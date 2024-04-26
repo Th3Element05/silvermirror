@@ -1,0 +1,84 @@
+; BG
+;all shades of grey in suicune.png 
+	RGB 31, 31, 31
+	RGB 31, 13, 04 ; 31, 14, 04
+	RGB 22, 05, 05 ; 07, 22, 12
+	RGB 01, 01, 01 ; 08, 16, 31
+;version title text
+	RGB 31, 31, 31
+	RGB 24, 24, 26
+	RGB 06, 06, 06
+	RGB 00, 00, 00
+;top of POKEMON logo
+	RGB 31, 31, 31
+	RGB 29, 28, 12 ; 31, 31, 31
+	RGB 02, 03, 30
+	RGB 05, 05, 05
+;next line of POKEMON logo
+	RGB 31, 31, 31
+	RGB 29, 28, 12 ; 31, 31, 18
+	RGB 02, 03, 30
+	RGB 05, 05, 05
+;next line of POKEMON logo
+	RGB 31, 31, 31
+	RGB 29, 28, 12
+	RGB 02, 03, 30
+	RGB 05, 05, 05
+;next line of POKEMON logo
+	RGB 31, 31, 31
+	RGB 29, 28, 12 ; 28, 25, 06
+	RGB 02, 03, 30
+	RGB 05, 05, 05
+;bottom of POKEMON logo (and TM)
+	RGB 31, 31, 31
+	RGB 29, 28, 12 ; 26, 21, 00
+	RGB 02, 03, 30
+	RGB 05, 05, 05
+;c2001 GAME GREAK inc.
+	RGB 31, 31, 31
+	RGB 16, 16, 16
+	RGB 00, 00, 00
+	RGB 00, 00, 00
+
+
+; OBJ
+;All shades of grey in crystal.png
+	RGB 31, 31, 31
+	RGB 17, 19, 31
+	RGB 00, 07, 24
+	RGB 00, 04, 18
+;nothing?
+	RGB 00, 00, 00
+	RGB 00, 00, 00
+	RGB 00, 00, 00
+	RGB 00, 00, 00
+;nothing?
+	RGB 00, 00, 00
+	RGB 00, 00, 00
+	RGB 00, 00, 00
+	RGB 00, 00, 00
+;nothing?
+	RGB 00, 00, 00
+	RGB 00, 00, 00
+	RGB 00, 00, 00
+	RGB 00, 00, 00
+;nothing?
+	RGB 00, 00, 00
+	RGB 00, 00, 00
+	RGB 00, 00, 00
+	RGB 00, 00, 00
+;nothing?
+	RGB 00, 00, 00
+	RGB 00, 00, 00
+	RGB 00, 00, 00
+	RGB 00, 00, 00
+;nothing?
+	RGB 00, 00, 00
+	RGB 00, 00, 00
+	RGB 00, 00, 00
+	RGB 00, 00, 00
+;nothing?
+	RGB 00, 00, 00
+	RGB 00, 00, 00
+	RGB 00, 00, 00
+	RGB 00, 00, 00

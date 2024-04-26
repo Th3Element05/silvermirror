@@ -1,0 +1,166 @@
+	object_const_def
+
+IndigoPlateauPokecenter1F_MapScripts:
+	def_scene_scripts
+;	scene_script IndigoPlateauPokecenter1FNoopScene, SCENE_INDIGOPLATEAUPOKECENTER1F_RIVAL_BATTLE
+
+	def_callbacks
+	callback MAPCALLBACK_NEWMAP, IndigoPlateauPokecenter1FPrepareElite4Callback
+	callback MAPCALLBACK_NEWMAP, IndigoPlateauFlypointCallback
+
+IndigoPlateauPokecenter1FNoopScene:
+	end
+
+IndigoPlateauFlypointCallback:
+	setflag ENGINE_FLYPOINT_INDIGO_PLATEAU
+	endcallback
+
+IndigoPlateauPokecenter1FPrepareElite4Callback:
+	setmapscene WILLS_ROOM, SCENE_WILLSROOM_LOCK_DOOR
+	setmapscene KOGAS_ROOM, SCENE_KOGASROOM_LOCK_DOOR
+	setmapscene BRUNOS_ROOM, SCENE_BRUNOSROOM_LOCK_DOOR
+	setmapscene KARENS_ROOM, SCENE_KARENSROOM_LOCK_DOOR
+	setmapscene LANCES_ROOM, SCENE_LANCESROOM_LOCK_DOOR
+	setmapscene HALL_OF_FAME, SCENE_HALLOFFAME_ENTER
+	clearevent EVENT_WILLS_ROOM_ENTRANCE_CLOSED
+	clearevent EVENT_WILLS_ROOM_EXIT_OPEN
+	clearevent EVENT_KOGAS_ROOM_ENTRANCE_CLOSED
+	clearevent EVENT_KOGAS_ROOM_EXIT_OPEN
+	clearevent EVENT_BRUNOS_ROOM_ENTRANCE_CLOSED
+	clearevent EVENT_BRUNOS_ROOM_EXIT_OPEN
+	clearevent EVENT_KARENS_ROOM_ENTRANCE_CLOSED
+	clearevent EVENT_KARENS_ROOM_EXIT_OPEN
+	clearevent EVENT_LANCES_ROOM_ENTRANCE_CLOSED
+	clearevent EVENT_LANCES_ROOM_EXIT_OPEN
+	clearevent EVENT_BEAT_E4_WILL
+	clearevent EVENT_BEAT_E4_KOGA
+	clearevent EVENT_BEAT_E4_BRUNO
+	clearevent EVENT_BEAT_E4_KAREN
+	clearevent EVENT_BEAT_E4_CHAMPION
+	setevent EVENT_LANCES_ROOM_OAK_AND_MARY
+	endcallback
+
+IndigoPlateauPokecenter1FNurseScript:
+	jumpstd PokecenterNurseScript
+
+IndigoPlateauPokecenter1FClerkScript:
+	opentext
+	pokemart MARTTYPE_STANDARD, MART_INDIGO_PLATEAU
+	closetext
+	end
+
+IndigoPlateauPokecenter1FGymGuideScript:
+	jumptextfaceplayer IndigoPlateauPokecenter1FGymGuideText
+IndigoPlateauPokecenter1FGymGuideText:
+	text "Yo! Champ in"
+	line "making!"
+
+	para "At #MON LEAGUE,"
+	line "you have to face"
+	cont "the ELITE FOUR in"
+	cont "succession."
+
+	para "If you lose, you"
+	line "have to start all"
+	cont "over again! This"
+	cont "is it! Go for it!"
+	done
+
+IndigoPlateauPokecenter1FCooltrainerMScript:
+	jumptextfaceplayer IndigoPlateauPokecenter1FCooltrainerMText
+IndigoPlateauPokecenter1FCooltrainerMText:
+	text "At the #MON"
+	line "LEAGUE, you'll get"
+	cont "tested by the"
+	cont "ELITE FOUR."
+
+	para "You have to beat"
+	line "them all. If you"
+	cont "lose, you have to"
+	cont "start all over!"
+	done
+
+TeleportGuyScript:
+	faceplayer
+	opentext
+	writetext TeleportGuyText1
+	yesorno
+	iffalse .No
+	writetext TeleportGuyYesText
+	waitbutton
+	closetext
+	playsound SFX_WARP_TO
+	special FadeOutPalettes
+	waitsfx
+	warp PALLET_TOWN, 5, 6
+	end
+
+.No:
+	writetext TeleportGuyNoText
+	waitbutton
+	closetext
+	end
+
+AbraScript:
+	opentext
+	writetext AbraText
+	cry ABRA
+	waitbutton
+	closetext
+	end
+
+TeleportGuyText1:
+	text "Ah! You're chal-"
+	line "lenging the ELITE"
+
+	para "FOUR? Are you sure"
+	line "you're ready?"
+
+	para "If you need to"
+	line "train some more,"
+
+	para "my ABRA can help"
+	line "you."
+
+	para "It can TELEPORT"
+	line "you home."
+
+	para "Would you like to"
+	line "go home now?"
+	done
+
+TeleportGuyYesText:
+	text "OK, OK. Picture"
+	line "your house in your"
+	cont "mind…"
+	done
+
+TeleportGuyNoText:
+	text "OK, OK. The best"
+	line "of luck to you!"
+	done
+
+AbraText:
+	text "ABRA: Aabra…"
+	done
+
+IndigoPlateauPokecenter1F_MapEvents:
+	db 0, 0 ; filler
+
+	def_warp_events
+	warp_event  7, 11, ROUTE_23, 1
+	warp_event  8, 11, ROUTE_23, 2
+	warp_event  7,  0, WILLS_ROOM, 1
+	warp_event  8,  0, WILLS_ROOM, 2
+
+	def_coord_events
+
+	def_bg_events
+
+	def_object_events
+	object_event 13,  5, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IndigoPlateauPokecenter1FNurseScript, -1
+	object_event  0,  7, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IndigoPlateauPokecenter1FClerkScript, -1
+	object_event  8,  4, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IndigoPlateauPokecenter1FCooltrainerMScript, -1
+	object_event  6,  9, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IndigoPlateauPokecenter1FGymGuideScript, -1
+	object_event 13, 10, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TeleportGuyScript, -1 ;EVENT_TELEPORT_GUY
+	object_event 14, 10, SPRITE_ABRA, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, AbraScript, -1 ;EVENT_TELEPORT_GUY

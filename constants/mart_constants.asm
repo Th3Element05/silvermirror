@@ -1,0 +1,41 @@
+; mart types (see engine/items/mart.asm)
+	const_def
+	const MARTTYPE_STANDARD
+	const MARTTYPE_BITTER
+	const MARTTYPE_BARGAIN
+	const MARTTYPE_PHARMACY
+	const MARTTYPE_ROOFTOP
+
+; Marts indexes (see data/items/marts.asm)
+	const_def
+	const MART_BALLS_ZERO
+	const MART_BALLS_ONE
+	const MART_BALLS_THREE
+	const MART_BALLS_FIVE
+	const MART_MED_ZERO
+	const MART_MED_TWO
+	const MART_MED_FOUR
+	const MART_MED_SIX
+;	const MART_VENDING_MACHINE
+	const MART_TMS_1
+	const MART_EVOLUTION_1
+	const MART_VITAMINS ; CELADON_5F1
+	const MART_BATTLE ; CELADON_5F2
+;	const MART_CELADON_2F_1 ; BALLS
+;	const MART_CELADON_2F_2 ; MEDS
+;	const MART_CELADON_3F   ; TMs1
+;	const MART_CELADON_4F   ; EVOLUTION
+;	const MART_CELADON_5F1  ; VITAMINS
+;	const MART_CELADON_5F2  ; BATTLE
+	const MART_INDIGO_PLATEAU
+	const MART_MT_MOON
+;	const MART_GOLDENROD_2F_1 ; MED
+;	const MART_GOLDENROD_2F_2 ; BALLS
+;	const MART_GOLDENROD_3F ; BATTLE
+;	const MART_GOLDENROD_4F ; VITAMINS
+;	const MART_GOLDENROD_5F ; TMs2
+	const MART_TMS_2
+	const MART_MAHOGANY_1
+	const MART_MAHOGANY_2
+	const MART_UNDERGROUND
+DEF NUM_MARTS EQU const_value
