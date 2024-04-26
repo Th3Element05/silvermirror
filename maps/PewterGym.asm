@@ -1,0 +1,245 @@
+	object_const_def
+	const PEWTERGYM_BROCK
+	const PEWTERGYM_YOUNGSTER
+	const PEWTERGYM_GYM_GUIDE
+
+PewterGym_MapScripts:
+	def_scene_scripts
+
+	def_callbacks
+
+PewterGymBrockScript:
+	faceplayer
+	opentext
+	checkevent EVENT_BEAT_BROCK
+	iftrue .FightDone
+	writetext BrockIntroText
+	waitbutton
+	closetext
+	winlosstext BrockWinLossText, 0
+	loadtrainer BROCK, BROCK1
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_BROCK
+	opentext
+	writetext ReceivedBoulderBadgeText
+	playsound SFX_GET_BADGE
+	waitsfx
+	setflag ENGINE_BOULDERBADGE
+	waitbutton
+;	closetext
+	; fallthrough
+.FightDone:
+	checkevent EVENT_GOT_TM34_BIDE
+	iftrue .SpeechAfterTM
+	setevent EVENT_BEAT_CAMPER_ISAAC
+	setmapscene PEWTER_CITY, SCENE_PEWTERCITY_NOOP
+	setevent EVENT_PEWTER_CITY_BLOCKING_YOUNGSTER
+	setevent EVENT_GOT_POKEBALLS_FROM_OAK
+	writetext BrockBoulderBadgeText
+	promptbutton
+	verbosegiveitem TM_BIDE
+	iffalse .NoRoomForBide
+	setevent EVENT_GOT_TM34_BIDE
+	; fallthrough
+.SpeechAfterTM
+	writetext BrockTMBideText
+	waitbutton
+	; fallthrough
+.NoRoomForBide
+	closetext
+	checkevent EVENT_TALKED_TO_MOM_AFTER_GETTING_POKEDEX
+	iffalse .DoMomCall
+	end
+.DoMomCall:
+	specialphonecall SPECIALCALL_WORRIED
+	end
+
+BrockIntroText:
+	text "I'm BROCK!"
+	line "I'm PEWTER's GYM"
+	cont "LEADER!"
+
+	para "I believe in rock"
+	line "hard defense and"
+	cont "determination!"
+
+	para "That's why my"
+	line "#MON are all"
+	cont "the rock-type!"
+
+	para "Do you still want"
+	line "to challenge me?"
+	cont "Fine then! Show"
+	cont "me your best!"
+	done
+
+BrockWinLossText:
+	text "BROCK: I took"
+	line "you for granted."
+
+	para "As proof of your"
+	line "victory, here's"
+	cont "the BOULDERBADGE!"
+	done
+
+ReceivedBoulderBadgeText:
+	text "<PLAYER> received"
+	line "BOULDERBADGE."
+	done
+
+BrockBoulderBadgeText:
+	text "That's an official"
+	line "POKEMON LEAGUE"
+	cont "BADGE!"
+
+	para "Its bearer's"
+	line "POKEMON become"
+	cont "more powerful!"
+
+	para "The technique"
+	line "FLASH can now be"
+	cont "used any time!"
+	
+	para "There are all"
+	line "kinds of trainers"
+	cont "in the world!"
+
+	para "You appear to be"
+	line "very gifted as a"
+	cont "#MON trainer!"
+
+	para "Go to the GYM in"
+	line "CERULEAN and test"
+	cont "your abilities!"
+
+	para "Wait! Take this"
+	line "with you!"
+	done
+
+BrockTMBideText:
+	text "TM34 contains"
+	line "BIDE!"
+
+	para "Your #MON will"
+	line "absorb damage in"
+	cont "battle then pay"
+	cont "it back double!"
+	
+	para "By using a TM, a"
+	line "#MON will"
+
+	para "instantly learn a"
+	line "new move."
+
+	para "Don't worry, TMs"
+	line "are reusable so"
+
+	para "use them however"
+	line "you like."
+	done
+
+TrainerCamperIsaac:
+	trainer CAMPER, ISAAC, EVENT_BEAT_CAMPER_ISAAC, CamperIsaacSeenText, CamperIsaacBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext CamperIsaacAfterBattleText
+	waitbutton
+	closetext
+	end
+
+CamperIsaacSeenText:
+	text "Stop right there,"
+	line "kid!"
+
+	para "You're still light"
+	line "years from facing"
+	cont "BROCK!"
+	done
+
+CamperIsaacBeatenText:
+	text "Darn!"
+
+	para "Light years isn't"
+	line "time! It measures"
+	cont "distance!"
+	done
+
+CamperIsaacAfterBattleText:
+	text "You're pretty hot,"
+	line "but not as hot"
+	cont "as BROCK!"
+	done
+
+PewterGymGuideScript:
+	faceplayer
+	opentext
+	checkevent EVENT_BEAT_BROCK
+	iftrue .PewterGymGuideWinScript
+	writetext PewterGymGuideText
+	waitbutton
+	closetext
+	end
+
+.PewterGymGuideWinScript:
+	writetext PewterGymGuideWinText
+	waitbutton
+	closetext
+	end
+
+PewterGymStatue:
+	checkflag ENGINE_BOULDERBADGE
+	iftrue .Beaten
+	jumpstd GymStatue1Script
+.Beaten:
+	gettrainername STRING_BUFFER_4, BROCK, BROCK1
+	jumpstd GymStatue2Script
+
+PewterGymGuideText:
+	text "Hiya! I can tell"
+	line "you have what it"
+	cont "takes to become a"
+	cont "#MON champ!"
+
+	para "I'm no trainer,"
+	line "but I can tell"
+	cont "you how to win!"
+
+	para "Let me take you"
+	line "to the top!"
+
+	para "The 1st #MON"
+	line "out in a match is"
+	cont "at the top of the"
+	cont "#MON LIST!"
+
+	para "By changing the"
+	line "order of #MON,"
+	cont "matches could be"
+	cont "made easier!"
+	done
+
+PewterGymGuideWinText:
+	text "Just as I thought!"
+	line "You're #MON"
+	cont "champ material!"
+	done
+
+PewterGym_MapEvents:
+	db 0, 0 ; filler
+
+	def_warp_events
+	warp_event  4, 13, PEWTER_CITY, 2
+	warp_event  5, 13, PEWTER_CITY, 2
+
+	def_coord_events
+
+	def_bg_events
+	bg_event  2, 11, BGEVENT_READ, PewterGymStatue
+	bg_event  7, 11, BGEVENT_READ, PewterGymStatue
+
+	def_object_events
+	object_event  5,  1, SPRITE_BROCK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PewterGymBrockScript, -1
+	object_event  3,  7, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperIsaac, -1
+	object_event  6, 11, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 1, PewterGymGuideScript, -1

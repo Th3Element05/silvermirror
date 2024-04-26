@@ -1,0 +1,76 @@
+; Groups are defined in data/trainers/parties.asm.
+
+TrainerGroups:
+; entries correspond to trainer classes (see constants/trainer_constants.asm)
+	table_width 2, TrainerGroups
+	dw FalknerGroup
+	dw BugsyGroup
+	dw WhitneyGroup
+	dw MortyGroup
+	dw ChuckGroup
+	dw JasmineGroup
+	dw PryceGroup
+	dw ClairGroup
+	dw PokemonProfGroup
+	dw Rival1Group
+	dw Rival2Group
+	dw BrockGroup
+	dw MistyGroup
+	dw LtSurgeGroup
+	dw ErikaGroup
+	dw KogaGroup
+	dw SabrinaGroup
+	dw BlaineGroup
+	dw GiovanniGroup
+	dw RocketBossGroup
+	dw LoreleiGroup
+	dw BrunoGroup
+	dw AgathaGroup
+	dw LanceGroup
+	dw ChampionGroup
+	dw PKMNTrainerGroup
+	dw RedGroup
+	dw GruntMGroup
+	dw GruntFGroup
+	dw ExecutiveMGroup
+	dw ExecutiveFGroup
+	dw ScientistGroup
+	dw YoungsterGroup
+	dw SchoolboyGroup
+	dw BirdKeeperGroup
+	dw LassGroup
+	dw TeacherGroup
+	dw CooltrainerMGroup
+	dw CooltrainerFGroup
+	dw BeautyGroup
+	dw PokemaniacGroup
+	dw GentlemanGroup
+	dw SkierGroup
+	dw BugCatcherGroup
+	dw FisherGroup
+	dw SwimmerMGroup
+	dw SwimmerFGroup
+	dw SailorGroup
+	dw SuperNerdGroup
+	dw GuitaristGroup
+	dw HikerGroup
+	dw BikerGroup
+	dw BurglarGroup
+	dw FirebreatherGroup
+	dw JugglerGroup
+	dw BlackbeltGroup
+	dw PsychicGroup
+	dw PicnickerGroup
+	dw CamperGroup
+	dw SageGroup
+	dw MediumGroup
+	dw BoarderGroup
+	dw PokefanMGroup
+	dw PokefanFGroup
+	dw KimonoGirlGroup
+	dw TwinsGroup
+	dw OfficerGroup
+	dw MysticalmanGroup
+	dw CoupleGroup
+	dw CoolDuoGroup
+	assert_table_length NUM_TRAINER_CLASSES - 3 ; exclude AERODACTYLE_FOSSIL, KABUTOPS_FOSSIL, POKEMON_GHOST

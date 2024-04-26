@@ -1,0 +1,126 @@
+; Landmarks indexes (see data/maps/landmarks.asm)
+	const_def
+	const LANDMARK_SPECIAL           ; 00
+; Johto landmarks
+	const LANDMARK_NEW_BARK_TOWN     ; 01
+	const LANDMARK_ROUTE_29          ; 02
+	const LANDMARK_CHERRYGROVE_CITY  ; 03
+	const LANDMARK_ROUTE_30          ; 04
+	const LANDMARK_ROUTE_31          ; 05
+	const LANDMARK_VIOLET_CITY       ; 06
+	const LANDMARK_SPROUT_TOWER      ; 07
+	const LANDMARK_ROUTE_32          ; 08
+	const LANDMARK_RUINS_OF_ALPH     ; 09
+	const LANDMARK_UNION_CAVE        ; 0a
+	const LANDMARK_ROUTE_33          ; 0b
+	const LANDMARK_AZALEA_TOWN       ; 0c
+	const LANDMARK_SLOWPOKE_WELL     ; 0d
+	const LANDMARK_ILEX_FOREST       ; 0e
+	const LANDMARK_ROUTE_34          ; 0f
+	const LANDMARK_GOLDENROD_CITY    ; 10
+	const LANDMARK_RADIO_TOWER       ; 11
+	const LANDMARK_ROUTE_35          ; 12
+	const LANDMARK_NATIONAL_PARK     ; 13
+	const LANDMARK_ROUTE_36          ; 14
+	const LANDMARK_ROUTE_37          ; 15
+	const LANDMARK_ECRUTEAK_CITY     ; 16
+	const LANDMARK_TIN_TOWER         ; 17
+	const LANDMARK_BURNED_TOWER      ; 18
+	const LANDMARK_ROUTE_38          ; 19
+	const LANDMARK_ROUTE_39          ; 1a
+	const LANDMARK_OLIVINE_CITY      ; 1b
+	const LANDMARK_LIGHTHOUSE        ; 1c
+	const LANDMARK_BATTLE_TOWER      ; 1d
+	const LANDMARK_ROUTE_40          ; 1e
+	const LANDMARK_WHIRL_ISLANDS     ; 1f
+	const LANDMARK_ROUTE_41          ; 20
+	const LANDMARK_CIANWOOD_CITY     ; 21
+;	const LANDMARK_CLIFF_EDGE_GATE   ; 22 removed from silvermirror
+;	const LANDMARK_ROUTE_47          ; 23 removed from silvermirror
+;	const LANDMARK_CLIFF_CAVE        ; 24 removed from silvermirror
+;	const LANDMARK_ROUTE_48          ; 25 removed from silvermirror
+;	const LANDMARK_SAFARI_ZONE_GATE  ; 26 removed from silvermirror
+;	const LANDMARK_SAFARI_ZONE       ; 27 moved to kanto
+	const LANDMARK_ROUTE_42          ; 28
+	const LANDMARK_MT_MORTAR         ; 29
+	const LANDMARK_MAHOGANY_TOWN     ; 2a
+	const LANDMARK_ROUTE_43          ; 2b
+	const LANDMARK_LAKE_OF_RAGE      ; 2c
+	const LANDMARK_ROUTE_44          ; 2d
+	const LANDMARK_ICE_PATH          ; 2e
+	const LANDMARK_BLACKTHORN_CITY   ; 2f
+	const LANDMARK_DRAGONS_DEN       ; 30
+	const LANDMARK_ROUTE_45          ; 31
+	const LANDMARK_DARK_CAVE         ; 32
+	const LANDMARK_ROUTE_46          ; 33
+	const LANDMARK_SILVER_CAVE       ; 34
+DEF KANTO_LANDMARK EQU const_value
+	const LANDMARK_PALLET_TOWN       ; 35
+	const LANDMARK_ROUTE_1           ; 36
+	const LANDMARK_VIRIDIAN_CITY     ; 37
+	const LANDMARK_ROUTE_2           ; 38
+	const LANDMARK_VIRIDIAN_FOREST   ; 39
+	const LANDMARK_DIGLETTS_CAVE     ; moved
+	const LANDMARK_PEWTER_CITY       ; 3a
+	const LANDMARK_ROUTE_3           ; 3b
+	const LANDMARK_MT_MOON           ; 3c
+	const LANDMARK_ROUTE_4           ; 3d
+	const LANDMARK_CERULEAN_CITY     ; 3e
+	const LANDMARK_ROUTE_24          ; 40
+	const LANDMARK_ROUTE_25          ; 41
+	const LANDMARK_ROUTE_5           ; 42
+	const LANDMARK_ROUTE_6           ; 44
+	const LANDMARK_VERMILION_CITY    ; 45
+	const LANDMARK_ROUTE_9           ; 49
+	const LANDMARK_ROUTE_10          ; 4b
+	const LANDMARK_ROCK_TUNNEL       ; 4a
+	const LANDMARK_POWER_PLANT       ; 4c
+	const LANDMARK_LAVENDER_TOWN     ; 4d
+	const LANDMARK_ROUTE_8           ; 48
+	const LANDMARK_ROUTE_7           ; 47
+	const LANDMARK_CELADON_CITY      ; 4f
+	const LANDMARK_SAFFRON_CITY      ; 50
+	const LANDMARK_ROUTE_11          ; 51
+	const LANDMARK_ROUTE_12          ; 52
+	const LANDMARK_ROUTE_13          ; 53
+	const LANDMARK_ROUTE_14          ; 54
+	const LANDMARK_ROUTE_15          ; 55
+	const LANDMARK_ROUTE_16          ; 56
+	const LANDMARK_ROUTE_17          ; 57
+	const LANDMARK_ROUTE_18          ; 58
+	const LANDMARK_FUCHSIA_CITY      ; 59
+	const LANDMARK_SAFARI_ZONE       ; moved
+	const LANDMARK_ROUTE_19          ; 5a
+	const LANDMARK_SEAFOAM_ISLANDS   ; 5c
+	const LANDMARK_ROUTE_20          ; 5b
+	const LANDMARK_CINNABAR_ISLAND   ; 5d
+	const LANDMARK_ROUTE_21          ; 5f
+	const LANDMARK_ROUTE_22          ; 60
+	const LANDMARK_ROUTE_23          ; 62
+	const LANDMARK_VICTORY_ROAD      ; 61
+	const LANDMARK_INDIGO_PLATEAU    ; 63
+; hof
+	const LANDMARK_ROUTE_26          ; 64
+	const LANDMARK_ROUTE_27          ; 65
+	const LANDMARK_TOHJO_FALLS       ; 66
+	const LANDMARK_ROUTE_28          ; 67
+; end
+	const LANDMARK_UNDERGROUND_PATH  ; moved
+	const LANDMARK_SS_ANNE           ; 68 ; LANDMARK_FAST_SHIP
+	const LANDMARK_POKEMON_TOWER     ; 4e ; LANMARK_LAV_RADIO_TOWER
+	const LANDMARK_ROCKET_HIDEOUT    ; silvermirror+
+	const LANDMARK_SILPH_CO          ; silvermirror+
+	const LANDMARK_POKEMON_MANSION   ; 5e
+	const LANDMARK_CERULEAN_CAVE     ; 3f
+DEF NUM_LANDMARKS EQU const_value
+
+; used in CaughtData
+	const_def $7f, -1
+	const LANDMARK_EVENT             ; $7f
+	const LANDMARK_GIFT              ; $7e
+
+; Regions
+	const_def
+	const JOHTO_REGION ; 0
+	const KANTO_REGION ; 1
+DEF NUM_REGIONS EQU const_value
