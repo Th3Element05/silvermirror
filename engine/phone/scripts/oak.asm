@@ -27,7 +27,7 @@ OakPhoneCalleeScript:
 
 .RemindFlash
 	checkevent EVENT_GOT_HM05_FLASH
-	iftrue .Default
+	iftrue .default
 	farwritetext OakPhoneRemindFlashText
 	end
 

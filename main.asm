@@ -423,7 +423,7 @@ INCLUDE "engine/phone/scripts/chad.asm"
 INCLUDE "engine/phone/scripts/dana.asm"
 INCLUDE "engine/phone/scripts/derek.asm"
 INCLUDE "engine/phone/scripts/doug.asm"
-INCLUDE "engine/phone/scripts/elm.asm"
+;INCLUDE "engine/phone/scripts/elm.asm"
 INCLUDE "engine/phone/scripts/oak.asm" ;silvermirror+
 INCLUDE "engine/phone/scripts/eoin.asm"
 INCLUDE "engine/phone/scripts/erin.asm"
@@ -676,8 +676,7 @@ INCLUDE "data/phone/text/chad_callee.asm"
 INCLUDE "data/phone/text/dana_callee.asm"
 INCLUDE "data/phone/text/derek_callee.asm"
 INCLUDE "data/phone/text/doug_callee.asm" ; new
-INCLUDE "data/phone/text/elm.asm"
-INCLUDE "data/phone/text/oak.asm" ;silvermirror+
+;INCLUDE "data/phone/text/elm.asm"
 INCLUDE "data/phone/text/erin_callee.asm"
 INCLUDE "data/phone/text/gaven_callee.asm"
 INCLUDE "data/phone/text/gina_callee.asm"
@@ -717,6 +716,7 @@ INCLUDE "data/phone/text/kayandtia_callee.asm" ; new
 INCLUDE "data/phone/text/kenny_callee.asm" ; new
 INCLUDE "data/phone/text/reese_callee.asm" ; new
 INCLUDE "data/phone/text/timandsue_callee.asm" ; new
+INCLUDE "data/phone/text/oak.asm" ;silvermirror+
 
 
 SECTION "Miscellaneous Text", ROMX
