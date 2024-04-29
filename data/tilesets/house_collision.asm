@@ -29,8 +29,8 @@
 	tilecoll WALL, WALL, FLOOR, PC ; 1c
 	tilecoll WALL, WALL, FLOOR, RADIO ; 1d
 	tilecoll WALL, TOWN_MAP, TV, FLOOR ; 1e
-	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 1f
-	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 20
+	tilecoll FLOOR, FLOOR, WALL, WALL ; 1f
+	tilecoll WALL, WALL, WALL, WALL ; 20
 	tilecoll FLOOR, WALL, FLOOR, WALL ; 21
 	tilecoll WALL, FLOOR, WALL, FLOOR ; 22
 	tilecoll FLOOR, WALL, FLOOR, WALL ; 23

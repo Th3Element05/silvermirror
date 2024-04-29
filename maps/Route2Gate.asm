@@ -27,10 +27,10 @@ Route2Gate_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  4,  0, ROUTE_2_NORTH, 2
-	warp_event  5,  0, ROUTE_2_NORTH, 3
+	warp_event  3,  0, ROUTE_2_NORTH, 2
+	warp_event  4,  0, ROUTE_2_NORTH, 3
+	warp_event  3,  7, ROUTE_2_SOUTH, 1
 	warp_event  4,  7, ROUTE_2_SOUTH, 1
-	warp_event  5,  7, ROUTE_2_SOUTH, 1
 ;	warp_event  3,  0, ROUTE_2, 4
 ;	warp_event  4,  0, ROUTE_2, 5
 ;	warp_event  3,  7, ROUTE_2, 6

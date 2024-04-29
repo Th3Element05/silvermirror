@@ -6,7 +6,13 @@ DayCare_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+	callback MAPCALLBACK_TILES, DayCareTilesCallback
 	callback MAPCALLBACK_OBJECTS, DayCareEggCheckCallback
+
+DayCareTilesCallback:
+	changeblock 2, 0, $37 ; door
+	changeblock 6, 0, $1c ; pc
+	endcallback
 
 DayCareEggCheckCallback:
 	checkflag ENGINE_DAY_CARE_MAN_HAS_EGG

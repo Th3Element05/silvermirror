@@ -66,6 +66,8 @@ OakScript:
 	jumptextfaceplayer OaksLabPokemonAwaitText
 
 .EvaluatePokedex
+	faceplayer
+	opentext
 	checkevent EVENT_GOT_POKEBALLS_FROM_OAK
 	iffalse .OakGiveBalls
 	writetext OakLabEvaluateDexText
@@ -83,7 +85,6 @@ OakScript:
 	jumptextfaceplayer OaksLabWildPokemonText
 
 .OakGiveBalls
-	opentext
 	writetext OaksLabGetPokeballsText
 	playsound SFX_ITEM
 	waitsfx
@@ -893,6 +894,7 @@ OaksLabOakGivePhoneNumberText:
 	line "phone number. You"
 	cont "can call me if"
 	cont "anything comes up!"
+	done
 
 GotOaksNumberText:
 	text "<PLAYER> got OAK's"

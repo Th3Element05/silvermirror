@@ -42,7 +42,7 @@ ENDM
 	map_const OLIVINE_HOUSE_BETA,                           4,  4 ;  4
 	map_const OLIVINE_PUNISHMENT_SPEECH_HOUSE,              4,  4 ;  5
 	map_const OLIVINE_GOOD_ROD_HOUSE,                       4,  4 ;  6
-	map_const OLIVINE_CAFE,                                 4,  4 ;  7
+	map_const OLIVINE_CAFE,                                 5,  4 ;  7 ; 4,  4 ;  7
 	map_const OLIVINE_MART,                                 5,  4 ;  8
 	map_const ROUTE_38_ECRUTEAK_GATE,                       4,  5 ;  9 ; 5,  4 ;  9
 	map_const ROUTE_39_BARN,                                4,  4 ; 10
@@ -395,13 +395,13 @@ ENDM
 	endgroup
 
 	newgroup FUCHSIA                                              ; 17
-	map_const ROUTE_13,                                    40,  9 ;  1
+	map_const ROUTE_13,                                    38,  9 ;  1 ; 40,  9 ;  1
 	map_const ROUTE_14,                                    10, 18 ;  2
 	map_const ROUTE_15,                                    25,  9 ; 3 ; 27,  9 ;  3
 	map_const ROUTE_18,                                    25,  9 ;  4
 	map_const FUCHSIA_CITY,                                20, 18 ;  5
 	map_const FUCHSIA_MART,                                 5,  4 ;  6
-	map_const SAFARI_ZONE_MAIN_OFFICE,                      4,  4 ;  7
+	map_const SAFARI_ZONE_MAIN_OFFICE,                      5,  4 ;  7 ; 4,  4 ;  7
 	map_const FUCHSIA_GYM,                                  5,  9 ;  8
 	map_const BILLS_BROTHERS_HOUSE,                         4,  4 ;  9
 	map_const FUCHSIA_POKECENTER_1F,                        7,  4 ; 10
@@ -464,14 +464,14 @@ ENDM
 	map_const CELADON_MANSION_1F,                           4,  5 ; 12
 	map_const CELADON_MANSION_2F,                           4,  5 ; 13
 	map_const CELADON_MANSION_3F,                           4,  5 ; 14
-	map_const CELADON_MANSION_ROOF,                         4,  5 ; 15
+	map_const CELADON_MANSION_ROOF,                         4,  7 ; 15 ; 4,  5 ; 15
 	map_const CELADON_MANSION_ROOF_HOUSE,                   4,  4 ; 16
 	map_const CELADON_POKECENTER_1F,                        7,  4 ; 17
 ;	map_const CELADON_POKECENTER_2F_BETA,                   8,  4 ; 18
 	map_const CELADON_GAME_CORNER,                         10,  7 ; 19
 	map_const CELADON_GAME_CORNER_PRIZE_ROOM,               3,  3 ; 20
 	map_const CELADON_GYM,                                  5,  9 ; 21
-	map_const CELADON_CAFE,                                 6,  4 ; 22
+	map_const CELADON_CAFE,                                 5,  4 ; 22 ; 6,  4 ; 22
 	map_const ROUTE_16_FUCHSIA_SPEECH_HOUSE,                4,  4 ; 23
 	map_const ROUTE_16_GATE,                                4,  5 ; 24 ; 5,  4 ; 24
 	map_const ROUTE_7_SAFFRON_GATE,                         4,  5 ; 25 ; 5,  4 ; 25

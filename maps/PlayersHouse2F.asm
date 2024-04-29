@@ -367,11 +367,14 @@ PlayersBedHealing:
 	iffalse .NoHeal
 	closetext
 ;	special StubbedTrainerRankings_Healings
-	special FadeOutPalettes
+;	special FadeOutPalettes
+	special FadeBlackQuickly
+	special ReloadSpritesNoPalettes
 	special HealParty
 	playmusic MUSIC_HEAL
-	pause 60
-	special FadeInPalettes
+	pause 70
+;	special FadeInPalettes
+	special FadeInQuickly
 	special RestartMapMusic
 	opentext
 	writetext PlayersBedHealingText3
