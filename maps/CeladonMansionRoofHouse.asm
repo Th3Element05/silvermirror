@@ -1,117 +1,144 @@
 	object_const_def
-	const CELADONMANSIONROOFHOUSE_PHARMACIST
+	const CELADONMANSIONROOF_EEVEE_POKE_BALL
 
 CeladonMansionRoofHouse_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+	callback MAPCALLBACK_TILES, CeladonMansionRoofTilesCallback
+
+CeladonMansionRoofTilesCallback:
+	changeblock 2, 2, $14 ; table top left
+	changeblock 2, 4, $18 ; table lower left
+	endcallback
+
+CeladonMansionEeveePokeballScript:
+	refreshscreen
+	pokepic EEVEE
+	cry EEVEE
+	waitbutton
+	closepokepic
+	checkevent EVENT_TALKED_TO_MAN_ABOUT_EEVEE
+	iffalse .EeveeOwned
+	opentext
+	writetext CeladonMansionRoofTakeEeveeText
+	yesorno
+	iffalse .DontTakeEevee
+	disappear CELADONMANSIONROOF_EEVEE_POKE_BALL
+	getmonname STRING_BUFFER_3, EEVEE
+	writetext CeladonMansionRoofReceivedEeveeText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	promptbutton
+	givepoke EEVEE, 5
+	closetext
+	setevent EVENT_GOT_EEVEE_FROM_CELADON_MANSION
+	end
+
+.EeveeOwned
+	jumptext CeladonMansionRoofEeveeText
+
+.DontTakeEevee
+	writetext CeladonMansionRoofDontTakeEeveeText
+	waitbutton
+	closetext
+	end
+
+CeladonMansionRoofEeveeText:
+	text "It's EEVEE!"
+
+	para "You should talk"
+	line "to its owner."
+	done
+
+CeladonMansionRoofTakeEeveeText:
+	text "It's EEVEE!"
+	line "Take it?"
+	done
+
+CeladonMansionRoofReceivedEeveeText:
+	text "<PLAYER> received"
+	line "@"
+	text_ram wStringBuffer3
+	text "!"
+	done
+
+CeladonMansionRoofDontTakeEeveeText:
+	text "<PLAYER> left"
+	line "EEVEE here."
+	done
 
 CeladonMansionRoofHousePharmacistScript:
+	checkevent EVENT_GOT_EEVEE_FROM_CELADON_MANSION
+	iftrue .TakeCareOfEevee
+	checkevent EVENT_TALKED_TO_MAN_ABOUT_EEVEE
+	iftrue .BetterOffWithYou
 	faceplayer
 	opentext
-;	checkevent EVENT_GOT_TM03_CURSE
-;	iftrue .GotCurse
-	writetext CeladonMansionRoofHousePharmacistIntroText
-	promptbutton
-	checktime NITE
-	iftrue .Night
-	writetext CeladonMansionRoofHousePharmacistNotNightText
+	writetext CeladonMansionRoofPharmacistText
 	waitbutton
 	closetext
+	setevent EVENT_TALKED_TO_MAN_ABOUT_EEVEE
 	end
 
-.Night:
-	writetext CeladonMansionRoofHousePharmacistStoryText
-	promptbutton
-;	verbosegiveitem TM_CURSE
-;	iffalse .NoRoom
-;	setevent EVENT_GOT_TM03_CURSE
-.GotCurse:
-	writetext CeladonMansionRoofHousePharmacistCurseText
-	waitbutton
-.NoRoom:
-	closetext
-	end
+.TakeCareOfEevee
+	jumptextfaceplayer CeladonMansionRoofTakeCareText
 
-CeladonMansionRoofHousePharmacistIntroText:
-	text "Let me recount a"
-	line "terrifying tale…"
+.BetterOffWithYou
+	jumptextfaceplayer CeladonMansionRoofBetterOffText
+
+CeladonMansionRoofPharmacistText:
+	text "That #MON"
+	line "is EEVEE. It was"
+	cont "given to me as"
+	cont "a gift."
+
+	para "But, I'm not a"
+	line "#MON trainer."
+
+	para "EEVEE would be"
+	line "happier with a"
+	cont "#MON trainer"
+	cont "like you."
+
+	para "Please, take"
+	line "EEVEE and make"
+	cont "it happy!"
 	done
 
-CeladonMansionRoofHousePharmacistNotNightText:
-	text "Then again, it's"
-	line "not as scary while"
-
-	para "it's still light"
-	line "outside."
-
-	para "Come back after"
-	line "sunset, OK?"
+CeladonMansionRoofTakeCareText:
+	text "Take good care of"
+	line "EEVEE for me!"
 	done
 
-CeladonMansionRoofHousePharmacistStoryText:
-	text "Once upon a time,"
-	line "there was a little"
-
-	para "boy who was given"
-	line "a new BICYCLE…"
-
-	para "He wanted to try"
-	line "it right away…"
-
-	para "He was having so"
-	line "much fun that he"
-
-	para "didn't notice the"
-	line "sun had set…"
-
-	para "While riding home"
-	line "in the pitch-black"
-
-	para "night, the bike"
-	line "suddenly slowed!"
-
-	para "The pedals became"
-	line "heavy!"
-
-	para "When he stopped"
-	line "pedaling, the bike"
-
-	para "began slipping"
-	line "backwards!"
-
-	para "It was as if the"
-	line "bike were cursed"
-
-	para "and trying to drag"
-	line "him into oblivion!"
-
-	para "…"
-
-	para "…"
-
-	para "SHRIEEEEK!"
-
-	para "The boy had been"
-	line "riding uphill on"
-	cont "CYCLING ROAD!"
-
-	para "…"
-	line "Ba-dum ba-dum!"
-
-	para "For listening so"
-	line "patiently, you may"
-	cont "take this--TM03!"
+CeladonMansionRoofBetterOffText:
+	text "EEVEE will be"
+	line "happier with a"
+	cont "trainer like you!"
 	done
 
-CeladonMansionRoofHousePharmacistCurseText:
-	text "TM03 is CURSE."
+CeladonMansionRoofBook:
+	jumptext CeladonMansionRoofBookText
+CeladonMansionRoofBookText:
+	text "Its a magazine"
+	line "of #MON facts!"
 
-	para "It's a terrifying"
-	line "move that slowly"
+	para "..."
+	
+	para "EEVEE, the"
+	line "EVOLUTION #MON"
 
-	para "whittles down the"
-	line "victim's HP."
+	para "It evolves into"
+	line "different forms"
+	cont "when exposed to"
+	cont "special STONES."
+
+	para "But EEVEE will"
+	line "also evolve under"
+	cont "other conditions!"
+
+	para "As long as it is"
+	line "happy enough!"
 	done
 
 CeladonMansionRoofHouse_MapEvents:
@@ -124,6 +151,8 @@ CeladonMansionRoofHouse_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event  3,  4, BGEVENT_READ, CeladonMansionRoofBook
 
 	def_object_events
-	object_event  3,  2, SPRITE_PHARMACIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeladonMansionRoofHousePharmacistScript, -1
+	object_event  4,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonMansionEeveePokeballScript, EVENT_GOT_EEVEE_FROM_CELADON_MANSION
+	object_event  2,  3, SPRITE_PHARMACIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeladonMansionRoofHousePharmacistScript, -1

@@ -192,6 +192,7 @@ CherrygroveGymSpeechHouse_Blocks:
 GuideGentsHouse_Blocks:
 CherrygroveEvolutionSpeechHouse_Blocks:
 Route30BerryHouse_Blocks:
+DayCare_Blocks:                            ;silvermirror (changed)
 MrFujisHouse_Blocks:                       ;silvermirror+
 	INCBIN "maps/House1.blk"
 
@@ -809,9 +810,9 @@ OlivinePort_Blocks:
 VermilionPort_Blocks:
 	INCBIN "maps/VermilionPort.blk"
 
-OlivineCafe_Blocks:
 SafariZoneMainOffice_Blocks:
-	INCBIN "maps/OlivineCafe.blk"
+;	INCBIN "maps/OlivineCafe.blk"
+	INCBIN "maps/SafariZoneMainOffice.blk"
 
 PlayersHouse2F_Blocks:
 	INCBIN "maps/PlayersHouse2F.blk"
@@ -869,8 +870,8 @@ LavRadioTower1F_Blocks:
 SilverCaveItemRooms_Blocks:
 	INCBIN "maps/SilverCaveItemRooms.blk"
 
-DayCare_Blocks:
-	INCBIN "maps/DayCare.blk"
+;DayCare_Blocks: (moved to use House1.blk)
+;	INCBIN "maps/DayCare.blk"
 
 ;SoulHouse_Blocks:
 ;	INCBIN "maps/SoulHouse.blk"
@@ -882,6 +883,7 @@ CeladonGym_Blocks:
 	INCBIN "maps/CeladonGym.blk"
 
 CeladonCafe_Blocks:
+OlivineCafe_Blocks:
 	INCBIN "maps/CeladonCafe.blk"
 
 RockTunnel1F_Blocks:

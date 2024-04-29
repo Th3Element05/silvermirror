@@ -334,22 +334,22 @@ ENDM
 	connection west, Route15, ROUTE_15, 9
 
 	map_attributes Route13, ROUTE_13, $43, NORTH | SOUTH
-	connection north, Route12, ROUTE_12, 28
+	connection north, Route12, ROUTE_12, 25 ;28
 	connection south, Route14, ROUTE_14, 0
 
 	map_attributes Route12, ROUTE_12, $43, NORTH | SOUTH | WEST
-	connection north, LavenderTown, LAVENDER_TOWN, 2
-	connection south, Route13, ROUTE_13, -28
-	connection west, Route11, ROUTE_11, 27
+	connection north, LavenderTown, LAVENDER_TOWN, 1 ;2
+	connection south, Route13, ROUTE_13, -25 ;-28
+	connection west, Route11, ROUTE_11, 28 ;27
 
 	map_attributes Route11, ROUTE_11, $0f, WEST | EAST
 	connection west, VermilionCity, VERMILION_CITY, -4 ;-5
-	connection east, Route12, ROUTE_12, -27
+	connection east, Route12, ROUTE_12, -28 ;-27
 
 	map_attributes LavenderTown, LAVENDER_TOWN, $2c, NORTH | SOUTH | WEST
 	connection north, Route10South, ROUTE_10_SOUTH, 0
 ;	connection north, Route10, ROUTE_10, 0
-	connection south, Route12, ROUTE_12, -2
+	connection south, Route12, ROUTE_12, -1 ;-2
 	connection west, Route8, ROUTE_8, -1 ;0
 
 	map_attributes VermilionCity, VERMILION_CITY, $43, NORTH | EAST
