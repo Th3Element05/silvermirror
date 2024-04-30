@@ -47,7 +47,9 @@ SpriteAnimFrameData:
 	dw .Frameset_EZChatCursor6
 	dw .Frameset_EZChatCursor7
 	dw .Frameset_BlueWalk
-	dw .Frameset_MagnetTrainBlue
+	dw .Frameset_GreenWalk
+;	dw .Frameset_MagnetTrainBlue
+	dw .Frameset_MagnetTrainGreen
 	dw .Frameset_MobileTradeSentBall
 	dw .Frameset_MobileTradeOTBall
 	dw .Frameset_MobileTradeCableBulge
@@ -129,11 +131,24 @@ SpriteAnimFrameData:
 	oamframe SPRITE_ANIM_OAMSET_BLUE_WALK_2,  8, OAM_X_FLIP
 	oamrestart
 
-.Frameset_MagnetTrainBlue:
-	oamframe SPRITE_ANIM_OAMSET_MAGNET_TRAIN_BLUE_1,  8
-	oamframe SPRITE_ANIM_OAMSET_MAGNET_TRAIN_BLUE_2,  8
-	oamframe SPRITE_ANIM_OAMSET_MAGNET_TRAIN_BLUE_1,  8
-	oamframe SPRITE_ANIM_OAMSET_MAGNET_TRAIN_BLUE_2,  8, OAM_X_FLIP
+.Frameset_GreenWalk: ;silvermirror+
+	oamframe SPRITE_ANIM_OAMSET_GREEN_WALK_1,  8
+	oamframe SPRITE_ANIM_OAMSET_GREEN_WALK_2,  8
+	oamframe SPRITE_ANIM_OAMSET_GREEN_WALK_1,  8
+	oamframe SPRITE_ANIM_OAMSET_GREEN_WALK_2,  8, OAM_X_FLIP
+	oamrestart
+
+;.Frameset_MagnetTrainBlue:
+;	oamframe SPRITE_ANIM_OAMSET_MAGNET_TRAIN_BLUE_1,  8
+;	oamframe SPRITE_ANIM_OAMSET_MAGNET_TRAIN_BLUE_2,  8
+;	oamframe SPRITE_ANIM_OAMSET_MAGNET_TRAIN_BLUE_1,  8
+;	oamframe SPRITE_ANIM_OAMSET_MAGNET_TRAIN_BLUE_2,  8, OAM_X_FLIP
+;	oamrestart
+.Frameset_MagnetTrainGreen: ;silvermirror+
+	oamframe SPRITE_ANIM_OAMSET_MAGNET_TRAIN_GREEN_1,  8
+	oamframe SPRITE_ANIM_OAMSET_MAGNET_TRAIN_GREEN_2,  8
+	oamframe SPRITE_ANIM_OAMSET_MAGNET_TRAIN_GREEN_1,  8
+	oamframe SPRITE_ANIM_OAMSET_MAGNET_TRAIN_GREEN_2,  8, OAM_X_FLIP
 	oamrestart
 
 .Frameset_GSTitleTrail:

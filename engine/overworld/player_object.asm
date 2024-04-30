@@ -36,7 +36,8 @@ SpawnPlayer:
 	ld a, [wPlayerGender]
 	bit PLAYERGENDER_FEMALE_F, a
 	jr z, .ok
-	ln e, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT
+;	ln e, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT
+	ln e, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT
 
 .ok
 	ld [hl], e

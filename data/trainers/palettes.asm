@@ -8,9 +8,8 @@ TrainerPalettes:
 
 PlayerPalette: ; Chris uses the same colors as Cal
 INCBIN "gfx/trainers/cal.gbcpal", middle_colors
-;KrisPalette: ; Kris shares Falkner's palette
 INCBIN "gfx/trainers/falkner.gbcpal", middle_colors
-KrisPalette: ; Green shares Bugsy's palette
+KrisPalette: ; Kris shares Bugsy's palette
 INCBIN "gfx/trainers/bugsy.gbcpal", middle_colors
 INCBIN "gfx/trainers/whitney.gbcpal", middle_colors
 INCBIN "gfx/trainers/morty.gbcpal", middle_colors
