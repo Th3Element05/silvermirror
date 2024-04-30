@@ -26,7 +26,7 @@ Route2South_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 15,  1, ROUTE_2_GATE, 3
+	warp_event 16,  1, ROUTE_2_GATE, 3
 	warp_event  3,  5, VIRIDIAN_FOREST_GATE_S, 3
 
 	def_coord_events
