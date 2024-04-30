@@ -27,10 +27,10 @@ DEF CHRIS EQU __trainer_class__
 	const PHONECONTACT_BUENA
 DEF NUM_NONTRAINER_PHONECONTACTS EQU const_value - 1
 
-DEF KRIS EQU __trainer_class__
 	trainerclass FALKNER ; 01
 	const FALKNER1
 
+DEF KRIS EQU __trainer_class__
 	trainerclass BUGSY ; 02
 	const BUGSY1
 
