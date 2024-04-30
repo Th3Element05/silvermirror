@@ -325,9 +325,9 @@ Route12_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 15, 61, BGEVENT_READ, Route12Sign
+	bg_event 13, 61, BGEVENT_READ, Route12Sign
 	bg_event 15, 13, BGEVENT_READ, FishingSpotSign
-	bg_event  4, 61, BGEVENT_ITEM, Route12HiddenHyperPotion
+	bg_event  3, 62, BGEVENT_ITEM, Route12HiddenHyperPotion
 
 	def_object_events
 	object_event 10, 60, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_BIGDOLLSYM, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route12Snorlax, EVENT_ROUTE_12_SNORLAX
