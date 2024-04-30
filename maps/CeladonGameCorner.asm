@@ -221,10 +221,14 @@ CeladonGameCorner10Coins1:
 .HiddenCoins
 	getstring STRING_BUFFER_4, CeladonGameCornerCoins10
 	scall CeladonGameCornerFoundCoinsStdScript
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
+	iftrue .End
 	givecoins 10
 	setevent EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_1
+.End
+	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
 ;	waitbutton
-	closetext
+;	closetext
 	end
 
 CeladonGameCorner10Coins2:
@@ -232,10 +236,14 @@ CeladonGameCorner10Coins2:
 .HiddenCoins
 	getstring STRING_BUFFER_4, CeladonGameCornerCoins10
 	scall CeladonGameCornerFoundCoinsStdScript
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
+	iftrue .End
 	givecoins 10
 	setevent EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_2
+.End
+	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
 ;	waitbutton
-	closetext
+;	closetext
 	end
 
 CeladonGameCorner10Coins3:
@@ -243,10 +251,14 @@ CeladonGameCorner10Coins3:
 .HiddenCoins
 	getstring STRING_BUFFER_4, CeladonGameCornerCoins10
 	scall CeladonGameCornerFoundCoinsStdScript
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
+	iftrue .End
 	givecoins 10
 	setevent EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_3
+.End
+	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
 ;	waitbutton
-	closetext
+;	closetext
 	end
 
 CeladonGameCorner10Coins4:
@@ -254,10 +266,14 @@ CeladonGameCorner10Coins4:
 .HiddenCoins
 	getstring STRING_BUFFER_4, CeladonGameCornerCoins10
 	scall CeladonGameCornerFoundCoinsStdScript
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
+	iftrue .End
 	givecoins 10
 	setevent EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_4
+.End
+	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
 ;	waitbutton
-	closetext
+;	closetext
 	end
 
 CeladonGameCorner10Coins5:
@@ -265,10 +281,14 @@ CeladonGameCorner10Coins5:
 .HiddenCoins
 	getstring STRING_BUFFER_4, CeladonGameCornerCoins10
 	scall CeladonGameCornerFoundCoinsStdScript
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
+	iftrue .End
 	givecoins 10
 	setevent EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_5
+.End
+	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
 ;	waitbutton
-	closetext
+;	closetext
 	end
 
 CeladonGameCorner10Coins6:
@@ -276,10 +296,14 @@ CeladonGameCorner10Coins6:
 .HiddenCoins
 	getstring STRING_BUFFER_4, CeladonGameCornerCoins10
 	scall CeladonGameCornerFoundCoinsStdScript
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
+	iftrue .End
 	givecoins 10
 	setevent EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_6
+.End
+	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
 ;	waitbutton
-	closetext
+;	closetext
 	end
 
 CeladonGameCorner10Coins7:
@@ -287,10 +311,14 @@ CeladonGameCorner10Coins7:
 .HiddenCoins
 	getstring STRING_BUFFER_4, CeladonGameCornerCoins10
 	scall CeladonGameCornerFoundCoinsStdScript
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
+	iftrue .End
 	givecoins 10
 	setevent EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_7
+.End
+	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
 ;	waitbutton
-	closetext
+;	closetext
 	end
 
 CeladonGameCorner10Coins8:
@@ -298,10 +326,14 @@ CeladonGameCorner10Coins8:
 .HiddenCoins
 	getstring STRING_BUFFER_4, CeladonGameCornerCoins10
 	scall CeladonGameCornerFoundCoinsStdScript
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
+	iftrue .End
 	givecoins 10
 	setevent EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_8
+.End
+	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
 ;	waitbutton
-	closetext
+;	closetext
 	end
 
 CeladonGameCorner20Coins1:
@@ -309,10 +341,14 @@ CeladonGameCorner20Coins1:
 .HiddenCoins
 	getstring STRING_BUFFER_4, CeladonGameCornerCoins20
 	scall CeladonGameCornerFoundCoinsStdScript
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
+	iftrue .End
 	givecoins 20
 	setevent EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_20_1
+.End
+	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
 ;	waitbutton
-	closetext
+;	closetext
 	end
 
 CeladonGameCorner20Coins2:
@@ -320,10 +356,14 @@ CeladonGameCorner20Coins2:
 .HiddenCoins
 	getstring STRING_BUFFER_4, CeladonGameCornerCoins20
 	scall CeladonGameCornerFoundCoinsStdScript
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
+	iftrue .End
 	givecoins 20
 	setevent EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_20_2
+.End
+	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
 ;	waitbutton
-	closetext
+;	closetext
 	end
 
 CeladonGameCorner40Coins:
@@ -331,10 +371,14 @@ CeladonGameCorner40Coins:
 .HiddenCoins
 	getstring STRING_BUFFER_4, CeladonGameCornerCoins40
 	scall CeladonGameCornerFoundCoinsStdScript
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
+	iftrue .End
 	givecoins 40
 	setevent EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_40
+.End
+	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
 ;	waitbutton
-	closetext
+;	closetext
 	end
 
 CeladonGameCorner100Coins:
@@ -342,10 +386,29 @@ CeladonGameCorner100Coins:
 .HiddenCoins
 	getstring STRING_BUFFER_4, CeladonGameCornerCoins100
 	scall CeladonGameCornerFoundCoinsStdScript
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
+	iftrue .End
 	givecoins 100
 	setevent EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_100
+.End
+	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
 ;	waitbutton
-	closetext
+;	closetext
+	end
+
+CeladonGameCornerDebugCoins:
+	conditional_event EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_100, .HiddenCoins
+.HiddenCoins
+	getstring STRING_BUFFER_4, CeladonGameCornerCoins100
+	scall CeladonGameCornerFoundCoinsStdScript
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
+	iftrue .End
+	givecoins 9999
+	setevent EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_100
+.End
+	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
+;	waitbutton
+;	closetext
 	end
 
 CeladonGameCornerCoins10:
@@ -361,59 +424,69 @@ CeladonGameCornerCoins100:
 	db "100@"
 
 CeladonGameCornerFoundCoinsStdScript:
-	checkitem COIN_CASE
-	iffalse .NoCoinCase
 	opentext
 	writetext CeladonGameCornerFoundCoinsStdText
 	promptbutton
+	checkitem COIN_CASE
+	iffalse .NoCoinCase
 	checkcoins MAX_COINS - 1
 	ifequal HAVE_MORE, .FullCoinCase
-	getstring STRING_BUFFER_4, CaladonGameCornerCoinName
-	scall .GiveCoins
-	end
-
-.GiveCoins:
-	jumpstd ReceiveItemScript
+;	getstring STRING_BUFFER_4, CaladonGameCornerCoinName
+;	scall .GiveCoins
+	writetext CeladonGameCornerGotCoinsText
+	playsound SFX_ITEM
+	waitsfx
+	waitbutton
+	closetext
 	end
 
 .NoCoinCase:
-	jumptext CeladonGameCornerNoCoinCaseText
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
+	writetext CeladonGameCornerNoCoinCaseText
+	waitbutton
+	closetext
+	end
 
 .FullCoinCase:
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
 	writetext CeladonGameCornerCoinCaseFullText
 	waitbutton
 	closetext
 	end
 
-CaladonGameCornerCoinName:
-	db "COIN@"
+;.GiveCoins:
+;	jumpstd ReceiveItemScript
+;	end
+
+;CaladonGameCornerCoinName:
+;	db "COIN@"
 
 ;CeladonGameCornerFoundCoinsText:
 ;	text "<PLAYER> found"
 ;	line "some coins!"
 ;	done
 
-CeladonGameCornerNoCoinCaseText:
+CeladonGameCornerGotCoinsText:
 	text "<PLAYER> found"
 	line "@"
 	text_ram wStringBuffer4
 	text " coins!"
-	
-	para "But <PLAYER>"
+	done
+
+CeladonGameCornerFoundCoinsStdText:
+	text "There are some"
+	line "coins here!"
+	done
+
+CeladonGameCornerNoCoinCaseText:
+	text "But <PLAYER>"
 	line "doesn't have a"
 	cont "COIN CASE."
 	done
 
-CeladonGameCornerFoundCoinsStdText:
-	text "<PLAYER> found"
-	line "@"
-	text_ram wStringBuffer4
-	text " coins!"
-	done
-
 CeladonGameCornerCoinCaseFullText:
 	text "But <PLAYER>'s"
-	line "COIN CASE is full."
+	line "COIN CASE is full!"
 	done
 
 CeladonGameCorner_MapEvents:
@@ -477,6 +550,7 @@ CeladonGameCorner_MapEvents:
 	bg_event  9,  8, BGEVENT_IFNOTSET, CeladonGameCorner20Coins2
 	bg_event 11,  3, BGEVENT_IFNOTSET, CeladonGameCorner40Coins
 	bg_event 15,  4, BGEVENT_IFNOTSET, CeladonGameCorner100Coins
+	bg_event  0,  0, BGEVENT_IFNOTSET, CeladonGameCornerDebugCoins
 
 ;	EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_1
 ;	EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_2
