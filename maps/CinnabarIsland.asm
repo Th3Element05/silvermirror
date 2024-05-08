@@ -1,168 +1,110 @@
 	object_const_def
-;	const CINNABARISLAND_BLUE
-;	const CINNABARISLAND_ROCK1
-;	const CINNABARISLAND_ROCK2
-;	const CINNABARISLAND_ROCK3
-;	const CINNABARISLAND_ROCK4
 
 CinnabarIsland_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, CinnabarIslandFlypointCallback
+	callback MAPCALLBACK_TILES, CinnabarGymDoorCallback
 
 CinnabarIslandFlypointCallback:
 	setflag ENGINE_FLYPOINT_CINNABAR
 	endcallback
 
-;CinnabarIslandBlue:
-;	faceplayer
-;	opentext
-;	writetext CinnabarIslandBlueText
-;	waitbutton
-;	closetext
-;	playsound SFX_WARP_TO
-;	applymovement CINNABARISLAND_BLUE, CinnabarIslandBlueTeleport
-;	disappear CINNABARISLAND_BLUE
-;	clearevent EVENT_VIRIDIAN_GYM_BLUE
-;	end
+CinnabarGymDoorCallback:
+	checkevent EVENT_CINNABAR_GYM_LEADER_RETURNED
+	iftrue .GymOpen
+	endcallback
+.GymOpen:
+	changeblock 18, 4, $12 ; DOOR
+	endcallback
 
-;CinnabarIslandGymSign:
-;	jumptext CinnabarIslandGymSignText
 
-;CinnabarIslandSign:
-;	jumptext CinnabarIslandSignText
 
-;CinnabarIslandPokecenterSign:
-;	jumpstd PokecenterSignScript
+CinnabarGymDoorLocked:
+	conditional_event EVENT_CINNABAR_GYM_LEADER_RETURNED, .LockedDoor
+.LockedDoor
+	jumptext CinnabarGymDoorLockedText
+CinnabarGymDoorLockedText:
+	text "The GYM's doors"
+	line "are locked..."
+	done
 
-;CinnabarIslandHiddenRareCandy:
-;	hiddenitem RARE_CANDY, EVENT_CINNABAR_ISLAND_HIDDEN_RARE_CANDY
+CinnabarIslandLockedDoorText:
+	text "The door is"
+	line "locked..."
+	done
 
-;CinnabarIslandHiddenStarPiece:
-;	hiddenitem STAR_PIECE, EVENT_CINNABAR_ISLAND_HIDDEN_STAR_PIECE
+CinnabarIslandGirl:
+	jumptextfaceplayer CinnabarIslandGirlText
+CinnabarIslandGirlText:
+	text "CINNABAR GYM's"
+	line "BLAINE is an odd"
+	cont "man who has lived"
+	cont "here for decades."
+	done
 
-;CinnabarIslandHiddenIron:
-;	hiddenitem IRON, EVENT_CINNABAR_ISLAND_HIDDEN_IRON
+CinnabarIslandGramps:
+	jumptextfaceplayer CinnabarIslandGrampsText
+CinnabarIslandGrampsText:
+	text "Scientists conduct"
+	line "experiments in"
+	cont "the burned out"
+	cont "building."
+	done
 
-;CinnabarIslandBlueTeleport:
-;	teleport_from
-;	step_end
+CinnabarIslandLabSign:
+	jumptext CinnabarIslandLabSignText
+CinnabarIslandLabSignText:
+	text "#MON LAB"
+	done
 
-;CinnabarIslandBlueText:
-;	text "Who are you?"
-;
-;	para "Well, it's plain"
-;	line "to see that you're"
-;	cont "a trainer…"
-;
-;	para "My name's BLUE."
-;
-;	para "I was once the"
-;	line "CHAMPION, although"
-;
-;	para "it was for only a"
-;	line "short time…"
-;
-;	para "That meddling RED"
-;	line "did me in…"
-;
-;	para "Anyway, what do"
-;	line "you want? You want"
-;
-;	para "to challenge me or"
-;	line "something?"
-;
-;	para "…I hate to say"
-;	line "it, but I'm not in"
-;
-;	para "the mood for a"
-;	line "battle now."
-;
-;	para "Take a good look"
-;	line "around you…"
-;
-;	para "A volcano erupts,"
-;	line "and just like"
-;
-;	para "that, a whole town"
-;	line "disappears."
-;
-;	para "We can go on win-"
-;	line "ning and losing in"
-;
-;	para "#MON. But if"
-;	line "nature so much as"
-;
-;	para "twitches, we can"
-;	line "lose in a second."
-;
-;	para "…"
-;
-;	para "That's the way it"
-;	line "is…"
-;
-;	para "But, anyway, I'm"
-;	line "still a trainer."
-;
-;	para "If I see a strong"
-;	line "opponent, it makes"
-;	cont "me want to battle."
-;
-;	para "If you want to"
-;	line "battle me, come to"
-;	cont "the VIRIDIAN GYM."
-;
-;	para "I'll take you on"
-;	line "then."
-;	done
+CinnabarIslandSign:
+	jumptext CinnabarIslandSignText
+CinnabarIslandSignText:
+	text "CINNABAR ISLAND"
 
-;CinnabarIslandGymSignText:
-;	text "There's a notice"
-;	line "here…"
-;
-;	para "CINNABAR GYM has"
-;	line "relocated to SEA-"
-;	cont "FOAM ISLANDS."
-;
-;	para "BLAINE"
-;	done
+	para "The Fiery Town of"
+	line "Burning Desire"
+	done
 
-;CinnabarIslandSignText:
-;	text "CINNABAR ISLAND"
-;
-;	para "The Fiery Town of"
-;	line "Burning Desire"
-;	done
+CinnabarIslandGymSign:
+	jumptext CinnabarIslandGymSignText
+CinnabarIslandGymSignText:
+	text "CINNABAR ISLAND"
+	line "#MON GYM"
+	cont "LEADER: BLAINE"
 
-;CinnabarIslandRock:
-;	jumpstd SmashRockScript
+	para "The Hot-Headed"
+	line "Quiz Master!"
+	done
 
-;CinnabarIslandMansionRock:
-;	setevent EVENT_CINNABAR_MANSION_ROCK_SMASHED
-;	jumpstd SmashRockScript
+CinnabarIslandPokecenterSign:
+	jumpstd PokecenterSignScript
+
+CinnabarIslandMartSign:
+	jumpstd MartSignScript
 
 CinnabarIsland_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 11, 13, CINNABAR_POKECENTER_1F, 1
-	warp_event  7,  3, POKEMON_MANSION_1F, 1
-	warp_event  6,  5, POKEMON_MANSION_1F, 1
+	warp_event  6,  5, POKEMON_MANSION_1F, 1     ;1
+	warp_event 18,  5, CINNABAR_GYM, 1           ;2
+	warp_event 11, 13, CINNABAR_POKECENTER_1F, 1 ;3
+	warp_event 15, 13, CINNABAR_MART, 1          ;4
+;	warp_event 11, 15, CINNABAR_LAB, 1           ;5
 
 	def_coord_events
 
 	def_bg_events
-;	bg_event 12, 13, BGEVENT_READ, CinnabarIslandPokecenterSign
-;	bg_event  7, 15, BGEVENT_READ, CinnabarIslandGymSign
-;	bg_event  5, 11, BGEVENT_READ, CinnabarIslandSign
-;	bg_event  9,  4, BGEVENT_ITEM, CinnabarIslandHiddenRareCandy
-;	bg_event 19,  4, BGEVENT_ITEM, CinnabarIslandHiddenStarPiece
-;	bg_event 18, 11, BGEVENT_ITEM, CinnabarIslandHiddenIron
+	bg_event  9,  7, BGEVENT_READ, CinnabarIslandSign
+	bg_event 13,  5, BGEVENT_READ, CinnabarIslandGymSign
+	bg_event 12, 13, BGEVENT_READ, CinnabarIslandPokecenterSign
+	bg_event 16, 13, BGEVENT_READ, CinnabarIslandMartSign
+	bg_event  9, 13, BGEVENT_READ, CinnabarIslandLabSign
+	bg_event 32,  7, BGEVENT_IFNOTSET, CinnabarGymDoorLocked
 
 	def_object_events
-;	object_event  7, 10, SPRITE_BLUE, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CinnabarIslandBlue, EVENT_BLUE_IN_CINNABAR
-;	object_event  7,  3, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarIslandMansionRock, EVENT_CINNABAR_MANSION_ROCK_SMASHED
-;	object_event 14,  5, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarIslandRock, -1
-;	object_event 12,  8, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarIslandRock, -1
-;	object_event 18,  7, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarIslandRock, -1
+	object_event 12,  7, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CinnabarIslandGirl, -1
+	object_event 14,  8, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CinnabarIslandGramps, -1

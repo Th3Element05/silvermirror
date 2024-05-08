@@ -15,10 +15,10 @@ PokemonMansion1F_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  5, 27, CINNABAR_ISLAND, 2     ; 1
-	warp_event  6, 27, CINNABAR_ISLAND, 2     ; 2
-	warp_event 26, 27, CINNABAR_ISLAND, 2     ; 3
-	warp_event 27, 27, CINNABAR_ISLAND, 2     ; 4
+	warp_event  5, 27, CINNABAR_ISLAND, 1     ; 1
+	warp_event  6, 27, CINNABAR_ISLAND, 1     ; 2
+	warp_event 26, 27, CINNABAR_ISLAND, 1     ; 3
+	warp_event 27, 27, CINNABAR_ISLAND, 1     ; 4
 	warp_event  5, 10, POKEMON_MANSION_2F, 2  ; 5
 	warp_event 21, 22, POKEMON_MANSION_B1F, 1 ; 6
 	warp_event 16, 14, POKEMON_MANSION_1F, 7  ; 7

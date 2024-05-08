@@ -1,5 +1,4 @@
 	object_const_def
-	const VERMILIONGYM_SURGE
 
 VermilionGym_MapScripts:
 	def_scene_scripts
@@ -70,7 +69,7 @@ VermilionGymTrashCanScript:
 VermilionGymSurgeScript:
 	faceplayer
 	opentext
-	checkevent EVENT_BEAT_LTSURGE
+	checkflag ENGINE_THUNDERBADGE
 	iftrue .FightDone
 	writetext LtSurgeIntroText
 	waitbutton
@@ -80,31 +79,30 @@ VermilionGymSurgeScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_LTSURGE
-	setevent EVENT_BEAT_GENTLEMAN_MILTON
-	setevent EVENT_BEAT_GUITARIST_CLYDE
-	setevent EVENT_BEAT_SAILOR_KENNETH
+	setevent EVENT_BEAT_GENTLEMAN_GREGORY
+	setevent EVENT_BEAT_GUITARIST_VINCENT
+	setevent EVENT_BEAT_JUGGLER_HORTON
 	opentext
-	writetext ReceivedThunderBadgeText
+	writetext ReceivedThunderbadgeText
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_THUNDERBADGE
-	waitbutton
+	promptbutton
+	writetext LtSurgeThunderbadgeText
+	promptbutton
 	; fallthrough
 .FightDone:
 	checkevent EVENT_GOT_TM52_SPARK
-	iftrue .SpeechAfterTM
-	writetext LtSurgeThunderBadgeText
-	promptbutton
+	iftrue .GotSpark
 	verbosegiveitem TM_SPARK
-	iffalse .NoRoomForSpark
 	setevent EVENT_GOT_TM52_SPARK
-	writetext LtSurgeSparkText
-	promptbutton
-	; fallthrough
-.SpeechAfterTM
+	writetext SurgeExplainTMText
+	waitbutton
+	closetext
+	end
+.GotSpark
 	writetext LtSurgeAfterBattleText
 	waitbutton
-.NoRoomForSpark
 	closetext
 	end
 
@@ -140,25 +138,21 @@ LtSurgeWinLossText:
 	line "the THUNDERBADGE!"
 	done
 
-ReceivedThunderBadgeText:
+ReceivedThunderbadgeText:
 	text "<PLAYER> received"
 	line "THUNDERBADGE."
 	done
 
-LtSurgeThunderBadgeText:
+LtSurgeThunderbadgeText:
 	text "The THUNDERBADGE"
-	line "cranks up your"
-	cont "#MON's SPEED!"
-
-	para "It also lets your"
-	line "#MON FLY any"
-	cont "time, kid!"
+	line "lets your #MON"
+	cont "use FLY anytime!"
 
 	para "You're special,"
 	line "kid! Take this!"
 	done
 
-LtSurgeSparkText:
+SurgeExplainTMText:
 	text "TM52 contains"
 	line "SPARK!"
 
@@ -267,20 +261,12 @@ SailorKennethAfterBattleText:
 	done
 
 VermilionGymGuideScript:
-	faceplayer
-	opentext
 	checkevent EVENT_BEAT_LTSURGE
 	iftrue .VermilionGymGuideWinScript
-	writetext VermilionGymGuideText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer VermilionGymGuideText
 
 .VermilionGymGuideWinScript:
-	writetext VermilionGymGuideWinText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer VermilionGymGuideWinText
 
 VermilionGymGuideText:
 	text "Yo! Champ in"
@@ -314,11 +300,11 @@ VermilionGymGuideWinText:
 	done
 
 VermilionGymStatue:
+	gettrainername STRING_BUFFER_4, LT_SURGE, LT_SURGE1
 	checkflag ENGINE_THUNDERBADGE
 	iftrue .Beaten
 	jumpstd GymStatue1Script
 .Beaten:
-	gettrainername STRING_BUFFER_4, LT_SURGE, LT_SURGE1
 	jumpstd GymStatue2Script
 
 ;VermilionGymTrashCan:
@@ -358,6 +344,8 @@ VermilionGymResetSwitchesText:
 	done
 
 VermilionGymSurgeTrashCan:
+	changeblock 4, 4, $32 ; floor
+	reloadmappart
 	jumpstd TrashCanScript
 
 VermilionGym_MapEvents:
@@ -390,7 +378,7 @@ VermilionGym_MapEvents:
 	bg_event  6,  1, BGEVENT_READ, VermilionGymSurgeTrashCan
 
 	def_object_events
-	object_event  5,  2, SPRITE_SURGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, VermilionGymSurgeScript, -1
+	object_event  5,  2, SPRITE_SURGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionGymSurgeScript, -1
 	object_event  9,  6, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerGentlemanMilton, -1
 	object_event  3,  8, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerGuitaristClyde, -1
 	object_event  0, 10, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSailorKenneth, -1

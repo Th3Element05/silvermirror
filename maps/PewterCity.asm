@@ -256,10 +256,10 @@ PewterCityNoApricorn:
 	end
 
 ; movement ;
-PewterCity1StepUpMovement:
-	step UP
-	step_end
-
+;PewterCity1StepUpMovement:
+;	step UP
+;	step_end
+;
 PewterCity1StepDownMovement:
 	step DOWN
 	step_end
@@ -290,6 +290,7 @@ PewterCity5StepsUpMovement:
 	step UP
 	step UP
 	step UP
+PewterCity1StepUpMovement:
 	step UP
 	step_end
 
@@ -327,12 +328,7 @@ PewterCityYoungsterLeavesGymMovement:
 	step LEFT
 	step LEFT
 	step LEFT
-;	hide_object
-;	big_step UP
-;	big_step UP
-;	big_step RIGHT
-;	big_step RIGHT
-	remove_object ;test
+	remove_object
 	step_end
 
 PewterCityMuseumGuyMovement:

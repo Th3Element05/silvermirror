@@ -49,6 +49,7 @@ CeladonCityPoliwrathText:
 	done
 
 CeladonCityGramps1Script:
+	faceplayer
 	opentext
 	checkevent EVENT_GOT_TM41_SOFTBOILED
 	iftrue .GotSoftboiled
@@ -221,17 +222,17 @@ CeladonCity_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  8, 13, CELADON_DEPT_STORE_1F, 3 ;1;
-	warp_event 22,  9, CELADON_MANSION_1F, 1 ;2;
-	warp_event 22,  3, CELADON_MANSION_1F, 3 ;3;
-	warp_event 23,  3, CELADON_MANSION_1F, 3 ;4;
-	warp_event 39,  9, CELADON_POKECENTER_1F, 1 ;5;
+	warp_event  8, 13, CELADON_DEPT_STORE_1F, 3 ;1
+	warp_event 22,  9, CELADON_MANSION_1F, 1 ;2
+	warp_event 22,  3, CELADON_MANSION_1F, 3 ;3
+	warp_event 23,  3, CELADON_MANSION_1F, 3 ;4
+	warp_event 39,  9, CELADON_POKECENTER_1F, 1 ;5
 	warp_event 26, 19, CELADON_GAME_CORNER, 1 ;6
 	warp_event 31, 19, CELADON_GAME_CORNER_PRIZE_ROOM, 1 ;7
 	warp_event 10, 27, CELADON_GYM, 1 ;8
-	warp_event 29, 27, CELADON_CAFE, 1 ;9;
-	warp_event 33, 27, CELADON_CHIEF_HOUSE, 1 ;10;
-	warp_event 41, 27, CELADON_HOTEL, 1 ;11;
+	warp_event 29, 27, CELADON_CAFE, 1 ;9
+	warp_event 33, 27, CELADON_CHIEF_HOUSE, 1 ;10
+	warp_event 41, 27, CELADON_HOTEL, 1 ;11
 
 	def_coord_events
 

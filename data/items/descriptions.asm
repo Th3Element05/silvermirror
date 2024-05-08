@@ -65,7 +65,7 @@ ItemDescriptions:
 	dw MaxEtherDesc
 	dw ElixerDesc
 	dw RedScaleDesc
-	dw SecretPotionDesc
+	dw OaksParcelDesc ; SecretPotionDesc
 	dw SSTicketDesc
 	dw MysteryEggDesc
 	dw ClearBellDesc
@@ -514,9 +514,12 @@ RedScaleDesc:
 	db   "A scale from the"
 	next "red GYARADOS.@"
 
-SecretPotionDesc:
-	db   "Fully heals any"
-	next "#MON.@"
+;SecretPotionDesc:
+;	db   "Fully heals any"
+;	next "#MON.@"
+OaksParcelDesc:
+	db   "A package for"
+	next "PROF.OAK.@"
 
 SSTicketDesc:
 	db   "A ticket for the"

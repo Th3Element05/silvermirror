@@ -41,13 +41,25 @@ PewterJigglypuffText:
 	done
 
 PewterPokecenter1FGentlemanScript:
-	jumptextfaceplayer PewterPokecenter1FGentlemanText
-PewterPokecenter1FGentlemanText:
+	opentext
+	writetext PewterPokecenter1FGentlemanText1
+	waitbutton
+	faceplayer
+	writetext PewterPokecenter1FGentlemanText2
+	waitbutton
+	closetext
+	turnobject LAST_TALKED, DOWN
+	end
+	
+PewterPokecenter1FGentlemanText1:
 	text "What!?"
 
 	para "TEAM ROCKET is"
 	line "at MT.MOON? Huh?"
-	cont "I'm on the phone!"
+	done
+
+PewterPokecenter1FGentlemanText2:
+	text "I'm on the phone!"
 
 	para "Scram!"
 	done

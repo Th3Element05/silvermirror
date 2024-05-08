@@ -17,46 +17,36 @@ PokemonTower2FRivalEncounter:
 	; fallthrough
 PokemonTower2FRivalScript:
 	playmusic MUSIC_RIVAL_ENCOUNTER
-;	pause 15
+;	pause 20
 	setlasttalked POKEMONTOWER2F_RIVAL
 	faceplayer
 	opentext
 	writetext PokemonTower2FRivalBeforeBattleText
 	waitbutton
 	closetext
-	winlosstext PokemonTower2FRivalBattleWinText, PokemonTower2FRivalBattleLossText
 	setlasttalked POKEMONTOWER2F_RIVAL
+	winlosstext PokemonTower2FRivalBattleWinText, PokemonTower2FRivalBattleLossText
 	checkevent EVENT_GOT_SQUIRTLE_FROM_OAK
 	iftrue .RivalBulbasaur
 	checkevent EVENT_GOT_BULBASAUR_FROM_OAK
 	iftrue .RivalCharmander
-;	winlosstext PokemonTower2FRivalBattleWinText, PokemonTower2FRivalBattleLossText
-;	setlasttalked POKEMONTOWER2F_RIVAL
-	loadtrainer RIVAL1, RIVAL2_3_SQUIRTLE
+	loadtrainer RIVAL2, RIVAL2_2_SQUIRTLE
 	startbattle
-;	dontrestartmapmusic
-	reloadmap
+	reloadmapafterbattle
 	sjump .FinishRival
 .RivalBulbasaur
-;	winlosstext PokemonTower2FRivalBattleWinText, PokemonTower2FRivalBattleLossText
-;	setlasttalked POKEMONTOWER2F_RIVAL
-	loadtrainer RIVAL1, RIVAL2_3_BULBASAUR
+	loadtrainer RIVAL2, RIVAL2_2_BULBASAUR
 	startbattle
-;	dontrestartmapmusic
-	reloadmap
+	reloadmapafterbattle
 	sjump .FinishRival
 .RivalCharmander
-;	winlosstext PokemonTower2FRivalBattleWinText, PokemonTower2FRivalBattleLossText
-;	setlasttalked POKEMONTOWER2F_RIVAL
-	loadtrainer RIVAL1, RIVAL2_3_CHARMANDER
+	loadtrainer RIVAL2, RIVAL2_2_CHARMANDER
 	loadmem VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
-;	dontrestartmapmusic
-	reloadmap
+	reloadmapafterbattle
 	sjump .FinishRival
 
 .FinishRival
-;	playmusic MUSIC_RIVAL_ENCOUNTER
 	opentext
 	writetext PokemonTower2FRivalAfterBattleText
 	waitbutton
@@ -76,8 +66,6 @@ PokemonTower2FRivalScript:
 	playsound SFX_EXIT_BUILDING
 	waitsfx
 	setscene SCENE_POKEMONTOWER2F_NOOP
-	special FadeOutMusic
-;	playmapmusic
 	special RestartMapMusic
 	end
 

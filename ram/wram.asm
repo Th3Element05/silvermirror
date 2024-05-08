@@ -3125,18 +3125,13 @@ wMountMoonB2FSceneID::                            db ;silvermirror ds 35
 wCeruleanCitySceneID::                            db ;silvermirror ds 34
 wRoute24SceneID::                                 db ;silvermirror ds 33
 wBillsHouseSceneID::                              db ;silvermirror ds 32
+;wRoute5SceneID::                                  db ;unused in silvermirror?
 wVermilionCitySceneID::                           db ;silvermirror ds 31
 wSSAnne2FSceneID::                                db ;silvermirror ds 30
 wPokemonTower2FSceneID::                          db ;silvermirror ds 29
 wPokemonTower5FSceneID::                          db ;silvermirror ds 28
 wPokemonTower6FSceneID::                          db ;silvermirror ds 27
-;wPokecenter2FSceneID::                            db ; unused in ;silvermirror ds 31
-;wTradeCenterSceneID::                             db ; unused in ;silvermirror ds 32
-;wColosseumSceneID::                               db ; unused in ;silvermirror ds 33
-;wTimeCapsuleSceneID::                             db ; unused in ;silvermirror ds 34
-;wPowerPlantSceneID::                              db ; unused in ;silvermirror ds 35
-;wCeruleanGymSceneID::                             db ; unused in ;silvermirror ds 36
-;wRoute25SceneID::                                 db ; unused in ;silvermirror ds 37
+wFightingDojoSceneID::                            db ;silvermirror ds 26
 wTrainerHouseB1FSceneID::                         db
 wVictoryRoadGateSceneID::                         db
 wSaffronMagnetTrainStationSceneID::               db
@@ -3149,7 +3144,6 @@ wBrunosRoomSceneID::                              db
 wKarensRoomSceneID::                              db
 wLancesRoomSceneID::                              db
 wHallOfFameSceneID::                              db
-;wRoute27SceneID::                                 db
 wNewBarkTownSceneID::                             db
 wElmsLabSceneID::                                 db
 wPlayersHouse1FSceneID::                          db
@@ -3180,7 +3174,6 @@ wBattleTowerElevatorSceneID::                     db
 wBattleTowerHallwaySceneID::                      db
 wBattleTowerOutsideSceneID::                      db
 wRoute43GateSceneID::                             db
-;wMountMoonSceneID::                               db ; unused in ;silvermirror ds 38
 wSproutTower3FSceneID::                           db
 wTinTower1FSceneID::                              db
 wBurnedTower1FSceneID::                           db
@@ -3204,18 +3197,27 @@ wDragonsDenB1FSceneID::                           db
 wDragonShrineSceneID::                            db
 wOlivinePortSceneID::                             db
 wVermilionPortSceneID::                           db
-wFastShip1FSceneID::                              db
-wFastShipB1FSceneID::                             db
 wMountMoonSquareSceneID::                         db
-;wMobileTradeRoomSceneID::                         db
-;wMobileBattleRoomSceneID::                        db
 wPokemonMansion1FSceneID::                        db
 wPokemonMansionB1FSceneID::                       db
 wSafariZoneEntranceSceneID::                      db
 wRoute42EcruteakGateSceneID::                     db
 wRoute39SceneID::                                 db
+;wPokecenter2FSceneID::                            db ; unused in ;silvermirror ds 
+;wTradeCenterSceneID::                             db ; unused in ;silvermirror ds 
+;wColosseumSceneID::                               db ; unused in ;silvermirror ds 
+;wTimeCapsuleSceneID::                             db ; unused in ;silvermirror ds 
+;wPowerPlantSceneID::                              db ; unused in ;silvermirror ds 
+;wCeruleanGymSceneID::                             db ; unused in ;silvermirror ds 
+;wRoute25SceneID::                                 db ; unused in ;silvermirror ds 
+;wRoute27SceneID::                                 db ; unused in ;silvermirror ds 
+;wMountMoonSceneID::                               db ; unused in ;silvermirror ds 
+;wFastShip1FSceneID::                              db ; unused in ;silvermirror ds 
+;wFastShipB1FSceneID::                             db ; unused in ;silvermirror ds 
+;wMobileTradeRoomSceneID::                         db ; unused in ;silvermirror ds 
+;wMobileBattleRoomSceneID::                        db ; unused in ;silvermirror ds 39
 
-	ds 38 ;silvermirror -ds 43 +ds 38
+	ds 39 ;silvermirror -ds 43 +ds 39
 
 ; fight counts
 wJackFightCount::    db

@@ -22,13 +22,7 @@ MapScenes::
 	scene_var POKEMON_TOWER_2F,                            wPokemonTower2FSceneID ;silvermirror
 	scene_var POKEMON_TOWER_5F,                            wPokemonTower5FSceneID ;silvermirror
 	scene_var POKEMON_TOWER_6F,                            wPokemonTower6FSceneID ;silvermirror
-;	scene_var POKECENTER_2F,                               wPokecenter2FSceneID
-;	scene_var TRADE_CENTER,                                wTradeCenterSceneID
-;	scene_var COLOSSEUM,                                   wColosseumSceneID
-;	scene_var TIME_CAPSULE,                                wTimeCapsuleSceneID
-;	scene_var POWER_PLANT,                                 wPowerPlantSceneID
-;	scene_var CERULEAN_GYM,                                wCeruleanGymSceneID ; unused in ;silvermirror
-;	scene_var ROUTE_25,                                    wRoute25SceneID ; unused in ;silvermirror
+	scene_var FIGHTING_DOJO,                               wFightingDojoSceneID ;silvermirror
 	scene_var TRAINER_HOUSE_B1F,                           wTrainerHouseB1FSceneID
 	scene_var VICTORY_ROAD_GATE,                           wVictoryRoadGateSceneID
 	scene_var SAFFRON_MAGNET_TRAIN_STATION,                wSaffronMagnetTrainStationSceneID
@@ -41,7 +35,6 @@ MapScenes::
 	scene_var KARENS_ROOM,                                 wKarensRoomSceneID
 	scene_var LANCES_ROOM,                                 wLancesRoomSceneID
 	scene_var HALL_OF_FAME,                                wHallOfFameSceneID
-;	scene_var ROUTE_27,                                    wRoute27SceneID
 	scene_var NEW_BARK_TOWN,                               wNewBarkTownSceneID
 	scene_var ELMS_LAB,                                    wElmsLabSceneID
 	scene_var PLAYERS_HOUSE_1F,                            wPlayersHouse1FSceneID
@@ -72,7 +65,6 @@ MapScenes::
 	scene_var BATTLE_TOWER_HALLWAY,                        wBattleTowerHallwaySceneID
 	scene_var BATTLE_TOWER_OUTSIDE,                        wBattleTowerOutsideSceneID ; unused
 	scene_var ROUTE_43_GATE,                               wRoute43GateSceneID
-;	scene_var MOUNT_MOON,                                  wMountMoonSceneID ; unused in ;silvermirror
 	scene_var SPROUT_TOWER_3F,                             wSproutTower3FSceneID
 	scene_var TIN_TOWER_1F,                                wTinTower1FSceneID
 	scene_var BURNED_TOWER_1F,                             wBurnedTower1FSceneID
@@ -96,14 +88,23 @@ MapScenes::
 	scene_var DRAGON_SHRINE,                               wDragonShrineSceneID
 	scene_var OLIVINE_PORT,                                wOlivinePortSceneID
 	scene_var VERMILION_PORT,                              wVermilionPortSceneID
-;	scene_var FAST_SHIP_1F,                                wFastShip1FSceneID
-;	scene_var FAST_SHIP_B1F,                               wFastShipB1FSceneID
 	scene_var MOUNT_MOON_SQUARE,                           wMountMoonSquareSceneID
-;	scene_var MOBILE_TRADE_ROOM,                           wMobileTradeRoomSceneID
-;	scene_var MOBILE_BATTLE_ROOM,                          wMobileBattleRoomSceneID
 	scene_var POKEMON_MANSION_1F,                          wPokemonMansion1FSceneID
 	scene_var POKEMON_MANSION_B1F,                         wPokemonMansionB1FSceneID
 	scene_var SAFARI_ZONE_ENTRANCE,                        wSafariZoneEntranceSceneID ; KEEP in silvermirror
 	scene_var ROUTE_42_ECRUTEAK_GATE,                      wRoute42EcruteakGateSceneID
 	scene_var ROUTE_39,                                    wRoute39SceneID
+;	scene_var POKECENTER_2F,                               wPokecenter2FSceneID
+;	scene_var TRADE_CENTER,                                wTradeCenterSceneID
+;	scene_var COLOSSEUM,                                   wColosseumSceneID
+;	scene_var TIME_CAPSULE,                                wTimeCapsuleSceneID
+;	scene_var POWER_PLANT,                                 wPowerPlantSceneID
+;	scene_var CERULEAN_GYM,                                wCeruleanGymSceneID ; unused in ;silvermirror
+;	scene_var ROUTE_25,                                    wRoute25SceneID ; unused in ;silvermirror
+;	scene_var ROUTE_27,                                    wRoute27SceneID
+;	scene_var MOUNT_MOON,                                  wMountMoonSceneID ; unused in ;silvermirror
+;	scene_var FAST_SHIP_1F,                                wFastShip1FSceneID
+;	scene_var FAST_SHIP_B1F,                               wFastShipB1FSceneID
+;	scene_var MOBILE_TRADE_ROOM,                           wMobileTradeRoomSceneID
+;	scene_var MOBILE_BATTLE_ROOM,                          wMobileBattleRoomSceneID
 	db -1 ; end

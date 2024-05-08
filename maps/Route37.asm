@@ -175,65 +175,65 @@ Route37NoApricorn:
 	closetext
 	end
 
-Route37HiddenEther:
-	hiddenitem ETHER, EVENT_ROUTE_37_HIDDEN_ETHER
+;Route37HiddenEther:
+;	hiddenitem ETHER, EVENT_ROUTE_37_HIDDEN_ETHER
 
-TwinsAnnandanne1SeenText:
-	text "ANN: ANNE and I"
-	line "are in this to-"
-	cont "gether!"
-	done
+;TwinsAnnandanne1SeenText:
+;	text "ANN: ANNE and I"
+;	line "are in this to-"
+;	cont "gether!"
+;	done
 
-TwinsAnnandanne1BeatenText:
-	text "ANN & ANNE: Nnn… A"
-	line "little too strong."
-	done
+;TwinsAnnandanne1BeatenText:
+;	text "ANN & ANNE: Nnn… A"
+;	line "little too strong."
+;	done
 
-TwinsAnnandanne1AfterBattleText:
-	text "ANN: I can tell"
-	line "what my sister and"
+;TwinsAnnandanne1AfterBattleText:
+;	text "ANN: I can tell"
+;	line "what my sister and"
+;
+;	para "my #MON are"
+;	line "thinking."
+;	done
 
-	para "my #MON are"
-	line "thinking."
-	done
+;TwinsAnnandanne2SeenText:
+;	text "ANNE: ANN and I"
+;	line "are in this to-"
+;	cont "gether!"
+;	done
 
-TwinsAnnandanne2SeenText:
-	text "ANNE: ANN and I"
-	line "are in this to-"
-	cont "gether!"
-	done
+;TwinsAnnandanne2BeatenText:
+;	text "ANN & ANNE: Nnn… A"
+;	line "little too strong."
+;	done
 
-TwinsAnnandanne2BeatenText:
-	text "ANN & ANNE: Nnn… A"
-	line "little too strong."
-	done
+;TwinsAnnandanne2AfterBattleText:
+;	text "ANNE: We share the"
+;	line "same feelings as"
+;	cont "our #MON."
+;	done
 
-TwinsAnnandanne2AfterBattleText:
-	text "ANNE: We share the"
-	line "same feelings as"
-	cont "our #MON."
-	done
+;PsychicGregSeenText:
+;	text "#MON can't do a"
+;	line "thing if they are"
+;	cont "asleep."
+;
+;	para "I'll show you how"
+;	line "scary that is!"
+;	done
 
-PsychicGregSeenText:
-	text "#MON can't do a"
-	line "thing if they are"
-	cont "asleep."
+;PsychicGregBeatenText:
+;	text "I lost. That's"
+;	line "pretty sad…"
+;	done
 
-	para "I'll show you how"
-	line "scary that is!"
-	done
-
-PsychicGregBeatenText:
-	text "I lost. That's"
-	line "pretty sad…"
-	done
-
-PsychicGregAfterBattleText:
-	text "Putting #MON to"
-	line "sleep or paralyz-"
-	cont "ing them are good"
-	cont "battle techniques."
-	done
+;PsychicGregAfterBattleText:
+;	text "Putting #MON to"
+;	line "sleep or paralyz-"
+;	cont "ing them are good"
+;	cont "battle techniques."
+;	done
 
 MeetSunnyText:
 	text "SUNNY: Hi!"
@@ -338,7 +338,7 @@ Route37_MapEvents:
 
 	def_bg_events
 	bg_event  5,  3, BGEVENT_READ, Route37Sign
-	bg_event  4,  2, BGEVENT_ITEM, Route37HiddenEther
+;	bg_event  4,  2, BGEVENT_ITEM, Route37HiddenEther
 	bg_event 13,  5, BGEVENT_READ, Route37NoApricorn
 	bg_event 16,  5, BGEVENT_READ, Route37NoApricorn
 	bg_event 15,  7, BGEVENT_READ, Route37NoApricorn

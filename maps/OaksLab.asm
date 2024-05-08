@@ -22,32 +22,8 @@ OaksLabNoop2Scene:
 OaksLabMeetOakScene:
 	applymovement PLAYER, OaksLabPlayerWalkInMovement
 	turnobject OAKSLAB_BLUE, UP
-;	opentext
-;	writetext OaksLabRivalFedUpWithWaitingText
-;	waitbutton
-;	closetext
-;	opentext
-;	writetext OaksLabChoosePokemonText
-;	waitbutton
-;	closetext
-;	opentext
-;	writetext OaksLabRivalWhatAboutMeText
-;	waitbutton
-;	closetext
-;	opentext
-;	writetext OaksLabBePatientText
-;	waitbutton
-;	closetext
-;	setscene SCENE_OAKSLAB_CANT_LEAVE
 	setscene SCENE_OAKSLAB_RIVAL_BATTLE
 	jumptext OaksLabIntroConversationText
-;	end
-
-;OaksLabNoop2Scene:
-;OaksLabNoop3Scene:
-;OaksLabNoop4Scene:
-;OaksLabNoop5Scene:
-;	end
 
 ;scripts
 OakScript:
@@ -259,13 +235,13 @@ LookAtPokeballsEarlyScript:
 OaksLabRivalBattleScript:
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	turnobject OAKSLAB_BLUE, DOWN
-	showemote EMOTE_SHOCK, OAKSLAB_BLUE, 20
+	turnobject PLAYER, UP
 	opentext
 	writetext OaksLabRivalBattleChallengeText
 	waitbutton
 	closetext
 	readvar VAR_XCOORD
-	ifequal 4, .Skip
+	ifequal 5, .Skip
 	applymovement OAKSLAB_BLUE, OaksLabRivalStepLeftMovement
 .Skip
 	checkevent EVENT_GOT_CHARMANDER_FROM_OAK
@@ -273,79 +249,65 @@ OaksLabRivalBattleScript:
 	checkevent EVENT_GOT_SQUIRTLE_FROM_OAK
 	iftrue .RivalBattleBulbasaurScript
 	applymovement OAKSLAB_BLUE, OaksLabRivalBattleCharmanderMovement
-	sjump RivalBattleApproachScript
+	sjump OaksLabRivalBattleStart
 
 .RivalBattleSquirtleScript
 	applymovement OAKSLAB_BLUE, OaksLabRivalBattleSquirtleMovement
-	sjump RivalBattleApproachScript
+	sjump OaksLabRivalBattleStart
 
 .RivalBattleBulbasaurScript
 	applymovement OAKSLAB_BLUE, OaksLabRivalBattleBulbasaurMovement
-	sjump RivalBattleApproachScript
-
-RivalBattleApproachScript:
-	readvar VAR_XCOORD
-	ifequal 4, .FaceRight
-	turnobject OAKSLAB_BLUE, RIGHT
-	turnobject PLAYER, LEFT
-	sjump OaksLabRivalBattleStart
-.FaceRight
-	turnobject OAKSLAB_BLUE, LEFT
-	turnobject PLAYER, RIGHT
 	; fallthrough
 OaksLabRivalBattleStart:
-	winlosstext OaksLabRivalBattleWinText, OaksLabRivalBattleLossText
 	setlasttalked OAKSLAB_BLUE
+	winlosstext OaksLabRivalBattleWinText, OaksLabRivalBattleLossText
 	checkevent EVENT_GOT_SQUIRTLE_FROM_OAK
 	iftrue .RivalBulbasaur
 	checkevent EVENT_GOT_BULBASAUR_FROM_OAK
 	iftrue .RivalCharmander
-;	winlosstext OaksLabRivalBattleWinText, OaksLabRivalBattleLossText
-;	setlasttalked OAKSLAB_BLUE
 	loadtrainer RIVAL1, RIVAL1_1_SQUIRTLE
 	loadmem VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
-;	dontrestartmapmusic
 	reloadmap
 	sjump .FinishRival
 .RivalBulbasaur:
-;	winlosstext OaksLabRivalBattleWinText, OaksLabRivalBattleLossText
-;	setlasttalked OAKSLAB_BLUE
 	loadtrainer RIVAL1, RIVAL1_1_BULBASAUR
 	loadmem VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
-;	dontrestartmapmusic
 	reloadmap
 	sjump .FinishRival
 .RivalCharmander:
-;	winlosstext OaksLabRivalBattleWinText, OaksLabRivalBattleLossText
-;	setlasttalked OAKSLAB_BLUE
 	loadtrainer RIVAL1, RIVAL1_1_CHARMANDER
 	loadmem VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
-;	dontrestartmapmusic
 	reloadmap
 	sjump .FinishRival
 
 .FinishRival:
-;	playmusic MUSIC_RIVAL_ENCOUNTER
 	opentext
 	writetext OaksLabAfterRivalBattleText
 	waitbutton
 	closetext
 	playmusic MUSIC_RIVAL_ENCOUNTER
-;	scall OaksLabRivalStepsRightLeftScript
+	scall OaksLabRivalGoesAroundScript
 	applymovement OAKSLAB_BLUE, OaksLabRivalLeavesMovement
-	pause 10
+	pause 15
 	disappear OAKSLAB_BLUE
 	playsound SFX_EXIT_BUILDING
 	setscene SCENE_OAKSLAB_NOOP
 	setmapscene PALLET_TOWN, SCENE_PALLETTOWN_NOOP
 	special HealParty
 	waitsfx
-;	special FadeOutMusic
-;	playmapmusic
 	special RestartMapMusic
+	end
+
+OaksLabRivalGoesAroundScript:
+	readvar VAR_XCOORD
+	ifequal 5, .Left
+	applymovement OAKSLAB_BLUE, OaksLabRivalStepRightMovement
+	end
+.Left
+	applymovement OAKSLAB_BLUE, OaksLabRivalStepLeftMovement
 	end
 
 DeliverOaksParcelScript:
@@ -354,6 +316,7 @@ DeliverOaksParcelScript:
 	opentext
 	writetext OaksLabHowIsMyPokemonText
 	playsound SFX_ITEM
+	takeitem OAKS_PARCEL
 	waitsfx
 	promptbutton
 	writetext OaksLabParcelThanksText
@@ -365,13 +328,11 @@ DeliverOaksParcelScript:
 	writetext OaksLabRivalGrampsText
 	waitbutton
 	closetext
-	appear OAKSLAB_BLUE
-	applymovement OAKSLAB_BLUE, OaksLabRivalWalksInMovement
+	scall OaksLabRivalParcelEntranceScript
 	opentext
 	writetext OaksLabWhatDidYouCallMeForText
 	waitbutton
 	closetext
-;	special FadeOutMusic
 	special RestartMapMusic
 	opentext
 	writetext OaksLabOakHaveRequestText
@@ -381,9 +342,10 @@ DeliverOaksParcelScript:
 	disappear OAKSLAB_POKEDEX1
 	disappear OAKSLAB_POKEDEX2
 	promptbutton
-	writetext OaksLabOaksDreamText
-	promptbutton
-	writetext OaksLabOakGivePagerText
+	writetext OaksLabOaksDreamGivePagerText
+;	writetext OaksLabOaksDreamText
+;	promptbutton
+;	writetext OaksLabOakGivePagerText
 	promptbutton
 	stringtotext .pagercardname, MEM_BUFFER_1
 	scall .JumpstdReceiveItem
@@ -392,21 +354,22 @@ DeliverOaksParcelScript:
 	promptbutton
 	writetext OaksLabOakExplainsPagerText
 	waitbutton
-	closetext
-	opentext
+;	closetext
+;	opentext
+	setlasttalked OAKSLAB_BLUE
+	faceplayer
 	writetext OaksLabRivalLeavesAfterPokedexText
 	waitbutton
 	closetext
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	applymovement OAKSLAB_BLUE, OaksLabRivalLeavesMovement
-	pause 30
+	pause 15
 	disappear OAKSLAB_BLUE
 	setevent EVENT_GOT_POKEDEX
 ;	setflag ENGINE_MOBILE_SYSTEM
 	setmapscene VIRIDIAN_CITY, SCENE_VIRIDIANCITY_MAP_CARD
 	setmapscene ROUTE_22, SCENE_ROUTE22_RIVAL
 	setscene SCENE_OAKSLAB_NOOP
-;	special FadeOutMusic
 	special RestartMapMusic
 	opentext
 	writetext OaksLabOakGivePhoneNumberText
@@ -428,16 +391,24 @@ DeliverOaksParcelScript:
 .pagercardname
 	db "PAGER CARD@"
 
+OaksLabRivalParcelEntranceScript:
+	readvar VAR_FACING
+	ifequal DOWN, .Short
+	appear OAKSLAB_BLUE
+	applymovement OAKSLAB_BLUE, OaksLabRivalWalksInMovement
+	end
+.Short
+	moveobject OAKSLAB_BLUE, 4, 6
+	appear OAKSLAB_BLUE
+	applymovement OAKSLAB_BLUE, OaksLabRivalWalksInMovementShort
+	end
+
 BlueScript:
 	checkevent EVENT_OAKS_LAB_OAK
 	iftrue .OakNotHere
 	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
 	iftrue .LooksStronger
 	jumptextfaceplayer OaksLabRivalNotGreedyText
-;	checkscene
-;	ifequal SCENE_OAKSLAB_OAK_NOT_HERE, .OakNotHere
-;	ifequal SCENE_OAKSLAB_CANT_LEAVE, .NotGreedy
-;	ifequal SCENE_OAKSLAB_RIVAL_BATTLE, .LooksStronger
 .OakNotHere
 	jumptextfaceplayer OaksLabRivalOakNotHereText
 .LooksStronger
@@ -468,13 +439,6 @@ PokedexScript:
 	jumptext OaksLabPokedexText
 
 ; movements
-;OaksLabOakWalkInMovement:
-;	step UP
-;	step UP
-;	step UP
-;	step UP
-;	step_end
-
 OaksLabPlayerWalkInMovement:
 	step UP
 	step UP
@@ -524,36 +488,25 @@ RivalTakesBulbasaurMovement:
 	step UP
 	step_end
 
+OaksLabRivalStepRightMovement:
+	slow_step RIGHT
+	step_end
+
 OaksLabRivalStepLeftMovement:
-	step LEFT
+	slow_step LEFT
 	step_end
 
 OaksLabRivalBattleBulbasaurMovement:
-	step LEFT
+	slow_step LEFT
 OaksLabRivalBattleSquirtleMovement:
-	step LEFT
+	slow_step LEFT
 OaksLabRivalBattleCharmanderMovement:
-	step LEFT
-	step DOWN
-	step DOWN
+	slow_step LEFT
+	slow_step DOWN
 	step_end
 
-;OaksLabRivalBattleSquirtleMovement:
-;	step LEFT
-;	step LEFT
-;	step DOWN
-;	step DOWN
-;	step_end
-
-;OaksLabRivalBattleBulbasaurMovement:
-;	step LEFT
-;	step LEFT
-;	step LEFT
-;	step DOWN
-;	step DOWN
-;	step_end
-
 OaksLabRivalLeavesMovement:
+	slow_step DOWN
 	slow_step DOWN
 	slow_step DOWN
 	slow_step DOWN
@@ -563,6 +516,7 @@ OaksLabRivalLeavesMovement:
 
 OaksLabRivalWalksInMovement:
 	slow_step UP
+OaksLabRivalWalksInMovementShort:
 	slow_step UP
 	slow_step UP
 	slow_step UP
@@ -575,14 +529,11 @@ OaksLabRivalOakNotHereText:
 	cont "isn't around!"
 	done
 	
-;OaksLabRivalFedUpWithWaitingText:
 OaksLabIntroConversationText:
 	text "<RIVAL>: Gramps!"
 	line "I'm fed up with"
 	cont "waiting!"
-;	done
 
-;OaksLabChoosePokemonText:
 	para "OAK: <RIVAL>?"
 	line "Let me think..."
 
@@ -608,15 +559,11 @@ OaksLabIntroConversationText:
 	line "have only 3 left,"
 	cont "but you can have"
 	cont "one! Choose!"
-;	done
 
-;OaksLabRivalWhatAboutMeText:
 	para "<RIVAL>: Hey!"
 	line "Gramps! What"
 	cont "about me?"
-;	done
 
-;OaksLabBePatientText:
 	para "OAK: Be patient!"
 	line "<RIVAL>, you can"
 	cont "have one too!"
@@ -691,21 +638,6 @@ OaksLabRivalTakesPokemonText:
 	text "<RIVAL>: I'll take"
 	line "this one, then!"
 	done
-
-;OaksLabRivalReceivedCharmanderText:
-;	text "<RIVAL> received"
-;	line "a CHARMANDER!"
-;	done
-
-;OaksLabRivalReceivedSquirtleText:
-;	text "<RIVAL> received"
-;	line "a SQUIRTLE!"
-;	done
-	
-;OaksLabRivalReceivedBulbasaurText:
-;	text "<RIVAL> received"
-;	line "a BULBASAUR!"
-;	done
 
 OaksLabRivalMineLooksStrongerText:
 	text "<RIVAL>: My"
@@ -813,7 +745,8 @@ OaksLabOakHaveRequestText:
 	line "#DEX from OAK!"
 	done
 
-OaksLabOaksDreamText:
+;OaksLabOaksDreamText:
+OaksLabOaksDreamGivePagerText:
 	text "OAK: To make a"
 	line "complete guide"
 	cont "on all the #MON"
@@ -834,10 +767,10 @@ OaksLabOaksDreamText:
 	para "This is a great"
 	line "undertaking in"
 	cont "#MON history!"
-	done
+;	done
 
-OaksLabOakGivePagerText:
-	text "<PLAYER>, <RIVAL>,"
+;OaksLabOakGivePagerText:
+	para "<PLAYER>, <RIVAL>,"
 	line "Take this, too."
 
 	para "It will come in"
@@ -867,14 +800,14 @@ OaksLabOakExplainsPagerText:
 	para "But you need to"
 	line "get #MON PAGERs"
 	cont "to call with it."
+
+	para "<RIVAL>: Alright"
+	line "Gramps! Leave it"
+	cont "all to me!"
 	done
 
 OaksLabRivalLeavesAfterPokedexText:
-	text "<RIVAL>: Alright"
-	line "Gramps! Leave it"
-	cont "all to me!"
-
-	para "<PLAYER>, I hate to"
+	text "<PLAYER>, I hate to"
 	line "say it, but I"
 	cont "don't need you!"
 
@@ -1135,7 +1068,15 @@ DebugFullPokegear:
 	closetext
 	end
 
-;Debug:
+DebugMasterBalls:
+	opentext
+	writetext DebugMasterBallsText
+	yesorno
+	iffalse .End
+	giveitem MASTER_BALL, 10
+.End
+	closetext
+	end
 
 DebugAllTMHMs:
 	opentext
@@ -1243,7 +1184,17 @@ DebugAllTMHMs:
 
 ;Debug:
 ;Debug:
-;Debug:
+
+DebugLockedGyms:
+	opentext
+	writetext DebugViridianGymText
+	yesorno
+	iffalse .End
+	setevent EVENT_CINNABAR_GYM_LEADER_RETURNED
+	setevent EVENT_VIRIDIAN_GYM_LEADER_RETURNED
+.End
+	closetext
+	end
 
 DebugBeatJohto:
 	opentext
@@ -1380,6 +1331,11 @@ DebugFullPokegearText:
 	line "Fly Anywhere?"
 	done
 
+DebugMasterBallsText:
+	text "Give 10"
+	line "MASTER BALLs?"
+	done
+
 DebugAllTMHMsText:
 	text "All TMs and"
 	line "all HMs?"
@@ -1388,6 +1344,11 @@ DebugAllTMHMsText:
 DebugAllHMsText:
 	text "All HMs?"
 	line "(not TMs)"
+	done
+
+DebugViridianGymText:
+	text "Unlock CINNABAR,"
+	line "VIRIDIAN GYMs?"
 	done
 
 DebugBeatJohtoText:
@@ -1446,12 +1407,12 @@ OaksLab_MapEvents:
 	bg_event  9,  1, BGEVENT_READ, DebugBeatEliteFour
 ; back bookshelves
 	bg_event  0,  6, BGEVENT_READ, DebugFullPokegear
-;	bg_event  1,  6, BGEVENT_READ, Debug
+	bg_event  1,  6, BGEVENT_READ, DebugMasterBalls
 	bg_event  2,  6, BGEVENT_READ, DebugAllTMHMs
 ;	bg_event  3,  6, BGEVENT_READ, DebugAllHMs
 ;	bg_event  6,  6, BGEVENT_READ, Debug
 ;	bg_event  7,  6, BGEVENT_READ, Debug
-;	bg_event  8,  6, BGEVENT_READ, Debug
+	bg_event  8,  6, BGEVENT_READ, DebugLockedGyms
 	bg_event  9,  6, BGEVENT_READ, DebugBeatJohto
 ; front bookshelves
 	bg_event  0,  7, BGEVENT_READ, DebugBeatBrock

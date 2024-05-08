@@ -1,31 +1,113 @@
 	object_const_def
-	const ROUTE_11GATE_OFFICER
 
 Route11Gate_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
 
+Route11GateOaksAideScript:
+	faceplayer
+	opentext
+	checkevent EVENT_GOT_ITEMFINDER
+	iftrue .GotItemfinder
+	writetext Route11GateOaksAideAskPokemonText
+	yesorno
+	iffalse .SaidNo
+	readvar VAR_DEXCAUGHT
+	getnum STRING_BUFFER_3
+	ifless 30, .NotEnough
+	writetext Route11GateOaksAideCongratsText
+	promptbutton
+	verbosegiveitem ITEMFINDER
+	setevent EVENT_GOT_ITEMFINDER
+.GotItemfinder
+	writetext Route11GateOaksAideItemfinderExplainText
+	waitbutton
+	closetext
+	end
+
+.NotEnough
+	writetext Route11GateOaksAideNotEnoughText
+	promptbutton
+.SaidNo
+	writetext Route11GateOaksAideLookForPokemonText
+	waitbutton
+	closetext
+	end
+
+Route11GateOaksAideAskPokemonText:
+	text "Hi! Remember me?"
+	line "I'm PROF.OAK's"
+	cont "AIDE."
+
+	para "If you caught 30"
+	line "kinds of #MON,"
+	cont "I'm supposed to"
+	cont "give you an"
+	cont "ITEMFINDER!"
+
+	para "So, <PLAYER>! Have"
+	line "you caught at"
+	cont "least 30 kinds of"
+	cont "#MON?"
+	done
+
+Route11GateOaksAideNotEnoughText:
+	text "You have only"
+	line "caught @"
+	text_ram wStringBuffer3
+	text " kinds"
+	cont "of #MON."
+	done
+
+Route11GateOaksAideLookForPokemonText:
+	text "Look for more"
+	line "#MON in caves"
+	cont "and tall grass!"
+	done
+
+Route11GateOaksAideCongratsText:
+	text "Great! You have"
+	line "caught @"
+	text_ram wStringBuffer3
+	text " kinds"
+	cont "of #MON!"
+	cont "Congratulations!"
+	done
+
+Route11GateOaksAideItemfinderExplainText:
+	text "There are items on"
+	line "the ground that"
+	cont "can't be seen."
+
+	para "ITEMFINDER will"
+	line "detect an item"
+	cont "close to you."
+
+	para "It can't pinpoint"
+	line "it, so you have"
+	cont "to look yourself!"
+	done
+
 Route11GateOfficerScript:
 	jumptextfaceplayer Route11GateOfficerText
-
 Route11GateOfficerText:
-	text "Hello, passerby!"
+	text "When you catch"
+	line "lots of #MON,"
+	cont "isn't it hard to"
+	cont "think up names?"
 
-	para "Have you seen"
-	line "DIGLETTS CAVE?"
+	para "In LAVENDER TOWN,"
+	line "there's a man who"
+	cont "rates #MON"
+	cont "nicknames."
 
-	para "You can go"
-	line "through it to get"
-	cont "to ROUTE 2!"
-
-	para "That is,"
-	line "if somthing isn't"
-
-	para "blocking the"
-	line "entrance…"
-
+	para "He'll help you"
+	line "rename them too!"
 	done
+
+Route11GateDebugItemfinder:
+	hiddenitem ITEMFINDER, EVENT_GOT_ITEMFINDER
 
 Route11Gate_MapEvents:
 	db 0, 0 ; filler
@@ -39,6 +121,7 @@ Route11Gate_MapEvents:
 	def_coord_events
 
 	def_bg_events
-
+	bg_event 0,  0, BGEVENT_ITEM, Route11GateDebugItemfinder
 	def_object_events
 	object_event  4,  1, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route11GateOfficerScript, -1
+	object_event  3,  6, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route11GateOaksAideScript, -1

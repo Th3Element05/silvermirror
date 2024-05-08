@@ -14,7 +14,7 @@ CeruleanCity_MapScripts:
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, CeruleanCityFlypointCallback
 	callback MAPCALLBACK_OBJECTS, CeruleanCityMoveOfficerCallback
-	callback MAPCALLBACK_OBJECTS, CeruleanCityMoveSlowbroCallback
+;	callback MAPCALLBACK_OBJECTS, CeruleanCityMoveSlowbroCallback
 	callback MAPCALLBACK_OBJECTS, CeruleanCaveBlockCallback
 
 CeruleanCityNoop1Scene:
@@ -27,12 +27,12 @@ CeruleanCityFlypointCallback:
 
 CeruleanCityMoveOfficerCallback:
 	checkevent EVENT_HELPED_BILL
-	iftrue .Skip
+	iftrue .BillHelped
 	moveobject CERULEANCITY_OFFICER, 27, 12
-.Skip:
-	endcallback
+.BillHelped
+;	endcallback
 
-CeruleanCityMoveSlowbroCallback:
+;CeruleanCityMoveSlowbroCallback:
 	checkevent EVENT_BEAT_LTSURGE
 	iffalse .Skip
 	moveobject CERULEANCITY_SLOWBRO, 28, 26
@@ -50,72 +50,60 @@ CeruleanCaveBlockCallback:
 	endcallback
 
 ; scripts
-CeruleanCityRivalEncounterL:
+CeruleanCityRivalEncounterR:
 	moveobject CERULEANCITY_RIVAL, 21, 2
 	; fallthrough
-CeruleanCityRivalEncounterR:
+CeruleanCityRivalEncounterL:
 	playmusic MUSIC_RIVAL_ENCOUNTER
-	pause 15
+	pause 20
 	appear CERULEANCITY_RIVAL
-	applymovement CERULEANCITY_RIVAL, CeruleanCityRivalMovement
-	readvar VAR_XCOORD
-	ifequal 20, .FaceRight
-	turnobject CERULEANCITY_RIVAL, RIGHT
-	turnobject PLAYER, LEFT
-	sjump CeruleanRivalBattle
-.FaceRight
-	turnobject CERULEANCITY_RIVAL, LEFT
-	turnobject PLAYER, RIGHT
-	; fallthrough
-CeruleanRivalBattle:
+	applymovement CERULEANCITY_RIVAL, CeruleanCityRivalApproachMovement
 	opentext
 	writetext CeruleanCityRivalBeforeBattleText
 	waitbutton
 	closetext
-	winlosstext CeruleanCityRivalBattleWinText, CeruleanCityRivalBattleLossText
+	setevent EVENT_CERULEAN_CITY_RIVAL
 	setlasttalked CERULEANCITY_RIVAL
+	winlosstext CeruleanCityRivalBattleWinText, CeruleanCityRivalBattleLossText
 	checkevent EVENT_GOT_SQUIRTLE_FROM_OAK
 	iftrue .RivalBulbasaur
 	checkevent EVENT_GOT_BULBASAUR_FROM_OAK
 	iftrue .RivalCharmander
-;	winlosstext CeruleanCityRivalBattleWinText, CeruleanCityRivalBattleLossText
-;	setlasttalked CERULEANCITY_RIVAL
-	loadtrainer RIVAL1, RIVAL2_1_SQUIRTLE
+	loadtrainer RIVAL1, RIVAL1_3_SQUIRTLE
 	startbattle
-;	dontrestartmapmusic
-	reloadmap
+	reloadmapafterbattle
 	sjump .FinishRival
 .RivalBulbasaur
-;	winlosstext CeruleanCityRivalBattleWinText, CeruleanCityRivalBattleLossText
-;	setlasttalked CERULEANCITY_RIVAL
-	loadtrainer RIVAL1, RIVAL2_1_BULBASAUR
+	loadtrainer RIVAL1, RIVAL1_3_BULBASAUR
 	startbattle
-;	dontrestartmapmusic
-	reloadmap
+	reloadmapafterbattle
 	sjump .FinishRival
 .RivalCharmander
-;	winlosstext CeruleanCityRivalBattleWinText, CeruleanCityRivalBattleLossText
-;	setlasttalked CERULEANCITY_RIVAL
-	loadtrainer RIVAL1, RIVAL2_1_CHARMANDER
-	loadmem VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	loadtrainer RIVAL1, RIVAL1_3_CHARMANDER
 	startbattle
-;	dontrestartmapmusic
-	reloadmap
+	reloadmapafterbattle
 	sjump .FinishRival
 
 .FinishRival
-;	playmusic MUSIC_RIVAL_ENCOUNTER
 	opentext
 	writetext CeruleanCityRivalAfterBattleText
 	waitbutton
 	closetext
 	playmusic MUSIC_RIVAL_ENCOUNTER
-	applymovement CERULEANCITY_RIVAL, CeruleanCityRivalMovement
+	scall CeruleanCityRivalGoesAroundScript
+	applymovement CERULEANCITY_RIVAL, CeruleanCityRivalLeavesMovement
 	disappear CERULEANCITY_RIVAL
 	setscene SCENE_CERULEANCITY_NOOP
-;	special FadeOutMusic
-;	playmapmusic
 	special RestartMapMusic
+	end
+
+CeruleanCityRivalGoesAroundScript:
+	readvar VAR_XCOORD
+	ifequal 20, .Right
+	applymovement CERULEANCITY_RIVAL, CeruleanCityRivalLeftMovement
+	end
+.Right
+	applymovement CERULEANCITY_RIVAL, CeruleanCityRivalRightMovement
 	end
 
 CeruleanCityRivalBeforeBattleText:
@@ -471,8 +459,18 @@ CeruleanCityMartSign:
 	jumpstd MartSignScript
 
 ; movements
-CeruleanCityRivalMovement:
+CeruleanCityRivalLeftMovement:
+	slow_step LEFT
+	step_end
+
+CeruleanCityRivalRightMovement:
+	slow_step RIGHT
+	step_end
+
+CeruleanCityRivalLeavesMovement:
 	slow_step DOWN
+	slow_step DOWN
+CeruleanCityRivalApproachMovement:
 	slow_step DOWN
 	slow_step DOWN
 	slow_step DOWN

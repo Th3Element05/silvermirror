@@ -1,7 +1,4 @@
 	object_const_def
-	const PEWTERGYM_BROCK
-	const PEWTERGYM_YOUNGSTER
-	const PEWTERGYM_GYM_GUIDE
 
 PewterGym_MapScripts:
 	def_scene_scripts
@@ -21,32 +18,31 @@ PewterGymBrockScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_BROCK
+	setevent EVENT_BEAT_CAMPER_ISAAC
+	setmapscene PEWTER_CITY, SCENE_PEWTERCITY_NOOP
+	setmapscene ROUTE_22, SCENE_ROUTE22_NOOP
+	setevent EVENT_PEWTER_CITY_BLOCKING_YOUNGSTER
+	setevent EVENT_GOT_POKEBALLS_FROM_OAK
 	opentext
-	writetext ReceivedBoulderBadgeText
+	writetext ReceivedBoulderbadgeText
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_BOULDERBADGE
-	waitbutton
-;	closetext
+	promptbutton
+	writetext BrockBoulderbadgeText
+	promptbutton
 	; fallthrough
 .FightDone:
 	checkevent EVENT_GOT_TM34_BIDE
 	iftrue .SpeechAfterTM
-	setevent EVENT_BEAT_CAMPER_ISAAC
-	setmapscene PEWTER_CITY, SCENE_PEWTERCITY_NOOP
-	setevent EVENT_PEWTER_CITY_BLOCKING_YOUNGSTER
-	setevent EVENT_GOT_POKEBALLS_FROM_OAK
-	writetext BrockBoulderBadgeText
-	promptbutton
 	verbosegiveitem TM_BIDE
-	iffalse .NoRoomForBide
 	setevent EVENT_GOT_TM34_BIDE
+	writetext BrockTMBideText
+	promptbutton
 	; fallthrough
 .SpeechAfterTM
-	writetext BrockTMBideText
+	writetext BrockAfterBattleText
 	waitbutton
-	; fallthrough
-.NoRoomForBide
 	closetext
 	checkevent EVENT_TALKED_TO_MOM_AFTER_GETTING_POKEDEX
 	iffalse .DoMomCall
@@ -83,19 +79,15 @@ BrockWinLossText:
 	cont "the BOULDERBADGE!"
 	done
 
-ReceivedBoulderBadgeText:
+ReceivedBoulderbadgeText:
 	text "<PLAYER> received"
 	line "BOULDERBADGE."
 	done
 
-BrockBoulderBadgeText:
+BrockBoulderbadgeText:
 	text "That's an official"
 	line "POKEMON LEAGUE"
 	cont "BADGE!"
-
-	para "Its bearer's"
-	line "POKEMON become"
-	cont "more powerful!"
 
 	para "The technique"
 	line "FLASH can now be"
@@ -125,18 +117,18 @@ BrockTMBideText:
 	line "absorb damage in"
 	cont "battle then pay"
 	cont "it back double!"
-	
-	para "By using a TM, a"
-	line "#MON will"
+	done
 
-	para "instantly learn a"
-	line "new move."
+BrockAfterBattleText:
+	text "By using a TM, a"
+	line "#MON will"
+	cont "instantly learn"
+	line "a new move."
 
 	para "Don't worry, TMs"
 	line "are reusable so"
-
-	para "use them however"
-	line "you like."
+	cont "use them however"
+	cont "you like."
 	done
 
 TrainerCamperIsaac:
@@ -173,28 +165,12 @@ CamperIsaacAfterBattleText:
 	done
 
 PewterGymGuideScript:
-	faceplayer
-	opentext
 	checkevent EVENT_BEAT_BROCK
 	iftrue .PewterGymGuideWinScript
-	writetext PewterGymGuideText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer PewterGymGuideText
 
 .PewterGymGuideWinScript:
-	writetext PewterGymGuideWinText
-	waitbutton
-	closetext
-	end
-
-PewterGymStatue:
-	checkflag ENGINE_BOULDERBADGE
-	iftrue .Beaten
-	jumpstd GymStatue1Script
-.Beaten:
-	gettrainername STRING_BUFFER_4, BROCK, BROCK1
-	jumpstd GymStatue2Script
+	jumptextfaceplayer PewterGymGuideWinText
 
 PewterGymGuideText:
 	text "Hiya! I can tell"
@@ -226,6 +202,14 @@ PewterGymGuideWinText:
 	cont "champ material!"
 	done
 
+PewterGymStatue:
+	gettrainername STRING_BUFFER_4, BROCK, BROCK1
+	checkflag ENGINE_BOULDERBADGE
+	iftrue .Beaten
+	jumpstd GymStatue1Script
+.Beaten:
+	jumpstd GymStatue2Script
+
 PewterGym_MapEvents:
 	db 0, 0 ; filler
 
@@ -240,6 +224,6 @@ PewterGym_MapEvents:
 	bg_event  7, 11, BGEVENT_READ, PewterGymStatue
 
 	def_object_events
-	object_event  5,  1, SPRITE_BROCK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PewterGymBrockScript, -1
+	object_event  5,  1, SPRITE_BROCK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterGymBrockScript, -1
 	object_event  3,  7, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperIsaac, -1
 	object_event  6, 11, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 1, PewterGymGuideScript, -1

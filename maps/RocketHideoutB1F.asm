@@ -35,8 +35,8 @@ RocketHideoutB1F_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 11,  2, CELADON_GAME_CORNER, 3 ; 1
-	warp_event 13,  2, ROCKET_HIDEOUT_B2F, 1  ; 2
+	warp_event 13,  2, CELADON_GAME_CORNER, 3 ; 1
+	warp_event 15,  2, ROCKET_HIDEOUT_B2F, 1  ; 2
 	warp_event 13, 20, ROCKET_HIDEOUT_B2F, 2  ; 3
 
 	def_coord_events

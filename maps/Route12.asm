@@ -21,11 +21,13 @@ Route12Snorlax:
 	writetext Route12PlayPokeFluteAskText
 	yesorno
 	iffalse .LetSleep
-	writetext Route12PlayPokeFluteText
 	special FadeOutMusic
-	pause 10
+	writetext Route12PlayPokeFluteText
+;	special FadeOutMusic
+;	pause 20
 	playsound SFX_POKEFLUTE
 	waitsfx
+;	promptbutton
 	writetext Route12SnorlaxWokeUpText
 	promptbutton
 	sjump Route12SnorlaxBattleScript
@@ -48,7 +50,7 @@ Route12SnorlaxBattleScript:
 	loadwildmon SNORLAX, 30
 	startbattle
 	disappear ROUTE12_SNORLAX
-	setevent EVENT_FOUGHT_SNORLAX
+	setevent EVENT_WOKE_SNORLAX
 	reloadmapafterbattle
 	special CheckBattleCaughtResult
 	iffalse .nocatch
@@ -77,8 +79,8 @@ Route12PlayPokeFluteAskText:
 
 Route12PlayPokeFluteText:
 	text "<PLAYER> played"
-	line "the # FLUTE for"
-	cont "SNORLAX!"
+	line "the # FLUTE!"
+;	cont "for SNORLAX!"
 	done
 
 Route12RadioNearSnorlaxText:
