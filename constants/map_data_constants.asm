@@ -141,7 +141,7 @@ DEF JOHTO_FLYPOINT EQU const_value
 	const FLY_MT_SILVER
 ; kanto
 DEF KANTO_FLYPOINT EQU const_value
-	const FLY_PALLET
+;	const FLY_PALLET
 	const FLY_VIRIDIAN
 	const FLY_PEWTER
 	const FLY_CERULEAN
@@ -153,5 +153,6 @@ DEF KANTO_FLYPOINT EQU const_value
 	const FLY_FUCHSIA
 	const FLY_CINNABAR
 	const FLY_INDIGO
+	const FLY_PALLET
 DEF NUM_FLYPOINTS EQU const_value
 
