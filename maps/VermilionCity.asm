@@ -20,6 +20,7 @@ VermilionCityFlypointCallback:
 
 VermilionCityAskEnterDockScript:
 	turnobject VERMILIONCITY_PORT_SAILOR, LEFT
+	turnobject PLAYER, RIGHT
 	opentext
 	checkevent EVENT_SS_ANNE_SET_SAIL
 	iftrue .NotHere

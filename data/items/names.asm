@@ -53,7 +53,7 @@ ItemNames::
 	li "X SPECIAL"
 	li "COIN CASE"
 	li "ITEMFINDER"
-	li "POKé FLUTE" ; POKE_FLUTE
+	li "POKé FLUTE" ; "POKE_FLUTE"
 	li "EXP.SHARE"
 	li "OLD ROD"
 	li "GOOD ROD"
@@ -64,7 +64,7 @@ ItemNames::
 	li "MAX ETHER"
 	li "ELIXER"
 	li "RED SCALE"
-	li "SECRETPOTION"
+	li "OAK's PARCEL" ; "SECRETPOTION"
 	li "S.S.TICKET"
 	li "MYSTERY EGG"
 	li "CLEAR BELL"
@@ -111,7 +111,7 @@ ItemNames::
 	li "BIG PEARL"
 	li "EVERSTONE"
 	li "SPELL TAG"
-	li "SILPH SCOPE" ; "RAGECANDYBAR" ; to be SILPH SCOPE
+	li "SILPH SCOPE" ; "RAGECANDYBAR"
 	li "GS BALL"
 	li "BLUE CARD"
 	li "MIRACLE SEED"
@@ -125,7 +125,7 @@ ItemNames::
 	li "HARD STONE"
 	li "LUCKY EGG"
 	li "CARD KEY"
-	li "BIKE VOUCHER" ; MACHINE PART
+	li "BIKE VOUCHER" ; "MACHINE PART"
 	li "EGG TICKET"
 	li "LOST ITEM"
 	li "STARDUST"

@@ -2326,6 +2326,8 @@ GymStatue1Script:
 	getcurlandmarkname STRING_BUFFER_3
 	opentext
 	farwritetext GymStatue_CityGymText
+	promptbutton
+	farwritetext GymStatue_WinningTrainers1Text
 	waitbutton
 	closetext
 	end
@@ -2335,7 +2337,7 @@ GymStatue2Script:
 	opentext
 	farwritetext GymStatue_CityGymText
 	promptbutton
-	farwritetext GymStatue_WinningTrainersText
+	farwritetext GymStatue_WinningTrainers2Text
 	waitbutton
 	closetext
 	end

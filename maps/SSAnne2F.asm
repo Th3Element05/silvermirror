@@ -13,74 +13,61 @@ SSAnne2FNoop1Scene:
 SSAnne2FNoop2Scene:
 	end
 
-
-
-SSAnne2FRivalEncounterR:
+SSAnne2FRivalEncounterL:
 	moveobject SSANNE2F_RIVAL, 34, 4
 	; fallthrough
-SSAnne2FRivalEncounterL:
+SSAnne2FRivalEncounterR:
 	playmusic MUSIC_RIVAL_ENCOUNTER
-	pause 15
+	pause 20
 	appear SSANNE2F_RIVAL
-	applymovement SSANNE2F_RIVAL, SSAnne2FRivalApproachMovement
-	readvar VAR_XCOORD
-	ifequal 34, .FaceRight
-	turnobject SSANNE2F_RIVAL, RIGHT
-	turnobject PLAYER, LEFT
-	sjump SSAnne2FRivalBattle
-.FaceRight
-	turnobject SSANNE2F_RIVAL, LEFT
-	turnobject PLAYER, RIGHT
-	; fallthrough
-SSAnne2FRivalBattle:
+	applymovement SSANNE2F_RIVAL, SSAnne2FRivalWalkDownMovement
 	opentext
 	writetext SSAnne2FRivalBeforeBattleText
 	waitbutton
 	closetext
-	winlosstext SSAnne2FRivalBattleWinText, SSAnne2FRivalBattleLossText
+	setevent EVENT_SSANNE_2F_RIVAL
 	setlasttalked SSANNE2F_RIVAL
+	winlosstext SSAnne2FRivalBattleWinText, SSAnne2FRivalBattleLossText
 	checkevent EVENT_GOT_SQUIRTLE_FROM_OAK
 	iftrue .RivalBulbasaur
 	checkevent EVENT_GOT_BULBASAUR_FROM_OAK
 	iftrue .RivalCharmander
-;	winlosstext SSAnne2FRivalBattleWinText, SSAnne2FRivalBattleLossText
-;	setlasttalked SSANNE2F_RIVAL
-	loadtrainer RIVAL1, RIVAL2_2_SQUIRTLE
+	loadtrainer RIVAL2, RIVAL2_1_SQUIRTLE
 	startbattle
-;	dontrestartmapmusic
-	reloadmap
+	reloadmapafterbattle
 	sjump .FinishRival
 .RivalBulbasaur
-;	winlosstext SSAnne2FRivalBattleWinText, SSAnne2FRivalBattleLossText
-;	setlasttalked SSANNE2F_RIVAL
-	loadtrainer RIVAL1, RIVAL2_2_BULBASAUR
+	loadtrainer RIVAL2, RIVAL2_1_BULBASAUR
 	startbattle
-;	dontrestartmapmusic
-	reloadmap
+	reloadmapafterbattle
 	sjump .FinishRival
 .RivalCharmander
-;	winlosstext SSAnne2FRivalBattleWinText, SSAnne2FRivalBattleLossText
-;	setlasttalked SSANNE2F_RIVAL
-	loadtrainer RIVAL1, RIVAL2_2_CHARMANDER
-	loadmem VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	loadtrainer RIVAL2, RIVAL2_1_CHARMANDER
 	startbattle
-;	dontrestartmapmusic
-	reloadmap
+	reloadmapafterbattle
 	sjump .FinishRival
 
 .FinishRival
-;	playmusic MUSIC_RIVAL_ENCOUNTER
 	opentext
 	writetext SSAnne2FRivalAfterBattleText
 	waitbutton
 	closetext
 	playmusic MUSIC_RIVAL_ENCOUNTER
+	scall SSAnne2FRivalGoesAroundScript
 	applymovement SSANNE2F_RIVAL, SSAnne2FRivalLeavesMovement
 	disappear SSANNE2F_RIVAL
 	setscene SCENE_SSANNE2F_NOOP
-;	special FadeOutMusic
-;	playmapmusic
 	special RestartMapMusic
+	end
+
+SSAnne2FRivalGoesAroundScript:
+	readvar VAR_XCOORD
+	ifequal 34, .Right
+	applymovement SSANNE2F_RIVAL, SSAnne2FRivalLeftMovement
+	applymovement SSANNE2F_RIVAL, SSAnne2FRivalWalkDownMovement
+	end
+.Right
+	applymovement SSANNE2F_RIVAL, SSAnne2FRivalRightMovement
 	end
 
 SSAnne2FRivalBeforeBattleText:
@@ -277,8 +264,13 @@ SSAnne2FWaiterText:
 	cont "invited trainers!"
 	done
 
-SSAnne2FRivalApproachMovement:
-	slow_step DOWN
+SSAnne2FRivalLeftMovement:
+	slow_step LEFT
+	step_end
+
+SSAnne2FRivalRightMovement:
+	slow_step RIGHT
+SSAnne2FRivalWalkDownMovement:
 	slow_step DOWN
 	slow_step DOWN
 	slow_step DOWN
@@ -286,9 +278,6 @@ SSAnne2FRivalApproachMovement:
 	step_end
 
 SSAnne2FRivalLeavesMovement:
-	slow_step DOWN
-	slow_step DOWN
-	slow_step DOWN
 	slow_step LEFT
 	slow_step LEFT
 	slow_step LEFT

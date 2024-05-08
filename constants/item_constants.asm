@@ -70,7 +70,7 @@
 	const MAX_ETHER    ; 3e
 	const ELIXER       ; 3f
 	const RED_SCALE    ; 40
-	const SECRETPOTION ; 41 ; quest item? can repurpose?
+	const OAKS_PARCEL  ; 41 ; SECRETPOTION ; 41
 	const S_S_TICKET   ; 42
 	const MYSTERY_EGG  ; 43
 	const CLEAR_BELL   ; 44

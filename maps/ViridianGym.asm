@@ -1,355 +1,437 @@
 	object_const_def
-;	const VIRIDIANGYM_BLUE
-;	const VIRIDIANGYM_GYM_GUIDE
+	const VIRIDIANGYM_GIOVANNI
 
 ViridianGym_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
 
-;ViridianGymBlueScript:
-;	faceplayer
-;	opentext
-;	checkflag ENGINE_EARTHBADGE
-;	iftrue .FightDone
-;	writetext LeaderBlueBeforeText
-;	waitbutton
-;	closetext
-;	winlosstext LeaderBlueWinText, 0
-;	loadtrainer BLUE, BLUE1
-;	startbattle
-;	reloadmapafterbattle
-;	setevent EVENT_BEAT_GIOVANNI ;EVENT_BEAT_BLUE
-;	setevent EVENT_BEAT_COOL_DUO_ELAN_AND_IDA
-;	setevent EVENT_BEAT_COOLTRAINERM_ARWIN
-;	setevent EVENT_BEAT_COOLTRAINERM_BONITA
-;	setevent EVENT_BEAT_COOLTRAINERF_SALMA
-;	opentext
-;	writetext Text_ReceivedEarthBadge
-;	playsound SFX_GET_BADGE
-;	waitsfx
-;	setflag ENGINE_EARTHBADGE
-;	writetext LeaderBlueAfterText
-;	waitbutton
-;	closetext
-;	end
-;
-;.FightDone:
-;	writetext LeaderBlueEpilogueText
-;	waitbutton
-;	closetext
-;	end
-;
-;ViridianGymGuideScript:
-;	faceplayer
-;	opentext
-;	checkevent EVENT_BEAT_GIOVANNI ;EVENT_BEAT_BLUE
-;	iftrue .ViridianGymGuideWinScript
-;	writetext ViridianGymGuideText
-;	waitbutton
-;	closetext
-;	end
-;
-;.ViridianGymGuideWinScript:
-;	writetext ViridianGymGuideWinText
-;	waitbutton
-;	closetext
-;	end
+ViridianGymGiovanniScript:
+	faceplayer
+	opentext
+	checkevent EVENT_BEAT_GIOVANNI
+	iftrue .FightDone
+	writetext GiovanniIntroText
+	waitbutton
+	closetext
+	winlosstext GiovanniWinLossText, 0
+	loadtrainer GIOVANNI, GIOVANNI1
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_GIOVANNI
+	setevent EVENT_BEAT_BLACKBELT_WAI
+	setevent EVENT_BEAT_COOLTRAINERM_PAUL
+	setevent EVENT_BEAT_COOLTRAINERM_NICK
+	setevent EVENT_BEAT_BLACKBELT_TY
+	setevent EVENT_BEAT_POKEMANIAC_ETHAN
+	setevent EVENT_BEAT_COOLTRAINERM_AARON
+	setevent EVENT_BEAT_BLACKBELT_CHO
+	setevent EVENT_BEAT_POKEMANIAC_DONALD
+	opentext
+	writetext ReceivedEarthbadgeText
+	playsound SFX_GET_BADGE
+	waitsfx
+	setflag ENGINE_EARTHBADGE
+	promptbutton
+	writetext GiovanniEarthbadgeText
+	promptbutton
+	; fallthrough
+.FightDone:
+	checkevent EVENT_GOT_TM27_FISSURE
+	iftrue .GotFissure
+	verbosegiveitem TM_FISSURE
+	setevent EVENT_GOT_TM27_FISSURE
+	writetext GiovanniExplainTMText
+	promptbutton
+.GotFissure:
+	writetext GiovanniAfterBattleText
+	waitbutton
+	closetext
+	special FadeBlackQuickly
+	special ReloadSpritesNoPalettes
+	disappear VIRIDIANGYM_GIOVANNI
+	pause 30
+	special FadeInQuickly
+	end
+
+GiovanniIntroText:
+	text "Fwahahaha! This is"
+	line "my hideout!"
+
+	para "I planned to"
+	line "resurrect TEAM"
+	cont "ROCKET here!"
+
+	para "But, you have"
+	line "caught me again!"
+	cont "So be it! This"
+	cont "time, I'm not"
+	cont "holding back!"
+
+	para "Once more, you"
+	line "shall face"
+	cont "GIOVANNI, the"
+	cont "greatest trainer!"
+	done
+
+GiovanniWinLossText:
+	text "Ha!"
+	line "That was a truly"
+	cont "intense fight!"
+	cont "You have won!"
+	cont "As proof, here is"
+	cont "the EARTHBADGE!"
+	done
+
+ReceivedEarthbadgeText:
+	text "<PLAYER> received"
+	line "EARTHBADGE."
+	done
+
+GiovanniEarthbadgeText:
+	text "The EARTHBADGE"
+	line "makes #MON of"
+	cont "any level obey!"
+
+	para "It is evidence of"
+	line "your mastery as a"
+	cont "#MON trainer!"
+
+	para "With it, you can"
+	line "enter the #MON"
+	cont "LEAGUE!"
+
+	para "It is my gift for"
+	line "your #MON"
+	cont "LEAGUE challenge!"
+	done
+
+GiovanniExplainTMText:
+	text "TM27 is FISSURE!"
+	line "It will take out"
+	cont "#MON with just"
+	cont "one hit!"
+
+	para "I made it when I"
+	line "ran the GYM here,"
+	cont "too long ago..."
+	done
+
+GiovanniAfterBattleText:
+	text "Having lost, I"
+	line "cannot face my"
+	cont "underlings!"
+	cont "TEAM ROCKET is"
+	cont "finished forever!"
+
+	para "I will dedicate my"
+	line "life to the study"
+	cont "of #MON!"
+
+	para "Let us meet again"
+	line "some day!"
+	cont "Farewell!"
+	done
+
+TrainerBlackbeltWai:
+	trainer BLACKBELT_T, WAI, EVENT_BEAT_BLACKBELT_WAI, BlackbeltWaiSeenText, BlackbeltWaiBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext BlackbeltWaiAfterBattleText
+	waitbutton
+	closetext
+	end
+
+BlackbeltWaiSeenText:
+	text "I'm the KARATE"
+	line "KING! Your fate"
+	cont "rests with me!"
+	done
+
+BlackbeltWaiBeatenText:
+	text "Ayah!"
+	done
+
+BlackbeltWaiAfterBattleText:
+	text "#MON LEAGUE?"
+	line "You? Don't get"
+	cont "cocky!"
+	done
+
+TrainerCooltrainerMPaul:
+	trainer COOLTRAINERM, PAUL, EVENT_BEAT_COOLTRAINERM_PAUL, CooltrainerMPaulSeenText, CooltrainerMPaulBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext CooltrainerMPaulAfterBattleText
+	waitbutton
+	closetext
+	end
+
+CooltrainerMPaulSeenText:
+	text "VIRIDIAN GYM was"
+	line "closed for a long"
+	cont "time, but now our"
+	cont "LEADER is back!"
+	done
+
+CooltrainerMPaulBeatenText:
+	text "I was"
+	line "beaten?"
+	done
+
+CooltrainerMPaulAfterBattleText:
+	text "You can go onto"
+	line "#MON LEAGUE"
+	cont "only by defeating"
+	cont "our GYM LEADER!"
+	done
+
+TrainerCooltrainerMNick:
+	trainer COOLTRAINERM, NICK, EVENT_BEAT_COOLTRAINERM_NICK, CooltrainerMNickSeenText, CooltrainerMNickBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext CooltrainerMNickAfterBattleText
+	waitbutton
+	closetext
+	end
+
+CooltrainerMNickSeenText:
+	text "The truly talented"
+	line "win with style!"
+	done
+
+CooltrainerMNickBeatenText:
+	text "I lost"
+	line "my grip!"
+	done
+
+CooltrainerMNickAfterBattleText:
+	text "The LEADER will"
+	line "scold me!"
+	done
+
+TrainerBlackbeltTy:
+	trainer BLACKBELT_T, TY, EVENT_BEAT_BLACKBELT_TY, BlackbeltTySeenText, BlackbeltTyBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext BlackbeltTyAfterBattleText
+	waitbutton
+	closetext
+	end
+
+BlackbeltTySeenText:
+	text "Karate is the"
+	line "ultimate form of"
+	cont "martial arts!"
+	done
+
+BlackbeltTyBeatenText:
+	text "Atcho!"
+	done
+
+BlackbeltTyAfterBattleText:
+	text "If my #MON"
+	line "were as good at"
+	cont "Karate as I..."
+	done
+
+TrainerPokemaniacEthan:
+	trainer POKEMANIAC, ETHAN, EVENT_BEAT_POKEMANIAC_ETHAN, PokemaniacEthanSeenText, PokemaniacEthanBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext PokemaniacEthanAfterBattleText
+	waitbutton
+	closetext
+	end
+
+PokemaniacEthanSeenText:
+	text "#MON and I, we"
+	line "make wonderful"
+	cont "music together!"
+	done
+
+PokemaniacEthanBeatenText:
+	text "You are in"
+	line "perfect harmony!"
+	done
+
+PokemaniacEthanAfterBattleText:
+	text "Do you know the"
+	line "identity of our"
+	cont "GYM LEADER?"
+	done
+
+TrainerCooltrainerMAaron:
+	trainer COOLTRAINERM, AARON, EVENT_BEAT_COOLTRAINERM_AARON, CooltrainerMAaronSeenText, CooltrainerMAaronBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext CooltrainerMAaronAfterBattleText
+	waitbutton
+	closetext
+	end
+
+CooltrainerMAaronSeenText:
+	text "Heh! You must be"
+	line "running out of"
+	cont "steam by now!"
+	done
+
+CooltrainerMAaronBeatenText:
+	text "I ran out"
+	line "of gas!"
+	done
+
+CooltrainerMAaronAfterBattleText:
+	text "You need power to"
+	line "keep up with our"
+	cont "GYM LEADER!"
+	done
+
+TrainerBlackbeltCho:
+	trainer BLACKBELT_T, CHO, EVENT_BEAT_BLACKBELT_CHO, BlackbeltChoSeenText, BlackbeltChoBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext BlackbeltChoAfterBattleText
+	waitbutton
+	closetext
+	end
+
+BlackbeltChoSeenText:
+	text "Rrrroar! I'm"
+	line "working myself"
+	cont "into a rage!"
+	done
+
+BlackbeltChoBeatenText:
+	text "Wargh!"
+	done
+
+BlackbeltChoAfterBattleText:
+	text "I'm still not"
+	line "worthy!"
+	done
+
+TrainerPokemaniacDonald:
+	trainer POKEMANIAC, DONALD, EVENT_BEAT_POKEMANIAC_DONALD, PokemaniacDonaldSeenText, PokemaniacDonaldBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext PokemaniacDonaldAfterBattleText
+	waitbutton
+	closetext
+	end
+
+PokemaniacDonaldSeenText:
+	text "Your #MON will"
+	line "cower before"
+	cont "my #MON!"
+	done
+
+PokemaniacDonaldBeatenText:
+	text "Yowch!"
+	done
+
+PokemaniacDonaldAfterBattleText:
+	text "Wait! I was just"
+	line "careless!"
+	done
+
+ViridianGymGuideScript:
+	faceplayer
+	opentext
+	checkevent EVENT_BEAT_GIOVANNI
+	iftrue .ViridianGymGuideWinScript
+	writetext ViridianGymGuideText
+	waitbutton
+	closetext
+	end
+
+.ViridianGymGuideWinScript:
+	writetext ViridianGymGuideWinText
+	waitbutton
+	closetext
+	end
+
+ViridianGymGuideText:
+	text "Yo! Champ in"
+	line "making!"
+
+	para "Even I don't know"
+	line "VIRIDIAN LEADER's"
+	cont "identity!"
+
+	para "This will be the"
+	line "toughest of all"
+	cont "the GYM LEADERs!"
+
+	para "I heard that the"
+	line "trainers here"
+	cont "like ground-type"
+	cont "#MON!"
+	done
+
+ViridianGymGuideWinText:
+	text "Blow me away!"
+	line "GIOVANNI was the"
+	cont "GYM LEADER here?"
+	done
 
 ViridianGymStatue:
+;	gettrainername STRING_BUFFER_4, GIOVANNI, GIOVANNI1
 	checkflag ENGINE_EARTHBADGE
 	iftrue .Beaten
-	jumpstd GymStatue1Script
+;	jumpstd GymStatue1Script
+	jumptext ViridianGymStatue1Text
 
 .Beaten:
-	gettrainername STRING_BUFFER_4, GIOVANNI, GIOVANNI1
-	jumpstd GymStatue2Script
+;	jumpstd GymStatue2Script
+	jumptext ViridianGymStatue2Text
 
-;TrainerCoolDuoElanandIda1:
-;	trainer COOL_DUO, ELANANDIDA, EVENT_BEAT_COOL_DUO_ELAN_AND_IDA, CoolDuoElanandIdaSeenText, CoolDuoElanandIdaBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext CoolDuoElanandIda1AfterBattleText
-;	waitbutton
-;	closetext
-;	end
+ViridianGymStatue1Text:
+	text "VIRIDIAN CITY"
+	line "#MON GYM"
 
-;TrainerCoolDuoElanandIda2:
-;	trainer COOL_DUO, ELANANDIDA, EVENT_BEAT_COOL_DUO_ELAN_AND_IDA, CoolDuoElanandIdaSeenText, CoolDuoElanandIdaBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext CoolDuoElanandIda2AfterBattleText
-;	waitbutton
-;	closetext
-;	end
+	para "WINNING TRAINERS:"
+	line "<RIVAL>"
+	done
 
-;TrainerCooltrainermArwin:
-;	trainer COOLTRAINERM, ARWIN, EVENT_BEAT_COOLTRAINERM_ARWIN, CooltrainermArwinSeenText, CooltrainermArwinBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext CooltrainermArwinAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+ViridianGymStatue2Text:
+	text "VIRIDIAN CITY"
+	line "#MON GYM"
 
-;TrainerCooltrainermBonita:
-;	trainer COOLTRAINERM, BONITA, EVENT_BEAT_COOLTRAINERM_BONITA, CooltrainermBonitaSeenText, CooltrainermBonitaBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext CooltrainermBonitaAfterBattleText
-;	waitbutton
-;	closetext
-;	end
-
-;TrainerCooltrainerfSalma:
-;	trainer COOLTRAINERF, SALMA, EVENT_BEAT_COOLTRAINERF_SALMA, CooltrainerfSalmaSeenText, CooltrainerfSalmaBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext CooltrainerfSalmaAfterBattleText
-;	waitbutton
-;	closetext
-;	end
-
-;LeaderBlueBeforeText:
-;	text "BLUE: Yo! Finally"
-;	line "got here, huh?"
-;
-;	para "I wasn't in the"
-;	line "mood at CINNABAR,"
-;
-;	para "but now I'm ready"
-;	line "to battle you."
-;
-;	para "…"
-;
-;	para "You're telling me"
-;	line "you conquered all"
-;	cont "the GYMS in JOHTO?"
-;
-;	para "Heh! JOHTO's GYMS"
-;	line "must be pretty"
-;	cont "pathetic then."
-;
-;	para "Hey, don't worry"
-;	line "about it."
-;
-;	para "I'll know if you"
-;	line "are good or not by"
-;
-;	para "battling you right"
-;	line "now."
-;
-;	para "Ready, JOHTO"
-;	line "CHAMP?"
-;	done
-;
-;LeaderBlueWinText:
-;	text "BLUE: What?"
-;
-;	para "How the heck did I"
-;	line "lose to you?"
-;
-;	para "…"
-;
-;	para "Tch, all right…"
-;	line "Here, take this--"
-;	cont "it's EARTHBADGE."
-;	done
-;
-;Text_ReceivedEarthBadge:
-;	text "<PLAYER> received"
-;	line "EARTHBADGE."
-;	done
-;
-;LeaderBlueAfterText:
-;	text "BLUE: …"
-;
-;	para "All right, I was"
-;	line "wrong. You're the"
-;
-;	para "real deal. You are"
-;	line "a good trainer."
-;
-;	para "But I'm going to"
-;	line "beat you someday."
-;
-;	para "Don't you forget"
-;	line "it!"
-;	done
-;
-;LeaderBlueEpilogueText:
-;	text "BLUE: Listen, you."
-;
-;	para "You'd better not"
-;	line "lose until I beat"
-;	cont "you. Got it?"
-;	done
-;
-;ViridianGymGuideText:
-;	text "Yo, CHAMP in"
-;	line "making!"
-;
-;	para "How's it going?"
-;	line "Looks like you're"
-;	cont "on a roll."
-;
-;	para "The GYM LEADER is"
-;	line "a guy who battled"
-;
-;	para "the CHAMPION three"
-;	line "years ago."
-;
-;	para "He's no pushover."
-;
-;	para "Give it everything"
-;	line "you've got!"
-;	done
-;
-;ViridianGymGuideWinText:
-;	text "Man, you are truly"
-;	line "tough…"
-;
-;	para "That was a heck of"
-;	line "an inspirational"
-;
-;	para "battle. It brought"
-;	line "tears to my eyes."
-;	done
-;
-;CoolDuoElanandIdaSeenText:
-;	text "IDA: I'm IDA!"
-;	line "Next to me"
-;	cont "is ELAN!"
-;
-;	para "Together, we're"
-;	line "a COOLDUO!"
-;
-;	para "ELAN: All right,"
-;	line "let's get this"
-;	cont "fight started!"
-;	cont "Come on!"
-;	done
-;
-;CoolDuoElanandIdaBeatenText:
-;	text "IDA: Wow."
-;	line "You're really"
-;	cont "something."
-;
-;	para "ELAN: Well, this"
-;	line "is surprising."
-;	done
-;
-;CoolDuoElanandIda1AfterBattleText:
-;	text "ELAN: You're"
-;	line "stronger than we"
-;	cont "anticipated!"
-;	done
-;
-;CoolDuoElanandIda2AfterBattleText:
-;	text "IDA: If the only"
-;	line "thing GYM trainers"
-;	cont "have is strength,"
-;	cont "they won't do"
-;	cont "well."
-;
-;	para "Bringing out"
-;	line "your opponent's"
-;	cont "strength is also"
-;	cont "very important!"
-;	done
-;
-;CooltrainermArwinSeenText:
-;	text "Anyway, fight me"
-;	line "and see!"
-;	done
-;
-;CooltrainermArwinBeatenText:
-;	text "I was deceived!"
-;	done
-;
-;CooltrainermArwinAfterBattleText:
-;	text "Me, I should be"
-;	line "a pretty good"
-;	cont "practice part-"
-;	cont "ner…"
-;
-;	para "I shouldn't say"
-;	line "that about myself!"
-;	done
-;
-;CooltrainermBonitaSeenText:
-;	text "Looking around the"
-;	line "room like that,"
-;
-;	para "doesn't it make"
-;	line "you a little"
-;	cont "dizzy?"
-;	done
-;
-;CooltrainermBonitaBeatenText:
-;	text "All of my"
-;	line "#MON…"
-;
-;	para "All dizzy and"
-;	line "fainting…"
-;	done
-;
-;CooltrainermBonitaAfterBattleText:
-;	text "Looks like you've"
-;	line "still got some"
-;	cont "energy left."
-;	done
-;
-;CooltrainerfSalmaSeenText:
-;	text "What do you think?"
-;
-;	para "You've never seen"
-;	line "such a wonderful"
-;	cont "GYM before,"
-;	cont "have you?"
-;	done
-;
-;CooltrainerfSalmaBeatenText:
-;	text "Whatever!"
-;	done
-;
-;CooltrainerfSalmaAfterBattleText:
-;	text "There are many "
-;	line "kinds of GYMs in"
-;	cont "the world,"
-;
-;	para "but I really like"
-;	line "this one!"
-;	done
+	para "WINNING TRAINERS:"
+	line "<RIVAL>"
+	cont "<PLAYER>"
+	done
 
 ViridianGym_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  4, 39, VIRIDIAN_CITY, 1
-	warp_event  5, 39, VIRIDIAN_CITY, 1
+	warp_event 16, 17, VIRIDIAN_CITY, 1
+	warp_event 17, 17, VIRIDIAN_CITY, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event  3, 35, BGEVENT_READ, ViridianGymStatue
-	bg_event  6, 35, BGEVENT_READ, ViridianGymStatue
+	bg_event 15, 15, BGEVENT_READ, ViridianGymStatue
+	bg_event 18, 15, BGEVENT_READ, ViridianGymStatue
 
 	def_object_events
-;	object_event  5,  2, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ViridianGymBlueScript, EVENT_VIRIDIAN_GYM_BLUE
-;	object_event  7, 36, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ViridianGymGuideScript, EVENT_VIRIDIAN_GYM_BLUE
-;	object_event  4,  8, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerCoolDuoElanandIda1, EVENT_VIRIDIAN_GYM_BLUE
-;	object_event  5,  8, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerCoolDuoElanandIda2, EVENT_VIRIDIAN_GYM_BLUE
-;	object_event  5, 29, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerCooltrainermArwin, EVENT_VIRIDIAN_GYM_BLUE
-;	object_event  2, 28, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerCooltrainerfSalma, EVENT_VIRIDIAN_GYM_BLUE
-;	object_event  2, 16, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerCooltrainermBonita, EVENT_VIRIDIAN_GYM_BLUE
+	object_event  2,  1, SPRITE_GIOVANNI, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianGymGiovanniScript, EVENT_BEAT_GIOVANNI
+	object_event 10,  1, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerBlackbeltWai, -1
+	object_event  6,  3, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerCooltrainerMPaul, -1
+	object_event 13,  5, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerCooltrainerMNick, -1
+	object_event  3,  7, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerBlackbeltTy, -1
+	object_event 10,  7, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerPokemaniacEthan, -1
+	object_event 12,  7, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerCooltrainerMAaron, -1
+	object_event 11, 11, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 4, TrainerBlackbeltCho, -1
+	object_event  2, 16, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerPokemaniacDonald, -1
+	object_event 16, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ViridianGymGuideScript, -1

@@ -18,7 +18,7 @@ Route22RivalBattleHigh:
 	moveobject ROUTE22_RIVAL, 24, 4
 Route22RivalBattleLow:
 	playmusic MUSIC_RIVAL_ENCOUNTER
-	pause 15
+	pause 20
 	appear ROUTE22_RIVAL
 	applymovement ROUTE22_RIVAL, Route22RivalApproachMovement
 ; check badges here to jump to second battle script
@@ -26,41 +26,29 @@ Route22RivalBattleLow:
 	writetext Route22RivalBeforeBattleText1
 	waitbutton
 	closetext
+	setevent EVENT_ROUTE_22_RIVAL
 	winlosstext Route22RivalBattleWinText1, Route22RivalBattleLossText1
-	setlasttalked ROUTE22_RIVAL
+;	setlasttalked ROUTE22_RIVAL
 	checkevent EVENT_GOT_SQUIRTLE_FROM_OAK
 	iftrue .RivalBulbasaur1
 	checkevent EVENT_GOT_BULBASAUR_FROM_OAK
 	iftrue .RivalCharmander1
-;	winlosstext Route22RivalBattleWinText1, Route22RivalBattleLossText1
-;	setlasttalked ROUTE22_RIVAL
 	loadtrainer RIVAL1, RIVAL1_2_SQUIRTLE
-	loadmem VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
-;	dontrestartmapmusic
-	reloadmap
+	reloadmapafterbattle
 	sjump .FinishRival1
 .RivalBulbasaur1:
-;	winlosstext Route22RivalBattleWinText1, Route22RivalBattleLossText1
-;	setlasttalked ROUTE22_RIVAL
 	loadtrainer RIVAL1, RIVAL1_2_BULBASAUR
-	loadmem VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
-;	dontrestartmapmusic
-	reloadmap
+	reloadmapafterbattle
 	sjump .FinishRival1
 .RivalCharmander1:
-;	winlosstext Route22RivalBattleWinText1, Route22RivalBattleLossText1
-;	setlasttalked ROUTE22_RIVAL
 	loadtrainer RIVAL1, RIVAL1_2_CHARMANDER
-	loadmem VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
-;	dontrestartmapmusic
-	reloadmap
+	reloadmapafterbattle
 	sjump .FinishRival1
 
 .FinishRival1:
-;	playmusic MUSIC_RIVAL_ENCOUNTER
 	opentext
 	writetext Route22RivalAfterBattleText1
 	waitbutton
@@ -70,18 +58,15 @@ Route22RivalBattleLow:
 	applymovement ROUTE22_RIVAL, Route22RivalLeavesMovement1
 	disappear ROUTE22_RIVAL
 	setscene SCENE_ROUTE22_NOOP
-	special HealParty
-;	special FadeOutMusic
-;	playmapmusic
 	special RestartMapMusic
 	end
 
 Route22RivalGoesAroundScript:
 	readvar VAR_YCOORD
-	ifequal 4, .Skip
+	ifequal 4, .Under
 	applymovement ROUTE22_RIVAL, Route22RivalOverMovement
 	end
-.Skip
+.Under
 	applymovement ROUTE22_RIVAL, Route22RivalUnderMovement
 	end
 
@@ -254,4 +239,4 @@ Route22_MapEvents:
 	bg_event 11,  7, BGEVENT_READ, VictoryRoadEntranceSign
 
 	def_object_events
-	object_event 24,  5, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BlueScript, EVENT_ROUTE_22_RIVAL
+	object_event 24,  5, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ROUTE_22_RIVAL

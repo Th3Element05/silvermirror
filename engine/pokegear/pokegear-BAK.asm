@@ -2925,14 +2925,12 @@ Pokedex_GetArea:
 	ld c, 4
 	call Request2bpp
 	call LoadTownMapGFX
-;	call FillKantoMap
-	call FillJohtoMap
+	call FillKantoMap
 	call .PlaceString_MonsNest
 	call TownMapPals
 	hlbgcoord 0, 0, vBGMap1
 	call TownMapBGUpdate
 ;	call FillJohtoMap    ;silvermirror- (dreams897 dex area changes)
-	call FillKantoMap
 	call .PlaceString_MonsNest
 	call TownMapPals
 	hlbgcoord 0, 0
@@ -2981,21 +2979,18 @@ Pokedex_GetArea:
 	jr nz, .right
 	ret
 
-;.left
-.right
+.left
 	ldh a, [hWY]
 	cp SCREEN_HEIGHT_PX
 	ret z
 	call ClearSprites
 	ld a, SCREEN_HEIGHT_PX
 	ldh [hWY], a
-;	xor a ; JOHTO_REGION
-	ld a, KANTO_REGION ;silvermirror+
+	xor a ; JOHTO_REGION
 	call .GetAndPlaceNest
 	ret
 
-;.right
-.left
+.right
 	ld a, [wStatusFlags]
 	bit STATUSFLAGS_HALL_OF_FAME_F, a
 	ret z
@@ -3005,8 +3000,7 @@ Pokedex_GetArea:
 	call ClearSprites
 	xor a
 	ldh [hWY], a
-;	ld a, KANTO_REGION
-	xor a ; JOHTO_REGION ;silvermirror+
+	ld a, KANTO_REGION
 	call .GetAndPlaceNest
 	ret
 

@@ -15,7 +15,7 @@ ViridianCity_MapScripts:
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, ViridianCityFlypointCallback
 	callback MAPCALLBACK_OBJECTS, ViridianCityMoveCoffeeGrampsCallback
-	callback MAPCALLBACK_TILES, ViridianCityGymDoorCallback
+	callback MAPCALLBACK_TILES, ViridianGymDoorCallback
 
 ViridianCityNoop1Scene:
 ViridianCityNoop2Scene:
@@ -33,8 +33,8 @@ ViridianCityMoveCoffeeGrampsCallback:
 .Skip:
 	endcallback
 
-ViridianCityGymDoorCallback:
-	checkevent EVENT_VIRIDIAN_GYM_LEADER_RETURNED ; EVENT_BLUE_IN_CINNABAR
+ViridianGymDoorCallback:
+	checkevent EVENT_VIRIDIAN_GYM_LEADER_RETURNED
 	iftrue .GymOpen
 	endcallback
 .GymOpen:
@@ -77,6 +77,11 @@ ViridianCityForceMapCardScript:
 
 ViridianCityMapCardScript:
 	opentext
+	checkevent EVENT_COFFEE_GRAMPS_STOPPED_YOU
+	iffalse .SkipStopped
+	writetext ViridianCityCoffeeGrampsSorryText
+	promptbutton
+.SkipStopped
 	writetext ViridianCityCoffeeGrampsMapCardText
 	promptbutton
 	getstring STRING_BUFFER_4, .mapcardname
@@ -101,7 +106,7 @@ ViridianCityCoffeeGrampsHeyText:
 	text "Hey! You!"
 	done
 
-ViridianCityCoffeeGrampsMapCardText:
+ViridianCityCoffeeGrampsSorryText:
 	text "Sorry for stopping"
 	line "you earlier."
 	cont "I'm not myself"
@@ -110,10 +115,13 @@ ViridianCityCoffeeGrampsMapCardText:
 	
 	para "You can go through"
 	line "now."
-	
-	para "To apologize,"
-	line "I want to give you"
-	cont "this MAP CARD."
+	done
+
+ViridianCityCoffeeGrampsMapCardText:
+	text "You look like"
+	line "you have a long"
+	cont "journey ahead of"
+	cont "you. Take this."
 	done
 
 GotMapCardText:
@@ -165,6 +173,7 @@ ViridianCityCoffeeGrampsBlockScript:
 	waitbutton
 	closetext
 	applymovement PLAYER, ViridianCityCoffeeGrampsBlockMovement
+	setevent EVENT_COFFEE_GRAMPS_STOPPED_YOU
 	end
 
 ViridianCityCoffeeGrampsBlockText:
@@ -176,7 +185,7 @@ ViridianCityCoffeeGrampsBlockText:
 	done
 
 ViridianCityGymGramps:
-	checkevent EVENT_VIRIDIAN_GYM_LEADER_RETURNED ; EVENT_BLUE_IN_CINNABAR
+	checkevent EVENT_VIRIDIAN_GYM_LEADER_RETURNED
 	iftrue .LeaderReturned
 	jumptextfaceplayer ViridianCityGymGrampsText
 .LeaderReturned:
@@ -325,13 +334,10 @@ ViridianCityMapCardRightMovement:
 	step LEFT
 	step_end
 
-; npc text
-
-
-
-
 ; bg text
 ViridianGymDoorLocked:
+	conditional_event EVENT_VIRIDIAN_GYM_LEADER_RETURNED, .LockedDoor
+.LockedDoor
 	jumptext ViridianGymDoorLockedText
 ViridianGymDoorLockedText:
 	text "The GYM's doors"
@@ -419,7 +425,7 @@ ViridianCity_MapEvents:
 	def_bg_events
 	bg_event 19,  1, BGEVENT_READ, ViridianCityTrainerTips1Sign
 	bg_event 27,  7, BGEVENT_READ, ViridianGymSign
-	bg_event 32,  7, BGEVENT_READ, ViridianGymDoorLocked
+	bg_event 32,  7, BGEVENT_IFNOTSET, ViridianGymDoorLocked
 	bg_event 21, 17, BGEVENT_READ, ViridianCitySchoolSign
 	bg_event 17, 17, BGEVENT_READ, ViridianCitySign
 	bg_event 30, 19, BGEVENT_READ, ViridianCityMartSign

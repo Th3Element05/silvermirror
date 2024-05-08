@@ -1,5 +1,4 @@
 	object_const_def
-;	const CERULEANGYM_MISTY
 
 CeruleanGym_MapScripts:
 	def_scene_scripts
@@ -22,27 +21,23 @@ CeruleanGymMistyScript:
 	setevent EVENT_BEAT_SWIMMERM_HAROLD
 	setevent EVENT_BEAT_PICNICKER_SOPHIA
 	opentext
-	writetext ReceivedCascadeBadgeText
+	writetext ReceivedCascadebadgeText
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_CASCADEBADGE
-	waitbutton
-;	closetext
+	promptbutton
+	writetext MistyCascadebadgeText
+	promptbutton
 	; fallthrough
 .FightDone:
 	checkevent EVENT_GOT_TM11_BUBBLEBEAM
 	iftrue .SpeechAfterTM
-	writetext MistyCascadeBadgeText
-	promptbutton
 	verbosegiveitem TM_BUBBLEBEAM
-	iffalse .NoRoomForBubblebeam
 	setevent EVENT_GOT_TM11_BUBBLEBEAM
 	; fallthrough
 .SpeechAfterTM
 	writetext MistyTMBubblebeamText
 	waitbutton
-	; fallthrough
-.NoRoomForBubblebeam
 	closetext
 	end
 
@@ -76,12 +71,12 @@ MistyWinLossText:
 	cont "show you beat me!"
 	done
 
-ReceivedCascadeBadgeText:
+ReceivedCascadebadgeText:
 	text "<PLAYER> received"
 	line "CASCADEBADGE."
 	done
 
-MistyCascadeBadgeText:
+MistyCascadebadgeText:
 	text "The CASCADEBADGE"
 	line "makes all #MON"
 	cont "up to L30 obey!"
@@ -203,11 +198,11 @@ CeruleanGymGuideWinText:
 	done
 
 CeruleanGymStatue:
+	gettrainername STRING_BUFFER_4, MISTY, MISTY1
 	checkflag ENGINE_CASCADEBADGE
 	iftrue .Beaten
 	jumpstd GymStatue1Script
 .Beaten:
-	gettrainername STRING_BUFFER_4, MISTY, MISTY1
 	jumpstd GymStatue2Script
 
 CeruleanGym_MapEvents:

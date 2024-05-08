@@ -60,7 +60,7 @@ Route16SnorlaxBattleScript:
 	loadwildmon SNORLAX, 30
 	startbattle
 	disappear ROUTE16_SNORLAX
-	setevent EVENT_FOUGHT_SNORLAX
+	setevent EVENT_WOKE_SNORLAX
 	reloadmapafterbattle
 	special CheckBattleCaughtResult
 	iffalse .nocatch
@@ -89,8 +89,8 @@ Route16PlayPokeFluteAskText:
 
 Route16PlayPokeFluteText:
 	text "<PLAYER> played"
-	line "the # FLUTE for"
-	cont "SNORLAX!"
+	line "the # FLUTE!"
+;	cont "for SNORLAX!"
 	done
 
 Route16RadioNearSnorlaxText:

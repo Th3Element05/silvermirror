@@ -18,6 +18,7 @@ ViridianMartOaksParcelScene:
 	opentext
 	writetext ViridianMartOaksParcelText
 	playsound SFX_KEY_ITEM
+	giveitem OAKS_PARCEL
 	waitsfx
 	promptbutton
 	closetext

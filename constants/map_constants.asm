@@ -206,7 +206,7 @@ ENDM
 	map_const CINNABAR_POKECENTER_1F,                       7,  4 ;  1
 ;	map_const CINNABAR_POKECENTER_2F_BETA,                  8,  4 ;  2
 	map_const ROUTE_19_FUCHSIA_GATE,                        4,  4 ;  3 ; 5,  4 ;  3
-	map_const SEAFOAM_GYM,                                 12, 11 ;  4
+;	map_const SEAFOAM_GYM,                                 12, 11 ;  4
 	map_const SEAFOAM_ISLANDS,                             15, 10 ;  5 ; 12, 12 ;  5
 	map_const SEAFOAM_ISLANDS_B1F,                         15, 10 ;  6 ; 23, 13 ;  6
 	map_const SEAFOAM_ISLANDS_B2F,                         15, 10 ;  7 ; 20, 13 ;  7
@@ -217,6 +217,7 @@ ENDM
 	map_const ROUTE_21,                                    10, 30 ; 12
 	map_const CINNABAR_ISLAND,                             11, 10 ; 13 ; 12, 11 ; 13
 	map_const CINNABAR_MART,                                5,  4 ; 18
+	map_const CINNABAR_GYM,                                12,  9 ; 19 ;silvermirror+
 	endgroup
 
 	newgroup CERULEAN                                             ;  7
@@ -469,7 +470,7 @@ ENDM
 	map_const CELADON_POKECENTER_1F,                        7,  4 ; 17
 ;	map_const CELADON_POKECENTER_2F_BETA,                   8,  4 ; 18
 	map_const CELADON_GAME_CORNER,                         10,  7 ; 19
-	map_const CELADON_GAME_CORNER_PRIZE_ROOM,               3,  3 ; 20
+	map_const CELADON_GAME_CORNER_PRIZE_ROOM,               4,  3 ; 20 ; 3,  3 ; 20
 	map_const CELADON_GYM,                                  5,  9 ; 21
 	map_const CELADON_CAFE,                                 5,  4 ; 22 ; 6,  4 ; 22
 	map_const ROUTE_16_FUCHSIA_SPEECH_HOUSE,                4,  4 ; 23
@@ -504,7 +505,7 @@ ENDM
 	map_const ROUTE_2_SOUTH,                               10, 17 ;  1 ; 12, 17 ;  1
 	map_const ROUTE_22,                                    20,  9 ;  2
 	map_const VIRIDIAN_CITY,                               20, 18 ;  3
-	map_const VIRIDIAN_GYM,                                 5, 20 ;  4
+	map_const VIRIDIAN_GYM,                                10,  9 ;  4 ; 5, 20 ;  4
 	map_const VIRIDIAN_NICKNAME_SPEECH_HOUSE,               4,  4 ;  5
 	map_const VIRIDIAN_MART,                                5,  4 ;  8
 	map_const VIRIDIAN_POKECENTER_1F,                       7,  4 ;  9
@@ -518,7 +519,7 @@ ENDM
 	map_const ROUTE_26,                                    10, 52 ;  1 ; 10, 54 ;  1
 	map_const ROUTE_26_HEAL_HOUSE,                          4,  4 ; 10
 	map_const DAY_OF_WEEK_SIBLINGS_HOUSE,                   4,  4 ; 11
-	map_const EARLS_POKEMON_ACADEMY,                        4,  8 ;  8
+	map_const EARLS_POKEMON_ACADEMY,                        4,  5 ;  8 ; 4,  8 ;  8
 	endgroup
 
 	newgroup NEW_BARK                                             ; 24

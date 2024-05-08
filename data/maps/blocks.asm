@@ -454,8 +454,15 @@ Route8UndergroundPathEntrance_Blocks:  ;silvermirror+
 KurtsHouse_Blocks:
 	INCBIN "maps/KurtsHouse.blk"
 
+;SaffronMagnetTrainStation_Blocks:
+;	INCBIN "maps/SaffronMagnetTrainStation.blk"
+;
+SaffronMagnetTrainStation_Blocks:
 GoldenrodMagnetTrainStation_Blocks:
-	INCBIN "maps/GoldenrodMagnetTrainStation.blk"
+	INCBIN "maps/MagnetTrainStation.blk"
+;
+;GoldenrodMagnetTrainStation_Blocks:
+;	INCBIN "maps/GoldenrodMagnetTrainStation.blk"
 
 RuinsOfAlphOutside_Blocks:
 	INCBIN "maps/RuinsOfAlphOutside.blk"
@@ -817,9 +824,6 @@ SafariZoneMainOffice_Blocks:
 PlayersHouse2F_Blocks:
 	INCBIN "maps/PlayersHouse2F.blk"
 
-SaffronMagnetTrainStation_Blocks:
-	INCBIN "maps/SaffronMagnetTrainStation.blk"
-
 CeruleanGym_Blocks:
 	INCBIN "maps/CeruleanGym.blk"
 
@@ -901,8 +905,10 @@ MountMoon_Blocks:
 MountMoonB2F_Blocks:                   ;silvermirror+
 	INCBIN "maps/MountMoonB2F.blk"     ;silvermirror+
 
-SeafoamGym_Blocks:
-	INCBIN "maps/SeafoamGym.blk"
+;SeafoamGym_Blocks:
+;	INCBIN "maps/SeafoamGym.blk"
+CinnabarGym_Blocks:                    ;silvermirror+
+	INCBIN "maps/CinnabarGym.blk"      ;silvermirror+
 
 MrPokemonsHouse_Blocks:
 	INCBIN "maps/MrPokemonsHouse.blk"
