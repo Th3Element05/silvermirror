@@ -130,9 +130,9 @@ CutFunction:
 	dw .FailCut
 
 .CheckAble:
-	ld de, ENGINE_CASCADEBADGE ; ENGINE_HIVEBADGE
-	call CheckBadge
-	jr c, .nohivebadge
+;	ld de, ENGINE_CASCADEBADGE ; ENGINE_HIVEBADGE ;silvermirror remove HM badge requirements
+;	call CheckBadge
+;	jr c, .nohivebadge
 	call CheckMapForSomethingToCut
 	jr c, .nothingtocut
 	ld a, $1
@@ -280,9 +280,9 @@ FlashFunction:
 	ret
 
 .CheckUseFlash:
-	ld de, ENGINE_BOULDERBADGE ; ENGINE_ZEPHYRBADGE
-	farcall CheckBadge
-	jr c, .nozephyrbadge
+;	ld de, ENGINE_BOULDERBADGE ; ENGINE_ZEPHYRBADGE ;silvermirror remove HM badge requirements
+;	farcall CheckBadge
+;	jr c, .nozephyrbadge
 	push hl
 	farcall SpecialAerodactylChamber
 	pop hl
@@ -344,9 +344,9 @@ SurfFunction:
 	dw .AlreadySurfing
 
 .TrySurf:
-	ld de, ENGINE_MARSHBADGE ; ENGINE_FOGBADGE
-	call CheckBadge
-	jr c, .nofogbadge
+;	ld de, ENGINE_MARSHBADGE ; ENGINE_FOGBADGE ;silvermirror remove HM badge requirements
+;	call CheckBadge
+;	jr c, .nofogbadge
 	ld hl, wBikeFlags
 	bit BIKEFLAGS_ALWAYS_ON_BIKE_F, [hl]
 	jr nz, .cannotsurf
@@ -500,9 +500,9 @@ TrySurfOW::
 	call CheckDirection
 	jr c, .quit
 
-	ld de, ENGINE_MARSHBADGE ; ENGINE_FOGBADGE
-	call CheckEngineFlag
-	jr c, .quit
+;	ld de, ENGINE_MARSHBADGE ; ENGINE_FOGBADGE ;silvermirror remove HM badge requirements
+;	call CheckEngineFlag
+;	jr c, .quit
 	
 	ld de, ENGINE_PAGER_SURF
 	call CheckEngineFlag
@@ -559,9 +559,9 @@ FlyFunction:
 	dw .FailFly
 
 .TryFly:
-	ld de, ENGINE_THUNDERBADGE ; ENGINE_STORMBADGE
-	call CheckBadge
-	jr c, .nostormbadge
+;	ld de, ENGINE_THUNDERBADGE ; ENGINE_STORMBADGE ;silvermirror remove HM badge requirements
+;	call CheckBadge
+;	jr c, .nostormbadge
 	call GetMapEnvironment
 	call CheckOutdoorMap
 	jr z, .outdoors
@@ -644,10 +644,10 @@ WaterfallFunction:
 	ret
 
 .TryWaterfall:
-	ld de, ENGINE_RISINGBADGE
-	farcall CheckBadge
-	ld a, $80
-	ret c
+;	ld de, ENGINE_BOULDERBADGE ; ENGINE_RISINGBADGE ;silvermirror remove HM badge requirements
+;	farcall CheckBadge
+;	ld a, $80
+;	ret c
 	call CheckMapCanWaterfall
 	jr c, .failed
 	ld hl, Script_WaterfallFromMenu
@@ -711,9 +711,9 @@ Script_UsedWaterfall:
 	text_end
 
 TryWaterfallOW::
-	ld de, ENGINE_RISINGBADGE
-	call CheckEngineFlag
-	jr c, .failed
+;	ld de, ENGINE_RISINGBADGE
+;	call CheckEngineFlag
+;	jr c, .failed
 	call CheckMapCanWaterfall
 	jr c, .failed
 	ld a, BANK(Script_AskWaterfall)
@@ -969,9 +969,9 @@ StrengthFunction:
 	ret
 
 .TryStrength:
-	ld de, ENGINE_RAINBOWBADGE ; ENGINE_PLAINBADGE
-	call CheckBadge
-	jr c, .Failed
+;	ld de, ENGINE_RAINBOWBADGE ; ENGINE_PLAINBADGE ;silvermirror remove HM badge requirements
+;	call CheckBadge
+;	jr c, .Failed
 	jr .UseStrength
 
 .AlreadyUsingStrength: ; unreferenced
@@ -1061,9 +1061,9 @@ BouldersMayMoveText:
 	text_end
 
 TryStrengthOW:
-	ld de, ENGINE_RAINBOWBADGE ; ENGINE_PLAINBADGE
-	call CheckEngineFlag
-	jr c, .nope
+;	ld de, ENGINE_RAINBOWBADGE ; ENGINE_PLAINBADGE ;silvermirror remove HM badge requirements
+;	call CheckEngineFlag
+;	jr c, .nope
 
 	ld de, ENGINE_PAGER_STRENGTH
 	call CheckEngineFlag
@@ -1104,9 +1104,9 @@ WhirlpoolFunction:
 	dw .FailWhirlpool
 
 .TryWhirlpool:
-	ld de, ENGINE_GLACIERBADGE
-	call CheckBadge
-	jr c, .noglacierbadge
+;	ld de, ENGINE_GLACIERBADGE ;silvermirror remove HM badge requirements
+;	call CheckBadge
+;	jr c, .noglacierbadge
 	call TryWhirlpoolMenu
 	jr c, .failed
 	ld a, $1
@@ -1196,9 +1196,9 @@ DisappearWhirlpool:
 	ret
 
 TryWhirlpoolOW::
-	ld de, ENGINE_GLACIERBADGE
-	call CheckEngineFlag
-	jr c, .failed
+;	ld de, ENGINE_GLACIERBADGE ;silvermirror remove HM badge requirements
+;	call CheckEngineFlag
+;	jr c, .failed
 
 	ld de, ENGINE_PAGER_WHIRLPOOL
 	call CheckEngineFlag
@@ -1797,9 +1797,9 @@ GotOffBikeText:
 	text_end
 
 TryCutOW::
-	ld de, ENGINE_CASCADEBADGE ; ENGINE_HIVEBADGE
-	call CheckEngineFlag
-	jr c, .cant_cut
+;	ld de, ENGINE_CASCADEBADGE ; ENGINE_HIVEBADGE ;silvermirror remove HM badge requirements
+;	call CheckEngineFlag
+;	jr c, .cant_cut
 
 	ld de, ENGINE_PAGER_CUT
 	call CheckEngineFlag
