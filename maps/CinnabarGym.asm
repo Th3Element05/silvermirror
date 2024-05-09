@@ -10,6 +10,29 @@ CinnabarGym_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+	callback MAPCALLBACK_TILES, .CinnabarGymDoorsCallback
+
+.CinnabarGymDoorsCallback:
+	checkevent EVENT_CINNABAR_GYM_QUIZ_1
+	iffalse .NoMoreDoors
+	changeblock 20, 6, $64 ; door 1 open
+	checkevent EVENT_CINNABAR_GYM_QUIZ_2
+	iffalse .NoMoreDoors
+	changeblock 12, 6, $64 ; door 2 open
+	checkevent EVENT_CINNABAR_GYM_QUIZ_3
+	iffalse .NoMoreDoors
+	changeblock 12, 12, $64 ; door 3 open
+	checkevent EVENT_CINNABAR_GYM_QUIZ_4
+	iffalse .NoMoreDoors
+	changeblock 6, 14, $66 ; door 4 open
+	checkevent EVENT_CINNABAR_GYM_QUIZ_5
+	iffalse .NoMoreDoors
+	changeblock 4, 12, $64 ; door 5 open
+	checkevent EVENT_CINNABAR_GYM_QUIZ_6
+	iffalse .NoMoreDoors
+	changeblock 4, 6, $64 ; door 6 open
+.NoMoreDoors:
+	endcallback
 
 CinnabarGymBlaineScript:
 	faceplayer
@@ -24,11 +47,11 @@ CinnabarGymBlaineScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_BLAINE
-	setevent EVENT_BEAT_FIREBREATHER_FINNLEY
+	setevent EVENT_BEAT_FIREBREATHER_BILL
 	setevent EVENT_BEAT_SUPER_NERD_HUGH
-	setevent EVENT_BEAT_FIREBREATHER_DUSTIN
+	setevent EVENT_BEAT_FIREBREATHER_RAY
 	setevent EVENT_BEAT_SUPER_NERD_CARY
-	setevent EVENT_BEAT_FIREBREATHER_DRAKE
+	setevent EVENT_BEAT_FIREBREATHER_EVAN
 	setevent EVENT_BEAT_SUPER_NERD_MARKUS
 	setevent EVENT_BEAT_SUPER_NERD_TERU
 	opentext
@@ -109,22 +132,24 @@ BlaineAfterBattleText:
 
 CinnabarQuizMachine1:
 	checkevent EVENT_CINNABAR_GYM_QUIZ_1
-	iftrue .QuizDone
-	changeblock 18, 8, $6c ; quiz blue
+	iftrue CinnabarGymQuizDone
+	pause 10
 	playsound SFX_BOOT_PC
-	waitsfx
+	changeblock 18, 8, $6c ; quiz blue
 	opentext
 	writetext CinnabarGymQuizIntroText
 	promptbutton
 	writetext CinnabarGymQuestion1Text
 	yesorno
 	iftrue .Correct
+	closetext
 	playsound SFX_WRONG
 	changeblock 18, 8, $6b ; quiz red
 	reloadmappart
-	waitsfx
+	pause 10
 	applymovement CINNABARGYM_TRAINER1, CinnabarGymWrongAnswerMovement
-	sjump TrainerFirebreatherFinnley
+	turnobject PLAYER, LEFT
+	sjump TrainerFirebreatherBill
 .Correct
 	playsound SFX_SAVE
 	changeblock 18, 8, $6a ; quiz green
@@ -138,15 +163,13 @@ CinnabarQuizMachine1:
 	reloadmappart
 	setevent EVENT_CINNABAR_GYM_QUIZ_1
 	end
-.QuizDone
-	jumptext CinnabarGymQuizDone
 
 CinnabarQuizMachine2:
 	checkevent EVENT_CINNABAR_GYM_QUIZ_2
-	iftrue .QuizDone
-	changeblock 10, 2, $6c ; quiz blue
+	iftrue CinnabarGymQuizDone
+	pause 10
 	playsound SFX_BOOT_PC
-	waitsfx
+	changeblock 10, 2, $6c ; quiz blue
 	opentext
 	writetext CinnabarGymQuizIntroText
 	promptbutton
@@ -156,8 +179,9 @@ CinnabarQuizMachine2:
 	playsound SFX_WRONG
 	changeblock 10, 2, $6b ; quiz red
 	reloadmappart
-	waitsfx
+	pause 10
 	applymovement CINNABARGYM_TRAINER2, CinnabarGymWrongAnswerMovement
+	turnobject PLAYER, LEFT
 	sjump TrainerSuperNerdHugh
 .Correct
 	playsound SFX_SAVE
@@ -172,15 +196,13 @@ CinnabarQuizMachine2:
 	reloadmappart
 	setevent EVENT_CINNABAR_GYM_QUIZ_2
 	end
-.QuizDone
-	jumptext CinnabarGymQuizDone
 
 CinnabarQuizMachine3:
 	checkevent EVENT_CINNABAR_GYM_QUIZ_3
-	iftrue .QuizDone
-	changeblock 10, 8, $6c ; quiz blue
+	iftrue CinnabarGymQuizDone
+	pause 10
 	playsound SFX_BOOT_PC
-	waitsfx
+	changeblock 10, 8, $6c ; quiz blue
 	opentext
 	writetext CinnabarGymQuizIntroText
 	promptbutton
@@ -192,7 +214,8 @@ CinnabarQuizMachine3:
 	reloadmappart
 	waitsfx
 	applymovement CINNABARGYM_TRAINER3, CinnabarGymWrongAnswerMovement
-	sjump TrainerFirebreatherDustin
+	turnobject PLAYER, LEFT
+	sjump TrainerFirebreatherRay
 .Correct
 	playsound SFX_SAVE
 	changeblock 10, 8, $6a ; quiz green
@@ -206,15 +229,13 @@ CinnabarQuizMachine3:
 	reloadmappart
 	setevent EVENT_CINNABAR_GYM_QUIZ_3
 	end
-.QuizDone
-	jumptext CinnabarGymQuizDone
 
 CinnabarQuizMachine4:
 	checkevent EVENT_CINNABAR_GYM_QUIZ_4
-	iftrue .QuizDone
-	changeblock 10, 14, $6c ; quiz blue
+	iftrue CinnabarGymQuizDone
+	pause 10
 	playsound SFX_BOOT_PC
-	waitsfx
+	changeblock 10, 14, $6c ; quiz blue
 	opentext
 	writetext CinnabarGymQuizIntroText
 	promptbutton
@@ -226,6 +247,7 @@ CinnabarQuizMachine4:
 	reloadmappart
 	waitsfx
 	applymovement CINNABARGYM_TRAINER4, CinnabarGymWrongAnswerMovement
+	turnobject PLAYER, LEFT
 	sjump TrainerSuperNerdCary
 .Correct
 	playsound SFX_SAVE
@@ -240,15 +262,13 @@ CinnabarQuizMachine4:
 	reloadmappart
 	setevent EVENT_CINNABAR_GYM_QUIZ_4
 	end
-.QuizDone
-	jumptext CinnabarGymQuizDone
 
 CinnabarQuizMachine5:
 	checkevent EVENT_CINNABAR_GYM_QUIZ_5
-	iftrue .QuizDone
-	changeblock 2, 14, $6c ; quiz blue
+	iftrue CinnabarGymQuizDone
+	pause 10
 	playsound SFX_BOOT_PC
-	waitsfx
+	changeblock 2, 14, $6c ; quiz blue
 	opentext
 	writetext CinnabarGymQuizIntroText
 	promptbutton
@@ -260,7 +280,8 @@ CinnabarQuizMachine5:
 	reloadmappart
 	waitsfx
 	applymovement CINNABARGYM_TRAINER5, CinnabarGymWrongAnswerMovement
-	sjump TrainerFirebreatherDrake
+	turnobject PLAYER, LEFT
+	sjump TrainerFirebreatherEvan
 .Correct
 	playsound SFX_SAVE
 	changeblock 2, 14, $6a ; quiz green
@@ -274,15 +295,13 @@ CinnabarQuizMachine5:
 	reloadmappart
 	setevent EVENT_CINNABAR_GYM_QUIZ_5
 	end
-.QuizDone
-	jumptext CinnabarGymQuizDone
 
 CinnabarQuizMachine6:
 	checkevent EVENT_CINNABAR_GYM_QUIZ_6
-	iftrue .QuizDone
-	changeblock 2, 8, $6c ; quiz blue
+	iftrue CinnabarGymQuizDone
+	pause 10
 	playsound SFX_BOOT_PC
-	waitsfx
+	changeblock 2, 8, $6c ; quiz blue
 	opentext
 	writetext CinnabarGymQuizIntroText
 	promptbutton
@@ -294,6 +313,7 @@ CinnabarQuizMachine6:
 	reloadmappart
 	waitsfx
 	applymovement CINNABARGYM_TRAINER6, CinnabarGymWrongAnswerMovement
+	turnobject PLAYER, LEFT
 	sjump TrainerSuperNerdMarkus
 .Correct
 	playsound SFX_SAVE
@@ -308,8 +328,9 @@ CinnabarQuizMachine6:
 	reloadmappart
 	setevent EVENT_CINNABAR_GYM_QUIZ_6
 	end
-.QuizDone
-	jumptext CinnabarGymQuizDone
+
+CinnabarGymQuizDone:
+	jumptext CinnabarGymQuizDoneText
 
 CinnabarGymQuizIntroText:
 	text "#MON Quiz!"
@@ -372,6 +393,7 @@ CinnabarGymQuestion5Text: ;true
 	line "same species'"
 	cont "stats can grow at"
 	cont "different rates?"
+	done
 
 CinnabarGymQuestion6Text: ;false
 ;	text "TM28 contains"
@@ -391,7 +413,7 @@ CinnabarGymQuizWrongText:
 	line "Incorrect!"
 	done
 
-CinnabarGymQuizDone:
+CinnabarGymQuizDoneText:
 	text "The door is"
 	line "already open."
 	done
@@ -401,52 +423,72 @@ CinnabarGymWrongAnswerMovement:
 	turn_head RIGHT
 	step_end
 
-TrainerFirebreatherFinnley: ; quiz 1
-	trainer FIREBREATHER, FINNLEY, EVENT_BEAT_FIREBREATHER_FINNLEY, FirebreatherFinnleySeenText, FirebreatherFinnleyBeatenText, 0, .Script
-.Script:
-	checkevent EVENT_CINNABAR_GYM_QUIZ_1
+TrainerFirebreatherBill: ; quiz 1
+	checkevent EVENT_BEAT_FIREBREATHER_BILL
 	iftrue .AfterBattleText
-	setevent EVENT_CINNABAR_GYM_QUIZ_1
+	faceplayer
+	opentext
+	writetext FirebreatherBillSeenText
+	waitbutton
+	closetext
+	winlosstext FirebreatherBillBeatenText, 0
+	loadtrainer FIREBREATHER, BILL
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_FIREBREATHER_BILL
+	checkevent EVENT_CINNABAR_GYM_QUIZ_1
+	iftrue .DoorAlreadyOpen
+	pause 20
 	playsound SFX_ENTER_DOOR
 	changeblock 20, 6, $64 ; door open
-;	reloadmappart
-;	changeblock 18, 8, $6d ; quiz off
 	reloadmappart
+	setevent EVENT_CINNABAR_GYM_QUIZ_1
+.DoorAlreadyOpen
 	end
-.AfterBattleText
-	jumptextfaceplayer FirebreatherFinnleyAfterBattleText
 
-FirebreatherFinnleySeenText:
+.AfterBattleText:
+	jumptextfaceplayer FirebreatherBillAfterBattleText
+
+FirebreatherBillSeenText:
 	text "I was a thief, but"
 	line "I became straight"
 	cont "as a trainer!"
 	done
 
-FirebreatherFinnleyBeatenText:
-	text "I"
-	line "surrender!"
+FirebreatherBillBeatenText:
+	text "I surrender!"
 	done
 
-FirebreatherFinnleyAfterBattleText:
+FirebreatherBillAfterBattleText:
 	text "Training #MON"
 	line "with BLAINE helped"
 	cont "me stop stealing!"
 	done
 
 TrainerSuperNerdHugh: ; quiz 2
-	trainer SUPER_NERD, HUGH, EVENT_BEAT_SUPER_NERD_HUGH, SuperNerdHughSeenText, SuperNerdHughBeatenText, 0, .Script
-.Script:
-	checkevent EVENT_CINNABAR_GYM_QUIZ_2
+	checkevent EVENT_BEAT_SUPER_NERD_HUGH
 	iftrue .AfterBattleText
-	setevent EVENT_CINNABAR_GYM_QUIZ_2
+	faceplayer
+	opentext
+	writetext SuperNerdHughSeenText
+	waitbutton
+	closetext
+	winlosstext SuperNerdHughBeatenText, 0
+	loadtrainer SUPER_NERD, HUGH
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_SUPER_NERD_HUGH
+	checkevent EVENT_CINNABAR_GYM_QUIZ_2
+	iftrue .DoorAlreadyOpen
+	pause 20
 	playsound SFX_ENTER_DOOR
 	changeblock 12, 6, $64 ; door open
-;	reloadmappart
-;	changeblock 10, 2, $6d ; quiz off
 	reloadmappart
+	setevent EVENT_CINNABAR_GYM_QUIZ_2
+.DoorAlreadyOpen
 	end
-.AfterBattleText
-	endifjustbattled
+
+.AfterBattleText:
 	jumptextfaceplayer SuperNerdHughAfterBattleText
 
 SuperNerdHughSeenText:
@@ -466,49 +508,71 @@ SuperNerdHughAfterBattleText:
 	cont "for you!"
 	done
 
-TrainerFirebreatherDustin: ; quiz 3
-	trainer FIREBREATHER, DUSTIN, EVENT_BEAT_FIREBREATHER_DUSTIN, FirebreatherDustinSeenText, FirebreatherDustinBeatenText, 0, .Script
-.Script:
-	checkevent EVENT_CINNABAR_GYM_QUIZ_3
+TrainerFirebreatherRay: ; quiz 3
+	checkevent EVENT_BEAT_FIREBREATHER_RAY
 	iftrue .AfterBattleText
-	setevent EVENT_CINNABAR_GYM_QUIZ_3
+	faceplayer
+	opentext
+	writetext FirebreatherRaySeenText
+	waitbutton
+	closetext
+	winlosstext FirebreatherRayBeatenText, 0
+	loadtrainer FIREBREATHER, RAY
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_FIREBREATHER_RAY
+	checkevent EVENT_CINNABAR_GYM_QUIZ_3
+	iftrue .DoorAlreadyOpen
+	pause 20
 	playsound SFX_ENTER_DOOR
 	changeblock 12, 12, $64 ; door open
-;	reloadmappart
-;	changeblock 10, 8, $6d ; quiz off
 	reloadmappart
+	setevent EVENT_CINNABAR_GYM_QUIZ_3
+.DoorAlreadyOpen
 	end
-.AfterBattleText
-	jumptextfaceplayer FirebreatherDustinAfterBattleText
 
-FirebreatherDustinSeenText:
+.AfterBattleText:
+	jumptextfaceplayer FirebreatherRayAfterBattleText
+
+FirebreatherRaySeenText:
 	text "I just like using"
 	line "fire #MON!"
 	done
 
-FirebreatherDustinBeatenText:
+FirebreatherRayBeatenText:
 	text "Too hot"
 	line "to handle!"
 	done
 
-FirebreatherDustinAfterBattleText:
+FirebreatherRayAfterBattleText:
 	text "I just don't like"
 	line "water #MON!"
 	done
 
 TrainerSuperNerdCary: ; quiz 4
-	trainer SUPER_NERD, CARY, EVENT_BEAT_SUPER_NERD_CARY, SuperNerdCarySeenText, SuperNerdCaryBeatenText, 0, .Script
-.Script:
-	checkevent EVENT_CINNABAR_GYM_QUIZ_4
+	checkevent EVENT_BEAT_SUPER_NERD_CARY
 	iftrue .AfterBattleText
-	setevent EVENT_CINNABAR_GYM_QUIZ_4
+	faceplayer
+	opentext
+	writetext SuperNerdCarySeenText
+	waitbutton
+	closetext
+	winlosstext SuperNerdCaryBeatenText, 0
+	loadtrainer SUPER_NERD, CARY
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_SUPER_NERD_CARY
+	checkevent EVENT_CINNABAR_GYM_QUIZ_4
+	iftrue .DoorAlreadyOpen
+	pause 20
 	playsound SFX_ENTER_DOOR
-	changeblock 6, 14, $64 ; door open
-;	reloadmappart
-;	changeblock 10, 14, $6d ; quiz off
+	changeblock 6, 14, $66 ; door open
 	reloadmappart
+	setevent EVENT_CINNABAR_GYM_QUIZ_4
+.DoorAlreadyOpen
 	end
-.AfterBattleText
+
+.AfterBattleText:
 	jumptextfaceplayer SuperNerdCaryAfterBattleText
 
 SuperNerdCarySeenText:
@@ -531,51 +595,73 @@ SuperNerdCaryAfterBattleText:
 	cont "his way down!"
 	done
 
-TrainerFirebreatherDrake: ; quiz 5
-	trainer FIREBREATHER, DRAKE, EVENT_BEAT_FIREBREATHER_DRAKE, FirebreatherDrakeSeenText, FirebreatherDrakeBeatenText, 0, .Script
-.Script:
-	checkevent EVENT_CINNABAR_GYM_QUIZ_5
+TrainerFirebreatherEvan: ; quiz 5
+	checkevent EVENT_BEAT_FIREBREATHER_EVAN
 	iftrue .AfterBattleText
-	setevent EVENT_CINNABAR_GYM_QUIZ_5
+	faceplayer
+	opentext
+	writetext FirebreatherEvanSeenText
+	waitbutton
+	closetext
+	winlosstext FirebreatherEvanBeatenText, 0
+	loadtrainer FIREBREATHER, EVAN
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_FIREBREATHER_EVAN
+	checkevent EVENT_CINNABAR_GYM_QUIZ_5
+	iftrue .DoorAlreadyOpen
+	pause 20
 	playsound SFX_ENTER_DOOR
 	changeblock 4, 12, $64 ; door open
-;	reloadmappart
-;	changeblock 2, 14, $6d ; quiz off
 	reloadmappart
+	setevent EVENT_CINNABAR_GYM_QUIZ_5
+.DoorAlreadyOpen
 	end
-.AfterBattleText
-	jumptextfaceplayer FirebreatherDrakeAfterBattleText
 
-FirebreatherDrakeSeenText:
+.AfterBattleText:
+	jumptextfaceplayer FirebreatherEvanAfterBattleText
+
+FirebreatherEvanSeenText:
 	text "I've been to many"
 	line "GYMs, but this is"
 	cont "my favorite!"
 	done
 
-FirebreatherDrakeBeatenText:
+FirebreatherEvanBeatenText:
 	text "Yowza!"
 	line "Too hot!"
 	done
 
-FirebreatherDrakeAfterBattleText:
+FirebreatherEvanAfterBattleText:
 	text "Us fire #MON"
 	line "fans like PONYTA"
 	cont "and NINETALES!"
 	done
 
 TrainerSuperNerdMarkus: ; quiz 6
-	trainer SUPER_NERD, MARKUS, EVENT_BEAT_SUPER_NERD_MARKUS, SuperNerdMarkusSeenText, SuperNerdMarkusBeatenText, 0, .Script
-.Script:
-	checkevent EVENT_CINNABAR_GYM_QUIZ_6
+	checkevent EVENT_BEAT_SUPER_NERD_MARKUS
 	iftrue .AfterBattleText
-	setevent EVENT_CINNABAR_GYM_QUIZ_6
+	faceplayer
+	opentext
+	writetext SuperNerdMarkusSeenText
+	waitbutton
+	closetext
+	winlosstext SuperNerdMarkusBeatenText, 0
+	loadtrainer SUPER_NERD, MARKUS
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_SUPER_NERD_MARKUS
+	checkevent EVENT_CINNABAR_GYM_QUIZ_6
+	iftrue .DoorAlreadyOpen
+	pause 20
 	playsound SFX_ENTER_DOOR
 	changeblock 4, 6, $64 ; door open
-;	reloadmappart
-;	changeblock 2, 8, $6d ; quiz off
 	reloadmappart
+	setevent EVENT_CINNABAR_GYM_QUIZ_6
+.DoorAlreadyOpen
 	end
-.AfterBattleText
+
+.AfterBattleText:
 	jumptextfaceplayer SuperNerdMarkusAfterBattleText
 
 SuperNerdMarkusSeenText:
@@ -687,12 +773,12 @@ CinnabarGym_MapEvents:
 	bg_event  3,  9, BGEVENT_UP, CinnabarQuizMachine6
 
 	def_object_events
-	object_event 18,  9, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerFirebreatherFinnley, -1
-	object_event 10,  3, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerSuperNerdHugh, -1
-	object_event 10,  9, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerFirebreatherDustin, -1
-	object_event 10, 15, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerSuperNerdCary, -1
-	object_event  2, 15, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerFirebreatherDrake, -1
-	object_event  2,  9, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerSuperNerdMarkus, -1
-	object_event 20,  2, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerSuperNerdTeru, -1
+	object_event 18,  9, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TrainerFirebreatherBill, -1
+	object_event 10,  3, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TrainerSuperNerdHugh, -1
+	object_event 10,  9, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TrainerFirebreatherRay, -1
+	object_event 10, 15, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TrainerSuperNerdCary, -1
+	object_event  2, 15, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TrainerFirebreatherEvan, -1
+	object_event  2,  9, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TrainerSuperNerdMarkus, -1
+	object_event 20,  2, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSuperNerdTeru, -1
 	object_event  3,  3, SPRITE_BLAINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CinnabarGymBlaineScript, -1
 	object_event 21, 14, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CinnabarGymGuideScript, -1

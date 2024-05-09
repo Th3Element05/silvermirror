@@ -648,11 +648,11 @@ DEF KRIS EQU __trainer_class__
 
 	trainerclass FIREBREATHER ; 35
 ; kanto
-	const DUSTIN ; burglar
-	const FINNLEY ; burglar
-	const DRAKE ; burglar
+	const RAY ; burglar
+	const BILL ; burglar
+	const EVAN ; burglar
 ; johto
-	const JEREMY
+	const LEO
 	const ALEX
 	const WALT1
 ; rematch
@@ -666,8 +666,8 @@ DEF KRIS EQU __trainer_class__
 	const FRITZ
 	const OTIS ; cueball
 	const BURT ; cueball
-	const BILL ; cueball
-	const RAY ; cueball
+	const FINNLEY ; cueball
+	const DUSTIN ; cueball
 	const LYLE ; cueball
 	const DARIUS ; cueball
 	const JULIEN ; cueball

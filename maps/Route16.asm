@@ -219,26 +219,26 @@ JugglerBurtAfterBattleText:
 	line "Get away from me!"
 	done
 
-TrainerJugglerBill:
-	trainer JUGGLER, BILL, EVENT_BEAT_JUGGLER_BILL, JugglerBillSeenText, JugglerBillBeatenText, 0, .Script
+TrainerJugglerFinnley:
+	trainer JUGGLER, FINNLEY, EVENT_BEAT_JUGGLER_FINNLEY, JugglerFinnleySeenText, JugglerFinnleyBeatenText, 0, .Script
 .Script:
 	endifjustbattled
 	opentext
-	writetext JugglerBillAfterBattleText
+	writetext JugglerFinnleyAfterBattleText
 	waitbutton
 	closetext
 	end
 
-JugglerBillSeenText:
+JugglerFinnleySeenText:
 	text "Nice BIKE!"
 	line "Hand it over!"
 	done
 
-JugglerBillBeatenText:
+JugglerFinnleyBeatenText:
 	text "Knock out!"
 	done
 
-JugglerBillAfterBattleText:
+JugglerFinnleyAfterBattleText:
 	text "Forget it, who"
 	line "needs your BIKE!"
 	done
@@ -307,5 +307,5 @@ Route16_MapEvents:
 	object_event  6, 12, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerJugglerOtis, -1
 	object_event  9, 13, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerBikerJoseph, -1
 	object_event 11, 14, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerJugglerBurt, -1
-	object_event 14, 15, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerJugglerBill, -1
+	object_event 14, 15, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerJugglerFinnley, -1
 	object_event 17, 14, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerBikerTeddy, -1
