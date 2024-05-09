@@ -82,9 +82,12 @@ PlayerReceivedSoulbadgeText:
 KogaExplainSoulbadgeText:
 	text "Now that you have"
 	line "the SOULBADGE,"
-	cont "your #MON can"
-	line "use SURF outside"
-	cont "of battle!"
+;	cont "your #MON can"
+;	cont "use SURF outside"
+;	cont "of battle!"
+	cont "you are one step"
+	cont "closer to the"
+	cont "#MON LEAGUE!"
 
 	para "Ah! Take this"
 	line "too!"
