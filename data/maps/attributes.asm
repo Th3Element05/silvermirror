@@ -290,10 +290,10 @@ ENDM
 
 	map_attributes CinnabarIsland, CINNABAR_ISLAND, $43, NORTH | EAST
 	connection north, Route21, ROUTE_21, 0
-	connection east, Route20, ROUTE_20, 2
+	connection east, Route20, ROUTE_20, 1 ;2
 
 	map_attributes Route20, ROUTE_20, $43, WEST | EAST
-	connection west, CinnabarIsland, CINNABAR_ISLAND, -2
+	connection west, CinnabarIsland, CINNABAR_ISLAND, -1 ;-2
 	connection east, Route19, ROUTE_19, -16
 
 	map_attributes Route19, ROUTE_19, $43, NORTH | WEST
