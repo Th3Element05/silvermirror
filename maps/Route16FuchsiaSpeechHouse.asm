@@ -8,6 +8,7 @@ Route16FuchsiaSpeechHouse_MapScripts:
 Route16FlyHouseLassScript:
 	checkevent EVENT_GOT_HM02_FLY
 	iftrue .AlreadyGotCut
+	faceplayer
 	opentext
 	writetext Route16FlyHouseLassText
 	promptbutton
