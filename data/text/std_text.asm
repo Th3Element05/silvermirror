@@ -313,8 +313,7 @@ GymStatue_WinningTrainers2Text:
 	text_ram wStringBuffer4
 	text_start
 	para "WINNING TRAINERS:"
-	line "<RIVAL>"
-	cont "<PLAYER>"
+	line "<RIVAL>, <PLAYER>"
 	done
 
 CoinVendor_WelcomeText:
