@@ -8,11 +8,9 @@ SaffronGym_MapScripts:
 
 .SaffronGymWarpCallback:
 	checkevent EVENT_BEAT_SABRINA
-	iftrue .ExitWarp
-	endcallback
-
-.ExitWarp:
+	iffalse .NoExitWarp
 	changeblock 8, 10, $12 ; red warp tile
+.NoExitWarp:
 	endcallback
 
 SaffronGymSabrinaScript:
