@@ -426,12 +426,13 @@ AnimateTileset::
 	and a
 	ret z
 
-; Back out if we're too far into VBlank
+; Back out if we're too far into VBlank 
 	ldh a, [rLY]
 	cp LY_VBLANK
 	ret c
 	cp LY_VBLANK + 7
 	ret nc
+;silvermirror, remove above section to animate tiles while text is open
 
 	ldh a, [hROMBank]
 	push af

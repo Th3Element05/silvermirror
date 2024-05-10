@@ -38,17 +38,38 @@ _AnimateTileset::
 Tileset0Anim:
 TilesetJohtoModernAnim:
 TilesetKantoAnim:
-	dw vTiles2 tile $14, AnimateWaterTile
+TilesetPortAnim:
+;	dw vTiles2 tile $14, AnimateWaterTile
+;	dw NULL,  WaitTileAnimation
+;	dw vTiles2 tile $64, AnimateFountainTile
+;	dw NULL,  WaitTileAnimation
+;	dw NULL,  WaitTileAnimation
+;	dw NULL,  AnimateWaterPalette
+;	dw NULL,  WaitTileAnimation
+;	dw NULL,  AnimateFlowerTile
+;	dw NULL,  WaitTileAnimation
+;	dw NULL,  WaitTileAnimation
+;	dw NULL,  StandingTileFrame8
+;	dw NULL,  DoneTileAnimation
+	dw vTiles2 tile $14, ReadTileToAnimBuffer
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+	dw wTileAnimBuffer, ScrollTileRightLeft
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+	dw vTiles2 tile $14, WriteTileFromAnimBuffer
+	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
 	dw vTiles2 tile $64, AnimateFountainTile
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
 	dw NULL,  AnimateWaterPalette
 	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
 	dw NULL,  AnimateFlowerTile
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
-	dw NULL,  StandingTileFrame8
+;	dw NULL,  StandingTileFrame8
 	dw NULL,  DoneTileAnimation
 
 TilesetParkAnim:
@@ -124,19 +145,19 @@ UnusedTilesetAnim2: ; unreferenced
 	dw NULL,  WaitTileAnimation
 	dw NULL,  DoneTileAnimation
 
-TilesetPortAnim:
-	dw vTiles2 tile $14, AnimateWaterTile
-	dw NULL,  WaitTileAnimation
-	dw NULL,  WaitTileAnimation
-	dw NULL,  WaitTileAnimation
-	dw NULL,  WaitTileAnimation
-	dw NULL,  AnimateWaterPalette
-	dw NULL,  WaitTileAnimation
-	dw NULL,  WaitTileAnimation
-	dw NULL,  WaitTileAnimation
-	dw NULL,  WaitTileAnimation
-	dw NULL,  StandingTileFrame8
-	dw NULL,  DoneTileAnimation
+;TilesetPortAnim:
+;	dw vTiles2 tile $14, AnimateWaterTile
+;	dw NULL,  WaitTileAnimation
+;	dw NULL,  WaitTileAnimation
+;	dw NULL,  WaitTileAnimation
+;	dw NULL,  WaitTileAnimation
+;	dw NULL,  AnimateWaterPalette
+;	dw NULL,  WaitTileAnimation
+;	dw NULL,  WaitTileAnimation
+;	dw NULL,  WaitTileAnimation
+;	dw NULL,  WaitTileAnimation
+;	dw NULL,  StandingTileFrame8
+;	dw NULL,  DoneTileAnimation
 
 TilesetEliteFourRoomAnim:
 	dw NULL,  AnimateLavaBubbleTile2
