@@ -2,26 +2,29 @@
 
 MrFujisHouse_MapScripts:
 	def_scene_scripts
+	scene_script MrFujisHouseNoop1Scene, SCENE_MRFUJISHOUSE_NOOP
+	scene_script MrFujisHousePokefluteScene, SCENE_MRFUJISHOUSE_POKEFLUTE
 
 	def_callbacks
 
-MrFujisHouseMrFujiScript:
-	faceplayer
-	checkevent EVENT_GOT_POKEFLUTE
-	iftrue .Skip
+MrFujisHouseNoop1Scene:
+	end
+
+MrFujisHousePokefluteScene:
 	opentext
 	writetext MrFujisHouseMrFujiGivePokeFluteText
 	promptbutton
 	verbosegiveitem POKE_FLUTE
 	waitbutton
 	closetext
+	setscene SCENE_MRFUJISHOUSE_NOOP
 	; fallthrough
-.Skip
+MrFujisHouseMrFujiScript:
 	checkevent EVENT_WOKE_SNORLAX
 	iftrue .FluteHelped
-	jumptext MrFujisHouseMrFujiExplainFluteText
+	jumptextfaceplayer MrFujisHouseMrFujiExplainFluteText
 .FluteHelped
-	jumptext MrFujisHouseMrFujiFluteHelpedText
+	jumptextfaceplayer MrFujisHouseMrFujiFluteHelpedText
 
 MrFujisHouseMrFujiGivePokeFluteText:
 	text "MR.FUJI: <PLAYER>."
