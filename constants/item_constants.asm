@@ -136,7 +136,7 @@
 	const LOST_ITEM    ; 80 ; can be repurposed if removed from fan club and copycat house
 	const STARDUST     ; 81
 	const STAR_PIECE   ; 82
-	const BASEMENT_KEY ; 83 ; use in hideout?
+	const LIFT_KEY     ; 83 ; BASEMENT_KEY
 	const PASS         ; 84
 	const SAFARI_BALL  ; 85
 	const CHARCOAL     ; 86 ; include?

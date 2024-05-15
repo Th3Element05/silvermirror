@@ -387,6 +387,7 @@ CeladonDeptStoreRoof_Blocks:
 
 GoldenrodDeptStoreElevator_Blocks:
 CeladonDeptStoreElevator_Blocks:
+RocketHideoutElevator_Blocks:
 	INCBIN "maps/DeptStoreElevator.blk"
 
 CeladonMansion1F_Blocks:

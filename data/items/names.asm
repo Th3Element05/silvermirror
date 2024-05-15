@@ -130,7 +130,7 @@ ItemNames::
 	li "LOST ITEM"
 	li "STARDUST"
 	li "STAR PIECE"
-	li "BASEMENT KEY"
+	li "LIFT KEY" ; "BASEMENT KEY"
 	li "PASS"
 	li "SAFARI BALL"
 	li "CHARCOAL"

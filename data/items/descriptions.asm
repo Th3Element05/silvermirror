@@ -131,7 +131,7 @@ ItemDescriptions:
 	dw LostItemDesc
 	dw StardustDesc
 	dw StarPieceDesc
-	dw BasementKeyDesc
+	dw ElevatorKeyDesc ; BasementKeyDesc
 	dw PassDesc
 	dw SafariBallDesc
 	dw CharcoalDesc
@@ -778,8 +778,11 @@ StarPieceDesc:
 	db   "A hunk of red gem."
 	next "Sell very high.@"
 
-BasementKeyDesc:
-	db   "Opens doors.@"
+;BasementKeyDesc:
+;	db   "Opens doors.@"
+ElevatorKeyDesc:
+	db   "Unlocks hideout"
+	next "elevator.@"
 
 PassDesc:
 	db   "A ticket for the"
