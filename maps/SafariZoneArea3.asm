@@ -56,8 +56,8 @@ SafariZoneArea3_MapEvents:
 	warp_event  9, 33, SAFARI_ZONE_AREA_4, 4       ; 4
 	warp_event 20, 33, SAFARI_ZONE_AREA_1, 5       ; 5
 	warp_event 21, 33, SAFARI_ZONE_AREA_1, 6       ; 6
-	warp_event 37, 28, SAFARI_ZONE_AREA_2, 1       ; 5
-	warp_event 37, 29, SAFARI_ZONE_AREA_2, 2       ; 6
+	warp_event 35, 28, SAFARI_ZONE_AREA_2, 1       ; 5
+	warp_event 35, 29, SAFARI_ZONE_AREA_2, 2       ; 6
 	warp_event 33,  3, SAFARI_REST_HOUSE_AREA_3, 1 ; 7
 
 	def_coord_events

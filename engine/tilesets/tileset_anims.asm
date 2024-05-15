@@ -288,7 +288,7 @@ TilesetGameCornerAnim:
 TilesetTraditionalHouseAnim:
 TilesetTrainStationAnim:
 TilesetChampionsRoomAnim:
-;TilesetLighthouseAnim:
+TilesetLighthouseAnim:
 TilesetPlayersRoomAnim:
 TilesetPokeComCenterAnim:
 TilesetBattleTowerInsideAnim:
@@ -308,7 +308,6 @@ TilesetCemetaryAnim:
 	dw NULL,  WaitTileAnimation
 	dw NULL,  DoneTileAnimation
 
-TilesetLighthouseAnim:                          ;silvermirror
 TilesetFacilityAnim:
 	dw vTiles2 tile $60, AnimateWaterTile
 	dw NULL,  WaitTileAnimation
