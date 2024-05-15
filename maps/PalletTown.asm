@@ -6,7 +6,7 @@
 PalletTown_MapScripts:
 	def_scene_scripts
 	scene_script PalletTownNoop1Scene, SCENE_PALLETTOWN_OAK_HEY_WAIT
-	scene_script PalletTownNoop1Scene, SCENE_PALLETTOWN_NOOP
+	scene_script PalletTownNoop2Scene, SCENE_PALLETTOWN_NOOP
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, PalletTownFlypointCallback

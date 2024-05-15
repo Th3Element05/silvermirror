@@ -760,8 +760,6 @@ ENDM
 	map_attributes CeruleanCave1F, CERULEAN_CAVE_1F, $09, 0
 	map_attributes CeruleanCave2F, CERULEAN_CAVE_2F, $09, 0
 	map_attributes CeruleanCaveB1F, CERULEAN_CAVE_B1F, $09, 0
-	map_attributes PokemonMansion1F, POKEMON_MANSION_1F, $6C, 0
-	map_attributes PokemonMansionB1F, POKEMON_MANSION_B1F, $77, 0
 ;	map_attributes SafariZoneGatePokecenter1F, SAFARI_ZONE_GATE_POKECENTER_1F, $00, 0
 	map_attributes SafariZoneArea1, SAFARI_ZONE_AREA_1, $06, 0
 	map_attributes SafariZoneArea2, SAFARI_ZONE_AREA_2, $06, 0
@@ -797,10 +795,13 @@ ENDM
 	map_attributes RocketHideoutB2F, ROCKET_HIDEOUT_B2F, $00, 0
 	map_attributes RocketHideoutB3F, ROCKET_HIDEOUT_B3F, $00, 0
 	map_attributes RocketHideoutB4F, ROCKET_HIDEOUT_B4F, $00, 0
+	map_attributes RocketHideoutElevator, ROCKET_HIDEOUT_ELEVATOR, $00, 0
 	map_attributes Route12Gate, ROUTE_12_GATE, $00, 0
 ;
-	map_attributes PokemonMansion2F, POKEMON_MANSION_2F, $6C, 0
-	map_attributes PokemonMansion3F, POKEMON_MANSION_3F, $6C, 0
+	map_attributes PokemonMansion1F, POKEMON_MANSION_1F, $00, 0
+	map_attributes PokemonMansion2F, POKEMON_MANSION_2F, $00, 0
+	map_attributes PokemonMansion3F, POKEMON_MANSION_3F, $00, 0
+	map_attributes PokemonMansionB1F, POKEMON_MANSION_B1F, $00, 0
 	map_attributes CinnabarMart, CINNABAR_MART, $00, 0
 	map_attributes CinnabarGym, CINNABAR_GYM, $00, 0
 	map_attributes Route26Gate, ROUTE_26_GATE, $00, 0

@@ -172,6 +172,7 @@ ENDM
 	map_const ROCKET_HIDEOUT_B2F,                          15, 11 ; 28
 	map_const ROCKET_HIDEOUT_B3F,                          11, 12 ; 29
 	map_const ROCKET_HIDEOUT_B4F,                          11, 12 ; 30
+	map_const ROCKET_HIDEOUT_ELEVATOR,                      2,  2 ; 31 ;silvermirror+
 	map_const POKEMON_MANSION_1F,                          15, 14 ; 14
 	map_const POKEMON_MANSION_2F,                          15, 14 ; 16
 	map_const POKEMON_MANSION_3F,                          15,  9 ; 17
@@ -580,15 +581,16 @@ ENDM
 	endgroup
 
 	newgroup SAFARI_ZONE                                          ; 28
-	map_const SAFARI_ZONE_ENTRANCE,                         5,  5 ;  3
-	map_const SAFARI_ZONE_AREA_1,                          20, 16 ;  6
-	map_const SAFARI_ZONE_AREA_2,                          17, 13 ;  7 ; 22, 19 ;  7
-	map_const SAFARI_ZONE_AREA_3,                          22, 19 ;  1
-	map_const SAFARI_ZONE_AREA_4,                          18, 15 ;  8 ; 20, 24 ;  8
-	map_const SAFARI_REST_HOUSE_AREA_1,                     4,  4 ;  9
-	map_const SAFARI_REST_HOUSE_AREA_2,                     4,  4 ; 10
-	map_const SAFARI_REST_HOUSE_AREA_3,                     4,  4 ; 11
-	map_const SAFARI_REST_HOUSE_AREA_4,                     4,  4 ; 12
+	map_const SAFARI_ZONE_ENTRANCE,                         5,  5 ;  1
+	map_const SAFARI_ZONE_AREA_1,                          20, 16 ;  2
+	map_const SAFARI_ZONE_AREA_2,                          17, 13 ;  3 ; 22, 19 ;  7
+	map_const SAFARI_ZONE_AREA_3,                          21, 19 ;  4
+	map_const SAFARI_ZONE_AREA_4,                          18, 15 ;  5 ; 20, 24 ;  8
+	map_const SAFARI_REST_HOUSE_AREA_1,                     4,  4 ;  6
+	map_const SAFARI_REST_HOUSE_AREA_2,                     4,  4 ;  7
+	map_const SAFARI_REST_HOUSE_AREA_3,                     4,  4 ;  8
+	map_const SAFARI_REST_HOUSE_AREA_4,                     4,  4 ;  9
+;	map_const SAFARI_ZONE_SECRET_HOUSE,                     4,  4 ; 10
 	endgroup
 
 DEF NUM_MAP_GROUPS EQU const_value ; 26

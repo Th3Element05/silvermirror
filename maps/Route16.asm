@@ -121,11 +121,7 @@ TrainerBikerAiden:
 	trainer BIKER, AIDEN1, EVENT_BEAT_BIKER_AIDEN, BikerAidenSeenText, BikerAidenBeatenText, 0, .Script
 .Script:
 	endifjustbattled
-	opentext
-	writetext BikerAidenAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer BikerAidenAfterBattleText
 
 BikerAidenSeenText:
 	text "Sure, I'll go!"
@@ -146,11 +142,7 @@ TrainerJugglerOtis:
 	trainer JUGGLER, OTIS, EVENT_BEAT_JUGGLER_OTIS, JugglerOtisSeenText, JugglerOtisBeatenText, 0, .Script
 .Script:
 	endifjustbattled
-	opentext
-	writetext JugglerOtisAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer JugglerOtisAfterBattleText
 
 JugglerOtisSeenText:
 	text "I'm feeling"
@@ -172,11 +164,7 @@ TrainerBikerJoseph:
 	trainer BIKER, JOSEPH, EVENT_BEAT_BIKER_JOSEPH, BikerJosephSeenText, BikerJosephBeatenText, 0, .Script
 .Script:
 	endifjustbattled
-	opentext
-	writetext BikerJosephAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer BikerJosephAfterBattleText
 
 BikerJosephSeenText:
 	text "Hey, you just"
@@ -198,11 +186,7 @@ TrainerJugglerBurt:
 	trainer JUGGLER, BURT, EVENT_BEAT_JUGGLER_BURT, JugglerBurtSeenText, JugglerBurtBeatenText, 0, .Script
 .Script:
 	endifjustbattled
-	opentext
-	writetext JugglerBurtAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer JugglerBurtAfterBattleText
 
 JugglerBurtSeenText:
 	text "Come out and play,"
@@ -223,11 +207,7 @@ TrainerJugglerFinnley:
 	trainer JUGGLER, FINNLEY, EVENT_BEAT_JUGGLER_FINNLEY, JugglerFinnleySeenText, JugglerFinnleyBeatenText, 0, .Script
 .Script:
 	endifjustbattled
-	opentext
-	writetext JugglerFinnleyAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer JugglerFinnleyAfterBattleText
 
 JugglerFinnleySeenText:
 	text "Nice BIKE!"
@@ -247,11 +227,7 @@ TrainerBikerTeddy:
 	trainer BIKER, TEDDY, EVENT_BEAT_BIKER_TEDDY, BikerTeddySeenText, BikerTeddyBeatenText, 0, .Script
 .Script:
 	endifjustbattled
-	opentext
-	writetext BikerTeddyAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer BikerTeddyAfterBattleText
 
 BikerTeddySeenText:
 	text "What do you want?"

@@ -104,10 +104,10 @@ MACRO _use_palette_routine_for_map
 ENDM
 
 MapSpecificPalettes:
-	_use_palette_routine_for_map POKEMON_MANSION_B1F, .LavaOverRedCoalOverBrownBGPalette
-	_use_palette_routine_for_map SAFARI_ZONE_AREA_2, .SandOverBrownBGPalette
-	_use_palette_routine_for_map SAFARI_ZONE_AREA_3, .SwampBGPalettes
-	_use_palette_routine_for_map SAFARI_ZONE_AREA_4, .SundriedBGPalettes
+;	_use_palette_routine_for_map POKEMON_MANSION_B1F, .LavaOverRedCoalOverBrownBGPalette
+;	_use_palette_routine_for_map SAFARI_ZONE_AREA_2, .SandOverBrownBGPalette
+;	_use_palette_routine_for_map SAFARI_ZONE_AREA_3, .SwampBGPalettes
+;	_use_palette_routine_for_map SAFARI_ZONE_AREA_4, .SundriedBGPalettes
 	_use_palette_routine_for_map PEWTER_MUSEUM_1F, .MuseumBGPalettes
 	_use_palette_routine_for_map PEWTER_MUSEUM_2F, .MuseumBGPalettes
 	_use_palette_routine_for_map BLACKTHORN_GYM_1F, .BlackThornGymBGPalettes
@@ -116,7 +116,7 @@ MapSpecificPalettes:
 	_use_palette_routine_for_map KARENS_ROOM, .KarensRoomBGPalettes
 	_use_palette_routine_for_map KOGAS_ROOM, .KogasRoomBGPalettes
 	_use_palette_routine_for_map WILLS_ROOM, .WillsRoomBGPalettes
-	_use_palette_routine_for_map VIRIDIAN_GYM, .ViridianGymBGPalettes
+;	_use_palette_routine_for_map VIRIDIAN_GYM, .ViridianGymBGPalettes
 	db -1 ; terminator
 
 .LavaOverRedCoalOverBrownBGPalette:
@@ -199,10 +199,10 @@ MapSpecificOBPalettes:
 ;	_use_palette_routine_for_map ROUTE_10_SOUTH, .YellowOverRockOBPalette
 	_use_palette_routine_for_map CERULEAN_CAVE_B1F, .PurpleOverPinkOBPalette
 	_use_palette_routine_for_map MR_FUJIS_HOUSE, .PurpleOverRockYellowOverPinkOBPalette
-	_use_palette_routine_for_map SAFARI_ZONE_AREA_2, .SandOverTreeOBPalette
-	_use_palette_routine_for_map SAFARI_ZONE_AREA_3, .SwampOverTreeOBPalette
+;	_use_palette_routine_for_map SAFARI_ZONE_AREA_2, .SandOverTreeOBPalette
+;	_use_palette_routine_for_map SAFARI_ZONE_AREA_3, .SwampOverTreeOBPalette
 	_use_palette_routine_for_map PEWTER_MUSEUM_1F, .YellowOverRockOBPalette
-	_use_palette_routine_for_map PEWTER_MUSEUM_2F, .YellowOverRockOBPalette
+;	_use_palette_routine_for_map PEWTER_MUSEUM_2F, .YellowOverRockOBPalette
 ;silvermirror+
 	_use_palette_routine_for_map SS_ANNE_ROOMS_B1F, .GrayOverRockOBPalette
 	db -1 ; terminator
