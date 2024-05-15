@@ -23,6 +23,7 @@ MapScenes::
 	scene_var POKEMON_TOWER_5F,                            wPokemonTower5FSceneID ;silvermirror
 	scene_var POKEMON_TOWER_6F,                            wPokemonTower6FSceneID ;silvermirror
 	scene_var FIGHTING_DOJO,                               wFightingDojoSceneID ;silvermirror
+	scene_var MR_FUJIS_HOUSE,                              wMrFujisHouseSceneID ;silvermirror
 	scene_var TRAINER_HOUSE_B1F,                           wTrainerHouseB1FSceneID
 	scene_var VICTORY_ROAD_GATE,                           wVictoryRoadGateSceneID
 	scene_var SAFFRON_MAGNET_TRAIN_STATION,                wSaffronMagnetTrainStationSceneID
