@@ -187,7 +187,7 @@ Route26HealHouse_Blocks:
 DayOfWeekSiblingsHouse_Blocks:
 ;Route27SandstormHouse_Blocks:
 MrPsychicsHouse_Blocks:
-Route5CleanseTagHouse_Blocks:
+;Route5CleanseTagHouse_Blocks:
 CherrygroveGymSpeechHouse_Blocks:
 GuideGentsHouse_Blocks:
 CherrygroveEvolutionSpeechHouse_Blocks:
@@ -848,6 +848,36 @@ FightingDojo_Blocks:
 SilphCo1F_Blocks:
 	INCBIN "maps/SilphCo1F.blk"
 
+SilphCo2F_Blocks:
+	INCBIN "maps/SilphCo2F.blk"
+
+SilphCo3F_Blocks:
+	INCBIN "maps/SilphCo3F.blk"
+
+SilphCo4F_Blocks:
+	INCBIN "maps/SilphCo4F.blk"
+
+SilphCo5F_Blocks:
+	INCBIN "maps/SilphCo5F.blk"
+
+SilphCo6F_Blocks:
+	INCBIN "maps/SilphCo6F.blk"
+
+SilphCo7F_Blocks:
+	INCBIN "maps/SilphCo7F.blk"
+
+SilphCo8F_Blocks:
+	INCBIN "maps/SilphCo8F.blk"
+
+SilphCo9F_Blocks:
+	INCBIN "maps/SilphCo9F.blk"
+
+SilphCo10F_Blocks:
+	INCBIN "maps/SilphCo10F.blk"
+
+SilphCo11F_Blocks:
+	INCBIN "maps/SilphCo11F.blk"
+
 ViridianGym_Blocks:
 	INCBIN "maps/ViridianGym.blk"
 
@@ -869,8 +899,8 @@ OaksLab_Blocks:
 ;MrFujisHouse_Blocks:
 ;	INCBIN "maps/MrFujisHouse.blk"
 
-LavRadioTower1F_Blocks:
-	INCBIN "maps/LavRadioTower1F.blk"
+;LavRadioTower1F_Blocks:
+;	INCBIN "maps/LavRadioTower1F.blk"
 
 SilverCaveItemRooms_Blocks:
 	INCBIN "maps/SilverCaveItemRooms.blk"
@@ -917,9 +947,9 @@ MrPokemonsHouse_Blocks:
 VictoryRoadGate_Blocks:
 	INCBIN "maps/VictoryRoadGate.blk"
 
-OlivinePortPassage_Blocks:
-VermilionPortPassage_Blocks:
-	INCBIN "maps/PortPassage.blk"
+;OlivinePortPassage_Blocks:
+;VermilionPortPassage_Blocks:
+;	INCBIN "maps/PortPassage.blk"
 
 FuchsiaGym_Blocks:
 	INCBIN "maps/FuchsiaGym.blk"
@@ -999,8 +1029,8 @@ BattleTower1F_Blocks:
 BattleTowerBattleRoom_Blocks:
 	INCBIN "maps/BattleTowerBattleRoom.blk"
 
-PokecomCenterAdminOfficeMobile_Blocks:
-	INCBIN "maps/PokecomCenterAdminOfficeMobile.blk"
+;PokecomCenterAdminOfficeMobile_Blocks:
+;	INCBIN "maps/PokecomCenterAdminOfficeMobile.blk"
 
 ;MobileTradeRoom_Blocks:
 ;	INCBIN "maps/MobileTradeRoom.blk"

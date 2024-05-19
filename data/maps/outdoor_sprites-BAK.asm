@@ -4,34 +4,34 @@
 OutdoorSprites:
 ; entries correspond to MAPGROUP_* constants
 	table_width 2, OutdoorSprites
-	dw PalletGroupSprites
-	dw ViridianGroupSprites
-	dw PewterGroupSprites
-	dw CeruleanGroupSprites
-	dw VermilionGroupSprites
-	dw FastShipGroupSprites
-	dw LavenderGroupSprites
-	dw CeladonGroupSprites
-	dw FuchsiaGroupSprites
-	dw SafariZoneGroupSprites
-	dw SaffronGroupSprites
-	dw CinnabarGroupSprites
-	dw IndigoGroupSprites
-	dw DungeonsGroupSprites
-	dw NewBarkGroupSprites
-	dw CherrygroveGroupSprites
-	dw VioletGroupSprites
-	dw AzaleaGroupSprites
-	dw GoldenrodGroupSprites
-	dw EcruteakGroupSprites
 	dw OlivineGroupSprites
-	dw CianwoodGroupSprites
 	dw MahoganyGroupSprites
-	dw LakeOfRageGroupSprites
+	dw DungeonsGroupSprites
+	dw EcruteakGroupSprites
 	dw BlackthornGroupSprites
+	dw CinnabarGroupSprites
+	dw CeruleanGroupSprites
+	dw AzaleaGroupSprites
+	dw LakeOfRageGroupSprites
+	dw VioletGroupSprites
+	dw GoldenrodGroupSprites
+	dw VermilionGroupSprites
+	dw PalletGroupSprites
+	dw PewterGroupSprites
+	dw FastShipGroupSprites
+	dw IndigoGroupSprites
+	dw FuchsiaGroupSprites
+	dw LavenderGroupSprites
 	dw SilverGroupSprites
 	dw CableClubGroupSprites
+	dw CeladonGroupSprites
+	dw CianwoodGroupSprites
+	dw ViridianGroupSprites
+	dw NewBarkGroupSprites
+	dw SaffronGroupSprites
+	dw CherrygroveGroupSprites
 	dw SafariZoneGateGroupSprites
+	dw SafariZoneGroupSprites
 	assert_table_length NUM_MAP_GROUPS
 
 ; Route1 and ViridianCity are connected
