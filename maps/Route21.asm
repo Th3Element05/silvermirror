@@ -1,23 +1,23 @@
 	object_const_def
-	const ROUTE21_SWIMMER_GIRL
-	const ROUTE21_SWIMMER_GUY
-	const ROUTE21_FISHER
-	const ROUTE21_CINNABAR_ROCK1
-	const ROUTE21_CINNABAR_ROCK2
+;	const ROUTE21_SWIMMER_GIRL
+;	const ROUTE21_SWIMMER_GUY
+;	const ROUTE21_FISHER
+;	const ROUTE21_CINNABAR_ROCK1
+;	const ROUTE21_CINNABAR_ROCK2
 
 Route21_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
 
-Route21HiddenStarDust1:
-	hiddenitem STARDUST, EVENT_ROUTE21_HIDDEN_STARDUST1
+;Route21HiddenStarDust1:
+;	hiddenitem STARDUST, EVENT_ROUTE21_HIDDEN_STARDUST1
 
-Route21HiddenStarDust2:
-	hiddenitem STARDUST, EVENT_ROUTE21_HIDDEN_STARDUST2
+;Route21HiddenStarDust2:
+;	hiddenitem STARDUST, EVENT_ROUTE21_HIDDEN_STARDUST2
 
-Route21HiddenStarDust3:
-	hiddenitem STARDUST, EVENT_ROUTE21_HIDDEN_STARDUST3
+;Route21HiddenStarDust3:
+;	hiddenitem STARDUST, EVENT_ROUTE21_HIDDEN_STARDUST3
 
 ;TrainerSwimmermSeth:
 ;	trainer SWIMMERM, SETH, EVENT_BEAT_SWIMMERM_SETH, SwimmermSethSeenText, SwimmermSethBeatenText, 0, .Script
@@ -413,9 +413,9 @@ Route21_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 12, 19, BGEVENT_ITEM, Route21HiddenStarDust1
-	bg_event 15, 34, BGEVENT_ITEM, Route21HiddenStarDust2
-	bg_event  8, 36, BGEVENT_ITEM, Route21HiddenStarDust3
+;	bg_event 12, 19, BGEVENT_ITEM, Route21HiddenStarDust1
+;	bg_event 15, 34, BGEVENT_ITEM, Route21HiddenStarDust2
+;	bg_event  8, 36, BGEVENT_ITEM, Route21HiddenStarDust3
 
 	def_object_events
 ;	object_event  8, 14, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerfNikki, -1
@@ -430,5 +430,5 @@ Route21_MapEvents:
 ;	object_event  8, 47, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerFisherGideon, -1
 ;	object_event  6, 23, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerBirdkeeperKarter, -1
 ;	object_event  4, 54, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerBirdkeeperEaston, -1
-	object_event  9, 57, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CINNABAR_MANSION_ROCK_SMASHED
-	object_event 16, 55, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
+;	object_event  9, 57, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CINNABAR_MANSION_ROCK_SMASHED
+;	object_event 16, 55, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
