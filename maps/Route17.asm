@@ -1,8 +1,4 @@
 	object_const_def
-;	const ROUTE_17_BIKER1
-;	const ROUTE_17_BIKER2
-;	const ROUTE_17_BIKER3
-;	const ROUTE_17_BIKER4
 
 Route17_MapScripts:
 	def_scene_scripts
@@ -15,537 +11,287 @@ Route17AlwaysOnBikeCallback:
 	setflag ENGINE_DOWNHILL
 	endcallback
 
-;TrainerBikerReese:
-;	trainer BIKER, REESE1, EVENT_BEAT_BIKER_REESE, BikerReeseSeenText, BikerReeseBeatenText, 0, .Script
+TrainerJugglerDustin:
+	trainer JUGGLER, DUSTIN, EVENT_BEAT_JUGGLER_DUSTIN, JugglerDustinSeenText, JugglerDustinBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	jumptextfaceplayer JugglerDustinAfterBattleText
 
-;.Script:
-;	loadvar VAR_CALLERID, PHONE_BIKER_REESE
-;	opentext
-;	checkflag ENGINE_REESE_READY_FOR_REMATCH
-;	iftrue .WantsBattle
-;	checkcellnum PHONE_BIKER_REESE
-;	iftrue .ReeseDefeated
-;	checkevent EVENT_REESE_ASKED_FOR_PHONE_NUMBER
-;	iftrue .AskedBefore
-;	writetext BikerReeseAfterBattleText
-;	waitbutton
-;	setevent EVENT_REESE_ASKED_FOR_PHONE_NUMBER
-;	scall Route17AskNumber1
-;	jump .AskForNumber
+JugglerDustinSeenText:
+	text "What do you want,"
+	line "kiddo?"
+	done
 
-;.AskedBefore:
-;	scall Route17AskNumber2
-;.AskForNumber:
-;	askforphonenumber PHONE_BIKER_REESE
-;	ifequal PHONE_CONTACTS_FULL, Route17PhoneFull
-;	ifequal PHONE_CONTACT_REFUSED, Route17NumberDeclined
-;	gettrainername STRING_BUFFER_3, BIKER, REESE1
-;	scall Route17RegisteredNumber
-;	jump Route17NumberAccepted
+JugglerDustinBeatenText:
+	text "Whoo!"
+	done
 
-;.WantsBattle:
-;	scall Route17Rematch
-;	winlosstext BikerReeseBeatenText, 0
-;	checkevent EVENT_BEAT_BLUE
-;	iftrue .LoadFight2
-;	checkevent ENGINE_FLYPOINT_PEWTER
-;	iftrue .LoadFight1
-;	loadtrainer BIKER, REESE1
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_REESE_READY_FOR_REMATCH
-;	end
+JugglerDustinAfterBattleText:
+	text "I could belly-"
+	line "bump you outta"
+	cont "here!"
+	done
 
-;.LoadFight1:
-;	loadtrainer BIKER, REESE2
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_REESE_READY_FOR_REMATCH
-;	end
+TrainerBikerMarkey:
+	trainer BIKER, MARKEY, EVENT_BEAT_BIKER_MARKEY, BikerMarkeySeenText, BikerMarkeyBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	jumptextfaceplayer BikerMarkeyAfterBattleText
 
-;.LoadFight2:
-;	loadtrainer BIKER, REESE3
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_REESE_READY_FOR_REMATCH
-;	end
+BikerMarkeySeenText:
+	text "You heading to"
+	line "FUCHSIA?"
+	done
 
-;.ReeseDefeated:
-;	writetext BikerReeseAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+BikerMarkeyBeatenText:
+	text "Crash and"
+	line "burn!"
+	done
 
-;TrainerBikerJoseph:
-;	trainer BIKER, JOSEPH, EVENT_BEAT_BIKER_JOSEPH, BikerJosephSeenText, BikerJosephBeatenText, 0, .Script
+BikerMarkeyAfterBattleText:
+	text "I love racing"
+	line "downhill!"
+	done
 
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext BikerJosephAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+TrainerJugglerLyle:
+	trainer JUGGLER, LYLE, EVENT_BEAT_JUGGLER_LYLE, JugglerLyleSeenText, JugglerLyleBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	jumptextfaceplayer JugglerLyleAfterBattleText
 
-;TrainerBikerEoin:
-;	trainer BIKER, EOIN1, EVENT_BEAT_BIKER_EOIN, BikerEoinSeenText, BikerEoinBeatenText, 0, .Script
+JugglerLyleSeenText:
+	text "There's no money"
+	line "in fighting kids!"
+	done
 
-;.Script:
-;	loadvar VAR_CALLERID, PHONE_BIKER_EOIN
-;	opentext
-;	checkflag ENGINE_EOIN_READY_FOR_REMATCH
-;	iftrue .WantsBattle
-;	checkcellnum PHONE_BIKER_EOIN
-;	iftrue .EoinDefeated
-;	checkevent EVENT_EOIN_ASKED_FOR_PHONE_NUMBER
-;	iftrue .AskedBefore
-;	writetext BikerEoinAfterBattleText
-;	waitbutton
-;	setevent EVENT_EOIN_ASKED_FOR_PHONE_NUMBER
-;	scall Route17AskNumber1
-;	jump .AskForNumber
+JugglerLyleBeatenText:
+	text "Burned out!"
+	done
 
-;.AskedBefore:
-;	scall Route17AskNumber2
-;.AskForNumber:
-;	askforphonenumber PHONE_BIKER_EOIN
-;	ifequal PHONE_CONTACTS_FULL, Route17PhoneFull
-;	ifequal PHONE_CONTACT_REFUSED, Route17NumberDeclined
-;	gettrainername STRING_BUFFER_3, BIKER, EOIN1
-;	scall Route17RegisteredNumber
-;	jump Route17NumberAccepted
+JugglerLyleAfterBattleText:
+	text "Good stuff is"
+	line "lying around on"
+	cont "CYCLING ROAD!"
+	done
 
-;.WantsBattle:
-;	scall Route17Rematch
-;	winlosstext BikerEoinBeatenText, 0
-;	checkevent EVENT_BEAT_BLUE
-;	iftrue .LoadFight2
-;	checkevent ENGINE_FLYPOINT_PEWTER
-;	iftrue .LoadFight1
-;	loadtrainer BIKER, EOIN1
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_EOIN_READY_FOR_REMATCH
-;	end
+TrainerBikerRiley:
+	trainer BIKER, RILEY, EVENT_BEAT_BIKER_RILEY, BikerRileySeenText, BikerRileyBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	jumptextfaceplayer BikerRileyAfterBattleText
 
-;.LoadFight1:
-;	loadtrainer BIKER, EOIN2
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_EOIN_READY_FOR_REMATCH
-;	end
+BikerRileySeenText:
+	text "We're BIKERs!"
+	line "Highway stars!"
+	done
 
-;.LoadFight2:
-;	loadtrainer BIKER, EOIN3
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_EOIN_READY_FOR_REMATCH
-;	end
+BikerRileyBeatenText:
+	text "Smoked!"
+	done
 
-;.EoinDefeated:
-;	writetext BikerEoinAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+BikerRileyAfterBattleText:
+	text "Are you looking"
+	line "for adventure?"
+	done
 
-;TrainerBikerAiden:
-;	trainer BIKER, AIDEN1, EVENT_BEAT_BIKER_AIDEN, BikerAidenSeenText, BikerAidenBeatenText, 0, .Script
+TrainerBikerTheron:
+	trainer BIKER, THERON, EVENT_BEAT_BIKER_THERON, BikerTheronSeenText, BikerTheronBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	jumptextfaceplayer BikerTheronAfterBattleText
 
-;.Script:
-;	loadvar VAR_CALLERID, PHONE_BIKER_AIDEN
-;	opentext
-;	checkflag ENGINE_AIDEN_READY_FOR_REMATCH
-;	iftrue .WantsBattle
-;	checkcellnum PHONE_BIKER_AIDEN
-;	iftrue .AidenDefeated
-;	checkevent EVENT_AIDEN_ASKED_FOR_PHONE_NUMBER
-;	iftrue .AskedBefore
-;	writetext BikerAidenAfterBattleText
-;	waitbutton
-;	setevent EVENT_AIDEN_ASKED_FOR_PHONE_NUMBER
-;	scall Route17AskNumber1
-;	jump .AskForNumber
+BikerTheronSeenText:
+	text "Let VOLTORB"
+	line "electrify you!"
+	done
 
-;.AskedBefore:
-;	scall Route17AskNumber2
-;.AskForNumber:
-;	askforphonenumber PHONE_BIKER_AIDEN
-;	ifequal PHONE_CONTACTS_FULL, Route17PhoneFull
-;	ifequal PHONE_CONTACT_REFUSED, Route17NumberDeclined
-;	gettrainername STRING_BUFFER_3, BIKER, AIDEN1
-;	scall Route17RegisteredNumber
-;	jump Route17NumberAccepted
+BikerTheronBeatenText:
+	text "Grounded"
+	line "out!"
+	done
 
-;.WantsBattle:
-;	scall Route17Rematch
-;	winlosstext BikerAidenBeatenText, 0
-;	checkevent EVENT_BEAT_BLUE
-;	iftrue .LoadFight2
-;	checkevent ENGINE_FLYPOINT_PEWTER
-;	iftrue .LoadFight1
-;	loadtrainer BIKER, AIDEN1
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_AIDEN_READY_FOR_REMATCH
-;	end
+BikerTheronAfterBattleText:
+	text "I got my VOLTORB"
+	line "at the abandoned"
+	cont "POWER PLANT."
+	done
 
-;.LoadFight1:
-;	loadtrainer BIKER, AIDEN2
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_AIDEN_READY_FOR_REMATCH
-;	end
+TrainerJugglerDarius:
+	trainer JUGGLER, DARIUS, EVENT_BEAT_JUGGLER_DARIUS, JugglerDariusSeenText, JugglerDariusBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	jumptextfaceplayer JugglerDariusAfterBattleText
 
-;.LoadFight2:
-;	loadtrainer BIKER, AIDEN3
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_AIDEN_READY_FOR_REMATCH
-;	end
+JugglerDariusSeenText:
+	text "My #MON won't"
+	line "evolve! Why?"
+	done
 
-;.AidenDefeated:
-;	writetext BikerAidenAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+JugglerDariusBeatenText:
+	text "Why, you!"
+	done
 
-;Route17AskNumber1:
-;	jumpstd AskNumber1MScript
-;	end
+JugglerDariusAfterBattleText:
+	text "Maybe some #MON"
+	line "need element"
+	cont "STONEs to evolve."
+	done
 
-;Route17AskNumber2:
-;	jumpstd AskNumber2MScript
-;	end
+TrainerJugglerJulien:
+	trainer JUGGLER, JULIEN, EVENT_BEAT_JUGGLER_JULIEN, JugglerJulienSeenText, JugglerJulienBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	jumptextfaceplayer JugglerJulienAfterBattleText
 
-;Route17RegisteredNumber:
-;	jumpstd RegisteredNumberMScript
-;	end
+JugglerJulienSeenText:
+	text "I need a little"
+	line "exercise!"
+	done
 
-;Route17NumberAccepted:
-;	jumpstd NumberAcceptedMScript
-;	end
+JugglerJulienBeatenText:
+	text "Whew!"
+	line "Good workout!"
+	done
 
-;Route17NumberDeclined:
-;	jumpstd NumberDeclinedMScript
-;	end
+JugglerJulienAfterBattleText:
+	text "I'm sure I lost"
+	line "weight there!"
+	done
 
-;Route17PhoneFull:
-;	jumpstd PhoneFullMScript
-;	end
+TrainerBikerEoin:
+	trainer BIKER, EOIN1, EVENT_BEAT_BIKER_EOIN, BikerEoinSeenText, BikerEoinBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	jumptextfaceplayer BikerEoinAfterBattleText
 
-;Route17Rematch:
-;	jumpstd RematchMScript
-;	end
+BikerEoinSeenText:
+	text "Nice BIKE!"
+	line "How's it handle?"
+	done
 
-;TrainerBikerTheron:
-;	trainer BIKER, THERON, EVENT_BEAT_BIKER_THERON, BikerTheronSeenText, BikerTheronBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext BikerTheronAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+BikerEoinBeatenText:
+	text "Shoot!"
+	done
 
-;TrainerBikerTeddy:
-;	trainer BIKER, TEDDY, EVENT_BEAT_BIKER_TEDDY, BikerTeddySeenText, BikerTeddyBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext BikerTeddyAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+BikerEoinAfterBattleText:
+	text "The slope makes"
+	line "it hard to steer!"
+	done
 
-;TrainerBikerMarkey:
-;	trainer BIKER, MARKEY, EVENT_BEAT_BIKER_MARKEY, BikerMarkeySeenText, BikerMarkeyBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext BikerMarkeyAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+TrainerJugglerMaximo:
+	trainer JUGGLER, MAXIMO, EVENT_BEAT_JUGGLER_MAXIMO, JugglerMaximoSeenText, JugglerMaximoBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	jumptextfaceplayer JugglerMaximoAfterBattleText
 
-;TrainerBikerCharles:
-;	trainer BIKER, CHARLES, EVENT_BEAT_BIKER_CHARLES, BikerCharlesSeenText, BikerCharlesBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext BikerCharlesAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+JugglerMaximoSeenText:
+	text "Be a rebel!"
+	done
 
-;TrainerBikerRiley:
-;	trainer BIKER, RILEY, EVENT_BEAT_BIKER_RILEY, BikerRileySeenText, BikerRileyBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext BikerRileyAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+JugglerMaximoBeatenText:
+	text "Aaaargh!"
+	done
 
-;TrainerBikerJoel:
-;	trainer BIKER, JOEL, EVENT_BEAT_BIKER_JOEL, BikerJoelSeenText, BikerJoelBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext BikerJoelAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+JugglerMaximoAfterBattleText:
+	text "Be ready to fight"
+	line "for your beliefs!"
+	done
 
-;TrainerBikerGlenn:
-;	trainer BIKER, GLENN, EVENT_BEAT_BIKER_GLENN, BikerGlennSeenText, BikerGlennBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext BikerGlennAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+TrainerBikerNolan:
+	trainer BIKER, NOLAN, EVENT_BEAT_BIKER_NOLAN, BikerNolanSeenText, BikerNolanBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	jumptextfaceplayer BikerNolanAfterBattleText
 
-;TrainerBikerDan:
-;	trainer BIKER, DAN, EVENT_BEAT_BIKER_DAN, BikerDanSeenText, BikerDanBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext BikerDanAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+BikerNolanSeenText:
+	text "Get lost kid!"
+	line "I'm bushed!"
+	done
 
-;Route17HiddenMaxEther:
-;	hiddenitem MAX_ETHER, EVENT_ROUTE_17_HIDDEN_MAX_ETHER
+BikerNolanBeatenText:
+	text "Are you"
+	line "satisfied?"
+	done
 
-;Route17HiddenMaxElixer:
-;	hiddenitem MAX_ELIXER, EVENT_ROUTE_17_HIDDEN_MAX_ELIXER
+BikerNolanAfterBattleText:
+	text "I need to catch"
+	line "a few Zs!"
+	done
 
-;BikerReeseSeenText:
-;	text "Hey, you! You're"
-;	line "from JOHTO, huh?"
-;	done
-;
-;BikerReeseBeatenText:
-;	text "Whoa, you kick!"
-;	done
-;
-;BikerReeseAfterBattleText:
-;	text "Don't get cocky,"
-;	line "you JOHTO punk!"
-;	done
-;
-;BikerJosephSeenText:
-;	text "Modding my Bike"
-;	line "costs a bunch of"
-;	cont "money!"
-;
-;	para "I need a job!"
-;	done
-;
-;BikerJosephBeatenText:
-;	text "Argh. I failed!"
-;	done
-;
-;BikerJosephAfterBattleText:
-;	text "Bike?"
-;
-;	para "Oh, I was talking"
-;	line "about my BICYCLE!"
-;	done
-;
-;BikerEoinSeenText:
-;	text "Vroom vroom!"
-;	line "Baribaribaribari!"
-;
-;	para "What do you think"
-;	line "of my engine"
-;	cont "imitation?"
-;	done
-;
-;BikerEoinBeatenText:
-;	text "Hnnff…hnnff…"
-;	line "I'm out of breath…"
-;	done
-;
-;BikerEoinAfterBattleText:
-;	text "We don't put out"
-;	line "any exhaust fumes."
-;
-;	para "We're a biker club"
-;	line "that's kind to"
-;	cont "nature!"
-;	done
-;
-;BikerAidenSeenText:
-;	text "Hey, who told you"
-;	line "you could ride up"
-;	cont "and down this"
-;	cont "road?"
-;	done
-;
-;BikerAidenBeatenText:
-;	text "Crash!"
-;	done
-;
-;BikerAidenAfterBattleText:
-;	text "See you later!"
-;	line "Come back anytime!"
-;	done
-;
-;BikerDanSeenText:
-;	text "Parara parapara"
-;	line "para-parara!"
-;
-;	para "My horn's got a"
-;	line "great melody to"
-;	cont "it, don't you"
-;	cont "think?"
-;	done
-;
-;BikerDanBeatenText:
-;	text "Paaraaraaaaa…"
-;	done
-;
-;BikerDanAfterBattleText:
-;	text "I love this melan-"
-;	line "choly melody."
-;
-;	para "It really suits"
-;	line "me well…"
-;	done
-;
-;BikerTheronSeenText:
-;	text "I'll toughen you"
-;	line "up."
-;
-;	para "Now, you come"
-;	line "along with me."
-;	done
-;
-;BikerTheronBeatenText:
-;	text "All right, thanks!"
-;	done
-;
-;BikerTheronAfterBattleText:
-;	text "All right! That"
-;	line "fighting yell was"
-;	cont "great!"
-;	done
-;
-;BikerTeddySeenText:
-;	text "Hey, that's a"
-;	line "cool Bike you're"
-;	cont "riding!"
-;	done
-;
-;BikerTeddyBeatenText:
-;	text "Great job."
-;	done
-;
-;BikerTeddyAfterBattleText:
-;	text "I love the way you"
-;	line "do battle, too!"
-;
-;	para "Consider me a fan!"
-;	done
-;
-;BikerMarkeySeenText:
-;	text "Hey hey hey!"
-;	line "You're in my way!"
-;
-;	para "IN MY WAY!"
-;	done
-;
-;BikerMarkeyBeatenText:
-;	text "I lost. I lost!"
-;	done
-;
-;BikerMarkeyAfterBattleText:
-;	text "Won't you give it"
-;	line "a try?"
-;
-;	para "Would you like to"
-;	line "join my team?"
-;	done
-;
-;BikerRileySeenText:
-;	text "You're gonna lose!"
-;	line "I've got a hunch!"
-;	done
-;
-;BikerRileyBeatenText:
-;	text "Maybe my hunch was"
-;	line "a little off…"
-;	done
-;
-;BikerRileyAfterBattleText:
-;	text "You're so cool!"
-;
-;	para "You don't do any-"
-;	line "thing halfway!"
-;	done
-;
-;BikerJoelSeenText:
-;	text "Wow. That's a cool"
-;	line "BICYCLE!"
-;	done
-;
-;BikerJoelBeatenText:
-;	text "But you don't just"
-;	line "look cool…"
-;	done
-;
-;BikerJoelAfterBattleText:
-;	text "I look cool, but"
-;	line "I'm weak, so I'm"
-;	cont "not really cool."
-;
-;	para "I have to train"
-;	line "harder…"
-;	done
-;
-;BikerGlennSeenText:
-;	text "Hey! Want to have"
-;	line "a speed battle?"
-;	done
-;
-;BikerGlennBeatenText:
-;	text "Yikes! You've got"
-;	line "awesome torque!"
-;	done
-;
-;BikerGlennAfterBattleText:
-;	text "Hands-free riding"
-;	line "is considered cool"
-;	cont "on CYCLING ROAD."
-;	done
-;
-;BikerCharlesSeenText:
-;	text "We're fearless"
-;	line "highway stars!"
-;	done
-;
-;BikerCharlesBeatenText:
-;	text "Arrrgh! Crash and"
-;	line "burn!"
-;	done
-;
-;BikerCharlesAfterBattleText:
-;	text "Reckless driving"
-;	line "causes accidents!"
-;	cont "Take it easy!"
-;	done
+Route17NoticeSign:
+	jumptext Route17NoticeSignText
+Route17NoticeSignText:
+	text "It's a notice!"
+
+	para "Watch out for"
+	line "discarded items!"
+	done
+
+Route17TrainerTips1:
+	jumptext Route17TrainerTips1Text
+Route17TrainerTips1Text:
+	text "TRAINER TIPS"
+
+	para "All #MON are"
+	line "unique."
+
+	para "Even #MON of"
+	line "the same type and"
+	cont "level grow at"
+	cont "different rates."
+	done
+
+Route17TrainerTips2:
+	jumptext Route17TrainerTips2Text
+Route17TrainerTips2Text:
+	text "TRAINER TIPS"
+
+	para "Press the A or B"
+	line "Button to stay in"
+	cont "place while on a"
+	cont "slope."
+	done
+
+Route17Sign:
+	jumptext Route17SignText
+Route17SignText:
+	text "ROUTE 17"
+	line "CELADON CITY -"
+	cont "FUCHSIA CITY"
+	done
+
+Route17NoticeSign2:
+	jumptext Route17NoticeSign2Text
+Route17NoticeSign2Text:
+	text "It's a notice!"
+
+	para "Don't throw the"
+	line "game, throw #"
+	cont "BALLs instead!"
+	done
+
+Route17CyclingRoadEndsSign:
+	jumptext Route17CyclingRoadEndsSignText
+Route17CyclingRoadEndsSignText:
+	text "CYCLING ROAD"
+	line "Slope ends here!"
+	done
+
+; hidden items
+Route17HiddenRareCandy:
+	hiddenitem RARE_CANDY, EVENT_ROUTE_17_HIDDEN_RARE_CANDY
+
+Route17HiddenFullRestore:
+	hiddenitem FULL_RESTORE, EVENT_ROUTE_17_HIDDEN_FULL_RESTORE
+
+Route17HiddenMaxRevive:
+	hiddenitem MAX_REVIVE, EVENT_ROUTE_17_HIDDEN_MAX_REVIVE
+
+Route17HiddenPPUp:
+	hiddenitem PP_UP, EVENT_ROUTE_17_HIDDEN_PP_UP
+
+Route17HiddenMaxElixer:
+	hiddenitem MAX_ELIXER, EVENT_ROUTE_17_HIDDEN_MAX_ELIXER
 
 Route17_MapEvents:
 	db 0, 0 ; filler
@@ -555,19 +301,26 @@ Route17_MapEvents:
 	def_coord_events
 
 	def_bg_events
-;	bg_event 14, 10, BGEVENT_ITEM, Route17HiddenMaxEther
-;	bg_event  9, 109, BGEVENT_ITEM, Route17HiddenMaxElixer
+	bg_event  9, 51, BGEVENT_READ, Route17NoticeSign
+	bg_event  9, 63, BGEVENT_READ, Route17TrainerTips1
+	bg_event  9, 75, BGEVENT_READ, Route17TrainerTips2
+	bg_event  9, 87, BGEVENT_READ, Route17Sign
+	bg_event  9, 109, BGEVENT_READ, Route17NoticeSign2
+	bg_event  9, 139, BGEVENT_READ, Route17CyclingRoadEndsSign
+	bg_event 15, 14, BGEVENT_ITEM, Route17HiddenRareCandy
+	bg_event  8, 45, BGEVENT_ITEM, Route17HiddenFullRestore
+	bg_event 17, 72, BGEVENT_ITEM, Route17HiddenPPUp
+	bg_event  4, 91, BGEVENT_ITEM, Route17HiddenMaxRevive
+	bg_event  8, 119, BGEVENT_ITEM, Route17HiddenMaxElixer
 
 	def_object_events
-;	object_event  8,  9, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerBikerRiley, -1
-;	object_event 12, 19, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerBikerJoel, -1
-;	object_event  3, 88, SPRITE_BIKER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBikerGlenn, -1
-;	object_event  9, 118, SPRITE_BIKER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBikerCharles, -1
-;	object_event  4, 15, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerBikerReese, -1
-;	object_event 14, 37, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerBikerJoseph, -1
-;	object_event 14, 93, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerBikerEoin, -1
-;	object_event  5, 31, SPRITE_BIKER, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE,  0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBikerAiden, -1
-;	object_event 17, 61, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBikerTheron, -1
-;	object_event  2, 59, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBikerTeddy, -1
-;	object_event  5, 101, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerBikerMarkey, -1
-;	object_event  9, 63, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBikerDan, -1
+	object_event 11, 16, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerJugglerDustin, -1
+	object_event  4, 18, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerBikerMarkey, -1
+	object_event 12, 19, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerJugglerLyle, -1
+	object_event  7, 32, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerBikerRiley, -1
+	object_event 14, 34, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerBikerTheron, -1
+	object_event 17, 58, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerJugglerDarius, -1
+	object_event  2, 68, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerJugglerJulien, -1
+	object_event  5, 98, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerBikerEoin, -1
+	object_event 14, 98, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerJugglerMaximo, -1
+	object_event 10, 116, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerBikerNolan, -1
