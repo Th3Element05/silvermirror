@@ -595,7 +595,7 @@ ENDM
 	map_attributes GoldenrodDeptStoreRoof, GOLDENROD_DEPT_STORE_ROOF, $3b, 0
 	map_attributes GoldenrodGameCorner, GOLDENROD_GAME_CORNER, $00, 0
 	map_attributes GoldenrodPokecenter1F, GOLDENROD_POKECENTER_1F, $00, 0
-	map_attributes PokecomCenterAdminOfficeMobile, POKECOM_CENTER_ADMIN_OFFICE_MOBILE, $00, 0
+;	map_attributes PokecomCenterAdminOfficeMobile, POKECOM_CENTER_ADMIN_OFFICE_MOBILE, $00, 0
 	map_attributes IlexForestAzaleaGate, ILEX_FOREST_AZALEA_GATE, $00, 0
 	map_attributes Route34IlexForestGate, ROUTE_34_ILEX_FOREST_GATE, $00, 0
 	map_attributes DayCare, DAY_CARE, $00, 0
@@ -628,8 +628,8 @@ ENDM
 ;	map_attributes FastShipCabins_SW_SSW_NW, FAST_SHIP_CABINS_SW_SSW_NW, $00, 0
 ;	map_attributes FastShipCabins_SE_SSE_CaptainsCabin, FAST_SHIP_CABINS_SE_SSE_CAPTAINS_CABIN, $00, 0
 ;	map_attributes FastShipB1F, FAST_SHIP_B1F, $00, 0
-	map_attributes OlivinePortPassage, OLIVINE_PORT_PASSAGE, $00, 0
-	map_attributes VermilionPortPassage, VERMILION_PORT_PASSAGE, $00, 0
+;	map_attributes OlivinePortPassage, OLIVINE_PORT_PASSAGE, $00, 0
+;	map_attributes VermilionPortPassage, VERMILION_PORT_PASSAGE, $00, 0
 	map_attributes MountMoonSquare, MOUNT_MOON_SQUARE, $2d, 0
 	map_attributes MountMoonGiftShop, MOUNT_MOON_GIFT_SHOP, $00, 0
 	map_attributes TinTowerRoof, TIN_TOWER_ROOF, $00, 0
@@ -730,12 +730,11 @@ ENDM
 ;	map_attributes SaffronPokecenter2FBeta, SAFFRON_POKECENTER_2F_BETA, $00, 0
 	map_attributes MrPsychicsHouse, MR_PSYCHICS_HOUSE, $00, 0
 	map_attributes SaffronMagnetTrainStation, SAFFRON_MAGNET_TRAIN_STATION, $00, 0
-	map_attributes SilphCo1F, SILPH_CO_1F, $00, 0
 	map_attributes CopycatsHouse1F, COPYCATS_HOUSE_1F, $00, 0
 	map_attributes CopycatsHouse2F, COPYCATS_HOUSE_2F, $00, 0
 	map_attributes Route5UndergroundPathEntrance, ROUTE_5_UNDERGROUND_PATH_ENTRANCE, $00, 0
 	map_attributes Route5SaffronGate, ROUTE_5_SAFFRON_GATE, $00, 0
-	map_attributes Route5CleanseTagHouse, ROUTE_5_CLEANSE_TAG_HOUSE, $00, 0
+;	map_attributes Route5CleanseTagHouse, ROUTE_5_CLEANSE_TAG_HOUSE, $00, 0
 	map_attributes CherrygroveMart, CHERRYGROVE_MART, $00, 0
 	map_attributes CherrygrovePokecenter1F, CHERRYGROVE_POKECENTER_1F, $00, 0
 	map_attributes CherrygroveGymSpeechHouse, CHERRYGROVE_GYM_SPEECH_HOUSE, $00, 0
@@ -797,6 +796,18 @@ ENDM
 	map_attributes RocketHideoutB4F, ROCKET_HIDEOUT_B4F, $00, 0
 	map_attributes RocketHideoutElevator, ROCKET_HIDEOUT_ELEVATOR, $00, 0
 	map_attributes Route12Gate, ROUTE_12_GATE, $00, 0
+;
+	map_attributes SilphCo1F, SILPH_CO_1F, $00, 0
+	map_attributes SilphCo2F, SILPH_CO_2F, $00, 0
+	map_attributes SilphCo3F, SILPH_CO_3F, $00, 0
+	map_attributes SilphCo4F, SILPH_CO_4F, $00, 0
+	map_attributes SilphCo5F, SILPH_CO_5F, $00, 0
+	map_attributes SilphCo6F, SILPH_CO_6F, $00, 0
+	map_attributes SilphCo7F, SILPH_CO_7F, $00, 0
+	map_attributes SilphCo8F, SILPH_CO_8F, $00, 0
+	map_attributes SilphCo9F, SILPH_CO_9F, $00, 0
+	map_attributes SilphCo10F, SILPH_CO_10F, $00, 0
+	map_attributes SilphCo11F, SILPH_CO_11F, $00, 0
 ;
 	map_attributes PokemonMansion1F, POKEMON_MANSION_1F, $00, 0
 	map_attributes PokemonMansion2F, POKEMON_MANSION_2F, $00, 0
