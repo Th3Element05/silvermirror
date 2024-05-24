@@ -824,6 +824,11 @@ YoungsterGroup:
 	db 11, EKANS
 	db -1 ; end
 
+	; YOUNGSTER, BILLY1 (ROUTE 3)2
+	db "BILLY@", TRAINERTYPE_NORMAL
+	db 14, SPEAROW
+	db -1 ; end
+
 	; YOUNGSTER, GORDON (MT MOON 1F)3
 	db "GORDON@", TRAINERTYPE_NORMAL
 	db 10, RATTATA
@@ -849,9 +854,20 @@ YoungsterGroup:
 	db 17, SLOWPOKE
 	db -1 ; end
 
+	; YOUNGSTER, RICKY (ROUTE 25)7
+	db "RICKY@", TRAINERTYPE_NORMAL
+	db 14, EKANS
+	db 14, SANDSHREW
+	db -1 ; end
+
 	; YOUNGSTER, JIMMY (SS ANNE 1F)8
 	db "JIMMY@", TRAINERTYPE_NORMAL
 	db 21, NIDORAN_M
+	db -1 ; end
+
+	; YOUNGSTER, ALAN1 (ROUTE 11)9
+	db "ALAN@", TRAINERTYPE_NORMAL
+	db 21, EKANS
 	db -1 ; end
 
 	; YOUNGSTER, OWEN (ROUTE 11)10
@@ -889,22 +905,6 @@ YoungsterGroup:
 	db -1 ; end
 
 SchoolboyGroup:
-	; SCHOOLBOY, BILLY1 (ROUTE 3)youngster2
-	db "BILLY@", TRAINERTYPE_NORMAL
-	db 14, SPEAROW
-	db -1 ; end
-
-	; SCHOOLBOY, RICKY (ROUTE 25)youngster7
-	db "RICKY@", TRAINERTYPE_NORMAL
-	db 14, EKANS
-	db 14, SANDSHREW
-	db -1 ; end
-
-	; SCHOOLBOY, ALAN1 (ROUTE 11)youngster9
-	db "ALAN@", TRAINERTYPE_NORMAL
-	db 21, EKANS
-	db -1 ; end
-
 	; SCHOOLBOY, TORIN1
 	db "TORIN@", TRAINERTYPE_NORMAL
 	db 20, DITTO
@@ -1051,6 +1051,12 @@ LassGroup:
 	db  9, PIDGEY
 	db -1 ; end
 
+	; LASS, COLETTE (ROUTE 3)2
+	db "COLETTE@", TRAINERTYPE_NORMAL
+	db 10, RATTATA
+	db 10, NIDORAN_M
+	db -1 ; end
+
 	; LASS, EVELYN (ROUTE 3)3
 	db "EVELYN@", TRAINERTYPE_NORMAL
 	db 14, JIGGLYPUFF
@@ -1090,6 +1096,13 @@ LassGroup:
 	db "MICHELLE@", TRAINERTYPE_NORMAL
 	db 15, NIDORAN_M
 	db 15, NIDORAN_F
+	db -1 ; end
+
+	; LASS, HILLARY1 (ROUTE 25)10
+	db "HILLARY@", TRAINERTYPE_NORMAL
+	db 13, ODDISH
+	db 13, PIDGEY
+	db 13, ODDISH
 	db -1 ; end
 
 	; LASS, SADIE (SS ANNE 1F)11
@@ -1160,19 +1173,6 @@ LassGroup:
 	db -1 ; end
 
 TeacherGroup:
-	; TEACHER, COLETTE (ROUTE 3)lass2
-	db "COLETTE@", TRAINERTYPE_NORMAL
-	db 10, RATTATA
-	db 10, NIDORAN_M
-	db -1 ; end
-
-	; TEACHER, HILLARY1 (ROUTE 25)10
-	db "HILLARY@", TRAINERTYPE_NORMAL
-	db 13, ODDISH
-	db 13, PIDGEY
-	db 13, ODDISH
-	db -1 ; end
-
 	; TEACHER, SHIRLEY
 	db "SHIRLEY@", TRAINERTYPE_NORMAL
 	db 20, DITTO
@@ -2931,10 +2931,10 @@ BoarderGroup:
 	db -1 ; end
 
 PokefanMGroup:
-	; POKEFANM, TREVOR (ROUTE 11)gambler4
+	; POKEFANM, TREVOR (ROUTE 8)gambler7
 	db "TREVOR@", TRAINERTYPE_NORMAL
-	db 18, GROWLITHE
-	db 18, VULPIX
+	db 24, GROWLITHE
+	db 24, VULPIX
 	db -1 ; end
 
 	; POKEFANM, WILLIAM (ROUTE 11)gambler3
@@ -2978,10 +2978,10 @@ PokefanFGroup:
 	db 18, ODDISH
 	db -1 ; end
 
-	; POKEFANF, GEORGIA (ROUTE 8)gambler7
+	; POKEFANF, GEORGIA (ROUTE 11)gambler4
 	db "GEORGIA@", TRAINERTYPE_NORMAL
-	db 24, GROWLITHE
-	db 24, VULPIX
+	db 18, GROWLITHE
+	db 18, VULPIX
 	db -1 ; end
 
 	; POKEFANF, JAMIE
