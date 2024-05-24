@@ -302,12 +302,12 @@ ENDM
 
 	map_attributes FuchsiaCity, FUCHSIA_CITY, $0f, SOUTH | WEST | EAST
 	connection south, Route19, ROUTE_19, 5
-	connection west, Route18, ROUTE_18, 4
-	connection east, Route15, ROUTE_15, 4
+	connection west, Route18, ROUTE_18, 5
+	connection east, Route15, ROUTE_15, 5
 
 	map_attributes Route18, ROUTE_18, $43, NORTH | EAST
 	connection north, Route17, ROUTE_17, 0
-	connection east, FuchsiaCity, FUCHSIA_CITY, -4
+	connection east, FuchsiaCity, FUCHSIA_CITY, -5
 
 	map_attributes Route17, ROUTE_17, $43, NORTH | SOUTH
 	connection north, Route16, ROUTE_16, 0
@@ -326,7 +326,7 @@ ENDM
 	connection east, SaffronCity, SAFFRON_CITY, -5 ;-7
 
 	map_attributes Route15, ROUTE_15, $0f, WEST | EAST
-	connection west, FuchsiaCity, FUCHSIA_CITY, -4
+	connection west, FuchsiaCity, FUCHSIA_CITY, -5
 	connection east, Route14, ROUTE_14, -9
 
 	map_attributes Route14, ROUTE_14, $43, NORTH | WEST
@@ -796,6 +796,8 @@ ENDM
 	map_attributes RocketHideoutB4F, ROCKET_HIDEOUT_B4F, $00, 0
 	map_attributes RocketHideoutElevator, ROCKET_HIDEOUT_ELEVATOR, $00, 0
 	map_attributes Route12Gate, ROUTE_12_GATE, $00, 0
+	map_attributes FuchsiaGoodRodHouse, FUCHSIA_GOOD_ROD_HOUSE, $00, 0
+	map_attributes SaffronPidgeyHouse, SAFFRON_PIDGEY_HOUSE, $00, 0
 ;
 	map_attributes SilphCo1F, SILPH_CO_1F, $00, 0
 	map_attributes SilphCo2F, SILPH_CO_2F, $00, 0
