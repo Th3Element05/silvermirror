@@ -2,7 +2,7 @@
 	const MAHOGANYMART1F_PHARMACIST
 	const MAHOGANYMART1F_BLACK_BELT
 	const MAHOGANYMART1F_LANCE
-	const MAHOGANYMART1F_DRAGONITE
+;	const MAHOGANYMART1F_DRAGONITE
 	const MAHOGANYMART1F_GRANNY
 
 MahoganyMart1F_MapScripts:
@@ -11,7 +11,7 @@ MahoganyMart1F_MapScripts:
 	scene_script MahoganyMart1FLanceUncoversStairsScene, SCENE_MAHOGANYMART1F_LANCE_UNCOVERS_STAIRS
 
 	def_callbacks
-	callback MAPCALLBACK_TILES, MahoganyMart1FStaircaseCallback
+;	callback MAPCALLBACK_TILES, MahoganyMart1FStaircaseCallback
 
 MahoganyMart1FNoopScene:
 	end
@@ -67,10 +67,10 @@ MahoganyMart1FLanceUncoversStaircaseScript:
 	pause 15
 	closetext
 	playsound SFX_TACKLE
-	applymovement MAHOGANYMART1F_DRAGONITE, MahoganyMart1FDragoniteTackleMovement
+;	applymovement MAHOGANYMART1F_DRAGONITE, MahoganyMart1FDragoniteTackleMovement
 	applymovement MAHOGANYMART1F_BLACK_BELT, MahoganyMart1FBlackBeltKnockedBackMovement
 	pause 15
-	disappear MAHOGANYMART1F_DRAGONITE
+;	disappear MAHOGANYMART1F_DRAGONITE
 	pause 15
 	applymovement MAHOGANYMART1F_LANCE, MahoganyMart1FLanceApproachPlayerMovement
 	opentext
@@ -234,5 +234,5 @@ MahoganyMart1F_MapEvents:
 	object_event  4,  3, SPRITE_PHARMACIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MahoganyMart1FPharmacistScript, EVENT_TEAM_ROCKET_BASE_POPULATION
 	object_event  1,  6, SPRITE_BLACK_BELT, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MahoganyMart1FBlackBeltScript, EVENT_TEAM_ROCKET_BASE_POPULATION
 	object_event  4,  6, SPRITE_LANCE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_MAHOGANY_MART_LANCE_AND_DRAGONITE
-	object_event  3,  6, SPRITE_DRAGONITE_MOVE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_MAHOGANY_MART_LANCE_AND_DRAGONITE
+;	object_event  3,  6, SPRITE_DRAGONITE_MOVE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_MAHOGANY_MART_LANCE_AND_DRAGONITE
 	object_event  1,  3, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MahoganyMart1FGrannyScript, EVENT_MAHOGANY_MART_OWNERS
