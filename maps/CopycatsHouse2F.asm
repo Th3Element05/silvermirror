@@ -1,6 +1,6 @@
 	object_const_def
 	const COPYCATSHOUSE2F_COPYCAT1 ; if player is male
-	const COPYCATSHOUSE2F_DODRIO
+;	const COPYCATSHOUSE2F_DODRIO
 	const COPYCATSHOUSE2F_FAIRYDOLL ; lost item
 	const COPYCATSHOUSE2F_MONSTERDOLL
 	const COPYCATSHOUSE2F_BIRDDOLL
@@ -170,15 +170,15 @@ Copycat:
 ;	closetext
 	end
 
-CopycatsDodrio:
-	opentext
-	writetext CopycatsDodrioText1
-	cry DODRIO
-	promptbutton
-	writetext CopycatsDodrioText2
-	waitbutton
-	closetext
-	end
+;CopycatsDodrio:
+;	opentext
+;	writetext CopycatsDodrioText1
+;	cry DODRIO
+;	promptbutton
+;	writetext CopycatsDodrioText2
+;	waitbutton
+;	closetext
+;	end
 
 CopycatsHouse2FDoll:
 	jumptext CopycatsHouse2FDollText
@@ -372,8 +372,8 @@ CopycatsHouse2F_MapEvents:
 
 	def_object_events
 	object_event  4,  3, SPRITE_COPYCAT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Copycat, EVENT_COPYCAT_1
-	object_event  6,  4, SPRITE_DODRIO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CopycatsDodrio, -1
-	object_event  6,  1, SPRITE_FAIRY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, EVENT_COPYCATS_HOUSE_2F_DOLL
-	object_event  2,  1, SPRITE_MONSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, -1
-	object_event  7,  1, SPRITE_BIRD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, -1
-	object_event  4,  3, SPRITE_COPYCAT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Copycat, EVENT_COPYCAT_2
+;	object_event  6,  4, SPRITE_DODUO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CopycatsDodrio, -1
+	object_event  6,  1, SPRITE_CLEFAIRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, EVENT_COPYCATS_HOUSE_2F_DOLL
+	object_event  2,  1, SPRITE_MONSTER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, -1
+	object_event  7,  1, SPRITE_PIDGEY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, -1
+	object_event  4,  3, SPRITE_COPYCAT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Copycat, EVENT_COPYCAT_2
