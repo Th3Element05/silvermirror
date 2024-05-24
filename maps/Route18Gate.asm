@@ -6,39 +6,96 @@ Route18Gate_MapScripts:
 	scene_script Route18GateNoopScene, SCENE_ROUTE_18GATE_BICYCLE_CHECK
 
 	def_callbacks
-	callback MAPCALLBACK_TILES, Route18GateTilesCallback
+;	callback MAPCALLBACK_TILES, Route18GateTilesCallback
 
-Route18GateTilesCallback:
-	changeblock 2, 2, $0c ; top left
-	changeblock 4, 2, $0e ; top right
-	changeblock 2, 6, $30 ; bottom left
-	changeblock 4, 6, $31 ; bottom right
-	endcallback
+;Route18GateTilesCallback:
+;	changeblock 2, 2, $0c ; top left
+;	changeblock 4, 2, $0e ; top right
+;	changeblock 2, 6, $30 ; bottom left
+;	changeblock 4, 6, $31 ; bottom right
+;	endcallback
 
 Route18GateNoopScene:
+	end
+
+Route18GateBicycleCheck1:
+	checkitem BICYCLE
+	iftrue Route18Bicycle
+	showemote EMOTE_SHOCK, PLAYER, 20
+	opentext
+	writetext Route18GateStopText
+	waitbutton
+	closetext
+	applymovement PLAYER, Route18GateStopMovement1
+	jumptext Route18GateCannotPassText
+
+Route18GateBicycleCheck2:
+	checkitem BICYCLE
+	iftrue Route18Bicycle
+	showemote EMOTE_SHOCK, PLAYER, 20
+	opentext
+	writetext Route18GateStopText
+	waitbutton
+	closetext
+	applymovement PLAYER, Route18GateStopMovement2
+	jumptext Route18GateCannotPassText
+
+Route18GateBicycleCheck3:
+	checkitem BICYCLE
+	iftrue Route18Bicycle
+	showemote EMOTE_SHOCK, PLAYER, 20
+	opentext
+	writetext Route18GateStopText
+	waitbutton
+	closetext
+	applymovement PLAYER, Route18GateStopMovement3
+	jumptext Route18GateCannotPassText
+
+Route18GateBicycleCheck4:
+	checkitem BICYCLE
+	iftrue Route18Bicycle
+	showemote EMOTE_SHOCK, PLAYER, 20
+	opentext
+	writetext Route18GateStopText
+	waitbutton
+	closetext
+	applymovement PLAYER, Route18GateStopMovement4
+	jumptext Route18GateCannotPassText
+
+Route18Bicycle:
 	end
 
 Route18GateOfficerScript:
 	jumptextfaceplayer Route18GateOfficerText
 
-Route18GateBicycleCheck:
-	checkitem BICYCLE
-	iffalse .NoBicycle
-	end
+;Route18GateBicycleCheck:
+;	checkitem BICYCLE
+;	iffalse .NoBicycle
+;	end
+;
+;.NoBicycle:
+;	showemote EMOTE_SHOCK, ROUTE_18GATE_OFFICER, 15
+;	turnobject PLAYER, UP
+;	opentext
+;	writetext Route18GateCannotPassText
+;	waitbutton
+;	closetext
+;	applymovement PLAYER, Route18GateCannotPassMovement
+;	end
+;
+;Route18GateCannotPassMovement:
+;	step RIGHT
+;	step_end
 
-.NoBicycle:
-	showemote EMOTE_SHOCK, ROUTE_18GATE_OFFICER, 15
-	turnobject PLAYER, UP
-	opentext
-	writetext Route18GateCannotPassText
-	waitbutton
-	closetext
-	applymovement PLAYER, Route18GateCannotPassMovement
-	end
-
-Route18GateCannotPassMovement:
+Route18GateStopMovement1:
+	step UP
+Route18GateStopMovement2:
+	step UP
+Route18GateStopMovement3:
+	step UP
+Route18GateStopMovement4:
 	step RIGHT
-	turn_head LEFT
+	turn_head UP
 	step_end
 
 Route18GateOfficerText:
@@ -47,10 +104,12 @@ Route18GateOfficerText:
 	cont "here."
 	done
 
-Route18GateCannotPassText:
+Route18GateStopText:
 	text "Hey! Whoa! Stop!"
+	done
 
-	para "You need to have"
+Route18GateCannotPassText:
+	text "You need to have"
 	line "a BICYCLE to ride"
 	cont "on CYCLING ROAD!"
 
@@ -68,10 +127,12 @@ Route18Gate_MapEvents:
 	warp_event  7,  5, ROUTE_18, 4
 
 	def_coord_events
-	coord_event  3,  4, SCENE_ROUTE_18GATE_BICYCLE_CHECK, Route18GateBicycleCheck
-	coord_event  3,  5, SCENE_ROUTE_18GATE_BICYCLE_CHECK, Route18GateBicycleCheck
+	coord_event  3,  6, SCENE_ROUTE_18GATE_BICYCLE_CHECK, Route18GateBicycleCheck1
+	coord_event  3,  5, SCENE_ROUTE_18GATE_BICYCLE_CHECK, Route18GateBicycleCheck2
+	coord_event  3,  4, SCENE_ROUTE_18GATE_BICYCLE_CHECK, Route18GateBicycleCheck3
+	coord_event  3,  3, SCENE_ROUTE_18GATE_BICYCLE_CHECK, Route18GateBicycleCheck4
 
 	def_bg_events
 
 	def_object_events
-	object_event  4,  2, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route18GateOfficerScript, -1
+	object_event  4,  1, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route18GateOfficerScript, -1
