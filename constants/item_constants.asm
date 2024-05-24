@@ -106,7 +106,7 @@
 	const DOME_FOSSIL  ; 62
 	const PNK_APRICORN ; 63
 	const BLACKGLASSES ; 64 ; include?
-	const SLOWPOKETAIL ; 65 ; can remove/repurpose?
+	const GOLD_TEETH   ; 65 ; SLOWPOKETAIL ; 65
 	const SILK_SCARF   ; 66 ; include?
 	const STICK        ; 67 ; include?
 	const SMOKE_BALL   ; 68 ; include?
