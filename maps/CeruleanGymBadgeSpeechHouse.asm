@@ -1,14 +1,21 @@
 	object_const_def
-	const CERULEANGYMBADGESPEECHHOUSE_POKEFAN_M
 
 CeruleanGymBadgeSpeechHouse_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+	callback MAPCALLBACK_TILES, CeruleanGymBadgeHouseTilesCallback
+
+CeruleanGymBadgeHouseTilesCallback:
+	changeblock 2, 0, $37 ; back door
+	changeblock 2, 2, $28 ; chair
+	changeblock 2, 4, $2a ; table
+	changeblock 4, 2, $2e ; chair
+	changeblock 4, 4, $2b ; table
+	endcallback
 
 CeruleanGymBadgeSpeechHousePokefanMScript:
 	jumptextfaceplayer CeruleanGymBadgeSpeechHousePokefanMText
-
 CeruleanGymBadgeSpeechHousePokefanMText:
 	text "Are you collecting"
 	line "GYM BADGES?"
@@ -20,10 +27,11 @@ CeruleanGymBadgeSpeechHouse_MapEvents:
 	def_warp_events
 	warp_event  2,  7, CERULEAN_CITY, 3
 	warp_event  3,  7, CERULEAN_CITY, 3
+	warp_event  3,  0, CERULEAN_CITY, 10
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event  2,  3, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeruleanGymBadgeSpeechHousePokefanMScript, -1
+	object_event  3,  4, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeruleanGymBadgeSpeechHousePokefanMScript, -1

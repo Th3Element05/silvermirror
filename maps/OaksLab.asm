@@ -83,18 +83,21 @@ OaksLabTryToLeaveScript:
 	end
 
 CharmanderPokeBallScript:
-	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
-	iftrue LookAtOakPokeBallScript
 	checkevent EVENT_OAKS_LAB_OAK
 	iftrue LookAtPokeballsEarlyScript
-;	checkscene 
-;	ifequal SCENE_OAKSLAB_OAK_NOT_HERE, LookAtPokeballsEarlyScript
-	turnobject OAKSLAB_OAK, DOWN
+;	opentext
+;	setval CHARMANDER
+;	special ShowPokedexEntry
 	refreshscreen
 	pokepic CHARMANDER
 	cry CHARMANDER
 	waitbutton
 	closepokepic
+	setval CHARMANDER
+	special UnusedSetSeenMon
+	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
+	iftrue OaksLastPokemonScript
+	turnobject OAKSLAB_OAK, DOWN
 	opentext
 	writetext OaksLabTakeCharmanderText
 	yesorno
@@ -115,18 +118,21 @@ CharmanderPokeBallScript:
 	sjump RivalTakesSquirtle
 	
 SquirtlePokeBallScript:
-	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
-	iftrue LookAtOakPokeBallScript
 	checkevent EVENT_OAKS_LAB_OAK
 	iftrue LookAtPokeballsEarlyScript
-;	checkscene 
-;	ifequal SCENE_OAKSLAB_OAK_NOT_HERE, LookAtPokeballsEarlyScript
-	turnobject OAKSLAB_OAK, DOWN
+;	opentext
+;	setval SQUIRTLE
+;	special ShowPokedexEntry
 	refreshscreen
 	pokepic SQUIRTLE
 	cry SQUIRTLE
 	waitbutton
 	closepokepic
+	setval SQUIRTLE
+	special UnusedSetSeenMon
+	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
+	iftrue OaksLastPokemonScript
+	turnobject OAKSLAB_OAK, DOWN
 	opentext
 	writetext OaksLabTakeSquirtleText
 	yesorno
@@ -147,18 +153,21 @@ SquirtlePokeBallScript:
 	sjump RivalTakesBulbasaur
 	
 BulbasaurPokeBallScript:
-	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
-	iftrue LookAtOakPokeBallScript
 	checkevent EVENT_OAKS_LAB_OAK
 	iftrue LookAtPokeballsEarlyScript
-;	checkscene 
-;	ifequal SCENE_OAKSLAB_OAK_NOT_HERE, LookAtPokeballsEarlyScript
-	turnobject OAKSLAB_OAK, DOWN
+;	opentext
+;	setval BULBASAUR
+;	special ShowPokedexEntry
 	refreshscreen
 	pokepic BULBASAUR
 	cry BULBASAUR
 	waitbutton
 	closepokepic
+	setval BULBASAUR
+	special UnusedSetSeenMon
+	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
+	iftrue OaksLastPokemonScript
+	turnobject OAKSLAB_OAK, DOWN
 	opentext
 	writetext OaksLabTakeBulbasaurText
 	yesorno
@@ -224,7 +233,7 @@ RivalTakesBulbasaur:
 ;	setscene SCENE_OAKSLAB_RIVAL_BATTLE
 	end
 
-LookAtOakPokeBallScript:
+OaksLastPokemonScript:
 	jumptext OaksPokeBallText
 ;	end
 
