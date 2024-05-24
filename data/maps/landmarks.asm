@@ -72,21 +72,22 @@ Landmarks:
 	landmark  76,  52, MtMoonName
 	landmark  88,  52, Route4Name
 	landmark 100,  52, CeruleanCityName
+	landmark  92,  44, CeruleanCaveName
 	landmark 100,  40, Route24Name
 	landmark 112,  36, Route25Name
 	landmark 100,  60, Route5Name
 	landmark 100,  76, Route6Name
 	landmark 100,  84, VermilionCityName
+	landmark 116,  84, Route11Name
 	landmark 116,  52, Route9Name
-	landmark 132,  56, Route10Name
+	landmark 132,  52, Route10Name
 	landmark 132,  60, RockTunnelName
 	landmark 140,  60, PowerPlantName
 	landmark 132,  68, LavenderTownName
+	landmark 136,  68, PokemonTowerName
 	landmark 116,  68, Route8Name
 	landmark  92,  68, Route7Name
 	landmark  84,  68, CeladonCityName
-	landmark 100,  68, SaffronCityName
-	landmark 116,  84, Route11Name
 	landmark 132,  84, Route12Name
 	landmark 124, 100, Route13Name
 	landmark 116, 108, Route14Name
@@ -96,10 +97,13 @@ Landmarks:
 	landmark  80, 116, Route18Name
 	landmark  92, 116, FuchsiaCityName
 	landmark  92, 108, SafariZoneName ;silvermirror
+	landmark 100,  68, SaffronCityName
+	landmark 102,  66, SilphCoName
 	landmark  92, 132, Route19Name
 	landmark  76, 132, SeafoamIslandsName
 	landmark  64, 132, Route20Name
 	landmark  52, 132, CinnabarIslandName
+	landmark  50, 130, PokemonMansionName ; 56, 128, PokemonMansionName
 	landmark  52, 116, Route21Name
 	landmark  40,  76, Route22Name
 	landmark  28,  60, Route23Name
@@ -113,11 +117,7 @@ Landmarks:
 ; end
 	landmark 108,  76, UndergroundName
 	landmark 100,  92, SSAnneName
-	landmark 140,  68, PokemonTowerName
 	landmark  84,  68, RocketHideoutName
-	landmark 100,  68, SilphCoName
-	landmark  48, 128, PokemonMansionName ; 56, 128, PokemonMansionName
-	landmark  92,  44, CeruleanCaveName
 	assert_table_length NUM_LANDMARKS
 
 NewBarkTownName:     db "NEW BARK¯TOWN@"
