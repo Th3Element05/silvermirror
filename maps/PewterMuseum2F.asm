@@ -83,7 +83,7 @@ PewterMuseum2F_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  3,  5, BGEVENT_READ, PewterMuseum2FMeteoriteSign
+	bg_event  3,  4, BGEVENT_READ, PewterMuseum2FMeteoriteSign
 	bg_event 10,  3, BGEVENT_READ, PewterMuseum2FShuttleSign
 	bg_event 11,  3, BGEVENT_READ, PewterMuseum2FShuttleSign
 
