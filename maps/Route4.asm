@@ -56,6 +56,11 @@ Route4CooltrainerText:
 
 Route4Sign:
 	jumptext Route4SignText
+Route4SignText:
+	text "ROUTE 4"
+	line "MT.MOON -"
+	cont "CERULEAN CITY"
+	done
 
 Route4TMWhirlwind:
 	itemball TM_WHIRLWIND
@@ -72,13 +77,6 @@ Route3MtMoonSignText:
 
 Route4MtMoonPokecenterSign:
 	jumpstd PokecenterSignScript
-
-
-Route4SignText:
-	text "ROUTE 4"
-	line "MT.MOON -"
-	cont "CERULEAN CITY"
-	done
 
 Route4_MapEvents:
 	db 0, 0 ; filler
@@ -98,6 +96,6 @@ Route4_MapEvents:
 
 	def_object_events
 	object_event  7,  8, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route4CooltrainerScript, -1
-	object_event 57,  3, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerLassAlice, -1
+	object_event 57,  3, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerLassAlice, -1
 	object_event 51,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, Route4TMWhirlwind, EVENT_ROUTE_4_TM_WHIRLWIND
 ;	object_event 72,  4, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0,ObjectEvent, 0

@@ -33,27 +33,27 @@ YoungsterSamuelAfterBattleText:
 	cont "different kinds."
 	done
 
-TrainerSchoolboyRicky:
-	trainer SCHOOLBOY, RICKY, EVENT_BEAT_SCHOOLBOY_RICKY, SchoolboyRickySeenText, SchoolboyRickyBeatenText, 0, .Script
+TrainerYoungsterRicky:
+	trainer YOUNGSTER, RICKY, EVENT_BEAT_YOUNGSTER_RICKY, YoungsterRickySeenText, YoungsterRickyBeatenText, 0, .Script
 .Script:
 	endifjustbattled
 	opentext
-	writetext SchoolboyRickyAfterBattleText
+	writetext YoungsterRickyAfterBattleText
 	waitbutton
 	closetext
 	end
 
-SchoolboyRickySeenText:
+YoungsterRickySeenText:
 	text "I knew I had to"
 	line "fight you!"
 	done
 
-SchoolboyRickyBeatenText:
+YoungsterRickyBeatenText:
 	text "I knew"
 	line "I'd lose too!"
 	done
 
-SchoolboyRickyAfterBattleText:
+YoungsterRickyAfterBattleText:
 	text "If your #MON"
 	line "gets confused or"
 	cont "falls asleep,"
@@ -113,28 +113,28 @@ CamperElliotAfterBattleText:
 	line "will cheer me up."
 	done
 
-TrainerTeacherHillary:
-	trainer TEACHER, HILLARY1, EVENT_BEAT_TEACHER_HILLARY, TeacherHillarySeenText, TeacherHillaryBeatenText, 0, .Script
+TrainerLassHillary:
+	trainer LASS, HILLARY1, EVENT_BEAT_LASS_HILLARY, LassHillarySeenText, LassHillaryBeatenText, 0, .Script
 .Script:
 	endifjustbattled
 	opentext
-	writetext TeacherHillaryAfterBattleText
+	writetext LassHillaryAfterBattleText
 	waitbutton
 	closetext
 	end
 
-TeacherHillarySeenText:
-	text "My students have"
+LassHillarySeenText:
+	text "My favorite are"
 	line "cute #MON."
 	cont "They're adorable!"
 	done
 
-TeacherHillaryBeatenText:
+LassHillaryBeatenText:
 	text "That's not so"
 	line "cute!"
 	done
 
-TeacherHillaryAfterBattleText:
+LassHillaryAfterBattleText:
 	text "You came from MT."
 	line "MOON? Did you see"
 	cont "any CLEFAIRY?"
@@ -280,10 +280,10 @@ Route25_MapEvents:
 
 	def_object_events
 	object_event  8,  2, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerYoungsterSamuel, -1
-	object_event 26,  3, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSchoolboyRicky, -1
+	object_event 26,  3, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerYoungsterRicky, -1
 	object_event  2,  4, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerHikerRussell, -1
 	object_event 18,  4, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerCamperElliot, -1
-	object_event 31,  4, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerTeacherHillary, -1
+	object_event 31,  4, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerLassHillary, -1
 	object_event 12,  5, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerYoungsterMikey, -1
 	object_event  7,  7, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerHikerPhillip, -1
 	object_event 12,  8, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerLassMichelle, -1

@@ -1,629 +1,339 @@
 	object_const_def
-;	const ROUTE_13_YOUNGSTER1
-;	const ROUTE_13_YOUNGSTER2
-;	const ROUTE_13_POKEFAN_M1
-;	const ROUTE_13_POKEFAN_M2
-;	const ROUTE_13_POKEFAN_M3
 
 Route13_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
 
-;TrainerCoupleTimandSue1:
-;	trainer COUPLE, TIMANDSUE1, EVENT_BEAT_COUPLE_TIMANDSUE, CoupleTimandSueSeenText, CoupleTimandSueBeatenText, 0, .Script
+TrainerBirdKeeperJamie:
+	trainer BIRD_KEEPER, JAMIE1, EVENT_BEAT_BIRD_KEEPER_JAMIE, BirdKeeperJamieSeenText, BirdKeeperJamieBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	jumptextfaceplayer BirdKeeperJamieAfterBattleText
 
-;.Script:
-;	loadvar VAR_CALLERID, PHONE_COUPLE_TIM_AND_SUE
-;	opentext
-;	checkflag ENGINE_TIM_AND_SUE_READY_FOR_REMATCH
-;	iftrue TimAndSueWantsBattle
-;	checkcellnum PHONE_COUPLE_TIM_AND_SUE
-;	iftrue TimAndSue1Defeated
-;	checkevent EVENT_TIM_AND_SUE_ASKED_FOR_PHONE_NUMBER
-;	iftrue TimAndSueAskedBefore
-;	writetext CoupleTimandSueAfterBattleText1
-;	waitbutton
-;	setevent EVENT_TIM_AND_SUE_ASKED_FOR_PHONE_NUMBER
-;	scall TimAndSueAskNumber1
-;	jump TimAndSueAskForNumber
+BirdKeeperJamieSeenText:
+	text "You need to use"
+	line "TMs to teach good"
+	cont "moves to #MON!"
+	done
 
-;TimAndSueAskedBefore:
-;	scall TimAndSueAskNumber2
-;TimAndSueAskForNumber:
-;	askforphonenumber PHONE_COUPLE_TIM_AND_SUE
-;	ifequal PHONE_CONTACTS_FULL, TimAndSuePhoneFull
-;	ifequal PHONE_CONTACT_REFUSED, TimAndSueNumberDeclined
-;	gettrainername STRING_BUFFER_3, COUPLE, TIMANDSUE1
-;	scall TimAndSueRegisteredNumber
-;	jump TimAndSueNumberAccepted
+BirdKeeperJamieBeatenText:
+	text "Not good"
+	line "enough!"
+	done
 
-;TimAndSueWantsBattle:
-;	scall TimAndSueRematch
-;	winlosstext CoupleTimandSueBeatenText, 0
-;	checkevent EVENT_BEAT_BLUE
-;	iftrue TimAndSueLoadFight2
-;	checkevent ENGINE_FLYPOINT_PEWTER
-;	iftrue TimAndSueLoadFight1
-;	loadtrainer COUPLE, TIMANDSUE1
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_TIM_AND_SUE_READY_FOR_REMATCH
-;	end
+BirdKeeperJamieAfterBattleText:
+	text "You have some HMs"
+	line "right? Those moves"
+	cont "are useful for"
+	cont "getting around."
+	done
 
-;TrainerCoupleTimandSue2:
-;	trainer COUPLE, TIMANDSUE1, EVENT_BEAT_COUPLE_TIMANDSUE, CoupleTimandSueSeenText, CoupleTimandSueBeatenText, 0, .Script
+TrainerBirdKeeperDennis:
+	trainer BIRD_KEEPER, DENNIS, EVENT_BEAT_BIRD_KEEPER_DENNIS, BirdKeeperDennisSeenText, BirdKeeperDennisBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	jumptextfaceplayer BirdKeeperDennisAfterBattleText
 
-;.Script:
-;	loadvar VAR_CALLERID, PHONE_COUPLE_TIM_AND_SUE
-;	opentext
-;	checkflag ENGINE_TIM_AND_SUE_READY_FOR_REMATCH
-;	iftrue TimAndSueWantsBattle
-;	checkcellnum PHONE_COUPLE_TIM_AND_SUE
-;	iftrue TimAndSue2Defeated
-;	checkevent EVENT_TIM_AND_SUE_ASKED_FOR_PHONE_NUMBER
-;	iftrue TimAndSueAskedBefore
-;	writetext CoupleTimandSueAfterBattleText2
-;	waitbutton
-;	setevent EVENT_TIM_AND_SUE_ASKED_FOR_PHONE_NUMBER
-;	scall TimAndSueAskNumber1
-;	jump TimAndSueAskForNumber
+BirdKeeperDennisSeenText:
+	text "TMs are on sale"
+	line "in CELADON!"
+	cont "But, only a few"
+	cont "people have HMs!"
+	done
 
-;TimAndSueLoadFight1:
-;	loadtrainer COUPLE, TIMANDSUE2
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_TIM_AND_SUE_READY_FOR_REMATCH
-;	end
+BirdKeeperDennisBeatenText:
+	text "Aww, bummer!"
+	done
 
-;TimAndSueLoadFight2:
-;	loadtrainer COUPLE, TIMANDSUE3
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_TIM_AND_SUE_READY_FOR_REMATCH
-;	end
+BirdKeeperDennisAfterBattleText:
+	text "Teach #MON"
+	line "moves of the same"
+	cont "element type for"
+	cont "more power."
+	done
 
-;TimAndSue1Defeated:
-;	writetext CoupleTimandSueAfterBattleText1
-;	waitbutton
-;	closetext
-;	end
+TrainerBirdKeeperPerry:
+	trainer BIRD_KEEPER, PERRY, EVENT_BEAT_BIRD_KEEPER_PERRY, BirdKeeperPerrySeenText, BirdKeeperPerryBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	jumptextfaceplayer BirdKeeperPerryAfterBattleText
 
-;TimAndSue2Defeated:
-;	writetext CoupleTimandSueAfterBattleText2
-;	waitbutton
-;	closetext
-;	end
+BirdKeeperPerrySeenText:
+	text "Have you taught"
+	line "your bird #MON"
+	cont "how to FLY?"
+	done
 
-;TimAndSueAskNumber1:
-;	jumpstd AskNumber1FScript
-;	end
+BirdKeeperPerryBeatenText:
+	text "Shot down"
+	line "in flames!"
+	done
 
-;TimAndSueAskNumber2:
-;	jumpstd AskNumber2FScript
-;	end
+BirdKeeperPerryAfterBattleText:
+	text "Bird #MON are"
+	line "my true love!"
+	done
 
-;TimAndSueRegisteredNumber:
-;	jumpstd RegisteredNumberFScript
-;	end
+TrainerBirdKeeperToby:
+	trainer BIRD_KEEPER, TOBY, EVENT_BEAT_BIRD_KEEPER_TOBY, BirdKeeperTobySeenText, BirdKeeperTobyBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	jumptextfaceplayer BirdKeeperTobyAfterBattleText
 
-;TimAndSueNumberAccepted:
-;	jumpstd NumberAcceptedFScript
-;	end
+BirdKeeperTobySeenText:
+	text "My bird #MON"
+	line "should be ready"
+	cont "for battle."
+	done
 
-;TimAndSueNumberDeclined:
-;	jumpstd NumberDeclinedFScript
-;	end
+BirdKeeperTobyBeatenText:
+	text "Not ready"
+	line "yet!"
+	done
 
-;TimAndSuePhoneFull:
-;	jumpstd PhoneFullFScript
-;	end
+BirdKeeperTobyAfterBattleText:
+	text "They need to learn"
+	line "better moves."
+	done
 
-;TimAndSueRematch:
-;	jumpstd RematchFScript
-;	end
+TrainerBirdKeeperRoy:
+	trainer BIRD_KEEPER, ROY, EVENT_BEAT_BIRD_KEEPER_ROY, BirdKeeperRoySeenText, BirdKeeperRoyBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	jumptextfaceplayer BirdKeeperRoyAfterBattleText
 
-;TrainerPicnickerPiper:
-;	trainer PICNICKER, PIPER, EVENT_BEAT_PICNICKER_PIPER, PicnickerPiperSeenText, PicnickerPiperBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext PicnickerPiperAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+BirdKeeperRoySeenText:
+	text "I always go with"
+	line "bird #MON!"
+	done
 
-;TrainerPicnickerGinger:
-;	trainer PICNICKER, GINGER, EVENT_BEAT_PICNICKER_GINGER, PicnickerGingerSeenText, PicnickerGingerBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext PicnickerGingerAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+BirdKeeperRoyBeatenText:
+	text "Out of power!"
+	done
 
-;TrainerCamperTanner:
-;	trainer CAMPER, TANNER1, EVENT_BEAT_CAMPER_TANNER, CamperTannerSeenText, CamperTannerBeatenText, 0, .Script
+BirdKeeperRoyAfterBattleText:
+	text "I wish I could"
+	line "fly like PIDGEY"
+	cont "and PIDGEOTTO..."
+	done
 
-;.Script:
-;	loadvar VAR_CALLERID, PHONE_CAMPER_TANNER
-;	opentext
-;	checkflag ENGINE_TANNER_READY_FOR_REMATCH
-;	iftrue .ChooseRematch
-;	checkflag ENGINE_TANNER_HAS_SUN_STONE
-;	iftrue .GiveSunStone
-;	checkcellnum PHONE_CAMPER_TANNER
-;	iftrue .TannerDefeated
-;	checkevent EVENT_TANNER_ASKED_FOR_PHONE_NUMBER
-;	iftrue .AskAgainForPhoneNumber
-;	writetext CamperTannerAfterBattleText
-;	waitbutton
-;	setevent EVENT_TANNER_ASKED_FOR_PHONE_NUMBER
-;	scall Route13AskNumber1
-;	jump .ContinueAskForPhoneNumber
+TrainerBikerDwayne:
+	trainer BIKER, DWAYNE, EVENT_BEAT_BIKER_DWAYNE, BikerDwayneSeenText, BikerDwayneBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	jumptextfaceplayer BikerDwayneAfterBattleText
 
-;.AskAgainForPhoneNumber:
-;	scall Route13AskNumber2
-;.ContinueAskForPhoneNumber:
-;	askforphonenumber PHONE_CAMPER_TANNER
-;	ifequal PHONE_CONTACTS_FULL, Route13PhoneFull
-;	ifequal PHONE_CONTACT_REFUSED, Route13NumberDeclined
-;	gettrainername STRING_BUFFER_3, CAMPER, TANNER1
-;	scall Route13RegisteredNumber
-;	jump Route13NumberAccepted
+BikerDwayneSeenText:
+	text "What're you"
+	line "lookin' at?"
+	done
 
-;.ChooseRematch:
-;	scall Route13Rematch
-;	winlosstext CamperTannerBeatenText, 0
-;	checkflag EVENT_BEAT_BLUE
-;	iftrue .LoadFight2
-;	checkflag ENGINE_FLYPOINT_PEWTER
-;	iftrue .LoadFight1
-;	loadtrainer CAMPER, TANNER1
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_TANNER_READY_FOR_REMATCH
-;	end
+BikerDwayneBeatenText:
+	text "Dang!"
+	line "Stripped gears!"
+	done
 
-;.LoadFight1:
-;	loadtrainer CAMPER, TANNER2
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_TANNER_READY_FOR_REMATCH
-;	end
+BikerDwayneAfterBattleText:
+	text "Get lost!"
+	done
 
-;.LoadFight2:
-;	loadtrainer CAMPER, TANNER3
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_TANNER_READY_FOR_REMATCH
-;	end
+TrainerBirdKeeperRod:
+	trainer BIRD_KEEPER, ROD, EVENT_BEAT_BIRD_KEEPER_ROD, BirdKeeperRodSeenText, BirdKeeperRodBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	jumptextfaceplayer BirdKeeperRodAfterBattleText
 
-;.GiveSunStone:
-;	scall .Gift
-;	verbosegiveitem SUN_STONE
-;	iffalse .BagFull
-;	clearflag ENGINE_TANNER_HAS_SUN_STONE
-;	setevent ENGINE_TANNER_GAVE_SUN_STONE
-;	jump Route13NumberAccepted
+BirdKeeperRodSeenText:
+	text "The wind's blowing"
+	line "my way!"
+	done
 
-;.BagFull:
-;	jump .PackFull
+BirdKeeperRodBeatenText:
+	text "The wind turned!"
+	done
 
-;.Gift:
-;	jumpstd GiftMScript
-;	end
+BirdKeeperRodAfterBattleText:
+	text "I'm beat. I guess"
+	line "I'll FLY home."
+	done
 
-;.PackFull:
-;	jumpstd PackFullMScript
-;	end
+TrainerPicnickerSelina:
+	trainer PICNICKER, SELINA, EVENT_BEAT_PICNICKER_SELINA, PicnickerSelinaSeenText, PicnickerSelinaBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	jumptextfaceplayer PicnickerSelinaAfterBattleText
 
-;.TannerDefeated:
-;	writetext CamperTannerAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+PicnickerSelinaSeenText:
+	text "My cute #MON"
+	line "wish to make your"
+	cont "acquaintance."
+	done
 
-;Route13AskNumber1:
-;	jumpstd AskNumber1MScript
-;	end
+PicnickerSelinaBeatenText:
+	text "Wow!"
+	line "You totally won!"
+	done
 
-;Route13AskNumber2:
-;	jumpstd AskNumber2MScript
-;	end
+PicnickerSelinaAfterBattleText:
+	text "You have to make"
+	line "#MON fight to"
+	cont "toughen them up!"
+	done
 
-;Route13RegisteredNumber:
-;	jumpstd RegisteredNumberMScript
-;	end
+TrainerPicnickerTanya:
+	trainer PICNICKER, TANYA, EVENT_BEAT_PICNICKER_TANYA, PicnickerTanyaSeenText, PicnickerTanyaBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	jumptextfaceplayer PicnickerTanyaAfterBattleText
 
-;Route13NumberAccepted:
-;	jumpstd NumberAcceptedMScript
-;	end
+PicnickerTanyaSeenText:
+	text "Wow! Your BADGEs"
+	line "are too cool!"
+	done
 
-;Route13NumberDeclined:
-;	jumpstd NumberDeclinedMScript
-;	end
+PicnickerTanyaBeatenText:
+	text "Not enough!"
+	done
 
-;Route13PhoneFull:
-;	jumpstd PhoneFullMScript
-;	end
+PicnickerTanyaAfterBattleText:
+	text "You got those"
+	line "BADGEs from GYM"
+	cont "LEADERs. I know!"
+	done
 
-;Route13Rematch:
-;	jumpstd RematchMScript
-;	end
+TrainerTwinsKayAndTia1:
+	trainer TWINS, KAYANDTIA1, EVENT_BEAT_TWINS_KAYANDTIA, TwinsKayAndTiaSeenText, TwinsKayAndTiaBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	jumptextfaceplayer TwinsKayAndTia1AfterBattleText
 
-;TrainerCamperClark:
-;	trainer CAMPER, CLARK, EVENT_BEAT_CAMPER_CLARK, CamperClarkSeenText, CamperClarkBeatenText, 0, .Script
+TrainerTwinsKayAndTia2:
+	trainer TWINS, KAYANDTIA1, EVENT_BEAT_TWINS_KAYANDTIA, TwinsKayAndTiaSeenText, TwinsKayAndTiaBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	jumptextfaceplayer TwinsKayAndTia2AfterBattleText
 
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext CamperClarkAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+TwinsKayAndTiaSeenText:
+	text "Sure, we'll play"
+	line "with you!"
+	done
 
-;TrainerPokefanmAlex:
-;	trainer POKEFANM, ALEX, EVENT_BEAT_POKEFANM_ALEX, PokefanmAlexSeenText, PokefanmAlexBeatenText, 0, .Script
+TwinsKayAndTiaBeatenText:
+	text "You brute!"
+	done
 
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext PokefanmAlexAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+TwinsKayAndTia1AfterBattleText:
+	text "I wonder which is"
+	line "stronger, male or"
+	cont "female #MON?"
+	done
 
-;TrainerPokefanmJoshua:
-;	trainer POKEFANM, JOSHUA, EVENT_BEAT_POKEFANM_JOSHUA, PokefanmJoshuaSeenText, PokefanmJoshuaBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext PokefanmJoshuaAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+TwinsKayAndTia2AfterBattleText:
+	text "I don't know"
+	line "anything about"
+	cont "#MON. I just"
+	cont "like cute ones!"
+	done
 
-;TrainerBirdKeeperPerry:
-;	trainer BIRD_KEEPER, PERRY, EVENT_BEAT_BIRD_KEEPER_PERRY, BirdKeeperPerrySeenText, BirdKeeperPerryBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext BirdKeeperPerryAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+TrainerPicnickerPiper:
+	trainer PICNICKER, PIPER, EVENT_BEAT_PICNICKER_PIPER, PicnickerPiperSeenText, PicnickerPiperBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	jumptextfaceplayer PicnickerPiperAfterBattleText
 
-;TrainerBirdKeeperBret:
-;	trainer BIRD_KEEPER, BRET, EVENT_BEAT_BIRD_KEEPER_BRET, BirdKeeperBretSeenText, BirdKeeperBretBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext BirdKeeperBretAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+PicnickerPiperSeenText:
+	text "I'm told I'm good"
+	line "for a kid!"
+	done
 
-;TrainerHikerKenny:
-;	trainer HIKER, KENNY1, EVENT_BEAT_HIKER_KENNY, HikerKennySeenText, HikerKennyBeatenText, 0, .Script
+PicnickerPiperBeatenText:
+	text "Ohh!"
+	line "I lost!"
+	done
 
-;.Script:
-;	loadvar VAR_CALLERID, PHONE_HIKER_KENNY
-;	opentext
-;	checkflag ENGINE_KENNY_READY_FOR_REMATCH
-;	iftrue .WantsBattle
-;	checkcellnum PHONE_HIKER_KENNY
-;	iftrue .KennyDefeated
-;	checkevent EVENT_KENNY_ASKED_FOR_PHONE_NUMBER
-;	iftrue .AskedBefore
-;	writetext HikerKennyAfterBattleText
-;	waitbutton
-;	setevent EVENT_KENNY_ASKED_FOR_PHONE_NUMBER
-;	scall Route13AskNumber1
-;	jump .AskForNumber
+PicnickerPiperAfterBattleText:
+	text "I want to become"
+	line "a good trainer."
+	cont "I'll train hard."
+	done
 
-;.AskedBefore:
-;	scall Route13AskNumber2
-;.AskForNumber:
-;	askforphonenumber PHONE_HIKER_KENNY
-;	ifequal PHONE_CONTACTS_FULL, Route13PhoneFull
-;	ifequal PHONE_CONTACT_REFUSED, Route13NumberDeclined
-;	gettrainername STRING_BUFFER_3, HIKER, KENNY1
-;	scall Route13RegisteredNumber
-;	jump Route13NumberAccepted
+TrainerBirdKeeperAbe:
+	trainer BIRD_KEEPER, ABE, EVENT_BEAT_BIRD_KEEPER_ABE, BirdKeeperAbeSeenText, BirdKeeperAbeBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	jumptextfaceplayer BirdKeeperAbeAfterBattleText
 
-;.WantsBattle:
-;	scall Route13Rematch
-;	winlosstext HikerKennyBeatenText, 0
-;	checkevent EVENT_BEAT_BLUE
-;	iftrue .LoadFight2
-;	checkevent ENGINE_FLYPOINT_PEWTER
-;	iftrue .LoadFight1
-;	loadtrainer HIKER, KENNY1
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_KENNY_READY_FOR_REMATCH
-;	end
+BirdKeeperAbeSeenText:
+	text "My bird #MON"
+	line "want to scrap!"
+	done
 
-;.LoadFight1:
-;	loadtrainer HIKER, KENNY2
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_KENNY_READY_FOR_REMATCH
-;	end
+BirdKeeperAbeBeatenText:
+	text "My bird combo"
+	line "lost?"
+	done
 
-;.LoadFight2:
-;	loadtrainer HIKER, KENNY3
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_KENNY_READY_FOR_REMATCH
-;	end
+BirdKeeperAbeAfterBattleText:
+	text "My #MON look"
+	line "happy even though"
+	cont "they lost."
+	done
 
-;.KennyDefeated:
-;	writetext HikerKennyAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+TrainerPicnickerDebra:
+	trainer PICNICKER, DEBRA, EVENT_BEAT_PICNICKER_DEBRA, PicnickerDebraSeenText, PicnickerDebraBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	jumptextfaceplayer PicnickerDebraAfterBattleText
 
-Route13TrainerTips:
-	jumptext Route13TrainerTipsText
+PicnickerDebraSeenText:
+	text "I found CARBOS in"
+	line "a cave once."
+	done
+
+PicnickerDebraBeatenText:
+	text "Just messed up!"
+	done
+
+PicnickerDebraAfterBattleText:
+	text "CARBOS boosted"
+	line "the SPEED of my"
+	cont "#MON."
+	done
+
+Route13TrainerTips1:
+	jumptext Route13TrainerTips1Text
+Route13TrainerTips1Text:
+	text "TRAINER TIPS"
+
+	para "Look to the left"
+	line "of that post!"
+	done
+
+Route13TrainerTips2:
+	jumptext Route13TrainerTips2Text
+Route13TrainerTips2Text:
+	text "TRAINER TIPS"
+
+	para "Use SELECT to"
+	line "switch items in"
+	cont "the ITEM window!"
+	done
 
 Route13Sign:
 	jumptext Route13SignText
-
-Route13DirectionsSign:
-	jumptext Route13DirectionsSignText
-
-;Route13HiddenCalcium:
-;	hiddenitem CALCIUM, EVENT_ROUTE_13_HIDDEN_CALCIUM
-;
-;PicnickerPiperSeenText:
-;	text "Hey, hey, how"
-;	line "about we bring out"
-;
-;	para "your #MON and"
-;	line "mine for a battle?"
-;	done
-;
-;PicnickerPiperBeatenText:
-;	text "Oh, that's"
-;	line "too bad…"
-;	done
-;
-;PicnickerPiperAfterBattleText:
-;	text "The way you were"
-;	line "walking with your"
-;
-;	para "#MON made me"
-;	line "think that I could"
-;	cont "win."
-;	done
-;
-;PicnickerGingerSeenText:
-;	text "Why is it I always"
-;	line "get the urge to"
-;
-;	para "whistle when"
-;	line "walking through"
-;	cont "nature?"
-;	done
-;
-;PicnickerGingerBeatenText:
-;	text "Tweeee!"
-;	done
-;
-;PicnickerGingerAfterBattleText:
-;	text "Instead of comm-"
-;	line "unicating with"
-;	cont "#MON with"
-;	cont "words,"
-;
-;	para "you can comm-"
-;	line "unicate with them"
-;	cont "through whistling!"
-;	done
-;
-;CoupleTimandSueSeenText:
-;	text "TIM: I'll give you"
-;	line "a little hint."
-;
-;	para "Don't you think my"
-;	line "girlfriend's much"
-;
-;	para "stronger than"
-;	line "I am?"
-;
-;	para "SUE: Women who"
-;	line "don't take love"
-;
-;	para "seriously and who"
-;	line "are reckless might"
-;	cont "get hurt."
-;	done
-;
-;CoupleTimandSueBeatenText:
-;	text "TIM: You're the"
-;	line "strongest!"
-;
-;	para "SUE: Wa ha…"
-;	done
-;
-;CoupleTimandSueAfterBattleText1:
-;	text "TIM: If you've"
-;	line "beaten her, you"
-;	cont "must be strong!"
-;	done
-;
-;CoupleTimandSueAfterBattleText2:
-;	text "SUE: That strength"
-;	line "of yours…"
-;
-;	para "I've got it!"
-;	line "Are you in love?"
-;	done
-;
-;CamperTannerSeenText:
-;	text "I can fit in a"
-;	line "quick battle while"
-;
-;	para "I'm in the midst"
-;	line "of preparing a"
-;	cont "meal!"
-;	done
-;
-;CamperTannerBeatenText:
-;	text "Oh, I'm hungry…"
-;	done
-;
-;CamperTannerAfterBattleText:
-;	text "I figured it would"
-;	line "be easy to knock"
-;	cont "you out…"
-;	done
-;
-;CamperClarkSeenText:
-;	text "Collect water!"
-;	line "Don't let the fire"
-;	cont "go out!"
-;
-;	para "Look out for wild"
-;	line "#MON!"
-;
-;	para "Let's go,"
-;	line "Campfire!"
-;	done
-;
-;CamperClarkBeatenText:
-;	text "Pfuuuuhh…"
-;	done
-;
-;CamperClarkAfterBattleText:
-;	text "It doesn't matter"
-;	line "what kind of prep-"
-;	cont "aration you've"
-;	cont "done."
-;
-;	para "If you lose,"
-;	line "you lose."
-;	done
-;
-;PokefanmAlexSeenText:
-;	text "Bow down before my"
-;	line "regal #MON!"
-;	done
-;
-;PokefanmAlexBeatenText:
-;	text "How… How dare you"
-;	line "mock royalty!"
-;	done
-;
-;PokefanmAlexAfterBattleText:
-;	text "Doesn't everyone"
-;	line "wish to someday be"
-;	cont "a king?"
-;	done
-;
-;PokefanmJoshuaSeenText:
-;	text "Nihihi! Would you"
-;	line "like to battle my"
-;	cont "PIKACHU gang?"
-;	done
-;
-;PokefanmJoshuaBeatenText:
-;	text "PI-PIKACHU!"
-;	done
-;
-;PokefanmJoshuaAfterBattleText:
-;	text "You look like you"
-;	line "have many #MON,"
-;
-;	para "but PIKACHU is"
-;	line "still the best."
-;	done
-;
-;BirdKeeperPerrySeenText:
-;	text "Agility is the key"
-;	line "attribute of bird"
-;	cont "#MON."
-;	done
-;
-;BirdKeeperPerryBeatenText:
-;	text "You beat me with"
-;	line "your speed…"
-;	done
-;
-;BirdKeeperPerryAfterBattleText:
-;	text "Your #MON are"
-;	line "remarkably well-"
-;	cont "trained."
-;	done
-;
-;BirdKeeperBretSeenText:
-;	text "Check out my #-"
-;	line "MON. Just look at"
-;
-;	para "their coloring and"
-;	line "their plumage."
-;	done
-;
-;BirdKeeperBretBeatenText:
-;	text "Shoot!"
-;	line "Not good enough!"
-;	done
-;
-;BirdKeeperBretAfterBattleText:
-;	text "If you groom them,"
-;	line "#MON get happy."
-;	done
-;
-;HikerKennySeenText:
-;	text "I should go to"
-;	line "ROCK TUNNEL to get"
-;	cont "myself an ONIX."
-;	done
-;
-;HikerKennyBeatenText:
-;	text "I lost…"
-;	done
-;
-;HikerKennyAfterBattleText:
-;	text "Geological fea-"
-;	line "tures don't appear"
-;	cont "to change."
-;
-;	para "But they actually"
-;	line "change, little by"
-;	cont "little."
-;	done
-
-Route13TrainerTipsText:
-	text "TRAINER TIPS"
-
-	para "Look! Right there,"
-	line "at the left side"
-	cont "of the post."
-	done
-
 Route13SignText:
 	text "ROUTE 13"
 
-	para "NORTH TO SILENCE"
-	line "BRIDGE"
+	para "NORTH TO"
+	line "SILENCE BRIDGE"
 	done
 
-Route13DirectionsSignText:
-	text "NORTH TO LAVENDER"
-	line "TOWN"
+Route13HiddenCalcium:
+	hiddenitem CALCIUM, EVENT_ROUTE_13_HIDDEN_CALCIUM
 
-	para "WEST TO FUCHSIA"
-	line "CITY"
-	done
+Route13HiddenPPUp:
+	hiddenitem PP_UP, EVENT_ROUTE_13_HIDDEN_PP_UP
 
 Route13_MapEvents:
 	db 0, 0 ; filler
@@ -633,20 +343,24 @@ Route13_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 35, 13, BGEVENT_READ, Route13TrainerTips
+	bg_event 35, 13, BGEVENT_READ, Route13TrainerTips1
+	bg_event 53,  5, BGEVENT_READ, Route13TrainerTips2
 	bg_event 51, 11, BGEVENT_READ, Route13Sign
-	bg_event 17, 13, BGEVENT_READ, Route13DirectionsSign
-;	bg_event 36, 13, BGEVENT_ITEM, Route13HiddenCalcium
+	bg_event 36, 13, BGEVENT_ITEM, Route13HiddenCalcium
+	bg_event 21, 14, BGEVENT_ITEM, Route13HiddenPPUp
 
 	def_object_events
-;	object_event 63, 11, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperPerry, -1
-;	object_event 70,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerBirdKeeperBret, -1
-;	object_event 47,  8, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerPokefanmJoshua, -1
-;	object_event  6, 10, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerHikerKenny, -1
-;	object_event 35,  6, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerPokefanmAlex, -1
-;	object_event 27, 10, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerCamperTanner, -1
-;	object_event  5,  5, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerCamperClark, -1
-;	object_event 69, 10, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerPicnickerPiper, -1
-;	object_event 16,  6, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerPicnickerGinger, -1
-;	object_event 52,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerCoupleTimandSue1, -1
-;	object_event 53,  6, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerCoupleTimandSue2, -1
+	object_event  4,  4, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerBirdKeeperJamie, -1
+	object_event 12, 11, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerBirdKeeperDennis, -1
+	object_event 14, 15, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperPerry, -1
+	object_event 15,  6, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerBirdKeeperToby, -1
+	object_event 27, 13, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerBirdKeeperRoy, -1
+	object_event 30,  7, SPRITE_BIKER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerBikerDwayne, -1
+	object_event 32,  4, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerBirdKeeperRod, -1
+	object_event 43, 10, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerPicnickerSelina, -1
+	object_event 47,  9, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerPicnickerTanya, -1
+	object_event 52,  6, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerTwinsKayAndTia1, -1
+	object_event 53,  6, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerTwinsKayAndTia2, -1
+	object_event 64, 10, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerPicnickerPiper, -1
+	object_event 65, 10, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerBirdKeeperAbe, -1
+	object_event 66,  5, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerPicnickerDebra, -1

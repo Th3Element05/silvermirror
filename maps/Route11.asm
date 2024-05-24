@@ -23,17 +23,17 @@ Route11Fruittrees:
 .NoApricorn:
 	endcallback
 
-TrainerPokefanMTrevor:
-	trainer POKEFANM, TREVOR, EVENT_BEAT_POKEFANM_TREVOR, PokefanMTrevorSeenText, PokefanMTrevorBeatenText, 0, .Script
+TrainerPokefanFGeorgia:
+	trainer POKEFANF, GEORGIA, EVENT_BEAT_POKEFANF_GEORGIA, PokefanFGeorgiaSeenText, PokefanFGeorgiaBeatenText, 0, .Script
 .Script:
 	endifjustbattled
 	opentext
-	writetext PokefanMTrevorAfterBattleText
+	writetext PokefanFGeorgiaAfterBattleText
 	waitbutton
 	closetext
 	end
 
-PokefanMTrevorSeenText:
+PokefanFGeorgiaSeenText:
 	text "Hi. Did you know…?"
 
 	para "#MON get more"
@@ -44,12 +44,12 @@ PokefanMTrevorSeenText:
 	cont "remember."
 	done
 
-PokefanMTrevorBeatenText:
+PokefanFGeorgiaBeatenText:
 	text "Where did I meet"
 	line "this VULPIX?"
 	done
 
-PokefanMTrevorAfterBattleText:
+PokefanFGeorgiaAfterBattleText:
 	text "If only there were"
 	line "an easy way to"
 
@@ -83,28 +83,28 @@ YoungsterOwenAfterBattleText:
 	line "Leave me alone!"
 	done
 
-TrainerSchoolboyAlan:
-	trainer SCHOOLBOY, ALAN1, EVENT_BEAT_SCHOOLBOY_ALAN, SchoolboyAlanSeenText, SchoolboyAlanBeatenText, 0, .Script
+TrainerYoungsterAlan:
+	trainer YOUNGSTER, ALAN1, EVENT_BEAT_YOUNGSTER_ALAN, YoungsterAlanSeenText, YoungsterAlanBeatenText, 0, .Script
 .Script:
 	endifjustbattled
 	opentext
-	writetext SchoolboyAlanAfterBattleText
+	writetext YoungsterAlanAfterBattleText
 	waitbutton
 	closetext
 	end
 
-SchoolboyAlanSeenText:
+YoungsterAlanSeenText:
 	text "I'm the best in"
 	line "my class!"
 	done
 
-SchoolboyAlanBeatenText:
+YoungsterAlanBeatenText:
 	text "Darn!"
 	line "I need to make my"
 	cont "#MON stronger!"
 	done
 
-SchoolboyAlanAfterBattleText:
+YoungsterAlanAfterBattleText:
 	text "There's a fat"
 	line "#MON that"
 	cont "comes down from"
@@ -495,9 +495,9 @@ Route11_MapEvents:
 	object_event 48,  2, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route11BerryTree, EVENT_ROUTE_11_BERRY
 	object_event 49,  1, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route11ApricornTree, EVENT_ROUTE_11_APRICORN
 	object_event 47, 11, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_BIGDOLLSYM, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route11Snorlax, EVENT_ROUTE_11_SNORLAX_RESPAWN
-	object_event 33,  3, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerPokefanMTrevor, -1
+	object_event 33,  3, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerPokefanFGeorgia, -1
 	object_event 22,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerYoungsterOwen, -1
-	object_event 13,  5, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSchoolboyAlan, -1
+	object_event 13,  5, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerYoungsterAlan, -1
 	object_event 43,  5, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerYoungsterIan, -1
 	object_event 45,  7, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerPokefanMWilliam, -1
 	object_event 26,  9, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerPokefanFBeverly, -1
