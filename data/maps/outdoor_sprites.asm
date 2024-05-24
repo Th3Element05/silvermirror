@@ -9,7 +9,7 @@ OutdoorSprites:
 	dw PewterGroupSprites
 	dw CeruleanGroupSprites
 	dw VermilionGroupSprites
-	dw FastShipGroupSprites
+	dw SSAnneGroupSprites
 	dw LavenderGroupSprites
 	dw CeladonGroupSprites
 	dw FuchsiaGroupSprites
@@ -17,7 +17,6 @@ OutdoorSprites:
 	dw SaffronGroupSprites
 	dw CinnabarGroupSprites
 	dw IndigoGroupSprites
-	dw DungeonsGroupSprites
 	dw NewBarkGroupSprites
 	dw CherrygroveGroupSprites
 	dw VioletGroupSprites
@@ -30,140 +29,172 @@ OutdoorSprites:
 	dw LakeOfRageGroupSprites
 	dw BlackthornGroupSprites
 	dw SilverGroupSprites
-	dw CableClubGroupSprites
+	dw DungeonsGroupSprites
 	dw SafariZoneGateGroupSprites
+	dw CableClubGroupSprites
 	assert_table_length NUM_MAP_GROUPS
 
-; Route1 and ViridianCity are connected
-; Route2North and PewterCity are connected
-; PalletTown and Route21 are connected
-PewterGroupSprites:
-; Route3, PewterCity
-	db SPRITE_YOUNGSTER
-	db SPRITE_BUG_CATCHER
-	db SPRITE_LASS
-	db SPRITE_TEACHER
-	db SPRITE_COOLTRAINER_F
-	db SPRITE_COOLTRAINER_M
-	db SPRITE_SUPER_NERD
-	; 6 of 9 max walking sprites
-	db SPRITE_POKE_BALL
-	db SPRITE_BERRY
-	db SPRITE_APRICORN
-	db 0 ; end
-
-ViridianGroupSprites:
-; Route2South, Route22, ViridianCity
 PalletGroupSprites:
-; Route1, PalletTown
+;PalletTown	OAK, TEACHER, FISHER
+;Route1		YOUNGSTER, berry, apricorn
+ViridianGroupSprites:
+;ViridianCity	GRAMPS, FISHER, TEACHER, YOUNGSTER
+;Route2South	poke_ball
+;Route22	BLUE
 CinnabarGroupSprites:
-; Route19, Route20, Route21, CinnabarIsland
-	db SPRITE_OAK ;silvermirror
-	db SPRITE_BLUE ;silvermirror (now walking)
+;CinnabarIsland GRAMPS, TEACHER
+;Route19	SWIMMER_M, SWIMMER_F, COOLTRAINER_M
+;Route20        SWIMMER_M, SWIMMER_F, COOLTRAINER_M
+;Route21        SWIMMER_M, SWIMMER_F, FISHER
+	db SPRITE_OAK
+	db SPRITE_BLUE
 	db SPRITE_TEACHER
 	db SPRITE_FISHER
 	db SPRITE_YOUNGSTER
 	db SPRITE_GRAMPS
-;	db SPRITE_BUG_CATCHER
-;	db SPRITE_LASS
-;	db SPRITE_COOLTRAINER_F
-	db SPRITE_COOLTRAINER_M ;silvermirror (now walking)
-	db SPRITE_SWIMMER_GIRL
+	db SPRITE_COOLTRAINER_M
 	db SPRITE_SWIMMER_GUY
-	; 9 of 9 max walking sprites
-;	db SPRITE_BLUE
-;	db SPRITE_COOLTRAINER_M
+	db SPRITE_SWIMMER_GIRL
+	; 9 of 9 walking
 	db SPRITE_POKE_BALL
 	db SPRITE_BERRY
 	db SPRITE_APRICORN
-	db SPRITE_ROCK
 	db 0 ; end
 
-; CeruleanCity and Route5 are connected
+PewterGroupSprites:
+;PewterCity     YOUNGSTER, SUPER_NERD, COOLTRAINER_M, COOLTRAINER_F, berry, apricorn
+;ViridianForest YOUNGSTER, berry, apricorn, poke_ball
+;Route2North    berry, apricorn
+;Route3         LASS, YOUNGSTER, SUPER_NERD
 CeruleanGroupSprites:
-; Route4, Route9, Route10North, Route24, Route25, CeruleanCity
-SaffronGroupSprites:
-; Route5, SaffronCity
+;CeruleanCity   BLUE, COOLTRAINER_M, COOLTRAINER_F, SUPER_NERD, LASS, officer, rocket
+;Route4         LASS, poke_ball
+;Route24        YOUNGSTER, FISHER, COOLTRAINER_M, COOLTRAINER_F, poke_ball
+;Route25        YOUNGSTER, FISHER, COOLTRAINER_M, COOLTRAINER_F
+;Route5         (in SaffronGroup for roof color, actually connected to CeruleanCity)
+;Route9         YOUNGSTER, FISHER, COOLTRAINER_M, COOLTRAINER_F, poke_ball
+;Route10North   COOLTRAINER_F
 	db SPRITE_BLUE
-	db SPRITE_COOLTRAINER_F
-	db SPRITE_COOLTRAINER_M
-	db SPRITE_SUPER_NERD
-	db SPRITE_LASS
 	db SPRITE_YOUNGSTER
-	db SPRITE_BUG_CATCHER
+	db SPRITE_LASS
+	db SPRITE_SUPER_NERD
+	db SPRITE_COOLTRAINER_M
+	db SPRITE_COOLTRAINER_F
 	db SPRITE_FISHER
-	db SPRITE_TEACHER
-	; 7 of 9 max walking sprites
+	; 7 of 9 walking
 	db SPRITE_OFFICER
 	db SPRITE_ROCKET
 	db SPRITE_SLOWBRO
 	db SPRITE_DAY_CARE_MON_1
 	db SPRITE_DAY_CARE_MON_2
 	db SPRITE_POKE_BALL
-;	db SPRITE_ZAPDOS
+	db SPRITE_BERRY
+	db SPRITE_APRICORN
 	db 0 ; end
 
 VermilionGroupSprites:
-; Route6, Route11, VermilionCity
-	db SPRITE_BUG_CATCHER
+;VermilionCity   SAILOR, BEAUTY, sage, machop
+;Route6          YOUNGSTER, COOLTRAINER_M, COOLTRAINER_F
+;Route11         YOUNGSTER, POKEFAN_M, POKEFAN_F, OFFICER, snorlax
+SSAnneGroupSprites:
+;VermilionPort   none
+;OlivinePort     none
+;MountMoonSquare CLEFAIRY
+;TinTowerRoof    ho_oh
+	db SPRITE_YOUNGSTER
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_COOLTRAINER_F
 	db SPRITE_POKEFAN_M
 	db SPRITE_POKEFAN_F
-	db SPRITE_YOUNGSTER
 	db SPRITE_OFFICER
 	db SPRITE_SAILOR
 	db SPRITE_BEAUTY
-	; 9 of 9 max walking sprites
+	db SPRITE_CLEFAIRY_MOVE
+	; 9 of 9 walking
 	db SPRITE_SAGE
 	db SPRITE_MACHOP
 	db SPRITE_BIG_SNORLAX
+	db SPRITE_HO_OH
+	db SPRITE_ROCK
+	db SPRITE_BERRY
+	db SPRITE_APRICORN
+	db 0 ; end
+
+LavenderGroupSprites:
+;LavenderTown   SUPER_NERD, twin, cooltrainer_m
+;Route10South   SUPER_NERD, FISHER, COOLTRAINER_F
+;Route8         SUPER_NERD, LASS, POKEFAN_M
+;Route12        FISHER, ROCKER, COOLTRAINER_M, poke_ball
+;Route13        COOLTRAINER_M, COOLTRAINER_F, BIKER, twin
+;Route14        COOLTRAINER_M,	BIKER
+;Route15        COOLTRAINER_M, COOLTRAINER_F, BIKER, BEAUTY
+	db SPRITE_SUPER_NERD
+	db SPRITE_FISHER
+	db SPRITE_LASS
+	db SPRITE_COOLTRAINER_M
+	db SPRITE_COOLTRAINER_F
+	db SPRITE_POKEFAN_M
+	db SPRITE_ROCKER
+	db SPRITE_BIKER
+	db SPRITE_BEAUTY
+	; 9 of 9 walking
+	db SPRITE_TWIN
+	db SPRITE_BIG_SNORLAX
+	db SPRITE_POKE_BALL
 	db SPRITE_BERRY
 	db SPRITE_APRICORN
 	db 0 ; end
 
 CeladonGroupSprites:
-; Route7, Route16, Route17, CeladonCity
+;CeladonCity          ROCKET, TEACHER, TWIN, gramps, fisher, poliwrath
+;CeladonDeptStoreRoof TWIN, super_nerd
+;CeladonMansionRoof   none
+;Route7               none
+;Route16              BIKER
 	db SPRITE_ROCKET
+	db SPRITE_TEACHER
 	db SPRITE_TWIN
-	db SPRITE_LASS
 	db SPRITE_BIKER
-	; 4 of 9 max walking sprites
+	; 4 of 9 walking
+	db SPRITE_COOLTRAINER_M
+	db SPRITE_SUPER_NERD
 	db SPRITE_GRAMPS
 	db SPRITE_FISHER
 	db SPRITE_POLIWRATH
 	db SPRITE_BIG_SNORLAX
-	db SPRITE_POKE_BALL
-	db SPRITE_BERRY
 	db 0 ; end
 
-; Route12 and Route13 are connected
-LavenderGroupSprites:
-; Route8, Route12, Route10South, LavenderTown
 FuchsiaGroupSprites:
-; Route13, Route14, Route15, Route18, FuchsiaCity
-	db SPRITE_POKEFAN_M
-	db SPRITE_POKEFAN_F
-	db SPRITE_YOUNGSTER
-	db SPRITE_FISHER
-	db SPRITE_TEACHER
-	db SPRITE_SUPER_NERD
-	db SPRITE_BIKER
-	db SPRITE_GENTLEMAN
-	db SPRITE_LASS
-	; 9 of 9 max walking sprites
-	db SPRITE_BIG_SNORLAX
+;FuchsiaCity    SCYTHER, PINSIR, DRATINI, CHANSEY, SURF, KANGASKHAN, COOLTRAINER_M, GRAMPS, pokefan_m
+;Route17        BIKER
+;Route18        COOLTRAINER_M
+	db SPRITE_SCYTHER_MOVE
+	db SPRITE_PINSIR_MOVE
+	db SPRITE_DRATINI_MOVE
+	db SPRITE_CHANSEY_MOVE
+	db SPRITE_SURF
+	db SPRITE_KANGASKHAN_MOVE
+	db SPRITE_COOLTRAINER_M
 	db SPRITE_GRAMPS
-	db SPRITE_ZAPDOS
-	db SPRITE_TWIN
-	db SPRITE_POKE_BALL
+	db SPRITE_BIKER
+	; 9 of 9 walking
+	db SPRITE_POKEFAN_M
+	db SPRITE_BIG_SNORLAX
 	db SPRITE_BERRY
 	db SPRITE_APRICORN
 	db 0 ; end
 
-IndigoGroupSprites:
-; Route23
-	; 0 of 9 max walking sprites
+SaffronGroupSprites:
+;SaffronCity    ROCKET, RECPTIONIST, CLERK, SCIENTIST, ROCKER, gentleman, pidgeot
+;Route5         (in SaffronGroup for roof color, actually connected to CeruleanCity)
+	db SPRITE_ROCKET
+	db SPRITE_RECEPTIONIST
+	db SPRITE_CLERK
+	db SPRITE_SCIENTIST
+	db SPRITE_ROCKER
+	; 5 of 9 walking
+	db SPRITE_GENTLEMAN
+	db SPRITE_PIDGEOT
 	db 0 ; end
 
 ; Route29 and CherrygroveCity are connected
@@ -171,17 +202,15 @@ NewBarkGroupSprites:
 ; Route26, Route27, Route29, NewBarkTown
 CherrygroveGroupSprites:
 ; Route30, Route31, CherrygroveCity
-	db SPRITE_RIVAL
 	db SPRITE_TEACHER
 	db SPRITE_FISHER
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_YOUNGSTER
 	db SPRITE_GRAMPS
-	db SPRITE_BUG_CATCHER
+	db SPRITE_BOY
 	db SPRITE_COOLTRAINER_F
 	; max 8 of 9 walking sprites
 	db SPRITE_PIDGEY
-	db SPRITE_RATTATA_UP
 	db SPRITE_POKE_BALL
 	db SPRITE_BERRY
 	db SPRITE_APRICORN
@@ -198,7 +227,7 @@ EcruteakGroupSprites:
 	db SPRITE_GRAMPS
 	db SPRITE_YOUNGSTER
 	db SPRITE_COOLTRAINER_M
-	db SPRITE_BUG_CATCHER
+	db SPRITE_BOY
 	db SPRITE_SUPER_NERD
 	; 8 of 9 max walking sprites
 	db SPRITE_TWIN
@@ -217,7 +246,6 @@ AzaleaGroupSprites:
 	db SPRITE_TEACHER
 	db SPRITE_ROCKET
 	db SPRITE_LASS
-	db SPRITE_RIVAL
 	; 7 of 9 max walking sprites
 	db SPRITE_BERRY
 	db SPRITE_APRICORN
@@ -245,7 +273,6 @@ OlivineGroupSprites:
 ; Route38, Route39, OlivineCity
 CianwoodGroupSprites:
 ; Route40, Route41, CianwoodCity, BattleTowerOutside
-	db SPRITE_RIVAL
 	db SPRITE_POKEFAN_M
 	db SPRITE_LASS
 	db SPRITE_SWIMMER_GIRL
@@ -292,7 +319,6 @@ LakeOfRageGroupSprites:
 	db SPRITE_LASS
 	db SPRITE_YOUNGSTER
 	; 8 of 9 max walking sprites
-	db SPRITE_GYARADOS
 	db SPRITE_BERRY
 	db SPRITE_APRICORN
 	db SPRITE_POKE_BALL
@@ -314,11 +340,6 @@ BlackthornGroupSprites:
 	db SPRITE_POKE_BALL
 	db 0 ; end
 
-SilverGroupSprites:
-; Route28, SilverCaveOutside
-	; 0 of 9 max walking sprites
-	db 0 ; end
-
 DungeonsGroupSprites:
 ; NationalPark, NationalParkBugContest, RuinsOfAlphOutside
 	db SPRITE_LASS
@@ -329,52 +350,22 @@ DungeonsGroupSprites:
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_FISHER
 	db SPRITE_SCIENTIST
-	db SPRITE_BUG_CATCHER
+	db SPRITE_BOY
 	; 8 of 9 max walking sprites
 	db SPRITE_GAMEBOY_KID
-	db SPRITE_PERSIAN
 	db SPRITE_POKE_BALL
 	db 0 ; end
 
-FastShipGroupSprites:
-; OlivinePort, VermilionPort, MountMoonSquare, TinTowerRoof
-	db SPRITE_SAILOR
-	db SPRITE_FISHING_GURU
-	db SPRITE_SUPER_NERD
-	db SPRITE_COOLTRAINER_F
-	db SPRITE_YOUNGSTER
-	; 5 of 9 max walking sprites
-	db SPRITE_HO_OH
-	db SPRITE_CLEFAIRY_MOVE
-	db SPRITE_ROCK
-	db 0 ; end
-
-CableClubGroupSprites:
-; (no outdoor maps)
-	; 0 of 9 max walking sprites
-	db 0 ; end
-
-SafariZoneGateGroupSprites:
 SafariZoneGroupSprites:
-; Route47, Route48, SafariZoneGate, CliffEdgeCave, CliffEdgeGate
-; all of the above maps have been removed from silvermirror
-;	db SPRITE_TWIN
-;	db SPRITE_SUPER_NERD
-;	db SPRITE_YOUNGSTER
-;	db SPRITE_LASS
-;	db SPRITE_POKEFAN_M
-;	db SPRITE_JIGGLYPUFF
-;	db SPRITE_KANGASKHAN
-;	db SPRITE_BUTTERFREE
-;	db SPRITE_TEACHER
-;	; 7 of 9 max walking sprites
-;	db SPRITE_SLOWPOKE
-;	db SPRITE_GENTLEMAN
-;	db SPRITE_POKEFAN_F
-;	db SPRITE_GRAMPS
-;	db SPRITE_COOLTRAINER_M
-;	db SPRITE_COOLTRAINER_F
-;	db SPRITE_BEAUTY
-;	db SPRITE_POKE_BALL
-;	db SPRITE_OLD_LINK_RECEPTIONIST
+;SafariZoneArea1
+;SafariZoneArea2
+;SafariZoneArea3
+;SafariZoneArea4
+IndigoGroupSprites:
+;Route23        none
+SilverGroupSprites:
+;Route28
+;SilverCaveOutside
+SafariZoneGateGroupSprites:
+CableClubGroupSprites:
 	db 0 ; end

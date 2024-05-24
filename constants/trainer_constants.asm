@@ -222,11 +222,14 @@ DEF KRIS EQU __trainer_class__
 	trainerclass YOUNGSTER ; 20
 ; kanto
 	const ASHER
+	const BILLY1
 	const GORDON
 	const ALBERT
 	const SAMUEL
 	const MIKEY
+	const RICKY
 	const JIMMY
+	const ALAN1
 	const OWEN
 	const IAN1
 	const JASON
@@ -235,6 +238,12 @@ DEF KRIS EQU __trainer_class__
 	const REGIS
 	const JOEY1
 ; rematch
+	const BILLY2
+	const BILLY3
+	const ALAN2
+	const ALAN3
+	const ALAN4
+	const ALAN5
 	const IAN2
 	const IAN3
 	const IAN4
@@ -245,22 +254,12 @@ DEF KRIS EQU __trainer_class__
 	const JOEY5
 
 	trainerclass SCHOOLBOY ; 21
-; kanto (YOUNGSTER)
-	const BILLY1
-	const RICKY
-	const ALAN1
 ; johto
 	const TORIN1
 	const JACK1
 	const CHAD1
 	const KIPP
 ; rematch
-	const BILLY2
-	const BILLY3
-	const ALAN2
-	const ALAN3
-	const ALAN4
-	const ALAN5
 	const TORIN2
 	const TORIN3
 	const JACK2
@@ -304,6 +303,7 @@ DEF KRIS EQU __trainer_class__
 	trainerclass LASS ; 23
 ; kanto
 	const BRIDGET
+	const COLETTE
 	const EVELYN
 	const ALICE
 	const LINDA
@@ -311,6 +311,7 @@ DEF KRIS EQU __trainer_class__
 	const LAURA
 	const SHANNON
 	const MICHELLE
+	const HILLARY1
 	const SADIE
 	const ELLEN
 	const DANA1
@@ -328,22 +329,18 @@ DEF KRIS EQU __trainer_class__
 	const KRISE3
 	const KRISE4
 	const KRISE5
+	const HILLARY2
+	const HILLARY3
 	const DANA2
 	const DANA3
 	const DANA4
 	const DANA5
 
 	trainerclass TEACHER ; 24
-; kanto (LASS)
-	const COLETTE
-	const HILLARY1
 ; johto
 	const SHIRLEY
 	const KATE
 	const IRENE
-; rematch
-	const HILLARY2
-	const HILLARY3
 
 	trainerclass COOLTRAINERM ; 25
 ; kanto

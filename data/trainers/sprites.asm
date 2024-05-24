@@ -19,23 +19,23 @@ BTTrainerClassSprites:
 	db SPRITE_KOGA          ; Koga
 	db SPRITE_SABRINA       ; Sabrina
 	db SPRITE_BLAINE        ; Blaine
-	db SPRITE_GIOVANNI      ; GIOVANNI
-	db SPRITE_GIOVANNI      ; ROCKET_BOSS
-	db SPRITE_LORELEI       ; LORELEI
+	db SPRITE_GIOVANNI      ; Giovanni
+	db SPRITE_GIOVANNI      ; Rocket Boss
+	db SPRITE_LORELEI       ; Lorelei
 	db SPRITE_BRUNO         ; Bruno
-	db SPRITE_AGATHA        ; AGATHA
-	db SPRITE_LANCE         ; LANCE
-	db SPRITE_BLUE          ; Champion ; BLUE
-	db SPRITE_CHRIS         ; PKMNTrainer
-	db SPRITE_RED           ; Red
+	db SPRITE_AGATHA        ; Agatha
+	db SPRITE_LANCE         ; Lance
+	db SPRITE_BLUE          ; Champion
+	db SPRITE_CAL           ; PKMNTrainer
+	db SPRITE_CHRIS         ; Red
 	db SPRITE_ROCKET        ; GruntM
 	db SPRITE_ROCKET_GIRL   ; GruntF
 	db SPRITE_ROCKET        ; ExecutiveM
 	db SPRITE_ROCKET_GIRL   ; ExecutiveF
 	db SPRITE_SCIENTIST     ; Scientist
 	db SPRITE_YOUNGSTER     ; Youngster
-	db SPRITE_YOUNGSTER     ; Schoolboy
-	db SPRITE_YOUNGSTER     ; BirdKeeper
+	db SPRITE_BOY           ; Schoolboy
+	db SPRITE_COOLTRAINER_M ; BirdKeeper
 	db SPRITE_LASS          ; Lass
 	db SPRITE_TEACHER       ; Teacher
 	db SPRITE_COOLTRAINER_M ; CooltrainerM
@@ -44,9 +44,9 @@ BTTrainerClassSprites:
 	db SPRITE_SUPER_NERD    ; Pokemaniac
 	db SPRITE_GENTLEMAN     ; Gentleman
 	db SPRITE_BEAUTY        ; Skier
-	db SPRITE_BUG_CATCHER   ; BugCatcher
+	db SPRITE_YOUNGSTER     ; BugCatcher
 	db SPRITE_FISHER        ; Fisher
-	db SPRITE_SUPER_NERD    ; SwimmerM
+	db SPRITE_COOLTRAINER_M ; SwimmerM
 	db SPRITE_COOLTRAINER_F ; SwimmerF
 	db SPRITE_SAILOR        ; Sailor
 	db SPRITE_SUPER_NERD    ; SuperNerd
@@ -55,11 +55,11 @@ BTTrainerClassSprites:
 	db SPRITE_BIKER         ; Biker
 	db SPRITE_PHARMACIST    ; Burglar
 	db SPRITE_FISHER        ; Firebreather
-	db SPRITE_SUPER_NERD    ; Juggler
+	db SPRITE_ROCKER        ; Juggler
 	db SPRITE_BLACK_BELT    ; Blackbelt
 	db SPRITE_YOUNGSTER     ; Psychic
-	db SPRITE_LASS          ; Picnicker
-	db SPRITE_YOUNGSTER     ; Camper
+	db SPRITE_COOLTRAINER_F ; Picnicker
+	db SPRITE_COOLTRAINER_M ; Camper
 	db SPRITE_SAGE          ; Sage
 	db SPRITE_GRANNY        ; Medium
 	db SPRITE_ROCKER        ; Boarder
