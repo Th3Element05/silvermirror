@@ -141,53 +141,53 @@ BugCatcherDionAfterBattleText:
 	cont "the wild ones!"
 	done
 
-TrainerTeacherColette:
-	trainer TEACHER, COLETTE, EVENT_BEAT_TEACHER_COLETTE, TeacherColetteSeenText, TeacherColetteBeatenText, 0, .Script
+TrainerLassColette:
+	trainer LASS, COLETTE, EVENT_BEAT_LASS_COLETTE, LassColetteSeenText, LassColetteBeatenText, 0, .Script
 .Script:
 	endifjustbattled
 	opentext
-	writetext TeacherColetteAfterBattleText
+	writetext LassColetteAfterBattleText
 	waitbutton
 	closetext
 	end
 
-TeacherColetteSeenText:
+LassColetteSeenText:
 	text "Shouldn't you be"
 	line "at school?"
 	done
 
-TeacherColetteBeatenText:
+LassColetteBeatenText:
 	text "You must have"
 	line "studied #MON!"
 	done
 
-TeacherColetteAfterBattleText:
+LassColetteAfterBattleText:
 	text "There's always"
 	line "more to learn"
 	cont "about #MON!"
 	done
 
-TrainerSchoolboyBilly:
-	trainer SCHOOLBOY, BILLY1, EVENT_BEAT_SCHOOLBOY_BILLY, SchoolboyBillySeenText, SchoolboyBillyBeatenText, 0, .Script
+TrainerYoungsterBilly:
+	trainer YOUNGSTER, BILLY1, EVENT_BEAT_YOUNGSTER_BILLY, YoungsterBillySeenText, YoungsterBillyBeatenText, 0, .Script
 .Script:
 	endifjustbattled
 	opentext
-	writetext SchoolboyBillyAfterBattleText
+	writetext YoungsterBillyAfterBattleText
 	waitbutton
 	closetext
 	end
 
-SchoolboyBillySeenText:
+YoungsterBillySeenText:
 	text "Hey! You're not"
 	line "wearing shorts!"
 	done
 
-SchoolboyBillyBeatenText:
+YoungsterBillyBeatenText:
 	text "Lost!"
 	line "Lost! Lost!"
 	done
 
-SchoolboyBillyAfterBattleText:
+YoungsterBillyAfterBattleText:
 	text "I always wear"
 	line "shorts, even in"
 	cont "winter!"
@@ -274,8 +274,8 @@ Route3_MapEvents:
 	object_event 15,  5, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerBugCatcherAl, -1
 	object_event  6,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerBugCatcherJosh, -1
 	object_event 20,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherDion, -1
-	object_event 12,  9, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerTeacherColette, -1
-	object_event 18,  9, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSchoolboyBilly, -1
+	object_event 12,  9, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerLassColette, -1
+	object_event 18,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerYoungsterBilly, -1
 	object_event 29, 10, SPRITE_LASS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 2, TrainerLassEvelyn, -1
 	object_event 53, 11, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route3SuperNerdScript, -1
 ;	object_event 55, 10, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route3CooltrainerScript, -1

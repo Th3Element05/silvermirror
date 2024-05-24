@@ -207,28 +207,28 @@ SuperNerdShawnAfterBattleText:
 	cont "...and...then..."
 	done
 
-TrainerPokefanFGeorgia:
-	trainer POKEFANF, GEORGIA, EVENT_BEAT_POKEFANF_GEORGIA, PokefanFGeorgiaSeenText, PokefanFGeorgiaBeatenText, 0, .Script
+TrainerPokefanMTrevor:
+	trainer POKEFANM, TREVOR, EVENT_BEAT_POKEFANM_TREVOR, PokefanMTrevorSeenText, PokefanMTrevorBeatenText, 0, .Script
 .Script:
 	endifjustbattled
 	opentext
-	writetext PokefanFGeorgiaAfterBattleText
+	writetext PokefanMTrevorAfterBattleText
 	waitbutton
 	closetext
 	end
 
-PokefanFGeorgiaSeenText:
+PokefanMTrevorSeenText:
 	text "I'm going to shop"
 	line "at the DEPT.STORE"
 	cont "and then…"
 	done
 
-PokefanFGeorgiaBeatenText:
+PokefanMTrevorBeatenText:
 	text "What was I going"
 	line "to do?"
 	done
 
-PokefanFGeorgiaAfterBattleText:
+PokefanMTrevorAfterBattleText:
 	text "Oh, yes! I have to"
 	line "get my #MON out"
 	cont "of DAY-CARE!"
@@ -363,10 +363,10 @@ Route8_MapEvents:
 	object_event 49,  8, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, Route8ApricornTree, EVENT_ROUTE_8_APRICORN
 	object_event  4,  7, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSuperNerdPat, -1
 	object_event  9, 11, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerPokefanMJoshua, -1
-	object_event 22,  5, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerLassDana, -1
+	object_event 22,  5, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerLassDana, -1
 	object_event 22,  6, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSuperNerdTom, -1
-	object_event 22,  7, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerLassSarah, -1
-	object_event 22,  8, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerLassChloe, -1
+	object_event 22,  7, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerLassSarah, -1
+	object_event 22,  8, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerLassChloe, -1
 	object_event 38,  8, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerSuperNerdShawn, -1
-	object_event 42, 15, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerPokefanFGeorgia, -1
-	object_event 47, 14, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 4, TrainerLassNora, -1
+	object_event 42, 15, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerPokefanMTrevor, -1
+	object_event 47, 14, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 4, TrainerLassNora, -1
