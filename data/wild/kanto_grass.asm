@@ -1965,4 +1965,41 @@ KantoGrassWildMons:
 	db 10, DITTO      ;  1% chance
 	end_grass_wildmons
 
+	def_grass_wildmons SAFARI_ZONE_ENTRANCE
+	db 0 percent, 0 percent, 0 percent ; encounter rates: morn/day/nite
+	; morn
+	db 10, NIDORAN_M  ; 20% chance
+	db 10, NIDORAN_F  ; 20% chance
+	db 10, EXEGGCUTE  ; 15% chance
+	db 10, NIDORINO   ; 10% chance
+	db 10, NIDORINA   ; 10% chance
+	db 10, TAUROS     ; 10% chance
+	db 10, SCYTHER    ;  5% chance
+	db 10, PINSIR     ;  5% chance
+	db 10, LICKITUNG  ;  4% chance
+	db 10, CHANSEY    ;  1% chance
+	; day
+	db 10, VENONAT    ; 20% chance
+	db 10, VENOMOTH   ; 20% chance
+	db 10, PARAS      ; 15% chance
+	db 10, PARASECT   ; 10% chance
+	db 10, RHYHORN    ; 10% chance
+	db 10, KANGASKHAN ; 10% chance
+	db 10, CUBONE     ;  5% chance
+	db 10, MAROWAK    ;  5% chance
+	db 10, TANGELA    ;  4% chance
+	db 10, NIDORAN_M  ;  1% chance
+	; nite
+	db 10, NIDORAN_M  ; 20% chance
+	db 10, NIDORAN_M  ; 20% chance
+	db 10, NIDORAN_M  ; 15% chance
+	db 10, NIDORAN_M  ; 10% chance
+	db 10, NIDORAN_M  ; 10% chance
+	db 10, NIDORAN_M  ; 10% chance
+	db 10, NIDORAN_M  ;  5% chance
+	db 10, NIDORAN_M  ;  5% chance
+	db 10, NIDORAN_M  ;  4% chance
+	db 10, NIDORAN_M  ;  1% chance
+	end_grass_wildmons
+
 	db -1 ; end
