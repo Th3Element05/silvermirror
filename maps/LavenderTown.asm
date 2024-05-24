@@ -120,7 +120,7 @@ LavenderTown_MapEvents:
 	warp_event  7,  9, MR_FUJIS_HOUSE, 1
 	warp_event  3, 13, LAVENDER_SPEECH_HOUSE, 1
 	warp_event  7, 13, LAVENDER_NAME_RATER, 1
-	warp_event 15, 13, LAVENDER_MART, 2
+	warp_event 15, 13, LAVENDER_MART, 1
 	warp_event 14,  5, POKEMON_TOWER_1F, 2
 
 	def_coord_events
@@ -135,5 +135,5 @@ LavenderTown_MapEvents:
 
 	def_object_events
 	object_event  8,  7, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LavenderTownSuperNerdScript, -1
-	object_event 15,  9, SPRITE_TWIN, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LavenderTownGirlScript, -1
+	object_event 15,  9, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LavenderTownGirlScript, -1
 	object_event  9, 10, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LavenderTownCooltrainerMScript, -1

@@ -52,5 +52,5 @@ VermilionDiglettsCaveSpeechHouse_MapEvents:
 
 	def_object_events
 	object_event  5,  3, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VermilionPidgeyHouseYoungsterScript, -1
-	object_event  3,  5, SPRITE_PIDGEY_MOVE, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, VermilionPidgeyHousePidgeyScript, -1
+	object_event  3,  5, SPRITE_PIDGEY, SPRITEMOVEDATA_POKEMON, 2, 2, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, VermilionPidgeyHousePidgeyScript, -1
 	object_event  4,  3, SPRITE_PAPER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionPidgeyHousePaperScript, -1

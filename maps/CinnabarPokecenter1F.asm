@@ -1,7 +1,4 @@
 	object_const_def
-	const CINNABARPOKECENTER1F_NURSE
-	const CINNABARPOKECENTER1F_COOLTRAINER_F
-	const CINNABARPOKECENTER1F_FISHER
 
 CinnabarPokecenter1F_MapScripts:
 	def_scene_scripts
@@ -11,25 +8,43 @@ CinnabarPokecenter1F_MapScripts:
 CinnabarPokecenter1FNurseScript:
 	jumpstd PokecenterNurseScript
 
-CinnabarPokecenter1FCooltrainerFScript:
-	jumptextfaceplayer CinnabarPokecenter1FCooltrainerFText
+CinnabarPokecenter1FReceptionistScript:
+	jumpstd PokecenterReceptionistScript
 
-CinnabarPokecenter1FFisherScript:
-	jumptextfaceplayer CinnabarPokecenter1FFisherText
+CinnabarPokecenter1FBenchGuyScript:
+	jumptext CinnabarPokecenter1FBenchGuyText
+CinnabarPokecenter1FBenchGuyText:
+	text "#MON can still"
+	line "learn techniques"
+	cont "after canceling"
+	cont "evolution."
 
-CinnabarPokecenter1FCooltrainerFText:
-	text "CINNABAR GYM's"
-	line "BLAINE apparently"
-
-	para "lives alone in the"
-	line "SEAFOAM ISLANDS"
-	cont "cave…"
+	para "Evolution can wait"
+	line "until new moves"
+	cont "have been learned."
 	done
 
-CinnabarPokecenter1FFisherText:
-	text "It's been a year"
-	line "since the volcano"
-	cont "erupted."
+CinnabarPokecenter1FGentlemanScript:
+	jumptextfaceplayer CinnabarPokecenter1FGentlemanText
+CinnabarPokecenter1FGentlemanText:
+	text "#MON you get"
+	line "in trades grow"
+	cont "very quickly."
+
+	para "I think it's"
+	line "worth a try!"
+	done
+
+CinnabarPokecenter1FCooltrainerFScript:
+	jumptextfaceplayer CinnabarPokecenter1FCooltrainerFText
+CinnabarPokecenter1FCooltrainerFText:
+	text "You can cancel"
+	line "evolution."
+
+	para "When a #MON is"
+	line "evolving, you can"
+	cont "stop it and leave"
+	cont "it the way it is."
 	done
 
 CinnabarPokecenter1F_MapEvents:
@@ -44,6 +59,8 @@ CinnabarPokecenter1F_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  3,  1, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarPokecenter1FNurseScript, -1
-	object_event  7,  6, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CinnabarPokecenter1FCooltrainerFScript, -1
-	object_event  2,  4, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CinnabarPokecenter1FFisherScript, -1
+	object_event  3,  1, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CinnabarPokecenter1FNurseScript, -1
+	object_event 11,  2, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CinnabarPokecenter1FReceptionistScript, -1
+	object_event  0,  4, SPRITE_BENCH_GUY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CinnabarPokecenter1FBenchGuyScript, -1
+	object_event  2,  6, SPRITE_GENTLEMAN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CinnabarPokecenter1FGentlemanScript, -1
+	object_event  9,  4, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CinnabarPokecenter1FCooltrainerFScript, -1
