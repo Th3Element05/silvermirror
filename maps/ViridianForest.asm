@@ -1,9 +1,6 @@
 	object_const_def
 	const VIRIDIAN_FOREST_BERRY
 	const VIRIDIAN_FOREST_APRICORN
-;	const VIRIDIAN_FOREST_POKE_BALL1
-;	const VIRIDIAN_FOREST_POKE_BALL2
-;	const VIRIDIAN_FOREST_POKE_BALL3
 
 ViridianForest_MapScripts:
 	def_scene_scripts
