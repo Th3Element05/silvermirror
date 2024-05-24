@@ -195,6 +195,7 @@ INCLUDE "maps/FuchsiaGym.asm"
 INCLUDE "maps/BillsBrothersHouse.asm"
 INCLUDE "maps/SafariZoneWardensHome.asm"
 INCLUDE "maps/SafariZoneMainOffice.asm"
+INCLUDE "maps/FuchsiaGoodRodHouse.asm"
 
 
 SECTION "Map Scripts 18", ROMX
@@ -233,6 +234,7 @@ INCLUDE "maps/MrPsychicsHouse.asm"
 INCLUDE "maps/SaffronMagnetTrainStation.asm"
 INCLUDE "maps/CopycatsHouse1F.asm"
 INCLUDE "maps/CopycatsHouse2F.asm"
+INCLUDE "maps/SaffronPidgeyHouse.asm"
 
 
 SECTION "Map Scripts 21", ROMX

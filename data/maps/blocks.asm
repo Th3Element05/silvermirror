@@ -185,24 +185,24 @@ Route2NuggetHouse_Blocks:
 PlayersNeighborsHouse_Blocks:
 Route26HealHouse_Blocks:
 DayOfWeekSiblingsHouse_Blocks:
-;Route27SandstormHouse_Blocks:
 MrPsychicsHouse_Blocks:
-;Route5CleanseTagHouse_Blocks:
 CherrygroveGymSpeechHouse_Blocks:
 GuideGentsHouse_Blocks:
 CherrygroveEvolutionSpeechHouse_Blocks:
 Route30BerryHouse_Blocks:
-DayCare_Blocks:                            ;silvermirror (changed)
-MrFujisHouse_Blocks:                       ;silvermirror+
+DayCare_Blocks:
+MrFujisHouse_Blocks:
+FuchsiaGoodRodHouse_Blocks:
+SafariZoneWardensHome_Blocks:
+SaffronPidgeyHouse_Blocks:
 	INCBIN "maps/House1.blk"
 
-CeruleanTrashedHouse_Blocks:               ;silvermirror+
+CeruleanTrashedHouse_Blocks:
 	INCBIN "maps/CeruleanTrashedHouse.blk" ;silvermirror+
 
-BillsHouse_Blocks:                         ;silvermirror+
+BillsHouse_Blocks:
 	INCBIN "maps/BillsHouse.blk"           ;silvermirror+
 
-;SafariZoneFuchsiaGateBeta_Blocks:
 Route19FuchsiaGate_Blocks:
 Route43MahoganyGate_Blocks:
 Route43Gate_Blocks:
@@ -839,7 +839,6 @@ PowerPlant_Blocks:
 
 PokemonFanClub_Blocks:
 CeladonChiefHouse_Blocks: ;silvermirror+
-SafariZoneWardensHome_Blocks:
 	INCBIN "maps/PokemonFanClub.blk"
 
 FightingDojo_Blocks:

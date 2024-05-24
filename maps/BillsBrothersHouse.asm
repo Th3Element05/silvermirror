@@ -1,39 +1,60 @@
 	object_const_def
-;	const BILLSBROTHERSHOUSE_POKEFAN_F
-;	const BILLSBROTHERSHOUSE_YOUNGSTER
 
 BillsBrothersHouse_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+	callback MAPCALLBACK_TILES, BillsBrothersHouseTilesCallback
+
+BillsBrothersHouseTilesCallback:
+	changeblock 6, 0, $1c ; pc
+
+BillsGrandpaScript:
+	jumptextfaceplayer BillsGrandpaText
+BillsGrandpaText:
+	text "Hmm? You've met"
+	line "BILL?"
+
+	para "He's my grandson!"
+
+	para "He always liked"
+	line "collecting things"
+	cont "even as a child!"
+	done
+
+BillsMomScript:
+	jumptextfaceplayer BillsMomText
+BillsMomText:
+	text "SAFARI ZONE's"
+	line "WARDEN is old,"
+	cont "but still active!"
+
+	para "All his teeth are"
+	line "false, though."
+	done
 
 BillsBrotherScript:
 	jumptextfaceplayer BillsBrotherText
 BillsBrotherText:
-	text "My brother BILL"
-	line "has a house on"
-	cont "CERULEAN CAPE."
-	done
+	text "BILL files his"
+	line "own #MON data"
+	cont "on his PC!"
 
-;BillsBrothersHouseYoungsterScript:
-;	jumptextfaceplayer BillsBrothersHouseYoungsterText
-;BillsBrothersHouseYoungsterText:
-;	text "I saw these weird,"
-;	line "slow #MON on"
-;	cont "CYCLING ROAD."
-;	done
+	para "Did he show you?"
+	done
 
 BillsBrothersHouse_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, FUCHSIA_CITY, 4
-	warp_event  3,  7, FUCHSIA_CITY, 4
+	warp_event  2,  7, FUCHSIA_CITY, 7
+	warp_event  3,  7, FUCHSIA_CITY, 7
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event  2,  3, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BillsBrotherScript, -1
-;	object_event  6,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BillsBrothersHouseYoungsterScript, -1
+	object_event  2,  3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BillsGrandpaScript, -1
+	object_event  5,  4, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BillsMomScript, -1
+	object_event  7,  2, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BillsBrotherScript, -1
