@@ -29,9 +29,9 @@
 	RGB 22,18,01, 20,08,00 ; eve
 
 ; group 6 (SS Anne)
- 	RGB 27,23,01, 23,11,00 ; morn/day
- 	RGB 15,11,01, 11,10,01 ; nite
-	RGB 22,18,01, 20,08,00 ; eve
+ 	RGB 14,17,31, 07,11,15 ; morn/day
+ 	RGB 09,13,19, 07,07,16 ; nite
+	RGB 12,13,23, 06,08,11 ; eve
 
 ; group 7 (Lavender)
  	RGB 23,15,31, 16,05,31 ; morn/day
