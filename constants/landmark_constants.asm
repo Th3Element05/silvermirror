@@ -66,34 +66,38 @@ DEF KANTO_LANDMARK EQU const_value
 	const LANDMARK_MT_MOON           ; 3c
 	const LANDMARK_ROUTE_4           ; 3d
 	const LANDMARK_CERULEAN_CITY     ; 3e
+	const LANDMARK_CERULEAN_CAVE     ; 3f
 	const LANDMARK_ROUTE_24          ; 40
 	const LANDMARK_ROUTE_25          ; 41
 	const LANDMARK_ROUTE_5           ; 42
 	const LANDMARK_ROUTE_6           ; 44
 	const LANDMARK_VERMILION_CITY    ; 45
+	const LANDMARK_ROUTE_11          ; 50
 	const LANDMARK_ROUTE_9           ; 49
 	const LANDMARK_ROUTE_10          ; 4b
 	const LANDMARK_ROCK_TUNNEL       ; 4a
 	const LANDMARK_POWER_PLANT       ; 4c
 	const LANDMARK_LAVENDER_TOWN     ; 4d
+	const LANDMARK_POKEMON_TOWER     ; 4e ; LANMARK_LAV_RADIO_TOWER
 	const LANDMARK_ROUTE_8           ; 48
 	const LANDMARK_ROUTE_7           ; 47
 	const LANDMARK_CELADON_CITY      ; 4f
-	const LANDMARK_SAFFRON_CITY      ; 50
-	const LANDMARK_ROUTE_11          ; 51
-	const LANDMARK_ROUTE_12          ; 52
-	const LANDMARK_ROUTE_13          ; 53
-	const LANDMARK_ROUTE_14          ; 54
-	const LANDMARK_ROUTE_15          ; 55
-	const LANDMARK_ROUTE_16          ; 56
-	const LANDMARK_ROUTE_17          ; 57
-	const LANDMARK_ROUTE_18          ; 58
-	const LANDMARK_FUCHSIA_CITY      ; 59
-	const LANDMARK_SAFARI_ZONE       ; moved
-	const LANDMARK_ROUTE_19          ; 5a
+	const LANDMARK_ROUTE_12          ; 51
+	const LANDMARK_ROUTE_13          ; 52
+	const LANDMARK_ROUTE_14          ; 53
+	const LANDMARK_ROUTE_15          ; 54
+	const LANDMARK_ROUTE_16          ; 55
+	const LANDMARK_ROUTE_17          ; 56
+	const LANDMARK_ROUTE_18          ; 57
+	const LANDMARK_FUCHSIA_CITY      ; 58
+	const LANDMARK_SAFARI_ZONE       ; 59
+	const LANDMARK_SAFFRON_CITY      ; 5a
+	const LANDMARK_SILPH_CO          ; silvermirror+
+	const LANDMARK_ROUTE_19          ; 5b
 	const LANDMARK_SEAFOAM_ISLANDS   ; 5c
-	const LANDMARK_ROUTE_20          ; 5b
-	const LANDMARK_CINNABAR_ISLAND   ; 5d
+	const LANDMARK_ROUTE_20          ; 5d
+	const LANDMARK_CINNABAR_ISLAND   ; 5e
+	const LANDMARK_POKEMON_MANSION   ; 5e
 	const LANDMARK_ROUTE_21          ; 5f
 	const LANDMARK_ROUTE_22          ; 60
 	const LANDMARK_ROUTE_23          ; 62
@@ -107,11 +111,7 @@ DEF KANTO_LANDMARK EQU const_value
 ; end
 	const LANDMARK_UNDERGROUND_PATH  ; moved
 	const LANDMARK_SS_ANNE           ; 68 ; LANDMARK_FAST_SHIP
-	const LANDMARK_POKEMON_TOWER     ; 4e ; LANMARK_LAV_RADIO_TOWER
 	const LANDMARK_ROCKET_HIDEOUT    ; silvermirror+
-	const LANDMARK_SILPH_CO          ; silvermirror+
-	const LANDMARK_POKEMON_MANSION   ; 5e
-	const LANDMARK_CERULEAN_CAVE     ; 3f
 DEF NUM_LANDMARKS EQU const_value
 
 ; used in CaughtData
