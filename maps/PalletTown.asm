@@ -1,7 +1,5 @@
 	object_const_def
 	const PALLETTOWN_OAK
-;	const PALLETTOWN_TEACHER
-;	const PALLETTOWN_FISHER
 
 PalletTown_MapScripts:
 	def_scene_scripts
