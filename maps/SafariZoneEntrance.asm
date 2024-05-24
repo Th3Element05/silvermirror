@@ -130,40 +130,6 @@ SafariZoneEntranceOfficer_NotFirstTime:
 	closetext
 	end
 
-;SafariZoneEntranceBaoboScript:
-;	faceplayer
-;	opentext
-;	writetext SafariZoneEntranceBaoboHello_Text
-;	promptbutton
-;	checkevent EVENT_ROUTE_39_BAOBA_GAVE_EXP_SHARE
-;	iffalse .didnt_get_exp_share
-;	writetext SafariZoneEntranceBaoboDidYouKnow_Text
-;	waitbutton
-;	closetext
-;	end
-;
-;.didnt_get_exp_share
-;	writetext SafariZoneEntranceBaoboGiveExpShareText
-;	waitbutton
-;	giveitem EXP_SHARE
-;	iffalse .bag_full
-;	waitsfx
-;	writetext SafariZoneGotExpShareText
-;	playsound SFX_ITEM
-;	waitsfx
-;	itemnotify
-;	setevent EVENT_ROUTE_39_BAOBA_GAVE_EXP_SHARE
-;	writetext SafariZoneEntranceBaoboDidYouKnow_Text
-;	waitbutton
-;	closetext
-;	end
-;
-;.bag_full
-;	writetext SafariZoneEntranceBaoboBagfullText
-;	waitbutton
-;	closetext
-;	end
-
 MovementData_Officer2:
 	step UP
 	step LEFT
@@ -299,31 +265,6 @@ SafariZoneEntranceMainOfficer_NotEnoughMoneyText:
 	line "have enough money."
 	done
 
-;SafariZoneEntranceBaoboHello_Text:
-;	text "BAOBA: Hello!"
-;	line "So glad you made"
-;	cont "it here."
-;	done
-;
-;SafariZoneEntranceBaoboDidYouKnow_Text:
-;	text "Did you know?"
-;
-;	para "I used to run a"
-;	line "SAFARI ZONE in"
-;	cont "FUCHSIA CITY, but"
-;	cont "I decided to ex-"
-;	cont "pand the business"
-;	cont "to JOHTO."
-;	
-;	para "I hope you enjoy"
-;	line "your time here!"
-;	done
-;
-;SafariZoneEntranceBaoboGiveExpShareText:
-;	text "Here is the gift "
-;	line "I promised you."
-;	done
-
 SafariZoneBoxFullText:
 	text "Uh-oh…"
 	line "Both your party"
@@ -342,16 +283,6 @@ SafariZoneBoxFullText:
 	line "come see me."
 	done
 
-;SafariZoneGotExpShareText:
-;	text "<PLAYER> received"
-;	line "EXP.SHARE."
-;	done
-;
-;SafariZoneEntranceBaoboBagfullText:
-;	text "Oh dear, you have"
-;	line "no room for this."
-;	done
-
 SafariZoneEntrance_MapEvents:
 	db 0, 0 ; filler
 
@@ -359,15 +290,12 @@ SafariZoneEntrance_MapEvents:
 	warp_event  3,  0, SAFARI_ZONE_AREA_1, 1
 	warp_event  2,  9, FUCHSIA_CITY, 1
 	warp_event  3,  9, FUCHSIA_CITY, 1
-;	warp_event  2,  9, SAFARI_ZONE_GATE, 1
-;	warp_event  3,  9, SAFARI_ZONE_GATE, 1
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event  0,  6, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, PERSONTYPE_SCRIPT, 0, SafariZoneEntranceOfficerScript, -1
+	object_event  0,  5, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, PERSONTYPE_SCRIPT, 0, SafariZoneEntranceOfficerScript, -1
 	object_event  3,  2, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, PERSONTYPE_SCRIPT, 0, SafariZoneEntranceMainOfficerScript, EVENT_SAFARI_ZONE_ENTRANCE_OFFICER_SAFARI_GAME_NOT_ACTIVE
 	object_event  2,  1, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, PERSONTYPE_SCRIPT, 0, SafariZoneEntranceMainOfficerScript, EVENT_SAFARI_ZONE_ENTRANCE_OFFICER_SAFARI_GAME_ACTIVE
-;	object_event  8,  6, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, PERSONTYPE_SCRIPT, 0, SafariZoneEntranceBaoboScript, 0
