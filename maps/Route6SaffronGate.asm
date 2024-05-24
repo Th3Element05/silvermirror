@@ -1,37 +1,192 @@
 	object_const_def
-	const ROUTE6SAFFRONGATE_OFFICER
 
 Route6SaffronGate_MapScripts:
 	def_scene_scripts
-;	scene_script Route6SaffronGateNoopScene ; unusable
+	scene_script Route6GateNoop1Scene, SCENE_ROUTE6GATE_CLOSED
+	scene_script Route6GateNoop2Scene, SCENE_ROUTE6GATE_NOOP
 
 	def_callbacks
 
-;Route6SaffronGateNoopScene:
-;	end
+Route6GateNoop1Scene:
+Route6GateNoop2Scene:
+	end
 
-Route6SaffronGuardScript:
-	jumptextfaceplayer Route6SaffronGuardWelcomeText
-Route6SaffronGuardWelcomeText:
-	text "The MAGNET TRAIN"
-	line "is the most famous"
+Route6GateGuardScript:
+	checkevent EVENT_GAVE_SAFFRON_GUARD_DRINK
+	iffalse Route6GateClosedScript
+	jumptext Route6GateThanksText
 
-	para "thing about SAF-"
-	line "FRON."
+Route6GateStopScript1:
+	showemote EMOTE_SHOCK, PLAYER, 20
+	opentext
+	writetext Route6GateStopText
+	waitbutton
+	closetext
+	applymovement PLAYER, Route6GateStopMovement1
+	sjump Route6GateClosedScript
+
+Route6GateStopScript2:
+	showemote EMOTE_SHOCK, PLAYER, 20
+	opentext
+	writetext Route6GateStopText
+	waitbutton
+	closetext
+	applymovement PLAYER, Route6GateStopMovement2
+	sjump Route6GateClosedScript
+
+Route6GateStopScript3:
+	showemote EMOTE_SHOCK, PLAYER, 20
+	opentext
+	writetext Route6GateStopText
+	waitbutton
+	closetext
+	applymovement PLAYER, Route6GateStopMovement3
+	sjump Route6GateClosedScript
+
+Route6GateStopScript4:
+	showemote EMOTE_SHOCK, PLAYER, 20
+	opentext
+	writetext Route6GateStopText
+	waitbutton
+	closetext
+	applymovement PLAYER, Route6GateStopMovement4
+	; fallthrough
+Route6GateClosedScript:
+	opentext
+	writetext Route6GateClosedText
+	waitbutton
+	checkitem FRESH_WATER
+	iftrue .FreshWater
+	checkitem SODA_POP
+	iftrue .SodaPop
+	checkitem LEMONADE
+	iftrue .Lemonade
+	; else
+	closetext
+	end
+
+.FreshWater
+	getitemname STRING_BUFFER_3, FRESH_WATER
+	writetext Route6GateHaveDrinkText
+	promptbutton
+	takeitem FRESH_WATER, 1
+	writetext Route6GateGiveDrinkText
+	promptbutton
+	sjump Route6GateOpenScript
+
+.SodaPop
+	getitemname STRING_BUFFER_3, SODA_POP
+	writetext Route6GateHaveDrinkText
+	promptbutton
+	takeitem SODA_POP, 1
+	writetext Route6GateGiveDrinkText
+	promptbutton
+	sjump Route6GateOpenScript
+
+.Lemonade
+	getitemname STRING_BUFFER_3, LEMONADE
+	writetext Route6GateHaveDrinkText
+	promptbutton
+	takeitem LEMONADE, 1
+	writetext Route6GateGiveDrinkText
+	promptbutton
+	; fallthrough
+Route6GateOpenScript:
+	playsound SFX_POTION
+	writetext Route6GateOpenText
+	waitbutton
+	closetext
+	setevent EVENT_GAVE_SAFFRON_GUARD_DRINK
+	setscene SCENE_ROUTE5GATE_NOOP
+	setscene SCENE_ROUTE6GATE_NOOP
+	setscene SCENE_ROUTE7GATE_NOOP
+	setscene SCENE_ROUTE8GATE_NOOP
+	end
+
+Route6GateStopText:
+	text "Wait, stop! The"
+	line "road is closed!"
 	done
+
+Route6GateClosedText:
+	text "TEAM ROCKET is"
+	line "causing trouble"
+	cont "in SAFFRON CITY."
+
+	para "I'm on guard duty."
+	line "You can't go"
+	cont "through."
+
+	para "Gee, I'm thirsty,"
+	line "though!"
+	done
+
+Route6GateHaveDrinkText:
+	text "..."
+	line "Huh? I can have"
+	cont "this drink?"
+
+	para "Gee, thanks!"
+	done
+
+Route6GateGiveDrinkText:
+	text "<PLAYER> gave"
+	line "@"
+	text_ram wStringBuffer3
+	text "!"
+	done
+
+Route6GateOpenText:
+	text "..."
+	line "Glug glug..."
+	cont "..."
+	cont "Gulp..."
+
+	para "If you want to go"
+	line "to SAFFRON CITY..."
+
+	para "You can go on"
+	line "through. I'll"
+	cont "share this with"
+	cont "the other guards!"
+	
+	para "Just be careful"
+	line "with TEAM ROCKET"
+	cont "around!"
+	done
+
+Route6GateThanksText:
+	text "Hi, thanks for"
+	line "the cool drinks!"
+	done
+
+Route6GateStopMovement1:
+	step LEFT
+Route6GateStopMovement2:
+	step LEFT
+Route6GateStopMovement3:
+	step LEFT
+Route6GateStopMovement4:
+	step DOWN
+	turn_head LEFT
+	step_end
 
 Route6SaffronGate_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  3,  0, SAFFRON_CITY, 12
-	warp_event  4,  0, SAFFRON_CITY, 13
+	warp_event  3,  0, SAFFRON_CITY, 11
+	warp_event  4,  0, SAFFRON_CITY, 12
 	warp_event  3,  7, ROUTE_6, 2
 	warp_event  4,  7, ROUTE_6, 2
 
 	def_coord_events
+	coord_event  5,  3, SCENE_ROUTE6GATE_CLOSED, Route6GateStopScript1
+	coord_event  4,  3, SCENE_ROUTE6GATE_CLOSED, Route6GateStopScript2
+	coord_event  3,  3, SCENE_ROUTE6GATE_CLOSED, Route6GateStopScript3
+	coord_event  2,  3, SCENE_ROUTE6GATE_CLOSED, Route6GateStopScript4
 
 	def_bg_events
 
 	def_object_events
-	object_event  0,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route6SaffronGuardScript, -1
+	object_event  0,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route6GateGuardScript, -1

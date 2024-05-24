@@ -3126,14 +3126,18 @@ wCeruleanCitySceneID::                            db ;silvermirror ds 34
 wRoute24SceneID::                                 db ;silvermirror ds 33
 wBillsHouseSceneID::                              db ;silvermirror ds 32
 ;wRoute5SceneID::                                  db ;unused in silvermirror?
-wVermilionCitySceneID::                           db ;silvermirror ds 31
-wSSAnne2FSceneID::                                db ;silvermirror ds 30
-wPokemonTower2FSceneID::                          db ;silvermirror ds 29
-wPokemonTower5FSceneID::                          db ;silvermirror ds 28
-wPokemonTower6FSceneID::                          db ;silvermirror ds 27
-wFightingDojoSceneID::                            db ;silvermirror ds 26
-wMrFujisHouseSceneID::                            db ;silvermirror ds 25
-wSilphCo11FSceneID::                              db ;silvermirror ds 24
+wRoute5SaffronGateSceneID::                       db ;silvermirror ds 31
+wRoute6SaffronGateSceneID::                       db ;silvermirror ds 30
+wRoute7SaffronGateSceneID::                       db ;silvermirror ds 29
+wRoute8SaffronGateSceneID::                       db ;silvermirror ds 28
+wVermilionCitySceneID::                           db ;silvermirror ds 27
+wSSAnne2FSceneID::                                db ;silvermirror ds 26
+wPokemonTower2FSceneID::                          db ;silvermirror ds 25
+wPokemonTower5FSceneID::                          db ;silvermirror ds 24
+wPokemonTower6FSceneID::                          db ;silvermirror ds 23
+wFightingDojoSceneID::                            db ;silvermirror ds 22
+wMrFujisHouseSceneID::                            db ;silvermirror ds 21
+wSilphCo11FSceneID::                              db ;silvermirror ds 20
 wTrainerHouseB1FSceneID::                         db
 wVictoryRoadGateSceneID::                         db
 wSaffronMagnetTrainStationSceneID::               db
@@ -3204,8 +3208,8 @@ wPokemonMansionB1FSceneID::                       db
 wSafariZoneEntranceSceneID::                      db
 wRoute42EcruteakGateSceneID::                     db
 wRoute39SceneID::                                 db
-;wPokecenter2FSceneID::                            db ; unused in ;silvermirror ds 25
-;wTradeCenterSceneID::                             db ; unused in ;silvermirror ds 26
+;wPokecenter2FSceneID::                            db ; unused in ;silvermirror ds 21
+;wTradeCenterSceneID::                             db ; unused in ;silvermirror ds 22
 ;wColosseumSceneID::                               db ; unused in ;silvermirror ds 
 ;wTimeCapsuleSceneID::                             db ; unused in ;silvermirror ds 
 ;wPowerPlantSceneID::                              db ; unused in ;silvermirror ds 
@@ -3216,10 +3220,10 @@ wRoute39SceneID::                                 db
 ;wFastShip1FSceneID::                              db ; unused in ;silvermirror ds 
 ;wFastShipB1FSceneID::                             db ; unused in ;silvermirror ds 
 ;wRadioTower5FSceneID::                            db ; unused in ;silvermirror ds
-;wMobileTradeRoomSceneID::                         db ; unused in ;silvermirror ds 37
-;wMobileBattleRoomSceneID::                        db ; unused in ;silvermirror ds 38
+;wMobileTradeRoomSceneID::                         db ; unused in ;silvermirror ds 33
+;wMobileBattleRoomSceneID::                        db ; unused in ;silvermirror ds 34
 
-	ds 38 ;silvermirror -ds 43 +ds 38
+	ds 34 ;silvermirror -ds 43 +ds 34
 
 ; fight counts
 wJackFightCount::    db

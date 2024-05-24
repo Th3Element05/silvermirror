@@ -17,6 +17,10 @@ MapScenes::
 	scene_var ROUTE_24,                                    wRoute24SceneID ;silvermirror
 	scene_var BILLS_HOUSE,                                 wBillsHouseSceneID ;silvermirror
 ;	scene_var ROUTE_5,                                     wRoute5SceneID ;silvermirror ; unused?
+	scene_var ROUTE_5_SAFFRON_GATE,                        wRoute5SaffronGateSceneID ;silvermirror
+	scene_var ROUTE_6_SAFFRON_GATE,                        wRoute6SaffronGateSceneID ;silvermirror
+	scene_var ROUTE_7_SAFFRON_GATE,                        wRoute7SaffronGateSceneID ;silvermirror
+	scene_var ROUTE_8_SAFFRON_GATE,                        wRoute8SaffronGateSceneID ;silvermirror
 	scene_var VERMILION_CITY,                              wVermilionCitySceneID ;silvermirror
 	scene_var SS_ANNE_2F,                                  wSSAnne2FSceneID ;silvermirror
 	scene_var POKEMON_TOWER_2F,                            wPokemonTower2FSceneID ;silvermirror
