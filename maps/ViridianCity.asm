@@ -1,10 +1,6 @@
 	object_const_def
 	const VIRIDIANCITY_COFFEE_GRAMPS
 	const VIRIDIANCITY_FISHER
-;	const VIRIDIANCITY_GYM_GRAMPS
-;	const VIRIDIANCITY_YOUNGSTER1
-;	const VIRIDIANCITY_YOUNGSTER2
-;	const VIRIDIANCITY_LASS
 
 ViridianCity_MapScripts:
 	def_scene_scripts
@@ -413,7 +409,7 @@ ViridianCity_MapEvents:
 	def_warp_events
 	warp_event 32,  7, VIRIDIAN_GYM, 1
 	warp_event 21,  9, VIRIDIAN_NICKNAME_SPEECH_HOUSE, 1
-	warp_event 21, 15, EARLS_POKEMON_ACADEMY, 1 ; TRAINER_HOUSE_1F, 1
+	warp_event 21, 15, EARLS_POKEMON_ACADEMY, 1
 	warp_event 29, 19, VIRIDIAN_MART, 1
 	warp_event 23, 25, VIRIDIAN_POKECENTER_1F, 1
 

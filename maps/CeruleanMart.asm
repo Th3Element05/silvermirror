@@ -10,11 +10,6 @@ CeruleanMartClerkScript:
 	readvar VAR_BADGES
 	ifgreater 4, .BallsFive
 	ifequal 3, .BallsThree
-	ifequal 1, .BallsOne
-	pokemart MARTTYPE_STANDARD, MART_BALLS_ZERO
-	closetext
-	end
-.BallsOne
 	pokemart MARTTYPE_STANDARD, MART_BALLS_ONE
 	closetext
 	end

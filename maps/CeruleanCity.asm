@@ -493,7 +493,8 @@ CeruleanCity_MapEvents:
 	warp_event 19, 17, CERULEAN_POKECENTER_1F, 1          ; 6
 	warp_event 30, 19, CERULEAN_GYM, 1                    ; 7
 	warp_event 14, 25, GOLDENROD_BIKE_SHOP, 1 ;_BIKE_SHOP ; 8
-	warp_event 25, 25, CERULEAN_MART, 2                   ; 9
+	warp_event 25, 25, CERULEAN_MART, 1                   ; 9
+	warp_event  9,  9, CERULEAN_GYM_BADGE_SPEECH_HOUSE, 3 ; 10
 
 	def_coord_events
 	coord_event 20,  7, SCENE_CERULEANCITY_RIVAL_BATTLE, CeruleanCityRivalEncounterL
