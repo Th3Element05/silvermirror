@@ -103,7 +103,7 @@ CinnabarIsland_MapEvents:
 	bg_event 12, 13, BGEVENT_READ, CinnabarIslandPokecenterSign
 	bg_event 16, 13, BGEVENT_READ, CinnabarIslandMartSign
 	bg_event  9, 13, BGEVENT_READ, CinnabarIslandLabSign
-	bg_event 32,  7, BGEVENT_IFNOTSET, CinnabarGymDoorLocked
+	bg_event 18,  5, BGEVENT_IFNOTSET, CinnabarGymDoorLocked
 
 	def_object_events
 	object_event 12,  7, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CinnabarIslandGirl, -1
