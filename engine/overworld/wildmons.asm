@@ -350,6 +350,12 @@ ChooseWildEncounter:
 ;	jr nz, .ok
 ; If the Pokemon is encountered in a special way, skip randomizing level.
 	ld a, [wBattleType]
+	cp BATTLETYPE_NO_CATCH
+	jr z, .ok
+	cp BATTLETYPE_FORCEITEM
+	jr z, .ok
+	cp BATTLETYPE_KANTO_LEGEND
+	jr z, .ok
 	cp BATTLETYPE_SUICUNE
 	jr z, .ok
 ;silvermirror
