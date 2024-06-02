@@ -205,6 +205,7 @@ MapSpecificOBPalettes:
 ;	_use_palette_routine_for_map PEWTER_MUSEUM_2F, .YellowOverRockOBPalette
 ;silvermirror+
 	_use_palette_routine_for_map SS_ANNE_ROOMS_B1F, .GrayOverRockOBPalette
+	_use_palette_routine_for_map POWER_PLANT, .YellowOverRockOBPalette
 	db -1 ; terminator
 
 .PurpleOverRockOBPalette:
