@@ -9,8 +9,8 @@ CeruleanGymBadgeSpeechHouse_MapScripts:
 CeruleanGymBadgeHouseTilesCallback:
 	changeblock 2, 0, $37 ; back door
 	changeblock 2, 2, $28 ; chair
-	changeblock 2, 4, $2a ; table
-	changeblock 4, 2, $2e ; chair
+	changeblock 4, 2, $2a ; table
+	changeblock 2, 4, $2e ; chair
 	changeblock 4, 4, $2b ; table
 	endcallback
 
