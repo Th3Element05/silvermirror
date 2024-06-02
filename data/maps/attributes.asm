@@ -144,7 +144,7 @@ ENDM
 	connection west, Route44, ROUTE_44, 9
 
 	map_attributes SilverCaveOutside, SILVER_CAVE_OUTSIDE, $2c, EAST
-	connection east, Route28, ROUTE_28, 9
+	connection east, Route28, ROUTE_28, 6
 
 	map_attributes Route26, ROUTE_26, $0F, NORTH | WEST
 	connection north, Route22, ROUTE_22, -1
@@ -162,7 +162,7 @@ ENDM
 	connection west, NewBarkTown, NEW_BARK_TOWN, 0
 
 	map_attributes Route28, ROUTE_28, $2c, WEST
-	connection west, SilverCaveOutside, SILVER_CAVE_OUTSIDE, -9
+	connection west, SilverCaveOutside, SILVER_CAVE_OUTSIDE, -6
 
 	map_attributes Route29, ROUTE_29, $05, NORTH | WEST | EAST
 	connection north, Route46, ROUTE_46, 10
@@ -379,16 +379,8 @@ ENDM
 	map_attributes Route9, ROUTE_9, $2c, WEST | EAST
 	connection west, CeruleanCity, CERULEAN_CITY, -4
 	connection east, Route10North, ROUTE_10_NORTH, 0 ;-1
-;	connection east, Route10, ROUTE_10, 0 ;-1
 
-;	map_attributes Route24, ROUTE_24, $2c, NORTH | SOUTH
-;	connection north, Route25, ROUTE_25, 0
-;	connection south, CeruleanCity, CERULEAN_CITY, -5
-;
-;	map_attributes Route25, ROUTE_25, $2c, SOUTH
-;	connection south, Route24, ROUTE_24, 0
-;
-	map_attributes Route24, ROUTE_24, $2c, SOUTH | EAST
+	map_attributes Route24, ROUTE_24, $43, SOUTH | EAST
 	connection south, CeruleanCity, CERULEAN_CITY, -5
 	connection east, Route25, ROUTE_25, 0
 
@@ -482,10 +474,10 @@ ENDM
 	map_attributes MountMortar2FInside, MOUNT_MORTAR_2F_INSIDE, $09, 0
 	map_attributes MountMortarB1F, MOUNT_MORTAR_B1F, $09, 0
 	map_attributes IcePath1F, ICE_PATH_1F, $09, 0
-	map_attributes IcePathB1F, ICE_PATH_B1F, $19, 0
-	map_attributes IcePathB2FMahoganySide, ICE_PATH_B2F_MAHOGANY_SIDE, $19, 0
-	map_attributes IcePathB2FBlackthornSide, ICE_PATH_B2F_BLACKTHORN_SIDE, $19, 0
-	map_attributes IcePathB3F, ICE_PATH_B3F, $19, 0
+	map_attributes IcePathB1F, ICE_PATH_B1F, $1f, 0
+	map_attributes IcePathB2FMahoganySide, ICE_PATH_B2F_MAHOGANY_SIDE, $1f, 0
+	map_attributes IcePathB2FBlackthornSide, ICE_PATH_B2F_BLACKTHORN_SIDE, $1f, 0
+	map_attributes IcePathB3F, ICE_PATH_B3F, $1f, 0
 	map_attributes WhirlIslandNW, WHIRL_ISLAND_NW, $09, 0
 	map_attributes WhirlIslandNE, WHIRL_ISLAND_NE, $09, 0
 	map_attributes WhirlIslandSW, WHIRL_ISLAND_SW, $09, 0
@@ -754,7 +746,7 @@ ENDM
 	map_attributes SeafoamIslandsB1F, SEAFOAM_ISLANDS_B1F, $09, 0
 	map_attributes SeafoamIslandsB2F, SEAFOAM_ISLANDS_B2F, $09, 0
 	map_attributes SeafoamIslandsB3F, SEAFOAM_ISLANDS_B3F, $02, 0 ; $09, 0
-	map_attributes SeafoamIslandsB4F, SEAFOAM_ISLANDS_B4F, $1F, 0 ; $09, 0
+	map_attributes SeafoamIslandsB4F, SEAFOAM_ISLANDS_B4F, $39, 0 ; $09, 0
 	map_attributes Route11Gate, ROUTE_11_GATE, $00, 0
 	map_attributes CeruleanCave1F, CERULEAN_CAVE_1F, $09, 0
 	map_attributes CeruleanCave2F, CERULEAN_CAVE_2F, $09, 0
@@ -769,6 +761,7 @@ ENDM
 	map_attributes SafariRestHouseArea3, SAFARI_REST_HOUSE_AREA_3, $00, 0
 	map_attributes SafariRestHouseArea4, SAFARI_REST_HOUSE_AREA_4, $00, 0
 ;silvermirror+
+	map_attributes SafariSecretHouse, SAFARI_SECRET_HOUSE, $00, 0
 	map_attributes MountMoonB2F, MOUNT_MOON_B2F, $02, 0
 	map_attributes CeruleanTrashedHouse, CERULEAN_TRASHED_HOUSE, $00, 0
 	map_attributes SSAnne1F, SS_ANNE_1F, $00, 0
