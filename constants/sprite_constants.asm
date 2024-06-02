@@ -238,7 +238,7 @@ DEF SPRITE_POKEMON EQU const_value
 ;	const SPRITE_KRABBY     ; 62
 ;	const SPRITE_KINGLER    ; 63
 	const SPRITE_VOLTORB    ; 64 DECORATION
-;	const SPRITE_ELECTRODE  ; 65
+	const SPRITE_ELECTRODE  ; 65
 ;	const SPRITE_EXEGGCUTE  ; 66
 ;	const SPRITE_EXEGGUTOR  ; 67
 	const SPRITE_CUBONE     ; 68
@@ -406,3 +406,4 @@ DEF SPRITE_VARS EQU const_value
 	const SPRITE_BIG_DOLL            ; f3
 	const SPRITE_COPYCAT             ; f4
 	const SPRITE_BILL_TRANSFORM      ; f5
+	const SPRITE_VOLTORB_TRAP        ; f6

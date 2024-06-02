@@ -1082,7 +1082,8 @@ DebugMasterBalls:
 	writetext DebugMasterBallsText
 	yesorno
 	iffalse .End
-	giveitem MASTER_BALL, 10
+	giveitem MASTER_BALL, 40
+	giveitem MAX_REPEL, 40
 .End
 	closetext
 	end
@@ -1341,8 +1342,8 @@ DebugFullPokegearText:
 	done
 
 DebugMasterBallsText:
-	text "Give 10"
-	line "MASTER BALLs?"
+	text "MASTER BALLs and"
+	line "MAX REPELs?"
 	done
 
 DebugAllTMHMsText:
