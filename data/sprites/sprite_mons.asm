@@ -101,7 +101,7 @@ SpriteMons:
 ;	db KRABBY     ; 62
 ;	db KINGLER    ; 63
 	db VOLTORB    ; 64 DECORATION
-;	db ELECTRODE  ; 65
+	db ELECTRODE  ; 65
 ;	db EXEGGCUTE  ; 66
 ;	db EXEGGUTOR  ; 67
 	db CUBONE     ; 68
