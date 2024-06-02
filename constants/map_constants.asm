@@ -85,8 +85,8 @@ ENDM
 	map_const GOLDENROD_BIKE_SHOP,                          4,  4 ;  8
 	map_const DAY_CARE,                                     4,  4 ;  9
 	map_const ROUTE_4,                                     40,  9 ; 10
-	map_const ROUTE_24,                                    11, 18 ; 11
-	map_const ROUTE_25,                                    27,  9 ; 12
+	map_const ROUTE_24,                                    10, 18 ; 11
+	map_const ROUTE_25,                                    30,  9 ; 12
 	map_const BILLS_HOUSE,                                  4,  4 ; 13
 	map_const ROUTE_9,                                     30,  9 ; 14
 	map_const ROUTE_10_NORTH,                              10, 15 ; 15
@@ -203,7 +203,7 @@ ENDM
 	map_const SAFARI_REST_HOUSE_AREA_2,                     4,  4 ;  7
 	map_const SAFARI_REST_HOUSE_AREA_3,                     4,  4 ;  8
 	map_const SAFARI_REST_HOUSE_AREA_4,                     4,  4 ;  9
-;	map_const SAFARI_ZONE_SECRET_HOUSE,                     4,  4 ; 10
+	map_const SAFARI_SECRET_HOUSE,                          4,  4 ; 10
 	endgroup
 
 	newgroup SAFFRON                                              ; 11
@@ -228,7 +228,7 @@ ENDM
 	map_const CINNABAR_MART,                                5,  4 ;  3
 	map_const CINNABAR_GYM,                                12,  9 ;  4
 	map_const ROUTE_19,                                    10, 25 ;  5
-	map_const ROUTE_20,                                    42,  9 ;  6
+	map_const ROUTE_20,                                    45,  9 ;  6
 	map_const ROUTE_21,                                    10, 30 ;  7
 	endgroup
 
@@ -412,7 +412,7 @@ ENDM
 	map_const DAY_OF_WEEK_SIBLINGS_HOUSE,                   4,  4 ;  4
 	map_const ROUTE_27_EAST,                               26,  9 ;  5
 	map_const ROUTE_28,                                    20,  9 ;  6
-	map_const SILVER_CAVE_OUTSIDE,                         20, 18 ;  7
+	map_const SILVER_CAVE_OUTSIDE,                         20, 15 ;  7
 	map_const SILVER_CAVE_POKECENTER_1F,                    7,  4 ;  8
 	map_const ROUTE_28_STEEL_WING_HOUSE,                    4,  4 ;  9
 	endgroup
@@ -452,13 +452,13 @@ ENDM
 	map_const SEAFOAM_ISLANDS,                             15, 10 ; 31
 	map_const SEAFOAM_ISLANDS_B1F,                         15, 10 ; 32
 	map_const SEAFOAM_ISLANDS_B2F,                         15, 10 ; 33
-	map_const SEAFOAM_ISLANDS_B3F,                         15, 10 ; 34
+	map_const SEAFOAM_ISLANDS_B3F,                         15, 11 ; 34
 	map_const SEAFOAM_ISLANDS_B4F,                         15, 10 ; 35
 	map_const POKEMON_MANSION_1F,                          15, 14 ; 36
 	map_const POKEMON_MANSION_2F,                          15, 14 ; 37
 	map_const POKEMON_MANSION_3F,                          15,  9 ; 38
 	map_const POKEMON_MANSION_B1F,                         15, 14 ; 39
-	map_const POWER_PLANT,                                 10,  9 ; 40
+	map_const POWER_PLANT,                                 20, 18 ; 40 ; 10,  9 ; 40
 	map_const VICTORY_ROAD,                                10, 36 ; 41
 	map_const CERULEAN_CAVE_1F,                            20, 14 ; 42
 	map_const CERULEAN_CAVE_2F,                            20, 14 ; 43
