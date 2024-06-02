@@ -40,10 +40,10 @@ PalletGroupSprites:
 ViridianGroupSprites:
 ;ViridianCity	GRAMPS, FISHER, TEACHER, YOUNGSTER
 ;Route2South	poke_ball
-;Route22	BLUE
+;Route22        BLUE
 CinnabarGroupSprites:
 ;CinnabarIsland GRAMPS, TEACHER
-;Route19	SWIMMER_M, SWIMMER_F, COOLTRAINER_M
+;Route19        SWIMMER_M, SWIMMER_F, COOLTRAINER_M
 ;Route20        SWIMMER_M, SWIMMER_F, COOLTRAINER_M
 ;Route21        SWIMMER_M, SWIMMER_F, FISHER
 	db SPRITE_OAK
@@ -61,6 +61,11 @@ CinnabarGroupSprites:
 	db SPRITE_APRICORN
 	db 0 ; end
 
+SafariZoneGroupSprites:
+;SafariZoneArea1 COOLTRAINER_M, COOLTRAINER_F, YOUNGSTER, LASS, poke_ball
+;SafariZoneArea2 COOLTRAINER_M, COOLTRAINER_F, YOUNGSTER, LASS, SUPER_NERD, FISHER, poke_ball
+;SafariZoneArea3 COOLTRAINER_M, COOLTRAINER_F, YOUNGSTER, SCIENTIST, poke_ball
+;SafariZoneArea4 COOLTRAINER_M, COOLTRAINER_F, LASS, FISHER, poke_ball
 PewterGroupSprites:
 ;PewterCity     YOUNGSTER, SUPER_NERD, COOLTRAINER_M, COOLTRAINER_F, berry, apricorn
 ;ViridianForest YOUNGSTER, berry, apricorn, poke_ball
@@ -81,7 +86,8 @@ CeruleanGroupSprites:
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_COOLTRAINER_F
 	db SPRITE_FISHER
-	; 7 of 9 walking
+	db SPRITE_SCIENTIST ; SafariZoneArea3
+	; 8 of 9 walking
 	db SPRITE_OFFICER
 	db SPRITE_ROCKET
 	db SPRITE_SLOWBRO
@@ -356,11 +362,6 @@ DungeonsGroupSprites:
 	db SPRITE_POKE_BALL
 	db 0 ; end
 
-SafariZoneGroupSprites:
-;SafariZoneArea1
-;SafariZoneArea2
-;SafariZoneArea3
-;SafariZoneArea4
 IndigoGroupSprites:
 ;Route23        none
 SilverGroupSprites:
