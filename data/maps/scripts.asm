@@ -209,6 +209,7 @@ INCLUDE "maps/SafariRestHouseArea1.asm"
 INCLUDE "maps/SafariRestHouseArea2.asm"
 INCLUDE "maps/SafariRestHouseArea3.asm"
 INCLUDE "maps/SafariRestHouseArea4.asm"
+INCLUDE "maps/SafariSecretHouse.asm"
 
 
 SECTION "Map Scripts 19", ROMX

@@ -1124,5 +1124,8 @@ SafariRestHouseArea3_Blocks:
 SafariRestHouseArea4_Blocks:
 	INCBIN "maps/SafariRestHouse.blk"
 
+SafariSecretHouse_Blocks:
+	INCBIN "maps/SafariSecretHouse.blk"
+
 SafariZoneEntrance_Blocks:
 	INCBIN "maps/SafariZoneEntrance.blk"
