@@ -1,236 +1,276 @@
 	object_const_def
-;	const ROUTE_19_SWIMMER_GIRL
-;	const ROUTE_19_SWIMMER_GUY1
-;	const ROUTE_19_SWIMMER_GUY2
-;	const ROUTE_19_SWIMMER_GUY3
-;	const ROUTE_19_FISHER1
-;	const ROUTE_19_FISHER2
 
 Route19_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
-;	callback MAPCALLBACK_TILES, Route19ClearRocksCallback
 
-;Route19ClearRocksCallback:
-;	checkevent EVENT_CINNABAR_ROCKS_CLEARED
-;	iftrue .Done
-;	changeblock  6,  6, $7a ; rock
-;	changeblock  8,  6, $7a ; rock
-;	changeblock 10,  6, $7a ; rock
-;	changeblock 12,  8, $7a ; rock
-;	changeblock  4,  8, $7a ; rock
-;	changeblock 10, 10, $7a ; rock
-;.Done:
-;	endcallback
+TrainerSwimmerMSimon:
+	trainer SWIMMERM, SIMON, EVENT_BEAT_SWIMMERM_SIMON, SwimmerMSimonSeenText, SwimmerMSimonBeatenText, 0, .Script
 
-;TrainerSwimmerfDawn:
-;	trainer SWIMMERF, DAWN, EVENT_BEAT_SWIMMERF_DAWN, SwimmerfDawnSeenText, SwimmerfDawnBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext SwimmerfDawnAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+.Script:
+	endifjustbattled
+	opentext
+	writetext SwimmerMSimonAfterBattleText
+	waitbutton
+	closetext
+	end
 
-;TrainerSwimmermHarold:
-;	trainer SWIMMERM, HAROLD, EVENT_BEAT_SWIMMERM_HAROLD, SwimmermHaroldSeenText, SwimmermHaroldBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext SwimmermHaroldAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+SwimmerMSimonSeenText:
+	text "Have to warm up"
+	line "before my swim!"
+	done
 
-;TrainerSwimmermJerome:
-;	trainer SWIMMERM, JEROME, EVENT_BEAT_SWIMMERM_JEROME, SwimmermJeromeSeenText, SwimmermJeromeBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext SwimmermJeromeAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+SwimmerMSimonBeatenText:
+	text "All warmed up!"
+	done
 
-;TrainerSwimmermTucker:
-;	trainer SWIMMERM, TUCKER, EVENT_BEAT_SWIMMERM_TUCKER, SwimmermTuckerSeenText, SwimmermTuckerBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext SwimmermTuckerAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+SwimmerMSimonAfterBattleText:
+	text "Thanks, kid! I'm"
+	line "ready for a swim!"
+	done
 
-;Route19Fisher1Script:
-;	faceplayer
-;	opentext
-;	checkevent EVENT_CINNABAR_ROCKS_CLEARED
-;	iftrue .RocksCleared
-;	writetext Route19Fisher1Text
-;	waitbutton
-;	closetext
-;	end
-;
-;.RocksCleared:
-;	writetext Route19Fisher1Text_RocksCleared
-;	waitbutton
-;	closetext
-;	end
+TrainerSwimmerMRandall:
+	trainer SWIMMERM, RANDALL, EVENT_BEAT_SWIMMERM_RANDALL, SwimmerMRandallSeenText, SwimmerMRandallBeatenText, 0, .Script
 
-;Route19Fisher2Script:
-;	faceplayer
-;	opentext
-;	checkevent EVENT_CINNABAR_ROCKS_CLEARED
-;	iftrue .RocksCleared
-;	writetext Route19Fisher2Text
-;	waitbutton
-;	closetext
-;	end
-;
-;.RocksCleared:
-;	writetext Route19Fisher2Text_RocksCleared
-;	waitbutton
-;	closetext
-;	end
+.Script:
+	endifjustbattled
+	opentext
+	writetext SwimmerMRandallAfterBattleText
+	waitbutton
+	closetext
+	end
 
-;Route19Sign:
-;	jumptext Route19SignText
+SwimmerMRandallSeenText:
+	text "Wait! You'll have"
+	line "a heart attack!"
+	done
 
-;CarefulSwimmingSign:
-;	jumptext CarefulSwimmingSignText
+SwimmerMRandallBeatenText:
+	text "Ooh!"
+	line "That's chilly!"
+	done
 
-;SwimmermHaroldSeenText:
-;	text "Have you ever gone"
-;	line "swimming in the"
-;	cont "sea at night?"
-;	done
+SwimmerMRandallAfterBattleText:
+	text "Watch out for"
+	line "TENTACOOL!"
+	done
 
-;SwimmermHaroldBeatenText:
-;	text "Glub…"
-;	done
+TrainerSwimmerMCharlie:
+	trainer SWIMMERM, CHARLIE, EVENT_BEAT_SWIMMERM_CHARLIE, SwimmerMCharlieSeenText, SwimmerMCharlieBeatenText, 0, .Script
 
-;SwimmermHaroldAfterBattleText:
-;	text "At night, the sea"
-;	line "turns black. It"
-;
-;	para "feels like it will"
-;	line "swallow you up."
-;	done
+.Script:
+	endifjustbattled
+	opentext
+	writetext SwimmerMCharlieAfterBattleText
+	waitbutton
+	closetext
+	end
 
-;SwimmermTuckerSeenText:
-;	text "Pant, pant…"
-;	line "Just… a little…"
-;
-;	para "farther… to…"
-;	line "FUCHSIA…"
-;	done
+SwimmerMCharlieSeenText:
+	text "I look at the"
+	line "sea to forget!"
+	done
 
-;SwimmermTuckerBeatenText:
-;	text "I'm drowning!"
-;	done
+SwimmerMCharlieBeatenText:
+	text "Ooh!"
+	line "Traumatic!"
+	done
 
-;SwimmermTuckerAfterBattleText:
-;	text "I… asked my girl-"
-;	line "friend to swim to"
-;	cont "FUCHSIA… Gasp…"
-;	done
+SwimmerMCharlieAfterBattleText:
+	text "I'm looking at the"
+	line "sea to forget!"
+	done
 
-;SwimmerfDawnSeenText:
-;	text "I'm disgusted by"
-;	line "wimpy people!"
-;	done
+TrainerSwimmerMGeorge:
+	trainer SWIMMERM, GEORGE, EVENT_BEAT_SWIMMERM_GEORGE, SwimmerMGeorgeSeenText, SwimmerMGeorgeBeatenText, 0, .Script
 
-;SwimmerfDawnBeatenText:
-;	text "I could beat you"
-;	line "at swimming…"
-;	done
+.Script:
+	endifjustbattled
+	opentext
+	writetext SwimmerMGeorgeAfterBattleText
+	waitbutton
+	closetext
+	end
 
-;SwimmerfDawnAfterBattleText:
-;	text "It's a quick swim"
-;	line "between FUCHSIA"
-;
-;	para "and SEAFOAM IS-"
-;	line "LANDS…"
-;
-;	para "Sheesh, some big"
-;	line "man my boyfriend"
-;
-;	para "is! What a wimp!"
-;	done
+SwimmerMGeorgeSeenText:
+	text "I love swimming!"
+	line "What about you?"
+	done
 
-;SwimmermJeromeSeenText:
-;	text "Swimming?"
-;	line "I'm lousy at it."
-;
-;	para "I'm just splashing"
-;	line "around in these"
-;	cont "shallow waters."
-;	done
+SwimmerMGeorgeBeatenText:
+	text "Belly flop!"
+	done
 
-;SwimmermJeromeBeatenText:
-;	text "I thought I could"
-;	line "win."
-;	done
+SwimmerMGeorgeAfterBattleText:
+	text "I can beat #MON"
+	line "at swimming!"
+	done
 
-;SwimmermJeromeAfterBattleText:
-;	text "I might be bad at"
-;	line "swimming, but I"
-;	cont "love the sea."
-;	done
+TrainerSwimmerMBerke:
+	trainer SWIMMERM, BERKE, EVENT_BEAT_SWIMMERM_BERKE, SwimmerMBerkeSeenText, SwimmerMBerkeBeatenText, 0, .Script
 
-;Route19Fisher1Text:
-;	text "Sorry. This road"
-;	line "is closed for"
-;	cont "construction."
-;
-;	para "If you want to get"
-;	line "to CINNABAR, you'd"
-;
-;	para "better go south"
-;	line "from PALLET TOWN."
-;	done
+.Script:
+	endifjustbattled
+	opentext
+	writetext SwimmerMBerkeAfterBattleText
+	waitbutton
+	closetext
+	end
 
-;Route19Fisher1Text_RocksCleared:
-;	text "I'm all sweaty."
-;	line "Time for a swim!"
-;	done
+SwimmerMBerkeSeenText:
+	text "What's beyond the"
+	line "horizon?"
+	done
 
-;Route19Fisher2Text:
-;	text "Who knows how long"
-;	line "it would take to"
-;	cont "move this boulder…"
-;	done
+SwimmerMBerkeBeatenText:
+	text "Glub!"
+	done
 
-;Route19Fisher2Text_RocksCleared:
-;	text "The roadwork is"
-;	line "finally finished."
-;
-;	para "Now I can go"
-;	line "fishing again."
-;	done
+SwimmerMBerkeAfterBattleText:
+	text "I see a couple of"
+	line "islands!"
+	done
 
-;Route19SignText:
-;	text "ROUTE 19"
-;
-;	para "FUCHSIA CITY -"
-;	line "SEAFOAM ISLANDS"
-;	done
+TrainerSwimmerMKirk:
+	trainer SWIMMERM, KIRK, EVENT_BEAT_SWIMMERM_KIRK, SwimmerMKirkSeenText, SwimmerMKirkBeatenText, 0, .Script
 
-;CarefulSwimmingSignText:
-;	text "Please be careful"
-;	line "if you are swim-"
-;	cont "ming to SEAFOAM"
-;	cont "ISLANDS."
-;
-;	para "FUCHSIA POLICE"
-;	done
+.Script:
+	endifjustbattled
+	opentext
+	writetext SwimmerMKirkAfterBattleText
+	waitbutton
+	closetext
+	end
+
+SwimmerMKirkSeenText:
+	text "I tried diving"
+	line "for #MON, but"
+	cont "it was a no go!"
+	done
+
+SwimmerMKirkBeatenText:
+	text "Help!"
+	done
+
+SwimmerMKirkAfterBattleText:
+	text "You have to fish"
+	line "for sea #MON!"
+	done
+
+TrainerSwimmerMMatthew:
+	trainer SWIMMERM, MATTHEW, EVENT_BEAT_SWIMMERM_MATTHEW, SwimmerMMatthewSeenText, SwimmerMMatthewBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext SwimmerMMatthewAfterBattleText
+	waitbutton
+	closetext
+	end
+
+SwimmerMMatthewSeenText:
+	text "These waters are"
+	line "treacherous!"
+	done
+
+SwimmerMMatthewBeatenText:
+	text "Ooh!"
+	line "Dangerous!"
+	done
+
+SwimmerMMatthewAfterBattleText:
+	text "I got a cramp!"
+	line "Glub, glub..."
+	done
+
+TrainerSwimmerFElaine:
+	trainer SWIMMERF, ELAINE, EVENT_BEAT_SWIMMERF_ELAINE, SwimmerFElaineSeenText, SwimmerFElaineBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext SwimmerFElaineAfterBattleText
+	waitbutton
+	closetext
+	end
+
+SwimmerFElaineSeenText:
+	text "Oh, I just love"
+	line "your ride! Can I"
+	cont "have it if I win?"
+	done
+
+SwimmerFElaineBeatenText:
+	text "Oh!"
+	line "I lost!"
+	done
+
+SwimmerFElaineAfterBattleText:
+	text "It's still a long"
+	line "way to go to"
+	cont "SEAFOAM ISLANDS."
+	done
+
+TrainerSwimmerFPaula:
+	trainer SWIMMERF, PAULA, EVENT_BEAT_SWIMMERF_PAULA, SwimmerFPaulaSeenText, SwimmerFPaulaBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext SwimmerFPaulaAfterBattleText
+	waitbutton
+	closetext
+	end
+
+SwimmerFPaulaSeenText:
+	text "Swimming's great!"
+	line "Sunburns aren't!"
+	done
+
+SwimmerFPaulaBeatenText:
+	text "Shocker!"
+	done
+
+SwimmerFPaulaAfterBattleText:
+	text "My boy friend"
+	line "wanted to swim to"
+	cont "SEAFOAM ISLANDS."
+	done
+
+TrainerSwimmerFKaylee:
+	trainer SWIMMERF, KAYLEE, EVENT_BEAT_SWIMMERF_KAYLEE, SwimmerFKayleeSeenText, SwimmerFKayleeBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext SwimmerFKayleeAfterBattleText
+	waitbutton
+	closetext
+	end
+
+SwimmerFKayleeSeenText:
+	text "I swam here, but"
+	line "I'm tired."
+	done
+
+SwimmerFKayleeBeatenText:
+	text "I'm exhausted..."
+	done
+
+SwimmerFKayleeAfterBattleText:
+	text "LAPRAS is so big,"
+	line "it must keep you"
+	cont "dry on water."
+	done
+
+Route19Sign:
+	jumptext Route19SignText
+Route19SignText:
+	text "SEA ROUTE 19"
+	line "FUCHSIA CITY -"
+	cont "SEAFOAM ISLANDS"
+	done
 
 Route19_MapEvents:
 	db 0, 0 ; filler
@@ -241,13 +281,16 @@ Route19_MapEvents:
 	def_coord_events
 
 	def_bg_events
-;	bg_event 11, 15, BGEVENT_READ, Route19Sign
-;	bg_event 11,  1, BGEVENT_READ, CarefulSwimmingSign
+	bg_event 11, 13, BGEVENT_READ, Route19Sign
 
 	def_object_events
-;	object_event 11, 40, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 0, TrainerSwimmerfDawn, -1
-;	object_event  6, 36, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSwimmermHarold, -1
-;	object_event 11, 21, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSwimmermJerome, -1
-;	object_event 10, 40, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerSwimmermTucker, -1
-;	object_event  9,  5, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 1, Route19Fisher1Script, -1
-;	object_event 11,  5, SPRITE_FISHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 1, Route19Fisher2Script, -1
+	object_event  8, 11, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerSwimmerMSimon, -1
+	object_event 13, 11, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerMRandall, -1
+	object_event  9, 17, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSwimmerMCharlie, -1
+	object_event 13, 25, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerSwimmerMGeorge, -1
+	object_event  4, 27, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerSwimmerMBerke, -1
+	object_event 15, 31, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSwimmerMKirk, -1
+	object_event  9, 39, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerSwimmerMMatthew, -1
+	object_event  8, 40, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 4, TrainerSwimmerFElaine, -1
+	object_event 11, 40, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerSwimmerFPaula, -1
+	object_event 10, 41, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSwimmerFKaylee, -1
