@@ -2,7 +2,6 @@
 	const SAFARIZONEENTRANCE_OFFICER
 	const SAFARIZONEENTRANCE_OFFICER2
 	const SAFARIZONEENTRANCE_OFFICER3
-;	const SAFARIZONEENTRANCE_GENTLEMAN
 
 SafariZoneEntrance_MapScripts:
 	def_scene_scripts
@@ -84,6 +83,23 @@ SafariZoneEntranceMainOfficerScript:
 	playsound SFX_ENTER_DOOR
 	special FadeOutPalettes
 	waitsfx
+;silvermirror random NPCs
+	setevent EVENT_SAFARI_ZONE_AREA_1_NPC1
+	setevent EVENT_SAFARI_ZONE_AREA_1_NPC2
+	setevent EVENT_SAFARI_ZONE_AREA_1_NPC3
+	setevent EVENT_SAFARI_ZONE_AREA_2_NPC1
+	setevent EVENT_SAFARI_ZONE_AREA_2_NPC2
+	setevent EVENT_SAFARI_ZONE_AREA_2_NPC3
+	setevent EVENT_SAFARI_ZONE_AREA_3_NPC1
+	setevent EVENT_SAFARI_ZONE_AREA_3_NPC2
+	setevent EVENT_SAFARI_ZONE_AREA_3_NPC3
+	setevent EVENT_SAFARI_ZONE_AREA_4_NPC1
+	setevent EVENT_SAFARI_ZONE_AREA_4_NPC2
+	scall SafariZoneArea1NPCs
+	scall SafariZoneArea2NPCs
+	scall SafariZoneArea3NPCs
+	scall SafariZoneArea4NPCs
+;silvermirror random NPCs
 	warpfacing UP, SAFARI_ZONE_AREA_1, 18, 25
 	setevent EVENT_SAFARI_ZONE_ENTRANCE_OFFICER_SAFARI_GAME_NOT_ACTIVE
 	clearevent EVENT_SAFARI_ZONE_ENTRANCE_OFFICER_SAFARI_GAME_ACTIVE
@@ -112,6 +128,66 @@ SafariZoneEntranceMainOfficerScript:
 	closetext
 	end
 
+SafariZoneArea1NPCs:
+	random 4
+	ifequal 1, .Area1NPC1
+	ifequal 2, .Area1NPC2
+	ifequal 3, .Area1NPC3
+	end
+.Area1NPC1
+	clearevent EVENT_SAFARI_ZONE_AREA_1_NPC1
+	end
+.Area1NPC2
+	clearevent EVENT_SAFARI_ZONE_AREA_1_NPC2
+	end
+.Area1NPC3
+	clearevent EVENT_SAFARI_ZONE_AREA_1_NPC3
+	end
+
+SafariZoneArea2NPCs:
+	random 4
+	ifequal 1, .Area2NPC1
+	ifequal 2, .Area2NPC2
+	ifequal 3, .Area2NPC3
+	end
+.Area2NPC1
+	clearevent EVENT_SAFARI_ZONE_AREA_2_NPC1
+	end
+.Area2NPC2
+	clearevent EVENT_SAFARI_ZONE_AREA_2_NPC2
+	end
+.Area2NPC3
+	clearevent EVENT_SAFARI_ZONE_AREA_2_NPC3
+	end
+
+SafariZoneArea3NPCs:
+	random 4
+	ifequal 1, .Area3NPC1
+	ifequal 2, .Area3NPC2
+	ifequal 3, .Area3NPC3
+	end
+.Area3NPC1
+	clearevent EVENT_SAFARI_ZONE_AREA_3_NPC1
+	end
+.Area3NPC2
+	clearevent EVENT_SAFARI_ZONE_AREA_3_NPC2
+	end
+.Area3NPC3
+	clearevent EVENT_SAFARI_ZONE_AREA_3_NPC3
+	end
+
+SafariZoneArea4NPCs:
+	random 3
+	ifequal 1, .Area4NPC1
+	ifequal 2, .Area4NPC2
+	end
+.Area4NPC1
+	clearevent EVENT_SAFARI_ZONE_AREA_4_NPC1
+	end
+.Area4NPC2
+	clearevent EVENT_SAFARI_ZONE_AREA_4_NPC2
+	end
+
 SafariZoneEntranceOfficerScript:
 	faceplayer
 	opentext
@@ -119,6 +195,11 @@ SafariZoneEntranceOfficerScript:
 	yesorno
 	iffalse SafariZoneEntranceOfficer_NotFirstTime
 	writetext SafariZoneEntranceOfficer_Text3
+	checkevent EVENT_GOT_HM03_SURF
+	iftrue .FoundSecretHouse
+	promptbutton
+	writetext SafariZoneEntranceOfficer_Text4
+.FoundSecretHouse
 	waitbutton
 	closetext
 	turnobject SAFARIZONEENTRANCE_OFFICER, RIGHT
@@ -195,8 +276,16 @@ SafariZoneEntranceOfficer_Text3:
 	para "Before you enter,"
 	line "make sure you have"
 	cont "room in your PC"
-	cont "storage for new"
-	cont "#MON!"
+	cont "for new #MON!"
+	done
+
+SafariZoneEntranceOfficer_Text4:
+	text "We're running a"
+	line "event right now!"
+
+	para "Find the SECRET"
+	line "HOUSE and you win"
+	cont "a free HM03!"
 	done
 
 SafariZoneEntranceMainOfficer_Text:
@@ -267,20 +356,16 @@ SafariZoneEntranceMainOfficer_NotEnoughMoneyText:
 
 SafariZoneBoxFullText:
 	text "Uh-oh…"
-	line "Both your party"
-
-	para "and your PC BOX"
-	line "are full."
+	line "Your PC BOX is"
+	line "full of #MON!"
 
 	para "You have no room"
 	line "for any #MON"
 	cont "you catch."
 
 	para "Please make room"
-	line "in your party or"
-
-	para "your PC BOX, then"
-	line "come see me."
+	line "in your PC BOX,"
+	line "then come see me."
 	done
 
 SafariZoneEntrance_MapEvents:
@@ -297,5 +382,5 @@ SafariZoneEntrance_MapEvents:
 
 	def_object_events
 	object_event  0,  5, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, PERSONTYPE_SCRIPT, 0, SafariZoneEntranceOfficerScript, -1
-	object_event  3,  2, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, PERSONTYPE_SCRIPT, 0, SafariZoneEntranceMainOfficerScript, EVENT_SAFARI_ZONE_ENTRANCE_OFFICER_SAFARI_GAME_NOT_ACTIVE
-	object_event  2,  1, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, PERSONTYPE_SCRIPT, 0, SafariZoneEntranceMainOfficerScript, EVENT_SAFARI_ZONE_ENTRANCE_OFFICER_SAFARI_GAME_ACTIVE
+	object_event  3,  2, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, PERSONTYPE_SCRIPT, 0, SafariZoneEntranceMainOfficerScript, EVENT_SAFARI_ZONE_ENTRANCE_OFFICER_SAFARI_GAME_NOT_ACTIVE
+	object_event  2,  1, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, PERSONTYPE_SCRIPT, 0, SafariZoneEntranceMainOfficerScript, EVENT_SAFARI_ZONE_ENTRANCE_OFFICER_SAFARI_GAME_ACTIVE

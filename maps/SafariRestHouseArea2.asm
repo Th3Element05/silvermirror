@@ -1,65 +1,33 @@
 	object_const_def
-	const SAFARIZONERESTHOUSEAREA2_SCIENTIST
-	const SAFARIZONERESTHOUSEAREA2_POKEFAN_M
-	const SAFARIZONERESTHOUSEAREA2_TWIN
 
 SafariRestHouseArea2_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
 
-SafariRestHouseArea2ScientistScript:
-	faceplayer
-	opentext
-	writetext SafariRestHouseArea2ScientistScript_Text
-	waitbutton
-	closetext
-	end
-
-SafariRestHouseArea2PokefanMScript:
-	faceplayer
-	opentext
-	writetext SafariRestHouseArea2PokefanMScript_Text
-	waitbutton
-	closetext
-	end
-
-SafariRestHouseArea2TwinScript:
-	faceplayer
-	opentext
-	writetext SafariRestHouseArea2TwinScript_Text
-	waitbutton
-	closetext
-	end
-
-SafariRestHouseArea2ScientistScript_Text:
-	text "I came here to"
-	line "study how the wild"
-	cont "#MON adapt to"
-	cont "their environment."
-	
-	para "Although I did pay"
-	line "the fee, I haven't"
-	cont "actually tried to"
-	cont "catch any yet…"
+SafariRestHouseArea2Scientist:
+	jumptextfaceplayer SafariRestHouseArea2ScientistText
+SafariRestHouseArea2ScientistText:
+	text "How many did you"
+	line "catch? I'm bushed"
+	cont "from the work!"
 	done
 
-SafariRestHouseArea2PokefanMScript_Text:
-	text "It sure got hotter"
-	line "all of a sudden."
-	
-	para "Maybe that's why"
-	line "the #MON are"
-	cont "different in this"
-	cont "area…"
+SafariRestHouseArea2PokefanM:
+	jumptextfaceplayer SafariRestHouseArea2PokefanMText
+SafariRestHouseArea2PokefanMText:
+	text "I caught a"
+	line "CHANSEY!"
+
+	para "That makes this"
+	line "all worthwhile!"
 	done
 
-SafariRestHouseArea2TwinScript_Text:
-	text "I wonder what the"
-	line "BAIT tastes like?"
-	
-	para "My daddy won't let"
-	line "me taste it."
+SafariRestHouseArea2Twin:
+	jumptextfaceplayer SafariRestHouseArea2TwinText
+SafariRestHouseArea2TwinText:
+	text "Whew! I'm tired"
+	line "from all the fun!"
 	done
 
 SafariRestHouseArea2_MapEvents:
@@ -74,6 +42,6 @@ SafariRestHouseArea2_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  1,  3, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_UP_DOWN, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SafariRestHouseArea2ScientistScript, 0
-	object_event  5,  5, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SafariRestHouseArea2PokefanMScript, 0
-	object_event  6,  5, SPRITE_TWIN, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, SafariRestHouseArea2TwinScript, 0
+	object_event  2,  3, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_UP_DOWN, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SafariRestHouseArea2Scientist, 0
+	object_event  5,  2, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SafariRestHouseArea2PokefanM, 0
+	object_event  6,  2, SPRITE_TWIN, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, SafariRestHouseArea2Twin, 0
