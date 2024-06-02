@@ -410,41 +410,42 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 ;	def_grass_wildmons ROUTE_10_SOUTH ;silvermirror (THIS WILL BECOME POWER PLANT)
-;	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	def_grass_wildmons POWER_PLANT ;silvermirror
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 ;	; morn
-;	db 25, VOLTORB    ; 20% chance 30
-;	db 24, MAGNEMITE  ; 20% chance 35
-;	db 23, MAGNEMITE  ; 15% chance
-;	db 24, VOLTORB    ; 10% chance
-;	db 20, PIKACHU    ; 10% chance 15
-;	db 32, MAGNETON   ; 10% chance 10
-;	db 21, PIKACHU    ;  5% chance
-;	db 24, GRIMER     ;  5% chance 5
-;	db 33, ELECTABUZZ ;  4% chance 5
-;	db 33, ELECTABUZZ ;  1% chance
-;	; day
-;	db 25, VOLTORB    ; 20% chance 30
-;	db 24, MAGNEMITE  ; 20% chance 35
-;	db 23, MAGNEMITE  ; 15% chance
-;	db 24, VOLTORB    ; 10% chance
-;	db 20, PIKACHU    ; 10% chance 15
-;	db 32, MAGNETON   ; 10% chance 10
-;	db 21, PIKACHU    ;  5% chance
-;	db 24, GRIMER     ;  5% chance 5
-;	db 33, ELECTABUZZ ;  4% chance 5
-;	db 33, ELECTABUZZ ;  1% chance
-;	; nite
-;	db 25, VOLTORB    ; 20% chance 30
-;	db 24, MAGNEMITE  ; 20% chance 35
-;	db 23, MAGNEMITE  ; 15% chance
-;	db 24, VOLTORB    ; 10% chance
-;	db 20, PIKACHU    ; 10% chance 15
-;	db 32, MAGNETON   ; 10% chance 10
-;	db 21, PIKACHU    ;  5% chance
-;	db 24, GRIMER     ;  5% chance 5
-;	db 33, ELECTABUZZ ;  4% chance 5
-;	db 33, ELECTABUZZ ;  1% chance
-;	end_grass_wildmons
+	db 25, VOLTORB    ; 20% chance 30
+	db 24, MAGNEMITE  ; 20% chance 35
+	db 23, MAGNEMITE  ; 15% chance
+	db 24, VOLTORB    ; 10% chance
+	db 20, PIKACHU    ; 10% chance 15
+	db 32, MAGNETON   ; 10% chance 10
+	db 21, PIKACHU    ;  5% chance
+	db 24, GRIMER     ;  5% chance 5
+	db 33, ELECTABUZZ ;  4% chance 5
+	db 33, ELECTABUZZ ;  1% chance
+	; day
+	db 25, VOLTORB    ; 20% chance 30
+	db 24, MAGNEMITE  ; 20% chance 35
+	db 23, MAGNEMITE  ; 15% chance
+	db 24, VOLTORB    ; 10% chance
+	db 20, PIKACHU    ; 10% chance 15
+	db 32, MAGNETON   ; 10% chance 10
+	db 21, PIKACHU    ;  5% chance
+	db 24, GRIMER     ;  5% chance 5
+	db 33, ELECTABUZZ ;  4% chance 5
+	db 33, ELECTABUZZ ;  1% chance
+	; nite
+	db 25, VOLTORB    ; 20% chance 30
+	db 24, MAGNEMITE  ; 20% chance 35
+	db 23, MAGNEMITE  ; 15% chance
+	db 24, VOLTORB    ; 10% chance
+	db 20, PIKACHU    ; 10% chance 15
+	db 32, MAGNETON   ; 10% chance 10
+	db 21, PIKACHU    ;  5% chance
+	db 24, GRIMER     ;  5% chance 5
+	db 33, ELECTABUZZ ;  4% chance 5
+	db 33, ELECTABUZZ ;  1% chance
+	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_11 ;silvermirror
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
