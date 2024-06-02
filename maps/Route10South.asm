@@ -1,48 +1,9 @@
 	object_const_def
-;	const ROUTE_10_ZAPDOS
 
 Route10South_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
-;	callback MAPCALLBACK_OBJECTS, Route10SouthZapdos
-
-;Route10SouthZapdos:
-;	checkevent EVENT_FOUGHT_ZAPDOS
-;	iftrue .NoAppear
-;	readvar VAR_BADGES
-;	ifequal NUM_BADGES, .Appear
-;	jump .NoAppear
-;
-;.Appear:
-;	appear ROUTE_10_ZAPDOS
-;	endcallback
-;
-;.NoAppear:
-;	disappear ROUTE_10_ZAPDOS
-;	endcallback
-;
-;Route10Zapdos:
-;	opentext
-;	writetext ZapdosText
-;	cry ZAPDOS
-;	pause 15
-;	closetext
-;	loadvar VAR_BATTLETYPE, BATTLETYPE_KANTO_LEGEND
-;	loadwildmon ZAPDOS, 50
-;	startbattle
-;	disappear ROUTE_10_ZAPDOS
-;	setevent EVENT_FOUGHT_ZAPDOS
-;	reloadmapafterbattle
-;	special CheckBattleCaughtResult
-;	iffalse .nocatch
-;	setflag ENGINE_PLAYER_CAUGHT_ZAPDOS
-;.nocatch
-;	end
-;
-;ZapdosText:
-;	text "Gyaoo!"
-;	done
 
 TrainerPokemaniacBrent:
 	trainer POKEMANIAC, BRENT1, EVENT_BEAT_POKEMANIAC_BRENT, PokemaniacBrentSeenText, PokemaniacBrentBeatenText, 0, .Script
@@ -193,6 +154,9 @@ PowerPlantSignText:
 	text "KANTO POWER PLANT"
 	done
 
+Route10SouthRock:
+	jumpstd SmashRockScript
+
 ; hidden items
 Route10HiddenMaxEther:
 	hiddenitem MAX_ETHER, EVENT_ROUTE_10_HIDDEN_MAX_ETHER
@@ -212,9 +176,11 @@ Route10South_MapEvents:
 	bg_event 16, 23, BGEVENT_ITEM, Route10HiddenMaxEther
 
 	def_object_events
-;	object_event  3, 10, SPRITE_ZAPDOS, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0,  Route10Zapdos, EVENT_ZAPDOS_APPEAR
 	object_event 10, 14, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerPokemaniacBrent, -1
 	object_event  7, 24, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerPicnickerErin, -1
 	object_event  3, 27, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerHikerJim, -1
 	object_event  3, 31, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerHikerTimothy, -1
 	object_event 12, 34, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerPokemaniacLarry, -1
+	object_event 14,  6, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route10SouthRock, -1
+	object_event 15,  7, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route10SouthRock, -1
+	object_event 14,  9, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route10SouthRock, -1

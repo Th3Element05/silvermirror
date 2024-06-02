@@ -29,7 +29,6 @@ Route24NuggetRocketScript:
 	setlasttalked ROUTE24_ROCKET
 	loadtrainer GRUNTM, GRUNTM_5
 	startbattle
-	dontrestartmapmusic
 	reloadmap
 	opentext
 	writetext Route24NuggetRocketAfterBattleText
@@ -252,4 +251,4 @@ Route24_MapEvents:
 	object_event 11, 31, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerBugCatcherWayne, -1
 	object_event  5, 20, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 4, TrainerCamperTanner, -1
 	object_event 10,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, Route24TMThunderWave, EVENT_ROUTE_24_TM_THUNDER_WAVE
-	object_event 24,  4, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerHikerRussell, -1
+;	object_event 24,  4, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerHikerRussell, -1
