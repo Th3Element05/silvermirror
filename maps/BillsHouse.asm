@@ -77,7 +77,7 @@ BillsHouseBillsComputerScript:
 	special LoadUsedSpritesGFX
 	playsound SFX_ENTER_DOOR
 	applymovement BILLSHOUSE_BILL, BillsHouseBillExitsTeleporterMovement
-	playmapmusic
+	special RestartMapMusic
 	applymovement PLAYER, BillsHousePlayerGoesToBillMovement
 	opentext
 	writetext BillsHouseBillThanksText
