@@ -449,6 +449,7 @@ ENDM
 	map_const SILPH_CO_9F,                                 13,  9 ; 28
 	map_const SILPH_CO_10F,                                 8,  9 ; 29
 	map_const SILPH_CO_11F,                                 9,  9 ; 30
+	map_const SILPH_CO_ELEVATOR,                            2,  2 ; 30
 	map_const SEAFOAM_ISLANDS,                             15, 10 ; 31
 	map_const SEAFOAM_ISLANDS_B1F,                         15, 10 ; 32
 	map_const SEAFOAM_ISLANDS_B2F,                         15, 10 ; 33

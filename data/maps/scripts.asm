@@ -251,6 +251,7 @@ INCLUDE "maps/SilphCo8F.asm"
 INCLUDE "maps/SilphCo9F.asm"
 INCLUDE "maps/SilphCo10F.asm"
 INCLUDE "maps/SilphCo11F.asm"
+INCLUDE "maps/SilphCoElevator.asm"
 
 
 SECTION "Map Scripts 22", ROMX

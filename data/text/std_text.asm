@@ -418,3 +418,15 @@ PokecenterReceptionistText: ;silvermirror+
 	cont "#MON or ITEM"
 	cont "Storage Systems!"
 	done
+
+SilphCo_NoCardKeyText:
+	text "Darn! It needs"
+	line "a CARD KEY!"
+	done
+
+SilphCo_BingoText:
+	text "Bingo!"
+
+	para "The CARD KEY"
+	line "opened the door!"
+	done
