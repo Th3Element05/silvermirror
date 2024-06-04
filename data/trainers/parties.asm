@@ -1,14 +1,30 @@
-INCLUDE "data/trainers/party_pointers.asm"
+;INCLUDE "data/trainers/party_pointers.asm"
 
-Trainers:
+;Trainers:
+;; Trainer data structure:
+;; - db "NAME@", TRAINERTYPE_* constant
+;; - 1 to 6 Pokémon:
+;;    * for TRAINERTYPE_NORMAL:     db level, species
+;;    * for TRAINERTYPE_MOVES:      db level, species, 4 moves
+;;    * for TRAINERTYPE_ITEM:       db level, species, item
+;;    * for TRAINERTYPE_ITEM_MOVES: db level, species, item, 4 moves
+;; - db -1 ; end
+
+; ABOVE, REMOVED
+
 ; Trainer data structure:
-; - db "NAME@", TRAINERTYPE_* constant
+; - db "NAME@", TRAINERTYPE_* constants |ed together
 ; - 1 to 6 Pokémon:
-;    * for TRAINERTYPE_NORMAL:     db level, species
-;    * for TRAINERTYPE_MOVES:      db level, species, 4 moves
-;    * for TRAINERTYPE_ITEM:       db level, species, item
-;    * for TRAINERTYPE_ITEM_MOVES: db level, species, item, 4 moves
+;    * in all cases:              db level, species
+;    * with TRAINERTYPE_NICKNAME: db "NICKNAME@"
+;    * with TRAINERTYPE_DVS:      db atk|def dv, spd|spc dv
+;    * with TRAINERTYPE_STAT_EXP: dw hp, atk, def, spd, spc
+;    * with TRAINERTYPE_ITEM:     db item
+;    * with TRAINERTYPE_MOVES:    db move 1, move 2, move 3, move 4
+;    (TRAINERTYPE_ITEM_MOVES is just TRAINERTYPE_ITEM | TRAINERTYPE_MOVES)
 ; - db -1 ; end
+
+SECTION "Enemy Trainer Parties 1", ROMX ; readded from challenge
 
 FalknerGroup:
 	; FALKNER, FALKNER1
@@ -1470,11 +1486,26 @@ BugCatcherGroup:
 	db  9, WEEDLE
 	db -1 ; end
 
+;	; BUG_CATCHER, ED (VIRIDIAN FOREST)2
+;	db "ED@", TRAINERTYPE_NORMAL
+;	db  7, WEEDLE
+;	db  7, KAKUNA
+;	db  7, WEEDLE
+;	db -1 ; end
+;
 	; BUG_CATCHER, ED (VIRIDIAN FOREST)2
-	db "ED@", TRAINERTYPE_NORMAL
+	db "ED@", TRAINERTYPE_VARIABLE
+	; Classic Mode
+	db TRAINERTYPE_NORMAL
 	db  7, WEEDLE
 	db  7, KAKUNA
 	db  7, WEEDLE
+	db $fe ; delimiter
+	; Gen2 Mode
+	db TRAINERTYPE_NORMAL
+	db  7, WEEDLE
+	db  7, KAKUNA
+	db  7, SPINARAK
 	db -1 ; end
 
 	; BUG_CATCHER, ROB1 (VIRIDIAN FOREST)1
