@@ -58,6 +58,7 @@ StdScripts::
 	add_stdscript GameCornerCoinVendorScript
 	add_stdscript HappinessCheckScript
 	add_stdscript PokecenterReceptionistScript ;silvermirror+
+	add_stdscript SilphCoNoCardKeyScript ;silvermirror+
 
 PokecenterNurseScript:
 ; EVENT_WELCOMED_TO_POKECOM_CENTER is never set
@@ -2461,11 +2462,15 @@ HappinessCheckScript:
 	end
 
 PokecenterReceptionistScript: ;silvermirror+
-	opentext
-	farwritetext PokecenterReceptionistText
-	waitbutton
-	closetext
-	end
+	farjumptext PokecenterReceptionistText
+
+SilphCoNoCardKeyScript:
+	farjumptext SilphCo_NoCardKeyText
+
+SilphCoOpenDoorScript::
+	pause 10
+	playsound SFX_TALLY
+	farjumptext SilphCo_BingoText
 
 Movement_ContestResults_WalkAfterWarp:
 	step RIGHT

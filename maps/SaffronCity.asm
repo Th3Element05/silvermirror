@@ -242,7 +242,7 @@ SaffronCity_MapEvents:
 	warp_event 27, 13, SAFFRON_MART, 1          ; 3
 	warp_event  9, 29, SAFFRON_POKECENTER_1F, 1 ; 4
 	warp_event 29, 29, MR_PSYCHICS_HOUSE, 1     ; 5
-	warp_event 18, 21, SILPH_CO_1F, 1           ; 6
+	warp_event 18, 21, SILPH_CO_1F, 3           ; 6
 	warp_event  7,  5, COPYCATS_HOUSE_1F, 1     ; 7
 	warp_event 18,  1, ROUTE_5_SAFFRON_GATE, 3  ; 8
 	warp_event  0, 22, ROUTE_7_SAFFRON_GATE, 3  ; 9
