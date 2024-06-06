@@ -121,6 +121,7 @@ SilphCo7FRivalScript:
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	scall SilphCo7FRivalGoesAroundScript
 	playsound SFX_WARP_FROM
+	applymovement SILPHCO7F_RIVAL, SilphCo7FRivalTeleportMovement
 	disappear SILPHCO7F_RIVAL
 	waitsfx
 	setscene SCENE_SILPHCO7F_NOOP
@@ -208,6 +209,10 @@ SilphCo7FLaprasGiftScript:
 	opentext
 	writetext SilphCo7FGiveLaprasText
 	promptbutton
+	writetext SilphCo7FReceivedLaprasText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	promptbutton
 	givepoke LAPRAS, 15
 	setevent EVENT_GOT_LAPRAS_FROM_SILPH_CO
 	writetext SilphCo7FExplainLaprasText
@@ -231,6 +236,11 @@ SilphCo7FGiveLaprasText:
 	para "I want you to"
 	line "have this #MON"
 	cont "for saving us."
+	done
+
+SilphCo7FReceivedLaprasText:
+	text "<PLAYER> received"
+	line "LAPRAS!"
 	done
 
 SilphCo7FExplainLaprasText:
@@ -438,12 +448,14 @@ SilphCo7FRivalLeavesMovementLong:
 	slow_step RIGHT
 	slow_step RIGHT
 	slow_step DOWN
-	teleport_from
 	step_end
 
 SilphCo7FRivalLeavesMovementShort:
 	slow_step RIGHT
 	slow_step RIGHT
+	step_end
+
+SilphCo7FRivalTeleportMovement:
 	teleport_from
 	step_end
 
