@@ -102,7 +102,7 @@ Music:
 	dba Music_JigglypuffSong           ; Music_MobileAdapter
 	dba Music_BuenasPassword
 	dba Music_LookMysticalMan
-	dba Music_CrystalOpening
+	dba Music_PowerPlant               ; Music_CrystalOpening
 	dba Music_BattleTowerTheme
 	dba Music_SuicuneBattle
 	dba Music_BattleTowerLobby

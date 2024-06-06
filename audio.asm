@@ -132,7 +132,7 @@ SECTION "Songs 5", ROMX
 INCLUDE "audio/music/ssanne.asm" ; "audio/music/mobileadaptermenu.asm"
 INCLUDE "audio/music/buenaspassword.asm"
 INCLUDE "audio/music/lookmysticalman.asm"
-INCLUDE "audio/music/crystalopening.asm"
+INCLUDE "audio/music/powerplant.asm" ; "audio/music/crystalopening.asm"
 INCLUDE "audio/music/battletowertheme.asm"
 INCLUDE "audio/music/suicunebattle.asm"
 INCLUDE "audio/music/battletowerlobby.asm"
