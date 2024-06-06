@@ -27,6 +27,100 @@ SilphCo8F_Door1:
 	setevent EVENT_SILPH_CO_8F_DOOR_1
 	end
 
+SilphCo8FClerk:
+	checkevent EVENT_BEAT_GIOVANNI_SILPHCO
+	iftrue .Cleared
+	jumptextfaceplayer SilphCo8FClerkText
+.Cleared
+	jumptextfaceplayer SilphCo8FClerkSavedText
+
+SilphCo8FClerkText:
+	text "I wonder if SILPH"
+	line "is finished..."
+	done
+
+SilphCo8FClerkSavedText:
+	text "Thanks for saving"
+	line "us!"
+	done
+
+TrainerScientistLinden:
+	trainer SCIENTIST, LINDEN, EVENT_BEAT_SCIENTIST_LINDEN, ScientistLindenSeenText, ScientistLindenBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext ScientistLindenAfterBattleText
+	waitbutton
+	closetext
+	end
+
+ScientistLindenSeenText:
+	text "You're causing us"
+	line "problems!"
+	done
+
+ScientistLindenBeatenText:
+	text "Huh?"
+	line "I lost?"
+	done
+
+ScientistLindenAfterBattleText:
+	text "So, what do you"
+	line "think of SILPH's"
+	cont "teleporters?"
+	done
+
+TrainerRocketGruntF8:
+	trainer GRUNTF, GRUNTF_8, EVENT_BEAT_GRUNTF_8, GruntF8SeenText, GruntF8BeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext GruntF8AfterBattleText
+	waitbutton
+	closetext
+	end
+
+GruntF8SeenText:
+	text "That's as far as"
+	line "you'll go!"
+	done
+
+GruntF8BeatenText:
+	text "Not enough"
+	line "grit!"
+	done
+
+GruntF8AfterBattleText:
+	text "If you don't turn"
+	line "back, I'll call"
+	cont "for backup!"
+	done
+
+TrainerRocketGruntM25:
+	trainer GRUNTM, GRUNTM_25, EVENT_BEAT_GRUNTM_25, GruntM25SeenText, GruntM25BeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext GruntM25AfterBattleText
+	waitbutton
+	closetext
+	end
+
+GruntM25SeenText:
+	text "I am one of the 4"
+	line "ROCKET BROTHERS!"
+	done
+
+GruntM25BeatenText:
+	text "Whoo!"
+	line "Oh brothers!"
+	done
+
+GruntM25AfterBattleText:
+	text "I'll leave you up"
+	line "to my brothers!"
+	done
+
 SilphCo8F_MapEvents:
 	db 0, 0 ; filler
 
@@ -46,5 +140,7 @@ SilphCo8F_MapEvents:
 	bg_event  7,  9, BGEVENT_IFNOTSET, SilphCo8F_Door1
 
 	def_object_events
-;	object_event  4,  2, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SilphCoReceptionistScript, -1
-;	object_event 13,  1, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SilphCoOfficerScript, -1
+	object_event 10,  2, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 4, TrainerScientistLinden, EVENT_BEAT_GIOVANNI_SILPHCO
+	object_event 19,  2, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 4, TrainerRocketGruntF8, EVENT_BEAT_GIOVANNI_SILPHCO
+	object_event 13, 15, SPRITE_ROCKET, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 4, TrainerRocketGruntM25, EVENT_BEAT_GIOVANNI_SILPHCO
+	object_event  3,  2, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SilphCo8FClerk, -1

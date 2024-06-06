@@ -45,6 +45,83 @@ SilphCo3F_Door2:
 	setevent EVENT_SILPH_CO_3F_DOOR_2
 	end
 
+SilphCo3FClerk:
+	checkevent EVENT_BEAT_GIOVANNI_SILPHCO
+	iftrue .Cleared
+	jumptextfaceplayer SilphCo3FClerkText
+.Cleared
+	jumptextfaceplayer SilphCo3FClerkSavedText
+
+SilphCo3FClerkText:
+	text "I work for SILPH."
+	line "What should I do?"
+	done
+
+SilphCo3FClerkSavedText:
+	text "<PLAYER>! You"
+	line "and your #MON"
+	cont "saved us!"
+	done
+
+TrainerRocketGruntM18:
+	trainer GRUNTM, GRUNTM_18, EVENT_BEAT_GRUNTM_18, GruntM18SeenText, GruntM18BeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext GruntM18AfterBattleText
+	waitbutton
+	closetext
+	end
+
+GruntM18SeenText:
+	text "Quit messing with"
+	line "us, kid!"
+	done
+
+GruntM18BeatenText:
+	text "I give up!"
+	done
+
+GruntM18AfterBattleText:
+	text "You can only open"
+	line "the doors with a"
+	cont "CARD KEY!"
+	done
+
+TrainerScientistJed:
+	trainer SCIENTIST, JED, EVENT_BEAT_SCIENTIST_JED, ScientistJedSeenText, ScientistJedBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext ScientistJedAfterBattleText
+	waitbutton
+	closetext
+	end
+
+ScientistJedSeenText:
+	text "I support TEAM"
+	line "ROCKET more than"
+	cont "I support SILPH!"
+	done
+
+ScientistJedBeatenText:
+	text "You really"
+	line "got me!"
+	done
+
+ScientistJedAfterBattleText:
+	text "Humph..."
+
+	para "TEAM ROCKET said"
+	line "that if I helped"
+	cont "them, they'd let"
+	cont "me study #MON!"
+	done
+
+;  itemballs
+SilphCo3FHyperPotion:
+	itemball HYPER_POTION
+
 SilphCo3F_MapEvents:
 	db 0, 0 ; filler
 
@@ -69,5 +146,7 @@ SilphCo3F_MapEvents:
 	bg_event 17,  9, BGEVENT_IFNOTSET, SilphCo3F_Door2
 
 	def_object_events
-;	object_event  4,  2, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SilphCoReceptionistScript, -1
-;	object_event 13,  1, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SilphCoOfficerScript, -1
+	object_event 20,  7, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerRocketGruntM18, EVENT_BEAT_GIOVANNI_SILPHCO
+	object_event  6,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerScientistJed, EVENT_BEAT_GIOVANNI_SILPHCO
+	object_event 24,  8, SPRITE_CLERK, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SilphCo3FClerk, -1
+	object_event  8,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SilphCo3FHyperPotion, EVENT_SILPH_CO_3F_HYPER_POTION

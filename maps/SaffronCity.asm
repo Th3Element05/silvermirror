@@ -16,6 +16,7 @@ SaffronCityMoveRocketCallback:
 	checkevent EVENT_POKEMON_TOWER_7F_MR_FUJI
 	iftrue .SavedFuji
 	moveobject SAFFRONCITY_SILPHROCKET, 18, 22
+	turnobject SAFFRONCITY_SILPHROCKET, UP
 .SavedFuji
 	endcallback
 
@@ -24,7 +25,7 @@ SaffronCityRocketGuard:
 	iftrue .RocketAsleep
 	jumptextfaceplayer SaffronRocketGuardText
 .RocketAsleep
-	showemote EMOTE_SLEEP, VIRIDIANCITY_FISHER, 40
+	showemote EMOTE_SLEEP, SAFFRONCITY_SILPHROCKET, 40
 	jumptext SaffronRocketGuardSnoozeText
 
 SaffronRocketGuardText:

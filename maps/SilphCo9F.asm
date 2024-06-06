@@ -81,6 +81,119 @@ SilphCo9F_Door4:
 	setevent EVENT_SILPH_CO_9F_DOOR_4
 	end
 
+SilphCo9FNurseScript:
+	checkevent EVENT_BEAT_GIOVANNI_SILPHCO
+	iftrue .Cleared
+	opentext
+	writetext SilphCo9FNurseText1
+	waitbutton
+	closetext
+;	special StubbedTrainerRankings_Healings
+;	special FadeOutPalettes
+	special FadeBlackQuickly
+	special ReloadSpritesNoPalettes
+	special HealParty
+	playmusic MUSIC_HEAL
+	pause 70
+;	special FadeInPalettes
+	special FadeInQuickly
+	special RestartMapMusic
+	jumptext SilphCo9FNurseText2
+.Cleared
+	jumptext SilphCo9FNurseSavedText
+
+SilphCo9FNurseText1:
+	text "You look tired!"
+	line "You should take a"
+	cont "quick nap!"
+	done
+
+SilphCo9FNurseText2:
+	text "Don't give up!"
+	done
+
+SilphCo9FNurseSavedText:
+	text "Thank you so"
+	line "much!"
+	done
+
+TrainerRocketGruntM26:
+	trainer GRUNTM, GRUNTM_26, EVENT_BEAT_GRUNTM_26, GruntM26SeenText, GruntM26BeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext GruntM26AfterBattleText
+	waitbutton
+	closetext
+	end
+
+GruntM26SeenText:
+	text "I am one of the 4"
+	line "ROCKET BROTHERS!"
+	done
+
+GruntM26BeatenText:
+	text "Warg!"
+	line "Brothers, I lost!"
+	done
+
+GruntM26AfterBattleText:
+	text "My brothers will"
+	line "avenge me!"
+	done
+
+TrainerScientistIsaiah:
+	trainer SCIENTIST, ISAIAH, EVENT_BEAT_SCIENTIST_ISAIAH, ScientistIsaiahSeenText, ScientistIsaiahBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext ScientistIsaiahAfterBattleText
+	waitbutton
+	closetext
+	end
+
+ScientistIsaiahSeenText:
+	text "Your #MON have"
+	line "weak points! I"
+	cont "can nail them!"
+	done
+
+ScientistIsaiahBeatenText:
+	text "You hammered me!"
+	done
+
+ScientistIsaiahAfterBattleText:
+	text "Exploiting weak"
+	line "spots does work!"
+	cont "Think about"
+	cont "element types!"
+	done
+
+TrainerRocketGruntF9:
+	trainer GRUNTF, GRUNTF_9, EVENT_BEAT_GRUNTF_9, GruntF9SeenText, GruntF9BeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext GruntF9AfterBattleText
+	waitbutton
+	closetext
+	end
+
+GruntF9SeenText:
+	text "Your #MON seem"
+	line "to adore you, kid!"
+	done
+
+GruntF9BeatenText:
+	text "Ghaaah!"
+	done
+
+GruntF9AfterBattleText:
+	text "If I had started"
+	line "as a trainer at"
+	cont "your age..."
+	done
+
 ; hidden items
 SilphCo9FHiddenMaxPotion:
 	hiddenitem MAX_POTION, EVENT_SILPH_CO_9F_HIDDEN_MAX_POTION
@@ -109,5 +222,7 @@ SilphCo9F_MapEvents:
 	bg_event  2, 15, BGEVENT_ITEM, SilphCo9FHiddenMaxPotion
 
 	def_object_events
-;	object_event  4,  2, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SilphCoReceptionistScript, -1
-;	object_event 13,  1, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SilphCoOfficerScript, -1
+	object_event  2,  4, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 4, TrainerRocketGruntM26, EVENT_BEAT_GIOVANNI_SILPHCO
+	object_event 21, 14, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerScientistIsaiah, EVENT_BEAT_GIOVANNI_SILPHCO
+	object_event 13, 16, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 4, TrainerRocketGruntF9, EVENT_BEAT_GIOVANNI_SILPHCO
+	object_event  3, 14, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilphCo9FNurseScript, -1
