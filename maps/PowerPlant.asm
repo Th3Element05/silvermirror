@@ -25,7 +25,6 @@ PowerPlantZapdos:
 	loadwildmon ZAPDOS, 50
 	startbattle
 	disappear POWERPLANT_ZAPDOS
-	setevent EVENT_FOUGHT_ZAPDOS
 	reloadmapafterbattle
 	special CheckBattleCaughtResult
 	iffalse .NoCatch
@@ -35,8 +34,16 @@ PowerPlantZapdos:
 	iftrue .GotThunderbolt
 	appear POWERPLANT_THUNDERBOLT
 	setevent EVENT_GOT_TM24_THUNDERBOLT
+	reloadmappart
 .GotThunderbolt
+	checkevent EVENT_FOUGHT_ZAPDOS
+	iftrue .End
+	pause 15
 	changeblock 4, 12, $3c ; door open
+	reloadmappart
+	playsound SFX_ENTER_DOOR
+.End
+	setevent EVENT_FOUGHT_ZAPDOS
 	end
 
 ZapdosText:
