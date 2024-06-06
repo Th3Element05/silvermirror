@@ -28,6 +28,7 @@ MapScenes::
 	scene_var POKEMON_TOWER_6F,                            wPokemonTower6FSceneID ;silvermirror
 	scene_var FIGHTING_DOJO,                               wFightingDojoSceneID ;silvermirror
 	scene_var MR_FUJIS_HOUSE,                              wMrFujisHouseSceneID ;silvermirror
+	scene_var SILPH_CO_7F,                                 wSilphCo7FSceneID ;silvermirror
 	scene_var SILPH_CO_11F,                                wSilphCo11FSceneID ;silvermirror
 	scene_var TRAINER_HOUSE_B1F,                           wTrainerHouseB1FSceneID
 	scene_var VICTORY_ROAD_GATE,                           wVictoryRoadGateSceneID
