@@ -378,7 +378,6 @@ PlayersBedHealing:
 	special RestartMapMusic
 	opentext
 	writetext PlayersBedHealingText3
-	waitbutton
 	; fallthrough
 .NoHeal
 	waitbutton
