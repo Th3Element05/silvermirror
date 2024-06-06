@@ -115,9 +115,9 @@ PlayBattleMusic:
 	jr nz, .othertrainer
 
 	ld a, [wOtherTrainerID]
-	cp RIVAL2_2_BULBASAUR ; Rival in Indigo Plateau
+	cp RIVAL2_4_BULBASAUR ; Second Rival on Route 22
 	jr c, .done
-	ld de, MUSIC_CHAMPION_BATTLE
+	ld de, MUSIC_RIVAL_BATTLE ;MUSIC_CHAMPION_BATTLE
 	jr .done
 
 .othertrainer
