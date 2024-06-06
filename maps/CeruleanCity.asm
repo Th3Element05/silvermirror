@@ -82,8 +82,8 @@ CeruleanCityRivalEncounterL:
 	loadtrainer RIVAL1, RIVAL1_3_CHARMANDER
 	startbattle
 	reloadmapafterbattle
-	sjump .FinishRival
-
+;	sjump .FinishRival
+	; fallthrough
 .FinishRival
 	opentext
 	writetext CeruleanCityRivalAfterBattleText
