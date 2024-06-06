@@ -267,9 +267,9 @@ SilphCo11FComputerText:
 	done
 
 SilphCo11FGiovanniApproachMovement:
-	slow_step DOWN
-	slow_step DOWN
-	slow_step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
 	step_end
 
 SilphCo11F_MapEvents:
