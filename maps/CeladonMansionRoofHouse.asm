@@ -25,7 +25,6 @@ CeladonMansionEeveePokeballScript:
 	yesorno
 	iffalse .DontTakeEevee
 	disappear CELADONMANSIONROOF_EEVEE_POKE_BALL
-	getmonname STRING_BUFFER_3, EEVEE
 	writetext CeladonMansionRoofReceivedEeveeText
 	playsound SFX_CAUGHT_MON
 	waitsfx
@@ -58,9 +57,7 @@ CeladonMansionRoofTakeEeveeText:
 
 CeladonMansionRoofReceivedEeveeText:
 	text "<PLAYER> received"
-	line "@"
-	text_ram wStringBuffer3
-	text "!"
+	line "EEVEE!"
 	done
 
 CeladonMansionRoofDontTakeEeveeText:
