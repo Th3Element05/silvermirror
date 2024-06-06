@@ -2182,8 +2182,8 @@ GetMapMusic::
 	ld a, c
 	cp MUSIC_MAHOGANY_MART
 	jr z, .mahoganymart
-	cp MUSIC_RADIO_TOWER
-	jr z, .radiotower
+	cp MUSIC_SILPH_CO ;MUSIC_RADIO_TOWER
+	jr z, .silphco ;.radiotower
 	farcall Function8b342
 	ld e, c
 	ld d, 0
@@ -2192,15 +2192,24 @@ GetMapMusic::
 	pop hl
 	ret
 
-.radiotower
+;.radiotower
+;	ld a, [wStatusFlags2]
+;	bit STATUSFLAGS2_ROCKETS_IN_RADIO_TOWER_F, a
+;	jr z, .clearedradiotower
+;	ld de, MUSIC_ROCKET_OVERTURE
+;	jr .done
+.silphco
 	ld a, [wStatusFlags2]
-	bit STATUSFLAGS2_ROCKETS_IN_RADIO_TOWER_F, a
-	jr z, .clearedradiotower
-	ld de, MUSIC_ROCKET_OVERTURE
+	bit STATUSFLAGS2_ROCKETS_SILPH_CO_F, a
+	jr z, .rocketsinsilphco
+	ld de, MUSIC_CITIES_1
 	jr .done
 
-.clearedradiotower
-	ld de, MUSIC_GOLDENROD_CITY
+;.clearedradiotower
+;	ld de, MUSIC_GOLDENROD_CITY
+;	jr .done
+.rocketsinsilphco
+	ld de, MUSIC_SILPH_CO
 	jr .done
 
 .mahoganymart
