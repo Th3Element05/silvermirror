@@ -10,8 +10,8 @@ SpecialPhoneCallList:
 	table_width SPECIALCALL_SIZE, SpecialPhoneCallList
 	specialcall SpecialCallOnlyWhenOutside, PHONECONTACT_OAK,      OakPhoneCallerScript ;POKERUS
 	specialcall SpecialCallOnlyWhenOutside, PHONECONTACT_OAK,      OakPhoneCallerScript ;OAK FLASH
-	specialcall SpecialCallOnlyWhenOutside, PHONECONTACT_OAK,      OakPhoneCallerScript ;elm assistant
-	specialcall SpecialCallOnlyWhenOutside, PHONECONTACT_OAK,      OakPhoneCallerScript ;odd broadcast
+	specialcall SpecialCallOnlyWhenOutside, PHONECONTACT_OAK,      OakPhoneCallerScript ;SILPHCO
+	specialcall SpecialCallOnlyWhenOutside, PHONECONTACT_OAK,      OakPhoneCallerScript ;VIRIDIANGYM
 	specialcall SpecialCallWhereverYouAre,  PHONECONTACT_OAK,      OakPhoneCallerScript ;elm ss ticket
 	specialcall SpecialCallWhereverYouAre,  PHONECONTACT_BIKESHOP, BikeShopPhoneCallerScript ;bikeshop
 ;	specialcall SpecialCallWhereverYouAre,  PHONECONTACT_MOM,      MomPhoneLectureScript ;mom worried

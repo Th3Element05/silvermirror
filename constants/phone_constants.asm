@@ -60,8 +60,8 @@ DEF NUM_PHONE_CONTACTS EQU const_value - 1
 	const SPECIALCALL_NONE
 	const SPECIALCALL_POKERUS        ;only outside
 	const SPECIALCALL_FLASH          ;only outside
-	const SPECIALCALL_ASSISTANT      ;only outside
-	const SPECIALCALL_WEIRDBROADCAST ;only outside
+	const SPECIALCALL_SILPHCO        ;only outside
+	const SPECIALCALL_VIRIDIANGYM    ;only outside
 	const SPECIALCALL_SSTICKET       ;wherever you are
 	const SPECIALCALL_BIKESHOP       ;wherever you are
 ;	const SPECIALCALL_WORRIED        ;wherever you are

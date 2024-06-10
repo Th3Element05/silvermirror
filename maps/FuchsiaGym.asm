@@ -32,6 +32,7 @@ FuchsiaGymKogaScript:
 	promptbutton
 	writetext KogaExplainSoulbadgeText
 	promptbutton
+	scall FuchsiaGymCheckBadges
 	; fallthrough
 .FightDone:
 	checkevent EVENT_GOT_TM06_TOXIC
@@ -45,6 +46,24 @@ FuchsiaGymKogaScript:
 	writetext KogaAfterBattleText
 	waitbutton
 	closetext
+	end
+
+FuchsiaGymCheckBadges:
+	readvar VAR_BADGES
+	ifequal 6, .SilphCo
+	ifequal 7, .ViridianGym
+	end
+
+.SilphCo
+	checkevent EVENT_BEAT_GIOVANNI_SILPHCO
+	iftrue .AlreadyBeatSilph
+	specialphonecall SPECIALCALL_SILPHCO
+.AlreadyBeatSilph
+	end
+
+.ViridianGym
+	setevent EVENT_VIRIDIAN_GYM_LEADER_RETURNED
+	specialphonecall SPECIALCALL_VIRIDIANGYM
 	end
 
 KogaIntroText:

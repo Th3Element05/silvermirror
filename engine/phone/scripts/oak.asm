@@ -14,6 +14,10 @@ OakPhoneCalleeScript:
 ;	iftrue .assistant
 ;	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
 ;	iftrue .checkingegg
+	checkevent EVENT_OAK_CALLED_ABOUT_VIRIDIAN_GYM
+	iftrue .RemindViridianGym
+	checkevent EVENT_OAK_CALLED_ABOUT_SILPHCO
+	iftrue .RemindSilphCo
 	checkevent EVENT_OAK_CALLED_ABOUT_FLASH
 	iftrue .RemindFlash
 ;	checkevent EVENT_GOT_MYSTERY_EGG_FROM_MR_POKEMON
@@ -24,6 +28,18 @@ OakPhoneCalleeScript:
 ;.sawmrpokemon
 ;	farwritetext ElmPhoneSawMrPokemonText
 ;	end
+
+.RemindViridianGym
+	checkevent EVENT_BEAT_GIOVANNI
+	iftrue .default
+	farwritetext OakPhoneRemindViridianGymText
+	end
+
+.RemindSilphCo
+	checkevent EVENT_BEAT_GIOVANNI_SILPHCO
+	iftrue .default
+	farwritetext OakPhoneRemindSilphCoText
+	end
 
 .RemindFlash
 	checkevent EVENT_GOT_HM05_FLASH
@@ -70,8 +86,8 @@ OakPhoneCalleeScript:
 OakPhoneCallerScript:
 	readvar VAR_SPECIALPHONECALL
 	ifequal SPECIALCALL_FLASH, .flash
-	ifequal SPECIALCALL_ASSISTANT, .assistant
-	ifequal SPECIALCALL_WEIRDBROADCAST, .rocket
+	ifequal SPECIALCALL_SILPHCO, .silphco
+	ifequal SPECIALCALL_VIRIDIANGYM, .viridiangym
 	ifequal SPECIALCALL_SSTICKET, .gift
 	ifequal SPECIALCALL_MASTERBALL, .gift
 	farwritetext ElmPhoneDiscoveredPokerusText
@@ -84,16 +100,16 @@ OakPhoneCallerScript:
 	setevent EVENT_OAK_CALLED_ABOUT_FLASH
 	end
 
-.assistant
-	farwritetext ElmPhoneEggAssistantText
+.silphco
+	farwritetext OakPhoneSilphCoText
 	specialphonecall SPECIALCALL_NONE
-;	clearevent EVENT_ELMS_AIDE_IN_VIOLET_POKEMON_CENTER
-;	setevent EVENT_ELMS_AIDE_IN_LAB
+	setevent EVENT_OAK_CALLED_ABOUT_SILPHCO
 	end
 
-.rocket
-	farwritetext ElmPhoneRadioTowerRocketTakeoverText
+.viridiangym
+	farwritetext OakPhoneViridianGymText
 	specialphonecall SPECIALCALL_NONE
+	setevent EVENT_OAK_CALLED_ABOUT_VIRIDIAN_GYM
 	end
 
 .gift
