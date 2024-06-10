@@ -299,6 +299,14 @@ Route9_Blocks:
 Route22_Blocks:
 	INCBIN "maps/Route22.blk"
 
+CinnabarLab_Blocks:
+	INCBIN "maps/CinnabarLab.blk"
+
+CinnabarLabResearchRoom_Blocks:
+	INCBIN "maps/CinnabarLabResearchRoom.blk"
+
+CinnabarLabFossilRoom_Blocks:
+	INCBIN "maps/CinnabarLabFossilRoom.blk"
 
 SECTION "Map Blocks 2", ROMX
 
@@ -755,6 +763,7 @@ DarkCaveVioletEntrance_Blocks:
 DarkCaveBlackthornEntrance_Blocks:
 	INCBIN "maps/DarkCaveBlackthornEntrance.blk"
 
+MrPokemonsHouse_Blocks:
 RuinsOfAlphResearchCenter_Blocks:
 	INCBIN "maps/RuinsOfAlphResearchCenter.blk"
 
@@ -941,8 +950,8 @@ MountMoonB2F_Blocks:                   ;silvermirror+
 CinnabarGym_Blocks:                    ;silvermirror+
 	INCBIN "maps/CinnabarGym.blk"      ;silvermirror+
 
-MrPokemonsHouse_Blocks:
-	INCBIN "maps/MrPokemonsHouse.blk"
+;MrPokemonsHouse_Blocks:               ;moved use alph research center
+;	INCBIN "maps/MrPokemonsHouse.blk"
 
 VictoryRoadGate_Blocks:
 	INCBIN "maps/VictoryRoadGate.blk"
