@@ -8,6 +8,12 @@ MrPokemonsHouse_MapScripts:
 ;	scene_script MrPokemonsHouseNoopScene,          SCENE_MRPOKEMONSHOUSE_NOOP
 
 	def_callbacks
+	callback MAPCALLBACK_TILES, MrPokemonsHouseTilesCallback
+
+MrPokemonsHouseTilesCallback:
+	changeblock 2, 0, $54 ; couch
+	changeblock 4, 0, $55 ; couch
+	endcallback
 
 ;MrPokemonsHouseMeetMrPokemonScene:
 ;	sdefer MrPokemonsHouseMrPokemonEventScript

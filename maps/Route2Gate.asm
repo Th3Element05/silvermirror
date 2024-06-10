@@ -60,6 +60,7 @@ Route2GateOaksAideScript:
 	promptbutton
 	verbosegiveitem HM_FLASH
 	setevent EVENT_GOT_HM05_FLASH
+;	clearevent EVENT_OAK_CALLED_ABOUT_FLASH
 .GotFlash
 	writetext Route2GateOaksAideFlashExplainText
 	waitbutton

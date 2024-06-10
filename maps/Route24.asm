@@ -41,7 +41,7 @@ Route24NuggetRocketScript:
 	waitsfx
 	special FadeInQuickly
 	setscene SCENE_ROUTE24_NOOP
-	playmapmusic
+;	playmapmusic
 	end
 
 Route24NuggetRocketIntroText:
