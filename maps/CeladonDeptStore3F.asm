@@ -8,9 +8,26 @@ CeladonDeptStore3F_MapScripts:
 CeladonDeptStore3FClerkScript:
 	faceplayer
 	opentext
+	checkevent EVENT_GOT_TM18_COUNTER
+	iffalse .GiveCounter
 	pokemart MARTTYPE_STANDARD, MART_TMS_1
 	closetext
 	end
+
+.GiveCounter
+	writetext CeladonDeptStore3FFreeSampleText
+	promptbutton
+	verbosegiveitem TM_COUNTER
+	setevent EVENT_GOT_TM18_COUNTER
+	end
+
+CeladonDeptStore3FFreeSampleText:
+	text "Welcome to the"
+	line "TM SHOP!"
+
+	para "We're giving away"
+	line "free samples today!"
+	done
 
 CeladonDeptStore3FGameboyKid1Script:
 	faceplayer
