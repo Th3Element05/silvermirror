@@ -5,12 +5,17 @@ SaffronPidgeyHouse_MapScripts:
 
 	def_callbacks
 
-SaffronPidgeyHouseYoungster:
-	jumptextfaceplayer SaffronPidgeyHouseYoungsterText
-SaffronPidgeyHouseYoungsterText:
-	text "The COPYCAT is"
-	line "cute! I'm getting"
-	cont "her a # DOLL!"
+SaffronPidgeyHouseBoy:
+	jumptextfaceplayer SaffronPidgeyHouseBoyText
+SaffronPidgeyHouseBoyText:
+	text "My neighbor the"
+	line "COPYCAT lost her"
+	cont "favorite doll."
+
+	para "I tried to give"
+	line "her a new one,"
+	cont "but she only wants"
+	cont "her old doll back."
 	done
 
 SaffronPidgeyHouseLass:
@@ -59,7 +64,7 @@ SaffronPidgeyHouse_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  4,  1, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronPidgeyHouseYoungster, -1
+	object_event  4,  1, SPRITE_BOY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronPidgeyHouseBoy, -1
 	object_event  2,  3, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronPidgeyHouseLass, -1
 	object_event  6,  4, SPRITE_PIDGEY, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronPidgeyHousePidgey, -1
 	object_event  3,  3, SPRITE_PAPER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronPidgeyHousePaper, -1

@@ -25,6 +25,8 @@ CopycatsHouse2FWhichGenderCallback:
 	endcallback
 
 Copycat:
+	verbosegiveitem TM_MIMIC
+	end
 ;	faceplayer
 ;	checkevent EVENT_GOT_PASS_FROM_COPYCAT
 ;	iftrue .GotPass

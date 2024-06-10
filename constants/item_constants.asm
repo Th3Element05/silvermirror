@@ -133,7 +133,7 @@
 	const CARD_KEY     ; 7d ; use in silph co
 	const BIKE_VOUCHER ; 7e ; MACHINE_PART
 	const EGG_TICKET   ; 7f ; can be repurposed, unused
-	const LOST_ITEM    ; 80 ; can be repurposed if removed from fan club and copycat house
+	const LOST_ITEM    ; 80 ; KEEP for copycat quest
 	const STARDUST     ; 81
 	const STAR_PIECE   ; 82
 	const LIFT_KEY     ; 83 ; BASEMENT_KEY
