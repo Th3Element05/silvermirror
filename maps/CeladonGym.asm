@@ -33,6 +33,7 @@ CeladonGymErikaScript:
 	promptbutton
 	writetext ErikaExplainRainbowbadgeText
 	promptbutton
+	scall CeladonGymCheckBadges
 	; fallthrough
 .FightDone:
 	checkevent EVENT_GOT_TM21_GIGA_DRAIN
@@ -47,6 +48,24 @@ CeladonGymErikaScript:
 	writetext ErikaAfterBattleText
 	waitbutton
 	closetext
+	end
+
+CeladonGymCheckBadges:
+	readvar VAR_BADGES
+	ifequal 6, .SilphCo
+	ifequal 7, .ViridianGym
+	end
+
+.SilphCo
+	checkevent EVENT_BEAT_GIOVANNI_SILPHCO
+	iftrue .AlreadyBeatSilph
+	specialphonecall SPECIALCALL_SILPHCO
+.AlreadyBeatSilph
+	end
+
+.ViridianGym
+	setevent EVENT_VIRIDIAN_GYM_LEADER_RETURNED
+	specialphonecall SPECIALCALL_VIRIDIANGYM
 	end
 
 ErikaIntroText:

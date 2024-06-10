@@ -59,6 +59,62 @@ OakPhoneRemindFlashText:
 	cont "CAVE on ROUTE 11!"
 	done
 
+OakPhoneSilphCoText:
+	text "Hello, <PLAYER>?"
+
+	para "I've just heard"
+	line "news about TEAM"
+	cont "ROCKET activity"
+	cont "in SAFFRON CITY!"
+
+	para "Be careful if you"
+	line "go to challenge"
+	cont "the GYM there!"
+	done
+
+OakPhoneRemindSilphCoText:
+	text "Hello, <PLAYER>?"
+
+	para "TEAM ROCKET is"
+	line "still active in"
+	cont "SAFFRON CITY!"
+
+	para "Be careful if you"
+	line "go to SAFFRON GYM!"
+	done
+
+OakPhoneViridianGymText:
+	text "Hello, <PLAYER>?"
+
+	para "Are you still"
+	line "collecting"
+	cont "GYM BADGES?"
+
+	para "I've gotten word"
+	line "the GYM LEADER in"
+	cont "VIRIDIAN CITY has"
+	cont "returned!"
+
+	para "If you need more"
+	line "BADGES, you should"
+	cont "go challenge them!"
+	done
+
+OakPhoneRemindViridianGymText:
+	text "Hello, <PLAYER>?"
+
+	para "If you need more"
+	line "GYM BADGES, you"
+	cont "should challenge"
+	cont "the GYM LEADER in"
+	cont "VIRIDIAN CITY!"
+	done
+
+;
+;
+;
+;
+;
 ElmPhoneSawMrPokemonText:
 	text "Hello, <PLAY_G>?"
 
@@ -193,20 +249,20 @@ ElmPhoneDisasterText:
 	line "here now!"
 	done
 
-ElmPhoneEggAssistantText:
-	text "Hello, <PLAY_G>? We"
-	line "discovered some-"
-
-	para "thing about the"
-	line "EGG!"
-
-	para "My assistant is at"
-	line "the #MON CENTER"
-
-	para "in VIOLET CITY. "
-	line "Could you talk to"
-	cont "him?"
-	done
+;ElmPhoneEggAssistantText:
+;	text "Hello, <PLAY_G>? We"
+;	line "discovered some-"
+;
+;	para "thing about the"
+;	line "EGG!"
+;
+;	para "My assistant is at"
+;	line "the #MON CENTER"
+;
+;	para "in VIOLET CITY. "
+;	line "Could you talk to"
+;	cont "him?"
+;	done
 
 ElmPhoneRadioTowerRocketTakeoverText:
 	text "<PLAY_G>, how are"

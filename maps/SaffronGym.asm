@@ -41,6 +41,7 @@ SaffronGymSabrinaScript:
 	promptbutton
 	writetext SabrinaExplainMarshbadgeText
 	promptbutton
+	scall SaffronGymCheckBadges
 	; fallthrough
 .FightDone:
 	checkevent EVENT_GOT_TM46_PSYWAVE
@@ -65,6 +66,16 @@ SaffronGymSabrinaScript:
 	writetext SabrinaAfterBattleText
 	waitbutton
 	closetext
+	end
+
+SaffronGymCheckBadges:
+	readvar VAR_BADGES
+	ifequal 7, .ViridianGym
+	end
+
+.ViridianGym
+	setevent EVENT_VIRIDIAN_GYM_LEADER_RETURNED
+	specialphonecall SPECIALCALL_VIRIDIANGYM
 	end
 
 SabrinaIntroText:

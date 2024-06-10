@@ -62,6 +62,7 @@ CinnabarGymBlaineScript:
 	promptbutton
 	writetext BlaineVolcanobadgeText
 	promptbutton
+	scall CinnabarGymCheckBadges
 	; fallthrough
 .FightDone:
 	checkevent EVENT_GOT_TM38_FIRE_BLAST
@@ -71,6 +72,7 @@ CinnabarGymBlaineScript:
 	writetext BlaineExplainTMText
 	waitbutton
 	closetext
+	
 	end
 .GotFireBlast:
 	writetext BlaineAfterBattleText
@@ -78,12 +80,34 @@ CinnabarGymBlaineScript:
 	closetext
 	end
 
+CinnabarGymCheckBadges:
+	readvar VAR_BADGES
+	ifequal 6, .SilphCo
+	ifequal 7, .ViridianGym
+	end
+
+.SilphCo
+	checkevent EVENT_BEAT_GIOVANNI_SILPHCO
+	iftrue .AlreadyBeatSilph
+	specialphonecall SPECIALCALL_SILPHCO
+.AlreadyBeatSilph
+	end
+
+.ViridianGym
+	setevent EVENT_VIRIDIAN_GYM_LEADER_RETURNED
+	specialphonecall SPECIALCALL_VIRIDIANGYM
+	end
+
 BlaineIntroText:
 	text "Hah!"
 
-	para "I am BLAINE! I"
-	line "am the LEADER of"
-	cont "CINNABAR GYM!"
+;	para "I am BLAINE! I"
+;	line "am the LEADER of"
+;	cont "CINNABAR GYM!"
+
+	para "<PLAYER>! You"
+	line "came to challenge"
+	cont "CINNABAR GYM?"
 
 	para "My fiery #MON"
 	line "will incinerate"

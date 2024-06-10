@@ -31,6 +31,7 @@ PewterGymBrockScript:
 	promptbutton
 	writetext BrockBoulderbadgeText
 	promptbutton
+	scall PewterGymCheckBadges
 	; fallthrough
 .FightDone:
 	checkevent EVENT_GOT_TM34_BIDE
@@ -49,6 +50,24 @@ PewterGymBrockScript:
 	end
 .DoMomCall:
 	specialphonecall SPECIALCALL_WORRIED
+	end
+
+PewterGymCheckBadges:
+	readvar VAR_BADGES
+	ifequal 6, .SilphCo
+	ifequal 7, .ViridianGym
+	end
+
+.SilphCo
+	checkevent EVENT_BEAT_GIOVANNI_SILPHCO
+	iftrue .AlreadyBeatSilph
+	specialphonecall SPECIALCALL_SILPHCO
+.AlreadyBeatSilph
+	end
+
+.ViridianGym
+	setevent EVENT_VIRIDIAN_GYM_LEADER_RETURNED
+	specialphonecall SPECIALCALL_VIRIDIANGYM
 	end
 
 BrockIntroText:
