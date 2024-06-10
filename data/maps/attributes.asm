@@ -811,4 +811,7 @@ ENDM
 	map_attributes PokemonMansionB1F, POKEMON_MANSION_B1F, $00, 0
 	map_attributes CinnabarMart, CINNABAR_MART, $00, 0
 	map_attributes CinnabarGym, CINNABAR_GYM, $00, 0
+	map_attributes CinnabarLab, CINNABAR_LAB, $00, 0
+	map_attributes CinnabarLabResearchRoom, CINNABAR_LAB_RESEARCH_ROOM, $00, 0
+	map_attributes CinnabarLabFossilRoom, CINNABAR_LAB_FOSSIL_ROOM, $00, 0
 	map_attributes Route26Gate, ROUTE_26_GATE, $00, 0

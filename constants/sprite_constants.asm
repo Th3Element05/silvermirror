@@ -270,7 +270,7 @@ DEF SPRITE_POKEMON EQU const_value
 ;	const SPRITE_GYARADOS   ; 82
 ;	const SPRITE_LAPRAS     ; 83 walk
 ;	const SPRITE_DITTO      ; 84
-;	const SPRITE_EEVEE      ; 85
+	const SPRITE_EEVEE      ; 85
 ;	const SPRITE_VAPOREON   ; 86
 ;	const SPRITE_JOLTEON    ; 87
 ;	const SPRITE_FLAREON    ; 88
