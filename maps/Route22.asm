@@ -21,7 +21,8 @@ Route22RivalBattleLow:
 	pause 20
 	appear ROUTE22_RIVAL
 	applymovement ROUTE22_RIVAL, Route22RivalApproachMovement
-; check badges here to jump to second battle script
+	readvar VAR_BADGES
+	ifgreater 7, FinalRivalBattleScript
 	opentext
 	writetext Route22RivalBeforeBattleText1
 	waitbutton
@@ -68,6 +69,44 @@ Route22RivalGoesAroundScript:
 	end
 .Under
 	applymovement ROUTE22_RIVAL, Route22RivalUnderMovement
+	end
+
+FinalRivalBattleScript:
+	opentext
+	writetext Route22RivalBeforeBattleText2
+	waitbutton
+	closetext
+	setevent EVENT_ROUTE_22_RIVAL
+	winlosstext Route22RivalBattleWinText2, Route22RivalBattleLossText2
+;	setlasttalked ROUTE22_RIVAL
+	checkevent EVENT_GOT_SQUIRTLE_FROM_OAK
+	iftrue .RivalBulbasaur2
+	checkevent EVENT_GOT_BULBASAUR_FROM_OAK
+	iftrue .RivalCharmander2
+	loadtrainer RIVAL2, RIVAL2_4_SQUIRTLE
+	startbattle
+	reloadmapafterbattle
+	sjump .FinishRival2
+.RivalBulbasaur2:
+	loadtrainer RIVAL2, RIVAL2_4_BULBASAUR
+	startbattle
+	reloadmapafterbattle
+	sjump .FinishRival2
+.RivalCharmander2:
+	loadtrainer RIVAL2, RIVAL2_4_CHARMANDER
+	startbattle
+	reloadmapafterbattle
+	; fallthrough
+.FinishRival2:
+	opentext
+	writetext Route22RivalAfterBattleText2
+	waitbutton
+	closetext
+	playmusic MUSIC_RIVAL_ENCOUNTER
+	applymovement ROUTE22_RIVAL, Route22RivalLeavesMovement2
+	disappear ROUTE22_RIVAL
+	setscene SCENE_ROUTE22_NOOP
+	special RestartMapMusic
 	end
 
 ; movements
