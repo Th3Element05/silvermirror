@@ -10,6 +10,7 @@ SaffronCity_MapScripts:
 
 SaffronCityFlypointCallback:
 	setflag ENGINE_FLYPOINT_SAFFRON
+	setmapscene CINNABAR_ISLAND, SCENE_CINNABARISLAND_NOOP
 	endcallback
 
 SaffronCityMoveRocketCallback:

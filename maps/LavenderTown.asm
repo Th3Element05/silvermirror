@@ -8,6 +8,7 @@ LavenderTown_MapScripts:
 
 LavenderTownFlypointCallback:
 	setflag ENGINE_FLYPOINT_LAVENDER
+	setmapscene CINNABAR_ISLAND, SCENE_CINNABARISLAND_NOOP
 	endcallback
 
 LavenderTownSuperNerdScript:

@@ -732,6 +732,8 @@ SlowbroFrontpic:     INCBIN "gfx/pokemon/slowbro/front.animated.2bpp.lz"
 
 SECTION "Pics 21", ROMX
 PokemonGhostPic:     INCBIN "gfx/trainers/pokemon_ghost.2bpp.lz"
+MissingnoFrontPic:   INCBIN "gfx/pokemon/missingno/front.animated.2bpp.lz" ;missingno
+MissingnoBackPic:    INCBIN "gfx/pokemon/missingno/back.2bpp.lz" ;missingno
 
 
 SECTION "Pics 22", ROMX

@@ -250,3 +250,4 @@ FramesPointers:
 	dw LugiaFrames
 	dw HoOhFrames
 	dw CelebiFrames
+	dw MissingnoFrames ;missingno

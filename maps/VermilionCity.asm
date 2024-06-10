@@ -16,6 +16,7 @@ VermilionCityNoop2Scene:
 
 VermilionCityFlypointCallback:
 	setflag ENGINE_FLYPOINT_VERMILION
+	setmapscene CINNABAR_ISLAND, SCENE_CINNABARISLAND_NOOP
 	endcallback
 
 VermilionCityAskEnterDockScript:

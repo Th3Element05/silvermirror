@@ -253,4 +253,5 @@ NewPokedexOrder:
 	db LUGIA
 	db HO_OH
 	db CELEBI
+	db MISSINGNO ;missingno
 	assert_table_length NUM_POKEMON

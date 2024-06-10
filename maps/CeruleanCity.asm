@@ -23,6 +23,7 @@ CeruleanCityNoop2Scene:
 
 CeruleanCityFlypointCallback:
 	setflag ENGINE_FLYPOINT_CERULEAN
+	setmapscene CINNABAR_ISLAND, SCENE_CINNABARISLAND_NOOP
 	endcallback
 
 CeruleanCityMoveOfficerCallback:
@@ -31,7 +32,7 @@ CeruleanCityMoveOfficerCallback:
 	moveobject CERULEANCITY_OFFICER, 27, 12
 .BillHelped
 ;	endcallback
-
+	; fallthrough
 ;CeruleanCityMoveSlowbroCallback:
 	checkevent EVENT_BEAT_LTSURGE
 	iffalse .Skip

@@ -253,7 +253,8 @@ IconPointers:
 	dw LugiaIcon
 	dw HoOhIcon
 	dw CelebiIcon
+	dw MissingnoIcon ;missingno
 	assert_table_length NUM_POKEMON + 1
-	dw NullIcon ; unused
+;	dw NullIcon ; unused
 	dw EggIcon
 	assert_table_length EGG + 1

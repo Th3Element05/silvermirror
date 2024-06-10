@@ -208,7 +208,7 @@ KantoWaterWildMonsChallenge:
 	end_water_wildmons
 
 	def_water_wildmons CINNABAR_ISLAND ;silvermirror
-	db 6 percent ; encounter rate
+	db 4 percent ; encounter rate
 	db 16, TENTACOOL
 	db 17, KRABBY
 	db 18, STARYU

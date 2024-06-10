@@ -11,6 +11,7 @@ FuchsiaCity_MapScripts:
 
 FuchsiaCityFlypointCallback:
 	setflag ENGINE_FLYPOINT_FUCHSIA
+	setmapscene CINNABAR_ISLAND, SCENE_CINNABARISLAND_NOOP
 	endcallback
 
 FuchsiaCityFruittrees:

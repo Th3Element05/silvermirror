@@ -253,4 +253,5 @@ OldPokedexOrder:
 	db MEWTWO
 	db MEW
 	db CELEBI
+	db MISSINGNO ;missingno
 	assert_table_length NUM_POKEMON

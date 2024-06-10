@@ -273,4 +273,5 @@
 	const ICON_LUGIA       ; LUGIA
 	const ICON_HO_OH       ; HO_OH
 	const ICON_CELEBI      ; CELEBI
+	const ICON_MISSINGNO   ; MISSINGNO ;missingno
 	const ICON_EGG         ; EGG

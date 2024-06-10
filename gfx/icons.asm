@@ -256,6 +256,7 @@ TyranitarIcon::  INCBIN "gfx/icons/tyranitar.2bpp"
 LugiaIcon::      INCBIN "gfx/icons/lugia.2bpp"
 HoOhIcon::       INCBIN "gfx/icons/ho_oh.2bpp"
 CelebiIcon::     INCBIN "gfx/icons/celebi.2bpp"
+MissingnoIcon::  INCBIN "gfx/icons/missingno.2bpp" ;missingno
 EggIcon::        INCBIN "gfx/icons/egg.2bpp"
 
 
