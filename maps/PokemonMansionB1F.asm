@@ -79,6 +79,8 @@ PokemonMansionB1FBlaineScript:
 	opentext
 	writetext PokemonMansionB1FBlaineText
 	waitbutton
+	closetext
+	pause 10
 	readvar VAR_FACING
 	ifnotequal DOWN, .Skip
 	applymovement POKEMONMANSIONB1F_BLAINE, PokemonMansion3FBlaineGoesAroundMovement
