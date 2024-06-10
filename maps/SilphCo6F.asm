@@ -169,7 +169,7 @@ ScientistLowellBeatenText:
 
 ScientistLowellAfterBattleText:
 	text "TIKSI BRANCH?"
-	line "It's in Russian"
+	line "It's in northern"
 	cont "no man's land!"
 	done
 
