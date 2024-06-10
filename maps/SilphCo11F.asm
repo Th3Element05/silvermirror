@@ -91,6 +91,7 @@ SilphCo11FGiovanniEncounter:
 	setevent EVENT_BEAT_GIOVANNI_SILPHCO
 	setevent EVENT_SAFFRON_CITY_ROCKETS
 	clearevent EVENT_SAFFRON_CITY_CIVILIANS
+;	clearevent EVENT_OAK_CALLED_ABOUT_SILPHCO
 	special PlayMapMusic
 	end
 
@@ -195,9 +196,12 @@ SilphCo11FPresidentMasterBallText:
 	line "#MON without"
 	cont "fail!"
 
-	para "You should be"
-	line "quiet about using"
-	cont "it, though."
+	para "We've only made a"
+	line "limited number of"
+	cont "these!"
+
+	para "Please, be quiet"
+	cont "about using it!"
 	done
 
 TrainerRocketExecutiveM2:
