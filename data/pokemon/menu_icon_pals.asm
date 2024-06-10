@@ -257,7 +257,8 @@ MonMenuIconPals:
 	icon_pals BLUE,   PINK     ; LUGIA
 	icon_pals RED,    BROWN    ; HO_OH
 	icon_pals GREEN,  PINK     ; CELEBI
+	icon_pals GRAY,   GRAY     ; MISSINGNO ;missingno
 	assert_table_length NUM_POKEMON
-	icon_pals RED,    RED      ; unused
+;	icon_pals RED,    RED      ; unused
 	icon_pals RED,    RED      ; EGG
 	assert_table_length EGG

@@ -18,6 +18,7 @@ PewterCity_MapScripts:
 PewterCityFlypointCallback:
 	setflag ENGINE_FLYPOINT_PEWTER
 	setmapscene PEWTER_MUSEUM_1F, SCENE_DEFAULT
+	setmapscene CINNABAR_ISLAND, SCENE_CINNABARISLAND_NOOP
 	endcallback
 
 PewterCityNoop1Scene:

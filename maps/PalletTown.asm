@@ -16,6 +16,7 @@ PalletTownNoop2Scene:
 PalletTownFlypointCallback:
 	setflag ENGINE_FLYPOINT_PALLET
 	clearevent EVENT_FIRST_TIME_BANKING_WITH_MOM
+	setmapscene CINNABAR_ISLAND, SCENE_CINNABARISLAND_NOOP
 	endcallback
 
 PalletTownOakHeyWaitScriptR:

@@ -9,6 +9,7 @@ CeladonCity_MapScripts:
 
 CeladonCityFlypointCallback:
 	setflag ENGINE_FLYPOINT_CELADON
+	setmapscene CINNABAR_ISLAND, SCENE_CINNABARISLAND_NOOP
 	endcallback
 
 CeladonCityRocket1Script:

@@ -20,6 +20,7 @@ ViridianCityNoop3Scene:
 
 ViridianCityFlypointCallback:
 	setflag ENGINE_FLYPOINT_VIRIDIAN
+	setmapscene CINNABAR_ISLAND, SCENE_CINNABARISLAND_NOOP
 	endcallback
 
 ViridianCityMoveCoffeeGrampsCallback:
@@ -47,27 +48,46 @@ ViridianCityCoffeeGrampsScript:
 	writetext ViridianCityCatchPokemonAsk
 	yesorno
 	iffalse .DoCatchTutorial
-	jumptext ViridianCityCatchTutorialDeclinedText
+	writetext ViridianCityCatchTutorialDeclinedText
+	waitbutton
+	closetext
+	end
 
 .DoCatchTutorial
 	writetext ViridianCityCatchTutorialAcceptedText
 	loadwildmon WEEDLE, 5
 	catchtutorial BATTLETYPE_TUTORIAL
 	refreshscreen
-	opentext
+	setmapscene CINNABAR_ISLAND, SCENE_CINNABARISLAND_MISSINGNO
 	jumptext CatchingTutorialDebriefText
 
-ViridianCityForceMapCardScript:
-	turnobject VIRIDIANCITY_COFFEE_GRAMPS, RIGHT
+ViridianCityForceMapCardScript2:
+;	turnobject VIRIDIANCITY_COFFEE_GRAMPS, RIGHT
 	showemote EMOTE_SHOCK, VIRIDIANCITY_COFFEE_GRAMPS, 30
 	opentext
 	writetext ViridianCityCoffeeGrampsHeyText
 	waitbutton
 	closetext
-	readvar VAR_XCOORD
-	ifequal 18, .Skip
-	applymovement PLAYER, ViridianCityMapCardRightMovement
-.Skip
+	applymovement PLAYER, ViridianCityMapCardMovement2
+	sjump ViridianCityMapCardScript
+
+ViridianCityForceMapCardScript1:
+;	turnobject VIRIDIANCITY_COFFEE_GRAMPS, RIGHT
+	showemote EMOTE_SHOCK, VIRIDIANCITY_COFFEE_GRAMPS, 30
+	opentext
+	writetext ViridianCityCoffeeGrampsHeyText
+	waitbutton
+	closetext
+	applymovement PLAYER, ViridianCityMapCardMovement1
+	sjump ViridianCityMapCardScript
+
+ViridianCityForceMapCardScript0:
+;	turnobject VIRIDIANCITY_COFFEE_GRAMPS, RIGHT
+	showemote EMOTE_SHOCK, VIRIDIANCITY_COFFEE_GRAMPS, 30
+	opentext
+	writetext ViridianCityCoffeeGrampsHeyText
+	waitbutton
+	closetext
 	turnobject PLAYER, LEFT
 	; fallthrough
 
@@ -211,12 +231,12 @@ ViridianCityDreamEaterFisher:
 	writetext ViridianCityDreamEaterFisherText
 	promptbutton
 	verbosegiveitem TM_DREAM_EATER
-	iffalse .NoRoomForDreamEater
+;	iffalse .NoRoomForDreamEater
 	setevent EVENT_GOT_TM42_DREAM_EATER
 .GotDreamEater:
 	writetext ViridianCityDreamEaterFisherGotDreamEaterText
 	waitbutton
-.NoRoomForDreamEater:
+;.NoRoomForDreamEater:
 	closetext
 	end
 
@@ -326,7 +346,9 @@ ViridianCityCoffeeGrampsBlockMovement:
 	step DOWN
 	step_end
 
-ViridianCityMapCardRightMovement:
+ViridianCityMapCardMovement2:
+	step LEFT
+ViridianCityMapCardMovement1:
 	step LEFT
 	step_end
 
@@ -415,8 +437,9 @@ ViridianCity_MapEvents:
 
 	def_coord_events
 	coord_event 19,  9, SCENE_VIRIDIANCITY_NO_POKEDEX, ViridianCityCoffeeGrampsBlockScript
-	coord_event 18,  5, SCENE_VIRIDIANCITY_MAP_CARD, ViridianCityForceMapCardScript
-	coord_event 19,  5, SCENE_VIRIDIANCITY_MAP_CARD, ViridianCityForceMapCardScript
+	coord_event 17,  5, SCENE_VIRIDIANCITY_MAP_CARD, ViridianCityForceMapCardScript0
+	coord_event 18,  5, SCENE_VIRIDIANCITY_MAP_CARD, ViridianCityForceMapCardScript1
+	coord_event 19,  5, SCENE_VIRIDIANCITY_MAP_CARD, ViridianCityForceMapCardScript2
 
 	def_bg_events
 	bg_event 19,  1, BGEVENT_READ, ViridianCityTrainerTips1Sign
@@ -430,7 +453,7 @@ ViridianCity_MapEvents:
 	bg_event 14,  4, BGEVENT_ITEM, ViridianCityHiddenPotion
 
 	def_object_events
-	object_event 17,  5, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityCoffeeGrampsScript, -1
+	object_event 16,  5, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityCoffeeGrampsScript, -1
 	object_event  6, 23, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ViridianCityDreamEaterFisher, -1
 	object_event 30,  8, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ViridianCityGymGramps, -1
 	object_event 13, 20, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 3, 3, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ViridianCityYoungster1Script, -1

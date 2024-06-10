@@ -30,6 +30,7 @@ MapScenes::
 	scene_var MR_FUJIS_HOUSE,                              wMrFujisHouseSceneID ;silvermirror
 	scene_var SILPH_CO_7F,                                 wSilphCo7FSceneID ;silvermirror
 	scene_var SILPH_CO_11F,                                wSilphCo11FSceneID ;silvermirror
+	scene_var CINNABAR_ISLAND,                             wCinnabarIslandSceneID ;silvermirror
 	scene_var TRAINER_HOUSE_B1F,                           wTrainerHouseB1FSceneID
 	scene_var VICTORY_ROAD_GATE,                           wVictoryRoadGateSceneID
 	scene_var SAFFRON_MAGNET_TRAIN_STATION,                wSaffronMagnetTrainStationSceneID
