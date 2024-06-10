@@ -58,288 +58,286 @@ RuinsOfAlphResearchCenterGetUnownDexScript:
 	end
 
 RuinsOfAlphResearchCenterFossilScientistScript:
-	faceplayer
-	opentext
-	checkevent EVENT_FOSSIL_SCIENTIST_WORKING_HELIX
-	iftrue .check_fossil_step_count_helix
-	checkevent EVENT_FOSSIL_SCIENTIST_WORKING_DOME
-	iftrue .check_fossil_step_count_dome
-	checkevent EVENT_FOSSIL_SCIENTIST_WORKING_AMBER
-	iftrue .check_fossil_step_count_amber
-	writetext RuinsOfAlphResearchCenterFossilScientistDoYouHaveFossilText
-	waitbutton
-	checkitem HELIX_FOSSIL
-	iftrue .own_helix
-	checkitem DOME_FOSSIL
-	iftrue .own_dome
-	checkitem OLD_AMBER
-	iftrue IsOldAmber
-	writetext RuinsOfAlphResearchCenterFossilScientistNoFossilText
-	waitbutton
-	closetext
+;	faceplayer
+;	opentext
+;	checkevent EVENT_FOSSIL_SCIENTIST_WORKING_HELIX
+;	iftrue .check_fossil_step_count_helix
+;	checkevent EVENT_FOSSIL_SCIENTIST_WORKING_DOME
+;	iftrue .check_fossil_step_count_dome
+;	checkevent EVENT_FOSSIL_SCIENTIST_WORKING_AMBER
+;	iftrue .check_fossil_step_count_amber
+;	writetext RuinsOfAlphResearchCenterFossilScientistDoYouHaveFossilText
+;	waitbutton
+;	checkitem HELIX_FOSSIL
+;	iftrue .own_helix
+;	checkitem DOME_FOSSIL
+;	iftrue .own_dome
+;	checkitem OLD_AMBER
+;	iftrue IsOldAmber
+;	writetext RuinsOfAlphResearchCenterFossilScientistNoFossilText
+;	waitbutton
+;	closetext
 	end
 
-.check_fossil_step_count_helix
-	callasm FossilCheckStepCount
-	iftrue .give_omanyte
-	writetext RuinsOfAlphResearchCenterFossilScientistNotDoneYetText
-	waitbutton
-	closetext
-	end
-
-.check_fossil_step_count_dome
-	callasm FossilCheckStepCount
-	iftrue .give_kabuto
-	writetext RuinsOfAlphResearchCenterFossilScientistNotDoneYetText
-	waitbutton
-	closetext
-	end
-
-.check_fossil_step_count_amber
-	callasm FossilCheckStepCount
-	iftrue .give_aerodactyl
-	writetext RuinsOfAlphResearchCenterFossilScientistNotDoneYetText
-	waitbutton
-	closetext
-	end
-
-
-.give_omanyte
-	writetext RuinsOfAlphResearchCenterFossilScientistDoneOmanyteText
-	waitbutton
-	readvar VAR_PARTYCOUNT
-	ifequal PARTY_LENGTH, .No_Room
-	writetext RuinsOfAlphResearchCenterPlayerReceivedOmanyteText
-	playsound SFX_CAUGHT_MON
-	waitsfx
-;	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
-;	iftrue .omanyte_challenge_mode
-	givepoke OMANYTE, 20
-;	jump .omanyte_finish
-;.omanyte_challenge_mode
-;	givepoke OMANYTE, 25
-;.omanyte_finish
-	writetext RuinsOfAlphResearchCenterFossilScientistTakeGoodCareOfItText
-	waitbutton
-	closetext
-	clearevent EVENT_FOSSIL_SCIENTIST_WORKING_HELIX
-	end
-
-.give_kabuto
-	writetext RuinsOfAlphResearchCenterFossilScientistDoneKabutoText
-	waitbutton
-	readvar VAR_PARTYCOUNT
-	ifequal PARTY_LENGTH, .No_Room
-	writetext RuinsOfAlphResearchCenterPlayerReceivedKabutoText
-	playsound SFX_CAUGHT_MON
-	waitsfx
-;	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
-;	iftrue .kabuto_challenge_mode
-	givepoke KABUTO, 20
-;	jump .kabuto_finish
-;.kabuto_challenge_mode
-;	givepoke KABUTO, 25
-;.kabuto_finish
-	writetext RuinsOfAlphResearchCenterFossilScientistTakeGoodCareOfItText
-	waitbutton
-	closetext
-	clearevent EVENT_FOSSIL_SCIENTIST_WORKING_DOME
-	end
-
-.give_aerodactyl
-	writetext RuinsOfAlphResearchCenterFossilScientistDoneAerodactylText
-	waitbutton
-	readvar VAR_PARTYCOUNT
-	ifequal PARTY_LENGTH, .No_Room
-	writetext RuinsOfAlphResearchCenterPlayerReceivedAerodactylText
-	playsound SFX_CAUGHT_MON
-	waitsfx
-;	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
-;	iftrue .aerodactyl_challenge_mode
-	givepoke AERODACTYL, 20
-;	jump .aerodactyl_finish
-;.aerodactyl_challenge_mode
-;	givepoke AERODACTYL, 25
-;.aerodactyl_finish
-	writetext RuinsOfAlphResearchCenterFossilScientistTakeGoodCareOfItText
-	waitbutton
-	closetext
-	clearevent EVENT_FOSSIL_SCIENTIST_WORKING_AMBER
-	end
-
-.No_Room
-	writetext RuinsOfAlphResearchCenterFossilScientistNoRoomForFossilPokemonText
-	waitbutton
-	closetext
-	end
-
-
-.own_helix
-	checkitem DOME_FOSSIL
-	iftrue .own_helix_and_dome
-	checkitem OLD_AMBER
-	iftrue .ask_helix_amber
-	writetext RuinsOfAlphResearchCenterFossilScientistIsHelixFossilText
-	yesorno
-	iftrue GaveHelixFossil
-	jump .no_fossil
-
-.own_dome
-	checkitem OLD_AMBER
-	iftrue .ask_dome_amber
-	writetext RuinsOfAlphResearchCenterFossilScientistIsDomeFossilText
-	yesorno
-	iftrue GaveDomeFossil
-	jump .no_fossil
-
-.own_helix_and_dome
-	checkitem OLD_AMBER
-	iftrue .ask_helix_dome_amber
-	loadmenu HelixDomeMenuDataHeader
-	verticalmenu
-	closewindow
-	ifequal $1, IsHelixFossil
-	ifequal $2, IsDomeFossil
-	jump .no_fossil
-
-.ask_helix_amber
-	loadmenu HelixAmberMenuDataHeader
-	verticalmenu
-	closewindow
-	ifequal $1, IsHelixFossil
-	ifequal $2, IsOldAmber
-	jump .no_fossil
-
-.ask_dome_amber
-	loadmenu DomeAmberMenuDataHeader
-	verticalmenu
-	closewindow
-	ifequal $1, IsDomeFossil
-	ifequal $2, IsOldAmber
-	jump .no_fossil
-
-.ask_helix_dome_amber
-	loadmenu HelixDomeAmberMenuDataHeader
-	verticalmenu
-	closewindow
-	ifequal $1, IsHelixFossil
-	ifequal $2, IsDomeFossil
-	ifequal $3, IsOldAmber
-.no_fossil:
-	writetext RuinsOfAlphResearchCenterFossilScientistNoFossilText
-	waitbutton
-	closetext
-	end
-
-HelixDomeMenuDataHeader:
-	db $40 ; flags
-	db 04, 00 ; start coords
-	db 11, 15 ; end coords
-	dw .MenuData2
-	db 1 ; default option
-
-.MenuData2:
-	db $80 ; flags
-	db 3 ; items
-	db "HELIX FOSSIL@"
-	db "DOME FOSSIL@"
-	db "CANCEL@"
-
-HelixAmberMenuDataHeader:
-	db $40 ; flags
-	db 04, 00 ; start coords
-	db 11, 15 ; end coords
-	dw .MenuData2
-	db 1 ; default option
-
-.MenuData2:
-	db $80 ; flags
-	db 3 ; items
-	db "HELIX FOSSIL@"
-	db "OLD AMBER@"
-	db "CANCEL@"
-
-DomeAmberMenuDataHeader:
-	db $40 ; flags
-	db 04, 00 ; start coords
-	db 11, 14 ; end coords
-	dw .MenuData2
-	db 1 ; default option
-
-.MenuData2:
-	db $80 ; flags
-	db 3 ; items
-	db "DOME FOSSIL@"
-	db "OLD AMBER@"
-	db "CANCEL@"
-
-HelixDomeAmberMenuDataHeader:
-	db $40 ; flags
-	db 02, 00 ; start coords
-	db 11, 15 ; end coords
-	dw .MenuData2
-	db 1 ; default option
-
-.MenuData2:
-	db $80 ; flags
-	db 4 ; items
-	db "HELIX FOSSIL@"
-	db "DOME FOSSIL@"
-	db "OLD AMBER@"
-	db "CANCEL@"
-
-IsHelixFossil:
-	writetext RuinsOfAlphResearchCenterFossilScientistIsHelixFossilText
-	yesorno
-	iffalse DeniedRessurection
-	jump GaveHelixFossil
-
-IsDomeFossil:
-	writetext RuinsOfAlphResearchCenterFossilScientistIsDomeFossilText
-	yesorno
-	iffalse DeniedRessurection
-	jump GaveDomeFossil
-
-IsOldAmber:
-	writetext RuinsOfAlphResearchCenterFossilScientistIsOldAmberText
-	yesorno
-	iffalse DeniedRessurection
-	jump GaveOldAmber
-
-DeniedRessurection:
-	writetext RuinsOfAlphResearchCenterFossilScientistNoFossilText
-	waitbutton
-	closetext
-	end
-
-GaveHelixFossil:
-	writetext RuinsOfAlphResearchCenterFossilScientistGaveFossilText
-	waitbutton
-	closetext
-	takeitem HELIX_FOSSIL
-	setevent EVENT_FOSSIL_SCIENTIST_WORKING_HELIX
-	callasm FossilSetStepCount
-	end
-
-GaveDomeFossil:
-	writetext RuinsOfAlphResearchCenterFossilScientistGaveFossilText
-	waitbutton
-	closetext
-	takeitem DOME_FOSSIL
-	setevent EVENT_FOSSIL_SCIENTIST_WORKING_DOME
-	callasm FossilSetStepCount
-	end
-
-GaveOldAmber:
-	writetext RuinsOfAlphResearchCenterFossilScientistGaveFossilText
-	waitbutton
-	closetext
-	takeitem OLD_AMBER
-	setevent EVENT_FOSSIL_SCIENTIST_WORKING_AMBER
-	callasm FossilSetStepCount
-	end
-
-
+;.check_fossil_step_count_helix
+;	callasm FossilCheckStepCount
+;	iftrue .give_omanyte
+;	writetext RuinsOfAlphResearchCenterFossilScientistNotDoneYetText
+;	waitbutton
+;	closetext
+;	end
+;
+;.check_fossil_step_count_dome
+;	callasm FossilCheckStepCount
+;	iftrue .give_kabuto
+;	writetext RuinsOfAlphResearchCenterFossilScientistNotDoneYetText
+;	waitbutton
+;	closetext
+;	end
+;
+;.check_fossil_step_count_amber
+;	callasm FossilCheckStepCount
+;	iftrue .give_aerodactyl
+;	writetext RuinsOfAlphResearchCenterFossilScientistNotDoneYetText
+;	waitbutton
+;	closetext
+;	end
+;
+;
+;.give_omanyte
+;	writetext RuinsOfAlphResearchCenterFossilScientistDoneOmanyteText
+;	waitbutton
+;	readvar VAR_PARTYCOUNT
+;	ifequal PARTY_LENGTH, .No_Room
+;	writetext RuinsOfAlphResearchCenterPlayerReceivedOmanyteText
+;	playsound SFX_CAUGHT_MON
+;	waitsfx
+;;	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
+;;	iftrue .omanyte_challenge_mode
+;	givepoke OMANYTE, 20
+;;	jump .omanyte_finish
+;;.omanyte_challenge_mode
+;;	givepoke OMANYTE, 25
+;;.omanyte_finish
+;	writetext RuinsOfAlphResearchCenterFossilScientistTakeGoodCareOfItText
+;	waitbutton
+;	closetext
+;	clearevent EVENT_FOSSIL_SCIENTIST_WORKING_HELIX
+;	end
+;
+;.give_kabuto
+;	writetext RuinsOfAlphResearchCenterFossilScientistDoneKabutoText
+;	waitbutton
+;	readvar VAR_PARTYCOUNT
+;	ifequal PARTY_LENGTH, .No_Room
+;	writetext RuinsOfAlphResearchCenterPlayerReceivedKabutoText
+;	playsound SFX_CAUGHT_MON
+;	waitsfx
+;;	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
+;;	iftrue .kabuto_challenge_mode
+;	givepoke KABUTO, 20
+;;	jump .kabuto_finish
+;;.kabuto_challenge_mode
+;;	givepoke KABUTO, 25
+;;.kabuto_finish
+;	writetext RuinsOfAlphResearchCenterFossilScientistTakeGoodCareOfItText
+;	waitbutton
+;	closetext
+;	clearevent EVENT_FOSSIL_SCIENTIST_WORKING_DOME
+;	end
+;
+;.give_aerodactyl
+;	writetext RuinsOfAlphResearchCenterFossilScientistDoneAerodactylText
+;	waitbutton
+;	readvar VAR_PARTYCOUNT
+;	ifequal PARTY_LENGTH, .No_Room
+;	writetext RuinsOfAlphResearchCenterPlayerReceivedAerodactylText
+;	playsound SFX_CAUGHT_MON
+;	waitsfx
+;;	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
+;;	iftrue .aerodactyl_challenge_mode
+;	givepoke AERODACTYL, 20
+;;	jump .aerodactyl_finish
+;;.aerodactyl_challenge_mode
+;;	givepoke AERODACTYL, 25
+;;.aerodactyl_finish
+;	writetext RuinsOfAlphResearchCenterFossilScientistTakeGoodCareOfItText
+;	waitbutton
+;	closetext
+;	clearevent EVENT_FOSSIL_SCIENTIST_WORKING_AMBER
+;	end
+;
+;.No_Room
+;	writetext RuinsOfAlphResearchCenterFossilScientistNoRoomForFossilPokemonText
+;	waitbutton
+;	closetext
+;	end
+;
+;.own_helix
+;	checkitem DOME_FOSSIL
+;	iftrue .own_helix_and_dome
+;	checkitem OLD_AMBER
+;	iftrue .ask_helix_amber
+;	writetext RuinsOfAlphResearchCenterFossilScientistIsHelixFossilText
+;	yesorno
+;	iftrue GaveHelixFossil
+;	jump .no_fossil
+;
+;.own_dome
+;	checkitem OLD_AMBER
+;	iftrue .ask_dome_amber
+;	writetext RuinsOfAlphResearchCenterFossilScientistIsDomeFossilText
+;	yesorno
+;	iftrue GaveDomeFossil
+;	jump .no_fossil
+;
+;.own_helix_and_dome
+;	checkitem OLD_AMBER
+;	iftrue .ask_helix_dome_amber
+;	loadmenu HelixDomeMenuDataHeader
+;	verticalmenu
+;	closewindow
+;	ifequal $1, IsHelixFossil
+;	ifequal $2, IsDomeFossil
+;	jump .no_fossil
+;
+;.ask_helix_amber
+;	loadmenu HelixAmberMenuDataHeader
+;	verticalmenu
+;	closewindow
+;	ifequal $1, IsHelixFossil
+;	ifequal $2, IsOldAmber
+;	jump .no_fossil
+;
+;.ask_dome_amber
+;	loadmenu DomeAmberMenuDataHeader
+;	verticalmenu
+;	closewindow
+;	ifequal $1, IsDomeFossil
+;	ifequal $2, IsOldAmber
+;	jump .no_fossil
+;
+;.ask_helix_dome_amber
+;	loadmenu HelixDomeAmberMenuDataHeader
+;	verticalmenu
+;	closewindow
+;	ifequal $1, IsHelixFossil
+;	ifequal $2, IsDomeFossil
+;	ifequal $3, IsOldAmber
+;.no_fossil:
+;	writetext RuinsOfAlphResearchCenterFossilScientistNoFossilText
+;	waitbutton
+;	closetext
+;	end
+;
+;HelixDomeMenuDataHeader:
+;	db $40 ; flags
+;	db 04, 00 ; start coords
+;	db 11, 15 ; end coords
+;	dw .MenuData2
+;	db 1 ; default option
+;
+;.MenuData2:
+;	db $80 ; flags
+;	db 3 ; items
+;	db "HELIX FOSSIL@"
+;	db "DOME FOSSIL@"
+;	db "CANCEL@"
+;
+;HelixAmberMenuDataHeader:
+;	db $40 ; flags
+;	db 04, 00 ; start coords
+;	db 11, 15 ; end coords
+;	dw .MenuData2
+;	db 1 ; default option
+;
+;.MenuData2:
+;	db $80 ; flags
+;	db 3 ; items
+;	db "HELIX FOSSIL@"
+;	db "OLD AMBER@"
+;	db "CANCEL@"
+;
+;DomeAmberMenuDataHeader:
+;	db $40 ; flags
+;	db 04, 00 ; start coords
+;	db 11, 14 ; end coords
+;	dw .MenuData2
+;	db 1 ; default option
+;
+;.MenuData2:
+;	db $80 ; flags
+;	db 3 ; items
+;	db "DOME FOSSIL@"
+;	db "OLD AMBER@"
+;	db "CANCEL@"
+;
+;HelixDomeAmberMenuDataHeader:
+;	db $40 ; flags
+;	db 02, 00 ; start coords
+;	db 11, 15 ; end coords
+;	dw .MenuData2
+;	db 1 ; default option
+;
+;.MenuData2:
+;	db $80 ; flags
+;	db 4 ; items
+;	db "HELIX FOSSIL@"
+;	db "DOME FOSSIL@"
+;	db "OLD AMBER@"
+;	db "CANCEL@"
+;
+;IsHelixFossil:
+;	writetext RuinsOfAlphResearchCenterFossilScientistIsHelixFossilText
+;	yesorno
+;	iffalse DeniedRessurection
+;	jump GaveHelixFossil
+;
+;IsDomeFossil:
+;	writetext RuinsOfAlphResearchCenterFossilScientistIsDomeFossilText
+;	yesorno
+;	iffalse DeniedRessurection
+;	jump GaveDomeFossil
+;
+;IsOldAmber:
+;	writetext RuinsOfAlphResearchCenterFossilScientistIsOldAmberText
+;	yesorno
+;	iffalse DeniedRessurection
+;	jump GaveOldAmber
+;
+;DeniedRessurection:
+;	writetext RuinsOfAlphResearchCenterFossilScientistNoFossilText
+;	waitbutton
+;	closetext
+;	end
+;
+;GaveHelixFossil:
+;	writetext RuinsOfAlphResearchCenterFossilScientistGaveFossilText
+;	waitbutton
+;	closetext
+;	takeitem HELIX_FOSSIL
+;	setevent EVENT_FOSSIL_SCIENTIST_WORKING_HELIX
+;	callasm FossilSetStepCount
+;	end
+;
+;GaveDomeFossil:
+;	writetext RuinsOfAlphResearchCenterFossilScientistGaveFossilText
+;	waitbutton
+;	closetext
+;	takeitem DOME_FOSSIL
+;	setevent EVENT_FOSSIL_SCIENTIST_WORKING_DOME
+;	callasm FossilSetStepCount
+;	end
+;
+;GaveOldAmber:
+;	writetext RuinsOfAlphResearchCenterFossilScientistGaveFossilText
+;	waitbutton
+;	closetext
+;	takeitem OLD_AMBER
+;	setevent EVENT_FOSSIL_SCIENTIST_WORKING_AMBER
+;	callasm FossilSetStepCount
+;	end
+;
 RuinsOfAlphResearchCenterScientist3Script:
 	faceplayer
 	opentext
