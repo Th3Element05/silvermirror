@@ -780,7 +780,7 @@ SwarmGrassWildMons:
 	db 15, DITTO      ;  1% chance
 
 ; Golbat swarm
-	map_id VICTORY_ROAD
+	map_id VICTORY_ROAD_3F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 	db 15, DITTO      ; 20% chance
