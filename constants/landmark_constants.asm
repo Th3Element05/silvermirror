@@ -53,6 +53,7 @@
 	const LANDMARK_ROUTE_45          ; 31
 	const LANDMARK_DARK_CAVE         ; 32
 	const LANDMARK_ROUTE_46          ; 33
+	const LANDMARK_ROUTE_27_WEST     ; silvermirror+
 	const LANDMARK_SILVER_CAVE       ; 34
 DEF KANTO_LANDMARK EQU const_value
 	const LANDMARK_PALLET_TOWN       ; 35
