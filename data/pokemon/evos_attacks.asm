@@ -220,20 +220,21 @@ BeedrillEvosAttacks:
 	db 40, AGILITY
 	db 0 ; no more level-up moves
 
-PidgeyEvosAttacks:
+PidgeyEvosAttacks: ;silvermirror modified
 	db EVOLVE_LEVEL, 18, PIDGEOTTO
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 5, SAND_ATTACK
 	db 9, GUST
 	db 15, QUICK_ATTACK
-	db 21, WHIRLWIND
-	db 29, WING_ATTACK
-	db 37, AGILITY
-	db 47, MIRROR_MOVE
+;	db 21, WHIRLWIND
+	db 21, WING_ATTACK
+	db 29, AGILITY
+	db 37, MIRROR_MOVE
+	db 47, WHIRLWIND
 	db 0 ; no more level-up moves
 
-PidgeottoEvosAttacks:
+PidgeottoEvosAttacks: ;silvermirror modified
 	db EVOLVE_LEVEL, 36, PIDGEOT
 	db 0 ; no more evolutions
 	db 1, TACKLE
@@ -242,13 +243,14 @@ PidgeottoEvosAttacks:
 	db 5, SAND_ATTACK
 	db 9, GUST
 	db 15, QUICK_ATTACK
-	db 23, WHIRLWIND
-	db 33, WING_ATTACK
-	db 43, AGILITY
-	db 55, MIRROR_MOVE
+;	db 23, WHIRLWIND
+	db 23, WING_ATTACK
+	db 33, AGILITY
+	db 43, MIRROR_MOVE
+	db 55, WHIRLWIND
 	db 0 ; no more level-up moves
 
-PidgeotEvosAttacks:
+PidgeotEvosAttacks: ;silvermirror modified
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, SAND_ATTACK
@@ -257,10 +259,11 @@ PidgeotEvosAttacks:
 	db 5, SAND_ATTACK
 	db 9, GUST
 	db 15, QUICK_ATTACK
-	db 23, WHIRLWIND
-	db 33, WING_ATTACK
-	db 46, AGILITY
-	db 61, MIRROR_MOVE
+;	db 23, WHIRLWIND
+	db 23, WING_ATTACK
+	db 33, AGILITY
+	db 46, MIRROR_MOVE
+	db 61, WHIRLWIND
 	db 0 ; no more level-up moves
 
 RattataEvosAttacks:
@@ -290,8 +293,8 @@ RaticateEvosAttacks:
 SpearowEvosAttacks:
 	db EVOLVE_LEVEL, 20, FEAROW
 	db 0 ; no more evolutions
-	db 1, PECK
 	db 1, GROWL
+	db 1, PECK
 	db 7, LEER
 	db 13, FURY_ATTACK
 	db 25, PURSUIT
@@ -302,8 +305,8 @@ SpearowEvosAttacks:
 
 FearowEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, PECK
 	db 1, GROWL
+	db 1, PECK
 	db 1, LEER
 	db 1, FURY_ATTACK
 	db 7, LEER
@@ -365,12 +368,13 @@ RaichuEvosAttacks:
 	db 1, THUNDERBOLT
 	db 0 ; no more level-up moves
 
-SandshrewEvosAttacks:
+SandshrewEvosAttacks: ;silvermirror modified
 	db EVOLVE_LEVEL, 22, SANDSLASH
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 6, DEFENSE_CURL
-	db 11, SAND_ATTACK
+	db 10, SAND_ATTACK
+;	db 11, SAND_ATTACK
 	db 17, POISON_STING
 	db 23, SLASH
 	db 30, SWIFT
@@ -378,13 +382,14 @@ SandshrewEvosAttacks:
 	db 45, SANDSTORM
 	db 0 ; no more level-up moves
 
-SandslashEvosAttacks:
+SandslashEvosAttacks: ;silvermirror modified
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, DEFENSE_CURL
 	db 1, SAND_ATTACK
 	db 6, DEFENSE_CURL
-	db 11, SAND_ATTACK
+	db 10, SAND_ATTACK
+;	db 11, SAND_ATTACK
 	db 17, POISON_STING
 	db 24, SLASH
 	db 33, SWIFT
@@ -485,14 +490,14 @@ ClefableEvosAttacks:
 	db 1, MOONLIGHT
 	db 0 ; no more level-up moves
 
-VulpixEvosAttacks:
+VulpixEvosAttacks: ;silvermirror modified
 	db EVOLVE_ITEM, FIRE_STONE, NINETALES
 	db 0 ; no more evolutions
-	db 1, EMBER
 	db 1, TAIL_WHIP
-	db 7, QUICK_ATTACK
-	db 13, ROAR
-	db 19, CONFUSE_RAY
+	db 1, QUICK_ATTACK
+	db 7, EMBER
+	db 13, CONFUSE_RAY
+	db 21, ROAR
 	db 25, SAFEGUARD
 	db 31, FLAMETHROWER
 	db 37, FIRE_SPIN
@@ -769,8 +774,8 @@ PrimeapeEvosAttacks:
 GrowlitheEvosAttacks:
 	db EVOLVE_ITEM, FIRE_STONE, ARCANINE
 	db 0 ; no more evolutions
-	db 1, BITE
 	db 1, ROAR
+	db 1, BITE
 	db 9, EMBER
 	db 18, LEER
 	db 26, TAKE_DOWN
@@ -1200,13 +1205,12 @@ GrimerEvosAttacks:
 
 MukEvosAttacks:
 	db 0 ; no more evolutions
-	; moves are not sorted by level
 	db 1, POISON_GAS
 	db 1, POUND
 	db 1, HARDEN
-	db 33, HARDEN
-	db 37, DISABLE
-	db 45, SLUDGE
+	db 5, HARDEN
+	db 10, DISABLE
+	db 16, SLUDGE
 	db 23, MINIMIZE
 	db 31, SCREECH
 	db 45, ACID_ARMOR
@@ -1236,45 +1240,90 @@ CloysterEvosAttacks:
 	db 41, SPIKE_CANNON
 	db 0 ; no more level-up moves
 
-GastlyEvosAttacks:
+;GastlyEvosAttacks:
+;	db EVOLVE_LEVEL, 25, HAUNTER
+;	db 0 ; no more evolutions
+;	db 1, HYPNOSIS
+;	db 1, LICK
+;	db 8, SPITE
+;	db 13, MEAN_LOOK
+;	db 16, CURSE
+;	db 21, NIGHT_SHADE
+;	db 28, CONFUSE_RAY
+;	db 33, DREAM_EATER
+;	db 36, DESTINY_BOND
+;	db 0 ; no more level-up moves
+;
+GastlyEvosAttacks: ;silvermirror modified
 	db EVOLVE_LEVEL, 25, HAUNTER
 	db 0 ; no more evolutions
 	db 1, HYPNOSIS
+	db 1, SPITE
 	db 1, LICK
-	db 8, SPITE
-	db 13, MEAN_LOOK
-	db 16, CURSE
-	db 21, NIGHT_SHADE
+	db 8, NIGHT_SHADE
+	db 13, CURSE
+	db 16, HYPNOSIS
+	db 21, MEAN_LOOK
 	db 28, CONFUSE_RAY
 	db 33, DREAM_EATER
 	db 36, DESTINY_BOND
 	db 0 ; no more level-up moves
 
-HaunterEvosAttacks:
+;HaunterEvosAttacks:
+;	db EVOLVE_TRADE, -1, GENGAR
+;	db EVOLVE_ITEM, LINKING_CORD, GENGAR
+;	db 0 ; no more evolutions
+;	db 1, HYPNOSIS
+;	db 1, LICK
+;	db 1, SPITE
+;	db 8, SPITE
+;	db 13, MEAN_LOOK
+;	db 16, CURSE
+;	db 21, NIGHT_SHADE
+;	db 31, CONFUSE_RAY
+;	db 39, DREAM_EATER
+;	db 48, DESTINY_BOND
+;	db 0 ; no more level-up moves
+;
+HaunterEvosAttacks: ;silvermirror modified
 	db EVOLVE_TRADE, -1, GENGAR
 	db EVOLVE_ITEM, LINKING_CORD, GENGAR
 	db 0 ; no more evolutions
 	db 1, HYPNOSIS
-	db 1, LICK
 	db 1, SPITE
-	db 8, SPITE
-	db 13, MEAN_LOOK
-	db 16, CURSE
-	db 21, NIGHT_SHADE
+	db 1, LICK
+	db 8, NIGHT_SHADE
+	db 13, CURSE
+	db 16, HYPNOSIS
+	db 21, MEAN_LOOK
 	db 31, CONFUSE_RAY
 	db 39, DREAM_EATER
 	db 48, DESTINY_BOND
 	db 0 ; no more level-up moves
 
-GengarEvosAttacks:
+;GengarEvosAttacks:
+;	db 0 ; no more evolutions
+;	db 1, HYPNOSIS
+;	db 1, LICK
+;	db 1, SPITE
+;	db 8, SPITE
+;	db 13, MEAN_LOOK
+;	db 16, CURSE
+;	db 21, NIGHT_SHADE
+;	db 31, CONFUSE_RAY
+;	db 39, DREAM_EATER
+;	db 48, DESTINY_BOND
+;	db 0 ; no more level-up moves
+;
+GengarEvosAttacks: ;silvermirror modified
 	db 0 ; no more evolutions
 	db 1, HYPNOSIS
-	db 1, LICK
 	db 1, SPITE
-	db 8, SPITE
-	db 13, MEAN_LOOK
-	db 16, CURSE
-	db 21, NIGHT_SHADE
+	db 1, LICK
+	db 8, NIGHT_SHADE
+	db 13, CURSE
+	db 16, HYPNOSIS
+	db 21, MEAN_LOOK
 	db 31, CONFUSE_RAY
 	db 39, DREAM_EATER
 	db 48, DESTINY_BOND
@@ -1708,9 +1757,9 @@ JynxEvosAttacks:
 
 ElectabuzzEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, QUICK_ATTACK
 	db 1, LEER
 	db 1, THUNDERPUNCH
+	db 1, QUICK_ATTACK
 	db 9, THUNDERPUNCH
 	db 17, LIGHT_SCREEN
 	db 25, SWIFT
@@ -1941,54 +1990,57 @@ AerodactylEvosAttacks:
 	db 50, HYPER_BEAM
 	db 0 ; no more level-up moves
 
-SnorlaxEvosAttacks:
+SnorlaxEvosAttacks: ;silvermirror modified
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 8, AMNESIA
-	db 15, DEFENSE_CURL
-	db 22, BELLY_DRUM
-	db 29, HEADBUTT
-	db 36, SNORE
-	db 36, REST
-	db 43, BODY_SLAM
-	db 50, ROLLOUT
-	db 57, HYPER_BEAM
+	db 14, DEFENSE_CURL
+	db 21, BELLY_DRUM
+	db 26, HEADBUTT
+	db 32, SNORE
+	db 32, REST
+	db 39, BODY_SLAM
+	db 46, ROLLOUT
+	db 53, HYPER_BEAM
 	db 0 ; no more level-up moves
 
-ArticunoEvosAttacks:
+ArticunoEvosAttacks: ;silvermirror modified
 	db 0 ; no more evolutions
 	db 1, GUST
-	db 1, POWDER_SNOW
-	db 13, MIST
-	db 25, AGILITY
-	db 37, MIND_READER
-	db 49, ICE_BEAM
-	db 61, REFLECT
-	db 73, BLIZZARD
+	db 1, MIST
+	db 12, POWDER_SNOW
+	db 23, AGILITY
+	db 34, MIND_READER
+	db 45, RAZOR_WIND
+	db 56, REFLECT
+	db 67, SKY_ATTACK
+	db 78, BLIZZARD
 	db 0 ; no more level-up moves
 
-ZapdosEvosAttacks:
+ZapdosEvosAttacks: ;silvermirror modified
 	db 0 ; no more evolutions
 	db 1, PECK
-	db 1, THUNDERSHOCK
-	db 13, THUNDER_WAVE
-	db 25, AGILITY
-	db 37, DETECT
-	db 49, DRILL_PECK
-	db 61, LIGHT_SCREEN
-	db 73, THUNDER
+	db 1, THUNDER_WAVE
+	db 12, THUNDERSHOCK
+	db 23, AGILITY
+	db 34, DETECT
+	db 45, DRILL_PECK
+	db 56, LIGHT_SCREEN
+	db 67, SKY_ATTACK
+	db 78, THUNDER
 	db 0 ; no more level-up moves
 
-MoltresEvosAttacks:
+MoltresEvosAttacks: ;silvermirror modified
 	db 0 ; no more evolutions
-	db 1, WING_ATTACK
-	db 1, EMBER
-	db 13, FIRE_SPIN
-	db 25, AGILITY
-	db 37, ENDURE
-	db 49, FLAMETHROWER
-	db 61, SAFEGUARD
-	db 73, SKY_ATTACK
+	db 1, PECK
+	db 1, FIRE_SPIN
+	db 12, EMBER
+	db 23, AGILITY
+	db 34, ENDURE
+	db 45, WING_ATTACK
+	db 56, SAFEGUARD
+	db 67, SKY_ATTACK
+	db 78, FIRE_BLAST
 	db 0 ; no more level-up moves
 
 DratiniEvosAttacks:
@@ -3372,3 +3424,4 @@ MissingnoEvosAttacks:
 	db 1, WATER_GUN
 	db 1, SKY_ATTACK
 	db 0 ; no more level-up moves
+	
