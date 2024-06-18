@@ -57,7 +57,7 @@ Route16SnorlaxBattleScript:
 	cry SNORLAX
 	closetext
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
-	loadwildmon SNORLAX, 30
+	loadwildmon SNORLAX, 32
 	startbattle
 	disappear ROUTE16_SNORLAX
 	setevent EVENT_WOKE_SNORLAX
