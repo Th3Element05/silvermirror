@@ -25,9 +25,12 @@ HandleStoneTable::
 	ld hl, OBJECT_TILE
 	add hl, de
 	ld a, [hl]
+	cp COLL_BUTTON           ;silvermirror, stone button
+	jr z, .button        ;silvermirror, stone button
 	call CheckPitTile
 	jr nz, .next
 
+.button                  ;silvermirror, stone button
 	ld hl, OBJECT_WALKING
 	add hl, de
 	ld a, [hl]
