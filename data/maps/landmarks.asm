@@ -59,6 +59,7 @@ Landmarks:
 	landmark 132,  64, Route45Name
 	landmark 112,  72, DarkCaveName
 	landmark 124,  88, Route46Name
+	landmark 148, 100, Route27WestName
 	landmark 148,  68, SilverCaveName
 	assert_table_length KANTO_LANDMARK
 	landmark  52, 100, PalletTownName
@@ -194,6 +195,7 @@ Route24Name:         db "ROUTE 24@"
 Route25Name:         db "ROUTE 25@"
 Route26Name:         db "ROUTE 26@"
 Route27Name:         db "ROUTE 27@"
+Route27WestName:     db "ROUTE 27@"
 Route28Name:         db "ROUTE 28@"
 Route29Name:         db "ROUTE 29@"
 Route30Name:         db "ROUTE 30@"
