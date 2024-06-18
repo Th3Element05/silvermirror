@@ -3199,7 +3199,6 @@ wTeamRocketBaseB2FSceneID::                       db
 wTeamRocketBaseB3FSceneID::                       db
 wGoldenrodUndergroundSwitchRoomEntrancesSceneID:: db
 wSilverCaveRoom3SceneID::                         db
-wVictoryRoadSceneID::                             db
 wDragonsDenB1FSceneID::                           db
 wDragonShrineSceneID::                            db
 wOlivinePortSceneID::                             db
@@ -3210,8 +3209,9 @@ wPokemonMansionB1FSceneID::                       db
 wSafariZoneEntranceSceneID::                      db
 wRoute42EcruteakGateSceneID::                     db
 wRoute39SceneID::                                 db
-;wPokecenter2FSceneID::                            db ; unused in ;silvermirror ds 19
-;wTradeCenterSceneID::                             db ; unused in ;silvermirror ds 20
+;wVictoryRoadSceneID::                             db ; unused in ;silvermirror ds 19
+;wPokecenter2FSceneID::                            db ; unused in ;silvermirror ds 20
+;wTradeCenterSceneID::                             db ; unused in ;silvermirror ds
 ;wColosseumSceneID::                               db ; unused in ;silvermirror ds 
 ;wTimeCapsuleSceneID::                             db ; unused in ;silvermirror ds 
 ;wPowerPlantSceneID::                              db ; unused in ;silvermirror ds 
@@ -3222,10 +3222,10 @@ wRoute39SceneID::                                 db
 ;wFastShip1FSceneID::                              db ; unused in ;silvermirror ds 
 ;wFastShipB1FSceneID::                             db ; unused in ;silvermirror ds 
 ;wRadioTower5FSceneID::                            db ; unused in ;silvermirror ds
-;wMobileTradeRoomSceneID::                         db ; unused in ;silvermirror ds 31
-;wMobileBattleRoomSceneID::                        db ; unused in ;silvermirror ds 32
+;wMobileTradeRoomSceneID::                         db ; unused in ;silvermirror ds 32
+;wMobileBattleRoomSceneID::                        db ; unused in ;silvermirror ds 33
 
-	ds 32 ;silvermirror -ds 43 +ds 32
+	ds 33 ;silvermirror -ds 43 +ds 33
 
 ; fight counts
 wJackFightCount::    db

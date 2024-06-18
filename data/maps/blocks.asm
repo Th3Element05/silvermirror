@@ -975,8 +975,17 @@ UndergroundPathEW_Blocks:              ;silvermirror+
 Route39Barn_Blocks:
 	INCBIN "maps/Route39Barn.blk"
 
-VictoryRoad_Blocks:
-	INCBIN "maps/VictoryRoad.blk"
+;VictoryRoad_Blocks:
+;	INCBIN "maps/VictoryRoad.blk"
+
+VictoryRoad1F_Blocks:
+	INCBIN "maps/VictoryRoad1F.blk"
+
+VictoryRoad2F_Blocks:
+	INCBIN "maps/VictoryRoad2F.blk"
+
+VictoryRoad3F_Blocks:
+	INCBIN "maps/VictoryRoad3F.blk"
 
 Route23_Blocks:
 	INCBIN "maps/Route23.blk"

@@ -90,7 +90,6 @@ MapScenes::
 	scene_var TEAM_ROCKET_BASE_B3F,                        wTeamRocketBaseB3FSceneID
 	scene_var GOLDENROD_UNDERGROUND_SWITCH_ROOM_ENTRANCES, wGoldenrodUndergroundSwitchRoomEntrancesSceneID
 	scene_var SILVER_CAVE_ROOM_3,                          wSilverCaveRoom3SceneID ; unused
-	scene_var VICTORY_ROAD,                                wVictoryRoadSceneID
 	scene_var DRAGONS_DEN_B1F,                             wDragonsDenB1FSceneID
 	scene_var DRAGON_SHRINE,                               wDragonShrineSceneID
 	scene_var OLIVINE_PORT,                                wOlivinePortSceneID
@@ -101,6 +100,7 @@ MapScenes::
 	scene_var SAFARI_ZONE_ENTRANCE,                        wSafariZoneEntranceSceneID ; KEEP in silvermirror
 	scene_var ROUTE_42_ECRUTEAK_GATE,                      wRoute42EcruteakGateSceneID
 	scene_var ROUTE_39,                                    wRoute39SceneID
+;	scene_var VICTORY_ROAD,                                wVictoryRoadSceneID
 ;	scene_var POKECENTER_2F,                               wPokecenter2FSceneID
 ;	scene_var TRADE_CENTER,                                wTradeCenterSceneID
 ;	scene_var COLOSSEUM,                                   wColosseumSceneID
