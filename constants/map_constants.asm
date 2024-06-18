@@ -463,7 +463,10 @@ ENDM
 	map_const POKEMON_MANSION_3F,                          15,  9 ; 38
 	map_const POKEMON_MANSION_B1F,                         15, 14 ; 39
 	map_const POWER_PLANT,                                 20, 18 ; 40 ; 10,  9 ; 40
-	map_const VICTORY_ROAD,                                10, 36 ; 41
+;	map_const VICTORY_ROAD,                                10, 36 ; 41
+	map_const VICTORY_ROAD_1F,                             13, 12 ; 41
+	map_const VICTORY_ROAD_2F,                             15, 12 ; 42
+	map_const VICTORY_ROAD_3F,                             15, 12 ; 43
 	map_const CERULEAN_CAVE_1F,                            20, 14 ; 42
 	map_const CERULEAN_CAVE_2F,                            20, 14 ; 43
 	map_const CERULEAN_CAVE_B1F,                           20, 14 ; 44
@@ -538,9 +541,9 @@ ENDM
 	map_const WHIRL_ISLAND_B2F,                            10, 18 ; 112
 	map_const WHIRL_ISLAND_LUGIA_CHAMBER,                  10,  9 ; 113
 	map_const SILVER_CAVE_ROOM_1,                          10, 18 ; 114
-	map_const SILVER_CAVE_ROOM_2,                          15, 19 ; 115
+	map_const SILVER_CAVE_ROOM_2,                          15, 17 ; 115
 	map_const SILVER_CAVE_ROOM_3,                          10, 18 ; 116
-	map_const SILVER_CAVE_ITEM_ROOMS,                      10, 17 ; 117
+	map_const SILVER_CAVE_ITEM_ROOMS,                      10,  9 ; 117
 	map_const DARK_CAVE_VIOLET_ENTRANCE,                   20, 18 ; 118
 	map_const DARK_CAVE_BLACKTHORN_ENTRANCE,               17, 18 ; 119
 	map_const DRAGONS_DEN_1F,                               5,  9 ; 120

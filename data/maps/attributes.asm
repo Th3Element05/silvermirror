@@ -487,7 +487,7 @@ ENDM
 	map_attributes WhirlIslandB2F, WHIRL_ISLAND_B2F, $2e, 0
 	map_attributes WhirlIslandLugiaChamber, WHIRL_ISLAND_LUGIA_CHAMBER, $0f, 0
 	map_attributes SilverCaveRoom1, SILVER_CAVE_ROOM_1, $09, 0
-	map_attributes SilverCaveRoom2, SILVER_CAVE_ROOM_2, $2E, 0
+	map_attributes SilverCaveRoom2, SILVER_CAVE_ROOM_2, $09, 0
 	map_attributes SilverCaveRoom3, SILVER_CAVE_ROOM_3, $09, 0
 	map_attributes SilverCaveItemRooms, SILVER_CAVE_ITEM_ROOMS, $09, 0
 	map_attributes DarkCaveVioletEntrance, DARK_CAVE_VIOLET_ENTRANCE, $09, 0
@@ -518,7 +518,10 @@ ENDM
 	map_attributes RockTunnelB1F, ROCK_TUNNEL_B1F, $09, 0
 ;	map_attributes SafariZoneFuchsiaGateBeta, SAFARI_ZONE_FUCHSIA_GATE_BETA, $00, 0
 ;	map_attributes SafariZoneBeta, SAFARI_ZONE_BETA, $13, 0
-	map_attributes VictoryRoad, VICTORY_ROAD, $1d, 0
+;	map_attributes VictoryRoad, VICTORY_ROAD, $1d, 0
+	map_attributes VictoryRoad1F, VICTORY_ROAD_1F, $09, 0
+	map_attributes VictoryRoad2F, VICTORY_ROAD_2F, $1d, 0
+	map_attributes VictoryRoad3F, VICTORY_ROAD_3F, $1d, 0
 	map_attributes EcruteakTinTowerEntrance, ECRUTEAK_TIN_TOWER_ENTRANCE, $00, 0
 	map_attributes WiseTriosRoom, WISE_TRIOS_ROOM, $00, 0
 	map_attributes EcruteakPokecenter1F, ECRUTEAK_POKECENTER_1F, $00, 0
