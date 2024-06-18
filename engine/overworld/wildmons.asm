@@ -356,7 +356,13 @@ ChooseWildEncounter:
 	jr z, .ok
 	cp BATTLETYPE_KANTO_LEGEND
 	jr z, .ok
-	cp BATTLETYPE_SUICUNE
+;	cp BATTLETYPE_SUICUNE
+;	jr z, .ok
+	cp BATTLETYPE_FORCESHINY
+	jr z, .ok
+; Don't boost wild Pokemon levels on Route 1
+	ld a, [wCurLandmark]
+	cp LANDMARK_ROUTE_1
 	jr z, .ok
 ;silvermirror
 ; If the Pokemon is encountered by surfing, we need to give the levels some variety.
