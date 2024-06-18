@@ -59,7 +59,7 @@ PowerPlantVoltorbTrapScript:
 	pause 20
 	closetext
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
-	loadwildmon VOLTORB, 37
+	loadwildmon VOLTORB, 30
 	startbattle
 	disappear LAST_TALKED
 	variablesprite SPRITE_VOLTORB_TRAP, SPRITE_POKE_BALL
@@ -74,7 +74,23 @@ PowerPlantElectrodeTrapScript:
 	cry ELECTRODE
 	pause 20
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
-	loadwildmon ELECTRODE, 40
+	loadwildmon ELECTRODE, 30
+	startbattle
+	disappear LAST_TALKED
+	variablesprite SPRITE_VOLTORB_TRAP, SPRITE_POKE_BALL
+	reloadmapafterbattle
+	end
+
+PowerPlantShinyVoltorbTrapScript:
+	variablesprite SPRITE_VOLTORB_TRAP, SPRITE_VOLTORB
+	special LoadUsedSpritesGFX
+	opentext
+	writetext PowerPlantBzzztText
+	cry VOLTORB
+	pause 20
+	closetext
+	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCESHINY
+	loadwildmon VOLTORB, 30
 	startbattle
 	disappear LAST_TALKED
 	variablesprite SPRITE_VOLTORB_TRAP, SPRITE_POKE_BALL
@@ -145,7 +161,7 @@ PowerPlant_MapEvents:
 	object_event 23, 34, SPRITE_VOLTORB_TRAP, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, PowerPlantVoltorbTrapScript, EVENT_POWER_PLANT_VOLTORB_3
 	object_event 18, 26, SPRITE_VOLTORB_TRAP, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, PowerPlantVoltorbTrapScript, EVENT_POWER_PLANT_VOLTORB_4
 	object_event 25, 28, SPRITE_VOLTORB_TRAP, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, PowerPlantVoltorbTrapScript, EVENT_POWER_PLANT_VOLTORB_5
-	object_event 37, 32, SPRITE_VOLTORB_TRAP, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, PowerPlantVoltorbTrapScript, EVENT_POWER_PLANT_VOLTORB_6
+	object_event 37, 32, SPRITE_VOLTORB_TRAP, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PowerPlantShinyVoltorbTrapScript, EVENT_POWER_PLANT_VOLTORB_6
 	object_event 27, 19, SPRITE_VOLTORB_TRAP, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, PowerPlantElectrodeTrapScript, EVENT_POWER_PLANT_ELECTRODE_1
 	object_event 21, 14, SPRITE_VOLTORB_TRAP, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, PowerPlantElectrodeTrapScript, EVENT_POWER_PLANT_ELECTRODE_2
 	object_event  8, 25, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_ITEMBALL, 0, PowerPlantCarbos, EVENT_POWER_PLANT_CARBOS
