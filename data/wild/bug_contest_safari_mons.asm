@@ -161,33 +161,33 @@ ContestSafariMonsNormal:
 	db 20, NIDORAN_F,     14, 30
 	db 20, EXEGGCUTE,     14, 30
 	db 10, TANGELA,       15, 30
-	db  9, DODUO,         14, 30
+	db  5, TANGELA,       15, 30
 	db  5, NIDORINO,      16, 30
 	db  5, NIDORINA,      16, 30
-	db  5, FARFETCH_D,    15, 30
-	db  5, TAUROS,        15, 30
+	db 10, FARFETCH_D,    15, 30
+	db  4, CHANSEY,       15, 30
 	db  1, CHANSEY,       15, 30
 ; day/eve
 	db 20, NIDORAN_M,     14, 30
 	db 20, NIDORAN_F,     14, 30
 	db 20, EXEGGCUTE,     14, 30
 	db 10, TANGELA,       15, 30
-	db  9, DODUO,         14, 30
+	db  5, TANGELA,       15, 30
 	db  5, NIDORINO,      16, 30
 	db  5, NIDORINA,      16, 30
-	db  5, FARFETCH_D,    15, 30
-	db  5, TAUROS,        15, 30
+	db 10, FARFETCH_D,    15, 30
+	db  4, CHANSEY,       15, 30
 	db  1, CHANSEY,       15, 30
 ; nite
 	db 20, NIDORAN_M,     14, 30
 	db 20, NIDORAN_F,     14, 30
 	db 20, EXEGGCUTE,     14, 30
 	db 10, TANGELA,       15, 30
-	db  9, DODUO,         14, 30
+	db  5, TANGELA,       15, 30
 	db  5, NIDORINO,      16, 30
 	db  5, NIDORINA,      16, 30
-	db  5, FARFETCH_D,    15, 30
-	db  5, TAUROS,        15, 30
+	db 10, FARFETCH_D,    15, 30
+	db  4, CHANSEY,       15, 30
 	db  1, CHANSEY,       15, 30
 	assert_table_length 30
 	
