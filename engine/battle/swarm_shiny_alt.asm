@@ -4,277 +4,146 @@ GenerateAltSwarmShiny:
 	ld a, [wSwarmMapNumber]
 	ld c, a
 	call GetWorldMapLocation
-	cp LANDMARK_ROUTE_35
-	jp z, .psyduck
-	cp LANDMARK_DARK_CAVE
-	jp z, .teddiursa
-	cp LANDMARK_ROUTE_32
-	jp z, .bellsprout
-	cp LANDMARK_MT_MORTAR
-	jp z, .machop
-	cp LANDMARK_ROUTE_38
-	jp z, .tauros
-	cp LANDMARK_OLIVINE_CITY
-	jp z, .corsola
-	cp LANDMARK_ROUTE_44
-	jp z, .lickitung
-	cp LANDMARK_SLOWPOKE_WELL
-	jp z, .slowpoke
-	cp LANDMARK_ROUTE_30
-	jp z, .weedle
-	cp LANDMARK_ROUTE_31
-	jp z, .ledyba
-	cp LANDMARK_ILEX_FOREST
-	jp z, .oddish
-	cp LANDMARK_ROUTE_29
-	jp z, .pineco
-	cp LANDMARK_ROUTE_34
-	jp z, .drowzee
-	cp LANDMARK_NATIONAL_PARK
-	jp z, .venonat
-	cp LANDMARK_ROUTE_36
-	jp z, .growlithe
-	cp LANDMARK_ROUTE_37
-	jp z, .stantler
-	cp LANDMARK_UNION_CAVE
-	jp z, .wooper
-	cp LANDMARK_ROUTE_33
-	jp z, .aipom
-	cp LANDMARK_BURNED_TOWER
-	jp z, .koffing
-	cp LANDMARK_ROUTE_41
-	jp z, .mantine
-	cp LANDMARK_ROUTE_42
-	jp z, .mareep
-	cp LANDMARK_ROUTE_43
-	jp z, .girafarig
-;	cp LANDMARK_ROUTE_48
-;	jp z, .houndour
-;	cp LANDMARK_CLIFF_CAVE
-;	jp z, .onix
-	cp LANDMARK_ICE_PATH
-	jp z, .sneasel
-	cp LANDMARK_ROUTE_45
-	jp z, .skarmory
-	cp LANDMARK_VICTORY_ROAD
-	jp z, .rhyhorn
-	cp LANDMARK_ROUTE_21
-	jp z, .mr_mime
-	cp LANDMARK_ROUTE_1
-	jp z, .raticate
-	cp LANDMARK_VIRIDIAN_FOREST
-	jp z, .bulbasaur
-	cp LANDMARK_ROUTE_22
-	jp z, .charmander
-	cp LANDMARK_MT_MOON
-	jp z, .clefairy
+	cp LANDMARK_ROUTE_3
+	jp z, .jigglypuff
 	cp LANDMARK_ROUTE_5
-	jp z, .noctowl
+	jp z, .snubbull
 	cp LANDMARK_ROUTE_6
 	jp z, .abra
-	cp LANDMARK_ROUTE_11
-	jp z, .pidgeotto
-	cp LANDMARK_ROUTE_25
-	jp z, .squirtle
-	cp LANDMARK_ROCK_TUNNEL
-	jp z, .kangaskhan
-	cp LANDMARK_ROUTE_10
-	jp z, .electabuzz
+	cp LANDMARK_ROUTE_7
+	jp z, .murkrow
 	cp LANDMARK_ROUTE_8
-	jp z, .tyrogue
-	cp LANDMARK_ROUTE_17
-	jp z, .grimer
-	cp LANDMARK_ROUTE_15
-	jp z, .exeggcute
-	cp LANDMARK_ROUTE_14
-	jp z, .nidorina
+	jp z, .houndour
+	cp LANDMARK_ROUTE_10
+	jp z, .mareep
+	cp LANDMARK_ROUTE_11
+	jp z, .hoppip
 	cp LANDMARK_ROUTE_13
-	jp z, .chansey
-	cp LANDMARK_ROUTE_20
+	jp z, .farfetch_d
+	cp LANDMARK_ROUTE_15
+	jp z, .venonat
+	cp LANDMARK_ROUTE_17
+	jp z, .natu
+	cp LANDMARK_ROUTE_19
+	jp z, .staryu
+	cp LANDMARK_ROUTE_21
+	jp z, .marill
+	cp LANDMARK_ROUTE_24
+	jp z, .oddish
+	cp LANDMARK_ROUTE_25
+	jp z, .bellsprout
+	cp LANDMARK_VIRIDIAN_FOREST
+	jp z, .pikachu
+	cp LANDMARK_MT_MOON
+	jp z, .clefairy
+	cp LANDMARK_VERMILION_CITY
 	jp z, .shellder
+	cp LANDMARK_ROCK_TUNNEL
+	jp z, .phanpy
 	cp LANDMARK_SEAFOAM_ISLANDS
 	jp z, .jynx
+	cp LANDMARK_POWER_PLANT
+	jp z, .electabuzz
+	cp LANDMARK_POKEMON_MANSION
+	jp z, .magmar
+	cp LANDMARK_VICTORY_ROAD
+	jp z, .ditto
+	cp LANDMARK_ROUTE_30
+	jp z, .ditto
 	jp .skipshine
 
-.psyduck
+.jigglypuff
 	ld a, [wCurPartySpecies]
-	cp PSYDUCK
+	cp JIGGLYPUFF
 	jp .next
-.teddiursa
+.snubbull
 	ld a, [wCurPartySpecies]
-	cp TEDDIURSA
-	jp .next
-.bellsprout
-	ld a, [wCurPartySpecies]
-	cp BELLSPROUT
-	jp .next
-.machop
-	ld a, [wCurPartySpecies]
-	cp MACHOP
-	jp .next
-.tauros
-	ld a, [wCurPartySpecies]
-	cp TAUROS
-	jp .next
-.corsola
-	ld a, [wCurPartySpecies]
-	cp CORSOLA
-	jp .next
-.lickitung
-	ld a, [wCurPartySpecies]
-	cp LICKITUNG
-	jp .next
-.slowpoke
-	ld a, [wCurPartySpecies]
-	cp SLOWPOKE
-	jp .next
-.weedle
-	ld a, [wCurPartySpecies]
-	cp WEEDLE
-	jp .next
-.ledyba
-	ld a, [wCurPartySpecies]
-	cp LEDYBA
-	jp .next
-.oddish
-	ld a, [wCurPartySpecies]
-	cp ODDISH
-	jp .next
-.stantler
-	ld a, [wCurPartySpecies]
-	cp STANTLER
-	jp .next
-.drowzee
-	ld a, [wCurPartySpecies]
-	cp DROWZEE
-	jp .next
-.venonat
-	ld a, [wCurPartySpecies]
-	cp VENONAT
-	jp .next
-.growlithe
-	ld a, [wCurPartySpecies]
-	cp GROWLITHE
-	jp .next
-.pineco
-	ld a, [wCurPartySpecies]
-	cp PINECO
-	jp .next
-.wooper
-	ld a, [wCurPartySpecies]
-	cp WOOPER
-	jp .next
-.aipom
-	ld a, [wCurPartySpecies]
-	cp AIPOM
-	jp .next
-.koffing
-	ld a, [wCurPartySpecies]
-	cp KOFFING
-	jp .next
-.mantine
-	ld a, [wCurPartySpecies]
-	cp MANTINE
-	jp .next
-.mareep
-	ld a, [wCurPartySpecies]
-	cp MAREEP
-	jp .next
-.girafarig
-	ld a, [wCurPartySpecies]
-	cp GIRAFARIG
-	jp .next
-;.houndour
-;	ld a, [wCurPartySpecies]
-;	cp HOUNDOUR
-;	jp .next
-;.onix
-;	ld a, [wCurPartySpecies]
-;	cp ONIX
-;	jp .next
-.sneasel
-	ld a, [wCurPartySpecies]
-	cp SNEASEL
-	jp .next
-.skarmory
-	ld a, [wCurPartySpecies]
-	cp SKARMORY
-	jp .next
-.rhyhorn
-	ld a, [wCurPartySpecies]
-	cp RHYHORN
-	jp .next
-.mr_mime
-	ld a, [wCurPartySpecies]
-	cp MR__MIME
-	jp .next
-.raticate
-	ld a, [wCurPartySpecies]
-	cp RATICATE
-	jp .next
-.bulbasaur
-	ld a, [wCurPartySpecies]
-	cp BULBASAUR
-	jp .next
-.charmander
-	ld a, [wCurPartySpecies]
-	cp CHARMANDER
-	jp .next
-.clefairy
-	ld a, [wCurPartySpecies]
-	cp CLEFAIRY
-	jp .next
-.noctowl
-	ld a, [wCurPartySpecies]
-	cp NOCTOWL
+	cp SNUBBULL
 	jp .next
 .abra
 	ld a, [wCurPartySpecies]
 	cp ABRA
 	jp .next
-.pidgeotto
+.murkrow
 	ld a, [wCurPartySpecies]
-	cp PIDGEOTTO
+	cp MURKROW
 	jp .next
-.squirtle
+.houndour
 	ld a, [wCurPartySpecies]
-	cp SQUIRTLE
+	cp HOUNDOUR
 	jp .next
-.kangaskhan
+.mareep
 	ld a, [wCurPartySpecies]
-	cp KANGASKHAN
+	cp MAREEP
 	jp .next
-.electabuzz
+.hoppip
 	ld a, [wCurPartySpecies]
-	cp ELECTABUZZ
+	cp HOPPIP
 	jp .next
-.tyrogue
+.farfetch_d
 	ld a, [wCurPartySpecies]
-	cp TYROGUE
+	cp FARFETCH_D
 	jp .next
-.grimer
+.venonat
 	ld a, [wCurPartySpecies]
-	cp GRIMER
+	cp VENONAT
 	jp .next
-.exeggcute
+.natu
 	ld a, [wCurPartySpecies]
-	cp EXEGGCUTE
+	cp NATU
 	jp .next
-.nidorina
+.staryu
 	ld a, [wCurPartySpecies]
-	cp NIDORINA
+	cp STARYU
 	jp .next
-.chansey
+.marill
 	ld a, [wCurPartySpecies]
-	cp CHANSEY
+	cp MARILL
+	jp .next
+.bellsprout
+	ld a, [wCurPartySpecies]
+	cp BELLSPROUT
+	jp .next
+.oddish
+	ld a, [wCurPartySpecies]
+	cp ODDISH
+	jp .next
+.pikachu
+	ld a, [wCurPartySpecies]
+	cp PIKACHU
+	jp .next
+.clefairy
+	ld a, [wCurPartySpecies]
+	cp CLEFAIRY
 	jp .next
 .shellder
 	ld a, [wCurPartySpecies]
 	cp SHELLDER
 	jp .next
+.phanpy
+	ld a, [wCurPartySpecies]
+	cp PHANPY
+	jp .next
 .jynx
 	ld a, [wCurPartySpecies]
 	cp JYNX
+	jp .next
+.electabuzz
+	ld a, [wCurPartySpecies]
+	cp ELECTABUZZ
+	jp .next
+.magmar
+	ld a, [wCurPartySpecies]
+	cp MAGMAR
+	jp .next
+.larvitar
+	ld a, [wCurPartySpecies]
+	cp LARVITAR
+	jp .next
+.ditto
+	ld a, [wCurPartySpecies]
+	cp DITTO
+	jp .next
 .next
 	jr nz, .skipshine
 	;fallthrough
