@@ -25,6 +25,8 @@ SafariZoneArea1YoungsterText:
 	done
 
 SafariZoneArea1Lass:
+	jumptextfaceplayer SafariZoneArea1LassText
+SafariZoneArea1LassText:
 	text "Many kinds of"
 	line "#MON are found"
 	cont "in SAFARI ZONE!"
@@ -34,6 +36,8 @@ SafariZoneArea1Lass:
 	done
 
 SafariZoneArea1Cooltrainers:
+	jumptextfaceplayer SafariZoneArea1CooltrainersText
+SafariZoneArea1CooltrainersText:
 	text "SAFARI ZONE has"
 	line "rare #MON that"
 	cont "can't normally be"
@@ -54,7 +58,7 @@ SafariZoneArea1OfficerText:
 SafariZoneArea1RestHouseSign:
 	jumptext SafariZoneArea1RestHouseSignText
 SafariZoneArea1RestHouseSignText:
-	line "REST HOUSE"
+	text "REST HOUSE"
 	done
 
 ;SafariZoneArea1TrainerTipsSign:
