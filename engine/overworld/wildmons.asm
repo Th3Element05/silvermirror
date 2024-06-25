@@ -130,7 +130,7 @@ FindNest:
 	call GetNextWildMonDataByte
 	ld c, a
 	inc hl
-	ld a, NUM_WATERMON
+	ld a, NUM_WATERMON ; * 3 ;water_time
 	call .SearchMapForMon
 	jr nc, .next_water
 	ld [de], a
@@ -320,6 +320,38 @@ ChooseWildEncounter:
 	ld de, GrassMonProbTable
 
 .watermon
+
+;\/water_time
+;ChooseWildEncounter:
+;	call InitWildMonBank
+;	call LoadWildMonDataPointer
+;	jp nc, .nowildbattle
+;	call CheckEncounterRoamMon
+;	jp c, .startwildbattle
+;
+;	inc hl
+;	inc hl
+;	inc hl
+;	call CheckOnWater
+;	jr z, .watermon
+;	inc hl
+;	inc hl
+;	call GetTimeOfDayNotEve
+;	ld bc, NUM_GRASSMON * 2
+;	call AddNTimes
+;	call CheckOnWater
+;	ld de, GrassMonProbTable
+;	jr nz, .grassmon
+;
+;.watermon
+;	call GetTimeOfDayNotEve
+;	ld bc, NUM_WATERMON * 2
+;	call AddNTimes
+;	ld de, WaterMonProbTable
+;
+;.grassmon
+;/\water_time
+
 ; hl contains the pointer to the wild mon data, let's save that to the stack
 	push hl
 .randomloop
@@ -399,7 +431,7 @@ ChooseWildEncounter:
 	jr c, .levelup
 	inc b
 
-; Check if we buff the wild mon, and by how much.
+; Check if we buff the wild mon level, and by how much (up to +4).
 .levelup
 	call Random
 	cp 35 percent
@@ -425,6 +457,17 @@ ChooseWildEncounter:
 	call ValidateTempWildMonSpecies
 	jr c, .nowildbattle
 
+; If the wild Pokemon is CORSOLA, check TimeOfDay and encounter STARYU instead if NITE.
+	cp CORSOLA
+	jr nz, .notcorsola
+	ld a, [wTimeOfDay]
+	cp NITE_F
+	jr nz, .done
+	ld b, STARYU
+	jr .done
+	
+.notcorsola
+; If the wild Pokemon is UNOWN, only encounter forms that have been unlocked.
 	cp UNOWN
 	jr nz, .done
 
