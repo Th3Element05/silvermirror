@@ -2,25 +2,20 @@
 
 SwarmWaterWildMonsAltChallenge:
 
-	; Corsola swarm
-	map_id OLIVINE_CITY
+	; Staryu swarm
+	map_id ROUTE_19
 	db 6 percent ; encounter rate
-	db 15, CORSOLA
-	db 20, CORSOLA
-	db 25, TENTACRUEL
+	db 10, DITTO      ; 50
+	db 10, DITTO      ; 30
+	db 15, DITTO      ; 10
+	db 15, DITTO      ; 10
 
-	; Mantine swarm
-	map_id ROUTE_41
+	; Dratini swarm
+	map_id ROUTE_23
 	db 6 percent ; encounter rate
-	db 20, MANTINE
-	db 25, MANTINE
-	db 25, TENTACRUEL
-
-	; Shellder swarm
-	map_id ROUTE_20
-	db 6 percent ; encounter rate
-	db 40, SHELLDER
-	db 45, SHELLDER
-	db 45, TENTACRUEL
+	db 10, DITTO      ; 50
+	db 10, DITTO      ; 30
+	db 15, DITTO      ; 10
+	db 15, DITTO      ; 10
 
 	db -1 ; end
