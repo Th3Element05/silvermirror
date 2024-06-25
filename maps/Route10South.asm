@@ -5,32 +5,32 @@ Route10South_MapScripts:
 
 	def_callbacks
 
-TrainerPokemaniacBrent:
-	trainer POKEMANIAC, BRENT1, EVENT_BEAT_POKEMANIAC_BRENT, PokemaniacBrentSeenText, PokemaniacBrentBeatenText, 0, .Script
-.Script:
-	endifjustbattled
-	opentext
-	writetext PokemaniacBrentAfterBattleText
-	waitbutton
-	closetext
-	end
-
-PokemaniacBrentSeenText:
-	text "Wow, are you a"
-	line "#MANIAC too?"
-	cont "Want to see my"
-	cont "collection?"
-	done
-
-PokemaniacBrentBeatenText:
-	text "Humph."
-	line "I'm not angry!"
-	done
-
-PokemaniacBrentAfterBattleText:
-	text "I have more rare"
-	line "#MON at home!"
-	done
+;TrainerPokemaniacBrent:
+;	trainer POKEMANIAC, BRENT1, EVENT_BEAT_POKEMANIAC_BRENT, PokemaniacBrentSeenText, PokemaniacBrentBeatenText, 0, .Script
+;.Script:
+;	endifjustbattled
+;	opentext
+;	writetext PokemaniacBrentAfterBattleText
+;	waitbutton
+;	closetext
+;	end
+;
+;PokemaniacBrentSeenText:
+;	text "Wow, are you a"
+;	line "#MANIAC too?"
+;	cont "Want to see my"
+;	cont "collection?"
+;	done
+;
+;PokemaniacBrentBeatenText:
+;	text "Humph."
+;	line "I'm not angry!"
+;	done
+;
+;PokemaniacBrentAfterBattleText:
+;	text "I have more rare"
+;	line "#MON at home!"
+;	done
 
 TrainerPicnickerErin:
 	trainer PICNICKER, ERIN1, EVENT_BEAT_PICNICKER_ERIN, PicnickerErinSeenText, PicnickerErinBeatenText, 0, .Script
@@ -148,14 +148,14 @@ Route10SignText:
 	line "LAVENDER TOWN"
 	done
 
-PowerPlantSign:
-	jumptext PowerPlantSignText
-PowerPlantSignText:
-	text "KANTO POWER PLANT"
-	done
-
-Route10SouthRock:
-	jumpstd SmashRockScript
+;PowerPlantSign:
+;	jumptext PowerPlantSignText
+;PowerPlantSignText:
+;	text "KANTO POWER PLANT"
+;	done
+;
+;Route10SouthRock:
+;	jumpstd SmashRockScript
 
 ; hidden items
 Route10HiddenMaxEther:
@@ -165,22 +165,22 @@ Route10South_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  4,  9, POWER_PLANT, 1
-	warp_event  8, 23, ROCK_TUNNEL_1F, 2
+;	warp_event  4,  9, POWER_PLANT, 1
+	warp_event  8,  3, ROCK_TUNNEL_1F, 2
 
 	def_coord_events
 
 	def_bg_events
-	bg_event  3, 11, BGEVENT_READ, PowerPlantSign
-	bg_event  9, 25, BGEVENT_READ, Route10Sign
-	bg_event 16, 23, BGEVENT_ITEM, Route10HiddenMaxEther
+;	bg_event  3, 11, BGEVENT_READ, PowerPlantSign
+	bg_event  9,  5, BGEVENT_READ, Route10Sign
+	bg_event 16,  3, BGEVENT_ITEM, Route10HiddenMaxEther
 
 	def_object_events
-	object_event 10, 14, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerPokemaniacBrent, -1
-	object_event  7, 24, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerPicnickerErin, -1
-	object_event  3, 27, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerHikerJim, -1
-	object_event  3, 31, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerHikerTimothy, -1
-	object_event 12, 34, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerPokemaniacLarry, -1
-	object_event 14,  6, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route10SouthRock, -1
-	object_event 15,  7, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route10SouthRock, -1
-	object_event 14,  9, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route10SouthRock, -1
+;	object_event 10, 14, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerPokemaniacBrent, -1
+	object_event  7,  4, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerPicnickerErin, -1
+	object_event  3,  7, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerHikerJim, -1
+	object_event  3, 11, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerHikerTimothy, -1
+	object_event 12, 14, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerPokemaniacLarry, -1
+;	object_event 14,  6, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route10SouthRock, -1
+;	object_event 15,  7, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route10SouthRock, -1
+;	object_event 14,  9, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route10SouthRock, -1

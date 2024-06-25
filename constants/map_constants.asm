@@ -89,7 +89,7 @@ ENDM
 	map_const ROUTE_25,                                    30,  9 ; 12
 	map_const BILLS_HOUSE,                                  4,  4 ; 13
 	map_const ROUTE_9,                                     30,  9 ; 14
-	map_const ROUTE_10_NORTH,                              10, 15 ; 15
+	map_const ROUTE_10_NORTH,                              10, 24 ; 15
 	map_const ROUTE_10_POKECENTER_1F,                       7,  4 ; 16
 	endgroup
 
@@ -136,7 +136,7 @@ ENDM
 	map_const MR_FUJIS_HOUSE,                               4,  4 ;  4
 	map_const LAVENDER_SPEECH_HOUSE,                        4,  4 ;  5
 	map_const LAVENDER_NAME_RATER,                          4,  4 ;  6
-	map_const ROUTE_10_SOUTH,                              10, 21 ;  7
+	map_const ROUTE_10_SOUTH,                              10, 11 ;  7
 	map_const ROUTE_8,                                     28, 11 ;  9
 	map_const ROUTE_8_UNDERGROUND_PATH_ENTRANCE,            4,  4 ; 10
 	map_const ROUTE_8_SAFFRON_GATE,                         4,  5 ; 11
