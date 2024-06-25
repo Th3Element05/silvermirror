@@ -177,7 +177,7 @@ ItemEffects:
 	dw PokeBallEffect      ; PARK_BALL
 	dw NoEffect            ; RAINBOW_WING
 	dw NoEffect            ; BRICK_PIECE
-	dw NoEffect            ; ITEM_BE
+	dw SuperRod2Effect     ; SUPER_ROD_2 ; ITEM_BE
 	dw NoEffect            ; ITEM_2D ;+
 	dw NoEffect            ; ITEM_32 ;+
 	dw NoEffect            ; ITEM_88 ;+
@@ -2319,6 +2319,10 @@ GoodRodEffect:
 SuperRodEffect:
 	ld e, $2
 	jr UseRod
+
+SuperRod2Effect: ;silvermirror+
+	ld e, $3     ;
+	jr UseRod    ;
 
 UseRod:
 	farcall FishFunction
