@@ -8,7 +8,7 @@ IsInJohto::
 	call GetWorldMapLocation
 
 	cp LANDMARK_SS_ANNE
-	jr z, .Johto
+	jr z, .Kanto ;silvermirror ; .Johto
 
 	cp LANDMARK_SPECIAL
 	jr nz, .CheckRegion
