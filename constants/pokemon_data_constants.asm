@@ -207,11 +207,13 @@ DEF NUM_HOF_TEAMS EQU 30
 ;DEF NUM_GRASSMON EQU 7 ; data/wild/*_grass.asm table size ;silvermirror- EXPAND encounter tables
 ;DEF NUM_WATERMON EQU 3 ; data/wild/*_water.asm table size ;silvermirror- EXPAND encounter tables
 DEF NUM_GRASSMON EQU 10 ; data/wild/*_grass.asm table size ;silvermirror+ EXPAND encounter tables
-DEF NUM_WATERMON EQU 3 ; data/wild/*_water.asm table size  ;silvermirror+ EXPAND encounter tables
+DEF NUM_WATERMON EQU 4 ; data/wild/*_water.asm table size  ;silvermirror+ EXPAND encounter tables
 
 DEF GRASS_WILDDATA_LENGTH EQU 2 + 3 + NUM_GRASSMON * 2 * 3
-DEF WATER_WILDDATA_LENGTH EQU 2 + 1 + NUM_WATERMON * 2
-DEF FISHGROUP_DATA_LENGTH EQU 1 + 2 * 3
+DEF WATER_WILDDATA_LENGTH EQU 2 + 1 + NUM_WATERMON * 2 ;water_og
+;DEF WATER_WILDDATA_LENGTH EQU 2 + 1 + NUM_WATERMON * 2 * 3 ;water_time
+;DEF FISHGROUP_DATA_LENGTH EQU 1 + 2 * 3 ;fish_3_rods
+DEF FISHGROUP_DATA_LENGTH EQU 1 + 2 * 4 ;fish_4_rods
 
 DEF NUM_ROAMMON_MAPS EQU 16 ; RoamMaps table size (see data/wild/roammon_maps.asm)
 
