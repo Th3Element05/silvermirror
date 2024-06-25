@@ -222,6 +222,21 @@ OaksHouseSignText:
 	text "<RIVAL>'s HOUSE"
 	done
 
+TradeNPCTest:
+	faceplayer
+	opentext
+	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
+	iftrue .Gen2
+	trade NPC_TRADE_MIKE
+	waitbutton
+	closetext
+	end
+.Gen2
+	trade NPC_TRADE_KYLE
+	waitbutton
+	closetext
+	end
+
 PalletTown_MapEvents:
 	db 0, 0 ; filler
 
@@ -244,3 +259,4 @@ PalletTown_MapEvents:
 	object_event 8,  5, SPRITE_OAK, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PALLET_TOWN_OAK
 	object_event  4,  8, SPRITE_TEACHER, SPRITEMOVEDATA_WANDER, 2, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PalletTownTeacherScript, -1
 	object_event 12, 14, SPRITE_FISHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, PalletTownFisherScript, -1
+	object_event  1,  2, SPRITE_OAK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TradeNPCTest, -1
