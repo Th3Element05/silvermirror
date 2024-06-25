@@ -33,6 +33,7 @@ endr
 	; 0: Old
 	; 1: Good
 	; 2: Super
+	; 3: Super2
 	inc hl
 	ld e, b
 	ld d, 0
@@ -62,6 +63,21 @@ endr
 	call z, .TimeEncounter
 
 	ld e, [hl]
+	; Check if we buff the wild mon level, and by how much (up to +4).
+	call Random
+	cp 35 percent
+	jr c, .level_up_done
+	inc e
+	cp 65 percent
+	jr c, .level_up_done
+	inc e
+	cp 85 percent
+	jr c, .level_up_done
+	inc e
+	cp 95 percent
+	jr c, .level_up_done
+	inc e
+.level_up_done
 	ret
 
 .no_bite
@@ -103,7 +119,7 @@ GetFishGroupIndex:
 	jr z, .horsea
 	cp FISHGROUP_DRATINI
 	jr z, .dratini
-	cp FISHGROUP_STARYU
+	cp FISHGROUP_STARYU ;alt CORSOLA
 	jr z, .staryu
 	cp FISHGROUP_SHELLDER
 	jr z, .shellder
@@ -128,19 +144,10 @@ GetFishGroupIndex:
 	jr .done
 
 .chinchou
-	ld hl, wSwarmFlags
-	bit SWARMFLAGS_ALT_SWARM_F, [hl]
-	jr nz, .corsola
 	ld a, [wFishingSwarmFlag]
 	cp FISHSWARM_CHINCHOU
 	jr nz, .done
 	ld d, FISHGROUP_CHINCHOU_SWARM
-	jr .done
-.corsola
-	ld a, [wFishingSwarmFlag]
-	cp FISHSWARM_CORSOLA
-	jr nz, .done
-	ld d, FISHGROUP_CORSOLA_SWARM
 	jr .done
 
 .horsea
@@ -167,10 +174,19 @@ GetFishGroupIndex:
 	jr .done
 
 .staryu
+	ld hl, wSwarmFlags
+	bit SWARMFLAGS_ALT_SWARM_F, [hl]
+	jr nz, .corsola
 	ld a, [wFishingSwarmFlag]
 	cp FISHSWARM_STARYU
 	jr nz, .done
 	ld d, FISHGROUP_STARYU_SWARM
+	jr .done
+.corsola
+	ld a, [wFishingSwarmFlag]
+	cp FISHSWARM_CORSOLA
+	jr nz, .done
+	ld d, FISHGROUP_CORSOLA_SWARM
 	jr .done
 
 .shellder
