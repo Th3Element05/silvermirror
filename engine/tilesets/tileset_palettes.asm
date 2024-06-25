@@ -199,8 +199,8 @@ MapSpecificOBPalettes:
 ;	_use_palette_routine_for_map ROUTE_10_SOUTH, .YellowOverRockOBPalette
 	_use_palette_routine_for_map CERULEAN_CAVE_B1F, .PurpleOverPinkOBPalette
 	_use_palette_routine_for_map MR_FUJIS_HOUSE, .PurpleOverRockYellowOverPinkOBPalette
-;	_use_palette_routine_for_map SAFARI_ZONE_AREA_2, .SandOverTreeOBPalette
-;	_use_palette_routine_for_map SAFARI_ZONE_AREA_3, .SwampOverTreeOBPalette
+;	_use_palette_routine_for_map SAFARI_ZONE_AREA_2, .SwampOverTreeOBPalette
+	_use_palette_routine_for_map SAFARI_ZONE_AREA_3, .SandOverTreeOBPalette
 	_use_palette_routine_for_map PEWTER_MUSEUM_1F, .YellowOverRockOBPalette
 ;	_use_palette_routine_for_map PEWTER_MUSEUM_2F, .YellowOverRockOBPalette
 ;silvermirror+
