@@ -164,7 +164,7 @@ ItemDescriptions:
 	dw RainbowWingDesc
 	dw BrickPieceDesc
 	dw FlowerMailDesc
-	dw TeruSama1Desc
+	dw SuperRod2Desc  ; TeruSama1Desc
 	dw TeruSama2Desc ;+
 	dw TeruSama3Desc ;+
 	dw TeruSama4Desc ;+
@@ -491,6 +491,7 @@ SilverLeafDesc:
 	next "colored leaf.@"
 
 SuperRodDesc:
+SuperRod2Desc:
 	db   "The best ROD for"
 	next "catching #MON.@"
 

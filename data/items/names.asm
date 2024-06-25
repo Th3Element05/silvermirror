@@ -58,7 +58,7 @@ ItemNames::
 	li "OLD ROD"
 	li "GOOD ROD"
 	li "SILVER LEAF"
-	li "SUPER ROD"
+	li "SUPER ROD"  ; SUPER_ROD
 	li "PP UP"
 	li "ETHER"
 	li "MAX ETHER"
@@ -163,7 +163,7 @@ ItemNames::
 	li "RAINBOW WING"
 	li "BRICK PIECE"
 	li "FLOWER MAIL"
-	li "TERU-SAMA"
+	li "SUPER ROD"    ; SUPER_ROD_2
 	li "TERU-SAMA"    ;+
 	li "TERU-SAMA"    ;+
 	li "TERU-SAMA"    ;+
