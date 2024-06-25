@@ -204,13 +204,22 @@ OaksPKMNTalkSwarm1:
 	ld hl, wDailyFlags1
 	bit DAILYFLAGS1_SWARM_F, [hl]
 	jp nz, .check_alt_swarm
-	jp .generate_flag
+	jp .challenge_check
 
 .check_alt_swarm
 	ld hl, wSwarmFlags
 	bit SWARMFLAGS_ALT_SWARM_F, [hl]
 	jp nz, .done
 
+.challenge_check
+;silvermirror ; Only do challenge mode check if in Kanto
+	call .InJohto
+	jp nc, .generate_flag
+;silvermirror ; Check if challenge mode is active. If no, don't use alternate swarms.
+	ld a, [wChallengeMode]
+	bit GAME_CHALLENGE_MODE_F, a
+	jr z, .normal_swarm
+; Choose normal or alternate swarm
 .generate_flag
 	call Random ; generate a random number below 8
 	and %11 ; '3' in bit  (increase bit number with each new added swarm)
@@ -368,17 +377,15 @@ OaksPKMNTalkSwarm1:
 
 .InJohto:
 ; if in Johto or on the S.S. Aqua, set carry
-
 ; otherwise clear carry
 	ld a, [wPokegearMapPlayerIconLandmark]
 	cp LANDMARK_SS_ANNE
-	jr z, .johto
+	jr z, .kanto ;silvermirror ; .johto
 	cp KANTO_LANDMARK
 	jr c, .johto
 .kanto
 	and a
 	ret
-
 .johto
 	scf
 	ret
