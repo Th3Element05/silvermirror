@@ -169,7 +169,7 @@
 	const RAINBOW_WING ; a1
 	const BRICK_PIECE  ; a2 ; held by traded machop? useless.
 	const FLOWER_MAIL  ; a3
-	const ITEM_BE      ; a4
+	const SUPER_ROD_2  ; a4 ; ITEM_BE
 	const ITEM_2D      ; a5
 	const ITEM_32      ; a6
 	const ITEM_88      ; a7
