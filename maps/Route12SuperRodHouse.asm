@@ -16,7 +16,18 @@ Route12SuperRodHouseFishingGuruScript:
 	iffalse .Refused
 	writetext GiveSuperRodText
 	promptbutton
+	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
+	iftrue .SuperRod2
 	verbosegiveitem SUPER_ROD
+	iffalse .NoRoom
+	setevent EVENT_GOT_SUPER_ROD
+	writetext GaveSuperRodText
+	waitbutton
+	closetext
+	end
+
+.SuperRod2
+	verbosegiveitem SUPER_ROD_2
 	iffalse .NoRoom
 	setevent EVENT_GOT_SUPER_ROD
 	writetext GaveSuperRodText
