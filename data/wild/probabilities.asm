@@ -28,16 +28,17 @@ GrassMonProbTable:
 	mon_prob 100, 9 ;  1% chance
 	assert_table_length NUM_GRASSMON
 
-WaterMonProbTable:
-	table_width 2, WaterMonProbTable
-	mon_prob 60,  0 ; 60% chance
-	mon_prob 90,  1 ; 30% chance
-	mon_prob 100, 2 ; 10% chance
-	assert_table_length NUM_WATERMON
-;
 ;WaterMonProbTable:
 ;	table_width 2, WaterMonProbTable
-;	mon_prob 70,  0 ; 70% chance
-;	mon_prob 90,  1 ; 20% chance
+;	mon_prob 60,  0 ; 60% chance
+;	mon_prob 90,  1 ; 30% chance
 ;	mon_prob 100, 2 ; 10% chance
 ;	assert_table_length NUM_WATERMON
+;
+WaterMonProbTable:
+	table_width 2, WaterMonProbTable
+	mon_prob 50,  0 ; 50% chance
+	mon_prob 80,  1 ; 30% chance
+	mon_prob 90,  2 ; 10% chance
+	mon_prob 100, 3 ; 10% chance
+	assert_table_length NUM_WATERMON
