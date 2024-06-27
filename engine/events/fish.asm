@@ -115,7 +115,7 @@ GetFishGroupIndex:
 	jr z, .remoraid
 	cp FISHGROUP_CHINCHOU
 	jr z, .chinchou
-	cp FISHGROUP_HORSEA
+	cp FISHGROUP_HORSEA ;removed alt MANTINE
 	jr z, .horsea
 	cp FISHGROUP_DRATINI
 	jr z, .dratini
@@ -151,20 +151,20 @@ GetFishGroupIndex:
 	jr .done
 
 .horsea
-	ld hl, wSwarmFlags
-	bit SWARMFLAGS_ALT_SWARM_F, [hl]
-	jr nz, .mantine
+;	ld hl, wSwarmFlags
+;	bit SWARMFLAGS_ALT_SWARM_F, [hl]
+;	jr nz, .mantine
 	ld a, [wFishingSwarmFlag]
 	cp FISHSWARM_HORSEA
 	jr nz, .done
 	ld d, FISHGROUP_HORSEA_SWARM
 	jr .done
-.mantine
-	ld a, [wFishingSwarmFlag]
-	cp FISHSWARM_MANTINE
-	jr nz, .done
-	ld d, FISHGROUP_MANTINE_SWARM
-	jr .done
+;.mantine
+;	ld a, [wFishingSwarmFlag]
+;	cp FISHSWARM_MANTINE
+;	jr nz, .done
+;	ld d, FISHGROUP_MANTINE_SWARM
+;	jr .done
 
 .dratini
 	ld a, [wFishingSwarmFlag]
