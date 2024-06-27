@@ -269,8 +269,8 @@ KantoGrassWildMons:
 	db 12, ABRA       ; 15% chance 15
 	db 20, RATTATA    ; 10% chance 10
 	db 23, PIDGEOTTO  ; 10% chance 10
-	db 18, GROWLITHE  ; 10% chance 10
-	db 18, VULPIX     ;  5% chance 10
+	db 18, VULPIX     ; 10% chance 20
+	db 18, VULPIX     ;  5% chance
 	db 18, VULPIX     ;  5% chance
 	db 17, MEOWTH     ;  4% chance 5
 	db 17, MEOWTH     ;  1% chance
@@ -280,8 +280,8 @@ KantoGrassWildMons:
 	db 12, ABRA       ; 15% chance 15
 	db 20, RATTATA    ; 10% chance 10
 	db 23, PIDGEOTTO  ; 10% chance 10
-	db 18, GROWLITHE  ; 10% chance 10
-	db 18, VULPIX     ;  5% chance 10
+	db 18, VULPIX     ; 10% chance 20
+	db 18, VULPIX     ;  5% chance
 	db 18, VULPIX     ;  5% chance
 	db 17, MEOWTH     ;  4% chance 5
 	db 17, MEOWTH     ;  1% chance
@@ -290,8 +290,8 @@ KantoGrassWildMons:
 	db 17, MEOWTH     ; 20% chance 25
 	db 12, ABRA       ; 15% chance 15
 	db 20, RATTATA    ; 10% chance
-	db 18, GROWLITHE  ; 10% chance 10
-	db 18, VULPIX     ; 10% chance 10
+	db 18, VULPIX     ; 10% chance 20
+	db 18, VULPIX     ; 10% chance
 	db 20, RATTATA    ;  5% chance
 	db 17, MEOWTH     ;  5% chance
 	db 20, PIDGEY     ;  4% chance
@@ -306,9 +306,9 @@ KantoGrassWildMons:
 	db 12, ABRA       ; 15% chance 15
 	db 20, RATTATA    ; 10% chance 10
 	db 23, PIDGEOTTO  ; 10% chance 10
-	db 18, GROWLITHE  ; 10% chance 10
-	db 18, VULPIX     ;  5% chance 10
-	db 18, VULPIX     ;  5% chance
+	db 18, GROWLITHE  ; 10% chance 20
+	db 18, GROWLITHE  ;  5% chance
+	db 18, GROWLITHE  ;  5% chance
 	db 17, MEOWTH     ;  4% chance 5
 	db 17, MEOWTH     ;  1% chance
 	; day
@@ -317,9 +317,9 @@ KantoGrassWildMons:
 	db 12, ABRA       ; 15% chance 15
 	db 20, RATTATA    ; 10% chance 10
 	db 23, PIDGEOTTO  ; 10% chance 10
-	db 18, GROWLITHE  ; 10% chance 10
-	db 18, VULPIX     ;  5% chance 10
-	db 18, VULPIX     ;  5% chance
+	db 18, GROWLITHE  ; 10% chance 20
+	db 18, GROWLITHE  ;  5% chance
+	db 18, GROWLITHE  ;  5% chance
 	db 17, MEOWTH     ;  4% chance 5
 	db 17, MEOWTH     ;  1% chance
 	; nite
@@ -327,8 +327,8 @@ KantoGrassWildMons:
 	db 17, MEOWTH     ; 20% chance 25
 	db 12, ABRA       ; 15% chance 15
 	db 16, GASTLY     ; 10% chance 10
-	db 18, GROWLITHE  ; 10% chance 10
-	db 18, VULPIX     ; 10% chance 10
+	db 18, GROWLITHE  ; 10% chance 20
+	db 18, GROWLITHE  ; 10% chance
 	db 20, RATTATA    ;  5% chance
 	db 17, MEOWTH     ;  5% chance
 	db 20, PIDGEY     ;  4% chance
@@ -520,7 +520,7 @@ KantoGrassWildMons:
 	db 26, FARFETCH_D ;  1% chance
 	end_grass_wildmons
 
-	def_grass_wildmons ROUTE_14 ;GEN1
+	def_grass_wildmons ROUTE_14; | ROUTE_15 ;GEN1
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 26, BELLSPROUT ; 20% chance 50
@@ -531,8 +531,8 @@ KantoGrassWildMons:
 	db 29, WEEPINBELL ; 10% chance 10
 	db 25, PIDGEY     ;  5% chance
 	db 26, ODDISH     ;  5% chance 5
-	db 16, DITTO      ;  4% chance 5
-	db 16, DITTO      ;  1% chance
+	db 20, DITTO      ;  4% chance 5
+	db 20, DITTO      ;  1% chance
 	; day
 	db 26, BELLSPROUT ; 20% chance 50
 	db 26, BELLSPROUT ; 20% chance
@@ -542,8 +542,8 @@ KantoGrassWildMons:
 	db 29, WEEPINBELL ; 10% chance 10
 	db 25, PIDGEY     ;  5% chance
 	db 26, ODDISH     ;  5% chance 5
-	db 16, DITTO      ;  4% chance 5
-	db 16, DITTO      ;  1% chance
+	db 20, DITTO      ;  4% chance 5
+	db 20, DITTO      ;  1% chance
 	; nite
 	db 26, ODDISH     ; 20% chance 50
 	db 26, ODDISH     ; 20% chance
@@ -553,8 +553,8 @@ KantoGrassWildMons:
 	db 29, GLOOM      ; 10% chance 10
 	db 26, BELLSPROUT ;  5% chance 5
 	db 28, VENOMOTH   ;  5% chance 5
-	db 16, DITTO      ;  4% chance 5
-	db 16, DITTO      ;  1% chance
+	db 20, DITTO      ;  4% chance 5
+	db 20, DITTO      ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_15 ;GEN1
@@ -706,7 +706,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_21 ;GEN1
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 16, PIDGEY     ; 20% chance 56
 	db 16, PIDGEY     ; 20% chance
@@ -1233,9 +1233,9 @@ KantoGrassWildMons:
 	db 19, GASTLY     ; 10% chance
 	db 20, GASTLY     ; 10% chance
 	db 20, GASTLY     ;  5% chance
-	db 20, CUBONE     ;  5% chance 5
-	db 25, HAUNTER    ;  4% chance 5
-	db 25, HAUNTER    ;  1% chance
+	db 25, HAUNTER    ;  5% chance 5
+	db 20, CUBONE     ;  4% chance 5
+	db 20, CUBONE     ;  1% chance
 	; day
 	db 18, GASTLY     ; 20% chance 75
 	db 18, GASTLY     ; 20% chance
@@ -1244,9 +1244,9 @@ KantoGrassWildMons:
 	db 19, GASTLY     ; 10% chance
 	db 20, GASTLY     ; 10% chance
 	db 20, GASTLY     ;  5% chance
-	db 20, CUBONE     ;  5% chance 5
-	db 25, HAUNTER    ;  4% chance 5
-	db 25, HAUNTER    ;  1% chance
+	db 25, HAUNTER    ;  5% chance 5
+	db 20, CUBONE     ;  4% chance 5
+	db 20, CUBONE     ;  1% chance
 	; nite
 	db 18, GASTLY     ; 20% chance 75
 	db 18, GASTLY     ; 20% chance
@@ -1255,93 +1255,130 @@ KantoGrassWildMons:
 	db 19, GASTLY     ; 10% chance
 	db 20, GASTLY     ; 10% chance
 	db 20, GASTLY     ;  5% chance
-	db 20, CUBONE     ;  5% chance 5
-	db 25, HAUNTER    ;  4% chance 5
-	db 25, HAUNTER    ;  1% chance
+	db 25, HAUNTER    ;  5% chance 5
+	db 20, CUBONE     ;  4% chance 5
+	db 20, CUBONE     ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons POKEMON_TOWER_4F ;GEN1
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 	db 18, GASTLY     ; 20% chance 75
-	db 18, GASTLY     ; 20% chance
+	db 19, GASTLY     ; 20% chance
 	db 18, ZUBAT      ; 15% chance 15
-	db 19, GASTLY     ; 10% chance
+	db 18, GASTLY     ; 10% chance
 	db 19, GASTLY     ; 10% chance
 	db 20, GASTLY     ; 10% chance
 	db 20, GASTLY     ;  5% chance
-	db 20, CUBONE     ;  5% chance 5
-	db 25, HAUNTER    ;  4% chance 5
-	db 25, HAUNTER    ;  1% chance
+	db 25, HAUNTER    ;  5% chance 5
+	db 20, CUBONE     ;  4% chance 5
+	db 20, CUBONE     ;  1% chance
 	; day
 	db 18, GASTLY     ; 20% chance 75
-	db 18, GASTLY     ; 20% chance
+	db 19, GASTLY     ; 20% chance
 	db 18, ZUBAT      ; 15% chance 15
-	db 19, GASTLY     ; 10% chance
+	db 18, GASTLY     ; 10% chance
 	db 19, GASTLY     ; 10% chance
 	db 20, GASTLY     ; 10% chance
 	db 20, GASTLY     ;  5% chance
-	db 20, CUBONE     ;  5% chance 5
-	db 25, HAUNTER    ;  4% chance 5
-	db 25, HAUNTER    ;  1% chance
+	db 25, HAUNTER    ;  5% chance 5
+	db 20, CUBONE     ;  4% chance 5
+	db 20, CUBONE     ;  1% chance
 	; nite
 	db 18, GASTLY     ; 20% chance 75
-	db 18, GASTLY     ; 20% chance
+	db 19, GASTLY     ; 20% chance
 	db 18, ZUBAT      ; 15% chance 15
-	db 19, GASTLY     ; 10% chance
+	db 18, GASTLY     ; 10% chance
 	db 19, GASTLY     ; 10% chance
 	db 20, GASTLY     ; 10% chance
 	db 20, GASTLY     ;  5% chance
-	db 20, CUBONE     ;  5% chance 5
-	db 25, HAUNTER    ;  4% chance 5
-	db 25, HAUNTER    ;  1% chance
+	db 25, HAUNTER    ;  5% chance 5
+	db 20, CUBONE     ;  4% chance 5
+	db 20, CUBONE     ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons POKEMON_TOWER_5F ;GEN1
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 	db 18, GASTLY     ; 20% chance 75
-	db 18, GASTLY     ; 20% chance
+	db 19, GASTLY     ; 20% chance
 	db 18, ZUBAT      ; 15% chance 15
-	db 19, GASTLY     ; 10% chance
-	db 19, GASTLY     ; 10% chance
+	db 18, GASTLY     ; 10% chance
 	db 20, GASTLY     ; 10% chance
-	db 20, GASTLY     ;  5% chance
-	db 20, CUBONE     ;  5% chance 5
-	db 25, HAUNTER    ;  4% chance 5
-	db 25, HAUNTER    ;  1% chance
+	db 20, GASTLY     ; 10% chance
+	db 19, GASTLY     ;  5% chance
+	db 25, HAUNTER    ;  5% chance 5
+	db 20, CUBONE     ;  4% chance 5
+	db 20, CUBONE     ;  1% chance
 	; day
 	db 18, GASTLY     ; 20% chance 75
-	db 18, GASTLY     ; 20% chance
+	db 19, GASTLY     ; 20% chance
 	db 18, ZUBAT      ; 15% chance 15
-	db 19, GASTLY     ; 10% chance
-	db 19, GASTLY     ; 10% chance
+	db 18, GASTLY     ; 10% chance
 	db 20, GASTLY     ; 10% chance
-	db 20, GASTLY     ;  5% chance
-	db 20, CUBONE     ;  5% chance 5
-	db 25, HAUNTER    ;  4% chance 5
-	db 25, HAUNTER    ;  1% chance
+	db 20, GASTLY     ; 10% chance
+	db 19, GASTLY     ;  5% chance
+	db 25, HAUNTER    ;  5% chance 5
+	db 20, CUBONE     ;  4% chance 5
+	db 20, CUBONE     ;  1% chance
 	; nite
 	db 18, GASTLY     ; 20% chance 75
-	db 18, GASTLY     ; 20% chance
+	db 19, GASTLY     ; 20% chance
 	db 18, ZUBAT      ; 15% chance 15
-	db 19, GASTLY     ; 10% chance
-	db 19, GASTLY     ; 10% chance
+	db 18, GASTLY     ; 10% chance
 	db 20, GASTLY     ; 10% chance
-	db 20, GASTLY     ;  5% chance
-	db 20, CUBONE     ;  5% chance 5
-	db 25, HAUNTER    ;  4% chance 5
-	db 25, HAUNTER    ;  1% chance
+	db 20, GASTLY     ; 10% chance
+	db 19, GASTLY     ;  5% chance
+	db 25, HAUNTER    ;  5% chance 5
+	db 20, CUBONE     ;  4% chance 5
+	db 20, CUBONE     ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons POKEMON_TOWER_6F ;GEN1
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
+	db 18, GASTLY     ; 20% chance 75
+	db 19, GASTLY     ; 20% chance
+	db 19, ZUBAT      ; 15% chance 15
+	db 18, GASTLY     ; 10% chance
+	db 20, GASTLY     ; 10% chance
+	db 20, GASTLY     ; 10% chance
+	db 19, GASTLY     ;  5% chance
+	db 25, HAUNTER    ;  5% chance 5
+	db 20, CUBONE     ;  4% chance 5
+	db 20, CUBONE     ;  1% chance
+	; day
+	db 18, GASTLY     ; 20% chance 75
+	db 19, GASTLY     ; 20% chance
+	db 19, ZUBAT      ; 15% chance 15
+	db 18, GASTLY     ; 10% chance
+	db 20, GASTLY     ; 10% chance
+	db 20, GASTLY     ; 10% chance
+	db 19, GASTLY     ;  5% chance
+	db 25, HAUNTER    ;  5% chance 5
+	db 20, CUBONE     ;  4% chance 5
+	db 20, CUBONE     ;  1% chance
+	; nite
+	db 18, GASTLY     ; 20% chance 75
+	db 19, GASTLY     ; 20% chance
+	db 19, ZUBAT      ; 15% chance 15
+	db 18, GASTLY     ; 10% chance
+	db 20, GASTLY     ; 10% chance
+	db 20, GASTLY     ; 10% chance
+	db 19, GASTLY     ;  5% chance
+	db 25, HAUNTER    ;  5% chance 5
+	db 20, CUBONE     ;  4% chance 5
+	db 20, CUBONE     ;  1% chance
+	end_grass_wildmons
+
+	def_grass_wildmons POKEMON_TOWER_7F ;GEN1
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	; morn
 	db 18, GASTLY     ; 20% chance 70
-	db 18, GASTLY     ; 20% chance
-	db 18, ZUBAT      ; 15% chance 15
-	db 19, GASTLY     ; 10% chance
-	db 19, GASTLY     ; 10% chance
+	db 19, GASTLY     ; 20% chance
+	db 19, ZUBAT      ; 15% chance 15
+	db 18, GASTLY     ; 10% chance
+	db 20, GASTLY     ; 10% chance
 	db 20, GASTLY     ; 10% chance
 	db 20, CUBONE     ;  5% chance 10
 	db 20, CUBONE     ;  5% chance
@@ -1349,10 +1386,10 @@ KantoGrassWildMons:
 	db 25, HAUNTER    ;  1% chance
 	; day
 	db 18, GASTLY     ; 20% chance 70
-	db 18, GASTLY     ; 20% chance
-	db 18, ZUBAT      ; 15% chance 15
-	db 19, GASTLY     ; 10% chance
-	db 19, GASTLY     ; 10% chance
+	db 19, GASTLY     ; 20% chance
+	db 19, ZUBAT      ; 15% chance 15
+	db 18, GASTLY     ; 10% chance
+	db 20, GASTLY     ; 10% chance
 	db 20, GASTLY     ; 10% chance
 	db 20, CUBONE     ;  5% chance 10
 	db 20, CUBONE     ;  5% chance
@@ -1360,10 +1397,10 @@ KantoGrassWildMons:
 	db 25, HAUNTER    ;  1% chance
 	; nite
 	db 18, GASTLY     ; 20% chance 70
-	db 18, GASTLY     ; 20% chance
-	db 18, ZUBAT      ; 15% chance 15
-	db 19, GASTLY     ; 10% chance
-	db 19, GASTLY     ; 10% chance
+	db 19, GASTLY     ; 20% chance
+	db 19, ZUBAT      ; 15% chance 15
+	db 18, GASTLY     ; 10% chance
+	db 20, GASTLY     ; 10% chance
 	db 20, GASTLY     ; 10% chance
 	db 20, CUBONE     ;  5% chance 10
 	db 20, CUBONE     ;  5% chance
@@ -1708,7 +1745,7 @@ KantoGrassWildMons:
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 	db 28, KOFFING    ; 20% chance 20
-	db 28, GRIMER     ; 20% chance 35
+	db 28, GRIMER     ; 20% chance 36
 	db 28, GRIMER     ; 15% chance
 	db 20, DITTO      ; 10% chance 10
 	db 27, GROWLITHE  ; 10% chance 10
@@ -1716,10 +1753,10 @@ KantoGrassWildMons:
 	db 36, WEEZING    ;  5% chance 5
 	db 38, MUK        ;  5% chance 5
 	db 34, MAGMAR     ;  4% chance 5
-	db 34, MAGMAR     ;  1% chance
+	db 28, GRIMER     ;  1% chance
 	; day
 	db 28, KOFFING    ; 20% chance 20
-	db 28, GRIMER     ; 20% chance 35
+	db 28, GRIMER     ; 20% chance 36
 	db 28, GRIMER     ; 15% chance
 	db 20, DITTO      ; 10% chance 10
 	db 27, GROWLITHE  ; 10% chance 10
@@ -1727,10 +1764,10 @@ KantoGrassWildMons:
 	db 36, WEEZING    ;  5% chance 5
 	db 38, MUK        ;  5% chance 5
 	db 34, MAGMAR     ;  4% chance 5
-	db 34, MAGMAR     ;  1% chance
+	db 28, GRIMER     ;  1% chance
 	; nite
 	db 28, KOFFING    ; 20% chance 20
-	db 28, GRIMER     ; 20% chance 35
+	db 28, GRIMER     ; 20% chance 36
 	db 28, GRIMER     ; 15% chance
 	db 20, DITTO      ; 10% chance 10
 	db 27, GROWLITHE  ; 10% chance 10
@@ -1738,155 +1775,155 @@ KantoGrassWildMons:
 	db 36, WEEZING    ;  5% chance 5
 	db 38, MUK        ;  5% chance 5
 	db 34, MAGMAR     ;  4% chance 5
-	db 34, MAGMAR     ;  1% chance
+	db 28, GRIMER     ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons VICTORY_ROAD_1F ;GEN1
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 42, ONIX       ; 20% chance 30
-	db 36, ZUBAT      ; 20% chance 20
-	db 37, RHYHORN    ; 15% chance 20
-	db 42, ONIX       ; 10% chance
-	db 42, GOLBAT     ; 10% chance 10
+	db 42, ONIX       ; 20% chance 20
+	db 34, MACHOP     ; 20% chance 20
+	db 34, GEODUDE    ; 15% chance 15
+	db 36, ZUBAT      ; 10% chance 10
+	db 40, MACHOKE    ; 10% chance 10
 	db 38, GRAVELER   ; 10% chance 10
-	db 38, MACHOKE    ;  5% chance 10
-	db 38, MACHOKE    ;  5% chance
-	db 37, RHYHORN    ;  4% chance
-	db 37, RHYHORN    ;  1% chance
+	db 42, GOLBAT     ;  5% chance 10
+	db 42, GOLBAT     ;  5% chance
+	db 40, MAROWAK    ;  4% chance 5
+	db 40, MAROWAK    ;  1% chance
 	; day
-	db 42, ONIX       ; 20% chance 30
-	db 36, ZUBAT      ; 20% chance 20
-	db 37, RHYHORN    ; 15% chance 20
-	db 42, ONIX       ; 10% chance
-	db 42, GOLBAT     ; 10% chance 10
+	db 42, ONIX       ; 20% chance 20
+	db 34, MACHOP     ; 20% chance 20
+	db 34, GEODUDE    ; 15% chance 15
+	db 36, ZUBAT      ; 10% chance 10
+	db 40, MACHOKE    ; 10% chance 10
 	db 38, GRAVELER   ; 10% chance 10
-	db 38, MACHOKE    ;  5% chance 10
-	db 38, MACHOKE    ;  5% chance
-	db 37, RHYHORN    ;  4% chance
-	db 37, RHYHORN    ;  1% chance
+	db 42, GOLBAT     ;  5% chance 10
+	db 42, GOLBAT     ;  5% chance
+	db 40, MAROWAK    ;  4% chance 5
+	db 40, MAROWAK    ;  1% chance
 	; nite
-	db 42, ONIX       ; 20% chance 30
-	db 36, ZUBAT      ; 20% chance 20
-	db 37, RHYHORN    ; 15% chance 20
-	db 42, ONIX       ; 10% chance
-	db 42, GOLBAT     ; 10% chance 10
+	db 42, ONIX       ; 20% chance 20
+	db 34, MACHOP     ; 20% chance 20
+	db 34, GEODUDE    ; 15% chance 15
+	db 36, ZUBAT      ; 10% chance 10
+	db 40, MACHOKE    ; 10% chance 10
 	db 38, GRAVELER   ; 10% chance 10
-	db 38, MACHOKE    ;  5% chance 10
-	db 38, MACHOKE    ;  5% chance
-	db 37, RHYHORN    ;  4% chance
-	db 37, RHYHORN    ;  1% chance
+	db 42, GOLBAT     ;  5% chance 10
+	db 42, GOLBAT     ;  5% chance
+	db 40, MAROWAK    ;  4% chance 5
+	db 40, MAROWAK    ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons VICTORY_ROAD_2F ;GEN1
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 42, ONIX       ; 20% chance 30
-	db 37, RHYHORN    ; 20% chance 20
-	db 36, ZUBAT      ; 15% chance 20
-	db 42, ONIX       ; 10% chance
-	db 42, GOLBAT     ; 10% chance 10
+	db 42, ONIX       ; 20% chance 20
+	db 34, MACHOP     ; 20% chance 20
+	db 34, GEODUDE    ; 15% chance 15
+	db 36, ZUBAT      ; 10% chance 10
+	db 40, MACHOKE    ; 10% chance 10
 	db 38, GRAVELER   ; 10% chance 10
-	db 36, ZUBAT      ;  5% chance
-	db 38, MACHOKE    ;  5% chance 10
-	db 38, MACHOKE    ;  4% chance
-	db 38, MACHOKE    ;  1% chance
+	db 42, GOLBAT     ;  5% chance 10
+	db 42, GOLBAT     ;  5% chance
+	db 40, MAROWAK    ;  4% chance 5
+	db 40, MAROWAK    ;  1% chance
 	; day
-	db 44, ONIX       ; 20% chance 20
-	db 32, GEODUDE    ; 20% chance 20
-	db 30, MACHOP     ; 15% chance 15
-	db 38, RHYHORN    ; 10% chance 20
-	db 40, RHYHORN    ; 10% chance
-	db 34, ZUBAT      ; 10% chance 10
-	db 39, GOLBAT     ;  5% chance 5
-	db 41, GRAVELER   ;  5% chance 5
-	db 40, MACHOKE    ;  4% chance 5
-	db 41, MACHOKE    ;  1% chance
+	db 42, ONIX       ; 20% chance 20
+	db 34, MACHOP     ; 20% chance 20
+	db 34, GEODUDE    ; 15% chance 15
+	db 36, ZUBAT      ; 10% chance 10
+	db 40, MACHOKE    ; 10% chance 10
+	db 38, GRAVELER   ; 10% chance 10
+	db 42, GOLBAT     ;  5% chance 10
+	db 42, GOLBAT     ;  5% chance
+	db 40, MAROWAK    ;  4% chance 5
+	db 40, MAROWAK    ;  1% chance
 	; nite
-	db 44, ONIX       ; 20% chance 20
-	db 32, GEODUDE    ; 20% chance 20
-	db 30, MACHOP     ; 15% chance 15
-	db 38, RHYHORN    ; 10% chance 20
-	db 40, RHYHORN    ; 10% chance
-	db 34, ZUBAT      ; 10% chance 10
-	db 39, GOLBAT     ;  5% chance 5
-	db 41, GRAVELER   ;  5% chance 5
-	db 40, MACHOKE    ;  4% chance 5
-	db 41, MACHOKE    ;  1% chance
+	db 42, ONIX       ; 20% chance 20
+	db 34, MACHOP     ; 20% chance 20
+	db 34, GEODUDE    ; 15% chance 15
+	db 36, ZUBAT      ; 10% chance 10
+	db 40, MACHOKE    ; 10% chance 10
+	db 38, GRAVELER   ; 10% chance 10
+	db 42, GOLBAT     ;  5% chance 10
+	db 42, GOLBAT     ;  5% chance
+	db 40, MAROWAK    ;  4% chance 5
+	db 40, MAROWAK    ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons VICTORY_ROAD_3F ;GEN1
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 42, ONIX       ; 20% chance 30
-	db 37, RHYHORN    ; 20% chance 20
-	db 36, ZUBAT      ; 15% chance 20
-	db 42, ONIX       ; 10% chance
-	db 42, GOLBAT     ; 10% chance 10
+	db 42, ONIX       ; 20% chance 20
+	db 34, MACHOP     ; 20% chance 20
+	db 34, GEODUDE    ; 15% chance 15
+	db 36, ZUBAT      ; 10% chance 10
+	db 40, MACHOKE    ; 10% chance 10
 	db 38, GRAVELER   ; 10% chance 10
-	db 36, ZUBAT      ;  5% chance
-	db 38, MACHOKE    ;  5% chance 10
-	db 38, MACHOKE    ;  4% chance
-	db 38, MACHOKE    ;  1% chance
+	db 42, GOLBAT     ;  5% chance 10
+	db 42, GOLBAT     ;  5% chance
+	db 40, MAROWAK    ;  4% chance 5
+	db 40, MAROWAK    ;  1% chance
 	; day
-	db 44, ONIX       ; 20% chance 20
-	db 32, GEODUDE    ; 20% chance 20
-	db 30, MACHOP     ; 15% chance 15
-	db 38, RHYHORN    ; 10% chance 20
-	db 40, RHYHORN    ; 10% chance
-	db 34, ZUBAT      ; 10% chance 10
-	db 39, GOLBAT     ;  5% chance 5
-	db 41, GRAVELER   ;  5% chance 5
-	db 40, MACHOKE    ;  4% chance 5
-	db 41, MACHOKE    ;  1% chance
+	db 42, ONIX       ; 20% chance 20
+	db 34, MACHOP     ; 20% chance 20
+	db 34, GEODUDE    ; 15% chance 15
+	db 36, ZUBAT      ; 10% chance 10
+	db 40, MACHOKE    ; 10% chance 10
+	db 38, GRAVELER   ; 10% chance 10
+	db 42, GOLBAT     ;  5% chance 10
+	db 42, GOLBAT     ;  5% chance
+	db 40, MAROWAK    ;  4% chance 5
+	db 40, MAROWAK    ;  1% chance
 	; nite
-	db 44, ONIX       ; 20% chance 20
-	db 32, GEODUDE    ; 20% chance 20
-	db 30, MACHOP     ; 15% chance 15
-	db 38, RHYHORN    ; 10% chance 20
-	db 40, RHYHORN    ; 10% chance
-	db 34, ZUBAT      ; 10% chance 10
-	db 39, GOLBAT     ;  5% chance 5
-	db 41, GRAVELER   ;  5% chance 5
-	db 40, MACHOKE    ;  4% chance 5
-	db 41, MACHOKE    ;  1% chance
+	db 42, ONIX       ; 20% chance 20
+	db 34, MACHOP     ; 20% chance 20
+	db 34, GEODUDE    ; 15% chance 15
+	db 36, ZUBAT      ; 10% chance 10
+	db 40, MACHOKE    ; 10% chance 10
+	db 38, GRAVELER   ; 10% chance 10
+	db 42, GOLBAT     ;  5% chance 10
+	db 42, GOLBAT     ;  5% chance
+	db 40, MAROWAK    ;  4% chance 5
+	db 40, MAROWAK    ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons CERULEAN_CAVE_1F ;GEN1
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 50, GOLBAT     ; 20% chance 40
-	db 50, GOLBAT     ; 20% chance
-	db 48, MACHOKE    ; 15% chance 20
+	db 50, GOLBAT     ; 20% chance 35
+	db 48, MACHOKE    ; 20% chance 20
+	db 50, GOLBAT     ; 15% chance
 	db 50, SANDSLASH  ; 10% chance 10
 	db 50, ARBOK      ; 10% chance 10
 	db 52, PARASECT   ; 10% chance 10
 	db 52, VENOMOTH   ;  5% chance 10
 	db 52, VENOMOTH   ;  5% chance 10
-	db 48, MACHOKE    ;  4% chance
-	db 48, MACHOKE    ;  1% chance
+	db 50, GOLBAT     ;  4% chance
+	db 50, GOLBAT     ;  1% chance
 	; day
-	db 50, GOLBAT     ; 20% chance 40
-	db 50, GOLBAT     ; 20% chance
-	db 48, MACHOKE    ; 15% chance 20
+	db 50, GOLBAT     ; 20% chance 35
+	db 48, MACHOKE    ; 20% chance 20
+	db 50, GOLBAT     ; 15% chance
 	db 50, SANDSLASH  ; 10% chance 10
 	db 50, ARBOK      ; 10% chance 10
 	db 52, PARASECT   ; 10% chance 10
 	db 52, VENOMOTH   ;  5% chance 10
 	db 52, VENOMOTH   ;  5% chance 10
-	db 48, MACHOKE    ;  4% chance
-	db 48, MACHOKE    ;  1% chance
+	db 50, GOLBAT     ;  4% chance
+	db 50, GOLBAT     ;  1% chance
 	; nite
-	db 50, GOLBAT     ; 20% chance 40
-	db 50, GOLBAT     ; 20% chance
-	db 48, MACHOKE    ; 15% chance 20
+	db 50, GOLBAT     ; 20% chance 35
+	db 48, MACHOKE    ; 20% chance 20
+	db 50, GOLBAT     ; 15% chance
 	db 50, SANDSLASH  ; 10% chance 10
 	db 50, ARBOK      ; 10% chance 10
 	db 52, PARASECT   ; 10% chance 10
 	db 52, VENOMOTH   ;  5% chance 10
 	db 52, VENOMOTH   ;  5% chance 10
-	db 48, MACHOKE    ;  4% chance
-	db 48, MACHOKE    ;  1% chance
+	db 50, GOLBAT     ;  4% chance
+	db 50, GOLBAT     ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons CERULEAN_CAVE_2F ;GEN1
