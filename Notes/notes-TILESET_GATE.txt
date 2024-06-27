@@ -1,0 +1,79 @@
+gfx\tilesets\gate.png
+gfx\tilesets\gate_palette_map.asm
+data\tilesets\gate_metatiles.bin
+data\tilesets\gate_collision.asm
+
+EastWestGate.blk 4Wx5H
+NorthSouthGate.blk 4Wx4H
+UndergroundPathEntrance.blk
+SafariZoneEntrance.blk
+GoldenrodUnderground.blk
+Route35NationalParkGate.blk
+Route36NationalParkGate.blk
+
+
+
+TILESET_GATE
+
+;	EastWestGate.blk (4Wx5H)
+	Route38EcruteakGate_Blocks:
+	Route42EcruteakGate_Blocks:
+	Route32RuinsOfAlphGate_Blocks:
+	IlexForestAzaleaGate_Blocks:
+	Route15FuchsiaGate_Blocks:
+	Route8SaffronGate_Blocks:
+	Route16Gate_Blocks:
+	Route7SaffronGate_Blocks:
+	Route18Gate_Blocks:
+	Route31VioletGate_Blocks:
+	Route11Gate_Blocks:
+
+;	NorthSouthGate.blk (4Wx4H)
+	Route12Gate_Blocks: (doesn't exist)
+	Route19FuchsiaGate_Blocks:
+	Route43MahoganyGate_Blocks:
+	Route43Gate_Blocks:
+	Route35GoldenrodGate_Blocks:
+	Route36RuinsOfAlphGate_Blocks:
+	Route34IlexForestGate_Blocks:
+	Route6SaffronGate_Blocks:
+	Route40BattleTowerGate_Blocks:
+	Route2Gate_Blocks:
+	Route29Route46Gate_Blocks:
+	Route5SaffronGate_Blocks:
+	ViridianForestGateN_Blocks:
+ViridianForestGateS_Blocks:
+
+;	UndergroundPathEntrance.blk
+Route5UndergroundPathEntrance
+Route6UndergroundPathEntrance
+Route7UndergroundPathEntrance
+Route8UndergroundPathEntrance
+
+;	PewterMuseum1F.blk
+PewterMuseum1F
+
+;	PewterMuseum2F.blk
+PewterMuseum2F
+
+;	SafariZoneEntrance.blk
+SafariZoneEntrance
+
+;	VictoryRoadGate.blk
+VictoryRoadGate
+
+;	GoldenrodUnderground.blk
+GoldenrodUnderground
+
+;	Route35NationalParkGate.blk
+Route35NationalParkGate
+
+;	Route36NationalParkGate.blk
+Route36NationalParkGate
+
+;	TradeCenter.blk
+TradeCenter
+TimeCapsule
+
+;	Colosseum.blk
+Colosseum

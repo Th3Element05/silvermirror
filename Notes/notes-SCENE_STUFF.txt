@@ -1,0 +1,178 @@
+
+SCENE STUFF
+\data\maps\scenes.asm
+MapScenes::
+	scene_var MAP_NAME, 	wMapNameSceneID
+
+\ram\wram.asm
+	; map scene ids
+	wMapNameSceneID		db
+
+
+
+text line "123456789012345678" ;max 18 characters
+
+
+
+\maps\TeamRocketBase*.asm
+; this is FULL of interesting scripts!
+
+
+
+SCALL
+This appears to call a script (with an [end]) to execute, 
+then returns to continue the current script.
+; useful for executing the same script within multiple other scripts on a map
+
+
+
+WAITBUTTON vs PROMPTBUTTON
+Every [jumptext] and [jumptextfaceplayer] does an implicit [waitbutton](and [closetext]?) at the end. 
+[waitbutton] is the same as [promptbutton] but without the blinking cursor.
+The arrow is automatic for any [para] and [cont] (before the text?)
+Basically, the arrow is showing if there is more text.
+There is no arrow if the button press ends the textbox.
+
+[prompt] is a text command which does the same thing as the script command [promptbutton]
+Both display an arrow and wait for the player to press a button
+
+
+
+checkflag ENGINE_POKEDEX
+CherrygroveYoungsterScript:
+	faceplayer
+	opentext
+	checkflag ENGINE_POKEDEX
+	iftrue .HavePokedex
+	writetext CherrygroveYoungsterText_NoPokedex
+	waitbutton
+	closetext
+	end
+
+const ENGINE_POKEDEX
+
+
+TRAINER CONSTANTS
+\constants\trainer_constants.asm
+
+
+
+SPRITE STUFF
+\data\maps\outdoor_sprites.asm
+; Defines what sprites are available in each map group
+
+
+
+RECEIVE ITEM SCRIPT
+jumpstd ReceiveItemScript
+ReceiveItemScript:
+	waitsfx
+	farwritetext ReceivedItemText
+	playsound SFX_ITEM
+	waitsfx
+	end
+ReceivedItemText:
+	text "<PLAYER> received"
+	line "@"
+	text_ram wStringBuffer4
+	text "."
+	done
+
+
+
+VISIBILITY FLAGS
+\constants\event_flags.asm
+	const_next 1600
+; Sprite visibility flags
+; When these events are CLEARED, the sprite is VISIBLE
+; When there events are SET, the sprite is HIDDEN
+; 'disappear' and 'appear' set/clear these flags immediately
+; 'setevent' and 'clearevent' set/clear toggle visibility when the map is reloaded
+
+\engine\events\std_scripts.asm
+InitializeEventsScript:
+; (i think) this is where event flags are set at the start of the game
+
+
+
+SPECIAL POINTERS
+\data\events\special_pointers.asm
+
+
+
+HEAL BED
+FastShipBed:
+	opentext
+	writetext FastShipBedText1
+	waitbutton
+	closetext
+	special FadeBlackQuickly
+	special ReloadSpritesNoPalettes
+	special StubbedTrainerRankings_Healings
+	special HealParty
+	playmusic MUSIC_HEAL
+	pause 60
+	special RestartMapMusic
+	special FadeInQuickly
+	opentext
+	writetext FastShipBedText2
+	waitbutton
+	closetext
+	checkevent EVENT_FAST_SHIP_HAS_ARRIVED
+	iftrue .AlreadyArrived
+	checkevent EVENT_FAST_SHIP_FOUND_GIRL
+	iftrue .CanArrive
+	checkevent EVENT_FAST_SHIP_FIRST_TIME
+	iftrue .CanArrive
+.AlreadyArrived:
+	end
+.CanArrive:
+	playsound SFX_ELEVATOR_END
+	pause 30
+	checkevent EVENT_FAST_SHIP_DESTINATION_OLIVINE
+	iftrue .ArrivedOlivine
+	opentext
+	writetext FastShipArrivedVermilionText
+	waitbutton
+	closetext
+	setevent EVENT_FAST_SHIP_HAS_ARRIVED
+	end
+.ArrivedOlivine:
+	opentext
+	writetext FastShipArrivedOlivineText
+	waitbutton
+	closetext
+	setevent EVENT_FAST_SHIP_HAS_ARRIVED
+	end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

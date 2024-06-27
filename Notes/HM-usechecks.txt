@@ -1,0 +1,144 @@
+\engine\events\overworld.asm
+
+HM01 CUT ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+CutFunction:
+...
+.CheckAble:
+	ld de, ENGINE_HIVEBADGE
+	call CheckBadge
+	jr c, .nohivebadge
+	call CheckMapForSomethingToCut
+	jr c, .nothingtocut
+	ld a, $1
+	ret
+...
+TryCutOW::
+	ld de, ENGINE_HIVEBADGE
+	call CheckEngineFlag
+	jr c, .cant_cut
+
+	ld de, ENGINE_PAGER_CUT
+	call CheckEngineFlag
+	jr c, .cant_cut
+
+
+HM02 FLY ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+FlyFunction:
+...
+.TryFly:
+	ld de, ENGINE_STORMBADGE
+	call CheckBadge
+	jr c, .nostormbadge
+	call GetMapEnvironment
+	call CheckOutdoorMap
+	jr z, .outdoors
+	jr .indoors
+
+
+HM03 SURF ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+SurfFunction:
+...
+.TrySurf:
+	ld de, ENGINE_FOGBADGE
+	call CheckBadge
+	jr c, .nofogbadge
+...
+TrySurfOW::
+...
+	call CheckDirection
+	jr c, .quit
+
+	ld de, ENGINE_FOGBADGE
+	call CheckEngineFlag
+	jr c, .quit
+	
+	ld de, ENGINE_PAGER_SURF
+	call CheckEngineFlag
+	jr c, .quit
+
+
+HM04 STRENGTH ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+StrengthFunction:
+...
+.TryStrength:
+	ld de, ENGINE_PLAINBADGE
+	call CheckBadge
+	jr c, .Failed
+	jr .UseStrength
+...
+TryStrengthOW:
+	ld de, ENGINE_PLAINBADGE
+	call CheckEngineFlag
+	jr c, .nope
+
+	ld de, ENGINE_PAGER_STRENGTH
+	call CheckEngineFlag
+	jr c, .nope
+
+
+
+HM05 FLASH ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+FlashFunction:
+...
+.CheckUseFlash:
+	ld de, ENGINE_ZEPHYRBADGE
+	farcall CheckBadge
+	jr c, .nozephyrbadge
+	push hl
+
+
+HM06 WHIRLPOOL ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+WhirlpoolFunction:
+...
+.TryWhirlpool:
+	ld de, ENGINE_GLACIERBADGE
+	call CheckBadge
+	jr c, .noglacierbadge
+	call TryWhirlpoolMenu
+	jr c, .failed
+	ld a, $1
+	ret
+...
+TryWhirlpoolOW::
+	ld de, ENGINE_GLACIERBADGE
+	call CheckEngineFlag
+	jr c, .failed
+
+	ld de, ENGINE_PAGER_WHIRLPOOL
+	call CheckEngineFlag
+	jr c, .failed
+
+
+HM07 WATERFALL ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+WaterfallFunction:
+...
+.TryWaterfall:
+	ld de, ENGINE_RISINGBADGE
+	farcall CheckBadge
+	ld a, $80
+	ret c
+	call CheckMapCanWaterfall
+	jr c, .failed
+	ld hl, Script_WaterfallFromMenu
+	call QueueScript
+	ld a, $81
+	ret
+...
+TryWaterfallOW::
+	ld de, ENGINE_RISINGBADGE
+	call CheckEngineFlag
+	jr c, .failed
+	call CheckMapCanWaterfall
+	jr c, .failed
+	ld a, BANK(Script_AskWaterfall)
+	ld hl, Script_AskWaterfall
+	call CallScript
+	scf
+	ret
+
+
+
+
+
+
+

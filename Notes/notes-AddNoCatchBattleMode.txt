@@ -1,0 +1,119 @@
+
+constants\battle_constants.asm
+; battle classes (wBattleMode values)
+	const_def 1
+	const WILD_BATTLE
+	const TRAINER_BATTLE
++	const NO_CATCH
+
+
+ram\wram.asm
+wBattleMode::
+; 0: overworld
+; 1: wild battle
+; 2: trainer battle
++; 3: no catch
+	db
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+constants\battle_constants.asm
+; battle types (wBattleType values)
+	const_def
+	const BATTLETYPE_NORMAL
+	const BATTLETYPE_CANLOSE
+	const BATTLETYPE_DEBUG
+	const BATTLETYPE_TUTORIAL
+	const BATTLETYPE_FISH
+	const BATTLETYPE_ROAMING
+	const BATTLETYPE_CONTEST
+	const BATTLETYPE_FORCESHINY
+	const BATTLETYPE_TREE
+	const BATTLETYPE_TRAP
+	const BATTLETYPE_FORCEITEM
+	const BATTLETYPE_CELEBI
+	const BATTLETYPE_SUICUNE
+	const BATTLETYPE_HO_OH
+	const BATTLETYPE_LUGIA
+	const BATTLETYPE_KANTO_LEGEND
+	const BATTLETYPE_SAFARI
+	const BATTLETYPE_SAFARI_FISH
+	const BATTLETYPE_SAFARI_TREE
++	const BATTLETYPE_NO_CATCH
+
+
+engine\items\item_effects.asm
+PokeBallEffect:
+	ld a, [wBattleMode]
+	dec a
+	jp nz, UseBallInTrainerBattle
+
+	ld a, [wBattleType]
+	cp BATTLETYPE_TUTORIAL
+	jr z, .room_in_party
++	cp BATTLETYPE_NO_CATCH
++	jp z, UseBallInNoCatchBattle
+
+	ld a, [wPartyCount]
+	cp PARTY_LENGTH
+	jr nz, .room_in_party
+
+...	...
+
+UseBallInTrainerBattle:
+	call ReturnToBattle_UseBall
+	ld de, ANIM_THROW_POKE_BALL
+	ld a, e
+	ld [wFXAnimID], a
+	ld a, d
+	ld [wFXAnimID + 1], a
+	xor a
+	ld [wBattleAnimParam], a
+	ldh [hBattleTurn], a
+	ld [wNumHits], a
+	predef PlayBattleAnim
+	ld hl, BallBlockedText
+	call PrintText
+	ld hl, BallDontBeAThiefText
+	call PrintText
+	jr UseDisposableItem
++
++UseBallInNoCatchBattle:
++	call ReturnToBattle_UseBall
++	ld de, ANIM_THROW_POKE_BALL
++	ld a, e
++	ld [wFXAnimID], a
++	ld a, d
++	ld [wFXAnimID + 1], a
++	xor a
++	ld [wBattleAnimParam], a
++	ldh [hBattleTurn], a
++	ld [wNumHits], a
++	predef PlayBattleAnim
++	ld hl, CantCatchThisMonText
++	call PrintText
++	jr UseDisposableItem
+
+...	...
+
++CantCatchThisMonText:
++	text_far _CantCatchThisMonText
++	text_end
+
+
+
+data\text\common_3.asm
+_BallDontBeAThiefText::
+	text "Don't be a thief!"
+	prompt
++
++_CantCatchThisMonText::
++	text "This #MON"
++	line "can't be caught!"
++	prompt
+
+
+
+
+
+

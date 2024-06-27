@@ -1,0 +1,96 @@
+silvermirror
+MODIFIED FILES LIST
+
+\constants\event_flags.asm
+\constants\trainer_constants.asm
+
+\data\pager_system.asm
+
+\data\items\marts.asm
+\data\maps\maps.asm
+\data\maps\outdoor_sprites.asm
+\data\maps\scenes.asm
+-\data\moves\grammar.asm -unreferenced, removed INCLUDE
+\data\player_names.asm
+\data\pokemon\dex_order_new.asm
++\data\pokemon\dex_order_old.asm +added
+\data\text\common_2.asm
+\data\text\common_3.asm
+\data\trainers\attributes.asm
+\data\trainers\class_names.asm
+\data\trainers\dvs.asm
+\data\trainers\encounter_music.asm
+\data\trainers\genders.asm
+\data\trainers\palettes.asm
+=\data\trainers\parties.asm =pokecrystal, +modified
+	/\ TRAINER POKEMON PARTIES (https://www.serebii.net/rb/rival.shtml)
+\data\trainers\party_pointers.asm
+\data\trainers\pic_pointers.asm
+\data\trainers\sprites.asm
+
+=\engine\battle\read_trainer_party.asm =pokecrystal (-reduntant INCLUDE)
+\engine\battle\used_move_text.asm
+\engine\events\overworld.asm
+\engine\events\specials.asm
+\engine\events\std_scripts.asm
+\engine\menus\intro_menu.asm
+\engine\menus\init_gender.asm
+\engine\movie\intro.asm
+\engine\pokedex\pokedex.asm
+
+\gfx\sprites\pokedex.png
+\gfx\title\crystal.png
+\gfx\title\logo.png
+\gfx\title\suicune.png
+\gfx\trainers\Rival1.png
+\gfx\trainers\Rival2.png
++\gfx\trainers\Rival3.png +added
+
+\mobile\mobile_12.asm
+\mobile\mobile_45_sprite_engine.asm
+\mobile\mobile_5f.asm
+\mobile\mobile_menu.asm
+
+;kanto maps
+
+\maps\PlayersHouse1F.asm
+\maps\PlayersHouse2F.asm
+
+\maps\PalletTown.asm
+\maps\OaksLab.asm
+\maps\Route1.asm
+\maps\ViridianCity.asm
+
+;johto maps
+\maps\CianwoodCity.asm
+\maps\DanceTheater.asm
+\maps\IlexForest.asm
+\maps\OlivineCafe.asm
+\maps\Route36.asm
+\maps\SproutTower3F.asm
+\maps\TeamRocketBaseB2F.asm
+\maps\VioletCity.asm
+all rival battle locations
+
+
+\ram\wram.asm
+
+
+
+INTEND TO MODIFY
+
+\gfx\trainers\rival1.png
+\gfx\trainers\rival2.png
+
+\gfx\player\chris.png
+\gfx\player\chris_back.png
+\gfx\player\kris.png ??
+\gfx\player\kris_back.png ??
+
+\gfx\trainers\red.png
+\gfx\trainers\blue.png
+
+\gfx\trainer_card\chris_card.png
+\gfx\trainer_card\kris_card.png ??
+
+\gfx\title

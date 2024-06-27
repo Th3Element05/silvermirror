@@ -1,0 +1,80 @@
+3 bulbasaur
+4 charmander
+1 squirtle
+10 caterpie
+11 weedle
+28 pidgey
+32 rattata
+14 spearow
+13 ekans
+11 pikachu
+7 sandshrew
+5 nidoran_f
+7 nidoran_m
+7 clefairy
+8 vulpix
+2 jigglypuff
+24 zubat
+14 oddish
+4 paras
+1 venonat
+1 diglett
+11 meowth
+0 psyduck (+1, -1 tentacool)
+9 mankey
+11 growlithe
+12 poliwag
+3 abra
+27 machop
+13 bellsprout
+15 tentacool
+18 geodude
+4 ponyta
+10 slowpoke
+12 magnemite
+2 farfetch_d
+5 doduo
+1 seel
+20 grimer
+12 shellder
+17 gastly
+9 onix
+15 drowzee
+0 krabby (+1, -1 goldeen)
+13 voltorb
+1 exeggcute
+8 cubone
+1 hitmonlee
+1 hitmonchan
+2 lickitung
+35 koffing
+6 rhyhorn
+1 chansey (fuchsia zoo)
+1 tangela
+0 KANGASKHAN (fuchsia zoo)
+18 horsea
+18 goldeen
+9 staryu
+4 mr__mime
+0 SCYTHER (fuchsia zoo)
+(trade)0 JYNX
+				0 ELECTABUZZ
+				0 MAGMAR
+0 PINSIR (fuchsia zoo)
+1 tauros
+8 magikarp
+(gift) 1 lapras (fuchsia zoo)
+				0 DITTO
+(gift)0 EEVEE
+(prize)0 PORYGON
+(gift)0 OMANYTE
+(gift)0 KABUTO
+(gift)0 AERODACTYL
+(story)0 SNORLAX
+0 DRATINI (fuchsia zoo)
+
+
+
+
+
+

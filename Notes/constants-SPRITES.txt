@@ -1,0 +1,263 @@
+
+; sprite palettes
+	const_def
+	const PAL_OW_RED    ; 0
+	const PAL_OW_BLUE   ; 1
+	const PAL_OW_GREEN  ; 2
+	const PAL_OW_BROWN  ; 3
+	const PAL_OW_PINK   ; 4
+	const PAL_OW_EMOTE  ; 5
+	const PAL_OW_TREE   ; 6
+	const PAL_OW_ROCK   ; 7
+
+PAL_OW_ROCK referenced in
+data\sprites\sprites.asm
+engine\gfx\color.asm
+engine\battle\battle_transition.asm
+contants\sprite_data_constants.asm
+
+MapSpecificOBPalettes:
+engine\tilesets\tileset_palettes.asm
+
+SPRITE CONSTANTS
+	const SPRITE_NONE                   ; 00
+	const SPRITE_CHRIS                  ; 01
+	const SPRITE_CHRIS_BIKE             ; 02
+	const SPRITE_GAMEBOY_KID            ; 03
+	const SPRITE_RIVAL                  ; 04
+	const SPRITE_OAK                    ; 05
+	const SPRITE_RED                    ; 06
+	const SPRITE_BLUE                   ; 07
+	const SPRITE_BILL                   ; 08
+	const SPRITE_ELDER                  ; 09
+	const SPRITE_JANINE                 ; 0a
+	const SPRITE_KURT                   ; 0b
+	const SPRITE_MOM                    ; 0c
+	const SPRITE_BLAINE                 ; 0d
+	const SPRITE_REDS_MOM               ; 0e
+	const SPRITE_DAISY                  ; 0f
+	const SPRITE_ELM                    ; 10
+	const SPRITE_WILL                   ; 11
+	const SPRITE_FALKNER                ; 12
+	const SPRITE_WHITNEY                ; 13
+	const SPRITE_BUGSY                  ; 14
+	const SPRITE_MORTY                  ; 15
+	const SPRITE_CHUCK                  ; 16
+	const SPRITE_JASMINE                ; 17
+	const SPRITE_PRYCE                  ; 18
+	const SPRITE_CLAIR                  ; 19
+	const SPRITE_BROCK                  ; 1a
+	const SPRITE_KAREN                  ; 1b
+	const SPRITE_BRUNO                  ; 1c
+	const SPRITE_MISTY                  ; 1d
+	const SPRITE_LANCE                  ; 1e
+	const SPRITE_SURGE                  ; 1f
+	const SPRITE_ERIKA                  ; 20
+	const SPRITE_KOGA                   ; 21
+	const SPRITE_SABRINA                ; 22
+	const SPRITE_COOLTRAINER_M          ; 23
+	const SPRITE_COOLTRAINER_F          ; 24
+	const SPRITE_BUG_CATCHER            ; 25
+	const SPRITE_TWIN                   ; 26
+	const SPRITE_YOUNGSTER              ; 27
+	const SPRITE_LASS                   ; 28
+	const SPRITE_TEACHER                ; 29
+	const SPRITE_BEAUTY                 ; 2a
+	const SPRITE_SUPER_NERD             ; 2b
+	const SPRITE_ROCKER                 ; 2c
+	const SPRITE_POKEFAN_M              ; 2d
+	const SPRITE_POKEFAN_F              ; 2e
+	const SPRITE_GRAMPS                 ; 2f
+	const SPRITE_GRANNY                 ; 30
+	const SPRITE_SWIMMER_GUY            ; 31
+	const SPRITE_SWIMMER_GIRL           ; 32
+	const SPRITE_BIG_SNORLAX            ; 33
+	const SPRITE_SURFING_PIKACHU        ; 34
+	const SPRITE_ROCKET                 ; 35
+	const SPRITE_ROCKET_GIRL            ; 36
+	const SPRITE_NURSE                  ; 37
+	const SPRITE_LINK_RECEPTIONIST      ; 38
+	const SPRITE_CLERK                  ; 39
+	const SPRITE_FISHER                 ; 3a
+	const SPRITE_FISHING_GURU           ; 3b
+	const SPRITE_SCIENTIST              ; 3c
+	const SPRITE_KIMONO_GIRL            ; 3d
+	const SPRITE_SAGE                   ; 3e
+	const SPRITE_UNUSED_GUY             ; 3f
+	const SPRITE_GENTLEMAN              ; 40
+	const SPRITE_BLACK_BELT             ; 41
+	const SPRITE_RECEPTIONIST           ; 42
+	const SPRITE_OFFICER                ; 43
+	const SPRITE_CAL                    ; 44
+	const SPRITE_SLOWPOKE               ; 45
+	const SPRITE_CAPTAIN                ; 46
+	const SPRITE_BIG_LAPRAS             ; 47
+	const SPRITE_GYM_GUIDE              ; 48
+	const SPRITE_SAILOR                 ; 49
+	const SPRITE_BIKER                  ; 4a
+	const SPRITE_PHARMACIST             ; 4b
+	const SPRITE_MONSTER                ; 4c
+	const SPRITE_FAIRY                  ; 4d
+	const SPRITE_BIRD                   ; 4e
+	const SPRITE_DRAGONITE_MOVE         ; 4f
+	const SPRITE_BIG_ONIX               ; 50
+	const SPRITE_N64                    ; 51
+	const SPRITE_SUDOWOODO              ; 52
+	const SPRITE_SURF                   ; 53
+	const SPRITE_POKE_BALL              ; 54
+	const SPRITE_POKEDEX                ; 55
+	const SPRITE_PAPER                  ; 56
+	const SPRITE_VIRTUAL_BOY            ; 57
+	const SPRITE_OLD_LINK_RECEPTIONIST  ; 58
+	const SPRITE_ROCK                   ; 59
+	const SPRITE_BOULDER                ; 5a
+	const SPRITE_SNES                   ; 5b
+	const SPRITE_FAMICOM                ; 5c
+	const SPRITE_BERRY                  ; 5d
+	const SPRITE_GOLD_TROPHY            ; 5e
+	const SPRITE_SILVER_TROPHY          ; 5f
+	const SPRITE_KRIS                   ; 60
+	const SPRITE_KRIS_BIKE              ; 61
+	const SPRITE_KURT_OUTSIDE           ; 62
+	const SPRITE_SUICUNE                ; 63
+	const SPRITE_ENTEI                  ; 64
+	const SPRITE_RAIKOU                 ; 65
+	const SPRITE_APRICORN               ; 66
+	const SPRITE_RATTATA_UP             ; 69
+	const SPRITE_PIDGEY_MOVE            ; 6a
+	const SPRITE_SLOWPOKE_NOTAIL        ; 6b SPRITE IS DOME FOSSIL ;silvermirror
+	const SPRITE_FARFETCH_D_MOVE        ; 6c
+	const SPRITE_FOSSIL                 ; 6d
+	const SPRITE_OLD_AMBER              ; 6e
+	const SPRITE_AMPHY_SICK             ; 6f
+	const SPRITE_CLEFAIRY_MOVE          ; 70
+ 	const SPRITE_CHRIS_RUN              ; 71
+ 	const SPRITE_KRIS_RUN               ; 72
+
+; SpriteMons indexes (see data/sprites/sprite_mons.asm)
+	const_next $80
+DEF SPRITE_POKEMON EQU const_value
+	const SPRITE_UNOWN                  ; 80 DECORATION
+	const SPRITE_GEODUDE                ; 81 DECORATION
+	const SPRITE_GROWLITHE              ; 82
+	const SPRITE_WEEDLE                 ; 83 DECORATION
+	const SPRITE_SHELLDER               ; 84 DECORATION
+	const SPRITE_ODDISH                 ; 85 DECORATION
+	const SPRITE_GENGAR                 ; 86 DECORATION
+	const SPRITE_ZUBAT                  ; 87
+	const SPRITE_MAGIKARP               ; 88 DECORATION
+	const SPRITE_SQUIRTLE               ; 89 DECORATION
+	const SPRITE_MEOWTH                 ; 8a
+	const SPRITE_BUTTERFREE             ; 8b
+	const SPRITE_DIGLETT                ; 8c DECORATION
+	const SPRITE_POLIWAG                ; 8d DECORATION
+	const SPRITE_PIKACHU                ; 8e DECORATION
+	const SPRITE_CLEFAIRY               ; 8f DECORATION
+	const SPRITE_CHARMANDER             ; 90 DECORATION
+	const SPRITE_MEWTWO                 ; 91
+	const SPRITE_STARMIE                ; 92 DECORATION
+	const SPRITE_BULBASAUR              ; 93 DECORATION
+	const SPRITE_JIGGLYPUFF             ; 94 DECORATION
+	const SPRITE_GRIMER                 ; 95 DECORATION
+	const SPRITE_DRATINI                ; 96
+	const SPRITE_ABRA                   ; 97
+	const SPRITE_TENTACOOL              ; 98 DECORATION
+	const SPRITE_MILTANK                ; 99
+	const SPRITE_MACHOP                 ; 9a DECORATION
+	const SPRITE_VOLTORB                ; 9b DECORATION
+	const SPRITE_LAPRAS                 ; 9c
+	const SPRITE_RHYDON                 ; 9d
+	const SPRITE_MOLTRES                ; 9e
+	const SPRITE_SNORLAX                ; 9f
+	const SPRITE_GYARADOS               ; a0
+	const SPRITE_LUGIA                  ; a1
+	const SPRITE_HO_OH                  ; a2
+	const SPRITE_PIDGEY                 ; a3
+	const SPRITE_FARFETCH_D             ; a4
+	const SPRITE_MACHOKE                ; a5
+	const SPRITE_PERSIAN                ; a6
+	const SPRITE_AMPHAROS               ; a7
+	const SPRITE_ELECTRODE              ; a8
+	const SPRITE_MURKROW                ; a9
+	const SPRITE_RATTATA                ; aa
+	const SPRITE_SPEAROW                ; ab
+	const SPRITE_NIDORAN_M              ; ac
+	const SPRITE_KANGASKHAN             ; ad
+	const SPRITE_SLOWBRO                ; ae
+	const SPRITE_ZAPDOS                 ; af
+	const SPRITE_NIDORINO               ; b0
+	const SPRITE_PSYDUCK                ; b1
+	const SPRITE_BAYLEEF                ; b2
+	const SPRITE_POLIWRATH              ; b3
+	const SPRITE_NIDORAN_F              ; b4
+	const SPRITE_FEAROW                 ; b5
+	const SPRITE_ARTICUNO               ; b6
+	const SPRITE_DODRIO                 ; b6
+	const SPRITE_BLISSEY                ; b7
+	const SPRITE_MEW                    ; b8
+DEF NUM_POKEMON_SPRITES EQU const_value - SPRITE_POKEMON
+
+
+MapSpecificOBPalettes:
+	_use_palette_routine_for_map ROUTE_30, .PurpleOverRockOBPalette
+	_use_palette_routine_for_map VIOLET_CITY, .YellowOverRockOBPalette
+	_use_palette_routine_for_map AZALEA_TOWN, .WhiteOverRockOBPalette
+	_use_palette_routine_for_map ROUTE_38, .WhiteOverRockOBPalette
+	_use_palette_routine_for_map ROUTE_42, .YellowOverRockOBPalette
+	_use_palette_routine_for_map ROUTE_44, .YellowOverRockOBPalette
+	_use_palette_routine_for_map ROUTE_46, .YellowOverRockOBPalette
+	_use_palette_routine_for_map PEWTER_CITY, .WhiteOverRockOBPalette
+	_use_palette_routine_for_map PEWTER_NIDORAN_SPEECH_HOUSE, .PurpleOverRockOBPalette
+	_use_palette_routine_for_map ROUTE_8, .PurpleOverRockYellowOverPinkOBPalette
+	_use_palette_routine_for_map FUCHSIA_CITY, .YellowOverRockOBPalette
+	_use_palette_routine_for_map OLIVINE_LIGHTHOUSE_6F, .YellowOverRockOBPalette
+	_use_palette_routine_for_map VIRIDIAN_NICKNAME_SPEECH_HOUSE, .PurpleOverRockOBPalette
+	_use_palette_routine_for_map INDIGO_PLATEAU_POKECENTER_1F, .YellowOverRockOBPalette
+	_use_palette_routine_for_map VERMILION_CITY, .GrayOverRockOBPalette
+	_use_palette_routine_for_map GOLDENROD_DEPT_STORE_B1F, .GrayOverRockOBPalette
+	_use_palette_routine_for_map DANCE_THEATER, .GrayOverRockOBPalette
+;	_use_palette_routine_for_map ROUTE_10_SOUTH, .YellowOverRockOBPalette
+	_use_palette_routine_for_map CERULEAN_CAVE_B1F, .PurpleOverPinkOBPalette
+	_use_palette_routine_for_map MR_FUJIS_HOUSE, .PurpleOverRockYellowOverPinkOBPalette
+	_use_palette_routine_for_map SAFARI_ZONE_AREA_2, .SandOverTreeOBPalette
+	_use_palette_routine_for_map SAFARI_ZONE_AREA_3, .SwampOverTreeOBPalette
+	_use_palette_routine_for_map PEWTER_MUSEUM_1F, .YellowOverRockOBPalette
+	_use_palette_routine_for_map PEWTER_MUSEUM_2F, .YellowOverRockOBPalette
+;silvermirror+
+	_use_palette_routine_for_map SS_ANNE_ROOMS_B1F, .GrayOverRockOBPalette
+	db -1 ; terminator
+
+
+00 ~ 0
+01 ~ 8
+02 ~ 16
+03 ~ 24
+04 ~ 32
+05 ~ 40
+06 ~ 48
+07 ~ 56
+08 ~ 64
+09 ~ 72
+10 ~ 80
+11 ~ 88
+12 ~ 96
+13 ~ 104
+14 ~ 112
+15 ~ 120
+16 ~ 128
+17 ~ 136
+18 ~ 144
+19 ~ 152
+20 ~ 160
+21 ~ 168
+22 ~ 176
+23 ~ 184
+24 ~ 192
+25 ~ 200
+26 ~ 208
+27 ~ 216
+28 ~ 224
+29 ~ 232
+30 ~ 240
+31 ~ 248
+x ~ 255

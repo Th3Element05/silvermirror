@@ -1,0 +1,244 @@
+AddNTimes::
+; Add bc * a to hl.
+	and a
+	ret z
+.loop
+	add hl, bc
+	dec a
+	jr nz, .loop
+	ret
+
+
+	writetext RadioTower1FRadioCardWomanYouWinText
+	promptbutton
+	getstring STRING_BUFFER_4, .RadioCardText
+	scall .ReceiveItem
+	writetext RadioTower1FPokegearIsARadioText
+	promptbutton
+	setflag ENGINE_RADIO_CARD
+.GotCard:
+	writetext RadioTower1FRadioCardWomanTuneInText
+	waitbutton
+	closetext
+	end
+
+.RadioCardText:
+	db "RADIO CARD@"
+
+.ReceiveItem:
+	jumpstd ReceiveItemScript
+	end
+
+RadioTower1FPokegearIsARadioText:
+	text "<PLAYER>'s #GEAR"
+	line "can now double as"
+	cont "a radio!"
+	done
+
+
+
+TEST to-do
+
+def_grass_wildmons ROUTE_14 | ROUTE_15
+
+Route22 Rival battles, first and second
+
+Rival DVs (OaksLab, Route22)
+bike shop, yesorno, then bike voucher
+vermilion sailor on dock, visibility after ss anne sets sail EVENT_SS_ANNE_SET_SAIL
+vermilion gym new door switches script
+pokemon tower exit warp to lavender
+pokeflute do awakening effect
+celadon cafe (and bill's house) waitbutton (necessary?) after verbosegiveitem
+test STRENGTH with/without rainbowbadge
+
+
+
+TO-DO to-do
+
+OPT repeats text after swarm flag set
+
+MahoganyMart1F is dungeon? to RocketBaseB1F
+ROUTE11 water mons, use vermilion
+
+power plant palette, use INDOOR
+
+CRASH > safari zone 1 SW NPC
+CRASH > safari zone 1 NE NPC
+CRASH > safari zone 1 rest house sign
+safari zone 3 rest house exit warp
+safari zone border blocks, wrong tree
+safari zone entrance script warp coords
+safari zone tall brown grass has green when walking
+safari zone grey sand looks weird next to brown sand, esp MORN, ok at NITE
+safari zone secret house blocks messed up, can't talk to guy
+
+
+trainer parties, levels/learnsets
+
+Gate2F:
+11, ITEMFINDER (30), trade ask nidorino offer nidorina
+12, tm39
+15, EXP.ALL (50)
+16, nothing of value
+18, trade ask slowbro offer lickitung
+
+Trades:
+Route2 gameboykid,	MR__MIME, Abra  	MR__MIME, Clefairy
+Route5 girl/twin,	NIDORAN_F, NidoranM	MACHOKE, Cubone
+Route11 youngster,	NIDORINA, Nidorino	DUGTRIO, Lickitung
+Route18 youngster,	LICKITUNG, Slowbro	PARASECT, Tangela
+Cerulean sage,  	JYNX, Poliwhirl
+Vermilion girl/twin,	FARFETCH_D, Spearow
+Cinnabar scientist,	DEWGONG, Ponyta		MUK, Kangaskhan
+Cinnabar gramps,	ELECTRODE, Raichu	RHYDON, Golduck
+Cinnabar beauty,	TANGELA, Venonat	DEWGONG, Growlithe
+
+
+variable menus for celadon dept store roof (use code from fossils)
+
+TRAINERTYPE_VARIABLE for Gen2Mode alt parties (ref, BugCatcher Ed)
+
+game corner gift coins add sound
+
+goldenrod underground entrances
+
+bill's house extra stuff
+
+put move deleter in kanto
+
+Route18Gate2F trade SLOWBRO for LICKITUNG
+
+fix mom asks what oak's errand after get pokemon
+
+wild held items, evo items, data\pokemon\base_stats\*.asm
+data\trainers\attributes.asm TRAINER ITEMS
+reconsider game corner prizes dragonrage, psychic, hyperbeam
+
+can remove/reuse MYSERY_EGG key item
+
+remove Route5CleanseTagHouse
+
+oaks lab "those are poke balls" line break
+oaks lab receive ball isn't plural
+viridian city blocking coord event old man doesn't face player
+pewter museum amber scientist repeats cinnabar island text
+pewter museum amber scientist after text box open/close
+
+route16gate bicycle check, tile swaps?
+route18gate bicycle check, tile swaps?
+
+rival route22(1) exit movement
+rival encounters face eachother scripts
+
+route 12 gate 2F, get TM_SWIFT
+EastWest Gate2F: Route 11, 15, 16, 18
+NorthSouth Gate2F: 12
+
+Use POKE_FLUTE, does FLY to last location flown to
+
+fish groups
+gen2 mode wild data
+trainer parties-amounts
+
+playershouse mom stuff
+route 5 underground path, in-game trade
+day-care pokemon sprites, one bright other dark?
+game corner hidden coins, event is set after fail conditions
+FixPicBank
+battle tower stuff?
+
+EGG_LEVEL
+MACRO savemon_struct
+MON_LEVEL
+engine\pokemon\stats_screen.asm > .LoadPals: > set 5, [hl]
+data\pokemon\base_stats\*.asm > db 5 ; unknown 2
+engine\pokemon\breeding.asm > MON_LEVEL
+	HatchEggScript: > callasm OverworldHatchEgg
+
+
+
+REMOVE to-do
+
+debug ss ticket
+debug pokeflute
+debug silph scope
+
+
+MISC
+
+water_time
+constants/pokemon_data_constants.asm
+	DEF WATER_WILDDATA_LENGTH EQU 2 + 1 + NUM_WATERMON * 2 * 3
+engine\overworld\wildmons.asm
+.FindWater:
+~	ld a, NUM_WATERMON * 3
+ChooseWildEncounter:
+~	jr .gotmon
+data\wild\kanto_water.asm
+data\wild\johto_water.asm
+data\wild\swarm_water.asm
+data\wild\swarm_alt.asm
+
+
+engine\pokemon\caught_data.asm(177-181)
+	commented out references to POKECENTER_2F (removed)
+
+any weird audio issues, check audio\engine.asm(1123) ;inc a ;silvermirror-
+
+	BATTLETYPE_KANTO_LEGEND
+CeruleanCaveB1F
+PokemonMansionB1F
+PowerPlant
+Route10South
+SeafoamIslandsB4F
+SilverCaveItemRooms
+	constants\battle_constants.asm
+	engine\battle\start_battle.asm (music)
+	engine\overworld\wildmons.asm
+
+TilesetRocketFacilityAnim:
+	dw vTiles2 tile $6b, ReadTileToAnimBuffer
+	dw wTileAnimBuffer, ScrollTileRight
+	dw vTiles2 tile $6b, WriteTileFromAnimBuffer
+	dw vTiles2 tile $7b, ReadTileToAnimBuffer
+	dw wTileAnimBuffer, ScrollTileRight
+	dw vTiles2 tile $7b, WriteTileFromAnimBuffer
+;
+	dw vTiles2 tile $6c, ReadTileToAnimBuffer
+	dw wTileAnimBuffer, ScrollTileLeft
+	dw vTiles2 tile $6c, WriteTileFromAnimBuffer
+	dw vTiles2 tile $7c, ReadTileToAnimBuffer
+	dw wTileAnimBuffer, ScrollTileLeft
+	dw vTiles2 tile $7c, WriteTileFromAnimBuffer
+;
+	dw vTiles2 tile $6d, ReadTileToAnimBuffer
+	dw wTileAnimBuffer, ScrollTileDown
+	dw vTiles2 tile $6d, WriteTileFromAnimBuffer
+	dw vTiles2 tile $6e, ReadTileToAnimBuffer
+	dw wTileAnimBuffer, ScrollTileDown
+	dw vTiles2 tile $6e, WriteTileFromAnimBuffer
+;
+	dw vTiles2 tile $7d, ReadTileToAnimBuffer
+	dw wTileAnimBuffer, ScrollTileUp
+	dw vTiles2 tile $7d, WriteTileFromAnimBuffer
+	dw vTiles2 tile $7e, ReadTileToAnimBuffer
+	dw wTileAnimBuffer, ScrollTileUp
+	dw vTiles2 tile $7e, WriteTileFromAnimBuffer
+;
+;	dw NULL,  WaitTileAnimation
+	dw NULL,  DoneTileAnimation
+
+
+
+GIT
+
+git status
+
+git add .
+
+git commit -am "commit message"
+
+git push origin master
+; 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
+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

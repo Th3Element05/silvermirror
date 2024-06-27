@@ -1,0 +1,36 @@
+notes-TRAINER_STUFF
+
+\constants\trainer_contstants.asm
+; trainer class ids
+ ; `trainerclass` indexes are for:
+ ; - TrainerClassNames 		(see data/trainers/class_names.asm)
+ ; - TrainerClassAttributes 	(see data/trainers/attributes.asm)
+ ; - TrainerClassDVs 		(see data/trainers/dvs.asm)
+ ; - TrainerGroups 		(see data/trainers/party_pointers.asm)
+ ; - TrainerEncounterMusic 	(see data/trainers/encounter_music.asm)
+ ; - TrainerPicPointers 	(see data/trainers/pic_pointers.asm)
+ ; - TrainerPalettes 		(see data/trainers/palettes.asm)
+ ; - BTTrainerClassSprites 	(see data/trainers/sprites.asm)
+ ; - BTTrainerClassGenders 	(see data/trainers/genders.asm)
+ ; trainer constants are Trainers indexes, for the sub-tables of TrainerGroups 
+;				(see data/trainers/parties.asm)
+
+NEED TO EDIT
+\constants\trainer_constants.asm
+\data\trainers\parties.asm
+event flags
+
+; Trainer data structure:
+; - db "NAME@", TRAINERTYPE_* constant
+; - 1 to 6 Pokémon:
+;    * for TRAINERTYPE_NORMAL:     db level, species
+;    * for TRAINERTYPE_MOVES:      db level, species, 4 moves
+;    * for TRAINERTYPE_ITEM:       db level, species, item
+;    * for TRAINERTYPE_ITEM_MOVES: db level, species, item, 4 moves
+; - db -1 ; end
+
+
+
+	db "GRUNT@", TRAINERTYPE_NORMAL
+	db 10, DITTO
+	db -1 ; end
