@@ -1,0 +1,29 @@
+
+pokemon tower safe space stuff
+
+can you use TALL_GRASS on INDOOR maps?
+
+engine\overworld\tile_events.asm
+CheckGrassCollision::
+	ld a, [wPlayerTile]
+	ld hl, .blocks
+	ld de, 1
+	call IsInArray
+	ret
+
+.blocks
+	db COLL_CUT_08
+	db COLL_TALL_GRASS
+	db COLL_LONG_GRASS
+	db COLL_CUT_28
+	db COLL_WATER
+	db COLL_GRASS_48
+	db COLL_GRASS_49
+	db COLL_GRASS_4A
+	db COLL_GRASS_4B
+	db COLL_GRASS_4C
+	db -1
+
+
+constants\collision_constants.asm
+COLL_GRASS_48

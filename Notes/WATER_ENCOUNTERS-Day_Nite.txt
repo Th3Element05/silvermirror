@@ -1,0 +1,126 @@
+CORSOLA encountered during NITE is swapped for STARYU
+
+engine\overworld\wildmons.asm
+~
+/; Store the level
+/.ok
+/	ld a, b
+/	ld [wCurPartyLevel], a
+/	call GetNextWildMonDataByte
+/	dec hl
+/	ld b, a
+/	call ValidateTempWildMonSpecies
+/	jr c, .nowildbattle
+/
+/+	cp CORSOLA
+/+	jr nz, .notcorsola
+/+	ld a, [wTimeOfDay]
+/+	cp NITE_F
+/+	jr nz, .done
+/+	ld b, STARYU
+/+	jr .done
+/+	
+/+.notcorsola
+/	cp UNOWN
+/	jr nz, .done
+
+
+
+WATER ENCOUNTERS
+morn/day/eve and nite
+
+
+engine\overworld\wildmons.asm
+~
+/GetTimeOfDayWater: ; this returns 0 for MORN/DAY/EVE and 1 for NITE
+/	ld a, [wTimeOfDay]
+/	cp MORN_F
+/	ret z
+/	dec a
+/	cp MORN_F
+/	ret z
+/	cp DAY_F
+/	ret z
+/	ld a, MORN_F
+/	ret
+~
+/.FindWater:
+/	call GetNextWildMonDataByte
+/	dec hl
+/	cp -1
+/	ret z
+/	push hl
+/	call GetNextWildMonDataByte
+/	ld b, a
+/	call GetNextWildMonDataByte
+/	ld c, a
+/	inc hl
+/;	ld a, NUM_WATERMON * 3
+/+	ld a, NUM_WATERMON * 2 ; water encounters are only 2 tables long
+/	call .SearchMapForMon
+/	jr nc, .next_water
+/	ld [de], a
+/	inc de
+~
+/ChooseWildEncounter:
+/	call InitWildMonBank
+/	call LoadWildMonDataPointer
+/	jp nc, .nowildbattle
+/	call CheckEncounterRoamMon
+/	jp c, .startwildbattle
+/
+/	inc hl
+/	inc hl
+/	inc hl
+/	call CheckOnWater
+/;	ld de, WaterMonProbTable
+/	jr z, .watermon
+/	inc hl
+/	inc hl
+/	call GetTimeOfDayNotEve
+/	ld bc, NUM_GRASSMON * 2
+/	call AddNTimes
+/	ld de, GrassMonProbTable
+/	call CheckOnWater
+/	jr nz, .gotmon
+/
+/.watermon
+/	call GetTimeOfDayWater ; uses first encounter table for MORN/DAY/EVE, second for NITE
+/	ld bc, NUM_WATERMON * 2
+/	call AddNTimes
+/	ld de, WaterMonProbTable
+/
+/.gotmon
+/; hl contains the pointer to the wild mon data, let's save that to the stack
+
+
+
+constants\pokemon_data_constants.asm
+~
+/;DEF WATER_WILDDATA_LENGTH EQU 2 + 1 + NUM_WATERMON * 2
+/DEF WATER_WILDDATA_LENGTH EQU 2 + 1 + NUM_WATERMON * 2 * 2
+
+
+
+data\wild\kanto_water.asm
+data\wild\johto_water.asm
+data\wild\swarm_water.asm
+data\wild\swarm_alt.asm
+~
+/	def_water_wildmons VIRIDIAN_CITY ;silvermirror
+/	db 4 percent ; encounter rate
+/	; morn / day / eve
+/	db 10, BULBASAUR
+/	db 10, BULBASAUR
+/	db 10, BULBASAUR
+/	; nite
+/	db 10, SQUIRTLE
+/	db 10, SQUIRTLE
+/	db 10, SQUIRTLE
+/	end_water_wildmons
+
+
+
+
+
+

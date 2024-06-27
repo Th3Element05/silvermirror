@@ -1,0 +1,59 @@
+
+EXPANDED ENCOUNTER TABLES
+constants/pokemon_data_constants.asm
+data/wild/probabilities.asm
+
+data/wild/kanto_grass.asm
+data/wild/johto_grass.asm
+data/wild/swarm_grass.asm
+data/wild/swarm_grass_alt.asm
+; data/wild/kanto_water.asm
+; data/wild/johto_water.asm
+; data/wild/swarm_water.asm
+; data/wild/swarm_water_alt.asm
+
+data/wild/challenge_mode/kanto_grass.asm
+data/wild/challenge_mode/johto_grass.asm
+data/wild/challenge_mode/swarm_grass.asm
+data/wild/challenge_mode/swarm_grass_alt.asm
+; data/wild/challenge_mode/kanto_water.asm
+; data/wild/challenge_mode/johto_water.asm
+; data/wild/challenge_mode/swarm_water.asm
+; data/wild/challenge_mode/swarm_water_alt.asm
+
+KantoGrassWildMonsChallenge:
+JohtoGrassWildMonsChallenge:
+SwarmGrassWildMonsChallenge:
+SwarmGrassWildMonsAltChallenge:
+
+
+
+
+
+
+
+
+; this is fucked...
+CUSTOM PROBABILTY AND LEVEL RANGES - FILES
+engine/overworld/wildmons.asm
+engine/pokegear/radio.asm
+constants/pokemon_data_constants.asm
+; main.asm (engine/overworld/wildmons.asm is already in own SECTION)
+
+data\wild\kanto_grass.asm
+data\wild\kanto_water.asm
+data\wild\johto_grass.asm
+data\wild\johto_water.asm
+data\wild\swarm_grass.asm
+data\wild\swarm_grass_alt.asm
+data\wild\swarm_water.asm
+data\wild\swarm_water_alt.asm
+
+data\wild\challenge_mode\kanto_grass.asm
+data\wild\challenge_mode\kanto_water.asm
+data\wild\challenge_mode\johto_grass.asm
+data\wild\challenge_mode\johto_water.asm
+data\wild\challenge_mode\swarm_grass.asm
+data\wild\challenge_mode\swarm_grass_alt.asm
+data\wild\challenge_mode\swarm_water.asm
+data\wild\challenge_mode\swarm_water_alt.asm

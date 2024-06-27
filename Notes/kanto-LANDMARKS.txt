@@ -1,0 +1,57 @@
+pallet town	52, 100
+route 1		52, 84(88)92
+viridian city	52, 76
+route 2		52, 60(64)68
+viridian forest	52, 60
+diglett's cave	60, 60
+pewter city	52, 52
+route 3		60(64)68, 52
+mt moon		76, 52
+route 4		84(88)92, 52
+cerulean city	100, 52
+route 24	100, 36(40)44
+route 25  	108(112)116, 36
+route 5		100, 60
+route 6		100, 76
+vermilion city	100, 84
+route 9		116, 52
+route 10	132, 52
+rock tunnel	132, 60
+power plant	140, 60
+lavender town	132, 68
+route 8		116, 68
+route 7		92, 68
+celadon city	84, 68
+saffron city	100, 68
+route 11	116, 84
+route 12  	132, 84 or 84(88)92
+route 13	124, 100
+route 14  	116, 108
+route 15	108, 116
+route 16	68(72)76, 68
+route 17	68, 92
+route 18	76(80)84, 116
+fuchsia city	92, 116
+safari zone	92, 108
+route 19	92, 132
+seafoam islands	76, 132
+route 20	60(64)68, 132
+cinnabar island	52, 132
+route 21	52, 116
+route 22  	36(40)44, 76
+route 23	28, 60(64)68
+victory road	28, 52
+indigo plateau	28, 36
+~~~~~~~	HOF
+route 26	28, 84(88)92
+route 27	20(24)28, 100
+tohjo falls	12, 100
+route 28	12(16)20, 76
+~~~~~~~	END
+underground	108, 76
+s.s.anne	100, 92
+pokemon tower	140, 68
+rocket hideout	84, 68
+silph co.	100, 68
+pokemon mansion 48, 128
+cerulean cave	92, 44

@@ -1,0 +1,17 @@
+
+TILESET STUFF
+
+
+constants/tileset_constants.asm
+
+data/tilesets.asm
+	gfx/tilesets/[name].png
+	gfx/tilesets/[name]_palette_map.asm
+	data/tilesets/[name]_metatiles.bin
+	data/tilesets/[name]_collision.asm
+
+gfx/tilesets.asm
+
+gfx/tileset_palette_maps.asm
+
+engine/tilesets/tileset_anims.asm

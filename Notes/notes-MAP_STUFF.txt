@@ -1,0 +1,169 @@
+MAP STUFF NOTES
+
+ADDING NEW MAPS
+\constants\map_constants.asm
+	; Defines whcih maps are in which map groups
+	; Also defines each map id, width, and heigh
+
+\data\maps\maps.asm
+	; Defines tileset, environment, location, music, phoneservice, palette, 
+	; and fishing of each map in each mapgroup
+
+\data\maps\blocks.asm
+	; Defines which *.blk file a map uses
+
+\data\maps\attributes.asm
+	; Overworld map connections to other maps
+	; Also defines map attributes with no connections:
+map_attributes Route23, ROUTE_23, $0f, 0
+               mapname, map_id, $borderblock, connections
+
+\data\maps\scripts.asm
+	; INCLUDE "maps/[mapname].asm"
+
+engine/events/map_name_sign.asm
+.CheckSpecialMap:
+; These landmarks do not get pop-up signs.
+	cp -1
+	ret z
+	cp LANDMARK_SPECIAL ; redundant check
+	ret z
+	cp LANDMARK_RADIO_TOWER
+	ret z
+	cp LANDMARK_LAV_RADIO_TOWER
+	ret z
+	cp LANDMARK_UNDERGROUND_PATH
+	ret z
+	cp LANDMARK_INDIGO_PLATEAU
+	ret z
+	cp LANDMARK_POWER_PLANT
+	ret z
+	ld a, 1
+	and a
+	ret
+
+
+
+
+
+POKERED, objects, warps, etc
+pokered-master\data\maps\objects\mapname.asm
+
+
+
+MART STUFF
+\constants\mart_constants.asm
+	; mart name constants
+\data\items\marts.asm
+	; what items each mart sells
+
+
+
+\data\maps\scripts.asm
+	; INCLUDES all map script files (maps\mapname.asm)
+	; writes scripts to SECTIONS of the ROMX
+
+
+
+LOCKED DOOR SCRIPT
+TeamRocketBaseB2F_MapScripts:
+	def_scene_scripts
+	...
+	def_callbacks
+	callback MAPCALLBACK_TILES, TeamRocketBaseB2FTransmitterDoorCallback
+
+TeamRocketBaseB2FNoop1Scene:
+	end
+...	...
+TeamRocketBaseB2FTransmitterDoorCallback:
+	checkevent EVENT_OPENED_DOOR_TO_ROCKET_HIDEOUT_TRANSMITTER
+	iftrue .OpenDoor
+	endcallback
+.OpenDoor:
+	changeblock 14, 12, $07 ; floor
+	endcallback
+...	...
+...	...
+	def_bg_events
+	bg_event 14, 12, BGEVENT_IFNOTSET, TeamRocketBaseB2FLockedDoor
+	bg_event 15, 12, BGEVENT_IFNOTSET, TeamRocketBaseB2FLockedDoor
+
+TeamRocketBaseB2FLockedDoor:
+	conditional_event EVENT_OPENED_DOOR_TO_ROCKET_HIDEOUT_TRANSMITTER, .Script
+.Script:
+	opentext
+	checkevent EVENT_LEARNED_HAIL_GIOVANNI
+	iftrue .KnowsPassword
+	writetext RocketBaseDoorNoPasswordText
+	waitbutton
+	closetext
+	end
+.KnowsPassword:
+	writetext RocketBaseDoorKnowPasswordText
+	waitbutton
+	playsound SFX_ENTER_DOOR
+	changeblock 14, 12, $07 ; floor
+	; changeblock (doubleX), (doubleY), $[tilesetID]
+	reloadmappart
+	closetext
+	setevent EVENT_OPENED_DOOR_TO_ROCKET_HIDEOUT_TRANSMITTER
+	waitsfx
+	end
+
+
+
+SNORLAX
+Route11Snorlax:
+	opentext
+	special SnorlaxAwake
+	iftrue .Awake
+	writetext Route11SnorlaxSleepingText
+	waitbutton
+	closetext
+	end
+.Awake:
+	writetext Route11RadioNearSnorlaxText
+	pause 15
+	cry SNORLAX
+	closetext
+	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
+	loadwildmon SNORLAX, 50
+	startbattle
+	disappear ROUTE_11_BIG_SNORLAX
+	disappear ROUTE_11_BIG_SNORLAX_RESPAWN
+	setevent EVENT_FOUGHT_SNORLAX
+	reloadmapafterbattle
+	special CheckBattleCaughtResult
+	iffalse .nocatch
+	setflag ENGINE_PLAYER_CAUGHT_SNORLAX
+.nocatch
+	end
+
+\engine\events\specials.asm
+SnorlaxAwake:
+...	...
+.ProximityCoords:
+	;   x,  y
+	db  7,  6 ; left
+	db  7,  7 ; left
+	db 10,  6 ; right
+	db 10,  7 ; right
+;respawn
+	db 50, 11 ; left
+	db 50, 12 ; left
+	db 53, 11 ; right
+	db 53, 12 ; right
+	db 51, 13 ; down
+	db 52, 13 ; down
+	db -1
+
+
+
+MAP DESIGN NOTES
+
+It so happens that a 30x30 map will neatly fit into this limit, since (30+6)×(30+6)=1296.
+However, keep in mind that the official maps are usually designed with the 
+width as a multiple of 10 and the height as a multiple of 9. 
+For example, small towns are often 10x9; large cities are 20x18; 
+routes may be 20x9, or 10x18, or 10x45, or so on; 
+National Park is 20x27; et cetera.

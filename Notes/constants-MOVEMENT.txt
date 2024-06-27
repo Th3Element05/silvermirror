@@ -1,0 +1,141 @@
+
+SPRITE MOVE DATA
+	const SPRITEMOVEDATA_00                   ; 00
+	const SPRITEMOVEDATA_STILL                ; 01
+	const SPRITEMOVEDATA_WANDER               ; 02
+	const SPRITEMOVEDATA_SPINRANDOM_SLOW      ; 03
+	const SPRITEMOVEDATA_WALK_UP_DOWN         ; 04
+	const SPRITEMOVEDATA_WALK_LEFT_RIGHT      ; 05
+	const SPRITEMOVEDATA_STANDING_DOWN        ; 06
+	const SPRITEMOVEDATA_STANDING_UP          ; 07
+	const SPRITEMOVEDATA_STANDING_LEFT        ; 08
+	const SPRITEMOVEDATA_STANDING_RIGHT       ; 09
+	const SPRITEMOVEDATA_SPINRANDOM_FAST      ; 0a
+	const SPRITEMOVEDATA_PLAYER               ; 0b
+	const SPRITEMOVEDATA_INDEXED_1            ; 0c
+	const SPRITEMOVEDATA_INDEXED_2            ; 0d
+	const SPRITEMOVEDATA_0E                   ; 0e
+	const SPRITEMOVEDATA_0F                   ; 0f
+	const SPRITEMOVEDATA_10                   ; 10
+	const SPRITEMOVEDATA_11                   ; 11
+	const SPRITEMOVEDATA_12                   ; 12
+	const SPRITEMOVEDATA_FOLLOWING            ; 13
+	const SPRITEMOVEDATA_SCRIPTED             ; 14
+	const SPRITEMOVEDATA_BIGDOLLSYM           ; 15
+	const SPRITEMOVEDATA_POKEMON              ; 16
+	const SPRITEMOVEDATA_SUDOWOODO            ; 17
+	const SPRITEMOVEDATA_SMASHABLE_ROCK       ; 18
+	const SPRITEMOVEDATA_STRENGTH_BOULDER     ; 19
+	const SPRITEMOVEDATA_FOLLOWNOTEXACT       ; 1a
+	const SPRITEMOVEDATA_SHADOW               ; 1b
+	const SPRITEMOVEDATA_EMOTE                ; 1c
+	const SPRITEMOVEDATA_SCREENSHAKE          ; 1d
+	const SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE ; 1e
+	const SPRITEMOVEDATA_SPINCLOCKWISE        ; 1f
+	const SPRITEMOVEDATA_BIGDOLLASYM          ; 20
+	const SPRITEMOVEDATA_BIGDOLL              ; 21
+	const SPRITEMOVEDATA_BOULDERDUST          ; 22
+	const SPRITEMOVEDATA_GRASS                ; 23
+	const SPRITEMOVEDATA_SWIM_WANDER          ; 24
+
+STEP COMMANDS
+; hides an object during movement without a visibility flag
+	hide_object
+
+; shows an object during movement without a visibility flag
+	show_object
+
+; is this?
+remove_object
+
+
+
+; turnobject to face direction
+	turn_head DOWN
+	turn_head UP
+	turn_head LEFT
+	turn_head RIGHT
+
+; unknown movement
+	turn_step DOWN
+	turn_step UP
+	turn_step LEFT
+	turn_step RIGHT
+
+; normal walking movement
+	step DOWN
+	step UP
+	step LEFT
+	step RIGHT
+; ?slow walking movement
+	slow_step DOWN
+	slow_step UP
+	slow_step LEFT
+	slow_step RIGHT
+; ?fast walking movement
+	big_step DOWN
+	big_step UP
+	big_step LEFT
+	big_step RIGHT
+
+; unknown movement
+	slide_step DOWN
+	slide_step UP
+	slide_step LEFT
+	slide_step RIGHT
+; ?slow version?
+	slow_slide_step DOWN
+	slow_slide_step UP
+	slow_slide_step LEFT
+	slow_slide_step RIGHT
+; ?fast version?
+	fast_slide_step DOWN
+	fast_slide_step UP
+	fast_slide_step LEFT
+	fast_slide_step RIGHT
+
+; unknown movement
+	turn_away DOWN
+	turn_away UP
+	turn_away LEFT
+	turn_away RIGHT
+
+; uknown movement
+	turn_in DOWN
+	turn_in UP
+	turn_in LEFT
+	turn_in RIGHT
+
+; unknown movement
+	turn_waterfall DOWN
+	turn_waterfall UP
+	turn_waterfall LEFT
+	turn_waterfall RIGHT
+
+; moves two spaces, jumps over 1 space
+	jump_step DOWN
+	jump_step UP
+	jump_step LEFT
+	jump_step RIGHT
+; ?slow version?
+	slow_jump_step DOWN
+	slow_jump_step UP
+	slow_jump_step LEFT
+	slow_jump_step RIGHT
+; ?fast version?
+	fast_jump_step DOWN
+	fast_jump_step UP
+	fast_jump_step LEFT
+	fast_jump_step RIGHT
+
+; ?sleep animation?
+	step_sleep 1
+	step_sleep 2
+	step_sleep 3
+	step_sleep 4
+	step_sleep 5
+	step_sleep 6
+	step_sleep 7
+	step_sleep 8
+	
+	step_end

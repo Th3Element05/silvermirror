@@ -1,0 +1,79 @@
+OlivineTimsHouse
+OlivineHouseBeta
+OlivinePunishmentSpeechHouse
+OlivineGoodRodHouse
+Route39Farmhouse
+MahoganyRedGyaradosSpeechHouse
+BlackthornDragonspeechHouse
+BlackthornEmysHouse
+MoveDeletersHouse
+CeruleanGymBadgeSpeechHouse
+CeruleanTradeSpeechHouse
+CharcoalKiln
+LakeOfRageHiddenPowerHouse
+LakeOfRageMagikarpHouse
+GoldenrodHappinessRater
+BillsFamilysHouse
+GoldenrodPPSpeechHouse
+GoldenrodNameRater
+VermilionFishingSpeechHouse
+VermilionMagnetTrainSpeechHouse
+VermilionDiglettsCaveSpeechHouse
+BluesHouse
+PewterNidoranSpeechHouse
+PewterSnoozeSpeechHouse
+Route2NuggetHouse
+BillsBrothersHouse
+MrFujisHouse
+LavenderSpeechHouse
+LavenderNameRater
+Route12SuperRodHouse
+Route28SteelWingHouse
+CeladonMansionRoofHouse
+Route16FuchsiaSpeechHouse
+ManiasHouse
+CianwoodPharmacy
+CianwoodPhotoStudio
+CianwoodLugiaSpeechHouse
+PokeSeersHouse
+ViridianNicknameSpeechHouse
+Route26HealHouse
+DayOfWeekSiblingsHouse
+PlayersNeighborsHouse
+MrPsychicsHouse
+Route5CleanseTagHouse (remove)
+CherrygroveGymSpeechHouse
+GuideGentsHouse
+CherrygroveEvolutionSpeechHouse
+Route30BerryHouse
+	House1.blk
+
+PokemonFanClub
+CeladonChiefHouse
+SafariZoneWardensHome
+	PokemonFanClub.blk
+
+CeruleanTrashedHouse
+	CeruleanTrashedHouse.blk
+
+TrainerHouse1F
+	TrainerHouse1F.blk
+
+GoldenrodFlowerShop
+	GoldenrodFlowerShop.blk
+
+SafariZoneMainOffice
+	SafariZoneMainOffice.blk
+
+DayCare
+	DayCare.blk
+Change DayCare to use House1.blk and swap tiles 2,0>$37 and 6,0>$1c
+
+
+
+
+
+
+
+
+

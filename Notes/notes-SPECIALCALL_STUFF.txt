@@ -1,0 +1,10 @@
+SPECIALCALL_STUFF
+
+constants\phone_constants.asm
+
+data\phone\phone_contacts.asm
+data\phone\special_calls.asm
+data\phone\text\oak.asm
+
+engine\phone\scripts\oak.asm
+

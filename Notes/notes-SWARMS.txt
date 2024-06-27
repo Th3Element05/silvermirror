@@ -1,0 +1,136 @@
+SWARMS
+engine\pokegear\radio.asm
+	OPT triggers swarms, .generate_flag determines normal/alt
+
+engine\events\fish.asm
+	determines FISHGROUP_ based on swarm flags
+
+.generate_flag
++;Check if challenge mode is active. If no, don't use alt swarms.
++	ld a, [wChallengeMode]
++	bit GAME_CHALLENGE_MODE_F, a
++	jr z, .normal_swarm
+	call Random ; generate a random number below 8
+	and %11 ; '3' in bit  (increase bit number with each new added swarm)
+	cp 0
+	jp z, .normal_swarm
+	cp 1
+	jp z, .alternate_swarm
+	jp .generate_flag
+
+
+
+JIGGLYPUFF	ROUTE_3		~	JIGGLYPUFF
+DITTO		ROUTE_5		SNUBBUL
+ABRA		ROUTE_6		~	ABRA
+VULPIX		ROUTE_7		MURKROW
+GROWLITHE	ROUTE_8		HOURDOUR
+VOLTORB		ROUTE_10_NORTH	MAREEP
+DROWZEE		ROUTE_11	HOPPIP
+FARFETCH_D	ROUTE_13	~	FARFETCH_D
+VENONAT		ROUTE_15	~	VENONAT
+PONYTA		ROUTE_17	NATU
+STARYU		ROUTE_19	~	STARYU
+MR__MIME	ROUTE_21	MARILL
+DRATINI		ROUTE_23	x
+BELLSPROUT	ROUTE_24	~ODDISH
+ODDISH		ROUTE_25	~BELLSPROUT
+PIKACHU		VIRIDIAN_FOREST	~	PIKACHU
+CLEFAIRY	MOUNT_MOON	~	CLEFAIRY
+	SHELLDER	VERMILION_CITY	~	SHELLDER
+CUBONE		ROCK_TUNNEL_B1F	PHANPY
+JYNX		SEAFOAM_B4F	~	JYNX
+ELECTABUZZ	POWER_PLANT	~	ELECTABUZZ
+MAGMAR		MANSION_B1F	~	MAGMAR
+x		VICTORY_ROAD	~	LARVITAR
+
+
+
+.jigglypuff
+	ld a, [wCurPartySpecies]
+	cp JIGGLYPUFF
+	jp .next
+.ditto
+	ld a, [wCurPartySpecies]
+	cp DITTO
+	jp .next
+.abra
+	ld a, [wCurPartySpecies]
+	cp ABRA
+	jp .next
+.vulpix
+	ld a, [wCurPartySpecies]
+	cp VULPIX
+	jp .next
+.growlithe
+	ld a, [wCurPartySpecies]
+	cp GROWLITHE
+	jp .next
+.voltorb
+	ld a, [wCurPartySpecies]
+	cp VOLTORB
+	jp .next
+.drowzee
+	ld a, [wCurPartySpecies]
+	cp DROWZEE
+	jp .next
+.farfetch_d
+	ld a, [wCurPartySpecies]
+	cp FARFETCH_D
+	jp .next
+.venonat
+	ld a, [wCurPartySpecies]
+	cp VENONAT
+	jp .next
+.ponyta
+	ld a, [wCurPartySpecies]
+	cp PONYTA
+	jp .next
+.staryu
+	ld a, [wCurPartySpecies]
+	cp STARYU
+	jp .next
+.mr_mime
+	ld a, [wCurPartySpecies]
+	cp MR__MIME
+	jp .next
+.dratini
+	ld a, [wCurPartySpecies]
+	cp DRATINI
+	jp .next
+.bellsprout
+	ld a, [wCurPartySpecies]
+	cp BELLSPROUT
+	jp .next
+.oddish
+	ld a, [wCurPartySpecies]
+	cp ODDISH
+	jp .next
+.pikachu
+	ld a, [wCurPartySpecies]
+	cp PIKACHU
+	jp .next
+.clefairy
+	ld a, [wCurPartySpecies]
+	cp CLEFAIRY
+	jp .next
+.shellder
+	ld a, [wCurPartySpecies]
+	cp SHELLDER
+	jp .next
+.cubone
+	ld a, [wCurPartySpecies]
+	cp CUBONE
+	jp .next
+.jynx
+	ld a, [wCurPartySpecies]
+	cp JYNX
+	jp .next
+.electabuzz
+	ld a, [wCurPartySpecies]
+	cp ELECTABUZZ
+	jp .next
+.magmar
+	ld a, [wCurPartySpecies]
+	cp MAGMAR
+	jp .next

@@ -1,0 +1,7 @@
+
+NPC TRADES
+
+constants\npc_trade_constants.asm
+data\events\npc_trades.asm
+engine\events\npc_trade.asm
+data\text\common_1.asm
