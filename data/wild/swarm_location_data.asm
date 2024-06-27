@@ -1,5 +1,5 @@
 SwarmLocationDataKanto::
-	db JIGGLYPUFF, GROUP_ROUTE_3,             MAP_ROUTE_1,             LANDMARK_ROUTE_1,         FISHSWARM_NONE
+	db JIGGLYPUFF, GROUP_ROUTE_3,             MAP_ROUTE_3,             LANDMARK_ROUTE_3,         FISHSWARM_NONE
 	db DITTO,      GROUP_ROUTE_5,             MAP_ROUTE_5,             LANDMARK_ROUTE_5,         FISHSWARM_NONE
 	db ABRA,       GROUP_ROUTE_6,             MAP_ROUTE_6,             LANDMARK_ROUTE_6,         FISHSWARM_NONE
 	db VULPIX,     GROUP_ROUTE_7,             MAP_ROUTE_7,             LANDMARK_ROUTE_7,         FISHSWARM_NONE
@@ -25,7 +25,7 @@ SwarmLocationDataKanto::
 SwarmLocationDataKantoEnd::
 
 SwarmLocationDataKantoAlt::
-	db JIGGLYPUFF, GROUP_ROUTE_3,             MAP_ROUTE_1,             LANDMARK_ROUTE_1,         FISHSWARM_NONE
+	db JIGGLYPUFF, GROUP_ROUTE_3,             MAP_ROUTE_3,             LANDMARK_ROUTE_3,         FISHSWARM_NONE
 	db SNUBBULL,   GROUP_ROUTE_5,             MAP_ROUTE_5,             LANDMARK_ROUTE_5,         FISHSWARM_NONE
 	db ABRA,       GROUP_ROUTE_6,             MAP_ROUTE_6,             LANDMARK_ROUTE_6,         FISHSWARM_NONE
 	db MURKROW,    GROUP_ROUTE_7,             MAP_ROUTE_7,             LANDMARK_ROUTE_7,         FISHSWARM_NONE
