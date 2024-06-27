@@ -614,14 +614,27 @@ _JohtoWildmonCheck:
 	ld l, e
 	ret
 
-_SwarmWildmonCheck:
-	call CopyCurrMapDE
+;_SwarmWildmonCheck: ;checks active swarm for current MAP
+;	call CopyCurrMapDE
+;	ld a, [wSwarmMapGroup]
+;	cp d
+;	jr nz, _NoSwarmWildmon
+;	ld a, [wSwarmMapNumber]
+;	cp e
+;	jr nz, _NoSwarmWildmon
+;	call LookUpWildmonsForMapDE
+;	jr nc, _NoSwarmWildmon
+;	scf
+;	ret
+_SwarmWildmonCheck: ;checks active swarm for current LANDMARK
+	call CopyCurrLandmarkDE
 	ld a, [wSwarmMapGroup]
 	cp d
 	jr nz, _NoSwarmWildmon
-	ld a, [wSwarmMapNumber]
+	ld a, [wSwarmLandmark]
 	cp e
 	jr nz, _NoSwarmWildmon
+	call CopyCurrMapDE
 	call LookUpWildmonsForMapDE
 	jr nc, _NoSwarmWildmon
 	scf
@@ -639,6 +652,13 @@ CopyCurrMapDE:
 	ld a, [wMapGroup]
 	ld d, a
 	ld a, [wMapNumber]
+	ld e, a
+	ret
+
+CopyCurrLandmarkDE:
+	ld a, [wMapGroup]
+	ld d, a
+	ld a, [wCurLandmark]
 	ld e, a
 	ret
 
