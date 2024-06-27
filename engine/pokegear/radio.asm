@@ -214,7 +214,7 @@ OaksPKMNTalkSwarm1:
 .challenge_check
 ;silvermirror ; Only do challenge mode check if in Kanto
 	call .InJohto
-	jp nc, .generate_flag
+	jp c, .generate_flag
 ;silvermirror ; Check if challenge mode is active. If no, don't use alternate swarms.
 	ld a, [wChallengeMode]
 	bit GAME_CHALLENGE_MODE_F, a
