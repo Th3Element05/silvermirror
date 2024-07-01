@@ -37,7 +37,7 @@
 	const MUSIC_SURF                         ; 21 samename
 	const MUSIC_EVOLUTION                    ; 22
 	const MUSIC_NATIONAL_PARK                ; 23
-	const MUSIC_CREDITS                      ; 24
+	const MUSIC_CREDITS                      ; 24 samename
 	const MUSIC_AZALEA_TOWN                  ; 25
 	const MUSIC_CHERRYGROVE_CITY             ; 26
 	const MUSIC_KIMONO_ENCOUNTER             ; 27
