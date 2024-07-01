@@ -1,5 +1,5 @@
 	tilecoll WALL, WALL, WALL, WALL ; 00
-	tilecoll WALL, WALL, WALL, WALL ; 01
+	tilecoll WALL, WALL, PC, RADIO ; 01
 	tilecoll WALL, STAIRCASE, FLOOR, FLOOR ; 02
 	tilecoll WALL, WALL, TV, BOOKSHELF ; 03
 	tilecoll WALL, WALL, FLOOR, FLOOR ; 04
@@ -36,19 +36,19 @@
 	tilecoll WALL, STAIRCASE, FLOOR, FLOOR ; 23
 	tilecoll WALL, STAIRCASE, FLOOR, FLOOR ; 24
 	tilecoll WALL, STAIRCASE, FLOOR, FLOOR ; 25
-	tilecoll FF, FF, FF, FF ; 26
-	tilecoll FF, FF, FF, FF ; 27
-	tilecoll FF, FF, FF, FF ; 28
+	tilecoll FLOOR, FLOOR, FLOOR, WALL ; 26
+	tilecoll FLOOR, FLOOR, WALL, FLOOR ; 27
+	tilecoll WALL, WALL, WALL, WALL ; 28
 	tilecoll FF, FF, FF, FF ; 29
-	tilecoll FF, FF, FF, FF ; 2a
-	tilecoll FF, FF, FF, FF ; 2b
-	tilecoll FF, FF, FF, FF ; 2c
-	tilecoll FF, FF, FF, FF ; 2d
-	tilecoll FF, FF, FF, FF ; 2e
-	tilecoll FF, FF, FF, FF ; 2f
-	tilecoll FF, FF, FF, FF ; 30
-	tilecoll FF, FF, FF, FF ; 31
-	tilecoll FF, FF, FF, FF ; 32
+	tilecoll FLOOR, WALL, FLOOR, FLOOR ; 2a
+	tilecoll WALL, FLOOR, FLOOR, FLOOR ; 2b
+	tilecoll WALL, WALL, BOOKSHELF, BOOKSHELF ; 2c
+	tilecoll FLOOR, WALL, FLOOR, WALL ; 2d
+	tilecoll WALL, STAIRCASE, FLOOR, FLOOR ; 2e
+	tilecoll FLOOR, FLOOR, WARP_CARPET_DOWN, WARP_CARPET_DOWN ; 2f
+	tilecoll WALL, WALL, TV, WALL ; 30
+	tilecoll WINDOW, WALL, FLOOR, FLOOR ; 31
+	tilecoll WALL, FLOOR, FLOOR, FLOOR ; 32
 	tilecoll FF, FF, FF, FF ; 33
 	tilecoll FF, FF, FF, FF ; 34
 	tilecoll FF, FF, FF, FF ; 35

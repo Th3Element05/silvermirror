@@ -278,7 +278,7 @@ UnusedTilesetAnim5: ; unreferenced
 
 TilesetBattleTowerOutsideAnim:
 TilesetHouseAnim:
-TilesetPlayersHouseAnim:
+;TilesetPlayersHouseAnim:
 TilesetPokecenterAnim:
 TilesetGateAnim:
 TilesetLabAnim:

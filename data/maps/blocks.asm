@@ -265,6 +265,24 @@ Route39_Blocks:
 PlayersHouse1F_Blocks:
 	INCBIN "maps/PlayersHouse1F.blk"
 
+PlayersHouse2F_Blocks:
+CopycatsHouse2F_Blocks:
+RedsHouse2F_Blocks:
+	INCBIN "maps/PlayersHouse2F.blk"
+
+CopycatsHouse1F_Blocks:
+RedsHouse1F_Blocks:
+	INCBIN "maps/RedsHouse1F.blk"
+
+;CopycatsHouse1F_Blocks:
+;	INCBIN "maps/CopycatsHouse1F.blk"
+
+;CopycatsHouse2F_Blocks:
+;	INCBIN "maps/CopycatsHouse2F.blk"
+
+;RedsHouse2F_Blocks:
+;	INCBIN "maps/RedsHouse2F.blk"
+
 Route38EcruteakGate_Blocks:
 Route42EcruteakGate_Blocks:
 Route32RuinsOfAlphGate_Blocks:
@@ -688,17 +706,23 @@ TeamRocketBaseB3F_Blocks:
 IndigoPlateauPokecenter1F_Blocks:
 	INCBIN "maps/IndigoPlateauPokecenter1F.blk"
 
-WillsRoom_Blocks:
-	INCBIN "maps/WillsRoom.blk"
+E4LoreleisRoom_Blocks:
+	INCBIN "maps/E4LoreleisRoom.blk"
 
-KogasRoom_Blocks:
-	INCBIN "maps/KogasRoom.blk"
+E4BrunosRoom_Blocks:
+	INCBIN "maps/E4BrunosRoom.blk"
 
-BrunosRoom_Blocks:
-	INCBIN "maps/BrunosRoom.blk"
+E4AgathasRoom_Blocks:
+	INCBIN "maps/E4AgathasRoom.blk"
 
-KarensRoom_Blocks:
-	INCBIN "maps/KarensRoom.blk"
+E4LancesRoom_Blocks:
+	INCBIN "maps/E4LancesRoom.blk"
+
+;E4ChampionsRoom_Blocks:
+;	INCBIN "maps/E4ChampionsRoom.blk"
+
+HallOfFame_Blocks:
+	INCBIN "maps/HallOfFame.blk"
 
 AzaleaGym_Blocks:
 	INCBIN "maps/AzaleaGym.blk"
@@ -832,9 +856,6 @@ SafariZoneMainOffice_Blocks:
 ;	INCBIN "maps/OlivineCafe.blk"
 	INCBIN "maps/SafariZoneMainOffice.blk"
 
-PlayersHouse2F_Blocks:
-	INCBIN "maps/PlayersHouse2F.blk"
-
 CeruleanGym_Blocks:
 	INCBIN "maps/CeruleanGym.blk"
 
@@ -895,12 +916,6 @@ TrainerHouse1F_Blocks:
 
 TrainerHouseB1F_Blocks:
 	INCBIN "maps/TrainerHouseB1F.blk"
-
-RedsHouse1F_Blocks:
-	INCBIN "maps/RedsHouse1F.blk"
-
-RedsHouse2F_Blocks:
-	INCBIN "maps/RedsHouse2F.blk"
 
 OaksLab_Blocks:
 	INCBIN "maps/OaksLab.blk"
@@ -989,18 +1004,6 @@ VictoryRoad3F_Blocks:
 
 Route23_Blocks:
 	INCBIN "maps/Route23.blk"
-
-LancesRoom_Blocks:
-	INCBIN "maps/LancesRoom.blk"
-
-HallOfFame_Blocks:
-	INCBIN "maps/HallOfFame.blk"
-
-CopycatsHouse1F_Blocks:
-	INCBIN "maps/CopycatsHouse1F.blk"
-
-CopycatsHouse2F_Blocks:
-	INCBIN "maps/CopycatsHouse2F.blk"
 
 GoldenrodFlowerShop_Blocks:
 	INCBIN "maps/GoldenrodFlowerShop.blk"

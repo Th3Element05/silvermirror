@@ -5,7 +5,7 @@
 	const TILESET_KANTO                ; 03
 	const TILESET_BATTLE_TOWER_OUTSIDE ; 04
 	const TILESET_HOUSE                ; 05
-	const TILESET_PLAYERS_HOUSE        ; 06
+;	const TILESET_PLAYERS_HOUSE        ; 06
 	const TILESET_POKECENTER           ; 07
 	const TILESET_GATE                 ; 08
 	const TILESET_PORT                 ; 09
