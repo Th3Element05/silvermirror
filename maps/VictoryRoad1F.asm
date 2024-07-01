@@ -36,11 +36,56 @@ VictoryRoad1FPushedSwitchText:
 	line "pushed the switch!"
 	done
 
-;VictoryRoadTMEarthquake:
-;	itemball TM_EARTHQUAKE
+TrainerCooltrainerMSean:
+	trainer COOLTRAINERM, SEAN, EVENT_BEAT_COOLTRAINERM_SEAN, CooltrainerMSeanSeenText, CooltrainerMSeanBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext CooltrainerMSeanAfterBattleText
+	waitbutton
+	closetext
+	end
 
-;VictoryRoadHiddenMaxPotion:
-;	hiddenitem MAX_POTION, EVENT_VICTORY_ROAD_HIDDEN_MAX_POTION
+CooltrainerMSeanSeenText:
+	text "I can see you're"
+	line "good! Let me see"
+	cont "exactly how good!"
+	done
+
+CooltrainerMSeanBeatenText:
+	text "I had a"
+	line "chance..."
+	done
+
+CooltrainerMSeanAfterBattleText:
+	text "I concede, you're"
+	line "better than me!"
+	done
+
+TrainerCooltrainerFLois:
+	trainer COOLTRAINERF, LOIS, EVENT_BEAT_COOLTRAINERF_LOIS, CooltrainerFLoisSeenText, CooltrainerFLoisBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext CooltrainerFLoisAfterBattleText
+	waitbutton
+	closetext
+	end
+
+CooltrainerFLoisSeenText:
+	text "I wonder if you"
+	line "are good enough"
+	cont "for me!"
+	done
+
+CooltrainerFLoisBeatenText:
+	text "I lost out!"
+	done
+
+CooltrainerFLoisAfterBattleText:
+	text "I never wanted to"
+	line "lose to anybody!"
+	done
 
 VictoryRoad1FGateSign:
 	jumptext VictoryRoad1FGateSignText
@@ -60,6 +105,13 @@ VictoryRoad1FButtonSignText:
 VictoryRoad1FBoulder:
 	jumpstd StrengthBoulderScript
 
+; itemballs
+VictoryRoad1FTMSkyAttack:
+	itemball TM_SKY_ATTACK
+
+VictoryRoad1FRareCandy:
+	itemball RARE_CANDY
+
 VictoryRoad1F_MapEvents:
 	db 0, 0 ; filler
 
@@ -74,9 +126,11 @@ VictoryRoad1F_MapEvents:
 	bg_event 13, 13, BGEVENT_UP, VictoryRoad1FGateSign
 	bg_event 16, 13, BGEVENT_UP, VictoryRoad1FGateSign
 	bg_event 22, 17, BGEVENT_READ, VictoryRoad1FButtonSign
-;	bg_event  7,  5, BGEVENT_ITEM, VictoryRoadHiddenMaxPotion
 
 	def_object_events
 	object_event  7, 19, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoad1FBoulder, -1
-;	object_event 18, 13, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_VICTORY_ROAD
-;	object_event  3, 28, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoadTMEarthquake, EVENT_VICTORY_ROAD_TM_EARTHQUAKE
+	object_event 19,  4, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoad1FBoulder, -1
+	object_event  7,  4, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerCooltrainerMSean, -1
+	object_event 11,  7, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 3, TrainerCooltrainerFLois, -1
+	object_event 16,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, VictoryRoad1FTMSkyAttack, EVENT_VICTORY_ROAD_1F_TM_SKY_ATTACK
+	object_event 14,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoad1FRareCandy, EVENT_VICTORY_ROAD_1F_RARE_CANDY

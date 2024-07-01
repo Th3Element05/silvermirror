@@ -1,6 +1,8 @@
 	object_const_def
 	const VICTORYROAD2F_BOULDER1
 	const VICTORYROAD2F_BOULDER2
+	const VICTORYROAD2F_MOLTRES
+	const VICTORYROAD2F_FLAMETHROWER
 
 VictoryRoad2F_MapScripts:
 	def_scene_scripts
@@ -62,11 +64,163 @@ VictoryRoad2FPushedSwitchText:
 	line "pushed the switch!"
 	done
 
-;VictoryRoadTMEarthquake:
-;	itemball TM_EARTHQUAKE
+VictoryRoad2FMoltres:
+	opentext
+	writetext MoltresText
+	cry MOLTRES
+	pause 20
+	closetext
+;	loadvar VAR_BATTLETYPE, BATTLETYPE_KANTO_LEGEND
+	loadwildmon MOLTRES, 50
+	startbattle
+	disappear VICTORYROAD2F_MOLTRES
+	setevent EVENT_FOUGHT_MOLTRES
+	reloadmapafterbattle
+	special CheckBattleCaughtResult
+	iffalse .NoCatch
+	setflag ENGINE_PLAYER_CAUGHT_MOLTRES
+.NoCatch
+	checkevent EVENT_GOT_TM51_FLAMETHROWER
+	iftrue .GotFlamethrower
+	appear VICTORYROAD2F_FLAMETHROWER
+	setevent EVENT_GOT_TM51_FLAMETHROWER
+.GotFlamethrower
+	end
 
-;VictoryRoadHiddenMaxPotion:
-;	hiddenitem MAX_POTION, EVENT_VICTORY_ROAD_HIDDEN_MAX_POTION
+MoltresText:
+	text "Gyaoo!"
+	done
+
+TrainerPokemaniacRon:
+	trainer POKEMANIAC, RON, EVENT_BEAT_POKEMANIAC_RON, PokemaniacRonSeenText, PokemaniacRonBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext PokemaniacRonAfterBattleText
+	waitbutton
+	closetext
+	end
+
+PokemaniacRonSeenText:
+	text "If you can get"
+	line "through here, you"
+	cont "can go meet the"
+	cont "ELITE FOUR!"
+	done
+
+PokemaniacRonBeatenText:
+	text "No!"
+	line "Unbelievable!"
+	done
+
+PokemaniacRonAfterBattleText:
+	text "I can beat you"
+	line "when it comes to"
+	cont "knowledge about"
+	cont "#MON!"
+	done
+
+TrainerJugglerDario:
+	trainer JUGGLER, DARIO, EVENT_BEAT_JUGGLER_DARIO, JugglerDarioSeenText, JugglerDarioBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext JugglerDarioAfterBattleText
+	waitbutton
+	closetext
+	end
+
+JugglerDarioSeenText:
+	text "Is VICTORY ROAD"
+	line "too tough?"
+	done
+
+JugglerDarioBeatenText:
+	text "Well done!"
+	done
+
+JugglerDarioAfterBattleText:
+	text "Many trainers give"
+	line "up the challenge"
+	cont "here."
+	done
+
+TrainerCooltrainerMMike:
+	trainer COOLTRAINERM, MIKE, EVENT_BEAT_COOLTRAINERM_MIKE, CooltrainerMMikeSeenText, CooltrainerMMikeBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext CooltrainerMMikeAfterBattleText
+	waitbutton
+	closetext
+	end
+
+CooltrainerMMikeSeenText:
+	text "Come on!"
+	line "I'll whip you!"
+	done
+
+CooltrainerMMikeBeatenText:
+	text "I got whipped!"
+	done
+
+CooltrainerMMikeAfterBattleText:
+	text "You earned the"
+	line "right to be on"
+	cont "VICTORY ROAD!"
+	done
+
+TrainerBlackbeltYoshi:
+	trainer BLACKBELT_T, YOSHI, EVENT_BEAT_BLACKBELT_YOSHI, BlackbeltYoshiSeenText, BlackbeltYoshiBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext BlackbeltYoshiAfterBattleText
+	waitbutton
+	closetext
+	end
+
+BlackbeltYoshiSeenText:
+	text "VICTORY ROAD is"
+	line "the final test"
+	cont "for trainers!"
+	done
+
+BlackbeltYoshiBeatenText:
+	text "Aiyah!"
+	done
+
+BlackbeltYoshiAfterBattleText:
+	text "If you get stuck,"
+	line "try moving some"
+	cont "boulders around!"
+	done
+
+TrainerJugglerGilbert:
+	trainer JUGGLER, GILBERT, EVENT_BEAT_JUGGLER_GILBERT, JugglerGilbertSeenText, JugglerGilbertBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext JugglerGilbertAfterBattleText
+	waitbutton
+	closetext
+	end
+
+JugglerGilbertSeenText:
+	text "Ah, so you wish"
+	line "to challenge the"
+	cont "ELITE FOUR?"
+	done
+
+JugglerGilbertBeatenText:
+	text "You got me!"
+	done
+
+JugglerGilbertAfterBattleText:
+	text "A trainer named"
+	line "<RIVAL> also came"
+	cont "through here!"
+	done
 
 VictoryRoad2FGateSign:
 	jumptext VictoryRoad2FGateSignText
@@ -86,6 +240,26 @@ VictoryRoad2FButtonSignText:
 VictoryRoad2FBoulder:
 	jumpstd StrengthBoulderScript
 
+; itemballs
+VictoryRoad2FTMFlamethrower:
+	itemball TM_FLAMETHROWER
+
+VictoryRoad2FGuardSpec:
+	itemball GUARD_SPEC
+
+VictoryRoad2FTMSubmission:
+	itemball TM_SUBMISSION
+
+VictoryRoad2FFullHeal:
+	itemball FULL_HEAL
+
+VictoryRoad2FTMMegaKick:
+	itemball TM_MEGA_KICK
+
+; hidden items
+VictoryRoad2FHiddenUltraBall:
+	hiddenitem ULTRA_BALL, EVENT_VICTORY_ROAD_2F_HIDDEN_ULTRA_BALL
+
 VictoryRoad2F_MapEvents:
 	db 0, 0 ; filler
 
@@ -94,7 +268,7 @@ VictoryRoad2F_MapEvents:
 	warp_event  1,  3, VICTORY_ROAD_3F, 2 ;2
 	warp_event 23,  7, VICTORY_ROAD_3F, 3 ;3
 	warp_event 23, 13, VICTORY_ROAD_3F, 4 ;4
-	warp_event 21, 22, VICTORY_ROAD_3F, 5 ;5 fall
+	warp_event 22, 22, VICTORY_ROAD_3F, 5 ;5 fall
 	warp_event  1, 21, VICTORY_ROAD_2F, 6 ;6 button
 	warp_event  9, 23, VICTORY_ROAD_2F, 7 ;7 button
 
@@ -107,11 +281,19 @@ VictoryRoad2F_MapEvents:
 	bg_event 24, 17, BGEVENT_UP, VictoryRoad2FGateSign
 	bg_event  0, 21, BGEVENT_READ, VictoryRoad2FButtonSign
 	bg_event  8, 23, BGEVENT_READ, VictoryRoad2FButtonSign
-;	bg_event  7,  5, BGEVENT_ITEM, VictoryRoadHiddenMaxPotion
+	bg_event  4,  6, BGEVENT_ITEM, VictoryRoad2FHiddenUltraBall
 
 	def_object_events
 	object_event  2, 17, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoad2FBoulder, -1
-	object_event 20, 22, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoad2FBoulder, EVENT_VICTORY_ROAD_2F_BOULDER2
-
-;	object_event 18, 13, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_VICTORY_ROAD
-;	object_event  3, 28, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoadTMEarthquake, EVENT_VICTORY_ROAD_TM_EARTHQUAKE
+	object_event 21, 22, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoad2FBoulder, EVENT_VICTORY_ROAD_2F_BOULDER2
+	object_event 12,  3, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VictoryRoad2FMoltres, EVENT_MOLTRES_APPEAR
+	object_event 11,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, VictoryRoad2FTMFlamethrower, EVENT_VICTORY_ROAD_2F_TM_FLAMETHROWER
+	object_event  3,  5, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerPokemaniacRon, -1
+	object_event 26,  3, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerJugglerDario, -1
+	object_event 20,  8, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerCooltrainerMMike, -1
+	object_event 13,  9, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerBlackbeltYoshi, -1
+	object_event 20, 19, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerJugglerGilbert, -1
+	object_event  4,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoad2FGuardSpec, EVENT_VICTORY_ROAD_2F_GUARD_SPEC
+	object_event 27,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoad2FTMSubmission, EVENT_VICTORY_ROAD_2F_TM_SUBMISSION
+	object_event 19,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoad2FFullHeal, EVENT_VICTORY_ROAD_2F_FULL_HEAL
+	object_event 10, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoad2FTMMegaKick, EVENT_VICTORY_ROAD_2F_TM_MEGA_KICK
