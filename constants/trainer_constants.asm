@@ -363,8 +363,8 @@ DEF KRIS EQU __trainer_class__
 ; kanto
 	const GWEN
 	const LOIS
-	const FRAN
 	const BETH1
+	const FRAN
 ; johto
 	const SALMA
 	const LOLA
