@@ -46,8 +46,12 @@ BillsHouseBillScript:
 	jumptext BillsHouseBillInsideTeleporterText
 
 .AfterHelpedBill
-	; checkevent been to SS ANNE
-	jumptextfaceplayer BillsHouseBillPartyText
+	checkevent EVENT_GOT_HM01_CUT
+	iftrue .GotCut
+	jumptextfaceplayer BillsHouseBillShipText
+.GotCut
+	jumptextfaceplayer BillsHouseBillExplainRadioCardText
+
 
 BillsHouseBillGoesToTeleporterScript:
 	readvar VAR_FACING
@@ -82,16 +86,32 @@ BillsHouseBillsComputerScript:
 	opentext
 	writetext BillsHouseBillThanksText
 	promptbutton
-	verbosegiveitem S_S_TICKET ; this is the SS Aqua ticket for now
-;	iffalse .NoRoom
+; Bill gives RADIO CARD
+	getstring STRING_BUFFER_4, .RadioCardText
+	scall .ReceiveItem
+	writetext BillsHousePokegearIsARadioText
 	promptbutton
-	writetext BillsHouseBillPartyText
+	setflag ENGINE_RADIO_CARD
+	writetext BillsHouseBillExplainRadioCardText
+	promptbutton
+; Bill gives S_S_TICKET
+;	verbosegiveitem S_S_TICKET ; this is the SS Aqua ticket for now
+;;	iffalse .NoRoom
+;	promptbutton
+	writetext BillsHouseBillShipText
 	waitbutton
 	setevent EVENT_HELPED_BILL
 	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
 	; fallthrough
 .NoCellSeparator
 	closetext
+	end
+
+.RadioCardText:
+	db "RADIO CARD@"
+
+.ReceiveItem:
+	jumpstd ReceiveItemScript
 	end
 
 .Skip
@@ -115,8 +135,7 @@ BillsHouseBillWalksAroundPlayerMovement:
 	step UP
 	step UP
 	step UP
-	hide_object
-;	step UP ;can you interact with Bill in the door?
+	hide_object ; you can talk to Bill through the door
 	step_end
 
 BillsHouseBillSwitchTeleportersMovement:
@@ -222,19 +241,37 @@ BillsHouseBillThanksText:
 	cont "maybe this'll do."
 	done
 
-BillsHouseBillPartyText:
-	text "That cruise ship,"
+BillsHousePokegearIsARadioText:
+	text "<PLAYER>'s #GEAR"
+	line "can now tune in"
+	cont "to the radio!"
+	done
+
+BillsHouseBillExplainRadioCardText:
+	text "BILL: There's a"
+	line "radio station that"
+	cont "reports swarms of"
+	cont "rare #MON!"
+
+	para "You should give it"
+	line "a listen sometime!"
+	done
+
+
+
+
+
+BillsHouseBillShipText:
+	text "The cruise ship,"
 	line "S.S.ANNE, is in"
 	cont "VERMILION CITY."
 	cont "Its passengers"
 	cont "are all trainers!"
 
-	para "They invited me"
-	line "to their party,"
-	cont "but I can't stand"
-	cont "fancy do's. Why"
-	cont "don't you go"
-	cont "instead of me?"
+	para "If you go there,"
+	line "maybe you'll get"
+	cont "to battle some"
+	cont "rare #MON!"
 	done
 
 BillsHouseComputerWrongSideText:
