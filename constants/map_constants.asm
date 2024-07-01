@@ -214,7 +214,7 @@ ENDM
 	map_const FIGHTING_DOJO,                                5,  6 ;  5
 	map_const MR_PSYCHICS_HOUSE,                            4,  4 ;  6
 	map_const COPYCATS_HOUSE_1F,                            4,  4 ;  7
-	map_const COPYCATS_HOUSE_2F,                            5,  3 ;  8
+	map_const COPYCATS_HOUSE_2F,                            4,  3 ;  8
 	map_const SAFFRON_PIDGEY_HOUSE,                         4,  4 ;  9
 	map_const SAFFRON_MAGNET_TRAIN_STATION,                10,  9 ; 10
 	map_const ROUTE_5,                                     10, 16 ; 11
@@ -237,14 +237,14 @@ ENDM
 
 	newgroup INDIGO                                               ; 13
 	map_const VICTORY_ROAD_GATE,                           10,  8 ;  1
-	map_const ROUTE_23,                                    10, 36 ;  2
+	map_const ROUTE_23,                                    10, 37 ;  2
 	map_const INDIGO_PLATEAU_POKECENTER_1F,                 9,  6 ;  3
-	map_const WILLS_ROOM,                                   5,  9 ;  4
-	map_const KOGAS_ROOM,                                   5,  9 ;  5
-	map_const BRUNOS_ROOM,                                  5,  9 ;  6
-	map_const KARENS_ROOM,                                  5,  9 ;  7
-	map_const LANCES_ROOM,                                  5, 12 ;  8
-	map_const HALL_OF_FAME,                                 5,  7 ;  9
+	map_const E4_LORELEIS_ROOM,                             5,  9 ;  4
+	map_const E4_BRUNOS_ROOM,                               5,  9 ;  5
+	map_const E4_AGATHAS_ROOM,                              5,  9 ;  6
+	map_const E4_LANCES_ROOM,                               5, 11 ;  7
+;	map_const E4_CHAMPIONS_ROOM,                            5,  9 ;  8
+	map_const HALL_OF_FAME,                                 5,  5 ;  9
 	endgroup
 
 	newgroup NEW_BARK                                             ; 15
