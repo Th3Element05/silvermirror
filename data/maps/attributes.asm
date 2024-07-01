@@ -631,11 +631,11 @@ ENDM
 	map_attributes BurnedTowerB1F, BURNED_TOWER_B1F, $09, 0
 	map_attributes BlackthornGym2F, BLACKTHORN_GYM_2F, $46, 0
 	map_attributes IndigoPlateauPokecenter1F, INDIGO_PLATEAU_POKECENTER_1F, $00, 0
-	map_attributes WillsRoom, WILLS_ROOM, $00, 0
-	map_attributes KogasRoom, KOGAS_ROOM, $00, 0
-	map_attributes BrunosRoom, BRUNOS_ROOM, $46, 0
-	map_attributes KarensRoom, KARENS_ROOM, $00, 0
-	map_attributes LancesRoom, LANCES_ROOM, $00, 0
+	map_attributes E4LoreleisRoom, E4_LORELEIS_ROOM, $00, 0
+	map_attributes E4BrunosRoom, E4_BRUNOS_ROOM, $00, 0
+	map_attributes E4AgathasRoom, E4_AGATHAS_ROOM, $00, 0
+	map_attributes E4LancesRoom, E4_LANCES_ROOM, $00, 0
+;	map_attributes E4ChampionsRoom, E4_CHAMPIONS_ROOM, $00, 0
 	map_attributes HallOfFame, HALL_OF_FAME, $00, 0
 	map_attributes FuchsiaMart, FUCHSIA_MART, $00, 0
 	map_attributes SafariZoneMainOffice, SAFARI_ZONE_MAIN_OFFICE, $00, 0

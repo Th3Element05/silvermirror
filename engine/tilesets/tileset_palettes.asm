@@ -112,59 +112,59 @@ MapSpecificPalettes:
 	_use_palette_routine_for_map PEWTER_MUSEUM_2F, .MuseumBGPalettes
 	_use_palette_routine_for_map BLACKTHORN_GYM_1F, .BlackThornGymBGPalettes
 	_use_palette_routine_for_map BLACKTHORN_GYM_2F, .BlackThornGymBGPalettes
-	_use_palette_routine_for_map BRUNOS_ROOM, .BlackThornGymBGPalettes
-	_use_palette_routine_for_map KARENS_ROOM, .KarensRoomBGPalettes
-	_use_palette_routine_for_map KOGAS_ROOM, .KogasRoomBGPalettes
-	_use_palette_routine_for_map WILLS_ROOM, .WillsRoomBGPalettes
+;	_use_palette_routine_for_map E4_BRUNOS_ROOM, .BlackThornGymBGPalettes
+	_use_palette_routine_for_map E4_AGATHAS_ROOM, .AgathasRoomBGPalettes
+;	_use_palette_routine_for_map KOGAS_ROOM, .KogasRoomBGPalettes
+	_use_palette_routine_for_map E4_LORELEIS_ROOM, .LoreleisRoomBGPalettes
 ;	_use_palette_routine_for_map VIRIDIAN_GYM, .ViridianGymBGPalettes
 	db -1 ; terminator
 
-.LavaOverRedCoalOverBrownBGPalette:
-	ld hl, LavaOverRedCoalOverBrown
-	jp .next
-.SandOverBrownBGPalette:
-	ld hl, SandOverRock
-	ld a, [wTimeOfDayPal]
-	maskbits NUM_DAYTIMES
-	ld bc, 8 palettes
-	call AddNTimes
-	jp .next_TimeOfDay
-.SwampBGPalettes:
-	ld hl, SwampPals
-	ld a, [wTimeOfDayPal]
-	maskbits NUM_DAYTIMES
-	ld bc, 8 palettes
-	call AddNTimes
-	jp .next_TimeOfDay
-.SundriedBGPalettes:
-	ld hl, SundriedPals
-	ld a, [wTimeOfDayPal]
-	maskbits NUM_DAYTIMES
-	ld bc, 8 palettes
-	call AddNTimes
-	ld de, wBGPals1
-	ld a, BANK(wBGPals1)
-	call FarCopyWRAM
-	scf
-	ret
+;.LavaOverRedCoalOverBrownBGPalette:
+;	ld hl, LavaOverRedCoalOverBrown
+;	jp .next
+;.SandOverBrownBGPalette:
+;	ld hl, SandOverRock
+;	ld a, [wTimeOfDayPal]
+;	maskbits NUM_DAYTIMES
+;	ld bc, 8 palettes
+;	call AddNTimes
+;	jp .next_TimeOfDay
+;.SwampBGPalettes:
+;	ld hl, SwampPals
+;	ld a, [wTimeOfDayPal]
+;	maskbits NUM_DAYTIMES
+;	ld bc, 8 palettes
+;	call AddNTimes
+;	jp .next_TimeOfDay
+;.SundriedBGPalettes:
+;	ld hl, SundriedPals
+;	ld a, [wTimeOfDayPal]
+;	maskbits NUM_DAYTIMES
+;	ld bc, 8 palettes
+;	call AddNTimes
+;	ld de, wBGPals1
+;	ld a, BANK(wBGPals1)
+;	call FarCopyWRAM
+;	scf
+;	ret
 .BlackThornGymBGPalettes:
 	ld hl, BlackThornGymPals
 	jp .next
-.KarensRoomBGPalettes:
-	ld hl, KarensRoomPals
+.AgathasRoomBGPalettes:
+	ld hl, AgathasRoomPals
 	jp .next
-.KogasRoomBGPalettes:
-	ld hl, KogasRoomPals
-	jp .next
-.WillsRoomBGPalettes:
-	ld hl, WillsRoomPals
+;.KogasRoomBGPalettes:
+;	ld hl, KogasRoomPals
+;	jp .next
+.LoreleisRoomBGPalettes:
+	ld hl, LoreleisRoomPals
 	jp .next
 .MuseumBGPalettes
 	call LoadMuseumPalette
 	scf
 	ret
-.ViridianGymBGPalettes:
-	ld hl, ViridianGymPals
+;.ViridianGymBGPalettes:
+;	ld hl, ViridianGymPals
 .next
 	ld bc, 8 palettes
 .next_TimeOfDay
@@ -203,6 +203,7 @@ MapSpecificOBPalettes:
 	_use_palette_routine_for_map SAFARI_ZONE_AREA_3, .SandOverTreeOBPalette
 	_use_palette_routine_for_map PEWTER_MUSEUM_1F, .YellowOverRockOBPalette
 ;	_use_palette_routine_for_map PEWTER_MUSEUM_2F, .YellowOverRockOBPalette
+	_use_palette_routine_for_map COPYCATS_HOUSE_2F, .YellowOverRockOBPalette
 ;silvermirror+
 	_use_palette_routine_for_map SS_ANNE_ROOMS_B1F, .GrayOverRockOBPalette
 	_use_palette_routine_for_map POWER_PLANT, .YellowOverRockOBPalette
@@ -257,12 +258,12 @@ MapSpecificOBPalettes:
 	ld hl, SandOverTree
 	jr .finish
 
-.SwampOverTreeOBPalette
-	ld a, [wTimeOfDayPal]
-	maskbits NUM_DAYTIMES
-	ld bc, 8 palettes
-	ld hl, SwampOverTree
-	jr .finish
+;.SwampOverTreeOBPalette
+;	ld a, [wTimeOfDayPal]
+;	maskbits NUM_DAYTIMES
+;	ld bc, 8 palettes
+;	ld hl, SwampOverTree
+;	jr .finish
 	
 .finish
 	call AddNTimes

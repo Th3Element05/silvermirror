@@ -1,5 +1,5 @@
 	object_const_def
-	const HALLOFFAME_LANCE
+	const HALLOFFAME_OAK
 
 HallOfFame_MapScripts:
 	def_scene_scripts
@@ -16,15 +16,15 @@ HallOfFameNoopScene:
 	end
 
 HallOfFameEnterScript:
-	follow HALLOFFAME_LANCE, PLAYER
-	applymovement HALLOFFAME_LANCE, HallOfFame_WalkUpWithLance
+	follow HALLOFFAME_OAK, PLAYER
+	applymovement HALLOFFAME_OAK, HallOfFame_WalkUpWithOak
 	stopfollow
 	turnobject PLAYER, RIGHT
 	opentext
-	writetext HallOfFame_LanceText
+	writetext HallOfFame_OakText
 	waitbutton
 	closetext
-	turnobject HALLOFFAME_LANCE, UP
+	turnobject HALLOFFAME_OAK, UP
 	applymovement PLAYER, HallOfFame_SlowlyApproachMachine
 	setscene SCENE_HALLOFFAME_NOOP
 	pause 15
@@ -46,11 +46,11 @@ HallOfFameEnterScript:
 	halloffame
 	end
 
-HallOfFame_WalkUpWithLance:
-	step UP
-	step UP
-	step UP
-	step UP
+HallOfFame_WalkUpWithOak:
+;	step UP
+;	step UP
+;	step UP
+;	step UP
 	step UP
 	step UP
 	step UP
@@ -63,62 +63,45 @@ HallOfFame_SlowlyApproachMachine:
 	slow_step UP
 	step_end
 
-HallOfFame_LanceText:
-	text "LANCE: It's been a"
-	line "long time since I"
-	cont "last came here."
+HallOfFame_OakText:
+	text "OAK: Er-hem!"
+	line "Congratulations"
+	cont "<PLAYER>!"
 
-	para "This is where we"
-	line "honor the LEAGUE"
+	para "This is the"
+	line "#MON LEAGUE"
+	cont "HALL OF FAME!"
 
-	para "CHAMPIONS for all"
-	line "eternity."
+	para "#MON LEAGUE"
+	line "champions are"
+	cont "honored for their"
+	cont "achievments here!"
 
-	para "Their courageous"
-	line "#MON are also"
-	cont "inducted."
+	para "Their #MON are"
+	line "also recorded in"
+	cont "the HALL OF FAME!"
 
-	para "Here today, we"
-	line "witnessed the rise"
+	para "<PLAYER>! You have"
+	line "endeavored hard"
+	cont "to become the new"
+	cont "LEAGUE champion!"
 
-	para "of a new LEAGUE"
-	line "CHAMPION--a"
-
-	para "trainer who feels"
-	line "compassion for,"
-
-	para "and trust toward,"
-	line "all #MON."
-
-	para "A trainer who"
-	line "succeeded through"
-
-	para "perseverance and"
-	line "determination."
-
-	para "The new LEAGUE"
-	line "CHAMPION who has"
-
-	para "all the makings"
-	line "of greatness!"
-
-	para "<PLAY_G>, allow me"
-	line "to register you"
-
-	para "and your partners"
-	line "as CHAMPIONS!"
+	para "Congratulations,"
+	line "<PLAYER>, you and"
+	cont "your #MON are"
+	cont "HALL OF FAMERs!"
 	done
 
 HallOfFame_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  4, 13, LANCES_ROOM, 3
-	warp_event  5, 13, LANCES_ROOM, 4
+	warp_event  4,  9, E4_LANCES_ROOM, 3
+	warp_event  5,  9, E4_LANCES_ROOM, 4
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event  4, 12, SPRITE_LANCE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
+	object_event  4,  8, SPRITE_OAK, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1

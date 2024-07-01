@@ -10,6 +10,7 @@ MapScenes::
 	scene_var VIRIDIAN_CITY,                               wViridianCitySceneID ;silvermirror
 	scene_var VIRIDIAN_MART,                               wViridianMartSceneID ;silvermirror
 	scene_var ROUTE_22,                                    wRoute22SceneID ;silvermirror
+	scene_var ROUTE_26_GATE,                               wRoute26GateSceneID ;silvermirror
 	scene_var PEWTER_CITY,                                 wPewterCitySceneID ;silvermirror
 	scene_var PEWTER_MUSEUM_1F,                            wPewterMuseumSceneID ;silvermirror (reordered)
 	scene_var MOUNT_MOON_B2F,                              wMountMoonB2FSceneID ;silvermirror (removed scene_var MOUNT_MOON)
@@ -37,11 +38,10 @@ MapScenes::
 	scene_var ROUTE_16_GATE,                               wRoute16GateSceneID
 	scene_var ROUTE_18_GATE,                               wRoute18GateSceneID
 	scene_var INDIGO_PLATEAU_POKECENTER_1F,                wIndigoPlateauPokecenter1FSceneID
-	scene_var WILLS_ROOM,                                  wWillsRoomSceneID
-	scene_var KOGAS_ROOM,                                  wKogasRoomSceneID
-	scene_var BRUNOS_ROOM,                                 wBrunosRoomSceneID
-	scene_var KARENS_ROOM,                                 wKarensRoomSceneID
-	scene_var LANCES_ROOM,                                 wLancesRoomSceneID
+	scene_var E4_LORELEIS_ROOM,                            wE4LoreleisRoomSceneID
+	scene_var E4_BRUNOS_ROOM,                              wE4BrunosRoomSceneID
+	scene_var E4_AGATHAS_ROOM,                             wE4AgathasRoomSceneID
+	scene_var E4_LANCES_ROOM,                              wE4LancesRoomSceneID
 	scene_var HALL_OF_FAME,                                wHallOfFameSceneID
 	scene_var NEW_BARK_TOWN,                               wNewBarkTownSceneID
 	scene_var ELMS_LAB,                                    wElmsLabSceneID
@@ -100,6 +100,7 @@ MapScenes::
 	scene_var SAFARI_ZONE_ENTRANCE,                        wSafariZoneEntranceSceneID ; KEEP in silvermirror
 	scene_var ROUTE_42_ECRUTEAK_GATE,                      wRoute42EcruteakGateSceneID
 	scene_var ROUTE_39,                                    wRoute39SceneID
+;	scene_var E4_CHAMPIONS_ROOM,                           wE4ChampionsRoomSceneID
 ;	scene_var VICTORY_ROAD,                                wVictoryRoadSceneID
 ;	scene_var POKECENTER_2F,                               wPokecenter2FSceneID
 ;	scene_var TRADE_CENTER,                                wTradeCenterSceneID

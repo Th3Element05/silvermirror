@@ -1,7 +1,7 @@
 	object_const_def
 	const BRUNOSROOM_BRUNO
 
-BrunosRoom_MapScripts:
+E4BrunosRoom_MapScripts:
 	def_scene_scripts
 	scene_script BrunosRoomLockDoorScene, SCENE_BRUNOSROOM_LOCK_DOOR
 	scene_script BrunosRoomNoopScene,     SCENE_BRUNOSROOM_NOOP
@@ -19,11 +19,11 @@ BrunosRoomNoopScene:
 BrunosRoomDoorsCallback:
 	checkevent EVENT_BRUNOS_ROOM_ENTRANCE_CLOSED
 	iffalse .KeepEntranceOpen
-	changeblock 4, 14, $2a ; wall
+	changeblock 4, 14, $0a ; wall
 .KeepEntranceOpen:
 	checkevent EVENT_BRUNOS_ROOM_EXIT_OPEN
 	iffalse .KeepExitClosed
-	changeblock 4, 2, $44 ; open door
+	changeblock 4, 2, $0b ; open door
 .KeepExitClosed:
 	endcallback
 
@@ -32,7 +32,7 @@ BrunosRoomDoorLocksBehindYouScript:
 	refreshscreen $86
 	playsound SFX_STRENGTH
 	earthquake 80
-	changeblock 4, 14, $2a ; wall
+	changeblock 4, 14, $0a ; wall
 	reloadmappart
 	closetext
 	setscene SCENE_BRUNOSROOM_NOOP
@@ -58,7 +58,7 @@ BrunoScript_Battle:
 	waitbutton
 	closetext
 	playsound SFX_ENTER_DOOR
-	changeblock 4, 2, $44 ; open door
+	changeblock 4, 2, $0b ; open door
 	reloadmappart
 	closetext
 	setevent EVENT_BRUNOS_ROOM_EXIT_OPEN
@@ -79,31 +79,23 @@ BrunosRoom_EnterMovement:
 	step_end
 
 BrunoScript_BrunoBeforeText:
-	text "I am BRUNO of the"
-	line "ELITE FOUR."
+	text "I am BRUNO of"
+	line "the ELITE FOUR!"
 
-	para "I always train to"
-	line "the extreme be-"
-	cont "cause I believe in"
-	cont "our potential."
+	para "Through rigorous"
+	line "training, people"
+	cont "and #MON can"
+	cont "become stronger!"
 
-	para "That is how we"
-	line "became strong."
+	para "I've weight"
+	line "trained with"
+	cont "my #MON!"
 
-	para "Can you withstand"
-	line "our power?"
+	para "<PLAYER>!"
 
-	para "Hm? I see no fear"
-	line "in you. You look"
-
-	para "determined. Per-"
-	line "fect for battle!"
-
-	para "Ready, <PLAYER>?"
-	line "You will bow down"
-
-	para "to our overwhelm-"
-	line "ing power!"
+	para "We will grind you"
+	line "down with our"
+	cont "superior power!"
 
 	para "Hoo hah!"
 	done
@@ -114,22 +106,19 @@ BrunoScript_BrunoBeatenText:
 	done
 
 BrunoScript_BrunoDefeatText:
-	text "Having lost, I"
-	line "have no right to"
-	cont "say anything…"
-
-	para "Go face your next"
-	line "challenge!"
+	text "My job is done!"
+	line "Go face your next"
+	cont "challenge!"
 	done
 
-BrunosRoom_MapEvents:
+E4BrunosRoom_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  4, 17, KOGAS_ROOM, 3
-	warp_event  5, 17, KOGAS_ROOM, 4
-	warp_event  4,  2, KARENS_ROOM, 1
-	warp_event  5,  2, KARENS_ROOM, 2
+	warp_event  4, 17, E4_LORELEIS_ROOM, 3
+	warp_event  5, 17, E4_LORELEIS_ROOM, 4
+	warp_event  4,  2, E4_AGATHAS_ROOM, 1
+	warp_event  5,  2, E4_AGATHAS_ROOM, 2
 
 	def_coord_events
 
