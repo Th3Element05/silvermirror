@@ -9,11 +9,13 @@ AddNTimes::
 	ret
 
 
-
 TEST to-do
 
-Walk away from rival in Lances Room, see if he moves/disappears.
-Camera pans up after defeating champion, try extending map if doesn't work?
+pokeflute do awakening effect?
+copycat script
+E4LancesRoom, playmapmusic after intro rival
+victory road 2f boulder disappears, doesn't tile swap
+victory road bould scripts, reloadmappart necessary?
 
 Route22 Rival battles, first and second
 
@@ -22,7 +24,6 @@ bike shop, yesorno, then bike voucher
 vermilion sailor on dock, visibility after ss anne sets sail EVENT_SS_ANNE_SET_SAIL
 vermilion gym new door switches script
 pokemon tower exit warp to lavender
-pokeflute do awakening effect
 celadon cafe (and bill's house) waitbutton (necessary?) after verbosegiveitem
 test STRENGTH with/without rainbowbadge
 
@@ -30,7 +31,7 @@ test STRENGTH with/without rainbowbadge
 
 TO-DO to-do
 
-victory road 2f boulder disappears, doesn't tile swap
+
 
 Finish Bills House give stuff/SS Anne access.
 
