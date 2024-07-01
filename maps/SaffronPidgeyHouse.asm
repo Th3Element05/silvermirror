@@ -8,14 +8,20 @@ SaffronPidgeyHouse_MapScripts:
 SaffronPidgeyHouseBoy:
 	jumptextfaceplayer SaffronPidgeyHouseBoyText
 SaffronPidgeyHouseBoyText:
+;	text "My neighbor the"
+;	line "COPYCAT lost her"
+;	cont "favorite doll."
+;
+;	para "I tried to give"
+;	line "her a new one,"
+;	cont "but she only wants"
+;	cont "her old doll back."
+;	done
 	text "My neighbor the"
-	line "COPYCAT lost her"
-	cont "favorite doll."
+	line "COPYCAT is cute!"
 
-	para "I tried to give"
-	line "her a new one,"
-	cont "but she only wants"
-	cont "her old doll back."
+	para "I'm going to give"
+	line "her a # DOLL!"
 	done
 
 SaffronPidgeyHouseLass:
