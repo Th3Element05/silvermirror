@@ -1192,6 +1192,16 @@ DebugAllTMHMs:
 	closetext
 	end
 
+DebugCredits:
+	opentext
+	writetext DebugRollCreditsText
+	yesorno
+	iffalse .End
+	credits
+.End
+	closetext
+	end
+
 ;Debug:
 ;Debug:
 
@@ -1356,6 +1366,10 @@ DebugAllHMsText:
 	line "(not TMs)"
 	done
 
+DebugRollCreditsText:
+	text "Roll credits?"
+	done
+
 DebugViridianGymText:
 	text "Unlock CINNABAR,"
 	line "VIRIDIAN GYMs?"
@@ -1419,7 +1433,7 @@ OaksLab_MapEvents:
 	bg_event  0,  6, BGEVENT_READ, DebugFullPokegear
 	bg_event  1,  6, BGEVENT_READ, DebugMasterBalls
 	bg_event  2,  6, BGEVENT_READ, DebugAllTMHMs
-;	bg_event  3,  6, BGEVENT_READ, DebugAllHMs
+	bg_event  3,  6, BGEVENT_READ, DebugCredits
 ;	bg_event  6,  6, BGEVENT_READ, Debug
 ;	bg_event  7,  6, BGEVENT_READ, Debug
 	bg_event  8,  6, BGEVENT_READ, DebugLockedGyms
