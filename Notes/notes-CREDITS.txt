@@ -1,0 +1,14 @@
+CREDITS
+
+engine\movie\credits.asm
+
+data\credits\credits_script.asm
+
+constants\credits_constants.asm
+data\credits_strings.asm
+
+gfx\credits\credits.pal
+gfx\credits\pichu.png
+gfx\credits\smoochum.png
+gfx\credits\ditto.png
+gfx\credits\igglybuff.png
