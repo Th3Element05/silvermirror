@@ -1178,6 +1178,8 @@ Script_reloadmapafterbattle:
 	ld hl, wBattleScriptFlags
 	ld d, [hl]
 	ld [hl], 0
+	ld hl, wWildBattlePanic    ;silvermirror
+	ld [hl], d                 ;silvermirror
 	ld a, [wBattleResult]
 	and ~BATTLERESULT_BITMASK
 	cp LOSE

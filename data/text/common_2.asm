@@ -548,6 +548,33 @@ _WhitedOutText::
 	line "out!"
 	done
 
+_WhitedOutToWildMonText:: ;silvermirror
+	text "<PLAYER> is out of"
+	line "useable #MON!"
+
+	para "<PLAYER> dropped"
+	line "¥@"
+	text_decimal hMoneyTemp, 3, 6
+	text "…"
+
+	para "<PLAYER> whited"
+	line "out!"
+	done
+
+_WhitedOutToTrainerText:: ;silvermirror
+	text "<PLAYER> is out of"
+	line "useable #MON!"
+
+	para "<PLAYER> paid"
+	line "¥@"
+	text_decimal hMoneyTemp, 3, 6
+	text " to the"
+	cont "winner…"
+
+	para "<PLAYER> whited"
+	line "out!"
+	done
+
 _ItemfinderItemNearbyText::
 	text "Yes! ITEMFINDER"
 	line "indicates there's"

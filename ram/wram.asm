@@ -2897,7 +2897,9 @@ wScriptTextBank::
 wDeferredScriptAddr::
 wScriptTextAddr::
 	dw
-	ds 1
+;	ds 1 ; wWildBattlePanic
+wWildBattlePanic:: db ;silvermirror
+
 wWildEncounterCooldown:: db
 
 wXYComparePointer:: dw
