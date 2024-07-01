@@ -2008,39 +2008,36 @@ ArticunoEvosAttacks: ;silvermirror modified
 	db 0 ; no more evolutions
 	db 1, GUST
 	db 1, MIST
-	db 12, POWDER_SNOW
-	db 23, AGILITY
-	db 34, MIND_READER
-	db 45, RAZOR_WIND
-	db 56, REFLECT
-	db 67, SKY_ATTACK
-	db 78, BLIZZARD
+	db 13, POWDER_SNOW
+	db 25, AGILITY
+	db 37, MIND_READER
+	db 49, RAZOR_WIND
+	db 61, REFLECT
+	db 73, BLIZZARD
 	db 0 ; no more level-up moves
 
 ZapdosEvosAttacks: ;silvermirror modified
 	db 0 ; no more evolutions
 	db 1, PECK
 	db 1, THUNDER_WAVE
-	db 12, THUNDERSHOCK
-	db 23, AGILITY
-	db 34, DETECT
-	db 45, DRILL_PECK
-	db 56, LIGHT_SCREEN
-	db 67, SKY_ATTACK
-	db 78, THUNDER
+	db 13, THUNDERSHOCK
+	db 25, AGILITY
+	db 37, DETECT
+	db 49, DRILL_PECK
+	db 61, LIGHT_SCREEN
+	db 73, THUNDER
 	db 0 ; no more level-up moves
 
 MoltresEvosAttacks: ;silvermirror modified
 	db 0 ; no more evolutions
 	db 1, PECK
 	db 1, FIRE_SPIN
-	db 12, EMBER
-	db 23, AGILITY
-	db 34, ENDURE
-	db 45, WING_ATTACK
-	db 56, SAFEGUARD
-	db 67, SKY_ATTACK
-	db 78, FIRE_BLAST
+	db 13, EMBER
+	db 25, AGILITY
+	db 37, ENDURE
+	db 49, WING_ATTACK
+	db 61, SAFEGUARD
+	db 73, FIRE_BLAST
 	db 0 ; no more level-up moves
 
 DratiniEvosAttacks:
