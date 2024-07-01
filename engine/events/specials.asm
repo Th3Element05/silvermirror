@@ -367,28 +367,28 @@ SnorlaxAwake:
 	cp MUSIC_POKE_FLUTE_CHANNEL
 	jr nz, .nope
 
-	ld a, [wXCoord]
-	ld b, a
-	ld a, [wYCoord]
-	ld c, a
-
-	ld hl, .ProximityCoords
-.loop
-	ld a, [hli]
-	cp -1
-	jr z, .nope
-	cp b
-	jr nz, .nextcoord
-	ld a, [hli]
-	cp c
-	jr nz, .loop
+;	ld a, [wXCoord]
+;	ld b, a
+;	ld a, [wYCoord]
+;	ld c, a
+;
+;	ld hl, .ProximityCoords
+;.loop
+;	ld a, [hli]
+;	cp -1
+;	jr z, .nope
+;	cp b
+;	jr nz, .nextcoord
+;	ld a, [hli]
+;	cp c
+;	jr nz, .loop
 
 	ld a, TRUE
 	jr .done
 
-.nextcoord
-	inc hl
-	jr .loop
+;.nextcoord
+;	inc hl
+;	jr .loop
 
 .nope
 	xor a
@@ -396,20 +396,20 @@ SnorlaxAwake:
 	ld [wScriptVar], a
 	ret
 
-.ProximityCoords:
-	;   x,  y
-	db  7,  6 ; left
-	db  7,  7 ; left
-	db 10,  6 ; right
-	db 10,  7 ; right
-;respawn
-	db 50, 11 ; left
-	db 50, 12 ; left
-	db 53, 11 ; right
-	db 53, 12 ; right
-	db 51, 13 ; down
-	db 52, 13 ; down
-	db -1
+;.ProximityCoords:
+;	;   x,  y
+;	db  7,  6 ; left
+;	db  7,  7 ; left
+;	db 10,  6 ; right
+;	db 10,  7 ; right
+;;respawn
+;	db 50, 11 ; left
+;	db 50, 12 ; left
+;	db 53, 11 ; right
+;	db 53, 12 ; right
+;	db 51, 13 ; down
+;	db 52, 13 ; down
+;	db -1
 
 PlayCurMonCry:
 	ld a, [wCurPartySpecies]
