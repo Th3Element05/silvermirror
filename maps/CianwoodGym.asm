@@ -238,70 +238,70 @@ ChuckAfterText:
 	cont "hours a day!"
 	done
 
-BlackbeltYoshiSeenText:
-	text "My #MON and I"
-	line "are bound togeth-"
-	cont "er by friendship."
-
-	para "Our bond will"
-	line "never be broken!"
-	done
-
-BlackbeltYoshiBeatenText:
-	text "This isn't real!"
-	done
-
-BlackbeltYoshiAfterText:
-	text "You seem to have a"
-	line "strong bond with"
-	cont "your #MON too!"
-	done
-
-BlackbeltLaoSeenText:
-	text "We martial artists"
-	line "fear nothing!"
-	done
-
-BlackbeltLaoBeatenText:
-	text "That's shocking!"
-	done
-
-BlackbeltLaoAfterText:
-	text "Fighting #MON"
-	line "are afraid of psy-"
-	cont "chics…"
-	done
-
-BlackbeltNobSeenText:
-	text "Words are useless."
-	line "Let your fists do"
-	cont "the talking!"
-	done
-
-BlackbeltNobBeatenText:
-	text "…"
-	done
-
-BlackbeltNobAfterText:
-	text "I lost! "
-	line "I'm speechless!"
-	done
-
-BlackbeltLungSeenText:
-	text "My raging fists"
-	line "will shatter your"
-	cont "#MON!"
-	done
-
-BlackbeltLungBeatenText:
-	text "I got shattered!"
-	done
-
-BlackbeltLungAfterText:
-	text "My #MON lost…"
-	line "My… my pride is"
-	cont "shattered…"
-	done
+;BlackbeltYoshiSeenText:
+;	text "My #MON and I"
+;	line "are bound togeth-"
+;	cont "er by friendship."
+;
+;	para "Our bond will"
+;	line "never be broken!"
+;	done
+;
+;BlackbeltYoshiBeatenText:
+;	text "This isn't real!"
+;	done
+;
+;BlackbeltYoshiAfterText:
+;	text "You seem to have a"
+;	line "strong bond with"
+;	cont "your #MON too!"
+;	done
+;
+;BlackbeltLaoSeenText:
+;	text "We martial artists"
+;	line "fear nothing!"
+;	done
+;
+;BlackbeltLaoBeatenText:
+;	text "That's shocking!"
+;	done
+;
+;BlackbeltLaoAfterText:
+;	text "Fighting #MON"
+;	line "are afraid of psy-"
+;	cont "chics…"
+;	done
+;
+;BlackbeltNobSeenText:
+;	text "Words are useless."
+;	line "Let your fists do"
+;	cont "the talking!"
+;	done
+;
+;BlackbeltNobBeatenText:
+;	text "…"
+;	done
+;
+;BlackbeltNobAfterText:
+;	text "I lost! "
+;	line "I'm speechless!"
+;	done
+;
+;BlackbeltLungSeenText:
+;	text "My raging fists"
+;	line "will shatter your"
+;	cont "#MON!"
+;	done
+;
+;BlackbeltLungBeatenText:
+;	text "I got shattered!"
+;	done
+;
+;BlackbeltLungAfterText:
+;	text "My #MON lost…"
+;	line "My… my pride is"
+;	cont "shattered…"
+;	done
 
 CianwoodGym_MapEvents:
 	db 0, 0 ; filler
