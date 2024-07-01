@@ -21,8 +21,8 @@ INCLUDE "gfx/tilesets/johto_modern_palette_map.asm"
 TilesetHousePalMap:
 INCLUDE "gfx/tilesets/house_palette_map.asm"
 
-TilesetPlayersHousePalMap:
-INCLUDE "gfx/tilesets/players_house_palette_map.asm"
+;TilesetPlayersHousePalMap:
+;INCLUDE "gfx/tilesets/players_house_palette_map.asm"
 
 TilesetPokecenterPalMap:
 INCLUDE "gfx/tilesets/pokecenter_palette_map.asm"

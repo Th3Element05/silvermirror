@@ -19,7 +19,7 @@ Tilesets::
 	tileset TilesetKanto
 	tileset TilesetBattleTowerOutside
 	tileset TilesetHouse
-	tileset TilesetPlayersHouse
+;	tileset TilesetPlayersHouse
 	tileset TilesetPokecenter
 	tileset TilesetGate
 	tileset TilesetPort

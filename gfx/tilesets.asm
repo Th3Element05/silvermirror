@@ -54,14 +54,14 @@ INCBIN "data/tilesets/port_metatiles.bin"
 TilesetPortColl::
 INCLUDE "data/tilesets/port_collision.asm"
 
-TilesetPlayersHouseGFX::
-INCBIN "gfx/tilesets/players_house.2bpp.lz"
+;TilesetPlayersHouseGFX::
+;INCBIN "gfx/tilesets/players_house.2bpp.lz"
 
-TilesetPlayersHouseMeta::
-INCBIN "data/tilesets/players_house_metatiles.bin"
+;TilesetPlayersHouseMeta::
+;INCBIN "data/tilesets/players_house_metatiles.bin"
 
-TilesetPlayersHouseColl::
-INCLUDE "data/tilesets/players_house_collision.asm"
+;TilesetPlayersHouseColl::
+;INCLUDE "data/tilesets/players_house_collision.asm"
 
 TilesetMansionGFX::
 INCBIN "gfx/tilesets/mansion.2bpp.lz"
