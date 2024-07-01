@@ -47,7 +47,7 @@ VictoryRoad2FSetUpStoneTableCallback:
 ;	pause 20
 	playsound SFX_PUSH_BUTTON
 	disappear VICTORYROAD2F_BOULDER2
-	changeblock 0, 20, $4f ; statue rock
+	changeblock 8, 22, $4f ; statue rock
 ;	reloadmappart
 ;	waitsfx
 	opentext
