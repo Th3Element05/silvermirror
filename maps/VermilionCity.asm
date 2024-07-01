@@ -26,11 +26,12 @@ VermilionCityAskEnterDockScript:
 	checkevent EVENT_SS_ANNE_SET_SAIL
 	iftrue .NotHere
 	writetext VermilionPortSailorWelcomeText
-	promptbutton
-	writetext VermilionPortSailorAskTicketText
-	checkitem S_S_TICKET
-	iffalse .NoTicket
-	writetext VermilionPortShowTicketText
+;	promptbutton
+;	writetext VermilionPortSailorAskTicketText
+;	promptbutton
+;	checkitem S_S_TICKET
+;	iffalse .NoTicket
+;	writetext VermilionPortShowTicketText
 	waitbutton
 	closetext
 ;	turnobject VERMILIONCITY_PORT_SAILOR, UP
@@ -44,36 +45,36 @@ VermilionCityAskEnterDockScript:
 	applymovement PLAYER, VermilionPortNoEntryMovement
 	end
 
-.NoTicket
-	writetext VermilionPortSailorNoTicketText
-	waitbutton
-	closetext
-	applymovement PLAYER, VermilionPortNoEntryMovement
-	end
+;.NoTicket
+;	writetext VermilionPortSailorNoTicketText
+;	waitbutton
+;	closetext
+;	applymovement PLAYER, VermilionPortNoEntryMovement
+;	end
 
-VermilionPortShowTicketText:
-	text "<PLAYER> flashed"
-	line "the S.S.TICKET!"
+;VermilionPortShowTicketText:
+;	text "<PLAYER> flashed"
+;	line "the S.S.TICKET!"
+;
+;	para "Great! Welcome to"
+;	line "S.S.ANNE!"
+;	done
 
-	para "Great! Welcome to"
-	line "S.S.ANNE!"
-	done
+;VermilionPortSailorNoTicketText:
+;	text "<PLAYER> doesn't"
+;	line "have the needed"
+;	cont "S.S.TICKET."
+;
+;	para "Sorry!"		
+;
+;	para "You need a ticket"
+;	line "to get aboard."
+;	done
 
-VermilionPortSailorNoTicketText:
-	text "<PLAYER> doesn't"
-	line "have the needed"
-	cont "S.S.TICKET."
-
-	para "Sorry!"		
-
-	para "You need a ticket"
-	line "to get aboard."
-	done
-
-VermilionPortSailorAskTicketText:
-	text "Excuse me, do you"
-	line "have a ticket?"
-	prompt
+;VermilionPortSailorAskTicketText:
+;	text "Excuse me, do you"
+;	line "have a ticket?"
+;	done
 
 VermilionCitySSAnneLeavesScript:
 	checkevent EVENT_GOT_HM01_CUT
@@ -110,6 +111,12 @@ VermilionPortSailorScript:
 VermilionPortSailorWelcomeText:
 	text "Welcome to the"
 	line "S.S.ANNE!"
+
+	para "The party is over,"
+	line "so I guess you can"
+	cont "come on board and"
+	cont "look around before"
+	cont "we set sail again."
 	done
 
 VermilionPortSailorSetSailText:
