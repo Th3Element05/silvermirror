@@ -2208,6 +2208,12 @@ PokeFluteEffect:
 ;	jp PrintText
 ;end copied directly from pokered
 
+;StatusHealingEffect:
+	ld b, PARTYMENUACTION_HEALING_ITEM
+	call UseItem_SelectMon
+	jp c, StatusHealer_ExitMenu
+	ret
+
 .in_battle
 	xor a
 	ld [wPokeFluteCuredSleep], a
