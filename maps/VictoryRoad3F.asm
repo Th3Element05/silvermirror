@@ -56,11 +56,108 @@ VictoryRoad3FBoulderFellText:
 	line "through!"
 	done
 
-;VictoryRoadTMEarthquake:
-;	itemball TM_EARTHQUAKE
+TrainerCooltrainerFBeth:
+	trainer COOLTRAINERF, BETH1, EVENT_BEAT_COOLTRAINERF_BETH, CooltrainerFBethSeenText, CooltrainerFBethBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext CooltrainerFBethAfterBattleText
+	waitbutton
+	closetext
+	end
 
-;VictoryRoadHiddenMaxPotion:
-;	hiddenitem MAX_POTION, EVENT_VICTORY_ROAD_HIDDEN_MAX_POTION
+CooltrainerFBethSeenText:
+	text "Trainers live to"
+	line "seek stronger"
+	cont "opponents!"
+	done
+
+CooltrainerFBethBeatenText:
+	text "Oh!"
+	line "So strong!"
+	done
+
+CooltrainerFBethAfterBattleText:
+	text "By fighting tough"
+	line "battles, you get"
+	cont "stronger!"
+	done
+
+TrainerCooltrainerMGaven:
+	trainer COOLTRAINERM, GAVEN1, EVENT_BEAT_COOLTRAINERM_GAVEN, CooltrainerMGavinSeenText, CooltrainerMGavinBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext CooltrainerMGavinAfterBattleText
+	waitbutton
+	closetext
+	end
+
+CooltrainerMGavinSeenText:
+	text "I heard rumors of"
+	line "a child prodigy!"
+	done
+
+CooltrainerMGavinBeatenText:
+	text "The rumors"
+	line "were true!"
+	done
+
+CooltrainerMGavinAfterBattleText:
+	text "You beat GIOVANNI"
+	line "of TEAM ROCKET?"
+	done
+
+TrainerCooltrainerFFran:
+	trainer COOLTRAINERF, FRAN, EVENT_BEAT_COOLTRAINERF_FRAN, CooltrainerFFranSeenText, CooltrainerFFranBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext CooltrainerFFranAfterBattleText
+	waitbutton
+	closetext
+	end
+
+CooltrainerFFranSeenText:
+	text "I'll show you just"
+	line "how good you are!"
+	done
+
+CooltrainerFFranBeatenText:
+	text "I'm furious!"
+	done
+
+CooltrainerFFranAfterBattleText:
+	text "You showed me just"
+	line "how good I was!"
+	done
+
+TrainerCooltrainerMRyan:
+	trainer COOLTRAINERM, RYAN, EVENT_BEAT_COOLTRAINERM_RYAN, CooltrainerMRyanSeenText, CooltrainerMRyanBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext CooltrainerMRyanAfterBattleText
+	waitbutton
+	closetext
+	end
+
+CooltrainerMRyanSeenText:
+	text "Only the chosen"
+	line "can pass here!"
+	done
+
+CooltrainerMRyanBeatenText:
+	text "I don't"
+	line "believe it!"
+	done
+
+CooltrainerMRyanAfterBattleText:
+	text "All trainers here"
+	line "are headed to the"
+	cont "#MON LEAGUE!"
+	cont "Be careful!"
+	done
 
 VictoryRoad3FGateSign:
 	jumptext VictoryRoad3FGateSignText
@@ -80,6 +177,14 @@ VictoryRoad3FButtonSignText:
 VictoryRoad3FBoulder:
 	jumpstd StrengthBoulderScript
 
+; itemballs
+VictoryRoad3FMaxRevive:
+	itemball MAX_REVIVE
+
+; hidden items
+VictoryRoad3FHiddenFullRestore:
+	hiddenitem FULL_RESTORE, EVENT_VICTORY_ROAD_3F_HIDDEN_FULL_RESTORE
+
 VictoryRoad3F_MapEvents:
 	db 0, 0 ; filler
 
@@ -97,11 +202,14 @@ VictoryRoad3F_MapEvents:
 	bg_event  9, 13, BGEVENT_UP, VictoryRoad3FGateSign
 	bg_event 12, 13, BGEVENT_UP, VictoryRoad3FGateSign
 	bg_event  4, 13, BGEVENT_RIGHT, VictoryRoad3FButtonSign
-;	bg_event  7,  5, BGEVENT_ITEM, VictoryRoadHiddenMaxPotion
+	bg_event 28, 17, BGEVENT_ITEM, VictoryRoad3FHiddenFullRestore
 
 	def_object_events
 	object_event 15,  8, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoad3FBoulder, -1
 	object_event 21, 21, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoad3FBoulder, EVENT_VICTORY_ROAD_3F_BOULDER2
 	object_event 15, 18, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoad3FBoulder, -1
-;	object_event 18, 13, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_VICTORY_ROAD
-;	object_event  3, 28, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoadTMEarthquake, EVENT_VICTORY_ROAD_TM_EARTHQUAKE
+	object_event 12, 11, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerCooltrainerFBeth, -1
+	object_event 24, 17, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerCooltrainerMGaven, -1
+	object_event  6, 19, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerCooltrainerFFran, -1
+	object_event  5, 20, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerCooltrainerMRyan, -1
+	object_event 21, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoad3FMaxRevive, EVENT_VICTORY_ROAD_3F_MAX_REVIVE
