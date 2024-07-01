@@ -82,7 +82,7 @@ PokemonFanClubShowPsyduckText:
 PokemonFanClubPsyduckFanBetterText:
 	text "Oh dear!"
 
-	para "My SEEL is far"
+	para "My PSYDUCK is far"
 	line "more attractive!"
 	done
 
