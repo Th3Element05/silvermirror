@@ -9,37 +9,11 @@ AddNTimes::
 	ret
 
 
-	writetext RadioTower1FRadioCardWomanYouWinText
-	promptbutton
-	getstring STRING_BUFFER_4, .RadioCardText
-	scall .ReceiveItem
-	writetext RadioTower1FPokegearIsARadioText
-	promptbutton
-	setflag ENGINE_RADIO_CARD
-.GotCard:
-	writetext RadioTower1FRadioCardWomanTuneInText
-	waitbutton
-	closetext
-	end
-
-.RadioCardText:
-	db "RADIO CARD@"
-
-.ReceiveItem:
-	jumpstd ReceiveItemScript
-	end
-
-RadioTower1FPokegearIsARadioText:
-	text "<PLAYER>'s #GEAR"
-	line "can now double as"
-	cont "a radio!"
-	done
-
-
 
 TEST to-do
 
-def_grass_wildmons ROUTE_14 | ROUTE_15
+Walk away from rival in Lances Room, see if he moves/disappears.
+Camera pans up after defeating champion, try extending map if doesn't work?
 
 Route22 Rival battles, first and second
 
@@ -55,6 +29,10 @@ test STRENGTH with/without rainbowbadge
 
 
 TO-DO to-do
+
+victory road 2f boulder disappears, doesn't tile swap
+
+Finish Bills House give stuff/SS Anne access.
 
 OPT repeats text after swarm flag set
 
