@@ -89,9 +89,9 @@ ElmsHouse_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  0,  1, BGEVENT_READ, ElmsHousePC
-	bg_event  6,  1, BGEVENT_READ, ElmsHouseBookshelf
-	bg_event  7,  1, BGEVENT_READ, ElmsHouseBookshelf
+	bg_event  6,  1, BGEVENT_READ, ElmsHousePC
+	bg_event  0,  1, BGEVENT_READ, ElmsHouseBookshelf
+	bg_event  1,  1, BGEVENT_READ, ElmsHouseBookshelf
 
 	def_object_events
 	object_event  1,  5, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ElmsWife, -1
