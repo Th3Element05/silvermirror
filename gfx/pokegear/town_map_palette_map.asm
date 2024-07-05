@@ -5,7 +5,8 @@
 	const PAL_TOWNMAP_CITY     ; 3
 	const PAL_TOWNMAP_POI      ; 4
 	const PAL_TOWNMAP_POI_MTN  ; 5
-	const PAL_TOWNMAP_PPS      ; 6
+	const PAL_TOWNMAP_POI_WTR  ; 6
+;	const PAL_TOWNMAP_PPS      ; 6
 
 MACRO townmappals
 rept _NARG / 2
@@ -19,7 +20,7 @@ ENDM
 	townmappals EARTH,    EARTH,    EARTH,    MOUNTAIN, MOUNTAIN, MOUNTAIN, BORDER,   BORDER
 	townmappals EARTH,    EARTH,    CITY,     EARTH,    POI,      POI_MTN,  POI,      POI_MTN
 	townmappals EARTH,    EARTH,    EARTH,    MOUNTAIN, MOUNTAIN, MOUNTAIN, BORDER,   BORDER
-	townmappals EARTH,    EARTH,    BORDER,   EARTH,    EARTH,    BORDER,   BORDER,   BORDER
+	townmappals EARTH,    EARTH,    BORDER,   EARTH,    EARTH,    EARTH,    POI_WTR,  POI_WTR
 	townmappals EARTH,    EARTH,    EARTH,    MOUNTAIN, MOUNTAIN, MOUNTAIN, BORDER,   BORDER
 	townmappals BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER
 ; gfx/pokegear/pokegear.png
@@ -29,5 +30,6 @@ ENDM
 	townmappals CITY,     CITY,     CITY,     CITY,     CITY,     CITY,     CITY,     BORDER
 	townmappals CITY,     CITY,     CITY,     CITY,     CITY,     CITY,     CITY,     CITY
 	townmappals BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER
-	townmappals PPS,      PPS,      PPS,      PPS,      BORDER,   BORDER,   BORDER,   BORDER
+;	townmappals PPS,      PPS,      PPS,      PPS,      BORDER,   BORDER,   BORDER,   BORDER
+	townmappals POI_WTR,  POI_WTR,  POI_WTR,  POI_WTR,  BORDER,   BORDER,   BORDER,   BORDER
 	townmappals BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER
