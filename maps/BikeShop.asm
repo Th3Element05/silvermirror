@@ -1,6 +1,6 @@
 	object_const_def
 
-GoldenrodBikeShop_MapScripts:
+BikeShop_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
@@ -152,7 +152,7 @@ BikeShopBicycleText:
 	line "BICYCLE!"
 	done
 
-GoldenrodBikeShop_MapEvents:
+BikeShop_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
