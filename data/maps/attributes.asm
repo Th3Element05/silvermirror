@@ -573,7 +573,7 @@ ENDM
 	map_attributes Route36RuinsOfAlphGate, ROUTE_36_RUINS_OF_ALPH_GATE, $00, 0
 	map_attributes Route36NationalParkGate, ROUTE_36_NATIONAL_PARK_GATE, $00, 0
 	map_attributes GoldenrodGym, GOLDENROD_GYM, $00, 0
-	map_attributes GoldenrodBikeShop, GOLDENROD_BIKE_SHOP, $00, 0
+	map_attributes BikeShop, BIKE_SHOP, $00, 0
 	map_attributes GoldenrodHappinessRater, GOLDENROD_HAPPINESS_RATER, $00, 0
 	map_attributes BillsFamilysHouse, BILLS_FAMILYS_HOUSE, $00, 0
 	map_attributes GoldenrodMagnetTrainStation, GOLDENROD_MAGNET_TRAIN_STATION, $00, 0

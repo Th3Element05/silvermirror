@@ -791,8 +791,8 @@ MrPokemonsHouse_Blocks:
 RuinsOfAlphResearchCenter_Blocks:
 	INCBIN "maps/RuinsOfAlphResearchCenter.blk"
 
-GoldenrodBikeShop_Blocks:
-	INCBIN "maps/GoldenrodBikeShop.blk"
+BikeShop_Blocks:
+	INCBIN "maps/BikeShop.blk"
 
 DanceTheater_Blocks:
 	INCBIN "maps/DanceTheater.blk"
