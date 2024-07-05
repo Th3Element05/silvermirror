@@ -18,7 +18,7 @@ BulbasaurEvosAttacks:
 	db EVOLVE_LEVEL, 16, IVYSAUR
 	db 0 ; no more evolutions
 	db 1, TACKLE
-	db 4, GROWL
+	db 1, GROWL
 	db 7, LEECH_SEED
 	db 10, VINE_WHIP
 	db 15, POISONPOWDER
@@ -118,7 +118,7 @@ SquirtleEvosAttacks:
 	db EVOLVE_LEVEL, 16, WARTORTLE
 	db 0 ; no more evolutions
 	db 1, TACKLE
-	db 4, TAIL_WHIP
+	db 1, TAIL_WHIP
 	db 7, BUBBLE
 	db 10, WITHDRAW
 	db 13, WATER_GUN
@@ -306,9 +306,9 @@ SpearowEvosAttacks:
 FearowEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, GROWL
-	db 1, PECK
 	db 1, LEER
 	db 1, FURY_ATTACK
+	db 1, PECK
 	db 7, LEER
 	db 13, FURY_ATTACK
 	db 26, PURSUIT
@@ -320,8 +320,8 @@ FearowEvosAttacks:
 EkansEvosAttacks:
 	db EVOLVE_LEVEL, 22, ARBOK
 	db 0 ; no more evolutions
-	db 1, WRAP
 	db 1, LEER
+	db 1, WRAP
 	db 9, POISON_STING
 	db 15, BITE
 	db 23, GLARE
@@ -332,8 +332,8 @@ EkansEvosAttacks:
 
 ArbokEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, WRAP
 	db 1, LEER
+	db 1, WRAP
 	db 1, POISON_STING
 	db 1, BITE
 	db 9, POISON_STING
@@ -344,15 +344,15 @@ ArbokEvosAttacks:
 	db 51, HAZE
 	db 0 ; no more level-up moves
 
-PikachuEvosAttacks:
+PikachuEvosAttacks: ;silvermirror modified
 	db EVOLVE_ITEM, THUNDERSTONE, RAICHU
 	db 0 ; no more evolutions
 	db 1, THUNDERSHOCK
 	db 1, GROWL
-	db 6, TAIL_WHIP
-	db 8, THUNDER_WAVE
-	db 11, QUICK_ATTACK
-	db 15, DOUBLE_TEAM
+	db 7, THUNDER_WAVE
+	db 10, QUICK_ATTACK
+	db 14, DOUBLE_TEAM
+	db 17, THUNDERSHOCK
 	db 20, SLAM
 	db 26, THUNDERBOLT
 	db 33, AGILITY
@@ -1561,8 +1561,8 @@ WeezingEvosAttacks:
 RhyhornEvosAttacks:
 	db EVOLVE_LEVEL, 42, RHYDON
 	db 0 ; no more evolutions
-	db 1, HORN_ATTACK
 	db 1, TAIL_WHIP
+	db 1, HORN_ATTACK
 	db 13, STOMP
 	db 19, FURY_ATTACK
 	db 31, SCARY_FACE
@@ -1659,8 +1659,8 @@ SeadraEvosAttacks:
 GoldeenEvosAttacks:
 	db EVOLVE_LEVEL, 33, SEAKING
 	db 0 ; no more evolutions
-	db 1, PECK
 	db 1, TAIL_WHIP
+	db 1, PECK
 	db 10, SUPERSONIC
 	db 15, HORN_ATTACK
 	db 24, FLAIL
@@ -1672,9 +1672,8 @@ GoldeenEvosAttacks:
 
 SeakingEvosAttacks:
 	db 0 ; no more evolutions
+	db 1, TAIL_WHIP
 	db 1, PECK
-	db 1, TAIL_WHIP
-	db 1, TAIL_WHIP
 	db 10, SUPERSONIC
 	db 15, HORN_ATTACK
 	db 24, FLAIL
