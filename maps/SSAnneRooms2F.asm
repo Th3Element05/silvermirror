@@ -187,16 +187,16 @@ SSAnneRooms2F_MapEvents:
 	def_warp_events
 	warp_event  2,  5, SS_ANNE_2F, 4 ; 1
 	warp_event  3,  5, SS_ANNE_2F, 4 ; 2
-	warp_event  8,  5, SS_ANNE_2F, 5 ; 3
-	warp_event  9,  5, SS_ANNE_2F, 5 ; 4
-	warp_event 14,  5, SS_ANNE_2F, 6 ; 5
-	warp_event 15,  5, SS_ANNE_2F, 6 ; 6
-	warp_event 20,  5, SS_ANNE_2F, 7 ; 7
-	warp_event 21,  5, SS_ANNE_2F, 7 ; 8
-	warp_event 26,  5, SS_ANNE_2F, 8 ; 9
-	warp_event 27,  5, SS_ANNE_2F, 8 ; 10
-	warp_event 32,  5, SS_ANNE_2F, 9 ; 11
-	warp_event 33,  5, SS_ANNE_2F, 9 ; 12
+	warp_event 12,  5, SS_ANNE_2F, 5 ; 3
+	warp_event 13,  5, SS_ANNE_2F, 5 ; 4
+	warp_event 22,  5, SS_ANNE_2F, 6 ; 5
+	warp_event 23,  5, SS_ANNE_2F, 6 ; 6
+	warp_event  2, 15, SS_ANNE_2F, 7 ; 7
+	warp_event  3, 15, SS_ANNE_2F, 7 ; 8
+	warp_event 12, 15, SS_ANNE_2F, 8 ; 9
+	warp_event 13, 15, SS_ANNE_2F, 8 ; 10
+	warp_event 22, 15, SS_ANNE_2F, 9 ; 11
+	warp_event 23, 15, SS_ANNE_2F, 9 ; 12
 
 	def_coord_events
 
@@ -204,15 +204,15 @@ SSAnneRooms2F_MapEvents:
 
 	def_object_events
 	object_event  1,  2, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneRooms2FGentleman1Script, -1
-	object_event  6,  2, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerGentlemanGregory, -1
-	object_event  9,  4, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerFisherJustin, -1
-	object_event 14,  1, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneRooms2FGrampsScript, -1
-	object_event 13,  2, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneRooms2FGentleman2Script, -1
-	object_event 20,  1, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerLassEllen, -1
-	object_event 18,  4, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerGentlemanWesley, -1
-	object_event 26,  2, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneRooms2FGentleman3Script, -1
-	object_event 25,  4, SPRITE_BOY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneRooms2FBugCatcherScript, -1
-	object_event 30,  2, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneRooms2FBeautyScript, -1
-	object_event 32,  2, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneRooms2FLassScript, -1
-	object_event  8,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SSAnneRooms2FMaxEther, EVENT_SS_ANNE_ROOMS_2F_MAX_ETHER
-	object_event 18,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SSAnneRooms2FRareCandy, EVENT_SS_ANNE_ROOMS_2F_RARE_CANDY
+	object_event 10,  2, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerGentlemanGregory, -1
+	object_event 13,  4, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerFisherJustin, -1
+	object_event 22,  1, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneRooms2FGrampsScript, -1
+	object_event 21,  2, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneRooms2FGentleman2Script, -1
+	object_event  2, 11, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerLassEllen, -1
+	object_event  0, 14, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerGentlemanWesley, -1
+	object_event 12, 12, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneRooms2FGentleman3Script, -1
+	object_event 11, 14, SPRITE_BOY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneRooms2FBugCatcherScript, -1
+	object_event 20, 12, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneRooms2FBeautyScript, -1
+	object_event 22, 12, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneRooms2FLassScript, -1
+	object_event 12,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SSAnneRooms2FMaxEther, EVENT_SS_ANNE_ROOMS_2F_MAX_ETHER
+	object_event  0, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SSAnneRooms2FRareCandy, EVENT_SS_ANNE_ROOMS_2F_RARE_CANDY

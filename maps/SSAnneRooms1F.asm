@@ -176,11 +176,11 @@ SSAnneRooms1F_MapEvents:
 
 	def_warp_events
 	warp_event  0,  0, SS_ANNE_1F, 4
-	warp_event  6,  0, SS_ANNE_1F, 5
-	warp_event 12,  0, SS_ANNE_1F, 6
-	warp_event 18,  0, SS_ANNE_1F, 7
-	warp_event 24,  0, SS_ANNE_1F, 8
-	warp_event 30,  0, SS_ANNE_1F, 9
+	warp_event 10,  0, SS_ANNE_1F, 5
+	warp_event 20,  0, SS_ANNE_1F, 6
+	warp_event  0, 10, SS_ANNE_1F, 7
+	warp_event 10, 10, SS_ANNE_1F, 8
+	warp_event 20, 10, SS_ANNE_1F, 9
 
 	def_coord_events
 
@@ -188,13 +188,13 @@ SSAnneRooms1F_MapEvents:
 
 	def_object_events
 	object_event  1,  3, SPRITE_GENTLEMAN, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneRooms1FGentlemanScript, -1
-	object_event  9,  1, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerLassSadie, -1
-	object_event  6,  3, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneRooms1FLass1Script, -1
-	object_event  7,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerYoungsterJimmy, -1
-	object_event 14,  1, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneRooms1FGirlScript, -1
-	object_event 15,  1, SPRITE_CLEFAIRY, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneRooms1FWigglytuffScript, -1
-	object_event 12,  4, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneRooms1FPokefanMScript, -1
-	object_event 20,  3, SPRITE_LASS, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneRooms1FLass2Script, -1
-	object_event 25,  4, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerGentlemanEdward, -1
-	object_event 32,  3, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerGentlemanPreston, -1
-	object_event  8,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, SSAnneRooms1FTMBodySlam, EVENT_SS_ANNE_ROOMS_1F_TM_BODY_SLAM
+	object_event 13,  1, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerLassSadie, -1
+	object_event 10,  3, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneRooms1FLass1Script, -1
+	object_event 11,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerYoungsterJimmy, -1
+	object_event 22,  1, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneRooms1FGirlScript, -1
+	object_event 23,  1, SPRITE_CLEFAIRY, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneRooms1FWigglytuffScript, -1
+	object_event 20,  4, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneRooms1FPokefanMScript, -1
+	object_event  2, 13, SPRITE_LASS, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneRooms1FLass2Script, -1
+	object_event 11, 14, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerGentlemanEdward, -1
+	object_event 22, 13, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerGentlemanPreston, -1
+	object_event 12,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, SSAnneRooms1FTMBodySlam, EVENT_SS_ANNE_ROOMS_1F_TM_BODY_SLAM
