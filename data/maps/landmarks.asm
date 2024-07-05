@@ -91,20 +91,20 @@ Landmarks:
 	landmark  84,  68, CeladonCityName
 	landmark 132,  84, Route12Name
 	landmark 124, 100, Route13Name
-	landmark 116, 108, Route14Name
-	landmark 108, 116, Route15Name
+	landmark 116, 104, Route14Name
+	landmark 108, 108, Route15Name
 	landmark  72,  68, Route16Name
-	landmark  68,  92, Route17Name
-	landmark  80, 116, Route18Name
-	landmark  92, 116, FuchsiaCityName
-	landmark  92, 108, SafariZoneName ;silvermirror
+	landmark  68,  88, Route17Name
+	landmark  80, 108, Route18Name
+	landmark  92, 108, FuchsiaCityName
+	landmark  92, 100, SafariZoneName ;silvermirror
 	landmark 100,  68, SaffronCityName
 	landmark 102,  66, SilphCoName
-	landmark  92, 132, Route19Name
-	landmark  76, 132, SeafoamIslandsName
-	landmark  64, 132, Route20Name
+	landmark  92, 124, Route19Name
+	landmark  80, 132, SeafoamIslandsName
+	landmark  68, 132, Route20Name
 	landmark  52, 132, CinnabarIslandName
-	landmark  50, 130, PokemonMansionName ; 56, 128, PokemonMansionName
+	landmark  50, 130, PokemonMansionName
 	landmark  52, 116, Route21Name
 	landmark  40,  76, Route22Name
 	landmark  28,  60, Route23Name
