@@ -82,7 +82,7 @@ ENDM
 	map_const CERULEAN_TRASHED_HOUSE,                       4,  4 ;  5
 	map_const CERULEAN_GYM_BADGE_SPEECH_HOUSE,              4,  4 ;  6
 	map_const CERULEAN_TRADE_SPEECH_HOUSE,                  4,  4 ;  7
-	map_const GOLDENROD_BIKE_SHOP,                          4,  4 ;  8
+	map_const BIKE_SHOP,                                    4,  4 ;  8
 	map_const DAY_CARE,                                     4,  4 ;  9
 	map_const ROUTE_4,                                     40,  9 ; 10
 	map_const ROUTE_24,                                    10, 18 ; 11
