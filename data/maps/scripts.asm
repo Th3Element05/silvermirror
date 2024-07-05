@@ -61,7 +61,7 @@ INCLUDE "maps/CeruleanGym.asm"
 INCLUDE "maps/CeruleanTrashedHouse.asm" 
 INCLUDE "maps/CeruleanGymBadgeSpeechHouse.asm"
 INCLUDE "maps/CeruleanTradeSpeechHouse.asm"
-INCLUDE "maps/GoldenrodBikeShop.asm"
+INCLUDE "maps/BikeShop.asm"
 
 
 SECTION "Map Scripts 7", ROMX
