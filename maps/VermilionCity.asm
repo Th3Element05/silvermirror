@@ -265,11 +265,11 @@ VermilionCityHiddenMaxEther:
 	hiddenitem MAX_ETHER, EVENT_VERMILION_CITY_HIDDEN_MAX_ETHER
 
 ;debug items
-VermilionCityDebugSSTicket:
-	hiddenitem S_S_TICKET, EVENT_VERMILION_CITY_HIDDEN_MAX_ETHER
+;VermilionCityDebugSSTicket:
+;	hiddenitem S_S_TICKET, EVENT_VERMILION_CITY_HIDDEN_MAX_ETHER
 
-VermilionCityDebugPokeFlute:
-	hiddenitem POKE_FLUTE, EVENT_ROUTE_12_HIDDEN_HYPER_POTION
+;VermilionCityDebugPokeFlute:
+;	hiddenitem POKE_FLUTE, EVENT_ROUTE_12_HIDDEN_HYPER_POTION
 
 VermilionCity_MapEvents:
 	db 0, 0 ; filler
@@ -298,8 +298,8 @@ VermilionCity_MapEvents:
 	bg_event 12,  3, BGEVENT_READ, VermilionCityPokecenterSign
 	bg_event 24, 13, BGEVENT_READ, VermilionCityMartSign
 	bg_event 14, 11, BGEVENT_ITEM, VermilionCityHiddenMaxEther
-	bg_event 35,  2, BGEVENT_ITEM, VermilionCityDebugSSTicket
-	bg_event 35,  3, BGEVENT_ITEM, VermilionCityDebugPokeFlute
+;	bg_event 35,  2, BGEVENT_ITEM, VermilionCityDebugSSTicket
+;	bg_event 35,  3, BGEVENT_ITEM, VermilionCityDebugPokeFlute
 
 	def_object_events
 	object_event 19, 30, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionPortSailorScript, -1
