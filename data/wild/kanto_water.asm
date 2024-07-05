@@ -22,17 +22,17 @@ KantoWaterWildMons:
 	def_water_wildmons ROUTE_4 ;GEN1
 	db 4 percent ; encounter rate
 	db 10, GOLDEEN    ; 50
-	db  5, MAGIKARP   ; 30
-	db 10, GOLDEEN    ; 10
+	db 10, PSYDUCK    ; 30
+	db  5, MAGIKARP   ; 10
 	db 15, SEAKING    ; 10
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_6 ;GEN1
-	db 4 percent ; encounter rate
+	db 6 percent ; encounter rate
 	db 10, POLIWAG    ; 50
-	db  5, MAGIKARP   ; 30
-	db 10, POLIWAG    ; 10
+	db 10, PSYDUCK    ; 30
 	db 15, POLIWHIRL  ; 10
+	db 15, GOLDUCK    ; 10
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_10_NORTH ;GEN1
@@ -43,18 +43,26 @@ KantoWaterWildMons:
 	db 15, SEAKING    ; 10
 	end_water_wildmons
 
-	def_water_wildmons ROUTE_12 ;GEN1
+	def_water_wildmons ROUTE_11 ;GEN1
 	db 6 percent ; encounter rate
 	db 10, TENTACOOL  ; 50
-	db 10, SLOWPOKE   ; 30
+	db 10, HORSEA     ; 30
+	db 10, TENTACOOL  ; 10
+	db 10, STARYU     ; 10
+	end_water_wildmons
+
+	def_water_wildmons ROUTE_12 ;GEN1
+	db 6 percent ; encounter rate
+	db 10, SLOWPOKE   ; 50
+	db 10, TENTACOOL  ; 30
 	db 10, TENTACOOL  ; 10
 	db 15, SLOWBRO    ; 10
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_13 ;GEN1
 	db 6 percent ; encounter rate
-	db 10, TENTACOOL  ; 50
-	db 10, SLOWPOKE   ; 30
+	db 10, SLOWPOKE   ; 50
+	db 10, TENTACOOL  ; 30
 	db 10, TENTACOOL  ; 10
 	db 15, SLOWBRO    ; 10
 	end_water_wildmons
@@ -84,7 +92,7 @@ KantoWaterWildMons:
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_22 ;GEN1
-	db 2 percent ; encounter rate
+	db 6 percent ; encounter rate
 	db 10, POLIWAG    ; 50
 	db  5, MAGIKARP   ; 30
 	db 10, POLIWAG    ; 10
@@ -93,25 +101,25 @@ KantoWaterWildMons:
 
 	def_water_wildmons ROUTE_23 ;GEN1
 	db 4 percent ; encounter rate
-	db  6, MAGIKARP   ; 50
-	db 10, MAGIKARP   ; 30
-	db 14, MAGIKARP   ; 10
+	db  5, MAGIKARP   ; 50
+	db  5, MAGIKARP   ; 30
 	db 20, GYARADOS   ; 10
+	db 15, DRATINI    ; 10
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_24 ;GEN1
 	db 4 percent ; encounter rate
 	db 10, GOLDEEN    ; 50
-	db  5, MAGIKARP   ; 30
-	db 10, GOLDEEN    ; 10
+	db 10, PSYDUCK    ; 30
+	db  5, MAGIKARP   ; 10
 	db 15, SEAKING    ; 10
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_25 ;GEN1
-	db 4 percent ; encounter rate
+	db 6 percent ; encounter rate
 	db 10, GOLDEEN    ; 50
-	db  5, MAGIKARP   ; 30
-	db 10, GOLDEEN    ; 10
+	db 10, PSYDUCK    ; 30
+	db  5, MAGIKARP   ; 10
 	db 15, SEAKING    ; 10
 	end_water_wildmons
 
@@ -132,23 +140,23 @@ KantoWaterWildMons:
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_28 ;GEN1
-	db 2 percent ; encounter rate
-	db 10, MAGIKARP   ; 50
-	db 20, GYARADOS   ; 30
-	db  6, MAGIKARP   ; 10
-	db 15, DRATINI    ; 10
+	db 6 percent ; encounter rate
+	db  5, MAGIKARP   ; 50
+	db  6, MAGIKARP   ; 30
+	db 10, MAGIKARP   ; 10
+	db 20, GYARADOS   ; 10
 	end_water_wildmons
 
-	def_water_wildmons PALLET_TOWN ;GEN1
-	db 6 percent ; encounter rate
-	db 15, TENTACOOL  ; 50
-	db 16, HORSEA     ; 30
-	db 15, TENTACOOL  ; 10
-	db 16, STARYU     ; 10
-	end_water_wildmons
+;	def_water_wildmons PALLET_TOWN ;GEN1
+;	db 6 percent ; encounter rate
+;	db 15, TENTACOOL  ; 50
+;	db 16, HORSEA     ; 30
+;	db 15, TENTACOOL  ; 10
+;	db 16, STARYU     ; 10
+;	end_water_wildmons
 
 	def_water_wildmons VIRIDIAN_CITY ;GEN1
-	db 2 percent ; encounter rate
+	db 6 percent ; encounter rate
 	db 10, POLIWAG    ; 50
 	db  5, MAGIKARP   ; 30
 	db 10, POLIWAG    ; 10
@@ -158,29 +166,29 @@ KantoWaterWildMons:
 	def_water_wildmons CERULEAN_CITY ;GEN1
 	db 4 percent ; encounter rate
 	db 10, GOLDEEN    ; 50
-	db  5, MAGIKARP   ; 30
-	db 10, GOLDEEN    ; 10
+	db 10, PSYDUCK    ; 30
+	db  5, MAGIKARP   ; 10
 	db 15, SEAKING    ; 10
 	end_water_wildmons
 
 	def_water_wildmons VERMILION_CITY ;GEN1
 	db 6 percent ; encounter rate
-	db  8, TENTACOOL  ; 50
-	db  8, HORSEA     ; 30
-	db  8, TENTACOOL  ; 10
-	db  8, STARYU     ; 10
+	db 10, TENTACOOL  ; 50
+	db 10, HORSEA     ; 30
+	db 10, TENTACOOL  ; 10
+	db 10, STARYU     ; 10
 	end_water_wildmons
 
 	def_water_wildmons VERMILION_PORT ;GEN1
-	db 2 percent ; encounter rate
-	db  8, TENTACOOL  ; 50
-	db  8, HORSEA     ; 30
-	db  8, TENTACOOL  ; 10
-	db  8, STARYU     ; 10
+	db 6 percent ; encounter rate
+	db 15, TENTACOOL  ; 50
+	db 16, HORSEA     ; 30
+	db 15, TENTACOOL  ; 10
+	db 16, STARYU     ; 10
 	end_water_wildmons
 
 	def_water_wildmons CELADON_CITY ;GEN1
-	db 2 percent ; encounter rate
+	db 4 percent ; encounter rate
 	db  5, MAGIKARP   ; 50
 	db 10, GRIMER     ; 30
 	db  5, MAGIKARP   ; 10
@@ -188,7 +196,7 @@ KantoWaterWildMons:
 	end_water_wildmons
 
 	def_water_wildmons FUCHSIA_CITY ;GEN1
-	db 2 percent ; encounter rate
+	db 6 percent ; encounter rate
 	db  5, MAGIKARP   ; 50
 	db  7, MAGIKARP   ; 30
 	db  9, MAGIKARP   ; 10
@@ -205,18 +213,18 @@ KantoWaterWildMons:
 
 	def_water_wildmons CERULEAN_CAVE_1F ;GEN1
 	db 4 percent ; encounter rate
-	db 10, SLOWPOKE   ; 50
-	db 10, MAGIKARP   ; 30
+	db 10, MAGIKARP   ; 50
+	db 10, SLOWPOKE   ; 30
 	db 20, SLOWBRO    ; 10
-	db 20, GYARADOS   ; 10
+	db 25, GYARADOS   ; 10
 	end_water_wildmons
 
 	def_water_wildmons CERULEAN_CAVE_B1F ;GEN1
 	db 4 percent ; encounter rate
-	db 10, SLOWPOKE   ; 50
-	db 10, MAGIKARP   ; 30
+	db 10, MAGIKARP   ; 50
+	db 10, SLOWPOKE   ; 30
 	db 20, SLOWBRO    ; 10
-	db 20, GYARADOS   ; 10
+	db 25, GYARADOS   ; 10
 	end_water_wildmons
 
 	def_water_wildmons TOHJO_FALLS ;GEN1
@@ -229,34 +237,34 @@ KantoWaterWildMons:
 
 	def_water_wildmons SAFARI_ZONE_AREA_1 ;GEN1
 	db 6 percent ; encounter rate
-	db  9, PSYDUCK    ; 50
-	db  9, SLOWPOKE   ; 30
-	db  9, SLOWPOKE   ; 10
-	db  9, SLOWPOKE   ; 10
+	db  9, SLOWPOKE   ; 50
+	db  9, PSYDUCK    ; 30
+	db  9, PSYDUCK    ; 10
+	db  9, PSYDUCK    ; 10
 	end_water_wildmons
 
 	def_water_wildmons SAFARI_ZONE_AREA_2 ;GEN1
 	db 6 percent ; encounter rate
-	db  9, PSYDUCK    ; 50
-	db  9, SLOWPOKE   ; 30
-	db  9, SLOWPOKE   ; 10
-	db  9, SLOWPOKE   ; 10
+	db  9, SLOWPOKE   ; 50
+	db  9, PSYDUCK    ; 30
+	db  9, PSYDUCK    ; 10
+	db  9, PSYDUCK    ; 10
 	end_water_wildmons
 
 	def_water_wildmons SAFARI_ZONE_AREA_3 ;GEN1
 	db 6 percent ; encounter rate
-	db  9, PSYDUCK    ; 50
-	db  9, SLOWPOKE   ; 30
-	db  9, SLOWPOKE   ; 10
-	db  9, SLOWPOKE   ; 10
+	db  9, SLOWPOKE   ; 50
+	db  9, PSYDUCK    ; 30
+	db  9, PSYDUCK    ; 10
+	db  9, PSYDUCK    ; 10
 	end_water_wildmons
 
 	def_water_wildmons SAFARI_ZONE_AREA_4 ;GEN1
 	db 6 percent ; encounter rate
-	db  9, PSYDUCK    ; 50
-	db  9, SLOWPOKE   ; 30
-	db  9, SLOWPOKE   ; 10
-	db  9, SLOWPOKE   ; 10
+	db  9, SLOWPOKE   ; 50
+	db  9, PSYDUCK    ; 30
+	db  9, PSYDUCK    ; 10
+	db  9, PSYDUCK    ; 10
 	end_water_wildmons
 
 	db -1 ; end
