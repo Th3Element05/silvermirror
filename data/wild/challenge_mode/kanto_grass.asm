@@ -190,38 +190,38 @@ KantoGrassWildMonsChallenge:
 	def_grass_wildmons ROUTE_5 ;GEN2
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 14, PIDGEY     ; 20% chance 25
-	db  8, SNUBBULL   ; 20% chance 20
-	db  8, ABRA       ; 15% chance 15
-	db 14, SENTRET    ; 10% chance 15
+	db 14, PIDGEY     ; 20% chance 35
+	db 14, SENTRET    ; 20% chance 20
+	db  8, PIDGEY     ; 15% chance
+	db  8, ABRA       ; 10% chance 10
 	db 10, DITTO      ; 10% chance 10
 	db  6, JIGGLYPUFF ; 10% chance 10
-	db 18, PIDGEOTTO  ;  5% chance 5
-	db 14, SENTRET    ;  5% chance
-	db 14, PIDGEY     ;  4% chance
-	db 14, PIDGEY     ;  1% chance
+	db 14, SNUBBULL   ;  5% chance 10
+	db 14, SNUBBULL   ;  5% chance
+	db 18, PIDGEOTTO  ;  4% chance 5
+	db 18, PIDGEOTTO  ;  1% chance
 	; day
-	db 14, PIDGEY     ; 20% chance 25
-	db 14, SENTRET    ; 20% chance 25
-	db  8, ABRA       ; 15% chance 15
-	db  8, SNUBBULL   ; 10% chance 10
+	db 14, PIDGEY     ; 20% chance 35
+	db 14, SENTRET    ; 20% chance 20
+	db  8, PIDGEY     ; 15% chance
+	db  8, ABRA       ; 10% chance 10
 	db 10, DITTO      ; 10% chance 10
 	db  6, JIGGLYPUFF ; 10% chance 10
-	db 18, PIDGEOTTO  ;  5% chance 5
-	db 14, SENTRET    ;  5% chance
-	db 14, PIDGEY     ;  4% chance
-	db 14, PIDGEY     ;  1% chance
+	db 14, SNUBBULL   ;  5% chance 10
+	db 14, SNUBBULL   ;  5% chance
+	db 18, PIDGEOTTO  ;  4% chance 5
+	db 18, PIDGEOTTO  ;  1% chance
 	; nite
-	db 14, HOOTHOOT   ; 20% chance 25
-	db 14, RATTATA    ; 20% chance 25
-	db  8, ABRA       ; 15% chance 15
-	db 12, MEOWTH     ; 10% chance 25
+	db 14, HOOTHOOT   ; 20% chance 30
+	db 14, RATTATA    ; 20% chance 20
+	db 12, MEOWTH     ; 15% chance 25
+	db  8, ABRA       ; 10% chance 10
 	db 10, DITTO      ; 10% chance 10
 	db 12, MEOWTH     ; 10% chance
-	db 12, MEOWTH     ;  5% chance 5
-	db 14, RATTATA    ;  5% chance
-	db 14, HOOTHOOT   ;  4% chance
-	db 14, HOOTHOOT   ;  1% chance
+	db 14, HOOTHOOT   ;  5% chance
+	db 14, HOOTHOOT   ;  5% chance
+	db 20, NOCTOWL    ;  4% chance 5
+	db 20, NOCTOWL    ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_6 ;GEN2
@@ -251,11 +251,11 @@ KantoGrassWildMonsChallenge:
 	; nite
 	db 14, RATTATA    ; 20% chance 25
 	db 12, MEOWTH     ; 20% chance 25
-	db 14, HOOTHOOT   ; 15% chance 30
+	db 14, HOOTHOOT   ; 15% chance 25
 	db  8, ABRA       ; 10% chance 10
 	db 11, WOOPER     ; 10% chance 10
 	db 14, HOOTHOOT   ; 10% chance
-	db 14, HOOTHOOT   ;  5% chance
+	db 20, NOCTOWL    ;  5% chance 5
 	db 12, MEOWTH     ;  5% chance
 	db 14, RATTATA    ;  4% chance
 	db 14, RATTATA    ;  1% chance
@@ -265,74 +265,74 @@ KantoGrassWildMonsChallenge:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 20, PIDGEY     ; 20% chance 30
-	db 20, SENTRET    ; 20% chance 25
-	db 15, NATU       ; 15% chance 15
-	db 20, PIDGEY     ; 10% chance
+	db 12, ABRA       ; 20% chance 20
+	db 20, SENTRET    ; 15% chance 25
+	db 20, SENTRET    ; 10% chance
+	db 20, PIDGEY     ; 10% chance 10
 	db 23, PIDGEOTTO  ; 10% chance 10
-	db 18, VULPIX     ; 10% chance 20
 	db 18, VULPIX     ;  5% chance
-	db 20, SENTRET    ;  5% chance
-	db 18, VULPIX     ;  4% chance
-	db 18, VULPIX     ;  1% chance
+	db 18, VULPIX     ;  5% chance
+	db 22, KADABRA    ;  4% chance 5
+	db 22, KADABRA    ;  1% chance
 	; day
 	db 20, PIDGEY     ; 20% chance 30
-	db 20, SENTRET    ; 20% chance 25
-	db 15, NATU       ; 15% chance 15
-	db 20, PIDGEY     ; 10% chance
+	db 12, ABRA       ; 20% chance 20
+	db 20, SENTRET    ; 15% chance 25
+	db 20, SENTRET    ; 10% chance
+	db 20, PIDGEY     ; 10% chance 10
 	db 23, PIDGEOTTO  ; 10% chance 10
-	db 18, VULPIX     ; 10% chance 20
 	db 18, VULPIX     ;  5% chance
-	db 20, SENTRET    ;  5% chance
-	db 18, VULPIX     ;  4% chance
-	db 18, VULPIX     ;  1% chance
+	db 18, VULPIX     ;  5% chance
+	db 22, KADABRA    ;  4% chance 5
+	db 22, KADABRA    ;  1% chance
 	; nite
-	db 20, MURKROW    ; 20% chance 20
-	db 20, RATTATA    ; 20% chance 25
+	db 20, RATTATA    ; 20% chance 20
+	db 12, ABRA       ; 20% chance 20
 	db 17, MEOWTH     ; 15% chance 25
 	db 17, MEOWTH     ; 10% chance
-	db 18, HOUNDOUR   ; 10% chance 20
-	db 18, HOUNDOUR   ; 10% chance
-	db 20, RATTATA    ;  5% chance
-	db 15, NATU       ;  5% chance 10
-	db 15, NATU       ;  4% chance
-	db 15, NATU       ;  1% chance
+	db 20, MURKROW    ; 10% chance 10
+	db 23, NOCTOWL    ; 10% chance 10
+	db 18, HOUNDOUR   ;  5% chance 10
+	db 18, HOUNDOUR   ;  5% chance
+	db 22, KADABRA    ;  4% chance 5
+	db 22, KADABRA    ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_8 ;GEN2
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 20, PIDGEY     ; 20% chance 30
-	db 20, SENTRET    ; 20% chance 25
-	db 15, NATU       ; 15% chance 15
+	db 12, ABRA       ; 20% chance 20
+	db 20, SENTRET    ; 15% chance 25
+	db 20, SENTRET    ; 10% chance
 	db 20, PIDGEY     ; 10% chance
 	db 23, PIDGEOTTO  ; 10% chance 10
-	db 18, GROWLITHE  ; 10% chance 20
+	db 18, GROWLITHE  ;  5% chance 10
 	db 18, GROWLITHE  ;  5% chance
-	db 20, SENTRET    ;  5% chance
-	db 18, GROWLITHE  ;  4% chance
-	db 18, GROWLITHE  ;  1% chance
+	db 22, KADABRA    ;  4% chance 5
+	db 22, KADABRA    ;  1% chance
 	; day
 	db 20, PIDGEY     ; 20% chance 30
-	db 20, SENTRET    ; 20% chance 25
-	db 15, NATU       ; 15% chance 15
+	db 12, ABRA       ; 20% chance 20
+	db 20, SENTRET    ; 15% chance 25
+	db 20, SENTRET    ; 10% chance
 	db 20, PIDGEY     ; 10% chance
 	db 23, PIDGEOTTO  ; 10% chance 10
-	db 18, GROWLITHE  ; 10% chance 20
+	db 18, GROWLITHE  ;  5% chance 10
 	db 18, GROWLITHE  ;  5% chance
-	db 20, SENTRET    ;  5% chance
-	db 18, GROWLITHE  ;  4% chance
-	db 18, GROWLITHE  ;  1% chance
+	db 22, KADABRA    ;  4% chance 5
+	db 22, KADABRA    ;  1% chance
 	; nite
-	db 20, MURKROW    ; 20% chance 20
 	db 20, RATTATA    ; 20% chance 20
-	db 17, MEOWTH     ; 15% chance 20
-	db 18, HOUNDOUR   ; 10% chance 20
-	db 18, HOUNDOUR   ; 10% chance
-	db 18, GASTLY     ; 10% chance 10
-	db 17, MEOWTH     ;  5% chance
-	db 15, NATU       ;  5% chance 10
-	db 15, NATU       ;  4% chance
-	db 15, NATU       ;  1% chance
+	db 12, ABRA       ; 20% chance 20
+	db 17, MEOWTH     ; 15% chance 25
+	db 17, MEOWTH     ; 10% chance
+	db 16, GASTLY     ; 10% chance
+	db 20, MURKROW    ; 10% chance 10
+	db 18, HOUNDOUR   ;  5% chance 10
+	db 18, HOUNDOUR   ;  5% chance
+	db 22, KADABRA    ;  4% chance 5
+	db 22, KADABRA    ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_9 ;GEN2
@@ -375,36 +375,36 @@ KantoGrassWildMonsChallenge:
 	def_grass_wildmons ROUTE_10_NORTH ;GEN2
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 16, MAGNEMITE  ; 20% chance 30
-	db 16, MAREEP     ; 20% chance 20
+	db 16, MAGNEMITE  ; 20% chance 40
+	db 16, MAGNEMITE  ; 20% chance
 	db 16, SPEAROW    ; 15% chance 25
 	db 16, NIDORAN_M  ; 10% chance 10
 	db 16, NIDORAN_F  ; 10% chance 10
-	db 16, MAGNEMITE  ; 10% chance
+	db 16, MAREEP     ; 10% chance 10
 	db 16, SPEAROW    ;  5% chance
 	db 16, SPEAROW    ;  5% chance
 	db 17, VOLTORB    ;  4% chance 5
 	db 17, VOLTORB    ;  1% chance
 	; day
-	db 16, MAGNEMITE  ; 20% chance 30
-	db 16, MAREEP     ; 20% chance 20
+	db 16, MAGNEMITE  ; 20% chance 40
+	db 16, MAGNEMITE  ; 20% chance
 	db 16, SPEAROW    ; 15% chance 25
 	db 16, NIDORAN_M  ; 10% chance 10
 	db 16, NIDORAN_F  ; 10% chance 10
-	db 16, MAGNEMITE  ; 10% chance
+	db 16, MAREEP     ; 10% chance 10
 	db 16, SPEAROW    ;  5% chance
 	db 16, SPEAROW    ;  5% chance
 	db 17, VOLTORB    ;  4% chance 5
 	db 17, VOLTORB    ;  1% chance
 	; nite
 	db 16, MAGNEMITE  ; 20% chance 30
-	db 16, MAREEP     ; 20% chance 20
-	db 16, SPEAROW    ; 15% chance 25
-	db 16, RATTATA    ; 10% chance 10
+	db 16, RATTATA    ; 20% chance 20
+	db 16, HOOTHOOT   ; 15% chance 25
+	db 16, MAGNEMITE  ; 10% chance 10
 	db 14, ZUBAT      ; 10% chance 10
-	db 16, MAGNEMITE  ; 10% chance
-	db 16, SPEAROW    ;  5% chance
-	db 16, SPEAROW    ;  5% chance
+	db 16, MAREEP     ; 10% chance 10
+	db 16, HOOTHOOT   ;  5% chance
+	db 16, HOOTHOOT   ;  5% chance
 	db 17, VOLTORB    ;  4% chance 5
 	db 17, VOLTORB    ;  1% chance
 	end_grass_wildmons
@@ -412,35 +412,35 @@ KantoGrassWildMonsChallenge:
 	def_grass_wildmons ROUTE_11 ;GEN2
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 16, PIDGEY     ; 20% chance 30
-	db 14, HOPPIP     ; 20% chance 20
-	db 15, SANDSHREW  ; 15% chance 20
-	db 16, PIDGEY     ; 10% chance
-	db 18, PIDGEOTTO  ; 10% chance 10
-	db 15, EKANS      ; 10% chance 20
-	db 15, SANDSHREW  ;  5% chance
-	db 15, EKANS      ;  5% chance
-	db 15, EKANS      ;  4% chance
-	db 15, EKANS      ;  1% chance
+	db 15, SANDSHREW  ; 20% chance 30
+	db 15, EKANS      ; 20% chance 30
+	db 16, SPEAROW    ; 15% chance 25
+	db 15, SANDSHREW  ; 10% chance
+	db 15, EKANS      ; 10% chance
+	db 15, HOPPIP     ; 10% chance 10
+	db 16, SPEAROW    ;  5% chance
+	db 16, SPEAROW    ;  5% chance
+	db 16, SPEAROW    ;  4% chance
+	db 16, PIDGEOTTO  ;  1% chance
 	; day
-	db 16, PIDGEY     ; 20% chance 30
-	db 14, HOPPIP     ; 20% chance 20
-	db 15, SANDSHREW  ; 15% chance 20
-	db 16, PIDGEY     ; 10% chance
-	db 18, PIDGEOTTO  ; 10% chance 10
-	db 15, EKANS      ; 10% chance 20
-	db 15, SANDSHREW  ;  5% chance
-	db 15, EKANS      ;  5% chance
-	db 15, EKANS      ;  4% chance
-	db 15, EKANS      ;  1% chance
+	db 15, SANDSHREW  ; 20% chance 30
+	db 15, EKANS      ; 20% chance 30
+	db 16, SPEAROW    ; 15% chance 25
+	db 15, SANDSHREW  ; 10% chance
+	db 15, EKANS      ; 10% chance
+	db 15, HOPPIP     ; 10% chance 10
+	db 16, SPEAROW    ;  5% chance
+	db 16, SPEAROW    ;  5% chance
+	db 16, SPEAROW    ;  4% chance
+	db 16, PIDGEOTTO  ;  1% chance
 	; nite
-	db 15, RATTATA    ; 20% chance 30
-	db 15, DROWZEE    ; 20% chance 25
-	db 16, HOOTHOOT   ; 15% chance 25
-	db 15, RATTATA    ; 10% chance
-	db 15, SANDSHREW  ; 10% chance 10
-	db 15, EKANS      ; 10% chance 10
-	db 16, HOOTHOOT   ;  5% chance
+	db 15, SANDSHREW  ; 20% chance 30
+	db 15, EKANS      ; 20% chance 30
+	db 16, HOOTHOOT   ; 15% chance 20
+	db 15, RATTATA    ; 10% chance 15
+	db 15, DROWZEE    ; 10% chance 25
+	db 15, DROWZEE    ; 10% chance
+	db 15, RATTATA    ;  5% chance
 	db 16, HOOTHOOT   ;  5% chance
 	db 15, DROWZEE    ;  4% chance
 	db 15, DROWZEE    ;  1% chance
@@ -708,38 +708,38 @@ KantoGrassWildMonsChallenge:
 	def_grass_wildmons ROUTE_21 ;GEN2
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 16, PIDGEY     ; 20% chance 41
+	db 16, PIDGEY     ; 20% chance 30
 	db 14, SENTRET    ; 20% chance 25
-	db 16, PIDGEY     ; 15% chance
+	db 15, MARILL     ; 15% chance 16
+	db 16, PIDGEY     ; 10% chance
 	db 28, PIDGEOTTO  ; 10% chance 10
-	db 25, TANGELA    ; 10% chance 20
-	db 25, TANGELA    ; 10% chance
+	db 25, TANGELA    ; 10% chance 10
 	db 14, SENTRET    ;  5% chance
-	db 16, PIDGEY     ;  5% chance
+	db 20, FURRET     ;  5% chance 5
 	db 26, MR__MIME   ;  4% chance 4
-	db 16, PIDGEY     ;  1% chance
+	db 15, MARILL     ;  1% chance
 	; day
-	db 16, PIDGEY     ; 20% chance 41
+	db 16, PIDGEY     ; 20% chance 30
 	db 14, SENTRET    ; 20% chance 25
-	db 16, PIDGEY     ; 15% chance
+	db 15, MARILL     ; 15% chance 16
+	db 16, PIDGEY     ; 10% chance
 	db 28, PIDGEOTTO  ; 10% chance 10
-	db 25, TANGELA    ; 10% chance 20
-	db 25, TANGELA    ; 10% chance
+	db 25, TANGELA    ; 10% chance 10
 	db 14, SENTRET    ;  5% chance
-	db 16, PIDGEY     ;  5% chance
+	db 20, FURRET     ;  5% chance 5
 	db 26, MR__MIME   ;  4% chance 4
-	db 16, PIDGEY     ;  1% chance
+	db 15, MARILL     ;  1% chance
 	; nite
-	db 16, HOOTHOOT   ; 20% chance 41
+	db 16, HOOTHOOT   ; 20% chance 30
 	db 14, RATTATA    ; 20% chance 25
-	db 16, HOOTHOOT   ; 15% chance
+	db 15, MARILL     ; 15% chance 16
+	db 16, HOOTHOOT   ; 10% chance
 	db 28, NOCTOWL    ; 10% chance 10
 	db 25, TANGELA    ; 10% chance 10
-	db 15, MARILL     ; 10% chance 10
 	db 14, RATTATA    ;  5% chance
-	db 16, HOOTHOOT   ;  5% chance
+	db 20, RATICATE   ;  5% chance 5
 	db 26, MR__MIME   ;  4% chance 4
-	db 16, HOOTHOOT   ;  1% chance
+	db 15, MARILL     ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_22 ;GEN2
@@ -819,35 +819,35 @@ KantoGrassWildMonsChallenge:
 	def_grass_wildmons ROUTE_24 ;GEN2
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 13, PIDGEY     ; 20% chance 40
-	db 13, PIDGEY     ; 20% chance
-	db 10, BELLSPROUT ; 15% chance 30
-	db 10, BELLSPROUT ; 10% chance
+	db 10, BELLSPROUT ; 20% chance 35
+	db 13, PIDGEY     ; 20% chance 30
+	db 10, BELLSPROUT ; 15% chance
+	db 13, PIDGEY     ; 10% chance
 	db 12, SUNKERN    ; 10% chance 19
 	db  8, ABRA       ; 10% chance 10
-	db 10, BELLSPROUT ;  5% chance
+	db 10, PSYDUCK    ;  5% chance 5
 	db 12, SUNKERN    ;  5% chance
 	db 12, SUNKERN    ;  4% chance
 	db 18, PIDGEOTTO  ;  1% chance 1
 	; day
-	db 13, PIDGEY     ; 20% chance 40
-	db 13, PIDGEY     ; 20% chance
-	db 10, BELLSPROUT ; 15% chance 30
-	db 10, BELLSPROUT ; 10% chance
+	db 10, BELLSPROUT ; 20% chance 35
+	db 13, PIDGEY     ; 20% chance 30
+	db 10, BELLSPROUT ; 15% chance
+	db 13, PIDGEY     ; 10% chance
 	db 12, SUNKERN    ; 10% chance 19
 	db  8, ABRA       ; 10% chance 10
-	db 10, BELLSPROUT ;  5% chance
+	db 10, PSYDUCK    ;  5% chance 5
 	db 12, SUNKERN    ;  5% chance
 	db 12, SUNKERN    ;  4% chance
 	db 18, PIDGEOTTO  ;  1% chance 1
 	; nite
-	db 13, HOOTHOOT   ; 20% chance 40
-	db 13, HOOTHOOT   ; 20% chance
-	db 10, ODDISH     ; 15% chance 30
-	db 10, ODDISH     ; 10% chance
+	db 10, ODDISH     ; 20% chance 35
+	db 13, HOOTHOOT   ; 20% chance 30
+	db 10, ODDISH     ; 15% chance
+	db 13, HOOTHOOT   ; 10% chance
 	db 12, VENONAT    ; 10% chance 19
 	db  8, ABRA       ; 10% chance 10
-	db 10, ODDISH     ;  5% chance
+	db 10, PSYDUCK    ;  5% chance 5
 	db 12, VENONAT    ;  5% chance
 	db 12, VENONAT    ;  4% chance
 	db 18, NOCTOWL    ;  1% chance 1
@@ -919,7 +919,7 @@ KantoGrassWildMonsChallenge:
 	db  3, HOOTHOOT   ; 20% chance
 	db  3, RATTATA    ; 15% chance 30
 	db  2, ODDISH     ; 10% chance 10
-	db  2, VULPIX     ; 10% chance 10
+	db  2, HOUNDOUR   ; 10% chance 10
 	db  2, WOOPER     ; 10% chance 10
 	db  3, RATTATA    ;  5% chance
 	db  3, RATTATA    ;  5% chance
@@ -1559,8 +1559,8 @@ KantoGrassWildMonsChallenge:
 	def_grass_wildmons SEAFOAM_ISLANDS_B4F ;GEN2
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 22, KRABBY     ; 20% chance 21
-	db 24, SEEL       ; 20% chance 30
+	db 22, KRABBY     ; 20% chance 20
+	db 24, SEEL       ; 20% chance 31
 	db 24, SHELLDER   ; 15% chance 15
 	db 25, SNEASEL    ; 10% chance 10
 	db 23, SEEL       ; 10% chance
@@ -1568,10 +1568,10 @@ KantoGrassWildMonsChallenge:
 	db 28, KINGLER    ;  5% chance 5
 	db 34, DEWGONG    ;  5% chance 5
 	db 25, JYNX       ;  4% chance 4
-	db 22, KRABBY     ;  1% chance
+	db 24, SEEL       ;  1% chance
 	; day
-	db 22, KRABBY     ; 20% chance 21
-	db 24, SEEL       ; 20% chance 30
+	db 22, KRABBY     ; 20% chance 20
+	db 24, SEEL       ; 20% chance 31
 	db 24, SHELLDER   ; 15% chance 15
 	db 25, SNEASEL    ; 10% chance 10
 	db 23, SEEL       ; 10% chance
@@ -1579,10 +1579,10 @@ KantoGrassWildMonsChallenge:
 	db 28, KINGLER    ;  5% chance 5
 	db 34, DEWGONG    ;  5% chance 5
 	db 25, JYNX       ;  4% chance 4
-	db 22, KRABBY     ;  1% chance
+	db 24, SEEL       ;  1% chance
 	; nite
-	db 22, KRABBY     ; 20% chance 21
-	db 24, SEEL       ; 20% chance 30
+	db 22, KRABBY     ; 20% chance 20
+	db 24, SEEL       ; 20% chance 31
 	db 24, SHELLDER   ; 15% chance 15
 	db 25, SNEASEL    ; 10% chance 10
 	db 23, SEEL       ; 10% chance
@@ -1590,7 +1590,7 @@ KantoGrassWildMonsChallenge:
 	db 28, KINGLER    ;  5% chance 5
 	db 34, DEWGONG    ;  5% chance 5
 	db 25, JYNX       ;  4% chance 4
-	db 22, KRABBY     ;  1% chance
+	db 24, SEEL       ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons POWER_PLANT ;GEN2
@@ -1707,38 +1707,38 @@ KantoGrassWildMonsChallenge:
 	def_grass_wildmons POKEMON_MANSION_3F ;GEN2
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 28, KOFFING    ; 20% chance 35
-	db 28, GRIMER     ; 20% chance 25
-	db 28, KOFFING    ; 15% chance
-	db 33, MAGMAR     ; 10% chance 10
+	db 28, KOFFING    ; 20% chance 40
+	db 28, KOFFING    ; 20% chance
+	db 28, GRIMER     ; 15% chance 25
+	db 28, GRIMER     ; 10% chance
 	db 25, HOUNDOUR   ; 10% chance 10
 	db 25, SLUGMA     ; 10% chance 10
 	db 35, WEEZING    ;  5% chance 5
 	db 38, MUK        ;  5% chance 5
-	db 28, GRIMER     ;  4% chance
-	db 28, GRIMER     ;  1% chance
+	db 34, MAGMAR     ;  4% chance 5
+	db 34, MAGMAR     ;  1% chance
 	; day
-	db 28, KOFFING    ; 20% chance 35
-	db 28, GRIMER     ; 20% chance 25
-	db 28, KOFFING    ; 15% chance
-	db 33, MAGMAR     ; 10% chance 10
+	db 28, KOFFING    ; 20% chance 40
+	db 28, KOFFING    ; 20% chance
+	db 28, GRIMER     ; 15% chance 25
+	db 28, GRIMER     ; 10% chance
 	db 25, HOUNDOUR   ; 10% chance 10
 	db 25, SLUGMA     ; 10% chance 10
 	db 35, WEEZING    ;  5% chance 5
 	db 38, MUK        ;  5% chance 5
-	db 28, GRIMER     ;  4% chance
-	db 28, GRIMER     ;  1% chance
+	db 34, MAGMAR     ;  4% chance 5
+	db 34, MAGMAR     ;  1% chance
 	; nite
-	db 28, KOFFING    ; 20% chance 35
-	db 28, GRIMER     ; 20% chance 25
-	db 28, KOFFING    ; 15% chance
-	db 33, MAGMAR     ; 10% chance 10
+	db 28, KOFFING    ; 20% chance 40
+	db 28, KOFFING    ; 20% chance
+	db 28, GRIMER     ; 15% chance 25
+	db 28, GRIMER     ; 10% chance
 	db 25, HOUNDOUR   ; 10% chance 10
 	db 25, SLUGMA     ; 10% chance 10
 	db 35, WEEZING    ;  5% chance 5
 	db 38, MUK        ;  5% chance 5
-	db 28, GRIMER     ;  4% chance
-	db 28, GRIMER     ;  1% chance
+	db 34, MAGMAR     ;  4% chance 5
+	db 34, MAGMAR     ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons POKEMON_MANSION_B1F ;GEN2
@@ -1752,7 +1752,7 @@ KantoGrassWildMonsChallenge:
 	db 26, SLUGMA     ; 10% chance 10
 	db 36, WEEZING    ;  5% chance 5
 	db 38, MUK        ;  5% chance 5
-	db 34, MAGMAR     ;  4% chance 5
+	db 34, MAGMAR     ;  4% chance 4
 	db 28, GRIMER     ;  1% chance
 	; day
 	db 28, KOFFING    ; 20% chance 20
@@ -1763,7 +1763,7 @@ KantoGrassWildMonsChallenge:
 	db 26, SLUGMA     ; 10% chance 10
 	db 36, WEEZING    ;  5% chance 5
 	db 38, MUK        ;  5% chance 5
-	db 34, MAGMAR     ;  4% chance 5
+	db 34, MAGMAR     ;  4% chance 4
 	db 28, GRIMER     ;  1% chance
 	; nite
 	db 28, KOFFING    ; 20% chance 20
@@ -1774,7 +1774,7 @@ KantoGrassWildMonsChallenge:
 	db 26, SLUGMA     ; 10% chance 10
 	db 36, WEEZING    ;  5% chance 5
 	db 38, MUK        ;  5% chance 5
-	db 34, MAGMAR     ;  4% chance 5
+	db 34, MAGMAR     ;  4% chance 4
 	db 28, GRIMER     ;  1% chance
 	end_grass_wildmons
 

@@ -20,7 +20,7 @@ FishGroups:
 	fishgroup 80 percent, .Qwilfish_Swarm_Old,   .Qwilfish_Swarm_Good,   .Qwilfish_Swarm_Super,   .Qwilfish_Swarm_Super_2
 	fishgroup 80 percent, .Remoraid_Swarm_Old,   .Remoraid_Swarm_Good,   .Remoraid_Swarm_Super,   .Remoraid_Swarm_Super_2
 	fishgroup 80 percent, .Gyarados_Old,         .Gyarados_Good,         .Gyarados_Super,         .Gyarados_Super_2
-	fishgroup 80 percent, .Dratini_2_Old,        .Dratini_2_Good,        .Dratini_2_Super,        .Dratini_2_Super_2
+	fishgroup 80 percent, .Dratini_No_Swarm_Old, .Dratini_No_Swarm_Good, .Dratini_No_Swarm_Super, .Dratini_No_Swarm_Super_2
 	fishgroup 80 percent, .WhirlIslands_Old,     .WhirlIslands_Good,     .WhirlIslands_Super,     .WhirlIslands_Super_2
 	fishgroup 80 percent, .Qwilfish_Old,         .Qwilfish_Good,         .Qwilfish_Super,         .Qwilfish_Super_2
 	fishgroup 80 percent, .Remoraid_Old,         .Remoraid_Good,         .Remoraid_Super,         .Remoraid_Super_2
@@ -96,27 +96,23 @@ FishGroups:
 
 ; Lake / River
 .Lake_Old:
-.Chinchou_Old:
 	db  50 percent, MAGIKARP,    5 ; 50%
 	db  95 percent, MAGIKARP,    5 ; 45%
 	db 100 percent, GOLDEEN,     5 ;  5%
 .Lake_Good:
-.Chinchou_Good:
 	db  50 percent, GOLDEEN,    10 ; 50%
 	db  80 percent, MAGIKARP,   10 ; 30%
 	db  90 percent, GOLDEEN,    10 ; 10%
 	db 100 percent, GOLDEEN,    10 ; 10%
 .Lake_Super:
-.Chinchou_Super:
 	db  60 percent, GOLDEEN,    20 ; 60%
 	db  80 percent, MAGIKARP,   15 ; 20%
 	db  90 percent, GOLDEEN,    20 ; 10%
 	db 100 percent, SEAKING,    25 ; 10%
 .Lake_Super_2:
-.Chinchou_Super_2:
 	db  60 percent, GOLDEEN,    20 ; 60%
 	db  80 percent, MAGIKARP,   15 ; 20%
-	db  90 percent, CHINCHOU,   20 ; 10%
+	db  90 percent, GOLDEEN,    20 ; 10%
 	db 100 percent, SEAKING,    25 ; 10%
 
 ; Shore
@@ -216,27 +212,27 @@ FishGroups:
 ; Ocean
 .Ocean_Old:
 .Horsea_Old:
-;.Chinchou_Old:
+.Chinchou_Old:
 	db  70 percent, MAGIKARP,    5 ; 70%
 	db  85 percent, TENTACOOL,   5 ; 15%
 	db 100 percent, TENTACOOL,   5 ; 15%
 .Ocean_Good:
 .Horsea_Good:
-;.Chinchou_Good:
+.Chinchou_Good:
 	db  50 percent, TENTACOOL,  10 ; 50%
 	db  80 percent, MAGIKARP,   10 ; 30%
 	db  90 percent, TENTACOOL,  10 ; 10%
 	db 100 percent, HORSEA,     10 ; 10%
 .Ocean_Super:
 .Horsea_Super:
-;.Chinchou_Super:
+.Chinchou_Super:
 	db  50 percent, HORSEA,     20 ; 50%
 	db  80 percent, TENTACOOL,  20 ; 30%
 	db  90 percent, STARYU,     20 ; 10%
 	db 100 percent, MAGIKARP,   15 ; 10%
 .Ocean_Super_2:
 .Horsea_Super_2:
-;.Chinchou_Super_2:
+.Chinchou_Super_2:
 	db  50 percent, HORSEA,     20 ; 50%
 	db  80 percent, TENTACOOL,  20 ; 30%
 	db  90 percent, CHINCHOU,   20 ; 10%
@@ -317,42 +313,42 @@ FishGroups:
 .Gyarados_Good:
 	db  30 percent, MAGIKARP,   10 ; 30%
 	db  60 percent, MAGIKARP,   10 ; 30%
-	db  90 percent, MAGIKARP,   10 ; 30%
-	db 100 percent, GYARADOS,   20 ; 10%
+	db  96 percent, MAGIKARP,   10 ; 36%
+	db 100 percent, GYARADOS,   20 ;  4%
 .Gyarados_Super:
 	db  30 percent, MAGIKARP,   15 ; 30%
 	db  60 percent, MAGIKARP,   15 ; 30%
-	db  90 percent, GYARADOS,   25 ; 30%
-	db 100 percent, MAGIKARP,   15 ; 10%
+	db  90 percent, MAGIKARP,   15 ; 30%
+	db 100 percent, GYARADOS,   25 ; 10%
 .Gyarados_Super_2:
 	db  30 percent, MAGIKARP,   15 ; 30%
 	db  60 percent, MAGIKARP,   15 ; 30%
-	db  90 percent, GYARADOS,   25 ; 30%
-	db 100 percent, MAGIKARP,   15 ; 10%
+	db  90 percent, MAGIKARP,   15 ; 30%
+	db 100 percent, GYARADOS,   25 ; 10%
 
 ; Dratini
 .Dratini_Old:
-.Dratini_2_Old:
+.Dratini_No_Swarm_Old:
 	db  50 percent, MAGIKARP,    5 ; 50%
 	db  95 percent, MAGIKARP,    5 ; 45%
 	db 100 percent, MAGIKARP,    5 ;  5%
 .Dratini_Good:
-.Dratini_2_Good:
-	db  30 percent, MAGIKARP,   10 ; 30%
-	db  60 percent, MAGIKARP,   10 ; 30%
-	db  90 percent, MAGIKARP,   10 ; 30%
+.Dratini_No_Swarm_Good:
+	db  40 percent, MAGIKARP,   10 ; 40%
+	db  70 percent, MAGIKARP,   10 ; 30%
+	db  90 percent, MAGIKARP,   10 ; 20%
 	db 100 percent, DRATINI,    10 ; 10%
 .Dratini_Super:
-.Dratini_2_Super:
-	db  30 percent, MAGIKARP,   15 ; 30%
-	db  60 percent, MAGIKARP,   15 ; 30%
-	db  90 percent, DRATINI,    20 ; 30%
+.Dratini_No_Swarm_Super:
+	db  40 percent, MAGIKARP,   15 ; 40%
+	db  70 percent, MAGIKARP,   15 ; 30%
+	db  90 percent, DRATINI,    20 ; 20%
 	db 100 percent, DRAGONAIR,  25 ; 10%
 .Dratini_Super_2:
-.Dratini_2_Super_2:
-	db  30 percent, MAGIKARP,   15 ; 30%
-	db  60 percent, MAGIKARP,   15 ; 30%
-	db  90 percent, DRATINI,    20 ; 30%
+.Dratini_No_Swarm_Super_2:
+	db  40 percent, MAGIKARP,   15 ; 40%
+	db  70 percent, MAGIKARP,   15 ; 30%
+	db  90 percent, DRATINI,    20 ; 20%
 	db 100 percent, DRAGONAIR,  25 ; 10%
 
 ; Dratini Swarm
@@ -641,21 +637,21 @@ FishGroups:
 ;	db  90 percent + 1, MAGIKARP,   40
 ;	db 100 percent,     MAGIKARP,   40
 ;
-;.Dratini_2_Old:
+;.Dratini_No_Swarm_Old:
 ;	db  70 percent + 1, MAGIKARP,   10
 ;	db  85 percent + 1, MAGIKARP,   10
 ;	db 100 percent,     MAGIKARP,   10
-;.Dratini_2_Good:
+;.Dratini_No_Swarm_Good:
 ;	db  35 percent,     MAGIKARP,   10
 ;	db  70 percent,     MAGIKARP,   10
 ;	db  90 percent + 1, MAGIKARP,   10
 ;	db 100 percent,     time_group 16
-;.Dratini_2_Super:
+;.Dratini_No_Swarm_Super:
 ;	db  40 percent,     MAGIKARP,   10
 ;	db  70 percent,     time_group 17
 ;	db  90 percent + 1, MAGIKARP,   10
 ;	db 100 percent,     DRAGONAIR,  10
-;.Dratini_2_Super_2:
+;.Dratini_No_Swarm_Super_2:
 ;	db  40 percent,     MAGIKARP,   10
 ;	db  70 percent,     time_group 17
 ;	db  90 percent + 1, MAGIKARP,   10
