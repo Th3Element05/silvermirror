@@ -210,15 +210,15 @@ SSAnneRoomsB1F_MapEvents:
 	def_warp_events
 	warp_event  2,  5, SS_ANNE_1F, 10 ; 1
 	warp_event  3,  5, SS_ANNE_1F, 10 ; 2
-	warp_event  8,  5, SS_ANNE_1F, 11 ; 3
-	warp_event  9,  5, SS_ANNE_1F, 11 ; 4
-	warp_event 14,  5, SS_ANNE_1F, 12 ; 5
-	warp_event 15,  5, SS_ANNE_1F, 12 ; 6
+	warp_event 12,  5, SS_ANNE_1F, 11 ; 3
+	warp_event 13,  5, SS_ANNE_1F, 11 ; 4
+	warp_event 22,  5, SS_ANNE_1F, 12 ; 5
+	warp_event 23,  5, SS_ANNE_1F, 12 ; 6
 ; dummy room 4
-	warp_event 26,  5, SS_ANNE_1F, 13 ; 7
-	warp_event 27,  5, SS_ANNE_1F, 13 ; 8
-	warp_event 32,  5, SS_ANNE_1F, 14 ; 9
-	warp_event 33,  5, SS_ANNE_1F, 14 ; 10
+	warp_event 12, 15, SS_ANNE_1F, 13 ; 7
+	warp_event 13, 15, SS_ANNE_1F, 13 ; 8
+	warp_event 22, 15, SS_ANNE_1F, 14 ; 9
+	warp_event 23, 15, SS_ANNE_1F, 14 ; 10
 
 	def_coord_events
 
@@ -228,15 +228,12 @@ SSAnneRoomsB1F_MapEvents:
 	def_object_events
 	object_event  0,  2, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerSailorTerrell, -1
 	object_event  0,  4, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerFisherArnold, -1
-	object_event  8,  3, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerSailorErnest, -1
-	object_event 14,  1, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerSailorKent, -1
-	object_event 26,  1, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerSailorJeff, -1
-	object_event 24,  3, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerSailorGarrett, -1
-	object_event 31,  2, SPRITE_MACHOKE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, SSAnneRoomsB1FMachokeScript, -1
-	object_event 30,  3, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneRoomsB1FSuperNerdScript, -1
-	object_event  6,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SSAnneRoomsB1FTMRest, EVENT_SS_ANNE_ROOMS_B1F_TM_REST
-	object_event 12,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SSAnneRoomsB1FEther, EVENT_SS_ANNE_ROOMS_B1F_ETHER
-	object_event 32,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SSAnneRoomsB1FMaxPotion, EVENT_SS_ANNE_ROOMS_B1F_MAX_POTION
-; dummy room 4
-	object_event 20,  1, SPRITE_SAILOR, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneRoomsB1FSuperNerdScript, -1
-	object_event 18,  3, SPRITE_SAILOR, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneRoomsB1FSuperNerdScript, -1
+	object_event 12,  3, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerSailorErnest, -1
+	object_event 22,  1, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerSailorKent, -1
+	object_event 12, 11, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerSailorJeff, -1
+	object_event 10, 13, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerSailorGarrett, -1
+	object_event 21, 12, SPRITE_MACHOKE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, SSAnneRoomsB1FMachokeScript, -1
+	object_event 20, 13, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneRoomsB1FSuperNerdScript, -1
+	object_event 10,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SSAnneRoomsB1FTMRest, EVENT_SS_ANNE_ROOMS_B1F_TM_REST
+	object_event 20,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SSAnneRoomsB1FEther, EVENT_SS_ANNE_ROOMS_B1F_ETHER
+	object_event 22, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SSAnneRoomsB1FMaxPotion, EVENT_SS_ANNE_ROOMS_B1F_MAX_POTION
