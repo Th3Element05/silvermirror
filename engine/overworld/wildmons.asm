@@ -380,6 +380,7 @@ ChooseWildEncounter:
 ;; If the Pokemon is encountered by surfing, we need to give the levels some variety.
 ;	call CheckOnWater
 ;	jr nz, .ok
+
 ; If the Pokemon is encountered in a special way, skip randomizing level.
 	ld a, [wBattleType]
 	cp BATTLETYPE_NO_CATCH
@@ -392,15 +393,53 @@ ChooseWildEncounter:
 ;	jr z, .ok
 	cp BATTLETYPE_FORCESHINY
 	jr z, .ok
+
+;; Boost wild pokemon levels by 2 for each badge obtained, up to 8 badges (+16).
+;	ld a, NUM_BADGES
+;	cp 0
+;	jr c, .gotbadges
+;	inc b
+;	inc b
+;	cp 1
+;	jr c, .gotbadges
+;	inc b
+;	inc b
+;	cp 2
+;	jr c, .gotbadges
+;	inc b
+;	inc b
+;	cp 3
+;	jr c, .gotbadges
+;	inc b
+;	inc b
+;	cp 4
+;	jr c, .gotbadges
+;	inc b
+;	inc b
+;	cp 5
+;	jr c, .gotbadges
+;	inc b
+;	inc b
+;	cp 6
+;	jr c, .gotbadges
+;	inc b
+;	inc b
+;	cp 7
+;	jr c, .gotbadges
+;	inc b
+;	inc b
+;	
+;.gotbadges
+
 ; Don't boost wild Pokemon levels on Route 1
 	ld a, [wCurLandmark]
 	cp LANDMARK_ROUTE_1
 	jr z, .ok
-;silvermirror
+
 ; If the Pokemon is encountered by surfing, we need to give the levels some variety.
 	call CheckOnWater
 	jr nz, .levelup
-; Flat 10% chance to increase the level of the wild mon by up to 9,
+; Flat 10% chance to increase the level of the wild mon by up to +9,
 ; then jump to the normal wild mon level increase check.
 	call Random
 	cp 10 percent
@@ -626,7 +665,7 @@ _JohtoWildmonCheck:
 ;	jr nc, _NoSwarmWildmon
 ;	scf
 ;	ret
-_SwarmWildmonCheck: ;checks active swarm for current LANDMARK
+_SwarmWildmonCheck: ;checks active swarms for current LANDMARK
 	call CopyCurrLandmarkDE
 	ld a, [wSwarmMapGroup]
 	cp d
