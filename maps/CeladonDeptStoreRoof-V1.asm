@@ -111,203 +111,22 @@ CeladonDeptStoreRoofGirlScript:
 	opentext
 	writetext CeladonDeptStoreRoofGirlText
 	yesorno
-	iffalse .no_drink
-	checkitem FRESH_WATER
-	iftrue .own_water
-	checkitem SODA_POP
-	iftrue .own_soda
-	checkitem LEMONADE
-	iftrue .ask_lemonade
-	writetext CeladonDeptStoreRoofNoYouDontText
-	waitbutton
+	iffalse .End
+	writetext CeladonSeptStoreRoofGiveWhichDrinkText
+	loadmenu .GirlMenuHeader
+	verticalmenu
+	closewindow
+	ifequal 1, .GiveFreshWater
+	ifequal 2, .GiveSodaPop
+	ifequal 3, .GiveLemonade
+.End:
 	closetext
 	end
-
-.own_water
-	checkitem SODA_POP
-	iftrue .own_water_and_soda
-	checkitem LEMONADE
-	iftrue .ask_water_lemonade
-	jump .ask_water
-
-.own_soda
-	checkitem LEMONADE
-	iftrue .ask_soda_lemonade
-	jump .ask_soda
-
-.own_water_and_soda
-	checkitem LEMONADE
-	iftrue .ask_water_soda_lemonade
-	loadmenu .WaterSodaMenuDataHeader
-	verticalmenu
-	closewindow
-	ifequal $1, .IsFreshWater
-	ifequal $2, .IsSodaPop
-	jump .no_drink
-
-.ask_water
-	loadmenu .WaterMenuDataHeader
-	verticalmenu
-	closewindow
-	ifequal $1, .IsFreshWater
-	jump .no_drink
-
-.ask_soda
-	loadmenu .SodaMenuDataHeader
-	verticalmenu
-	closewindow
-	ifequal $1, .IsSodaPop
-	jump .no_drink
-
-.ask_lemonade
-	loadmenu .LemonadeMenuDataHeader
-	verticalmenu
-	closewindow
-	ifequal $1, .IsLemonade
-	jump .no_drink
-
-.ask_water_lemonade
-	loadmenu .WaterLemonadeMenuDataHeader
-	verticalmenu
-	closewindow
-	ifequal $1, .IsFreshWater
-	ifequal $2, .IsLemonade
-	jump .no_drink
-
-.ask_soda_lemonade
-	loadmenu .SodaLemonadeMenuDataHeader
-	verticalmenu
-	closewindow
-	ifequal $1, .IsSodaPop
-	ifequal $2, .IsLemonade
-	jump .no_drink
-
-.ask_water_soda_lemonade
-	loadmenu .WaterSodaLemonadeMenuDataHeader
-	verticalmenu
-	closewindow
-	ifequal $1, .IsFreshWater
-	ifequal $2, .IsSodaPop
-	ifequal $3, .IsLemonade
-	; fallthrough
-
-.no_drink
-	writetext CeladonDeptStoreRoofTooBadText
-	waitbutton
-	closetext
-	end
-
-.WaterMenuDataHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 14, 6
-	dw .WaterMenuData
-	db 1 ; default option
-
-.WaterMenuData:
-	db STATICMENU_CURSOR ; flags
-	db 2 ; items
-	db "FRESH WATER@"
-	db "CANCEL@"
-
-.SodaMenuDataHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 12, 6
-	dw .SodaMenuData
-	db 1 ; default option
-
-.SodaMenuData:
-	db STATICMENU_CURSOR ; flags
-	db 2 ; items
-	db "SODA POP@"
-	db "CANCEL@"
-
-.LemonadeMenuDataHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 12, 6
-	dw .LemonadeMenuData
-	db 1 ; default option
-
-.LemonadeMenuData:
-	db STATICMENU_CURSOR ; flags
-	db 2 ; items
-	db "LEMONADE@"
-	db "CANCEL@"
-
-.WaterSodaMenuDataHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 14, 8
-	dw .WaterSodaMenuData
-	db 1 ; default option
-
-.WaterSodaMenuData:
-	db STATICMENU_CURSOR ; flags
-	db 3 ; items
-	db "FRESH WATER@"
-	db "SODA POP@"
-	db "CANCEL@"
-
-.WaterLemonadeMenuDataHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 14, 8
-	dw .WaterLemonadeMenuData
-	db 1 ; default option
-
-.WaterLemonadeMenuData:
-	db STATICMENU_CURSOR ; flags
-	db 3 ; items
-	db "FRESH WATER@"
-	db "LEMONADE@"
-	db "CANCEL@"
-
-.SodaLemonadeMenuDataHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 12, 8
-	dw .SodaLemonadeMenuData
-	db 1 ; default option
-
-.SodaLemonadeMenuData:
-	db STATICMENU_CURSOR ; flags
-	db 3 ; items
-	db "SODA POP@"
-	db "LEMONADE@"
-	db "CANCEL@"
-
-.WaterSodaLemonadeMenuDataHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 14, 10
-	dw .WaterSodaLemonadeMenuData
-	db 1 ; default option
-
-.WaterSodaLemonadeMenuData:
-	db STATICMENU_CURSOR ; flags
-	db 4 ; items
-	db "FRESH WATER@"
-	db "SODA POP@"
-	db "LEMONADE@"
-	db "CANCEL@"
-
-.IsFreshWater:
-	getitemname STRING_BUFFER_3, FRESH_WATER
-	writetext CeladonDeptStoreRoofCanHaveText
-	yesorno
-	iffalse .no_drink
-	sjump .GiveFreshWater
-
-.IsSodaPop:
-	getitemname STRING_BUFFER_3, SODA_POP
-	writetext CeladonDeptStoreRoofCanHaveText
-	yesorno
-	iffalse .no_drink
-	sjump .GiveSodaPop
-
-.IsLemonade:
-	getitemname STRING_BUFFER_3, LEMONADE
-	writetext CeladonDeptStoreRoofCanHaveText
-	yesorno
-	iffalse .no_drink
-	sjump .GiveLemonade
 
 .GiveFreshWater:
+	getitemname STRING_BUFFER_3, FRESH_WATER
+	checkitem FRESH_WATER
+	iffalse .NoDrink
 	checkevent EVENT_GOT_TM53_ICY_WIND
 	iftrue .GotTM
 	takeitem FRESH_WATER, 1
@@ -321,6 +140,9 @@ CeladonDeptStoreRoofGirlScript:
 	end
 
 .GiveSodaPop:
+	getitemname STRING_BUFFER_3, SODA_POP
+	checkitem SODA_POP
+	iffalse .NoDrink
 	checkevent EVENT_GOT_TM48_ROCK_SLIDE
 	iftrue .GotTM
 	takeitem SODA_POP, 1
@@ -334,6 +156,9 @@ CeladonDeptStoreRoofGirlScript:
 	end
 
 .GiveLemonade:
+	getitemname STRING_BUFFER_3, LEMONADE
+	checkitem LEMONADE
+	iffalse .NoDrink
 	checkevent EVENT_GOT_TM49_TRI_ATTACK
 	iftrue .GotTM
 	takeitem LEMONADE, 1
@@ -346,32 +171,50 @@ CeladonDeptStoreRoofGirlScript:
 	closetext
 	end
 
+.NoDrink:
+	writetext CeladonDeptStoreRoofNoDrinkText
+	waitbutton
+	closetext
+	end
+
 .GotTM:
 	writetext CeladonDeptStoreRoofNoThanksText
 	waitbutton
 	closetext
 	end
 
+.GirlMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 2, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	dw .GirlMenuData
+	db 1 ; default option
+
+.GirlMenuData:
+	db STATICMENU_CURSOR ; flags
+	db 4 ; items
+	db "FRESH WATER@"
+	db "SODA POP@"
+	db "LEMONADE@"
+	db "CANCEL@"
+
 CeladonDeptStoreRoofGirlText:
 	text "I'm thirsty! Do"
-	line "Do you have any-"
-	cont "thing to drink?"
+	line "you have anything"
+	cont "to drink?"
 	done
 
-CeladonDeptStoreRoofNoYouDontText:
-	text "No you don't!"
+CeladonSeptStoreRoofGiveWhichDrinkText:
+	text "Give her which"
+	line "drink?"
 	done
 
-CeladonDeptStoreRoofTooBadText:
-	text "Oh."
-	line "That's too bad."
-	done
-
-CeladonDeptStoreRoofCanHaveText:
-	text "I can have this"
-	line "@"
+CeladonDeptStoreRoofNoDrinkText:
+	text "<PLAYER> doesn't"
+	line "have any"
+	cont "@"
 	text_ram wStringBuffer3
-	text "?"
+	text ""
+	cont "to give!"
 	done
 
 CeladonDeptStoreRoofGaveDrinkText:
