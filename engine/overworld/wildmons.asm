@@ -31,11 +31,23 @@ LoadWildMonData:
 	ld [wWaterEncounterRate], a
 	ret
 
-GetTimeOfDayNotEve:
+;GetTimeOfDayNotEve:
+;	ld a, [wTimeOfDay]
+;	cp EVE_F
+;	ret nz
+;	ld a, DAY_F ; ld a, DAY_F to make evening use day encounters or NITE_F to make evening use nite encounters
+;	ret
+
+GetTimeDayOrNite:
 	ld a, [wTimeOfDay]
-	cp EVE_F
-	ret nz
-	ld a, DAY_F ; ld a, DAY_F to make evening use day encounters or NITE_F to make evening use nite encounters
+	cp MORN_F ; if morning, use 1st (morn/day/eve) encoutners
+	ret z
+	dec a     ; dec time of day value
+	cp MORN_F ; if MORN now, actual time is DAY, use 1st (morn/day/eve) encounters
+	ret z
+	cp DAY_F  ; if DAY now, actual time is NITE, use 2nd (nite) encounters
+	ret z
+	ld a, MORN_F ; must be NITE now, actual time is EVE, use 1st (morn/day/eve) encounters
 	ret
 
 FindNest:
@@ -107,7 +119,8 @@ FindNest:
 	inc hl
 	inc hl
 	inc hl
-	ld a, NUM_GRASSMON * 3
+;	ld a, NUM_GRASSMON * 3
+	ld a, NUM_GRASSMON * 2 ; only day/nite encounter tables
 	call .SearchMapForMon
 	jr nc, .next_grass
 	ld [de], a
@@ -314,7 +327,8 @@ ChooseWildEncounter:
 	jr z, .watermon
 	inc hl
 	inc hl
-	call GetTimeOfDayNotEve
+;	call GetTimeOfDayNotEve
+	call GetTimeDayOrNite
 	ld bc, NUM_GRASSMON * 2
 	call AddNTimes
 	ld de, GrassMonProbTable
@@ -1042,7 +1056,8 @@ RandomUnseenWildMon:
 	push hl
 	ld bc, 5 + 4 * 2 ; Location of the level of the 5th wild Pokemon in that map
 	add hl, bc
-	call GetTimeOfDayNotEve
+;	call GetTimeOfDayNotEve
+	call GetTimeDayOrNite
 	ld bc, NUM_GRASSMON * 2
 	call AddNTimes
 .randloop1
@@ -1127,7 +1142,8 @@ RandomPhoneWildMon:
 .ok
 	ld bc, 5 + 0 * 2
 	add hl, bc
-	call GetTimeOfDayNotEve
+;	call GetTimeOfDayNotEve
+	call GetTimeDayOrNite
 	inc a
 	ld bc, NUM_GRASSMON * 2
 .loop
