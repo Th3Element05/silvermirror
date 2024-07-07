@@ -66,8 +66,12 @@ LancesRoomLanceScript:
 	dontrestartmapmusic
 	reloadmapafterbattle
 	setevent EVENT_BEAT_E4_LANCE
+	playmusic MUSIC_GYM_VICTORY
 	opentext
-	writetext LanceBattleAfterText
+	writetext LanceBattleAfterText_1
+	promptbutton
+	special FadeOutMusic
+	writetext LanceBattleAfterText_2
 	waitbutton
 	closetext
 	playsound SFX_ENTER_DOOR
@@ -181,7 +185,7 @@ LancesRoomRivalBattleScript:
 ;	disappear PLAYER
 	applymovement PLAYER, Movement_CameraPansUp
 	pause 20
-	warpfacing UP, HALL_OF_FAME, 4, 13
+	warpfacing UP, HALL_OF_FAME, 4, 9
 	end
 
 LanceScript_AfterBattle:
@@ -306,7 +310,7 @@ LanceBattleWinText:
 	cont "#MON master!"
 	done
 
-LanceBattleAfterText:
+LanceBattleAfterText_1:
 	text "I still can't"
 	line "believe my"
 	cont "dragons lost to"
@@ -315,8 +319,10 @@ LanceBattleAfterText:
 	para "You are now the"
 	line "#MON LEAGUE"
 	cont "champion!"
+	done
 
-	para "...Or, you would"
+LanceBattleAfterText_2:
+	text "...Or, you would"
 	line "have been, but"
 	cont "you have one more"
 	cont "challenge ahead."
