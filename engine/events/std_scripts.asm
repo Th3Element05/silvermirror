@@ -2472,6 +2472,222 @@ SilphCoOpenDoorScript::
 	playsound SFX_TALLY
 	farjumptext SilphCo_BingoText
 
+SaffronGateClosedScript::
+	opentext
+	farwritetext SaffronGateClosedText
+	checkitem FRESH_WATER
+	iftrue .own_water
+	checkitem SODA_POP
+	iftrue .own_soda
+	checkitem LEMONADE
+	iftrue .ask_lemonade
+	waitbutton
+.no_drink
+	closetext
+	end
+
+.own_water
+	checkitem SODA_POP
+	iftrue .own_water_and_soda
+	checkitem LEMONADE
+	iftrue .ask_water_lemonade
+	jump .ask_water
+
+.own_soda
+	checkitem LEMONADE
+	iftrue .ask_soda_lemonade
+	jump .ask_soda
+
+.own_water_and_soda
+	checkitem LEMONADE
+	iftrue .ask_water_soda_lemonade
+	loadmenu .WaterSodaMenuDataHeader
+	verticalmenu
+	closewindow
+	ifequal $1, .IsFreshWater
+	ifequal $2, .IsSodaPop
+	jump .no_drink
+
+.ask_water
+	loadmenu .WaterMenuDataHeader
+	verticalmenu
+	closewindow
+	ifequal $1, .IsFreshWater
+	jump .no_drink
+
+.ask_soda
+	loadmenu .SodaMenuDataHeader
+	verticalmenu
+	closewindow
+	ifequal $1, .IsSodaPop
+	jump .no_drink
+
+.ask_lemonade
+	loadmenu .LemonadeMenuDataHeader
+	verticalmenu
+	closewindow
+	ifequal $1, .IsLemonade
+	jump .no_drink
+
+.ask_water_lemonade
+	loadmenu .WaterLemonadeMenuDataHeader
+	verticalmenu
+	closewindow
+	ifequal $1, .IsFreshWater
+	ifequal $2, .IsLemonade
+	jump .no_drink
+
+.ask_soda_lemonade
+	loadmenu .SodaLemonadeMenuDataHeader
+	verticalmenu
+	closewindow
+	ifequal $1, .IsSodaPop
+	ifequal $2, .IsLemonade
+	jump .no_drink
+
+.ask_water_soda_lemonade
+	loadmenu .WaterSodaLemonadeMenuDataHeader
+	verticalmenu
+	closewindow
+	ifequal $1, .IsFreshWater
+	ifequal $2, .IsSodaPop
+	ifequal $3, .IsLemonade
+	; fallthrough
+
+;.no_drink
+;	farwritetext SaffronGateTooBadText
+;	waitbutton
+;	closetext
+;	end
+
+.WaterMenuDataHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 0, 14, 6
+	dw .WaterMenuData
+	db 1 ; default option
+
+.WaterMenuData:
+	db STATICMENU_CURSOR ; flags
+	db 2 ; items
+	db "FRESH WATER@"
+	db "CANCEL@"
+
+.SodaMenuDataHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 0, 12, 6
+	dw .SodaMenuData
+	db 1 ; default option
+
+.SodaMenuData:
+	db STATICMENU_CURSOR ; flags
+	db 2 ; items
+	db "SODA POP@"
+	db "CANCEL@"
+
+.LemonadeMenuDataHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 0, 12, 6
+	dw .LemonadeMenuData
+	db 1 ; default option
+
+.LemonadeMenuData:
+	db STATICMENU_CURSOR ; flags
+	db 2 ; items
+	db "LEMONADE@"
+	db "CANCEL@"
+
+.WaterSodaMenuDataHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 0, 14, 8
+	dw .WaterSodaMenuData
+	db 1 ; default option
+
+.WaterSodaMenuData:
+	db STATICMENU_CURSOR ; flags
+	db 3 ; items
+	db "FRESH WATER@"
+	db "SODA POP@"
+	db "CANCEL@"
+
+.WaterLemonadeMenuDataHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 0, 14, 8
+	dw .WaterLemonadeMenuData
+	db 1 ; default option
+
+.WaterLemonadeMenuData:
+	db STATICMENU_CURSOR ; flags
+	db 3 ; items
+	db "FRESH WATER@"
+	db "LEMONADE@"
+	db "CANCEL@"
+
+.SodaLemonadeMenuDataHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 0, 12, 8
+	dw .SodaLemonadeMenuData
+	db 1 ; default option
+
+.SodaLemonadeMenuData:
+	db STATICMENU_CURSOR ; flags
+	db 3 ; items
+	db "SODA POP@"
+	db "LEMONADE@"
+	db "CANCEL@"
+
+.WaterSodaLemonadeMenuDataHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 0, 14, 10
+	dw .WaterSodaLemonadeMenuData
+	db 1 ; default option
+
+.WaterSodaLemonadeMenuData:
+	db STATICMENU_CURSOR ; flags
+	db 4 ; items
+	db "FRESH WATER@"
+	db "SODA POP@"
+	db "LEMONADE@"
+	db "CANCEL@"
+
+.IsFreshWater:
+	getitemname STRING_BUFFER_3, FRESH_WATER
+	farwritetext SaffronGateCanHaveDrinkText
+	promptbutton
+	takeitem FRESH_WATER, 1
+	farwritetext SaffronGateGiveDrinkText
+	promptbutton
+	sjump .SaffronGateOpenScript
+
+.IsSodaPop:
+	getitemname STRING_BUFFER_3, SODA_POP
+	farwritetext SaffronGateCanHaveDrinkText
+	promptbutton
+	takeitem SODA_POP, 1
+	farwritetext SaffronGateGiveDrinkText
+	promptbutton
+	sjump .SaffronGateOpenScript
+
+.IsLemonade:
+	getitemname STRING_BUFFER_3, LEMONADE
+	farwritetext SaffronGateCanHaveDrinkText
+	promptbutton
+	takeitem LEMONADE, 1
+	farwritetext SaffronGateGiveDrinkText
+	promptbutton
+	sjump .SaffronGateOpenScript
+
+.SaffronGateOpenScript:
+	playsound SFX_POTION
+	farwritetext SaffronGateOpenText
+	waitbutton
+	closetext
+	setevent EVENT_GAVE_SAFFRON_GUARD_DRINK
+	setmapscene ROUTE_5_SAFFRON_GATE, SCENE_ROUTE5GATE_NOOP
+	setmapscene ROUTE_6_SAFFRON_GATE, SCENE_ROUTE6GATE_NOOP
+	setmapscene ROUTE_7_SAFFRON_GATE, SCENE_ROUTE7GATE_NOOP
+	setmapscene ROUTE_8_SAFFRON_GATE, SCENE_ROUTE8GATE_NOOP
+	end
+
 Movement_ContestResults_WalkAfterWarp:
 	step RIGHT
 	step DOWN

@@ -51,108 +51,14 @@ Route8GateStopScript4:
 	closetext
 	applymovement PLAYER, Route8GateStopMovement4
 	; fallthrough
+
 Route8GateClosedScript:
-	opentext
-	writetext Route8GateClosedText
-	waitbutton
-	checkitem FRESH_WATER
-	iftrue .FreshWater
-	checkitem SODA_POP
-	iftrue .SodaPop
-	checkitem LEMONADE
-	iftrue .Lemonade
-	; else
-	closetext
-	end
-
-.FreshWater
-	getitemname STRING_BUFFER_3, FRESH_WATER
-	writetext Route8GateHaveDrinkText
-	promptbutton
-	takeitem FRESH_WATER, 1
-	writetext Route8GateGiveDrinkText
-	promptbutton
-	sjump Route8GateOpenScript
-
-.SodaPop
-	getitemname STRING_BUFFER_3, SODA_POP
-	writetext Route8GateHaveDrinkText
-	promptbutton
-	takeitem SODA_POP, 1
-	writetext Route8GateGiveDrinkText
-	promptbutton
-	sjump Route8GateOpenScript
-
-.Lemonade
-	getitemname STRING_BUFFER_3, LEMONADE
-	writetext Route8GateHaveDrinkText
-	promptbutton
-	takeitem LEMONADE, 1
-	writetext Route8GateGiveDrinkText
-	promptbutton
-	; fallthrough
-Route8GateOpenScript:
-	playsound SFX_POTION
-	writetext Route8GateOpenText
-	waitbutton
-	closetext
-	setevent EVENT_GAVE_SAFFRON_GUARD_DRINK
-	setscene SCENE_ROUTE5GATE_NOOP
-	setscene SCENE_ROUTE6GATE_NOOP
-	setscene SCENE_ROUTE7GATE_NOOP
-	setscene SCENE_ROUTE8GATE_NOOP
+	farscall SaffronGateClosedScript
 	end
 
 Route8GateStopText:
 	text "Wait, stop! The"
 	line "road is closed!"
-	done
-
-Route8GateClosedText:
-	text "TEAM ROCKET is"
-	line "causing trouble"
-	cont "in SAFFRON CITY."
-
-	para "I'm on guard duty."
-	line "You can't go"
-	cont "through."
-
-	para "Gee, I'm thirsty,"
-	line "though!"
-	done
-
-Route8GateHaveDrinkText:
-	text "..."
-	line "Huh? I can have"
-	cont "this drink?"
-
-	para "Gee, thanks!"
-	done
-
-Route8GateGiveDrinkText:
-	text "<PLAYER> gave"
-	line "@"
-	text_ram wStringBuffer3
-	text "!"
-	done
-
-Route8GateOpenText:
-	text "..."
-	line "Glug glug..."
-	cont "..."
-	cont "Gulp..."
-
-	para "If you want to go"
-	line "to SAFFRON CITY..."
-
-	para "You can go on"
-	line "through. I'll"
-	cont "share this with"
-	cont "the other guards!"
-	
-	para "Just be careful"
-	line "with TEAM ROCKET"
-	cont "around!"
 	done
 
 Route8GateThanksText:
