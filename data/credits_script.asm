@@ -8,7 +8,7 @@ CreditsScript:
 	db        POKEMON_TITLE, 1
 	db         SILVERMIRROR, 2
 
-	db CREDITS_WAIT, 8
+	db CREDITS_WAIT, 20
 
 ; Play the credits music.
 	db CREDITS_MUSIC
@@ -60,7 +60,7 @@ CreditsScript:
 ;	db     SHIGEKI_MORIMOTO, 3
 ;	db     HIRONOBU_YOSHIDA, 4
 
-	db CREDITS_WAIT, 12
+	db CREDITS_WAIT, 32
 
 ;	db       MONSTER_DESIGN, 0
 ;	db         SATOSHI_OOTA, 1
@@ -74,7 +74,7 @@ CreditsScript:
 ;	db     HIRONOBU_YOSHIDA, 2
 ;	db          JUN_OKUTANI, 3
 
-	db CREDITS_WAIT, 12
+	db CREDITS_WAIT, 32
 
 	db         SILVERMIRROR, 1
 	db    POKEMON_ANIMATION, 2
@@ -101,7 +101,7 @@ CreditsScript:
 	db         TH3ELEMENT05, 3
 	db            SOURAPPLE, 4
 
-	db CREDITS_WAIT, 12
+	db CREDITS_WAIT, 32
 
 ;	db         CREDIT_MUSIC, 0
 ;	db       JUNICHI_MASUDA, 1
@@ -135,7 +135,7 @@ CreditsScript:
 	db          GAME_DESIGN, 2
 	db         TH3ELEMENT05, 3
 
-	db CREDITS_WAIT, 12
+	db CREDITS_WAIT, 32
 
 ;	db        GAME_SCENARIO, 0
 ;	db       JUNICHI_MASUDA, 1
@@ -200,7 +200,7 @@ CreditsScript:
 	db         TH3ELEMENT05, 3
 	db            SOURAPPLE, 4
 
-	db CREDITS_WAIT, 12
+	db CREDITS_WAIT, 32
 
 ;	db         COORDINATION, 1
 ;	db      HIROYUKI_ZINNAI, 2
@@ -224,7 +224,7 @@ CreditsScript:
 	db         BLEEPERWAGON, 3
 ;	db               EXKZOL, 4
 
-	db CREDITS_WAIT, 12
+	db CREDITS_WAIT, 32
 
 ; Clear the banner.
 	db CREDITS_CLEAR
@@ -321,13 +321,13 @@ CreditsScript:
 	db       SPECIAL_THANKS, 0
 	db             SHOUTOUT, 1
 
-	db CREDITS_WAIT, 12
+	db CREDITS_WAIT, 64
 
 	db          SOURCRYSTAL, 1
 	db              CREATOR, 2
 	db            SOURAPPLE, 3
 
-	db CREDITS_WAIT, 12
+	db CREDITS_WAIT, 32
 
 	db          SOURCRYSTAL, 1
 	db         CONTRIBUTORS, 2
@@ -338,11 +338,11 @@ CreditsScript:
 ;	db                PFERO, 4
 ;	db                 ZUMI, 5
 
-	db CREDITS_WAIT, 12
+	db CREDITS_WAIT, 32
 
 	db            COPYRIGHT, 1
 
-	db CREDITS_WAIT, 9
+	db CREDITS_WAIT, 12
 
 ; Display "The End" graphic.
 	db CREDITS_THEEND
