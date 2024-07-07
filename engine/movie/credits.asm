@@ -293,8 +293,8 @@ ParseCredits:
 	cp COPYRIGHT
 	jr z, .copyright
 
-	cp STAFF
-	jr c, .staff
+;	cp STAFF
+;	jr c, .staff
 
 ; The rest start from line 6.
 
@@ -305,8 +305,8 @@ ParseCredits:
 	hlcoord 2, 6
 	jr .print
 
-.staff
-	hlcoord 0, 6
+;.staff
+;	hlcoord 0, 6
 
 .print
 ; Print strings spaced every two lines.
