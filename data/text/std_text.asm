@@ -419,14 +419,61 @@ PokecenterReceptionistText: ;silvermirror+
 	cont "Storage Systems!"
 	done
 
-SilphCo_NoCardKeyText:
+SilphCo_NoCardKeyText: ;silvermirror+
 	text "Darn! It needs"
 	line "a CARD KEY!"
 	done
 
-SilphCo_BingoText:
+SilphCo_BingoText: ;silvermirror+
 	text "Bingo!"
 
 	para "The CARD KEY"
 	line "opened the door!"
+	done
+
+SaffronGateClosedText: ;silvermirror+
+	text "TEAM ROCKET is"
+	line "causing trouble"
+	cont "in SAFFRON CITY."
+
+	para "I'm on guard duty."
+	line "You can't go"
+	cont "through."
+
+	para "Gee, I'm thirsty,"
+	line "though!"
+	done
+
+SaffronGateCanHaveDrinkText: ;silvermirror+
+	text "..."
+	line "Huh? I can have"
+	cont "this drink?"
+
+	para "Gee, thanks!"
+	done
+
+SaffronGateGiveDrinkText: ;silvermirror+
+	text "<PLAYER> gave"
+	line "@"
+	text_ram wStringBuffer3
+	text "!"
+	done
+
+SaffronGateOpenText: ;silvermirror+
+	text "..."
+	line "Glug glug..."
+	cont "..."
+	cont "Gulp..."
+
+	para "If you want to go"
+	line "to SAFFRON CITY..."
+
+	para "You can go on"
+	line "through. I'll"
+	cont "share this with"
+	cont "the other guards!"
+	
+	para "Just be careful"
+	line "with TEAM ROCKET"
+	cont "around!"
 	done
