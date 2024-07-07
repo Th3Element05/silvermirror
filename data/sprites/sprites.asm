@@ -24,7 +24,7 @@ OverworldSprites:
 	overworld_sprite BlaineSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
 	overworld_sprite GiovanniSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
 	overworld_sprite LoreleiSpriteGFX, 12, STANDING_SPRITE, PAL_OW_RED
-	overworld_sprite BrunoSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite BrunoSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
 	overworld_sprite AgathaSpriteGFX, 12, STANDING_SPRITE, PAL_OW_GREEN
 	overworld_sprite LanceSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
 	overworld_sprite FalknerSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
