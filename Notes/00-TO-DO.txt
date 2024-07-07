@@ -11,6 +11,7 @@ AddNTimes::
 
 TEST to-do
 
+DISABLE FISHING ON CYCLING ROAD! can you fish on cycling road? 
 pokeflute do awakening effect?
 copycat script
 E4LancesRoom, playmapmusic after intro rival
@@ -31,7 +32,7 @@ test STRENGTH with/without rainbowbadge
 
 TO-DO to-do
 
-
+Still need to do water route swarms, 19, 20, VERMILION
 
 Finish Bills House give stuff/SS Anne access.
 
