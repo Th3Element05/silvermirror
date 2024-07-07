@@ -30,17 +30,6 @@ BillsHouseBillScript:
 	playsound SFX_ENTER_DOOR
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
 	end
-;	readvar VAR_FACING
-;	ifequal LEFT, .BillWalkAroundPlayer
-;	applymovement BILLSHOUSE_BILL, BillsHouseBillEntersTeleporterMovement
-;	playsound SFX_ENTER_DOOR
-;	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
-;	end
-;.BillWalkAroundPlayer
-;	applymovement BILLSHOUSE_BILL, BillsHouseBillWalksAroundPlayerMovement
-;	playsound SFX_ENTER_DOOR
-;	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
-;	end
 
 .BillInsideTeleporter
 	jumptext BillsHouseBillInsideTeleporterText
@@ -51,7 +40,6 @@ BillsHouseBillScript:
 	jumptextfaceplayer BillsHouseBillShipText
 .GotCut
 	jumptextfaceplayer BillsHouseBillExplainRadioCardText
-
 
 BillsHouseBillGoesToTeleporterScript:
 	readvar VAR_FACING
@@ -257,10 +245,6 @@ BillsHouseBillExplainRadioCardText:
 	line "a listen sometime!"
 	done
 
-
-
-
-
 BillsHouseBillShipText:
 	text "The cruise ship,"
 	line "S.S.ANNE, is in"
@@ -282,11 +266,6 @@ BillsHouseComputerWrongSideText:
 BillsHouseComputerCodeText:
 	text "Bill's computer"
 	line "has code on it."
-
-	para "ld a, [wBill]"
-	line "ld c, a"
-	cont "call #MONDNA"
-	cont "ret"
 
 	para "What does it mean?"
 	done
