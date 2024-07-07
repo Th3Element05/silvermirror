@@ -235,9 +235,9 @@ SwarmGrassWildMonsChallenge:
 	db 15, EKANS      ; 10% chance
 	db 16, SPEAROW    ; 10% chance 10
 	db 15, SANDSHREW  ;  5% chance
-	db 15, HOPPIP     ;  5% chance 10
-	db 15, HOPPIP     ;  4% chance
-	db 15, HOPPIP     ;  1% chance
+	db 10, HOPPIP     ;  5% chance 10
+	db 10, HOPPIP     ;  4% chance
+	db 10, HOPPIP     ;  1% chance
 	; day
 	db 15, DROWZEE    ; 20% chance 40
 	db 15, DROWZEE    ; 20% chance
@@ -246,9 +246,9 @@ SwarmGrassWildMonsChallenge:
 	db 15, EKANS      ; 10% chance
 	db 16, SPEAROW    ; 10% chance 10
 	db 15, SANDSHREW  ;  5% chance
-	db 15, HOPPIP     ;  5% chance 10
-	db 15, HOPPIP     ;  4% chance
-	db 15, HOPPIP     ;  1% chance
+	db 10, HOPPIP     ;  5% chance 10
+	db 10, HOPPIP     ;  4% chance
+	db 10, HOPPIP     ;  1% chance
 	; nite
 	db 15, DROWZEE    ; 20% chance 40
 	db 15, DROWZEE    ; 20% chance
