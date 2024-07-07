@@ -417,7 +417,7 @@ KantoGrassWildMonsChallenge:
 	db 16, SPEAROW    ; 15% chance 25
 	db 15, SANDSHREW  ; 10% chance
 	db 15, EKANS      ; 10% chance
-	db 15, HOPPIP     ; 10% chance 10
+	db 10, HOPPIP     ; 10% chance 10
 	db 16, SPEAROW    ;  5% chance
 	db 16, SPEAROW    ;  5% chance
 	db 16, SPEAROW    ;  4% chance
@@ -428,7 +428,7 @@ KantoGrassWildMonsChallenge:
 	db 16, SPEAROW    ; 15% chance 25
 	db 15, SANDSHREW  ; 10% chance
 	db 15, EKANS      ; 10% chance
-	db 15, HOPPIP     ; 10% chance 10
+	db 10, HOPPIP     ; 10% chance 10
 	db 16, SPEAROW    ;  5% chance
 	db 16, SPEAROW    ;  5% chance
 	db 16, SPEAROW    ;  4% chance
