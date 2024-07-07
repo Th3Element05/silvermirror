@@ -99,26 +99,26 @@
 ;	const MOBILE_SYSTEM_AD
 ;	const MOBILE_STADIUM_DIR
 ;	const COORDINATION
-;	const COPYRIGHT
+	const COPYRIGHT
 ;	const US_VERSION_STAFF
 ;	const US_COORDINATION
 ;	const TEXT_TRANSLATION
 ;	const PAAD_TESTING
-	cosnt SILVERMIRROR
-	cosnt SOURCRYSTAL
-	cosnt CREATOR
-	cosnt CONTRIBUTORS
-	cosnt SHOUTOUT
-	cosnt TH3ELEMENT05
-	cosnt SOURAPPLE
-	cosnt RANGI
+	const SILVERMIRROR
+	const SOURCRYSTAL
+	const CREATOR
+	const CONTRIBUTORS
+	const SHOUTOUT
+	const TH3ELEMENT05
+	const SOURAPPLE
+	const RANGI
 	const RANGI_PFERO
-	cosnt VULCANDTH
+	const VULCANDTH
 	const VULCANDTH_ZUMI
-	cosnt PFERO
-	cosnt ZUMI
-	cosnt BLEEPERWAGON
-	cosnt EXKZOL
+	const PFERO
+	const ZUMI
+	const BLEEPERWAGON
+	const EXKZOL
 DEF NUM_CREDITS_STRINGS EQU const_value
 
 ; CreditsScript indexes (see data/credits_script.asm)

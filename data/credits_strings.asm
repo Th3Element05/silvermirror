@@ -99,7 +99,7 @@ CreditsStringsPointers:
 ;	dw .MobileSystemAd
 ;	dw .MobileStadiumDir
 ;	dw .Coordination
-;	dw .Copyright
+	dw .Copyright
 ;	dw .UsVersionStaff
 ;	dw .UsCoordination
 ;	dw .TextTranslation
@@ -248,8 +248,7 @@ CreditsStringsPointers:
 ;                      ; "12345678901234567890@" max length (screen width)
 ;                      ; up to 5 lines per page
 ;"12345678901234567890@"
- " Rangi        pfero
- " Vulcandth     Zumi
+
 .Copyright:
 	;    (C) 1  9  9  5 - 2  0  0  1     N  i  n  t  e  n  d  o
 	db   $60,$61,$62,$63,$64,$65,$66,$67,$68,$69,$6a,$6b,$6c

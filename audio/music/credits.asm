@@ -1,10 +1,17 @@
-Music_RBYCredits::
+;Music_RBYCredits::
+;	channel_count 3
+;	channel 1, Music_RBYCredits_Ch1
+;	channel 2, Music_RBYCredits_Ch2
+;	channel 3, Music_RBYCredits_Ch3
+;
+;Music_RBYCredits_Ch1::
+Music_Credits::
 	channel_count 3
-	channel 1, Music_RBYCredits_Ch1
-	channel 2, Music_RBYCredits_Ch2
-	channel 3, Music_RBYCredits_Ch3
+	channel 1, Music_Credits_Ch1
+	channel 2, Music_Credits_Ch2
+	channel 3, Music_Credits_Ch3
 
-Music_RBYCredits_Ch1::
+Music_Credits_Ch1::
 	tempo 140
 	volume 7, 7
 	duty_cycle 3
@@ -290,7 +297,7 @@ Music_RBYCredits_Ch1::
 	sound_ret
 
 
-Music_RBYCredits_Ch2::
+Music_Credits_Ch2::
 	duty_cycle 3
 	vibrato 10, 2, 5
 	note_type 12, 12, 5
@@ -580,7 +587,7 @@ Music_RBYCredits_Ch2::
 	sound_ret
 
 
-Music_RBYCredits_Ch3::
+Music_Credits_Ch3::
 	note_type 12, 1, 0
 	octave 5
 	note C#, 6
@@ -603,9 +610,9 @@ Music_RBYCredits_Ch3::
 	note A_, 1
 	rest 15
 	rest 16
-	sound_call Music_RBYCredits_branch_7ffa4
-	sound_call Music_RBYCredits_branch_7ffae
-	sound_call Music_RBYCredits_branch_7ffa4
+	sound_call Music_Credits_branch_7ffa4
+	sound_call Music_Credits_branch_7ffae
+	sound_call Music_Credits_branch_7ffa4
 	octave 4
 	note E_, 2
 	note A_, 2
@@ -615,13 +622,13 @@ Music_RBYCredits_Ch3::
 	note F#, 2
 	note G_, 2
 	note A_, 2
-	sound_call Music_RBYCredits_branch_7ffa4
-	sound_call Music_RBYCredits_branch_7ffae
-	sound_call Music_RBYCredits_branch_7ffa4
-	sound_call Music_RBYCredits_branch_7ffa4
-	sound_call Music_RBYCredits_branch_7ffb8
-	sound_call Music_RBYCredits_branch_7ffb8
-	sound_call Music_RBYCredits_branch_7ffc1
+	sound_call Music_Credits_branch_7ffa4
+	sound_call Music_Credits_branch_7ffae
+	sound_call Music_Credits_branch_7ffa4
+	sound_call Music_Credits_branch_7ffa4
+	sound_call Music_Credits_branch_7ffb8
+	sound_call Music_Credits_branch_7ffb8
+	sound_call Music_Credits_branch_7ffc1
 	octave 4
 	note A_, 2
 	octave 5
@@ -637,34 +644,34 @@ Music_RBYCredits_Ch3::
 	octave 4
 	note B_, 2
 	note A_, 2
-	sound_call Music_RBYCredits_branch_7ffb8
-	sound_call Music_RBYCredits_branch_7ffb8
-	sound_call Music_RBYCredits_branch_7ffc1
-	sound_call Music_RBYCredits_branch_7ffc1
+	sound_call Music_Credits_branch_7ffb8
+	sound_call Music_Credits_branch_7ffb8
+	sound_call Music_Credits_branch_7ffc1
+	sound_call Music_Credits_branch_7ffc1
 	octave 4
 	note G_, 4
 	note A_, 4
 	note B_, 4
 	octave 5
 	note D_, 4
-	sound_call Music_RBYCredits_branch_7ffa4
-	sound_call Music_RBYCredits_branch_7ffa4
-	sound_call Music_RBYCredits_branch_7ffa4
-	sound_call Music_RBYCredits_branch_7ffa4
-	sound_call Music_RBYCredits_branch_7ffa4
-	sound_call Music_RBYCredits_branch_7ffa4
-	sound_call Music_RBYCredits_branch_7ffae
-	sound_call Music_RBYCredits_branch_7ffae
-	sound_call Music_RBYCredits_branch_7ffa4
+	sound_call Music_Credits_branch_7ffa4
+	sound_call Music_Credits_branch_7ffa4
+	sound_call Music_Credits_branch_7ffa4
+	sound_call Music_Credits_branch_7ffa4
+	sound_call Music_Credits_branch_7ffa4
+	sound_call Music_Credits_branch_7ffa4
+	sound_call Music_Credits_branch_7ffae
+	sound_call Music_Credits_branch_7ffae
+	sound_call Music_Credits_branch_7ffa4
 	note E_, 4
 	note A_, 2
 	note E_, 4
 	note A_, 2
 	note E_, 2
 	note A_, 2
-	sound_call Music_RBYCredits_branch_7ffae
-	sound_call Music_RBYCredits_branch_7ffae
-	sound_call Music_RBYCredits_branch_7ffa4
+	sound_call Music_Credits_branch_7ffae
+	sound_call Music_Credits_branch_7ffae
+	sound_call Music_Credits_branch_7ffa4
 	note E_, 2
 	note A_, 2
 	note E_, 2
@@ -673,10 +680,10 @@ Music_RBYCredits_Ch3::
 	note A_, 2
 	note G#, 2
 	note A_, 2
-	sound_call Music_RBYCredits_branch_7ffd2
-	sound_call Music_RBYCredits_branch_7ffd2
-	sound_call Music_RBYCredits_branch_7ffdb
-	sound_call Music_RBYCredits_branch_7ffdb
+	sound_call Music_Credits_branch_7ffd2
+	sound_call Music_Credits_branch_7ffd2
+	sound_call Music_Credits_branch_7ffdb
+	sound_call Music_Credits_branch_7ffdb
 	note F_, 2
 	note A_, 2
 	note F_, 2
@@ -693,8 +700,8 @@ Music_RBYCredits_Ch3::
 	note D_, 2
 	note E_, 2
 	note F_, 2
-	sound_call Music_RBYCredits_branch_7ffb8
-	sound_call Music_RBYCredits_branch_7ffb8
+	sound_call Music_Credits_branch_7ffb8
+	sound_call Music_Credits_branch_7ffb8
 	note E_, 4
 	note A_, 4
 	note E_, 4
@@ -703,16 +710,16 @@ Music_RBYCredits_Ch3::
 	note A_, 4
 	note E_, 4
 	note A_, 4
-	sound_call Music_RBYCredits_branch_7ffa4
-	sound_call Music_RBYCredits_branch_7ffa4
-	sound_call Music_RBYCredits_branch_7ffe4
-	sound_call Music_RBYCredits_branch_7ffe4
-	sound_call Music_RBYCredits_branch_7ffa4
-	sound_call Music_RBYCredits_branch_7ffa4
-	sound_call Music_RBYCredits_branch_7ffb8
-	sound_call Music_RBYCredits_branch_7ffb8
-	sound_call Music_RBYCredits_branch_7ffed
-	sound_call Music_RBYCredits_branch_7ffed
+	sound_call Music_Credits_branch_7ffa4
+	sound_call Music_Credits_branch_7ffa4
+	sound_call Music_Credits_branch_7ffe4
+	sound_call Music_Credits_branch_7ffe4
+	sound_call Music_Credits_branch_7ffa4
+	sound_call Music_Credits_branch_7ffa4
+	sound_call Music_Credits_branch_7ffb8
+	sound_call Music_Credits_branch_7ffb8
+	sound_call Music_Credits_branch_7ffed
+	sound_call Music_Credits_branch_7ffed
 	note A_, 1
 	rest 1
 	note A_, 1
@@ -723,7 +730,7 @@ Music_RBYCredits_Ch3::
 	rest 7
 	sound_ret
 
-Music_RBYCredits_branch_7ffa4::
+Music_Credits_branch_7ffa4::
 	octave 4
 	note E_, 2
 	note A_, 2
@@ -735,7 +742,7 @@ Music_RBYCredits_branch_7ffa4::
 	note A_, 2
 	sound_ret
 
-Music_RBYCredits_branch_7ffae::
+Music_Credits_branch_7ffae::
 	octave 4
 	note D_, 2
 	note G_, 2
@@ -747,7 +754,7 @@ Music_RBYCredits_branch_7ffae::
 	note G_, 2
 	sound_ret
 
-Music_RBYCredits_branch_7ffb8::
+Music_Credits_branch_7ffb8::
 	note G_, 2
 	note B_, 2
 	note G_, 2
@@ -758,11 +765,7 @@ Music_RBYCredits_branch_7ffb8::
 	note B_, 2
 	sound_ret
 
-Music_RBYCredits_branch_7ffc1::
-	octave 4
-	note A_, 2
-	octave 5
-	note C#, 2
+Music_Credits_branch_7ffc1::
 	octave 4
 	note A_, 2
 	octave 5
@@ -775,9 +778,13 @@ Music_RBYCredits_branch_7ffc1::
 	note A_, 2
 	octave 5
 	note C#, 2
+	octave 4
+	note A_, 2
+	octave 5
+	note C#, 2
 	sound_ret
 
-Music_RBYCredits_branch_7ffd2::
+Music_Credits_branch_7ffd2::
 	note D_, 2
 	note A_, 2
 	note D_, 2
@@ -788,7 +795,7 @@ Music_RBYCredits_branch_7ffd2::
 	note A_, 2
 	sound_ret
 
-Music_RBYCredits_branch_7ffdb::
+Music_Credits_branch_7ffdb::
 	note E_, 2
 	note G#, 2
 	note E_, 2
@@ -799,7 +806,7 @@ Music_RBYCredits_branch_7ffdb::
 	note G#, 2
 	sound_ret
 
-Music_RBYCredits_branch_7ffe4::
+Music_Credits_branch_7ffe4::
 	note E_, 2
 	note B_, 2
 	note E_, 2
@@ -810,7 +817,7 @@ Music_RBYCredits_branch_7ffe4::
 	note B_, 2
 	sound_ret
 
-Music_RBYCredits_branch_7ffed::
+Music_Credits_branch_7ffed::
 	note A_, 1
 	rest 1
 	note A_, 1
