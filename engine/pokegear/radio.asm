@@ -466,16 +466,16 @@ OaksPKMNTalk4:
 	push bc
 
 	; Search the JohtoGrassWildMons array for the chosen map.
-	ld hl, JohtoGrassWildMons
+	ld hl, KantoGrassWildMons ;JohtoGrassWildMons
 .loop
-	ld a, BANK(JohtoGrassWildMons)
+	ld a, BANK(KantoGrassWildMons) ;BANK(JohtoGrassWildMons)
 	call GetFarByte
 	cp -1
 	jr z, .overflow
 	inc hl
 	cp b
 	jr nz, .next
-	ld a, BANK(JohtoGrassWildMons)
+	ld a, BANK(KantoGrassWildMons) ;BANK(JohtoGrassWildMons)
 	call GetFarByte
 	cp c
 	jr z, .done
@@ -494,26 +494,26 @@ endr
 	; Can't pick 3 since evening does not have wild data.
 .loop2
 	call Random
-	maskbits NUM_DAYTIMES
+	maskbits NUM_DAYTIMES - 2
 	cp EVE_F
 	jr z, .loop2
 
 	ld bc, 2 * NUM_GRASSMON
 	call AddNTimes
 .loop3
-	; Choose one of the middle three Pokemon.
+	; Choose a pokemon ;Choose one of the middle three Pokemon.
 	call Random
 	maskbits NUM_GRASSMON
 	cp 2
 	jr c, .loop3
-	cp 5
+	cp 9
 	jr nc, .loop3
 	ld e, a
 	ld d, 0
 	add hl, de
 	add hl, de
 	inc hl ; skip level
-	ld a, BANK(JohtoGrassWildMons)
+	ld a, BANK(KantoGrassWildMons) ;BANK(JohtoGrassWildMons)
 	call GetFarByte
 	ld [wNamedObjectIndex], a
 	ld [wCurPartySpecies], a
