@@ -382,7 +382,7 @@ KantoGrassWildMons:
 	db 16, NIDORAN_F  ; 10% chance 10
 	db 16, SPEAROW    ; 10% chance 25
 	db 16, RATTATA    ;  5% chance 10
-	db 16, RATATTA    ;  5% chance
+	db 16, RATTATA    ;  5% chance
 	db 17, VOLTORB    ;  4% chance 5
 	db 17, VOLTORB    ;  1% chance
 	; day
@@ -393,7 +393,7 @@ KantoGrassWildMons:
 	db 16, NIDORAN_F  ; 10% chance 10
 	db 16, SPEAROW    ; 10% chance 25
 	db 16, RATTATA    ;  5% chance 10
-	db 16, RATATTA    ;  5% chance
+	db 16, RATTATA    ;  5% chance
 	db 17, VOLTORB    ;  4% chance 5
 	db 17, VOLTORB    ;  1% chance
 	; nite
