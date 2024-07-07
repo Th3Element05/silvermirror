@@ -228,7 +228,7 @@ CreditsStringsPointers:
 ;.TextTranslation:     db "  TEXT TRANSLATION@"
 ;.PaadTesting:         db "    PAAD TESTING@"
 .SilverMirror:        db "   SILVER MIRROR@"
-.SourCrystal:         db "    SOUR CRYSTAL"
+.SourCrystal:         db "    SOUR CRYSTAL@"
 .Creator:             db "      CREATOR@"
 .Contributors:        db "    CONTRIBUTORS@"
 .ShoutOut:            db "  To SourApple for"
