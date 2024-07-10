@@ -286,16 +286,16 @@ FuchsiaCity_MapEvents:
 	warp_event 18,  3, SAFARI_ZONE_ENTRANCE, 3     ; 1
 	warp_event  5, 15, FUCHSIA_MART, 1             ; 2
 	warp_event 22, 13, SAFARI_ZONE_MAIN_OFFICE, 1  ; 3
-	warp_event 37, 18, ROUTE_15_FUCHSIA_GATE, 1    ; 4
-	warp_event 37, 19, ROUTE_15_FUCHSIA_GATE, 2    ; 5
+	warp_event 37, 18, ROUTE_15_GATE, 1    ; 4
+	warp_event 37, 19, ROUTE_15_GATE, 2    ; 5
 	warp_event 10, 27, FUCHSIA_GYM, 1              ; 6
 	warp_event 13, 27, BILLS_BROTHERS_HOUSE, 1     ; 7
 	warp_event 17, 27, FUCHSIA_POKECENTER_1F, 1    ; 8
 	warp_event 27, 29, SAFARI_ZONE_WARDENS_HOME, 1 ; 9
 	warp_event 31, 29, FUCHSIA_GOOD_ROD_HOUSE, 1   ; 10
 	warp_event 31, 27, FUCHSIA_GOOD_ROD_HOUSE, 3   ; 11
-	warp_event 19, 35, ROUTE_19_FUCHSIA_GATE, 1    ; 12
-	warp_event 20, 35, ROUTE_19_FUCHSIA_GATE, 2    ; 13
+	warp_event 19, 35, ROUTE_19_GATE, 1    ; 12
+	warp_event 20, 35, ROUTE_19_GATE, 2    ; 13
 
 	def_coord_events
 
