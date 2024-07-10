@@ -4,6 +4,14 @@ SSAnneRoomsB1F_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+	callback MAPCALLBACK_NEWMAP, SSAnneRoomsB1FTMCallback
+
+SSAnneRoomsB1FTMCallback:
+	checkitem TM_REST
+	iffalse .Skip
+	setevent EVENT_SS_ANNE_ROOMS_B1F_TM_REST
+.Skip
+	endcallback
 
 TrainerSailorTerrell:
 	trainer SAILOR, TERRELL, EVENT_BEAT_SAILOR_TERRELL, SailorTerrellSeenText, SailorTerrellBeatenText, 0, .Script
