@@ -56,6 +56,7 @@ CinnabarGroupSprites:
 	db SPRITE_SWIMMER_GUY
 	db SPRITE_SWIMMER_GIRL
 	; 9 of 9 walking
+	db SPRITE_BOY
 	db SPRITE_POKE_BALL
 	db SPRITE_BERRY
 	db SPRITE_APRICORN
@@ -90,6 +91,7 @@ CeruleanGroupSprites:
 	; 8 of 9 walking
 	db SPRITE_OFFICER
 	db SPRITE_ROCKET
+	db SPRITE_CAPTAIN
 	db SPRITE_SLOWBRO
 	db SPRITE_DAY_CARE_MON_1
 	db SPRITE_DAY_CARE_MON_2
@@ -169,6 +171,7 @@ CeladonGroupSprites:
 	db SPRITE_FISHER
 	db SPRITE_POLIWRATH
 	db SPRITE_BIG_SNORLAX
+	db SPRITE_POKE_BALL
 	db 0 ; end
 
 FuchsiaGroupSprites:
@@ -189,6 +192,7 @@ FuchsiaGroupSprites:
 	db SPRITE_BIG_SNORLAX
 	db SPRITE_BERRY
 	db SPRITE_APRICORN
+	db SPRITE_POKE_BALL
 	db 0 ; end
 
 SaffronGroupSprites:
