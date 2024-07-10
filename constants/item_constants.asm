@@ -160,7 +160,7 @@
 	const NORMAL_BOX   ; 98 ; include?
 	const GORGEOUS_BOX ; 99 ; include?
 	const SUN_STONE    ; 9a
-	const POLKADOT_BOW ; 9b ; include?
+	const STEEL_INGOT  ; 9b ; POLKADOT_BOW
 	const UP_GRADE     ; 9c (evolve)
 	const ORAN_BERRY   ; 9d
 	const SITRUS_BERRY ; 9e
