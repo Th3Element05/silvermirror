@@ -1,19 +1,18 @@
 	object_const_def
-	const ROUTE_18GATE_OFFICER
+;	const ROUTE_18GATE_OFFICER
 
 Route18Gate_MapScripts:
 	def_scene_scripts
 	scene_script Route18GateNoopScene, SCENE_ROUTE_18GATE_BICYCLE_CHECK
 
 	def_callbacks
-;	callback MAPCALLBACK_TILES, Route18GateTilesCallback
+	callback MAPCALLBACK_TILES, Route18GateTilesCallback
 
-;Route18GateTilesCallback:
-;	changeblock 2, 2, $0c ; top left
-;	changeblock 4, 2, $0e ; top right
-;	changeblock 2, 6, $30 ; bottom left
-;	changeblock 4, 6, $31 ; bottom right
-;	endcallback
+Route18GateTilesCallback:
+	changeblock 2, 6, $12 ; open counter
+	changeblock 4, 6, $1b ; open counter
+	changeblock 4, 8, $19 ; stairs
+	endcallback
 
 Route18GateNoopScene:
 	end
@@ -125,14 +124,15 @@ Route18Gate_MapEvents:
 	warp_event  0,  5, ROUTE_18, 2
 	warp_event  7,  4, ROUTE_18, 3
 	warp_event  7,  5, ROUTE_18, 4
+	warp_event  4,  8, ROUTE_18_GATE_2F, 1
 
 	def_coord_events
-	coord_event  3,  6, SCENE_ROUTE_18GATE_BICYCLE_CHECK, Route18GateBicycleCheck1
-	coord_event  3,  5, SCENE_ROUTE_18GATE_BICYCLE_CHECK, Route18GateBicycleCheck2
-	coord_event  3,  4, SCENE_ROUTE_18GATE_BICYCLE_CHECK, Route18GateBicycleCheck3
-	coord_event  3,  3, SCENE_ROUTE_18GATE_BICYCLE_CHECK, Route18GateBicycleCheck4
+	coord_event  2,  6, SCENE_ROUTE_18GATE_BICYCLE_CHECK, Route18GateBicycleCheck1
+	coord_event  2,  5, SCENE_ROUTE_18GATE_BICYCLE_CHECK, Route18GateBicycleCheck2
+	coord_event  2,  4, SCENE_ROUTE_18GATE_BICYCLE_CHECK, Route18GateBicycleCheck3
+	coord_event  2,  3, SCENE_ROUTE_18GATE_BICYCLE_CHECK, Route18GateBicycleCheck4
 
 	def_bg_events
 
 	def_object_events
-	object_event  4,  1, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route18GateOfficerScript, -1
+	object_event  3,  1, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route18GateOfficerScript, -1

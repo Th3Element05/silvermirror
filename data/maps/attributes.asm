@@ -538,7 +538,7 @@ ENDM
 	map_attributes MoveDeletersHouse, MOVE_DELETERS_HOUSE, $00, 0
 	map_attributes CinnabarPokecenter1F, CINNABAR_POKECENTER_1F, $00, 0
 ;	map_attributes CinnabarPokecenter2FBeta, CINNABAR_POKECENTER_2F_BETA, $00, 0
-	map_attributes Route19FuchsiaGate, ROUTE_19_FUCHSIA_GATE, $00, 0
+	map_attributes Route19Gate, ROUTE_19_GATE, $00, 0
 ;	map_attributes SeafoamGym, SEAFOAM_GYM, $09, 0
 	map_attributes CeruleanGymBadgeSpeechHouse, CERULEAN_GYM_BADGE_SPEECH_HOUSE, $00, 0
 ;	map_attributes CeruleanPoliceStation, CERULEAN_POLICE_STATION, $00, 0
@@ -644,7 +644,8 @@ ENDM
 	map_attributes FuchsiaPokecenter1F, FUCHSIA_POKECENTER_1F, $00, 0
 ;	map_attributes FuchsiaPokecenter2FBeta, FUCHSIA_POKECENTER_2F_BETA, $00, 0
 	map_attributes SafariZoneWardensHome, SAFARI_ZONE_WARDENS_HOME, $00, 0
-	map_attributes Route15FuchsiaGate, ROUTE_15_FUCHSIA_GATE, $00, 0
+	map_attributes Route15Gate, ROUTE_15_GATE, $00, 0
+	map_attributes Route15Gate2F, ROUTE_15_GATE_2F, $00, 0
 	map_attributes LavenderPokecenter1F, LAVENDER_POKECENTER_1F, $00, 0
 ;	map_attributes LavenderPokecenter2FBeta, LAVENDER_POKECENTER_2F_BETA, $00, 0
 	map_attributes MrFujisHouse, MR_FUJIS_HOUSE, $00, 0
@@ -686,6 +687,7 @@ ENDM
 	map_attributes Route16Gate, ROUTE_16_GATE, $00, 0
 	map_attributes Route7SaffronGate, ROUTE_7_SAFFRON_GATE, $00, 0
 	map_attributes Route18Gate, ROUTE_18_GATE, $00, 0
+	map_attributes Route18Gate2F, ROUTE_18_GATE_2F, $00, 0
 	map_attributes ManiasHouse, MANIAS_HOUSE, $00, 0
 	map_attributes CianwoodGym, CIANWOOD_GYM, $00, 0
 	map_attributes CianwoodPokecenter1F, CIANWOOD_POKECENTER_1F, $00, 0
@@ -751,14 +753,15 @@ ENDM
 	map_attributes SeafoamIslandsB3F, SEAFOAM_ISLANDS_B3F, $02, 0 ; $09, 0
 	map_attributes SeafoamIslandsB4F, SEAFOAM_ISLANDS_B4F, $39, 0 ; $09, 0
 	map_attributes Route11Gate, ROUTE_11_GATE, $00, 0
+	map_attributes Route11Gate2F, ROUTE_11_GATE_2F, $00, 0
 	map_attributes CeruleanCave1F, CERULEAN_CAVE_1F, $09, 0
 	map_attributes CeruleanCave2F, CERULEAN_CAVE_2F, $09, 0
 	map_attributes CeruleanCaveB1F, CERULEAN_CAVE_B1F, $09, 0
 ;	map_attributes SafariZoneGatePokecenter1F, SAFARI_ZONE_GATE_POKECENTER_1F, $00, 0
-	map_attributes SafariZoneArea1, SAFARI_ZONE_AREA_1, $06, 0
-	map_attributes SafariZoneArea2, SAFARI_ZONE_AREA_2, $06, 0
-	map_attributes SafariZoneArea3, SAFARI_ZONE_AREA_3, $06, 0
-	map_attributes SafariZoneArea4, SAFARI_ZONE_AREA_4, $06, 0 ; $05, 0
+	map_attributes SafariZoneArea1, SAFARI_ZONE_AREA_1, $4b, 0
+	map_attributes SafariZoneArea2, SAFARI_ZONE_AREA_2, $4b, 0
+	map_attributes SafariZoneArea3, SAFARI_ZONE_AREA_3, $4b, 0
+	map_attributes SafariZoneArea4, SAFARI_ZONE_AREA_4, $4b, 0 ; $05, 0
 	map_attributes SafariRestHouseArea1, SAFARI_REST_HOUSE_AREA_1, $00, 0
 	map_attributes SafariRestHouseArea2, SAFARI_REST_HOUSE_AREA_2, $00, 0
 	map_attributes SafariRestHouseArea3, SAFARI_REST_HOUSE_AREA_3, $00, 0
@@ -792,6 +795,7 @@ ENDM
 	map_attributes RocketHideoutB4F, ROCKET_HIDEOUT_B4F, $00, 0
 	map_attributes RocketHideoutElevator, ROCKET_HIDEOUT_ELEVATOR, $00, 0
 	map_attributes Route12Gate, ROUTE_12_GATE, $00, 0
+	map_attributes Route12Gate2F, ROUTE_12_GATE_2F, $00, 0
 	map_attributes FuchsiaGoodRodHouse, FUCHSIA_GOOD_ROD_HOUSE, $00, 0
 	map_attributes SaffronPidgeyHouse, SAFFRON_PIDGEY_HOUSE, $00, 0
 ;

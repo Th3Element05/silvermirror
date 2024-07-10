@@ -203,7 +203,7 @@ CeruleanTrashedHouse_Blocks:
 BillsHouse_Blocks:
 	INCBIN "maps/BillsHouse.blk"           ;silvermirror+
 
-Route19FuchsiaGate_Blocks:
+Route19Gate_Blocks:
 Route43MahoganyGate_Blocks:
 Route43Gate_Blocks:
 Route35GoldenrodGate_Blocks:
@@ -219,6 +219,25 @@ ViridianForestGateS_Blocks:
 Route26Gate_Blocks:                        ;silvermirror+
 Route12Gate_Blocks:                        ;silvermirror+
 	INCBIN "maps/NorthSouthGate.blk"
+
+Route38EcruteakGate_Blocks:
+Route42EcruteakGate_Blocks:
+Route32RuinsOfAlphGate_Blocks:
+IlexForestAzaleaGate_Blocks:
+Route15Gate_Blocks:
+Route8SaffronGate_Blocks:
+Route16Gate_Blocks:
+Route7SaffronGate_Blocks:
+Route18Gate_Blocks:
+Route31VioletGate_Blocks:
+Route11Gate_Blocks:
+	INCBIN "maps/EastWestGate.blk"
+
+Route11Gate2F_Blocks:
+Route12Gate2F_Blocks:
+Route15Gate2F_Blocks:
+Route18Gate2F_Blocks:
+	INCBIN "maps/Gate2F.blk"
 
 CinnabarIsland_Blocks:
 	INCBIN "maps/CinnabarIsland.blk"
@@ -282,19 +301,6 @@ RedsHouse1F_Blocks:
 
 ;RedsHouse2F_Blocks:
 ;	INCBIN "maps/RedsHouse2F.blk"
-
-Route38EcruteakGate_Blocks:
-Route42EcruteakGate_Blocks:
-Route32RuinsOfAlphGate_Blocks:
-IlexForestAzaleaGate_Blocks:
-Route15FuchsiaGate_Blocks:
-Route8SaffronGate_Blocks:
-Route16Gate_Blocks:
-Route7SaffronGate_Blocks:
-Route18Gate_Blocks:
-Route31VioletGate_Blocks:
-Route11Gate_Blocks:
-	INCBIN "maps/EastWestGate.blk"
 
 VermilionCity_Blocks:
 	INCBIN "maps/VermilionCity.blk"
