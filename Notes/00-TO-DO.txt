@@ -11,10 +11,15 @@ AddNTimes::
 
 TEST to-do
 
-DISABLE FISHING ON CYCLING ROAD! can you fish on cycling road? 
+Pewter starter boost items after Brock
+
+Rout12/16 Snorlax ;reloadmappart
+
+SSAnneRooms1F/B1F TM itemball disappears if you've bought it from store
+
+game corner gift coins add sound
 pokeflute do awakening effect?
 copycat script
-E4LancesRoom, playmapmusic after intro rival
 victory road 2f boulder disappears, doesn't tile swap
 victory road bould scripts, reloadmappart necessary?
 
@@ -32,62 +37,69 @@ test STRENGTH with/without rainbowbadge
 
 TO-DO to-do
 
-Still need to do water route swarms, 19, 20, VERMILION
+berries
 
-Finish Bills House give stuff/SS Anne access.
+make bill not talk about SS Anne, oak call
 
-OPT repeats text after swarm flag set
+route12 fishing guru facing wrong way
+bike shop guy on bike tile
+route12gate guard after snorlax text
+route12 snorlax say no, text close/open
+mr fuji pokeflute text typo "hearnig"
+route 12 gate stairs block colision
+route 10 spawn coords
+
+mom_phone items
+
+Snorlax drops TM_SNORE when first defeated
+Snorlax drops TM_SLEEP_TALK first defeated
+MartTMs2: currently tbolt fthrower ibeam
 
 MahoganyMart1F is dungeon? to RocketBaseB1F
 ROUTE11 water mons, use vermilion
 
 power plant palette, use INDOOR
 
-CRASH > safari zone 1 SW NPC
-CRASH > safari zone 1 NE NPC
-CRASH > safari zone 1 rest house sign
-safari zone 3 rest house exit warp
-safari zone border blocks, wrong tree
-safari zone entrance script warp coords
-safari zone tall brown grass has green when walking
-safari zone grey sand looks weird next to brown sand, esp MORN, ok at NITE
-safari zone secret house blocks messed up, can't talk to guy
-
-
 trainer parties, levels/learnsets
 
-Gate2F:
-11, ITEMFINDER (30), trade ask nidorino offer nidorina
-12, tm39
-15, EXP.ALL (50)
-16, nothing of value
-18, trade ask slowbro offer lickitung
+Gate2F: check all of these for completeness
+done 11, ITEMFINDER (30)
+map  11, TRADE ask nidorino offer nidorina
+donedone 12, tm39
+donedone 15, EXP_SHARE (50)
+skip 16, nothing of value
+map  18, TRADE ask slowbro offer lickitung
 
 Trades:
-Route2 gameboykid,	MR__MIME, Abra  	MR__MIME, Clefairy
-Route5 girl/twin,	NIDORAN_F, NidoranM	MACHOKE, Cubone
-Route11 youngster,	NIDORINA, Nidorino	DUGTRIO, Lickitung
-Route18 youngster,	LICKITUNG, Slowbro	PARASECT, Tangela
-Cerulean sage,  	JYNX, Poliwhirl
-Vermilion girl/twin,	FARFETCH_D, Spearow
-Cinnabar scientist,	DEWGONG, Ponyta		MUK, Kangaskhan
-Cinnabar gramps,	ELECTRODE, Raichu	RHYDON, Golduck
-Cinnabar beauty,	TANGELA, Venonat	DEWGONG, Growlithe
+Route2 gameboykid, REYLEY, MR__MIME, Abra  	MR__MIME, Clefairy
+Route5 girl/twin, SAIGE, NIDORAN_F, NidoranM	MACHOKE, Cubone
+Route11 youngster, TURNER, NIDORINA, Nidorino	DUGTRIO, Lickitung
+Route18 youngster, HADEN, LICKITUNG, Slowbro	PARASECT, Tangela
+Cerulean sage, DONTAE, JYNX, Poliwhirl	
+Vermilion girl/twin, ELYSSA, FARFETCH_D, Spearow
+Cinnabar scientist, CLIFTON, SEEL, Ponyta	MUK, Kangaskhan	
+Cinnabar gramps, NORMA, ELECTRODE, Raichu	RHYDON, Golduck	
+Cinnabar beauty, GARETT, TANGELA, Venonat	DEWGONG, Growlithe
+
+_COLLECTOR, ABRA,       MR__MIME,   "MARCEL@@@@@", $37, $66, SITRUS_BERRY, 47460, "MATEO@@@@@@"
+_GIRL,      NIDORAN_M,  NIDORAN_F,  "SPOT@@@@@@@", $96, $66, PECHA_BERRY,  49926, "MIA@@@@@@@@"
+_NEWBIE,    HAUNTER,    KADABRA,    "ABBY@@@@@@@", $98, $88, LUM_BERRY,    29289, "LUCAS@@@@@@"
+_HAPPY,     SLOWBRO,    LICKITUNG,  "MARC@@@@@@@", $77, $66, LEPPA_BERRY,  00293, "NOAH@@@@@@@"
+_HAPPY,     POLIWHIRL,  JYNX,       "LOLA@@@@@@@", $96, $86, ASPEAR_BERRY, 15617, "MASON@@@@@@"
+_GIRL,      SPEAROW,    FARFETCH_D, "DUX@@@@@@@@", $96, $66, STICK,        36491, "ELYSSA@@@@@"
+_COLLECTOR, PONYTA,     SEEL,       "SAILOR@@@@@", $96, $66, SITRUS_BERRY, 51082, "GARETT@@@@@"
+_HAPPY,     RAICHU,     ELECTRODE,  "DORIS@@@@@@", $96, $66, CHERI_BERRY,  51082, "CLIFTON@@@@"
+_COLLECTOR, VENONAT,    TANGELA,    "CRINKLES@@@", $96, $66, CHESTO_BERRY, 51082, "NORMA@@@@@@"
 
 
-variable menus for celadon dept store roof (use code from fossils)
 
 TRAINERTYPE_VARIABLE for Gen2Mode alt parties (ref, BugCatcher Ed)
-
-game corner gift coins add sound
 
 goldenrod underground entrances
 
 bill's house extra stuff
 
 put move deleter in kanto
-
-Route18Gate2F trade SLOWBRO for LICKITUNG
 
 fix mom asks what oak's errand after get pokemon
 
@@ -96,8 +108,6 @@ data\trainers\attributes.asm TRAINER ITEMS
 reconsider game corner prizes dragonrage, psychic, hyperbeam
 
 can remove/reuse MYSERY_EGG key item
-
-remove Route5CleanseTagHouse
 
 oaks lab "those are poke balls" line break
 oaks lab receive ball isn't plural
