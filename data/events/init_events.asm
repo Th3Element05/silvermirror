@@ -7,6 +7,8 @@ InitialEvents:
 	dw EVENT_MR_FUJIS_HOUSE_MR_FUJI ;silvermirror+
 	dw EVENT_ROCKET_HIDEOUT_B4F_LIFT_KEY ;silvermirror+
 	dw EVENT_ROCKET_HIDEOUT_B4F_SILPH_SCOPE ;silvermirror+
+;	dw EVENT_ROUTE_12_TM_SNORE ;silvermirror+
+;	dw EVENT_ROUTE_16_TM_SLEEP_TALK ;silvermirror+
 	dw EVENT_SEAFOAM_B1F_BOULDER_1 ;silvermirror+
 	dw EVENT_SEAFOAM_B1F_BOULDER_2 ;silvermirror+
 	dw EVENT_SEAFOAM_B2F_BOULDER_1 ;silvermirror+
