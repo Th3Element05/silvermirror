@@ -5,6 +5,53 @@ Route25_MapScripts:
 
 	def_callbacks
 
+Route25Captain:
+	opentext
+	writetext Route25CaptainIntroText
+	waitbutton
+	faceplayer
+	writetext Route25CaptainQuestionText
+	promptbutton
+	checkevent EVENT_GOT_MYSTIC_WATER
+	iftrue .GotMysticWater
+	writetext Route25CaptainMysticWaterText
+	verbosegiveitem MYSTIC_WATER
+	iffalse .BagFull
+	setevent EVENT_GOT_MYSTIC_WATER
+.GotMysticWater
+	writetext Route25CaptainEnjoyTheWaterText
+	waitbutton
+.BagFull
+	closetext
+	turnobject LAST_TALKED, RIGHT
+	end
+
+Route25CaptainIntroText:
+	text "I come out to the"
+	line "cape to enjoy the"
+	cont "water."
+	done
+
+Route25CaptainQuestionText:
+	text "Did you come out"
+	line "here to enjoy the"
+	cont "water, too?"
+	done
+
+Route25CaptainMysticWaterText:
+	text "..."
+
+	para "I like you."
+
+	para "I want you to"
+	cont "have this."
+	done
+
+Route25CaptainEnjoyTheWaterText:
+	text "Let's enjoy the"
+	line "water together."
+	done
+
 TrainerYoungsterSamuel:
 	trainer YOUNGSTER, SAMUEL, EVENT_BEAT_YOUNGSTER_SAMUEL, YoungsterSamuelSeenText, YoungsterSamuelBeatenText, 0, .Script
 .Script:
@@ -288,4 +335,5 @@ Route25_MapEvents:
 	object_event 13,  7, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerHikerPhillip, -1
 	object_event 18,  8, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerLassMichelle, -1
 	object_event 23,  9, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerHikerLeonard, -1
+	object_event 47,  9, SPRITE_CAPTAIN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route25Captain, -1
 	object_event 22,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, Route25TMSeismicToss, EVENT_ROUTE_25_TM_SEISMIC_TOSS
