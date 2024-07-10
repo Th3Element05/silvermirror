@@ -19,9 +19,9 @@ PewterGymBrockScript:
 	reloadmapafterbattle
 	setevent EVENT_BEAT_BROCK
 	setevent EVENT_BEAT_CAMPER_ISAAC
-	setmapscene PEWTER_CITY, SCENE_PEWTERCITY_NOOP
+;	setmapscene PEWTER_CITY, SCENE_PEWTERCITY_NOOP
 	setmapscene ROUTE_22, SCENE_ROUTE22_NOOP
-	setevent EVENT_PEWTER_CITY_BLOCKING_YOUNGSTER
+;	setevent EVENT_PEWTER_CITY_BLOCKING_YOUNGSTER
 	setevent EVENT_GOT_POKEBALLS_FROM_OAK
 	opentext
 	writetext ReceivedBoulderbadgeText
