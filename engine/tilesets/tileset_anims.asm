@@ -68,7 +68,8 @@ TilesetPortAnim:
 	dw NULL,  WaitTileAnimation
 	dw NULL,  AnimateFlowerTile
 	dw NULL,  WaitTileAnimation
-	dw NULL,  WaitTileAnimation
+;	dw NULL,  WaitTileAnimation
+	dw vTiles2 tile $74, AnimateWaterTile ;johto water animation
 ;	dw NULL,  StandingTileFrame8
 	dw NULL,  DoneTileAnimation
 
