@@ -155,7 +155,7 @@ ItemDescriptions:
 	dw NormalBoxDesc
 	dw GorgeousBoxDesc
 	dw SunStoneDesc
-	dw PolkadotBowDesc
+	dw MetalCoatDesc ; STEEL_INGOT ; PolkadotBowDesc
 	dw UpGradeDesc
 	dw OranBerryDesc
 	dw SitrusBerryDesc
@@ -880,9 +880,9 @@ SunStoneDesc:
 	db   "Evolves certain"
 	next "kinds of #MON.@"
 
-PolkadotBowDesc:
-	db   "Powers up normal-"
-	next "type moves. (HOLD)@"
+;PolkadotBowDesc:
+;	db   "Powers up normal-"
+;	next "type moves. (HOLD)@"
 
 UpGradeDesc:
 	db   "A mysterious box"

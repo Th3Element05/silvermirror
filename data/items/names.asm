@@ -154,7 +154,7 @@ ItemNames::
 	li "NORMAL BOX"
 	li "GORGEOUS BOX"
 	li "SUN STONE"
-	li "POLKADOT BOW"
+	li "STEEL INGOT" ; "POLKADOT BOW"
 	li "UP-GRADE"
 	li "ORAN BERRY"
 	li "GOLD BERRY"
