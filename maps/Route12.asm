@@ -45,13 +45,16 @@ Route12Snorlax:
 Route12SnorlaxBattleScript:
 	pause 15
 	cry SNORLAX
+	writetext Route12SnorlaxAttackedText
+	waitbutton
 	closetext
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
 	loadwildmon SNORLAX, 32
 	startbattle
+	reloadmapafterbattle
 	disappear ROUTE12_SNORLAX
 	setevent EVENT_WOKE_SNORLAX
-	reloadmapafterbattle
+;	reloadmappart
 	special CheckBattleCaughtResult
 	iffalse .nocatch
 	setflag ENGINE_PLAYER_CAUGHT_SNORLAX
@@ -93,6 +96,11 @@ Route12RadioNearSnorlaxText:
 
 Route12SnorlaxWokeUpText:
 	text "SNORLAX woke up!"
+	done
+
+Route12SnorlaxAttackedText:
+	text "It attacked in a"
+	line "grumpy rage!"
 	done
 
 Route12LetSnorlaxSleepText:
@@ -291,6 +299,9 @@ CamperTedAfterBattleText:
 Route12TMPayDay:
 	itemball TM_PAY_DAY
 
+Route12TMSnore:
+	itemball TM_SNORE
+
 Route12Iron:
 	itemball IRON
 
@@ -333,6 +344,7 @@ Route12_MapEvents:
 
 	def_object_events
 	object_event 10, 60, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_BIGDOLLSYM, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route12Snorlax, EVENT_ROUTE_12_SNORLAX
+	object_event 11, 62, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, Route12TMSnore, EVENT_ROUTE_12_TM_SNORE
 	object_event 16, 29, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerFisherScott, -1
 	object_event  7, 37, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerFisherHenry, -1
 	object_event 14, 38, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerFisherMarvin, -1
@@ -341,4 +353,5 @@ Route12_MapEvents:
 	object_event  8, 83, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerFisherRaymond, -1
 	object_event 13, 88, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerCamperTed, -1
 	object_event 16, 33, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, Route12TMPayDay, EVENT_ROUTE_12_TM_PAY_DAY
+	object_event 11, 62, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, Route12TMSnore, EVENT_ROUTE_12_TM_SNORE
 	object_event  7, 85, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route12Iron, EVENT_ROUTE_12_IRON

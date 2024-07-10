@@ -55,13 +55,16 @@ Route16Snorlax:
 Route16SnorlaxBattleScript:
 	pause 15
 	cry SNORLAX
+	writetext Route16SnorlaxAttackedText
+	waitbutton
 	closetext
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
 	loadwildmon SNORLAX, 32
 	startbattle
-	disappear ROUTE16_SNORLAX
-	setevent EVENT_WOKE_SNORLAX
 	reloadmapafterbattle
+	disappear ROUTE12_SNORLAX
+	setevent EVENT_WOKE_SNORLAX
+;	reloadmappart
 	special CheckBattleCaughtResult
 	iffalse .nocatch
 	setflag ENGINE_PLAYER_CAUGHT_SNORLAX
@@ -103,6 +106,11 @@ Route16RadioNearSnorlaxText:
 
 Route16SnorlaxWokeUpText:
 	text "SNORLAX woke up!"
+	done
+
+Route16SnorlaxAttackedText:
+	text "It attacked in a"
+	line "grumpy rage!"
 	done
 
 Route16LetSnorlaxSleepText:
@@ -244,6 +252,14 @@ BikerTeddyAfterBattleText:
 	cont "what's it to you?"
 	done
 
+; itemballs
+Route16SharpBeak:
+	itemball SHARP_BEAK
+
+Route16TMSleepTalk:
+	itemball TM_SLEEP_TALK
+
+; signs
 CyclingRoadSign:
 	jumptext CyclingRoadSignText
 CyclingRoadSignText:
@@ -274,14 +290,16 @@ Route16_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 25, 13, BGEVENT_READ, CyclingRoadSign
+	bg_event 27, 13, BGEVENT_READ, CyclingRoadSign
 	bg_event  5, 19, BGEVENT_READ, Route16Sign
 
 	def_object_events
-	object_event 23, 12, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_BIGDOLLSYM, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route16Snorlax, EVENT_ROUTE_16_SNORLAX
+	object_event 24, 12, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_BIGDOLLSYM, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route16Snorlax, EVENT_ROUTE_16_SNORLAX
 	object_event  3, 14, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerBikerAiden, -1
 	object_event  6, 12, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerJugglerOtis, -1
 	object_event  9, 13, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBikerJoseph, -1
 	object_event 11, 14, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerJugglerBurt, -1
 	object_event 14, 15, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerJugglerFinnley, -1
 	object_event 17, 14, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBikerTeddy, -1
+	object_event  4,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route16SharpBeak, EVENT_ROUTE_16_SHARP_BEAK
+	object_event 19, 14, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, Route16TMSleepTalk, EVENT_ROUTE_16_TM_SLEEP_TALK
