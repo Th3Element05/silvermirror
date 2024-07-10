@@ -1503,11 +1503,12 @@ _NPCTradeWrongText1::
 	done
 
 _NPCTradeCompleteText1::
-	text "Yay! I got myself"
+	text "Great! Thank you!"
+
+	para "I finally got"
 	line "@"
 	text_ram wStringBuffer1
 	text "!"
-	cont "Thanks!"
 	done
 
 _NPCTradeAfterText1::
@@ -1532,29 +1533,28 @@ _NPCTradeIntroText2::
 	text "?"
 	done
 
-_NPCTradeCancelText2::
-	text "You don't have"
-	line "one either?"
+;_NPCTradeCancelText2::
+;	text "You don't have"
+;	line "one either?"
+;
+;	para "Gee, that's really"
+;	line "disappointing…"
+;	done
 
-	para "Gee, that's really"
-	line "disappointing…"
-	done
-
-_NPCTradeWrongText2::
-	text "You don't have"
-	line "@"
-	text_ram wStringBuffer1
-	text "? That's"
-	cont "too bad, then."
-	done
+;_NPCTradeWrongText2::
+;	text "You don't have"
+;	line "@"
+;	text_ram wStringBuffer1
+;	text "? That's"
+;	cont "too bad, then."
+;	done
 
 _NPCTradeCompleteText2::
-	text "Great! Thank you!"
-
-	para "I finally got"
+	text "Yay! I got my own"
 	line "@"
 	text_ram wStringBuffer1
-	text "."
+	text "!"
+	cont "Thanks!"
 	done
 
 _NPCTradeAfterText2::
@@ -1581,20 +1581,20 @@ _NPCTradeIntroText3::
 	text "?"
 	done
 
-_NPCTradeCancelText3::
-	text "You don't want to"
-	line "trade? Oh, darn…"
-	done
+;_NPCTradeCancelText3::
+;	text "You don't want to"
+;	line "trade? Oh, darn…"
+;	done
 
-_NPCTradeWrongText3::
-	text "That's not"
-	line "@"
-	text_ram wStringBuffer1
-	text "."
-
-	para "Please trade with"
-	line "me if you get one."
-	done
+;_NPCTradeWrongText3::
+;	text "That's not"
+;	line "@"
+;	text_ram wStringBuffer1
+;	text "."
+;
+;	para "Please trade with"
+;	line "me if you get one."
+;	done
 
 _NPCTradeCompleteText3::
 	text "Wow! Thank you!"

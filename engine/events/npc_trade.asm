@@ -412,14 +412,14 @@ TradeTexts:
 	dw NPCTradeIntroText3
 ; TRADE_DIALOG_CANCEL
 	dw NPCTradeCancelText1
-	dw NPCTradeCancelText2
-	dw NPCTradeCancelText2
-	dw NPCTradeCancelText3
+	dw NPCTradeCancelText1;2
+	dw NPCTradeCancelText1;2
+	dw NPCTradeCancelText1;3
 ; TRADE_DIALOG_WRONG
 	dw NPCTradeWrongText1
-	dw NPCTradeWrongText2
-	dw NPCTradeWrongText2
-	dw NPCTradeWrongText3
+	dw NPCTradeWrongText1;2
+	dw NPCTradeWrongText1;2
+	dw NPCTradeWrongText1;3
 ; TRADE_DIALOG_COMPLETE
 	dw NPCTradeCompleteText1
 	dw NPCTradeCompleteText2
@@ -473,13 +473,13 @@ NPCTradeIntroText2:
 	text_far _NPCTradeIntroText2
 	text_end
 
-NPCTradeCancelText2:
-	text_far _NPCTradeCancelText2
-	text_end
+;NPCTradeCancelText2:
+;	text_far _NPCTradeCancelText2
+;	text_end
 
-NPCTradeWrongText2:
-	text_far _NPCTradeWrongText2
-	text_end
+;NPCTradeWrongText2:
+;	text_far _NPCTradeWrongText2
+;	text_end
 
 NPCTradeCompleteText2:
 	text_far _NPCTradeCompleteText2
@@ -493,13 +493,13 @@ NPCTradeIntroText3:
 	text_far _NPCTradeIntroText3
 	text_end
 
-NPCTradeCancelText3:
-	text_far _NPCTradeCancelText3
-	text_end
+;NPCTradeCancelText3:
+;	text_far _NPCTradeCancelText3
+;	text_end
 
-NPCTradeWrongText3:
-	text_far _NPCTradeWrongText3
-	text_end
+;NPCTradeWrongText3:
+;	text_far _NPCTradeWrongText3
+;	text_end
 
 NPCTradeCompleteText3:
 	text_far _NPCTradeCompleteText3
