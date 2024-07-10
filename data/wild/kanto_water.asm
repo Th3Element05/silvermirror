@@ -55,7 +55,7 @@ KantoWaterWildMons:
 	db 6 percent ; encounter rate
 	db 10, SLOWPOKE   ; 50
 	db 10, TENTACOOL  ; 30
-	db 10, TENTACOOL  ; 10
+	db 10, SHELLDER   ; 10
 	db 15, SLOWBRO    ; 10
 	end_water_wildmons
 
@@ -63,7 +63,7 @@ KantoWaterWildMons:
 	db 6 percent ; encounter rate
 	db 10, SLOWPOKE   ; 50
 	db 10, TENTACOOL  ; 30
-	db 10, TENTACOOL  ; 10
+	db 10, SHELLDER   ; 10
 	db 15, SLOWBRO    ; 10
 	end_water_wildmons
 
@@ -127,7 +127,7 @@ KantoWaterWildMons:
 	db 6 percent ; encounter rate
 	db 10, TENTACOOL  ; 50
 	db 10, SLOWPOKE   ; 30
-	db 10, TENTACOOL  ; 10
+	db 10, SHELLDER   ; 10
 	db 15, SLOWBRO    ; 10
 	end_water_wildmons
 
@@ -135,7 +135,7 @@ KantoWaterWildMons:
 	db 6 percent ; encounter rate
 	db 10, TENTACOOL  ; 50
 	db 10, SLOWPOKE   ; 30
-	db 10, TENTACOOL  ; 10
+	db 10, SHELLDER   ; 10
 	db 15, SLOWBRO    ; 10
 	end_water_wildmons
 
@@ -147,13 +147,13 @@ KantoWaterWildMons:
 	db 20, GYARADOS   ; 10
 	end_water_wildmons
 
-;	def_water_wildmons PALLET_TOWN ;GEN1
-;	db 6 percent ; encounter rate
-;	db 15, TENTACOOL  ; 50
-;	db 16, HORSEA     ; 30
-;	db 15, TENTACOOL  ; 10
-;	db 16, STARYU     ; 10
-;	end_water_wildmons
+	def_water_wildmons PALLET_TOWN ;GEN1
+	db 6 percent ; encounter rate
+	db 15, TENTACOOL  ; 50
+	db 16, HORSEA     ; 30
+	db 15, TENTACOOL  ; 10
+	db 16, STARYU     ; 10
+	end_water_wildmons
 
 	def_water_wildmons VIRIDIAN_CITY ;GEN1
 	db 6 percent ; encounter rate
@@ -214,7 +214,7 @@ KantoWaterWildMons:
 	def_water_wildmons CERULEAN_CAVE_1F ;GEN1
 	db 4 percent ; encounter rate
 	db 10, MAGIKARP   ; 50
-	db 10, SLOWPOKE   ; 30
+	db 10, GOLDUCK    ; 30
 	db 20, SLOWBRO    ; 10
 	db 25, GYARADOS   ; 10
 	end_water_wildmons
@@ -222,7 +222,7 @@ KantoWaterWildMons:
 	def_water_wildmons CERULEAN_CAVE_B1F ;GEN1
 	db 4 percent ; encounter rate
 	db 10, MAGIKARP   ; 50
-	db 10, SLOWPOKE   ; 30
+	db 10, GOLDUCK    ; 30
 	db 20, SLOWBRO    ; 10
 	db 25, GYARADOS   ; 10
 	end_water_wildmons
