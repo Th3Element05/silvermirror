@@ -95,6 +95,9 @@ PokemonMansion1FEscapeRope:
 PokemonMansion1FCarbos:
 	itemball CARBOS
 
+PokemonMansion1FCharcoal:
+	itemball CHARCOAL
+
 ; hidden items
 PokemonMansion1FHiddenMoonStone:
 	hiddenitem MOON_STONE, EVENT_POKEMON_MANSION_1F_HIDDEN_MOON_STONE
@@ -121,3 +124,4 @@ PokemonMansion1F_MapEvents:
 	object_event 16, 17, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerScientistSilas, -1
 	object_event 14,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PokemonMansion1FEscapeRope, EVENT_POKEMON_MANSION_1F_ESCAPE_ROPE
 	object_event 18, 21, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PokemonMansion1FCarbos, EVENT_POKEMON_MANSION_1F_CARBOS
+	object_event 16, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PokemonMansion1FCharcoal, EVENT_POKEMON_MANSION_1F_CHARCOAL
