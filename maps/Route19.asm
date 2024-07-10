@@ -5,6 +5,44 @@ Route19_MapScripts:
 
 	def_callbacks
 
+Route19Boy:
+	faceplayer
+	opentext
+	checkevent EVENT_GOT_POISON_BARB
+	iftrue .GotPoisonBarb
+	writetext Route19BoyStungText
+	verbosegiveitem POISON_BARB
+	iffalse .BagFull
+	setevent EVENT_GOT_POISON_BARB
+.GotPoisonBarb
+	writetext Route19BoyTentacoolText
+	waitbutton
+.BagFull
+	closetext
+	end
+
+Route19BoyStungText:
+	text "Ouch! Ouch! Ouch!"
+
+	para "TENTACOOL got me"
+	line "with POISON STING!"
+
+	para "I'm lucky I had"
+	line "ANTIDOTE!"
+
+	para "This was left"
+	line "behind, you can"
+	cont "have it."
+	done
+
+Route19BoyTentacoolText:
+	text "I'll be sure to"
+	line "watch out for"
+	cont "TENTACOOL from"
+	cont "now on!"
+	done
+
+
 TrainerSwimmerMSimon:
 	trainer SWIMMERM, SIMON, EVENT_BEAT_SWIMMERM_SIMON, SwimmerMSimonSeenText, SwimmerMSimonBeatenText, 0, .Script
 
@@ -276,7 +314,7 @@ Route19_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  9,  3, ROUTE_19_FUCHSIA_GATE, 3
+	warp_event  9,  3, ROUTE_19_GATE, 3
 
 	def_coord_events
 
@@ -285,7 +323,7 @@ Route19_MapEvents:
 
 	def_object_events
 	object_event  8, 11, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerSwimmerMSimon, -1
-	object_event 13, 11, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerMRandall, -1
+	object_event 12, 11, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerMRandall, -1
 	object_event  9, 17, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSwimmerMCharlie, -1
 	object_event 13, 25, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerSwimmerMGeorge, -1
 	object_event  4, 27, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerSwimmerMBerke, -1
@@ -294,3 +332,4 @@ Route19_MapEvents:
 	object_event  8, 40, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 4, TrainerSwimmerFElaine, -1
 	object_event 11, 40, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerSwimmerFPaula, -1
 	object_event 10, 41, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSwimmerFKaylee, -1
+	object_event 13, 14, SPRITE_BOY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route19Boy, -1
