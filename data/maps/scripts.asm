@@ -261,26 +261,30 @@ SECTION "Map Scripts 22", ROMX
 
 INCLUDE "maps/Route11.asm"
 INCLUDE "maps/Route11Gate.asm"
+INCLUDE "maps/Route11Gate2F.asm"
 INCLUDE "maps/DiglettsCave.asm"
 INCLUDE "maps/Route12.asm"
 INCLUDE "maps/Route12Gate.asm"
+INCLUDE "maps/Route12Gate2F.asm"
 INCLUDE "maps/Route12SuperRodHouse.asm"
 INCLUDE "maps/Route13.asm"
 INCLUDE "maps/Route14.asm"
 INCLUDE "maps/Route15.asm"
-INCLUDE "maps/Route15FuchsiaGate.asm"
+INCLUDE "maps/Route15Gate.asm"
+INCLUDE "maps/Route15Gate2F.asm"
 INCLUDE "maps/Route16.asm"
 INCLUDE "maps/Route16Gate.asm"
 INCLUDE "maps/Route16FuchsiaSpeechHouse.asm" ;(fly house)
 INCLUDE "maps/Route17.asm"
 INCLUDE "maps/Route18.asm"
 INCLUDE "maps/Route18Gate.asm"
+INCLUDE "maps/Route18Gate2F.asm"
 
 
 SECTION "Map Scripts 23", ROMX
 
 INCLUDE "maps/Route19.asm"
-INCLUDE "maps/Route19FuchsiaGate.asm"
+INCLUDE "maps/Route19Gate.asm"
 INCLUDE "maps/Route20.asm"
 INCLUDE "maps/SeafoamIslands.asm"
 INCLUDE "maps/SeafoamIslandsB1F.asm"
