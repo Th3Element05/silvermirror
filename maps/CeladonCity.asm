@@ -216,6 +216,9 @@ CeladonCityPokecenterSign:
 	jumpstd PokecenterSignScript
 
 ; hidden items
+CeladonCityMiracleSeed:
+	itemball MIRACLE_SEED
+
 CeladonCityHiddenPpUp:
 	hiddenitem PP_UP, EVENT_CELADON_CITY_HIDDEN_PP_UP
 
@@ -259,3 +262,4 @@ CeladonCity_MapEvents:
 	object_event 14, 19, SPRITE_TEACHER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeladonCityLassScript, -1
 	object_event 23, 22, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonCityGramps2Script, -1
 	object_event  8, 28, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonCityGramps3Script, -1
+	object_event  3, 27, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, CeladonCityMiracleSeed, EVENT_CELADON_CITY_MIRACLE_SEED
