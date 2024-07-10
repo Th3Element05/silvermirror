@@ -20,7 +20,7 @@ ViridianMartOaksParcelScene:
 	playsound SFX_KEY_ITEM
 	giveitem OAKS_PARCEL
 	waitsfx
-	promptbutton
+	waitbutton
 	closetext
 	setevent EVENT_GOT_OAKS_PARCEL
 	setscene SCENE_VIRIDIANMART_NOOP
