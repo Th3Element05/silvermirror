@@ -136,6 +136,8 @@ CeladonGameCornerFishingGuruScript:
 	getstring STRING_BUFFER_4, CeladonGameCornerCoins10
 	writetext CeladonGameCornerReceivedCoinsText
 	givecoins 10
+	playsound SFX_ITEM
+	waitsfx
 	setevent EVENT_GOT_COINS_FROM_CELADON_FISHING_GURU
 	sjump CeladonGameCornerEndRightScript
 
@@ -236,6 +238,8 @@ CeladonGameCornerFisherScript:
 	getstring STRING_BUFFER_4, CeladonGameCornerCoins20
 	writetext CeladonGameCornerReceivedCoinsText
 	givecoins 20
+	playsound SFX_ITEM
+	waitsfx
 	setevent EVENT_GOT_COINS_FROM_CELADON_FISHER
 	sjump CeladonGameCornerEndLeftScript
 
@@ -276,6 +280,8 @@ CeladonGameCornerGentlemanScript:
 	getstring STRING_BUFFER_4, CeladonGameCornerCoins20
 	writetext CeladonGameCornerReceivedCoinsText
 	givecoins 20
+	playsound SFX_ITEM
+	waitsfx
 	setevent EVENT_GOT_COINS_FROM_CELADON_GENTLEMAN
 	sjump CeladonGameCornerEndRightScript
 
@@ -356,26 +362,25 @@ CeladonGameCornerCardFlipScript:
 	end
 
 CeladonGameCornerOutOfOrderScript:
-;	jumptext CeladonGameCornerOutOfOrderText
-;CeladonGameCornerOutOfOrderText:
-;	done
-	end
+	jumptext CeladonGameCornerOutOfOrderText
+CeladonGameCornerOutOfOrderText:
+	text "OUT OF ORDER"
+	line "This is broken."
+	done
 
 CeladonGameCornerOutToLunchScript:
-;	opentext
-;	writetext CeladonGameCornerSodaCanText
-;	waitbutton
-	special SlotMachine
-	closetext
-	end
+	jumptext CeladonGameCornerOutToLunchText
+CeladonGameCornerOutToLunchText:
+	text "OUT TO LUNCH"
+	line "This is reserved."
+	done
 
 CeladonGameCornerSomeonesKeysScript:
-;	opentext
-;	writetext CeladonGameCornerSodaCanText
-;	waitbutton
-	special SlotMachine
-	closetext
-	end
+	jumptext CeladonGameCornerSomeonesKeysText
+CeladonGameCornerSomeonesKeysText:
+	text "Someone's keys!"
+	line "They'll be back."
+	done
 
 CeladonGameCorner10Coins1:
 	conditional_event EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_1, .HiddenCoins
