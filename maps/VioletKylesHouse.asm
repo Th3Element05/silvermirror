@@ -13,7 +13,7 @@ VioletKylesHousePokefanMScript:
 Kyle:
 	faceplayer
 	opentext
-	trade NPC_TRADE_KYLE
+;	trade NPC_TRADE_KYLE
 	waitbutton
 	closetext
 	end
