@@ -53,7 +53,7 @@ LeaveSafariEarly:
 	playsound SFX_ENTER_DOOR
 	special FadeOutPalettes
 	waitsfx
-	warpfacing UP, SAFARI_ZONE_AREA_1, 18, 25
+	warpfacing UP, SAFARI_ZONE_AREA_1, 18, 27
 	end
 
 SafariZoneEntranceMainOfficerScript:
