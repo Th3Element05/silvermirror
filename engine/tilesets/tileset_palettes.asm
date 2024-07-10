@@ -116,6 +116,7 @@ MapSpecificPalettes:
 	_use_palette_routine_for_map E4_AGATHAS_ROOM, .AgathasRoomBGPalettes
 ;	_use_palette_routine_for_map KOGAS_ROOM, .KogasRoomBGPalettes
 	_use_palette_routine_for_map E4_LORELEIS_ROOM, .LoreleisRoomBGPalettes
+	_use_palette_routine_for_map POWER_PLANT, .PowerPlantIndoorPalettes
 ;	_use_palette_routine_for_map VIRIDIAN_GYM, .ViridianGymBGPalettes
 	db -1 ; terminator
 
@@ -158,6 +159,9 @@ MapSpecificPalettes:
 ;	jp .next
 .LoreleisRoomBGPalettes:
 	ld hl, LoreleisRoomPals
+	jp .next
+.PowerPlantIndoorPalettes:
+	ld hl, PowerPlantIndoorPals
 	jp .next
 .MuseumBGPalettes
 	call LoadMuseumPalette
