@@ -1,7 +1,7 @@
 	object_const_def
 	const ROUTE_19FUCHSIAGATE_OFFICER
 
-Route19FuchsiaGate_MapScripts:
+Route19Gate_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
@@ -43,7 +43,7 @@ Route19FuchsiaGateOfficerScript:
 ;	line "That's great!"
 ;	done
 
-Route19FuchsiaGate_MapEvents:
+Route19Gate_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events

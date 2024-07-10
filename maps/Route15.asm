@@ -243,8 +243,8 @@ Route15_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  8, ROUTE_15_FUCHSIA_GATE, 3
-	warp_event  2,  9, ROUTE_15_FUCHSIA_GATE, 4
+	warp_event  2,  8, ROUTE_15_GATE, 3
+	warp_event  2,  9, ROUTE_15_GATE, 4
 
 	def_coord_events
 

@@ -107,6 +107,7 @@ ENDM
 	map_const ROUTE_6_SAFFRON_GATE,                         4,  4 ; 13
 	map_const ROUTE_11,                                    27,  9 ; 11
 	map_const ROUTE_11_GATE,                                4,  5 ; 12
+	map_const ROUTE_11_GATE_2F,                             4,  4 ; 13
 	endgroup
 
 	newgroup SS_ANNE ; FAST_SHIP                                  ;  6
@@ -142,10 +143,11 @@ ENDM
 	map_const ROUTE_8_SAFFRON_GATE,                         4,  5 ; 11
 	map_const ROUTE_12,                                    11, 52 ; 12
 	map_const ROUTE_12_GATE,                                4,  4 ; 13
-	map_const ROUTE_12_SUPER_ROD_HOUSE,                     4,  4 ; 14
-	map_const ROUTE_13,                                    38,  9 ; 15
-	map_const ROUTE_14,                                    10, 18 ; 16
-	map_const ROUTE_15,                                    25,  9 ; 17
+	map_const ROUTE_12_GATE_2F,                             4,  4 ; 14
+	map_const ROUTE_12_SUPER_ROD_HOUSE,                     4,  4 ; 15
+	map_const ROUTE_13,                                    38,  9 ; 16
+	map_const ROUTE_14,                                    10, 18 ; 17
+	map_const ROUTE_15,                                    25,  9 ; 18
 	endgroup
 
 	newgroup CELADON                                              ;  8
@@ -186,11 +188,13 @@ ENDM
 	map_const SAFARI_ZONE_MAIN_OFFICE,                      5,  4 ;  6
 	map_const BILLS_BROTHERS_HOUSE,                         4,  4 ;  7
 	map_const FUCHSIA_GOOD_ROD_HOUSE,                       4,  4 ;  8
-	map_const ROUTE_15_FUCHSIA_GATE,                        4,  5 ;  9
-	map_const ROUTE_17,                                    10, 71 ; 10
-	map_const ROUTE_18,                                    25,  9 ; 11
-	map_const ROUTE_18_GATE,                                4,  5 ; 12
-	map_const ROUTE_19_FUCHSIA_GATE,                        4,  4 ; 13
+	map_const ROUTE_15_GATE,                                4,  5 ;  9
+	map_const ROUTE_15_GATE_2F,                             4,  5 ; 10
+	map_const ROUTE_17,                                    10, 71 ; 11
+	map_const ROUTE_18,                                    25,  9 ; 12
+	map_const ROUTE_18_GATE,                                4,  5 ; 13
+	map_const ROUTE_18_GATE_2F,                             4,  4 ; 14
+	map_const ROUTE_19_GATE,                                4,  4 ; 15
 	endgroup
 
 	newgroup SAFARI_ZONE                                          ; 10
