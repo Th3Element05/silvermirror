@@ -313,8 +313,8 @@ FishGroups:
 .Gyarados_Good:
 	db  30 percent, MAGIKARP,   10 ; 30%
 	db  60 percent, MAGIKARP,   10 ; 30%
-	db  96 percent, MAGIKARP,   10 ; 36%
-	db 100 percent, GYARADOS,   20 ;  4%
+	db  99 percent, MAGIKARP,   10 ; 39%
+	db 100 percent, GYARADOS,   20 ;  1%
 .Gyarados_Super:
 	db  30 percent, MAGIKARP,   15 ; 30%
 	db  60 percent, MAGIKARP,   15 ; 30%
@@ -341,15 +341,15 @@ FishGroups:
 .Dratini_Super:
 .Dratini_No_Swarm_Super:
 	db  40 percent, MAGIKARP,   15 ; 40%
-	db  70 percent, MAGIKARP,   15 ; 30%
-	db  90 percent, DRATINI,    20 ; 20%
-	db 100 percent, DRAGONAIR,  25 ; 10%
+	db  75 percent, MAGIKARP,   15 ; 35%
+	db  95 percent, DRATINI,    20 ; 20%
+	db 100 percent, DRAGONAIR,  25 ;  5%
 .Dratini_Super_2:
 .Dratini_No_Swarm_Super_2:
 	db  40 percent, MAGIKARP,   15 ; 40%
-	db  70 percent, MAGIKARP,   15 ; 30%
-	db  90 percent, DRATINI,    20 ; 20%
-	db 100 percent, DRAGONAIR,  25 ; 10%
+	db  75 percent, MAGIKARP,   15 ; 35%
+	db  95 percent, DRATINI,    20 ; 20%
+	db 100 percent, DRAGONAIR,  25 ;  5%
 
 ; Dratini Swarm
 .Dratini_Swarm_Old:
