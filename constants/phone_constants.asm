@@ -2,9 +2,9 @@
 	const_def
 	const PHONE_00
 	const PHONE_MOM
-	const PHONE_ELM
-	const PHONE_BILL
 	const PHONE_OAK
+	const PHONE_BILL
+;	const PHONE_ELM
 	const PHONE_SCHOOLBOY_JACK
 	const PHONE_POKEFAN_BEVERLY
 	const PHONE_SAILOR_HUEY
@@ -59,12 +59,12 @@ DEF NUM_PHONE_CONTACTS EQU const_value - 1
 	const_def
 	const SPECIALCALL_NONE
 	const SPECIALCALL_POKERUS        ;only outside
+	const SPECIALCALL_SSANNE         ;only outside
 	const SPECIALCALL_FLASH          ;only outside
 	const SPECIALCALL_SILPHCO        ;only outside
 	const SPECIALCALL_VIRIDIANGYM    ;only outside
 	const SPECIALCALL_SSTICKET       ;wherever you are
-	const SPECIALCALL_BIKESHOP       ;wherever you are
-;	const SPECIALCALL_WORRIED        ;wherever you are
+;	const SPECIALCALL_BIKESHOP       ;wherever you are
 	const SPECIALCALL_WORRIED        ;only outside
 	const SPECIALCALL_MASTERBALL     ;only outside
 DEF NUM_SPECIALCALLS EQU const_value - 1

@@ -13,9 +13,9 @@ PhoneContacts:
 	table_width PHONE_CONTACT_SIZE, PhoneContacts
 	phone TRAINER_NONE, PHONE_00,              N_A,                       0,       UnusedPhoneScript,        0,       UnusedPhoneScript
 	phone TRAINER_NONE, PHONECONTACT_MOM,      PLAYERS_HOUSE_1F,          ANYTIME, MomPhoneCalleeScript,     0,       UnusedPhoneScript
-	phone TRAINER_NONE, PHONECONTACT_BIKESHOP, ELMS_LAB,                  0,       UnusedPhoneScript,        0,       UnusedPhoneScript
-	phone TRAINER_NONE, PHONECONTACT_BILL,     N_A,                       ANYTIME, BillPhoneCalleeScript,    0,       BillPhoneCallerScript
 	phone TRAINER_NONE, PHONECONTACT_OAK,      OAKS_LAB,                  ANYTIME, OakPhoneCalleeScript,     0,       OakPhoneCallerScript
+	phone TRAINER_NONE, PHONECONTACT_BILL,     N_A,                       ANYTIME, BillPhoneCalleeScript,    0,       BillPhoneCallerScript
+;	phone TRAINER_NONE, PHONECONTACT_BIKESHOP, ELMS_LAB,                  0,       UnusedPhoneScript,        0,       UnusedPhoneScript
 	phone SCHOOLBOY,    JACK1,                 NATIONAL_PARK,             ANYTIME, JackPhoneCalleeScript,    ANYTIME, JackPhoneCallerScript
 	phone POKEFANF,     BEVERLY1,               ROUTE_11,                 ANYTIME, BeverlyPhoneCalleeScript, ANYTIME, BeverlyPhoneCallerScript
 	phone SAILOR,       HUEY1,                 OLIVINE_LIGHTHOUSE_2F,     ANYTIME, HueyPhoneCalleeScript,    ANYTIME, HueyPhoneCallerScript
