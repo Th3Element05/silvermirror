@@ -103,7 +103,6 @@ CharmanderPokeBallScript:
 	yesorno
 	iffalse OaksLabDidntChooseStarterScript
 	disappear OAKSLAB_POKE_BALL1
-	setevent EVENT_GOT_CHARMANDER_FROM_OAK
 	writetext OaksLabChoseStarterText
 	promptbutton
 	waitsfx
@@ -115,6 +114,7 @@ CharmanderPokeBallScript:
 	givepoke CHARMANDER, 5
 	closetext
 	setevent EVENT_GOT_A_POKEMON_FROM_OAK
+	setevent EVENT_GOT_CHARMANDER_FROM_OAK
 	sjump RivalTakesSquirtle
 	
 SquirtlePokeBallScript:
@@ -138,7 +138,6 @@ SquirtlePokeBallScript:
 	yesorno
 	iffalse OaksLabDidntChooseStarterScript
 	disappear OAKSLAB_POKE_BALL2
-	setevent EVENT_GOT_SQUIRTLE_FROM_OAK
 	writetext OaksLabChoseStarterText
 	promptbutton
 	waitsfx
@@ -150,6 +149,7 @@ SquirtlePokeBallScript:
 	givepoke SQUIRTLE, 5
 	closetext
 	setevent EVENT_GOT_A_POKEMON_FROM_OAK
+	setevent EVENT_GOT_SQUIRTLE_FROM_OAK
 	sjump RivalTakesBulbasaur
 	
 BulbasaurPokeBallScript:
@@ -173,7 +173,6 @@ BulbasaurPokeBallScript:
 	yesorno
 	iffalse OaksLabDidntChooseStarterScript
 	disappear OAKSLAB_POKE_BALL3
-	setevent EVENT_GOT_BULBASAUR_FROM_OAK
 	writetext OaksLabChoseStarterText
 	promptbutton
 	waitsfx
@@ -185,6 +184,7 @@ BulbasaurPokeBallScript:
 	givepoke BULBASAUR, 5
 	closetext
 	setevent EVENT_GOT_A_POKEMON_FROM_OAK
+	setevent EVENT_GOT_BULBASAUR_FROM_OAK
 	sjump RivalTakesCharmander
 
 OaksLabDidntChooseStarterScript:
@@ -198,7 +198,7 @@ RivalTakesCharmander:
 	opentext
 	writetext OaksLabRivalTakesPokemonText
 	disappear OAKSLAB_POKE_BALL1
-;	writetext OaksLabRivalReceivedCharmanderText
+	clearevent EVENT_BLUES_ROOM_CHARMANDER
 	waitbutton
 	closetext
 ;	setscene SCENE_OAKSLAB_RIVAL_BATTLE
@@ -216,7 +216,7 @@ RivalTakesSquirtle:
 	opentext
 	writetext OaksLabRivalTakesPokemonText
 	disappear OAKSLAB_POKE_BALL2
-;	writetext OaksLabRivalReceivedSquirtleText
+	clearevent EVENT_BLUES_ROOM_SQUIRTLE
 	waitbutton
 	closetext
 ;	setscene SCENE_OAKSLAB_RIVAL_BATTLE
@@ -227,7 +227,7 @@ RivalTakesBulbasaur:
 	opentext
 	writetext OaksLabRivalTakesPokemonText
 	disappear OAKSLAB_POKE_BALL3
-;	writetext OaksLabRivalReceivedBulbasaurText
+	clearevent EVENT_BLUES_ROOM_BULBASAUR
 	waitbutton
 	closetext
 ;	setscene SCENE_OAKSLAB_RIVAL_BATTLE
@@ -1463,4 +1463,6 @@ OaksLab_MapEvents:
 	object_event  1,  9, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OaksLabGirlScript, -1
 	object_event  8,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksAssistantScript, -1
 	object_event  2, 10, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksAssistantScript, -1
-
+;	object_event  2,  3, SPRITE_BULBASAUR, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, OaksLabBulbasaur, EVENT_OAKS_LAB_BULBASAUR
+;	object_event  2,  3, SPRITE_CHARMANDER, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OaksLabCharmander, EVENT_OAKS_LAB_CHARMANDER
+;	object_event  2,  3, SPRITE_SQUIRTLE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksLabSquirtle, EVENT_OAKS_LAB_SQUIRTLE
