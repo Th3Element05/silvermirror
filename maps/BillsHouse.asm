@@ -4,8 +4,14 @@
 
 BillsHouse_MapScripts:
 	def_scene_scripts
+	scene_script BillsHouseNoop1Scene, SCENE_BILLSHOUSE_NOOP
+	scene_script BillsHouseNoop2Scene, SCENE_BILLSHOUSE_DONT_LEAVE
 
 	def_callbacks
+
+BillsHouseNoop1Scene:
+BillsHouseNoop2Scene:
+	end
 
 BillsHouseBillScript:
 	checkevent EVENT_HELPED_BILL
@@ -20,28 +26,28 @@ BillsHouseBillScript:
 	writetext BillsHouseWontHelpBillText
 	promptbutton
 	; fallthrough
-	sjump .SaidYesToBill
-	
+
 .SaidYesToBill
 	writetext BillsHouseTeleporterText
 	waitbutton
 	closetext
-	scall BillsHouseBillGoesToTeleporterScript
+	scall .BillsHouseBillGoesToTeleporterScript
 	playsound SFX_ENTER_DOOR
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
+	setscene SCENE_BILLSHOUSE_DONT_LEAVE
 	end
 
 .BillInsideTeleporter
 	jumptext BillsHouseBillInsideTeleporterText
 
 .AfterHelpedBill
-	checkevent EVENT_GOT_HM01_CUT
-	iftrue .GotCut
-	jumptextfaceplayer BillsHouseBillShipText
-.GotCut
+;	checkevent EVENT_GOT_HM01_CUT
+;	iftrue .GotCut
 	jumptextfaceplayer BillsHouseBillExplainRadioCardText
+;.GotCut
+;	jumptextfaceplayer BillsHouseBillAskSeePokemonText
 
-BillsHouseBillGoesToTeleporterScript:
+.BillsHouseBillGoesToTeleporterScript:
 	readvar VAR_FACING
 	ifequal LEFT, .BillWalkAroundPlayer
 	applymovement BILLSHOUSE_BILL, BillsHouseBillEntersTeleporterMovement
@@ -51,19 +57,21 @@ BillsHouseBillGoesToTeleporterScript:
 	end
 
 BillsHouseBillsComputerScript:
-	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
-	iffalse .Skip
+	checkscene
+	ifnotequal SCENE_BILLSHOUSE_DONT_LEAVE, .Skip
 	opentext
-	writetext BillsHouseAskCellSeparatorText
-	yesorno
-	iffalse .NoCellSeparator
 	writetext BillsHouseRunCellSeparatorText
 	waitbutton
 	closetext
 	special FadeOutMusic
+	playsound SFX_BOOT_PC
+	waitsfx
 	playsound SFX_WARP_FROM
 	waitsfx
 	playsound SFX_WARP_TO
+	waitsfx
+	playsound SFX_EVOLVED
+	waitsfx
 	applymovement BILLSHOUSE_BILL, BillsHouseBillSwitchTeleportersMovement
 	variablesprite SPRITE_BILL_TRANSFORM, SPRITE_BILL
 	special LoadUsedSpritesGFX
@@ -81,18 +89,18 @@ BillsHouseBillsComputerScript:
 	promptbutton
 	setflag ENGINE_RADIO_CARD
 	writetext BillsHouseBillExplainRadioCardText
-	promptbutton
+;	promptbutton
 ; Bill gives S_S_TICKET
 ;	verbosegiveitem S_S_TICKET ; this is the SS Aqua ticket for now
 ;;	iffalse .NoRoom
 ;	promptbutton
-	writetext BillsHouseBillShipText
+;	writetext BillsHouseBillShipText
 	waitbutton
+	closetext
 	setevent EVENT_HELPED_BILL
 	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
-	; fallthrough
-.NoCellSeparator
-	closetext
+	specialphonecall SPECIALCALL_SSANNE
+	setscene SCENE_BILLSHOUSE_NOOP
 	end
 
 .RadioCardText:
@@ -105,12 +113,44 @@ BillsHouseBillsComputerScript:
 .Skip
 	jumptext BillsHouseComputerCodeText
 
+BillsHouseDontLeaveScript:
+	playsound SFX_ENTER_DOOR
+	applymovement BILLSHOUSE_BILL, BillsHouseBillDontLeaveMovement
+	opentext
+	writetext BillsHouseBillDontLeaveText
+	promptbutton
+	closetext
+	applymovement PLAYER, BillsHousePlayerDontLeaveMovement
+	opentext
+	writetext BillsHouseBillReminderText
+	waitbutton
+	closetext
+	applymovement BILLSHOUSE_BILL, BillsHouseBillEntersTeleporterAgainMovement
+	playsound SFX_ENTER_DOOR
+	end
+
+BillsHouseBillDontLeaveText:
+	text "Hey pal!"
+	line "Don't leave!"
+	done
+
+BillsHouseBillReminderText:
+	text "I need you to run"
+	line "the program on my"
+	cont "PC while I'm in"
+	cont "the teleporter!"
+
+	para "I can't do this"
+	line "by myself, chief!"
+	done
+
 ; movement
 BillsHouseBillEntersTeleporterMovement:
 	step RIGHT
 	step RIGHT
 	step UP
 	step UP
+BillsHouseBillEntersTeleporterAgainMovement:
 	step UP
 	hide_object
 	step_end
@@ -147,6 +187,15 @@ BillsHousePlayerGoesToBillMovement:
 	turn_head UP
 	step_end
 
+BillsHouseBillDontLeaveMovement:
+	show_object
+	step DOWN
+	step_end
+
+BillsHousePlayerDontLeaveMovement:
+	step UP
+	step_end
+
 BillsHouseBillIntroText:
 	text "Hiya! I'm a"
 	line "#MON..."
@@ -170,23 +219,16 @@ BillsHouseBillIntroText:
 
 BillsHouseTeleporterText:
 	text "When I'm in the"
-	line "TELEPORTER, just"
-	cont "click RUN on the"
+	line "TELEPORTER, go to"
+	cont "my PC and run the"
 	cont "Cell Separation"
-	cont "Program on my PC!"
+	cont "System!"
 	done
 
 BillsHouseBillInsideTeleporterText:
-	text "BILL: Click RUN"
-	line "on the Cell"
-	cont "Separation Program"
+	text "Go run the Cell"
+	line "Separator Program"
 	cont "on my PC!"
-	done
-
-	text "BILL: Hit RUN"
-	line "hit RUN on the"
-	cont "Cell Separation"
-	cont "Program!"
 	done
 
 BillsHouseWontHelpBillText:
@@ -197,14 +239,6 @@ BillsHouseWontHelpBillText:
 	para "What do you say,"
 	line "chief? Please?"
 	cont "OK? All right!"
-	done
-
-BillsHouseAskCellSeparatorText:
-	text "There's a bunch of"
-	line "code on the screen"
-	cont "and a button: RUN"
-	
-	para "Press it?"
 	done
 
 BillsHouseRunCellSeparatorText:
@@ -245,29 +279,10 @@ BillsHouseBillExplainRadioCardText:
 	line "a listen sometime!"
 	done
 
-BillsHouseBillShipText:
-	text "The cruise ship,"
-	line "S.S.ANNE, is in"
-	cont "VERMILION CITY."
-	cont "Its passengers"
-	cont "are all trainers!"
-
-	para "If you go there,"
-	line "maybe you'll get"
-	cont "to battle some"
-	cont "rare #MON!"
-	done
-
-BillsHouseComputerWrongSideText:
-	text "You see the screen"
-	line "from this side."
-	done
-
 BillsHouseComputerCodeText:
-	text "Bill's computer"
-	line "has code on it."
-
-	para "What does it mean?"
+	text "Cell Separator:"
+	line "Last Test Result:"
+	cont "       SUCCESSFUL"
 	done
 
 ;BillsGrandpa:
@@ -623,6 +638,9 @@ BillsHouse_MapEvents:
 	warp_event  3,  7, ROUTE_25, 1
 
 	def_coord_events
+	coord_event  2,  7, SCENE_BILLSHOUSE_DONT_LEAVE, BillsHouseDontLeaveScript
+	coord_event  3,  7, SCENE_BILLSHOUSE_DONT_LEAVE, BillsHouseDontLeaveScript
+
 
 	def_bg_events
 	bg_event  1,  4, BGEVENT_UP, BillsHouseBillsComputerScript
