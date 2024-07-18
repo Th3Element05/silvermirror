@@ -2,8 +2,21 @@
 
 Route9_MapScripts:
 	def_scene_scripts
+	scene_script Route9CheckFlashScene, SCENE_ROUTE9_CHECK_FLASH
+	scene_script Route9NoopScene,       SCENE_ROUTE9_NOOP
 
 	def_callbacks
+
+Route9CheckFlashScene:
+	checkevent EVENT_GOT_HM05_FLASH
+	iftrue .GotFlash
+	specialphonecall SPECIALCALL_FLASH
+.GotFlash
+	setscene SCENE_ROUTE9_NOOP
+	end
+
+Route9NoopScene:
+	end
 
 TrainerBugCatcherDoug:
 	trainer BUG_CATCHER, DOUG1, EVENT_BEAT_BUG_CATCHER_DOUG, BugCatcherDougSeenText, BugCatcherDougBeatenText, 0, .Script
@@ -285,4 +298,4 @@ Route9_MapEvents:
 	object_event 13, 10, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerPicnickerGina, -1
 	object_event 16, 15, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerHikerErik, -1
 	object_event 45, 15, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerHikerMichael, -1
-	object_event 10, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route9TMTeleport, EVENT_ROUTE_9_TM_TELEPORT
+	object_event 10, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, Route9TMTeleport, EVENT_ROUTE_9_TM_TELEPORT

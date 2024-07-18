@@ -24,6 +24,7 @@ MapScenes::
 	scene_var ROUTE_8_SAFFRON_GATE,                        wRoute8SaffronGateSceneID ;silvermirror
 	scene_var VERMILION_CITY,                              wVermilionCitySceneID ;silvermirror
 	scene_var SS_ANNE_2F,                                  wSSAnne2FSceneID ;silvermirror
+	scene_var ROUTE_9,                                     wRoute9SceneID ;silvermirror
 	scene_var POKEMON_TOWER_2F,                            wPokemonTower2FSceneID ;silvermirror
 	scene_var POKEMON_TOWER_5F,                            wPokemonTower5FSceneID ;silvermirror
 	scene_var POKEMON_TOWER_6F,                            wPokemonTower6FSceneID ;silvermirror
