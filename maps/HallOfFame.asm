@@ -31,6 +31,7 @@ HallOfFameEnterScript:
 	setval HEALMACHINE_HALL_OF_FAME
 	special HealMachineAnim
 	setevent EVENT_BEAT_ELITE_FOUR
+	setevent EVENT_INDIGO_POKECENTER_GYM_GUIDE
 ;	setevent EVENT_TELEPORT_GUY
 ;	setevent EVENT_RIVAL_SPROUT_TOWER
 ;	clearevent EVENT_RED_IN_MT_SILVER
@@ -39,10 +40,15 @@ HallOfFameEnterScript:
 	special RespawnOneOffs
 ;	setmapscene SPROUT_TOWER_3F, SCENE_SPROUTTOWER3F_NOOP
 	special HealParty
+;	checkevent EVENT_GOT_DRAGON_FANG
+;	iftrue .SkipDragonFang
+;	clearevent EVENT_INDIGO_POKECENTER_LANCE
+;	setmapscene INDIGO_PLATEAU_POKECENTER_1F, SCENE_INDIGOPLATEAUPOKECENTER1F_LANCE
+;.SkipDragonFang
 ;	checkevent EVENT_GOT_SS_TICKET_FROM_ELM
 ;	iftrue .SkipPhoneCall
 ;	specialphonecall SPECIALCALL_SSTICKET
-.SkipPhoneCall:
+;.SkipPhoneCall:
 	halloffame
 	end
 
