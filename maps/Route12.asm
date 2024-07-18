@@ -54,13 +54,15 @@ Route12SnorlaxBattleScript:
 	reloadmapafterbattle
 	disappear ROUTE12_SNORLAX
 	setevent EVENT_WOKE_SNORLAX
+;	setevent EVENT_WOKE_ROUTE_12_SNORLAX
 ;	reloadmappart
-	special CheckBattleCaughtResult
-	iffalse .nocatch
-	setflag ENGINE_PLAYER_CAUGHT_SNORLAX
+;	special CheckBattleCaughtResult
+	checkevent EVENT_ROUTE_16_SNORLAX
+	iffalse .notboth
+	setflag ENGINE_PLAYER_WOKE_BOTH_SNORLAX
 	end
 	
-.nocatch
+.notboth
 	opentext
 	writetext Route12SnorlaxWentHomeText
 	waitbutton
@@ -344,7 +346,7 @@ Route12_MapEvents:
 
 	def_object_events
 	object_event 10, 60, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_BIGDOLLSYM, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route12Snorlax, EVENT_ROUTE_12_SNORLAX
-	object_event 11, 62, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, Route12TMSnore, EVENT_ROUTE_12_TM_SNORE
+;	object_event 11, 62, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, Route12TMSnore, EVENT_ROUTE_12_TM_SNORE
 	object_event 16, 29, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerFisherScott, -1
 	object_event  7, 37, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerFisherHenry, -1
 	object_event 14, 38, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerFisherMarvin, -1
