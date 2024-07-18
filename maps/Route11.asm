@@ -350,12 +350,12 @@ Route11SnorlaxBattleScript:
 	loadwildmon SNORLAX, 50
 	startbattle
 	disappear ROUTE_11_BIG_SNORLAX_RESPAWN
-	setevent EVENT_FOUGHT_SNORLAX
+;	setevent EVENT_FOUGHT_SNORLAX
 	reloadmapafterbattle
-	special CheckBattleCaughtResult
-	iffalse .nocatch
-	setflag ENGINE_PLAYER_CAUGHT_SNORLAX
-.nocatch
+;	special CheckBattleCaughtResult
+;	iffalse .nocatch
+;	setflag ENGINE_PLAYER_CAUGHT_SNORLAX
+;.nocatch
 	end
 
 Route11SnorlaxSleepingText:
