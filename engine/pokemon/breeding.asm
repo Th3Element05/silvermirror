@@ -53,9 +53,9 @@ CheckBreedmonCompatibility:
 	jr z, .done
 
 .compute
-	call .CheckDVs
-	ld c, 255
-	jp z, .done
+;	call .CheckDVs ;silvermirror, remove "related" DV check
+;	ld c, 255
+;	jp z, .done
 	ld a, [wBreedMon2Species]
 	ld b, a
 	ld a, [wBreedMon1Species]
@@ -84,23 +84,22 @@ CheckBreedmonCompatibility:
 	ld [wBreedingCompatibility], a
 	ret
 
-.CheckDVs:
-; If Defense DVs match and the lower 3 bits of the Special DVs match,
-; avoid breeding
-	ld a, [wBreedMon1DVs]
-	and %1111
-	ld b, a
-	ld a, [wBreedMon2DVs]
-	and %1111
-	cp b
-	ret nz
-	ld a, [wBreedMon1DVs + 1]
-	and %111
-	ld b, a
-	ld a, [wBreedMon2DVs + 1]
-	and %111
-	cp b
-	ret
+;.CheckDVs:
+;; If Defense DVs match and the lower 3 bits of the Special DVs match, avoid breeding
+;	ld a, [wBreedMon1DVs]
+;	and %1111
+;	ld b, a
+;	ld a, [wBreedMon2DVs]
+;	and %1111
+;	cp b
+;	ret nz
+;	ld a, [wBreedMon1DVs + 1]
+;	and %111
+;	ld b, a
+;	ld a, [wBreedMon2DVs + 1]
+;	and %111
+;	cp b
+;	ret
 
 .CheckBreedingGroupCompatibility:
 ; If either mon is in the No Eggs group,
@@ -240,9 +239,9 @@ HatchEggs:
 	cp TOGEPI
 	jr nz, .nottogepi
 	; set the event flag for hatching togepi
-	ld de, EVENT_TOGEPI_HATCHED
-	ld b, SET_FLAG
-	call EventFlagAction
+;	ld de, EVENT_TOGEPI_HATCHED             ;silvermirror, removed
+;	ld b, SET_FLAG
+;	call EventFlagAction
 .nottogepi
 
 	pop de
