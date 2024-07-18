@@ -408,7 +408,7 @@ TradeTexts:
 ; TRADE_DIALOG_INTRO
 	dw NPCTradeIntroText1
 	dw NPCTradeIntroText2
-	dw NPCTradeIntroText2
+	dw NPCTradeIntroText4
 	dw NPCTradeIntroText3
 ; TRADE_DIALOG_CANCEL
 	dw NPCTradeCancelText1
@@ -428,7 +428,7 @@ TradeTexts:
 ; TRADE_DIALOG_AFTER
 	dw NPCTradeAfterText1
 	dw NPCTradeAfterText2
-	dw NPCTradeAfterText4
+	dw NPCTradeAfterText2
 	dw NPCTradeAfterText3
 
 NPCTradeCableText:
@@ -453,66 +453,70 @@ NPCTradeIntroText1:
 	text_far _NPCTradeIntroText1
 	text_end
 
-NPCTradeCancelText1:
-	text_far _NPCTradeCancelText1
-	text_end
-
-NPCTradeWrongText1:
-	text_far _NPCTradeWrongText1
-	text_end
-
-NPCTradeCompleteText1:
-	text_far _NPCTradeCompleteText1
-	text_end
-
-NPCTradeAfterText1:
-	text_far _NPCTradeAfterText1
-	text_end
-
 NPCTradeIntroText2:
 	text_far _NPCTradeIntroText2
-	text_end
-
-;NPCTradeCancelText2:
-;	text_far _NPCTradeCancelText2
-;	text_end
-
-;NPCTradeWrongText2:
-;	text_far _NPCTradeWrongText2
-;	text_end
-
-NPCTradeCompleteText2:
-	text_far _NPCTradeCompleteText2
-	text_end
-
-NPCTradeAfterText2:
-	text_far _NPCTradeAfterText2
 	text_end
 
 NPCTradeIntroText3:
 	text_far _NPCTradeIntroText3
 	text_end
 
+NPCTradeIntroText4:
+	text_far _NPCTradeIntroText4
+	text_end
+
+NPCTradeCancelText1:
+	text_far _NPCTradeCancelText1
+	text_end
+
+;NPCTradeCancelText2:
+;	text_far _NPCTradeCancelText2
+;	text_end
+
 ;NPCTradeCancelText3:
 ;	text_far _NPCTradeCancelText3
+;	text_end
+
+NPCTradeWrongText1:
+	text_far _NPCTradeWrongText1
+	text_end
+
+;NPCTradeWrongText2:
+;	text_far _NPCTradeWrongText2
 ;	text_end
 
 ;NPCTradeWrongText3:
 ;	text_far _NPCTradeWrongText3
 ;	text_end
 
-NPCTradeCompleteText3:
-	text_far _NPCTradeCompleteText3
+NPCTradeCompleteText1:
+	text_far _NPCTradeCompleteText1
 	text_end
 
-NPCTradeAfterText3:
-	text_far _NPCTradeAfterText3
+NPCTradeCompleteText2:
+	text_far _NPCTradeCompleteText2
+	text_end
+
+NPCTradeCompleteText3:
+	text_far _NPCTradeCompleteText3
 	text_end
 
 NPCTradeCompleteText4:
 	text_far _NPCTradeCompleteText4
 	text_end
 
-NPCTradeAfterText4:
-	text_far _NPCTradeAfterText4
+NPCTradeAfterText1:
+	text_far _NPCTradeAfterText1
 	text_end
+
+NPCTradeAfterText2:
+	text_far _NPCTradeAfterText2
+	text_end
+
+NPCTradeAfterText3:
+	text_far _NPCTradeAfterText3
+	text_end
+
+;NPCTradeAfterText4:
+;	text_far _NPCTradeAfterText4
+;	text_end
