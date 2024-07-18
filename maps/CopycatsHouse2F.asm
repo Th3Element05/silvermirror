@@ -12,6 +12,7 @@ CopycatsHouse2F_MapScripts:
 ;	callback MAPCALLBACK_OBJECTS, CopycatsHouse2FWhichGenderCallback
 
 CopycatsHouse2FHouseTilesCallback:
+	changeblock 2, 0, $32 ; table
 	changeblock 0, 4, $1c ; pink bed
 	endcallback
 
@@ -230,3 +231,5 @@ CopycatsHouse2F_MapEvents:
 	object_event  6,  4, SPRITE_DODUO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CopycatsDoduo, -1
 	object_event  0,  1, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, -1
 	object_event  5,  4, SPRITE_PIKACHU, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, -1
+	object_event  2,  1, SPRITE_JIGGLYPUFF, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, -1
+	object_event  3,  1, SPRITE_ABRA, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, -1
