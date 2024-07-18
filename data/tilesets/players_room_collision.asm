@@ -47,9 +47,9 @@
 	tilecoll WALL, STAIRCASE, FLOOR, FLOOR ; 2e
 	tilecoll FLOOR, FLOOR, WARP_CARPET_DOWN, WARP_CARPET_DOWN ; 2f
 	tilecoll WALL, WALL, TV, WALL ; 30
-	tilecoll WINDOW, WALL, FLOOR, FLOOR ; 31
-	tilecoll WALL, FLOOR, FLOOR, FLOOR ; 32
-	tilecoll FF, FF, FF, FF ; 33
+	tilecoll TOWN_MAP, WALL, FLOOR, FLOOR ; 31
+	tilecoll WALL, WALL, WALL, WALL ; 32
+	tilecoll WALL, FLOOR, WALL, FLOOR ; 33
 	tilecoll FF, FF, FF, FF ; 34
 	tilecoll FF, FF, FF, FF ; 35
 	tilecoll FF, FF, FF, FF ; 36
