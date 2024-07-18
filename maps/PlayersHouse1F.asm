@@ -293,17 +293,19 @@ HurryUpElmIsWaitingText:
 	done
 
 SoWhatWasProfElmsErrandText:
-	text "So, what was PROF."
-	line "OAK's errand?"
+	text "So, what did PROF."
+	line "OAK have for you?"
 
 	para "…"
 
-	para "That does sound"
-	line "important."
+	para "Wow! Your own"
+	line "#MON!"
 
-	para "But, you should be"
-	line "proud that people"
-	cont "rely on you."
+	para "That's a big"
+	line "responsibility!"
+
+	para "But I know you're"
+	line "ready for it!"
 	done
 
 ImBehindYouText:
@@ -338,9 +340,8 @@ NeighborText:
 
 	para "My daughter is"
 	line "adamant about"
-
-	para "becoming PROF."
-	line "OAK's assistant."
+	cont "becoming PROF."
+	cont "OAK's assistant."
 
 	para "She really loves"
 	line "#MON!"
@@ -370,8 +371,7 @@ PlayersHouse1FFridgeText:
 PlayersHouse1FTVText:
 	text "There's a movie on"
 	line "TV: Stars dot the"
-
-	para "sky as two boys"
+	cont "sky as two boys"
 	line "ride on a train…"
 
 	para "I'd better get"

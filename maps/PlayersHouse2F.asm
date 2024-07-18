@@ -286,6 +286,7 @@ if DEF(_DEBUG)
 ;endr
 	; intro events
 	addcellnum PHONE_MOM
+	addcellnum PHONE_OAK
 	setmapscene PLAYERS_HOUSE_1F, $1
 	setevent EVENT_PLAYERS_HOUSE_MOM_1
 	clearevent EVENT_PLAYERS_HOUSE_MOM_2
@@ -372,7 +373,7 @@ PlayersBedHealing:
 	special ReloadSpritesNoPalettes
 	special HealParty
 	playmusic MUSIC_HEAL
-	pause 70
+	pause 60 ;70
 ;	special FadeInPalettes
 	special FadeInQuickly
 	special RestartMapMusic
@@ -400,9 +401,9 @@ PlayersBedHealingText3:
 	done
 
 PlayersRadioText1:
-	text "PROF.OAK'S #MON"
-	line "TALK! Please tune"
-	cont "in next time!"
+	text "#MON TALK!"
+	line "Please tune in"
+	cont "next time!"
 	done
 
 PlayersRadioText2:
@@ -411,7 +412,7 @@ PlayersRadioText2:
 
 PlayersRadioText3:
 	text "This is DJ MARY,"
-	line "your co-host!"
+	line "your host!"
 	done
 
 PlayersRadioText4:
