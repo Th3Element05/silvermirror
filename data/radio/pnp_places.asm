@@ -2,14 +2,25 @@
 
 PnP_Places:
 	map_id PALLET_TOWN                 ; PALLET_TOWN
-	map_id ROUTE_22                    ; ROUTE_22
-	map_id PEWTER_CITY                 ; PEWTER_CITY
-	map_id CERULEAN_TRASHED_HOUSE      ; CERULEAN_CITY
-;	map_id CERULEAN_POLICE_STATION     ; CERULEAN_CITY
-	map_id ROUTE_12                    ; ROUTE_12
-	map_id ROUTE_11                    ; ROUTE_11
-	map_id ROUTE_16                    ; ROUTE_16
-	map_id ROUTE_14                    ; ROUTE_14
-	map_id CINNABAR_POKECENTER_1F      ; CINNABAR_ISLAND
-;	map_id CINNABAR_POKECENTER_2F_BETA ; CINNABAR_ISLAND
+	map_id VIRIDIAN_CITY
+	map_id PEWTER_CITY
+	map_id CERULEAN_CITY
+	map_id VERMILION_CITY
+	map_id LAVENDER_TOWN
+	map_id CELADON_CITY
+	map_id FUCHSIA_CITY
+	map_id SAFFRON_CITY
+	map_id CINNABAR_ISLAND
 .End
+
+;PnP_Places:
+;	map_id PALLET_TOWN                 ; PALLET_TOWN
+;	map_id ROUTE_22                    ; ROUTE_22
+;	map_id PEWTER_CITY                 ; PEWTER_CITY
+;	map_id CERULEAN_POLICE_STATION     ; CERULEAN_CITY
+;	map_id ROUTE_12                    ; ROUTE_12
+;	map_id ROUTE_11                    ; ROUTE_11
+;	map_id ROUTE_16                    ; ROUTE_16
+;	map_id ROUTE_14                    ; ROUTE_14
+;	map_id CINNABAR_POKECENTER_2F_BETA ; CINNABAR_ISLAND
+;.End
