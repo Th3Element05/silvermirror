@@ -2321,7 +2321,7 @@ NoRadioName:
 	call Textbox
 	ret
 
-OaksPKMNTalkName:     db "OAK's <PK><MN> Talk@"
+OaksPKMNTalkName:     db "<PK><MN> Talk@"
 PokedexShowName:      db "#DEX Show@"
 PokemonMusicName:     db "#MON Music@"
 LuckyChannelName:     db "Lucky Channel@"
@@ -2865,10 +2865,10 @@ FlyMap:
 ; enters Kanto, fly access is restricted until Indigo Plateau is
 ; visited and its flypoint enabled.
 	push af
-	ld c, SPAWN_INDIGO
-	call HasVisitedSpawn
-	and a
-	jr z, .NoKanto
+;	ld c, SPAWN_INDIGO
+;	call HasVisitedSpawn
+;	and a
+;	jr z, .NoKanto
 ; Kanto's map is only loaded if we've visited Indigo Plateau
 	ld a, KANTO_FLYPOINT ; first Kanto flypoint
 	ld [wStartFlypoint], a
