@@ -34,10 +34,13 @@ Route16Snorlax:
 	writetext Route16PlayPokeFluteAskText
 	yesorno
 	iffalse .LetSleep
-	writetext Route16PlayPokeFluteText
 	special FadeOutMusic
+	writetext Route16PlayPokeFluteText
+;	special FadeOutMusic
+;	pause 20
 	playsound SFX_POKEFLUTE
 	waitsfx
+;	promptbutton
 	writetext Route16SnorlaxWokeUpText
 	promptbutton
 	sjump Route16SnorlaxBattleScript
@@ -64,13 +67,15 @@ Route16SnorlaxBattleScript:
 	reloadmapafterbattle
 	disappear ROUTE12_SNORLAX
 	setevent EVENT_WOKE_SNORLAX
+;	setevent EVENT_WOKE_ROUTE_16_SNORLAX
 ;	reloadmappart
-	special CheckBattleCaughtResult
-	iffalse .nocatch
-	setflag ENGINE_PLAYER_CAUGHT_SNORLAX
+;	special CheckBattleCaughtResult
+	checkevent EVENT_ROUTE_12_SNORLAX
+	iffalse .notboth
+	setflag ENGINE_PLAYER_WOKE_BOTH_SNORLAX
 	end
 	
-.nocatch
+.notboth
 	opentext
 	writetext Route16SnorlaxWentHomeText
 	waitbutton
