@@ -1,0 +1,45 @@
+
+
+~Amulet Coin	celadon game corner
+~Cleanse Tag	pokemon tower
+Smoke Ball	?silph scared person
+Everstone	?daycare
+~Focus Band	dojo
+Lucky Egg	?oak's aide
+Scope Lens	
+~Leftovers	snorlax
+Brightpowder	
+Quick Claw	
+
+
+~Metal Powder	DITTO cinnabar lab scientist
+~Lucky Punch	CHANSEY cinnabar lab gramps
+~Stick		FARFETCH_D vermilion city girl
+~Thick Club	CUBONE route 11 gate 2f
+Berserk Gene
+Light Ball
+
+Kings Rock	
+Metal Coat	
+Dragon Scale	
+Up-Grade	
+
+
+~Hard Stone	ROCK	rock tunnel
+~Mystic Water	WATER	route25
+~Magnet		ELECTR	route10?
+~Miracle Seed	GRASS	celadon city
+~Poison Barb	POISON	route19
+~Twisted Spoon	PSYCHIC	mr psychics house
+~Charcoal	FIRE	cinnabar mansion
+~Soft Sand	GROUND	digletts cave
+~Blackbelt_I	FIGHT	dojo
+
+~Sharp Beak	FLYING	route16
+~Silver Powder	BUG	viridian forest
+~Silk Scarf	NORMAL	route5
+~Spell Tag	GHOST	pokemon tower
+~Nevermeltice	ICE	seafoam islands
+Dragon Fang	DRAGON	? victory road?
+Blackglasses	DARK	johto
+
