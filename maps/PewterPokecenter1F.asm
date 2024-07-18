@@ -31,7 +31,6 @@ PewterPokecenterJigglypuff:
 	playmusic MUSIC_JIGGLYPUFF_SONG
 	pause 200
 	special RestartMapMusic
-	waitbutton
 	closetext
 	end
 
