@@ -15,6 +15,7 @@ Route25Captain:
 	checkevent EVENT_GOT_MYSTIC_WATER
 	iftrue .GotMysticWater
 	writetext Route25CaptainMysticWaterText
+	promptbutton
 	verbosegiveitem MYSTIC_WATER
 	iffalse .BagFull
 	setevent EVENT_GOT_MYSTIC_WATER
@@ -36,14 +37,13 @@ Route25CaptainQuestionText:
 	text "Did you come out"
 	line "here to enjoy the"
 	cont "water, too?"
+
+	para "..."
 	done
 
 Route25CaptainMysticWaterText:
-	text "..."
-
-	para "I like you."
-
-	para "I want you to"
+	text "I like you."
+	line "I want you to"
 	cont "have this."
 	done
 

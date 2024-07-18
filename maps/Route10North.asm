@@ -78,6 +78,10 @@ PowerPlantSignText:
 Route10NorthRock:
 	jumpstd SmashRockScript
 
+; itemballs
+Route10Magnet:
+	itemball MAGNET
+
 ; hidden items
 Route10HiddenSuperPotion:
 	hiddenitem SUPER_POTION, EVENT_ROUTE_10_HIDDEN_SUPER_POTION
@@ -101,6 +105,7 @@ Route10North_MapEvents:
 	def_object_events
 	object_event  7, 25, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerPicnickerAzriel, -1
 	object_event 10, 42, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerPokemaniacBrent, -1
+	object_event 14, 31, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route10Magnet, EVENT_ROUTE_10_MAGNET
 ;	object_event 14, 31, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route10NorthRock, -1
 ;	object_event 15, 32, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route10NorthRock, -1
 ;	object_event 14, 34, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route10NorthRock, -1

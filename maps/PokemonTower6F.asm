@@ -42,9 +42,9 @@ PokemonTower6FGhostScript:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_NO_CATCH
 	loadwildmon MAROWAK, 30
 	startbattle
+	reloadmapafterbattle
 	setevent EVENT_FOUGHT_POKEMON_GHOST
 	setscene SCENE_POKEMONTOWER6F_NOOP
-	reloadmapafterbattle
 	jumptext PokemonTower6FGhostDepartedText
 
 PokemonTower6FBegoneText:
@@ -155,14 +155,18 @@ PokemonTower6FStepBackMovement:
 	remove_fixed_facing
 	step_end
 
+; itemballs
 PokemonTower6FXAccuracy:
 	itemball X_ACCURACY
 
 PokemonTower6FRareCandy:
 	itemball RARE_CANDY
 
-PokemonTower6FDebugSilphScope:
-	hiddenitem SILPH_SCOPE, EVENT_POKEMON_TOWER_5F_HIDDEN_ELIXER
+PokemonTower6FSpellTag:
+	itemball SPELL_TAG
+
+;PokemonTower6FDebugSilphScope:
+;	hiddenitem SILPH_SCOPE, EVENT_POKEMON_TOWER_5F_HIDDEN_ELIXER
 
 PokemonTower6F_MapEvents:
 	db 0, 0 ; filler
@@ -175,11 +179,12 @@ PokemonTower6F_MapEvents:
 	coord_event  8, 16, SCENE_POKEMONTOWER6F_GET_OUT, PokemonTower6FGhostScript
 
 	def_bg_events
-	bg_event  2, 15, BGEVENT_ITEM, PokemonTower6FDebugSilphScope
+;	bg_event  2, 15, BGEVENT_ITEM, PokemonTower6FDebugSilphScope
 
 	def_object_events
 	object_event  7,  5, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerMediumMaya, -1
 	object_event 14,  5, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerMediumWillow, -1
 	object_event 10, 10, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerMediumAbigail, -1
 	object_event 12, 14, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PokemonTower6FXAccuracy, EVENT_POKEMON_TOWER_6F_X_ACCURACY
-	object_event  4,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PokemonTower6FRareCandy, EVENT_POKEMON_TOWER_6F_RARE_CANDY
+	object_event  1, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PokemonTower6FRareCandy, EVENT_POKEMON_TOWER_6F_RARE_CANDY
+	object_event 10, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PokemonTower6FSpellTag, EVENT_POKEMON_TOWER_6F_SPELL_TAG

@@ -275,7 +275,7 @@ ViridianForestPokeball:
 	itemball POKE_BALL
 
 ViridianForestSilverPowder:
-	itemball SILVER_POWDER
+	itemball SILVERPOWDER
 
 ; hidden items
 ViridianForestHiddenPotion:

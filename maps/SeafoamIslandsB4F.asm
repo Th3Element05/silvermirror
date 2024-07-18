@@ -41,8 +41,12 @@ SeafoamIslandsB4FBoulderLandText:
 	line "landed here."
 	done
 
+; itemballs
 SeafoamTMIceBeam:
 	itemball TM_ICE_BEAM
+
+SeafoamB4FNevermeltice:
+	itemball NEVERMELTICE
 
 ; hidden items
 SeafoamIslandsB4FHiddenUltraBall:
@@ -67,5 +71,4 @@ SeafoamIslandsB4F_MapEvents:
 	object_event  8,  1, SPRITE_ARTICUNO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0,  SeafoamIslandsArticuno, EVENT_ARTICUNO_APPEAR
 	object_event  7,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, SeafoamTMIceBeam, EVENT_SEAFOAM_B4F_TM_ICE_BEAM
 	object_event  6, 17, SPRITE_BOULDER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SeafoamIslandsB4FBoulderLand, EVENT_SEAFOAM_B4F_BOULDER_X1
-;	object_event 15, -1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SeafoamIslandsB4FUltraBall, EVENT_SEAFOAM_ISLANDS_B4F_ULTRA_BALL
-;	object_event 27,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SeafoamIslandsB4FBigPearl, EVENT_SEAFOAM_ISLANDS_B4F_BIG_PEARL
+	object_event 28,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SeafoamB4FNevermeltice, EVENT_SEAFOAM_B4F_NEVERMELTICE
