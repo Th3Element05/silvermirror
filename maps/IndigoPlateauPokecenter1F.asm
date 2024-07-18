@@ -1,15 +1,24 @@
 	object_const_def
+;	const INDIGOPLATEAUPOKECENTER1F_LANCE
+	const INDIGOPLATEAUPOKECENTER1F_COOLTRAINERM
 
 IndigoPlateauPokecenter1F_MapScripts:
 	def_scene_scripts
-;	scene_script IndigoPlateauPokecenter1FNoopScene, SCENE_INDIGOPLATEAUPOKECENTER1F_RIVAL_BATTLE
+	scene_script IndigoPlateauPokecenter1FNoop1Scene, SCENE_INDIGOPLATEAUPOKECENTER1F_FIRST_TIME
+	scene_script IndigoPlateauPokecenter1FNoop2Scene, SCENE_INDIGOPLATEAUPOKECENTER1F_NOOP
+;	scene_script IndigoPlateauPokecenter1FLanceScene, SCENE_INDIGOPLATEAUPOKECENTER1F_LANCE
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, IndigoPlateauPokecenter1FPrepareElite4Callback
 	callback MAPCALLBACK_NEWMAP, IndigoPlateauFlypointCallback
 
-IndigoPlateauPokecenter1FNoopScene:
+IndigoPlateauPokecenter1FNoop1Scene:
+IndigoPlateauPokecenter1FNoop2Scene:
 	end
+
+;IndigoPlateauPokecenter1FLanceScene:
+;	sdefer IndigoPokecenterLanceGiftScript
+;	end
 
 IndigoPlateauFlypointCallback:
 	setflag ENGINE_FLYPOINT_INDIGO_PLATEAU
@@ -67,19 +76,40 @@ IndigoPlateauPokecenter1FGymGuideText:
 	cont "is it! Go for it!"
 	done
 
+IndigoPokecenterFirstVisitScript:
+	turnobject INDIGOPLATEAUPOKECENTER1F_COOLTRAINERM, LEFT
+	turnobject PLAYER, RIGHT
+	; fallthrough
 IndigoPlateauPokecenter1FCooltrainerMScript:
+	setscene SCENE_INDIGOPLATEAUPOKECENTER1F_NOOP
 	jumptextfaceplayer IndigoPlateauPokecenter1FCooltrainerMText
 IndigoPlateauPokecenter1FCooltrainerMText:
-	text "At the #MON"
-	line "LEAGUE, you'll get"
-	cont "tested by the"
-	cont "ELITE FOUR."
+	text "Past here, you'll"
+	line "be tested by the"
+	cont "ELITE FOUR!"
 
-	para "You have to beat"
-	line "them all. If you"
-	cont "lose, you have to"
+	para "Once you enter,"
+	line "you need to beat"
+	cont "them all. If you"
+	cont "lose you need to"
 	cont "start all over!"
 	done
+;
+;	text "At the #MON"
+;	line "LEAGUE, you'll get"
+;	cont "tested by the"
+;	cont "ELITE FOUR."
+;
+;	para "You have to beat"
+;	line "them all. If you"
+;	cont "lose, you have to"
+;	cont "start all over!"
+;	done
+
+;IndigoPokecenterLanceGiftScript:
+;	setscene SCENE_INDIGOPLATEAUPOKECENTER1F_NOOP
+;	end
+
 
 TeleportGuyScript:
 	faceplayer
@@ -155,13 +185,15 @@ IndigoPlateauPokecenter1F_MapEvents:
 	warp_event  8,  0, E4_LORELEIS_ROOM, 2
 
 	def_coord_events
+	coord_event  7,  4, SCENE_INDIGOPLATEAUPOKECENTER1F_FIRST_TIME, IndigoPokecenterFirstVisitScript
 
 	def_bg_events
 
 	def_object_events
+;	object_event  8,  8, SPRITE_LANCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IndigoPokecenterLanceGiftScript, EVENT_INDIGO_POKECENTER_LANCE
+	object_event  8,  4, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IndigoPlateauPokecenter1FCooltrainerMScript, -1
 	object_event 13,  5, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IndigoPlateauPokecenter1FNurseScript, -1
 	object_event  0,  7, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IndigoPlateauPokecenter1FClerkScript, -1
-	object_event  8,  4, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IndigoPlateauPokecenter1FCooltrainerMScript, -1
-	object_event  6,  9, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IndigoPlateauPokecenter1FGymGuideScript, -1
+	object_event  6,  9, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IndigoPlateauPokecenter1FGymGuideScript, EVENT_INDIGO_POKECENTER_GYM_GUIDE
 	object_event 13, 10, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TeleportGuyScript, -1 ;EVENT_TELEPORT_GUY
 	object_event 14, 10, SPRITE_ABRA, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, AbraScript, -1 ;EVENT_TELEPORT_GUY
