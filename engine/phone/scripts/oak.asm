@@ -1,33 +1,18 @@
+; YOU CALL OAK
 OakPhoneCalleeScript:
 	readvar VAR_SPECIALPHONECALL
 	ifequal SPECIALCALL_POKERUS, .pokerus
-;	checkevent EVENT_SHOWED_TOGEPI_TO_ELM
-;	iftrue .discovery
-;	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
-;	iffalse .next
-;	checkevent EVENT_TOGEPI_HATCHED
-;	iftrue .egghatched
-;.next
-;	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
-;	iftrue .eggunhatched
-;	checkevent EVENT_ELMS_AIDE_IN_LAB
-;	iftrue .assistant
-;	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
-;	iftrue .checkingegg
 	checkevent EVENT_OAK_CALLED_ABOUT_VIRIDIAN_GYM
 	iftrue .RemindViridianGym
 	checkevent EVENT_OAK_CALLED_ABOUT_SILPHCO
 	iftrue .RemindSilphCo
 	checkevent EVENT_OAK_CALLED_ABOUT_FLASH
 	iftrue .RemindFlash
-;	checkevent EVENT_GOT_MYSTERY_EGG_FROM_MR_POKEMON
-;	iftrue .sawmrpokemon
+	checkevent EVENT_OAK_CALLED_ABOUT_SSANNE
+	iftrue .RemindSSAnne
+	; else
 	farwritetext OakPhoneHealYourMonText
 	end
-
-;.sawmrpokemon
-;	farwritetext ElmPhoneSawMrPokemonText
-;	end
 
 .RemindViridianGym
 	checkevent EVENT_BEAT_GIOVANNI
@@ -47,35 +32,14 @@ OakPhoneCalleeScript:
 	farwritetext OakPhoneRemindFlashText
 	end
 
-;.checkingegg
-;	farwritetext ElmPhoneCheckingTheEggText
-;	end
-
-;.assistant
-;	farwritetext ElmPhoneAssistantText
-;	end
-
-;.eggunhatched
-;	farwritetext ElmPhoneHowIsTheEggText
-;	end
-
-;.egghatched
-;	farwritetext ElmPhoneEggHatchedText
-;	setevent EVENT_TOLD_ELM_ABOUT_TOGEPI_OVER_THE_PHONE
-;	end
-
-;.discovery
-;	random 2
-;	ifequal 0, .nextdiscovery
-;	farwritetext ElmPhoneDiscoveredHatchTimeText
-;	end
-
-;.nextdiscovery
-;	farwritetext ElmPhoneInvestigatingEggMovesText
-;	end
+.RemindSSAnne
+	checkevent EVENT_GOT_HM01_CUT
+	iftrue .default
+	farwritetext OakPhoneRemindSSAnneText
+	end
 
 .pokerus
-	farwritetext ElmPhoneDiscoveredPokerusText
+	farwritetext OakPhoneDiscoveredPokerusText
 	specialphonecall SPECIALCALL_NONE
 	end
 
@@ -83,15 +47,23 @@ OakPhoneCalleeScript:
 	farwritetext OakPhoneHowManyBadgesText
 	end
 
+; OAK CALLS YOU
 OakPhoneCallerScript:
 	readvar VAR_SPECIALPHONECALL
+	ifequal SPECIALCALL_SSANNE, .ssanne
 	ifequal SPECIALCALL_FLASH, .flash
 	ifequal SPECIALCALL_SILPHCO, .silphco
 	ifequal SPECIALCALL_VIRIDIANGYM, .viridiangym
 	ifequal SPECIALCALL_SSTICKET, .gift
 	ifequal SPECIALCALL_MASTERBALL, .gift
-	farwritetext ElmPhoneDiscoveredPokerusText
+	farwritetext OakPhoneDiscoveredPokerusText
 	specialphonecall SPECIALCALL_NONE
+	end
+
+.ssanne
+	farwritetext OakPhoneSSAnneText
+	specialphonecall SPECIALCALL_NONE
+	setevent EVENT_OAK_CALLED_ABOUT_SSANNE
 	end
 
 .flash
@@ -113,11 +85,11 @@ OakPhoneCallerScript:
 	end
 
 .gift
-	farwritetext ElmPhoneGiftText
+	farwritetext OakPhoneGiftText
 	specialphonecall SPECIALCALL_NONE
 	end
 
-.neat ; unreferenced
-	farwritetext ElmPhoneGotAholdOfSomethingNeatText
-	specialphonecall SPECIALCALL_NONE
-	end
+;.neat ; unreferenced
+;	farwritetext ElmPhoneGotAholdOfSomethingNeatText
+;	specialphonecall SPECIALCALL_NONE
+;	end
