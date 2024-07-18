@@ -11,9 +11,12 @@ AddNTimes::
 
 TEST to-do
 
+CinnabarLab Trade, iffalse test
+
 Pewter starter boost items after Brock
 
 Rout12/16 Snorlax ;reloadmappart
+snorlax, respawn on route11 only after waking both
 
 SSAnneRooms1F/B1F TM itemball disappears if you've bought it from store
 
@@ -37,8 +40,153 @@ test STRENGTH with/without rainbowbadge
 
 TO-DO to-do
 
+constants\menu_constants.asm MOVES
+mom start text PARA
+remove name?: DAISY: pokemon are living things
+mom text, already seen your pokemon?
+old man "sorry for stopping you"
+BROCK after battle text issue. "a new move."
+pewter gym statues, make grey
+route 3 npc faceplayer
+check pokecenter link receptionist sprites
+granny sideways sprite too short?
+nugget bridge trainers, move to one side?
+nugget bridge rocket before text, too many button presses between text?
+route 25 captain text issue
+bill text, dont ask about pokemon collection...
+bill house test result, say SUCCESS
+oak call ssanne, ####DEX
+trashed house wall cracks, adjust?
+cerulean city move slowbro after trashed house or rocket
+daycare, outdoor sprites, also one dark brown, one bright pink?
+NIDORAN trade, doesn't specify gender
+vermilion pokecenter npcs don't faceplayer
+route 2 trade house scientist face wrong way
+fanclub psyduck, do rock color?
+vermilion mart cooltrainerM doesn't faceplayer
+ssanne1Frooms girl says WIGGLYTUFF, but its clefairy
+ssanne "entrance" block tiles, mast, warpcarpet down
+ssanneroomsb1f TMREST isn't blue
+ssannekitchen workers should face up after talking
+ssannerooms2f gentleman shows snorlax
+ssanne stairs blocks can have shadows
+ssanne captains journal doesnt have text
+disappear vermilion sailor in ssanne captain script?
+room ornaments all red?
+unlock all bed/poster/rug ornaments at init?
+daisy grooming whiteout leaves bright palettes, players room works right
+daisy text after grooming, adjust?
+daisy night text wrong cont
+mom call about daisy grooming, maybe?
+players room bed text, no has extra buttonpress to close text
+LT.SUREGE, Lightning Warrior
+surge room trash can does soemthign funny
+route6 couple shouldn't faceplayer when talking after battle
+bike shop youngster standing on bike
+double space in give flash text?
+route9 extend cliff a bit
+route11 text "fat pokemon" big
+route11 pokefanF para
+route11 youngster no regrets text?
+route9 teleportTM itemball CRASH (fixed)
+route10 pokecenter gentleman can block nurse
+rock tunnel, move hard stone?
+rock tunnel lavender exit wrong warp (fixed)
+check marts for variable inventory (meds)
+PLACES&PEOPLE talks about ROCKET EXECUTIVE a lot
+route12 gate north entrance... warp carpet?
+route8 has YELLOW over COLOR (lass)
+MAGNETMITE caught holding METAL COAT
+EEVEE line evos_attacks...
+celadon mansion 1f "meowth brings home money!"
+celadon mansion 2f pc text
+celadon mansion 3f, mentions jasmine
+celadon hotel palette appears to be AUTO
+celadon hotel bench guy doesn't have text
+celadon dept store 3f youngster, para
+celadon dept store 3f COUNTER, needs closetext
+PPS pikachu palette
+fly pager too many para
+celadon gym weepinbell/gloom movesets are tough
+celadon game corner play sound before run away movement
+decide if door/wall should have edge or not
+rocket hideout LIFT KEY doesn't disappear
+running animation UP/DOWN needs head bob
+KARATE MASTER: text, before, after?
+karate master waitbutton before fight start
+karate master after text, line break between #MON / LEAGUE is bad
+bench guys, no red
+route8 super nerd has level 22 muk ?
+pokemon tower medium margret (floor) view distance
+pokemon tower 5f dont get trapped behind npc, just in case
+pokemon tower 6f, closetext/opentext before SILPH SCOPE
+mr fuji color
+mr fuji house, give pokeflue, unecessary waitbutton? check closetext/opentext before explain
+mr fuji house swap girl/psyduck (psyduck only faces down)
+TEST 	route16 pokeflute doesn't play sound (check route12 script)
+route18 move sign left a little
+gate2f don't allow bike!
+TEST 	route15gate2f, constant/size
+check common text for para
+restore field moves to mon_menu?
+route15 top trainer in right place?
+route13 lower trainer needs to be visible from route14
+fuchsia city scyther sign, say "speed and agility"
+fuchsia city ERIK should be younger, like cooltrainer
+safari zone explaination "running an event"
+check safari zone officer colors, brown or green are probably good
+check all gate officer colors, probably all blue
+safari zone entrance warp coords still wrong?
+bill's familly's house in fuchsia city is MESSED UP
+game corner machine c2, a4
+route17 sprites changed to chansey after wild battle...
+
+
+
+
+PPS possible to add up/down arrows or remove textbox?
+why do jumptextfaceplayer stay facing but dont stay facing after movements?
+
+YOUNGSTER - blue
+CAMPER - green
+PICNICKER - green
+LASS - blue
+HIKER - blue
+POKEFAN_F - purple, blue? any?
+POKEFAN_M - red, brown?
+SAILOR - blue
+ROCKER - red, white? brown?
+GENTLEMAN - blue, brown? any?
+COUPLE - blue
+BUGCATCHER - blue
+POKEMANIAC - purple, blue? red?
+BEAUTY - blue
+SUPER NERD - brown, any?
+FISHER - teal blue/green
+BIRD KEEPER - blue (rocker sprite?)
+BIKER - dark blue
+TWINS - pink
+JUGGLER - blue
+
+
+KOGA - purple
+GRAMPS - brown
+
+
+
+
+radio stations
+
+route 19 gate guard text
+
+POISON_BARB says quick claw x79
+blues house 2f computer CRASH
+
+TRY use SCENE and coord_event on top of a warp_event
+
 berries
 
+simplify bills house sequence
 make bill not talk about SS Anne, oak call
 
 route12 fishing guru facing wrong way
@@ -49,10 +197,8 @@ mr fuji pokeflute text typo "hearnig"
 route 12 gate stairs block colision
 route 10 spawn coords
 
-mom_phone items
+SEEN pokemon
 
-Snorlax drops TM_SNORE when first defeated
-Snorlax drops TM_SLEEP_TALK first defeated
 MartTMs2: currently tbolt fthrower ibeam
 
 MahoganyMart1F is dungeon? to RocketBaseB1F
@@ -138,13 +284,7 @@ game corner hidden coins, event is set after fail conditions
 FixPicBank
 battle tower stuff?
 
-EGG_LEVEL
-MACRO savemon_struct
-MON_LEVEL
-engine\pokemon\stats_screen.asm > .LoadPals: > set 5, [hl]
-data\pokemon\base_stats\*.asm > db 5 ; unknown 2
-engine\pokemon\breeding.asm > MON_LEVEL
-	HatchEggScript: > callasm OverworldHatchEgg
+EGG_LEVEL 
 
 
 
