@@ -30,7 +30,7 @@ MomPhoneGenericAreaText:
 	cont "of neat, <PLAYER>."
 	done
 
-MomPhoneNewBarkText:
+MomPhonePalletText:
 	text "What? You're in"
 	line "@"
 	text_ram wStringBuffer3
@@ -40,7 +40,7 @@ MomPhoneNewBarkText:
 	line "sometime!"
 	done
 
-MomPhoneCherrygroveText:
+MomPhoneViridianText:
 	text "You're visiting"
 	line "@"
 	text_ram wStringBuffer3
@@ -66,9 +66,8 @@ MomDeterminedText:
 
 	para "But, <PLAYER>, I"
 	line "know you're really"
-
-	para "determined. You'll"
-	line "be OK, right?"
+	cont "determined. You'll"
+	cont "be OK, right?"
 	done
 
 MomCheckBalanceText:
@@ -89,9 +88,8 @@ MomImportantToSaveText:
 MomYoureNotSavingText:
 	text "Oh, <PLAYER>,"
 	line "you're not saving"
-
-	para "any money. Would"
-	line "you like to save?"
+	cont "any money. Would"
+	cont "you like to save?"
 	done
 
 MomYouveSavedText:

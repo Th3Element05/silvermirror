@@ -21,9 +21,9 @@ ENDM
 DEF CHRIS EQU __trainer_class__
 	trainerclass TRAINER_NONE ; 00
 	const PHONECONTACT_MOM
-	const PHONECONTACT_BIKESHOP
-	const PHONECONTACT_BILL
 	const PHONECONTACT_OAK
+	const PHONECONTACT_BILL
+;	const PHONECONTACT_BIKESHOP
 	const PHONECONTACT_BUENA
 DEF NUM_NONTRAINER_PHONECONTACTS EQU const_value - 1
 
@@ -885,4 +885,4 @@ DEF KRIS EQU __trainer_class__
 
 	trainerclass POKEMON_GHOST ; 48
 
-DEF NUM_TRAINER_CLASSES EQU __trainer_class__ - 1
+DEF NUM_TRAINER_CLASSES EQU __trainer_class__ - 1 ; should we subtract the fossils and ghost here?

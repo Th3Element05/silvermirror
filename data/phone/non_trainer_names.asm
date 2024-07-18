@@ -3,15 +3,15 @@ NonTrainerCallerNames:
 	table_width 2, NonTrainerCallerNames
 	dw .none
 	dw .mom
-	dw .bikeshop
+	dw .oak
 	dw .bill
-	dw .elm
+;	dw .bikeshop
 	dw .buena
 	assert_table_length NUM_NONTRAINER_PHONECONTACTS + 1
 
 .none:     db "----------@"
 .mom:      db "MOM:@"
+.oak:      db "PROF.OAK:@"
 .bill:     db "BILL:@"
-.elm:      db "PROF.OAK:@"
-.bikeshop: db "BIKE SHOP:@"
+;.bikeshop: db "BIKE SHOP:@"
 .buena:    db "BUENA:<LF>   DISC JOCKEY@"
