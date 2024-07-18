@@ -193,12 +193,19 @@ RockTunnel1FSignText:
 	cont "LAVENDER TOWN"
 	done
 
+; itemballs
+RockTunnel1FHardStone:
+	itemball HARD_STONE
+
+RockTunnel1FRock:
+	jumpstd SmashRockScript
+
 RockTunnel1F_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
 	warp_event 15,  5, ROUTE_10_NORTH, 2  ; 1
-	warp_event 13, 29, ROUTE_10_SOUTH, 2  ; 2
+	warp_event 13, 29, ROUTE_10_SOUTH, 1  ; 2
 	warp_event  5,  3, ROCK_TUNNEL_B1F, 3 ; 3
 	warp_event 17, 11, ROCK_TUNNEL_B1F, 2 ; 4
 	warp_event 31,  3, ROCK_TUNNEL_B1F, 4 ; 5
@@ -217,3 +224,6 @@ RockTunnel1F_MapEvents:
 	object_event 33, 18, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerPicnickerEdna, -1
 	object_event 29, 21, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerPicnickerKim, -1
 	object_event 20, 22, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerPicnickerBrooke, -1
+	object_event 19, 17, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RockTunnel1FHardStone, EVENT_ROCK_TUNNEL_1F_HARD_STONE
+	object_event 24, 12, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RockTunnel1FRock, -1
+	object_event 26, 15, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RockTunnel1FRock, -1

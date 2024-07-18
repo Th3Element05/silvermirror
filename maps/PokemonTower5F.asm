@@ -141,9 +141,14 @@ PokemonTower5FPurifiedZoneText:
 	line "are fully healed!"
 	done
 
+; itemballs
 PokemonTower5FNugget:
 	itemball NUGGET
 
+PokemonTower5FCleanseTag:
+	itemball CLEANSE_TAG
+
+; hidden items
 PokemonTower5FHiddenElixer:
 	hiddenitem ELIXER, EVENT_POKEMON_TOWER_5F_HIDDEN_ELIXER
 
@@ -174,3 +179,4 @@ PokemonTower5F_MapEvents:
 	object_event  4, 10, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerMediumLydia, -1
 	object_event  7, 16, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerMediumDelilah, -1
 	object_event  4, 14, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PokemonTower5FNugget, EVENT_POKEMON_TOWER_5F_NUGGET
+	object_event  9,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PokemonTower5FCleanseTag, EVENT_POKEMON_TOWER_5F_CLEANSE_TAG

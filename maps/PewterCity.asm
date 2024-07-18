@@ -115,9 +115,12 @@ PewterCityBlockingYoungsterScript:
 	end
 
 .GiveItem
+	checkevent EVENT_GOT_PEWTER_BOOST_ITEM
+	iftrue .Skip
 	writetext PewterCityYoungsterBeatBrockText
 	promptbutton
 	setscene SCENE_PEWTERCITY_NOOP
+.Skip
 	checkevent EVENT_GOT_BULBASAUR_FROM_OAK
 	iftrue .MiracleSeed
 	checkevent EVENT_GOT_CHARMANDER_FROM_OAK
@@ -125,8 +128,8 @@ PewterCityBlockingYoungsterScript:
 ;	checkevent EVENT_GOT_SQUIRTLE_FROM_OAK
 ;	iftrue .MysticWater
 ;.MysticWater
-	getitemname STRING_BUFFER_3, MYSTIC_WATER
-	getstring STRING_BUFFER_4, PewterCityWater
+	getitemname STRING_BUFFER_4, MYSTIC_WATER
+	getstring STRING_BUFFER_5, PewterCityWater
 	checkevent EVENT_GOT_PEWTER_BOOST_ITEM
 	iftrue .GotPewterBoostItem
 	verbosegiveitem MYSTIC_WATER
@@ -135,8 +138,8 @@ PewterCityBlockingYoungsterScript:
 	sjump .GotPewterBoostItem
 
 .Charcoal
-	getitemname STRING_BUFFER_3, CHARCOAL
-	getstring STRING_BUFFER_4, PewterCityFire
+	getitemname STRING_BUFFER_4, CHARCOAL
+	getstring STRING_BUFFER_5, PewterCityFire
 	checkevent EVENT_GOT_PEWTER_BOOST_ITEM
 	iftrue .GotPewterBoostItem
 	verbosegiveitem CHARCOAL
@@ -145,8 +148,8 @@ PewterCityBlockingYoungsterScript:
 	sjump .GotPewterBoostItem
 
 .MiracleSeed
-	getitemname STRING_BUFFER_3, MIRACLE_SEED
-	getstring STRING_BUFFER_4, PewterCityGrass
+	getitemname STRING_BUFFER_4, MIRACLE_SEED
+	getstring STRING_BUFFER_5, PewterCityGrass
 	checkevent EVENT_GOT_PEWTER_BOOST_ITEM
 	iftrue .GotPewterBoostItem
 	verbosegiveitem MIRACLE_SEED
@@ -191,11 +194,11 @@ PewterCityYoungsterBeatBrockText:
 PewterCityYoungsterExplainItemText:
 	text "Holding that"
 	line "@"
-	text_ram wStringBuffer3
-	text "will"
+	text_ram wStringBuffer4
+	text " will"
 	cont "boost a #MON's"
 	cont "@"
-	text_ram wStringBuffer4
+	text_ram wStringBuffer2
 	text "-attacks!"
 	done
 
@@ -463,8 +466,8 @@ PewterCityGoToGymMovement1:
 
 PewterCityGoToGymMovement1_Alt:
 	step DOWN
-	step LEFT
 	step DOWN
+	step LEFT
 	step_end
 
 PewterCity14StepsLeftMovement:

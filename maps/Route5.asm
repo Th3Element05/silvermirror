@@ -109,6 +109,10 @@ Route5UndergroundPathSignText:
 	line "VERMILION CITY"
 	done
 
+; itemballs
+Route5SilkScarf:
+	itemball SILK_SCARF
+
 Route5_MapEvents:
 	db 0, 0 ; filler
 
@@ -129,3 +133,4 @@ Route5_MapEvents:
 	object_event 11, 24, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DayCareManScript_Outside, EVENT_DAY_CARE_MAN_ON_ROUTE_5
 	object_event  8, 16, SPRITE_DAY_CARE_MON_1, SPRITEMOVEDATA_POKEMON, 2, 2, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DayCareMon1Script, EVENT_DAY_CARE_MON_1
 	object_event 11, 17, SPRITE_DAY_CARE_MON_2, SPRITEMOVEDATA_POKEMON, 2, 2, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, DayCareMon2Script, EVENT_DAY_CARE_MON_2
+	object_event 12,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route5SilkScarf, EVENT_ROUTE_5_SILK_SCARF
