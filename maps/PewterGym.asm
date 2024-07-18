@@ -31,6 +31,7 @@ PewterGymBrockScript:
 	promptbutton
 	writetext BrockBoulderbadgeText
 	promptbutton
+	clearevent EVENT_BLUES_HOUSE_NEIGHBOR
 	scall PewterGymCheckBadges
 	; fallthrough
 .FightDone:
