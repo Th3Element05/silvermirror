@@ -23,6 +23,7 @@ ViridianMartOaksParcelScene:
 	waitbutton
 	closetext
 	setevent EVENT_GOT_OAKS_PARCEL
+	setevent EVENT_PLAYERS_HOUSE_1F_NEIGHBOR
 	setscene SCENE_VIRIDIANMART_NOOP
 	end
 
