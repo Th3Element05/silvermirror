@@ -5,6 +5,7 @@ INCLUDE "maps/PlayersHouse1F.asm"
 INCLUDE "maps/PlayersHouse2F.asm"
 INCLUDE "maps/OaksLab.asm"
 INCLUDE "maps/BluesHouse.asm"
+INCLUDE "maps/BluesHouse2F.asm"
 INCLUDE "maps/Route1.asm"
 
 
@@ -299,7 +300,6 @@ SECTION "Map Scripts 24", ROMX
 INCLUDE "maps/Route22.asm"
 INCLUDE "maps/VictoryRoadGate.asm"
 INCLUDE "maps/Route23.asm"
-;INCLUDE "maps/VictoryRoad.asm"
 INCLUDE "maps/VictoryRoad1F.asm"
 INCLUDE "maps/VictoryRoad2F.asm"
 INCLUDE "maps/VictoryRoad3F.asm"
@@ -308,7 +308,6 @@ INCLUDE "maps/E4LoreleisRoom.asm"
 INCLUDE "maps/E4BrunosRoom.asm"
 INCLUDE "maps/E4AgathasRoom.asm"
 INCLUDE "maps/E4LancesRoom.asm"
-;INCLUDE "maps/E4ChampionsRoom.asm"
 INCLUDE "maps/HallOfFame.asm"
 
 
