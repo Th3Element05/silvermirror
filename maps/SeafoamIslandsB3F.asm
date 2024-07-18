@@ -58,7 +58,7 @@ SeafoamIslandsB3F_MapEvents:
 	warp_event  3, 18, SEAFOAM_ISLANDS_B4F, 3 ; 6 pit
 	warp_event  6, 19, SEAFOAM_ISLANDS_B4F, 4 ; 7 pit
 	warp_event 21, 17, SEAFOAM_ISLANDS_B4F, 5 ; 8 pit
-	warp_event 18, 12, SEAFOAM_ISLANDS_B2F, 8 ; 9 fall
+	warp_event 17, 13, SEAFOAM_ISLANDS_B2F, 8 ; 9 fall
 	warp_event 23, 11, SEAFOAM_ISLANDS_B2F, 9 ; 10 fall
 
 	def_coord_events
@@ -68,6 +68,7 @@ SeafoamIslandsB3F_MapEvents:
 
 	def_object_events
 	object_event  8, 16, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SeafoamIslandsB3FBoulder, EVENT_SEAFOAM_B3F_BOULDER_1
-	object_event  9, 16, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SeafoamIslandsB3FBoulder, -1
 	object_event 18, 13, SPRITE_BOULDER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SeafoamIslandsB3FBoulderLand, EVENT_SEAFOAM_B3F_BOULDER_X1
 	object_event 23, 12, SPRITE_BOULDER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SeafoamIslandsB3FBoulderLand, EVENT_SEAFOAM_B3F_BOULDER_X2
+	object_event  9, 16, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SeafoamIslandsB3FBoulder, -1
+	object_event  3, 16, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SeafoamIslandsB3FBoulder, -1
