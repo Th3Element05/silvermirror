@@ -9,11 +9,25 @@ CeruleanTradeSpeechHouse_MapScripts:
 
 	def_callbacks
 
-;CeruleanTradeSpeechHouseGrannyScript:
-;	jumptextfaceplayer CeruleanTradeSpeechHouseGrannyText
+CeruleanTradeSpeechHouseMasonScript:
+	faceplayer
+	opentext
+	trade NPC_TRADE_MASON
+	waitbutton
+	closetext
+	end
 
-;CeruleanTradeSpeechHouseGrampsScript:
-;	jumptextfaceplayer CeruleanTradeSpeechHouseGrampsText
+CeruleanTradeSpeechHouseGrannyScript:
+	jumptextfaceplayer CeruleanTradeSpeechHouseGrannyText
+CeruleanTradeSpeechHouseGrannyText:
+	text "My husband likes"
+	line "trading #MON."
+
+	para "If you are a"
+	line "collector, would"
+	cont "you please trade"
+	cont "with him?"
+	done
 
 ;CeruleanTradeSpeechHouseRhydonScript:
 ;	opentext
@@ -22,7 +36,12 @@ CeruleanTradeSpeechHouse_MapScripts:
 ;	waitbutton
 ;	closetext
 ;	end
-
+;
+;CeruleanTradeSpeechHouseRhydonText:
+;	text "KANGASKHAN: Garu"
+;	line "garuu."
+;	done
+;
 ;CeruleanTradeSpeechHouseZubatScript:
 ;	opentext
 ;	writetext CeruleanTradeSpeechHouseZubatText
@@ -30,23 +49,7 @@ CeruleanTradeSpeechHouse_MapScripts:
 ;	waitbutton
 ;	closetext
 ;	end
-
-;CeruleanTradeSpeechHouseGrannyText:
-;	text "My husband lives"
-;	line "happily with #-"
-;	cont "MON he got through"
-;	cont "trades."
-;	done
-
-;CeruleanTradeSpeechHouseGrampsText:
-;	text "Ah… I'm so happy…"
-;	done
-
-;CeruleanTradeSpeechHouseRhydonText:
-;	text "KANGASKHAN: Garu"
-;	line "garuu."
-;	done
-
+;
 ;CeruleanTradeSpeechHouseZubatText:
 ;	text "ZUBAT: Zuba zubaa."
 ;	done
@@ -63,7 +66,7 @@ CeruleanTradeSpeechHouse_MapEvents:
 	def_bg_events
 
 	def_object_events
-;	object_event  2,  4, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanTradeSpeechHouseGrannyScript, -1
-;	object_event  1,  2, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeruleanTradeSpeechHouseGrampsScript, -1
-;	object_event  5,  2, SPRITE_KANGASKHAN, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CeruleanTradeSpeechHouseRhydonScript, -1
-;	object_event  5,  6, SPRITE_ZUBAT, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanTradeSpeechHouseZubatScript, -1
+	object_event  5,  4, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanTradeSpeechHouseGrannyScript, -1
+	object_event  1,  2, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeruleanTradeSpeechHouseMasonScript, -1
+;	object_event  4,  1, SPRITE_KANGASKHAN, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CeruleanTradeSpeechHouseRhydonScript, -1
+;	object_event  3,  5, SPRITE_ZUBAT, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanTradeSpeechHouseZubatScript, -1
