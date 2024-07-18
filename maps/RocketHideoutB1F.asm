@@ -10,7 +10,7 @@ RocketHideoutB1F_MapScripts:
 	checkevent EVENT_OPENED_ROCKET_HIDEOUT_B1F_DOOR
 	iffalse .DoorClosed
 	changeblock 16, 14, $64 ; door open
-.DoorClosed:
+.DoorClosed
 	endcallback
 
 TrainerRocketGruntM7:
