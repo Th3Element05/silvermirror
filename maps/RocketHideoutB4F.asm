@@ -68,6 +68,7 @@ TrainerRocketGruntF3:
 	checkevent EVENT_GOT_ROCKET_HIDEOUT_LEFT_KEY
 	iftrue .Skip
 	appear ROCKETHIDEOUTB4F_LIFT_KEY
+	setevent EVENT_GOT_ROCKET_HIDEOUT_LEFT_KEY
 .Skip
 	jumptextfaceplayer RocketGruntF3AfterBattleText
 
@@ -144,14 +145,7 @@ RocketExecutiveF1AfterBattleText:
 	done
 
 RocketHideoutB4FLiftKey:
-	opentext
-	disappear ROCKETHIDEOUTB4F_LIFT_KEY
-	verbosegiveitem LIFT_KEY
-	waitsfx
-	promptbutton
-	closetext
-	setevent EVENT_GOT_ROCKET_HIDEOUT_LEFT_KEY
-	end
+	itemball LIFT_KEY
 
 RocketHideoutB4FSilphScope:
 	itemball SILPH_SCOPE
@@ -182,8 +176,8 @@ RocketHideoutB4F_MapEvents:
 	bg_event 17,  1, BGEVENT_ITEM, RocketHideoutB4FHiddenSuperPotion
 
 	def_object_events
-	object_event 17,  3, SPRITE_GIOVANNI, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TrainerRocketHideoutGiovanni, EVENT_BEAT_GIOVANNI_HIDEOUT
-	object_event  2,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RocketHideoutB4FLiftKey, EVENT_ROCKET_HIDEOUT_B4F_LIFT_KEY
+	object_event 17,  3, SPRITE_GIOVANNI, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerRocketHideoutGiovanni, EVENT_BEAT_GIOVANNI_HIDEOUT
+	object_event  2,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RocketHideoutB4FLiftKey, EVENT_ROCKET_HIDEOUT_B4F_LIFT_KEY
 	object_event 17,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RocketHideoutB4FSilphScope, EVENT_ROCKET_HIDEOUT_B4F_SILPH_SCOPE
 	object_event  3,  2, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerRocketGruntF3, -1
 	object_event 18, 14, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerRocketExecutiveF1, EVENT_BEAT_GIOVANNI_HIDEOUT
