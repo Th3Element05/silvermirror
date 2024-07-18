@@ -503,7 +503,7 @@ CeruleanCity_MapEvents:
 
 	def_bg_events
 	bg_event 23, 19, BGEVENT_READ, CeruleanCitySign
-	bg_event 27, 21, BGEVENT_READ, CeruleanGymSign
+	bg_event 29, 21, BGEVENT_READ, CeruleanGymSign
 	bg_event 11, 25, BGEVENT_READ, CeruleanCityBikeShopSign
 	bg_event 17, 29, BGEVENT_READ, CeruleanCityTrainerTips
 	bg_event 15,  8, BGEVENT_ITEM, CeruleanCityHiddenRareCandy
