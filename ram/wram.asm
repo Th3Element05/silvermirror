@@ -3115,34 +3115,35 @@ wFarfetchdPosition:: db
 
 	ds 13
 
-; map scene ids                                       ;sourcrystal ds 43
-wPalletTownSceneID::                              db ;silvermirror ds 42
-wOaksLabSceneID::                                 db ;silvermirror ds 41
-wViridianCitySceneID::                            db ;silvermirror ds 40
-wViridianMartSceneID::                            db ;silvermirror ds 39
-wRoute22SceneID::                                 db ;silvermirror ds 38
-wRoute26GateSceneID::                             db ;silvermirror ds 37
-wPewterCitySceneID::                              db ;silvermirror ds 36
-wPewterMuseumSceneID::                            db ;silvermirror ds 35
-wMountMoonB2FSceneID::                            db ;silvermirror ds 34
-wCeruleanCitySceneID::                            db ;silvermirror ds 33
-wRoute24SceneID::                                 db ;silvermirror ds 32
-wBillsHouseSceneID::                              db ;silvermirror ds 31
+; map scene ids
+wPalletTownSceneID::                              db ; ds 42
+wOaksLabSceneID::                                 db ; ds 41
+wViridianCitySceneID::                            db ; ds 40
+wViridianMartSceneID::                            db ; ds 39
+wRoute22SceneID::                                 db ; ds 38
+wRoute26GateSceneID::                             db ; ds 37
+wPewterCitySceneID::                              db ; ds 36
+wPewterMuseumSceneID::                            db ; ds 35
+wMountMoonB2FSceneID::                            db ; ds 34
+wCeruleanCitySceneID::                            db ; ds 33
+wRoute24SceneID::                                 db ; ds 32
+wBillsHouseSceneID::                              db ; ds 31
 ;wRoute5SceneID::                                  db ;unused in silvermirror?
-wRoute5SaffronGateSceneID::                       db ;silvermirror ds 30
-wRoute6SaffronGateSceneID::                       db ;silvermirror ds 29
-wRoute7SaffronGateSceneID::                       db ;silvermirror ds 28
-wRoute8SaffronGateSceneID::                       db ;silvermirror ds 27
-wVermilionCitySceneID::                           db ;silvermirror ds 26
-wSSAnne2FSceneID::                                db ;silvermirror ds 25
-wPokemonTower2FSceneID::                          db ;silvermirror ds 24
-wPokemonTower5FSceneID::                          db ;silvermirror ds 23
-wPokemonTower6FSceneID::                          db ;silvermirror ds 22
-wFightingDojoSceneID::                            db ;silvermirror ds 21
-wMrFujisHouseSceneID::                            db ;silvermirror ds 20
-wSilphCo7FSceneID::                               db ;silvermirror ds 19
-wSilphCo11FSceneID::                              db ;silvermirror ds 18
-wCinnabarIslandSceneID::                          db ;silvermirror ds 17
+wRoute5SaffronGateSceneID::                       db ; ds 30
+wRoute6SaffronGateSceneID::                       db ; ds 29
+wRoute7SaffronGateSceneID::                       db ; ds 28
+wRoute8SaffronGateSceneID::                       db ; ds 27
+wVermilionCitySceneID::                           db ; ds 26
+wSSAnne2FSceneID::                                db ; ds 25
+wRoute9SceneID::                                  db ; ds 24
+wPokemonTower2FSceneID::                          db ; ds 23
+wPokemonTower5FSceneID::                          db ; ds 22
+wPokemonTower6FSceneID::                          db ; ds 21
+wFightingDojoSceneID::                            db ; ds 20
+wMrFujisHouseSceneID::                            db ; ds 19
+wSilphCo7FSceneID::                               db ; ds 18
+wSilphCo11FSceneID::                              db ; ds 17
+wCinnabarIslandSceneID::                          db ; ds 16
 wTrainerHouseB1FSceneID::                         db
 wVictoryRoadGateSceneID::                         db ; keep
 wSaffronMagnetTrainStationSceneID::               db
@@ -3211,22 +3212,22 @@ wPokemonMansionB1FSceneID::                       db
 wSafariZoneEntranceSceneID::                      db
 wRoute42EcruteakGateSceneID::                     db
 wRoute39SceneID::                                 db
-;wE4ChampionsRoomSceneID::                         db ; wLancesRoomSceneID::    ds 19
-;wVictoryRoadSceneID::                             db ; unused in ;silvermirror ds 20
-;wPokecenter2FSceneID::                            db ; unused in ;silvermirror ds
-;wTradeCenterSceneID::                             db ; unused in ;silvermirror ds
-;wColosseumSceneID::                               db ; unused in ;silvermirror ds 
-;wTimeCapsuleSceneID::                             db ; unused in ;silvermirror ds 
-;wPowerPlantSceneID::                              db ; unused in ;silvermirror ds 
-;wCeruleanGymSceneID::                             db ; unused in ;silvermirror ds 
-;wRoute25SceneID::                                 db ; unused in ;silvermirror ds 
-;wRoute27SceneID::                                 db ; unused in ;silvermirror ds 
-;wMountMoonSceneID::                               db ; unused in ;silvermirror ds 
-;wFastShip1FSceneID::                              db ; unused in ;silvermirror ds 
-;wFastShipB1FSceneID::                             db ; unused in ;silvermirror ds 
-;wRadioTower5FSceneID::                            db ; unused in ;silvermirror ds
-;wMobileTradeRoomSceneID::                         db ; unused in ;silvermirror ds 33
-;wMobileBattleRoomSceneID::                        db ; unused in ;silvermirror ds 34
+;wE4ChampionsRoomSceneID::                         db ; wLancesRoomSceneID::   ds 19
+;wVictoryRoadSceneID::                             db ; unused in silvermirror ds 20
+;wPokecenter2FSceneID::                            db ; unused in silvermirror
+;wTradeCenterSceneID::                             db ; unused in silvermirror
+;wColosseumSceneID::                               db ; unused in silvermirror
+;wTimeCapsuleSceneID::                             db ; unused in silvermirror
+;wPowerPlantSceneID::                              db ; unused in silvermirror
+;wCeruleanGymSceneID::                             db ; unused in silvermirror
+;wRoute25SceneID::                                 db ; unused in silvermirror
+;wRoute27SceneID::                                 db ; unused in silvermirror
+;wMountMoonSceneID::                               db ; unused in silvermirror
+;wFastShip1FSceneID::                              db ; unused in silvermirror
+;wFastShipB1FSceneID::                             db ; unused in silvermirror
+;wRadioTower5FSceneID::                            db ; unused in silvermirror
+;wMobileTradeRoomSceneID::                         db ; unused in silvermirror ; ds 33
+;wMobileBattleRoomSceneID::                        db ; unused in silvermirror ; ds 34
 
 	ds 34 ;silvermirror -ds 43 +ds 34
 
@@ -3260,7 +3261,7 @@ wKenjiFightCount::   db ; unreferenced
 wParryFightCount::   db
 wErinFightCount::    db
 
-	ds 100
+	ds 100 ;(88 makes room for 16 map objects)
 
 wEventFlags:: flag_array NUM_EVENTS
 
