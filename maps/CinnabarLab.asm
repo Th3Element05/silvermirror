@@ -16,33 +16,21 @@ CinnabarLabScientistText:
 	cont "for examination."
 	done
 
-CinnabarLabGramps:
-	jumptextfaceplayer CinnabarLabGrampsText
-CinnabarLabGrampsText:
-	text "Hello there! Do"
-	line "you want to trade"
-	cont "your RAICHU"
-	cont "for ELECTRODE?"
-	;yesorno
+CinnabarLabCliftonScript:
+	faceplayer
+	opentext
+	trade NPC_TRADE_CLIFTON
+	waitbutton
+	closetext
+	end
 
-	;text "Well, if you"
-	;line "don't want to..."
-	done
-
-CinnabarLabBeauty:
-	jumptextfaceplayer CinnabarLabBeautyText
-CinnabarLabBeautyText:
-	text "Hi! Do you have"
-	line "VENONAT?"
-
-	para "Want to trade it"
-	line "for TANGELA?"
-	;yesorno
-
-	;text "That's too bad."
-	done
-
-
+CinnabarLabNormaScript:
+	faceplayer
+	opentext
+	trade NPC_TRADE_NORMA
+	waitbutton
+	closetext
+	end
 
 CinnabarLabResearchRoomSign:
 	jumptext CinnabarLabResearchRoomSignText
@@ -75,5 +63,5 @@ CinnabarLab_MapEvents:
 
 	def_object_events
 	object_event  4,  2, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarLabScientist, -1
-	object_event  0,  3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarLabGramps, -1
-	object_event  3,  4, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarLabBeauty, -1
+	object_event  0,  3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarLabCliftonScript, -1
+	object_event  3,  4, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarLabNormaScript, -1

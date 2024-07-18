@@ -6,48 +6,25 @@ Route2NuggetHouse_MapScripts:
 
 	def_callbacks
 
-;Route2NuggetHouseFisherScript:
-;	faceplayer
-;	opentext
-;	checkevent EVENT_GOT_NUGGET_FROM_GUY
-;	iftrue .GotNugget
-;	writetext Route2NuggetHouseFisherText
-;	promptbutton
-;	verbosegiveitem NUGGET
-;	iffalse .NoRoom
-;	setevent EVENT_GOT_NUGGET_FROM_GUY
-;.GotNugget:
-;	writetext Route2NuggetHouseFisherText_GotNugget
-;	waitbutton
-;.NoRoom:
-;	closetext
-;	end
+Route2TradeHouseMateoScript:
+	faceplayer
+	opentext
+	trade NPC_TRADE_MATEO
+	waitbutton
+	closetext
+	end
 
-;Route2NuggetHouseBookshelf: ; unreferenced
-;	jumpstd DifficultBookshelfScript
+Route2TradeHouseScientistScript:
+	jumptextfaceplayer Route2TradeHouseScientistText
+Route2TradeHouseScientistText:
+	text "The PPS is great!"
 
-;Route2NuggetHouseFisherText:
-;	text "Hi! Wow, I'm glad"
-;	line "to see you."
-;
-;	para "You're the first"
-;	line "visitor I've had"
-;	cont "in a long time."
-;
-;	para "I'm super-happy!"
-;	line "Let me give you a"
-;	cont "little present."
-;	done
-
-;Route2NuggetHouseFisherText_GotNugget:
-;	text "That's a NUGGET."
-;
-;	para "I can't give you"
-;	line "any nuggets of"
-;
-;	para "wisdom, so that'll"
-;	line "have to do!"
-;	done
+	para "You can still use"
+	line "techniques like"
+	cont "CUT, even if your"
+	cont "own #MON haven't"
+	cont "learned them!"
+	done
 
 Route2NuggetHouse_MapEvents:
 	db 0, 0 ; filler
@@ -63,4 +40,5 @@ Route2NuggetHouse_MapEvents:
 	def_bg_events
 
 	def_object_events
-;	object_event  2,  4, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route2NuggetHouseFisherScript, -1
+	object_event  4,  1, SPRITE_GAMEBOY_KID, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route2TradeHouseMateoScript, -1
+	object_event  2,  4, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, Route2TradeHouseScientistScript, -1

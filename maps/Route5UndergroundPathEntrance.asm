@@ -6,11 +6,12 @@ Route5UndergroundPathEntrance_MapScripts:
 	def_callbacks
 
 Route5UndergroundPathEntranceGirlScript:
-	jumptextfaceplayer Route5UndergroundPathEntranceGirlText
-Route5UndergroundPathEntranceGirlText:
-	text "I'm supposed to be"
-	line "an in-game TRADE."
-	done
+	faceplayer
+	opentext
+	trade NPC_TRADE_MIA
+	waitbutton
+	closetext
+	end
 
 Route5UndergroundPathEntrance_MapEvents:
 	db 0, 0 ; filler

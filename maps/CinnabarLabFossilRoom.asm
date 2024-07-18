@@ -377,7 +377,28 @@ CinnabarLabFossilScientistTakeGoodCareOfItText:
 	done
 
 CinnabarLabTradeScientistScript:
+	faceplayer
+	opentext
+	writetext CinnabarLabTradeScientistText
+	promptbutton
+	trade NPC_TRADE_JIM
+	waitbutton
+	closetext
 	end
+
+CinnabarLabTradeScientistText:
+	text "I'm researching"
+	line "how #MON eggs"
+	cont "are created!"
+	done
+
+;Kyle:
+;	faceplayer
+;	opentext
+;	trade NPC_TRADE_KYLE
+;	waitbutton
+;	closetext
+;	end
 
 CinnabarLabFossilRoom_MapEvents:
 	db 0, 0 ; filler
@@ -395,4 +416,4 @@ CinnabarLabFossilRoom_MapEvents:
 	object_event  3,  2, SPRITE_DOME_FOSSIL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PewterMuseum1F_Amber_Script, EVENT_CINNABAR_LAB_DOME_FOSSIL
 	object_event  3,  2, SPRITE_OLD_AMBER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, PewterMuseum1F_Amber_Script, EVENT_CINNABAR_LAB_OLD_AMBER
 	object_event  4,  2, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarLabFossilScientistScript, -1
-	object_event  7,  6, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarLabTradeScientistScript, -1
+	object_event  6,  6, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarLabTradeScientistScript, -1
