@@ -165,7 +165,6 @@ Route10South_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-;	warp_event  4,  9, POWER_PLANT, 1
 	warp_event  8,  3, ROCK_TUNNEL_1F, 2
 
 	def_coord_events
