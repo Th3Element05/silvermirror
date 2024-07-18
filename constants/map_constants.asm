@@ -41,7 +41,8 @@ ENDM
 	map_const PLAYERS_HOUSE_2F,                             4,  3 ;  3
 	map_const OAKS_LAB,                                     5,  6 ;  4
 	map_const BLUES_HOUSE,                                  4,  4 ;  5
-	map_const ROUTE_1,                                     10, 18 ;  6
+	map_const BLUES_HOUSE_2F,                               4,  3 ;  6
+	map_const ROUTE_1,                                     10, 18 ;  7
 	endgroup
 
 	newgroup VIRIDIAN                                             ;  2
@@ -114,11 +115,11 @@ ENDM
 	map_const VERMILION_PORT,                              10,  9 ;  1
 	map_const OLIVINE_PORT,                                10, 18 ;  2
 	map_const SS_ANNE_1F,                                  19,  8 ;  3
-	map_const SS_ANNE_ROOMS_1F,                            17,  3 ;  4
-	map_const SS_ANNE_ROOMS_B1F,                           17,  3 ;  5
+	map_const SS_ANNE_ROOMS_1F,                            12,  8 ;  4
+	map_const SS_ANNE_ROOMS_B1F,                           12,  8 ;  5
 	map_const SS_ANNE_KITCHEN,                              7,  7 ;  6
 	map_const SS_ANNE_2F,                                  19,  8 ;  7
-	map_const SS_ANNE_ROOMS_2F,                            17,  3 ;  8
+	map_const SS_ANNE_ROOMS_2F,                            12,  8 ;  8
 	map_const SS_ANNE_BOW,                                 10,  7 ;  9
 ;	map_const FAST_SHIP_1F,                                16,  9 ; 10
 ;	map_const FAST_SHIP_CABINS_NNW_NNE_NE,                  4, 16 ; 11
@@ -189,7 +190,7 @@ ENDM
 	map_const BILLS_BROTHERS_HOUSE,                         4,  4 ;  7
 	map_const FUCHSIA_GOOD_ROD_HOUSE,                       4,  4 ;  8
 	map_const ROUTE_15_GATE,                                4,  5 ;  9
-	map_const ROUTE_15_GATE_2F,                             4,  5 ; 10
+	map_const ROUTE_15_GATE_2F,                             4,  4 ; 10
 	map_const ROUTE_17,                                    10, 71 ; 11
 	map_const ROUTE_18,                                    25,  9 ; 12
 	map_const ROUTE_18_GATE,                                4,  5 ; 13
@@ -247,7 +248,6 @@ ENDM
 	map_const E4_BRUNOS_ROOM,                               5,  9 ;  5
 	map_const E4_AGATHAS_ROOM,                              5,  9 ;  6
 	map_const E4_LANCES_ROOM,                               5, 11 ;  7
-;	map_const E4_CHAMPIONS_ROOM,                            5,  9 ;  8
 	map_const HALL_OF_FAME,                                 5,  5 ;  9
 	endgroup
 
