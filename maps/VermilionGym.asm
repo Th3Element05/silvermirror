@@ -79,9 +79,9 @@ VermilionGymSurgeScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_LTSURGE
-	setevent EVENT_BEAT_GENTLEMAN_GREGORY
-	setevent EVENT_BEAT_GUITARIST_VINCENT
-	setevent EVENT_BEAT_JUGGLER_HORTON
+	setevent EVENT_BEAT_GENTLEMAN_MILTON
+	setevent EVENT_BEAT_GUITARIST_CLYDE
+	setevent EVENT_BEAT_SAILOR_KENNETH
 	opentext
 	writetext ReceivedThunderbadgeText
 	playsound SFX_GET_BADGE
