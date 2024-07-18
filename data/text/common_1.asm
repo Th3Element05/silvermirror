@@ -366,8 +366,11 @@ _MomFoundAnItemText::
 	prompt
 
 _MomBoughtWithYourMoneyText::
-	text "I bought it with"
-	line "your money. Sorry!"
+;	text "I bought it with"
+;	line "your money. Sorry!"
+;	prompt
+	text "I bought it for"
+	line "you, as a gift!"
 	prompt
 
 _MomItsInPCText::
@@ -509,7 +512,8 @@ _MobileTradeCameBackText::
 
 _OPT_IntroText1::
 	text_start
-	line "MARY: PROF.OAK'S"
+;	line "MARY: PROF.OAK'S"
+	line "MARY: Welcome to"
 	done
 
 _OPT_IntroText2::
@@ -585,11 +589,12 @@ _OPT_SwarmText11::
 
 _OPT_OakText1::
 	text_start
-	line "OAK: @"
+;	line "OAK: @"
+	line "MARY: @"
 	text_ram wMonOrItemNameBuffer
 	text_end
 
-	text_end ; unreferenced
+;	text_end ; unreferenced
 
 _OPT_OakText2::
 	text_start
@@ -780,7 +785,7 @@ _PokedexShowText::
 	text_ram wStringBuffer1
 	text_end
 
-	text_end ; unreferenced
+;	text_end ; unreferenced
 
 ; Pokémon Music Channel / Pokémusic
 
@@ -931,7 +936,7 @@ _PnP_Text4::
 	text_ram wStringBuffer1
 	text_end
 
-	text_end ; unreferenced
+;	text_end ; unreferenced
 
 _PnP_CuteText::
 	text_start
@@ -1474,7 +1479,7 @@ _NPCTradeFanfareText::
 	text_pause
 	text_end
 
-	text_end ; unreferenced
+;	text_end ; unreferenced
 
 _NPCTradeIntroText1::
 	text "I collect #MON."
@@ -1487,35 +1492,6 @@ _NPCTradeIntroText1::
 	line "for my @"
 	text_ram wStringBuffer2
 	text "?"
-	done
-
-_NPCTradeCancelText1::
-	text "You don't want to"
-	line "trade? Aww…"
-	done
-
-_NPCTradeWrongText1::
-	text "Huh? That's not"
-	line "@"
-	text_ram wStringBuffer1
-	text ". "
-	cont "What a letdown…"
-	done
-
-_NPCTradeCompleteText1::
-	text "Great! Thank you!"
-
-	para "I finally got"
-	line "@"
-	text_ram wStringBuffer1
-	text "!"
-	done
-
-_NPCTradeAfterText1::
-	text "Hi, how's my old"
-	line "@"
-	text_ram wStringBuffer2
-	text " doing?"
 	done
 
 _NPCTradeIntroText2::
@@ -1533,45 +1509,12 @@ _NPCTradeIntroText2::
 	text "?"
 	done
 
-;_NPCTradeCancelText2::
-;	text "You don't have"
-;	line "one either?"
-;
-;	para "Gee, that's really"
-;	line "disappointing…"
-;	done
-
-;_NPCTradeWrongText2::
-;	text "You don't have"
-;	line "@"
-;	text_ram wStringBuffer1
-;	text "? That's"
-;	cont "too bad, then."
-;	done
-
-_NPCTradeCompleteText2::
-	text "Yay! I got my own"
-	line "@"
-	text_ram wStringBuffer1
-	text "!"
-	cont "Thanks!"
-	done
-
-_NPCTradeAfterText2::
-	text "Hi! The @"
-	text_ram wMonOrItemNameBuffer
-	text_start
-	line "you traded me is"
-	cont "doing great!"
-	done
-
 _NPCTradeIntroText3::
 	text_ram wMonOrItemNameBuffer
 	text "'s cute,"
 	line "but I don't have"
-
-	para "it. Do you have"
-	line "@"
+	cont "one. Do you have"
+	cont "@"
 	text_ram wStringBuffer1
 	text "?"
 
@@ -1581,9 +1524,50 @@ _NPCTradeIntroText3::
 	text "?"
 	done
 
+_NPCTradeIntroText4::
+	text "Do you have a"
+	line "@"
+	text_ram wStringBuffer1
+	text "?"
+
+	para "Would you like to"
+	line "trade it for my"
+	cont "@"
+	text_ram wStringBuffer2
+	text "?"
+	done
+
+_NPCTradeCancelText1::
+	text "You don't want to"
+	line "trade?"
+	done
+
+;_NPCTradeCancelText2::
+;	text "You don't have"
+;	line "one either?"
+;
+;	para "Gee, that's really"
+;	line "disappointing…"
+;	done
+
 ;_NPCTradeCancelText3::
 ;	text "You don't want to"
 ;	line "trade? Oh, darn…"
+;	done
+
+_NPCTradeWrongText1::
+	text "Huh? That's not"
+	line "@"
+	text_ram wStringBuffer1
+	text "."
+	done
+
+;_NPCTradeWrongText2::
+;	text "You don't have"
+;	line "@"
+;	text_ram wStringBuffer1
+;	text "? That's"
+;	cont "too bad, then."
 ;	done
 
 ;_NPCTradeWrongText3::
@@ -1596,12 +1580,49 @@ _NPCTradeIntroText3::
 ;	line "me if you get one."
 ;	done
 
+_NPCTradeCompleteText1::
+	text "Great! Thank you!"
+
+	para "I finally got"
+	line "@"
+	text_ram wStringBuffer1
+	text "!"
+	done
+
+_NPCTradeCompleteText2::
+	text "Yay! I got my own"
+	line "@"
+	text_ram wStringBuffer1
+	text "!"
+	cont "Thanks!"
+	done
+
 _NPCTradeCompleteText3::
 	text "Wow! Thank you!"
 	line "I always wanted"
 	cont "@"
 	text_ram wMonOrItemNameBuffer
 	text "!"
+	done
+
+_NPCTradeCompleteText4::
+	text "Excellent!"
+	line "Thanks!"
+	done
+
+_NPCTradeAfterText1::
+	text "Hi, how's my old"
+	line "@"
+	text_ram wStringBuffer2
+	text " doing?"
+	done
+
+_NPCTradeAfterText2::
+	text "Hi! The @"
+	text_ram wMonOrItemNameBuffer
+	text_start
+	line "you traded me is"
+	cont "doing great!"
 	done
 
 _NPCTradeAfterText3::
@@ -1617,16 +1638,12 @@ _NPCTradeAfterText3::
 	line "so cute!"
 	done
 
-_NPCTradeCompleteText4::
-	text "Uh? What happened?"
-	done
-
-_NPCTradeAfterText4::
-	text "Trading is so odd…"
-
-	para "I still have a lot"
-	line "to learn about it."
-	done
+;_NPCTradeAfterText4::
+;	text "Trading is so odd…"
+;
+;	para "I still have a lot"
+;	line "to learn about it."
+;	done
 
 _MomLeavingText1::
 	text "Wow, that's a cute"
