@@ -36,7 +36,7 @@ KantoWaterWildMons:
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_10_NORTH ;GEN1
-	db 4 percent ; encounter rate
+	db 2 percent ; encounter rate
 	db 10, GOLDEEN    ; 50
 	db  5, MAGIKARP   ; 30
 	db 10, GOLDEEN    ; 10
