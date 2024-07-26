@@ -116,6 +116,14 @@ EvolveAfterBattle_MasterLoop:
 	jr .proceed
 
 .happiness
+;	ld a, [wChallengeMode]
+;	bit GAME_CHALLENGE_MODE_F, a
+;	jp nz, .do_happiness
+
+; CHECK HALL OF FAME HERE
+;	jp nz, .dont_evolve_2
+
+;.do_happiness
 	ld a, [wTempMonHappiness]
 	cp HAPPINESS_TO_EVOLVE
 	jp c, .dont_evolve_2
