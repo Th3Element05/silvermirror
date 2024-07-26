@@ -2051,13 +2051,13 @@ RadioChannels:
 .PKMNTalkAndPokedexShow:
 ; Pokédex Show in the morning
 ; Oak's Pokémon Talk in the afternoon and evening
-	call .InJohto
-	jr nc, .check_radio_card_expansion
-	jp LoadStation_OaksPokemonTalk
-.check_radio_card_expansion
-	ld a, [wPokegearFlags]
-	bit POKEGEAR_EXPN_CARD_F, a
-	jr z, .NoSignal
+;	call .InJohto
+;	jr nc, .check_radio_card_expansion
+;	jp LoadStation_OaksPokemonTalk
+;.check_radio_card_expansion
+;	ld a, [wPokegearFlags]
+;	bit POKEGEAR_EXPN_CARD_F, a
+;	jr z, .NoSignal
 	jp LoadStation_OaksPokemonTalk
 
 .PokemonMusic:
@@ -2084,17 +2084,17 @@ RadioChannels:
 .PlacesAndPeople:
 	call .InJohto
 	jr c, .NoSignal
-	ld a, [wPokegearFlags]
-	bit POKEGEAR_EXPN_CARD_F, a
-	jr z, .NoSignal
+;	ld a, [wPokegearFlags]
+;	bit POKEGEAR_EXPN_CARD_F, a
+;	jr z, .NoSignal
 	jp LoadStation_PlacesAndPeople
 
 .LetsAllSing:
 	call .InJohto
 	jr c, .NoSignal
-	ld a, [wPokegearFlags]
-	bit POKEGEAR_EXPN_CARD_F, a
-	jr z, .NoSignal
+;	ld a, [wPokegearFlags]
+;	bit POKEGEAR_EXPN_CARD_F, a
+;	jr z, .NoSignal
 	jp LoadStation_LetsAllSing
 
 .PokeFluteRadio:
@@ -2128,8 +2128,8 @@ RadioChannels:
 ; if in Johto or on the S.S. Aqua, set carry
 ; otherwise clear carry
 	ld a, [wPokegearMapPlayerIconLandmark]
-	cp LANDMARK_SS_ANNE
-	jr z, .johto
+;	cp LANDMARK_SS_ANNE
+;	jr z, .johto
 	cp KANTO_LANDMARK
 	jr c, .johto
 ; kanto
@@ -2321,14 +2321,14 @@ NoRadioName:
 	call Textbox
 	ret
 
-OaksPKMNTalkName:     db "<PK><MN> Talk@"
+OaksPKMNTalkName:     db "#MON Talk@" ;"<PK><MN> Talk@"
 PokedexShowName:      db "#DEX Show@"
 PokemonMusicName:     db "#MON Music@"
 LuckyChannelName:     db "Lucky Channel@"
 UnownStationName:     db "?????@"
 
 PlacesAndPeopleName:  db "Places & People@"
-LetsAllSingName:      db "Let's All Sing!@"
+LetsAllSingName:      db "#MON Music@" ;"Let's All Sing!@"
 PokeFluteStationName: db "# FLUTE@"
 
 _TownMap:
