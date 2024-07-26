@@ -123,15 +123,15 @@ LancesRoomRivalBattleScript:
 	iftrue .ChampionBulbasaur
 	checkevent EVENT_GOT_BULBASAUR_FROM_OAK
 	iftrue .ChampionCharmander
-	getmonname STRING_BUFFER_3, SQUIRTLE
+	getmonname STRING_BUFFER_3, CHARMANDER
 	loadtrainer CHAMPION, CHAMPION1_SQUIRTLE
 	sjump .DoChampionBattle
 .ChampionBulbasaur
-	getmonname STRING_BUFFER_3, BULBASAUR
+	getmonname STRING_BUFFER_3, SQUIRTLE
 	loadtrainer CHAMPION, CHAMPION1_BULBASAUR
 	sjump .DoChampionBattle
 .ChampionCharmander
-	getmonname STRING_BUFFER_3, CHARMANDER
+	getmonname STRING_BUFFER_3, BULBASAUR
 	loadtrainer CHAMPION, CHAMPION1_CHARMANDER
 ;	sjump .FinishChampion
 	; fallthrough
@@ -219,7 +219,7 @@ Movement_RivalWalksIn:
 Movement_LanceStepsAside:
 	step RIGHT
 	step RIGHT
-	turn_head LEFT
+;	turn_head LEFT
 	step_end
 
 Movement_TalkRivalBehind:
@@ -354,7 +354,7 @@ LanceDefeatText:
 	done
 ;
 ;	para "Shall I heal your"
-;	line "####MON before"
+;	line "#MON before"
 ;	cont "this battle?"
 ;	done
 
