@@ -74,3 +74,5 @@
 	tilecoll FLOOR, SPIN_LEFT, FLOOR, SPIN_LEFT ; 49
 	tilecoll SPIN_DOWN, STOP_SPIN, FLOOR, FLOOR ; 4a
 	tilecoll WALL, WALL, FLOOR, FLOOR ; 4b
+	tilecoll FLOOR, FLOOR, WALL, FLOOR ; 4c
+	tilecoll FLOOR, WALL, FLOOR, FLOOR ; 4d
