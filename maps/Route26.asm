@@ -491,10 +491,10 @@ Route26_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-;	warp_event  7,  5, VICTORY_ROAD_GATE, 3
 	warp_event  7,  1, ROUTE_26_GATE, 3
-	warp_event 15, 53, ROUTE_26_HEAL_HOUSE, 1
 	warp_event  5, 67, DAY_OF_WEEK_SIBLINGS_HOUSE, 1
+;	warp_event  7,  5, VICTORY_ROAD_GATE, 3
+;	warp_event 15, 53, ROUTE_26_HEAL_HOUSE, 1
 
 	def_coord_events
 
