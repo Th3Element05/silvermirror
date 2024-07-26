@@ -7,40 +7,49 @@ CinnabarLabFossilRoom_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+	callback MAPCALLBACK_NEWMAP, CinnabarLabFossilCallback
 ;	callback MAPCALLBACK_OBJECTS, CinnabarLabFossilCallback
-;
-;CinnabarLabFossilCallback:
-;	checkevent EVENT_FOSSIL_SCIENTIST_WORKING
-;	iftrue .WhichFossil
-;	disappear CINNABARLAB_HELIX
-;	disappear CINNABARLAB_DOME
-;	disappear CINNABARLAB_AMBER
-;	endcallback
-;.WhichFossil
-;	checkevent EVENT_FOSSIL_SCIENTIST_WORKING_HELIX
-;	iffalse .NotHelix
-;	appear CINNABARLAB_HELIX
-;	endcallback
-;.NotHelix
-;	checkevent EVENT_FOSSIL_SCIENTIST_WORKING_DOME
-;	iffalse .NotDome
-;	appear CINNABARLAB_AMBER
-;	endcallback
-;.NotDome
-;	appear CINNABARLAB_AMBER
-;	endcallback
+
+CinnabarLabFossilCallback:
+	checkevent EVENT_FOSSIL_SCIENTIST_WORKING_HELIX
+	iftrue .check_fossil_step_count_helix
+	checkevent EVENT_FOSSIL_SCIENTIST_WORKING_DOME
+	iftrue .check_fossil_step_count_dome
+	checkevent EVENT_FOSSIL_SCIENTIST_WORKING_AMBER
+	iftrue .check_fossil_step_count_amber
+	endcallback
+
+.check_fossil_step_count_helix
+	callasm FossilCheckStepCount
+	iffalse .NotDone
+	disappear CINNABARLAB_HELIX
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	endcallback
+
+.check_fossil_step_count_dome
+	callasm FossilCheckStepCount
+	iffalse .NotDone
+	disappear CINNABARLAB_DOME
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
+	endcallback
+
+.check_fossil_step_count_amber
+	callasm FossilCheckStepCount
+	iffalse .NotDone
+	disappear CINNABARLAB_AMBER
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_3
+.NotDone
+	endcallback
 
 CinnabarLabFossilScientistScript:
-	checkevent EVENT_FOSSIL_SCIENTIST_WORKING
-	iftrue .StillWorking
-	checkevent EVENT_FOSSIL_SCIENTIST_WORKING_HELIX
-	iftrue .GiveOmanyte
-	checkevent EVENT_FOSSIL_SCIENTIST_WORKING_DOME
-	iftrue .GiveKabuto
-	checkevent EVENT_FOSSIL_SCIENTIST_WORKING_AMBER
-	iftrue .GiveAerodactyl
 	faceplayer
 	opentext
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	iftrue .give_omanyte
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
+	iftrue .give_kabuto
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_3
+	iftrue .give_aerodactyl
 	writetext CinnabarLabFossilScientistDoYouHaveFossilText
 	waitbutton
 	checkitem HELIX_FOSSIL
@@ -54,10 +63,7 @@ CinnabarLabFossilScientistScript:
 	closetext
 	end
 
-.StillWorking
-	jumptextfaceplayer CinnabarLabFossilScientistGaveFossilText
-
-.GiveOmanyte
+.give_omanyte
 	getmonname STRING_BUFFER_3, OMANYTE
 	writetext CinnabarLabFossilScientistDoneText
 	waitbutton
@@ -73,7 +79,7 @@ CinnabarLabFossilScientistScript:
 	clearevent EVENT_FOSSIL_SCIENTIST_WORKING_HELIX
 	end
 
-.GiveKabuto
+.give_kabuto
 	getmonname STRING_BUFFER_3, KABUTO
 	writetext CinnabarLabFossilScientistDoneText
 	waitbutton
@@ -89,7 +95,7 @@ CinnabarLabFossilScientistScript:
 	clearevent EVENT_FOSSIL_SCIENTIST_WORKING_DOME
 	end
 
-.GiveAerodactyl
+.give_aerodactyl
 	getmonname STRING_BUFFER_3, AERODACTYL
 	writetext CinnabarLabFossilScientistDoneText
 	waitbutton
@@ -116,12 +122,22 @@ CinnabarLabFossilScientistScript:
 	iftrue .own_helix_and_dome
 	checkitem OLD_AMBER
 	iftrue .ask_helix_amber
-	jump IsHelixFossil
+	getitemname STRING_BUFFER_4, HELIX_FOSSIL
+	getmonname STRING_BUFFER_3, OMANYTE
+	writetext CinnabarLabFossilScientistIsFossilText
+	yesorno
+	iftrue GaveHelixFossil
+	jump .no_fossil
 
 .own_dome
 	checkitem OLD_AMBER
 	iftrue .ask_dome_amber
-	jump IsDomeFossil
+	getitemname STRING_BUFFER_4, DOME_FOSSIL
+	getmonname STRING_BUFFER_3, KABUTO
+	writetext CinnabarLabFossilScientistIsFossilText
+	yesorno
+	iftrue GaveDomeFossil
+	jump .no_fossil
 
 .own_helix_and_dome
 	checkitem OLD_AMBER
@@ -156,7 +172,6 @@ CinnabarLabFossilScientistScript:
 	ifequal $1, IsHelixFossil
 	ifequal $2, IsDomeFossil
 	ifequal $3, IsOldAmber
-
 .no_fossil:
 	writetext CinnabarLabFossilScientistNoFossilText
 	waitbutton
@@ -226,7 +241,7 @@ IsHelixFossil:
 	writetext CinnabarLabFossilScientistIsFossilText
 	yesorno
 	iffalse DeniedRessurection
-	jump GiveHelixFossil
+	jump GaveHelixFossil
 
 IsDomeFossil:
 	getitemname STRING_BUFFER_4, DOME_FOSSIL
@@ -234,7 +249,7 @@ IsDomeFossil:
 	writetext CinnabarLabFossilScientistIsFossilText
 	yesorno
 	iffalse DeniedRessurection
-	jump GiveDomeFossil
+	jump GaveDomeFossil
 
 IsOldAmber:
 	getitemname STRING_BUFFER_4, OLD_AMBER
@@ -242,7 +257,7 @@ IsOldAmber:
 	writetext CinnabarLabFossilScientistIsFossilText
 	yesorno
 	iffalse DeniedRessurection
-	jump GiveOldAmber
+	jump GaveOldAmber
 
 DeniedRessurection:
 	writetext CinnabarLabFossilScientistNoFossilText
@@ -250,37 +265,31 @@ DeniedRessurection:
 	closetext
 	end
 
-GiveHelixFossil:
+GaveHelixFossil:
 	writetext CinnabarLabFossilScientistGaveFossilText
 	waitbutton
 	closetext
 	takeitem HELIX_FOSSIL
-	appear CINNABARLAB_HELIX
 	setevent EVENT_FOSSIL_SCIENTIST_WORKING_HELIX
-	setevent EVENT_FOSSIL_SCIENTIST_WORKING
-;	callasm FossilSetStepCount
+	callasm FossilSetStepCount
 	end
 
-GiveDomeFossil:
+GaveDomeFossil:
 	writetext CinnabarLabFossilScientistGaveFossilText
 	waitbutton
 	closetext
 	takeitem DOME_FOSSIL
-	appear CINNABARLAB_DOME
 	setevent EVENT_FOSSIL_SCIENTIST_WORKING_DOME
-	setevent EVENT_FOSSIL_SCIENTIST_WORKING
-;	callasm FossilSetStepCount
+	callasm FossilSetStepCount
 	end
 
-GiveOldAmber:
+GaveOldAmber:
 	writetext CinnabarLabFossilScientistGaveFossilText
 	waitbutton
 	closetext
 	takeitem OLD_AMBER
-	appear CINNABARLAB_AMBER
 	setevent EVENT_FOSSIL_SCIENTIST_WORKING_AMBER
-	setevent EVENT_FOSSIL_SCIENTIST_WORKING
-;	callasm FossilSetStepCount
+	callasm FossilSetStepCount
 	end
 
 CinnabarLabFossilScientistDoYouHaveFossilText:
@@ -318,7 +327,7 @@ CinnabarLabFossilScientistIsFossilText:
 	cont "@"
 	text_ram wStringBuffer3
 	text " back"
-	cont "to life?"
+	line "to life?"
 	done
 
 CinnabarLabFossilScientistGaveFossilText:
@@ -383,43 +392,30 @@ CinnabarLabTradeScientistText:
 	cont "are created!"
 	done
 
-CinnabarLabFossilRoomHelixFossil:
-	jumptext CinnabarLabFossilRoomHelixFossilText
-CinnabarLabFossilRoomHelixFossilText:
-	text "The HELIX FOSSIL"
-	line "is being revived!"
-	done
+FossilSetStepCount:
+	ld a, 50
+	ld [wFossilStepCount], a
+	ret
 
-CinnabarLabFossilRoomDomeFossil:
-	jumptext CinnabarLabFossilRoomDomeFossilText
-CinnabarLabFossilRoomDomeFossilText:
-	text "The DOME FOSSIL"
-	line "is being revived!"
-	done
+FossilCheckStepCount:
+	ld a, [wFossilStepCount]
+	cp 0
+	jr z, .yes
+	ld a, FALSE
+	ld [wScriptVar], a
+	ret
+.yes
+	ld a, TRUE
+	ld [wScriptVar], a
+	ret
 
-CinnabarLabFossilRoomOldAmber:
-	jumptext CinnabarLabFossilRoomOldAmberText
-CinnabarLabFossilRoomOldAmberText:
-	text "The OLD AMBER"
-	line "is being revived!"
-	done
-
-;FossilSetStepCount:
-;	ld a, 50
-;	ld [wFossilStepCount], a
-;	ret
-
-;FossilCheckStepCount:
-;	ld a, [wFossilStepCount]
-;	cp 0
-;	jr z, .yes
-;	ld a, FALSE
-;	ld [wScriptVar], a
-;	ret
-;.yes
-;	ld a, TRUE
-;	ld [wScriptVar], a
-;	ret
+;Kyle:
+;	faceplayer
+;	opentext
+;	trade NPC_TRADE_KYLE
+;	waitbutton
+;	closetext
+;	end
 
 CinnabarLabFossilRoom_MapEvents:
 	db 0, 0 ; filler
@@ -433,8 +429,8 @@ CinnabarLabFossilRoom_MapEvents:
 	def_bg_events
 
 	def_object_events
-;	object_event  3,  2, SPRITE_FOSSIL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CinnabarLabFossilRoomHelixFossil, EVENT_CINNABAR_LAB_HELIX_FOSSIL
-;	object_event  3,  2, SPRITE_DOME_FOSSIL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CinnabarLabFossilRoomDomeFossil, EVENT_CINNABAR_LAB_DOME_FOSSIL
-;	object_event  3,  2, SPRITE_OLD_AMBER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, CinnabarLabFossilRoomOldAmber, EVENT_CINNABAR_LAB_OLD_AMBER
+	object_event  3,  2, SPRITE_FOSSIL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PewterMuseum1F_Amber_Script, EVENT_CINNABAR_LAB_HELIX_FOSSIL
+	object_event  3,  2, SPRITE_DOME_FOSSIL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PewterMuseum1F_Amber_Script, EVENT_CINNABAR_LAB_DOME_FOSSIL
+	object_event  3,  2, SPRITE_OLD_AMBER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, PewterMuseum1F_Amber_Script, EVENT_CINNABAR_LAB_OLD_AMBER
 	object_event  4,  2, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarLabFossilScientistScript, -1
 	object_event  6,  6, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarLabTradeScientistScript, -1
