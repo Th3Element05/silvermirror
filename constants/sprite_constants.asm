@@ -76,7 +76,7 @@
 	const SPRITE_KURT                   ; 48 (AzeleaTown, IlexForest, KurtsHouse, SplopokeWellB1F)
 	const SPRITE_CAL                    ; 49
 	const SPRITE_BUSINESSMAN            ; 4a
-;; 4b
+	const SPRITE_BUG_CATCHER            ; 4b
 ;; 4c
 ;; 4d
 ;; 4e
