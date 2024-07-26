@@ -75,8 +75,8 @@ FuchsiaCityScytherText:
 
 	para "Wields it's razor-"
 	line "sharp blades with"
-	cont "ninja-like agility"
-	cont "and speed!"
+	cont "ninja-like speed"
+	cont "and agility!"
 	done
 
 FuchsiaChanseyExhibit:
@@ -135,9 +135,9 @@ FuchsiaCityYoungsterText:
 	cont "be caught there."
 	done
 
-FuchsiaCityPokefanM:
-	jumptextfaceplayer FuchsiaCityPokefanMText
-FuchsiaCityPokefanMText:
+FuchsiaCityErik:
+	jumptextfaceplayer FuchsiaCityErikText
+FuchsiaCityErikText:
 	text "ERIK: Where's"
 	line "SARA? I said I'd"
 	cont "meet her here."
@@ -326,7 +326,7 @@ FuchsiaCity_MapEvents:
 	object_event 12, 13, SPRITE_SURF, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 3, 3, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FuchsiaCityPokemon, -1
 	object_event 31, 13, SPRITE_KANGASKHAN_MOVE, SPRITEMOVEDATA_WANDER, 3, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FuchsiaCityPokemon, -1
 	object_event 10,  9, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, FuchsiaCityYoungster, -1
-	object_event 28,  8, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, FuchsiaCityPokefanM, -1
+	object_event 28,  8, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, FuchsiaCityErik, -1
 	object_event 19, 18, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FuchsiaCityGramps, -1
 
 ; electabuzz

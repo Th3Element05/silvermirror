@@ -86,6 +86,7 @@ PewterMuseum2F_MapEvents:
 	bg_event  3,  4, BGEVENT_READ, PewterMuseum2FMeteoriteSign
 	bg_event 10,  3, BGEVENT_READ, PewterMuseum2FShuttleSign
 	bg_event 11,  3, BGEVENT_READ, PewterMuseum2FShuttleSign
+	bg_event 12,  3, BGEVENT_READ, PewterMuseum2FShuttleSign
 
 	def_object_events
 	object_event  7,  5, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PewterMuseum2F_Scientist_Script, -1

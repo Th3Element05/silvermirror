@@ -38,9 +38,8 @@ PokefanFGeorgiaSeenText:
 
 	para "#MON get more"
 	line "friendly if you"
-
-	para "train them in a"
-	line "place that they"
+	cont "train them in a"
+	cont "place that they"
 	cont "remember."
 	done
 
@@ -74,8 +73,8 @@ YoungsterOwenSeenText:
 	done
 
 YoungsterOwenBeatenText:
-	text "My"
-	line "#MON couldn't!"
+	text "My #MON"
+	line "couldn't!"
 	done
 
 YoungsterOwenAfterBattleText:
@@ -105,7 +104,7 @@ YoungsterAlanBeatenText:
 	done
 
 YoungsterAlanAfterBattleText:
-	text "There's a fat"
+	text "There's a big"
 	line "#MON that"
 	cont "comes down from"
 	cont "the mountains."

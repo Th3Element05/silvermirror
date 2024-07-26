@@ -14,8 +14,8 @@ CopycatsHouse1FPokefanFScript:
 CopycatsHouse1FChanseyScript:
 	faceplayer
 	opentext
-	cry CHANSEY
 	writetext CopycatsHouse1FChanseyText
+	cry CHANSEY
 	waitbutton
 	closetext
 	end

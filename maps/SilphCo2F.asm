@@ -55,9 +55,9 @@ SilphCo2FReceptionist:
 	writetext SilphCo2FReceptionistTakeThisText
 	promptbutton
 	verbosegiveitem TM_SELFDESTRUCT
-	promptbutton
 	setevent EVENT_GOT_TM36_SELFDESTRUCT
 .GotSelfdestruct
+	faceplayer
 	writetext SilphCo2FReceptionistExplainText
 	waitbutton
 	closetext

@@ -85,8 +85,7 @@ KarateMasterDefeatMyStudentsText:
 	done
 
 KarateMasterChallengeText:
-	text "KARATE MASTER:"
-	line "Ha! Well met,"
+	text "Ha! Well met,"
 	cont "Challenger!"
 
 	para "My students are"
@@ -108,9 +107,9 @@ KarateMasterChoosePokemonText:
 	text "Indeed, I have"
 	line "lost!"
 
-	para "Alas, I can not"
-	line "offer a #MON"
-	cont "LEAGUE badge."
+	para "I can not award"
+	line "a #MON LEAGUE"
+	cont "badge."
 
 	para "Instead, I will"
 	line "give you a prized"
@@ -240,8 +239,7 @@ BlackbeltTakeshiSeenText:
 	done
 
 BlackbeltTakeshiBeatenText:
-	text "I give"
-	line "up!"
+	text "I yield!"
 	done
 
 BlackbeltTakeshiAfterBattleText:

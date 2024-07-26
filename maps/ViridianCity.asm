@@ -201,11 +201,15 @@ ViridianCityCoffeeGrampsBlockText:
 	done
 
 ViridianCityGymGramps:
+	checkevent EVENT_BEAT_GIOVANNI
+	iftrue .LeaderLeft
 	checkevent EVENT_VIRIDIAN_GYM_LEADER_RETURNED
 	iftrue .LeaderReturned
 	jumptextfaceplayer ViridianCityGymGrampsText
-.LeaderReturned:
+.LeaderReturned
 	jumptextfaceplayer ViridianCityLeaderReturnedText
+.LeaderLeft
+	jumptextfaceplayer ViridianCityLeaderLeftText
 
 ViridianCityGymGrampsText:
 	text "This #MON GYM"
@@ -220,9 +224,20 @@ ViridianCityLeaderReturnedText:
 	line "LEADER returned!"
 	done
 
+ViridianCityLeaderLeftText:
+	text "Looks like the"
+	line "LEADER left for"
+	cont "good this time."
+
+	para "I wonder who will"
+	line "fill the role of"
+	cont "GYM LEADER in"
+	cont "VIRIDIAN now?"
+	done
+
 ViridianCityDreamEaterFisher:
-	showemote EMOTE_SLEEP, VIRIDIANCITY_FISHER, 30
-	pause 20
+;	showemote EMOTE_SLEEP, VIRIDIANCITY_FISHER, 30
+;	pause 20
 	showemote EMOTE_SLEEP, VIRIDIANCITY_FISHER, 30
 	faceplayer
 	opentext

@@ -15,10 +15,12 @@ MrFujisHousePokefluteScene:
 	writetext MrFujisHouseMrFujiGivePokeFluteText
 	promptbutton
 	verbosegiveitem POKE_FLUTE
+	writetext MrFujisHouseMrFujiExplainFluteText
 	waitbutton
 	closetext
 	setscene SCENE_MRFUJISHOUSE_NOOP
-	; fallthrough
+	end
+
 MrFujisHouseMrFujiScript:
 	checkevent EVENT_WOKE_SNORLAX
 	iftrue .FluteHelped
@@ -40,7 +42,7 @@ MrFujisHouseMrFujiGivePokeFluteText:
 
 MrFujisHouseMrFujiExplainFluteText:
 	text "MR.FUJI: Upon"
-	line "hearnig the #"
+	line "hearing the #"
 	cont "FLUTE, sleeping"
 	cont "#MON will"
 	cont "spring awake!"
@@ -148,11 +150,13 @@ MrFujisHouse_MapEvents:
 	def_bg_events
 	bg_event  0,  1, BGEVENT_READ, MrFujisHouseBookshelf
 	bg_event  1,  1, BGEVENT_READ, MrFujisHouseBookshelf
+	bg_event  8,  1, BGEVENT_READ, MrFujisHouseBookshelf
+	bg_event  9,  1, BGEVENT_READ, MrFujisHouseBookshelf
 
 	def_object_events
 	object_event  4,  1, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MrFujisHouseMrFujiScript, EVENT_MR_FUJIS_HOUSE_MR_FUJI
 	object_event  1,  3, SPRITE_NIDORINO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, MrFujisHouseNidorino, -1
-	object_event  6,  3, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MrFujisHouseGirlScript, -1
-	object_event  6,  4, SPRITE_PSYDUCK, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, MrFujisHousePsyduck, -1
-	object_event  3,  5, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MrFujisHouseSuperNerdScript, -1
-	object_event  3,  3, SPRITE_POKEDEX, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MrFujisHousePokedexScript, -1
+	object_event  7,  4, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MrFujisHouseGirlScript, -1
+	object_event  7,  3, SPRITE_PSYDUCK, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, MrFujisHousePsyduck, -1
+	object_event  2,  4, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MrFujisHouseSuperNerdScript, -1
+	object_event  5,  3, SPRITE_POKEDEX, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MrFujisHousePokedexScript, -1

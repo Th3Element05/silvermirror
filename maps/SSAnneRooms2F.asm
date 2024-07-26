@@ -113,7 +113,18 @@ GentlemanWesleyAfterBattleText:
 
 ; npc
 SSAnneRooms2FGentleman1Script:
-	jumptextfaceplayer SSAnneRooms2FGentleman1Text
+	faceplayer
+	opentext
+	writetext SSAnneRooms2FGentleman1Text
+	promptbutton
+	closetext
+	refreshscreen
+	pokepic SNORLAX
+	waitbutton
+	closepokepic
+	clostext
+	end
+
 SSAnneRooms2FGentleman1Text:
 	text "In all my travels"
 	line "I've never seen"

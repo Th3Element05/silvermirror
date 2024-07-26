@@ -86,8 +86,8 @@ VictoryRoad2FPushedSwitchText:
 
 VictoryRoad2FMoltres:
 	opentext
-	cry MOLTRES
 	writetext MoltresText
+	cry MOLTRES
 	pause 20
 	closetext
 ;	loadvar VAR_BATTLETYPE, BATTLETYPE_KANTO_LEGEND

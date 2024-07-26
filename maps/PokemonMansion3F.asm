@@ -115,7 +115,7 @@ PokemonMansion3FDiaryText:
 	line "Feb. 6"
 
 	para "We created a new"
-	line "####MON by using"
+	line "#MON by using"
 	cont "MEW's DNA!"
 	
 	para "We named our"

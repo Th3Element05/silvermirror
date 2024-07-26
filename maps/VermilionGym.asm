@@ -8,11 +8,9 @@ VermilionGym_MapScripts:
 
 .VermilionGymDoorsCallback:
 	checkevent EVENT_VERMILION_GYM_SWITCH_2
-	iftrue .NoDoors
-	endcallback
-
-.NoDoors:
+	iffalse .Skip
 	changeblock 4, 4, $32 ; floor
+.Skip
 	endcallback
 
 VermilionGymTrashCanScript:
@@ -295,7 +293,7 @@ VermilionGymGuideText:
 	line "nickname. People"
 	cont "refer to him as"
 	cont "the Lightning"
-	cont "American!"
+	cont "Warrior!"
 
 	para "He's an expert on"
 	line "electric #MON!"

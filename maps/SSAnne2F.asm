@@ -337,7 +337,7 @@ SSAnne2F_MapEvents:
 
 	def_bg_events
 	bg_event 24,  1, BGEVENT_READ, SSAnne2FCaptainsTrashCan
-	bg_event 22,  2, BGEVENT_READ, SSAnne2FCaptainsBook
+	bg_event 21,  2, BGEVENT_READ, SSAnne2FCaptainsBook
 
 	def_object_events
 	object_event 35,  4, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_SSANNE_2F_RIVAL

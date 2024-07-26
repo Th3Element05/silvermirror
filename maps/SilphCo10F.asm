@@ -9,7 +9,7 @@ SilphCo10F_MapScripts:
 SilphCo10FDoorsCallback:
 	checkevent EVENT_SILPH_CO_10F_DOOR_1
 	iffalse .End
-	changeblock 10, 8, $3e ; open door
+	changeblock 10, 8, $3c ; open door
 .End
 	endcallback
 

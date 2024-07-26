@@ -251,9 +251,8 @@ IsItDSTText:
 ComeHomeForDSTText:
 	text "Come home to"
 	line "adjust your clock"
-
-	para "for Daylight"
-	line "Saving Time."
+	cont "for Daylight"
+	cont "Saving Time."
 
 	para "By the way, do you"
 	line "know how to use"

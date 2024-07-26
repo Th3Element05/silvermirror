@@ -143,7 +143,7 @@ BrockAfterBattleText:
 	text "By using a TM, a"
 	line "#MON will"
 	cont "instantly learn"
-	line "a new move."
+	cont "a new move."
 
 	para "Don't worry, TMs"
 	line "are reusable so"

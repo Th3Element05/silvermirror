@@ -5,6 +5,15 @@ SSAnneKitchen_MapScripts:
 
 	def_callbacks
 
+;SSAnneKitchenCookScript:
+;	faceplayer
+;	opentext
+;	writetext SSAnneKitchenCookText
+;	waitbutton
+;	closetext
+;	turnobject LAST_TALKED, UP
+;	end
+
 SSAnneKitchenCook1Script:
 	jumptextfaceplayer SSAnneKitchenCook1Text
 SSAnneKitchenCook1Text:
@@ -28,7 +37,14 @@ SSAnneKitchenCook3Text:
 	done
 
 SSAnneKitchenCook4Script:
-	jumptextfaceplayer SSAnneKitchenCook4Text
+	faceplayer
+	opentext
+	writetext SSAnneKitchenCook4Text
+	waitbutton
+	closetext
+	turnobject LAST_TALKED, UP
+	end
+
 SSAnneKitchenCook4Text:
 	text "Hum-de-hum-de-"
 	line "ho..."
@@ -39,7 +55,14 @@ SSAnneKitchenCook4Text:
 	done
 
 SSAnneKitchenCook5Script:
-	jumptextfaceplayer SSAnneKitchenCook5Text
+	faceplayer
+	opentext
+	writetext SSAnneKitchenCook5Text
+	waitbutton
+	closetext
+	turnobject LAST_TALKED, UP
+	end
+
 SSAnneKitchenCook5Text:
 	text "Did you hear about"
 	line "SNORLAX?"
@@ -49,7 +72,14 @@ SSAnneKitchenCook5Text:
 	done
 
 SSAnneKitchenCook6Script:
-	jumptextfaceplayer SSAnneKitchenCook6Text
+	faceplayer
+	opentext
+	writetext SSAnneKitchenCook6Text
+	waitbutton
+	closetext
+	turnobject LAST_TALKED, UP
+	end
+
 SSAnneKitchenCook6Text:
 	text "Snivel...Sniff..."
 
@@ -72,7 +102,12 @@ SSAnneKitchenCook7Text:
 	done
 
 SSAnneKitchenTrashcan:
-	jumpstd TrashCanScript
+;	jumpstd TrashCanScript
+	jumptext SSAnneKitchenTrashcanText
+SSAnneKitchenTrashcanText:
+	text "Its full of"
+	line "potato peels!"
+	done
 
 SSAnneKitchenHiddenGreatBall:
 	hiddenitem GREAT_BALL, EVENT_SS_ANNE_KITCHEN_HIDDEN_GREAT_BALL
@@ -89,6 +124,7 @@ SSAnneKitchen_MapEvents:
 	bg_event 13,  5, BGEVENT_READ, SSAnneKitchenTrashcan
 	bg_event 13,  7, BGEVENT_READ, SSAnneKitchenTrashcan
 	bg_event 13,  9, BGEVENT_ITEM, SSAnneKitchenHiddenGreatBall
+;	bg_event 13,  9, BGEVENT_READ, SSAnneKitchenTrashcan
 
 	def_object_events
 	object_event  1,  8, SPRITE_CHEF, SPRITEMOVEDATA_WALK_UP_DOWN, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneKitchenCook1Script, -1

@@ -141,7 +141,7 @@ SaffronCivilianText3:
 	done
 
 SaffronCivilianText4:
-	text "I saw ROCKET"
+	text "I saw ROCKET's"
 	line "BOSS escaping"
 	cont "SILPH's building."
 	done
@@ -226,14 +226,14 @@ SaffronCityMartSign:
 	jumpstd MartSignScript
 
 ; debug items
-DebugFreshWater:
-	hiddenitem FRESH_WATER, EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_1
+;DebugFreshWater:
+;	hiddenitem FRESH_WATER, EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_1
 
-DebugSodaPop:
-	hiddenitem SODA_POP, EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_2
+;DebugSodaPop:
+;	hiddenitem SODA_POP, EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_2
 
-DebugLemonade:
-	hiddenitem LEMONADE, EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_3
+;DebugLemonade:
+;	hiddenitem LEMONADE, EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_3
 
 SaffronCity_MapEvents:
 	db 0, 0 ; filler
@@ -268,9 +268,9 @@ SaffronCity_MapEvents:
 	bg_event 10, 29, BGEVENT_READ, SaffronCityPokecenterSign
 	bg_event 28, 13, BGEVENT_READ, SaffronCityMartSign
 ; debug items
-	bg_event 16, 10, BGEVENT_ITEM, DebugFreshWater
-	bg_event 17, 10, BGEVENT_ITEM, DebugSodaPop
-	bg_event 18, 10, BGEVENT_ITEM, DebugLemonade
+;	bg_event 16, 10, BGEVENT_ITEM, DebugFreshWater
+;	bg_event 17, 10, BGEVENT_ITEM, DebugSodaPop
+;	bg_event 18, 10, BGEVENT_ITEM, DebugLemonade
 
 	def_object_events
 	object_event 19, 22, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronCityRocketGuard, EVENT_SAFFRON_CITY_ROCKETS
@@ -284,6 +284,6 @@ SaffronCity_MapEvents:
 	object_event 14, 30, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronCityCivilianScript, EVENT_SAFFRON_CITY_CIVILIANS
 	object_event 23, 24, SPRITE_CLERK, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronCityCivilianScript, EVENT_SAFFRON_CITY_CIVILIANS
 	object_event 11, 14, SPRITE_SCIENTIST, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronCityCivilianScript, EVENT_SAFFRON_CITY_CIVILIANS
-	object_event 20,  8, SPRITE_ROCKER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronCityRocketScript, EVENT_SAFFRON_CITY_CIVILIANS
+	object_event 20,  8, SPRITE_ROCKER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronCityCivilianScript, EVENT_SAFFRON_CITY_CIVILIANS
 	object_event 34, 13, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronCityGentleman, EVENT_SAFFRON_CITY_CIVILIANS
 	object_event 35, 13, SPRITE_PIDGEOT, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronCityPidgeot, EVENT_SAFFRON_CITY_CIVILIANS

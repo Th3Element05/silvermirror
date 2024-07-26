@@ -21,7 +21,6 @@ PokemonTower6FGhostScript:
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	iftrue .GetOut
 	writetext PokemonTower6FBegoneText
-	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	sjump .PushBack
 
 .GetOut:
@@ -33,6 +32,7 @@ PokemonTower6FGhostScript:
 	iftrue .SilphScope
 	closetext
 	applymovement PLAYER, PokemonTower6FStepBackMovement
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	end
 
 .SilphScope
@@ -45,7 +45,11 @@ PokemonTower6FGhostScript:
 	reloadmapafterbattle
 	setevent EVENT_FOUGHT_POKEMON_GHOST
 	setscene SCENE_POKEMONTOWER6F_NOOP
-	jumptext PokemonTower6FGhostDepartedText
+	writetext PokemonTower6FGhostDepartedText
+	cry MAROWAK
+	waitbutton
+	closetext
+	end
 
 PokemonTower6FBegoneText:
 	text "Be gone..."

@@ -100,7 +100,7 @@ SafariZoneEntranceMainOfficerScript:
 	scall SafariZoneArea3NPCs
 	scall SafariZoneArea4NPCs
 ;silvermirror random NPCs
-	warpfacing UP, SAFARI_ZONE_AREA_1, 18, 25
+	warpfacing UP, SAFARI_ZONE_AREA_1, 18, 27
 	setevent EVENT_SAFARI_ZONE_ENTRANCE_OFFICER_SAFARI_GAME_NOT_ACTIVE
 	clearevent EVENT_SAFARI_ZONE_ENTRANCE_OFFICER_SAFARI_GAME_ACTIVE
 	end
@@ -280,7 +280,7 @@ SafariZoneEntranceOfficer_Text3:
 	done
 
 SafariZoneEntranceOfficer_Text4:
-	text "We're running a"
+	text "We're running an"
 	line "event right now!"
 
 	para "Find the SECRET"
@@ -381,6 +381,6 @@ SafariZoneEntrance_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  0,  5, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, PERSONTYPE_SCRIPT, 0, SafariZoneEntranceOfficerScript, -1
+	object_event  0,  5, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, PERSONTYPE_SCRIPT, 0, SafariZoneEntranceOfficerScript, -1
 	object_event  3,  2, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, PERSONTYPE_SCRIPT, 0, SafariZoneEntranceMainOfficerScript, EVENT_SAFARI_ZONE_ENTRANCE_OFFICER_SAFARI_GAME_NOT_ACTIVE
 	object_event  2,  1, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, PERSONTYPE_SCRIPT, 0, SafariZoneEntranceMainOfficerScript, EVENT_SAFARI_ZONE_ENTRANCE_OFFICER_SAFARI_GAME_ACTIVE

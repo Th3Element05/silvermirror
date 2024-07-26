@@ -13,34 +13,37 @@ CeladonMansion2FBookshelf:
 	jumpstd DifficultBookshelfScript
 
 CeladonMansion2FComputerText:
-	text "<PLAYER> turned on"
-	line "the PC."
-
-	para "…"
-
-	para "Someone was in the"
-	line "middle of compos-"
-	cont "ing an e-mail."
-
-	para "…I hope you'll"
-	line "come visit KANTO."
-
-	para "I think you'll be"
-	line "surprised at how"
-
-	para "much things have"
-	line "changed here."
-
-	para "You'll also see"
-	line "many #MON that"
-
-	para "aren't native to"
-	line "JOHTO."
-
-	para "To the PRODUCER"
-
-	para "…"
+	text "The PC is off."
 	done
+
+;	text "<PLAYER> turned on"
+;	line "the PC."
+;
+;	para "…"
+;
+;	para "Someone was in the"
+;	line "middle of compos-"
+;	cont "ing an e-mail."
+;
+;	para "…I hope you'll"
+;	line "come visit KANTO."
+;
+;	para "I think you'll be"
+;	line "surprised at how"
+;
+;	para "much things have"
+;	line "changed here."
+;
+;	para "You'll also see"
+;	line "many #MON that"
+;
+;	para "aren't native to"
+;	line "JOHTO."
+;
+;	para "To the PRODUCER"
+;
+;	para "…"
+;	done
 
 CeladonMansion2FMeetingRoomSignText:
 	text "GAME FREAK"

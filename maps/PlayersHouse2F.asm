@@ -53,8 +53,8 @@ PlayersHouseRadioScript:
 if DEF(_DEBUG)
 	opentext
 ;	; full pokegear
-;	setflag ENGINE_POKEGEAR
-;	setflag ENGINE_PHONE_CARD
+	setflag ENGINE_POKEGEAR
+	setflag ENGINE_PHONE_CARD
 ;	setflag ENGINE_MAP_CARD
 ;	setflag ENGINE_PAGER_CARD
 ;	setflag ENGINE_RADIO_CARD
@@ -367,21 +367,18 @@ PlayersBedHealing:
 	yesorno
 	iffalse .NoHeal
 	closetext
-;	special StubbedTrainerRankings_Healings
-;	special FadeOutPalettes
 	special FadeBlackQuickly
 	special ReloadSpritesNoPalettes
 	special HealParty
 	playmusic MUSIC_HEAL
-	pause 60 ;70
-;	special FadeInPalettes
+	pause 60
 	special FadeInQuickly
 	special RestartMapMusic
 	opentext
 	writetext PlayersBedHealingText3
+	waitbutton
 	; fallthrough
 .NoHeal
-	waitbutton
 	closetext
 	end
 

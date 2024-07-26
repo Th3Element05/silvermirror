@@ -45,12 +45,11 @@ CeladonMansion1FBookshelf:
 CeladonMansionManagerText:
 	text "My dear #MON"
 	line "keep me company,"
-
-	para "so I don't ever"
-	line "feel lonely."
+	cont "so I don't ever"
+	cont "feel lonely."
 
 	para "MEOWTH even brings"
-	line "money home."
+	line "money home!"
 	done
 
 CeladonMansion1FMeowthText:
