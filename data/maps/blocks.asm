@@ -169,7 +169,7 @@ PokeSeersHouse_Blocks:
 ViridianNicknameSpeechHouse_Blocks:
 Route2NuggetHouse_Blocks:
 PlayersNeighborsHouse_Blocks:
-Route26HealHouse_Blocks:
+;Route26HealHouse_Blocks:
 DayOfWeekSiblingsHouse_Blocks:
 MrPsychicsHouse_Blocks:
 CherrygroveGymSpeechHouse_Blocks:
@@ -177,7 +177,7 @@ GuideGentsHouse_Blocks:
 CherrygroveEvolutionSpeechHouse_Blocks:
 Route30BerryHouse_Blocks:
 DayCare_Blocks:
-MrFujisHouse_Blocks:
+;MrFujisHouse_Blocks:
 FuchsiaGoodRodHouse_Blocks:
 SafariZoneWardensHome_Blocks:
 SaffronPidgeyHouse_Blocks:
@@ -911,8 +911,8 @@ TrainerHouseB1F_Blocks:
 OaksLab_Blocks:
 	INCBIN "maps/OaksLab.blk"
 
-;MrFujisHouse_Blocks:
-;	INCBIN "maps/MrFujisHouse.blk"
+MrFujisHouse_Blocks:
+	INCBIN "maps/MrFujisHouse.blk"
 
 ;LavRadioTower1F_Blocks:
 ;	INCBIN "maps/LavRadioTower1F.blk"

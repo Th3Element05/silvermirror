@@ -102,7 +102,7 @@ Landmarks:
 	landmark 102,  66, SilphCoName
 	landmark  92, 124, Route19Name
 	landmark  80, 132, SeafoamIslandsName
-	landmark  68, 132, Route20Name
+	landmark  76, 132, Route20Name ;68, 132
 	landmark  52, 132, CinnabarIslandName
 	landmark  50, 130, PokemonMansionName
 	landmark  52, 116, Route21Name
