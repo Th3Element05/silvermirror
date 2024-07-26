@@ -6,9 +6,9 @@ ENDM
 MonMenuIconPals:
 	table_width 1, MonMenuIconPals
 	;         normal, shiny
-	icon_pals GREEN,  YELLOW     ; BULBASAUR
-	icon_pals GREEN,  YELLOW     ; IVYSAUR
-	icon_pals GREEN,  YELLOW     ; VENUSAUR
+	icon_pals GREEN,  YELLOW   ; BULBASAUR
+	icon_pals GREEN,  YELLOW   ; IVYSAUR
+	icon_pals GREEN,  YELLOW   ; VENUSAUR
 	icon_pals RED,    YELLOW   ; CHARMANDER
 	icon_pals RED,    YELLOW   ; CHARMELEON
 	icon_pals RED,    GRAY     ; CHARIZARD
@@ -257,7 +257,7 @@ MonMenuIconPals:
 	icon_pals BLUE,   PINK     ; LUGIA
 	icon_pals RED,    BROWN    ; HO_OH
 	icon_pals GREEN,  PINK     ; CELEBI
-	icon_pals GRAY,   GRAY     ; MISSINGNO ;missingno
+	icon_pals GRAY,   BLUE     ; MISSINGNO ;missingno
 	assert_table_length NUM_POKEMON
 ;	icon_pals RED,    RED      ; unused
 	icon_pals RED,    RED      ; EGG
