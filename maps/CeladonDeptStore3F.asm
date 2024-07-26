@@ -19,6 +19,7 @@ CeladonDeptStore3FClerkScript:
 	promptbutton
 	verbosegiveitem TM_COUNTER
 	setevent EVENT_GOT_TM18_COUNTER
+	closetext
 	end
 
 CeladonDeptStore3FFreeSampleText:
@@ -39,13 +40,11 @@ CeladonDeptStore3FGameboyKid1Script:
 	end
 
 CeladonDeptStore3FGameboyKid1Text:
-	text "Captured #MON"
-	line "are registered"
-	cont "with an ID No."
-	cont "and OT, the name"
-	cont "of the Original"
-	cont "Trainer that"
-	cont "caught it!"
+	text "#MON are"
+	line "registered with"
+	cont "an ID No. of the"
+	cont "Original Trainer"
+	cont "that caught it!"
 	done
 
 CeladonDeptStore3FGameboyKid2Script:
@@ -93,9 +92,8 @@ CeladonDeptStore3FYoungsterScript:
 CeladonDeptStore3FYoungsterText:
 	text "I can't decide"
 	line "which #MON I"
-
-	para "should use this TM"
-	line "on…"
+	cont "should use this TM"
+	cont "on…"
 
 	para "Lucky for me,"
 	line "it's reusable!"
