@@ -166,13 +166,13 @@ BikeShop_MapEvents:
 ;	bg_event  0,  3, BGEVENT_READ, BikeShopBicycle
 	bg_event  1,  3, BGEVENT_READ, BikeShopBicycle
 ;	bg_event  0,  5, BGEVENT_READ, BikeShopBicycle
-	bg_event  1,  5, BGEVENT_READ, BikeShopBicycle
+	bg_event  1,  4, BGEVENT_READ, BikeShopBicycle
 	bg_event  0,  6, BGEVENT_READ, BikeShopBicycle
 	bg_event  1,  6, BGEVENT_READ, BikeShopBicycle
 	bg_event  6,  6, BGEVENT_READ, BikeShopBicycle
 ;	bg_event  7,  6, BGEVENT_READ, BikeShopBicycle
 
 	def_object_events
-	object_event  7,  3, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BikeShopClerkScript, -1
-	object_event  1,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BikeShopYoungsterScript, -1
+	object_event  7,  3, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, BikeShopClerkScript, -1
+	object_event  1,  5, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BikeShopYoungsterScript, -1
 	object_event  5,  6, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BikeShopPokefanFScript, -1
