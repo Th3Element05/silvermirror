@@ -11,6 +11,7 @@ CinnabarIsland_MapScripts:
 
 CinnabarIslandFlypointCallback:
 	setflag ENGINE_FLYPOINT_CINNABAR
+	clearevent EVENT_FOSSIL_SCIENTIST_WORKING
 	endcallback
 
 CinnabarGymDoorCallback:
