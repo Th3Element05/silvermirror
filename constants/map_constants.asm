@@ -135,7 +135,7 @@ ENDM
 	map_const LAVENDER_TOWN,                               10,  9 ;  1
 	map_const LAVENDER_POKECENTER_1F,                       7,  4 ;  2
 	map_const LAVENDER_MART,                                5,  4 ;  3
-	map_const MR_FUJIS_HOUSE,                               4,  4 ;  4
+	map_const MR_FUJIS_HOUSE,                               5,  4 ;  4
 	map_const LAVENDER_SPEECH_HOUSE,                        4,  4 ;  5
 	map_const LAVENDER_NAME_RATER,                          4,  4 ;  6
 	map_const ROUTE_10_SOUTH,                              10, 11 ;  7
@@ -181,7 +181,7 @@ ENDM
 	endgroup
 
 	newgroup FUCHSIA                                              ;  9
-	map_const FUCHSIA_CITY,                                20, 18 ;  1
+	map_const FUCHSIA_CITY,                                20, 19 ;  1
 	map_const FUCHSIA_POKECENTER_1F,                        7,  4 ;  2
 	map_const FUCHSIA_MART,                                 5,  4 ;  3
 	map_const FUCHSIA_GYM,                                  5,  9 ;  4
@@ -415,7 +415,7 @@ ENDM
 	newgroup SILVER                                               ; 26
 	map_const ROUTE_26,                                    10, 52 ;  1
 	map_const ROUTE_26_GATE,                                4,  4 ;  2
-	map_const ROUTE_26_HEAL_HOUSE,                          4,  4 ;  3
+;	map_const ROUTE_26_HEAL_HOUSE,                          4,  4 ;  3
 	map_const DAY_OF_WEEK_SIBLINGS_HOUSE,                   4,  4 ;  4
 	map_const ROUTE_27_EAST,                               26,  9 ;  5
 	map_const ROUTE_28,                                    20,  9 ;  6

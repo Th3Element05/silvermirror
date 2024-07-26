@@ -702,7 +702,7 @@ ENDM
 	map_attributes PlayersHouse2F, PLAYERS_HOUSE_2F, $00, 0
 	map_attributes PlayersNeighborsHouse, PLAYERS_NEIGHBORS_HOUSE, $00, 0
 	map_attributes ElmsHouse, ELMS_HOUSE, $00, 0
-	map_attributes Route26HealHouse, ROUTE_26_HEAL_HOUSE, $00, 0
+;	map_attributes Route26HealHouse, ROUTE_26_HEAL_HOUSE, $00, 0
 	map_attributes DayOfWeekSiblingsHouse, DAY_OF_WEEK_SIBLINGS_HOUSE, $00, 0
 ;	map_attributes Route27SandstormHouse, ROUTE_27_SANDSTORM_HOUSE, $00, 0
 	map_attributes Route29Route46Gate, ROUTE_29_ROUTE_46_GATE, $00, 0
