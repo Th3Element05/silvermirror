@@ -548,15 +548,16 @@ Credits_LoadBorderGFX:
 	cp $ff
 	jr z, .init
 
-	and %11
+	and %111 ;%11
 	ld e, a
 	inc a
-	and %11
+	and %111 ;%11
 	ld [hl], a
 	ld a, [wCreditsBorderMon]
-	and %11
+	and %111 ;%11
 	add a
 	add a
+	add a ;silvermirror +
 	add e
 	add a
 	ld e, a
@@ -577,21 +578,37 @@ Credits_LoadBorderGFX:
 	dw CreditsPichuGFX     + 16 tiles
 	dw CreditsPichuGFX     + 32 tiles
 	dw CreditsPichuGFX     + 48 tiles
+	dw CreditsPichuGFX      + 64 tiles
+	dw CreditsPichuGFX      + 80 tiles
+	dw CreditsPichuGFX      + 96 tiles
+	dw CreditsPichuGFX      + 112 tiles
 
 	dw CreditsSmoochumGFX
 	dw CreditsSmoochumGFX  + 16 tiles
 	dw CreditsSmoochumGFX  + 32 tiles
 	dw CreditsSmoochumGFX  + 48 tiles
+	dw CreditsSmoochumGFX   + 64 tiles
+	dw CreditsSmoochumGFX   + 80 tiles
+	dw CreditsSmoochumGFX   + 96 tiles
+	dw CreditsSmoochumGFX   + 112 tiles
 
 	dw CreditsDittoGFX
 	dw CreditsDittoGFX     + 16 tiles
 	dw CreditsDittoGFX     + 32 tiles
 	dw CreditsDittoGFX     + 48 tiles
+	dw CreditsDittoGFX      + 64 tiles
+	dw CreditsDittoGFX      + 80 tiles
+	dw CreditsDittoGFX      + 96 tiles
+	dw CreditsDittoGFX      + 112 tiles
 
 	dw CreditsIgglybuffGFX
 	dw CreditsIgglybuffGFX + 16 tiles
 	dw CreditsIgglybuffGFX + 32 tiles
 	dw CreditsIgglybuffGFX + 48 tiles
+	dw CreditsIgglybuffGFX  + 64 tiles
+	dw CreditsIgglybuffGFX  + 80 tiles
+	dw CreditsIgglybuffGFX  + 96 tiles
+	dw CreditsIgglybuffGFX  + 112 tiles
 
 Credits_TheEnd:
 	ld a, $40
