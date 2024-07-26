@@ -425,27 +425,67 @@ BlueScript:
 
 OaksAssistantScript:
 	jumptextfaceplayer OaksAssistantText
+OaksAssistantText:
+	text "I study #MON as"
+	line "PROF.OAK's AIDE."
+	done
 
-OaksLabGirlScript:
-	jumptextfaceplayer OaksLabGirlText
+;OaksLabGirlScript:
+;	jumptextfaceplayer OaksLabGirlText
+;OaksLabGirlText:
+;	text "PROF.OAK is the"
+;	line "authority on"
+;	cont "#MON!"
+;
+;	para "Many #MON"
+;	line "trainers hold him"
+;	cont "in high regard!"
+;	done
 
-OaksLabBookshelf:
-	jumpstd DifficultBookshelfScript
+
 
 OaksLabPoster1:
 	jumptext OaksLabPoster1Text
+OaksLabPoster1Text:
+	text "Press START to"
+	line "open the MENU."
+	done
 
 OaksLabPoster2:
 	jumptext OaksLabPoster2Text
+OaksLabPoster2Text:
+	text "The SAVE option is"
+	line "on the MENU."
 
-OaksLabTrashcan:
-	jumptext OaksLabTrashcanText
+	para "Use it in a timely"
+	line "manner."
+	done
 
 OaksLabPC:
 	jumptext OaksLabPCText
-	
+OaksLabPCText:
+	text "It's PROF. OAK's"
+	line "personal computer."
+
+	para "…"
+
+	para "You don't know"
+	line "the password."
+	done
+
 PokedexScript:
 	jumptext OaksLabPokedexText
+OaksLabPokedexText:
+	text "It's encyclopedia-"
+	line "like, but the"
+	cont "pages are blank!"
+	done
+
+OaksLabTrashcan:
+	jumpstd TrashCanScript
+
+OaksLabBookshelf:
+	jumpstd DifficultBookshelfScript
 
 ; movements
 OaksLabPlayerWalkInMovement:
@@ -890,53 +930,15 @@ OaksLabPokeballExplainationText:
 	cont "have to be lucky!"
 	done
 
-OaksAssistantText:
-	text "I study #MON as"
-	line "PROF.OAK's AIDE."
-	done
-
-OaksLabGirlText:
-	text "PROF.OAK is the"
-	line "authority on"
-	cont "#MON!"
-
-	para "Many #MON"
-	line "trainers hold him"
-	cont "in high regard!"
-	done
-
 ; bg text
 OaksPokeBallText:
 	text "That's PROF.OAK's"
 	line "last #MON!"
 	done
 
-OaksLabPoster1Text:
-	text "Press START to"
-	line "open the MENU."
-	done
-
-OaksLabPoster2Text:
-	text "The SAVE option is"
-	line "on the MENU."
-
-	para "Use it in a timely"
-	line "manner."
-	done
-
 OaksLabTrashcanText:
 	text "There's nothing in"
 	line "here…"
-	done
-
-OaksLabPCText:
-	text "It's PROF. OAK's"
-	line "personal computer."
-
-	para "…"
-
-	para "You don't know"
-	line "the password."
 	done
 
 OaksLabThoseArePokeballsText:
@@ -945,15 +947,9 @@ OaksLabThoseArePokeballsText:
 	cont "contain #MON!"
 	done
 
-OaksLabPokedexText:
-	text "It's encyclopedia-"
-	line "like, but the"
-	cont "pages are blank!"
-	done
-
 OakLabEvaluateDexText:
-	text "How is your #-"
-	line "DEX coming?"
+	text "How is your"
+	line "#DEX coming?"
 
 	para "Let's see…"
 	done
@@ -1458,11 +1454,11 @@ OaksLab_MapEvents:
 	object_event  6,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CharmanderPokeBallScript, EVENT_CHARMANDER_POKEBALL_IN_OAKS_LAB
 	object_event  7,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SquirtlePokeBallScript, EVENT_SQUIRTLE_POKEBALL_IN_OAKS_LAB
 	object_event  8,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BulbasaurPokeBallScript, EVENT_BULBASAUR_POKEBALL_IN_OAKS_LAB
-	object_event  2,  1, SPRITE_POKEDEX, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PokedexScript, EVENT_GOT_POKEDEX
-	object_event  3,  1, SPRITE_POKEDEX, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PokedexScript, EVENT_GOT_POKEDEX
-	object_event  1,  9, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OaksLabGirlScript, -1
-	object_event  8,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksAssistantScript, -1
-	object_event  2, 10, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksAssistantScript, -1
+	object_event  2,  1, SPRITE_POKEDEX, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, PokedexScript, EVENT_GOT_POKEDEX
+	object_event  3,  1, SPRITE_POKEDEX, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, PokedexScript, EVENT_GOT_POKEDEX
 ;	object_event  2,  3, SPRITE_BULBASAUR, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, OaksLabBulbasaur, EVENT_OAKS_LAB_BULBASAUR
 ;	object_event  2,  3, SPRITE_CHARMANDER, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OaksLabCharmander, EVENT_OAKS_LAB_CHARMANDER
 ;	object_event  2,  3, SPRITE_SQUIRTLE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksLabSquirtle, EVENT_OAKS_LAB_SQUIRTLE
+	object_event  8,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksAssistantScript, -1
+	object_event  2, 10, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksAssistantScript, -1
+;	object_event  1,  9, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OaksLabGirlScript, -1
