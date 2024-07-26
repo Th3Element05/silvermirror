@@ -2,7 +2,7 @@
 ;	const COPYCATSHOUSE2F_COPYCAT1 ; if player is male
 ;	const COPYCATSHOUSE2F_COPYCAT2 ; if player is female
 	const COPYCATSHOUSE2F_COPYCAT ; neutral blue color
-	const COPYCATSHOUSE2F_FAIRYDOLL ; pokedoll
+	const COPYCATSHOUSE2F_POKEDOLL ; pokedoll
 
 CopycatsHouse2F_MapScripts:
 	def_scene_scripts
@@ -62,10 +62,10 @@ Copycat:
 	promptbutton
 	takeitem POKE_DOLL
 	verbosegiveitem TM_MIMIC
-	promptbutton
 	writetext CopycatText_ExplainTM
 	waitbutton
 	closetext
+	appear COPYCATSHOUSE2F_POKEDOLL
 	setevent EVENT_GOT_TM31_MIMIC
 	end
 
@@ -93,11 +93,12 @@ CopycatIntoTwinScript:
 	faceplayer
 	variablesprite SPRITE_COPYCAT, SPRITE_TWIN
 	special LoadUsedSpritesGFX
+	end
 
 CopycatsDoduo:
 	opentext
-	cry DODRIO
 	writetext CopycatsDoduoText
+	cry DODRIO
 	waitbutton
 	closetext
 	end
@@ -147,7 +148,7 @@ CopycatText_QuitMimicking:
 	done
 
 CopycatText_IsThatAPokedoll:
-	text "COPYCAT: Oh wow!"
+	text "Oh wow!"
 	line "A # DOLL?"
 
 	para "Is it for me?"
@@ -228,8 +229,8 @@ CopycatsHouse2F_MapEvents:
 ;	object_event  2,  4, SPRITE_COPYCAT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Copycat, EVENT_COPYCAT_2
 	object_event  2,  4, SPRITE_COPYCAT, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Copycat, -1
 	object_event  4,  4, SPRITE_CLEFAIRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, EVENT_COPYCATS_HOUSE_2F_DOLL
-	object_event  6,  4, SPRITE_DODUO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CopycatsDoduo, -1
-	object_event  0,  1, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, -1
+	object_event  1,  1, SPRITE_DODUO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CopycatsDoduo, -1
+;	object_event  0,  1, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, -1
 	object_event  5,  4, SPRITE_PIKACHU, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, -1
-	object_event  2,  1, SPRITE_JIGGLYPUFF, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, -1
-	object_event  3,  1, SPRITE_ABRA, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, -1
+	object_event  3,  1, SPRITE_JIGGLYPUFF, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, -1
+	object_event  2,  1, SPRITE_ABRA, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, -1
