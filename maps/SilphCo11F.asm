@@ -34,7 +34,7 @@ SilphCo11F_Door1:
 	jumpstd SilphCoNoCardKeyScript
 .OpenDoor
 	farscall SilphCoOpenDoorScript
-	changeblock 6, 12, $3e ; open door
+	changeblock 6, 12, $3d ; open door
 	reloadmappart
 	playsound SFX_ENTER_DOOR
 	setevent EVENT_SILPH_CO_11F_DOOR_1
@@ -49,7 +49,7 @@ SilphCo11F_Door2:
 .StillLocked
 	jumptext SilphCo11FLockedDoorText
 SilphCo11FLockedDoorText:
-	text "The CARD KEY"
+	text "Your CARD KEY"
 	line "doesn't work!"
 
 	para "It's locked from"
@@ -201,7 +201,7 @@ SilphCo11FPresidentMasterBallText:
 	cont "these!"
 
 	para "Please, be quiet"
-	cont "about using it!"
+	line "about using it!"
 	done
 
 TrainerRocketExecutiveM2:

@@ -35,6 +35,7 @@ TrainerCoupleTimAndSue_Tim:
 	trainer COUPLE, TIMANDSUE1, EVENT_BEAT_COUPLE_TIMANDSUE, CoupleTimSeenText, CoupleTimAndSueBeatenText, 0, .Script
 .Script:
 	endifjustbattled
+	turnobject LAST_TALKED, RIGHT
 	opentext
 	writetext CoupleTimAndSueAfterBattleText
 	waitbutton
@@ -42,15 +43,20 @@ TrainerCoupleTimAndSue_Tim:
 	end
 
 CoupleTimSeenText:
-	text "Who's there?"
+	text "TIM: Who's there?"
 	line "Quit listening in"
 	cont "on us!"
+
+	para "SUE: Excuse me!"
+	line "This is a private"
+	cont "conversation!"
 	done
 
 TrainerCoupleTimAndSue_Sue:
 	trainer COUPLE, TIMANDSUE1, EVENT_BEAT_COUPLE_TIMANDSUE, CoupleSueSeenText, CoupleTimAndSueBeatenText, 0, .Script
 .Script:
 	endifjustbattled
+	turnobject LAST_TALKED, LEFT
 	opentext
 	writetext CoupleTimAndSueAfterBattleText
 	waitbutton
@@ -58,14 +64,16 @@ TrainerCoupleTimAndSue_Sue:
 	end
 
 CoupleSueSeenText:
-	text "Excuse me! This"
-	line "is a private"
+	text "SUE: Excuse me!"
+	line "This is a private"
 	cont "conversation!"
+
+	para "TIM: Stop eaves-"
+	line "dropping!"
 	done
 
 CoupleTimAndSueBeatenText:
-	text "We"
-	line "just can't win!"
+	text "We just can't win!"
 	done
 
 CoupleTimAndSueAfterBattleText:

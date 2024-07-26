@@ -73,9 +73,9 @@ TrainerScientistSilas:
 	end
 
 ScientistSilasSeenText:
-	text "Who are you? There"
-	line "shouldn't be"
-	cont "anyone here."
+	text "Who are you?"
+	line "There shouldn't"
+	cont "be anyone here."
 	done
 
 ScientistSilasBeatenText:
@@ -83,9 +83,8 @@ ScientistSilasBeatenText:
 	done
 
 ScientistSilasAfterBattleText:
-	text "A key? I don't"
-	line "know what you're"
-	cont "talking about."
+	text "BLAINE? I haven't"
+	line "seen him."
 	done
 
 ; itemballs

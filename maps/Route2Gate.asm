@@ -6,38 +6,6 @@ Route2Gate_MapScripts:
 
 	def_callbacks
 
-
-
-;	writetext SSAnne2FCaptainThanksGivePagerText
-;	promptbutton
-;	stringtotext .pagercardname, MEM_BUFFER_1
-;	scall .JumpstdReceiveItem
-;	setflag ENGINE_PAGER_CUT
-;	writetext GotCutPagerText
-;	promptbutton
-;	writetext SSAnne2FCaptainExplainPagerGiveCutText
-;	promptbutton
-;	verbosegiveitem HM_CUT
-;	setevent EVENT_GOT_HM01_CUT
-;	writetext SSAnne2FCaptianExplainCutText
-;	waitbutton
-;	closetext
-;	end
-;
-;.JumpstdReceiveItem:
-;	jumpstd ReceiveItemScript
-;	end
-;
-;.pagercardname
-;	db "CUT PAGER@"
-;
-;GotCutPagerText:
-;	text "SCYTHER was"
-;	line "added to the PPS!"
-;	done
-
-
-
 Route2GateOaksAideScript:
 	faceplayer
 	opentext
@@ -135,7 +103,7 @@ Route2GateOaksAideExplainPagerGiveFlashText:
 
 	para "PROF.OAK wanted"
 	line "you to have this,"
-	cont "too.  So you can"
+	cont "too. So you can"
 	cont "teach FLASH to"
 	cont "your own #MON!"
 	done
@@ -149,6 +117,14 @@ Route2GateOaksAideFlashExplainText:
 ;	line "get through the"
 ;	cont "ROCK TUNNEL to"
 ;	cont "LAVENDER TOWN!"
+	done
+
+Route2GateOfficerScript:
+	jumptextfaceplayer Route2GateOfficerScriptText
+Route2GateOfficerScriptText:
+	text "You'll need FLASH"
+	line "to get through"
+	cont "ROCK TUNNEL."
 	done
 
 Route2Gate_MapEvents:
@@ -170,3 +146,4 @@ Route2Gate_MapEvents:
 
 	def_object_events
 	object_event  5,  4, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route2GateOaksAideScript, -1
+	object_event  0,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route2GateOfficerScript, -1

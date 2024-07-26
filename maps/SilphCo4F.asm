@@ -46,10 +46,10 @@ SilphCo4F_Door2:
 	end
 
 SilphCo4FClerk:
-	faceplayer
-	opentext
 	checkevent EVENT_BEAT_GIOVANNI_SILPHCO
 	iftrue .Cleared
+	faceplayer
+	opentext
 	writetext SilphCo4FClerkText
 	waitbutton
 	closetext

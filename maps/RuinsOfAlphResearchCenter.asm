@@ -469,22 +469,22 @@ RuinsOfAlphResearchCenterLeavesPlayerMovement:
 	step UP
 	step_end
 
-FossilSetStepCount:
-	ld a, 50
-	ld [wFossilStepCount], a
-	ret
-
-FossilCheckStepCount:
-	ld a, [wFossilStepCount]
-	cp 0
-	jr z, .yes
-	ld a, FALSE
-	ld [wScriptVar], a
-	ret
-.yes
-	ld a, TRUE
-	ld [wScriptVar], a
-	ret
+;FossilSetStepCount:
+;	ld a, 50
+;	ld [wFossilStepCount], a
+;	ret
+;
+;FossilCheckStepCount:
+;	ld a, [wFossilStepCount]
+;	cp 0
+;	jr z, .yes
+;	ld a, FALSE
+;	ld [wScriptVar], a
+;	ret
+;.yes
+;	ld a, TRUE
+;	ld [wScriptVar], a
+;	ret
 
 RuinsOfAlphResearchCenterModifiedDexText:
 	text "Done!"

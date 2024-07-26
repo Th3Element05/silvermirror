@@ -146,17 +146,17 @@ SSAnneRooms1FGirlScript:
 	jumptextfaceplayer SSAnneRooms1FGirlText
 SSAnneRooms1FGirlText:
 	text "I always travel"
-	line "with WIGGLYTUFF!"
+	line "with CLEFAIRY!"
 	done
 
 SSAnneRooms1FWigglytuffScript:
 	opentext
-	writetext SSAnneRooms1FWigglytuffText
+	writetext SSAnneRooms1FClefairyText
 	cry CLEFAIRY
 	waitbutton
 	closetext
 	end
-SSAnneRooms1FWigglytuffText:
+SSAnneRooms1FClefairyText:
 	text "CLEFAIRY: Puup"
 	line "pupuu!"
 	done

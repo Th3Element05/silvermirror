@@ -238,6 +238,9 @@ MovementData_Player_Walks_Museum_Entrance:
 	step DOWN
 	step_end
 
+PewterMuseumBookshelf:
+	jumpstd DifficultBookshelfScript
+
 PewterMuseum1F_MapEvents:
 	db 0, 0 ; filler
 
@@ -255,6 +258,12 @@ PewterMuseum1F_MapEvents:
 	def_bg_events
 	bg_event  3,  6, BGEVENT_READ, PewterMuseum1FKabutopsFossilDisplay
 	bg_event  3,  3, BGEVENT_READ, PewterMuseum1FAerodactylFossilDisplay
+	bg_event 12,  1, BGEVENT_READ, PewterMuseumBookshelf
+	bg_event 13,  1, BGEVENT_READ, PewterMuseumBookshelf
+	bg_event 14,  1, BGEVENT_READ, PewterMuseumBookshelf
+	bg_event 17,  1, BGEVENT_READ, PewterMuseumBookshelf
+	bg_event 18,  1, BGEVENT_READ, PewterMuseumBookshelf
+	bg_event 19,  1, BGEVENT_READ, PewterMuseumBookshelf
 
 	def_object_events
 	object_event 12,  4, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PewterMuseum1F_Reception_Scientist_Script, -1

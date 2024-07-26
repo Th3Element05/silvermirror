@@ -7,7 +7,7 @@ Route16FuchsiaSpeechHouse_MapScripts:
 
 Route16FlyHouseLassScript:
 	checkevent EVENT_GOT_HM02_FLY
-	iftrue .AlreadyGotCut
+	iftrue .AlreadyGotFly
 	faceplayer
 	opentext
 	writetext Route16FlyHouseLassText
@@ -26,7 +26,7 @@ Route16FlyHouseLassScript:
 	closetext
 	end
 
-.AlreadyGotCut
+.AlreadyGotFly
 	jumptextfaceplayer Route16FlyHouseExplainFlyText
 
 .JumpstdReceiveItem:
@@ -60,15 +60,9 @@ Route16FlyHouseExplainPagerGiveFlyText:
 	cont "to take you back"
 	cont "to any town."
 
-	para "Of course, you"
-	line "need to have the"
-
-	para "GYM BADGE from"
-	line "VERMILION CITY"
-	cont "to use it."
-
-	para "Oh here take this"
-	line "too!"
+	para "Please keep my"
+	line "secret! You can"
+	cont "have this too!"
 	done
 
 Route16FlyHouseExplainFlyText:

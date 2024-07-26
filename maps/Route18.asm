@@ -112,7 +112,7 @@ Route18_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 35,  5, BGEVENT_READ, Route18CyclingRoadSign
+	bg_event 33,  5, BGEVENT_READ, Route18CyclingRoadSign
 	bg_event 43,  7, BGEVENT_READ, Route18Sign
 
 	def_object_events

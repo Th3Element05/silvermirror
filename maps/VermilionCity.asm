@@ -90,7 +90,7 @@ VermilionCitySSAnneLeavesScript:
 	applymovement PLAYER, VermilionPortNoEntryMovement
 	setscene SCENE_VERMILIONCITY_ASK_ENTER_DOCK
 	setevent EVENT_SS_ANNE_SET_SAIL
-;	disappear VERMILIONCITY_SAILOR
+	disappear VERMILIONCITY_SAILOR
 	;fallthrough
 .Skip
 	end
@@ -220,8 +220,8 @@ VermilionGymSignText:
 	line "#MON GYM"
 	cont "LEADER: LT.SURGE"
 
-	para "The Lightning "
-	line "American!"
+	para "The Lightning"
+	line "Warrior!"
 	done
 
 PokemonFanClubSign:

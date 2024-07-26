@@ -72,6 +72,8 @@ SilphCo7F_Door3:
 
 SilphCo7FRivalEncounterHigh:
 	playmusic MUSIC_RIVAL_ENCOUNTER
+	turnobject SILPHCO7F_RIVAL, UP
+	turnobject PLAYER, DOWN
 	opentext
 	writetext SilphCo7FRivalSeenText
 	waitbutton
@@ -81,6 +83,8 @@ SilphCo7FRivalEncounterHigh:
 
 SilphCo7FRivalEncounterLow:
 	playmusic MUSIC_RIVAL_ENCOUNTER
+	turnobject SILPHCO7F_RIVAL, UP
+	turnobject PLAYER, DOWN
 	opentext
 	writetext SilphCo7FRivalSeenText
 	waitbutton

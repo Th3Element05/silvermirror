@@ -257,14 +257,10 @@ SwimmerMCameronAfterBattleText:
 	line "sure looks fun!"
 	done
 
-SeafoamIslandsWestSign:
-	jumptext SeafoamIslandsWestSignText
-SeafoamIslandsWestSignText:
-	done
-
-SeafoamIslandsEastSign:
-	jumptext SeafoamIslandsEastSignText
-SeafoamIslandsEastSignText:
+SeafoamIslandsSign:
+	jumptext SeafoamIslandsSignText
+SeafoamIslandsSignText:
+	text "SEAFOAM ISLANDS"
 	done
 
 ;SeafoamIslandsRock:
@@ -280,8 +276,8 @@ Route20_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 47,  7, BGEVENT_READ, SeafoamIslandsWestSign
-	bg_event 53, 11, BGEVENT_READ, SeafoamIslandsEastSign
+	bg_event 47,  7, BGEVENT_READ, SeafoamIslandsSign
+	bg_event 53, 11, BGEVENT_READ, SeafoamIslandsSign
 
 	def_object_events
 	object_event  8,  8, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerSwimmerFDenise, -1

@@ -152,13 +152,14 @@ GameFreakProgrammerText:
 	done
 
 GameFreakCharacterDesignerText:
-	text "Aren't the TWINS"
-	line "adorable?"
+	text "I wrote the story!"
+	line "Isn't ERIKA cute?"
 
-	para "JASMINE's pretty"
-	line "too."
+	para "I like MISTY a"
+	line "lot too!"
 
-	para "Oh, I love them!"
+	para "Oh, and SABRINA,"
+	line "I like her!"
 	done
 
 CeladonMansion3FDevRoomSignText:
@@ -175,9 +176,8 @@ CeladonMansion3FDrawingText:
 CeladonMansion3FGameProgramText:
 	text "It's the game"
 	line "program. Messing"
-
-	para "with it could put"
-	line "a bug in the game!"
+	cont "with it could put"
+	cont "a bug in the game!"
 	done
 
 CeladonMansion3FReferenceMaterialText:
