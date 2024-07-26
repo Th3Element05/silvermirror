@@ -9,143 +9,88 @@ AddNTimes::
 	ret
 
 
+HAPPINESS EVOLVE
+engine\pokemon\evolve.asm
+.happiness
+;	ld a, [wChallengeMode]
+;	bit GAME_CHALLENGE_MODE_F, a
+;	jp nz, .do_happiness ; (ChallengeMode = True)
+
+; CHECK HALL OF FAME HERE
+;	jp nz, .dont_evolve_2
+
+;.do_happiness
+
+EGG BABIES
+engine\events\daycare.asm
+; Nidoran♀ can give birth to either gender of Nidoran
+
+PICHU		pikachu
+CLEFFA		clefairy
+IGGLYBUFF	jigglypuff
+SMOOCHUM	jynx
+ELEKID		electabuzz
+MAGBY		magmar
+TYROGUE		hitmonlee/hitmonchan
+~
+UNOWN
+
+4 togekiss	shiny stone
+4 honchkrow	dusk stone
+4 mismagius	dusk stone
+4 gliscor	razor fang @ night
+4 weavile	razor claw @ night
+4 mamoswine	M_ancient power
+4 yanmega	M_ancient power
+~
+4 ambipom	M_double hit
+
+
+
+
 TEST to-do
 
-CinnabarLab Trade, iffalse test
+ssannerooms2f snorlax closepokepic, closetext
+daisy grooming whiteout leaves bright palettes, players room works right
+game corner machines
+cinnabar lab fossil text "back to life" line error
+cinnabar lab fossil sprites
+silph music after giovanni
 
-Pewter starter boost items after Brock
+running animation UP/DOWN needs head bob
+check pokecenter link receptionist sprites
+check all silph doors changeblocks, exit/reenter
 
-Rout12/16 Snorlax ;reloadmappart
-snorlax, respawn on route11 only after waking both
+daisy night text wrong cont
+celadon hotel palette appears to be AUTO
 
-SSAnneRooms1F/B1F TM itemball disappears if you've bought it from store
-
-game corner gift coins add sound
-pokeflute do awakening effect?
-copycat script
-victory road 2f boulder disappears, doesn't tile swap
-victory road bould scripts, reloadmappart necessary?
-
-Route22 Rival battles, first and second
-
-Rival DVs (OaksLab, Route22)
-bike shop, yesorno, then bike voucher
-vermilion sailor on dock, visibility after ss anne sets sail EVENT_SS_ANNE_SET_SAIL
-vermilion gym new door switches script
-pokemon tower exit warp to lavender
-celadon cafe (and bill's house) waitbutton (necessary?) after verbosegiveitem
-test STRENGTH with/without rainbowbadge
+Does Lance face left after movement with turnobject?
+credit, long pause after PROGRAMERS
 
 
 
 TO-DO to-do
 
-constants\menu_constants.asm MOVES
-mom start text PARA
-remove name?: DAISY: pokemon are living things
-mom text, already seen your pokemon?
-old man "sorry for stopping you"
-BROCK after battle text issue. "a new move."
-pewter gym statues, make grey
-route 3 npc faceplayer
-check pokecenter link receptionist sprites
-granny sideways sprite too short?
-nugget bridge trainers, move to one side?
-nugget bridge rocket before text, too many button presses between text?
-route 25 captain text issue
-bill text, dont ask about pokemon collection...
-bill house test result, say SUCCESS
-oak call ssanne, ####DEX
-trashed house wall cracks, adjust?
-cerulean city move slowbro after trashed house or rocket
-daycare, outdoor sprites, also one dark brown, one bright pink?
+kris run
+cinnabar lab old amber "yellow over rock (or purple)"
+adjust sabrina sprite hair
 NIDORAN trade, doesn't specify gender
-vermilion pokecenter npcs don't faceplayer
-route 2 trade house scientist face wrong way
-fanclub psyduck, do rock color?
-vermilion mart cooltrainerM doesn't faceplayer
-ssanne1Frooms girl says WIGGLYTUFF, but its clefairy
-ssanne "entrance" block tiles, mast, warpcarpet down
-ssanneroomsb1f TMREST isn't blue
-ssannekitchen workers should face up after talking
-ssannerooms2f gentleman shows snorlax
-ssanne stairs blocks can have shadows
-ssanne captains journal doesnt have text
-disappear vermilion sailor in ssanne captain script?
-room ornaments all red?
-unlock all bed/poster/rug ornaments at init?
-daisy grooming whiteout leaves bright palettes, players room works right
-daisy text after grooming, adjust?
-daisy night text wrong cont
-mom call about daisy grooming, maybe?
-players room bed text, no has extra buttonpress to close text
-LT.SUREGE, Lightning Warrior
-surge room trash can does soemthign funny
-route6 couple shouldn't faceplayer when talking after battle
-bike shop youngster standing on bike
-double space in give flash text?
-route9 extend cliff a bit
-route11 text "fat pokemon" big
-route11 pokefanF para
-route11 youngster no regrets text?
-route9 teleportTM itemball CRASH (fixed)
-route10 pokecenter gentleman can block nurse
-rock tunnel, move hard stone?
-rock tunnel lavender exit wrong warp (fixed)
+route10 spawn coords
+move nugget bridge trainers back to alts
+oaks lab pokedex sprite red
+pokemon fan club "yellow over rock" not working?
+route19 cut 1 block off top
+cry should be after text
+
+silph co put text on computers?
+berries
 check marts for variable inventory (meds)
-PLACES&PEOPLE talks about ROCKET EXECUTIVE a lot
-route12 gate north entrance... warp carpet?
-route8 has YELLOW over COLOR (lass)
-MAGNETMITE caught holding METAL COAT
-EEVEE line evos_attacks...
-celadon mansion 1f "meowth brings home money!"
-celadon mansion 2f pc text
-celadon mansion 3f, mentions jasmine
-celadon hotel palette appears to be AUTO
-celadon hotel bench guy doesn't have text
-celadon dept store 3f youngster, para
-celadon dept store 3f COUNTER, needs closetext
-PPS pikachu palette
-fly pager too many para
 celadon gym weepinbell/gloom movesets are tough
-celadon game corner play sound before run away movement
 decide if door/wall should have edge or not
-rocket hideout LIFT KEY doesn't disappear
-running animation UP/DOWN needs head bob
-KARATE MASTER: text, before, after?
-karate master waitbutton before fight start
-karate master after text, line break between #MON / LEAGUE is bad
-bench guys, no red
-route8 super nerd has level 22 muk ?
-pokemon tower medium margret (floor) view distance
-pokemon tower 5f dont get trapped behind npc, just in case
-pokemon tower 6f, closetext/opentext before SILPH SCOPE
-mr fuji color
-mr fuji house, give pokeflue, unecessary waitbutton? check closetext/opentext before explain
-mr fuji house swap girl/psyduck (psyduck only faces down)
-TEST 	route16 pokeflute doesn't play sound (check route12 script)
-route18 move sign left a little
-gate2f don't allow bike!
-TEST 	route15gate2f, constant/size
 check common text for para
-restore field moves to mon_menu?
-route15 top trainer in right place?
-route13 lower trainer needs to be visible from route14
-fuchsia city scyther sign, say "speed and agility"
-fuchsia city ERIK should be younger, like cooltrainer
-safari zone explaination "running an event"
-check safari zone officer colors, brown or green are probably good
-check all gate officer colors, probably all blue
-safari zone entrance warp coords still wrong?
-bill's familly's house in fuchsia city is MESSED UP
-game corner machine c2, a4
-route17 sprites changed to chansey after wild battle...
-
-
-
-
+restore field moves to mon_menu? text may be issue
 PPS possible to add up/down arrows or remove textbox?
-why do jumptextfaceplayer stay facing but dont stay facing after movements?
+rock smash items, add fossils? tutorial
 
 YOUNGSTER - blue
 CAMPER - green
@@ -167,30 +112,25 @@ BIRD KEEPER - blue (rocker sprite?)
 BIKER - dark blue
 TWINS - pink
 JUGGLER - blue
-
+SWIMMER_M - dark blue
+SWIMMER_F - green
+BURGLAR - blue/purple
+FIREBREATHER - red
+COOLTRAINER_M - red
+COOLTRAINER_F - red
+BLACKBELT - brown
 
 KOGA - purple
 GRAMPS - brown
+MR_FUJI - purple
 
 
-
-
-radio stations
-
+EEVEE line evos_attacks...
+bench guys, no red
 route 19 gate guard text
-
-POISON_BARB says quick claw x79
-blues house 2f computer CRASH
 
 TRY use SCENE and coord_event on top of a warp_event
 
-berries
-
-simplify bills house sequence
-make bill not talk about SS Anne, oak call
-
-route12 fishing guru facing wrong way
-bike shop guy on bike tile
 route12gate guard after snorlax text
 route12 snorlax say no, text close/open
 mr fuji pokeflute text typo "hearnig"
@@ -204,8 +144,6 @@ MartTMs2: currently tbolt fthrower ibeam
 MahoganyMart1F is dungeon? to RocketBaseB1F
 ROUTE11 water mons, use vermilion
 
-power plant palette, use INDOOR
-
 trainer parties, levels/learnsets
 
 Gate2F: check all of these for completeness
@@ -215,6 +153,8 @@ donedone 12, tm39
 donedone 15, EXP_SHARE (50)
 skip 16, nothing of value
 map  18, TRADE ask slowbro offer lickitung
+
+room ornaments all red?
 
 Trades:
 Route2 gameboykid, REYLEY, MR__MIME, Abra  	MR__MIME, Clefairy
@@ -271,21 +211,15 @@ route 12 gate 2F, get TM_SWIFT
 EastWest Gate2F: Route 11, 15, 16, 18
 NorthSouth Gate2F: 12
 
-Use POKE_FLUTE, does FLY to last location flown to
-
-fish groups
-gen2 mode wild data
 trainer parties-amounts
 
 playershouse mom stuff
-route 5 underground path, in-game trade
+
 day-care pokemon sprites, one bright other dark?
-game corner hidden coins, event is set after fail conditions
 FixPicBank
 battle tower stuff?
 
-EGG_LEVEL 
-
+unlock all bed/poster/rug ornaments at init?
 
 
 REMOVE to-do
