@@ -1,0 +1,161 @@
+PAL_OW_PINK
+
+\data\sprites\sprites.asm (1 hit)
+	Line 114: 	overworld_sprite ChanseyMoveSpriteGFX, 12, WALKING_SPRITE, PAL_OW_PINK
+\engine\gfx\color.asm (1 hit)
+	Line 1384: 	ld de, wOBPals1 palette PAL_OW_PINK + 2
+
+
+
+PAL_NPC_PINK
+
+\maps\AzaleaGym.asm (2 hits)
+	Line 380: ;;	object_event  4, 10, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 1, TrainerTwinsAmyandmay1, -1
+	Line 381: ;;	object_event  5, 10, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 1, TrainerTwinsAmyandmay2, -1
+\maps\AzaleaTown.asm (4 hits)
+	Line 530: ;	object_event  8, 17, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, EVENT_AZALEA_TOWN_SLOWPOKES
+	Line 531: ;	object_event 18,  9, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, EVENT_AZALEA_TOWN_SLOWPOKES
+	Line 532: ;	object_event 29,  9, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, EVENT_AZALEA_TOWN_SLOWPOKES
+	Line 533: ;	object_event 15, 15, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, EVENT_AZALEA_TOWN_SLOWPOKES
+\maps\CeladonGym.asm (1 hit)
+	Line 377: 	object_event  5,  3, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 3, TrainerCooltrainerFGwen, -1
+\maps\CeruleanCaveB1F.asm (1 hit)
+	Line 100: 	object_event 34, 17, SPRITE_MEWTWO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0,  CeruleanCaveB1FMewtwo, EVENT_MEWTWO_APPEAR
+\maps\CeruleanCity.asm (1 hit)
+	Line 515: 	object_event 20, 26, SPRITE_SLOWBRO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, CeruleanCitySlowbroScript, -1
+\maps\CopycatsHouse1F.asm (1 hit)
+	Line 60: 	object_event  1,  5, SPRITE_CHANSEY_MOVE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, CopycatsHouse1FChanseyScript, -1
+\maps\CopycatsHouse2F - Copy.asm (1 hit)
+	Line 381: 	object_event  4,  4, SPRITE_CLEFAIRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, EVENT_COPYCATS_HOUSE_2F_DOLL
+\maps\CopycatsHouse2F.asm (2 hits)
+	Line 230: 	object_event  4,  4, SPRITE_CLEFAIRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, EVENT_COPYCATS_HOUSE_2F_DOLL
+	Line 234: 	object_event  2,  1, SPRITE_JIGGLYPUFF, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, -1
+\maps\KurtsHouse.asm (3 hits)
+	Line 663: 	object_event  5,  3, SPRITE_TWIN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, KurtsGranddaughter1, EVENT_KURTS_HOUSE_GRANDDAUGHTER_1
+	Line 664: 	object_event  6,  3, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, KurtsHouseSlowpoke, EVENT_KURTS_HOUSE_SLOWPOKE
+	Line 666: 	object_event 11,  4, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, KurtsGranddaughter2, EVENT_KURTS_HOUSE_GRANDDAUGHTER_2
+\maps\LavenderPokecenter1F.asm (1 hit)
+	Line 56: 	object_event  2,  6, SPRITE_TWIN, SPRITEMOVEDATA_WALK_UP_DOWN, 2, 1, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LavenderPokecenter1FGirlScript, -1
+\maps\MountMoonSquare.asm (2 hits)
+	Line 149: 	object_event  6,  6, SPRITE_CLEFAIRY_MOVE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_MT_MOON_SQUARE_CLEFAIRY
+	Line 150: 	object_event  7,  6, SPRITE_CLEFAIRY_MOVE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_MT_MOON_SQUARE_CLEFAIRY
+\maps\MrFujisHouse.asm (1 hit)
+	Line 156: 	object_event  6,  4, SPRITE_PSYDUCK, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, MrFujisHousePsyduck, -1
+\maps\PewterPokecenter1F.asm (1 hit)
+	Line 89: 	object_event  1,  3, SPRITE_JIGGLYPUFF, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, PewterPokecenterJigglypuff, -1
+\maps\PokemonMansionB1F.asm (1 hit)
+	Line 312: ;	object_event  3,  4, SPRITE_MEW, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
+\maps\RadioTower2F.asm (1 hit)
+	Line 739: 	object_event 12,  1, SPRITE_JIGGLYPUFF, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, RadioTowerJigglypuff, -1
+\maps\Route1.asm (1 hit)
+	Line 177: 	object_event  7,  7, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, Route1BerryTree, EVENT_ROUTE_1_BERRY
+\maps\Route10Pokecenter1F.asm (1 hit)
+	Line 60: 	object_event  2,  5, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, Route10Pokecenter1FFisherScript, -1
+\maps\Route19.asm (1 hit)
+	Line 420: 	object_event  8, 40, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 4, TrainerSwimmerFElaine, -1
+\maps\Route20.asm (1 hit)
+	Line 288: 	object_event 41,  8, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 3, TrainerSwimmerFKara, -1
+\maps\Route3.asm (1 hit)
+	Line 279: 	object_event 29, 10, SPRITE_LASS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 2, TrainerLassEvelyn, -1
+\maps\Route30.asm (2 hits)
+	Line 554: 	object_event 12,  7, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, Route30BerryTree2, EVENT_ROUTE_30_BERRY_2
+	Line 556: 	object_event 11,  5, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, Route30ApricornTree2, EVENT_ROUTE_30_APRICORN_2
+\maps\Route31.asm (1 hit)
+	Line 513: 	object_event 30,  7, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, Route31BerryTree, EVENT_ROUTE_31_BERRY
+\maps\Route33.asm (2 hits)
+	Line 293: 	object_event  6, 11, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, Route33BerryTree, EVENT_ROUTE_33_BERRY
+	Line 295: 	object_event 13, 16, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, Route33ApricornTree2, EVENT_ROUTE_33_APRICORN_2
+\maps\Route34.asm (1 hit)
+	Line 929: ;	object_event 14, 18, SPRITE_DAY_CARE_MON_1, SPRITEMOVEDATA_POKEMON, 2, 2, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DayCareMon1Script, EVENT_DAY_CARE_MON_1
+\maps\Route37.asm (2 hits)
+	Line 347: ;	object_event  6, 12, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 1, TrainerTwinsAnnandanne1, -1
+	Line 348: ;	object_event  7, 12, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 1, TrainerTwinsAnnandanne2, -1
+\maps\Route39.asm (4 hits)
+	Line 592: 	object_event  3, 12, SPRITE_MILTANK, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, Route39Miltank, -1
+	Line 593: 	object_event  6, 11, SPRITE_MILTANK, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, Route39Miltank, -1
+	Line 594: 	object_event  4, 15, SPRITE_MILTANK, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, Route39Miltank, -1
+	Line 595: 	object_event  8, 13, SPRITE_MILTANK, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, Route39Miltank, -1
+\maps\Route39Barn.asm (1 hit)
+	Line 204: 	object_event  3,  3, SPRITE_MILTANK, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, MoomooScript, -1
+\maps\Route40BattleTowerGate.asm (1 hit)
+	Line 86: 	object_event  5,  5, SPRITE_TWIN, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, Route40BattleTowerGateTwinScript, -1
+\maps\Route42.asm (1 hit)
+	Line 424: 	object_event 27, 16, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, Route42ApricornTree, EVENT_ROUTE_42_APRICORN
+\maps\Route43.asm (1 hit)
+	Line 578: 	object_event  1, 24, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, Route43BerryTree, EVENT_ROUTE_43_BERRY
+\maps\Route48.asm (2 hits)
+	Line 33: 	object_event 19, -2, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, 0, -1
+	Line 35: 	object_event  6, -5, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, 0, -1
+\maps\Route5.asm (1 hit)
+	Line 134: 	object_event  8, 16, SPRITE_DAY_CARE_MON_1, SPRITEMOVEDATA_POKEMON, 2, 2, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DayCareMon1Script, EVENT_DAY_CARE_MON_1
+\maps\Route8.asm (2 hits)
+	Line 363: 	object_event 49,  8, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, Route8ApricornTree, EVENT_ROUTE_8_APRICORN
+	Line 372: 	object_event 47, 14, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 4, TrainerLassNora, -1
+\maps\Route9.asm (1 hit)
+	Line 297: 	object_event 48,  8, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 2, TrainerPicnickerEllie, -1
+\maps\SafariRestHouseArea2.asm (1 hit)
+	Line 47: 	object_event  6,  2, SPRITE_TWIN, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, SafariRestHouseArea2Twin, 0
+\maps\SafariZoneGate.asm (3 hits)
+	Line 235: 	object_event  5,  6, SPRITE_JIGGLYPUFF, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, SafariZoneGateJigglypuffScript, -1
+	Line 243: 	object_event 21, 20, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, SafariZoneGateSlowpokeScript, -1
+	Line 245: ;	object_event  8, 17, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, SafariZoneGateTeacherMartScript, -1
+\maps\SilphCo6F.asm (1 hit)
+	Line 230: 	object_event 21,  6, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, SilphCo6FReceptionist1, -1
+\maps\SlowpokeWellB1F.asm (2 hits)
+	Line 336: ;	object_event  7,  4, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB1FSlowpokeWithMailScript, EVENT_SLOWPOKE_WELL_SLOWPOKES
+	Line 337: ;	object_event  6,  2, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB1FTaillessSlowpokeScript, EVENT_SLOWPOKE_WELL_SLOWPOKES
+\maps\VictoryRoad1F.asm (1 hit)
+	Line 145: 	object_event 11,  7, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 3, TrainerCooltrainerFLois, -1
+\maps\ViridianForest.asm (2 hits)
+	Line 310: 	object_event 17,  6, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, ViridianForestBerryTree, EVENT_VIRIDIAN_FOREST_BERRY
+	Line 311: 	object_event 31,  6, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, ViridianForestApricornTree, EVENT_VIRIDIAN_FOREST_APRICORN
+
+
+\engine\tilesets\tileset_palettes.asm (7 hits)
+	Line 195: 	_use_palette_routine_for_map ROUTE_8, .PurpleOverRockYellowOverPinkOBPalette
+	Line 204: 	_use_palette_routine_for_map CERULEAN_CAVE_B1F, .PurpleOverPinkOBPalette
+	Line 205: 	_use_palette_routine_for_map MR_FUJIS_HOUSE, .PurpleOverRockYellowOverPinkOBPalette
+	Line 237: .PurpleOverRockYellowOverPinkOBPalette
+	Line 241: 	ld hl, PurpleOverRockYellowOverPink
+	Line 251: .PurpleOverPinkOBPalette:
+	Line 255: 	ld hl, PurpleOverPink
+
+
+\gfx\overworld\npc_sprites.pal (4 hits)
+	Line  6: 	RGB 28,31,16, 31,19,10, 27,07,16, 00,00,00 ; pink  (purple is 15,04,16)
+	Line 16: 	RGB 27,31,27, 31,19,10, 27,07,16, 00,00,00 ; pink
+	Line 26: 	RGB 15,14,24, 31,19,10, 27,07,16, 00,00,00 ; pink
+	Line 36: 	RGB 29,21,14, 31,19,10, 27,07,16, 00,00,00 ; pink
+\gfx\overworld\npc_sprites_darkness.pal (1 hit)
+	Line  6: 	RGB 01,01,02, 31,19,10, 30,10,06, 00,00,00 ; pink
+\gfx\overworld\npc_sprites_special.pal (26 hits)
+	Line   8: 	RGB 28,31,16, 31,19,10, 27,07,16, 00,00,00 ; pink
+	Line  18: 	RGB 27,31,27, 31,19,10, 27,07,16, 00,00,00 ; pink
+	Line  28: 	RGB 15,14,24, 31,19,10, 27,07,16, 00,00,00 ; pink
+	Line  38: 	RGB 29,21,14, 31,19,10, 27,07,16, 00,00,00 ; pink
+	Line  51: 	RGB 28,31,16, 31,19,10, 27,07,16, 00,00,00 ; pink
+	Line  61: 	RGB 27,31,27, 31,19,10, 27,07,16, 00,00,00 ; pink
+	Line  71: 	RGB 15,14,24, 31,19,10, 27,07,16, 00,00,00 ; pink
+	Line  81: 	RGB 29,21,14, 31,19,10, 27,07,16, 00,00,00 ; pink
+	Line  94: 	RGB 28,31,16, 31,19,10, 27,07,16, 00,00,00 ; pink
+	Line 104: 	RGB 27,31,27, 31,19,10, 27,07,16, 00,00,00 ; pink
+	Line 114: 	RGB 15,14,24, 31,19,10, 27,07,16, 00,00,00 ; pink
+	Line 124: 	RGB 29,21,14, 31,19,10, 27,07,16, 00,00,00 ; pink
+	Line 130: PurpleOverRockYellowOverPink:	
+	Line 173: PurpleOverPink:
+	Line 224: 	RGB 28,31,16, 31,19,10, 27,07,16, 00,00,00 ; pink
+	Line 234: 	RGB 27,31,27, 31,19,10, 27,07,16, 00,00,00 ; pink
+	Line 244: 	RGB 15,14,24, 31,19,10, 27,07,16, 00,00,00 ; pink
+	Line 254: 	RGB 29,21,14, 31,19,10, 27,07,16, 00,00,00 ; pink
+	Line 266: 	RGB 28,31,16, 31,19,10, 30,10,06, 00,00,00 ; pink
+	Line 276: 	RGB 27,31,27, 31,19,10, 30,10,06, 00,00,00 ; pink
+	Line 286: 	RGB 15,14,24, 31,19,10, 30,10,06, 00,00,00 ; pink
+	Line 296: 	RGB 31,21,12, 31,19,10, 27,07,16, 00,00,00 ; pink
+	Line 308: 	RGB 28,31,16, 31,19,10, 30,10,06, 00,00,00 ; pink
+	Line 318: 	RGB 27,31,27, 31,19,10, 30,10,06, 00,00,00 ; pink
+	Line 328: 	RGB 15,14,24, 31,19,10, 30,10,06, 00,00,00 ; pink
+	Line 338: 	RGB 31,21,12, 31,19,10, 27,07,16, 00,00,00 ; pink
+
+
+
+
