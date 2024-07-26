@@ -6,7 +6,17 @@ VictoryRoad3F_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+	callback MAPCALLBACK_TILES, VictoryRoad3FGateCallback
 	callback MAPCALLBACK_STONETABLE, VictoryRoad3FSetUpStoneTableCallback
+
+VictoryRoad3FGateCallback:
+	checkevent EVENT_VICTORY_ROAD_3F_GATE_OPEN
+	iffalse .End
+	changeblock 2, 12, $4e ; rock
+	changeblock 10, 12, $4d ; gate open
+;	disappear VICTORYROAD3F_BOULDER1
+.End
+	endcallback
 
 VictoryRoad3FSetUpStoneTableCallback:
 	usestonetable .StoneTable
@@ -31,6 +41,7 @@ VictoryRoad3FSetUpStoneTableCallback:
 	playsound SFX_WALL_OPEN
 	changeblock 10, 12, $4d ; gate open
 ;	reloadmappart
+	setevent EVENT_VICTORY_ROAD_3F_GATE_OPEN
 	end
 
 .Boulder2:
@@ -208,7 +219,7 @@ VictoryRoad3F_MapEvents:
 	bg_event 28, 17, BGEVENT_ITEM, VictoryRoad3FHiddenFullRestore
 
 	def_object_events
-	object_event 15,  8, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoad3FBoulder, -1
+	object_event 15,  8, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoad3FBoulder, EVENT_VICTORY_ROAD_3F_BOULDER1
 	object_event 21, 21, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoad3FBoulder, EVENT_VICTORY_ROAD_3F_BOULDER2
 	object_event 15, 18, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoad3FBoulder, -1
 	object_event 12, 11, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerCooltrainerFBeth, -1

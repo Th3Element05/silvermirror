@@ -9,12 +9,30 @@ VictoryRoad2F_MapScripts:
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, VictoryRoad2FBoulderCallback
+	callback MAPCALLBACK_TILES, VictoryRoad2FGatesCallback
 	callback MAPCALLBACK_STONETABLE, VictoryRoad2FSetUpStoneTableCallback
 
 VictoryRoad2FBoulderCallback:
 	checkevent EVENT_VICTORY_ROAD_BOULDER_FELL_THROUGH
 	iffalse .End
+	checkevent EVENT_VICTORY_ROAD_2F_GATE_2_OPEN
+	iftrue .End
 	appear VICTORYROAD2F_BOULDER2
+.End
+	endcallback
+
+VictoryRoad2FGatesCallback:
+	checkevent EVENT_VICTORY_ROAD_2F_GATE_1_OPEN
+	iffalse .Next
+	changeblock 0, 20, $4f ; statue rock
+	changeblock 8, 10, $4d ; gate open
+;	disappear VICTORYROAD2F_BOULDER1
+.Next
+	checkevent EVENT_VICTORY_ROAD_2F_GATE_2_OPEN
+	iffalse .End
+	changeblock 8, 22, $4f ; statue rock
+	changeblock 22, 16, $4d ; gate open
+;	disappear VICTORYROAD2F_BOULDER2
 .End
 	endcallback
 
@@ -41,6 +59,7 @@ VictoryRoad2FSetUpStoneTableCallback:
 	playsound SFX_WALL_OPEN
 	changeblock 8, 10, $4d ; gate open
 ;	reloadmappart
+	setevent EVENT_VICTORY_ROAD_2F_GATE_1_OPEN
 	end
 
 .Boulder2
@@ -57,6 +76,7 @@ VictoryRoad2FSetUpStoneTableCallback:
 	playsound SFX_WALL_OPEN
 	changeblock 22, 16, $4d ; gate open
 ;	reloadmappart
+	setevent EVENT_VICTORY_ROAD_2F_GATE_2_OPEN
 	end
 
 VictoryRoad2FPushedSwitchText:
@@ -66,8 +86,8 @@ VictoryRoad2FPushedSwitchText:
 
 VictoryRoad2FMoltres:
 	opentext
-	writetext MoltresText
 	cry MOLTRES
+	writetext MoltresText
 	pause 20
 	closetext
 ;	loadvar VAR_BATTLETYPE, BATTLETYPE_KANTO_LEGEND
@@ -284,7 +304,7 @@ VictoryRoad2F_MapEvents:
 	bg_event  4,  6, BGEVENT_ITEM, VictoryRoad2FHiddenUltraBall
 
 	def_object_events
-	object_event  2, 17, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoad2FBoulder, -1
+	object_event  2, 17, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoad2FBoulder, EVENT_VICTORY_ROAD_2F_BOULDER1
 	object_event 21, 22, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoad2FBoulder, EVENT_VICTORY_ROAD_2F_BOULDER2
 	object_event 12,  3, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VictoryRoad2FMoltres, EVENT_MOLTRES_APPEAR
 	object_event 11,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, VictoryRoad2FTMFlamethrower, EVENT_VICTORY_ROAD_2F_TM_FLAMETHROWER
