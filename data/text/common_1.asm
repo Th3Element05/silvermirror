@@ -1646,8 +1646,9 @@ _NPCTradeAfterText3::
 ;	done
 
 _MomLeavingText1::
-	text "Wow, that's a cute"
-	line "#MON."
+	text "Wow, that's a neat"
+	line "device. You say"
+	cont "it's a #DEX?"
 
 	para "Where did you get"
 	line "it?"
