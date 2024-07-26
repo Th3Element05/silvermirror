@@ -210,7 +210,7 @@ SaffronGroupSprites:
 
 ; Route29 and CherrygroveCity are connected
 NewBarkGroupSprites:
-; Route26, Route27, Route29, NewBarkTown
+; Route27West, Route29, NewBarkTown
 CherrygroveGroupSprites:
 ; Route30, Route31, CherrygroveCity
 	db SPRITE_TEACHER
@@ -351,6 +351,14 @@ BlackthornGroupSprites:
 	db SPRITE_POKE_BALL
 	db 0 ; end
 
+SilverGroupSprites:
+; Route26, Route27East, Route28, SilverCaveOutside
+;	db SPRITE_BLUE
+	; 0 of 9 max walking sprites
+	db SPRITE_BERRY
+	db SPRITE_APRICORN
+	db SPRITE_POKE_BALL
+
 DungeonsGroupSprites:
 ; NationalPark, NationalParkBugContest, RuinsOfAlphOutside
 	db SPRITE_LASS
@@ -369,9 +377,6 @@ DungeonsGroupSprites:
 
 IndigoGroupSprites:
 ;Route23        none
-SilverGroupSprites:
-;Route28
-;SilverCaveOutside
 SafariZoneGateGroupSprites:
 CableClubGroupSprites:
 	db 0 ; end
