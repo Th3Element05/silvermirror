@@ -1351,11 +1351,11 @@ LoadMapPals:
 
 	; Day Care outdoor palettes
 	ld a, [wMapGroup]
-	cp GROUP_ROUTE_34
+	cp GROUP_ROUTE_5 ;GROUP_ROUTE_34
 	ret nz
 
 	ld a, [wMapNumber]
-	cp MAP_ROUTE_34
+	cp MAP_ROUTE_5 ;MAP_ROUTE_34
 	ret nz
 
 	ld a, BANK(wBreedMon1Species)
