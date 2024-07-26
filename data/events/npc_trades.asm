@@ -11,7 +11,7 @@ NPCTrades:
 ; route 2 ~
 	npctrade TRADE_DIALOGSET_COLLECTOR, ABRA,       MR__MIME,   "MARCEL@@@@@", $37, $66, SITRUS_BERRY, 47460, "MATEO@@@@@@", TRADE_GENDER_EITHER
 ; route 5 underground entrance ~
-	npctrade TRADE_DIALOGSET_GIRL,      NIDORAN_F,  NIDORAN_M,  "SPIKE@@@@@@", $96, $66, PECHA_BERRY,  49926, "MIA@@@@@@@@", TRADE_GENDER_EITHER
+	npctrade TRADE_DIALOGSET_GIRL,      NIDORAN_F,  NIDORAN_M,  "SPIKE@@@@@@", $96, $66, PECHA_BERRY,  49926, "MIA@@@@@@@@", TRADE_GENDER_FEMALE
 ; route 11 gate 2f ~
 	npctrade TRADE_DIALOGSET_HAPPY,     GEODUDE,    CUBONE,     "FLINT@@@@@@", $98, $88, THICK_CLUB,   29289, "LUCAS@@@@@@", TRADE_GENDER_EITHER
 ; route 18 gate 2f ~
