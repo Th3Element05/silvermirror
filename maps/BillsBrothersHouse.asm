@@ -8,6 +8,7 @@ BillsBrothersHouse_MapScripts:
 
 BillsBrothersHouseTilesCallback:
 	changeblock 6, 0, $1c ; pc
+	endcallback
 
 BillsGrandpaScript:
 	jumptextfaceplayer BillsGrandpaText
