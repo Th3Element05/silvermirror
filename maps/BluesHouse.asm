@@ -62,10 +62,11 @@ DaisyScript:
 	writetext DaisyAlrightText
 	waitbutton
 	closetext
-	special FadeOutPalettes
+	special FadeBlackQuickly
+	special ReloadSpritesNoPalettes
+	special HealParty
 	playmusic MUSIC_HEAL
 	pause 60
-;	special FadeInPalettes
 	special FadeInQuickly
 	special RestartMapMusic
 	opentext
@@ -182,18 +183,18 @@ DaisyAllDoneText:
 
 DaisyAlreadyGroomedText:
 	text "DAISY: I always"
-	line "have tea around"
+	line "enjoy a nice cup"
+	cont "of tea!"
 
-	para "this time. Come"
-	line "join me."
+	para "Come visit again"
+	line" soon!"
 	done
 
 DaisyRefusedText:
 	text "DAISY: You don't"
 	line "want to have one"
-
-	para "groomed? OK, we'll"
-	line "just have tea."
+	cont "groomed? OK, we'll"
+	cont "just have tea."
 	done
 
 DaisyCantGroomEggText:
