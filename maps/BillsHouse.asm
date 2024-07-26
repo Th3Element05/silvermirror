@@ -252,11 +252,11 @@ BillsHouseBillThanksText:
 	line "Thanks, bud! I"
 	cont "owe you one!"
 
-	para "So, did you come"
-	line "to see my #MON"
-	cont "collection?"
-	cont "You didn't?"
-	cont "That's a bummer."
+;	para "So, did you come"
+;	line "to see my #MON"
+;	cont "collection?"
+;	cont "You didn't?"
+;	cont "That's a bummer."
 
 	para "I've got to thank"
 	line "you... Oh here,"
@@ -282,7 +282,7 @@ BillsHouseBillExplainRadioCardText:
 BillsHouseComputerCodeText:
 	text "Cell Separator:"
 	line "Last Test Result:"
-	cont "       SUCCESSFUL"
+	cont "          SUCCESS"
 	done
 
 ;BillsGrandpa:
