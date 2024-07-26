@@ -10,7 +10,7 @@ IndigoPlateauPokecenter1F_MapScripts:
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, IndigoPlateauPokecenter1FPrepareElite4Callback
-	callback MAPCALLBACK_NEWMAP, IndigoPlateauFlypointCallback
+;	callback MAPCALLBACK_NEWMAP, IndigoPlateauFlypointCallback
 
 IndigoPlateauPokecenter1FNoop1Scene:
 IndigoPlateauPokecenter1FNoop2Scene:
@@ -20,11 +20,12 @@ IndigoPlateauPokecenter1FNoop2Scene:
 ;	sdefer IndigoPokecenterLanceGiftScript
 ;	end
 
-IndigoPlateauFlypointCallback:
-	setflag ENGINE_FLYPOINT_INDIGO_PLATEAU
-	endcallback
+;IndigoPlateauFlypointCallback:
+;	setflag ENGINE_FLYPOINT_INDIGO_PLATEAU
+;	endcallback
 
 IndigoPlateauPokecenter1FPrepareElite4Callback:
+	setflag ENGINE_FLYPOINT_INDIGO_PLATEAU
 	setmapscene E4_LORELEIS_ROOM, SCENE_LORELEISROOM_LOCK_DOOR
 	setmapscene E4_BRUNOS_ROOM, SCENE_BRUNOSROOM_LOCK_DOOR
 	setmapscene E4_AGATHAS_ROOM, SCENE_AGATHASROOM_LOCK_DOOR
