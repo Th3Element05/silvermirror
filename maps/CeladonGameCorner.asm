@@ -674,10 +674,10 @@ CeladonGameCorner_MapEvents:
 	def_bg_events
 	bg_event  9,  0, BGEVENT_READ, CeladonGameCornerPosterScript
 ;
-;	bg_event  1,  6, BGEVENT_LEFT, CeladonGameCornerCardFlipScript
+	bg_event  1,  6, BGEVENT_LEFT, CeladonGameCornerCardFlipScript
 	bg_event  1,  7, BGEVENT_LEFT, CeladonGameCornerCardFlipScript
 	bg_event  1,  8, BGEVENT_LEFT, CeladonGameCornerCardFlipScript
-;	bg_event  1,  9, BGEVENT_LEFT, CeladonGameCornerCardFlipScript
+	bg_event  1,  9, BGEVENT_LEFT, CeladonGameCornerCardFlipScript
 	bg_event  1, 10, BGEVENT_LEFT, CeladonGameCornerCardFlipScript
 	bg_event  1, 11, BGEVENT_LEFT, CeladonGameCornerCardFlipScript
 	bg_event  6,  6, BGEVENT_RIGHT, CeladonGameCornerCardFlipScript
@@ -687,7 +687,7 @@ CeladonGameCorner_MapEvents:
 	bg_event  6, 10, BGEVENT_RIGHT, CeladonGameCornerCardFlipScript
 	bg_event  6, 11, BGEVENT_RIGHT, CeladonGameCornerCardFlipScript
 	bg_event  7,  6, BGEVENT_LEFT, CeladonGameCornerLuckySlotMachineScript
-;	bg_event  7,  7, BGEVENT_LEFT, CeladonGameCornerLuckySlotMachineScript
+	bg_event  7,  7, BGEVENT_LEFT, CeladonGameCornerLuckySlotMachineScript
 	bg_event  7,  8, BGEVENT_LEFT, CeladonGameCornerLuckySlotMachineScript
 	bg_event  7,  9, BGEVENT_LEFT, CeladonGameCornerLuckySlotMachineScript
 ;	bg_event  7, 10, BGEVENT_LEFT, CeladonGameCornerLuckySlotMachineScript
