@@ -523,8 +523,8 @@ _AskCutText::
 	done
 
 _CanCutText::
-	text "This tree can be"
-	line "CUT!"
+	text "This tree could"
+	line "be CUT!"
 	done
 
 _FoundItemText::
