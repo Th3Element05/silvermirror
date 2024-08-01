@@ -217,13 +217,13 @@ LassEvelynAfterBattleText:
 	line "foot of MT.MOON."
 	done
 
-;Route3CooltrainerScript:
-;	jumptextfaceplayer Route3CooltrainerText
-;Route3CooltrainerText:
-;	text "Ouch! I tripped"
-;	line "over a rocky"
-;	cont "#MON, GEODUDE!"
-;	done
+Route3CooltrainerScript:
+	jumptextfaceplayer Route3CooltrainerText
+Route3CooltrainerText:
+	text "Ouch! I tripped"
+	line "over a rocky"
+	cont "#MON, GEODUDE!"
+	done
 
 Route3SuperNerdScript:
 	jumptextfaceplayer Route3SuperNerdText
@@ -237,12 +237,12 @@ Route3SuperNerdText:
 	cont "lot out of you!"
 	done
 
-;Route3MtMoonSign:
-;	jumptext Route3MtMoonSignText
-;Route3MtMoonSignText:
-;	text "MT.MOON"
-;	line "Tunnel Entrance"
-;	done
+Route3MtMoonSign:
+	jumptext Route3MtMoonSignText
+Route3MtMoonSignText:
+	text "MT.MOON"
+	line "Tunnel Entrance"
+	done
 
 Route3Sign:
 	jumptext Route3SignText
@@ -251,31 +251,31 @@ Route3SignText:
 	line "MT.MOON AHEAD"
 	done
 
-;Route3MtMoonPokecenterSign:
-;	jumpstd PokecenterSignScript
+Route3MtMoonPokecenterSign:
+	jumpstd PokecenterSignScript
 
 Route3_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-;	warp_event 64,  7, MOUNT_MOON, 4
-;	warp_event 57,  7, MOUNT_MOON_POKECENTER_1F, 1
+	warp_event 56,  5, MOUNT_MOON, 4
+	warp_event 49,  5, MOUNT_MOON_POKECENTER_1F, 1
 
 	def_coord_events
 
 	def_bg_events
-;	bg_event 63,  9, BGEVENT_READ, Route3MtMoonSign
-	bg_event 55,  9, BGEVENT_READ, Route3Sign
-;	bg_event 58,  7, BGEVENT_READ, Route3MtMoonPokecenterSign
+	bg_event 55,  7, BGEVENT_READ, Route3MtMoonSign
+	bg_event 49, 27, BGEVENT_READ, Route3Sign
+	bg_event 50,  5, BGEVENT_READ, Route3MtMoonPokecenterSign
 
 	def_object_events
-	object_event 10,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerYoungsterAsher, -1
-	object_event 19,  4, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerLassBridget, -1
-	object_event 15,  5, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerBugCatcherAl, -1
-	object_event  6,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerBugCatcherJosh, -1
-	object_event 20,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherDion, -1
-	object_event 12,  9, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerLassColette, -1
-	object_event 18,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerYoungsterBilly, -1
-	object_event 29, 10, SPRITE_LASS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 2, TrainerLassEvelyn, -1
-	object_event 53, 11, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route3SuperNerdScript, -1
-;	object_event 55, 10, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route3CooltrainerScript, -1
+	object_event 10, 22, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerYoungsterAsher, -1
+	object_event 19, 22, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerLassBridget, -1
+	object_event 15, 23, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerBugCatcherAl, -1
+	object_event  6, 24, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerBugCatcherJosh, -1
+	object_event 20, 24, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherDion, -1
+	object_event 12, 27, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerLassColette, -1
+	object_event 18, 27, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerYoungsterBilly, -1
+	object_event 27, 28, SPRITE_LASS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerLassEvelyn, -1
+	object_event 47, 29, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route3SuperNerdScript, -1
+	object_event 47,  8, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route3CooltrainerScript, -1
