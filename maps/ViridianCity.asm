@@ -61,18 +61,18 @@ ViridianCityCoffeeGrampsScript:
 	setmapscene CINNABAR_ISLAND, SCENE_CINNABARISLAND_MISSINGNO
 	jumptext CatchingTutorialDebriefText
 
-ViridianCityForceMapCardScript2:
-;	turnobject VIRIDIANCITY_COFFEE_GRAMPS, RIGHT
-	showemote EMOTE_SHOCK, VIRIDIANCITY_COFFEE_GRAMPS, 30
-	opentext
-	writetext ViridianCityCoffeeGrampsHeyText
-	waitbutton
-	closetext
-	applymovement PLAYER, ViridianCityMapCardMovement2
-	sjump ViridianCityMapCardScript
+;ViridianCityForceMapCardScript2:
+;;	turnobject VIRIDIANCITY_COFFEE_GRAMPS, RIGHT
+;	showemote EMOTE_SHOCK, VIRIDIANCITY_COFFEE_GRAMPS, 30
+;	opentext
+;	writetext ViridianCityCoffeeGrampsHeyText
+;	waitbutton
+;	closetext
+;	applymovement PLAYER, ViridianCityMapCardMovement2
+;	sjump ViridianCityMapCardScript
 
 ViridianCityForceMapCardScript1:
-;	turnobject VIRIDIANCITY_COFFEE_GRAMPS, RIGHT
+	turnobject VIRIDIANCITY_COFFEE_GRAMPS, RIGHT
 	showemote EMOTE_SHOCK, VIRIDIANCITY_COFFEE_GRAMPS, 30
 	opentext
 	writetext ViridianCityCoffeeGrampsHeyText
@@ -82,7 +82,7 @@ ViridianCityForceMapCardScript1:
 	sjump ViridianCityMapCardScript
 
 ViridianCityForceMapCardScript0:
-;	turnobject VIRIDIANCITY_COFFEE_GRAMPS, RIGHT
+	turnobject VIRIDIANCITY_COFFEE_GRAMPS, RIGHT
 	showemote EMOTE_SHOCK, VIRIDIANCITY_COFFEE_GRAMPS, 30
 	opentext
 	writetext ViridianCityCoffeeGrampsHeyText
@@ -452,9 +452,9 @@ ViridianCity_MapEvents:
 
 	def_coord_events
 	coord_event 19,  9, SCENE_VIRIDIANCITY_NO_POKEDEX, ViridianCityCoffeeGrampsBlockScript
-	coord_event 17,  5, SCENE_VIRIDIANCITY_MAP_CARD, ViridianCityForceMapCardScript0
-	coord_event 18,  5, SCENE_VIRIDIANCITY_MAP_CARD, ViridianCityForceMapCardScript1
-	coord_event 19,  5, SCENE_VIRIDIANCITY_MAP_CARD, ViridianCityForceMapCardScript2
+	coord_event 18,  5, SCENE_VIRIDIANCITY_MAP_CARD, ViridianCityForceMapCardScript0
+	coord_event 19,  5, SCENE_VIRIDIANCITY_MAP_CARD, ViridianCityForceMapCardScript1
+;	coord_event 20,  5, SCENE_VIRIDIANCITY_MAP_CARD, ViridianCityForceMapCardScript2
 
 	def_bg_events
 	bg_event 19,  1, BGEVENT_READ, ViridianCityTrainerTips1Sign
@@ -468,9 +468,9 @@ ViridianCity_MapEvents:
 	bg_event 14,  4, BGEVENT_ITEM, ViridianCityHiddenPotion
 
 	def_object_events
-	object_event 16,  5, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityCoffeeGrampsScript, -1
+	object_event 17,  5, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityCoffeeGrampsScript, -1
 	object_event  6, 23, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ViridianCityDreamEaterFisher, -1
-	object_event 30,  8, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ViridianCityGymGramps, -1
+	object_event 30,  8, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityGymGramps, -1
 	object_event 13, 20, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 3, 3, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ViridianCityYoungster1Script, -1
-	object_event 30, 25, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 3, 3, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ViridianCityYoungster2Script, -1
+	object_event 30, 25, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_WANDER, 3, 3, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ViridianCityYoungster2Script, -1
 	object_event 17,  9, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ViridianCityGirlScript, -1
