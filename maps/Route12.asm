@@ -28,21 +28,26 @@ Route12Snorlax:
 	playsound SFX_POKEFLUTE
 	waitsfx
 ;	promptbutton
-	writetext Route12SnorlaxWokeUpText
-	promptbutton
-	sjump Route12SnorlaxBattleScript
+;	writetext Route12SnorlaxWokeUpText
+;	promptbutton
+	sjump .Route12SnorlaxBattleScript
 
 .LetSleep:
-	jumptext Route12LetSnorlaxSleepText
+	writetext Route12LetSnorlaxSleepText
+	waitbutton
+	closetext
+	end
 
 .PlayRadio:
 	writetext Route12RadioNearSnorlaxText
 	promptbutton
-	writetext Route12SnorlaxWokeUpText
-	promptbutton
+;	writetext Route12SnorlaxWokeUpText
+;	promptbutton
 	; fallthrough
 
-Route12SnorlaxBattleScript:
+.Route12SnorlaxBattleScript:
+	writetext Route12SnorlaxWokeUpText
+	promptbutton
 	pause 15
 	cry SNORLAX
 	writetext Route12SnorlaxAttackedText
@@ -348,12 +353,12 @@ Route12_MapEvents:
 	object_event 10, 60, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_BIGDOLLSYM, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route12Snorlax, EVENT_ROUTE_12_SNORLAX
 ;	object_event 11, 62, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, Route12TMSnore, EVENT_ROUTE_12_TM_SNORE
 	object_event 16, 29, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerFisherScott, -1
-	object_event  7, 37, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerFisherHenry, -1
-	object_event 14, 38, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerFisherMarvin, -1
-	object_event 11, 50, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerFisherTully, -1
+	object_event  7, 37, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerFisherHenry, -1
+	object_event 14, 38, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerFisherMarvin, -1
+	object_event 11, 50, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerFisherTully, -1
 	object_event 16, 72, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerGuitaristVincent, -1
-	object_event  8, 83, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerFisherRaymond, -1
-	object_event 13, 88, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerCamperTed, -1
+	object_event  8, 83, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerFisherRaymond, -1
+	object_event 13, 88, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerCamperTed, -1
 	object_event 16, 33, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, Route12TMPayDay, EVENT_ROUTE_12_TM_PAY_DAY
 	object_event 11, 62, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, Route12TMSnore, EVENT_ROUTE_12_TM_SNORE
 	object_event  7, 85, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route12Iron, EVENT_ROUTE_12_IRON
