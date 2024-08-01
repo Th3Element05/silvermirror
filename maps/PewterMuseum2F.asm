@@ -89,8 +89,8 @@ PewterMuseum2F_MapEvents:
 	bg_event 12,  3, BGEVENT_READ, PewterMuseum2FShuttleSign
 
 	def_object_events
-	object_event  7,  5, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PewterMuseum2F_Scientist_Script, -1
-	object_event  1,  4, SPRITE_GRANNY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 2, 2, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PewterMuseum2F_Granny_Script, -1
-	object_event  5,  2, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PewterMuseum2F_Youngster_Script, -1
-	object_event 11,  5, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_LEFT, 2, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, PewterMuseum2F_Girl_Script, -1
-	object_event 12,  5, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 2, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PewterMuseum2F_PokefanM_Script, -1
+	object_event  7,  5, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterMuseum2F_Scientist_Script, -1
+	object_event  1,  4, SPRITE_GRANNY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterMuseum2F_Granny_Script, -1
+	object_event  5,  2, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterMuseum2F_Youngster_Script, -1
+	object_event 11,  5, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_LEFT, 2, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterMuseum2F_Girl_Script, -1
+	object_event 12,  5, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 2, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterMuseum2F_PokefanM_Script, -1

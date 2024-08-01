@@ -183,41 +183,51 @@ LoadSpecialMapOBPalette:
 	jp SearchPaletteRoutine
 
 MapSpecificOBPalettes:
-	_use_palette_routine_for_map ROUTE_30, .PurpleOverRockOBPalette
+	_use_palette_routine_for_map PEWTER_POKECENTER_1F, .PinkOverRockOBPalette
+	_use_palette_routine_for_map PEWTER_MUSEUM_1F, .YellowOverRockOBPalette
+	_use_palette_routine_for_map CERULEAN_CITY, .PinkOverRockOBPalette
+	_use_palette_routine_for_map VERMILION_CITY, .GrayOverRockOBPalette
+	_use_palette_routine_for_map POKEMON_FAN_CLUB, .YellowOverRockOBPalette
+	_use_palette_routine_for_map SS_ANNE_ROOMS_1F, .PinkOverRockOBPalette
+	_use_palette_routine_for_map SS_ANNE_ROOMS_B1F, .GrayOverRockOBPalette
+	_use_palette_routine_for_map MR_FUJIS_HOUSE, .YellowOverRockOBPalette
+	_use_palette_routine_for_map CELADON_MANSION_1F, .PinkOverRockOBPalette
+	_use_palette_routine_for_map FUCHSIA_CITY, .PinkOverRockOBPalette
+	_use_palette_routine_for_map SAFARI_ZONE_AREA_3, .RockOverTreeOBPalette
+	_use_palette_routine_for_map POWER_PLANT, .YellowOverRockOBPalette
+	_use_palette_routine_for_map FIGHTING_DOJO, .GrayOverRockOBPalette
+	_use_palette_routine_for_map COPYCATS_HOUSE_1F, .PinkOverRockOBPalette
+	_use_palette_routine_for_map COPYCATS_HOUSE_2F, .PinkOverRockOBPalette
+	_use_palette_routine_for_map INDIGO_PLATEAU_POKECENTER_1F, .YellowOverRockOBPalette
+	_use_palette_routine_for_map MOUNT_MOON_SQUARE, .PinkOverRockOBPalette
+;
 	_use_palette_routine_for_map VIOLET_CITY, .YellowOverRockOBPalette
-	_use_palette_routine_for_map AZALEA_TOWN, .WhiteOverRockOBPalette
-	_use_palette_routine_for_map ROUTE_38, .WhiteOverRockOBPalette
 	_use_palette_routine_for_map ROUTE_42, .YellowOverRockOBPalette
 	_use_palette_routine_for_map ROUTE_44, .YellowOverRockOBPalette
 	_use_palette_routine_for_map ROUTE_46, .YellowOverRockOBPalette
-	_use_palette_routine_for_map PEWTER_CITY, .WhiteOverRockOBPalette
-	_use_palette_routine_for_map PEWTER_NIDORAN_SPEECH_HOUSE, .PurpleOverRockOBPalette
-	_use_palette_routine_for_map ROUTE_8, .PurpleOverRockYellowOverPinkOBPalette
-	_use_palette_routine_for_map FUCHSIA_CITY, .YellowOverRockOBPalette
 	_use_palette_routine_for_map OLIVINE_LIGHTHOUSE_6F, .YellowOverRockOBPalette
-	_use_palette_routine_for_map VIRIDIAN_NICKNAME_SPEECH_HOUSE, .PurpleOverRockOBPalette
-	_use_palette_routine_for_map INDIGO_PLATEAU_POKECENTER_1F, .YellowOverRockOBPalette
-	_use_palette_routine_for_map VERMILION_CITY, .GrayOverRockOBPalette
 	_use_palette_routine_for_map GOLDENROD_DEPT_STORE_B1F, .GrayOverRockOBPalette
 	_use_palette_routine_for_map DANCE_THEATER, .GrayOverRockOBPalette
-;	_use_palette_routine_for_map ROUTE_10_SOUTH, .YellowOverRockOBPalette
-	_use_palette_routine_for_map CERULEAN_CAVE_B1F, .PurpleOverPinkOBPalette
-	_use_palette_routine_for_map MR_FUJIS_HOUSE, .PurpleOverRockYellowOverPinkOBPalette
-;	_use_palette_routine_for_map SAFARI_ZONE_AREA_2, .SwampOverTreeOBPalette
-	_use_palette_routine_for_map SAFARI_ZONE_AREA_3, .SandOverTreeOBPalette
-	_use_palette_routine_for_map PEWTER_MUSEUM_1F, .YellowOverRockOBPalette
+;OG
+;	_use_palette_routine_for_map VIRIDIAN_NICKNAME_SPEECH_HOUSE, .PurpleOverRockOBPalette ;PURPLE
+;	_use_palette_routine_for_map PEWTER_CITY, .WhiteOverRockOBPalette                     ;SILVER
+;	_use_palette_routine_for_map PEWTER_NIDORAN_SPEECH_HOUSE, .PurpleOverRockOBPalette    ;PURPLE
 ;	_use_palette_routine_for_map PEWTER_MUSEUM_2F, .YellowOverRockOBPalette
-	_use_palette_routine_for_map COPYCATS_HOUSE_2F, .YellowOverRockOBPalette
-;silvermirror+
-	_use_palette_routine_for_map SS_ANNE_ROOMS_B1F, .GrayOverRockOBPalette
-	_use_palette_routine_for_map POWER_PLANT, .YellowOverRockOBPalette
+;	_use_palette_routine_for_map ROUTE_8, .PurpleOverRockYellowOverPinkOBPalette          ;PINK and PURPLE
+;	_use_palette_routine_for_map MR_FUJIS_HOUSE, .PurpleOverRockYellowOverPinkOBPalette   ;PINK and PURPLE
+;	_use_palette_routine_for_map SAFARI_ZONE_AREA_2, .SwampOverTreeOBPalette
+;	_use_palette_routine_for_map ROUTE_10_SOUTH, .YellowOverRockOBPalette
+;	_use_palette_routine_for_map CERULEAN_CAVE_B1F, .PurpleOverPinkOBPalette              ;PINK and PURPLE
+;	_use_palette_routine_for_map ROUTE_30, .PurpleOverRockOBPalette                       ;PURPLE
+;	_use_palette_routine_for_map AZALEA_TOWN, .WhiteOverRockOBPalette                     ;SILVER
+;	_use_palette_routine_for_map ROUTE_38, .WhiteOverRockOBPalette                        ;SILVER
 	db -1 ; terminator
 
-.PurpleOverRockOBPalette:
+.PinkOverRockOBPalette:
 	ld a, [wTimeOfDayPal]
 	maskbits NUM_DAYTIMES
 	ld bc, 8 palettes
-	ld hl, PurpleOverRock
+	ld hl, PinkOverRock
 	jr .finish
 
 .YellowOverRockOBPalette:
@@ -227,20 +237,6 @@ MapSpecificOBPalettes:
 	ld hl, YellowOverRock
 	jr .finish
 
-.WhiteOverRockOBPalette:
-	ld a, [wTimeOfDayPal]
-	maskbits NUM_DAYTIMES
-	ld bc, 8 palettes
-	ld hl, WhiteOverRock
-	jr .finish
-
-.PurpleOverRockYellowOverPinkOBPalette
-	ld a, [wTimeOfDayPal]
-	maskbits NUM_DAYTIMES
-	ld bc, 8 palettes
-	ld hl, PurpleOverRockYellowOverPink
-	jr .finish
-
 .GrayOverRockOBPalette
 	ld a, [wTimeOfDayPal]
 	maskbits NUM_DAYTIMES
@@ -248,19 +244,47 @@ MapSpecificOBPalettes:
 	ld hl, GrayOverRock
 	jr .finish
 
-.PurpleOverPinkOBPalette:
+.BlackOverRockOBPalette:
 	ld a, [wTimeOfDayPal]
 	maskbits NUM_DAYTIMES
 	ld bc, 8 palettes
-	ld hl, PurpleOverPink
+	ld hl, BlackOverRock
 	jr .finish
 
-.SandOverTreeOBPalette:
+.RockOverTreeOBPalette:
 	ld a, [wTimeOfDayPal]
 	maskbits NUM_DAYTIMES
 	ld bc, 8 palettes
-	ld hl, SandOverTree
+	ld hl, RockOverTree
 	jr .finish
+
+;.PurpleOverRockOBPalette:
+;	ld a, [wTimeOfDayPal]
+;	maskbits NUM_DAYTIMES
+;	ld bc, 8 palettes
+;	ld hl, PurpleOverRock
+;	jr .finish
+
+;.WhiteOverRockOBPalette:
+;	ld a, [wTimeOfDayPal]
+;	maskbits NUM_DAYTIMES
+;	ld bc, 8 palettes
+;	ld hl, WhiteOverRock
+;	jr .finish
+
+;.PurpleOverRockYellowOverPinkOBPalette
+;	ld a, [wTimeOfDayPal]
+;	maskbits NUM_DAYTIMES
+;	ld bc, 8 palettes
+;	ld hl, PurpleOverRockYellowOverPink
+;	jr .finish
+
+;.PurpleOverPinkOBPalette:
+;	ld a, [wTimeOfDayPal]
+;	maskbits NUM_DAYTIMES
+;	ld bc, 8 palettes
+;	ld hl, PurpleOverPink
+;	jr .finish
 
 ;.SwampOverTreeOBPalette
 ;	ld a, [wTimeOfDayPal]

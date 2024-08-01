@@ -26,4 +26,4 @@ Route7UndergroundPathEntrance_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  2,  3, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 2, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, Route7UndergroundPathEntrancePokefanMScript, -1
+	object_event  2,  3, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route7UndergroundPathEntrancePokefanMScript, -1

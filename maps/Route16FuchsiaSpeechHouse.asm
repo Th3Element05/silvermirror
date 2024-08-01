@@ -103,5 +103,5 @@ Route16FuchsiaSpeechHouse_MapEvents:
 	bg_event  1,  1, BGEVENT_READ, Route16FuchsiaSpeechHouseBookshelf
 
 	def_object_events
-	object_event  2,  3, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route16FlyHouseLassScript, -1
-	object_event  6,  4, SPRITE_FEAROW, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, Route16FlyHouseFearowScript, -1
+	object_event  2,  3, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route16FlyHouseLassScript, -1
+	object_event  6,  4, SPRITE_FEAROW, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, Route16FlyHouseFearowScript, -1

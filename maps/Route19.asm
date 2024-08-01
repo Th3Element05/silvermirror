@@ -1,5 +1,5 @@
 	object_const_def
-	const ROUTE19_YOUNGSTER
+	const ROUTE19_BOY
 	const ROUTE19_POISON_BARB
 
 Route19_MapScripts:
@@ -44,10 +44,10 @@ Route19_MapScripts:
 ;	cont "now on!"
 ;	done
 
-Route19Youngster:
+Route19Boy:
 	faceplayer
 	opentext
-	writetext Route19YoungsterStungText
+	writetext Route19BoyStungText
 	yesorno
 	iffalse .NoAntidote
 	checkitem ANTIDOTE
@@ -56,27 +56,27 @@ Route19Youngster:
 	promptbutton
 	takeitem ANTIDOTE, 1
 	playsound SFX_FULL_HEAL
-	writetext Route19YoungsterThanksText
+	writetext Route19BoyThanksText
 	waitbutton
-	sjump Route19YoungsterGoesHome
+	sjump Route19BoyGoesHome
 
 .NoAntidote
-	writetext Route19YoungsterNoAntidoteText
+	writetext Route19BoyNoAntidoteText
 	; fallthrough
 
-Route19YoungsterGoesHome:
+Route19BoyGoesHome:
 	waitbutton
 	closetext
 	appear ROUTE19_POISON_BARB
 	readvar VAR_FACING
 	ifnotequal DOWN, .Skip
-	applymovement ROUTE19_YOUNGSTER, Route19YoungsterGoesAroundMovement
+	applymovement ROUTE19_BOY, Route19BoyGoesAroundMovement
 .Skip
-	applymovement ROUTE19_YOUNGSTER, Route19YoungsterLeavesMovement
-	disappear ROUTE19_YOUNGSTER
+	applymovement ROUTE19_BOY, Route19BoyLeavesMovement
+	disappear ROUTE19_BOY
 	end
 
-Route19YoungsterStungText:
+Route19BoyStungText:
 	text "Ouch! Ouch! Ouch!"
 
 	para "TENTACOOL got me"
@@ -91,7 +91,7 @@ Route19GaveAntidoteText:
 	line "ANTIDOTE!"
 	done
 
-Route19YoungsterThanksText:
+Route19BoyThanksText:
 	text "Wow, thanks!"
 	line "You're a life-"
 	cont "saver!"
@@ -101,7 +101,7 @@ Route19YoungsterThanksText:
 	cont "Bye!"
 	done
 
-Route19YoungsterNoAntidoteText:
+Route19BoyNoAntidoteText:
 	text "Oh no, you don't"
 	line "have any?"
 
@@ -377,14 +377,14 @@ Route19SignText:
 	done
 
 
-Route19YoungsterGoesAroundMovement:
+Route19BoyGoesAroundMovement:
 	big_step LEFT
 	big_step UP
 	big_step UP
 	big_step RIGHT
 	step_end
 
-Route19YoungsterLeavesMovement:
+Route19BoyLeavesMovement:
 	big_step UP
 	big_step UP
 	big_step UP
@@ -408,15 +408,15 @@ Route19_MapEvents:
 	bg_event 11, 11, BGEVENT_READ, Route19Sign
 
 	def_object_events
-	object_event 13, 12, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route19Youngster, EVENT_ROUTE_19_YOUNGSTER
+	object_event 13, 12, SPRITE_BOY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route19Boy, EVENT_ROUTE_19_BOY
 	object_event 13, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route19PoisonBarb, EVENT_ROUTE_19_POISON_BARB
-	object_event  8,  9, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerSwimmerMSimon, -1
-	object_event 12,  9, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerMRandall, -1
+	object_event  8,  9, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSwimmerMSimon, -1
+	object_event 12,  9, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSwimmerMRandall, -1
 	object_event  9, 15, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSwimmerMCharlie, -1
-	object_event 13, 22, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerSwimmerMGeorge, -1
-	object_event  5, 26, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerSwimmerMBerke, -1
+	object_event 13, 22, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSwimmerMGeorge, -1
+	object_event  5, 26, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSwimmerMBerke, -1
 	object_event 14, 32, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSwimmerMKirk, -1
-	object_event  9, 39, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerSwimmerMMatthew, -1
-	object_event  8, 40, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 4, TrainerSwimmerFElaine, -1
-	object_event 11, 40, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerSwimmerFPaula, -1
-	object_event 10, 41, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSwimmerFKaylee, -1
+	object_event  9, 39, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSwimmerMMatthew, -1
+	object_event  8, 40, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerSwimmerFElaine, -1
+	object_event 11, 40, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerSwimmerFPaula, -1
+	object_event 10, 41, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerSwimmerFKaylee, -1

@@ -63,5 +63,5 @@ LavenderSpeechHouse_MapEvents:
 	bg_event  1,  1, BGEVENT_READ, LavenderSpeechHouseBookshelf
 
 	def_object_events
-	object_event  2,  4, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LavenderSpeechHouseTeacherScript, -1
-	object_event  3,  5, SPRITE_CUBONE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, LavenderSpeechHouseCubone, -1
+	object_event  2,  4, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LavenderSpeechHouseTeacherScript, -1
+	object_event  3,  5, SPRITE_CUBONE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LavenderSpeechHouseCubone, -1

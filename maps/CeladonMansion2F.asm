@@ -13,7 +13,7 @@ CeladonMansion2FBookshelf:
 	jumpstd DifficultBookshelfScript
 
 CeladonMansion2FComputerText:
-	text "The PC is off."
+	text "The PC isn't on."
 	done
 
 ;	text "<PLAYER> turned on"

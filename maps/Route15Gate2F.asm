@@ -110,4 +110,4 @@ Route15Gate2F_MapEvents:
 	bg_event  4,  2, BGEVENT_UP, Route15Gate2FBinoculars
 
 	def_object_events
-	object_event  6,  3, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route15Gate2FOaksAideScript, -1
+	object_event  6,  3, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route15Gate2FOaksAideScript, -1
