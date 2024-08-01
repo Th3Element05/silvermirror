@@ -46,14 +46,6 @@ LassAliceAfterBattleText:
 	line "them all."
 	done
 
-Route4CooltrainerScript:
-	jumptextfaceplayer Route4CooltrainerText
-Route4CooltrainerText:
-	text "Ouch! I tripped"
-	line "over a rocky"
-	cont "#MON, GEODUDE!"
-	done
-
 Route4Sign:
 	jumptext Route4SignText
 Route4SignText:
@@ -68,34 +60,29 @@ Route4TMWhirlwind:
 Route4HiddenGreatBall:
 	hiddenitem GREAT_BALL, EVENT_ROUTE_4_HIDDEN_GREAT_BALL
 
-Route4MtMoonSign:
-	jumptext Route3MtMoonSignText
-Route3MtMoonSignText:
-	text "MT.MOON"
-	line "Tunnel Entrance"
-	done
-
 Route4MtMoonPokecenterSign:
 	jumpstd PokecenterSignScript
+
+Route4Rock:
+	jumpstd SmashRockScript
 
 Route4_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 16,  5, MOUNT_MOON, 4
-	warp_event  9,  5, MOUNT_MOON_POKECENTER_1F, 1
-	warp_event 24,  5, MOUNT_MOON, 13
+	warp_event  4,  5, MOUNT_MOON, 13
 
 	def_coord_events
 
 	def_bg_events
-	bg_event 15,  7, BGEVENT_READ, Route4MtMoonSign
-	bg_event 10,  5, BGEVENT_READ, Route4MtMoonPokecenterSign
-	bg_event 27,  7, BGEVENT_READ, Route4Sign
-	bg_event 36,  3, BGEVENT_ITEM, Route4HiddenGreatBall
+	bg_event  7,  7, BGEVENT_READ, Route4Sign
+	bg_event 16,  3, BGEVENT_ITEM, Route4HiddenGreatBall
 
 	def_object_events
-	object_event  7,  8, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route4CooltrainerScript, -1
-	object_event 57,  3, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerLassAlice, -1
-	object_event 51,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, Route4TMWhirlwind, EVENT_ROUTE_4_TM_WHIRLWIND
-;	object_event 72,  4, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0,ObjectEvent, 0
+	object_event 37,  3, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerLassAlice, -1
+	object_event 31,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, Route4TMWhirlwind, EVENT_ROUTE_4_TM_WHIRLWIND
+;	object_event 64,  4, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0,ObjectEvent, 0
+	object_event 50,  9, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route4Rock, -1
+	object_event 48,  5, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route4Rock, -1
+	object_event 53,  2, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route4Rock, -1
+	object_event 12,  2, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route4Rock, -1

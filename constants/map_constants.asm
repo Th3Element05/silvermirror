@@ -71,7 +71,7 @@ ENDM
 	map_const VIRIDIAN_FOREST,                             17, 28 ; 11
 	map_const VIRIDIAN_FOREST_GATE_N,                       4,  4 ; 12
 	map_const VIRIDIAN_FOREST_GATE_S,                       4,  4 ; 13
-	map_const ROUTE_3,                                     32,  9 ; 14
+	map_const ROUTE_3,                                     30, 18 ; 14
 	map_const MOUNT_MOON_POKECENTER_1F,                     7,  4 ; 15
 	endgroup
 
@@ -85,7 +85,7 @@ ENDM
 	map_const CERULEAN_TRADE_SPEECH_HOUSE,                  4,  4 ;  7
 	map_const BIKE_SHOP,                                    4,  4 ;  8
 	map_const DAY_CARE,                                     4,  4 ;  9
-	map_const ROUTE_4,                                     40,  9 ; 10
+	map_const ROUTE_4,                                     30,  9 ; 10
 	map_const ROUTE_24,                                    10, 18 ; 11
 	map_const ROUTE_25,                                    30,  9 ; 12
 	map_const BILLS_HOUSE,                                  4,  4 ; 13
@@ -427,7 +427,7 @@ ENDM
 	newgroup DUNGEONS                                             ; 14
 ; kanto
 	map_const MOUNT_MOON,                                  20, 27 ;  1
-	map_const MOUNT_MOON_B2F,                              20, 18 ;  2
+	map_const MOUNT_MOON_B2F,                              20, 19 ;  2
 	map_const UNDERGROUND_PATH,                             3, 14 ;  3
 	map_const DIGLETTS_CAVE,                               19, 17 ;  4
 	map_const ROCK_TUNNEL_1F,                              18, 16 ;  5
@@ -471,9 +471,9 @@ ENDM
 	map_const VICTORY_ROAD_1F,                             13, 12 ; 41
 	map_const VICTORY_ROAD_2F,                             15, 12 ; 42
 	map_const VICTORY_ROAD_3F,                             15, 12 ; 43
-	map_const CERULEAN_CAVE_1F,                            20, 14 ; 42
-	map_const CERULEAN_CAVE_2F,                            20, 14 ; 43
-	map_const CERULEAN_CAVE_B1F,                           20, 14 ; 44
+	map_const CERULEAN_CAVE_1F,                            17, 11 ; 42
+	map_const CERULEAN_CAVE_2F,                            15,  9 ; 43
+	map_const CERULEAN_CAVE_B1F,                           17, 11 ; 44
 ; johto
 	map_const SPROUT_TOWER_1F,                             10,  8 ; 45
 	map_const SPROUT_TOWER_2F,                             10,  8 ; 46
