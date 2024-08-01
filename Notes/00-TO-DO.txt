@@ -50,37 +50,38 @@ UNOWN
 
 TEST to-do
 
+fly to all fly destinations
+blackout/respawn to all respawn points
+
+viridian city coffee gramps map card scene
+route3 connections to PewterCity and Route4
+pokemon fan club "yellow over rock" not working?
+route 12 gate stairs block colision
+copycat 2f snorlax doll
+route19 cut 1 block off top
+test daycareman/daycarelady intro "\engine\events\daycare.asm" DayCareLadyIntroText:
 ssannerooms2f snorlax closepokepic, closetext
 daisy grooming whiteout leaves bright palettes, players room works right
 game corner machines
 cinnabar lab fossil text "back to life" line error
 cinnabar lab fossil sprites
 silph music after giovanni
+route12 snorlax play poke flute, make sure new script works right and copy to route16/route11
 
 running animation UP/DOWN needs head bob
 check pokecenter link receptionist sprites
 check all silph doors changeblocks, exit/reenter
 
 daisy night text wrong cont
-celadon hotel palette appears to be AUTO
-
-Does Lance face left after movement with turnobject?
-credit, long pause after PROGRAMERS
 
 
 
 TO-DO to-do
 
-kris run
-cinnabar lab old amber "yellow over rock (or purple)"
-adjust sabrina sprite hair
+HM/Pager badge requirments
+daisy do hapiness rater
+
 NIDORAN trade, doesn't specify gender
-route10 spawn coords
-move nugget bridge trainers back to alts
-oaks lab pokedex sprite red
-pokemon fan club "yellow over rock" not working?
-route19 cut 1 block off top
-cry should be after text
 
 silph co put text on computers?
 berries
@@ -92,50 +93,15 @@ restore field moves to mon_menu? text may be issue
 PPS possible to add up/down arrows or remove textbox?
 rock smash items, add fossils? tutorial
 
-YOUNGSTER - blue
-CAMPER - green
-PICNICKER - green
-LASS - blue
-HIKER - blue
-POKEFAN_F - purple, blue? any?
-POKEFAN_M - red, brown?
-SAILOR - blue
-ROCKER - red, white? brown?
-GENTLEMAN - blue, brown? any?
-COUPLE - blue
-BUGCATCHER - blue
-POKEMANIAC - purple, blue? red?
-BEAUTY - blue
-SUPER NERD - brown, any?
-FISHER - teal blue/green
-BIRD KEEPER - blue (rocker sprite?)
-BIKER - dark blue
-TWINS - pink
-JUGGLER - blue
-SWIMMER_M - dark blue
-SWIMMER_F - green
-BURGLAR - blue/purple
-FIREBREATHER - red
-COOLTRAINER_M - red
-COOLTRAINER_F - red
-BLACKBELT - brown
-
-KOGA - purple
-GRAMPS - brown
-MR_FUJI - purple
-
+https://github.com/pret/pokecrystal/wiki/Physical-Special-split
+then
+https://github.com/pret/pokecrystal/wiki/Display-more-information-on-the-move-screen
 
 EEVEE line evos_attacks...
-bench guys, no red
-route 19 gate guard text
 
 TRY use SCENE and coord_event on top of a warp_event
+Warp on to active coord_event on door, what happens?
 
-route12gate guard after snorlax text
-route12 snorlax say no, text close/open
-mr fuji pokeflute text typo "hearnig"
-route 12 gate stairs block colision
-route 10 spawn coords
 
 SEEN pokemon
 
