@@ -102,6 +102,7 @@ DayCareLadyIntroText:
 	bit DAYCARELADY_ACTIVE_F, [hl]
 	jr nz, .okay
 	set DAYCARELADY_ACTIVE_F, [hl]
+	set DAYCAREMAN_ACTIVE_F, [hl]
 	inc a
 .okay
 	call PrintDayCareText
@@ -109,7 +110,16 @@ DayCareLadyIntroText:
 	ret
 
 DayCareManIntroText:
+;	set DAYCAREMAN_ACTIVE_F, [hl]
+;	call PrintDayCareText
+;	call YesNoBox
+;	ret
+	bit DAYCAREMAN_ACTIVE_F, [hl]
+	jr nz, .okay
 	set DAYCAREMAN_ACTIVE_F, [hl]
+	set DAYCARELADY_ACTIVE_F, [hl]
+	inc a
+.okay
 	call PrintDayCareText
 	call YesNoBox
 	ret
