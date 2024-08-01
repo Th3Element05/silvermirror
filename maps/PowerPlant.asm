@@ -56,7 +56,8 @@ PowerPlantVoltorbTrapScript:
 	opentext
 	writetext PowerPlantBzzztText
 	cry VOLTORB
-	pause 20
+;	pause 20
+	showemote EMOTE_BOLT, LAST_TALKED, 20
 	closetext
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
 	loadwildmon VOLTORB, 30
@@ -72,7 +73,8 @@ PowerPlantElectrodeTrapScript:
 	opentext
 	writetext PowerPlantBzzztText
 	cry ELECTRODE
-	pause 20
+;	pause 20
+	showemote EMOTE_BOLT, LAST_TALKED, 20
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
 	loadwildmon ELECTRODE, 30
 	startbattle
@@ -87,7 +89,8 @@ PowerPlantShinyVoltorbTrapScript:
 	opentext
 	writetext PowerPlantBzzztText
 	cry VOLTORB
-	pause 20
+;	pause 20
+	showemote EMOTE_BOLT, LAST_TALKED, 20
 	closetext
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCESHINY
 	loadwildmon VOLTORB, 30
@@ -171,3 +174,5 @@ PowerPlant_MapEvents:
 	object_event 26, 32, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, PowerPlantTMThunder, EVENT_POWER_PLANT_TM_THUNDER
 	object_event 38,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_ITEMBALL, 0, PowerPlantRareCandy, EVENT_POWER_PLANT_RARE_CANDY
 	object_event 28,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_ITEMBALL, 0, PowerPlantHPUp, EVENT_POWER_PLANT_HP_UP
+
+;.YellowOverRockOBPalette

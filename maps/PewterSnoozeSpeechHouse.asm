@@ -47,5 +47,5 @@ PewterSnoozeSpeechHouse_MapEvents:
 	bg_event  1,  1, BGEVENT_READ, PewterSnoozeSpeechHouseBookshelf
 
 	def_object_events
-	object_event  2,  3, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PewterSnoozeSpeechHouseGamblerScript, -1
+	object_event  2,  3, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PewterSnoozeSpeechHouseGamblerScript, -1
 	object_event  4,  5, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, PewterSnoozeSpeechHouseYoungsterScript, -1

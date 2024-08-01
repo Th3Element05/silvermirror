@@ -1,7 +1,7 @@
 	object_const_def
-	const CINNABARLAB_HELIX
-	const CINNABARLAB_DOME
-	const CINNABARLAB_AMBER
+;	const CINNABARLAB_HELIX
+;	const CINNABARLAB_DOME
+;	const CINNABARLAB_AMBER
 
 CinnabarLabFossilRoom_MapScripts:
 	def_scene_scripts
@@ -255,7 +255,7 @@ GiveHelixFossil:
 	waitbutton
 	closetext
 	takeitem HELIX_FOSSIL
-	appear CINNABARLAB_HELIX
+;	appear CINNABARLAB_HELIX
 	setevent EVENT_FOSSIL_SCIENTIST_WORKING_HELIX
 	setevent EVENT_FOSSIL_SCIENTIST_WORKING
 ;	callasm FossilSetStepCount
@@ -266,7 +266,7 @@ GiveDomeFossil:
 	waitbutton
 	closetext
 	takeitem DOME_FOSSIL
-	appear CINNABARLAB_DOME
+;	appear CINNABARLAB_DOME
 	setevent EVENT_FOSSIL_SCIENTIST_WORKING_DOME
 	setevent EVENT_FOSSIL_SCIENTIST_WORKING
 ;	callasm FossilSetStepCount
@@ -277,7 +277,7 @@ GiveOldAmber:
 	waitbutton
 	closetext
 	takeitem OLD_AMBER
-	appear CINNABARLAB_AMBER
+;	appear CINNABARLAB_AMBER
 	setevent EVENT_FOSSIL_SCIENTIST_WORKING_AMBER
 	setevent EVENT_FOSSIL_SCIENTIST_WORKING
 ;	callasm FossilSetStepCount

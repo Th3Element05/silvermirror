@@ -62,7 +62,7 @@ YoungsterTakesYouToGymScript1:
 	waitbutton
 	closetext
 	turnobject PLAYER, UP
-	sjump PewterCityBlockingYoungsterScript
+	sjump PewterCityBlockingGuyScript
 YoungsterTakesYouToGymScript2:
 	showemote EMOTE_SHOCK, PEWTERCITY_YOUNGSTER, 20
 	opentext
@@ -70,7 +70,7 @@ YoungsterTakesYouToGymScript2:
 	waitbutton
 	closetext
 	applymovement PLAYER, PewterCity1StepUpMovement
-	sjump PewterCityBlockingYoungsterScript
+	sjump PewterCityBlockingGuyScript
 
 YoungsterTakesYouToGymScript3:
 	showemote EMOTE_SHOCK, PEWTERCITY_YOUNGSTER, 20
@@ -79,10 +79,10 @@ YoungsterTakesYouToGymScript3:
 	waitbutton
 	closetext
 	applymovement PLAYER, PewterCity2StepsUpMovement
-;	sjump PewterCityBlockingYoungsterScript
+;	sjump PewterCityBlockingGuyScript
 	; fallthrough
 	
-PewterCityBlockingYoungsterScript:
+PewterCityBlockingGuyScript:
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_BROCK
@@ -314,9 +314,9 @@ PewterCityCooltrainerFText:
 	cont "fell on MT.MOON."
 	done
 
-PewterCityCooltrainerMScript:
-	jumptextfaceplayer PewterCityCooltrainerMText
-PewterCityCooltrainerMText:
+PewterCityYoungsterScript:
+	jumptextfaceplayer PewterCityYoungsterText
+PewterCityYoungsterText:
 	text "There aren't many"
 	line "serious #MON"
 	cont "trainers here!"
@@ -625,9 +625,8 @@ PewterCity_MapEvents:
 	object_event 31,  5, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PewterCityBerryTree2, EVENT_PEWTER_BERRY_2
 	object_event 31,  3, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PewterCityApricornTree, EVENT_PEWTER_APRICORN
 	object_event 29,  3, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, PewterCityApricornTree2, EVENT_PEWTER_APRICORN_2
-	object_event 35, 16, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterCityBlockingYoungsterScript, EVENT_PEWTER_CITY_BLOCKING_YOUNGSTER
+	object_event 35, 16, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PewterCityBlockingGuyScript, -1 ;EVENT_PEWTER_CITY_BLOCKING_GUY
 	object_event 27, 17, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PewterCitySuperNerd1Script, -1
-	object_event  8, 15, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, PewterCityCooltrainerFScript, -1
-	object_event 17, 25, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, PewterCityCooltrainerMScript, -1
-	object_event 26, 25, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PewterCitySuperNerd2Script, -1
-
+	object_event  8, 15, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterCityCooltrainerFScript, -1
+	object_event 17, 25, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterCityYoungsterScript, -1
+	object_event 26, 25, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterCitySuperNerd2Script, -1

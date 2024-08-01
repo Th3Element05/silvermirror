@@ -51,4 +51,5 @@ RocketHideoutElevator_MapEvents:
 
 	def_bg_events
 	bg_event  2,  0, BGEVENT_READ, RocketHideoutElevatorScript
+
 	def_object_events

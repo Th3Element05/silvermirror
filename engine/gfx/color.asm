@@ -1381,7 +1381,7 @@ LoadMapPals:
 	inc hl
 	inc hl
 
-	ld de, wOBPals1 palette PAL_OW_PINK + 2
+	ld de, wOBPals1 palette PAL_OW_TREE + 2 ;PAL_OW_PINK + 2
 	ld bc, 1 palettes - 2
 	ld a, BANK(wOBPals1)
 	call FarCopyWRAM

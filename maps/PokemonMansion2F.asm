@@ -128,7 +128,7 @@ PokemonMansion2F_MapEvents:
 	bg_event  2, 11, BGEVENT_READ, PokemonMansion2FSecretSwitch
 
 	def_object_events
-	object_event  3, 17, SPRITE_PHARMACIST, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 1, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerBurglarDuncan, -1
+	object_event  3, 17, SPRITE_PHARMACIST, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 0, TrainerBurglarDuncan, -1
 	object_event 28,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PokemonMansion2FCalcium, EVENT_POKEMON_MANSION_2F_CALCIUM
 	object_event 18,  2, SPRITE_POKEDEX, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PokemonMansion2FDiary1, -1
 	object_event  4, 23, SPRITE_POKEDEX, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PokemonMansion2FDiary2, -1

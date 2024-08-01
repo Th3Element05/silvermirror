@@ -646,5 +646,5 @@ BillsHouse_MapEvents:
 	bg_event  1,  4, BGEVENT_UP, BillsHouseBillsComputerScript
 
 	def_object_events
-	object_event  1,  5, SPRITE_BILL_TRANSFORM, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BillsHouseBillScript, -1
+	object_event  1,  5, SPRITE_BILL_TRANSFORM, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BillsHouseBillScript, -1
 ;	object_event  7,  7, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_UP, 0, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BillsGrandpa, -1

@@ -62,5 +62,5 @@ MrPsychicsHouse_MapEvents:
 	bg_event  1,  1, BGEVENT_READ, MrPsychicsHouseBookshelf
 
 	def_object_events
-	object_event  5,  3, SPRITE_FISHING_GURU, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MrPsychic, -1
+	object_event  5,  3, SPRITE_FISHING_GURU, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, MrPsychic, -1
 	object_event  3,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, MrPsychicsHouseTwistedSpoon, EVENT_MR_PSYCHICS_HOUSE_TWISTED_SPOON

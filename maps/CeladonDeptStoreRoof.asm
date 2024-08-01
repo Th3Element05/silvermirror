@@ -451,4 +451,4 @@ CeladonDeptStoreRoof_MapEvents:
 
 	def_object_events
 	object_event  9,  4, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonDeptStoreRoofSuperNerdScript, -1
-	object_event  4,  5, SPRITE_TWIN, SPRITEMOVEDATA_WANDER, 2, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeladonDeptStoreRoofGirlScript, -1
+	object_event  4,  5, SPRITE_TWIN, SPRITEMOVEDATA_WANDER, 2, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonDeptStoreRoofGirlScript, -1
