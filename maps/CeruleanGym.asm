@@ -100,16 +100,16 @@ MistyCascadebadgeText:
 	line "makes all #MON"
 	cont "up to L30 obey!"
 
-	para "That includes"
-	line "even outsiders!"
-
-	para "There's more, you"
-	line "can now use CUT"
-	cont "any time!"
-
-	para "You can CUT down"
-	line "small bushes to"
-	cont "open new paths!"
+;	para "That includes"
+;	line "even outsiders!"
+;
+;	para "There's more, you"
+;	line "can now use CUT"
+;	cont "any time!"
+;
+;	para "You can CUT down"
+;	line "small bushes to"
+;	cont "open new paths!"
 
 	para "You can also have"
 	line "my favorite TM!"

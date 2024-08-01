@@ -98,9 +98,9 @@ GiovanniEarthbadgeText:
 	line "your mastery as a"
 	cont "#MON trainer!"
 
-	para "With it, you can"
-	line "enter the #MON"
-	cont "LEAGUE!"
+	para "With 8 badges you"
+	line "can now enter the"
+	cont "#MON LEAGUE!"
 
 	para "It is my gift for"
 	line "your #MON"

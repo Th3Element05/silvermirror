@@ -161,9 +161,13 @@ ReceivedThunderbadgeText:
 	done
 
 LtSurgeThunderbadgeText:
-	text "The THUNDERBADGE"
-	line "lets your #MON"
-	cont "use FLY anytime!"
+;	text "The THUNDERBADGE"
+;	line "lets your #MON"
+;	cont "use FLY anytime!"
+
+	text "That's an official"
+	line "POKEMON LEAGUE"
+	cont "BADGE!"
 
 	para "You're special,"
 	line "kid! Take this!"
