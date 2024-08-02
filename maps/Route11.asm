@@ -323,25 +323,26 @@ Route11Snorlax:
 	writetext Route11PlayPokeFluteAskText
 	yesorno
 	iffalse .LetSleep
-	writetext Route11PlayPokeFluteText
 	special FadeOutMusic
+	writetext Route11PlayPokeFluteText
 	playsound SFX_POKEFLUTE
 	waitsfx
-	writetext Route11SnorlaxWokeUpText
-	promptbutton
-	sjump Route11SnorlaxBattleScript
+	sjump .Route11SnorlaxBattleScript
 
 .LetSleep:
-	jumptext Route11LetSnorlaxSleepText
+	writetext Route11LetSnorlaxSleepText
+	waitbutton
+	closetext
+	end
 
 .PlayRadio:
 	writetext Route11RadioNearSnorlaxText
 	promptbutton
-	writetext Route11SnorlaxWokeUpText
-	promptbutton
 	; fallthrough
 
-Route11SnorlaxBattleScript:
+.Route11SnorlaxBattleScript:
+	writetext Route11SnorlaxWokeUpText
+	promptbutton
 	pause 15
 	cry SNORLAX
 	closetext
@@ -349,12 +350,7 @@ Route11SnorlaxBattleScript:
 	loadwildmon SNORLAX, 50
 	startbattle
 	disappear ROUTE_11_BIG_SNORLAX_RESPAWN
-;	setevent EVENT_FOUGHT_SNORLAX
 	reloadmapafterbattle
-;	special CheckBattleCaughtResult
-;	iffalse .nocatch
-;	setflag ENGINE_PLAYER_CAUGHT_SNORLAX
-;.nocatch
 	end
 
 Route11SnorlaxSleepingText:

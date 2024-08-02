@@ -36,26 +36,24 @@ Route16Snorlax:
 	iffalse .LetSleep
 	special FadeOutMusic
 	writetext Route16PlayPokeFluteText
-;	special FadeOutMusic
-;	pause 20
 	playsound SFX_POKEFLUTE
 	waitsfx
-;	promptbutton
-	writetext Route16SnorlaxWokeUpText
-	promptbutton
-	sjump Route16SnorlaxBattleScript
+	sjump .Route16SnorlaxBattleScript
 
 .LetSleep:
-	jumptext Route16LetSnorlaxSleepText
+	writetext Route16LetSnorlaxSleepText
+	waitbutton
+	closetext
+	end
 
 .PlayRadio:
 	writetext Route16RadioNearSnorlaxText
 	promptbutton
-	writetext Route16SnorlaxWokeUpText
-	promptbutton
 	; fallthrough
 
-Route16SnorlaxBattleScript:
+.Route16SnorlaxBattleScript:
+	writetext Route16SnorlaxWokeUpText
+	promptbutton
 	pause 15
 	cry SNORLAX
 	writetext Route16SnorlaxAttackedText
