@@ -50,24 +50,13 @@ UNOWN
 
 TEST to-do
 
-fly to all fly destinations
-blackout/respawn to all respawn points
-
-viridian city coffee gramps map card scene
-route3 connections to PewterCity and Route4
-pokemon fan club "yellow over rock" not working?
-route 12 gate stairs block colision
-copycat 2f snorlax doll
-route19 cut 1 block off top
 test daycareman/daycarelady intro "\engine\events\daycare.asm" DayCareLadyIntroText:
-ssannerooms2f snorlax closepokepic, closetext
+
 daisy grooming whiteout leaves bright palettes, players room works right
 game corner machines
 cinnabar lab fossil text "back to life" line error
 cinnabar lab fossil sprites
 silph music after giovanni
-route12 snorlax play poke flute, make sure new script works right and copy to route16/route11
-
 running animation UP/DOWN needs head bob
 check pokecenter link receptionist sprites
 check all silph doors changeblocks, exit/reenter
@@ -78,12 +67,21 @@ daisy night text wrong cont
 
 TO-DO to-do
 
+route19 boy run away sound
+
+viridian group sprites bug_catcher
+
+mt moon square border blocks are water
+
 HM/Pager badge requirments
+add non-context HMs to mon_menu?  fly and flash
+
 daisy do hapiness rater
 
 NIDORAN trade, doesn't specify gender
 
 silph co put text on computers?
+cinnabar lab put text on computers
 berries
 check marts for variable inventory (meds)
 celadon gym weepinbell/gloom movesets are tough
