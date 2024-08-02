@@ -85,6 +85,7 @@ PewterGroupSprites:
 	db SPRITE_POKE_BALL
 	db SPRITE_BERRY
 	db SPRITE_APRICORN
+	db 0 ; end
 	;updated
 
 CeruleanGroupSprites:
@@ -110,6 +111,7 @@ SaffronGroupSprites:
 	; 9 of 9 walking
 	db SPRITE_OFFICER
 	db SPRITE_COOLTRAINER_M
+	db SPRITE_COOLTRAINER_F
 	db SPRITE_CAPTAIN
 	db SPRITE_GENTLEMAN
 	db SPRITE_PIDGEOT
