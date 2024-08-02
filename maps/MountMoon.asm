@@ -225,7 +225,7 @@ MountMoon_MapEvents:
 	warp_event  5,  5, MOUNT_MOON, 5        ; 1
 	warp_event 15,  9, MOUNT_MOON, 9        ; 2
 	warp_event 25, 15, MOUNT_MOON, 6        ; 3
-	warp_event 13, 33, ROUTE_4, 1           ; 4
+	warp_event 13, 33, ROUTE_3, 1           ; 4
 	warp_event  3, 39, MOUNT_MOON, 1        ; 5
 	warp_event 21, 41, MOUNT_MOON, 3        ; 6
 	warp_event 29, 41, MOUNT_MOON_SQUARE, 1 ; 7
@@ -234,7 +234,7 @@ MountMoon_MapEvents:
 	warp_event 29, 49, MOUNT_MOON_B2F, 1    ; 10
 	warp_event  3, 51, MOUNT_MOON_B2F, 2    ; 11
 	warp_event 13, 51, MOUNT_MOON_B2F, 4    ; 12
-	warp_event 35, 51, ROUTE_4, 3           ; 13
+	warp_event 35, 51, ROUTE_4, 1           ; 13
 
 	def_coord_events
 

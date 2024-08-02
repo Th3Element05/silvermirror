@@ -389,11 +389,11 @@ ENDM
 
 	map_attributes Route3, ROUTE_3, $2c, WEST | EAST
 	connection west, PewterCity, PEWTER_CITY, 5 ;-4 ;6
-	connection north, Route4, ROUTE_4, 0 ;24 ; east, Route4, ROUTE_4, 1
+	connection east, Route4, ROUTE_4, 0 ;24 ; east, Route4, ROUTE_4, 1
 
 
 	map_attributes Route4, ROUTE_4, $2c, WEST | EAST
-	connection south, Route3, ROUTE_3, 0 ;-24 ; west, Route3, ROUTE_3, -1
+	connection west, Route3, ROUTE_3, 0 ;-24 ; west, Route3, ROUTE_3, -1
 	connection east, CeruleanCity, CERULEAN_CITY, -4
 
 	map_attributes Route8, ROUTE_8, $2c, WEST | EAST
