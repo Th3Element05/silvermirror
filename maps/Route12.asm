@@ -23,13 +23,8 @@ Route12Snorlax:
 	iffalse .LetSleep
 	special FadeOutMusic
 	writetext Route12PlayPokeFluteText
-;	special FadeOutMusic
-;	pause 20
 	playsound SFX_POKEFLUTE
 	waitsfx
-;	promptbutton
-;	writetext Route12SnorlaxWokeUpText
-;	promptbutton
 	sjump .Route12SnorlaxBattleScript
 
 .LetSleep:
@@ -41,8 +36,6 @@ Route12Snorlax:
 .PlayRadio:
 	writetext Route12RadioNearSnorlaxText
 	promptbutton
-;	writetext Route12SnorlaxWokeUpText
-;	promptbutton
 	; fallthrough
 
 .Route12SnorlaxBattleScript:
