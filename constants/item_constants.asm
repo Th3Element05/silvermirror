@@ -202,7 +202,7 @@ DEF TM01 EQU const_value
 	add_tm DYNAMICPUNCH ; aa
 	add_tm RAZOR_WIND   ; ab
 	add_tm SWORDS_DANCE ; ac
-	add_tm WHIRLWIND    ; ad
+	add_tm ROLLOUT      ; ad ;WHIRLWIND    ; ad
 	add_tm MEGA_KICK    ; ae
 	add_tm TOXIC        ; af
 	add_tm HORN_DRILL   ; b0
@@ -252,9 +252,9 @@ DEF TM01 EQU const_value
 	add_tm FLAMETHROWER ; dc
 	add_tm SPARK        ; dd
 	add_tm ICY_WIND     ; de
-	add_tm HEADBUTT     ; df
-	add_tm CURSE        ; e0
-	add_tm ROLLOUT      ; e1
+	add_tm FALSE_SWIPE  ; df ;HEADBUTT     ; df
+	add_tm HEADBUTT     ; e0 ;CURSE        ; e0
+	add_tm CURSE        ; e1 ;ROLLOUT      ; e1 (tm04)
 	add_tm ROCK_SMASH   ; e2
 	add_tm HIDDEN_POWER ; e3
 	add_tm SUNNY_DAY    ; e4
