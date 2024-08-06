@@ -10,19 +10,19 @@ TrainerClassDVs:
 	dn  9,  8,  8,  8 ; JASMINE
 	dn  9,  8,  8,  8 ; PRYCE
 	dn  7, 12, 13, 13 ; CLAIR
-	dn  9,  8,  8,  8 ; POKEMON_PROF
-	dn  2,  2,  2,  2 ; RIVAL1
-	dn 10, 10, 10,  9 ; RIVAL2
+	dn 10, 10, 10, 10 ; POKEMON_PROF
+	dn  8,  8,  8,  8 ; RIVAL1
+	dn 10, 10, 10, 10 ; RIVAL2
 	dn  9,  8,  8,  8 ; BROCK
 	dn  7,  8,  8,  8 ; MISTY
 	dn  9,  8,  8,  8 ; LT_SURGE
-	dn  8,  9,  9,  9 ; ERIKA
+	dn  7,  9,  9,  9 ; ERIKA
 	dn  9,  9,  9,  9 ; KOGA
-	dn  7, 13, 10,  8 ; SABRINA
-	dn  9,  9, 10,  9 ; BLAINE
-	dn 10, 12, 12, 12 ; GIOVANNI
+	dn  7, 13,  8,  7 ; SABRINA
+	dn  9, 10, 10, 10 ; BLAINE
+	dn 10, 12, 12, 13 ; GIOVANNI
 	dn 10, 10,  9, 10 ; ROCKET BOSS
-	dn 13, 12, 13, 13 ; LORELEI
+	dn  7, 12, 13, 13 ; LORELEI
 	dn 13, 12, 13, 13 ; BRUNO
 	dn  7, 15, 13, 15 ; AGATHA
 	dn 13, 13, 12, 13 ; LANCE
@@ -44,7 +44,7 @@ TrainerClassDVs:
 	dn  6,  9, 12,  8 ; BEAUTY
 	dn  9,  8,  8,  8 ; POKEMANIAC
 	dn  9,  8,  8,  8 ; GENTLEMAN
-	dn  9,  8,  8,  8 ; SKIER
+	dn  7,  8,  8,  8 ; SKIER
 	dn  9,  8,  8,  8 ; BUG_CATCHER
 	dn  9,  8,  8,  8 ; FISHER
 	dn  9,  8,  8,  8 ; SWIMMERM
