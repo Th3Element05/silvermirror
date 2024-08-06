@@ -11,7 +11,7 @@
 	const EVENT_TEMPORARY_UNTIL_MAP_RELOAD_7
 	const EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
 ; used 8
-;
+
 ; Johto ;Kanto Gym Leader TM gifts
 	const EVENT_GOT_TM34_BIDE
 	const EVENT_GOT_TM11_BUBBLEBEAM
@@ -22,8 +22,8 @@
 	const EVENT_GOT_TM38_FIRE_BLAST
 	const EVENT_GOT_TM27_FISSURE
 ; used 8
-;
-; HMs (EVENT_GOT_HM07_WATERFALL was with the Johto itemballs)
+
+; HMs
 	const EVENT_GOT_HM01_CUT
 	const EVENT_GOT_HM02_FLY
 	const EVENT_GOT_HM03_SURF
@@ -32,13 +32,13 @@
 	const EVENT_GOT_HM06_WHIRLPOOL
 	const EVENT_GOT_HM07_WATERFALL
 ; used 7
-;
+
 ; Rods
 	const EVENT_GOT_OLD_ROD
 	const EVENT_GOT_GOOD_ROD
 	const EVENT_GOT_SUPER_ROD
 ; used 3
-;
+
 ; Gift TMs
 	const EVENT_GOT_TM13_ICE_BEAM
 	const EVENT_GOT_TM18_COUNTER
@@ -58,7 +58,7 @@
 	const EVENT_GOT_TM61_SNORE
 	const EVENT_GOT_TM69_SLEEP_TALK
 ; used 17
-;
+
 ; Got stuff
 	const EVENT_GOT_PEWTER_BOOST_ITEM
 	const EVENT_GOT_MYSTIC_WATER
@@ -74,12 +74,14 @@
 	const EVENT_GOT_HITMONLEE_FROM_DOJO
 	const EVENT_GOT_HITMONCHAN_FROM_DOJO
 	const EVENT_GOT_LAPRAS_FROM_SILPH_CO
-;	const EVENT_GOT_POISON_BARB
 	const EVENT_GOT_EXP_SHARE
 	const EVENT_GOT_MASTER_BALL_FROM_SILPH_CO
 	const EVENT_GOT_DRAGON_FANG
 ; used 17
-;
+; group total used 60
+; running total used 60
+
+	const_next 100
 ; Kanto story events (silvermirror)
 	const EVENT_INITIALIZED_EVENTS
 	const EVENT_FIRST_TIME_BANKING_WITH_MOM
@@ -189,7 +191,10 @@
 	const EVENT_FOUGHT_MOLTRES
 	const EVENT_CAUGHT_MISSINGNO
 ; used 102
-;
+; group total used 102
+; running total used 202
+
+	const_next 300
 ; Kanto people
 ; Sprite visibility flags
 ; When these events are cleared, the sprite becomes visible; when set, the sprite is hidden.
@@ -252,7 +257,10 @@
 	const EVENT_ZAPDOS_APPEAR
 	const EVENT_MOLTRES_APPEAR
 ; used 55
-;
+; group total used 55
+; running total used 355
+
+	const_next 400
 ; Kanto itemballs
 ; Sprite visibility flags
 ; When these events are cleared, the sprite becomes visible; when set, the sprite is hidden.
@@ -275,7 +283,7 @@
 	const EVENT_MT_MOON_POTION2
 	const EVENT_MT_MOON_B2F_TM_DYNAMICPUNCH
 	const EVENT_MT_MOON_B2F_HP_UP
-	const EVENT_ROUTE_4_TM_WHIRLWIND
+	const EVENT_ROUTE_4_TM_FALSE_SWIPE
 	const EVENT_ROUTE_24_TM_THUNDER_WAVE
 	const EVENT_ROUTE_25_TM_SEISMIC_TOSS
 	const EVENT_ROUTE_5_SILK_SCARF
@@ -396,7 +404,10 @@
 	const EVENT_CERULEAN_CAVE_B1F_ULTRA_BALL
 	const EVENT_CERULEAN_CAVE_B1F_MAX_REVIVE
 ; used 136
-;
+; group total used 136
+; running total used 536
+
+	const_next 600
 ; Kanto hidden items (silvermirror)
 	const EVENT_VIRIDIAN_CITY_HIDDEN_POTION                ;done
 	const EVENT_VIRIDIAN_FOREST_HIDDEN_POTION              ;done
@@ -465,7 +476,10 @@
 	const EVENT_CERULEAN_CAVE_B1F_HIDDEN_ULTRA_BALL        ;done
 	const EVENT_MT_MOON_SQUARE_HIDDEN_MOON_STONE           ;moved to silvermirror
 ; used 66
-;
+; group total used 66
+; running total used 666
+
+	const_next 700
 ; Trainer flags
 ; Johto Gym Leaders
 	const EVENT_BEAT_FALKNER
@@ -768,6 +782,8 @@
 	const EVENT_BEAT_SUPER_NERD_JAMES
 	const EVENT_BEAT_SUPER_NERD_MERLE
 ; Guitarist
+	const EVENT_BEAT_GUITARIST_WYATT
+	const EVENT_BEAT_GUITARIST_LOGAN
 	const EVENT_BEAT_GUITARIST_CLYDE
 	const EVENT_BEAT_GUITARIST_VINCENT
 	const EVENT_BEAT_GUITARIST_EDGAR
@@ -977,8 +993,11 @@
 	const EVENT_BEAT_COOL_DUO_THOMANDKAE
 	const EVENT_BEAT_COOL_DUO_ZACANDJEN
 	const EVENT_BEAT_COOL_DUO_ELANANDIDA
-; used 464
-;
+; used 466
+; group total used 466
+; running total used 1166
+
+	const_next 1200
 ; Phone events
 	const EVENT_JACK_ASKED_FOR_PHONE_NUMBER
 	const EVENT_IAN_ASKED_FOR_PHONE_NUMBER
@@ -1034,7 +1053,10 @@
 	const EVENT_ERIN_ASKED_FOR_PHONE_NUMBER
 	const EVENT_BUENA_OFFERED_HER_PHONE_NUMBER_NO_BLUE_CARD
 ; used 53
-;
+; group total used 53
+; running total used 1253
+
+	const_next 1300
 ; Berries and Apricorns
 	const EVENT_ROUTE_29_BERRY
 	const EVENT_ROUTE_29_APRICORN
@@ -1091,7 +1113,10 @@
 	const EVENT_FUCHSIA_BERRY
 	const EVENT_FUCHSIA_APRICORN
 ; used 54
-;
+; group total used 54
+; running total used 1354
+
+	const_next 1400
 ; Kurt Apricorn events
 	const EVENT_GAVE_KURT_RED_APRICORN
 	const EVENT_GAVE_KURT_BLU_APRICORN
@@ -1100,7 +1125,8 @@
 	const EVENT_GAVE_KURT_WHT_APRICORN
 	const EVENT_GAVE_KURT_BLK_APRICORN
 	const EVENT_GAVE_KURT_PNK_APRICORN
-; used 7
+	const_skip
+; used 8
 ;
 ; Decorations
 	const EVENT_DECO_BED_1
