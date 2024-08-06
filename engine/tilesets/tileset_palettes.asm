@@ -244,12 +244,12 @@ MapSpecificOBPalettes:
 	ld hl, GrayOverRock
 	jr .finish
 
-.BlackOverRockOBPalette:
-	ld a, [wTimeOfDayPal]
-	maskbits NUM_DAYTIMES
-	ld bc, 8 palettes
-	ld hl, BlackOverRock
-	jr .finish
+;.BlackOverRockOBPalette:
+;	ld a, [wTimeOfDayPal]
+;	maskbits NUM_DAYTIMES
+;	ld bc, 8 palettes
+;	ld hl, BlackOverRock
+;	jr .finish
 
 .RockOverTreeOBPalette:
 	ld a, [wTimeOfDayPal]

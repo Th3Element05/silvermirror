@@ -1092,7 +1092,7 @@ DebugAllTMHMs:
 	giveitem TM_DYNAMICPUNCH
 	giveitem TM_RAZOR_WIND
 	giveitem TM_SWORDS_DANCE
-	giveitem TM_WHIRLWIND
+	giveitem TM_FALSE_SWIPE ; TM_WHIRLWIND
 	giveitem TM_MEGA_KICK
 	giveitem TM_TOXIC
 	giveitem TM_HORN_DRILL

@@ -133,7 +133,7 @@ DaisyOutLateText:
 	para "That many!"
 
 	para "My grandpa OAK"
-	cont "is lucky to have"
+	line "is lucky to have"
 	cont "you and <RIVAL>"
 	cont "helping him!"
 	done
@@ -187,7 +187,7 @@ DaisyAlreadyGroomedText:
 	cont "of tea!"
 
 	para "Come visit again"
-	line" soon!"
+	line "soon!"
 	done
 
 DaisyRefusedText:
