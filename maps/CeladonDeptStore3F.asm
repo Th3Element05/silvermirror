@@ -26,8 +26,8 @@ CeladonDeptStore3FFreeSampleText:
 	text "Welcome to the"
 	line "TM SHOP!"
 
-	para "We're giving away"
-	line "free samples today!"
+	para "We're giving out"
+	line "a free TM today!"
 	done
 
 CeladonDeptStore3FGameboyKid1Script:

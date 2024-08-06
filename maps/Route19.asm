@@ -72,6 +72,7 @@ Route19BoyGoesHome:
 	ifnotequal DOWN, .Skip
 	applymovement ROUTE19_BOY, Route19BoyGoesAroundMovement
 .Skip
+	playsound SFX_RUN
 	applymovement ROUTE19_BOY, Route19BoyLeavesMovement
 	disappear ROUTE19_BOY
 	end

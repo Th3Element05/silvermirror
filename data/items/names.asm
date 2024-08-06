@@ -170,8 +170,8 @@ ItemNames::
 	li "TERU-SAMA"    ;+
 	li "TERU-SAMA"    ;+
 	li "TERU-SAMA"    ;+ const ITEM_8E
-	li "TERU-SAMA" ;+ ITEM_C3
-	li "TERU-SAMA" ;+ ITEM_DC
+	li "TERU-SAMA"    ;+ ITEM_C3
+	li "TERU-SAMA"    ;+ ITEM_DC
 	assert_list_length NUM_ITEMS
 	li "TM01"
 	li "TM02"
