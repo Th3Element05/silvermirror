@@ -566,7 +566,9 @@ DEF KRIS EQU __trainer_class__
 	const MERLE
 
 	trainerclass GUITARIST ; 31
-; kanto (ROCKER)
+; kanto (ROCKER/ELECTRICIAN)
+	const WYATT
+	const LOGAN
 	const CLYDE
 	const VINCENT
 ; johto

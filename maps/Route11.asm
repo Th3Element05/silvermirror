@@ -199,33 +199,29 @@ PokefanFBeverlyAfterBattleText:
 	cont "cute, too."
 	done
 
-TrainerOfficerKeith:
-	trainer OFFICER, KEITH, EVENT_BEAT_OFFICER_KEITH, OfficerKeithSeenText, OfficerKeithBeatenText, 0, .Script
+TrainerGuitaristWyatt:
+	trainer GUITARIST, WYATT, EVENT_BEAT_GUITARIST_WYATT, GuitaristWyattSeenText, GuitaristWyattBeatenText, 0, .Script
 .Script:
 	endifjustbattled
 	opentext
-	writetext OfficerKeithAfterBattleText
+	writetext GuitaristWyattAfterBattleText
 	waitbutton
 	closetext
 	end
 
-OfficerKeithSeenText:
-	text "Who goes there?"
-	line "What are you up"
-	cont "to?"
+GuitaristWyattSeenText:
+	text "I'm practicing"
+	line "for a show!"
 	done
 
-OfficerKeithBeatenText:
-	text "You're a tough"
-	line "little kid."
+GuitaristWyattBeatenText:
+	text "That was"
+	line "electric!"
 	done
 
-OfficerKeithAfterBattleText:
-	text "Yep, I see nothing"
-	line "wrong today. You"
-
-	para "be good and stay"
-	line "out of trouble."
+GuitaristWyattAfterBattleText:
+	text "Well, better get"
+	line "back to work."
 	done
 
 TrainerYoungsterJason:
@@ -283,29 +279,29 @@ PokefanMRobertAfterBattleText:
 	line "this…"
 	done
 
-TrainerOfficerDirk:
-	trainer OFFICER, DIRK, EVENT_BEAT_OFFICER_DIRK, OfficerDirkSeenText, OfficerDirkBeatenText, 0, .Script
+TrainerGuitaristLogan:
+	trainer GUITARIST, LOGAN, EVENT_BEAT_GUITARIST_LOGAN, GuitaristLoganSeenText, GuitaristLoganBeatenText, 0, .Script
 .Script:
 	endifjustbattled
 	opentext
-	writetext OfficerDirkAfterBattleText
+	writetext GuitaristLoganAfterBattleText
 	waitbutton
 	closetext
 	end
 
-OfficerDirkSeenText:
+GuitaristLoganSeenText:
 	text "Watch out for"
-	line "TEAM ROCKET!"
+	line "live wires!"
 	done
 
-OfficerDirkBeatenText:
-	text "Whoa! You can"
-	line "handle yourself!"
+GuitaristLoganBeatenText:
+	text "Whoa!"
+	line "You spark plug!"
 	done
 
-OfficerDirkAfterBattleText:
-	text "Well, better get"
-	line "back to work."
+GuitaristLoganAfterBattleText:
+	text "#MON battles"
+	line "are electrifying!"
 	done
 
 Route11Snorlax:
@@ -496,7 +492,7 @@ Route11_MapEvents:
 	object_event 43,  5, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerYoungsterIan, -1
 	object_event 45,  7, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerPokefanMWilliam, -1
 	object_event 26,  9, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 2, TrainerPokefanFBeverly, -1
-	object_event 36, 11, SPRITE_OFFICER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerOfficerKeith, -1
+	object_event 36, 11, SPRITE_OFFICER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerGuitaristWyatt, -1
 	object_event 22, 12, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerYoungsterJason, -1
 	object_event 10, 14, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerPokefanMRobert, -1
-	object_event 45, 16, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerOfficerDirk, -1
+	object_event 45, 16, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerGuitaristLogan, -1
