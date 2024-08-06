@@ -116,13 +116,25 @@ EvolveAfterBattle_MasterLoop:
 	jr .proceed
 
 .happiness
+;	ld a, [wCurPartyMon]
+;	cp EEVEE
+;	jr z, .check_mode
+;	
+;	cp CHANSEY
+;	jr z, .check_mode
+;	
+;	cp GOLBAT
+;	jr nz, .do_happiness
+;
+;.check_mode
 ;	ld a, [wChallengeMode]
 ;	bit GAME_CHALLENGE_MODE_F, a
 ;	jp nz, .do_happiness
-
-; CHECK HALL OF FAME HERE
-;	jp nz, .dont_evolve_2
-
+;
+;	ld a, [wStatusFlags]
+;	bit STATUSFLAGS_HALL_OF_FAME_F, a
+;	jr z, .dont_evolve_2
+;
 ;.do_happiness
 	ld a, [wTempMonHappiness]
 	cp HAPPINESS_TO_EVOLVE
