@@ -14,13 +14,13 @@ SECTION "Evolutions and Attacks", ROMX
 
 INCLUDE "data/pokemon/evos_attacks_pointers.asm"
 
-BulbasaurEvosAttacks:
+BulbasaurEvosAttacks: ;silvermirror modified
 	db EVOLVE_LEVEL, 16, IVYSAUR
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, GROWL
-	db 7, LEECH_SEED
-	db 10, VINE_WHIP
+	db 7, VINE_WHIP
+	db 10, LEECH_SEED
 	db 15, POISONPOWDER
 	db 15, SLEEP_POWDER
 	db 20, RAZOR_LEAF
@@ -30,15 +30,15 @@ BulbasaurEvosAttacks:
 	db 46, SOLARBEAM
 	db 0 ; no more level-up moves
 
-IvysaurEvosAttacks:
+IvysaurEvosAttacks: ;silvermirror modified
 	db EVOLVE_LEVEL, 32, VENUSAUR
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, GROWL
 	db 1, LEECH_SEED
 	db 4, GROWL
-	db 7, LEECH_SEED
-	db 10, VINE_WHIP
+	db 7, VINE_WHIP
+	db 10, LEECH_SEED
 	db 15, POISONPOWDER
 	db 15, SLEEP_POWDER
 	db 22, RAZOR_LEAF
@@ -48,15 +48,15 @@ IvysaurEvosAttacks:
 	db 56, SOLARBEAM
 	db 0 ; no more level-up moves
 
-VenusaurEvosAttacks:
+VenusaurEvosAttacks: ;silvermirror modified
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, GROWL
 	db 1, LEECH_SEED
 	db 1, VINE_WHIP
 	db 4, GROWL
-	db 7, LEECH_SEED
-	db 10, VINE_WHIP
+	db 7, VINE_WHIP
+	db 10, LEECH_SEED
 	db 15, POISONPOWDER
 	db 15, SLEEP_POWDER
 	db 22, RAZOR_LEAF
@@ -560,11 +560,12 @@ GolbatEvosAttacks:
 	db 55, HAZE
 	db 0 ; no more level-up moves
 
-OddishEvosAttacks:
+OddishEvosAttacks: ;silvermirror modified
 	db EVOLVE_LEVEL, 21, GLOOM
 	db 0 ; no more evolutions
 	db 1, ABSORB
-	db 7, SWEET_SCENT
+	db 1, SWEET_SCENT
+	db 7, ABSORB
 	db 14, POISONPOWDER
 	db 16, STUN_SPORE
 	db 18, SLEEP_POWDER
@@ -573,14 +574,14 @@ OddishEvosAttacks:
 	db 39, PETAL_DANCE
 	db 0 ; no more level-up moves
 
-GloomEvosAttacks:
+GloomEvosAttacks: ;silvermirror modified
 	db EVOLVE_ITEM, LEAF_STONE, VILEPLUME
 	db EVOLVE_ITEM, SUN_STONE, BELLOSSOM
 	db 0 ; no more evolutions
 	db 1, ABSORB
 	db 1, SWEET_SCENT
 	db 1, POISONPOWDER
-	db 7, SWEET_SCENT
+	db 7, ABSORB
 	db 14, POISONPOWDER
 	db 16, STUN_SPORE
 	db 18, SLEEP_POWDER
@@ -685,29 +686,29 @@ DugtrioEvosAttacks:
 	db 61, FISSURE
 	db 0 ; no more level-up moves
 
-MeowthEvosAttacks:
+MeowthEvosAttacks: ;silvermirror modified
 	db EVOLVE_LEVEL, 28, PERSIAN
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, GROWL
 	db 11, BITE
 	db 20, PAY_DAY
-	db 28, FEINT_ATTACK
+	db 28, FURY_SWIPES ;FEINT_ATTACK
 	db 35, SCREECH
-	db 41, FURY_SWIPES
+	db 41, FEINT_ATTACK ;FURY_SWIPES
 	db 46, SLASH
 	db 0 ; no more level-up moves
 
-PersianEvosAttacks:
+PersianEvosAttacks: ;silvermirror modified
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, GROWL
 	db 1, BITE
 	db 11, BITE
 	db 20, PAY_DAY
-	db 29, FEINT_ATTACK
+	db 29, FURY_SWIPES ;FEINT_ATTACK
 	db 38, SCREECH
-	db 46, FURY_SWIPES
+	db 46, FEINT_ATTACK ;FURY_SWIPES
 	db 53, SLASH
 	db 0 ; no more level-up moves
 
@@ -1140,8 +1141,8 @@ FarfetchDEvosAttacks:
 DoduoEvosAttacks:
 	db EVOLVE_LEVEL, 31, DODRIO
 	db 0 ; no more evolutions
-	db 1, PECK
 	db 1, GROWL
+	db 1, PECK
 	db 9, PURSUIT
 	db 13, FURY_ATTACK
 	db 21, TRI_ATTACK
@@ -1205,10 +1206,9 @@ GrimerEvosAttacks:
 
 MukEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, POISON_GAS
 	db 1, POUND
 	db 1, HARDEN
-	db 5, HARDEN
+	db 1, POISON_GAS
 	db 10, DISABLE
 	db 16, SLUDGE
 	db 23, MINIMIZE
@@ -1260,11 +1260,11 @@ GastlyEvosAttacks: ;silvermirror modified
 	db 1, HYPNOSIS
 	db 1, SPITE
 	db 1, LICK
-	db 8, NIGHT_SHADE
-	db 13, CURSE
+	db 8, MEAN_LOOK
+	db 12, CONFUSE_RAY
 	db 16, HYPNOSIS
-	db 21, MEAN_LOOK
-	db 28, CONFUSE_RAY
+	db 21, NIGHT_SHADE
+	db 28, CURSE
 	db 33, DREAM_EATER
 	db 36, DESTINY_BOND
 	db 0 ; no more level-up moves
@@ -1292,13 +1292,13 @@ HaunterEvosAttacks: ;silvermirror modified
 	db 1, HYPNOSIS
 	db 1, SPITE
 	db 1, LICK
-	db 8, NIGHT_SHADE
-	db 13, CURSE
+	db 8, MEAN_LOOK
+	db 12, CONFUSE_RAY
 	db 16, HYPNOSIS
-	db 21, MEAN_LOOK
-	db 31, CONFUSE_RAY
-	db 39, DREAM_EATER
-	db 48, DESTINY_BOND
+	db 21, NIGHT_SHADE
+	db 29, CURSE
+	db 38, DREAM_EATER
+	db 47, DESTINY_BOND
 	db 0 ; no more level-up moves
 
 ;GengarEvosAttacks:
@@ -1320,13 +1320,13 @@ GengarEvosAttacks: ;silvermirror modified
 	db 1, HYPNOSIS
 	db 1, SPITE
 	db 1, LICK
-	db 8, NIGHT_SHADE
-	db 13, CURSE
+	db 8, MEAN_LOOK
+	db 12, CONFUSE_RAY
 	db 16, HYPNOSIS
-	db 21, MEAN_LOOK
-	db 31, CONFUSE_RAY
-	db 39, DREAM_EATER
-	db 48, DESTINY_BOND
+	db 21, NIGHT_SHADE
+	db 29, CURSE
+	db 38, DREAM_EATER
+	db 47, DESTINY_BOND
 	db 0 ; no more level-up moves
 
 OnixEvosAttacks:
@@ -1517,11 +1517,12 @@ HitmonchanEvosAttacks:
 	db 50, COUNTER
 	db 0 ; no more level-up moves
 
-LickitungEvosAttacks:
+LickitungEvosAttacks: ;silvermirror modified
 	db 0 ; no more evolutions
 	db 1, LICK
-	db 7, SUPERSONIC
-	db 13, DEFENSE_CURL
+	db 1, DEFENSE_CURL
+	db 7, LICK
+	db 13, SUPERSONIC
 	db 19, STOMP
 	db 25, WRAP
 	db 31, DISABLE
@@ -1529,33 +1530,32 @@ LickitungEvosAttacks:
 	db 43, SCREECH
 	db 0 ; no more level-up moves
 
-KoffingEvosAttacks:
+KoffingEvosAttacks: ;silvermirror modified
 	db EVOLVE_LEVEL, 35, WEEZING
 	db 0 ; no more evolutions
 	db 1, POISON_GAS
 	db 1, TACKLE
 	db 9, SMOG
-	db 17, SELFDESTRUCT
+	db 17, HAZE
 	db 21, SLUDGE
 	db 25, SMOKESCREEN
-	db 33, HAZE
-	db 41, EXPLOSION
-	db 45, DESTINY_BOND
+	db 30, SELFDESTRUCT
+	db 37, DESTINY_BOND
+	db 44, EXPLOSION
 	db 0 ; no more level-up moves
 
-WeezingEvosAttacks:
+WeezingEvosAttacks: ;silvermirror modified
 	db 0 ; no more evolutions
+	db 1, SELFDESTRUCT
 	db 1, POISON_GAS
 	db 1, TACKLE
-	db 1, SMOG
-	db 1, SELFDESTRUCT
 	db 9, SMOG
-	db 17, SELFDESTRUCT
+	db 17, HAZE
 	db 21, SLUDGE
 	db 25, SMOKESCREEN
-	db 33, HAZE
-	db 44, EXPLOSION
-	db 51, DESTINY_BOND
+	db 30, SELFDESTRUCT
+	db 39, DESTINY_BOND
+	db 48, EXPLOSION
 	db 0 ; no more level-up moves
 
 RhyhornEvosAttacks:
@@ -2333,8 +2333,8 @@ LedianEvosAttacks:
 SpinarakEvosAttacks:
 	db EVOLVE_LEVEL, 22, ARIADOS
 	db 0 ; no more evolutions
-	db 1, POISON_STING
 	db 1, STRING_SHOT
+	db 1, POISON_STING
 	db 6, SCARY_FACE
 	db 11, CONSTRICT
 	db 17, NIGHT_SHADE
@@ -2347,10 +2347,10 @@ SpinarakEvosAttacks:
 
 AriadosEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, POISON_STING
 	db 1, STRING_SHOT
-	db 1, SCARY_FACE
-	db 1, CONSTRICT
+	db 1, POISON_STING
+;	db 1, SCARY_FACE
+;	db 1, CONSTRICT
 	db 6, SCARY_FACE
 	db 11, CONSTRICT
 	db 17, NIGHT_SHADE
@@ -2458,8 +2458,8 @@ TogeticEvosAttacks:
 NatuEvosAttacks:
 	db EVOLVE_LEVEL, 25, XATU
 	db 0 ; no more evolutions
-	db 1, PECK
 	db 1, LEER
+	db 1, PECK
 	db 10, NIGHT_SHADE
 	db 20, TELEPORT
 	db 30, FUTURE_SIGHT
@@ -2469,9 +2469,9 @@ NatuEvosAttacks:
 
 XatuEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, PECK
 	db 1, LEER
-	db 1, NIGHT_SHADE
+	db 1, PECK
+;	db 1, NIGHT_SHADE
 	db 10, NIGHT_SHADE
 	db 20, TELEPORT
 	db 35, FUTURE_SIGHT
@@ -2879,12 +2879,12 @@ GranbullEvosAttacks:
 	db 51, TAKE_DOWN
 	db 0 ; no more level-up moves
 
-QwilfishEvosAttacks:
+QwilfishEvosAttacks: ;silvermirror modified
 	db 0 ; no more evolutions
 	db 1, SPIKES
 	db 1, TACKLE
-	db 1, POISON_STING
-	db 10, HARDEN
+	db 1, HARDEN
+	db 7, POISON_STING
 	db 10, MINIMIZE
 	db 19, WATER_GUN
 	db 28, PIN_MISSILE
