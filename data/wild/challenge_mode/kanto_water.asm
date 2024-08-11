@@ -38,8 +38,8 @@ KantoWaterWildMonsChallenge:
 	def_water_wildmons ROUTE_10_NORTH ;GEN1
 	db 2 percent ; encounter rate
 	db 10, GOLDEEN    ; 50
-	db 10, CHINCHOU   ; 30
-	db  5, MAGIKARP   ; 10
+	db  5, MAGIKARP   ; 30
+	db 10, CHINCHOU   ; 10
 	db 15, SEAKING    ; 10
 	end_water_wildmons
 
@@ -147,12 +147,12 @@ KantoWaterWildMonsChallenge:
 	db 20, GYARADOS   ; 10
 	end_water_wildmons
 
-;	def_water_wildmons PALLET_TOWN ;GEN1
-;	db 6 percent ; encounter rate
-;	db 15, TENTACOOL  ; 50
-;	db 16, HORSEA     ; 30
-;	db 15, CORSOLA    ; 10
-;	db 16, STARYU     ; 10
+	def_water_wildmons PALLET_TOWN ;GEN1
+	db 4 percent ; encounter rate
+	db 15, TENTACOOL  ; 50
+	db 16, HORSEA     ; 30
+	db 15, CORSOLA    ; 10
+	db 16, MANTINE    ; 10
 ;	end_water_wildmons
 
 	def_water_wildmons VIRIDIAN_CITY ;GEN1
@@ -214,7 +214,7 @@ KantoWaterWildMonsChallenge:
 	def_water_wildmons CERULEAN_CAVE_1F ;GEN1
 	db 4 percent ; encounter rate
 	db 10, MAGIKARP   ; 50
-	db 10, SLOWPOKE   ; 30
+	db 10, GOLDUCK    ; 30
 	db 20, SLOWBRO    ; 10
 	db 25, GYARADOS   ; 10
 	end_water_wildmons
@@ -222,7 +222,7 @@ KantoWaterWildMonsChallenge:
 	def_water_wildmons CERULEAN_CAVE_B1F ;GEN1
 	db 4 percent ; encounter rate
 	db 10, MAGIKARP   ; 50
-	db 10, SLOWPOKE   ; 30
+	db 10, GOLDUCK    ; 30
 	db 20, SLOWBRO    ; 10
 	db 25, GYARADOS   ; 10
 	end_water_wildmons

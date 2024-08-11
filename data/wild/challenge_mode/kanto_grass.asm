@@ -164,7 +164,7 @@ KantoGrassWildMonsChallenge:
 ;	db  8, SENTRET    ;  4% chance
 ;	db  8, SENTRET    ;  1% chance
 	; day
-	db  8, SPEAROW    ; 20% chance 40
+	db  8, SPEAROW    ; 20% chance 50
 	db  8, SPEAROW    ; 20% chance
 	db  8, SENTRET    ; 15% chance 20
 	db  8, SPEAROW    ; 10% chance
@@ -178,7 +178,7 @@ KantoGrassWildMonsChallenge:
 	db  8, HOOTHOOT   ; 20% chance 40
 	db  8, HOOTHOOT   ; 20% chance
 	db  8, RATTATA    ; 15% chance 20
-	db  7, ZUBAT      ; 10% chance
+	db  7, ZUBAT      ; 10% chance 10
 	db  8, SANDSHREW  ; 10% chance 10
 	db  8, EKANS      ; 10% chance 10
 	db  9, MANKEY     ;  5% chance 10
@@ -281,7 +281,7 @@ KantoGrassWildMonsChallenge:
 	db 20, SENTRET    ; 10% chance
 	db 20, PIDGEY     ; 10% chance 10
 	db 23, PIDGEOTTO  ; 10% chance 10
-	db 18, VULPIX     ;  5% chance
+	db 18, VULPIX     ;  5% chance 10
 	db 18, VULPIX     ;  5% chance
 	db 22, KADABRA    ;  4% chance 5
 	db 22, KADABRA    ;  1% chance
@@ -327,7 +327,7 @@ KantoGrassWildMonsChallenge:
 	db 12, ABRA       ; 20% chance 20
 	db 17, MEOWTH     ; 15% chance 25
 	db 17, MEOWTH     ; 10% chance
-	db 16, GASTLY     ; 10% chance
+	db 16, GASTLY     ; 10% chance 10
 	db 20, MURKROW    ; 10% chance 10
 	db 18, HOUNDOUR   ;  5% chance 10
 	db 18, HOUNDOUR   ;  5% chance
@@ -425,14 +425,14 @@ KantoGrassWildMonsChallenge:
 	; day
 	db 15, SANDSHREW  ; 20% chance 30
 	db 15, EKANS      ; 20% chance 30
-	db 16, SPEAROW    ; 15% chance 25
+	db 16, SPEAROW    ; 15% chance 30
 	db 15, SANDSHREW  ; 10% chance
 	db 15, EKANS      ; 10% chance
 	db 10, HOPPIP     ; 10% chance 10
 	db 16, SPEAROW    ;  5% chance
 	db 16, SPEAROW    ;  5% chance
 	db 16, SPEAROW    ;  4% chance
-	db 16, PIDGEOTTO  ;  1% chance
+	db 16, SPEAROW    ;  1% chance
 	; nite
 	db 15, SANDSHREW  ; 20% chance 30
 	db 15, EKANS      ; 20% chance 30
@@ -460,7 +460,7 @@ KantoGrassWildMonsChallenge:
 ;	db 26, FARFETCH_D ;  4% chance 5
 ;	db 26, FARFETCH_D ;  1% chance
 	; day
-	db 25, BELLSPROUT ; 20% chance 35
+	db 25, BELLSPROUT ; 20% chance 40
 	db 23, PIDGEY     ; 20% chance 20
 	db 25, BELLSPROUT ; 15% chance
 	db 27, PIDGEOTTO  ; 10% chance 10
@@ -471,7 +471,7 @@ KantoGrassWildMonsChallenge:
 	db 26, FARFETCH_D ;  4% chance 5
 	db 26, FARFETCH_D ;  1% chance
 	; nite
-	db 25, ODDISH     ; 20% chance 35
+	db 25, ODDISH     ; 20% chance 40
 	db 23, HOOTHOOT   ; 20% chance 20
 	db 25, ODDISH     ; 15% chance
 	db 27, NOCTOWL    ; 10% chance 10
@@ -497,7 +497,7 @@ KantoGrassWildMonsChallenge:
 ;	db 26, FARFETCH_D ;  4% chance 5
 ;	db 26, FARFETCH_D ;  1% chance
 	; day
-	db 25, BELLSPROUT ; 20% chance 35
+	db 25, BELLSPROUT ; 20% chance 40
 	db 23, PIDGEY     ; 20% chance 20
 	db 25, BELLSPROUT ; 15% chance
 	db 27, PIDGEOTTO  ; 10% chance 10
@@ -508,7 +508,7 @@ KantoGrassWildMonsChallenge:
 	db 26, FARFETCH_D ;  4% chance 5
 	db 26, FARFETCH_D ;  1% chance
 	; nite
-	db 25, ODDISH     ; 20% chance 35
+	db 25, ODDISH     ; 20% chance 40
 	db 23, HOOTHOOT   ; 20% chance 20
 	db 25, ODDISH     ; 15% chance
 	db 27, NOCTOWL    ; 10% chance 10
@@ -520,7 +520,7 @@ KantoGrassWildMonsChallenge:
 	db 26, FARFETCH_D ;  1% chance
 	end_grass_wildmons
 
-	def_grass_wildmons ROUTE_14; | ROUTE_15 ; GEN2
+	def_grass_wildmons ROUTE_14 ;GEN2
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 ;	db 26, BELLSPROUT ; 20% chance 40
@@ -537,7 +537,7 @@ KantoGrassWildMonsChallenge:
 	db 26, BELLSPROUT ; 20% chance 40
 	db 26, BELLSPROUT ; 20% chance
 	db 24, PIDGEY     ; 15% chance 20
-	db 28, PIDGEOTTO  ; 10% chance
+	db 28, PIDGEOTTO  ; 10% chance 10
 	db 29, WEEPINBELL ; 10% chance 10
 	db 24, HOPPIP     ; 10% chance 10
 	db 24, PIDGEY     ;  5% chance
@@ -548,7 +548,7 @@ KantoGrassWildMonsChallenge:
 	db 26, ODDISH     ; 20% chance 40
 	db 26, ODDISH     ; 20% chance
 	db 24, HOOTHOOT   ; 15% chance 20
-	db 28, NOCTOWL    ; 10% chance
+	db 28, NOCTOWL    ; 10% chance 10
 	db 29, GLOOM      ; 10% chance 10
 	db 24, VENONAT    ; 10% chance 10
 	db 24, HOOTHOOT   ;  5% chance
@@ -574,7 +574,7 @@ KantoGrassWildMonsChallenge:
 	db 26, BELLSPROUT ; 20% chance 40
 	db 26, BELLSPROUT ; 20% chance
 	db 24, PIDGEY     ; 15% chance 20
-	db 28, PIDGEOTTO  ; 10% chance
+	db 28, PIDGEOTTO  ; 10% chance 10
 	db 29, WEEPINBELL ; 10% chance 10
 	db 24, HOPPIP     ; 10% chance 10
 	db 24, PIDGEY     ;  5% chance
@@ -585,7 +585,7 @@ KantoGrassWildMonsChallenge:
 	db 26, ODDISH     ; 20% chance 40
 	db 26, ODDISH     ; 20% chance
 	db 24, HOOTHOOT   ; 15% chance 20
-	db 28, NOCTOWL    ; 10% chance
+	db 28, NOCTOWL    ; 10% chance 10
 	db 29, GLOOM      ; 10% chance 10
 	db 24, VENONAT    ; 10% chance 10
 	db 24, HOOTHOOT   ;  5% chance
@@ -1063,7 +1063,7 @@ KantoGrassWildMonsChallenge:
 	db  7, ZUBAT      ;  4% chance
 	db  8, CLEFAIRY   ;  1% chance 1
 	; nite
-	db  6, ZUBAT      ; 20% chance 79
+	db  6, ZUBAT      ; 20% chance 76
 	db  6, ZUBAT      ; 20% chance
 	db  6, ZUBAT      ; 15% chance
 	db  7, ZUBAT      ; 10% chance
@@ -1422,23 +1422,23 @@ KantoGrassWildMonsChallenge:
 ;	db 26, GOLDUCK    ;  4% chance 5
 ;	db 26, GOLDUCK    ;  1% chance
 	; day
-	db 19, ZUBAT      ; 20% chance 35
-	db 20, KRABBY     ; 20% chance 20
-	db 20, ZUBAT      ; 15% chance
-	db 20, PSYDUCK    ; 10% chance 10
+	db 19, ZUBAT      ; 20% chance 30
+	db 20, PSYDUCK    ; 20% chance 20
+	db 20, KRABBY     ; 15% chance 25
+	db 20, KRABBY     ; 10% chance
 	db 20, SHELLDER   ; 10% chance 10
-	db 20, STARYU     ; 10% chance 10
+	db 19, ZUBAT      ; 10% chance
 	db 30, GOLBAT     ;  5% chance 5
 	db 28, KINGLER    ;  5% chance 5
 	db 26, GOLDUCK    ;  4% chance 5
 	db 26, GOLDUCK    ;  1% chance
 	; nite
-	db 19, ZUBAT      ; 20% chance 35
-	db 20, KRABBY     ; 20% chance 20
-	db 20, ZUBAT      ; 15% chance
-	db 20, PSYDUCK    ; 10% chance 10
+	db 19, ZUBAT      ; 20% chance 30
+	db 20, PSYDUCK    ; 20% chance 20
+	db 20, KRABBY     ; 15% chance 25
+	db 20, KRABBY     ; 10% chance
 	db 20, SHELLDER   ; 10% chance 10
-	db 20, STARYU     ; 10% chance 10
+	db 19, ZUBAT      ; 10% chance
 	db 30, GOLBAT     ;  5% chance 5
 	db 28, KINGLER    ;  5% chance 5
 	db 26, GOLDUCK    ;  4% chance 5
@@ -1900,7 +1900,7 @@ KantoGrassWildMonsChallenge:
 ;	db 52, PARASECT   ; 10% chance 10
 ;	db 52, VENOMOTH   ;  5% chance 10
 ;	db 52, VENOMOTH   ;  5% chance 10
-;	db 48, WOBBUFFET  ;  4% chance
+;	db 48, WOBBUFFET  ;  4% chance 5
 ;	db 48, WOBBUFFET  ;  1% chance
 	; day
 	db 50, GOLBAT     ; 20% chance 35
@@ -1911,7 +1911,7 @@ KantoGrassWildMonsChallenge:
 	db 52, PARASECT   ; 10% chance 10
 	db 52, VENOMOTH   ;  5% chance 10
 	db 52, VENOMOTH   ;  5% chance 10
-	db 48, WOBBUFFET  ;  4% chance
+	db 48, WOBBUFFET  ;  4% chance 5
 	db 48, WOBBUFFET  ;  1% chance
 	; nite
 	db 50, GOLBAT     ; 20% chance 35
@@ -1922,7 +1922,7 @@ KantoGrassWildMonsChallenge:
 	db 52, PARASECT   ; 10% chance 10
 	db 52, VENOMOTH   ;  5% chance 10
 	db 52, VENOMOTH   ;  5% chance 10
-	db 48, WOBBUFFET  ;  4% chance
+	db 48, WOBBUFFET  ;  4% chance 5
 	db 48, WOBBUFFET  ;  1% chance
 	end_grass_wildmons
 
