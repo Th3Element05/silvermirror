@@ -53,8 +53,6 @@ const	STATUSFLAGS_HALL_OF_FAME_F ; 6
 
 TEST to-do
 
-SPRITE_CHEF use SILVER
-
 enable code for, and test, happines evolution challenge/beforeHOF/afterHOF
 
 test daycareman/daycarelady intro "\engine\events\daycare.asm" DayCareLadyIntroText:
