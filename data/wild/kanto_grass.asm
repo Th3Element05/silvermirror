@@ -1460,23 +1460,23 @@ KantoGrassWildMons:
 ;	db 26, GOLDUCK    ;  4% chance 5
 ;	db 26, GOLDUCK    ;  1% chance
 	; day
-	db 19, ZUBAT      ; 20% chance 35
-	db 20, KRABBY     ; 20% chance 20
-	db 20, ZUBAT      ; 15% chance
-	db 20, PSYDUCK    ; 10% chance 10
+	db 19, ZUBAT      ; 20% chance 30
+	db 20, PSYDUCK    ; 20% chance 20
+	db 20, KRABBY     ; 15% chance 25
+	db 20, KRABBY     ; 10% chance
 	db 20, SHELLDER   ; 10% chance 10
-	db 20, STARYU     ; 10% chance 10
+	db 19, ZUBAT      ; 10% chance
 	db 30, GOLBAT     ;  5% chance 5
 	db 28, KINGLER    ;  5% chance 5
 	db 26, GOLDUCK    ;  4% chance 5
 	db 26, GOLDUCK    ;  1% chance
 	; nite
-	db 19, ZUBAT      ; 20% chance 35
-	db 20, KRABBY     ; 20% chance 20
-	db 20, ZUBAT      ; 15% chance
-	db 20, PSYDUCK    ; 10% chance 10
+	db 19, ZUBAT      ; 20% chance 30
+	db 20, PSYDUCK    ; 20% chance 20
+	db 20, KRABBY     ; 15% chance 25
+	db 20, KRABBY     ; 10% chance
 	db 20, SHELLDER   ; 10% chance 10
-	db 20, STARYU     ; 10% chance 10
+	db 19, ZUBAT      ; 10% chance
 	db 30, GOLBAT     ;  5% chance 5
 	db 28, KINGLER    ;  5% chance 5
 	db 26, GOLDUCK    ;  4% chance 5
