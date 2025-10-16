@@ -113,6 +113,7 @@ DEF KANTO_LANDMARK EQU const_value
 	const LANDMARK_UNDERGROUND_PATH  ; moved
 	const LANDMARK_SS_ANNE           ; 68 ; LANDMARK_FAST_SHIP
 	const LANDMARK_ROCKET_HIDEOUT    ; silvermirror+
+	const LANDMARK_FAST_SHIP
 DEF NUM_LANDMARKS EQU const_value
 
 ; used in CaughtData

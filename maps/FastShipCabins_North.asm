@@ -4,7 +4,7 @@
 ;	const FASTSHIPCABINS_SW_SSW_NW_BEAUTY
 ;	const FASTSHIPCABINS_SW_SSW_NW_ROCKER
 
-FastShipCabins_SW_SSW_NW_MapScripts:
+FastShipCabins_North_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
@@ -62,55 +62,8 @@ FastShipCabins_SW_SSW_NW_MapScripts:
 ;	closetext
 ;	end
 
-;FastShipBed:
-;	opentext
-;	writetext FastShipBedText1
-;	waitbutton
-;	closetext
-;	special FadeBlackQuickly
-;	special ReloadSpritesNoPalettes
-;	special StubbedTrainerRankings_Healings
-;	special HealParty
-;	playmusic MUSIC_HEAL
-;	pause 60
-;	special RestartMapMusic
-;	special FadeInQuickly
-;	opentext
-;	writetext FastShipBedText2
-;	waitbutton
-;	closetext
-;	checkevent EVENT_FAST_SHIP_HAS_ARRIVED
-;	iftrue .AlreadyArrived
-;	checkevent EVENT_FAST_SHIP_FOUND_GIRL
-;	iftrue .CanArrive
-;	checkevent EVENT_FAST_SHIP_FIRST_TIME
-;	iftrue .CanArrive
-;.AlreadyArrived:
-;	end
-;
-;.CanArrive:
-;	playsound SFX_ELEVATOR_END
-;	pause 30
-;	checkevent EVENT_FAST_SHIP_DESTINATION_OLIVINE
-;	iftrue .ArrivedOlivine
-;	opentext
-;	writetext FastShipArrivedVermilionText
-;	waitbutton
-;	closetext
-;	setevent EVENT_FAST_SHIP_HAS_ARRIVED
-;	end
-;
-;.ArrivedOlivine:
-;	opentext
-;	writetext FastShipArrivedOlivineText
-;	waitbutton
-;	closetext
-;	setevent EVENT_FAST_SHIP_HAS_ARRIVED
-;	end
 
-;FastShipCabinsNorthwestCabinTrashcan:
-;	jumpstd TrashCanScript
-;
+
 ;FirebreatherLyleSeenText:
 ;	text "I'm going to KANTO"
 ;	line "to put on fire-"
@@ -197,45 +150,96 @@ FastShipCabins_SW_SSW_NW_MapScripts:
 ;	para "what's today's"
 ;	line "lucky number?"
 ;	done
-;
-;FastShipBedText1:
-;	text "A comfy bed!"
-;	line "Time to sleep…"
-;	done
-;
-;FastShipBedText2:
-;	text "Ah, refreshed and"
-;	line "restored!"
-;	done
-;
-;FastShipArrivedOlivineText:
-;	text "FAST SHIP S.S.AQUA"
-;	line "has arrived in"
-;	cont "OLIVINE CITY."
-;	done
-;
-;FastShipArrivedVermilionText:
-;	text "FAST SHIP S.S.AQUA"
-;	line "has arrived in"
-;	cont "VERMILION CITY."
-;	done
 
-FastShipCabins_SW_SSW_NW_MapEvents:
+
+
+FastShipBed:
+	opentext
+	writetext FastShipBedText1
+	waitbutton
+	closetext
+	special FadeBlackQuickly
+	special ReloadSpritesNoPalettes
+	special StubbedTrainerRankings_Healings
+	special HealParty
+	playmusic MUSIC_HEAL
+	pause 60
+	special RestartMapMusic
+	special FadeInQuickly
+	opentext
+	writetext FastShipBedText2
+	waitbutton
+	closetext
+	checkevent EVENT_FAST_SHIP_HAS_ARRIVED
+	iftrue .AlreadyArrived
+	checkevent EVENT_FAST_SHIP_COMPLETED_FIRST_TRIP
+	iftrue .CanArrive
+.AlreadyArrived:
+	end
+
+.CanArrive:
+	playsound SFX_ELEVATOR_END
+	pause 30
+	checkevent EVENT_FAST_SHIP_DESTINATION_OLIVINE
+	iftrue .ArrivedOlivine
+	opentext
+	writetext FastShipArrivedVermilionText
+	waitbutton
+	closetext
+	setevent EVENT_FAST_SHIP_HAS_ARRIVED
+	end
+
+.ArrivedOlivine:
+	opentext
+	writetext FastShipArrivedOlivineText
+	waitbutton
+	closetext
+	setevent EVENT_FAST_SHIP_HAS_ARRIVED
+	end
+
+FastShipBedText1:
+	text "A comfy bed!"
+	line "Time to sleep…"
+	done
+
+FastShipBedText2:
+	text "Ah, refreshed and"
+	line "restored!"
+	done
+
+FastShipArrivedOlivineText:
+	text "FAST SHIP S.S.AQUA"
+	line "has arrived in"
+	cont "OLIVINE CITY."
+	done
+
+FastShipArrivedVermilionText:
+	text "FAST SHIP S.S.AQUA"
+	line "has arrived in"
+	cont "VERMILION CITY."
+	done
+
+FastShipCabinsNorthwestCabinTrashcan:
+	jumpstd TrashCanScript
+
+FastShipCabins_North_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-;	warp_event  2,  0, FAST_SHIP_1F, 5
-;	warp_event  2, 19, FAST_SHIP_1F, 6
-;	warp_event  3, 19, FAST_SHIP_1F, 6
-;	warp_event  2, 31, FAST_SHIP_1F, 7
-;	warp_event  3, 31, FAST_SHIP_1F, 7
+	warp_event  4,  1, FAST_SHIP_1F, 2
+	warp_event  2, 13, FAST_SHIP_1F, 3
+	warp_event  2, 25, FAST_SHIP_1F, 4
+	warp_event  2, 37, FAST_SHIP_1F, 5
 
 	def_coord_events
 
 	def_bg_events
-;	bg_event  7,  1, BGEVENT_READ, FastShipBed
-;	bg_event  7,  2, BGEVENT_READ, FastShipBed
-;	bg_event  7,  7, BGEVENT_READ, FastShipCabinsNorthwestCabinTrashcan
+	bg_event  7,  2, BGEVENT_READ, FastShipBed
+	bg_event  7,  3, BGEVENT_READ, FastShipBed
+	bg_event  7,  7, BGEVENT_READ, FastShipCabinsNorthwestCabinTrashcan
+	bg_event  4, 14, BGEVENT_READ, FastShipCabinsNorthwestCabinTrashcan
+	bg_event  7, 31, BGEVENT_READ, FastShipCabinsNorthwestCabinTrashcan
+	bg_event  6, 38, BGEVENT_READ, FastShipCabinsNorthwestCabinTrashcan
 
 	def_object_events
 ;	object_event  1, 15, SPRITE_FISHER, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerFirebreatherLyle, EVENT_FAST_SHIP_PASSENGERS_FIRST_TRIP

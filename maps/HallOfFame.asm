@@ -45,10 +45,11 @@ HallOfFameEnterScript:
 ;	clearevent EVENT_INDIGO_POKECENTER_LANCE
 ;	setmapscene INDIGO_PLATEAU_POKECENTER_1F, SCENE_INDIGOPLATEAUPOKECENTER1F_LANCE
 ;.SkipDragonFang
-;	checkevent EVENT_GOT_SS_TICKET_FROM_ELM
-;	iftrue .SkipPhoneCall
-;	specialphonecall SPECIALCALL_SSTICKET
-;.SkipPhoneCall:
+	checkevent EVENT_GOT_SS_TICKET_FROM_OAK
+	iftrue .SkipPhoneCall
+	specialphonecall SPECIALCALL_SSTICKET
+	setmapscene VERMILION_CITY, SCENE_VERMILIONCITY_SSAQUA_FIRST_TIME
+.SkipPhoneCall:
 	halloffame
 	end
 

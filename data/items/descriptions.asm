@@ -523,8 +523,8 @@ OaksParcelDesc:
 	next "PROF.OAK.@"
 
 SSTicketDesc:
-	db   "A ticket for the"
-	next "S.S.AQUA.@"
+	db   "A ticket to ride"
+	next "the S.S.AQUA.@"
 
 MysteryEggDesc:
 	db   "An EGG obtained"

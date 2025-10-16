@@ -28,24 +28,24 @@ OlivineGymJasmineScript:
 ;	readvar VAR_BADGES
 ;	scall OlivineGymActivateRockets
 .FightDone:
-;	checkevent EVENT_GOT_TM23_IRON_TAIL
-;	iftrue .GotIronTail
+	checkevent EVENT_GOT_TM23_IRON_TAIL
+	iftrue .GotIronTail
 	writetext Jasmine_BadgeSpeech
-;	promptbutton
-;	verbosegiveitem TM_IRON_TAIL
-;	iffalse .NoRoomForIronTail
-;	setevent EVENT_GOT_TM23_IRON_TAIL
-;	writetext Jasmine_IronTailSpeech
+	promptbutton
+	verbosegiveitem TM_IRON_TAIL
+	iffalse .NoRoomForIronTail
+	setevent EVENT_GOT_TM23_IRON_TAIL
+	writetext Jasmine_IronTailSpeech
 	waitbutton
 	closetext
 	end
 
-;.GotIronTail:
-;	writetext Jasmine_GoodLuck
-;	waitbutton
-;.NoRoomForIronTail:
-;	closetext
-;	end
+.GotIronTail:
+	writetext Jasmine_GoodLuck
+	waitbutton
+.NoRoomForIronTail:
+	closetext
+	end
 
 ;OlivineGymActivateRockets:
 ;	ifequal 7, .RadioTowerRockets
@@ -93,17 +93,17 @@ OlivineGymStatue:
 	jumpstd GymStatue2Script
 
 Jasmine_SteelTypeIntro:
-	text "…Thank you for"
-	line "your help at the"
-	cont "LIGHTHOUSE…"
-
-	para "But this is dif-"
-	line "ferent. Please"
-
-	para "allow me to intro-"
-	line "duce myself."
-
-	para "I am JASMINE, a"
+;	text "…Thank you for"
+;	line "your help at the"
+;	cont "LIGHTHOUSE…"
+;
+;	para "But this is dif-"
+;	line "ferent. Please"
+;
+;	para "allow me to intro-"
+;	line "duce myself."
+;
+	text "I am JASMINE, a"
 	line "GYM LEADER. I use"
 	cont "the steel-type."
 
@@ -121,9 +121,6 @@ Jasmine_BetterTrainer:
 	text "…You are a better"
 	line "trainer than me,"
 
-	para "in both skill and"
-	line "kindness."
-
 	para "In accordance with"
 	line "LEAGUE rules, I"
 
@@ -137,17 +134,18 @@ Text_ReceivedMineralBadge:
 	done
 
 Jasmine_BadgeSpeech:
-	text "MINERALBADGE"
-	line "raises #MON's"
-	cont "DEFENSE."
-
-	para "…Um… Please take"
+;	text "MINERALBADGE"
+;	line "raises #MON's"
+;	cont "DEFENSE."
+;
+	text "…Um… Please take"
 	line "this too…"
 	done
 
 Text_ReceivedTM09: ; unreferenced
 	text "<PLAYER> received"
-	line "TM09."
+;	line "TM09."
+	line "TM65."
 	done
 
 Jasmine_IronTailSpeech:
@@ -163,7 +161,10 @@ Jasmine_GoodLuck:
 	done
 
 OlivineGymGuideText:
-	text "JASMINE uses the"
+	text "Yo! CHAMP in"
+	line "making!"
+
+	para "JASMINE uses the"
 	line "newly discovered"
 	cont "steel-type."
 
@@ -182,18 +183,35 @@ OlivineGymGuideWinText:
 	cont "unknown kind!"
 	done
 
-OlivineGymGuidePreText:
-	text "JASMINE, the GYM"
-	line "LEADER, is at the"
-	cont "LIGHTHOUSE."
-
-	para "She's been tending"
-	line "to a sick #MON."
-
-	para "A strong trainer"
-	line "has to be compas-"
-	cont "sionate."
-	done
+;OlivineGymGuidePreText:
+;	text "JASMINE, the GYM"
+;	line "LEADER, is at the"
+;	cont "LIGHTHOUSE."
+;
+;	para "She's been tending"
+;	line "to a sick #MON."
+;
+;	para "A strong trainer"
+;	line "has to be compas-"
+;	cont "sionate."
+;	done
+;
+;	text "Yo! CHAMP in"
+;	line "making!"
+;
+;	para "You lucked out"
+;	line "this time."
+;
+;	para "JASMINE is very"
+;	line "compasionate. She"
+;
+;	para "is often out help-"
+;	line "ing sick #MON."
+;
+;	para "But she happens"
+;	line "to be here at the"
+;	cont "GYM right now!"
+;	done
 
 OlivineGym_MapEvents:
 	db 0, 0 ; filler
@@ -205,9 +223,9 @@ OlivineGym_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  3, 13, BGEVENT_READ, OlivineGymStatue
-	bg_event  6, 13, BGEVENT_READ, OlivineGymStatue
+	bg_event  2, 13, BGEVENT_READ, OlivineGymStatue
+	bg_event  7, 13, BGEVENT_READ, OlivineGymStatue
 
 	def_object_events
-	object_event  5,  3, SPRITE_JASMINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineGymJasmineScript, -1 ; EVENT_OLIVINE_GYM_JASMINE
-	object_event  7, 13, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineGymGuideScript, -1
+	object_event  5,  1, SPRITE_JASMINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineGymJasmineScript, -1 ; EVENT_OLIVINE_GYM_JASMINE
+	object_event  6, 13, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineGymGuideScript, -1

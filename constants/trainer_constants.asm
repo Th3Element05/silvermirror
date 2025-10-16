@@ -173,8 +173,8 @@ DEF KRIS EQU __trainer_class__
 	const GRUNTM_27
 	const GRUNTM_28
 ; johto
-	const GRUNTM_29
-	const GRUNTM_30
+	const GRUNTM_29 ; fast ship engine room
+	const GRUNTM_30 ; fast ship captains cabin
 
 	trainerclass GRUNTF ; 1c
 ; kanto
@@ -192,12 +192,14 @@ DEF KRIS EQU __trainer_class__
 ; kanto
 	const EXECUTIVEM_1
 	const EXECUTIVEM_2
+; johto
+	const EXECUTIVEM_3 ; fast ship engine room
 
 	trainerclass EXECUTIVEF ; 1e
 ; kanto
 	const EXECUTIVEF_1
 ; johto
-	const EXECUTIVEF_2
+	const EXECUTIVEF_2 ; fast ship captains cabin
 
 	trainerclass SCIENTIST ; 1f
 ; kanto

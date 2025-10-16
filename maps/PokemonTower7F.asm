@@ -15,7 +15,9 @@ PokemonTower7FMrFujiScript:
 	waitbutton
 	closetext
 	setevent EVENT_POKEMON_TOWER_7F_MR_FUJI
+	setevent EVENT_SAFFRON_CITY_ROCKET_GUARD
 	clearevent EVENT_MR_FUJIS_HOUSE_MR_FUJI
+	clearevent EVENT_SAFFRON_CITY_ROCKET_SLEEP
 	setmapscene MR_FUJIS_HOUSE, SCENE_MRFUJISHOUSE_POKEFLUTE
 	special FadeBlackQuickly
 	special ReloadSpritesNoPalettes

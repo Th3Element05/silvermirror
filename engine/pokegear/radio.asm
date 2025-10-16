@@ -377,8 +377,11 @@ OaksPKMNTalkSwarm1:
 
 .InJohto:
 ; if in Johto or on the S.S. Aqua, set carry
+
 ; otherwise clear carry
 	ld a, [wPokegearMapPlayerIconLandmark]
+	cp LANDMARK_FAST_SHIP
+	jr z, .johto
 	cp LANDMARK_SS_ANNE
 	jr z, .kanto ;silvermirror ; .johto
 	cp KANTO_LANDMARK

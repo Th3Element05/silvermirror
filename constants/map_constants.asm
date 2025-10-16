@@ -113,19 +113,24 @@ ENDM
 
 	newgroup SS_ANNE ; FAST_SHIP                                  ;  6
 	map_const VERMILION_PORT,                              10,  9 ;  1
-	map_const OLIVINE_PORT,                                10, 18 ;  2
-	map_const SS_ANNE_1F,                                  19,  8 ;  3
-	map_const SS_ANNE_ROOMS_1F,                            12,  8 ;  4
-	map_const SS_ANNE_ROOMS_B1F,                           12,  8 ;  5
+	map_const OLIVINE_PORT,                                10,  9 ;  2
+	map_const SS_ANNE_1F,                                  18,  8 ;  3
+	map_const SS_ANNE_ROOMS_1F,                             7, 16 ;  4
+	map_const SS_ANNE_ROOMS_B1F,                            7, 16 ;  5
 	map_const SS_ANNE_KITCHEN,                              7,  7 ;  6
-	map_const SS_ANNE_2F,                                  19,  8 ;  7
+	map_const SS_ANNE_2F,                                  19,  9 ;  7
 	map_const SS_ANNE_ROOMS_2F,                            12,  8 ;  8
 	map_const SS_ANNE_BOW,                                 10,  7 ;  9
-;	map_const FAST_SHIP_1F,                                16,  9 ; 10
-;	map_const FAST_SHIP_CABINS_NNW_NNE_NE,                  4, 16 ; 11
-;	map_const FAST_SHIP_CABINS_SW_SSW_NW,                   4, 16 ; 12
-;	map_const FAST_SHIP_CABINS_SE_SSE_CAPTAINS_CABIN,       5, 17 ; 13
-;	map_const FAST_SHIP_B1F,                               16,  8 ; 14
+	map_const FAST_SHIP_1F,                                18,  8 ; 10
+	map_const FAST_SHIP_B1F,                               17,  8 ; 11
+	map_const FAST_SHIP_CABINS_NORTH,                       4, 22 ; 12
+	map_const FAST_SHIP_CABINS_SOUTH,                       4, 22 ; 13
+	map_const FAST_SHIP_CAPTAINS_CABIN,                    19,  9 ; 14
+	map_const FAST_SHIP_ENGINE_ROOM,                       12,  7 ; 15
+;	map_const FAST_SHIP_CABINS_NNW_NNE_NE,                  4, 16 ; 12
+;	map_const FAST_SHIP_CABINS_SW_SSW_NW,                   4, 16 ; 13
+;	map_const FAST_SHIP_CABINS_SE_SSE_CAPTAINS_CABIN,       5, 17 ; 14
+
 	map_const MOUNT_MOON_SQUARE,                           15,  9 ; 15
 	map_const MOUNT_MOON_GIFT_SHOP,                         4,  4 ; 16
 	map_const TIN_TOWER_ROOF,                              10,  9 ; 17
@@ -345,7 +350,7 @@ ENDM
 	endgroup
 
 	newgroup OLIVINE                                              ; 21
-	map_const OLIVINE_CITY,                                20, 18 ;  1
+	map_const OLIVINE_CITY,                                20, 19 ;  1
 	map_const OLIVINE_POKECENTER_1F,                        7,  4 ;  2
 	map_const OLIVINE_MART,                                 5,  4 ;  3
 	map_const OLIVINE_GYM,                                  5,  8 ;  4
@@ -512,12 +517,12 @@ ENDM
 	map_const UNION_CAVE_B2F,                              10, 18 ; 79
 	map_const SLOWPOKE_WELL_B1F,                           10,  9 ; 80
 	map_const SLOWPOKE_WELL_B2F,                           10,  9 ; 81
-	map_const OLIVINE_LIGHTHOUSE_1F,                       10,  9 ; 82
+	map_const OLIVINE_LIGHTHOUSE_1F,                        9,  8 ; 82
 	map_const OLIVINE_LIGHTHOUSE_2F,                       10,  9 ; 83
 	map_const OLIVINE_LIGHTHOUSE_3F,                       10,  9 ; 84
 	map_const OLIVINE_LIGHTHOUSE_4F,                       10,  9 ; 85
-	map_const OLIVINE_LIGHTHOUSE_5F,                       10,  9 ; 86
-	map_const OLIVINE_LIGHTHOUSE_6F,                       10,  9 ; 87
+	map_const OLIVINE_LIGHTHOUSE_5F,                        9,  8 ; 86
+	map_const OLIVINE_LIGHTHOUSE_6F,                        9,  8 ; 87
 	map_const MAHOGANY_MART_1F,                             4,  4 ; 88
 	map_const TEAM_ROCKET_BASE_B1F,                        15,  9 ; 89
 	map_const TEAM_ROCKET_BASE_B2F,                        15,  9 ; 90

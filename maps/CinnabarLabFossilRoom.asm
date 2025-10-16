@@ -102,7 +102,7 @@ CinnabarLabFossilScientistScript:
 	writetext CinnabarLabFossilScientistTakeGoodCareOfItText
 	waitbutton
 	closetext
-	clearevent EVENT_FOSSIL_SCIENTIST_WORKING_HELIX
+	clearevent EVENT_FOSSIL_SCIENTIST_WORKING_AMBER
 	end
 
 .No_Room

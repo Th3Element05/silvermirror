@@ -1,467 +1,156 @@
 	object_const_def
-;	const FASTSHIPB1F_SAILOR1
-;	const FASTSHIPB1F_SAILOR2
-;	const FASTSHIPB1F_SAILOR3
-;	const FASTSHIPB1F_LASS
-;	const FASTSHIPB1F_SUPER_NERD
-;	const FASTSHIPB1F_SAILOR4
-;	const FASTSHIPB1F_FISHER
-;	const FASTSHIPB1F_BLACK_BELT
-;	const FASTSHIPB1F_SAILOR5
-;	const FASTSHIPB1F_TEACHER
-;	const FASTSHIPB1F_YOUNGSTER1
-;	const FASTSHIPB1F_YOUNGSTER2
+	const FASTSHIPB1F_ROCKETGIRL
+	const FASTSHIPB1F_ROCKET
+	const FASTSHIPB1F_SAILOR_BLOCK
 
 FastShipB1F_MapScripts:
 	def_scene_scripts
-;	scene_script FastShipB1FNoop1Scene, SCENE_FASTSHIPB1F_SAILOR_BLOCKS
-;	scene_script FastShipB1FNoop2Scene, SCENE_FASTSHIPB1F_NOOP
+	scene_script FastShipB1FNoop1Scene, SCENE_FASTSHIPB1F_ROCKETS
+	scene_script FastShipB1FNoop2Scene, SCENE_FASTSHIPB1F_NOOP
 
 	def_callbacks
+	callback MAPCALLBACK_OBJECTS, FastShipB1FMoveSailorCallback
 
-;FastShipB1FNoop1Scene:
-;	end
+FastShipB1FNoop1Scene:
+FastShipB1FNoop2Scene:
+	end
 
-;FastShipB1FNoop2Scene:
-;	end
+FastShipB1FMoveSailorCallback:
+	checkevent EVENT_BEAT_EXECUTIVEM_3
+	iftrue .Skip
+	moveobject FASTSHIPB1F_SAILOR_BLOCK, 6, 7
+.Skip
+	endcallback
 
-;FastShipB1FSailorBlocksLeft:
-;	checkevent EVENT_FAST_SHIP_B1F_SAILOR_RIGHT
-;	iftrue FastShipB1FAlreadyBlocked
-;	applymovement FASTSHIPB1F_SAILOR2, FastShipB1FSailorBlocksLeftMovement
-;	moveobject FASTSHIPB1F_SAILOR1, 30, 6
-;	appear FASTSHIPB1F_SAILOR1
-;	pause 5
-;	disappear FASTSHIPB1F_SAILOR2
-;	end
-
-;FastShipB1FSailorBlocksRight:
-;	checkevent EVENT_FAST_SHIP_B1F_SAILOR_LEFT
-;	iftrue FastShipB1FAlreadyBlocked
-;	applymovement FASTSHIPB1F_SAILOR1, FastShipB1FSailorBlocksRightMovement
-;	moveobject FASTSHIPB1F_SAILOR2, 31, 6
-;	appear FASTSHIPB1F_SAILOR2
-;	pause 5
-;	disappear FASTSHIPB1F_SAILOR1
-;	end
-
-;FastShipB1FAlreadyBlocked:
-;	end
-
-;FastShipB1FSailorScript:
-;	faceplayer
+FastShipB1FRocketsScript:
+	opentext
+	writetext FastShipB1FHuhText
+	turnobject PLAYER, UP
+	opentext
+	writetext FastShipB1FRocketsText
+	promptbutton
+	closetext
+	follow FASTSHIPB1F_ROCKETGIRL, FASTSHIPB1F_ROCKET
+	applymovement FASTSHIPB1F_ROCKETGIRL, FastShipB1FRocketsMovement1
+	stopfollow
+	turnobject PLAYER, LEFT
+	turnobject FASTSHIPB1F_ROCKET, RIGHT
+	applymovement FASTSHIPB1F_ROCKETGIRL, FastShipB1FRocketsLeaveMovement
+	disappear FASTSHIPB1F_ROCKETGIRL
 ;	opentext
-;	checkevent EVENT_FAST_SHIP_FIRST_TIME
-;	iftrue .FirstTime
-;	checkevent EVENT_FAST_SHIP_LAZY_SAILOR
-;	iftrue .LazySailor
-;	checkevent EVENT_FAST_SHIP_INFORMED_ABOUT_LAZY_SAILOR
-;	iftrue .AlreadyInformed
-;	writetext FastShipB1FOnDutySailorText
+;	writetext FastShipB1FStayOutOfTheWayText
 ;	waitbutton
 ;	closetext
-;	setevent EVENT_FAST_SHIP_INFORMED_ABOUT_LAZY_SAILOR
-;	clearevent EVENT_FAST_SHIP_CABINS_NNW_NNE_NE_SAILOR
-;	end
+	applymovement FASTSHIPB1F_ROCKET, FastShipB1FRocketShovesPlayerMovement
+	playsound SFX_TACKLE
+	applymovement PLAYER, FastShipB1FPlayerJumpsBackMovement
+	opentext
+	writetext FastShipB1FStayOutOfTheWayText
+	waitbutton
+	closetext
+	applymovement FASTSHIPB1F_ROCKET, FastShipB1FRocketsLeaveMovement
+	disappear FASTSHIPB1F_ROCKET
+	setscene SCENE_FASTSHIPB1F_NOOP
+	end
 
-;.AlreadyInformed:
-;	writetext FastShipB1FOnDutySailorRefusedText
-;	waitbutton
-;	closetext
-;	end
+FastShipB1FHuhText:
+	text "…?"
+	done
 
-;.LazySailor:
-;	writetext FastShipB1FOnDutySailorThanksText
-;	checkevent EVENT_FAST_SHIP_FOUND_GIRL
-;	iffalse .NotFoundGirl
-;	waitbutton
-;	closetext
-;	end
-;
-;.NotFoundGirl:
-;	promptbutton
-;	writetext FastShipB1FOnDutySailorSawLittleGirlText
-;	waitbutton
-;	closetext
-;	end
+FastShipB1FRocketsText:
+	text "ROCKET: They have"
+	line "the engine room"
+	cont "under control."
 
-;.FirstTime:
-;	writetext FastShipB1FOnDutySailorDirectionsText
-;	waitbutton
-;	closetext
-;	end
+	para "You come with me."
+	line "We'll take care"
+	cont "of the captain."
+	done
 
-;TrainerSailorJeff:
-;	trainer SAILOR, JEFF, EVENT_BEAT_SAILOR_JEFF, SailorJeffSeenText, SailorJeffBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext SailorJeffAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+FastShipB1FStayOutOfTheWayText:
+	text "You better stay"
+	line "out of our way if"
+	cont "you know what's"
+	cont "good for you!"
+	done
 
-;TrainerPicnickerDebra:
-;	trainer PICNICKER, DEBRA, EVENT_BEAT_PICNICKER_DEBRA, PicnickerDebraSeenText, PicnickerDebraBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext PicnickerDebraAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+FastShipB1FUnconsciousSailor:
+	checkevent EVENT_FAST_SHIP_HAS_ARRIVED
+	iftrue .JustResting
+	jumptext FastShipB1FUnconsciousSailorText
 
-;TrainerJugglerFritz:
-;	trainer JUGGLER, FRITZ, EVENT_BEAT_JUGGLER_FRITZ, JugglerFritzSeenText, JugglerFritzBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext JugglerFritzAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+.JustResting
+	jumptext FastShipB1FRestingSailorText
 
-;TrainerSailorGarrett:
-;	trainer SAILOR, GARRETT, EVENT_BEAT_SAILOR_GARRETT, SailorGarrettSeenText, SailorGarrettBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext SailorGarrettAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+FastShipB1FUnconsciousSailorText:
+	text "He's been knocked"
+	line "unconscious!"
+	done
 
-;TrainerFisherJonah:
-;	trainer FISHER, JONAH, EVENT_BEAT_FISHER_JONAH, FisherJonahSeenText, FisherJonahBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext FisherJonahAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+FastShipB1FRestingSailorText:
+	text "SAILOR: I'll be"
+	line "alright. I'm just"
+	cont "resting."
 
-;TrainerBlackbeltWai:
-;	trainer BLACKBELT_T, WAI, EVENT_BEAT_BLACKBELT_WAI, BlackbeltWaiSeenText, BlackbeltWaiBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext BlackbeltWaiAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+FastShipB1FSleepingSailor:
+	jumptext FastShipB1FSleepingSailorText
+FastShipB1FSleepingSailorText:
+	text "He's…!           "
+	line "…just sleeping."
 
-;TrainerSailorKenneth:
-;	trainer SAILOR, KENNETH, EVENT_BEAT_SAILOR_KENNETH, SailorKennethSeenText, SailorKennethBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext SailorKennethAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+FastShipB1FRocketsMovement1:
+	step LEFT
+	step LEFT
+	step DOWN
+	step DOWN
+	step DOWN
+	step LEFT
+	step_end
 
-;TrainerTeacherShirley:
-;	trainer TEACHER, SHIRLEY, EVENT_BEAT_TEACHER_SHIRLEY, TeacherShirleySeenText, TeacherShirleyBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext TeacherShirleyAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+FastShipB1FRocketsLeaveMovement:
+	step LEFT
+	step LEFT
+	step_end
 
-;TrainerSchoolboyNate:
-;	trainer SCHOOLBOY, NATE, EVENT_BEAT_SCHOOLBOY_NATE, SchoolboyNateSeenText, SchoolboyNateBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext SchoolboyNateAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+FastShipB1FRocketShovesPlayerMovement:
+	big_step RIGHT
+	step_end
 
-;TrainerSchoolboyRicky:
-;	trainer SCHOOLBOY, RICKY, EVENT_BEAT_SCHOOLBOY_RICKY, SchoolboyRickySeenText, SchoolboyRickyBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext SchoolboyRickyAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+FastShipB1FPlayerJumpsBackMovement:
+	turn_head LEFT
+	fix_facing
+	jump_step RIGHT
+	remove_fixed_facing
+	step_end
 
-;FastShipB1FTrashcan:
-;	jumpstd TrashCanScript
-;
-;FastShipB1FSailorBlocksRightMovement:
-;	fix_facing
-;	big_step RIGHT
-;	remove_fixed_facing
-;	turn_head DOWN
-;	step_end
-;
-;FastShipB1FSailorBlocksLeftMovement:
-;	fix_facing
-;	big_step LEFT
-;	remove_fixed_facing
-;	turn_head DOWN
-;	step_end
-;
-;FastShipB1FOnDutySailorText:
-;	text "Hey, kid. Could I"
-;	line "get you to look"
-;	cont "for my buddy?"
-;
-;	para "He's goofing off"
-;	line "somewhere, that"
-;	cont "lazy bum!"
-;
-;	para "I want to go find"
-;	line "him, but I'm on"
-;	cont "duty right now."
-;	done
-
-;FastShipB1FOnDutySailorRefusedText:
-;	text "Oh, gee…"
-;
-;	para "The CAPTAIN will"
-;	line "be furious…"
-;	done
-;
-;FastShipB1FOnDutySailorThanksText:
-;	text "Thanks, kid!"
-;	line "I chewed him out"
-;
-;	para "good so he'll quit"
-;	line "slacking off!"
-;	done
-;
-;FastShipB1FOnDutySailorSawLittleGirlText:
-;	text "A little girl?"
-;
-;	para "I may have seen"
-;	line "her go by here."
-;	done
-;
-;FastShipB1FOnDutySailorDirectionsText:
-;	text "The dining room is"
-;	line "up ahead."
-;
-;	para "The stairs at the"
-;	line "end lead to the"
-;	cont "CAPTAIN's cabin."
-;	done
-
-;SailorJeffSeenText:
-;	text "Nothing beats a"
-;	line "battle when I'm"
-;	cont "on my break."
-;	done
-;
-;SailorJeffBeatenText:
-;	text "Win or lose, my"
-;	line "break's over!"
-;	done
-;
-;SailorJeffAfterBattleText:
-;	text "I guess I can't"
-;	line "win if I don't get"
-;	cont "serious."
-;	done
-;
-;PicnickerDebraSeenText:
-;	text "I'm so bored."
-;	line "Want to battle?"
-;	done
-;
-;PicnickerDebraBeatenText:
-;	text "Yow! You're too"
-;	line "strong!"
-;	done
-;
-;PicnickerDebraAfterBattleText:
-;	text "SAFFRON, CELADON…"
-;	line "I hear there are"
-;
-;	para "many big cities"
-;	line "in KANTO."
-;	done
-;
-;JugglerFritzSeenText:
-;	text "Urrf…"
-;	line "I'm seasick!"
-;	done
-;
-;JugglerFritzBeatenText:
-;	text "I can't move any-"
-;	line "more…"
-;	done
-;
-;JugglerFritzAfterBattleText:
-;	text "No more ships for"
-;	line "me. Next time,"
-;
-;	para "I'm taking the"
-;	line "MAGNET TRAIN."
-;	done
-;
-;SailorGarrettSeenText:
-;	text "This is where we"
-;	line "sailors work!"
-;	done
-;
-;SailorGarrettBeatenText:
-;	text "I lost on my home"
-;	line "field…"
-;	done
-;
-;SailorGarrettAfterBattleText:
-;	text "We get different"
-;	line "passengers from"
-;
-;	para "VERMILION CITY to"
-;	line "OLIVINE CITY."
-;	done
-;
-;FisherJonahSeenText:
-;	text "Even though we're"
-;	line "out on the sea, I"
-;	cont "can't fish!"
-;
-;	para "This is boring!"
-;	line "Let's battle!"
-;	done
-;
-;FisherJonahBeatenText:
-;	text "I… I'm not bored"
-;	line "anymore…"
-;	done
-;
-;FisherJonahAfterBattleText:
-;	text "I plan to fish off"
-;	line "VERMILION's pier."
-;	done
-;
-;BlackbeltWaiSeenText:
-;	text "I'm building up my"
-;	line "legs by bracing"
-;
-;	para "against the ship's"
-;	line "rocking!"
-;	done
-;
-;BlackbeltWaiBeatenText:
-;	text "Rocked and rolled"
-;	line "over!"
-;	done
-;
-;BlackbeltWaiAfterBattleText:
-;	text "I couldn't find"
-;	line "the KARATE KING in"
-;	cont "JOHTO."
-;
-;	para "He's supposed to"
-;	line "be training in a"
-;	cont "cave somewhere."
-;	done
-;
-;SailorKennethSeenText:
-;	text "I'm a sailor man!"
-;
-;	para "But I'm training"
-;	line "#MON, so I can"
-;	cont "become the CHAMP!"
-;	done
-;
-;SailorKennethBeatenText:
-;	text "My lack of train-"
-;	line "ing is obvious…"
-;	done
-;
-;SailorKennethAfterBattleText:
-;	text "Eight BADGES!"
-;	line "They must prove"
-;
-;	para "that you've beaten"
-;	line "GYM LEADERS."
-;
-;	para "No wonder you're"
-;	line "so good!"
-;	done
-;
-;TeacherShirleySeenText:
-;	text "Don't lay a finger"
-;	line "on my students!"
-;	done
-;
-;TeacherShirleyBeatenText:
-;	text "Aaack!"
-;	done
-;
-;TeacherShirleyAfterBattleText:
-;	text "We're on a field"
-;	line "trip to the RUINS"
-;	cont "outside VIOLET."
-;	done
-;
-;SchoolboyNateSeenText:
-;	text "Do you know the"
-;	line "RUINS OF ALPH?"
-;	done
-;
-;SchoolboyNateBeatenText:
-;	text "Yaargh!"
-;	done
-;
-;SchoolboyNateAfterBattleText:
-;	text "Radios pick up"
-;	line "strange signals"
-;	cont "inside the RUINS."
-;	done
-;
-;SchoolboyRickySeenText:
-;	text "There are some odd"
-;	line "stone panels in"
-;	cont "the RUINS OF ALPH."
-;	done
-;
-;SchoolboyRickyBeatenText:
-;	text "I was done in!"
-;	done
-;
-;SchoolboyRickyAfterBattleText:
-;	text "I read that there"
-;	line "are four of those"
-;	cont "stone panels."
-;	done
+FastShipB1FTrashcan:
+	jumpstd TrashCanScript
 
 FastShipB1F_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-;	warp_event  5, 11, FAST_SHIP_1F, 11
-;	warp_event 31, 13, FAST_SHIP_1F, 12
+	warp_event 31,  7, FAST_SHIP_1F, 10
+	warp_event  3,  7, FAST_SHIP_1F, 11
+	warp_event  7,  3, FAST_SHIP_ENGINE_ROOM, 1
 
 	def_coord_events
-;	coord_event 30,  7, SCENE_FASTSHIPB1F_SAILOR_BLOCKS, FastShipB1FSailorBlocksLeft
-;	coord_event 31,  7, SCENE_FASTSHIPB1F_SAILOR_BLOCKS, FastShipB1FSailorBlocksRight
+	coord_event 24, 12, SCENE_FASTSHIPB1F_ROCKETS, FastShipB1FRocketsScript
 
 	def_bg_events
-;	bg_event 27,  9, BGEVENT_READ, FastShipB1FTrashcan
+	bg_event 15,  3, BGEVENT_READ, FastShipB1FTrashcan
 
 	def_object_events
-;	object_event 30,  6, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, FastShipB1FSailorScript, EVENT_FAST_SHIP_B1F_SAILOR_LEFT
+	object_event 24,  9, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FAST_SHIP_B1F_ROCKETS
+	object_event 25,  9, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FAST_SHIP_B1F_ROCKETS
+	object_event  6,  8, SPRITE_SLEEPING, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, FastShipB1FUnconsciousSailor, EVENT_FAST_SHIP_COMPLETED_FIRST_TRIP
+	object_event  5,  6, SPRITE_SLEEPING, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, FastShipB1FUnconsciousSailor, EVENT_FAST_SHIP_COMPLETED_FIRST_TRIP
+	object_event 24, 13, SPRITE_SLEEPING, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, FastShipB1FUnconsciousSailor, EVENT_FAST_SHIP_COMPLETED_FIRST_TRIP
+;
+	object_event 31,  3, SPRITE_SLEEPING, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, FastShipB1FSleepingSailor, EVENT_FAST_SHIP_SAILORS
+	object_event 10,  3, SPRITE_SAILOR, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, FastShipB1FUnconsciousSailor, EVENT_FAST_SHIP_SAILORS
+	object_event 15,  8, SPRITE_SAILOR, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, FastShipB1FUnconsciousSailor, EVENT_FAST_SHIP_SAILORS
+;
 ;	object_event 31,  6, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, FastShipB1FSailorScript, EVENT_FAST_SHIP_B1F_SAILOR_RIGHT
 ;	object_event  9, 11, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSailorJeff, EVENT_FAST_SHIP_PASSENGERS_FIRST_TRIP
 ;	object_event  6,  4, SPRITE_LASS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerPicnickerDebra, EVENT_FAST_SHIP_PASSENGERS_FIRST_TRIP

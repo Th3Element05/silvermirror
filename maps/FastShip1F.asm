@@ -1,313 +1,289 @@
 	object_const_def
-;	const FASTSHIP1F_SAILOR1
-;	const FASTSHIP1F_SAILOR2
-;	const FASTSHIP1F_SAILOR3
-;	const FASTSHIP1F_GENTLEMAN
+	const FASTSHIP1F_EXITSAILOR
+	const FASTSHIP1F_ROCKETGIRL
+	const FASTSHIP1F_ROCKET
 
 FastShip1F_MapScripts:
 	def_scene_scripts
-;	scene_script FastShip1FNoop1Scene,     SCENE_FASTSHIP1F_NOOP
-;	scene_script FastShip1FEnterShipScene, SCENE_FASTSHIP1F_ENTER_SHIP
-;	scene_script FastShip1FNoop2Scene,     SCENE_FASTSHIP1F_MEET_GRANDPA
+	scene_script FastShip1FNoop1Scene,      SCENE_FASTSHIP1F_NOOP
+	scene_script FastShip1FEnterShipScene,  SCENE_FASTSHIP1F_ENTER_SHIP
+	scene_script FastShip1FSeeRocketsScene, SCENE_FASTSHIP1F_ROCKETS
 
 	def_callbacks
 
-;FastShip1FNoop1Scene:
-;	end
-;
-;FastShip1FEnterShipScene:
-;	sdefer FastShip1FEnterShipScript
-;	end
-;
-;FastShip1FNoop2Scene:
-;	end
-;
-;FastShip1FEnterShipScript:
-;	applymovement FASTSHIP1F_SAILOR1, FastShip1F_SailorStepAsideMovement
-;	applymovement PLAYER, FastShip1F_PlayerEntersShipMovement
-;	applymovement FASTSHIP1F_SAILOR1, FastShip1F_SailorBlocksDoorMovement
-;	pause 30
-;	playsound SFX_BOAT
-;	earthquake 30
-;	blackoutmod FAST_SHIP_CABINS_SW_SSW_NW
-;	clearevent EVENT_FAST_SHIP_HAS_ARRIVED
-;	checkevent EVENT_FAST_SHIP_FIRST_TIME
-;	iftrue .SkipGrandpa
-;	setscene SCENE_FASTSHIP1F_MEET_GRANDPA
-;	end
-;
-;.SkipGrandpa:
-;	setscene SCENE_FASTSHIP1F_NOOP
-;	end
+FastShip1FNoop1Scene:
+	end
 
-;FastShip1FSailor1Script:
-;	faceplayer
-;	opentext
-;	checkevent EVENT_FAST_SHIP_HAS_ARRIVED
-;	iftrue .Arrived
-;	checkevent EVENT_FAST_SHIP_DESTINATION_OLIVINE
-;	iftrue .Olivine
-;	writetext FastShip1FSailor1Text_ToVermilion
-;	waitbutton
-;	closetext
-;	end
+FastShip1FEnterShipScene:
+	sdefer FastShip1FEnterShipScript
+	end
 
-;.Olivine:
-;	writetext FastShip1FSailor1Text_ToOlivine
-;	waitbutton
-;	closetext
-;	end
+FastShip1FSeeRocketsScene:
+	sdefer FastShip1FSeeRocketsScript
+	end
 
-;.Arrived:
-;	checkevent EVENT_FAST_SHIP_DESTINATION_OLIVINE
-;	iftrue ._Olivine
-;	writetext FastShip1FSailor1Text_InVermilion
-;	waitbutton
-;	closetext
-;	scall .LetThePlayerOut
-;	playsound SFX_EXIT_BUILDING
-;	special FadeOutPalettes
-;	waitsfx
-;	setevent EVENT_VERMILION_PORT_SAILOR_AT_GANGWAY
-;	setmapscene VERMILION_PORT, SCENE_VERMILIONPORT_LEAVE_SHIP
-;	warp VERMILION_PORT, 7, 17
-;	end
+FastShip1FEnterShipScript:
+	applymovement FASTSHIP1F_EXITSAILOR, FastShip1F_SailorStepAsideMovement
+	applymovement PLAYER, FastShip1F_PlayerEntersShipMovement
+	applymovement FASTSHIP1F_EXITSAILOR, FastShip1F_SailorBlocksDoorMovement
+	pause 30
+	playsound SFX_BOAT
+	earthquake 30
+	clearevent EVENT_FAST_SHIP_HAS_ARRIVED
+	checkevent EVENT_FAST_SHIP_COMPLETED_FIRST_TRIP
+	iffalse .DoRockets
+	blackoutmod FAST_SHIP_CABINS_NORTH
+	setscene SCENE_FASTSHIP1F_NOOP
+	end
 
-;._Olivine:
-;	writetext FastShip1FSailor1Text_InOlivine
-;	waitbutton
-;	closetext
-;	scall .LetThePlayerOut
-;	playsound SFX_EXIT_BUILDING
-;	special FadeOutPalettes
-;	waitsfx
-;	setevent EVENT_OLIVINE_PORT_SAILOR_AT_GANGWAY
-;	setmapscene OLIVINE_PORT, SCENE_OLIVINEPORT_LEAVE_SHIP
-;	warp OLIVINE_PORT, 7, 23
-;	end
+.DoRockets:
+	setscene SCENE_FASTSHIP1F_ROCKETS
+	end
 
-;.LetThePlayerOut:
-;	readvar VAR_FACING
-;	ifequal RIGHT, .YouAreFacingRight
-;	applymovement FASTSHIP1F_SAILOR1, FastShip1F_SailorStepAsideMovement
-;	applymovement PLAYER, FastShip1F_PlayerLeavesShipMovement
-;	end
+FastShip1FSeeRocketsScript:
+	pause 30
+	follow FASTSHIP1F_ROCKETGIRL, FASTSHIP1F_ROCKET
+	applymovement FASTSHIP1F_ROCKETGIRL, FastShip1FRocketsMovement
+	playsound SFX_ENTER_DOOR
+	disappear FASTSHIP1F_ROCKETGIRL
+	disappear FASTSHIP1F_ROCKET
+	waitsfx
+	setscene SCENE_FASTSHIP1F_NOOP
+	end
 
-;.YouAreFacingRight:
-;	applymovement FASTSHIP1F_SAILOR1, FastShip1F_SailorStepAsideDownMovement
-;	applymovement PLAYER, FastShip1F_PlayerLeavesShipRightMovement
-;	end
+FastShip1FExitSailorScript:
+	faceplayer
+	opentext
+	checkevent EVENT_FAST_SHIP_HAS_ARRIVED
+	iftrue .Arrived
+	checkevent EVENT_FAST_SHIP_DESTINATION_OLIVINE
+	iftrue .Olivine
+	writetext FastShip1FSailor1Text_ToVermilion
+	waitbutton
+	writetext FastShip1FSailor1Text_Bed
+	waitbutton
+	closetext
+	end
 
-;FastShip1FSailor2Script:
-;	faceplayer
-;	opentext
-;	checkevent EVENT_FAST_SHIP_FIRST_TIME
-;	iftrue .Vermilion
-;	writetext FastShip1FSailor2Text_FirstTime
-;	waitbutton
-;	closetext
-;	end
+.Olivine:
+	writetext FastShip1FSailor1Text_ToOlivine
+	waitbutton
+	checkevent EVENT_FAST_SHIP_COMPLETED_FIRST_TRIP
+	iffalse .FirstTripInProgress
+	writetext FastShip1FSailor1Text_Bed
+	waitbutton
+.FirstTripInProgress
+	closetext
+	end
 
-;.Vermilion:
-;	writetext FastShip1FSailor2Text
-;	waitbutton
-;	closetext
-;	end
+.Arrived:
+	setflag ENGINE_RODE_SSAQUA_TODAY
+	checkevent EVENT_FAST_SHIP_DESTINATION_OLIVINE
+	iftrue ._Olivine
+	writetext FastShip1FSailor1Text_InVermilion
+	waitbutton
+	closetext
+	scall .LetThePlayerOut
+	playsound SFX_EXIT_BUILDING
+	special FadeOutPalettes
+	waitsfx
+	clearevent EVENT_VERMILION_PORT_TICKET_SAILOR
+	setmapscene VERMILION_PORT, SCENE_VERMILIONPORT_SS_AQUA
+	warpfacing UP, VERMILION_PORT, 5, 7
+	end
 
-;FastShip1FSailor3Script:
-;	jumptextfaceplayer FastShip1FSailor3Text
+._Olivine:
+	writetext FastShip1FSailor1Text_InOlivine
+	waitbutton
+	closetext
+	scall .LetThePlayerOut
+	playsound SFX_EXIT_BUILDING
+	special FadeOutPalettes
+	waitsfx
+	clearevent EVENT_OLIVINE_PORT_TICKET_SAILOR
+	setmapscene OLIVINE_PORT, SCENE_OLIVINEPORT_SS_AQUA
+	setevent EVENT_FAST_SHIP_COMPLETED_FIRST_TRIP
+	clearevent EVENT_FAST_SHIP_SAILORS
+	warpfacing UP, OLIVINE_PORT, 5, 7
+	end
 
-;WorriedGrandpaSceneRight:
-;	moveobject FASTSHIP1F_GENTLEMAN, 20, 6
+.LetThePlayerOut:
+	readvar VAR_FACING
+	ifequal RIGHT, .YouAreFacingRight
+	applymovement FASTSHIP1F_EXITSAILOR, FastShip1F_SailorStepAsideMovement
+	applymovement PLAYER, FastShip1F_PlayerLeavesShipMovement
+	end
 
-;WorriedGrandpaSceneLeft:
-;	appear FASTSHIP1F_GENTLEMAN
-;	applymovement FASTSHIP1F_GENTLEMAN, FastShip1F_GrandpaRunsInMovement
-;	playsound SFX_TACKLE
-;	applymovement PLAYER, FastShip1F_PlayerHitByGrandpaMovement
-;	applymovement FASTSHIP1F_GENTLEMAN, FastShip1F_GrandpaApproachesPlayerMovement
-;	opentext
-;	writetext FastShip1FGrandpaText
-;	waitbutton
-;	closetext
-;	turnobject PLAYER, RIGHT
-;	applymovement FASTSHIP1F_GENTLEMAN, FastShip1F_GrandpaRunsOutMovement
-;	disappear FASTSHIP1F_GENTLEMAN
-;	setscene SCENE_FASTSHIP1F_NOOP
-;	end
+.YouAreFacingRight:
+	applymovement FASTSHIP1F_EXITSAILOR, FastShip1F_SailorStepAsideDownMovement
+	applymovement PLAYER, FastShip1F_PlayerLeavesShipRightMovement
+	end
 
-;FastShip1F_SailorStepAsideMovement:
-;	slow_step LEFT
-;	turn_head RIGHT
-;	step_end
+FastShip1FSailor1Text_ToVermilion:
+	text "FAST SHIP S.S.AQUA"
+	line "is en route to"
+	cont "VERMILION CITY."
 
-;FastShip1F_SailorBlocksDoorMovement:
-;	slow_step RIGHT
-;	turn_head DOWN
-;	step_end
+	para "We will make an"
+	line "announcement when"
+	cont "we arrive."
+	done
 
-;FastShip1F_SailorStepAsideDownMovement:
-;	slow_step DOWN
-;	turn_head UP
-;	step_end
+FastShip1FSailor1Text_ToOlivine:
+	text "FAST SHIP S.S.AQUA"
+	line "is en route to"
+	cont "OLIVINE CITY."
 
-;FastShip1F_PlayerEntersShipMovement:
-;	step DOWN
-;	step DOWN
-;	turn_head DOWN
-;	step_end
+	para "We will make an"
+	line "announcement when"
+	cont "we arrive."
+	done
 
-;FastShip1F_GrandpaRunsInMovement:
-;	big_step RIGHT
-;	big_step RIGHT
-;	big_step RIGHT
-;	big_step RIGHT
-;	step_end
+FastShip1FSailor1Text_Bed:
+	text "You can use the"
+	line "bed in your cabin"
+	cont "to pass the time"
+	cont "until we arrive."
+	done
 
-;FastShip1F_GrandpaApproachesPlayerMovement:
-;	step RIGHT
-;	step_end
+FastShip1FSailor1Text_InOlivine:
+	text "FAST SHIP S.S.AQUA"
+	line "has arrived in"
+	cont "OLIVINE CITY."
+	done
 
-;FastShip1F_GrandpaRunsOutMovement:
-;	big_step DOWN
-;	big_step RIGHT
-;	big_step RIGHT
-;	big_step RIGHT
-;	big_step RIGHT
-;	big_step RIGHT
-;	big_step RIGHT
-;	big_step DOWN
-;	big_step DOWN
-;	big_step DOWN
-;	big_step DOWN
-;	step_end
+FastShip1FSailor1Text_InVermilion:
+	text "FAST SHIP S.S.AQUA"
+	line "has arrived in"
+	cont "VERMILION CITY."
+	done
 
-;FastShip1F_PlayerHitByGrandpaMovement:
-;	big_step RIGHT
-;	turn_head LEFT
-;	step_end
+FastShip1FGuideSailorScript:
+	faceplayer
+	opentext
+	checkevent EVENT_FAST_SHIP_COMPLETED_FIRST_TRIP
+	iffalse .FirstTrip
+	writetext FastShip1FRoomSailorText
+	waitbutton
+	closetext
+	end
 
-;FastShip1F_StepUpMovement: ; unreferenced
-;	step UP
-;	step_end
+.FirstTrip
+	writetext FastShip1FRoomSailorText_FirstTrip
+	waitbutton
+	closetext
+	end
 
-;FastShip1F_StepDownMovement: ; unreferenced
-;	step DOWN
-;	step_end
+FastShip1FRoomSailorText:
+	text "Here's your cabin."
 
-;FastShip1F_PlayerLeavesShipMovement:
-;	step UP
-;	step UP
-;	step_end
+	para "You can heal your"
+	line "#MON by taking"
+	cont "a nap in the bed."
 
-;FastShip1F_PlayerLeavesShipRightMovement:
-;	step RIGHT
-;	step UP
-;	step_end
+	para "The ship will"
+	line "arrive while"
+	cont "you're sleeping."
+	done
 
-;FastShip1FSailor1Text_ToVermilion:
-;	text "FAST SHIP S.S.AQUA"
-;	line "is en route to"
-;	cont "VERMILION CITY."
-;
-;	para "We will make an"
-;	line "announcement when"
-;	cont "we arrive."
-;	done
+FastShip1FRoomSailorText_FirstTrip:
+	text "Here's your cabin."
 
-;FastShip1FSailor1Text_ToOlivine:
-;	text "FAST SHIP S.S.AQUA"
-;	line "is en route to"
-;	cont "OLIVINE CITY."
-;
-;	para "We will make an"
-;	line "announcement when"
-;	cont "we arrive."
-;	done
+	para "If your #MON"
+	line "are hurt, take a"
+	cont "nap in the bed."
 
-;FastShip1FSailor2Text_FirstTime:
-;	text "Here's your cabin."
-;
-;	para "If your #MON"
-;	line "are hurt, take a"
-;	cont "nap in the bed."
-;
-;	para "That will heal"
-;	line "them."
-;	done
+	para "That will heal"
+	line "them."
+	done
 
-;FastShip1FSailor2Text:
-;	text "Here's your cabin."
-;
-;	para "You can heal your"
-;	line "#MON by taking"
-;	cont "a nap in the bed."
-;
-;	para "The ship will"
-;	line "arrive while"
-;	cont "you're sleeping."
-;	done
+FastShip1FSailor3Script:
+	jumptextfaceplayer FastShip1FSailor3Text
 
-;FastShip1FSailor3Text:
-;	text "The passengers are"
-;	line "all trainers."
-;
-;	para "They're all itch-"
-;	line "ing to battle in"
-;	cont "their cabins."
-;	done
+FastShip1FSailor3Text:
+	text "The passengers are"
+	line "all trainers."
 
-;FastShip1FGrandpaText:
-;	text "Whoa! Excuse me."
-;	line "I was in a hurry!"
-;
-;	para "My granddaughter"
-;	line "is missing!"
-;
-;	para "She's just a wee"
-;	line "girl. If you see"
-;
-;	para "her, please let me"
-;	line "know!"
-;	done
+	para "They're all itch-"
+	line "ing to battle in"
+	cont "their cabins."
+	done
 
-;FastShip1FSailor1Text_InOlivine:
-;	text "FAST SHIP S.S.AQUA"
-;	line "has arrived in"
-;	cont "OLIVINE CITY."
-;	done
+FastShip1F_SailorStepAsideMovement:
+	slow_step LEFT
+	turn_head RIGHT
+	step_end
 
-;FastShip1FSailor1Text_InVermilion:
-;	text "FAST SHIP S.S.AQUA"
-;	line "has arrived in"
-;	cont "VERMILION CITY."
-;	done
+FastShip1F_SailorBlocksDoorMovement:
+	slow_step RIGHT
+	turn_head DOWN
+	step_end
+
+FastShip1F_SailorStepAsideDownMovement:
+	slow_step DOWN
+	turn_head UP
+	step_end
+
+FastShip1F_PlayerEntersShipMovement:
+	step DOWN
+	step DOWN
+	turn_head DOWN
+	step_end
+
+FastShip1FRocketsMovement:
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step DOWN
+	step DOWN
+	step DOWN
+	step RIGHT
+	step UP
+	step_end
+
+FastShip1F_PlayerLeavesShipMovement:
+	step UP
+	step UP
+	step_end
+
+FastShip1F_PlayerLeavesShipRightMovement:
+	step RIGHT
+	step UP
+	step_end
 
 FastShip1F_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-;	warp_event 25,  1, FAST_SHIP_1F, -1
-;	warp_event 27,  8, FAST_SHIP_CABINS_NNW_NNE_NE, 1
-;	warp_event 23,  8, FAST_SHIP_CABINS_NNW_NNE_NE, 2
-;	warp_event 19,  8, FAST_SHIP_CABINS_NNW_NNE_NE, 3
-;	warp_event 15,  8, FAST_SHIP_CABINS_SW_SSW_NW, 1
-;	warp_event 15, 15, FAST_SHIP_CABINS_SW_SSW_NW, 2
-;	warp_event 19, 15, FAST_SHIP_CABINS_SW_SSW_NW, 4
-;	warp_event 23, 15, FAST_SHIP_CABINS_SE_SSE_CAPTAINS_CABIN, 1
-;	warp_event 27, 15, FAST_SHIP_CABINS_SE_SSE_CAPTAINS_CABIN, 3
-;	warp_event  3, 13, FAST_SHIP_CABINS_SE_SSE_CAPTAINS_CABIN, 5
-;	warp_event  6, 12, FAST_SHIP_B1F, 1
-;	warp_event 30, 14, FAST_SHIP_B1F, 2
+	warp_event 25,  1, FAST_SHIP_1F, -1
+	warp_event 15,  6, FAST_SHIP_CABINS_NORTH, 1
+	warp_event 19,  6, FAST_SHIP_CABINS_NORTH, 2
+	warp_event 23,  6, FAST_SHIP_CABINS_NORTH, 3
+	warp_event 27,  6, FAST_SHIP_CABINS_NORTH, 4
+	warp_event 15, 11, FAST_SHIP_CABINS_SOUTH, 1
+	warp_event 19, 11, FAST_SHIP_CABINS_SOUTH, 2
+	warp_event 23, 11, FAST_SHIP_CABINS_SOUTH, 3
+	warp_event 27, 11, FAST_SHIP_CABINS_SOUTH, 4
+	warp_event 32,  8, FAST_SHIP_B1F, 1
+	warp_event  2,  8, FAST_SHIP_B1F, 2
+	warp_event  5,  7, FAST_SHIP_CAPTAINS_CABIN, 1
 
 	def_coord_events
-;	coord_event 24,  6, SCENE_FASTSHIP1F_MEET_GRANDPA, WorriedGrandpaSceneLeft
-;	coord_event 25,  6, SCENE_FASTSHIP1F_MEET_GRANDPA, WorriedGrandpaSceneRight
+;	coord_event 24,  4, SCENE_FASTSHIP1F_ROCKETS, FastShip1FSeeRocketsSceneLeft
+;	coord_event 25,  4, SCENE_FASTSHIP1F_ROCKETS, FastShip1FSeeRocketsSceneRight
 
 	def_bg_events
 
 	def_object_events
-;	object_event 25,  2, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FastShip1FSailor1Script, -1
-;	object_event 14,  7, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FastShip1FSailor2Script, -1
-;	object_event 22, 17, SPRITE_SAILOR, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FastShip1FSailor3Script, -1
-;	object_event 19,  6, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FAST_SHIP_1F_GENTLEMAN
+	object_event 25,  2, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FastShip1FExitSailorScript, -1
+	object_event 20,  5, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FAST_SHIP_1F_ROCKETS
+	object_event 20,  4, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FAST_SHIP_1F_ROCKETS
+	object_event 14,  5, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FastShip1FGuideSailorScript, -1
+	object_event 21, 13, SPRITE_SAILOR, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FastShip1FSailor3Script, -1

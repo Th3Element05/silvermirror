@@ -4,14 +4,14 @@ RockTunnel1F_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
-	callback MAPCALLBACK_TILES, .RockTunnelLadderCallback
-
-.RockTunnelLadderCallback:
-	checkevent EVENT_GOT_HM05_FLASH
-	iftrue .Skip
-	changeblock 26, 8, $1e ; rocks
-.Skip
-	endcallback
+;	callback MAPCALLBACK_TILES, .RockTunnelLadderCallback
+;
+;.RockTunnelLadderCallback:
+;	checkevent EVENT_GOT_HM05_FLASH
+;	iftrue .Skip
+;	changeblock 26, 8, $1e ; rocks
+;.Skip
+;	endcallback
 
 TrainerHikerBailey:
 	trainer HIKER, BAILEY, EVENT_BEAT_HIKER_BAILEY, HikerBaileySeenText, HikerBaileyBeatenText, 0, .Script
@@ -222,7 +222,7 @@ RockTunnel1F_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 11, 26, BGEVENT_READ, RockTunnel1FSign
+	bg_event 12, 27, BGEVENT_READ, RockTunnel1FSign
 
 	def_object_events
 	object_event  7,  5, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerHikerBailey, -1

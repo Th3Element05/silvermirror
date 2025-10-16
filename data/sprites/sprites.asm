@@ -82,7 +82,7 @@ OverworldSprites:
 	overworld_sprite CalSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
 	overworld_sprite BusinessmanSpriteGFX, 12, STANDING_SPRITE, PAL_OW_BROWN
 	overworld_sprite BugCatcherSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
-; 4c
+	overworld_sprite SleepingSpriteGFX, 12, STANDING_SPRITE, PAL_OW_BROWN
 ; 4d
 ; 4e
 ; 4f

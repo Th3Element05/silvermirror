@@ -119,6 +119,7 @@ Landmarks:
 	landmark 108,  76, UndergroundName
 	landmark 100,  92, SSAnneName
 	landmark  84,  68, RocketHideoutName
+	landmark 140, 116, FastShipName
 	assert_table_length NUM_LANDMARKS
 
 NewBarkTownName:     db "NEW BARK¯TOWN@"
@@ -221,6 +222,7 @@ DarkCaveName:        db "DARK CAVE@"
 IlexForestName:      db "ILEX¯FOREST@"
 BurnedTowerName:     db "BURNED¯TOWER@"
 SSAnneName:          db "S.S.ANNE@"
+FastShipName:        db "FAST SHIP@"
 ViridianForestName:  db "VIRIDIAN¯FOREST@"
 DiglettsCaveName:    db "DIGLETT'S¯CAVE@"
 TohjoFallsName:      db "TOHJO FALLS@"

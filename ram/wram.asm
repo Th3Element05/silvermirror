@@ -3116,48 +3116,55 @@ wFarfetchdPosition:: db
 	ds 13
 
 ; map scene ids
-wPalletTownSceneID::                              db ; ds 42
-wOaksLabSceneID::                                 db ; ds 41
-wViridianCitySceneID::                            db ; ds 40
-wViridianMartSceneID::                            db ; ds 39
-wRoute22SceneID::                                 db ; ds 38
-wRoute26GateSceneID::                             db ; ds 37
-wPewterCitySceneID::                              db ; ds 36
-wPewterMuseumSceneID::                            db ; ds 35
-wMountMoonB2FSceneID::                            db ; ds 34
-wCeruleanCitySceneID::                            db ; ds 33
-wRoute24SceneID::                                 db ; ds 32
-wBillsHouseSceneID::                              db ; ds 31
-;wRoute5SceneID::                                  db ;unused in silvermirror?
-wRoute5SaffronGateSceneID::                       db ; ds 30
-wRoute6SaffronGateSceneID::                       db ; ds 29
-wRoute7SaffronGateSceneID::                       db ; ds 28
-wRoute8SaffronGateSceneID::                       db ; ds 27
-wVermilionCitySceneID::                           db ; ds 26
-wSSAnne2FSceneID::                                db ; ds 25
-wRoute9SceneID::                                  db ; ds 24
-wPokemonTower2FSceneID::                          db ; ds 23
-wPokemonTower5FSceneID::                          db ; ds 22
-wPokemonTower6FSceneID::                          db ; ds 21
-wFightingDojoSceneID::                            db ; ds 20
-wMrFujisHouseSceneID::                            db ; ds 19
-wSilphCo7FSceneID::                               db ; ds 18
-wSilphCo11FSceneID::                              db ; ds 17
-wCinnabarIslandSceneID::                          db ; ds 16
-wTrainerHouseB1FSceneID::                         db
-wVictoryRoadGateSceneID::                         db ; keep
+wPlayersHouse1FSceneID::                          db
+wPalletTownSceneID::                              db
+wOaksLabSceneID::                                 db
+wViridianCitySceneID::                            db
+wViridianMartSceneID::                            db
+wRoute22SceneID::                                 db
+wRoute26GateSceneID::                             db
+wPewterCitySceneID::                              db
+wPewterMuseumSceneID::                            db
+wMountMoonB2FSceneID::                            db
+wCeruleanCitySceneID::                            db
+wRoute24SceneID::                                 db
+wBillsHouseSceneID::                              db
+wRoute5SaffronGateSceneID::                       db
+wRoute6SaffronGateSceneID::                       db
+wRoute7SaffronGateSceneID::                       db
+wRoute8SaffronGateSceneID::                       db
+wVermilionCitySceneID::                           db
+wSSAnne2FSceneID::                                db
+wRoute9SceneID::                                  db
+wPokemonTower2FSceneID::                          db
+wPokemonTower5FSceneID::                          db
+wPokemonTower6FSceneID::                          db
+wFightingDojoSceneID::                            db
+wMrFujisHouseSceneID::                            db
+wSafariZoneEntranceSceneID::                      db
+wSilphCo7FSceneID::                               db
+wSilphCo11FSceneID::                              db
+wCinnabarIslandSceneID::                          db
+wVictoryRoadGateSceneID::                         db
 wSaffronMagnetTrainStationSceneID::               db
-wRoute16GateSceneID::                             db ; keep
-wRoute18GateSceneID::                             db ; keep
+wRoute16GateSceneID::                             db
+wRoute18GateSceneID::                             db
 wIndigoPlateauPokecenter1FSceneID::               db
-wE4LoreleisRoomSceneID::                          db ; wWillsRoomSceneID::
-wE4BrunosRoomSceneID::                            db ; wKogasRoomSceneID::
-wE4AgathasRoomSceneID::                           db ; wBrunosRoomSceneID::
-wE4LancesRoomSceneID::                            db ; wKarensRoomSceneID::  
-wHallOfFameSceneID::                              db ; keep
+wE4LoreleisRoomSceneID::                          db
+wE4BrunosRoomSceneID::                            db
+wE4AgathasRoomSceneID::                           db
+wE4LancesRoomSceneID::                            db
+wHallOfFameSceneID::                              db
+wVermilionPortSceneID::                           db
+wOlivinePortSceneID::                             db
+wFastShip1FSceneID::                              db
+wFastShipB1FSceneID::                             db
+wFastShipEngineRoomSceneID::                      db
+wOlivineCitySceneID::                             db
+;
+wTrainerHouseB1FSceneID::                         db
 wNewBarkTownSceneID::                             db
 wElmsLabSceneID::                                 db
-wPlayersHouse1FSceneID::                          db
 wRoute29SceneID::                                 db
 wCherrygroveCitySceneID::                         db
 wMrPokemonsHouseSceneID::                         db
@@ -3169,7 +3176,6 @@ wAzaleaTownSceneID::                              db
 wGoldenrodGymSceneID::                            db
 wGoldenrodMagnetTrainStationSceneID::             db
 wGoldenrodPokecenter1FSceneID::                   db
-wOlivineCitySceneID::                             db
 wRoute34SceneID::                                 db
 wRoute34IlexForestGateSceneID::                   db
 wEcruteakTinTowerEntranceSceneID::                db
@@ -3204,16 +3210,13 @@ wGoldenrodUndergroundSwitchRoomEntrancesSceneID:: db
 wSilverCaveRoom3SceneID::                         db
 wDragonsDenB1FSceneID::                           db
 wDragonShrineSceneID::                            db
-wOlivinePortSceneID::                             db
-wVermilionPortSceneID::                           db
 wMountMoonSquareSceneID::                         db
 wPokemonMansion1FSceneID::                        db
 wPokemonMansionB1FSceneID::                       db
-wSafariZoneEntranceSceneID::                      db
 wRoute42EcruteakGateSceneID::                     db
 wRoute39SceneID::                                 db
-;wE4ChampionsRoomSceneID::                         db ; wLancesRoomSceneID::   ds 19
-;wVictoryRoadSceneID::                             db ; unused in silvermirror ds 20
+;wE4ChampionsRoomSceneID::                         db ; wLancesRoomSceneID::   
+;wVictoryRoadSceneID::                             db ; unused in silvermirror
 ;wPokecenter2FSceneID::                            db ; unused in silvermirror
 ;wTradeCenterSceneID::                             db ; unused in silvermirror
 ;wColosseumSceneID::                               db ; unused in silvermirror
@@ -3223,13 +3226,11 @@ wRoute39SceneID::                                 db
 ;wRoute25SceneID::                                 db ; unused in silvermirror
 ;wRoute27SceneID::                                 db ; unused in silvermirror
 ;wMountMoonSceneID::                               db ; unused in silvermirror
-;wFastShip1FSceneID::                              db ; unused in silvermirror
-;wFastShipB1FSceneID::                             db ; unused in silvermirror
 ;wRadioTower5FSceneID::                            db ; unused in silvermirror
-;wMobileTradeRoomSceneID::                         db ; unused in silvermirror ; ds 33
-;wMobileBattleRoomSceneID::                        db ; unused in silvermirror ; ds 34
+;wMobileTradeRoomSceneID::                         db ; unused in silvermirror
+;wMobileBattleRoomSceneID::                        db ; unused in silvermirror
 
-	ds 34 ;silvermirror -ds 43 +ds 34
+	ds 30 ;total ds 128 - 98 used = ds 30
 
 ; fight counts
 wJackFightCount::    db

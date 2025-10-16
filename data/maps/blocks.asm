@@ -347,31 +347,33 @@ Route10North_Blocks:
 ;Route10_Blocks:                        ;silvermirror+
 ;	INCBIN "maps/Route10.blk"
 
-OlivinePokecenter1F_Blocks:
-MahoganyPokecenter1F_Blocks:
-EcruteakPokecenter1F_Blocks:
-BlackthornPokecenter1F_Blocks:
-CinnabarPokecenter1F_Blocks:
+ViridianPokecenter1F_Blocks:
+PewterPokecenter1F_Blocks:
+MountMoonPokecenter1F_Blocks:
 CeruleanPokecenter1F_Blocks:
+VermilionPokecenter1F_Blocks:
 Route10Pokecenter1F_Blocks:
-AzaleaPokecenter1F_Blocks:
+LavenderPokecenter1F_Blocks:
+CeladonPokecenter1F_Blocks:
+CeladonHotel_Blocks:                   ;silvermirror+
+SaffronPokecenter1F_Blocks:
+FuchsiaPokecenter1F_Blocks:
+CinnabarPokecenter1F_Blocks:
+;SafariZoneGatePokecenter1F_Blocks:
+	INCBIN "maps/Pokecenter1F.blk"
+
+CherrygrovePokecenter1F_Blocks:
 VioletPokecenter1F_Blocks:
 Route32Pokecenter1F_Blocks:
+AzaleaPokecenter1F_Blocks:
 GoldenrodPokecenter1F_Blocks:
-VermilionPokecenter1F_Blocks:
-PewterPokecenter1F_Blocks:
-FuchsiaPokecenter1F_Blocks:
-LavenderPokecenter1F_Blocks:
-SilverCavePokecenter1F_Blocks:
-CeladonPokecenter1F_Blocks:
+EcruteakPokecenter1F_Blocks:
+OlivinePokecenter1F_Blocks:
 CianwoodPokecenter1F_Blocks:
-ViridianPokecenter1F_Blocks:
-SaffronPokecenter1F_Blocks:
-CherrygrovePokecenter1F_Blocks:
-MountMoonPokecenter1F_Blocks:
-;SafariZoneGatePokecenter1F_Blocks:
-CeladonHotel_Blocks:                   ;silvermirror+
-	INCBIN "maps/Pokecenter1F.blk"
+MahoganyPokecenter1F_Blocks:
+BlackthornPokecenter1F_Blocks:
+SilverCavePokecenter1F_Blocks:
+	INCBIN "maps/Pokecenter1FJohto.blk"
 
 EarlsPokemonAcademy_Blocks:
 	INCBIN "maps/EarlsPokemonAcademy.blk"
@@ -810,6 +812,7 @@ SSAnneKitchen_Blocks: ;silvermirror
 	INCBIN "maps/SSAnneKitchen.blk"
 
 SSAnne2F_Blocks: ;silvermirror
+FastShipCaptainsCabin_Blocks:
 	INCBIN "maps/SSAnne2F.blk"
 
 SSAnneRoomsB1F_Blocks:
@@ -819,11 +822,20 @@ SSAnneRooms2F_Blocks: ;silvermirror
 SSAnneBow_Blocks: ;silvermirror
 	INCBIN "maps/SSAnneBow.blk"
 
-;FastShip1F_Blocks:
-;	INCBIN "maps/FastShip1F.blk"
+FastShip1F_Blocks:
+	INCBIN "maps/FastShip1F.blk"
 
-;FastShipB1F_Blocks:
-;	INCBIN "maps/FastShipB1F.blk"
+FastShipB1F_Blocks:
+	INCBIN "maps/FastShipB1F.blk"
+
+FastShipEngineRoom_Blocks: ;silvermirror
+	INCBIN "maps/FastShipEngineRoom.blk"
+
+FastShipCabins_North_Blocks:
+	INCBIN "maps/FastShipCabins_North.blk"
+
+FastShipCabins_South_Blocks:
+	INCBIN "maps/FastShipCabins_South.blk"
 
 ;BetaFastShipInsideCutOut_Blocks: ; unreferenced
 ;	INCBIN "maps/unused/BetaFastShipInsideCutOut.blk"

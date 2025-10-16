@@ -168,6 +168,7 @@ SSAnne2FRubCaptainsBack:
 	writetext SSAnne2FCaptianExplainCutText
 	waitbutton
 	closetext
+	setmapscene VERMILION_CITY, SCENE_VERMILIONCITY_SSANNE_LEAVES
 	end
 
 .JumpstdReceiveItem:
@@ -319,27 +320,27 @@ SSAnne2F_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  4,  4, SS_ANNE_1F, 2        ; 1
-	warp_event  2,  8, SS_ANNE_BOW, 1       ; 2
-	warp_event 34,  4, SS_ANNE_2F, 10       ; 3
-	warp_event  9, 11, SS_ANNE_ROOMS_2F, 1  ; 4
-	warp_event 13, 11, SS_ANNE_ROOMS_2F, 3  ; 5
-	warp_event 17, 11, SS_ANNE_ROOMS_2F, 5  ; 6
-	warp_event 21, 11, SS_ANNE_ROOMS_2F, 7  ; 7
-	warp_event 25, 11, SS_ANNE_ROOMS_2F, 9  ; 8
-	warp_event 29, 11, SS_ANNE_ROOMS_2F, 11 ; 9
-	warp_event 21,  5, SS_ANNE_2F, 3        ; 10
-	warp_event 20,  5, SS_ANNE_2F, 3        ; 11
+	warp_event  4,  6, SS_ANNE_1F, 2        ; 1
+	warp_event  2, 10, SS_ANNE_BOW, 1       ; 2
+	warp_event 34,  6, SS_ANNE_2F, 10       ; 3
+	warp_event  9, 13, SS_ANNE_ROOMS_2F, 1  ; 4
+	warp_event 13, 13, SS_ANNE_ROOMS_2F, 3  ; 5
+	warp_event 17, 13, SS_ANNE_ROOMS_2F, 5  ; 6
+	warp_event 21, 13, SS_ANNE_ROOMS_2F, 7  ; 7
+	warp_event 25, 13, SS_ANNE_ROOMS_2F, 9  ; 8
+	warp_event 29, 13, SS_ANNE_ROOMS_2F, 11 ; 9
+	warp_event 20,  7, SS_ANNE_2F, 3        ; 10
+	warp_event 21,  7, SS_ANNE_2F, 3        ; 11
 
 	def_coord_events
-	coord_event 34,  9, SCENE_SSANNE2F_RIVAL_BATTLE, SSAnne2FRivalEncounterL
-	coord_event 35,  9, SCENE_SSANNE2F_RIVAL_BATTLE, SSAnne2FRivalEncounterR
+	coord_event 34, 11, SCENE_SSANNE2F_RIVAL_BATTLE, SSAnne2FRivalEncounterL
+	coord_event 35, 11, SCENE_SSANNE2F_RIVAL_BATTLE, SSAnne2FRivalEncounterR
 
 	def_bg_events
-	bg_event 24,  1, BGEVENT_READ, SSAnne2FCaptainsTrashCan
-	bg_event 21,  2, BGEVENT_READ, SSAnne2FCaptainsBook
+	bg_event 20,  2, BGEVENT_READ, SSAnne2FCaptainsTrashCan
+	bg_event 23,  4, BGEVENT_READ, SSAnne2FCaptainsBook
 
 	def_object_events
-	object_event 35,  4, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_SSANNE_2F_RIVAL
-	object_event 24,  2, SPRITE_CAPTAIN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnne2FCaptainScript, -1
-	object_event 19, 13, SPRITE_CHEF, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnne2FWaiterScript, -1
+	object_event 35,  6, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_SSANNE_2F_RIVAL
+	object_event 20,  3, SPRITE_CAPTAIN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SSAnne2FCaptainScript, -1
+	object_event 19, 15, SPRITE_CHEF, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnne2FWaiterScript, -1

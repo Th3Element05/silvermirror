@@ -610,11 +610,15 @@ ENDM
 	map_attributes PewterMuseum2F, PEWTER_MUSEUM_2F, $00, 0
 	map_attributes OlivinePort, OLIVINE_PORT, $0a, 0
 	map_attributes VermilionPort, VERMILION_PORT, $0a, 0
-;	map_attributes FastShip1F, FAST_SHIP_1F, $00, 0
+	map_attributes FastShip1F, FAST_SHIP_1F, $00, 0
+	map_attributes FastShipB1F, FAST_SHIP_B1F, $00, 0
+	map_attributes FastShipCabins_North, FAST_SHIP_CABINS_NORTH, $00, 0
+	map_attributes FastShipCabins_South, FAST_SHIP_CABINS_SOUTH, $00, 0
+	map_attributes FastShipCaptainsCabin, FAST_SHIP_CAPTAINS_CABIN, $00, 0
+	map_attributes FastShipEngineRoom, FAST_SHIP_ENGINE_ROOM, $00, 0
 ;	map_attributes FastShipCabins_NNW_NNE_NE, FAST_SHIP_CABINS_NNW_NNE_NE, $00, 0
 ;	map_attributes FastShipCabins_SW_SSW_NW, FAST_SHIP_CABINS_SW_SSW_NW, $00, 0
 ;	map_attributes FastShipCabins_SE_SSE_CaptainsCabin, FAST_SHIP_CABINS_SE_SSE_CAPTAINS_CABIN, $00, 0
-;	map_attributes FastShipB1F, FAST_SHIP_B1F, $00, 0
 ;	map_attributes OlivinePortPassage, OLIVINE_PORT_PASSAGE, $00, 0
 ;	map_attributes VermilionPortPassage, VERMILION_PORT_PASSAGE, $00, 0
 	map_attributes MountMoonSquare, MOUNT_MOON_SQUARE, $2c, 0
@@ -741,7 +745,7 @@ ENDM
 	map_attributes Route11Gate, ROUTE_11_GATE, $00, 0
 	map_attributes Route11Gate2F, ROUTE_11_GATE_2F, $00, 0
 	map_attributes CeruleanCave1F, CERULEAN_CAVE_1F, $09, 0
-	map_attributes CeruleanCave2F, CERULEAN_CAVE_2F, $09, 0
+	map_attributes CeruleanCave2F, CERULEAN_CAVE_2F, $1d, 0
 	map_attributes CeruleanCaveB1F, CERULEAN_CAVE_B1F, $09, 0
 ;	map_attributes SafariZoneGatePokecenter1F, SAFARI_ZONE_GATE_POKECENTER_1F, $00, 0
 	map_attributes SafariZoneArea1, SAFARI_ZONE_AREA_1, $4b, 0

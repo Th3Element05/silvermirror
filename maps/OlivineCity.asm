@@ -1,13 +1,9 @@
 	object_const_def
-	const OLIVINECITY_SAILOR1
-	const OLIVINECITY_YOUNGSTER
-	const OLIVINECITY_SAILOR2
-;	const OLIVINECITY_OLIVINE_RIVAL
+;	const OLIVINECITY_SAILOR
 
 OlivineCity_MapScripts:
 	def_scene_scripts
-	scene_script OlivineCityNoop1Scene, SCENE_OLIVINECITY_RIVAL_ENCOUNTER
-	scene_script OlivineCityNoop2Scene, SCENE_OLIVINECITY_NOOP
+	scene_script VermilionCityNoop1Scene, SCENE_OLIVINECITY_CHECK_ENTER_PORT
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, OlivineCityFlypointCallback
@@ -15,194 +11,55 @@ OlivineCity_MapScripts:
 OlivineCityNoop1Scene:
 	end
 
-OlivineCityNoop2Scene:
-	end
-
 OlivineCityFlypointCallback:
 	setflag ENGINE_FLYPOINT_OLIVINE
+	readvar VAR_FACING
+	ifnotequal UP, .NotExitingPort
+	applymovement PLAYER, OlivineCityPlayerExitsPortMovement
+.NotExitingPort
 	endcallback
 
-;OlivineCityRivalSceneTop:
-;	turnobject PLAYER, LEFT
-;	showemote EMOTE_SHOCK, PLAYER, 15
-;	special FadeOutMusic
-;	pause 15
-;	playsound SFX_ENTER_DOOR
-;	appear OLIVINECITY_OLIVINE_RIVAL
-;	waitsfx
-;	applymovement OLIVINECITY_OLIVINE_RIVAL, OlivineCityRivalApproachesTopMovement
-;	playmusic MUSIC_RIVAL_ENCOUNTER
-;	opentext
-;	writetext OlivineCityRivalText
-;	waitbutton
-;	closetext
-;	applymovement PLAYER, OlivineCityPlayerStepsAsideTopMovement
-;	turnobject PLAYER, RIGHT
-;	applymovement OLIVINECITY_OLIVINE_RIVAL, OlivineCityRivalLeavesTopMovement
-;	setscene SCENE_OLIVINECITY_NOOP
-;	disappear OLIVINECITY_OLIVINE_RIVAL
-;	special RestartMapMusic
-;	special LoadUsedSpritesGFX
-;	end
+OlivineCityCheckEnterPortScript:
+	setmapscene OLIVINE_PORT, SCENE_OLIVINEPORT_NO_SHIP
+	setevent EVENT_OLIVINE_PORT_TICKET_SAILOR
+	readvar VAR_WEEKDAY
+	ifequal SUNDAY, .SSAquaAtVermilion
+	ifequal MONDAY, .SSAquaAtOlivine
+	ifequal WEDNESDAY, .SSAquaAtVermilion
+	ifequal FRIDAY, .SSAquaAtOlivine
+	end
 
-;OlivineCityRivalSceneBottom:
-;	turnobject PLAYER, LEFT
-;	showemote EMOTE_SHOCK, PLAYER, 15
-;	special FadeOutMusic
-;	pause 15
-;	playsound SFX_ENTER_DOOR
-;	appear OLIVINECITY_OLIVINE_RIVAL
-;	waitsfx
-;	applymovement OLIVINECITY_OLIVINE_RIVAL, OlivineCityRivalApproachesBottomMovement
-;	playmusic MUSIC_RIVAL_ENCOUNTER
-;	opentext
-;	writetext OlivineCityRivalText
-;	waitbutton
-;	closetext
-;	applymovement PLAYER, OlivineCityPlayerStepsAsideBottomMovement
-;	turnobject PLAYER, RIGHT
-;	applymovement OLIVINECITY_OLIVINE_RIVAL, OlivineCityRivalLeavesBottomMovement
-;	disappear OLIVINECITY_OLIVINE_RIVAL
-;	setscene SCENE_OLIVINECITY_NOOP
-;	special RestartMapMusic
-;	special LoadUsedSpritesGFX
-;	end
+.SSAquaAtOlivine
+	checkflag ENGINE_RODE_SSAQUA_TODAY
+	iftrue .SailedToVermilion
+	setmapscene OLIVINE_PORT, SCENE_OLIVINEPORT_SS_AQUA
+	clearevent EVENT_OLIVINE_PORT_TICKET_SAILOR
+.SailedToVermilion
+	end
+
+.SSAquaAtVermilion
+	checkflag ENGINE_RODE_SSAQUA_TODAY
+	iffalse .StillAtVermilion
+	setmapscene OLIVINE_PORT, SCENE_OLIVINEPORT_SS_AQUA
+	clearevent EVENT_OLIVINE_PORT_TICKET_SAILOR
+.StillAtVermilion
+	end
+
+OlivineCityPortSailor1Script:
+	jumptextfaceplayer OlivineCityPortSailorText
+OlivineCityPortSailorText:
+;	text "S.S.AQUA sails to"
+;	line "VERMILION CITY in"
+;	cont "KANTO on MONDAY"
+;	cont "and FRIDAY."
+;	done
+	text "The S.S.AQUA"
+	line "sails to KANTO on "
+	cont "MONDAY and FRIDAY."
+	done
 
 OlivineCitySailor1Script:
 	jumptextfaceplayer OlivineCitySailor1Text
-
-OlivineCityStandingYoungsterScript:
-	faceplayer
-	opentext
-	random 2
-	ifequal 0, .FiftyFifty
-	writetext OlivineCityStandingYoungsterPokegearText
-	waitbutton
-	closetext
-	end
-
-.FiftyFifty:
-	writetext OlivineCityStandingYoungsterPokedexText
-	waitbutton
-	closetext
-	end
-
-OlivineCitySailor2Script:
-	jumptextfaceplayer OlivineCitySailor2Text
-
-OlivineCitySign:
-	jumptext OlivineCitySignText
-
-OlivineCityPortSign:
-	jumptext OlivineCityPortSignText
-
-OlivineGymSign:
-	jumptext OlivineGymSignText
-
-OlivineLighthouseSign:
-	jumptext OlivineLighthouseSignText
-
-OlivineCityBattleTowerSign:
-	jumptext OlivineCityBattleTowerSignText
-
-OlivineCityPokecenterSign:
-	jumpstd PokecenterSignScript
-
-OlivineCityMartSign:
-	jumpstd MartSignScript
-
-;OlivineCityRivalApproachesTopMovement:
-;	step DOWN
-;	step RIGHT
-;	step RIGHT
-;	step_end
-
-;OlivineCityRivalApproachesBottomMovement:
-;	step DOWN
-;	step DOWN
-;	step RIGHT
-;	step RIGHT
-;	step_end
-
-;OlivineCityRivalLeavesTopMovement:
-;	step RIGHT
-;	step RIGHT
-;	step RIGHT
-;	step RIGHT
-;	step RIGHT
-;	step RIGHT
-;	step UP
-;	step UP
-;	step UP
-;	step UP
-;	step UP
-;	step UP
-;	step_end
-
-;OlivineCityRivalLeavesBottomMovement:
-;	step RIGHT
-;	step RIGHT
-;	step RIGHT
-;	step RIGHT
-;	step RIGHT
-;	step RIGHT
-;	step UP
-;	step UP
-;	step UP
-;	step UP
-;	step UP
-;	step_end
-
-;OlivineCityPlayerStepsAsideTopMovement:
-;	step DOWN
-;	turn_head UP
-;	step_end
-
-;OlivineCityPlayerStepsAsideBottomMovement:
-;	step UP
-;	turn_head DOWN
-;	step_end
-
-;OlivineCityRivalText:
-;	text "…"
-;
-;	para "You again?"
-;
-;	para "There's no need to"
-;	line "panic. I don't"
-;
-;	para "bother with wimps"
-;	line "like you."
-;
-;	para "Speaking of weak-"
-;	line "lings, the city's"
-;
-;	para "GYM LEADER isn't"
-;	line "here."
-;
-;	para "Supposedly taking"
-;	line "care of a sick"
-;
-;	para "#MON at the"
-;	line "LIGHTHOUSE."
-;
-;	para "Humph! Boo-hoo!"
-;	line "Just let sick"
-;	cont "#MON go!"
-;
-;	para "A #MON that"
-;	line "can't battle is"
-;	cont "worthless!"
-;
-;	para "Why don't you go"
-;	line "train at the"
-;	cont "LIGHTHOUSE?"
-;
-;	para "Who knows. It may"
-;	line "make you a bit"
-;	cont "less weak!"
-;	done
-
 OlivineCitySailor1Text:
 	text "Dark roads are"
 	line "dangerous at"
@@ -221,6 +78,35 @@ OlivineCitySailor1Text:
 	line "ship can sail."
 	done
 
+OlivineCitySailor2Script:
+	jumptextfaceplayer OlivineCitySailor2Text
+OlivineCitySailor2Text:
+	text "The sea is sweet!"
+
+	para "Sunsets on the sea"
+	line "are marvelous!"
+
+	para "Sing with me! "
+	line "Yo-ho! Blow the"
+	cont "man down!…"
+	done
+
+OlivineCityStandingYoungsterScript:
+	faceplayer
+	opentext
+	random 2
+	ifequal 0, .FiftyFifty
+	writetext OlivineCityStandingYoungsterPokegearText
+	waitbutton
+	closetext
+	end
+
+.FiftyFifty:
+	writetext OlivineCityStandingYoungsterPokedexText
+	waitbutton
+	closetext
+	end
+
 OlivineCityStandingYoungsterPokegearText:
 	text "That thing you"
 	line "have--it's a #-"
@@ -236,17 +122,15 @@ OlivineCityStandingYoungsterPokedexText:
 	line "awesome."
 	done
 
-OlivineCitySailor2Text:
-	text "The sea is sweet!"
+; movements
+OlivineCityPlayerExitsPortMovement:
+	step UP
+	step UP
+	step_end
 
-	para "Sunsets on the sea"
-	line "are marvelous!"
-
-	para "Sing with me! "
-	line "Yo-ho! Blow the"
-	cont "man down!…"
-	done
-
+; signs
+OlivineCitySign:
+	jumptext OlivineCitySignText
 OlivineCitySignText:
 	text "OLIVINE CITY"
 
@@ -254,11 +138,15 @@ OlivineCitySignText:
 	line "to Foreign Lands"
 	done
 
+OlivineCityPortSign:
+	jumptext OlivineCityPortSignText
 OlivineCityPortSignText:
 	text "OLIVINE PORT"
 	line "FAST SHIP PIER"
 	done
 
+OlivineGymSign:
+	jumptext OlivineGymSignText
 OlivineGymSignText:
 	text "OLIVINE CITY"
 	line "#MON GYM"
@@ -268,21 +156,26 @@ OlivineGymSignText:
 	line "Defense Girl"
 	done
 
+OlivineLighthouseSign:
+	jumptext OlivineLighthouseSignText
 OlivineLighthouseSignText:
 	text "OLIVINE LIGHTHOUSE"
 	line "Also known as the"
 	cont "GLITTER LIGHTHOUSE"
 	done
 
+OlivineCityBattleTowerSign:
+	jumptext OlivineCityBattleTowerSignText
 OlivineCityBattleTowerSignText:
 	text "BATTLE TOWER AHEAD"
 	line "Opening Now!"
 	done
 
-OlivineCityBattleTowerSignText_NotYetOpen: ; unreferenced
-; originally shown when the Battle Tower was closed
-	text "BATTLE TOWER AHEAD"
-	done
+OlivineCityPokecenterSign:
+	jumpstd PokecenterSignScript
+
+OlivineCityMartSign:
+	jumpstd MartSignScript
 
 OlivineCity_MapEvents:
 	db 0, 0 ; filler
@@ -291,24 +184,20 @@ OlivineCity_MapEvents:
 	warp_event 13, 21, OLIVINE_POKECENTER_1F, 1
 	warp_event 10, 11, OLIVINE_GYM, 1
 	warp_event 25, 11, OLIVINE_TIMS_HOUSE, 1
-	warp_event  0,  0, OLIVINE_HOUSE_BETA, 1 ; inaccessible
+	warp_event 18, 33, OLIVINE_PORT, 1
 	warp_event 29, 11, OLIVINE_PUNISHMENT_SPEECH_HOUSE, 1
 	warp_event 13, 15, OLIVINE_GOOD_ROD_HOUSE, 1
 	warp_event  7, 21, OLIVINE_CAFE, 1
 	warp_event 19, 17, OLIVINE_MART, 2
 	warp_event 29, 27, OLIVINE_LIGHTHOUSE_1F, 1
-	warp_event 19, 27, OLIVINE_PORT, 1
-	warp_event 20, 27, OLIVINE_PORT, 1
-;	warp_event 19, 27, OLIVINE_PORT_PASSAGE, 1
-;	warp_event 20, 27, OLIVINE_PORT_PASSAGE, 2
+	warp_event 19, 33, OLIVINE_PORT, 1
 
 	def_coord_events
-;	coord_event 13, 12, SCENE_OLIVINECITY_RIVAL_ENCOUNTER, OlivineCityRivalSceneTop
-;	coord_event 13, 13, SCENE_OLIVINECITY_RIVAL_ENCOUNTER, OlivineCityRivalSceneBottom
+	coord_event 18, 32, SCENE_OLIVINECITY_CHECK_ENTER_PORT, OlivineCityCheckEnterPortScript
 
 	def_bg_events
 	bg_event 17, 11, BGEVENT_READ, OlivineCitySign
-	bg_event 20, 24, BGEVENT_READ, OlivineCityPortSign
+	bg_event 20, 22, BGEVENT_READ, OlivineCityPortSign
 	bg_event  7, 11, BGEVENT_READ, OlivineGymSign
 	bg_event 30, 28, BGEVENT_READ, OlivineLighthouseSign
 	bg_event  3, 23, BGEVENT_READ, OlivineCityBattleTowerSign
@@ -316,7 +205,7 @@ OlivineCity_MapEvents:
 	bg_event 20, 17, BGEVENT_READ, OlivineCityMartSign
 
 	def_object_events
-	object_event 26, 27, SPRITE_SAILOR, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineCitySailor1Script, -1
+	object_event 19, 32, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_UP, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineCityPortSailor1Script, -1
+	object_event 29, 28, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_DOWN, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineCitySailor1Script, -1
 	object_event 20, 13, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineCityStandingYoungsterScript, -1
 	object_event 17, 21, SPRITE_SAILOR, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineCitySailor2Script, -1
-;	object_event 10, 11, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_OLIVINE_CITY

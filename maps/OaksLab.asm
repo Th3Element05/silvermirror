@@ -27,6 +27,11 @@ OaksLabMeetOakScene:
 
 ;scripts
 OakScript:
+	faceplayer
+	checkevent EVENT_GOT_SS_TICKET_FROM_OAK
+	iftrue .EvaluatePokedex
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .OakGiveTicket
 	checkevent EVENT_GOT_POKEDEX
 	iftrue .EvaluatePokedex
 ;deliver parcel
@@ -39,10 +44,9 @@ OakScript:
 	checkscene
 	ifequal SCENE_OAKSLAB_RIVAL_BATTLE, .OakWildPokemon
 ;else
-	jumptextfaceplayer OaksLabPokemonAwaitText
+	jumptext OaksLabPokemonAwaitText
 
 .EvaluatePokedex
-	faceplayer
 	opentext
 	checkevent EVENT_GOT_POKEBALLS_FROM_OAK
 	iffalse .OakGiveBalls
@@ -54,12 +58,6 @@ OakScript:
 	closetext
 	end
 
-.OakWhichPokemonDoYouWant
-	jumptextfaceplayer OaksLabWhichPokemonDoYouWantText
-
-.OakWildPokemon
-	jumptextfaceplayer OaksLabWildPokemonText
-
 .OakGiveBalls
 	writetext OaksLabGetPokeballsText
 	playsound SFX_ITEM
@@ -70,6 +68,23 @@ OakScript:
 	waitbutton
 	closetext
 	setevent EVENT_GOT_POKEBALLS_FROM_OAK
+	end
+
+.OakWhichPokemonDoYouWant
+	jumptext OaksLabWhichPokemonDoYouWantText
+
+.OakWildPokemon
+	jumptext OaksLabWildPokemonText
+
+.OakGiveTicket
+	opentext
+	writetext OakGiveTicketText1
+	promptbutton
+	verbosegiveitem S_S_TICKET
+	setevent EVENT_GOT_SS_TICKET_FROM_OAK
+	writetext OakGiveTicketText2
+	waitbutton
+	closetext
 	end
 
 OaksLabTryToLeaveScript:
@@ -321,7 +336,6 @@ OaksLabRivalGoesAroundScript:
 
 DeliverOaksParcelScript:
 	moveobject OAKSLAB_BLUE, 4, 7
-	faceplayer
 	opentext
 	writetext OaksLabHowIsMyPokemonText
 	playsound SFX_ITEM
@@ -377,6 +391,8 @@ DeliverOaksParcelScript:
 	setevent EVENT_GOT_POKEDEX
 ;	setflag ENGINE_MOBILE_SYSTEM
 	setmapscene VIRIDIAN_CITY, SCENE_VIRIDIANCITY_MAP_CARD
+	setevent EVENT_VIRIDIAN_CITY_COFFEE_GRAMPS
+	clearevent EVENT_VIRIDIAN_CITY_CATCHING_GRAMPS
 	setmapscene ROUTE_22, SCENE_ROUTE22_RIVAL
 	setscene SCENE_OAKSLAB_NOOP
 	special RestartMapMusic
@@ -930,6 +946,39 @@ OaksLabPokeballExplainationText:
 	cont "have to be lucky!"
 	done
 
+OakGiveTicketText1:
+	text "OAK: <PLAYER>!"
+	line "There you are!"
+
+	para "I called because I"
+	line "have something for"
+	cont "you."
+
+	para "See? It's an"
+	line "S.S.TICKET."
+
+	para "Now you can catch"
+	line "#MON in JOHTO!"
+	done
+
+OakGiveTicketText2:
+	text "Board the ship at"
+	line "VERMILION CITY!"
+
+	para "It sails to"
+	line "OLIVINE CITY far"
+	cont "to the west!"
+
+	para "You should visit"
+	line "my friend PROF.ELM"
+	cont "in NEW BARK TOWN!"
+
+	para "I'm sure he would"
+	line "love to see how"
+	cont "your #DEX is"
+	cont "coming along!"
+	done
+
 ; bg text
 OaksPokeBallText:
 	text "That's PROF.OAK's"
@@ -1005,8 +1054,9 @@ DebugBeatEliteFour:
 	writetext DebugBeatEliteFourText
 	yesorno
 	iffalse .End
-	setflag ENGINE_CREDITS_SKIP
-	setevent EVENT_BEAT_ELITE_FOUR
+;	setflag ENGINE_CREDITS_SKIP
+;	setevent EVENT_BEAT_ELITE_FOUR
+	warp HALL_OF_FAME, 4, 9
 .End
 	closetext
 	end

@@ -29,58 +29,58 @@ GoldenrodDeptStore5FClerkScript:
 	closetext
 	end
 
-GoldenrodDeptStore5FReceptionistScript:
-	faceplayer
-	opentext
-	readvar VAR_WEEKDAY
-	ifnotequal SUNDAY, .EventIsOver
-	checkflag ENGINE_GOLDENROD_DEPT_STORE_TM71_RETURN
-	iftrue .EventIsOver
-	special GetFirstPokemonHappiness
-	writetext GoldenrodDeptStore5FReceptionistOhYourMonDotDotDotText
-	promptbutton
-	ifgreater 150 - 1, .VeryHappy
-	ifgreater 50 - 1, .SomewhatHappy
-	sjump .NotVeryHappy
-
-.VeryHappy:
-	writetext GoldenrodDeptStore5FReceptionistThisMoveShouldBePerfectText
-	promptbutton
+;GoldenrodDeptStore5FReceptionistScript:
+;	faceplayer
+;	opentext
+;	readvar VAR_WEEKDAY
+;	ifnotequal SUNDAY, .EventIsOver
+;	checkflag ENGINE_GOLDENROD_DEPT_STORE_TM71_RETURN
+;	iftrue .EventIsOver
+;	special GetFirstPokemonHappiness
+;	writetext GoldenrodDeptStore5FReceptionistOhYourMonDotDotDotText
+;	promptbutton
+;	ifgreater 150 - 1, .VeryHappy
+;	ifgreater 50 - 1, .SomewhatHappy
+;	sjump .NotVeryHappy
+;
+;.VeryHappy:
+;	writetext GoldenrodDeptStore5FReceptionistThisMoveShouldBePerfectText
+;	promptbutton
 ;	checkitem TM_RETURN
 ;	iftrue .AlreadyGotTM
 ;	verbosegiveitem TM_RETURN
 ;	setflag ENGINE_GOLDENROD_DEPT_STORE_TM71_RETURN
-	closetext
-	end
-
-.SomewhatHappy:
-	writetext GoldenrodDeptStore5FReceptionistItsAdorableText
-	waitbutton
-	closetext
-	end
-
-.NotVeryHappy:
-	writetext GoldenrodDeptStore5FReceptionistItLooksEvilHowAboutThisTMText
-	promptbutton
+;	closetext
+;	end
+;
+;.SomewhatHappy:
+;	writetext GoldenrodDeptStore5FReceptionistItsAdorableText
+;	waitbutton
+;	closetext
+;	end
+;
+;.NotVeryHappy:
+;	writetext GoldenrodDeptStore5FReceptionistItLooksEvilHowAboutThisTMText
+;	promptbutton
 ;	checkitem TM_FRUSTRATION
 ;	iftrue .AlreadyGotTM
 ;	verbosegiveitem TM_FRUSTRATION
 ;	setflag ENGINE_GOLDENROD_DEPT_STORE_TM71_RETURN
-	closetext
-	end
-
-.AlreadyGotTM:
-	writetext GoldenrodDeptStore5FAlreadyGotTMText
-	waitbutton
-	closetext
-	end
-
-.EventIsOver:
-	writetext GoldenrodDeptStore5FReceptionistThereAreTMsPerfectForMonText
-	waitbutton
-.Done:
-	closetext
-	end
+;	closetext
+;	end
+;
+;.AlreadyGotTM:
+;	writetext GoldenrodDeptStore5FAlreadyGotTMText
+;	waitbutton
+;	closetext
+;	end
+;
+;.EventIsOver:
+;	writetext GoldenrodDeptStore5FReceptionistThereAreTMsPerfectForMonText
+;	waitbutton
+;.Done:
+;	closetext
+;	end
 
 Carrie:
 	faceplayer
@@ -221,4 +221,4 @@ GoldenrodDeptStore5F_MapEvents:
 	object_event  6,  3, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Mike, -1
 	object_event 13,  5, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStore5FPokefanMScript, -1
 	object_event  9,  1, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Carrie, -1
-	object_event  7,  5, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStore5FReceptionistScript, EVENT_GOLDENROD_DEPT_STORE_5F_HAPPINESS_EVENT_LADY
+;	object_event  7,  5, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStore5FReceptionistScript, EVENT_GOLDENROD_DEPT_STORE_5F_HAPPINESS_EVENT_LADY
