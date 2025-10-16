@@ -1,85 +1,32 @@
 	object_const_def
-	const VERMILIONCITY_PORT_SAILOR
-	const VERMILIONCITY_SAILOR
+;	const VERMILIONCITY_PORT_SAILOR
 
 VermilionCity_MapScripts:
 	def_scene_scripts
-	scene_script VermilionCityNoop1Scene, SCENE_VERMILIONCITY_ASK_ENTER_DOCK
-	scene_script VermilionCityNoop2Scene, SCENE_VERMILIONCITY_CAN_ENTER_DOCK
+	scene_script VermilionCityNoop1Scene,        SCENE_VERMILIONCITY_BEFORE_HOF
+	scene_script VermilionCityNoop2Scene,        SCENE_VERMILIONCITY_SSAQUA_FIRST_TIME
+	scene_script VermilionCityNoop3Scene,        SCENE_VERMILIONCITY_CHECK_ENTER_PORT
+	scene_script VermilionCitySSAnneLeavesScene, SCENE_VERMILIONCITY_SSANNE_LEAVES
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, VermilionCityFlypointCallback
 
-VermilionCityNoop1Scene:
-VermilionCityNoop2Scene:
-	end
-
 VermilionCityFlypointCallback:
 	setflag ENGINE_FLYPOINT_VERMILION
 	setmapscene CINNABAR_ISLAND, SCENE_CINNABARISLAND_NOOP
+	readvar VAR_FACING
+	ifnotequal UP, .NotExitingPort
+	applymovement PLAYER, VermilionCityPlayerExitsPortMovement
+.NotExitingPort
 	endcallback
 
-VermilionCityAskEnterDockScript:
-	turnobject VERMILIONCITY_PORT_SAILOR, LEFT
-	turnobject PLAYER, RIGHT
-	opentext
-	checkevent EVENT_SS_ANNE_SET_SAIL
-	iftrue .NotHere
-	writetext VermilionPortSailorWelcomeText
-;	promptbutton
-;	writetext VermilionPortSailorAskTicketText
-;	promptbutton
-;	checkitem S_S_TICKET
-;	iffalse .NoTicket
-;	writetext VermilionPortShowTicketText
-	waitbutton
-	closetext
-;	turnobject VERMILIONCITY_PORT_SAILOR, UP
-	setscene SCENE_VERMILIONCITY_CAN_ENTER_DOCK
+VermilionCityNoop1Scene:
+VermilionCityNoop2Scene:
+VermilionCityNoop3Scene:
 	end
 
-.NotHere
-	writetext VermilionPortSailorSetSailText
-	waitbutton
-	closetext
-	applymovement PLAYER, VermilionPortNoEntryMovement
-	end
-
-;.NoTicket
-;	writetext VermilionPortSailorNoTicketText
-;	waitbutton
-;	closetext
-;	applymovement PLAYER, VermilionPortNoEntryMovement
-;	end
-
-;VermilionPortShowTicketText:
-;	text "<PLAYER> flashed"
-;	line "the S.S.TICKET!"
-;
-;	para "Great! Welcome to"
-;	line "S.S.ANNE!"
-;	done
-
-;VermilionPortSailorNoTicketText:
-;	text "<PLAYER> doesn't"
-;	line "have the needed"
-;	cont "S.S.TICKET."
-;
-;	para "Sorry!"		
-;
-;	para "You need a ticket"
-;	line "to get aboard."
-;	done
-
-;VermilionPortSailorAskTicketText:
-;	text "Excuse me, do you"
-;	line "have a ticket?"
-;	done
-
-VermilionCitySSAnneLeavesScript:
-	checkevent EVENT_GOT_HM01_CUT
-	iffalse .Skip
-	turnobject PLAYER, DOWN
+VermilionCitySSAnneLeavesScene:
+	applymovement PLAYER, VermilionPortSSAnneLeavesMovement
 	pause 30
 	playsound SFX_BOAT
 	earthquake 30
@@ -87,11 +34,10 @@ VermilionCitySSAnneLeavesScript:
 	writetext VermilionCitySSAnneLeavesText
 	waitbutton
 	closetext
-	applymovement PLAYER, VermilionPortNoEntryMovement
-	setscene SCENE_VERMILIONCITY_ASK_ENTER_DOCK
+	setscene SCENE_VERMILIONCITY_BEFORE_HOF
+	setmapscene VERMILION_PORT, SCENE_VERMILIONPORT_NO_SHIP
 	setevent EVENT_SS_ANNE_SET_SAIL
-	disappear VERMILIONCITY_SAILOR
-	;fallthrough
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 .Skip
 	end
 
@@ -100,49 +46,172 @@ VermilionCitySSAnneLeavesText:
 	line "departing!"
 	done
 
-VermilionPortSailorScript:
+VermilionCitySSAnneStoryBeatScript:
 	checkevent EVENT_SS_ANNE_SET_SAIL
-	iftrue .SetSail
-	jumptextfaceplayer VermilionPortSailorWelcomeText
+	iftrue .NoSSAnne
+	setmapscene VERMILION_PORT, SCENE_VERMILIONPORT_SS_ANNE
+.NoSSAnne
+	setevent EVENT_VERMILION_PORT_TICKET_SAILOR
+	end
 
-.SetSail
-	jumptextfaceplayer VermilionPortSailorSetSailText
+VermilionCitySSAquaStoryBeatScript:
+	setmapscene VERMILION_PORT, SCENE_VERMILIONPORT_SS_AQUA
+	clearevent EVENT_VERMILION_PORT_TICKET_SAILOR
+	end
 
-VermilionPortSailorWelcomeText:
+VermilionCityCheckEnterPortScript:
+	setmapscene VERMILION_PORT, SCENE_VERMILIONPORT_NO_SHIP
+	setevent EVENT_VERMILION_PORT_TICKET_SAILOR
+	readvar VAR_WEEKDAY
+	ifequal SUNDAY, .SSAquaAtVermilion
+	ifequal MONDAY, .SSAquaAtOlivine
+	ifequal WEDNESDAY, .SSAquaAtVermilion
+	ifequal FRIDAY, .SSAquaAtOlivine
+	ifequal SATURDAY, .SSAnneAtVermilion
+	end
+
+.SSAquaAtVermilion
+	checkflag ENGINE_RODE_SSAQUA_TODAY
+	iftrue .SailedToOlivine
+	setmapscene VERMILION_PORT, SCENE_VERMILIONPORT_SS_AQUA
+	clearevent EVENT_VERMILION_PORT_TICKET_SAILOR
+.SailedToOlivine
+	end
+
+.SSAquaAtOlivine
+	checkflag ENGINE_RODE_SSAQUA_TODAY
+	iffalse .StillAtOlivine
+	setmapscene VERMILION_PORT, SCENE_VERMILIONPORT_SS_AQUA
+	clearevent EVENT_VERMILION_PORT_TICKET_SAILOR
+.StillAtOlivine
+	end
+
+.SSAnneAtVermilion
+	setmapscene VERMILION_PORT, SCENE_VERMILIONPORT_SS_ANNE
+	setevent EVENT_VERMILION_PORT_TICKET_SAILOR
+	checkflag ENGINE_RODE_SSAQUA_TODAY
+	iftrue .DontResetSSAnneTrainers
+;	clearevent EVENT_BEAT_COOLTRAINERM_SEAN
+;	clearevent EVENT_BEAT_COOLTRAINERF_CAROL
+;	clearevent EVENT_BEAT_GENTLEMAN_EDWARD
+;	clearevent EVENT_BEAT_BEAUTY_CASSIE
+;	clearevent EVENT_BEAT_PSYCHIC_RODNEY
+;	clearevent EVENT_BEAT_SUPER_NERD_SHAWN
+;	clearevent EVENT_BEAT_SAILOR_GARRETT
+;	clearevent EVENT_BEAT_FISHER_JONAH
+;	clearevent EVENT_BEAT_BLACKBELT_WAI
+	setflag ENGINE_RODE_SSAQUA_TODAY
+.DontResetSSAnneTrainers
+	end
+
+VermilionCityPortSailorScript:
+	checkevent EVENT_GOT_HM01_CUT
+	iffalse .SSAnneWelcomeText
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	iftrue .SSAnneSetSail
+	checkevent EVENT_SS_ANNE_SET_SAIL
+	iftrue .SSAnneBeforeHoF
+	; else
+	jumptextfaceplayer VermilionCityPortSailorNoShipText
+
+.SSAnneBeforeHoF
+	jumptextfaceplayer VermilionCityPortSailorBeforeHoFText
+
+.SSAnneSetSail
+	jumptextfaceplayer VermilionCityPortSailorSetSailText
+
+.SSAnneWelcomeText
+	jumptextfaceplayer VermilionCityPortSailorWelcomeText
+
+VermilionCityPortSailorNoShipText:
+	text "S.S.AQUA sails to"
+	line "OLIVINE CITY in"
+	cont "JOHTO on SUNDAY"
+	cont "and WEDNESDAY."
+
+	para "S.S.ANNE docks"
+	line "here on SATURDAY."
+	done
+
+VermilionCityPortSailorBeforeHoFText:
+	text "S.S.AQUA sails to"
+	line "OLIVINE CITY in"
+	cont "JOHTO on SUNDAY"
+	cont "and WEDNESDAY."
+	done
+
+VermilionCityPortSailorSetSailText:
+	text "The S.S.ANNE has"
+	line "set sail!"
+	done
+
+VermilionCityPortSailorWelcomeText:
 	text "Welcome to the"
 	line "S.S.ANNE!"
 
-	para "The party is over,"
-	line "so I guess you can"
-	cont "come on board and"
-	cont "look around before"
-	cont "we set sail again."
-	done
-
-VermilionPortSailorSetSailText:
-	text "The ship set sail."
+	para "All trainers are"
+	line "welcome on board"
+	cont "until its time to"
+	cont "set sail again!"
 	done
 
 VermilionCityGamblerScript:
+	checkscene
+	ifequal SCENE_VERMILIONCITY_CHECK_ENTER_PORT, .CheckDay
 	checkevent EVENT_SS_ANNE_SET_SAIL
-	iftrue .Departed
-	jumptextfaceplayer VermilionCityGamblerHarborText
+	iffalse .SSAnneDocked
+	jumptextfaceplayer VermilionCityGamblerSSAnneDepartedText
 
-.Departed
-	jumptextfaceplayer VermilionCityGamblerDepartedText
-	
-VermilionCityGamblerHarborText:
+.CheckDay
+	checkflag ENGINE_RODE_SSAQUA_TODAY
+	iftrue .SSAquaLeft
+	readvar VAR_WEEKDAY
+	ifequal SUNDAY, .SSAquaDocked
+	ifequal WEDNESDAY, .SSAquaDocked
+	ifequal SATURDAY, .SSAnneDocked
+	; else
+	jumptextfaceplayer VermilionCityGamblerRelaxingText
+	end
+
+.SSAquaDocked
+	jumptextfaceplayer VermilionCityGamblerSSAquaText
+
+.SSAquaLeft
+	jumptextfaceplayer VermilionCityGamblerSSAquaDepartedText
+
+.SSAnneDocked
+	jumptextfaceplayer VermilionCityGamblerSSAnneText
+
+VermilionCityGamblerSSAquaText:
+	text "Did you see S.S."
+	line "AQUA moored in"
+	cont "the harbor?"
+	done
+
+VermilionCityGamblerSSAquaDepartedText:
+	text "The S.S.AQUA has"
+	line "already sailed to"
+	cont "OLIVINE today."
+	done
+
+VermilionCityGamblerSSAnneText:
 	text "Did you see S.S."
 	line "ANNE moored in"
 	cont "the harbor?"
 	done
 
-VermilionCityGamblerDepartedText:
+VermilionCityGamblerSSAnneDepartedText:
 	text "The S.S.ANNE has"
 	line "departed!"
 
 	para "She'll return here"
 	line "after her voyage."
+	done
+
+VermilionCityGamblerRelaxingText:
+	text "Watching ships"
+	line "coming and going"
+	cont "is very relaxing!"
 	done
 
 VermilionCityBeautyScript:
@@ -200,7 +269,14 @@ VermilionCitySailorText:
 	done
 
 ; movement
-VermilionPortNoEntryMovement:
+VermilionPortSSAnneLeavesMovement:
+	step UP
+	step UP
+	turn_head DOWN
+	step_end
+
+VermilionCityPlayerExitsPortMovement:
+	step UP
 	step UP
 	step_end
 
@@ -271,6 +347,15 @@ VermilionCityHiddenMaxEther:
 ;VermilionCityDebugPokeFlute:
 ;	hiddenitem POKE_FLUTE, EVENT_ROUTE_12_HIDDEN_HYPER_POTION
 
+;VermilionCitySetTwoDayTimer:
+;	ld a, 2
+;	ld hl, wUnusedTwoDayTimer
+;	ld [hl], a
+;	call UpdateTime
+;	ld hl, wUnusedTwoDayTimerStartDate
+;	call CopyDayToHL
+;	ret
+
 VermilionCity_MapEvents:
 	db 0, 0 ; filler
 
@@ -282,12 +367,13 @@ VermilionCity_MapEvents:
 	warp_event 23, 13, VERMILION_MART, 1
 	warp_event 23, 19, VERMILION_DIGLETTS_CAVE_SPEECH_HOUSE, 1
 	warp_event 12, 19, VERMILION_GYM, 1
-	warp_event 18, 31, VERMILION_PORT, 1 ;VERMILION_PORT_PASSAGE, 1
-	warp_event 19, 31, VERMILION_PORT, 1 ;VERMILION_PORT_PASSAGE, 2
+	warp_event 18, 31, VERMILION_PORT, 1
+	warp_event 19, 31, VERMILION_PORT, 1
 
 	def_coord_events
-	coord_event 18, 30, SCENE_VERMILIONCITY_ASK_ENTER_DOCK, VermilionCityAskEnterDockScript
-	coord_event 18, 30, SCENE_VERMILIONCITY_CAN_ENTER_DOCK, VermilionCitySSAnneLeavesScript
+	coord_event 18, 30, SCENE_VERMILIONCITY_BEFORE_HOF, VermilionCitySSAnneStoryBeatScript
+	coord_event 18, 30, SCENE_VERMILIONCITY_SSAQUA_FIRST_TIME, VermilionCitySSAquaStoryBeatScript
+	coord_event 18, 30, SCENE_VERMILIONCITY_CHECK_ENTER_PORT, VermilionCityCheckEnterPortScript
 
 	def_bg_events
 	bg_event 27,  3, BGEVENT_READ, VermilionCitySign
@@ -302,8 +388,8 @@ VermilionCity_MapEvents:
 ;	bg_event 35,  3, BGEVENT_ITEM, VermilionCityDebugPokeFlute
 
 	def_object_events
-	object_event 19, 30, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionPortSailorScript, -1
-	object_event 25, 27, SPRITE_SAILOR, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionCitySailorScript, EVENT_SS_ANNE_SET_SAIL
+	object_event 19, 30, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionCityPortSailorScript, -1
+	object_event 25, 27, SPRITE_SAILOR, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionCitySailorScript, -1
 	object_event 27,  6, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionMachopOwner, -1
 	object_event 30,  7, SPRITE_MACHOP, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, VermilionMachop, -1
 	object_event 14,  6, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, VermilionCityGamblerScript, -1

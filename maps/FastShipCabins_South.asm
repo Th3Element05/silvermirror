@@ -7,7 +7,7 @@
 ;	const FASTSHIPCABINS_NNW_NNE_NE_GENTLEMAN
 ;	const FASTSHIPCABINS_NNW_NNE_NE_PHARMACIST
 
-FastShipCabins_NNW_NNE_NE_MapScripts:
+FastShipCabins_South_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
@@ -264,13 +264,18 @@ FastShipCabins_NNW_NNE_NE_MapScripts:
 ;	line "lost it…"
 ;	done
 
-FastShipCabins_NNW_NNE_NE_MapEvents:
+FastShipCabins_South_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-;	warp_event 18,  0, FAST_SHIP_1F, 2
-;	warp_event 18, 12, FAST_SHIP_1F, 3
-;	warp_event 18, 24, FAST_SHIP_1F, 4
+	warp_event  2,  7, FAST_SHIP_1F, 6
+	warp_event  2, 19, FAST_SHIP_1F, 7
+	warp_event  2, 31, FAST_SHIP_1F, 8
+	warp_event  2, 43, FAST_SHIP_1F, 9
+	warp_event  3,  7, FAST_SHIP_1F, 6
+	warp_event  3, 19, FAST_SHIP_1F, 7
+	warp_event  3, 31, FAST_SHIP_1F, 8
+	warp_event  3, 43, FAST_SHIP_1F, 9
 
 	def_coord_events
 

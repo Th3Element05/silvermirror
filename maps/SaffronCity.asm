@@ -1,34 +1,34 @@
 	object_const_def
-	const SAFFRONCITY_SILPHROCKET
+	const SAFFRONCITY_ROCKET_GUARD
+	const SAFFRONCITY_ROCKET_SLEEP
 
 SaffronCity_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, SaffronCityFlypointCallback
-	callback MAPCALLBACK_OBJECTS, SaffronCityMoveRocketCallback
+;	callback MAPCALLBACK_OBJECTS, SaffronCityMoveRocketCallback
 
 SaffronCityFlypointCallback:
 	setflag ENGINE_FLYPOINT_SAFFRON
 	setmapscene CINNABAR_ISLAND, SCENE_CINNABARISLAND_NOOP
 	endcallback
 
-SaffronCityMoveRocketCallback:
-	checkevent EVENT_POKEMON_TOWER_7F_MR_FUJI
-	iftrue .SavedFuji
-	moveobject SAFFRONCITY_SILPHROCKET, 18, 22
-	turnobject SAFFRONCITY_SILPHROCKET, UP
-.SavedFuji
-	endcallback
+;SaffronCityMoveRocketCallback:
+;	checkevent EVENT_POKEMON_TOWER_7F_MR_FUJI
+;	iftrue .SavedFuji
+;	moveobject SAFFRONCITY_SILPHROCKET, 18, 22
+;	turnobject SAFFRONCITY_SILPHROCKET, UP
+;.SavedFuji
+;	endcallback
 
 SaffronCityRocketGuard:
-	checkevent EVENT_POKEMON_TOWER_7F_MR_FUJI
-	iftrue .RocketAsleep
+;	checkevent EVENT_POKEMON_TOWER_7F_MR_FUJI
+;	iftrue .RocketAsleep
 	jumptextfaceplayer SaffronRocketGuardText
-.RocketAsleep
-	showemote EMOTE_SLEEP, SAFFRONCITY_SILPHROCKET, 40
-	jumptext SaffronRocketGuardSnoozeText
-
+;.RocketAsleep
+;	showemote EMOTE_SLEEP, SAFFRONCITY_ROCKET_SLEEP, 40
+;	jumptext SaffronRocketGuardSnoozeText
 SaffronRocketGuardText:
 	text "I'm a security"
 	line "guard."
@@ -37,9 +37,12 @@ SaffronRocketGuardText:
 	line "don't allow in!"
 	done
 
+SaffronCityRocketSleep:
+	showemote EMOTE_SLEEP, SAFFRONCITY_ROCKET_SLEEP, 40
+	jumptext SaffronRocketGuardSnoozeText
 SaffronRocketGuardSnoozeText:
-	text "..."
-	line "Snore..."
+	text "…"
+	line "Snore…"
 
 	para "Hah! He's taking"
 	line "a snooze!"
@@ -149,9 +152,13 @@ SaffronCivilianText4:
 SaffronCityGentleman:
 	jumptextfaceplayer SaffronCityGentlemanText
 SaffronCityGentlemanText:
-	text "I flew here on my"
-	line "PIDGEOT when I"
-	cont "read about SILPH."
+;	text "I flew here on my"
+;	line "PIDGEOT when I"
+;	cont "read about SILPH."
+;	
+	text "I came right away"
+	line "when I read about"
+	cont "ROCKETS at SILPH!"
 
 	para "It's already over?"
 	line "I missed the"
@@ -273,7 +280,8 @@ SaffronCity_MapEvents:
 ;	bg_event 18, 10, BGEVENT_ITEM, DebugLemonade
 
 	def_object_events
-	object_event 19, 22, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronCityRocketGuard, EVENT_SAFFRON_CITY_ROCKETS
+	object_event 18, 22, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronCityRocketGuard, EVENT_SAFFRON_CITY_ROCKET_GUARD
+	object_event 19, 22, SPRITE_SLEEPING, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SaffronCityRocketSleep, EVENT_SAFFRON_CITY_ROCKET_SLEEP
 	object_event  7,  6, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronCityRocketScript, EVENT_SAFFRON_CITY_ROCKETS
 	object_event  8, 12, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronCityRocketScript, EVENT_SAFFRON_CITY_ROCKETS
 	object_event 34,  4, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronCityRocketScript, EVENT_SAFFRON_CITY_ROCKETS
@@ -285,5 +293,5 @@ SaffronCity_MapEvents:
 	object_event 23, 24, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SaffronCityCivilianScript, EVENT_SAFFRON_CITY_CIVILIANS
 	object_event 11, 14, SPRITE_SCIENTIST, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronCityCivilianScript, EVENT_SAFFRON_CITY_CIVILIANS
 	object_event 20,  8, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SaffronCityCivilianScript, EVENT_SAFFRON_CITY_CIVILIANS
-	object_event 34, 13, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronCityGentleman, EVENT_SAFFRON_CITY_CIVILIANS
-	object_event 35, 13, SPRITE_PIDGEOT, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SaffronCityPidgeot, EVENT_SAFFRON_CITY_CIVILIANS
+	object_event 35, 13, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronCityGentleman, EVENT_SAFFRON_CITY_CIVILIANS
+;	object_event 35, 13, SPRITE_PIDGEOT, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SaffronCityPidgeot, EVENT_SAFFRON_CITY_CIVILIANS

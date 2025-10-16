@@ -15,22 +15,22 @@ CinnabarGym_MapScripts:
 .CinnabarGymDoorsCallback:
 	checkevent EVENT_CINNABAR_GYM_QUIZ_1
 	iffalse .NoMoreDoors
-	changeblock 20, 6, $64 ; door 1 open
+	changeblock 20, 6, $3c ; door 1 open
 	checkevent EVENT_CINNABAR_GYM_QUIZ_2
 	iffalse .NoMoreDoors
-	changeblock 12, 6, $64 ; door 2 open
+	changeblock 12, 6, $3c ; door 2 open
 	checkevent EVENT_CINNABAR_GYM_QUIZ_3
 	iffalse .NoMoreDoors
-	changeblock 12, 12, $64 ; door 3 open
+	changeblock 12, 12, $3c ; door 3 open
 	checkevent EVENT_CINNABAR_GYM_QUIZ_4
 	iffalse .NoMoreDoors
-	changeblock 6, 14, $66 ; door 4 open
+	changeblock 6, 14, $3e ; door 4 open
 	checkevent EVENT_CINNABAR_GYM_QUIZ_5
 	iffalse .NoMoreDoors
-	changeblock 4, 12, $64 ; door 5 open
+	changeblock 4, 12, $3c ; door 5 open
 	checkevent EVENT_CINNABAR_GYM_QUIZ_6
 	iffalse .NoMoreDoors
-	changeblock 4, 6, $64 ; door 6 open
+	changeblock 4, 6, $3c ; door 6 open
 .NoMoreDoors:
 	endcallback
 
@@ -183,7 +183,7 @@ CinnabarQuizMachine1:
 	waitbutton
 	closetext
 	playsound SFX_ENTER_DOOR
-	changeblock 20, 6, $64 ; door open
+	changeblock 20, 6, $3c ; door open
 	reloadmappart
 	setevent EVENT_CINNABAR_GYM_QUIZ_1
 	end
@@ -216,7 +216,7 @@ CinnabarQuizMachine2:
 	waitbutton
 	closetext
 	playsound SFX_ENTER_DOOR
-	changeblock 12, 6, $64 ; door open
+	changeblock 12, 6, $3c ; door open
 	reloadmappart
 	setevent EVENT_CINNABAR_GYM_QUIZ_2
 	end
@@ -249,7 +249,7 @@ CinnabarQuizMachine3:
 	waitbutton
 	closetext
 	playsound SFX_ENTER_DOOR
-	changeblock 12, 12, $64 ; door open
+	changeblock 12, 12, $3c ; door open
 	reloadmappart
 	setevent EVENT_CINNABAR_GYM_QUIZ_3
 	end
@@ -282,7 +282,7 @@ CinnabarQuizMachine4:
 	waitbutton
 	closetext
 	playsound SFX_ENTER_DOOR
-	changeblock 6, 14, $66 ; door open
+	changeblock 6, 14, $3e ; door open
 	reloadmappart
 	setevent EVENT_CINNABAR_GYM_QUIZ_4
 	end
@@ -315,7 +315,7 @@ CinnabarQuizMachine5:
 	waitbutton
 	closetext
 	playsound SFX_ENTER_DOOR
-	changeblock 4, 12, $64 ; door open
+	changeblock 4, 12, $3c ; door open
 	reloadmappart
 	setevent EVENT_CINNABAR_GYM_QUIZ_5
 	end
@@ -348,7 +348,7 @@ CinnabarQuizMachine6:
 	waitbutton
 	closetext
 	playsound SFX_ENTER_DOOR
-	changeblock 4, 6, $64 ; door open
+	changeblock 4, 6, $3c ; door open
 	reloadmappart
 	setevent EVENT_CINNABAR_GYM_QUIZ_6
 	end
@@ -464,7 +464,7 @@ TrainerFirebreatherBill: ; quiz 1
 	iftrue .DoorAlreadyOpen
 	pause 20
 	playsound SFX_ENTER_DOOR
-	changeblock 20, 6, $64 ; door open
+	changeblock 20, 6, $3c ; door open
 	reloadmappart
 	setevent EVENT_CINNABAR_GYM_QUIZ_1
 .DoorAlreadyOpen
@@ -506,7 +506,7 @@ TrainerSuperNerdHugh: ; quiz 2
 	iftrue .DoorAlreadyOpen
 	pause 20
 	playsound SFX_ENTER_DOOR
-	changeblock 12, 6, $64 ; door open
+	changeblock 12, 6, $3c ; door open
 	reloadmappart
 	setevent EVENT_CINNABAR_GYM_QUIZ_2
 .DoorAlreadyOpen
@@ -549,7 +549,7 @@ TrainerFirebreatherRay: ; quiz 3
 	iftrue .DoorAlreadyOpen
 	pause 20
 	playsound SFX_ENTER_DOOR
-	changeblock 12, 12, $64 ; door open
+	changeblock 12, 12, $3c ; door open
 	reloadmappart
 	setevent EVENT_CINNABAR_GYM_QUIZ_3
 .DoorAlreadyOpen
@@ -590,7 +590,7 @@ TrainerSuperNerdCary: ; quiz 4
 	iftrue .DoorAlreadyOpen
 	pause 20
 	playsound SFX_ENTER_DOOR
-	changeblock 6, 14, $66 ; door open
+	changeblock 6, 14, $3e ; door open
 	reloadmappart
 	setevent EVENT_CINNABAR_GYM_QUIZ_4
 .DoorAlreadyOpen
@@ -636,7 +636,7 @@ TrainerFirebreatherEvan: ; quiz 5
 	iftrue .DoorAlreadyOpen
 	pause 20
 	playsound SFX_ENTER_DOOR
-	changeblock 4, 12, $64 ; door open
+	changeblock 4, 12, $3c ; door open
 	reloadmappart
 	setevent EVENT_CINNABAR_GYM_QUIZ_5
 .DoorAlreadyOpen
@@ -679,7 +679,7 @@ TrainerSuperNerdMarkus: ; quiz 6
 	iftrue .DoorAlreadyOpen
 	pause 20
 	playsound SFX_ENTER_DOOR
-	changeblock 4, 6, $64 ; door open
+	changeblock 4, 6, $3c ; door open
 	reloadmappart
 	setevent EVENT_CINNABAR_GYM_QUIZ_6
 .DoorAlreadyOpen
@@ -782,8 +782,8 @@ CinnabarGym_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 19, 17, CINNABAR_ISLAND, 2
 	warp_event 20, 17, CINNABAR_ISLAND, 2
+	warp_event 21, 17, CINNABAR_ISLAND, 2
 
 	def_coord_events
 
@@ -805,4 +805,4 @@ CinnabarGym_MapEvents:
 	object_event  2,  9, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TrainerSuperNerdMarkus, -1
 	object_event 20,  2, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerSuperNerdTeru, -1
 	object_event  3,  3, SPRITE_BLAINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarGymBlaineScript, -1
-	object_event 21, 14, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarGymGuideScript, -1
+	object_event 19, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarGymGuideScript, -1

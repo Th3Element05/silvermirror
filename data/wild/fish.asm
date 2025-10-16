@@ -376,47 +376,47 @@ FishGroups:
 .Qwilfish_NoSwarm_Old:
 .Qwilfish_Old:
 	db  70 percent, MAGIKARP,    5 ; 70%
-	db  85 percent, MAGIKARP,    5 ; 15%
-	db 100 percent, TENTACOOL,   5 ; 15%
+	db  90 percent, MAGIKARP,    5 ; 20%
+	db 100 percent, SLOWPOKE,    5 ; 10%
 .Qwilfish_NoSwarm_Good:
 .Qwilfish_Good:
-	db  35 percent, MAGIKARP,   10 ; 35%
-	db  70 percent, TENTACOOL,  10 ; 35%
-	db  90 percent, TENTACOOL,  10 ; 20%
-	db 100 percent, TENTACOOL,  10 ; 10%
+	db  40 percent, MAGIKARP,   10 ; 40%
+	db  70 percent, SLOWPOKE,   10 ; 30%
+	db  90 percent, SLOWPOKE,   10 ; 20%
+	db 100 percent, SHELLDER,   10 ; 10%
 .Qwilfish_NoSwarm_Super:
 .Qwilfish_Super:
-	db  40 percent, TENTACOOL,  20 ; 40%
-	db  70 percent, TENTACOOL,  20 ; 30%
-	db  90 percent, MAGIKARP,   15 ; 20%
-	db 100 percent, QWILFISH,   20 ; 10%
+	db  40 percent, SLOWPOKE,   20 ; 40%
+	db  60 percent, SLOWPOKE,   20 ; 30%
+	db  80 percent, SHELLDER,   20 ; 20%
+	db 100 percent, MAGIKARP,   15 ; 20%
 .Qwilfish_NoSwarm_Super_2:
 .Qwilfish_Super_2:
-	db  40 percent, TENTACOOL,  20 ; 40%
-	db  70 percent, TENTACOOL,  20 ; 30%
-	db  90 percent, MAGIKARP,   15 ; 20%
+	db  60 percent, SLOWPOKE,   20 ; 60%
+	db  80 percent, SHELLDER,   20 ; 20%
+	db  90 percent, MAGIKARP,   15 ; 10%
 	db 100 percent, QWILFISH,   20 ; 10%
 
 ; Qwilfish Swarm
 .Qwilfish_Swarm_Old:
 	db  70 percent, MAGIKARP,    5 ; 70%
-	db  85 percent, MAGIKARP,    5 ; 15%
+	db  85 percent, SLOWPOKE,    5 ; 15%
 	db 100 percent, QWILFISH,    5 ; 15%
 .Qwilfish_Swarm_Good:
 	db  40 percent, MAGIKARP,   10 ; 40%
 	db  70 percent, QWILFISH,   10 ; 30%
 	db  90 percent, QWILFISH,   10 ; 20%
-	db 100 percent, MAGIKARP,   10 ; 10%
+	db 100 percent, SLOWPOKE,   10 ; 10%
 .Qwilfish_Swarm_Super:
 	db  40 percent, QWILFISH,   20 ; 40%
 	db  70 percent, QWILFISH,   20 ; 30%
 	db  90 percent, QWILFISH,   20 ; 20%
-	db 100 percent, MAGIKARP,   15 ; 10%
+	db 100 percent, SLOWPOKE,   20 ; 10%
 .Qwilfish_Swarm_Super_2:
 	db  40 percent, QWILFISH,   20 ; 40%
 	db  70 percent, QWILFISH,   20 ; 30%
 	db  90 percent, QWILFISH,   20 ; 20%
-	db 100 percent, MAGIKARP,   15 ; 10%
+	db 100 percent, SLOWPOKE,   20 ; 10%
 
 ; Whirl Islands
 .WhirlIslands_Old:

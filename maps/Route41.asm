@@ -342,15 +342,15 @@ Route41_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 12, 17, WHIRL_ISLAND_NW, 1
-	warp_event 36, 19, WHIRL_ISLAND_NE, 1
-	warp_event 12, 37, WHIRL_ISLAND_SW, 1
-	warp_event 36, 45, WHIRL_ISLAND_SE, 1
+	warp_event 42, 11, WHIRL_ISLAND_NW, 1
+	warp_event 66, 13, WHIRL_ISLAND_NE, 1
+	warp_event 42, 31, WHIRL_ISLAND_SW, 1
+	warp_event 66, 39, WHIRL_ISLAND_SE, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event  9, 35, BGEVENT_ITEM, Route41HiddenMaxEther
+	bg_event 39, 29, BGEVENT_ITEM, Route41HiddenMaxEther
 
 	def_object_events
 ;	object_event 32,  6, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSwimmermCharlie, -1

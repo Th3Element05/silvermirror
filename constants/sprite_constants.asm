@@ -77,7 +77,7 @@
 	const SPRITE_CAL                    ; 49
 	const SPRITE_BUSINESSMAN            ; 4a
 	const SPRITE_BUG_CATCHER            ; 4b
-;; 4c
+	const SPRITE_SLEEPING               ; 4c (DOWN=GRAMPS, UP=ROCKET, LEFT/RIGHT=SAILOR)
 ;; 4d
 ;; 4e
 ;; 4f

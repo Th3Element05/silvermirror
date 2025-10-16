@@ -48,7 +48,8 @@ PalletTownOakHeyWaitScriptL:
 	setmapscene OAKS_LAB, SCENE_OAKSLAB_MEET_OAK
 	clearevent EVENT_OAKS_LAB_OAK
 	applymovement PLAYER, PalletTownEnterLabMovement
-	warpfacing UP, OAKS_LAB, 5, 11
+	warp OAKS_LAB, 5, 11
+;	warpfacing UP, OAKS_LAB, 5, 11
 	end
 
 PalletTownOakHeyWaitText:

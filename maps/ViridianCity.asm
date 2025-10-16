@@ -1,5 +1,6 @@
 	object_const_def
 	const VIRIDIANCITY_COFFEE_GRAMPS
+	const VIRIDIANCITY_CATCHING_GRAMPS
 	const VIRIDIANCITY_FISHER
 
 ViridianCity_MapScripts:
@@ -10,7 +11,7 @@ ViridianCity_MapScripts:
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, ViridianCityFlypointCallback
-	callback MAPCALLBACK_OBJECTS, ViridianCityMoveCoffeeGrampsCallback
+;	callback MAPCALLBACK_OBJECTS, ViridianCityMoveCoffeeGrampsCallback
 	callback MAPCALLBACK_TILES, ViridianGymDoorCallback
 
 ViridianCityNoop1Scene:
@@ -23,12 +24,12 @@ ViridianCityFlypointCallback:
 	setmapscene CINNABAR_ISLAND, SCENE_CINNABARISLAND_NOOP
 	endcallback
 
-ViridianCityMoveCoffeeGrampsCallback:
-	checkscene
-	iftrue .Skip ; not SCENE_VIRIDIANCITY_NO_POKEDEX
-	moveobject VIRIDIANCITY_COFFEE_GRAMPS, 18, 9
-.Skip:
-	endcallback
+;ViridianCityMoveCoffeeGrampsCallback:
+;	checkscene
+;	iftrue .Skip ; not SCENE_VIRIDIANCITY_NO_POKEDEX
+;	moveobject VIRIDIANCITY_COFFEE_GRAMPS, 18, 9
+;.Skip:
+;	endcallback
 
 ViridianGymDoorCallback:
 	checkevent EVENT_VIRIDIAN_GYM_LEADER_RETURNED
@@ -40,9 +41,30 @@ ViridianGymDoorCallback:
 
 ;object scripts
 ViridianCityCoffeeGrampsScript:
+;ViridianCityCoffeeGrampsBlockScript:
+;	faceplayer
+	showemote EMOTE_SAD, VIRIDIANCITY_COFFEE_GRAMPS, 20
+	opentext
+	writetext ViridianCityCoffeeGrampsBlockText
+	waitbutton
+	closetext
+	applymovement PLAYER, ViridianCityCoffeeGrampsBlockMovement
+	setevent EVENT_COFFEE_GRAMPS_STOPPED_YOU
+	end
+
+ViridianCityCoffeeGrampsBlockText:
+	text "You can't go"
+	line "through here!"
+
+	para "This is private"
+	line "property!"
+	done
+
+ViridianCityTutorialGrampsScript:
+;ViridianCityCoffeeGrampsScript:
 	faceplayer
 	checkscene
-	ifequal SCENE_VIRIDIANCITY_NO_POKEDEX, ViridianCityCoffeeGrampsBlockScript
+;	ifequal SCENE_VIRIDIANCITY_NO_POKEDEX, ViridianCityCoffeeGrampsBlockScript
 	ifequal SCENE_VIRIDIANCITY_MAP_CARD, ViridianCityMapCardScript
 	opentext
 	writetext ViridianCityCatchPokemonAsk
@@ -109,7 +131,7 @@ ViridianCityMapCardScript:
 	promptbutton
 	setscene SCENE_VIRIDIANCITY_NOOP
 	setevent EVENT_GOT_MAP_CARD
-	sjump ViridianCityCoffeeGrampsScript
+	sjump ViridianCityTutorialGrampsScript
 
 .JumpstdReceiveItem:
 	jumpstd ReceiveItemScript
@@ -179,25 +201,6 @@ ViridianCityCoffeeGrampsTravelText:
 	para "I hope that will"
 	line "come in handy on"
 	cont "your travels!"
-	done
-
-ViridianCityCoffeeGrampsBlockScript:
-	faceplayer
-	showemote EMOTE_SAD, VIRIDIANCITY_COFFEE_GRAMPS, 20
-	opentext
-	writetext ViridianCityCoffeeGrampsBlockText
-	waitbutton
-	closetext
-	applymovement PLAYER, ViridianCityCoffeeGrampsBlockMovement
-	setevent EVENT_COFFEE_GRAMPS_STOPPED_YOU
-	end
-
-ViridianCityCoffeeGrampsBlockText:
-	text "You can't go"
-	line "through here!"
-
-	para "This is private"
-	line "property!"
 	done
 
 ViridianCityGymGramps:
@@ -451,7 +454,7 @@ ViridianCity_MapEvents:
 	warp_event 23, 25, VIRIDIAN_POKECENTER_1F, 1
 
 	def_coord_events
-	coord_event 19,  9, SCENE_VIRIDIANCITY_NO_POKEDEX, ViridianCityCoffeeGrampsBlockScript
+	coord_event 19,  9, SCENE_VIRIDIANCITY_NO_POKEDEX, ViridianCityCoffeeGrampsScript ;ViridianCityCoffeeGrampsBlockScript
 	coord_event 18,  5, SCENE_VIRIDIANCITY_MAP_CARD, ViridianCityForceMapCardScript0
 	coord_event 19,  5, SCENE_VIRIDIANCITY_MAP_CARD, ViridianCityForceMapCardScript1
 ;	coord_event 20,  5, SCENE_VIRIDIANCITY_MAP_CARD, ViridianCityForceMapCardScript2
@@ -468,7 +471,8 @@ ViridianCity_MapEvents:
 	bg_event 14,  4, BGEVENT_ITEM, ViridianCityHiddenPotion
 
 	def_object_events
-	object_event 17,  5, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityCoffeeGrampsScript, -1
+	object_event 18,  9, SPRITE_SLEEPING, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_OW_BROWN, OBJECTTYPE_SCRIPT, 0, ViridianCityCoffeeGrampsScript, EVENT_VIRIDIAN_CITY_COFFEE_GRAMPS
+	object_event 17,  5, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityTutorialGrampsScript, EVENT_VIRIDIAN_CITY_CATCHING_GRAMPS
 	object_event  6, 23, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ViridianCityDreamEaterFisher, -1
 	object_event 30,  8, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityGymGramps, -1
 	object_event 13, 20, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ViridianCityYoungster1Script, -1

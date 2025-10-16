@@ -36,11 +36,17 @@ SaffronMagnetTrainStationOfficerScript:
 	applymovement PLAYER, SaffronMagnetTrainStationPlayerApproachAndEnterTrainMovement
 	setval TRUE
 	special MagnetTrain
+	wait 8
 	warpcheck
 	newloadmap MAPSETUP_TRAIN
 	applymovement PLAYER, .MovementBoardTheTrain
-	wait 20
+	wait 5
 	end
+;	special MagnetTrain
+;	wait 8
+;	warpfacing DOWN, PALLET_TOWN, 5, 5
+;	wait 5
+;	end
 
 .MovementBoardTheTrain:
 	turn_head DOWN

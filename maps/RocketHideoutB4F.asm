@@ -96,7 +96,7 @@ TrainerRocketExecutiveM1:
 	iffalse .Skip
 	changeblock 16, 12, $65 ; door open
 	reloadmappart
-	setevent EVENT_OPENED_ROCKET_HIDEOUT_B1F_DOOR
+	setevent EVENT_OPENED_ROCKET_HIDEOUT_B4F_DOOR
 .Skip
 	jumptextfaceplayer RocketExecutiveM1AfterBattleText
 

@@ -37,28 +37,28 @@
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 24
 	tilecoll WALL, WALL, WALL, WALL ; 25
 	tilecoll WALL, WALL, WALL, WALL ; 26
-	tilecoll FLOOR, WALL, FLOOR, WALL ; 27
-	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 28
-	tilecoll WALL, WALL, FLOOR, WALL ; 29
-	tilecoll WALL, WALL, WALL, WALL ; 2a
-	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 2b
-	tilecoll WALL, WALL, WALL, FLOOR ; 2c
-	tilecoll WALL, WALL, WALL, WALL ; 2d
-	tilecoll FLOOR, FLOOR, WALL, WALL ; 2e
-	tilecoll WALL, FLOOR, WALL, WALL ; 2f
-	tilecoll FLOOR, FLOOR, WALL, WALL ; 30
-	tilecoll WALL, FLOOR, FLOOR, WALL ; 31
-	tilecoll FLOOR, FLOOR, WALL, WALL ; 32
-	tilecoll WALL, WALL, FLOOR, FLOOR ; 33
-	tilecoll FLOOR, WALL, WALL, WALL ; 34
-	tilecoll UP_WALL, UP_WALL, FLOOR, FLOOR ; 35
-	tilecoll UP_WALL, WALL, FLOOR, WALL ; 36
-	tilecoll FLOOR, FLOOR, WARP_CARPET_DOWN, WARP_CARPET_DOWN ; 37
-	tilecoll WALL, UP_WALL, WALL, FLOOR ; 38
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 27
+	tilecoll WALL, FLOOR, WALL, FLOOR ; 28
+	tilecoll FLOOR, FLOOR, WARP_CARPET_DOWN, WARP_CARPET_DOWN ; 29
+	tilecoll FLOOR, WALL, FLOOR, WALL ; 2a
+	tilecoll WALL, WALL, WALL, WALL ; 2b
+	tilecoll WALL, UP_WALL, WALL, FLOOR ; 2c
+	tilecoll UP_WALL, UP_WALL, FLOOR, FLOOR ; 2d
+	tilecoll UP_WALL, WALL, FLOOR, WALL ; 2e
+	tilecoll WALL, WALL, WALL, WALL ; 2f
+	tilecoll WALL, FLOOR, WALL, WALL ; 30
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 31
+	tilecoll FLOOR, WALL, WALL, WALL ; 32
+	tilecoll WALL, WALL, WALL, WALL ; 33
+	tilecoll WALL, FLOOR, WALL, FLOOR ; 34
+	tilecoll FLOOR, FLOOR, WALL, WALL ; 35
+	tilecoll WALL, WALL, WALL, FLOOR ; 36
+	tilecoll FLOOR, WALL, FLOOR, WALL ; 37
+	tilecoll WALL, WALL, FLOOR, WALL ; 38
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 39
-	tilecoll WALL, FLOOR, WALL, FLOOR ; 3a
-	tilecoll FLOOR, WALL, FLOOR, WALL ; 3b
-	tilecoll FLOOR, WALL, FLOOR, WALL ; 3c
-	tilecoll WALL, FLOOR, WALL, FLOOR ; 3d
+	tilecoll FLOOR, FLOOR, WALL, WALL ; 3a
+	tilecoll WALL, WALL, WALL, WALL ; 3b
+	tilecoll FLOOR, FLOOR, WALL, WALL ; 3c
+	tilecoll WALL, WALL, FLOOR, FLOOR ; 3d
 	tilecoll FLOOR, WALL, WALL, WALL ; 3e
-	tilecoll WALL, WALL, WALL, WALL ; 3f
+	tilecoll WALL, FLOOR, FLOOR, WALL ; 3f

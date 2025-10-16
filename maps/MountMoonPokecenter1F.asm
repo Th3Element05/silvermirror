@@ -61,7 +61,6 @@ MtMoonPokecenter1FSalesmanScript:
 	promptbutton
 	givepoke MAGIKARP, 5
 	setevent EVENT_BOUGHT_MAGIKARP
-	waitbutton
 	; fallthrough
 .NoRefunds
 	writetext MtMoonPokecenterSalesmanNoRefundsText

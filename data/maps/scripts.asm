@@ -109,6 +109,13 @@ INCLUDE "maps/SSAnneKitchen.asm"
 INCLUDE "maps/SSAnne2F.asm"
 INCLUDE "maps/SSAnneRooms2F.asm"
 INCLUDE "maps/SSAnneBow.asm"
+INCLUDE "maps/OlivinePort.asm"
+INCLUDE "maps/FastShip1F.asm"
+INCLUDE "maps/FastShipB1F.asm"
+INCLUDE "maps/FastShipCabins_North.asm"
+INCLUDE "maps/FastShipCabins_South.asm"
+INCLUDE "maps/FastShipCaptainsCabin.asm"
+INCLUDE "maps/FastShipEngineRoom.asm"
 
 
 SECTION "Map Scripts 11", ROMX
@@ -511,7 +518,6 @@ INCLUDE "maps/OlivineCafe.asm"
 INCLUDE "maps/OlivineTimsHouse.asm"
 INCLUDE "maps/OlivinePunishmentSpeechHouse.asm"
 INCLUDE "maps/OlivineHouseBeta.asm"
-INCLUDE "maps/OlivinePort.asm"
 
 
 SECTION "Map Scripts 41", ROMX
