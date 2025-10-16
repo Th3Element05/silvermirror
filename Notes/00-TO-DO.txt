@@ -53,7 +53,7 @@ const	STATUSFLAGS_HALL_OF_FAME_F ; 6
 
 TEST to-do
 
-enable code for, and test, happines evolution challenge/beforeHOF/afterHOF
+viridian map card man says you can't go through (once)
 
 test daycareman/daycarelady intro "\engine\events\daycare.asm" DayCareLadyIntroText:
 
@@ -65,12 +65,28 @@ check pokecenter link receptionist sprites
 
 
 TO-DO to-do
+TO RELEASE BETA: remove SS Ticket (maps/HallOfFame, maps/OaksLab)
+
+olivine tim's house trade
+olivine lighthouse (currently blocked)
+
+snorlax awake - can pokeflute item trigger pokeflute radio channel to play?
+
+NIDORAN trade, doesn't specify gender (test it, can it be fixed?)
+contants\npc_trade_constants.asm
+data\events\npc_trades.asm
+
+FIX FOSSIL REVIVE SCRIPT (did I fix this already?)
+
+
+
+
 
 evos_attack Documentation
 
 gym leader levels
 
-block route26 until HOF
+block route26 until HOF		EVENT_BEAT_ELITE_FOUR
 
 TM names in Game Corner Prize Room
 pick prize, say price, ask yesorno
@@ -81,8 +97,6 @@ adjust fly/flash text
 daisy do hapiness rater
 
 rock smash items, add fossils? tutorial
-
-NIDORAN trade, doesn't specify gender
 
 silph co put text on computers?
 cinnabar lab put text on computers
@@ -249,6 +263,18 @@ TilesetRocketFacilityAnim:
 ;	dw NULL,  WaitTileAnimation
 	dw NULL,  DoneTileAnimation
 
+ENGINE_RODE_SSAQUA_TODAY ;ENGINE_GOLDENROD_DEPT_STORE_TM71_RETURN
+DAILYFLAGS2_ENGINE_RODE_SSAQUA_TODAY_F ;GOLDENROD_DEPT_STORE_TM71_RETURN_F
+\constants\engine_flags.asm (1 hit)
+Line 176: 	const ENGINE_GOLDENROD_DEPT_STORE_TM71_RETURN
+\constants\wram_constants.asm (1 hit)
+Line 356: 	const DAILYFLAGS2_GOLDENROD_DEPT_STORE_TM71_RETURN_F  ; 3
+\data\events\engine_flags.asm (1 hit)
+Line 186: 	engine_flag wDailyFlags2, DAILYFLAGS2_GOLDENROD_DEPT_STORE_TM71_RETURN_F
+\maps\GoldenrodDeptStore5F.asm (3 hits)
+Line  37: 	checkflag ENGINE_GOLDENROD_DEPT_STORE_TM71_RETURN
+Line  52: ;	setflag ENGINE_GOLDENROD_DEPT_STORE_TM71_RETURN
+Line  68: ;	setflag ENGINE_GOLDENROD_DEPT_STORE_TM71_RETURN
 
 
 GIT
