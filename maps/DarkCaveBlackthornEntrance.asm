@@ -1,7 +1,7 @@
 	object_const_def
-	const DARKCAVEBLACKTHORNENTRANCE_PHARMACIST
-	const DARKCAVEBLACKTHORNENTRANCE_POKE_BALL1
-	const DARKCAVEBLACKTHORNENTRANCE_POKE_BALL2
+;	const DARKCAVEBLACKTHORNENTRANCE_PHARMACIST
+;	const DARKCAVEBLACKTHORNENTRANCE_POKE_BALL1
+;	const DARKCAVEBLACKTHORNENTRANCE_POKE_BALL2
 
 DarkCaveBlackthornEntrance_MapScripts:
 	def_scene_scripts
@@ -24,12 +24,6 @@ DarkCaveBlackthornEntrancePharmacistScript:
 .PackFull:
 	closetext
 	end
-
-DarkCaveBlackthornEntranceRevive:
-	itemball REVIVE
-
-DarkCaveBlackthornEntranceLinkingCord:
-	itemball LINKING_CORD
 
 DarkCaveBlackthornEntrancePharmacistText1:
 	text "Whoa! You startled"
@@ -59,6 +53,12 @@ DarkCaveBlackthornEntrancePharmacistText2:
 	cont "type moves."
 	done
 
+;DarkCaveBlackthornEntranceRevive:
+;	itemball REVIVE
+
+;DarkCaveBlackthornEntranceLinkingCord:
+;	itemball LINKING_CORD
+
 DarkCaveBlackthornEntrance_MapEvents:
 	db 0, 0 ; filler
 
@@ -72,5 +72,5 @@ DarkCaveBlackthornEntrance_MapEvents:
 
 	def_object_events
 	object_event  7,  9, SPRITE_PHARMACIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DarkCaveBlackthornEntrancePharmacistScript, -1
-	object_event 21, 30, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DarkCaveBlackthornEntranceRevive, EVENT_DARK_CAVE_BLACKTHORN_ENTRANCE_REVIVE
-	object_event  7, 28, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DarkCaveBlackthornEntranceLinkingCord, EVENT_DARK_CAVE_BLACKTHORN_ENTRANCE_LINKING_CORD
+;	object_event 21, 30, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DarkCaveBlackthornEntranceRevive, EVENT_DARK_CAVE_BLACKTHORN_ENTRANCE_REVIVE
+;	object_event  7, 28, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DarkCaveBlackthornEntranceLinkingCord, EVENT_DARK_CAVE_BLACKTHORN_ENTRANCE_LINKING_CORD

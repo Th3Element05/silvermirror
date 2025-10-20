@@ -16,6 +16,7 @@ Route42_MapScripts:
 
 	def_callbacks
 	callback MAPCALLBACK_OBJECTS, Route42Fruittrees
+	callback MAPCALLBACK_TILES, Route42BouldersCallback
 
 ;Route42Noop1Scene:
 ;Route42Noop2Scene:
@@ -41,6 +42,14 @@ Route42Fruittrees:
 	iftrue .NoAPRICORN_3
 	appear ROUTE_42_APRICORN_3
 .NoAPRICORN_3:
+	endcallback
+
+Route42BouldersCallback:
+	checkevent EVENT_ROUTE_42_BOULDERS_CLEARED
+	iftrue .End
+	changeblock 52, 4, $0a ; boulder
+	changeblock 52, 6, $0a ; boulder
+.End
 	endcallback
 
 ;Route42SuicuneScript:
@@ -197,16 +206,14 @@ Route42Fruittrees:
 ;	end
 
 Route42Sign1:
-	jumptext Route42Sign1Text
+Route42Sign2:
+	jumptext Route42SignText
 
 MtMortarSign1:
 	jumptext MtMortarSign1Text
 
 MtMortarSign2:
 	jumptext MtMortarSign2Text
-
-Route42Sign2:
-	jumptext Route42Sign2Text
 
 ;Route42UltraBall:
 ;	itemball ULTRA_BALL
@@ -293,7 +300,7 @@ Route42Sign2:
 ;	line "it. Please?"
 ;	done
 
-Route42Sign1Text:
+Route42SignText:
 	text "ROUTE 42"
 
 	para "ECRUTEAK CITY -"
@@ -312,13 +319,6 @@ MtMortarSign2Text:
 
 	para "WATERFALL CAVE"
 	line "INSIDE"
-	done
-
-Route42Sign2Text:
-	text "ROUTE 42"
-
-	para "ECRUTEAK CITY -"
-	line "MAHOGANY TOWN"
 	done
 
 Route42ApricornTree:
@@ -397,6 +397,9 @@ Route42NothingHereText:
 	line "here…"
 	done
 
+Route42Rock:
+	jumpstd SmashRockScript
+
 Route42_MapEvents:
 	db 0, 0 ; filler
 
@@ -424,9 +427,14 @@ Route42_MapEvents:
 	object_event 27, 16, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route42ApricornTree, EVENT_ROUTE_42_APRICORN
 	object_event 28, 16, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route42APRICORN_2Tree, EVENT_ROUTE_42_APRICORN_2
 	object_event 29, 16, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, Route42APRICORN_3Tree, EVENT_ROUTE_42_APRICORN_3
+;
 ;	object_event 40, 10, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerFisherTully, -1
 ;	object_event 51,  9, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerHikerBenjamin, -1
 ;	object_event 47,  8, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerPokemaniacShane, -1
+;
 ;	object_event  6,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route42UltraBall, EVENT_ROUTE_42_ULTRA_BALL
 ;	object_event 33,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route42SuperPotion, EVENT_ROUTE_42_SUPER_POTION
 ;	object_event 26, 16, SPRITE_SUICUNE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_SAW_SUICUNE_ON_ROUTE_42
+	object_event 55,  7, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route42Rock, -1
+	object_event 51,  6, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route42Rock, -1
+	object_event 54,  4, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route42Rock, -1

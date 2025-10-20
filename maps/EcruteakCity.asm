@@ -64,27 +64,6 @@ EcruteakCityFlypointCallback:
 ;EcruteakCityYoungsterScript:
 ;	jumptextfaceplayer EcruteakCityYoungsterText
 
-;EcruteakCitySign:
-;	jumptext EcruteakCitySignText
-
-;TinTowerSign:
-;	jumptext TinTowerSignText
-
-;EcruteakGymSign:
-;	jumptext EcruteakGymSignText
-
-;EcruteakDanceTheaterSign:
-;	jumptext EcruteakDanceTheaterSignText
-
-;BurnedTowerSign:
-;	jumptext BurnedTowerSignText
-
-;EcruteakCityPokecenterSign:
-;	jumpstd PokecenterSignScript
-
-;EcruteakCityMartSign:
-;	jumpstd MartSignScript
-
 ;EcruteakCityHiddenHyperPotion:
 ;	hiddenitem HYPER_POTION, EVENT_ECRUTEAK_CITY_HIDDEN_HYPER_POTION
 
@@ -215,46 +194,67 @@ EcruteakCityFlypointCallback:
 ;	cont "Hohoho!"
 ;	done
 
-;EcruteakCitySignText:
-;	text "ECRUTEAK CITY"
-;	line "A Historical City"
-;
-;	para "Where the Past"
-;	line "Meets the Present"
-;	done
+EcruteakCitySign:
+	jumptext EcruteakCitySignText
 
-;TinTowerSignText:
-;	text "TIN TOWER"
-;
-;	para "A legendary #-"
-;	line "MON is said to"
-;	cont "roost here."
-;	done
+TinTowerSign:
+	jumptext TinTowerSignText
 
-;EcruteakGymSignText:
-;	text "ECRUTEAK CITY"
-;	line "#MON GYM"
-;	cont "LEADER: MORTY"
-;
-;	para "The Mystic Seer of"
-;	line "the Future"
-;	done
+EcruteakGymSign:
+	jumptext EcruteakGymSignText
 
-;EcruteakDanceTheaterSignText:
-;	text "ECRUTEAK DANCE"
-;	line "THEATER"
-;	done
+EcruteakDanceTheaterSign:
+	jumptext EcruteakDanceTheaterSignText
 
-;BurnedTowerSignText:
-;	text "BURNED TOWER"
-;
-;	para "It was destroyed"
-;	line "by a mysterious"
-;	cont "fire."
-;
-;	para "Please stay away,"
-;	line "as it is unsafe."
-;	done
+BurnedTowerSign:
+	jumptext BurnedTowerSignText
+
+EcruteakCityPokecenterSign:
+	jumpstd PokecenterSignScript
+
+EcruteakCityMartSign:
+	jumpstd MartSignScript
+
+EcruteakCitySignText:
+	text "ECRUTEAK CITY"
+	line "A Historical City"
+
+	para "Where the Past"
+	line "Meets the Present"
+	done
+
+TinTowerSignText:
+	text "TIN TOWER"
+
+	para "A legendary #-"
+	line "MON is said to"
+	cont "roost here."
+	done
+
+EcruteakGymSignText:
+	text "ECRUTEAK CITY"
+	line "#MON GYM"
+	cont "LEADER: MORTY"
+
+	para "The Mystic Seer of"
+	line "the Future"
+	done
+
+EcruteakDanceTheaterSignText:
+	text "ECRUTEAK DANCE"
+	line "THEATER"
+	done
+
+BurnedTowerSignText:
+	text "BURNED TOWER"
+
+	para "It was destroyed"
+	line "by a mysterious"
+	cont "fire."
+
+	para "Please stay away,"
+	line "as it is unsafe."
+	done
 
 EcruteakCity_MapEvents:
 	db 0, 0 ; filler
@@ -279,13 +279,13 @@ EcruteakCity_MapEvents:
 	def_coord_events
 
 	def_bg_events
-;	bg_event 15, 21, BGEVENT_READ, EcruteakCitySign
-;	bg_event 38, 10, BGEVENT_READ, TinTowerSign
-;	bg_event  8, 28, BGEVENT_READ, EcruteakGymSign
-;	bg_event 21, 21, BGEVENT_READ, EcruteakDanceTheaterSign
-;	bg_event  2, 10, BGEVENT_READ, BurnedTowerSign
-;	bg_event 24, 27, BGEVENT_READ, EcruteakCityPokecenterSign
-;	bg_event 30, 21, BGEVENT_READ, EcruteakCityMartSign
+	bg_event 15, 21, BGEVENT_READ, EcruteakCitySign
+	bg_event 38, 10, BGEVENT_READ, TinTowerSign
+	bg_event  8, 28, BGEVENT_READ, EcruteakGymSign
+	bg_event 21, 21, BGEVENT_READ, EcruteakDanceTheaterSign
+	bg_event  2, 10, BGEVENT_READ, BurnedTowerSign
+	bg_event 24, 27, BGEVENT_READ, EcruteakCityPokecenterSign
+	bg_event 30, 21, BGEVENT_READ, EcruteakCityMartSign
 ;	bg_event 23, 14, BGEVENT_ITEM, EcruteakCityHiddenHyperPotion
 
 	def_object_events

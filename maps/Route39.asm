@@ -189,62 +189,6 @@ MoomooFarmSign:
 Route39TrainerTips:
 	jumptext Route39TrainerTipsText
 
-;Route39Baoba1:
-;	turnobject ROUTE_39_GENTLEMAN_BAOBA, RIGHT
-;	showemote EMOTE_SHOCK, ROUTE_39_GENTLEMAN_BAOBA, 15
-;	applymovement ROUTE_39_GENTLEMAN_BAOBA, MovementData_Route39_Baoba_Approach1
-;	sjump Route39BaobaScript
-
-;Route39Baoba2:
-;	turnobject ROUTE_39_GENTLEMAN_BAOBA, RIGHT
-;	showemote EMOTE_SHOCK, ROUTE_39_GENTLEMAN_BAOBA, 15
-;	applymovement ROUTE_39_GENTLEMAN_BAOBA, MovementData_Route39_Baoba_Approach2
-;	sjump Route39BaobaScript
-
-;Route39Baoba3:
-;	turnobject ROUTE_39_GENTLEMAN_BAOBA, RIGHT
-;	showemote EMOTE_SHOCK, ROUTE_39_GENTLEMAN_BAOBA, 15
-;	applymovement ROUTE_39_GENTLEMAN_BAOBA, MovementData_Route39_Baoba_Approach3
-;	sjump Route39BaobaScript
-
-;Route39Baoba4:
-;	turnobject ROUTE_39_GENTLEMAN_BAOBA, RIGHT
-;	showemote EMOTE_SHOCK, ROUTE_39_GENTLEMAN_BAOBA, 15
-;	applymovement ROUTE_39_GENTLEMAN_BAOBA, MovementData_Route39_Baoba_Approach4
-;	sjump Route39BaobaScript
-
-;Route39BaobaScript:
-;	opentext
-;	writetext Route39BaobaIntroText
-;	waitbutton
-;	giveitem EXP_SHARE
-;	iffalse .bag_full
-;	waitsfx
-;	writetext Route39GotExpShareText
-;	playsound SFX_ITEM
-;	waitsfx
-;	itemnotify
-;	writetext Route39BaobaLeavingText
-;	waitbutton
-;	closetext
-;	setevent EVENT_ROUTE_39_BAOBA_RETURNED_TO_SAFARI_ZONE
-;	setevent EVENT_ROUTE_39_BAOBA_GAVE_EXP_SHARE
-;	setscene SCENE_ROUTE_39_BAOBA_GONE
-;	applymovement ROUTE_39_GENTLEMAN_BAOBA, MovementData_Route39_Baoba_Leaves
-;	disappear ROUTE_39_GENTLEMAN_BAOBA
-;	end
-;
-;.bag_full
-;	writetext Route39BaobaBagFullText
-;	waitbutton
-;	writetext Route39BaobaLeavingText
-;	waitbutton
-;	closetext
-;	setscene SCENE_ROUTE_39_BAOBA_GONE
-;	applymovement ROUTE_39_GENTLEMAN_BAOBA, MovementData_Route39_Baoba_Leaves
-;	disappear ROUTE_39_GENTLEMAN_BAOBA
-;	end
-
 ;Route39HiddenNugget:
 ;	hiddenitem NUGGET, EVENT_ROUTE_39_HIDDEN_NUGGET
 
@@ -475,96 +419,6 @@ Route39NothingHereText:
 	line "here…"
 	done
 
-;Route39BaobaIntroText:
-;	text "BAOBA: …Ohh!"
-;
-;	para "Is that a #DEX?"
-;
-;	para "I haven't seen one"
-;	line "of those in ages."
-;
-;	para "My name is BAOBA!"
-;
-;	para "I run a SAFARI"
-;	line "ZONE just beyond"
-;	cont "CIANWOOD CITY."
-;
-;	para "I'm sure a young"
-;	line "trainer such as"
-;
-;	para "yourself would be"
-;	line "quite interested"
-;
-;	para "in the rare and"
-;	line "exotic #MON"
-;	cont "found there."
-;
-;	para "I certainly hope"
-;	line "you will consider"
-;	cont "taking a look."
-;	
-;	para "Anyway, I had"
-;	line "better get back."
-;
-;	para "Please take this"
-;	line "as a token of our"
-;	cont "meeting…"
-;	done
-
-;Route39BaobaBagFullText:
-;	text "Oh dear, you have"
-;	line "no room for this."
-;	
-;	para "Don't worry I will"
-;	line "hold onto it until"
-;	
-;	para "you can visit me"
-;	line "at the SAFARI ZONE"
-;	cont "later."
-;	done
-
-;Route39GotExpShareText:
-;	text "<PLAYER> received"
-;	line "EXP.SHARE."
-;	done
-
-;Route39BaobaLeavingText:
-;	text "Remember, the"
-;	line "SAFARI ZONE is"
-;
-;	para "west beyond"
-;	line "CIANWOOD CITY."
-;
-;	para "Best of luck to"
-;	line "you!"
-;	done
-
-;MovementData_Route39_Baoba_Approach1:
-;	step UP
-;MovementData_Route39_Baoba_Approach2:
-;	step RIGHT
-;	step RIGHT
-;	step_end
-
-;MovementData_Route39_Baoba_Approach4:
-;	step DOWN
-;MovementData_Route39_Baoba_Approach3:
-;	step DOWN
-;	step RIGHT
-;	step RIGHT
-;	step_end
-
-;MovementData_Route39_Baoba_Leaves:
-;	step LEFT
-;	step LEFT
-;	step DOWN
-;	step DOWN
-;	step DOWN
-;	step DOWN
-;	step DOWN
-;	step DOWN
-;	step_end
-
 Route39_MapEvents:
 	db 0, 0 ; filler
 
@@ -593,9 +447,10 @@ Route39_MapEvents:
 	object_event  6, 11, SPRITE_MILTANK, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route39Miltank, -1
 	object_event  4, 15, SPRITE_MILTANK, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route39Miltank, -1
 	object_event  8, 13, SPRITE_MILTANK, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route39Miltank, -1
+;
 ;	object_event 13, 29, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TrainerSailorEugene, -1
 ;	object_event 10, 22, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerPokefanmDerek, -1
 ;	object_event 11, 19, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerPokefanfRuth, -1
 ;	object_event 14, 14, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerPsychicNorman, -1
 ;	object_event  4, 22, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TrainerPokefanfJaime, -1
-;	object_event 13,  9, SPRITE_GENTLEMAN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ROUTE_39_BAOBA_RETURNED_TO_SAFARI_ZONE
+; -1

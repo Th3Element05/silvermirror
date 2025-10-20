@@ -1,10 +1,42 @@
 	object_const_def
-	const ROUTE_42ECRUTEAKGATE_OFFICER
+;	const ROUTE_42ECRUTEAKGATE_OFFICER
 
 Route42EcruteakGate_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+
+Route42EcruteakGateGentlemanScript:
+	checkevent EVENT_ROUTE_42_BOULDERS_CLEARED
+	iftrue .BouldersCleared
+	jumptextfaceplayer Route42EcruteakGateRouteBlockedText
+
+.BouldersCleared
+	jumptextfaceplayer Route42EcruteakGateRouteClearText
+
+Route42EcruteakGateRouteBlockedText:
+	text "There was a land-"
+	line "slide on ROUTE 42!"
+
+	para "Boulders fell from"
+	line "MT. MORTAR and"
+	cont "blocked ROUTE 42!"
+
+	para "The GYM LEADER of"
+	line "MAHOGANY TOWN is"
+
+	para "working hard to"
+	line "clear the road!"
+	done
+
+Route42EcruteakGateRouteClearText:
+	text "The boulders have"
+	line "been cleared!"
+
+	para "The road to"
+	line "MAHOGANY TOWN is"
+	cont "open again!"
+	done
 
 Route42EcruteakGateOfficerScript:
 	jumptextfaceplayer Route42EcruteakGateOfficerText
@@ -32,3 +64,4 @@ Route42EcruteakGate_MapEvents:
 
 	def_object_events
 	object_event  4,  1, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route42EcruteakGateOfficerScript, -1
+	object_event  3,  6, SPRITE_GENTLEMAN, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, Route42EcruteakGateGentlemanScript, -1

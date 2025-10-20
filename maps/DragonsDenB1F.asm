@@ -1,13 +1,13 @@
 	object_const_def
-	const DRAGONSDENB1F_POKE_BALL1
+;	const DRAGONSDENB1F_POKE_BALL1
 	const DRAGONSDENB1F_CLAIR
 ;	const DRAGONSDENB1F_RIVAL
 ;	const DRAGONSDENB1F_COOLTRAINER_M
 ;	const DRAGONSDENB1F_COOLTRAINER_F
 ;	const DRAGONSDENB1F_TWIN1
 ;	const DRAGONSDENB1F_TWIN2
-	const DRAGONSDENB1F_POKE_BALL2
-	const DRAGONSDENB1F_POKE_BALL3
+;	const DRAGONSDENB1F_POKE_BALL2
+;	const DRAGONSDENB1F_POKE_BALL3
 
 DragonsDenB1F_MapScripts:
 	def_scene_scripts
@@ -15,7 +15,7 @@ DragonsDenB1F_MapScripts:
 	scene_script DragonsDenB1FNoop2Scene, SCENE_DRAGONSDENB1F_CLAIR_GIVES_TM
 
 	def_callbacks
-	callback MAPCALLBACK_NEWMAP, DragonsDenB1FCheckRivalCallback
+;	callback MAPCALLBACK_NEWMAP, DragonsDenB1FCheckRivalCallback
 
 DragonsDenB1FNoop1Scene:
 	end
@@ -23,11 +23,11 @@ DragonsDenB1FNoop1Scene:
 DragonsDenB1FNoop2Scene:
 	end
 
-DragonsDenB1FCheckRivalCallback:
-	checkevent EVENT_BEAT_RIVAL_IN_MT_MOON
-	iftrue .CheckDay
+;DragonsDenB1FCheckRivalCallback:
+;	checkevent EVENT_BEAT_RIVAL_IN_MT_MOON
+;	iftrue .CheckDay
 ;	disappear DRAGONSDENB1F_RIVAL
-	endcallback
+;	endcallback
 
 .CheckDay:
 	readvar VAR_WEEKDAY
@@ -170,23 +170,23 @@ DragonsDenB1FDragonFangScript:
 ;	special RestartMapMusic
 ;	end
 
-DragonShrineSignpost:
-	jumptext DragonShrineSignpostText
-
-DragonsDenB1FCalcium:
-	itemball CALCIUM
-
-DragonsDenB1FMaxElixer:
-	itemball MAX_ELIXER
-
-DragonsDenB1FHiddenRevive:
-	hiddenitem REVIVE, EVENT_DRAGONS_DEN_B1F_HIDDEN_REVIVE
-
-DragonsDenB1FHiddenMaxPotion:
-	hiddenitem MAX_POTION, EVENT_DRAGONS_DEN_B1F_HIDDEN_MAX_POTION
-
-DragonsDenB1FHiddenMaxElixer:
-	hiddenitem MAX_ELIXER, EVENT_DRAGONS_DEN_B1F_HIDDEN_MAX_ELIXER
+;DragonShrineSignpost:
+;	jumptext DragonShrineSignpostText
+;
+;DragonsDenB1FCalcium:
+;	itemball CALCIUM
+;
+;DragonsDenB1FMaxElixer:
+;	itemball MAX_ELIXER
+;
+;DragonsDenB1FHiddenRevive:
+;	hiddenitem REVIVE, EVENT_DRAGONS_DEN_B1F_HIDDEN_REVIVE
+;
+;DragonsDenB1FHiddenMaxPotion:
+;	hiddenitem MAX_POTION, EVENT_DRAGONS_DEN_B1F_HIDDEN_MAX_POTION
+;
+;DragonsDenB1FHiddenMaxElixer:
+;	hiddenitem MAX_ELIXER, EVENT_DRAGONS_DEN_B1F_HIDDEN_MAX_ELIXER
 
 MovementDragonsDen_ClairWalksToYou:
 	slow_step RIGHT
@@ -415,17 +415,17 @@ DragonsDenB1F_MapEvents:
 
 	def_bg_events
 	bg_event 18, 22, BGEVENT_READ, DragonShrineSignpost
-	bg_event 33, 29, BGEVENT_ITEM, DragonsDenB1FHiddenRevive
-	bg_event 21, 17, BGEVENT_ITEM, DragonsDenB1FHiddenMaxPotion
-	bg_event 31, 15, BGEVENT_ITEM, DragonsDenB1FHiddenMaxElixer
+;	bg_event 33, 29, BGEVENT_ITEM, DragonsDenB1FHiddenRevive
+;	bg_event 21, 17, BGEVENT_ITEM, DragonsDenB1FHiddenMaxPotion
+;	bg_event 31, 15, BGEVENT_ITEM, DragonsDenB1FHiddenMaxElixer
 
 	def_object_events
-	object_event 35, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DragonsDenB1FDragonFangScript, EVENT_DRAGONS_DEN_B1F_DRAGON_FANG
+;	object_event 35, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DragonsDenB1FDragonFangScript, EVENT_DRAGONS_DEN_B1F_DRAGON_FANG
 	object_event 14, 28, SPRITE_CLAIR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_DRAGONS_DEN_CLAIR
 ;	object_event 20, 23, SPRITE_RIVAL, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DragonsDenB1FRivalScript, EVENT_RIVAL_DRAGONS_DEN
 ;	object_event 20,  8, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerCooltrainermDarin, -1
 ;	object_event  8,  8, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerCooltrainerfCara, -1
 ;	object_event  4, 17, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerTwinsLeaandpia1, -1
 ;	object_event  4, 18, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerTwinsLeaandpia2, -1
-	object_event 30,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DragonsDenB1FCalcium, EVENT_DRAGONS_DEN_B1F_CALCIUM
-	object_event  5, 20, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DragonsDenB1FMaxElixer, EVENT_DRAGONS_DEN_B1F_MAX_ELIXER
+;	object_event 30,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DragonsDenB1FCalcium, EVENT_DRAGONS_DEN_B1F_CALCIUM
+;	object_event  5, 20, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DragonsDenB1FMaxElixer, EVENT_DRAGONS_DEN_B1F_MAX_ELIXER

@@ -1,7 +1,7 @@
 	object_const_def
 ;	const SILVERCAVEITEMROOMS_MOLTRES
-	const SILVERCAVEITEMROOMS_POKE_BALL1
-	const SILVERCAVEITEMROOMS_POKE_BALL2
+;	const SILVERCAVEITEMROOMS_POKE_BALL1
+;	const SILVERCAVEITEMROOMS_POKE_BALL2
 
 SilverCaveItemRooms_MapScripts:
 	def_scene_scripts
@@ -29,12 +29,12 @@ SilverCaveItemRooms_MapScripts:
 ;
 ;SilverCaveItemRoomsHiddenUltraBall:
 ;	hiddenitem ULTRA_BALL, EVENT_SILVERCAVEITEMROOMS_HIDDEN_ULTRA_BALL
-
-SilverCaveItemRoomsMaxRevive:
-	itemball MAX_REVIVE
-
-SilverCaveItemRoomsFullRestore:
-	itemball FULL_RESTORE
+;
+;SilverCaveItemRoomsMaxRevive:
+;	itemball MAX_REVIVE
+;
+;SilverCaveItemRoomsFullRestore:
+;	itemball FULL_RESTORE
 
 ;SilverCaveItemRoomsMoltres:
 ;	opentext
@@ -74,5 +74,5 @@ SilverCaveItemRooms_MapEvents:
 
 	def_object_events
 ;	object_event  9, 24, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0,  SilverCaveItemRoomsMoltres, EVENT_MOLTRES_APPEAR
-	object_event  6,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SilverCaveItemRoomsMaxRevive, EVENT_SILVER_CAVE_ITEM_ROOMS_MAX_REVIVE
-	object_event 15, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SilverCaveItemRoomsFullRestore, EVENT_SILVER_CAVE_ITEM_ROOMS_FULL_RESTORE
+;	object_event  6,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SilverCaveItemRoomsMaxRevive, EVENT_SILVER_CAVE_ITEM_ROOMS_MAX_REVIVE
+;	object_event 15, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SilverCaveItemRoomsFullRestore, EVENT_SILVER_CAVE_ITEM_ROOMS_FULL_RESTORE

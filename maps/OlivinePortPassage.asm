@@ -6,16 +6,16 @@ OlivinePortPassage_MapScripts:
 
 	def_callbacks
 
-OlivinePortPassagePokefanMScript:
-	jumptextfaceplayer OlivinePortPassagePokefanMText
-
-OlivinePortPassagePokefanMText:
-	text "FAST SHIP S.S.AQUA"
-	line "sails to KANTO on"
-
-	para "Mondays and Fri-"
-	line "days."
-	done
+;OlivinePortPassagePokefanMScript:
+;	jumptextfaceplayer OlivinePortPassagePokefanMText
+;
+;OlivinePortPassagePokefanMText:
+;	text "FAST SHIP S.S.AQUA"
+;	line "sails to KANTO on"
+;
+;	para "Mondays and Fri-"
+;	line "days."
+;	done
 
 OlivinePortPassage_MapEvents:
 	db 0, 0 ; filler
@@ -32,4 +32,4 @@ OlivinePortPassage_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event 17,  1, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivinePortPassagePokefanMScript, EVENT_OLIVINE_PORT_PASSAGE_POKEFAN_M
+;	object_event 17,  1, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivinePortPassagePokefanMScript, EVENT_OLIVINE_PORT_PASSAGE_POKEFAN_M

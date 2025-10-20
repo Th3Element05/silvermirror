@@ -12,15 +12,15 @@ Route39Farmhouse_MapScripts:
 PokefanM_DairyFarmer:
 	faceplayer
 	opentext
-	checkevent EVENT_HEALED_MOOMOO
-	iftrue FarmerMScript_SellMilk
-	writetext FarmerMText_SickCow
-	waitbutton
-	closetext
-	setevent EVENT_TALKED_TO_FARMER_ABOUT_MOOMOO
-	end
-
-FarmerMScript_SellMilk:
+;	checkevent EVENT_HEALED_MOOMOO
+;	iftrue FarmerMScript_SellMilk
+;	writetext FarmerMText_SickCow
+;	waitbutton
+;	closetext
+;	setevent EVENT_TALKED_TO_FARMER_ABOUT_MOOMOO
+;	end
+;
+;FarmerMScript_SellMilk:
 	checkitem MOOMOO_MILK
 	iftrue FarmerMScript_Milking
 	writetext FarmerMText_BuyMilk
@@ -70,14 +70,14 @@ PokefanF_SnoreFarmer:
 	opentext
 	checkevent EVENT_GOT_TM61_SNORE
 	iftrue FarmerFScript_GotSnore
-	checkevent EVENT_HEALED_MOOMOO
-	iftrue FarmerFScript_GiveSnore
-	writetext FarmerFText_InTrouble
-	waitbutton
-	closetext
-	end
-
-FarmerFScript_GiveSnore:
+;	checkevent EVENT_HEALED_MOOMOO
+;	iftrue FarmerFScript_GiveSnore
+;	writetext FarmerFText_InTrouble
+;	waitbutton
+;	closetext
+;	end
+;
+;FarmerFScript_GiveSnore:
 	writetext FarmerFText_HealedMiltank
 	promptbutton
 	verbosegiveitem TM_SNORE
