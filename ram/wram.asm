@@ -3161,6 +3161,8 @@ wFastShip1FSceneID::                              db
 wFastShipB1FSceneID::                             db
 wFastShipEngineRoomSceneID::                      db
 wOlivineCitySceneID::                             db
+wBurnedTower1FSceneID::                           db
+wBurnedTowerB1FSceneID::                          db
 ;
 wTrainerHouseB1FSceneID::                         db
 wNewBarkTownSceneID::                             db
@@ -3180,8 +3182,6 @@ wRoute34SceneID::                                 db
 wRoute34IlexForestGateSceneID::                   db
 wEcruteakTinTowerEntranceSceneID::                db
 wWiseTriosRoomSceneID::                           db
-wEcruteakPokecenter1FSceneID::                    db
-wEcruteakGymSceneID::                             db
 wMahoganyTownSceneID::                            db
 wRoute42SceneID::                                 db
 wCianwoodCitySceneID::                            db
@@ -3193,8 +3193,6 @@ wBattleTowerOutsideSceneID::                      db
 wRoute43GateSceneID::                             db
 wSproutTower3FSceneID::                           db
 wTinTower1FSceneID::                              db
-wBurnedTower1FSceneID::                           db
-wBurnedTowerB1FSceneID::                          db
 wRuinsOfAlphOutsideSceneID::                      db
 wRuinsOfAlphResearchCenterSceneID::               db
 wRuinsOfAlphHoOhChamberSceneID::                  db
@@ -3213,8 +3211,10 @@ wDragonShrineSceneID::                            db
 wMountMoonSquareSceneID::                         db
 wPokemonMansion1FSceneID::                        db
 wPokemonMansionB1FSceneID::                       db
-wRoute42EcruteakGateSceneID::                     db
-wRoute39SceneID::                                 db
+;wRoute42EcruteakGateSceneID::                     db ; unused in silvermirror
+;wEcruteakPokecenter1FSceneID::                    db ; unused in silvermirror
+;wEcruteakGymSceneID::                             db ; unused in silvermirror
+;wRoute39SceneID::                                 db ; unused in silvermirror
 ;wE4ChampionsRoomSceneID::                         db ; wLancesRoomSceneID::   
 ;wVictoryRoadSceneID::                             db ; unused in silvermirror
 ;wPokecenter2FSceneID::                            db ; unused in silvermirror

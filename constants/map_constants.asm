@@ -270,7 +270,7 @@ ENDM
 
 	newgroup CHERRYGROVE                                          ; 16
 	map_const CHERRYGROVE_CITY,                            20,  9 ;  1
-	map_const CHERRYGROVE_POKECENTER_1F,                    7,  4 ;  2
+	map_const CHERRYGROVE_POKECENTER_1F,                    5,  4 ;  2
 	map_const CHERRYGROVE_MART,                             5,  4 ;  3
 	map_const GUIDE_GENTS_HOUSE,                            4,  4 ;  4
 	map_const CHERRYGROVE_GYM_SPEECH_HOUSE,                 4,  4 ;  5
@@ -284,7 +284,7 @@ ENDM
 
 	newgroup VIOLET                                               ; 17
 	map_const VIOLET_CITY,                                 20, 18 ;  1
-	map_const VIOLET_POKECENTER_1F,                         7,  4 ;  2
+	map_const VIOLET_POKECENTER_1F,                         5,  4 ;  2
 	map_const VIOLET_MART,                                  5,  4 ;  3
 	map_const VIOLET_GYM,                                   5,  8 ;  4
 	map_const TRAINER_HOUSE_1F,                             5,  7 ;  5
@@ -293,7 +293,7 @@ ENDM
 	map_const VIOLET_NICKNAME_SPEECH_HOUSE,                 4,  4 ;  8
 	map_const ROUTE_32,                                    10, 45 ;  9
 	map_const ROUTE_32_RUINS_OF_ALPH_GATE,                  4,  5 ; 10
-	map_const ROUTE_32_POKECENTER_1F,                       7,  4 ; 11
+	map_const ROUTE_32_POKECENTER_1F,                       5,  4 ; 11
 	map_const ROUTE_35,                                    10, 18 ; 12
 	map_const ROUTE_35_GOLDENROD_GATE,                      4,  4 ; 13
 	map_const ROUTE_35_NATIONAL_PARK_GATE,                  4,  4 ; 14
@@ -304,7 +304,7 @@ ENDM
 
 	newgroup AZALEA                                               ; 18
 	map_const AZALEA_TOWN,                                 20,  9 ;  1
-	map_const AZALEA_POKECENTER_1F,                         7,  4 ;  2
+	map_const AZALEA_POKECENTER_1F,                         5,  4 ;  2
 	map_const AZALEA_MART,                                  5,  4 ;  3
 	map_const AZALEA_GYM,                                   5,  8 ;  4
 	map_const KURTS_HOUSE,                                  8,  4 ;  5
@@ -315,7 +315,7 @@ ENDM
 
 	newgroup GOLDENROD                                            ; 19
 	map_const GOLDENROD_CITY,                              20, 18 ;  1
-	map_const GOLDENROD_POKECENTER_1F,                      7,  4 ;  2
+	map_const GOLDENROD_POKECENTER_1F,                      5,  4 ;  2
 	map_const GOLDENROD_DEPT_STORE_1F,                      8,  4 ;  3
 	map_const GOLDENROD_DEPT_STORE_2F,                      8,  4 ;  4
 	map_const GOLDENROD_DEPT_STORE_3F,                      8,  4 ;  5
@@ -338,7 +338,7 @@ ENDM
 
 	newgroup ECRUTEAK                                             ; 20
 	map_const ECRUTEAK_CITY,                               20, 18 ;  1
-	map_const ECRUTEAK_POKECENTER_1F,                       7,  4 ;  2
+	map_const ECRUTEAK_POKECENTER_1F,                       5,  4 ;  2
 	map_const ECRUTEAK_MART,                                5,  4 ;  3
 	map_const ECRUTEAK_GYM,                                 5,  9 ;  4
 	map_const DANCE_THEATER,                                6,  7 ;  5
@@ -351,7 +351,7 @@ ENDM
 
 	newgroup OLIVINE                                              ; 21
 	map_const OLIVINE_CITY,                                20, 19 ;  1
-	map_const OLIVINE_POKECENTER_1F,                        7,  4 ;  2
+	map_const OLIVINE_POKECENTER_1F,                        5,  4 ;  2
 	map_const OLIVINE_MART,                                 5,  4 ;  3
 	map_const OLIVINE_GYM,                                  5,  8 ;  4
 	map_const OLIVINE_CAFE,                                 5,  4 ;  5
@@ -368,7 +368,7 @@ ENDM
 
 	newgroup CIANWOOD                                             ; 22
 	map_const CIANWOOD_CITY,                               15, 27 ;  1
-	map_const CIANWOOD_POKECENTER_1F,                       7,  4 ;  2
+	map_const CIANWOOD_POKECENTER_1F,                       5,  4 ;  2
 	map_const CIANWOOD_PHARMACY,                            4,  4 ;  3
 	map_const CIANWOOD_GYM,                                 5,  9 ;  4
 	map_const MANIAS_HOUSE,                                 4,  4 ;  5
@@ -387,7 +387,7 @@ ENDM
 
 	newgroup MAHOGANY                                             ; 23
 	map_const MAHOGANY_TOWN,                               10,  9 ;  1
-	map_const MAHOGANY_POKECENTER_1F,                       7,  4 ;  2
+	map_const MAHOGANY_POKECENTER_1F,                       5,  4 ;  2
 	map_const MAHOGANY_GYM,                                 5,  9 ;  3
 	map_const MAHOGANY_RED_GYARADOS_SPEECH_HOUSE,           4,  4 ;  4
 	map_const ROUTE_42,                                    30,  9 ;  5
@@ -406,7 +406,7 @@ ENDM
 
 	newgroup BLACKTHORN                                           ; 25
 	map_const BLACKTHORN_CITY,                             20, 18 ;  1
-	map_const BLACKTHORN_POKECENTER_1F,                     7,  4 ;  2
+	map_const BLACKTHORN_POKECENTER_1F,                     5,  4 ;  2
 	map_const BLACKTHORN_MART,                              5,  4 ;  3
 	map_const BLACKTHORN_GYM_1F,                            5,  9 ;  4
 	map_const BLACKTHORN_GYM_2F,                            5,  9 ;  5
@@ -425,7 +425,7 @@ ENDM
 	map_const ROUTE_27_EAST,                               26,  9 ;  5
 	map_const ROUTE_28,                                    20,  9 ;  6
 	map_const SILVER_CAVE_OUTSIDE,                         20, 15 ;  7
-	map_const SILVER_CAVE_POKECENTER_1F,                    7,  4 ;  8
+	map_const SILVER_CAVE_POKECENTER_1F,                    5,  4 ;  8
 	map_const ROUTE_28_STEEL_WING_HOUSE,                    4,  4 ;  9
 	endgroup
 

@@ -50,6 +50,8 @@ MapScenes::
 	scene_var FAST_SHIP_B1F,                               wFastShipB1FSceneID
 	scene_var FAST_SHIP_ENGINE_ROOM,                       wFastShipEngineRoomSceneID
 	scene_var OLIVINE_CITY,                                wOlivineCitySceneID
+	scene_var BURNED_TOWER_1F,                             wBurnedTower1FSceneID
+	scene_var BURNED_TOWER_B1F,                            wBurnedTowerB1FSceneID
 ; og scenes below
 	scene_var TRAINER_HOUSE_B1F,                           wTrainerHouseB1FSceneID
 	scene_var NEW_BARK_TOWN,                               wNewBarkTownSceneID
@@ -69,8 +71,6 @@ MapScenes::
 	scene_var ROUTE_34_ILEX_FOREST_GATE,                   wRoute34IlexForestGateSceneID ; unused
 	scene_var ECRUTEAK_TIN_TOWER_ENTRANCE,                 wEcruteakTinTowerEntranceSceneID
 	scene_var WISE_TRIOS_ROOM,                             wWiseTriosRoomSceneID
-	scene_var ECRUTEAK_POKECENTER_1F,                      wEcruteakPokecenter1FSceneID
-;	scene_var ECRUTEAK_GYM,                                wEcruteakGymSceneID
 	scene_var MAHOGANY_TOWN,                               wMahoganyTownSceneID
 	scene_var ROUTE_42,                                    wRoute42SceneID
 	scene_var CIANWOOD_CITY,                               wCianwoodCitySceneID
@@ -82,8 +82,6 @@ MapScenes::
 	scene_var ROUTE_43_GATE,                               wRoute43GateSceneID
 	scene_var SPROUT_TOWER_3F,                             wSproutTower3FSceneID
 	scene_var TIN_TOWER_1F,                                wTinTower1FSceneID
-	scene_var BURNED_TOWER_1F,                             wBurnedTower1FSceneID
-	scene_var BURNED_TOWER_B1F,                            wBurnedTowerB1FSceneID
 	scene_var RUINS_OF_ALPH_OUTSIDE,                       wRuinsOfAlphOutsideSceneID
 	scene_var RUINS_OF_ALPH_RESEARCH_CENTER,               wRuinsOfAlphResearchCenterSceneID
 	scene_var RUINS_OF_ALPH_HO_OH_CHAMBER,                 wRuinsOfAlphHoOhChamberSceneID
@@ -102,8 +100,10 @@ MapScenes::
 	scene_var MOUNT_MOON_SQUARE,                           wMountMoonSquareSceneID
 	scene_var POKEMON_MANSION_1F,                          wPokemonMansion1FSceneID
 	scene_var POKEMON_MANSION_B1F,                         wPokemonMansionB1FSceneID
-	scene_var ROUTE_42_ECRUTEAK_GATE,                      wRoute42EcruteakGateSceneID
-	scene_var ROUTE_39,                                    wRoute39SceneID
+;	scene_var ROUTE_42_ECRUTEAK_GATE,                      wRoute42EcruteakGateSceneID
+;	scene_var ECRUTEAK_POKECENTER_1F,                      wEcruteakPokecenter1FSceneID
+;	scene_var ECRUTEAK_GYM,                                wEcruteakGymSceneID
+;	scene_var ROUTE_39,                                    wRoute39SceneID
 ;	scene_var E4_CHAMPIONS_ROOM,                           wE4ChampionsRoomSceneID
 ;	scene_var VICTORY_ROAD,                                wVictoryRoadSceneID
 ;	scene_var POKECENTER_2F,                               wPokecenter2FSceneID
