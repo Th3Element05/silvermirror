@@ -17,7 +17,7 @@ PagerCardIconSpecies:
 	db MACHOKE
 	db PIKACHU ;silvermirror -MAREEP
 	db AZUMARILL ;silvermirror -REMORAID
-	db CUBONE
+	db GEODUDE ;silvermirror -CUBONE
 	db 0 ; end
 
 PagerCardSprites:

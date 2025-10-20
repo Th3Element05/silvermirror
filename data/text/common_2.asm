@@ -463,7 +463,7 @@ _AskHeadbuttText::
 	done
 
 _UseRockSmashText::
-	text "Called CUBONE" ;silvermirror -"<PLAYER> summoned a"
+	text "Called GEODUDE" ;silvermirror -"<PLAYER> summoned a"
 	line "to use ROCK SMASH!" ;silvermirror -"CUBONE to use"
 ;	cont "ROCK SMASH!" ;silvermirror -
 	done
