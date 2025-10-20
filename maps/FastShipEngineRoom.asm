@@ -149,9 +149,9 @@ FastShipEngineRoomSailor:
 	jumptextfaceplayer FastShipEngineRoomSailorText
 FastShipEngineRoomSailorText:
 	text "It's important for"
-	line "any ship to keep"
-	cont "the engine well"
-	cont "maintained."
+	line "for any ship"
+	cont "to keep the engine"
+	cont "well maintained."
 
 	para "But especially so"
 	line "for a FAST SHIP"
