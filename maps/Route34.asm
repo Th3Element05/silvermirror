@@ -603,8 +603,8 @@ Route34Sign:
 Route34TrainerTips:
 	jumptext Route34TrainerTipsText
 
-Route34DayCareSign:
-	jumptext Route34DayCareSignText
+;Route34DayCareSign:
+;	jumptext Route34DayCareSignText
 
 ;Route34Nugget:
 ;	itemball NUGGET
@@ -892,12 +892,12 @@ Route34TrainerTipsText:
 	cont "which BERRIES."
 	done
 
-Route34DayCareSignText:
-	text "DAY-CARE"
-
-	para "LET US RAISE YOUR"
-	line "#MON FOR YOU!"
-	done
+;Route34DayCareSignText:
+;	text "DAY-CARE"
+;
+;	para "LET US RAISE YOUR"
+;	line "#MON FOR YOU!"
+;	done
 
 Route34_MapEvents:
 	db 0, 0 ; filler
@@ -914,7 +914,7 @@ Route34_MapEvents:
 	def_bg_events
 	bg_event 12,  6, BGEVENT_READ, Route34Sign
 	bg_event 13, 33, BGEVENT_READ, Route34TrainerTips
-	bg_event 10, 13, BGEVENT_READ, Route34DayCareSign
+;	bg_event 10, 13, BGEVENT_READ, Route34DayCareSign
 ;	bg_event  8, 32, BGEVENT_ITEM, Route34HiddenRareCandy
 ;	bg_event 17, 19, BGEVENT_ITEM, Route34HiddenSuperPotion
 

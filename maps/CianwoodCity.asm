@@ -28,11 +28,11 @@ CianwoodCityNoop2Scene:
 
 CianwoodCityFlypointAndSuicuneCallback:
 	setflag ENGINE_FLYPOINT_CIANWOOD
-	setevent EVENT_EUSINE_IN_BURNED_TOWER
-	checkevent EVENT_FOUGHT_EUSINE
-	iffalse .Done
-	disappear CIANWOODCITY_EUSINE
-.Done:
+;	setevent EVENT_EUSINE_IN_BURNED_TOWER
+;	checkevent EVENT_FOUGHT_EUSINE
+;	iffalse .Done
+;	disappear CIANWOODCITY_EUSINE
+;.Done:
 	endcallback
 
 ;CianwoodCitySuicuneAndEusine:

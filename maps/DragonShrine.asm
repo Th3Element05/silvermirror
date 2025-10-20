@@ -198,8 +198,8 @@ DragonShrineElder1Script:
 	iftrue .ReceivedDratini
 	checkevent EVENT_GOT_DRATINI
 	iffalse .GiveDratini
-	checkevent EVENT_BEAT_RIVAL_IN_MT_MOON
-	iftrue .BeatRivalInMtMoon
+;	checkevent EVENT_BEAT_RIVAL_IN_MT_MOON
+;	iftrue .BeatRivalInMtMoon
 	writetext DragonShrineClairsGrandfatherText
 	waitbutton
 	closetext
@@ -235,11 +235,11 @@ DragonShrineElder1Script:
 	closetext
 	end
 
-.BeatRivalInMtMoon:
-	writetext DragonShrineRivalIsInTrainingText
-	waitbutton
-	closetext
-	end
+;.BeatRivalInMtMoon:
+;	writetext DragonShrineRivalIsInTrainingText
+;	waitbutton
+;	closetext
+;	end
 
 .DontGiveDratiniYet:
 	writetext DragonShrineComeAgainText
@@ -549,17 +549,17 @@ DragonShrineClairsGrandfatherText:
 	line "grandfather."
 	done
 
-DragonShrineRivalIsInTrainingText:
-	text "A boy close to"
-	line "your age is in"
-	cont "training here."
-
-	para "He is much like"
-	line "CLAIR when she was"
-
-	para "younger. It is a"
-	line "little worrisome…"
-	done
+;DragonShrineRivalIsInTrainingText:
+;	text "A boy close to"
+;	line "your age is in"
+;	cont "training here."
+;
+;	para "He is much like"
+;	line "CLAIR when she was"
+;
+;	para "younger. It is a"
+;	line "little worrisome…"
+;	done
 
 DragonShrineWrongAnswerText1:
 	text "Hah? I didn't"
