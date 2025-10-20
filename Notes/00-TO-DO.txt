@@ -67,6 +67,10 @@ check pokecenter link receptionist sprites
 TO-DO to-do
 TO RELEASE BETA: remove SS Ticket (maps/HallOfFame, maps/OaksLab)
 
+OlivineGymStatue:
+	gettrainername STRING_BUFFER_4, JASMINE, JASMINE1
+	jumpstd GymStatue3Script
+
 olivine tim's house trade
 olivine lighthouse (currently blocked)
 
@@ -76,7 +80,21 @@ NIDORAN trade, doesn't specify gender (test it, can it be fixed?)
 contants\npc_trade_constants.asm
 data\events\npc_trades.asm
 
+get rock smash from mahogany gym leader on route 42?
+
 FIX FOSSIL REVIVE SCRIPT (did I fix this already?)
+
+SHUCKLE get in trade
+
+cianwood fighting gym come use strength to clear route 42
+
+FAST SHIP rocket parties
+GruntM_29
+GruntM_30
+ExecutiveM_3
+ExecutiveF_2
+
+ROUTE 11 replace GUITARISTs with OFFICERs (Rex and Carter)
 
 
 

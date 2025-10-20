@@ -1,0 +1,6 @@
+engine\overworld\wildmons.asm
+InitRoamMons:
+; added all [wRoamMon3*] for suicune
+
+wRoamMon3Species
+RespawnRoamingSuicune
