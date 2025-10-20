@@ -20,6 +20,8 @@ PnP_HiddenPeople:
 	db KABUTOPS_FOSSIL
 	db AERODACTYL_FOSSIL
 	db POKEMON_GHOST
+	db POKEMON_PROF
+	db RED
 	; fallthrough
 PnP_HiddenPeople_BeatE4:
 	db LORELEI
@@ -36,8 +38,6 @@ PnP_HiddenPeople_BeatE4:
 	db CLAIR
 	; fallthrough
 PnP_HiddenPeople_BeatKanto:
-	db POKEMON_PROF
-	db RED
 	db -1
 
 ;PnP_HiddenPeople:
