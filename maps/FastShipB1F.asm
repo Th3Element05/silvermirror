@@ -25,6 +25,7 @@ FastShipB1FMoveSailorCallback:
 FastShipB1FRocketsScript:
 	opentext
 	writetext FastShipB1FHuhText
+	promptbutton
 	turnobject PLAYER, UP
 	opentext
 	writetext FastShipB1FRocketsText
@@ -63,15 +64,16 @@ FastShipB1FRocketsText:
 	cont "under control."
 
 	para "You come with me."
-	line "We'll take care"
-	cont "of the captain."
+
+	para "We'll take care"
+	line "of the captain."
 	done
 
 FastShipB1FStayOutOfTheWayText:
 	text "You better stay"
-	line "out of our way if"
-	cont "you know what's"
-	cont "good for you!"
+	line "out of our way!"
+
+	para "Or else!"
 	done
 
 FastShipB1FUnconsciousSailor:
@@ -89,14 +91,17 @@ FastShipB1FUnconsciousSailorText:
 
 FastShipB1FRestingSailorText:
 	text "SAILOR: I'll be"
-	line "alright. I'm just"
-	cont "resting."
+	line "alright."
+
+	para "I'm just resting."
+	done
 
 FastShipB1FSleepingSailor:
 	jumptext FastShipB1FSleepingSailorText
 FastShipB1FSleepingSailorText:
 	text "He's…!           "
 	line "…just sleeping."
+	done
 
 FastShipB1FRocketsMovement1:
 	step LEFT
