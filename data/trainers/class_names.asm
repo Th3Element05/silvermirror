@@ -27,7 +27,7 @@ TrainerClassNames::
 	li "ELITE FOUR"     ;LANCE
 	li "CHAMPION"       ;CHAMPION
 	li "<PKMN> TRAINER" ;CAL
-	li "<PKMN> TRAINER" ;RED
+	li "<PKMN> TRAINER"   ;OAK ;-RED
 	li "ROCKET"         ;GRUNTM
 	li "ROCKET"         ;GRUNTF
 	li "ROCKET"         ;EXECUTIVEM

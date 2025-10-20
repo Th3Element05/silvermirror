@@ -18,6 +18,7 @@ GymLeaders:
 	db AGATHA ; KAREN
 	db LANCE ; KOGA
 	db CHAMPION
+	db POKEMON_PROF
 	db RED
 ; fallthrough
 KantoGymLeaders:

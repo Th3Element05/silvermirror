@@ -53,6 +53,7 @@ DEF KRIS EQU __trainer_class__
 	const CLAIR1
 
 	trainerclass POKEMON_PROF ; 09
+	const OAK_T
 
 	trainerclass RIVAL1 ; 0a
 ; OAKS_LAB
@@ -856,12 +857,12 @@ DEF KRIS EQU __trainer_class__
 	const KAYANDTIA3
 
 	trainerclass OFFICER ; 42
-; kanto (ENGINEER)
-	const KEITH
-	const DIRK
-; johto
+; kanto
 	const REX
 	const CARTER
+; johto
+	const KEITH
+	const DIRK
 
 	trainerclass MYSTICALMAN ; 43
 	const EUSINE
