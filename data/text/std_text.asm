@@ -24,46 +24,46 @@ NurseNiteText:
 	line "#MON CENTER."
 	done
 
-PokeComNurseMornText:
-	text "Good morning!"
-
-	para "This is the #-"
-	line "MON COMMUNICATION"
-
-	para "CENTER--or the"
-	line "#COM CENTER."
-	done
-
-PokeComNurseDayText:
-	text "Hello!"
-
-	para "This is the #-"
-	line "MON COMMUNICATION"
-
-	para "CENTER--or the"
-	line "#COM CENTER."
-	done
-
-PokeComNurseEveText:
-	text "Good evening."
-
-	para "This is the #-"
-	line "MON COMMUNICATION"
-
-	para "CENTER--or the"
-	line "#COM CENTER."
-	done
-
-PokeComNurseNiteText:
-	text "Good to see you"
-	line "working so late."
-
-	para "This is the #-"
-	line "MON COMMUNICATION"
-
-	para "CENTER--or the"
-	line "#COM CENTER."
-	done
+;PokeComNurseMornText:
+;	text "Good morning!"
+;
+;	para "This is the #-"
+;	line "MON COMMUNICATION"
+;
+;	para "CENTER--or the"
+;	line "#COM CENTER."
+;	done
+;
+;PokeComNurseDayText:
+;	text "Hello!"
+;
+;	para "This is the #-"
+;	line "MON COMMUNICATION"
+;
+;	para "CENTER--or the"
+;	line "#COM CENTER."
+;	done
+;
+;PokeComNurseEveText:
+;	text "Good evening."
+;
+;	para "This is the #-"
+;	line "MON COMMUNICATION"
+;
+;	para "CENTER--or the"
+;	line "#COM CENTER."
+;	done
+;
+;PokeComNurseNiteText:
+;	text "Good to see you"
+;	line "working so late."
+;
+;	para "This is the #-"
+;	line "MON COMMUNICATION"
+;
+;	para "CENTER--or the"
+;	line "#COM CENTER."
+;	done
 
 NurseAskHealText:
 	text "We can heal your"
@@ -115,20 +115,20 @@ NursePokerusText:
 	line "CENTER."
 	done
 
-PokeComNursePokerusText:
-	text "Your #MON"
-	line "appear to be"
-
-	para "infected by tiny"
-	line "life forms."
-
-	para "Your #MON are"
-	line "healthy and seem"
-	cont "to be fine."
-
-	para "But we can't tell"
-	line "you anything more."
-	done
+;PokeComNursePokerusText:
+;	text "Your #MON"
+;	line "appear to be"
+;
+;	para "infected by tiny"
+;	line "life forms."
+;
+;	para "Your #MON are"
+;	line "healthy and seem"
+;	cont "to be fine."
+;
+;	para "But we can't tell"
+;	line "you anything more."
+;	done
 
 DifficultBookshelfText:
 	text "It's full of"
@@ -298,21 +298,31 @@ GymStatue_CityGymText:
 	text_ram wStringBuffer3
 	text_start
 	line "#MON GYM"
+	
+	para "LEADER: @"
+	text_ram wStringBuffer4
+	text_start
 	done
 
 GymStatue_WinningTrainers1Text:
-	text "LEADER: @"
-	text_ram wStringBuffer4
-	text_start
-	para "WINNING TRAINERS:"
+;	text "LEADER: @"
+;	text_ram wStringBuffer4
+;	text_start
+;	line "WINNING TRAINERS:"
+;	line "<RIVAL>, <PLAYER>"
+;	done
+	text "WINNING TRAINERS:"
 	line "<RIVAL>"
 	done
 
 GymStatue_WinningTrainers2Text:
-	text "LEADER: @"
-	text_ram wStringBuffer4
-	text_start
-	para "WINNING TRAINERS:"
+;	text "LEADER: @"
+;	text_ram wStringBuffer4
+;	text_start
+;	line "WINNING TRAINERS:"
+;	line "<RIVAL>, <PLAYER>"
+;	done
+	text "WINNING TRAINERS:"
 	line "<RIVAL>, <PLAYER>"
 	done
 
