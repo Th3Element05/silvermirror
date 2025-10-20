@@ -104,7 +104,7 @@ DEF KANTO_LANDMARK EQU const_value
 	const LANDMARK_ROUTE_23          ; 62
 	const LANDMARK_VICTORY_ROAD      ; 61
 	const LANDMARK_INDIGO_PLATEAU    ; 63
-; hof
+; hof \engine\pokegear\pokegear.asm > TownMap_GetKantoLandmarkLimits:
 	const LANDMARK_ROUTE_26          ; 64
 	const LANDMARK_ROUTE_27          ; 65
 	const LANDMARK_TOHJO_FALLS       ; 66
