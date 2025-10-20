@@ -110,7 +110,7 @@ Landmarks:
 	landmark  28,  60, Route23Name
 	landmark  28,  44, VictoryRoadName
 	landmark  28,  36, IndigoPlateauName
-; hof
+; hof \engine\pokegear\pokegear.asm > TownMap_GetKantoLandmarkLimits:
 	landmark  28,  88, Route26Name
 	landmark  24, 100, Route27Name
 	landmark  12, 100, TohjoFallsName
