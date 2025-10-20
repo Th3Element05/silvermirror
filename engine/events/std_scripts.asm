@@ -52,6 +52,7 @@ StdScripts::
 	add_stdscript RematchGiftFScript
 	add_stdscript GymStatue1Script
 	add_stdscript GymStatue2Script
+	add_stdscript GymStatue3Script
 	add_stdscript ReceiveItemScript
 	add_stdscript ReceiveTogepiEggScript
 	add_stdscript PCScript
@@ -75,52 +76,52 @@ PokecenterNurseScript:
 	sjump .ok
 
 .morn
-	checkevent EVENT_WELCOMED_TO_POKECOM_CENTER
-	iftrue .morn_comcenter
+;	checkevent EVENT_WELCOMED_TO_POKECOM_CENTER
+;	iftrue .morn_comcenter
 	farwritetext NurseMornText
 	promptbutton
 	sjump .ok
-.morn_comcenter
-	farwritetext PokeComNurseMornText
-	promptbutton
-	sjump .ok
+;.morn_comcenter
+;	farwritetext PokeComNurseMornText
+;	promptbutton
+;	sjump .ok
 
 .day
-	checkevent EVENT_WELCOMED_TO_POKECOM_CENTER
-	iftrue .day_comcenter
+;	checkevent EVENT_WELCOMED_TO_POKECOM_CENTER
+;	iftrue .day_comcenter
 	farwritetext NurseDayText
 	promptbutton
 	sjump .ok
-.day_comcenter
-	farwritetext PokeComNurseDayText
-	promptbutton
-	sjump .ok
+;.day_comcenter
+;	farwritetext PokeComNurseDayText
+;	promptbutton
+;	sjump .ok
 
 .eve
-	checkevent EVENT_WELCOMED_TO_POKECOM_CENTER
-	iftrue .eve_comcenter
+;	checkevent EVENT_WELCOMED_TO_POKECOM_CENTER
+;	iftrue .eve_comcenter
 	farwritetext NurseEveText
 	promptbutton
 	sjump .ok
-.eve_comcenter
-	farwritetext PokeComNurseEveText
-	promptbutton
-	sjump .ok
+;.eve_comcenter
+;	farwritetext PokeComNurseEveText
+;	promptbutton
+;	sjump .ok
 
 .nite
-	checkevent EVENT_WELCOMED_TO_POKECOM_CENTER
-	iftrue .nite_comcenter
+;	checkevent EVENT_WELCOMED_TO_POKECOM_CENTER
+;	iftrue .nite_comcenter
 	farwritetext NurseNiteText
 	promptbutton
 	sjump .ok
-.nite_comcenter
-	farwritetext PokeComNurseNiteText
-	promptbutton
-	sjump .ok
+;.nite_comcenter
+;	farwritetext PokeComNurseNiteText
+;	promptbutton
+;	sjump .ok
 
 .ok
 	; only do this once
-	clearevent EVENT_WELCOMED_TO_POKECOM_CENTER
+;	clearevent EVENT_WELCOMED_TO_POKECOM_CENTER
 
 	farwritetext NurseAskHealText
 	yesorno
@@ -165,17 +166,17 @@ PokecenterNurseScript:
 
 .pokerus
 	; already cleared earlier in the script
-	checkevent EVENT_WELCOMED_TO_POKECOM_CENTER
-	iftrue .pokerus_comcenter
+;	checkevent EVENT_WELCOMED_TO_POKECOM_CENTER
+;	iftrue .pokerus_comcenter
 	farwritetext NursePokerusText
 	waitbutton
 	closetext
 	sjump .pokerus_done
-
-.pokerus_comcenter
-	farwritetext PokeComNursePokerusText
-	waitbutton
-	closetext
+;
+;.pokerus_comcenter
+;	farwritetext PokeComNursePokerusText
+;	waitbutton
+;	closetext
 
 .pokerus_done
 	setflag ENGINE_CAUGHT_POKERUS
@@ -2339,6 +2340,14 @@ GymStatue2Script:
 	farwritetext GymStatue_CityGymText
 	promptbutton
 	farwritetext GymStatue_WinningTrainers2Text
+	waitbutton
+	closetext
+	end
+
+GymStatue3Script:
+	getcurlandmarkname STRING_BUFFER_3
+	opentext
+	farwritetext GymStatue_CityGymText
 	waitbutton
 	closetext
 	end
