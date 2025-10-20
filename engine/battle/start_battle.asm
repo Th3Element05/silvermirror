@@ -82,6 +82,8 @@ PlayBattleMusic:
 	ld de, MUSIC_CHAMPION_BATTLE
 	cp CHAMPION
 	jr z, .done
+	cp POKEMON_PROF
+	jr z, .done
 	cp RED
 	jr z, .done
 
@@ -101,7 +103,7 @@ PlayBattleMusic:
 	farcall IsKantoGymLeader
 	jr c, .done
 
-	; IsGymLeader also counts CHAMPION, RED, and the Kanto gym leaders
+	; IsGymLeader also counts CHAMPION, POKEMON_PROF, RED, and the Kanto gym leaders
 	; but they have been taken care of before this
 	ld de, MUSIC_JOHTO_GYM_LEADER_BATTLE
 	farcall IsGymLeader
