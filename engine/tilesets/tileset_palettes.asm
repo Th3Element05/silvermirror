@@ -208,6 +208,7 @@ MapSpecificOBPalettes:
 	_use_palette_routine_for_map OLIVINE_LIGHTHOUSE_6F, .YellowOverRockOBPalette
 	_use_palette_routine_for_map GOLDENROD_DEPT_STORE_B1F, .GrayOverRockOBPalette
 	_use_palette_routine_for_map DANCE_THEATER, .GrayOverRockOBPalette
+	_use_palette_routine_for_map CHERRYGROVE_CITY, .GrayOverTreeOBPalette
 ;OG
 ;	_use_palette_routine_for_map VIRIDIAN_NICKNAME_SPEECH_HOUSE, .PurpleOverRockOBPalette ;PURPLE
 ;	_use_palette_routine_for_map PEWTER_CITY, .WhiteOverRockOBPalette                     ;SILVER
@@ -242,6 +243,13 @@ MapSpecificOBPalettes:
 	maskbits NUM_DAYTIMES
 	ld bc, 8 palettes
 	ld hl, GrayOverRock
+	jr .finish
+
+.GrayOverTreeOBPalette
+	ld a, [wTimeOfDayPal]
+	maskbits NUM_DAYTIMES
+	ld bc, 8 palettes
+	ld hl, GrayOverTree
 	jr .finish
 
 ;.BlackOverRockOBPalette:
