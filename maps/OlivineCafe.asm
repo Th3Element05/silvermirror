@@ -41,13 +41,13 @@ OlivineCafeStrengthSailorScript:
 ;	text "MACHOKE was" ;silvermirror -"MACHOKE PUSH was"
 ;	line "added to the PPS!"
 ;	done
-;
-;OlivineCafeFishingGuruScript:
-;	jumptextfaceplayer OlivineCafeFishingGuruText
-;
-;OlivineCafeSailorScript:
-;	jumptextfaceplayer OlivineCafeSailorText
-;
+
+OlivineCafeFishingGuruScript:
+	jumptextfaceplayer OlivineCafeFishingGuruText
+
+OlivineCafeSailorScript:
+	jumptextfaceplayer OlivineCafeSailorText
+
 ;OlivineCafeStrengthSailorText:
 ;	text "Hah! Your #MON"
 ;	line "sure look like"
