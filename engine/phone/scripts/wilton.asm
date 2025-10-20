@@ -52,10 +52,10 @@ WiltonHasItem:
 	clearevent EVENT_WILTON_HAS_GREAT_BALL
 	clearevent EVENT_WILTON_HAS_POKE_BALL
 	random 5
-	ifequal 0, .UltraBall
-	random 3
+	ifequal 0, .PokeBall
+	random 4
 	ifequal 0, .GreatBall
-	sjump .PokeBall
+	sjump .UltraBall
 
 .UltraBall:
 	setevent EVENT_WILTON_HAS_ULTRA_BALL
