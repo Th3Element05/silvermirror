@@ -3889,7 +3889,7 @@ PokefanFGroup:
 	db 19, VULPIX,      ORAN_BERRY
 	db -1 ; end
 
-	; POKEFANF, JAIME
+	; POKEFANF, JAMIE
 	db "JAIME@", TRAINERTYPE_NORMAL
 	db 20, MISSINGNO
 	db -1 ; end
@@ -3973,16 +3973,6 @@ TwinsGroup:
 	db -1 ; end
 
 OfficerGroup:
-	; OFFICER, REX
-	db "REX@", TRAINERTYPE_NORMAL
-	db 20, MISSINGNO
-	db -1 ; end
-
-	; OFFICER, CARTER
-	db "CARTER@", TRAINERTYPE_NORMAL
-	db 20, MISSINGNO
-	db -1 ; end
-
 	; OFFICER, KEITH
 	db "KEITH@", TRAINERTYPE_NORMAL
 	db 20, MISSINGNO
@@ -3990,6 +3980,16 @@ OfficerGroup:
 
 	; OFFICER, DIRK
 	db "DIRK@", TRAINERTYPE_NORMAL
+	db 20, MISSINGNO
+	db -1 ; end
+
+	; OFFICER, REX
+	db "REX@", TRAINERTYPE_NORMAL
+	db 20, MISSINGNO
+	db -1 ; end
+
+	; OFFICER, CARTER
+	db "CARTER@", TRAINERTYPE_NORMAL
 	db 20, MISSINGNO
 	db -1 ; end
 

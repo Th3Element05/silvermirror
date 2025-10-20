@@ -10,7 +10,7 @@ TrainerClassDVs:
 	dn  9,  8,  8,  8 ; JASMINE
 	dn  9,  8,  8,  8 ; PRYCE
 	dn  7, 12, 13, 13 ; CLAIR
-	dn 10, 10, 10, 10 ; POKEMON_PROF
+	dn 15, 13, 13, 14 ; POKEMON_PROF ;dn 10, 10, 10, 10 ; POKEMON_PROF
 	dn  8,  8,  8,  8 ; RIVAL1
 	dn 10, 10, 10, 10 ; RIVAL2
 	dn  9,  8,  8,  8 ; BROCK
