@@ -29,32 +29,39 @@ DayCareEggCheckCallback:
 DayCareManScript_Inside:
 	faceplayer
 	opentext
-;	checkevent EVENT_GOT_ODD_EGG
-;	iftrue .AlreadyHaveOddEgg
-;	writetext DayCareManText_GiveOddEgg
-;	promptbutton
-;	closetext
-;	readvar VAR_PARTYCOUNT
-;	ifequal PARTY_LENGTH, .PartyFull
+	checkevent EVENT_GOT_ODD_EGG
+	iftrue .AlreadyGotOddEgg
+	checkflag ENGINE_CHALLENGE_MODE_ACTIVE ;only give egg in Gen2 mode
+	iffalse .AlreadyGotOddEgg              ;only give egg in Gen2 mode
+	writetext DayCareManText_GiveOddEgg
+	promptbutton
+	closetext
+	readvar VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, .PartyFull
 ;	special GiveOddEgg
-;	opentext
-;	writetext DayCareText_GotOddEgg
-;	playsound SFX_KEY_ITEM
-;	waitsfx
-;	writetext DayCareText_DescribeOddEgg
-;	waitbutton
-;	closetext
-;	setevent EVENT_GOT_ODD_EGG
-;	end
-;
-;.PartyFull:
-;	opentext
-;	writetext DayCareText_PartyFull
-;	waitbutton
-;	closetext
-;	end
-;
-;.AlreadyHaveOddEgg:
+	giveegg TOGEPI, EGG_LEVEL
+	getstring STRING_BUFFER_4, .eggname
+	opentext
+	writetext DayCareText_GotOddEgg
+	playsound SFX_GET_EGG
+	waitsfx
+	writetext DayCareText_DescribeOddEgg
+	waitbutton
+	closetext
+	setevent EVENT_GOT_ODD_EGG
+	end
+
+.eggname
+	db "EGG@"
+
+.PartyFull:
+	opentext
+	writetext DayCareText_PartyFull
+	waitbutton
+	closetext
+	end
+
+.AlreadyGotOddEgg:
 	special DayCareMan
 	waitbutton
 	closetext
@@ -137,7 +144,7 @@ DayCareText_ComeAgain: ; unreferenced
 
 DayCareText_GotOddEgg:
 	text "<PLAYER> received"
-	line "ODD EGG!"
+	line "the EGG!"
 	done
 
 DayCareText_DescribeOddEgg:
