@@ -85,12 +85,13 @@ OlivineGymGuideScript:
 ;	end
 
 OlivineGymStatue:
-	checkflag ENGINE_MINERALBADGE
-	iftrue .Beaten
-	jumpstd GymStatue1Script
-.Beaten:
 	gettrainername STRING_BUFFER_4, JASMINE, JASMINE1
-	jumpstd GymStatue2Script
+	jumpstd GymStatue3Script
+;	checkflag ENGINE_MINERALBADGE
+;	iftrue .Beaten
+;	jumpstd GymStatue1Script
+;.Beaten:
+;	jumpstd GymStatue2Script
 
 Jasmine_SteelTypeIntro:
 ;	text "…Thank you for"
@@ -227,5 +228,5 @@ OlivineGym_MapEvents:
 	bg_event  7, 13, BGEVENT_READ, OlivineGymStatue
 
 	def_object_events
-	object_event  5,  1, SPRITE_JASMINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineGymJasmineScript, -1 ; EVENT_OLIVINE_GYM_JASMINE
+	object_event  5,  1, SPRITE_JASMINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineGymJasmineScript, -1
 	object_event  6, 13, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineGymGuideScript, -1

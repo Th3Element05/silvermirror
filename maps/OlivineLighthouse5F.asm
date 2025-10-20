@@ -41,8 +41,8 @@ OlivineLighthouse5F_MapScripts:
 ;OlivineLighthouse5FTMSwagger:
 ;	itemball TM_SWAGGER
 
-OlivineLighthouse5FHiddenHyperPotion:
-	hiddenitem HYPER_POTION, EVENT_OLIVINE_LIGHTHOUSE_5F_HIDDEN_HYPER_POTION
+;OlivineLighthouse5FHiddenHyperPotion:
+;	hiddenitem HYPER_POTION, EVENT_OLIVINE_LIGHTHOUSE_5F_HIDDEN_HYPER_POTION
 
 ;SailorErnestSeenText:
 ;	text "I wanted to battle"
@@ -103,7 +103,7 @@ OlivineLighthouse5F_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  3, 13, BGEVENT_ITEM, OlivineLighthouse5FHiddenHyperPotion
+;	bg_event  3, 13, BGEVENT_ITEM, OlivineLighthouse5FHiddenHyperPotion
 
 	def_object_events
 ;	object_event  8, 11, SPRITE_SAILOR, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSailorErnest, -1

@@ -3,13 +3,10 @@
 
 OlivineCity_MapScripts:
 	def_scene_scripts
-	scene_script VermilionCityNoop1Scene, SCENE_OLIVINECITY_CHECK_ENTER_PORT
+	scene_script OlivineCityNoop1Scene, SCENE_OLIVINECITY_CHECK_ENTER_PORT
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, OlivineCityFlypointCallback
-
-OlivineCityNoop1Scene:
-	end
 
 OlivineCityFlypointCallback:
 	setflag ENGINE_FLYPOINT_OLIVINE
@@ -18,6 +15,9 @@ OlivineCityFlypointCallback:
 	applymovement PLAYER, OlivineCityPlayerExitsPortMovement
 .NotExitingPort
 	endcallback
+
+OlivineCityNoop1Scene:
+	end
 
 OlivineCityCheckEnterPortScript:
 	setmapscene OLIVINE_PORT, SCENE_OLIVINEPORT_NO_SHIP
