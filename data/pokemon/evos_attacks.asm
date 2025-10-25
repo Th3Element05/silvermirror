@@ -2676,8 +2676,8 @@ YanmaEvosAttacks:
 WooperEvosAttacks:
 	db EVOLVE_LEVEL, 20, QUAGSIRE
 	db 0 ; no more evolutions
-	db 1, WATER_GUN
 	db 1, TAIL_WHIP
+	db 1, WATER_GUN
 	db 11, SLAM
 	db 21, AMNESIA
 	db 31, EARTHQUAKE
@@ -2688,8 +2688,8 @@ WooperEvosAttacks:
 
 QuagsireEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, WATER_GUN
 	db 1, TAIL_WHIP
+	db 1, WATER_GUN
 	db 11, SLAM
 	db 23, AMNESIA
 	db 35, EARTHQUAKE
