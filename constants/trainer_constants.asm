@@ -53,7 +53,9 @@ DEF KRIS EQU __trainer_class__
 	const CLAIR1
 
 	trainerclass POKEMON_PROF ; 09
-	const OAK_T
+	const OAK_T_VENUSAUR
+	const OAK_T_CHARIZARD
+	const OAK_T_BLASTOISE
 
 	trainerclass RIVAL1 ; 0a
 ; OAKS_LAB
@@ -218,9 +220,7 @@ DEF KRIS EQU __trainer_class__
 	const DOMINIC
 	const EZEKIEL
 ; johto
-	const THOMAS
-	const DUDLEY
-	const GAEL
+;	none
 
 	trainerclass YOUNGSTER ; 20
 ; kanto
@@ -240,6 +240,7 @@ DEF KRIS EQU __trainer_class__
 	const DANNY
 	const REGIS
 	const JOEY1
+	const THOMAS
 ; rematch
 	const BILLY2
 	const BILLY3
@@ -257,11 +258,12 @@ DEF KRIS EQU __trainer_class__
 	const JOEY5
 
 	trainerclass SCHOOLBOY ; 21
+; kanto
+;	none
 ; johto
 	const TORIN1
 	const JACK1
 	const CHAD1
-	const KIPP
 ; rematch
 	const TORIN2
 	const TORIN3
@@ -295,6 +297,8 @@ DEF KRIS EQU __trainer_class__
 	const JOE
 	const NATE
 	const JOHN
+	const RICK
+	const LUCAS
 ; rematch
 	const JAMIE2
 	const JAMIE3
@@ -358,6 +362,9 @@ DEF KRIS EQU __trainer_class__
 	const JAKE
 	const BRIAN
 	const KEVIN
+	const COLT
+	const CALLUM
+	const ZANE
 ; reamtch
 	const GAVEN2
 	const GAVEN3
@@ -372,6 +379,10 @@ DEF KRIS EQU __trainer_class__
 	const SALMA
 	const LOLA
 	const REENA1
+	const JENN
+	const CARA
+	const QUINN
+	const LAYLA
 ; rematch
 	const BETH2
 	const BETH3
@@ -389,6 +400,7 @@ DEF KRIS EQU __trainer_class__
 	const CAROL
 	const EMMA
 	const CYBIL
+	const SAMANTHA
 
 	trainerclass POKEMANIAC ; 28
 ; kanto
@@ -405,6 +417,8 @@ DEF KRIS EQU __trainer_class__
 	const ZACH
 	const MILLER
 	const ROLAND
+	const MAX
+	const JULIUS
 ; rematch
 	const BRENT2
 	const BRENT3
@@ -418,7 +432,6 @@ DEF KRIS EQU __trainer_class__
 	const WESLEY
 	const MILTON
 ; johto
-	const ALLEN
 	const BLAKE
 	const ALFRED1
 ; reamtch
@@ -450,6 +463,10 @@ DEF KRIS EQU __trainer_class__
 	const DARIN
 	const ARNIE1
 	const WADE1
+	const DYLAN
+	const FINLEY
+	const JON
+	const ABEL
 ; rematch
 	const ROB2
 	const ROB3
@@ -481,6 +498,10 @@ DEF KRIS EQU __trainer_class__
 	const BARNEY
 	const WILTON1
 	const RALPH1
+	const EMIL
+	const MARCO
+	const ARCHIE
+	const ROYCE
 ; rematch
 	const TULLY2
 	const TULLY3
@@ -516,6 +537,9 @@ DEF KRIS EQU __trainer_class__
 	const DARYL
 	const TONY
 	const CODY
+	const WES
+	const CARLOS
+	const MACK
 
 	trainerclass SWIMMERF ; 2e
 ; kanto
@@ -532,6 +556,9 @@ DEF KRIS EQU __trainer_class__
 	const NIKKI
 	const DIANA
 	const BRIANA
+	const ELOISE
+	const HANNAH
+	const KYRIE
 
 	trainerclass SAILOR ; 2f
 ; kanto
@@ -545,7 +572,6 @@ DEF KRIS EQU __trainer_class__
 	const KENNETH
 ; johto
 	const STANLY
-	const RICK
 	const HUEY1
 ; rematch
 	const HUEY2
@@ -596,9 +622,11 @@ DEF KRIS EQU __trainer_class__
 	const WALTER
 	const KENNY1
 ; johto
+	const ANTHONY1
 	const QUENTIN
 	const PARRY1
-	const ANTHONY1
+	const PATRICK
+	const ALEC
 ; rematch
 	const KENNY2
 	const KENNY3
@@ -646,7 +674,6 @@ DEF KRIS EQU __trainer_class__
 ; johto
 	const BARRY
 	const JERRY
-	const SPENCER
 
 	trainerclass FIREBREATHER ; 35
 ; kanto
@@ -654,9 +681,9 @@ DEF KRIS EQU __trainer_class__
 	const BILL ; burglar
 	const EVAN ; burglar
 ; johto
+	const WALT1
 	const LEO
 	const ALEX
-	const WALT1
 ; rematch
 	const WALT2
 	const WALT3
@@ -681,9 +708,9 @@ DEF KRIS EQU __trainer_class__
 	const DARIO
 	const GILBERT
 ; johto
+	const IRWIN1 ; no rematch
 	const JARED
 	const RODNEY
-	const IRWIN1 ; no rematch
 
 	trainerclass BLACKBELT_T ; 37
 ; kanto
@@ -697,9 +724,10 @@ DEF KRIS EQU __trainer_class__
 	const CHO
 	const YOSHI
 ; johto
-	const LEE
-	const KIYO
 	const KENJI1 ; no rematch
+	const LEE
+	const LAO
+	const KIYO
 
 	trainerclass PSYCHIC_T ; 38
 ; kanto
@@ -711,6 +739,8 @@ DEF KRIS EQU __trainer_class__
 	const NORMAN
 	const MARK
 	const PHIL
+	const IDRIS
+	const KENAN
 
 	trainerclass PICNICKER ; 39
 ; kanto (JR TRAINER F)
@@ -737,6 +767,8 @@ DEF KRIS EQU __trainer_class__
 ; johto
 	const DAWN
 	const NICOLE
+	const MEGAN
+	const ROBIN
 	const LIZ1
 ; rematch
 	const GINA2
@@ -763,6 +795,10 @@ DEF KRIS EQU __trainer_class__
 	const GRANT
 	const CLARK
 	const TODD1
+	const SPENCER
+	const DILAN
+	const TERRY
+	const NELSON
 ; rematch
 	const TANNER2
 	const TANNER3
@@ -776,16 +812,14 @@ DEF KRIS EQU __trainer_class__
 	const KOJI
 	const KHAI
 ; johto
+	const GAKU
+	const PING
 	const CHOW
 	const NICO
-	const JIN
 	const NOE
-	const PING
-	const LIAN
+	const JIN
 	const KYRO
 	const LI
-	const GAKU
-	const MASA
 
 	trainerclass MEDIUM ; 3c
 ; kanto (CHANNELER)
@@ -813,8 +847,8 @@ DEF KRIS EQU __trainer_class__
 	trainerclass BOARDER ; 3d
 ; johto
 	const RONALD
-	const BRAD
 	const SHAUN
+	const BRAD
 
 	trainerclass POKEFANM ; 3e
 ; kanto (GAMBLER)
@@ -823,16 +857,15 @@ DEF KRIS EQU __trainer_class__
 	const ROBERT
 	const JOSHUA
 ; johto
-	const COLIN
-	const ALLAN
 	const DEREK1 ; no rematch
+	const COLIN
+	const BRENDAN
 
 	trainerclass POKEFANF ; 3f
 ; kanto (GAMBLER)
 	const BEVERLY1 ; no rematch
 	const GEORGIA
 ; johto
-	const JAIME
 	const ELEANOR
 	const RUTH
 
@@ -848,10 +881,10 @@ DEF KRIS EQU __trainer_class__
 ; kanto (BEAUTYs r13)
 	const KAYANDTIA1
 ; johto
-	const AMYANDMAY
 	const ANNANDANNE
-	const JOANDZOE
+	const AMYANDMAY
 	const MEGANDPEG
+	const JOANDZOE
 ; rematch
 	const KAYANDTIA2
 	const KAYANDTIA3
