@@ -89,11 +89,11 @@ CherrygroveRockSmashGuyCallAnytimeText:
 	done
 
 CherrygroveGeodudeRockSmashMovement: ;test?
-	step_shake ;needs time specified?
+	step_shake 10;needs time specified?
 	step_end
 
 CherrygroveGeodudeSmashesRockMovement:
-	rock_smash
+	rock_smash 10
 	step_end
 
 CherrygroveCityGeodudeScript:
@@ -160,9 +160,6 @@ MysticWaterGuy:
 
 CherrygroveCitySign:
 	jumptext CherrygroveCitySignText
-
-GuideGentsHouseSign:
-	jumptext GuideGentsHouseSignText
 
 CherrygroveCityPokecenterSign:
 	jumpstd PokecenterSignScript
