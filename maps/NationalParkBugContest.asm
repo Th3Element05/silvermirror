@@ -106,14 +106,14 @@ NationalParkBugContestBattleNoticeSign:
 NationalParkBugContestTrainerTipsSign:
 	jumptext NationalParkBugContestTrainerTipsText
 
-NationalParkBugContestParlyzHeal:
-	itemball PARLYZ_HEAL
+;NationalParkBugContestParlyzHeal:
+;	itemball PARLYZ_HEAL
 
 ;NationalParkBugContestTMDig:
 ;	itemball TM_DIG
 
-NationalParkBugContestHiddenFullHeal:
-	hiddenitem FULL_HEAL, EVENT_NATIONAL_PARK_HIDDEN_FULL_HEAL
+;NationalParkBugContestHiddenFullHeal:
+;	hiddenitem FULL_HEAL, EVENT_NATIONAL_PARK_HIDDEN_FULL_HEAL
 
 BugCatchingContestant1AText:
 	text "DON: I'm going to"
@@ -232,7 +232,7 @@ NationalParkBugContest_MapEvents:
 	def_bg_events
 	bg_event 14, 44, BGEVENT_READ, NationalParkBugContestRelaxationSquareSign
 	bg_event 27, 31, BGEVENT_READ, NationalParkBugContestBattleNoticeSign
-	bg_event  6, 47, BGEVENT_ITEM, NationalParkBugContestHiddenFullHeal
+;	bg_event  6, 47, BGEVENT_ITEM, NationalParkBugContestHiddenFullHeal
 	bg_event 12,  4, BGEVENT_READ, NationalParkBugContestTrainerTipsSign
 
 	def_object_events

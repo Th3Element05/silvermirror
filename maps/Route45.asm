@@ -352,20 +352,20 @@ Route45NoApricorn:
 	closetext
 	end
 
-Route45Nugget:
-	itemball NUGGET
+;Route45Nugget:
+;	itemball NUGGET
 
-Route45Revive:
-	itemball REVIVE
+;Route45Revive:
+;	itemball REVIVE
 
-Route45Elixer:
-	itemball ELIXER
+;Route45Elixer:
+;	itemball ELIXER
 
-Route45MaxPotion:
-	itemball MAX_POTION
+;Route45MaxPotion:
+;	itemball MAX_POTION
 
-Route45HiddenPpUp:
-	hiddenitem PP_UP, EVENT_ROUTE_45_HIDDEN_PP_UP
+;Route45HiddenPpUp:
+;	hiddenitem PP_UP, EVENT_ROUTE_45_HIDDEN_PP_UP
 
 ;HikerErikSeenText:
 ;	text "Be prepared for"
