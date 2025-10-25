@@ -125,30 +125,30 @@ DragonsDenB1F_ClairScene:
 ;	closetext
 ;	end
 
-DragonsDenB1FDragonFangScript:
-; This whole script is written out rather than as an itemball
-; because it's left over from the GS event.
-	giveitem DRAGON_FANG
-	iffalse .BagFull
-	disappear DRAGONSDENB1F_POKE_BALL1
-	opentext
-	getitemname STRING_BUFFER_3, DRAGON_FANG
-	writetext Text_FoundDragonFang
-	playsound SFX_ITEM
-	waitsfx
-	itemnotify
-	closetext
-	end
-
-.BagFull:
-	opentext
-	getitemname STRING_BUFFER_3, DRAGON_FANG
-	writetext Text_FoundDragonFang
-	promptbutton
-	writetext Text_NoRoomForDragonFang
-	waitbutton
-	closetext
-	end
+;DragonsDenB1FDragonFangScript:
+;; This whole script is written out rather than as an itemball
+;; because it's left over from the GS event.
+;	giveitem DRAGON_FANG
+;	iffalse .BagFull
+;	disappear DRAGONSDENB1F_POKE_BALL1
+;	opentext
+;	getitemname STRING_BUFFER_3, DRAGON_FANG
+;	writetext Text_FoundDragonFang
+;	playsound SFX_ITEM
+;	waitsfx
+;	itemnotify
+;	closetext
+;	end
+;
+;.BagFull:
+;	opentext
+;	getitemname STRING_BUFFER_3, DRAGON_FANG
+;	writetext Text_FoundDragonFang
+;	promptbutton
+;	writetext Text_NoRoomForDragonFang
+;	waitbutton
+;	closetext
+;	end
 
 ;DragonsDenB1FRivalScript:
 ;	playmusic MUSIC_RIVAL_ENCOUNTER
@@ -170,9 +170,9 @@ DragonsDenB1FDragonFangScript:
 ;	special RestartMapMusic
 ;	end
 
-;DragonShrineSignpost:
-;	jumptext DragonShrineSignpostText
-;
+DragonShrineSignpost:
+	jumptext DragonShrineSignpostText
+
 ;DragonsDenB1FCalcium:
 ;	itemball CALCIUM
 ;
