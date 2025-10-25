@@ -614,8 +614,8 @@ KantoGrassWildMonsChallenge:
 	db 22, DODUO      ; 10% chance
 	db 23, SENTRET    ; 10% chance
 	db 26, FURRET     ; 10% chance 10
-	db 20, GRIMER     ;  5% chance 10
-	db 20, GRIMER     ;  5% chance
+	db 20, SLUGMA     ;  5% chance 10
+	db 20, SLUGMA     ;  5% chance
 	db 25, FEAROW     ;  4% chance 5
 	db 25, FEAROW     ;  1% chance
 	; nite
@@ -651,7 +651,7 @@ KantoGrassWildMonsChallenge:
 	db 24, DODUO      ; 10% chance
 	db 22, SPEAROW    ; 10% chance 10
 	db 20, NATU       ; 10% chance 10
-	db 25, FURRET     ;  5% chance 5
+	db 25, SLUGMA     ;  5% chance 5
 	db 21, PONYTA     ;  5% chance
 	db 26, DODRIO     ;  4% chance 5
 	db 26, DODRIO     ;  1% chance
@@ -688,8 +688,8 @@ KantoGrassWildMonsChallenge:
 	db 22, DODUO      ; 10% chance
 	db 23, SENTRET    ; 10% chance
 	db 26, FURRET     ; 10% chance 10
-	db 20, GRIMER     ;  5% chance 10
-	db 20, GRIMER     ;  5% chance
+	db 20, SLUGMA     ;  5% chance 10
+	db 20, SLUGMA     ;  5% chance
 	db 25, FEAROW     ;  4% chance 5
 	db 25, FEAROW     ;  1% chance
 	; nite
