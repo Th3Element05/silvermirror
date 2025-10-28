@@ -1023,6 +1023,11 @@ DebugGotCharmander:
 	closetext
 	end
 
+
+DebugGotCharmanderText:
+	text "Got CHARMANDER?"
+	done
+
 DebugGotSquirtle:
 	opentext
 	writetext DebugGotSquirtleText
@@ -1035,6 +1040,10 @@ DebugGotSquirtle:
 	waitbutton
 	closetext
 	end
+
+DebugGotSquirtleText:
+	text "Got SQUIRTLE?"
+	done
 
 DebugGotBulbasaur:
 	opentext
@@ -1049,17 +1058,30 @@ DebugGotBulbasaur:
 	closetext
 	end
 
+DebugGotBulbasaurText:
+	text "Got BULBASAUR?"
+	done
+
 DebugBeatEliteFour:
 	opentext
 	writetext DebugBeatEliteFourText
 	yesorno
 	iffalse .End
+	setevent EVENT_BEAT_E4_LORELEI
+	setevent EVENT_BEAT_E4_BRUNO
+	setevent EVENT_BEAT_E4_AGATHA
+	setevent EVENT_BEAT_E4_LANCE
+	setevent EVENT_BEAT_E4_CHAMPION
 ;	setflag ENGINE_CREDITS_SKIP
 ;	setevent EVENT_BEAT_ELITE_FOUR
 	warp HALL_OF_FAME, 4, 9
 .End
 	closetext
 	end
+
+DebugBeatEliteFourText:
+	text "Beat ELITE FOUR?"
+	done
 
 ; back bookshelves
 DebugFullPokegear:
@@ -1123,6 +1145,11 @@ DebugFullPokegear:
 	closetext
 	end
 
+DebugFullPokegearText:
+	text "Full #GEAR?"
+	line "Fly Anywhere?"
+	done
+
 DebugMasterBalls:
 	opentext
 	writetext DebugMasterBallsText
@@ -1133,6 +1160,11 @@ DebugMasterBalls:
 .End
 	closetext
 	end
+
+DebugMasterBallsText:
+	text "MASTER BALLs and"
+	line "MAX REPELs?"
+	done
 
 DebugAllTMHMs:
 	opentext
@@ -1238,170 +1270,6 @@ DebugAllTMHMs:
 	closetext
 	end
 
-DebugCredits:
-	opentext
-	writetext DebugRollCreditsText
-	yesorno
-	iffalse .End
-	credits
-.End
-	closetext
-	end
-
-;Debug:
-;Debug:
-
-DebugLockedGyms:
-	opentext
-	writetext DebugViridianGymText
-	yesorno
-	iffalse .End
-	setevent EVENT_CINNABAR_GYM_LEADER_RETURNED
-	setevent EVENT_VIRIDIAN_GYM_LEADER_RETURNED
-.End
-	closetext
-	end
-
-DebugBeatJohto:
-	opentext
-	writetext DebugBeatJohtoText
-	yesorno
-	iffalse .End
-	setflag ENGINE_ZEPHYRBADGE
-	setflag ENGINE_HIVEBADGE
-	setflag ENGINE_PLAINBADGE
-	setflag ENGINE_FOGBADGE
-	setflag ENGINE_STORMBADGE
-	setflag ENGINE_MINERALBADGE
-	setflag ENGINE_GLACIERBADGE
-	setflag ENGINE_RISINGBADGE
-	setevent EVENT_BEAT_FALKNER
-	setevent EVENT_BEAT_BUGSY
-	setevent EVENT_BEAT_WHITNEY
-	setevent EVENT_BEAT_MORTY
-	setevent EVENT_BEAT_CHUCK
-	setevent EVENT_BEAT_JASMINE
-	setevent EVENT_BEAT_PRYCE
-	setevent EVENT_BEAT_CLAIR
-.End
-	closetext
-	end
-
-; front bookshelves
-DebugBeatBrock:
-	opentext
-	writetext DebugBeatBrockText
-	yesorno
-	iffalse .End
-	setflag ENGINE_BOULDERBADGE
-	setevent EVENT_BEAT_BROCK
-.End
-	closetext
-	end
-
-DebugBeatMisty:
-	opentext
-	writetext DebugBeatMistyText
-	yesorno
-	iffalse .End
-	setflag ENGINE_CASCADEBADGE
-	setevent EVENT_BEAT_MISTY
-.End
-	closetext
-	end
-
-DebugBeatSurge:
-	opentext
-	writetext DebugBeatSurgeText
-	yesorno
-	iffalse .End
-	setflag ENGINE_THUNDERBADGE
-	setevent EVENT_BEAT_LTSURGE
-.End
-	closetext
-	end
-
-DebugBeatErika:
-	opentext
-	writetext DebugBeatErikaText
-	yesorno
-	iffalse .End
-	setflag ENGINE_RAINBOWBADGE
-	setevent EVENT_BEAT_ERIKA
-.End
-	closetext
-	end
-
-DebugBeatKoga:
-	opentext
-	writetext DebugBeatKogaText
-	yesorno
-	iffalse .End
-	setflag ENGINE_MARSHBADGE
-	setevent EVENT_BEAT_KOGA
-.End
-	closetext
-	end
-
-DebugBeatSabrina:
-	opentext
-	writetext DebugBeatSabrinaText
-	yesorno
-	iffalse .End
-	setflag ENGINE_SOULBADGE
-	setevent EVENT_BEAT_SABRINA
-.End
-	closetext
-	end
-
-DebugBeatBlaine:
-	opentext
-	writetext DebugBeatBlaineText
-	yesorno
-	iffalse .End
-	setflag ENGINE_VOLCANOBADGE
-	setevent EVENT_BEAT_BLAINE
-.End
-	closetext
-	end
-
-DebugBeatGiovanni:
-	opentext
-	writetext DebugBeatGiovanniText
-	yesorno
-	iffalse .End
-	setflag ENGINE_EARTHBADGE
-	setevent EVENT_BEAT_GIOVANNI
-.End
-	closetext
-	end
-
-DebugGotCharmanderText:
-	text "Got CHARMANDER?"
-	done
-
-DebugGotSquirtleText:
-	text "Got SQUIRTLE?"
-	done
-
-DebugGotBulbasaurText:
-	text "Got BULBASAUR?"
-	done
-
-DebugBeatEliteFourText:
-	text "Beat ELITE FOUR?"
-	done
-
-DebugFullPokegearText:
-	text "Full #GEAR?"
-	line "Fly Anywhere?"
-	done
-
-DebugMasterBallsText:
-	text "MASTER BALLs and"
-	line "MAX REPELs?"
-	done
-
 DebugAllTMHMsText:
 	text "All TMs and"
 	line "all HMs?"
@@ -1412,18 +1280,108 @@ DebugAllHMsText:
 	line "(not TMs)"
 	done
 
+DebugCredits:
+	opentext
+	writetext DebugRollCreditsText
+	yesorno
+	iffalse .End
+	credits
+.End
+	closetext
+	end
+
 DebugRollCreditsText:
 	text "Roll credits?"
 	done
 
-DebugViridianGymText:
-	text "Unlock CINNABAR,"
-	line "VIRIDIAN GYMs?"
-	done
+DebugSkipFastShip:
+	opentext
+	writetext DebugSkipFastShipText
+	yesorno
+	iffalse .End
+;	checkevent EVENT_BEAT_E4_CHAMPION
+;	iffalse .NotReady
+	warp OLIVINE_CITY, 13, 22
+;.NotReady
+;	writetext DebugCompleteKantoFirstText
+;	waitbutton
+.End
+	closetext
+	end
 
-DebugBeatJohtoText:
-	text "All JOHTO BADGES?"
+DebugSkipFastShipText:
+	text "Skip FAST SHIP?"
 	done
+;
+;DebugCompleteKantoFirstText:
+;	text "debug Complete"
+;	line "Kanto first!"
+;	done
+
+;Debug:
+;Debug:
+;Debug:
+
+; front bookshelves
+DebugBeatKantoLeaders:
+	opentext
+	writetext DebugBeatBrockText
+	yesorno
+	iffalse .misty
+	setflag ENGINE_BOULDERBADGE
+	setevent EVENT_BEAT_BROCK
+.misty
+	opentext
+	writetext DebugBeatMistyText
+	yesorno
+	iffalse .surge
+	setflag ENGINE_CASCADEBADGE
+	setevent EVENT_BEAT_MISTY
+.surge
+	opentext
+	writetext DebugBeatSurgeText
+	yesorno
+	iffalse .erika
+	setflag ENGINE_THUNDERBADGE
+	setevent EVENT_BEAT_LTSURGE
+.erika
+	opentext
+	writetext DebugBeatErikaText
+	yesorno
+	iffalse .koga
+	setflag ENGINE_RAINBOWBADGE
+	setevent EVENT_BEAT_ERIKA
+.koga
+	opentext
+	writetext DebugBeatKogaText
+	yesorno
+	iffalse .sabrina
+	setflag ENGINE_MARSHBADGE
+	setevent EVENT_BEAT_KOGA
+.sabrina
+	opentext
+	writetext DebugBeatSabrinaText
+	yesorno
+	iffalse .blaine
+	setflag ENGINE_SOULBADGE
+	setevent EVENT_BEAT_SABRINA
+.blaine
+	opentext
+	writetext DebugBeatBlaineText
+	yesorno
+	iffalse .giovanni
+	setflag ENGINE_VOLCANOBADGE
+	setevent EVENT_BEAT_BLAINE
+.giovanni
+	opentext
+	writetext DebugBeatGiovanniText
+	yesorno
+	iffalse .End
+	setflag ENGINE_EARTHBADGE
+	setevent EVENT_BEAT_GIOVANNI
+.End
+	closetext
+	end
 
 DebugBeatBrockText:
 	text "Beat BROCK?"
@@ -1457,6 +1415,192 @@ DebugBeatGiovanniText:
 	text "Beat GIOVANNI?"
 	done
 
+DebugLockedKantoGyms:
+	opentext
+	writetext DebugViridianGymText
+	yesorno
+	iffalse .End
+	setevent EVENT_CINNABAR_GYM_LEADER_RETURNED
+	setevent EVENT_VIRIDIAN_GYM_LEADER_RETURNED
+.End
+	closetext
+	end
+
+DebugViridianGymText:
+	text "Unlock CINNABAR,"
+	line "VIRIDIAN GYMs?"
+	done
+
+DebugCompleteKanto:
+	opentext
+	writetext DebugCompleteKantoText
+	yesorno
+	iffalse .End
+	setevent EVENT_GOT_POKEDEX
+	setflag ENGINE_POKEDEX
+	setflag ENGINE_POKEGEAR
+	setflag ENGINE_PHONE_CARD
+	setflag ENGINE_MAP_CARD
+	setflag ENGINE_PAGER_CARD
+	setflag ENGINE_RADIO_CARD
+;	setflag ENGINE_EXPN_CARD
+	setflag ENGINE_PAGER_CUT
+	setflag ENGINE_PAGER_FLY
+	setflag ENGINE_PAGER_SURF
+	setflag ENGINE_PAGER_STRENGTH
+	setflag ENGINE_PAGER_FLASH
+;	setflag ENGINE_PAGER_WHIRLPOOL
+;	setflag ENGINE_PAGER_ROCK_SMASH
+	setflag ENGINE_BOULDERBADGE
+	setflag ENGINE_CASCADEBADGE
+	setflag ENGINE_THUNDERBADGE
+	setflag ENGINE_RAINBOWBADGE
+	setflag ENGINE_MARSHBADGE
+	setflag ENGINE_SOULBADGE
+	setflag ENGINE_VOLCANOBADGE
+	setflag ENGINE_EARTHBADGE
+	setflag ENGINE_FLYPOINT_INDIGO_PLATEAU
+	setflag ENGINE_FLYPOINT_PALLET
+	setflag ENGINE_FLYPOINT_VIRIDIAN
+	setflag ENGINE_FLYPOINT_PEWTER
+	setflag ENGINE_FLYPOINT_CERULEAN
+	setflag ENGINE_FLYPOINT_VERMILION
+	setflag ENGINE_FLYPOINT_CELADON
+	setflag ENGINE_FLYPOINT_ROCK_TUNNEL
+	setflag ENGINE_FLYPOINT_LAVENDER
+	setflag ENGINE_FLYPOINT_FUCHSIA
+	setflag ENGINE_FLYPOINT_SAFFRON
+	setflag ENGINE_FLYPOINT_CINNABAR
+	setevent EVENT_CINNABAR_GYM_LEADER_RETURNED
+	setevent EVENT_VIRIDIAN_GYM_LEADER_RETURNED
+	setevent EVENT_BEAT_BROCK
+	setevent EVENT_BEAT_MISTY
+	setevent EVENT_BEAT_LTSURGE
+	setevent EVENT_BEAT_ERIKA
+	setevent EVENT_BEAT_KOGA
+	setevent EVENT_BEAT_SABRINA
+	setevent EVENT_BEAT_BLAINE
+	setevent EVENT_BEAT_GIOVANNI
+	setflag ENGINE_BOULDERBADGE
+	setflag ENGINE_CASCADEBADGE
+	setflag ENGINE_THUNDERBADGE
+	setflag ENGINE_RAINBOWBADGE
+	setflag ENGINE_MARSHBADGE
+	setflag ENGINE_SOULBADGE
+	setflag ENGINE_VOLCANOBADGE
+	setflag ENGINE_EARTHBADGE
+	setevent EVENT_BEAT_E4_LORELEI
+	setevent EVENT_BEAT_E4_BRUNO
+	setevent EVENT_BEAT_E4_AGATHA
+	setevent EVENT_BEAT_E4_LANCE
+	setevent EVENT_BEAT_E4_CHAMPION
+	warp HALL_OF_FAME, 4, 9
+.End
+	closetext
+	end
+
+DebugCompleteKantoText:
+	text "Complete KANTO?"
+	done
+
+;Debug:
+
+DebugBeatJohtoLeaders:
+	opentext
+	writetext DebugBeatJasmineText
+	yesorno
+	iffalse .morty
+	setflag ENGINE_MINERALBADGE
+	setevent EVENT_BEAT_JASMINE
+.morty
+	opentext
+	writetext DebugBeatMortyText
+	yesorno
+	iffalse .whitney
+	setflag ENGINE_FOGBADGE
+	setevent EVENT_BEAT_MORTY
+.whitney
+	opentext
+	writetext DebugBeatWhitneyText
+	yesorno
+	iffalse .bugsy
+	setflag ENGINE_PLAINBADGE
+	setevent EVENT_BEAT_WHITNEY
+.bugsy
+	opentext
+	writetext DebugBeatBugsyText
+	yesorno
+	iffalse .falkner
+	setflag ENGINE_HIVEBADGE
+	setevent EVENT_BEAT_BUGSY
+.falkner
+	opentext
+	writetext DebugBeatFalknerText
+	yesorno
+	iffalse .pryce
+	setflag ENGINE_ZEPHYRBADGE
+	setevent EVENT_BEAT_FALKNER
+.pryce
+	opentext
+	writetext DebugBeatPryceText
+	yesorno
+	iffalse .chuck
+	setflag ENGINE_GLACIERBADGE
+	setevent EVENT_BEAT_PRYCE
+.chuck
+	opentext
+	writetext DebugBeatChuckText
+	yesorno
+	iffalse .clair
+	setflag ENGINE_STORMBADGE
+	setevent EVENT_BEAT_CHUCK
+.clair
+	opentext
+	writetext DebugBeatClairText
+	yesorno
+	iffalse .End
+	setflag ENGINE_RISINGBADGE
+	setevent EVENT_BEAT_CLAIR
+.End
+	closetext
+	end
+
+DebugBeatJasmineText:
+	text "Beat JASMINE?"
+	done
+
+DebugBeatMortyText:
+	text "Beat MORTY?"
+	done
+
+DebugBeatWhitneyText:
+	text "Beat WHITNEY?"
+	done
+
+DebugBeatBugsyText:
+	text "Beat BUGSY?"
+	done
+
+DebugBeatFalknerText:
+	text "Beat FALKNER?"
+	done
+
+DebugBeatPryceText:
+	text "Beat PRYCE?"
+	done
+
+DebugBeatChuckText:
+	text "Beat CHUCK?"
+	done
+
+DebugBeatClairText:
+	text "Beat CLAIR?"
+	done
+
+;Debug:
+;Debug:
+;Debug:
+
 OaksLab_MapEvents:
 	db 0, 0 ; filler
 
@@ -1471,6 +1615,7 @@ OaksLab_MapEvents:
 	coord_event  5,  6, SCENE_OAKSLAB_RIVAL_BATTLE, OaksLabTryToLeaveScript ;OaksLabRivalBattleScript
 
 	def_bg_events
+; oak bookshelves
 	bg_event  6,  1, BGEVENT_READ, DebugGotCharmander
 	bg_event  7,  1, BGEVENT_READ, DebugGotSquirtle
 	bg_event  8,  1, BGEVENT_READ, DebugGotBulbasaur
@@ -1480,19 +1625,20 @@ OaksLab_MapEvents:
 	bg_event  1,  6, BGEVENT_READ, DebugMasterBalls
 	bg_event  2,  6, BGEVENT_READ, DebugAllTMHMs
 	bg_event  3,  6, BGEVENT_READ, DebugCredits
-;	bg_event  6,  6, BGEVENT_READ, Debug
+	bg_event  6,  6, BGEVENT_READ, DebugSkipFastShip
 ;	bg_event  7,  6, BGEVENT_READ, Debug
-	bg_event  8,  6, BGEVENT_READ, DebugLockedGyms
-	bg_event  9,  6, BGEVENT_READ, DebugBeatJohto
+;	bg_event  8,  6, BGEVENT_READ, Debug
+;	bg_event  9,  6, BGEVENT_READ, Debug
 ; front bookshelves
-	bg_event  0,  7, BGEVENT_READ, DebugBeatBrock
-	bg_event  1,  7, BGEVENT_READ, DebugBeatMisty
-	bg_event  2,  7, BGEVENT_READ, DebugBeatSurge
-	bg_event  3,  7, BGEVENT_READ, DebugBeatErika
-	bg_event  6,  7, BGEVENT_READ, DebugBeatKoga
-	bg_event  7,  7, BGEVENT_READ, DebugBeatSabrina
-	bg_event  8,  7, BGEVENT_READ, DebugBeatBlaine
-	bg_event  9,  7, BGEVENT_READ, DebugBeatGiovanni
+	bg_event  0,  7, BGEVENT_READ, DebugBeatKantoLeaders
+	bg_event  1,  7, BGEVENT_READ, DebugLockedKantoGyms
+;	bg_event  2,  7, BGEVENT_READ, Debug
+	bg_event  3,  7, BGEVENT_READ, DebugCompleteKanto
+	bg_event  6,  7, BGEVENT_READ, DebugBeatJohtoLeaders
+;	bg_event  7,  7, BGEVENT_READ, Debug
+;	bg_event  8,  7, BGEVENT_READ, Debug
+;	bg_event  9,  7, BGEVENT_READ, Debug
+; normal stuff
 	bg_event  4,  0, BGEVENT_READ, OaksLabPoster1
 	bg_event  5,  0, BGEVENT_READ, OaksLabPoster2
 	bg_event  9,  3, BGEVENT_READ, OaksLabTrashcan
