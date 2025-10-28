@@ -73,7 +73,6 @@ MapScenes::
 	scene_var WISE_TRIOS_ROOM,                             wWiseTriosRoomSceneID
 	scene_var MAHOGANY_TOWN,                               wMahoganyTownSceneID
 	scene_var ROUTE_42,                                    wRoute42SceneID
-	scene_var CIANWOOD_CITY,                               wCianwoodCitySceneID
 	scene_var BATTLE_TOWER_1F,                             wBattleTower1FSceneID
 	scene_var BATTLE_TOWER_BATTLE_ROOM,                    wBattleTowerBattleRoomSceneID
 	scene_var BATTLE_TOWER_ELEVATOR,                       wBattleTowerElevatorSceneID
@@ -100,6 +99,7 @@ MapScenes::
 	scene_var MOUNT_MOON_SQUARE,                           wMountMoonSquareSceneID
 	scene_var POKEMON_MANSION_1F,                          wPokemonMansion1FSceneID
 	scene_var POKEMON_MANSION_B1F,                         wPokemonMansionB1FSceneID
+;	scene_var CIANWOOD_CITY,                               wCianwoodCitySceneID
 ;	scene_var ROUTE_42_ECRUTEAK_GATE,                      wRoute42EcruteakGateSceneID
 ;	scene_var ECRUTEAK_POKECENTER_1F,                      wEcruteakPokecenter1FSceneID
 ;	scene_var ECRUTEAK_GYM,                                wEcruteakGymSceneID
