@@ -17,6 +17,7 @@ OutdoorSprites:
 	dw SaffronGroupSprites
 	dw CinnabarGroupSprites
 	dw IndigoGroupSprites
+;
 	dw NewBarkGroupSprites
 	dw CherrygroveGroupSprites
 	dw VioletGroupSprites
@@ -227,7 +228,7 @@ FuchsiaGroupSprites:
 
 SilverGroupSprites:
 ; Route26, Route27East, Route28, SilverCaveOutside
-;	db SPRITE_BLUE
+	db SPRITE_OAK
 	; 0 of 9 max walking sprites
 	db SPRITE_BERRY
 	db SPRITE_APRICORN
@@ -306,25 +307,26 @@ GoldenrodGroupSprites:
 
 ; OlivineCity and Route40 are connected
 OlivineGroupSprites:
-; Route38, Route39, OlivineCity
+; OlivineCity			SAILOR, youngster
+; Route38				?
+; Route39				?
 CianwoodGroupSprites:
-; Route40, Route41, CianwoodCity, BattleTowerOutside
-	db SPRITE_POKEFAN_M
-	db SPRITE_LASS
-	db SPRITE_SWIMMER_GIRL
+; CianwoodCity			POKEFAN_M, POKEFAN_F, LASS, youngster
+; Route40				SWIMMER_M, SWIMMER_F, beauty, fisher, lass, youngster, rock
+; Route41				SWIMMER_M, SWIMMER_F
+; BattleTowerOutside	SAILOR
 	db SPRITE_SAILOR
+	db SPRITE_POKEFAN_M
 	db SPRITE_POKEFAN_F
-	db SPRITE_SUPER_NERD
 	db SPRITE_SWIMMER_GUY
-	db SPRITE_GENTLEMAN
-	; 9 of 9 max walking sprites
+	db SPRITE_SWIMMER_GIRL
+	; 5 of 9 max walking sprites
 	db SPRITE_BEAUTY
+	db SPRITE_YOUNGSTER
 	db SPRITE_MILTANK
+	db SPRITE_ROCK
 	db SPRITE_BERRY
 	db SPRITE_APRICORN
-	db SPRITE_ROCK
-	db SPRITE_YOUNGSTER ; non-walking version of SPRITE_YOUNGSTER
-	db SPRITE_SUICUNE
 	db 0 ; end
 
 MahoganyGroupSprites:
