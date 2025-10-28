@@ -1371,7 +1371,7 @@ RockSmashFromMenuScript:
 RockSmashScript:
 	callasm GetPartyNickname
 	writetext UseRockSmashText
-	cry CUBONE
+	cry GEODUDE
 	waitbutton
 	closetext
 	special WaitSFX
