@@ -102,13 +102,28 @@ RockItemEncounter:
 	ret
 	
 .RockItems:
-	db 2, STAR_PIECE
-	db 6, NUGGET
-	db 13, BIG_PEARL
-	db 16, STARDUST
-	db 18, REVIVE
-	db 25, PEARL
-	db 51, GOLD_LEAF
-	db 51, SILVER_LEAF
-	db 64, BRICK_PIECE
+	db 1, PP_UP
+	db 1, HP_UP
+	db 1, PROTEIN
+	db 1, IRON
+	db 1, CARBOS
+	db 2, STAR_PIECE ;9800
+	db 4, NUGGET ;10000
+	db 8, BIG_PEARL ;7500
+	db 12, STARDUST ;2000
+	db 16, PEARL ;1400
+	db 24, BRICK_PIECE ;50
 	db -1
+
+;.RockItems:
+;	db 2, STAR_PIECE ;9800
+;	db 6, NUGGET ;10000
+;	db 13, BIG_PEARL ;7500
+;	db 16, STARDUST ;2000
+;	db 18, REVIVE
+;	db 25, PEARL ;1400
+;	db 51, GOLD_LEAF ;2000
+;	db 51, SILVER_LEAF ;2000
+;	db 64, BRICK_PIECE ;50
+;	db -1
+;
