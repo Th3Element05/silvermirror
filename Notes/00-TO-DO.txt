@@ -50,6 +50,11 @@ UNOWN
 const	STATUSFLAGS_HALL_OF_FAME_F ; 6
 
 
+ROCK SMASH ITEMS
+engine\events\checkforhiddenitems.asm
+
+
+
 
 TEST to-do
 
