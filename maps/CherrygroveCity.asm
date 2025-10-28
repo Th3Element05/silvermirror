@@ -26,6 +26,7 @@ CherrygroveRockSmashGuyScript:
 	pause 20
 	scall CherrygroveCityGeodudeScript
 	applymovement CHERRYGROVECITY_GEODUDE, CherrygroveGeodudeRockSmashMovement
+	pause 10
 	applymovement CHERRYGROVECITY_ROCK, CherrygroveGeodudeSmashesRockMovement
 	pause 20
 	setlasttalked CHERRYGROVECITY_GRAMPS
@@ -89,7 +90,7 @@ CherrygroveRockSmashGuyCallAnytimeText:
 	done
 
 CherrygroveGeodudeRockSmashMovement: ;test?
-	step_shake 10;needs time specified?
+	step_shake 10;needs time specified? or displacement?
 	step_end
 
 CherrygroveGeodudeSmashesRockMovement:
