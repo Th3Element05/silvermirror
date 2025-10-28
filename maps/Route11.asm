@@ -199,27 +199,58 @@ PokefanFBeverlyAfterBattleText:
 	cont "cute, too."
 	done
 
-TrainerGuitaristWyatt:
-	trainer GUITARIST, WYATT, EVENT_BEAT_GUITARIST_WYATT, GuitaristWyattSeenText, GuitaristWyattBeatenText, 0, .Script
+;OfficerKeithScript:
+;	faceplayer
+;	opentext
+;	checktime NITE
+;	iffalse .NoFight
+;	checkevent EVENT_BEAT_OFFICER_KEITH
+;	iftrue .AfterScript
+;	playmusic MUSIC_TRAINER_ENCOUNTER ; MUSIC_OFFICER_ENCOUNTER
+;	writetext OfficerKeithSeenText
+;	waitbutton
+;	closetext
+;	winlosstext OfficerKeithWinText, 0
+;	loadtrainer OFFICER, KEITH
+;	startbattle
+;	reloadmapafterbattle
+;	setevent EVENT_BEAT_OFFICER_KEITH
+;	closetext
+;	end
+
+;.AfterScript:
+;	writetext OfficerKeithAfterText
+;	waitbutton
+;	closetext
+;	end
+
+;.NoFight:
+;	writetext OfficerKeithDaytimeText
+;;	waitbutton
+;	closetext
+;	end
+
+TrainerOfficerRex:
+	trainer OFFICER, REX, EVENT_BEAT_OFFICER_REX, OfficerRexSeenText, OfficerRexBeatenText, 0, .Script
 .Script:
 	endifjustbattled
 	opentext
-	writetext GuitaristWyattAfterBattleText
+	writetext OfficerRexAfterBattleText
 	waitbutton
 	closetext
 	end
 
-GuitaristWyattSeenText:
+OfficerRexSeenText:
 	text "I'm practicing"
 	line "for a show!"
 	done
 
-GuitaristWyattBeatenText:
+OfficerRexBeatenText:
 	text "That was"
 	line "electric!"
 	done
 
-GuitaristWyattAfterBattleText:
+OfficerRexAfterBattleText:
 	text "Well, better get"
 	line "back to work."
 	done
@@ -279,27 +310,58 @@ PokefanMRobertAfterBattleText:
 	line "this…"
 	done
 
-TrainerGuitaristLogan:
-	trainer GUITARIST, LOGAN, EVENT_BEAT_GUITARIST_LOGAN, GuitaristLoganSeenText, GuitaristLoganBeatenText, 0, .Script
+;OfficerKeithScript:
+;	faceplayer
+;	opentext
+;	checktime NITE
+;	iffalse .NoFight
+;	checkevent EVENT_BEAT_OFFICER_KEITH
+;	iftrue .AfterScript
+;	playmusic MUSIC_TRAINER_ENCOUNTER ; MUSIC_OFFICER_ENCOUNTER
+;	writetext OfficerKeithSeenText
+;	waitbutton
+;	closetext
+;	winlosstext OfficerKeithWinText, 0
+;	loadtrainer OFFICER, KEITH
+;	startbattle
+;	reloadmapafterbattle
+;	setevent EVENT_BEAT_OFFICER_KEITH
+;	closetext
+;	end
+
+;.AfterScript:
+;	writetext OfficerKeithAfterText
+;	waitbutton
+;	closetext
+;	end
+
+;.NoFight:
+;	writetext OfficerKeithDaytimeText
+;;	waitbutton
+;	closetext
+;	end
+
+TrainerOfficerCarter:
+	trainer OFFICER, CARTER, EVENT_BEAT_OFFICER_CARTER, OfficerCarterSeenText, OfficerCarterBeatenText, 0, .Script
 .Script:
 	endifjustbattled
 	opentext
-	writetext GuitaristLoganAfterBattleText
+	writetext OfficerCarterAfterBattleText
 	waitbutton
 	closetext
 	end
 
-GuitaristLoganSeenText:
+OfficerCarterSeenText:
 	text "Watch out for"
 	line "live wires!"
 	done
 
-GuitaristLoganBeatenText:
+OfficerCarterBeatenText:
 	text "Whoa!"
 	line "You spark plug!"
 	done
 
-GuitaristLoganAfterBattleText:
+OfficerCarterAfterBattleText:
 	text "#MON battles"
 	line "are electrifying!"
 	done
@@ -492,7 +554,7 @@ Route11_MapEvents:
 	object_event 43,  5, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerYoungsterIan, -1
 	object_event 45,  7, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerPokefanMWilliam, -1
 	object_event 26,  9, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 2, TrainerPokefanFBeverly, -1
-	object_event 36, 11, SPRITE_OFFICER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerGuitaristWyatt, -1
+	object_event 36, 11, SPRITE_OFFICER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerOfficerRex, -1
 	object_event 22, 12, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerYoungsterJason, -1
 	object_event 10, 14, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerPokefanMRobert, -1
-	object_event 45, 16, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerGuitaristLogan, -1
+	object_event 45, 16, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerOfficerCarter, -1
