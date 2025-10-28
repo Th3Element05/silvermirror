@@ -26,12 +26,12 @@
 ; Johto Gym Leader TM gifts
 	const EVENT_GOT_TM23_IRON_TAIL
 	const EVENT_GOT_TM30_SHADOW_BALL
-	const_skip
-	const_skip
-	const_skip
-	const_skip
-	const_skip
-	const_skip
+	const_skip ;attract
+	const_skip ;fury cutter
+	const_skip ;mud slap, or steel wing?
+	const_skip ;ancientpower (need add)
+	const_skip ;HM-whirlpool?
+	const_skip ;outrage
 ; used 8
 
 ; HMs (pagers)
@@ -387,8 +387,10 @@
 	const EVENT_FAST_SHIP_PASSENGERS_FIRST_TRIP
 	const EVENT_FAST_SHIP_PASSENGERS_KANTOBOUND
 	const EVENT_FAST_SHIP_PASSENGERS_JOHTOBOUND
-; used 11
-; running total used 371
+	const EVENT_CIANWOOD_GYM_CLOSED_BLACKBELTS
+	const EVENT_CIANWOOD_GYM_TRAINERS
+; used 12
+; running total used 372
 
 ; OG JOHTO PEOPLE
 	const EVENT_LAKE_OF_RAGE_LANCE
@@ -931,6 +933,9 @@
 ; running total used 866
 ;
 ; Johto hidden items
+	const EVENT_ROUTE_40_HIDDEN_HYPER_POTION
+	const EVENT_ROUTE_41_HIDDEN_MAX_ETHER
+; in place above this line
 ;	const EVENT_TIN_TOWER_4F_HIDDEN_MAX_POTION
 ;	const EVENT_TIN_TOWER_5F_HIDDEN_FULL_RESTORE
 ;	const EVENT_TIN_TOWER_5F_HIDDEN_CARBOS
@@ -974,8 +979,6 @@
 	const EVENT_ROUTE_34_HIDDEN_SUPER_POTION
 	const EVENT_ROUTE_37_HIDDEN_ETHER
 	const EVENT_ROUTE_39_HIDDEN_NUGGET
-	const EVENT_ROUTE_40_HIDDEN_HYPER_POTION
-	const EVENT_ROUTE_41_HIDDEN_MAX_ETHER
 ;	const EVENT_ROUTE_42_HIDDEN_MAX_POTION
 ;	const EVENT_ROUTE_44_HIDDEN_ELIXER
 ;	const EVENT_ROUTE_45_HIDDEN_PP_UP

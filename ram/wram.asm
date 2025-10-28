@@ -3184,7 +3184,6 @@ wEcruteakTinTowerEntranceSceneID::                db
 wWiseTriosRoomSceneID::                           db
 wMahoganyTownSceneID::                            db
 wRoute42SceneID::                                 db
-wCianwoodCitySceneID::                            db
 wBattleTower1FSceneID::                           db
 wBattleTowerBattleRoomSceneID::                   db
 wBattleTowerElevatorSceneID::                     db
@@ -3211,6 +3210,7 @@ wDragonShrineSceneID::                            db
 wMountMoonSquareSceneID::                         db
 wPokemonMansion1FSceneID::                        db
 wPokemonMansionB1FSceneID::                       db
+;wCianwoodCitySceneID::                            db ; unused in silvermirror
 ;wRoute42EcruteakGateSceneID::                     db ; unused in silvermirror
 ;wEcruteakPokecenter1FSceneID::                    db ; unused in silvermirror
 ;wEcruteakGymSceneID::                             db ; unused in silvermirror
