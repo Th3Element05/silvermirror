@@ -3161,6 +3161,7 @@ wFastShip1FSceneID::                              db
 wFastShipB1FSceneID::                             db
 wFastShipEngineRoomSceneID::                      db
 wOlivineCitySceneID::                             db
+wEcruteakCitySceneID::                            db
 wBurnedTower1FSceneID::                           db
 wBurnedTowerB1FSceneID::                          db
 ;

@@ -50,6 +50,7 @@ MapScenes::
 	scene_var FAST_SHIP_B1F,                               wFastShipB1FSceneID
 	scene_var FAST_SHIP_ENGINE_ROOM,                       wFastShipEngineRoomSceneID
 	scene_var OLIVINE_CITY,                                wOlivineCitySceneID
+	scene_var ECRUTEAK_CITY,                               wEcruteakCitySceneID
 	scene_var BURNED_TOWER_1F,                             wBurnedTower1FSceneID
 	scene_var BURNED_TOWER_B1F,                            wBurnedTowerB1FSceneID
 ; og scenes below

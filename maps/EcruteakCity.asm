@@ -1,101 +1,179 @@
 	object_const_def
-;	const ECRUTEAKCITY_GRAMPS1
-;	const ECRUTEAKCITY_GRAMPS2
-;	const ECRUTEAKCITY_LASS1
-;	const ECRUTEAKCITY_LASS2
-;	const ECRUTEAKCITY_FISHER
-;	const ECRUTEAKCITY_YOUNGSTER
-;	const ECRUTEAKCITY_GRAMPS3
+	const ECRUTEAKCITY_GRAMPS
 
 EcruteakCity_MapScripts:
 	def_scene_scripts
+	scene_script EcruteakCityNoop1Scene,      SCENE_ECRUTEAKCITY_LOST_GIRL
+	scene_script EcruteakCityNoop2Scene,      SCENE_ECRUTEAKCITY_NOOP
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, EcruteakCityFlypointCallback
+
+EcruteakCityNoop1Scene:
+EcruteakCityNoop2Scene:
+	end
 
 EcruteakCityFlypointCallback:
 	setflag ENGINE_FLYPOINT_ECRUTEAK
 	endcallback
 
-;EcruteakCityGramps1Script:
-;	jumptextfaceplayer EcruteakCityGramps1Text
+EcruteakCityLostGirlScript:
+	showemote EMOTE_SHOCK, ECRUTEAKCITY_GRAMPS, 15
+	turnobject PLAYER, UP
+	; fallthrough
+EcruteakCityGramps1Script:
+	checkevent EVENT_FOUND_GIRL_IN_BURNED_TOWER
+	iftrue .FoundGirl
+	faceplayer
+	opentext
+	writetext EcruteakCityGramps1BeforeText
+	waitbutton
+	closetext
+	setscene SCENE_ECRUTEAKCITY_NOOP
+	end
 
-;EcruteakCityGramps2Script:
-;	jumptextfaceplayer EcruteakCityGramps2Text
+.FoundGirl
+	jumptextfaceplayer EcruteakCityGramps1AfterText
 
-;EcruteakCityGramps3Script:
-;	jumptextfaceplayer EcruteakCityGramps3Text
+EcruteakCityGramps1BeforeText:
+	text "Oh, no. Oh, no…"
 
-;EcruteakCityLass1Script:
-;	jumptextfaceplayer EcruteakCityLass1Text
+	para "My granddaughter"
+	line "is missing."
 
-;EcruteakCityLass2Script:
-;	faceplayer
-;	opentext
-;	checkevent EVENT_RELEASED_THE_BEASTS
-;	iftrue .ReleasedBeasts
-;	writetext EcruteakCityLass2Text
-;	waitbutton
-;	closetext
-;	end
-;
-;.ReleasedBeasts:
-;	writetext EcruteakCityLass2Text_ReleasedBeasts
-;	waitbutton
-;	closetext
-;	end
+	para "No… She couldn't"
+	line "have gone to the"
+	cont "BURNED TOWER."
 
-;EcruteakCityFisherScript:
-;	faceplayer
-;	opentext
-;	checkevent EVENT_JASMINE_RETURNED_TO_GYM
-;	iftrue .JasmineReturned
-;	writetext EcruteakCityFisherText
-;	waitbutton
-;	closetext
-;	end
-;
-;.JasmineReturned:
-;	writetext EcruteakCityFisherText_JasmineReturned
-;	waitbutton
-;	closetext
-;	end
+	para "I told her not to"
+	line "go near it…"
+
+	para "People seem to"
+	line "disappear there…"
+
+	para "Oh, what should I"
+	line "do…?"
+	done
+
+EcruteakCityGramps1AfterText:
+	text "In the distant"
+	line "past…"
+
+	para "This tower burned"
+	line "in a fire. Three"
+	cont "nameless #MON"
+	cont "perished in it."
+
+	para "A rainbow-colored"
+	line "#MON descended"
+	cont "from the sky and"
+	cont "resurrected them…"
+
+	para "It's a legend that"
+	line "has been passed"
+	cont "down by ECRUTEAK"
+	cont "GYM LEADERS."
+
+	para "Me?"
+
+	para "I was a trainer"
+	line "way back when."
+	cont "Hohoho!"
+	done
+
+EcruteakCityGirlScript:
+	jumptextfaceplayer EcruteakCityGirlText
+EcruteakCityGirlText:
+	text "After grandpa ran"
+	line "into the tower,"
+	cont "three big #MON"
+	cont "ran out!"
+
+	para "Were those the"
+	line "legendary #MON"
+	cont "I was looking for?"
+	done
+
+EcruteakCityGramps2Script:
+	jumptextfaceplayer EcruteakCityGramps1Text
+EcruteakCityGramps1Text:
+	text "ECRUTEAK used to"
+	line "have two towers:"
+
+	para "one each in the"
+	line "east and west."
+	done
+
+EcruteakCityLass1Script:
+	jumptextfaceplayer EcruteakCityLass1Text
+EcruteakCityLass1Text:
+	text "I'm going to prac-"
+	line "tice at the DANCE"
+
+	para "THEATER. Care to"
+	line "join me?"
+	done
+
+EcruteakCityLass2Script:
+	faceplayer
+	opentext
+	checkevent EVENT_RELEASED_THE_BEASTS
+	iftrue .ReleasedBeasts
+	writetext EcruteakCityLass2Text
+	waitbutton
+	closetext
+	end
+
+.ReleasedBeasts:
+	writetext EcruteakCityLass2Text_ReleasedBeasts
+	waitbutton
+	closetext
+	end
+
+EcruteakCityLass2Text:
+	text "The tower that"
+	line "used to be here…"
+
+	para "My grandma told me"
+	line "it used to be much"
+	cont "taller."
+	done
+
+EcruteakCityLass2Text_ReleasedBeasts:
+	text "Three big #MON"
+	line "ran off in differ-"
+	cont "ent directions."
+
+	para "What were they?"
+	done
+
+EcruteakCityFisherScript:
+	jumptextfaceplayer EcruteakCityFisherText
+EcruteakCityFisherText:
+	text "OLIVINE LIGHTHOUSE"
+	line "uses a #MON as"
+	cont "the beacon."
+
+	para "The light allows"
+	line "boats to sail"
+	cont "at night."
+	done
+
 
 ;EcruteakCityYoungsterScript:
 ;	jumptextfaceplayer EcruteakCityYoungsterText
-
-;EcruteakCityHiddenHyperPotion:
-;	hiddenitem HYPER_POTION, EVENT_ECRUTEAK_CITY_HIDDEN_HYPER_POTION
-
-;UnusedMissingDaughterText: ; unreferenced
-;	text "Oh, no. Oh, no…"
+;EcruteakCityYoungsterText:
+;	text "I hear #MON are"
+;	line "rampaging at the"
 ;
-;	para "My daughter is"
-;	line "missing."
-;
-;	para "No… She couldn't"
-;	line "have gone to the"
-;	cont "BURNED TOWER."
-;
-;	para "I told her not to"
-;	line "go near it…"
-;
-;	para "People seem to"
-;	line "disappear there…"
-;
-;	para "Oh, what should I"
-;	line "do…?"
+;	para "LAKE OF RAGE. I'd"
+;	line "like to see that."
 ;	done
 
-;EcruteakCityGramps1Text:
-;	text "ECRUTEAK used to"
-;	line "have two towers:"
-;
-;	para "one each in the"
-;	line "east and west."
-;	done
 
-;EcruteakCityGramps2Text:
+;EcruteakCityGramps3Script:
+;	jumptextfaceplayer EcruteakCityGramps3Text
+;EcruteakCityGramps3Text:
 ;	text "Ah, child."
 ;	line "Have you learned"
 ;
@@ -110,104 +188,6 @@ EcruteakCityFlypointCallback:
 ;	cont "nice, I hear."
 ;	done
 
-;EcruteakCityLass1Text:
-;	text "I'm going to prac-"
-;	line "tice at the DANCE"
-;
-;	para "THEATER. Care to"
-;	line "join me?"
-;	done
-
-;EcruteakCityLass2Text:
-;	text "The tower that"
-;	line "used to be here…"
-;
-;	para "My grandma told me"
-;	line "it used to be much"
-;	cont "taller."
-;	done
-
-;EcruteakCityLass2Text_ReleasedBeasts:
-;	text "Three big #MON"
-;	line "ran off in differ-"
-;	cont "ent directions."
-;	cont "What were they?"
-;	done
-
-;EcruteakCityFisherText:
-;	text "I heard a rumor"
-;	line "about OLIVINE"
-;	cont "LIGHTHOUSE."
-;
-;	para "The #MON that"
-;	line "serves as the"
-;
-;	para "beacon fell ill."
-;	line "Sounds like they"
-;	cont "are in trouble."
-;	done
-
-;EcruteakCityFisherText_JasmineReturned:
-;	text "The #MON at"
-;	line "OLIVINE LIGHTHOUSE"
-;	cont "has been cured."
-;
-;	para "Boats can safely"
-;	line "sail out to sea at"
-;	cont "night again."
-;	done
-
-;EcruteakCityYoungsterText:
-;	text "I hear #MON are"
-;	line "rampaging at the"
-;
-;	para "LAKE OF RAGE. I'd"
-;	line "like to see that."
-;	done
-
-;EcruteakCityGramps3Text:
-;	text "In the distant"
-;	line "past…"
-;
-;	para "This tower burned"
-;	line "in a fire. Three"
-;
-;	para "nameless #MON"
-;	line "perished in it."
-;
-;	para "A rainbow-colored"
-;	line "#MON descended"
-;
-;	para "from the sky and"
-;	line "resurrected them…"
-;
-;	para "It's a legend that"
-;	line "has been passed"
-;
-;	para "down by ECRUTEAK"
-;	line "GYM LEADERS."
-;
-;	para "Me?"
-;
-;	para "I was a trainer"
-;	line "way back when."
-;	cont "Hohoho!"
-;	done
-
-EcruteakCitySign:
-	jumptext EcruteakCitySignText
-
-TinTowerSign:
-	jumptext TinTowerSignText
-
-EcruteakGymSign:
-	jumptext EcruteakGymSignText
-
-EcruteakDanceTheaterSign:
-	jumptext EcruteakDanceTheaterSignText
-
-BurnedTowerSign:
-	jumptext BurnedTowerSignText
 
 EcruteakCityPokecenterSign:
 	jumpstd PokecenterSignScript
@@ -215,6 +195,9 @@ EcruteakCityPokecenterSign:
 EcruteakCityMartSign:
 	jumpstd MartSignScript
 
+
+EcruteakCitySign:
+	jumptext EcruteakCitySignText
 EcruteakCitySignText:
 	text "ECRUTEAK CITY"
 	line "A Historical City"
@@ -223,6 +206,8 @@ EcruteakCitySignText:
 	line "Meets the Present"
 	done
 
+TinTowerSign:
+	jumptext TinTowerSignText
 TinTowerSignText:
 	text "TIN TOWER"
 
@@ -231,6 +216,8 @@ TinTowerSignText:
 	cont "roost here."
 	done
 
+EcruteakGymSign:
+	jumptext EcruteakGymSignText
 EcruteakGymSignText:
 	text "ECRUTEAK CITY"
 	line "#MON GYM"
@@ -240,11 +227,15 @@ EcruteakGymSignText:
 	line "the Future"
 	done
 
+EcruteakDanceTheaterSign:
+	jumptext EcruteakDanceTheaterSignText
 EcruteakDanceTheaterSignText:
 	text "ECRUTEAK DANCE"
 	line "THEATER"
 	done
 
+BurnedTowerSign:
+	jumptext BurnedTowerSignText
 BurnedTowerSignText:
 	text "BURNED TOWER"
 
@@ -255,6 +246,9 @@ BurnedTowerSignText:
 	para "Please stay away,"
 	line "as it is unsafe."
 	done
+
+EcruteakCityHiddenHyperPotion:
+	hiddenitem HYPER_POTION, EVENT_ECRUTEAK_CITY_HIDDEN_HYPER_POTION
 
 EcruteakCity_MapEvents:
 	db 0, 0 ; filler
@@ -277,22 +271,24 @@ EcruteakCity_MapEvents:
 	warp_event  0, 19, ROUTE_38_ECRUTEAK_GATE, 4
 
 	def_coord_events
+	coord_event  5, 10, SCENE_ECRUTEAKCITY_LOST_GIRL, EcruteakCityLostGirlScript
 
 	def_bg_events
+	bg_event 24, 27, BGEVENT_READ, EcruteakCityPokecenterSign
+	bg_event 30, 21, BGEVENT_READ, EcruteakCityMartSign
 	bg_event 15, 21, BGEVENT_READ, EcruteakCitySign
 	bg_event 38, 10, BGEVENT_READ, TinTowerSign
 	bg_event  8, 28, BGEVENT_READ, EcruteakGymSign
 	bg_event 21, 21, BGEVENT_READ, EcruteakDanceTheaterSign
 	bg_event  2, 10, BGEVENT_READ, BurnedTowerSign
-	bg_event 24, 27, BGEVENT_READ, EcruteakCityPokecenterSign
-	bg_event 30, 21, BGEVENT_READ, EcruteakCityMartSign
-;	bg_event 23, 14, BGEVENT_ITEM, EcruteakCityHiddenHyperPotion
+	bg_event 23, 14, BGEVENT_ITEM, EcruteakCityHiddenHyperPotion
 
 	def_object_events
-;	object_event 18, 15, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakCityGramps1Script, -1
-;	object_event 20, 21, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakCityGramps2Script, -1
-;	object_event 21, 29, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, EcruteakCityLass1Script, -1
-;	object_event  3,  9, SPRITE_LASS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakCityLass2Script, -1
-;	object_event  9, 22, SPRITE_FISHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, EcruteakCityFisherScript, -1
+	object_event  5,  9, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, EcruteakCityGramps1Script, -1
+	object_event  4,  9, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, EcruteakCityGirlScript, EVENT_ECRUTEAK_CITY_GIRL
+	object_event 19, 15, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakCityGramps2Script, -1
+	object_event 21, 29, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, EcruteakCityLass1Script, -1
+	object_event 10, 12, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakCityLass2Script, -1
+	object_event  9, 22, SPRITE_FISHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, EcruteakCityFisherScript, -1
 ;	object_event 10, 14, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, EcruteakCityYoungsterScript, -1
-;	object_event  3,  7, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, EcruteakCityGramps3Script, EVENT_ECRUTEAK_CITY_GRAMPS
+;	object_event 20, 21, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakCityGramps3Script, -1
