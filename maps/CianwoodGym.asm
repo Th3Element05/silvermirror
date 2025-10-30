@@ -73,6 +73,13 @@ CianwoodGymChuckScript:
 	closetext
 	end
 
+.AlreadyGotWhirlpool:
+	writetext ChuckAfterText
+	waitbutton
+.BagFull:
+	closetext
+	end
+
 .JumpstdReceiveItem:
 	jumpstd ReceiveItemScript
 	end
@@ -84,13 +91,6 @@ GotWhirlpoolPagerText: ;change whirlpool pager to POLIWRATH?
 	text "AZUMARILL was"
 	line "added to the PPS!"
 	done
-
-.AlreadyGotWhirlpool:
-	writetext ChuckAfterText
-	waitbutton
-.BagFull:
-	closetext
-	end
 
 ;CianwoodGymActivateRockets:
 ;	ifequal 7, .RadioTowerRockets
@@ -155,12 +155,6 @@ GetStormBadgeText:
 	done
 
 ChuckExplainBadgeText:
-;	text "STORMBADGE makes"
-;	line "all #MON up to"
-;
-;	para "L70 obey, even"
-;	line "traded ones."
-;
 	text "You're strong."
 	line "I think you might"
 	cont "your #MON could"
@@ -195,111 +189,6 @@ ChuckAfterText:
 	cont "hours a day!"
 	done
 
-;TrainerBlackbeltNob:
-;	trainer BLACKBELT_T, NOB, EVENT_BEAT_BLACKBELT_NOB, BlackbeltNobSeenText, BlackbeltNobBeatenText, 0, .Script
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext BlackbeltNobAfterText
-;	waitbutton
-;	closetext
-;	end
-;
-;BlackbeltNobSeenText:
-;	text "Words are useless."
-;	line "Let your fists do"
-;	cont "the talking!"
-;	done
-;
-;BlackbeltNobBeatenText:
-;	text "…"
-;	done
-;
-;BlackbeltNobAfterText:
-;	text "I lost! "
-;	line "I'm speechless!"
-;	done
-
-;TrainerBlackbeltLung:
-;	trainer BLACKBELT_T, LUNG, EVENT_BEAT_BLACKBELT_LUNG, BlackbeltLungSeenText, BlackbeltLungBeatenText, 0, .Script
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext BlackbeltLungAfterText
-;	waitbutton
-;	closetext
-;	end
-
-;BlackbeltLungSeenText:
-;	text "My raging fists"
-;	line "will shatter your"
-;	cont "#MON!"
-;	done
-;
-;BlackbeltLungBeatenText:
-;	text "I got shattered!"
-;	done
-;
-;BlackbeltLungAfterText:
-;	text "My #MON lost…"
-;	line "My… my pride is"
-;	cont "shattered…"
-;	done
-
-;TrainerBlackbeltYoshi:
-;	trainer BLACKBELT_T, YOSHI, EVENT_BEAT_BLACKBELT_YOSHI, BlackbeltYoshiSeenText, BlackbeltYoshiBeatenText, 0, .Script
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext BlackbeltYoshiAfterText
-;	waitbutton
-;	closetext
-;	end
-;
-;BlackbeltYoshiSeenText:
-;	text "My #MON and I"
-;	line "are bound togeth-"
-;	cont "er by friendship."
-;
-;	para "Our bond will"
-;	line "never be broken!"
-;	done
-;
-;BlackbeltYoshiBeatenText:
-;	text "This isn't real!"
-;	done
-;
-;BlackbeltYoshiAfterText:
-;	text "You seem to have a"
-;	line "strong bond with"
-;	cont "your #MON too!"
-;	done
-
-;TrainerBlackbeltLao:
-;	trainer BLACKBELT_T, LAO, EVENT_BEAT_BLACKBELT_LAO, BlackbeltLaoSeenText, BlackbeltLaoBeatenText, 0, .Script
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext BlackbeltLaoAfterText
-;	waitbutton
-;	closetext
-;	end
-;
-;BlackbeltLaoSeenText:
-;	text "We martial artists"
-;	line "fear nothing!"
-;	done
-;
-;BlackbeltLaoBeatenText:
-;	text "That's shocking!"
-;	done
-;
-;BlackbeltLaoAfterText:
-;	text "Fighting #MON"
-;	line "are afraid of psy-"
-;	cont "chics…"
-;	done
-
 CianwoodGymMovement_ChuckChucksBoulder:
 	set_sliding
 	big_step LEFT
@@ -308,17 +197,109 @@ CianwoodGymMovement_ChuckChucksBoulder:
 	remove_sliding
 	step_end
 
-CianwoodGymBoulder:
-	jumpstd StrengthBoulderScript
+TrainerBlackbeltLee:
+	trainer BLACKBELT_T, LEE, EVENT_BEAT_BLACKBELT_LEE, BlackbeltLeeSeenText, BlackbeltLeeBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext BlackbeltLeeAfterText
+	waitbutton
+	closetext
+	end
 
-OlivineGymStatue:
-	gettrainername STRING_BUFFER_4, CHUCK, CHuCK1
+BlackbeltLeeSeenText:
+	text "My #MON and I"
+	line "are bound togeth-"
+	cont "er by friendship."
+
+	para "Our bond will"
+	line "never be broken!"
+	done
+
+BlackbeltLeeBeatenText:
+	text "This isn't real!"
+	done
+
+BlackbeltLeeAfterText:
+	text "You seem to have a"
+	line "strong bond with"
+	cont "your #MON too!"
+	done
+
+TrainerBlackbeltLao:
+	trainer BLACKBELT_T, LAO, EVENT_BEAT_BLACKBELT_LAO, BlackbeltLaoSeenText, BlackbeltLaoBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext BlackbeltLaoAfterText
+	waitbutton
+	closetext
+	end
+
+BlackbeltLaoSeenText:
+	text "We martial artists"
+	line "fear nothing!"
+	done
+
+BlackbeltLaoBeatenText:
+	text "That's shocking!"
+	done
+
+BlackbeltLaoAfterText:
+	text "Fighting #MON"
+	line "are afraid of"
+	cont "psychics…"
+	done
+
+CianwoodGymGuideScript:
+	faceplayer
+	checkevent EVENT_BEAT_CHUCK
+	iftrue .CianwoodGymGuideWinScript
+	opentext
+	writetext CianwoodGymGuideText
+	waitbutton
+	closetext
+	end
+
+.CianwoodGymGuideWinScript:
+	opentext
+	writetext CianwoodGymGuideWinText
+	waitbutton
+	closetext
+	end
+
+CianwoodGymGuideText:
+	text "The GYM LEADER"
+	cont "here uses the"
+	cont "fighting-type."
+
+	para "So you should"
+	line "confound him with"
+	cont "psychic #MON."
+
+	para "Wipe out his #-"
+	line "MON before they"
+	cont "can use their"
+	cont "physical strength."
+	done
+
+CianwoodGymGuideWinText:
+	text "<PLAYER>! You won!"
+	line "I could tell by"
+	cont "looking at you!"
+	done
+
+CianwoodGymStatue:
+	gettrainername STRING_BUFFER_4, CHUCK, CHUCK1
 	jumpstd GymStatue3Script
 ;	checkflag ENGINE_STORMBADGE
 ;	iftrue .Beaten
 ;	jumpstd GymStatue1Script
 ;.Beaten:
 ;	jumpstd GymStatue2Script
+
+CianwoodGymBoulder:
+	jumpstd StrengthBoulderScript
 
 CianwoodGym_MapEvents:
 	db 0, 0 ; filler
@@ -336,10 +317,11 @@ CianwoodGym_MapEvents:
 	def_object_events
 	object_event  4,  1, SPRITE_CHUCK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CianwoodGymChuckScript, -1
 	object_event  5,  1, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodGymBoulder, -1
+	object_event  7, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CianwoodGymGuideScript, -1
 	object_event  4, 13, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GymClosedBlackbeltScript, EVENT_CIANWOOD_GYM_CLOSED_BLACKBELTS
 	object_event  5, 13, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GymClosedBlackbeltScript, EVENT_CIANWOOD_GYM_CLOSED_BLACKBELTS
-	object_event  2, 12, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBlackbeltNob, EVENT_CIANWOOD_GYM_TRAINERS
-	object_event  7, 12, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBlackbeltLung, EVENT_CIANWOOD_GYM_TRAINERS
+	object_event  2, 12, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBlackbeltLee, EVENT_CIANWOOD_GYM_TRAINERS ;nob
+	object_event  7, 12, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBlackbeltLao, EVENT_CIANWOOD_GYM_TRAINERS ;lung
 	object_event  4,  8, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodGymBoulder, -1
 	object_event  5,  8, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodGymBoulder, -1
 ;	object_event  3,  9, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBlackbeltYoshi, -1

@@ -1,5 +1,4 @@
 	object_const_def
-	const POKESEERSHOUSE_GRANNY
 
 PokeSeersHouse_MapScripts:
 	def_scene_scripts

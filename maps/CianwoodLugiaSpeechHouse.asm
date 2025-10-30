@@ -1,7 +1,4 @@
 	object_const_def
-	const CIANWOODLUGIASPEECHHOUSE_TEACHER
-	const CIANWOODLUGIASPEECHHOUSE_LASS
-	const CIANWOODLUGIASPEECHHOUSE_TWIN
 
 CianwoodLugiaSpeechHouse_MapScripts:
 	def_scene_scripts
@@ -28,7 +25,7 @@ CianwoodLugiaSpeechHouseTeacherText:
 	line "the four islands"
 	cont "along the way?"
 
-	para "I heard that a "
+	para "I heard that a"
 	line "mythical sea crea-"
 	cont "ture is hiding in"
 	cont "them."
@@ -37,8 +34,7 @@ CianwoodLugiaSpeechHouseTeacherText:
 CianwoodLugiaSpeechHouseLassText:
 	text "I heard that you"
 	line "can only see it if"
-
-	para "you have a SILVER"
+	cont "you have a SILVER"
 	line "WING."
 
 	para "It must have the"
@@ -49,9 +45,8 @@ CianwoodLugiaSpeechHouseLassText:
 CianwoodLugiaSpeechHouseTwinText:
 	text "I've heard that"
 	line "the whirlpools"
-
-	para "around the islands"
-	line "are caused by the"
+	cont "around the islands"
+	cont "are caused by the"
 	cont "sea creature."
 
 	para "You might need a"
