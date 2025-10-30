@@ -1,10 +1,116 @@
 	object_const_def
-	const MANIASHOUSE_ROCKER
 
 ManiasHouse_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+
+ManiaScript:
+	faceplayer
+	opentext
+	checkevent EVENT_GAVE_SHUCKLE_TO_MANIA
+	iftrue .AlreadyGaveShuckle
+	writetext ManiaText_WantShuckle
+	yesorno
+	iffalse .refused
+	special ReturnShuckie
+	ifequal SHUCKIE_WRONG_MON, .wrong
+	ifequal SHUCKIE_REFUSED, .refused
+	ifequal SHUCKIE_FAINTED, .fainted
+	ifequal SHUCKIE_HAPPY, .superhappy
+.superhappy
+;	; SHUCKIE_RETURNED
+	writetext ManiaText_LoveShuckie
+	setevent EVENT_GAVE_SHUCKLE_TO_MANIA
+	promptbutton
+.AlreadyGaveShuckle
+	writetext ManiaText_Thanks
+	waitbutton
+	closetext
+	end
+
+.wrong
+	writetext ManiaText_NotShuckle
+	waitbutton
+	closetext
+	end
+
+.refused
+	writetext ManiaText_RefusedShuckle
+	waitbutton
+	closetext
+	end
+
+.fainted
+	writetext ManiaText_ShuckleFainted
+	waitbutton
+	closetext
+	end
+
+;.nothingleft ; unreferenced
+;	writetext ManiaText_ShuckleIsYourLastMon
+;	waitbutton
+;	closetext
+;	end
+
+ManiaText_WantShuckle:
+	text "Hi! You have lots"
+	line "of #MON!"
+
+	para "I've always wanted"
+	line "my own #MON!"
+
+	para "SCHUCKLE is my"
+	line "favorite!"
+
+	para "Do you have one?"
+
+	para "Can I have it?"
+	done
+
+ManiaText_RefusedShuckle:
+	text "Oh. I understand."
+
+	para "Please come back"
+	line "if you change your"
+	cont "mind!"
+	done
+
+ManiaText_NotShuckle:
+	text "That's not a"
+	line "SHUCKLE!"
+	done
+
+ManiaText_ShuckleFainted:
+	text "That #MON"
+	line "needs to go to a"
+	cont "#MON CENTER."
+	done
+;
+;	text "You should take"
+;	line "that #MON to a"
+;	cont "#MON CENTER."
+;	done
+;
+;	text "That #MON"
+;	line "doesn't look"
+;	cont "so good."
+;	done
+
+ManiaText_LoveShuckie:
+	text "Wow! SHUCKLE!"
+
+	para "I'm going to call"
+	line "it SHUCKIE!"
+	done
+
+ManiaText_Thanks:
+	text "Thanks!"
+
+	para "I promise to"
+	line "make sure SHUCKIE"
+	cont "is happy!"
+	done
 
 ;ManiaScript:
 ;	faceplayer
@@ -209,4 +315,4 @@ ManiasHouse_MapEvents:
 	def_bg_events
 
 	def_object_events
-;	object_event  2,  4, SPRITE_ROCKER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ManiaScript, -1
+	object_event  2,  4, SPRITE_BOY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ManiaScript, -1
