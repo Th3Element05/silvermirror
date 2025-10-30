@@ -246,7 +246,6 @@ SwimmermTonyAfterBattleText:
 
 Route40Lass1Script:
 	jumptextfaceplayer Route40Lass1Text
-
 Route40Lass1Text:
 	text "Although you can't"
 	line "see it from here,"
@@ -257,7 +256,6 @@ Route40Lass1Text:
 
 Route40Lass2Script:
 	jumptextfaceplayer Route40Lass2Text
-
 Route40Lass2Text:
 	text "I came to OLIVINE"
 	line "by ship to see the"
@@ -272,7 +270,6 @@ Route40Lass2Text:
 
 Route40StandingYoungsterScript:
 	jumptextfaceplayer Route40StandingYoungsterText
-
 Route40StandingYoungsterText:
 	text "Have you gone to"
 	line "the BATTLE TOWER?"
