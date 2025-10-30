@@ -571,7 +571,7 @@ DEF KRIS EQU __trainer_class__
 	const GARRETT
 	const KENNETH
 ; johto
-	const STANLY
+	const STANLEY
 	const HUEY1
 ; rematch
 	const HUEY2
