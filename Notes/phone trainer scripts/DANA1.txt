@@ -1,0 +1,150 @@
+DANA1
+TrainerLassDana1:
+	trainer LASS, DANA1, EVENT_BEAT_LASS_DANA, LassDana1SeenText, LassDana1BeatenText, 0, .Script
+.Script
+	loadvar VAR_CALLERID, PHONE_LASS_DANA
+	opentext
+	checkflag ENGINE_DANA_READY_FOR_REMATCH
+	iftrue .DanaRematch
+	checkflag ENGINE_DANA_HAS_THUNDERSTONE
+	iftrue .TryGiveThunderstone
+	checkcellnum PHONE_LASS_DANA
+	iftrue .DanaDefeated
+	checkevent EVENT_DANA_ASKED_FOR_PHONE_NUMBER
+	iftrue .SecondTimeAsking
+	writetext LassDana1AfterBattleText
+	promptbutton
+	setevent EVENT_DANA_ASKED_FOR_PHONE_NUMBER
+	scall .AskNumber1F
+	sjump .AskForPhoneNumber
+
+.SecondTimeAsking:
+	scall .AskNumber2F
+.AskForPhoneNumber:
+	askforphonenumber PHONE_LASS_DANA
+	ifequal PHONE_CONTACTS_FULL, .PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, .DeclinedPhoneNumber
+	gettrainername STRING_BUFFER_3, LASS, DANA1
+	scall .RegisteredPhoneNumber
+	sjump .NumberAccepted
+
+.DanaRematch:
+	scall .Rematch
+	winlosstext LassDana1BeatenText, 0
+	checkevent EVENT_RESTORED_POWER_TO_KANTO
+	iftrue .LoadFight4
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .LoadFight3
+	checkevent EVENT_CLEARED_RADIO_TOWER
+	iftrue .LoadFight2
+	checkflag ENGINE_FLYPOINT_CIANWOOD
+	iftrue .LoadFight1
+	loadtrainer LASS, DANA1
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_DANA_READY_FOR_REMATCH
+	end
+
+.LoadFight1:
+	loadtrainer LASS, DANA2
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_DANA_READY_FOR_REMATCH
+	end
+
+.LoadFight2:
+	loadtrainer LASS, DANA3
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_DANA_READY_FOR_REMATCH
+	end
+
+.LoadFight3:
+	loadtrainer LASS, DANA4
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_DANA_READY_FOR_REMATCH
+	end
+
+.LoadFight4:
+	loadtrainer LASS, DANA5
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_DANA_READY_FOR_REMATCH
+	end
+
+.TryGiveThunderstone:
+	scall .Gift
+	verbosegiveitem THUNDERSTONE
+	iffalse .NoRoomForThunderstone
+	clearflag ENGINE_DANA_HAS_THUNDERSTONE
+	setevent ENGINE_DANA_GAVE_THUNDERSTONE
+	sjump .NumberAccepted
+
+.NoRoomForThunderstone:
+	sjump .PackFull
+
+.AskNumber1F:
+	jumpstd AskNumber1FScript
+	end
+
+.AskNumber2F:
+	jumpstd AskNumber2FScript
+	end
+
+.RegisteredPhoneNumber:
+	jumpstd RegisteredNumberFScript
+	end
+
+.NumberAccepted:
+	jumpstd NumberAcceptedFScript
+	end
+
+.DeclinedPhoneNumber:
+	jumpstd NumberDeclinedFScript
+	end
+
+.PhoneFull:
+	jumpstd PhoneFullFScript
+	end
+
+.Rematch:
+	jumpstd RematchFScript
+	end
+
+.Gift:
+	jumpstd GiftFScript
+	end
+
+.PackFull:
+	jumpstd PackFullFScript
+	end
+
+.DanaDefeated:
+	writetext LassDana1AfterBattleText
+	promptbutton
+	closetext
+	end
+
+LassDana1SeenText:
+	text "You seem to be"
+	line "good at #MON."
+
+	para "If you are, how"
+	line "about giving me"
+	cont "some advice?"
+	done
+
+LassDana1BeatenText:
+	text "I see. So you can"
+	line "battle that way."
+	done
+
+LassDana1AfterBattleText:
+	text "I know something"
+	line "good!"
+
+	para "MOOMOO FARM's milk"
+	line "is famous for its"
+	cont "flavor."
+	done
