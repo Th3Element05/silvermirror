@@ -87,10 +87,10 @@ ReturnShuckie:
 ; OT ID
 	ld a, [hli]
 	cp HIGH(MANIA_OT_ID)
-	jr nz, .DontReturn
+	jr nz, .done ;.DontReturn
 	ld a, [hl]
 	cp LOW(MANIA_OT_ID)
-	jr nz, .DontReturn
+	jr nz, .done ;.DontReturn
 
 ; OT
 	ld a, [wCurPartyMon]
@@ -100,7 +100,7 @@ ReturnShuckie:
 .CheckOT:
 	ld a, [de]
 	cp [hl]
-	jr nz, .DontReturn
+	jr nz, .done ;.DontReturn
 	cp "@"
 	jr z, .done
 	inc de
@@ -118,11 +118,12 @@ ReturnShuckie:
 	cp 150
 	ld a, SHUCKIE_HAPPY
 	jr nc, .HappyToStayWithYou
+.HappyToStayWithYou:
 	xor a ; REMOVE_PARTY
 	ld [wPokemonWithdrawDepositParameter], a
 	callfar RemoveMonFromParty
 	ld a, SHUCKIE_RETURNED
-.HappyToStayWithYou:
+;.HappyToStayWithYou:
 	ld [wScriptVar], a
 	ret
 
