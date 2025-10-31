@@ -2,25 +2,15 @@
 	const ROUTE_42_APRICORN
 	const ROUTE_42_APRICORN_2
 	const ROUTE_42_APRICORN_3
-;	const ROUTE_42_FISHER
-;	const ROUTE_42_POKEFAN_M
-;	const ROUTE_42_SUPER_NERD
-;	const ROUTE_42_POKE_BALL1
-;	const ROUTE_42_POKE_BALL2
-;	const ROUTE_42_SUICUNE
+	const ROUTE_42_CHUCK
+	const ROUTE_42_PRIMEAPE
 
 Route42_MapScripts:
 	def_scene_scripts
-;	scene_script Route42Noop1Scene, SCENE_ROUTE_42_NOOP
-;	scene_script Route42Noop2Scene, SCENE_ROUTE_42_SUICUNE
 
 	def_callbacks
 	callback MAPCALLBACK_OBJECTS, Route42Fruittrees
 	callback MAPCALLBACK_TILES, Route42BouldersCallback
-
-;Route42Noop1Scene:
-;Route42Noop2Scene:
-;	end
 
 Route42Fruittrees:
 .Apricorn:
@@ -49,26 +39,143 @@ Route42BouldersCallback:
 	iftrue .End
 	changeblock 50, 6, $0a ; boulder
 ;	changeblock 52, 4, $0a ; boulder
-	changeblock 52, 6, $0a ; boulder
+;	changeblock 52, 6, $0a ; boulder
 	changeblock 52, 8, $0a ; boulder
 .End
 	endcallback
 
-;Route42SuicuneScript:
-;	showemote EMOTE_SHOCK, PLAYER, 15
-;	pause 15
-;	playsound SFX_WARP_FROM
-;	applymovement ROUTE_42_SUICUNE, Route42SuicuneMovement
-;	disappear ROUTE_42_SUICUNE
-;	pause 10
-;	setscene SCENE_ROUTE_42_NOOP
-;	clearevent EVENT_SAW_SUICUNE_ON_ROUTE_36
-;	setmapscene ROUTE_36, SCENE_ROUTE_36_SUICUNE
-;	end
+Route42HikerScript:
+	checkevent EVENT_ROUTE_42_BOULDERS_CLEARED
+	iftrue .HikerBouldersCleared
+	jumptextfaceplayer Route42HikerBlockedText
+
+.HikerBouldersCleared
+	jumptextfaceplayer Route42HikerClearedText
+
+Route42HikerBlockedText:
+	text "Oh no! How am I"
+	line "going to get to"
+	cont "MAHOGANY TOWN?"
+
+	para "I'll need to go"
+	line "through DARK CAVE"
+	cont "on ROUTE 30."
+
+	para "But I'm afraid of"
+	line "the dark!"
+	done
+
+Route42HikerClearedText:
+	text "Aha! The boulders"
+	line "are all smashed!"
+
+	para "Now I don't need"
+	line "to go through that"
+	cont "DARK CAVE!"
+	done
+
+;Route42ChuckClearsBouldersScript:
+Route42ChuckScript:
+	opentext
+	writetext Route42ChuckTellRocksmashText
+	promptbutton
+	scall Route42PrimeapeScript
+	showemote EMOTE_SHOCK, PLAYER, 15
+	earthquake 50
+	playsound SFX_STRENGTH
+	waitsfx
+	changeblock 52, 8, $aa ; ground
+	reloadmappart
+	pause 20
+	opentext
+	writetext Route42ChuckWellDoneText
+	promptbutton
+	closetext
+	playsound SFX_BALL_POOF
+	waitsfx
+	disappear ROUTE_42_PRIMEAPE
+	pause 10
+	turnobject ROUTE_42_CHUCK, RIGHT
+	opentext
+	writetext Route42ChuckFarewellText
+	waitbutton
+	closetext
+	applymovement ROUTE_42_CHUCK, Route42ChuckWalksAwayMovement
+	disappear ROUTE_42_CHUCK
+	setevent EVENT_ROUTE_42_BOULDERS_CLEARED
+	clearevent EVENT_CIANWOOD_GYM_TRAINERS
+	end
+
+Route42ChuckTellRocksmashText:
+	text "CHUCK: Great work"
+	line "so far, PRIMEAPE!"
+
+	para "One more! Make it"
+	line "a big one!"
+
+	para "Use ROCK SMASH!"
+	done
+
+Route42ChuckWellDoneText:
+	text "WAHAHAH!"
+	line "Well done!"
+
+	para "You deserve a"
+	line "rest, PRIMEAPE!"
+
+	para "Return!"
+	done
+
+Route42ChuckFarewellText:
+	text "That's it! The"
+	line "path is clear!"
+
+	para "I should get back"
+	line "to CIANWOOD CITY!"
+
+	para "I am the GYM"
+	line "LEADER there!"
+
+	para "You look like a"
+	line "tough trainer!"
+
+	para "You should come"
+	line "challenge my GYM!"
+
+	para "My #MON love"
+	line "crushing rocks!"
+
+	para "But they love"
+	line "crushing strong"
+	cont "#MON more!"
+
+	para "WAHAHAH!"
+	done
+
+Route42ChuckWalksAwayMovement:
+	step DOWN
+	step DOWN
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step_end
+
+Route42PrimeapeScript:
+	opentext
+	writetext Route42PrimeapeText
+	cry PRIMEAPE
+	waitbutton
+	closetext
+	end
+
+Route42PrimeapeText:
+	text "PRIMEAPE: Prruh!"
+	line "Prruh! Priii!"
+	done
 
 ;TrainerFisherTully:
 ;	trainer FISHER, TULLY1, EVENT_BEAT_FISHER_TULLY, FisherTullySeenText, FisherTullyBeatenText, 0, .Script
-
 ;.Script:
 ;	loadvar VAR_CALLERID, PHONE_FISHER_TULLY
 ;	opentext
@@ -85,7 +192,7 @@ Route42BouldersCallback:
 ;	setevent EVENT_TULLY_ASKED_FOR_PHONE_NUMBER
 ;	scall .AskNumber1
 ;	sjump .AskForNumber
-
+;
 ;.AskedAlready:
 ;	scall .AskNumber2
 ;.AskForNumber:
@@ -95,7 +202,7 @@ Route42BouldersCallback:
 ;	gettrainername STRING_BUFFER_3, FISHER, TULLY1
 ;	scall .RegisteredNumber
 ;	sjump .NumberAccepted
-
+;
 ;.WantsBattle:
 ;	scall .Rematch
 ;	winlosstext FisherTullyBeatenText, 0
@@ -110,28 +217,28 @@ Route42BouldersCallback:
 ;	reloadmapafterbattle
 ;	clearflag ENGINE_TULLY_READY_FOR_REMATCH
 ;	end
-
+;
 ;.LoadFight1:
 ;	loadtrainer FISHER, TULLY2
 ;	startbattle
 ;	reloadmapafterbattle
 ;	clearflag ENGINE_TULLY_READY_FOR_REMATCH
 ;	end
-
+;
 ;.LoadFight2:
 ;	loadtrainer FISHER, TULLY3
 ;	startbattle
 ;	reloadmapafterbattle
 ;	clearflag ENGINE_TULLY_READY_FOR_REMATCH
 ;	end
-
+;
 ;.LoadFight3:
 ;	loadtrainer FISHER, TULLY4
 ;	startbattle
 ;	reloadmapafterbattle
 ;	clearflag ENGINE_TULLY_READY_FOR_REMATCH
 ;	end
-
+;
 ;.HasWaterStone:
 ;	scall .Gift
 ;	verbosegiveitem WATER_STONE
@@ -139,104 +246,52 @@ Route42BouldersCallback:
 ;	clearflag ENGINE_TULLY_HAS_WATER_STONE
 ;	setevent ENGINE_TULLY_GAVE_WATER_STONE
 ;	sjump .NumberAccepted
-
+;
 ;.NoRoom:
 ;	sjump .PackFull
-
+;
 ;.AskNumber1:
 ;	jumpstd AskNumber1MScript
 ;	end
-
+;
 ;.AskNumber2:
 ;	jumpstd AskNumber2MScript
 ;	end
-
+;
 ;.RegisteredNumber:
 ;	jumpstd RegisteredNumberMScript
 ;	end
-
+;
 ;.NumberAccepted:
 ;	jumpstd NumberAcceptedMScript
 ;	end
-
+;
 ;.NumberDeclined:
 ;	jumpstd NumberDeclinedMScript
 ;	end
-
+;
 ;.PhoneFull:
 ;	jumpstd PhoneFullMScript
 ;	end
-
+;
 ;.Rematch:
 ;	jumpstd RematchMScript
 ;	end
-
+;
 ;.Gift:
 ;	jumpstd GiftMScript
 ;	end
-
+;
 ;.PackFull:
 ;	jumpstd PackFullMScript
 ;	end
-
+;
 ;.TullyDefeated:
 ;	writetext FisherTullyAfterBattleText
 ;	promptbutton
 ;	closetext
 ;	end
-
-;TrainerPokemaniacShane:
-;	trainer POKEMANIAC, SHANE, EVENT_BEAT_POKEMANIAC_SHANE, PokemaniacShaneSeenText, PokemaniacShaneBeatenText, 0, .Script
 ;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext PokemaniacShaneAfterBattleText
-;	waitbutton
-;	closetext
-;	end
-
-;TrainerHikerBenjamin:
-;	trainer HIKER, BENJAMIN, EVENT_BEAT_HIKER_BENJAMIN, HikerBenjaminSeenText, HikerBenjaminBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext HikerBenjaminAfterBattleText
-;	waitbutton
-;	closetext
-;	end
-
-Route42Sign1:
-Route42Sign2:
-	jumptext Route42SignText
-
-MtMortarSign1:
-	jumptext MtMortarSign1Text
-
-MtMortarSign2:
-	jumptext MtMortarSign2Text
-
-;Route42UltraBall:
-;	itemball ULTRA_BALL
-
-;Route42SuperPotion:
-;	itemball SUPER_POTION
-
-;Route42HiddenMaxPotion:
-;	hiddenitem MAX_POTION, EVENT_ROUTE_42_HIDDEN_MAX_POTION
-
-;Route42SuicuneMovement:
-;	set_sliding
-;	fast_jump_step UP
-;	fast_jump_step UP
-;	fast_jump_step UP
-;	fast_jump_step RIGHT
-;	fast_jump_step RIGHT
-;	fast_jump_step RIGHT
-;	remove_sliding
-;	step_end
-
 ;FisherTullySeenText:
 ;	text "Let me demonstrate"
 ;	line "the power of the"
@@ -258,24 +313,18 @@ MtMortarSign2:
 ;	para "That's the best"
 ;	line "part of fishing!"
 ;	done
-;
-;HikerBenjaminSeenText:
-;	text "Ah, it's good to"
-;	line "be outside!"
-;	cont "I feel so free!"
-;	done
-;
-;HikerBenjaminBeatenText:
-;	text "Gahahah!"
-;	done
-;
-;HikerBenjaminAfterBattleText:
-;	text "Losing feels in-"
-;	line "significant if you"
-;
-;	para "look up at the big"
-;	line "sky!"
-;	done
+
+
+
+;TrainerPokemaniacShane:
+;	trainer POKEMANIAC, SHANE, EVENT_BEAT_POKEMANIAC_SHANE, PokemaniacShaneSeenText, PokemaniacShaneBeatenText, 0, .Script
+;.Script:
+;	endifjustbattled
+;	opentext
+;	writetext PokemaniacShaneAfterBattleText
+;	waitbutton
+;	closetext
+;	end
 ;
 ;PokemaniacShaneSeenText:
 ;	text "HEY!"
@@ -302,6 +351,40 @@ MtMortarSign2:
 ;	line "it. Please?"
 ;	done
 
+
+
+;TrainerHikerBenjamin:
+;	trainer HIKER, BENJAMIN, EVENT_BEAT_HIKER_BENJAMIN, HikerBenjaminSeenText, HikerBenjaminBeatenText, 0, .Script
+;.Script:
+;	endifjustbattled
+;	opentext
+;	writetext HikerBenjaminAfterBattleText
+;	waitbutton
+;	closetext
+;	end
+;
+;HikerBenjaminSeenText:
+;	text "Ah, it's good to"
+;	line "be outside!"
+;	cont "I feel so free!"
+;	done
+;
+;HikerBenjaminBeatenText:
+;	text "Gahahah!"
+;	done
+;
+;HikerBenjaminAfterBattleText:
+;	text "Losing feels in-"
+;	line "significant if you"
+;
+;	para "look up at the big"
+;	line "sky!"
+;	done
+
+
+Route42Sign1:
+Route42Sign2:
+	jumptext Route42SignText
 Route42SignText:
 	text "ROUTE 42"
 
@@ -309,6 +392,8 @@ Route42SignText:
 	line "MAHOGANY TOWN"
 	done
 
+MtMortarSign1:
+	jumptext MtMortarSign1Text
 MtMortarSign1Text:
 	text "MT.MORTAR"
 
@@ -316,12 +401,23 @@ MtMortarSign1Text:
 	line "INSIDE"
 	done
 
+MtMortarSign2:
+	jumptext MtMortarSign2Text
 MtMortarSign2Text:
 	text "MT.MORTAR"
 
 	para "WATERFALL CAVE"
 	line "INSIDE"
 	done
+
+Route42HiddenMaxPotion:
+	hiddenitem MAX_POTION, EVENT_ROUTE_42_HIDDEN_MAX_POTION
+
+;Route42UltraBall:
+;	itemball ULTRA_BALL
+
+;Route42SuperPotion:
+;	itemball SUPER_POTION
 
 Route42ApricornTree:
 	opentext
@@ -413,14 +509,13 @@ Route42_MapEvents:
 	warp_event 46,  7, MOUNT_MORTAR_1F_OUTSIDE, 3
 
 	def_coord_events
-;	coord_event 24, 14, SCENE_ROUTE_42_SUICUNE, Route42SuicuneScript
 
 	def_bg_events
 	bg_event  4, 10, BGEVENT_READ, Route42Sign1
 	bg_event  7,  5, BGEVENT_READ, MtMortarSign1
 	bg_event 45,  9, BGEVENT_READ, MtMortarSign2
 	bg_event 54,  8, BGEVENT_READ, Route42Sign2
-;	bg_event 16, 11, BGEVENT_ITEM, Route42HiddenMaxPotion
+	bg_event 16, 11, BGEVENT_ITEM, Route42HiddenMaxPotion
 	bg_event 27, 16, BGEVENT_READ, Route42NoApricorn
 	bg_event 28, 16, BGEVENT_READ, Route42NoApricorn
 	bg_event 29, 16, BGEVENT_READ, Route42NoApricorn
@@ -429,6 +524,9 @@ Route42_MapEvents:
 	object_event 27, 16, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route42ApricornTree, EVENT_ROUTE_42_APRICORN
 	object_event 28, 16, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route42APRICORN_2Tree, EVENT_ROUTE_42_APRICORN_2
 	object_event 29, 16, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, Route42APRICORN_3Tree, EVENT_ROUTE_42_APRICORN_3
+	object_event 52,  6, SPRITE_CHUCK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route42ChuckScript, EVENT_ROUTE_42_BOULDERS_CLEARED
+	object_event 52,  7, SPRITE_PRIMEAPE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route42PrimeapeScript, EVENT_ROUTE_42_BOULDERS_CLEARED
+	object_event 50, 10, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route42HikerScript, -1
 ;
 ;	object_event 40, 10, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerFisherTully, -1
 ;	object_event 51,  9, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerHikerBenjamin, -1
@@ -436,7 +534,7 @@ Route42_MapEvents:
 ;
 ;	object_event  6,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route42UltraBall, EVENT_ROUTE_42_ULTRA_BALL
 ;	object_event 33,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route42SuperPotion, EVENT_ROUTE_42_SUPER_POTION
-;	object_event 26, 16, SPRITE_SUICUNE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_SAW_SUICUNE_ON_ROUTE_42
+;	object_event 53,  4, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route42Rock, EVENT_CIANWOOD_GYM_TRAINERS
+	object_event 54,  4, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route42Rock, -1 ;EVENT_ROUTE_42_BOULDERS_CLEARED
+	object_event 50,  6, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route42Rock, EVENT_CIANWOOD_GYM_TRAINERS
 	object_event 53, 10, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route42Rock, -1
-	object_event 51,  6, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route42Rock, -1
-	object_event 54,  4, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route42Rock, -1

@@ -19,14 +19,13 @@ Route42EcruteakGateRouteBlockedText:
 	line "slide on ROUTE 42!"
 
 	para "Boulders fell from"
-	line "MT. MORTAR and"
+	line "MT.MORTAR and"
 	cont "blocked ROUTE 42!"
 
-	para "The GYM LEADER of"
-	line "MAHOGANY TOWN is"
-
-	para "working hard to"
-	line "clear the road!"
+	para "The GYM LEADER"
+	line "from CIANWOOD is"
+	cont "has come all this"
+	cont "way to help!"
 	done
 
 Route42EcruteakGateRouteClearText:
