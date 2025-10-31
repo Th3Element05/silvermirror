@@ -13,9 +13,10 @@ Route38EcruteakGateOfficerText:
 	text "Where did you say"
 	line "you're from?"
 
-	para "NEW BARK TOWN?"
+	para "PALLET TOWN,"
+	line "in KANTO?"
 
-	para "PROF.ELM lives"
+	para "PROF.OAK lives"
 	line "over there, right?"
 
 	para "You've come a long"
