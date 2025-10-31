@@ -194,7 +194,7 @@ DEF SPRITE_POKEMON EQU const_value
 	const SPRITE_PSYDUCK    ; 36
 ;	const SPRITE_GOLDUCK    ; 37
 ;	const SPRITE_MANKEY     ; 38
-;	const SPRITE_PRIMEAPE   ; 39
+	const SPRITE_PRIMEAPE   ; 39
 ;	const SPRITE_GROWLITHE  ; 3a
 ;	const SPRITE_ARCANINE   ; 3b
 	const SPRITE_POLIWAG    ; 3c DECORATION
