@@ -809,10 +809,10 @@ DEF KRIS EQU __trainer_class__
 
 	trainerclass SAGE ; 3b
 ; kanto (TAMER)
-	const KOJI
+	const KOA
 	const KHAI
 ; johto
-	const GAKU
+	const BO
 	const PING
 	const CHOW
 	const NICO
@@ -820,6 +820,9 @@ DEF KRIS EQU __trainer_class__
 	const JIN
 	const KYRO
 	const LI
+	const GAKU
+	const MASA
+	const KOJI
 
 	trainerclass MEDIUM ; 3c
 ; kanto (CHANNELER)
