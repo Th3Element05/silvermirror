@@ -18,7 +18,7 @@ FuchsiaGymKogaScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_KOGA
-	setevent EVENT_BEAT_SAGE_KOJI
+	setevent EVENT_BEAT_SAGE_KOA
 	setevent EVENT_BEAT_SAGE_KHAI
 	setevent EVENT_BEAT_JUGGLER_HORTON
 	setevent EVENT_BEAT_JUGGLER_ADAM
@@ -132,17 +132,17 @@ KogaAfterBattleText:
 	line "terrorize foes!"
 	done
 
-TrainerSageKoji:
-	trainer SAGE, KOJI, EVENT_BEAT_SAGE_KOJI, SageKojiSeenText, SageKojiBeatenText, 0, .Script
+TrainerSageKoa:
+	trainer SAGE, KOA, EVENT_BEAT_SAGE_KOA, SageKoaSeenText, SageKoaBeatenText, 0, .Script
 .Script:
 	endifjustbattled
 	opentext
-	writetext SageKojiAfterBattleText
+	writetext SageKoaAfterBattleText
 	waitbutton
 	closetext
 	end
 
-SageKojiSeenText:
+SageKoaSeenText:
 	text "I also study the"
 	line "way of the ninja"
 	cont "with master KOGA!"
@@ -152,11 +152,11 @@ SageKojiSeenText:
 	cont "animals!"
 	done
 
-SageKojiBeatenText:
+SageKoaBeatenText:
 	text "I'm defeated!"
 	done
 
-SageKojiAfterBattleText:
+SageKoaAfterBattleText:
 	text "I still have much"
 	line "to learn!"
 	done
@@ -369,7 +369,7 @@ FuchsiaGym_MapEvents:
 
 	def_object_events
 	object_event  4, 10, SPRITE_KOGA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FuchsiaGymKogaScript, -1
-	object_event  8,  2, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSageKoji, -1
+	object_event  8,  2, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSageKoa, -1
 	object_event  3,  5, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSageKhai, -1
 	object_event  2,  7, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerJugglerHorton, -1
 	object_event  7,  8, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerJugglerAdam, -1
