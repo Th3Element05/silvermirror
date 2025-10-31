@@ -57,7 +57,7 @@ SpriteMons:
 	db PSYDUCK    ; 36
 ;	db GOLDUCK    ; 37
 ;	db MANKEY     ; 38
-;	db PRIMEAPE   ; 39
+	db PRIMEAPE   ; 39
 ;	db GROWLITHE  ; 3a
 ;	db ARCANINE   ; 3b
 	db POLIWAG    ; 3c DECORATION
