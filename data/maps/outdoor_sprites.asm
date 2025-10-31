@@ -308,7 +308,7 @@ GoldenrodGroupSprites:
 ; OlivineCity and Route40 are connected
 OlivineGroupSprites:
 ; OlivineCity			SAILOR, youngster
-; Route38				SAILOR, ROCKER, LASS, BEAUTY, YOUNGSTER, berry, apricorn
+; Route38				SAILOR, ROCKER, LASS, BEAUTY, youngster, berry, apricorn
 ; Route39				SAILOR, POKEFAN_F, POKEFAN_M, YOUNGSTER, miltank, berry, apricorn (can -youngster if necessary? (range=1))
 CianwoodGroupSprites:
 ; CianwoodCity			POKEFAN_M, POKEFAN_F, LASS, youngster
@@ -325,6 +325,7 @@ CianwoodGroupSprites:
 	db SPRITE_ROCKER
 	db SPRITE_YOUNGSTER
 	; 9 of 9 max walking sprites
+	db SPRITE_FISHER
 	db SPRITE_MILTANK
 	db SPRITE_ROCK
 	db SPRITE_BERRY
@@ -332,7 +333,9 @@ CianwoodGroupSprites:
 	db 0 ; end
 
 MahoganyGroupSprites:
-; Route42, Route44, MahoganyTown
+; Route42		CHUCK, pokefanm, primeape, rock, apricorn
+; Route44		
+; MahoganyTown	
 	db SPRITE_GRAMPS
 	db SPRITE_YOUNGSTER
 	db SPRITE_LASS
@@ -341,11 +344,13 @@ MahoganyGroupSprites:
 	db SPRITE_POKEFAN_M
 	db SPRITE_COOLTRAINER_F
 	db SPRITE_FISHER
-	; 8 of 9 max walking sprites
+	db SPRITE_CHUCK
+	; 9 of 9 max walking sprites
+	db SPRITE_PRIMEAPE
+	db SPRITE_POKE_BALL
+	db SPRITE_ROCK
 	db SPRITE_BERRY
 	db SPRITE_APRICORN
-	db SPRITE_POKE_BALL
-	db SPRITE_SUICUNE
 	db 0 ; end
 
 LakeOfRageGroupSprites:
