@@ -159,7 +159,6 @@ EcruteakCityFisherText:
 	cont "at night."
 	done
 
-
 ;EcruteakCityYoungsterScript:
 ;	jumptextfaceplayer EcruteakCityYoungsterText
 ;EcruteakCityYoungsterText:
@@ -169,7 +168,6 @@ EcruteakCityFisherText:
 ;	para "LAKE OF RAGE. I'd"
 ;	line "like to see that."
 ;	done
-
 
 ;EcruteakCityGramps3Script:
 ;	jumptextfaceplayer EcruteakCityGramps3Text
@@ -187,7 +185,6 @@ EcruteakCityFisherText:
 ;	line "give you something"
 ;	cont "nice, I hear."
 ;	done
-
 
 EcruteakCityPokecenterSign:
 	jumpstd PokecenterSignScript
