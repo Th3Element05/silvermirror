@@ -113,8 +113,8 @@ OverworldSprites:
 	overworld_sprite PinsirMoveSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
 	overworld_sprite ChanseyMoveSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
 	overworld_sprite KangaskhanMoveSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
-; 68
-; 69
+	overworld_sprite MrMimeMoveSpriteGFX, 12, WALKING_SPRITE, PAL_OW_PURPLE
+	overworld_sprite TangelaMoveSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
 ; 6a
 ; 6b
 ; 6c

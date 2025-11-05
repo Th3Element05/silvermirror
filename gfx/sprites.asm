@@ -100,6 +100,8 @@ ScytherMoveSpriteGFX::         INCBIN "gfx/sprites/scyther_move.2bpp"
 PinsirMoveSpriteGFX::          INCBIN "gfx/sprites/pinsir_move.2bpp"
 ChanseyMoveSpriteGFX::         INCBIN "gfx/sprites/chansey_move.2bpp"
 KangaskhanMoveSpriteGFX::      INCBIN "gfx/sprites/kangaskhan_move.2bpp"
+MrMimeMoveSpriteGFX::          INCBIN "gfx/sprites/mr_mime_move.2bpp"
+TangelaMoveSpriteGFX::         INCBIN "gfx/sprites/tangela_move.2bpp"
 
 
 SECTION "Sprites 3", ROMX
