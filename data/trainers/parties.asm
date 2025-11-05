@@ -1108,8 +1108,8 @@ SchoolboyGroup:
 	db -1 ; end
 
 	; SCHOOLBOY, CHAD1
-	db "CHAD@", TRAINERTYPE_NORMAL
-	db 20, MISSINGNO
+	db "CHAD@", TRAINERTYPE_MOVES
+	db 46, MR__MIME,    LIGHT_SCREEN, REFLECT, ENCORE, PSYBEAM
 	db -1 ; end
 
 BirdKeeperGroup:
