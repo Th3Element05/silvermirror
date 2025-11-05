@@ -268,11 +268,12 @@ EcruteakGroupSprites:
 	db SPRITE_SUPER_NERD
 	; 8 of 9 max walking sprites
 	db SPRITE_TWIN
+	db SPRITE_MR__MIME_MOVE
+	db SPRITE_TANGELA_MOVE
 	db SPRITE_SUDOWOODO
 	db SPRITE_POKE_BALL
 	db SPRITE_BERRY
 	db SPRITE_APRICORN
-	db SPRITE_SUICUNE
 	db 0 ; end
 
 AzaleaGroupSprites:

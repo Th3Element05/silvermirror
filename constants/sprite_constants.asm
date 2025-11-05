@@ -108,8 +108,8 @@
 	const SPRITE_PINSIR_MOVE            ; 65
 	const SPRITE_CHANSEY_MOVE           ; 66
 	const SPRITE_KANGASKHAN_MOVE        ; 67
-;; 68
-;; 69
+	const SPRITE_MR__MIME_MOVE          ; 68
+	const SPRITE_TANGELA_MOVE           ; 69
 ;; 6a
 ;; 6b
 ;; 6c
@@ -248,8 +248,8 @@ DEF SPRITE_POKEMON EQU const_value
 ;	const SPRITE_LICKITUNG  ; 6c
 ;	const SPRITE_KOFFING    ; 6d
 ;	const SPRITE_WEEZING    ; 6e
-;	const SPRITE_RHYHORN    ; 6f
-	const SPRITE_RHYDON     ; 70
+	const SPRITE_RHYHORN    ; 6f
+;	const SPRITE_RHYDON     ; 70
 ;	const SPRITE_CHANSEY    ; 71 walk
 ;	const SPRITE_TANGELA    ; 72
 ;	const SPRITE_KANGASKHAN ; 73 walk
