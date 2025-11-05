@@ -1,6 +1,4 @@
 	object_const_def
-	const ECRUTEAKITEMFINDERHOUSE_COOLTRAINER_M
-	const ECRUTEAKITEMFINDERHOUSE_POKEDEX
 
 EcruteakItemfinderHouse_MapScripts:
 	def_scene_scripts
@@ -107,9 +105,6 @@ EcruteakHistoryBook:
 	closetext
 	end
 
-ItemFinderHouseRadio:
-	jumpstd Radio2Script
-
 EcruteakHistoryBookText:
 	text "HISTORY OF"
 	line "ECRUTEAK"
@@ -139,15 +134,13 @@ EcruteakTwoTowersText:
 EcruteakThreeMonText:
 	text "ECRUTEAK was also"
 	line "home to three"
-
-	para "#MON that raced"
-	line "around the town."
+	cont "#MON that raced"
+	cont "around the town."
 
 	para "They were said to"
 	line "have been born of"
-
-	para "water, lightning"
-	line "and fire."
+	cont "water, lightning"
+	cont "and fire."
 
 	para "But they could not"
 	line "contain their"
@@ -155,22 +148,24 @@ EcruteakThreeMonText:
 
 	para "So they say the"
 	line "three ran like the"
-
-	para "wind off into the"
-	line "grassland."
+	cont "wind off into the"
+	cont "grassland."
 	done
+
+ItemFinderHouseRadio:
+	jumpstd Radio2Script
 
 EcruteakItemfinderHouse_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	warp_event  2,  7, ECRUTEAK_CITY, 11
 	warp_event  3,  7, ECRUTEAK_CITY, 11
-	warp_event  4,  7, ECRUTEAK_CITY, 11
 
 	def_coord_events
 
 	def_bg_events
-	bg_event  2,  1, BGEVENT_READ, ItemFinderHouseRadio
+	bg_event  7,  1, BGEVENT_READ, ItemFinderHouseRadio
 
 	def_object_events
 ;	object_event  2,  3, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, EcruteakItemfinderGuy, -1

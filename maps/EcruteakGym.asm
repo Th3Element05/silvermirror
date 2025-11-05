@@ -1,10 +1,4 @@
 	object_const_def
-;	const ECRUTEAKGYM_MORTY
-;	const ECRUTEAKGYM_SAGE1
-;	const ECRUTEAKGYM_SAGE2
-;	const ECRUTEAKGYM_GRANNY1
-;	const ECRUTEAKGYM_GRANNY2
-;	const ECRUTEAKGYM_GYM_GUIDE
 ;	const ECRUTEAKGYM_GRAMPS
 
 EcruteakGym_MapScripts:
@@ -20,6 +14,46 @@ EcruteakGym_MapScripts:
 
 ;EcruteakGymNoopScene:
 ;	end
+
+;EcruteakGymClosed:
+;	applymovement PLAYER, EcruteakGymPlayerStepUpMovement
+;	applymovement ECRUTEAKGYM_GRAMPS, EcruteakGymGrampsSlowStepDownMovement
+;	opentext
+;	writetext EcruteakGymClosedText
+;	waitbutton
+;	closetext
+;	follow PLAYER, ECRUTEAKGYM_GRAMPS
+;	applymovement PLAYER, EcruteakGymPlayerSlowStepDownMovement
+;	stopfollow
+;	special FadeOutPalettes
+;	playsound SFX_ENTER_DOOR
+;	waitsfx
+;	warp ECRUTEAK_CITY, 6, 27
+;	end
+;
+;EcruteakGymClosedText:
+;	text "MORTY, the GYM"
+;	line "LEADER, is absent."
+;
+;	para "Sorry, but you'll"
+;	line "have to leave."
+;
+;	para "Hohohoho."
+;	done
+;
+;EcruteakGymPlayerStepUpMovement:
+;	step UP
+;	step_end
+;
+;EcruteakGymPlayerSlowStepDownMovement:
+;	fix_facing
+;	slow_step DOWN
+;	remove_fixed_facing
+;	step_end
+;
+;EcruteakGymGrampsSlowStepDownMovement:
+;	slow_step DOWN
+;	step_end
 
 EcruteakGymMortyScript:
 	faceplayer
@@ -47,10 +81,10 @@ EcruteakGymMortyScript:
 .FightDone:
 	checkevent EVENT_GOT_TM30_SHADOW_BALL
 	iftrue .GotShadowBall
-;	setevent EVENT_BEAT_SAGE_JEFFREY
+;	setevent EVENT_BEAT_SAGE_BO
 ;	setevent EVENT_BEAT_SAGE_PING
-;	setevent EVENT_BEAT_MEDIUM_MARTHA
-;	setevent EVENT_BEAT_MEDIUM_GRACE
+;	setevent EVENT_BEAT_MEDIUM_MINA
+;	setevent EVENT_BEAT_MEDIUM_LEONA
 	writetext MortyText_FogBadgeSpeech
 	promptbutton
 	verbosegiveitem TM_SHADOW_BALL
@@ -79,126 +113,21 @@ EcruteakGymMortyScript:
 ;.RadioTowerRockets:
 ;	jumpstd RadioTowerRocketsScript
 
-;EcruteakGymClosed:
-;	applymovement PLAYER, EcruteakGymPlayerStepUpMovement
-;	applymovement ECRUTEAKGYM_GRAMPS, EcruteakGymGrampsSlowStepDownMovement
-;	opentext
-;	writetext EcruteakGymClosedText
-;	waitbutton
-;	closetext
-;	follow PLAYER, ECRUTEAKGYM_GRAMPS
-;	applymovement PLAYER, EcruteakGymPlayerSlowStepDownMovement
-;	stopfollow
-;	special FadeOutPalettes
-;	playsound SFX_ENTER_DOOR
-;	waitsfx
-;	warp ECRUTEAK_CITY, 6, 27
-;	end
-
-;TrainerSageJeffrey:
-;	trainer SAGE, JEFFREY, EVENT_BEAT_SAGE_JEFFREY, SageJeffreySeenText, SageJeffreyBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext SageJeffreyAfterBattleText
-;	waitbutton
-;	closetext
-;	end
-
-;TrainerSagePing:
-;	trainer SAGE, PING, EVENT_BEAT_SAGE_PING, SagePingSeenText, SagePingBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext SagePingAfterBattleText
-;	waitbutton
-;	closetext
-;	end
-
-;TrainerMediumMartha:
-;	trainer MEDIUM, MARTHA, EVENT_BEAT_MEDIUM_MARTHA, MediumMarthaSeenText, MediumMarthaBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext MediumMarthaAfterBattleText
-;	waitbutton
-;	closetext
-;	end
-
-;TrainerMediumGrace:
-;	trainer MEDIUM, GRACE, EVENT_BEAT_MEDIUM_GRACE, MediumGraceSeenText, MediumGraceBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext MediumGraceAfterBattleText
-;	waitbutton
-;	closetext
-;	end
-
-EcruteakGymGuideScript:
-	faceplayer
-	opentext
-	checkevent EVENT_BEAT_MORTY
-	iftrue .EcruteakGymGuideWinScript
-	writetext EcruteakGymGuideText
-	waitbutton
-	closetext
-	end
-
-.EcruteakGymGuideWinScript:
-	writetext EcruteakGymGuideWinText
-	waitbutton
-	closetext
-	end
-
-EcruteakGymStatue:
-	checkflag ENGINE_FOGBADGE
-	iftrue .Beaten
-	jumpstd GymStatue1Script
-.Beaten:
-	gettrainername STRING_BUFFER_4, MORTY, MORTY1
-	jumpstd GymStatue2Script
-
-;EcruteakGymPlayerStepUpMovement:
-;	step UP
-;	step_end
-
-;EcruteakGymPlayerSlowStepDownMovement:
-;	fix_facing
-;	slow_step DOWN
-;	remove_fixed_facing
-;	step_end
-
-;EcruteakGymGrampsSlowStepDownMovement:
-;	slow_step DOWN
-;	step_end
-
 MortyIntroText:
-	text "Good of you to"
-	line "have come."
-
-	para "Here in ECRUTEAK,"
+	text "Here in ECRUTEAK,"
 	line "#MON have been"
 	cont "revered."
 
 	para "It's said that a"
 	line "rainbow-colored"
-
-	para "#MON will come"
-	line "down to appear"
-
-	para "before a truly"
-	line "powerful trainer."
+	cont "#MON will appear"
+	cont "before a truly"
+	cont "powerful trainer."
 
 	para "I believed that"
 	line "tale, so I have"
-
-	para "secretly trained"
-	line "here all my life."
+	cont "trained here all"
+	cont "my life."
 
 	para "As a result, I can"
 	line "now see what"
@@ -208,9 +137,8 @@ MortyIntroText:
 
 	para "With a little"
 	line "more, I could see"
-
-	para "a future in which"
-	line "I meet the #MON"
+	cont "a future in which"
+	cont "I meet the #MON"
 	cont "of rainbow colors."
 
 	para "You're going to"
@@ -251,9 +179,8 @@ MortyText_FogBadgeSpeech:
 MortyText_ShadowBallSpeech:
 	text "It's SHADOW BALL."
 	line "It causes damage"
-
-	para "and may reduce"
-	line "SP.DEF."
+	cont "and may reduce"
+	cont "SP.DEF."
 
 	para "Use it if it"
 	line "appeals to you."
@@ -274,95 +201,148 @@ MortyFightDoneText:
 	line "that…"
 	done
 
-;SageJeffreySeenText:
-;	text "I spent the spring"
-;	line "with my #MON."
-;
-;	para "Then summer, fall"
-;	line "and winter…"
-;
-;	para "Then spring came"
-;	line "again. We have"
-;
-;	para "lived together"
-;	line "for a long time."
-;	done
-;
-;SageJeffreyBeatenText:
-;	text "Wins and losses, I"
-;	line "experienced both."
-;	done
-;
-;SageJeffreyAfterBattleText:
-;	text "Where did #MON"
-;	line "come from?"
-;	done
-;
-;SagePingSeenText:
-;	text "Can you inflict"
-;	line "any damage on our"
-;	cont "#MON?"
-;	done
-;
-;SagePingBeatenText:
-;	text "Ah! Well done!"
-;	done
-;
-;SagePingAfterBattleText:
-;	text "We use only ghost-"
-;	line "type #MON."
-;
-;	para "No normal-type"
-;	line "attack can harm"
-;	cont "them!"
-;	done
-;
-;MediumMarthaSeenText:
-;	text "I shall win!"
-;	done
-;
-;MediumMarthaBeatenText:
-;	text "I, I, I lost!"
-;	done
-;
-;MediumMarthaAfterBattleText:
-;	text "The one who wants"
-;	line "to win most--will!"
-;	done
-;
-;MediumGraceSeenText:
-;	text "Stumped by our in-"
-;	line "visible floor?"
-;
-;	para "Defeat me if you"
-;	line "want a hint!"
-;	done
-;
-;MediumGraceBeatenText:
-;	text "Wha-what?"
-;	done
-;
-;MediumGraceAfterBattleText:
-;	text "Fine. I shall tell"
-;	line "you the secret of"
-;
-;	para "the invisible"
-;	line "floor."
-;
-;	para "The path is right"
-;	line "before our eyes!"
-;	done
+TrainerSageBo:
+	trainer SAGE, BO, EVENT_BEAT_SAGE_BO, SageBoSeenText, SageBoBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext SageBoAfterBattleText
+	waitbutton
+	closetext
+	end
+
+SageBoSeenText:
+	text "I spent the spring"
+	line "with my #MON."
+
+	para "Then summer, fall"
+	line "and winter…"
+
+	para "Then spring came"
+	line "again. We have"
+	cont "lived together"
+	cont "for a long time."
+	done
+
+SageBoBeatenText:
+	text "Wins and losses, I"
+	line "experienced both."
+	done
+
+SageBoAfterBattleText:
+	text "Where did #MON"
+	line "come from?"
+	done
+
+TrainerSagePing:
+	trainer SAGE, PING, EVENT_BEAT_SAGE_PING, SagePingSeenText, SagePingBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext SagePingAfterBattleText
+	waitbutton
+	closetext
+	end
+
+SagePingSeenText:
+	text "Can you inflict"
+	line "any damage on our"
+	cont "#MON?"
+	done
+
+SagePingBeatenText:
+	text "Ah! Well done!"
+	done
+
+SagePingAfterBattleText:
+	text "We use only ghost-"
+	line "type #MON."
+
+	para "No normal-type"
+	line "attack can harm"
+	cont "them!"
+	done
+
+TrainerMediumMina:
+	trainer MEDIUM, MINA, EVENT_BEAT_MEDIUM_MINA, MediumMinaSeenText, MediumMinaBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext MediumMinaAfterBattleText
+	waitbutton
+	closetext
+	end
+
+MediumMinaSeenText:
+	text "I shall win!"
+	done
+
+MediumMinaBeatenText:
+	text "I, I, I lost!"
+	done
+
+MediumMinaAfterBattleText:
+	text "The one who wants"
+	line "to win most--will!"
+	done
+
+TrainerMediumLeona:
+	trainer MEDIUM, LEONA, EVENT_BEAT_MEDIUM_LEONA, MediumLeonaSeenText, MediumLeonaBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext MediumLeonaAfterBattleText
+	waitbutton
+	closetext
+	end
+
+MediumLeonaSeenText:
+	text "Stumped by our in-"
+	line "visible floor?"
+
+	para "Defeat me if you"
+	line "want a hint!"
+	done
+
+MediumLeonaBeatenText:
+	text "Wha-what?"
+	done
+
+MediumLeonaAfterBattleText:
+	text "Fine. I shall tell"
+	line "you the secret of"
+
+	para "the invisible"
+	line "floor."
+
+	para "The path is right"
+	line "before our eyes!"
+	done
+
+EcruteakGymGuideScript:
+	faceplayer
+	opentext
+	checkevent EVENT_BEAT_MORTY
+	iftrue .EcruteakGymGuideWinScript
+	writetext EcruteakGymGuideText
+	waitbutton
+	closetext
+	end
+
+.EcruteakGymGuideWinScript:
+	writetext EcruteakGymGuideWinText
+	waitbutton
+	closetext
+	end
 
 EcruteakGymGuideText:
 	text "The trainers here"
-	line "have secret mo-"
-	cont "tives."
+	line "know many secrets."
 
 	para "If you win, they"
 	line "may tell you some"
-
-	para "deep secrets about"
-	line "ECRUTEAK."
+	cont "deep secrets about"
+	cont "ECRUTEAK."
 	done
 
 EcruteakGymGuideWinText:
@@ -374,15 +354,14 @@ EcruteakGymGuideWinText:
 	cont "pure terror!"
 	done
 
-;EcruteakGymClosedText:
-;	text "MORTY, the GYM"
-;	line "LEADER, is absent."
-;
-;	para "Sorry, but you'll"
-;	line "have to leave."
-;
-;	para "Hohohoho."
-;	done
+EcruteakGymStatue:
+	gettrainername STRING_BUFFER_4, MORTY, MORTY1
+	jumpstd GymStatue3Script
+;	checkflag ENGINE_FOGBADGE
+;	iftrue .Beaten
+;	jumpstd GymStatue1Script
+;.Beaten:
+;	jumpstd GymStatue2Script
 
 EcruteakGym_MapEvents:
 	db 0, 0 ; filler
@@ -395,7 +374,7 @@ EcruteakGym_MapEvents:
 	warp_event  3,  4, ECRUTEAK_GYM, 3
 	warp_event  4,  4, ECRUTEAK_GYM, 3
 	warp_event  4,  5, ECRUTEAK_GYM, 3
-	warp_event  6,  7, ECRUTEAK_GYM, 3
+	warp_event  6,  4, ECRUTEAK_GYM, 3
 	warp_event  7,  4, ECRUTEAK_GYM, 3
 	warp_event  2,  6, ECRUTEAK_GYM, 3
 	warp_event  3,  6, ECRUTEAK_GYM, 3
@@ -429,10 +408,10 @@ EcruteakGym_MapEvents:
 	bg_event  6, 15, BGEVENT_READ, EcruteakGymStatue
 
 	def_object_events
-	object_event  5,  1, SPRITE_MORTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, EcruteakGymMortyScript, -1
-;	object_event  2,  7, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerSageJeffrey, -1
-;	object_event  3, 13, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSagePing, -1
-;	object_event  7,  5, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerMediumMartha, -1
-;	object_event  7,  9, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerMediumGrace, -1
-	object_event  7, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, EcruteakGymGuideScript, -1
 ;	object_event  4, 14, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ECRUTEAK_GYM_GRAMPS
+	object_event  5,  1, SPRITE_MORTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, EcruteakGymMortyScript, -1
+	object_event  2,  7, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerSageBo, -1 ;jeffrey
+	object_event  3, 13, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSagePing, -1 ;ping
+	object_event  7,  5, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerMediumMina, -1 ;martha
+	object_event  7,  9, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerMediumLeona, -1 ;grace
+	object_event  7, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, EcruteakGymGuideScript, -1
