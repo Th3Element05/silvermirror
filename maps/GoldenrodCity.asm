@@ -19,16 +19,12 @@ GoldenrodCity_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
-	callback MAPCALLBACK_NEWMAP, GoldenrodCityFlypointAndFloriaCallback
+	callback MAPCALLBACK_NEWMAP, GoldenrodCityFlypointCallback
 ;	callback MAPCALLBACK_OBJECTS, GoldenrodCityMoveTutorCallback
 
-GoldenrodCityFlypointAndFloriaCallback:
+GoldenrodCityFlypointCallback:
 	setflag ENGINE_FLYPOINT_GOLDENROD
 	setflag ENGINE_REACHED_GOLDENROD
-;	checkevent EVENT_MET_FLORIA
-;	iftrue .FloriaDone
-;	clearevent EVENT_FLORIA_AT_SUDOWOODO
-;.FloriaDone:
 	endcallback
 
 ;GoldenrodCityMoveTutorCallback:
