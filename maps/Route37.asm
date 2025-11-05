@@ -1,11 +1,8 @@
 	object_const_def
-;	const ROUTE_37_TWIN1
-;	const ROUTE_37_TWIN2
-;	const ROUTE_37_YOUNGSTER
 	const ROUTE_37_APRICORN
-	const ROUTE_37_SUNNY
 	const ROUTE_37_APRICORN_2
 	const ROUTE_37_APRICORN_3
+	const ROUTE_37_SUNNY
 
 Route37_MapScripts:
 	def_scene_scripts
@@ -44,39 +41,6 @@ Route37FruittreesandSunny:
 .SunnyAppears:
 	appear ROUTE_37_SUNNY
 	endcallback
-
-;TrainerTwinsAnnandanne1:
-;	trainer TWINS, ANNANDANNE1, EVENT_BEAT_TWINS_ANN_AND_ANNE, TwinsAnnandanne1SeenText, TwinsAnnandanne1BeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext TwinsAnnandanne1AfterBattleText
-;	waitbutton
-;	closetext
-;	end
-
-;TrainerTwinsAnnandanne2:
-;	trainer TWINS, ANNANDANNE2, EVENT_BEAT_TWINS_ANN_AND_ANNE, TwinsAnnandanne2SeenText, TwinsAnnandanne2BeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext TwinsAnnandanne2AfterBattleText
-;	waitbutton
-;	closetext
-;	end
-
-;TrainerPsychicGreg:
-;	trainer PSYCHIC_T, GREG, EVENT_BEAT_PSYCHIC_GREG, PsychicGregSeenText, PsychicGregBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext PsychicGregAfterBattleText
-;	waitbutton
-;	closetext
-;	end
 
 SunnyScript:
 	faceplayer
@@ -120,120 +84,6 @@ SunnyNotSundayScript:
 	waitbutton
 	closetext
 	end
-
-Route37Sign:
-	jumptext Route37SignText
-
-Route37ApricornTree:
-	opentext
-	writetext Route37ApricornTreeText
-	promptbutton
-	writetext Route37HeyItsApricornText
-	promptbutton
-	verbosegiveitem RED_APRICORN
-	iffalse .NoRoomInBag
-	disappear ROUTE_37_APRICORN
-	setflag ENGINE_DAILY_ROUTE_37_APRICORN
-.NoRoomInBag
-	closetext
-	end
-
-Route37ApricornTree2:
-	opentext
-	writetext Route37ApricornTreeText
-	promptbutton
-	writetext Route37HeyItsAPRICORN_2Text
-	promptbutton
-	verbosegiveitem BLU_APRICORN
-	iffalse .NoRoomInBag
-	disappear ROUTE_37_APRICORN_2
-	setflag ENGINE_DAILY_ROUTE_37_APRICORN_2
-.NoRoomInBag
-	closetext
-	end
-
-Route37ApricornTree3:
-	opentext
-	writetext Route37ApricornTreeText
-	promptbutton
-	writetext Route37HeyItsAPRICORN_3Text
-	promptbutton
-	verbosegiveitem BLK_APRICORN
-	iffalse .NoRoomInBag
-	disappear ROUTE_37_APRICORN_3
-	setflag ENGINE_DAILY_ROUTE_37_APRICORN_3
-.NoRoomInBag
-	closetext
-	end
-
-Route37NoApricorn:
-	opentext
-	writetext Route37ApricornTreeText
-	promptbutton
-	writetext Route37NothingHereText
-	waitbutton
-	closetext
-	end
-
-;Route37HiddenEther:
-;	hiddenitem ETHER, EVENT_ROUTE_37_HIDDEN_ETHER
-
-;TwinsAnnandanne1SeenText:
-;	text "ANN: ANNE and I"
-;	line "are in this to-"
-;	cont "gether!"
-;	done
-
-;TwinsAnnandanne1BeatenText:
-;	text "ANN & ANNE: Nnn… A"
-;	line "little too strong."
-;	done
-
-;TwinsAnnandanne1AfterBattleText:
-;	text "ANN: I can tell"
-;	line "what my sister and"
-;
-;	para "my #MON are"
-;	line "thinking."
-;	done
-
-;TwinsAnnandanne2SeenText:
-;	text "ANNE: ANN and I"
-;	line "are in this to-"
-;	cont "gether!"
-;	done
-
-;TwinsAnnandanne2BeatenText:
-;	text "ANN & ANNE: Nnn… A"
-;	line "little too strong."
-;	done
-
-;TwinsAnnandanne2AfterBattleText:
-;	text "ANNE: We share the"
-;	line "same feelings as"
-;	cont "our #MON."
-;	done
-
-;PsychicGregSeenText:
-;	text "#MON can't do a"
-;	line "thing if they are"
-;	cont "asleep."
-;
-;	para "I'll show you how"
-;	line "scary that is!"
-;	done
-
-;PsychicGregBeatenText:
-;	text "I lost. That's"
-;	line "pretty sad…"
-;	done
-
-;PsychicGregAfterBattleText:
-;	text "Putting #MON to"
-;	line "sleep or paralyz-"
-;	cont "ing them are good"
-;	cont "battle techniques."
-;	done
 
 MeetSunnyText:
 	text "SUNNY: Hi!"
@@ -295,9 +145,147 @@ SunnyNotSundayText:
 	cont "Um… I forgot!"
 	done
 
+TrainerPsychicMark:
+	trainer PSYCHIC_T, MARK, EVENT_BEAT_PSYCHIC_MARK, PsychicMarkSeenText, PsychicMarkBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext PsychicMarkAfterBattleText
+	waitbutton
+	closetext
+	end
+
+PsychicMarkSeenText:
+	text "#MON can't do a"
+	line "thing if they are"
+	cont "asleep."
+
+	para "I'll show you how"
+	line "scary that is!"
+	done
+
+PsychicMarkBeatenText:
+	text "I lost. That's"
+	line "pretty sad…"
+	done
+
+PsychicMarkAfterBattleText:
+	text "Putting #MON to"
+	line "sleep or paralyz-"
+	cont "ing them are good"
+	cont "battle techniques."
+	done
+
+TrainerTwinsAnnandanne1:
+	trainer TWINS, ANNANDANNE, EVENT_BEAT_TWINS_ANNANDANNE, TwinsAnnandanne1SeenText, TwinsAnnandanneBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext TwinsAnnandanne1AfterBattleText
+	waitbutton
+	closetext
+	end
+
+TrainerTwinsAnnandanne2:
+	trainer TWINS, ANNANDANNE, EVENT_BEAT_TWINS_ANNANDANNE, TwinsAnnandanne2SeenText, TwinsAnnandanneBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext TwinsAnnandanne2AfterBattleText
+	waitbutton
+	closetext
+	end
+
+TwinsAnnandanne1SeenText:
+	text "ANN: ANNE and I"
+	line "are in this to-"
+	cont "gether!"
+	done
+
+TwinsAnnandanne2SeenText:
+	text "ANNE: ANN and I"
+	line "are in this to-"
+	cont "gether!"
+	done
+
+TwinsAnnandanneBeatenText:
+	text "ANN & ANNE: Nnn… A"
+	line "little too strong."
+	done
+
+TwinsAnnandanne1AfterBattleText:
+	text "ANN: I can tell"
+	line "what my sister and"
+
+	para "my #MON are"
+	line "thinking."
+	done
+
+TwinsAnnandanne2AfterBattleText:
+	text "ANNE: We share the"
+	line "same feelings as"
+	cont "our #MON."
+	done
+
+Route37Sign:
+	jumptext Route37SignText
 Route37SignText:
 	text "ROUTE 37"
 	done
+
+Route37HiddenEther:
+	hiddenitem ETHER, EVENT_ROUTE_37_HIDDEN_ETHER
+
+Route37ApricornTree:
+	opentext
+	writetext Route37ApricornTreeText
+	promptbutton
+	writetext Route37HeyItsApricornText
+	promptbutton
+	verbosegiveitem RED_APRICORN
+	iffalse .NoRoomInBag
+	disappear ROUTE_37_APRICORN
+	setflag ENGINE_DAILY_ROUTE_37_APRICORN
+.NoRoomInBag
+	closetext
+	end
+
+Route37ApricornTree2:
+	opentext
+	writetext Route37ApricornTreeText
+	promptbutton
+	writetext Route37HeyItsAPRICORN_2Text
+	promptbutton
+	verbosegiveitem BLU_APRICORN
+	iffalse .NoRoomInBag
+	disappear ROUTE_37_APRICORN_2
+	setflag ENGINE_DAILY_ROUTE_37_APRICORN_2
+.NoRoomInBag
+	closetext
+	end
+
+Route37ApricornTree3:
+	opentext
+	writetext Route37ApricornTreeText
+	promptbutton
+	writetext Route37HeyItsAPRICORN_3Text
+	promptbutton
+	verbosegiveitem BLK_APRICORN
+	iffalse .NoRoomInBag
+	disappear ROUTE_37_APRICORN_3
+	setflag ENGINE_DAILY_ROUTE_37_APRICORN_3
+.NoRoomInBag
+	closetext
+	end
+
+Route37NoApricorn:
+	opentext
+	writetext Route37ApricornTreeText
+	promptbutton
+	writetext Route37NothingHereText
+	waitbutton
+	closetext
+	end
 
 Route37BerryTreeText:
 	text "It's a"
@@ -338,16 +326,16 @@ Route37_MapEvents:
 
 	def_bg_events
 	bg_event  5,  3, BGEVENT_READ, Route37Sign
-;	bg_event  4,  2, BGEVENT_ITEM, Route37HiddenEther
+	bg_event  4,  2, BGEVENT_ITEM, Route37HiddenEther
 	bg_event 13,  5, BGEVENT_READ, Route37NoApricorn
 	bg_event 16,  5, BGEVENT_READ, Route37NoApricorn
 	bg_event 15,  7, BGEVENT_READ, Route37NoApricorn
 
 	def_object_events
-;	object_event  6, 12, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerTwinsAnnandanne1, -1
-;	object_event  7, 12, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerTwinsAnnandanne2, -1
-;	object_event  6,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerPsychicGreg, -1
 	object_event 13,  5, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route37ApricornTree, EVENT_ROUTE_37_APRICORN
-	object_event 16,  8, SPRITE_BOY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SunnyScript, EVENT_ROUTE_37_SUNNY_OF_SUNDAY
 	object_event 16,  5, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route37ApricornTree2, EVENT_ROUTE_37_APRICORN_2
 	object_event 15,  7, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, Route37ApricornTree3, EVENT_ROUTE_37_APRICORN_3
+	object_event 16,  8, SPRITE_BOY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SunnyScript, EVENT_ROUTE_37_SUNNY_OF_SUNDAY
+	object_event  6,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 1, TrainerPsychicMark, -1 ;greg
+	object_event  6, 12, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 1, TrainerTwinsAnnandanne1, -1 ;annandanne1
+	object_event  7, 12, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 1, TrainerTwinsAnnandanne2, -1 ;annandanne2
