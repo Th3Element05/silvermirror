@@ -67,8 +67,8 @@
 	tilecoll WALL, WALL, WALL, WALL ; 42
 	tilecoll WATER, WHIRLPOOL, WATER, WATER ; 43
 	tilecoll WALL, WALL, WALL, WALL ; 44
-	tilecoll FLOOR, WALL, FLOOR, WALL ; 45
-	tilecoll WALL, FLOOR, WALL, FLOOR ; 46
+	tilecoll WALL, WALL, WALL, WALL ; 45
+	tilecoll WALL, WALL, WALL, WALL ; 46
 	tilecoll LADDER, FLOOR, FLOOR, FLOOR ; 47
 	tilecoll WALL, WALL, WALL, WALL ; 48
 	tilecoll WALL, UP_WALL, WALL, WALL ; 49
@@ -78,5 +78,3 @@
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 4d
 	tilecoll WALL, WALL, WALL, WALL ; 4e
 	tilecoll WALL, WALL, WALL, WALL ; 4f
-	tilecoll WALL, WALL, WALL, WALL ; 50
-	tilecoll FLOOR, FLOOR, FLOOR, LADDER ; 51
