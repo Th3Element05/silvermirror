@@ -39,7 +39,6 @@ Route42EcruteakGateRouteClearText:
 
 Route42EcruteakGateOfficerScript:
 	jumptextfaceplayer Route42EcruteakGateOfficerText
-
 Route42EcruteakGateOfficerText:
 	text "MT.MORTAR is like"
 	line "a maze inside."
