@@ -1,8 +1,4 @@
 	object_const_def
-	const OLIVINEPOKECENTER1F_NURSE
-	const OLIVINEPOKECENTER1F_FISHING_GURU
-	const OLIVINEPOKECENTER1F_FISHER
-	const OLIVINEPOKECENTER1F_TEACHER
 
 OlivinePokecenter1F_MapScripts:
 	def_scene_scripts
@@ -17,16 +13,11 @@ OlivinePokecenter1FFishingGuruScript:
 
 OlivinePokecenter1FFisherScript:
 	jumptextfaceplayer OlivinePokecenter1FFisherText
-
-OlivinePokecenter1FTeacherScript:
-	jumptextfaceplayer OlivinePokecenter1FTeacherText
-
 OlivinePokecenter1FFisherText:
 	text "The SAILOR in the"
 	line "OLIVINE CAFE next"
-
-	para "door is really"
-	line "generous."
+	cont "door is really"
+	cont "generous."
 
 	para "He taught my"
 	line "#MON STRENGTH."
@@ -35,6 +26,8 @@ OlivinePokecenter1FFisherText:
 	line "big boulders."
 	done
 
+OlivinePokecenter1FTeacherScript:
+	jumptextfaceplayer OlivinePokecenter1FTeacherText
 OlivinePokecenter1FTeacherText:
 	text "There's a person"
 	line "in CIANWOOD CITY"
