@@ -1,41 +1,41 @@
 	object_const_def
-	const OLIVINEHOUSEBETA_TEACHER
-	const OLIVINEHOUSEBETA_RHYDON
+;	const OLIVINEHOUSEBETA_TEACHER
+;	const OLIVINEHOUSEBETA_RHYDON
 
 OlivineHouseBeta_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
 
-OlivineHouseBetaTeacherScript:
-	jumptextfaceplayer OlivineHouseBetaTeacherText
+;OlivineHouseBetaTeacherScript:
+;	jumptextfaceplayer OlivineHouseBetaTeacherText
 
-OlivineHouseBetaRhydonScript:
-	opentext
-	writetext OlivineHouseBetaRhydonText
-	cry RHYDON
-	waitbutton
-	closetext
-	end
+;OlivineHouseBetaRhydonScript:
+;	opentext
+;	writetext OlivineHouseBetaRhydonText
+;	cry RHYDON
+;	waitbutton
+;	closetext
+;	end
 
-OlivineHouseBetaBookshelf1:
-	jumpstd PictureBookshelfScript
+;OlivineHouseBetaBookshelf1:
+;	jumpstd PictureBookshelfScript
 
-OlivineHouseBetaBookshelf2:
-	jumpstd MagazineBookshelfScript
+;OlivineHouseBetaBookshelf2:
+;	jumpstd MagazineBookshelfScript
 
-OlivineHouseBetaTeacherText:
-	text "When my #MON"
-	line "got sick, the"
+;OlivineHouseBetaTeacherText:
+;	text "When my #MON"
+;	line "got sick, the"
+;
+;	para "PHARMACIST in"
+;	line "ECRUTEAK made some"
+;	cont "medicine for me."
+;	done
 
-	para "PHARMACIST in"
-	line "ECRUTEAK made some"
-	cont "medicine for me."
-	done
-
-OlivineHouseBetaRhydonText:
-	text "RHYDON: Gugooh!"
-	done
+;OlivineHouseBetaRhydonText:
+;	text "RHYDON: Gugooh!"
+;	done
 
 OlivineHouseBeta_MapEvents:
 	db 0, 0 ; filler
@@ -47,9 +47,9 @@ OlivineHouseBeta_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  0,  1, BGEVENT_READ, OlivineHouseBetaBookshelf1
-	bg_event  1,  1, BGEVENT_READ, OlivineHouseBetaBookshelf2
+;	bg_event  0,  1, BGEVENT_READ, OlivineHouseBetaBookshelf1
+;	bg_event  1,  1, BGEVENT_READ, OlivineHouseBetaBookshelf2
 
 	def_object_events
-	object_event  2,  3, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineHouseBetaTeacherScript, -1
-	object_event  6,  4, SPRITE_RHYDON, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineHouseBetaRhydonScript, -1
+;	object_event  2,  3, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineHouseBetaTeacherScript, -1
+;	object_event  6,  4, SPRITE_RHYDON, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineHouseBetaRhydonScript, -1
