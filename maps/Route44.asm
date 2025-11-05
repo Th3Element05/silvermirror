@@ -372,179 +372,179 @@ Route44MaxRepel:
 ;Route44HiddenElixer:
 ;	hiddenitem ELIXER, EVENT_ROUTE_44_HIDDEN_ELIXER
 
-FisherWilton1SeenText:
-	text "Aack! You made me"
-	line "lose a POLIWAG!"
+;FisherWilton1SeenText:
+;	text "Aack! You made me"
+;	line "lose a POLIWAG!"
+;
+;	para "What are you going"
+;	line "to do about it?"
+;	done
 
-	para "What are you going"
-	line "to do about it?"
-	done
+;FisherWilton1BeatenText:
+;	text "Just forget about"
+;	line "it."
+;	done
 
-FisherWilton1BeatenText:
-	text "Just forget about"
-	line "it."
-	done
+;FisherWiltonHugePoliwagText:
+;	text "That POLIWAG that"
+;	line "got away…"
+;	cont "It was huge."
+;
+;	para "I swear it must've"
+;	line "been 16 feet long!"
+;	done
 
-FisherWiltonHugePoliwagText:
-	text "That POLIWAG that"
-	line "got away…"
-	cont "It was huge."
+;FisherEdgarSeenText:
+;	text "I fish until I"
+;	line "can't anymore."
+;
+;	para "I also battle"
+;	line "until I drop."
+;
+;	para "That's my"
+;	line "relationship"
+;	cont "with my #MON."
+;	done
 
-	para "I swear it must've"
-	line "been 16 feet long!"
-	done
+;FisherEdgarBeatenText:
+;	text "Hmmmm… "
+;	line "This isn't right."
+;	done
 
-FisherEdgarSeenText:
-	text "I fish until I"
-	line "can't anymore."
+;FisherEdgarAfterBattleText:
+;	text "That's 100 wins"
+;	line "to 101 losses."
+;
+;	para "I won't battle"
+;	line "again for a while."
+;	done
 
-	para "I also battle"
-	line "until I drop."
+;BirdKeeperVance1SeenText:
+;	text "Do you know about"
+;	line "the legendary bird"
+;	cont "#MON?"
+;	done
 
-	para "That's my"
-	line "relationship"
-	cont "with my #MON."
-	done
+;BirdKeeperVance1BeatenText:
+;	text "Whew! You're hot"
+;	line "stuff."
+;	done
 
-FisherEdgarBeatenText:
-	text "Hmmmm… "
-	line "This isn't right."
-	done
+;BirdKeeperVanceLegendaryBirdsText:
+;	text "ARTICUNO, ZAPDOS"
+;	line "and MOLTRES are"
+;
+;	para "the three legend-"
+;	line "ary bird #MON."
+;
+;	para "I heard there are"
+;	line "other legendary"
+;	cont "birds, though."
+;	done
 
-FisherEdgarAfterBattleText:
-	text "That's 100 wins"
-	line "to 101 losses."
+;BirdKeeperVance2BeatenText:
+;	text "Why can't I ever"
+;	line "beat you?"
+;
+;	para "Oh yeah, here you"
+;	line "go. It's that gift"
+;
+;	para "I couldn't give"
+;	line "you last time."
+;	done
 
-	para "I won't battle"
-	line "again for a while."
-	done
+;PsychicPhilSeenText:
+;	text "I'm gonna win,"
+;	line "for sure!"
+;	done
 
-BirdKeeperVance1SeenText:
-	text "Do you know about"
-	line "the legendary bird"
-	cont "#MON?"
-	done
+;PsychicPhilBeatenText:
+;	text "Arrgh… That's a"
+;	line "shocking loss…"
+;	done
 
-BirdKeeperVance1BeatenText:
-	text "Whew! You're hot"
-	line "stuff."
-	done
+;PsychicPhilAfterBattleText:
+;	text "It's important to"
+;	line "have conviction"
+;	cont "on your side."
+;	done
 
-BirdKeeperVanceLegendaryBirdsText:
-	text "ARTICUNO, ZAPDOS"
-	line "and MOLTRES are"
+;PokemaniacZachSeenText:
+;	text "I'll do anything"
+;	line "to get my hands on"
+;	cont "rare #MON!"
+;	done
 
-	para "the three legend-"
-	line "ary bird #MON."
+;PokemaniacZachBeatenText:
+;	text "Oooh, your #MON"
+;	line "are so appealing."
+;	done
 
-	para "I heard there are"
-	line "other legendary"
-	cont "birds, though."
-	done
+;PokemaniacZachAfterBattleText:
+;	text "If a #MON has"
+;	line "different colors"
+;
+;	para "from usual, it's"
+;	line "more valuable."
+;
+;	para "What? You mean"
+;	line "that's not true?"
+;	done
 
-BirdKeeperVance2BeatenText:
-	text "Why can't I ever"
-	line "beat you?"
+;CooltrainermAllenSeenText:
+;	text "I can tell you're"
+;	line "a good trainer by"
+;	cont "looking at you."
+;
+;	para "I'm good at #-"
+;	line "MON, and I can see"
+;	cont "that you are too."
+;	done
 
-	para "Oh yeah, here you"
-	line "go. It's that gift"
+;CooltrainermAllenBeatenText:
+;	text "Tch! It's a total"
+;	line "loss on my part."
+;	done
 
-	para "I couldn't give"
-	line "you last time."
-	done
+;CooltrainermAllenAfterBattleText:
+;	text "Wow. You have a"
+;	line "lot of BADGES."
+;
+;	para "No wonder you're"
+;	line "so tough."
+;
+;	para "I wonder if"
+;	line "ECRUTEAK GYM's"
+;
+;	para "MORTY is still in"
+;	line "training?"
+;
+;	para "He really hammered"
+;	line "me."
+;	done
 
-PsychicPhilSeenText:
-	text "I'm gonna win,"
-	line "for sure!"
-	done
+;CooltrainerfCybilSeenText:
+;	text "You look strong."
+;
+;	para "Good trainers seek"
+;	line "tough opponents"
+;	cont "instinctively."
+;	done
 
-PsychicPhilBeatenText:
-	text "Arrgh… That's a"
-	line "shocking loss…"
-	done
+;CooltrainerfCybilBeatenText:
+;	text "Nope! This won't"
+;	line "do at all."
+;	done
 
-PsychicPhilAfterBattleText:
-	text "It's important to"
-	line "have conviction"
-	cont "on your side."
-	done
-
-PokemaniacZachSeenText:
-	text "I'll do anything"
-	line "to get my hands on"
-	cont "rare #MON!"
-	done
-
-PokemaniacZachBeatenText:
-	text "Oooh, your #MON"
-	line "are so appealing."
-	done
-
-PokemaniacZachAfterBattleText:
-	text "If a #MON has"
-	line "different colors"
-
-	para "from usual, it's"
-	line "more valuable."
-
-	para "What? You mean"
-	line "that's not true?"
-	done
-
-CooltrainermAllenSeenText:
-	text "I can tell you're"
-	line "a good trainer by"
-	cont "looking at you."
-
-	para "I'm good at #-"
-	line "MON, and I can see"
-	cont "that you are too."
-	done
-
-CooltrainermAllenBeatenText:
-	text "Tch! It's a total"
-	line "loss on my part."
-	done
-
-CooltrainermAllenAfterBattleText:
-	text "Wow. You have a"
-	line "lot of BADGES."
-
-	para "No wonder you're"
-	line "so tough."
-
-	para "I wonder if"
-	line "ECRUTEAK GYM's"
-
-	para "MORTY is still in"
-	line "training?"
-
-	para "He really hammered"
-	line "me."
-	done
-
-CooltrainerfCybilSeenText:
-	text "You look strong."
-
-	para "Good trainers seek"
-	line "tough opponents"
-	cont "instinctively."
-	done
-
-CooltrainerfCybilBeatenText:
-	text "Nope! This won't"
-	line "do at all."
-	done
-
-CooltrainerfCybilAfterBattleText:
-	text "We all get better"
-	line "by experiencing"
-	cont "many battles."
-
-	para "I battled a lot to"
-	line "become what I am"
-	cont "today--an elite."
-	done
+;CooltrainerfCybilAfterBattleText:
+;	text "We all get better"
+;	line "by experiencing"
+;	cont "many battles."
+;
+;	para "I battled a lot to"
+;	line "become what I am"
+;	cont "today--an elite."
+;	done
 
 Route44Sign1Text:
 	text "ROUTE 44"
