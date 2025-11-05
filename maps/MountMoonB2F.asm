@@ -75,12 +75,13 @@ MtMoonDomeFossilScript:
 	opentext
 	writetext MtMoonB2FWantDomeFossilText
 	yesorno
-	iffalse MtMoonB2FDidntChooseFossilScript
+	iffalse MtMoonB2FDontGetFossilScript
 	verbosegiveitem DOME_FOSSIL
-	iffalse NoRoomForFossil
+	iffalse MtMoonB2FDontGetFossilScript
 ;	closetext
 	disappear MOUNTMOONB2F_DOME_FOSSIL
 	setevent EVENT_MT_MOON_OBTAINED_FOSSIL
+	setevent EVENT_DOME_FOSSIL_AT_MT_MORTAR
 	applymovement MOUNTMOONB2F_SUPER_NERD, MtMoonB2FSuperNerdTakesHelixMovement
 	sjump MtMoonB2FSuperNerdTakesFossilScript
 	
@@ -88,19 +89,16 @@ MtMoonHelixFossilScript:
 	opentext
 	writetext MtMoonB2FWantHelixFossilText
 	yesorno
-	iffalse MtMoonB2FDidntChooseFossilScript
+	iffalse MtMoonB2FDontGetFossilScript
 	verbosegiveitem HELIX_FOSSIL
-	iffalse NoRoomForFossil
+	iffalse MtMoonB2FDontGetFossilScript
 ;	closetext
 	disappear MOUNTMOONB2F_HELIX_FOSSIL
 	setevent EVENT_MT_MOON_OBTAINED_FOSSIL
+	setevent EVENT_HELIX_FOSSIL_AT_MT_MORTAR
 	sjump MtMoonB2FSuperNerdTakesFossilScript
 
-NoRoomForFossil:
-	closetext
-	end
-
-MtMoonB2FDidntChooseFossilScript:
+MtMoonB2FDontGetFossilScript:
 	closetext
 	end
 

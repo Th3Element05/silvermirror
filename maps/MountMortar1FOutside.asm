@@ -1,8 +1,6 @@
 	object_const_def
-;	const MOUNTMORTAR1FOUTSIDE_POKE_BALL1
-;	const MOUNTMORTAR1FOUTSIDE_POKE_BALL2
-;	const MOUNTMORTAR1FOUTSIDE_HELIX_FOSSIL
-;	const MOUNTMORTAR1FOUTSIDE_DOME_FOSSIL
+	const MOUNTMORTAR1FOUTSIDE_HELIX_FOSSIL
+	const MOUNTMORTAR1FOUTSIDE_DOME_FOSSIL
 
 MountMortar1FOutside_MapScripts:
 	def_scene_scripts
@@ -118,18 +116,37 @@ MountMortar1FOutside_MapScripts:
 ;	closetext
 ;	end
 
-;MountMortar1FOutsideEther:
-;	itemball ETHER
+MountMortar1FHelixFossil:
+	opentext
+	writetext MountMortar1FHelixFossilText
+	yesorno
+	iffalse MtMortar1FOutsideDontGetFossilScript
+	verbosegiveitem HELIX_FOSSIL
+	iffalse MtMortar1FOutsideDontGetFossilScript
+	closetext
+	disappear MOUNTMORTAR1FOUTSIDE_HELIX_FOSSIL
+	setevent EVENT_MT_MORTAR_OBTAINED_FOSSIL
+;	setevent EVENT_HELIX_FOSSIL_AT_MT_MORTAR
 
-;MountMortar1FOutsideRevive:
-;	itemball REVIVE
+MountMortar1FDomeFossil:
+	opentext
+	writetext MountMortar1FDomeFossilText
+	yesorno
+	iffalse MtMortar1FOutsideDontGetFossilScript
+	verbosegiveitem DOME_FOSSIL
+	iffalse MtMortar1FOutsideDontGetFossilScript
+	closetext
+	disappear MOUNTMORTAR1FOUTSIDE_DOME_FOSSIL
+	setevent EVENT_MT_MORTAR_OBTAINED_FOSSIL
+;	setevent EVENT_DOME_FOSSIL_AT_MT_MORTAR
 
-;MountMortar1FOutsideHiddenHyperPotion:
-;	hiddenitem HYPER_POTION, EVENT_MOUNT_MORTAR_1F_OUTSIDE_HIDDEN_HYPER_POTION
+MtMortar1FOutsideDontGetFossilScript:
+	closetext
+	end
 
-;MountMortar1FHelixFossilText:
-;	text "You found a"
-;	line "HELIX FOSSIL…"
+MountMortar1FHelixFossilText:
+	text "You found a"
+	line "HELIX FOSSIL…"
 ;
 ;	para "If you take this"
 ;	line "fossil, the wall"
@@ -137,13 +154,13 @@ MountMortar1FOutside_MapScripts:
 ;	para "will most likely"
 ;	line "collapse."
 ;	
-;	para "Will you take the"
-;	line "HELIX FOSSIL?"
-;	done
+	para "Will you take the"
+	line "HELIX FOSSIL?"
+	done
 
-;MountMortar1FDomeFossilText:
-;	text "You found a"
-;	line "DOME FOSSIL…"
+MountMortar1FDomeFossilText:
+	text "You found a"
+	line "DOME FOSSIL…"
 ;
 ;	para "If you take this"
 ;	line "fossil, the wall"
@@ -151,9 +168,9 @@ MountMortar1FOutside_MapScripts:
 ;	para "will most likely"
 ;	line "collapse."
 ;	
-;	para "Will you take the"
-;	line "DOME FOSSIL?"
-;	done
+	para "Will you take the"
+	line "DOME FOSSIL?"
+	done
 
 ;MountMortar1FHelixFossilWashedAwayText:
 ;	text "The HELIX FOSSIL"
@@ -182,27 +199,36 @@ MountMortar1FOutside_MapScripts:
 ;	slow_step RIGHT
 ;	step_end
 
+MountMortar1FOutsideEther:
+	itemball ETHER
+
+MountMortar1FOutsideRevive:
+	itemball REVIVE
+
+MountMortar1FOutsideHiddenHyperPotion:
+	hiddenitem HYPER_POTION, EVENT_MOUNT_MORTAR_1F_OUTSIDE_HIDDEN_HYPER_POTION
+
 MountMortar1FOutside_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  3, 33, ROUTE_42, 3
-	warp_event 17, 33, ROUTE_42, 4
-	warp_event 37, 33, ROUTE_42, 5
-	warp_event 17,  5, MOUNT_MORTAR_2F_INSIDE, 1
-	warp_event 11, 21, MOUNT_MORTAR_1F_INSIDE, 1
-	warp_event 29, 21, MOUNT_MORTAR_1F_INSIDE, 2
-	warp_event 17, 29, MOUNT_MORTAR_B1F, 2
-	warp_event  7, 13, MOUNT_MORTAR_1F_INSIDE, 3
-	warp_event 33, 13, MOUNT_MORTAR_1F_INSIDE, 4
+	warp_event  3, 33, ROUTE_42, 3 ;1
+	warp_event 17, 33, ROUTE_42, 4 ;2
+	warp_event 37, 33, ROUTE_42, 5 ;3
+	warp_event 17,  5, MOUNT_MORTAR_2F_INSIDE, 1 ;4
+	warp_event 11, 21, MOUNT_MORTAR_1F_INSIDE, 1 ;5
+	warp_event 29, 21, MOUNT_MORTAR_1F_INSIDE, 2 ;6
+	warp_event 17, 29, MOUNT_MORTAR_B1F, 2 ;7
+	warp_event  7, 13, MOUNT_MORTAR_1F_INSIDE, 3 ;8
+	warp_event 33, 13, MOUNT_MORTAR_1F_INSIDE, 4 ;9
 
 	def_coord_events
 
 	def_bg_events
-;	bg_event 25, 22, BGEVENT_ITEM, MountMortar1FOutsideHiddenHyperPotion
+	bg_event 25, 22, BGEVENT_ITEM, MountMortar1FOutsideHiddenHyperPotion
 
 	def_object_events
-;	object_event 13, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, MountMortar1FOutsideEther, EVENT_MOUNT_MORTAR_1F_OUTSIDE_ETHER
-;	object_event 31, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, MountMortar1FOutsideRevive, EVENT_MOUNT_MORTAR_1F_OUTSIDE_REVIVE
-;	object_event 20, 23, SPRITE_FOSSIL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountMortar1FHelixFossil, EVENT_MT_MORTAR_OBTAINED_FOSSIL
-;	object_event 21, 23, SPRITE_FOSSIL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountMortar1FDomeFossil, EVENT_MT_MORTAR_OBTAINED_FOSSIL
+	object_event 20, 23, SPRITE_FOSSIL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountMortar1FHelixFossil, EVENT_HELIX_FOSSIL_AT_MT_MORTAR
+	object_event 21, 23, SPRITE_DOME_FOSSIL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountMortar1FDomeFossil, EVENT_DOME_FOSSIL_AT_MT_MORTAR
+	object_event 13, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, MountMortar1FOutsideEther, EVENT_MOUNT_MORTAR_1F_OUTSIDE_ETHER
+	object_event 31, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, MountMortar1FOutsideRevive, EVENT_MOUNT_MORTAR_1F_OUTSIDE_REVIVE
