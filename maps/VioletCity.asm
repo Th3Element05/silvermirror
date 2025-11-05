@@ -13,11 +13,13 @@ VioletCity_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
-	callback MAPCALLBACK_NEWMAP, VioletCityFlypointCallback
+	callback MAPCALLBACK_NEWMAP, VioletCityFlypointAndRoute32Callback
 	callback MAPCALLBACK_OBJECTS, VioletCityFruittrees
 
-VioletCityFlypointCallback:
+VioletCityFlypointAndRoute32Callback:
 	setflag ENGINE_FLYPOINT_VIOLET
+	clearevent EVENT_ROUTE_36_BATTLE
+	setevent EVENT_ROUTE_36_OPEN
 	endcallback
 
 VioletCityFruittrees:
