@@ -58,41 +58,6 @@ OlivineGymJasmineScript:
 ;.RadioTowerRockets:
 ;	jumpstd RadioTowerRocketsScript
 
-OlivineGymGuideScript:
-	faceplayer
-	checkevent EVENT_BEAT_JASMINE
-	iftrue .OlivineGymGuideWinScript
-;	checkevent EVENT_JASMINE_RETURNED_TO_GYM
-;	iffalse .OlivineGymGuidePreScript
-	opentext
-	writetext OlivineGymGuideText
-	waitbutton
-	closetext
-	end
-
-.OlivineGymGuideWinScript:
-	opentext
-	writetext OlivineGymGuideWinText
-	waitbutton
-	closetext
-	end
-
-;.OlivineGymGuidePreScript:
-;	opentext
-;	writetext OlivineGymGuidePreText
-;	waitbutton
-;	closetext
-;	end
-
-OlivineGymStatue:
-	gettrainername STRING_BUFFER_4, JASMINE, JASMINE1
-	jumpstd GymStatue3Script
-;	checkflag ENGINE_MINERALBADGE
-;	iftrue .Beaten
-;	jumpstd GymStatue1Script
-;.Beaten:
-;	jumpstd GymStatue2Script
-
 Jasmine_SteelTypeIntro:
 ;	text "…Thank you for"
 ;	line "your help at the"
@@ -161,6 +126,32 @@ Jasmine_GoodLuck:
 	cont "but good luck…"
 	done
 
+OlivineGymGuideScript:
+	faceplayer
+	checkevent EVENT_BEAT_JASMINE
+	iftrue .OlivineGymGuideWinScript
+;	checkevent EVENT_JASMINE_RETURNED_TO_GYM
+;	iffalse .OlivineGymGuidePreScript
+	opentext
+	writetext OlivineGymGuideText
+	waitbutton
+	closetext
+	end
+
+.OlivineGymGuideWinScript:
+	opentext
+	writetext OlivineGymGuideWinText
+	waitbutton
+	closetext
+	end
+
+;.OlivineGymGuidePreScript:
+;	opentext
+;	writetext OlivineGymGuidePreText
+;	waitbutton
+;	closetext
+;	end
+
 OlivineGymGuideText:
 	text "Yo! CHAMP in"
 	line "making!"
@@ -213,6 +204,15 @@ OlivineGymGuideWinText:
 ;	line "to be here at the"
 ;	cont "GYM right now!"
 ;	done
+
+OlivineGymStatue:
+	gettrainername STRING_BUFFER_4, JASMINE, JASMINE1
+	jumpstd GymStatue3Script
+;	checkflag ENGINE_MINERALBADGE
+;	iftrue .Beaten
+;	jumpstd GymStatue1Script
+;.Beaten:
+;	jumpstd GymStatue2Script
 
 OlivineGym_MapEvents:
 	db 0, 0 ; filler
