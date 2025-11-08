@@ -491,7 +491,7 @@ SilverLeafDesc:
 	next "colored leaf.@"
 
 SuperRodDesc:
-SuperRod2Desc:
+;SuperRod2Desc:
 	db   "The best ROD for"
 	next "catching #MON.@"
 
@@ -915,6 +915,10 @@ BrickPieceDesc:
 FlowerMailDesc:
 	db   "Flower-print MAIL."
 	next "(HOLD)@"
+
+SuperRod2Desc:
+	db   "There is a special"
+	next "lure on this ROD.@"
 
 ;SurfMailDesc:
 ;	db   "LAPRAS-print MAIL."
