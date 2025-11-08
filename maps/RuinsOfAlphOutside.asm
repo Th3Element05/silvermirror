@@ -11,7 +11,13 @@ RuinsOfAlphOutside_MapScripts:
 ;	scene_script RuinsOfAlphOutsideNoop2Scene, SCENE_RUINSOFALPHOUTSIDE_GET_UNOWN_DEX
 
 	def_callbacks
+;	callback MAPCALLBACK_NEWMAP, RuinsOfAlphOutsideRoute32Callback
 ;	callback MAPCALLBACK_OBJECTS, ScientistCallback
+
+;RuinsOfAlphOutsideRoute32Callback:
+;	clearevent EVENT_ROUTE_36_BATTLE
+;	setevent EVENT_ROUTE_36_OPEN
+;	endcallback
 
 ;RuinsOfAlphOutsideNoop1Scene:
 ;	end
