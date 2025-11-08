@@ -4,10 +4,6 @@
 	const ROUTE_36_ARTHUR
 	const ROUTE_36_SUDOWOODO
 	const ROUTE_36_FLORIA
-;	const ROUTE_36_YOUNGSTER1
-;	const ROUTE_36_YOUNGSTER2
-;	const ROUTE_36_LASS1
-;	const ROUTE_36_FISHER
 
 Route36_MapScripts:
 	def_scene_scripts
