@@ -12,7 +12,7 @@ GoldenrodDeptStore4F_MapScripts:
 GoldenrodDeptStore4FClerkScript:
 	faceplayer
 	opentext
-	pokemart MARTTYPE_STANDARD, MART_VITAMINS
+	pokemart MARTTYPE_STANDARD, MART_VITAMINS_1
 	closetext
 	end
 

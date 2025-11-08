@@ -8,7 +8,7 @@ CeladonDeptStore5F_MapScripts:
 CeladonDeptStore5FClerk1Script:
 	faceplayer
 	opentext
-	pokemart MARTTYPE_STANDARD, MART_VITAMINS
+	pokemart MARTTYPE_STANDARD, MART_VITAMINS_1
 	closetext
 	end
 
