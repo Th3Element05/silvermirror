@@ -12,20 +12,21 @@ Marts:
 ;	dw MartVendingMachine
 	dw MartTMs1
 	dw MartEvolution1
-	dw MartVitamins
+	dw MartVitamins1
+	dw MartVitamins2
 	dw MartBattle
 ;	dw MartCeladon2F1 = MartBalls
 ;	dw MartCeladon2F2 = MartMed
 ;	dw MartCeladon3F = MartTMs1
 ;	dw MartCeladon4F = MartEvolution1
-;	dw MartCeladon5F1 = MartVitamins
+;	dw MartCeladon5F1 = MartVitamins1
 ;	dw MartCeladon5F2 = MartBattle
 	dw MartIndigoPlateau
 	dw MartMtMoon
 ;	dw MartGoldenrod2F1 = MartMed
 ;	dw MartGoldenrod2F2 = MartBalls
 ;	dw MartGoldenrod3F = MartBattle
-;	dw MartGoldenrod4F = MartVitamins
+;	dw MartGoldenrod4F = MartVitamins2 ?
 ;	dw MartGoldenrod5F = MartTMs2
 	dw MartTMs2
 	dw MartMahogany1
@@ -135,8 +136,19 @@ MartEvolution1:
 	db LINKING_CORD
 	db -1 ; end
 
-; MartCeladon5F1:
-MartVitamins:
+;MartCeladon5F1:
+MartVitamins1:
+	db 5 ; # items
+	db HP_UP
+	db PROTEIN
+	db IRON
+	db CALCIUM
+	db CARBOS
+;	db PP_UP
+	db -1 ; end
+
+;Mart Goldenrod4F: ?
+MartVitamins2:
 	db 6 ; # items
 	db HP_UP
 	db PROTEIN
@@ -146,7 +158,7 @@ MartVitamins:
 	db PP_UP
 	db -1 ; end
 
-; MartCeladon5F2:
+;MartCeladon5F2:
 MartBattle: 
 	db 7 ; # items
 	db X_ACCURACY
@@ -162,7 +174,7 @@ MartBattle:
 ;MartCeladon2F2 = MartMed
 ;MartCeladon3F = MartTMs1
 ;MartCeladon4F = MartEvolution1
-;MartCeladon5F1 = MartVitamins
+;MartCeladon5F1 = MartVitamins1
 ;MartCeladon5F2 = MartBattle
 
 MartIndigoPlateau:
@@ -191,7 +203,7 @@ MartMtMoon:
 ;MartGoldenrod2F1 = MartMed
 ;MartGoldenrod2F2 = MartBalls
 ;MartGoldenrod3F: = MartBattle
-;MartGoldenrod4F: = MartVitamins
+;MartGoldenrod4F: = MartVitamins2 ?
 ;MartGoldenrod5F: = MartTMs2
 
 MartTMs2:
