@@ -423,7 +423,7 @@ _BouldersMayMoveText::
 	done
 
 _UseWhirlpoolText::
-	text "Called AZUMARILL" ;silvermirror -"<PLAYER> summoned a"
+	text "Called POLIWRATH" ;silvermirror -"<PLAYER> summoned a"
 	line "to use WHIRLPOOL!" ;silvermirror -"REMORAID to use"
 ;	cont "WHIRLPOOL!" ;silvermirror -
 	done

@@ -1171,7 +1171,7 @@ Script_WhirlpoolFromMenu:
 
 Script_UsedWhirlpool:
 	writetext UseWhirlpoolText
-	cry AZUMARILL ;silvermirror -REMORAID
+	cry POLIWRATH ;silvermirror -REMORAID
 	waitbutton
 	reloadmappart
 	callasm DisappearWhirlpool
