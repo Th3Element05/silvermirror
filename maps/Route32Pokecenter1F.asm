@@ -1,7 +1,4 @@
 	object_const_def
-	const ROUTE32POKECENTER1F_NURSE
-	const ROUTE32POKECENTER1F_FISHING_GURU
-	const ROUTE32POKECENTER1F_COOLTRAINER_F
 
 Route32Pokecenter1F_MapScripts:
 	def_scene_scripts
@@ -14,18 +11,66 @@ Route32Pokecenter1FNurseScript:
 Route32Pokecenter1FFishingGuruScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_OLD_ROD
-	iftrue .GotOldRod
+	checkevent EVENT_GOT_JOHTO_LURE
+	iftrue .SwapLure
+	writetext Route32Pokecenter1FFishingGuruText_Intro
+	promptbutton
+	checkevent EVENT_GOT_SUPER_ROD
+	iftrue .GotSuperRod
+; don't have super rod yet
 	writetext Route32Pokecenter1FFishingGuruText_Question
 	yesorno
 	iffalse .Refused
 	writetext Route32Pokecenter1FFishingGuruText_Yes
 	promptbutton
-	verbosegiveitem OLD_ROD
-	writetext Route32Pokecenter1FFishingGuruText_GiveOldRod
+	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
+	iffalse .GiveSuperRod
+	verbosegiveitem SUPER_ROD_2
+	setevent EVENT_GOT_SUPER_ROD
+	writetext Route32Pokecenter1FFishingGuruText_GiveSuperRod
 	waitbutton
 	closetext
-	setevent EVENT_GOT_OLD_ROD
+	end
+
+.GotSuperRod:
+	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
+	iffalse .OfferLure
+	writetext Route32Pokecenter1FFishingGuruText_HaveRod
+	waitbutton
+	closetext
+	end
+
+.SwapLure:
+	checkevent EVENT_SUPER_ROD_LURE_ACTIVE
+	iffalse .OfferLure
+	writetext Route32Pokecenter1FFishingGuruText_AskTakeLure
+	yesorno
+	iffalse .NoSwapLure
+	giveitem SUPER_ROD
+	takeitem SUPER_ROD_2, 1
+	clearevent EVENT_SUPER_ROD_LURE_ACTIVE
+	writetext Route32Pokecenter1FFishingGuruText_ReturnLure
+	waitbutton
+	closetext
+	end
+
+.GiveSuperRod:
+	verbosegiveitem SUPER_ROD
+	setevent EVENT_GOT_SUPER_ROD
+	writetext Route32Pokecenter1FFishingGuruText_GiveSuperRod
+	promptbutton
+	; fallthrough
+.OfferLure:
+	writetext Route32Pokecenter1FFishingGuruText_OfferLure
+	yesorno
+	iffalse .NoSwapLure
+	setevent EVENT_GOT_JOHTO_LURE
+	giveitem SUPER_ROD_2
+	takeitem SUPER_ROD, 1
+	setevent EVENT_SUPER_ROD_LURE_ACTIVE
+	writetext Route32Pokecenter1FFishingGuruText_GiveLure
+	waitbutton
+	closetext
 	end
 
 .Refused:
@@ -34,22 +79,20 @@ Route32Pokecenter1FFishingGuruScript:
 	closetext
 	end
 
-.GotOldRod:
-	writetext Route32Pokecenter1FFishingGuruText_After
+.NoSwapLure:
+	writetext Route32Pokecenter1FFishingGuruText_SwapAnytime
 	waitbutton
 	closetext
 	end
 
-Route32Pokecenter1FCooltrainerFScript:
-	jumptextfaceplayer Route32Pokecenter1FCooltrainerFText
+Route32Pokecenter1FFishingGuruText_Intro:
+	text "I'm the JOHTO"
+	line "FISHING GURU!"
+	done
 
 Route32Pokecenter1FFishingGuruText_Question:
 	text "This is a great"
 	line "fishing spot."
-
-	para "You saw people"
-	line "fishing? How"
-	cont "about you?"
 
 	para "Would you like one"
 	line "of my RODS?"
@@ -63,19 +106,18 @@ Route32Pokecenter1FFishingGuruText_Yes:
 	line "angler too!"
 	done
 
-Route32Pokecenter1FFishingGuruText_GiveOldRod:
+Route32Pokecenter1FFishingGuruText_GiveSuperRod:
 	text "Fishing is great!"
 
 	para "If there's water,"
 	line "be it the sea or a"
-
-	para "stream, try out"
-	line "your ROD."
+	cont "stream, try out"
+	cont "your ROD."
 	done
 
 Route32Pokecenter1FFishingGuruText_No:
-	text "Oh. That's rather"
-	line "disappointing…"
+	text "Oh. That's too"
+	line "bad…"
 	done
 
 Route32Pokecenter1FFishingGuruText_After:
@@ -83,6 +125,66 @@ Route32Pokecenter1FFishingGuruText_After:
 	line "they biting?"
 	done
 
+Route32Pokecenter1FFishingGuruText_OfferLure:
+	text "I have a special"
+	line "lure that can hook"
+	cont "exotic #MON in"
+	cont "KANTO."
+
+	para "Would you like to"
+	line "borrow it?"
+	done
+
+Route32Pokecenter1FFishingGuruText_AskTakeLure:
+	text "How are the #-"
+	line "MON biting?"
+
+	para "Do you want me to"
+	line "take my special"
+	cont "lure off of your"
+	cont "SUPER ROD?"
+	done
+
+Route32Pokecenter1FFishingGuruText_SwapAnytime:
+	text "If you change your"
+	line "mind, just say so."
+
+	para "I'll swap your"
+	line "lure anytime!"
+	done
+
+Route32Pokecenter1FFishingGuruText_GiveLure:
+	text "I'll put it on"
+	line "your SUPER ROD."
+
+	para "There. All set."
+
+	para "If you ever want"
+	line "me to take it off,"
+	cont "just say so."
+	done
+
+Route32Pokecenter1FFishingGuruText_ReturnLure:
+	text "I'll take it off"
+	line "your SUPER ROD."
+
+	para "There. All set."
+
+	para "If you ever want"
+	line "me to put it back"
+	cont "on, just say so."
+	done
+
+Route32Pokecenter1FFishingGuruText_HaveRod:
+	text "I have cousins in"
+	line "KANTO, we're all"
+	cont "avid fishermen."
+
+	para "Have you met them?"
+	done
+
+Route32Pokecenter1FCooltrainerFScript:
+	jumptextfaceplayer Route32Pokecenter1FCooltrainerFText
 Route32Pokecenter1FCooltrainerFText:
 	text "What should I make"
 	line "my #MON hold?"
