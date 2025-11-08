@@ -23,6 +23,7 @@ OaksLabMeetOakScene:
 	applymovement PLAYER, OaksLabPlayerWalkInMovement
 	turnobject OAKSLAB_BLUE, UP
 	setscene SCENE_OAKSLAB_RIVAL_BATTLE
+	variablesprite SPRITE_VARIABLE, SPRITE_GEODUDE_MOVE
 	jumptext OaksLabIntroConversationText
 
 ;scripts

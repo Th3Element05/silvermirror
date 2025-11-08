@@ -1,9 +1,213 @@
 	object_const_def
+	const ROUTE_20_COOLTRAINERM
+	const ROUTE_20_GEODUDE
+	const ROUTE_20_ROCK
 
 Route20_MapScripts:
 	def_scene_scripts
+	scene_script Route20Noop1Scene, SCENE_ROUTE20_GET_ROCKSMASH
+	scene_script Route20Noop2Scene, SCENE_ROUTE20_NOOP
 
 	def_callbacks
+
+Route20Noop1Scene:
+Route20Noop2Scene:
+	end
+
+Route20GetRocksmashScript:
+	showemote EMOTE_SHOCK, ROUTE_20_COOLTRAINERM, 20
+	readvar VAR_FACING
+	ifequal DOWN, .ThruSeafoam
+	turnobject PLAYER, LEFT
+	applymovement ROUTE_20_COOLTRAINERM, Route20RockSmashGuyApproachMovement
+	opentext
+	writetext Route20RockSmashGuyIntro_Cinnabar
+	waitbutton
+	closetext
+	follow ROUTE_20_COOLTRAINERM, PLAYER
+	applymovement ROUTE_20_COOLTRAINERM, Route20RockSmashGuyReturnMovement
+	stopfollow
+	pause 15
+	sjump Route20RockSmashGuyScript
+
+.ThruSeafoam
+	turnobject PLAYER, LEFT
+	applymovement ROUTE_20_COOLTRAINERM, Route20RockSmashGuyApproachMovement
+	opentext
+	writetext Route20RockSmashGuyIntro_Seafoam
+	waitbutton
+	closetext
+	follow ROUTE_20_COOLTRAINERM, PLAYER
+	applymovement ROUTE_20_COOLTRAINERM, Route20RockSmashGuyReturnMovement
+	stopfollow
+	pause 15
+	; fallthrough ; sjump Route20RockSmashGuyScript
+
+Route20RockSmashGuyScript:
+;	setlasttalked ROUTE_20_COOLTRAINERM
+	faceplayer
+	opentext
+;	checkevent EVENT_GOT_TM58_ROCK_SMASH
+;	iftrue .AlreadyGotRockSmash
+	writetext Route20RockSmashGuyIntroText
+	promptbutton
+	closetext
+	turnobject ROUTE_20_COOLTRAINERM, LEFT
+	pause 10
+	turnobject ROUTE_20_GEODUDE, LEFT
+	scall Route20GeodudeScript
+	pause 10
+	playsound SFX_STRENGTH
+	earthquake 84
+	applymovement ROUTE_20_ROCK, Route20RockSmashMovement
+;	waitsfx
+	disappear ROUTE_20_ROCK
+	turnobject ROUTE_20_GEODUDE, RIGHT
+	pause 10
+;	setlasttalked ROUTE_20_COOLTRAINERM
+	faceplayer
+	opentext
+	writetext Route20RockSmashGuyGivePagerText
+	promptbutton
+	stringtotext .pagercardname, MEM_BUFFER_1
+	scall .JumpstdReceiveItem
+	setflag ENGINE_PAGER_ROCK_SMASH
+	promptbutton
+	writetext GotRockSmashPagerText
+	promptbutton
+	writetext Route20RockSmashGuyGiveTMText
+	promptbutton
+	verbosegiveitem TM_ROCK_SMASH
+	setevent EVENT_GOT_TM58_ROCK_SMASH
+	turnobject ROUTE_20_COOLTRAINERM, LEFT
+	writetext Route20RockSmashGuyLetsGoText
+	promptbutton
+	closetext
+	playsound SFX_BALL_POOF
+	waitsfx
+	disappear ROUTE_20_GEODUDE
+	pause 10
+	faceplayer
+	opentext
+	writetext Route20RockSmashGuyFarewellText
+	waitbutton
+	closetext
+	applymovement ROUTE_20_COOLTRAINERM, Route20RockSmashGuyLeaveMovement
+	disappear ROUTE_20_COOLTRAINERM
+	setscene SCENE_ROUTE20_NOOP
+	end
+
+.AlreadyGotRockSmash:
+	writetext Route20RockSmashGuyFarewellText
+	waitbutton
+	closetext
+	end
+
+.JumpstdReceiveItem:
+	jumpstd ReceiveItemScript
+	end
+
+.pagercardname
+	db "ROCKSMASH PAGER@"
+
+Route20RockSmashGuyIntro_Seafoam:
+	text "Whoa! Did you go"
+	line "through SEAFOAM"
+	cont "ISLANDS?"
+
+	para "That must have"
+	line "been tough!"
+
+	para "Here, you probably"
+	line "want to see this."
+	done
+
+Route20RockSmashGuyIntro_Cinnabar:
+	text "Wait! Are you"
+	line "gonna go through"
+	cont "SEAFOAM ISLANDS?"
+
+	para "Check this out,"
+	line "first!"
+	done
+
+Route20RockSmashGuyIntroText:
+	text "My GEODUDE loves"
+	line "smashing rocks!"
+
+	para "Watch!"
+	done
+
+Route20RockSmashGuyGivePagerText:
+	text "You can make some"
+	line "shortcuts with"
+	cont "ROCK SMASH!"
+
+	para "Take this!"
+	done
+
+GotRockSmashPagerText:
+	text "GEODUDE was"
+	line "added to the PPS!"
+	done
+
+Route20RockSmashGuyGiveTMText:
+	text "You can call my"
+	line "GEODUDE any time"
+	cont "you need to use"
+	cont "ROCK SMASH!"
+
+	para "Teach your own"
+	line "#MON to use"
+	cont "ROCK SMASH with"
+	cont "this!"
+	done
+
+Route20RockSmashGuyLetsGoText:
+	text "Let's go, GEODUDE!"
+	done
+
+Route20RockSmashGuyFarewellText:
+	text "Have fun smashing!"
+	line "See ya!"
+	done
+
+Route20GeodudeScript:
+	opentext
+	writetext Route20GeodudeText
+	cry GEODUDE
+	waitbutton
+	closetext
+	end
+
+Route20GeodudeText:
+	text "GEODUDE: Geo!"
+	line "Geo-dude!"
+	done
+
+Route20RockSmashMovement:
+	rock_smash 10
+	step_end
+
+Route20RockSmashGuyApproachMovement:
+	step RIGHT
+	step RIGHT
+	step_end
+
+Route20RockSmashGuyReturnMovement:
+	step LEFT
+	step LEFT
+	step_end
+
+Route20RockSmashGuyLeaveMovement:
+	step LEFT
+	step LEFT
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
+	step_end
 
 TrainerSwimmerFDenise:
 	trainer SWIMMERF, DENISE, EVENT_BEAT_SWIMMERF_DENISE, SwimmerFDeniseSeenText, SwimmerFDeniseBeatenText, 0, .Script
@@ -263,8 +467,8 @@ SeafoamIslandsSignText:
 	text "SEAFOAM ISLANDS"
 	done
 
-;SeafoamIslandsRock:
-;	jumpstd SmashRockScript
+Route20RockScript:
+	jumpstd SmashRockScript
 
 Route20_MapEvents:
 	db 0, 0 ; filler
@@ -274,20 +478,32 @@ Route20_MapEvents:
 	warp_event 54,  9, SEAFOAM_ISLANDS, 2 ; 2
 
 	def_coord_events
+	coord_event 54, 10, SCENE_ROUTE20_GET_ROCKSMASH, Route20GetRocksmashScript
 
 	def_bg_events
 	bg_event 47,  7, BGEVENT_READ, SeafoamIslandsSign
 	bg_event 53, 11, BGEVENT_READ, SeafoamIslandsSign
 
 	def_object_events
+	object_event 51, 10, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_SCRIPT, 0, Route20RockSmashGuyScript, EVENT_GOT_TM58_ROCK_SMASH
+	object_event 50, 10, SPRITE_VARIABLE, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_SCRIPT, 0, Route20GeodudeScript, EVENT_GOT_TM58_ROCK_SMASH
+	object_event 49, 10, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route20RockScript, -1
+;
 	object_event  8,  8, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerSwimmerFDenise, -1
 	object_event 20,  7, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerFSusie, -1
 	object_event 19, 11, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerFHeidi, -1
 	object_event 30,  9, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBirdKepperVance, -1
 	object_event 34, 12, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSwimmerMTucker, -1
 	object_event 41,  8, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerSwimmerFKara, -1
-	object_event 51, 13, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerFGinger, -1
+	object_event 51, 14, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerSwimmerFGinger, -1
 	object_event 65,  9, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerFWendy, -1
 	object_event 77,  8, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSwimmerMJerome, -1
 	object_event 78, 12, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSwimmerMCameron, -1
-;	object_event 51,  9, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SeafoamIslandsRock, -1
+	object_event 50, 11, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route20RockScript, -1
+
+;.GrayOverTreeOBPalette <-
+;\engine\tilesets\tileset_palettes.asm
+;\gfx\overworld\npc_sprites_special.pal
+;
+;.GrayOverRockOBPalette ???  can't use rock due to... the rock.
+;? PAL_ICON_GRAY ?

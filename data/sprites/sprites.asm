@@ -115,7 +115,7 @@ OverworldSprites:
 	overworld_sprite KangaskhanMoveSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
 	overworld_sprite MrMimeMoveSpriteGFX, 12, WALKING_SPRITE, PAL_OW_PURPLE
 	overworld_sprite TangelaMoveSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
-; 6a
+	overworld_sprite GeodudeMoveSpriteGFX, 12, WALKING_SPRITE, PAL_OW_TREE
 ; 6b
 ; 6c
 ; 6d
