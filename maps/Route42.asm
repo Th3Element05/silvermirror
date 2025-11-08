@@ -122,8 +122,6 @@ Route42ChuckWellDoneText:
 
 	para "You deserve a"
 	line "rest, PRIMEAPE!"
-
-	para "Return!"
 	done
 
 Route42ChuckFarewellText:

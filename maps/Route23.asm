@@ -27,13 +27,13 @@ VictoryRoadSignText:
 
 ; hidden items
 Route23HiddenMaxEther:
-	hiddenitem MAX_ETHER, EVENT_ROUTE23_HIDDEN_MAX_ETHER
+	hiddenitem MAX_ETHER, EVENT_ROUTE_23_HIDDEN_MAX_ETHER
 
 Route23HiddenUltraBall:
-	hiddenitem ULTRA_BALL, EVENT_ROUTE23_HIDDEN_ULTRA_BALL
+	hiddenitem ULTRA_BALL, EVENT_ROUTE_23_HIDDEN_ULTRA_BALL
 
 Route23HiddenFullRestore:
-	hiddenitem FULL_RESTORE, EVENT_ROUTE23_HIDDEN_FULL_RESTORE
+	hiddenitem FULL_RESTORE, EVENT_ROUTE_23_HIDDEN_FULL_RESTORE
 
 Route23_MapEvents:
 	db 0, 0 ; filler
