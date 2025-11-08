@@ -1,0 +1,46 @@
+constants\engine_flags.asm
+18
+	const ENGINE_PAGER_HEADBUTT
+
+constants\wram_constants.asm
+263
+	const PAGER_HEADBUTT_F ; 7
+
+
+data\pager_system.asm
+32
+	db SPRITE_ANIM_OBJ_PAGER_MON_GREY, PAGER_HEADBUTT_F
+21
+	db SPECIES
+9
+	db "TM55 HEADBUTT@"
+
+data\events\engine_flags.asm
+27
+	engine_flag wPagerFlags, PAGER_HEADBUTT_F
+
+
+engine\pokegear\pokegear.asm
+695
+HeadbuttPagerRoutine:
+	farcall MonMenu_Headbutt
+	ret nz
+	jr FinishPagerRoutine
+629
+	dw HeadbuttPagerRoutine
+
+engine\evnets\overworld.asm
+1295
+;	ld d, HEADBUTT
+;	call CheckPartyMove
+	ld de, ENGINE_PAGER_HEADBUTT
+	call CheckEngineFlag
+
+
+
+
+
+
+
+
+

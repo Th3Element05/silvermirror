@@ -1,0 +1,127 @@
+LIZ1
+TrainerPicnickerLiz1:
+	trainer PICNICKER, LIZ1, EVENT_BEAT_PICNICKER_LIZ, PicnickerLiz1SeenText, PicnickerLiz1BeatenText, 0, .Script
+.Script:
+	loadvar VAR_CALLERID, PHONE_PICNICKER_LIZ
+	opentext
+	checkflag ENGINE_LIZ_READY_FOR_REMATCH
+	iftrue .Rematch
+	checkcellnum PHONE_PICNICKER_LIZ
+	iftrue .LizDefeated
+	checkevent EVENT_LIZ_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskAgain
+	writetext PicnickerLiz1AfterText
+	promptbutton
+	setevent EVENT_LIZ_ASKED_FOR_PHONE_NUMBER
+	scall .AskNumber1
+	sjump .AskForNumber
+
+.AskAgain:
+	scall .AskNumber2
+.AskForNumber:
+	askforphonenumber PHONE_PICNICKER_LIZ
+	ifequal PHONE_CONTACTS_FULL, .PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
+	gettrainername STRING_BUFFER_3, PICNICKER, LIZ1
+	scall .RegisteredNumber
+	sjump .NumberAccepted
+
+.Rematch:
+	scall .RematchStd
+	winlosstext PicnickerLiz1BeatenText, 0
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .LoadFight4
+	checkevent EVENT_CLEARED_RADIO_TOWER
+	iftrue .LoadFight3
+	checkevent EVENT_CLEARED_ROCKET_HIDEOUT
+	iftrue .LoadFight2
+	checkflag ENGINE_FLYPOINT_ECRUTEAK
+	iftrue .LoadFight1
+	loadtrainer PICNICKER, LIZ1
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_LIZ_READY_FOR_REMATCH
+	end
+
+.LoadFight1:
+	loadtrainer PICNICKER, LIZ2
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_LIZ_READY_FOR_REMATCH
+	end
+
+.LoadFight2:
+	loadtrainer PICNICKER, LIZ3
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_LIZ_READY_FOR_REMATCH
+	end
+
+.LoadFight3:
+	loadtrainer PICNICKER, LIZ4
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_LIZ_READY_FOR_REMATCH
+	end
+
+.LoadFight4:
+	loadtrainer PICNICKER, LIZ5
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_LIZ_READY_FOR_REMATCH
+	end
+
+.AskNumber1:
+	jumpstd AskNumber1FScript
+	end
+
+.AskNumber2:
+	jumpstd AskNumber2FScript
+	end
+
+.RegisteredNumber:
+	jumpstd RegisteredNumberFScript
+	end
+
+.NumberAccepted:
+	jumpstd NumberAcceptedFScript
+	end
+
+.NumberDeclined:
+	jumpstd NumberDeclinedFScript
+	end
+
+.PhoneFull:
+	jumpstd PhoneFullFScript
+	end
+
+.RematchStd:
+	jumpstd RematchFScript
+	end
+
+.LizDefeated:
+	writetext PicnickerLiz1AfterText
+	promptbutton
+	closetext
+	end
+
+PicnickerLiz1SeenText:
+	text "Uh-huh. Yeah, and"
+	line "you know…"
+
+	para "Pardon? Battle?"
+	line "I'm on the phone."
+
+	para "Oh, all right. But"
+	line "make it fast."
+	done
+
+PicnickerLiz1BeatenText:
+	text "Oh! I've got to"
+	line "relieve my anger!"
+	done
+
+PicnickerLiz1AfterText:
+	text "I was having a"
+	line "nice chat too."
+	done
