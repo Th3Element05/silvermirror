@@ -359,6 +359,7 @@ CeladonHotel_Blocks:                   ;silvermirror+
 SaffronPokecenter1F_Blocks:
 FuchsiaPokecenter1F_Blocks:
 CinnabarPokecenter1F_Blocks:
+SilverCavePokecenter1F_Blocks:
 ;SafariZoneGatePokecenter1F_Blocks:
 	INCBIN "maps/Pokecenter1F.blk"
 
@@ -372,7 +373,6 @@ OlivinePokecenter1F_Blocks:
 CianwoodPokecenter1F_Blocks:
 MahoganyPokecenter1F_Blocks:
 BlackthornPokecenter1F_Blocks:
-SilverCavePokecenter1F_Blocks:
 	INCBIN "maps/Pokecenter1FJohto.blk"
 
 EarlsPokemonAcademy_Blocks:
