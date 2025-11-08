@@ -241,6 +241,7 @@ DEF KRIS EQU __trainer_class__
 	const REGIS
 	const JOEY1
 	const THOMAS
+	const BRADY
 ; rematch
 	const BILLY2
 	const BILLY3
@@ -497,11 +498,12 @@ DEF KRIS EQU __trainer_class__
 ; johto
 	const BARNEY
 	const WILTON1
-	const RALPH1
+	const FRED
 	const EMIL
 	const MARCO
 	const ARCHIE
 	const ROYCE
+	const RALPH1
 ; rematch
 	const TULLY2
 	const TULLY3
@@ -687,8 +689,8 @@ DEF KRIS EQU __trainer_class__
 ; rematch
 	const WALT2
 	const WALT3
-	const WALT4
-	const WALT5
+;	const WALT4
+;	const WALT5
 
 	trainerclass JUGGLER ; 36
 ; kanto
@@ -907,7 +909,8 @@ DEF KRIS EQU __trainer_class__
 ; kanto (JR TRAINERs r6)
 	const TIMANDSUE1
 ; johto
-	const DUFFANDEDA
+	const DUFFANDEDA_DUFF
+	const DUFFANDEDA_EDA
 	const MOEANDLULU
 	const VICANDTARA
 ; rematch
