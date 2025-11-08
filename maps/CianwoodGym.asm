@@ -88,7 +88,7 @@ CianwoodGymChuckScript:
 	db "WHIRLPOOL PAGER@"
 
 GotWhirlpoolPagerText: ;change whirlpool pager to POLIWRATH?
-	text "AZUMARILL was"
+	text "POLIWRATH was"
 	line "added to the PPS!"
 	done
 
