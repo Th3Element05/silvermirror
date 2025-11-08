@@ -18,10 +18,11 @@ PewterPokecenter1FBenchGuyText:
 
 	para "When JIGGLYPUFF"
 	line "sings, #MON"
-	cont "get drowsy..."
+	cont "get drowsy…"
 
-	para "...Me too..."
-	line "Snore..."
+	para "…Me too…"
+
+	para "Zzz…"
 	done
 
 PewterPokecenterJigglypuff:

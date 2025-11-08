@@ -6,6 +6,7 @@ VermilionMart_MapScripts:
 	def_callbacks
 
 VermilionMartClerkScript:
+	faceplayer
 	opentext
 	readvar VAR_BADGES
 	ifgreater 4, .BallsFive

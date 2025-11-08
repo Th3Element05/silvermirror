@@ -6,6 +6,7 @@ LavenderMart_MapScripts:
 	def_callbacks
 
 LavenderMartClerkScript:
+	faceplayer
 	opentext
 	readvar VAR_BADGES
 	ifgreater 4, .BallsFive

@@ -1,7 +1,4 @@
 	object_const_def
-	const VIOLETMART_CLERK
-	const VIOLETMART_GRANNY
-	const VIOLETMART_COOLTRAINER_M
 
 VioletMart_MapScripts:
 	def_scene_scripts
@@ -9,17 +6,20 @@ VioletMart_MapScripts:
 	def_callbacks
 
 VioletMartClerkScript:
+	faceplayer
 	opentext
 	pokemart MARTTYPE_STANDARD, MART_BALLS_FIVE
 	closetext
 	end
 
+VioletMartMedScript:
+	opentext
+	pokemart MARTTYPE_STANDARD, MART_MED_SIX
+	closetext
+	end
+
 VioletMartGrannyScript:
 	jumptextfaceplayer VioletMartGrannyText
-
-VioletMartCooltrainerMScript:
-	jumptextfaceplayer VioletMartCooltrainerMText
-
 VioletMartGrannyText:
 	text "When you first"
 	line "catch a #MON,"
@@ -34,6 +34,8 @@ VioletMartGrannyText:
 	cont "love."
 	done
 
+VioletMartCooltrainerMScript:
+	jumptextfaceplayer VioletMartCooltrainerMText
 VioletMartCooltrainerMText:
 	text "#MON can hold"
 	line "items like POTION"
@@ -41,9 +43,8 @@ VioletMartCooltrainerMText:
 
 	para "But they don't"
 	line "appear to know how"
-
-	para "to use manmade"
-	line "items."
+	cont "to use manmade"
+	cont "items."
 	done
 
 VioletMart_MapEvents:
@@ -58,6 +59,7 @@ VioletMart_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  1,  3, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletMartClerkScript, -1
+	object_event  0,  5, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, VioletMartClerkScript, -1
+	object_event  0,  3, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VioletMartMedScript, -1
 	object_event  7,  6, SPRITE_GRANNY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletMartGrannyScript, -1
 	object_event  5,  2, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VioletMartCooltrainerMScript, -1

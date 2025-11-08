@@ -1,8 +1,4 @@
 	object_const_def
-	const MAHOGANYPOKECENTER1F_NURSE
-	const MAHOGANYPOKECENTER1F_POKEFAN_M
-	const MAHOGANYPOKECENTER1F_YOUNGSTER
-	const MAHOGANYPOKECENTER1F_COOLTRAINER_F
 
 MahoganyPokecenter1F_MapScripts:
 	def_scene_scripts
@@ -14,23 +10,26 @@ MahoganyPokecenter1FNurseScript:
 
 MahoganyPokecenter1FPokefanMScript:
 	jumptextfaceplayer MahoganyPokecenter1FPokefanMText
+MahoganyPokecenter1FPokefanMText:
+;	text "What's this? TEAM"
+;	line "ROCKET has come"
+;	cont "back?"
+;
+;	para "I saw some men in"
+;	line "black at LAKE OF"
+;	cont "RAGE…"
+;	done
+	text "I saw CLAIR, the"
+	line "GYM LEADER from"
+	cont "BLACKTHORN CITY"
+	cont "passing through."
+
+	para "Sometimes she goes"
+	line "to LAKE OF RAGE."
+	done
 
 MahoganyPokecenter1FYoungsterScript:
 	jumptextfaceplayer MahoganyPokecenter1FYoungsterText
-
-MahoganyPokecenter1FCooltrainerFScript:
-	jumptextfaceplayer MahoganyPokecenter1FCooltrainerFText
-
-MahoganyPokecenter1FPokefanMText:
-	text "What's this? TEAM"
-	line "ROCKET has come"
-	cont "back?"
-
-	para "I saw some men in"
-	line "black at LAKE OF"
-	cont "RAGE…"
-	done
-
 MahoganyPokecenter1FYoungsterText:
 	text "I stop my #MON"
 	line "from evolving too"
@@ -42,6 +41,8 @@ MahoganyPokecenter1FYoungsterText:
 	cont "evolve."
 	done
 
+MahoganyPokecenter1FCooltrainerFScript:
+	jumptextfaceplayer MahoganyPokecenter1FCooltrainerFText
 MahoganyPokecenter1FCooltrainerFText:
 	text "#MON do become"
 	line "stronger when they"

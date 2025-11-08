@@ -1,7 +1,4 @@
 	object_const_def
-	const AZALEAMART_CLERK
-;	const AZALEAMART_COOLTRAINER_M
-;	const AZALEAMART_BUG_CATCHER
 
 AzaleaMart_MapScripts:
 	def_scene_scripts
@@ -9,39 +6,40 @@ AzaleaMart_MapScripts:
 	def_callbacks
 
 AzaleaMartClerkScript:
+	faceplayer
 	opentext
 	pokemart MARTTYPE_STANDARD, MART_BALLS_FIVE
 	closetext
 	end
 
-;AzaleaMartCooltrainerMScript:
-;	jumptextfaceplayer AzaleaMartCooltrainerMText
+AzaleaMartMedScript:
+	opentext
+	pokemart MARTTYPE_STANDARD, MART_MED_SIX
+	closetext
+	end
 
-;AzaleaMartBugCatcherScript:
-;	jumptextfaceplayer AzaleaMartBugCatcherText
+AzaleaMartCooltrainerMScript:
+	jumptextfaceplayer AzaleaMartCooltrainerMText
+AzaleaMartCooltrainerMText:
+	text "Normal # BALLS"
+	line "are alright, but"
+	cont "I wish KURT would"
+	cont "make me some of"
+	cont "his custom BALLS."
+	done
 
-;AzaleaMartCooltrainerMText:
-;	text "There's no GREAT"
-;	line "BALL here. #"
-;
-;	para "BALLS will have"
-;	line "to do."
-;
-;	para "I wish KURT would"
-;	line "make me some of"
-;	cont "his custom BALLS."
-;	done
+AzaleaMartBugCatcherScript:
+	jumptextfaceplayer AzaleaMartBugCatcherText
+AzaleaMartBugCatcherText:
+	text "A GREAT BALL is"
+	line "better for catch-"
+	cont "ing #MON than"
+	cont "a # BALL."
 
-;AzaleaMartBugCatcherText:
-;	text "A GREAT BALL is"
-;	line "better for catch-"
-;	cont "ing #MON than a"
-;	cont "# BALL."
-;
-;	para "But KURT's might"
-;	line "be better some-"
-;	cont "times."
-;	done
+	para "But KURT's might"
+	line "be better some-"
+	cont "times."
+	done
 
 AzaleaMart_MapEvents:
 	db 0, 0 ; filler
@@ -55,6 +53,7 @@ AzaleaMart_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  1,  3, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AzaleaMartClerkScript, -1
-;	object_event  2,  5, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AzaleaMartCooltrainerMScript, -1
-;	object_event  7,  2, SPRITE_BOY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AzaleaMartBugCatcherScript, -1
+	object_event  0,  5, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AzaleaMartClerkScript, -1
+	object_event  0,  3, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AzaleaMartMedScript, -1
+	object_event  4,  5, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AzaleaMartCooltrainerMScript, -1
+	object_event  7,  2, SPRITE_BOY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AzaleaMartBugCatcherScript, -1
