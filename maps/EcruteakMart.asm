@@ -6,6 +6,7 @@ EcruteakMart_MapScripts:
 	def_callbacks
 
 EcruteakMartClerkScript:
+	faceplayer
 	opentext
 	pokemart MARTTYPE_STANDARD, MART_BALLS_FIVE
 	closetext

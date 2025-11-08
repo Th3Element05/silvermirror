@@ -11,7 +11,7 @@ CianwoodPokecenter1FNurseScript:
 CianwoodPokecenter1FLassScript:
 	jumptextfaceplayer CianwoodPokecenter1FLassText
 CianwoodPokecenter1FLassText:
-	text "Did you meet the"
+	text "Have you met the"
 	line "#MANIAC?"
 
 	para "He's always brag-"

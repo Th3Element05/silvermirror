@@ -35,6 +35,7 @@ ViridianMartClerkScript:
 	iftrue .Mart
 	jumptext ViridianMartSayHiToOakText
 .Mart
+	faceplayer
 	opentext
 	readvar VAR_BADGES
 	ifgreater 4, .BallsFive

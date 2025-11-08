@@ -6,6 +6,7 @@ OlivineMart_MapScripts:
 	def_callbacks
 
 OlivineMartClerkScript:
+	faceplayer
 	opentext
 	pokemart MARTTYPE_STANDARD, MART_BALLS_FIVE
 	closetext

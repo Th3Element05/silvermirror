@@ -6,6 +6,7 @@ CeruleanMart_MapScripts:
 	def_callbacks
 
 CeruleanMartClerkScript:
+	faceplayer
 	opentext
 	readvar VAR_BADGES
 	ifgreater 4, .BallsFive
