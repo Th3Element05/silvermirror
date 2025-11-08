@@ -125,3 +125,23 @@ TrainerSchoolboyAlan1:
 	promptbutton
 	closetext
 	end
+
+SchoolboyAlan1SeenText:
+	text "Thanks to my stud-"
+	line "ies, I'm ready for"
+	cont "any #MON!"
+	done
+
+SchoolboyAlan1BeatenText:
+	text "Oops! Computation"
+	line "error?"
+	done
+
+SchoolboyAlanBooksText:
+	text "Darn. I study five"
+	line "hours a day too."
+
+	para "There's more to"
+	line "learning than just"
+	cont "reading books."
+	done
