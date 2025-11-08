@@ -36,7 +36,7 @@ OutdoorSprites:
 	assert_table_length NUM_MAP_GROUPS
 
 PalletGroupSprites:
-;PalletTown	OAK, TEACHER, FISHER
+;PalletTown	VAR(OAK), TEACHER, FISHER
 ;Route1		YOUNGSTER, berry, apricorn
 ViridianGroupSprites:
 ;ViridianCity	GRAMPS, FISHER, TEACHER, YOUNGSTER, BUG_CATCHER
@@ -45,9 +45,10 @@ ViridianGroupSprites:
 CinnabarGroupSprites:
 ;CinnabarIsland GRAMPS, TEACHER
 ;Route19        SWIMMER_M, SWIMMER_F, COOLTRAINER_M
-;Route20        SWIMMER_M, SWIMMER_F, COOLTRAINER_M
+;Route20        VAR(GEODUDE), SWIMMER_M, SWIMMER_F, COOLTRAINER_M, rock
 ;Route21        SWIMMER_M, FISHER
-	db SPRITE_OAK
+	db SPRITE_VARIABLE
+;	db SPRITE_OAK
 	db SPRITE_BLUE
 	db SPRITE_TEACHER
 	db SPRITE_YOUNGSTER
@@ -60,6 +61,7 @@ CinnabarGroupSprites:
 	db SPRITE_SLEEPING
 	db SPRITE_FISHER
 	db SPRITE_POKE_BALL
+	db SPRITE_ROCK
 	db SPRITE_BERRY
 	db SPRITE_APRICORN
 	db 0 ; end
@@ -255,22 +257,27 @@ CherrygroveGroupSprites:
 
 ; Route37 and EcruteakCity are connected
 VioletGroupSprites:
-; Route32, Route35, Route36, Route37, VioletCity
+; VioletCity   LASS, SUPER_NERD, GRAMPS, youngster, berry, apricorn
+; Route32      YOUNGSTER, FISHER, ROCKER, lass, pokeball
+; Route35      BUG_CATCHER, FISHER, ROCKER, YOUNGSTER, LASS, officer, berry, apricorn
+; Route36      YOUNGSTER, BOY, TWIN, tangela_move, mr__mime_move, berry, apricorn
+; Route37      BOY, youngster, twin, apricorn
 EcruteakGroupSprites:
-; EcruteakCity
-	db SPRITE_FISHER
+; EcruteakCity 
 	db SPRITE_LASS
-	db SPRITE_OFFICER
-	db SPRITE_GRAMPS
 	db SPRITE_YOUNGSTER
-	db SPRITE_COOLTRAINER_M
+	db SPRITE_FISHER
+	db SPRITE_ROCKER
+	db SPRITE_BUG_CATCHER
+	db SPRITE_TWIN
 	db SPRITE_BOY
 	db SPRITE_SUPER_NERD
-	; 8 of 9 max walking sprites
-	db SPRITE_TWIN
-	db SPRITE_MR__MIME_MOVE
-	db SPRITE_TANGELA_MOVE
+	db SPRITE_GRAMPS
+	; 9 of 9 max walking sprites
+	db SPRITE_OFFICER
 	db SPRITE_SUDOWOODO
+	db SPRITE_TANGELA_MOVE
+	db SPRITE_MR__MIME_MOVE
 	db SPRITE_POKE_BALL
 	db SPRITE_BERRY
 	db SPRITE_APRICORN

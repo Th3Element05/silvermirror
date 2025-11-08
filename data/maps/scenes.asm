@@ -33,6 +33,7 @@ MapScenes::
 	scene_var SAFARI_ZONE_ENTRANCE,                        wSafariZoneEntranceSceneID
 	scene_var SILPH_CO_7F,                                 wSilphCo7FSceneID
 	scene_var SILPH_CO_11F,                                wSilphCo11FSceneID
+	scene_var ROUTE_20,                                    wRoute20SceneID
 	scene_var CINNABAR_ISLAND,                             wCinnabarIslandSceneID
 	scene_var VICTORY_ROAD_GATE,                           wVictoryRoadGateSceneID
 	scene_var SAFFRON_MAGNET_TRAIN_STATION,                wSaffronMagnetTrainStationSceneID

@@ -110,7 +110,7 @@
 	const SPRITE_KANGASKHAN_MOVE        ; 67
 	const SPRITE_MR__MIME_MOVE          ; 68
 	const SPRITE_TANGELA_MOVE           ; 69
-;; 6a
+	const SPRITE_GEODUDE_MOVE           ; 6a
 ;; 6b
 ;; 6c
 ;; 6d
@@ -407,3 +407,4 @@ DEF SPRITE_VARS EQU const_value
 	const SPRITE_COPYCAT             ; f4
 	const SPRITE_BILL_TRANSFORM      ; f5
 	const SPRITE_VOLTORB_TRAP        ; f6
+	const SPRITE_VARIABLE            ; f7

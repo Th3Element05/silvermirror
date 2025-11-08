@@ -194,6 +194,7 @@ MapSpecificOBPalettes:
 	_use_palette_routine_for_map CELADON_MANSION_1F, .PinkOverRockOBPalette
 	_use_palette_routine_for_map FUCHSIA_CITY, .PinkOverRockOBPalette
 	_use_palette_routine_for_map SAFARI_ZONE_AREA_3, .RockOverTreeOBPalette
+	_use_palette_routine_for_map ROUTE_20, .GrayOverTreeOBPalette
 	_use_palette_routine_for_map POWER_PLANT, .YellowOverRockOBPalette
 	_use_palette_routine_for_map FIGHTING_DOJO, .GrayOverRockOBPalette
 	_use_palette_routine_for_map COPYCATS_HOUSE_1F, .PinkOverRockOBPalette
@@ -208,7 +209,7 @@ MapSpecificOBPalettes:
 	_use_palette_routine_for_map OLIVINE_LIGHTHOUSE_6F, .YellowOverRockOBPalette
 	_use_palette_routine_for_map GOLDENROD_DEPT_STORE_B1F, .GrayOverRockOBPalette
 	_use_palette_routine_for_map DANCE_THEATER, .GrayOverRockOBPalette
-	_use_palette_routine_for_map CHERRYGROVE_CITY, .GrayOverTreeOBPalette
+;	_use_palette_routine_for_map CHERRYGROVE_CITY, .GrayOverTreeOBPalette
 ;OG
 ;	_use_palette_routine_for_map VIRIDIAN_NICKNAME_SPEECH_HOUSE, .PurpleOverRockOBPalette ;PURPLE
 ;	_use_palette_routine_for_map PEWTER_CITY, .WhiteOverRockOBPalette                     ;SILVER

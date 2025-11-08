@@ -3144,6 +3144,7 @@ wMrFujisHouseSceneID::                            db
 wSafariZoneEntranceSceneID::                      db
 wSilphCo7FSceneID::                               db
 wSilphCo11FSceneID::                              db
+wRoute20SceneID::                                 db
 wCinnabarIslandSceneID::                          db
 wVictoryRoadGateSceneID::                         db
 wSaffronMagnetTrainStationSceneID::               db
