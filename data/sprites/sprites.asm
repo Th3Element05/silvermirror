@@ -126,7 +126,7 @@ OverworldSprites:
 ; 72
 ; 73
 ; 74
-; 75
+	overworld_sprite HoohShadowSpriteGFX, 12, STANDING_SPRITE, PAL_OW_ROCK ; 75
 ; decorations
 	overworld_sprite BigSnorlaxSpriteGFX, 12, STANDING_SPRITE, PAL_OW_BLUE
 	overworld_sprite BigLaprasSpriteGFX, 12, STANDING_SPRITE, PAL_OW_BLUE
