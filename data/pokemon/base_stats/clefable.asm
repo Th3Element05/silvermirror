@@ -6,7 +6,7 @@
 	db NORMAL, NORMAL ; type
 	db 25 ; catch rate
 	db 129 ; base exp
-	db LUM_BERRY, MOON_STONE ; items
+	db LUM_BERRY, STAR_PIECE ; items
 	db GENDER_F75 ; gender ratio
 ;	db 100 ; unknown 1
 	db 10 ; step cycles to hatch
