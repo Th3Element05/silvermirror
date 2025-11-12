@@ -636,30 +636,30 @@ CeladonGameCornerAmuletCoin:
 	itemball AMULET_COIN
 
 ; itemfinder spoofs
-CeladonGameCorner10Coins1I:
-	hiddenitem ORAN_BERRY, EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_1
-CeladonGameCorner10Coins2I:
-	hiddenitem ORAN_BERRY, EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_2
-CeladonGameCorner10Coins3I:
-	hiddenitem ORAN_BERRY, EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_3
-CeladonGameCorner10Coins4I:
-	hiddenitem ORAN_BERRY, EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_4
-CeladonGameCorner10Coins5I:
-	hiddenitem ORAN_BERRY, EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_5
-CeladonGameCorner10Coins6I:
-	hiddenitem ORAN_BERRY, EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_6
-CeladonGameCorner10Coins7I:
-	hiddenitem ORAN_BERRY, EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_7
-CeladonGameCorner10Coins8I:
-	hiddenitem ORAN_BERRY, EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_8
-CeladonGameCorner20Coins1I:
-	hiddenitem ORAN_BERRY, EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_20_1
-CeladonGameCorner20Coins2I:
-	hiddenitem ORAN_BERRY, EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_20_2
-CeladonGameCorner40CoinsI:
-	hiddenitem ORAN_BERRY, EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_40
-CeladonGameCorner100CoinsI:
-	hiddenitem ORAN_BERRY, EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_100
+;CeladonGameCorner10Coins1I:
+;	hiddenitem ORAN_BERRY, EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_1
+;CeladonGameCorner10Coins2I:
+;	hiddenitem ORAN_BERRY, EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_2
+;CeladonGameCorner10Coins3I:
+;	hiddenitem ORAN_BERRY, EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_3
+;CeladonGameCorner10Coins4I:
+;	hiddenitem ORAN_BERRY, EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_4
+;CeladonGameCorner10Coins5I:
+;	hiddenitem ORAN_BERRY, EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_5
+;CeladonGameCorner10Coins6I:
+;	hiddenitem ORAN_BERRY, EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_6
+;CeladonGameCorner10Coins7I:
+;	hiddenitem ORAN_BERRY, EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_7
+;CeladonGameCorner10Coins8I:
+;	hiddenitem ORAN_BERRY, EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_8
+;CeladonGameCorner20Coins1I:
+;	hiddenitem ORAN_BERRY, EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_20_1
+;CeladonGameCorner20Coins2I:
+;	hiddenitem ORAN_BERRY, EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_20_2
+;CeladonGameCorner40CoinsI:
+;	hiddenitem ORAN_BERRY, EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_40
+;CeladonGameCorner100CoinsI:
+;	hiddenitem ORAN_BERRY, EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_100
 
 CeladonGameCorner_MapEvents:
 	db 0, 0 ; filler
@@ -712,29 +712,29 @@ CeladonGameCorner_MapEvents:
 	bg_event 18, 11, BGEVENT_RIGHT, CeladonGameCornerLuckySlotMachineScript
 ;
 	bg_event  0,  4, BGEVENT_IFNOTSET, CeladonGameCorner10Coins1
-	bg_event  0,  4, BGEVENT_ITEM, CeladonGameCorner10Coins1I
+;	bg_event  0,  4, BGEVENT_ITEM, CeladonGameCorner10Coins1I
 	bg_event  1, 12, BGEVENT_IFNOTSET, CeladonGameCorner10Coins2
-	bg_event  1, 12, BGEVENT_ITEM, CeladonGameCorner10Coins2I
+;	bg_event  1, 12, BGEVENT_ITEM, CeladonGameCorner10Coins2I
 	bg_event  3, 10, BGEVENT_IFNOTSET, CeladonGameCorner10Coins3
-	bg_event  3, 10, BGEVENT_ITEM, CeladonGameCorner10Coins3I
+;	bg_event  3, 10, BGEVENT_ITEM, CeladonGameCorner10Coins3I
 	bg_event  4,  8, BGEVENT_IFNOTSET, CeladonGameCorner10Coins4
-	bg_event  4,  8, BGEVENT_ITEM, CeladonGameCorner10Coins4I
+;	bg_event  4,  8, BGEVENT_ITEM, CeladonGameCorner10Coins4I
 	bg_event  9, 11, BGEVENT_IFNOTSET, CeladonGameCorner10Coins5
-	bg_event  9, 11, BGEVENT_ITEM, CeladonGameCorner10Coins5I
+;	bg_event  9, 11, BGEVENT_ITEM, CeladonGameCorner10Coins5I
 	bg_event 10, 12, BGEVENT_IFNOTSET, CeladonGameCorner10Coins6
-	bg_event 10, 12, BGEVENT_ITEM, CeladonGameCorner10Coins6I
+;	bg_event 10, 12, BGEVENT_ITEM, CeladonGameCorner10Coins6I
 	bg_event 12, 11, BGEVENT_IFNOTSET, CeladonGameCorner10Coins7
-	bg_event 12, 11, BGEVENT_ITEM, CeladonGameCorner10Coins7I
+;	bg_event 12, 11, BGEVENT_ITEM, CeladonGameCorner10Coins7I
 	bg_event 16, 10, BGEVENT_IFNOTSET, CeladonGameCorner10Coins8
-	bg_event 16, 10, BGEVENT_ITEM, CeladonGameCorner10Coins8I
+;	bg_event 16, 10, BGEVENT_ITEM, CeladonGameCorner10Coins8I
 	bg_event  3,  7, BGEVENT_IFNOTSET, CeladonGameCorner20Coins1
-	bg_event  3,  7, BGEVENT_ITEM, CeladonGameCorner20Coins1I
+;	bg_event  3,  7, BGEVENT_ITEM, CeladonGameCorner20Coins1I
 	bg_event  9,  8, BGEVENT_IFNOTSET, CeladonGameCorner20Coins2
-	bg_event  9,  8, BGEVENT_ITEM, CeladonGameCorner20Coins2I
+;	bg_event  9,  8, BGEVENT_ITEM, CeladonGameCorner20Coins2I
 	bg_event 11,  3, BGEVENT_IFNOTSET, CeladonGameCorner40Coins
-	bg_event 11,  3, BGEVENT_ITEM, CeladonGameCorner40CoinsI
+;	bg_event 11,  3, BGEVENT_ITEM, CeladonGameCorner40CoinsI
 	bg_event 15,  4, BGEVENT_IFNOTSET, CeladonGameCorner100Coins
-	bg_event 15,  4, BGEVENT_ITEM, CeladonGameCorner100CoinsI
+;	bg_event 15,  4, BGEVENT_ITEM, CeladonGameCorner100CoinsI
 	bg_event  0,  0, BGEVENT_IFNOTSET, CeladonGameCornerDebugCoins
 
 	def_object_events
