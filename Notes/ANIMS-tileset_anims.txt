@@ -1,0 +1,70 @@
+engine\tilesets\tileset_anims.asm
+
+TilesetCaveAnim:
+TilesetDarkCaveAnim:
+
+$water	dw vTiles2 tile $14, ReadTileToAnimBuffer
+	dw NULL,  FlickeringCaveEntrancePalette
+R/L	dw wTileAnimBuffer, ScrollTileRightLeft
+	dw NULL,  FlickeringCaveEntrancePalette
+$water	dw vTiles2 tile $14, WriteTileFromAnimBuffer
+	dw NULL,  FlickeringCaveEntrancePalette
+Wpal	dw NULL,  AnimateWaterPalette
+	dw NULL,  FlickeringCaveEntrancePalette
+$wfall	dw vTiles2 tile $40, ReadTileToAnimBuffer
+	dw NULL,  FlickeringCaveEntrancePalette
+down	dw wTileAnimBuffer, ScrollTileDown
+	dw NULL,  FlickeringCaveEntrancePalette
+down	dw wTileAnimBuffer, ScrollTileDown
+	dw NULL,  FlickeringCaveEntrancePalette
+down	dw wTileAnimBuffer, ScrollTileDown
+	dw NULL,  FlickeringCaveEntrancePalette
+$wfall	dw vTiles2 tile $40, WriteTileFromAnimBuffer
+	dw NULL,  FlickeringCaveEntrancePalette
+whirl	dw WhirlpoolFrames9, AnimateWhirlpoolTile
+whirl	dw WhirlpoolFrames10, AnimateWhirlpoolTile
+whirl	dw WhirlpoolFrames11, AnimateWhirlpoolTile
+whirl	dw WhirlpoolFrames12, AnimateWhirlpoolTile
+	dw NULL,  DoneTileAnimation
+
+
+Tileset0Anim:
+TilesetJohtoModernAnim:
+TilesetKantoAnim:
+TilesetPortAnim:
+
+$water	dw vTiles2 tile $14, ReadTileToAnimBuffer ;$14 water
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+R/L	dw wTileAnimBuffer, ScrollTileRightLeft
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+$water	dw vTiles2 tile $14, WriteTileFromAnimBuffer ;$14 water
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+$fount	dw vTiles2 tile $64, AnimateFountainTile ;$64 fountain
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+Wpal	dw NULL,  AnimateWaterPalette
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+flower	dw NULL,  AnimateFlowerTile
+	dw NULL,  WaitTileAnimation
+$water	dw vTiles2 tile $74, AnimateWaterTile ;$74 johto water
+	dw NULL,  DoneTileAnimation
+
+
+UnusedTilesetAnim3: ; unreferenced
+; Scrolls tile $53 like a waterfall; scrolls tile $03 like cave water.
+	dw vTiles2 tile $53, ReadTileToAnimBuffer
+	dw wTileAnimBuffer, ScrollTileDown
+	dw wTileAnimBuffer, ScrollTileDown
+	dw vTiles2 tile $53, WriteTileFromAnimBuffer
+	dw vTiles2 tile $03, ReadTileToAnimBuffer
+	dw wTileAnimBuffer, ScrollTileRightLeft
+	dw vTiles2 tile $03, WriteTileFromAnimBuffer
+	dw vTiles2 tile $53, ReadTileToAnimBuffer
+	dw wTileAnimBuffer, ScrollTileDown
+	dw wTileAnimBuffer, ScrollTileDown
+	dw vTiles2 tile $53, WriteTileFromAnimBuffer
+	dw NULL,  DoneTileAnimation
