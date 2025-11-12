@@ -54,6 +54,22 @@ ROCK SMASH ITEMS
 engine\events\checkforhiddenitems.asm
 
 
+SLOTS PAYOUT
+engine\games\slot_machine.asm
+1844 .PayoutTable:
+
+
+GetPriceToRetrieveBreedmon:
+100?
+
+
+constants\battle_constants.asm
+; significant level values
+DEF EGG_LEVEL EQU 1
+
+
+
+
 
 
 TEST to-do
@@ -70,11 +86,22 @@ check pokecenter link receptionist sprites
 
 
 TO-DO to-do
-TO RELEASE BETA: remove SS Ticket (maps/HallOfFame, maps/OaksLab)
 
-OlivineGymStatue:
-	gettrainername STRING_BUFFER_4, JASMINE, JASMINE1
-	jumpstd GymStatue3Script
+buy egg in Game Corner?
+special GiveOddEgg
+data\events\odd_eggs.asm
+
+slugma, houndour, murkrow (johto?)
+misdreavus, larvitar (johto?)
+possibly game corner
+
+SLUGMA goldenrod prize      X[in mt. mortar]    +(g2 16/17/18 day)
+HOUNDOUR                    +route 35/37 nite   +(gen2 rt7)
+MURKROW goldenrod prize     X[route 45 nite]    +(gen2 7/16(18))
+MISDREAVUS                  +burned tower nite  +(mt silver)
+LARVITAR goldenrod prize    +route 45?          +(mt silver)
+
+
 
 olivine tim's house trade
 olivine lighthouse (currently blocked)
@@ -95,10 +122,7 @@ cianwood fighting gym come use strength to clear route 42
 
 ROUTE 11 replace GUITARISTs with OFFICERs (Rex and Carter)
 
-SLUGMA in mt. mortar +(gen2 16/17/18 day)
-HOUNDOUR route 35/37 nite +(gen2 rt7)
-MURKROW route 45 nite +(gen2 7/16(18))
-MISDREAVUS burned tower nite (mt silver)
+
 
 CHANSEY rematch trainer, for grinding
 
