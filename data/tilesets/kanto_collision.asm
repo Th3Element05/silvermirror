@@ -176,3 +176,4 @@
 	tilecoll WALL, WALL, WALL, WALL ; af
 	tilecoll WALL, WALL, WALL, WALL ; b0
 	tilecoll WATER, WATER, WALL, WALL ; b1
+	tilecoll WATERFALL, WATERFALL, WATERFALL, WATERFALL ; b2
