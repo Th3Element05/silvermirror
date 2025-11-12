@@ -184,6 +184,7 @@ MartIndigoPlateau:
 	db MAX_REPEL
 	db HYPER_POTION
 	db MAX_POTION
+;	db ETHER
 	db REVIVE
 	db MAX_REVIVE
 	db FULL_HEAL
