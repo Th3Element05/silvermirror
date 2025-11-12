@@ -99,7 +99,7 @@ CeruleanGroupSprites:
 ;Route25        YOUNGSTER, POKEFAN_M, LASS, captain, poke_ball
 ;Route5         (in SaffronGroup for roof color, actually connected to CeruleanCity)
 ;Route9         YOUNGSTER, POKEFAN_M, LASS, BUG_CATCHER, poke_ball
-;Route10North   LASS, SUPER_NERD, poke_ball
+;Route10North   LASS, SUPER_NERD, poke_ball, rock
 SaffronGroupSprites:
 ;SaffronCity    ROCKET, LASS, SUPER_NERD, SCIENTIST, POKEFAN_M, gentleman, pidgeot
 ;Route5         GRAMPS, daycare_mon_1, daycare_mon_2
@@ -123,6 +123,7 @@ SaffronGroupSprites:
 	db SPRITE_DAY_CARE_MON_1
 	db SPRITE_DAY_CARE_MON_2
 	db SPRITE_POKE_BALL
+	db SPRITE_ROCK
 	db SPRITE_BERRY
 	; max 20 of 20 outdoor sprites
 ;	db SPRITE_PIDGEOT
