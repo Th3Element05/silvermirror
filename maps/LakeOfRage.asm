@@ -101,6 +101,14 @@ LakeOfRageWesleyCallback:
 ;	appear LAKEOFRAGE_LANCE
 ;	end
 
+; check catch result to respawn if you kill it?
+;	special CheckBattleCaughtResult
+;	iffalse .NoCatch
+;	setflag ENGINE_PLAYER_CAUGHT_ZAPDOS
+;.NoCatch
+
+
+
 ;LakeOfRageGrampsScript:
 ;	faceplayer
 ;	opentext
