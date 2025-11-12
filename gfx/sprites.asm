@@ -91,7 +91,10 @@ ApricornSpriteGFX::            INCBIN "gfx/sprites/apricorn.2bpp"
 FossilSpriteGFX::              INCBIN "gfx/sprites/fossil.2bpp"
 DomeFossilSpriteGFX::          INCBIN "gfx/sprites/dome_fossil.2bpp"
 OldAmberSpriteGFX::            INCBIN "gfx/sprites/old_amber.2bpp"
-;
+
+
+SECTION "Sprites 3", ROMX
+
 SudowoodoSpriteGFX::           INCBIN "gfx/sprites/sudowoodo.2bpp"
 MonsterSpriteGFX::             INCBIN "gfx/sprites/monster.2bpp"
 ClefairyMoveSpriteGFX::        INCBIN "gfx/sprites/clefairy_move.2bpp"
@@ -103,10 +106,8 @@ KangaskhanMoveSpriteGFX::      INCBIN "gfx/sprites/kangaskhan_move.2bpp"
 MrMimeMoveSpriteGFX::          INCBIN "gfx/sprites/mr_mime_move.2bpp"
 TangelaMoveSpriteGFX::         INCBIN "gfx/sprites/tangela_move.2bpp"
 GeodudeMoveSpriteGFX::         INCBIN "gfx/sprites/geodude_move.2bpp"
-
-
-SECTION "Sprites 3", ROMX
-
+HoohShadowSpriteGFX::          INCBIN "gfx/sprites/hooh_shadow.2bpp"
+;
 BigSnorlaxSpriteGFX::          INCBIN "gfx/sprites/big_snorlax.2bpp"
 BigLaprasSpriteGFX::           INCBIN "gfx/sprites/big_lapras.2bpp"
 BigOnixSpriteGFX::             INCBIN "gfx/sprites/big_onix.2bpp"
