@@ -69,11 +69,11 @@
 	const EVENT_GOT_TM49_TRI_ATTACK
 	const EVENT_GOT_TM51_FLAMETHROWER
 	const EVENT_GOT_TM53_ICY_WIND
-	const_skip ; unused
 	const EVENT_GOT_TM61_SNORE
-	const EVENT_GOT_TM69_SLEEP_TALK
 	const EVENT_GOT_TM64_ENDURE
 	const EVENT_GOT_TM68_SWAGGER ; dance theater
+	const EVENT_GOT_TM69_SLEEP_TALK
+	const_skip ; unused
 ; used 17
 
 ; Got stuff Kanto
