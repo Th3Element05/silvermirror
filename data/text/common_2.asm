@@ -1650,4 +1650,3 @@ _CantDepositText::
 	text "Can't deposit"
 	line "this item."
 	prompt
-
