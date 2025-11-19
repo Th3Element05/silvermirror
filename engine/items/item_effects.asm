@@ -67,7 +67,7 @@ ItemEffects:
 	dw XItemEffect         ; X_SPECIAL
 	dw CoinCaseEffect      ; COIN_CASE
 	dw ItemfinderEffect    ; ITEMFINDER
-	dw StatusHealingEffect ; POKE_FLUTE ; PokeFluteEffect ; POKE_FLUTE
+	dw PokeFluteEffect     ; POKE_FLUTE ; PokeFluteEffect ; POKE_FLUTE ; StatusHealingEffect
 	dw NoEffect            ; EXP_SHARE
 	dw OldRodEffect        ; OLD_ROD
 	dw GoodRodEffect       ; GOOD_ROD
@@ -2170,133 +2170,108 @@ XItemEffect:
 INCLUDE "data/items/x_stats.asm"
 
 PokeFluteEffect:
-	ld a, [wBattleMode]
-	and a
-	jr nz, .in_battle
-	; overworld flute code was dummied out here
-;copied directly from pokered
-; if not in battle
-;	call ItemUseReloadOverworldData
-;	ld a, [wCurMap]
-;	cp ROUTE_12
-;	jr nz, .notRoute12
-;	CheckEvent EVENT_BEAT_ROUTE12_SNORLAX
-;	jr nz, .noSnorlaxToWakeUp
-;; if the player hasn't beaten Route 12 Snorlax
-;	ld hl, Route12SnorlaxFluteCoords
-;	call ArePlayerCoordsInArray
-;	jr nc, .noSnorlaxToWakeUp
-;	ld hl, PlayedFluteHadEffectText
-;	call PrintText
-;	SetEvent EVENT_FIGHT_ROUTE12_SNORLAX
+; enable the farcall and comment out the rest of this to enable pokeflute.asm script
+; also see \main.asm 258 to [INCLUDE "engine/events/pokeflute.asm"]
+	farcall _PokeFlute
+	ret
+;
+;	ld a, [wBattleMode]
+;	and a
+;	jr nz, .in_battle
+
+;;StatusHealingEffect:
+;	ld b, PARTYMENUACTION_HEALING_ITEM
+;	call UseItem_SelectMon
+;	jp c, StatusHealer_ExitMenu
 ;	ret
-;.notRoute12
-;	cp ROUTE_16
-;	jr nz, .noSnorlaxToWakeUp
-;	CheckEvent EVENT_BEAT_ROUTE16_SNORLAX
-;	jr nz, .noSnorlaxToWakeUp
-;; if the player hasn't beaten Route 16 Snorlax
-;	ld hl, Route16SnorlaxFluteCoords
-;	call ArePlayerCoordsInArray
-;	jr nc, .noSnorlaxToWakeUp
-;	ld hl, PlayedFluteHadEffectText
+;
+;.in_battle
+;	xor a
+;	ld [wPokeFluteCuredSleep], a
+;
+;	ld b, ~SLP_MASK
+;
+;	ld hl, wPartyMon1Status
+;	call .CureSleep
+;
+;	ld a, [wBattleMode]
+;	cp WILD_BATTLE
+;	jr z, .skip_otrainer
+;	ld hl, wOTPartyMon1Status
+;	call .CureSleep
+;
+;.skip_otrainer
+;	ld hl, wBattleMonStatus
+;	ld a, [hl]
+;	and b
+;	ld [hl], a
+;	ld hl, wEnemyMonStatus
+;	ld a, [hl]
+;	and b
+;	ld [hl], a
+;
+;	ld a, [wPokeFluteCuredSleep]
+;	and a
+;	ld hl, .PlayedFluteText
+;	jp z, PrintText
+;	ld hl, .PlayedTheFlute
 ;	call PrintText
-;	SetEvent EVENT_FIGHT_ROUTE16_SNORLAX
-;	ret
-;.noSnorlaxToWakeUp
-;	ld hl, PlayedFluteNoEffectText
+;
+;	ld a, [wLowHealthAlarm]
+;	and 1 << DANGER_ON_F
+;	jr nz, .dummy
+;	; more code was dummied out here
+;.dummy
+;	ld hl, .FluteWakeUpText
 ;	jp PrintText
-;end copied directly from pokered
-
-;StatusHealingEffect:
-	ld b, PARTYMENUACTION_HEALING_ITEM
-	call UseItem_SelectMon
-	jp c, StatusHealer_ExitMenu
-	ret
-
-.in_battle
-	xor a
-	ld [wPokeFluteCuredSleep], a
-
-	ld b, ~SLP_MASK
-
-	ld hl, wPartyMon1Status
-	call .CureSleep
-
-	ld a, [wBattleMode]
-	cp WILD_BATTLE
-	jr z, .skip_otrainer
-	ld hl, wOTPartyMon1Status
-	call .CureSleep
-.skip_otrainer
-
-	ld hl, wBattleMonStatus
-	ld a, [hl]
-	and b
-	ld [hl], a
-	ld hl, wEnemyMonStatus
-	ld a, [hl]
-	and b
-	ld [hl], a
-
-	ld a, [wPokeFluteCuredSleep]
-	and a
-	ld hl, .PlayedFluteText
-	jp z, PrintText
-	ld hl, .PlayedTheFlute
-	call PrintText
-
-	ld a, [wLowHealthAlarm]
-	and 1 << DANGER_ON_F
-	jr nz, .dummy
-	; more code was dummied out here
-.dummy
-	ld hl, .FluteWakeUpText
-	jp PrintText
-
-.CureSleep:
-	ld de, PARTYMON_STRUCT_LENGTH
-	ld c, PARTY_LENGTH
-.loop
-	ld a, [hl]
-	push af
-	and SLP_MASK
-	jr z, .not_asleep
-	ld a, TRUE
-	ld [wPokeFluteCuredSleep], a
-.not_asleep
-	pop af
-	and b
-	ld [hl], a
-	add hl, de
-	dec c
-	jr nz, .loop
-	ret
-
-.PlayedFluteText:
-	text_far _PlayedFluteText
-	text_end
-
-.FluteWakeUpText:
-	text_far _FluteWakeUpText
-	text_end
-
-.PlayedTheFlute:
-	; played the # FLUTE.@ @
-	text_far Text_PlayedPokeFlute
-	text_asm
-	ld a, [wBattleMode]
-	and a
-	jr nz, .battle
-
-	push de
-	ld de, SFX_POKEFLUTE
-	call WaitPlaySFX
-	call WaitSFX
-	pop de
-
-.battle
-	jp PokeFluteTerminator
+;
+;.CureSleep:
+;	ld de, PARTYMON_STRUCT_LENGTH
+;	ld c, PARTY_LENGTH
+;.loop
+;	ld a, [hl]
+;	push af
+;	and SLP_MASK
+;	jr z, .not_asleep
+;	ld a, TRUE
+;	ld [wPokeFluteCuredSleep], a
+;.not_asleep
+;	pop af
+;	and b
+;	ld [hl], a
+;	add hl, de
+;	dec c
+;	jr nz, .loop
+;	ret
+;
+;.PlayedFluteText:
+;	text_far _PlayedFluteText
+;	text_end
+;
+;.FluteWakeUpText:
+;	text_far _FluteWakeUpText
+;	text_end
+;
+;.PlayedTheFlute:
+;	; played the # FLUTE.@ @
+;	text_far Text_PlayedPokeFlute
+;	text_asm
+;	ld a, [wBattleMode]
+;	and a
+;	jr nz, .battle
+;
+;	push de
+;	ld de, SFX_POKEFLUTE
+;	call WaitPlaySFX
+;	call WaitSFX
+;	pop de
+;
+;.battle
+;	jp PokeFluteTerminator
+;;(see home\text.asm)
+;;PokeFluteTerminator::
+;;	ld hl, .stop
+;;	ret
 
 BlueCardEffect:
 	ld hl, .BlueCardBalanceText

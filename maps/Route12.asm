@@ -12,38 +12,36 @@ Route12Snorlax:
 	iftrue .PlayRadio
 	checkitem POKE_FLUTE
 	iftrue .PlayPokeFlute
-	writetext Route12SnorlaxSleepingText
+	farwritetext _SnorlaxSleepingText
 	waitbutton
 	closetext
 	end
 
 .PlayPokeFlute:
-	writetext Route12PlayPokeFluteAskText
+	farwritetext _PlayPokeFluteAskText
 	yesorno
-	iffalse .LetSleep
-	special FadeOutMusic
-	writetext Route12PlayPokeFluteText
-	playsound SFX_POKEFLUTE
-	waitsfx
-	sjump .Route12SnorlaxBattleScript
-
-.LetSleep:
-	writetext Route12LetSnorlaxSleepText
+	iftrue Route12SnorlaxBattleScript
+	farwritetext _LetSnorlaxSleepText
 	waitbutton
 	closetext
 	end
 
 .PlayRadio:
-	writetext Route12RadioNearSnorlaxText
+	farwritetext _RadioNearSnorlaxText
 	promptbutton
-	; fallthrough
+	sjump Route12RadioWakesSnorlax
 
-.Route12SnorlaxBattleScript:
-	writetext Route12SnorlaxWokeUpText
+Route12SnorlaxBattleScript::
+	special FadeOutMusic
+	farwritetext _PlayPokeFluteText
+	playsound SFX_POKEFLUTE
+	waitsfx
+Route12RadioWakesSnorlax:
+	farwritetext _SnorlaxWokeUpText
 	promptbutton
 	pause 15
 	cry SNORLAX
-	writetext Route12SnorlaxAttackedText
+	farwritetext _SnorlaxAttackedText
 	waitbutton
 	closetext
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
@@ -52,68 +50,67 @@ Route12Snorlax:
 	reloadmapafterbattle
 	disappear ROUTE12_SNORLAX
 	setevent EVENT_WOKE_SNORLAX
-;	setevent EVENT_WOKE_ROUTE_12_SNORLAX
 ;	reloadmappart
-;	special CheckBattleCaughtResult
+	special CheckBattleCaughtResult
+	iftrue .caught
+	opentext
+	farwritetext _SnorlaxWentHomeText
+	waitbutton
+	closetext
+.caught
 	checkevent EVENT_ROUTE_16_SNORLAX
 	iffalse .notboth
 	setflag ENGINE_PLAYER_WOKE_BOTH_SNORLAX
-	end
-	
 .notboth
-	opentext
-	writetext Route12SnorlaxWentHomeText
-	waitbutton
-	closetext
 	end
 
-Route12SnorlaxSleepingText:
-	text "A sleeping #MON"
-	line "blocks the way!"
-	done
-
-Route12PlayPokeFluteAskText:
-	text "SNORLAX is sound"
-	line "asleep."
-	
-	para "Play the"
-	line "# FLUTE?"
-	done
-
-Route12PlayPokeFluteText:
-	text "<PLAYER> played"
-	line "the # FLUTE!"
+;Route12SnorlaxSleepingText:
+;	text "A sleeping #MON"
+;	line "blocks the way!"
+;	done
+;
+;Route12RadioNearSnorlaxText:
+;	text "SNORLAX can hear"
+;	line "the music from"
+;	cont "the #GEAR."
+;
+;	para "…"
+;	done
+;
+;Route12PlayPokeFluteAskText:
+;	text "SNORLAX is sound"
+;	line "asleep."
+;	
+;	para "Play the"
+;	line "# FLUTE?"
+;	done
+;
+;Route12PlayPokeFluteText:
+;	text "<PLAYER> played"
+;	line "the # FLUTE"
 ;	cont "for SNORLAX!"
-	done
-
-Route12RadioNearSnorlaxText:
-	text "SNORLAX can hear"
-	line "the music from"
-	cont "<PLAYER>'s #GEAR."
-
-	para "…"
-	done
-
-Route12SnorlaxWokeUpText:
-	text "SNORLAX woke up!"
-	done
-
-Route12SnorlaxAttackedText:
-	text "It attacked in a"
-	line "grumpy rage!"
-	done
-
-Route12LetSnorlaxSleepText:
-	text "<PLAYER> let the"
-	line "SNORLAX sleep."
-	done
-
-Route12SnorlaxWentHomeText:
-	text "SNORLAX calmed"
-	line "down! With a big"
-	cont "yawn, it returned"
-	cont "to the mountains!"
-	done
+;	done
+;
+;Route12SnorlaxWokeUpText:
+;	text "SNORLAX woke up!"
+;	done
+;
+;Route12SnorlaxAttackedText:
+;	text "It attacked in a"
+;	line "grumpy rage!"
+;	done
+;
+;Route12LetSnorlaxSleepText:
+;	text "<PLAYER> let the"
+;	line "SNORLAX sleep."
+;	done
+;
+;Route12SnorlaxWentHomeText:
+;	text "SNORLAX calmed"
+;	line "down! With a big"
+;	cont "yawn, it returned"
+;	cont "to the mountains!"
+;	done
 
 TrainerFisherScott:
 	trainer FISHER, SCOTT, EVENT_BEAT_FISHER_SCOTT, FisherScottSeenText, FisherScottBeatenText, 0, .Script
