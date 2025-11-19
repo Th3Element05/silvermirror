@@ -3,6 +3,7 @@
 	const ROUTE_30_BERRY_2
 	const ROUTE_30_APRICORN
 	const ROUTE_30_APRICORN_2
+	const ROUTE_30_RAINBOW_WING
 ;	const ROUTE_30_YOUNGSTER1
 ;	const ROUTE_30_YOUNGSTER2
 ;	const ROUTE_30_YOUNGSTER3
@@ -15,6 +16,8 @@
 
 Route30_MapScripts:
 	def_scene_scripts
+	scene_script Route30Noop1Scene, SCENE_ROUTE30_HOOH_FLYOVER
+	scene_script Route30Noop2Scene, SCENE_ROUTE30_NOOP
 
 	def_callbacks
 	callback MAPCALLBACK_OBJECTS, Route30Fruittrees
@@ -47,6 +50,202 @@ Route30Fruittrees:
 	appear ROUTE_30_APRICORN_2
 .NoAPRICORN_2:
 	endcallback
+
+Route30Noop1Scene:
+Route30Noop2Scene:
+	end
+
+;MUSIC_TIN_TOWER
+
+Route30HoohFlyoverScript:
+	special FadeOutMusic
+	pause 20
+	cry HO_OH
+	showemote EMOTE_SHOCK, PLAYER, 20
+	turnobject PLAYER, DOWN
+	pause 10
+	turnobject PLAYER, LEFT
+	pause 10
+	turnobject PLAYER, RIGHT
+	pause 10
+	turnobject PLAYER, DOWN
+	pause 10
+	applymovement PLAYER, Route30PlayerLooksAroundMovement
+	pause 10
+	turnobject PLAYER, DOWN
+	pause 10
+	turnobject PLAYER, LEFT
+	pause 10
+	turnobject PLAYER, RIGHT
+	pause 10
+	turnobject PLAYER, DOWN
+	pause 10
+;	cry HO_OH
+	showemote EMOTE_SHOCK, PLAYER, 20
+;	playmusic MUSIC_TIN_TOWER
+;faster animation
+	playsound SFX_INTRO_SUICUNE_4
+	changeblock 12, 10, $90
+	refreshscreen
+	changeblock 12, 10, $91
+	refreshscreen
+	changeblock 12, 10, $94
+	changeblock 12, 8, $90
+	refreshscreen
+	playsound SFX_INTRO_SUICUNE_4
+	changeblock 12, 10, $02
+	changeblock 12, 8, $91
+	refreshscreen
+	changeblock 12, 8, $94
+	changeblock 12, 6, $90
+	refreshscreen
+	turnobject PLAYER, LEFT
+	changeblock 12, 8, $02
+	changeblock 12, 6, $91
+	refreshscreen
+	playsound SFX_INTRO_SUICUNE_4
+	changeblock 12, 6, $94
+	changeblock 12, 4, $90
+	refreshscreen
+	turnobject PLAYER, UP
+	changeblock 12, 6, $02
+	changeblock 12, 4, $91
+	refreshscreen
+	changeblock 12, 4, $94
+	changeblock 12, 2, $90
+	refreshscreen
+	playsound SFX_INTRO_SUICUNE_4
+	changeblock 12, 4, $02
+	changeblock 12, 2, $91
+	refreshscreen
+	changeblock 12, 2, $5d
+	refreshscreen
+;smoother animation
+;	changeblock 12, 10, $a4
+;	refreshscreen
+;	changeblock 12, 10, $90
+;	refreshscreen
+;	changeblock 12, 10, $a6
+;	refreshscreen
+;	changeblock 12, 10, $91
+;	refreshscreen
+;	changeblock 12, 10, $a8
+;	changeblock 12, 8, $a4
+;	refreshscreen
+;	changeblock 12, 10, $94
+;	changeblock 12, 8, $90
+;	refreshscreen
+;	changeblock 12, 10, $aa
+;	changeblock 12, 8, $a6
+;	refreshscreen
+;	changeblock 12, 10, $02
+;	changeblock 12, 8, $91
+;	refreshscreen
+;	changeblock 12, 8, $a8
+;	changeblock 12, 6, $a4
+;	refreshscreen
+;	changeblock 12, 8, $94
+;	changeblock 12, 6, $90
+;	refreshscreen
+;	changeblock 12, 8, $aa
+;	changeblock 12, 6, $a6
+;	refreshscreen
+;	changeblock 12, 8, $02
+;	changeblock 12, 6, $91
+;	refreshscreen
+;	changeblock 12, 6, $a8
+;	changeblock 12, 4, $a4
+;	refreshscreen
+;	changeblock 12, 6, $94
+;	changeblock 12, 4, $90
+;	refreshscreen
+;	changeblock 12, 6, $aa
+;	changeblock 12, 4, $a6
+;	refreshscreen
+;	changeblock 12, 6, $02
+;	changeblock 12, 4, $91
+;	refreshscreen
+;	changeblock 12, 4, $a8
+;	changeblock 12, 2, $a4
+;	refreshscreen
+;	changeblock 12, 4, $94
+;	changeblock 12, 2, $90
+;	refreshscreen
+;	changeblock 12, 4, $aa
+;	changeblock 12, 2, $a6
+;	refreshscreen
+;	changeblock 12, 4, $02
+;	changeblock 12, 2, $91
+;	refreshscreen
+;	changeblock 12, 2, $a8
+;	refreshscreen
+;	changeblock 12, 2, $5d
+;	refreshscreen
+;	pause 10
+	cry HO_OH
+	waitsfx
+	opentext
+	writetext Route30HoohFlyoverText
+	waitbutton
+	closetext
+	pause 10
+	playsound SFX_INTRO_SUICUNE_1
+;	playsound SFX_GAME_FREAK_PRESENTS
+	appear ROUTE_30_RAINBOW_WING
+	applymovement ROUTE_30_RAINBOW_WING, Route30RainbowWingAppearsMovement
+	disappear ROUTE_30_RAINBOW_WING
+	appear ROUTE_30_RAINBOW_WING
+	pause 10
+	opentext
+	writetext Route30RainbowWingText
+	waitbutton
+	closetext
+	setscene SCENE_ROUTE30_NOOP
+	setevent EVENT_ROUTE_30_SAW_HOOH
+	special RestartMapMusic
+	end
+
+Route30HoohFlyoverText:
+	text "A huge #MON"
+	line "cast a shadow as"
+	cont "it flew overhead!"
+	done
+
+Route30RainbowWingText:
+	text "Something floated"
+	line "down after the"
+	cont "#MON went by."
+	done
+
+Route30PlayerLooksAroundMovement:
+	step DOWN
+	step LEFT
+	step LEFT
+	step LEFT
+	step_end
+
+Route30ShadowFlyoverMovement:
+;	fix_facing
+	slow_step UP
+	slow_step UP
+	slow_step UP
+	slow_step UP
+	slow_step UP
+	slow_step UP
+	slow_step UP
+	slow_step UP
+	slow_step UP
+	slow_step UP
+	slow_step UP
+	step_end
+
+Route30RainbowWingAppearsMovement:
+	rock_smash 10
+	step_end
+
+Route30RainbowWing:
+	itemball RAINBOW_WING
+
 
 ;YoungsterJoey_ImportantBattleScript:
 ;	waitsfx
@@ -537,6 +736,7 @@ Route30_MapEvents:
 	warp_event 17,  5, MR_POKEMONS_HOUSE, 1
 
 	def_coord_events
+	coord_event 17,  6, SCENE_ROUTE30_HOOH_FLYOVER, Route30HoohFlyoverScript
 
 	def_bg_events
 ;	bg_event  9, 43, BGEVENT_READ, Route30Sign
@@ -544,16 +744,18 @@ Route30_MapEvents:
 ;	bg_event 15,  5, BGEVENT_READ, MrPokemonsHouseSign
 ;	bg_event  3, 21, BGEVENT_READ, Route30TrainerTips
 ;	bg_event 14,  9, BGEVENT_ITEM, Route30HiddenPotion
-	bg_event 12,  7, BGEVENT_READ, Route30NoBerry
+	bg_event 16,  9, BGEVENT_READ, Route30NoBerry
 	bg_event  4, 39, BGEVENT_READ, Route30NoBerry
 	bg_event  5, 39, BGEVENT_READ, Route30NoApricorn
-	bg_event 11,  5, BGEVENT_READ, Route30NoApricorn
+	bg_event 15,  9, BGEVENT_READ, Route30NoApricorn
 
 	def_object_events
 	object_event  4, 39, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route30BerryTree, EVENT_ROUTE_30_BERRY
-	object_event 12,  7, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, Route30BerryTree2, EVENT_ROUTE_30_BERRY_2
+	object_event 16,  9, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, Route30BerryTree2, EVENT_ROUTE_30_BERRY_2
 	object_event  5, 39, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route30ApricornTree, EVENT_ROUTE_30_APRICORN
-	object_event 11,  5, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, Route30ApricornTree2, EVENT_ROUTE_30_APRICORN_2
+	object_event 15,  9, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, Route30ApricornTree2, EVENT_ROUTE_30_APRICORN_2
+	object_event 13,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route30RainbowWing, EVENT_ROUTE_30_RAINBOW_WING
+;
 ;	object_event  5, 26, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, YoungsterJoey_ImportantBattleScript, EVENT_ROUTE_30_BATTLE
 ;	object_event  2, 28, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerYoungsterJoey, EVENT_ROUTE_30_YOUNGSTER_JOEY
 ;	object_event  5, 23, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerYoungsterMikey, -1
