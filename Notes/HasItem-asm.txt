@@ -1,0 +1,20 @@
+here's the ASM code i've been using for checking if the player has an item in their bag:
+
+HasItem:
+; Calls CheckItem to check if item a is in the player's bag
+; Carry flag is set if not.
+    ld [wCurItem], a
+    ld hl, wNumItems
+    call CheckItem
+    jr c, .yes
+    scf
+    ret
+.yes
+    xor a
+    ret
+
+then you'd call it like:
+
+    ld a, HM_CUT
+    jr HasItem
+    jr c, .player_doesnt_have

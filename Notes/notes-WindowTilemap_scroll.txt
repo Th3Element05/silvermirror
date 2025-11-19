@@ -1,0 +1,23 @@
+constants\hardware_constants.asm
+home\window.asm
+home\tilemap.asm
+home\copy_tilemap.asm
+gfx\copy_tilemap_at_once.asm
+
+intro, credits, magnet train?
+
+engine\events\magnet_train.asm
+Line 168: DrawMagnetTrain:
+Line 172: 	call GetMagnetTrainBGTiles
+Line 180: 	ld de, MagnetTrainTilemap
+Line 184: 	ld de, MagnetTrainTilemap + SCREEN_WIDTH
+Line 188: 	ld de, MagnetTrainTilemap + (SCREEN_WIDTH * 2)
+Line 192: 	ld de, MagnetTrainTilemap + (SCREEN_WIDTH * 3)
+
+Line 214: GetMagnetTrainBGTiles:
+Line 218: 	ld hl, MagnetTrainBGTiles
+
+Line 433: MagnetTrainTilemap:
+	; 20x4 tilemap
+	INCBIN "gfx/overworld/magnet_train_fg.tilemap"
+

@@ -1,4 +1,52 @@
+kanto waterfall tile $92
+johto waterfall tile $40
+
 engine\tilesets\tileset_anims.asm
+
+Tileset0Anim:
+TilesetJohtoModernAnim:
+TilesetKantoAnim:
+TilesetPortAnim:
+$water	dw vTiles2 tile $14, ReadTileToAnimBuffer ;$14 water
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+R/L	dw wTileAnimBuffer, ScrollTileRightLeft
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+$water	dw vTiles2 tile $14, WriteTileFromAnimBuffer ;$14 water
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+$fount	dw vTiles2 tile $64, AnimateFountainTile ;$64 fountain
+Wpal	dw NULL,  AnimateWaterPalette
+$wfall	dw vTiles2 tile $6f, ReadTileToAnimBuffer
+down	dw wTileAnimBuffer, ScrollTileDown
+down	dw wTileAnimBuffer, ScrollTileDown
+down	dw wTileAnimBuffer, ScrollTileDown
+$wfall	dw vTiles2 tile $6f, WriteTileFromAnimBuffer
+flower	dw NULL,  AnimateFlowerTile
+$water	dw vTiles2 tile $74, AnimateWaterTile ;$74 johto water
+	dw NULL,  StandingTileFrame8
+	dw NULL,  DoneTileAnimation
+
+TilesetJohtoAnim:
+$water	dw vTiles2 tile $14, AnimateWaterTile
+Wpal	dw NULL,  AnimateWaterPalette
+$wfall	dw vTiles2 tile $40, ReadTileToAnimBuffer
+down	dw wTileAnimBuffer, ScrollTileDown
+down	dw wTileAnimBuffer, ScrollTileDown
+down	dw wTileAnimBuffer, ScrollTileDown
+$wfall	dw vTiles2 tile $40, WriteTileFromAnimBuffer
+flower	dw NULL,  AnimateFlowerTile
+wpool	dw WhirlpoolFrames1, AnimateWhirlpoolTile
+wpool	dw WhirlpoolFrames2, AnimateWhirlpoolTile
+wpool	dw WhirlpoolFrames3, AnimateWhirlpoolTile
+wpool	dw WhirlpoolFrames4, AnimateWhirlpoolTile
+	dw NULL,  StandingTileFrame8
+	dw NULL,  DoneTileAnimation
+
+
+
+
 
 TilesetCaveAnim:
 TilesetDarkCaveAnim:
@@ -32,7 +80,6 @@ Tileset0Anim:
 TilesetJohtoModernAnim:
 TilesetKantoAnim:
 TilesetPortAnim:
-
 $water	dw vTiles2 tile $14, ReadTileToAnimBuffer ;$14 water
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
