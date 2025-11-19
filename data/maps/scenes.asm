@@ -54,6 +54,7 @@ MapScenes::
 	scene_var ECRUTEAK_CITY,                               wEcruteakCitySceneID
 	scene_var BURNED_TOWER_1F,                             wBurnedTower1FSceneID
 	scene_var BURNED_TOWER_B1F,                            wBurnedTowerB1FSceneID
+	scene_var ROUTE_30,                                    wRoute30SceneID
 ; og scenes below
 	scene_var TRAINER_HOUSE_B1F,                           wTrainerHouseB1FSceneID
 	scene_var NEW_BARK_TOWN,                               wNewBarkTownSceneID

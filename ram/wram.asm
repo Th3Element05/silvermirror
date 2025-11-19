@@ -3165,6 +3165,7 @@ wOlivineCitySceneID::                             db
 wEcruteakCitySceneID::                            db
 wBurnedTower1FSceneID::                           db
 wBurnedTowerB1FSceneID::                          db
+wRoute30SceneID::                                 db
 ;
 wTrainerHouseB1FSceneID::                         db
 wNewBarkTownSceneID::                             db
