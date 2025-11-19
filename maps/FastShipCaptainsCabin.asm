@@ -54,14 +54,20 @@ TrainerRocketExecutiveF2:
 .DontNeedToMove
 	turnobject PLAYER, UP
 	turnobject FASTSHIPCAPTAINSCABIN_CAPTAIN, DOWN
-	opentext
-	writetext SSAquaCaptainTakeThisText
-	promptbutton
-	verbosegiveitem METAL_COAT
-	iffalse .NoRoom
-	setevent EVENT_GOT_METAL_COAT_FROM_CAPTAIN_ON_SS_AQUA
-.NoRoom:
-	closetext
+;
+	scall SSAquaCaptainSaved
+;
+;	opentext
+;	writetext SSAquaCaptainTakeThisText
+;	promptbutton
+;	verbosegiveitem SMOKE_BALL
+;	iffalse .NoRoom
+;	setevent EVENT_GOT_SMOKE_BALL_FROM_CAPTAIN_ON_SS_AQUA
+;	writetext SSAquaCaptainSmokeBallText
+;	waitbutton
+;.NoRoom:
+;	closetext
+;
 	waitsfx
 	playsound SFX_ELEVATOR_END
 	pause 30
@@ -98,10 +104,11 @@ ExecutiveF2AfterBattleText:
 
 SSAquaCaptain:
 	faceplayer
+SSAquaCaptainSaved:
 	opentext
 	checkevent EVENT_BEAT_EXECUTIVEF_2
 	iffalse .HelpCaptain
-	checkevent EVENT_GOT_METAL_COAT_FROM_CAPTAIN_ON_SS_AQUA
+	checkevent EVENT_GOT_SMOKE_BALL_FROM_CAPTAIN_ON_SS_AQUA
 	iffalse .GiveMetalCoat
 	checkevent EVENT_FAST_SHIP_COMPLETED_FIRST_TRIP
 	iftrue .LaterTrip
@@ -119,9 +126,11 @@ SSAquaCaptain:
 .GiveMetalCoat
 	writetext SSAquaCaptainTakeThisText
 	promptbutton
-	verbosegiveitem METAL_COAT
+	verbosegiveitem SMOKE_BALL
 	iffalse .NoRoom
-	setevent EVENT_GOT_METAL_COAT_FROM_CAPTAIN_ON_SS_AQUA
+	setevent EVENT_GOT_SMOKE_BALL_FROM_CAPTAIN_ON_SS_AQUA
+	writetext SSAquaCaptainSmokeBallText
+	waitbutton
 .NoRoom:
 	closetext
 	end
@@ -139,6 +148,21 @@ SSAquaCaptainTakeThisText:
 	cont "hadn't been here!"
 
 	para "Please, take this!"
+	done
+
+SSAquaCaptainSmokeBallText:
+	text "A #MON holding"
+	line "that SMOKE BALL"
+	cont "can flee from any"
+	cont "wild #MON."
+
+	para "Too bad it doesn't"
+	line "work in trainer"
+	cont "battles!"
+
+	para "I could have given"
+	line "those ROCKETS the"
+	cont "slip!"
 	done
 
 SSAquaCaptainThanksText:
