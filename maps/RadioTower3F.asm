@@ -14,13 +14,13 @@ RadioTower3F_MapScripts:
 ;	callback MAPCALLBACK_TILES, RadioTower3FCardKeyShutterCallback
 
 ;RadioTower3FCardKeyShutterCallback:
-;	checkevent EVENT_USED_THE_CARD_KEY_IN_THE_RADIO_TOWER
-;	iftrue .Change
+;	checkevent EVENT_USED_RADIO_TOWER_CARD_KEY
+;	iffalse .ShutDoor
 ;	endcallback
 ;
-;.Change:
-;	changeblock 14, 2, $2a ; open shutter
-;	changeblock 14, 4, $01 ; floor
+;.ShutDoor:
+;	changeblock 14, 2, $28 ; closed key slot
+;	changeblock 14, 4, $29 ; closed shutter
 ;	endcallback
 
 ;RadioTower3FSuperNerdScript:
@@ -49,7 +49,7 @@ RadioTower3F_MapScripts:
 ;	iftrue .GotSunnyDay
 ;	checkevent EVENT_CLEARED_RADIO_TOWER
 ;	iftrue .NoRockets
-;	checkevent EVENT_USED_THE_CARD_KEY_IN_THE_RADIO_TOWER
+;	checkevent EVENT_USED_RADIO_TOWER_CARD_KEY
 ;	iftrue .UsedCardKey
 ;	writetext RadioTower3FCooltrainerFPleaseSaveDirectorText
 ;	waitbutton
@@ -124,29 +124,51 @@ RadioTower3F_MapScripts:
 ;	closetext
 ;	end
 
-;CardKeySlotScript::
-;	opentext
-;	writetext RadioTower3FCardKeySlotText
-;	waitbutton
-;	checkevent EVENT_USED_THE_CARD_KEY_IN_THE_RADIO_TOWER
-;	iftrue .UsedCardKey
-;	checkitem CARD_KEY
-;	iftrue .HaveCardKey
-;.UsedCardKey:
-;	closetext
-;	end
+CardKeySlotScript::
+	opentext
+	writetext RadioTower3FCardKeySlotText
+	waitbutton
+	checkevent EVENT_USED_RADIO_TOWER_CARD_KEY
+	iftrue .EndCardKey
+	checkitem CARD_KEY
+	iffalse .EndCardKey
+	writetext InsertedTheCardKeyText
+	waitbutton
+	checkevent EVENT_GOT_RADIO_TOWER_CARD_KEY
+	iftrue .Open
+	playsound SFX_WRONG
+	writetext WrongCardKeyText
+	waitbutton
+.EndCardKey:
+	closetext
+	end
 
-;.HaveCardKey:
-;	writetext InsertedTheCardKeyText
-;	waitbutton
-;	setevent EVENT_USED_THE_CARD_KEY_IN_THE_RADIO_TOWER
+.Open:
+;	setevent EVENT_USED_RADIO_TOWER_CARD_KEY
 ;	playsound SFX_ENTER_DOOR
 ;	changeblock 14, 2, $2a ; open shutter
 ;	changeblock 14, 4, $01 ; floor
 ;	reloadmappart
-;	closetext
-;	waitsfx
-;	end
+	closetext
+	waitsfx
+	end
+
+RadioTower3FCardKeySlotText:
+	text "It's the CARD KEY"
+	line "slot."
+	done
+
+InsertedTheCardKeyText:
+	text "<PLAYER> inserted"
+	line "the CARD KEY."
+	done
+
+WrongCardKeyText:
+	text "The CARD KEY from"
+	line "SILPH CO. doesn't"
+	cont "work here."
+	done
+
 
 ;RadioTower3FPersonnelSign:
 ;	jumptext RadioTower3FPersonnelSignText
@@ -305,16 +327,6 @@ RadioTower3F_MapScripts:
 ;	para "I can transmit as"
 ;	line "strong a signal as"
 ;	cont "I need from here."
-;	done
-
-;RadioTower3FCardKeySlotText:
-;	text "It's the CARD KEY"
-;	line "slot."
-;	done
-
-;InsertedTheCardKeyText:
-;	text "<PLAYER> inserted"
-;	line "the CARD KEY."
 ;	done
 
 ;RadioTower3FPersonnelSignText:
