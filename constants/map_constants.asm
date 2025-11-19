@@ -196,7 +196,7 @@ ENDM
 	map_const FUCHSIA_GOOD_ROD_HOUSE,                       4,  4 ;  8
 	map_const ROUTE_15_GATE,                                4,  5 ;  9
 	map_const ROUTE_15_GATE_2F,                             4,  4 ; 10
-	map_const ROUTE_17,                                    10, 71 ; 11
+	map_const ROUTE_17,                                    10, 70 ; 11
 	map_const ROUTE_18,                                    25,  9 ; 12
 	map_const ROUTE_18_GATE,                                4,  5 ; 13
 	map_const ROUTE_18_GATE_2F,                             4,  4 ; 14
