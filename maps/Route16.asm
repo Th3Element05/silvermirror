@@ -25,108 +25,105 @@ Route16Snorlax:
 	iftrue .PlayRadio
 	checkitem POKE_FLUTE
 	iftrue .PlayPokeFlute
-	writetext Route16SnorlaxSleepingText
+	farwritetext _SnorlaxSleepingText
 	waitbutton
 	closetext
 	end
 
 .PlayPokeFlute:
-	writetext Route16PlayPokeFluteAskText
+	farwritetext _PlayPokeFluteAskText
 	yesorno
-	iffalse .LetSleep
-	special FadeOutMusic
-	writetext Route16PlayPokeFluteText
-	playsound SFX_POKEFLUTE
-	waitsfx
-	sjump .Route16SnorlaxBattleScript
-
-.LetSleep:
-	writetext Route16LetSnorlaxSleepText
+	iftrue Route16SnorlaxBattleScript
+	farwritetext _LetSnorlaxSleepText
 	waitbutton
 	closetext
 	end
 
 .PlayRadio:
-	writetext Route16RadioNearSnorlaxText
+	farwritetext _RadioNearSnorlaxText
 	promptbutton
-	; fallthrough
+	sjump Route16RadioWakesSnorlax
 
-.Route16SnorlaxBattleScript:
-	writetext Route16SnorlaxWokeUpText
+Route16SnorlaxBattleScript::
+	special FadeOutMusic
+	farwritetext _PlayPokeFluteText
+	playsound SFX_POKEFLUTE
+	waitsfx
+Route16RadioWakesSnorlax:
+	farwritetext _SnorlaxWokeUpText
 	promptbutton
 	pause 15
 	cry SNORLAX
-	writetext Route16SnorlaxAttackedText
+	farwritetext _SnorlaxAttackedText
 	waitbutton
 	closetext
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
 	loadwildmon SNORLAX, 32
 	startbattle
 	reloadmapafterbattle
-	disappear ROUTE12_SNORLAX
+	disappear ROUTE16_SNORLAX
 	setevent EVENT_WOKE_SNORLAX
-;	setevent EVENT_WOKE_ROUTE_16_SNORLAX
 ;	reloadmappart
-;	special CheckBattleCaughtResult
+	special CheckBattleCaughtResult
+	iftrue .caught
+	opentext
+	farwritetext _SnorlaxWentHomeText
+	waitbutton
+	closetext
+.caught
 	checkevent EVENT_ROUTE_12_SNORLAX
 	iffalse .notboth
 	setflag ENGINE_PLAYER_WOKE_BOTH_SNORLAX
-	end
-	
 .notboth
-	opentext
-	writetext Route16SnorlaxWentHomeText
-	waitbutton
-	closetext
 	end
 
-Route16SnorlaxSleepingText:
-	text "A sleeping #MON"
-	line "blocks the way!"
-	done
-
-Route16PlayPokeFluteAskText:
-	text "SNORLAX is sound"
-	line "asleep."
-	
-	para "Play the"
-	line "# FLUTE?"
-	done
-
-Route16PlayPokeFluteText:
-	text "<PLAYER> played"
-	line "the # FLUTE!"
+;Route16SnorlaxSleepingText:
+;	text "A sleeping #MON"
+;	line "blocks the way!"
+;	done
+;
+;Route16RadioNearSnorlaxText:
+;	text "SNORLAX can hear"
+;	line "the music from"
+;	cont "the #GEAR."
+;
+;	para "…"
+;	done
+;
+;Route16PlayPokeFluteAskText:
+;	text "SNORLAX is sound"
+;	line "asleep."
+;	
+;	para "Play the"
+;	line "# FLUTE?"
+;	done
+;
+;Route16PlayPokeFluteText:
+;	text "<PLAYER> played"
+;	line "the # FLUTE"
 ;	cont "for SNORLAX!"
-	done
-
-Route16RadioNearSnorlaxText:
-	text "SNORLAX can hear"
-	line "the music from"
-	cont "<PLAYER>'s #GEAR."
-
-	para "…"
-	done
-
-Route16SnorlaxWokeUpText:
-	text "SNORLAX woke up!"
-	done
-
-Route16SnorlaxAttackedText:
-	text "It attacked in a"
-	line "grumpy rage!"
-	done
-
-Route16LetSnorlaxSleepText:
-	text "<PLAYER> let the"
-	line "SNORLAX sleep."
-	done
-
-Route16SnorlaxWentHomeText:
-	text "SNORLAX calmed"
-	line "down! With a big"
-	cont "yawn, it returned"
-	cont "to the mountains!"
-	done
+;	done
+;
+;Route16SnorlaxWokeUpText:
+;	text "SNORLAX woke up!"
+;	done
+;
+;Route16SnorlaxAttackedText:
+;	text "It attacked in a"
+;	line "grumpy rage!"
+;	done
+;
+;Route16LetSnorlaxSleepText:
+;	text "<PLAYER> let the"
+;	line "SNORLAX sleep."
+;	done
+;
+;Route16SnorlaxWentHomeText:
+;	text "SNORLAX calmed"
+;	line "down! With a big"
+;	cont "yawn, it returned"
+;	cont "to the mountains!"
+;	done
 
 TrainerBikerAiden:
 	trainer BIKER, AIDEN1, EVENT_BEAT_BIKER_AIDEN, BikerAidenSeenText, BikerAidenBeatenText, 0, .Script
@@ -305,4 +302,4 @@ Route16_MapEvents:
 	object_event 14, 15, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerJugglerFinnley, -1
 	object_event 17, 14, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBikerTeddy, -1
 	object_event  4,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route16SharpBeak, EVENT_ROUTE_16_SHARP_BEAK
-	object_event 19, 14, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, Route16TMSleepTalk, EVENT_ROUTE_16_TM_SLEEP_TALK
+	object_event 24, 14, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, Route16TMSleepTalk, EVENT_ROUTE_16_TM_SLEEP_TALK

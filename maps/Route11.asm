@@ -1,7 +1,7 @@
 	object_const_def
 	const ROUTE_11_BERRY
 	const ROUTE_11_APRICORN
-	const ROUTE_11_BIG_SNORLAX_RESPAWN
+	const ROUTE11_SNORLAX
 
 Route11_MapScripts:
 	def_scene_scripts
@@ -22,6 +22,156 @@ Route11Fruittrees:
 	appear ROUTE_11_APRICORN
 .NoApricorn:
 	endcallback
+
+Route11Snorlax:
+	opentext
+	special SnorlaxAwake
+	iftrue .PlayRadio
+	checkitem POKE_FLUTE
+	iftrue .PlayPokeFlute
+	writetext _SnorlaxSleepingText
+	waitbutton
+	closetext
+	end
+
+.PlayPokeFlute:
+	writetext _PlayPokeFluteAskText
+	yesorno
+	iftrue Route11SnorlaxBattleScript
+	writetext _LetSnorlaxSleepText
+	waitbutton
+	closetext
+	end
+
+.PlayRadio:
+	writetext _RadioNearSnorlaxText
+	promptbutton
+	sjump Route11RadioWakesSnorlax
+
+Route11SnorlaxBattleScript::
+	special FadeOutMusic
+	writetext _PlayPokeFluteText
+	playsound SFX_POKEFLUTE
+	waitsfx
+Route11RadioWakesSnorlax:
+	writetext _SnorlaxWokeUpText
+	promptbutton
+	pause 15
+	cry SNORLAX
+	writetext _SnorlaxAttackedText
+	waitbutton
+	closetext
+	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
+	loadwildmon SNORLAX, 50
+	startbattle
+	reloadmapafterbattle
+	disappear ROUTE11_SNORLAX
+	setevent EVENT_WOKE_SNORLAX
+;	reloadmappart
+	special CheckBattleCaughtResult
+	iftrue .caught
+	opentext
+	writetext _SnorlaxWentHomeText
+	waitbutton
+	closetext
+.caught
+	end
+
+_SnorlaxSleepingText:: ;export for routes 12 and 16
+	text "A sleeping #MON"
+	line "blocks the way!"
+	done
+
+_PlayPokeFluteAskText:: ;export for routes 12 and 16
+	text "SNORLAX is sound"
+	line "asleep."
+	
+	para "Play the"
+	line "# FLUTE?"
+	done
+
+_LetSnorlaxSleepText:: ;export for routes 12 and 16
+	text "<PLAYER> let the"
+	line "SNORLAX sleep."
+	done
+
+_RadioNearSnorlaxText:: ;export for routes 12 and 16
+	text "SNORLAX can hear"
+	line "the music from"
+	cont "the #GEAR."
+
+	para "…"
+	done
+
+_PlayPokeFluteText:: ;export for routes 12 and 16
+	text "<PLAYER> played"
+	line "the # FLUTE"
+	cont "for SNORLAX!"
+	done
+
+_SnorlaxWokeUpText:: ;export for routes 12 and 16
+	text "SNORLAX woke up!"
+	done
+
+_SnorlaxAttackedText:: ;export for routes 12 and 16
+	text "It attacked in a"
+	line "grumpy rage!"
+	done
+
+_SnorlaxWentHomeText:: ;export for routes 12 and 16
+	text "SNORLAX calmed"
+	line "down! With a big"
+	cont "yawn, it returned"
+	cont "to the mountains!"
+	done
+
+;Route11SnorlaxSleepingText:
+;	text "A sleeping #MON"
+;	line "blocks the way!"
+;	done
+;
+;Route11RadioNearSnorlaxText:
+;	text "SNORLAX can hear"
+;	line "the music from"
+;	cont "the #GEAR."
+;
+;	para "…"
+;	done
+;
+;Route11PlayPokeFluteAskText:
+;	text "SNORLAX is sound"
+;	line "asleep."
+;	
+;	para "Play the"
+;	line "# FLUTE?"
+;	done
+;
+;Route11PlayPokeFluteText:
+;	text "<PLAYER> played"
+;	line "the # FLUTE"
+;	cont "for SNORLAX!"
+;	done
+;
+;Route11SnorlaxWokeUpText:
+;	text "SNORLAX woke up!"
+;	done
+;
+;Route11SnorlaxAttackedText:
+;	text "It attacked in a"
+;	line "grumpy rage!"
+;	done
+;
+;Route11LetSnorlaxSleepText:
+;	text "<PLAYER> let the"
+;	line "SNORLAX sleep."
+;	done
+;
+;Route11SnorlaxWentHomeText:
+;	text "SNORLAX calmed"
+;	line "down! With a big"
+;	cont "yawn, it returned"
+;	cont "to the mountains!"
+;	done
 
 TrainerPokefanFGeorgia:
 	trainer POKEFANF, GEORGIA, EVENT_BEAT_POKEFANF_GEORGIA, PokefanFGeorgiaSeenText, PokefanFGeorgiaBeatenText, 0, .Script
@@ -366,87 +516,6 @@ OfficerCarterAfterBattleText:
 	line "are electrifying!"
 	done
 
-Route11Snorlax:
-	opentext
-	special SnorlaxAwake
-	iftrue .PlayRadio
-	checkitem POKE_FLUTE
-	iftrue .PlayPokeFlute
-	writetext Route11SnorlaxSleepingText
-	waitbutton
-	closetext
-	end
-
-.PlayPokeFlute:
-	writetext Route11PlayPokeFluteAskText
-	yesorno
-	iffalse .LetSleep
-	special FadeOutMusic
-	writetext Route11PlayPokeFluteText
-	playsound SFX_POKEFLUTE
-	waitsfx
-	sjump .Route11SnorlaxBattleScript
-
-.LetSleep:
-	writetext Route11LetSnorlaxSleepText
-	waitbutton
-	closetext
-	end
-
-.PlayRadio:
-	writetext Route11RadioNearSnorlaxText
-	promptbutton
-	; fallthrough
-
-.Route11SnorlaxBattleScript:
-	writetext Route11SnorlaxWokeUpText
-	promptbutton
-	pause 15
-	cry SNORLAX
-	closetext
-	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
-	loadwildmon SNORLAX, 50
-	startbattle
-	disappear ROUTE_11_BIG_SNORLAX_RESPAWN
-	reloadmapafterbattle
-	end
-
-Route11SnorlaxSleepingText:
-	text "SNORLAX is snoring"
-	line "peacefully…"
-	done
-
-Route11PlayPokeFluteAskText:
-	text "SNORLAX is sound"
-	line "asleep."
-	
-	para "Play the"
-	line "# FLUTE?"
-	done
-
-Route11PlayPokeFluteText:
-	text "<PLAYER> played"
-	line "the # FLUTE"
-	cont "for SNORLAX!"
-	done
-
-Route11RadioNearSnorlaxText:
-	text "SNORLAX can hear"
-	line "the music from"
-	cont "<PLAYER>'s #GEAR."
-
-	para "…"
-	done
-
-Route11SnorlaxWokeUpText:
-	text "SNORLAX woke up!"
-	done
-
-Route11LetSnorlaxSleepText:
-	text "<PLAYER> let the"
-	line "SNORLAX sleep."
-	done
-
 Route11BerryTree:
 	opentext
 	writetext Route11BerryTreeText
@@ -547,7 +616,7 @@ Route11_MapEvents:
 	def_object_events
 	object_event 48,  2, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route11BerryTree, EVENT_ROUTE_11_BERRY
 	object_event 49,  1, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route11ApricornTree, EVENT_ROUTE_11_APRICORN
-	object_event 47, 11, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_BIGDOLLSYM, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route11Snorlax, EVENT_ROUTE_11_SNORLAX_RESPAWN
+	object_event 48, 11, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_BIGDOLLSYM, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route11Snorlax, EVENT_ROUTE_11_SNORLAX_RESPAWN
 	object_event 33,  3, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 3, TrainerPokefanFGeorgia, -1
 	object_event 22,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerYoungsterOwen, -1
 	object_event 13,  5, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerYoungsterAlan, -1
