@@ -39,37 +39,48 @@ Tileset0Anim:
 TilesetJohtoModernAnim:
 TilesetKantoAnim:
 TilesetPortAnim:
-;	dw vTiles2 tile $14, AnimateWaterTile
+;	dw vTiles2 tile $14, ReadTileToAnimBuffer
+;	dw NULL,  WaitTileAnimation
+;	dw NULL,  WaitTileAnimation
+;	dw wTileAnimBuffer, ScrollTileRightLeft
+;	dw NULL,  WaitTileAnimation
+;	dw NULL,  WaitTileAnimation
+;	dw vTiles2 tile $14, WriteTileFromAnimBuffer
+;	dw NULL,  WaitTileAnimation
 ;	dw NULL,  WaitTileAnimation
 ;	dw vTiles2 tile $64, AnimateFountainTile
 ;	dw NULL,  WaitTileAnimation
 ;	dw NULL,  WaitTileAnimation
 ;	dw NULL,  AnimateWaterPalette
 ;	dw NULL,  WaitTileAnimation
+;	dw NULL,  WaitTileAnimation
 ;	dw NULL,  AnimateFlowerTile
 ;	dw NULL,  WaitTileAnimation
-;	dw NULL,  WaitTileAnimation
-;	dw NULL,  StandingTileFrame8
+;	dw vTiles2 tile $74, AnimateWaterTile ;johto water animation
 ;	dw NULL,  DoneTileAnimation
-	dw vTiles2 tile $14, ReadTileToAnimBuffer
+	dw vTiles2 tile $14, ReadTileToAnimBuffer ;$14 water
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
 	dw wTileAnimBuffer, ScrollTileRightLeft
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
-	dw vTiles2 tile $14, WriteTileFromAnimBuffer
+	dw vTiles2 tile $14, WriteTileFromAnimBuffer ;$14 water
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
-	dw vTiles2 tile $64, AnimateFountainTile
+	dw vTiles2 tile $64, AnimateFountainTile ;$64 fountain
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
 	dw NULL,  AnimateWaterPalette
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
+	dw vTiles2 tile $6f, ReadTileToAnimBuffer
+	dw wTileAnimBuffer, ScrollTileDown
+	dw wTileAnimBuffer, ScrollTileDown
+	dw wTileAnimBuffer, ScrollTileDown
+	dw vTiles2 tile $6f, WriteTileFromAnimBuffer
 	dw NULL,  AnimateFlowerTile
 	dw NULL,  WaitTileAnimation
-;	dw NULL,  WaitTileAnimation
-	dw vTiles2 tile $74, AnimateWaterTile ;johto water animation
+	dw vTiles2 tile $74, AnimateWaterTile ;$74 johto water
 ;	dw NULL,  StandingTileFrame8
 	dw NULL,  DoneTileAnimation
 
