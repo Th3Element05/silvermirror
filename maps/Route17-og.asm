@@ -260,15 +260,15 @@ Route17SignText:
 	cont "FUCHSIA CITY"
 	done
 
-;Route17NoticeSign2:
-;	jumptext Route17NoticeSign2Text
-;Route17NoticeSign2Text:
-;	text "It's a notice!"
-;
-;	para "Don't throw the"
-;	line "game, throw #"
-;	cont "BALLs instead!"
-;	done
+Route17NoticeSign2:
+	jumptext Route17NoticeSign2Text
+Route17NoticeSign2Text:
+	text "It's a notice!"
+
+	para "Don't throw the"
+	line "game, throw #"
+	cont "BALLs instead!"
+	done
 
 Route17CyclingRoadEndsSign:
 	jumptext Route17CyclingRoadEndsSignText
@@ -301,26 +301,26 @@ Route17_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 11, 51, BGEVENT_READ, Route17NoticeSign
-	bg_event 11, 63, BGEVENT_READ, Route17TrainerTips1
-	bg_event 15, 77, BGEVENT_READ, Route17TrainerTips2
-	bg_event  5, 89, BGEVENT_READ, Route17Sign
-;	bg_event  9, 109, BGEVENT_READ, Route17NoticeSign2
+	bg_event  9, 51, BGEVENT_READ, Route17NoticeSign
+	bg_event  9, 63, BGEVENT_READ, Route17TrainerTips1
+	bg_event  9, 75, BGEVENT_READ, Route17TrainerTips2
+	bg_event  9, 87, BGEVENT_READ, Route17Sign
+	bg_event  9, 109, BGEVENT_READ, Route17NoticeSign2
 	bg_event  9, 137, BGEVENT_READ, Route17CyclingRoadEndsSign
 	bg_event 15, 14, BGEVENT_ITEM, Route17HiddenRareCandy
-	bg_event 10, 43, BGEVENT_ITEM, Route17HiddenFullRestore
-	bg_event 18, 81, BGEVENT_ITEM, Route17HiddenPPUp
-	bg_event  2, 81, BGEVENT_ITEM, Route17HiddenMaxRevive
+	bg_event  8, 45, BGEVENT_ITEM, Route17HiddenFullRestore
+	bg_event 17, 72, BGEVENT_ITEM, Route17HiddenPPUp
+	bg_event  4, 91, BGEVENT_ITEM, Route17HiddenMaxRevive
 	bg_event  8, 119, BGEVENT_ITEM, Route17HiddenMaxElixer
 
 	def_object_events
-	object_event  6, 12, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerJugglerDustin, -1
-	object_event  4, 20, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerBikerMarkey, -1
+	object_event 11, 16, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerJugglerDustin, -1
+	object_event  4, 18, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerBikerMarkey, -1
 	object_event 12, 19, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerJugglerLyle, -1
-	object_event  6, 33, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerBikerRiley, -1
-	object_event 14, 33, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBikerTheron, -1
-	object_event 15, 62, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerJugglerDarius, -1
-	object_event  2, 58, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerJugglerJulien, -1
-	object_event  4, 98, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBikerEoin, -1
-	object_event 16, 93, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerJugglerMaximo, -1
+	object_event  7, 32, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerBikerRiley, -1
+	object_event 14, 34, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBikerTheron, -1
+	object_event 17, 58, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerJugglerDarius, -1
+	object_event  2, 68, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerJugglerJulien, -1
+	object_event  5, 98, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBikerEoin, -1
+	object_event 14, 98, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerJugglerMaximo, -1
 	object_event 10, 116, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerBikerNolan, -1
