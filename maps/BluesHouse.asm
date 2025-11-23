@@ -25,10 +25,10 @@ BluesHouseNeighborText:
 DaisyScript:
 	checkflag ENGINE_MAP_CARD
 	iftrue .DaisyGroom ; keep grooming?
-	checkevent EVENT_GOT_POKEDEX
-	iffalse .DaisyIdle
 	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
 	iffalse .BlueAtLab
+	checkevent EVENT_GOT_POKEDEX
+	iffalse .DaisyIdle
 	jumptextfaceplayer BluesHouseNoMapText
 
 .BlueAtLab
@@ -38,16 +38,13 @@ DaisyScript:
 	jumptextfaceplayer BluesHouseDaisyIdleText
 
 .DaisyGroom
-	faceplayer
-	opentext
 	checktime NITE
 	iffalse .Daytime
-	writetext DaisyOutLateText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer DaisyOutLateText
 
 .Daytime:
+	faceplayer
+	opentext
 	checkflag ENGINE_DAISYS_GROOMING
 	iftrue .AlreadyGroomedMon
 	writetext DaisyOfferGroomingText
@@ -103,14 +100,14 @@ BluesHouseBlueAtLabText:
 	done
 
 BluesHouseNoMapText:
-	text "You want to"
-	line "borrow a MAP CARD?"
+	text "You want to borrow"
+	line "a MAP CARD?"
 
 	para "I just loaned mine"
 	line "to <RIVAL>."
 
 	para "Sorry. I don't"
-	line "have an extra one."
+	line "have another one."
 	done
 
 BluesHouseDaisyIdleText:
@@ -199,8 +196,8 @@ DaisyRefusedText:
 
 DaisyCantGroomEggText:
 	text "DAISY: Oh, sorry."
-	line "I honestly can't"
-	cont "groom an EGG."
+	line "I can't groom"
+	cont "an EGG."
 	done
 
 BluesHouse_MapEvents:
