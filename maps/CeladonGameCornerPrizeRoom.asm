@@ -10,6 +10,11 @@ DEF CELADONGAMECORNER_FIRE_STONE_COINS   EQU 250
 DEF CELADONGAMECORNER_THUNDERSTONE_COINS EQU 250
 DEF CELADONGAMECORNER_WATER_STONE_COINS  EQU 250
 DEF CELADONGAMECORNER_LEAF_STONE_COINS   EQU 250
+;
+DEF CELADONGAMECORNER_KINGS_ROCK_COINS   EQU 1000
+DEF CELADONGAMECORNER_METAL_COAT_COINS   EQU 1000
+DEF CELADONGAMECORNER_DRAGON_SCALE_COINS EQU 1000
+DEF CELADONGAMECORNER_UP_GRADE_COINS     EQU 1000
 ;50 coins = $1000
 ;500 coins = $10000
 
@@ -24,12 +29,12 @@ CeladonGameCornerPrizeRoom_MapScripts:
 CeladonPrizeRoomPokemonVendor:
 	faceplayer
 	opentext
-	writetext CeladonPrizeRoom_IntroText
+	writetext GameCornerPrize_IntroText
 	waitbutton
 	checkitem COIN_CASE
 	iffalse CeladonPrizeRoom_NoCoinCaseScript
 .loop
-	writetext CeladonPrizeRoom_WhichPrizeText
+	writetext GameCornerPrize_WhichPrizeText
 	special DisplayCoinCaseBalance
 	loadmenu CeladonPrizeRoomMonVendorMenuHeader
 	verticalmenu
@@ -50,7 +55,7 @@ CeladonPrizeRoomPokemonVendor:
 	iffalse CeladonPrizeRoom_CancelPurchaseScript
 	waitsfx
 	playsound SFX_TRANSACTION
-	writetext CeladonPrizeRoom_HereYouGoText
+	writetext GameCornerPrize_HereYouGoText
 	waitbutton
 	setval CLEFAIRY
 	special GameCornerPrizeMonCheckDex
@@ -68,7 +73,7 @@ CeladonPrizeRoomPokemonVendor:
 	iffalse CeladonPrizeRoom_CancelPurchaseScript
 	waitsfx
 	playsound SFX_TRANSACTION
-	writetext CeladonPrizeRoom_HereYouGoText
+	writetext GameCornerPrize_HereYouGoText
 	waitbutton
 	setval DRATINI
 	special GameCornerPrizeMonCheckDex
@@ -86,7 +91,7 @@ CeladonPrizeRoomPokemonVendor:
 	iffalse CeladonPrizeRoom_CancelPurchaseScript
 	waitsfx
 	playsound SFX_TRANSACTION
-	writetext CeladonPrizeRoom_HereYouGoText
+	writetext GameCornerPrize_HereYouGoText
 	waitbutton
 	setval CHANSEY
 	special GameCornerPrizeMonCheckDex
@@ -104,7 +109,7 @@ CeladonPrizeRoomPokemonVendor:
 	iffalse CeladonPrizeRoom_CancelPurchaseScript
 	waitsfx
 	playsound SFX_TRANSACTION
-	writetext CeladonPrizeRoom_HereYouGoText
+	writetext GameCornerPrize_HereYouGoText
 	waitbutton
 	setval PORYGON
 	special GameCornerPrizeMonCheckDex
@@ -143,11 +148,11 @@ CeladonPrizeRoomMonVendorMenuHeader:
 CeladonPrizeRoomItemVendor:
 	faceplayer
 	opentext
-	writetext CeladonPrizeRoom_IntroText
+	writetext GameCornerPrize_IntroText
 	waitbutton
 	checkitem COIN_CASE
 	iffalse CeladonPrizeRoom_NoCoinCaseScript
-	writetext CeladonPrizeRoom_WhichPrizeText
+	writetext GameCornerPrize_WhichPrizeText
 CeladonPrizeRoomItemVendorLoop:
 	special DisplayCoinCaseBalance
 	loadmenu CeladonPrizeRoomItemVendorMenuHeader
@@ -221,12 +226,14 @@ CeladonPrizeRoomItemVendorMenuHeader:
 CeladonPrizeRoomStoneVendor:
 	faceplayer
 	opentext
-	writetext CeladonPrizeRoom_IntroText
+	writetext GameCornerPrize_IntroText
 	waitbutton
 	checkitem COIN_CASE
 	iffalse CeladonPrizeRoom_NoCoinCaseScript
-	writetext CeladonPrizeRoom_WhichPrizeText
+	writetext GameCornerPrize_WhichPrizeText
 CeladonPrizeRoomStoneVendorLoop:
+	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
+	iftrue CeladonPrizeRoomEvolveVendorLoop
 	special DisplayCoinCaseBalance
 	loadmenu CeladonPrizeRoomStoneVendorMenuHeader
 	verticalmenu
@@ -295,52 +302,129 @@ CeladonPrizeRoomStoneVendorMenuHeader:
 	db "LEAF STONE   {d:CELADONGAMECORNER_LEAF_STONE_COINS}@"
 	db "CANCEL@"
 
+;CeladonPrizeRoomEvolveVendor:
+;	faceplayer
+;	opentext
+;	writetext GameCornerPrize_IntroText
+;	waitbutton
+;	checkitem COIN_CASE
+;	iffalse CeladonPrizeRoom_NoCoinCaseScript
+;	writetext GameCornerPrize_WhichPrizeText
+CeladonPrizeRoomEvolveVendorLoop:
+	special DisplayCoinCaseBalance
+	loadmenu CeladonPrizeRoomEvolveVendorMenuHeader
+	verticalmenu
+	closewindow
+	ifequal 1, .KingsRock
+	ifequal 2, .MetalCoat
+	ifequal 3, .DragonScale
+	ifequal 4, .UpGrade
+	sjump CeladonPrizeRoom_CancelPurchaseScript
+
+.KingsRock:
+	checkcoins CELADONGAMECORNER_KINGS_ROCK_COINS
+	ifequal HAVE_LESS, CeladonPrizeRoom_NotEnoughCoinsScript
+	getitemname STRING_BUFFER_3, KINGS_ROCK
+	scall CeladonPrizeRoom_ConfirmPurchaseScript
+	iffalse CeladonPrizeRoom_CancelPurchaseScript
+	giveitem KINGS_ROCK
+	iffalse CeladonPrizeRoom_NoRoomScript
+	takecoins CELADONGAMECORNER_KINGS_ROCK_COINS
+	sjump CeladonPrizeRoomStoneVendor_FinishScript
+
+.MetalCoat:
+	checkcoins CELADONGAMECORNER_METAL_COAT_COINS
+	ifequal HAVE_LESS, CeladonPrizeRoom_NotEnoughCoinsScript
+	getitemname STRING_BUFFER_3, METAL_COAT
+	scall CeladonPrizeRoom_ConfirmPurchaseScript
+	iffalse CeladonPrizeRoom_CancelPurchaseScript
+	giveitem METAL_COAT
+	iffalse CeladonPrizeRoom_NoRoomScript
+	takecoins CELADONGAMECORNER_METAL_COAT_COINS
+	sjump CeladonPrizeRoomStoneVendor_FinishScript
+
+.DragonScale:
+	checkcoins CELADONGAMECORNER_DRAGON_SCALE_COINS
+	ifequal HAVE_LESS, CeladonPrizeRoom_NotEnoughCoinsScript
+	getitemname STRING_BUFFER_3, DRAGON_SCALE
+	scall CeladonPrizeRoom_ConfirmPurchaseScript
+	iffalse CeladonPrizeRoom_CancelPurchaseScript
+	giveitem DRAGON_SCALE
+	iffalse CeladonPrizeRoom_NoRoomScript
+	takecoins CELADONGAMECORNER_DRAGON_SCALE_COINS
+	sjump CeladonPrizeRoomStoneVendor_FinishScript
+
+.UpGrade:
+	checkcoins CELADONGAMECORNER_UP_GRADE_COINS
+	ifequal HAVE_LESS, CeladonPrizeRoom_NotEnoughCoinsScript
+	getitemname STRING_BUFFER_3, UP_GRADE
+	scall CeladonPrizeRoom_ConfirmPurchaseScript
+	iffalse CeladonPrizeRoom_CancelPurchaseScript
+	giveitem UP_GRADE
+	iffalse CeladonPrizeRoom_NoRoomScript
+	takecoins CELADONGAMECORNER_UP_GRADE_COINS
+	sjump CeladonPrizeRoomStoneVendor_FinishScript
+
+CeladonPrizeRoomEvolveVendorMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 2, 19, TEXTBOX_Y - -1
+	dw .MenuDataItems
+	db 1 ; default option
+.MenuDataItems:
+	db STATICMENU_CURSOR ; flags
+	db 5 ; items
+	db "KING'S ROCK  {d:CELADONGAMECORNER_KINGS_ROCK_COINS}@"
+	db "METAL COAT   {d:CELADONGAMECORNER_METAL_COAT_COINS}@"
+	db "DRAGON SCALE {d:CELADONGAMECORNER_DRAGON_SCALE_COINS}@"
+	db "UP-GRADE     {d:CELADONGAMECORNER_UP_GRADE_COINS}@"
+	db "CANCEL@"
+
 ; vendor universal scripts
 CeladonPrizeRoomItemVendor_FinishScript:
 	waitsfx
 	playsound SFX_TRANSACTION
-	writetext CeladonPrizeRoom_HereYouGoText
+	writetext GameCornerPrize_HereYouGoText
 	waitbutton
 	sjump CeladonPrizeRoomItemVendorLoop
 
 CeladonPrizeRoomStoneVendor_FinishScript:
 	waitsfx
 	playsound SFX_TRANSACTION
-	writetext CeladonPrizeRoom_HereYouGoText
+	writetext GameCornerPrize_HereYouGoText
 	waitbutton
 	sjump CeladonPrizeRoomStoneVendorLoop
 
 CeladonPrizeRoom_NotEnoughCoinsScript:
-	writetext CeladonPrizeRoom_NotEnoughCoinsText
+	writetext GameCornerPrize_NotEnoughCoinsText
 	waitbutton
 	closetext
 	end
 
 CeladonPrizeRoom_NoRoomScript:
-	writetext CeladonPrizeRoom_NoRoomText
+	writetext GameCornerPrize_NoRoomText
 	waitbutton
 	closetext
 	end
 
 CeladonPrizeRoom_ConfirmPurchaseScript:
-	writetext CeladonPrizeRoom_ConfirmPurchaseText
+	writetext GameCornerPrize_ConfirmPurchaseText
 	yesorno
 	end
 
 CeladonPrizeRoom_CancelPurchaseScript:
-	writetext CeladonPrizeRoom_ComeAgainText
+	writetext GameCornerPrize_ComeAgainText
 	waitbutton
 	closetext
 	end
 
 CeladonPrizeRoom_NoCoinCaseScript:
-	writetext CeladonPrizeRoom_NoCoinCaseText
+	writetext GameCornerPrize_NoCoinCaseText
 	waitbutton
 	closetext
 	end
 
 ; vendor texts
-CeladonPrizeRoom_IntroText:
+GameCornerPrize_IntroText::
 	text "Welcome!"
 
 	para "We exchange your"
@@ -348,39 +432,39 @@ CeladonPrizeRoom_IntroText:
 	cont "prizes!"
 	done
 
-CeladonPrizeRoom_WhichPrizeText:
+GameCornerPrize_WhichPrizeText::
 	text "Which prize would"
 	line "you like?"
 	done
 
-CeladonPrizeRoom_NotEnoughCoinsText:
+GameCornerPrize_NotEnoughCoinsText::
 	text "You don't have"
 	line "enough coins."
 	done
 
-CeladonPrizeRoom_NoRoomText:
+GameCornerPrize_NoRoomText::
 	text "You have no room"
 	line "for it."
 	done
 
-CeladonPrizeRoom_ConfirmPurchaseText:
+GameCornerPrize_ConfirmPurchaseText::
 	text "OK, so you wanted"
 	line "a @"
 	text_ram wStringBuffer3
 	text "?"
 	done
 
-CeladonPrizeRoom_HereYouGoText:
+GameCornerPrize_HereYouGoText::
 	text "Here you go!"
 	done
 
-CeladonPrizeRoom_ComeAgainText:
+GameCornerPrize_ComeAgainText::
 	text "OK. Please save"
 	line "your coins and"
 	cont "come again!"
 	done
 
-CeladonPrizeRoom_NoCoinCaseText:
+GameCornerPrize_NoCoinCaseText::
 	text "Oh? You don't have"
 	line "a COIN CASE."
 	done

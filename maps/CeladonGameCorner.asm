@@ -339,16 +339,16 @@ CeladonGameCornerFullCoinCaseText:
 	line "enough of coins!"
 	done
 
-CeladonGameCornerLuckySlotMachineScript:
+CeladonGameCornerSlotMachineScript:
 	random 6
-	ifequal 0, CeladonGameCornerSlotMachineScript
+	ifequal 0, CeladonGameCornerLuckySlotMachineScript
 	refreshscreen
 	setval FALSE
 	special SlotMachine
 	closetext
 	end
 
-CeladonGameCornerSlotMachineScript:
+CeladonGameCornerLuckySlotMachineScript:
 	refreshscreen
 	setval TRUE
 	special SlotMachine
