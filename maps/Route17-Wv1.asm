@@ -301,26 +301,26 @@ Route17_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 13, 49, BGEVENT_READ, Route17NoticeSign
-	bg_event 13, 61, BGEVENT_READ, Route17TrainerTips1
-	bg_event 11, 73, BGEVENT_READ, Route17TrainerTips2
-	bg_event  7, 31, BGEVENT_READ, Route17Sign
+	bg_event 11, 51, BGEVENT_READ, Route17NoticeSign
+	bg_event 11, 63, BGEVENT_READ, Route17TrainerTips1
+	bg_event 15, 77, BGEVENT_READ, Route17TrainerTips2
+	bg_event  5, 89, BGEVENT_READ, Route17Sign
 ;	bg_event  9, 109, BGEVENT_READ, Route17NoticeSign2
-	bg_event 11, 129, BGEVENT_READ, Route17CyclingRoadEndsSign
-	bg_event 17, 12, BGEVENT_ITEM, Route17HiddenRareCandy
-	bg_event 12, 41, BGEVENT_ITEM, Route17HiddenFullRestore
-	bg_event 20, 80, BGEVENT_ITEM, Route17HiddenPPUp
-	bg_event  4, 80, BGEVENT_ITEM, Route17HiddenMaxRevive
-	bg_event 12, 118, BGEVENT_ITEM, Route17HiddenMaxElixer
+	bg_event  9, 137, BGEVENT_READ, Route17CyclingRoadEndsSign
+	bg_event 15, 14, BGEVENT_ITEM, Route17HiddenRareCandy
+	bg_event 10, 43, BGEVENT_ITEM, Route17HiddenFullRestore
+	bg_event 18, 81, BGEVENT_ITEM, Route17HiddenPPUp
+	bg_event  2, 81, BGEVENT_ITEM, Route17HiddenMaxRevive
+	bg_event  8, 119, BGEVENT_ITEM, Route17HiddenMaxElixer
 
 	def_object_events
-	object_event  7,  9, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerJugglerDustin, -1
-	object_event  6, 21, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerBikerMarkey, -1
-	object_event 12, 17, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerJugglerLyle, -1
+	object_event  6, 12, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerJugglerDustin, -1
+	object_event  4, 20, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerBikerMarkey, -1
+	object_event 12, 19, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerJugglerLyle, -1
 	object_event  6, 33, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerBikerRiley, -1
-	object_event 16, 31, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBikerTheron, -1
-	object_event 17, 60, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerJugglerDarius, -1
-	object_event  4, 58, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerJugglerJulien, -1
-	object_event  6, 97, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBikerEoin, -1
-	object_event 18, 91, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerJugglerMaximo, -1
-	object_event 11, 114, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerBikerNolan, -1
+	object_event 14, 33, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBikerTheron, -1
+	object_event 15, 62, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerJugglerDarius, -1
+	object_event  2, 58, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerJugglerJulien, -1
+	object_event  4, 98, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBikerEoin, -1
+	object_event 16, 93, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerJugglerMaximo, -1
+	object_event 10, 116, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerBikerNolan, -1

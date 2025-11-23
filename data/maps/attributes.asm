@@ -306,15 +306,15 @@ ENDM
 	connection east, Route15, ROUTE_15, 5
 
 	map_attributes Route18, ROUTE_18, $43, NORTH | EAST
-	connection north, Route17, ROUTE_17, 0
+	connection north, Route17, ROUTE_17, -1
 	connection east, FuchsiaCity, FUCHSIA_CITY, -5
 
 	map_attributes Route17, ROUTE_17, $43, NORTH | SOUTH
-	connection north, Route16, ROUTE_16, 0
-	connection south, Route18, ROUTE_18, 0
+	connection north, Route16, ROUTE_16, 1
+	connection south, Route18, ROUTE_18, 1
 
 	map_attributes Route16, ROUTE_16, $43, SOUTH | EAST
-	connection south, Route17, ROUTE_17, 0
+	connection south, Route17, ROUTE_17, -1
 	connection east, CeladonCity, CELADON_CITY, -3 ;-5
 
 	map_attributes CeladonCity, CELADON_CITY, $0f, WEST | EAST
@@ -578,9 +578,9 @@ ENDM
 	map_attributes GoldenrodDeptStore3F, GOLDENROD_DEPT_STORE_3F, $00, 0
 	map_attributes GoldenrodDeptStore4F, GOLDENROD_DEPT_STORE_4F, $00, 0
 	map_attributes GoldenrodDeptStore5F, GOLDENROD_DEPT_STORE_5F, $00, 0
-	map_attributes GoldenrodDeptStore6F, GOLDENROD_DEPT_STORE_6F, $00, 0
+;	map_attributes GoldenrodDeptStore6F, GOLDENROD_DEPT_STORE_6F, $00, 0
 	map_attributes GoldenrodDeptStoreElevator, GOLDENROD_DEPT_STORE_ELEVATOR, $00, 0
-	map_attributes GoldenrodDeptStoreRoof, GOLDENROD_DEPT_STORE_ROOF, $3b, 0
+	map_attributes GoldenrodDeptStoreRoof, GOLDENROD_DEPT_STORE_ROOF, $23, 0
 	map_attributes GoldenrodGameCorner, GOLDENROD_GAME_CORNER, $00, 0
 	map_attributes GoldenrodPokecenter1F, GOLDENROD_POKECENTER_1F, $00, 0
 ;	map_attributes PokecomCenterAdminOfficeMobile, POKECOM_CENTER_ADMIN_OFFICE_MOBILE, $00, 0
@@ -663,7 +663,7 @@ ENDM
 	map_attributes CeladonDeptStore4F, CELADON_DEPT_STORE_4F, $00, 0
 	map_attributes CeladonDeptStore5F, CELADON_DEPT_STORE_5F, $00, 0
 ;	map_attributes CeladonDeptStore6F, CELADON_DEPT_STORE_6F, $00, 0
-	map_attributes CeladonDeptStoreRoof, CELADON_DEPT_STORE_ROOF, $3b, 0
+	map_attributes CeladonDeptStoreRoof, CELADON_DEPT_STORE_ROOF, $23, 0
 	map_attributes CeladonDeptStoreElevator, CELADON_DEPT_STORE_ELEVATOR, $00, 0
 	map_attributes CeladonMansion1F, CELADON_MANSION_1F, $00, 0
 	map_attributes CeladonMansion2F, CELADON_MANSION_2F, $00, 0
