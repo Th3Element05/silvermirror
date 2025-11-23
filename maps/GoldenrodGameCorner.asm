@@ -52,6 +52,11 @@ GoldenrodGameCorner_MapScripts:
 ;	closetext
 ;	turnobject LAST_TALKED, RIGHT
 ;	end
+;
+;MoveTutorInsideText:
+;	text "Wahahah! The coins"
+;	line "keep rolling in!"
+;	done
 
 GoldenrodGameCornerCoinVendorScript:
 	jumpstd GameCornerCoinVendorScript
@@ -60,12 +65,12 @@ GoldenrodGameCornerCoinVendorScript:
 GoldenrodGameCornerPokemonVendor:
 	faceplayer
 	opentext
-	writetext GoldenrodGameCorner_IntroText
+	farwritetext GameCornerPrize_IntroText
 	waitbutton
 	checkitem COIN_CASE
 	iffalse GoldenrodGameCorner_NoCoinCaseScript
 .loop
-	writetext GoldenrodGameCorner_WhichPrizeText
+	farwritetext GameCornerPrize_WhichPrizeText
 	special DisplayCoinCaseBalance
 	loadmenu GoldenrodGameCornerMonVendorMenuHeader
 	verticalmenu
@@ -86,7 +91,7 @@ GoldenrodGameCornerPokemonVendor:
 	iffalse GoldenrodGameCorner_CancelPurchaseScript
 	waitsfx
 	playsound SFX_TRANSACTION
-	writetext GoldenrodGameCorner_HereYouGoText
+	farwritetext GameCornerPrize_HereYouGoText
 	waitbutton
 	setval TOGEPI
 	special GameCornerPrizeMonCheckDex
@@ -104,7 +109,7 @@ GoldenrodGameCornerPokemonVendor:
 	iffalse GoldenrodGameCorner_CancelPurchaseScript
 	waitsfx
 	playsound SFX_TRANSACTION
-	writetext GoldenrodGameCorner_HereYouGoText
+	farwritetext GameCornerPrize_HereYouGoText
 	waitbutton
 	setval MURKROW
 	special GameCornerPrizeMonCheckDex
@@ -122,7 +127,7 @@ GoldenrodGameCornerPokemonVendor:
 	iffalse GoldenrodGameCorner_CancelPurchaseScript
 	waitsfx
 	playsound SFX_TRANSACTION
-	writetext GoldenrodGameCorner_HereYouGoText
+	farwritetext GameCornerPrize_HereYouGoText
 	waitbutton
 	setval SLUGMA
 	special GameCornerPrizeMonCheckDex
@@ -140,7 +145,7 @@ GoldenrodGameCornerPokemonVendor:
 	iffalse GoldenrodGameCorner_CancelPurchaseScript
 	waitsfx
 	playsound SFX_TRANSACTION
-	writetext GoldenrodGameCorner_HereYouGoText
+	farwritetext GameCornerPrize_HereYouGoText
 	waitbutton
 	setval LARVITAR
 	special GameCornerPrizeMonCheckDex
@@ -166,11 +171,11 @@ GoldenrodGameCornerMonVendorMenuHeader:
 GoldenrodGameCornerItemVendor:
 	faceplayer
 	opentext
-	writetext GoldenrodGameCorner_IntroText
+	farwritetext GameCornerPrize_IntroText
 	waitbutton
 	checkitem COIN_CASE
 	iffalse GoldenrodGameCorner_NoCoinCaseScript
-	writetext GoldenrodGameCorner_WhichPrizeText
+	farwritetext GameCornerPrize_WhichPrizeText
 GoldenrodGameCornerItemVendorLoop:
 	special DisplayCoinCaseBalance
 	loadmenu GoldenrodGameCornerItemVendorMenuHeader
@@ -244,14 +249,14 @@ GoldenrodGameCornerItemVendorMenuHeader:
 GoldenrodGameCornerEvolveVendor:
 	faceplayer
 	opentext
-	writetext GoldenrodGameCorner_IntroText
+	farwritetext GameCornerPrize_IntroText
 	waitbutton
 	checkitem COIN_CASE
 	iffalse GoldenrodGameCorner_NoCoinCaseScript
-	writetext GoldenrodGameCorner_WhichPrizeText
+	farwritetext GameCornerPrize_WhichPrizeText
 GoldenrodGameCornerEvolveVendorLoop:
 	special DisplayCoinCaseBalance
-	loadmenu GoldenrodGameCornerStoneVendorMenuHeader
+	loadmenu GoldenrodGameCornerEvolveVendorMenuHeader
 	verticalmenu
 	closewindow
 	ifequal 1, .KingsRock
@@ -304,7 +309,7 @@ GoldenrodGameCornerEvolveVendorLoop:
 	takecoins GOLDENRODGAMECORNER_UP_GRADE_COINS
 	sjump GoldenrodGameCornerEvolveVendor_FinishScript
 
-GoldenrodGameCornerStoneVendorMenuHeader:
+GoldenrodGameCornerEvolveVendorMenuHeader:
 	db MENU_BACKUP_TILES ; flags
 	menu_coords 0, 2, 19, TEXTBOX_Y - -1
 	dw .MenuDataItems
@@ -346,98 +351,15 @@ GoldenrodGameCornerEggVendor:
 	writetext GoldenrodGameCornerEggVendor_FinishText
 	waitbutton
 	closetext
+	turnobject LAST_TALKED, RIGHT
 	end
 
 .NoThanks
 	writetext GoldenrodGameCornerEggVendor_OfferStandsText
 	waitbutton
 	closetext
+	turnobject LAST_TALKED, RIGHT
 	end
-
-; vendor universal scripts
-GoldenrodGameCornerItemVendor_FinishScript:
-	waitsfx
-	playsound SFX_TRANSACTION
-	writetext GoldenrodGameCorner_HereYouGoText
-	waitbutton
-	sjump GoldenrodGameCornerItemVendorLoop
-
-GoldenrodGameCornerEvolveVendor_FinishScript:
-	waitsfx
-	playsound SFX_TRANSACTION
-	writetext GoldenrodGameCorner_HereYouGoText
-	waitbutton
-	sjump GoldenrodGameCornerEvolveVendorLoop
-
-GoldenrodGameCorner_NotEnoughCoinsScript:
-	writetext GoldenrodGameCorner_NotEnoughCoinsText
-	waitbutton
-	closetext
-	end
-
-GoldenrodGameCorner_NoRoomScript:
-	writetext GoldenrodGameCorner_NoRoomText
-	waitbutton
-	closetext
-	end
-
-GoldenrodGameCorner_ConfirmPurchaseScript:
-	writetext GoldenrodGameCorner_ConfirmPurchaseText
-	yesorno
-	end
-
-GoldenrodGameCorner_CancelPurchaseScript:
-	writetext GoldenrodGameCorner_ComeAgainText
-	waitbutton
-	closetext
-	end
-
-GoldenrodGameCorner_NoCoinCaseScript:
-	writetext GoldenrodGameCorner_NoCoinCaseText
-	waitbutton
-	closetext
-	end
-
-; vendor texts
-GoldenrodGameCorner_IntroText:
-	text "Welcome!"
-
-	para "We exchange your"
-	line "coins for fabulous"
-	cont "prizes!"
-	done
-
-GoldenrodGameCorner_WhichPrizeText:
-	text "Which prize would"
-	line "you like?"
-	done
-
-GoldenrodGameCorner_NotEnoughCoinsText:
-	text "You don't have"
-	line "enough coins."
-	done
-
-GoldenrodGameCorner_NoRoomText:
-	text "You have no room"
-	line "for it."
-	done
-
-GoldenrodGameCorner_ConfirmPurchaseText:
-	text "OK, so you wanted"
-	line "a @"
-	text_ram wStringBuffer3
-	text "?"
-	done
-
-GoldenrodGameCorner_HereYouGoText:
-	text "Here you go!"
-	done
-
-GoldenrodGameCorner_ComeAgainText:
-	text "OK. Please save"
-	line "your coins and"
-	cont "come again!"
-	done
 
 GoldenrodGameCornerEggVendor_IntroText:
 	text "Psst. You there."
@@ -469,10 +391,95 @@ GoldenrodGameCornerEggVendor_OfferStandsText:
 	line "change your mind."
 	done
 
-GoldenrodGameCorner_NoCoinCaseText:
-	text "Oh? You don't have"
-	line "a COIN CASE."
-	done
+; vendor universal scripts
+GoldenrodGameCornerItemVendor_FinishScript:
+	waitsfx
+	playsound SFX_TRANSACTION
+	farwritetext GameCornerPrize_HereYouGoText
+	waitbutton
+	sjump GoldenrodGameCornerItemVendorLoop
+
+GoldenrodGameCornerEvolveVendor_FinishScript:
+	waitsfx
+	playsound SFX_TRANSACTION
+	farwritetext GameCornerPrize_HereYouGoText
+	waitbutton
+	sjump GoldenrodGameCornerEvolveVendorLoop
+
+GoldenrodGameCorner_NotEnoughCoinsScript:
+	farwritetext GameCornerPrize_NotEnoughCoinsText
+	waitbutton
+	closetext
+	end
+
+GoldenrodGameCorner_NoRoomScript:
+	farwritetext GameCornerPrize_NoRoomText
+	waitbutton
+	closetext
+	end
+
+GoldenrodGameCorner_ConfirmPurchaseScript:
+	farwritetext GameCornerPrize_ConfirmPurchaseText
+	yesorno
+	end
+
+GoldenrodGameCorner_CancelPurchaseScript:
+	farwritetext GameCornerPrize_ComeAgainText
+	waitbutton
+	closetext
+	end
+
+GoldenrodGameCorner_NoCoinCaseScript:
+	farwritetext GameCornerPrize_NoCoinCaseText
+	waitbutton
+	closetext
+	end
+
+; vendor texts
+;GoldenrodGameCorner_IntroText:
+;	text "Welcome!"
+;
+;	para "We exchange your"
+;	line "coins for fabulous"
+;	cont "prizes!"
+;	done
+;
+;GoldenrodGameCorner_WhichPrizeText:
+;	text "Which prize would"
+;	line "you like?"
+;	done
+;
+;GoldenrodGameCorner_NotEnoughCoinsText:
+;	text "You don't have"
+;	line "enough coins."
+;	done
+;
+;GoldenrodGameCorner_NoRoomText:
+;	text "You have no room"
+;	line "for it."
+;	done
+;
+;GoldenrodGameCorner_ConfirmPurchaseText:
+;	text "OK, so you wanted"
+;	line "a @"
+;	text_ram wStringBuffer3
+;	text "?"
+;	done
+;
+;GoldenrodGameCorner_HereYouGoText:
+;	text "Here you go!"
+;	done
+;
+;GoldenrodGameCorner_ComeAgainText:
+;	text "OK. Please save"
+;	line "your coins and"
+;	cont "come again!"
+;	done
+;
+;GoldenrodGameCorner_NoCoinCaseText:
+;	text "Oh? You don't have"
+;	line "a COIN CASE."
+;	done
 
 ; special (multi menu)
 ;GoldenrodGameCornerSpecialVendorScript:
@@ -672,62 +679,89 @@ GoldenrodGameCorner_NoCoinCaseText:
 ;	db "CANCEL@"
 ;
 
-GoldenrodGameCornerPharmacistScript:
+GoldenrodGameCornerLuckySeatScript:
 	faceplayer
 	opentext
 	writetext GoldenrodGameCornerPharmacistText
-	waitbutton
-	closetext
-	turnobject LAST_TALKED, LEFT
-	end
+	sjump GoldenrodGameCornerEndRightScript
+
+GoldenrodGameCornerPharmacistText:
+	text "I always play this"
+	line "slot machine. It"
+	cont "pays out more than"
+	cont "others, I think."
+	done
 
 GoldenrodGameCornerPokefanM1Script:
 	faceplayer
 	opentext
 	writetext GoldenrodGameCornerPokefanM1Text
-	waitbutton
-	closetext
-	turnobject LAST_TALKED, RIGHT
-	end
+	sjump GoldenrodGameCornerEndLeftScript
+
+GoldenrodGameCornerPokefanM1Text:
+	text "I just love this"
+	line "new slot machine."
+
+	para "It's more of a"
+	line "challenge than the"
+	cont "ones in CELADON."
+	done
+
+GoldenrodGameCornerCooltrainerFScript:
+	faceplayer
+	opentext
+	writetext GoldenrodGameCornerCooltrainerFText
+	sjump GoldenrodGameCornerEndRightScript
+
+GoldenrodGameCornerCooltrainerFText:
+	text "I won't quit until"
+	line "I win!"
+	done
 
 GoldenrodGameCornerCooltrainerMScript:
 	faceplayer
 	opentext
 	writetext GoldenrodGameCornerCooltrainerMText
-	waitbutton
-	closetext
-	turnobject LAST_TALKED, LEFT
-	end
+	sjump GoldenrodGameCornerEndLeftScript
+
+GoldenrodGameCornerCooltrainerMText:
+	text "Life is a gamble."
+	line "I'm going to flip"
+	cont "cards till I drop!"
+	done
 
 GoldenrodGameCornerPokefanFScript:
 	faceplayer
 	opentext
 	writetext GoldenrodGameCornerPokefanFText
+	sjump GoldenrodGameCornerEndRightScript
+
+GoldenrodGameCornerPokefanFText:
+	text "Card flip…"
+
+	para "I prefer it over"
+	line "the slots because"
+	cont "it's easier to"
+	cont "figure the odds."
+
+	para "But the payout is"
+	line "much lower."
+	done
+
+GoldenrodGameCornerEndLeftScript:
+	waitbutton
+	closetext
+	turnobject LAST_TALKED, LEFT
+	end
+
+GoldenrodGameCornerEndRightScript:
 	waitbutton
 	closetext
 	turnobject LAST_TALKED, RIGHT
 	end
-
-GoldenrodGameCornerCooltrainerFScript:
-	jumptextfaceplayer GoldenrodGameCornerCooltrainerFText
-
-GoldenrodGameCornerGentlemanScript:
-	faceplayer
-	opentext
-	writetext GoldenrodGameCornerGentlemanText
-	waitbutton
-	closetext
-	turnobject LAST_TALKED, RIGHT
-	end
-
-GoldenrodGameCornerPokefanM2Script:
-	jumptextfaceplayer GoldenrodGameCornerPokefanM2Text
-
-GoldenrodGameCornerLeftTheirDrinkScript:
-	jumptext GoldenrodGameCornerLeftTheirDrinkText
 
 GoldenrodGameCornerSlotsMachineScript:
-	random 6
+	random 2
 	ifequal 0, GoldenrodGameCornerLuckySlotsMachineScript
 	refreshscreen
 	setval FALSE
@@ -748,77 +782,8 @@ GoldenrodGameCornerCardFlipMachineScript:
 	closetext
 	end
 
-GoldenrodGameCornerPharmacistText:
-	text "I always play this"
-	line "slot machine. It"
-
-	para "pays out more than"
-	line "others, I think."
-	done
-
-GoldenrodGameCornerPokefanM1Text:
-	text "I just love this"
-	line "new slot machine."
-
-	para "It's more of a"
-	line "challenge than the"
-	cont "ones in CELADON."
-	done
-
-GoldenrodGameCornerCooltrainerMText:
-	text "Life is a gamble."
-	line "I'm going to flip"
-	cont "cards till I drop!"
-	done
-
-GoldenrodGameCornerPokefanFText:
-	text "Card flip…"
-
-	para "I prefer it over"
-	line "the slots because"
-
-	para "it's easier to"
-	line "figure the odds."
-
-	para "But the payout is"
-	line "much lower."
-	done
-
-GoldenrodGameCornerCooltrainerFText:
-	text "I won't quit until"
-	line "I win!"
-	done
-
-GoldenrodGameCornerGentlemanText:
-	text "I taught BLIZZARD"
-	line "to my #MON."
-
-	para "It was hard to get"
-	line "enough coins for"
-
-	para "it, but it was"
-	line "worth it."
-	done
-
-GoldenrodGameCornerPokefanM2Text:
-	text "I couldn't win at"
-	line "the slots, and I"
-
-	para "blew it on card"
-	line "flipping…"
-
-	para "I got so furious,"
-	line "I tossed out my"
-
-	para "COIN CASE in the"
-	line "UNDERGROUND."
-	done
-
-MoveTutorInsideText:
-	text "Wahahah! The coins"
-	line "keep rolling in!"
-	done
-
+GoldenrodGameCornerLeftTheirDrinkScript:
+	jumptext GoldenrodGameCornerLeftTheirDrinkText
 GoldenrodGameCornerLeftTheirDrinkText:
 	text "Someone left their"
 	line "drink."
@@ -836,26 +801,26 @@ GoldenrodGameCorner_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  6,  6, BGEVENT_READ, GoldenrodGameCornerLuckySlotsMachineScript
-	bg_event  6,  7, BGEVENT_READ, GoldenrodGameCornerLuckySlotsMachineScript
-	bg_event  6,  8, BGEVENT_READ, GoldenrodGameCornerLuckySlotsMachineScript
-	bg_event  6,  9, BGEVENT_READ, GoldenrodGameCornerLuckySlotsMachineScript
-	bg_event  6, 10, BGEVENT_READ, GoldenrodGameCornerLuckySlotsMachineScript
-	bg_event  6, 11, BGEVENT_RIGHT, GoldenrodGameCornerLuckySlotsMachineScript
-	bg_event  7,  6, BGEVENT_READ, GoldenrodGameCornerLuckySlotsMachineScript
+	bg_event  6,  6, BGEVENT_READ, GoldenrodGameCornerSlotsMachineScript
+	bg_event  6,  7, BGEVENT_READ, GoldenrodGameCornerLuckySlotsMachineScript ;lucky text
+	bg_event  6,  8, BGEVENT_READ, GoldenrodGameCornerSlotsMachineScript
+	bg_event  6,  9, BGEVENT_READ, GoldenrodGameCornerSlotsMachineScript
+	bg_event  6, 10, BGEVENT_READ, GoldenrodGameCornerLuckySlotsMachineScript ;lucky text
+	bg_event  6, 11, BGEVENT_RIGHT, GoldenrodGameCornerSlotsMachineScript
+	bg_event  7,  6, BGEVENT_READ, GoldenrodGameCornerSlotsMachineScript
 	bg_event  7,  7, BGEVENT_READ, GoldenrodGameCornerLuckySlotsMachineScript ;og lucky
-	bg_event  7,  8, BGEVENT_READ, GoldenrodGameCornerLuckySlotsMachineScript
-	bg_event  7,  9, BGEVENT_READ, GoldenrodGameCornerLuckySlotsMachineScript
-	bg_event  7, 10, BGEVENT_READ, GoldenrodGameCornerLuckySlotsMachineScript
-	bg_event  7, 11, BGEVENT_LEFT, GoldenrodGameCornerLuckySlotsMachineScript
-	bg_event 12,  6, BGEVENT_READ, GoldenrodGameCornerLuckySlotsMachineScript
-	bg_event 12,  7, BGEVENT_READ, GoldenrodGameCornerLuckySlotsMachineScript
-	bg_event 12,  8, BGEVENT_READ, GoldenrodGameCornerLuckySlotsMachineScript
-	bg_event 12,  9, BGEVENT_READ, GoldenrodGameCornerLuckySlotsMachineScript
-	bg_event 12, 10, BGEVENT_READ, GoldenrodGameCornerLuckySlotsMachineScript
-	bg_event 12, 11, BGEVENT_RIGHT, GoldenrodGameCornerLuckySlotsMachineScript
+;	bg_event  7,  8, BGEVENT_READ, GoldenrodGameCornerSlotsMachineScript
+	bg_event  7,  9, BGEVENT_READ, GoldenrodGameCornerSlotsMachineScript
+	bg_event  7, 10, BGEVENT_READ, GoldenrodGameCornerSlotsMachineScript
+	bg_event  7, 11, BGEVENT_LEFT, GoldenrodGameCornerSlotsMachineScript
+	bg_event 12,  6, BGEVENT_READ, GoldenrodGameCornerSlotsMachineScript
+	bg_event 12,  7, BGEVENT_READ, GoldenrodGameCornerSlotsMachineScript
+	bg_event 12,  8, BGEVENT_READ, GoldenrodGameCornerSlotsMachineScript
+;	bg_event 12,  9, BGEVENT_READ, GoldenrodGameCornerSlotsMachineScript
+	bg_event 12, 10, BGEVENT_READ, GoldenrodGameCornerSlotsMachineScript
+	bg_event 12, 11, BGEVENT_RIGHT, GoldenrodGameCornerSlotsMachineScript
 	bg_event 13,  6, BGEVENT_READ, GoldenrodGameCornerCardFlipMachineScript
-	bg_event 13,  7, BGEVENT_READ, GoldenrodGameCornerCardFlipMachineScript
+;	bg_event 13,  7, BGEVENT_READ, GoldenrodGameCornerCardFlipMachineScript
 	bg_event 13,  8, BGEVENT_READ, GoldenrodGameCornerCardFlipMachineScript
 	bg_event 13,  9, BGEVENT_READ, GoldenrodGameCornerCardFlipMachineScript
 	bg_event 13, 10, BGEVENT_READ, GoldenrodGameCornerCardFlipMachineScript
@@ -864,7 +829,7 @@ GoldenrodGameCorner_MapEvents:
 	bg_event 18,  7, BGEVENT_READ, GoldenrodGameCornerCardFlipMachineScript
 	bg_event 18,  8, BGEVENT_READ, GoldenrodGameCornerCardFlipMachineScript
 	bg_event 18,  9, BGEVENT_READ, GoldenrodGameCornerCardFlipMachineScript
-	bg_event 18, 10, BGEVENT_READ, GoldenrodGameCornerCardFlipMachineScript
+;	bg_event 18, 10, BGEVENT_READ, GoldenrodGameCornerCardFlipMachineScript
 	bg_event 18, 11, BGEVENT_RIGHT, GoldenrodGameCornerCardFlipMachineScript
 	bg_event 12,  1, BGEVENT_LEFT, GoldenrodGameCornerLeftTheirDrinkScript
 
@@ -874,11 +839,10 @@ GoldenrodGameCorner_MapEvents:
 	object_event 15,  2, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodGameCornerPokemonVendor, -1
 	object_event 19,  2, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodGameCornerItemVendor, -1
 	object_event 17,  2, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodGameCornerEvolveVendor, -1
-	object_event 17, 10, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, GoldenrodGameCornerEggVendor, -1
-	object_event  8,  7, SPRITE_PHARMACIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GoldenrodGameCornerPharmacistScript, -1
-	object_event 11, 10, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GoldenrodGameCornerPokefanM1Script, -1
-	object_event 14,  8, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GoldenrodGameCornerCooltrainerMScript, -1
-	object_event 17,  6, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodGameCornerPokefanFScript, -1
-	object_event 10,  3, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 2, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodGameCornerCooltrainerFScript, -1
-	object_event  5, 10, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GoldenrodGameCornerGentlemanScript, -1
-	object_event  2,  9, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GoldenrodGameCornerPokefanM2Script, -1
+	object_event 10,  1, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, GoldenrodGameCornerEggVendor, -1
+	object_event  5,  7, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, DAY, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GoldenrodGameCornerLuckySeatScript, -1
+	object_event  5, 10, SPRITE_PHARMACIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, NITE, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GoldenrodGameCornerLuckySeatScript, -1
+	object_event  8,  8, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GoldenrodGameCornerPokefanM1Script, -1
+	object_event 11,  9, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 2, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodGameCornerCooltrainerFScript, -1
+	object_event 14,  7, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GoldenrodGameCornerCooltrainerMScript, -1
+	object_event 17, 10, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodGameCornerPokefanFScript, -1
