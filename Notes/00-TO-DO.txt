@@ -83,13 +83,11 @@ cinnabar lab fossil sprites
 running animation UP/DOWN needs head bob
 check pokecenter link receptionist sprites
 
+celadon game corner gen2 evolve prizes
+(can farcall DEF GOLDENRODGAMECORNER_X_COINS)?
 
 
 TO-DO to-do
-
-buy egg in Game Corner?
-special GiveOddEgg
-data\events\odd_eggs.asm
 
 slugma, houndour, murkrow (johto?)
 misdreavus, larvitar (johto?)
