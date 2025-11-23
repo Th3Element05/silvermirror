@@ -13,7 +13,6 @@ Marts:
 	dw MartTMs1
 	dw MartEvolution1
 	dw MartVitamins1
-	dw MartVitamins2
 	dw MartBattle
 ;	dw MartCeladon2F1 = MartBalls
 ;	dw MartCeladon2F2 = MartMed
@@ -117,12 +116,12 @@ MartMedSix:
 ;MartCeladon3F:
 MartTMs1:
 	db 6 ; # items
+	db TM_PROTECT ; TM_BODY_SLAM
+	db TM_SUBSTITUTE ; TM_REST
 	db TM_COUNTER
-	db TM_BODY_SLAM ; TM_PSYCH_UP
-	db TM_REST ; TM_PROTECT
-	db TM_SUNNY_DAY ; TM_THUNDERPUNCH
-	db TM_RAIN_DANCE ; TM_FIRE_PUNCH
-	db TM_SANDSTORM ; TM_ICE_PUNCH
+	db TM_ROCK_SLIDE
+	db TM_TRI_ATTACK
+	db TM_HYPER_BEAM
 	db -1 ; end
 
 ;MartCeladon4F:
@@ -137,6 +136,7 @@ MartEvolution1:
 	db -1 ; end
 
 ;MartCeladon5F1:
+;Mart Goldenrod4F:
 MartVitamins1:
 	db 5 ; # items
 	db HP_UP
@@ -145,17 +145,6 @@ MartVitamins1:
 	db CALCIUM
 	db CARBOS
 ;	db PP_UP
-	db -1 ; end
-
-;Mart Goldenrod4F: ?
-MartVitamins2:
-	db 6 ; # items
-	db HP_UP
-	db PROTEIN
-	db IRON
-	db CALCIUM
-	db CARBOS
-	db PP_UP
 	db -1 ; end
 
 ;MartCeladon5F2:

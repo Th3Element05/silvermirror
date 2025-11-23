@@ -378,34 +378,34 @@ BlackthornPokecenter1F_Blocks:
 EarlsPokemonAcademy_Blocks:
 	INCBIN "maps/EarlsPokemonAcademy.blk"
 
-GoldenrodDeptStore1F_Blocks:
 CeladonDeptStore1F_Blocks:
+GoldenrodDeptStore1F_Blocks:
 	INCBIN "maps/DeptStore1F.blk"
 
-GoldenrodDeptStore2F_Blocks:
 CeladonDeptStore2F_Blocks:
+CeladonDeptStore5F_Blocks:
+GoldenrodDeptStore3F_Blocks:
 	INCBIN "maps/DeptStore2F.blk"
 
-GoldenrodDeptStore3F_Blocks:
 CeladonDeptStore3F_Blocks:
+GoldenrodDeptStore2F_Blocks:
+GoldenrodDeptStore4F_Blocks:
 	INCBIN "maps/DeptStore3F.blk"
 
-GoldenrodDeptStore4F_Blocks:
 CeladonDeptStore4F_Blocks:
+GoldenrodDeptStore5F_Blocks:
 	INCBIN "maps/DeptStore4F.blk"
 
-GoldenrodDeptStore5F_Blocks:
-CeladonDeptStore5F_Blocks:
-	INCBIN "maps/DeptStore5F.blk"
+;	INCBIN "maps/DeptStore5F.blk"
 
-GoldenrodDeptStore6F_Blocks:
-;CeladonDeptStore6F_Blocks:
-	INCBIN "maps/DeptStore6F.blk"
+;GoldenrodDeptStore6F_Blocks:
+;	INCBIN "maps/DeptStore6F.blk"
 
 GoldenrodDeptStoreRoof_Blocks:
-CeladonDeptStoreRoof_Blocks:
 ;	INCBIN "maps/GoldenrodDeptStoreRoof.blk"
+CeladonDeptStoreRoof_Blocks:
 	INCBIN "maps/DeptStoreRoof.blk"
+
 
 GoldenrodDeptStoreElevator_Blocks:
 CeladonDeptStoreElevator_Blocks:

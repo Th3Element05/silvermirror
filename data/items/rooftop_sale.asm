@@ -7,6 +7,7 @@ RooftopSaleMart1:
 	dbw REVIVE,       1200
 	db -1
 
+; post-HOF
 RooftopSaleMart2:
 	db 5
 	dbw HYPER_POTION, 1000

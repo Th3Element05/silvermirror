@@ -42,15 +42,31 @@ GoldenrodDeptStoreElevatorScript:
 	end
 
 GoldenrodDeptStoreElevatorData:
-	db 7 ; floors
-	elevfloor FLOOR_B1F, 2, GOLDENROD_DEPT_STORE_B1F
-	elevfloor FLOOR_1F,  4, GOLDENROD_DEPT_STORE_1F
-	elevfloor FLOOR_2F,  3, GOLDENROD_DEPT_STORE_2F
-	elevfloor FLOOR_3F,  3, GOLDENROD_DEPT_STORE_3F
-	elevfloor FLOOR_4F,  3, GOLDENROD_DEPT_STORE_4F
-	elevfloor FLOOR_5F,  3, GOLDENROD_DEPT_STORE_5F
-	elevfloor FLOOR_6F,  2, GOLDENROD_DEPT_STORE_6F
+	db 6 ; floors
+	elevfloor FLOOR_B1F, 1, GOLDENROD_DEPT_STORE_B1F ;2
+	elevfloor FLOOR_1F,  1, GOLDENROD_DEPT_STORE_1F  ;4
+	elevfloor FLOOR_2F,  1, GOLDENROD_DEPT_STORE_2F  ;3
+	elevfloor FLOOR_3F,  1, GOLDENROD_DEPT_STORE_3F  ;3
+	elevfloor FLOOR_4F,  1, GOLDENROD_DEPT_STORE_4F  ;3
+	elevfloor FLOOR_5F,  1, GOLDENROD_DEPT_STORE_5F  ;3
+;	elevfloor FLOOR_6F,  1, GOLDENROD_DEPT_STORE_6F  ;2
 	db -1 ; end
+
+GoldenrodDeptStoreElevatorDirectory:
+	jumptext GoldenrodDeptStoreElevatorDirectoryText
+GoldenrodDeptStoreElevatorDirectoryText:
+	text "1F SERVICE COUNTER"
+
+	para "2F TRAINER'S"
+	line "   MARKET"
+
+	para "3F BATTLE"
+	line "   COLLECTION"
+
+	para "4F MEDICINE BOX"
+
+	para "5F TM CORNER"
+	done
 
 GoldenrodDeptStoreElevator_MapEvents:
 	db 0, 0 ; filler
@@ -62,6 +78,7 @@ GoldenrodDeptStoreElevator_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  3,  0, BGEVENT_READ, GoldenrodDeptStoreElevatorScript
+	bg_event  2,  0, BGEVENT_READ, GoldenrodDeptStoreElevatorScript
+	bg_event  1,  0, BGEVENT_READ, GoldenrodDeptStoreElevatorDirectory
 
 	def_object_events
