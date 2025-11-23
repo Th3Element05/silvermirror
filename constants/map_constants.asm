@@ -196,7 +196,7 @@ ENDM
 	map_const FUCHSIA_GOOD_ROD_HOUSE,                       4,  4 ;  8
 	map_const ROUTE_15_GATE,                                4,  5 ;  9
 	map_const ROUTE_15_GATE_2F,                             4,  4 ; 10
-	map_const ROUTE_17,                                    10, 70 ; 11
+	map_const ROUTE_17,                                    12, 66 ; 11
 	map_const ROUTE_18,                                    25,  9 ; 12
 	map_const ROUTE_18_GATE,                                4,  5 ; 13
 	map_const ROUTE_18_GATE_2F,                             4,  4 ; 14
@@ -321,9 +321,9 @@ ENDM
 	map_const GOLDENROD_DEPT_STORE_3F,                      8,  4 ;  5
 	map_const GOLDENROD_DEPT_STORE_4F,                      8,  4 ;  6
 	map_const GOLDENROD_DEPT_STORE_5F,                      8,  4 ;  7
-	map_const GOLDENROD_DEPT_STORE_6F,                      8,  4 ;  8
+;	map_const GOLDENROD_DEPT_STORE_6F,                      8,  4 ;  8
 	map_const GOLDENROD_DEPT_STORE_ELEVATOR,                2,  2 ;  9
-	map_const GOLDENROD_DEPT_STORE_ROOF,                    8,  4 ; 10
+	map_const GOLDENROD_DEPT_STORE_ROOF,                    8,  6 ; 10
 	map_const GOLDENROD_GYM,                               10,  9 ; 11
 	map_const GOLDENROD_MAGNET_TRAIN_STATION,              10,  9 ; 12
 	map_const GOLDENROD_HAPPINESS_RATER,                    4,  4 ; 13
@@ -529,7 +529,7 @@ ENDM
 	map_const TEAM_ROCKET_BASE_B3F,                        15,  9 ; 91
 	map_const ILEX_FOREST,                                 15, 27 ; 92
 	map_const GOLDENROD_UNDERGROUND,                        9, 18 ; 93 ; 15, 18 ; 93
-	map_const GOLDENROD_UNDERGROUND_SWITCH_ROOM_ENTRANCES, 15, 18 ; 94
+	map_const GOLDENROD_UNDERGROUND_SWITCH_ROOM_ENTRANCES, 13,  8 ; 94
 	map_const GOLDENROD_DEPT_STORE_B1F,                    10,  9 ; 95
 	map_const GOLDENROD_UNDERGROUND_WAREHOUSE,             10,  9 ; 96
 	map_const MOUNT_MORTAR_1F_OUTSIDE,                     20, 18 ; 97
