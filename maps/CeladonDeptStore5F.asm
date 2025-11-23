@@ -4,6 +4,14 @@ CeladonDeptStore5F_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+	callback MAPCALLBACK_TILES, CeladonDeptStore5FChangeBlockCallback
+
+CeladonDeptStore5FChangeBlockCallback:
+	changeblock 10, 0, $05 ; stairs down
+	changeblock 12, 0, $06 ; stairs up
+	changeblock  4, 4, $15 ; fancy shelf
+	changeblock  8, 4, $1b ; plain shelf
+	endcallback
 
 CeladonDeptStore5FClerk1Script:
 	faceplayer

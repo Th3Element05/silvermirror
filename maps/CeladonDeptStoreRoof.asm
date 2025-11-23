@@ -9,103 +9,6 @@ CeladonDeptStoreRoof_MapScripts:
 
 	def_callbacks
 
-CeladonDeptStoreRoofVendingMachine:
-	opentext
-	writetext CeladonVendingText
-.Start:
-	special PlaceMoneyTopRight
-	loadmenu .VendingMenuHeader
-	verticalmenu
-	closewindow
-	ifequal 1, .FreshWater
-	ifequal 2, .SodaPop
-	ifequal 3, .Lemonade
-	closetext
-	end
-
-.FreshWater:
-	checkmoney YOUR_MONEY, CELADONDEPTSTOREROOF_FRESH_WATER_PRICE
-	ifequal HAVE_LESS, .NotEnoughMoney
-	giveitem FRESH_WATER
-	iffalse .NotEnoughSpace
-	takemoney YOUR_MONEY, CELADONDEPTSTOREROOF_FRESH_WATER_PRICE
-	getitemname STRING_BUFFER_3, FRESH_WATER
-	sjump .VendItem
-
-.SodaPop:
-	checkmoney YOUR_MONEY, CELADONDEPTSTOREROOF_SODA_POP_PRICE
-	ifequal HAVE_LESS, .NotEnoughMoney
-	giveitem SODA_POP
-	iffalse .NotEnoughSpace
-	takemoney YOUR_MONEY, CELADONDEPTSTOREROOF_SODA_POP_PRICE
-	getitemname STRING_BUFFER_3, SODA_POP
-	sjump .VendItem
-
-.Lemonade:
-	checkmoney YOUR_MONEY, CELADONDEPTSTOREROOF_LEMONADE_PRICE
-	ifequal HAVE_LESS, .NotEnoughMoney
-	giveitem LEMONADE
-	iffalse .NotEnoughSpace
-	takemoney YOUR_MONEY, CELADONDEPTSTOREROOF_LEMONADE_PRICE
-	getitemname STRING_BUFFER_3, LEMONADE
-	sjump .VendItem
-
-.VendItem:
-	pause 10
-	playsound SFX_ENTER_DOOR
-	writetext CeladonClangText
-	promptbutton
-	itemnotify
-	sjump .Start
-
-.NotEnoughMoney:
-	writetext CeladonVendingNoMoneyText
-	waitbutton
-	sjump .Start
-
-.NotEnoughSpace:
-	writetext CeladonVendingNoSpaceText
-	waitbutton
-	sjump .Start
-
-.VendingMenuHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 2, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
-	dw .VendingMenuData
-	db 1 ; default option
-
-.VendingMenuData:
-	db STATICMENU_CURSOR ; flags
-	db 4 ; items
-	db "FRESH WATER  ¥{d:CELADONDEPTSTOREROOF_FRESH_WATER_PRICE}@"
-	db "SODA POP     ¥{d:CELADONDEPTSTOREROOF_SODA_POP_PRICE}@"
-	db "LEMONADE     ¥{d:CELADONDEPTSTOREROOF_LEMONADE_PRICE}@"
-	db "CANCEL@"
-
-CeladonVendingText:
-	text "A vending machine!"
-	line "Here's the menu."
-	done
-
-CeladonClangText:
-	text "Clang!"
-
-	para "@"
-	text_ram wStringBuffer3
-	text_start
-	line "popped out."
-	done
-
-CeladonVendingNoMoneyText:
-	text "Oops, not enough"
-	line "money…"
-	done
-
-CeladonVendingNoSpaceText:
-	text "There's no more"
-	line "room for stuff…"
-	done
-
 CeladonDeptStoreRoofGirlScript:
 	faceplayer
 	opentext
@@ -308,41 +211,47 @@ CeladonDeptStoreRoofGirlScript:
 	sjump .GiveLemonade
 
 .GiveFreshWater:
-	checkevent EVENT_GOT_TM53_ICY_WIND
+	checkevent EVENT_GOT_TM71_SANDSTORM
 	iftrue .GotTM
 	takeitem FRESH_WATER, 1
-	writetext CeladonDeptStoreRoofGaveDrinkText
+;	writetext CeladonDeptStoreRoofGaveDrinkText
+;	promptbutton
+	writetext CeladonDeptStoreRoofSandstormText
 	promptbutton
-	verbosegiveitem TM_ICY_WIND
-	setevent EVENT_GOT_TM53_ICY_WIND
-	writetext CeladonDeptStoreRoofIcyWindText
-	waitbutton
+	verbosegiveitem TM_SANDSTORM
+	setevent EVENT_GOT_TM71_SANDSTORM
+;	writetext CeladonDeptStoreRoofIcyWindText
+;	waitbutton
 	closetext
 	end
 
 .GiveSodaPop:
-	checkevent EVENT_GOT_TM48_ROCK_SLIDE
+	checkevent EVENT_GOT_TM63_RAIN_DANCE
 	iftrue .GotTM
 	takeitem SODA_POP, 1
-	writetext CeladonDeptStoreRoofGaveDrinkText
+;	writetext CeladonDeptStoreRoofGaveDrinkText
+;	promptbutton
+	writetext CeladonDeptStoreRoofRainDanceText
 	promptbutton
-	verbosegiveitem TM_ROCK_SLIDE
-	setevent EVENT_GOT_TM48_ROCK_SLIDE
-	writetext CeladonDeptStoreRoofRockSlideText
-	waitbutton
+	verbosegiveitem TM_RAIN_DANCE
+	setevent EVENT_GOT_TM63_RAIN_DANCE
+;	writetext CeladonDeptStoreRoofRockSlideText
+;	waitbutton
 	closetext
 	end
 
 .GiveLemonade:
-	checkevent EVENT_GOT_TM49_TRI_ATTACK
+	checkevent EVENT_GOT_TM59_SUNNY_DAY
 	iftrue .GotTM
 	takeitem LEMONADE, 1
-	writetext CeladonDeptStoreRoofGaveDrinkText
+;	writetext CeladonDeptStoreRoofGaveDrinkText
+;	promptbutton
+	writetext CeladonDeptStoreRoofSunnyDayText
 	promptbutton
-	verbosegiveitem TM_TRI_ATTACK
-	setevent EVENT_GOT_TM49_TRI_ATTACK
-	writetext CeladonDeptStoreRoofTriAttackText
-	waitbutton
+	verbosegiveitem TM_SUNNY_DAY
+	setevent EVENT_GOT_TM59_SUNNY_DAY
+;	writetext CeladonDeptStoreRoofTriAttackText
+;	waitbutton
 	closetext
 	end
 
@@ -379,35 +288,65 @@ CeladonDeptStoreRoofGaveDrinkText:
 	line "@"
 	text_ram wStringBuffer3
 	text "!"
-	
-	para "You can have this,"
-	line "from me!"
+;	
+;	para "You can have this,"
+;	line "from me!"
 	done
 
-CeladonDeptStoreRoofIcyWindText:
-	text "TM58 contains"
-	line "ICY WIND!"
+;CeladonDeptStoreRoofIcyWindText:
+;	text "TM58 contains"
+;	line "ICY WIND!"
+;	
+;	para "It slows down any"
+;	line "#MON it hits!"
+;	done
+
+CeladonDeptStoreRoofSandstormText:
+	text "Thanks!"
 	
-	para "It slows down any"
-	line "#MON it hits!"
+	para "FRESH WATER would"
+	line "be great to have"
+	cont "in a hot desert!"
+
+	para "Take this!"
 	done
 
-CeladonDeptStoreRoofRockSlideText:
-	text "TM48 contains"
-	line "ROCK SLIDE!"
-	
-	para "It might make the"
-	line "target flinch!"
+;CeladonDeptStoreRoofRockSlideText:
+;	text "TM48 contains"
+;	line "ROCK SLIDE!"
+;	
+;	para "It might make the"
+;	line "target flinch!"
+;	done
+
+CeladonDeptStoreRoofRainDanceText:
+	text "Yay! SODA POP!"
+
+	para "Fizzy drinks"
+	line "make me think of"
+	cont "thunderstorms!"
+
+	para "Take this!"
 	done
 
-CeladonDeptStoreRoofTriAttackText:
-	text "TM49 contains"
-	line "TRI ATTACK!"
+;CeladonDeptStoreRoofTriAttackText:
+;	text "TM49 contains"
+;	line "TRI ATTACK!"
+;
+;	para "It has a chance"
+;	line "to PRALYZE, BURN,"
+;	cont "or even FREEZE"
+;	cont "opposing #MON!"
+;	done
 
-	para "It has a chance"
-	line "to PRALYZE, BURN,"
-	cont "or even FREEZE"
-	cont "opposing #MON!"
+CeladonDeptStoreRoofSunnyDayText:
+	text "LEMONADE is such"
+	line "a pretty color!"
+	
+	para "Just like the big"
+	line "yellow sun!"
+
+	para "Take this!"
 	done
 
 CeladonDeptStoreRoofNoThanksText:
@@ -433,6 +372,103 @@ CeladonDeptStoreRoofDirectory:
 CeladonDeptStoreRoofDirectoryText:
 	text "ROOFTOP SQUARE"
 	line "VENDING MACHINES"
+	done
+
+CeladonDeptStoreRoofVendingMachine:
+	opentext
+	writetext CeladonVendingText
+.Start:
+	special PlaceMoneyTopRight
+	loadmenu .VendingMenuHeader
+	verticalmenu
+	closewindow
+	ifequal 1, .FreshWater
+	ifequal 2, .SodaPop
+	ifequal 3, .Lemonade
+	closetext
+	end
+
+.FreshWater:
+	checkmoney YOUR_MONEY, CELADONDEPTSTOREROOF_FRESH_WATER_PRICE
+	ifequal HAVE_LESS, .NotEnoughMoney
+	giveitem FRESH_WATER
+	iffalse .NotEnoughSpace
+	takemoney YOUR_MONEY, CELADONDEPTSTOREROOF_FRESH_WATER_PRICE
+	getitemname STRING_BUFFER_3, FRESH_WATER
+	sjump .VendItem
+
+.SodaPop:
+	checkmoney YOUR_MONEY, CELADONDEPTSTOREROOF_SODA_POP_PRICE
+	ifequal HAVE_LESS, .NotEnoughMoney
+	giveitem SODA_POP
+	iffalse .NotEnoughSpace
+	takemoney YOUR_MONEY, CELADONDEPTSTOREROOF_SODA_POP_PRICE
+	getitemname STRING_BUFFER_3, SODA_POP
+	sjump .VendItem
+
+.Lemonade:
+	checkmoney YOUR_MONEY, CELADONDEPTSTOREROOF_LEMONADE_PRICE
+	ifequal HAVE_LESS, .NotEnoughMoney
+	giveitem LEMONADE
+	iffalse .NotEnoughSpace
+	takemoney YOUR_MONEY, CELADONDEPTSTOREROOF_LEMONADE_PRICE
+	getitemname STRING_BUFFER_3, LEMONADE
+	sjump .VendItem
+
+.VendItem:
+	pause 10
+	playsound SFX_ENTER_DOOR
+	writetext CeladonClangText
+	promptbutton
+	itemnotify
+	sjump .Start
+
+.NotEnoughMoney:
+	writetext CeladonVendingNoMoneyText
+	waitbutton
+	sjump .Start
+
+.NotEnoughSpace:
+	writetext CeladonVendingNoSpaceText
+	waitbutton
+	sjump .Start
+
+.VendingMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 2, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	dw .VendingMenuData
+	db 1 ; default option
+
+.VendingMenuData:
+	db STATICMENU_CURSOR ; flags
+	db 4 ; items
+	db "FRESH WATER  ¥{d:CELADONDEPTSTOREROOF_FRESH_WATER_PRICE}@"
+	db "SODA POP     ¥{d:CELADONDEPTSTOREROOF_SODA_POP_PRICE}@"
+	db "LEMONADE     ¥{d:CELADONDEPTSTOREROOF_LEMONADE_PRICE}@"
+	db "CANCEL@"
+
+CeladonVendingText:
+	text "A vending machine!"
+	line "Here's the menu."
+	done
+
+CeladonClangText:
+	text "Clang!"
+
+	para "@"
+	text_ram wStringBuffer3
+	text_start
+	line "popped out."
+	done
+
+CeladonVendingNoMoneyText:
+	text "Oops, not enough"
+	line "money…"
+	done
+
+CeladonVendingNoSpaceText:
+	text "There's no more"
+	line "room for stuff…"
 	done
 
 CeladonDeptStoreRoof_MapEvents:

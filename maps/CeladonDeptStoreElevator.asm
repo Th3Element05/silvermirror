@@ -15,6 +15,16 @@ CeladonDeptStoreElevatorScript:
 .Done:
 	end
 
+CeladonDeptStoreElevatorData:
+	db 5 ; floors
+	elevfloor FLOOR_1F, 1, CELADON_DEPT_STORE_1F
+	elevfloor FLOOR_2F, 1, CELADON_DEPT_STORE_2F
+	elevfloor FLOOR_3F, 1, CELADON_DEPT_STORE_3F
+	elevfloor FLOOR_4F, 1, CELADON_DEPT_STORE_4F
+	elevfloor FLOOR_5F, 1, CELADON_DEPT_STORE_5F
+;	elevfloor FLOOR_6F, 1, CELADON_DEPT_STORE_6F
+	db -1 ; end
+
 CeladonDeptStoreElevatorDirectory:
 	jumptext CeladonDeptStoreElevatorDirectoryText
 CeladonDeptStoreElevatorDirectoryText:
@@ -30,16 +40,6 @@ CeladonDeptStoreElevatorDirectoryText:
 
 	para "5F: DRUG STORE"
 	done
-
-CeladonDeptStoreElevatorData:
-	db 5 ; floors
-	elevfloor FLOOR_1F, 1, CELADON_DEPT_STORE_1F
-	elevfloor FLOOR_2F, 1, CELADON_DEPT_STORE_2F
-	elevfloor FLOOR_3F, 1, CELADON_DEPT_STORE_3F
-	elevfloor FLOOR_4F, 1, CELADON_DEPT_STORE_4F
-	elevfloor FLOOR_5F, 1, CELADON_DEPT_STORE_5F
-;	elevfloor FLOOR_6F, 1, CELADON_DEPT_STORE_6F
-	db -1 ; end
 
 CeladonDeptStoreElevator_MapEvents:
 	db 0, 0 ; filler

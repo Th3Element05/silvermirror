@@ -16,6 +16,19 @@ CeladonDeptStore1FReceptionistText:
 	line "to the right."
 	done
 
+CeladonDeptStore1FGentlemanScript:
+	jumptextfaceplayer CeladonDeptStore1FGentlemanText
+CeladonDeptStore1FGentlemanText:
+	text "The DEPT.STORE"
+	line "has a decent se-"
+	cont "lection."
+
+	para "But some items"
+	line "are only available"
+	cont "as GAME CORNER"
+	cont "prizes."
+	done
+
 CeladonDeptStore1FDirectory:
 	jumptext CeladonDeptStore1FDirectoryText
 CeladonDeptStore1FDirectoryText:
@@ -63,3 +76,4 @@ CeladonDeptStore1F_MapEvents:
 
 	def_object_events
 	object_event  7,  1, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonDeptStore1FReceptionistScript, -1
+	object_event 10,  5, SPRITE_GENTLEMAN, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonDeptStore1FGentlemanScript, -1
