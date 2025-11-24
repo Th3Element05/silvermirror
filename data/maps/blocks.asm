@@ -90,6 +90,9 @@ PalletTown_Blocks:
 Route25_Blocks:
 	INCBIN "maps/Route25.blk"
 
+BehindBillsHouse_Blocks:
+	INCBIN "maps/BehindBillsHouse.blk"
+
 Route24_Blocks:
 	INCBIN "maps/Route24.blk"
 
@@ -129,6 +132,12 @@ FuchsiaCity_Blocks:
 Route38_Blocks:
 	INCBIN "maps/Route38.blk"
 
+EcruteakLugiaSpeechHouse_Blocks:
+EcruteakItemfinderHouse_Blocks:
+VioletNicknameSpeechHouse_Blocks:
+VioletKylesHouse_Blocks:
+;	INCBIN "maps/House2.blk"
+;
 OlivineTimsHouse_Blocks:
 OlivineHouseBeta_Blocks:
 OlivinePunishmentSpeechHouse_Blocks:
@@ -449,12 +458,6 @@ RocketHideoutB4F_Blocks:               ;silvermirror+
 ;TradeCenter_Blocks:
 ;TimeCapsule_Blocks:
 ;	INCBIN "maps/TradeCenter.blk"
-
-EcruteakLugiaSpeechHouse_Blocks:
-EcruteakItemfinderHouse_Blocks:
-VioletNicknameSpeechHouse_Blocks:
-VioletKylesHouse_Blocks:
-	INCBIN "maps/House2.blk"
 
 UnionCaveB1F_Blocks:
 	INCBIN "maps/UnionCaveB1F.blk"
