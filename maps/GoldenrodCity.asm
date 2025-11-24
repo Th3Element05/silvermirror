@@ -449,20 +449,20 @@ GoldenrodCity_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 24,  7, GOLDENROD_GYM, 1
-	warp_event 31, 21, GOLDENROD_HAPPINESS_RATER, 1
-	warp_event  5, 25, BILLS_FAMILYS_HOUSE, 1
-	warp_event 10, 13, GOLDENROD_MAGNET_TRAIN_STATION, 2
-	warp_event 29,  5, GOLDENROD_FLOWER_SHOP, 1
-	warp_event 33,  9, GOLDENROD_PP_SPEECH_HOUSE, 1
-	warp_event 15,  7, GOLDENROD_NAME_RATER, 1
-	warp_event 24, 27, GOLDENROD_DEPT_STORE_1F, 3
-	warp_event 14, 21, GOLDENROD_GAME_CORNER, 1
-	warp_event  5, 15, RADIO_TOWER_1F, 1
-	warp_event 19,  1, ROUTE_35_GOLDENROD_GATE, 3
-	warp_event  9,  5, GOLDENROD_UNDERGROUND, 1
-	warp_event 11, 29, GOLDENROD_UNDERGROUND, 4
-	warp_event 15, 27, GOLDENROD_POKECENTER_1F, 1
+	warp_event 19,  1, ROUTE_35_GOLDENROD_GATE, 3 ;1
+	warp_event  9,  5, GOLDENROD_UNDERGROUND, 1 ;2
+	warp_event 15,  7, GOLDENROD_NAME_RATER, 1 ;3
+	warp_event 24,  7, GOLDENROD_GYM, 1 ;4
+	warp_event 29,  5, GOLDENROD_FLOWER_SHOP, 1 ;5
+	warp_event  5, 15, RADIO_TOWER_1F, 1 ;6
+	warp_event 10, 13, GOLDENROD_MAGNET_TRAIN_STATION, 2 ;7
+	warp_event 14, 21, GOLDENROD_GAME_CORNER, 1 ;8
+	warp_event 31, 21, GOLDENROD_HAPPINESS_RATER, 1 ;9
+	warp_event  5, 25, BILLS_FAMILYS_HOUSE, 1 ;10
+	warp_event 15, 27, GOLDENROD_POKECENTER_1F, 1 ;11
+	warp_event 24, 27, GOLDENROD_DEPT_STORE_1F, 3 ;12
+	warp_event 11, 29, GOLDENROD_UNDERGROUND, 4 ;13
+;	warp_event 33,  9, GOLDENROD_PP_SPEECH_HOUSE, 1 ;14
 
 	def_coord_events
 

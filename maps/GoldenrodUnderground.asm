@@ -684,8 +684,8 @@ GoldenrodUnderground_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 13, 21, GOLDENROD_CITY, 12 ;north room
-	warp_event 14, 21, GOLDENROD_CITY, 12 ;north room
+	warp_event 13, 21, GOLDENROD_CITY, 2 ;north room
+	warp_event 14, 21, GOLDENROD_CITY, 2 ;north room
 	warp_event 14, 17, GOLDENROD_UNDERGROUND, 7 ;north room stairs
 	warp_event 13, 35, GOLDENROD_CITY, 13 ;south room
 	warp_event 14, 35, GOLDENROD_CITY, 13 ;south room

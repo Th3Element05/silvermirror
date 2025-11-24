@@ -66,8 +66,8 @@ GoldenrodDeptStore1F_MapEvents:
 	def_warp_events
 	warp_event  2,  0, GOLDENROD_DEPT_STORE_ELEVATOR, 1
 	warp_event 12,  0, GOLDENROD_DEPT_STORE_2F, 3
-	warp_event  7,  7, GOLDENROD_CITY, 9
-	warp_event  8,  7, GOLDENROD_CITY, 9
+	warp_event  7,  7, GOLDENROD_CITY, 12
+	warp_event  8,  7, GOLDENROD_CITY, 12
 
 	def_coord_events
 
