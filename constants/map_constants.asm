@@ -87,11 +87,12 @@ ENDM
 	map_const DAY_CARE,                                     4,  4 ;  9
 	map_const ROUTE_4,                                     30,  9 ; 10
 	map_const ROUTE_24,                                    10, 18 ; 11
-	map_const ROUTE_25,                                    30,  9 ; 12
+	map_const ROUTE_25,                                    32,  9 ; 12
 	map_const BILLS_HOUSE,                                  4,  4 ; 13
 	map_const ROUTE_9,                                     30,  9 ; 14
 	map_const ROUTE_10_NORTH,                              10, 24 ; 15
 	map_const ROUTE_10_POKECENTER_1F,                       7,  4 ; 16
+	map_const BEHIND_BILLS_HOUSE,                          10, 11 ; 17
 	endgroup
 
 	newgroup VERMILION                                            ;  5
