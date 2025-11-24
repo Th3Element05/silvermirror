@@ -86,7 +86,7 @@ GiovanniWinLossText:
 
 ReceivedEarthbadgeText:
 	text "<PLAYER> received"
-	line "EARTHBADGE."
+	line "the EARTHBADGE."
 	done
 
 GiovanniEarthbadgeText:

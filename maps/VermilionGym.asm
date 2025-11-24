@@ -157,7 +157,7 @@ LtSurgeWinLossText:
 
 ReceivedThunderbadgeText:
 	text "<PLAYER> received"
-	line "THUNDERBADGE."
+	line "the THUNDERBADGE."
 	done
 
 LtSurgeThunderbadgeText:

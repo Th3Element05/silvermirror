@@ -101,7 +101,7 @@ BrockWinLossText:
 
 ReceivedBoulderbadgeText:
 	text "<PLAYER> received"
-	line "BOULDERBADGE."
+	line "the BOULDERBADGE."
 	done
 
 BrockBoulderbadgeText:

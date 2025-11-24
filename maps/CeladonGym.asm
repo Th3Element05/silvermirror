@@ -108,7 +108,7 @@ ErikaBeatenText:
 
 PlayerReceivedRainbowbadgeText:
 	text "<PLAYER> received"
-	line "RAINBOWBADGE."
+	line "the RAINBOWBADGE."
 	done
 
 ErikaExplainRainbowbadgeText:

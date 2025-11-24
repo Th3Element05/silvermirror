@@ -92,7 +92,7 @@ MistyWinLossText:
 
 ReceivedCascadebadgeText:
 	text "<PLAYER> received"
-	line "CASCADEBADGE."
+	line "the CASCADEBADGE."
 	done
 
 MistyCascadebadgeText:

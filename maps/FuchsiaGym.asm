@@ -95,7 +95,7 @@ KogaBeatenText:
 
 PlayerReceivedSoulbadgeText:
 	text "<PLAYER> received"
-	line "SOULBADGE."
+	line "the SOULBADGE."
 	done
 
 KogaExplainSoulbadgeText:
