@@ -26,7 +26,7 @@ MahoganyMart1F_MapScripts:
 ;	endcallback
 ;
 ;.ShowStairs:
-;	changeblock 6, 2, $1e ; stairs
+;	changeblock 6, 2, $28 ; stairs
 ;	endcallback
 
 ;MahoganyMart1FPharmacistScript:
@@ -222,8 +222,8 @@ MahoganyMart1F_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  3,  7, MAHOGANY_TOWN, 1
 	warp_event  4,  7, MAHOGANY_TOWN, 1
+	warp_event  5,  7, MAHOGANY_TOWN, 1
 	warp_event  7,  3, TEAM_ROCKET_BASE_B1F, 1
 
 	def_coord_events
