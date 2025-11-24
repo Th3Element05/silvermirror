@@ -26,7 +26,7 @@
 ; Johto Gym Leader TM gifts
 	const EVENT_GOT_TM23_IRON_TAIL
 	const EVENT_GOT_TM30_SHADOW_BALL
-	const_skip ;attract
+	const EVENT_GOT_TM45_ATTRACT
 	const_skip ;fury cutter
 	const_skip ;mud slap, or steel wing?
 	const_skip ;ancientpower (need add)
@@ -232,6 +232,7 @@
 	const EVENT_FOUGHT_SUDOWOODO
 	const EVENT_ROUTE_36_BATTLE
 	const EVENT_ROUTE_36_OPEN
+	const EVENT_MADE_WHITNEY_CRY
 ;
 	const EVENT_USED_BASEMENT_KEY
 ;
@@ -1205,6 +1206,7 @@
 	const EVENT_BEAT_LASS_CONNIE
 	const EVENT_BEAT_LASS_HAILEY
 	const EVENT_BEAT_LASS_KELLY
+	const EVENT_BEAT_LASS_RUBY
 ; Teacher
 	const EVENT_BEAT_TEACHER_SHIRLEY
 	const EVENT_BEAT_TEACHER_KATE
@@ -1599,10 +1601,10 @@
 	const EVENT_BEAT_COOL_DUO_THOMANDKAE
 	const EVENT_BEAT_COOL_DUO_ZACANDJEN
 	const EVENT_BEAT_COOL_DUO_ELANANDIDA
-; used 467
-; running total used 1467
+; used 468
+; running total used 1468
 ;
-; johto trainers 140
+; johto trainers 141
 
 	const_next 1600
 ; Phone events
@@ -1849,7 +1851,6 @@
 ;	const EVENT_GOT_SECRETPOTION_FROM_PHARMACY
 ;	const EVENT_REFUSED_TO_HELP_LANCE_AT_LAKE_OF_RAGE
 ;	const EVENT_GOT_ORAN_BERRY_FROM_ROUTE_30_HOUSE
-;	const EVENT_MADE_WHITNEY_CRY
 ;	const EVENT_HERDED_FARFETCHD
 ;	const EVENT_CLEARED_SLOWPOKE_WELL
 ;	const EVENT_REFUSED_TO_TAKE_EGG_FROM_ELMS_AIDE
