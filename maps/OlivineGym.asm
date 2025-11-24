@@ -96,7 +96,7 @@ Jasmine_BetterTrainer:
 
 Text_ReceivedMineralBadge:
 	text "<PLAYER> received"
-	line "MINERALBADGE."
+	line "the MINERALBADGE."
 	done
 
 Jasmine_BadgeSpeech:
@@ -153,8 +153,7 @@ OlivineGymGuideScript:
 ;	end
 
 OlivineGymGuideText:
-	text "Yo! CHAMP in"
-	line "making!"
+	text "Yo! Champ!"
 
 	para "JASMINE uses the"
 	line "newly discovered"

@@ -156,7 +156,7 @@ MortyWinLossText:
 
 Text_ReceivedFogBadge:
 	text "<PLAYER> received"
-	line "FOGBADGE."
+	line "the FOGBADGE."
 	done
 
 MortyText_FogBadgeSpeech:

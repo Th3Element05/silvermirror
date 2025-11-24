@@ -111,7 +111,7 @@ SabrinaBeatenText:
 
 PlayerReceivedMarshbadgeText:
 	text "<PLAYER> received"
-	line "MARSHADGE."
+	line "the MARSHADGE."
 	done
 
 SabrinaExplainMarshbadgeText:
