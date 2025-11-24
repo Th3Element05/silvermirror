@@ -332,6 +332,7 @@ DEF KRIS EQU __trainer_class__
 	const CONNIE
 	const HAILEY
 	const KELLY
+	const RUBY
 ; rematch
 	const KRISE2
 	const KRISE3
