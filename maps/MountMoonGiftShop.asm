@@ -29,8 +29,8 @@ MountMoonGiftShop_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  3,  7, MOUNT_MOON_SQUARE, 3
 	warp_event  4,  7, MOUNT_MOON_SQUARE, 3
+	warp_event  5,  7, MOUNT_MOON_SQUARE, 3
 
 	def_coord_events
 
