@@ -5,9 +5,13 @@ SometimesFleeMons:
 	db -1
 
 OftenFleeMons:
+	db RAIKOU
+	db ENTEI
+	db SUICUNE
 	db -1
 
 AlwaysFleeMons:
-	db RAIKOU
-	db ENTEI
+;	db RAIKOU
+;	db ENTEI
+;	db SUICUNE
 	db -1
