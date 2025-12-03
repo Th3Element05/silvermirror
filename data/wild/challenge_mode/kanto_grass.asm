@@ -1482,7 +1482,7 @@ KantoGrassWildMonsChallenge:
 	db 30, JYNX       ;  1% chance 1
 	end_grass_wildmons
 
-	def_grass_wildmons SEAFOAM_ISLANDS_B2F ;GEN1
+	def_grass_wildmons SEAFOAM_ISLANDS_B2F ;GEN2
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 ;	db 21, KRABBY     ; 20% chance 30
@@ -1519,7 +1519,7 @@ KantoGrassWildMonsChallenge:
 	db 30, JYNX       ;  1% chance 1
 	end_grass_wildmons
 
-	def_grass_wildmons SEAFOAM_ISLANDS_B3F ;GEN1
+	def_grass_wildmons SEAFOAM_ISLANDS_B3F ;GEN2
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 ;	db 22, KRABBY     ; 20% chance 30
@@ -2037,93 +2037,133 @@ KantoGrassWildMonsChallenge:
 	db 21, SLOWPOKE   ;  1% chance
 	end_grass_wildmons
 
-	def_grass_wildmons SAFARI_ZONE_AREA_1 ;GEN2
-	db 0 percent, 0 percent, 0 percent ; encounter rates: morn/day/nite
+	def_grass_wildmons BEHIND_BILLS_HOUSE ;GEN2
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-;	db 10, CHANSEY    ; 20% chance
-;	db 10, CHANSEY    ; 20% chance
-;	db 10, CHANSEY    ; 15% chance
-;	db 10, CHANSEY    ; 10% chance
-;	db 10, CHANSEY    ; 10% chance
-;	db 10, CHANSEY    ; 10% chance
-;	db 10, CHANSEY    ;  5% chance
-;	db 10, CHANSEY    ;  5% chance
-;	db 10, CHANSEY    ;  4% chance
-;	db 10, CHANSEY    ;  1% chance
+;	db 13, PIDGEY     ; 20% chance 40
+;	db 13, PIDGEY     ; 20% chance
+;	db 10, BELLSPROUT ; 15% chance 30
+;	db 10, BELLSPROUT ; 10% chance
+;	db 12, SUNKERN    ; 10% chance 19
+;	db  8, ABRA       ; 10% chance 10
+;	db 10, BELLSPROUT ;  5% chance
+;	db 12, SUNKERN    ;  5% chance
+;	db 12, SUNKERN    ;  4% chance
+;	db 18, PIDGEOTTO  ;  1% chance 1
 	; day
-	db 10, GIRAFARIG  ; 20% chance
-	db 10, STANTLER   ; 20% chance
-	db 10, EXEGGCUTE  ; 15% chance
-	db 10, AIPOM      ; 10% chance
-	db 10, MILTANK    ; 10% chance
-	db 10, TAUROS     ; 10% chance
-	db 10, CHANSEY    ;  5% chance
-	db 10, EEVEE      ;  5% chance
-	db 10, LEDYBA     ;  4% chance
-	db 10, YANMA      ;  1% chance
+	db 13, PIDGEY     ; 20% chance 40
+	db 13, PIDGEY     ; 20% chance
+	db 10, BELLSPROUT ; 15% chance 30
+	db 10, DITTO      ; 10% chance
+	db 12, SUNKERN    ; 10% chance 19
+	db  8, ABRA       ; 10% chance 10
+	db  7, BULBASAUR  ;  5% chance
+	db  7, CHARMANDER ;  5% chance
+	db  7, SQUIRTLE   ;  4% chance
+	db  7, SQUIRTLE   ;  1% chance 1
 	; nite
-	db 10, PARAS      ; 20% chance
-	db 10, LEDIAN     ; 20% chance
-	db 10, SCYTHER    ; 15% chance
-	db 10, PINSIR     ; 10% chance
-	db 10, HERACROSS  ; 10% chance
-	db 10, SPINARAK   ; 10% chance
-	db 10, VENONAT    ;  5% chance
-	db 10, ARIADOS    ;  5% chance
-	db 10, PHANPY     ;  4% chance
-	db 10, GLIGAR     ;  1% chance
+	db 13, HOOTHOOT   ; 20% chance 40
+	db 13, HOOTHOOT   ; 20% chance
+	db 10, ODDISH     ; 15% chance 30
+	db 10, DITTO      ; 10% chance
+	db 12, VENONAT    ; 10% chance 19
+	db  8, ABRA       ; 10% chance 10
+	db  7, BULBASAUR  ;  5% chance
+	db  7, CHARMANDER ;  5% chance
+	db  7, SQUIRTLE   ;  4% chance
+	db  7, SQUIRTLE   ;  1% chance 1
 	end_grass_wildmons
 
-	def_grass_wildmons SAFARI_ZONE_AREA_2 ;GEN2
-	db 0 percent, 0 percent, 0 percent ; encounter rates: morn/day/nite
-	; morn
-;	db 10, CHANSEY    ; 20% chance
-;	db 10, CHANSEY    ; 20% chance
-;	db 10, CHANSEY    ; 15% chance
-;	db 10, CHANSEY    ; 10% chance
-;	db 10, CHANSEY    ; 10% chance
-;	db 10, CHANSEY    ; 10% chance
-;	db 10, CHANSEY    ;  5% chance
-;	db 10, CHANSEY    ;  5% chance
-;	db 10, CHANSEY    ;  4% chance
-;	db 10, CHANSEY    ;  1% chance
-	; day
-	db 10, SKARMORY   ; 20% chance
-	db 10, RHYHORN    ; 20% chance
-	db 10, KANGASKHAN ; 15% chance
-	db 10, CUBONE     ; 10% chance
-	db 10, LARVITAR   ; 10% chance
-	db 10, HOPPIP     ; 10% chance
-	db 10, TANGELA    ;  5% chance
-	db 10, SMEARGLE   ;  5% chance
-	db 10, WOOPER     ;  4% chance
-	db 10, CHANSEY    ;  1% chance
-	; nite
-	db 10, SLOWPOKE   ; 20% chance
-	db 10, MARILL     ; 20% chance
-	db 10, PSYDUCK    ; 15% chance
-	db 10, MAGIKARP   ; 10% chance
-	db 10, DRATINI    ; 10% chance
-	db 10, DRAGONAIR  ; 10% chance
-	db 10, CHANSEY    ;  5% chance
-	db 10, CHANSEY    ;  5% chance
-	db 10, CHANSEY    ;  4% chance
-	db 10, CHANSEY    ;  1% chance
-	end_grass_wildmons
+	db -1 ; end
 
-;	def_grass_wildmons SAFARI_ZONE_ENTRANCE ;GEN2
+;
+;	def_grass_wildmons SAFARI_ZONE_AREA_1 ;GEN2
 ;	db 0 percent, 0 percent, 0 percent ; encounter rates: morn/day/nite
-;	; morn
+;;	; morn
+;;	db 10, CHANSEY    ; 20% chance
+;;	db 10, CHANSEY    ; 20% chance
+;;	db 10, CHANSEY    ; 15% chance
+;;	db 10, CHANSEY    ; 10% chance
+;;	db 10, CHANSEY    ; 10% chance
+;;	db 10, CHANSEY    ; 10% chance
+;;	db 10, CHANSEY    ;  5% chance
+;;	db 10, CHANSEY    ;  5% chance
+;;	db 10, CHANSEY    ;  4% chance
+;;	db 10, CHANSEY    ;  1% chance
+;	; day
 ;	db 10, GIRAFARIG  ; 20% chance
 ;	db 10, STANTLER   ; 20% chance
 ;	db 10, EXEGGCUTE  ; 15% chance
 ;	db 10, AIPOM      ; 10% chance
 ;	db 10, MILTANK    ; 10% chance
 ;	db 10, TAUROS     ; 10% chance
-;	db 10, SMEARGLE   ;  5% chance
+;	db 10, CHANSEY    ;  5% chance
 ;	db 10, EEVEE      ;  5% chance
 ;	db 10, LEDYBA     ;  4% chance
 ;	db 10, YANMA      ;  1% chance
+;	; nite
+;	db 10, PARAS      ; 20% chance
+;	db 10, LEDIAN     ; 20% chance
+;	db 10, SCYTHER    ; 15% chance
+;	db 10, PINSIR     ; 10% chance
+;	db 10, HERACROSS  ; 10% chance
+;	db 10, SPINARAK   ; 10% chance
+;	db 10, VENONAT    ;  5% chance
+;	db 10, ARIADOS    ;  5% chance
+;	db 10, PHANPY     ;  4% chance
+;	db 10, GLIGAR     ;  1% chance
+;	end_grass_wildmons
+;
+;	def_grass_wildmons SAFARI_ZONE_AREA_2 ;GEN2
+;	db 0 percent, 0 percent, 0 percent ; encounter rates: morn/day/nite
+;;	; morn
+;;	db 10, CHANSEY    ; 20% chance
+;;	db 10, CHANSEY    ; 20% chance
+;;	db 10, CHANSEY    ; 15% chance
+;;	db 10, CHANSEY    ; 10% chance
+;;	db 10, CHANSEY    ; 10% chance
+;;	db 10, CHANSEY    ; 10% chance
+;;	db 10, CHANSEY    ;  5% chance
+;;	db 10, CHANSEY    ;  5% chance
+;;	db 10, CHANSEY    ;  4% chance
+;;	db 10, CHANSEY    ;  1% chance
+;	; day
+;	db 10, SKARMORY   ; 20% chance
+;	db 10, RHYHORN    ; 20% chance
+;	db 10, KANGASKHAN ; 15% chance
+;	db 10, CUBONE     ; 10% chance
+;	db 10, LARVITAR   ; 10% chance
+;	db 10, HOPPIP     ; 10% chance
+;	db 10, TANGELA    ;  5% chance
+;	db 10, SMEARGLE   ;  5% chance
+;	db 10, WOOPER     ;  4% chance
+;	db 10, CHANSEY    ;  1% chance
+;	; nite
+;	db 10, SLOWPOKE   ; 20% chance
+;	db 10, MARILL     ; 20% chance
+;	db 10, PSYDUCK    ; 15% chance
+;	db 10, MAGIKARP   ; 10% chance
+;	db 10, DRATINI    ; 10% chance
+;	db 10, DRAGONAIR  ; 10% chance
+;	db 10, CHANSEY    ;  5% chance
+;	db 10, CHANSEY    ;  5% chance
+;	db 10, CHANSEY    ;  4% chance
+;	db 10, CHANSEY    ;  1% chance
+;	end_grass_wildmons
+;
+;	def_grass_wildmons SAFARI_ZONE_ENTRANCE ;GEN2
+;	db 0 percent, 0 percent, 0 percent ; encounter rates: morn/day/nite
+;;	; morn
+;;	db 10, GIRAFARIG  ; 20% chance
+;;	db 10, STANTLER   ; 20% chance
+;;	db 10, EXEGGCUTE  ; 15% chance
+;;	db 10, AIPOM      ; 10% chance
+;;	db 10, MILTANK    ; 10% chance
+;;	db 10, TAUROS     ; 10% chance
+;;	db 10, SMEARGLE   ;  5% chance
+;;	db 10, EEVEE      ;  5% chance
+;;	db 10, LEDYBA     ;  4% chance
+;;	db 10, YANMA      ;  1% chance
 ;	; day
 ;	db 10, PARAS      ; 20% chance
 ;	db 10, LEDIAN     ; 20% chance
@@ -2147,5 +2187,3 @@ KantoGrassWildMonsChallenge:
 ;	db 10, CUBONE     ;  4% chance
 ;	db 10, CHANSEY    ;  1% chance
 ;	end_grass_wildmons
-
-	db -1 ; end

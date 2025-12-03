@@ -2075,80 +2075,122 @@ KantoGrassWildMons:
 	db 21, SLOWPOKE   ;  1% chance
 	end_grass_wildmons
 
-	def_grass_wildmons SAFARI_ZONE_AREA_1 ;GEN1
-	db 0 percent, 0 percent, 0 percent ; encounter rates: morn/day/nite
+	def_grass_wildmons BEHIND_BILLS_HOUSE ;GEN1
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-;	db 10, CHANSEY    ; 20% chance
-;	db 10, CHANSEY    ; 20% chance
-;	db 10, CHANSEY    ; 15% chance
-;	db 10, CHANSEY    ; 10% chance
-;	db 10, CHANSEY    ; 10% chance
-;	db 10, CHANSEY    ; 10% chance
-;	db 10, CHANSEY    ;  5% chance
-;	db 10, CHANSEY    ;  5% chance
-;	db 10, CHANSEY    ;  4% chance
-;	db 10, CHANSEY    ;  1% chance
+;	db 22, ZUBAT      ; 20% chance 30
+;	db 24, GOLBAT     ; 20% chance 20
+;	db 20, RATTATA    ; 15% chance 15
+;	db 22, ZUBAT      ; 10% chance
+;	db 21, SLOWPOKE   ; 10% chance 15
+;	db 22, RATICATE   ; 10% chance 20
+;	db 22, RATICATE   ;  5% chance
+;	db 22, RATICATE   ;  5% chance
+;	db 21, SLOWPOKE   ;  4% chance
+;	db 21, SLOWPOKE   ;  1% chance
 	; day
-	db 10, NIDORAN_M  ; 20% chance
-	db 10, NIDORAN_F  ; 20% chance
-	db 10, EXEGGCUTE  ; 15% chance
-	db 10, DODUO      ; 10% chance
-	db 10, NIDORINO   ; 10% chance
-	db 10, NIDORINA   ; 10% chance
-	db 10, TAUROS     ;  5% chance
-	db 10, LICKITUNG  ;  5% chance
-	db 10, CHANSEY    ;  4% chance
-	db 10, EEVEE      ;  1% chance
+	db 10, BELLSPROUT ; 20% chance 40
+	db 10, BELLSPROUT ; 20% chance
+	db 13, PIDGEY     ; 15% chance 40
+	db 13, PIDGEY     ; 10% chance
+	db  8, ABRA       ; 10% chance 10
+	db 10, DITTO      ; 10% chance
+	db  7, BULBASAUR  ;  5% chance
+	db  7, CHARMANDER ;  5% chance 5
+	db  7, SQUIRTLE   ;  4% chance 4
+	db  7, SQUIRTLE   ;  1% chance 1
 	; nite
-	db 10, PARAS      ; 20% chance
-	db 10, VENONAT    ; 20% chance
-	db 10, PARASECT   ; 15% chance
-	db 10, VENOMOTH   ; 10% chance
-	db 10, SCYTHER    ; 10% chance
-	db 10, PINSIR     ; 10% chance
-	db 10, RHYHORN    ;  5% chance
-	db 10, KANGASKHAN ;  5% chance
-	db 10, CUBONE     ;  4% chance
-	db 10, TANGELA    ;  1% chance
+	db 10, ODDISH     ; 20% chance 40
+	db 10, ODDISH     ; 20% chance
+	db 12, VENONAT    ; 15% chance 40
+	db 12, VENONAT    ; 10% chance
+	db  8, ABRA       ; 10% chance 10
+	db 10, DITTO      ; 10% chance
+	db  7, BULBASAUR  ;  5% chance
+	db  7, CHARMANDER ;  5% chance 5
+	db  7, SQUIRTLE   ;  4% chance 4
+	db  7, SQUIRTLE   ;  1% chance 1
 	end_grass_wildmons
 
-	def_grass_wildmons SAFARI_ZONE_AREA_2 ;GEN1
-	db 0 percent, 0 percent, 0 percent ; encounter rates: morn/day/nite
-	; morn
-;	db 10, CHANSEY    ; 20% chance
-;	db 10, CHANSEY    ; 20% chance
-;	db 10, CHANSEY    ; 15% chance
-;	db 10, CHANSEY    ; 10% chance
-;	db 10, CHANSEY    ; 10% chance
-;	db 10, CHANSEY    ; 10% chance
-;	db 10, CHANSEY    ;  5% chance
-;	db 10, CHANSEY    ;  5% chance
-;	db 10, CHANSEY    ;  4% chance
-;	db 10, CHANSEY    ;  1% chance
-	; day
-	db 10, FARFETCH_D ; 20% chance
-	db 10, DRATINI    ; 20% chance
-	db 10, SLOWPOKE   ; 15% chance
-	db 10, PSYDUCK    ; 10% chance
-	db 10, MAGIKARP   ; 10% chance
-	db 10, CHANSEY    ; 10% chance
-	db 10, CHANSEY    ;  5% chance
-	db 10, CHANSEY    ;  5% chance
-	db 10, CHANSEY    ;  4% chance
-	db 10, CHANSEY    ;  1% chance
-	; nite
-	db 10, CHANSEY    ; 20% chance
-	db 10, CHANSEY    ; 20% chance
-	db 10, CHANSEY    ; 15% chance
-	db 10, CHANSEY    ; 10% chance
-	db 10, CHANSEY    ; 10% chance
-	db 10, CHANSEY    ; 10% chance
-	db 10, CHANSEY    ;  5% chance
-	db 10, CHANSEY    ;  5% chance
-	db 10, CHANSEY    ;  4% chance
-	db 10, CHANSEY    ;  1% chance
-	end_grass_wildmons
+	db -1 ; end
 
+;
+;
+;
+;	def_grass_wildmons SAFARI_ZONE_AREA_1 ;GEN1
+;	db 0 percent, 0 percent, 0 percent ; encounter rates: morn/day/nite
+;	; morn
+;;	db 10, CHANSEY    ; 20% chance
+;;	db 10, CHANSEY    ; 20% chance
+;;	db 10, CHANSEY    ; 15% chance
+;;	db 10, CHANSEY    ; 10% chance
+;;	db 10, CHANSEY    ; 10% chance
+;;	db 10, CHANSEY    ; 10% chance
+;;	db 10, CHANSEY    ;  5% chance
+;;	db 10, CHANSEY    ;  5% chance
+;;	db 10, CHANSEY    ;  4% chance
+;;	db 10, CHANSEY    ;  1% chance
+;	; day
+;	db 14, NIDORAN_M  ; 20% chance
+;	db 14, NIDORAN_F  ; 20% chance
+;	db 14, EXEGGCUTE  ; 15% chance
+;	db 14, DODUO      ; 10% chance
+;	db 16, NIDORINO   ; 10% chance
+;	db 16, NIDORINA   ; 10% chance
+;	db 15, TAUROS     ;  5% chance
+;	db 15, LICKITUNG  ;  5% chance
+;	db 15, CHANSEY    ;  4% chance
+;	db 14, EEVEE      ;  1% chance
+;	; nite
+;	db 14, NIDORAN_M  ; 20% chance
+;	db 14, NIDORAN_F  ; 20% chance
+;	db 14, EXEGGCUTE  ; 15% chance
+;	db 14, DODUO      ; 10% chance
+;	db 16, NIDORINO   ; 10% chance
+;	db 16, NIDORINA   ; 10% chance
+;	db 15, TAUROS     ;  5% chance
+;	db 15, LICKITUNG  ;  5% chance
+;	db 15, CHANSEY    ;  4% chance
+;	db 14, EEVEE      ;  1% chance
+;	end_grass_wildmons
+;
+;	def_grass_wildmons SAFARI_ZONE_AREA_2 ;GEN1
+;	db 0 percent, 0 percent, 0 percent ; encounter rates: morn/day/nite
+;	; morn
+;;	db 10, CHANSEY    ; 20% chance
+;;	db 10, CHANSEY    ; 20% chance
+;;	db 10, CHANSEY    ; 15% chance
+;;	db 10, CHANSEY    ; 10% chance
+;;	db 10, CHANSEY    ; 10% chance
+;;	db 10, CHANSEY    ; 10% chance
+;;	db 10, CHANSEY    ;  5% chance
+;;	db 10, CHANSEY    ;  5% chance
+;;	db 10, CHANSEY    ;  4% chance
+;;	db 10, CHANSEY    ;  1% chance
+;	; day
+;	db 14, NIDORAN_M  ; 20% chance
+;	db 14, NIDORAN_F  ; 20% chance
+;	db 14, EXEGGCUTE  ; 15% chance
+;	db 14, PARAS      ; 10% chance
+;	db 14, PARAS      ; 10% chance
+;	db 14, PARAS      ; 10% chance
+;	db 16, PARASECT   ;  5% chance
+;	db 15, SCYTHER    ;  5% chance
+;	db 15, PINSIR     ;  4% chance
+;	db 15, CHANSEY    ;  1% chance
+;	; nite
+;	db 14, NIDORAN_M  ; 20% chance
+;	db 14, NIDORAN_F  ; 20% chance
+;	db 14, EXEGGCUTE  ; 15% chance
+;	db 14, VENONAT    ; 10% chance
+;	db 14, VENONAT    ; 10% chance
+;	db 14, VENONAT    ; 10% chance
+;	db 16, PARASECT   ;  5% chance
+;	db 15, SCYTHER    ;  5% chance
+;	db 15, PINSIR     ;  4% chance
+;	db 15, CHANSEY    ;  1% chance
+;	end_grass_wildmons
+;
 ;	def_grass_wildmons SAFARI_ZONE_ENTRANCE ;GEN1
 ;	db 0 percent, 0 percent, 0 percent ; encounter rates: morn/day/nite
 ;	; morn
@@ -2185,5 +2227,3 @@ KantoGrassWildMons:
 ;	db 10, CHANSEY    ;  4% chance
 ;	db 10, CHANSEY    ;  1% chance
 ;	end_grass_wildmons
-
-	db -1 ; end
