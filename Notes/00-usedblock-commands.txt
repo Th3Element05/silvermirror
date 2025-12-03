@@ -1,0 +1,51 @@
+right-click > Open Git Bash here
+
+
+function usedblocks() {
+  grep -wi "TILESET_$1" data/maps/maps.asm | \
+  sed -E 's|\tmap ([^,]+),.+|maps/\1.blk|g' | \
+  xargs cat | xxd -c 1 -p | sort | uniq -c
+}
+
+usedblocks
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+function unusedblocks() {
+  usedb=$(grep -wi "TILESET_$1" data/maps/maps.asm | \
+          sed -E 's|\tmap ([^,]+),.+|maps/\1.blk|g' | \
+          xargs cat | xxd -c 1 -p | sort | uniq | \
+          xargs -I{} printf '%d\n' 0x{})
+  allb=$(seq 0 "${usedb##*$'\n'}")
+  comm -23 <(echo "$allb") <(echo "$usedb") | \
+    xargs printf '%02x\n'
+}
+
+unusedblocks
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+function usedblocks() {
+  grep -wi "TILESET_KANTO" data/maps/maps.asm | \
+  sed -E 's|\tmap ([^,]+),.+|maps/\1.blk|g' | \
+  xargs cat | xxd -c 1 -p | sort | uniq -c
+}
+
+usedblocks
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+function unusedblocks() {
+  usedb=$(grep -wi "TILESET_PARK" data/maps/maps.asm | \
+          sed -E 's|\tmap ([^,]+),.+|maps/\1.blk|g' | \
+          xargs cat | xxd -c 1 -p | sort | uniq | \
+          xargs -I{} printf '%d\n' 0x{})
+  allb=$(seq 0 "${usedb##*$'\n'}")
+  comm -23 <(echo "$allb") <(echo "$usedb") | \
+    xargs printf '%02x\n'
+}
+
+unusedblocks
+
