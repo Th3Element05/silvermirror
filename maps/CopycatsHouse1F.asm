@@ -57,6 +57,6 @@ CopycatsHouse1F_MapEvents:
 	def_object_events
 	object_event  5,  4, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CopycatsHouse1FPokefanMScript, -1
 	object_event  2,  3, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CopycatsHouse1FPokefanFScript, -1
-	object_event  1,  5, SPRITE_CHANSEY_MOVE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, CopycatsHouse1FChanseyScript, -1
+	object_event  1,  5, SPRITE_CHANSEY_MOVE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, CopycatsHouse1FChanseyScript, -1
 
-;.PinkOverRockOBPalette
+;.PinkOverYellowOBPalette

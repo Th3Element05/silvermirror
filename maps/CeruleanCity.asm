@@ -13,7 +13,8 @@ CeruleanCity_MapScripts:
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, CeruleanCityFlypointCallback
-	callback MAPCALLBACK_OBJECTS, CeruleanCityMoveOfficerCallback
+	callback MAPCALLBACK_OBJECTS, CeruleanCityBlockersCallback
+;	callback MAPCALLBACK_OBJECTS, CeruleanCityMoveOfficerCallback
 ;	callback MAPCALLBACK_OBJECTS, CeruleanCityMoveSlowbroCallback
 ;	callback MAPCALLBACK_OBJECTS, CeruleanCaveBlockCallback
 
@@ -26,7 +27,8 @@ CeruleanCityFlypointCallback:
 	setmapscene CINNABAR_ISLAND, SCENE_CINNABARISLAND_NOOP
 	endcallback
 
-CeruleanCityMoveOfficerCallback:
+CeruleanCityBlockersCallback:
+;CeruleanCityMoveOfficerCallback:
 	checkevent EVENT_HELPED_BILL
 	iftrue .BillHelped
 	moveobject CERULEANCITY_OFFICER, 27, 12
@@ -239,18 +241,22 @@ CeruleanCityRocketLeavesText:
 
 CeruleanCitySlowbroScript:
 	opentext
-	writetext CeruleanCitySlowbroText
+	writetext CeruleanCitySlowbroText1
+	pause 60
+	writetext CeruleanCitySlowbroText2
 	cry SLOWBRO
 	waitbutton
 	closetext
 	end
 
-CeruleanCitySlowbroText:
-	text "..."
-	line "..."
-	
-	para "..."
-	line "SLOWBRO: Yarah?"
+CeruleanCitySlowbroText1:
+	text "SLOWBRO: …"
+
+	para "<……> <……> <……>"
+	done
+
+CeruleanCitySlowbroText2:
+	text "<……> <……>Yarah?"
 	done
 
 CeruleanCitySlowbroTrainerScript:
@@ -512,7 +518,7 @@ CeruleanCity_MapEvents:
 	object_event 20,  2, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CERULEAN_CITY_RIVAL
 	object_event 28, 12, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeruleanCityOfficerScript, -1
 	object_event 30,  8, SPRITE_ROCKET, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerRocketGruntM4, EVENT_CERULEAN_CITY_ROCKET
-	object_event 20, 26, SPRITE_SLOWBRO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, CeruleanCitySlowbroScript, -1
+	object_event 20, 26, SPRITE_SLOWBRO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, CeruleanCitySlowbroScript, -1
 	object_event 21, 26, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCitySlowbroTrainerScript, -1
 	object_event  4, 12, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, CeruleanCaveCooltrainerMScript, 0
 	object_event 15, 18, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WALK_UP_DOWN, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeruleanCitySuperNerd1Script, -1
@@ -520,4 +526,4 @@ CeruleanCity_MapEvents:
 	object_event  9, 21, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanCitySuperNerd2Script, -1
 	object_event  9, 27, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCityCooltrainerFScript, -1
 
-;.PinkOverRockOBPalette
+;.PinkOverYellowOBPalette
