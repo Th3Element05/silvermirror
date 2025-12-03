@@ -41,11 +41,39 @@ BillsHouseBillScript:
 	jumptext BillsHouseBillInsideTeleporterText
 
 .AfterHelpedBill
+	faceplayer
+	opentext
+	checkcellnum PHONE_BILL
+	iftrue .GotBillsNumber
+	writetext BillOffersNumberText
+	askforphonenumber PHONE_BILL
+	ifequal PHONE_CONTACTS_FULL, .NoRoom
+	ifequal PHONE_CONTACT_REFUSED, .Refused
+	waitsfx
+	addcellnum PHONE_BILL
+	writetext RecordedBillsNumberText
+	playsound SFX_REGISTER_PHONE_NUMBER
+	waitsfx
+	waitbutton
+	closetext
+	end
+
+.NoRoom:
+	writetext BillsHousePhoneFullText
+	promptbutton
+.Refused:
+	writetext BillsHouseBummerText
+	waitbutton
+	closetext
+	end
+
+.GotBillsNumber
 ;	checkevent EVENT_GOT_HM01_CUT
-;	iftrue .GotCut
-	jumptextfaceplayer BillsHouseBillExplainRadioCardText
-;.GotCut
-;	jumptextfaceplayer BillsHouseBillAskSeePokemonText
+;	iftrue BillsGrandpa
+	writetext BillsHouseBillExplainRadioCardText
+	waitbutton
+	closetext
+	end
 
 .BillsHouseBillGoesToTeleporterScript:
 	readvar VAR_FACING
@@ -130,7 +158,7 @@ BillsHouseDontLeaveScript:
 	end
 
 BillsHouseBillDontLeaveText:
-	text "Hey pal!"
+	text "BILL: Hey pal!"
 	line "Don't leave!"
 	done
 
@@ -198,8 +226,8 @@ BillsHousePlayerDontLeaveMovement:
 
 BillsHouseBillIntroText:
 	text "Hiya! I'm a"
-	line "#MON..."
-	cont "...No I'm not!"
+	line "#MON…"
+	cont "…No I'm not!"
 
 	para "Call me BILL!"
 	line "I'm a true blue"
@@ -226,9 +254,9 @@ BillsHouseTeleporterText:
 	done
 
 BillsHouseBillInsideTeleporterText:
-	text "Go run the Cell"
-	line "Separator Program"
-	cont "on my PC!"
+	text "BILL: Go run the"
+	line "Cell Separation"
+	cont "Program on my PC!"
 	done
 
 BillsHouseWontHelpBillText:
@@ -259,7 +287,7 @@ BillsHouseBillThanksText:
 ;	cont "That's a bummer."
 
 	para "I've got to thank"
-	line "you... Oh here,"
+	line "you… Oh here,"
 	cont "maybe this'll do."
 	done
 
@@ -280,9 +308,31 @@ BillsHouseBillExplainRadioCardText:
 	done
 
 BillsHouseComputerCodeText:
-	text "Cell Separator:"
+	text "Cell Separation:"
 	line "Last Test Result:"
 	cont "          SUCCESS"
+	done
+
+BillOffersNumberText:
+	text "If you save my"
+	line "phone number, you"
+	cont "can call about my"
+	cont "#MON STORAGE"
+	cont "system any time."
+	done 
+
+BillsHousePhoneFullText:
+	text "You can't record"
+	line "any more numbers."
+	done
+
+BillsHouseBummerText:
+	text "That's a bummer."
+	done
+
+RecordedBillsNumberText:
+	text "<PLAYER> recorded"
+	line "BILL's number."
 	done
 
 ;BillsGrandpa:
@@ -314,7 +364,7 @@ BillsHouseComputerCodeText:
 ;	yesorno
 ;	iffalse .SaidNo
 ;	scall .ExcitedToSee
-;	special BillsGrandfather
+;	special BillsGrandfather ; load species into wScriptVar and text buffers
 ;	iffalse .SaidNo
 ;	ifnotequal LICKITUNG, .WrongPokemon
 ;	scall .CorrectPokemon
@@ -328,7 +378,7 @@ BillsHouseComputerCodeText:
 ;	yesorno
 ;	iffalse .SaidNo
 ;	scall .ExcitedToSee
-;	special BillsGrandfather
+;	special BillsGrandfather ; load species into wScriptVar and text buffers
 ;	iffalse .SaidNo
 ;	ifnotequal ODDISH, .WrongPokemon
 ;	scall .CorrectPokemon
@@ -342,7 +392,7 @@ BillsHouseComputerCodeText:
 ;	yesorno
 ;	iffalse .SaidNo
 ;	scall .ExcitedToSee
-;	special BillsGrandfather
+;	special BillsGrandfather ; load species into wScriptVar and text buffers
 ;	iffalse .SaidNo
 ;	ifnotequal STARYU, .WrongPokemon
 ;	scall .CorrectPokemon
@@ -358,7 +408,7 @@ BillsHouseComputerCodeText:
 ;	yesorno
 ;	iffalse .SaidNo
 ;	scall .ExcitedToSee
-;	special BillsGrandfather
+;	special BillsGrandfather ; load species into wScriptVar and text buffers
 ;	iffalse .SaidNo
 ;	ifnotequal GROWLITHE, .WrongPokemon
 ;	scall .CorrectPokemon
@@ -372,7 +422,7 @@ BillsHouseComputerCodeText:
 ;	yesorno
 ;	iffalse .SaidNo
 ;	scall .ExcitedToSee
-;	special BillsGrandfather
+;	special BillsGrandfather ; load species into wScriptVar and text buffers
 ;	iffalse .SaidNo
 ;	ifnotequal VULPIX, .WrongPokemon
 ;	scall .CorrectPokemon
@@ -386,7 +436,7 @@ BillsHouseComputerCodeText:
 ;	yesorno
 ;	iffalse .SaidNo
 ;	scall .ExcitedToSee
-;	special BillsGrandfather
+;	special BillsGrandfather ; load species into wScriptVar and text buffers
 ;	iffalse .SaidNo
 ;	ifnotequal PICHU, .WrongPokemon
 ;	scall .CorrectPokemon

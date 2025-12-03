@@ -23,25 +23,25 @@ BillsGrandpaText:
 	cont "even as a child!"
 	done
 
-BillsMomScript:
-	jumptextfaceplayer BillsMomText
-BillsMomText:
+BillsBrotherScript:
+	jumptextfaceplayer BillsBrotherText
+BillsBrotherText:
+;	text "BILL files his"
+;	line "own #MON data"
+;	cont "on his PC!"
+;
+;	para "Did he show you?"
+;	done
+;
+;BillsMomScript:
+;	jumptextfaceplayer BillsMomText
+;BillsMomText:
 	text "SAFARI ZONE's"
 	line "WARDEN is old,"
 	cont "but still active!"
 
 	para "All his teeth are"
 	line "false, though."
-	done
-
-BillsBrotherScript:
-	jumptextfaceplayer BillsBrotherText
-BillsBrotherText:
-	text "BILL files his"
-	line "own #MON data"
-	cont "on his PC!"
-
-	para "Did he show you?"
 	done
 
 BillsBrothersHouse_MapEvents:
@@ -57,5 +57,5 @@ BillsBrothersHouse_MapEvents:
 
 	def_object_events
 	object_event  2,  3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BillsGrandpaScript, -1
-	object_event  5,  4, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BillsMomScript, -1
+;	object_event  5,  4, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BillsMomScript, -1
 	object_event  7,  2, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BillsBrotherScript, -1
