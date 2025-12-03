@@ -141,6 +141,12 @@ GoldenrodDeptStoreRoofBugCatcherText:
 	line "there's any left?"
 	done
 
+GoldenrodDeptStoreRoofDirectory:
+	jumptext GoldenrodDeptStoreRoofDirectoryText
+GoldenrodDeptStoreRoofDirectoryText:
+	text "ROOFTOP SQUARE"
+	done
+
 PokeDollVendingMachine:
 	jumptext PokeDollVendingMachineText
 PokeDollVendingMachineText:

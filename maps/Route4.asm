@@ -1,20 +1,21 @@
 	object_const_def
+	const ROUTE4_CAVE_COOLTRAINER_M
 
 Route4_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
-;	callback MAPCALLBACK_OBJECTS, .CaveCooltrainerCaveBlock
+	callback MAPCALLBACK_OBJECTS, .CaveCooltrainerCaveBlock
 
-;.CaveCooltrainerCaveBlock:
-;	readvar VAR_BADGES
-;	ifequal NUM_BADGES, .CaveCooltrainerDissapear
-;	appear ROUTE4_CAVE_COOLTRAINER_M
-;	endcallback
+.CaveCooltrainerCaveBlock:
+	readvar VAR_BADGES
+	ifequal NUM_KANTO_BADGES, .CaveCooltrainerDissapear
+	appear ROUTE4_CAVE_COOLTRAINER_M
+	endcallback
 
-;.CaveCooltrainerDissapear:
-;	disappear ROUTE4_CAVE_COOLTRAINER_M
-;	endcallback
+.CaveCooltrainerDissapear:
+	disappear ROUTE4_CAVE_COOLTRAINER_M
+	endcallback
 
 TrainerLassAlice:
 	trainer LASS, ALICE, EVENT_BEAT_LASS_ALICE, LassAliceSeenText, LassAliceBeatenText, 0, .Script
@@ -79,9 +80,9 @@ Route4_MapEvents:
 	bg_event 16,  3, BGEVENT_ITEM, Route4HiddenGreatBall
 
 	def_object_events
+	object_event 64,  4, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0,ObjectEvent, 0
 	object_event 37,  3, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerLassAlice, -1
 	object_event 31,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, Route4TMFalseSwipe, EVENT_ROUTE_4_TM_FALSE_SWIPE
-;	object_event 64,  4, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0,ObjectEvent, 0
 	object_event 50, 10, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route4Rock, -1
 	object_event 48,  5, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route4Rock, -1
 	object_event 51,  2, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route4Rock, -1
