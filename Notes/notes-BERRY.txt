@@ -1,0 +1,106 @@
+	const PAL_NPC_RED    ; 8
+	const PAL_NPC_BLUE   ; 9
+	const PAL_NPC_GREEN  ; a
+	const PAL_NPC_BROWN  ; b
+	const PAL_NPC_PURPLE ; c ; PAL_NPC_PINK
+	const PAL_NPC_EMOTE  ; d ; DEF PAL_NPC_SILVER EQUS "PAL_NPC_EMOTE"
+	const PAL_NPC_TREE   ; e
+	const PAL_NPC_ROCK   ; f
+
+
+constants\item_constants.asm
+ORAN_BERRY	BLUE
+PECHA_BERRY	peach
+PERSIM_BERRY	peach
+CHERI_BERRY	RED
+LEPPA_BERRY	RED
+RAWST_BERRY	GREEN/BLUE
+CHESTO_BERRY	PURPLE
+ASPEAR_BERRY	yellow
+
+SITRUS_BERRY	yellow
+LUM_BERRY	GREEN
+
+
+constants\engine_flags.asm
+; wDailyFlags1
+const ENGINE_DAILY_ROUTE_29_BERRY
+
+
+constants\script_constants.asm
+; fruittree arguments
+const FRUITTREE_ROUTE_29
+
+
+data\items\fruit_trees.asm
+db ORAN_BERRY	; ROUTE_29
+
+
+data\events\engine_flags.asm
+engine_flag wDailyFlags1, DAILYFLAGS_ROUTE29_BERRY
+
+
+def_callbacks
+callback MAPCALLBACK_OBJECTS, PewterCityFruittrees
+
+PewterCityFruittrees:
+;Berry:
+	checkflag ENGINE_DAILY_PEWTER_BERRY
+	iftrue .NoBerry
+	appear PEWTERCITY_BERRY
+.NoBerry:
+	;fallthrough
+
+;Apricorn:
+	checkflag ENGINE_DAILY_PEWTER_APRICORN
+	iftrue .NoApricorn
+	appear PEWTERCITY_APRICORN
+.NoApricorn:
+	;fallthrough
+
+;BERRY_2:
+	checkflag ENGINE_DAILY_PEWTER_BERRY_2
+	iftrue .NoBERRY_2
+	appear PEWTERCITY_BERRY_2
+.NoBERRY_2:
+	;fallthrough
+
+;APRICORN_2:
+	checkflag ENGINE_DAILY_PEWTER_APRICORN_2
+	iftrue .NoAPRICORN_2
+	appear PEWTERCITY_APRICORN_2
+.NoAPRICORN_2:
+	endcallback
+
+; berries
+PewterCityBerryTree:
+	opentext
+	writetext PewterCityBerryTreeText
+	promptbutton
+	writetext PewterCityHeyItsBerryText
+	promptbutton
+	verbosegiveitem RAWST_BERRY
+	iffalse .NoRoomInBag
+	disappear PEWTERCITY_BERRY
+	setflag ENGINE_DAILY_PEWTER_BERRY
+.NoRoomInBag
+	closetext
+	end
+
+PewterCityBerryTree2:
+	opentext
+	writetext PewterCityBerryTreeText
+	promptbutton
+	writetext PewterCityHeyItsBERRY_2Text
+	promptbutton
+	verbosegiveitem CHESTO_BERRY
+	iffalse .NoRoomInBag
+	disappear PEWTERCITY_BERRY_2
+	setflag ENGINE_DAILY_PEWTER_BERRY_2
+.NoRoomInBag
+	closetext
+	end
+
+def_object_events
+	object_event 33,  5, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, PewterCityBerryTree, EVENT_PEWTER_BERRY
+	object_event 31,  5, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PewterCityBerryTree2, EVENT_PEWTER_BERRY_2

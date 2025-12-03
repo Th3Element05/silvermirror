@@ -1,0 +1,124 @@
+KANTO
+	ROUTE 1
+	oran	blue
+	blk	.GreyOverYellow
+
+	VIRIDIAN FOREST
+	oran	blue
+	pecha	.PinkOverYellow
+
+	ROUTE 2 NORTH
+	pnk	.PinkOverYellow
+
+	PEWTER CITY
+	chesto	purple
+	persim	.PinkOverYellow
+	blu	blue
+	wht	silver
+
+	ROUTE 24
+	leppa	red
+
+	ROUTE 25
+	lum	green
+
+ROUTE 8
+rawst	tree
+ylw	yellow
+
+ROUTE 11
+cheri	red
+grn	green
+
+ROUTE 16
+sitrus	yellow
+
+FUCHSIA CITY
+chansey	.PinkOverSilver
+aspear	yellow
+red	red
+
+ROUTE 26
+leppa	red
+sitrus	yellow
+
+
+JOHTO
+ROUTE 39
+oran	blue
+
+ROUTE 38
+chesto	purple
+wht	silver
+
+ROUTE 37
+red	red
+blu	blue
+blk	.GreyOverYellow
+
+ROUTE 36
+rawst	tree
+
+ROUTE 35
+leppa	red
+grn	green
+
+AZALEA
+wht	silver
+
+ROUTE 33
+blk	.GreyOverYellow
+
+VIOLET CITY
+ylw	yellow
+
+ROUTE 30
+oran
+pecha	.PinkOverYellow
+pnk	.PinkOverYellow
+
+ROUTE 42
+pnk	.PinkOverSilver
+grn	green
+ylw	yellow
+
+ROUTE 43
+persim	.PinkOverYellow
+blu	blue
+
+ROUTE 44
+aspear	yellow
+red	red
+
+ROUTE 45
+leppa	red
+lum	green
+
+ROUTE 46
+cheri	red
+sitrus	yellow
+
+ROUTE 29
+oran	blue
+
+
+
+BLUE	5 oran		hp
+.pink	2 pecha		poison
+PURPLE	2 chesto	sleep
+.pink	2 persim	confuse
+RED	2 cheri		parlyze
+TREE	2 rawst		burn
+YELLOW	2 aspear	freeze
+RED	4 leppa		pp
+YELLOW	3 sitrus	hp
+GREEN	2 lum		status
+
+RED	3 RED
+GREEN	3 GRN
+BLUE	3 BLU
+YELLOW	3 YLW
+.pink	3 PNK
+.grey	3 BLK
+SILVER	3 WHT
+
