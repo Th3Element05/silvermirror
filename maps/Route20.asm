@@ -486,7 +486,7 @@ Route20_MapEvents:
 
 	def_object_events
 	object_event 51, 10, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_SCRIPT, 0, Route20RockSmashGuyScript, EVENT_GOT_TM58_ROCK_SMASH
-	object_event 50, 10, SPRITE_VARIABLE, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_SCRIPT, 0, Route20GeodudeScript, EVENT_GOT_TM58_ROCK_SMASH
+	object_event 50, 10, SPRITE_VARIABLE, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_ICON_GRAY, OBJECTTYPE_SCRIPT, 0, Route20GeodudeScript, EVENT_GOT_TM58_ROCK_SMASH
 	object_event 49, 10, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route20RockScript, -1
 ;
 	object_event  8,  8, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerSwimmerFDenise, -1
@@ -501,9 +501,5 @@ Route20_MapEvents:
 	object_event 78, 12, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSwimmerMCameron, -1
 	object_event 50, 11, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route20RockScript, -1
 
-;.GrayOverTreeOBPalette <-
-;\engine\tilesets\tileset_palettes.asm
-;\gfx\overworld\npc_sprites_special.pal
-;
-;.GrayOverRockOBPalette ???  can't use rock due to... the rock.
+;.GrayOverYellowOBPalette
 ;? PAL_ICON_GRAY ?
