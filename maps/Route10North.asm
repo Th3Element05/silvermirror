@@ -90,22 +90,23 @@ Route10North_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 11, 19, ROUTE_10_POKECENTER_1F, 1
-	warp_event  6, 17, ROCK_TUNNEL_1F, 1
-	warp_event  4, 37, POWER_PLANT, 1
+	warp_event  9, 33, ROUTE_10_POKECENTER_1F, 1
+	warp_event  4, 31, ROCK_TUNNEL_1F, 1
+	warp_event  4, 51, POWER_PLANT, 1
+	warp_event  6,  1, ROUTE_10_POKECENTER_1F, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event  7, 19, BGEVENT_READ, Route10NorthRockTunnelSign
-	bg_event 12, 19, BGEVENT_READ, Route10PokecenterSign
-	bg_event  3, 39, BGEVENT_READ, PowerPlantSign
-	bg_event  9, 17, BGEVENT_ITEM, Route10HiddenSuperPotion
+	bg_event  5, 33, BGEVENT_READ, Route10NorthRockTunnelSign
+	bg_event 10, 33, BGEVENT_READ, Route10PokecenterSign
+	bg_event  3, 53, BGEVENT_READ, PowerPlantSign
+	bg_event  7, 31, BGEVENT_ITEM, Route10HiddenSuperPotion
 
 	def_object_events
-	object_event  7, 25, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerPicnickerAzriel, -1
-	object_event 10, 42, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 4, TrainerPokemaniacBrent, -1
-	object_event 14, 32, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route10Magnet, EVENT_ROUTE_10_MAGNET
-	object_event 14, 30, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route10NorthRock, -1
+	object_event  5, 39, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerPicnickerAzriel, -1
+	object_event 10, 54, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 4, TrainerPokemaniacBrent, -1
+	object_event 14, 46, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route10Magnet, EVENT_ROUTE_10_MAGNET
+	object_event 14, 44, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route10NorthRock, -1
 ;	object_event 15, 32, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route10NorthRock, -1
 ;	object_event 14, 34, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route10NorthRock, -1
