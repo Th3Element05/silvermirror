@@ -1,5 +1,4 @@
 	object_const_def
-	const VIOLETCITY_BERRY
 	const VIOLETCITY_APRICORN
 ;	const VIOLETCITY_EARL
 
@@ -17,14 +16,6 @@ VioletCityFlypointAndRoute32Callback:
 	endcallback
 
 VioletCityFruittrees:
-.Berry:
-	checkflag ENGINE_DAILY_VIOLET_BERRY
-	iftrue .NoBerry
-	appear VIOLETCITY_BERRY
-.NoBerry:
-	;fallthrough
-
-.Apricorn:
 	checkflag ENGINE_DAILY_VIOLET_APRICORN
 	iftrue .NoApricorn
 	appear VIOLETCITY_APRICORN
@@ -273,20 +264,6 @@ VioletCityPPUp:
 VioletCityRareCandy:
 	itemball RARE_CANDY
 
-VioletBerryTree:
-	opentext
-	writetext VioletBerryTreeText
-	promptbutton
-	writetext VioletHeyItsBerryText
-	promptbutton
-	verbosegiveitem CHERI_BERRY
-	iffalse .NoRoomInBag
-	disappear VIOLETCITY_BERRY
-	setflag ENGINE_DAILY_VIOLET_BERRY
-.NoRoomInBag
-	closetext
-	end
-
 VioletApricornTree:
 	opentext
 	writetext VioletApricornTreeText
@@ -368,12 +345,11 @@ VioletCity_MapEvents:
 	bg_event 32, 25, BGEVENT_READ, VioletCityPokecenterSign
 	bg_event 10, 17, BGEVENT_READ, VioletCityMartSign
 	bg_event 37, 14, BGEVENT_ITEM, VioletCityHiddenHyperPotion
-	bg_event  6,  7, BGEVENT_READ, VioletNoBerry
+	bg_event 15, 27, BGEVENT_READ, VioletNoBerry
 	bg_event 14, 29, BGEVENT_READ, VioletNoApricorn
 
 	def_object_events
-	object_event  6,  7, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VioletBerryTree, EVENT_VIOLET_BERRY
-	object_event 14, 29, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, VioletApricornTree, EVENT_VIOLET_APRICORN
+	object_event 14, 29, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, VioletApricornTree, EVENT_VIOLET_APRICORN ;ylw
 ;	object_event 13, 16, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, VioletCityEarlScript, EVENT_VIOLET_CITY_EARL
 	object_event 28, 28, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, VioletCityLassScript, -1
 	object_event 24, 14, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WANDER, 1, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VioletCitySuperNerdScript, -1

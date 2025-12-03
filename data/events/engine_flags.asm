@@ -125,6 +125,33 @@ EngineFlags:
 	engine_flag wDailyFlags1, DAILYFLAGS1_GOT_SHUCKIE_TODAY_F
 	engine_flag wDailyFlags1, DAILYFLAGS1_GOLDENROD_UNDERGROUND_BARGAIN_F
 	engine_flag wDailyFlags1, DAILYFLAGS1_TRAINER_HOUSE_F
+	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE1_FRUIT
+	engine_flag wDailyFlags1, DAILYFLAGS_VIRIDIANFOREST_FRUIT
+	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE2NORTH_FRUIT
+	engine_flag wDailyFlags1, DAILYFLAGS_PEWTERCITY_FRUIT
+	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE24_FRUIT
+	engine_flag wDailyFlags1, DAILYFLAGS_BEHIND_BILLS_HOUSE_FRUIT
+;	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE11_FRUIT
+;	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE8_FRUIT
+;	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE16_FRUIT
+;	engine_flag wDailyFlags1, DAILYFLAGS_FUCHSIACITY_FRUIT
+;	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE26_FRUIT
+;	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE29_FRUIT
+;	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE30_FRUIT
+;	engine_flag wDailyFlags1, DAILYFLAGS_VIOLETCITY_FRUIT
+;	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE33_FRUIT
+;	engine_flag wDailyFlags1, DAILYFLAGS_AZALEATOWN_FRUIT
+;	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE35_FRUIT
+;	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE36_FRUIT
+;	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE37_FRUIT
+;	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE38_FRUIT
+;	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE39_FRUIT
+;	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE42_FRUIT
+;	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE43_FRUIT
+;	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE44_FRUIT
+;	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE45_FRUIT
+;	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE46_FRUIT
+;
 	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE29_BERRY
 	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE29_APRICORN
 	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE30_BERRY
@@ -165,14 +192,14 @@ EngineFlags:
 	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE46_APRICORN2
 	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE26_BERRY
 	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE26_APRICORN
-	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE1_BERRY
-	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE1_APRICORN
-	engine_flag wDailyFlags1, DAILYFLAGS_VIRIDIAN_FOREST_BERRY
-	engine_flag wDailyFlags1, DAILYFLAGS_VIRIDIAN_FOREST_APRICORN
-	engine_flag wDailyFlags1, DAILYFLAGS_PEWTER_BERRY
-	engine_flag wDailyFlags1, DAILYFLAGS_PEWTER_BERRY2
-	engine_flag wDailyFlags1, DAILYFLAGS_PEWTER_APRICORN
-	engine_flag wDailyFlags1, DAILYFLAGS_PEWTER_APRICORN2
+;	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE1_BERRY
+;	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE1_APRICORN
+;	engine_flag wDailyFlags1, DAILYFLAGS_VIRIDIAN_FOREST_BERRY
+;	engine_flag wDailyFlags1, DAILYFLAGS_VIRIDIAN_FOREST_APRICORN
+;	engine_flag wDailyFlags1, DAILYFLAGS_PEWTER_BERRY
+;	engine_flag wDailyFlags1, DAILYFLAGS_PEWTER_BERRY2
+;	engine_flag wDailyFlags1, DAILYFLAGS_PEWTER_APRICORN
+;	engine_flag wDailyFlags1, DAILYFLAGS_PEWTER_APRICORN2
 	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE8_BERRY
 	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE8_APRICORN
 	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE11_BERRY

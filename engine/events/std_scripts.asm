@@ -63,7 +63,6 @@ StdScripts::
 
 PokecenterNurseScript:
 ; EVENT_WELCOMED_TO_POKECOM_CENTER is never set
-
 	opentext
 	checktime MORN
 	iftrue .morn
@@ -122,7 +121,6 @@ PokecenterNurseScript:
 .ok
 	; only do this once
 ;	clearevent EVENT_WELCOMED_TO_POKECOM_CENTER
-
 	farwritetext NurseAskHealText
 	yesorno
 	iffalse .done
@@ -2695,6 +2693,15 @@ SaffronGateClosedScript::
 	setmapscene ROUTE_6_SAFFRON_GATE, SCENE_ROUTE6GATE_NOOP
 	setmapscene ROUTE_7_SAFFRON_GATE, SCENE_ROUTE7GATE_NOOP
 	setmapscene ROUTE_8_SAFFRON_GATE, SCENE_ROUTE8GATE_NOOP
+	end
+
+Std_NoFruitScript::
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	farwritetext _NothingHereText
+	waitbutton
+	closetext
 	end
 
 Movement_ContestResults_WalkAfterWarp:

@@ -293,6 +293,33 @@ DEF CELEBIEVENT_FOREST_IS_RESTLESS_F EQU 2
 	const DAILYFLAGS1_GOT_SHUCKIE_TODAY_F             ; 5
 	const DAILYFLAGS1_GOLDENROD_UNDERGROUND_BARGAIN_F ; 6
 	const DAILYFLAGS1_TRAINER_HOUSE_F                 ; 7
+	const DAILYFLAGS_ROUTE1_FRUIT                     ; 8
+	const DAILYFLAGS_VIRIDIANFOREST_FRUIT             ; 9
+	const DAILYFLAGS_ROUTE2NORTH_FRUIT                ; 10
+	const DAILYFLAGS_PEWTERCITY_FRUIT                 ; 11
+	const DAILYFLAGS_ROUTE24_FRUIT                    ; 12
+	const DAILYFLAGS_BEHIND_BILLS_HOUSE_FRUIT         ; 13
+;	const DAILYFLAGS_ROUTE11_FRUIT                    ; 14
+;	const DAILYFLAGS_ROUTE8_FRUIT                     ; 15
+;	const DAILYFLAGS_ROUTE16_FRUIT                    ; 16
+;	const DAILYFLAGS_FUCHSIACITY_FRUIT                ; 17
+;	const DAILYFLAGS_ROUTE26_FRUIT                    ; 18
+;	const DAILYFLAGS_ROUTE29_FRUIT                    ; 19
+;	const DAILYFLAGS_ROUTE30_FRUIT                    ; 20
+;	const DAILYFLAGS_VIOLETCITY_FRUIT                 ; 21
+;	const DAILYFLAGS_ROUTE33_FRUIT                    ; 22
+;	const DAILYFLAGS_AZALEATOWN_FRUIT                 ; 23
+;	const DAILYFLAGS_ROUTE35_FRUIT                    ; 24
+;	const DAILYFLAGS_ROUTE36_FRUIT                    ; 25
+;	const DAILYFLAGS_ROUTE37_FRUIT                    ; 26
+;	const DAILYFLAGS_ROUTE38_FRUIT                    ; 27
+;	const DAILYFLAGS_ROUTE39_FRUIT                    ; 28
+;	const DAILYFLAGS_ROUTE42_FRUIT                    ; 29
+;	const DAILYFLAGS_ROUTE43_FRUIT                    ; 30
+;	const DAILYFLAGS_ROUTE44_FRUIT                    ; 31
+;	const DAILYFLAGS_ROUTE45_FRUIT                    ; 32
+;	const DAILYFLAGS_ROUTE46_FRUIT                    ; 33
+;
 	const DAILYFLAGS_ROUTE29_BERRY                    ; 8
 	const DAILYFLAGS_ROUTE29_APRICORN                 ; 9
 	const DAILYFLAGS_ROUTE30_BERRY                    ; 10
@@ -333,14 +360,14 @@ DEF CELEBIEVENT_FOREST_IS_RESTLESS_F EQU 2
 	const DAILYFLAGS_ROUTE46_APRICORN2                ; 45
 	const DAILYFLAGS_ROUTE26_BERRY                    ; 46
 	const DAILYFLAGS_ROUTE26_APRICORN                 ; 47
-	const DAILYFLAGS_ROUTE1_BERRY                     ; 48
-	const DAILYFLAGS_ROUTE1_APRICORN                  ; 49
-	const DAILYFLAGS_VIRIDIAN_FOREST_BERRY            ; 50
-	const DAILYFLAGS_VIRIDIAN_FOREST_APRICORN         ; 51
-	const DAILYFLAGS_PEWTER_BERRY                     ; 52
-	const DAILYFLAGS_PEWTER_BERRY2                    ; 53
-	const DAILYFLAGS_PEWTER_APRICORN                  ; 54
-	const DAILYFLAGS_PEWTER_APRICORN2                 ; 55
+;	const DAILYFLAGS_ROUTE1_BERRY                     ; 48
+;	const DAILYFLAGS_ROUTE1_APRICORN                  ; 49
+;	const DAILYFLAGS_VIRIDIAN_FOREST_BERRY            ; 50
+;	const DAILYFLAGS_VIRIDIAN_FOREST_APRICORN         ; 51
+;	const DAILYFLAGS_PEWTER_BERRY                     ; 52
+;	const DAILYFLAGS_PEWTER_BERRY2                    ; 53
+;	const DAILYFLAGS_PEWTER_APRICORN                  ; 54
+;	const DAILYFLAGS_PEWTER_APRICORN2                 ; 55
 	const DAILYFLAGS_ROUTE8_BERRY                     ; 56
 	const DAILYFLAGS_ROUTE8_APRICORN                  ; 57
 	const DAILYFLAGS_ROUTE11_BERRY                    ; 58
