@@ -3,17 +3,17 @@
 
 GoldenrodPokecenter1F_MapScripts:
 	def_scene_scripts
-	scene_script GoldenrodPokecenter1FGSBallScene, SCENE_GOLDENRODPOKECENTER1F_GS_BALL
+;	scene_script GoldenrodPokecenter1FGSBallScene, SCENE_GOLDENRODPOKECENTER1F_GS_BALL
 
 	def_callbacks
 
 GoldenrodPokecenter1FNurseScript:
 	jumpstd PokecenterNurseScript
 
-GoldenrodPokecenter1FGSBallScene:
+;GoldenrodPokecenter1FGSBallScene:
 ;	checkevent EVENT_BEAT_ELITE_FOUR
 ;	iftrue .gsball
-	end
+;	end
 
 ;.gsball
 ;	checkevent EVENT_GOT_GS_BALL_FROM_GOLDENROD_POKEMON_CENTER
