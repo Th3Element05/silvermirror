@@ -1,73 +1,55 @@
 	object_const_def
-	const VIRIDIAN_FOREST_BERRY
-	const VIRIDIAN_FOREST_APRICORN
+	const VIRIDIANFOREST_ORAN_BERRY
+	const VIRIDIANFOREST_PECHA_BERRY
 
 ViridianForest_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
-	callback MAPCALLBACK_OBJECTS, .Fruittrees
+	callback MAPCALLBACK_OBJECTS, ViridianForestFruittrees
 
-.Fruittrees
+ViridianForestFruittrees:
 .Berry:
-	checkflag ENGINE_DAILY_VIRIDIAN_FOREST_BERRY
-	iftrue .NoBerry
-	appear VIRIDIAN_FOREST_BERRY
-.NoBerry:
-	;fallthrough
-
-.Apricorn:
-	checkflag ENGINE_DAILY_VIRIDIAN_FOREST_APRICORN
-	iftrue .NoApricorn
-	appear VIRIDIAN_FOREST_APRICORN
-.NoApricorn:
+	checkflag ENGINE_DAILY_VIRIDIAN_FOREST_FRUIT
+	iftrue .NoFruit
+	appear VIRIDIANFOREST_ORAN_BERRY
+	appear VIRIDIANFOREST_PECHA_BERRY
+.NoFruit:
 	endcallback
 
-ViridianForestBerryTree:
+; fruit
+ViridianForest_OranBerry:
 	opentext
-	writetext ViridianForestBerryTreeText
+	farwritetext _FruitBearingTreeText
 	promptbutton
-	writetext ViridianForestHeyItsBerryText
+	getitemname STRING_BUFFER_3, ORAN_BERRY
+	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem PECHA_BERRY
+	verbosegiveitem ORAN_BERRY, 2
 	iffalse .NoRoomInBag
-	disappear VIRIDIAN_FOREST_BERRY
-	setflag ENGINE_DAILY_VIRIDIAN_FOREST_BERRY
+	disappear VIRIDIANFOREST_ORAN_BERRY
+	setflag ENGINE_DAILY_VIRIDIAN_FOREST_FRUIT
 .NoRoomInBag
 	closetext
 	end
 
-ViridianForestApricornTree:
+ViridianForest_PechaBerry:
 	opentext
-	writetext ViridianForestApricornTreeText
+	farwritetext _FruitBearingTreeText
 	promptbutton
-	writetext ViridianForestHeyItsApricornText
+	getitemname STRING_BUFFER_3, PECHA_BERRY
+	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem PNK_APRICORN
+	verbosegiveitem PECHA_BERRY, 2
 	iffalse .NoRoomInBag
-	disappear VIRIDIAN_FOREST_APRICORN
-	setflag ENGINE_DAILY_VIRIDIAN_FOREST_APRICORN
+	disappear VIRIDIANFOREST_PECHA_BERRY
+	setflag ENGINE_DAILY_VIRIDIAN_FOREST_FRUIT
 .NoRoomInBag
 	closetext
 	end
 
-ViridianForestNoBerry:
-	opentext
-	writetext ViridianForestBerryTreeText
-	promptbutton
-	writetext ViridianForestNothingHereText
-	waitbutton
-	closetext
-	end
-
-ViridianForestNoApricorn:
-	opentext
-	writetext ViridianForestApricornTreeText
-	promptbutton
-	writetext ViridianForestNothingHereText
-	waitbutton
-	closetext
-	end
+ViridianForest_NoFruit:
+	farsjump Std_NoFruitScript
 
 ; trainers
 TrainerBugCatcherBenny:
@@ -239,32 +221,13 @@ ViridianForestLeavingSignText:
 	cont "PEWTER CITY AHEAD"
 	done
 
-ViridianForestBerryTreeText:
-	text "It's a"
-	line "BERRY tree…"
-	done
-
-ViridianForestHeyItsBerryText:
-	text "Hey! It's"
-	line "PECHA BERRY!"
-	done
-
-ViridianForestApricornTreeText:
-	text "It's an"
-	line "APRICORN tree…"
-	done
-
-ViridianForestHeyItsApricornText:
-	text "Hey! It's"
-	line "PNK APRICORN!"
-	done
-
-ViridianForestNothingHereText:
-	text "There's nothing"
-	line "here…"
-	done
-
 ; items
+ViridianForestHiddenPotion:
+	hiddenitem POTION, EVENT_VIRIDIAN_FOREST_HIDDEN_POTION
+
+ViridianForestHiddenAntidote:
+	hiddenitem ANTIDOTE, EVENT_VIRIDIAN_FOREST_HIDDEN_ANTIDOTE
+
 ViridianForestAntidote:
 	itemball ANTIDOTE
 
@@ -277,44 +240,39 @@ ViridianForestPokeball:
 ViridianForestSilverPowder:
 	itemball SILVERPOWDER
 
-; hidden items
-ViridianForestHiddenPotion:
-	hiddenitem POTION, EVENT_VIRIDIAN_FOREST_HIDDEN_POTION
-
-ViridianForestHiddenAntidote:
-	hiddenitem ANTIDOTE, EVENT_VIRIDIAN_FOREST_HIDDEN_ANTIDOTE
-
 ViridianForest_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  1,  3, VIRIDIAN_FOREST_GATE_N, 3
-	warp_event 16, 51, VIRIDIAN_FOREST_GATE_S, 1
-	warp_event 17, 51, VIRIDIAN_FOREST_GATE_S, 2
+	warp_event  2,  3, VIRIDIAN_FOREST_GATE_N, 3
+	warp_event 16, 39, VIRIDIAN_FOREST_GATE_S, 1
+	warp_event 17, 39, VIRIDIAN_FOREST_GATE_S, 2
 
 	def_coord_events
 
 	def_bg_events
-	bg_event 17,  6, BGEVENT_READ, ViridianForestNoBerry
-	bg_event 31,  6, BGEVENT_READ, ViridianForestNoApricorn
-	bg_event  2,  5, BGEVENT_READ, ViridianForestLeavingSign
-	bg_event 26, 21, BGEVENT_READ, ViridianForestTrainerTips2
-	bg_event  4, 28, BGEVENT_READ, ViridianForestTrainerTips3
-	bg_event 16, 36, BGEVENT_READ, ViridianForestUseAntidoteSign
-	bg_event 24, 44, BGEVENT_READ, ViridianForestTrainerTips1
-	bg_event 18, 49, BGEVENT_READ, ViridianForestTrainerTips4
-	bg_event  1, 22, BGEVENT_ITEM, ViridianForestHiddenPotion
-	bg_event 16, 46, BGEVENT_ITEM, ViridianForestHiddenAntidote
+	bg_event 21,  2, BGEVENT_READ, ViridianForest_NoFruit
+	bg_event 23,  2, BGEVENT_READ, ViridianForest_NoFruit
+	bg_event  4,  5, BGEVENT_READ, ViridianForestLeavingSign
+	bg_event 24, 14, BGEVENT_READ, ViridianForestTrainerTips2
+	bg_event  4, 20, BGEVENT_READ, ViridianForestTrainerTips3
+	bg_event 16, 26, BGEVENT_READ, ViridianForestUseAntidoteSign
+	bg_event 24, 32, BGEVENT_READ, ViridianForestTrainerTips1
+	bg_event 18, 37, BGEVENT_READ, ViridianForestTrainerTips4
+	bg_event  1, 15, BGEVENT_ITEM, ViridianForestHiddenPotion
+	bg_event 16, 34, BGEVENT_ITEM, ViridianForestHiddenAntidote
 
 	def_object_events
-	object_event 17,  6, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, ViridianForestBerryTree, EVENT_VIRIDIAN_FOREST_BERRY
-	object_event 31,  6, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, ViridianForestApricornTree, EVENT_VIRIDIAN_FOREST_APRICORN
-	object_event 16, 47, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianForestYoungster1, -1
-	object_event 27, 44, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ViridianForestYoungster2, -1
-	object_event  2, 22, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerBugCatcherBenny, -1
-	object_event 30, 23, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerBugCatcherEd, -1
-	object_event 30, 37, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerBugCatcherRob, -1
-	object_event 25, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, ViridianForestAntidote, EVENT_VIRIDIAN_FOREST_ANTIDOTE
-	object_event 12, 33, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, ViridianForestPotion, EVENT_VIRIDIAN_FOREST_POTION
-	object_event  1, 35, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, ViridianForestPokeball, EVENT_VIRIDIAN_FOREST_POKE_BALL
-	object_event 17, 28, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, ViridianForestSilverPowder, EVENT_VIRIDIAN_FOREST_SILVER_POWDER
+	object_event 21,  2, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ViridianForest_OranBerry, EVENT_VIRIDIAN_FOREST_ORAN_BERRY
+	object_event 23,  2, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, ViridianForest_PechaBerry, EVENT_VIRIDIAN_FOREST_PECHA_BERRY
+	object_event 16, 35, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianForestYoungster1, -1
+	object_event 27, 32, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ViridianForestYoungster2, -1
+	object_event  2, 15, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerBugCatcherBenny, -1
+	object_event 28, 17, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerBugCatcherEd, -1
+	object_event 30, 27, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerBugCatcherRob, -1
+	object_event 24, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, ViridianForestAntidote, EVENT_VIRIDIAN_FOREST_ANTIDOTE
+	object_event 12, 23, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, ViridianForestPotion, EVENT_VIRIDIAN_FOREST_POTION
+	object_event  2, 25, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, ViridianForestPokeball, EVENT_VIRIDIAN_FOREST_POKE_BALL
+	object_event 18, 21, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, ViridianForestSilverPowder, EVENT_VIRIDIAN_FOREST_SILVER_POWDER
+
+;.PinkOverYellowOBPalette
