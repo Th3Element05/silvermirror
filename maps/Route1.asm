@@ -1,6 +1,6 @@
 	object_const_def
-	const ROUTE_1_BERRY
-	const ROUTE_1_APRICORN
+	const ROUTE1_ORAN_BERRY
+	const ROUTE1_BLK_APRICORN
 
 Route1_MapScripts:
 	def_scene_scripts
@@ -10,18 +10,72 @@ Route1_MapScripts:
 
 Route1Fruittrees:
 .Berry:
-	checkflag ENGINE_DAILY_ROUTE_1_BERRY
-	iftrue .NoBerry
-	appear ROUTE_1_BERRY
-.NoBerry:
-	;fallthrough
-.Apricorn:
-	checkflag ENGINE_DAILY_ROUTE_1_APRICORN
-	iftrue .NoApricorn
-	appear ROUTE_1_APRICORN
-.NoApricorn:
+	checkflag ENGINE_DAILY_ROUTE_1_FRUIT
+	iftrue .NoFruit
+	appear ROUTE_1_ORAN_BERRY
+	appear ROUTE_1_BLK_APRICORN
+.NoFruit:
 	endcallback
 
+Route1_OranBerry:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, ORAN_BERRY
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem ORAN_BERRY, 2
+	iffalse .NoRoomInBag
+	disappear ROUTE_1_ORAN_BERRY
+	setflag ENGINE_DAILY_ROUTE_1_FRUIT
+.NoRoomInBag
+	closetext
+	end
+
+Route1_BLKApricorn:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, BLK_APRICORN
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem BLK_APRICORN
+	iffalse .NoRoomInBag
+	disappear ROUTE_1_BLK_APRICORN
+	setflag ENGINE_DAILY_ROUTE_1_FRUIT
+.NoRoomInBag
+	closetext
+	end
+
+Route1_NoFruit:
+	farsjump Std_NoFruitScript
+
+;Route1BerryTreeText:
+;	text "It's a"
+;	line "BERRY tree…"
+;	done
+;
+;Route1HeyItsBerryText:
+;	text "Hey! It's"
+;	line "ORAN BERRY!"
+;	done
+;
+;Route1ApricornTreeText:
+;	text "It's an"
+;	line "APRICORN tree…"
+;	done
+;
+;Route1HeyItsApricornText:
+;	text "Hey! It's"
+;	line "BLK APRICORN!"
+;	done
+;
+;Route1NothingHereText:
+;	text "There's nothing"
+;	line "here…"
+;	done
+
+; npc
 Route1PotionSample:
 	faceplayer
 	opentext
@@ -36,58 +90,6 @@ Route1PotionSample:
 	writetext Route1AlsoHavePokeballsText
 	waitbutton
 .NoRoom:
-	closetext
-	end
-
-Route1YoungsterLedges:
-	jumptextfaceplayer Route1YoungsterLedgesText
-	
-Route1Sign:
-	jumptext Route1SignText
-
-Route1BerryTree:
-	opentext
-	writetext Route1BerryTreeText
-	promptbutton
-	writetext Route1HeyItsBerryText
-	promptbutton
-	verbosegiveitem PERSIM_BERRY
-	iffalse .NoRoomInBag
-	disappear ROUTE_1_BERRY
-	setflag ENGINE_DAILY_ROUTE_1_BERRY
-.NoRoomInBag
-	closetext
-	end
-
-Route1ApricornTree:
-	opentext
-	writetext Route1ApricornTreeText
-	promptbutton
-	writetext Route1HeyItsApricornText
-	promptbutton
-	verbosegiveitem BLK_APRICORN
-	iffalse .NoRoomInBag
-	disappear ROUTE_1_APRICORN
-	setflag ENGINE_DAILY_ROUTE_1_APRICORN
-.NoRoomInBag
-	closetext
-	end
-
-Route1NoBerry:
-	opentext
-	writetext Route1BerryTreeText
-	promptbutton
-	writetext Route1NothingHereText
-	waitbutton
-	closetext
-	end
-
-Route1NoApricorn:
-	opentext
-	writetext Route1ApricornTreeText
-	promptbutton
-	writetext Route1NothingHereText
-	waitbutton
 	closetext
 	end
 
@@ -112,6 +114,8 @@ Route1AlsoHavePokeballsText:
 	cont "catching #MON!"
 	done
 
+Route1YoungsterLedges:
+	jumptextfaceplayer Route1YoungsterLedgesText
 Route1YoungsterLedgesText:
 	text "See those ledges"
 	line "along the road?"
@@ -125,6 +129,9 @@ Route1YoungsterLedgesText:
 	cont "quicker that way."
 	done
 
+; bg text
+Route1Sign:
+	jumptext Route1SignText
 Route1SignText:
 	text "ROUTE 1"
 
@@ -136,31 +143,6 @@ Route1SignText:
 ;	cont "VIRIDIAN CITY"
 ;	done
 
-Route1BerryTreeText:
-	text "It's a"
-	line "BERRY tree…"
-	done
-
-Route1HeyItsBerryText:
-	text "Hey! It's"
-	line "PERSIM BERRY!"
-	done
-
-Route1ApricornTreeText:
-	text "It's an"
-	line "APRICORN tree…"
-	done
-
-Route1HeyItsApricornText:
-	text "Hey! It's"
-	line "BLK APRICORN!"
-	done
-
-Route1NothingHereText:
-	text "There's nothing"
-	line "here…"
-	done
-
 Route1_MapEvents:
 	db 0, 0 ; filler
 
@@ -169,12 +151,14 @@ Route1_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event  7,  7, BGEVENT_READ, Route1_NoFruit
+	bg_event  5,  7, BGEVENT_READ, Route1_NoFruit
 	bg_event  9, 27, BGEVENT_READ, Route1Sign
-	bg_event  7,  7, BGEVENT_READ, Route1NoBerry
-	bg_event  5,  7, BGEVENT_READ, Route1NoApricorn
 
 	def_object_events
-	object_event  7,  7, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, Route1BerryTree, EVENT_ROUTE_1_BERRY
-	object_event  5,  7, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, Route1ApricornTree, EVENT_ROUTE_1_APRICORN
+	object_event  7,  7, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route1_OranBerry, EVENT_ROUTE_1_ORAN_BERRY
+	object_event  5,  7, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, Route1_BLKApricorn, EVENT_ROUTE_1_BLK_APRICORN
 	object_event  5, 24, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route1PotionSample, -1
 	object_event 15, 13, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route1YoungsterLedges, -1
+
+;.GreyOverYellowOBPalette

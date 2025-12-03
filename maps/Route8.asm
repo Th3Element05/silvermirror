@@ -355,12 +355,12 @@ Route8_MapEvents:
 
 	def_bg_events
 	bg_event 11,  7, BGEVENT_READ, Route8UndergroundPathSign
-	bg_event  5, 16, BGEVENT_READ, Route8NoBerry
-	bg_event 49,  8, BGEVENT_READ, Route8NoApricorn
+	bg_event 48,  8, BGEVENT_READ, Route8NoBerry
+	bg_event  7, 16, BGEVENT_READ, Route8NoApricorn
 
 	def_object_events
-	object_event  5, 16, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route8BerryTree, EVENT_ROUTE_8_BERRY
-	object_event 49,  8, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, Route8ApricornTree, EVENT_ROUTE_8_APRICORN
+	object_event 48,  8, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route8BerryTree, EVENT_ROUTE_8_BERRY ;rawst
+	object_event  7, 16, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, Route8ApricornTree, EVENT_ROUTE_8_APRICORN ;ylw
 	object_event  4,  7, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerSuperNerdPat, -1
 	object_event  9, 11, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerPokefanMJoshua, -1
 	object_event 22,  5, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerLassDana, -1

@@ -1,4 +1,5 @@
 	object_const_def
+	const ROUTE24_LEPPA_BERRY
 	const ROUTE24_ROCKET
 
 Route24_MapScripts:
@@ -7,11 +8,39 @@ Route24_MapScripts:
 	scene_script Route24Noop2Scene, SCENE_ROUTE24_NOOP
 
 	def_callbacks
+	callback MAPCALLBACK_OBJECTS, Route24Fruittrees
+
+Route24Fruittrees:
+	checkflag ENGINE_DAILY_ROUTE_24_FRUIT
+	iftrue .NoFruit
+	appear ROUTE24_LEPPA_BERRY
+.NoFruit:
+	endcallback
 
 Route24Noop1Scene:
 Route24Noop2Scene:
 	end
 
+; fruit
+Route24_LeppaBerry:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, LEPPA_BERRY
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem LEPPA_BERRY, 2
+	iffalse .NoRoomInBag
+	disappear ROUTE24_LEPPA_BERRY
+	setflag ENGINE_DAILY_ROUTE_24_FRUIT
+.NoRoomInBag
+	closetext
+	end
+
+Route24_NoFruit:
+	farsjump Std_NoFruitScript
+
+; scripts
 Route24NuggetRocketCoordScript:
 	turnobject PLAYER, RIGHT
 	; fallthrough
@@ -91,6 +120,7 @@ Route24NuggetRocketAfterBattleText:
 	cont "TEAM ROCKET!"
 	done
 
+; trainers
 TrainerCamperIvan:
 	trainer CAMPER, IVAN, EVENT_BEAT_CAMPER_IVAN, CamperIvanSeenText, CamperIvanBeatenText, 0, .Script
 .Script:
@@ -201,8 +231,6 @@ NuggetBridgeAfterBattleText:
 	line "have no regrets!"
 	done
 
-
-
 TrainerCamperTanner:
 	trainer CAMPER, TANNER1, EVENT_BEAT_CAMPER_TANNER, CamperTannerSeenText, CamperTannerBeatenText, 0, .Script
 .Script:
@@ -229,6 +257,7 @@ CamperTannerAfterBattleText:
 	cont "bridge scared me!"
 	done
 
+; items
 Route24TMThunderWave:
 	itemball TM_THUNDER_WAVE
 
@@ -241,14 +270,16 @@ Route24_MapEvents:
 	coord_event 10, 15, SCENE_ROUTE24_NUGGET_ROCKET, Route24NuggetRocketCoordScript
 
 	def_bg_events
+	bg_event 11,  5, BGEVENT_READ, Route24_NoFruit
 
 	def_object_events
+	object_event 11,  5, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route24_LeppaBerry, EVENT_ROUTE_24_LEPPA_BERRY
 	object_event 11, 15, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, Route24NuggetRocketScript, EVENT_NUGGET_BRIDGE_ROCKET
 	object_event 11, 19, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerCamperIvan, -1
-	object_event 10, 22, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerLassLaura, -1
+	object_event 11, 22, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerLassLaura, -1
 	object_event 11, 25, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerYoungsterAlbert, -1
-	object_event 10, 28, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerLassShannon, -1
+	object_event 11, 28, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerLassShannon, -1
 	object_event 11, 31, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerBugCatcherWayne, -1
 	object_event  5, 20, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerCamperTanner, -1
-	object_event 10,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, Route24TMThunderWave, EVENT_ROUTE_24_TM_THUNDER_WAVE
+	object_event  6,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, Route24TMThunderWave, EVENT_ROUTE_24_TM_THUNDER_WAVE
 ;	object_event 24,  4, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerHikerRussell, -1

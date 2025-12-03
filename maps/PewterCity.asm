@@ -1,8 +1,8 @@
 	object_const_def
-	const PEWTERCITY_BERRY
-	const PEWTERCITY_BERRY_2
-	const PEWTERCITY_APRICORN
-	const PEWTERCITY_APRICORN_2
+	const PEWTERCITY_CHESTO_BERRY
+	const PEWTERCITY_PERSIM_BERRY
+	const PEWTERCITY_BLU_APRICORN
+	const PEWTERCITY_WHT_APRICORN
 	const PEWTERCITY_YOUNGSTER
 	const PEWTERCITY_SUPER_NERD1
 
@@ -21,38 +21,83 @@ PewterCityFlypointCallback:
 	setmapscene CINNABAR_ISLAND, SCENE_CINNABARISLAND_NOOP
 	endcallback
 
+PewterCityFruittrees:
+	checkflag ENGINE_DAILY_PEWTER_CITY_FRUIT
+	iftrue .NoFruit
+	appear PEWTERCITY_CHESTO_BERRY
+	appear PEWTERCITY_PERSIM_BERRY
+	appear PEWTERCITY_BLU_APRICORN
+	appear PEWTERCITY_WHT_APRICORN
+.NoFruit:
+	endcallback
+
 PewterCityNoop1Scene:
 PewterCityNoop2Scene:
 	end
 
-PewterCityFruittrees:
-;Berry:
-	checkflag ENGINE_DAILY_PEWTER_BERRY
-	iftrue .NoBerry
-	appear PEWTERCITY_BERRY
-.NoBerry:
-	;fallthrough
+; fruit
+PewterCity_ChestoBerry:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, CHESTO_BERRY
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem CHESTO_BERRY, 2
+	iffalse .NoRoomInBag
+	disappear PEWTERCITY_CHESTO_BERRY
+	setflag ENGINE_DAILY_PEWTER_CITY_FRUIT
+.NoRoomInBag
+	closetext
+	end
 
-;Apricorn:
-	checkflag ENGINE_DAILY_PEWTER_APRICORN
-	iftrue .NoApricorn
-	appear PEWTERCITY_APRICORN
-.NoApricorn:
-	;fallthrough
+PewterCity_PersimBerry:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, PERSIM_BERRY
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem PERSIM_BERRY, 2
+	iffalse .NoRoomInBag
+	disappear PEWTERCITY_PERSIM_BERRY
+	setflag ENGINE_DAILY_PEWTER_CITY_FRUIT
+.NoRoomInBag
+	closetext
+	end
 
-;BERRY_2:
-	checkflag ENGINE_DAILY_PEWTER_BERRY_2
-	iftrue .NoBERRY_2
-	appear PEWTERCITY_BERRY_2
-.NoBERRY_2:
-	;fallthrough
+PewterCity_BLUApricorn:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, BLU_APRICORN
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem BLU_APRICORN
+	iffalse .NoRoomInBag
+	disappear PEWTERCITY_BLU_APRICORN
+	setflag ENGINE_DAILY_PEWTER_CITY_FRUIT
+.NoRoomInBag
+	closetext
+	end
 
-;APRICORN_2:
-	checkflag ENGINE_DAILY_PEWTER_APRICORN_2
-	iftrue .NoAPRICORN_2
-	appear PEWTERCITY_APRICORN_2
-.NoAPRICORN_2:
-	endcallback
+PewterCity_WHTApricorn:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, WHT_APRICORN
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem WHT_APRICORN
+	iffalse .NoRoomInBag
+	disappear PEWTERCITY_WHT_APRICORN
+	setflag ENGINE_DAILY_PEWTER_CITY_FRUIT
+.NoRoomInBag
+	closetext
+	end
+
+PewterCity_NoFruit:
+	farsjump Std_NoFruitScript
 
 ; scripts
 YoungsterTakesYouToGymScript1:
@@ -382,81 +427,6 @@ PewterCityPokecenterSign:
 PewterCityMartSign:
 	jumpstd MartSignScript
 
-; berries
-PewterCityBerryTree:
-	opentext
-	writetext PewterCityBerryTreeText
-	promptbutton
-	writetext PewterCityHeyItsBerryText
-	promptbutton
-	verbosegiveitem RAWST_BERRY
-	iffalse .NoRoomInBag
-	disappear PEWTERCITY_BERRY
-	setflag ENGINE_DAILY_PEWTER_BERRY
-.NoRoomInBag
-	closetext
-	end
-
-PewterCityBerryTree2:
-	opentext
-	writetext PewterCityBerryTreeText
-	promptbutton
-	writetext PewterCityHeyItsBERRY_2Text
-	promptbutton
-	verbosegiveitem CHESTO_BERRY
-	iffalse .NoRoomInBag
-	disappear PEWTERCITY_BERRY_2
-	setflag ENGINE_DAILY_PEWTER_BERRY_2
-.NoRoomInBag
-	closetext
-	end
-
-PewterCityApricornTree:
-	opentext
-	writetext PewterCityApricornTreeText
-	promptbutton
-	writetext PewterCityHeyItsApricornText
-	promptbutton
-	verbosegiveitem BLU_APRICORN
-	iffalse .NoRoomInBag
-	disappear PEWTERCITY_APRICORN
-	setflag ENGINE_DAILY_PEWTER_APRICORN
-.NoRoomInBag
-	closetext
-	end
-
-PewterCityApricornTree2:
-	opentext
-	writetext PewterCityApricornTreeText
-	promptbutton
-	writetext PewterCityHeyItsAPRICORN_2Text
-	promptbutton
-	verbosegiveitem WHT_APRICORN
-	iffalse .NoRoomInBag
-	disappear PEWTERCITY_APRICORN_2
-	setflag ENGINE_DAILY_PEWTER_APRICORN_2
-.NoRoomInBag
-	closetext
-	end
-
-PewterCityNoBerry:
-	opentext
-	writetext PewterCityBerryTreeText
-	promptbutton
-	writetext PewterCityNothingHereText
-	waitbutton
-	closetext
-	end
-
-PewterCityNoApricorn:
-	opentext
-	writetext PewterCityApricornTreeText
-	promptbutton
-	writetext PewterCityNothingHereText
-	waitbutton
-	closetext
-	end
-
 ; movement ;
 PewterCityGoToGymMovement1:
 	step LEFT
@@ -555,41 +525,6 @@ PewterCityMuseumGuyLeavesMovement:
 	remove_object
 	step_end
 
-PewterCityBerryTreeText:
-	text "It's a"
-	line "BERRY tree…"
-	done
-
-PewterCityHeyItsBerryText:
-	text "Hey! It's"
-	line "RAWST BERRY!"
-	done
-
-PewterCityHeyItsBERRY_2Text:
-	text "Hey! It's"
-	line "CHESTO BERRY!"
-	done
-
-PewterCityApricornTreeText:
-	text "It's an"
-	line "APRICORN tree…"
-	done
-
-PewterCityHeyItsApricornText:
-	text "Hey! It's"
-	line "BLU APRICORN!"
-	done
-
-PewterCityHeyItsAPRICORN_2Text:
-	text "Hey! It's"
-	line "WHT APRICORN!"
-	done
-
-PewterCityNothingHereText:
-	text "There's nothing"
-	line "here…"
-	done
-
 PewterCity_MapEvents:
 	db 0, 0 ; filler
 
@@ -608,6 +543,10 @@ PewterCity_MapEvents:
 	coord_event 35, 19, SCENE_PEWTERCITY_FIGHT_BROCK, YoungsterTakesYouToGymScript3
 
 	def_bg_events
+	bg_event 29,  5, BGEVENT_READ, PewterCity_NoFruit
+	bg_event 29,  3, BGEVENT_READ, PewterCity_NoFruit
+	bg_event 31,  4, BGEVENT_READ, PewterCity_NoFruit
+	bg_event 33,  3, BGEVENT_READ, PewterCity_NoFruit
 	bg_event 15,  9, BGEVENT_READ, PewterCityMuseumSign
 	bg_event 11, 17, BGEVENT_READ, PewterCityGymSign
 	bg_event 33, 19, BGEVENT_READ, PewterCityPoliceNoticeSign
@@ -615,18 +554,16 @@ PewterCity_MapEvents:
 	bg_event 19, 29, BGEVENT_READ, PewterCityTrainerTips
 	bg_event 14, 25, BGEVENT_READ, PewterCityPokecenterSign
 	bg_event 24, 17, BGEVENT_READ, PewterCityMartSign
-	bg_event 31,  5, BGEVENT_READ, PewterCityNoBerry
-	bg_event 33,  5, BGEVENT_READ, PewterCityNoBerry
-	bg_event 31,  3, BGEVENT_READ, PewterCityNoApricorn
-	bg_event 29,  3, BGEVENT_READ, PewterCityNoApricorn
 
 	def_object_events
-	object_event 33,  5, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, PewterCityBerryTree, EVENT_PEWTER_BERRY
-	object_event 31,  5, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PewterCityBerryTree2, EVENT_PEWTER_BERRY_2
-	object_event 31,  3, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PewterCityApricornTree, EVENT_PEWTER_APRICORN
-	object_event 29,  3, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, PewterCityApricornTree2, EVENT_PEWTER_APRICORN_2
+	object_event 29,  3, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, PewterCity_ChestoBerry, EVENT_PEWTER_CITY_CHESTO_BERRY ;chesto
+	object_event 29,  5, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, PewterCity_PersimBerry, EVENT_PEWTER_CITY_PERSIM_BERRY ;persim
+	object_event 31,  4, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PewterCity_BLUApricorn, EVENT_PEWTER_CITY_BLU_APRICORN ;blu
+	object_event 33,  3, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, PewterCity_WHTApricorn, EVENT_PEWTER_CITY_WHT_APRICORN ;wht
 	object_event 35, 16, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PewterCityBlockingGuyScript, -1 ;EVENT_PEWTER_CITY_BLOCKING_GUY
 	object_event 27, 17, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PewterCitySuperNerd1Script, -1
 	object_event  8, 15, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterCityCooltrainerFScript, -1
 	object_event 17, 25, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterCityYoungsterScript, -1
 	object_event 26, 25, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterCitySuperNerd2Script, -1
+
+.;PinkOverYellowOBPalette

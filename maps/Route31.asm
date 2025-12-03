@@ -506,12 +506,12 @@ Route31_MapEvents:
 	def_bg_events
 	bg_event  7,  5, BGEVENT_READ, Route31Sign
 	bg_event 31,  5, BGEVENT_READ, DarkCaveSign
-	bg_event 30,  7, BGEVENT_READ, Route31NoBerry
-	bg_event 16,  7, BGEVENT_READ, Route31NoApricorn
+	bg_event 16,  7, BGEVENT_READ, Route31NoBerry
+	bg_event 17,  6, BGEVENT_READ, Route31NoApricorn
 
 	def_object_events
-	object_event 30,  7, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, Route31BerryTree, EVENT_ROUTE_31_BERRY
-	object_event 16,  7, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, Route31ApricornTree, EVENT_ROUTE_31_APRICORN
+	object_event 16,  7, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, Route31BerryTree, EVENT_ROUTE_31_BERRY ;remove
+	object_event 17,  6, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, Route31ApricornTree, EVENT_ROUTE_31_APRICORN ;remove
 ;	object_event 17,  7, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31MailRecipientScript, -1
 ;	object_event  9,  5, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31YoungsterScript, -1
 ;	object_event 21, 13, SPRITE_BOY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TrainerBugCatcherWade1, -1
