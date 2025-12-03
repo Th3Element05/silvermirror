@@ -378,7 +378,7 @@ ENDM
 
 	map_attributes Route9, ROUTE_9, $2c, WEST | EAST
 	connection west, CeruleanCity, CERULEAN_CITY, -4
-	connection east, Route10North, ROUTE_10_NORTH, 0 ;-1
+	connection east, Route10North, ROUTE_10_NORTH, -7 ;0 ;-1
 
 	map_attributes Route24, ROUTE_24, $43, SOUTH | EAST
 	connection south, CeruleanCity, CERULEAN_CITY, -5
@@ -407,7 +407,7 @@ ENDM
 
 	map_attributes Route10North, ROUTE_10_NORTH, $2c, SOUTH | WEST
 	connection south, Route10South, ROUTE_10_SOUTH, 0
-	connection west, Route9, ROUTE_9, 0 ;1
+	connection west, Route9, ROUTE_9, 7 ;0 ;-1
 
 ;	map_attributes Route10, ROUTE_10, $2c, SOUTH | WEST
 ;	connection south, LavenderTown, LAVENDER_TOWN, 0
