@@ -235,6 +235,14 @@ KantoWaterWildMons:
 	db 15, SEAKING    ; 10
 	end_water_wildmons
 
+	def_water_wildmons BEHIND_BILLS_HOUSE ;GEN1
+	db 6 percent ; encounter rate
+	db 10, GOLDEEN    ; 50
+	db 10, PSYDUCK    ; 30
+	db  5, MAGIKARP   ; 10
+	db 15, SEAKING    ; 10
+	end_water_wildmons
+
 	def_water_wildmons SAFARI_ZONE_AREA_1 ;GEN1
 	db 6 percent ; encounter rate
 	db  9, SLOWPOKE   ; 50
