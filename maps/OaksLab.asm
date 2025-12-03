@@ -61,10 +61,14 @@ OakScript:
 
 .OakGiveBalls
 	writetext OaksLabGetPokeballsText
-	playsound SFX_ITEM
-	waitsfx
+;	playsound SFX_ITEM
+;	waitsfx
+;	promptbutton
+;	giveitem POKE_BALL, 5
+;
 	promptbutton
-	giveitem POKE_BALL, 5
+	verbosegiveitem POKE_BALL, 5
+;
 	writetext OaksLabPokeballExplainationText
 	waitbutton
 	closetext
@@ -925,9 +929,9 @@ OaksLabGetPokeballsText:
 	line "them! Use these"
 	cont "to capture wild"
 	cont "#MON."
-
-	para "<PLAYER> received"
-	line "# BALLs."
+;
+;	para "<PLAYER> received"
+;	line "# BALLs."
 	done
 
 OaksLabPokeballExplainationText:

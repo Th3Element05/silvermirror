@@ -371,7 +371,7 @@ PlayersHouse1FTVText:
 	text "There's a movie on"
 	line "TV: Stars dot the"
 	cont "sky as two boys"
-	line "ride on a train…"
+	cont "ride on a train…"
 
 	para "I'd better get"
 	line "rolling too!"
