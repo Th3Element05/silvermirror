@@ -34,13 +34,7 @@ Kurt1:
 	faceplayer
 	opentext
 	checkevent EVENT_MET_KURT
-	iftrue .GotLevelBall
-	writetext KurtsHouseKurtBallsFromApricornsText
-	promptbutton
-;	verbosegiveitem LEVEL_BALL
-;	iffalse .NoRoomForBall
-	setevent EVENT_MET_KURT
-.GotLevelBall:
+	iffalse .IMakeBallsFromApricorns
 	checkevent EVENT_GAVE_KURT_RED_APRICORN
 	iftrue .GiveLevelBall
 	checkevent EVENT_GAVE_KURT_BLU_APRICORN
@@ -58,12 +52,12 @@ Kurt1:
 	checkevent EVENT_CAN_GIVE_GS_BALL_TO_KURT
 	iftrue .CanGiveGSBallToKurt
 .NoGSBall:
-;	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
-;	iftrue .CheckApricorns
-;	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_3
-;	iftrue .CheckApricorns
-;	writetext KurtsHouseKurtBallsFromApricornsText
-;	waitbutton
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
+	iftrue .CheckApricorns
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_3
+	iftrue .CheckApricorns
+	writetext KurtsHouseKurtBallsFromApricornsText
+	waitbutton
 .CheckApricorns:
 	checkitem RED_APRICORN
 	iftrue .AskApricorn
@@ -79,23 +73,24 @@ Kurt1:
 	iftrue .AskApricorn
 	checkitem PNK_APRICORN
 	iftrue .AskApricorn
-;	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
-;	iftrue .ThatTurnedOutGreat
-;	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_3
-;	iftrue .IMakeBallsFromApricorns
-;	closetext
-;	end
-;
-;.IMakeBallsFromApricorns:
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
+	iftrue .ThatTurnedOutGreat
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_3
+	iftrue .IMakeBallsFromApricorns
+	closetext
+	end
+
+.IMakeBallsFromApricorns:
 	writetext KurtsHouseKurtBallsFromApricornsText
 	waitbutton
 	closetext
+	setevent EVENT_MET_KURT
 	end
 
 .AskApricorn:
 	writetext KurtsHouseKurtAskYouHaveAnApricornText
 	promptbutton
-;	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_3
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_3
 	special SelectApricornForKurt
 	ifequal FALSE, .Cancel
 	ifequal BLU_APRICORN, .Blu
@@ -133,43 +128,30 @@ Kurt1:
 	sjump .GaveKurtApricorns
 
 .GaveKurtApricorns:
-	setflag ENGINE_KURT_MAKING_BALLS
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+.WaitForApricorns:
 	writetext KurtsHouseKurtIllStartRightAwayText
 	waitbutton
 	closetext
 	special FadeBlackQuickly
 	special ReloadSpritesNoPalettes
-	disappear KURTSHOUSE_KURT1
-	appear KURTSHOUSE_KURT2
-;	disappear KURTSHOUSE_TWIN1
-;	appear KURTSHOUSE_TWIN2
 	pause 15
 	special FadeInQuickly
-;	opentext
-;	sjump Kurt1
+	opentext
+	sjump Kurt1
 	end
 
 .Cancel:
 	writetext KurtsHouseKurtThatsALetdownText
 	waitbutton
-.NoRoomForBall:
 	closetext
 	end
 
 .ThatTurnedOutGreat:
 	writetext KurtsHouseKurtTurnedOutGreatText
 	waitbutton
+.NoRoomForBall:
 	closetext
-	clearflag ENGINE_KURT_MAKING_BALLS
-	special FadeBlackQuickly
-	special ReloadSpritesNoPalettes
-	disappear KURTSHOUSE_KURT2
-	appear KURTSHOUSE_KURT1
-	disappear KURTSHOUSE_TWIN2
-	appear KURTSHOUSE_TWIN1
-	pause 15
-	special FadeInQuickly
 	end
 
 .GiveLevelBall:
@@ -239,12 +221,6 @@ Kurt1:
 	setevent EVENT_GAVE_GS_BALL_TO_KURT
 	takeitem GS_BALL
 	setflag ENGINE_KURT_MAKING_BALLS
-	special FadeBlackQuickly
-	special ReloadSpritesNoPalettes
-	disappear KURTSHOUSE_KURT1
-	appear KURTSHOUSE_KURT2
-	pause 15
-	special FadeInQuickly
 	end
 
 .GaveGSBallToKurt:
@@ -288,10 +264,13 @@ Kurt1:
 	end
 
 Kurt2:
-	checkevent EVENT_GAVE_GS_BALL_TO_KURT
-	iffalse Kurt1
 	faceplayer
 	opentext
+	checkevent EVENT_GAVE_GS_BALL_TO_KURT
+	iftrue KurtScript_ImCheckingItNow
+	end
+
+KurtScript_ImCheckingItNow:
 	writetext KurtsHouseKurtImCheckingItNowText
 	waitbutton
 	turnobject KURTSHOUSE_KURT2, UP
@@ -323,9 +302,8 @@ KurtsHouseKurtAskYouHaveAnApricornText:
 KurtsHouseKurtIllStartRightAwayText:
 	text "KURT: Splendid!"
 
-	para "I'll get started"
-	line "right away, it"
-	cont "won't take long."
+	para "I'll start working"
+	line "right away."
 	done
 
 KurtsHouseKurtThatsALetdownText:
@@ -347,12 +325,12 @@ KurtsHouseKurtTurnedOutGreatText:
 	line "#MON with it."
 	done
 
-;KurtsHouseKurtGranddaughterHelpingWorkFasterText:
-;	text "KURT: Now that my"
-;	line "granddaughter is"
-;	cont "helping me, I can"
-;	cont "work much faster."
-;	done
+KurtsHouseKurtGranddaughterHelpingWorkFasterText:
+	text "KURT: Now that my"
+	line "granddaughter is"
+	cont "helping me, I can"
+	cont "work much faster."
+	done
 
 KurtsHouseKurtWhatIsThatText:
 	text "Wh-what is that?"
@@ -470,7 +448,9 @@ KurtsHouseKurtGoAroundPlayerThenExitHouseMovement:
 KurtsGranddaughter1:
 	faceplayer
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
-	iftrue KurtsGranddaughterHelpScript
+	iftrue KurtsGranddaughter2Subscript
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
+	iftrue KurtsGranddaughterFunScript
 	checkevent EVENT_FOREST_IS_RESTLESS
 	iftrue .Lonely
 	opentext
@@ -488,10 +468,11 @@ KurtsGranddaughter1:
 
 KurtsGranddaughter2:
 	faceplayer
+KurtsGranddaughter2Subscript:
 	opentext
 	checkevent EVENT_GAVE_GS_BALL_TO_KURT
 	iftrue .GSBall
-	writetext KurtsGranddaughterFunText
+	writetext KurtsGranddaughterHelpText
 	waitbutton
 	closetext
 	turnobject KURTSHOUSE_TWIN2, RIGHT
@@ -504,9 +485,9 @@ KurtsGranddaughter2:
 	turnobject KURTSHOUSE_TWIN2, RIGHT
 	end
 
-KurtsGranddaughterHelpScript:
+KurtsGranddaughterFunScript:
 	opentext
-	writetext KurtsGranddaughterHelpText
+	writetext KurtsGranddaughterFunText
 	waitbutton
 	closetext
 	end
@@ -554,22 +535,15 @@ KurtsGranddaughterGSBallText:
 KurtsHouseSlowpoke:
 	faceplayer
 	opentext
-	writetext KurtsHouseSlowpokeText1
-	pause 60
-	writetext KurtsHouseSlowpokeText2
+	writetext KurtsHouseSlowpokeText
 	cry SLOWPOKE
 	waitbutton
 	closetext
 	end
 
-KurtsHouseSlowpokeText1:
+KurtsHouseSlowpokeText:
 	text "SLOWPOKE: …"
-
-	para "<……> <……> <……>"
-	done
-
-KurtsHouseSlowpokeText2:
-	text "<……> <……>Yawn?"
+	line "Yawn?"
 	done
 
 KurtsHouseOakPhoto:
@@ -619,4 +593,4 @@ KurtsHouse_MapEvents:
 	object_event  5,  3, SPRITE_TWIN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, KurtsGranddaughter1, EVENT_KURTS_HOUSE_GRANDDAUGHTER_1
 	object_event 14,  3, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Kurt2, EVENT_KURTS_HOUSE_KURT_2
 	object_event 11,  4, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, KurtsGranddaughter2, EVENT_KURTS_HOUSE_GRANDDAUGHTER_2
-	object_event  6,  3, SPRITE_SLOWPOKE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, KurtsHouseSlowpoke, -1
+	object_event  6,  3, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, KurtsHouseSlowpoke, -1
