@@ -164,21 +164,21 @@
 	tilecoll WATER, WATER, WATER, WALL ; a3
 	tilecoll WALL, WALL, WALL, WALL ; a4
 	tilecoll FLOOR, FLOOR, WALL, WALL ; a5
-	tilecoll WATER, WATER, BUOY, BUOY ; a6
+	tilecoll FLOOR, WALL, FLOOR, FLOOR ; a6
 	tilecoll WALL, WALL, WALL, WALL ; a7
-	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; a8
-	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; a9
-	tilecoll WATER, WATER, BUOY, BUOY ; aa
+	tilecoll FLOOR, FLOOR, WALL, FLOOR ; a8
+	tilecoll FLOOR, FLOOR, WALL, FLOOR ; a9
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; aa
 	tilecoll WALL, WALL, WALL, WALL ; ab
-	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; ac
-	tilecoll WALL, FLOOR, FLOOR, FLOOR ; ad
-	tilecoll FLOOR, FLOOR, WALL, FLOOR ; ae
+	tilecoll WALL, FLOOR, FLOOR, FLOOR ; ac
+	tilecoll FLOOR, FLOOR, FLOOR, WALL ; ad
+	tilecoll WALL, FLOOR, FLOOR, FLOOR ; ae
 	tilecoll FLOOR, FLOOR, FLOOR, WALL ; af
-	tilecoll FLOOR, FLOOR, WALL, WALL ; b0
-	tilecoll FLOOR, FLOOR, WALL, FLOOR ; b1
-	tilecoll FLOOR, WALL, FLOOR, FLOOR ; b2
-	tilecoll WALL, FLOOR, FLOOR, FLOOR ; b3
+	tilecoll WATER, WATER, BUOY, BUOY ; b0
+	tilecoll FLOOR, FLOOR, WALL, WALL ; b1
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; b2
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; b3
 	tilecoll FLOOR, WALL, FLOOR, WALL ; b4
 	tilecoll FLOOR, WALL, FLOOR, FLOOR ; b5
 	tilecoll WALL, WALL, FLOOR, FLOOR ; b6
-	tilecoll FLOOR, FLOOR, FLOOR, WALL ; b7
+	tilecoll WATER, WATER, BUOY, BUOY ; b7
