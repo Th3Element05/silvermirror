@@ -190,31 +190,31 @@ LoadSpecialMapOBPalette:
 
 MapSpecificOBPalettes:
 ;kanto
-	_use_palette_routine_for_map ROUTE_1, .GreyOverYellowOBPalette                  ;blk
+	_use_palette_routine_for_map ROUTE_1, .GrayOverYellowOBPalette                  ;blk
 	_use_palette_routine_for_map VIRIDIAN_FOREST, .PinkOverYellowOBPalette          ;pecha
 	_use_palette_routine_for_map ROUTE_2_NORTH, .PinkOverYellowOBPalette            ;pnk
 	_use_palette_routine_for_map PEWTER_CITY, .PinkOverYellowOBPalette              ;persim
 	_use_palette_routine_for_map PEWTER_POKECENTER_1F, .PinkOverYellowOBPalette     ;jigglypuff
 	_use_palette_routine_for_map CERULEAN_CITY, .PinkOverYellowOBPalette            ;slowbro
-	_use_palette_routine_for_map VERMILION_CITY, .GreyOverYellowOBPalette           ;machop
+	_use_palette_routine_for_map VERMILION_CITY, .GrayOverYellowOBPalette           ;machop
 	_use_palette_routine_for_map SS_ANNE_ROOMS_1F, .PinkOverYellowOBPalette         ;clefairy
-	_use_palette_routine_for_map SS_ANNE_ROOMS_B1F, .GreyOverYellowOBPalette        ;machoke
+	_use_palette_routine_for_map SS_ANNE_ROOMS_B1F, .GrayOverYellowOBPalette        ;machoke
 	_use_palette_routine_for_map CELADON_MANSION_1F, .PinkOverYellowOBPalette       ;clefairy
 	_use_palette_routine_for_map FUCHSIA_CITY, .PinkOverSilverOBPalette             ;chansey (aspear)
 	_use_palette_routine_for_map SAFARI_ZONE_AREA_3, .RockOverTreeOBPalette         ;dry grass
-	_use_palette_routine_for_map ROUTE_20, .GreyOverYellowOBPalette                 ;geodude
-	_use_palette_routine_for_map FIGHTING_DOJO, .GreyOverYellowOBPalette            ;blackbelt
+	_use_palette_routine_for_map ROUTE_20, .GrayOverYellowOBPalette                 ;geodude
+	_use_palette_routine_for_map FIGHTING_DOJO, .GrayOverSilverOBPalette            ;blackbelt
 	_use_palette_routine_for_map COPYCATS_HOUSE_1F, .PinkOverYellowOBPalette        ;chansey
 	_use_palette_routine_for_map COPYCATS_HOUSE_2F, .PinkOverYellowOBPalette        ;dolls
 	_use_palette_routine_for_map MOUNT_MOON_SQUARE, .PinkOverYellowOBPalette        ;clefairy
 ;johto
-	_use_palette_routine_for_map DANCE_THEATER, .GreyOverYellowOBPalette            ;rhyhorn
-	_use_palette_routine_for_map ROUTE_42, .PinkOverSilverOBPalette                 ;pnk
-	_use_palette_routine_for_map ROUTE_37, .GreyOverYellowOBPalette                 ;blk
-	_use_palette_routine_for_map GOLDENROD_DEPT_STORE_B1F, .GreyOverYellowOBPalette ;machoke
+	_use_palette_routine_for_map DANCE_THEATER, .GrayOverYellowOBPalette            ;rhyhorn
+	_use_palette_routine_for_map ROUTE_37, .GrayOverYellowOBPalette                 ;blk
+	_use_palette_routine_for_map GOLDENROD_DEPT_STORE_B1F, .GrayOverYellowOBPalette ;machoke
 	_use_palette_routine_for_map AZALEA_TOWN, .PinkOverYellowOBPalette              ;slowpoke
-	_use_palette_routine_for_map ROUTE_33, .GreyOverYellowOBPalette                 ;blk
+	_use_palette_routine_for_map ROUTE_33, .GrayOverYellowOBPalette                 ;blk
 	_use_palette_routine_for_map ROUTE_30, .PinkOverYellowOBPalette                 ;pecha, pnk
+	_use_palette_routine_for_map ROUTE_42, .PinkOverSilverOBPalette                 ;pnk
 	_use_palette_routine_for_map ROUTE_43, .PinkOverYellowOBPalette                 ;persim
 	db -1 ; terminator
 
@@ -225,11 +225,11 @@ MapSpecificOBPalettes:
 	ld hl, PinkOverYellow
 	jr .finish
 
-.GreyOverYellowOBPalette:
+.GrayOverYellowOBPalette:
 	ld a, [wTimeOfDayPal]
 	maskbits NUM_DAYTIMES
 	ld bc, 8 palettes
-	ld hl, GreyOverYellow
+	ld hl, GrayOverYellow
 	jr .finish
 
 .PinkOverSilverOBPalette:
@@ -239,12 +239,12 @@ MapSpecificOBPalettes:
 	ld hl, PinkOverSilver
 	jr .finish
 
-;.GreyOverSilverOBPalette:
-;	ld a, [wTimeOfDayPal]
-;	maskbits NUM_DAYTIMES
-;	ld bc, 8 palettes
-;	ld hl, GreyOverSilver
-;	jr .finish
+.GrayOverSilverOBPalette:
+	ld a, [wTimeOfDayPal]
+	maskbits NUM_DAYTIMES
+	ld bc, 8 palettes
+	ld hl, GrayOverSilver
+	jr .finish
 
 .RockOverTreeOBPalette:
 	ld a, [wTimeOfDayPal]
