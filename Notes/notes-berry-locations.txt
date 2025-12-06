@@ -1,4 +1,4 @@
-KANTO
+	KANTO
 	ROUTE 1
 	oran	blue
 	blk	.GreyOverYellow
@@ -22,84 +22,84 @@ KANTO
 	ROUTE 25
 	lum	green
 
-ROUTE 8
-rawst	tree
-ylw	yellow
+	ROUTE 8
+	rawst	tree
+	ylw	yellow
 
-ROUTE 11
-cheri	red
-grn	green
+	ROUTE 11
+	cheri	red
+	grn	green
 
-ROUTE 16
-sitrus	yellow
+	ROUTE 16
+	sitrus	yellow
 
-FUCHSIA CITY
-chansey	.PinkOverSilver
-aspear	yellow
-red	red
+	FUCHSIA CITY
+	chansey	.PinkOverSilver
+	aspear	yellow
+	red	red
 
-ROUTE 26
-leppa	red
-sitrus	yellow
+	ROUTE 26
+	leppa	red
+	sitrus	yellow
 
 
 JOHTO
-ROUTE 39
-oran	blue
+	ROUTE 39
+	oran	blue
 
-ROUTE 38
-chesto	purple
-wht	silver
+	ROUTE 38
+	chesto	purple
+	wht	silver
 
-ROUTE 37
-red	red
-blu	blue
-blk	.GreyOverYellow
+	ROUTE 37
+	red	red
+	blu	blue
+	blk	.GreyOverYellow
 
-ROUTE 36
-rawst	tree
+	ROUTE 36
+	rawst	tree
 
-ROUTE 35
-leppa	red
-grn	green
+	ROUTE 35
+	leppa	red
+	grn	green
 
-AZALEA
-wht	silver
+	AZALEA
+	wht	silver
 
-ROUTE 33
-blk	.GreyOverYellow
+	ROUTE 33
+	blk	.GreyOverYellow
 
-VIOLET CITY
-ylw	yellow
+	VIOLET CITY
+	ylw	yellow
 
-ROUTE 30
-oran
-pecha	.PinkOverYellow
-pnk	.PinkOverYellow
+	ROUTE 30
+	oran
+	pecha	.PinkOverYellow
+	pnk	.PinkOverYellow
 
-ROUTE 42
-pnk	.PinkOverSilver
-grn	green
-ylw	yellow
+	ROUTE 29
+	oran	blue
 
-ROUTE 43
-persim	.PinkOverYellow
-blu	blue
+	ROUTE 42
+	pnk	.PinkOverSilver
+	grn	green
+	ylw	yellow
 
-ROUTE 44
-aspear	yellow
-red	red
+	ROUTE 43
+	persim	.PinkOverYellow
+	blu	blue
 
-ROUTE 45
-leppa	red
-lum	green
+	ROUTE 44
+	aspear	yellow
+	red	red
 
-ROUTE 46
-cheri	red
-sitrus	yellow
+	ROUTE 45
+	leppa	red
+	lum	green
 
-ROUTE 29
-oran	blue
+	ROUTE 46
+	cheri	red
+	sitrus	yellow
 
 
 
