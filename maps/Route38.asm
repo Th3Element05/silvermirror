@@ -1,6 +1,6 @@
 	object_const_def
-	const ROUTE_38_BERRY
-	const ROUTE_38_APRICORN
+	const ROUTE38_CHESTO_BERRY
+	const ROUTE38_WHT_APRICORN
 
 Route38_MapScripts:
 	def_scene_scripts
@@ -9,20 +9,48 @@ Route38_MapScripts:
 	callback MAPCALLBACK_OBJECTS, Route38Fruittrees
 
 Route38Fruittrees:
-.Berry:
-	checkflag ENGINE_DAILY_ROUTE_38_BERRY
-	iftrue .NoBerry
-	appear ROUTE_38_BERRY
-.NoBerry:
-	;fallthrough
-
-.Apricorn:
-	checkflag ENGINE_DAILY_ROUTE_38_APRICORN
-	iftrue .NoApricorn
-	appear ROUTE_38_APRICORN
-.NoApricorn:
+	checkflag ENGINE_DAILY_ROUTE_38_FRUIT
+	iftrue .NoFruit
+	appear ROUTE38_CHESTO_BERRY
+	appear ROUTE38_WHT_APRICORN
+.NoFruit:
 	endcallback
 
+; fruit
+Route38_ChestoBerry:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, CHESTO_BERRY
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem CHESTO_BERRY, 2
+	iffalse .NoRoomInBag
+	disappear ROUTE38_CHESTO_BERRY
+	setflag ENGINE_DAILY_ROUTE_38_FRUIT
+.NoRoomInBag
+	closetext
+	end
+
+Route38_WHTApricorn:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, WHT_APRICORN
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem WHT_APRICORN
+	iffalse .NoRoomInBag
+	disappear ROUTE38_WHT_APRICORN
+	setflag ENGINE_DAILY_ROUTE_38_FRUIT
+.NoRoomInBag
+	closetext
+	end
+
+Route38_NoFruit:
+	farsjump Std_NoFruitScript
+
+; trainers
 TrainerLassConnie:
 	trainer LASS, CONNIE, EVENT_BEAT_LASS_CONNIE, LassConnieSeenText, LassConnieBeatenText, 0, .Script
 .Script
@@ -197,77 +225,6 @@ Route38TrainerTipsText:
 	cont "its evolution."
 	done
 
-Route38BerryTree:
-	opentext
-	writetext Route38BerryTreeText
-	promptbutton
-	writetext Route38HeyItsBerryText
-	promptbutton
-	verbosegiveitem ORAN_BERRY
-	iffalse .NoRoomInBag
-	disappear ROUTE_38_BERRY
-	setflag ENGINE_DAILY_ROUTE_38_BERRY
-.NoRoomInBag
-	closetext
-	end
-
-Route38ApricornTree:
-	opentext
-	writetext Route38ApricornTreeText
-	promptbutton
-	writetext Route38HeyItsApricornText
-	promptbutton
-	verbosegiveitem WHT_APRICORN
-	iffalse .NoRoomInBag
-	disappear ROUTE_38_APRICORN
-	setflag ENGINE_DAILY_ROUTE_38_APRICORN
-.NoRoomInBag
-	closetext
-	end
-
-Route38NoBerry:
-	opentext
-	writetext Route38BerryTreeText
-	promptbutton
-	writetext Route38NothingHereText
-	waitbutton
-	closetext
-	end
-
-Route38NoApricorn:
-	opentext
-	writetext Route38ApricornTreeText
-	promptbutton
-	writetext Route38NothingHereText
-	waitbutton
-	closetext
-	end
-
-Route38BerryTreeText:
-	text "It's a"
-	line "BERRY tree…"
-	done
-
-Route38HeyItsBerryText:
-	text "Hey! It's"
-	line "ORAN BERRY!"
-	done
-
-Route38ApricornTreeText:
-	text "It's an"
-	line "APRICORN tree…"
-	done
-
-Route38HeyItsApricornText:
-	text "Hey! It's"
-	line "WHT APRICORN!"
-	done
-
-Route38NothingHereText:
-	text "There's nothing"
-	line "here…"
-	done
-
 Route38_MapEvents:
 	db 0, 0 ; filler
 
@@ -278,14 +235,14 @@ Route38_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 12, 10, BGEVENT_READ, Route38_NoFruit
+	bg_event 12,  9, BGEVENT_READ, Route38_NoFruit
 	bg_event 33,  7, BGEVENT_READ, Route38Sign
 	bg_event  5, 13, BGEVENT_READ, Route38TrainerTips
-	bg_event 12, 10, BGEVENT_READ, Route38NoBerry
-	bg_event 12,  9, BGEVENT_READ, Route38NoApricorn
 
 	def_object_events
-	object_event 12, 10, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route38BerryTree, EVENT_ROUTE_38_BERRY ;chesto
-	object_event 12,  9, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, Route38ApricornTree, EVENT_ROUTE_38_APRICORN ;blu
+	object_event 12, 10, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, Route38_ChestoBerry, EVENT_ROUTE_38_CHESTO_BERRY
+	object_event 12,  9, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, Route38_WHTApricorn, EVENT_ROUTE_38_WHT_APRICORN
 	object_event 14,  3, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerLassConnie, -1 ;dana
 	object_event 24,  5, SPRITE_SAILOR, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSailorHuey, -1 ;harry
 	object_event  5,  8, SPRITE_BEAUTY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerBeautyEmma, -1 ;olivia

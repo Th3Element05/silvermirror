@@ -1,16 +1,6 @@
 	object_const_def
-;	const ROUTE_44_FISHER1
-;	const ROUTE_44_FISHER2
-;	const ROUTE_44_YOUNGSTER1
-;	const ROUTE_44_SUPER_NERD
-;	const ROUTE_44_YOUNGSTER2
-;	const ROUTE_44_COOLTRAINER_M
-;	const ROUTE_44_COOLTRAINER_F
-	const ROUTE_44_BERRY
-	const ROUTE_44_APRICORN
-	const ROUTE_44_POKE_BALL1
-	const ROUTE_44_POKE_BALL2
-	const ROUTE_44_POKE_BALL3
+	const ROUTE44_ASPEAR_BERRY
+	const ROUTE44_RED_APRICORN
 
 Route44_MapScripts:
 	def_scene_scripts
@@ -19,19 +9,47 @@ Route44_MapScripts:
 	callback MAPCALLBACK_OBJECTS, Route44Fruittrees
 
 Route44Fruittrees:
-.Berry:
-	checkflag ENGINE_DAILY_ROUTE_44_BERRY
-	iftrue .NoBerry
-	appear ROUTE_44_BERRY
-.NoBerry:
-	;fallthrough
-
-.Apricorn:
-	checkflag ENGINE_DAILY_ROUTE_44_APRICORN
-	iftrue .NoApricorn
-	appear ROUTE_44_APRICORN
-.NoApricorn:
+	checkflag ENGINE_DAILY_ROUTE_44_FRUIT
+	iftrue .NoFruit
+	appear ROUTE44_ASPEAR_BERRY
+	appear ROUTE44_RED_APRICORN
+.NoFruit:
 	endcallback
+
+; fruit
+Route44_AspearBerry:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, ASPEAR_BERRY
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem ASPEAR_BERRY, 2
+	iffalse .NoRoomInBag
+	disappear ROUTE44_ASPEAR_BERRY
+	setflag ENGINE_DAILY_ROUTE_44_FRUIT
+.NoRoomInBag
+	closetext
+	end
+
+Route44_REDApricorn:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, RED_APRICORN
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem RED_APRICORN
+	iffalse .NoRoomInBag
+	disappear ROUTE44_RED_APRICORN
+	setflag ENGINE_DAILY_ROUTE_44_FRUIT
+.NoRoomInBag
+	closetext
+	end
+
+Route44_NoFruit:
+	farsjump Std_NoFruitScript
+
 
 ;TrainerBirdKeeperVance1:
 ;	trainer BIRD_KEEPER, VANCE1, EVENT_BEAT_BIRD_KEEPER_VANCE, BirdKeeperVance1SeenText, BirdKeeperVance1BeatenText, 0, .Script
@@ -309,56 +327,14 @@ Route44Fruittrees:
 ;	end
 
 Route44Sign1:
-	jumptext Route44Sign1Text
-
 Route44Sign2:
-	jumptext Route44Sign2Text
+	jumptext Route44SignText
+Route44SignText:
+	text "ROUTE 44"
 
-Route44BerryTree:
-	opentext
-	writetext Route44BerryTreeText
-	promptbutton
-	writetext Route44HeyItsBerryText
-	promptbutton
-	verbosegiveitem ASPEAR_BERRY
-	iffalse .NoRoomInBag
-	disappear ROUTE_44_BERRY
-	setflag ENGINE_DAILY_ROUTE_44_BERRY
-.NoRoomInBag
-	closetext
-	end
-
-Route44ApricornTree:
-	opentext
-	writetext Route44ApricornTreeText
-	promptbutton
-	writetext Route44HeyItsApricornText
-	promptbutton
-	verbosegiveitem RED_APRICORN
-	iffalse .NoRoomInBag
-	disappear ROUTE_44_APRICORN
-	setflag ENGINE_DAILY_ROUTE_44_APRICORN
-.NoRoomInBag
-	closetext
-	end
-
-Route44NoBerry:
-	opentext
-	writetext Route44BerryTreeText
-	promptbutton
-	writetext Route44NothingHereText
-	waitbutton
-	closetext
-	end
-
-Route44NoApricorn:
-	opentext
-	writetext Route44ApricornTreeText
-	promptbutton
-	writetext Route44NothingHereText
-	waitbutton
-	closetext
-	end
+	para "MAHOGANY TOWN -"
+	line "BLACKTHORN CITY"
+	done
 
 Route44MaxRevive:
 	itemball MAX_REVIVE
@@ -546,43 +522,6 @@ Route44MaxRepel:
 ;	cont "today--an elite."
 ;	done
 
-Route44Sign1Text:
-	text "ROUTE 44"
-	line "ICE PATH AHEAD"
-	done
-
-Route44Sign2Text:
-	text "ROUTE 44"
-
-	para "MAHOGANY TOWN -"
-	line "BLACKTHORN CITY"
-	done
-
-Route44BerryTreeText:
-	text "It's a"
-	line "BERRY tree…"
-	done
-
-Route44HeyItsBerryText:
-	text "Hey! It's"
-	line "ASPEAR BERRY!"
-	done
-
-Route44ApricornTreeText:
-	text "It's an"
-	line "APRICORN tree…"
-	done
-
-Route44HeyItsApricornText:
-	text "Hey! It's"
-	line "RED APRICORN!"
-	done
-
-Route44NothingHereText:
-	text "There's nothing"
-	line "here…"
-	done
-
 Route44_MapEvents:
 	db 0, 0 ; filler
 
@@ -592,13 +531,15 @@ Route44_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 53,  7, BGEVENT_READ, Route44Sign1
+	bg_event 15,  3, BGEVENT_READ, Route44_NoFruit
+	bg_event  9,  5, BGEVENT_READ, Route44_NoFruit
+	bg_event 51,  5, BGEVENT_READ, Route44Sign1
 	bg_event  6, 10, BGEVENT_READ, Route44Sign2
 ;	bg_event 32,  9, BGEVENT_ITEM, Route44HiddenElixer
-	bg_event 15,  3, BGEVENT_READ, Route44NoBerry
-	bg_event  9,  5, BGEVENT_READ, Route44NoApricorn
 
 	def_object_events
+	object_event 15,  3, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, Route44_AspearBerry, EVENT_ROUTE_44_ASPEAR_BERRY
+	object_event  9,  5, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route44_REDApricorn, EVENT_ROUTE_44_RED_APRICORN
 ;	object_event 35,  3, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerFisherWilton1, -1
 ;	object_event 19, 13, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerFisherEdgar, -1
 ;	object_event 10,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerPsychicPhil, -1
@@ -606,8 +547,6 @@ Route44_MapEvents:
 ;	object_event 51,  5, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerBirdKeeperVance1, -1
 ;	object_event 41, 15, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TrainerCooltrainermAllen, -1
 ;	object_event 31, 14, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TrainerCooltrainerfCybil, -1
-	object_event 15,  3, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, Route44BerryTree, EVENT_ROUTE_44_BERRY ;aspear
-	object_event  9,  5, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route44ApricornTree, EVENT_ROUTE_44_APRICORN ;wht
 ;	object_event 30,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route44MaxRevive, EVENT_ROUTE_44_MAX_REVIVE
 ;	object_event 45,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route44UltraBall, EVENT_ROUTE_44_ULTRA_BALL
 ;	object_event 14,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route44MaxRepel, EVENT_ROUTE_44_MAX_REPEL

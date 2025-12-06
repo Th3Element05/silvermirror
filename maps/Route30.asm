@@ -1,18 +1,8 @@
 	object_const_def
-	const ROUTE_30_BERRY
-	const ROUTE_30_BERRY_2
-	const ROUTE_30_APRICORN
-	const ROUTE_30_APRICORN_2
-	const ROUTE_30_RAINBOW_WING
-;	const ROUTE_30_YOUNGSTER1
-;	const ROUTE_30_YOUNGSTER2
-;	const ROUTE_30_YOUNGSTER3
-;	const ROUTE_30_BUG_CATCHER
-;	const ROUTE_30_YOUNGSTER4
-;	const ROUTE_30_MONSTER1
-;	const ROUTE_30_MONSTER2
-;	const ROUTE_30_COOLTRAINER_F
-;	const ROUTE_30_POKE_BALL
+	const ROUTE30_ORAN_BERRY
+	const ROUTE30_PECHA_BERRY
+	const ROUTE30_PNK_APRICORN
+	const ROUTE30_RAINBOW_WING
 
 Route30_MapScripts:
 	def_scene_scripts
@@ -22,38 +12,67 @@ Route30_MapScripts:
 	def_callbacks
 	callback MAPCALLBACK_OBJECTS, Route30Fruittrees
 
-Route30Fruittrees:
-.Berry:
-	checkflag ENGINE_DAILY_ROUTE_30_BERRY
-	iftrue .NoBerry
-	appear ROUTE_30_BERRY
-.NoBerry:
-	;fallthrough
-
-.Apricorn:
-	checkflag ENGINE_DAILY_ROUTE_30_APRICORN
-	iftrue .NoApricorn
-	appear ROUTE_30_APRICORN
-.NoApricorn:
-	;fallthrough
-
-.BERRY_2:
-	checkflag ENGINE_DAILY_ROUTE_30_BERRY_2
-	iftrue .NoBERRY_2
-	appear ROUTE_30_BERRY_2
-.NoBERRY_2:
-	;fallthrough
-
-.APRICORN_2:
-	checkflag ENGINE_DAILY_ROUTE_30_APRICORN_2
-	iftrue .NoAPRICORN_2
-	appear ROUTE_30_APRICORN_2
-.NoAPRICORN_2:
-	endcallback
-
 Route30Noop1Scene:
 Route30Noop2Scene:
 	end
+
+Route30Fruittrees:
+	checkflag ENGINE_DAILY_ROUTE_1_FRUIT
+	iftrue .NoFruit
+	appear ROUTE1_ORAN_BERRY
+	appear ROUTE1_BLK_APRICORN
+.NoFruit:
+	endcallback
+
+; fruit
+Route30_OranBerry:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, ORAN_BERRY
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem ORAN_BERRY, 2
+	iffalse .NoRoomInBag
+	disappear ROUTE30_ORAN_BERRY
+	setflag ENGINE_DAILY_ROUTE_30_FRUIT
+.NoRoomInBag
+	closetext
+	end
+	
+Route30_PechaBerry:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, PECHA_BERRY
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem PECHA_BERRY, 2
+	iffalse .NoRoomInBag
+	disappear ROUTE30_PECHA_BERRY
+	setflag ENGINE_DAILY_ROUTE_30_FRUIT
+.NoRoomInBag
+	closetext
+	end
+
+Route30_PNKApricorn:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, PNK_APRICORN
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem PNK_APRICORN
+	iffalse .NoRoomInBag
+	disappear ROUTE30_PNK_APRICORN
+	setflag ENGINE_DAILY_ROUTE_30_FRUIT
+.NoRoomInBag
+	closetext
+	end
+
+Route30_NoFruit:
+	farsjump Std_NoFruitScript
+
 
 ;MUSIC_TIN_TOWER
 
@@ -191,10 +210,10 @@ Route30HoohFlyoverScript:
 	pause 10
 	playsound SFX_INTRO_SUICUNE_1
 ;	playsound SFX_GAME_FREAK_PRESENTS
-	appear ROUTE_30_RAINBOW_WING
-	applymovement ROUTE_30_RAINBOW_WING, Route30RainbowWingAppearsMovement
-	disappear ROUTE_30_RAINBOW_WING
-	appear ROUTE_30_RAINBOW_WING
+	appear ROUTE30_RAINBOW_WING
+	applymovement ROUTE30_RAINBOW_WING, Route30RainbowWingAppearsMovement
+	disappear ROUTE30_RAINBOW_WING
+	appear ROUTE30_RAINBOW_WING
 	pause 10
 	opentext
 	writetext Route30RainbowWingText
@@ -619,115 +638,6 @@ Route30RainbowWing:
 ;	line "tougher too."
 ;	done
 
-Route30BerryTree:
-	opentext
-	writetext Route30BerryTreeText
-	promptbutton
-	writetext Route30HeyItsBerryText
-	promptbutton
-	verbosegiveitem ORAN_BERRY
-	iffalse .NoRoomInBag
-	disappear ROUTE_30_BERRY
-	setflag ENGINE_DAILY_ROUTE_30_BERRY
-.NoRoomInBag
-	closetext
-	end
-
-Route30BerryTree2:
-	opentext
-	writetext Route30BerryTreeText
-	promptbutton
-	writetext Route30HeyItsBERRY_2Text
-	promptbutton
-	verbosegiveitem PECHA_BERRY
-	iffalse .NoRoomInBag
-	disappear ROUTE_30_BERRY_2
-	setflag ENGINE_DAILY_ROUTE_30_BERRY_2
-.NoRoomInBag
-	closetext
-	end
-
-Route30ApricornTree:
-	opentext
-	writetext Route30ApricornTreeText
-	promptbutton
-	writetext Route30HeyItsApricornText
-	promptbutton
-	verbosegiveitem GRN_APRICORN
-	iffalse .NoRoomInBag
-	disappear ROUTE_30_APRICORN
-	setflag ENGINE_DAILY_ROUTE_30_APRICORN
-.NoRoomInBag
-	closetext
-	end
-
-Route30ApricornTree2:
-	opentext
-	writetext Route30ApricornTreeText
-	promptbutton
-	writetext Route30HeyItsAPRICORN_2Text
-	promptbutton
-	verbosegiveitem PNK_APRICORN
-	iffalse .NoRoomInBag
-	disappear ROUTE_30_APRICORN_2
-	setflag ENGINE_DAILY_ROUTE_30_APRICORN_2
-.NoRoomInBag
-	closetext
-	end
-
-Route30NoBerry:
-	opentext
-	writetext Route30BerryTreeText
-	promptbutton
-	writetext Route30NothingHereText
-	waitbutton
-	closetext
-	end
-
-Route30NoApricorn:
-	opentext
-	writetext Route30ApricornTreeText
-	promptbutton
-	writetext Route30NothingHereText
-	waitbutton
-	closetext
-	end
-
-Route30BerryTreeText:
-	text "It's a"
-	line "BERRY tree…"
-	done
-
-Route30HeyItsBerryText:
-	text "Hey! It's"
-	line "ORAN BERRY!"
-	done
-
-Route30HeyItsBERRY_2Text:
-	text "Hey! It's"
-	line "PECHA BERRY!"
-	done
-
-Route30ApricornTreeText:
-	text "It's an"
-	line "APRICORN tree…"
-	done
-
-Route30HeyItsApricornText:
-	text "Hey! It's"
-	line "GRN APRICORN!"
-	done
-
-Route30HeyItsAPRICORN_2Text:
-	text "Hey! It's"
-	line "PNK APRICORN!"
-	done
-
-Route30NothingHereText:
-	text "There's nothing"
-	line "here…"
-	done
-
 Route30_MapEvents:
 	db 0, 0 ; filler
 
@@ -739,21 +649,19 @@ Route30_MapEvents:
 	coord_event 17,  6, SCENE_ROUTE30_HOOH_FLYOVER, Route30HoohFlyoverScript
 
 	def_bg_events
+	bg_event  5, 39, BGEVENT_READ, Route30_NoFruit
+	bg_event 16,  8, BGEVENT_READ, Route30_NoFruit
+	bg_event 15,  9, BGEVENT_READ, Route30_NoFruit
 ;	bg_event  9, 43, BGEVENT_READ, Route30Sign
 ;	bg_event 13, 29, BGEVENT_READ, MrPokemonsHouseDirectionsSign
 ;	bg_event 15,  5, BGEVENT_READ, MrPokemonsHouseSign
 ;	bg_event  3, 21, BGEVENT_READ, Route30TrainerTips
 ;	bg_event 14,  9, BGEVENT_ITEM, Route30HiddenPotion
-	bg_event 16,  8, BGEVENT_READ, Route30NoBerry
-	bg_event  5, 39, BGEVENT_READ, Route30NoBerry
-	bg_event 15,  9, BGEVENT_READ, Route30NoApricorn
-	bg_event  4, 39, BGEVENT_READ, Route30NoApricorn
 
 	def_object_events
-	object_event  5, 39, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route30BerryTree, EVENT_ROUTE_30_BERRY ;oran
-	object_event 16,  8, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, Route30BerryTree2, EVENT_ROUTE_30_BERRY_2 ;pecha
-	object_event 15,  9, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route30ApricornTree, EVENT_ROUTE_30_APRICORN ;pnk
-	object_event  4, 39, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, Route30ApricornTree2, EVENT_ROUTE_30_APRICORN_2 ;remove
+	object_event  5, 39, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route30_OranBerry, EVENT_ROUTE_30_ORAN_BERRY
+	object_event 16,  8, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, Route30_PechaBerry, EVENT_ROUTE_30_PECHA_BERRY
+	object_event 15,  9, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, Route30_PNKApricorn, EVENT_ROUTE_30_PNK_APRICORN
 	object_event 13,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route30RainbowWing, EVENT_ROUTE_30_RAINBOW_WING
 ;
 ;	object_event  5, 26, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, YoungsterJoey_ImportantBattleScript, EVENT_ROUTE_30_BATTLE
@@ -765,3 +673,5 @@ Route30_MapEvents:
 ;	object_event  5, 25, SPRITE_RATTATA_UP, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ROUTE_30_BATTLE
 ;	object_event  2, 13, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route30CooltrainerFScript, -1
 ;	object_event  8, 35, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route30Antidote, EVENT_ROUTE_30_ANTIDOTE
+
+;.PinkOverYellowOBPalette

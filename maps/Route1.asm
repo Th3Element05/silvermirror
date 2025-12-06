@@ -9,14 +9,14 @@ Route1_MapScripts:
 	callback MAPCALLBACK_OBJECTS, Route1Fruittrees
 
 Route1Fruittrees:
-.Berry:
 	checkflag ENGINE_DAILY_ROUTE_1_FRUIT
 	iftrue .NoFruit
-	appear ROUTE_1_ORAN_BERRY
-	appear ROUTE_1_BLK_APRICORN
+	appear ROUTE1_ORAN_BERRY
+	appear ROUTE1_BLK_APRICORN
 .NoFruit:
 	endcallback
 
+; fruit
 Route1_OranBerry:
 	opentext
 	farwritetext _FruitBearingTreeText
@@ -26,7 +26,7 @@ Route1_OranBerry:
 	promptbutton
 	verbosegiveitem ORAN_BERRY, 2
 	iffalse .NoRoomInBag
-	disappear ROUTE_1_ORAN_BERRY
+	disappear ROUTE1_ORAN_BERRY
 	setflag ENGINE_DAILY_ROUTE_1_FRUIT
 .NoRoomInBag
 	closetext
@@ -41,7 +41,7 @@ Route1_BLKApricorn:
 	promptbutton
 	verbosegiveitem BLK_APRICORN
 	iffalse .NoRoomInBag
-	disappear ROUTE_1_BLK_APRICORN
+	disappear ROUTE1_BLK_APRICORN
 	setflag ENGINE_DAILY_ROUTE_1_FRUIT
 .NoRoomInBag
 	closetext

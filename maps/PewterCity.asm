@@ -566,4 +566,4 @@ PewterCity_MapEvents:
 	object_event 17, 25, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterCityYoungsterScript, -1
 	object_event 26, 25, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterCitySuperNerd2Script, -1
 
-.;PinkOverYellowOBPalette
+;.PinkOverYellowOBPalette

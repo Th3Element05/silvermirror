@@ -1,8 +1,8 @@
 	object_const_def
-	const ROUTE_37_APRICORN
-	const ROUTE_37_APRICORN_2
-	const ROUTE_37_APRICORN_3
-	const ROUTE_37_SUNNY
+	const ROUTE37_RED_APRICORN
+	const ROUTE37_BLU_APRICORN
+	const ROUTE37_BLK_APRICORN
+	const ROUTE37_SUNNY
 
 Route37_MapScripts:
 	def_scene_scripts
@@ -11,37 +11,72 @@ Route37_MapScripts:
 	callback MAPCALLBACK_OBJECTS, Route37FruittreesandSunny
 
 Route37FruittreesandSunny:
-.Apricorn:
-	checkflag ENGINE_DAILY_ROUTE_37_APRICORN
-	iftrue .NoApricorn
-	appear ROUTE_37_APRICORN
-.NoApricorn:
-	;fallthrough
-
-.APRICORN_2:
-	checkflag ENGINE_DAILY_ROUTE_37_APRICORN_2
-	iftrue .NoAPRICORN_2
-	appear ROUTE_37_APRICORN_2
-.NoAPRICORN_2:
-	;fallthrough
-
-.APRICORN_3:
-	checkflag ENGINE_DAILY_ROUTE_37_APRICORN_3
-	iftrue .NoAPRICORN_3
-	appear ROUTE_37_APRICORN_3
-.NoAPRICORN_3:
-	;fallthrough
-
+	checkflag ENGINE_DAILY_ROUTE_37_FRUIT
+	iftrue .Sunny
+	appear ROUTE37_RED_APRICORN
+	appear ROUTE37_BLU_APRICORN
+	appear ROUTE37_BLK_APRICORN
+	; fallthrough
 .Sunny:
 	readvar VAR_WEEKDAY
 	ifequal SUNDAY, .SunnyAppears
-	disappear ROUTE_37_SUNNY
+	disappear ROUTE37_SUNNY
 	endcallback
 
 .SunnyAppears:
-	appear ROUTE_37_SUNNY
+	appear ROUTE37_SUNNY
 	endcallback
 
+; fruit
+Route37_REDApricorn:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, RED_APRICORN
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem RED_APRICORN
+	iffalse .NoRoomInBag
+	disappear ROUTE37_RED_APRICORN
+	setflag ENGINE_DAILY_ROUTE_37_FRUIT
+.NoRoomInBag
+	closetext
+	end
+
+Route37_BLUApricorn:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, BLK_APRICORN
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem BLK_APRICORN
+	iffalse .NoRoomInBag
+	disappear ROUTE37_BLU_APRICORN
+	setflag ENGINE_DAILY_ROUTE_37_FRUIT
+.NoRoomInBag
+	closetext
+	end
+
+Route37_BLKApricorn:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, BLK_APRICORN
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem BLK_APRICORN
+	iffalse .NoRoomInBag
+	disappear ROUTE37_BLK_APRICORN
+	setflag ENGINE_DAILY_ROUTE_37_FRUIT
+.NoRoomInBag
+	closetext
+	end
+
+Route37_NoFruit:
+	farsjump Std_NoFruitScript
+
+; scripts
 SunnyScript:
 	faceplayer
 	opentext
@@ -227,94 +262,15 @@ TwinsAnnandanne2AfterBattleText:
 	cont "our #MON."
 	done
 
+; items
+Route37HiddenEther:
+	hiddenitem ETHER, EVENT_ROUTE_37_HIDDEN_ETHER
+
+; bg text
 Route37Sign:
 	jumptext Route37SignText
 Route37SignText:
 	text "ROUTE 37"
-	done
-
-Route37HiddenEther:
-	hiddenitem ETHER, EVENT_ROUTE_37_HIDDEN_ETHER
-
-Route37ApricornTree:
-	opentext
-	writetext Route37ApricornTreeText
-	promptbutton
-	writetext Route37HeyItsApricornText
-	promptbutton
-	verbosegiveitem RED_APRICORN
-	iffalse .NoRoomInBag
-	disappear ROUTE_37_APRICORN
-	setflag ENGINE_DAILY_ROUTE_37_APRICORN
-.NoRoomInBag
-	closetext
-	end
-
-Route37ApricornTree2:
-	opentext
-	writetext Route37ApricornTreeText
-	promptbutton
-	writetext Route37HeyItsAPRICORN_2Text
-	promptbutton
-	verbosegiveitem BLU_APRICORN
-	iffalse .NoRoomInBag
-	disappear ROUTE_37_APRICORN_2
-	setflag ENGINE_DAILY_ROUTE_37_APRICORN_2
-.NoRoomInBag
-	closetext
-	end
-
-Route37ApricornTree3:
-	opentext
-	writetext Route37ApricornTreeText
-	promptbutton
-	writetext Route37HeyItsAPRICORN_3Text
-	promptbutton
-	verbosegiveitem BLK_APRICORN
-	iffalse .NoRoomInBag
-	disappear ROUTE_37_APRICORN_3
-	setflag ENGINE_DAILY_ROUTE_37_APRICORN_3
-.NoRoomInBag
-	closetext
-	end
-
-Route37NoApricorn:
-	opentext
-	writetext Route37ApricornTreeText
-	promptbutton
-	writetext Route37NothingHereText
-	waitbutton
-	closetext
-	end
-
-Route37BerryTreeText:
-	text "It's a"
-	line "BERRY tree…"
-	done
-
-Route37ApricornTreeText:
-	text "It's an"
-	line "APRICORN tree…"
-	done
-
-Route37HeyItsApricornText:
-	text "Hey! It's"
-	line "RED APRICORN!"
-	done
-
-Route37HeyItsAPRICORN_2Text:
-	text "Hey! It's"
-	line "BLU APRICORN!"
-	done
-
-Route37HeyItsAPRICORN_3Text:
-	text "Hey! It's"
-	line "BLK APRICORN!"
-	done
-
-Route37NothingHereText:
-	text "There's nothing"
-	line "here…"
 	done
 
 Route37_MapEvents:
@@ -325,16 +281,16 @@ Route37_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  5,  3, BGEVENT_READ, Route37Sign
+	bg_event 13,  5, BGEVENT_READ, Route37_NoFruit
+	bg_event 16,  5, BGEVENT_READ, Route37_NoFruit
+	bg_event 15,  7, BGEVENT_READ, Route37_NoFruit
 	bg_event  4,  2, BGEVENT_ITEM, Route37HiddenEther
-	bg_event 13,  5, BGEVENT_READ, Route37NoApricorn
-	bg_event 15,  7, BGEVENT_READ, Route37NoApricorn
-	bg_event 16,  5, BGEVENT_READ, Route37NoApricorn
+	bg_event  5,  3, BGEVENT_READ, Route37Sign
 
 	def_object_events
-	object_event 13,  5, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route37ApricornTree, EVENT_ROUTE_37_APRICORN ;red
-	object_event 15,  7, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route37ApricornTree2, EVENT_ROUTE_37_APRICORN_2 ;blu
-	object_event 16,  5, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, Route37ApricornTree3, EVENT_ROUTE_37_APRICORN_3 ;blk
+	object_event 13,  5, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route37_REDApricorn, EVENT_ROUTE_37_RED_APRICORN
+	object_event 16,  5, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route37_BLUApricorn, EVENT_ROUTE_37_BLU_APRICORN
+	object_event 15,  7, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, Route37_BLKApricorn, EVENT_ROUTE_37_BLK_APRICORN
 	object_event 16,  8, SPRITE_BOY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SunnyScript, EVENT_ROUTE_37_SUNNY_OF_SUNDAY
 	object_event  6,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 1, TrainerPsychicMark, -1 ;greg
 	object_event  6, 12, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 1, TrainerTwinsAnnandanne1, -1 ;annandanne1

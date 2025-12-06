@@ -1,47 +1,50 @@
 	object_const_def
-	const ROUTE_36_BERRY
-	const ROUTE_36_APRICORN
-	const ROUTE_36_ARTHUR
+	const ROUTE36_RAWST_BERRY
+	const ROUTE36_ARTHUR
 	const ROUTE_36_SUDOWOODO
 	const ROUTE_36_FLORIA
 
 Route36_MapScripts:
 	def_scene_scripts
-;	scene_script Route36Noop1Scene, SCENE_ROUTE_36_NOOP
-;	scene_script Route36Noop2Scene, SCENE_ROUTE_36_SUICUNE
 
 	def_callbacks
 	callback MAPCALLBACK_OBJECTS, Route36FruittreesandArthurCallback
 
-;Route36Noop1Scene:
-;Route36Noop2Scene:
-;	end
-
 Route36FruittreesandArthurCallback:
-.Berry:
-	checkflag ENGINE_DAILY_ROUTE_36_BERRY
-	iftrue .NoBerry
-	appear ROUTE_36_BERRY
-.NoBerry:
-	;fallthrough
-
-.Apricorn:
-	checkflag ENGINE_DAILY_ROUTE_36_APRICORN
-	iftrue .NoApricorn
-	appear ROUTE_36_APRICORN
-.NoApricorn:
-	;fallthrough
-
-.ArthurCallback:
+	checkflag ENGINE_DAILY_ROUTE_36_FRUIT
+	iftrue .Arthur
+	appear ROUTE36_RAWST_BERRY
+	; fallthrough
+.Arthur:
 	readvar VAR_WEEKDAY
 	ifequal THURSDAY, .ArthurAppears
-	disappear ROUTE_36_ARTHUR
+	disappear ROUTE36_ARTHUR
 	endcallback
 
 .ArthurAppears:
-	appear ROUTE_36_ARTHUR
+	appear ROUTE36_ARTHUR
 	endcallback
 
+; fruit
+Route36_RawstBerry:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, RAWST_BERRY
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem RAWST_BERRY, 2
+	iffalse .NoRoomInBag
+	disappear ROUTE36_RAWST_BERRY
+	setflag ENGINE_DAILY_ROUTE_36_FRUIT
+.NoRoomInBag
+	closetext
+	end
+
+Route36_NoFruit:
+	farsjump Std_NoFruitScript
+
+; scripts
 ArthurScript:
 	faceplayer
 	opentext
@@ -588,77 +591,6 @@ Route36TrainerTips2Text:
 	line "landmarks."
 	done
 
-Route36BerryTree:
-	opentext
-	writetext Route36BerryTreeText
-	promptbutton
-	writetext Route36HeyItsBerryText
-	promptbutton
-	verbosegiveitem RAWST_BERRY
-	iffalse .NoRoomInBag
-	disappear ROUTE_36_BERRY
-	setflag ENGINE_DAILY_ROUTE_36_BERRY
-.NoRoomInBag
-	closetext
-	end
-
-Route36ApricornTree:
-	opentext
-	writetext Route36ApricornTreeText
-	promptbutton
-	writetext Route36HeyItsApricornText
-	promptbutton
-	verbosegiveitem BLU_APRICORN
-	iffalse .NoRoomInBag
-	disappear ROUTE_36_APRICORN
-	setflag ENGINE_DAILY_ROUTE_36_APRICORN
-.NoRoomInBag
-	closetext
-	end
-
-Route36NoBerry:
-	opentext
-	writetext Route36BerryTreeText
-	promptbutton
-	writetext Route36NothingHereText
-	waitbutton
-	closetext
-	end
-
-Route36NoApricorn:
-	opentext
-	writetext Route36ApricornTreeText
-	promptbutton
-	writetext Route36NothingHereText
-	waitbutton
-	closetext
-	end
-
-Route36BerryTreeText:
-	text "It's a"
-	line "BERRY tree…"
-	done
-
-Route36HeyItsBerryText:
-	text "Hey! It's"
-	line "RAWST BERRY!"
-	done
-
-Route36ApricornTreeText:
-	text "It's an"
-	line "APRICORN tree…"
-	done
-
-Route36HeyItsApricornText:
-	text "Hey! It's"
-	line "BLU APRICORN!"
-	done
-
-Route36NothingHereText:
-	text "There's nothing"
-	line "here…"
-	done
-
 Route36_MapEvents:
 	db 0, 0 ; filler
 
@@ -673,16 +605,14 @@ Route36_MapEvents:
 ;	coord_event 22,  7, SCENE_ROUTE_36_SUICUNE, Route36SuicuneScript
 
 	def_bg_events
+	bg_event 21,  4, BGEVENT_READ, Route36_NoFruit
 	bg_event 29,  1, BGEVENT_READ, Route36TrainerTips2
 	bg_event 45, 11, BGEVENT_READ, RuinsOfAlphNorthSign
 	bg_event 55,  7, BGEVENT_READ, Route36Sign
 	bg_event 21,  7, BGEVENT_READ, Route36TrainerTips1
-	bg_event 21,  4, BGEVENT_READ, Route36NoBerry
-	bg_event 23,  3, BGEVENT_READ, Route36NoApricorn
 
 	def_object_events
-	object_event 21,  4, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route36BerryTree, EVENT_ROUTE_36_BERRY ;rawst
-	object_event 23,  3, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route36ApricornTree, EVENT_ROUTE_36_APRICORN ;remove
+	object_event 21,  4, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_SCRIPT, 0, Route36_RawstBerry, EVENT_ROUTE_36_RAWST_BERRY
 	object_event 48,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ArthurScript, EVENT_ROUTE_36_ARTHUR_OF_THURSDAY
 	object_event 35,  8, SPRITE_SUDOWOODO, SPRITEMOVEDATA_SUDOWOODO, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SudowoodoScript, EVENT_ROUTE_36_SUDOWOODO
 	object_event 33, 11, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route36FloriaScript, EVENT_FLORIA_AT_SUDOWOODO

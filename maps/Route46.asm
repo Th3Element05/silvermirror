@@ -1,10 +1,6 @@
 	object_const_def
-;	const ROUTE_46_POKEFAN_M
-;	const ROUTE_46_YOUNGSTER
-;	const ROUTE_46_LASS
-	const ROUTE_46_BERRY
-	const ROUTE_46_BERRY_2
-;	const ROUTE_46_POKE_BALL
+	const ROUTE46_CHERI_BERRY
+	const ROUTE46_SITRUS_BERRY
 
 Route46_MapScripts:
 	def_scene_scripts
@@ -13,20 +9,48 @@ Route46_MapScripts:
 	callback MAPCALLBACK_OBJECTS, Route46Fruittrees
 
 Route46Fruittrees:
-.Berry:
-	checkflag ENGINE_DAILY_ROUTE_46_BERRY
-	iftrue .NoBerry
-	appear ROUTE_46_BERRY
-.NoBerry:
-	;fallthrough
-
-.BERRY_2:
-	checkflag ENGINE_DAILY_ROUTE_46_BERRY_2
-	iftrue .NoBERRY_2
-	appear ROUTE_46_BERRY_2
-.NoBERRY_2:
+	checkflag ENGINE_DAILY_ROUTE_46_FRUIT
+	iftrue .NoFruit
+	appear ROUTE46_CHERI_BERRY
+	appear ROUTE46_SITRUS_BERRY
+.NoFruit:
 	endcallback
 
+; fruit
+Route46_CheriBerry:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, CHERI_BERRY
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem CHERI_BERRY, 2
+	iffalse .NoRoomInBag
+	disappear ROUTE46_CHERI_BERRY
+	setflag ENGINE_DAILY_ROUTE_46_FRUIT
+.NoRoomInBag
+	closetext
+	end
+
+Route46_SitrusBerry:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, SITRUS_BERRY
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem SITRUS_BERRY, 2
+	iffalse .NoRoomInBag
+	disappear ROUTE46_SITRUS_BERRY
+	setflag ENGINE_DAILY_ROUTE_46_FRUIT
+.NoRoomInBag
+	closetext
+	end
+
+Route46_NoFruit:
+	farsjump Std_NoFruitScript
+
+; trainers
 ;TrainerCamperTed:
 ;	trainer CAMPER, TED, EVENT_BEAT_CAMPER_TED, CamperTedSeenText, CamperTedBeatenText, 0, .Script
 ;
@@ -174,43 +198,6 @@ Route46Sign:
 Route46XSpeed:
 	itemball X_SPEED
 
-Route46BerryTree:
-	opentext
-	writetext Route46BerryTreeText
-	promptbutton
-	writetext Route46HeyItsBerryText
-	promptbutton
-	verbosegiveitem CHERI_BERRY
-	iffalse .NoRoomInBag
-	disappear ROUTE_46_BERRY
-	setflag ENGINE_DAILY_ROUTE_46_BERRY
-.NoRoomInBag
-	closetext
-	end
-
-Route46BerryTree2:
-	opentext
-	writetext Route46BerryTreeText
-	promptbutton
-	writetext Route46HeyItsBERRY_2Text
-	promptbutton
-	verbosegiveitem ORAN_BERRY
-	iffalse .NoRoomInBag
-	disappear ROUTE_46_BERRY_2
-	setflag ENGINE_DAILY_ROUTE_46_BERRY_2
-.NoRoomInBag
-	closetext
-	end
-
-Route46NoBerry:
-	opentext
-	writetext Route46BerryTreeText
-	promptbutton
-	writetext Route46NothingHereText
-	waitbutton
-	closetext
-	end
-
 ;HikerBaileySeenText:
 ;	text "Awright! I'll show"
 ;	line "you the power of"
@@ -291,41 +278,6 @@ Route46SignText:
 	line "MOUNTAIN RD. AHEAD"
 	done
 
-Route46BerryTreeText:
-	text "It's a"
-	line "BERRY tree…"
-	done
-
-Route46HeyItsBerryText:
-	text "Hey! It's"
-	line "CHERI BERRY!"
-	done
-
-Route46HeyItsBERRY_2Text:
-	text "Hey! It's"
-	line "ORAN BERRY!"
-	done
-
-Route46ApricornTreeText:
-	text "It's an"
-	line "APRICORN tree…"
-	done
-
-Route46HeyItsApricornText:
-	text "Hey! It's"
-	line "GRN APRICORN!"
-	done
-
-Route46HeyItsAPRICORN_2Text:
-	text "Hey! It's"
-	line "YLW APRICORN!"
-	done
-
-Route46NothingHereText:
-	text "There's nothing"
-	line "here…"
-	done
-
 Route46_MapEvents:
 	db 0, 0 ; filler
 
@@ -337,14 +289,14 @@ Route46_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event  7,  6, BGEVENT_READ, Route46_NoFruit
+	bg_event  8,  5, BGEVENT_READ, Route46_NoFruit
 	bg_event  9, 27, BGEVENT_READ, Route46Sign
-	bg_event  7,  6, BGEVENT_READ, Route46NoBerry
-	bg_event  8,  5, BGEVENT_READ, Route46NoBerry
 
 	def_object_events
+	object_event  7,  6, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route46_CheriBerry, EVENT_ROUTE_46_CHERI_BERRY
+	object_event  8,  5, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, Route46_SitrusBerry, EVENT_ROUTE_46_SITRUS_BERRY
 ;	object_event 12, 19, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerHikerBailey, -1
 ;	object_event  4, 14, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerCamperTed, -1
 ;	object_event  2, 13, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerPicnickerErin1, -1
-	object_event  7,  6, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route46BerryTree, EVENT_ROUTE_46_BERRY ;cheri
-	object_event  8,  5, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, Route46BerryTree2, EVENT_ROUTE_46_BERRY_2 ;sitrus
 ;	object_event  1, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route46XSpeed, EVENT_ROUTE_46_X_SPEED

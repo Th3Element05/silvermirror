@@ -1,6 +1,4 @@
 	object_const_def
-	const ROUTE_31_BERRY
-	const ROUTE_31_APRICORN
 ;	const ROUTE_31_FISHER
 ;	const ROUTE_31_YOUNGSTER
 ;	const ROUTE_31_BUG_CATCHER
@@ -13,22 +11,6 @@ Route31_MapScripts:
 
 	def_callbacks
 ;	callback MAPCALLBACK_NEWMAP, Route31CheckMomCallCallback
-	callback MAPCALLBACK_OBJECTS, Route31Fruittrees
-
-Route31Fruittrees:
-.Berry:
-	checkflag ENGINE_DAILY_ROUTE_31_BERRY
-	iftrue .NoBerry
-	appear ROUTE_31_BERRY
-.NoBerry:
-	;fallthrough
-
-.Apricorn:
-	checkflag ENGINE_DAILY_ROUTE_31_APRICORN
-	iftrue .NoApricorn
-	appear ROUTE_31_APRICORN
-.NoApricorn:
-	endcallback
 
 ;Route31CheckMomCallCallback:
 ;	checkevent EVENT_TALKED_TO_MOM_AFTER_MYSTERY_EGG_QUEST
@@ -422,77 +404,6 @@ DarkCaveSignText:
 	text "DARK CAVE"
 	done
 
-Route31BerryTree:
-	opentext
-	writetext Route31BerryTreeText
-	promptbutton
-	writetext Route31HeyItsBerryText
-	promptbutton
-	verbosegiveitem PERSIM_BERRY
-	iffalse .NoRoomInBag
-	disappear ROUTE_31_BERRY
-	setflag ENGINE_DAILY_ROUTE_31_BERRY
-.NoRoomInBag
-	closetext
-	end
-
-Route31ApricornTree:
-	opentext
-	writetext Route31ApricornTreeText
-	promptbutton
-	writetext Route31HeyItsApricornText
-	promptbutton
-	verbosegiveitem BLK_APRICORN
-	iffalse .NoRoomInBag
-	disappear ROUTE_31_APRICORN
-	setflag ENGINE_DAILY_ROUTE_31_APRICORN
-.NoRoomInBag
-	closetext
-	end
-
-Route31NoBerry:
-	opentext
-	writetext Route31BerryTreeText
-	promptbutton
-	writetext Route31NothingHereText
-	waitbutton
-	closetext
-	end
-
-Route31NoApricorn:
-	opentext
-	writetext Route31ApricornTreeText
-	promptbutton
-	writetext Route31NothingHereText
-	waitbutton
-	closetext
-	end
-
-Route31BerryTreeText:
-	text "It's a"
-	line "BERRY tree…"
-	done
-
-Route31HeyItsBerryText:
-	text "Hey! It's"
-	line "PERSIM BERRY!"
-	done
-
-Route31ApricornTreeText:
-	text "It's an"
-	line "APRICORN tree…"
-	done
-
-Route31HeyItsApricornText:
-	text "Hey! It's"
-	line "BLK APRICORN!"
-	done
-
-Route31NothingHereText:
-	text "There's nothing"
-	line "here…"
-	done
-
 Route31_MapEvents:
 	db 0, 0 ; filler
 
@@ -506,12 +417,8 @@ Route31_MapEvents:
 	def_bg_events
 	bg_event  7,  5, BGEVENT_READ, Route31Sign
 	bg_event 31,  5, BGEVENT_READ, DarkCaveSign
-	bg_event 16,  7, BGEVENT_READ, Route31NoBerry
-	bg_event 17,  6, BGEVENT_READ, Route31NoApricorn
 
 	def_object_events
-	object_event 16,  7, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, Route31BerryTree, EVENT_ROUTE_31_BERRY ;remove
-	object_event 17,  6, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, Route31ApricornTree, EVENT_ROUTE_31_APRICORN ;remove
 ;	object_event 17,  7, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31MailRecipientScript, -1
 ;	object_event  9,  5, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31YoungsterScript, -1
 ;	object_event 21, 13, SPRITE_BOY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TrainerBugCatcherWade1, -1

@@ -1,7 +1,6 @@
 	object_const_def
-	const ROUTE_29_BERRY
-	const ROUTE_29_APRICORN
-	const ROUTE_29_TUSCANY
+	const ROUTE29_ORAN_BERRY
+	const ROUTE29_TUSCANY
 ;	const ROUTE_29_COOLTRAINER_M1
 ;	const ROUTE_29_YOUNGSTER
 ;	const ROUTE_29_TEACHER1
@@ -11,144 +10,46 @@
 
 Route29_MapScripts:
 	def_scene_scripts
-;	scene_script Route29Noop1Scene, SCENE_ROUTE_29_NOOP
-;	scene_script Route29Noop2Scene, SCENE_ROUTE_29_CATCH_TUTORIAL
 
 	def_callbacks
 	callback MAPCALLBACK_OBJECTS, Route29FruittreesandTuscany
 
-;Route29Noop1Scene:
-;Route29Noop2Scene:
-;	end
-
 Route29FruittreesandTuscany:
 .Berry:
-	checkflag ENGINE_DAILY_ROUTE_29_BERRY
-	iftrue .NoBerry
-	appear ROUTE_29_BERRY
-.NoBerry:
-	;fallthrough
-
-.Apricorn:
-	checkflag ENGINE_DAILY_ROUTE_29_APRICORN
-	iftrue .NoApricorn
-	appear ROUTE_29_APRICORN
-.NoApricorn:
-	;fallthrough
-
+	checkflag ENGINE_DAILY_ROUTE_29_FRUIT
+	iftrue .Tuscany
+	appear ROUTE29_ORAN_BERRY
+	; fallthrough
 .Tuscany:
-	checkflag ENGINE_ZEPHYRBADGE
-	iftrue .DoesTuscanyAppear
-
-.TuscanyDisappears:
-	disappear ROUTE_29_TUSCANY
-	endcallback
-
-.DoesTuscanyAppear:
 	readvar VAR_WEEKDAY
-	ifnotequal TUESDAY, .TuscanyDisappears
-	appear ROUTE_29_TUSCANY
+	ifequal TUESDAY, .TuscanyAppears
+	disappear ROUTE29_TUSCANY
 	endcallback
 
-;Route29Tutorial1:
-;	turnobject ROUTE_29_COOLTRAINER_M1, UP
-;	showemote EMOTE_SHOCK, ROUTE_29_COOLTRAINER_M1, 15
-;	applymovement ROUTE_29_COOLTRAINER_M1, DudeMovementData1a
-;	turnobject PLAYER, LEFT
-;	setevent EVENT_DUDE_TALKED_TO_YOU
-;	opentext
-;	writetext CatchingTutorialIntroText
-;	yesorno
-;	iffalse Script_RefusedTutorial1
-;	closetext
-;	follow ROUTE_29_COOLTRAINER_M1, PLAYER
-;	applymovement ROUTE_29_COOLTRAINER_M1, DudeMovementData1b
-;	stopfollow
-;	loadwildmon RATTATA, 5
-;	catchtutorial BATTLETYPE_TUTORIAL
-;	turnobject ROUTE_29_COOLTRAINER_M1, UP
-;	opentext
-;	writetext CatchingTutorialDebriefText
-;	waitbutton
-;	closetext
-;	setscene SCENE_ROUTE_29_NOOP
-;	setevent EVENT_LEARNED_TO_CATCH_POKEMON
-;	end
+.TuscanyAppears:
+	appear ROUTE29_TUSCANY
+	endcallback
 
-;Route29Tutorial2:
-;	turnobject ROUTE_29_COOLTRAINER_M1, UP
-;	showemote EMOTE_SHOCK, ROUTE_29_COOLTRAINER_M1, 15
-;	applymovement ROUTE_29_COOLTRAINER_M1, DudeMovementData2a
-;	turnobject PLAYER, LEFT
-;	setevent EVENT_DUDE_TALKED_TO_YOU
-;	opentext
-;	writetext CatchingTutorialIntroText
-;	yesorno
-;	iffalse Script_RefusedTutorial2
-;	closetext
-;	follow ROUTE_29_COOLTRAINER_M1, PLAYER
-;	applymovement ROUTE_29_COOLTRAINER_M1, DudeMovementData2b
-;	stopfollow
-;	loadwildmon RATTATA, 5
-;	catchtutorial BATTLETYPE_TUTORIAL
-;	turnobject ROUTE_29_COOLTRAINER_M1, UP
-;	opentext
-;	writetext CatchingTutorialDebriefText
-;	waitbutton
-;	closetext
-;	setscene SCENE_ROUTE_29_NOOP
-;	setevent EVENT_LEARNED_TO_CATCH_POKEMON
-;	end
+; fruit
+Route29_OranBerry:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, ORAN_BERRY
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem ORAN_BERRY, 2
+	iffalse .NoRoomInBag
+	disappear ROUTE29_ORAN_BERRY
+	setflag ENGINE_DAILY_ROUTE_29_FRUIT
+.NoRoomInBag
+	closetext
+	end
 
-;Script_RefusedTutorial1:
-;	writetext CatchingTutorialDeclinedText
-;	waitbutton
-;	closetext
-;	applymovement ROUTE_29_COOLTRAINER_M1, DudeMovementData1b
-;	setscene SCENE_ROUTE_29_NOOP
-;	end
+Route29_NoFruit:
+	farsjump Std_NoFruitScript
 
-;Script_RefusedTutorial2:
-;	writetext CatchingTutorialDeclinedText
-;	waitbutton
-;	closetext
-;	applymovement ROUTE_29_COOLTRAINER_M1, DudeMovementData2b
-;	setscene SCENE_ROUTE_29_NOOP
-;	end
 
-;CatchingTutorialDudeScript:
-;	faceplayer
-;	opentext
-;	readvar VAR_BOXSPACE
-;	ifequal 0, .BoxFull
-;	checkevent EVENT_LEARNED_TO_CATCH_POKEMON
-;	iftrue .BoxFull
-;	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
-;	iffalse .BoxFull
-;	writetext CatchingTutorialRepeatText
-;	yesorno
-;	iffalse .Declined
-;	closetext
-;	loadwildmon RATTATA, 5
-;	catchtutorial BATTLETYPE_TUTORIAL
-;	opentext
-;	writetext CatchingTutorialDebriefText
-;	waitbutton
-;	closetext
-;	setevent EVENT_LEARNED_TO_CATCH_POKEMON
-;	end
-;
-;.BoxFull:
-;	writetext CatchingTutorialBoxFullText
-;	waitbutton
-;	closetext
-;	end
-;
-;.Declined:
-;	writetext CatchingTutorialDeclinedText
-;	waitbutton
-;	closetext
-;	end
 
 ;Route29YoungsterScript:
 ;	jumptextfaceplayer Route29YoungsterText
@@ -187,84 +88,7 @@ Route29FruittreesandTuscany:
 ;Route29Potion:
 ;	itemball POTION
 
-;DudeMovementData1a:
-;	step UP
-;	step UP
-;	step UP
-;	step UP
-;	step RIGHT
-;	step RIGHT
-;	step_end
 
-;DudeMovementData2a:
-;	step UP
-;	step UP
-;	step UP
-;	step RIGHT
-;	step RIGHT
-;	step_end
-
-;DudeMovementData1b:
-;	step LEFT
-;	step LEFT
-;	step DOWN
-;	step DOWN
-;	step DOWN
-;	step DOWN
-;	step_end
-
-;DudeMovementData2b:
-;	step LEFT
-;	step LEFT
-;	step DOWN
-;	step DOWN
-;	step DOWN
-;	step_end
-
-;CatchingTutorialBoxFullText:
-;	text "#MON hide in"
-;	line "the grass. Who"
-;
-;	para "knows when they'll"
-;	line "pop out…"
-;	done
-
-;CatchingTutorialIntroText:
-;	text "I've seen you a"
-;	line "couple times. How"
-;
-;	para "many #MON have"
-;	line "you caught?"
-;
-;	para "Would you like me"
-;	line "to show you how to"
-;	cont "catch #MON?"
-;	done
-
-;CatchingTutorialDebriefText:
-;	text "That's how you do"
-;	line "it."
-;
-;	para "If you weaken them"
-;	line "first, #MON are"
-;	cont "easier to catch."
-;	done
-
-;CatchingTutorialDeclinedText:
-;	text "Oh. Fine, then."
-;
-;	para "Anyway, if you"
-;	line "want to catch"
-;
-;	para "#MON, you have"
-;	line "to walk a lot."
-;	done
-
-;CatchingTutorialRepeatText:
-;	text "Huh? You want me"
-;	line "to show you how to"
-;	cont "catch #MON?"
-;	done
 
 ;Route29YoungsterText:
 ;	text "Yo. How are your"
@@ -423,77 +247,6 @@ TuscanyNotTuesdayText:
 	cont "is unfortunate…"
 	done
 
-Route29BerryTree:
-	opentext
-	writetext Route29BerryTreeText
-	promptbutton
-	writetext Route29HeyItsBerryText
-	promptbutton
-	verbosegiveitem ORAN_BERRY
-	iffalse .NoRoomInBag
-	disappear ROUTE_29_BERRY
-	setflag ENGINE_DAILY_ROUTE_29_BERRY
-.NoRoomInBag
-	closetext
-	end
-
-Route29ApricornTree:
-	opentext
-	writetext Route29ApricornTreeText
-	promptbutton
-	writetext Route29HeyItsApricornText
-	promptbutton
-	verbosegiveitem GRN_APRICORN
-	iffalse .NoRoomInBag
-	disappear ROUTE_29_APRICORN
-	setflag ENGINE_DAILY_ROUTE_29_APRICORN
-.NoRoomInBag
-	closetext
-	end
-
-Route29NoBerry:
-	opentext
-	writetext Route29BerryTreeText
-	promptbutton
-	writetext Route29NothingHereText
-	waitbutton
-	closetext
-	end
-
-Route29NoApricorn:
-	opentext
-	writetext Route29ApricornTreeText
-	promptbutton
-	writetext Route29NothingHereText
-	waitbutton
-	closetext
-	end
-
-Route29BerryTreeText:
-	text "It's a"
-	line "BERRY tree…"
-	done
-
-Route29HeyItsBerryText:
-	text "Hey! It's"
-	line "ORAN BERRY!"
-	done
-
-Route29ApricornTreeText:
-	text "It's an"
-	line "APRICORN tree…"
-	done
-
-Route29HeyItsApricornText:
-	text "Hey! It's"
-	line "GRN APRICORN!"
-	done
-
-Route29NothingHereText:
-	text "There's nothing"
-	line "here…"
-	done
-
 Route29_MapEvents:
 	db 0, 0 ; filler
 
@@ -505,14 +258,12 @@ Route29_MapEvents:
 ;	coord_event 53,  9, SCENE_ROUTE_29_CATCH_TUTORIAL, Route29Tutorial2
 
 	def_bg_events
+	bg_event 12,  2, BGEVENT_READ, Route29_NoFruit
 ;	bg_event 51,  7, BGEVENT_READ, Route29Sign1
 ;	bg_event  3,  5, BGEVENT_READ, Route29Sign2
-	bg_event 12,  2, BGEVENT_READ, Route29NoBerry
-	bg_event 10,  2, BGEVENT_READ, Route29NoApricorn
 
 	def_object_events
-	object_event 12,  2, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route29BerryTree, EVENT_ROUTE_29_BERRY ;oran
-	object_event 10,  2, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route29ApricornTree, EVENT_ROUTE_29_APRICORN ;remove
+	object_event 12,  2, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route29_OranBerry, EVENT_ROUTE_29_ORAN_BERRY
 	object_event 29, 12, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TuscanyScript, EVENT_ROUTE_29_TUSCANY_OF_TUESDAY
 ;	object_event 50, 12, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CatchingTutorialDudeScript, -1
 ;	object_event 27, 16, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route29YoungsterScript, -1

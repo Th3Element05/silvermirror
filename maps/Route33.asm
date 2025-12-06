@@ -1,10 +1,5 @@
 	object_const_def
-	const ROUTE_33_BERRY
-	const ROUTE_33_APRICORN
-	const ROUTE_33_APRICORN_2
-;	const ROUTE_33_POKEFAN_M
-;	const ROUTE_33_LASS
-
+	const ROUTE33_BLK_APRICORN
 
 Route33_MapScripts:
 	def_scene_scripts
@@ -13,26 +8,30 @@ Route33_MapScripts:
 	callback MAPCALLBACK_OBJECTS, Route33Fruittrees
 
 Route33Fruittrees:
-.Berry:
-	checkflag ENGINE_DAILY_ROUTE_33_BERRY
-	iftrue .NoBerry
-	appear ROUTE_33_BERRY
-.NoBerry:
-	;fallthrough
-
-.Apricorn:
-	checkflag ENGINE_DAILY_ROUTE_33_APRICORN
-	iftrue .NoApricorn
-	appear ROUTE_33_APRICORN
-.NoApricorn:
-	;fallthrough
-
-.APRICORN_2:
-	checkflag ENGINE_DAILY_ROUTE_33_APRICORN_2
-	iftrue .NoAPRICORN_2
-	appear ROUTE_33_APRICORN_2
-.NoAPRICORN_2:
+	checkflag ENGINE_DAILY_ROUTE_33_FRUIT
+	iftrue .NoFruit
+	appear ROUTE33_BLK_APRICORN
+.NoFruit:
 	endcallback
+
+Route33_BLKApricorn:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, BLK_APRICORN
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem BLK_APRICORN
+	iffalse .NoRoomInBag
+	disappear ROUTE33_BLK_APRICORN
+	setflag ENGINE_DAILY_ROUTE_33_FRUIT
+.NoRoomInBag
+	closetext
+	end
+
+Route33_NoFruit:
+	farsjump Std_NoFruitScript
+
 
 ;Route33LassScript:
 ;	jumptextfaceplayer Route33LassText
@@ -185,113 +184,21 @@ Route33SignText:
 	text "ROUTE 33"
 	done
 
-Route33BerryTree:
-	opentext
-	writetext Route33BerryTreeText
-	promptbutton
-	writetext Route33HeyItsBerryText
-	promptbutton
-	verbosegiveitem PECHA_BERRY
-	iffalse .NoRoomInBag
-	disappear ROUTE_33_BERRY
-	setflag ENGINE_DAILY_ROUTE_33_BERRY
-.NoRoomInBag
-	closetext
-	end
-
-Route33ApricornTree:
-	opentext
-	writetext Route33ApricornTreeText
-	promptbutton
-	writetext Route33HeyItsApricornText
-	promptbutton
-	verbosegiveitem BLK_APRICORN
-	iffalse .NoRoomInBag
-	disappear ROUTE_33_APRICORN
-	setflag ENGINE_DAILY_ROUTE_33_APRICORN
-.NoRoomInBag
-	closetext
-	end
-
-Route33ApricornTree2:
-	opentext
-	writetext Route33ApricornTreeText
-	promptbutton
-	writetext Route33HeyItsAPRICORN_2Text
-	promptbutton
-	verbosegiveitem PNK_APRICORN
-	iffalse .NoRoomInBag
-	disappear ROUTE_33_APRICORN_2
-	setflag ENGINE_DAILY_ROUTE_33_APRICORN_2
-.NoRoomInBag
-	closetext
-	end
-
-Route33NoBerry:
-	opentext
-	writetext Route33BerryTreeText
-	promptbutton
-	writetext Route33NothingHereText
-	waitbutton
-	closetext
-	end
-
-Route33NoApricorn:
-	opentext
-	writetext Route33ApricornTreeText
-	promptbutton
-	writetext Route33NothingHereText
-	waitbutton
-	closetext
-	end
-
-Route33BerryTreeText:
-	text "It's a"
-	line "BERRY tree…"
-	done
-
-Route33HeyItsBerryText:
-	text "Hey! It's"
-	line "PECHA BERRY!"
-	done
-
-Route33ApricornTreeText:
-	text "It's an"
-	line "APRICORN tree…"
-	done
-
-Route33HeyItsApricornText:
-	text "Hey! It's"
-	line "BLK APRICORN!"
-	done
-
-Route33HeyItsAPRICORN_2Text:
-	text "Hey! It's"
-	line "PNK APRICORN!"
-	done
-
-Route33NothingHereText:
-	text "There's nothing"
-	line "here…"
-	done
-
 Route33_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 11,  9, UNION_CAVE_1F, 3
+	warp_event 10,  9, UNION_CAVE_1F, 3
 
 	def_coord_events
 
 	def_bg_events
+	bg_event  6, 12, BGEVENT_READ, Route33_NoFruit
 	bg_event 11, 11, BGEVENT_READ, Route33Sign
-	bg_event 14, 16, BGEVENT_READ, Route33NoBerry
-	bg_event 13, 16, BGEVENT_READ, Route33NoApricorn
-	bg_event  5, 11, BGEVENT_READ, Route33NoApricorn
 
 	def_object_events
-	object_event 14, 16, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, Route33BerryTree, EVENT_ROUTE_33_BERRY ;remove
-	object_event  5, 11, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, Route33ApricornTree, EVENT_ROUTE_33_APRICORN ;red
-	object_event 13, 16, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, Route33ApricornTree2, EVENT_ROUTE_33_APRICORN_2 ;remove
+	object_event  6, 12, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, Route33_BLKApricorn, EVENT_ROUTE_33_BLK_APRICORN
 ;	object_event  6, 13, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerHikerAnthony, -1
 ;	object_event 12, 16, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route33LassScript, -1
+
+;.GrayOverYellowOBPalette

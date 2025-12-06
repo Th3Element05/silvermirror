@@ -1,6 +1,6 @@
 	object_const_def
-	const ROUTE_11_BERRY
-	const ROUTE_11_APRICORN
+	const ROUTE11_CHERI_BERRY
+	const ROUTE11_GRN_APRICORN
 	const ROUTE11_SNORLAX
 
 Route11_MapScripts:
@@ -10,19 +10,48 @@ Route11_MapScripts:
 	callback MAPCALLBACK_OBJECTS, Route11Fruittrees
 
 Route11Fruittrees:
-.Berry:
-	checkflag ENGINE_DAILY_ROUTE_11_BERRY
-	iftrue .NoBerry
-	appear ROUTE_11_BERRY
-.NoBerry:
-	;fallthrough
-.Apricorn:
-	checkflag ENGINE_DAILY_ROUTE_11_APRICORN
-	iftrue .NoApricorn
-	appear ROUTE_11_APRICORN
-.NoApricorn:
+	checkflag ENGINE_DAILY_ROUTE_11_FRUIT
+	iftrue .NoFruit
+	appear ROUTE11_CHERI_BERRY
+	appear ROUTE11_GRN_APRICORN
+.NoFruit:
 	endcallback
 
+; fruit
+Route11_CheriBerry:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, CHERI_BERRY
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem CHERI_BERRY, 2
+	iffalse .NoRoomInBag
+	disappear ROUTE11_CHERI_BERRY
+	setflag ENGINE_DAILY_ROUTE_11_FRUIT
+.NoRoomInBag
+	closetext
+	end
+
+Route11_GRNApricorn:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, GRN_APRICORN
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem GRN_APRICORN
+	iffalse .NoRoomInBag
+	disappear ROUTE11_GRN_APRICORN
+	setflag ENGINE_DAILY_ROUTE_11_FRUIT
+.NoRoomInBag
+	closetext
+	end
+
+Route11_NoFruit:
+	farsjump Std_NoFruitScript
+
+; scripts
 Route11Snorlax:
 	opentext
 	special SnorlaxAwake
@@ -173,6 +202,7 @@ _SnorlaxWentHomeText:: ;export for routes 12 and 16
 ;	cont "to the mountains!"
 ;	done
 
+; trainers
 TrainerPokefanFGeorgia:
 	trainer POKEFANF, GEORGIA, EVENT_BEAT_POKEFANF_GEORGIA, PokefanFGeorgiaSeenText, PokefanFGeorgiaBeatenText, 0, .Script
 .Script:
@@ -516,84 +546,14 @@ OfficerCarterAfterBattleText:
 	line "are electrifying!"
 	done
 
-Route11BerryTree:
-	opentext
-	writetext Route11BerryTreeText
-	promptbutton
-	writetext Route11HeyItsBerryText
-	promptbutton
-	verbosegiveitem ORAN_BERRY
-	iffalse .NoRoomInBag
-	disappear ROUTE_11_BERRY
-	setflag ENGINE_DAILY_ROUTE_11_BERRY
-.NoRoomInBag
-	closetext
-	end
-
-Route11ApricornTree:
-	opentext
-	writetext Route11ApricornTreeText
-	promptbutton
-	writetext Route11HeyItsApricornText
-	promptbutton
-	verbosegiveitem GRN_APRICORN
-	iffalse .NoRoomInBag
-	disappear ROUTE_11_APRICORN
-	setflag ENGINE_DAILY_ROUTE_11_APRICORN
-.NoRoomInBag
-	closetext
-	end
-
-Route11NoBerry:
-	opentext
-	writetext Route11BerryTreeText
-	promptbutton
-	writetext Route11NothingHereText
-	waitbutton
-	closetext
-	end
-
-Route11NoApricorn:
-	opentext
-	writetext Route11ApricornTreeText
-	promptbutton
-	writetext Route11NothingHereText
-	waitbutton
-	closetext
-	end
-
+; bg text
 Route11DiglettsCaveSign:
 	jumptext Route11DiglettsCaveSignText
 Route11DiglettsCaveSignText:
 	text "DIGLETT'S CAVE"
 	done
 
-Route11BerryTreeText:
-	text "It's a"
-	line "BERRY tree…"
-	done
-
-Route11HeyItsBerryText:
-	text "Hey! It's"
-	line "ORAN BERRY!"
-	done
-
-Route11ApricornTreeText:
-	text "It's an"
-	line "APRICORN tree…"
-	done
-
-Route11HeyItsApricornText:
-	text "Hey! It's"
-	line "GRN APRICORN!"
-	done
-
-Route11NothingHereText:
-	text "There's nothing"
-	line "here…"
-	done
-
-; hidden items
+; items
 Route11HiddenEscapeRope:
 	hiddenitem ESCAPE_ROPE, EVENT_ROUTE_11_HIDDEN_ESCAPE_ROPE
 
@@ -608,14 +568,14 @@ Route11_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 48,  2, BGEVENT_READ, Route11_NoFruit
+	bg_event 49,  1, BGEVENT_READ, Route11_NoFruit
 	bg_event 48,  5, BGEVENT_ITEM, Route11HiddenEscapeRope
 	bg_event  1,  5, BGEVENT_READ, Route11DiglettsCaveSign
-	bg_event 48,  2, BGEVENT_READ, Route11NoBerry
-	bg_event 49,  1, BGEVENT_READ, Route11NoApricorn
 
 	def_object_events
-	object_event 48,  2, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route11BerryTree, EVENT_ROUTE_11_BERRY ;cherri
-	object_event 49,  1, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route11ApricornTree, EVENT_ROUTE_11_APRICORN ;grn
+	object_event 48,  2, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route11_CheriBerry, EVENT_ROUTE_11_CHERI_BERRY
+	object_event 49,  1, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route11_GRNApricorn, EVENT_ROUTE_11_GRN_APRICORN
 	object_event 48, 11, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_BIGDOLLSYM, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route11Snorlax, EVENT_ROUTE_11_SNORLAX_RESPAWN
 	object_event 33,  3, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 3, TrainerPokefanFGeorgia, -1
 	object_event 22,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerYoungsterOwen, -1
