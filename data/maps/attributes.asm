@@ -470,7 +470,7 @@ ENDM
 	map_attributes TeamRocketBaseB1F, TEAM_ROCKET_BASE_B1F, $00, 0
 	map_attributes TeamRocketBaseB2F, TEAM_ROCKET_BASE_B2F, $00, 0
 	map_attributes TeamRocketBaseB3F, TEAM_ROCKET_BASE_B3F, $00, 0
-	map_attributes IlexForest, ILEX_FOREST, $28, 0
+	map_attributes IlexForest, ILEX_FOREST, $25, 0
 	map_attributes GoldenrodUnderground, GOLDENROD_UNDERGROUND, $00, 0
 	map_attributes GoldenrodUndergroundSwitchRoomEntrances, GOLDENROD_UNDERGROUND_SWITCH_ROOM_ENTRANCES, $00, 0
 	map_attributes GoldenrodDeptStoreB1F, GOLDENROD_DEPT_STORE_B1F, $00, 0
@@ -738,7 +738,7 @@ ENDM
 ;	map_attributes CliffEdgeGate, CLIFF_EDGE_GATE, $09, 0
 ;	map_attributes CliffCave, CLIFF_CAVE, $09, 0
 	map_attributes SafariZoneEntrance, SAFARI_ZONE_ENTRANCE, $00, 0
-	map_attributes ViridianForest, VIRIDIAN_FOREST, $58, 0
+	map_attributes ViridianForest, VIRIDIAN_FOREST, $03, 0
 	map_attributes ViridianForestGateN, VIRIDIAN_FOREST_GATE_N, $00, 0
 	map_attributes ViridianForestGateS, VIRIDIAN_FOREST_GATE_S, $00, 0
 	map_attributes MountMoonPokecenter1F, MOUNT_MOON_POKECENTER_1F, $00, 0
