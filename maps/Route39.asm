@@ -1,6 +1,5 @@
 	object_const_def
-	const ROUTE_39_BERRY
-	const ROUTE_39_APRICORN
+	const ROUTE39_ORAN_BERRY
 
 Route39_MapScripts:
 	def_scene_scripts
@@ -9,20 +8,32 @@ Route39_MapScripts:
 	callback MAPCALLBACK_OBJECTS, Route39Fruittrees
 
 Route39Fruittrees:
-.Berry:
-	checkflag ENGINE_DAILY_ROUTE_39_BERRY
-	iftrue .NoBerry
-	appear ROUTE_39_BERRY
-.NoBerry:
-	;fallthrough
-
-.Apricorn:
-	checkflag ENGINE_DAILY_ROUTE_39_APRICORN
-	iftrue .NoApricorn
-	appear ROUTE_39_APRICORN
-.NoApricorn:
+	checkflag ENGINE_DAILY_ROUTE_39_FRUIT
+	iftrue .NoFruit
+	appear ROUTE39_ORAN_BERRY
+.NoFruit:
 	endcallback
 
+; fruit
+Route39_OranBerry:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, ORAN_BERRY
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem ORAN_BERRY, 2
+	iffalse .NoRoomInBag
+	disappear ROUTE39_ORAN_BERRY
+	setflag ENGINE_DAILY_ROUTE_39_FRUIT
+.NoRoomInBag
+	closetext
+	end
+
+Route39_NoFruit:
+	farsjump Std_NoFruitScript
+
+; trainers
 TrainerPsychicNorman:
 	trainer PSYCHIC_T, NORMAN, EVENT_BEAT_PSYCHIC_NORMAN, PsychicNormanSeenText, PsychicNormanBeatenText, 0, .Script
 .Script:
@@ -330,77 +341,6 @@ Route39TrainerTipsText:
 Route39HiddenNugget:
 	hiddenitem NUGGET, EVENT_ROUTE_39_HIDDEN_NUGGET
 
-Route39BerryTree:
-	opentext
-	writetext Route39BerryTreeText
-	promptbutton
-	writetext Route39HeyItsBerryText
-	promptbutton
-	verbosegiveitem CHESTO_BERRY
-	iffalse .NoRoomInBag
-	disappear ROUTE_39_BERRY
-	setflag ENGINE_DAILY_ROUTE_39_BERRY
-.NoRoomInBag
-	closetext
-	end
-
-Route39ApricornTree:
-	opentext
-	writetext Route39ApricornTreeText
-	promptbutton
-	writetext Route39HeyItsApricornText
-	promptbutton
-	verbosegiveitem GRN_APRICORN
-	iffalse .NoRoomInBag
-	disappear ROUTE_39_APRICORN
-	setflag ENGINE_DAILY_ROUTE_39_APRICORN
-.NoRoomInBag
-	closetext
-	end
-
-Route39NoBerry:
-	opentext
-	writetext Route39BerryTreeText
-	promptbutton
-	writetext Route39NothingHereText
-	waitbutton
-	closetext
-	end
-
-Route39NoApricorn:
-	opentext
-	writetext Route39ApricornTreeText
-	promptbutton
-	writetext Route39NothingHereText
-	waitbutton
-	closetext
-	end
-
-Route39BerryTreeText:
-	text "It's a"
-	line "BERRY tree…"
-	done
-
-Route39HeyItsBerryText:
-	text "Hey! It's"
-	line "CHESTO BERRY!"
-	done
-
-Route39ApricornTreeText:
-	text "It's an"
-	line "APRICORN tree…"
-	done
-
-Route39HeyItsApricornText:
-	text "Hey! It's"
-	line "GRN APRICORN!"
-	done
-
-Route39NothingHereText:
-	text "There's nothing"
-	line "here…"
-	done
-
 Route39_MapEvents:
 	db 0, 0 ; filler
 
@@ -415,16 +355,14 @@ Route39_MapEvents:
 ;	coord_event 16, 11, SCENE_DEFAULT, Route39Baoba4
 
 	def_bg_events
+	bg_event  9,  3, BGEVENT_READ, Route39_NoFruit
 	bg_event  5, 31, BGEVENT_READ, Route39TrainerTips
 	bg_event  9,  5, BGEVENT_READ, MoomooFarmSign
 	bg_event 15,  7, BGEVENT_READ, Route39Sign
 	bg_event  5, 13, BGEVENT_ITEM, Route39HiddenNugget
-	bg_event  9,  3, BGEVENT_READ, Route39NoBerry
-	bg_event  8,  3, BGEVENT_READ, Route39NoApricorn
 
 	def_object_events
-	object_event  9,  3, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route39BerryTree, EVENT_ROUTE_39_BERRY ;oran
-	object_event  8,  3, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route39ApricornTree, EVENT_ROUTE_39_APRICORN ;remove
+	object_event  9,  3, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route39_OranBerry, EVENT_ROUTE_39_ORAN_BERRY
 	object_event  3, 12, SPRITE_MILTANK, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route39Miltank, -1
 	object_event  6, 11, SPRITE_MILTANK, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route39Miltank, -1
 	object_event  4, 15, SPRITE_MILTANK, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route39Miltank, -1

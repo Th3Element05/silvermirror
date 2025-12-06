@@ -1,6 +1,6 @@
 	object_const_def
-	const ROUTE_35_BERRY
-	const ROUTE_35_APRICORN
+	const ROUTE35_LEPPA_BERRY
+	const ROUTE35_GRN_APRICORN
 
 Route35_MapScripts:
 	def_scene_scripts
@@ -9,20 +9,47 @@ Route35_MapScripts:
 	callback MAPCALLBACK_OBJECTS, Route35Fruittrees
 
 Route35Fruittrees:
-.Berry:
-	checkflag ENGINE_DAILY_ROUTE_35_BERRY
-	iftrue .NoBerry
-	appear ROUTE_35_BERRY
-.NoBerry:
-	;fallthrough
-	
-.Apricorn:
-	checkflag ENGINE_DAILY_ROUTE_35_APRICORN
-	iftrue .NoApricorn
-	appear ROUTE_35_APRICORN
-.NoApricorn:
+	checkflag ENGINE_DAILY_ROUTE_35_FRUIT
+	iftrue .NoFruit
+	appear ROUTE35_LEPPA_BERRY
+	appear ROUTE35_GRN_APRICORN
+.NoFruit:
 	endcallback
 
+Route35_LeppaBerry:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, LEPPA_BERRY
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem LEPPA_BERRY, 2
+	iffalse .NoRoomInBag
+	disappear ROUTE35_LEPPA_BERRY
+	setflag ENGINE_DAILY_ROUTE_35_FRUIT
+.NoRoomInBag
+	closetext
+	end
+
+Route35_GRNApricorn:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, GRN_APRICORN
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem GRN_APRICORN
+	iffalse .NoRoomInBag
+	disappear ROUTE35_GRN_APRICORN
+	setflag ENGINE_DAILY_ROUTE_35_FRUIT
+.NoRoomInBag
+	closetext
+	end
+
+Route35_NoFruit:
+	farsjump Std_NoFruitScript
+
+; trainers
 TrainerOfficerDirk:
 	faceplayer
 	opentext
@@ -437,77 +464,6 @@ Route35SignText:
 ;Route35TMRollout:
 ;	itemball TM_ROLLOUT
 
-Route35BerryTree:
-	opentext
-	writetext Route35BerryTreeText
-	promptbutton
-	writetext Route35HeyItsBerryText
-	promptbutton
-	verbosegiveitem LEPPA_BERRY
-	iffalse .NoRoomInBag
-	disappear ROUTE_35_BERRY
-	setflag ENGINE_DAILY_ROUTE_35_BERRY
-.NoRoomInBag
-	closetext
-	end
-
-Route35ApricornTree:
-	opentext
-	writetext Route35ApricornTreeText
-	promptbutton
-	writetext Route35HeyItsApricornText
-	promptbutton
-	verbosegiveitem GRN_APRICORN
-	iffalse .NoRoomInBag
-	disappear ROUTE_35_APRICORN
-	setflag ENGINE_DAILY_ROUTE_35_APRICORN
-.NoRoomInBag
-	closetext
-	end
-
-Route35NoBerry:
-	opentext
-	writetext Route35BerryTreeText
-	promptbutton
-	writetext Route35NothingHereText
-	waitbutton
-	closetext
-	end
-
-Route35NoApricorn:
-	opentext
-	writetext Route35ApricornTreeText
-	promptbutton
-	writetext Route35NothingHereText
-	waitbutton
-	closetext
-	end
-
-Route35BerryTreeText:
-	text "It's a"
-	line "BERRY tree…"
-	done
-
-Route35HeyItsBerryText:
-	text "Hey! It's"
-	line "LEPPA BERRY!"
-	done
-
-Route35ApricornTreeText:
-	text "It's an"
-	line "APRICORN tree…"
-	done
-
-Route35HeyItsApricornText:
-	text "Hey! It's"
-	line "GRN APRICORN!"
-	done
-
-Route35NothingHereText:
-	text "There's nothing"
-	line "here…"
-	done
-
 Route35_MapEvents:
 	db 0, 0 ; filler
 
@@ -519,14 +475,14 @@ Route35_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event  2, 26, BGEVENT_READ, Route35_NoFruit
+	bg_event  1, 25, BGEVENT_READ, Route35_NoFruit
 	bg_event  1,  7, BGEVENT_READ, Route35Sign
 	bg_event 11, 31, BGEVENT_READ, Route35Sign
-	bg_event  2, 26, BGEVENT_READ, Route35NoBerry
-	bg_event  1, 25, BGEVENT_READ, Route35NoApricorn
 
 	def_object_events
-	object_event  2, 26, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route35BerryTree, EVENT_ROUTE_35_BERRY ;leppa
-	object_event  1, 25, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route35ApricornTree, EVENT_ROUTE_35_APRICORN ;grn
+	object_event  2, 26, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route35_LeppaBerry, EVENT_ROUTE_35_LEPPA_BERRY
+	object_event  1, 25, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route35_GRNApricorn, EVENT_ROUTE_35_GRN_APRICORN
 	object_event  5,  6, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TrainerOfficerDirk, -1 ;dirk
 	object_event 16,  7, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerBugCatcherDarin, -1 ;arnie
 	object_event  2, 10, SPRITE_FISHER, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerFirebreatherWalt, -1 ;walt

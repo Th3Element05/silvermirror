@@ -1,45 +1,55 @@
 	object_const_def
-	const ROUTE_43_BERRY
-	const ROUTE_43_APRICORN
-;	const ROUTE_43_SUPER_NERD1
-;	const ROUTE_43_SUPER_NERD2
-;	const ROUTE_43_SUPER_NERD3
-;	const ROUTE_43_FISHER
-;	const ROUTE_43_LASS
-;	const ROUTE_43_YOUNGSTER
-;	const ROUTE_43_POKE_BALL
+	const ROUTE43_PERSIM_BERRY
+	const ROUTE43_BLU_APRICORN
 
 Route43_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
-;	callback MAPCALLBACK_NEWMAP, Route43CheckIfRocketsScene
 	callback MAPCALLBACK_OBJECTS, Route43Fruittrees
 
-;Route43CheckIfRocketsScene:
-;	checkevent EVENT_CLEARED_ROCKET_HIDEOUT
-;	iftrue .NoRockets
-;	setmapscene ROUTE_43_GATE, SCENE_ROUTE_43GATE_ROCKET_SHAKEDOWN
-;	endcallback
-
-;.NoRockets:
-;	setmapscene ROUTE_43_GATE, SCENE_ROUTE_43GATE_NOOP
-;	endcallback
-
 Route43Fruittrees:
-.Berry:
-	checkflag ENGINE_DAILY_ROUTE_43_BERRY
-	iftrue .NoBerry
-	appear ROUTE_43_BERRY
-.NoBerry:
-	;fallthrough
-
-.Apricorn:
-	checkflag ENGINE_DAILY_ROUTE_43_APRICORN
-	iftrue .NoApricorn
-	appear ROUTE_43_APRICORN
-.NoApricorn:
+	checkflag ENGINE_DAILY_ROUTE_43_FRUIT
+	iftrue .NoFruit
+	appear ROUTE43_PERSIM_BERRY
+	appear ROUTE43_BLU_APRICORN
+.NoFruit:
 	endcallback
+
+; fruit
+Route43_PersimBerry:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, PERSIM_BERRY
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem PERSIM_BERRY, 2
+	iffalse .NoRoomInBag
+	disappear ROUTE43_PERSIM_BERRY
+	setflag ENGINE_DAILY_ROUTE_43_FRUIT
+.NoRoomInBag
+	closetext
+	end
+
+Route43_BLUApricorn:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, BLU_APRICORN
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem BLU_APRICORN
+	iffalse .NoRoomInBag
+	disappear ROUTE43_BLU_APRICORN
+	setflag ENGINE_DAILY_ROUTE_43_FRUIT
+.NoRoomInBag
+	closetext
+	end
+
+Route43_NoFruit:
+	farsjump Std_NoFruitScript
+
 
 ;TrainerCamperSpencer:
 ;	trainer CAMPER, SPENCER, EVENT_BEAT_CAMPER_SPENCER, CamperSpencerSeenText, CamperSpencerBeatenText, 0, .Script
@@ -484,77 +494,6 @@ Route43TrainerTipsText:
 	line "#MON's type."
 	done
 
-Route43BerryTree:
-	opentext
-	writetext Route43BerryTreeText
-	promptbutton
-	writetext Route43HeyItsBerryText
-	promptbutton
-	verbosegiveitem PERSIM_BERRY
-	iffalse .NoRoomInBag
-	disappear ROUTE_43_BERRY
-	setflag ENGINE_DAILY_ROUTE_43_BERRY
-.NoRoomInBag
-	closetext
-	end
-
-Route43ApricornTree:
-	opentext
-	writetext Route43ApricornTreeText
-	promptbutton
-	writetext Route43HeyItsApricornText
-	promptbutton
-	verbosegiveitem BLK_APRICORN
-	iffalse .NoRoomInBag
-	disappear ROUTE_43_APRICORN
-	setflag ENGINE_DAILY_ROUTE_43_APRICORN
-.NoRoomInBag
-	closetext
-	end
-
-Route43NoBerry:
-	opentext
-	writetext Route43BerryTreeText
-	promptbutton
-	writetext Route43NothingHereText
-	waitbutton
-	closetext
-	end
-
-Route43NoApricorn:
-	opentext
-	writetext Route43ApricornTreeText
-	promptbutton
-	writetext Route43NothingHereText
-	waitbutton
-	closetext
-	end
-
-Route43BerryTreeText:
-	text "It's a"
-	line "BERRY tree…"
-	done
-
-Route43HeyItsBerryText:
-	text "Hey! It's"
-	line "PERSIM BERRY!"
-	done
-
-Route43ApricornTreeText:
-	text "It's an"
-	line "APRICORN tree…"
-	done
-
-Route43HeyItsApricornText:
-	text "Hey! It's"
-	line "BLK APRICORN!"
-	done
-
-Route43NothingHereText:
-	text "There's nothing"
-	line "here…"
-	done
-
 Route43_MapEvents:
 	db 0, 0 ; filler
 
@@ -568,15 +507,15 @@ Route43_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event  1, 26, BGEVENT_READ, Route43_NoFruit
+	bg_event  1, 25, BGEVENT_READ, Route43_NoFruit
 	bg_event 13,  3, BGEVENT_READ, Route43Sign1
 	bg_event 11, 49, BGEVENT_READ, Route43Sign2
 	bg_event 16, 38, BGEVENT_READ, Route43TrainerTips
-	bg_event  1, 26, BGEVENT_READ, Route43NoBerry
-	bg_event  1, 25, BGEVENT_READ, Route43NoApricorn
 
 	def_object_events
-	object_event  1, 26, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route43BerryTree, EVENT_ROUTE_43_BERRY ;persim
-	object_event  1, 25, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, Route43ApricornTree, EVENT_ROUTE_43_APRICORN ;blk
+	object_event  1, 26, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, Route43_PersimBerry, EVENT_ROUTE_43_PERSIM_BERRY
+	object_event  1, 25, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route43_BLUApricorn, EVENT_ROUTE_43_BLU_APRICORN
 ;	object_event 13,  5, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerPokemaniacBen, -1
 ;	object_event 13, 20, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerPokemaniacBrent, -1
 ;	object_event 14,  7, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerPokemaniacRon, -1
@@ -584,3 +523,5 @@ Route43_MapEvents:
 ;	object_event  9, 25, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerPicnickerTiffany, -1
 ;	object_event 13, 40, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperSpencer, -1
 ;	object_event 12, 32, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route43MaxEther, EVENT_ROUTE_43_MAX_ETHER
+
+;.PinkOverYellowOBPalette

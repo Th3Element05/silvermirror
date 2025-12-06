@@ -1,5 +1,5 @@
 	object_const_def
-	const AZALEATOWN_APRICORN
+	const AZALEATOWN_WHT_APRICORN
 	const AZALEATOWN_KURT_OUTSIDE
 
 AzaleaTown_MapScripts:
@@ -9,7 +9,7 @@ AzaleaTown_MapScripts:
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, AzaleaTownFlypointCallback
-	callback MAPCALLBACK_OBJECTS, AzaleaTownApricorn
+	callback MAPCALLBACK_OBJECTS, AzaleaTownFruittrees
 
 AzaleaTownNoop1Scene:
 AzaleaTownNoop2Scene:
@@ -20,13 +20,32 @@ AzaleaTownFlypointCallback:
 ;	clearflag ENGINE_KURT_MAKING_BALLS
 	endcallback
 
-AzaleaTownApricorn:
-	checkflag ENGINE_DAILY_AZALEA_APRICORN
-	iftrue .NoApricorn
-	appear AZALEATOWN_APRICORN
-.NoApricorn:
+AzaleaTownFruittrees:
+	checkflag ENGINE_DAILY_AZALEA_TOWN_FRUIT
+	iftrue .NoFruit
+	appear AZALEATOWN_WHT_APRICORN
+.NoFruit:
 	endcallback
 
+AzaleaTown_WHTApricorn:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, WHT_APRICORN
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem WHT_APRICORN
+	iffalse .NoRoomInBag
+	disappear AZALEATOWN_WHT_APRICORN
+	setflag ENGINE_DAILY_AZALEA_TOWN_FRUIT
+.NoRoomInBag
+	closetext
+	end
+
+AzaleaTown_NoFruit:
+	farsjump Std_NoFruitScript
+
+; scripts
 AzaleaTownCelebiScene:
 	applymovement PLAYER, AzaleaTownPlayerLeavesKurtsHouseMovement
 	opentext
@@ -217,44 +236,6 @@ AzaleaTownMartSignScript:
 AzaleaTownHiddenFullHeal:
 	hiddenitem FULL_HEAL, EVENT_AZALEA_TOWN_HIDDEN_FULL_HEAL
 
-AzaleaApricornTree:
-	opentext
-	writetext AzaleaApricornTreeText
-	promptbutton
-	writetext AzaleaHeyItsApricornText
-	promptbutton
-	verbosegiveitem WHT_APRICORN
-	iffalse .NoRoomInBag
-	disappear AZALEATOWN_APRICORN
-	setflag ENGINE_DAILY_AZALEA_APRICORN
-.NoRoomInBag
-	closetext
-	end
-
-AzaleaNoApricorn:
-	opentext
-	writetext AzaleaApricornTreeText
-	promptbutton
-	writetext AzaleaNothingHereText
-	waitbutton
-	closetext
-	end
-
-AzaleaApricornTreeText:
-	text "It's an"
-	line "APRICORN tree…"
-	done
-
-AzaleaHeyItsApricornText:
-	text "Hey! It's"
-	line "WHT APRICORN!"
-	done
-
-AzaleaNothingHereText:
-	text "There's nothing"
-	line "here…"
-	done
-
 AzaleaTown_MapEvents:
 	db 0, 0 ; filler
 
@@ -272,6 +253,7 @@ AzaleaTown_MapEvents:
 	coord_event  9,  6, SCENE_AZALEATOWN_KURT_RETURNS_GS_BALL, AzaleaTownCelebiScene
 
 	def_bg_events
+	bg_event  8,  2, BGEVENT_READ, AzaleaTown_NoFruit
 	bg_event 19,  9, BGEVENT_READ, AzaleaTownSign
 	bg_event 11,  9, BGEVENT_READ, KurtsHouseSign
 	bg_event 15, 15, BGEVENT_READ, AzaleaGymSign
@@ -281,10 +263,9 @@ AzaleaTown_MapEvents:
 	bg_event 22,  5, BGEVENT_READ, AzaleaTownMartSignScript
 	bg_event  3,  9, BGEVENT_READ, AzaleaTownIlextForestSign
 	bg_event 31,  6, BGEVENT_ITEM, AzaleaTownHiddenFullHeal
-	bg_event  8,  2, BGEVENT_READ, AzaleaNoApricorn
 
 	def_object_events
-	object_event  8,  2, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, AzaleaApricornTree, EVENT_AZALEA_APRICORN ;wht
+	object_event  8,  2, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, AzaleaTown_WHTApricorn, EVENT_AZALEA_TOWN_WHT_APRICORN
 	object_event  6,  5, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AzaleaTownKurtScript, EVENT_AZALEA_TOWN_KURT
 	object_event  7,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AzaleaTownYoungsterScript, -1
 	object_event 22,  9, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 1, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AzaleaTownGrampsScript, -1

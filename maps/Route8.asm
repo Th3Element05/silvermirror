@@ -1,6 +1,6 @@
 	object_const_def
-	const ROUTE_8_BERRY
-	const ROUTE_8_APRICORN
+	const ROUTE8_RAWST_BERRY
+	const ROUTE8_YLW_APRICORN
 
 Route8_MapScripts:
 	def_scene_scripts
@@ -9,18 +9,46 @@ Route8_MapScripts:
 	callback MAPCALLBACK_OBJECTS, Route8Fruittrees
 
 Route8Fruittrees:
-.Berry:
-	checkflag ENGINE_DAILY_ROUTE_8_BERRY
-	iftrue .NoBerry
-	appear ROUTE_8_BERRY
-.NoBerry:
-	;fallthrough
-.Apricorn:
-	checkflag ENGINE_DAILY_ROUTE_8_APRICORN
-	iftrue .NoApricorn
-	appear ROUTE_8_APRICORN
-.NoApricorn:
+	checkflag ENGINE_DAILY_ROUTE_8_FRUIT
+	iftrue .NoFruit
+	appear ROUTE8_RAWST_BERRY
+	appear ROUTE8_YLW_APRICORN
+.NoFruit:
 	endcallback
+
+Route8_RawstBerry:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, RAWST_BERRY
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem RAWST_BERRY, 2
+	iffalse .NoRoomInBag
+	disappear ROUTE8_RAWST_BERRY
+	setflag ENGINE_DAILY_ROUTE_8_FRUIT
+.NoRoomInBag
+	closetext
+	end
+
+Route8_YLWApricorn:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, YLW_APRICORN
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem YLW_APRICORN
+	iffalse .NoRoomInBag
+	disappear ROUTE8_YLW_APRICORN
+	setflag ENGINE_DAILY_ROUTE_8_FRUIT
+.NoRoomInBag
+	closetext
+	end
+
+Route8_NoFruit:
+	farsjump Std_NoFruitScript
+
 
 TrainerSuperNerdPat:
 	trainer SUPER_NERD, PAT, EVENT_BEAT_SUPER_NERD_PAT, SuperNerdPatSeenText, SuperNerdPatBeatenText, 0, .Script
@@ -272,77 +300,6 @@ Route8UndergroundPathSignText:
 	cont "LAVENDER TOWN"
 	done
 
-Route8BerryTree:
-	opentext
-	writetext Route8BerryTreeText
-	promptbutton
-	writetext Route8HeyItsBerryText
-	promptbutton
-	verbosegiveitem CHERI_BERRY
-	iffalse .NoRoomInBag
-	disappear ROUTE_8_BERRY
-	setflag ENGINE_DAILY_ROUTE_8_BERRY
-.NoRoomInBag
-	closetext
-	end
-
-Route8ApricornTree:
-	opentext
-	writetext Route8ApricornTreeText
-	promptbutton
-	writetext Route8HeyItsApricornText
-	promptbutton
-	verbosegiveitem YLW_APRICORN
-	iffalse .NoRoomInBag
-	disappear ROUTE_8_APRICORN
-	setflag ENGINE_DAILY_ROUTE_8_APRICORN
-.NoRoomInBag
-	closetext
-	end
-
-Route8NoBerry:
-	opentext
-	writetext Route8BerryTreeText
-	promptbutton
-	writetext Route8NothingHereText
-	waitbutton
-	closetext
-	end
-
-Route8NoApricorn:
-	opentext
-	writetext Route8ApricornTreeText
-	promptbutton
-	writetext Route8NothingHereText
-	waitbutton
-	closetext
-	end
-
-Route8BerryTreeText:
-	text "It's a"
-	line "BERRY tree…"
-	done
-
-Route8HeyItsBerryText:
-	text "Hey! It's"
-	line "CHERI BERRY!"
-	done
-
-Route8ApricornTreeText:
-	text "It's an"
-	line "APRICORN tree…"
-	done
-
-Route8HeyItsApricornText:
-	text "Hey! It's"
-	line "YLW APRICORN!"
-	done
-
-Route8NothingHereText:
-	text "There's nothing"
-	line "here…"
-	done
-
 Route8_MapEvents:
 	db 0, 0 ; filler
 
@@ -354,13 +311,13 @@ Route8_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event  7, 16, BGEVENT_READ, Route8_NoFruit
+	bg_event 48,  8, BGEVENT_READ, Route8_NoFruit
 	bg_event 11,  7, BGEVENT_READ, Route8UndergroundPathSign
-	bg_event 48,  8, BGEVENT_READ, Route8NoBerry
-	bg_event  7, 16, BGEVENT_READ, Route8NoApricorn
 
 	def_object_events
-	object_event 48,  8, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route8BerryTree, EVENT_ROUTE_8_BERRY ;rawst
-	object_event  7, 16, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, Route8ApricornTree, EVENT_ROUTE_8_APRICORN ;ylw
+	object_event 48,  8, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_SCRIPT, 0, Route8_RawstBerry, EVENT_ROUTE_8_RAWST_BERRY
+	object_event  7, 16, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, Route8_YLWApricorn, EVENT_ROUTE_8_YLW_APRICORN
 	object_event  4,  7, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerSuperNerdPat, -1
 	object_event  9, 11, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerPokefanMJoshua, -1
 	object_event 22,  5, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerLassDana, -1

@@ -1,5 +1,5 @@
 	object_const_def
-	const VIOLETCITY_APRICORN
+	const VIOLETCITY_YLW_APRICORN
 ;	const VIOLETCITY_EARL
 
 VioletCity_MapScripts:
@@ -16,12 +16,32 @@ VioletCityFlypointAndRoute32Callback:
 	endcallback
 
 VioletCityFruittrees:
-	checkflag ENGINE_DAILY_VIOLET_APRICORN
-	iftrue .NoApricorn
-	appear VIOLETCITY_APRICORN
-.NoApricorn:
+	checkflag ENGINE_DAILY_VIOLET_CITY_FRUIT
+	iftrue .NoFruit
+	appear VIOLETCITY_YLW_APRICORN
+.NoFruit:
 	endcallback
 
+; fruit
+VioletCity_YLWApricorn:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, YLW_APRICORN
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem YLW_APRICORN
+	iffalse .NoRoomInBag
+	disappear VIOLETCITY_YLW_APRICORN
+	setflag ENGINE_DAILY_ROUTE_33_FRUIT
+.NoRoomInBag
+	closetext
+	end
+
+VioletCity_NoFruit:
+	farsjump Std_NoFruitScript
+
+; scripts
 ;VioletCityEarlScript:
 ;	applymovement VIOLETCITY_EARL, VioletCitySpinningEarl_MovementData
 ;	faceplayer
@@ -264,63 +284,6 @@ VioletCityPPUp:
 VioletCityRareCandy:
 	itemball RARE_CANDY
 
-VioletApricornTree:
-	opentext
-	writetext VioletApricornTreeText
-	promptbutton
-	writetext VioletHeyItsApricornText
-	promptbutton
-	verbosegiveitem YLW_APRICORN
-	iffalse .NoRoomInBag
-	disappear VIOLETCITY_APRICORN
-	setflag ENGINE_DAILY_VIOLET_APRICORN
-.NoRoomInBag
-	closetext
-	end
-
-VioletNoBerry:
-	opentext
-	writetext VioletBerryTreeText
-	promptbutton
-	writetext VioletNothingHereText
-	waitbutton
-	closetext
-	end
-
-VioletNoApricorn:
-	opentext
-	writetext VioletApricornTreeText
-	promptbutton
-	writetext VioletNothingHereText
-	waitbutton
-	closetext
-	end
-
-VioletBerryTreeText:
-	text "It's a"
-	line "BERRY tree…"
-	done
-
-VioletHeyItsBerryText:
-	text "Hey! It's"
-	line "CHERI BERRY!"
-	done
-
-VioletApricornTreeText:
-	text "It's an"
-	line "APRICORN tree…"
-	done
-
-VioletHeyItsApricornText:
-	text "Hey! It's"
-	line "YLW APRICORN!"
-	done
-
-VioletNothingHereText:
-	text "There's nothing"
-	line "here…"
-	done
-
 VioletCity_MapEvents:
 	db 0, 0 ; filler
 
@@ -338,6 +301,7 @@ VioletCity_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 14, 29, BGEVENT_READ, VioletCity_NoFruit
 	bg_event 24, 20, BGEVENT_READ, VioletCitySign
 	bg_event 15, 17, BGEVENT_READ, VioletGymSign
 	bg_event 24,  8, BGEVENT_READ, SproutTowerSign
@@ -345,11 +309,9 @@ VioletCity_MapEvents:
 	bg_event 32, 25, BGEVENT_READ, VioletCityPokecenterSign
 	bg_event 10, 17, BGEVENT_READ, VioletCityMartSign
 	bg_event 37, 14, BGEVENT_ITEM, VioletCityHiddenHyperPotion
-	bg_event 15, 27, BGEVENT_READ, VioletNoBerry
-	bg_event 14, 29, BGEVENT_READ, VioletNoApricorn
 
 	def_object_events
-	object_event 14, 29, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, VioletApricornTree, EVENT_VIOLET_APRICORN ;ylw
+	object_event 14, 29, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, VioletCity_YLWApricorn, EVENT_VIOLET_CITY_YLW_APRICORN
 ;	object_event 13, 16, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, VioletCityEarlScript, EVENT_VIOLET_CITY_EARL
 	object_event 28, 28, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, VioletCityLassScript, -1
 	object_event 24, 14, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WANDER, 1, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VioletCitySuperNerdScript, -1

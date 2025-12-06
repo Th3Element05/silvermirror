@@ -1,6 +1,6 @@
 	object_const_def
-	const ROUTE_26_BERRY
-	const ROUTE_26_APRICORN
+	const ROUTE26_LEPPA_BERRY
+	const ROUTE26_SITRUS_BERRY
 ;	const ROUTE_26_COOLTRAINER_M1
 ;	const ROUTE_26_COOLTRAINER_M2
 ;	const ROUTE_26_COOLTRAINER_F1
@@ -15,20 +15,48 @@ Route26_MapScripts:
 	def_callbacks
 	callback MAPCALLBACK_OBJECTS, Route26Fruittrees
 
+; fruit
 Route26Fruittrees:
-.Berry:
-	checkflag ENGINE_DAILY_ROUTE_26_BERRY
-	iftrue .NoBerry
-	appear ROUTE_26_BERRY
-.NoBerry:
-	;fallthrough
-
-.Apricorn:
-	checkflag ENGINE_DAILY_ROUTE_26_APRICORN
-	iftrue .NoApricorn
-	appear ROUTE_26_APRICORN
-.NoApricorn:
+	checkflag ENGINE_DAILY_ROUTE_26_FRUIT
+	iftrue .NoFruit
+	appear ROUTE1_ORAN_BERRY
+	appear ROUTE1_BLK_APRICORN
+.NoFruit:
 	endcallback
+
+Route26_LeppaBerry:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, LEPPA_BERRY
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem LEPPA_BERRY, 2
+	iffalse .NoRoomInBag
+	disappear ROUTE26_LEPPA_BERRY
+	setflag ENGINE_DAILY_ROUTE_26_FRUIT
+.NoRoomInBag
+	closetext
+	end
+
+Route26_SitrusBerry:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, SITRUS_BERRY
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem SITRUS_BERRY, 2
+	iffalse .NoRoomInBag
+	disappear ROUTE26_SITRUS_BERRY
+	setflag ENGINE_DAILY_ROUTE_26_FRUIT
+.NoRoomInBag
+	closetext
+	end
+
+Route26_NoFruit:
+	farsjump Std_NoFruitScript
+
 
 ;TrainerCooltrainermJake:
 ;	trainer COOLTRAINERM, JAKE, EVENT_BEAT_COOLTRAINERM_JAKE, CooltrainermJakeSeenText, CooltrainermJakeBeatenText, 0, .Script
@@ -255,51 +283,6 @@ Route26Fruittrees:
 Route26Sign:
 	jumptext Route26SignText
 
-Route26BerryTree:
-	opentext
-	writetext Route26BerryTreeText
-	promptbutton
-	writetext Route26HeyItsBerryText
-	promptbutton
-	verbosegiveitem RAWST_BERRY
-	iffalse .NoRoomInBag
-	disappear ROUTE_26_BERRY
-	setflag ENGINE_DAILY_ROUTE_26_BERRY
-.NoRoomInBag
-	closetext
-	end
-
-Route26ApricornTree:
-	opentext
-	writetext Route26ApricornTreeText
-	promptbutton
-	writetext Route26HeyItsApricornText
-	promptbutton
-	verbosegiveitem BLU_APRICORN
-	iffalse .NoRoomInBag
-	disappear ROUTE_26_APRICORN
-	setflag ENGINE_DAILY_ROUTE_26_APRICORN
-.NoRoomInBag
-	closetext
-	end
-
-Route26NoBerry:
-	opentext
-	writetext Route26BerryTreeText
-	promptbutton
-	writetext Route26NothingHereText
-	waitbutton
-	closetext
-	end
-
-Route26NoApricorn:
-	opentext
-	writetext Route26ApricornTreeText
-	promptbutton
-	writetext Route26NothingHereText
-	waitbutton
-	closetext
-	end
 
 ;Route26MaxElixer:
 ;	itemball MAX_ELIXER
@@ -457,34 +440,6 @@ Route26NoApricorn:
 
 Route26SignText:
 	text "ROUTE 26"
-
-	para "#MON LEAGUE"
-	line "RECEPTION GATE"
-	done
-
-Route26BerryTreeText:
-	text "It's a"
-	line "BERRY tree…"
-	done
-
-Route26HeyItsBerryText:
-	text "Hey! It's"
-	line "RAWST BERRY!"
-	done
-
-Route26ApricornTreeText:
-	text "It's an"
-	line "APRICORN tree…"
-	done
-
-Route26HeyItsApricornText:
-	text "Hey! It's"
-	line "BLU APRICORN!"
-	done
-
-Route26NothingHereText:
-	text "There's nothing"
-	line "here…"
 	done
 
 Route26_MapEvents:
@@ -499,13 +454,13 @@ Route26_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 13, 49, BGEVENT_READ, Route26_NoFruit
+	bg_event 14, 50, BGEVENT_READ, Route26_NoFruit
 	bg_event  9,  3, BGEVENT_READ, Route26Sign
-	bg_event 13, 49, BGEVENT_READ, Route26NoBerry
-	bg_event 14, 50, BGEVENT_READ, Route26NoApricorn
 
 	def_object_events
-	object_event 13, 49, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route26BerryTree, EVENT_ROUTE_26_BERRY ;leppa
-	object_event 14, 50, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, Route26ApricornTree, EVENT_ROUTE_26_APRICORN ;sitrus
+	object_event 13, 49, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route26_LeppaBerry, EVENT_ROUTE_26_LEPPA_BERRY
+	object_event 14, 50, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, Route26_SitrusBerry, EVENT_ROUTE_26_SITRUS_BERRY
 ;	object_event 14, 24, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerCooltrainermJake, -1
 ;	object_event  9, 38, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerCooltrainermGaven3, -1
 ;	object_event 10, 56, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerCooltrainerfJoyce, -1

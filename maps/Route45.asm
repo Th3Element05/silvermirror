@@ -1,18 +1,6 @@
 	object_const_def
-;	const ROUTE_45_POKEFAN_M1
-;	const ROUTE_45_POKEFAN_M2
-;	const ROUTE_45_POKEFAN_M3
-;	const ROUTE_45_POKEFAN_M4
-;	const ROUTE_45_BLACK_BELT
-;	const ROUTE_45_COOLTRAINER_M
-;	const ROUTE_45_COOLTRAINER_F
-	const ROUTE_45_BERRY
-	const ROUTE_45_APRICORN
-;	const ROUTE_45_POKE_BALL1
-;	const ROUTE_45_POKE_BALL2
-;	const ROUTE_45_POKE_BALL3
-;	const ROUTE_45_POKE_BALL4
-;	const ROUTE_45_YOUNGSTER
+	const ROUTE45_LEPPA_BERRY
+	const ROUTE45_LUM_BERRY
 
 Route45_MapScripts:
 	def_scene_scripts
@@ -22,18 +10,47 @@ Route45_MapScripts:
 
 Route45Fruittrees:
 .Berry:
-	checkflag ENGINE_DAILY_ROUTE_45_BERRY
-	iftrue .NoBerry
-	appear ROUTE_45_BERRY
-.NoBerry:
-	;fallthrough
-
-.Apricorn:
-	checkflag ENGINE_DAILY_ROUTE_45_APRICORN
-	iftrue .NoApricorn
-	appear ROUTE_45_APRICORN
-.NoApricorn:
+	checkflag ENGINE_DAILY_ROUTE_45_FRUIT
+	iftrue .NoFruit
+	appear ROUTE45_LEPPA_BERRY
+	appear ROUTE45_LUM_BERRY
+.NoFruit:
 	endcallback
+
+; fruit
+Route45_LeppaBerry:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, LEPPA_BERRY
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem LEPPA_BERRY, 2
+	iffalse .NoRoomInBag
+	disappear ROUTE45_LEPPA_BERRY
+	setflag ENGINE_DAILY_ROUTE_45_FRUIT
+.NoRoomInBag
+	closetext
+	end
+
+Route45_LumBerry:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, LUM_BERRY
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem LUM_BERRY, 2
+	iffalse .NoRoomInBag
+	disappear ROUTE45_LUM_BERRY
+	setflag ENGINE_DAILY_ROUTE_45_FRUIT
+.NoRoomInBag
+	closetext
+	end
+
+Route45_NoFruit:
+	farsjump Std_NoFruitScript
+
 
 ;TrainerBlackbeltKenji:
 ;	trainer BLACKBELT_T, KENJI, EVENT_BEAT_BLACKBELT_KENJI, BlackbeltKenji3SeenText, BlackbeltKenji3BeatenText, 0, .Script
@@ -305,52 +322,10 @@ Route45DummyScript: ; unreferenced
 
 Route45Sign:
 	jumptext Route45SignText
-
-Route45BerryTree:
-	opentext
-	writetext Route45BerryTreeText
-	promptbutton
-	writetext Route45HeyItsBerryText
-	promptbutton
-	verbosegiveitem LEPPA_BERRY
-	iffalse .NoRoomInBag
-	disappear ROUTE_45_BERRY
-	setflag ENGINE_DAILY_ROUTE_45_BERRY
-.NoRoomInBag
-	closetext
-	end
-
-Route45ApricornTree:
-	opentext
-	writetext Route45ApricornTreeText
-	promptbutton
-	writetext Route45HeyItsApricornText
-	promptbutton
-	verbosegiveitem GRN_APRICORN
-	iffalse .NoRoomInBag
-	disappear ROUTE_45_APRICORN
-	setflag ENGINE_DAILY_ROUTE_45_APRICORN
-.NoRoomInBag
-	closetext
-	end
-
-Route45NoBerry:
-	opentext
-	writetext Route45BerryTreeText
-	promptbutton
-	writetext Route45NothingHereText
-	waitbutton
-	closetext
-	end
-
-Route45NoApricorn:
-	opentext
-	writetext Route45ApricornTreeText
-	promptbutton
-	writetext Route45NothingHereText
-	waitbutton
-	closetext
-	end
+Route45SignText:
+	text "ROUTE 45"
+	line "MOUNTAIN ROAD"
+	done
 
 ;Route45Nugget:
 ;	itemball NUGGET
@@ -579,36 +554,6 @@ Route45DummyText:
 ;	line "there, but…"
 ;	done
 
-Route45SignText:
-	text "ROUTE 45"
-	line "MOUNTAIN RD. AHEAD"
-	done
-
-Route45BerryTreeText:
-	text "It's a"
-	line "BERRY tree…"
-	done
-
-Route45HeyItsBerryText:
-	text "Hey! It's"
-	line "LEPPA BERRY!"
-	done
-
-Route45ApricornTreeText:
-	text "It's an"
-	line "APRICORN tree…"
-	done
-
-Route45HeyItsApricornText:
-	text "Hey! It's"
-	line "GRN APRICORN!"
-	done
-
-Route45NothingHereText:
-	text "There's nothing"
-	line "here…"
-	done
-
 Route45_MapEvents:
 	db 0, 0 ; filler
 
@@ -618,12 +563,14 @@ Route45_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 16, 80, BGEVENT_READ, Route45_NoFruit
+	bg_event 15, 82, BGEVENT_READ, Route45_NoFruit
 	bg_event 10,  4, BGEVENT_READ, Route45Sign
 ;	bg_event 13, 80, BGEVENT_ITEM, Route45HiddenPpUp
-	bg_event 16, 80, BGEVENT_READ, Route45NoBerry
-	bg_event 15, 82, BGEVENT_READ, Route45NoApricorn
 
 	def_object_events
+	object_event 16, 80, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route45_LeppaBerry, EVENT_ROUTE_45_LEPPA_BERRY
+	object_event 15, 82, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route45_LumBerry, EVENT_ROUTE_45_LUM_BERRY
 ;	object_event 10, 16, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerHikerErik, -1
 ;	object_event 15, 65, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerHikerMichael, -1
 ;	object_event  5, 28, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerHikerParry, -1
@@ -631,8 +578,6 @@ Route45_MapEvents:
 ;	object_event 11, 50, SPRITE_BLACK_BELT, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBlackbeltKenji, -1
 ;	object_event 17, 18, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerCooltrainermRyan, -1
 ;	object_event  5, 36, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerCooltrainerfKelly, -1
-	object_event 16, 80, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route45BerryTree, EVENT_ROUTE_45_BERRY ;lum
-	object_event 15, 82, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route45ApricornTree, EVENT_ROUTE_45_APRICORN ;leppa
 ;	object_event  6, 51, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route45Nugget, EVENT_ROUTE_45_NUGGET
 ;	object_event  5, 66, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route45Revive, EVENT_ROUTE_45_REVIVE
 ;	object_event  6, 20, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route45Elixer, EVENT_ROUTE_45_ELIXER

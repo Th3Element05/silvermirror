@@ -1,4 +1,5 @@
 	object_const_def
+	const ROUTE16_SITRUS_BERRY
 	const ROUTE16_SNORLAX
 
 Route16_MapScripts:
@@ -6,6 +7,7 @@ Route16_MapScripts:
 	
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, Route16AlwaysOnBikeCallback
+	callback MAPCALLBACK_OBJECTS, Route16Fruittrees
 
 Route16AlwaysOnBikeCallback:
 	readvar VAR_YCOORD
@@ -19,6 +21,33 @@ Route16AlwaysOnBikeCallback:
 	clearflag ENGINE_ALWAYS_ON_BIKE
 	endcallback
 
+; fruit
+Route16Fruittrees:
+	checkflag ENGINE_DAILY_ROUTE_16_FRUIT
+	iftrue .NoFruit
+	appear ROUTE16_SITRUS_BERRY
+.NoFruit:
+	endcallback
+
+Route16_SitrusBerry:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, SITRUS_BERRY
+	farwritetext _HeyItsFruitText
+	promptbutton
+	verbosegiveitem SITRUS_BERRY, 2
+	iffalse .NoRoomInBag
+	disappear ROUTE16_SITRUS_BERRY
+	setflag ENGINE_DAILY_ROUTE_16_FRUIT
+.NoRoomInBag
+	closetext
+	end
+
+Route16_NoFruit:
+	farsjump Std_NoFruitScript
+
+; scripts
 Route16Snorlax:
 	opentext
 	special SnorlaxAwake
@@ -290,10 +319,12 @@ Route16_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 23,  5, BGEVENT_READ, Route16_NoFruit
 	bg_event 27, 13, BGEVENT_READ, CyclingRoadSign
 	bg_event  5, 19, BGEVENT_READ, Route16Sign
 
 	def_object_events
+	object_event 23,  5, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, Route16_SitrusBerry, EVENT_ROUTE_16_SITRUS_BERRY
 	object_event 24, 12, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_BIGDOLLSYM, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route16Snorlax, EVENT_ROUTE_16_SNORLAX
 	object_event  3, 14, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerBikerAiden, -1
 	object_event  6, 12, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerJugglerOtis, -1
