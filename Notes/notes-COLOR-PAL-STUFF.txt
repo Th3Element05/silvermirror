@@ -1,0 +1,14 @@
+notes-COLOR-PAL-STUFF
+
+constants\icon_constants.asm
+	const PAL_ICON_RED    ; 0
+data\pokemon\menu_icon_pals.asm
+	icon_pals GREEN,  YELLOW   ; BULBASAUR
+gfx\stats\party_menu_ob.pal
+	RGB 27,31,27, 31,19,10, 31,07,01, 00,00,00 ; red
+
+51	PINK
+43	GRAY
+70	YELLOW
+48	PURPLE
+
