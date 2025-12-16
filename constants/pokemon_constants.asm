@@ -191,9 +191,9 @@ DEF JOHTO_POKEMON EQU const_value
 	const CROBAT     ; a9
 	const CHINCHOU   ; aa
 	const LANTURN    ; ab
-	const PICHU      ; ac
-	const CLEFFA     ; ad
-	const IGGLYBUFF  ; ae
+	const PICHU      ; ac ; baby
+	const CLEFFA     ; ad ; baby
+	const IGGLYBUFF  ; ae ; baby
 	const TOGEPI     ; af
 	const TOGETIC    ; b0
 	const NATU       ; b1
@@ -255,11 +255,11 @@ DEF JOHTO_POKEMON EQU const_value
 	const PORYGON2   ; e9
 	const STANTLER   ; ea
 	const SMEARGLE   ; eb
-	const TYROGUE    ; ec
+	const TYROGUE    ; ec ; baby(keep)
 	const HITMONTOP  ; ed
-	const SMOOCHUM   ; ee
-	const ELEKID     ; ef
-	const MAGBY      ; f0
+	const SMOOCHUM   ; ee ; baby
+	const ELEKID     ; ef ; baby
+	const MAGBY      ; f0 ; baby
 	const MILTANK    ; f1
 	const BLISSEY    ; f2
 	const RAIKOU     ; f3
@@ -272,9 +272,9 @@ DEF JOHTO_POKEMON EQU const_value
 	const HO_OH      ; fa
 	const CELEBI     ; fb
 	const MISSINGNO  ; fc ;missingno
+;	const_skip       ; fd
 DEF NUM_POKEMON EQU const_value - 1
-;	const_skip       ; fc
-	const EGG        ; fd
+	const EGG        ; fd, fe
 
 ; Unown forms
 ; indexes for:
