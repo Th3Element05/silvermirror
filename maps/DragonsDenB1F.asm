@@ -315,80 +315,80 @@ RivalText_Training2:
 	line "of my way…"
 	done
 
-CooltrainermDarinSeenText:
-	text "You! How dare you"
-	line "enter uninvited!"
-	done
+;CooltrainermDarinSeenText:
+;	text "You! How dare you"
+;	line "enter uninvited!"
+;	done
 
-CooltrainermDarinBeatenText:
-	text "S-strong!"
-	done
+;CooltrainermDarinBeatenText:
+;	text "S-strong!"
+;	done
 
-CooltrainermDarinAfterBattleText:
-	text "The SHRINE ahead"
-	line "is home to the"
+;CooltrainermDarinAfterBattleText:
+;	text "The SHRINE ahead"
+;	line "is home to the"
+;
+;	para "MASTER of our"
+;	line "dragon-user clan."
+;
+;	para "You're not allowed"
+;	line "to just go in!"
+;	done
 
-	para "MASTER of our"
-	line "dragon-user clan."
+;CooltrainerfCaraSeenText:
+;	text "You shouldn't be"
+;	line "in here!"
+;	done
 
-	para "You're not allowed"
-	line "to just go in!"
-	done
+;CooltrainerfCaraBeatenText:
+;	text "Oh yikes, I lost!"
+;	done
 
-CooltrainerfCaraSeenText:
-	text "You shouldn't be"
-	line "in here!"
-	done
+;CooltrainerfCaraAfterBattleText:
+;	text "Soon I'm going to"
+;	line "get permission"
+;
+;	para "from our MASTER to"
+;	line "use dragons."
+;
+;	para "When I do, I'm"
+;	line "going to become an"
+;
+;	para "admirable dragon"
+;	line "trainer and gain"
+;
+;	para "our MASTER's"
+;	line "approval."
+;	done
 
-CooltrainerfCaraBeatenText:
-	text "Oh yikes, I lost!"
-	done
+;TwinsLeaandpia1SeenText:
+;	text "It's a stranger we"
+;	line "don't know."
+;	done
 
-CooltrainerfCaraAfterBattleText:
-	text "Soon I'm going to"
-	line "get permission"
+;TwinsLeaandpia1BeatenText:
+;	text "Ouchies."
+;	done
 
-	para "from our MASTER to"
-	line "use dragons."
+;TwinsLeaandpia1AfterBattleText:
+;	text "It was like having"
+;	line "to battle LANCE."
+;	done
 
-	para "When I do, I'm"
-	line "going to become an"
+;TwinsLeaandpia2SeenText:
+;	text "Who are you?"
+;	done
 
-	para "admirable dragon"
-	line "trainer and gain"
+;TwinsLeaandpia2BeatenText:
+;	text "Meanie."
+;	done
 
-	para "our MASTER's"
-	line "approval."
-	done
-
-TwinsLeaandpia1SeenText:
-	text "It's a stranger we"
-	line "don't know."
-	done
-
-TwinsLeaandpia1BeatenText:
-	text "Ouchies."
-	done
-
-TwinsLeaandpia1AfterBattleText:
-	text "It was like having"
-	line "to battle LANCE."
-	done
-
-TwinsLeaandpia2SeenText:
-	text "Who are you?"
-	done
-
-TwinsLeaandpia2BeatenText:
-	text "Meanie."
-	done
-
-TwinsLeaandpia2AfterBattleText:
-	text "We'll tell on you."
-
-	para "MASTER will be"
-	line "angry with you."
-	done
+;TwinsLeaandpia2AfterBattleText:
+;	text "We'll tell on you."
+;
+;	para "MASTER will be"
+;	line "angry with you."
+;	done
 
 Text_FoundDragonFang:
 	text "<PLAYER> found"
