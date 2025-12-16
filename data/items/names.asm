@@ -58,12 +58,12 @@ ItemNames::
 	li "OLD ROD"
 	li "GOOD ROD"
 	li "SILVER LEAF"
-	li "SUPER ROD"  ; SUPER_ROD
+	li "SUPER ROD" ; SUPER_ROD
 	li "PP UP"
 	li "ETHER"
 	li "MAX ETHER"
 	li "ELIXER"
-	li "RED SCALE"
+	li "GOLD SCALE" ;"RED SCALE"
 	li "OAK's PARCEL" ; "SECRETPOTION"
 	li "S.S.TICKET"
 	li "MYSTERY EGG"
@@ -249,6 +249,7 @@ ItemNames::
 	li "TM74"
 	li "TM75"
 	li "TM76"
+	li "TM77"
 	assert_list_length NUM_ITEMS + NUM_TMS; + 2 ; count ITEM_C3 and ITEM_DC
 	li "HM01"
 	li "HM02"

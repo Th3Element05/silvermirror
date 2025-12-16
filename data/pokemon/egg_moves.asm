@@ -20,7 +20,7 @@ BulbasaurEggMoves:
 
 CharmanderEggMoves:
 	db BELLY_DRUM
-	db ANCIENTPOWER
+;	db ANCIENTPOWER
 ;	db ROCK_SLIDE
 	db BITE
 	db OUTRAGE
@@ -143,7 +143,7 @@ VenonatEggMoves:
 DiglettEggMoves:
 	db FEINT_ATTACK
 	db SCREECH
-	db ANCIENTPOWER
+;	db ANCIENTPOWER
 	db PURSUIT
 	db BEAT_UP
 	db -1 ; end
@@ -315,12 +315,12 @@ ExeggcuteEggMoves:
 	db MOONLIGHT
 ;	db REFLECT
 	db MEGA_DRAIN
-	db ANCIENTPOWER
+;	db ANCIENTPOWER
 	db -1 ; end
 
 CuboneEggMoves:
 ;	db ROCK_SLIDE
-	db ANCIENTPOWER
+;	db ANCIENTPOWER
 	db BELLY_DRUM
 	db SCREECH
 ;	db SKULL_BASH
@@ -461,7 +461,7 @@ ChikoritaEggMoves:
 	db VINE_WHIP
 	db LEECH_SEED
 ;	db COUNTER
-	db ANCIENTPOWER
+;	db ANCIENTPOWER
 	db FLAIL
 ;	db SWORDS_DANCE
 	db DETECT
@@ -481,7 +481,7 @@ TotodileEggMoves:
 	db CRUNCH
 	db THRASH
 	db HYDRO_PUMP
-	db ANCIENTPOWER
+;	db ANCIENTPOWER
 	db RAZOR_WIND
 ;	db ROCK_SLIDE
 	db DETECT
@@ -626,7 +626,7 @@ YanmaEggMoves:
 
 WooperEggMoves:
 ;	db BODY_SLAM
-	db ANCIENTPOWER
+;	db ANCIENTPOWER
 	db SAFEGUARD
 	db -1 ; end
 
@@ -662,7 +662,7 @@ PinecoEggMoves:
 
 DunsparceEggMoves:
 ;	db BIDE
-	db ANCIENTPOWER
+;	db ANCIENTPOWER
 ;	db ROCK_SLIDE
 	db BITE
 ;	db RAGE
@@ -733,7 +733,7 @@ SwinubEggMoves:
 	db BITE
 ;	db BODY_SLAM
 ;	db ROCK_SLIDE
-	db ANCIENTPOWER
+;	db ANCIENTPOWER
 	db DETECT
 	db -1 ; end
 
@@ -791,7 +791,7 @@ HoundourEggMoves:
 PhanpyEggMoves:
 	db FOCUS_ENERGY
 ;	db BODY_SLAM
-	db ANCIENTPOWER
+;	db ANCIENTPOWER
 ;	db WATER_GUN
 	db -1 ; end
 
@@ -845,7 +845,7 @@ LarvitarEggMoves:
 	db STOMP
 	db OUTRAGE
 	db FOCUS_ENERGY
-	db ANCIENTPOWER
+;	db ANCIENTPOWER
 	db DETECT
 	db -1 ; end
 

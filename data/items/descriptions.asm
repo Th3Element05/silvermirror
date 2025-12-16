@@ -64,7 +64,7 @@ ItemDescriptions:
 	dw EtherDesc
 	dw MaxEtherDesc
 	dw ElixerDesc
-	dw RedScaleDesc
+	dw GoldScaleDesc ; RedScaleDesc
 	dw OaksParcelDesc ; SecretPotionDesc
 	dw SSTicketDesc
 	dw MysteryEggDesc
@@ -511,9 +511,10 @@ ElixerDesc:
 	db   "Restores PP of all"
 	next "moves by 10.@"
 
-RedScaleDesc:
-	db   "A scale from the"
-	next "red GYARADOS.@"
+;RedScaleDesc:
+GoldScaleDesc:
+	db   "A scale from a"
+	next "gold MAGIKARP.@"
 
 ;SecretPotionDesc:
 ;	db   "Fully heals any"
