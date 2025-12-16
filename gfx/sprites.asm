@@ -106,6 +106,7 @@ KangaskhanMoveSpriteGFX::      INCBIN "gfx/sprites/kangaskhan_move.2bpp"
 MrMimeMoveSpriteGFX::          INCBIN "gfx/sprites/mr_mime_move.2bpp"
 TangelaMoveSpriteGFX::         INCBIN "gfx/sprites/tangela_move.2bpp"
 GeodudeMoveSpriteGFX::         INCBIN "gfx/sprites/geodude_move.2bpp"
+MagikarpSwimSpriteGFX::        INCBIN "gfx/sprites/magikarp_swim.2bpp"
 ;
 BigSnorlaxSpriteGFX::          INCBIN "gfx/sprites/big_snorlax.2bpp"
 BigLaprasSpriteGFX::           INCBIN "gfx/sprites/big_lapras.2bpp"

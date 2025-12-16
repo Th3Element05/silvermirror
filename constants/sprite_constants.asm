@@ -100,18 +100,18 @@
 ;; 5f
 ; walking pokemon
 ;	LAPRAS is SPRITE_SURF
-	const SPRITE_SUDOWOODO              ; 60
+	const SPRITE_SUDOWOODO              ; 60 (Route36)
 	const SPRITE_MONSTER                ; 61 (init_events, BillsHouse)
 	const SPRITE_CLEFAIRY_MOVE          ; 62 (MountMoonSquare)
-	const SPRITE_DRATINI_MOVE           ; 63
-	const SPRITE_SCYTHER_MOVE           ; 64
-	const SPRITE_PINSIR_MOVE            ; 65
-	const SPRITE_CHANSEY_MOVE           ; 66
-	const SPRITE_KANGASKHAN_MOVE        ; 67
-	const SPRITE_MR__MIME_MOVE          ; 68
-	const SPRITE_TANGELA_MOVE           ; 69
-	const SPRITE_GEODUDE_MOVE           ; 6a
-;; 6b
+	const SPRITE_DRATINI_MOVE           ; 63 (Fuschia City)
+	const SPRITE_SCYTHER_MOVE           ; 64 (Fuschia City)
+	const SPRITE_PINSIR_MOVE            ; 65 (Fuschia City)
+	const SPRITE_CHANSEY_MOVE           ; 66 (Fuschia City, CopycatsHouse1F)
+	const SPRITE_KANGASKHAN_MOVE        ; 67 (Fuschia City)
+	const SPRITE_MR__MIME_MOVE          ; 68 (Route36)
+	const SPRITE_TANGELA_MOVE           ; 69 (Route36)
+	const SPRITE_GEODUDE_MOVE           ; 6a (Route20)
+	const SPRITE_MAGIKARP_SWIM          ; 6b (LakeOfRage)
 ;; 6c
 ;; 6d
 ;; 6e
