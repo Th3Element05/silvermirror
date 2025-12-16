@@ -34,7 +34,7 @@ OverworldSprites:
 	overworld_sprite ChuckSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
 	overworld_sprite JasmineSpriteGFX, 12, WALKING_SPRITE, PAL_OW_GREEN
 	overworld_sprite PryceSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
-	overworld_sprite ClairSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite ClairSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
 	overworld_sprite RocketSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
 	overworld_sprite RocketGirlSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
 	overworld_sprite CooltrainerMSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
@@ -115,8 +115,8 @@ OverworldSprites:
 	overworld_sprite KangaskhanMoveSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
 	overworld_sprite MrMimeMoveSpriteGFX, 12, WALKING_SPRITE, PAL_OW_PURPLE
 	overworld_sprite TangelaMoveSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
-	overworld_sprite GeodudeMoveSpriteGFX, 12, WALKING_SPRITE, PAL_OW_TREE
-; 6b
+	overworld_sprite GeodudeMoveSpriteGFX, 12, WALKING_SPRITE, PAL_OW_SILVER
+	overworld_sprite MagikarpSwimSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
 ; 6c
 ; 6d
 ; 6e
