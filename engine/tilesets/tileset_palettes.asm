@@ -116,7 +116,7 @@ MapSpecificPalettes:
 	_use_palette_routine_for_map E4_LORELEIS_ROOM, .LoreleisRoomBGPalettes
 	_use_palette_routine_for_map POWER_PLANT, .PowerPlantIndoorPalettes
 ;	_use_palette_routine_for_map VIRIDIAN_GYM, .ViridianGymBGPalettes
-	_use_palette_routine_for_map MAHOGANY_GYM, .MahoganyGymBGPalettes
+	_use_palette_routine_for_map MAHOGANY_GYM, .AgathasRoomBGPalettes
 ;	_use_palette_routine_for_map PEWTER_MUSEUM_1F, .MuseumBGPalettes
 ;	_use_palette_routine_for_map PEWTER_MUSEUM_2F, .MuseumBGPalettes
 	db -1 ; terminator
@@ -167,9 +167,6 @@ MapSpecificPalettes:
 ;.ViridianGymBGPalettes:
 ;	ld hl, ViridianGymPals
 ;	jp .next
-.MahoganyGymBGPalettes:
-	ld hl, AgathasRoomPals
-	jp .next
 ;.MuseumBGPalettes
 ;	call LoadMuseumPalette
 ;	scf
@@ -213,6 +210,7 @@ MapSpecificOBPalettes:
 	_use_palette_routine_for_map GOLDENROD_DEPT_STORE_B1F, .GrayOverYellowOBPalette ;machoke
 	_use_palette_routine_for_map AZALEA_TOWN, .PinkOverYellowOBPalette              ;slowpoke
 	_use_palette_routine_for_map ROUTE_33, .GrayOverYellowOBPalette                 ;blk
+	_use_palette_routine_for_map UNION_CAVE_1F, .GrayOverYellowOBPalette            ;geodude
 	_use_palette_routine_for_map ROUTE_30, .PinkOverYellowOBPalette                 ;pecha, pnk
 	_use_palette_routine_for_map ROUTE_42, .PinkOverSilverOBPalette                 ;pnk
 	_use_palette_routine_for_map ROUTE_43, .PinkOverYellowOBPalette                 ;persim
