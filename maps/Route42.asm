@@ -86,7 +86,7 @@ Route42ChuckScript:
 	writetext Route42ChuckTellRocksmashText
 	promptbutton
 	scall Route42PrimeapeScript
-	showemote EMOTE_SHOCK, PLAYER, 15
+;	showemote EMOTE_SHOCK, PLAYER, 15 ;can't do emote due to PinkOverSilver palette
 	earthquake 50
 	playsound SFX_STRENGTH
 	waitsfx
@@ -98,7 +98,8 @@ Route42ChuckScript:
 	promptbutton
 	closetext
 	playsound SFX_BALL_POOF
-	waitsfx
+;	waitsfx
+	applymovement ROUTE42_PRIMEAPE, Route42RockSmashMovement
 	disappear ROUTE42_PRIMEAPE
 	pause 10
 	turnobject ROUTE42_CHUCK, RIGHT
@@ -163,6 +164,10 @@ Route42ChuckWalksAwayMovement:
 	step LEFT
 	step LEFT
 	step LEFT
+	step_end
+
+Route42RockSmashMovement:
+	rock_smash 10
 	step_end
 
 Route42PrimeapeScript:
