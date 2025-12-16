@@ -170,10 +170,10 @@ AzaleaTownSign:
 	jumptext AzaleaTownSignText
 AzaleaTownSignText:
 	text "AZALEA TOWN"
-	line "Where People and"
 
-	para "#MON Live in"
-	line "Happy Harmony"
+	para "Where People and"
+	line "#MON Live in"
+	cont "Happy Harmony"
 	done
 
 KurtsHouseSign:
