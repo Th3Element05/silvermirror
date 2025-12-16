@@ -1,0 +1,50 @@
+tangrowth	M_ancientpower
+~
+gliscor		razor fang @ night
+honchkrow	dusk stone
+mamoswine	M_ancientpower
+mismagius	dusk stone
+weavile		razor claw @ night
+yanmega		M_ancientpower
+x
+togekiss	shiny stone (happiness?)
+ambipom		M_double hit
+magnezone	thunderstone?
+
+
+#Pic banks are offset by PICS_FIX
+
+`data/pokemon/pic_pointers.asm`, `data/pokemon/unown_pic_pointers.asm`, and `data/trainers/pic_pointers.asm` all have to use dba_pic instead of dba. 
+This is a macro in `macros/data.asm` that offsets banks by PICS_FIX:
+
+]MACRO dba_pic ; dbw bank, address
+]	db BANK(\1) - PICS_FIX
+]	dw \1
+]ENDM
+
+The offset is translated into a correct bank by FixPicBank in engine/gfx/load_pics.asm:
+
+]FixPicBank:
+]; This is a thing for some reason.
+]
+]EXPORT DEF PICS_FIX EQU $36
+]
+]	push hl
+]	push bc
+]	sub BANK("Pics 1") - PICS_FIX
+]	ld c, a
+]	ld b, 0
+]	ld hl, .PicsBanks
+]	add hl, bc
+]	ld a, [hl]
+]	pop bc
+]	pop hl
+]	ret
+]
+].PicsBanks:
+]	db BANK("Pics 1")  ; BANK("Pics 1") + 0
+]	...
+]	db BANK("Pics 24") ; BANK("Pics 1") + 23
+
+Fix: Delete FixPicBank and remove all four calls to FixPicBank in engine/gfx/load_pics.asm. Then use dba instead of dba_pic everywhere.
+

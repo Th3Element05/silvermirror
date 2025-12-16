@@ -1,0 +1,92 @@
+  C:\cygwin64\home\scrawford\silvermirror-local\maps\AzaleaGym.asm
+	Line 272: 	text "Yo, champ!"
+  C:\cygwin64\home\scrawford\silvermirror-local\maps\BillsFamilysHouse.asm
+	Line  59: 	cont "LEAGUE CHAMPION!"
+  C:\cygwin64\home\scrawford\silvermirror-local\maps\BlackthornGym1F.asm
+	Line 341: 	text "Yo! CHAMP!"
+	Line 374: ;	cont "#MON CHAMPION!"
+  C:\cygwin64\home\scrawford\silvermirror-local\maps\CeladonGameCorner.asm
+	Line 193: 	cont "champ in making!"
+  C:\cygwin64\home\scrawford\silvermirror-local\maps\CeruleanCity.asm
+	Line 417: 	line "champion is the"
+  C:\cygwin64\home\scrawford\silvermirror-local\maps\CeruleanGym.asm
+	Line 193: 	text "Yo! Champ in"
+  C:\cygwin64\home\scrawford\silvermirror-local\maps\CinnabarGym.asm
+	Line 754: 	text "Yo! Champ in"
+  C:\cygwin64\home\scrawford\silvermirror-local\maps\E4LancesRoom.asm
+	Line 117: 	writetext ChampionBattleIntroText
+	Line 121: 	winlosstext ChampionBattleWinText, ChampionBattleLossText
+	Line 123: 	iftrue .ChampionBulbasaur
+	Line 125: 	iftrue .ChampionCharmander
+	Line 127: 	loadtrainer CHAMPION, CHAMPION1_SQUIRTLE
+	Line 128: 	sjump .DoChampionBattle
+	Line 129: .ChampionBulbasaur
+	Line 131: 	loadtrainer CHAMPION, CHAMPION1_BULBASAUR
+	Line 132: 	sjump .DoChampionBattle
+	Line 133: .ChampionCharmander
+	Line 135: 	loadtrainer CHAMPION, CHAMPION1_CHARMANDER
+	Line 136: ;	sjump .FinishChampion
+	Line 138: .DoChampionBattle
+	Line 142: 	setevent EVENT_BEAT_E4_CHAMPION
+	Line 145: 	writetext ChampionBattleAfterText
+	Line 321: 	cont "champion!"
+	Line 343: 	cont "champion!"
+	Line 353: 	cont "of CHAMPION!"
+	Line 361: ChampionBattleIntroText:
+	Line 385: 	line "LEAGUE champion!"
+	Line 398: ChampionBattleWinText:
+	Line 405: 	cont "LEAGUE champ?"
+	Line 412: ChampionBattleLossText:
+	Line 428: ChampionBattleAfterText:
+	Line 438: 	cont "LEAGUE champion!"
+	Line 453: 	cont "champion!"
+	Line 486: 	cont "a champ again!"
+	Line 511: ;	warp_event  4,  1, E4_CHAMPIONS_ROOM, 1
+	Line 512: ;	warp_event  5,  1, E4_CHAMPIONS_ROOM, 2
+  C:\cygwin64\home\scrawford\silvermirror-local\maps\ElmsLab.asm
+	Line 1067: ;	line "the CHAMPION."
+	Line 1097: ;	para "championship will"
+  C:\cygwin64\home\scrawford\silvermirror-local\maps\FastShipCabins_South.asm
+	Line 153: ;	line "become the CHAMP!"
+  C:\cygwin64\home\scrawford\silvermirror-local\maps\FuchsiaGym.asm
+	Line 327: 	text "Yo! Champ in"
+  C:\cygwin64\home\scrawford\silvermirror-local\maps\GoldenrodGym.asm
+	Line 333: 	text "Yo! Champ!"
+  C:\cygwin64\home\scrawford\silvermirror-local\maps\HallOfFame.asm
+	Line  83: 	line "champions are"
+	Line  94: 	cont "LEAGUE champion!"
+  C:\cygwin64\home\scrawford\silvermirror-local\maps\IndigoPlateauPokecenter1F.asm
+	Line  33: ;	setmapscene E4_CHAMPIONS_ROOM, SCENE_CHAMPIONSROOM_LOCK_DOOR
+	Line  43: ;	clearevent EVENT_CHAMPIONS_ROOM_ENTRANCE_CLOSED
+	Line  44: ;	clearevent EVENT_CHAMPIONS_ROOM_EXIT_OPEN
+	Line  49: 	clearevent EVENT_BEAT_E4_CHAMPION
+	Line  66: 	text "Yo! Champ in"
+  C:\cygwin64\home\scrawford\silvermirror-local\maps\OaksLab.asm
+	Line 1079: 	setevent EVENT_BEAT_E4_CHAMPION
+	Line 1307: ;	checkevent EVENT_BEAT_E4_CHAMPION
+	Line 1501: 	setevent EVENT_BEAT_E4_CHAMPION
+  C:\cygwin64\home\scrawford\silvermirror-local\maps\OlivineGym.asm
+	Line 156: 	text "Yo! Champ!"
+	Line 190: ;	text "Yo! CHAMP in"
+  C:\cygwin64\home\scrawford\silvermirror-local\maps\PewterGym.asm
+	Line 199: 	cont "#MON champ!"
+	Line 222: 	cont "champ material!"
+  C:\cygwin64\home\scrawford\silvermirror-local\maps\Route26.asm
+	Line 425: ;	cont "the LEAGUE CHAMP!"
+  C:\cygwin64\home\scrawford\silvermirror-local\maps\Route42.asm
+	Line 267: 	line "the trainer CHAMP"
+  C:\cygwin64\home\scrawford\silvermirror-local\maps\SaffronGym.asm
+	Line 375: 	text "Yo! Champ in"
+  C:\cygwin64\home\scrawford\silvermirror-local\maps\TrainerHouse1F.asm
+	Line  83: 	line "become the CHAMP"
+	Line  91: 	para "The CHAMPION from"
+  C:\cygwin64\home\scrawford\silvermirror-local\maps\VermilionGym.asm
+	Line 293: 	text "Yo! Champ in"
+  C:\cygwin64\home\scrawford\silvermirror-local\maps\VioletGym.asm
+	Line 228: 	text "Hey! Champ!"
+	Line 241: 	line "from you, Champ!"
+  C:\cygwin64\home\scrawford\silvermirror-local\maps\ViridianGym.asm
+	Line 364: 	text "Yo! Champ in"
+  C:\cygwin64\home\scrawford\silvermirror-local\ram\wram.asm
+	Line 2966: wSpawnAfterChampion:: db
+	Line 3221: ;wE4ChampionsRoomSceneID::                         db ; wLancesRoomSceneID::

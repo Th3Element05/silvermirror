@@ -31,19 +31,25 @@ IGGLYBUFF	jigglypuff
 SMOOCHUM	jynx
 ELEKID		electabuzz
 MAGBY		magmar
+~
 TYROGUE		hitmonlee/hitmonchan
 ~
 UNOWN
 
-4 togekiss	shiny stone
-4 honchkrow	dusk stone
-4 mismagius	dusk stone
-4 gliscor	razor fang @ night
-4 weavile	razor claw @ night
-4 mamoswine	M_ancient power
-4 yanmega	M_ancient power
+tangrowth	M_ancientpower
 ~
-4 ambipom	M_double hit
+gliscor		razor fang @ night
+honchkrow	dusk stone
+mamoswine	M_ancientpower
+mismagius	dusk stone
+weavile		razor claw @ night
+yanmega		M_ancientpower
+x
+togekiss	shiny stone (happiness?)
+ambipom		M_double hit
+magnezone	thunderstone?
+
+
 
 
 ; wStatusFlags::
