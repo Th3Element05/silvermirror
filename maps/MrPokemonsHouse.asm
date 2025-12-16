@@ -56,7 +56,7 @@ MrPokemonsHouseTilesCallback:
 ;MrPokemonsHouse_MrPokemonScript:
 ;	faceplayer
 ;	opentext
-;	checkitem RED_SCALE
+;	checkitem GOLD_SCALE
 ;	iftrue .RedScale
 ;	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
 ;	iftrue .AlwaysNewDiscoveries
@@ -77,7 +77,7 @@ MrPokemonsHouseTilesCallback:
 ;	iffalse .refused
 ;	verbosegiveitem LUCKY_EGG
 ;	iffalse .full
-;	takeitem RED_SCALE
+;	takeitem GOLD_SCALE
 ;	sjump .AlwaysNewDiscoveries
 
 ;.refused
