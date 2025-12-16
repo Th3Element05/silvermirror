@@ -367,6 +367,8 @@ DEF KRIS EQU __trainer_class__
 	const COLT
 	const CALLUM
 	const ZANE
+	const AXEL
+	const MILES
 ; reamtch
 	const GAVEN2
 	const GAVEN3
@@ -385,6 +387,9 @@ DEF KRIS EQU __trainer_class__
 	const CARA
 	const QUINN
 	const LAYLA
+	const IRIS
+	const LILY
+	const RIVER
 ; rematch
 	const BETH2
 	const BETH3
@@ -421,6 +426,9 @@ DEF KRIS EQU __trainer_class__
 	const ROLAND
 	const MAX
 	const JULIUS
+	const MICAH
+	const CARSON
+	const JUDE
 ; rematch
 	const BRENT2
 	const BRENT3
@@ -630,6 +638,8 @@ DEF KRIS EQU __trainer_class__
 	const PARRY1
 	const PATRICK
 	const ALEC
+	const DIEGO
+	const LEONEL
 ; rematch
 	const KENNY2
 	const KENNY3
