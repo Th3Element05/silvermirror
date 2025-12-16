@@ -509,6 +509,12 @@ RespawnOneOffs:
 	eventflagreset EVENT_FOUGHT_MEW
 .CaughtMew
 
+	ld de, ENGINE_PLAYER_CAUGHT_MAGIKARP
+	farcall EngineFlagAction
+	jr nz, .CaughtMagikarp
+	eventflagreset EVENT_LAKE_OF_RAGE_GOLD_MAGIKARP
+.CaughtMagikarp
+
 	ld de, ENGINE_PLAYER_CAUGHT_RAIKOU
 	farcall EngineFlagAction
 	jr nz, .CaughtRaikou
@@ -529,9 +535,18 @@ RespawnOneOffs:
 
 	ld de, ENGINE_PLAYER_CAUGHT_SUICUNE
 	farcall EngineFlagAction
-	jr nz, .CaughtOrNeverFoughtSuicune
-	eventflagreset EVENT_TIN_TOWER_1F_SUICUNE
-.CaughtOrNeverFoughtSuicune
+	jr nz, .CaughtSuicune
+	ld hl, wRoamMon3Species
+	ld a, [hl]
+	and a
+	call z, RespawnRoamingSuicune
+.CaughtSuicune
+
+;	ld de, ENGINE_PLAYER_CAUGHT_SUICUNE
+;	farcall EngineFlagAction
+;	jr nz, .CaughtOrNeverFoughtSuicune
+;	eventflagreset EVENT_TIN_TOWER_1F_SUICUNE
+;.CaughtOrNeverFoughtSuicune
 
 	ld de, ENGINE_PLAYER_CAUGHT_LUGIA
 	farcall EngineFlagAction
