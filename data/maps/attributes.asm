@@ -533,7 +533,7 @@ ENDM
 	map_attributes EcruteakMart, ECRUTEAK_MART, $00, 0
 	map_attributes EcruteakGym, ECRUTEAK_GYM, $00, 0
 	map_attributes EcruteakItemfinderHouse, ECRUTEAK_ITEMFINDER_HOUSE, $00, 0
-	map_attributes BlackthornGym1F, BLACKTHORN_GYM_1F, $46, 0
+	map_attributes BlackthornGym1F, BLACKTHORN_GYM_1F, $00, 0
 	map_attributes BlackthornDragonSpeechHouse, BLACKTHORN_DRAGON_SPEECH_HOUSE, $00, 0
 	map_attributes BlackthornEmysHouse, BLACKTHORN_EMYS_HOUSE, $00, 0
 	map_attributes BlackthornMart, BLACKTHORN_MART, $00, 0
@@ -630,7 +630,7 @@ ENDM
 	map_attributes MountMoonGiftShop, MOUNT_MOON_GIFT_SHOP, $00, 0
 	map_attributes TinTowerRoof, TIN_TOWER_ROOF, $00, 0
 	map_attributes BurnedTowerB1F, BURNED_TOWER_B1F, $09, 0
-	map_attributes BlackthornGym2F, BLACKTHORN_GYM_2F, $46, 0
+	map_attributes BlackthornGym2F, BLACKTHORN_GYM_2F, $00, 0
 	map_attributes IndigoPlateauPokecenter1F, INDIGO_PLATEAU_POKECENTER_1F, $00, 0
 	map_attributes E4LoreleisRoom, E4_LORELEIS_ROOM, $00, 0
 	map_attributes E4BrunosRoom, E4_BRUNOS_ROOM, $00, 0
