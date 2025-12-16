@@ -344,5 +344,6 @@ EngineFlags:
 	engine_flag wPlayerCaught2, 2 ; Celebi
 	engine_flag wPlayerCaught2, 3 ; Sudowoodo
 	engine_flag wPlayerCaught2, 4 ; Snorlax
+	engine_flag wPlayerCaught2, 5 ; Magikarp
 
 	assert_table_length NUM_ENGINE_FLAGS
