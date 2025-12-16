@@ -69,7 +69,7 @@
 	const ETHER        ; 3d
 	const MAX_ETHER    ; 3e
 	const ELIXER       ; 3f
-	const RED_SCALE    ; 40
+	const GOLD_SCALE   ; 40 ; RED_SCALE
 	const OAKS_PARCEL  ; 41 ; SECRETPOTION ; 41
 	const S_S_TICKET   ; 42
 	const MYSTERY_EGG  ; 43
@@ -275,6 +275,7 @@ DEF TM01 EQU const_value
 	add_tm STEEL_WING   ; f3
 	add_tm FURY_CUTTER  ; f4
 	add_tm NIGHTMARE    ; f5
+	add_tm ANCIENTPOWER ; f6
 DEF NUM_TMS EQU __tmhm_value__ - 1
 
 MACRO add_hm
