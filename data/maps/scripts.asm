@@ -386,11 +386,12 @@ INCLUDE "maps/RuinsOfAlphKabutoChamber.asm"
 INCLUDE "maps/RuinsOfAlphOmanyteChamber.asm"
 INCLUDE "maps/RuinsOfAlphAerodactylChamber.asm"
 INCLUDE "maps/RuinsOfAlphInnerChamber.asm"
-INCLUDE "maps/RuinsOfAlphResearchCenter.asm"
-INCLUDE "maps/RuinsOfAlphHoOhItemRoom.asm"
 INCLUDE "maps/RuinsOfAlphKabutoItemRoom.asm"
-INCLUDE "maps/RuinsOfAlphOmanyteItemRoom.asm"
 INCLUDE "maps/RuinsOfAlphAerodactylItemRoom.asm"
+INCLUDE "maps/RuinsOfAlphOmanyteItemRoom.asm"
+INCLUDE "maps/RuinsOfAlphHoOhItemRoom.asm"
+INCLUDE "maps/RuinsOfAlphWordRoom.asm"
+;INCLUDE "maps/RuinsOfAlphResearchCenter.asm"
 
 
 SECTION "Map Scripts 31", ROMX
@@ -518,7 +519,7 @@ INCLUDE "maps/OlivineGoodRodHouse.asm"
 INCLUDE "maps/OlivineCafe.asm"
 INCLUDE "maps/OlivineTimsHouse.asm"
 INCLUDE "maps/OlivinePunishmentSpeechHouse.asm"
-INCLUDE "maps/OlivineHouseBeta.asm"
+;INCLUDE "maps/OlivineHouseBeta.asm"
 
 
 SECTION "Map Scripts 41", ROMX
