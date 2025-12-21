@@ -28,8 +28,8 @@ UnionCave1FGeodude:
 	iffalse .Set1
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
 	iffalse .Set2
-;	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_3
-;	iffalse .Set3
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_3
+	iffalse .Set3
 ;	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_4
 ;	iffalse .Set4
 	promptbutton
@@ -49,13 +49,13 @@ UnionCave1FGeodude:
 
 ;.Set4
 ;	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_4
-;.Set3
-;	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_3
+.Set3
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_3
 .Set2
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
 .Set1
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
-;	turnobject UNIONCAVE1F_GEODUDE, RIGHT
+;	turnobject UNIONCAVE1F_GEODUDE, RIGHT ;(I think the sprite gets reset facing right when it is "appear")
 	waitbutton
 	closetext
 	end
@@ -112,7 +112,8 @@ UnionCave1FHikerToPlayerText:
 	done
 
 UnionCave1FHikerDudeText:
-	text "Dude…?"
+	text "Dude…"
+	line "Why?"
 	done
 
 UnionCave1FBlockingPokemaniac:
