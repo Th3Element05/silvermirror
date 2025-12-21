@@ -1,8 +1,4 @@
 	object_const_def
-;	const RUINSOFALPHKABUTOITEMROOM_POKE_BALL1
-;	const RUINSOFALPHKABUTOITEMROOM_POKE_BALL2
-;	const RUINSOFALPHKABUTOITEMROOM_POKE_BALL3
-;	const RUINSOFALPHKABUTOITEMROOM_POKE_BALL4
 
 RuinsOfAlphKabutoItemRoom_MapScripts:
 	def_scene_scripts
@@ -22,13 +18,12 @@ RuinsOfAlphKabutoItemRoomEnergypowder:
 	itemball ENERGYPOWDER
 
 RuinsOfAlphKabutoItemRoomAncientReplica:
-	jumptext RuinsOfAlphKabutoItemRoomAncientReplicaText
-
-RuinsOfAlphKabutoItemRoomAncientReplicaText:
-	text "It's a replica of"
-	line "an ancient #-"
-	cont "MON."
-	done
+	jumptext RuinsOfAlphInnerChamber_StatueText
+;RuinsOfAlphKabutoItemRoom_StatueText:
+;	text "It's a replica of"
+;	line "an ancient #-"
+;	cont "MON."
+;	done
 
 RuinsOfAlphKabutoItemRoom_MapEvents:
 	db 0, 0 ; filler
@@ -46,7 +41,7 @@ RuinsOfAlphKabutoItemRoom_MapEvents:
 	bg_event  5,  1, BGEVENT_READ, RuinsOfAlphKabutoItemRoomAncientReplica
 
 	def_object_events
-	object_event  2,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphKabutoItemRoomOranBerry, EVENT_PICKED_UP_ORAN_BERRY_FROM_KABUTO_ITEM_ROOM
-	object_event  5,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphKabutoItemRoomPechaBerry, EVENT_PICKED_UP_PECHA_BERRY_FROM_KABUTO_ITEM_ROOM
-	object_event  2,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphKabutoItemRoomHealPowder, EVENT_PICKED_UP_HEAL_POWDER_FROM_KABUTO_ITEM_ROOM
-	object_event  5,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphKabutoItemRoomEnergypowder, EVENT_PICKED_UP_ENERGYPOWDER_FROM_KABUTO_ITEM_ROOM
+	object_event  2,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphKabutoItemRoomOranBerry, EVENT_KABUTO_ITEM_ROOM_ORAN_BERRY
+	object_event  5,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphKabutoItemRoomPechaBerry, EVENT_KABUTO_ITEM_ROOM_PECHA_BERRY
+	object_event  2,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphKabutoItemRoomHealPowder, EVENT_KABUTO_ITEM_ROOM_HEAL_POWDER
+	object_event  5,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphKabutoItemRoomEnergypowder, EVENT_KABUTO_ITEM_ROOM_ENERGYPOWDER
