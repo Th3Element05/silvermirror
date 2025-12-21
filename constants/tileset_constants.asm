@@ -37,8 +37,8 @@
 ;	const TILESET_OMANYTE_WORD_ROOM    ; 23
 ;	const TILESET_AERODACTYL_WORD_ROOM ; 24
 ;silvermirror+
-	const TILESET_ROCKET_FACILITY      ; 20
-	const TILESET_CEMETARY             ; 21
+	const TILESET_ROCKET_FACILITY      ; 21
+	const TILESET_CEMETARY             ; 22
 DEF NUM_TILESETS EQU const_value - 1
 
 ; wTileset struct size
