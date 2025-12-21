@@ -528,4 +528,4 @@ ItemAttributes:
 	assert_table_length NUM_ITEMS + NUM_TMS + NUM_HMS; + 2 ; count ITEM_C3 and ITEM_DC
 ; ITEM_FF
 	item_attribute $9999, HELD_NONE, 0, NO_LIMITS, ITEM, ITEMMENU_NOUSE, ITEMMENU_NOUSE
-	assert_table_length $100 ;$fe ;$100
+	assert_table_length $101 ;$fe ;$100
