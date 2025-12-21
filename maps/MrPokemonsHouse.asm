@@ -8,19 +8,18 @@ MrPokemonsHouse_MapScripts:
 ;	scene_script MrPokemonsHouseNoopScene,          SCENE_MRPOKEMONSHOUSE_NOOP
 
 	def_callbacks
-	callback MAPCALLBACK_TILES, MrPokemonsHouseTilesCallback
+;	callback MAPCALLBACK_TILES, MrPokemonsHouseTilesCallback ;this was for shared map (removed), unnecessary now
 
-MrPokemonsHouseTilesCallback:
-	changeblock 2, 0, $54 ; couch
-	changeblock 4, 0, $55 ; couch
-	endcallback
+;MrPokemonsHouseTilesCallback: ;this was for shared map (removed), unnecessary now
+;	changeblock 2, 0, $54 ; couch
+;	changeblock 4, 0, $55 ; couch
+;	endcallback
 
 ;MrPokemonsHouseMeetMrPokemonScene:
 ;	sdefer MrPokemonsHouseMrPokemonEventScript
-;	end
-
 ;MrPokemonsHouseNoopScene:
 ;	end
+
 
 ;MrPokemonsHouseMrPokemonEventScript:
 ;	showemote EMOTE_SHOCK, MRPOKEMONSHOUSE_GENTLEMAN, 15
