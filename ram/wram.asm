@@ -3195,8 +3195,8 @@ wBattleTowerOutsideSceneID::                      db
 wRoute43GateSceneID::                             db
 wSproutTower3FSceneID::                           db
 wTinTower1FSceneID::                              db
-wRuinsOfAlphOutsideSceneID::                      db
-wRuinsOfAlphResearchCenterSceneID::               db
+;wRuinsOfAlphOutsideSceneID::                      db
+;wRuinsOfAlphResearchCenterSceneID::               db
 wRuinsOfAlphHoOhChamberSceneID::                  db
 wRuinsOfAlphKabutoChamberSceneID::                db
 wRuinsOfAlphOmanyteChamberSceneID::               db
