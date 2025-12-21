@@ -1830,8 +1830,8 @@ GyaradosEvosAttacks:
 
 LaprasEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, WATER_GUN
 	db 1, GROWL
+	db 1, WATER_GUN
 	db 1, SING
 	db 8, MIST
 	db 15, BODY_SLAM
