@@ -251,10 +251,13 @@ if DEF(_DEBUG)
 	loadmem wPartyMon1Moves+1, ICE_BEAM
 	loadmem wPartyMon1Moves+2, THUNDERBOLT
 	loadmem wPartyMon1Moves+3, PSYCHIC_M
+;	loadmem wPartyMon2DVs+0, $ea
+;	loadmem wPartyMon2DVs+1, $aa
+;
 	loadmem wPartyMon2Moves+0, FLAMETHROWER
 	loadmem wPartyMon2Moves+1, THUNDERPUNCH
 	loadmem wPartyMon2Moves+2, PSYCHIC_M
-	loadmem wPartyMon2Moves+3, THIEF
+	loadmem wPartyMon2Moves+3, HEADBUTT
 ;	loadmem wPartyMon2DVs+0, $ea
 ;	loadmem wPartyMon2DVs+1, $aa
 ;
