@@ -58,36 +58,36 @@ Route11Snorlax:
 	iftrue .PlayRadio
 	checkitem POKE_FLUTE
 	iftrue .PlayPokeFlute
-	writetext _SnorlaxSleepingText
+	writetext Route11_SnorlaxSleepingText
 	waitbutton
 	closetext
 	end
 
 .PlayPokeFlute:
-	writetext _PlayPokeFluteAskText
+	writetext Route11_PlayPokeFluteAskText
 	yesorno
 	iftrue Route11SnorlaxBattleScript
-	writetext _LetSnorlaxSleepText
+	writetext Route11_LetSnorlaxSleepText
 	waitbutton
 	closetext
 	end
 
 .PlayRadio:
-	writetext _RadioNearSnorlaxText
+	writetext Route11_RadioNearSnorlaxText
 	promptbutton
 	sjump Route11RadioWakesSnorlax
 
-Route11SnorlaxBattleScript::
+Route11SnorlaxBattleScript:: ;export for pokeflute from pack
 	special FadeOutMusic
-	writetext _PlayPokeFluteText
+	writetext Route11_PlayPokeFluteText
 	playsound SFX_POKEFLUTE
 	waitsfx
 Route11RadioWakesSnorlax:
-	writetext _SnorlaxWokeUpText
+	writetext Route11_SnorlaxWokeUpText
 	promptbutton
 	pause 15
 	cry SNORLAX
-	writetext _SnorlaxAttackedText
+	writetext Route11_SnorlaxAttackedText
 	waitbutton
 	closetext
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
@@ -100,18 +100,20 @@ Route11RadioWakesSnorlax:
 	special CheckBattleCaughtResult
 	iftrue .caught
 	opentext
-	writetext _SnorlaxWentHomeText
+	writetext Route11_SnorlaxWentHomeText
 	waitbutton
 	closetext
 .caught
 	end
 
-_SnorlaxSleepingText:: ;export for routes 12 and 16
+Route11_SnorlaxSleepingText:
+;_SnorlaxSleepingText:: ;export for routes 12 and 16
 	text "A sleeping #MON"
 	line "blocks the way!"
 	done
 
-_PlayPokeFluteAskText:: ;export for routes 12 and 16
+Route11_PlayPokeFluteAskText:
+;_PlayPokeFluteAskText:: ;export for routes 12 and 16
 	text "SNORLAX is sound"
 	line "asleep."
 	
@@ -119,12 +121,14 @@ _PlayPokeFluteAskText:: ;export for routes 12 and 16
 	line "# FLUTE?"
 	done
 
-_LetSnorlaxSleepText:: ;export for routes 12 and 16
+Route11_LetSnorlaxSleepText:
+;_LetSnorlaxSleepText:: ;export for routes 12 and 16
 	text "<PLAYER> let the"
 	line "SNORLAX sleep."
 	done
 
-_RadioNearSnorlaxText:: ;export for routes 12 and 16
+Route11_RadioNearSnorlaxText:
+;_RadioNearSnorlaxText:: ;export for routes 12 and 16
 	text "SNORLAX can hear"
 	line "the music from"
 	cont "the #GEAR."
@@ -132,75 +136,31 @@ _RadioNearSnorlaxText:: ;export for routes 12 and 16
 	para "…"
 	done
 
-_PlayPokeFluteText:: ;export for routes 12 and 16
+Route11_PlayPokeFluteText:
+;_PlayPokeFluteText:: ;export for routes 12 and 16
 	text "<PLAYER> played"
 	line "the # FLUTE"
 	cont "for SNORLAX!"
 	done
 
-_SnorlaxWokeUpText:: ;export for routes 12 and 16
+Route11_SnorlaxWokeUpText:
+;_SnorlaxWokeUpText:: ;export for routes 12 and 16
 	text "SNORLAX woke up!"
 	done
 
-_SnorlaxAttackedText:: ;export for routes 12 and 16
+Route11_SnorlaxAttackedText:
+;_SnorlaxAttackedText:: ;export for routes 12 and 16
 	text "It attacked in a"
 	line "grumpy rage!"
 	done
 
-_SnorlaxWentHomeText:: ;export for routes 12 and 16
+Route11_SnorlaxWentHomeText:
+;_SnorlaxWentHomeText:: ;export for routes 12 and 16
 	text "SNORLAX calmed"
 	line "down! With a big"
 	cont "yawn, it returned"
 	cont "to the mountains!"
 	done
-
-;Route11SnorlaxSleepingText:
-;	text "A sleeping #MON"
-;	line "blocks the way!"
-;	done
-;
-;Route11RadioNearSnorlaxText:
-;	text "SNORLAX can hear"
-;	line "the music from"
-;	cont "the #GEAR."
-;
-;	para "…"
-;	done
-;
-;Route11PlayPokeFluteAskText:
-;	text "SNORLAX is sound"
-;	line "asleep."
-;	
-;	para "Play the"
-;	line "# FLUTE?"
-;	done
-;
-;Route11PlayPokeFluteText:
-;	text "<PLAYER> played"
-;	line "the # FLUTE"
-;	cont "for SNORLAX!"
-;	done
-;
-;Route11SnorlaxWokeUpText:
-;	text "SNORLAX woke up!"
-;	done
-;
-;Route11SnorlaxAttackedText:
-;	text "It attacked in a"
-;	line "grumpy rage!"
-;	done
-;
-;Route11LetSnorlaxSleepText:
-;	text "<PLAYER> let the"
-;	line "SNORLAX sleep."
-;	done
-;
-;Route11SnorlaxWentHomeText:
-;	text "SNORLAX calmed"
-;	line "down! With a big"
-;	cont "yawn, it returned"
-;	cont "to the mountains!"
-;	done
 
 ; trainers
 TrainerPokefanFGeorgia:
