@@ -54,36 +54,36 @@ Route16Snorlax:
 	iftrue .PlayRadio
 	checkitem POKE_FLUTE
 	iftrue .PlayPokeFlute
-	farwritetext _SnorlaxSleepingText
+	writetext Route11_SnorlaxSleepingText
 	waitbutton
 	closetext
 	end
 
 .PlayPokeFlute:
-	farwritetext _PlayPokeFluteAskText
+	writetext Route11_PlayPokeFluteAskText
 	yesorno
 	iftrue Route16SnorlaxBattleScript
-	farwritetext _LetSnorlaxSleepText
+	writetext Route11_LetSnorlaxSleepText
 	waitbutton
 	closetext
 	end
 
 .PlayRadio:
-	farwritetext _RadioNearSnorlaxText
+	writetext Route11_RadioNearSnorlaxText
 	promptbutton
 	sjump Route16RadioWakesSnorlax
 
-Route16SnorlaxBattleScript::
+Route16SnorlaxBattleScript:: ;export for pokeflute from pack
 	special FadeOutMusic
-	farwritetext _PlayPokeFluteText
+	writetext Route11_PlayPokeFluteText
 	playsound SFX_POKEFLUTE
 	waitsfx
 Route16RadioWakesSnorlax:
-	farwritetext _SnorlaxWokeUpText
+	writetext Route11_SnorlaxWokeUpText
 	promptbutton
 	pause 15
 	cry SNORLAX
-	farwritetext _SnorlaxAttackedText
+	writetext Route11_SnorlaxAttackedText
 	waitbutton
 	closetext
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
@@ -96,7 +96,7 @@ Route16RadioWakesSnorlax:
 	special CheckBattleCaughtResult
 	iftrue .caught
 	opentext
-	farwritetext _SnorlaxWentHomeText
+	writetext Route11_SnorlaxWentHomeText
 	waitbutton
 	closetext
 .caught
