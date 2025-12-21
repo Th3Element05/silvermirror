@@ -266,4 +266,4 @@ ItemNames::
 ;	li "TERU-SAMA"
 ;	li "TERU-SAMA"
 	li "?"
-	assert_list_length $100 ;$fe ;$100
+	assert_list_length $101 ;$fe ;$100
