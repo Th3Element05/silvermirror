@@ -1,9 +1,4 @@
 	object_const_def
-;	const RUINSOFALPHOUTSIDE_YOUNGSTER1
-;	const RUINSOFALPHOUTSIDE_SCIENTIST
-;	const RUINSOFALPHOUTSIDE_FISHER
-;	const RUINSOFALPHOUTSIDE_YOUNGSTER2
-;	const RUINSOFALPHOUTSIDE_YOUNGSTER3
 
 RuinsOfAlphOutside_MapScripts:
 	def_scene_scripts
@@ -11,82 +6,204 @@ RuinsOfAlphOutside_MapScripts:
 ;	scene_script RuinsOfAlphOutsideNoop2Scene, SCENE_RUINSOFALPHOUTSIDE_GET_UNOWN_DEX
 
 	def_callbacks
-;	callback MAPCALLBACK_NEWMAP, RuinsOfAlphOutsideRoute32Callback
-;	callback MAPCALLBACK_OBJECTS, ScientistCallback
+	callback MAPCALLBACK_TILES, RuinsOfAlphOutsideCavesCallback
 
-;RuinsOfAlphOutsideRoute32Callback:
-;	clearevent EVENT_ROUTE_36_BATTLE
-;	setevent EVENT_ROUTE_36_OPEN
-;	endcallback
+RuinsOfAlphOutsideCavesCallback:
+	checkevent EVENT_MADE_UNOWN_APPEAR_IN_RUINS
+	iftrue .RuinsAreOpen
+	changeblock 10, 12, $b0 ; closed ruins
+	changeblock 2, 16, $b0 ; closed ho-oh
+	changeblock 2, 28, $b0 ; closed omanyte
+	changeblock 16, 32, $b0 ; closed aerodactyl
+.RuinsAreOpen
+	endcallback
 
 ;RuinsOfAlphOutsideNoop1Scene:
-;	end
-
 ;RuinsOfAlphOutsideNoop2Scene:
 ;	end
 
-;ScientistCallback:
-;	checkflag ENGINE_UNOWN_DEX
-;	iftrue .NoScientist
-;	checkevent EVENT_MADE_UNOWN_APPEAR_IN_RUINS
-;	iftrue .MaybeScientist
-;	sjump .NoScientist
+RuinsOfAlphOutsideScientistScript:
+	checkflag ENGINE_UNOWN_DEX
+	iftrue .GotUnownDex
+	faceplayer
+	opentext
+	checkevent EVENT_TALKED_TO_RUINS_SCIENTIST_AFTER_FALLING
+	iftrue .SkipIntro
+	writetext RuinsOfAlphOutside_DoneForText
+	setevent EVENT_TALKED_TO_RUINS_SCIENTIST_AFTER_FALLING
+	promptbutton
+.SkipIntro
+	clearflag EVENT_RUINS_OF_ALPH_INNER_CHAMBER_SCIENTISTS
+	writetext RuinsOfAlphOutside_TellMeText
+	waitbutton
+	readvar VAR_UNOWNCOUNT
+	ifgreater 2, .GiveUnownDex
+	closetext
+	end
 
-;.MaybeScientist:
-;	readvar VAR_UNOWNCOUNT
-;	ifgreater 2, .YesScientist
-;	sjump .NoScientist
-
-;.YesScientist:
-;	appear RUINSOFALPHOUTSIDE_SCIENTIST
-;	setscene SCENE_RUINSOFALPHOUTSIDE_GET_UNOWN_DEX
-;	endcallback
-
-;.NoScientist:
-;	disappear RUINSOFALPHOUTSIDE_SCIENTIST
-;	setscene SCENE_RUINSOFALPHOUTSIDE_NOTHING
-;	endcallback
-
-;RuinsOfAlphOutsideScientistScene1:
-;	turnobject RUINSOFALPHOUTSIDE_SCIENTIST, UP
-;	turnobject PLAYER, DOWN
-;	sjump RuinsOfAlphOutsideScientistSceneContinue
-
-;RuinsOfAlphOutsideScientistScene2:
-;	turnobject RUINSOFALPHOUTSIDE_SCIENTIST, LEFT
-;	turnobject PLAYER, RIGHT
-;	sjump RuinsOfAlphOutsideScientistSceneContinue
-
-;RuinsOfAlphOutsideScientistScript:
-;	faceplayer
-;RuinsOfAlphOutsideScientistSceneContinue:
-;	opentext
-;	writetext RuinsOfAlphOutsideScientistText
+.GiveUnownDex
+	writetext RuinsOfAlphOutside_GiveUnownDexText
+	waitbutton
+	playsound SFX_SWITCH_POKEMON
+	pause 30
+	playsound SFX_TALLY
+	pause 30
+	playsound SFX_TRANSACTION
+	pause 30
+	writetext RuinsOfAlphOutside_ModifiedDexText
 ;	waitbutton
-;	closetext
-;	playmusic MUSIC_SHOW_ME_AROUND
-;	follow RUINSOFALPHOUTSIDE_SCIENTIST, PLAYER
-;	applymovement RUINSOFALPHOUTSIDE_SCIENTIST, MovementData_0x580ba
-;	disappear RUINSOFALPHOUTSIDE_SCIENTIST
-;	stopfollow
-;	applymovement PLAYER, MovementData_0x580c5
-;	setmapscene RUINS_OF_ALPH_RESEARCH_CENTER, SCENE_RUINSOFALPHRESEARCHCENTER_GET_UNOWN_DEX
-;	warpcheck
-;	end
+;	writetext RuinsOfAlphOutside_DexUpgradedText
+	playsound SFX_ITEM
+	waitsfx
+	setflag ENGINE_UNOWN_DEX
+	writetext RuinsOfAlphOutside_ExplainDexText
+	waitbutton
+	closetext
+	special RestartMapMusic
+	end
 
-;RuinsOfAlphOutsideFisherScript:
-;	faceplayer
-;	opentext
-;	checkevent EVENT_TALKED_TO_RUINS_COWARD
-;	iftrue .Next
-;	setevent EVENT_TALKED_TO_RUINS_COWARD
-;	writetext RuinsOfAlphOutsideFisherText1
-;	promptbutton
-;.Next:
-;	writetext RuinsOfAlphOutsideFisherText2
-;	waitbutton
-;	closetext
-;	end
+.GotUnownDex
+	readvar VAR_UNOWNCOUNT
+	ifequal NUM_UNOWN, .CaughtAllUnown
+	jumptextfaceplayer RuinsOfAlphOutside_RuinsAreOldText
+
+.CaughtAllUnown:
+	jumptextfaceplayer RuinsOfAlphOutside_AllUnownText
+
+RuinsOfAlphOutside_DoneForText:
+	text "You! You're okay!"
+
+	para "I thought you were"
+	line "done for when you"
+	cont "fell through the"
+	cont "floor."
+
+	para "The earth shook"
+	line "when that hole"
+	cont "opened."
+
+RuinsOfAlphOutside_TellMeText:
+	text "The tremor seems"
+	line "to have opened up"
+	cont "other chambers in"
+	cont "the ruins!"
+
+	para "There's so much"
+	line "more to study"
+	cont "here now."
+
+	para "Please, come tell"
+	line "me if you discover"
+	cont "anything in these"
+	cont "ruins."
+	done
+
+;RuinsOfAlphOutsideScientistText:
+RuinsOfAlphOutside_GiveUnownDexText:
+	text "Hm? What's that?"
+
+	para "There are strange"
+	line "#MON appearing"
+	cont "in the ruins?"
+
+	para "They look like the"
+	line "strange symbols on"
+	cont "the walls of the"
+	cont "RUINS."
+
+	para "If those symbols"
+	line "represent #MON,"
+	cont "there should be"
+	cont "many more."
+
+	para "Hm? That's a #-"
+	line "DEX, isn't it?"
+
+	para "Let me upgrade it"
+	line "to keep track of"
+	cont "the forms of this"
+	cont "new #MON."
+	done
+
+RuinsOfAlphOutside_ModifiedDexText:
+	text "Done!"
+
+	para "I modified your"
+	line "#DEX."
+
+	para "I added an"
+	line "optional mode to"
+	cont "store UNOWN data."
+
+	para "It records them in"
+	line "the sequence that"
+	cont "they were caught."
+;	done
+
+;RuinsOfAlphOutside_DexUpgradedText:
+	para "<PLAYER>'s #DEX"
+	line "was upgraded."
+	done
+
+RuinsOfAlphOutside_ExplainDexText:
+	text "The UNOWN you"
+	line "catch will all be"
+	cont "recorded."
+
+	para "Check to see how"
+	line "many kinds exist."
+	done
+
+RuinsOfAlphOutside_RuinsAreOldText:
+	text "The RUINS are"
+	line "about 1500 years"
+	cont "old."
+
+	para "But it's not known"
+	line "why they were"
+	cont "built--or by whom."
+	done
+
+RuinsOfAlphOutside_AllUnownText:
+	text "You caught all the"
+	line "UNOWN variations?"
+
+	para "That's a great"
+	line "achievement!"
+
+	para "But I'm sure that"
+	line "there's more to"
+	cont "discover here."
+
+	para "I'm going to set"
+	line "up a permanent"
+	cont "facility here to"
+	cont "conduct research."
+	done
+
+TrainerPsychicIdris:
+	trainer PSYCHIC_T, IDRIS, EVENT_BEAT_PSYCHIC_IDRIS, PsychicIdrisSeenText, PsychicIdrisBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext PsychicIdrisAfterBattleText
+	waitbutton
+	closetext
+	end
+
+PsychicIdrisSeenText:
+	text "Hmmm… This is a"
+	line "strange place."
+	done
+
+PsychicIdrisBeatenText:
+	text "…"
+	done
+
+PsychicIdrisAfterBattleText:
+	text "I like thinking"
+	line "here."
+	done
 
 ;RuinsOfAlphOutsideYoungster1Script:
 ;	faceplayer
@@ -96,6 +213,14 @@ RuinsOfAlphOutside_MapScripts:
 ;	closetext
 ;	end
 
+;RuinsOfAlphOutsideYoungster1Text:
+;	text "There are many"
+;	line "kinds of UNOWN, so"
+;
+;	para "we use them for"
+;	line "our secret codes."
+;	done
+
 ;RuinsOfAlphOutsideYoungster2Script:
 ;	faceplayer
 ;	opentext
@@ -104,133 +229,6 @@ RuinsOfAlphOutside_MapScripts:
 ;	closetext
 ;	turnobject RUINSOFALPHOUTSIDE_YOUNGSTER3, UP
 ;	end
-
-;TrainerPsychicNathan:
-;	trainer PSYCHIC_T, NATHAN, EVENT_BEAT_PSYCHIC_NATHAN, PsychicNathanSeenText, PsychicNathanBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext PsychicNathanAfterBattleText
-;	waitbutton
-;	closetext
-;	end
-
-RuinsOfAlphOutsideMysteryChamberSign:
-	jumptext RuinsOfAlphOutsideMysteryChamberSignText
-
-RuinsOfAlphSign:
-	jumptext RuinsOfAlphSignText
-
-RuinsOfAlphResearchCenterSign:
-	jumptext RuinsOfAlphResearchCenterSignText
-
-;MovementData_0x580ba:
-;	step RIGHT
-;	step RIGHT
-;	step RIGHT
-;	step RIGHT
-;	step UP
-;	step UP
-;	step RIGHT
-;	step RIGHT
-;	step UP
-;	step UP
-;	step_end
-;
-;MovementData_0x580c5:
-;	step UP
-;	step_end
-
-;RuinsOfAlphOutsideScientistText:
-;	text "Hm? That's a #-"
-;	line "DEX, isn't it?"
-;	cont "May I see it?"
-;
-;	para "There are so many"
-;	line "kinds of #MON."
-;
-;	para "Hm? What's this?"
-;
-;	para "What is this"
-;	line "#MON?"
-;
-;	para "It looks like the"
-;	line "strange writing on"
-;
-;	para "the walls of the"
-;	line "RUINS."
-;
-;	para "If those drawings"
-;	line "are really #-"
-;	cont "MON, there should"
-;	cont "be many more."
-;
-;	para "I know! Let me up-"
-;	line "grade your #-"
-;	cont "DEX. Follow me."
-;	done
-
-;PsychicNathanSeenText:
-;	text "Hmmm… This is a"
-;	line "strange place."
-;	done
-
-;PsychicNathanBeatenText:
-;	text "…"
-;	done
-
-;PsychicNathanAfterBattleText:
-;	text "I like thinking"
-;	line "here."
-;	done
-
-RuinsOfAlphOutsideMysteryChamberSignText:
-	text "MYSTERY STONE"
-	line "PANEL CHAMBER"
-	done
-
-RuinsOfAlphSignText:
-	text "RUINS OF ALPH"
-	line "VISITORS WELCOME"
-	done
-
-RuinsOfAlphResearchCenterSignText:
-	text "RUINS OF ALPH"
-	line "RESEARCH CENTER"
-
-	para "THE AUTHORITY ON"
-	line "THE RUINS OF ALPH"
-	done
-
-;RuinsOfAlphOutsideFisherText1:
-;	text "While exploring"
-;	line "the RUINS, we"
-;
-;	para "suddenly noticed"
-;	line "an odd presence."
-;
-;	para "We all got scared"
-;	line "and ran away."
-;
-;	para "You should be"
-;	line "careful too."
-;	done
-
-;RuinsOfAlphOutsideFisherText2:
-;	text "The RUINS hide a"
-;	line "huge secret!"
-;
-;	para "…I think…"
-;	done
-
-;RuinsOfAlphOutsideYoungster1Text:
-;	text "There are many"
-;	line "kinds of UNOWN, so"
-;
-;	para "we use them for"
-;	line "our secret codes."
-;	done
 
 ;RuinsOfAlphOutsideYoungster2Text:
 ;	text "A… H… E… A… D…"
@@ -242,34 +240,53 @@ RuinsOfAlphResearchCenterSignText:
 ;	line "message!"
 ;	done
 
+RuinsOfAlphSign:
+	jumptext RuinsOfAlphSignText
+RuinsOfAlphSignText:
+	text "RUINS OF ALPH"
+	done
+
+RuinsOfAlphResearchSiteSign:
+	jumptext RuinsOfAlphResearchSiteSignText
+RuinsOfAlphResearchSiteSignText:
+	text "RUINS OF ALPH"
+	line "RESEARCH SITE"
+	done
+
+;RuinsOfAlphOutsideMysteryChamberSign:
+;	jumptext RuinsOfAlphOutsideMysteryChamberSignText
+;RuinsOfAlphOutsideMysteryChamberSignText:
+;	text "MYSTERY STONE"
+;	line "PANEL CHAMBER"
+;	done
+
 RuinsOfAlphOutside_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2, 17, RUINS_OF_ALPH_HO_OH_CHAMBER, 1
 	warp_event 14,  7, RUINS_OF_ALPH_KABUTO_CHAMBER, 1
-	warp_event  2, 29, RUINS_OF_ALPH_OMANYTE_CHAMBER, 1
 	warp_event 16, 33, RUINS_OF_ALPH_AERODACTYL_CHAMBER, 1
+	warp_event  2, 29, RUINS_OF_ALPH_OMANYTE_CHAMBER, 1
+	warp_event  2, 17, RUINS_OF_ALPH_HO_OH_CHAMBER, 1
 	warp_event 10, 13, RUINS_OF_ALPH_INNER_CHAMBER, 1
-	warp_event 17, 11, RUINS_OF_ALPH_RESEARCH_CENTER, 1
 	warp_event  6, 19, UNION_CAVE_B1F, 1
 	warp_event  6, 27, UNION_CAVE_B1F, 2
 	warp_event  7,  5, ROUTE_36_RUINS_OF_ALPH_GATE, 3
 	warp_event 13, 20, ROUTE_32_RUINS_OF_ALPH_GATE, 1
 	warp_event 13, 21, ROUTE_32_RUINS_OF_ALPH_GATE, 2
+;	warp_event 17, 11, RUINS_OF_ALPH_RESEARCH_CENTER, 1
 
 	def_coord_events
 ;	coord_event 11, 14, SCENE_RUINSOFALPHOUTSIDE_GET_UNOWN_DEX, RuinsOfAlphOutsideScientistScene1
 ;	coord_event 10, 15, SCENE_RUINSOFALPHOUTSIDE_GET_UNOWN_DEX, RuinsOfAlphOutsideScientistScene2
 
 	def_bg_events
-	bg_event 16,  8, BGEVENT_READ, RuinsOfAlphOutsideMysteryChamberSign
 	bg_event 12, 16, BGEVENT_READ, RuinsOfAlphSign
-	bg_event 18, 12, BGEVENT_READ, RuinsOfAlphResearchCenterSign
+	bg_event 18, 12, BGEVENT_READ, RuinsOfAlphResearchSiteSign
+;	bg_event 16,  8, BGEVENT_READ, RuinsOfAlphOutsideMysteryChamberSign
 
 	def_object_events
-;	object_event  4, 20, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerPsychicNathan, -1
-;	object_event 11, 15, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphOutsideScientistScript, EVENT_RUINS_OF_ALPH_OUTSIDE_SCIENTIST
-;	object_event 13, 17, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphOutsideFisherScript, EVENT_RUINS_OF_ALPH_OUTSIDE_TOURIST_FISHER
-;	object_event 14, 11, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphOutsideYoungster1Script, EVENT_RUINS_OF_ALPH_OUTSIDE_TOURIST_YOUNGSTERS
+	object_event 16, 11, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphOutsideScientistScript, EVENT_RUINS_OF_ALPH_OUTSIDE_SCIENTIST
+	object_event  4, 20, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 1, TrainerPsychicIdris, -1 ;nathan
 ;	object_event 12,  8, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphOutsideYoungster2Script, EVENT_RUINS_OF_ALPH_OUTSIDE_TOURIST_YOUNGSTERS
+;	object_event 14, 11, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphOutsideYoungster1Script, EVENT_RUINS_OF_ALPH_OUTSIDE_TOURIST_YOUNGSTERS
