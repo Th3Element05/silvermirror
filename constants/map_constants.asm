@@ -359,7 +359,7 @@ ENDM
 	map_const OLIVINE_GOOD_ROD_HOUSE,                       4,  4 ;  6
 	map_const OLIVINE_TIMS_HOUSE,                           4,  4 ;  7
 	map_const OLIVINE_PUNISHMENT_SPEECH_HOUSE,              4,  4 ;  8
-	map_const OLIVINE_HOUSE_BETA,                           4,  4 ;  9
+;	map_const OLIVINE_HOUSE_BETA,                           4,  4 ;  9
 	map_const ROUTE_38,                                    20,  9 ; 10
 	map_const ROUTE_38_ECRUTEAK_GATE,                       4,  5 ; 11
 	map_const ROUTE_39,                                    10, 18 ; 12
@@ -503,16 +503,17 @@ ENDM
 	map_const RADIO_TOWER_4F,                               9,  4 ; 64
 	map_const RADIO_TOWER_5F,                               9,  4 ; 65
 	map_const RUINS_OF_ALPH_OUTSIDE,                       10, 18 ; 66
-	map_const RUINS_OF_ALPH_HO_OH_CHAMBER,                  4,  5 ; 67
-	map_const RUINS_OF_ALPH_KABUTO_CHAMBER,                 4,  5 ; 68
+	map_const RUINS_OF_ALPH_KABUTO_CHAMBER,                 4,  5 ; 67
+	map_const RUINS_OF_ALPH_AERODACTYL_CHAMBER,             4,  5 ; 68
 	map_const RUINS_OF_ALPH_OMANYTE_CHAMBER,                4,  5 ; 69
-	map_const RUINS_OF_ALPH_AERODACTYL_CHAMBER,             4,  5 ; 70
-	map_const RUINS_OF_ALPH_INNER_CHAMBER,                 10, 14 ; 71
-	map_const RUINS_OF_ALPH_RESEARCH_CENTER,                4,  4 ; 72
-	map_const RUINS_OF_ALPH_HO_OH_ITEM_ROOM,                4,  5 ; 73
-	map_const RUINS_OF_ALPH_KABUTO_ITEM_ROOM,               4,  5 ; 74
-	map_const RUINS_OF_ALPH_OMANYTE_ITEM_ROOM,              4,  5 ; 75
-	map_const RUINS_OF_ALPH_AERODACTYL_ITEM_ROOM,           4,  5 ; 76
+	map_const RUINS_OF_ALPH_HO_OH_CHAMBER,                  4,  5 ; 70
+	map_const RUINS_OF_ALPH_INNER_CHAMBER,                 10, 13 ; 71
+	map_const RUINS_OF_ALPH_KABUTO_ITEM_ROOM,               4,  5 ; 72
+	map_const RUINS_OF_ALPH_AERODACTYL_ITEM_ROOM,           4,  5 ; 73
+	map_const RUINS_OF_ALPH_OMANYTE_ITEM_ROOM,              4,  5 ; 74
+	map_const RUINS_OF_ALPH_HO_OH_ITEM_ROOM,                4,  5 ; 75
+	map_const RUINS_OF_ALPH_WORD_ROOM,                      9,  6 ; 76
+;	map_const RUINS_OF_ALPH_RESEARCH_CENTER,                4,  4 ; 77
 	map_const UNION_CAVE_1F,                               10, 18 ; 77
 	map_const UNION_CAVE_B1F,                              10, 18 ; 78
 	map_const UNION_CAVE_B2F,                              10, 18 ; 79

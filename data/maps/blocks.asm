@@ -139,7 +139,7 @@ VioletKylesHouse_Blocks:
 ;	INCBIN "maps/House2.blk"
 ;
 OlivineTimsHouse_Blocks:
-OlivineHouseBeta_Blocks:
+;OlivineHouseBeta_Blocks:
 OlivinePunishmentSpeechHouse_Blocks:
 OlivineGoodRodHouse_Blocks:
 Route39Farmhouse_Blocks:
@@ -497,11 +497,35 @@ RuinsOfAlphOutside_Blocks:
 RuinsOfAlphInnerChamber_Blocks:
 	INCBIN "maps/RuinsOfAlphInnerChamber.blk"
 
-RuinsOfAlphHoOhChamber_Blocks:
 RuinsOfAlphKabutoChamber_Blocks:
-RuinsOfAlphOmanyteChamber_Blocks:
 RuinsOfAlphAerodactylChamber_Blocks:
+RuinsOfAlphOmanyteChamber_Blocks:
+RuinsOfAlphHoOhChamber_Blocks:
 	INCBIN "maps/RuinsOfAlphPuzzleChamber.blk"
+
+RuinsOfAlphKabutoItemRoom_Blocks:
+RuinsOfAlphAerodactylItemRoom_Blocks:
+RuinsOfAlphOmanyteItemRoom_Blocks:
+RuinsOfAlphHoOhItemRoom_Blocks:
+	INCBIN "maps/RuinsOfAlphItemRoom.blk"
+
+RuinsOfAlphWordRoom_Blocks:
+	INCBIN "maps/RuinsOfAlphWordRoom.blk"
+
+;RuinsOfAlphKabutoWordRoom_Blocks:
+;	INCBIN "maps/RuinsOfAlphKabutoWordRoom.blk"
+
+;RuinsOfAlphAerodactylWordRoom_Blocks:
+;	INCBIN "maps/RuinsOfAlphAerodactylWordRoom.blk"
+
+;RuinsOfAlphOmanyteWordRoom_Blocks:
+;	INCBIN "maps/RuinsOfAlphOmanyteWordRoom.blk"
+
+;RuinsOfAlphHoOhWordRoom_Blocks:
+;	INCBIN "maps/RuinsOfAlphHoOhWordRoom.blk"
+
+;RuinsOfAlphResearchCenter_Blocks:
+;	INCBIN "maps/RuinsOfAlphResearchCenter.blk"
 
 SproutTower1F_Blocks:
 	INCBIN "maps/SproutTower1F.blk"
@@ -783,10 +807,6 @@ DarkCaveVioletEntrance_Blocks:
 DarkCaveBlackthornEntrance_Blocks:
 	INCBIN "maps/DarkCaveBlackthornEntrance.blk"
 
-MrPokemonsHouse_Blocks:
-RuinsOfAlphResearchCenter_Blocks:
-	INCBIN "maps/RuinsOfAlphResearchCenter.blk"
-
 BikeShop_Blocks:
 	INCBIN "maps/BikeShop.blk"
 
@@ -969,8 +989,8 @@ MountMoonB2F_Blocks:                   ;silvermirror+
 CinnabarGym_Blocks:                    ;silvermirror+
 	INCBIN "maps/CinnabarGym.blk"      ;silvermirror+
 
-;MrPokemonsHouse_Blocks:               ;moved use alph research center
-;	INCBIN "maps/MrPokemonsHouse.blk"
+MrPokemonsHouse_Blocks:
+	INCBIN "maps/MrPokemonsHouse.blk"
 
 VictoryRoadGate_Blocks:
 	INCBIN "maps/VictoryRoadGate.blk"
@@ -1023,24 +1043,6 @@ DragonsDenB1F_Blocks:
 
 TohjoFalls_Blocks:
 	INCBIN "maps/TohjoFalls.blk"
-
-RuinsOfAlphHoOhItemRoom_Blocks:
-RuinsOfAlphKabutoItemRoom_Blocks:
-RuinsOfAlphOmanyteItemRoom_Blocks:
-RuinsOfAlphAerodactylItemRoom_Blocks:
-	INCBIN "maps/RuinsOfAlphItemRoom.blk"
-
-;RuinsOfAlphHoOhWordRoom_Blocks:
-;	INCBIN "maps/RuinsOfAlphHoOhWordRoom.blk"
-
-;RuinsOfAlphKabutoWordRoom_Blocks:
-;	INCBIN "maps/RuinsOfAlphKabutoWordRoom.blk"
-
-;RuinsOfAlphOmanyteWordRoom_Blocks:
-;	INCBIN "maps/RuinsOfAlphOmanyteWordRoom.blk"
-
-;RuinsOfAlphAerodactylWordRoom_Blocks:
-;	INCBIN "maps/RuinsOfAlphAerodactylWordRoom.blk"
 
 DragonShrine_Blocks:
 	INCBIN "maps/DragonShrine.blk"
