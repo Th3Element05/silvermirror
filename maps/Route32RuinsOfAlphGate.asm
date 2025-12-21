@@ -48,8 +48,8 @@ Route32RuinsOfAlphGate_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  0,  4, RUINS_OF_ALPH_OUTSIDE, 10
-	warp_event  0,  5, RUINS_OF_ALPH_OUTSIDE, 11
+	warp_event  0,  4, RUINS_OF_ALPH_OUTSIDE, 9
+	warp_event  0,  5, RUINS_OF_ALPH_OUTSIDE, 10
 	warp_event  7,  4, ROUTE_32, 2
 	warp_event  7,  5, ROUTE_32, 3
 
