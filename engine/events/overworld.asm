@@ -778,9 +778,9 @@ EscapeRopeOrDig:
 	jr z, .incave
 	cp DUNGEON
 	jr z, .incave
-	call GetFishingGroup       ;silvermirror
-	cp FISHGROUP_WHIRL_ISLANDS ;silvermirror
-	jr z, .incave              ;silvermirror
+	call GetFishingGroup       ;silvermirror (escape rope in lavender tower)
+	cp FISHGROUP_WHIRL_ISLANDS ;silvermirror (escape rope in lavender tower)
+	jr z, .incave              ;silvermirror (escape rope in lavender tower)
 .fail
 	ld a, $2
 	ret
