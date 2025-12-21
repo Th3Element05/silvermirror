@@ -38,8 +38,8 @@ Route36RuinsOfAlphGate_MapEvents:
 	def_warp_events
 	warp_event  3,  0, ROUTE_36, 3
 	warp_event  4,  0, ROUTE_36, 4
-	warp_event  3,  7, RUINS_OF_ALPH_OUTSIDE, 9
-	warp_event  4,  7, RUINS_OF_ALPH_OUTSIDE, 9
+	warp_event  3,  7, RUINS_OF_ALPH_OUTSIDE, 8
+	warp_event  4,  7, RUINS_OF_ALPH_OUTSIDE, 8
 
 	def_coord_events
 
