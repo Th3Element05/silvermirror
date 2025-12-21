@@ -11,45 +11,57 @@ HoOhChamber:
 	ret
 
 OmanyteChamber:
-	call GetMapAttributesPointer ; pointless?
-	ld de, EVENT_WALL_OPENED_IN_OMANYTE_CHAMBER
-	ld b, CHECK_FLAG
-	call EventFlagAction
-	ld a, c
-	and a
-	jr nz, .nope
-
-	ld a, WATER_STONE
-	ld [wCurItem], a
-	ld hl, wNumItems
-	call CheckItem
-	jr c, .open
-
-	ld a, [wPartyCount]
-	ld b, a
-	inc b
-.loop
-	dec b
-	jr z, .nope
-	ld a, b
-	dec a
-	ld [wCurPartyMon], a
-	push bc
-	ld a, MON_ITEM
-	call GetPartyParamLocation
-	pop bc
+	ld hl, wPartySpecies
 	ld a, [hl]
-	cp WATER_STONE
-	jr nz, .loop
-
-.open
+	cp UNOWN ; is Unown the first Pokémon in the party?
+	jr nz, .done ; if not, we're done
 	call GetMapAttributesPointer ; pointless?
 	ld de, EVENT_WALL_OPENED_IN_OMANYTE_CHAMBER
 	ld b, SET_FLAG
 	call EventFlagAction
-
-.nope
+.done
 	ret
+
+;OmanyteChamber:
+;	call GetMapAttributesPointer ; pointless?
+;	ld de, EVENT_WALL_OPENED_IN_OMANYTE_CHAMBER
+;	ld b, CHECK_FLAG
+;	call EventFlagAction
+;	ld a, c
+;	and a
+;	jr nz, .nope
+;
+;	ld a, WATER_STONE
+;	ld [wCurItem], a
+;	ld hl, wNumItems
+;	call CheckItem
+;	jr c, .open
+;
+;	ld a, [wPartyCount]
+;	ld b, a
+;	inc b
+;.loop
+;	dec b
+;	jr z, .nope
+;	ld a, b
+;	dec a
+;	ld [wCurPartyMon], a
+;	push bc
+;	ld a, MON_ITEM
+;	call GetPartyParamLocation
+;	pop bc
+;	ld a, [hl]
+;	cp WATER_STONE
+;	jr nz, .loop
+;
+;.open
+;	call GetMapAttributesPointer ; pointless?
+;	ld de, EVENT_WALL_OPENED_IN_OMANYTE_CHAMBER
+;	ld b, SET_FLAG
+;	call EventFlagAction
+;
+;.nope
+;	ret
 
 SpecialAerodactylChamber:
 	push de
