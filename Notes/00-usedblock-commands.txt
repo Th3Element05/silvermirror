@@ -1,4 +1,4 @@
-right-click > Open Git Bash here
+right-click > Open Git Bash here (in silvermirror-local)
 
 
 function usedblocks() {
@@ -28,7 +28,7 @@ unusedblocks
 
 
 function usedblocks() {
-  grep -wi "TILESET_KANTO" data/maps/maps.asm | \
+  grep -wi "TILESET_JOHTO" data/maps/maps.asm | \
   sed -E 's|\tmap ([^,]+),.+|maps/\1.blk|g' | \
   xargs cat | xxd -c 1 -p | sort | uniq -c
 }
@@ -38,7 +38,7 @@ usedblocks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 function unusedblocks() {
-  usedb=$(grep -wi "TILESET_PARK" data/maps/maps.asm | \
+  usedb=$(grep -wi "TILESET_JOHTO" data/maps/maps.asm | \
           sed -E 's|\tmap ([^,]+),.+|maps/\1.blk|g' | \
           xargs cat | xxd -c 1 -p | sort | uniq | \
           xargs -I{} printf '%d\n' 0x{})
