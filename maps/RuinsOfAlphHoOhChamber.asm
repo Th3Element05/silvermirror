@@ -1,3 +1,5 @@
+	object_const_def
+
 RuinsOfAlphHoOhChamber_MapScripts:
 	def_scene_scripts
 	scene_script RuinsOfAlphHoOhChamberCheckWallScene, SCENE_RUINSOFALPHHOOHCHAMBER_CHECK_WALL
@@ -14,23 +16,21 @@ RuinsOfAlphHoOhChamberCheckWallScene:
 
 .OpenWall:
 	sdefer RuinsOfAlphHoOhChamberWallOpenScript
-	end
-
 RuinsOfAlphHoOhChamberNoopScene:
 	end
 
 RuinsOfAlphHoOhChamberHiddenDoorsCallback:
 	checkevent EVENT_WALL_OPENED_IN_HO_OH_CHAMBER
 	iftrue .WallOpen
-	changeblock 4, 0, $2e ; closed wall
+	changeblock 4, 0, $1d ; closed wall
 .WallOpen:
 	checkevent EVENT_SOLVED_HO_OH_PUZZLE
 	iffalse .FloorClosed
 	endcallback
 
 .FloorClosed:
-	changeblock 2, 2, $01 ; left floor
-	changeblock 4, 2, $02 ; right floor
+	changeblock 2, 2, $02 ; left floor
+	changeblock 4, 2, $03 ; right floor
 	endcallback
 
 RuinsOfAlphHoOhChamberWallOpenScript:
@@ -39,7 +39,7 @@ RuinsOfAlphHoOhChamberWallOpenScript:
 	showemote EMOTE_SHOCK, PLAYER, 20
 	pause 30
 	playsound SFX_STRENGTH
-	changeblock 4, 0, $30 ; open wall
+	changeblock 4, 0, $1e ; open wall
 	reloadmappart
 	earthquake 50
 	setscene SCENE_RUINSOFALPHHOOHCHAMBER_NOOP
@@ -55,7 +55,7 @@ RuinsOfAlphHoOhChamberPuzzle:
 	end
 
 .PuzzleComplete:
-	setevent EVENT_RUINS_OF_ALPH_INNER_CHAMBER_TOURISTS
+;	setevent EVENT_RUINS_OF_ALPH_INNER_CHAMBER_TOURISTS
 	setevent EVENT_SOLVED_HO_OH_PUZZLE
 	setflag ENGINE_UNLOCKED_UNOWNS_X_TO_Z
 	setmapscene RUINS_OF_ALPH_INNER_CHAMBER, SCENE_RUINSOFALPHINNERCHAMBER_STRANGE_PRESENCE
@@ -66,32 +66,32 @@ RuinsOfAlphHoOhChamberPuzzle:
 	reloadmappart
 	playsound SFX_STRENGTH
 	earthquake 80
-	applymovement PLAYER, RuinsOfAlphHoOhChamberSkyfallTopMovement
+	applymovement PLAYER, RuinsOfAlphKabutoChamber_SkyfallTopMovement
 	playsound SFX_KINESIS
 	waitsfx
 	pause 20
 	warpcheck
 	end
 
-RuinsOfAlphHoOhChamberAncientReplica:
-	jumptext RuinsOfAlphHoOhChamberAncientReplicaText
+;RuinsOfAlphHoOhChamber_SkyfallTopMovement:
+;	skyfall_top
+;	step_end
+
 
 RuinsOfAlphHoOhChamberDescriptionSign:
 	jumptext RuinsOfAlphHoOhChamberDescriptionText
+RuinsOfAlphHoOhChamberDescriptionText:
+	text "A #MON that"
+	line "flew gracefully on"
+	cont "rainbow-colored"
+	cont "wings."
+	done
 
-RuinsOfAlphHoOhChamberWallPatternLeft:
-	opentext
-	writetext RuinsOfAlphHoOhChamberWallPatternLeftText
-	setval UNOWNWORDS_HO_OH
-	special DisplayUnownWords
-	closetext
-	end
-
-RuinsOfAlphHoOhChamberWallPatternRight:
+RuinsOfAlphHoOhChamberWallPattern:
 	checkevent EVENT_WALL_OPENED_IN_HO_OH_CHAMBER
 	iftrue .WallOpen
 	opentext
-	writetext RuinsOfAlphHoOhChamberWallPatternRightText
+	writetext RuinsOfAlphKabutoChamber_WallPatternText
 	setval UNOWNWORDS_HO_OH
 	special DisplayUnownWords
 	closetext
@@ -99,54 +99,35 @@ RuinsOfAlphHoOhChamberWallPatternRight:
 
 .WallOpen:
 	opentext
-	writetext RuinsOfAlphHoOhChamberWallHoleText
+	writetext RuinsOfAlphKabutoChamber_WallHoleText
 	waitbutton
 	closetext
 	end
 
-RuinsOfAlphHoOhChamberSkyfallTopMovement:
-	skyfall_top
-	step_end
+;RuinsOfAlphHoOhChamber_WallPatternText:
+;	text "Patterns appeared"
+;	line "on the walls…"
+;	done
 
-RuinsOfAlphHoOhChamberWallPatternLeftText:
-	text "Patterns appeared"
-	line "on the walls…"
-	done
+;RuinsOfAlphHoOhChamber_WallHoleText:
+;	text "There's a big hole"
+;	line "in the wall!"
+;	done
 
-RuinsOfAlphHoOhChamberUnownText: ; unreferenced
-	text "It's UNOWN text!"
-	done
-
-RuinsOfAlphHoOhChamberWallPatternRightText:
-	text "Patterns appeared"
-	line "on the walls…"
-	done
-
-RuinsOfAlphHoOhChamberWallHoleText:
-	text "There's a big hole"
-	line "in the wall!"
-	done
-
-RuinsOfAlphHoOhChamberAncientReplicaText:
-	text "It's a replica of"
-	line "an ancient #-"
-	cont "MON."
-	done
-
-RuinsOfAlphHoOhChamberDescriptionText:
-	text "A #MON that"
-	line "flew gracefully on"
-
-	para "rainbow-colored"
-	line "wings."
-	done
+RuinsOfAlphHoOhChamberAncientReplica:
+	jumptext RuinsOfAlphInnerChamber_StatueText
+;RuinsOfAlphHoOhChamber_StatueText:
+;	text "It's a replica of"
+;	line "an ancient #-"
+;	cont "MON."
+;	done
 
 RuinsOfAlphHoOhChamber_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  3,  9, RUINS_OF_ALPH_OUTSIDE, 1
-	warp_event  4,  9, RUINS_OF_ALPH_OUTSIDE, 1
+	warp_event  3,  9, RUINS_OF_ALPH_OUTSIDE, 4
+	warp_event  4,  9, RUINS_OF_ALPH_OUTSIDE, 4
 	warp_event  3,  3, RUINS_OF_ALPH_INNER_CHAMBER, 2
 	warp_event  4,  3, RUINS_OF_ALPH_INNER_CHAMBER, 3
 	warp_event  4,  0, RUINS_OF_ALPH_HO_OH_ITEM_ROOM, 1
@@ -158,7 +139,6 @@ RuinsOfAlphHoOhChamber_MapEvents:
 	bg_event  5,  3, BGEVENT_READ, RuinsOfAlphHoOhChamberAncientReplica
 	bg_event  3,  2, BGEVENT_UP, RuinsOfAlphHoOhChamberPuzzle
 	bg_event  4,  2, BGEVENT_UP, RuinsOfAlphHoOhChamberDescriptionSign
-	bg_event  3,  0, BGEVENT_UP, RuinsOfAlphHoOhChamberWallPatternLeft
-	bg_event  4,  0, BGEVENT_UP, RuinsOfAlphHoOhChamberWallPatternRight
+	bg_event  4,  0, BGEVENT_UP, RuinsOfAlphHoOhChamberWallPattern
 
 	def_object_events

@@ -1,8 +1,4 @@
 	object_const_def
-;	const RUINSOFALPHHOOHITEMROOM_POKE_BALL1
-;	const RUINSOFALPHHOOHITEMROOM_POKE_BALL2
-;	const RUINSOFALPHHOOHITEMROOM_POKE_BALL3
-;	const RUINSOFALPHHOOHITEMROOM_POKE_BALL4
 
 RuinsOfAlphHoOhItemRoom_MapScripts:
 	def_scene_scripts
@@ -22,13 +18,12 @@ RuinsOfAlphHoOhItemRoomCharcoal:
 	itemball CHARCOAL
 
 RuinsOfAlphHoOhItemRoomAncientReplica:
-	jumptext RuinsOfAlphHoOhItemRoomAncientReplicaText
-
-RuinsOfAlphHoOhItemRoomAncientReplicaText:
-	text "It's a replica of"
-	line "an ancient #-"
-	cont "MON."
-	done
+	jumptext RuinsOfAlphInnerChamber_StatueText
+;RuinsOfAlphHoOhItemRoom_StatueText:
+;	text "It's a replica of"
+;	line "an ancient #-"
+;	cont "MON."
+;	done
 
 RuinsOfAlphHoOhItemRoom_MapEvents:
 	db 0, 0 ; filler
@@ -46,7 +41,7 @@ RuinsOfAlphHoOhItemRoom_MapEvents:
 	bg_event  5,  1, BGEVENT_READ, RuinsOfAlphHoOhItemRoomAncientReplica
 
 	def_object_events
-	object_event  2,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphHoOhItemRoomSitrusBerry, EVENT_PICKED_UP_SITRUS_BERRY_FROM_HO_OH_ITEM_ROOM
-	object_event  5,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphHoOhItemRoomLeppaBerry, EVENT_PICKED_UP_LEPPA_BERRY_FROM_HO_OH_ITEM_ROOM
-	object_event  2,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphHoOhItemRoomRevivalHerb, EVENT_PICKED_UP_REVIVAL_HERB_FROM_HO_OH_ITEM_ROOM
-	object_event  5,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphHoOhItemRoomCharcoal, EVENT_PICKED_UP_CHARCOAL_FROM_HO_OH_ITEM_ROOM
+	object_event  2,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphHoOhItemRoomSitrusBerry, EVENT_HO_OH_ITEM_ROOM_SITRUS_BERRY
+	object_event  5,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphHoOhItemRoomLeppaBerry, EVENT_HO_OH_ITEM_ROOM_LEPPA_BERRY
+	object_event  2,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphHoOhItemRoomRevivalHerb, EVENT_HO_OH_ITEM_ROOM_REVIVAL_HERB
+	object_event  5,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphHoOhItemRoomCharcoal, EVENT_HO_OH_ITEM_ROOM_CHARCOAL

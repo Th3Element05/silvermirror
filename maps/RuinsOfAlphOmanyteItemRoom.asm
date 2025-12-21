@@ -1,8 +1,4 @@
 	object_const_def
-;	const RUINSOFALPHOMANYTEITEMROOM_POKE_BALL1
-;	const RUINSOFALPHOMANYTEITEMROOM_POKE_BALL2
-;	const RUINSOFALPHOMANYTEITEMROOM_POKE_BALL3
-;	const RUINSOFALPHOMANYTEITEMROOM_POKE_BALL4
 
 RuinsOfAlphOmanyteItemRoom_MapScripts:
 	def_scene_scripts
@@ -22,13 +18,12 @@ RuinsOfAlphOmanyteItemRoomStarPiece:
 	itemball STAR_PIECE
 
 RuinsOfAlphOmanyteItemRoomAncientReplica:
-	jumptext RuinsOfAlphOmanyteItemRoomAncientReplicaText
-
-RuinsOfAlphOmanyteItemRoomAncientReplicaText:
-	text "It's a replica of"
-	line "an ancient #-"
-	cont "MON."
-	done
+	jumptext RuinsOfAlphInnerChamber_StatueText
+;RuinsOfAlphOmanyteItemRoom_StatueText:
+;	text "It's a replica of"
+;	line "an ancient #-"
+;	cont "MON."
+;	done
 
 RuinsOfAlphOmanyteItemRoom_MapEvents:
 	db 0, 0 ; filler
@@ -46,7 +41,7 @@ RuinsOfAlphOmanyteItemRoom_MapEvents:
 	bg_event  5,  1, BGEVENT_READ, RuinsOfAlphOmanyteItemRoomAncientReplica
 
 	def_object_events
-	object_event  2,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphOmanyteItemRoomLeppaBerry, EVENT_PICKED_UP_LEPPA_BERRY_FROM_OMANYTE_ITEM_ROOM
-	object_event  5,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphOmanyteItemRoomMysticWater, EVENT_PICKED_UP_MYSTIC_WATER_FROM_OMANYTE_ITEM_ROOM
-	object_event  2,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphOmanyteItemRoomStardust, EVENT_PICKED_UP_STARDUST_FROM_OMANYTE_ITEM_ROOM
-	object_event  5,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphOmanyteItemRoomStarPiece, EVENT_PICKED_UP_STAR_PIECE_FROM_OMANYTE_ITEM_ROOM
+	object_event  2,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphOmanyteItemRoomLeppaBerry, EVENT_OMANYTE_ITEM_ROOM_LEPPA_BERRY
+	object_event  5,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphOmanyteItemRoomMysticWater, EVENT_OMANYTE_ITEM_ROOM_MYSTIC_WATER
+	object_event  2,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphOmanyteItemRoomStardust, EVENT_OMANYTE_ITEM_ROOM_STARDUST
+	object_event  5,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphOmanyteItemRoomStarPiece, EVENT_OMANYTE_ITEM_ROOM_STAR_PIECE
