@@ -17,9 +17,8 @@ CinnabarIslandFlypointCallback:
 CinnabarGymDoorCallback:
 	checkevent EVENT_CINNABAR_GYM_LEADER_RETURNED
 	iftrue .GymOpen
-	endcallback
+	changeblock 18, 4, $66 ; LOCKED
 .GymOpen:
-	changeblock 18, 4, $12 ; DOOR
 	endcallback
 
 CinnabarIslandNoop1Scene:
@@ -31,8 +30,8 @@ CinnabarGymDoorLocked:
 .LockedDoor
 	jumptext CinnabarGymDoorLockedText
 CinnabarGymDoorLockedText:
-	text "The GYM's doors"
-	line "are locked..."
+	text "The GYM's door is"
+	line "locked…"
 
 	para "There's a note!"
 
