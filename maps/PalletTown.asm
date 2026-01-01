@@ -43,7 +43,7 @@ PalletTownOakHeyWaitScriptL:
 	applymovement PALLETTOWN_OAK, PalletTownOakGoToLabMovement
 	turnobject PLAYER, UP
 	disappear PALLETTOWN_OAK
-	playsound SFX_EXIT_BUILDING
+	playsound SFX_ENTER_DOOR ;SFX_EXIT_BUILDING
 	waitsfx
 	setmapscene OAKS_LAB, SCENE_OAKSLAB_MEET_OAK
 	clearevent EVENT_OAKS_LAB_OAK
@@ -188,12 +188,13 @@ PalletTownOakGoToLabMovement:
 	step RIGHT
 	step RIGHT
 	step RIGHT
-	step UP
-	step_end
-	
 PalletTownEnterLabMovement:
 	step UP
 	step_end
+	
+;PalletTownEnterLabMovement:
+;	step UP
+;	step_end
 
 PalletTownSign:
 	jumptext PalletTownSignText
