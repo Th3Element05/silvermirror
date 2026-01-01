@@ -1,5 +1,4 @@
 	object_const_def
-	const GUIDEGENTSHOUSE_GRAMPS
 
 GuideGentsHouse_MapScripts:
 	def_scene_scripts
@@ -8,10 +7,6 @@ GuideGentsHouse_MapScripts:
 
 GuideGentsHouseGuideGent:
 	jumptextfaceplayer GuideGentsHouseGuideGentText
-
-GuideGentsHouseBookshelf:
-	jumpstd MagazineBookshelfScript
-
 GuideGentsHouseGuideGentText:
 	text "When I was a wee"
 	line "lad, I was a hot-"
@@ -24,6 +19,9 @@ GuideGentsHouseGuideGentText:
 	para "Treat them all"
 	line "with kindness!"
 	done
+
+GuideGentsHouseBookshelf:
+	jumpstd MagazineBookshelfScript
 
 GuideGentsHouse_MapEvents:
 	db 0, 0 ; filler
@@ -39,4 +37,4 @@ GuideGentsHouse_MapEvents:
 	bg_event  1,  1, BGEVENT_READ, GuideGentsHouseBookshelf
 
 	def_object_events
-	object_event  2,  3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GuideGentsHouseGuideGent, EVENT_GUIDE_GENT_VISIBLE_IN_CHERRYGROVE
+	object_event  2,  3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GuideGentsHouseGuideGent, -1
