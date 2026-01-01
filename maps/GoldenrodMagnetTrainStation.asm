@@ -14,25 +14,19 @@ GoldenrodMagnetTrainStationNoopScene:
 GoldenrodMagnetTrainStationOfficerScript:
 	faceplayer
 	opentext
-	checkevent EVENT_RESTORED_POWER_TO_KANTO
-	iftrue .MagnetTrainToSaffron
-	writetext GoldenrodMagnetTrainStationOfficerTheTrainHasntComeInText
-	waitbutton
-	closetext
-	end
-
-.MagnetTrainToSaffron:
-	writetext GoldenrodMagnetTrainStationOfficerAreYouComingAboardText
+;	checkflag ENGINE_REACHED_GOLDENROD ;for saffron station
+;	iffalse .ClosedForRepairs
+	writetext GoldenrodMagnetTrainStationOfficer_AreYouComingAboardText
 	yesorno
 	iffalse .DecidedNotToRide
 	checkitem PASS
-	iffalse .PassNotInBag
-	writetext GoldenrodMagnetTrainStationOfficerRightThisWayText
+	iffalse .BuyPass ;.PassNotInBag
+	writetext SaffronMagnetTrainStationOfficer_RightThisWayText
 	waitbutton
 	closetext
-	applymovement GOLDENRODMAGNETTRAINSTATION_OFFICER, GoldenrodMagnetTrainStationOfficerApproachTrainDoorMovement
-	applymovement PLAYER, GoldenrodMagnetTrainStationPlayerApproachAndEnterTrainMovement
-	setval FALSE
+	applymovement GOLDENRODMAGNETTRAINSTATION_OFFICER, SaffronMagnetTrainStationOfficerApproachTrainDoorMovement
+	applymovement PLAYER, SaffronMagnetTrainStationPlayerApproachAndEnterTrainMovement
+	setval FALSE ;to saffron?
 	special MagnetTrain
 	warpcheck
 	newloadmap MAPSETUP_TRAIN
@@ -44,77 +38,42 @@ GoldenrodMagnetTrainStationOfficerScript:
 	turn_head DOWN
 	step_end
 
-.PassNotInBag:
-	writetext GoldenrodMagnetTrainStationOfficerYouDontHaveARailPassText
-	waitbutton
-	closetext
-	end
-
 .DecidedNotToRide:
-	writetext GoldenrodMagnetTrainStationOfficerHopeToSeeYouAgainText
+	writetext SaffronMagnetTrainStationOfficer_HopeToSeeYouAgainText
 	waitbutton
 	closetext
 	end
 
-Script_ArriveFromSaffron:
-	applymovement GOLDENRODMAGNETTRAINSTATION_OFFICER, GoldenrodMagnetTrainStationOfficerApproachTrainDoorMovement
-	applymovement PLAYER, GoldenrodMagnetTrainStationPlayerLeaveTrainAndEnterStationMovement
-	applymovement GOLDENRODMAGNETTRAINSTATION_OFFICER, GoldenrodMagnetTrainStationOfficerReturnToBoardingGateMovement
-	opentext
-	writetext GoldenrodMagnetTrainStationOfficerArrivedInGoldenrodText
+.BuyPass:
+	writetext SaffronMagnetTrainStation_OfficerSellsPassText
+	promptbutton
+	special PlaceMoneyTopRight
+	yesorno
+	iffalse .Refused
+	checkmoney YOUR_MONEY, 500
+	ifequal HAVE_LESS, .NotEnoughMoney
+	waitsfx
+	playsound SFX_TRANSACTION
+	takemoney YOUR_MONEY, 500
+	special PlaceMoneyTopRight
+	waitsfx
+	writetext SaffronMagnetTrainStationOfficer_BoughtPassText
+	giveitem PASS
+	playsound SFX_KEY_ITEM
+	waitsfx
+	itemnotify
+;	setevent EVENT_GOT_MAGNET_TRAIN_PASS
 	waitbutton
+	sjump GoldenrodMagnetTrainStationOfficerScript
+
+.NotEnoughMoney
+	writetext SaffronMagnetTrainStation_NotEnoughMoneyText
+	waitbutton
+.Refused
 	closetext
 	end
 
-GoldenrodMagnetTrainStationGentlemanScript:
-	jumptextfaceplayer GoldenrodMagnetTrainStationGentlemanText
-
-GoldenrodMagnetTrainStationOfficerApproachTrainDoorMovement:
-	step UP
-	step UP
-	step RIGHT
-	turn_head LEFT
-	step_end
-
-GoldenrodMagnetTrainStationOfficerReturnToBoardingGateMovement:
-	step LEFT
-	step DOWN
-	step DOWN
-	step_end
-
-GoldenrodMagnetTrainStationPlayerApproachAndEnterTrainMovement:
-	step UP
-	step UP
-	step UP
-	step LEFT
-	step LEFT
-	step LEFT
-	step UP
-	step UP
-	step_end
-
-GoldenrodMagnetTrainStationPlayerLeaveTrainAndEnterStationMovement:
-	step LEFT
-	step LEFT
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	turn_head UP
-	step_end
-
-GoldenrodMagnetTrainStationOfficerTheTrainHasntComeInText:
-	text "The train hasn't"
-	line "come in…"
-
-	para "I know! I'll carry"
-	line "the passengers on"
-	cont "my back!"
-
-	para "That won't work."
-	done
-
-GoldenrodMagnetTrainStationOfficerAreYouComingAboardText:
+GoldenrodMagnetTrainStationOfficer_AreYouComingAboardText:
 	text "We'll soon depart"
 	line "for SAFFRON."
 
@@ -122,25 +81,46 @@ GoldenrodMagnetTrainStationOfficerAreYouComingAboardText:
 	line "aboard?"
 	done
 
-GoldenrodMagnetTrainStationOfficerRightThisWayText:
-	text "May I see your"
-	line "rail PASS, please?"
+;GoldenrodMagnetTrainStationOfficer_RightThisWayText:
+;	text "May I see your"
+;	line "rail PASS, please?"
+;
+;	para "OK. Right this"
+;	line "way, please."
+;	done
 
-	para "OK. Right this"
-	line "way, please."
-	done
+;GoldenrodMagnetTrainStationOfficer_HopeToSeeYouAgainText:
+;	text "We hope to see you"
+;	line "again!"
+;	done
 
-GoldenrodMagnetTrainStationOfficerYouDontHaveARailPassText:
-	text "Sorry. You don't"
-	line "have a rail PASS."
-	done
+;GoldenrodMagnetTrainStation_OfficerSellsPassText:
+;	text "You don't have a"
+;	line "rail PASS."
+;
+;	para "Would you like to"
+;	line "buy one?"
+;
+;	para "Ride as often as"
+;	line "you like for ¥500?"
+;	done
 
-GoldenrodMagnetTrainStationOfficerHopeToSeeYouAgainText:
-	text "We hope to see you"
-	line "again!"
-	done
+;GoldenrodMagnetTrainStationOfficer_BoughtPassText:
+;	text "Thank you! Here is"
+;	line "your PASS."
+;	done
 
-GoldenrodMagnetTrainStationOfficerArrivedInGoldenrodText:
+Script_ArriveFromSaffron:
+	applymovement GOLDENRODMAGNETTRAINSTATION_OFFICER, SaffronMagnetTrainStationOfficerApproachTrainDoorMovement
+	applymovement PLAYER, SaffronMagnetTrainStationPlayerLeaveTrainAndEnterStationMovement
+	applymovement GOLDENRODMAGNETTRAINSTATION_OFFICER, SaffronMagnetTrainStationOfficerReturnToBoardingGateMovement
+	opentext
+	writetext GoldenrodMagnetTrainStationOfficer_ArrivedInGoldenrodText
+	waitbutton
+	closetext
+	end
+
+GoldenrodMagnetTrainStationOfficer_ArrivedInGoldenrodText:
 	text "We have arrived in"
 	line "GOLDENROD."
 
@@ -148,18 +128,113 @@ GoldenrodMagnetTrainStationOfficerArrivedInGoldenrodText:
 	line "again."
 	done
 
+;GoldenrodMagnetTrainStationPlayerApproachAndEnterTrainMovement:
+;	step UP
+;	step UP
+;	step UP
+;	step LEFT
+;	step LEFT
+;	step LEFT
+;	step UP
+;	step UP
+;	step_end
+
+;GoldenrodMagnetTrainStationOfficerApproachTrainDoorMovement:
+;	step UP
+;	step UP
+;	step RIGHT
+;	turn_head LEFT
+;	step_end
+
+;GoldenrodMagnetTrainStationPlayerLeaveTrainAndEnterStationMovement:
+;	step LEFT
+;	step LEFT
+;	step DOWN
+;	step DOWN
+;	step DOWN
+;	step DOWN
+;	turn_head UP
+;	step_end
+
+;GoldenrodMagnetTrainStationOfficerReturnToBoardingGateMovement:
+;	step LEFT
+;	step DOWN
+;	step DOWN
+;	step_end
+
+GoldenrodMagnetTrainStationGentlemanScript:
+	faceplayer
+	opentext
+	writetext GoldenrodMagnetTrainStationGentlemanText
+	checkitem PASS
+	iftrue .AlreadyHavePass
+	promptbutton
+	writetext GoldenrodMagnetTrainStationGentleman_DoYouLikeTrainsText
+	yesorno
+	iffalse .DontLikeTrains
+	writetext GoldenrodMagnetTrainStationGentleman_TrainsText
+	waitbutton
+	playsound SFX_KEY_ITEM
+	verbosegiveitem PASS
+	waitsfx
+;	itemnotify
+	closetext
+	end
+
+.DontLikeTrains:
+	writetext GoldenrodMagnetTrainStationGentleman_DisappointedText
+.AlreadyHavePass:
+	waitbutton
+	closetext
+	end
+
+GoldenrodMagnetTrainStationGentleman_DisappointedText:
+	text "Oh, that's"
+	line "disappointing…"
+	done
+
 GoldenrodMagnetTrainStationGentlemanText:
 	text "I'm the PRESIDENT."
 
 	para "My dream was to"
 	line "build a train that"
-
-	para "is faster than any"
-	line "#MON."
+	cont "is faster than any"
+	cont "#MON."
 
 	para "It really brings"
 	line "JOHTO much closer"
 	cont "to KANTO."
+	done
+
+GoldenrodMagnetTrainStationGentleman_DoYouLikeTrainsText:
+	text "Do you like trains"
+	line "as much as I do?"
+	done
+
+GoldenrodMagnetTrainStationGentleman_TrainsText:
+	text "Wonderful! Let me"
+	line "tell you more!"
+
+	para "Smooth… hovering…"
+	line "frictionless…"
+	cont "travel… advanced…"
+
+	para "Oh, and… faster…"
+	line "electromagnetic…"
+	cont "quiet… high-tech…"
+
+	para "Did I mention?"
+	line "Streamlined…"
+	cont "modern… powerful…"
+	cont "high-speed…"
+	
+	para "Oops! Look at the"
+	line "time! I've kept"
+	cont "you too long!"
+
+	para "I enjoyed talking"
+	line "with you! I want"
+	cont "you to have this!"
 	done
 
 GoldenrodMagnetTrainStation_MapEvents:
@@ -178,4 +253,4 @@ GoldenrodMagnetTrainStation_MapEvents:
 
 	def_object_events
 	object_event  9,  9, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodMagnetTrainStationOfficerScript, -1
-	object_event 11, 14, SPRITE_GENTLEMAN, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodMagnetTrainStationGentlemanScript, EVENT_GOLDENROD_TRAIN_STATION_GENTLEMAN
+	object_event 11, 14, SPRITE_GENTLEMAN, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodMagnetTrainStationGentlemanScript, -1
