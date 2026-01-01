@@ -208,8 +208,8 @@ CeladonGroupSprites:
 	;updated
 
 FuchsiaGroupSprites:
-;FuchsiaCity    SCYTHER, PINSIR, DRATINI, CHANSEY, SURF, KANGASKHAN, COOLTRAINER_M, GRAMPS
-;Route17        BIKER
+;FuchsiaCity	SCYTHER, PINSIR, DRATINI, CHANSEY, SURF, KANGASKHAN, COOLTRAINER_M, GRAMPS
+;Route17		BIKER
 ;Route18        COOLTRAINER_M
 ;(route 16)		BIKER, big_snorlax, poke_ball
 	db SPRITE_BIKER
@@ -232,25 +232,29 @@ FuchsiaGroupSprites:
 SilverGroupSprites:
 ; Route26, Route27East, Route28, SilverCaveOutside
 	db SPRITE_OAK
-	; 0 of 9 max walking sprites
+	; 1 of 9 max walking sprites
 	db SPRITE_BERRY
 	db SPRITE_APRICORN
 	db SPRITE_POKE_BALL
 
 ; Route29 and CherrygroveCity are connected
 NewBarkGroupSprites:
-; Route27West, Route29, NewBarkTown
+;NewBarkTown	BLUE, FISHER, teacher, berry, poke_ball
+;Route29		SUPER_NERD, TEACHER, CAL
+;Route27West	?
 CherrygroveGroupSprites:
-; Route30, Route31, CherrygroveCity
-	db SPRITE_TEACHER
+;CherrygroveCity	TEACHER, YOUNGSTER, fisher
+;Route30			YOUNGSTER, BUG_CATCHER, poke_ball, berry, apricorn
+;Route31			BUG_CATHCER, COOLTRAINER_M, fisher, youngster, poke_ball
+	db SPRITE_BLUE
 	db SPRITE_FISHER
-	db SPRITE_COOLTRAINER_M
+	db SPRITE_SUPER_NERD
+	db SPRITE_TEACHER
 	db SPRITE_YOUNGSTER
-	db SPRITE_GRAMPS
-	db SPRITE_BOY
-	db SPRITE_COOLTRAINER_F
+	db SPRITE_BUG_CATCHER
+	db SPRITE_COOLTRAINER_M
+	db SPRITE_CAL
 	; max 8 of 9 walking sprites
-	db SPRITE_PIDGEY
 	db SPRITE_POKE_BALL
 	db SPRITE_BERRY
 	db SPRITE_APRICORN
@@ -343,8 +347,8 @@ CianwoodGroupSprites:
 
 MahoganyGroupSprites:
 ; Route42		CHUCK, pokefanm, primeape, rock, apricorn
-; Route44		
-; MahoganyTown	
+; Route44		?
+; MahoganyTown	?
 	db SPRITE_GRAMPS
 	db SPRITE_YOUNGSTER
 	db SPRITE_LASS
@@ -363,7 +367,8 @@ MahoganyGroupSprites:
 	db 0 ; end
 
 LakeOfRageGroupSprites:
-; Route43, LakeOfRage
+;LakeOfRage		CLAIR, ?
+;Route43		?
 	db SPRITE_CLAIR
 	db SPRITE_MAGIKARP_SWIM
 	db SPRITE_SUPER_NERD
