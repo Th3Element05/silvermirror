@@ -277,21 +277,24 @@ Route39_Blocks:
 	INCBIN "maps/Route39.blk"
 
 PlayersHouse1F_Blocks:
+BluesHouse_Blocks:
+CopycatsHouse1F_Blocks:
+RedsHouse1F_Blocks:
 	INCBIN "maps/PlayersHouse1F.blk"
+
+;BluesHouse_Blocks:
+;CopycatsHouse1F_Blocks:
+;RedsHouse1F_Blocks:
+;	INCBIN "maps/RedsHouse1F.blk"
+
+;CopycatsHouse1F_Blocks:
+;	INCBIN "maps/CopycatsHouse1F.blk"
 
 PlayersHouse2F_Blocks:
 BluesHouse2F_Blocks:
 CopycatsHouse2F_Blocks:
 RedsHouse2F_Blocks:
 	INCBIN "maps/PlayersHouse2F.blk"
-
-BluesHouse_Blocks:
-CopycatsHouse1F_Blocks:
-RedsHouse1F_Blocks:
-	INCBIN "maps/RedsHouse1F.blk"
-
-;CopycatsHouse1F_Blocks:
-;	INCBIN "maps/CopycatsHouse1F.blk"
 
 ;CopycatsHouse2F_Blocks:
 ;	INCBIN "maps/CopycatsHouse2F.blk"
