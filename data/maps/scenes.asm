@@ -54,14 +54,15 @@ MapScenes::
 	scene_var ECRUTEAK_CITY,                               wEcruteakCitySceneID
 	scene_var BURNED_TOWER_1F,                             wBurnedTower1FSceneID
 	scene_var BURNED_TOWER_B1F,                            wBurnedTowerB1FSceneID
+	scene_var MR_POKEMONS_HOUSE,                           wMrPokemonsHouseSceneID
 	scene_var ROUTE_30,                                    wRoute30SceneID
+	scene_var ROUTE_29,                                    wRoute29SceneID
+	scene_var NEW_BARK_TOWN,                               wNewBarkTownSceneID
+	scene_var RADIO_TOWER_4F,                              wRadioTower4FSceneID
 ; og scenes below
 	scene_var TRAINER_HOUSE_B1F,                           wTrainerHouseB1FSceneID
-	scene_var NEW_BARK_TOWN,                               wNewBarkTownSceneID
 	scene_var ELMS_LAB,                                    wElmsLabSceneID
-	scene_var ROUTE_29,                                    wRoute29SceneID
 	scene_var CHERRYGROVE_CITY,                            wCherrygroveCitySceneID
-	scene_var MR_POKEMONS_HOUSE,                           wMrPokemonsHouseSceneID
 	scene_var ROUTE_32,                                    wRoute32SceneID
 	scene_var ROUTE_35_NATIONAL_PARK_GATE,                 wRoute35NationalParkGateSceneID
 	scene_var ROUTE_36,                                    wRoute36SceneID
@@ -82,7 +83,7 @@ MapScenes::
 	scene_var BATTLE_TOWER_HALLWAY,                        wBattleTowerHallwaySceneID
 	scene_var BATTLE_TOWER_OUTSIDE,                        wBattleTowerOutsideSceneID ; unused
 	scene_var ROUTE_43_GATE,                               wRoute43GateSceneID
-	scene_var SPROUT_TOWER_3F,                             wSproutTower3FSceneID
+;	scene_var SPROUT_TOWER_3F,                             wSproutTower3FSceneID
 	scene_var TIN_TOWER_1F,                                wTinTower1FSceneID
 ;	scene_var RUINS_OF_ALPH_OUTSIDE,                       wRuinsOfAlphOutsideSceneID
 ;	scene_var RUINS_OF_ALPH_RESEARCH_CENTER,               wRuinsOfAlphResearchCenterSceneID
