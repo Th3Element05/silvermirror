@@ -88,6 +88,8 @@ DEF KRIS EQU __trainer_class__
 	const RIVAL2_4_BULBASAUR
 	const RIVAL2_4_CHARMANDER
 	const RIVAL2_4_SQUIRTLE
+; NEW BARK TOWN
+	const RIVAL2_NEW_BARK_TOWN
 
 	trainerclass BROCK ; 0c
 	const BROCK1
@@ -197,6 +199,7 @@ DEF KRIS EQU __trainer_class__
 	const EXECUTIVEM_2
 ; johto
 	const EXECUTIVEM_3 ; fast ship engine room
+	const FANATIC      ; radio tower 4f
 
 	trainerclass EXECUTIVEF ; 1e
 ; kanto
@@ -421,7 +424,7 @@ DEF KRIS EQU __trainer_class__
 	const ETHAN
 	const DONALD
 ; johto
-	const ZACH
+	const ZACH ; unused (route42)
 	const MILLER
 	const ROLAND
 	const MAX
