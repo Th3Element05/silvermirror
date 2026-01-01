@@ -61,13 +61,14 @@ OakScript:
 
 .OakGiveBalls
 	writetext OaksLabGetPokeballsText
-;	playsound SFX_ITEM
-;	waitsfx
-;	promptbutton
-;	giveitem POKE_BALL, 5
-;
+	playsound SFX_ITEM
+	waitsfx
 	promptbutton
-	verbosegiveitem POKE_BALL, 5
+	giveitem POKE_BALL, 5
+	itemnotify
+;
+;	promptbutton
+;	verbosegiveitem POKE_BALL, 5
 ;
 	writetext OaksLabPokeballExplainationText
 	waitbutton
@@ -320,9 +321,9 @@ OaksLabRivalBattleStart:
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	scall OaksLabRivalGoesAroundScript
 	applymovement OAKSLAB_BLUE, OaksLabRivalLeavesMovement
-	pause 15
-	disappear OAKSLAB_BLUE
+;	pause 15
 	playsound SFX_EXIT_BUILDING
+	disappear OAKSLAB_BLUE
 	setscene SCENE_OAKSLAB_NOOP
 	setmapscene PALLET_TOWN, SCENE_PALLETTOWN_NOOP
 	special HealParty
@@ -401,18 +402,21 @@ DeliverOaksParcelScript:
 	setmapscene ROUTE_22, SCENE_ROUTE22_RIVAL
 	setscene SCENE_OAKSLAB_NOOP
 	special RestartMapMusic
+	faceplayer
 	opentext
 	writetext OaksLabOakGivePhoneNumberText
 	waitbutton
-	closetext
+;	closetext
 	addcellnum PHONE_OAK
-	opentext
+;	opentext
 	writetext GotOaksNumberText
 	playsound SFX_REGISTER_PHONE_NUMBER
 	waitsfx
+	promptbutton
+;	closetext
+	writetext OaksLabOakTalkToMomText
 	waitbutton
 	closetext
-	jumptext OaksLabOakTalkToMomText
 	end
 
 .JumpstdReceiveItem:
@@ -517,9 +521,6 @@ OaksLabPlayerWalkInMovement:
 	step UP
 	step UP
 	step UP
-	step UP
-	step_end
-
 OaksLabDontLeaveMovement:
 	step UP
 	step_end
@@ -567,12 +568,12 @@ OaksLabRivalStepLeftMovement:
 	step_end
 
 OaksLabRivalBattleBulbasaurMovement:
-	slow_step LEFT
+	step LEFT
 OaksLabRivalBattleSquirtleMovement:
-	slow_step LEFT
+	step LEFT
 OaksLabRivalBattleCharmanderMovement:
-	slow_step LEFT
-	slow_step DOWN
+	step LEFT
+	step DOWN
 	step_end
 
 OaksLabRivalLeavesMovement:
@@ -582,6 +583,7 @@ OaksLabRivalLeavesMovement:
 	slow_step DOWN
 	slow_step DOWN
 	slow_step DOWN
+	step_sleep 10
 	step_end
 
 OaksLabRivalWalksInMovement:
@@ -595,17 +597,17 @@ OaksLabRivalWalksInMovementShort:
 ; npc text
 OaksLabRivalOakNotHereText:
 	text "<RIVAL>: Yo"
-	line "<PLAYER>! Gramps"
+	line "<PLAYER>! GRAMPS"
 	cont "isn't around!"
 	done
 	
 OaksLabIntroConversationText:
-	text "<RIVAL>: Gramps!"
+	text "<RIVAL>: GRAMPS!"
 	line "I'm fed up with"
 	cont "waiting!"
 
 	para "OAK: <RIVAL>?"
-	line "Let me think..."
+	line "Let me think…"
 
 	para "Oh, that's right,"
 	line "I told you to"
@@ -619,7 +621,7 @@ OaksLabIntroConversationText:
 	para "Haha!"
 
 	para "They are inside"
-	line "the # BALLs."
+	line "the #BALLs."
 
 	para "When I was young,"
 	line "I was a serious"
@@ -628,10 +630,12 @@ OaksLabIntroConversationText:
 	para "In my old age, I"
 	line "have only 3 left,"
 	cont "but you can have"
-	cont "one! Choose!"
+	cont "one!"
+
+	para "Choose!"
 
 	para "<RIVAL>: Hey!"
-	line "Gramps! What"
+	line "GRAMPS! What"
 	cont "about me?"
 
 	para "OAK: Be patient!"
@@ -640,7 +644,7 @@ OaksLabIntroConversationText:
 	done
 
 OaksLabWhichPokemonDoYouWantText:
-	text "Now, <PLAYER>,"
+	text "OAK: Now, <PLAYER>,"
 	line "which #MON do"
 	cont "you want?"
 	done
@@ -675,20 +679,20 @@ OaksLabRivalNotGreedyText:
 	done
 
 OaksLabTakeCharmanderText:
-	text "So! You want the"
-	line "fire #MON,"
+	text "You want the"
+	line "FIRE #MON,"
 	cont "CHARMANDER?"
 	done
 
 OaksLabTakeSquirtleText:
-	text "So! You want the"
-	line "water #MON,"
+	text "You want the"
+	line "WATER #MON,"
 	cont "SQUIRTLE?"
 	done
 
 OaksLabTakeBulbasaurText:
-	text "So! You want the"
-	line "grass #MON,"
+	text "You want the"
+	line "GRASS #MON,"
 	cont "BULBASAUR?"
 	done
 
@@ -726,7 +730,7 @@ OaksLabRivalBattleChallengeText:
 	done
 
 OaksLabRivalBattleWinText:
-	text "WHAT?"
+	text "<RIVAL>: WHAT?"
 	line "Unbelievable!"
 	cont "I picked the"
 	cont "wrong #MON!"
@@ -743,7 +747,7 @@ OaksLabAfterRivalBattleText:
 	cont "#MON fight to"
 	cont "toughen it up!"
 
-	para "<PLAYER>! Gramps!"
+	para "<PLAYER>! GRAMPS!"
 	line "Smell you later!"
 	done
 
@@ -775,14 +779,15 @@ OaksLabHowIsMyPokemonText:
 	done
 
 OaksLabParcelThanksText:
-	text "Ah! This is the"
-	line "custom # BALL"
-	cont "I ordered!"
-	cont "Thank you!"
+	text "OAK: Ah! This is"
+	line "the custom #-"
+	cont "BALL I ordered."
+
+	para "Thank you!"
 	done
 
 OaksLabRivalGrampsText:
-	text "<RIVAL>: Gramps!"
+	text "<RIVAL>: GRAMPS!"
 	done
 
 OaksLabWhatDidYouCallMeForText:
@@ -820,7 +825,7 @@ OaksLabOaksDreamGivePagerText:
 	text "OAK: To make a"
 	line "complete guide"
 	cont "on all the #MON"
-	cont "in the world..."
+	cont "in the world…"
 
 	para "That was my dream!"
 
@@ -854,13 +859,12 @@ GotPagerCardText:
 	done
 
 OaksLabOakExplainsPagerText:
-	text "That's the latest"
-	line "#GEAR card."
+	text "OAK: That's the"
+	line "latest #GEAR"
+	cont "expansion card."
 
 	para "The #MON"
 	line "PAGER SYSTEM."
-
-	para "Or PPS for short."
 
 	para "It allows you to"
 	line "call on special"
@@ -872,7 +876,7 @@ OaksLabOakExplainsPagerText:
 	cont "to call with it."
 
 	para "<RIVAL>: Alright"
-	line "Gramps! Leave it"
+	line "GRAMPS! Leave it"
 	cont "all to me!"
 	done
 
@@ -905,18 +909,19 @@ GotOaksNumberText:
 	done
 
 OaksLabOakTalkToMomText:
-	text "Your journey will"
-	line "be long and hard."
+	text "OAK: You have a"
+	line "long journey ahead"
+	cont "of you."
 
-	para "Before you leave,"
-	line "make sure that you"
-	cont "talk to your mom."
+	para "Make sure that you"
+	line "talk to your mom"
+	cont "before you leave."
 	done
 
 OaksLabPokemonAwaitText:
-	text "#MON around the"
-	line "world wait for"
-	cont "you, <PLAYER>!"
+	text "OAK: <PLAYER>!"
+	line "#MON around the"
+	cont "world await you!"
 	done
 
 OaksLabGetPokeballsText:
@@ -929,17 +934,17 @@ OaksLabGetPokeballsText:
 	line "them! Use these"
 	cont "to capture wild"
 	cont "#MON."
-;
-;	para "<PLAYER> received"
-;	line "# BALLs."
+
+	para "<PLAYER> received"
+	line "#BALLs."
 	done
 
 OaksLabPokeballExplainationText:
-	text "When a wild"
+	text "OAK: When a wild"
 	line "#MON appears,"
 	cont "it's fair game."
 
-	para "Just throw a #"
+	para "Just throw a #-"
 	line "BALL at it and"
 	cont "try to catch it!"
 
@@ -947,20 +952,22 @@ OaksLabPokeballExplainationText:
 	line "work, though."
 
 	para "A healthy #MON"
-	line "could escape. You"
-	cont "have to be lucky!"
+	line "could escape."
+
+	para "You need to weaken"
+	line "them first."
 	done
 
 OakGiveTicketText1:
 	text "OAK: <PLAYER>!"
 	line "There you are!"
 
-	para "I called because I"
-	line "have something for"
-	cont "you."
+	para "I called because"
+	line "I have something"
+	cont "for you."
 
-	para "See? It's an"
-	line "S.S.TICKET."
+	para "It's a ticket to"
+	line "ride the S.S.AQUA!"
 
 	para "Now you can catch"
 	line "#MON in JOHTO!"
@@ -997,7 +1004,7 @@ OaksLabTrashcanText:
 
 OaksLabThoseArePokeballsText:
 	text "Those are"
-	line "# BALLs. They"
+	line "#BALLs. They"
 	cont "contain #MON!"
 	done
 
@@ -1014,20 +1021,65 @@ OakLabOakGoodbyeText:
 	cont "come visit again."
 	done
 
+;OaksLabTravelTip1Text:
+;	text "<PLAYER> opened a"
+;	line "book."
+;
+;	para "Travel Tip 1:"
+;
+;	para "Press START to"
+;	line "open the MENU."
+;	done
+
+;OaksLabTravelTip2Text:
+;	text "<PLAYER> opened a"
+;	line "book."
+;
+;	para "Travel Tip 2:"
+;
+;	para "Record your trip"
+;	line "with SAVE!"
+;	done
+
+;OaksLabTravelTip3Text:
+;	text "<PLAYER> opened a"
+;	line "book."
+;
+;	para "Travel Tip 3:"
+;
+;	para "Open your PACK and"
+;	line "press SELECT to"
+;	cont "move items."
+;	done
+
+;OaksLabTravelTip4Text:
+;	text "<PLAYER> opened a"
+;	line "book."
+;
+;	para "Travel Tip 4:"
+;
+;	para "Check your #MON"
+;	line "moves. Press the"
+;
+;	para "A Button to switch"
+;	line "moves."
+;	done
+
 ; DEBUG
 DebugGotCharmander:
 	opentext
 	writetext DebugGotCharmanderText
+	yesorno
+	iffalse .End
 	setevent EVENT_GOT_POKEDEX
 	setflag ENGINE_POKEDEX
 	setevent EVENT_GOT_A_POKEMON_FROM_OAK
 	clearevent EVENT_GOT_SQUIRTLE_FROM_OAK
 	clearevent EVENT_GOT_BULBASAUR_FROM_OAK
 	setevent EVENT_GOT_CHARMANDER_FROM_OAK
-	waitbutton
+.End
 	closetext
 	end
-
 
 DebugGotCharmanderText:
 	text "Got CHARMANDER?"
@@ -1036,13 +1088,15 @@ DebugGotCharmanderText:
 DebugGotSquirtle:
 	opentext
 	writetext DebugGotSquirtleText
+	yesorno
+	iffalse .End
 	setevent EVENT_GOT_POKEDEX
 	setflag ENGINE_POKEDEX
 	setevent EVENT_GOT_A_POKEMON_FROM_OAK
 	clearevent EVENT_GOT_CHARMANDER_FROM_OAK
 	clearevent EVENT_GOT_BULBASAUR_FROM_OAK
 	setevent EVENT_GOT_SQUIRTLE_FROM_OAK
-	waitbutton
+.End
 	closetext
 	end
 
@@ -1053,13 +1107,15 @@ DebugGotSquirtleText:
 DebugGotBulbasaur:
 	opentext
 	writetext DebugGotBulbasaurText
+	yesorno
+	iffalse .End
 	setevent EVENT_GOT_POKEDEX
 	setflag ENGINE_POKEDEX
 	setevent EVENT_GOT_A_POKEMON_FROM_OAK
 	clearevent EVENT_GOT_CHARMANDER_FROM_OAK
 	clearevent EVENT_GOT_SQUIRTLE_FROM_OAK
 	setevent EVENT_GOT_BULBASAUR_FROM_OAK
-	waitbutton
+.End
 	closetext
 	end
 
@@ -1171,11 +1227,11 @@ DebugMasterBallsText:
 	line "MAX REPELs?"
 	done
 
-DebugAllTMHMs:
+DebugAllTMs:
 	opentext
-	writetext DebugAllTMHMsText
+	writetext DebugAllTMsText
 	yesorno
-	iffalse .NoTMs
+	iffalse .End
 	giveitem TM_DYNAMICPUNCH
 	giveitem TM_RAZOR_WIND
 	giveitem TM_SWORDS_DANCE
@@ -1252,52 +1308,118 @@ DebugAllTMHMs:
 	giveitem TM_STEEL_WING
 	giveitem TM_FURY_CUTTER
 	giveitem TM_NIGHTMARE
-	; fallthrough
-.NoTMs
-	writetext DebugAllHMsText
-	yesorno
-	iffalse .End
-	giveitem HM_CUT
-	giveitem HM_FLY
-	giveitem HM_SURF
-	giveitem HM_STRENGTH
-	giveitem HM_FLASH
-	giveitem HM_WHIRLPOOL
-	giveitem HM_WATERFALL
-	setevent EVENT_GOT_HM01_CUT
-	setevent EVENT_GOT_HM02_FLY
-	setevent EVENT_GOT_HM03_SURF
-	setevent EVENT_GOT_HM04_STRENGTH
-	setevent EVENT_GOT_HM05_FLASH
-	setevent EVENT_GOT_HM06_WHIRLPOOL
-	setevent EVENT_GOT_HM07_WATERFALL
 .End
 	closetext
 	end
 
-DebugAllTMHMsText:
-	text "All TMs and"
-	line "all HMs?"
+DebugAllTMsText:
+	text "All TMs?"
 	done
 
-DebugAllHMsText:
-	text "All HMs?"
-	line "(not TMs)"
-	done
-
-DebugCredits:
+DebugAllHMs:
 	opentext
-	writetext DebugRollCreditsText
+	writetext DebugAskPagerCardText
 	yesorno
 	iffalse .End
-	credits
+	setflag ENGINE_PAGER_CARD
+	writetext DebugAskCutText
+	yesorno
+	iffalse .fly
+	giveitem HM_CUT
+	setflag ENGINE_PAGER_CUT
+	setevent EVENT_GOT_HM01_CUT
+.fly
+	writetext DebugAskFlyText
+	yesorno
+	iffalse .surf
+	giveitem HM_FLY
+	setflag ENGINE_PAGER_FLY
+	setevent EVENT_GOT_HM02_FLY
+.surf
+	writetext DebugAskSurfText
+	yesorno
+	iffalse .strength
+	giveitem HM_SURF
+	setflag ENGINE_PAGER_SURF
+	setevent EVENT_GOT_HM03_SURF
+.strength
+	writetext DebugAskStrengthText
+	yesorno
+	iffalse .flash
+	giveitem HM_STRENGTH
+	setflag ENGINE_PAGER_STRENGTH
+	setevent EVENT_GOT_HM04_STRENGTH
+.flash
+	writetext DebugAskFlashText
+	yesorno
+	iffalse .whirlpool
+	giveitem HM_FLASH
+	setflag ENGINE_PAGER_FLASH
+	setevent EVENT_GOT_HM05_FLASH
+.whirlpool
+	writetext DebugAskWhirlpoolText
+	yesorno
+	iffalse .waterfall
+	giveitem HM_WHIRLPOOL
+	setflag ENGINE_PAGER_WHIRLPOOL
+	setevent EVENT_GOT_HM06_WHIRLPOOL
+.waterfall
+	writetext DebugAskWaterfallText
+	yesorno
+	iffalse .rocksmash
+	giveitem HM_WATERFALL
+	setevent EVENT_GOT_HM07_WATERFALL
+	setflag ENGINE_CAN_USE_WATERFALL
+.rocksmash
+	writetext DebugAskRockSmashText
+	yesorno
+	iffalse .End
+	giveitem TM_ROCK_SMASH
+	setflag ENGINE_PAGER_ROCK_SMASH
+	setevent EVENT_GOT_TM58_ROCK_SMASH
 .End
 	closetext
 	end
 
-DebugRollCreditsText:
-	text "Roll credits?"
+DebugAskPagerCardText:
+	text "Enable"
+	line "PAGER CARD?"
 	done
+
+DebugAskCutText:
+	text "CUT?"
+	done
+
+DebugAskFlyText:
+	text "FLY?"
+	done
+
+DebugAskSurfText:
+	text "SURF?"
+	done
+
+DebugAskStrengthText:
+	text "STRENGTH?"
+	done
+
+DebugAskFlashText:
+	text "FLASH?"
+	done
+
+DebugAskWhirlpoolText:
+	text "WHIRLPOOL?"
+	done
+
+DebugAskWaterfallText:
+	text "WATERFALL?"
+	done
+
+DebugAskRockSmashText:
+	text "ROCKSMASH?"
+	done
+
+;Debug:
+;Debug:
 
 DebugSkipFastShip:
 	opentext
@@ -1323,9 +1445,19 @@ DebugSkipFastShipText:
 ;	line "Kanto first!"
 ;	done
 
-;Debug:
-;Debug:
-;Debug:
+DebugCredits:
+	opentext
+	writetext DebugRollCreditsText
+	yesorno
+	iffalse .End
+	credits
+.End
+	closetext
+	end
+
+DebugRollCreditsText:
+	text "Roll credits?"
+	done
 
 ; front bookshelves
 DebugBeatKantoLeaders:
@@ -1436,6 +1568,8 @@ DebugViridianGymText:
 	line "VIRIDIAN GYMs?"
 	done
 
+;Debug:
+
 DebugCompleteKanto:
 	opentext
 	writetext DebugCompleteKantoText
@@ -1448,14 +1582,19 @@ DebugCompleteKanto:
 	setflag ENGINE_MAP_CARD
 	setflag ENGINE_PAGER_CARD
 	setflag ENGINE_RADIO_CARD
-;	setflag ENGINE_EXPN_CARD
+	setflag ENGINE_EXPN_CARD
 	setflag ENGINE_PAGER_CUT
 	setflag ENGINE_PAGER_FLY
 	setflag ENGINE_PAGER_SURF
 	setflag ENGINE_PAGER_STRENGTH
 	setflag ENGINE_PAGER_FLASH
 ;	setflag ENGINE_PAGER_WHIRLPOOL
-;	setflag ENGINE_PAGER_ROCK_SMASH
+	setflag ENGINE_PAGER_ROCK_SMASH
+	setevent EVENT_GOT_HM01_CUT
+	setevent EVENT_GOT_HM02_FLY
+	setevent EVENT_GOT_HM03_SURF
+	setevent EVENT_GOT_HM04_STRENGTH
+	setevent EVENT_GOT_HM05_FLASH
 	setflag ENGINE_BOULDERBADGE
 	setflag ENGINE_CASCADEBADGE
 	setflag ENGINE_THUNDERBADGE
@@ -1486,6 +1625,8 @@ DebugCompleteKanto:
 	setevent EVENT_BEAT_SABRINA
 	setevent EVENT_BEAT_BLAINE
 	setevent EVENT_BEAT_GIOVANNI
+	setevent EVENT_BEAT_GIOVANNI_HIDEOUT
+	setevent EVENT_BEAT_GIOVANNI_SILPHCO
 	setflag ENGINE_BOULDERBADGE
 	setflag ENGINE_CASCADEBADGE
 	setflag ENGINE_THUNDERBADGE
@@ -1507,8 +1648,6 @@ DebugCompleteKanto:
 DebugCompleteKantoText:
 	text "Complete KANTO?"
 	done
-
-;Debug:
 
 DebugBeatJohtoLeaders:
 	opentext
@@ -1627,13 +1766,13 @@ OaksLab_MapEvents:
 	bg_event  9,  1, BGEVENT_READ, DebugBeatEliteFour
 ; back bookshelves
 	bg_event  0,  6, BGEVENT_READ, DebugFullPokegear
-	bg_event  1,  6, BGEVENT_READ, DebugMasterBalls
-	bg_event  2,  6, BGEVENT_READ, DebugAllTMHMs
-	bg_event  3,  6, BGEVENT_READ, DebugCredits
-	bg_event  6,  6, BGEVENT_READ, DebugSkipFastShip
+	bg_event  1,  6, BGEVENT_READ, DebugAllTMs
+	bg_event  2,  6, BGEVENT_READ, DebugAllHMs
+	bg_event  3,  6, BGEVENT_READ, DebugMasterBalls
+;	bg_event  6,  6, BGEVENT_READ, Debug
 ;	bg_event  7,  6, BGEVENT_READ, Debug
-;	bg_event  8,  6, BGEVENT_READ, Debug
-;	bg_event  9,  6, BGEVENT_READ, Debug
+	bg_event  8,  6, BGEVENT_READ, DebugSkipFastShip
+	bg_event  9,  6, BGEVENT_READ, DebugCredits
 ; front bookshelves
 	bg_event  0,  7, BGEVENT_READ, DebugBeatKantoLeaders
 	bg_event  1,  7, BGEVENT_READ, DebugLockedKantoGyms
@@ -1643,6 +1782,7 @@ OaksLab_MapEvents:
 ;	bg_event  7,  7, BGEVENT_READ, Debug
 ;	bg_event  8,  7, BGEVENT_READ, Debug
 ;	bg_event  9,  7, BGEVENT_READ, Debug
+
 ; normal stuff
 	bg_event  4,  0, BGEVENT_READ, OaksLabPoster1
 	bg_event  5,  0, BGEVENT_READ, OaksLabPoster2
