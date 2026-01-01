@@ -11,9 +11,6 @@ PlayersHouse2F_MapScripts:
 	callback MAPCALLBACK_NEWMAP, PlayersHouse2FInitializeRoomCallback
 	callback MAPCALLBACK_TILES, PlayersHouse2FSetUpTileDecorationsCallback
 
-PlayersHouse2FNoopScene: ; unreferenced
-	end
-
 PlayersHouse2FInitializeRoomCallback:
 	special ToggleDecorationsVisibility
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
@@ -28,8 +25,6 @@ PlayersHouse2FInitializeRoomCallback:
 PlayersHouse2FSetUpTileDecorationsCallback:
 	special ToggleMaptileDecorations
 	endcallback
-
-	db 0, 0, 0 ; unused
 
 PlayersHouseDoll1Script::
 	describedecoration DECODESC_LEFT_DOLL
