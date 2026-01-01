@@ -190,7 +190,7 @@ CeruleanGymGuideScript:
 	jumptextfaceplayer CeruleanGymGuideWinText
 
 CeruleanGymGuideText:
-	text "Yo! Champ in"
+	text "Yo! CHAMP in the"
 	line "making!"
 
 	para "Here's my advice!"

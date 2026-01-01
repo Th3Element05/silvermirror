@@ -191,7 +191,7 @@ GruntF9BeatenText:
 GruntF9AfterBattleText:
 	text "If I had started"
 	line "as a trainer at"
-	cont "your age..."
+	cont "your age…"
 	done
 
 ; hidden items

@@ -115,7 +115,7 @@ GiovanniExplainTMText:
 
 	para "I made it when I"
 	line "ran the GYM here,"
-	cont "too long ago..."
+	cont "too long ago…"
 	done
 
 GiovanniAfterBattleText:
@@ -237,7 +237,7 @@ BlackbeltTyBeatenText:
 BlackbeltTyAfterBattleText:
 	text "If my #MON"
 	line "were as good at"
-	cont "Karate as I..."
+	cont "Karate as I…"
 	done
 
 TrainerPokemaniacEthan:
@@ -361,7 +361,7 @@ ViridianGymGuideScript:
 	end
 
 ViridianGymGuideText:
-	text "Yo! Champ in"
+	text "Yo! CHAMP in the"
 	line "making!"
 
 	para "Even I don't know"

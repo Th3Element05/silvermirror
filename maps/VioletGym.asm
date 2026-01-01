@@ -225,7 +225,7 @@ VioletGymGuideScript:
 	end
 
 VioletGymGuideText:
-	text "Hey! Champ!"
+	text "Hey! CHAMP!"
 
 	para "The grass-type is"
 	line "weak against the"
@@ -238,7 +238,7 @@ VioletGymGuideWinText:
 	text "Nice battle!"
 
 	para "I expected no less"
-	line "from you, Champ!"
+	line "from you, CHAMP!"
 	done
 
 VioletGymStatue:

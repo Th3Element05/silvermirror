@@ -455,9 +455,10 @@ SaffronGateClosedText: ;silvermirror+
 	done
 
 SaffronGateCanHaveDrinkText: ;silvermirror+
-	text "..."
-	line "Huh? I can have"
-	cont "this drink?"
+	text "<……>"
+
+	para "Huh? I can have"
+	line "this drink?"
 
 	para "Gee, thanks!"
 	done
@@ -470,13 +471,13 @@ SaffronGateGiveDrinkText: ;silvermirror+
 	done
 
 SaffronGateOpenText: ;silvermirror+
-	text "..."
-	line "Glug glug..."
-	cont "..."
-	cont "Gulp..."
+	text "…"
+	line "Glug glug…"
+	cont "…"
+	cont "Gulp…"
 
 	para "If you want to go"
-	line "to SAFFRON CITY..."
+	line "to SAFFRON CITY…"
 
 	para "You can go on"
 	line "through. I'll"

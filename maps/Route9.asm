@@ -45,7 +45,7 @@ BugCatcherDougBeatenText:
 BugCatcherDougAfterBattleText:
 	text "I have to collect"
 	line "more than bugs to"
-	cont "get stronger..."
+	cont "get stronger…"
 	done
 
 TrainerHikerBenjamin:
@@ -111,7 +111,7 @@ TrainerCamperSid:
 CamperSidSeenText:
 	text "I'm taking ROCK"
 	line "TUNNEL to go to"
-	cont "LAVENDER..."
+	cont "LAVENDER…"
 	done
 
 CamperSidBeatenText:
@@ -140,8 +140,7 @@ BugCatcherDonSeenText:
 	done
 
 BugCatcherDonBeatenText:
-	text "My"
-	line "bugs..."
+	text "My bugs…"
 	done
 
 BugCatcherDonAfterBattleText:

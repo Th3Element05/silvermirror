@@ -120,8 +120,6 @@ CeladonMansionRoofBookText:
 	text "Its a magazine"
 	line "of #MON facts!"
 
-	para "..."
-	
 	para "EEVEE, the"
 	line "EVOLUTION #MON"
 

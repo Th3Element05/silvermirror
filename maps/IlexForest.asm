@@ -137,7 +137,7 @@ Text_KurtCaughtCelebi:
 	line "what I just saw."
 
 	para "It motivates me to"
-	line "make better BALLS!"
+	line "make better BALLs!"
 
 	para "I'm going!"
 	done

@@ -48,8 +48,8 @@ TrainerMediumDoris:
 	end
 
 MediumDorisSeenText:
-	text "You...shall..."
-	line "join...us..."
+	text "You… shall…"
+	line "join… us…"
 	done
 
 MediumDorisBeatenText:
@@ -72,8 +72,8 @@ TrainerMediumJade:
 	end
 
 MediumJadeSeenText:
-	text "Give...me..."
-	line "your...soul..."
+	text "Give… me…"
+	line "your… soul…"
 	done
 
 MediumJadeBeatenText:
@@ -119,8 +119,8 @@ TrainerMediumDelilah:
 	end
 
 MediumDelilahSeenText:
-	text "Urgah..."
-	line "Urff...."
+	text "Urgah…"
+	line "Urff…"
 	done
 
 MediumDelilahBeatenText:

@@ -26,7 +26,7 @@ CeladonCafeWomanText:
 CeladonCafeFisher:
 	jumptextfaceplayer CeladonCafeFisherText
 CeladonCafeFisherText:
-	text "Munch..."
+	text "Munch…"
 
 	para "The man in the"
 	line "corner lost it"
@@ -59,7 +59,7 @@ CeladonCafeGamblerScript:
 CeladonCafeGamblerText:
 	text "I always thought"
 	line "I was going to"
-	cont "win it back..."
+	cont "win it back…"
 	done
 
 CeladonCafeLostItAllText:

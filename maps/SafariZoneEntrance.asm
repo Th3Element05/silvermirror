@@ -264,13 +264,13 @@ SafariZoneEntranceOfficer_Text3:
 	cont "of #MON."
 	
 	para "Use the SAFARI"
-	line "BALLS we provide"
+	line "BALLs we provide"
 	cont "to catch whatever"
 	cont "#MON you want!"
 	
 	para "When you run out"
 	line "of time or SAFARI"
-	cont "BALLS, it's game"
+	cont "BALLs, it's game"
 	cont "over for you!"
 	
 	para "Before you enter,"
@@ -312,14 +312,14 @@ SafariZoneEntranceMainOfficer_Text3:
 	
 	para "We only allow the"
 	line "use of our SAFARI"
-	cont "BALLS here."
+	cont "BALLs here."
 	done
 
 SafariZoneEntranceMainOfficer_Text4:
 	text "We'll call you on"
 	line "the PA when you"
 	cont "run out of time"
-	cont "or SAFARI BALLS!"
+	cont "or SAFARI BALLs!"
 	
 	para "Good luck!"
 	done
@@ -335,7 +335,7 @@ SafariZoneEntranceMainOfficer_Text6:
 
 SafariZoneEntranceMainOfficer_Text7:
 	text "Please return any"
-	line "SAFARI BALLS you"
+	line "SAFARI BALLs you"
 	cont "have left."
 	done
 
@@ -346,7 +346,7 @@ SafariZoneEntranceMainOfficer_Text8:
 
 SafariZoneEntranceReceivedBalls_Text:
 	text "<PLAYER> received"
-	line "30 SAFARI BALLS."
+	line "30 SAFARI BALLs."
 	done
 
 SafariZoneEntranceMainOfficer_NotEnoughMoneyText:

@@ -58,7 +58,7 @@ Route12GateGuardAfterSnorlaxText:
 ;
 ;	para "You can have this"
 ;	line "TM. I don't need"
-;	cont "it any more..."
+;	cont "it any more…"
 ;	done
 ;
 ;Route12GateLassExplainSwiftText:

@@ -16,7 +16,7 @@ CeladonDeptStore4FSuperNerdScript:
 	jumptextfaceplayer CeladonDeptStore4FSuperNerdText
 CeladonDeptStore4FSuperNerdText:
 	text "I'm getting a"
-	line "# DOLL for my"
+	line "#DOLL for my"
 	cont "girl friend!"
 	done
 
@@ -29,7 +29,7 @@ CeladonDeptStore4FYoungsterText:
 	para "You can run from"
 	line "wild #MON by"
 	cont "distracting them"
-	cont "with a # DOLL!"
+	cont "with a #DOLL!"
 	done
 
 CeladonDeptStore4FDirectory:

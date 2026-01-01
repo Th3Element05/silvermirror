@@ -85,13 +85,12 @@ Jasmine_SteelTypeIntro:
 
 Jasmine_BetterTrainer:
 	text "…You are a better"
-	line "trainer than me,"
+	line "trainer than me…"
 
 	para "In accordance with"
 	line "LEAGUE rules, I"
-
-	para "confer upon you"
-	line "this BADGE."
+	cont "confer upon you"
+	cont "this BADGE."
 	done
 
 Text_ReceivedMineralBadge:
@@ -106,12 +105,6 @@ Jasmine_BadgeSpeech:
 ;
 	text "…Um… Please take"
 	line "this too…"
-	done
-
-Text_ReceivedTM09: ; unreferenced
-	text "<PLAYER> received"
-;	line "TM09."
-	line "TM65."
 	done
 
 Jasmine_IronTailSpeech:
@@ -130,8 +123,6 @@ OlivineGymGuideScript:
 	faceplayer
 	checkevent EVENT_BEAT_JASMINE
 	iftrue .OlivineGymGuideWinScript
-;	checkevent EVENT_JASMINE_RETURNED_TO_GYM
-;	iffalse .OlivineGymGuidePreScript
 	opentext
 	writetext OlivineGymGuideText
 	waitbutton
@@ -145,15 +136,8 @@ OlivineGymGuideScript:
 	closetext
 	end
 
-;.OlivineGymGuidePreScript:
-;	opentext
-;	writetext OlivineGymGuidePreText
-;	waitbutton
-;	closetext
-;	end
-
 OlivineGymGuideText:
-	text "Yo! Champ!"
+	text "Yo! CHAMP!"
 
 	para "JASMINE uses the"
 	line "newly discovered"
@@ -173,36 +157,6 @@ OlivineGymGuideWinText:
 	line "encounter of an"
 	cont "unknown kind!"
 	done
-
-;OlivineGymGuidePreText:
-;	text "JASMINE, the GYM"
-;	line "LEADER, is at the"
-;	cont "LIGHTHOUSE."
-;
-;	para "She's been tending"
-;	line "to a sick #MON."
-;
-;	para "A strong trainer"
-;	line "has to be compas-"
-;	cont "sionate."
-;	done
-;
-;	text "Yo! CHAMP in"
-;	line "making!"
-;
-;	para "You lucked out"
-;	line "this time."
-;
-;	para "JASMINE is very"
-;	line "compasionate. She"
-;
-;	para "is often out help-"
-;	line "ing sick #MON."
-;
-;	para "But she happens"
-;	line "to be here at the"
-;	cont "GYM right now!"
-;	done
 
 OlivineGymStatue:
 	gettrainername STRING_BUFFER_4, JASMINE, JASMINE1

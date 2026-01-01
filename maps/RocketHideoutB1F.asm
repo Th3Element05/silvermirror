@@ -93,7 +93,7 @@ RocketGruntM9SeenText:
 	done
 
 RocketGruntM9BeatenText:
-	text "Why...?"
+	text "Why…?"
 	done
 
 RocketGruntM9AfterBattleText:

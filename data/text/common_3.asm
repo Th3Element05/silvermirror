@@ -15,7 +15,7 @@ _OakText8::
 	cont "your rival since"
 	cont "you were a baby."
 
-	para "...Erm, what is"
+	para "…Erm, what is"
 	line "his name again?"
 	prompt
 
@@ -41,9 +41,8 @@ if !DEF(_DEBUG)
 
 	para "A world of dreams"
 	line "and adventures"
-
-	para "with #MON"
-	line "awaits! Let's go!"
+	cont "with #MON"
+	cont "awaits! Let's go!"
 
 endc
 	para "I'll be seeing you"
@@ -344,9 +343,8 @@ _SeerNoLocationText::
 
 	para "I don't understand"
 	line "how, but it is"
-
-	para "incredible!"
-	line "You are special."
+	cont "incredible!"
+;	cont "You are special."
 
 	para "I can't tell where"
 	line "you met it, but it"
@@ -376,9 +374,8 @@ _SeerMoreCareText::
 
 	para "It would be wise"
 	line "to raise your"
-
-	para "#MON with a"
-	line "little more care."
+	cont "#MON with a"
+	cont "little more care."
 	done
 
 _SeerMoreConfidentText::
@@ -414,9 +411,8 @@ _SeerMightyText::
 	text_ram wSeerNickname
 	text_start
 	line "must have come"
-
-	para "through numerous"
-	line "#MON battles."
+	cont "through numerous"
+	cont "#MON battles."
 
 	para "It looks brimming"
 	line "with confidence."
@@ -430,9 +426,8 @@ _SeerImpressedText::
 
 	para "It's been a long"
 	line "time since I've"
-
-	para "seen a #MON as"
-	line "mighty as this"
+	cont "seen a #MON as"
+	cont "mighty as this"
 	cont "@"
 	text_ram wSeerNickname
 	text "."
@@ -551,9 +546,8 @@ _BargainShopIntroText::
 
 	para "I sell rare items"
 	line "that nobody else"
-
-	para "carries--but only"
-	line "one of each item."
+	cont "carries--but only"
+	cont "one of each item."
 	done
 
 _BargainShopFinalPriceText::
@@ -725,9 +719,8 @@ _SlotsDarnText::
 _MobileStadiumEntryText::
 	text "Data for use in"
 	line "the MOBILE STADIUM"
-
-	para "of the N64 #MON"
-	line "STADIUM 2 can be"
+	cont "of the N64 #MON"
+	cont "STADIUM 2 can be"
 	cont "read here."
 
 	para "Read the data?"
@@ -739,9 +732,8 @@ _MobileStadiumSuccessText::
 
 	para "We hope you enjoy"
 	line "MOBILE STADIUM"
-
-	para "battles in the N64"
-	line "#MON STADIUM 2."
+	cont "battles in the N64"
+	cont "#MON STADIUM 2."
 
 	para ""
 	done
@@ -786,15 +778,13 @@ _MobileOnlyThreeMonMayEnterText::
 _MobileCardFolderIntro1Text::
 	text "The CARD FOLDER"
 	line "stores your and"
-
-	para "your friends'"
-	line "CARDS."
+	cont "your friends'"
+	cont "CARDS."
 
 	para "A CARD contains"
 	line "information like"
-
-	para "the person's name,"
-	line "phone number and"
+	cont "the person's name,"
+	cont "phone number and"
 	cont "profile."
 
 	para ""
@@ -805,9 +795,8 @@ _MobileCardFolderIntro2Text::
 
 	para "Once you've"
 	line "entered your phone"
-
-	para "number, you can"
-	line "trade CARDS with"
+	cont "number, you can"
+	cont "trade CARDS with"
 	cont "your friends."
 
 	para ""
@@ -816,12 +805,10 @@ _MobileCardFolderIntro2Text::
 _MobileCardFolderIntro3Text::
 	text "If you have your"
 	line "friend's CARD, you"
-
-	para "can use it to make"
-	line "a call from a"
-
-	para "mobile phone on"
-	line "the 2nd floor of a"
+	cont "can use it to make"
+	cont "a call from a"
+	cont "mobile phone on"
+	cont "the 2nd floor of a"
 	cont "#MON CENTER."
 
 	para ""
@@ -830,9 +817,8 @@ _MobileCardFolderIntro3Text::
 _MobileCardFolderIntro4Text::
 	text "To safely store"
 	line "your collection of"
-
-	para "CARDS, you must"
-	line "set a PASSCODE for"
+	cont "CARDS, you must"
+	cont "set a PASSCODE for"
 	cont "your CARD FOLDER."
 
 	para ""
@@ -841,9 +827,8 @@ _MobileCardFolderIntro4Text::
 _MobileCardFolderAskDeleteText::
 	text "If the CARD FOLDER"
 	line "is deleted, all"
-
-	para "its CARDS and the"
-	line "PASSCODE will also"
+	cont "its CARDS and the"
+	cont "PASSCODE will also"
 	cont "be deleted."
 
 	para "Beware--a deleted"
@@ -1059,7 +1044,7 @@ _GearTodayText::
 	text_today
 	text_end
 
-	text_end ; unreferenced
+;	text_end ; unreferenced
 
 _GearEllipseText::
 	text "<……>"
@@ -1287,8 +1272,8 @@ _RepelUsedEarlierIsStillInEffectText::
 	prompt
 
 _PlayedFluteText::
-	text "Played the #"
-	line "FLUTE."
+	text "<PLAYER> played the"
+	line "#FLUTE."
 
 	para "Now, that's a"
 	line "catchy tune!"
@@ -1301,7 +1286,7 @@ _FluteWakeUpText::
 
 Text_PlayedPokeFlute::
 	text "<PLAYER> played the"
-	line "# FLUTE.@"
+	line "#FLUTE.@"
 	text_promptbutton
 	text_end
 

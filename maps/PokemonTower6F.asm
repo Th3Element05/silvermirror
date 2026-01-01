@@ -52,8 +52,8 @@ PokemonTower6FGhostScript:
 	end
 
 PokemonTower6FBegoneText:
-	text "Be gone..."
-	line "Intruders..."
+	text "Be gone…"
+	line "Intruders…"
 	done
 
 PokemonTower6FGetOutText:
@@ -90,7 +90,7 @@ TrainerMediumMaya:
 	end
 
 MediumMayaSeenText:
-	text "Urff... Kwaah!"
+	text "Urff… Kwaah!"
 	done
 
 MediumMayaBeatenText:
@@ -115,8 +115,8 @@ TrainerMediumWillow:
 	end
 
 MediumWillowSeenText:
-	text "Ke..ke...ke..."
-	line "ke..ke...ke!!"
+	text "Ke… ke… ke…"
+	line "ke… ke… ke!!"
 	done
 
 MediumWillowBeatenText:
@@ -139,8 +139,8 @@ TrainerMediumAbigail:
 	end
 
 MediumAbigailSeenText:
-	text "Give...me..."
-	line "blood..."
+	text "Give… me…"
+	line "blood…"
 	done
 
 MediumAbigailBeatenText:
@@ -149,7 +149,7 @@ MediumAbigailBeatenText:
 
 MediumAbigailAfterBattleText:
 	text "I feel anemic"
-	line "and weak..."
+	line "and weak…"
 	done
 
 PokemonTower6FStepBackMovement:

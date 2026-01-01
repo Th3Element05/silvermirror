@@ -21,7 +21,7 @@ SaffronPidgeyHouseBoyText:
 	line "COPYCAT is cute!"
 
 	para "I'm going to give"
-	line "her a # DOLL!"
+	line "her a #DOLL!"
 	done
 
 SaffronPidgeyHouseLass:

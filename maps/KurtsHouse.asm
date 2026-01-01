@@ -157,21 +157,6 @@ Kurt1:
 	closetext
 	end
 
-.ThatTurnedOutGreat:
-	writetext KurtsHouseKurtTurnedOutGreatText
-	waitbutton
-	closetext
-	clearflag ENGINE_KURT_MAKING_BALLS
-	special FadeBlackQuickly
-	special ReloadSpritesNoPalettes
-	disappear KURTSHOUSE_KURT2
-	appear KURTSHOUSE_KURT1
-	disappear KURTSHOUSE_TWIN2
-	appear KURTSHOUSE_TWIN1
-	pause 15
-	special FadeInQuickly
-	end
-
 .GiveLevelBall:
 	writetext KurtsHouseKurtJustFinishedYourBallText
 	promptbutton
@@ -227,6 +212,21 @@ Kurt1:
 	iffalse .NoRoomForBall
 	clearevent EVENT_GAVE_KURT_PNK_APRICORN
 	sjump .ThatTurnedOutGreat
+
+.ThatTurnedOutGreat:
+	writetext KurtsHouseKurtTurnedOutGreatText
+	waitbutton
+	closetext
+	clearflag ENGINE_KURT_MAKING_BALLS
+	special FadeBlackQuickly
+	special ReloadSpritesNoPalettes
+	disappear KURTSHOUSE_KURT2
+	appear KURTSHOUSE_KURT1
+	disappear KURTSHOUSE_TWIN2
+	appear KURTSHOUSE_TWIN1
+	pause 15
+	special FadeInQuickly
+	end
 
 .CanGiveGSBallToKurt:
 	checkevent EVENT_GAVE_GS_BALL_TO_KURT
@@ -301,14 +301,14 @@ Kurt2:
 	end
 
 KurtsHouseKurtBallsFromApricornsText:
-	text "KURT: I make BALLS"
+	text "KURT: I make BALLs"
 	line "from APRICORNS."
 
 	para "Collect them from"
 	line "trees and bring"
 	cont "'em to me."
 
-	para "I'll make BALLS"
+	para "I'll make BALLs"
 	line "out of them."
 	done
 
@@ -361,7 +361,7 @@ KurtsHouseKurtWhatIsThatText:
 	line "one before."
 
 	para "It looks a lot"
-	line "like a # BALL,"
+	line "like a #BALL,"
 	cont "but it appears to"
 	cont "be something else."
 
@@ -395,7 +395,7 @@ KurtsHouseKurtThisBallStartedToShakeText:
 ;
 ;	para "<PLAYER>, eh? You"
 ;	line "want me to make"
-;	cont "some BALLS?"
+;	cont "some BALLs?"
 ;
 ;	para "Sorry, but that'll"
 ;	line "have to wait."
@@ -441,10 +441,9 @@ KurtsHouseKurtThisBallStartedToShakeText:
 ;	para "I like your style!"
 ;
 ;	para "I would be honored"
-;	line "to make BALLS for"
-;
-;	para "a trainer like"
-;	line "you."
+;	line "to make BALLs for"
+;	cont "a trainer like"
+;	cont "you."
 ;
 ;	para "This is all I have"
 ;	line "now, but take it."
@@ -522,7 +521,7 @@ KurtsGranddaughterLonelyText:
 KurtsGranddaughterDadText:
 	text "My dad works at"
 	line "SILPH researching"
-	cont "# BALLS."
+	cont "#BALLs."
 
 	para "I have to stay"
 	line "home with Grandpa"
@@ -534,13 +533,13 @@ KurtsGranddaughterHelpText:
 	line "Grandpa now!"
 
 	para "We'll make good"
-	line "BALLS for you, so"
+	line "BALLs for you, so"
 	cont "please wait!"
 	done
 
 KurtsGranddaughterFunText:
 	text "It's fun to make"
-	line "BALLS!"
+	line "BALLs!"
 	done
 
 KurtsGranddaughterGSBallText:

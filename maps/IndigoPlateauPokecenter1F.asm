@@ -63,7 +63,7 @@ IndigoPlateauPokecenter1FClerkScript:
 IndigoPlateauPokecenter1FGymGuideScript:
 	jumptextfaceplayer IndigoPlateauPokecenter1FGymGuideText
 IndigoPlateauPokecenter1FGymGuideText:
-	text "Yo! Champ in"
+	text "Yo! CHAMP in the"
 	line "making!"
 
 	para "At #MON LEAGUE,"

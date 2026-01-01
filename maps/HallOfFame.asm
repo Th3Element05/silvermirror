@@ -33,7 +33,6 @@ HallOfFameEnterScript:
 	setevent EVENT_BEAT_ELITE_FOUR
 	setevent EVENT_INDIGO_POKECENTER_GYM_GUIDE
 ;	setevent EVENT_TELEPORT_GUY
-;	setevent EVENT_RIVAL_SPROUT_TOWER
 ;	clearevent EVENT_RED_IN_MT_SILVER
 ;	setevent EVENT_OLIVINE_PORT_SPRITES_BEFORE_HALL_OF_FAME
 ;	clearevent EVENT_OLIVINE_PORT_SPRITES_AFTER_HALL_OF_FAME
@@ -80,7 +79,7 @@ HallOfFame_OakText:
 	cont "HALL OF FAME!"
 
 	para "#MON LEAGUE"
-	line "champions are"
+	line "CHAMPIONs are"
 	cont "honored for their"
 	cont "achievments here!"
 
@@ -91,7 +90,7 @@ HallOfFame_OakText:
 	para "<PLAYER>! You have"
 	line "endeavored hard"
 	cont "to become the new"
-	cont "LEAGUE champion!"
+	cont "LEAGUE CHAMPION!"
 
 	para "Congratulations,"
 	line "<PLAYER>, you and"

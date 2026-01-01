@@ -110,7 +110,7 @@ Route1PotionSampleText:
 
 Route1AlsoHavePokeballsText:
 	text "We also carry"
-	line "# BALLs for"
+	line "#BALLs for"
 	cont "catching #MON!"
 	done
 

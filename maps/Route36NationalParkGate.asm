@@ -497,13 +497,13 @@ Route36NationalParkGateOfficer1AskToParticipateText:
 
 Route36NationalParkGateOfficer1GiveParkBallsText:
 	text "Here are the PARK"
-	line "BALLS for the"
+	line "BALLs for the"
 	cont "Contest."
 	done
 
 Route36NationalParkGatePlayerReceivedParkBallsText:
 	text "<PLAYER> received"
-	line "{d:BUG_CONTEST_BALLS} PARK BALLS."
+	line "{d:BUG_CONTEST_BALLS} PARK BALLs."
 	done
 
 Route36NationalParkGateOfficer1ExplainsRulesText:
@@ -516,7 +516,7 @@ Route36NationalParkGateOfficer1ExplainsRulesText:
 	line "minutes."
 
 	para "If you run out of"
-	line "PARK BALLS, you're"
+	line "PARK BALLs, you're"
 	cont "done."
 
 	para "You can keep the"

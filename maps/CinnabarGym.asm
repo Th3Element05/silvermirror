@@ -728,10 +728,10 @@ SuperNerdTeruBeatenText:
 SuperNerdTeruAfterBattleText:
 	text "Fire, or to be"
 	line "more precise,"
-	cont "combustion..."
+	cont "combustion…"
 
 	para "Blah, blah, blah,"
-	line "blah..."
+	line "blah…"
 	done
 
 CinnabarGymGuideScript:
@@ -751,7 +751,7 @@ CinnabarGymGuideScript:
 	end
 
 CinnabarGymGuideText:
-	text "Yo! Champ in"
+	text "Yo! CHAMP in the"
 	line "making!"
 
 	para "The hot-headed"

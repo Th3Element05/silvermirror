@@ -1390,7 +1390,7 @@ _SafariOutOfBallsText::
 	text "PA: Ding-dong!"
 
 	para "You are out of"
-	line "SAFARI BALLS!"
+	line "SAFARI BALLs!"
 	prompt
 
 _RepelWoreOffText::

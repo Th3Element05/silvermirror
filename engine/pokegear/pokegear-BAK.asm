@@ -2329,7 +2329,7 @@ UnownStationName:     db "?????@"
 
 PlacesAndPeopleName:  db "Places & People@"
 LetsAllSingName:      db "Let's All Sing!@"
-PokeFluteStationName: db "# FLUTE@"
+PokeFluteStationName: db "#FLUTE@"
 
 _TownMap:
 	ld hl, wOptions

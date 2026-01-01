@@ -110,7 +110,7 @@ ScientistJedBeatenText:
 	done
 
 ScientistJedAfterBattleText:
-	text "Humph..."
+	text "Humph…"
 
 	para "TEAM ROCKET said"
 	line "that if I helped"

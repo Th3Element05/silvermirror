@@ -23,7 +23,7 @@ CeladonPokecenter1FBenchGuyText:
 CeladonPokecenter1FGentlemanScript:
 	jumptextfaceplayer CeladonPokecenter1FGentlemanText
 CeladonPokecenter1FGentlemanText:
-	text "# FLUTE awakens"
+	text "#FLUTE awakens"
 	line "#MON with a"
 	cont "sound that only"
 	cont "they can hear!"

@@ -23,7 +23,7 @@ MtMoonPokecenter1FBenchGuyText:
 MtMoonPokecenter1FYoungsterScript:
 	jumptextfaceplayer MtMoonPokecenter1FYoungsterText
 MtMoonPokecenter1FYoungsterText:
-	text "I've 6 # BALLs"
+	text "I've 6 #BALLs"
 	line "set in my belt."
 
 	para "At most, you can"
@@ -35,7 +35,7 @@ MtMoonPokecenter1FGentlemanScript:
 MtMoonPokecenter1FGentlemanText:
 	text "TEAM ROCKET"
 	line "attacks CERULEAN"
-	cont "citizens..."
+	cont "citizens…"
 
 	para "TEAM ROCKET is"
 	line "always in the"

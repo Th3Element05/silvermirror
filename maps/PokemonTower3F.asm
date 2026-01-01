@@ -16,8 +16,8 @@ TrainerMediumMartha:
 	end
 
 MediumMarthaSeenText:
-	text "Urrg...Awaa..."
-	line "Huhu...graa.."
+	text "Urrg… Awaa…"
+	line "Huhu… graa…"
 	done
 
 MediumMarthaBeatenText:
@@ -42,7 +42,7 @@ TrainerMediumGrace:
 	end
 
 MediumGraceSeenText:
-	text "Kekeke...."
+	text "Kekeke…"
 	line "Kwaaah!"
 	done
 

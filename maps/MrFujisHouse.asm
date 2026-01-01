@@ -56,7 +56,7 @@ MrFujisHouseMrFujiGivePokeFluteText:
 
 MrFujisHouseMrFujiExplainFluteText:
 	text "MR.FUJI: Upon"
-	line "hearing the #"
+	line "hearing the #-"
 	cont "FLUTE, sleeping"
 	cont "#MON will"
 	cont "spring awake!"
@@ -83,7 +83,7 @@ MrFujisHouseMrFujiExplainRadioText:
 	cont "up more channels!"
 
 	para "Now you can listen"
-	line "to the # FLUTE"
+	line "to the #FLUTE"
 	cont "channel!"
 	done
 
@@ -165,7 +165,7 @@ MrFujisHousePokedexText:
 	cont "Drawing!"
 
 	para "The application"
-	line "form is..."
+	line "form is…"
 
 	para "Gone! It's been"
 	line "clipped out!"

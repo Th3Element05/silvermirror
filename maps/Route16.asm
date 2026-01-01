@@ -123,14 +123,14 @@ Route16RadioWakesSnorlax:
 ;	text "SNORLAX is sound"
 ;	line "asleep."
 ;	
-;	para "Play the"
-;	line "# FLUTE?"
+;	para "Will you play the"
+;	line "#FLUTE?"
 ;	done
 ;
 ;Route16PlayPokeFluteText:
 ;	text "<PLAYER> played"
-;	line "the # FLUTE"
-;	cont "for SNORLAX!"
+;	line "the #FLUTE for"
+;	cont "SNORLAX!"
 ;	done
 ;
 ;Route16SnorlaxWokeUpText:

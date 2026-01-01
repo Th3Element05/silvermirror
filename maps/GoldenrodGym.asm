@@ -330,7 +330,7 @@ GoldenrodGymGuideScript:
 	end
 
 GoldenrodGymGuideText:
-	text "Yo! Champ!"
+	text "Yo! CHAMP!"
 
 	para "This GYM is home"
 	line "to normal-type"

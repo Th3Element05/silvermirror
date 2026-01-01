@@ -127,7 +127,7 @@ AzaleaTownTeacherScript:
 AzaleaTownTeacherText:
 	text "Did you come to"
 	line "get KURT to make"
-	cont "some BALLS?"
+	cont "some BALLs?"
 
 	para "A lot of people do"
 	line "just that."

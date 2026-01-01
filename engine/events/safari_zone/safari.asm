@@ -49,6 +49,6 @@ SafariZoneText_GameIsOver::
 	db "@"
 
 SafariZoneText_OutOfBalls::
-	; PA: You are out of SAFARI BALLS!
+	; PA: You are out of SAFARI BALLs!
 	text_jump _SafariOutOfBallsText
 	db "@"

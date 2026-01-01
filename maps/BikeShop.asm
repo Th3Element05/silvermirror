@@ -83,7 +83,7 @@ BikeShopClerkCantAffordText:
 	done
 
 BikeShopClerkBikeVoucherText:
-	text "Oh, that's..."
+	text "Oh, that's…"
 
 	para "A BIKE VOUCHER!"
 

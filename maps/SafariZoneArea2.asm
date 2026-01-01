@@ -67,7 +67,7 @@ SafariZoneArea2Cooltrainers:
 	jumptextfaceplayer SafariZoneArea2CooltrainersText
 SafariZoneArea2CooltrainersText:
 	text "I'm saving my"
-	line "SAFARI BALLS for"
+	line "SAFARI BALLs for"
 	cont "strong looking"
 	cont "#MON!"
 	done

@@ -61,8 +61,8 @@ FishingGuruOldGiveRodText:
 	done
 
 FishingGuruOldRefusedText:
-	text "Oh... That's so"
-	line "disappointing..."
+	text "Oh… That's so"
+	line "disappointing…"
 	done
 
 FishingGuruOldAfterText:

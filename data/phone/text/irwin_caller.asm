@@ -163,12 +163,11 @@ IrwinSnorlaxGossipText:
 
 	para "I was watching you"
 	line "from afar, so I"
-
-	para "couldn't tell what"
-	line "you did exactly."
+	cont "couldn't tell what"
+	cont "you did exactly."
 
 	para "Did you play a"
-	line "flute to wake it?"
+	line "FLUTE to wake it?"
 
 	para "Wow! That's like"
 	line "magic!"

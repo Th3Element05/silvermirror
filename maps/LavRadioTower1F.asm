@@ -206,7 +206,7 @@ LavRadioTower1F_MapScripts:
 ;	text "Perk Up #MON"
 ;	line "with Mellow Sounds"
 ;
-;	para "of the # FLUTE"
+;	para "of the #FLUTE"
 ;	line "on CHANNEL 20"
 ;	done
 
