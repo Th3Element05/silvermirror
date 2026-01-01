@@ -197,10 +197,10 @@ MapSpecificOBPalettes:
 	_use_palette_routine_for_map SS_ANNE_ROOMS_1F, .PinkOverYellowOBPalette         ;clefairy
 	_use_palette_routine_for_map SS_ANNE_ROOMS_B1F, .GrayOverYellowOBPalette        ;machoke
 	_use_palette_routine_for_map CELADON_MANSION_1F, .PinkOverYellowOBPalette       ;clefairy
-	_use_palette_routine_for_map FUCHSIA_CITY, .PinkOverSilverOBPalette             ;chansey (aspear)
+	_use_palette_routine_for_map FUCHSIA_CITY, .PinkOverPurpleOBPalette             ;chansey (aspear)
 	_use_palette_routine_for_map SAFARI_ZONE_AREA_3, .RockOverTreeOBPalette         ;dry grass
 	_use_palette_routine_for_map ROUTE_20, .GrayOverYellowOBPalette                 ;geodude
-	_use_palette_routine_for_map FIGHTING_DOJO, .GrayOverSilverOBPalette            ;blackbelt
+	_use_palette_routine_for_map FIGHTING_DOJO, .GrayOverTreeOBPalette              ;blackbelt
 	_use_palette_routine_for_map COPYCATS_HOUSE_1F, .PinkOverYellowOBPalette        ;chansey
 	_use_palette_routine_for_map COPYCATS_HOUSE_2F, .PinkOverYellowOBPalette        ;dolls
 	_use_palette_routine_for_map MOUNT_MOON_SQUARE, .PinkOverYellowOBPalette        ;clefairy
@@ -212,7 +212,7 @@ MapSpecificOBPalettes:
 	_use_palette_routine_for_map ROUTE_33, .GrayOverYellowOBPalette                 ;blk
 	_use_palette_routine_for_map UNION_CAVE_1F, .GrayOverYellowOBPalette            ;geodude
 	_use_palette_routine_for_map ROUTE_30, .PinkOverYellowOBPalette                 ;pecha, pnk
-	_use_palette_routine_for_map ROUTE_42, .PinkOverSilverOBPalette                 ;pnk
+	_use_palette_routine_for_map ROUTE_42, .PinkOverPurpleOBPalette                 ;pnk
 	_use_palette_routine_for_map ROUTE_43, .PinkOverYellowOBPalette                 ;persim
 	db -1 ; terminator
 
@@ -230,18 +230,18 @@ MapSpecificOBPalettes:
 	ld hl, GrayOverYellow
 	jr .finish
 
-.PinkOverSilverOBPalette:
+.PinkOverPurpleOBPalette:
 	ld a, [wTimeOfDayPal]
 	maskbits NUM_DAYTIMES
 	ld bc, 8 palettes
-	ld hl, PinkOverSilver
+	ld hl, PinkOverPurple
 	jr .finish
 
-.GrayOverSilverOBPalette:
+.GrayOverTreeOBPalette:
 	ld a, [wTimeOfDayPal]
 	maskbits NUM_DAYTIMES
 	ld bc, 8 palettes
-	ld hl, GrayOverSilver
+	ld hl, GrayOverTree
 	jr .finish
 
 .RockOverTreeOBPalette:
