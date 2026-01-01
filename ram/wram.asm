@@ -3057,7 +3057,7 @@ wStatusFlags2::
 ; bit 4: bike shop call
 ; bit 5: can use sweet scent
 ; bit 6: reached goldenrod
-; bit 7: rockets in mahogany
+; bit 7: can use waterafll ;rockets in mahogany
 	db
 
 wMoney:: ds 3
@@ -3165,14 +3165,15 @@ wOlivineCitySceneID::                             db
 wEcruteakCitySceneID::                            db
 wBurnedTower1FSceneID::                           db
 wBurnedTowerB1FSceneID::                          db
+wMrPokemonsHouseSceneID::                         db
 wRoute30SceneID::                                 db
+wRoute29SceneID::                                 db
+wNewBarkTownSceneID::                             db
+wRadioTower4FSceneID::                            db
 ;
 wTrainerHouseB1FSceneID::                         db
-wNewBarkTownSceneID::                             db
 wElmsLabSceneID::                                 db
-wRoute29SceneID::                                 db
 wCherrygroveCitySceneID::                         db
-wMrPokemonsHouseSceneID::                         db
 wRoute32SceneID::                                 db
 wRoute35NationalParkGateSceneID::                 db
 wRoute36SceneID::                                 db
@@ -3193,7 +3194,7 @@ wBattleTowerElevatorSceneID::                     db
 wBattleTowerHallwaySceneID::                      db
 wBattleTowerOutsideSceneID::                      db
 wRoute43GateSceneID::                             db
-wSproutTower3FSceneID::                           db
+;wSproutTower3FSceneID::                           db
 wTinTower1FSceneID::                              db
 ;wRuinsOfAlphOutsideSceneID::                      db
 ;wRuinsOfAlphResearchCenterSceneID::               db
