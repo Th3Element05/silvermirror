@@ -1,10 +1,12 @@
 	object_const_def
+	const SILPHCO5F_APRICORN_BALL
 
 SilphCo5F_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
 	callback MAPCALLBACK_TILES, SilphCo5FDoorsCallback
+	callback MAPCALLBACK_OBJECTS, SilphCo5FApricornBallCallback
 
 SilphCo5FDoorsCallback:
 	checkevent EVENT_SILPH_CO_5F_DOOR_1
@@ -19,6 +21,11 @@ SilphCo5FDoorsCallback:
 	iffalse .End
 	changeblock 6, 12, $3e ; open door
 .End
+	endcallback
+
+SilphCo5FApricornBallCallback:
+	disappear SILPHCO5F_APRICORN_BALL
+;	setevent EVENT_KURTS_SON_APRICORN_BALL
 	endcallback
 
 SilphCo5F_Door1:
@@ -63,6 +70,277 @@ SilphCo5F_Door3:
 	setevent EVENT_SILPH_CO_5F_DOOR_3
 	end
 
+SilphCo5FKurtsSon:
+	faceplayer
+	opentext
+	checkevent EVENT_BEAT_GIOVANNI_SILPHCO
+	iffalse .HelpUsFirst
+; cleared silph co
+	checkevent EVENT_MET_KURTS_SON
+	iftrue .SkipIntro
+	writetext SilphCo5FKurtsSon_ThankYouText
+	promptbutton
+;	verbosegiveitem LEVEL_BALL
+;	iffalse .NoRoomForBall
+	setevent EVENT_MET_KURTS_SON
+	sjump .BringMeApricorns
+
+.SkipIntro
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1 ;making ball
+	iftrue .StillWorking
+	checkevent EVENT_GAVE_KURT_SON_RED_APRICORN
+	iftrue .GiveLevelBall
+	checkevent EVENT_GAVE_KURT_SON_BLU_APRICORN
+	iftrue .GiveLureBall
+	checkevent EVENT_GAVE_KURT_SON_YLW_APRICORN
+	iftrue .GiveMoonBall
+	checkevent EVENT_GAVE_KURT_SON_GRN_APRICORN
+	iftrue .GiveFriendBall
+	checkevent EVENT_GAVE_KURT_SON_WHT_APRICORN
+	iftrue .GiveFastBall
+	checkevent EVENT_GAVE_KURT_SON_BLK_APRICORN
+	iftrue .GiveHeavyBall
+	checkevent EVENT_GAVE_KURT_SON_PNK_APRICORN
+	iftrue .GiveLoveBall
+
+.CheckApricorns:
+	checkitem RED_APRICORN
+	iftrue .AskApricorn
+	checkitem BLU_APRICORN
+	iftrue .AskApricorn
+	checkitem YLW_APRICORN
+	iftrue .AskApricorn
+	checkitem GRN_APRICORN
+	iftrue .AskApricorn
+	checkitem WHT_APRICORN
+	iftrue .AskApricorn
+	checkitem BLK_APRICORN
+	iftrue .AskApricorn
+	checkitem PNK_APRICORN
+	iftrue .AskApricorn
+
+.BringMeApricorns
+	writetext SilphCo5F_BallsFromApricornsText
+	waitbutton
+	closetext
+	end
+
+.AskApricorn:
+	writetext KurtsHouseKurtAskYouHaveAnApricornText
+	promptbutton
+	special SelectApricornForKurt
+	ifequal FALSE, .Cancel
+	ifequal BLU_APRICORN, .Blu
+	ifequal YLW_APRICORN, .Ylw
+	ifequal GRN_APRICORN, .Grn
+	ifequal WHT_APRICORN, .Wht
+	ifequal BLK_APRICORN, .Blk
+	ifequal PNK_APRICORN, .Pnk
+; .Red
+	setevent EVENT_GAVE_KURT_SON_RED_APRICORN
+	sjump .GaveKurtSonApricorns
+
+.Blu:
+	setevent EVENT_GAVE_KURT_SON_BLU_APRICORN
+	sjump .GaveKurtSonApricorns
+
+.Ylw:
+	setevent EVENT_GAVE_KURT_SON_YLW_APRICORN
+	sjump .GaveKurtSonApricorns
+
+.Grn:
+	setevent EVENT_GAVE_KURT_SON_GRN_APRICORN
+	sjump .GaveKurtSonApricorns
+
+.Wht:
+	setevent EVENT_GAVE_KURT_SON_WHT_APRICORN
+	sjump .GaveKurtSonApricorns
+
+.Blk:
+	setevent EVENT_GAVE_KURT_SON_BLK_APRICORN
+	sjump .GaveKurtSonApricorns
+
+.Pnk:
+	setevent EVENT_GAVE_KURT_SON_PNK_APRICORN
+	sjump .GaveKurtSonApricorns
+
+.GaveKurtSonApricorns:
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	writetext SilphCo5F_StartRightAwayText
+	waitbutton
+	closetext
+	turnobject LAST_TALKED, DOWN
+	appear SILPHCO5F_APRICORN_BALL
+	end
+
+.Cancel:
+	writetext SilphCo5FKurtsSon_DeclinedText
+	waitbutton
+.NoRoomForBall:
+	closetext
+	end
+
+.GiveLevelBall:
+	writetext SilphCo5FKurtsSon_FinishedYourBallText
+	promptbutton
+	verbosegiveitemvar LEVEL_BALL, VAR_KURT_APRICORNS
+	iffalse .NoRoomForBall
+	clearevent EVENT_GAVE_KURT_SON_RED_APRICORN
+	sjump .TryCatchingPokemon
+
+.GiveLureBall:
+	writetext SilphCo5FKurtsSon_FinishedYourBallText
+	promptbutton
+	verbosegiveitemvar LURE_BALL, VAR_KURT_APRICORNS
+	iffalse .NoRoomForBall
+	clearevent EVENT_GAVE_KURT_SON_BLU_APRICORN
+	sjump .TryCatchingPokemon
+
+.GiveMoonBall:
+	writetext SilphCo5FKurtsSon_FinishedYourBallText
+	promptbutton
+	verbosegiveitemvar MOON_BALL, VAR_KURT_APRICORNS
+	iffalse .NoRoomForBall
+	clearevent EVENT_GAVE_KURT_SON_YLW_APRICORN
+	sjump .TryCatchingPokemon
+
+.GiveFriendBall:
+	writetext SilphCo5FKurtsSon_FinishedYourBallText
+	promptbutton
+	verbosegiveitemvar FRIEND_BALL, VAR_KURT_APRICORNS
+	iffalse .NoRoomForBall
+	clearevent EVENT_GAVE_KURT_SON_GRN_APRICORN
+	sjump .TryCatchingPokemon
+
+.GiveFastBall:
+	writetext SilphCo5FKurtsSon_FinishedYourBallText
+	promptbutton
+	verbosegiveitemvar FAST_BALL, VAR_KURT_APRICORNS
+	iffalse .NoRoomForBall
+	clearevent EVENT_GAVE_KURT_SON_WHT_APRICORN
+	sjump .TryCatchingPokemon
+
+.GiveHeavyBall:
+	writetext SilphCo5FKurtsSon_FinishedYourBallText
+	promptbutton
+	verbosegiveitemvar HEAVY_BALL, VAR_KURT_APRICORNS
+	iffalse .NoRoomForBall
+	clearevent EVENT_GAVE_KURT_SON_BLK_APRICORN
+	sjump .TryCatchingPokemon
+
+.GiveLoveBall:
+	writetext SilphCo5FKurtsSon_FinishedYourBallText
+	promptbutton
+	verbosegiveitemvar LOVE_BALL, VAR_KURT_APRICORNS
+	iffalse .NoRoomForBall
+	clearevent EVENT_GAVE_KURT_SON_PNK_APRICORN
+	sjump .TryCatchingPokemon
+
+.TryCatchingPokemon:
+;	clearevent EVENT_KURTS_SON_MAKING_BALL
+	writetext SilphCo5FKurtsSon_TryCatchingText
+	waitbutton
+	closetext
+	end
+
+.StillWorking:
+	writetext SilphCo5FKurtsSon_StillWorking
+	waitbutton
+	closetext
+	turnobject LAST_TALKED, DOWN
+	end
+
+.HelpUsFirst:
+	writetext SilphCo5FKurtsSon_HelpUsText
+	waitbutton
+	closetext
+	end
+
+SilphCo5FKurtsSon_HelpUsText:
+	text "I study #BALL"
+	line "technology."
+
+	para "But TEAM ROCKET"
+	cont "has locked us out"
+	cont "of the system!"
+
+	para "You're a trainer?"
+
+	para "If you can get rid"
+	line "of TEAM ROCKET, I"
+	cont "might be able to"
+	cont "help you!"
+	done
+
+SilphCo5FKurtsSon_ThankYouText:
+	text "You really drove"
+	line "out TEAM ROCKET?"
+
+	para "That's amazing!"
+
+	para "I need to thank"
+	line "you somehow."
+
+	para "I study #BALLs for"
+	line "work, but I craft"
+	cont "them traditionally"
+	cont "as a hobby."
+
+	para "Its a skill that"
+	line "my dad taught me."
+	done
+
+SilphCo5F_BallsFromApricornsText:
+	text "If you bring me"
+	line "APRICORNS, I can"
+	cont "make them into"
+	cont "#BALLs."
+	done
+
+SilphCo5F_StartRightAwayText:
+	text "Great!"
+
+	para "I'll start working"
+	line "on it right away!"
+	done
+
+SilphCo5FKurtsSon_StillWorking:
+	text "I need more time"
+	line "to finish making"
+	cont "your BALL."
+
+	para "My father is a lot"
+	line "quicker at this."
+
+	para "He lives in JOHTO,"
+	line "in AZALEA TOWN."
+	done
+
+SilphCo5FKurtsSon_DeclinedText:
+	text "Let me know if you"
+	line "want me to make"
+	cont "you any #BALLs."
+	done
+
+SilphCo5FKurtsSon_FinishedYourBallText:
+	text "I just finished"
+	cont "your BALL. Here!"
+	done
+
+SilphCo5FKurtsSon_TryCatchingText:
+	text "Try catching"
+	line "#MON with it."
+	done
+
+SilphCo5FApricornBall:
+	jumptext SilphCo5F_BallInProgressText
+SilphCo5F_BallInProgressText:
+	text "Its an APRICORN."
+
+	para "It's being turned"
+	line "into a #BALL."
+	done
+
 SilphCo5FClerk:
 	checkevent EVENT_BEAT_GIOVANNI_SILPHCO
 	iftrue .Cleared
@@ -106,7 +384,7 @@ ScientistRichBeatenText:
 
 ScientistRichAfterBattleText:
 	text "We worked on the"
-	line "ultimate # BALL"
+	line "ultimate #BALL"
 	cont "which could catch"
 	cont "anything!"
 	done
@@ -127,8 +405,8 @@ GruntM21SeenText:
 	done
 
 GruntM21BeatenText:
-	text "Cough..."
-	line "Cough..."
+	text "Cough…"
+	line "Cough…"
 	done
 
 GruntM21AfterBattleText:
@@ -261,6 +539,8 @@ SilphCo5F_MapEvents:
 	bg_event 12,  3, BGEVENT_ITEM, SilphCo5FHiddenElixer
 
 	def_object_events
+	object_event  2,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_ITEMBALL, 0, SilphCo5FApricornBall, EVENT_KURTS_SON_APRICORN_BALL
+	object_event  2,  5, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, SilphCo5FKurtsSon, -1
 	object_event  8,  3, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerScientistRich, EVENT_BEAT_GIOVANNI_SILPHCO
 	object_event 28,  4, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerRocketGruntM21, EVENT_BEAT_GIOVANNI_SILPHCO
 	object_event 18, 10, SPRITE_ROCKER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerJugglerFritz, EVENT_BEAT_GIOVANNI_SILPHCO
