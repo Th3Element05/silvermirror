@@ -1,7 +1,4 @@
 	object_const_def
-	const VIOLETNICKNAMESPEECHHOUSE_TEACHER
-	const VIOLETNICKNAMESPEECHHOUSE_LASS
-	const VIOLETNICKNAMESPEECHHOUSE_BIRD
 
 VioletNicknameSpeechHouse_MapScripts:
 	def_scene_scripts
