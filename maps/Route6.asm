@@ -77,8 +77,8 @@ CoupleTimAndSueBeatenText:
 	done
 
 CoupleTimAndSueAfterBattleText:
-	text "Whisper..."
-	line "whisper..."
+	text "Whisper…"
+	line "whisper…"
 	done
 
 TrainerBugCatcherEllis:

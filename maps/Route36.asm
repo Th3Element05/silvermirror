@@ -1,6 +1,6 @@
 	object_const_def
 	const ROUTE36_RAWST_BERRY
-	const ROUTE36_ARTHUR
+;	const ROUTE36_ARTHUR
 	const ROUTE_36_SUDOWOODO
 	const ROUTE_36_FLORIA
 
@@ -16,14 +16,14 @@ Route36FruittreesandArthurCallback:
 	appear ROUTE36_RAWST_BERRY
 	; fallthrough
 .Arthur:
-	readvar VAR_WEEKDAY
-	ifequal THURSDAY, .ArthurAppears
-	disappear ROUTE36_ARTHUR
+;	readvar VAR_WEEKDAY
+;	ifequal THURSDAY, .ArthurAppears
+;	disappear ROUTE36_ARTHUR
 	endcallback
 
-.ArthurAppears:
-	appear ROUTE36_ARTHUR
-	endcallback
+;.ArthurAppears:
+;	appear ROUTE36_ARTHUR
+;	endcallback
 
 ; fruit
 Route36_RawstBerry:
@@ -234,7 +234,7 @@ FloriaText1:
 	para "When I sprinkled"
 	line "water on that"
 	cont "weird tree, it"
-	line "jumped right up!"
+	cont "jumped right up!"
 
 	para "It just has to be"
 	line "a #MON."
@@ -242,7 +242,7 @@ FloriaText1:
 	para "I bet it would be"
 	line "shocked out of its"
 	cont "disguise if you"
-	line "soaked it!"
+	cont "soaked it!"
 
 	para "I know! I'll tell"
 	line "my sis and borrow"
@@ -570,9 +570,8 @@ Route36TrainerTips1Text:
 
 	para "However, differ-"
 	line "ences will become"
-
-	para "pronounced as the"
-	line "#MON grow."
+	cont "pronounced as the"
+	cont "#MON grow."
 	done
 
 Route36TrainerTips2:
@@ -586,9 +585,8 @@ Route36TrainerTips2Text:
 
 	para "It is convenient"
 	line "for exploring"
-
-	para "caves and other"
-	line "landmarks."
+	cont "caves and other"
+	cont "landmarks."
 	done
 
 Route36_MapEvents:
@@ -613,7 +611,7 @@ Route36_MapEvents:
 
 	def_object_events
 	object_event 21,  4, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_SCRIPT, 0, Route36_RawstBerry, EVENT_ROUTE_36_RAWST_BERRY
-	object_event 48,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ArthurScript, EVENT_ROUTE_36_ARTHUR_OF_THURSDAY
+;	object_event 48,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ArthurScript, EVENT_ROUTE_36_ARTHUR_OF_THURSDAY
 	object_event 35,  8, SPRITE_SUDOWOODO, SPRITEMOVEDATA_SUDOWOODO, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SudowoodoScript, EVENT_ROUTE_36_SUDOWOODO
 	object_event 33, 11, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route36FloriaScript, EVENT_FLORIA_AT_SUDOWOODO
 	object_event 39,  9, SPRITE_BOY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route36BlockingSchoolboyLeftScript, EVENT_ROUTE_36_OPEN

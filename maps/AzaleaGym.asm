@@ -269,7 +269,7 @@ AzaleaGymGuideScript:
 	end
 
 AzaleaGymGuideText:
-	text "Yo, champ!"
+	text "Yo, CHAMP!"
 
 	para "BUGSY's young, but"
 	line "his knowledge of"

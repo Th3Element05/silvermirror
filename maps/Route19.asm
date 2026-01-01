@@ -286,7 +286,7 @@ SwimmerMMatthewBeatenText:
 
 SwimmerMMatthewAfterBattleText:
 	text "I got a cramp!"
-	line "Glub, glub..."
+	line "Glub, glub…"
 	done
 
 TrainerSwimmerFElaine:
@@ -360,7 +360,7 @@ SwimmerFKayleeSeenText:
 	done
 
 SwimmerFKayleeBeatenText:
-	text "I'm exhausted..."
+	text "I'm exhausted…"
 	done
 
 SwimmerFKayleeAfterBattleText:

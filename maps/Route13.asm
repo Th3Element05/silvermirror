@@ -115,7 +115,7 @@ BirdKeeperRoyBeatenText:
 BirdKeeperRoyAfterBattleText:
 	text "I wish I could"
 	line "fly like PIDGEY"
-	cont "and PIDGEOTTO..."
+	cont "and PIDGEOTTO…"
 	done
 
 TrainerBikerDwayne:

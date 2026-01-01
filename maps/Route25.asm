@@ -38,7 +38,7 @@ Route25CaptainQuestionText:
 	line "here to enjoy the"
 	cont "water, too?"
 
-	para "..."
+	para "<……>"
 	done
 
 Route25CaptainMysticWaterText:
@@ -152,7 +152,7 @@ CamperElliotSeenText:
 
 CamperElliotBeatenText:
 	text "Aww,"
-	line "darn..."
+	line "darn…"
 	done
 
 CamperElliotAfterBattleText:

@@ -179,7 +179,7 @@ _PokeFlute:
 	text_end
 
 .PlayedTheFlute:
-	; played the # FLUTE.@ @
+	; played the #FLUTE.@ @
 	text_far Text_PlayedPokeFlute
 	text_asm
 	ld a, [wBattleMode]

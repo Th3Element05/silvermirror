@@ -95,7 +95,7 @@ PokemonMansionB1FBlaineText:
 	line "doing in a place"
 	cont "like this?"
 
-	para "..."
+	para "<……>"
 
 	para "I see, you are a"
 	line "#MON trianer!"
@@ -114,7 +114,7 @@ PokemonMansionB1FBlaineText:
 	para "But so much has"
 	line "been looted, there"
 	cont "isn't much left to"
-	cont "find..."
+	cont "find…"
 
 	para "I imagine you want"
 	line "to challenge the"
@@ -261,7 +261,7 @@ PokemonMansionB1FDiaryText:
 
 	para "We have failed to"
 	line "curb its vicious"
-	cont "tendencies..."
+	cont "tendencies…"
 	done
 
 PokemonMansion3FBlaineGoesAroundMovement:

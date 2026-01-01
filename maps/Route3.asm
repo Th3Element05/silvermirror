@@ -228,9 +228,9 @@ Route3CooltrainerText:
 Route3SuperNerdScript:
 	jumptextfaceplayer Route3SuperNerdText
 Route3SuperNerdText:
-	text "Whew... I better"
-	line "take a rest..."
-	cont "Groan..."
+	text "Whew… I better"
+	line "take a rest…"
+	cont "Groan…"
 
 	para "That tunnel from"
 	line "CERULEAN takes a"

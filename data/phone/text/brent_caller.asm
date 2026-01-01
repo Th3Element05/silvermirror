@@ -34,7 +34,7 @@ BrentLostAMonText:
 	line "sighting. But I"
 
 	para "didn't have any"
-	line "# BALLS…"
+	line "#BALLs…"
 
 	para "Would BILL laugh"
 	line "at my mistakes?"

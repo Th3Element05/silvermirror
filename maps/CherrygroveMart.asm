@@ -36,14 +36,14 @@ CherrygroveMartMedScript:
 ;
 ;CherrygroveMartCooltrainerMText:
 ;	text "They're fresh out"
-;	line "of # BALLS!"
+;	line "of #BALLs!"
 ;
 ;	para "When will they get"
 ;	line "more of them?"
 ;	done
 ;
 ;CherrygroveMartCooltrainerMText_PokeBallsInStock:
-;	text "# BALLS are in"
+;	text "#BALLs are in"
 ;	line "stock! Now I can"
 ;	cont "catch #MON!"
 ;	done
@@ -53,9 +53,8 @@ CherrygroveMartYoungsterScript:
 CherrygroveMartYoungsterText:
 	text "When I was walking"
 	line "in the grass, a"
-
-	para "bug #MON poi-"
-	line "soned my #MON!"
+	cont "bug #MON poi-"
+	cont "soned my #MON!"
 
 	para "I just kept going,"
 	line "but then my"

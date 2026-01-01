@@ -106,7 +106,7 @@ SilphCo11FGiovanniIntroText:
 
 	para "Keep your nose"
 	line "out of grown-up"
-	cont "matters..."
+	cont "matters…"
 
 	para "Or, experience a"
 	line "world of pain!"
@@ -247,7 +247,7 @@ GruntM28SeenText:
 	done
 
 GruntM28BeatenText:
-	text "Don't..."
+	text "Don't…"
 	line "Please!"
 	done
 

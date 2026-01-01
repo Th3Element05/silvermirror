@@ -318,18 +318,18 @@ LanceBattleAfterText_1:
 
 	para "You are now the"
 	line "#MON LEAGUE"
-	cont "champion!"
+	cont "CHAMPION!"
 	done
 
 LanceBattleAfterText_2:
-	text "...Or, you would"
+	text "…Or, you would"
 	line "have been, but"
 	cont "you have one more"
 	cont "challenge ahead."
 
 	para "You have to face"
 	line "another trainer!"
-	cont "His name is..."
+	cont "His name is…"
 	done
 
 LanceRivalIntroText:
@@ -340,7 +340,7 @@ LanceRivalIntroText:
 
 	para "He is the new"
 	line "#MON LEAGUE"
-	cont "champion!"
+	cont "CHAMPION!"
 	done
 
 LanceDefeatText:
@@ -382,7 +382,7 @@ ChampionBattleIntroText:
 	para "And now!"
 
 	para "I'm the #MON"
-	line "LEAGUE champion!"
+	line "LEAGUE CHAMPION!"
 
 	para "<PLAYER>! Do you"
 	line "know what that"
@@ -402,7 +402,7 @@ ChampionBattleWinText:
 
 	para "After all that"
 	line "work to become"
-	cont "LEAGUE champ?"
+	cont "LEAGUE CHAMP?"
 
 	para "My reign is over"
 	line "already?"
@@ -431,11 +431,11 @@ ChampionBattleAfterText:
 
 	para "I never made any"
 	line "mistakes raising"
-	cont "my #MON..."
+	cont "my #MON…"
 
 	para "Darn it! You're"
 	line "the new #MON"
-	cont "LEAGUE champion!"
+	cont "LEAGUE CHAMPION!"
 
 	para "Although I don't"
 	line "like to admit it."
@@ -450,7 +450,7 @@ LancesRoomOakCongratulationsText:
 	line "Congratulations!"
 	cont "You're the new"
 	cont "#MON LEAGUE"
-	cont "champion!"
+	cont "CHAMPION!"
 
 	para "You've grown up so"
 	line "much since you"
@@ -483,7 +483,7 @@ LancesRoomOakDisappointedText:
 
 	para "Without them, you"
 	line "will never become"
-	cont "a champ again!"
+	cont "a CHAMP again!"
 	done
 
 LancesRoomOakComeWithMeText:

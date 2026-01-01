@@ -263,10 +263,10 @@ CeruleanCitySlowbroTrainerScript:
 	turnobject CERULEANCITY_SLOWBRO_TRAINER, LEFT
 	opentext
 	random 3
-	ifequal 0, .WaterGun
+;	ifequal 0, .WaterGun ;just fallthrough
 	ifequal 1, .Withdraw
 	ifequal 2, .Psychic
-.WaterGun
+;.WaterGun
 	writetext CeruleanCitySlowbroTrainerWaterGunText
 	promptbutton
 	closetext
@@ -284,11 +284,11 @@ CeruleanCitySlowbroTrainerScript:
 CeruleanCitySlowbroDisobeysScript:
 	opentext
 	random 4
-	ifequal 0, .Snooze
+;	ifequal 0, .Snooze ;just fallthrough
 	ifequal 1, .Loaf
 	ifequal 2, .Turn
 	ifequal 3, .Ignore
-.Snooze
+;.Snooze
 	writetext CeruleanCitySlowbroSnoozeText
 	waitbutton
 	closetext
@@ -333,22 +333,22 @@ CeruleanCitySlowbroTrainerPsychicText:
 
 CeruleanCitySlowbroSnoozeText:
 	text "SLOWBRO took a"
-	line "snooze..."
+	line "snooze…"
 	done
 
 CeruleanCitySlowbroLoafText:
 	text "SLOWBRO is"
-	line "loafing around..."
+	line "loafing around…"
 	done
 
 CeruleanCitySlowbroTurnText:
 	text "SLOWBRO turned"
-	line "away..."
+	line "away…"
 	done
 
 CeruleanCitySlowbroIgnoreText:
 	text "SLOWBRO"
-	line "ignored orders..."
+	line "ignored orders…"
 	done
 
 CeruleanCityObedienceSpeechText:
@@ -370,7 +370,7 @@ CeruleanCitySuperNerd1Text:
 	cont "SLOWBRO."
 	
 	para "Its blocking the"
-	line "path..."
+	line "path…"
 
 	para "There might be a"
 	line "way around."
@@ -414,7 +414,7 @@ CeruleanCaveCooltrainerMText:
 	cont "live in there!"
 
 	para "The #MON LEAGUE"
-	line "champion is the"
+	line "CHAMPION is the"
 	cont "only person who"
 	cont "is allowed in!"
 	done

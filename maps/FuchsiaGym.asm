@@ -324,7 +324,7 @@ FuchsiaGymGuideScript:
 	jumptextfaceplayer FuchsiaGymGuideWinText
 
 FuchsiaGymGuideText:
-	text "Yo! Champ in"
+	text "Yo! CHAMP in the"
 	line "making!"
 
 	para "FUCHSIA GYM is"

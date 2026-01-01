@@ -155,7 +155,7 @@ PokemonFanClubChairmanIntroText:
 	line "when it comes to"
 	cont "#MON!"
 
-	para "So..."
+	para "So…"
 
 	para "Did you come"
 	line "visit to hear"

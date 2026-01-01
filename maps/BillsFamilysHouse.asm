@@ -89,11 +89,11 @@ BillsFamilysHouseBill_GiveGSBallText:
 
 BillsFamilysHouseBill_ExplainGSBallText:
 	text "BILL: It resembles"
-	line "a # BALL, but"
+	line "a #BALL, but"
 	cont "it isn't one."
 
 	para "I'm not an expert"
-	line "on # BALLS."
+	line "on #BALLs."
 
 	para "But maybe you"
 	line "will meet someone"

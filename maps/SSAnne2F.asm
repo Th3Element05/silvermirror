@@ -184,9 +184,9 @@ GotCutPagerText:
 	done
 
 SSAnne2FCaptainIntroText:
-	text "CAPTAIN: Ooargh..."
-	line "I feel hideous..."
-	cont "Urrp! Seasick..."
+	text "CAPTAIN: Ooargh…"
+	line "I feel hideous…"
+	cont "Urrp! Seasick…"
 	done
 
 SSAnne2FRubCaptainsBackText:
@@ -194,8 +194,8 @@ SSAnne2FRubCaptainsBackText:
 	line "the CAPTAIN's"
 	cont "back!"
 
-	para "Rub-rub..."
-	line "Rub-rub..."
+	para "Rub-rub…"
+	line "Rub-rub…"
 	done
 
 SSAnne2FCaptainThanksGivePagerText:
@@ -207,7 +207,7 @@ SSAnne2FCaptainThanksGivePagerText:
 	line "my CUT technique?"
 
 	para "I could show you"
-	line "if I wasn't ill..."
+	line "if I wasn't ill…"
 
 	para "I know! You can"
 	line "have this!"
@@ -310,7 +310,7 @@ SSAnne2FCaptainsBook:
 	jumptext SSAnne2FCaptainsBookText
 SSAnne2FCaptainsBookText:
 	text "How to Conquer"
-	line "Seasickness..."
+	line "Seasickness…"
 
 	para "The CAPTAIN's"
 	line "reading this!"

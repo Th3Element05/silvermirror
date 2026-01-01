@@ -59,7 +59,7 @@ RocketHideoutGiovanniAfterBattleText:
 	line "aside this time!"
 
 	para "I hope we meet"
-	line "again..."
+	line "again…"
 	done
 	
 TrainerRocketGruntF3:

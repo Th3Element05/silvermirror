@@ -76,7 +76,7 @@ TrainerHikerNoland:
 
 HikerNolandSeenText:
 	text "Hmm. Maybe I'm"
-	line "lost in here..."
+	line "lost in here…"
 	done
 
 HikerNolandBeatenText:

@@ -76,11 +76,12 @@ RuinsOfAlphOutside_DoneForText:
 	para "I thought you were"
 	line "done for when you"
 	cont "fell through the"
-	cont "floor."
+	cont "floor!"
 
 	para "The earth shook"
 	line "when that hole"
 	cont "opened."
+	done
 
 RuinsOfAlphOutside_TellMeText:
 	text "The tremor seems"

@@ -47,11 +47,11 @@ SSAnneKitchenCook4Script:
 
 SSAnneKitchenCook4Text:
 	text "Hum-de-hum-de-"
-	line "ho..."
+	line "ho…"
 
 	para "I peel spuds"
 	line "every day!"
-	cont "Hum-hum..."
+	cont "Hum-hum…"
 	done
 
 SSAnneKitchenCook5Script:
@@ -81,11 +81,11 @@ SSAnneKitchenCook6Script:
 	end
 
 SSAnneKitchenCook6Text:
-	text "Snivel...Sniff..."
+	text "Snivel… Sniff…"
 
 	para "I only get to"
-	line "peel onions..."
-	cont "Snivel..."
+	line "peel onions…"
+	cont "Snivel…"
 	done
 
 SSAnneKitchenCook7Script:

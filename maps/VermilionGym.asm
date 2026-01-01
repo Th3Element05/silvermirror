@@ -290,7 +290,7 @@ VermilionGymGuideScript:
 	jumptextfaceplayer VermilionGymGuideWinText
 
 VermilionGymGuideText:
-	text "Yo! Champ in"
+	text "Yo! CHAMP in the"
 	line "making!"
 
 	para "LT.SURGE has a"

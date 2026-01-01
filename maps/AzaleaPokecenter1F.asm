@@ -43,7 +43,7 @@ AzaleaPokecenter1FPokefanFText:
 	para "Then you can catch"
 	line "#MON with it!"
 
-	para "Before # BALLS"
+	para "Before #BALLs"
 	line "were invented,"
 	cont "everyone used"
 	cont "APRICORNS."

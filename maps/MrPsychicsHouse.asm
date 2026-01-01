@@ -27,10 +27,10 @@ MrPsychicsHouseBookshelf:
 	jumpstd DifficultBookshelfScript
 
 MrPsychicText1:
-	text "...Wait! Don't"
+	text "…Wait! Don't"
 	line "say a word!"
 
-	para "…"
+	para "<……>"
 
 	para "…I got it!"
 

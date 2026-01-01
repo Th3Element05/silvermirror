@@ -36,7 +36,7 @@ SilphCo8FClerk:
 
 SilphCo8FClerkText:
 	text "I wonder if SILPH"
-	line "is finished..."
+	line "is finished…"
 	done
 
 SilphCo8FClerkSavedText:

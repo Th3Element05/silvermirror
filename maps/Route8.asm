@@ -231,8 +231,8 @@ SuperNerdShawnBeatenText:
 
 SuperNerdShawnAfterBattleText:
 	text "Go with GRIMER"
-	line "first...and..."
-	cont "...and...then..."
+	line "first… and…"
+	cont "…and… then…"
 	done
 
 TrainerPokefanMTrevor:

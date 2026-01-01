@@ -21,11 +21,11 @@ AzaleaMartMedScript:
 AzaleaMartCooltrainerMScript:
 	jumptextfaceplayer AzaleaMartCooltrainerMText
 AzaleaMartCooltrainerMText:
-	text "Normal # BALLS"
+	text "Normal #BALLs"
 	line "are alright, but"
 	cont "I wish KURT would"
 	cont "make me some of"
-	cont "his custom BALLS."
+	cont "his custom BALLs."
 	done
 
 AzaleaMartBugCatcherScript:
@@ -34,7 +34,7 @@ AzaleaMartBugCatcherText:
 	text "A GREAT BALL is"
 	line "better for catch-"
 	cont "ing #MON than"
-	cont "a # BALL."
+	cont "a #BALL."
 
 	para "But KURT's might"
 	line "be better some-"

@@ -186,11 +186,11 @@ CeladonGameCornerGymGuideScript:
 	sjump CeladonGameCornerEndLeftScript
 
 CeladonGameCornerGymGuideText:
-	text "Hey!"
+	text "Hey! CHAMP in the"
+	line "making!"
 
 	para "You have better"
-	line "things to do,"
-	cont "champ in making!"
+	line "things to do!"
 
 	para "CELADON GYM's"
 	line "LEADER is ERIKA!"

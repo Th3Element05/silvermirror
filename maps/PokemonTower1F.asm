@@ -20,13 +20,13 @@ PokemonTowerPokefanMText:
 	line "for my CLEFAIRY."
 
 	para "Sniff! I can't"
-	line "stop crying..."
+	line "stop crying…"
 	done
 
 PokemonTowerGirlScript:
 	jumptextfaceplayer PokemonTowerGirlText
 PokemonTowerGirlText:
-	text "My GROWLITHE..."
+	text "My GROWLITHE…"
 	line "Why did you die?"
 	done
 

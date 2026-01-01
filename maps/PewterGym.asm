@@ -196,7 +196,7 @@ PewterGymGuideText:
 	text "Hiya! I can tell"
 	line "you have what it"
 	cont "takes to become a"
-	cont "#MON champ!"
+	cont "#MON CHAMP!"
 
 	para "I'm no trainer,"
 	line "but I can tell"
@@ -219,7 +219,7 @@ PewterGymGuideText:
 PewterGymGuideWinText:
 	text "Just as I thought!"
 	line "You're #MON"
-	cont "champ material!"
+	cont "CHAMP material!"
 	done
 
 PewterGymStatue:

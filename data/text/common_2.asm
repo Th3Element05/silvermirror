@@ -79,9 +79,8 @@ _NameRaterEggText::
 _NameRaterSameNameText::
 	text "It might look the"
 	line "same as before,"
-
-	para "but this new name"
-	line "is much better!"
+	cont "but this new name"
+	cont "is much better!"
 
 	para "Well done!"
 	done
@@ -705,13 +704,21 @@ Text_ThisGameHasTwoGameModes::
 	prompt
 
 Text_NormalModeDesc::
-	text "No wild GEN2" ; "#MON levels"
-	line "#MON in KANTO." ; "remain unchanged."
+;	text "No wild GEN2" ; "#MON levels"
+;	line "#MON in KANTO." ; "remain unchanged."
+;	done
+;
+	text "No GEN2 #MON"
+	line "appear in KANTO."
 	done
 
 Text_ChallengeModeDesc::
-	text "Some wild GEN2" ; "Higher #MON"
-	line "#MON in KANTO." ; "levels."
+;	text "Some wild GEN2" ; "Higher #MON"
+;	line "#MON in KANTO." ; "levels."
+;	done
+;
+	text "Some GEN2 #MON"
+	line "appear in KANTO."
 	done
 
 Text_ThisCannotBeChanged::
@@ -725,7 +732,7 @@ Text_BattleEffectActivate::
 	text_ram wStringBuffer2
 	text_end
 
-	text_end ; unreferenced
+;	text_end ; unreferenced
 
 _BattleStatWentWayUpText::
 	text_pause
@@ -959,8 +966,6 @@ _AnimationTypeText:: ; unreferenced
 	line "Animation type @"
 	text_ram wStringBuffer2
 	text_end
-
-	text_end ; unreferenced
 
 _MonNumberText:: ; unreferenced
 	text "#MON number?"
@@ -1268,7 +1273,7 @@ _OakRating01::
 _OakRating02::
 	text "Good. I see you"
 	line "understand how to"
-	cont "use # BALLS."
+	cont "use #BALLs."
 	done
 
 _OakRating03::
@@ -1298,17 +1303,15 @@ _OakRating05::
 _OakRating06::
 	text "To evolve, some"
 	line "#MON grow,"
-
-	para "others use the"
-	line "effects of STONES."
+	cont "others use the"
+	cont "effects of STONES."
 	done
 
 _OakRating07::
 	text "Have you gotten a"
 	line "fishing ROD? You"
-
-	para "can catch #MON"
-	line "by fishing."
+	cont "can catch #MON"
+	cont "by fishing."
 	done
 
 _OakRating08::
@@ -1320,9 +1323,8 @@ _OakRating08::
 _OakRating09::
 	text "Some #MON only"
 	line "appear during"
-
-	para "certain times of"
-	line "the day."
+	cont "certain times of"
+	cont "the day."
 	done
 
 _OakRating10::
@@ -1332,34 +1334,34 @@ _OakRating10::
 	done
 
 _OakRating11::
+_OakRating12::
 	text "I'm impressed."
 	line "You're evolving"
-
-	para "#MON, not just"
-	line "catching them."
+	cont "#MON, not just"
+	cont "catching them."
 	done
 
-_OakRating12::
-	text "Have you met KURT?"
-	line "His custom BALLS"
-	cont "should help."
-	done
+;_OakRating12::
+;	text "Have you met KURT?"
+;	line "His custom BALLs"
+;	cont "should help."
+;	done
 
 _OakRating13::
+_OakRating14::
 	text "Wow. You've found"
 	line "more #MON than"
-
-	para "the last #DEX"
-	line "research project."
+	cont "the last #DEX"
+	cont "research project."
 	done
 
-_OakRating14::
-	text "Are you trading"
-	line "your #MON?"
-
-	para "It's tough to do"
-	line "this alone!"
-	done
+;_OakRating14::
+;	text "Are you trading"
+;	line "your #MON?"
+;
+;	para "It's tough to do"
+;	line "this alone!"
+;	done
 
 _OakRating15::
 	text "Wow! You've hit"
@@ -1378,25 +1380,23 @@ _OakRating16::
 _OakRating17::
 	text "Magnificent! You"
 	line "could become a"
-
-	para "#MON professor"
-	line "right now!"
+	cont "#MON professor"
+	cont "right now!"
 	done
 
 _OakRating18::
 	text "Your #DEX is"
 	line "amazing! You're"
-
-	para "ready to turn"
-	line "professional!"
+	cont "ready to turn"
+	cont "professional!"
 	done
 
 _OakRating19::
 	text "Whoa! A perfect"
 	line "#DEX! I've"
+	cont "dreamt about this!"
 
-	para "dreamt about this!"
-	line "Congratulations!"
+	para "Congratulations!"
 	done
 
 _OakPCText4::
@@ -1407,22 +1407,22 @@ _OakPCText4::
 _TrainerRankingExplanationText:: ; unreferenced
 	text "Triple-theme"
 	line "trainer ranking!"
-
-	para "The SAVE file you"
-	line "just sent might"
-	cont "make the rankings!"
-
-	para ""
+;
+;	para "The SAVE file you"
+;	line "just sent might"
+;	cont "make the rankings!"
+;
+;	para ""
 	done
 
 _TrainerRankingNoDataText:: ; unreferenced
 	text "There is no"
 	line "ranking data."
-
-	para "Link to obtain"
-	line "ranking data."
-
-	para ""
+;
+;	para "Link to obtain"
+;	line "ranking data."
+;
+;	para ""
 	done
 
 _MemoryGameYeahText::
@@ -1586,9 +1586,8 @@ _PokemonNotEnoughHPText::
 _MayRegisterItemText::
 	text "An item in your"
 	line "PACK may be"
-
-	para "registered for use"
-	line "on SELECT Button."
+	cont "registered for use"
+	cont "on SELECT Button."
 	done
 
 _OakText1::
@@ -1617,8 +1616,6 @@ _OakText3::
 	text_promptbutton
 	text_end
 
-	text_end ; unreferenced
-
 _OakText4::
 	text "For some people," ;silvermirror -"People and #MON"
 	line "#MON are pets" ;silvermirror -"live together by"
@@ -1634,7 +1631,7 @@ _OakText4::
 	prompt
 
 _OakText5::
-	text "Myself..." ;silvermirror -"But we don't know"
+	text "Myself…" ;silvermirror -"But we don't know"
 ;	line "everything about" ;silvermirror -
 ;	cont "#MON yet." ;silvermirror -
 

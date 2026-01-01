@@ -197,8 +197,8 @@ SwimmerMPatonSeenText:
 	done
 
 SwimmerMPatonBeatenText:
-	text "Pant..."
-	line "pant...pant..."
+	text "Pant…"
+	line "pant… pant…"
 	done
 
 SwimmerMPatonAfterBattleText:

@@ -52,7 +52,7 @@ MediumEthelBeatenText:
 
 MediumEthelAfterBattleText:
 	text "I must have been"
-	line "dreaming..."
+	line "dreaming…"
 	done
 
 TrainerMediumRebecca:
@@ -66,7 +66,7 @@ TrainerMediumRebecca:
 	end
 
 MediumRebeccaSeenText:
-	text "Huhuhu..."
+	text "Huhuhu…"
 	line "Beat me not!"
 	done
 
@@ -78,7 +78,7 @@ MediumRebeccaBeatenText:
 MediumRebeccaAfterBattleText:
 	text "May the departed"
 	line "souls of #MON"
-	cont "rest in peace..."
+	cont "rest in peace…"
 	done
 
 PokemonTower4FAwakening:

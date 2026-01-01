@@ -40,7 +40,7 @@ RalphLostAMonText:
 	line "about it until he"
 
 	para "shared his #"
-	line "BALLS with me."
+	line "BALLs with me."
 
 	para "Hahah, that sure"
 	line "made my day!"

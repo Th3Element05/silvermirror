@@ -82,14 +82,14 @@ Route12RadioWakesSnorlax:
 ;	text "SNORLAX is sound"
 ;	line "asleep."
 ;	
-;	para "Play the"
-;	line "# FLUTE?"
+;	para "Will you play the"
+;	line "#FLUTE?"
 ;	done
 ;
 ;Route12_PlayPokeFluteText:
 ;	text "<PLAYER> played"
-;	line "the # FLUTE"
-;	cont "for SNORLAX!"
+;	line "the #FLUTE for"
+;	cont "SNORLAX!"
 ;	done
 ;
 ;Route12_SnorlaxWokeUpText:
@@ -206,8 +206,7 @@ FisherTullySeenText:
 	done
 
 FisherTullyBeatenText:
-	text "It's"
-	line "not easy..."
+	text "It's not easy…"
 	done
 
 FisherTullyAfterBattleText:

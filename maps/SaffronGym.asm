@@ -372,7 +372,7 @@ SaffronGymGuideScript:
 	jumptextfaceplayer SaffronGymGuideWinText
 
 SaffronGymGuideText:
-	text "Yo! Champ in"
+	text "Yo! CHAMP in the"
 	line "making!"
 
 	para "SABRINA's #MON"

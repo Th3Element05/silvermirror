@@ -116,9 +116,9 @@ Route11_PlayPokeFluteAskText:
 ;_PlayPokeFluteAskText:: ;export for routes 12 and 16
 	text "SNORLAX is sound"
 	line "asleep."
-	
-	para "Play the"
-	line "# FLUTE?"
+
+	para "Will you play the"
+	line "#FLUTE?"
 	done
 
 Route11_LetSnorlaxSleepText:
@@ -139,8 +139,8 @@ Route11_RadioNearSnorlaxText:
 Route11_PlayPokeFluteText:
 ;_PlayPokeFluteText:: ;export for routes 12 and 16
 	text "<PLAYER> played"
-	line "the # FLUTE"
-	cont "for SNORLAX!"
+	line "the #FLUTE for"
+	cont "SNORLAX!"
 	done
 
 Route11_SnorlaxWokeUpText:

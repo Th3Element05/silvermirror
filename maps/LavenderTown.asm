@@ -59,7 +59,7 @@ LavenderTownGirlGhostQuestionText:
 
 LavenderTownGirlGhostYesText:
 	text "Really? So there"
-	line "are believers..."
+	line "are believers…"
 	done
 
 LavenderTownGirlGhostNoText:

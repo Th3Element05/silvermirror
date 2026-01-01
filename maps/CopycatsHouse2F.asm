@@ -141,7 +141,7 @@ CopycatText_QuitMimicking:
 
 	para "My other hobby"
 	line "is collecting"
-	cont "# DOLLs!"
+	cont "#DOLLs!"
 
 	para "I can't get"
 	line "enough of them!"
@@ -149,7 +149,7 @@ CopycatText_QuitMimicking:
 
 CopycatText_IsThatAPokedoll:
 	text "Oh wow!"
-	line "A # DOLL?"
+	line "A #DOLL?"
 
 	para "Is it for me?"
 	done

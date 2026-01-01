@@ -24,9 +24,8 @@ VioletKylesHousePokefanMText:
 	cont "quickly."
 
 	para "But if you don't"
-	line "have the right GYM"
-
-	para "BADGE, they may"
+	line "have enough GYM"
+	cont "BADGES, they may"
 	line "disobey you."
 	done
 

@@ -402,7 +402,7 @@ TrainerBirdKeeperNate:
 
 BirdKeeperNateSeenText:
 	text "What kinds of"
-	line "BALLS do you use?"
+	line "BALLs do you use?"
 	done
 
 BirdKeeperNateBeatenText:

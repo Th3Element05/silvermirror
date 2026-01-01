@@ -117,7 +117,7 @@ GentlemanPrestonSeenText:
 
 GentlemanPrestonBeatenText:
 	text "My, my"
-	line "friends..."
+	line "friends…"
 	done
 
 GentlemanPrestonAfterBattleText:
