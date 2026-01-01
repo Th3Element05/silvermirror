@@ -17,7 +17,7 @@ BlackthornGym1FBouldersCallback:
 .skip2
 	checkevent EVENT_BOULDER_IN_BLACKTHORN_GYM_3
 	iffalse .skip3
-	changeblock 8, 6, $3b4 ; fallen boulder 3
+	changeblock 8, 6, $34 ; fallen boulder 3
 .skip3
 	endcallback
 
