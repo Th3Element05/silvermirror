@@ -40,7 +40,7 @@ ENDM
 	map_const PLAYERS_HOUSE_1F,                             5,  4 ;  2
 	map_const PLAYERS_HOUSE_2F,                             4,  3 ;  3
 	map_const OAKS_LAB,                                     5,  6 ;  4
-	map_const BLUES_HOUSE,                                  4,  4 ;  5
+	map_const BLUES_HOUSE,                                  5,  4 ;  5
 	map_const BLUES_HOUSE_2F,                               4,  3 ;  6
 	map_const ROUTE_1,                                     10, 18 ;  7
 	endgroup
@@ -224,7 +224,7 @@ ENDM
 	map_const SAFFRON_GYM,                                 10,  9 ;  4
 	map_const FIGHTING_DOJO,                                5,  6 ;  5
 	map_const MR_PSYCHICS_HOUSE,                            4,  4 ;  6
-	map_const COPYCATS_HOUSE_1F,                            4,  4 ;  7
+	map_const COPYCATS_HOUSE_1F,                            5,  4 ;  7
 	map_const COPYCATS_HOUSE_2F,                            4,  3 ;  8
 	map_const SAFFRON_PIDGEY_HOUSE,                         4,  4 ;  9
 	map_const SAFFRON_MAGNET_TRAIN_STATION,                10,  9 ; 10
@@ -265,7 +265,7 @@ ENDM
 	map_const ROUTE_29,                                    30,  9 ;  5
 	map_const ROUTE_29_ROUTE_46_GATE,                       4,  4 ;  6
 	map_const ROUTE_27_WEST,                               18,  9 ;  7
-	map_const REDS_HOUSE_1F,                                4,  4 ;  8
+	map_const REDS_HOUSE_1F,                                5,  4 ;  8
 	map_const REDS_HOUSE_2F,                                4,  4 ;  9
 	endgroup
 
@@ -481,9 +481,9 @@ ENDM
 	map_const CERULEAN_CAVE_2F,                            15,  9 ; 43
 	map_const CERULEAN_CAVE_B1F,                           17, 11 ; 44
 ; johto
-	map_const SPROUT_TOWER_1F,                             10,  8 ; 45
-	map_const SPROUT_TOWER_2F,                             10,  8 ; 46
-	map_const SPROUT_TOWER_3F,                             10,  8 ; 47
+	map_const SPROUT_TOWER_1F,                              8,  8 ; 45
+	map_const SPROUT_TOWER_2F,                              8,  8 ; 46
+	map_const SPROUT_TOWER_3F,                              8,  8 ; 47
 	map_const TIN_TOWER_1F,                                10,  9 ; 48
 	map_const TIN_TOWER_2F,                                10,  9 ; 49
 	map_const TIN_TOWER_3F,                                10,  9 ; 50

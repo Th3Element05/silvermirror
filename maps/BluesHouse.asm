@@ -15,7 +15,7 @@ BluesHouseNeighborText:
 	line "PALLET TOWN to"
 	cont "visit your mom?"
 
-	para "..."
+	para "<……>"
 
 	para "I wish <RIVAL>"
 	line "would come visit"
@@ -125,7 +125,7 @@ DaisyOutLateText:
 	line "#DEX coming"
 	cont "along?"
 
-	para "..."
+	para "<……>"
 
 	para "That many!"
 
@@ -196,22 +196,56 @@ DaisyRefusedText:
 
 DaisyCantGroomEggText:
 	text "DAISY: Oh, sorry."
-	line "I can't groom"
-	cont "an EGG."
+	line "I can't groom an"
+	cont "EGG."
 	done
+
+BluesHouse1FStoveScript:
+	jumptext BluesHouse1FStoveText
+BluesHouse1FStoveText:
+	text "It's the stove."
+	done
+
+BluesHouse1FSinkScript:
+	jumptext BluesHouse1FSinkText
+BluesHouse1FSinkText:
+	text "The sink is nice"
+	line "and clean."
+	done
+
+BluesHouse1FFridgeScript:
+	jumptext BluesHouse1FFridgeText
+BluesHouse1FFridgeText:
+	text "Let's see what's"
+	line "in the fridge…"
+
+	para "SODA POP!"
+	done
+
+BluesHouse1FTV:
+	jumpstd TVScript
+
+BluesHouse1FBookshelf:
+	jumpstd MagazineBookshelfScript
 
 BluesHouse_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, PALLET_TOWN, 2
-	warp_event  3,  7, PALLET_TOWN, 2
-	warp_event  7,  0, BLUES_HOUSE_2F, 1
+	warp_event  4,  7, PALLET_TOWN, 2
+	warp_event  5,  7, PALLET_TOWN, 2
+	warp_event  9,  0, BLUES_HOUSE_2F, 1
 
 	def_coord_events
 
 	def_bg_events
+	bg_event  0,  1, BGEVENT_READ, BluesHouse1FStoveScript
+	bg_event  1,  1, BGEVENT_READ, BluesHouse1FSinkScript
+	bg_event  2,  1, BGEVENT_READ, BluesHouse1FFridgeScript
+	bg_event  4,  1, BGEVENT_READ, BluesHouse1FTV
+	bg_event  6,  1, BGEVENT_READ, BluesHouse1FBookshelf
+	bg_event  7,  1, BGEVENT_READ, BluesHouse1FBookshelf
 
 	def_object_events
-	object_event  2,  3, SPRITE_DAISY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DaisyScript, -1
-	object_event  5,  4, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BluesHouseNeighbor, EVENT_BLUES_HOUSE_NEIGHBOR
+	object_event  4,  4, SPRITE_DAISY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DaisyScript, -1
+	object_event  7,  3, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BluesHouseNeighbor, EVENT_BLUES_HOUSE_NEIGHBOR
