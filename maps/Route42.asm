@@ -86,7 +86,7 @@ Route42ChuckScript:
 	writetext Route42ChuckTellRocksmashText
 	promptbutton
 	scall Route42PrimeapeScript
-;	showemote EMOTE_SHOCK, PLAYER, 15 ;can't do emote due to PinkOverSilver palette
+	showemote EMOTE_SHOCK, PLAYER, 15
 	earthquake 50
 	playsound SFX_STRENGTH
 	waitsfx
@@ -211,40 +211,40 @@ HikerAnthonyAfterBattleText:
 	cont "sky!"
 	done
 
-TrainerPokemaniacZach:
-	trainer POKEMANIAC, ZACH, EVENT_BEAT_POKEMANIAC_ZACH, PokemaniacZachSeenText, PokemaniacZachBeatenText, 0, .Script
-.Script:
-	endifjustbattled
-	opentext
-	writetext PokemaniacZachAfterBattleText
-	waitbutton
-	closetext
-	end
+;TrainerPokemaniacZach:
+;	trainer POKEMANIAC, ZACH, EVENT_BEAT_POKEMANIAC_ZACH, PokemaniacZachSeenText, PokemaniacZachBeatenText, 0, .Script
+;.Script:
+;	endifjustbattled
+;	opentext
+;	writetext PokemaniacZachAfterBattleText
+;	waitbutton
+;	closetext
+;	end
 
-PokemaniacZachSeenText:
-	text "HEY!"
+;PokemaniacZachSeenText:
+;	text "HEY!"
+;
+;	para "This is my secret"
+;	line "place! Get lost,"
+;	cont "you outsider!"
+;	done
 
-	para "This is my secret"
-	line "place! Get lost,"
-	cont "you outsider!"
-	done
+;PokemaniacZachBeatenText:
+;	text "This is still"
+;	line "my spot…"
+;	done
 
-PokemaniacZachBeatenText:
-	text "This is still"
-	line "my spot…"
-	done
-
-PokemaniacZachAfterBattleText:
-	text "You're working on"
-	line "a #DEX?"
-
-	para "Wow, you must know"
-	line "some pretty rare"
-	cont "#MON!"
-
-	para "May I please see"
-	line "it. Please?"
-	done
+;PokemaniacZachAfterBattleText:
+;	text "You're working on"
+;	line "a #DEX?"
+;
+;	para "Wow, you must know"
+;	line "some pretty rare"
+;	cont "#MON!"
+;
+;	para "May I please see"
+;	line "it. Please?"
+;	done
 
 TrainerFisherBarney:
 	trainer FISHER, BARNEY, EVENT_BEAT_FISHER_BARNEY, FisherBarneySeenText, FisherBarneyBeatenText, 0, .Script
@@ -269,7 +269,7 @@ FisherBarneyBeatenText:
 
 FisherBarneyAfterBattleText:
 	text "I want to become"
-	line "the trainer CHAMP"
+	line "the #MON CHAMP"
 	cont "using the #MON"
 	cont "I caught."
 
@@ -373,14 +373,14 @@ Route42_MapEvents:
 	bg_event 16, 11, BGEVENT_ITEM, Route42HiddenMaxPotion
 
 	def_object_events
-	object_event 27, 15, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, Route42_PNKApricorn, EVENT_ROUTE_42_PNK_APRICORN
+	object_event 27, 15, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, Route42_PNKApricorn, EVENT_ROUTE_42_PNK_APRICORN
 	object_event 28, 16, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route42_GRNApricorn, EVENT_ROUTE_42_GRN_APRICORN
 	object_event 29, 15, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, Route42_YLWApricorn, EVENT_ROUTE_42_YLW_APRICORN
 	object_event 52,  6, SPRITE_CHUCK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route42ChuckScript, EVENT_ROUTE_42_BOULDERS_CLEARED
 	object_event 52,  7, SPRITE_PRIMEAPE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route42PrimeapeScript, EVENT_ROUTE_42_BOULDERS_CLEARED
 	object_event 50, 10, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route42HikerScript, -1
 	object_event 12,  6, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerHikerAnthony, -1 ;benjamin
-	object_event 26, 11, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerPokemaniacZach, -1 ;shane
+;	object_event 26, 11, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 2, TrainerPokemaniacZach, -1 ;shane
 	object_event 40, 10, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerFisherBarney, -1 ;tully
 ;	object_event  6,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route42UltraBall, EVENT_ROUTE_42_ULTRA_BALL
 	object_event 33,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route42MaxPotion, EVENT_ROUTE_42_MAX_POTION ;EVENT_ROUTE_42_SUPER_POTION
@@ -389,4 +389,4 @@ Route42_MapEvents:
 	object_event 50,  6, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route42Rock, EVENT_CIANWOOD_GYM_TRAINERS
 ;	object_event 53,  4, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route42Rock, EVENT_CIANWOOD_GYM_TRAINERS
 
-;.PinkOverSilverOBPalette
+;.PinkOverPurpleOBPalette
