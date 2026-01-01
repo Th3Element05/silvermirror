@@ -8,7 +8,7 @@
 	const NO_ITEM      ; 00
 	const MASTER_BALL  ; 01
 	const ULTRA_BALL   ; 02
-	const BRIGHTPOWDER ; 03 ; include?
+	const BRIGHTPOWDER ; 03
 	const GREAT_BALL   ; 04
 	const POKE_BALL    ; 05
 	const TOWN_MAP     ; 06 ; unused? maybe?
@@ -35,12 +35,12 @@
 	const PROTEIN      ; 1b
 	const IRON         ; 1c
 	const CARBOS       ; 1d
-	const LUCKY_PUNCH  ; 1e ; include?
+	const LUCKY_PUNCH  ; 1e
 	const CALCIUM      ; 1f
 	const RARE_CANDY   ; 20
 	const X_ACCURACY   ; 21
 	const LEAF_STONE   ; 22
-	const METAL_POWDER ; 23 ; include?
+	const METAL_POWDER ; 23
 	const NUGGET       ; 24
 	const POKE_DOLL    ; 25
 	const FULL_HEAL    ; 26
@@ -60,10 +60,10 @@
 	const COIN_CASE    ; 34
 	const ITEMFINDER   ; 35
 	const POKE_FLUTE   ; 36
-	const EXP_SHARE    ; 37 ; INCLUDE
+	const EXP_SHARE    ; 37
 	const OLD_ROD      ; 38
 	const GOOD_ROD     ; 39
-	const SILVER_LEAF  ; 3a ; only a sell item? can repurpose?
+	const SILVER_LEAF  ; 3a ; only sell item (rocksmash). can repurpose if necessary.
 	const SUPER_ROD    ; 3b
 	const PP_UP        ; 3c
 	const ETHER        ; 3d
@@ -76,98 +76,98 @@
 	const CLEAR_BELL   ; 44
 	const SILVER_WING  ; 45
 	const MOOMOO_MILK  ; 46
-	const QUICK_CLAW   ; 47 ; include?
+	const QUICK_CLAW   ; 47
 	const PECHA_BERRY  ; 48
-	const GOLD_LEAF    ; 49
-	const SOFT_SAND    ; 4a ; include?
-	const SHARP_BEAK   ; 4b ; include?
+	const GOLD_LEAF    ; 49 ; only sell item (rocksmash). can repurpose if necessary.
+	const SOFT_SAND    ; 4a
+	const SHARP_BEAK   ; 4b
 	const CHERI_BERRY  ; 4c
 	const ASPEAR_BERRY ; 4d
 	const RAWST_BERRY  ; 4e
-	const POISON_BARB  ; 4f ; include?
-	const KINGS_ROCK   ; 50 ; include? (evolve)
+	const POISON_BARB  ; 4f
+	const KINGS_ROCK   ; 50
 	const PERSIM_BERRY ; 51
 	const CHESTO_BERRY ; 52
 	const RED_APRICORN ; 53
 	const TINYMUSHROOM ; 54
 	const BIG_MUSHROOM ; 55
-	const SILVERPOWDER ; 56 ; include?
+	const SILVERPOWDER ; 56
 	const BLU_APRICORN ; 57
 	const HELIX_FOSSIL ; 58
-	const AMULET_COIN  ; 59 ; include?
+	const AMULET_COIN  ; 59
 	const YLW_APRICORN ; 5a
 	const GRN_APRICORN ; 5b
-	const CLEANSE_TAG  ; 5c ; include?
-	const MYSTIC_WATER ; 5d ; include?
-	const TWISTEDSPOON ; 5e ; include?
+	const CLEANSE_TAG  ; 5c
+	const MYSTIC_WATER ; 5d
+	const TWISTEDSPOON ; 5e
 	const WHT_APRICORN ; 5f
-	const BLACKBELT_I  ; 60 ; include?
+	const BLACKBELT_I  ; 60
 	const BLK_APRICORN ; 61
 	const DOME_FOSSIL  ; 62
 	const PNK_APRICORN ; 63
-	const BLACKGLASSES ; 64 ; include?
+	const BLACKGLASSES ; 64
 	const GOLD_TEETH   ; 65 ; SLOWPOKETAIL ; 65
-	const SILK_SCARF   ; 66 ; include?
-	const STICK        ; 67 ; include?
-	const SMOKE_BALL   ; 68 ; include?
-	const NEVERMELTICE ; 69 ; include?
-	const MAGNET       ; 6a ; include?
+	const SILK_SCARF   ; 66
+	const STICK        ; 67
+	const SMOKE_BALL   ; 68
+	const NEVERMELTICE ; 69
+	const MAGNET       ; 6a
 	const LUM_BERRY    ; 6b
 	const PEARL        ; 6c
 	const BIG_PEARL    ; 6d
-	const EVERSTONE    ; 6e ; include?
-	const SPELL_TAG    ; 6f ; include?
+	const EVERSTONE    ; 6e
+	const SPELL_TAG    ; 6f
 	const SILPH_SCOPE  ; 70 ; RAGECANDYBAR
 	const GS_BALL      ; 71
 	const BLUE_CARD    ; 72
-	const MIRACLE_SEED ; 73 ; include?
-	const THICK_CLUB   ; 74 ; include?
-	const FOCUS_BAND   ; 75 ; include?
+	const MIRACLE_SEED ; 73
+	const THICK_CLUB   ; 74
+	const FOCUS_BAND   ; 75
 	const OLD_AMBER    ; 76
 	const ENERGYPOWDER ; 77
 	const ENERGY_ROOT  ; 78
 	const HEAL_POWDER  ; 79
 	const REVIVAL_HERB ; 7a
-	const HARD_STONE   ; 7b ; include?
-	const LUCKY_EGG    ; 7c ; include?
-	const CARD_KEY     ; 7d ; use in silph co
+	const HARD_STONE   ; 7b
+	const LUCKY_EGG    ; 7c
+	const CARD_KEY     ; 7d ; use in silph co + radio tower
 	const BIKE_VOUCHER ; 7e ; MACHINE_PART
-	const EGG_TICKET   ; 7f ; can be repurposed, unused
-	const LOST_ITEM    ; 80 ; KEEP for copycat quest
+	const EGG_TICKET   ; 7f ; unused
+	const CARD_KEY_R   ; 80 ; LOST_ITEM
 	const STARDUST     ; 81
 	const STAR_PIECE   ; 82
 	const LIFT_KEY     ; 83 ; BASEMENT_KEY
 	const PASS         ; 84
 	const SAFARI_BALL  ; 85
-	const CHARCOAL     ; 86 ; include?
-	const BERRY_JUICE  ; 87 ; include?
-	const SCOPE_LENS   ; 88 ; include?
-	const METAL_COAT   ; 89 ; include? (evolve)
-	const DRAGON_FANG  ; 8a ; include?
-	const LEFTOVERS    ; 8b ; include?
+	const CHARCOAL     ; 86
+	const BERRY_JUICE  ; 87
+	const SCOPE_LENS   ; 88
+	const METAL_COAT   ; 89
+	const DRAGON_FANG  ; 8a
+	const LEFTOVERS    ; 8b
 	const LEPPA_BERRY  ; 8c
-	const DRAGON_SCALE ; 8d ; include? (evolve)
-	const BERSERK_GENE ; 8e ; include?
+	const DRAGON_SCALE ; 8d
+	const BERSERK_GENE ; 8e
 	const SACRED_ASH   ; 8f
 	const HEAVY_BALL   ; 90
 	const LEVEL_BALL   ; 91
 	const LURE_BALL    ; 92
 	const FAST_BALL    ; 93
-	const LIGHT_BALL   ; 94 ; include?
+	const LIGHT_BALL   ; 94
 	const FRIEND_BALL  ; 95
 	const MOON_BALL    ; 96
 	const LOVE_BALL    ; 97
-	const NORMAL_BOX   ; 98 ; include?
-	const GORGEOUS_BOX ; 99 ; include?
+	const NORMAL_BOX   ; 98
+	const GORGEOUS_BOX ; 99
 	const SUN_STONE    ; 9a
 	const STEEL_INGOT  ; 9b ; POLKADOT_BOW
-	const UP_GRADE     ; 9c (evolve)
+	const UP_GRADE     ; 9c
 	const ORAN_BERRY   ; 9d
 	const SITRUS_BERRY ; 9e
 	const SQUIRTBOTTLE ; 9f
 	const PARK_BALL    ; a0
 	const RAINBOW_WING ; a1
-	const BRICK_PIECE  ; a2 ; held by traded machop? useless.
+	const BRICK_PIECE  ; a2 ; held by traded machop, useless?
 	const FLOWER_MAIL  ; a3
 	const SUPER_ROD_2  ; a4 ; ITEM_BE
 	const ITEM_2D      ; a5
