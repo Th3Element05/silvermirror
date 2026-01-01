@@ -15,9 +15,9 @@ UnionCave1FGeodude:
 	cry GEODUDE
 	promptbutton
 	closetext
+	playsound SFX_TACKLE
 	applymovement UNIONCAVE1F_KANGASKHAN, UnionCave1FKangaskhanAttackMovement
-	playsound SFX_STRENGTH
-	earthquake 20
+;	earthquake 20
 	applymovement UNIONCAVE1F_GEODUDE, UnionCave1FRockSmashMovement
 	disappear UNIONCAVE1F_GEODUDE
 	appear UNIONCAVE1F_GEODUDE
@@ -35,7 +35,7 @@ UnionCave1FGeodude:
 	promptbutton
 	cry GEODUDE
 	waitsfx
-	playsound SFX_BALL_POOF
+	playsound SFX_FAINT ;SFX_BALL_POOF
 	applymovement UNIONCAVE1F_GEODUDE, UnionCave1FRockSmashMovement
 	disappear UNIONCAVE1F_GEODUDE
 	pause 5
@@ -76,10 +76,9 @@ UnionCave1FGeodudeFainted:
 
 UnionCave1FKangaskhanAttackMovement:
 	fix_facing
-;	big_step LEFT
-;	big_step RIGHT
-	fast_slide_step LEFT
-	fast_slide_step RIGHT
+	big_step LEFT
+	big_step RIGHT
+	remove_fixed_facing
 	step_end
 
 UnionCave1FRockSmashMovement:
@@ -89,9 +88,12 @@ UnionCave1FRockSmashMovement:
 UnionCave1FBlockingHiker:
 	checkevent EVENT_ROUTE_36_OPEN
 	iftrue .GeodudeFainted
+	playsound SFX_TACKLE
+	applymovement UNIONCAVE1F_KANGASKHAN, UnionCave1FKangaskhanAttackMovement
 	opentext
 	writetext UnionCave1FHikerToGeodudeText
-	waitbutton
+	playsound SFX_TACKLE
+	applymovement UNIONCAVE1F_GEODUDE, UnionCave1FGeodudeAttackMovement
 	faceplayer
 	writetext UnionCave1FHikerToPlayerText
 	waitbutton
@@ -105,7 +107,16 @@ UnionCave1FBlockingHiker:
 UnionCave1FHikerToGeodudeText:
 	text "Hang in there,"
 	line "GEODUDE!"
+
+	para "Use TACKLE!"
 	done
+
+UnionCave1FGeodudeAttackMovement:
+	fix_facing
+	big_step RIGHT
+	big_step LEFT
+	remove_fixed_facing
+	step_end
 
 UnionCave1FHikerToPlayerText:
 	text "Don't distract us!"
