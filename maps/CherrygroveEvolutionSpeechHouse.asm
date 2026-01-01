@@ -1,6 +1,4 @@
 	object_const_def
-	const CHERRYGROVEEVOLUTIONSPEECHHOUSE_LASS
-	const CHERRYGROVEEVOLUTIONSPEECHHOUSE_YOUNGSTER
 
 CherrygroveEvolutionSpeechHouse_MapScripts:
 	def_scene_scripts
@@ -8,36 +6,25 @@ CherrygroveEvolutionSpeechHouse_MapScripts:
 	def_callbacks
 
 CherrygroveEvolutionSpeechHouseYoungsterScript:
-	opentext
-	writetext CherrygroveEvolutionSpeechHouseYoungsterText
-	waitbutton
-	closetext
-	end
-
-CherrygroveEvolutionSpeechHouseLassScript:
-	opentext
-	writetext CherrygroveEvolutionSpeechHouseLassText
-	waitbutton
-	closetext
-	end
-
-CherrygroveEvolutionSpeechHouseBookshelf:
-	jumpstd MagazineBookshelfScript
-
+	jumptextfaceplayer CherrygroveEvolutionSpeechHouseYoungsterText
 CherrygroveEvolutionSpeechHouseYoungsterText:
 	text "#MON gain expe-"
 	line "rience in battle"
-
-	para "and change their"
-	line "form."
+	cont "and change their"
+	cont "form."
 	done
 
+CherrygroveEvolutionSpeechHouseLassScript:
+	jumptextfaceplayer CherrygroveEvolutionSpeechHouseLassText
 CherrygroveEvolutionSpeechHouseLassText:
 	text "#MON change?"
 
 	para "I would be shocked"
 	line "if one did that!"
 	done
+
+CherrygroveEvolutionSpeechHouseBookshelf:
+	jumpstd MagazineBookshelfScript
 
 CherrygroveEvolutionSpeechHouse_MapEvents:
 	db 0, 0 ; filler
