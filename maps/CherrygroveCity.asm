@@ -13,6 +13,7 @@ CherrygroveCityFlypointCallback:
 	setflag ENGINE_FLYPOINT_CHERRYGROVE
 	endcallback
 
+; script
 ;CherrygroveRockSmashGuyScript:
 ;	faceplayer
 ;	opentext
@@ -110,73 +111,33 @@ CherrygroveCityFlypointCallback:
 ;	line "Geo-dude!"
 ;	done
 
+; npc
 CherrygroveTeacherScript:
-	faceplayer
-	opentext
-	checkflag ENGINE_MAP_CARD
-	iftrue .HaveMapCard
-	writetext CherrygroveTeacherText_NoMapCard
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer CherrygroveTeacherText_HaveMapCard
+;	faceplayer
+;	opentext
+;	checkflag ENGINE_MAP_CARD
+;	iftrue .HaveMapCard
+;	writetext CherrygroveTeacherText_NoMapCard
+;	waitbutton
+;	closetext
+;	end
 
-.HaveMapCard:
-	writetext CherrygroveTeacherText_HaveMapCard
-	waitbutton
-	closetext
-	end
+;.HaveMapCard:
+;	writetext CherrygroveTeacherText_HaveMapCard
+;	waitbutton
+;	closetext
+;	end
 
-CherrygroveYoungsterScript:
-	faceplayer
-	opentext
-	checkflag ENGINE_POKEDEX
-	iftrue .HavePokedex
-	writetext CherrygroveYoungsterText_NoPokedex
-	waitbutton
-	closetext
-	end
-
-.HavePokedex:
-	writetext CherrygroveYoungsterText_HavePokedex
-	waitbutton
-	closetext
-	end
-
-MysticWaterGuy:
-	faceplayer
-	opentext
-	checkevent EVENT_GOT_MYSTIC_WATER_IN_CHERRYGROVE
-	iftrue .After
-	writetext MysticWaterGuyTextBefore
-	promptbutton
-	verbosegiveitem MYSTIC_WATER
-	iffalse .Exit
-	setevent EVENT_GOT_MYSTIC_WATER_IN_CHERRYGROVE
-.After:
-	writetext MysticWaterGuyTextAfter
-	waitbutton
-.Exit:
-	closetext
-	end
-
-CherrygroveCitySign:
-	jumptext CherrygroveCitySignText
-
-CherrygroveCityPokecenterSign:
-	jumpstd PokecenterSignScript
-
-CherrygroveCityMartSign:
-	jumpstd MartSignScript
-
-CherrygroveTeacherText_NoMapCard:
-	text "Did you talk to"
-	line "the old man by the"
-	cont "#MON CENTER?"
-
-	para "He'll put a MAP of"
-	line "JOHTO on your"
-	cont "#GEAR."
-	done
+;CherrygroveTeacherText_NoMapCard:
+;	text "Did you talk to"
+;	line "the old man by the"
+;	cont "#MON CENTER?"
+;
+;	para "He'll put a MAP of"
+;	line "JOHTO on your"
+;	cont "#GEAR."
+;	done
 
 CherrygroveTeacherText_HaveMapCard:
 	text "When you're with"
@@ -184,11 +145,28 @@ CherrygroveTeacherText_HaveMapCard:
 	cont "anywhere is fun."
 	done
 
-CherrygroveYoungsterText_NoPokedex:
-	text "MR.#MON's house"
-	line "is still farther"
-	cont "up ahead."
-	done
+CherrygroveYoungsterScript:
+	jumptextfaceplayer CherrygroveYoungsterText_HavePokedex
+;	faceplayer
+;	opentext
+;	checkflag ENGINE_POKEDEX
+;	iftrue .HavePokedex
+;	writetext CherrygroveYoungsterText_NoPokedex
+;	waitbutton
+;	closetext
+;	end
+
+;.HavePokedex:
+;	writetext CherrygroveYoungsterText_HavePokedex
+;	waitbutton
+;	closetext
+;	end
+
+;CherrygroveYoungsterText_NoPokedex:
+;	text "MR.#MON's house"
+;	line "is still farther"
+;	cont "up ahead."
+;	done
 
 CherrygroveYoungsterText_HavePokedex:
 	text "I battled the"
@@ -197,27 +175,58 @@ CherrygroveYoungsterText_HavePokedex:
 
 	para "My #MON lost."
 	line "They're a mess! I"
-
-	para "must take them to"
-	line "a #MON CENTER."
+	cont "must take them to"
+	cont "a #MON CENTER."
 	done
 
-MysticWaterGuyTextBefore:
-	text "A #MON I caught"
-	line "had an item."
+MysticWaterGuy:
+	faceplayer
+	opentext
+	writetext MysticWaterGuy_FishingText
+	waitbutton
+	closetext
+	turnobject LAST_TALKED, RIGHT
+	end
+;	faceplayer
+;	opentext
+;	checkevent EVENT_GOT_MYSTIC_WATER_IN_CHERRYGROVE
+;	iftrue .After
+;	writetext MysticWaterGuyTextBefore
+;	promptbutton
+;	verbosegiveitem MYSTIC_WATER
+;	iffalse .Exit
+;	setevent EVENT_GOT_MYSTIC_WATER_IN_CHERRYGROVE
+;.After:
+;	writetext MysticWaterGuyTextAfter
+;	waitbutton
+;.Exit:
+;	closetext
+;	end
 
-	para "I think it's"
-	line "MYSTIC WATER."
+;MysticWaterGuyTextBefore:
+;	text "A #MON I caught"
+;	line "had an item."
+;
+;	para "I think it's"
+;	line "MYSTIC WATER."
+;
+;	para "I don't need it,"
+;	line "so do you want it?"
+;	done
 
-	para "I don't need it,"
-	line "so do you want it?"
+;MysticWaterGuyTextAfter:
+;	text "Back to fishing"
+;	line "for me, then."
+;	done
+
+MysticWaterGuy_FishingText:
+	text "Fishing is very"
+	line "relaxing."
 	done
 
-MysticWaterGuyTextAfter:
-	text "Back to fishing"
-	line "for me, then."
-	done
-
+; bg text
+CherrygroveCitySign:
+	jumptext CherrygroveCitySignText
 CherrygroveCitySignText:
 	text "CHERRYGROVE CITY"
 
@@ -225,8 +234,14 @@ CherrygroveCitySignText:
 	line "Fragrant Flowers"
 	done
 
-CherrygroveCityRock:
-	jumpstd SmashRockScript
+CherrygroveCityPokecenterSign:
+	jumpstd PokecenterSignScript
+
+CherrygroveCityMartSign:
+	jumpstd MartSignScript
+
+;CherrygroveCityRock:
+;	jumpstd SmashRockScript
 
 CherrygroveCity_MapEvents:
 	db 0, 0 ; filler
@@ -249,7 +264,6 @@ CherrygroveCity_MapEvents:
 ;	object_event 22,  8, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygroveRockSmashGuyScript, -1
 ;	object_event 23,  8, SPRITE_GEODUDE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_SCRIPT, 0, CherrygroveCityGeodudeScript, -1
 ;	object_event 23,  9, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygroveCityRock, -1
-;
 	object_event 27, 12, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CherrygroveTeacherScript, -1
 	object_event 27,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CherrygroveYoungsterScript, -1
 	object_event  7, 12, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MysticWaterGuy, -1
@@ -258,5 +272,3 @@ CherrygroveCity_MapEvents:
 ;\engine\tilesets\tileset_palettes.asm
 ;\gfx\overworld\npc_sprites_special.pal
 ;
-;.GrayOverRockOBPalette ???  can't use rock due to... the rock.
-;? PAL_ICON_GRAY ?

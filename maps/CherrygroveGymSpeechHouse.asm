@@ -1,6 +1,4 @@
 	object_const_def
-	const CHERRYGROVEGYMSPEECHHOUSE_POKEFAN_M
-	const CHERRYGROVEGYMSPEECHHOUSE_BUG_CATCHER
 
 CherrygroveGymSpeechHouse_MapScripts:
 	def_scene_scripts
@@ -9,27 +7,27 @@ CherrygroveGymSpeechHouse_MapScripts:
 
 CherrygroveGymSpeechHousePokefanMScript:
 	jumptextfaceplayer CherrygroveGymSpeechHousePokefanMText
+CherrygroveGymSpeechHousePokefanMText:
+	text "You have a lot of"
+	line "GYM BADGES."
+
+	para "Have you visited"
+	line "all of the GYMS"
+	cont "around JOHTO yet?"
+	done
+;	text "You're trying to"
+;	line "see how good you"
+;	cont "are as a #MON"
+;	cont "trainer?"
+;
+;	para "You better visit"
+;	line "the #MON GYMS"
+;	cont "all over JOHTO and"
+;	cont "collect BADGES."
+;	done
 
 CherrygroveGymSpeechHouseBugCatcherScript:
 	jumptextfaceplayer CherrygroveGymSpeechHouseBugCatcherText
-
-CherrygroveGymSpeechHouseBookshelf:
-	jumpstd PictureBookshelfScript
-
-CherrygroveGymSpeechHousePokefanMText:
-	text "You're trying to"
-	line "see how good you"
-
-	para "are as a #MON"
-	line "trainer?"
-
-	para "You better visit"
-	line "the #MON GYMS"
-
-	para "all over JOHTO and"
-	line "collect BADGES."
-	done
-
 CherrygroveGymSpeechHouseBugCatcherText:
 	text "When I get older,"
 	line "I'm going to be a"
@@ -37,10 +35,12 @@ CherrygroveGymSpeechHouseBugCatcherText:
 
 	para "I make my #MON"
 	line "battle with my"
-
-	para "friend's to make"
-	line "them tougher!"
+	cont "friend's to make"
+	cont "them tougher!"
 	done
+
+CherrygroveGymSpeechHouseBookshelf:
+	jumpstd PictureBookshelfScript
 
 CherrygroveGymSpeechHouse_MapEvents:
 	db 0, 0 ; filler
