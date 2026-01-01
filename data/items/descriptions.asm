@@ -128,7 +128,7 @@ ItemDescriptions:
 	dw CardKeyDesc
 	dw BikeVoucherDesc ; MachinePartDesc
 	dw EggTicketDesc
-	dw LostItemDesc
+	dw CardKeyRDesc ; LostItemDesc
 	dw StardustDesc
 	dw StarPieceDesc
 	dw ElevatorKeyDesc ; BasementKeyDesc
@@ -756,8 +756,10 @@ LuckyEggDesc:
 	next "points. (HOLD)@"
 
 CardKeyDesc:
-	db   "Opens shutters in"
-	next "the RADIO TOWER.@"
+	db   "Opens doors in"
+	next "SILPH CO.@"
+;	db   "A swipe card for"
+;	next "security doors.@"
 
 ;MachinePartDesc:
 ;	db   "A machine part for"
@@ -771,9 +773,13 @@ EggTicketDesc:
 	db   "May use at Golden-"
 	next "rod trade corner.@"
 
-LostItemDesc:
-	db   "The # DOLL lost"
-	next "by the COPYCAT.@"
+CardKeyRDesc:
+	db   "Opens shutters in"
+	next "the RADIO TOWER.@"
+
+;LostItemDesc:
+;	db   "The #DOLL lost"
+;	next "by the COPYCAT.@"
 
 StardustDesc:
 	db   "Pretty, red sand."

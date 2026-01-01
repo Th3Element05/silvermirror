@@ -138,10 +138,10 @@ ItemEffects:
 	dw RevivalHerbEffect   ; REVIVAL_HERB
 	dw NoEffect            ; HARD_STONE
 	dw NoEffect            ; LUCKY_EGG
-	dw CardKeyEffect       ; CARD_KEY
+	dw NoEffect            ; CARD_KEY ; dw CardKeyEffect
 	dw NoEffect            ; SS_TICKET ; MACHINE_PART
 	dw NoEffect            ; EGG_TICKET
-	dw NoEffect            ; LOST_ITEM
+	dw CardKeyEffect       ; CARD_KEY_R ; LOST_ITEM
 	dw NoEffect            ; STARDUST
 	dw NoEffect            ; STAR_PIECE
 	dw BasementKeyEffect   ; BASEMENT_KEY
@@ -2253,7 +2253,7 @@ PokeFluteEffect:
 ;	text_end
 ;
 ;.PlayedTheFlute:
-;	; played the # FLUTE.@ @
+;	; played the #FLUTE.@ @
 ;	text_far Text_PlayedPokeFlute
 ;	text_asm
 ;	ld a, [wBattleMode]
