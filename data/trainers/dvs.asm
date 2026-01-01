@@ -10,16 +10,16 @@ TrainerClassDVs:
 	dn  9,  8,  8,  8 ; JASMINE
 	dn  9,  8,  8,  8 ; PRYCE
 	dn  7, 12, 13, 13 ; CLAIR
-	dn 15, 13, 13, 14 ; POKEMON_PROF ;dn 10, 10, 10, 10 ; POKEMON_PROF
+	dn 15, 15, 15, 15 ; POKEMON_PROF
 	dn  8,  8,  8,  8 ; RIVAL1
-	dn 10, 10, 10, 10 ; RIVAL2
+	dn 10, 11, 10, 10 ; RIVAL2
 	dn  9,  8,  8,  8 ; BROCK
 	dn  7,  8,  8,  8 ; MISTY
 	dn  9,  8,  8,  8 ; LT_SURGE
 	dn  7,  9,  9,  9 ; ERIKA
 	dn  9,  9,  9,  9 ; KOGA
 	dn  7, 13,  8,  7 ; SABRINA
-	dn  9, 10, 10, 10 ; BLAINE
+	dn  9, 10, 10, 11 ; BLAINE
 	dn 10, 12, 12, 13 ; GIOVANNI
 	dn 10, 10,  9, 10 ; ROCKET BOSS
 	dn  7, 12, 13, 13 ; LORELEI
