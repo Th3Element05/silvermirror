@@ -22,8 +22,8 @@ StdScripts::
 	add_stdscript SmashRockScript
 	add_stdscript PokecenterSignScript
 	add_stdscript MartSignScript
-	add_stdscript GoldenrodRocketsScript
-	add_stdscript RadioTowerRocketsScript
+;	add_stdscript GoldenrodRocketsScript
+;	add_stdscript RadioTowerRocketsScript
 	add_stdscript ElevatorButtonScript
 	add_stdscript DayToTextScript
 	add_stdscript BugContestResultsWarpScript
@@ -305,12 +305,12 @@ DayToTextScript:
 .SaturdayText:
 	db "SATURDAY@"
 
-GoldenrodRocketsScript:
-	clearevent EVENT_GOLDENROD_CITY_ROCKET_TAKEOVER
-	end
+;GoldenrodRocketsScript:
+;	clearevent EVENT_GOLDENROD_CITY_ROCKET_TAKEOVER
+;	end
 
-RadioTowerRocketsScript:
-	setflag ENGINE_ROCKETS_IN_RADIO_TOWER
+;RadioTowerRocketsScript:
+;	setflag ENGINE_ROCKETS_IN_RADIO_TOWER
 ;	setevent EVENT_GOLDENROD_CITY_CIVILIANS
 ;	setevent EVENT_RADIO_TOWER_BLACKBELT_BLOCKS_STAIRS
 ;	clearevent EVENT_RADIO_TOWER_ROCKET_TAKEOVER
@@ -318,7 +318,7 @@ RadioTowerRocketsScript:
 ;	setevent EVENT_MAHOGANY_TOWN_POKEFAN_M_BLOCKS_EAST
 ;	specialphonecall SPECIALCALL_WEIRDBROADCAST
 ;	setmapscene MAHOGANY_TOWN, SCENE_MAHOGANYTOWN_NOOP
-	end
+;	end
 
 BugContestResultsWarpScript:
 	special ClearBGPalettes
