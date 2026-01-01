@@ -711,9 +711,9 @@ Script_UsedWaterfall:
 	text_end
 
 TryWaterfallOW::
-;	ld de, ENGINE_RISINGBADGE
-;	call CheckEngineFlag
-;	jr c, .failed
+	ld de, ENGINE_CAN_USE_WATERFALL ;ENGINE_RISINGBADGE
+	call CheckEngineFlag
+	jr c, .failed
 	call CheckMapCanWaterfall
 	jr c, .failed
 	ld a, BANK(Script_AskWaterfall)
