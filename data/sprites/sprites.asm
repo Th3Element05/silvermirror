@@ -83,7 +83,7 @@ OverworldSprites:
 	overworld_sprite BusinessmanSpriteGFX, 12, STANDING_SPRITE, PAL_OW_BROWN
 	overworld_sprite BugCatcherSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
 	overworld_sprite SleepingSpriteGFX, 12, STANDING_SPRITE, PAL_OW_BROWN
-; 4d
+	overworld_sprite RedsMomSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
 ; 4e
 ; 4f
 ; objects
@@ -115,7 +115,7 @@ OverworldSprites:
 	overworld_sprite KangaskhanMoveSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
 	overworld_sprite MrMimeMoveSpriteGFX, 12, WALKING_SPRITE, PAL_OW_PURPLE
 	overworld_sprite TangelaMoveSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
-	overworld_sprite GeodudeMoveSpriteGFX, 12, WALKING_SPRITE, PAL_OW_SILVER
+	overworld_sprite GeodudeMoveSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
 	overworld_sprite MagikarpSwimSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
 ; 6c
 ; 6d
