@@ -9,6 +9,15 @@ OakPhoneHealYourMonText:
 	cont "they are hurt."
 	done
 
+OakPhoneEvaluatePokedexText:
+	text "Hello, <PLAYER>?"
+
+	para "You should drop"
+	line "by sometime so I"
+	cont "can evaluate your"
+	cont "#DEX."
+	done
+
 OakPhoneHowManyBadgesText:
 	text "Hello, <PLAYER>?"
 	line "How are you?"
@@ -142,6 +151,54 @@ OakPhoneRemindViridianGymText:
 	cont "should challenge"
 	cont "the GYM LEADER in"
 	cont "VIRIDIAN CITY!"
+	done
+
+OakPhoneNoAnswerText:
+	text "… … …"
+	line "… … …"
+
+	para "He didn't answer."
+	done
+
+OakPhoneRadioTowerText:
+	text "Hello? <PLAYER>?"
+
+	para "Its terrible!"
+
+	para "I'm at the RADIO"
+	line "TOWER in GOLDENROD"
+	cont "and someone has"
+	cont "taken us hostage!"
+
+	para "I never expected"
+	line "anything like this"
+	cont "to happen, I don't"
+	cont "have my #MON"
+	cont "with me!"
+
+	para "Please, help us!"
+	done
+
+OakPhoneRemindRadioTowerText:
+	text "<PLAYER>!"
+
+	para "We're still being"
+	line "held hostage at"
+	cont "the RADIO TOWER"
+	cont "in GOLDENROD!"
+
+	para "Help!"
+	done
+
+OakPhoneRemindWaterfallText:
+	text "Hello, <PLAYER>?"
+
+	para "DARK CAVE has a"
+	line "waterfall you can"
+	cont "climb now."
+
+	para "There's a way in"
+	line "on ROUTE 31."
 	done
 
 OakPhoneDiscoveredPokerusText:
