@@ -34,7 +34,7 @@
 	sitrus	yellow
 
 	FUCHSIA CITY
-	chansey	.PinkOverSilver
+	chansey	.PinkOverPurple
 	aspear	yellow
 	red	red
 
@@ -81,7 +81,7 @@ JOHTO
 	oran	blue
 
 	ROUTE 42
-	pnk	.PinkOverSilver
+	pnk	.PinkOverPurple
 	grn	green
 	ylw	yellow
 
@@ -114,11 +114,13 @@ RED	4 leppa		pp
 YELLOW	3 sitrus	hp
 GREEN	2 lum		status
 
-RED	3 RED
-GREEN	3 GRN
-BLUE	3 BLU
-YELLOW	3 YLW
-.pink	3 PNK
-.grey	3 BLK
-SILVER	3 WHT
-
+RED	RED	player/common
+GREEN	GRN	player/common
+BLUE	BLU	common
+BROWN		rocks/common?
+PURPLE		
+YELLOW	YLW	
+TREE		cut/headbutt
+SILVER	WHT	
+.pink	PNK
+.grey	BLK	
