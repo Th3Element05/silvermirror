@@ -80,7 +80,11 @@ CalSpriteGFX::                 INCBIN "gfx/sprites/cal.2bpp"
 BusinessmanSpriteGFX::         INCBIN "gfx/sprites/businessman.2bpp"
 BugCatcherSpriteGFX::          INCBIN "gfx/sprites/bug_catcher.2bpp"
 SleepingSpriteGFX::            INCBIN "gfx/sprites/sleeping.2bpp"
-;
+RedsMomSpriteGFX::             INCBIN "gfx/sprites/reds_mom.2bpp"
+
+
+SECTION "Sprites 3", ROMX
+
 PokeBallSpriteGFX::            INCBIN "gfx/sprites/poke_ball.2bpp"
 PokedexSpriteGFX::             INCBIN "gfx/sprites/pokedex.2bpp"
 PaperSpriteGFX::               INCBIN "gfx/sprites/paper.2bpp"
@@ -93,7 +97,7 @@ DomeFossilSpriteGFX::          INCBIN "gfx/sprites/dome_fossil.2bpp"
 OldAmberSpriteGFX::            INCBIN "gfx/sprites/old_amber.2bpp"
 
 
-SECTION "Sprites 3", ROMX
+SECTION "Sprites 4", ROMX
 
 SudowoodoSpriteGFX::           INCBIN "gfx/sprites/sudowoodo.2bpp"
 MonsterSpriteGFX::             INCBIN "gfx/sprites/monster.2bpp"
@@ -107,7 +111,10 @@ MrMimeMoveSpriteGFX::          INCBIN "gfx/sprites/mr_mime_move.2bpp"
 TangelaMoveSpriteGFX::         INCBIN "gfx/sprites/tangela_move.2bpp"
 GeodudeMoveSpriteGFX::         INCBIN "gfx/sprites/geodude_move.2bpp"
 MagikarpSwimSpriteGFX::        INCBIN "gfx/sprites/magikarp_swim.2bpp"
-;
+
+
+SECTION "Sprites 5", ROMX
+
 BigSnorlaxSpriteGFX::          INCBIN "gfx/sprites/big_snorlax.2bpp"
 BigLaprasSpriteGFX::           INCBIN "gfx/sprites/big_lapras.2bpp"
 BigOnixSpriteGFX::             INCBIN "gfx/sprites/big_onix.2bpp"
