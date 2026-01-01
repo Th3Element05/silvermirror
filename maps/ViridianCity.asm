@@ -14,11 +14,6 @@ ViridianCity_MapScripts:
 ;	callback MAPCALLBACK_OBJECTS, ViridianCityMoveCoffeeGrampsCallback
 	callback MAPCALLBACK_TILES, ViridianGymDoorCallback
 
-ViridianCityNoop1Scene:
-ViridianCityNoop2Scene:
-ViridianCityNoop3Scene:
-	end
-
 ViridianCityFlypointCallback:
 	setflag ENGINE_FLYPOINT_VIRIDIAN
 	setmapscene CINNABAR_ISLAND, SCENE_CINNABARISLAND_NOOP
@@ -34,10 +29,14 @@ ViridianCityFlypointCallback:
 ViridianGymDoorCallback:
 	checkevent EVENT_VIRIDIAN_GYM_LEADER_RETURNED
 	iftrue .GymOpen
-	endcallback
+	changeblock 32, 6, $66 ; LOCKED
 .GymOpen:
-	changeblock 32, 6, $12 ; DOOR
 	endcallback
+
+ViridianCityNoop1Scene:
+ViridianCityNoop2Scene:
+ViridianCityNoop3Scene:
+	end
 
 ;object scripts
 ViridianCityCoffeeGrampsScript:
@@ -94,8 +93,8 @@ ViridianCityTutorialGrampsScript:
 ;	sjump ViridianCityMapCardScript
 
 ViridianCityForceMapCardScript1:
-	turnobject VIRIDIANCITY_COFFEE_GRAMPS, RIGHT
-	showemote EMOTE_SHOCK, VIRIDIANCITY_COFFEE_GRAMPS, 30
+	turnobject VIRIDIANCITY_CATCHING_GRAMPS, RIGHT
+	showemote EMOTE_SHOCK, VIRIDIANCITY_CATCHING_GRAMPS, 20
 	opentext
 	writetext ViridianCityCoffeeGrampsHeyText
 	waitbutton
@@ -104,8 +103,8 @@ ViridianCityForceMapCardScript1:
 	sjump ViridianCityMapCardScript
 
 ViridianCityForceMapCardScript0:
-	turnobject VIRIDIANCITY_COFFEE_GRAMPS, RIGHT
-	showemote EMOTE_SHOCK, VIRIDIANCITY_COFFEE_GRAMPS, 30
+	turnobject VIRIDIANCITY_CATCHING_GRAMPS, RIGHT
+	showemote EMOTE_SHOCK, VIRIDIANCITY_CATCHING_GRAMPS, 20
 	opentext
 	writetext ViridianCityCoffeeGrampsHeyText
 	waitbutton
@@ -291,7 +290,7 @@ ViridianCityDreamEaterFisherGotDreamEaterText:
 ViridianCityYoungster1Script:
 	jumptextfaceplayer ViridianCityYoungster1Text
 ViridianCityYoungster1Text:
-	text "Those # BALLs"
+	text "Those #BALLs"
 	line "at your waist!"
 	cont "You have #MON!"
 
@@ -376,8 +375,8 @@ ViridianGymDoorLocked:
 .LockedDoor
 	jumptext ViridianGymDoorLockedText
 ViridianGymDoorLockedText:
-	text "The GYM's doors"
-	line "are locked..."
+	text "The GYM's door"
+	line "is locked…"
 	done
 
 ViridianCityTrainerTips1Sign:
