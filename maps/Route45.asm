@@ -15,6 +15,7 @@ Route45Fruittrees:
 	appear ROUTE45_LEPPA_BERRY
 	appear ROUTE45_LUM_BERRY
 .NoFruit:
+	clearevent EVENT_OAK_REMIND_ABOUT_WATERFALL
 	endcallback
 
 ; fruit
