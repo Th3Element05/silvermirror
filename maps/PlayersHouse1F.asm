@@ -182,17 +182,13 @@ NeighborScript:
 	turnobject PLAYERSHOUSE1F_POKEFAN_F, RIGHT
 	end
 
-PlayersHouse1FTVScript:
-	jumptext PlayersHouse1FTVText
 
-PlayersHouse1FStoveScript:
-	jumptext PlayersHouse1FStoveText
 
-PlayersHouse1FSinkScript:
-	jumptext PlayersHouse1FSinkText
 
-PlayersHouse1FFridgeScript:
-	jumptext PlayersHouse1FFridgeText
+
+
+
+
 
 MomTurnsTowardPlayerMovement:
 	turn_head RIGHT
@@ -346,6 +342,8 @@ NeighborText:
 	line "#MON!"
 	done
 
+PlayersHouse1FStoveScript:
+	jumptext PlayersHouse1FStoveText
 PlayersHouse1FStoveText:
 	text "Mom's specialty!"
 
@@ -353,12 +351,16 @@ PlayersHouse1FStoveText:
 	line "BURGER!"
 	done
 
+PlayersHouse1FSinkScript:
+	jumptext PlayersHouse1FSinkText
 PlayersHouse1FSinkText:
 	text "The sink is spot-"
 	line "less. Mom likes it"
 	cont "clean."
 	done
 
+PlayersHouse1FFridgeScript:
+	jumptext PlayersHouse1FFridgeText
 PlayersHouse1FFridgeText:
 	text "Let's see what's"
 	line "in the fridge…"
@@ -367,6 +369,8 @@ PlayersHouse1FFridgeText:
 	line "tasty LEMONADE!"
 	done
 
+PlayersHouse1FTVScript:
+	jumptext PlayersHouse1FTVText
 PlayersHouse1FTVText:
 	text "There's a movie on"
 	line "TV: Stars dot the"
@@ -377,12 +381,16 @@ PlayersHouse1FTVText:
 	line "rolling too!"
 	done
 
+PlayersHouse1FBookshelf:
+	jumpstd MagazineBookshelfScript
+;	jumpstd PictureBookshelfScript
+
 PlayersHouse1F_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  6,  7, PALLET_TOWN, 1
-	warp_event  7,  7, PALLET_TOWN, 1
+	warp_event  4,  7, PALLET_TOWN, 1
+	warp_event  5,  7, PALLET_TOWN, 1
 	warp_event  9,  0, PLAYERS_HOUSE_2F, 1
 
 	def_coord_events
@@ -394,6 +402,8 @@ PlayersHouse1F_MapEvents:
 	bg_event  1,  1, BGEVENT_READ, PlayersHouse1FSinkScript
 	bg_event  2,  1, BGEVENT_READ, PlayersHouse1FFridgeScript
 	bg_event  4,  1, BGEVENT_READ, PlayersHouse1FTVScript
+	bg_event  6,  1, BGEVENT_READ, PlayersHouse1FBookshelf
+	bg_event  7,  1, BGEVENT_READ, PlayersHouse1FBookshelf
 
 	def_object_events
 	object_event  7,  4, SPRITE_MOM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MomScript, EVENT_PLAYERS_HOUSE_MOM_1
