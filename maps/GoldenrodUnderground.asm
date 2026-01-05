@@ -668,14 +668,14 @@ GoldenrodUndergroundNoEntryText:
 	line "THIS POINT"
 	done
 
-;GoldenrodUndergroundHiddenParlyzHeal:
-;	hiddenitem PARLYZ_HEAL, EVENT_GOLDENROD_UNDERGROUND_HIDDEN_PARLYZ_HEAL
+GoldenrodUndergroundHiddenMaxPotion:
+	hiddenitem MAX_POTION, EVENT_GOLDENROD_UNDERGROUND_HIDDEN_MAX_POTION
 
-;GoldenrodUndergroundHiddenSuperPotion:
-;	hiddenitem SUPER_POTION, EVENT_GOLDENROD_UNDERGROUND_HIDDEN_SUPER_POTION
+GoldenrodUndergroundHiddenRevivalHerb:
+	hiddenitem REVIVAL_HERB, EVENT_GOLDENROD_UNDERGROUND_HIDDEN_REVIVAL_HERB
 
-;GoldenrodUndergroundHiddenAntidote:
-;	hiddenitem ANTIDOTE, EVENT_GOLDENROD_UNDERGROUND_HIDDEN_ANTIDOTE
+GoldenrodUndergroundHiddenAntidote:
+	hiddenitem RARE_CANDY, EVENT_GOLDENROD_UNDERGROUND_HIDDEN_RARE_CANDY
 
 ;GoldenrodUndergroundCoinCase:
 ;	itemball COIN_CASE
@@ -699,9 +699,9 @@ GoldenrodUnderground_MapEvents:
 	def_bg_events
 	bg_event 16,  6, BGEVENT_READ, BasementDoorScript
 	bg_event 17,  6, BGEVENT_READ, GoldenrodUndergroundNoEntrySign
-;	bg_event  5, 13, BGEVENT_ITEM, GoldenrodUndergroundHiddenParlyzHeal
-;	bg_event  3, 18, BGEVENT_ITEM, GoldenrodUndergroundHiddenSuperPotion
-;	bg_event 15,  8, BGEVENT_ITEM, GoldenrodUndergroundHiddenAntidote
+	bg_event  5, 13, BGEVENT_ITEM, GoldenrodUndergroundHiddenMaxPotion
+	bg_event  3, 18, BGEVENT_ITEM, GoldenrodUndergroundHiddenRevivalHerb
+	bg_event 15,  8, BGEVENT_ITEM, GoldenrodUndergroundHiddenRareCandy
 
 	def_object_events
 
