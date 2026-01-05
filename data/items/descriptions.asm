@@ -6,7 +6,7 @@ ItemDescriptions:
 	dw BrightpowderDesc
 	dw GreatBallDesc
 	dw PokeBallDesc
-	dw TownMapDesc ; TOWNMAP
+	dw TownMapDesc
 	dw BicycleDesc
 	dw MoonStoneDesc
 	dw AntidoteDesc
@@ -54,7 +54,7 @@ ItemDescriptions:
 	dw XSpecialDesc
 	dw CoinCaseDesc
 	dw ItemfinderDesc
-	dw PokeFluteDesc     ;silvermirror
+	dw PokeFluteDesc
 	dw ExpShareDesc
 	dw OldRodDesc
 	dw GoodRodDesc
@@ -155,113 +155,117 @@ ItemDescriptions:
 	dw NormalBoxDesc
 	dw GorgeousBoxDesc
 	dw SunStoneDesc
-	dw MetalCoatDesc ; STEEL_INGOT ; PolkadotBowDesc
+	dw SteelIngotDesc ; PolkadotBowDesc
 	dw UpGradeDesc
 	dw OranBerryDesc
 	dw SitrusBerryDesc
 	dw SquirtBottleDesc
 	dw ParkBallDesc
 	dw RainbowWingDesc
-	dw BrickPieceDesc
+	dw HeartScaleDesc ; BrickPieceDesc
 	dw FlowerMailDesc
-	dw SuperRod2Desc  ; TeruSama1Desc
-	dw TeruSama2Desc ;+
-	dw TeruSama3Desc ;+
-	dw TeruSama4Desc ;+
-	dw TeruSama5Desc ;+
-	dw TeruSama6Desc ;+
-	dw TeruSama7Desc ;+
-	dw TeruSama0Desc ;+ ITEM_C3
-	dw TeruSama0Desc ;+ ITEM_D3
+	dw SuperRod2Desc
+	dw TeruSama0Desc ; ITEM_A5
+	dw TeruSama0Desc ; ITEM_A6
+	dw TeruSama0Desc ; ITEM_A7
+	dw TeruSama0Desc ; ITEM_A8
+	dw TeruSama0Desc ; ITEM_A9
 	assert_table_length NUM_ITEMS
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc
-	dw TeruSama8Desc ;+
-	dw TeruSama8Desc ;+
-	dw TeruSama8Desc ;+
-	dw TeruSama8Desc ;+
-	dw TeruSama8Desc ;+
-	dw TeruSama8Desc ;+
-	dw TeruSama8Desc ;+
-	dw TeruSama8Desc ;+
-	dw TeruSama8Desc ;+
-	dw TeruSama8Desc ;+
-	dw TeruSama8Desc ;+
-	dw TeruSama8Desc ;+
-	dw TeruSama8Desc ;+
-	dw TeruSama8Desc ;+
-	dw TeruSama8Desc ;+
-	dw TeruSama8Desc ;+
-	dw TeruSama8Desc ;+
-	dw TeruSama8Desc ;+
-	dw TeruSama8Desc ;+
-	dw TeruSama8Desc ;+
-	dw TeruSama8Desc ;+
-	dw TeruSama8Desc ;+
-	dw TeruSama8Desc ;+
-	dw TeruSama8Desc ;+
-	dw TeruSama8Desc ;+
-	dw TeruSama8Desc ;+
-	dw TeruSama9Desc
-	dw TeruSama9Desc
-	dw TeruSama9Desc
-	dw TeruSama9Desc
-	dw TeruSama9Desc
-	dw TeruSama9Desc
-	dw TeruSama9Desc
-	assert_table_length $ff ;$fd ;$ff
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	assert_table_length NUM_ITEMS + NUM_TMS
+	dw TeruSama2Desc
+	dw TeruSama2Desc
+	dw TeruSama2Desc
+	dw TeruSama2Desc
+	dw TeruSama2Desc
+	dw TeruSama2Desc
+	dw TeruSama2Desc
+	assert_table_length NUM_ITEMS + NUM_TMS + NUM_HMS
+;	dw TeruSama0Desc ; ITEM_FF
+;	assert_table_length $ff ;include ITEM_FF
+;	assert_table_length $fe ;don't include ITEM_FF
+;	assert_table_length NUM_ITEMS + NUM_TMS + NUM_HMS + 1 ; count ITEM_FF
 
 MasterBallDesc:
-	db   "The best BALL. It"
-	next "never misses.@"
+	db   "The best BALL."
+	next "It never fails.@"
 
 UltraBallDesc:
 	db   "A BALL with a high"
@@ -272,21 +276,32 @@ BrightpowderDesc:
 	next "accuracy. (HOLD)@"
 
 GreatBallDesc:
-	db   "A BALL with a de-"
-	next "cent success rate.@"
+	db   "A BALL with a good"
+	next "rate of success.@"
 
 PokeBallDesc:
-	db   "An item for catch-"
-	next "ing #MON.@"
+	db   "Standard BALL for"
+	next "catching #MON.@"
+;	db   "An item for catch-"
+;	next "ing #MON.@"
 
 TownMapDesc:
-	db   "?@"
+	db   "A map of the local"
+	next "routes & towns.@"
 
 BicycleDesc:
 	db   "A collapsible bike"
 	next "for fast movement.@"
 
 MoonStoneDesc:
+FireStoneDesc:
+ThunderStoneDesc:
+WaterStoneDesc:
+LinkingCordDesc:
+LeafStoneDesc:
+MetalCoatDesc:
+DragonScaleDesc:
+SunStoneDesc:
 	db   "Evolves certain"
 	next "kinds of #MON.@"
 
@@ -342,21 +357,21 @@ MaxElixerDesc:
 	db   "Fully restores the"
 	next "PP of one #MON.@"
 
-FireStoneDesc:
-	db   "Evolves certain"
-	next "kinds of #MON.@"
+;FireStoneDesc:
+;	db   "Evolves certain"
+;	next "kinds of #MON.@"
 
-ThunderStoneDesc:
-	db   "Evolves certain"
-	next "kinds of #MON.@"
+;ThunderStoneDesc:
+;	db   "Evolves certain"
+;	next "kinds of #MON.@"
 
-WaterStoneDesc:
-	db   "Evolves certain"
-	next "kinds of #MON.@"
+;WaterStoneDesc:
+;	db   "Evolves certain"
+;	next "kinds of #MON.@"
 
-LinkingCordDesc:
-	db   "Evolves certain"
-	next "kinds of #MON.@"
+;LinkingCordDesc:
+;	db   "Evolves certain"
+;	next "kinds of #MON.@"
 
 HPUpDesc:
 	db   "Raises the HP of"
@@ -375,8 +390,10 @@ CarbosDesc:
 	next "one #MON.@"
 
 LuckyPunchDesc:
-	db   "Ups critical hit"
-	next "ratio of CHANSEY.@"
+	db   "Boosts CHANSEY"
+	next "crit ratio. (HOLD)@"
+;	db   "Ups critical hit"
+;	next "ratio of CHANSEY.@"
 
 CalciumDesc:
 	db   "Ups SPECIAL stats"
@@ -390,9 +407,9 @@ XAccuracyDesc:
 	db   "Raises accuracy."
 	next "(1 BTL)@"
 
-LeafStoneDesc:
-	db   "Evolves certain"
-	next "kinds of #MON.@"
+;LeafStoneDesc:
+;	db   "Evolves certain"
+;	next "kinds of #MON.@"
 
 MetalPowderDesc:
 	db   "Raises DEFENSE of"
@@ -497,7 +514,7 @@ SuperRodDesc:
 
 PPUpDesc:
 	db   "Raises max PP of"
-	next "a selected move.@"
+	next "one move.@"
 
 EtherDesc:
 	db   "Restores PP of one"
@@ -545,7 +562,7 @@ MoomooMilkDesc:
 
 QuickClawDesc:
 	db   "Raises 1st strike"
-	next "ratio. (HOLD)@"
+	next "chance. (HOLD)@"
 
 PechaBerryDesc:
 	db   "A self-cure for"
@@ -616,8 +633,10 @@ OldAmberDesc:
 	next "#MON fossil.@"
 
 AmuletCoinDesc:
-	db   "Doubles monetary"
-	next "earnings. (HOLD)@"
+	db   "Doubles money won"
+	next "in battle. (HOLD)@"
+;	db   "Doubles monetary"
+;	next "earnings. (HOLD)@"
 
 YlwApricornDesc:
 	db   "A yellow APRICORN.@"
@@ -645,12 +664,10 @@ BlackbeltDesc:
 	next "type moves. (HOLD)@"
 
 BlkApricornDesc:
-	db   "A black APRICORN."
-	next "@"
+	db   "A black APRICORN.@"
 
 PnkApricornDesc:
-	db   "A pink APRICORN."
-	next "@"
+	db   "A pink APRICORN.@"
 
 BlackGlassesDesc:
 	db   "Powers up dark-"
@@ -660,7 +677,7 @@ BlackGlassesDesc:
 ;	db   "Very tasty. Sell"
 ;	next "high.@"
 GoldTeethDesc:
-	db   "Gold-plated"
+	db   "Some gold-plated"
 	next "false teeth.@"
 
 SilkScarfDesc:
@@ -668,8 +685,10 @@ SilkScarfDesc:
 	next "type moves. (HOLD)@"
 
 StickDesc:
-	db   "An ordinary stick."
-	next "Sell low.@"
+	db   "Boosts FARFETCH'D"
+	next "crit ratio. (HOLD)@"
+;	db   "An ordinary stick."
+;	next "Sell low.@"
 
 SmokeBallDesc:
 	db   "Escape from wild"
@@ -696,8 +715,10 @@ BigPearlDesc:
 	next "pearl. Sell high.@"
 
 EverStoneDesc:
-	db   "Stops evolution."
-	next "(HOLD)@"
+	db   "Prevents #MON"
+	next "evolution. (HOLD)@"
+;	db   "Stops evolution."
+;	next "(HOLD)@"
 
 SpellTagDesc:
 	db   "Powers up ghost-"
@@ -706,14 +727,12 @@ SpellTagDesc:
 ;RageCandyBarDesc:
 ;	db   "Restores #MON"
 ;	next "HP by 20.@"
-
 SilphScopeDesc:              ;silvermirror
 	db   "Able to reveal"
 	next "unseen #MON.@"
 
 GSBallDesc:
-	db   "The mysterious"
-	next "BALL.@"
+	db   "A mysterious BALL.@"
 
 BlueCardDesc:
 	db   "Card to save"
@@ -724,8 +743,10 @@ MiracleSeedDesc:
 	next "type moves. (HOLD)@"
 
 ThickClubDesc:
-	db   "A bone of some"
-	next "sort. Sell low.@"
+	db   "Boosts MAROWAK's"
+	next "ATTACK. (HOLD)@"
+;	db   "A bone of some"
+;	next "sort. Sell low.@"
 
 FocusBandDesc:
 	db   "May prevent faint-"
@@ -764,7 +785,6 @@ CardKeyDesc:
 ;MachinePartDesc:
 ;	db   "A machine part for"
 ;	next "the POWER PLANT.@"
-
 BikeVoucherDesc:
 	db   "Can be redeemed"
 	next "at BIKE SHOP.@"
@@ -773,13 +793,12 @@ EggTicketDesc:
 	db   "May use at Golden-"
 	next "rod trade corner.@"
 
-CardKeyRDesc:
-	db   "Opens shutters in"
-	next "the RADIO TOWER.@"
-
 ;LostItemDesc:
 ;	db   "The #DOLL lost"
 ;	next "by the COPYCAT.@"
+CardKeyRDesc:
+	db   "Opens shutters in"
+	next "the RADIO TOWER.@"
 
 StardustDesc:
 	db   "Pretty, red sand."
@@ -792,12 +811,14 @@ StarPieceDesc:
 ;BasementKeyDesc:
 ;	db   "Opens doors.@"
 ElevatorKeyDesc:
-	db   "Unlocks hideout"
-	next "elevator.@"
+	db   "Unlocks elevator"
+	next "in ROCKET HIDEOUT.@"
 
 PassDesc:
-	db   "A ticket for the"
+	db   "A PASS to ride the"
 	next "MAGNET TRAIN.@"
+;	db   "A ticket for the"
+;	next "MAGNET TRAIN.@"
 
 SafariBallDesc:
 	db   "The BALL used in"
@@ -815,9 +836,9 @@ ScopeLensDesc:
 	db   "Raises critical"
 	next "hit ratio. (HOLD)@"
 
-MetalCoatDesc:
-	db   "Powers up steel-"
-	next "type moves. (HOLD)@"
+;MetalCoatDesc:
+;	db   "Powers up steel-"
+;	next "type moves. (HOLD)@"
 
 DragonFangDesc:
 	db   "Powers up dragon-"
@@ -831,9 +852,11 @@ LeppaBerryDesc:
 	db   "A self-restore"
 	next "for PP. (HOLD)@"
 
-DragonScaleDesc:
-	db   "A rare dragon-type"
-	next "item.@"
+;DragonScaleDesc:
+;	db   "Evolves certain"
+;	next "kinds of #MON.@"
+;	db   "A rare dragon-type"
+;	next "item.@"
 
 BerserkGeneDesc:
 	db   "Boosts ATTACK but"
@@ -883,13 +906,16 @@ GorgeousBoxDesc:
 	db   "Open it and see"
 	next "what's inside.@"
 
-SunStoneDesc:
-	db   "Evolves certain"
-	next "kinds of #MON.@"
+;SunStoneDesc:
+;	db   "Evolves certain"
+;	next "kinds of #MON.@"
 
 ;PolkadotBowDesc:
 ;	db   "Powers up normal-"
 ;	next "type moves. (HOLD)@"
+SteelIngotDesc:
+	db   "Powers up steel-"
+	next "type moves. (HOLD)@"
 
 UpGradeDesc:
 	db   "A mysterious box"
@@ -915,17 +941,22 @@ RainbowWingDesc:
 	db   "A mystical feather"
 	next "of rainbow colors.@"
 
-BrickPieceDesc:
-	db   "A rare chunk of"
-	next "tile.@"
+;BrickPieceDesc:
+;	db   "A rare chunk of"
+;	next "tile.@"
+HeartScaleDesc:
+	db   "A scale loved by"
+	next "collectors.@"
 
 FlowerMailDesc:
 	db   "Flower-print MAIL."
 	next "(HOLD)@"
 
 SuperRod2Desc:
-	db   "There is a special"
-	next "lure on this ROD.@"
+	db   "The best ROD with"
+	next "a special lure.@"
+;	db   "There is a special"
+;	next "lure on this ROD.@"
 
 ;SurfMailDesc:
 ;	db   "LAPRAS-print MAIL."
@@ -964,31 +995,27 @@ SuperRod2Desc:
 ;	next "(HOLD)@"
 
 TeruSama0Desc:
-	db   "?@"
-	
 TeruSama1Desc:
-	db   "?@"
-
 TeruSama2Desc:
 	db   "?@"
 
-TeruSama3Desc:
-	db   "?@"
+;TeruSama3Desc:
+;	db   "?@"
 
-TeruSama4Desc:
-	db   "?@"
+;TeruSama4Desc:
+;	db   "?@"
 
-TeruSama5Desc:
-	db   "?@"
+;TeruSama5Desc:
+;	db   "?@"
 
-TeruSama6Desc:
-	db   "?@"
+;TeruSama6Desc:
+;	db   "?@"
 
-TeruSama7Desc:
-	db   "?@"
+;TeruSama7Desc:
+;	db   "?@"
 
-TeruSama8Desc:
-	db   "?@"
+;TeruSama8Desc:
+;	db   "?@"
 
-TeruSama9Desc:
-	db   "?@"
+;TeruSama9Desc:
+;	db   "?@"

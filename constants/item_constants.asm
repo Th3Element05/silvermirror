@@ -167,17 +167,14 @@
 	const SQUIRTBOTTLE ; 9f
 	const PARK_BALL    ; a0
 	const RAINBOW_WING ; a1
-	const BRICK_PIECE  ; a2 ; held by traded machop, useless?
+	const HEART_SCALE  ; a2 ; BRICK_PIECE
 	const FLOWER_MAIL  ; a3
 	const SUPER_ROD_2  ; a4 ; ITEM_BE
-	const ITEM_2D      ; a5
-	const ITEM_32      ; a6
-	const ITEM_88      ; a7
-	const ITEM_89      ; a8
-	const ITEM_8D      ; a9
-	const ITEM_8E      ; aa ; TMs start at aa ?
-	const ITEM_C3      ; f6
-	const ITEM_DC      ; f7
+	const ITEM_A5      ; a5
+	const ITEM_A6      ; a6
+	const ITEM_A7      ; a7
+	const ITEM_A8      ; a8
+	const ITEM_A9      ; a9
 DEF NUM_ITEMS EQU const_value - 1
 
 DEF __tmhm_value__ = 1
@@ -202,7 +199,7 @@ DEF TM01 EQU const_value
 	add_tm DYNAMICPUNCH ; aa
 	add_tm RAZOR_WIND   ; ab
 	add_tm SWORDS_DANCE ; ac
-	add_tm ROLLOUT      ; ad ;WHIRLWIND    ; ad
+	add_tm ROLLOUT      ; ad ;WHIRLWIND
 	add_tm MEGA_KICK    ; ae
 	add_tm TOXIC        ; af
 	add_tm HORN_DRILL   ; b0
@@ -252,9 +249,9 @@ DEF TM01 EQU const_value
 	add_tm FLAMETHROWER ; dc
 	add_tm SPARK        ; dd
 	add_tm ICY_WIND     ; de
-	add_tm FALSE_SWIPE  ; df ;HEADBUTT     ; df
-	add_tm HEADBUTT     ; e0 ;CURSE        ; e0
-	add_tm CURSE        ; e1 ;ROLLOUT      ; e1 (tm04)
+	add_tm FALSE_SWIPE  ; df ;HEADBUTT
+	add_tm HEADBUTT     ; e0 ;CURSE
+	add_tm CURSE        ; e1 ;ROLLOUT
 	add_tm ROCK_SMASH   ; e2
 	add_tm HIDDEN_POWER ; e3
 	add_tm SUNNY_DAY    ; e4
@@ -276,6 +273,7 @@ DEF TM01 EQU const_value
 	add_tm FURY_CUTTER  ; f4
 	add_tm NIGHTMARE    ; f5
 	add_tm ANCIENTPOWER ; f6
+	add_tm TACKLE       ; f7 ;unused
 DEF NUM_TMS EQU __tmhm_value__ - 1
 
 MACRO add_hm
@@ -290,13 +288,13 @@ MACRO add_hm
 ENDM
 
 DEF HM01 EQU const_value
-	add_hm CUT          ; f8 ;f3
-	add_hm FLY          ; f9 ;f4
-	add_hm SURF         ; fa ;f5
-	add_hm STRENGTH     ; fb ;f6
-	add_hm FLASH        ; fc ;f7
-	add_hm WHIRLPOOL    ; fd ;f8
-	add_hm WATERFALL    ; fe ;f9
+	add_hm CUT          ; f8
+	add_hm FLY          ; f9
+	add_hm SURF         ; fa
+	add_hm STRENGTH     ; fb
+	add_hm FLASH        ; fc
+	add_hm WHIRLPOOL    ; fd
+	add_hm WATERFALL    ; fe
 DEF NUM_HMS EQU __tmhm_value__ - NUM_TMS - 1
 
 MACRO add_mt
@@ -316,7 +314,7 @@ DEF NUM_TUTORS = __tmhm_value__ - NUM_TMS - NUM_HMS - 1
 
 DEF NUM_TM_HM_TUTOR EQU NUM_TMS + NUM_HMS + NUM_TUTORS
 
-	const ITEM_FF       ; ff ; unused?
+;	const ITEM_FF       ; ff ; unnecessary / out of place
 
 DEF USE_SCRIPT_VAR EQU $00
 DEF ITEM_FROM_MEM  EQU $ff
@@ -324,4 +322,4 @@ DEF ITEM_FROM_MEM  EQU $ff
 ; leftovers from red
 DEF SAFARI_BALL_RED EQU $08 ; MOON_STONE
 DEF MOON_STONE_RED  EQU $0a ; BURN_HEAL
-DEF FULL_HEAL_RED   EQU $34 ; X_SPEED
+DEF FULL_HEAL_RED   EQU $32 ;$34 ; X_SPEED
