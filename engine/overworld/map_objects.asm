@@ -2942,8 +2942,9 @@ InitSprites:
 	ld hl, OBJECT_SPRITE_Y_OFFSET
 	add hl, bc
 	add [hl]
-	add 12 ;silvermirror change this for all overworld sprite Y offsets
-;	add 16 ;silvermirror change this for all overworld sprite Y offsets
+;	add 12 ;silvermirror - overworld sprite Y offset (12, +4)(default)
+	add 14 ;silvermirror - overworld sprite Y offset (14, +2)
+;	add 16 ;silvermirror - overworld sprite Y offset (16, aligned)
 	ld e, a
 	ld a, [wPlayerBGMapOffsetY]
 	add e
