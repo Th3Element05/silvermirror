@@ -126,18 +126,18 @@ DEF SPAWN_N_A EQU -1
 	const_def
 ; johto
 DEF JOHTO_FLYPOINT EQU const_value
-	const FLY_NEW_BARK
-	const FLY_CHERRYGROVE
-	const FLY_VIOLET
-	const FLY_AZALEA
-	const FLY_GOLDENROD
-	const FLY_ECRUTEAK
 	const FLY_OLIVINE
-	const FLY_CIANWOOD
-;	const FLY_SAFARI
+	const FLY_ECRUTEAK
+	const FLY_GOLDENROD
+	const FLY_AZALEA
+	const FLY_VIOLET
+	const FLY_CHERRYGROVE
+	const FLY_NEW_BARK
+	const FLY_BLACKTHORN
 	const FLY_MAHOGANY
 	const FLY_LAKE_OF_RAGE
-	const FLY_BLACKTHORN
+	const FLY_CIANWOOD
+;	const FLY_SAFARI
 	const FLY_MT_SILVER
 ; kanto
 DEF KANTO_FLYPOINT EQU const_value
@@ -156,3 +156,18 @@ DEF KANTO_FLYPOINT EQU const_value
 	const FLY_PALLET
 DEF NUM_FLYPOINTS EQU const_value
 
+;; johto
+;DEF JOHTO_FLYPOINT EQU const_value
+;	const FLY_NEW_BARK
+;	const FLY_CHERRYGROVE
+;	const FLY_VIOLET
+;	const FLY_AZALEA
+;	const FLY_GOLDENROD
+;	const FLY_ECRUTEAK
+;	const FLY_OLIVINE
+;	const FLY_CIANWOOD
+;;	const FLY_SAFARI
+;	const FLY_MAHOGANY
+;	const FLY_LAKE_OF_RAGE
+;	const FLY_BLACKTHORN
+;	const FLY_MT_SILVER
