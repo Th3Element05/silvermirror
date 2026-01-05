@@ -51,232 +51,104 @@ Route46_NoFruit:
 	farsjump Std_NoFruitScript
 
 ; trainers
-;TrainerCamperTed:
-;	trainer CAMPER, TED, EVENT_BEAT_CAMPER_TED, CamperTedSeenText, CamperTedBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext CamperTedAfterBattleText
-;	waitbutton
-;	closetext
-;	end
-
-;TrainerPicnickerErin1:
-;	trainer PICNICKER, ERIN1, EVENT_BEAT_PICNICKER_ERIN, PicnickerErin1SeenText, PicnickerErin1BeatenText, 0, .Script
-
-;.Script:
-;	loadvar VAR_CALLERID, PHONE_PICNICKER_ERIN
-;	opentext
-;	checkflag ENGINE_ERIN_READY_FOR_REMATCH
-;	iftrue .WantsBattle
-;	checkcellnum PHONE_PICNICKER_ERIN
-;	iftrue .ErinDefeated
-;	checkevent EVENT_ERIN_ASKED_FOR_PHONE_NUMBER
-;	iftrue .AskedAlready
-;	writetext PicnickerErinAfterBattleText
-;	promptbutton
-;	setevent EVENT_ERIN_ASKED_FOR_PHONE_NUMBER
-;	scall Route46AskNumber1F
-;	sjump .AskForNumber
-
-;.AskedAlready:
-;	scall Route46AskNumber2F
-;.AskForNumber:
-;	askforphonenumber PHONE_PICNICKER_ERIN
-;	ifequal PHONE_CONTACTS_FULL, Route46PhoneFullF
-;	ifequal PHONE_CONTACT_REFUSED, Route46NumberDeclinedF
-;	gettrainername STRING_BUFFER_3, PICNICKER, ERIN1
-;	scall Route46RegisteredNumberF
-;	sjump Route46NumberAcceptedF
-
-;.WantsBattle:
-;	scall Route46RematchF
-;	winlosstext PicnickerErin1BeatenText, 0
-;	checkevent EVENT_RESTORED_POWER_TO_KANTO
-;	iftrue .LoadFight2
-;	checkevent EVENT_BEAT_ELITE_FOUR
-;	iftrue .LoadFight1
-;	loadtrainer PICNICKER, ERIN1
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_ERIN_READY_FOR_REMATCH
-;	end
-
-;.LoadFight1:
-;	loadtrainer PICNICKER, ERIN2
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_ERIN_READY_FOR_REMATCH
-;	end
-
-;.LoadFight2:
-;	loadtrainer PICNICKER, ERIN3
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_ERIN_READY_FOR_REMATCH
-;	checkevent EVENT_ERIN_CALCIUM
-;	iftrue .HasCalcium
-;	checkevent EVENT_GOT_CALCIUM_FROM_ERIN
-;	iftrue .GotCalciumAlready
-;	scall Route46RematchGiftF
-;	verbosegiveitem CALCIUM
-;	iffalse ErinNoRoomForCalcium
-;	setevent EVENT_GOT_CALCIUM_FROM_ERIN
-;	sjump Route46NumberAcceptedF
-
-;.GotCalciumAlready:
+TrainerCoolDuoThomAndKae_Thom:
+	trainer COOL_DUO, THOMANDKAE, EVENT_BEAT_COOL_DUO_THOMANDKAE, CoolDuoThomSeenText, CoolDuoThomAndKaeBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext CoolDuoThomAfterBattleText
+	waitbutton
+	closetext
 	end
 
-;.HasCalcium:
-;	opentext
-;	writetext PicnickerErin2BeatenText
-;	waitbutton
-;	verbosegiveitem CALCIUM
-;	iffalse ErinNoRoomForCalcium
-;	clearevent EVENT_ERIN_CALCIUM
-;	setevent EVENT_GOT_CALCIUM_FROM_ERIN
-;	sjump Route46NumberAcceptedF
+TrainerCoolDuoThomAndKae_Kae:
+	trainer COOL_DUO, THOMANDKAE, EVENT_BEAT_COOL_DUO_THOMANDKAE, CoolDuoKaeSeenText, CoolDuoThomAndKaeBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext CoolDuoKaeAfterBattleText
+	waitbutton
+	closetext
+	end
 
-;.ErinDefeated:
-;	writetext PicnickerErinAfterBattleText
-;	promptbutton
-;	closetext
-;	end
+CoolDuoThomSeenText:
+	text "THOM: We've been"
+	line "raising our #-"
+	cont "MON together!"
 
-;Route46AskNumber1F:
-;	jumpstd AskNumber1FScript
-;	end
+	para "Will you battle"
+	line "with us?"
+	done
 
-;Route46AskNumber2F:
-;	jumpstd AskNumber2FScript
-;	end
+CoolDuoKaeSeenText:
+	text "KAE: We've been"
+	line "raising our #-"
+	cont "MON together!"
 
-;Route46RegisteredNumberF:
-;	jumpstd RegisteredNumberFScript
-;	end
+	para "Will you battle"
+	line "with us?"
+	done
 
-;Route46NumberAcceptedF:
-;	jumpstd NumberAcceptedFScript
-;	end
+CoolDuoThomAndKaeBeatenText:
+	text "Wha…? We lost?"
+	done
 
-;Route46NumberDeclinedF:
-;	jumpstd NumberDeclinedFScript
-;	end
+CoolDuoThomAfterBattleText:
+	text "We did our best,"
+	line "but came up short."
 
-;Route46PhoneFullF:
-;	jumpstd PhoneFullFScript
-;	end
+	para "No excuses--I"
+	line "admit we lost."
+	done
 
-;Route46RematchF:
-;	jumpstd RematchFScript
-;	end
+CoolDuoKaeAfterBattleText:
+	text "We've been to many"
+	line "GYMs, but the GYM"
+	cont "in GOLDENROD is my"
+	cont "favorite."
 
-;ErinNoRoomForCalcium:
-;	setevent EVENT_ERIN_CALCIUM
-;	jumpstd PackFullFScript
-;	end
+	para "It's filled with"
+	line "pretty flowers!"
+	done
 
-;Route46RematchGiftF:
-;	jumpstd RematchGiftFScript
-;	end
+TrainerHikerAlec:
+	trainer HIKER, ALEC, EVENT_BEAT_HIKER_ALEC, HikerAlecSeenText, HikerAlecBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext HikerAlecAfterBattleText
+	waitbutton
+	closetext
+	end
 
-;TrainerHikerBailey:
-;	trainer HIKER, BAILEY, EVENT_BEAT_HIKER_BAILEY, HikerBaileySeenText, HikerBaileyBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext HikerBaileyAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+HikerAlecSeenText:
+	text "Awright! I'll show"
+	line "you the power of"
+	cont "mountain #MON!"
+	done
 
+HikerAlecBeatenText:
+	text "Mercy! You showed"
+	line "me your power!"
+	done
+
+HikerAlecAfterBattleText:
+	text "It's over. I don't"
+	line "mind. We HIKERs"
+	cont "are like that."
+	done
+
+; text
 Route46Sign:
 	jumptext Route46SignText
-
-Route46XSpeed:
-	itemball X_SPEED
-
-;HikerBaileySeenText:
-;	text "Awright! I'll show"
-;	line "you the power of"
-;	cont "mountain #MON!"
-;	done
-;
-;HikerBaileyBeatenText:
-;	text "Mercy! You showed"
-;	line "me your power!"
-;	done
-;
-;HikerBaileyAfterBattleText:
-;	text "It's over. I don't"
-;	line "mind. We HIKERS"
-;	cont "are like that."
-;	done
-;
-;CamperTedSeenText:
-;	text "I'm raising #-"
-;	line "MON too!"
-;
-;	para "Will you battle"
-;	line "with me?"
-;	done
-;
-;CamperTedBeatenText:
-;	text "Wha…?"
-;	done
-;
-;CamperTedAfterBattleText:
-;	text "I did my best but"
-;	line "came up short."
-;
-;	para "No excuses--I"
-;	line "admit I lost."
-;	done
-;
-;PicnickerErin1SeenText:
-;	text "I raise #MON"
-;	line "too!"
-;
-;	para "Will you battle"
-;	line "with me?"
-;	done
-;
-;PicnickerErin1BeatenText:
-;	text "Oh, rats!"
-;	done
-;
-;PicnickerErinAfterBattleText:
-;	text "I've been to many"
-;	line "GYMS, but the GYM"
-;
-;	para "in GOLDENROD is my"
-;	line "favorite."
-;
-;	para "It's filled with"
-;	line "pretty flowers!"
-;	done
-;
-;PicnickerErin2BeatenText:
-;	text "Aww… I keep losing"
-;	line "all the time!"
-;
-;	para "I'll just have to"
-;	line "try harder!"
-;
-;	para "Anyway, thanks for"
-;	line "battling me again"
-;
-;	para "and again. Here's"
-;	line "that present from"
-;	cont "the other time."
-;	done
-;
 Route46SignText:
 	text "ROUTE 46"
 	line "MOUNTAIN RD. AHEAD"
 	done
+
+; items
+Route46XSpeed:
+	itemball X_SPEED
 
 Route46_MapEvents:
 	db 0, 0 ; filler
@@ -296,7 +168,7 @@ Route46_MapEvents:
 	def_object_events
 	object_event  7,  6, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route46_CheriBerry, EVENT_ROUTE_46_CHERI_BERRY
 	object_event  8,  5, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, Route46_SitrusBerry, EVENT_ROUTE_46_SITRUS_BERRY
-;	object_event 12, 19, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerHikerBailey, -1
-;	object_event  4, 14, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerCamperTed, -1
-;	object_event  2, 13, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerPicnickerErin1, -1
-;	object_event  1, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route46XSpeed, EVENT_ROUTE_46_X_SPEED
+	object_event  4, 14, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerCoolDuoThomAndKae_Thom, -1 ;ted
+	object_event  3, 13, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerCoolDuoThomAndKae_Kae, -1 ;erin
+	object_event 12, 19, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerHikerAlec, -1 ;bailey
+	object_event  1, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route46XSpeed, EVENT_ROUTE_46_X_SPEED
