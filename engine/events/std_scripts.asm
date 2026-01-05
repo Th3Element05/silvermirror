@@ -1524,6 +1524,8 @@ PhoneFullMScript:
 	end
 
 RematchMScript:
+	loadtemptrainer	;silvermirror+ play encounter music before rematch
+	encountermusic ;silvermirror+ play encounter music before rematch
 	readvar VAR_CALLERID
 	ifequal PHONE_SCHOOLBOY_JACK, .Jack
 	ifequal PHONE_SAILOR_HUEY, .Huey
@@ -2185,6 +2187,8 @@ PhoneFullFScript:
 	end
 
 RematchFScript:
+	loadtemptrainer ;silvermirror+ play encounter music before rematch
+	encountermusic ;silvermirror+ play encounter music before rematch
 	readvar VAR_CALLERID
 	ifequal PHONE_COOLTRAINERF_BETH, .Beth
 	ifequal PHONE_COOLTRAINERF_REENA, .Reena
