@@ -2,7 +2,7 @@
 	const ROUTE37_RED_APRICORN
 	const ROUTE37_BLU_APRICORN
 	const ROUTE37_BLK_APRICORN
-	const ROUTE37_SUNNY
+;	const ROUTE37_SUNNY
 
 Route37_MapScripts:
 	def_scene_scripts
@@ -18,14 +18,14 @@ Route37FruittreesandSunny:
 	appear ROUTE37_BLK_APRICORN
 	; fallthrough
 .Sunny:
-	readvar VAR_WEEKDAY
-	ifequal SUNDAY, .SunnyAppears
-	disappear ROUTE37_SUNNY
+;	readvar VAR_WEEKDAY
+;	ifequal SUNDAY, .SunnyAppears
+;	disappear ROUTE37_SUNNY
 	endcallback
 
-.SunnyAppears:
-	appear ROUTE37_SUNNY
-	endcallback
+;.SunnyAppears:
+;	appear ROUTE37_SUNNY
+;	endcallback
 
 ; fruit
 Route37_REDApricorn:
@@ -77,109 +77,110 @@ Route37_NoFruit:
 	farsjump Std_NoFruitScript
 
 ; scripts
-SunnyScript:
-	faceplayer
-	opentext
-	checkevent EVENT_GOT_MAGNET_FROM_SUNNY
-	iftrue SunnySundayScript
-	readvar VAR_WEEKDAY
-	ifnotequal SUNDAY, SunnyNotSundayScript
-	checkevent EVENT_MET_SUNNY_OF_SUNDAY
-	iftrue .MetSunny
-	writetext MeetSunnyText
-	promptbutton
-	setevent EVENT_MET_SUNNY_OF_SUNDAY
-.MetSunny:
-	checkflag ENGINE_PLAYER_IS_FEMALE
-	iftrue .Kris
-	writetext SunnyGivesGiftText1
-	promptbutton
-	sjump .next
-.Kris:
-	writetext SunnyGivesGiftText2
-	promptbutton
-.next
-	verbosegiveitem MAGNET
-	iffalse SunnyDoneScript
-	setevent EVENT_GOT_MAGNET_FROM_SUNNY
-	writetext SunnyGaveGiftText
-	waitbutton
-	closetext
-	end
+;SunnyScript:
+;	faceplayer
+;	opentext
+;	checkevent EVENT_GOT_MAGNET_FROM_SUNNY
+;	iftrue SunnySundayScript
+;	readvar VAR_WEEKDAY
+;	ifnotequal SUNDAY, SunnyNotSundayScript
+;	checkevent EVENT_MET_SUNNY_OF_SUNDAY
+;	iftrue .MetSunny
+;	writetext MeetSunnyText
+;	promptbutton
+;	setevent EVENT_MET_SUNNY_OF_SUNDAY
+;.MetSunny:
+;	checkflag ENGINE_PLAYER_IS_FEMALE
+;	iftrue .Kris
+;	writetext SunnyGivesGiftText1
+;	promptbutton
+;	sjump .next
+;.Kris:
+;	writetext SunnyGivesGiftText2
+;	promptbutton
+;.next
+;	verbosegiveitem MAGNET
+;	iffalse SunnyDoneScript
+;	setevent EVENT_GOT_MAGNET_FROM_SUNNY
+;	writetext SunnyGaveGiftText
+;	waitbutton
+;	closetext
+;	end
 
-SunnySundayScript:
-	writetext SunnySundayText
-	waitbutton
-SunnyDoneScript:
-	closetext
-	end
+;SunnySundayScript:
+;	writetext SunnySundayText
+;	waitbutton
+;SunnyDoneScript:
+;	closetext
+;	end
 
-SunnyNotSundayScript:
-	writetext SunnyNotSundayText
-	waitbutton
-	closetext
-	end
+;SunnyNotSundayScript:
+;	writetext SunnyNotSundayText
+;	waitbutton
+;	closetext
+;	end
 
-MeetSunnyText:
-	text "SUNNY: Hi!"
+;MeetSunnyText:
+;	text "SUNNY: Hi!"
+;
+;	para "I'm SUNNY of Sun-"
+;	line "day, meaning it's"
+;	cont "Sunday today!"
+;	done
 
-	para "I'm SUNNY of Sun-"
-	line "day, meaning it's"
-	cont "Sunday today!"
-	done
+;SunnyGivesGiftText1:
+;	text "I was told to give"
+;	line "you this if I saw"
+;	cont "you!"
+;	done
 
-SunnyGivesGiftText1:
-	text "I was told to give"
-	line "you this if I saw"
-	cont "you!"
-	done
+;SunnyGivesGiftText2:
+;	text "I was told to give"
+;	line "you this if I saw"
+;	cont "you!"
+;	done
 
-SunnyGivesGiftText2:
-	text "I was told to give"
-	line "you this if I saw"
-	cont "you!"
-	done
+;SunnyGaveGiftText:
+;	text "SUNNY: That thing…"
+;
+;	para "Um…"
+;
+;	para "… What was it now…"
+;
+;	para "…"
+;
+;	para "Oh! I remember"
+;	line "now!"
+;
+;	para "A #MON that"
+;	line "knows electric"
+;
+;	para "moves should hold"
+;	line "it."
+;
+;	para "My sis MONICA said"
+;	line "it powers up"
+;	cont "electric moves!"
+;	done
 
-SunnyGaveGiftText:
-	text "SUNNY: That thing…"
+;SunnySundayText:
+;	text "SUNNY: My sisters"
+;	line "and brothers are"
+;	cont "MONICA, TUSCANY,"
+;	cont "WESLEY, ARTHUR,"
+;	cont "FRIEDA and SANTOS."
+;
+;	para "They're all older"
+;	line "than me!"
+;	done
 
-	para "Um…"
+;SunnyNotSundayText:
+;	text "SUNNY: Isn't today"
+;	line "Sunday?"
+;	cont "Um… I forgot!"
+;	done
 
-	para "… What was it now…"
-
-	para "…"
-
-	para "Oh! I remember"
-	line "now!"
-
-	para "A #MON that"
-	line "knows electric"
-
-	para "moves should hold"
-	line "it."
-
-	para "My sis MONICA said"
-	line "it powers up"
-	cont "electric moves!"
-	done
-
-SunnySundayText:
-	text "SUNNY: My sisters"
-	line "and brothers are"
-	cont "MONICA, TUSCANY,"
-	cont "WESLEY, ARTHUR,"
-	cont "FRIEDA and SANTOS."
-
-	para "They're all older"
-	line "than me!"
-	done
-
-SunnyNotSundayText:
-	text "SUNNY: Isn't today"
-	line "Sunday?"
-	cont "Um… I forgot!"
-	done
-
+; trainers
 TrainerPsychicMark:
 	trainer PSYCHIC_T, MARK, EVENT_BEAT_PSYCHIC_MARK, PsychicMarkSeenText, PsychicMarkBeatenText, 0, .Script
 .Script:
@@ -291,7 +292,7 @@ Route37_MapEvents:
 	object_event 13,  5, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route37_REDApricorn, EVENT_ROUTE_37_RED_APRICORN
 	object_event 16,  5, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route37_BLUApricorn, EVENT_ROUTE_37_BLU_APRICORN
 	object_event 15,  7, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, Route37_BLKApricorn, EVENT_ROUTE_37_BLK_APRICORN
-	object_event 16,  8, SPRITE_BOY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SunnyScript, EVENT_ROUTE_37_SUNNY_OF_SUNDAY
+;	object_event 16,  8, SPRITE_BOY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SunnyScript, EVENT_ROUTE_37_SUNNY_OF_SUNDAY
 	object_event  6,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 1, TrainerPsychicMark, -1 ;greg
 	object_event  6, 12, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 1, TrainerTwinsAnnandanne1, -1 ;annandanne1
 	object_event  7, 12, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 1, TrainerTwinsAnnandanne2, -1 ;annandanne2

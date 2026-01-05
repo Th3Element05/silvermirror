@@ -1,5 +1,5 @@
 	object_const_def
-	const LAKEOFRAGE_WESLEY
+;	const LAKEOFRAGE_WESLEY
 	const LAKEOFRAGE_MAGIKARP
 	const LAKEOFRAGE_CLAIR
 
@@ -8,97 +8,95 @@ LakeOfRage_MapScripts:
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, LakeOfRageFlypointCallback
-	callback MAPCALLBACK_OBJECTS, LakeOfRageWesleyCallback
+;	callback MAPCALLBACK_OBJECTS, LakeOfRageWesleyCallback
 
 LakeOfRageFlypointCallback:
 	setflag ENGINE_FLYPOINT_LAKE_OF_RAGE
 	endcallback
 
-LakeOfRageWesleyCallback:
-	readvar VAR_WEEKDAY
-	ifequal WEDNESDAY, .WesleyAppears
-	disappear LAKEOFRAGE_WESLEY
-	endcallback
+;LakeOfRageWesleyCallback:
+;	readvar VAR_WEEKDAY
+;	ifequal WEDNESDAY, .WesleyAppears
+;	disappear LAKEOFRAGE_WESLEY
+;	endcallback
+;
+;.WesleyAppears:
+;	appear LAKEOFRAGE_WESLEY
+;	endcallback
 
-.WesleyAppears:
-	appear LAKEOFRAGE_WESLEY
-	endcallback
+;WesleyScript:
+;	faceplayer
+;	opentext
+;	checkevent EVENT_GOT_BLACKBELT_FROM_WESLEY
+;	iftrue WesleyWednesdayScript
+;	readvar VAR_WEEKDAY
+;	ifnotequal WEDNESDAY, WesleyNotWednesdayScript
+;	checkevent EVENT_MET_WESLEY_OF_WEDNESDAY
+;	iftrue .MetWesley
+;	writetext MeetWesleyText
+;	promptbutton
+;	setevent EVENT_MET_WESLEY_OF_WEDNESDAY
+;.MetWesley:
+;	writetext WesleyGivesGiftText
+;	promptbutton
+;	verbosegiveitem BLACKBELT_I
+;	iffalse WesleyDoneScript
+;	setevent EVENT_GOT_BLACKBELT_FROM_WESLEY
+;	writetext WesleyGaveGiftText
+;	waitbutton
+;	closetext
+;	end
 
-WesleyScript:
-	faceplayer
-	opentext
-	checkevent EVENT_GOT_BLACKBELT_FROM_WESLEY
-	iftrue WesleyWednesdayScript
-	readvar VAR_WEEKDAY
-	ifnotequal WEDNESDAY, WesleyNotWednesdayScript
-	checkevent EVENT_MET_WESLEY_OF_WEDNESDAY
-	iftrue .MetWesley
-	writetext MeetWesleyText
-	promptbutton
-	setevent EVENT_MET_WESLEY_OF_WEDNESDAY
-.MetWesley:
-	writetext WesleyGivesGiftText
-	promptbutton
-	verbosegiveitem BLACKBELT_I
-	iffalse WesleyDoneScript
-	setevent EVENT_GOT_BLACKBELT_FROM_WESLEY
-	writetext WesleyGaveGiftText
-	waitbutton
-	closetext
-	end
+;WesleyWednesdayScript:
+;	writetext WesleyWednesdayText
+;	waitbutton
+;WesleyDoneScript:
+;	closetext
+;	end
 
-WesleyWednesdayScript:
-	writetext WesleyWednesdayText
-	waitbutton
-WesleyDoneScript:
-	closetext
-	end
+;WesleyNotWednesdayScript:
+;	writetext WesleyNotWednesdayText
+;	waitbutton
+;	closetext
+;	end
 
-WesleyNotWednesdayScript:
-	writetext WesleyNotWednesdayText
-	waitbutton
-	closetext
-	end
+;MeetWesleyText:
+;	text "WESLEY: Well, how"
+;	line "do you do?"
+;
+;	para "Seeing as how it's"
+;	line "Wednesday today,"
+;	cont "I'm WESLEY of"
+;	cont "Wednesday."
+;	done
 
-MeetWesleyText:
-	text "WESLEY: Well, how"
-	line "do you do?"
+;WesleyGivesGiftText:
+;	text "Pleased to meet"
+;	line "you. Please take a"
+;	cont "souvenir."
+;	done
 
-	para "Seeing as how it's"
-	line "Wednesday today,"
+;WesleyGaveGiftText:
+;	text "WESLEY: BLACKBELT"
+;	line "beefs up the power"
+;	cont "of fighting moves."
+;	done
 
-	para "I'm WESLEY of"
-	line "Wednesday."
-	done
+;WesleyWednesdayText:
+;	text "WESLEY: Since you"
+;	line "found me, you must"
+;	cont "have met my broth-"
+;	cont "ers and sisters."
+;
+;	para "Or did you just"
+;	line "get lucky?"
+;	done
 
-WesleyGivesGiftText:
-	text "Pleased to meet"
-	line "you. Please take a"
-	cont "souvenir."
-	done
-
-WesleyGaveGiftText:
-	text "WESLEY: BLACKBELT"
-	line "beefs up the power"
-	cont "of fighting moves."
-	done
-
-WesleyWednesdayText:
-	text "WESLEY: Since you"
-	line "found me, you must"
-
-	para "have met my broth-"
-	line "ers and sisters."
-
-	para "Or did you just"
-	line "get lucky?"
-	done
-
-WesleyNotWednesdayText:
-	text "WESLEY: Today's"
-	line "not Wednesday."
-	cont "That's too bad."
-	done
+;WesleyNotWednesdayText:
+;	text "WESLEY: Today's"
+;	line "not Wednesday."
+;	cont "That's too bad."
+;	done
 
 ; magikarp
 GoldMagikarp:
@@ -111,16 +109,16 @@ GoldMagikarp:
 	loadwildmon MAGIKARP, 20
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCESHINY
 	startbattle
-;	ifequal LOSE, .NotBeaten ;why is this here?
+	ifequal LOSE, .NotBeaten ;why is this here?
 	disappear LAKEOFRAGE_MAGIKARP
-;.NotBeaten:                 ;why is this here?
+.NotBeaten:                 ;why is this here?
 	reloadmapafterbattle
-	special CheckBattleCaughtResult ; check catch result to respawn if you kill it?
-	iffalse .NoCatch
-	setflag ENGINE_PLAYER_CAUGHT_MAGIKARP ;ENGINE_PLAYER_CAUGHT_ZAPDOS
-.NoCatch
-	checkevent EVENT_DEFEATED_GOLD_MAGIKARP
-	iftrue .SecondChance
+;	special CheckBattleCaughtResult ; check catch result to respawn if you kill it?
+;	iffalse .NoCatch
+;	setflag ENGINE_PLAYER_CAUGHT_MAGIKARP ;ENGINE_PLAYER_CAUGHT_ZAPDOS
+;.NoCatch
+;	checkevent EVENT_DEFEATED_GOLD_MAGIKARP
+;	iftrue .SecondChance
 	opentext
 	giveitem GOLD_SCALE
 	waitsfx
@@ -131,7 +129,7 @@ GoldMagikarp:
 	closetext
 ;	appear LAKEOFRAGE_CLAIR
 	setevent EVENT_DEFEATED_GOLD_MAGIKARP
-.SecondChance
+;.SecondChance
 	end
 
 LakeOfRageMagikarpCryText:
@@ -251,7 +249,7 @@ LakeOfRageClairStayLongerText:
 LakeOfRageGetMoreBadgesText:
 	text "<PLAYER> should"
 	line "return here with"
-	cont "more GYM BADGES."
+	cont "more GYM BADGEs."
 	done
 
 LakeOfRageClairReturnsToGymText:
@@ -263,10 +261,6 @@ LakeOfRageClairReturnsToGymText:
 	line "battle there."
 	done
 
-LakeOfRagePlayerStepsDownMovement:
-	step DOWN
-	step_end
-
 LakeOfRageClairStepsLeftMovement:
 	step LEFT
 	step_end
@@ -277,6 +271,7 @@ LakeOfRageClairLeaveMovement:
 	step DOWN
 	step DOWN
 	step DOWN
+LakeOfRagePlayerStepsDownMovement:
 	step DOWN
 	step_end
 
@@ -404,8 +399,6 @@ CooltrainerfCaraAfterBattleText:
 	cont "pink BUTTERFREE."
 	done
 
-
-
 LakeOfRageSuperNerdScript:
 	jumptextfaceplayer LakeOfRageSuperNerdText
 LakeOfRageSuperNerdText:
@@ -478,7 +471,7 @@ MagikarpHouseSignScript:
 	end
 
 FishingGurusHouseSignText:
-	text "FISHING GURU'S"
+	text "FISHING GURU's"
 	line "HOUSE"
 	done
 
@@ -514,7 +507,7 @@ LakeOfRage_MapEvents:
 	bg_event 35,  4, BGEVENT_ITEM, LakeOfRageHiddenMaxPotion
 
 	def_object_events
-	object_event  2,  5, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WesleyScript, EVENT_LAKE_OF_RAGE_WESLEY_OF_WEDNESDAY
+;	object_event  2,  5, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WesleyScript, EVENT_LAKE_OF_RAGE_WESLEY_OF_WEDNESDAY
 	object_event 22, 20, SPRITE_MAGIKARP_SWIM, SPRITEMOVEDATA_SWIM_WANDER, 2, 1, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, GoldMagikarp, EVENT_LAKE_OF_RAGE_GOLD_MAGIKARP
 	object_event 21, 28, SPRITE_CLAIR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LakeOfRageClairScript, EVENT_CLAIR_RETURNED_TO_GYM ;EVENT_LAKE_OF_RAGE_CLAIR
 	object_event 36, 13, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LakeOfRageSuperNerdScript, -1
