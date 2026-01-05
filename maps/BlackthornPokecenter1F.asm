@@ -24,14 +24,12 @@ BlackthornPokecenter1FGentlemanText:
 BlackthornPokecenter1FTwinScript:
 	jumptextfaceplayer BlackthornPokecenter1FTwinText
 BlackthornPokecenter1FTwinText:
-	text "There was this"
-	line "move I just had"
-	cont "to teach my #-"
-	cont "MON."
+	text "I came to see the"
+	line "MOVE REMINDER."
 
-	para "So I got the MOVE"
-	line "DELETER to make it"
-	cont "forget an HM move."
+	para "He can help ####-"
+	line "MON remember moves"
+	cont "they forgot."
 	done
 
 BlackthornPokecenter1FCooltrainerMScript:
