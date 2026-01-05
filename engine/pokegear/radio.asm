@@ -1,19 +1,19 @@
 PlayRadioShow:
 ; If we're already in the radio program proper, we don't need to be here.
-;	ld a, [wCurRadioLine]
-;	cp POKE_FLUTE_RADIO
-;	jr nc, .ok
+	ld a, [wCurRadioLine]
+	cp POKE_FLUTE_RADIO
+	jr nc, .ok
 ; If Team Rocket is not occupying the radio tower, we don't need to be here.
-;	ld a, [wStatusFlags2]
-;	bit STATUSFLAGS2_ROCKETS_IN_RADIO_TOWER_F, a
-;	jr z, .ok
+	ld a, [wStatusFlags2]
+	bit STATUSFLAGS2_ROCKETS_IN_RADIO_TOWER_F, a
+	jr z, .ok
 ; If we're in Kanto, we don't need to be here.
-;	call IsInJohto
-;	and a
-;	jr nz, .ok
+	call IsInJohto
+	and a
+	jr nz, .ok
 ; Team Rocket broadcasts on all stations.
-;	ld a, ROCKET_RADIO
-;	ld [wCurRadioLine], a
+	ld a, ROCKET_RADIO
+	ld [wCurRadioLine], a
 .ok
 ; Jump to the currently loaded station.  The index to which we need to jump is in wCurRadioLine.
 	jumptable RadioJumptable, wCurRadioLine
@@ -1886,7 +1886,7 @@ BuenasPasswordCheckTime:
 	ret
 
 BuenasPasswordChannelName:
-	db "BUENA'S PASSWORD@"
+	db "BUENA's PASSWORD@"
 
 BuenaRadioText1:
 	text_far _BuenaRadioText1
