@@ -25,7 +25,7 @@ SpawnPoints:
 	spawn CINNABAR_ISLAND,            11, 14
 	spawn ROUTE_23,                    9,  6
 
-	spawn NEW_BARK_TOWN,              13,  6
+	spawn NEW_BARK_TOWN,               6,  5 ;13,  6
 	spawn CHERRYGROVE_CITY,           29,  4
 	spawn VIOLET_CITY,                31, 26
 	spawn ROUTE_32,                   11, 74
