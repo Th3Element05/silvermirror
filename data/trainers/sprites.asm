@@ -43,8 +43,8 @@ BTTrainerClassSprites:
 	db SPRITE_BEAUTY        ; Beauty
 	db SPRITE_SUPER_NERD    ; Pokemaniac
 	db SPRITE_GENTLEMAN     ; Gentleman
-	db SPRITE_BEAUTY        ; Skier
-	db SPRITE_YOUNGSTER     ; BugCatcher
+	db SPRITE_TEACHER       ; Skier
+	db SPRITE_BUG_CATCHER   ; BugCatcher
 	db SPRITE_FISHER        ; Fisher
 	db SPRITE_COOLTRAINER_M ; SwimmerM
 	db SPRITE_COOLTRAINER_F ; SwimmerF
@@ -62,7 +62,7 @@ BTTrainerClassSprites:
 	db SPRITE_COOLTRAINER_M ; Camper
 	db SPRITE_SAGE          ; Sage
 	db SPRITE_GRANNY        ; Medium
-	db SPRITE_ROCKER        ; Boarder
+	db SPRITE_COOLTRAINER_M ; Boarder
 	db SPRITE_POKEFAN_M     ; PokefanM
 	db SPRITE_POKEFAN_F     ; PokefanF
 	db SPRITE_KIMONO_GIRL   ; KimonoGirl
