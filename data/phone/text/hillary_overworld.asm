@@ -1,9 +1,8 @@
 HillaryAskNumber1Text:
 	text "I'd love to do"
 	line "some more battle"
-	
-	para "preparation and"
-	line "review with you…"
+	cont "preparation and"
+	cont "review with you…"
 	
 	para "That's it!"
 	
@@ -15,9 +14,8 @@ HillaryAskNumber1Text:
 HillaryAskNumber2Text:
 	text "Did you change"
 	line "your mind about"
-	
-	para "exchanging phone"
-	line "numbers?"
+	cont "exchanging phone"
+	cont "numbers?"
 	done
 
 HillaryNumberAcceptedText:
@@ -35,9 +33,8 @@ HillaryNumberAcceptedText:
 HillaryNumberDeclinedText:
 	text "Hey, you should"
 	line "listen when"
-
-	para "TEACHERs are talk-"
-	line "ing to you!"
+	cont "TEACHERs are talk-"
+	cont "ing to you!"
 	done
 
 HillaryRematchText:

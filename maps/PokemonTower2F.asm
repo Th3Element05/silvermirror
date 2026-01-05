@@ -121,11 +121,11 @@ PokemonTower2FMediumScript:
 PokemonTower2FMediumText:
 	text "Even we could not"
 	line "identify the"
-	cont "wayward GHOSTs!"
+	cont "wayward ghost!"
 
 	para "A SILPH SCOPE"
 	line "might be able to"
-	cont "unmask them."
+	cont "unmask it."
 	done
 
 PokemonTower2FRivalLeavesDownMovement:

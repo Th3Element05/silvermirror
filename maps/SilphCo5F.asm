@@ -292,7 +292,7 @@ SilphCo5FKurtsSon_ThankYouText:
 
 SilphCo5F_BallsFromApricornsText:
 	text "If you bring me"
-	line "APRICORNS, I can"
+	line "APRICORNs, I can"
 	cont "make them into"
 	cont "#BALLs."
 	done

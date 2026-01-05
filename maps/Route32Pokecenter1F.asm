@@ -95,7 +95,7 @@ Route32Pokecenter1FFishingGuruText_Question:
 	line "fishing spot."
 
 	para "Would you like one"
-	line "of my RODS?"
+	line "of my RODs?"
 	done
 
 Route32Pokecenter1FFishingGuruText_Yes:

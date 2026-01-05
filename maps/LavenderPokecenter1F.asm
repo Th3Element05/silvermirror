@@ -14,8 +14,8 @@ LavenderPokecenter1FReceptionistScript:
 LavenderPokecenter1FBenchGuyScript:
 	jumptext LavenderPokecenter1FBenchGuyText
 LavenderPokecenter1FBenchGuyText:
-	text "CUBONEs wear"
-	line "skulls, right?"
+	text "CUBONE wears"
+	line "a skull, right?"
 
 	para "People will pay a"
 	line "lot for one!"

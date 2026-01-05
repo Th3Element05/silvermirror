@@ -38,7 +38,7 @@ Route2N_NoFruit:
 Route2DiglettsCaveSign:
 	jumptext Route2DiglettsCaveSignText
 Route2DiglettsCaveSignText:
-	text "DIGLETT'S CAVE"
+	text "DIGLETT's CAVE"
 	done
 
 Route2North_MapEvents:

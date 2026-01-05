@@ -252,7 +252,7 @@ SaffronMagnetTrainStationLassText:
 	para "All the people in"
 	line "SAFFRON who ride"
 	cont "the MAGNET TRAIN"
-	cont "have PASSES."
+	cont "have a PASS."
 	done
 
 SaffronMagentTrainStationLassText2:

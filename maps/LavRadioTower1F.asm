@@ -198,7 +198,7 @@ LavRadioTower1F_MapScripts:
 ;	para "3F PERSONNEL"
 ;	line "4F PRODUCTION"
 ;
-;	para "5F DIRECTOR'S"
+;	para "5F DIRECTOR's"
 ;	line "   OFFICE"
 ;	done
 

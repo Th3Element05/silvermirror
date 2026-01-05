@@ -200,7 +200,7 @@ DanceTheaterGentelmanScript:
 
 GentlemanNeverLeftAScratchText:
 	text "Not only are the"
-	line "KIMONO GIRLS great"
+	line "KIMONO GIRLs great"
 	cont "dancers, they're"
 	cont "also skilled at"
 	cont "#MON."
@@ -214,20 +214,20 @@ GentlemanNeverLeftAScratchText:
 GentlemanElegantKimonoGirlsText:
 	text "I wish my #MON"
 	line "were as elegant as"
-	cont "the KIMONO GIRLS…"
+	cont "the KIMONO GIRLs…"
 	done
 
 GentlemanLadGiftText:
 	text "Lad! If you can"
 	line "defeat all of the"
-	cont "KIMONO GIRLS, I'll"
+	cont "KIMONO GIRLs, I'll"
 	line "give you a gift."
 	done
 
 GentlemanLassieGiftText:
 	text "Lassie, if you can"
 	line "defeat all of the"
-	cont "KIMONO GIRLS, I'll"
+	cont "KIMONO GIRLs, I'll"
 	line "give you a gift."
 	done
 
@@ -293,7 +293,7 @@ DanceTheaterCooltrainerMText:
 DanceTheaterGrannyScript:
 	jumptextfaceplayer DanceTheaterGrannyText
 DanceTheaterGrannyText:
-	text "The KIMONO GIRLS"
+	text "The KIMONO GIRLs"
 	line "are so beautiful…"
 
 	para "But they have to"

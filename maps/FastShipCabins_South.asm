@@ -145,7 +145,7 @@ FastShipCabins_South_MapScripts:
 ;	line "JOHTO can battle"
 ;
 ;	para "with KANTO GYM"
-;	line "LEADERS."
+;	line "LEADERs."
 ;	done
 
 ;CooltrainerfCarolSeenText:

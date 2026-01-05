@@ -157,7 +157,7 @@ Route33_NoFruit:
 ;	done
 
 ;HikerAnthony2AfterText:
-;	text "We HIKERS are at"
+;	text "We HIKERs are at"
 ;	line "our best in the"
 ;	cont "mountains."
 ;	done

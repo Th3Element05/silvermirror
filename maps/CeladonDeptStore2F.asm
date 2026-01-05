@@ -58,7 +58,7 @@ CeladonDeptStore2FYoungsterText:
 CeladonDeptStore2FDirectory:
 	jumptext CeladonDeptStore2FDirectoryText
 CeladonDeptStore2FDirectoryText:
-	text "2F: TRAINER'S"
+	text "2F: TRAINER's"
 	line "    MARKET"
 
 	para "Top Grade Items"

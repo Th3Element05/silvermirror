@@ -497,10 +497,10 @@ OlivinePortEnterFastShipMovement:
 ;	done
 ;
 ;OlivinePortFishingGuru2Text:
-;	text "How many RODS do"
+;	text "How many RODs do"
 ;	line "you have?"
 ;
-;	para "Different RODS"
+;	para "Different RODs"
 ;	line "catch different"
 ;	cont "#MON."
 ;	done

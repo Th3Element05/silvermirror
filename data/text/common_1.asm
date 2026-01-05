@@ -512,7 +512,7 @@ _MobileTradeCameBackText::
 
 _OPT_IntroText1::
 	text_start
-;	line "MARY: PROF.OAK'S"
+;	line "MARY: PROF.OAK's"
 	line "MARY: Welcome to"
 	done
 
@@ -589,8 +589,8 @@ _OPT_SwarmText11::
 
 _OPT_OakText1::
 	text_start
-;	line "OAK: @"
-	line "MARY: @"
+	line "OAK: @"
+;	line "MARY: @"
 	text_ram wMonOrItemNameBuffer
 	text_end
 
@@ -1024,64 +1024,74 @@ _PnP_Text5::
 	text_ram wStringBuffer1
 	text_end
 
-	text_end ; unreferenced
+;	text_end ; unreferenced
 
 _RocketRadioText1::
 	text_start
-	line "… …Ahem, we are"
+;	line "… …Ahem, we are"
+	line "…Ahem, due to an"
 	done
 
 _RocketRadioText2::
 	text_start
-	line "TEAM ROCKET!"
+;	line "TEAM ROCKET!"
+	line "emergency at the"
 	done
 
 _RocketRadioText3::
 	text_start
-	line "After three years"
+;	line "After three years"
+	line "radio tower, we"
 	done
 
 _RocketRadioText4::
 	text_start
-	line "of preparation, we"
+;	line "of preparation, we"
+	line "have temporarily"
 	done
 
 _RocketRadioText5::
 	text_start
-	line "have risen again"
+;	line "have risen again"
+	line "suspended all"
 	done
 
 _RocketRadioText6::
 	text_start
-	line "from the ashes!"
+;	line "from the ashes!"
+	line "broadcasts."
 	done
 
 _RocketRadioText7::
 	text_start
-	line "GIOVANNI! @"
-	text_pause
-	text "Can you"
+;	line "GIOVANNI! @"
+;	text_pause
+;	text "Can you"
+	line "Regular broadcasts"
 	done
 
 _RocketRadioText8::
 	text_start
-	line "hear?@"
-	text_pause
-	text " We did it!"
+;	line "hear?@"
+;	text_pause
+;	text " We did it!"
+	line "will resume after"
 	done
 
 _RocketRadioText9::
 	text_start
-	line "@"
-	text_pause
-	text "Where is our boss?"
+;	line "@"
+;	text_pause
+;	text "Where is our boss?"
+	line "the emergency has"
 	done
 
 _RocketRadioText10::
 	text_start
-	line "@"
-	text_pause
-	text "Is he listening?"
+;	line "@"
+;	text_pause
+;	text "Is he listening?"
+	line "been resolved."
 	done
 
 _BuenaRadioText1::
@@ -1779,7 +1789,7 @@ _DayCareManIntroText::
 _DayCareManIntroEggText::
 	text "I'm the DAY-CARE"
 	line "MAN. Do you know"
-	cont "about EGGS?"
+	cont "about EGGs?"
 
 	para "I was raising"
 	line "#MON with my"
@@ -1806,7 +1816,7 @@ _DayCareLadyIntroText::
 _DayCareLadyIntroEggText::
 	text "I'm the DAY-CARE"
 	line "LADY. Do you know"
-	cont "about EGGS?"
+	cont "about EGGs?"
 
 	para "My husband and I"
 	line "were raising some"

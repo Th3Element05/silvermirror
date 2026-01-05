@@ -59,17 +59,17 @@ VictoryRoadGateOfficerText:
 
 VictoryRoadGateNotEnoughBadgesText:
 	text "You don't have"
-	line "enough GYM BADGES."
+	line "enough GYM BADGEs."
 
 	para "I'm sorry, but I"
 	line "can't let you pass"
 	cont "without at least"
-	cont "eight GYM BADGES."
+	cont "eight GYM BADGEs."
 	done
 
 VictoryRoadGateEightBadgesText:
 	text "Oh! The eight"
-	line "BADGES of KANTO!"
+	line "BADGEs of KANTO!"
 
 	para "Please, go right"
 	line "on through!"

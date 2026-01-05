@@ -219,11 +219,10 @@ PokefanMDerekText_NotBragging:
 	text "I'm not listening"
 	line "to your bragging!"
 
-	para "We # FANS have"
+	para "We #FANs have"
 	line "a policy of not"
-
-	para "listening to other"
-	line "people brag!"
+	cont "listening to other"
+	cont "people brag!"
 	done
 
 TrainerSailorStanley:

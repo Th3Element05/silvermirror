@@ -126,7 +126,7 @@ CeladonMansionRoofBookText:
 	para "It evolves into"
 	line "different forms"
 	cont "when exposed to"
-	cont "special STONES."
+	cont "special STONEs."
 
 	para "But EEVEE will"
 	line "also evolve under"

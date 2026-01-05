@@ -418,7 +418,7 @@ TinTower1F_MapScripts:
 ;	done
 
 ;TinTower1FSage3Text:
-;	text "The two TOWERS are"
+;	text "The two TOWERs are"
 ;	line "said to have been"
 ;
 ;	para "built to foster"

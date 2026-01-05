@@ -57,7 +57,7 @@ GoldenrodDeptStore2FGentlemanText:
 GoldenrodDeptStore2FDirectory:
 	jumptext GoldenrodDeptStore2FDirectoryText
 GoldenrodDeptStore2FDirectoryText:
-	text "2F TRAINER'S"
+	text "2F TRAINER's"
 	line "   MARKET"
 
 	para "Your Travel"

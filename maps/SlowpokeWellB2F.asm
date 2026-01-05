@@ -40,13 +40,13 @@ SlowpokeWellB2FGymGuideText:
 	cont "discovery."
 
 	para "A SLOWPOKE with a"
-	line "KING'S ROCK often"
+	line "KING's ROCK often"
 
 	para "gets bitten by a"
 	line "SHELLDER."
 
 	para "Here, I'll share a"
-	line "KING'S ROCK with"
+	line "KING's ROCK with"
 	cont "you."
 	done
 

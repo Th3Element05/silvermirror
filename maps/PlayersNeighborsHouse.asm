@@ -77,7 +77,7 @@ PlayersNeighborsHouse_MapScripts:
 ;	done
 
 ;PlayerNeighborRadioText1:
-;	text "PROF.OAK'S #MON"
+;	text "PROF.OAK's #MON"
 ;	line "TALK! Please tune"
 ;	cont "in next time!"
 ;	done

@@ -321,7 +321,7 @@ TeamRocketBaseB3F_MapScripts:
 ;
 ;	para "Those passwords"
 ;	line "are known only to"
-;	cont "a few ROCKETS."
+;	cont "a few ROCKETs."
 ;
 ;	para "That ROCKET there"
 ;	line "very graciously"

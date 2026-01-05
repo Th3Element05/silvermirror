@@ -86,12 +86,12 @@ TiffanyHangUpText:
 	done
 
 TiffanyFoundItemText:
-	text "I bought some"
-	line "SILK SCARFs for"
+	text "I bought a"
+	line "SILK SCARF for"
 	cont "my CLEFAIRY."
 
-	para "I got too many, so"
-	line "I'll give you one!"
+	para "I bought an extra"
+	line "one to give you!"
 
 	para "Come collect it on"
 	line "@"

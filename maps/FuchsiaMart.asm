@@ -44,7 +44,7 @@ FuchsiaMartCooltrainerFText:
 	text "They don't sell"
 	line "SAFARI BALLs here."
 
-	para "You can only use"
+	para "You can only get"
 	line "those inside the"
 	cont "SAFARI ZONE!"
 	done
