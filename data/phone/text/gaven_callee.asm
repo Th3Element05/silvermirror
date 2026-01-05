@@ -66,7 +66,7 @@ GavenGenericText:
 	line "doing as great as"
 	cont "ever."
 
-	para "Let's keep at it"
-	line "and become #MON"
-	cont "CHAMPs!"
+	para "I'm going to keep"
+	line "training and be a"
+	cont "#MON CHAMP!"
 	done

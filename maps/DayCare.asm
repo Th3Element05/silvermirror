@@ -119,7 +119,7 @@ DayCareManText_GiveOddEgg:
 	line "MAN."
 
 	para "Do you know about"
-	line "EGGS?"
+	line "EGGs?"
 
 	para "I was raising"
 	line "#MON with my"

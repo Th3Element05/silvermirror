@@ -232,7 +232,7 @@ _YourFriendIsNotReadyText::
 
 _MysteryGiftFiveADayText::
 	text "Sorry--only five"
-	line "GIFTS a day."
+	line "gifts a day."
 	prompt
 
 _MysteryGiftOneADayText::
@@ -1304,7 +1304,7 @@ _OakRating06::
 	text "To evolve, some"
 	line "#MON grow,"
 	cont "others use the"
-	cont "effects of STONES."
+	cont "effects of STONEs."
 	done
 
 _OakRating07::

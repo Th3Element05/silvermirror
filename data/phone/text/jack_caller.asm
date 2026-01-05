@@ -99,40 +99,36 @@ JackGustTriviaText:
 	text "Did you know…?"
 
 	para "If your opponent"
-	line "is FLYing, your"
-
-	para "GUST becomes much"
-	line "more powerful."
+	line "is using FLY, your"
+	cont "GUST becomes much"
+	cont "more powerful."
 	done
 
 JackTwisterTriviaText:
 	text "Did you know…?"
 
 	para "If your opponent"
-	line "is FLYing, your"
-
-	para "TWISTER becomes"
-	line "more powerful."
+	line "is using FLY, your"
+	cont "TWISTER becomes"
+	cont "more powerful."
 	done
 
 JackEarthquakeTriviaText:
 	text "Did you know…?"
 
 	para "If your opponent"
-	line "uses DIG, your"
-
-	para "EARTHQUAKE becomes"
-	line "more powerful."
+	line "is using DIG, your"
+	cont "EARTHQUAKE becomes"
+	cont "more powerful."
 	done
 
 JackMagnitudeTriviaText:
 	text "Did you know…?"
 
 	para "If your opponent"
-	line "uses DIG, your"
-
-	para "MAGNITUDE becomes"
-	line "more powerful."
+	line "is using DIG, your"
+	cont "MAGNITUDE becomes"
+	cont "more powerful."
 	done
 
 JackSandstormTriviaText:

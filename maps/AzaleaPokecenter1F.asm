@@ -33,7 +33,7 @@ AzaleaPokecenter1FPokefanFScript:
 	jumptextfaceplayer AzaleaPokecenter1FPokefanFText
 AzaleaPokecenter1FPokefanFText:
 	text "Do you know about"
-	line "APRICORNS?"
+	line "APRICORNs?"
 
 	para "Crack one open,"
 	line "hollow it out and"
@@ -46,7 +46,7 @@ AzaleaPokecenter1FPokefanFText:
 	para "Before #BALLs"
 	line "were invented,"
 	cont "everyone used"
-	cont "APRICORNS."
+	cont "APRICORNs."
 	done
 
 AzaleaPokecenter1F_MapEvents:

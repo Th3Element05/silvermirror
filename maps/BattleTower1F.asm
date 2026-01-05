@@ -377,10 +377,10 @@ Text_BattleTowerIntroduction_1: ; unreferenced
 	line "hold battles in"
 
 	para "specially designed"
-	line "BATTLE ROOMS."
+	line "BATTLE ROOMs."
 
 	para "There are many"
-	line "BATTLE ROOMS in"
+	line "BATTLE ROOMs in"
 	cont "the BATTLE TOWER."
 
 	para "Each ROOM holds"
@@ -395,7 +395,7 @@ Text_BattleTowerIntroduction_1: ; unreferenced
 	para "could become the"
 	line "ROOM's LEADER."
 
-	para "All LEADERS will"
+	para "All LEADERs will"
 	line "be recorded in the"
 
 	para "HONOR ROLL for"
@@ -404,7 +404,7 @@ Text_BattleTowerIntroduction_1: ; unreferenced
 	para "You may challenge"
 	line "in up to five"
 
-	para "BATTLE ROOMS each"
+	para "BATTLE ROOMs each"
 	line "day."
 
 	para "However, you may"
@@ -437,10 +437,10 @@ Text_BattleTowerIntroduction_2:
 	line "hold battles in"
 
 	para "specially designed"
-	line "BATTLE ROOMS."
+	line "BATTLE ROOMs."
 
 	para "There are many"
-	line "BATTLE ROOMS in"
+	line "BATTLE ROOMs in"
 	cont "the BATTLE TOWER."
 
 	para "Each ROOM holds"
@@ -463,7 +463,7 @@ Text_BattleTowerIntroduction_2:
 
 Text_ReceivedAListOfLeadersOnTheHonorRoll:
 	text "Received a list of"
-	line "LEADERS on the"
+	line "LEADERs on the"
 	cont "HONOR ROLL."
 
 	para ""
@@ -693,7 +693,7 @@ Text_WeveBeenWaitingForYou:
 
 Text_FiveDayBattleLimit_Mobile:
 	text "You may enter only"
-	line "five BATTLE ROOMS"
+	line "five BATTLE ROOMs"
 	cont "each day."
 
 	para "Please come back"
@@ -761,7 +761,7 @@ Text_BattleTowerYoungster:
 
 Text_BattleTowerCooltrainerF:
 	text "There are lots of"
-	line "BATTLE ROOMS, but"
+	line "BATTLE ROOMs, but"
 
 	para "I'm going to win"
 	line "them all!"

@@ -191,9 +191,8 @@ PokefanFGeorgiaBeatenText:
 PokefanFGeorgiaAfterBattleText:
 	text "If only there were"
 	line "an easy way to"
-
-	para "identify where I"
-	line "got my #MON…"
+	cont "identify where I"
+	cont "got my #MON…"
 	done
 
 TrainerYoungsterOwen:
@@ -304,9 +303,8 @@ PokefanMWilliamBeatenText:
 PokefanMWilliamAfterBattleText:
 	text "I lost the battle,"
 	line "but my #MON win"
-
-	para "the prize for"
-	line "being most lovely."
+	cont "the prize for"
+	cont "being most lovely."
 	done
 
 TrainerPokefanFBeverly:
@@ -510,7 +508,7 @@ OfficerCarterAfterBattleText:
 Route11DiglettsCaveSign:
 	jumptext Route11DiglettsCaveSignText
 Route11DiglettsCaveSignText:
-	text "DIGLETT'S CAVE"
+	text "DIGLETT's CAVE"
 	done
 
 ; items

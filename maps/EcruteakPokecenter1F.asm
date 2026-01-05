@@ -12,7 +12,7 @@ EcruteakPokecenter1FPokefanMScript:
 	jumptextfaceplayer EcruteakPokecenter1FPokefanMText
 EcruteakPokecenter1FPokefanMText:
 ;	text "The way the KIMONO"
-;	line "GIRLS dance is"
+;	line "GIRLs dance is"
 ;
 ;	para "marvelous. Just"
 ;	line "like the way they"

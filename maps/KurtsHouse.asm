@@ -302,7 +302,7 @@ Kurt2:
 
 KurtsHouseKurtBallsFromApricornsText:
 	text "KURT: I make BALLs"
-	line "from APRICORNS."
+	line "from APRICORNs."
 
 	para "Collect them from"
 	line "trees and bring"
@@ -419,7 +419,7 @@ KurtsHouseKurtThisBallStartedToShakeText:
 ;	para "Anyway, they're at"
 ;	line "the WELL, cutting"
 ;
-;	para "off SLOWPOKETAILS"
+;	para "off SLOWPOKETAILs"
 ;	line "for sale!"
 ;
 ;	para "So I'm going to"

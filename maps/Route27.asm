@@ -442,7 +442,7 @@ TohjoFallsSign:
 ;	done
 ;
 ;BirdKeeperJose2AfterBattleText:
-;	text "BIRD KEEPERS like"
+;	text "BIRD KEEPERs like"
 ;	line "me mimic bird"
 ;
 ;	para "whistles to com-"

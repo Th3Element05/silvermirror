@@ -65,7 +65,7 @@ BethGenericText:
 	text "Are you the kind"
 	line "of person who goes"
 
-	para "to #MON CENTERS"
+	para "to #MON CENTERs"
 	line "often?"
 
 	para "I go every day."

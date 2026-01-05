@@ -320,7 +320,7 @@ GoldenrodGameCornerEvolveVendorMenuHeader:
 .MenuDataItems:
 	db STATICMENU_CURSOR ; flags
 	db 5 ; items
-	db "KING'S ROCK  {d:GOLDENRODGAMECORNER_KINGS_ROCK_COINS}@"
+	db "KING's ROCK  {d:GOLDENRODGAMECORNER_KINGS_ROCK_COINS}@"
 	db "METAL COAT   {d:GOLDENRODGAMECORNER_METAL_COAT_COINS}@"
 	db "DRAGON SCALE {d:GOLDENRODGAMECORNER_DRAGON_SCALE_COINS}@"
 	db "UP-GRADE     {d:GOLDENRODGAMECORNER_UP_GRADE_COINS}@"
@@ -664,7 +664,7 @@ GoldenrodGameCorner_NoCoinCaseScript:
 ;.MenuDataItems:
 ;	db STATICMENU_CURSOR ; flags
 ;	db 3 ; items
-;	db "KING'S ROCK  2000@"
+;	db "KING's ROCK  2000@"
 ;	db "METAL COAT   2000@"
 ;	db "NEXT@"
 ;

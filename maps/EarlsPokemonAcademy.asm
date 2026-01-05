@@ -390,7 +390,7 @@ AcademyNotebookText3:
 	para "They are expected"
 	line "to visit #MON"
 
-	para "GYMS and defeat"
+	para "GYMs and defeat"
 	line "other trainers."
 
 	para "The next page"

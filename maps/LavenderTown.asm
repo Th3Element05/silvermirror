@@ -14,14 +14,21 @@ LavenderTownFlypointCallback:
 LavenderTownSuperNerdScript:
 	jumptextfaceplayer LavenderTownSuperNerdText
 LavenderTownSuperNerdText:
-	text "GHOSTs appeared"
-	line "in #MON TOWER."
+	text "#MON TOWER is"
+	line "full of ghosts."
 
-	para "I think they're"
-	line "the spirits of"
-	cont "#MON that the"
-	cont "ROCKETs killed."
+	para "I don't like to"
+	line "go in there."
 	done
+
+;	text "GHOSTs appeared"
+;	line "in #MON TOWER."
+;
+;	para "I think they're"
+;	line "the spirits of"
+;	cont "#MON that the"
+;	cont "ROCKETs killed."
+;	done
 	
 LavenderTownCooltrainerMScript:
 	jumptextfaceplayer LavenderTownCooltrainerMText
@@ -54,7 +61,7 @@ LavenderTownGirlScript:
 
 LavenderTownGirlGhostQuestionText:
 	text "Do you believe in"
-	line "GHOSTs?"
+	line "ghosts?"
 	done
 
 LavenderTownGirlGhostYesText:

@@ -2188,7 +2188,7 @@ LoadStation_BuenasPassword:
 	ld de, BuenasPasswordName
 	ret
 
-BuenasPasswordName:    db "BUENA'S PASSWORD@"
+BuenasPasswordName:    db "BUENA's PASSWORD@"
 NotBuenasPasswordName: db "@"
 
 LoadStation_UnownRadio:
@@ -3044,7 +3044,7 @@ Pokedex_GetArea:
 	ret
 
 .String_SNest:
-	db "'S NEST@"
+	db "'s NEST@"
 
 .GetAndPlaceNest:
 	ld [wTownMapCursorLandmark], a

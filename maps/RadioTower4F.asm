@@ -463,7 +463,7 @@ RadioTower4FDJMaryText_GiveBrightPowder:
 
 RadioTower4FDJMaryText_Default:
 	text "MARY: Please tune"
-	line "in to PROF.OAK'S"
+	line "in to PROF.OAK's"
 	cont "#MON TALK."
 	done
 

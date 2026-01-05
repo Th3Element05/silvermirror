@@ -1,13 +1,6 @@
 	object_const_def
 	const ROUTE26_LEPPA_BERRY
 	const ROUTE26_SITRUS_BERRY
-;	const ROUTE_26_COOLTRAINER_M1
-;	const ROUTE_26_COOLTRAINER_M2
-;	const ROUTE_26_COOLTRAINER_F1
-;	const ROUTE_26_COOLTRAINER_F2
-;	const ROUTE_26_YOUNGSTER
-;	const ROUTE_26_FISHER
-;	const ROUTE_26_POKE_BALL
 
 Route26_MapScripts:
 	def_scene_scripts
@@ -311,7 +304,7 @@ Route26Sign:
 ;	line "LEAGUE's ELITE"
 ;
 ;	para "FOUR are tougher"
-;	line "than GYM LEADERS."
+;	line "than GYM LEADERs."
 ;	done
 ;
 ;CooltrainermGaven3SeenText:
@@ -356,7 +349,7 @@ Route26Sign:
 ;
 ;CooltrainerfJoyceAfterBattleText:
 ;	text "I've defeated"
-;	line "eight GYM LEADERS,"
+;	line "eight GYM LEADERs,"
 ;
 ;	para "so I was feeling"
 ;	line "confident."
@@ -393,7 +386,7 @@ Route26Sign:
 ;
 ;PsychicRichardSeenText:
 ;	text "Wow, look at all"
-;	line "those BADGES!"
+;	line "those BADGEs!"
 ;	cont "I'm impressed."
 ;
 ;	para "But you're not"

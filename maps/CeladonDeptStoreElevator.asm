@@ -31,7 +31,7 @@ CeladonDeptStoreElevatorDirectoryText:
 	text "1F: SERVICE"
 	line "    COUNTER"
 
-	para "2F: TRAINER'S"
+	para "2F: TRAINER's"
 	line "    MARKET"
 
 	para "3F: TM SHOP"

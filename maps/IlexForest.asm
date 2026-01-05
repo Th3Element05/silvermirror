@@ -395,7 +395,7 @@ IlexForest_MapEvents:
 ;	cont "steaming…"
 ;
 ;	para "The FARFETCH'D"
-;	line "that CUTS trees"
+;	line "that CUTs trees"
 ;
 ;	para "for charcoal took"
 ;	line "off on me."

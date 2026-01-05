@@ -446,13 +446,13 @@ MrPokemonsHouseDirectionsSign:
 	jumptext MrPokemonsHouseDirectionsSignText
 MrPokemonsHouseDirectionsSignText:
 	text "NORTH TO"
-	line "MR.#MON'S HOUSE"
+	line "MR.#MON's HOUSE"
 	done
 
 MrPokemonsHouseSign:
 	jumptext MrPokemonsHouseSignText
 MrPokemonsHouseSignText:
-	text "MR.#MON'S HOUSE"
+	text "MR.#MON's HOUSE"
 	done
 
 Route30TrainerTips:

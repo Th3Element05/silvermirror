@@ -385,7 +385,7 @@ PicnickerDawnBeatenText:
 	done
 
 PicnickerDawnAfterBattleText:
-	text "The GYM BADGES are"
+	text "The GYM BADGEs are"
 	line "pretty. I collect"
 	cont "them."
 	done

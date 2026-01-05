@@ -43,7 +43,7 @@ BeverlyHangUpText:
 
 BeverlyFoundItemText:
 	text "My husband got"
-	line "some NUGGETS."
+	line "some NUGGETs."
 
 	para "If you'd like, you"
 	line "could have one as"

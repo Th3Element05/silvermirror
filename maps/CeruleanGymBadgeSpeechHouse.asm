@@ -18,7 +18,7 @@ CeruleanGymBadgeSpeechHousePokefanMScript:
 	jumptextfaceplayer CeruleanGymBadgeSpeechHousePokefanMText
 CeruleanGymBadgeSpeechHousePokefanMText:
 	text "Are you collecting"
-	line "GYM BADGES?"
+	line "GYM BADGEs?"
 	done
 
 CeruleanGymBadgeSpeechHouse_MapEvents:

@@ -178,7 +178,7 @@ SageMasaAfterBattleText:
 	cont "said to rest."
 
 	para "The view from the"
-	line "tops of the TOWERS"
+	line "tops of the TOWERs"
 	cont "must have been"
 	cont "magnificent."
 

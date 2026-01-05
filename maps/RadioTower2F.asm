@@ -553,7 +553,7 @@ RadioTower2FSalesSignText:
 RadioTower2FOaksPKMNTalkSign:
 	jumptext RadioTower2FOaksPKMNTalkSignText
 RadioTower2FOaksPKMNTalkSignText:
-	text "PROF.OAK'S #MON"
+	text "PROF.OAK's #MON"
 	line "TALK"
 
 	para "The Hottest Show"

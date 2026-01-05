@@ -150,9 +150,8 @@ MomPhoneLectureText:
 
 	para "…… <PLAYER>?"
 	line "I heard from PROF."
-
-	para "OAK that you went"
-	line "on a long trip."
+	cont "OAK that you went"
+	cont "on a long trip."
 
 	para "I wish you would"
 	line "have told me…"

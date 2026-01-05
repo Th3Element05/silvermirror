@@ -157,11 +157,10 @@ SSAquaCaptainSmokeBallText:
 	cont "wild #MON."
 
 	para "Too bad it doesn't"
-	line "work in trainer"
-	cont "battles!"
+	line "work on trainers!"
 
 	para "I could have given"
-	line "those ROCKETS the"
+	line "those ROCKETs the"
 	cont "slip!"
 	done
 
@@ -175,7 +174,7 @@ SSAquaCaptainThanksText:
 	done
 
 SSAquaCaptainHelpText:
-	text "These ROCKETS are"
+	text "These ROCKETs are"
 	line "taking control of"
 	cont "the ship!"
 

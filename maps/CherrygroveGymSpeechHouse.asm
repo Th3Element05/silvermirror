@@ -9,10 +9,10 @@ CherrygroveGymSpeechHousePokefanMScript:
 	jumptextfaceplayer CherrygroveGymSpeechHousePokefanMText
 CherrygroveGymSpeechHousePokefanMText:
 	text "You have a lot of"
-	line "GYM BADGES."
+	line "GYM BADGEs."
 
 	para "Have you visited"
-	line "all of the GYMS"
+	line "all of the GYMs"
 	cont "around JOHTO yet?"
 	done
 ;	text "You're trying to"
@@ -21,9 +21,9 @@ CherrygroveGymSpeechHousePokefanMText:
 ;	cont "trainer?"
 ;
 ;	para "You better visit"
-;	line "the #MON GYMS"
+;	line "the #MON GYMs"
 ;	cont "all over JOHTO and"
-;	cont "collect BADGES."
+;	cont "collect BADGEs."
 ;	done
 
 CherrygroveGymSpeechHouseBugCatcherScript:

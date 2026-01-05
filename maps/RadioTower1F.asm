@@ -464,7 +464,7 @@ RadioTower1FDirectoryText:
 
 	para "4F PRODUCTION"
 
-	para "5F DIRECTOR'S"
+	para "5F DIRECTOR's"
 	line "   OFFICE"
 	done
 

@@ -681,7 +681,7 @@ TeamRocketBaseB2F_MapScripts:
 ;	text "LANCE: That did"
 ;	line "it. We defeated"
 ;
-;	para "all the ROCKETS"
+;	para "all the ROCKETs"
 ;	line "here."
 ;
 ;	para "But I'm concerned"

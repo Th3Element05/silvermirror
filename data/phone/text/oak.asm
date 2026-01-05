@@ -25,7 +25,7 @@ OakPhoneHowManyBadgesText:
 	para "……"
 
 	para "Wow, that many"
-	line "BADGES already?"
+	line "BADGEs already?"
 
 	para "Try not to overdo"
 	line "it."
@@ -83,7 +83,7 @@ OakPhoneGetFlashText:
 
 	para "You can take the"
 	line "shortcut through"
-	cont "DIGGLET'S CAVE!"
+	cont "DIGGLET's CAVE!"
 
 	para "There is an"
 	line "entrance east of"
@@ -98,7 +98,7 @@ OakPhoneRemindFlashText:
 	cont "on ROUTE 2."
 
 	para "You can get there"
-	line "through DIGGLET'S"
+	line "through DIGGLET's"
 	cont "CAVE on ROUTE 11!"
 	done
 
@@ -131,7 +131,7 @@ OakPhoneViridianGymText:
 
 	para "Are you still"
 	line "collecting"
-	cont "GYM BADGES?"
+	cont "GYM BADGEs?"
 
 	para "I've gotten word"
 	line "the GYM LEADER in"
@@ -139,7 +139,7 @@ OakPhoneViridianGymText:
 	cont "returned!"
 
 	para "If you need more"
-	line "BADGES, you should"
+	line "BADGEs, you should"
 	cont "go challenge them!"
 	done
 
@@ -147,7 +147,7 @@ OakPhoneRemindViridianGymText:
 	text "Hello, <PLAYER>?"
 
 	para "If you need more"
-	line "GYM BADGES, you"
+	line "GYM BADGEs, you"
 	cont "should challenge"
 	cont "the GYM LEADER in"
 	cont "VIRIDIAN CITY!"
@@ -202,7 +202,7 @@ OakPhoneRemindWaterfallText:
 	done
 
 OakPhoneDiscoveredPokerusText:
-	text "Hello, <PLAY_G>?"
+	text "Hello, <PLAYER>?"
 
 	para "I discovered an"
 	line "odd thing."
@@ -232,7 +232,7 @@ OakPhoneDiscoveredPokerusText:
 	done
 
 OakPhoneGiftText:
-	text "Hello, <PLAY_G>?"
+	text "Hello, <PLAYER>?"
 
 	para "I have something"
 	line "here for you."

@@ -25,7 +25,7 @@ VioletKylesHousePokefanMText:
 
 	para "But if you don't"
 	line "have enough GYM"
-	cont "BADGES, they may"
+	cont "BADGEs, they may"
 	line "disobey you."
 	done
 

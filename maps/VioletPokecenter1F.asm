@@ -198,7 +198,7 @@ VioletPokecenter1FYoungsterText:
 	cont "respect."
 
 	para "Without the right"
-	line "GYM BADGES, they"
+	line "GYM BADGEs, they"
 	cont "will just do as"
 	cont "they please."
 	done

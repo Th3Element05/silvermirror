@@ -36,7 +36,7 @@ WaltNumberAcceptedText:
 WaltNumberDeclinedText:
 	text "I knew you didn't"
 	line "particularly like"
-	cont "FIREBREATHERs…"
+	cont "FIREBREATHERS…"
 	done
 
 WaltPhoneFullText:

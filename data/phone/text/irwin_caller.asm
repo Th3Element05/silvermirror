@@ -75,7 +75,7 @@ IrwinRisingBadgeGossipText:
 	text "I saw, I saw!"
 
 	para "I saw you go into"
-	line "the DRAGON'S DEN!"
+	line "the DRAGON's DEN!"
 
 	para "I'm certain you"
 	line "passed! Aww, no"
@@ -266,7 +266,7 @@ IrwinSoMuchToChatAboutText:
 
 	para "Where are you?"
 
-	para "How many BADGES do"
+	para "How many BADGEs do"
 	line "you have now?"
 
 	para "How much money"

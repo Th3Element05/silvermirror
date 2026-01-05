@@ -72,9 +72,8 @@ OlivineCafeSailorScript:
 OlivineCafeStrengthSailorText_GotStrength:
 	text "On the sea, the"
 	line "only thing you can"
-
-	para "count on is your"
-	line "own good self!"
+	cont "count on is your"
+	cont "own good self!"
 
 	para "I'm so proud of my"
 	line "buff bod!"
@@ -83,23 +82,20 @@ OlivineCafeStrengthSailorText_GotStrength:
 OlivineCafeFishingGuruText:
 	text "OLIVINE CAFE's"
 	line "menu is chock full"
-
-	para "of hearty fare for"
-	line "beefy SAILORS!"
+	cont "of hearty fare for"
+	cont "beefy SAILORs!"
 	done
 
 OlivineCafeSailorText:
 	text "Whenever I roll"
 	line "into this town, I"
-
-	para "always visit the"
-	line "OLIVINE CAFE."
+	cont "always visit the"
+	cont "OLIVINE CAFE."
 
 	para "Everything on the"
 	line "menu makes me feel"
-
-	para "stronger. I can't"
-	line "stop eating!"
+	cont "stronger. I can't"
+	cont "stop eating!"
 	done
 
 OlivineCafe_MapEvents:

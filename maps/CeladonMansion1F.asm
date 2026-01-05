@@ -68,7 +68,7 @@ CeladonMansion1FNidoranFText:
 
 CeladonMansionManagersSuiteSignText:
 	text "CELADON MANSION"
-	line "MANAGER'S SUITE"
+	line "MANAGER's SUITE"
 	done
 
 CeladonMansion1F_MapEvents:

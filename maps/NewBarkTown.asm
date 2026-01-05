@@ -236,7 +236,7 @@ NewBarkTownElmsLabSignText:
 NewBarkTownElmsHouseSign:
 	jumptext NewBarkTownElmsHouseSignText
 NewBarkTownElmsHouseSignText:
-	text "ELM'S HOUSE"
+	text "ELM's HOUSE"
 	done
 
 NewBarkTown_MapEvents:

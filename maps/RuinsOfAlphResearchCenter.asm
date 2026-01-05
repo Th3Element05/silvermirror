@@ -674,7 +674,7 @@ RuinsOfAlphResearchCenter_MapScripts:
 ;	text "It's a photo of"
 ;	line "the RESEARCH"
 ;
-;	para "CENTER'S founder,"
+;	para "CENTER's founder,"
 ;	line "PROF.SILKTREE."
 ;	done
 

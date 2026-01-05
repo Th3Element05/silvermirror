@@ -391,7 +391,7 @@ CinnabarGymQuestion3Text: ;false
 ;	line "3 times?"
 ;	done
 	text "POLIWAG's belly"
-	line "swirls goes the"
+	line "swirls go in the"
 	cont "same direction as"
 	cont "POLIWHIRL's?"
 	done
@@ -762,7 +762,7 @@ CinnabarGymGuideText:
 	line "with water!"
 
 	para "You better take"
-	line "some BURN HEALs!"
+	line "some BURN HEAL!"
 	done
 
 CinnabarGymGuideWinText:
@@ -798,11 +798,11 @@ CinnabarGym_MapEvents:
 
 	def_object_events
 	object_event 18,  9, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TrainerFirebreatherBill, -1
-	object_event 10,  3, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TrainerSuperNerdHugh, -1
+	object_event 10,  3, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, TrainerSuperNerdHugh, -1
 	object_event 10,  9, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TrainerFirebreatherRay, -1
-	object_event 10, 15, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TrainerSuperNerdCary, -1
+	object_event 10, 15, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, TrainerSuperNerdCary, -1
 	object_event  2, 15, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TrainerFirebreatherEvan, -1
-	object_event  2,  9, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TrainerSuperNerdMarkus, -1
-	object_event 20,  2, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerSuperNerdTeru, -1
+	object_event  2,  9, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, TrainerSuperNerdMarkus, -1
+	object_event 20,  2, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_TRAINER, 2, TrainerSuperNerdTeru, -1
 	object_event  3,  3, SPRITE_BLAINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarGymBlaineScript, -1
 	object_event 19, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarGymGuideScript, -1

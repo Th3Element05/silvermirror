@@ -779,7 +779,7 @@ _MobileCardFolderIntro1Text::
 	text "The CARD FOLDER"
 	line "stores your and"
 	cont "your friends'"
-	cont "CARDS."
+	cont "CARDs."
 
 	para "A CARD contains"
 	line "information like"
@@ -796,7 +796,7 @@ _MobileCardFolderIntro2Text::
 	para "Once you've"
 	line "entered your phone"
 	cont "number, you can"
-	cont "trade CARDS with"
+	cont "trade CARDs with"
 	cont "your friends."
 
 	para ""
@@ -817,7 +817,7 @@ _MobileCardFolderIntro3Text::
 _MobileCardFolderIntro4Text::
 	text "To safely store"
 	line "your collection of"
-	cont "CARDS, you must"
+	cont "CARDs, you must"
 	cont "set a PASSCODE for"
 	cont "your CARD FOLDER."
 
@@ -827,7 +827,7 @@ _MobileCardFolderIntro4Text::
 _MobileCardFolderAskDeleteText::
 	text "If the CARD FOLDER"
 	line "is deleted, all"
-	cont "its CARDS and the"
+	cont "its CARDs and the"
 	cont "PASSCODE will also"
 	cont "be deleted."
 
@@ -867,7 +867,7 @@ _MobileCardFolderAskDeleteOldText::
 
 _MobileCardFolderFinishRegisteringCardsText::
 	text "Finish registering"
-	line "CARDS?"
+	line "CARDs?"
 	done
 
 _PhoneWrongNumberText::

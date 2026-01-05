@@ -158,7 +158,7 @@ BenText:
 RadioTower5FDirectorsOfficeSign:
 	jumptext RadioTower5FDirectorsOfficeSignText
 RadioTower5FDirectorsOfficeSignText:
-	text "5F DIRECTOR'S"
+	text "5F DIRECTOR's"
 	line "   OFFICE"
 	done
 

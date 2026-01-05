@@ -251,7 +251,7 @@ SlowpokeWellB1F_MapScripts:
 
 ;GruntM2SeenText:
 ;	text "Quit taking SLOW-"
-;	line "POKETAILS?"
+;	line "POKE TAILs?"
 ;
 ;	para "If we obeyed you,"
 ;	line "TEAM ROCKET's rep"
@@ -266,14 +266,14 @@ SlowpokeWellB1F_MapScripts:
 ;GruntM2AfterBattleText:
 ;	text "We need the money,"
 ;	line "but selling SLOW-"
-;	cont "POKETAILS?"
+;	cont "POKETAILs?"
 ;
 ;	para "It's tough being a"
 ;	line "ROCKET GRUNT!"
 ;	done
 
 ;GruntF1SeenText:
-;	text "Stop taking TAILS?"
+;	text "Stop taking TAILs?"
 ;
 ;	para "Yeah, just try to"
 ;	line "defeat all of us!"
@@ -284,7 +284,7 @@ SlowpokeWellB1F_MapScripts:
 ;	done
 
 ;GruntF1AfterBattleText:
-;	text "SLOWPOKETAILS"
+;	text "SLOWPOKETAILs"
 ;	line "grow back fast!"
 ;
 ;	para "What's wrong with"

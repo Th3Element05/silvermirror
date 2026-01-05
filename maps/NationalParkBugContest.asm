@@ -207,7 +207,7 @@ NationalParkBugContestBattleNoticeText:
 	line "in the grass."
 
 	para "NATIONAL PARK"
-	line "WARDEN'S OFFICE"
+	line "WARDEN's OFFICE"
 	done
 
 NationalParkBugContestTrainerTipsText:
