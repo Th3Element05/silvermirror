@@ -3234,7 +3234,7 @@ wPokemonMansionB1FSceneID::                       db
 ;wMobileTradeRoomSceneID::                         db ; unused in silvermirror
 ;wMobileBattleRoomSceneID::                        db ; unused in silvermirror
 
-	ds 30 ;total ds 128 - 98 used = ds 30
+	ds 34 ;total ds 128 - 94 used = ds 34
 
 ; fight counts
 wJackFightCount::    db
