@@ -2197,12 +2197,12 @@ GetMapMusic::
 .silphco
 	ld a, [wStatusFlags2]
 	bit STATUSFLAGS2_ROCKETS_SILPH_CO_F, a
-	jr z, .rocketsinsilphco
-	ld de, MUSIC_CITIES_1
+	jr z, .clearedsilphco
+	ld de, MUSIC_SILPH_CO
 	jr .done
 
-.rocketsinsilphco
-	ld de, MUSIC_SILPH_CO
+.clearedsilphco
+	ld de, MUSIC_CITIES_1
 	jr .done
 
 .radiotower

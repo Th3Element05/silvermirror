@@ -86,7 +86,7 @@ SilphCo11FGiovanniEncounter:
 ;	reloadmappart
 	waitsfx
 	special FadeInQuickly
-	setflag ENGINE_ROCKETS_IN_SILPH_CO
+	clearflag ENGINE_ROCKETS_IN_SILPH_CO
 	setscene SCENE_SILPHCO11F_NOOP
 	setevent EVENT_BEAT_GIOVANNI_SILPHCO
 	setevent EVENT_SAFFRON_CITY_ROCKETS
