@@ -303,7 +303,7 @@ VioletCity_MapEvents:
 	def_bg_events
 	bg_event 14, 29, BGEVENT_READ, VioletCity_NoFruit
 	bg_event 24, 20, BGEVENT_READ, VioletCitySign
-	bg_event 15, 17, BGEVENT_READ, VioletGymSign
+	bg_event 19, 17, BGEVENT_READ, VioletGymSign
 	bg_event 24,  8, BGEVENT_READ, SproutTowerSign
 	bg_event 27, 17, BGEVENT_READ, VioletCityTrainerHouseSign
 	bg_event 32, 25, BGEVENT_READ, VioletCityPokecenterSign

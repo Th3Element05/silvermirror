@@ -460,7 +460,7 @@ ViridianCity_MapEvents:
 
 	def_bg_events
 	bg_event 19,  1, BGEVENT_READ, ViridianCityTrainerTips1Sign
-	bg_event 27,  7, BGEVENT_READ, ViridianGymSign
+	bg_event 31,  7, BGEVENT_READ, ViridianGymSign
 	bg_event 32,  7, BGEVENT_IFNOTSET, ViridianGymDoorLocked
 	bg_event 21, 17, BGEVENT_READ, ViridianCitySchoolSign
 	bg_event 17, 17, BGEVENT_READ, ViridianCitySign
@@ -473,7 +473,7 @@ ViridianCity_MapEvents:
 	object_event 18,  9, SPRITE_SLEEPING, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_OW_BROWN, OBJECTTYPE_SCRIPT, 0, ViridianCityCoffeeGrampsScript, EVENT_VIRIDIAN_CITY_COFFEE_GRAMPS
 	object_event 17,  5, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityTutorialGrampsScript, EVENT_VIRIDIAN_CITY_CATCHING_GRAMPS
 	object_event  6, 23, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ViridianCityDreamEaterFisher, -1
-	object_event 30,  8, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityGymGramps, -1
+	object_event 27,  7, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityGymGramps, -1
 	object_event 13, 20, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ViridianCityYoungster1Script, -1
 	object_event 30, 25, SPRITE_BOY, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ViridianCityYoungster2Script, -1
 	object_event 17,  9, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ViridianCityGirlScript, -1

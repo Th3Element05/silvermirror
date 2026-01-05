@@ -179,7 +179,7 @@ AzaleaTownSignText:
 KurtsHouseSign:
 	jumptext KurtsHouseSignText
 KurtsHouseSignText:
-	text "KURT'S HOUSE"
+	text "KURT's HOUSE"
 	done
 
 AzaleaGymSign:
@@ -256,7 +256,7 @@ AzaleaTown_MapEvents:
 	bg_event  8,  2, BGEVENT_READ, AzaleaTown_NoFruit
 	bg_event 19,  9, BGEVENT_READ, AzaleaTownSign
 	bg_event 11,  9, BGEVENT_READ, KurtsHouseSign
-	bg_event 15, 15, BGEVENT_READ, AzaleaGymSign
+	bg_event 11, 15, BGEVENT_READ, AzaleaGymSign
 	bg_event 29,  7, BGEVENT_READ, SlowpokeWellSign
 	bg_event 19, 13, BGEVENT_READ, CharcoalKilnSign
 	bg_event 16,  9, BGEVENT_READ, AzaleaTownPokecenterSign
@@ -273,6 +273,6 @@ AzaleaTown_MapEvents:
 	object_event  8, 17, SPRITE_SLOWPOKE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, -1
 	object_event 18,  9, SPRITE_SLOWPOKE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, -1
 	object_event 29,  9, SPRITE_SLOWPOKE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, -1
-	object_event 16, 15, SPRITE_SLOWPOKE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, -1
+	object_event 14, 15, SPRITE_SLOWPOKE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, -1
 
 ;.PinkOverYellowOBPalette

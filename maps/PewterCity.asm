@@ -216,7 +216,7 @@ PewterCityYoungsterHeyText:
 
 PewterCityYoungsterFollowMeText:
 	text "You're a trainer"
-	line "right? BROCK's"
+	line "right? BROCK is"
 	cont "looking for new"
 	cont "challengers!"
 	cont "Follow me!"
@@ -352,10 +352,11 @@ PewterCityCooltrainerFScript:
 	jumptextfaceplayer PewterCityCooltrainerFText
 PewterCityCooltrainerFText:
 	text "It's rumored that"
-	line "CLEFAIRYs came"
-	cont "from the moon!"
-	para "They appeared "
-	line "after MOON STONE"
+	line "CLEFAIRY came from"
+	cont "the moon!"
+
+	para "They appeared"
+	line "after MOON STONEs"
 	cont "fell on MT.MOON."
 	done
 
@@ -367,9 +368,9 @@ PewterCityYoungsterText:
 	cont "trainers here!"
 
 	para "They're all like"
-	line "BUG CATCHERs,"
-	cont "but PEWTER GYM's"
-	cont "BROCK is totally"
+	line "BUG CATCHERs, but"
+	cont "the GYM LEADER,"
+	cont "BROCK, is totally"
 	cont "into it!"
 	done
 
@@ -395,13 +396,24 @@ PewterCityPoliceNoticeSign:
 	jumptext PewterCityPoliceNoticeSignText
 PewterCityPoliceNoticeSignText:
 	text "NOTICE!"
-	para "Thieves have been"
-	line "stealing #MON"
-	cont "fossils at MT."
-	cont "MOON! Please call"
-	cont "PEWTER POLICE"
-	cont "with any info!"
+
+	para "Suspicious people"
+	line "have been spotted"
+	cont "inside MT.MOON."
+
+	para "Please contact"
+	line "PEWTER CITY POLICE"
+	cont "with any info."
 	done
+
+;	text "NOTICE!"
+;	para "Thieves have been"
+;	line "stealing #MON"
+;	cont "fossils at MT."
+;	cont "MOON! Please call"
+;	cont "PEWTER POLICE"
+;	cont "with any info!"
+;	done
 
 PewterCitySign:
 	jumptext PewterCitySignText
@@ -415,6 +427,7 @@ PewterCityTrainerTips:
 	jumptext PewterCityTrainerTipsText
 PewterCityTrainerTipsText:
 	text "TRAINER TIPS"
+
 	para "Any #MON that"
 	line "takes part in"
 	cont "battle, however"
@@ -548,7 +561,7 @@ PewterCity_MapEvents:
 	bg_event 31,  4, BGEVENT_READ, PewterCity_NoFruit
 	bg_event 33,  3, BGEVENT_READ, PewterCity_NoFruit
 	bg_event 15,  9, BGEVENT_READ, PewterCityMuseumSign
-	bg_event 11, 17, BGEVENT_READ, PewterCityGymSign
+	bg_event 15, 17, BGEVENT_READ, PewterCityGymSign
 	bg_event 33, 19, BGEVENT_READ, PewterCityPoliceNoticeSign
 	bg_event 25, 23, BGEVENT_READ, PewterCitySign
 	bg_event 19, 29, BGEVENT_READ, PewterCityTrainerTips
