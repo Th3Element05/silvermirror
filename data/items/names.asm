@@ -4,8 +4,8 @@ ItemNames::
 	li "ULTRA BALL"
 	li "BRIGHTPOWDER"
 	li "GREAT BALL"
-	li "POKéBALL" ; VWF can't print "#BALL"
-	li "TERU-SAMA" ; TOWNMAP
+	li "POKéBALL"     ; VWF can't print "#BALL"
+	li "TOWN MAP"
 	li "BICYCLE"
 	li "MOON STONE"
 	li "ANTIDOTE"
@@ -36,7 +36,7 @@ ItemNames::
 	li "LEAF STONE"
 	li "METAL POWDER"
 	li "NUGGET"
-	li "POKéDOLL" ; VWF can't print "#DOLL"
+	li "POKéDOLL"     ; VWF can't print "#DOLL"
 	li "FULL HEAL"
 	li "REVIVE"
 	li "MAX REVIVE"
@@ -53,17 +53,17 @@ ItemNames::
 	li "X SPECIAL"
 	li "COIN CASE"
 	li "ITEMFINDER"
-	li "POKéFLUTE" ; "POKE_FLUTE" ; VWF can't print "#FLUTE"
+	li "POKéFLUTE"    ; VWF can't print "#FLUTE"
 	li "EXP.SHARE"
 	li "OLD ROD"
 	li "GOOD ROD"
 	li "SILVER LEAF"
-	li "SUPER ROD" ; SUPER_ROD
+	li "SUPER ROD"
 	li "PP UP"
 	li "ETHER"
 	li "MAX ETHER"
 	li "ELIXER"
-	li "GOLD SCALE" ;"RED SCALE"
+	li "GOLD SCALE"   ; "RED SCALE"
 	li "OAK's PARCEL" ; "SECRETPOTION"
 	li "S.S.TICKET"
 	li "MYSTERY EGG"
@@ -79,7 +79,7 @@ ItemNames::
 	li "ASPEAR BERRY"
 	li "RAWST BERRY"
 	li "POISON BARB"
-	li "KING'S ROCK"
+	li "KING's ROCK"
 	li "PERSIM BERRY"
 	li "CHESTO BERRY"
 	li "RED APRICORN"
@@ -100,8 +100,8 @@ ItemNames::
 	li "DOME FOSSIL"
 	li "PNK APRICORN"
 	li "BLACKGLASSES"
-	li "GOLD TEETH" ; "SLOWPOKETAIL"
-	li "SILK SCARF" ; "PINK BOW"
+	li "GOLD TEETH"   ; "SLOWPOKETAIL"
+	li "SILK SCARF"   ; "PINK BOW"
 	li "STICK"
 	li "SMOKE BALL"
 	li "NEVERMELTICE"
@@ -111,7 +111,7 @@ ItemNames::
 	li "BIG PEARL"
 	li "EVERSTONE"
 	li "SPELL TAG"
-	li "SILPH SCOPE" ; "RAGECANDYBAR"
+	li "SILPH SCOPE"  ; "RAGECANDYBAR"
 	li "GS BALL"
 	li "BLUE CARD"
 	li "MIRACLE SEED"
@@ -127,10 +127,10 @@ ItemNames::
 	li "CARD KEY"
 	li "BIKE VOUCHER" ; "MACHINE PART"
 	li "EGG TICKET"
-	li "CARD KEY" ; "LOST ITEM"
+	li "CARD KEY"     ; "LOST ITEM"
 	li "STARDUST"
 	li "STAR PIECE"
-	li "LIFT KEY" ; "BASEMENT KEY"
+	li "LIFT KEY"     ; "BASEMENT KEY"
 	li "PASS"
 	li "SAFARI BALL"
 	li "CHARCOAL"
@@ -154,24 +154,21 @@ ItemNames::
 	li "NORMAL BOX"
 	li "GORGEOUS BOX"
 	li "SUN STONE"
-	li "STEEL INGOT" ; "POLKADOT BOW"
+	li "STEEL INGOT"  ; "POLKADOT BOW"
 	li "UP-GRADE"
 	li "ORAN BERRY"
-	li "GOLD BERRY"
+	li "SITRUS BERRY" ; "GOLD BERRY"
 	li "SQUIRTBOTTLE"
 	li "PARK BALL"
 	li "RAINBOW WING"
-	li "BRICK PIECE"
+	li "HEART SCALE"  ; "BRICK PIECE"
 	li "FLOWER MAIL"
 	li "SUPER ROD"    ; SUPER_ROD_2
-	li "TERU-SAMA"    ;+
-	li "TERU-SAMA"    ;+
-	li "TERU-SAMA"    ;+
-	li "TERU-SAMA"    ;+
-	li "TERU-SAMA"    ;+
-	li "TERU-SAMA"    ;+ const ITEM_8E
-	li "TERU-SAMA"    ;+ ITEM_C3
-	li "TERU-SAMA"    ;+ ITEM_DC
+	li "ITEM-A5"      ; ITEM_A5
+	li "ITEM-A6"      ; ITEM_A6
+	li "ITEM-A7"      ; ITEM_A7
+	li "ITEM-A8"      ; ITEM_A8
+	li "ITEM-A9"      ; ITEM_A9
 	assert_list_length NUM_ITEMS
 	li "TM01"
 	li "TM02"
@@ -250,6 +247,7 @@ ItemNames::
 	li "TM75"
 	li "TM76"
 	li "TM77"
+	li "TM78" ;unused
 	assert_list_length NUM_ITEMS + NUM_TMS; + 2 ; count ITEM_C3 and ITEM_DC
 	li "HM01"
 	li "HM02"
@@ -259,11 +257,8 @@ ItemNames::
 	li "HM06"
 	li "HM07"
 	assert_list_length NUM_ITEMS + NUM_TMS + NUM_HMS; + 2  ; count ITEM_C3 and ITEM_DC
-;	li "TERU-SAMA"
-;	li "TERU-SAMA"
-;	li "TERU-SAMA"
-;	li "TERU-SAMA"
-;	li "TERU-SAMA"
-;	li "TERU-SAMA"
-	li "?"
-	assert_list_length $101 ;$fe ;$100
+;	li "ITEM_FF"
+;	assert_list_length $101 ;$fe ;$100
+;	assert_table_length $ff ;include ITEM_FF
+;	assert_table_length $fe ;dont include ITEM_FF
+;	assert_table_length NUM_ITEMS + NUM_TMS + NUM_HMS; + 1 ; count ITEM_FF
