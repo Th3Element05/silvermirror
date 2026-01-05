@@ -2041,13 +2041,13 @@ RadioChannels:
 ; frequency value given here = 4 × ingame_frequency − 2
 	dbw 16, .PKMNTalkAndPokedexShow ; 04.5
 	dbw 28, .PokemonMusic           ; 07.5
-	dbw 32, .LuckyChannel           ; 08.5
-	dbw 40, .BuenasPassword         ; 10.5
-	dbw 52, .RuinsOfAlphRadio       ; 13.5
+	dbw 32, .LuckyChannel           ; 08.5 ; johto
+	dbw 40, .BuenasPassword         ; 10.5 ; johto
+	dbw 52, .RuinsOfAlphRadio       ; 13.5 ; ruins of alph
 	dbw 64, .PlacesAndPeople        ; 16.5
 	dbw 72, .LetsAllSing            ; 18.5
-	dbw 78, .PokeFluteRadio         ; 20.0
-	dbw 80, .EvolutionRadio         ; 20.5
+	dbw 78, .PokeFluteRadio         ; 20.0 ; expn card
+	dbw 80, .EvolutionRadio         ; 20.5 ; disabled
 	db -1
 
 .PKMNTalkAndPokedexShow:
@@ -2063,8 +2063,8 @@ RadioChannels:
 	jp LoadStation_OaksPokemonTalk
 
 .PokemonMusic:
-	call .InJohto
-	jr nc, .NoSignal
+;	call .InJohto
+;	jr nc, .NoSignal
 	jp LoadStation_PokemonMusic
 
 .LuckyChannel:
@@ -2084,44 +2084,44 @@ RadioChannels:
 	jp LoadStation_UnownRadio
 
 .PlacesAndPeople:
-	call .InJohto
-	jr c, .NoSignal
+;	call .InJohto
+;	jr c, .NoSignal
 ;	ld a, [wPokegearFlags]
 ;	bit POKEGEAR_EXPN_CARD_F, a
 ;	jr z, .NoSignal
 	jp LoadStation_PlacesAndPeople
 
 .LetsAllSing:
-	call .InJohto
-	jr c, .NoSignal
+;	call .InJohto
+;	jr c, .NoSignal
 ;	ld a, [wPokegearFlags]
 ;	bit POKEGEAR_EXPN_CARD_F, a
 ;	jr z, .NoSignal
 	jp LoadStation_LetsAllSing
 
 .PokeFluteRadio:
-	call .InJohto
-	jr c, .NoSignal
+;	call .InJohto
+;	jr c, .NoSignal
 	ld a, [wPokegearFlags]
 	bit POKEGEAR_EXPN_CARD_F, a
 	jr z, .NoSignal
 	jp LoadStation_PokeFluteRadio
 
-.EvolutionRadio:
-; This station airs in the Lake of Rage area when Team Rocket is still in Mahogany.
-	ld a, [wStatusFlags]
-	bit STATUSFLAGS_ROCKET_SIGNAL_F, a
-	jr z, .NoSignal
-	ld a, [wPokegearMapPlayerIconLandmark]
-	cp LANDMARK_MAHOGANY_TOWN
-	jr z, .ok
-	cp LANDMARK_ROUTE_43
-	jr z, .ok
-	cp LANDMARK_LAKE_OF_RAGE
-	jr nz, .NoSignal
-.ok
-	jp LoadStation_EvolutionRadio
-
+.EvolutionRadio: ;silvermirror- removed this station, unused, maybe repurpose the engine flag?
+;; This station airs in the Lake of Rage area when Team Rocket is still in Mahogany.
+;	ld a, [wStatusFlags]
+;	bit STATUSFLAGS_ROCKET_SIGNAL_F, a
+;	jr z, .NoSignal
+;	ld a, [wPokegearMapPlayerIconLandmark]
+;	cp LANDMARK_MAHOGANY_TOWN
+;	jr z, .ok
+;	cp LANDMARK_ROUTE_43
+;	jr z, .ok
+;	cp LANDMARK_LAKE_OF_RAGE
+;	jr nz, .NoSignal
+;.ok
+;	jp LoadStation_EvolutionRadio
+;
 .NoSignal:
 	call NoRadioStation
 	ret
@@ -2190,7 +2190,7 @@ LoadStation_BuenasPassword:
 	ld de, BuenasPasswordName
 	ret
 
-BuenasPasswordName:    db "BUENA'S PASSWORD@"
+BuenasPasswordName:    db "BUENA's PASSWORD@"
 NotBuenasPasswordName: db "@"
 
 LoadStation_UnownRadio:
@@ -3052,7 +3052,7 @@ Pokedex_GetArea:
 	ret
 
 .String_SNest:
-	db "'S NEST@"
+	db "'s NEST@"
 
 .GetAndPlaceNest:
 	ld [wTownMapCursorLandmark], a
