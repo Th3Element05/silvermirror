@@ -54,17 +54,19 @@ BlackthornGymClairScript:
 	writetext ClairText_RisingBadgeSpeech
 	promptbutton
 	verbosegiveitem TM_DRAGONBREATH
-	iffalse .NoRoomForDragonbreath
+	iffalse .SpeechAfterTM ;.NoRoomForDragonbreath
 	setevent EVENT_GOT_TM23_DRAGONBREATH
 	writetext ClairText_DragonbreathSpeech
 	promptbutton
 .SpeechAfterTM
+;.NoRoomForDragonbreath:
 	checkevent EVENT_CLEARED_DRAGONS_DEN
 	iftrue .AfterDragonsDen
 	writetext ClairText_GoToDragonsDen
 	waitbutton
-.NoRoomForDragonbreath:
 	closetext
+	setevent EVENT_BLACKTHORN_CITY_GRAMPS_BLOCKS_DRAGONS_DEN
+	clearevent EVENT_BLACKTHORN_CITY_GRAMPS_NOT_BLOCKING_DRAGONS_DEN
 	end
 
 .AfterDragonsDen:
@@ -144,16 +146,19 @@ ClairText_GoToDragonsDen:
 	line "and even LANCE."
 
 	para "I think you should"
-	line "go see the elders"
-	cont "of our clan."
+	line "meet the elders of"
+	cont "our clan."
 
 	para "Their temple is in"
-	line "the DRAGON'S DEN,"
+	line "the DRAGON's DEN,"
 	cont "behind this gym."
 
-	para "Go see them if you"
-	line "think you've got"
-	cont "what it takes."
+	para "I will allow your"
+	line "entry."
+;
+;	para "Go see them if you"
+;	line "think you've got"
+;	cont "what it takes."
 	done
 
 ClairTextAfterDragonsDen:
