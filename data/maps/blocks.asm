@@ -146,7 +146,7 @@ Route39Farmhouse_Blocks:
 MahoganyRedGyaradosSpeechHouse_Blocks:
 BlackthornDragonSpeechHouse_Blocks:
 BlackthornEmysHouse_Blocks:
-MoveDeletersHouse_Blocks:
+BlackthornMovesHouse_Blocks:
 CeruleanGymBadgeSpeechHouse_Blocks:
 ;CeruleanPoliceStation_Blocks:
 CeruleanTradeSpeechHouse_Blocks:
@@ -188,6 +188,7 @@ Route30BerryHouse_Blocks:
 DayCare_Blocks:
 ;MrFujisHouse_Blocks:
 FuchsiaGoodRodHouse_Blocks:
+FuchsiaMovesHouse_Blocks:
 SafariZoneWardensHome_Blocks:
 SaffronPidgeyHouse_Blocks:
 	INCBIN "maps/House1.blk"

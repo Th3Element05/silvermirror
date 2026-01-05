@@ -539,7 +539,7 @@ ENDM
 	map_attributes BlackthornEmysHouse, BLACKTHORN_EMYS_HOUSE, $00, 0
 	map_attributes BlackthornMart, BLACKTHORN_MART, $00, 0
 	map_attributes BlackthornPokecenter1F, BLACKTHORN_POKECENTER_1F, $00, 0
-	map_attributes MoveDeletersHouse, MOVE_DELETERS_HOUSE, $00, 0
+	map_attributes BlackthornMovesHouse, BLACKTHORN_MOVES_HOUSE, $00, 0
 	map_attributes CinnabarPokecenter1F, CINNABAR_POKECENTER_1F, $00, 0
 	map_attributes Route19Gate, ROUTE_19_GATE, $00, 0
 	map_attributes CeruleanGymBadgeSpeechHouse, CERULEAN_GYM_BADGE_SPEECH_HOUSE, $00, 0
@@ -793,6 +793,7 @@ ENDM
 	map_attributes Route12Gate, ROUTE_12_GATE, $00, 0
 	map_attributes Route12Gate2F, ROUTE_12_GATE_2F, $00, 0
 	map_attributes FuchsiaGoodRodHouse, FUCHSIA_GOOD_ROD_HOUSE, $00, 0
+	map_attributes FuchsiaMovesHouse, FUCHSIA_MOVES_HOUSE, $00, 0
 	map_attributes SaffronPidgeyHouse, SAFFRON_PIDGEY_HOUSE, $00, 0
 ;
 	map_attributes SilphCo1F, SILPH_CO_1F, $00, 0

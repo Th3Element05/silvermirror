@@ -195,13 +195,14 @@ ENDM
 	map_const SAFARI_ZONE_MAIN_OFFICE,                      5,  4 ;  6
 	map_const BILLS_BROTHERS_HOUSE,                         4,  4 ;  7
 	map_const FUCHSIA_GOOD_ROD_HOUSE,                       4,  4 ;  8
-	map_const ROUTE_15_GATE,                                4,  5 ;  9
-	map_const ROUTE_15_GATE_2F,                             4,  4 ; 10
-	map_const ROUTE_17,                                    12, 66 ; 11
-	map_const ROUTE_18,                                    25,  9 ; 12
-	map_const ROUTE_18_GATE,                                4,  5 ; 13
-	map_const ROUTE_18_GATE_2F,                             4,  4 ; 14
-	map_const ROUTE_19_GATE,                                4,  4 ; 15
+	map_const FUCHSIA_MOVES_HOUSE,                          4,  4 ;  9
+	map_const ROUTE_15_GATE,                                4,  5 ; 10
+	map_const ROUTE_15_GATE_2F,                             4,  4 ; 11
+	map_const ROUTE_17,                                    12, 66 ; 12
+	map_const ROUTE_18,                                    25,  9 ; 13
+	map_const ROUTE_18_GATE,                                4,  5 ; 14
+	map_const ROUTE_18_GATE_2F,                             4,  4 ; 15
+	map_const ROUTE_19_GATE,                                4,  4 ; 16
 	endgroup
 
 	newgroup SAFARI_ZONE                                          ; 10
@@ -413,7 +414,7 @@ ENDM
 	map_const BLACKTHORN_GYM_2F,                            5,  9 ;  5
 	map_const BLACKTHORN_DRAGON_SPEECH_HOUSE,               4,  4 ;  6
 	map_const BLACKTHORN_EMYS_HOUSE,                        4,  4 ;  7
-	map_const MOVE_DELETERS_HOUSE,                          4,  4 ;  8
+	map_const BLACKTHORN_MOVES_HOUSE,                       4,  4 ;  8
 	map_const ROUTE_45,                                    10, 45 ;  9
 	map_const ROUTE_46,                                    10, 18 ; 10
 	endgroup
