@@ -344,7 +344,7 @@ INCLUDE "engine/games/slot_machine.asm"
 
 SECTION "Phone Scripts 1", ROMX
 
-INCLUDE "engine/phone/scripts/bike_shop.asm"
+;INCLUDE "engine/phone/scripts/bike_shop.asm"
 INCLUDE "engine/phone/scripts/brent_gossip.asm"
 INCLUDE "engine/phone/scripts/buena.asm"
 INCLUDE "engine/phone/scripts/chad_gossip.asm"
@@ -608,7 +608,7 @@ INCLUDE "data/phone/text/alfred_caller.asm" ; new
 INCLUDE "data/phone/text/anthony_caller.asm"
 INCLUDE "data/phone/text/beth_caller.asm"
 INCLUDE "data/phone/text/beverly_caller.asm"
-INCLUDE "data/phone/text/bike_shop.asm"
+;INCLUDE "data/phone/text/bike_shop.asm"
 INCLUDE "data/phone/text/billy_caller.asm" ; new
 INCLUDE "data/phone/text/doug_caller.asm" ; new
 INCLUDE "data/phone/text/gaven_caller.asm"
