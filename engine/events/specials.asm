@@ -465,19 +465,27 @@ TrainerHouse:
 	jp CloseSRAM
 
 RespawnOneOffs:
-	; Set CHECK_FLAG once to be used multiple times
+; Set CHECK_FLAG once to be used multiple times
 	ld b, CHECK_FLAG
+
+;silvermirror- respawn SUDOWOODO regardless
+;	ld de, ENGINE_PLAYER_CAUGHT_SUDOWOODO
+;	farcall EngineFlagAction
+;	jr nz, .CaughtSudowoodo
+	eventflagreset EVENT_ROUTE_36_SUDOWOODO
+;.CaughtSudowoodo
+
+;	ld de, ENGINE_PLAYER_CAUGHT_MAGIKARP
+;	farcall EngineFlagAction
+;	jr nz, .CaughtMagikarp
+;	eventflagreset EVENT_LAKE_OF_RAGE_GOLD_MAGIKARP
+;.CaughtMagikarp
+
 	ld de, ENGINE_PLAYER_WOKE_BOTH_SNORLAX
 	farcall EngineFlagAction
 	jr z, .DontRespawnSnorlax
 	eventflagreset EVENT_ROUTE_11_SNORLAX_RESPAWN
 .DontRespawnSnorlax
-
-	ld de, ENGINE_PLAYER_CAUGHT_SUDOWOODO
-	farcall EngineFlagAction
-	jr nz, .CaughtSudowoodo
-	eventflagreset EVENT_ROUTE_36_SUDOWOODO
-.CaughtSudowoodo
 
 	ld de, ENGINE_PLAYER_CAUGHT_ARTICUNO
 	farcall EngineFlagAction
@@ -508,12 +516,6 @@ RespawnOneOffs:
 	jr nz, .CaughtMew
 	eventflagreset EVENT_FOUGHT_MEW
 .CaughtMew
-
-	ld de, ENGINE_PLAYER_CAUGHT_MAGIKARP
-	farcall EngineFlagAction
-	jr nz, .CaughtMagikarp
-	eventflagreset EVENT_LAKE_OF_RAGE_GOLD_MAGIKARP
-.CaughtMagikarp
 
 	ld de, ENGINE_PLAYER_CAUGHT_RAIKOU
 	farcall EngineFlagAction
