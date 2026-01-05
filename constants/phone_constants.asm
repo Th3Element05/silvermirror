@@ -59,13 +59,13 @@ DEF NUM_PHONE_CONTACTS EQU const_value - 1
 	const_def
 	const SPECIALCALL_NONE
 	const SPECIALCALL_POKERUS        ;only outside
+	const SPECIALCALL_WORRIED        ;only outside
 	const SPECIALCALL_SSANNE         ;only outside
 	const SPECIALCALL_FLASH          ;only outside
 	const SPECIALCALL_SILPHCO        ;only outside
 	const SPECIALCALL_VIRIDIANGYM    ;only outside
-	const SPECIALCALL_SSTICKET       ;wherever you are
+	const SPECIALCALL_SSTICKET       ;only outside
 	const SPECIALCALL_RADIOTOWER     ;wherever you are
-	const SPECIALCALL_WORRIED        ;only outside
 	const SPECIALCALL_MASTERBALL     ;only outside
 DEF NUM_SPECIALCALLS EQU const_value - 1
 DEF SPECIALCALL_SIZE EQU 6
