@@ -1,98 +1,97 @@
 	object_const_def
-	const ROUTE40_MONICA
+;	const ROUTE40_MONICA
 
 Route40_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
-	callback MAPCALLBACK_OBJECTS, Route40MonicaCallback
+;	callback MAPCALLBACK_OBJECTS, Route40MonicaCallback
 
-Route40MonicaCallback:
-	clearevent EVENT_BATTLE_TOWER_OPEN_CIVILIANS
-	readvar VAR_WEEKDAY
-	ifequal MONDAY, .MonicaAppears
-	disappear ROUTE40_MONICA
-	endcallback
+;Route40MonicaCallback:
+;	clearevent EVENT_BATTLE_TOWER_OPEN_CIVILIANS
+;	readvar VAR_WEEKDAY
+;	ifequal MONDAY, .MonicaAppears
+;	disappear ROUTE40_MONICA
+;	endcallback
+;
+;.MonicaAppears:
+;	appear ROUTE40_MONICA
+;	endcallback
 
-.MonicaAppears:
-	appear ROUTE40_MONICA
-	endcallback
+;MonicaScript:
+;	faceplayer
+;	opentext
+;	checkevent EVENT_GOT_SHARP_BEAK_FROM_MONICA
+;	iftrue .Monday
+;	readvar VAR_WEEKDAY
+;	ifnotequal MONDAY, .NotMonday
+;	checkevent EVENT_MET_MONICA_OF_MONDAY
+;	iftrue .MetMonica
+;	writetext MeetMonicaText
+;	promptbutton
+;	setevent EVENT_MET_MONICA_OF_MONDAY
+;.MetMonica:
+;	writetext MonicaGivesGiftText
+;	promptbutton
+;	verbosegiveitem SHARP_BEAK
+;	iffalse .done
+;	setevent EVENT_GOT_SHARP_BEAK_FROM_MONICA
+;	writetext MonicaGaveGiftText
+;	waitbutton
+;.done
+;	closetext
+;	end
+;
+;.Monday:
+;	writetext MonicaMondayText
+;	waitbutton
+;
+;.NotMonday:
+;	writetext MonicaNotMondayText
+;	waitbutton
+;	closetext
+;	end
 
-MonicaScript:
-	faceplayer
-	opentext
-	checkevent EVENT_GOT_SHARP_BEAK_FROM_MONICA
-	iftrue .Monday
-	readvar VAR_WEEKDAY
-	ifnotequal MONDAY, .NotMonday
-	checkevent EVENT_MET_MONICA_OF_MONDAY
-	iftrue .MetMonica
-	writetext MeetMonicaText
-	promptbutton
-	setevent EVENT_MET_MONICA_OF_MONDAY
-.MetMonica:
-	writetext MonicaGivesGiftText
-	promptbutton
-	verbosegiveitem SHARP_BEAK
-	iffalse .done
-	setevent EVENT_GOT_SHARP_BEAK_FROM_MONICA
-	writetext MonicaGaveGiftText
-	waitbutton
-.done
-	closetext
-	end
+;MeetMonicaText:
+;	text "MONICA: Glad to"
+;	line "meet you. I'm"
+;
+;	para "MONICA of Monday."
+;	done
 
-.Monday:
-	writetext MonicaMondayText
-	waitbutton
+;MonicaGivesGiftText:
+;	text "As a token of our"
+;	line "friendship, I have"
+;	cont "a gift for you!"
+;	done
 
-.NotMonday:
-	writetext MonicaNotMondayText
-	waitbutton
-	closetext
-	end
+;MonicaGaveGiftText:
+;	text "MONICA: It's an"
+;	line "item that raises"
+;
+;	para "the power of fly-"
+;	line "ing-type moves."
+;
+;	para "You should equip a"
+;	line "bird #MON with"
+;	cont "that item."
+;	done
 
-MeetMonicaText:
-	text "MONICA: Glad to"
-	line "meet you. I'm"
+;MonicaMondayText:
+;	text "MONICA: My broth-"
+;	line "ers and sisters"
+;	cont "are all over the"
+;	cont "place."
+;
+;	para "See if you could"
+;	line "find them all!"
+;	done
 
-	para "MONICA of Monday."
-	done
-
-MonicaGivesGiftText:
-	text "As a token of our"
-	line "friendship, I have"
-	cont "a gift for you!"
-	done
-
-MonicaGaveGiftText:
-	text "MONICA: It's an"
-	line "item that raises"
-
-	para "the power of fly-"
-	line "ing-type moves."
-
-	para "You should equip a"
-	line "bird #MON with"
-	cont "that item."
-	done
-
-MonicaMondayText:
-	text "MONICA: My broth-"
-	line "ers and sisters"
-
-	para "are all over the"
-	line "place."
-
-	para "See if you could"
-	line "find them all!"
-	done
-
-MonicaNotMondayText:
-	text "MONICA: I don't"
-	line "think today is"
-	cont "Monday. How sad…"
-	done
+;MonicaNotMondayText:
+;	text "MONICA: I don't"
+;	line "think today is"
+;	cont "Monday. How sad…"
+;	done
 
 TrainerFisherRoyce:
 	trainer FISHER, ROYCE, EVENT_BEAT_FISHER_ROYCE, FisherRoyceSeenText, FisherRoyceBeatenText, 0, .Script
@@ -259,9 +258,8 @@ Route40Lass2Script:
 Route40Lass2Text:
 	text "I came to OLIVINE"
 	line "by ship to see the"
-
-	para "sights and soak up"
-	line "the atmosphere."
+	cont "sights and soak up"
+	cont "the atmosphere."
 
 	para "Being a port, it"
 	line "feels so different"
@@ -276,15 +274,13 @@ Route40StandingYoungsterText:
 
 	para "I think a lot of"
 	line "tough trainers"
-
-	para "have gathered"
-	line "there already."
+	cont "have gathered"
+	cont "there already."
 
 	para "But since you have"
-	line "so many BADGES,"
-
-	para "you shouldn't do"
-	line "badly at all."
+	line "so many BADGEs,"
+	cont "you shouldn't do"
+	cont "badly at all."
 	done
 
 ;Route40PokefanMScript:
@@ -339,7 +335,7 @@ Route40_MapEvents:
 	bg_event  7,  7, BGEVENT_ITEM, Route40HiddenHyperPotion
 
 	def_object_events
-	object_event  8, 10, SPRITE_BEAUTY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MonicaScript, EVENT_ROUTE_40_MONICA_OF_MONDAY
+;	object_event  8, 10, SPRITE_BEAUTY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MonicaScript, EVENT_ROUTE_40_MONICA_OF_MONDAY
 	object_event 15, 13, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerFisherRoyce, -1
 	object_event 13, 17, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSwimmermDaryl, -1 ;simon
 	object_event  4, 19, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerSwimmerfNikki, -1 ;elaine

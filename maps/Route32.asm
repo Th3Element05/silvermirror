@@ -1,105 +1,105 @@
 	object_const_def
-	const ROUTE32_FRIEDA
+;	const ROUTE32_FRIEDA
 
 Route32_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
-	callback MAPCALLBACK_OBJECTS, Route32FriedaCallback
+;	callback MAPCALLBACK_OBJECTS, Route32FriedaCallback
 
-Route32FriedaCallback:
-	readvar VAR_WEEKDAY
-	ifequal FRIDAY, .FriedaAppears
-	disappear ROUTE32_FRIEDA
-	endcallback
+;Route32FriedaCallback:
+;	readvar VAR_WEEKDAY
+;	ifequal FRIDAY, .FriedaAppears
+;	disappear ROUTE32_FRIEDA
+;	endcallback
+;
+;.FriedaAppears:
+;	appear ROUTE32_FRIEDA
+;	endcallback
 
-.FriedaAppears:
-	appear ROUTE32_FRIEDA
-	endcallback
+;FriedaScript:
+;	faceplayer
+;	opentext
+;	checkevent EVENT_GOT_POISON_BARB_FROM_FRIEDA
+;	iftrue .Friday
+;	readvar VAR_WEEKDAY
+;	ifnotequal FRIDAY, .NotFriday
+;	checkevent EVENT_MET_FRIEDA_OF_FRIDAY
+;	iftrue .MetFrieda
+;	writetext MeetFriedaText
+;	promptbutton
+;	setevent EVENT_MET_FRIEDA_OF_FRIDAY
+;.MetFrieda:
+;	writetext FriedaGivesGiftText
+;	promptbutton
+;	verbosegiveitem POISON_BARB
+;	iffalse .Done
+;	setevent EVENT_GOT_POISON_BARB_FROM_FRIEDA
+;	writetext FriedaGaveGiftText
+;	waitbutton
+;	closetext
+;	end
+;
+;.Friday:
+;	writetext FriedaFridayText
+;	waitbutton
+;.Done:
+;	closetext
+;	end
+;
+;.NotFriday:
+;	writetext FriedaNotFridayText
+;	waitbutton
+;	closetext
+;	end
 
-FriedaScript:
-	faceplayer
-	opentext
-	checkevent EVENT_GOT_POISON_BARB_FROM_FRIEDA
-	iftrue .Friday
-	readvar VAR_WEEKDAY
-	ifnotequal FRIDAY, .NotFriday
-	checkevent EVENT_MET_FRIEDA_OF_FRIDAY
-	iftrue .MetFrieda
-	writetext MeetFriedaText
-	promptbutton
-	setevent EVENT_MET_FRIEDA_OF_FRIDAY
-.MetFrieda:
-	writetext FriedaGivesGiftText
-	promptbutton
-	verbosegiveitem POISON_BARB
-	iffalse .Done
-	setevent EVENT_GOT_POISON_BARB_FROM_FRIEDA
-	writetext FriedaGaveGiftText
-	waitbutton
-	closetext
-	end
+;MeetFriedaText:
+;	text "FRIEDA: Yahoo!"
+;	line "It's Friday!"
+;
+;	para "I'm FRIEDA of"
+;	line "Friday!"
+;
+;	para "Nice to meet you!"
+;	done
 
-.Friday:
-	writetext FriedaFridayText
-	waitbutton
-.Done:
-	closetext
-	end
+;FriedaGivesGiftText:
+;	text "Here's a POISON"
+;	line "BARB for you!"
+;	done
 
-.NotFriday:
-	writetext FriedaNotFridayText
-	waitbutton
-	closetext
-	end
+;FriedaGaveGiftText:
+;	text "FRIEDA: Give it to"
+;	line "a #MON that has"
+;	cont "poison-type moves."
+;
+;	para "Oh!"
+;
+;	para "It's wicked!"
+;
+;	para "You'll be shocked"
+;	line "how good it makes"
+;	cont "poison moves!"
+;	done
 
-MeetFriedaText:
-	text "FRIEDA: Yahoo!"
-	line "It's Friday!"
+;FriedaFridayText:
+;	text "FRIEDA: Hiya! What"
+;	line "day do you like?"
+;
+;	para "I love Friday. No"
+;	line "doubt about it!"
+;
+;	para "Don't you think"
+;	line "it's great too?"
+;	done
 
-	para "I'm FRIEDA of"
-	line "Friday!"
-
-	para "Nice to meet you!"
-	done
-
-FriedaGivesGiftText:
-	text "Here's a POISON"
-	line "BARB for you!"
-	done
-
-FriedaGaveGiftText:
-	text "FRIEDA: Give it to"
-	line "a #MON that has"
-	cont "poison-type moves."
-
-	para "Oh!"
-
-	para "It's wicked!"
-
-	para "You'll be shocked"
-	line "how good it makes"
-	cont "poison moves!"
-	done
-
-FriedaFridayText:
-	text "FRIEDA: Hiya! What"
-	line "day do you like?"
-
-	para "I love Friday. No"
-	line "doubt about it!"
-
-	para "Don't you think"
-	line "it's great too?"
-	done
-
-FriedaNotFridayText:
-	text "FRIEDA: Isn't it"
-	line "Friday today?"
-
-	para "It's so boring"
-	line "when it's not!"
-	done
+;FriedaNotFridayText:
+;	text "FRIEDA: Isn't it"
+;	line "Friday today?"
+;
+;	para "It's so boring"
+;	line "when it's not!"
+;	done
 
 TrainerYoungsterRegis:
 	trainer YOUNGSTER, REGIS, EVENT_BEAT_YOUNGSTER_REGIS, YoungsterRegisSeenText, YoungsterRegisBeatenText, 0, .Script
@@ -321,7 +321,7 @@ TrainerBirdKeeperJohn:
 	end
 
 BirdKeeperJohnSeenText:
-	text "Those BADGES! You"
+	text "Those BADGEs! You"
 	line "sure have a lot!"
 	done
 

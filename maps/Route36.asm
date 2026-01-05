@@ -45,80 +45,81 @@ Route36_NoFruit:
 	farsjump Std_NoFruitScript
 
 ; scripts
-ArthurScript:
-	faceplayer
-	opentext
-	checkevent EVENT_GOT_HARD_STONE_FROM_ARTHUR
-	iftrue .AlreadyGotStone
-	readvar VAR_WEEKDAY
-	ifnotequal THURSDAY, ArthurNotThursdayScript
-	checkevent EVENT_MET_ARTHUR_OF_THURSDAY
-	iftrue .MetArthur
-	writetext MeetArthurText
-	promptbutton
-	setevent EVENT_MET_ARTHUR_OF_THURSDAY
-.MetArthur:
-	writetext ArthurGivesGiftText
-	promptbutton
-	verbosegiveitem HARD_STONE
-	iffalse .BagFull
-	setevent EVENT_GOT_HARD_STONE_FROM_ARTHUR
-	writetext ArthurGaveGiftText
-	waitbutton
-	closetext
-	end
+;ArthurScript:
+;	faceplayer
+;	opentext
+;	checkevent EVENT_GOT_HARD_STONE_FROM_ARTHUR
+;	iftrue .AlreadyGotStone
+;	readvar VAR_WEEKDAY
+;	ifnotequal THURSDAY, ArthurNotThursdayScript
+;	checkevent EVENT_MET_ARTHUR_OF_THURSDAY
+;	iftrue .MetArthur
+;	writetext MeetArthurText
+;	promptbutton
+;	setevent EVENT_MET_ARTHUR_OF_THURSDAY
+;.MetArthur:
+;	writetext ArthurGivesGiftText
+;	promptbutton
+;	verbosegiveitem HARD_STONE
+;	iffalse .BagFull
+;	setevent EVENT_GOT_HARD_STONE_FROM_ARTHUR
+;	writetext ArthurGaveGiftText
+;	waitbutton
+;	closetext
+;	end
 
-.AlreadyGotStone:
-	writetext ArthurThursdayText
-	waitbutton
-.BagFull:
-	closetext
-	end
+;.AlreadyGotStone:
+;	writetext ArthurThursdayText
+;	waitbutton
+;.BagFull:
+;	closetext
+;	end
 
-ArthurNotThursdayScript:
-	writetext ArthurNotThursdayText
-	waitbutton
-	closetext
-	end
+;ArthurNotThursdayScript:
+;	writetext ArthurNotThursdayText
+;	waitbutton
+;	closetext
+;	end
 
-MeetArthurText:
-	text "ARTHUR: Who are"
-	line "you?"
+;MeetArthurText:
+;	text "ARTHUR: Who are"
+;	line "you?"
+;
+;	para "I'm ARTHUR of"
+;	line "Thursday."
+;	done
 
-	para "I'm ARTHUR of"
-	line "Thursday."
-	done
+;ArthurGivesGiftText:
+;	text "Here. You can have"
+;	line "this."
+;	done
 
-ArthurGivesGiftText:
-	text "Here. You can have"
-	line "this."
-	done
+;ArthurGaveGiftText:
+;	text "ARTHUR: A #MON"
+;	line "that uses rock-"
+;
+;	para "type moves should"
+;	line "hold on to that."
+;
+;	para "It pumps up rock-"
+;	line "type attacks."
+;	done
 
-ArthurGaveGiftText:
-	text "ARTHUR: A #MON"
-	line "that uses rock-"
+;ArthurThursdayText:
+;	text "ARTHUR: I'm ARTHUR"
+;	line "of Thursday. I'm"
+;
+;	para "the second son out"
+;	line "of seven children."
+;	done
 
-	para "type moves should"
-	line "hold on to that."
+;ArthurNotThursdayText:
+;	text "ARTHUR: Today's"
+;	line "not Thursday. How"
+;	cont "disappointing."
+;	done
 
-	para "It pumps up rock-"
-	line "type attacks."
-	done
-
-ArthurThursdayText:
-	text "ARTHUR: I'm ARTHUR"
-	line "of Thursday. I'm"
-
-	para "the second son out"
-	line "of seven children."
-	done
-
-ArthurNotThursdayText:
-	text "ARTHUR: Today's"
-	line "not Thursday. How"
-	cont "disappointing."
-	done
-
+; sudowoodo
 SudowoodoScript:
 	checkitem SQUIRTBOTTLE
 	iftrue .Fight
@@ -152,10 +153,10 @@ WateredWeirdTreeScript:: ; export (for when you use Squirtbottle from pack)
 	ifequal DRAW, DidntCatchSudowoodo
 	disappear ROUTE_36_SUDOWOODO
 	reloadmapafterbattle
-	special CheckBattleCaughtResult
-	iffalse .nocatch
-	setflag ENGINE_PLAYER_CAUGHT_SUDOWOODO
-.nocatch
+;	special CheckBattleCaughtResult
+;	iffalse .nocatch
+;	setflag ENGINE_PLAYER_CAUGHT_SUDOWOODO
+;.nocatch
 	end
 
 DidntUseSquirtbottleScript:
@@ -201,8 +202,8 @@ WeirdTreeMovement_Flee:
 Route36FloriaScript:
 	faceplayer
 	opentext
-	checkevent EVENT_TALKED_TO_FLORIA_AT_FLOWER_SHOP
-	iftrue .SecondTimeTalking
+;	checkevent EVENT_TALKED_TO_FLORIA_AT_FLOWER_SHOP
+;	iftrue .SecondTimeTalking
 	setevent EVENT_MET_FLORIA
 	writetext FloriaText1
 	waitbutton
@@ -219,11 +220,11 @@ Route36FloriaScript:
 	disappear ROUTE_36_FLORIA
 	end
 
-.SecondTimeTalking:
-	writetext FloriaText2
-	waitbutton
-	closetext
-	end
+;.SecondTimeTalking:
+;	writetext FloriaText2
+;	waitbutton
+;	closetext
+;	end
 
 FloriaText1:
 	text "I'm FLORIA from"
@@ -239,27 +240,21 @@ FloriaText1:
 	para "It just has to be"
 	line "a #MON."
 
-	para "I bet it would be"
-	line "shocked out of its"
-	cont "disguise if you"
-	cont "soaked it!"
+	para "If I suprise it do"
+	line "you think it will"
+	cont "drop its disguise?"
 
-	para "I know! I'll tell"
-	line "my sis and borrow"
-	cont "her water bottle!"
+	para "I'll go ask my"
+	line "sis at the FLOWER"
+	cont "SHOP."
 	done
 
-FloriaText2:
-	text "When I told my sis"
-	line "about the wiggly"
-	cont "tree, she said"
-	cont "it's dangerous."
-
-	para "If I beat WHITNEY,"
-	line "I wonder if she'll"
-	cont "lend me her water"
-	cont "bottle…"
-	done
+;FloriaText2:
+;	text "When I told my sis"
+;	line "about the wiggly"
+;	cont "tree, she said"
+;	cont "it's dangerous."
+;	done
 
 FloriaMovement2:
 	step RIGHT
