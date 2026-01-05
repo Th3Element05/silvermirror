@@ -158,7 +158,7 @@ SaffronCityGentlemanText:
 ;	
 	text "I came right away"
 	line "when I read about"
-	cont "ROCKETS at SILPH!"
+	cont "ROCKETs at SILPH!"
 
 	para "It's already over?"
 	line "I missed the"
@@ -214,7 +214,7 @@ SilphCoSignText:
 MrPsychicsHouseSign:
 	jumptext MrPsychicsHouseSignText
 MrPsychicsHouseSignText:
-	text "MR.PSYCHIC'S"
+	text "MR.PSYCHIC's"
 	line "HOUSE"
 	done
 
@@ -267,7 +267,7 @@ SaffronCity_MapEvents:
 
 	def_bg_events
 	bg_event 17,  5, BGEVENT_READ, SaffronCitySign
-	bg_event 33,  5, BGEVENT_READ, SaffronGymSign
+	bg_event 33,  3, BGEVENT_READ, SaffronGymSign
 	bg_event 25,  5, BGEVENT_READ, FightingDojoSign
 	bg_event 15, 21, BGEVENT_READ, SilphCoSign
 	bg_event 27, 29, BGEVENT_READ, MrPsychicsHouseSign

@@ -261,7 +261,7 @@ MahoganyTown_MapEvents:
 	def_bg_events
 	bg_event  1,  5, BGEVENT_READ, MahoganyTownSign
 	bg_event  9,  7, BGEVENT_READ, MahoganyTownRagecandybarSign
-	bg_event  3, 13, BGEVENT_READ, MahoganyGymSign
+	bg_event  7, 13, BGEVENT_READ, MahoganyGymSign
 	bg_event 16, 13, BGEVENT_READ, MahoganyTownPokecenterSign
 
 	def_object_events

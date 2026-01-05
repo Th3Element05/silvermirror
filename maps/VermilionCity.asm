@@ -376,7 +376,7 @@ VermilionCity_MapEvents:
 
 	def_bg_events
 	bg_event 27,  3, BGEVENT_READ, VermilionCitySign
-	bg_event  7, 19, BGEVENT_READ, VermilionGymSign
+	bg_event 11, 19, BGEVENT_READ, VermilionGymSign
 	bg_event  7, 13, BGEVENT_READ, PokemonFanClubSign
 	bg_event 29, 15, BGEVENT_READ, VermilionCityPortSign
 	bg_event 37, 13, BGEVENT_READ, VermilionCityNoticeSign
@@ -390,7 +390,7 @@ VermilionCity_MapEvents:
 	object_event 19, 30, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionCityPortSailorScript, -1
 	object_event 25, 27, SPRITE_SAILOR, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionCitySailorScript, -1
 	object_event 27,  6, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionMachopOwner, -1
-	object_event 30,  7, SPRITE_MACHOP, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, VermilionMachop, -1
+	object_event 29,  8, SPRITE_MACHOP, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, VermilionMachop, -1
 	object_event 14,  6, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, VermilionCityGamblerScript, -1
 	object_event 19,  7, SPRITE_BEAUTY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VermilionCityBeautyScript, -1
 

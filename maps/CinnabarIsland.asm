@@ -123,13 +123,13 @@ CinnabarIsland_MapEvents:
 	coord_event 21, 11, SCENE_CINNABARISLAND_MISSINGNO, CinnabarIslandMissingNoScript
 
 	def_bg_events
-	bg_event  9,  7, BGEVENT_READ, CinnabarIslandSign
-	bg_event 13,  5, BGEVENT_READ, CinnabarIslandGymSign
+	bg_event 11,  7, BGEVENT_READ, CinnabarIslandSign
+	bg_event 17,  5, BGEVENT_READ, CinnabarIslandGymSign
 	bg_event 12, 13, BGEVENT_READ, CinnabarIslandPokecenterSign
 	bg_event 16, 13, BGEVENT_READ, CinnabarIslandMartSign
 	bg_event  5, 13, BGEVENT_READ, CinnabarIslandLabSign
 	bg_event 18,  5, BGEVENT_IFNOTSET, CinnabarGymDoorLocked
 
 	def_object_events
-	object_event 12,  7, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarIslandGirl, -1
-	object_event 14,  8, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarIslandGramps, -1
+	object_event 15,  8, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarIslandGirl, -1
+	object_event 10,  5, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarIslandGramps, -1

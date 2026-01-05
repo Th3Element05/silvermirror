@@ -242,7 +242,7 @@ CeladonCity_MapEvents:
 
 	def_bg_events
 	bg_event 17, 15, BGEVENT_READ, CeladonCitySign
-	bg_event 11, 29, BGEVENT_READ, CeladonGymSign
+	bg_event  9, 27, BGEVENT_READ, CeladonGymSign
 	bg_event 19,  9, BGEVENT_READ, CeladonCityMansionSign
 	bg_event 25, 21, BGEVENT_READ, CeladonCityGameCornerSign
 	bg_event 31, 21, BGEVENT_READ, CeladonCityPrizeExchangeSign

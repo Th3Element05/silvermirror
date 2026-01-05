@@ -72,7 +72,7 @@ EcruteakCityGramps1AfterText:
 	para "It's a legend that"
 	line "has been passed"
 	cont "down by ECRUTEAK"
-	cont "GYM LEADERS."
+	cont "GYM LEADERs."
 
 	para "Me?"
 
@@ -176,7 +176,7 @@ EcruteakCityFisherText:
 ;	line "Have you learned"
 ;
 ;	para "to dance like the"
-;	line "KIMONO GIRLS?"
+;	line "KIMONO GIRLs?"
 ;
 ;	para "If you go to their"
 ;	line "DANCE THEATER, an"
@@ -275,13 +275,13 @@ EcruteakCity_MapEvents:
 	bg_event 30, 21, BGEVENT_READ, EcruteakCityMartSign
 	bg_event 15, 21, BGEVENT_READ, EcruteakCitySign
 	bg_event 38, 10, BGEVENT_READ, TinTowerSign
-	bg_event  8, 28, BGEVENT_READ, EcruteakGymSign
+	bg_event  7, 27, BGEVENT_READ, EcruteakGymSign
 	bg_event 21, 21, BGEVENT_READ, EcruteakDanceTheaterSign
 	bg_event  2, 10, BGEVENT_READ, BurnedTowerSign
 	bg_event 23, 14, BGEVENT_ITEM, EcruteakCityHiddenHyperPotion
 
 	def_object_events
-	object_event  5,  9, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, EcruteakCityGramps1Script, -1
+	object_event  5,  9, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, EcruteakCityGramps1Script, -1
 	object_event  4,  9, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, EcruteakCityGirlScript, EVENT_ECRUTEAK_CITY_GIRL
 	object_event 19, 15, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakCityGramps2Script, -1
 	object_event 21, 29, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, EcruteakCityLass1Script, -1
