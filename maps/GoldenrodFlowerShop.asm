@@ -15,8 +15,6 @@ FlowerShopTeacherScript:
 	iffalse .HaventMetFloria
 	checkevent EVENT_TALKED_TO_FLORIA_AT_FLOWER_SHOP
 	iffalse .Lalala
-	checkflag ENGINE_PLAINBADGE
-	iffalse .NoPlainBadge
 	faceplayer
 	opentext
 	writetext GoldenrodFlowerShopTeacherHeresTheSquirtbottleText
@@ -29,13 +27,13 @@ FlowerShopTeacherScript:
 	end
 
 .HaventMetFloria:
-	jumptextfaceplayer GoldenrodFlowerShopTeacherMySisterWentToSeeWigglyTreeRoute36Text
+	jumptextfaceplayer GoldenrodFlowerShopTeacherWeirdTreeText
 
 .NoPlainBadge:
 	jumptextfaceplayer GoldenrodFlowerShopTeacherAskWantToBorrowWaterBottleText
 
 .GotSquirtbottle:
-	jumptextfaceplayer GoldenrodFlowerShopTeacherDontDoAnythingDangerousText
+	jumptextfaceplayer GoldenrodFlowerShopTeacherWaterPlantsText
 
 .Lalala:
 	turnobject GOLDENRODFLOWERSHOP_TEACHER, LEFT
@@ -45,7 +43,7 @@ FlowerShopTeacherScript:
 	closetext
 	end
 
-GoldenrodFlowerShopTeacherMySisterWentToSeeWigglyTreeRoute36Text:
+GoldenrodFlowerShopTeacherWeirdTreeText:
 	text "There's a weird"
 	line "tree on ROUTE 36."
 
@@ -69,17 +67,18 @@ GoldenrodFlowerShopTeacherAskWantToBorrowWaterBottleText:
 	done
 
 GoldenrodFlowerShopTeacherHeresTheSquirtbottleText:
-	text "Oh, you're better"
-	line "than WHITNEY…"
+	text "You want to borrow"
+	line "a SQUIRTBOTTLE?"
 
-	para "You'll be OK,"
-	line "then. Here's the"
-	cont "SQUIRTBOTTLE!"
+	para "Sure, any plants"
+	line "you meet will love"
+	cont "some water!"
 	done
 
-GoldenrodFlowerShopTeacherDontDoAnythingDangerousText:
-	text "Don't do anything"
-	line "too dangerous!"
+GoldenrodFlowerShopTeacherWaterPlantsText:
+	text "Give water to all"
+	line "the lovely plants"
+	cont "you meet!"
 	done
 
 GoldenrodFlowerShopTeacherLalalaHavePlentyOfWaterText:
@@ -91,34 +90,33 @@ GoldenrodFlowerShopTeacherLalalaHavePlentyOfWaterText:
 FlowerShopFloriaScript:
 	checkevent EVENT_FOUGHT_SUDOWOODO
 	iftrue .FoughtSudowoodo
-	checkevent EVENT_GOT_SQUIRTBOTTLE
-	iftrue .GotSquirtbottle
+	checkevent EVENT_BEAT_WHITNEY
+	iftrue .BeatWhitney
 	faceplayer
 	opentext
-	writetext GoldenrodFlowerShopFloriaWonderIfSisWillLendWaterBottleText
+	writetext GoldenrodFlowerShopFloriaToldSisText
 	waitbutton
 	closetext
 	setevent EVENT_TALKED_TO_FLORIA_AT_FLOWER_SHOP
-	setevent EVENT_FLORIA_AT_FLOWER_SHOP
-	clearevent EVENT_FLORIA_AT_SUDOWOODO
+;	setevent EVENT_FLORIA_AT_FLOWER_SHOP
+;	clearevent EVENT_FLORIA_AT_SUDOWOODO
 	end
 
-.GotSquirtbottle:
-	jumptextfaceplayer GoldenrodFlowerShopFloriaYouBeatWhitneyText
-
 .FoughtSudowoodo:
+	random 3
+	ifequal 0, .BeatWhitney
 	jumptextfaceplayer GoldenrodFlowerShopFloriaItReallyWasAMonText
 
-GoldenrodFlowerShopFloriaWonderIfSisWillLendWaterBottleText:
-	text "When I told my sis"
-	line "about the wiggly"
-	cont "tree, she said"
-	cont "it's dangerous."
+.BeatWhitney:
+	jumptextfaceplayer GoldenrodFlowerShopFloriaYouBeatWhitneyText
 
-	para "If I beat WHITNEY,"
-	line "I wonder if she'll"
-	cont "lend me her water"
-	cont "bottle…"
+GoldenrodFlowerShopFloriaToldSisText:
+	text "I told my sis"
+	line "about the weird"
+	cont "tree on ROUTE 36."
+
+	para "She said it was"
+	line "dangerous."
 	done
 
 GoldenrodFlowerShopFloriaYouBeatWhitneyText:
@@ -127,8 +125,8 @@ GoldenrodFlowerShopFloriaYouBeatWhitneyText:
 	done
 
 GoldenrodFlowerShopFloriaItReallyWasAMonText:
-	text "So it really was"
-	line "a #MON!"
+	text "So the tree really"
+	line "was a #MON!"
 	done
 
 ;FlowerShopShelf1: ; unreferenced
