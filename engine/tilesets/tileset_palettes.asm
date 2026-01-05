@@ -206,13 +206,14 @@ MapSpecificOBPalettes:
 	_use_palette_routine_for_map MOUNT_MOON_SQUARE, .PinkOverYellowOBPalette        ;clefairy
 ;johto
 	_use_palette_routine_for_map DANCE_THEATER, .GrayOverYellowOBPalette            ;rhyhorn
+	_use_palette_routine_for_map ROUTE_42, .PinkOverPurpleOBPalette                 ;pnk
 	_use_palette_routine_for_map ROUTE_37, .GrayOverYellowOBPalette                 ;blk
 	_use_palette_routine_for_map GOLDENROD_DEPT_STORE_B1F, .GrayOverYellowOBPalette ;machoke
 	_use_palette_routine_for_map AZALEA_TOWN, .PinkOverYellowOBPalette              ;slowpoke
 	_use_palette_routine_for_map ROUTE_33, .GrayOverYellowOBPalette                 ;blk
 	_use_palette_routine_for_map UNION_CAVE_1F, .GrayOverYellowOBPalette            ;geodude
 	_use_palette_routine_for_map ROUTE_30, .PinkOverYellowOBPalette                 ;pecha, pnk
-	_use_palette_routine_for_map ROUTE_42, .PinkOverPurpleOBPalette                 ;pnk
+	_use_palette_routine_for_map MAHOGANY_GYM, .PinkOverYellowOBPalette             ;skier
 	_use_palette_routine_for_map ROUTE_43, .PinkOverYellowOBPalette                 ;persim
 	db -1 ; terminator
 
