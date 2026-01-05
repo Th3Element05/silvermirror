@@ -1,0 +1,159 @@
+WILTON1
+TrainerFisherWilton1:
+	trainer FISHER, WILTON1, EVENT_BEAT_FISHER_WILTON, FisherWilton1SeenText, FisherWilton1BeatenText, 0, .Script
+.Script:
+	loadvar VAR_CALLERID, PHONE_FISHER_WILTON
+	opentext
+	checkflag ENGINE_WILTON_READY_FOR_REMATCH
+	iftrue .WantsBattle
+	checkflag ENGINE_WILTON_HAS_BALL_ITEM
+	iftrue .HasItem
+	checkcellnum PHONE_FISHER_WILTON
+	iftrue .WiltonDefeated
+	checkevent EVENT_WILTON_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskedAlready
+	writetext FisherWiltonHugePoliwagText
+	promptbutton
+	setevent EVENT_WILTON_ASKED_FOR_PHONE_NUMBER
+	scall Route44AskNumber1M
+	sjump .AskForNumber
+
+.AskedAlready:
+	scall Route44AskNumber2M
+.AskForNumber:
+	askforphonenumber PHONE_FISHER_WILTON
+	ifequal PHONE_CONTACTS_FULL, Route44PhoneFullM
+	ifequal PHONE_CONTACT_REFUSED, Route44NumberDeclinedM
+	gettrainername STRING_BUFFER_3, FISHER, WILTON1
+	scall Route44RegisteredNumberM
+	sjump Route44NumberAcceptedM
+
+.WantsBattle:
+	scall Route44RematchM
+	winlosstext FisherWilton1BeatenText, 0
+	checkevent EVENT_RESTORED_POWER_TO_KANTO
+	iftrue .LoadFight2
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .LoadFight1
+	loadtrainer FISHER, WILTON1
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_WILTON_READY_FOR_REMATCH
+	end
+
+.LoadFight1:
+	loadtrainer FISHER, WILTON2
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_WILTON_READY_FOR_REMATCH
+	end
+
+.LoadFight2:
+	loadtrainer FISHER, WILTON3
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_WILTON_READY_FOR_REMATCH
+	end
+
+.HasItem:
+	scall Route44GiftM
+	random 3
+	ifequal 0, .pokeball
+	ifequal 1, .greatball
+	ifequal 2, .ultraball
+
+.pokeball:
+	verbosegiveitem POKE_BALL
+	iffalse .Route44PackFullM
+	sjump .ItemReceived
+
+.greatball:
+	verbosegiveitem GREAT_BALL
+	iffalse .Route44PackFullM
+	sjump .ItemReceived
+
+.ultraball:
+	verbosegiveitem ULTRA_BALL
+	iffalse .Route44PackFullM
+	sjump .ItemReceived
+
+.ItemReceived:
+	clearflag ENGINE_WILTON_HAS_BALL_ITEM
+	setflag ENGINE_WILTON_GAVE_BALL_ITEM
+	sjump Route44NumberAcceptedM
+
+.Route44PackFullM:
+	sjump Route44PackFullM
+	
+.WiltonDefeated:
+	writetext FisherWiltonHugePoliwagText
+	promptbutton
+	closetext
+	end
+
+FisherWilton1SeenText:
+	text "Aack! You made me"
+	line "lose a POLIWAG!"
+
+	para "What are you going"
+	line "to do about it?"
+	done
+
+FisherWilton1BeatenText:
+	text "Just forget about"
+	line "it."
+	done
+
+FisherWiltonHugePoliwagText:
+	text "That POLIWAG that"
+	line "got away…"
+	cont "It was huge."
+
+	para "I swear it must've"
+	line "been 16 feet long!"
+	done
+
+Route44AskNumber1M:
+	jumpstd AskNumber1MScript
+	end
+
+Route44AskNumber2M:
+	jumpstd AskNumber2MScript
+	end
+
+Route44RegisteredNumberM:
+	jumpstd RegisteredNumberMScript
+	end
+
+Route44NumberAcceptedM:
+	jumpstd NumberAcceptedMScript
+	end
+
+Route44NumberDeclinedM:
+	jumpstd NumberDeclinedMScript
+	end
+
+Route44PhoneFullM:
+	jumpstd PhoneFullMScript
+	end
+
+Route44RematchM:
+	jumpstd RematchMScript
+	end
+
+Route44GiftM:
+	jumpstd GiftMScript
+	end
+
+Route44PackFullM:
+	jumpstd PackFullMScript
+	end
+
+VancePackFull:
+	setevent EVENT_VANCE_CARBOS
+	jumpstd PackFullMScript
+	end
+
+Route44RematchGiftM:
+	jumpstd RematchGiftMScript
+	end
