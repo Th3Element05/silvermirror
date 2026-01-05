@@ -21,7 +21,7 @@ OverworldSprites:
 	overworld_sprite ErikaSpriteGFX, 12, WALKING_SPRITE, PAL_OW_GREEN
 	overworld_sprite KogaSpriteGFX, 12, WALKING_SPRITE, PAL_OW_PURPLE
 	overworld_sprite SabrinaSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
-	overworld_sprite BlaineSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
+	overworld_sprite BlaineSpriteGFX, 12, WALKING_SPRITE, PAL_OW_SILVER ;PAL_OW_BROWN
 	overworld_sprite GiovanniSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
 	overworld_sprite LoreleiSpriteGFX, 12, STANDING_SPRITE, PAL_OW_RED
 	overworld_sprite BrunoSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
@@ -30,8 +30,8 @@ OverworldSprites:
 	overworld_sprite FalknerSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
 	overworld_sprite BugsySpriteGFX, 12, WALKING_SPRITE, PAL_OW_GREEN
 	overworld_sprite WhitneySpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
-	overworld_sprite MortySpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
-	overworld_sprite ChuckSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite MortySpriteGFX, 12, WALKING_SPRITE, PAL_NPC_PURPLE ;PAL_OW_BROWN
+	overworld_sprite ChuckSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN ;PAL_OW_RED
 	overworld_sprite JasmineSpriteGFX, 12, WALKING_SPRITE, PAL_OW_GREEN
 	overworld_sprite PryceSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
 	overworld_sprite ClairSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
@@ -43,9 +43,9 @@ OverworldSprites:
 	overworld_sprite TwinSpriteGFX, 12, WALKING_SPRITE, PAL_OW_PURPLE
 	overworld_sprite YoungsterSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
 	overworld_sprite LassSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
-	overworld_sprite TeacherSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite TeacherSpriteGFX, 12, WALKING_SPRITE, PAL_OW_GREEN
 	overworld_sprite BeautySpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
-	overworld_sprite SuperNerdSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
+	overworld_sprite SuperNerdSpriteGFX, 12, WALKING_SPRITE, PAL_OW_SILVER ;PAL_OW_BROWN
 	overworld_sprite RockerSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
 	overworld_sprite PokefanMSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
 	overworld_sprite PokefanFSpriteGFX, 12, WALKING_SPRITE, PAL_OW_PURPLE
@@ -88,7 +88,7 @@ OverworldSprites:
 ; 4f
 ; objects
 	overworld_sprite PokeBallSpriteGFX, 4, STILL_SPRITE, PAL_OW_RED
-	overworld_sprite PokedexSpriteGFX, 4, STILL_SPRITE, PAL_OW_BROWN
+	overworld_sprite PokedexSpriteGFX, 4, STILL_SPRITE, PAL_OW_RED
 	overworld_sprite PaperSpriteGFX, 4, STILL_SPRITE, PAL_OW_SILVER ;PAL_OW_BLUE
 	overworld_sprite RockSpriteGFX, 4, STILL_SPRITE, PAL_OW_ROCK
 	overworld_sprite BoulderSpriteGFX, 4, STILL_SPRITE, PAL_OW_ROCK
@@ -136,6 +136,6 @@ OverworldSprites:
 	overworld_sprite VirtualBoySpriteGFX, 4, STILL_SPRITE, PAL_OW_RED
 	overworld_sprite SnesSpriteGFX, 4, STILL_SPRITE, PAL_OW_BLUE
 	overworld_sprite N64SpriteGFX, 4, STILL_SPRITE, PAL_OW_BROWN
-	overworld_sprite GoldTrophySpriteGFX, 4, STILL_SPRITE, PAL_OW_BROWN
+	overworld_sprite GoldTrophySpriteGFX, 4, STILL_SPRITE, PAL_OW_YELLOW ;PAL_OW_BROWN
 	overworld_sprite SilverTrophySpriteGFX, 4, STILL_SPRITE, PAL_OW_SILVER
 	assert_table_length NUM_OVERWORLD_SPRITES
