@@ -26,7 +26,8 @@ MeetMomRightScript:
 	turnobject PLAYER, LEFT
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	iffalse .OnRight
-	applymovement PLAYERSHOUSE1F_MOM1, MomTurnsTowardPlayerMovement
+;	applymovement PLAYERSHOUSE1F_MOM1, MomTurnsTowardPlayerMovement
+	turnobject PLAYERSHOUSE1F_MOM1, RIGHT
 	sjump MeetMomScript
 
 .OnRight:
@@ -81,19 +82,21 @@ MeetMomScript:
 
 .FinishPhone:
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
-	iftrue .FromRight
+;	iftrue .FromRight
+	iftrue .Finish
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
 	iffalse .FromLeft
 	sjump .Finish
 
-.FromRight:
-	applymovement PLAYERSHOUSE1F_MOM1, MomTurnsBackMovement
-	sjump .Finish
+;.FromRight:
+;;	applymovement PLAYERSHOUSE1F_MOM1, MomTurnsBackMovement
+;	turnobject PLAYERSHOUSE1F_MOM1, LEFT
+;	sjump .Finish
 
 .FromLeft:
 	applymovement PLAYERSHOUSE1F_MOM1, MomWalksBackMovement
-	sjump .Finish
-
+;	sjump .Finish
+	; fallthrough
 .Finish:
 	special RestartMapMusic
 	turnobject PLAYERSHOUSE1F_MOM1, LEFT
@@ -182,25 +185,17 @@ NeighborScript:
 	turnobject PLAYERSHOUSE1F_POKEFAN_F, RIGHT
 	end
 
-
-
-
-
-
-
-
-
-MomTurnsTowardPlayerMovement:
-	turn_head RIGHT
-	step_end
+;MomTurnsTowardPlayerMovement:
+;	turn_head RIGHT
+;	step_end
 
 MomWalksToPlayerMovement:
 	slow_step RIGHT
 	step_end
 
-MomTurnsBackMovement:
-	turn_head LEFT
-	step_end
+;MomTurnsBackMovement:
+;	turn_head LEFT
+;	step_end
 
 MomWalksBackMovement:
 	slow_step LEFT
@@ -312,7 +307,7 @@ ImBehindYouText:
 
 NeighborMornIntroText:
 	text "Good morning,"
-	line "<PLAY_G>!"
+	line "<PLAYER>!"
 
 	para "I'm visiting!"
 	done
@@ -324,13 +319,13 @@ NeighborDayIntroText:
 
 NeighborNiteIntroText:
 	text "Good evening,"
-	line "<PLAY_G>!"
+	line "<PLAYER>!"
 
 	para "I'm visiting!"
 	done
 
 NeighborText:
-	text "<PLAY_G>, have you"
+	text "<PLAYER>, have you"
 	line "heard?"
 
 	para "My daughter is"
@@ -376,9 +371,6 @@ PlayersHouse1FTVText:
 	line "TV: Stars dot the"
 	cont "sky as two boys"
 	cont "ride on a train…"
-
-	para "I'd better get"
-	line "rolling too!"
 	done
 
 PlayersHouse1FBookshelf:
