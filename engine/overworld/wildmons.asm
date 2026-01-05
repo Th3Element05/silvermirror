@@ -403,8 +403,8 @@ ChooseWildEncounter:
 	jr z, .ok
 	cp BATTLETYPE_KANTO_LEGEND
 	jr z, .ok
-;	cp BATTLETYPE_SUICUNE
-;	jr z, .ok
+	cp BATTLETYPE_ROAMING ;BATTLETYPE_SUICUNE
+	jr z, .ok
 	cp BATTLETYPE_FORCESHINY
 	jr z, .ok
 
