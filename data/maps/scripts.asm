@@ -205,6 +205,7 @@ INCLUDE "maps/BillsBrothersHouse.asm"
 INCLUDE "maps/SafariZoneWardensHome.asm"
 INCLUDE "maps/SafariZoneMainOffice.asm"
 INCLUDE "maps/FuchsiaGoodRodHouse.asm"
+INCLUDE "maps/FuchsiaMovesHouse.asm"
 
 
 SECTION "Map Scripts 18", ROMX
@@ -622,7 +623,7 @@ INCLUDE "maps/BlackthornEmysHouse.asm"
 INCLUDE "maps/DragonsDen1F.asm"
 INCLUDE "maps/DragonsDenB1F.asm"
 INCLUDE "maps/DragonShrine.asm"
-INCLUDE "maps/MoveDeletersHouse.asm"
+INCLUDE "maps/BlackthornMovesHouse.asm"
 
 
 SECTION "Map Scripts 50", ROMX
