@@ -78,7 +78,7 @@ ItemEffects:
 	dw RestorePPEffect     ; MAX_ETHER
 	dw RestorePPEffect     ; ELIXER
 	dw NoEffect            ; GOLD_SCALE ; RED_SCALE
-	dw NoEffect            ; SECRETPOTION
+	dw NoEffect            ; OAKS_PARCEL ; SECRETPOTION
 	dw NoEffect            ; S_S_TICKET
 	dw NoEffect            ; MYSTERY_EGG
 	dw NoEffect            ; CLEAR_BELL
@@ -131,7 +131,7 @@ ItemEffects:
 	dw NoEffect            ; MIRACLE_SEED
 	dw NoEffect            ; THICK_CLUB
 	dw NoEffect            ; FOCUS_BAND
-	dw NoEffect            ; ITEM_78
+	dw NoEffect            ; OLD_AMBER
 	dw EnergypowderEffect  ; ENERGYPOWDER
 	dw EnergyRootEffect    ; ENERGY_ROOT
 	dw HealPowderEffect    ; HEAL_POWDER
@@ -139,12 +139,12 @@ ItemEffects:
 	dw NoEffect            ; HARD_STONE
 	dw NoEffect            ; LUCKY_EGG
 	dw NoEffect            ; CARD_KEY ; dw CardKeyEffect
-	dw NoEffect            ; SS_TICKET ; MACHINE_PART
+	dw NoEffect            ; BIKE_VOUCHER ; MACHINE_PART
 	dw NoEffect            ; EGG_TICKET
 	dw CardKeyEffect       ; CARD_KEY_R ; LOST_ITEM
 	dw NoEffect            ; STARDUST
 	dw NoEffect            ; STAR_PIECE
-	dw BasementKeyEffect   ; BASEMENT_KEY
+	dw NoEffect            ; LIFT_KEY ; BASEMENT_KEY ;BasementKeyEffect
 	dw NoEffect            ; PASS
 	dw PokeBallEffect      ; SAFARI_BALL
 	dw NoEffect            ; CHARCOAL
@@ -158,7 +158,6 @@ ItemEffects:
 	dw NoEffect            ; BERSERK_GENE
 	dw SacredAshEffect     ; SACRED_ASH
 	dw PokeBallEffect      ; HEAVY_BALL
-	dw NoEffect            ; FLOWER_MAIL
 	dw PokeBallEffect      ; LEVEL_BALL
 	dw PokeBallEffect      ; LURE_BALL
 	dw PokeBallEffect      ; FAST_BALL
@@ -176,29 +175,16 @@ ItemEffects:
 	dw SquirtbottleEffect  ; SQUIRTBOTTLE
 	dw PokeBallEffect      ; PARK_BALL
 	dw NoEffect            ; RAINBOW_WING
-	dw NoEffect            ; BRICK_PIECE
-	dw SuperRod2Effect     ; SUPER_ROD_2 ; ITEM_BE
-	dw NoEffect            ; ITEM_2D ;+
-	dw NoEffect            ; ITEM_32 ;+
-	dw NoEffect            ; ITEM_88 ;+
-	dw NoEffect            ; ITEM_89 ;+
-	dw NoEffect            ; ITEM_8D ;+
-	dw NoEffect            ; ITEM_8E ;+
-	dw NoEffect            ; ITEM_C3 ;+
-	dw NoEffect            ; ITEM_DC ;+
+	dw NoEffect            ; HEART_SCALE ; BRICK_PIECE
+	dw NoEffect            ; FLOWER_MAIL
+	dw SuperRod2Effect     ; SUPER_ROD_2
+	dw NoEffect            ; ITEM_A5
+	dw NoEffect            ; ITEM_A6
+	dw NoEffect            ; ITEM_A7
+	dw NoEffect            ; ITEM_A8
+	dw NoEffect            ; ITEM_A9
 	assert_table_length NUM_ITEMS ; assert_table_length ITEM_B3
 ; The items past ITEM_B3 do not have effect entries:
-;   BRICK_PIECE
-;	SURF_MAIL
-;	LITEBLUEMAIL
-;	PORTRAITMAIL
-;	LOVELY_MAIL
-;	EON_MAIL
-;	MORPH_MAIL
-;	BLUESKY_MAIL
-;	MUSIC_MAIL
-;	MIRAGE_MAIL
-;   ITEM_B3
 ; They all have the ITEMMENU_NOUSE attribute so they can't be used anyway.
 ; NoEffect would be appropriate, with the table then being NUM_ITEMS long.
 
