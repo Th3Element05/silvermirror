@@ -1,13 +1,5 @@
 	object_const_def
-;	const DRAGONSDENB1F_POKE_BALL1
 	const DRAGONSDENB1F_CLAIR
-;	const DRAGONSDENB1F_RIVAL
-;	const DRAGONSDENB1F_COOLTRAINER_M
-;	const DRAGONSDENB1F_COOLTRAINER_F
-;	const DRAGONSDENB1F_TWIN1
-;	const DRAGONSDENB1F_TWIN2
-;	const DRAGONSDENB1F_POKE_BALL2
-;	const DRAGONSDENB1F_POKE_BALL3
 
 DragonsDenB1F_MapScripts:
 	def_scene_scripts
@@ -15,30 +7,10 @@ DragonsDenB1F_MapScripts:
 	scene_script DragonsDenB1FNoop2Scene, SCENE_DRAGONSDENB1F_CLAIR_GIVES_TM
 
 	def_callbacks
-;	callback MAPCALLBACK_NEWMAP, DragonsDenB1FCheckRivalCallback
 
 DragonsDenB1FNoop1Scene:
-	end
-
 DragonsDenB1FNoop2Scene:
 	end
-
-;DragonsDenB1FCheckRivalCallback:
-;	checkevent EVENT_BEAT_RIVAL_IN_MT_MOON
-;	iftrue .CheckDay
-;	disappear DRAGONSDENB1F_RIVAL
-;	endcallback
-
-.CheckDay:
-	readvar VAR_WEEKDAY
-	ifequal TUESDAY, .AppearRival
-	ifequal THURSDAY, .AppearRival
-;	disappear DRAGONSDENB1F_RIVAL
-	endcallback
-
-.AppearRival:
-;	appear DRAGONSDENB1F_RIVAL
-	endcallback
 
 DragonsDenB1F_ClairScene:
 	appear DRAGONSDENB1F_CLAIR
@@ -283,7 +255,7 @@ DragonShrineSignpostText:
 	line "the dragon #MON"
 
 	para "said to have lived"
-	line "in DRAGON'S DEN."
+	line "in DRAGON's DEN."
 	done
 
 RivalText_Training1:
@@ -420,8 +392,8 @@ DragonsDenB1F_MapEvents:
 ;	bg_event 31, 15, BGEVENT_ITEM, DragonsDenB1FHiddenMaxElixer
 
 	def_object_events
-;	object_event 35, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DragonsDenB1FDragonFangScript, EVENT_DRAGONS_DEN_B1F_DRAGON_FANG
 	object_event 14, 28, SPRITE_CLAIR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_DRAGONS_DEN_CLAIR
+;	object_event 35, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DragonsDenB1FDragonFangScript, EVENT_DRAGONS_DEN_B1F_DRAGON_FANG
 ;	object_event 20, 23, SPRITE_RIVAL, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DragonsDenB1FRivalScript, EVENT_RIVAL_DRAGONS_DEN
 ;	object_event 20,  8, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerCooltrainermDarin, -1
 ;	object_event  8,  8, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerCooltrainerfCara, -1

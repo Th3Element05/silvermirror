@@ -2,7 +2,7 @@
 	const DRAGONSHRINE_ELDER1
 	const DRAGONSHRINE_ELDER2
 	const DRAGONSHRINE_ELDER3
-	const DRAGONSHRINE_CLAIR
+;	const DRAGONSHRINE_CLAIR
 
 DragonShrine_MapScripts:
 	def_scene_scripts
@@ -120,12 +120,12 @@ DragonShrineTakeTestScript:
 	playsound SFX_ENTER_DOOR
 	showemote EMOTE_SHOCK, PLAYER, 15
 	playmusic MUSIC_CLAIR
-	appear DRAGONSHRINE_CLAIR
+;	appear DRAGONSHRINE_CLAIR
 	waitsfx
 	turnobject PLAYER, DOWN
 	pause 30
-	applymovement DRAGONSHRINE_CLAIR, DragonShrineClairWalkInMovement
-	turnobject DRAGONSHRINE_CLAIR, RIGHT
+;	applymovement DRAGONSHRINE_CLAIR, DragonShrineClairWalkInMovement
+;	turnobject DRAGONSHRINE_CLAIR, RIGHT
 	turnobject PLAYER, LEFT
 	turnobject DRAGONSHRINE_ELDER1, LEFT
 	opentext
@@ -133,28 +133,28 @@ DragonShrineTakeTestScript:
 	waitbutton
 	closetext
 	special FadeOutMusic
-	applymovement DRAGONSHRINE_CLAIR, DragonShrineClairBigStepLeftMovement
+;	applymovement DRAGONSHRINE_CLAIR, DragonShrineClairBigStepLeftMovement
 	opentext
 	writetext DragonShrineClairThatCantBeText
 	waitbutton
 	closetext
-	applymovement DRAGONSHRINE_CLAIR, DragonShrineClairSlowStepLeftMovement
+;	applymovement DRAGONSHRINE_CLAIR, DragonShrineClairSlowStepLeftMovement
 	opentext
 	writetext DragonShrineClairYoureLyingText
 	waitbutton
 	closetext
 	applymovement DRAGONSHRINE_ELDER1, DragonShrineElderWalkToClairMovement
-	turnobject DRAGONSHRINE_CLAIR, UP
+;	turnobject DRAGONSHRINE_CLAIR, UP
 	opentext
 	writetext DragonShrineMustIInformLanceText
 	waitbutton
 	closetext
-	showemote EMOTE_SHOCK, DRAGONSHRINE_CLAIR, 15
+;	showemote EMOTE_SHOCK, DRAGONSHRINE_CLAIR, 15
 	opentext
 	writetext DragonShrineIUnderstandText
 	waitbutton
 	closetext
-	applymovement DRAGONSHRINE_CLAIR, DragonShrineClairTwoSlowStepsRightMovement
+;	applymovement DRAGONSHRINE_CLAIR, DragonShrineClairTwoSlowStepsRightMovement
 	opentext
 	writetext DragonShrineHereRisingBadgeText
 	waitbutton
@@ -171,7 +171,7 @@ DragonShrineTakeTestScript:
 	waitbutton
 	closetext
 	applymovement DRAGONSHRINE_ELDER1, DragonShrineElderWalkAway1Movement
-	turnobject DRAGONSHRINE_CLAIR, UP
+;	turnobject DRAGONSHRINE_CLAIR, UP
 	applymovement DRAGONSHRINE_ELDER1, DragonShrineElderWalkAway2Movement
 	turnobject PLAYER, UP
 	opentext
@@ -182,9 +182,9 @@ DragonShrineTakeTestScript:
 	writetext DragonShrineSpeechlessText
 	waitbutton
 	closetext
-	applymovement DRAGONSHRINE_CLAIR, DragonShrineClairWalkOutMovement
+;	applymovement DRAGONSHRINE_CLAIR, DragonShrineClairWalkOutMovement
 	playsound SFX_ENTER_DOOR
-	disappear DRAGONSHRINE_CLAIR
+;	disappear DRAGONSHRINE_CLAIR
 	waitsfx
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	end
@@ -676,4 +676,4 @@ DragonShrine_MapEvents:
 	object_event  5,  1, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DragonShrineElder1Script, EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	object_event  2,  4, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DragonShrineElder2Script, EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	object_event  7,  4, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DragonShrineElder3Script, EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
-	object_event  4,  8, SPRITE_CLAIR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_DRAGON_SHRINE_CLAIR
+;	object_event  4,  8, SPRITE_CLAIR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_DRAGON_SHRINE_CLAIR
