@@ -3829,8 +3829,8 @@ TryToRunAwayFromBattle:
 	jp z, .cant_escape
 	cp BATTLETYPE_FORCESHINY
 	jp z, .cant_escape
-	cp BATTLETYPE_SUICUNE
-	jp z, .cant_escape
+;	cp BATTLETYPE_SUICUNE
+;	jp z, .cant_escape
 
 	ld a, [wLinkMode]
 	and a
@@ -4041,7 +4041,7 @@ InitBattleMon:
 	ld bc, PARTYMON_STRUCT_LENGTH - MON_ATK
 	call CopyBytes
 	call ApplyStatusEffectOnPlayerStats
-	call BadgeStatBoosts
+;	call BadgeStatBoosts ;silvermirror- remove badge stat boosts
 	ret
 
 BattleCheckPlayerShininess:
@@ -6504,6 +6504,10 @@ LoadEnemyMon:
 ; by targeting those 1600 mm (= 5'3") or larger.
 ; After the conversion to feet, it is unable to target any,
 ; since the largest possible Magikarp is 5'3", and $0503 = 1283 mm.
+	ld a, [wBattleType]
+	cp BATTLETYPE_FORCESHINY
+	jr z, .Happiness
+
 	ld a, [wTempEnemyMonSpecies]
 	cp MAGIKARP
 	jr nz, .Happiness
@@ -6534,7 +6538,7 @@ LoadEnemyMon:
 ; Try again if length >= 1600 mm (i.e. if LOW(length) >= 3 inches)
 	ld a, [wMagikarpLength + 1]
 	cp 3
-	jr nc, .GenerateDVs
+	jp nc, .GenerateDVs
 
 .CheckMagikarpArea:
 	ld a, [wMapGroup]
@@ -7101,95 +7105,97 @@ ApplyStatLevelMultiplier:
 
 INCLUDE "data/battle/stat_multipliers_2.asm"
 
-BadgeStatBoosts:
-; Raise the stats of the battle mon in wBattleMon
-; depending on which badges have been obtained.
-
-; Every other badge boosts a stat, starting from the first.
-; GlacierBadge also boosts Special Defense, although the relevant code is buggy (see below).
-
-; 	ZephyrBadge:  Attack
-; 	PlainBadge:   Speed
-; 	MineralBadge: Defense
-; 	GlacierBadge: Special Attack and Special Defense
-
-; The boosted stats are in order, except PlainBadge and MineralBadge's boosts are swapped.
-
-	ld a, [wLinkMode]
-	and a
-	ret nz
-
-	ld a, [wInBattleTowerBattle]
-	and a
-	ret nz
-
-	ld a, [wJohtoBadges]
-
-; Swap badges 3 (PlainBadge) and 5 (MineralBadge).
-	ld d, a
-	and (1 << PLAINBADGE)
-	add a
-	add a
-	ld b, a
-	ld a, d
-	and (1 << MINERALBADGE)
-	rrca
-	rrca
-	ld c, a
-	ld a, d
-	and ((1 << ZEPHYRBADGE) | (1 << HIVEBADGE) | (1 << FOGBADGE) | (1 << STORMBADGE) | (1 << GLACIERBADGE) | (1 << RISINGBADGE))
-	or b
-	or c
-	ld b, a
-
-	ld hl, wBattleMonAttack
-	ld c, 4
-.CheckBadge:
-	ld a, b
-	srl b
-	push af
-	call c, BoostStat
-	pop af
-	inc hl
-	inc hl
-; Check every other badge.
-	srl b
-	dec c
-	jr nz, .CheckBadge
-	srl a
-	call c, BoostStat
-	ret
-
-BoostStat:
-; Raise stat at hl by 1/8.
-
-	ld a, [hli]
-	ld d, a
-	ld e, [hl]
-	srl d
-	rr e
-	srl d
-	rr e
-	srl d
-	rr e
-	ld a, [hl]
-	add e
-	ld [hld], a
-	ld a, [hl]
-	adc d
-	ld [hli], a
-
-; Cap at 999.
-	ld a, [hld]
-	sub LOW(MAX_STAT_VALUE)
-	ld a, [hl]
-	sbc HIGH(MAX_STAT_VALUE)
-	ret c
-	ld a, HIGH(MAX_STAT_VALUE)
-	ld [hli], a
-	ld a, LOW(MAX_STAT_VALUE)
-	ld [hld], a
-	ret
+;silvermirror- remove badge stat boosts
+;BadgeStatBoosts:
+;; Raise the stats of the battle mon in wBattleMon
+;; depending on which badges have been obtained.
+;
+;; Every other badge boosts a stat, starting from the first.
+;; GlacierBadge also boosts Special Defense, although the relevant code is buggy (see below).
+;
+;; 	ZephyrBadge:  Attack
+;; 	PlainBadge:   Speed
+;;	MineralBadge: Defense
+;; 	GlacierBadge: Special Attack and Special Defense
+;
+;; The boosted stats are in order, except PlainBadge and MineralBadge's boosts are swapped.
+;
+;	ld a, [wLinkMode]
+;	and a
+;	ret nz
+;
+;	ld a, [wInBattleTowerBattle]
+;	and a
+;	ret nz
+;
+;	ld a, [wJohtoBadges]
+;
+;; Swap badges 3 (PlainBadge) and 5 (MineralBadge).
+;	ld d, a
+;	and (1 << PLAINBADGE)
+;	add a
+;	add a
+;	ld b, a
+;	ld a, d
+;	and (1 << MINERALBADGE)
+;	rrca
+;	rrca
+;	ld c, a
+;	ld a, d
+;	and ((1 << ZEPHYRBADGE) | (1 << HIVEBADGE) | (1 << FOGBADGE) | (1 << STORMBADGE) | (1 << GLACIERBADGE) | (1 << RISINGBADGE))
+;	or b
+;	or c
+;	ld b, a
+;
+;	ld hl, wBattleMonAttack
+;	ld c, 4
+;.CheckBadge:
+;	ld a, b
+;	srl b
+;	push af
+;	call c, BoostStat
+;	pop af
+;	inc hl
+;	inc hl
+;; Check every other badge.
+;	srl b
+;	dec c
+;	jr nz, .CheckBadge
+;	srl a
+;	call c, BoostStat
+;	ret
+;
+;BoostStat:
+;; Raise stat at hl by 1/8.
+;
+;	ld a, [hli]
+;	ld d, a
+;	ld e, [hl]
+;	srl d
+;	rr e
+;	srl d
+;	rr e
+;	srl d
+;	rr e
+;	ld a, [hl]
+;	add e
+;	ld [hld], a
+;	ld a, [hl]
+;	adc d
+;	ld [hli], a
+;
+;; Cap at 999.
+;	ld a, [hld]
+;	sub LOW(MAX_STAT_VALUE)
+;	ld a, [hl]
+;	sbc HIGH(MAX_STAT_VALUE)
+;	ret c
+;	ld a, HIGH(MAX_STAT_VALUE)
+;	ld [hli], a
+;	ld a, LOW(MAX_STAT_VALUE)
+;	ld [hld], a
+;	ret
+;
 
 _LoadBattleFontsHPBar:
 	callfar LoadBattleFontsHPBar
@@ -7614,7 +7620,7 @@ GiveExperiencePoints:
 	ld [wApplyStatLevelMultipliersToEnemy], a
 	call ApplyStatLevelMultiplierOnAllStats
 	callfar ApplyStatusEffectOnPlayerStats
-	callfar BadgeStatBoosts
+;	callfar BadgeStatBoosts ;silvermirror- remove badge stat boosts
 	callfar UpdatePlayerHUD
 	call EmptyBattleTextbox
 	call LoadTilemapToTempTilemap
@@ -8478,14 +8484,14 @@ InitEnemyTrainer:
 	callfar GetTrainerAttributes
 	callfar ReadTrainerParty
 
-	; RIVAL1's first mon has no held item
-	ld a, [wTrainerClass]
-	cp RIVAL1
-	jr nz, .ok
-	xor a
-	ld [wOTPartyMon1Item], a
-
-.ok
+;	; RIVAL1's first mon has no held item
+;	ld a, [wTrainerClass]
+;	cp RIVAL1
+;	jr nz, .ok
+;	xor a
+;	ld [wOTPartyMon1Item], a
+;
+;.ok
 	ld de, vTiles2
 	callfar GetTrainerPic
 	xor a
