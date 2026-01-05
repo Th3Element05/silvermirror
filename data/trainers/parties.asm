@@ -1578,7 +1578,7 @@ CooltrainerMGroup:
 	db -1 ; end
 
 ; johto
-	; COOLTRAINERM, JAKE (DRAGON'S DEN) ;
+	; COOLTRAINERM, JAKE (DRAGON's DEN) ;
 	db "JAKE@", TRAINERTYPE_NORMAL
 	db 45, DRAGONAIR
 	db -1 ; end
@@ -1667,7 +1667,7 @@ CooltrainerFGroup:
 	db 42, STARMIE
 	db -1 ; end
 
-	; COOLTRAINERF, REENA1 (DRAGON'S DEN) ;
+	; COOLTRAINERF, REENA1 (DRAGON's DEN) ;
 	db "REENA@", TRAINERTYPE_NORMAL
 	db 36, HORSEA
 	db 36, SEADRA
@@ -3794,10 +3794,9 @@ PicnickerGroup:
 	db 47, CLEFABLE
 	db -1 ; end
 
-	; PICNICKER, ROBIN (ROUTE 46) ;
+	; PICNICKER, ROBIN
 	db "ROBIN@", TRAINERTYPE_NORMAL
-	db 42, PONYTA
-	db 43, RAPIDASH
+	db 20, MISSINGNO
 	db -1 ; end
 
 	; PICNICKER, LIZ1
@@ -3902,9 +3901,9 @@ CamperGroup:
 	db 42, STANTLER
 	db -1 ; end
 
-	; CAMPER, TERRY (ROUTE 46) ;
+	; CAMPER, TERRY
 	db "TERRY@", TRAINERTYPE_NORMAL
-	db 45, PRIMEAPE
+	db 20, MISSINGNO
 	db -1 ; end
 
 	; CAMPER, NELSON
@@ -4294,7 +4293,7 @@ TwinsGroup:
 	db 42, WIGGLYTUFF
 	db -1 ; end
 
-	; TWINS, AMYANDMAY (DRAGON'S DEN) ;
+	; TWINS, AMYANDMAY (DRAGON's DEN) ;
 	db "AMY & MAY@", TRAINERTYPE_NORMAL
 	db 43, DRATINI
 	db 42, DRAGONAIR
@@ -4393,9 +4392,11 @@ CoupleGroup:
 	db -1 ; end
 
 CoolDuoGroup:
-	; COOL_DUO, THOMANDKAE
+	; COOL_DUO, THOMANDKAE (ROUTE 46) ;
 	db "THOM & KAE@", TRAINERTYPE_NORMAL
-	db 20, MISSINGNO
+	db 42, PONYTA
+	db 45, PRIMEAPE
+	db 43, RAPIDASH
 	db -1 ; end
 
 	; COOL_DUO, ZACANDJEN
