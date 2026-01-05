@@ -106,8 +106,8 @@ Route43Gate_MapScripts:
 ;RocketScript_MakingABundle:
 ;	jumptextfaceplayer RocketText_MakingABundle
 
-OfficerScript_GuardWithSludgeBomb:
-	faceplayer
+;OfficerScript_GuardWithSludgeBomb:
+;	faceplayer
 ;	opentext
 ;	checkevent EVENT_GOT_TM36_SLUDGE_BOMB
 ;	iftrue .GotSludgeBomb
@@ -117,7 +117,7 @@ OfficerScript_GuardWithSludgeBomb:
 ;	iffalse .NoRoomForSludgeBomb
 ;	setevent EVENT_GOT_TM36_SLUDGE_BOMB
 ;	closetext
-	end
+;	end
 
 ;.GotSludgeBomb:
 ;	writetext OfficerText_AvoidGrass
@@ -259,6 +259,6 @@ Route43Gate_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  0,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OfficerScript_GuardWithSludgeBomb, EVENT_LAKE_OF_RAGE_CIVILIANS
+;	object_event  0,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OfficerScript_GuardWithSludgeBomb, EVENT_LAKE_OF_RAGE_CIVILIANS
 ;	object_event  2,  4, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RocketScript_MakingABundle, EVENT_ROUTE_43_GATE_ROCKETS
 ;	object_event  7,  4, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RocketScript_MakingABundle, EVENT_ROUTE_43_GATE_ROCKETS
