@@ -21,7 +21,7 @@ SaffronMagnetTrainStationOfficerScript:
 	writetext SaffronMagnetTrainStationOfficer_AreYouComingAboardText
 	yesorno
 	iffalse .DecidedNotToRide
-	checkitem PASS
+	checkitem RAIL_PASS
 	iffalse .BuyPass ;.PassNotInBag
 	writetext SaffronMagnetTrainStationOfficer_RightThisWayText
 	waitbutton
@@ -60,7 +60,7 @@ SaffronMagnetTrainStationOfficerScript:
 	special PlaceMoneyTopRight
 	waitsfx
 	writetext SaffronMagnetTrainStationOfficer_BoughtPassText
-	giveitem PASS
+	giveitem RAIL_PASS
 	playsound SFX_KEY_ITEM
 	waitsfx
 	itemnotify
@@ -102,7 +102,7 @@ SaffronMagnetTrainStationOfficer_AreYouComingAboardText:
 
 SaffronMagnetTrainStation_OfficerSellsPassText:
 	text "You don't have a"
-	line "rail PASS."
+	line "RAIL PASS."
 
 	para "Would you like to"
 	line "buy one?"
@@ -118,13 +118,13 @@ SaffronMagnetTrainStation_NotEnoughMoneyText:
 
 SaffronMagnetTrainStationOfficer_BoughtPassText:
 	text "Thank you! Here is"
-	line "your PASS."
+	line "your RAIL PASS."
 	done
 
 
 SaffronMagnetTrainStationOfficer_RightThisWayText:
 	text "May I see your"
-	line "rail PASS?"
+	line "RAIL PASS?"
 
 	para "OK. Right this"
 	line "way, please."
@@ -247,12 +247,12 @@ SaffronMagnetTrainStationLassScript:
 	
 SaffronMagnetTrainStationLassText:
 	text "Hi. Do you have a"
-	line "rail PASS?"
+	line "RAIL PASS?"
 
 	para "All the people in"
 	line "SAFFRON who ride"
 	cont "the MAGNET TRAIN"
-	cont "have a PASS."
+	cont "have a RAIL PASS."
 	done
 
 SaffronMagentTrainStationLassText2:
