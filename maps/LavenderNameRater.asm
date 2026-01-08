@@ -1,9 +1,7 @@
 	object_const_def
-;	const LAVENDERNAMERATER_NAME_RATER
 
 LavenderNameRater_MapScripts:
 	def_scene_scripts
-;	scene_script LavenderNameRaterNoopScene ; unusable
 
 	def_callbacks
 
@@ -18,7 +16,7 @@ LavenderNameRater:
 	closetext
 	end
 
-LavenderNameRaterUnusedBookshelf: ; unreferenced
+LavenderNameRaterDifficultBookshelf:
 	jumpstd DifficultBookshelfScript
 
 LavenderNameRater_MapEvents:
@@ -31,6 +29,8 @@ LavenderNameRater_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 0, 1, BGEVENT_READ, LavenderNameRaterDifficultBookshelf
+	bg_event 1, 1, BGEVENT_READ, LavenderNameRaterDifficultBookshelf
 
 	def_object_events
 	object_event  2,  3, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, LavenderNameRater, -1
