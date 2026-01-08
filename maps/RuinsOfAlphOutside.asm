@@ -2,8 +2,6 @@
 
 RuinsOfAlphOutside_MapScripts:
 	def_scene_scripts
-;	scene_script RuinsOfAlphOutsideNoop1Scene, SCENE_RUINSOFALPHOUTSIDE_NOTHING
-;	scene_script RuinsOfAlphOutsideNoop2Scene, SCENE_RUINSOFALPHOUTSIDE_GET_UNOWN_DEX
 
 	def_callbacks
 	callback MAPCALLBACK_TILES, RuinsOfAlphOutsideCavesCallback
@@ -17,10 +15,6 @@ RuinsOfAlphOutsideCavesCallback:
 	changeblock 16, 32, $b0 ; closed aerodactyl
 .RuinsAreOpen
 	endcallback
-
-;RuinsOfAlphOutsideNoop1Scene:
-;RuinsOfAlphOutsideNoop2Scene:
-;	end
 
 RuinsOfAlphOutsideScientistScript:
 	checkflag ENGINE_UNOWN_DEX
@@ -278,8 +272,6 @@ RuinsOfAlphOutside_MapEvents:
 ;	warp_event 17, 11, RUINS_OF_ALPH_RESEARCH_CENTER, 1
 
 	def_coord_events
-;	coord_event 11, 14, SCENE_RUINSOFALPHOUTSIDE_GET_UNOWN_DEX, RuinsOfAlphOutsideScientistScene1
-;	coord_event 10, 15, SCENE_RUINSOFALPHOUTSIDE_GET_UNOWN_DEX, RuinsOfAlphOutsideScientistScene2
 
 	def_bg_events
 	bg_event 12, 16, BGEVENT_READ, RuinsOfAlphSign
