@@ -1,5 +1,4 @@
 	object_const_def
-;	const ROUTE_42ECRUTEAKGATE_OFFICER
 
 Route42EcruteakGate_MapScripts:
 	def_scene_scripts
@@ -8,17 +7,14 @@ Route42EcruteakGate_MapScripts:
 
 Route42EcruteakGateGentlemanScript:
 	checkevent EVENT_ROUTE_42_BOULDERS_CLEARED
-	iftrue .BouldersCleared
+	iftrue .BouldersClearedGentleman
 	jumptextfaceplayer Route42EcruteakGateRouteBlockedText
 
-.BouldersCleared
+.BouldersClearedGentleman
 	jumptextfaceplayer Route42EcruteakGateRouteClearText
 
 Route42EcruteakGateRouteBlockedText:
-	text "There was a land-"
-	line "slide on ROUTE 42!"
-
-	para "Boulders fell from"
+	text "Boulders fell from"
 	line "MT.MORTAR and"
 	cont "blocked ROUTE 42!"
 
@@ -38,7 +34,29 @@ Route42EcruteakGateRouteClearText:
 	done
 
 Route42EcruteakGateOfficerScript:
+	checkevent EVENT_ROUTE_42_BOULDERS_CLEARED
+	iftrue .BouldersClearedOfficer
+	jumptextfaceplayer Route42EcruteakGateOfficerBlockedText
+
+.BouldersClearedOfficer
 	jumptextfaceplayer Route42EcruteakGateOfficerText
+
+Route42EcruteakGateOfficerBlockedText:
+	text "MT.MORTAR is this"
+	line "way, but you can't"
+	cont "get to MAHOGANY"
+	cont "right now."
+
+	para "There was a land-"
+	line "slide and the road"
+	cont "is blocked."
+	done
+
+;	para "Boulders fell down"
+;	line "from MT.MORTAR and"
+;	cont "blocked the road."
+;	done
+
 Route42EcruteakGateOfficerText:
 	text "MT.MORTAR is like"
 	line "a maze inside."

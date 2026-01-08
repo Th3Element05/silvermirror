@@ -1,6 +1,4 @@
 	object_const_def
-	const ROUTE_29ROUTE_46GATE_OFFICER
-	const ROUTE_29ROUTE_46GATE_YOUNGSTER
 
 Route29Route46Gate_MapScripts:
 	def_scene_scripts
@@ -9,10 +7,6 @@ Route29Route46Gate_MapScripts:
 
 Route29Route46GateOfficerScript:
 	jumptextfaceplayer Route29Route46GateOfficerText
-
-Route29Route46GateYoungsterScript:
-	jumptextfaceplayer Route29Route46GateYoungsterText
-
 Route29Route46GateOfficerText:
 	text "You can't climb"
 	line "ledges."
@@ -22,6 +16,8 @@ Route29Route46GateOfficerText:
 	cont "take a shortcut."
 	done
 
+Route29Route46GateYoungsterScript:
+	jumptextfaceplayer Route29Route46GateYoungsterText
 Route29Route46GateYoungsterText:
 	text "Different kinds of"
 	line "#MON appear"
@@ -29,9 +25,8 @@ Route29Route46GateYoungsterText:
 
 	para "If you want to"
 	line "catch them all,"
-
-	para "you have to look"
-	line "everywhere."
+	cont "you have to look"
+	cont "everywhere."
 	done
 
 Route29Route46Gate_MapEvents:

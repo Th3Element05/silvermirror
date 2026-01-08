@@ -1,6 +1,4 @@
 	object_const_def
-	const ROUTE_31VIOLETGATE_OFFICER
-	const ROUTE_31VIOLETGATE_COOLTRAINER_F
 
 Route31VioletGate_MapScripts:
 	def_scene_scripts
@@ -9,16 +7,14 @@ Route31VioletGate_MapScripts:
 
 Route31VioletGateOfficerScript:
 	jumptextfaceplayer Route31VioletGateOfficerText
-
-Route31VioletGateCooltrainerFScript:
-	jumptextfaceplayer Route31VioletGateCooltrainerFText
-
 Route31VioletGateOfficerText:
 	text "Hi there!"
 	line "Did you visit"
 	cont "SPROUT TOWER?"
 	done
 
+Route31VioletGateCooltrainerFScript:
+	jumptextfaceplayer Route31VioletGateCooltrainerFText
 Route31VioletGateCooltrainerFText:
 	text "I came too far"
 	line "out. I'd better"

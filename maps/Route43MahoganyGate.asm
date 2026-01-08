@@ -1,5 +1,4 @@
 	object_const_def
-	const ROUTE_43MAHOGANYGATE_OFFICER
 
 Route43MahoganyGate_MapScripts:
 	def_scene_scripts
@@ -7,34 +6,12 @@ Route43MahoganyGate_MapScripts:
 	def_callbacks
 
 Route43MahoganyGateOfficer:
-	faceplayer
-	opentext
-;	checkevent EVENT_CLEARED_ROCKET_HIDEOUT
-;	iftrue .RocketsCleared
-	writetext Route43MahoganyGateOfficerText
-	waitbutton
-	closetext
-	end
-
-;.RocketsCleared:
-;	writetext Route43MahoganyGateOfficerRocketsClearedText
-;	waitbutton
-;	closetext
-;	end
-
+	jumptext Route43MahoganyGateOfficerText
 Route43MahoganyGateOfficerText:
 	text "Only people headed"
 	line "up to LAKE OF RAGE"
-
-	para "have been through"
-	line "here lately."
+	cont "pass through here."
 	done
-
-;Route43MahoganyGateOfficerRocketsClearedText:
-;	text "Nobody goes up to"
-;	line "LAKE OF RAGE these"
-;	cont "days."
-;	done
 
 Route43MahoganyGate_MapEvents:
 	db 0, 0 ; filler
