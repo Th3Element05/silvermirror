@@ -14,9 +14,6 @@ TohjoFallsWestSignText:
 	line "KANTO AND JOHTO"
 	done
 
-;Route27RareCandy:
-;	itemball RARE_CANDY
-
 Route27West_MapEvents:
 	db 0, 0 ; filler
 
@@ -30,4 +27,3 @@ Route27West_MapEvents:
 
 	def_object_events
 ;	object_event 48,  7, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerCooltrainermBlake, -1
-;	object_event 53, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route27RareCandy, EVENT_ROUTE_27_RARE_CANDY
