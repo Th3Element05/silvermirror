@@ -145,7 +145,7 @@ ItemEffects:
 	dw NoEffect            ; STARDUST
 	dw NoEffect            ; STAR_PIECE
 	dw NoEffect            ; LIFT_KEY ; BASEMENT_KEY ;BasementKeyEffect
-	dw NoEffect            ; PASS
+	dw NoEffect            ; RAIL_PASS
 	dw PokeBallEffect      ; SAFARI_BALL
 	dw NoEffect            ; CHARCOAL
 	dw RestoreHPEffect     ; BERRY_JUICE
