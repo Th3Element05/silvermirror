@@ -1,6 +1,4 @@
 	object_const_def
-	const MAHOGANYREDGYARADOSSPEECHHOUSE_BLACK_BELT
-	const MAHOGANYREDGYARADOSSPEECHHOUSE_TEACHER
 
 MahoganyRedGyaradosSpeechHouse_MapScripts:
 	def_scene_scripts
@@ -9,53 +7,36 @@ MahoganyRedGyaradosSpeechHouse_MapScripts:
 
 MahoganyRedGyaradosSpeechHouseBlackBeltScript:
 	jumptextfaceplayer MahoganyRedGyaradosSpeechHouseBlackBeltText
-
-MahoganyRedGyaradosSpeechHouseTeacherScript:
-	faceplayer
-	opentext
-	checkflag ENGINE_ROCKETS_IN_RADIO_TOWER
-	iftrue .RocketsInRadioTower
-	writetext MahoganyRedGyaradosSpeechHouseTeacherText
-	waitbutton
-	closetext
-	end
-
-.RocketsInRadioTower:
-	writetext MahoganyRedGyaradosSpeechHouseTeacherText_RocketsInRadioTower
-	waitbutton
-	closetext
-	end
-
-MahoganyRedGyaradosSpeechHouseUnusedBookshelf1: ; unreferenced
-	jumpstd PictureBookshelfScript
-
-MahoganyRedGyaradosSpeechHouseUnusedBookshelf2: ; unreferenced
-	jumpstd MagazineBookshelfScript
-
 MahoganyRedGyaradosSpeechHouseBlackBeltText:
-	text "I heard that a red"
-	line "GYARADOS appeared"
-	cont "at the LAKE."
+	text "I heard a gold"
+	line "#MON was seen"
+	cont "in the lake."
 
-	para "That's odd, since"
-	line "even ordinary"
+	para "But LAKE OF RAGE"
+	line "is just full of"
+	cont "MAGIKARP…"
 
-	para "GYARADOS are rare"
-	line "in that lake…"
+	para "Aren't MAGIKARP"
+	line "usually orange?"
 	done
 
+;	text "I heard that a red"
+;	line "GYARADOS appeared"
+;	cont "at the LAKE."
+;
+;	para "That's odd, since"
+;	line "even ordinary"
+;
+;	para "GYARADOS are rare"
+;	line "in that lake…"
+;	done
+
+MahoganyRedGyaradosSpeechHouseTeacherScript:
+	jumptextfaceplayer MahoganyRedGyaradosSpeechHouseTeacherText
 MahoganyRedGyaradosSpeechHouseTeacherText:
 	text "My favorite radio"
 	line "program? I'd say"
 	cont "#MON MUSIC."
-	done
-
-MahoganyRedGyaradosSpeechHouseTeacherText_RocketsInRadioTower:
-	text "I've been hearing"
-	line "laughter on the"
-
-	para "radio…"
-	line "It's creepy."
 	done
 
 MahoganyRedGyaradosSpeechHouse_MapEvents:
