@@ -7,7 +7,7 @@ Route19Gate_MapScripts:
 	def_callbacks
 
 Route19FuchsiaGateOfficerScript:
-	jumptextfaceplayer Route19FuchsiaGateOfficerText
+	jumptext Route19FuchsiaGateOfficerText
 Route19FuchsiaGateOfficerText:
 	text "SEAFOAM ISLANDS"
 	line "are south-west"

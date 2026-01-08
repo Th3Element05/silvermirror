@@ -14,9 +14,9 @@ Route12GateTilesCallback:
 Route12GateGuardScript:
 	checkevent EVENT_ROUTE_12_SNORLAX
 	iftrue .AfterSnorlax
-	jumptextfaceplayer Route12GateGuardBeforeSnorlaxText
+	jumptext Route12GateGuardBeforeSnorlaxText
 .AfterSnorlax
-	jumptextfaceplayer Route12GateGuardAfterSnorlaxText
+	jumptext Route12GateGuardAfterSnorlaxText
 
 Route12GateGuardBeforeSnorlaxText:
 	text "There have been"

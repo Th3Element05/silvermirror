@@ -13,7 +13,7 @@ Route15GateTilesCallback:
 	endcallback
 
 Route15GateOfficerScript:
-	jumptextfaceplayer Route15GateOfficerText
+	jumptext Route15GateOfficerText
 Route15GateOfficerText:
 	text "You're working on"
 	line "a #DEX? That's"

@@ -8,28 +8,44 @@ Route36RuinsOfAlphGate_MapScripts:
 	def_callbacks
 
 Route36RuinsOfAlphGateOfficerScript:
-	jumptextfaceplayer Route36RuinsOfAlphGateOfficerText
+	checkevent EVENT_MADE_UNOWN_APPEAR_IN_RUINS
+	iftrue .RuinsUnearthed
+	jumptext Route32RuinsOfAlphGateOfficerText ;in Route32RuinsOfAlphGate.asm
+.RuinsUnearthed
+	jumptext Route36RuinsOfAlphGateOfficerText
 
-Route36RuinsOfAlphGateGrampsScript:
-	jumptextfaceplayer Route36RuinsOfAlphGateGrampsText
+;Route36RuinsOfAlphGateOfficerText:
+;	text "They found an old"
+;	cont "structure inside a"
+;	line "cave here."
+;
+;	para "The site was named"
+;	line "the RUINS OF ALPH."
+;	done
 
 Route36RuinsOfAlphGateOfficerText:
+	text "More RUINS were"
+	line "unearthed?"
+
 	text "Don't you wonder"
 	line "who'd make some-"
 	cont "thing like this?"
 	cont "And why?"
 	done
 
+Route36RuinsOfAlphGateGrampsScript:
+	jumptextfaceplayer Route36RuinsOfAlphGateGrampsText
 Route36RuinsOfAlphGateGrampsText:
-	text "Did you see that"
-	line "strange tree in"
-	cont "the road?"
+	text "I don't like walk-"
+	line "ing on ROUTE 36."
 
-	para "That may explain"
-	line "why fewer people"
+	para "I always feel like"
+	line "I see something"
+	cont "moving."
 
-	para "are visiting the"
-	line "RUINS OF ALPH."
+	para "But when I turn"
+	line "to look, there are"
+	cont "only trees."
 	done
 
 Route36RuinsOfAlphGate_MapEvents:

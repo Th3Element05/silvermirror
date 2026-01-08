@@ -120,7 +120,7 @@ Route2GateOaksAideFlashExplainText:
 	done
 
 Route2GateOfficerScript:
-	jumptextfaceplayer Route2GateOfficerScriptText
+	jumptext Route2GateOfficerScriptText
 Route2GateOfficerScriptText:
 	text "You'll need FLASH"
 	line "to get through"

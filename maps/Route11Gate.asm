@@ -97,7 +97,7 @@ Route11GateTilesCallback:
 ;	done
 
 Route11GateOfficerScript:
-	jumptextfaceplayer Route11GateOfficerText
+	jumptext Route11GateOfficerText
 Route11GateOfficerText:
 	text "When you catch"
 	line "lots of #MON,"
