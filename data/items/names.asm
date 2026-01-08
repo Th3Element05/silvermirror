@@ -131,7 +131,7 @@ ItemNames::
 	li "STARDUST"
 	li "STAR PIECE"
 	li "LIFT KEY"     ; "BASEMENT KEY"
-	li "PASS"
+	li "RAIL PASS"    ; "PASS"
 	li "SAFARI BALL"
 	li "CHARCOAL"
 	li "BERRY JUICE"

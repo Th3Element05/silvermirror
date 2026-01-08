@@ -137,7 +137,7 @@
 	const STARDUST     ; 81
 	const STAR_PIECE   ; 82
 	const LIFT_KEY     ; 83 ; BASEMENT_KEY
-	const PASS         ; 84
+	const RAIL_PASS    ; 84 ; PASS
 	const SAFARI_BALL  ; 85
 	const CHARCOAL     ; 86
 	const BERRY_JUICE  ; 87
