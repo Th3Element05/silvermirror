@@ -1,0 +1,113 @@
+BRENT1
+TrainerPokemaniacBrent:
+	trainer POKEMANIAC, BRENT1, EVENT_BEAT_POKEMANIAC_BRENT, PokemaniacBrentSeenText, PokemaniacBrentBeatenText, 0, .Script
+.Script:
+	loadvar VAR_CALLERID, PHONE_POKEMANIAC_BRENT
+	opentext
+	checkflag ENGINE_BRENT_READY_FOR_REMATCH
+	iftrue .WantsBattle
+	checkcellnum PHONE_POKEMANIAC_BRENT
+	iftrue .BrentDefeated
+	checkevent EVENT_BRENT_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskedAlready
+	writetext PokemaniacBrentAfterBattleText
+	promptbutton
+	setevent EVENT_BRENT_ASKED_FOR_PHONE_NUMBER
+	scall .AskNumber1
+	sjump .AskForNumber
+
+.AskedAlready:
+	scall .AskNumber2
+.AskForNumber:
+	askforphonenumber PHONE_POKEMANIAC_BRENT
+	ifequal PHONE_CONTACTS_FULL, .PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
+	gettrainername STRING_BUFFER_3, POKEMANIAC, BRENT1
+	scall .RegisteredNumber
+	sjump .NumberAccepted
+
+.WantsBattle:
+	scall .Rematch
+	winlosstext PokemaniacBrentBeatenText, 0
+	checkevent EVENT_RESTORED_POWER_TO_KANTO
+	iftrue .LoadFight3
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .LoadFight2
+	checkevent EVENT_CLEARED_ROCKET_HIDEOUT
+	iftrue .LoadFight1
+	loadtrainer POKEMANIAC, BRENT1
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_BRENT_READY_FOR_REMATCH
+	end
+
+.LoadFight1:
+	loadtrainer POKEMANIAC, BRENT2
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_BRENT_READY_FOR_REMATCH
+	end
+
+.LoadFight2:
+	loadtrainer POKEMANIAC, BRENT3
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_BRENT_READY_FOR_REMATCH
+	end
+
+.LoadFight3:
+	loadtrainer POKEMANIAC, BRENT4
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_BRENT_READY_FOR_REMATCH
+	end
+
+.AskNumber1:
+	jumpstd AskNumber1MScript
+	end
+
+.AskNumber2:
+	jumpstd AskNumber2MScript
+	end
+
+.RegisteredNumber:
+	jumpstd RegisteredNumberMScript
+	end
+
+.NumberAccepted:
+	jumpstd NumberAcceptedMScript
+	end
+
+.NumberDeclined:
+	jumpstd NumberDeclinedMScript
+	end
+
+.PhoneFull:
+	jumpstd PhoneFullMScript
+	end
+
+.Rematch:
+	jumpstd RematchMScript
+	end
+
+.BrentDefeated:
+	writetext PokemaniacBrentAfterBattleText
+	promptbutton
+	closetext
+	end
+
+PokemaniacBrentSeenText:
+	text "Hey! Do you have"
+	line "any rare #MON?"
+	done
+
+PokemaniacBrentBeatenText:
+	text "Oh, my poor #-"
+	line "MON! Darlings!"
+	done
+
+PokemaniacBrentAfterBattleText:
+	text "I'd be happy just"
+	line "to own a single"
+	cont "rare #MON."
+	done
