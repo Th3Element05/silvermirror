@@ -819,3 +819,5 @@ ENDM
 	map_attributes CinnabarLabResearchRoom, CINNABAR_LAB_RESEARCH_ROOM, $00, 0
 	map_attributes CinnabarLabFossilRoom, CINNABAR_LAB_FOSSIL_ROOM, $00, 0
 	map_attributes Route26Gate, ROUTE_26_GATE, $00, 0
+;
+	map_attributes DebugSoundRoom, DEBUG_SOUND_ROOM, $00, 0

@@ -562,22 +562,24 @@ ENDM
 	map_const DRAGONS_DEN_B1F,                             20, 18 ; 121
 	map_const DRAGON_SHRINE,                                5,  5 ; 122
 	map_const TOHJO_FALLS,                                 15,  9 ; 123
+;debug
+	map_const DEBUG_SOUND_ROOM,                            18, 13 ; 124
 	endgroup
 
-	newgroup SAFARI_ZONE_GATE                                     ; 27
-;	map_const ROUTE_47,                                    39, 19 ;  1
-;	map_const ROUTE_48,                                    18, 10 ;  2
-;	map_const SAFARI_ZONE_GATE,                            14, 11 ;  3
-;	map_const SAFARI_ZONE_GATE_POKECENTER_1F,               7,  4 ;  4
-	endgroup
-
-	newgroup CABLE_CLUB                                           ; 28
+	newgroup CABLE_CLUB                                           ; 27
 ;	map_const POKECENTER_2F,                                8,  4 ;  1
 ;	map_const TRADE_CENTER,                                 5,  4 ;  2
 ;	map_const COLOSSEUM,                                    5,  4 ;  3
 ;	map_const TIME_CAPSULE,                                 5,  4 ;  4
 ;	map_const MOBILE_TRADE_ROOM,                            5,  4 ;  5
 ;	map_const MOBILE_BATTLE_ROOM,                           5,  4 ;  6
+	endgroup
+
+	newgroup SAFARI_ZONE_GATE                                     ; 28
+;	map_const ROUTE_47,                                    39, 19 ;  1
+;	map_const ROUTE_48,                                    18, 10 ;  2
+;	map_const SAFARI_ZONE_GATE,                            14, 11 ;  3
+;	map_const SAFARI_ZONE_GATE_POKECENTER_1F,               7,  4 ;  4
 	endgroup
 
 DEF NUM_MAP_GROUPS EQU const_value ; 26

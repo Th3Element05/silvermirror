@@ -1158,3 +1158,6 @@ SafariSecretHouse_Blocks:
 
 SafariZoneEntrance_Blocks:
 	INCBIN "maps/SafariZoneEntrance.blk"
+
+DebugSoundRoom_Blocks:
+	INCBIN "maps/DebugSoundRoom.blk"
