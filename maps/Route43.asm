@@ -50,130 +50,128 @@ Route43_BLUApricorn:
 Route43_NoFruit:
 	farsjump Std_NoFruitScript
 
+; trainers
+TrainerPokemaniacMax:
+	trainer POKEMANIAC, MAX, EVENT_BEAT_POKEMANIAC_MAX, PokemaniacMaxSeenText, PokemaniacMaxBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext PokemaniacMaxAfterBattleText
+	waitbutton
+	closetext
+	end
 
-;TrainerCamperSpencer:
-;	trainer CAMPER, SPENCER, EVENT_BEAT_CAMPER_SPENCER, CamperSpencerSeenText, CamperSpencerBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext CamperSpencerAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+PokemaniacMaxSeenText:
+	text "I love #MON!"
 
-;TrainerPokemaniacBen:
-;	trainer POKEMANIAC, BEN, EVENT_BEAT_POKEMANIAC_BEN, PokemaniacBenSeenText, PokemaniacBenBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext PokemaniacBenAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+	para "That's why I"
+	line "started--and why"
+	cont "I'll keep on col-"
+	cont "lecting #MON!"
+	done
 
-;TrainerPokemaniacBrent:
-;	trainer POKEMANIAC, BRENT1, EVENT_BEAT_POKEMANIAC_BRENT, PokemaniacBrentSeenText, PokemaniacBrentBeatenText, 0, .Script
+PokemaniacMaxBeatenText:
+	text "How could you do"
+	line "this to me?"
+	done
 
-;.Script:
-;	loadvar VAR_CALLERID, PHONE_POKEMANIAC_BRENT
-;	opentext
-;	checkflag ENGINE_BRENT_READY_FOR_REMATCH
-;	iftrue .WantsBattle
-;	checkcellnum PHONE_POKEMANIAC_BRENT
-;	iftrue .BrentDefeated
-;	checkevent EVENT_BRENT_ASKED_FOR_PHONE_NUMBER
-;	iftrue .AskedAlready
-;	writetext PokemaniacBrentAfterBattleText
-;	promptbutton
-;	setevent EVENT_BRENT_ASKED_FOR_PHONE_NUMBER
-;	scall .AskNumber1
-;	sjump .AskForNumber
+PokemaniacMaxAfterBattleText:
+	text "What else do I"
+	line "like besides"
+	cont "#MON?"
 
-;.AskedAlready:
-;	scall .AskNumber2
-;.AskForNumber:
-;	askforphonenumber PHONE_POKEMANIAC_BRENT
-;	ifequal PHONE_CONTACTS_FULL, .PhoneFull
-;	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
-;	gettrainername STRING_BUFFER_3, POKEMANIAC, BRENT1
-;	scall .RegisteredNumber
-;	sjump .NumberAccepted
+	para "MARY on the radio."
+	line "I bet she's cute!"
+	done
 
-;.WantsBattle:
-;	scall .Rematch
-;	winlosstext PokemaniacBrentBeatenText, 0
-;	checkevent EVENT_RESTORED_POWER_TO_KANTO
-;	iftrue .LoadFight3
-;	checkevent EVENT_BEAT_ELITE_FOUR
-;	iftrue .LoadFight2
-;	checkevent EVENT_CLEARED_ROCKET_HIDEOUT
-;	iftrue .LoadFight1
-;	loadtrainer POKEMANIAC, BRENT1
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_BRENT_READY_FOR_REMATCH
-;	end
+TrainerPokemaniacJulius:
+	trainer POKEMANIAC, JULIUS, EVENT_BEAT_POKEMANIAC_JULIUS, PokemaniacJuliusSeenText, PokemaniacJuliusBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext PokemaniacJuliusAfterBattleText
+	waitbutton
+	closetext
+	end
 
-;.LoadFight1:
-;	loadtrainer POKEMANIAC, BRENT2
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_BRENT_READY_FOR_REMATCH
-;	end
+PokemaniacJuliusSeenText:
+	text "Hey! Do you have"
+	line "any rare #MON?"
+	done
 
-;.LoadFight2:
-;	loadtrainer POKEMANIAC, BRENT3
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_BRENT_READY_FOR_REMATCH
-;	end
+PokemaniacJuliusBeatenText:
+	text "Oh, my poor #-"
+	line "MON! Darlings!"
+	done
 
-;.LoadFight3:
-;	loadtrainer POKEMANIAC, BRENT4
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_BRENT_READY_FOR_REMATCH
-;	end
+PokemaniacJuliusAfterBattleText:
+	text "I'd be happy just"
+	line "to own a single"
+	cont "rare #MON."
+	done
 
-;.AskNumber1:
-;	jumpstd AskNumber1MScript
-;	end
+TrainerPicnickerMegan:
+	trainer PICNICKER, MEGAN, EVENT_BEAT_PICNICKER_MEGAN, PicnickerMeganSeenText, PicnickerMeganBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext PicnickerMeganAfterBattleText
+	waitbutton
+	closetext
+	end
 
-;.AskNumber2:
-;	jumpstd AskNumber2MScript
-;	end
+PicnickerMeganSeenText:
+	text "Are you going to"
+	line "LAKE OF RAGE too?"
 
-;.RegisteredNumber:
-;	jumpstd RegisteredNumberMScript
-;	end
+	para "Let's play for a "
+	line "little while!"
+	done
 
-;.NumberAccepted:
-;	jumpstd NumberAcceptedMScript
-;	end
+PicnickerMeganBeatenText:
+	text "I played too much!"
+	done
 
-;.NumberDeclined:
-;	jumpstd NumberDeclinedMScript
-;	end
+PicnickerMeganAfterBattleText:
+	text "I'm having a pic-"
+	line "nic with #MON."
 
-;.PhoneFull:
-;	jumpstd PhoneFullMScript
-;	end
+	para "Won't you join us?"
+	done
 
-;.Rematch:
-;	jumpstd RematchMScript
-;	end
+TrainerCamperSpencer:
+	trainer CAMPER, SPENCER, EVENT_BEAT_CAMPER_SPENCER, CamperSpencerSeenText, CamperSpencerBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext CamperSpencerAfterBattleText
+	waitbutton
+	closetext
+	end
 
-;.BrentDefeated:
-;	writetext PokemaniacBrentAfterBattleText
-;	promptbutton
-;	closetext
-;	end
+CamperSpencerSeenText:
+	text "I can do so much"
+	line "with my #MON--"
+	cont "it's super-fun!"
+	done
+
+CamperSpencerBeatenText:
+	text "Losing isn't fun"
+	line "at all…"
+	done
+
+CamperSpencerAfterBattleText:
+	text "Are you going to"
+	line "LAKE OF RAGE?"
+;	text "What is going on"
+;	line "at LAKE OF RAGE?"
+
+	para "We were planning"
+	line "to camp there."
+	done
 
 ;TrainerPokemaniacRon:
 ;	trainer POKEMANIAC, RON, EVENT_BEAT_POKEMANIAC_RON, PokemaniacRonSeenText, PokemaniacRonBeatenText, 0, .Script
-;
 ;.Script:
 ;	endifjustbattled
 ;	opentext
@@ -182,195 +180,12 @@ Route43_NoFruit:
 ;	closetext
 ;	end
 
-;TrainerFisherMarvin:
-;	trainer FISHER, MARVIN, EVENT_BEAT_FISHER_MARVIN, FisherMarvinSeenText, FisherMarvinBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext FisherMarvinAfterBattleText
-;	waitbutton
-;	closetext
-;	end
-
-;TrainerPicnickerTiffany:
-;	trainer PICNICKER, TIFFANY3, EVENT_BEAT_PICNICKER_TIFFANY, PicnickerTiffanySeenText, PicnickerTiffanyBeatenText, 0, .Script
-
-;.Script:
-;	loadvar VAR_CALLERID, PHONE_PICNICKER_TIFFANY
-;	opentext
-;	checkflag ENGINE_TIFFANY_READY_FOR_REMATCH
-;	iftrue .WantsBattle
-;	checkflag ENGINE_TIFFANY_HAS_SILK_SCARF
-;	iftrue .HasPinkBow
-;	checkcellnum PHONE_PICNICKER_TIFFANY
-;	iftrue .TiffanyDefeated
-;	checkevent EVENT_TIFFANY_ASKED_FOR_PHONE_NUMBER
-;	iftrue .AskedAlready
-;	writetext PicnickerTiffanyWantsPicnicText
-;	promptbutton
-;	setevent EVENT_TIFFANY_ASKED_FOR_PHONE_NUMBER
-;	scall .AskNumber1
-;	sjump .AskForNumber
-
-;.AskedAlready:
-;	scall .AskNumber2
-;.AskForNumber:
-;	askforphonenumber PHONE_PICNICKER_TIFFANY
-;	ifequal PHONE_CONTACTS_FULL, .PhoneFull
-;	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
-;	gettrainername STRING_BUFFER_3, PICNICKER, TIFFANY3
-;	scall .RegisteredNumber
-;	sjump .NumberAccepted
-
-;.WantsBattle:
-;	scall .Rematch
-;	winlosstext PicnickerTiffanyBeatenText, 0
-;	checkevent EVENT_RESTORED_POWER_TO_KANTO
-;	iftrue .LoadFight3
-;	checkevent EVENT_BEAT_ELITE_FOUR
-;	iftrue .LoadFight2
-;	checkevent EVENT_CLEARED_RADIO_TOWER
-;	iftrue .LoadFight1
-;	loadtrainer PICNICKER, TIFFANY3
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_TIFFANY_READY_FOR_REMATCH
-;	end
-
-;.LoadFight1:
-;	loadtrainer PICNICKER, TIFFANY1
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_TIFFANY_READY_FOR_REMATCH
-;	end
-
-;.LoadFight2:
-;	loadtrainer PICNICKER, TIFFANY2
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_TIFFANY_READY_FOR_REMATCH
-;	end
-
-;.LoadFight3:
-;	loadtrainer PICNICKER, TIFFANY4
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_TIFFANY_READY_FOR_REMATCH
-;	end
-
-;.HasPinkBow:
-;	scall .Gift
-;	verbosegiveitem SILK_SCARF
-;	iffalse .NoRoom
-;	clearflag ENGINE_TIFFANY_HAS_SILK_SCARF
-;	setevent ENGINE_TIFFANY_GAVE_SILK_SCARF
-;	sjump .NumberAccepted
-
-;.NoRoom:
-;	sjump .PackFull
-
-;.AskNumber1:
-;	jumpstd AskNumber1FScript
-;	end
-
-;.AskNumber2:
-;	jumpstd AskNumber2FScript
-;	end
-
-;.RegisteredNumber:
-;	jumpstd RegisteredNumberFScript
-;	end
-
-;.NumberAccepted:
-;	jumpstd NumberAcceptedFScript
-;	end
-
-;.NumberDeclined:
-;	jumpstd NumberDeclinedFScript
-;	end
-
-;.PhoneFull:
-;	jumpstd PhoneFullFScript
-;	end
-
-;.Rematch:
-;	jumpstd RematchFScript
-;	end
-
-;.Gift:
-;	jumpstd GiftFScript
-;	end
-
-;.PackFull:
-;	jumpstd PackFullFScript
-;	end
-
-;.TiffanyDefeated:
-;	writetext PicnickerTiffanyWantsPicnicText
-;	promptbutton
-;	closetext
-;	end
-
-Route43Sign1:
-	jumptext Route43Sign1Text
-
-Route43Sign2:
-	jumptext Route43Sign2Text
-
-Route43TrainerTips:
-	jumptext Route43TrainerTipsText
-
-;Route43MaxEther:
-;	itemball MAX_ETHER
-
-;PokemaniacBenSeenText:
-;	text "I love #MON!"
-;
-;	para "That's why I"
-;	line "started--and why"
-;
-;	para "I'll keep on col-"
-;	line "lecting #MON!"
-;	done
-;
-;PokemaniacBenBeatenText:
-;	text "How could you do"
-;	line "this to me?"
-;	done
-;
-;PokemaniacBenAfterBattleText:
-;	text "What else do I"
-;	line "like besides"
-;	cont "#MON?"
-;
-;	para "MARY on the radio."
-;	line "I bet she's cute!"
-;	done
-;
-;PokemaniacBrentSeenText:
-;	text "Hey! Do you have"
-;	line "any rare #MON?"
-;	done
-;
-;PokemaniacBrentBeatenText:
-;	text "Oh, my poor #-"
-;	line "MON! Darlings!"
-;	done
-;
-;PokemaniacBrentAfterBattleText:
-;	text "I'd be happy just"
-;	line "to own a single"
-;	cont "rare #MON."
-;	done
-;
 ;PokemaniacRonSeenText:
 ;	text "Would you get"
 ;	line "this?"
 ;
-;	para "Some <RIVAL> guy"
-;	line "made fun of my"
-;	cont "#MON!"
+;	para "Some guy made fun"
+;	line "of my #MON!"
 ;
 ;	para "Darn it! My #-"
 ;	line "MON's great!"
@@ -384,15 +199,24 @@ Route43TrainerTips:
 ;PokemaniacRonAfterBattleText:
 ;	text "It's okay for"
 ;	line "people to like"
-;
-;	para "different types"
-;	line "of #MON."
+;	cont "different types"
+;	cont "of #MON."
 ;
 ;	para "#MON isn't just"
 ;	line "about having the"
 ;	cont "most powerful one."
 ;	done
-;
+
+;TrainerFisherMarvin:
+;	trainer FISHER, MARVIN, EVENT_BEAT_FISHER_MARVIN, FisherMarvinSeenText, FisherMarvinBeatenText, 0, .Script
+;.Script:
+;	endifjustbattled
+;	opentext
+;	writetext FisherMarvinAfterBattleText
+;	waitbutton
+;	closetext
+;	end
+
 ;FisherMarvinSeenText:
 ;	text "I'm in a slump."
 ;
@@ -411,67 +235,26 @@ Route43TrainerTips:
 ;FisherMarvinAfterBattleText:
 ;	text "KURT's LURE BALL"
 ;	line "is the best for"
-;
-;	para "catching hooked"
-;	line "#MON."
+;	cont "catching hooked"
+;	cont "#MON."
 ;
 ;	para "It's much more"
 ;	line "effective than a"
 ;	cont "ULTRA BALL."
 ;	done
-;
-;CamperSpencerSeenText:
-;	text "I can do so much"
-;	line "with my #MON--"
-;	cont "it's super-fun!"
-;	done
-;
-;CamperSpencerBeatenText:
-;	text "Losing isn't fun"
-;	line "at all…"
-;	done
-;
-;CamperSpencerAfterBattleText:
-;	text "What is going on"
-;	line "at LAKE OF RAGE?"
-;
-;	para "We were planning"
-;	line "to camp there."
-;	done
-;
-;PicnickerTiffanySeenText:
-;	text "Are you going to"
-;	line "LAKE OF RAGE too?"
-;
-;	para "Let's play for a "
-;	line "little while!"
-;	done
-;
-;PicnickerTiffanyBeatenText:
-;	text "I played too much!"
-;	done
-;
-;PicnickerTiffanyWantsPicnicText:
-;	text "I'm having a pic-"
-;	line "nic with #MON."
-;
-;	para "Won't you join us?"
-;	done
 
-Route43Sign1Text:
+Route43Sign1:
+Route43Sign2:
+	jumptext Route43SignText
+Route43SignText:
 	text "ROUTE 43"
 
 	para "LAKE OF RAGE -"
 	line "MAHOGANY TOWN"
 	done
 
-Route43Sign2Text:
-	text "ROUTE 43"
-
-	para "LAKE OF RAGE -"
-	line "MAHOGANY TOWN"
-	done
-
+Route43TrainerTips:
+	jumptext Route43TrainerTipsText
 Route43TrainerTipsText:
 	text "TRAINER TIPS"
 
@@ -493,6 +276,9 @@ Route43TrainerTipsText:
 	para "weak against your"
 	line "#MON's type."
 	done
+
+Route43MaxEther:
+	itemball MAX_ETHER
 
 Route43_MapEvents:
 	db 0, 0 ; filler
@@ -516,12 +302,12 @@ Route43_MapEvents:
 	def_object_events
 	object_event  1, 26, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, Route43_PersimBerry, EVENT_ROUTE_43_PERSIM_BERRY
 	object_event  1, 25, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route43_BLUApricorn, EVENT_ROUTE_43_BLU_APRICORN
-;	object_event 13,  5, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerPokemaniacBen, -1
-;	object_event 13, 20, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerPokemaniacBrent, -1
-;	object_event 14,  7, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerPokemaniacRon, -1
-;	object_event  4, 16, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerFisherMarvin, -1
-;	object_event  9, 25, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerPicnickerTiffany, -1
-;	object_event 13, 40, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperSpencer, -1
-;	object_event 12, 32, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route43MaxEther, EVENT_ROUTE_43_MAX_ETHER
+	object_event 12,  7, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 3, TrainerPokemaniacMax, -1 ;ben
+	object_event 13, 20, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 3, TrainerPokemaniacJulius, -1 ;brent
+	object_event  9, 25, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerPicnickerMegan, -1 ;tiffany
+	object_event 13, 40, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperSpencer, -1 ;spencer
+;	object_event 14,  7, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_TRAINER, 2, TrainerPokemaniacRon, -1 ;ron
+;	object_event  4, 16, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerFisherMarvin, -1 ;marvin
+	object_event 12, 32, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route43MaxEther, EVENT_ROUTE_43_MAX_ETHER
 
 ;.PinkOverYellowOBPalette
