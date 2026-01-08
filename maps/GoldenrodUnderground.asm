@@ -11,38 +11,36 @@ GoldenrodUnderground_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
-	callback MAPCALLBACK_NEWMAP, GoldenrodUndergroundResetSwitchesCallback
-	callback MAPCALLBACK_TILES, GoldenrodUndergroundCheckBasementKeyCallback
+;	callback MAPCALLBACK_NEWMAP, GoldenrodUndergroundResetSwitchesCallback
+;	callback MAPCALLBACK_TILES, GoldenrodUndergroundCheckBasementKeyCallback
 	callback MAPCALLBACK_OBJECTS, GoldenrodUndergroundCheckDayOfWeekCallback
 
-GoldenrodUndergroundResetSwitchesCallback:
-	clearevent EVENT_SWITCH_1
-	clearevent EVENT_SWITCH_2
-	clearevent EVENT_SWITCH_3
-	clearevent EVENT_EMERGENCY_SWITCH
-	clearevent EVENT_SWITCH_4
-	clearevent EVENT_SWITCH_5
-	clearevent EVENT_SWITCH_6
-	clearevent EVENT_SWITCH_7
-	clearevent EVENT_SWITCH_8
-	clearevent EVENT_SWITCH_9
-	clearevent EVENT_SWITCH_10
-	clearevent EVENT_SWITCH_11
-	clearevent EVENT_SWITCH_12
-	clearevent EVENT_SWITCH_13
-	clearevent EVENT_SWITCH_14
-	setval 0
-	writemem wUndergroundSwitchPositions
-	endcallback
+;GoldenrodUndergroundResetSwitchesCallback:
+;	clearevent EVENT_SWITCH_1
+;	clearevent EVENT_SWITCH_2
+;	clearevent EVENT_SWITCH_3
+;	clearevent EVENT_EMERGENCY_SWITCH
+;	clearevent EVENT_SWITCH_4
+;	clearevent EVENT_SWITCH_5
+;	clearevent EVENT_SWITCH_6
+;	clearevent EVENT_SWITCH_7
+;	clearevent EVENT_SWITCH_8
+;	clearevent EVENT_SWITCH_9
+;	clearevent EVENT_SWITCH_10
+;	clearevent EVENT_SWITCH_11
+;	clearevent EVENT_SWITCH_12
+;	clearevent EVENT_SWITCH_13
+;	clearevent EVENT_SWITCH_14
+;	setval 0
+;	writemem wUndergroundSwitchPositions
+;	endcallback
 
-GoldenrodUndergroundCheckBasementKeyCallback:
-	checkevent EVENT_USED_BASEMENT_KEY
-	iffalse .LockBasementDoor
-	endcallback
-
-.LockBasementDoor:
-	changeblock 18, 6, $54 ; locked door
-	endcallback
+;GoldenrodUndergroundCheckBasementKeyCallback:
+;	checkevent EVENT_USED_BASEMENT_KEY
+;	iffalse .DoorLocked
+;	changeblock 18, 6, $07 ; locked door
+;.DoorLocked
+;	endcallback
 
 GoldenrodUndergroundCheckDayOfWeekCallback:
 	readvar VAR_WEEKDAY
@@ -104,9 +102,9 @@ GoldenrodUndergroundCheckDayOfWeekCallback:
 	disappear GOLDENRODUNDERGROUND_YOUNGER_HAIRCUT_BROTHER
 	endcallback
 
-.Friday: ;bitter, older, younger
+.Friday: ;older, younger
 	disappear GOLDENRODUNDERGROUND_BARGAIN
-	appear GOLDENRODUNDERGROUND_BITTER
+	disappear GOLDENRODUNDERGROUND_BITTER
 	appear GOLDENRODUNDERGROUND_OLDER_HAIRCUT_BROTHER
 	appear GOLDENRODUNDERGROUND_YOUNGER_HAIRCUT_BROTHER
 	endcallback
@@ -140,7 +138,6 @@ BargainMerchantScript:
 BitterMerchantScript:
 	opentext
 	readvar VAR_WEEKDAY
-	ifequal FRIDAY, .Open
 	ifequal SUNDAY, .Open
 	ifequal SATURDAY, .Open
 	sjump GoldenrodUndergroundScript_ShopClosed
@@ -674,7 +671,7 @@ GoldenrodUndergroundHiddenMaxPotion:
 GoldenrodUndergroundHiddenRevivalHerb:
 	hiddenitem REVIVAL_HERB, EVENT_GOLDENROD_UNDERGROUND_HIDDEN_REVIVAL_HERB
 
-GoldenrodUndergroundHiddenAntidote:
+GoldenrodUndergroundHiddenRareCandy:
 	hiddenitem RARE_CANDY, EVENT_GOLDENROD_UNDERGROUND_HIDDEN_RARE_CANDY
 
 ;GoldenrodUndergroundCoinCase:
@@ -705,8 +702,8 @@ GoldenrodUnderground_MapEvents:
 
 	def_object_events
 
-	object_event  5, 11, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, BargainMerchantScript, EVENT_GOLDENROD_UNDERGROUND_GRAMPS
-	object_event  5, 21, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, BitterMerchantScript, EVENT_GOLDENROD_UNDERGROUND_GRANNY
+	object_event  5, 11, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BargainMerchantScript, EVENT_GOLDENROD_UNDERGROUND_GRAMPS
+	object_event  5, 21, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BitterMerchantScript, EVENT_GOLDENROD_UNDERGROUND_GRANNY
 	object_event  5, 15, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OlderHaircutBrotherScript, EVENT_GOLDENROD_UNDERGROUND_OLDER_HAIRCUT_BROTHER
 	object_event  5, 16, SPRITE_BOY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, YoungerHaircutBrotherScript, EVENT_GOLDENROD_UNDERGROUND_YOUNGER_HAIRCUT_BROTHER
 ;
