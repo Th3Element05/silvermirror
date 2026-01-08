@@ -132,6 +132,7 @@ NewBarkTownRival_LookingForGrampsText:
 	cont "is, do you?"
 
 	para "<……>"
+	line "<……>"
 
 	para "He was on his way"
 	line "to GOLDENROD?"
