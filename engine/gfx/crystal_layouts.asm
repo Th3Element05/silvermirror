@@ -124,7 +124,7 @@ Palette_TextBG7:
 INCLUDE "gfx/font/bg_text.pal"
 
 Function49420::
-	ld hl, MansionPalette1 + 8 palettes
+	ld hl, RadioTowerPalette + 8 palettes ;MansionPalette1
 	ld de, wBGPals1 palette PAL_BG_ROOF
 	ld bc, 1 palettes
 	ld a, BANK(wBGPals1)
