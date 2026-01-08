@@ -1211,22 +1211,6 @@ DebugFullPokegearText:
 	line "Fly Anywhere?"
 	done
 
-DebugMasterBalls:
-	opentext
-	writetext DebugMasterBallsText
-	yesorno
-	iffalse .End
-	giveitem MASTER_BALL, 40
-	giveitem MAX_REPEL, 40
-.End
-	closetext
-	end
-
-DebugMasterBallsText:
-	text "MASTER BALLs and"
-	line "MAX REPELs?"
-	done
-
 DebugAllTMs:
 	opentext
 	writetext DebugAllTMsText
@@ -1418,8 +1402,21 @@ DebugAskRockSmashText:
 	text "ROCKSMASH?"
 	done
 
-;Debug:
-;Debug:
+DebugMasterBalls:
+	opentext
+	writetext DebugMasterBallsText
+	yesorno
+	iffalse .End
+	giveitem MASTER_BALL, 40
+	giveitem MAX_REPEL, 40
+.End
+	closetext
+	end
+
+DebugMasterBallsText:
+	text "MASTER BALLs and"
+	line "MAX REPELs?"
+	done
 
 DebugSkipFastShip:
 	opentext
@@ -1458,6 +1455,23 @@ DebugCredits:
 DebugRollCreditsText:
 	text "Roll credits?"
 	done
+
+;Debug:
+
+DebugSFXRoom:
+	opentext
+	writetext DebugSFXRoomText
+	yesorno
+	iffalse .End
+	warp DEBUG_SOUND_ROOM, 1, 1
+.End
+	closetext
+	end
+
+DebugSFXRoomText:
+	text "Go to SFX Room?"
+	done
+
 
 ; front bookshelves
 DebugBeatKantoLeaders:
@@ -1769,10 +1783,10 @@ OaksLab_MapEvents:
 	bg_event  1,  6, BGEVENT_READ, DebugAllTMs
 	bg_event  2,  6, BGEVENT_READ, DebugAllHMs
 	bg_event  3,  6, BGEVENT_READ, DebugMasterBalls
-;	bg_event  6,  6, BGEVENT_READ, Debug
-;	bg_event  7,  6, BGEVENT_READ, Debug
-	bg_event  8,  6, BGEVENT_READ, DebugSkipFastShip
-	bg_event  9,  6, BGEVENT_READ, DebugCredits
+	bg_event  6,  6, BGEVENT_READ, DebugSkipFastShip
+	bg_event  7,  6, BGEVENT_READ, DebugCredits
+;	bg_event  8,  6, BGEVENT_READ, Debug
+	bg_event  9,  6, BGEVENT_READ, DebugSFXRoom
 ; front bookshelves
 	bg_event  0,  7, BGEVENT_READ, DebugBeatKantoLeaders
 	bg_event  1,  7, BGEVENT_READ, DebugLockedKantoGyms
