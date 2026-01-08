@@ -161,13 +161,13 @@ Route46_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  7,  6, BGEVENT_READ, Route46_NoFruit
-	bg_event  8,  5, BGEVENT_READ, Route46_NoFruit
+	bg_event  8,  6, BGEVENT_READ, Route46_NoFruit
+	bg_event  7,  5, BGEVENT_READ, Route46_NoFruit
 	bg_event  9, 27, BGEVENT_READ, Route46Sign
 
 	def_object_events
-	object_event  7,  6, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route46_CheriBerry, EVENT_ROUTE_46_CHERI_BERRY
-	object_event  8,  5, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, Route46_SitrusBerry, EVENT_ROUTE_46_SITRUS_BERRY
+	object_event  8,  6, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route46_CheriBerry, EVENT_ROUTE_46_CHERI_BERRY
+	object_event  7,  5, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, Route46_SitrusBerry, EVENT_ROUTE_46_SITRUS_BERRY
 	object_event  4, 14, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerCoolDuoThomAndKae_Thom, -1 ;ted
 	object_event  3, 13, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerCoolDuoThomAndKae_Kae, -1 ;erin
 	object_event 12, 19, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerHikerAlec, -1 ;bailey
