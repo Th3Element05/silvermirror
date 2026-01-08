@@ -1,59 +1,9 @@
 	object_const_def
-;	const ECRUTEAKGYM_GRAMPS
 
 EcruteakGym_MapScripts:
 	def_scene_scripts
-;	scene_script EcruteakGymForcedToLeaveScene, SCENE_ECRUTEAKGYM_FORCED_TO_LEAVE
-;	scene_script EcruteakGymNoopScene,          SCENE_ECRUTEAKGYM_NOOP
 
 	def_callbacks
-
-;EcruteakGymForcedToLeaveScene:
-;	sdefer EcruteakGymClosed
-;	end
-
-;EcruteakGymNoopScene:
-;	end
-
-;EcruteakGymClosed:
-;	applymovement PLAYER, EcruteakGymPlayerStepUpMovement
-;	applymovement ECRUTEAKGYM_GRAMPS, EcruteakGymGrampsSlowStepDownMovement
-;	opentext
-;	writetext EcruteakGymClosedText
-;	waitbutton
-;	closetext
-;	follow PLAYER, ECRUTEAKGYM_GRAMPS
-;	applymovement PLAYER, EcruteakGymPlayerSlowStepDownMovement
-;	stopfollow
-;	special FadeOutPalettes
-;	playsound SFX_ENTER_DOOR
-;	waitsfx
-;	warp ECRUTEAK_CITY, 6, 27
-;	end
-;
-;EcruteakGymClosedText:
-;	text "MORTY, the GYM"
-;	line "LEADER, is absent."
-;
-;	para "Sorry, but you'll"
-;	line "have to leave."
-;
-;	para "Hohohoho."
-;	done
-;
-;EcruteakGymPlayerStepUpMovement:
-;	step UP
-;	step_end
-;
-;EcruteakGymPlayerSlowStepDownMovement:
-;	fix_facing
-;	slow_step DOWN
-;	remove_fixed_facing
-;	step_end
-;
-;EcruteakGymGrampsSlowStepDownMovement:
-;	slow_step DOWN
-;	step_end
 
 EcruteakGymMortyScript:
 	faceplayer
@@ -408,7 +358,6 @@ EcruteakGym_MapEvents:
 	bg_event  6, 15, BGEVENT_READ, EcruteakGymStatue
 
 	def_object_events
-;	object_event  4, 14, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ECRUTEAK_GYM_GRAMPS
 	object_event  5,  1, SPRITE_MORTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, EcruteakGymMortyScript, -1
 	object_event  2,  7, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerSageBo, -1 ;jeffrey
 	object_event  3, 13, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSagePing, -1 ;ping
