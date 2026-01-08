@@ -4,7 +4,6 @@
 
 Route28SteelWingHouse_MapScripts:
 	def_scene_scripts
-	scene_script Route28SteelWingHouseNoopScene ; unusable
 
 	def_callbacks
 
