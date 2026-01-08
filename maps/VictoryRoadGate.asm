@@ -1,7 +1,4 @@
 	object_const_def
-	const VICTORYROADGATE_OFFICER
-	const VICTORYROADGATE_BLACK_BELT1
-	const VICTORYROADGATE_BLACK_BELT2
 
 VictoryRoadGate_MapScripts:
 	def_scene_scripts
@@ -11,18 +8,11 @@ VictoryRoadGate_MapScripts:
 	def_callbacks
 
 VictoryRoadGateNoop1Scene:
-	end
-
 VictoryRoadGateNoop2Scene:
 	end
 
 VictoryRoadGateBadgeCheckScript:
 	turnobject PLAYER, LEFT
-	sjump _VictoryRoadGateBadgeCheckScript
-
-VictoryRoadGateOfficerScript:
-	faceplayer
-_VictoryRoadGateBadgeCheckScript:
 	opentext
 	writetext VictoryRoadGateOfficerText
 	promptbutton
@@ -41,17 +31,7 @@ _VictoryRoadGateBadgeCheckScript:
 	setscene SCENE_VICTORYROADGATE_NOOP
 	end
 
-VictoryRoadGateLeftBlackBeltScript:
-	jumptextfaceplayer VictoryRoadGateLeftBlackBeltText
-
-VictoryRoadGateRightBlackBeltScript:
-	jumptextfaceplayer VictoryRoadGateRightBlackBeltText
-
-VictoryRoadGateStepDownMovement:
-	step DOWN
-	step_end
-
-VictoryRoadGateOfficerText:
+VictoryRoadGateBadgeCheckText:
 	text "Only trainers who"
 	line "have proven them-"
 	cont "selves may pass."
@@ -75,7 +55,43 @@ VictoryRoadGateEightBadgesText:
 	line "on through!"
 	done
 
-VictoryRoadGateLeftBlackBeltText:
+VictoryRoadGateStepDownMovement:
+	step DOWN
+	step_end
+
+VictoryRoadGateBadgeOfficerScript:
+	jumptextfaceplayer VictoryRoadGateOfficerText
+VictoryRoadGateOfficerText:
+	text "VICTORY ROAD is"
+	line "full of tough"
+	cont "trainers."
+
+	para "They're all eager"
+	line "to battle as a"
+	cont "warm-up for the"
+	cont "ELITE FOUR."
+	done
+
+VictoryRoadGateRightOfficerScript:
+	jumptextfaceplayer VictoryRoadGateRightOfficerText
+VictoryRoadGateRightOfficerText:
+	text "Off to the #MON"
+	line "LEAGUE, are you?"
+
+	para "The ELITE FOUR are"
+	line "so strong it's"
+	cont "scary, and they're"
+	cont "ready for you!"
+	done
+
+VictoryRoadGateBlackBeltScript1:
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .Champion
+	jumptext VictoryRoadGateLeftBlackBeltFirstText
+.Champion
+	jumptext VictoryRoadGateLeftBlackBeltChampionText
+
+VictoryRoadGateLeftBlackBeltFirstText:
 	text "This way leads to"
 	line "MT.SILVER."
 
@@ -84,15 +100,24 @@ VictoryRoadGateLeftBlackBeltText:
 	cont "there."
 	done
 
-VictoryRoadGateRightBlackBeltText:
-	text "Off to the #MON"
-	line "LEAGUE, are you?"
+VictoryRoadGateLeftBlackBeltChampionText:
+	text "This way leads to"
+	line "MT.SILVER."
 
-	para "The ELITE FOUR are"
-	line "so strong it's"
+	para "Only trainers who"
+	line "are permitted by"
+	cont "#MON LEAGUE are"
+	cont "allowed through."
+	done
 
-	para "scary, and they're"
-	line "ready for you!"
+VictoryRoadGateBlackBeltScript2:
+	jumptextfaceplayer VictoryRoadGateLeftBlackBeltAllowedText
+VictoryRoadGateLeftBlackBeltAllowedText:
+	text "LANCE has granted"
+	line "you permission to"
+	cont "enter MT.SILVER."
+
+	para "Be careful."
 	done
 
 VictoryRoadGateVictoryRoadSign:
@@ -106,15 +131,6 @@ VictoryRoadGate_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-;	warp_event 17,  7, ROUTE_22, 1
-;	warp_event 18,  7, ROUTE_22, 1
-;	warp_event  9, 17, ROUTE_26, 1
-;	warp_event 10, 17, ROUTE_26, 1
-;	warp_event  9,  0, VICTORY_ROAD, 1
-;	warp_event 10,  0, VICTORY_ROAD, 1
-;	warp_event  1,  7, ROUTE_28, 2
-;	warp_event  2,  7, ROUTE_28, 2
-;
 	warp_event 14, 15, ROUTE_22, 1
 	warp_event 15, 15, ROUTE_22, 1
 	warp_event  2,  7, ROUTE_28, 2
@@ -123,18 +139,16 @@ VictoryRoadGate_MapEvents:
 	warp_event 15,  0, ROUTE_23, 7
 
 	def_coord_events
-;	coord_event 10, 11, SCENE_VICTORYROADGATE_BADGE_CHECK, VictoryRoadGateBadgeCheckScript
-;
 	coord_event 14,  9, SCENE_VICTORYROADGATE_BADGE_CHECK, VictoryRoadGateBadgeCheckScript
 
 	def_bg_events
 	bg_event 16, 0, BGEVENT_READ, VictoryRoadGateVictoryRoadSign
 
 	def_object_events
+	object_event 12,  9, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadGateBadgeOfficerScript, -1
+	object_event 16,  7, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadGateRightOfficerScript, -1
+	object_event  8,  3, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadGateBlackBeltScript1, EVENT_OPENED_MT_SILVER
+	object_event  8,  5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadGateBlackBeltScript2, EVENT_VICTORY_ROAD_GATE_BLACKBELT
 ;	object_event  8, 11, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadGateOfficerScript, -1
 ;	object_event  4,  6, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadGateLeftBlackBeltScript, EVENT_OPENED_MT_SILVER
 ;	object_event 12,  6, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadGateRightBlackBeltScript, EVENT_FOUGHT_SNORLAX
-;
-	object_event 12,  9, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadGateOfficerScript, -1
-	object_event  8,  3, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadGateLeftBlackBeltScript, EVENT_OPENED_MT_SILVER
-	object_event 17, 10, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadGateRightBlackBeltScript, -1 ;EVENT_FOUGHT_SNORLAX
