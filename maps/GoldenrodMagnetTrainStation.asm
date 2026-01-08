@@ -19,7 +19,7 @@ GoldenrodMagnetTrainStationOfficerScript:
 	writetext GoldenrodMagnetTrainStationOfficer_AreYouComingAboardText
 	yesorno
 	iffalse .DecidedNotToRide
-	checkitem PASS
+	checkitem RAIL_PASS
 	iffalse .BuyPass ;.PassNotInBag
 	writetext SaffronMagnetTrainStationOfficer_RightThisWayText
 	waitbutton
@@ -58,7 +58,7 @@ GoldenrodMagnetTrainStationOfficerScript:
 	special PlaceMoneyTopRight
 	waitsfx
 	writetext SaffronMagnetTrainStationOfficer_BoughtPassText
-	giveitem PASS
+	giveitem RAIL_PASS
 	playsound SFX_KEY_ITEM
 	waitsfx
 	itemnotify
@@ -83,7 +83,7 @@ GoldenrodMagnetTrainStationOfficer_AreYouComingAboardText:
 
 ;GoldenrodMagnetTrainStationOfficer_RightThisWayText:
 ;	text "May I see your"
-;	line "rail PASS, please?"
+;	line "RAIL PASS, please?"
 ;
 ;	para "OK. Right this"
 ;	line "way, please."
@@ -96,7 +96,7 @@ GoldenrodMagnetTrainStationOfficer_AreYouComingAboardText:
 
 ;GoldenrodMagnetTrainStation_OfficerSellsPassText:
 ;	text "You don't have a"
-;	line "rail PASS."
+;	line "RAIL PASS."
 ;
 ;	para "Would you like to"
 ;	line "buy one?"
@@ -107,7 +107,7 @@ GoldenrodMagnetTrainStationOfficer_AreYouComingAboardText:
 
 ;GoldenrodMagnetTrainStationOfficer_BoughtPassText:
 ;	text "Thank you! Here is"
-;	line "your PASS."
+;	line "your RAIL PASS."
 ;	done
 
 Script_ArriveFromSaffron:
@@ -166,7 +166,7 @@ GoldenrodMagnetTrainStationGentlemanScript:
 	faceplayer
 	opentext
 	writetext GoldenrodMagnetTrainStationGentlemanText
-	checkitem PASS
+	checkitem RAIL_PASS
 	iftrue .AlreadyHavePass
 	promptbutton
 	writetext GoldenrodMagnetTrainStationGentleman_DoYouLikeTrainsText
@@ -175,7 +175,7 @@ GoldenrodMagnetTrainStationGentlemanScript:
 	writetext GoldenrodMagnetTrainStationGentleman_TrainsText
 	waitbutton
 	playsound SFX_KEY_ITEM
-	verbosegiveitem PASS
+	verbosegiveitem RAIL_PASS
 	waitsfx
 ;	itemnotify
 	closetext
