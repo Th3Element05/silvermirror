@@ -1,0 +1,137 @@
+TIFFANY1
+TrainerPicnickerTiffany:
+	trainer PICNICKER, TIFFANY3, EVENT_BEAT_PICNICKER_TIFFANY, PicnickerTiffanySeenText, PicnickerTiffanyBeatenText, 0, .Script
+.Script:
+	loadvar VAR_CALLERID, PHONE_PICNICKER_TIFFANY
+	opentext
+	checkflag ENGINE_TIFFANY_READY_FOR_REMATCH
+	iftrue .WantsBattle
+	checkflag ENGINE_TIFFANY_HAS_SILK_SCARF
+	iftrue .HasPinkBow
+	checkcellnum PHONE_PICNICKER_TIFFANY
+	iftrue .TiffanyDefeated
+	checkevent EVENT_TIFFANY_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskedAlready
+	writetext PicnickerTiffanyWantsPicnicText
+	promptbutton
+	setevent EVENT_TIFFANY_ASKED_FOR_PHONE_NUMBER
+	scall .AskNumber1
+	sjump .AskForNumber
+
+.AskedAlready:
+	scall .AskNumber2
+.AskForNumber:
+	askforphonenumber PHONE_PICNICKER_TIFFANY
+	ifequal PHONE_CONTACTS_FULL, .PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
+	gettrainername STRING_BUFFER_3, PICNICKER, TIFFANY3
+	scall .RegisteredNumber
+	sjump .NumberAccepted
+
+.WantsBattle:
+	scall .Rematch
+	winlosstext PicnickerTiffanyBeatenText, 0
+	checkevent EVENT_RESTORED_POWER_TO_KANTO
+	iftrue .LoadFight3
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .LoadFight2
+	checkevent EVENT_CLEARED_RADIO_TOWER
+	iftrue .LoadFight1
+	loadtrainer PICNICKER, TIFFANY3
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_TIFFANY_READY_FOR_REMATCH
+	end
+
+.LoadFight1:
+	loadtrainer PICNICKER, TIFFANY1
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_TIFFANY_READY_FOR_REMATCH
+	end
+
+.LoadFight2:
+	loadtrainer PICNICKER, TIFFANY2
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_TIFFANY_READY_FOR_REMATCH
+	end
+
+.LoadFight3:
+	loadtrainer PICNICKER, TIFFANY4
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_TIFFANY_READY_FOR_REMATCH
+	end
+
+.HasPinkBow:
+	scall .Gift
+	verbosegiveitem SILK_SCARF
+	iffalse .NoRoom
+	clearflag ENGINE_TIFFANY_HAS_SILK_SCARF
+	setevent ENGINE_TIFFANY_GAVE_SILK_SCARF
+	sjump .NumberAccepted
+
+.NoRoom:
+	sjump .PackFull
+
+.AskNumber1:
+	jumpstd AskNumber1FScript
+	end
+
+.AskNumber2:
+	jumpstd AskNumber2FScript
+	end
+
+.RegisteredNumber:
+	jumpstd RegisteredNumberFScript
+	end
+
+.NumberAccepted:
+	jumpstd NumberAcceptedFScript
+	end
+
+.NumberDeclined:
+	jumpstd NumberDeclinedFScript
+	end
+
+.PhoneFull:
+	jumpstd PhoneFullFScript
+	end
+
+.Rematch:
+	jumpstd RematchFScript
+	end
+
+.Gift:
+	jumpstd GiftFScript
+	end
+
+.PackFull:
+	jumpstd PackFullFScript
+	end
+
+.TiffanyDefeated:
+	writetext PicnickerTiffanyWantsPicnicText
+	promptbutton
+	closetext
+	end
+
+PicnickerTiffanySeenText:
+	text "Are you going to"
+	line "LAKE OF RAGE too?"
+
+	para "Let's play for a "
+	line "little while!"
+	done
+
+PicnickerTiffanyBeatenText:
+	text "I played too much!"
+	done
+
+PicnickerTiffanyWantsPicnicText:
+	text "I'm having a pic-"
+	line "nic with #MON."
+
+	para "Won't you join us?"
+	done
