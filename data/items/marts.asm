@@ -28,8 +28,8 @@ Marts:
 ;	dw MartGoldenrod4F = MartVitamins2 ?
 ;	dw MartGoldenrod5F = MartTMs2
 	dw MartTMs2
-	dw MartMahogany1
-	dw MartMahogany2
+;	dw MartMahogany1
+;	dw MartMahogany2
 	dw MartUnderground
 	assert_table_length NUM_MARTS
 
@@ -204,26 +204,26 @@ MartTMs2:
 	db TM_ICE_BEAM ; TM_ICE_PUNCH
 	db -1 ; end
 
-MartMahogany1:
-	db 3 ; # items
-	db TINYMUSHROOM
-;	db SLOWPOKETAIL
-	db POKE_BALL
-	db POTION
-	db -1 ; end
+;MartMahogany1:
+;	db 3 ; # items
+;	db TINYMUSHROOM
+;;	db SLOWPOKETAIL
+;	db POKE_BALL
+;	db POTION
+;	db -1 ; end
 
-MartMahogany2:
-	db 8 ; # items
-;	db RAGECANDYBAR
-	db GREAT_BALL
-	db SUPER_POTION
-	db HYPER_POTION
-	db ANTIDOTE
-	db PARLYZ_HEAL
-	db SUPER_REPEL
-	db REVIVE
-	db FLOWER_MAIL
-	db -1 ; end
+;MartMahogany2:
+;	db 8 ; # items
+;;	db RAGECANDYBAR
+;	db GREAT_BALL
+;	db SUPER_POTION
+;	db HYPER_POTION
+;	db ANTIDOTE
+;	db PARLYZ_HEAL
+;	db SUPER_REPEL
+;	db REVIVE
+;	db FLOWER_MAIL
+;	db -1 ; end
 
 MartUnderground:
 	db 4 ; # items
