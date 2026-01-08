@@ -3126,115 +3126,86 @@ wRoute26GateSceneID::                             db
 wPewterCitySceneID::                              db
 wPewterMuseumSceneID::                            db
 wMountMoonB2FSceneID::                            db
+wMountMoonSquareSceneID::                         db
 wCeruleanCitySceneID::                            db
 wRoute24SceneID::                                 db
 wBillsHouseSceneID::                              db
-wRoute5SaffronGateSceneID::                       db
-wRoute6SaffronGateSceneID::                       db
-wRoute7SaffronGateSceneID::                       db
-wRoute8SaffronGateSceneID::                       db
 wVermilionCitySceneID::                           db
+wVermilionPortSceneID::                           db
 wSSAnne2FSceneID::                                db
 wRoute9SceneID::                                  db
 wPokemonTower2FSceneID::                          db
 wPokemonTower5FSceneID::                          db
 wPokemonTower6FSceneID::                          db
-wFightingDojoSceneID::                            db
 wMrFujisHouseSceneID::                            db
-wSafariZoneEntranceSceneID::                      db
+wRoute5SaffronGateSceneID::                       db
+wRoute6SaffronGateSceneID::                       db
+wRoute7SaffronGateSceneID::                       db
+wRoute8SaffronGateSceneID::                       db
+wFightingDojoSceneID::                            db
 wSilphCo7FSceneID::                               db
 wSilphCo11FSceneID::                              db
-wRoute20SceneID::                                 db
-wCinnabarIslandSceneID::                          db
-wVictoryRoadGateSceneID::                         db
 wSaffronMagnetTrainStationSceneID::               db
 wRoute16GateSceneID::                             db
 wRoute18GateSceneID::                             db
+wSafariZoneEntranceSceneID::                      db
+wRoute20SceneID::                                 db
+wCinnabarIslandSceneID::                          db
+wPokemonMansionB1FSceneID::                       db
+wVictoryRoadGateSceneID::                         db
 wIndigoPlateauPokecenter1FSceneID::               db
 wE4LoreleisRoomSceneID::                          db
 wE4BrunosRoomSceneID::                            db
 wE4AgathasRoomSceneID::                           db
 wE4LancesRoomSceneID::                            db
 wHallOfFameSceneID::                              db
-wVermilionPortSceneID::                           db
-wOlivinePortSceneID::                             db
+;
 wFastShip1FSceneID::                              db
 wFastShipB1FSceneID::                             db
 wFastShipEngineRoomSceneID::                      db
 wOlivineCitySceneID::                             db
+wOlivinePortSceneID::                             db
 wEcruteakCitySceneID::                            db
 wBurnedTower1FSceneID::                           db
 wBurnedTowerB1FSceneID::                          db
-wMrPokemonsHouseSceneID::                         db
-wRoute30SceneID::                                 db
-wRoute29SceneID::                                 db
-wNewBarkTownSceneID::                             db
-wRadioTower4FSceneID::                            db
-;
-wTrainerHouseB1FSceneID::                         db
-wElmsLabSceneID::                                 db
-wCherrygroveCitySceneID::                         db
-wRoute32SceneID::                                 db
-wRoute35NationalParkGateSceneID::                 db
-wRoute36SceneID::                                 db
-wRoute36NationalParkGateSceneID::                 db
-wAzaleaTownSceneID::                              db
-wGoldenrodGymSceneID::                            db
-wGoldenrodMagnetTrainStationSceneID::             db
-wGoldenrodPokecenter1FSceneID::                   db
-wRoute34SceneID::                                 db
-wRoute34IlexForestGateSceneID::                   db
 wEcruteakTinTowerEntranceSceneID::                db
 wWiseTriosRoomSceneID::                           db
-wMahoganyTownSceneID::                            db
-wRoute42SceneID::                                 db
+wRoute35NationalParkGateSceneID::                 db
+wRoute36NationalParkGateSceneID::                 db
+wGoldenrodGymSceneID::                            db
+wGoldenrodMagnetTrainStationSceneID::             db
+;wGoldenrodUndergroundSwitchRoomEntrancesSceneID:: db
+wAzaleaTownSceneID::                              db
+wRuinsOfAlphInnerChamberSceneID::                 db
+wRuinsOfAlphKabutoChamberSceneID::                db
+wRuinsOfAlphOmanyteChamberSceneID::               db
+wRuinsOfAlphAerodactylChamberSceneID::            db
+wRuinsOfAlphHoOhChamberSceneID::                  db
+wTrainerHouseB1FSceneID::                         db
+wRoute30SceneID::                                 db
+wMrPokemonsHouseSceneID::                         db
+wRoute29SceneID::                                 db
+wNewBarkTownSceneID::                             db
+wElmsLabSceneID::                                 db
+wRadioTower4FSceneID::                            db
+;wMahoganyMart1FSceneID::                          db
+;wTeamRocketBaseB1FSceneID::                       db
+;wTeamRocketBaseB2FSceneID::                       db
+;wTeamRocketBaseB3FSceneID::                       db
+wDragonsDenB1FSceneID::                           db
+wDragonShrineSceneID::                            db
 wBattleTower1FSceneID::                           db
 wBattleTowerBattleRoomSceneID::                   db
 wBattleTowerElevatorSceneID::                     db
 wBattleTowerHallwaySceneID::                      db
-wBattleTowerOutsideSceneID::                      db
-wRoute43GateSceneID::                             db
-;wSproutTower3FSceneID::                           db
-wTinTower1FSceneID::                              db
-;wRuinsOfAlphOutsideSceneID::                      db
-;wRuinsOfAlphResearchCenterSceneID::               db
-wRuinsOfAlphHoOhChamberSceneID::                  db
-wRuinsOfAlphKabutoChamberSceneID::                db
-wRuinsOfAlphOmanyteChamberSceneID::               db
-wRuinsOfAlphAerodactylChamberSceneID::            db
-wRuinsOfAlphInnerChamberSceneID::                 db
-wMahoganyMart1FSceneID::                          db
-wTeamRocketBaseB1FSceneID::                       db
-wTeamRocketBaseB2FSceneID::                       db
-wTeamRocketBaseB3FSceneID::                       db
-wGoldenrodUndergroundSwitchRoomEntrancesSceneID:: db
-wSilverCaveRoom3SceneID::                         db
-wDragonsDenB1FSceneID::                           db
-wDragonShrineSceneID::                            db
-wMountMoonSquareSceneID::                         db
-wPokemonMansion1FSceneID::                        db
-wPokemonMansionB1FSceneID::                       db
-;wCianwoodCitySceneID::                            db ; unused in silvermirror
-;wRoute42EcruteakGateSceneID::                     db ; unused in silvermirror
-;wEcruteakPokecenter1FSceneID::                    db ; unused in silvermirror
-;wEcruteakGymSceneID::                             db ; unused in silvermirror
-;wRoute39SceneID::                                 db ; unused in silvermirror
-;wE4ChampionsRoomSceneID::                         db ; wLancesRoomSceneID::   
-;wVictoryRoadSceneID::                             db ; unused in silvermirror
 ;wPokecenter2FSceneID::                            db ; unused in silvermirror
 ;wTradeCenterSceneID::                             db ; unused in silvermirror
 ;wColosseumSceneID::                               db ; unused in silvermirror
 ;wTimeCapsuleSceneID::                             db ; unused in silvermirror
-;wPowerPlantSceneID::                              db ; unused in silvermirror
-;wCeruleanGymSceneID::                             db ; unused in silvermirror
-;wRoute25SceneID::                                 db ; unused in silvermirror
-;wRoute27SceneID::                                 db ; unused in silvermirror
-;wMountMoonSceneID::                               db ; unused in silvermirror
-;wRadioTower5FSceneID::                            db ; unused in silvermirror
 ;wMobileTradeRoomSceneID::                         db ; unused in silvermirror
 ;wMobileBattleRoomSceneID::                        db ; unused in silvermirror
 
-	ds 34 ;total ds 128 - 94 used = ds 34
+	ds 52 ;total ds 128 - 76 used = ds 52
 
 ; fight counts
 wJackFightCount::    db
