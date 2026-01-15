@@ -29,7 +29,7 @@ TrainerPicPointers::
 	dba_pic LancePic
 	dba_pic ChampionPic
 	dba_pic CalPic
-	dba_pic RedPic
+	dba_pic JaninePic
 	dba_pic GruntmPic
 	dba_pic GruntfPic
 	dba_pic ExecutivemPic
@@ -70,9 +70,10 @@ TrainerPicPointers::
 	dba_pic KimonoGirlPic
 	dba_pic TwinsPic
 	dba_pic OfficerPic
-	dba_pic MysticalmanPic
+	dba_pic NinjaPic ;MysticalmanPic
 	dba_pic CouplePic
 	dba_pic CoolduoPic
+	dba_pic RedPic
 	dba_pic KabutopsFossilPic
 	dba_pic AerodactylFossilPic
 	dba_pic PokemonGhostPic
