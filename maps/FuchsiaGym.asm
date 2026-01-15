@@ -13,17 +13,17 @@ FuchsiaGymKogaScript:
 	writetext KogaIntroText
 	waitbutton
 	closetext
-	winlosstext KogaBeatenText, 0
+	winlosstext KogaBeaten1Text, 0
 	loadtrainer KOGA, KOGA1
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_KOGA
-	setevent EVENT_BEAT_SAGE_KOA
-	setevent EVENT_BEAT_SAGE_KHAI
-	setevent EVENT_BEAT_JUGGLER_HORTON
-	setevent EVENT_BEAT_JUGGLER_ADAM
-	setevent EVENT_BEAT_JUGGLER_AUSTIN
-	setevent EVENT_BEAT_JUGGLER_EMMETT
+	setevent EVENT_BEAT_NINJA_KOA
+	setevent EVENT_BEAT_NINJA_KHAI
+	setevent EVENT_BEAT_SAGE_EZRA
+	setevent EVENT_BEAT_SAGE_KYLO
+	setevent EVENT_BEAT_SAGE_KODA
+	setevent EVENT_BEAT_SAGE_MUSA
 	opentext
 	writetext PlayerReceivedSoulbadgeText
 	playsound SFX_GET_BADGE
@@ -76,7 +76,7 @@ KogaIntroText:
 	para "Very well, I"
 	line "shall show you"
 	cont "true terror as a"
-	cont "ninja master!"
+	cont "NINJA MASTER!"
 
 	para "You shall feel"
 	line "the despair of"
@@ -84,7 +84,7 @@ KogaIntroText:
 	cont "techniques!"
 	done
 
-KogaBeatenText:
+KogaBeaten1Text:
 	text "Humph!"
 	line "You have proven"
 	cont "your worth!"
@@ -132,46 +132,46 @@ KogaAfterBattleText:
 	line "terrorize foes!"
 	done
 
-TrainerSageKoa:
-	trainer SAGE, KOA, EVENT_BEAT_SAGE_KOA, SageKoaSeenText, SageKoaBeatenText, 0, .Script
+TrainerNinjaKoa:
+	trainer NINJA, KOA, EVENT_BEAT_NINJA_KOA, NinjaKoaSeenText, NinjaKoaBeatenText, 0, .Script
 .Script:
 	endifjustbattled
 	opentext
-	writetext SageKoaAfterBattleText
+	writetext NinjaKoaAfterBattleText
 	waitbutton
 	closetext
 	end
 
-SageKoaSeenText:
+NinjaKoaSeenText:
 	text "I also study the"
-	line "way of the ninja"
+	line "way of the NINJA"
 	cont "with master KOGA!"
 
-	para "Ninja have a long"
+	para "NINJAs have a long"
 	line "history of using"
 	cont "animals!"
 	done
 
-SageKoaBeatenText:
+NinjaKoaBeatenText:
 	text "I'm defeated!"
 	done
 
-SageKoaAfterBattleText:
+NinjaKoaAfterBattleText:
 	text "I still have much"
 	line "to learn!"
 	done
 
-TrainerSageKhai:
-	trainer SAGE, KHAI, EVENT_BEAT_SAGE_KHAI, SageKhaiSeenText, SageKhaiBeatenText, 0, .Script
+TrainerNinjaKhai:
+	trainer NINJA, KHAI, EVENT_BEAT_NINJA_KHAI, NinjaKhaiSeenText, NinjaKhaiBeatenText, 0, .Script
 .Script:
 	endifjustbattled
 	opentext
-	writetext SageKhaiAfterBattleText
+	writetext NinjaKhaiAfterBattleText
 	waitbutton
 	closetext
 	end
 
-SageKhaiSeenText:
+NinjaKhaiSeenText:
 	text "Stop right there!"
 
 	para "Our invisible"
@@ -179,12 +179,12 @@ SageKhaiSeenText:
 	cont "frustrated?"
 	done
 
-SageKhaiBeatenText:
+NinjaKhaiBeatenText:
 	text "Whoa!"
 	line "He's got it!"
 	done
 
-SageKhaiAfterBattleText:
+NinjaKhaiAfterBattleText:
 	text "You impressed me!"
 	line "Here's a hint!"
 
@@ -193,31 +193,30 @@ SageKhaiAfterBattleText:
 	cont "invisible walls!"
 	done
 
-TrainerJugglerHorton:
-	trainer JUGGLER, HORTON, EVENT_BEAT_JUGGLER_HORTON, JugglerHortonSeenText, JugglerHortonBeatenText, 0, .Script
+TrainerSageEzra:
+	trainer SAGE, EZRA, EVENT_BEAT_SAGE_EZRA, SageEzraSeenText, SageEzraBeatenText, 0, .Script
 .Script:
 	endifjustbattled
 	opentext
-	writetext JugglerHortonAfterBattleText
+	writetext SageEzraAfterBattleText
 	waitbutton
 	closetext
 	end
 
-JugglerHortonSeenText:
+SageEzraSeenText:
 	text "Master KOGA comes"
 	line "from a long line"
-	cont "of ninjas!"
+	cont "of NINJAs!"
 
 	para "What did you"
 	line "descend from?"
 	done
 
-JugglerHortonBeatenText:
-	text "Dropped"
-	line "my balls!"
+SageEzraBeatenText:
+	text "Dropped my balls!"
 	done
 
-JugglerHortonAfterBattleText:
+SageEzraAfterBattleText:
 	text "Where there is"
 	line "light, there is"
 	cont "shadow!"
@@ -227,73 +226,72 @@ JugglerHortonAfterBattleText:
 	cont "choose?"
 	done
 
-TrainerJugglerAdam:
-	trainer JUGGLER, ADAM, EVENT_BEAT_JUGGLER_ADAM, JugglerAdamSeenText, JugglerAdamBeatenText, 0, .Script
+TrainerSageKylo:
+	trainer SAGE, KYLO, EVENT_BEAT_SAGE_KYLO, SageKyloSeenText, SageKyloBeatenText, 0, .Script
 .Script:
 	endifjustbattled
 	opentext
-	writetext JugglerAdamAfterBattleText
+	writetext SageKyloAfterBattleText
 	waitbutton
 	closetext
 	end
 
-JugglerAdamSeenText:
-	text "I wanted to become"
-	line "a ninja, so I"
+SageKyloSeenText:
+	text "I want to become"
+	line "a NINJA, so I"
 	cont "joined this GYM!"
 	done
 
-JugglerAdamBeatenText:
-	text "I'm done"
-	line "for!"
+SageKyloBeatenText:
+	text "I'm done for!"
 	done
 
-JugglerAdamAfterBattleText:
+SageKyloAfterBattleText:
 	text "I will keep on"
 	line "training under"
-	cont "KOGA, my ninja"
-	cont "master!"
+	cont "my NINJA MASTER,"
+	roll "KOGA!"
 	done
 
-TrainerJugglerAustin:
-	trainer JUGGLER, AUSTIN, EVENT_BEAT_JUGGLER_AUSTIN, JugglerAustinSeenText, JugglerAustinBeatenText, 0, .Script
+TrainerSageKoda:
+	trainer SAGE, KODA, EVENT_BEAT_SAGE_KODA, SageKodaSeenText, SageKodaBeatenText, 0, .Script
 .Script:
 	endifjustbattled
 	opentext
-	writetext JugglerAustinAfterBattleText
+	writetext SageKodaAfterBattleText
 	waitbutton
 	closetext
 	end
 
-JugglerAustinSeenText:
+SageKodaSeenText:
 	text "Let's see you"
 	line "beat my special"
 	cont "techniques!"
 	done
 
-JugglerAustinBeatenText:
-	text "You"
-	line "had me fooled!"
+SageKodaBeatenText:
+	text "You had me"
+	line "fooled!"
 	done
 
-JugglerAustinAfterBattleText:
+SageKodaAfterBattleText:
 	text "I like poison and"
 	line "sleep techniques,"
-	cont "as they linger"
-	cont "after battle!"
+	cont "since they linger"
+	roll "after battle!"
 	done
 
-TrainerJugglerEmmett:
-	trainer JUGGLER, EMMETT, EVENT_BEAT_JUGGLER_EMMETT, JugglerEmmettSeenText, JugglerEmmettBeatenText, 0, .Script
+TrainerSageMusa:
+	trainer SAGE, MUSA, EVENT_BEAT_SAGE_MUSA, SageMusaSeenText, SageMusaBeatenText, 0, .Script
 .Script:
 	endifjustbattled
 	opentext
-	writetext JugglerEmmettAfterBattleText
+	writetext SageMusaAfterBattleText
 	waitbutton
 	closetext
 	end
 
-JugglerEmmettSeenText:
+SageMusaSeenText:
 	text "Strength isn't"
 	line "the key for"
 	cont "#MON!"
@@ -305,12 +303,12 @@ JugglerEmmettSeenText:
 	cont "brute strength!"
 	done
 
-JugglerEmmettBeatenText:
+SageMusaBeatenText:
 	text "What?"
 	line "Extraordinary!"
 	done
 
-JugglerEmmettAfterBattleText:
+SageMusaAfterBattleText:
 	text "So, you mix brawn"
 	line "with brains?"
 	cont "Good strategy!"
@@ -342,7 +340,7 @@ FuchsiaGymGuideText:
 
 FuchsiaGymGuideWinText:
 	text "It's amazing how"
-	line "ninja can terrify"
+	line "NINJA can terrify"
 	cont "even now!"
 	done
 
@@ -369,10 +367,12 @@ FuchsiaGym_MapEvents:
 
 	def_object_events
 	object_event  4, 10, SPRITE_KOGA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FuchsiaGymKogaScript, -1
-	object_event  8,  2, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSageKoa, -1
-	object_event  3,  5, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSageKhai, -1
-	object_event  2,  7, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerJugglerHorton, -1
-	object_event  7,  8, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerJugglerAdam, -1
-	object_event  1, 12, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerJugglerAustin, -1
-	object_event  8, 13, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerJugglerEmmett, -1
+	object_event  8,  2, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_TRAINER, 2, TrainerNinjaKoa, -1
+	object_event  3,  5, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_TRAINER, 2, TrainerNinjaKhai, -1
+	object_event  2,  7, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSageEzra, -1
+	object_event  7,  8, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSageKylo, -1
+	object_event  1, 12, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSageKoda, -1
+	object_event  8, 13, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSageMusa, -1
 	object_event  7, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, FuchsiaGymGuideScript, -1
+
+;.GrayOverTreeOBPalette
