@@ -1,728 +1,307 @@
 	object_const_def
-;	const TEAMROCKETBASEB1F_ROCKET1
-;	const TEAMROCKETBASEB1F_ROCKET2
-;	const TEAMROCKETBASEB1F_SCIENTIST
-;	const TEAMROCKETBASEB1F_POKE_BALL1
-;	const TEAMROCKETBASEB1F_POKE_BALL2
-;	const TEAMROCKETBASEB1F_POKE_BALL3
+	const TEAMROCKETBASEB1F_NINJA_M
+	const TEAMROCKETBASEB1F_NINJA_T
+	const TEAMROCKETBASEB1F_NINJA_BALL
 
 TeamRocketBaseB1F_MapScripts:
 	def_scene_scripts
-;	scene_script TeamRocketBaseB1FNoopScene, SCENE_TEAMROCKETBASEB1F_TRAPS
+	scene_script TeamRocketBaseB1FNoop1Scene, SCENE_TEAMROCKETBASEB1F_NINJAS
+	scene_script TeamRocketBaseB1FNoop2Scene, SCENE_TEAMROCKETBASEB1F_NOOP
 
 	def_callbacks
-;	callback MAPCALLBACK_OBJECTS, TeamRocketBaseB1FHideSecurityGruntCallback
+	callback MAPCALLBACK_TILES, TeamRocketBaseB1FStaircaseCallback
+	callback MAPCALLBACK_OBJECTS, TeamRocketBaseB1FHideNinjaGuardCallback
 
-;TeamRocketBaseB1FNoopScene:
-;	end
+TeamRocketBaseB1FNoop1Scene:
+TeamRocketBaseB1FNoop2Scene:
+	end
 
-;TeamRocketBaseB1FHideSecurityGruntCallback:
-;	disappear TEAMROCKETBASEB1F_ROCKET1
-;	endcallback
+TeamRocketBaseB1FStaircaseCallback:
+	checkevent EVENT_TEAM_ROCKET_BASE_B1F_SWITCH
+	iftrue .DontHideStairs
+	changeblock 2, 14, $34 ; scuff marks
+.DontHideStairs
+	endcallback
 
-;SecurityCamera1a:
-;	checkevent EVENT_SECURITY_CAMERA_1
-;	iftrue NoSecurityCamera
-;	scall PlaySecurityCameraSounds
-;	checkevent EVENT_TEAM_ROCKET_BASE_POPULATION
-;	iftrue NoSecurityCamera
-;	showemote EMOTE_SHOCK, PLAYER, 15
-;	playmusic MUSIC_ROCKET_ENCOUNTER
-;	moveobject TEAMROCKETBASEB1F_ROCKET1, 19, 2
-;	appear TEAMROCKETBASEB1F_ROCKET1
-;	turnobject PLAYER, LEFT
-;	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement1
-;	scall TrainerCameraGrunt1
-;	ifequal TRUE, NoSecurityCamera
-;	scall PlaySecurityCameraSounds
-;	showemote EMOTE_SHOCK, PLAYER, 15
-;	playmusic MUSIC_ROCKET_ENCOUNTER
-;	moveobject TEAMROCKETBASEB1F_ROCKET1, 19, 2
-;	appear TEAMROCKETBASEB1F_ROCKET1
-;	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement1
-;	scall TrainerCameraGrunt2
-;	ifequal TRUE, NoSecurityCamera
-;	setevent EVENT_SECURITY_CAMERA_1
-;	end
-;
-;SecurityCamera1b:
-;	checkevent EVENT_SECURITY_CAMERA_1
-;	iftrue NoSecurityCamera
-;	scall PlaySecurityCameraSounds
-;	checkevent EVENT_TEAM_ROCKET_BASE_POPULATION
-;	iftrue NoSecurityCamera
-;	showemote EMOTE_SHOCK, PLAYER, 15
-;	playmusic MUSIC_ROCKET_ENCOUNTER
-;	moveobject TEAMROCKETBASEB1F_ROCKET1, 19, 3
-;	appear TEAMROCKETBASEB1F_ROCKET1
-;	turnobject PLAYER, LEFT
-;	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement1
-;	scall TrainerCameraGrunt1
-;	ifequal TRUE, NoSecurityCamera
-;	scall PlaySecurityCameraSounds
-;	showemote EMOTE_SHOCK, PLAYER, 15
-;	playmusic MUSIC_ROCKET_ENCOUNTER
-;	moveobject TEAMROCKETBASEB1F_ROCKET1, 19, 3
-;	appear TEAMROCKETBASEB1F_ROCKET1
-;	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement1
-;	scall TrainerCameraGrunt2
-;	ifequal TRUE, NoSecurityCamera
-;	setevent EVENT_SECURITY_CAMERA_1
-;	end
-;
-;SecurityCamera2a:
-;	checkevent EVENT_SECURITY_CAMERA_2
-;	iftrue NoSecurityCamera
-;	scall PlaySecurityCameraSounds
-;	checkevent EVENT_TEAM_ROCKET_BASE_POPULATION
-;	iftrue NoSecurityCamera
-;	showemote EMOTE_SHOCK, PLAYER, 15
-;	playmusic MUSIC_ROCKET_ENCOUNTER
-;	moveobject TEAMROCKETBASEB1F_ROCKET1, 4, 7
-;	appear TEAMROCKETBASEB1F_ROCKET1
-;	turnobject PLAYER, LEFT
-;	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement2
-;	scall TrainerCameraGrunt1
-;	ifequal TRUE, NoSecurityCamera
-;	scall PlaySecurityCameraSounds
-;	showemote EMOTE_SHOCK, PLAYER, 15
-;	playmusic MUSIC_ROCKET_ENCOUNTER
-;	turnobject PLAYER, RIGHT
-;	moveobject TEAMROCKETBASEB1F_ROCKET1, 12, 5
-;	appear TEAMROCKETBASEB1F_ROCKET1
-;	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement3
-;	scall TrainerCameraGrunt2
-;	ifequal TRUE, NoSecurityCamera
-;	setevent EVENT_SECURITY_CAMERA_2
-;	end
-;
-;SecurityCamera2b:
-;	checkevent EVENT_SECURITY_CAMERA_2
-;	iftrue NoSecurityCamera
-;	scall PlaySecurityCameraSounds
-;	checkevent EVENT_TEAM_ROCKET_BASE_POPULATION
-;	iftrue NoSecurityCamera
-;	showemote EMOTE_SHOCK, PLAYER, 15
-;	playmusic MUSIC_ROCKET_ENCOUNTER
-;	moveobject TEAMROCKETBASEB1F_ROCKET1, 4, 8
-;	appear TEAMROCKETBASEB1F_ROCKET1
-;	turnobject PLAYER, LEFT
-;	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement4
-;	scall TrainerCameraGrunt1
-;	ifequal TRUE, NoSecurityCamera
-;	scall PlaySecurityCameraSounds
-;	showemote EMOTE_SHOCK, PLAYER, 15
-;	playmusic MUSIC_ROCKET_ENCOUNTER
-;	turnobject PLAYER, RIGHT
-;	moveobject TEAMROCKETBASEB1F_ROCKET1, 12, 5
-;	appear TEAMROCKETBASEB1F_ROCKET1
-;	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement5
-;	scall TrainerCameraGrunt2
-;	ifequal TRUE, NoSecurityCamera
-;	setevent EVENT_SECURITY_CAMERA_2
-;	end
-;
-;SecurityCamera3a:
-;	checkevent EVENT_SECURITY_CAMERA_3
-;	iftrue NoSecurityCamera
-;	scall PlaySecurityCameraSounds
-;	checkevent EVENT_TEAM_ROCKET_BASE_POPULATION
-;	iftrue NoSecurityCamera
-;	showemote EMOTE_SHOCK, PLAYER, 15
-;	playmusic MUSIC_ROCKET_ENCOUNTER
-;	moveobject TEAMROCKETBASEB1F_ROCKET1, 19, 6
-;	appear TEAMROCKETBASEB1F_ROCKET1
-;	turnobject PLAYER, LEFT
-;	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement1
-;	scall TrainerCameraGrunt1
-;	ifequal TRUE, NoSecurityCamera
-;	scall PlaySecurityCameraSounds
-;	showemote EMOTE_SHOCK, PLAYER, 15
-;	playmusic MUSIC_ROCKET_ENCOUNTER
-;	turnobject PLAYER, RIGHT
-;	moveobject TEAMROCKETBASEB1F_ROCKET1, 25, 11
-;	appear TEAMROCKETBASEB1F_ROCKET1
-;	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement6
-;	scall TrainerCameraGrunt2
-;	ifequal TRUE, NoSecurityCamera
-;	setevent EVENT_SECURITY_CAMERA_3
-;	end
-;
-;SecurityCamera3b:
-;	checkevent EVENT_SECURITY_CAMERA_3
-;	iftrue NoSecurityCamera
-;	scall PlaySecurityCameraSounds
-;	checkevent EVENT_TEAM_ROCKET_BASE_POPULATION
-;	iftrue NoSecurityCamera
-;	showemote EMOTE_SHOCK, PLAYER, 15
-;	playmusic MUSIC_ROCKET_ENCOUNTER
-;	moveobject TEAMROCKETBASEB1F_ROCKET1, 19, 7
-;	appear TEAMROCKETBASEB1F_ROCKET1
-;	turnobject PLAYER, LEFT
-;	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement1
-;	scall TrainerCameraGrunt1
-;	ifequal TRUE, NoSecurityCamera
-;	scall PlaySecurityCameraSounds
-;	showemote EMOTE_SHOCK, PLAYER, 15
-;	playmusic MUSIC_ROCKET_ENCOUNTER
-;	turnobject PLAYER, RIGHT
-;	moveobject TEAMROCKETBASEB1F_ROCKET1, 25, 12
-;	appear TEAMROCKETBASEB1F_ROCKET1
-;	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement7
-;	scall TrainerCameraGrunt2
-;	ifequal TRUE, NoSecurityCamera
-;	setevent EVENT_SECURITY_CAMERA_3
-;	end
-;
-;SecurityCamera4:
-;	checkevent EVENT_SECURITY_CAMERA_4
-;	iftrue NoSecurityCamera
-;	scall PlaySecurityCameraSounds
-;	checkevent EVENT_TEAM_ROCKET_BASE_POPULATION
-;	iftrue NoSecurityCamera
-;	showemote EMOTE_SHOCK, PLAYER, 15
-;	playmusic MUSIC_ROCKET_ENCOUNTER
-;	moveobject TEAMROCKETBASEB1F_ROCKET1, 17, 16
-;	appear TEAMROCKETBASEB1F_ROCKET1
-;	turnobject PLAYER, LEFT
-;	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement1
-;	scall TrainerCameraGrunt1
-;	ifequal TRUE, NoSecurityCamera
-;	scall PlaySecurityCameraSounds
-;	showemote EMOTE_SHOCK, PLAYER, 15
-;	playmusic MUSIC_ROCKET_ENCOUNTER
-;	turnobject PLAYER, RIGHT
-;	moveobject TEAMROCKETBASEB1F_ROCKET1, 25, 11
-;	appear TEAMROCKETBASEB1F_ROCKET1
-;	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement8
-;	scall TrainerCameraGrunt2
-;	ifequal TRUE, NoSecurityCamera
-;	setevent EVENT_SECURITY_CAMERA_4
-;	end
-;
-;SecurityCamera5:
-;	checkevent EVENT_SECURITY_CAMERA_5
-;	iftrue NoSecurityCamera
-;	scall PlaySecurityCameraSounds
-;	checkevent EVENT_TEAM_ROCKET_BASE_POPULATION
-;	iftrue NoSecurityCamera
-;	showemote EMOTE_SHOCK, PLAYER, 15
-;	playmusic MUSIC_ROCKET_ENCOUNTER
-;	moveobject TEAMROCKETBASEB1F_ROCKET1, 3, 16
-;	appear TEAMROCKETBASEB1F_ROCKET1
-;	turnobject PLAYER, LEFT
-;	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement1
-;	scall TrainerCameraGrunt1
-;	ifequal TRUE, NoSecurityCamera
-;	scall PlaySecurityCameraSounds
-;	showemote EMOTE_SHOCK, PLAYER, 15
-;	playmusic MUSIC_ROCKET_ENCOUNTER
-;	turnobject PLAYER, RIGHT
-;	moveobject TEAMROCKETBASEB1F_ROCKET1, 14, 16
-;	appear TEAMROCKETBASEB1F_ROCKET1
-;	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement9
-;	scall TrainerCameraGrunt2
-;	ifequal TRUE, NoSecurityCamera
-;	setevent EVENT_SECURITY_CAMERA_5
-;	end
-;
-;NoSecurityCamera:
-;	end
-;
-;TrainerCameraGrunt1:
-;	opentext
-;	writetext CameraGrunt1SeenText
-;	waitbutton
-;	closetext
-;	winlosstext CameraGrunt1BeatenText, 0
-;	setlasttalked TEAMROCKETBASEB1F_ROCKET1
-;	loadtrainer GRUNTM, GRUNTM_20
-;	startbattle
-;	disappear TEAMROCKETBASEB1F_ROCKET1
-;	reloadmapafterbattle
-;	end
-;
-;TrainerCameraGrunt2:
-;	opentext
-;	writetext CameraGrunt2SeenText
-;	waitbutton
-;	closetext
-;	winlosstext CameraGrunt2BeatenText, 0
-;	setlasttalked TEAMROCKETBASEB1F_ROCKET1
-;	loadtrainer GRUNTM, GRUNTM_21
-;	startbattle
-;	disappear TEAMROCKETBASEB1F_ROCKET1
-;	reloadmapafterbattle
-;	end
-;
-;PlaySecurityCameraSounds:
-;	playsound SFX_LICK
-;	pause 10
-;	playsound SFX_LICK
-;	pause 10
-;	playsound SFX_LICK
-;	pause 10
-;	playsound SFX_LICK
-;	pause 10
-;	playsound SFX_LICK
-;	pause 10
-;	playsound SFX_LICK
-;	end
-;
-;ExplodingTrap1:
-;	checkevent EVENT_EXPLODING_TRAP_1
-;	iftrue NoExplodingTrap
-;	scall KoffingExplodingTrap
-;	reloadmapafterbattle
-;	setevent EVENT_EXPLODING_TRAP_1
-;	end
-;
-;ExplodingTrap2:
-;	checkevent EVENT_EXPLODING_TRAP_2
-;	iftrue NoExplodingTrap
-;	scall VoltorbExplodingTrap
-;	reloadmapafterbattle
-;	setevent EVENT_EXPLODING_TRAP_2
-;	end
-;
-;ExplodingTrap3:
-;	checkevent EVENT_EXPLODING_TRAP_3
-;	iftrue NoExplodingTrap
-;	scall GeodudeExplodingTrap
-;	reloadmapafterbattle
-;	setevent EVENT_EXPLODING_TRAP_3
-;	end
-;
-;ExplodingTrap4:
-;	checkevent EVENT_EXPLODING_TRAP_4
-;	iftrue NoExplodingTrap
-;	scall VoltorbExplodingTrap
-;	reloadmapafterbattle
-;	setevent EVENT_EXPLODING_TRAP_4
-;	end
-;
-;ExplodingTrap5:
-;	checkevent EVENT_EXPLODING_TRAP_5
-;	iftrue NoExplodingTrap
-;	scall GeodudeExplodingTrap
-;	reloadmapafterbattle
-;	setevent EVENT_EXPLODING_TRAP_5
-;	end
-;
-;ExplodingTrap6:
-;	checkevent EVENT_EXPLODING_TRAP_6
-;	iftrue NoExplodingTrap
-;	scall KoffingExplodingTrap
-;	reloadmapafterbattle
-;	setevent EVENT_EXPLODING_TRAP_6
-;	end
-;
-;ExplodingTrap7:
-;	checkevent EVENT_EXPLODING_TRAP_7
-;	iftrue NoExplodingTrap
-;	scall VoltorbExplodingTrap
-;	reloadmapafterbattle
-;	setevent EVENT_EXPLODING_TRAP_7
-;	end
-;
-;ExplodingTrap8:
-;	checkevent EVENT_EXPLODING_TRAP_8
-;	iftrue NoExplodingTrap
-;	scall KoffingExplodingTrap
-;	reloadmapafterbattle
-;	setevent EVENT_EXPLODING_TRAP_8
-;	end
-;
-;ExplodingTrap9:
-;	checkevent EVENT_EXPLODING_TRAP_9
-;	iftrue NoExplodingTrap
-;	scall KoffingExplodingTrap
-;	reloadmapafterbattle
-;	setevent EVENT_EXPLODING_TRAP_9
-;	end
-;
-;ExplodingTrap10:
-;	checkevent EVENT_EXPLODING_TRAP_10
-;	iftrue NoExplodingTrap
-;	scall VoltorbExplodingTrap
-;	reloadmapafterbattle
-;	setevent EVENT_EXPLODING_TRAP_10
-;	end
-;
-;ExplodingTrap11:
-;	checkevent EVENT_EXPLODING_TRAP_11
-;	iftrue NoExplodingTrap
-;	scall GeodudeExplodingTrap
-;	reloadmapafterbattle
-;	setevent EVENT_EXPLODING_TRAP_11
-;	end
-;
-;ExplodingTrap12:
-;	checkevent EVENT_EXPLODING_TRAP_12
-;	iftrue NoExplodingTrap
-;	scall GeodudeExplodingTrap
-;	reloadmapafterbattle
-;	setevent EVENT_EXPLODING_TRAP_12
-;	end
-;
-;ExplodingTrap13:
-;	checkevent EVENT_EXPLODING_TRAP_13
-;	iftrue NoExplodingTrap
-;	scall GeodudeExplodingTrap
-;	reloadmapafterbattle
-;	setevent EVENT_EXPLODING_TRAP_13
-;	end
-;
-;ExplodingTrap14:
-;	checkevent EVENT_EXPLODING_TRAP_14
-;	iftrue NoExplodingTrap
-;	scall KoffingExplodingTrap
-;	reloadmapafterbattle
-;	setevent EVENT_EXPLODING_TRAP_14
-;	end
-;
-;ExplodingTrap15:
-;	checkevent EVENT_EXPLODING_TRAP_15
-;	iftrue NoExplodingTrap
-;	scall VoltorbExplodingTrap
-;	reloadmapafterbattle
-;	setevent EVENT_EXPLODING_TRAP_15
-;	end
-;
-;ExplodingTrap16:
-;	checkevent EVENT_EXPLODING_TRAP_16
-;	iftrue NoExplodingTrap
-;	scall KoffingExplodingTrap
-;	reloadmapafterbattle
-;	setevent EVENT_EXPLODING_TRAP_16
-;	end
-;
-;ExplodingTrap17:
-;	checkevent EVENT_EXPLODING_TRAP_17
-;	iftrue NoExplodingTrap
-;	scall VoltorbExplodingTrap
-;	reloadmapafterbattle
-;	setevent EVENT_EXPLODING_TRAP_17
-;	end
-;
-;ExplodingTrap18:
-;	checkevent EVENT_EXPLODING_TRAP_18
-;	iftrue NoExplodingTrap
-;	scall GeodudeExplodingTrap
-;	reloadmapafterbattle
-;	setevent EVENT_EXPLODING_TRAP_18
-;	end
-;
-;ExplodingTrap19:
-;	checkevent EVENT_EXPLODING_TRAP_19
-;	iftrue NoExplodingTrap
-;	scall GeodudeExplodingTrap
-;	reloadmapafterbattle
-;	setevent EVENT_EXPLODING_TRAP_19
-;	end
-;
-;ExplodingTrap20:
-;	checkevent EVENT_EXPLODING_TRAP_20
-;	iftrue NoExplodingTrap
-;	scall VoltorbExplodingTrap
-;	reloadmapafterbattle
-;	setevent EVENT_EXPLODING_TRAP_20
-;	end
-;
-;ExplodingTrap21:
-;	checkevent EVENT_EXPLODING_TRAP_21
-;	iftrue NoExplodingTrap
-;	scall KoffingExplodingTrap
-;	reloadmapafterbattle
-;	setevent EVENT_EXPLODING_TRAP_21
-;	end
-;
-;ExplodingTrap22:
-;	checkevent EVENT_EXPLODING_TRAP_22
-;	iftrue NoExplodingTrap
-;	scall VoltorbExplodingTrap
-;	reloadmapafterbattle
-;	setevent EVENT_EXPLODING_TRAP_22
-;	end
-;
-;VoltorbExplodingTrap:
-;	special FadeOutPalettes
-;	cry VOLTORB
-;	special FadeInPalettes
-;	setlasttalked -1
-;	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
-;	loadwildmon VOLTORB, 23
-;	startbattle
-;	end
-;
-;GeodudeExplodingTrap:
-;	special FadeOutPalettes
-;	cry GEODUDE
-;	special FadeInPalettes
-;	setlasttalked -1
-;	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
-;	loadwildmon GEODUDE, 21
-;	startbattle
-;	end
-;
-;KoffingExplodingTrap:
-;	special FadeOutPalettes
-;	cry KOFFING
-;	special FadeInPalettes
-;	setlasttalked -1
-;	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
-;	loadwildmon KOFFING, 21
-;	startbattle
-;	end
-;
-;NoExplodingTrap:
-;	end
-;
-;TrainerScientistJed:
-;	trainer SCIENTIST, JED, EVENT_BEAT_SCIENTIST_JED, ScientistJedSeenText, ScientistJedBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext ScientistJedAfterBattleText
-;	waitbutton
-;	closetext
-;	end
-;
-;TrainerGruntM16:
-;	trainer GRUNTM, GRUNTM_16, EVENT_BEAT_ROCKET_GRUNTM_16, GruntM16SeenText, GruntM16BeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext GruntM16AfterBattleText
-;	waitbutton
-;	closetext
-;	end
-;
-;TeamRocketBaseB1FSecurityCamera:
-;	jumptext TeamRocketBaseB1FSecurityCameraText
-;
-;TeamRocketBaseB1FBookshelf:
-;	jumpstd TeamRocketOathScript
-;
-;TeamRocketBaseB1FSecretSwitch:
-;	opentext
-;	checkevent EVENT_TURNED_OFF_SECURITY_CAMERAS
-;	iftrue .SecretSwitchOff
-;	writetext TeamRocketBaseB1FSecretSwitchText
-;	playsound SFX_TALLY
-;	waitbutton
-;	closetext
-;	setevent EVENT_TURNED_OFF_SECURITY_CAMERAS
-;	setevent EVENT_SECURITY_CAMERA_1
-;	setevent EVENT_SECURITY_CAMERA_2
-;	setevent EVENT_SECURITY_CAMERA_3
-;	setevent EVENT_SECURITY_CAMERA_4
-;	setevent EVENT_SECURITY_CAMERA_5
-;	end
-;
-;.SecretSwitchOff:
-;	writetext TeamRocketBaseB1FSwitchOffText
-;	waitbutton
-;	closetext
-;	end
-;
-;TeamRocketBaseB1FHyperPotion:
-;	itemball HYPER_POTION
-;
-;TeamRocketBaseB1FNugget:
-;	itemball NUGGET
-;
-;TeamRocketBaseB1FGuardSpec:
-;	itemball GUARD_SPEC
-;
-;TeamRocketBaseB1FHiddenRevive:
-;	hiddenitem REVIVE, EVENT_TEAM_ROCKET_BASE_B1F_HIDDEN_REVIVE
-;
-;SecurityCameraMovement1:
-;	big_step RIGHT
-;	big_step RIGHT
-;	big_step RIGHT
-;	big_step RIGHT
+TeamRocketBaseB1FHideNinjaGuardCallback:
+	disappear TEAMROCKETBASEB1F_NINJA_M
+	disappear TEAMROCKETBASEB1F_NINJA_T
+	endcallback
+
+;1
+NinjaSecurity1a:
+	checkevent EVENT_NINJA_SECURITY_1
+	iftrue NoNinjaSecurity
+	setevent EVENT_NINJA_SECURITY_1
+	moveobject TEAMROCKETBASEB1F_NINJA_M, 18, 1
+	moveobject TEAMROCKETBASEB1F_NINJA_T, 18, 2
+	sjump NinjaSecurityScript
+
+NinjaSecurity1b:
+	checkevent EVENT_NINJA_SECURITY_1
+	iftrue NoNinjaSecurity
+	setevent EVENT_NINJA_SECURITY_1
+	moveobject TEAMROCKETBASEB1F_NINJA_M, 18, 2
+	moveobject TEAMROCKETBASEB1F_NINJA_T, 18, 3
+	sjump NinjaSecurityScript
+
+;2
+NinjaSecurity2a:
+	checkevent EVENT_NINJA_SECURITY_2
+	iftrue NoNinjaSecurity
+	setevent EVENT_NINJA_SECURITY_2
+	moveobject TEAMROCKETBASEB1F_NINJA_M, 10, 1
+	moveobject TEAMROCKETBASEB1F_NINJA_T, 10, 2
+	sjump NinjaSecurityScript
+
+NinjaSecurity2b:
+	checkevent EVENT_NINJA_SECURITY_2
+	iftrue NoNinjaSecurity
+	setevent EVENT_NINJA_SECURITY_2
+	moveobject TEAMROCKETBASEB1F_NINJA_M, 10, 2
+	moveobject TEAMROCKETBASEB1F_NINJA_T, 10, 3
+	sjump NinjaSecurityScript
+
+;3
+NinjaSecurity3:
+	checkevent EVENT_NINJA_SECURITY_3
+	iftrue NoNinjaSecurity
+	setevent EVENT_NINJA_SECURITY_3
+	moveobject TEAMROCKETBASEB1F_NINJA_M, 20, 6
+	moveobject TEAMROCKETBASEB1F_NINJA_T, 20, 7
+	sjump NinjaSecurityScript
+
+;4
+NinjaSecurity4a:
+	checkevent EVENT_NINJA_SECURITY_4
+	iftrue NoNinjaSecurity
+	setevent EVENT_NINJA_SECURITY_4
+	moveobject TEAMROCKETBASEB1F_NINJA_M, 18, 11
+	moveobject TEAMROCKETBASEB1F_NINJA_T, 18, 12
+	sjump NinjaSecurityScript
+
+NinjaSecurity4b:
+	checkevent EVENT_NINJA_SECURITY_4
+	iftrue NoNinjaSecurity
+	setevent EVENT_NINJA_SECURITY_4
+	moveobject TEAMROCKETBASEB1F_NINJA_M, 18, 12
+	moveobject TEAMROCKETBASEB1F_NINJA_T, 18, 13
+	sjump NinjaSecurityScript
+
+;5
+NinjaSecurity5:
+	checkevent EVENT_NINJA_SECURITY_5
+	iftrue NoNinjaSecurity
+	setevent EVENT_NINJA_SECURITY_5
+	moveobject TEAMROCKETBASEB1F_NINJA_M, 4, 7
+	moveobject TEAMROCKETBASEB1F_NINJA_T, 4, 8
+	sjump NinjaSecurityScript
+
+;6
+NinjaSecurity6:
+	checkevent EVENT_NINJA_SECURITY_6
+	iftrue NoNinjaSecurity
+	setevent EVENT_NINJA_SECURITY_6
+	moveobject TEAMROCKETBASEB1F_NINJA_M, 2, 11
+	moveobject TEAMROCKETBASEB1F_NINJA_T, 2, 12
+	sjump NinjaSecurityScript
+
+;7
+NinjaSecurity7:
+	checkevent EVENT_NINJA_SECURITY_7
+	iftrue NoNinjaSecurity
+	setevent EVENT_NINJA_SECURITY_7
+	moveobject TEAMROCKETBASEB1F_NINJA_M, 27, 13
+	moveobject TEAMROCKETBASEB1F_NINJA_T, 27, 14
+	sjump NinjaSecurityScript
+
+;8 ;pokeball disguise
+NinjaSecurity8:
+	setevent EVENT_NINJA_SECURITY_8
+	moveobject TEAMROCKETBASEB1F_NINJA_M, 14, 16
+	moveobject TEAMROCKETBASEB1F_NINJA_T, 14, 16
+	playsound SFX_CUT
+	applymovement TEAMROCKETBASEB1F_NINJA_BALL, MahoganyMart1FRockSmashMovement2
+	disappear TEAMROCKETBASEB1F_NINJA_BALL
+	appear TEAMROCKETBASEB1F_NINJA_M
+	applymovement TEAMROCKETBASEB1F_NINJA_M, MahoganyMart1FRockSmashMovement2
+	sjump NinjaSecurityPokeballScript
+
+;battle
+NinjaSecurityScript:
+	playsound SFX_CUT
+	appear TEAMROCKETBASEB1F_NINJA_M
+	appear TEAMROCKETBASEB1F_NINJA_T
+	applymovement TEAMROCKETBASEB1F_NINJA_M, MahoganyMart1FRockSmashMovement2
+NinjaSecurityPokeballScript:
+	waitsfx
+	setlasttalked TEAMROCKETBASEB1F_NINJA_T
+	faceplayer
+	playmusic MUSIC_DRAGONS_DEN
+	pause 9
+	showemote EMOTE_SHOCK, PLAYER, 15
+	opentext
+	random 2
+	ifequal 1, .seen1
+	;  else 0
+	writetext TeamRocketBaseB1FNinjaGuardSeenText0
+	sjump .next
+.seen1
+	writetext TeamRocketBaseB1FNinjaGuardSeenText1
+;	sjump .next
+; fallthrough
+.next
+	waitbutton
+	closetext
+	scall NinjaGuardRandomBattleScript
+	startbattle
+;	turnobject TEAMROCKETBASEB1F_NINJA_M, DOWN
+	turnobject TEAMROCKETBASEB1F_NINJA_T, DOWN
+	disappear TEAMROCKETBASEB1F_NINJA_M
+	reloadmapafterbattle
+	playsound SFX_CUT
+	applymovement TEAMROCKETBASEB1F_NINJA_T, MahoganyMart1FRockSmashMovement2
+	disappear TEAMROCKETBASEB1F_NINJA_T
+	end
+
+NinjaGuardRandomBattleScript:
+	winlosstext NinjaGuardBeatenText, 0
+	random 3
+	ifequal 1, .party1
+	ifequal 2, .party2
+	;  else 0
+	loadtrainer NINJA, NINJA_GUARD_R0
+	end
+.party1
+	loadtrainer NINJA, NINJA_GUARD_R1
+	end
+.party2
+	loadtrainer NINJA, NINJA_GUARD_R2
+	end
+
+NoNinjaSecurity:
+	end
+
+TeamRocketBaseB1FNinjaGuardSeenText0:
+	text "How did you get"
+	line "in here?"
+	done
+
+TeamRocketBaseB1FNinjaGuardSeenText1:
+	text "We can't permit"
+	line "you to be here."
+	done
+
+NinjaGuardBeatenText:
+	text "I must vanish!"
+	done
+
+;TeamRocketBaseB1FRockSmashMovement:
+;	rock_smash 6
 ;	step_end
-;
-;SecurityCameraMovement2:
-;	big_step UP
-;	big_step RIGHT
-;	big_step UP
-;	big_step UP
-;	big_step UP
-;	big_step UP
-;	turn_head RIGHT
-;	step_end
-;
-;SecurityCameraMovement3:
-;	big_step LEFT
-;	big_step LEFT
-;	big_step LEFT
-;	big_step UP
-;	big_step UP
-;	big_step UP
-;	big_step LEFT
-;	big_step LEFT
-;	step_end
-;
-;SecurityCameraMovement4:
-;; he jumps over a trap
-;	jump_step UP
-;	big_step RIGHT
-;	big_step UP
-;	big_step UP
-;	big_step UP
-;	turn_head RIGHT
-;	step_end
-;
-;SecurityCameraMovement5:
-;	big_step LEFT
-;	big_step LEFT
-;	big_step LEFT
-;	big_step UP
-;	big_step UP
-;	big_step LEFT
-;	big_step LEFT
-;	step_end
-;
-;SecurityCameraMovement6:
-;	big_step UP
-;	big_step UP
-;	big_step RIGHT
-;	big_step UP
-;	big_step UP
-;	big_step UP
-;	big_step LEFT
-;	step_end
-;
-;SecurityCameraMovement7:
-;	big_step UP
-;	big_step UP
-;	big_step UP
-;	big_step RIGHT
-;	big_step UP
-;	big_step UP
-;	big_step LEFT
-;	step_end
-;
-;SecurityCameraMovement8:
-;	big_step DOWN
-;	big_step DOWN
-;	big_step RIGHT
-;	big_step DOWN
-;	big_step DOWN
-;	big_step DOWN
-;	big_step LEFT
-;	big_step LEFT
-;	big_step LEFT
-;	step_end
-;
-;SecurityCameraMovement9:
-;	big_step LEFT
-;	big_step LEFT
-;	big_step LEFT
-;	big_step LEFT
-;	big_step LEFT
-;	step_end
-;
-;CameraGrunt1SeenText:
-;	text "Hey!"
-;	line "Intruder alert!"
-;	done
-;
-;CameraGrunt1BeatenText:
-;	text "Dang… I failed…"
-;	done
-;
-;CameraGrunt2SeenText:
-;	text "It's my turn!"
-;	line "There's no escape!"
-;	done
-;
-;CameraGrunt2BeatenText:
-;	text "Surveillance cams"
-;	line "are in the #MON"
-;	cont "statues."
-;
-;	para "We'll keep appear-"
-;	line "ing until you trip"
-;	cont "a secret switch."
-;	done
-;
-;ScientistJedSeenText:
-;	text "This was once a"
-;	line "ninja hideout."
-;
-;	para "There are traps to"
-;	line "confound intruders"
-;	cont "like you."
-;	done
-;
-;ScientistJedBeatenText:
-;	text "I get it…"
-;	done
-;
-;ScientistJedAfterBattleText:
-;	text "All right. I'll"
-;	line "divulge a secret"
-;	cont "about our hideout."
-;
-;	para "That thing on the"
-;	line "floor up ahead is"
-;	cont "a warp panel."
-;
-;	para "If you step on it,"
-;	line "you'll be warped"
-;
-;	para "back to the en-"
-;	line "trance."
-;	done
-;
-;GruntM16SeenText:
-;	text "Heheh. Feeling"
-;	line "lucky, punk?"
-;
-;	para "Go ahead, take"
-;	line "another step."
-;
-;	para "We've got traps"
-;	line "set in the floor!"
-;	done
-;
-;GruntM16BeatenText:
-;	text "Kaboom!"
-;	done
-;
-;GruntM16AfterBattleText:
-;	text "I don't even know"
-;	line "where the traps"
-;	cont "are planted."
-;
-;	para "You'll just have"
-;	line "to collect your"
-;	cont "courage and walk."
-;	done
-;
-;TeamRocketBaseB1FSecurityCameraText:
-;	text "It's a PERSIAN"
-;	line "statue…"
-;
-;	para "Its eyes are oddly"
-;	line "shiny."
-;	done
-;
-;TeamRocketBaseB1FSecretSwitchText:
-;	text "A secret switch!"
-;	line "Better press it."
-;	done
-;
-;TeamRocketBaseB1FSwitchOffText:
-;	text "The switch is"
-;	line "turned off."
-;	done
+
+TeamRocketBaseB1FHiddenNinja1:
+	conditional_event EVENT_NINJA_SECURITY_1, TeamRocketBaseB1FHiddenNinja
+
+TeamRocketBaseB1FHiddenNinja2:
+	conditional_event EVENT_NINJA_SECURITY_2, TeamRocketBaseB1FHiddenNinja
+
+TeamRocketBaseB1FHiddenNinja3:
+	conditional_event EVENT_NINJA_SECURITY_3, TeamRocketBaseB1FHiddenNinja
+
+TeamRocketBaseB1FHiddenNinja4:
+	conditional_event EVENT_NINJA_SECURITY_4, TeamRocketBaseB1FHiddenNinja
+
+TeamRocketBaseB1FHiddenNinja5:
+	conditional_event EVENT_NINJA_SECURITY_5, TeamRocketBaseB1FHiddenNinja
+
+TeamRocketBaseB1FHiddenNinja6:
+	conditional_event EVENT_NINJA_SECURITY_6, TeamRocketBaseB1FHiddenNinja
+
+TeamRocketBaseB1FHiddenNinja7:
+	conditional_event EVENT_NINJA_SECURITY_7, TeamRocketBaseB1FHiddenNinja
+
+;TeamRocketBaseB1FHiddenNinja8:
+;	conditional_event EVENT_NINJA_SECURITY_8, TeamRocketBaseB1FHiddenNinja
+	
+TeamRocketBaseB1FHiddenNinja:
+	jumptext TeamRocketBaseB1FHiddenNinjaText
+TeamRocketBaseB1FHiddenNinjaText:
+	text "…"
+	done
+
+TeamRocketBaseB1FScuffMarks:
+	conditional_event EVENT_TEAM_ROCKET_BASE_B1F_SWITCH, .Proceed
+.Proceed
+	jumptext TeamRocketBaseB1FScuffMarksText
+TeamRocketBaseB1FScuffMarksText:
+	text "There are marks on"
+	line "the floor here…"
+	done
+
+TeamRocketBaseB1FBookshelfSwitch:
+	checkevent EVENT_TEAM_ROCKET_BASE_B1F_SWITCH
+	iftrue TeamRocketBaseB1FBookshelf
+	opentext
+	writetext TeamRocketBaseSecretSwitchText
+	yesorno
+	iffalse .NoPress
+	closetext
+	playsound SFX_PUSH_BUTTON
+	waitsfx
+	playsound SFX_STRENGTH
+	waitsfx
+	changeblock 2, 14, $35 ; stairs
+	opentext
+	writetext TeamRocketBaseSomethingMovedText
+	waitbutton
+	setevent EVENT_TEAM_ROCKET_BASE_B1F_SWITCH
+.NoPress
+	closetext
+	end
+
+TeamRocketBaseSecretSwitchText:
+	text "Huh? All of these"
+	line "books are fake!"
+
+	para "There's a switch"
+	line "hidden behind the"
+	cont "books!"
+
+	para "Press it?"
+	done
+
+TeamRocketBaseSomethingMovedText:
+	text "It sounded like"
+	line "something moved"
+	cont "somewhere."
+	done
+
+TeamRocketBaseB1FComputer:
+	jumptext TeamRocketBaseB1FComputerText
+TeamRocketBaseB1FComputerText:
+	text "The computer isn't"
+	line "even plugged in."
+	done
+
+TeamRocketBaseB1FBookshelf:
+	jumptext TeamRocketBaseB1FFakeBookshelfText
+TeamRocketBaseB1FFakeBookshelfText:
+	text "All of these books"
+	line "are fake!"
+	done
+
+TeamRocketBaseB1FHiddenRevive:
+	hiddenitem REVIVE, EVENT_TEAM_ROCKET_BASE_B1F_HIDDEN_REVIVE
+
+TeamRocketBaseB1FHyperPotion:
+	itemball HYPER_POTION
+
+TeamRocketBaseB1FNugget:
+	itemball NUGGET
+
+TeamRocketBaseB1FGuardSpec:
+	itemball GUARD_SPEC
 
 TeamRocketBaseB1F_MapEvents:
 	db 0, 0 ; filler
@@ -730,60 +309,54 @@ TeamRocketBaseB1F_MapEvents:
 	def_warp_events
 	warp_event 27,  2, MAHOGANY_MART_1F, 3
 	warp_event  2, 15, TEAM_ROCKET_BASE_B2F, 1
-	warp_event  5, 15, TEAM_ROCKET_BASE_B1F, 4
-	warp_event 25,  2, TEAM_ROCKET_BASE_B1F, 3
+;	warp_event  5, 15, TEAM_ROCKET_BASE_B1F, 4
+;	warp_event 25,  2, TEAM_ROCKET_BASE_B1F, 3
 
 	def_coord_events
 	; There are five security cameras in the base.
 	; Walking in front of one triggers two Rocket Grunts.
-;	coord_event 24,  2, SCENE_TEAMROCKETBASEB1F_TRAPS, SecurityCamera1a
-;	coord_event 24,  3, SCENE_TEAMROCKETBASEB1F_TRAPS, SecurityCamera1b
-;	coord_event  6,  2, SCENE_TEAMROCKETBASEB1F_TRAPS, SecurityCamera2a
-;	coord_event  6,  3, SCENE_TEAMROCKETBASEB1F_TRAPS, SecurityCamera2b
-;	coord_event 24,  6, SCENE_TEAMROCKETBASEB1F_TRAPS, SecurityCamera3a
-;	coord_event 24,  7, SCENE_TEAMROCKETBASEB1F_TRAPS, SecurityCamera3b
-;	coord_event 22, 16, SCENE_TEAMROCKETBASEB1F_TRAPS, SecurityCamera4
-;	coord_event  8, 16, SCENE_TEAMROCKETBASEB1F_TRAPS, SecurityCamera5
+	coord_event 17,  2, SCENE_TEAMROCKETBASEB1F_NINJAS, NinjaSecurity1a
+	coord_event 17,  3, SCENE_TEAMROCKETBASEB1F_NINJAS, NinjaSecurity1b
+	coord_event  9,  2, SCENE_TEAMROCKETBASEB1F_NINJAS, NinjaSecurity2a
+	coord_event  9,  3, SCENE_TEAMROCKETBASEB1F_NINJAS, NinjaSecurity2b
+	coord_event 19,  7, SCENE_TEAMROCKETBASEB1F_NINJAS, NinjaSecurity3
+	coord_event 19, 12, SCENE_TEAMROCKETBASEB1F_NINJAS, NinjaSecurity4a
+	coord_event 19, 13, SCENE_TEAMROCKETBASEB1F_NINJAS, NinjaSecurity4b
+	coord_event  3,  8, SCENE_TEAMROCKETBASEB1F_NINJAS, NinjaSecurity5
+	coord_event  5,  8, SCENE_TEAMROCKETBASEB1F_NINJAS, NinjaSecurity5;b
+	coord_event  1, 12, SCENE_TEAMROCKETBASEB1F_NINJAS, NinjaSecurity6
+	coord_event  3, 12, SCENE_TEAMROCKETBASEB1F_NINJAS, NinjaSecurity6;b
+	coord_event 26, 14, SCENE_TEAMROCKETBASEB1F_NINJAS, NinjaSecurity7
+	coord_event 28, 14, SCENE_TEAMROCKETBASEB1F_NINJAS, NinjaSecurity7;b
+;	coord_event 11, 16, SCENE_TEAMROCKETBASEB1F_NINJAS, NinjaSecurity8
 	; There are spots on the floor that trigger a Pokémon battle.
 	; Each Pokémon (Voltorb, Koffing, Geodude) knows Selfdestruct.
 ;	coord_event  2,  7, SCENE_TEAMROCKETBASEB1F_TRAPS, ExplodingTrap1
-;	coord_event  3,  7, SCENE_TEAMROCKETBASEB1F_TRAPS, ExplodingTrap2
-;	coord_event  4,  7, SCENE_TEAMROCKETBASEB1F_TRAPS, ExplodingTrap3
-;	coord_event  1,  8, SCENE_TEAMROCKETBASEB1F_TRAPS, ExplodingTrap4
-;	coord_event  3,  8, SCENE_TEAMROCKETBASEB1F_TRAPS, ExplodingTrap5
-;	coord_event  5,  8, SCENE_TEAMROCKETBASEB1F_TRAPS, ExplodingTrap6
-;	coord_event  3,  9, SCENE_TEAMROCKETBASEB1F_TRAPS, ExplodingTrap7
-;	coord_event  4,  9, SCENE_TEAMROCKETBASEB1F_TRAPS, ExplodingTrap8
-;	coord_event  1, 10, SCENE_TEAMROCKETBASEB1F_TRAPS, ExplodingTrap9
-;	coord_event  2, 10, SCENE_TEAMROCKETBASEB1F_TRAPS, ExplodingTrap10
-;	coord_event  3, 10, SCENE_TEAMROCKETBASEB1F_TRAPS, ExplodingTrap11
-;	coord_event  5, 10, SCENE_TEAMROCKETBASEB1F_TRAPS, ExplodingTrap12
-;	coord_event  2, 11, SCENE_TEAMROCKETBASEB1F_TRAPS, ExplodingTrap13
-;	coord_event  4, 11, SCENE_TEAMROCKETBASEB1F_TRAPS, ExplodingTrap14
-;	coord_event  1, 12, SCENE_TEAMROCKETBASEB1F_TRAPS, ExplodingTrap15
-;	coord_event  2, 12, SCENE_TEAMROCKETBASEB1F_TRAPS, ExplodingTrap16
-;	coord_event  4, 12, SCENE_TEAMROCKETBASEB1F_TRAPS, ExplodingTrap17
-;	coord_event  5, 12, SCENE_TEAMROCKETBASEB1F_TRAPS, ExplodingTrap18
-;	coord_event  1, 13, SCENE_TEAMROCKETBASEB1F_TRAPS, ExplodingTrap19
-;	coord_event  3, 13, SCENE_TEAMROCKETBASEB1F_TRAPS, ExplodingTrap20
-;	coord_event  4, 13, SCENE_TEAMROCKETBASEB1F_TRAPS, ExplodingTrap21
-;	coord_event  5, 13, SCENE_TEAMROCKETBASEB1F_TRAPS, ExplodingTrap22
 
 	def_bg_events
-;	bg_event 19, 11, BGEVENT_READ, TeamRocketBaseB1FSecretSwitch
-;	bg_event 24,  1, BGEVENT_UP, TeamRocketBaseB1FSecurityCamera
-;	bg_event  6,  1, BGEVENT_UP, TeamRocketBaseB1FSecurityCamera
-;	bg_event  8, 15, BGEVENT_UP, TeamRocketBaseB1FSecurityCamera
-;	bg_event 22, 15, BGEVENT_UP, TeamRocketBaseB1FSecurityCamera
-;	bg_event 24,  5, BGEVENT_UP, TeamRocketBaseB1FSecurityCamera
-;	bg_event 20, 11, BGEVENT_READ, TeamRocketBaseB1FBookshelf
-;	bg_event 21, 11, BGEVENT_READ, TeamRocketBaseB1FBookshelf
-;	bg_event  3, 11, BGEVENT_ITEM, TeamRocketBaseB1FHiddenRevive
+	bg_event 18,  1, BGEVENT_IFNOTSET, TeamRocketBaseB1FHiddenNinja1
+	bg_event 10,  1, BGEVENT_IFNOTSET, TeamRocketBaseB1FHiddenNinja2
+	bg_event 20,  5, BGEVENT_IFNOTSET, TeamRocketBaseB1FHiddenNinja3
+	bg_event 18, 11, BGEVENT_IFNOTSET, TeamRocketBaseB1FHiddenNinja4
+	bg_event  4,  7, BGEVENT_IFNOTSET, TeamRocketBaseB1FHiddenNinja5
+	bg_event  2, 11, BGEVENT_IFNOTSET, TeamRocketBaseB1FHiddenNinja6
+	bg_event 27, 13, BGEVENT_IFNOTSET, TeamRocketBaseB1FHiddenNinja7
+;	bg_event 12, 15, BGEVENT_IFNOTSET, TeamRocketBaseB1FHiddenNinja8
+	bg_event  3, 15, BGEVENT_IFNOTSET, TeamRocketBaseB1FScuffMarks
+;	bg_event 16, 11, BGEVENT_READ, TeamRocketBaseB1FBookshelf
+;	bg_event 17, 11, BGEVENT_READ, TeamRocketBaseB1FBookshelf
+	bg_event 17, 11, BGEVENT_READ, TeamRocketBaseB1FComputer
+	bg_event 20, 11, BGEVENT_READ, TeamRocketBaseB1FBookshelfSwitch
+	bg_event 21, 11, BGEVENT_READ, TeamRocketBaseB1FBookshelfSwitch
+	bg_event  4, 11, BGEVENT_ITEM, TeamRocketBaseB1FHiddenRevive
 
 	def_object_events
-;	object_event  0,  0, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_TEAM_ROCKET_BASE_SECURITY_GRUNTS
-;	object_event  2,  4, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerGruntM16, EVENT_TEAM_ROCKET_BASE_POPULATION
-;	object_event 18, 12, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerScientistJed, EVENT_TEAM_ROCKET_BASE_POPULATION
-;	object_event 27,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TeamRocketBaseB1FHyperPotion, EVENT_TEAM_ROCKET_BASE_B1F_HYPER_POTION
-;	object_event 14, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TeamRocketBaseB1FNugget, EVENT_TEAM_ROCKET_BASE_B1F_NUGGET
-;	object_event 21, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TeamRocketBaseB1FGuardSpec, EVENT_TEAM_ROCKET_BASE_B1F_GUARD_SPEC
+	object_event  0,  0, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_NINJA_SECURITY_NINJAS
+	object_event  0,  0, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_NINJA_SECURITY_NINJAS
+	object_event 14, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NinjaSecurity8, EVENT_NINJA_SECURITY_8
+	object_event 27,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TeamRocketBaseB1FHyperPotion, EVENT_TEAM_ROCKET_BASE_B1F_HYPER_POTION
+	object_event 19, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TeamRocketBaseB1FNugget, EVENT_TEAM_ROCKET_BASE_B1F_NUGGET
+	object_event  7,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TeamRocketBaseB1FGuardSpec, EVENT_TEAM_ROCKET_BASE_B1F_GUARD_SPEC
+
+;.GrayOverTreeOBPalette
+;CARD_KEY_N
