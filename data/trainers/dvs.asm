@@ -28,7 +28,7 @@ TrainerClassDVs:
 	dn 13, 13, 12, 13 ; LANCE
 	dn 14, 14, 14, 14 ; CHAMPION
 	dn 13, 12, 13, 13 ; CAL
-	dn 15, 13, 13, 14 ; RED
+	dn  7,  9, 11,  9 ; JANINE
 	dn 12,  8, 10,  8 ; GRUNTM
 	dn  7, 14, 10,  8 ; GRUNTF
 	dn 13,  8, 10,  8 ; EXECUTIVEM
@@ -69,7 +69,8 @@ TrainerClassDVs:
 	dn  6,  8,  8, 10 ; KIMONO_GIRL
 	dn  6,  8, 10,  8 ; TWINS
 	dn  9,  8,  8,  8 ; OFFICER
-	dn  9,  8,  8,  8 ; MYSTICALMAN
+	dn  9,  8,  8,  8 ; NINJA ; MYSTICALMAN
 	dn  9,  8,  8,  8 ; COUPLE
 	dn 10, 10, 10,  8 ; COOL_DUO
+	dn 15, 13, 13, 14 ; RED
 	assert_table_length NUM_TRAINER_CLASSES - 3 ; exclude AERODACTYLE_FOSSIL, KABUTOPS_FOSSIL, POKEMON_GHOST

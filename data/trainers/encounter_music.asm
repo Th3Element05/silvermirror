@@ -3,7 +3,7 @@
 TrainerEncounterMusic::
 ; entries correspond to trainer classes (see constants/trainer_constants.asm)
 	table_width 1, TrainerEncounterMusic
-	db MUSIC_TRAINER_ENCOUNTER       ; none
+	db MUSIC_TRAINER_ENCOUNTER      ; none
 	db MUSIC_YOUNGSTER_ENCOUNTER   ; falkner
 	db MUSIC_YOUNGSTER_ENCOUNTER   ; bugsy
 	db MUSIC_LASS_ENCOUNTER        ; whitney
@@ -24,13 +24,13 @@ TrainerEncounterMusic::
 	db MUSIC_TRAINER_ENCOUNTER     ; blaine
 	db MUSIC_ROCKET_ENCOUNTER      ; giovanni
 	db MUSIC_ROCKET_ENCOUNTER      ; rocket_boss
-	db MUSIC_TRAINER_ENCOUNTER     ; will
+	db MUSIC_TRAINER_ENCOUNTER     ; lorelei
 	db MUSIC_TRAINER_ENCOUNTER     ; bruno
-	db MUSIC_TRAINER_ENCOUNTER     ; karen
-	db MUSIC_LASS_ENCOUNTER        ; janine
+	db MUSIC_TRAINER_ENCOUNTER     ; agatha
+	db MUSIC_TRAINER_ENCOUNTER     ; lance
 	db MUSIC_TRAINER_ENCOUNTER     ; champion
 	db MUSIC_TRAINER_ENCOUNTER     ; cal
-	db MUSIC_TRAINER_ENCOUNTER     ; red
+	db MUSIC_SAGE_ENCOUNTER        ; janine
 	db MUSIC_ROCKET_ENCOUNTER      ; gruntm
 	db MUSIC_ROCKET_ENCOUNTER      ; gruntf
 	db MUSIC_ROCKET_ENCOUNTER      ; executivem
@@ -47,12 +47,12 @@ TrainerEncounterMusic::
 	db MUSIC_POKEMANIAC_ENCOUNTER  ; pokemaniac
 	db MUSIC_TRAINER_ENCOUNTER     ; gentleman
 	db MUSIC_BEAUTY_ENCOUNTER      ; skier
-	db MUSIC_YOUNGSTER_ENCOUNTER   ; bugcatcher
+	db MUSIC_YOUNGSTER_ENCOUNTER   ; bug_catcher
 	db MUSIC_TRAINER_ENCOUNTER     ; fisher
 	db MUSIC_TRAINER_ENCOUNTER     ; swimmerm
 	db MUSIC_BEAUTY_ENCOUNTER      ; swimmerf
 	db MUSIC_TRAINER_ENCOUNTER     ; sailor
-	db MUSIC_POKEMANIAC_ENCOUNTER  ; supernerd
+	db MUSIC_POKEMANIAC_ENCOUNTER  ; super_nerd
 	db MUSIC_TRAINER_ENCOUNTER     ; guitarist
 	db MUSIC_TRAINER_ENCOUNTER     ; hiker
 	db MUSIC_TRAINER_ENCOUNTER     ; biker
@@ -71,8 +71,9 @@ TrainerEncounterMusic::
 	db MUSIC_KIMONO_ENCOUNTER      ; kimonogirl
 	db MUSIC_LASS_ENCOUNTER        ; twins
 	db MUSIC_TRAINER_ENCOUNTER     ; officer
-	db MUSIC_TRAINER_ENCOUNTER     ; mysticalman
+	db MUSIC_DRAGONS_DEN           ; ninja ; mysticalman MUSIC_TRAINER_ENCOUNTER
 	db MUSIC_BEAUTY_ENCOUNTER      ; couple
 	db MUSIC_TRAINER_ENCOUNTER     ; coolduo
+	db MUSIC_TRAINER_ENCOUNTER     ; red
 	assert_table_length NUM_TRAINER_CLASSES - 2
-	db MUSIC_TRAINER_ENCOUNTER       ; unused
+;	db MUSIC_TRAINER_ENCOUNTER       ; unused

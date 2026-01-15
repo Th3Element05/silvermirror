@@ -29,7 +29,7 @@ TrainerGroups:
 	dba LanceGroup
 	dba ChampionGroup
 	dba PKMNTrainerGroup
-	dba RedGroup
+	dba JanineGroup
 	dba GruntMGroup
 	dba GruntFGroup
 	dba ExecutiveMGroup
@@ -70,7 +70,8 @@ TrainerGroups:
 	dba KimonoGirlGroup
 	dba TwinsGroup
 	dba OfficerGroup
-	dba MysticalmanGroup
+	dba NinjaGroup ;MysticalmanGroup
 	dba CoupleGroup
 	dba CoolDuoGroup
+	dba RedGroup
 	assert_table_length NUM_TRAINER_CLASSES - 3 ; exclude AERODACTYLE_FOSSIL, KABUTOPS_FOSSIL, POKEMON_GHOST

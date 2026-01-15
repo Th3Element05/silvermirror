@@ -27,7 +27,7 @@ TrainerClassNames::
 	li "ELITE FOUR"     ;LANCE
 	li "CHAMPION"       ;CHAMPION
 	li "<PKMN> TRAINER" ;CAL
-	li "<PKMN> TRAINER"   ;OAK ;-RED
+	li "NINJAMASTER"    ;JANINE ;-RED
 	li "ROCKET"         ;GRUNTM
 	li "ROCKET"         ;GRUNTF
 	li "ROCKET"         ;EXECUTIVEM
@@ -68,7 +68,8 @@ TrainerClassNames::
 	li "KIMONO GIRL"    ;KIMONO_GIRL
 	li "TWINS"          ;TWINS
 	li "OFFICER"        ;OFFICER
-	li "MYSTICALMAN"    ;MYSTICALMAN
+	li "NINJA"          ;NINJA ;"MYSTICALMAN" ;MYSTICALMAN
 	li "COUPLE"         ;COUPLE
 	li "COOLDUO"        ;COOL_DUO
+	li "<PKMN> TRAINER" ;RED
 	assert_list_length NUM_TRAINER_CLASSES - 3 ; exclude AERODACTYLE_FOSSIL, KABUTOPS_FOSSIL, POKEMON_GHOST
