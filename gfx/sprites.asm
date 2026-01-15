@@ -40,12 +40,12 @@ TeacherSpriteGFX::             INCBIN "gfx/sprites/teacher.2bpp"
 BeautySpriteGFX::              INCBIN "gfx/sprites/beauty.2bpp"
 SuperNerdSpriteGFX::           INCBIN "gfx/sprites/super_nerd.2bpp"
 RockerSpriteGFX::              INCBIN "gfx/sprites/rocker.2bpp"
-PokefanMSpriteGFX::            INCBIN "gfx/sprites/pokefan_m.2bpp"
-PokefanFSpriteGFX::            INCBIN "gfx/sprites/pokefan_f.2bpp"
 
 
 SECTION "Sprites 2", ROMX
 
+PokefanMSpriteGFX::            INCBIN "gfx/sprites/pokefan_m.2bpp"
+PokefanFSpriteGFX::            INCBIN "gfx/sprites/pokefan_f.2bpp"
 GrampsSpriteGFX::              INCBIN "gfx/sprites/gramps.2bpp"
 GrannySpriteGFX::              INCBIN "gfx/sprites/granny.2bpp"
 SwimmerGuySpriteGFX::          INCBIN "gfx/sprites/swimmer_guy.2bpp"
@@ -81,6 +81,8 @@ BusinessmanSpriteGFX::         INCBIN "gfx/sprites/businessman.2bpp"
 BugCatcherSpriteGFX::          INCBIN "gfx/sprites/bug_catcher.2bpp"
 SleepingSpriteGFX::            INCBIN "gfx/sprites/sleeping.2bpp"
 RedsMomSpriteGFX::             INCBIN "gfx/sprites/reds_mom.2bpp"
+NinjaSpriteGFX::               INCBIN "gfx/sprites/ninja.2bpp"
+JanineSpriteGFX::              INCBIN "gfx/sprites/janine.2bpp"
 
 
 SECTION "Sprites 3", ROMX

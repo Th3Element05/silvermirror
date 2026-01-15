@@ -84,8 +84,8 @@ OverworldSprites:
 	overworld_sprite BugCatcherSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
 	overworld_sprite SleepingSpriteGFX, 12, STANDING_SPRITE, PAL_OW_BROWN
 	overworld_sprite RedsMomSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
-; 4e
-; 4f
+	overworld_sprite NinjaSpriteGFX, 12, WALKING_SPRITE, PAL_OW_TREE
+	overworld_sprite JanineSpriteGFX, 12, WALKING_SPRITE, PAL_OW_PURPLE ;PAL_OW_RED
 ; objects
 	overworld_sprite PokeBallSpriteGFX, 4, STILL_SPRITE, PAL_OW_RED
 	overworld_sprite PokedexSpriteGFX, 4, STILL_SPRITE, PAL_OW_RED
