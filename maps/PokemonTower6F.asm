@@ -52,13 +52,13 @@ PokemonTower6FGhostScript:
 	end
 
 PokemonTower6FBegoneText:
-	text "Be gone…"
-	line "Intruders…"
+	text " Be gone…"
+	line "   Intruders…"
 	done
 
 PokemonTower6FGetOutText:
-	text "Get out!"
-	line "Get out!"
+	text " Get out!"
+	line "   Get out!"
 	done
 
 PokemonTower6FSilphScopeText:
