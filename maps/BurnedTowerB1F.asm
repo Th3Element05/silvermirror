@@ -21,9 +21,9 @@ BurnedTowerB1FNoop2Scene:
 
 BurnedTowerB1FLadderCallback:
 	checkevent EVENT_RELEASED_THE_BEASTS
-	iftrue .HideLadder
+	iftrue .DontHideLadder
 	changeblock 6, 14, $02 ; floor
-.HideLadder:
+.DontHideLadder:
 	endcallback
 
 ReleaseTheBeasts:
@@ -88,44 +88,6 @@ ReleaseTheBeasts:
 	setscene SCENE_BURNEDTOWERB1F_NOOP
 	end
 
-BurnedTowerB1FGramps:
-	faceplayer
-	opentext
-	writetext BurnedTowerB1FGrampsText
-	waitbutton
-	closetext
-;	readvar VAR_FACING
-;	ifequal UP, .Movement2
-	applymovement BURNEDTOWERB1F_GRAMPS, BurnedTowerB1FGrampsMovement1
-;	sjump .Finish
-;
-;.Movement2:
-;	applymovement BURNEDTOWERB1F_GRAMPS, BurnedTowerB1FGrampsMovement2
-;.Finish:
-	disappear BURNEDTOWERB1F_GRAMPS
-	playsound SFX_EXIT_BUILDING
-	waitsfx
-	end
-
-BurnedTowerB1FGrampsText:
-	text "What were those"
-	line "#MON that ran"
-	cont "by just now?"
-
-	para "I've never seen"
-	line "#MON like those"
-	cont "before!"
-
-	para "Anyway, I'm glad"
-	line "you aren't hurt!"
-
-	para "I found a ladder"
-	line "we can use to get"
-	cont "out of here."
-
-	para "It's this way."
-	done
-
 BurnedTowerRaikouMovement:
 	set_sliding
 	fast_jump_step DOWN
@@ -176,7 +138,37 @@ BurnedTowerSuicuneMovement3:
 ;	remove_sliding
 ;	step_end
 
-BurnedTowerB1FGrampsMovement1:
+BurnedTowerB1FGramps:
+	opentext
+	writetext BurnedTowerB1FGrampsText
+	waitbutton
+	closetext
+	applymovement BURNEDTOWERB1F_GRAMPS, BurnedTowerB1FGrampsMovement
+	disappear BURNEDTOWERB1F_GRAMPS
+	playsound SFX_EXIT_BUILDING
+	waitsfx
+	end
+
+BurnedTowerB1FGrampsText:
+	text "What were those"
+	line "#MON that ran"
+	cont "by just now?"
+
+	para "I've never seen"
+	line "#MON like those"
+	cont "before!"
+
+	para "Anyway, I'm glad"
+	line "you aren't hurt!"
+
+	para "I found a ladder"
+	line "we can use to get"
+	cont "out of here."
+
+	para "It's this way."
+	done
+
+BurnedTowerB1FGrampsMovement:
 	step DOWN
 	step LEFT
 	step LEFT
@@ -184,15 +176,6 @@ BurnedTowerB1FGrampsMovement1:
 	step DOWN
 	step DOWN
 	step_end
-
-;BurnedTowerB1FGrampsMovement2:
-;	step LEFT
-;	step LEFT
-;	step DOWN
-;	step DOWN
-;	step LEFT
-;	step DOWN
-;	step_end
 
 ;BurnedTowerB1FTMEndure:
 ;	itemball TM_ENDURE
@@ -216,13 +199,13 @@ BurnedTowerB1F_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  7,  3, SPRITE_RAIKOU, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BURNED_TOWER_B1F_BEASTS_1
+	object_event  7,  3, SPRITE_RAIKOU, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BURNED_TOWER_B1F_BEASTS_1
 	object_event 12,  3, SPRITE_ENTEI, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BURNED_TOWER_B1F_BEASTS_1
 	object_event 10,  4, SPRITE_SUICUNE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BURNED_TOWER_B1F_BEASTS_1
-	object_event  7,  3, SPRITE_RAIKOU, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_EMOTE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BURNED_TOWER_B1F_BEASTS_2
-	object_event 12,  3, SPRITE_ENTEI, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_EMOTE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BURNED_TOWER_B1F_BEASTS_2
-	object_event 10,  4, SPRITE_SUICUNE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_EMOTE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BURNED_TOWER_B1F_BEASTS_2
-	object_event 10, 12, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, BurnedTowerB1FGramps, EVENT_GRAMPS_IN_BURNED_TOWER
+	object_event  7,  3, SPRITE_RAIKOU, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_EMOTE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BURNED_TOWER_B1F_BEASTS_2
+	object_event 12,  3, SPRITE_ENTEI, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_EMOTE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BURNED_TOWER_B1F_BEASTS_2
+	object_event 10,  4, SPRITE_SUICUNE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_EMOTE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BURNED_TOWER_B1F_BEASTS_2
+	object_event 10, 12, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, BurnedTowerB1FGramps, EVENT_GRAMPS_IN_BURNED_TOWER
 ;	object_event 16,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, BurnedTowerB1FTMEndure, EVENT_BURNED_TOWER_B1F_TM_ENDURE
 	object_event 17,  8, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BurnedTowerB1FBoulder, -1
 	object_event  6, 13, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BurnedTowerB1FRock, -1
@@ -230,3 +213,6 @@ BurnedTowerB1F_MapEvents:
 	object_event  8, 10, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BurnedTowerB1FRock, -1
 	object_event 16,  5, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BurnedTowerB1FRock, -1
 	object_event  5,  6, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BurnedTowerB1FRock, -1
+
+;SPRITEMOVEDATA_STANDING_DOWN
+;PAL_NPC_EMOTE
