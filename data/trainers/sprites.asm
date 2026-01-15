@@ -27,7 +27,7 @@ BTTrainerClassSprites:
 	db SPRITE_LANCE         ; Lance
 	db SPRITE_BLUE          ; Champion
 	db SPRITE_CAL           ; PKMNTrainer
-	db SPRITE_CHRIS         ; Red
+	db SPRITE_JANINE        ; Janine
 	db SPRITE_ROCKET        ; GruntM
 	db SPRITE_ROCKET_GIRL   ; GruntF
 	db SPRITE_ROCKET        ; ExecutiveM
@@ -68,4 +68,8 @@ BTTrainerClassSprites:
 	db SPRITE_KIMONO_GIRL   ; KimonoGirl
 	db SPRITE_TWIN          ; Twins
 	db SPRITE_OFFICER       ; Officer
-	assert_table_length NUM_TRAINER_CLASSES - 6 ; exclude MYSTICALMAN, COUPLE, COOLDUO, AERODACTYLE_FOSSIL, KABUTOPS_FOSSIL, POKEMON_GHOST
+	db SPRITE_NINJA         ; Ninja
+	db SPRITE_COOLTRAINER_F ; Couple
+	db SPRITE_COOLTRAINER_M ; CoolDuo
+	db SPRITE_CHRIS         ; Red
+	assert_table_length NUM_TRAINER_CLASSES - 3 ; exclude AERODACTYLE_FOSSIL, KABUTOPS_FOSSIL, POKEMON_GHOST
