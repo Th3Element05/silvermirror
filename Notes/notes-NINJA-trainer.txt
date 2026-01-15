@@ -1,0 +1,33 @@
+QWILFISH	2
+ARIADOS		2
+NOCTOWL		2
+--GLIGAR	2
+--ARBOK		2
+SNEASEL		2
+CROBAT		2
+
+Crobat – speed & assassination
+Sneasel – ambush attacker
+Murkrow – scouting & sabotage
+Ariados – traps & poison
+Qwilfish – poison defense & deterrence
+Forretress – tactical defense & traps
+
+
+
+repurpose MYSTICALMAN trainerclass
+constants\trainer_constants.asm
+data\trainers\class_names.asm
+data\trainers\attributes.asm
+data\trainers\dvs.asm
+data\trainers\encounter_music.asm
+data\trainers\pic_pointers.asm
+gfx\pics.asm
+data\trainers\palettes.asm
+data\trainers\party_pointers.asm
+data\trainers\parties.asm
+data\trainers\sprites.asm
+data\trainers\genders.asm
+data\trainers\gendered_trainers.asm
+data\radio\pnp_hidden_people.asm
+
