@@ -105,6 +105,7 @@ DEF KRIS EQU __trainer_class__
 
 	trainerclass KOGA ; 10
 	const KOGA1
+	const KOGA2
 
 	trainerclass SABRINA ; 11
 	const SABRINA1
@@ -144,8 +145,8 @@ DEF KRIS EQU __trainer_class__
 	const CAL2
 	const CAL3
 
-	trainerclass RED ; 1a
-	const RED1
+	trainerclass JANINE ; 1a
+	const JANINE1
 
 	trainerclass GRUNTM ; 1b
 ; kanto
@@ -717,10 +718,10 @@ DEF KRIS EQU __trainer_class__
 	const DARIUS ; cueball
 	const JULIEN ; cueball
 	const MAXIMO ; cueball
-	const HORTON
-	const ADAM
-	const AUSTIN
-	const EMMETT
+	const HORTON ;unused
+	const ADAM ;unused
+	const AUSTIN ;unused
+	const EMMETT ;unused
 	const DARIO
 	const GILBERT
 ; johto
@@ -824,9 +825,11 @@ DEF KRIS EQU __trainer_class__
 	const TODD5
 
 	trainerclass SAGE ; 3b
-; kanto (TAMER)
-	const KOA
-	const KHAI
+; kanto (FUCHSIA GYM (jugglers))
+	const EZRA
+	const KYLO
+	const KODA
+	const MUSA
 ; johto
 	const BO
 	const PING
@@ -916,8 +919,25 @@ DEF KRIS EQU __trainer_class__
 	const KEITH
 	const DIRK
 
-	trainerclass MYSTICALMAN ; 43
-	const EUSINE
+	trainerclass NINJA ; 43 ;MYSTICALMAN
+; kanto (FUCHSIA GYM (tamers))
+	const KOA
+	const KHAI
+; johto
+	const NINJA_GUARD_R0    ;const EUSINE
+	const NINJA_GUARD_R1
+	const NINJA_GUARD_R2
+	const JONIN
+	const CHUNIN
+	const GENIN
+	const TEISATSU
+	const KANCHO
+	const KISHU
+	const KONRAN
+	const SEKKO
+;	const IROH
+;	const AANG
+;	const ZUKO
 
 	trainerclass COUPLE ; 44
 ; kanto (JR TRAINERs r6)
@@ -937,10 +957,13 @@ DEF KRIS EQU __trainer_class__
 	const ZACANDJEN
 	const ELANANDIDA
 
-	trainerclass KABUTOPS_FOSSIL ; 46
+	trainerclass RED ; 46
+	const RED1
 
-	trainerclass AERODACTYL_FOSSIL ; 47
+	trainerclass KABUTOPS_FOSSIL ; 47
 
-	trainerclass POKEMON_GHOST ; 48
+	trainerclass AERODACTYL_FOSSIL ; 48
+
+	trainerclass POKEMON_GHOST ; 49
 
 DEF NUM_TRAINER_CLASSES EQU __trainer_class__ - 1 ; should we subtract the fossils and ghost here?
