@@ -3188,10 +3188,10 @@ wRoute29SceneID::                                 db
 wNewBarkTownSceneID::                             db
 wElmsLabSceneID::                                 db
 wRadioTower4FSceneID::                            db
-;wMahoganyMart1FSceneID::                          db
-;wTeamRocketBaseB1FSceneID::                       db
+wMahoganyMart1FSceneID::                          db
+wTeamRocketBaseB1FSceneID::                       db
 ;wTeamRocketBaseB2FSceneID::                       db
-;wTeamRocketBaseB3FSceneID::                       db
+wTeamRocketBaseB3FSceneID::                       db
 wDragonsDenB1FSceneID::                           db
 wDragonShrineSceneID::                            db
 wBattleTower1FSceneID::                           db
@@ -3205,7 +3205,7 @@ wBattleTowerHallwaySceneID::                      db
 ;wMobileTradeRoomSceneID::                         db ; unused in silvermirror
 ;wMobileBattleRoomSceneID::                        db ; unused in silvermirror
 
-	ds 52 ;total ds 128 - 76 used = ds 52
+	ds 49 ;total ds 128 - 79 used = ds 49
 
 ; fight counts
 wJackFightCount::    db
