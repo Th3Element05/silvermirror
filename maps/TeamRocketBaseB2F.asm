@@ -1,947 +1,559 @@
 	object_const_def
-;	const TEAMROCKETBASEB2F_ROCKET1
-;	const TEAMROCKETBASEB2F_ROCKET_GIRL
-;	const TEAMROCKETBASEB2F_LANCE
-;	const TEAMROCKETBASEB2F_DRAGONITE
-;	const TEAMROCKETBASEB2F_ELECTRODE1
-;	const TEAMROCKETBASEB2F_ELECTRODE2
-;	const TEAMROCKETBASEB2F_ELECTRODE3
-;	const TEAMROCKETBASEB2F_ELECTRODE4
-;	const TEAMROCKETBASEB2F_ELECTRODE5
-;	const TEAMROCKETBASEB2F_ELECTRODE6
-;	const TEAMROCKETBASEB2F_ROCKET2
-;	const TEAMROCKETBASEB2F_ROCKET3
-;	const TEAMROCKETBASEB2F_ROCKET4
-;	const TEAMROCKETBASEB2F_POKE_BALL
+	const TEAMROCKETBASEB2F_JANINE
+	const TEAMROCKETBASEB2F_KOGA
+	const TEAMROCKETBASEB2F_JANINE_N
+	const TEAMROCKETBASEB2F_KOGA_N
+	const TEAMROCKETBASEB2F_NINJA_JONIN_T
+	const TEAMROCKETBASEB2F_NINJA_JONIN
+	const TEAMROCKETBASEB2F_BUSH_NINJA
+	const TEAMROCKETBASEB2F_SPEED_NINJA1
+	const TEAMROCKETBASEB2F_SPEED_NINJA2
+	const TEAMROCKETBASEB2F_SPEED_M
 
 TeamRocketBaseB2F_MapScripts:
 	def_scene_scripts
-;	scene_script TeamRocketBaseB2FNoop1Scene, SCENE_TEAMROCKETBASEB2F_LANCE_HEALS
-;	scene_script TeamRocketBaseB2FNoop2Scene, SCENE_TEAMROCKETBASEB2F_ROCKET_BOSS
-;	scene_script TeamRocketBaseB2FNoop3Scene, SCENE_TEAMROCKETBASEB2F_ELECTRODES
-;	scene_script TeamRocketBaseB2FNoop4Scene, SCENE_TEAMROCKETBASEB2F_NOOP
+;	scene_script TeamRocketBaseB2FNoop1Scene, SCENE_TEAMROCKETBASEB2F_MEET_JANINE
+;	scene_script TeamRocketBaseB2FNoop2Scene, SCENE_TEAMROCKETBASEB2F_NOOP
 
 	def_callbacks
-;	callback MAPCALLBACK_TILES, TeamRocketBaseB2FTransmitterDoorCallback
-;
+
 ;TeamRocketBaseB2FNoop1Scene:
 ;TeamRocketBaseB2FNoop2Scene:
-;TeamRocketBaseB2FNoop3Scene:
-;TeamRocketBaseB2FNoop4Scene:
 ;	end
+
+TrainerNinjaJonin:
+	trainer NINJA, JONIN, EVENT_BEAT_NINJA_JONIN, NinjaJoninSeenText, NinjaJoninBeatenText, 0, .Script
+.Script:
+	checkevent EVENT_TEAM_ROCKET_BASE_B2F_JONIN
+	iffalse TeamRocketBaseB2FNinjaJoninScript
+	setevent EVENT_NINJA_SECURITY_5
+	setevent EVENT_NINJA_SECURITY_6
+	setevent EVENT_NINJA_SECURITY_7
+	setevent EVENT_NINJA_SECURITY_8
+	setmapscene TEAM_ROCKET_BASE_B1F, SCENE_TEAMROCKETBASEB1F_NOOP
+	opentext
+	writetext NinjaJoninAfterBattleText
+	waitbutton
+	closetext
+	; fallthrough
+
+TeamRocketBaseB2FMeetJanineAndKogaScene:
+	follow TEAMROCKETBASEB2F_NINJA_JONIN_T, PLAYER
+	readvar VAR_YCOORD
+	ifequal 13, .Short
+	applymovement TEAMROCKETBASEB2F_NINJA_JONIN_T, TeamRocketBaseB2FOneStepUpMovement
+.Short
+	applymovement TEAMROCKETBASEB2F_NINJA_JONIN_T, TeamRocketBaseB2FApproachJanineMovement
+	stopfollow
+	turnobject TEAMROCKETBASEB2F_NINJA_JONIN_T, RIGHT
+	turnobject TEAMROCKETBASEB2F_JANINE, LEFT
+	turnobject PLAYER, RIGHT
+	opentext
+	writetext TeamRocketBaseB2FJanineQuestionText
+	waitbutton
+	closetext
+	showemote EMOTE_SHOCK, TEAMROCKETBASEB2F_JANINE, 15
+	applymovement TEAMROCKETBASEB2F_JANINE, TeamRocketBaseB2FMovesDownMovement
+	turnobject TEAMROCKETBASEB2F_NINJA_JONIN_T, DOWN
+	opentext
+	writetext TeamRocketBaseB2FJanineIntroText
+	waitbutton
+	closetext
+	appear TEAMROCKETBASEB2F_KOGA
+	turnobject TEAMROCKETBASEB2F_JANINE, DOWN
+	turnobject PLAYER, DOWN
+	showemote EMOTE_SHOCK, TEAMROCKETBASEB2F_JANINE, 15
+	applymovement TEAMROCKETBASEB2F_KOGA, TeamRocketBaseB2FFourStepsUpMovement
+	opentext
+	writetext TeamRocketBaseB2FKogaExplainsText
+	promptbutton
+	closetext
+	applymovement TEAMROCKETBASEB2F_KOGA, TeamRocketBaseB2FKogaApproachesPlayerMovement
+	opentext
+	writetext TeamRocketBaseB2FKogaWelcomeText
+	waitbutton
+	closetext
+	applymovement TEAMROCKETBASEB2F_JANINE, TeamRocketBaseB2FMovesDownMovement
+	turnobject TEAMROCKETBASEB2F_KOGA, RIGHT
+	opentext
+	writetext TeamRocketBaseB2FJanineInterjectsText
+	promptbutton
+	turnobject TEAMROCKETBASEB2F_KOGA, UP
+	pause 10
+	writetext TeamRocketBaseB2FPlayerExplainsText
+	waitbutton
+	closetext
+	applymovement TEAMROCKETBASEB2F_KOGA, TeamRocketBaseB2FSlowStepLeftMovement
+	opentext
+	writetext TeamRocketBaseB2FKogaPerhapsLugiaText
+	promptbutton
+	closetext
+	applymovement TEAMROCKETBASEB2F_KOGA, TeamRocketBaseB3FOneStepRightMovement
+	opentext
+	writetext TeamRocketBaseB2FKogaProposesChallengeText
+	promptbutton
+	closetext
+	applymovement TEAMROCKETBASEB2F_JANINE, TeamRocketBaseB2FOneStepUpMovement
+	turnobject TEAMROCKETBASEB2F_JANINE, LEFT
+	turnobject PLAYER, RIGHT
+	turnobject TEAMROCKETBASEB2F_KOGA, UP
+	opentext
+	writetext TeamRocketBaseB2FJanineExplainsChallengeText
+	waitbutton
+	closetext
+	applymovement TEAMROCKETBASEB2F_JANINE, TeamRocketBaseB2FSpinMovement
+	appear TEAMROCKETBASEB2F_JANINE_N
+	disappear TEAMROCKETBASEB2F_JANINE
+	refreshscreen
+	pause 15
+	applymovement TEAMROCKETBASEB2F_JANINE_N, TeamRocketBaseB2FExitSceneMovement
+	disappear TEAMROCKETBASEB2F_JANINE_N
+	applymovement TEAMROCKETBASEB2F_KOGA, TeamRocketBaseB2FSpinMovement
+	appear TEAMROCKETBASEB2F_KOGA_N
+	disappear TEAMROCKETBASEB2F_KOGA
+	refreshscreen
+	pause 15
+	applymovement TEAMROCKETBASEB2F_KOGA_N, TeamRocketBaseB2FExitSceneMovement
+	disappear TEAMROCKETBASEB2F_KOGA_N
+;	clearevent EVENT_TEAM_ROCKET_BASE_B2F_JONIN
+;	setevent EVENT_TEAM_ROCKET_BASE_B2F_JANINE
+;	setevent EVENT_TEAM_ROCKET_BASE_B2F_KOGA
+	appear TEAMROCKETBASEB2F_NINJA_JONIN
+	disappear TEAMROCKETBASEB2F_NINJA_JONIN_T
+	turnobject PLAYER, UP
+	opentext
+	writetext TeamRocketBaseB2FNinjaJoninChallengeText
+	waitbutton
+	closetext
+	end
+
+NinjaJoninSeenText:
+	text "Intruder!"
+
+	para "How did you get"
+	line "past our guards?"
+	done
+
+NinjaJoninBeatenText:
+	text "Such power!"
+	done
+
+NinjaJoninAfterBattleText:
+	text "I understand now"
+	line "how you got past"
+	cont "our guards."
+
+	para "I want you to meet"
+	line "one of the leaders"
+	cont "of our clan."
+
+	para "Please, follow me."
+	done
+
+TeamRocketBaseB2FJanineQuestionText:
+	text "JANINE: What is"
+	line "this?"
+
+	para "You know better"
+	line "than to bring an"
+	cont "outsider into our"
+	roll "den!"
+
+	para "JONIN: I do,"
+	line "JANINE."
+
+	para "But this outsider"
+	line "has found their"
+	cont "way here on their"
+	roll "own."
+
+	para "They have seen"
+	line "through our hidden"
+	cont "entrances, and"
+	roll "bested our guards."
+
+	para "I challenged them"
+	line "myself, and lost."
+	done
+
+TeamRocketBaseB2FJanineIntroText:
+	text "JANINE: We do not"
+	line "get unexpected"
+	cont "guests here."
+
+	para "No one has found"
+	line "the entrance to"
+	cont "our den and been"
+	roll "able to pass our"
+	cont "guards."
+
+	para "These are very"
+	line "impressive feats."
+
+	para "Tell me, why have"
+	line "you come here?"
+
+	para "<……> <……>"
+
+	para "JANINE: You seek"
+	line "the CLEAR BELL?"
+
+	para "As if we would"
+	line "just hand such an"
+	cont "artifact to some"
+	roll "outsider!"
+
+	para "Impossible!"
+
+	para "KOGA: JANINE!"
+	done
+
+TeamRocketBaseB2FKogaExplainsText:
+	text "KOGA: Can you not"
+	line "see the SOULBADGE"
+	cont "pinned to this"
+	roll "trainer's shirt?"
+
+	para "I tested this one"
+	line "and granted them"
+	cont "that BADGE myself."
+
+	para "This is <PLAYER>."
 ;
-;TeamRocketBaseB2FTransmitterDoorCallback:
-;	checkevent EVENT_OPENED_DOOR_TO_ROCKET_HIDEOUT_TRANSMITTER
-;	iftrue .OpenDoor
-;	endcallback
-;
-;.OpenDoor:
-;	changeblock 14, 12, $07 ; floor
-;	endcallback
-;
-;RocketBaseBossFLeft:
-;	moveobject TEAMROCKETBASEB2F_LANCE, 9, 13
-;	sjump RocketBaseBossFScript
-;
-;RocketBaseBossFRight:
-;	moveobject TEAMROCKETBASEB2F_ROCKET_GIRL, 21, 16
-;	moveobject TEAMROCKETBASEB2F_ROCKET1, 21, 16
-;	moveobject TEAMROCKETBASEB2F_DRAGONITE, 10, 13
-;	moveobject TEAMROCKETBASEB2F_LANCE, 10, 13
-;RocketBaseBossFScript:
-;	appear TEAMROCKETBASEB2F_ROCKET_GIRL
-;	appear TEAMROCKETBASEB2F_ROCKET1
-;	opentext
-;	writetext RocketBaseExecutiveFHoldItText
-;	waitbutton
-;	closetext
-;	turnobject PLAYER, DOWN
-;	showemote EMOTE_SHOCK, PLAYER, 15
-;	applymovement PLAYER, RocketBasePlayerApproachesBossFMovement
-;	playmusic MUSIC_ROCKET_ENCOUNTER
-;	applymovement TEAMROCKETBASEB2F_ROCKET_GIRL, RocketBaseBossFApproachesPlayerMovement
-;	turnobject PLAYER, UP
-;	applymovement TEAMROCKETBASEB2F_ROCKET1, RocketBaseGruntApproachesPlayerMovement
-;	opentext
-;	writetext RocketBaseBossFThrashText
-;	waitbutton
-;	closetext
-;	cry DRAGONITE
-;	turnobject TEAMROCKETBASEB2F_ROCKET_GIRL, LEFT
-;	turnobject PLAYER, LEFT
-;	appear TEAMROCKETBASEB2F_DRAGONITE
-;	applymovement TEAMROCKETBASEB2F_DRAGONITE, RocketBaseDragoniteAttacksMovement
-;	applymovement TEAMROCKETBASEB2F_ROCKET_GIRL, RocketBaseBossFHitMovement
-;	applymovement TEAMROCKETBASEB2F_ROCKET1, RocketBaseGruntProtectsBossFMovement
-;	appear TEAMROCKETBASEB2F_LANCE
-;	applymovement TEAMROCKETBASEB2F_LANCE, RocketBaseLanceApproachesBossFMovement
-;	opentext
-;	writetext RocketBaseLanceShareFunText
-;	waitbutton
-;	closetext
-;	turnobject PLAYER, RIGHT
-;	applymovement TEAMROCKETBASEB2F_ROCKET_GIRL, RocketBaseBossFFacesPlayerMovement
-;	opentext
-;	writetext RocketBaseBossDontMeddleText
-;	waitbutton
-;	closetext
-;	applymovement TEAMROCKETBASEB2F_ROCKET1, RocketBaseGruntBattlesLanceMovement
-;	applymovement TEAMROCKETBASEB2F_ROCKET_GIRL, RocketBaseBossFBattlesPlayerMovement
-;	winlosstext RocketBaseBossWinText, 0
-;	setlasttalked TEAMROCKETBASEB2F_ROCKET_GIRL
-;	loadtrainer EXECUTIVEF, EXECUTIVEF_2
-;	startbattle
-;	disappear TEAMROCKETBASEB2F_DRAGONITE
-;	setevent EVENT_TEAM_ROCKET_BASE_B2F_EXECUTIVE
-;	setevent EVENT_TEAM_ROCKET_BASE_B2F_GRUNT_WITH_EXECUTIVE
-;	setevent EVENT_TEAM_ROCKET_BASE_B2F_LANCE
-;	reloadmapafterbattle
-;	setevent EVENT_BEAT_ROCKET_EXECUTIVEF_2
-;	opentext
-;	writetext RocketBaseBossRetreatText
-;	waitbutton
-;	closetext
-;	special FadeBlackQuickly
-;	special ReloadSpritesNoPalettes
-;	disappear TEAMROCKETBASEB2F_ROCKET1
-;	disappear TEAMROCKETBASEB2F_ROCKET_GIRL
-;	disappear TEAMROCKETBASEB2F_ROCKET2
-;	disappear TEAMROCKETBASEB2F_ROCKET3
-;	disappear TEAMROCKETBASEB2F_ROCKET4
-;	pause 15
-;	special FadeInQuickly
-;	setscene SCENE_TEAMROCKETBASEB2F_ELECTRODES
-;	clearevent EVENT_TEAM_ROCKET_BASE_B2F_LANCE
-;	turnobject TEAMROCKETBASEB2F_LANCE, DOWN
-;	opentext
-;	writetext RocketBaseLancePostBattleText
-;	waitbutton
-;	closetext
-;	applymovement TEAMROCKETBASEB2F_LANCE, RocketBaseLanceChecksPlayerMovement
-;	turnobject PLAYER, UP
-;	opentext
-;	writetext RocketBaseLancePowerOffText
-;	waitbutton
-;	closetext
-;	follow TEAMROCKETBASEB2F_LANCE, PLAYER
-;	applymovement TEAMROCKETBASEB2F_LANCE, RocketBaseLanceApproachesMachineMovement
-;	stopfollow
-;	applymovement TEAMROCKETBASEB2F_LANCE, RocketBaseLancePacesMovement
-;	opentext
-;	writetext RockerBaseLanceElectrodeFaintText
-;	waitbutton
-;	closetext
-;	applymovement TEAMROCKETBASEB2F_LANCE, RocketBaseLanceApproachesElectrodesMovement
-;	disappear TEAMROCKETBASEB2F_LANCE
-;
-;RocketBaseCantLeaveScript:
-;	applymovement PLAYER, RocketBasePlayerCantLeaveElectrodesMovement
-;	end
-;
-;RocketBaseLancesSideScript:
-;	opentext
-;	writetext RocketBaseLancesSideText
-;	waitbutton
-;	closetext
-;	applymovement PLAYER, RocketBasePlayerCantGoRightMovement
-;	end
-;
-;LanceHealsScript1:
-;	turnobject PLAYER, UP
-;	sjump LanceHealsCommon
-;
-;LanceHealsScript2:
-;	turnobject PLAYER, RIGHT
-;	turnobject TEAMROCKETBASEB2F_LANCE, LEFT
-;LanceHealsCommon:
-;	opentext
-;	writetext LanceHealsText1
-;	waitbutton
-;	closetext
-;	special FadeOutPalettes
-;	special StubbedTrainerRankings_Healings
-;	playsound SFX_FULL_HEAL
-;	special HealParty
-;	special FadeInPalettes
-;	opentext
-;	writetext LanceHealsText2
-;	waitbutton
-;	closetext
-;	setscene SCENE_TEAMROCKETBASEB2F_ROCKET_BOSS
-;	setevent EVENT_LANCE_HEALED_YOU_IN_TEAM_ROCKET_BASE
-;	readvar VAR_FACING
-;	ifequal RIGHT, .FacingRight
-;	applymovement TEAMROCKETBASEB2F_LANCE, RocketBaseLanceLeavesAfterHealMovement
-;	disappear TEAMROCKETBASEB2F_LANCE
-;	end
-;
-;.FacingRight:
-;	applymovement TEAMROCKETBASEB2F_LANCE, RocketBaseLanceLeavesAfterHealRightMovement
-;	disappear TEAMROCKETBASEB2F_LANCE
-;	end
-;
-;TrainerGruntM17:
-;	trainer GRUNTM, GRUNTM_17, EVENT_BEAT_ROCKET_GRUNTM_17, GruntM17SeenText, GruntM17BeatenText, 0, .Script
-;
-;.Script:
+;	para "Furthermore, they"
+;	line "are also the most"
+;	cont "recent #MON"
+;	roll "LEAGUE CHAMPION."
+	done
+
+TeamRocketBaseB2FKogaWelcomeText:
+	text "KOGA: It is quite"
+	line "a surprise to find"
+	cont "you here."
+
+	para "<PLAYER>, welcome"
+	line "to the den of the"
+	cont "NINJA CLAN."
+	done
+
+TeamRocketBaseB2FJanineInterjectsText:
+	text "JANINE: Father,"
+	line "no matter who this"
+	cont "is, you know we"
+	roll "cannot just hand"
+	cont "the CLEAR BELL to"
+	roll "an outsider."
+
+	para "KOGA: Yes, you're"
+	line "right. Our clan"
+	cont "has protected the"
+	roll "CLEAR BELL for"
+	cont "generations."
+
+	para "Few even know that"
+	line "it exists, which"
+	cont "begs the question:"
+
+	para "How does <PLAYER>"
+	line "know to seek it"
+	cont "here?"
+	done
+
+TeamRocketBaseB2FPlayerExplainsText:
+	text "<……> <……>"
+
+	para "KOGA: I see…"
+	line "HO-OH has returned"
+	cont "to the TIN TOWER?"
+	done
+
+TeamRocketBaseB2FKogaPerhapsLugiaText:
+	text "KOGA: HO-OH…"
+
+	para "Then perhaps…"
+	line "LUGIA, too…?"
+	done
+
+TeamRocketBaseB2FKogaProposesChallengeText:
+	text "KOGA: JANINE, our"
+	line "clan has protected"
+	cont "the CLEAR BELL for"
+	roll "centuries, but we"
+	cont "knew a time would"
+	roll "come when someone"
+	cont "worthy of it would"
+	roll "appear."
+
+	para "HO-OH has revealed"
+	line "itself to <PLAYER>"
+	cont "and returned to"
+	roll "TIN TOWER."
+
+	para "This may be a sign"
+	line "they are destined"
+	cont "to receive the"
+	roll "CLEAR BELL."
+
+	para "We should test"
+	line "them."
+
+	para "JANINE: If you say"
+	line "so, then we shall"
+	cont "test them."
+	done
+
+TeamRocketBaseB2FJanineExplainsChallengeText:
+	text "JANINE: <PLAYER>,"
+	line "find us somewhere"
+	cont "within this den."
+
+	para "Only then will"
+	line "we grant you the"
+	cont "CLEAR BELL."
+	done
+
+TeamRocketBaseB2FApproachJanineMovement:
+	step UP
+	step UP
+TeamRocketBaseB2FFourStepsUpMovement:
+	step UP
+	step UP
+TeamRocketBaseB2FTwoStepsUpMovement:
+	step UP
+TeamRocketBaseB2FOneStepUpMovement:
+	step UP
+	step_end
+
+TeamRocketBaseB2FMovesDownMovement:
+	step DOWN
+	turn_head LEFT
+	step_end
+
+TeamRocketBaseB2FKogaApproachesPlayerMovement:
+	step LEFT
+	turn_head UP
+	step_end
+
+TeamRocketBaseB2FSlowStepLeftMovement:
+	slow_step LEFT
+	step_end
+
+;TeamRocketBaseB2FOneStepRightMovement:
+;	step RIGHT
+;	step_end
+
+TeamRocketBaseB2FSpinMovement:
+	turn_head DOWN
+	turn_head LEFT
+	turn_head UP
+	turn_head RIGHT
+	turn_head DOWN
+	turn_head LEFT
+	turn_head UP
+	turn_head RIGHT
+	turn_head DOWN
+	turn_head LEFT
+	turn_head UP
+	turn_head RIGHT
+	turn_head DOWN
+	step_end
+
+TeamRocketBaseB2FExitSceneMovement:
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step_end
+
+TeamRocketBaseB2FNinjaJoninScript:
+	checkevent EVENT_PASSED_NINJA_CHALLENGE
+	iffalse .ChallengeInProgress
+	jumptextfaceplayer TeamRocketBaseB2FNinjaJoninImpressedText
+
+.ChallengeInProgress
+	jumptextfaceplayer TeamRocketBaseB2FNinjaJoninChallengeText
+
+TeamRocketBaseB2FNinjaJoninImpressedText:
+	text "JONIN: You have"
+	line "been accepted by"
+	cont "both JANINE and"
+	roll "MASTER KOGA."
+
+	para "You are welcome"
+	line "here any time."
+	done
+
+TeamRocketBaseB2FNinjaJoninChallengeText:
+	text "JONIN: Good luck."
+	done
+
+TrainerNinjaGenin:
+	trainer NINJA, GENIN, EVENT_BEAT_NINJA_GENIN, NinjaChallengeSeenText, NinjaGeninBeatenText, 0, .Script
+.Script:
 ;	endifjustbattled
-;	opentext
-;	writetext GruntM17AfterBattleText
-;	waitbutton
-;	closetext
-;	end
-;
-;TrainerGruntM18:
-;	trainer GRUNTM, GRUNTM_18, EVENT_BEAT_ROCKET_GRUNTM_18, GruntM18SeenText, GruntM18BeatenText, 0, .Script
-;
-;.Script:
+	checkevent EVENT_PASSED_NINJA_CHALLENGE
+	iffalse TeamRocketBaseB2FNotWhoYouAreLookingFor
+	jumptextfaceplayer NinjaGeninAfterBattleText
+
+;NinjaChallengeSeenText:
+;	text "We have orders to"
+;	line "battle you if you"
+;	cont "talk to us!"
+;	done
+
+NinjaGeninBeatenText:
+	text "I didn't stand a"
+	line "chance."
+	done
+
+NinjaGeninAfterBattleText:
+	text "I want to get on"
+	line "the security team,"
+	cont "so I'm working my"
+	roll "way up the ranks."
+	done
+
+TrainerNinjaChunin:
+	trainer NINJA, CHUNIN, EVENT_BEAT_NINJA_CHUNIN, NinjaChallengeSeenText, NinjaChuninBeatenText, 0, .Script
+.Script:
 ;	endifjustbattled
-;	opentext
-;	writetext GruntM18AfterBattleText
-;	waitbutton
-;	closetext
-;	end
-;
-;TrainerGruntM19:
-;	trainer GRUNTM, GRUNTM_19, EVENT_BEAT_ROCKET_GRUNTM_19, GruntM19SeenText, GruntM19BeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext GruntM19AfterBattleText
-;	waitbutton
-;	closetext
-;	end
-;
-;RocketElectrode1:
-;	cry ELECTRODE
-;	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
-;	iftrue .Electrode1_challenge_mode
-;	loadwildmon ELECTRODE, 23
-;	jump .Electrode1_finish
-;.Electrode1_challenge_mode
-;	loadwildmon ELECTRODE, 36
-;.Electrode1_finish
-;	startbattle
-;	iftrue TeamRocketBaseB2FReloadMap
-;	disappear TEAMROCKETBASEB2F_ELECTRODE1
-;	disappear TEAMROCKETBASEB2F_ELECTRODE4
-;	checkevent EVENT_TEAM_ROCKET_BASE_B2F_ELECTRODE_1
-;	iffalse TeamRocketBaseB2FReloadMap
-;	checkevent EVENT_TEAM_ROCKET_BASE_B2F_ELECTRODE_2
-;	iffalse TeamRocketBaseB2FReloadMap
-;	checkevent EVENT_TEAM_ROCKET_BASE_B2F_ELECTRODE_3
-;	iffalse TeamRocketBaseB2FReloadMap
-;	reloadmapafterbattle
-;	special PlayMapMusic
-;	applymovement PLAYER, RocketBasePlayerLeavesElectrodesMovement1
-;	sjump RocketBaseElectrodeScript
-;
-;RocketElectrode2:
-;	cry ELECTRODE
-;	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
-;	iftrue .Electrode2_challenge_mode
-;	loadwildmon ELECTRODE, 23
-;	jump .Electrode2_finish
-;.Electrode2_challenge_mode
-;	loadwildmon ELECTRODE, 36
-;.Electrode2_finish
-;	startbattle
-;	iftrue TeamRocketBaseB2FReloadMap
-;	disappear TEAMROCKETBASEB2F_ELECTRODE2
-;	disappear TEAMROCKETBASEB2F_ELECTRODE5
-;	checkevent EVENT_TEAM_ROCKET_BASE_B2F_ELECTRODE_1
-;	iffalse TeamRocketBaseB2FReloadMap
-;	checkevent EVENT_TEAM_ROCKET_BASE_B2F_ELECTRODE_2
-;	iffalse TeamRocketBaseB2FReloadMap
-;	checkevent EVENT_TEAM_ROCKET_BASE_B2F_ELECTRODE_3
-;	iffalse TeamRocketBaseB2FReloadMap
-;	reloadmapafterbattle
-;	special PlayMapMusic
-;	applymovement PLAYER, RocketBasePlayerLeavesElectrodesMovement2
-;	sjump RocketBaseElectrodeScript
-;
-;RocketElectrode3:
-;	cry ELECTRODE
-;	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
-;	iftrue .Electrode3_challenge_mode
-;	loadwildmon ELECTRODE, 23
-;	jump .Electrode3_finish
-;.Electrode3_challenge_mode
-;	loadwildmon ELECTRODE, 36
-;.Electrode3_finish
-;	startbattle
-;	iftrue TeamRocketBaseB2FReloadMap
-;	disappear TEAMROCKETBASEB2F_ELECTRODE3
-;	disappear TEAMROCKETBASEB2F_ELECTRODE6
-;	checkevent EVENT_TEAM_ROCKET_BASE_B2F_ELECTRODE_1
-;	iffalse TeamRocketBaseB2FReloadMap
-;	checkevent EVENT_TEAM_ROCKET_BASE_B2F_ELECTRODE_2
-;	iffalse TeamRocketBaseB2FReloadMap
-;	checkevent EVENT_TEAM_ROCKET_BASE_B2F_ELECTRODE_3
-;	iffalse TeamRocketBaseB2FReloadMap
-;	reloadmapafterbattle
-;	special PlayMapMusic
-;	applymovement PLAYER, RocketBasePlayerLeavesElectrodesMovement3
-;	sjump RocketBaseElectrodeScript
-;
-;TeamRocketBaseB2FReloadMap:
-;	reloadmapafterbattle
-;	end
-;
-;RocketBaseElectrodeScript:
-;	moveobject TEAMROCKETBASEB2F_LANCE, 18, 6
-;	appear TEAMROCKETBASEB2F_LANCE
-;	applymovement TEAMROCKETBASEB2F_LANCE, RocketBaseLanceLeavesElectrodesMovement
-;	turnobject PLAYER, RIGHT
-;	opentext
-;	writetext RocketBaseLanceElectrodeDoneText
-;	promptbutton
-;	stringtotext .pagercardname, MEM_BUFFER_1
-;	scall .JumpstdReceiveItem
-;	setflag ENGINE_PAGER_WHIRLPOOL
-;	writetext GotWhirlpoolPagerText
-;	promptbutton
-;	writetext RocketBaseLanceWhirlpoolPagerText
-;	promptbutton
-;	verbosegiveitem HM_WHIRLPOOL
-;	setevent EVENT_GOT_HM06_WHIRLPOOL
-;	writetext RocketBaseLanceTeachesWhirlpoolText
-;	waitbutton
-;	closetext
-;	turnobject TEAMROCKETBASEB2F_LANCE, DOWN
-;	opentext
-;	writetext RocketBaseLanceMonMasterText
-;	waitbutton
-;	closetext
-;	turnobject PLAYER, DOWN
-;	applymovement TEAMROCKETBASEB2F_LANCE, RocketBaseLanceLeavesBaseMovement
-;	disappear TEAMROCKETBASEB2F_LANCE
-;	setevent EVENT_CLEARED_ROCKET_HIDEOUT
-;	clearflag ENGINE_ROCKET_SIGNAL_ON_CH20
-;	setevent EVENT_ROUTE_43_GATE_ROCKETS
-;	setevent EVENT_MAHOGANY_TOWN_POKEFAN_M_BLOCKS_GYM
-;	setscene SCENE_TEAMROCKETBASEB2F_NOOP
-;	clearevent EVENT_LAKE_OF_RAGE_CIVILIANS
-;	setevent EVENT_TURNED_OFF_SECURITY_CAMERAS
-;	setevent EVENT_SECURITY_CAMERA_1
-;	setevent EVENT_SECURITY_CAMERA_2
-;	setevent EVENT_SECURITY_CAMERA_3
-;	setevent EVENT_SECURITY_CAMERA_4
-;	setevent EVENT_SECURITY_CAMERA_5
-;	end
-;
-;.JumpstdReceiveItem:
-;	jumpstd ReceiveItemScript
-;	end
-;
-;.pagercardname
-;	db "WRLPOOLPAGER@"
-;
-;GotWhirlpoolPagerText:
-;	text "AZUMARILL was" ;silvermirror -"REMORAID WHIRL was"
-;	line "added to the PPS!"
+	checkevent EVENT_PASSED_NINJA_CHALLENGE
+	iffalse TeamRocketBaseB2FNotWhoYouAreLookingFor
+	jumptextfaceplayer NinjaChuninAfterBattleText
+
+;NinjaChallengeSeenText:
+;	text "We have orders to"
+;	line "battle you if you"
+;	cont "talk to us!"
 ;	done
-;
-;TeamRocketBaseB2FLockedDoor:
-;	conditional_event EVENT_OPENED_DOOR_TO_ROCKET_HIDEOUT_TRANSMITTER, .Script
-;
-;.Script:
-;	opentext
-;	checkevent EVENT_LEARNED_HAIL_GIOVANNI
-;	iftrue .KnowsPassword
-;	writetext RocketBaseDoorNoPasswordText
-;	waitbutton
-;	closetext
-;	end
-;
-;.KnowsPassword:
-;	writetext RocketBaseDoorKnowPasswordText
-;	waitbutton
-;	playsound SFX_ENTER_DOOR
-;	changeblock 14, 12, $07 ; floor
-;	reloadmappart
-;	closetext
-;	setevent EVENT_OPENED_DOOR_TO_ROCKET_HIDEOUT_TRANSMITTER
-;	waitsfx
-;	end
-;
-;TeamRocketBaseB2FTransmitterScript:
-;	opentext
-;	checkevent EVENT_CLEARED_ROCKET_HIDEOUT
-;	iftrue .Deactivated
-;	writetext RocketBaseB2FTransmitterText
-;	waitbutton
-;	closetext
-;	end
-;
-;.Deactivated:
-;	writetext RocketBaseB2FDeactivateTransmitterText
-;	waitbutton
-;	closetext
-;	end
-;
-;TeamRocketBaseB2FTMThief:
-;	itemball TM_THIEF
-;
-;TeamRocketBaseB2FHiddenFullHeal:
-;	hiddenitem FULL_HEAL, EVENT_TEAM_ROCKET_BASE_B2F_HIDDEN_FULL_HEAL
-;
-;RocketBaseLanceLeavesAfterHealMovement:
-;	step RIGHT
-;	step RIGHT
-;	step RIGHT
-;	step RIGHT
-;	step RIGHT
-;	step RIGHT
-;	step_end
-;
-;RocketBaseLanceLeavesAfterHealRightMovement:
-;	step RIGHT
-;	step RIGHT
-;	step RIGHT
-;	step RIGHT
-;	step RIGHT
-;	step_end
-;
-;RocketBasePlayerApproachesBossFMovement:
-;	step DOWN
-;	step DOWN
-;	step DOWN
-;	turn_head RIGHT
-;	step_end
-;
-;RocketBaseBossFApproachesPlayerMovement:
-;	big_step LEFT
-;	big_step LEFT
-;	big_step UP
-;	big_step UP
-;	big_step UP
-;	big_step LEFT
-;	big_step LEFT
-;	big_step LEFT
-;	big_step LEFT
-;	turn_head DOWN
-;	step_end
-;
-;RocketBaseGruntApproachesPlayerMovement:
-;	big_step LEFT
-;	big_step LEFT
-;	big_step UP
-;	big_step UP
-;	big_step LEFT
-;	big_step LEFT
-;	step_end
-;
-;RocketBaseDragoniteAttacksMovement:
-;	big_step RIGHT
-;	big_step RIGHT
-;	big_step RIGHT
-;	big_step RIGHT
-;	step_end
-;
-;RocketBaseBossFHitMovement:
-;	fix_facing
-;	set_sliding
-;	jump_step RIGHT
-;	remove_sliding
-;	remove_fixed_facing
-;	step_end
-;
-;RocketBaseBossFFacesPlayerMovement:
-;	slow_step DOWN
-;	turn_head LEFT
-;	step_end
-;
-;RocketBaseLanceApproachesBossFMovement:
-;	step RIGHT
-;	step RIGHT
-;	step RIGHT
-;	step_end
-;
-;RocketBaseBossFBattlesPlayerMovement:
-;	big_step LEFT
-;	step_end
-;
-;RocketBaseGruntBattlesLanceMovement:
-;	big_step LEFT
-;	step_end
-;
-;RocketBaseGruntProtectsBossFMovement:
-;	big_step LEFT
-;	big_step UP
-;	turn_head LEFT
-;	step_end
-;
-;RocketBaseLanceChecksPlayerMovement:
-;	step RIGHT
-;	step RIGHT
-;	turn_head DOWN
-;	step_end
-;
-;RocketBaseLanceApproachesMachineMovement:
-;	step UP
-;	step UP
-;	step UP
-;	step_end
-;
-;RocketBaseLancePacesMovement:
-;	step_sleep 8
-;	step LEFT
-;	step LEFT
-;	turn_head UP
-;	step_sleep 8
-;	step RIGHT
-;	step RIGHT
-;	step RIGHT
-;	step RIGHT
-;	turn_head UP
-;	step_sleep 8
-;	step LEFT
-;	step LEFT
-;	turn_head DOWN
-;	step_end
-;
-;RocketBaseLanceApproachesElectrodesMovement:
-;	step RIGHT
-;	step RIGHT
-;	step RIGHT
-;	step RIGHT
-;	step UP
-;	step UP
-;	step UP
-;	step UP
-;	step UP
-;	step_end
-;
-;RocketBasePlayerCantLeaveElectrodesMovement:
-;	step UP
-;	step LEFT
-;	step LEFT
-;	step LEFT
-;	step LEFT
-;	turn_head UP
-;	step_end
-;
-;RocketBasePlayerCantGoRightMovement:
-;	step LEFT
-;	step_end
-;
-;RocketBaseLanceLeavesElectrodesMovement:
-;	step DOWN
-;	step DOWN
-;	step DOWN
-;	step DOWN
-;	step DOWN
-;	step LEFT
-;	step LEFT
-;	step LEFT
-;	step_end
-;
-;RocketBaseLanceLeavesBaseMovement:
-;	step DOWN
-;	step DOWN
-;	step LEFT
-;	step LEFT
-;	step LEFT
-;	step LEFT
-;	step LEFT
-;	step LEFT
-;	step_end
-;
-;RocketBasePlayerLeavesElectrodesMovement1:
-;	step RIGHT
-;	step RIGHT
-;	step DOWN
-;	step DOWN
-;	step DOWN
-;	step DOWN
-;	step DOWN
-;	step DOWN
-;	step RIGHT
-;	step RIGHT
-;	step RIGHT
-;	step RIGHT
-;	step_end
-;
-;RocketBasePlayerLeavesElectrodesMovement2:
-;	step RIGHT
-;	step RIGHT
-;	step DOWN
-;	step DOWN
-;	step DOWN
-;	step DOWN
-;	step RIGHT
-;	step RIGHT
-;	step RIGHT
-;	step RIGHT
-;	step_end
-;
-;RocketBasePlayerLeavesElectrodesMovement3:
-;	step RIGHT
-;	step RIGHT
-;	step DOWN
-;	step DOWN
-;	step RIGHT
-;	step RIGHT
-;	step RIGHT
-;	step RIGHT
-;	step_end
-;
-;RocketBaseExecutiveFHoldItText:
-;	text "Hold it right"
-;	line "there!"
-;	done
-;
-;RocketBaseBossFThrashText:
-;	text "We can't have a"
-;	line "brat like you on"
-;	cont "the loose."
-;
-;	para "It's harmful to"
-;	line "TEAM ROCKET's"
-;	cont "pride, you see."
-;
-;	para "However strong you"
-;	line "may be, you can't"
-;
-;	para "take both of us at"
-;	line "the same time."
-;
-;	para "Sorry, baby. Now"
-;	line "get ready to be"
-;	cont "thrashed."
-;	done
-;
-;RocketBaseLanceShareFunText:
-;	text "Hey! Don't be so"
-;	line "selfish. Spread"
-;	cont "the fun around."
-;	done
-;
-;RocketBaseBossDontMeddleText:
-;	text "What? You had an"
-;	line "accomplice?"
-;
-;	para "Where is your"
-;	line "sense of honor?"
-;
-;	para "As the interim"
-;	line "boss in place of"
-;
-;	para "GIOVANNI, I'll"
-;	line "show you how wrong"
-;
-;	para "it is to meddle"
-;	line "with TEAM ROCKET!"
-;	done
-;
-;RocketBaseBossWinText:
-;	text "Tch, you really"
-;	line "are strong."
-;
-;	para "It's too bad."
-;
-;	para "If you were to"
-;	line "join TEAM ROCKET,"
-;
-;	para "you could become"
-;	line "an EXECUTIVE."
-;	done
-;
-;RocketBaseBossRetreatText:
-;	text "…This hideout is"
-;	line "done for…"
-;
-;	para "But that's fine."
-;	line "The broadcast ex-"
-;	cont "periment was a"
-;	cont "total success."
-;
-;	para "It doesn't matter"
-;	line "what happens to"
-;	cont "this hideout now."
-;
-;	para "We have much big-"
-;	line "ger plans."
-;
-;	para "You'll come to"
-;	line "appreciate TEAM"
-;
-;	para "ROCKET's true"
-;	line "power soon enough."
-;
-;	para "Enjoy yourself"
-;	line "while you can…"
-;
-;	para "Fufufufu…"
-;	done
-;
-;RocketBaseLancePostBattleText:
-;	text "LANCE: That did"
-;	line "it. We defeated"
-;
-;	para "all the ROCKETs"
-;	line "here."
-;
-;	para "But I'm concerned"
-;	line "about the young"
-;
-;	para "guy I battled in"
-;	line "the process…"
-;	done
-;
-;RocketBaseLancePowerOffText:
-;	text "Sorry, <PLAY_G>."
-;	line "I saw how well you"
-;
-;	para "were doing, so I"
-;	line "just hung back."
-;
-;	para "Now all there is"
-;	line "left to do is to"
-;
-;	para "turn off that odd"
-;	line "radio signal."
-;	done
-;
-;RockerBaseLanceElectrodeFaintText:
-;	text "It's this machine"
-;	line "that's causing all"
-;	cont "the problems."
-;
-;	para "I don't see a"
-;	line "switch on it…"
-;
-;	para "We have no choice."
-;	line "We have to make"
-;
-;	para "all the ELECTRODE"
-;	line "faint."
-;
-;	para "That should stop"
-;	line "this machine from"
-;
-;	para "transmitting that"
-;	line "strange signal."
-;
-;	para "It's no fault of"
-;	line "the #MON, so it"
-;
-;	para "makes me feel"
-;	line "guilty."
-;
-;	para "<PLAY_G>, let's"
-;	line "split the job."
-;	done
-;
-;RocketBaseLancesSideText:
-;	text "LANCE: Leave this"
-;	line "side to me."
-;	done
-;
-;RocketBaseLanceElectrodeDoneText:
-;	text "LANCE: That odd"
-;	line "signal has finally"
-;	cont "stopped."
-;
-;	para "The LAKE should be"
-;	line "back to normal."
-;
-;	para "You're the hero!"
-;	line "Let me thank you"
-;
-;	para "on behalf of all"
-;	line "the #MON."
-;
-;	para "Oh, yes. You"
-;	line "should take these."
-;
-;	para "I found them here,"
-;	line "but I don't have"
-;	cont "any need for them."
-;	done
-;
-;RocketBaseLanceTeachesWhirlpoolText:
-;	text "That HM teaches"
-;	line "WHIRLPOOL."
-;
-;	para "It's a move that"
-;	line "traps the foe"
-;	para "in a raging"
-;	line "WHIRLPOOL."
-;	done
-;
-;RocketBaseLanceWhirlpoolPagerText:
-;	text "That's a"
-;	line "WRLPOOLPAGER."
-;
-;	para "It summons a"
-;	line "#MON to get"
-;	cont "across wild water."
-;
-;	para "But keep this in"
-;	line "mind."
-;
-;	para "You can only use"
-;	line "that with the"
-;
-;	para "BADGE from"
-;	line "MAHOGANY GYM."
-;	done
-;
-;RocketBaseLanceMonMasterText:
-;	text "<PLAY_G>…"
-;
-;	para "The journey to be-"
-;	line "coming the #MON"
-;
-;	para "MASTER is long and"
-;	line "difficult."
-;
-;	para "Knowing that, will"
-;	line "you keep going?"
-;
-;	para "…"
-;
-;	para "I see. No, you're"
-;	line "right."
-;
-;	para "If you would give"
-;	line "up that easily,"
-;
-;	para "you would have"
-;	line "never chased that"
-;
-;	para "dream in the first"
-;	line "place."
-;
-;	para "I look forward to"
-;	line "seeing you again!"
-;	done
-;
-;LanceHealsText1:
-;	text "LANCE: Are you all"
-;	line "right?"
-;
-;	para "Your #MON are"
-;	line "hurt and tired."
-;
-;	para "Here, give them"
-;	line "some of my medi-"
-;	cont "cine."
-;	done
-;
-;LanceHealsText2:
-;	text "LANCE: <PLAY_G>,"
-;	line "let's give it our"
-;	cont "best for #MON."
-;	done
-;
-;GruntM17SeenText:
-;	text "The door won't"
-;	line "open?"
-;
-;	para "Well, duh."
-;	line "It has to have a"
-;
-;	para "password that only"
-;	line "TEAM ROCKET knows."
-;	done
-;
-;GruntM17BeatenText:
-;	text "What? I lost?"
-;	done
-;
-;GruntM17AfterBattleText:
-;	text "Heh, I'm just a"
-;	line "GRUNT."
-;
-;	para "I don't know the"
-;	line "password. Too bad"
-;	cont "for you."
-;	done
-;
-;GruntM18SeenText:
-;	text "Oh, a kid? I don't"
-;	line "really like this,"
-;
-;	para "but eliminate you"
-;	line "I must."
-;	done
-;
-;GruntM18BeatenText:
-;	text "I knew I'd lose…"
-;	done
-;
-;GruntM18AfterBattleText:
-;	text "I got wiped out on"
-;	line "the last mission"
-;	cont "by a kid too."
-;
-;	para "When we were ab-"
-;	line "ducting #MON,"
-;
-;	para "this kid with long"
-;	line "red hair and mean-"
-;
-;	para "looking eyes just"
-;	line "creamed me…"
-;	done
-;
-;GruntM19SeenText:
-;	text "You rotten little"
-;	line "pest!"
-;	done
-;
-;GruntM19BeatenText:
-;	text "Grrrr…"
-;	done
-;
-;GruntM19AfterBattleText:
-;	text "Heh, only the boss"
-;	line "knows the password"
-;	cont "for that door."
-;
-;	para "Where's the boss?"
-;	line "Who knows? Go look"
-;	cont "for yourself."
-;	done
-;
-;RocketBaseDoorNoPasswordText:
-;	text "The door's closed…"
-;
-;	para "It needs a pass-"
-;	line "word to open."
-;	done
-;
-;RocketBaseDoorKnowPasswordText:
-;	text "The door's closed…"
-;
-;	para "<PLAYER> entered"
-;	line "the password."
-;
-;	para "The door opened!"
-;	done
-;
-;RocketBaseB2FTransmitterText:
-;	text "It's the radio"
-;	line "transmitter that's"
-;
-;	para "sending the"
-;	line "sinister signal."
-;
-;	para "It's working at"
-;	line "full capacity."
-;	done
-;
-;RocketBaseB2FDeactivateTransmitterText:
-;	text "The radio trans-"
-;	line "mitter has finally"
-;
-;	para "stopped its evil"
-;	line "broadcast."
-;	done
+
+NinjaChuninBeatenText:
+	text "I followed my"
+	line "orders."
+	done
+
+NinjaChuninAfterBattleText:
+	text "I must train hard"
+	line "and challenge you"
+	cont "again to regain my"
+	roll "honor!"
+	done
+
+TeamRocketBaseB2FNotWhoYouAreLookingFor:
+	jumptextfaceplayer TeamRocketBaseB2FNotWhoYouAreLookingForText
+TeamRocketBaseB2FNotWhoYouAreLookingForText:
+	text "I'm not who you"
+	line "are looking for."
+	done
+
+NinjaChallengeSeenText:
+	text "We have orders to"
+	line "battle you if you"
+	cont "talk to us!"
+	done
+
+; flavor ninjas
+TeamRocketBaseB2FBushNinjaScript:
+	faceplayer
+	opentext
+	writetext TeamRocketBaseB2FConcealmentText
+	waitbutton
+	closetext
+	applymovement TEAMROCKETBASEB2F_BUSH_NINJA, TeamRocketBaseB2FEnterBushMovement
+	disappear TEAMROCKETBASEB2F_BUSH_NINJA
+;	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	end
+
+TeamRocketBaseB2FConcealmentText:
+	text "Concealment is an"
+	line "important skill."
+
+	para "I'm practicing."
+	done
+
+TeamRocketBaseB2FEnterBushMovement:
+	big_step UP
+	rock_smash 6
+	step_end
+
+TeamRocketBaseB2FHiddenNinja1:
+	conditional_event EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1, TeamRocketBaseB1FHiddenNinja
+
+TeamRocketBaseB2FSpeedNinja1Script:
+	faceplayer
+	opentext
+	writetext TeamRocketBaseB2FSpeedText
+	waitbutton
+	closetext
+	playsound SFX_CUT
+	applymovement TEAMROCKETBASEB2F_SPEED_NINJA1, MahoganyMart1FRockSmashMovement2
+	disappear TEAMROCKETBASEB2F_SPEED_NINJA1
+	appear TEAMROCKETBASEB2F_SPEED_NINJA2
+	sjump FinishSpeedNinja
+
+TeamRocketBaseB2FSpeedNinja2Script:
+	faceplayer
+	opentext
+	writetext TeamRocketBaseB2FSpeedText
+	waitbutton
+	closetext
+	playsound SFX_CUT
+	applymovement TEAMROCKETBASEB2F_SPEED_NINJA2, MahoganyMart1FRockSmashMovement2
+	disappear TEAMROCKETBASEB2F_SPEED_NINJA2
+	appear TEAMROCKETBASEB2F_SPEED_NINJA1
+;	sjump FinishSpeedNinja
+	; fallthrough
+FinishSpeedNinja:
+	appear TEAMROCKETBASEB2F_SPEED_M
+	applymovement TEAMROCKETBASEB2F_SPEED_M, MahoganyMart1FRockSmashMovement2
+	disappear TEAMROCKETBASEB2F_SPEED_M
+	end
+
+TeamRocketBaseB2FSpeedText:
+	text "Speed is an"
+	line "important skill."
+
+	para "I'm practicing."
+	done
+
+TeamRocketBaseB2FKnowledgeNinjaScript:
+	jumptextfaceplayer TeamRocketBaseB2FKnowledgeText
+TeamRocketBaseB2FKnowledgeText:
+	text "Knowledge is an"
+	line "important skill."
+
+	para "I'm reading."
+	done
+
+TeamRocketBaseB2FAccountantScript:
+	jumptextfaceplayer TeamRocketBaseB2FAccountantText
+TeamRocketBaseB2FAccountantText:
+	text "Who am I?"
+
+	para "I'm just the"
+	line "CLAN's accountant."
+	done
+
+TeamRocketBaseB2FBookshelf:
+	jumptext TeamRocketBaseB2FBookshelfText
+TeamRocketBaseB2FBookshelfText:
+	text "It's full of very"
+	line "old books."
+	done
+
+TeamRocketBaseB2FComputer:
+	jumptext TeamRocketBaseB2FTaxesText
+TeamRocketBaseB2FTaxesText:
+	text "It's the NINJA"
+	line "CLAN's taxes."
+	done
+
+TeamRocketBaseB2FHiddenFullHeal:
+	hiddenitem FULL_HEAL, EVENT_TEAM_ROCKET_BASE_B2F_HIDDEN_FULL_HEAL
+
+TeamRocketBaseB2FTMThief:
+	itemball TM_THIEF
 
 TeamRocketBaseB2F_MapEvents:
 	db 0, 0 ; filler
@@ -954,53 +566,45 @@ TeamRocketBaseB2F_MapEvents:
 	warp_event 27, 14, TEAM_ROCKET_BASE_B3F, 4
 
 	def_coord_events
-;	coord_event  5, 14, SCENE_DEFAULT, LanceHealsScript1
-;	coord_event  4, 13, SCENE_DEFAULT, LanceHealsScript2
-;	coord_event 14, 11, SCENE_TEAMROCKETBASEB2F_ROCKET_BOSS, RocketBaseBossFLeft
-;	coord_event 15, 11, SCENE_TEAMROCKETBASEB2F_ROCKET_BOSS, RocketBaseBossFRight
-;	coord_event 14, 12, SCENE_TEAMROCKETBASEB2F_ELECTRODES, RocketBaseCantLeaveScript
-;	coord_event 15, 12, SCENE_TEAMROCKETBASEB2F_ELECTRODES, RocketBaseCantLeaveScript
-;	coord_event 12,  3, SCENE_TEAMROCKETBASEB2F_ELECTRODES, RocketBaseLancesSideScript
-;	coord_event 12, 10, SCENE_TEAMROCKETBASEB2F_ELECTRODES, RocketBaseLancesSideScript
-;	coord_event 12, 11, SCENE_TEAMROCKETBASEB2F_ELECTRODES, RocketBaseLancesSideScript
+;	coord_event 14, 13, SCENE_TEAMROCKETBASEB2F_MEET_JANINE, RocketBaseB2FMeetJanineScript1
+;	coord_event 14, 14, SCENE_TEAMROCKETBASEB2F_MEET_JANINE, RocketBaseB2FMeetJanineScript2
 
 	def_bg_events
-;	bg_event 14, 12, BGEVENT_IFNOTSET, TeamRocketBaseB2FLockedDoor
-;	bg_event 15, 12, BGEVENT_IFNOTSET, TeamRocketBaseB2FLockedDoor
-;	bg_event 17,  9, BGEVENT_READ, TeamRocketBaseB2FTransmitterScript
-;	bg_event 16,  9, BGEVENT_READ, TeamRocketBaseB2FTransmitterScript
-;	bg_event 15,  9, BGEVENT_READ, TeamRocketBaseB2FTransmitterScript
-;	bg_event 14,  9, BGEVENT_READ, TeamRocketBaseB2FTransmitterScript
-;	bg_event 13,  9, BGEVENT_READ, TeamRocketBaseB2FTransmitterScript
-;	bg_event 12,  9, BGEVENT_READ, TeamRocketBaseB2FTransmitterScript
-;	bg_event 12,  8, BGEVENT_READ, TeamRocketBaseB2FTransmitterScript
-;	bg_event 12,  7, BGEVENT_READ, TeamRocketBaseB2FTransmitterScript
-;	bg_event 12,  6, BGEVENT_READ, TeamRocketBaseB2FTransmitterScript
-;	bg_event 12,  5, BGEVENT_READ, TeamRocketBaseB2FTransmitterScript
-;	bg_event 12,  4, BGEVENT_READ, TeamRocketBaseB2FTransmitterScript
-;	bg_event 13,  4, BGEVENT_READ, TeamRocketBaseB2FTransmitterScript
-;	bg_event 14,  4, BGEVENT_READ, TeamRocketBaseB2FTransmitterScript
-;	bg_event 15,  4, BGEVENT_READ, TeamRocketBaseB2FTransmitterScript
-;	bg_event 16,  4, BGEVENT_READ, TeamRocketBaseB2FTransmitterScript
-;	bg_event 17,  4, BGEVENT_READ, TeamRocketBaseB2FTransmitterScript
-;	bg_event 17,  5, BGEVENT_READ, TeamRocketBaseB2FTransmitterScript
-;	bg_event 17,  6, BGEVENT_READ, TeamRocketBaseB2FTransmitterScript
-;	bg_event 17,  7, BGEVENT_READ, TeamRocketBaseB2FTransmitterScript
-;	bg_event 17,  8, BGEVENT_READ, TeamRocketBaseB2FTransmitterScript
-;	bg_event 26,  7, BGEVENT_ITEM, TeamRocketBaseB2FHiddenFullHeal
+	bg_event 21,  9, BGEVENT_IFSET, TeamRocketBaseB2FHiddenNinja1
+	bg_event  8,  3, BGEVENT_READ, TeamRocketBaseB2FBookshelf
+	bg_event  9,  3, BGEVENT_READ, TeamRocketBaseB2FBookshelf
+	bg_event 10,  3, BGEVENT_READ, TeamRocketBaseB2FBookshelf
+	bg_event 11,  3, BGEVENT_READ, TeamRocketBaseB2FBookshelf
+	bg_event 18,  3, BGEVENT_READ, TeamRocketBaseB2FBookshelf
+	bg_event 19,  3, BGEVENT_READ, TeamRocketBaseB2FBookshelf
+;	bg_event 20,  3, BGEVENT_READ, TeamRocketBaseB2FBookshelf
+	bg_event 21,  3, BGEVENT_READ, TeamRocketBaseB2FBookshelf
+	bg_event 26,  7, BGEVENT_READ, TeamRocketBaseB2FBookshelf
+	bg_event 27,  7, BGEVENT_READ, TeamRocketBaseB2FBookshelf
+	bg_event 25,  8, BGEVENT_UP, TeamRocketBaseB2FComputer
+	bg_event 24,  5, BGEVENT_ITEM, TeamRocketBaseB2FHiddenFullHeal
 
 	def_object_events
-;	object_event 20, 16, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_TEAM_ROCKET_BASE_B2F_GRUNT_WITH_EXECUTIVE
-;	object_event 20, 16, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_TEAM_ROCKET_BASE_B2F_EXECUTIVE
-;	object_event  5, 13, SPRITE_LANCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_TEAM_ROCKET_BASE_B2F_LANCE
-;	object_event  9, 13, SPRITE_DRAGONITE_MOVE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_TEAM_ROCKET_BASE_B2F_DRAGONITE
-;	object_event  7,  5, SPRITE_ELECTRODE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RocketElectrode1, EVENT_TEAM_ROCKET_BASE_B2F_ELECTRODE_1
-;	object_event  7,  7, SPRITE_ELECTRODE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RocketElectrode2, EVENT_TEAM_ROCKET_BASE_B2F_ELECTRODE_2
-;	object_event  7,  9, SPRITE_ELECTRODE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RocketElectrode3, EVENT_TEAM_ROCKET_BASE_B2F_ELECTRODE_3
-;	object_event 22,  5, SPRITE_ELECTRODE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_TEAM_ROCKET_BASE_B2F_ELECTRODE_1
-;	object_event 22,  7, SPRITE_ELECTRODE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_TEAM_ROCKET_BASE_B2F_ELECTRODE_2
-;	object_event 22,  9, SPRITE_ELECTRODE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_TEAM_ROCKET_BASE_B2F_ELECTRODE_3
-;	object_event 25, 13, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerGruntM17, EVENT_TEAM_ROCKET_BASE_POPULATION
-;	object_event  4,  1, SPRITE_ROCKET, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerGruntM18, EVENT_TEAM_ROCKET_BASE_POPULATION
-;	object_event 21, 14, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 4, TrainerGruntM19, EVENT_TEAM_ROCKET_BASE_POPULATION
-;	object_event  3, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TeamRocketBaseB2FTMThief, EVENT_TEAM_ROCKET_BASE_B2F_TM_THIEF
+	object_event 15,  6, SPRITE_JANINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_TEAM_ROCKET_BASE_B2F_JANINE
+	object_event 15, 12, SPRITE_KOGA, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_TEAM_ROCKET_BASE_B2F_KOGA
+	object_event 15,  7, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_NINJA_SECURITY_NINJAS
+	object_event 14,  8, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_NINJA_SECURITY_NINJAS
+	object_event 14, 11, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 3, TrainerNinjaJonin, EVENT_TEAM_ROCKET_BASE_B2F_JANINE
+	object_event 14,  6, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, TeamRocketBaseB2FNinjaJoninScript, EVENT_TEAM_ROCKET_BASE_B2F_JONIN
+; concealment
+	object_event 21, 10, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_SCRIPT, 0, TeamRocketBaseB2FBushNinjaScript, EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+; speed
+	object_event  7,  9, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_SCRIPT, 0, TeamRocketBaseB2FSpeedNinja1Script, EVENT_TEAM_ROCKET_BASE_B2F_SPEED_NINJA1
+	object_event 11,  9, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_SCRIPT, 0, TeamRocketBaseB2FSpeedNinja2Script, EVENT_TEAM_ROCKET_BASE_B2F_SPEED_NINJA2
+	object_event  9,  9, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_NINJA_SECURITY_NINJAS
+; knowledge
+	object_event 20,  4, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_SCRIPT, 0, TeamRocketBaseB2FKnowledgeNinjaScript, -1
+; accounting
+	object_event 24,  9, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_SCRIPT, 0, TeamRocketBaseB2FAccountantScript, -1
+; trainers
+	object_event 25, 13, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_TRAINER, 0, TrainerNinjaGenin, -1
+	object_event  4,  1, SPRITE_NINJA, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_TRAINER, 0, TrainerNinjaChunin, -1
+; TM_THIEF
+	object_event  3, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, TeamRocketBaseB2FTMThief, EVENT_TEAM_ROCKET_BASE_B2F_TM_THIEF
+
+;.GrayOverTreeOBPalette
