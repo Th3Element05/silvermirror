@@ -77,10 +77,10 @@ MapScenes::
 	scene_var NEW_BARK_TOWN,                               wNewBarkTownSceneID
 	scene_var ELMS_LAB,                                    wElmsLabSceneID
 	scene_var RADIO_TOWER_4F,                              wRadioTower4FSceneID
-;	scene_var MAHOGANY_MART_1F,                            wMahoganyMart1FSceneID
-;	scene_var TEAM_ROCKET_BASE_B1F,                        wTeamRocketBaseB1FSceneID
+	scene_var MAHOGANY_MART_1F,                            wMahoganyMart1FSceneID
+	scene_var TEAM_ROCKET_BASE_B1F,                        wTeamRocketBaseB1FSceneID
 ;	scene_var TEAM_ROCKET_BASE_B2F,                        wTeamRocketBaseB2FSceneID
-;	scene_var TEAM_ROCKET_BASE_B3F,                        wTeamRocketBaseB3FSceneID
+	scene_var TEAM_ROCKET_BASE_B3F,                        wTeamRocketBaseB3FSceneID
 	scene_var DRAGONS_DEN_B1F,                             wDragonsDenB1FSceneID
 	scene_var DRAGON_SHRINE,                               wDragonShrineSceneID
 	scene_var BATTLE_TOWER_1F,                             wBattleTower1FSceneID
