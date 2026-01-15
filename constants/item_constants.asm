@@ -63,7 +63,7 @@
 	const EXP_SHARE    ; 37
 	const OLD_ROD      ; 38
 	const GOOD_ROD     ; 39
-	const SILVER_LEAF  ; 3a ; only sell item (rocksmash). can repurpose if necessary.
+	const SILVER_LEAF  ; 3a ; move relearner
 	const SUPER_ROD    ; 3b
 	const PP_UP        ; 3c
 	const ETHER        ; 3d
@@ -78,7 +78,7 @@
 	const MOOMOO_MILK  ; 46
 	const QUICK_CLAW   ; 47
 	const PECHA_BERRY  ; 48
-	const GOLD_LEAF    ; 49 ; only sell item (rocksmash). can repurpose if necessary.
+	const GOLD_LEAF    ; 49 ; move relearner
 	const SOFT_SAND    ; 4a
 	const SHARP_BEAK   ; 4b
 	const CHERI_BERRY  ; 4c
@@ -130,10 +130,10 @@
 	const REVIVAL_HERB ; 7a
 	const HARD_STONE   ; 7b
 	const LUCKY_EGG    ; 7c
-	const CARD_KEY     ; 7d ; use in silph co + radio tower
+	const CARD_KEY     ; 7d ; (silph co)
 	const BIKE_VOUCHER ; 7e ; MACHINE_PART
 	const EGG_TICKET   ; 7f ; unused
-	const CARD_KEY_R   ; 80 ; LOST_ITEM
+	const CARD_KEY_R   ; 80 ; (radio tower) ; LOST_ITEM
 	const STARDUST     ; 81
 	const STAR_PIECE   ; 82
 	const LIFT_KEY     ; 83 ; BASEMENT_KEY
@@ -170,7 +170,7 @@
 	const HEART_SCALE  ; a2 ; BRICK_PIECE
 	const FLOWER_MAIL  ; a3
 	const SUPER_ROD_2  ; a4 ; ITEM_BE
-	const ITEM_A5      ; a5
+	const CARD_KEY_N   ; a5
 	const ITEM_A6      ; a6
 	const ITEM_A7      ; a7
 	const ITEM_A8      ; a8

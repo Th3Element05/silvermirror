@@ -124,10 +124,10 @@ ItemNames::
 	li "REVIVAL HERB"
 	li "HARD STONE"
 	li "LUCKY EGG"
-	li "CARD KEY"
+	li "CARD KEY"     ; CARD_KEY
 	li "BIKE VOUCHER" ; "MACHINE PART"
 	li "EGG TICKET"
-	li "CARD KEY"     ; "LOST ITEM"
+	li "CARD KEY"     ; CARD_KEY_R ; "LOST ITEM"
 	li "STARDUST"
 	li "STAR PIECE"
 	li "LIFT KEY"     ; "BASEMENT KEY"
@@ -164,7 +164,7 @@ ItemNames::
 	li "HEART SCALE"  ; "BRICK PIECE"
 	li "FLOWER MAIL"
 	li "SUPER ROD"    ; SUPER_ROD_2
-	li "ITEM-A5"      ; ITEM_A5
+	li "CARD KEY"     ; CARD_KEY_N
 	li "ITEM-A6"      ; ITEM_A6
 	li "ITEM-A7"      ; ITEM_A7
 	li "ITEM-A8"      ; ITEM_A8
