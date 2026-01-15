@@ -13,8 +13,6 @@ E4LancesRoom_MapScripts:
 
 LancesRoomLockDoorScene:
 	sdefer LancesRoomDoorLocksBehindYouScript
-	end
-
 LancesRoomNoopScene:
 	end
 

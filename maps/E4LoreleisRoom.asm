@@ -11,8 +11,6 @@ E4LoreleisRoom_MapScripts:
 
 LoreleisRoomLockDoorScene:
 	sdefer LoreleisRoomDoorLocksBehindYouScript
-	end
-
 LoreleisRoomNoopScene:
 	end
 

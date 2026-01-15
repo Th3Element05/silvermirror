@@ -11,8 +11,6 @@ E4AgathasRoom_MapScripts:
 
 AgathasRoomLockDoorScene:
 	sdefer AgathasRoomDoorLocksBehindYouScript
-	end
-
 AgathasRoomNoopScene:
 	end
 
