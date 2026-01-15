@@ -104,6 +104,8 @@ MACRO _use_palette_routine_for_map
 ENDM
 
 MapSpecificPalettes:
+;	_use_palette_routine_for_map PEWTER_MUSEUM_1F, .MuseumBGPalettes
+;	_use_palette_routine_for_map PEWTER_MUSEUM_2F, .MuseumBGPalettes
 ;	_use_palette_routine_for_map POKEMON_MANSION_B1F, .LavaOverRedCoalOverBrownBGPalette
 ;	_use_palette_routine_for_map SAFARI_ZONE_AREA_2, .SandOverBrownBGPalette
 ;	_use_palette_routine_for_map SAFARI_ZONE_AREA_3, .SwampBGPalettes
@@ -117,8 +119,6 @@ MapSpecificPalettes:
 	_use_palette_routine_for_map POWER_PLANT, .PowerPlantIndoorPalettes
 ;	_use_palette_routine_for_map VIRIDIAN_GYM, .ViridianGymBGPalettes
 	_use_palette_routine_for_map MAHOGANY_GYM, .AgathasRoomBGPalettes
-;	_use_palette_routine_for_map PEWTER_MUSEUM_1F, .MuseumBGPalettes
-;	_use_palette_routine_for_map PEWTER_MUSEUM_2F, .MuseumBGPalettes
 	db -1 ; terminator
 
 ;.LavaOverRedCoalOverBrownBGPalette:
@@ -198,6 +198,7 @@ MapSpecificOBPalettes:
 	_use_palette_routine_for_map SS_ANNE_ROOMS_B1F, .GrayOverYellowOBPalette        ;machoke
 	_use_palette_routine_for_map CELADON_MANSION_1F, .PinkOverYellowOBPalette       ;clefairy
 	_use_palette_routine_for_map FUCHSIA_CITY, .PinkOverPurpleOBPalette             ;chansey (aspear)
+	_use_palette_routine_for_map FUCHSIA_GYM, .GrayOverTreeOBPalette                ;ninja
 	_use_palette_routine_for_map SAFARI_ZONE_AREA_3, .RockOverTreeOBPalette         ;dry grass
 	_use_palette_routine_for_map ROUTE_20, .GrayOverYellowOBPalette                 ;geodude
 	_use_palette_routine_for_map FIGHTING_DOJO, .GrayOverTreeOBPalette              ;blackbelt
@@ -214,6 +215,10 @@ MapSpecificOBPalettes:
 	_use_palette_routine_for_map UNION_CAVE_1F, .GrayOverYellowOBPalette            ;geodude
 	_use_palette_routine_for_map ROUTE_30, .PinkOverYellowOBPalette                 ;pecha, pnk
 	_use_palette_routine_for_map MAHOGANY_GYM, .PinkOverYellowOBPalette             ;skier
+	_use_palette_routine_for_map MAHOGANY_MART_1F, .GrayOverTreeOBPalette           ;ninja
+	_use_palette_routine_for_map TEAM_ROCKET_BASE_B1F, .GrayOverTreeOBPalette       ;ninja
+	_use_palette_routine_for_map TEAM_ROCKET_BASE_B2F, .GrayOverTreeOBPalette       ;ninja
+	_use_palette_routine_for_map TEAM_ROCKET_BASE_B3F, .GrayOverTreeOBPalette       ;ninja
 	_use_palette_routine_for_map ROUTE_43, .PinkOverYellowOBPalette                 ;persim
 	db -1 ; terminator
 
