@@ -35,7 +35,9 @@ UnionCave1FGeodude:
 	promptbutton
 	cry GEODUDE
 	waitsfx
-	playsound SFX_FAINT ;SFX_BALL_POOF
+;	playsound SFX_FAINT
+;	waitsfx
+	playsound SFX_BALL_POOF
 	applymovement UNIONCAVE1F_GEODUDE, UnionCave1FRockSmashMovement
 	disappear UNIONCAVE1F_GEODUDE
 	pause 5
