@@ -165,7 +165,7 @@ ItemDescriptions:
 	dw HeartScaleDesc ; BrickPieceDesc
 	dw FlowerMailDesc
 	dw SuperRod2Desc
-	dw TeruSama0Desc ; ITEM_A5
+	dw CardKeyNDesc
 	dw TeruSama0Desc ; ITEM_A6
 	dw TeruSama0Desc ; ITEM_A7
 	dw TeruSama0Desc ; ITEM_A8
@@ -957,6 +957,10 @@ SuperRod2Desc:
 	next "a special lure.@"
 ;	db   "There is a special"
 ;	next "lure on this ROD.@"
+
+CardKeyNDesc:
+	db   "Opens doors in the"
+	next "NINJA's DEN.@"
 
 ;SurfMailDesc:
 ;	db   "LAPRAS-print MAIL."
