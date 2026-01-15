@@ -79,8 +79,8 @@
 	const SPRITE_BUG_CATCHER            ; 4b
 	const SPRITE_SLEEPING               ; 4c (DOWN=GRAMPS, UP=ROCKET, LEFT/RIGHT=SAILOR)
 	const SPRITE_REDS_MOM               ; 4d
-;; 4e
-;; 4f
+	const SPRITE_NINJA                  ; 4e
+	const SPRITE_JANINE                 ; 4f
 ; objects
 	const SPRITE_POKE_BALL              ; 50
 	const SPRITE_POKEDEX                ; 51
@@ -390,6 +390,7 @@ DEF SPRITE_POKEMON EQU const_value
 	const SPRITE_LUGIA      ; f9
 	const SPRITE_HO_OH      ; fa
 	const SPRITE_CELEBI     ; fb
+;                           ; used = b4
 DEF NUM_POKEMON_SPRITES EQU const_value - SPRITE_POKEMON
 
 ; special GetMonSprite values (see engine/overworld/overworld.asm)
@@ -408,3 +409,5 @@ DEF SPRITE_VARS EQU const_value
 	const SPRITE_BILL_TRANSFORM      ; f5
 	const SPRITE_VOLTORB_TRAP        ; f6
 	const SPRITE_VARIABLE            ; f7
+;	const SPRITE_JANINE_TRANSFORM    ; f8
+;	const SPRITE_KOGA_TRANSFORM      ; f9

@@ -393,7 +393,8 @@ PoliwrathBackpic:    INCBIN "gfx/pokemon/poliwrath/back.2bpp.lz"
 SwimmermPic:         INCBIN "gfx/trainers/swimmer_m.2bpp.lz"
 SunkernFrontpic:     INCBIN "gfx/pokemon/sunkern/front.animated.2bpp.lz"
 NidorinoBackpic:     INCBIN "gfx/pokemon/nidorino/back.2bpp.lz"
-MysticalmanPic:      INCBIN "gfx/trainers/mysticalman.2bpp.lz"
+;MysticalmanPic:      INCBIN "gfx/trainers/mysticalman.2bpp.lz"
+NinjaPic:            INCBIN "gfx/trainers/ninja.2bpp.lz"
 CooltrainerfPic:     INCBIN "gfx/trainers/cooltrainer_f.2bpp.lz"
 ElectrodeFrontpic:   INCBIN "gfx/pokemon/electrode/front.animated.2bpp.lz"
 
@@ -496,7 +497,6 @@ LoreleiPic:          INCBIN "gfx/trainers/lorelei.2bpp.lz"
 SchoolboyPic:        INCBIN "gfx/trainers/schoolboy.2bpp.lz"
 MagnemiteFrontpic:   INCBIN "gfx/pokemon/magnemite/front.animated.2bpp.lz"
 ErikaPic:            INCBIN "gfx/trainers/erika.2bpp.lz"
-;JaninePic:           INCBIN "gfx/trainers/janine.2bpp.lz"
 LancePic:            INCBIN "gfx/trainers/lance.2bpp.lz"
 MagnemiteBackpic:    INCBIN "gfx/pokemon/magnemite/back.2bpp.lz"
 
@@ -712,6 +712,7 @@ DodrioFrontpic:      INCBIN "gfx/pokemon/dodrio/front.animated.2bpp.lz"
 HeracrossFrontpic:   INCBIN "gfx/pokemon/heracross/front.animated.2bpp.lz"
 WigglytuffFrontpic:  INCBIN "gfx/pokemon/wigglytuff/front.animated.2bpp.lz"
 UnownWBackpic:       INCBIN "gfx/pokemon/unown_w/back.2bpp.lz"
+JaninePic:           INCBIN "gfx/trainers/janine.2bpp.lz"
 
 
 ; Sections "Pics 20" to "Pics 24" are not used for any graphics,
