@@ -19,7 +19,7 @@ TeamRocketBaseB3FNoop2Scene:
 	end
 
 TeamRocketBaseB3FCheckDoorsCallback:
-;	checkevent EVENT_PASSED_NINJA_CHALLENGE
+;	checkevent EVENT_NINJA_CHALLENGE_IN_PROGRESS
 ;	iftrue .DontShutDoor
 ;	changeblock  8, 0, $29 ; wall
 ;	changeblock 10, 0, $5f ; bookshelf
@@ -51,14 +51,18 @@ TeamRocketBaseB3FKogaNinja:
 	winlosstext KogaBeatenNinjaText, 0
 	loadtrainer KOGA, KOGA2
 	startbattle
-	moveobject PLAYER, 6, 14
-	turnobject PLAYER, LEFT
-	turnobject TEAMROCKETBASEB3F_KOGA, RIGHT
+;	moveobject PLAYER, 6, 14
+;	turnobject PLAYER, LEFT
+;	turnobject TEAMROCKETBASEB3F_KOGA, RIGHT
 	reloadmapafterbattle
 	opentext
 	writetext TeamRocketBaseB3FKogaAfterBattleText
 	waitbutton
 	closetext
+	readvar VAR_FACING
+	ifnotequal UP, .skip
+	applymovement PLAYER, TeamRocketBaseB3FJanineStepRightMovement
+.skip
 	applymovement TEAMROCKETBASEB3F_KOGA, TeamRocketBaseB3FOneStepDownMovement
 	moveobject TEAMROCKETBASEB3F_KOGA, 5, 15
 	end
@@ -222,7 +226,10 @@ TeamRocketBaseB3FJanineNinja:
 	applymovement TEAMROCKETBASEB3F_KOGA, TeamRocketBaseB3FKogaLeavesMovement
 	disappear TEAMROCKETBASEB3F_KOGA
 	moveobject TEAMROCKETBASEB3F_JANINE, 10, 3
-	setevent EVENT_PASSED_NINJA_CHALLENGE
+	clearevent EVENT_NINJA_CHALLENGE_IN_PROGRESS
+;	setmapscene WISE_TRIOS_ROOM, SCENE_WISETRIOROOM_NOOP
+;	setevent EVENT_WISE_TRIOS_ROOM_WISE_TRIO_1
+;	clearevent EVENT_WISE_TRIOS_ROOM_WISE_TRIO_2
 	special RestartMapMusic
 	end
 
@@ -424,8 +431,8 @@ TrainerNinjaTeisatsu:
 	trainer NINJA, TEISATSU, EVENT_BEAT_NINJA_TEISATSU, NinjaTeisatsuSeenText, NinjaTeisatsuBeatenText, 0, .Script
 .Script:
 ;	endifjustbattled
-	checkevent EVENT_PASSED_NINJA_CHALLENGE
-	iffalse .PerfectDisguise
+	checkevent EVENT_NINJA_CHALLENGE_IN_PROGRESS
+	iftrue .PerfectDisguise
 	jumptextfaceplayer NinjaTeisatsuAfterBattleText
 
 .PerfectDisguise
@@ -462,8 +469,8 @@ TrainerNinjaKancho:
 	trainer NINJA, KANCHO, EVENT_BEAT_NINJA_KANCHO, NinjaKanchoSeenText, NinjaKanchoBeatenText, 0, .Script
 .Script:
 	endifjustbattled
-	checkevent EVENT_PASSED_NINJA_CHALLENGE
-	iffalse .DuringChallenge
+	checkevent EVENT_NINJA_CHALLENGE_IN_PROGRESS
+	iftrue .DuringChallenge
 	jumptextfaceplayer NinjaKanchoAfterBattleText
 
 .DuringChallenge
@@ -495,8 +502,8 @@ TrainerNinjaKishu:
 	trainer NINJA, KISHU, EVENT_BEAT_NINJA_KISHU, NinjaKishuSeenText, NinjaKishuBeatenText, 0, .Script
 .Script:
 	endifjustbattled
-	checkevent EVENT_PASSED_NINJA_CHALLENGE
-	iffalse .DuringChallenge
+	checkevent EVENT_NINJA_CHALLENGE_IN_PROGRESS
+	iftrue .DuringChallenge
 	jumptextfaceplayer NinjaKishuAfterBattleText
 
 .DuringChallenge
