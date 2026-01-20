@@ -13,7 +13,7 @@ SeafoamIslandsArticuno:
 	cry ARTICUNO
 	pause 20
 	closetext
-;	loadvar VAR_BATTLETYPE, BATTLETYPE_KANTO_LEGEND
+	loadvar VAR_BATTLETYPE, BATTLETYPE_KANTO_LEGEND
 	loadwildmon ARTICUNO, 50
 	startbattle
 	disappear SEAFOAMB4F_ARTICUNO
