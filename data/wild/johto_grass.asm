@@ -16,27 +16,27 @@ JohtoGrassWildMons:
 ;	db 20, DITTO      ;  4% chance
 ;	db 20, DITTO      ;  1% chance
 	; day
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
+	db 3, RATTATA      ; 20% chance
+	db 3, RATTATA      ; 20% chance
+	db 3, RATTATA      ; 15% chance
+	db 3, RATTATA      ; 10% chance
+	db 3, RATTATA      ; 10% chance
+	db 3, RATTATA      ; 10% chance
+	db 3, RATTATA      ;  5% chance
+	db 3, RATTATA      ;  5% chance
+	db 3, RATTATA      ;  4% chance
+	db 3, RATTATA      ;  1% chance
 	; nite
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
+	db 3, GASTLY      ; 20% chance
+	db 3, GASTLY      ; 20% chance
+	db 3, GASTLY      ; 15% chance
+	db 3, GASTLY      ; 10% chance
+	db 3, GASTLY      ; 10% chance
+	db 3, GASTLY      ; 10% chance
+	db 3, RATTATA     ;  5% chance
+	db 3, RATTATA     ;  5% chance
+	db 3, RATTATA     ;  4% chance
+	db 3, RATTATA     ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons SPROUT_TOWER_3F
@@ -53,27 +53,27 @@ JohtoGrassWildMons:
 ;	db 20, DITTO      ;  4% chance
 ;	db 20, DITTO      ;  1% chance
 	; day
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
+	db 3, RATTATA      ; 20% chance
+	db 3, RATTATA      ; 20% chance
+	db 3, RATTATA      ; 15% chance
+	db 3, RATTATA      ; 10% chance
+	db 3, RATTATA      ; 10% chance
+	db 3, RATTATA      ; 10% chance
+	db 3, RATTATA      ;  5% chance
+	db 3, RATTATA      ;  5% chance
+	db 3, RATTATA      ;  4% chance
+	db 3, RATTATA      ;  1% chance
 	; nite
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
+	db 3, GASTLY      ; 20% chance
+	db 3, GASTLY      ; 20% chance
+	db 3, GASTLY      ; 15% chance
+	db 3, GASTLY      ; 10% chance
+	db 3, GASTLY      ; 10% chance
+	db 3, GASTLY      ; 10% chance
+	db 3, RATTATA     ;  5% chance
+	db 3, RATTATA     ;  5% chance
+	db 3, RATTATA     ;  4% chance
+	db 3, RATTATA     ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons TIN_TOWER_2F
@@ -90,27 +90,27 @@ JohtoGrassWildMons:
 ;	db 20, DITTO      ;  4% chance
 ;	db 20, DITTO      ;  1% chance
 	; day
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
+	db 20, RATTATA      ; 20% chance
+	db 20, RATTATA      ; 20% chance
+	db 20, RATTATA      ; 15% chance
+	db 20, RATTATA      ; 10% chance
+	db 20, RATTATA      ; 10% chance
+	db 20, RATTATA      ; 10% chance
+	db 20, RATTATA      ;  5% chance
+	db 20, RATTATA      ;  5% chance
+	db 20, RATTATA      ;  4% chance
+	db 20, RATTATA      ;  1% chance
 	; nite
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
+	db 20, GASTLY      ; 20% chance
+	db 20, GASTLY      ; 20% chance
+	db 20, GASTLY      ; 15% chance
+	db 20, GASTLY      ; 10% chance
+	db 20, GASTLY      ; 10% chance
+	db 20, GASTLY      ; 10% chance
+	db 20, RATTATA     ;  5% chance
+	db 20, RATTATA     ;  5% chance
+	db 20, RATTATA     ;  4% chance
+	db 20, RATTATA     ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons TIN_TOWER_3F
@@ -127,27 +127,27 @@ JohtoGrassWildMons:
 ;	db 20, DITTO      ;  4% chance
 ;	db 20, DITTO      ;  1% chance
 	; day
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
+	db 20, RATTATA      ; 20% chance
+	db 20, RATTATA      ; 20% chance
+	db 20, RATTATA      ; 15% chance
+	db 20, RATTATA      ; 10% chance
+	db 20, RATTATA      ; 10% chance
+	db 20, RATTATA      ; 10% chance
+	db 20, RATTATA      ;  5% chance
+	db 20, RATTATA      ;  5% chance
+	db 20, RATTATA      ;  4% chance
+	db 20, RATTATA      ;  1% chance
 	; nite
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
+	db 20, GASTLY      ; 20% chance
+	db 20, GASTLY      ; 20% chance
+	db 20, GASTLY      ; 15% chance
+	db 20, GASTLY      ; 10% chance
+	db 20, GASTLY      ; 10% chance
+	db 20, GASTLY      ; 10% chance
+	db 20, RATTATA     ;  5% chance
+	db 20, RATTATA     ;  5% chance
+	db 20, RATTATA     ;  4% chance
+	db 20, RATTATA     ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons TIN_TOWER_4F
@@ -164,27 +164,27 @@ JohtoGrassWildMons:
 ;	db 20, DITTO      ;  4% chance
 ;	db 20, DITTO      ;  1% chance
 	; day
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
+	db 20, RATTATA      ; 20% chance
+	db 20, RATTATA      ; 20% chance
+	db 20, RATTATA      ; 15% chance
+	db 20, RATTATA      ; 10% chance
+	db 20, RATTATA      ; 10% chance
+	db 20, RATTATA      ; 10% chance
+	db 20, RATTATA      ;  5% chance
+	db 20, RATTATA      ;  5% chance
+	db 20, RATTATA      ;  4% chance
+	db 20, RATTATA      ;  1% chance
 	; nite
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
+	db 20, GASTLY      ; 20% chance
+	db 20, GASTLY      ; 20% chance
+	db 20, GASTLY      ; 15% chance
+	db 20, GASTLY      ; 10% chance
+	db 20, GASTLY      ; 10% chance
+	db 20, GASTLY      ; 10% chance
+	db 20, RATTATA     ;  5% chance
+	db 20, RATTATA     ;  5% chance
+	db 20, RATTATA     ;  4% chance
+	db 20, RATTATA     ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons TIN_TOWER_5F
@@ -201,27 +201,27 @@ JohtoGrassWildMons:
 ;	db 20, DITTO      ;  4% chance
 ;	db 20, DITTO      ;  1% chance
 	; day
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
+	db 20, RATTATA      ; 20% chance
+	db 20, RATTATA      ; 20% chance
+	db 20, RATTATA      ; 15% chance
+	db 20, RATTATA      ; 10% chance
+	db 20, RATTATA      ; 10% chance
+	db 20, RATTATA      ; 10% chance
+	db 20, RATTATA      ;  5% chance
+	db 20, RATTATA      ;  5% chance
+	db 20, RATTATA      ;  4% chance
+	db 20, RATTATA      ;  1% chance
 	; nite
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
+	db 20, GASTLY      ; 20% chance
+	db 20, GASTLY      ; 20% chance
+	db 20, GASTLY      ; 15% chance
+	db 20, GASTLY      ; 10% chance
+	db 20, GASTLY      ; 10% chance
+	db 20, GASTLY      ; 10% chance
+	db 20, RATTATA     ;  5% chance
+	db 20, RATTATA     ;  5% chance
+	db 20, RATTATA     ;  4% chance
+	db 20, RATTATA     ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons TIN_TOWER_6F
@@ -238,27 +238,27 @@ JohtoGrassWildMons:
 ;	db 20, DITTO      ;  4% chance
 ;	db 20, DITTO      ;  1% chance
 	; day
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
+	db 20, RATTATA      ; 20% chance
+	db 20, RATTATA      ; 20% chance
+	db 20, RATTATA      ; 15% chance
+	db 20, RATTATA      ; 10% chance
+	db 20, RATTATA      ; 10% chance
+	db 20, RATTATA      ; 10% chance
+	db 20, RATTATA      ;  5% chance
+	db 20, RATTATA      ;  5% chance
+	db 20, RATTATA      ;  4% chance
+	db 20, RATTATA      ;  1% chance
 	; nite
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
+	db 20, GASTLY      ; 20% chance
+	db 20, GASTLY      ; 20% chance
+	db 20, GASTLY      ; 15% chance
+	db 20, GASTLY      ; 10% chance
+	db 20, GASTLY      ; 10% chance
+	db 20, GASTLY      ; 10% chance
+	db 20, RATTATA     ;  5% chance
+	db 20, RATTATA     ;  5% chance
+	db 20, RATTATA     ;  4% chance
+	db 20, RATTATA     ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons TIN_TOWER_7F
@@ -275,27 +275,27 @@ JohtoGrassWildMons:
 ;	db 20, DITTO      ;  4% chance
 ;	db 20, DITTO      ;  1% chance
 	; day
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
+	db 20, RATTATA      ; 20% chance
+	db 20, RATTATA      ; 20% chance
+	db 20, RATTATA      ; 15% chance
+	db 20, RATTATA      ; 10% chance
+	db 20, RATTATA      ; 10% chance
+	db 20, RATTATA      ; 10% chance
+	db 20, RATTATA      ;  5% chance
+	db 20, RATTATA      ;  5% chance
+	db 20, RATTATA      ;  4% chance
+	db 20, RATTATA      ;  1% chance
 	; nite
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
+	db 20, GASTLY      ; 20% chance
+	db 20, GASTLY      ; 20% chance
+	db 20, GASTLY      ; 15% chance
+	db 20, GASTLY      ; 10% chance
+	db 20, GASTLY      ; 10% chance
+	db 20, GASTLY      ; 10% chance
+	db 20, RATTATA     ;  5% chance
+	db 20, RATTATA     ;  5% chance
+	db 20, RATTATA     ;  4% chance
+	db 20, RATTATA     ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons TIN_TOWER_8F
@@ -312,27 +312,27 @@ JohtoGrassWildMons:
 ;	db 20, DITTO      ;  4% chance
 ;	db 20, DITTO      ;  1% chance
 	; day
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
+	db 20, RATTATA      ; 20% chance
+	db 20, RATTATA      ; 20% chance
+	db 20, RATTATA      ; 15% chance
+	db 20, RATTATA      ; 10% chance
+	db 20, RATTATA      ; 10% chance
+	db 20, RATTATA      ; 10% chance
+	db 20, RATTATA      ;  5% chance
+	db 20, RATTATA      ;  5% chance
+	db 20, RATTATA      ;  4% chance
+	db 20, RATTATA      ;  1% chance
 	; nite
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
+	db 20, GASTLY      ; 20% chance
+	db 20, GASTLY      ; 20% chance
+	db 20, GASTLY      ; 15% chance
+	db 20, GASTLY      ; 10% chance
+	db 20, GASTLY      ; 10% chance
+	db 20, GASTLY      ; 10% chance
+	db 20, RATTATA     ;  5% chance
+	db 20, RATTATA     ;  5% chance
+	db 20, RATTATA     ;  4% chance
+	db 20, RATTATA     ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons TIN_TOWER_9F
@@ -349,27 +349,27 @@ JohtoGrassWildMons:
 ;	db 20, DITTO      ;  4% chance
 ;	db 20, DITTO      ;  1% chance
 	; day
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
+	db 20, RATTATA      ; 20% chance
+	db 20, RATTATA      ; 20% chance
+	db 20, RATTATA      ; 15% chance
+	db 20, RATTATA      ; 10% chance
+	db 20, RATTATA      ; 10% chance
+	db 20, RATTATA      ; 10% chance
+	db 20, RATTATA      ;  5% chance
+	db 20, RATTATA      ;  5% chance
+	db 20, RATTATA      ;  4% chance
+	db 20, RATTATA      ;  1% chance
 	; nite
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
+	db 20, GASTLY      ; 20% chance
+	db 20, GASTLY      ; 20% chance
+	db 20, GASTLY      ; 15% chance
+	db 20, GASTLY      ; 10% chance
+	db 20, GASTLY      ; 10% chance
+	db 20, GASTLY      ; 10% chance
+	db 20, RATTATA     ;  5% chance
+	db 20, RATTATA     ;  5% chance
+	db 20, RATTATA     ;  4% chance
+	db 20, RATTATA     ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons BURNED_TOWER_1F
