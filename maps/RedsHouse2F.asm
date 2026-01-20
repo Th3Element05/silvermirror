@@ -22,7 +22,7 @@ RedsHouse2FYoungChris:
 ;	ifequal POKEMAIL_NO_MAIL, .Proceed
 ;	ifequal POKEMAIL_LAST_MON, .Proceed
 	; POKEMAIL_CORRECT
-	sjump .Proceed
+	sjump .GiveGift
 
 .MoreThanOnePokemon:
 	writetext RedsHouse2FChrisPointsText
@@ -35,7 +35,7 @@ RedsHouse2FYoungChris:
 	; POKEMAIL_CORRECT
 	; fallthrough
 
-.Proceed:
+.GiveGift:
 	closetext
 	random 3
 	ifequal 0, .Love
@@ -84,7 +84,7 @@ RedsHouse2FYoungChris:
 RedsHouse2FChrisPointsOneText:
 	text "<……>"
 
-	para "The boy's pointing"
+	para "The boy is looking"
 	line "at the #BALL"
 	cont "on your belt."
 	done
@@ -92,7 +92,7 @@ RedsHouse2FChrisPointsOneText:
 RedsHouse2FChrisPointsText:
 	text "<……>"
 
-	para "The boy's pointing"
+	para "The boy is looking"
 	line "at the #BALLs"
 	cont "on your belt."
 	done
