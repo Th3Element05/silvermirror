@@ -90,7 +90,7 @@ VictoryRoad2FMoltres:
 	cry MOLTRES
 	pause 20
 	closetext
-;	loadvar VAR_BATTLETYPE, BATTLETYPE_KANTO_LEGEND
+	loadvar VAR_BATTLETYPE, BATTLETYPE_KANTO_LEGEND
 	loadwildmon MOLTRES, 50
 	startbattle
 	disappear VICTORYROAD2F_MOLTRES
