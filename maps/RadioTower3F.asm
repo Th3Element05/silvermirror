@@ -173,6 +173,7 @@ CardKeySlotScript:: ;export for using CARD KEY from bag
 	waitsfx
 	showemote EMOTE_SHOCK, RADIOTOWER3F_BLUE, 15
 	turnobject RADIOTOWER3F_BLUE, UP
+	turnobject PLAYER, DOWN
 	opentext
 	writetext RadioTower3FBlue_GateOpenText
 	waitbutton
