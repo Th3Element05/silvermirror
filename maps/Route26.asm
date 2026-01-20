@@ -273,13 +273,6 @@ Route26_NoFruit:
 ;	closetext
 ;	end
 
-Route26Sign:
-	jumptext Route26SignText
-
-
-;Route26MaxElixer:
-;	itemball MAX_ELIXER
-
 ;CooltrainermJakeSeenText:
 ;	text "I'm making my"
 ;	line "final preparations"
@@ -431,9 +424,14 @@ Route26Sign:
 ;	line "give up."
 ;	done
 
+Route26Sign:
+	jumptext Route26SignText
 Route26SignText:
 	text "ROUTE 26"
 	done
+
+Route26MaxElixer:
+	itemball MAX_ELIXER
 
 Route26_MapEvents:
 	db 0, 0 ; filler
@@ -460,4 +458,4 @@ Route26_MapEvents:
 ;	object_event  5,  8, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerCooltrainerfBeth1, -1
 ;	object_event 13, 79, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerPsychicRichard, -1
 ;	object_event 10, 92, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerFisherScott, -1
-;	object_event  9, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route26MaxElixer, EVENT_ROUTE_26_MAX_ELIXER
+	object_event  9, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route26MaxElixer, EVENT_ROUTE_26_MAX_ELIXER
