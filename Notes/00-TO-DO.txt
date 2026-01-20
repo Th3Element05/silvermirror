@@ -1,13 +1,3 @@
-AddNTimes::
-; Add bc * a to hl.
-	and a
-	ret z
-.loop
-	add hl, bc
-	dec a
-	jr nz, .loop
-	ret
-
 
 HAPPINESS EVOLVE
 engine\pokemon\evolve.asm
@@ -110,19 +100,13 @@ LARVITAR goldenrod prize    +route 45?          +(mt silver)
 olivine tim's house trade
 olivine lighthouse (currently blocked)
 
-snorlax awake - can pokeflute item trigger pokeflute radio channel to play?
-
 NIDORAN trade, doesn't specify gender (test it, can it be fixed?)
 contants\npc_trade_constants.asm
 data\events\npc_trades.asm
 
-get rock smash from mahogany gym leader on route 42?
-
 FIX FOSSIL REVIVE SCRIPT (did I fix this already?)
 
-SHUCKLE get in trade
-
-cianwood fighting gym come use strength to clear route 42
+SHUCKLE get in trade? (rocksmash?)
 
 ROUTE 11 replace GUITARISTs with OFFICERs (Rex and Carter)
 
