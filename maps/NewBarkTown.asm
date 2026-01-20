@@ -49,6 +49,7 @@ NewBarkTownRivalEncounterScript:
 	pause 10
 	opentext
 	writetext NewBarkTownRival_IntroText
+	promptbutton
 	winlosstext NewBarkTownRival_WinText, NewBarkTownRival_LossText
 	loadtrainer RIVAL2, RIVAL2_NEW_BARK_TOWN
 ;	loadmem VAR_BATTLETYPE, BATTLETYPE_CANLOSE
@@ -131,8 +132,7 @@ NewBarkTownRival_LookingForGrampsText:
 	line "to know where he"
 	cont "is, do you?"
 
-	para "<……>"
-	line "<……>"
+	para "<……><……>"
 
 	para "He was on his way"
 	line "to GOLDENROD?"
