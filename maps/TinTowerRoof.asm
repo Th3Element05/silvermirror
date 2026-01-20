@@ -8,18 +8,13 @@ TinTowerRoof_MapScripts:
 	callback MAPCALLBACK_OBJECTS, TinTowerRoofHoOhCallback
 
 TinTowerRoofHoOhCallback:
+	disappear TINTOWERROOF_HO_OH
 	checkevent EVENT_FOUGHT_HO_OH
 	iftrue .NoAppear
 	checkitem RAINBOW_WING
-	iftrue .Appear
-	sjump .NoAppear
-
-.Appear:
+	iffalse .NoAppear
 	appear TINTOWERROOF_HO_OH
-	endcallback
-
 .NoAppear:
-	disappear TINTOWERROOF_HO_OH
 	endcallback
 
 TinTowerHoOh:
@@ -29,11 +24,12 @@ TinTowerHoOh:
 	cry HO_OH
 	pause 15
 	closetext
-	setevent EVENT_FOUGHT_HO_OH
+;	setevent EVENT_FOUGHT_HO_OH
 	loadvar VAR_BATTLETYPE, BATTLETYPE_HO_OH
 	loadwildmon HO_OH, 60
 	startbattle
 	disappear TINTOWERROOF_HO_OH
+	setevent EVENT_FOUGHT_HO_OH
 	reloadmapafterbattle
 	special CheckBattleCaughtResult
 	iffalse .nocatch
@@ -50,11 +46,11 @@ TinTowerRoof_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  9, 13, TIN_TOWER_9F, 4
+	warp_event  6, 11, TIN_TOWER_9F, 4
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event  9,  7, SPRITE_HO_OH, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TinTowerHoOh, EVENT_TIN_TOWER_ROOF_HO_OH
+	object_event  7,  5, SPRITE_HO_OH, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TinTowerHoOh, EVENT_TIN_TOWER_ROOF_HO_OH
