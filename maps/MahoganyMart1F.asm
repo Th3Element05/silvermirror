@@ -11,8 +11,8 @@
 
 MahoganyMart1F_MapScripts:
 	def_scene_scripts
-	scene_script MahoganyMart1FNinjaScene, SCENE_MAHOGANYMART1F_NINJA
 	scene_script MahoganyMart1FNoopScene,  SCENE_MAHOGANYMART1F_NOOP
+	scene_script MahoganyMart1FNinjaScene, SCENE_MAHOGANYMART1F_NINJA
 
 	def_callbacks
 ;	callback MAPCALLBACK_TILES, MahoganyMart1FStaircaseCallback
@@ -43,6 +43,8 @@ MahoganyMart1FCheckDayOfWeekCallback:
 	readvar VAR_WEEKDAY
 	ifequal SATURDAY, .NoGranny
 	ifequal SUNDAY, .NoGranny
+;	checkevent EVENT_WISE_TRIO_EXPLAINED_CLEAR_BELL
+;	iffalse .Finished
 	readvar VAR_TIMEOFDAY
 	ifequal NITE, .NoGranny
 ;else appear
@@ -58,7 +60,7 @@ MahoganyMart1FCheckDayOfWeekCallback:
 
 ; scripts
 MahoganyMart1FNinjaScript:
-	pause 1
+	pause 5
 	showemote EMOTE_SHOCK, MAHOGANYMART1F_NINJA, 15
 	applymovement MAHOGANYMART1F_NINJA, MahoganyMart1FNinjaUsesStairsMovement
 	playsound SFX_EXIT_BUILDING
@@ -78,24 +80,30 @@ MahoganyMart1FNinjaUsesStairsMovement:
 MahoganyMartMerchantScript:
 	faceplayer
 	opentext
-	readvar VAR_TIMEOFDAY
-	ifequal NITE, .Closed
+	checktime NITE
+	iftrue .Closed
 	readvar VAR_WEEKDAY
-	ifequal SUNDAY, .Closed
-	ifequal SATURDAY, .Closed
+	ifequal SUNDAY, .Goldenrod
+	ifequal SATURDAY, .Goldenrod
 	pokemart MARTTYPE_BITTER, MART_UNDERGROUND
 	closetext
 	end
 
-.Closed:
+.Closed
 	writetext MahoganyMartMerchantClosedText
+	waitbutton
+	closetext
+	end
+
+.Goldenrod
+	writetext MahoganyMartMerchantGoldenrodText
 	waitbutton
 	closetext
 	end
 
 MahoganyMartMerchantClosedText:
 	text "Sorry, we're not"
-	line "open right now."
+	line "open at night."
 
 	para "I need to get my"
 	line "beauty sleep."
@@ -321,6 +329,16 @@ MahoganyMart1FGrannyReturnMovement:
 	turn_head RIGHT
 	step_end
 
+MahoganyMartTwinScript:
+	jumptextfaceplayer MahoganyMart1FTwinText
+MahoganyMart1FTwinText:
+	text "Granny's medicine"
+	line "works great!"
+
+	para "But #MON don't"
+	line "like the taste."
+	done
+
 MahoganyMart1F_MapEvents:
 	db 0, 0 ; filler
 
@@ -349,5 +367,6 @@ MahoganyMart1F_MapEvents:
 	object_event  6,  3, SPRITE_KRIS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	object_event  7,  2, SPRITE_CHRIS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	object_event  7,  2, SPRITE_KRIS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	object_event  7,  3, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_SCRIPT, 0, MahoganyMartTwinScript, EVENT_WISE_TRIO_EXPLAINED_CLEAR_BELL
 
 ;.GrayOverTreeOBPalette
