@@ -134,7 +134,7 @@ ENDM
 
 	map_const MOUNT_MOON_SQUARE,                           15,  9 ; 15
 	map_const MOUNT_MOON_GIFT_SHOP,                         4,  4 ; 16
-	map_const TIN_TOWER_ROOF,                              10,  9 ; 17
+	map_const TIN_TOWER_ROOF,                               8,  8 ; 17
 	endgroup
 
 	newgroup LAVENDER                                             ;  7
@@ -267,7 +267,7 @@ ENDM
 	map_const ROUTE_29_ROUTE_46_GATE,                       4,  4 ;  6
 	map_const ROUTE_27_WEST,                               18,  9 ;  7
 	map_const REDS_HOUSE_1F,                                5,  4 ;  8
-	map_const REDS_HOUSE_2F,                                4,  4 ;  9
+	map_const REDS_HOUSE_2F,                                4,  3 ;  9
 	endgroup
 
 	newgroup CHERRYGROVE                                          ; 16
@@ -485,15 +485,15 @@ ENDM
 	map_const SPROUT_TOWER_1F,                              8,  8 ; 45
 	map_const SPROUT_TOWER_2F,                              8,  8 ; 46
 	map_const SPROUT_TOWER_3F,                              8,  8 ; 47
-	map_const TIN_TOWER_1F,                                10,  9 ; 48
-	map_const TIN_TOWER_2F,                                10,  9 ; 49
-	map_const TIN_TOWER_3F,                                10,  9 ; 50
-	map_const TIN_TOWER_4F,                                10,  9 ; 51
-	map_const TIN_TOWER_5F,                                10,  9 ; 52
-	map_const TIN_TOWER_6F,                                10,  9 ; 53
-	map_const TIN_TOWER_7F,                                10,  9 ; 54
-	map_const TIN_TOWER_8F,                                10,  9 ; 55
-	map_const TIN_TOWER_9F,                                10,  9 ; 56
+	map_const TIN_TOWER_1F,                                 8,  8 ; 48
+	map_const TIN_TOWER_2F,                                 8,  8 ; 49
+	map_const TIN_TOWER_3F,                                 8,  8 ; 50
+	map_const TIN_TOWER_4F,                                 8,  8 ; 51
+	map_const TIN_TOWER_5F,                                 8,  8 ; 52
+	map_const TIN_TOWER_6F,                                 8,  8 ; 53
+	map_const TIN_TOWER_7F,                                 8,  8 ; 54
+	map_const TIN_TOWER_8F,                                 8,  8 ; 55
+	map_const TIN_TOWER_9F,                                 8,  8 ; 56
 	map_const BURNED_TOWER_1F,                             10,  9 ; 57
 	map_const BURNED_TOWER_B1F,                            10,  9 ; 58
 	map_const NATIONAL_PARK,                               20, 27 ; 59
