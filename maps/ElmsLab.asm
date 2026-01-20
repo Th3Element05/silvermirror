@@ -17,6 +17,7 @@ ElmsLabNoop2Scene:
 	end
 
 ElmsLabElmsNotHereScript:
+	playmusic MUSIC_NEW_BARK_TOWN
 	applymovement ELMSLAB_AIDE, ElmsLabAideApproachesPlayerMovement
 	opentext
 	writetext ElmsLabAide_ElmsNotHereText
@@ -92,8 +93,17 @@ ElmsLabElmScript:
 	jumptextfaceplayer ElmsLabElm_SaveOakText
 
 .AfterRadioTower:
-	jumptextfaceplayer ElmsLabElm_OakIsOkayText
-	; anything else?
+	faceplayer
+	opentext
+	writetext ElmsLabElm_OakIsOkayText
+	checkevent EVENT_WISE_TRIO_EXPLAINED_CLEAR_BELL
+	iftrue .DoneHere
+	promptbutton
+	writetext ElmsLabElm_RemindEcruteakText
+.DoneHere
+	waitbutton
+	closetext
+	end
 
 ElmsLabElm_MeetElmText:
 	text "I'm PROF.ELM, nice"
@@ -107,12 +117,12 @@ ElmsLabElm_MeetElmText:
 	line "becoming the new"
 	cont "LEAGUE CHAMPION!"
 
-	para "<……>"
+	para "<……><……>"
 
 	para "What? You want to"
 	line "show me something?"
 
-	para "That FEATHER, its"
+	para "That feather, its"
 	line "a RAINBOW WING!"
 
 	para "That came from the"
@@ -126,7 +136,7 @@ ElmsLabElm_MeetElmText:
 	para "Where in the world"
 	line "did you get that?"
 
-	para "<……>"
+	para "<……><……>"
 
 	para "So you really saw"
 	line "HO-OH?"
@@ -135,6 +145,13 @@ ElmsLabElm_MeetElmText:
 	line "finally returning"
 	cont "to its roost on"
 	cont "TIN TOWER?"
+
+	para "<PLAYER>, I think"
+	line "you should show"
+	cont "that RAINBOW WING"
+	roll "to the sages at"
+	cont "the TIN TOWER in"
+	roll "ECRUTEAK CITY."
 	done
 
 ElmsLabElm_ThanksForShowingMeText:
@@ -146,6 +163,17 @@ ElmsLabElm_ThanksForShowingMeText:
 ElmsLabElm_OakIsOkayText:
 	text "PROF.OAK is okay?"
 	line "That's a relief!"
+	done
+
+ElmsLabElm_RemindEcruteakText:
+	text "Did you ever show"
+	line "the RAINBOW WING"
+	cont "to the sages at"
+	roll "the TIN TOWER?"
+
+	para "I'm sure they will"
+	line "be very interested"
+	cont "to see it!"
 	done
 
 ElmsLabElmOverhearsPhoneCallScript:
@@ -172,8 +200,7 @@ ElmsLabElm_OverheardPhoneCallText:
 	para "Who was that on"
 	line "the phone?"
 
-	para "<……>"
-;	line "<……>"
+	para "<……><……>"
 	done
 
 ElmsLabElm_SaveOakText:
@@ -210,14 +237,14 @@ ElmsLabHealingMachine_HealParty:
 	closetext
 	end
 
-ElmsLabWindow:
-	jumptext ElmsLabWindowText
-ElmsLabWindowText:
-	text "The window's open."
-
-	para "A pleasant breeze"
-	line "is blowing in."
-	done
+;ElmsLabWindow:
+;	jumptext ElmsLabWindowText
+;ElmsLabWindowText:
+;	text "The window's open."
+;
+;	para "A pleasant breeze"
+;	line "is blowing in."
+;	done
 
 ElmsLabTrashcan:
 	jumptext ElmsLabTrashcanText
@@ -274,7 +301,7 @@ ElmsLab_MapEvents:
 	bg_event  8,  7, BGEVENT_READ, ElmsLabBookshelf
 	bg_event  9,  7, BGEVENT_READ, ElmsLabBookshelf
 	bg_event  9,  3, BGEVENT_READ, ElmsLabTrashcan
-	bg_event  5,  0, BGEVENT_READ, ElmsLabWindow
+;	bg_event  5,  0, BGEVENT_READ, ElmsLabWindow
 	bg_event  3,  5, BGEVENT_DOWN, ElmsLabPC
 
 	def_object_events
