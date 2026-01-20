@@ -22,6 +22,7 @@ PnP_HiddenPeople:
 	db POKEMON_GHOST
 	db POKEMON_PROF
 	db RED
+	db JANINE
 	; fallthrough
 PnP_HiddenPeople_BeatE4:
 	db LORELEI
