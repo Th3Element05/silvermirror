@@ -145,12 +145,6 @@ Route30HoohFlyoverScript:
 	closetext
 	pause 10
 	playsound SFX_INTRO_SUICUNE_1
-;	playsound SFX_GAME_FREAK_PRESENTS
-;	appear ROUTE30_RAINBOW_WING
-;	applymovement ROUTE30_RAINBOW_WING, Route30RainbowWingAppearsMovement
-;	disappear ROUTE30_RAINBOW_WING
-;	appear ROUTE30_RAINBOW_WING
-;	pause 10
 	opentext
 	writetext Route30RainbowWingText
 	promptbutton
