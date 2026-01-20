@@ -3168,8 +3168,9 @@ wOlivinePortSceneID::                             db
 wEcruteakCitySceneID::                            db
 wBurnedTower1FSceneID::                           db
 wBurnedTowerB1FSceneID::                          db
-wEcruteakTinTowerEntranceSceneID::                db
+;wEcruteakTinTowerEntranceSceneID::                db
 wWiseTriosRoomSceneID::                           db
+wTinTower1FSceneID::                              db
 wRoute35NationalParkGateSceneID::                 db
 wRoute36NationalParkGateSceneID::                 db
 wGoldenrodGymSceneID::                            db
