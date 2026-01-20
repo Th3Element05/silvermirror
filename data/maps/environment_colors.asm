@@ -8,7 +8,7 @@ EnvironmentColorsPointers:
 	dw .DungeonColors ; CAVE
 	dw .Env5Colors    ; ENVIRONMENT_5
 	dw .IndoorColors  ; GATE
-	dw .DungeonColors ; DUNGEON
+	dw .IndoorColors ; DUNGEON .DungeonColors
 	assert_table_length NUM_ENVIRONMENTS + 1
 
 ; Valid indices: $00 - $2b (see gfx/tilesets/bg_tiles.pal)
