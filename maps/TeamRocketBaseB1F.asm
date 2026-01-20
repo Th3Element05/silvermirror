@@ -125,7 +125,7 @@ NinjaSecurity8:
 	disappear TEAMROCKETBASEB1F_NINJA_BALL
 	appear TEAMROCKETBASEB1F_NINJA_M
 	applymovement TEAMROCKETBASEB1F_NINJA_M, MahoganyMart1FRockSmashMovement2
-	sjump NinjaSecurityPokeballScript
+	sjump NinjaSecurityScript
 
 ;battle
 NinjaSecurityScript:
@@ -133,7 +133,6 @@ NinjaSecurityScript:
 	appear TEAMROCKETBASEB1F_NINJA_M
 	appear TEAMROCKETBASEB1F_NINJA_T
 	applymovement TEAMROCKETBASEB1F_NINJA_M, MahoganyMart1FRockSmashMovement2
-NinjaSecurityPokeballScript:
 	waitsfx
 	setlasttalked TEAMROCKETBASEB1F_NINJA_T
 	faceplayer
@@ -162,6 +161,7 @@ NinjaSecurityPokeballScript:
 	playsound SFX_CUT
 	applymovement TEAMROCKETBASEB1F_NINJA_T, MahoganyMart1FRockSmashMovement2
 	disappear TEAMROCKETBASEB1F_NINJA_T
+	refreshscreen
 	end
 
 NinjaGuardRandomBattleScript:

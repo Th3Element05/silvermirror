@@ -125,6 +125,7 @@ TeamRocketBaseB2FMeetJanineAndKogaScene:
 	writetext TeamRocketBaseB2FNinjaJoninChallengeText
 	waitbutton
 	closetext
+	setevent EVENT_NINJA_CHALLENGE_IN_PROGRESS
 	end
 
 NinjaJoninSeenText:
@@ -367,8 +368,8 @@ TeamRocketBaseB2FExitSceneMovement:
 	step_end
 
 TeamRocketBaseB2FNinjaJoninScript:
-	checkevent EVENT_PASSED_NINJA_CHALLENGE
-	iffalse .ChallengeInProgress
+	checkevent EVENT_NINJA_CHALLENGE_IN_PROGRESS
+	iftrue .ChallengeInProgress
 	jumptextfaceplayer TeamRocketBaseB2FNinjaJoninImpressedText
 
 .ChallengeInProgress
@@ -392,8 +393,8 @@ TrainerNinjaGenin:
 	trainer NINJA, GENIN, EVENT_BEAT_NINJA_GENIN, NinjaChallengeSeenText, NinjaGeninBeatenText, 0, .Script
 .Script:
 ;	endifjustbattled
-	checkevent EVENT_PASSED_NINJA_CHALLENGE
-	iffalse TeamRocketBaseB2FNotWhoYouAreLookingFor
+	checkevent EVENT_NINJA_CHALLENGE_IN_PROGRESS
+	iftrue TeamRocketBaseB2FNotWhoYouAreLookingFor
 	jumptextfaceplayer NinjaGeninAfterBattleText
 
 ;NinjaChallengeSeenText:
@@ -418,8 +419,8 @@ TrainerNinjaChunin:
 	trainer NINJA, CHUNIN, EVENT_BEAT_NINJA_CHUNIN, NinjaChallengeSeenText, NinjaChuninBeatenText, 0, .Script
 .Script:
 ;	endifjustbattled
-	checkevent EVENT_PASSED_NINJA_CHALLENGE
-	iffalse TeamRocketBaseB2FNotWhoYouAreLookingFor
+	checkevent EVENT_NINJA_CHALLENGE_IN_PROGRESS
+	iftrue TeamRocketBaseB2FNotWhoYouAreLookingFor
 	jumptextfaceplayer NinjaChuninAfterBattleText
 
 ;NinjaChallengeSeenText:
