@@ -158,7 +158,7 @@ ChuckExplainBadgeText:
 	text "You're strong."
 	line "I think you might"
 	cont "your #MON could"
-	cont "handle anything."
+	roll "handle anything."
 
 	para "Take this, too!"
 	done
@@ -170,11 +170,25 @@ ChuckExplainPagerText:
 	para "With that, you can"
 	line "cross the turbulent"
 	cont "waters around the"
-	cont "WHIRL ISLANDS."
+	roll "WHIRL ISLANDS."
 
-	para "That's a dangerous"
-	line "place. But I know"
-	cont "you can handle it!"
+	para "People say that a"
+	line "powerful #MON"
+	cont "lurks deep within"
+	roll "WHIRL ISLANDs."
+
+	para "But I've searched"
+	line "there and never"
+	cont "found anything."
+
+	para "It's still a"
+	line "dangerous place."
+	cont "But I know you can"
+	roll "handle yourself."
+;
+;	para "That's a dangerous"
+;	line "place. But I know"
+;	cont "you can handle it!"
 	done
 
 ChuckAfterText:
@@ -280,7 +294,7 @@ CianwoodGymGuideText:
 	para "Wipe out his #-"
 	line "MON before they"
 	cont "can use their"
-	cont "physical strength."
+	roll "physical strength."
 	done
 
 CianwoodGymGuideWinText:
