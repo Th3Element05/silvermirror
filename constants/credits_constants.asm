@@ -107,6 +107,7 @@
 	const SILVERMIRROR
 	const SOURCRYSTAL
 	const CREATOR
+	const CODING
 	const CONTRIBUTORS
 	const SHOUTOUT
 	const TH3ELEMENT05
@@ -117,6 +118,8 @@
 	const VULCANDTH_ZUMI
 	const PFERO
 	const ZUMI
+	const RAJA239
+	const ARDORIN
 	const BLEEPERWAGON
 	const EXKZOL
 DEF NUM_CREDITS_STRINGS EQU const_value

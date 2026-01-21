@@ -78,10 +78,11 @@ CreditsScript:
 
 	db CREDITS_WAIT, 36
 
-	db       SPECIAL_THANKS, 0
-	db             SHOUTOUT, 1
+	db               CODING, 0
+	db              RAJA239, 2
+	db              ARDORIN, 3
 
-	db CREDITS_WAIT, 64
+	db CREDITS_WAIT, 36
 
 ;
 ; Clear the banner.
@@ -91,6 +92,11 @@ CreditsScript:
 
 ; Update the banner.
 	db CREDITS_SCENE, 3 ; Igglybuff / Pikachu
+
+	db       SPECIAL_THANKS, 0
+	db             SHOUTOUT, 1
+
+	db CREDITS_WAIT, 64
 
 	db          SOURCRYSTAL, 0
 	db              CREATOR, 1
@@ -113,6 +119,7 @@ CreditsScript:
 
 	db CREDITS_WAIT, 20
 
+;
 ; Clear the banner.
 	db CREDITS_CLEAR
 

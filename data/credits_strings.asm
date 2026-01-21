@@ -107,6 +107,7 @@ CreditsStringsPointers:
 	dw .SilverMirror
 	dw .SourCrystal
 	dw .Creator
+	dw .Coding
 	dw .Contributors
 	dw .ShoutOut
 	dw .Th3Element05
@@ -117,6 +118,8 @@ CreditsStringsPointers:
 	dw .VulcandthZumi
 	dw .pfero
 	dw .Zumi
+	dw .RaJa239
+	dw .Ardorin
 	dw .BleeperWagon
 	dw .Exkzol
 	assert_table_length NUM_CREDITS_STRINGS
@@ -230,6 +233,7 @@ CreditsStringsPointers:
 .SilverMirror:        db "   SILVER MIRROR@"
 .SourCrystal:         db "    SOUR CRYSTAL@"
 .Creator:             db "      CREATOR@"
+.Coding:              db " CODE CONTRIBUTORS@"
 .Contributors:        db "    CONTRIBUTORS@"
 .ShoutOut:            db "  To SourApple for"
                     next "    SOUR CRYSTAL"
@@ -241,10 +245,12 @@ CreditsStringsPointers:
 .Rangipfero:          db " Rangi        pfero@"
 .Vulcandth            db "     Vulcandth@"
 .VulcandthZumi:       db " Vulcandth     Zumi@"
-.pfero                db "       pfero@"
-.Zumi                 db "        Zumi@"
-.BleeperWagon         db "    BleeperWagon@"
-.Exkzol               db "       Exkzol@"
+.pfero:               db "       pfero@"
+.Zumi:                db "        Zumi@"
+.RaJa239:             db "      RaJa239@"
+.Ardorin:             db "       Ardorin@"
+.BleeperWagon:        db "    BleeperWagon@"
+.Exkzol:              db "       Exkzol@"
 ;                      ; "12345678901234567890@" max length (screen width)
 ;                      ; up to 5 lines per page
 ;"12345678901234567890@"
