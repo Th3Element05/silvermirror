@@ -1,0 +1,104 @@
+constants/pokemon_data_constants.asm
+284	DEF MAX_EV_EQU 252
++	DEF LEVEL_FROM_PARTY EQU 220
+
+
+data/trainers/parties.asm
+; pokemon level can be defined as `LEVEL_FROM_PARTY` and adjusted
+; LEVEL_FROM_PARTY + 1,
+; LEVEL_FROM_PARTY - 1, etc
+
+
+engine/battle/read_trainer_party.asm
+13		and a
+14		ret nz
+15
+	+	call SetTeamMaxLevel
+
+16		ld hl, wOTPartyCount
+17		xor a
+
+...
+
+109	; level
+	+	call SetDynamicLevel
+110		ld [CurPartyLevel], a
+
+...
+
+368	INCLUDE "data/trainers/party_pointers.asm"
+369
+370	SetTrainerBattleLevel:
+371	ld a, 255
+...
+405	.skip_name
+406		ld a, [hli]
+407		cp "@"
+408		jr nz, .skip_name
+409
+410		inc hl
+411		ld a, [hl]
+	+	call SetDynamicLevel
+412		ld [wCurPartyLevel], a
+413		ret
+414
++ everything below
+SetTeamMaxLevel:
+	ld a, [wPartyCount]
+	ld b, a
+	ld hl, wPartyMon1Level
+	ld a, [hl]
+	dec b
+	jr z, .SetLevel
+	ld de, PARTYMON_STRUCT_LENGTH
+	ld c, a
+
+.LoopPartyLevel
+	add hl, de
+	ld a, [hl]
+	cp c
+	jr c, .Continue
+	ld c, a
+.Continue
+	dec b
+	jr nz, .LoopPartyLevel
+	ld a, c
+.SetLevel
+	ld b, a
+	ld a, [wInBattleTowerBattle]
+	and a
+	ret nz
+	ld a, b
+	ld [wTeamMaxLevel], a
+	; fallthrough
+
+SetDynamicLevel:
+	cp MAX_LEVEL + 1
+	ret c
+	cp 199
+	ret c
+	sub LEVEL_FROM_PARTY
+	ld b, a
+	ld a, [wTeamMaxLevel]
+	add b
+	cp MAX_LEVEL
+	ret c
+; cap overflowflow at level 100
+	cp LEVEL_FROM_PARTY
+	ld a, MAX_LEVEL
+	ret c
+; cap overflow at level 2
+	ld a, 2
+	ret
+
+
+ram/wram.asm
+481	wEnemySDefLevel:: db
+482	wEnemyAccLevel:: db
+483	wEnemyEvaLevel:: db
+484	-	ds 1
+	+
+	+	wTeamMaxLevel:: db
+
+
+

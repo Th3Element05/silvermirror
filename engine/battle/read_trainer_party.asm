@@ -13,6 +13,8 @@ ReadTrainerParty:
 	and a
 	ret nz
 
+	call SetTeamMaxLevel ;dynamic levels
+
 	ld hl, wOTPartyCount
 	xor a
 	ld [hli], a
@@ -107,6 +109,7 @@ ReadTrainerPartyPieces:
 	ret z
 
 ; level
+	call SetDynamicLevel ;dynamic levels
 	ld [wCurPartyLevel], a
 
 ; species
@@ -409,5 +412,54 @@ SetTrainerBattleLevel:
 
 	inc hl
 	ld a, [hl]
+	call SetDynamicLevel ;dynamic levels
 	ld [wCurPartyLevel], a
 	ret
+
+;dynamic levels
+SetTeamMaxLevel:
+	ld a, [wPartyCount]
+	ld b, a
+	ld hl, wPartyMon1Level
+	ld a, [hl]
+	dec b
+	jr z, .SetLevel
+	ld de, PARTYMON_STRUCT_LENGTH
+	ld c, a
+
+.LoopPartyLevel
+	add hl, de
+	ld a, [hl]
+	cp c
+	jr c, .Continue
+	ld c, a
+.Continue
+	dec b
+	jr nz, .LoopPartyLevel
+	ld a, c
+.SetLevel
+	ld b, a
+	ld a, [wInBattleTowerBattle]
+	and a
+	ret nz
+	ld a, b
+	ld [wTeamMaxLevel], a
+	; fallthrough
+
+SetDynamicLevel:
+	cp MAX_LEVEL + 1
+	ret c
+	cp 199
+	ret c
+	sub PLAYER_LEVEL
+	ld b, a
+	ld a, [wTeamMaxLevel]
+	add b
+	cp MAX_LEVEL
+	ret c
+; cap overflowflow at level 100
+	cp PLAYER_LEVEL
+	ld a, MAX_LEVEL
+	ret c
+; cap overflow at level 2
+	ld a, 2
