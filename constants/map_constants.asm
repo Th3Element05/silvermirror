@@ -483,17 +483,19 @@ ENDM
 	map_const CERULEAN_CAVE_B1F,                           17, 11 ; 44
 ; johto
 	map_const SPROUT_TOWER_1F,                              8,  8 ; 45
-	map_const SPROUT_TOWER_2F,                              8,  8 ; 46
-	map_const SPROUT_TOWER_3F,                              8,  8 ; 47
+	map_const SPROUT_TOWER_2F_3F,                           8, 18 ; 46
+;	map_const SPROUT_TOWER_2F,                              8,  8    ; 46
+;	map_const SPROUT_TOWER_3F,                              8,  8    ; 47
 	map_const TIN_TOWER_1F,                                 8,  8 ; 48
-	map_const TIN_TOWER_2F,                                 8,  8 ; 49
-	map_const TIN_TOWER_3F,                                 8,  8 ; 50
-	map_const TIN_TOWER_4F,                                 8,  8 ; 51
-	map_const TIN_TOWER_5F,                                 8,  8 ; 52
-	map_const TIN_TOWER_6F,                                 8,  8 ; 53
-	map_const TIN_TOWER_7F,                                 8,  8 ; 54
-	map_const TIN_TOWER_8F,                                 8,  8 ; 55
-	map_const TIN_TOWER_9F,                                 8,  8 ; 56
+	map_const TIN_TOWER_FLOORS,                             8, 78 ; 49
+;	map_const TIN_TOWER_2F,                                 8,  8    ; 49
+;	map_const TIN_TOWER_3F,                                 8,  8    ; 50
+;	map_const TIN_TOWER_4F,                                 8,  8    ; 51
+;	map_const TIN_TOWER_5F,                                 8,  8    ; 52
+;	map_const TIN_TOWER_6F,                                 8,  8    ; 53
+;	map_const TIN_TOWER_7F,                                 8,  8    ; 54
+;	map_const TIN_TOWER_8F,                                 8,  8    ; 55
+;	map_const TIN_TOWER_9F,                                 8,  8    ; 56
 	map_const BURNED_TOWER_1F,                             10,  9 ; 57
 	map_const BURNED_TOWER_B1F,                            10,  9 ; 58
 	map_const NATIONAL_PARK,                               20, 27 ; 59
@@ -539,11 +541,12 @@ ENDM
 	map_const MOUNT_MORTAR_1F_INSIDE,                      20, 27 ; 98
 	map_const MOUNT_MORTAR_2F_INSIDE,                      20, 18 ; 99
 	map_const MOUNT_MORTAR_B1F,                            20, 18 ; 100
-	map_const ICE_PATH_1F,                                 20, 18 ; 101
+	map_const ICE_PATH_1F,                                 20, 15 ; 101
 	map_const ICE_PATH_B1F,                                10, 18 ; 102
-	map_const ICE_PATH_B2F_MAHOGANY_SIDE,                  10,  9 ; 103
-	map_const ICE_PATH_B2F_BLACKTHORN_SIDE,                 5,  9 ; 104
-	map_const ICE_PATH_B3F,                                10,  9 ; 105
+	map_const ICE_PATH_B2F_B3F,                            16, 16 ; 103
+;	map_const ICE_PATH_B2F_MAHOGANY_SIDE,                  10,  9     ; 103
+;	map_const ICE_PATH_B2F_BLACKTHORN_SIDE,                 5,  9     ; 104
+;	map_const ICE_PATH_B3F,                                10,  9     ; 105
 	map_const WHIRL_ISLAND_NW,                              5,  9 ; 106
 	map_const WHIRL_ISLAND_NE,                             10,  9 ; 107
 	map_const WHIRL_ISLAND_SW,                             10,  9 ; 108

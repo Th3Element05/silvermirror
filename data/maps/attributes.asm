@@ -421,17 +421,19 @@ ENDM
 	connection south, Route22, ROUTE_22, 0
 
 	map_attributes SproutTower1F, SPROUT_TOWER_1F, $00, 0
-	map_attributes SproutTower2F, SPROUT_TOWER_2F, $00, 0
-	map_attributes SproutTower3F, SPROUT_TOWER_3F, $00, 0
+	map_attributes SproutTower2F3F, SPROUT_TOWER_2F_3F, $00, 0
+;	map_attributes SproutTower2F, SPROUT_TOWER_2F, $00, 0
+;	map_attributes SproutTower3F, SPROUT_TOWER_3F, $00, 0
 	map_attributes TinTower1F, TIN_TOWER_1F, $00, 0
-	map_attributes TinTower2F, TIN_TOWER_2F, $00, 0
-	map_attributes TinTower3F, TIN_TOWER_3F, $00, 0
-	map_attributes TinTower4F, TIN_TOWER_4F, $00, 0
-	map_attributes TinTower5F, TIN_TOWER_5F, $00, 0
-	map_attributes TinTower6F, TIN_TOWER_6F, $00, 0
-	map_attributes TinTower7F, TIN_TOWER_7F, $00, 0
-	map_attributes TinTower8F, TIN_TOWER_8F, $00, 0
-	map_attributes TinTower9F, TIN_TOWER_9F, $00, 0
+	map_attributes TinTowerFloors, TIN_TOWER_FLOORS, $00, 0
+;	map_attributes TinTower2F, TIN_TOWER_2F, $00, 0
+;	map_attributes TinTower3F, TIN_TOWER_3F, $00, 0
+;	map_attributes TinTower4F, TIN_TOWER_4F, $00, 0
+;	map_attributes TinTower5F, TIN_TOWER_5F, $00, 0
+;	map_attributes TinTower6F, TIN_TOWER_6F, $00, 0
+;	map_attributes TinTower7F, TIN_TOWER_7F, $00, 0
+;	map_attributes TinTower8F, TIN_TOWER_8F, $00, 0
+;	map_attributes TinTower9F, TIN_TOWER_9F, $00, 0
 	map_attributes BurnedTower1F, BURNED_TOWER_1F, $00, 0
 	map_attributes NationalPark, NATIONAL_PARK, $06, 0
 	map_attributes NationalParkBugContest, NATIONAL_PARK_BUG_CONTEST, $06, 0
@@ -482,9 +484,10 @@ ENDM
 	map_attributes MountMortarB1F, MOUNT_MORTAR_B1F, $09, 0
 	map_attributes IcePath1F, ICE_PATH_1F, $09, 0
 	map_attributes IcePathB1F, ICE_PATH_B1F, $1f, 0
-	map_attributes IcePathB2FMahoganySide, ICE_PATH_B2F_MAHOGANY_SIDE, $1f, 0
-	map_attributes IcePathB2FBlackthornSide, ICE_PATH_B2F_BLACKTHORN_SIDE, $1f, 0
-	map_attributes IcePathB3F, ICE_PATH_B3F, $1f, 0
+	map_attributes IcePathB2FB3F, ICE_PATH_B2F_B3F, $1f, 0
+;	map_attributes IcePathB2FMahoganySide, ICE_PATH_B2F_MAHOGANY_SIDE, $1f, 0
+;	map_attributes IcePathB2FBlackthornSide, ICE_PATH_B2F_BLACKTHORN_SIDE, $1f, 0
+;	map_attributes IcePathB3F, ICE_PATH_B3F, $1f, 0
 	map_attributes WhirlIslandNW, WHIRL_ISLAND_NW, $09, 0
 	map_attributes WhirlIslandNE, WHIRL_ISLAND_NE, $09, 0
 	map_attributes WhirlIslandSW, WHIRL_ISLAND_SW, $09, 0

@@ -2,7 +2,7 @@
 
 JohtoGrassWildMons:
 
-	def_grass_wildmons SPROUT_TOWER_2F
+	def_grass_wildmons SPROUT_TOWER_2F_3F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
 ;	db 20, DITTO      ; 20% chance
@@ -39,44 +39,44 @@ JohtoGrassWildMons:
 	db 3, RATTATA     ;  1% chance
 	end_grass_wildmons
 
-	def_grass_wildmons SPROUT_TOWER_3F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
-	; morn
-;	db 20, DITTO      ; 20% chance
-;	db 20, DITTO      ; 20% chance
-;	db 20, DITTO      ; 15% chance
-;	db 20, DITTO      ; 10% chance
-;	db 20, DITTO      ; 10% chance
-;	db 20, DITTO      ; 10% chance
-;	db 20, DITTO      ;  5% chance
-;	db 20, DITTO      ;  5% chance
-;	db 20, DITTO      ;  4% chance
-;	db 20, DITTO      ;  1% chance
-	; day
-	db 3, RATTATA      ; 20% chance
-	db 3, RATTATA      ; 20% chance
-	db 3, RATTATA      ; 15% chance
-	db 3, RATTATA      ; 10% chance
-	db 3, RATTATA      ; 10% chance
-	db 3, RATTATA      ; 10% chance
-	db 3, RATTATA      ;  5% chance
-	db 3, RATTATA      ;  5% chance
-	db 3, RATTATA      ;  4% chance
-	db 3, RATTATA      ;  1% chance
-	; nite
-	db 3, GASTLY      ; 20% chance
-	db 3, GASTLY      ; 20% chance
-	db 3, GASTLY      ; 15% chance
-	db 3, GASTLY      ; 10% chance
-	db 3, GASTLY      ; 10% chance
-	db 3, GASTLY      ; 10% chance
-	db 3, RATTATA     ;  5% chance
-	db 3, RATTATA     ;  5% chance
-	db 3, RATTATA     ;  4% chance
-	db 3, RATTATA     ;  1% chance
-	end_grass_wildmons
+;	def_grass_wildmons SPROUT_TOWER_3F
+;	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+;	; morn
+;;	db 20, DITTO      ; 20% chance
+;;	db 20, DITTO      ; 20% chance
+;;	db 20, DITTO      ; 15% chance
+;;	db 20, DITTO      ; 10% chance
+;;	db 20, DITTO      ; 10% chance
+;;	db 20, DITTO      ; 10% chance
+;;	db 20, DITTO      ;  5% chance
+;;	db 20, DITTO      ;  5% chance
+;;	db 20, DITTO      ;  4% chance
+;;	db 20, DITTO      ;  1% chance
+;	; day
+;	db 3, RATTATA      ; 20% chance
+;	db 3, RATTATA      ; 20% chance
+;	db 3, RATTATA      ; 15% chance
+;	db 3, RATTATA      ; 10% chance
+;	db 3, RATTATA      ; 10% chance
+;	db 3, RATTATA      ; 10% chance
+;	db 3, RATTATA      ;  5% chance
+;	db 3, RATTATA      ;  5% chance
+;	db 3, RATTATA      ;  4% chance
+;	db 3, RATTATA      ;  1% chance
+;	; nite
+;	db 3, GASTLY      ; 20% chance
+;	db 3, GASTLY      ; 20% chance
+;	db 3, GASTLY      ; 15% chance
+;	db 3, GASTLY      ; 10% chance
+;	db 3, GASTLY      ; 10% chance
+;	db 3, GASTLY      ; 10% chance
+;	db 3, RATTATA     ;  5% chance
+;	db 3, RATTATA     ;  5% chance
+;	db 3, RATTATA     ;  4% chance
+;	db 3, RATTATA     ;  1% chance
+;	end_grass_wildmons
 
-	def_grass_wildmons TIN_TOWER_2F
+	def_grass_wildmons TIN_TOWER_FLOORS
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
 ;	db 20, DITTO      ; 20% chance
@@ -113,264 +113,213 @@ JohtoGrassWildMons:
 	db 20, RATTATA     ;  1% chance
 	end_grass_wildmons
 
-	def_grass_wildmons TIN_TOWER_3F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
-	; morn
-;	db 20, DITTO      ; 20% chance
-;	db 20, DITTO      ; 20% chance
-;	db 20, DITTO      ; 15% chance
-;	db 20, DITTO      ; 10% chance
-;	db 20, DITTO      ; 10% chance
-;	db 20, DITTO      ; 10% chance
-;	db 20, DITTO      ;  5% chance
-;	db 20, DITTO      ;  5% chance
-;	db 20, DITTO      ;  4% chance
-;	db 20, DITTO      ;  1% chance
-	; day
-	db 20, RATTATA      ; 20% chance
-	db 20, RATTATA      ; 20% chance
-	db 20, RATTATA      ; 15% chance
-	db 20, RATTATA      ; 10% chance
-	db 20, RATTATA      ; 10% chance
-	db 20, RATTATA      ; 10% chance
-	db 20, RATTATA      ;  5% chance
-	db 20, RATTATA      ;  5% chance
-	db 20, RATTATA      ;  4% chance
-	db 20, RATTATA      ;  1% chance
-	; nite
-	db 20, GASTLY      ; 20% chance
-	db 20, GASTLY      ; 20% chance
-	db 20, GASTLY      ; 15% chance
-	db 20, GASTLY      ; 10% chance
-	db 20, GASTLY      ; 10% chance
-	db 20, GASTLY      ; 10% chance
-	db 20, RATTATA     ;  5% chance
-	db 20, RATTATA     ;  5% chance
-	db 20, RATTATA     ;  4% chance
-	db 20, RATTATA     ;  1% chance
-	end_grass_wildmons
+;	def_grass_wildmons TIN_TOWER_2F
+;	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+;	; day
+;	db 20, RATTATA      ; 20% chance
+;	db 20, RATTATA      ; 20% chance
+;	db 20, RATTATA      ; 15% chance
+;	db 20, RATTATA      ; 10% chance
+;	db 20, RATTATA      ; 10% chance
+;	db 20, RATTATA      ; 10% chance
+;	db 20, RATTATA      ;  5% chance
+;	db 20, RATTATA      ;  5% chance
+;	db 20, RATTATA      ;  4% chance
+;	db 20, RATTATA      ;  1% chance
+;	; nite
+;	db 20, GASTLY      ; 20% chance
+;	db 20, GASTLY      ; 20% chance
+;	db 20, GASTLY      ; 15% chance
+;	db 20, GASTLY      ; 10% chance
+;	db 20, GASTLY      ; 10% chance
+;	db 20, GASTLY      ; 10% chance
+;	db 20, RATTATA     ;  5% chance
+;	db 20, RATTATA     ;  5% chance
+;	db 20, RATTATA     ;  4% chance
+;	db 20, RATTATA     ;  1% chance
+;	end_grass_wildmons
 
-	def_grass_wildmons TIN_TOWER_4F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
-	; morn
-;	db 20, DITTO      ; 20% chance
-;	db 20, DITTO      ; 20% chance
-;	db 20, DITTO      ; 15% chance
-;	db 20, DITTO      ; 10% chance
-;	db 20, DITTO      ; 10% chance
-;	db 20, DITTO      ; 10% chance
-;	db 20, DITTO      ;  5% chance
-;	db 20, DITTO      ;  5% chance
-;	db 20, DITTO      ;  4% chance
-;	db 20, DITTO      ;  1% chance
-	; day
-	db 20, RATTATA      ; 20% chance
-	db 20, RATTATA      ; 20% chance
-	db 20, RATTATA      ; 15% chance
-	db 20, RATTATA      ; 10% chance
-	db 20, RATTATA      ; 10% chance
-	db 20, RATTATA      ; 10% chance
-	db 20, RATTATA      ;  5% chance
-	db 20, RATTATA      ;  5% chance
-	db 20, RATTATA      ;  4% chance
-	db 20, RATTATA      ;  1% chance
-	; nite
-	db 20, GASTLY      ; 20% chance
-	db 20, GASTLY      ; 20% chance
-	db 20, GASTLY      ; 15% chance
-	db 20, GASTLY      ; 10% chance
-	db 20, GASTLY      ; 10% chance
-	db 20, GASTLY      ; 10% chance
-	db 20, RATTATA     ;  5% chance
-	db 20, RATTATA     ;  5% chance
-	db 20, RATTATA     ;  4% chance
-	db 20, RATTATA     ;  1% chance
-	end_grass_wildmons
+;	def_grass_wildmons TIN_TOWER_3F
+;	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+;	; day
+;	db 20, RATTATA      ; 20% chance
+;	db 20, RATTATA      ; 20% chance
+;	db 20, RATTATA      ; 15% chance
+;	db 20, RATTATA      ; 10% chance
+;	db 20, RATTATA      ; 10% chance
+;	db 20, RATTATA      ; 10% chance
+;	db 20, RATTATA      ;  5% chance
+;	db 20, RATTATA      ;  5% chance
+;	db 20, RATTATA      ;  4% chance
+;	db 20, RATTATA      ;  1% chance
+;	; nite
+;	db 20, GASTLY      ; 20% chance
+;	db 20, GASTLY      ; 20% chance
+;	db 20, GASTLY      ; 15% chance
+;	db 20, GASTLY      ; 10% chance
+;	db 20, GASTLY      ; 10% chance
+;	db 20, GASTLY      ; 10% chance
+;	db 20, RATTATA     ;  5% chance
+;	db 20, RATTATA     ;  5% chance
+;	db 20, RATTATA     ;  4% chance
+;	db 20, RATTATA     ;  1% chance
+;	end_grass_wildmons
 
-	def_grass_wildmons TIN_TOWER_5F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
-	; morn
-;	db 20, DITTO      ; 20% chance
-;	db 20, DITTO      ; 20% chance
-;	db 20, DITTO      ; 15% chance
-;	db 20, DITTO      ; 10% chance
-;	db 20, DITTO      ; 10% chance
-;	db 20, DITTO      ; 10% chance
-;	db 20, DITTO      ;  5% chance
-;	db 20, DITTO      ;  5% chance
-;	db 20, DITTO      ;  4% chance
-;	db 20, DITTO      ;  1% chance
-	; day
-	db 20, RATTATA      ; 20% chance
-	db 20, RATTATA      ; 20% chance
-	db 20, RATTATA      ; 15% chance
-	db 20, RATTATA      ; 10% chance
-	db 20, RATTATA      ; 10% chance
-	db 20, RATTATA      ; 10% chance
-	db 20, RATTATA      ;  5% chance
-	db 20, RATTATA      ;  5% chance
-	db 20, RATTATA      ;  4% chance
-	db 20, RATTATA      ;  1% chance
-	; nite
-	db 20, GASTLY      ; 20% chance
-	db 20, GASTLY      ; 20% chance
-	db 20, GASTLY      ; 15% chance
-	db 20, GASTLY      ; 10% chance
-	db 20, GASTLY      ; 10% chance
-	db 20, GASTLY      ; 10% chance
-	db 20, RATTATA     ;  5% chance
-	db 20, RATTATA     ;  5% chance
-	db 20, RATTATA     ;  4% chance
-	db 20, RATTATA     ;  1% chance
-	end_grass_wildmons
+;	def_grass_wildmons TIN_TOWER_4F
+;	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+;	; day
+;	db 20, RATTATA      ; 20% chance
+;	db 20, RATTATA      ; 20% chance
+;	db 20, RATTATA      ; 15% chance
+;	db 20, RATTATA      ; 10% chance
+;	db 20, RATTATA      ; 10% chance
+;	db 20, RATTATA      ; 10% chance
+;	db 20, RATTATA      ;  5% chance
+;	db 20, RATTATA      ;  5% chance
+;	db 20, RATTATA      ;  4% chance
+;	db 20, RATTATA      ;  1% chance
+;	; nite
+;	db 20, GASTLY      ; 20% chance
+;	db 20, GASTLY      ; 20% chance
+;	db 20, GASTLY      ; 15% chance
+;	db 20, GASTLY      ; 10% chance
+;	db 20, GASTLY      ; 10% chance
+;	db 20, GASTLY      ; 10% chance
+;	db 20, RATTATA     ;  5% chance
+;	db 20, RATTATA     ;  5% chance
+;	db 20, RATTATA     ;  4% chance
+;	db 20, RATTATA     ;  1% chance
+;	end_grass_wildmons
 
-	def_grass_wildmons TIN_TOWER_6F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
-	; morn
-;	db 20, DITTO      ; 20% chance
-;	db 20, DITTO      ; 20% chance
-;	db 20, DITTO      ; 15% chance
-;	db 20, DITTO      ; 10% chance
-;	db 20, DITTO      ; 10% chance
-;	db 20, DITTO      ; 10% chance
-;	db 20, DITTO      ;  5% chance
-;	db 20, DITTO      ;  5% chance
-;	db 20, DITTO      ;  4% chance
-;	db 20, DITTO      ;  1% chance
-	; day
-	db 20, RATTATA      ; 20% chance
-	db 20, RATTATA      ; 20% chance
-	db 20, RATTATA      ; 15% chance
-	db 20, RATTATA      ; 10% chance
-	db 20, RATTATA      ; 10% chance
-	db 20, RATTATA      ; 10% chance
-	db 20, RATTATA      ;  5% chance
-	db 20, RATTATA      ;  5% chance
-	db 20, RATTATA      ;  4% chance
-	db 20, RATTATA      ;  1% chance
-	; nite
-	db 20, GASTLY      ; 20% chance
-	db 20, GASTLY      ; 20% chance
-	db 20, GASTLY      ; 15% chance
-	db 20, GASTLY      ; 10% chance
-	db 20, GASTLY      ; 10% chance
-	db 20, GASTLY      ; 10% chance
-	db 20, RATTATA     ;  5% chance
-	db 20, RATTATA     ;  5% chance
-	db 20, RATTATA     ;  4% chance
-	db 20, RATTATA     ;  1% chance
-	end_grass_wildmons
+;	def_grass_wildmons TIN_TOWER_5F
+;	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+;	; day
+;	db 20, RATTATA      ; 20% chance
+;	db 20, RATTATA      ; 20% chance
+;	db 20, RATTATA      ; 15% chance
+;	db 20, RATTATA      ; 10% chance
+;	db 20, RATTATA      ; 10% chance
+;	db 20, RATTATA      ; 10% chance
+;	db 20, RATTATA      ;  5% chance
+;	db 20, RATTATA      ;  5% chance
+;	db 20, RATTATA      ;  4% chance
+;	db 20, RATTATA      ;  1% chance
+;	; nite
+;	db 20, GASTLY      ; 20% chance
+;	db 20, GASTLY      ; 20% chance
+;	db 20, GASTLY      ; 15% chance
+;	db 20, GASTLY      ; 10% chance
+;	db 20, GASTLY      ; 10% chance
+;	db 20, GASTLY      ; 10% chance
+;	db 20, RATTATA     ;  5% chance
+;	db 20, RATTATA     ;  5% chance
+;	db 20, RATTATA     ;  4% chance
+;	db 20, RATTATA     ;  1% chance
+;	end_grass_wildmons
 
-	def_grass_wildmons TIN_TOWER_7F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
-	; morn
-;	db 20, DITTO      ; 20% chance
-;	db 20, DITTO      ; 20% chance
-;	db 20, DITTO      ; 15% chance
-;	db 20, DITTO      ; 10% chance
-;	db 20, DITTO      ; 10% chance
-;	db 20, DITTO      ; 10% chance
-;	db 20, DITTO      ;  5% chance
-;	db 20, DITTO      ;  5% chance
-;	db 20, DITTO      ;  4% chance
-;	db 20, DITTO      ;  1% chance
-	; day
-	db 20, RATTATA      ; 20% chance
-	db 20, RATTATA      ; 20% chance
-	db 20, RATTATA      ; 15% chance
-	db 20, RATTATA      ; 10% chance
-	db 20, RATTATA      ; 10% chance
-	db 20, RATTATA      ; 10% chance
-	db 20, RATTATA      ;  5% chance
-	db 20, RATTATA      ;  5% chance
-	db 20, RATTATA      ;  4% chance
-	db 20, RATTATA      ;  1% chance
-	; nite
-	db 20, GASTLY      ; 20% chance
-	db 20, GASTLY      ; 20% chance
-	db 20, GASTLY      ; 15% chance
-	db 20, GASTLY      ; 10% chance
-	db 20, GASTLY      ; 10% chance
-	db 20, GASTLY      ; 10% chance
-	db 20, RATTATA     ;  5% chance
-	db 20, RATTATA     ;  5% chance
-	db 20, RATTATA     ;  4% chance
-	db 20, RATTATA     ;  1% chance
-	end_grass_wildmons
+;	def_grass_wildmons TIN_TOWER_6F
+;	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+;	; day
+;	db 20, RATTATA      ; 20% chance
+;	db 20, RATTATA      ; 20% chance
+;	db 20, RATTATA      ; 15% chance
+;	db 20, RATTATA      ; 10% chance
+;	db 20, RATTATA      ; 10% chance
+;	db 20, RATTATA      ; 10% chance
+;	db 20, RATTATA      ;  5% chance
+;	db 20, RATTATA      ;  5% chance
+;	db 20, RATTATA      ;  4% chance
+;	db 20, RATTATA      ;  1% chance
+;	; nite
+;	db 20, GASTLY      ; 20% chance
+;	db 20, GASTLY      ; 20% chance
+;	db 20, GASTLY      ; 15% chance
+;	db 20, GASTLY      ; 10% chance
+;	db 20, GASTLY      ; 10% chance
+;	db 20, GASTLY      ; 10% chance
+;	db 20, RATTATA     ;  5% chance
+;	db 20, RATTATA     ;  5% chance
+;	db 20, RATTATA     ;  4% chance
+;	db 20, RATTATA     ;  1% chance
+;	end_grass_wildmons
 
-	def_grass_wildmons TIN_TOWER_8F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
-	; morn
-;	db 20, DITTO      ; 20% chance
-;	db 20, DITTO      ; 20% chance
-;	db 20, DITTO      ; 15% chance
-;	db 20, DITTO      ; 10% chance
-;	db 20, DITTO      ; 10% chance
-;	db 20, DITTO      ; 10% chance
-;	db 20, DITTO      ;  5% chance
-;	db 20, DITTO      ;  5% chance
-;	db 20, DITTO      ;  4% chance
-;	db 20, DITTO      ;  1% chance
-	; day
-	db 20, RATTATA      ; 20% chance
-	db 20, RATTATA      ; 20% chance
-	db 20, RATTATA      ; 15% chance
-	db 20, RATTATA      ; 10% chance
-	db 20, RATTATA      ; 10% chance
-	db 20, RATTATA      ; 10% chance
-	db 20, RATTATA      ;  5% chance
-	db 20, RATTATA      ;  5% chance
-	db 20, RATTATA      ;  4% chance
-	db 20, RATTATA      ;  1% chance
-	; nite
-	db 20, GASTLY      ; 20% chance
-	db 20, GASTLY      ; 20% chance
-	db 20, GASTLY      ; 15% chance
-	db 20, GASTLY      ; 10% chance
-	db 20, GASTLY      ; 10% chance
-	db 20, GASTLY      ; 10% chance
-	db 20, RATTATA     ;  5% chance
-	db 20, RATTATA     ;  5% chance
-	db 20, RATTATA     ;  4% chance
-	db 20, RATTATA     ;  1% chance
-	end_grass_wildmons
+;	def_grass_wildmons TIN_TOWER_7F
+;	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+;	; day
+;	db 20, RATTATA      ; 20% chance
+;	db 20, RATTATA      ; 20% chance
+;	db 20, RATTATA      ; 15% chance
+;	db 20, RATTATA      ; 10% chance
+;	db 20, RATTATA      ; 10% chance
+;	db 20, RATTATA      ; 10% chance
+;	db 20, RATTATA      ;  5% chance
+;	db 20, RATTATA      ;  5% chance
+;	db 20, RATTATA      ;  4% chance
+;	db 20, RATTATA      ;  1% chance
+;	; nite
+;	db 20, GASTLY      ; 20% chance
+;	db 20, GASTLY      ; 20% chance
+;	db 20, GASTLY      ; 15% chance
+;	db 20, GASTLY      ; 10% chance
+;	db 20, GASTLY      ; 10% chance
+;	db 20, GASTLY      ; 10% chance
+;	db 20, RATTATA     ;  5% chance
+;	db 20, RATTATA     ;  5% chance
+;	db 20, RATTATA     ;  4% chance
+;	db 20, RATTATA     ;  1% chance
+;	end_grass_wildmons
 
-	def_grass_wildmons TIN_TOWER_9F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
-	; morn
-;	db 20, DITTO      ; 20% chance
-;	db 20, DITTO      ; 20% chance
-;	db 20, DITTO      ; 15% chance
-;	db 20, DITTO      ; 10% chance
-;	db 20, DITTO      ; 10% chance
-;	db 20, DITTO      ; 10% chance
-;	db 20, DITTO      ;  5% chance
-;	db 20, DITTO      ;  5% chance
-;	db 20, DITTO      ;  4% chance
-;	db 20, DITTO      ;  1% chance
-	; day
-	db 20, RATTATA      ; 20% chance
-	db 20, RATTATA      ; 20% chance
-	db 20, RATTATA      ; 15% chance
-	db 20, RATTATA      ; 10% chance
-	db 20, RATTATA      ; 10% chance
-	db 20, RATTATA      ; 10% chance
-	db 20, RATTATA      ;  5% chance
-	db 20, RATTATA      ;  5% chance
-	db 20, RATTATA      ;  4% chance
-	db 20, RATTATA      ;  1% chance
-	; nite
-	db 20, GASTLY      ; 20% chance
-	db 20, GASTLY      ; 20% chance
-	db 20, GASTLY      ; 15% chance
-	db 20, GASTLY      ; 10% chance
-	db 20, GASTLY      ; 10% chance
-	db 20, GASTLY      ; 10% chance
-	db 20, RATTATA     ;  5% chance
-	db 20, RATTATA     ;  5% chance
-	db 20, RATTATA     ;  4% chance
-	db 20, RATTATA     ;  1% chance
-	end_grass_wildmons
+;	def_grass_wildmons TIN_TOWER_8F
+;	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+;	; day
+;	db 20, RATTATA      ; 20% chance
+;	db 20, RATTATA      ; 20% chance
+;	db 20, RATTATA      ; 15% chance
+;	db 20, RATTATA      ; 10% chance
+;	db 20, RATTATA      ; 10% chance
+;	db 20, RATTATA      ; 10% chance
+;	db 20, RATTATA      ;  5% chance
+;	db 20, RATTATA      ;  5% chance
+;	db 20, RATTATA      ;  4% chance
+;	db 20, RATTATA      ;  1% chance
+;	; nite
+;	db 20, GASTLY      ; 20% chance
+;	db 20, GASTLY      ; 20% chance
+;	db 20, GASTLY      ; 15% chance
+;	db 20, GASTLY      ; 10% chance
+;	db 20, GASTLY      ; 10% chance
+;	db 20, GASTLY      ; 10% chance
+;	db 20, RATTATA     ;  5% chance
+;	db 20, RATTATA     ;  5% chance
+;	db 20, RATTATA     ;  4% chance
+;	db 20, RATTATA     ;  1% chance
+;	end_grass_wildmons
+
+;	def_grass_wildmons TIN_TOWER_9F
+;	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+;	; day
+;	db 20, RATTATA      ; 20% chance
+;	db 20, RATTATA      ; 20% chance
+;	db 20, RATTATA      ; 15% chance
+;	db 20, RATTATA      ; 10% chance
+;	db 20, RATTATA      ; 10% chance
+;	db 20, RATTATA      ; 10% chance
+;	db 20, RATTATA      ;  5% chance
+;	db 20, RATTATA      ;  5% chance
+;	db 20, RATTATA      ;  4% chance
+;	db 20, RATTATA      ;  1% chance
+;	; nite
+;	db 20, GASTLY      ; 20% chance
+;	db 20, GASTLY      ; 20% chance
+;	db 20, GASTLY      ; 15% chance
+;	db 20, GASTLY      ; 10% chance
+;	db 20, GASTLY      ; 10% chance
+;	db 20, GASTLY      ; 10% chance
+;	db 20, RATTATA     ;  5% chance
+;	db 20, RATTATA     ;  5% chance
+;	db 20, RATTATA     ;  4% chance
+;	db 20, RATTATA     ;  1% chance
+;	end_grass_wildmons
 
 	def_grass_wildmons BURNED_TOWER_1F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
@@ -386,27 +335,27 @@ JohtoGrassWildMons:
 ;	db 20, DITTO      ;  4% chance
 ;	db 20, DITTO      ;  1% chance
 	; day
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
+	db 20, RATTATA    ; 20% chance 55
+	db 20, RATTATA    ; 20% chance
+	db 20, RATTATA    ; 15% chance
+	db 20, KOFFING    ; 10% chance 30
+	db 20, KOFFING    ; 10% chance
+	db 20, KOFFING    ; 10% chance
+	db 20, ZUBAT      ;  5% chance 10
+	db 20, ZUBAT      ;  5% chance
+	db 20, RATICATE   ;  4% chance 5
+	db 20, RATICATE   ;  1% chance
 	; nite
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
+	db 20, RATTATA    ; 20% chance 50
+	db 20, RATTATA    ; 20% chance
+	db 20, KOFFING    ; 15% chance 25
+	db 20, KOFFING    ; 10% chance
+	db 20, RATTATA    ; 10% chance
+	db 20, MISDREAVUS ; 10% chance 10
+	db 20, ZUBAT      ;  5% chance 10
+	db 20, ZUBAT      ;  5% chance
+	db 20, RATICATE   ;  4% chance 5
+	db 20, RATICATE   ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons BURNED_TOWER_B1F
@@ -423,27 +372,27 @@ JohtoGrassWildMons:
 ;	db 20, DITTO      ;  4% chance
 ;	db 20, DITTO      ;  1% chance
 	; day
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
+	db 20, RATTATA    ; 20% chance 50
+	db 20, RATTATA    ; 20% chance
+	db 20, KOFFING    ; 15% chance 25
+	db 20, KOFFING    ; 10% chance
+	db 20, RATTATA    ; 10% chance
+	db 20, MAGMAR     ; 10% chance 10
+	db 20, ZUBAT      ;  5% chance 10
+	db 20, ZUBAT      ;  5% chance
+	db 20, SLUGMA     ;  4% chance 5
+	db 20, SLUGMA     ;  1% chance
 	; nite
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
+	db 20, RATTATA    ; 20% chance 50
+	db 20, RATTATA    ; 20% chance
+	db 20, KOFFING    ; 15% chance 25
+	db 20, KOFFING    ; 10% chance
+	db 20, RATTATA    ; 10% chance
+	db 20, MISDREAVUS ; 10% chance 10
+	db 20, ZUBAT      ;  5% chance 5
+	db 20, MAGMAR     ;  5% chance 5
+	db 20, SLUGMA     ;  4% chance 5
+	db 20, SLUGMA     ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons NATIONAL_PARK
@@ -1112,7 +1061,7 @@ JohtoGrassWildMons:
 	db 20, DITTO      ;  1% chance
 	end_grass_wildmons
 
-	def_grass_wildmons ICE_PATH_B2F_MAHOGANY_SIDE
+	def_grass_wildmons ICE_PATH_B2F_B3F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
 ;	db 20, DITTO      ; 20% chance
@@ -1149,9 +1098,20 @@ JohtoGrassWildMons:
 	db 20, DITTO      ;  1% chance
 	end_grass_wildmons
 
-	def_grass_wildmons ICE_PATH_B2F_BLACKTHORN_SIDE
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
-	; morn
+;	def_grass_wildmons ICE_PATH_B2F_MAHOGANY_SIDE
+;	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+;	; morn
+;;	db 20, DITTO      ; 20% chance
+;;	db 20, DITTO      ; 20% chance
+;;	db 20, DITTO      ; 15% chance
+;;	db 20, DITTO      ; 10% chance
+;;	db 20, DITTO      ; 10% chance
+;;	db 20, DITTO      ; 10% chance
+;;	db 20, DITTO      ;  5% chance
+;;	db 20, DITTO      ;  5% chance
+;;	db 20, DITTO      ;  4% chance
+;;	db 20, DITTO      ;  1% chance
+;	; day
 ;	db 20, DITTO      ; 20% chance
 ;	db 20, DITTO      ; 20% chance
 ;	db 20, DITTO      ; 15% chance
@@ -1162,33 +1122,33 @@ JohtoGrassWildMons:
 ;	db 20, DITTO      ;  5% chance
 ;	db 20, DITTO      ;  4% chance
 ;	db 20, DITTO      ;  1% chance
-	; day
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
-	; nite
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
-	end_grass_wildmons
+;	; nite
+;	db 20, DITTO      ; 20% chance
+;	db 20, DITTO      ; 20% chance
+;	db 20, DITTO      ; 15% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ;  5% chance
+;	db 20, DITTO      ;  5% chance
+;	db 20, DITTO      ;  4% chance
+;	db 20, DITTO      ;  1% chance
+;	end_grass_wildmons
 
-	def_grass_wildmons ICE_PATH_B3F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
-	; morn
+;	def_grass_wildmons ICE_PATH_B2F_BLACKTHORN_SIDE
+;	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+;	; morn
+;;	db 20, DITTO      ; 20% chance
+;;	db 20, DITTO      ; 20% chance
+;;	db 20, DITTO      ; 15% chance
+;;	db 20, DITTO      ; 10% chance
+;;	db 20, DITTO      ; 10% chance
+;;	db 20, DITTO      ; 10% chance
+;;	db 20, DITTO      ;  5% chance
+;;	db 20, DITTO      ;  5% chance
+;;	db 20, DITTO      ;  4% chance
+;;	db 20, DITTO      ;  1% chance
+;	; day
 ;	db 20, DITTO      ; 20% chance
 ;	db 20, DITTO      ; 20% chance
 ;	db 20, DITTO      ; 15% chance
@@ -1199,29 +1159,55 @@ JohtoGrassWildMons:
 ;	db 20, DITTO      ;  5% chance
 ;	db 20, DITTO      ;  4% chance
 ;	db 20, DITTO      ;  1% chance
-	; day
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
-	; nite
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
-	end_grass_wildmons
+;	; nite
+;	db 20, DITTO      ; 20% chance
+;	db 20, DITTO      ; 20% chance
+;	db 20, DITTO      ; 15% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ;  5% chance
+;	db 20, DITTO      ;  5% chance
+;	db 20, DITTO      ;  4% chance
+;	db 20, DITTO      ;  1% chance
+;	end_grass_wildmons
+
+;	def_grass_wildmons ICE_PATH_B3F
+;	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+;	; morn
+;;	db 20, DITTO      ; 20% chance
+;;	db 20, DITTO      ; 20% chance
+;;	db 20, DITTO      ; 15% chance
+;;	db 20, DITTO      ; 10% chance
+;;	db 20, DITTO      ; 10% chance
+;;	db 20, DITTO      ; 10% chance
+;;	db 20, DITTO      ;  5% chance
+;;	db 20, DITTO      ;  5% chance
+;;	db 20, DITTO      ;  4% chance
+;;	db 20, DITTO      ;  1% chance
+;	; day
+;	db 20, DITTO      ; 20% chance
+;	db 20, DITTO      ; 20% chance
+;	db 20, DITTO      ; 15% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ;  5% chance
+;	db 20, DITTO      ;  5% chance
+;	db 20, DITTO      ;  4% chance
+;	db 20, DITTO      ;  1% chance
+;	; nite
+;	db 20, DITTO      ; 20% chance
+;	db 20, DITTO      ; 20% chance
+;	db 20, DITTO      ; 15% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ;  5% chance
+;	db 20, DITTO      ;  5% chance
+;	db 20, DITTO      ;  4% chance
+;	db 20, DITTO      ;  1% chance
+;	end_grass_wildmons
 
 	def_grass_wildmons WHIRL_ISLAND_NW
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
