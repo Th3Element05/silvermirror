@@ -74,14 +74,14 @@ IcePathB1F_MapEvents:
 
 	def_warp_events
 	warp_event  3, 15, ICE_PATH_1F, 3 ;1
-	warp_event 17,  3, ICE_PATH_B2F_MAHOGANY_SIDE, 1 ;2
-	warp_event 11,  2, ICE_PATH_B2F_MAHOGANY_SIDE, 3 ;3 hole
-	warp_event  4,  7, ICE_PATH_B2F_MAHOGANY_SIDE, 4 ;4 hole
-	warp_event  5, 12, ICE_PATH_B2F_MAHOGANY_SIDE, 5 ;5 hole
-	warp_event 12, 13, ICE_PATH_B2F_MAHOGANY_SIDE, 6 ;6 hole
+	warp_event 17,  3, ICE_PATH_B2F_B3F, 1 ;2      ;ICE_PATH_B2F_MAHOGANY_SIDE, 1
+	warp_event 11,  2, ICE_PATH_B2F_B3F, 3 ;3 hole ;ICE_PATH_B2F_MAHOGANY_SIDE, 3
+	warp_event  4,  7, ICE_PATH_B2F_B3F, 4 ;4 hole ;ICE_PATH_B2F_MAHOGANY_SIDE, 4
+	warp_event  5, 12, ICE_PATH_B2F_B3F, 5 ;5 hole ;ICE_PATH_B2F_MAHOGANY_SIDE, 5
+	warp_event 12, 13, ICE_PATH_B2F_B3F, 6 ;6 hole ;ICE_PATH_B2F_MAHOGANY_SIDE, 6
 	warp_event  5, 25, ICE_PATH_1F, 4 ;7
-	warp_event 11, 27, ICE_PATH_B2F_BLACKTHORN_SIDE, 1 ;8
-	warp_event  3, 17, ICE_PATH_B2F_MAHOGANY_SIDE, 7 ;9
+	warp_event 11, 27, ICE_PATH_B2F_B3F, 8 ;8 ;ICE_PATH_B2F_BLACKTHORN_SIDE, 1
+	warp_event  3, 17, ICE_PATH_B2F_B3F, 7 ;9      ;ICE_PATH_B2F_MAHOGANY_SIDE, 7
 
 	def_coord_events
 

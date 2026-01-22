@@ -374,8 +374,9 @@ INCLUDE "maps/VioletKylesHouse.asm"
 INCLUDE "maps/TrainerHouse1F.asm"
 INCLUDE "maps/TrainerHouseB1F.asm"
 INCLUDE "maps/SproutTower1F.asm"
-INCLUDE "maps/SproutTower2F.asm"
-INCLUDE "maps/SproutTower3F.asm"
+INCLUDE "maps/SproutTower2F3F.asm"
+;INCLUDE "maps/SproutTower2F.asm"
+;INCLUDE "maps/SproutTower3F.asm"
 
 
 SECTION "Map Scripts 30", ROMX
@@ -490,14 +491,15 @@ SECTION "Map Scripts 38", ROMX
 INCLUDE "maps/EcruteakTinTowerEntrance.asm"
 INCLUDE "maps/WiseTriosRoom.asm"
 INCLUDE "maps/TinTower1F.asm"
-INCLUDE "maps/TinTower2F.asm"
-INCLUDE "maps/TinTower3F.asm"
-INCLUDE "maps/TinTower4F.asm"
-INCLUDE "maps/TinTower5F.asm"
-INCLUDE "maps/TinTower6F.asm"
-INCLUDE "maps/TinTower7F.asm"
-INCLUDE "maps/TinTower8F.asm"
-INCLUDE "maps/TinTower9F.asm"
+INCLUDE "maps/TinTowerFloors.asm"
+;INCLUDE "maps/TinTower2F.asm"
+;INCLUDE "maps/TinTower3F.asm"
+;INCLUDE "maps/TinTower4F.asm"
+;INCLUDE "maps/TinTower5F.asm"
+;INCLUDE "maps/TinTower6F.asm"
+;INCLUDE "maps/TinTower7F.asm"
+;INCLUDE "maps/TinTower8F.asm"
+;INCLUDE "maps/TinTower9F.asm"
 INCLUDE "maps/TinTowerRoof.asm"
 
 
@@ -606,9 +608,10 @@ SECTION "Map Scripts 48", ROMX
 INCLUDE "maps/Route44.asm"
 INCLUDE "maps/IcePath1F.asm"
 INCLUDE "maps/IcePathB1F.asm"
-INCLUDE "maps/IcePathB2FMahoganySide.asm"
-INCLUDE "maps/IcePathB2FBlackthornSide.asm"
-INCLUDE "maps/IcePathB3F.asm"
+INCLUDE "maps/IcePathB2FB3F.asm"
+;INCLUDE "maps/IcePathB2FMahoganySide.asm"
+;INCLUDE "maps/IcePathB2FBlackthornSide.asm"
+;INCLUDE "maps/IcePathB3F.asm"
 
 
 SECTION "Map Scripts 49", ROMX
