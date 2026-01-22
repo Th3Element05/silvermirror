@@ -115,6 +115,7 @@ Landmarks:
 	landmark 100,  92, SSAnneName
 	landmark  84,  68, RocketHideoutName
 	landmark 140, 116, FastShipName
+	landmark 112,  40, NinjaDenName
 	assert_table_length NUM_LANDMARKS
 
 ;; johto
@@ -284,3 +285,4 @@ SafariZoneName:      db "SAFARI ZONE@"
 SpecialMapName:      db "SPECIAL@"
 ;SafariZoneGateName:  db "SAFARI ZONE¯GATE@"
 RocketHideoutName:   db "ROCKET¯HIDEOUT@"
+NinjaDenName:        db "NINJA¯DEN@"
