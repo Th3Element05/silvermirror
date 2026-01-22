@@ -55,7 +55,9 @@ BurnedTowerLostGirlScript:
 	writetext BurnedTowerGirl_AfterText
 	waitbutton
 	closetext
+	wildoff
 	setevent EVENT_HOLE_IN_BURNED_TOWER
+	setscene SCENE_ECRUTEAKCITY_NOOP
 	pause 15
 	warpcheck
 	end

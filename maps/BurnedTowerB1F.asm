@@ -86,6 +86,7 @@ ReleaseTheBeasts:
 	reloadmappart
 	closetext
 	setscene SCENE_BURNEDTOWERB1F_NOOP
+	setscene SCENE_ECRUTEAKCITY_NOOP
 	end
 
 BurnedTowerRaikouMovement:
@@ -143,6 +144,7 @@ BurnedTowerB1FGramps:
 	writetext BurnedTowerB1FGrampsText
 	waitbutton
 	closetext
+	wildon
 	applymovement BURNEDTOWERB1F_GRAMPS, BurnedTowerB1FGrampsMovement
 	disappear BURNEDTOWERB1F_GRAMPS
 	playsound SFX_EXIT_BUILDING
