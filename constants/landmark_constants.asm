@@ -108,6 +108,7 @@ DEF KANTO_LANDMARK EQU const_value
 	const LANDMARK_SS_ANNE           ; 65
 	const LANDMARK_ROCKET_HIDEOUT    ; 66
 	const LANDMARK_FAST_SHIP         ; 67
+	const LANDMARK_NINJA_DEN         ; 68
 DEF NUM_LANDMARKS EQU const_value
 
 ; used in CaughtData
