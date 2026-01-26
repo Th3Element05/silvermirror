@@ -1209,7 +1209,7 @@ JohtoGrassWildMonsChallenge:
 ;	db 20, DITTO      ;  1% chance
 ;	end_grass_wildmons
 
-	def_grass_wildmons WHIRL_ISLAND_NW
+	def_grass_wildmons WHIRL_ISLAND_CAVES
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 ;	db 20, DITTO      ; 20% chance
@@ -1246,7 +1246,137 @@ JohtoGrassWildMonsChallenge:
 	db 20, DITTO      ;  1% chance
 	end_grass_wildmons
 
-	def_grass_wildmons WHIRL_ISLAND_NE
+;	def_grass_wildmons WHIRL_ISLAND_NW
+;	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+;	; day
+;	db 20, DITTO      ; 20% chance
+;	db 20, DITTO      ; 20% chance
+;	db 20, DITTO      ; 15% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ;  5% chance
+;	db 20, DITTO      ;  5% chance
+;	db 20, DITTO      ;  4% chance
+;	db 20, DITTO      ;  1% chance
+;	; nite
+;	db 20, DITTO      ; 20% chance
+;	db 20, DITTO      ; 20% chance
+;	db 20, DITTO      ; 15% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ;  5% chance
+;	db 20, DITTO      ;  5% chance
+;	db 20, DITTO      ;  4% chance
+;	db 20, DITTO      ;  1% chance
+;	end_grass_wildmons
+
+;	def_grass_wildmons WHIRL_ISLAND_NE
+;	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+;	; day
+;	db 20, DITTO      ; 20% chance
+;	db 20, DITTO      ; 20% chance
+;	db 20, DITTO      ; 15% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ;  5% chance
+;	db 20, DITTO      ;  5% chance
+;	db 20, DITTO      ;  4% chance
+;	db 20, DITTO      ;  1% chance
+;	; nite
+;	db 20, DITTO      ; 20% chance
+;	db 20, DITTO      ; 20% chance
+;	db 20, DITTO      ; 15% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ;  5% chance
+;	db 20, DITTO      ;  5% chance
+;	db 20, DITTO      ;  4% chance
+;	db 20, DITTO      ;  1% chance
+;	end_grass_wildmons
+
+;	def_grass_wildmons WHIRL_ISLAND_SW
+;	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+;	; day
+;	db 20, DITTO      ; 20% chance
+;	db 20, DITTO      ; 20% chance
+;	db 20, DITTO      ; 15% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ;  5% chance
+;	db 20, DITTO      ;  5% chance
+;	db 20, DITTO      ;  4% chance
+;	db 20, DITTO      ;  1% chance
+;	; nite
+;	db 20, DITTO      ; 20% chance
+;	db 20, DITTO      ; 20% chance
+;	db 20, DITTO      ; 15% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ;  5% chance
+;	db 20, DITTO      ;  5% chance
+;	db 20, DITTO      ;  4% chance
+;	db 20, DITTO      ;  1% chance
+;	end_grass_wildmons
+
+;	def_grass_wildmons WHIRL_ISLAND_SE
+;	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+;	; day
+;	db 20, DITTO      ; 20% chance
+;	db 20, DITTO      ; 20% chance
+;	db 20, DITTO      ; 15% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ;  5% chance
+;	db 20, DITTO      ;  5% chance
+;	db 20, DITTO      ;  4% chance
+;	db 20, DITTO      ;  1% chance
+;	; nite
+;	db 20, DITTO      ; 20% chance
+;	db 20, DITTO      ; 20% chance
+;	db 20, DITTO      ; 15% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ;  5% chance
+;	db 20, DITTO      ;  5% chance
+;	db 20, DITTO      ;  4% chance
+;	db 20, DITTO      ;  1% chance
+;	end_grass_wildmons
+
+;	def_grass_wildmons WHIRL_ISLAND_CAVE
+;	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+;	; day
+;	db 20, DITTO      ; 20% chance
+;	db 20, DITTO      ; 20% chance
+;	db 20, DITTO      ; 15% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ;  5% chance
+;	db 20, DITTO      ;  5% chance
+;	db 20, DITTO      ;  4% chance
+;	db 20, DITTO      ;  1% chance
+;	; nite
+;	db 20, DITTO      ; 20% chance
+;	db 20, DITTO      ; 20% chance
+;	db 20, DITTO      ; 15% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ;  5% chance
+;	db 20, DITTO      ;  5% chance
+;	db 20, DITTO      ;  4% chance
+;	db 20, DITTO      ;  1% chance
+;	end_grass_wildmons
+
+	def_grass_wildmons WHIRL_ISLAND_B1F_B2F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 ;	db 20, DITTO      ; 20% chance
@@ -1283,9 +1413,9 @@ JohtoGrassWildMonsChallenge:
 	db 20, DITTO      ;  1% chance
 	end_grass_wildmons
 
-	def_grass_wildmons WHIRL_ISLAND_SW
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
-	; morn
+;	def_grass_wildmons WHIRL_ISLAND_B1F
+;	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+;	; day
 ;	db 20, DITTO      ; 20% chance
 ;	db 20, DITTO      ; 20% chance
 ;	db 20, DITTO      ; 15% chance
@@ -1296,33 +1426,22 @@ JohtoGrassWildMonsChallenge:
 ;	db 20, DITTO      ;  5% chance
 ;	db 20, DITTO      ;  4% chance
 ;	db 20, DITTO      ;  1% chance
-	; day
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
-	; nite
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
-	end_grass_wildmons
+;	; nite
+;	db 20, DITTO      ; 20% chance
+;	db 20, DITTO      ; 20% chance
+;	db 20, DITTO      ; 15% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ; 10% chance
+;	db 20, DITTO      ;  5% chance
+;	db 20, DITTO      ;  5% chance
+;	db 20, DITTO      ;  4% chance
+;	db 20, DITTO      ;  1% chance
+;	end_grass_wildmons
 
-	def_grass_wildmons WHIRL_ISLAND_CAVE
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
-	; morn
+;	def_grass_wildmons WHIRL_ISLAND_B2F
+;	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+;	; day
 ;	db 20, DITTO      ; 20% chance
 ;	db 20, DITTO      ; 20% chance
 ;	db 20, DITTO      ; 15% chance
@@ -1333,33 +1452,7 @@ JohtoGrassWildMonsChallenge:
 ;	db 20, DITTO      ;  5% chance
 ;	db 20, DITTO      ;  4% chance
 ;	db 20, DITTO      ;  1% chance
-	; day
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
-	; nite
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
-	end_grass_wildmons
-
-	def_grass_wildmons WHIRL_ISLAND_SE
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
-	; morn
+;	; nite
 ;	db 20, DITTO      ; 20% chance
 ;	db 20, DITTO      ; 20% chance
 ;	db 20, DITTO      ; 15% chance
@@ -1370,103 +1463,7 @@ JohtoGrassWildMonsChallenge:
 ;	db 20, DITTO      ;  5% chance
 ;	db 20, DITTO      ;  4% chance
 ;	db 20, DITTO      ;  1% chance
-	; day
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
-	; nite
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
-	end_grass_wildmons
-
-	def_grass_wildmons WHIRL_ISLAND_B1F
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
-	; morn
-;	db 20, DITTO      ; 20% chance
-;	db 20, DITTO      ; 20% chance
-;	db 20, DITTO      ; 15% chance
-;	db 20, DITTO      ; 10% chance
-;	db 20, DITTO      ; 10% chance
-;	db 20, DITTO      ; 10% chance
-;	db 20, DITTO      ;  5% chance
-;	db 20, DITTO      ;  5% chance
-;	db 20, DITTO      ;  4% chance
-;	db 20, DITTO      ;  1% chance
-	; day
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
-	; nite
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
-	end_grass_wildmons
-
-	def_grass_wildmons WHIRL_ISLAND_B2F
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
-	; morn
-;	db 20, DITTO      ; 20% chance
-;	db 20, DITTO      ; 20% chance
-;	db 20, DITTO      ; 15% chance
-;	db 20, DITTO      ; 10% chance
-;	db 20, DITTO      ; 10% chance
-;	db 20, DITTO      ; 10% chance
-;	db 20, DITTO      ;  5% chance
-;	db 20, DITTO      ;  5% chance
-;	db 20, DITTO      ;  4% chance
-;	db 20, DITTO      ;  1% chance
-	; day
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
-	; nite
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
-	end_grass_wildmons
+;	end_grass_wildmons
 
 	def_grass_wildmons WHIRL_ISLAND_LUGIA_CHAMBER
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
