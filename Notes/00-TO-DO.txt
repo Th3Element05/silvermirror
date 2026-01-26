@@ -15,31 +15,8 @@ EGG BABIES
 engine\events\daycare.asm
 ; Nidoran♀ can give birth to either gender of Nidoran
 
-PICHU		pikachu
-CLEFFA		clefairy
-IGGLYBUFF	jigglypuff
-SMOOCHUM	jynx
-ELEKID		electabuzz
-MAGBY		magmar
-~
-TYROGUE		hitmonlee/hitmonchan
-~
-UNOWN
 
-tangrowth	M_ancientpower
-~
-gliscor		razor fang @ night
-honchkrow	dusk stone
-mamoswine	M_ancientpower
-mismagius	dusk stone
-weavile		razor claw @ night
-yanmega		M_ancientpower
-x
-togekiss	shiny stone (happiness?)
-ambipom		M_double hit
-magnezone	thunderstone?
-
-
+00-Remove-Babies.txt
 
 
 ; wStatusFlags::

@@ -1,0 +1,53 @@
+remove:
+	PICHU		pikachu
+	CLEFFA		clefairy
+	IGGLYBUFF	jigglypuff
+	SMOOCHUM	jynx
+	ELEKID		electabuzz
+	MAGBY		magmar
+	  TOGEPI
+	  TOGETIC
+	    253
+
+add:
+	gliscor		H_razor_fang @night
+	honchkrow	dusk_stone
+	mamoswine	M_ancientpower
+	mismagius	dusk_stone
+	weavile		H_razor_claw @night
+	yanmega		M_ancientpower
+	  tangrowth	M_ancientpower
+	  magnezone	thunderstone
+	    ambipom	M_double_hit
+	not:
+	togekiss	shiny_stone (happiness?)
+
+
+credits (Polished Crystal)
+
+GLISCOR		
+HONCHKROW	BloodlessNS
+MAMOSWINE	
+MISMAGIUS	BloodlessNS, SoupPotato
+WEAVILE		
+YANMEGA		
+AMBIPOM		Scarlax
+TANGROWTH	
+MAGNEZONE	Scarlax (BloodlessNS, SoupPotato)
+
+mauvesea sprites (most of them)
+ShadowOne333 sprites (most of them)
+BloodlessNS sprites (most of them)
+Scarlax
+SoupPotato
+
+Blue Emerald
+solo993
+Chamber
+Lake
+Neslug
+Pikachu25
+metalflygon08
+JaceDeane
+
+Satoshi Tajiri, Game Freak, and Nintendo for creating Pokémon Crystal in the first place.
