@@ -464,7 +464,7 @@ ENDM
 	map_const SILPH_CO_10F,                                 8,  9 ; 29
 	map_const SILPH_CO_11F,                                 9,  9 ; 30
 	map_const SILPH_CO_ELEVATOR,                            2,  2 ; 30
-	map_const SEAFOAM_ISLANDS,                             15, 10 ; 31
+	map_const SEAFOAM_ISLANDS,                             16, 10 ; 31
 	map_const SEAFOAM_ISLANDS_B1F,                         15, 10 ; 32
 	map_const SEAFOAM_ISLANDS_B2F,                         15, 10 ; 33
 	map_const SEAFOAM_ISLANDS_B3F,                         15, 11 ; 34
@@ -547,17 +547,19 @@ ENDM
 ;	map_const ICE_PATH_B2F_MAHOGANY_SIDE,                  10,  9     ; 103
 ;	map_const ICE_PATH_B2F_BLACKTHORN_SIDE,                 5,  9     ; 104
 ;	map_const ICE_PATH_B3F,                                10,  9     ; 105
-	map_const WHIRL_ISLAND_NW,                              5,  9 ; 106
-	map_const WHIRL_ISLAND_NE,                             10,  9 ; 107
-	map_const WHIRL_ISLAND_SW,                             10,  9 ; 108
-	map_const WHIRL_ISLAND_CAVE,                            5,  9 ; 109
-	map_const WHIRL_ISLAND_SE,                              5,  9 ; 110
-	map_const WHIRL_ISLAND_B1F,                            20, 18 ; 111
-	map_const WHIRL_ISLAND_B2F,                            10, 18 ; 112
+	map_const WHIRL_ISLAND_CAVES,                          21, 19 ; 106
+;	map_const WHIRL_ISLAND_NW,                              5,  9 ; 106
+;	map_const WHIRL_ISLAND_NE,                             10,  9 ; 107
+;	map_const WHIRL_ISLAND_SW,                             10,  9 ; 108
+;	map_const WHIRL_ISLAND_SE,                              5,  9 ; 109
+;	map_const WHIRL_ISLAND_CAVE,                            5,  9 ; 110
+	map_const WHIRL_ISLAND_B1F_B2F,                        31, 18 ; 111
+;	map_const WHIRL_ISLAND_B1F,                            20, 18 ; 111
+;	map_const WHIRL_ISLAND_B2F,                            10, 18 ; 112
 	map_const WHIRL_ISLAND_LUGIA_CHAMBER,                  10,  9 ; 113
 	map_const SILVER_CAVE_ROOM_1,                          10, 18 ; 114
 	map_const SILVER_CAVE_ROOM_2,                          15, 17 ; 115
-	map_const SILVER_CAVE_ROOM_3,                          10, 18 ; 116
+	map_const SILVER_CAVE_ROOM_3,                          16, 16 ; 116 ;10, 18
 	map_const SILVER_CAVE_ITEM_ROOMS,                      10,  9 ; 117
 	map_const DARK_CAVE_VIOLET_ENTRANCE,                   20, 18 ; 118
 	map_const DARK_CAVE_BLACKTHORN_ENTRANCE,               17, 18 ; 119
