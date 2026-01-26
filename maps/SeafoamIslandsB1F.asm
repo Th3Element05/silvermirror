@@ -64,14 +64,14 @@ SeafoamIslandsB1F_MapEvents:
 	warp_event  7,  7, SEAFOAM_ISLANDS, 3 ; 1 up
 	warp_event 25,  3, SEAFOAM_ISLANDS, 4 ; 2 up
 	warp_event 23, 17, SEAFOAM_ISLANDS, 5 ; 3 up
-	warp_event  6,  5, SEAFOAM_ISLANDS_B2F, 1 ; 4 down
+	warp_event  5,  5, SEAFOAM_ISLANDS_B2F, 1 ; 4 down
 	warp_event 13,  9, SEAFOAM_ISLANDS_B2F, 2 ; 5 down
-	warp_event 18, 17, SEAFOAM_ISLANDS_B2F, 3 ; 6 down
+	warp_event 17, 17, SEAFOAM_ISLANDS_B2F, 3 ; 6 down
 	warp_event 25, 13, SEAFOAM_ISLANDS_B2F, 4 ; 7 down
 	warp_event 18,  9, SEAFOAM_ISLANDS_B2F, 10 ; 8 pit
-	warp_event 23,  8, SEAFOAM_ISLANDS_B2F, 11 ; 9 pit
+	warp_event 24,  7, SEAFOAM_ISLANDS_B2F, 11 ; 9 pit
 	warp_event 17,  8, SEAFOAM_ISLANDS, 6 ; 10 fall
-	warp_event 24,  7, SEAFOAM_ISLANDS, 7 ; 11 fall
+	warp_event 23,  8, SEAFOAM_ISLANDS, 7 ; 11 fall
 
 	def_coord_events
 
