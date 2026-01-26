@@ -260,6 +260,8 @@ Route3_MapEvents:
 	def_warp_events
 	warp_event 56,  5, MOUNT_MOON, 4
 	warp_event 49,  5, MOUNT_MOON_POKECENTER_1F, 1
+;	warp_event  6,  5, MOUNT_MOON, 7
+;	warp_event 13,  5, MOUNT_MOON_GIFT_SHOP, 1
 
 	def_coord_events
 
