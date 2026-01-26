@@ -210,7 +210,7 @@ JohtoWaterWildMons:
 	db 15, MAGIKARP   ; 10
 	end_water_wildmons
 
-	def_water_wildmons WHIRL_ISLAND_SW
+	def_water_wildmons WHIRL_ISLAND_CAVES
 	db 4 percent ; encounter rate
 	db 20, TENTACOOL
 	db 15, HORSEA
@@ -218,7 +218,15 @@ JohtoWaterWildMons:
 	db 15, MAGIKARP   ; 10
 	end_water_wildmons
 
-	def_water_wildmons WHIRL_ISLAND_B2F
+;	def_water_wildmons WHIRL_ISLAND_SW
+;	db 4 percent ; encounter rate
+;	db 20, TENTACOOL
+;	db 15, HORSEA
+;	db 20, TENTACRUEL
+;	db 15, MAGIKARP   ; 10
+;	end_water_wildmons
+
+	def_water_wildmons WHIRL_ISLAND_B1F_B2F
 	db 4 percent ; encounter rate
 	db 15, HORSEA
 	db 20, HORSEA
@@ -226,8 +234,16 @@ JohtoWaterWildMons:
 	db 15, MAGIKARP   ; 10
 	end_water_wildmons
 
+;	def_water_wildmons WHIRL_ISLAND_B2F
+;	db 4 percent ; encounter rate
+;	db 15, HORSEA
+;	db 20, HORSEA
+;	db 20, TENTACRUEL
+;	db 15, MAGIKARP   ; 10
+;	end_water_wildmons
+
 	def_water_wildmons WHIRL_ISLAND_LUGIA_CHAMBER
-	db 4 percent ; encounter rate
+	db 1 percent ; encounter rate
 	db 20, HORSEA
 	db 20, TENTACRUEL
 	db 20, SEADRA
