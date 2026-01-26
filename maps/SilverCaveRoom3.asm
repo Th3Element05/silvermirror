@@ -48,15 +48,30 @@ RedLeavesText:
 	line "<……>"
 	done
 
+
+; item rooms
+SilverCaveItemRoomsMaxRevive:
+	itemball MAX_REVIVE
+
+SilverCaveItemRoomsFullRestore:
+	itemball FULL_RESTORE
+
+
 SilverCaveRoom3_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  9, 33, SILVER_CAVE_ROOM_2, 2
+	warp_event 21, 29, SILVER_CAVE_ROOM_2, 2
+; item rooms
+	warp_event  3,  7, SILVER_CAVE_ROOM_2, 4
+	warp_event  5, 29, SILVER_CAVE_ROOM_2, 3
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event  9, 10, SPRITE_CHRIS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Red, EVENT_RED_IN_MT_SILVER
+	object_event 22,  6, SPRITE_CHRIS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Red, EVENT_RED_IN_MT_SILVER
+; item rooms
+	object_event  4,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SilverCaveItemRoomsMaxRevive, EVENT_SILVER_CAVE_ITEM_ROOMS_MAX_REVIVE
+	object_event  4, 19, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SilverCaveItemRoomsFullRestore, EVENT_SILVER_CAVE_ITEM_ROOMS_FULL_RESTORE
