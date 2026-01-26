@@ -693,26 +693,32 @@ IcePathB2FB3F_Blocks:
 ;IcePathB3F_Blocks:
 ;	INCBIN "maps/IcePathB3F.blk"
 
-WhirlIslandNW_Blocks:
-	INCBIN "maps/WhirlIslandNW.blk"
+WhirlIslandCaves_Blocks:
+	INCBIN "maps/WhirlIslandCaves.blk"
 
-WhirlIslandNE_Blocks:
-	INCBIN "maps/WhirlIslandNE.blk"
+;WhirlIslandNW_Blocks:
+;	INCBIN "maps/WhirlIslandNW.blk"
 
-WhirlIslandSW_Blocks:
-	INCBIN "maps/WhirlIslandSW.blk"
+;WhirlIslandNE_Blocks:
+;	INCBIN "maps/WhirlIslandNE.blk"
 
-WhirlIslandCave_Blocks:
-	INCBIN "maps/WhirlIslandCave.blk"
+;WhirlIslandSW_Blocks:
+;	INCBIN "maps/WhirlIslandSW.blk"
 
-WhirlIslandSE_Blocks:
-	INCBIN "maps/WhirlIslandSE.blk"
+;WhirlIslandSE_Blocks:
+;	INCBIN "maps/WhirlIslandSE.blk"
+
+;WhirlIslandCave_Blocks:
+;	INCBIN "maps/WhirlIslandCave.blk"
 
 WhirlIslandB1F_Blocks:
 	INCBIN "maps/WhirlIslandB1F.blk"
 
-WhirlIslandB2F_Blocks:
-	INCBIN "maps/WhirlIslandB2F.blk"
+;WhirlIslandB1F_Blocks:
+;	INCBIN "maps/WhirlIslandB1F.blk"
+
+;WhirlIslandB2F_Blocks:
+;	INCBIN "maps/WhirlIslandB2F.blk"
 
 WhirlIslandLugiaChamber_Blocks:
 	INCBIN "maps/WhirlIslandLugiaChamber.blk"
