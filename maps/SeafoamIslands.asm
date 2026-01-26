@@ -50,10 +50,10 @@ SeafoamIslands_MapEvents:
 
 	def_warp_events
 	warp_event  5, 15, ROUTE_20, 1 ; 1 out
-	warp_event 25, 17, ROUTE_20, 2 ; 2 out
+	warp_event 27, 17, ROUTE_20, 2 ; 2 out
 	warp_event  7,  5, SEAFOAM_ISLANDS_B1F, 1 ; 3 down
 	warp_event 25,  3, SEAFOAM_ISLANDS_B1F, 2 ; 4 down
-	warp_event 23, 17, SEAFOAM_ISLANDS_B1F, 3 ; 5 down
+	warp_event 25, 17, SEAFOAM_ISLANDS_B1F, 3 ; 5 down
 	warp_event 16,  7, SEAFOAM_ISLANDS_B1F, 10 ; 6 pit
 	warp_event 24,  7, SEAFOAM_ISLANDS_B1F, 11 ; 7 pit
 
