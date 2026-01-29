@@ -510,16 +510,16 @@ ChooseWildEncounter:
 	call ValidateTempWildMonSpecies
 	jr c, .nowildbattle
 
-; If the wild Pokemon is CORSOLA, check TimeOfDay and encounter STARYU instead if NITE.
-	cp CORSOLA
-	jr nz, .notcorsola
-	ld a, [wTimeOfDay]
-	cp NITE_F
-	jr nz, .done
-	ld b, STARYU
-	jr .done
-	
-.notcorsola
+;; If the wild Pokemon is CORSOLA, check TimeOfDay and encounter STARYU instead if NITE.
+;	cp CORSOLA
+;	jr nz, .notcorsola
+;	ld a, [wTimeOfDay]
+;	cp NITE_F
+;	jr nz, .done
+;	ld b, STARYU
+;	jr .done
+;	
+;.notcorsola
 ; If the wild Pokemon is UNOWN, only encounter forms that have been unlocked.
 	cp UNOWN
 	jr nz, .done
