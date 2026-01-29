@@ -113,13 +113,13 @@ GetFishGroupIndex:
 	jr z, .qwilfish
 	cp FISHGROUP_REMORAID
 	jr z, .remoraid
-	cp FISHGROUP_CHINCHOU
+	cp FISHGROUP_CHINCHOU ;alt CORSOLA
 	jr z, .chinchou
 	cp FISHGROUP_HORSEA ;removed alt MANTINE
 	jr z, .horsea
 	cp FISHGROUP_DRATINI
 	jr z, .dratini
-	cp FISHGROUP_STARYU ;alt CORSOLA
+	cp FISHGROUP_STARYU
 	jr z, .staryu
 	cp FISHGROUP_SHELLDER
 	jr z, .shellder
@@ -144,10 +144,20 @@ GetFishGroupIndex:
 	jr .done
 
 .chinchou
+	ld hl, wSwarmFlags
+	bit SWARMFLAGS_ALT_SWARM_F, [hl]
+	jr nz, .corsola
 	ld a, [wFishingSwarmFlag]
 	cp FISHSWARM_CHINCHOU
 	jr nz, .done
 	ld d, FISHGROUP_CHINCHOU_SWARM
+	jr .done
+
+.corsola
+	ld a, [wFishingSwarmFlag]
+	cp FISHSWARM_CORSOLA
+	jr nz, .done
+	ld d, FISHGROUP_CORSOLA_SWARM
 	jr .done
 
 .horsea
@@ -159,6 +169,7 @@ GetFishGroupIndex:
 	jr nz, .done
 	ld d, FISHGROUP_HORSEA_SWARM
 	jr .done
+
 ;.mantine
 ;	ld a, [wFishingSwarmFlag]
 ;	cp FISHSWARM_MANTINE
@@ -174,19 +185,10 @@ GetFishGroupIndex:
 	jr .done
 
 .staryu
-	ld hl, wSwarmFlags
-	bit SWARMFLAGS_ALT_SWARM_F, [hl]
-	jr nz, .corsola
 	ld a, [wFishingSwarmFlag]
 	cp FISHSWARM_STARYU
 	jr nz, .done
 	ld d, FISHGROUP_STARYU_SWARM
-	jr .done
-.corsola
-	ld a, [wFishingSwarmFlag]
-	cp FISHSWARM_CORSOLA
-	jr nz, .done
-	ld d, FISHGROUP_CORSOLA_SWARM
 	jr .done
 
 .shellder
