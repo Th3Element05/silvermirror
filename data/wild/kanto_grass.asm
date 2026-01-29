@@ -39,43 +39,6 @@ KantoGrassWildMons:
 	db  4, PIDGEY     ;  1% chance
 	end_grass_wildmons
 
-	def_grass_wildmons ROUTE_2_NORTH ;GEN1
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
-	; morn
-;	db  4, PIDGEY     ; 20% chance 50
-;	db  3, RATTATA    ; 20% chance 20
-;	db  3, PIDGEY     ; 15% chance
-;	db  3, PIDGEY     ; 10% chance
-;	db  3, NIDORAN_F  ; 10% chance 15
-;	db  3, NIDORAN_M  ; 10% chance 15
-;	db  4, PIDGEY     ;  5% chance
-;	db  4, NIDORAN_M  ;  5% chance
-;	db  4, NIDORAN_F  ;  4% chance
-;	db  4, NIDORAN_F  ;  1% chance
-	; day
-	db  4, PIDGEY     ; 20% chance 50
-	db  3, RATTATA    ; 20% chance 20
-	db  3, PIDGEY     ; 15% chance
-	db  3, PIDGEY     ; 10% chance
-	db  3, NIDORAN_F  ; 10% chance 15
-	db  3, NIDORAN_M  ; 10% chance 15
-	db  4, PIDGEY     ;  5% chance
-	db  4, NIDORAN_M  ;  5% chance
-	db  4, NIDORAN_F  ;  4% chance
-	db  4, NIDORAN_F  ;  1% chance
-	; nite
-	db  4, RATTATA    ; 20% chance 50
-	db  3, PIDGEY     ; 20% chance 20
-	db  3, RATTATA    ; 15% chance
-	db  3, RATTATA    ; 10% chance
-	db  3, NIDORAN_F  ; 10% chance 15
-	db  3, NIDORAN_M  ; 10% chance 15
-	db  4, RATTATA    ;  5% chance
-	db  4, NIDORAN_M  ;  5% chance
-	db  4, NIDORAN_F  ;  4% chance
-	db  4, NIDORAN_F  ;  1% chance
-	end_grass_wildmons
-
 	def_grass_wildmons ROUTE_2_SOUTH ;GEN1
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
@@ -111,6 +74,43 @@ KantoGrassWildMons:
 	db  3, NIDORAN_M  ;  5% chance
 	db  3, NIDORAN_F  ;  4% chance
 	db  3, NIDORAN_F  ;  1% chance
+	end_grass_wildmons
+
+	def_grass_wildmons ROUTE_2_NORTH ;GEN1
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+;	db  4, PIDGEY     ; 20% chance 50
+;	db  3, RATTATA    ; 20% chance 20
+;	db  3, PIDGEY     ; 15% chance
+;	db  3, PIDGEY     ; 10% chance
+;	db  3, NIDORAN_F  ; 10% chance 15
+;	db  3, NIDORAN_M  ; 10% chance 15
+;	db  4, PIDGEY     ;  5% chance
+;	db  4, NIDORAN_M  ;  5% chance
+;	db  4, NIDORAN_F  ;  4% chance
+;	db  4, NIDORAN_F  ;  1% chance
+	; day
+	db  4, PIDGEY     ; 20% chance 50
+	db  3, RATTATA    ; 20% chance 20
+	db  3, PIDGEY     ; 15% chance
+	db  3, PIDGEY     ; 10% chance
+	db  3, NIDORAN_F  ; 10% chance 15
+	db  3, NIDORAN_M  ; 10% chance 15
+	db  4, PIDGEY     ;  5% chance
+	db  4, NIDORAN_M  ;  5% chance
+	db  4, NIDORAN_F  ;  4% chance
+	db  4, NIDORAN_F  ;  1% chance
+	; nite
+	db  4, RATTATA    ; 20% chance 50
+	db  3, PIDGEY     ; 20% chance 20
+	db  3, RATTATA    ; 15% chance
+	db  3, RATTATA    ; 10% chance
+	db  3, NIDORAN_F  ; 10% chance 15
+	db  3, NIDORAN_M  ; 10% chance 15
+	db  4, RATTATA    ;  5% chance
+	db  4, NIDORAN_M  ;  5% chance
+	db  4, NIDORAN_F  ;  4% chance
+	db  4, NIDORAN_F  ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_3 ;GEN1
