@@ -1253,18 +1253,34 @@ CloysterEvosAttacks:
 ;	db 33, DREAM_EATER
 ;	db 36, DESTINY_BOND
 ;	db 0 ; no more level-up moves
-;
-GastlyEvosAttacks: ;silvermirror modified
+
+;GastlyEvosAttacks: ;silvermirror modified
+;	db EVOLVE_LEVEL, 25, HAUNTER
+;	db 0 ; no more evolutions
+;	db 1, HYPNOSIS
+;	db 1, SPITE
+;	db 1, LICK
+;	db 8, MEAN_LOOK
+;	db 12, CONFUSE_RAY
+;	db 16, HYPNOSIS
+;	db 21, NIGHT_SHADE
+;	db 28, CURSE
+;	db 33, DREAM_EATER
+;	db 36, DESTINY_BOND
+;	db 0 ; no more level-up moves
+
+GastlyEvosAttacks: ;silvermirror modified less
 	db EVOLVE_LEVEL, 25, HAUNTER
 	db 0 ; no more evolutions
 	db 1, HYPNOSIS
-	db 1, SPITE
 	db 1, LICK
-	db 8, MEAN_LOOK
-	db 12, CONFUSE_RAY
-	db 16, HYPNOSIS
+	db 8, SPITE
+	db 9, HYPNOSIS
+	db 10, LICK
+	db 13, MEAN_LOOK
+	db 16, CURSE
 	db 21, NIGHT_SHADE
-	db 28, CURSE
+	db 28, CONFUSE_RAY
 	db 33, DREAM_EATER
 	db 36, DESTINY_BOND
 	db 0 ; no more level-up moves
