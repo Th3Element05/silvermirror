@@ -204,7 +204,9 @@ OaksPKMNTalkSwarm1:
 	ld hl, wDailyFlags1
 	bit DAILYFLAGS1_SWARM_F, [hl]
 	jp nz, .check_alt_swarm
+;	jp .generate_flag
 	jp .challenge_check
+;	jp .hof_check
 
 .check_alt_swarm
 	ld hl, wSwarmFlags
@@ -212,13 +214,20 @@ OaksPKMNTalkSwarm1:
 	jp nz, .done
 
 .challenge_check
-;silvermirror ; Only do challenge mode check if in Kanto
-	call .InJohto
-	jp c, .generate_flag
-;silvermirror ; Check if challenge mode is active. If no, don't use alternate swarms.
+;;silvermirror ; Only do challenge mode check if in Kanto
+;	call .InJohto
+;	jp c, .generate_flag
+;;silvermirror ; Check if challenge mode is active. If yes, consider alternate swarms.
 	ld a, [wChallengeMode]
 	bit GAME_CHALLENGE_MODE_F, a
-	jr z, .normal_swarm
+	jr nz, .generate_flag
+
+;.hof_check
+;silvermirror ; Check if beat e4. If no, don't use alternate swarms.
+	ld a, [wStatusFlags]
+	bit STATUSFLAGS_HALL_OF_FAME_F, a
+	jr z, .normal_swarm ;.not_hof
+
 ; Choose normal or alternate swarm
 .generate_flag
 	call Random ; generate a random number below 8
