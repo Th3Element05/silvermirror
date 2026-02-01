@@ -47,8 +47,8 @@ KantoWaterWildMonsChallenge:
 	db 6 percent ; encounter rate
 	db 10, TENTACOOL  ; 50
 	db 10, HORSEA     ; 30
-	db 10, CORSOLA    ; 10
-	db 10, STARYU     ; 10
+	db 10, TENTACOOL  ; 10
+	db 10, TENTACOOL  ; 10
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_12 ;GEN2
@@ -56,7 +56,7 @@ KantoWaterWildMonsChallenge:
 	db 10, SLOWPOKE   ; 50
 	db 10, TENTACOOL  ; 30
 	db 10, WOOPER     ; 10
-	db 15, SLOWBRO    ; 10
+	db 10, WOOPER     ; 10
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_13 ;GEN2
@@ -64,22 +64,22 @@ KantoWaterWildMonsChallenge:
 	db 10, SLOWPOKE   ; 50
 	db 10, TENTACOOL  ; 30
 	db 10, WOOPER     ; 10
-	db 15, SLOWBRO    ; 10
+	db 10, WOOPER     ; 10
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_19 ;GEN2
 	db 6 percent ; encounter rate
 	db 15, TENTACOOL  ; 50
 	db 16, HORSEA     ; 30
-	db 15, CORSOLA    ; 10
-	db 16, STARYU     ; 10
+	db 10, TENTACOOL  ; 10
+	db 16, TENTACOOL  ; 10
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_20 ;GEN2
 	db 6 percent ; encounter rate
 	db 15, TENTACOOL  ; 50
 	db 16, HORSEA     ; 30
-	db 15, CORSOLA    ; 10
+	db 10, TENTACOOL  ; 10
 	db 16, MANTINE    ; 10
 	end_water_wildmons
 
@@ -87,7 +87,7 @@ KantoWaterWildMonsChallenge:
 	db 6 percent ; encounter rate
 	db 15, TENTACOOL  ; 50
 	db 16, HORSEA     ; 30
-	db 15, CORSOLA    ; 10
+	db 10, TENTACOOL  ; 10
 	db 16, MANTINE    ; 10
 	end_water_wildmons
 
@@ -102,7 +102,7 @@ KantoWaterWildMonsChallenge:
 	def_water_wildmons ROUTE_23 ;GEN2
 	db 4 percent ; encounter rate
 	db  5, MAGIKARP   ; 50
-	db  5, MAGIKARP   ; 30
+	db 10, MAGIKARP   ; 30
 	db 20, GYARADOS   ; 10
 	db 15, DRATINI    ; 10
 	end_water_wildmons
@@ -128,7 +128,7 @@ KantoWaterWildMonsChallenge:
 	db 10, TENTACOOL  ; 50
 	db 10, WOOPER     ; 30
 	db 10, SLOWPOKE   ; 10
-	db 15, SLOWBRO    ; 10
+	db 10, HORSEA     ; 10
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_27_EAST ;GEN2
@@ -136,13 +136,13 @@ KantoWaterWildMonsChallenge:
 	db 10, TENTACOOL  ; 50
 	db 10, WOOPER     ; 30
 	db 10, SLOWPOKE   ; 10
-	db 15, SLOWBRO    ; 10
+	db 10, HORSEA     ; 10
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_28 ;GEN2
 	db 6 percent ; encounter rate
 	db  5, MAGIKARP   ; 50
-	db  6, MAGIKARP   ; 30
+	db  8, MAGIKARP   ; 30
 	db 10, MAGIKARP   ; 10
 	db 20, GYARADOS   ; 10
 	end_water_wildmons
@@ -151,7 +151,7 @@ KantoWaterWildMonsChallenge:
 	db 4 percent ; encounter rate
 	db 15, TENTACOOL  ; 50
 	db 16, HORSEA     ; 30
-	db 15, CORSOLA    ; 10
+	db 10, TENTACOOL  ; 10
 	db 16, MANTINE    ; 10
 ;	end_water_wildmons
 
@@ -167,7 +167,7 @@ KantoWaterWildMonsChallenge:
 	db 4 percent ; encounter rate
 	db 10, GOLDEEN    ; 50
 	db 10, PSYDUCK    ; 30
-	db  5, MARILL     ; 10
+	db  8, MARILL     ; 10
 	db 15, SEAKING    ; 10
 	end_water_wildmons
 
@@ -175,16 +175,16 @@ KantoWaterWildMonsChallenge:
 	db 6 percent ; encounter rate
 	db 10, TENTACOOL  ; 50
 	db 10, HORSEA     ; 30
-	db 10, CORSOLA    ; 10
-	db 10, STARYU     ; 10
+	db 10, TENTACOOL  ; 10
+	db 10, TENTACOOL  ; 10
 	end_water_wildmons
 
 	def_water_wildmons VERMILION_PORT ;GEN2
 	db 6 percent ; encounter rate
 	db 15, TENTACOOL  ; 50
 	db 16, HORSEA     ; 30
-	db 15, CORSOLA    ; 10
-	db 16, STARYU     ; 10
+	db 10, TENTACOOL  ; 10
+	db 16, TENTACOOL  ; 10
 	end_water_wildmons
 
 	def_water_wildmons CELADON_CITY ;GEN2
@@ -207,14 +207,14 @@ KantoWaterWildMonsChallenge:
 	db 2 percent ; encounter rate
 	db 15, TENTACOOL  ; 50
 	db 16, HORSEA     ; 30
-	db 15, CORSOLA    ; 10
-	db 16, STARYU     ; 10
+	db 10, TENTACOOL  ; 10
+	db 16, TENTACOOL  ; 10
 	end_water_wildmons
 
 	def_water_wildmons CERULEAN_CAVE_1F ;GEN2
 	db 4 percent ; encounter rate
 	db 10, MAGIKARP   ; 50
-	db 10, GOLDUCK    ; 30
+	db 15, GOLDUCK    ; 30
 	db 20, SLOWBRO    ; 10
 	db 25, GYARADOS   ; 10
 	end_water_wildmons
@@ -222,7 +222,7 @@ KantoWaterWildMonsChallenge:
 	def_water_wildmons CERULEAN_CAVE_B1F ;GEN2
 	db 4 percent ; encounter rate
 	db 10, MAGIKARP   ; 50
-	db 10, GOLDUCK    ; 30
+	db 15, GOLDUCK    ; 30
 	db 20, SLOWBRO    ; 10
 	db 25, GYARADOS   ; 10
 	end_water_wildmons
@@ -231,7 +231,7 @@ KantoWaterWildMonsChallenge:
 	db 4 percent ; encounter rate
 	db 10, GOLDEEN    ; 50
 	db 10, SLOWPOKE   ; 30
-	db 10, GOLDEEN    ; 10
+	db  5, MAGIKARP   ; 10
 	db 15, SEAKING    ; 10
 	end_water_wildmons
 
@@ -246,33 +246,33 @@ KantoWaterWildMonsChallenge:
 	def_water_wildmons SAFARI_ZONE_AREA_1 ;GEN2
 	db 6 percent ; encounter rate
 	db  9, SLOWPOKE   ; 50
-	db  9, MARILL     ; 30
-	db  9, PSYDUCK    ; 10
-	db  9, PSYDUCK    ; 10
+	db  9, PSYDUCK    ; 30
+	db  9, GOLDEEN    ; 10
+	db  9, GOLDEEN    ; 10
 	end_water_wildmons
 
 	def_water_wildmons SAFARI_ZONE_AREA_2 ;GEN2
 	db 6 percent ; encounter rate
 	db  9, SLOWPOKE   ; 50
-	db  9, MARILL     ; 30
-	db  9, PSYDUCK    ; 10
-	db  9, PSYDUCK    ; 10
+	db  9, PSYDUCK    ; 30
+	db  9, POLIWAG    ; 10
+	db  9, POLIWAG    ; 10
 	end_water_wildmons
 
 	def_water_wildmons SAFARI_ZONE_AREA_3 ;GEN2
 	db 6 percent ; encounter rate
 	db  9, SLOWPOKE   ; 50
-	db  9, MARILL     ; 30
-	db  9, PSYDUCK    ; 10
-	db  9, PSYDUCK    ; 10
+	db  9, PSYDUCK    ; 30
+	db  9, WOOPER     ; 10
+	db  9, WOOPER     ; 10
 	end_water_wildmons
 
 	def_water_wildmons SAFARI_ZONE_AREA_4 ;GEN2
 	db 6 percent ; encounter rate
 	db  9, SLOWPOKE   ; 50
-	db  9, MARILL     ; 30
-	db  9, PSYDUCK    ; 10
-	db  9, PSYDUCK    ; 10
+	db  9, PSYDUCK    ; 30
+	db  9, MARILL     ; 10
+	db  9, MARILL     ; 10
 	end_water_wildmons
 
 	db -1 ; end
