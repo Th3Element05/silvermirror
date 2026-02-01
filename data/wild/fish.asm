@@ -12,30 +12,31 @@ ENDM
 FishGroups:
 ; entries correspond to FISHGROUP_* constants
 	table_width FISHGROUP_DATA_LENGTH, FishGroups
-	fishgroup 80 percent, .Pond_Old,             .Pond_Good,             .Pond_Super,             .Pond_Super_2
-	fishgroup 80 percent, .Remoraid_Old,         .Remoraid_Good,         .Remoraid_Super,         .Remoraid_Super_2
-	fishgroup 80 percent, .Remoraid_Swarm_Old,   .Remoraid_Swarm_Good,   .Remoraid_Swarm_Super,   .Remoraid_Swarm_Super_2
-	fishgroup 80 percent, .Lake_Old,             .Lake_Good,             .Lake_Super,             .Lake_Super_2
-	fishgroup 80 percent, .Qwilfish_NoSwarm_Old, .Qwilfish_NoSwarm_Good, .Qwilfish_NoSwarm_Super, .Qwilfish_NoSwarm_Super_2
-	fishgroup 80 percent, .Qwilfish_Old,         .Qwilfish_Good,         .Qwilfish_Super,         .Qwilfish_Super_2
-	fishgroup 80 percent, .Qwilfish_Swarm_Old,   .Qwilfish_Swarm_Good,   .Qwilfish_Swarm_Super,   .Qwilfish_Swarm_Super_2
-	fishgroup 80 percent, .Shore_Old,            .Shore_Good,            .Shore_Super,            .Shore_Super_2
-	fishgroup 80 percent, .Staryu_Old,           .Staryu_Good,           .Staryu_Super,           .Staryu_Super_2
-	fishgroup 80 percent, .Shellder_Old,         .Shellder_Good,         .Shellder_Super,         .Shellder_Super_2
-	fishgroup 80 percent, .Staryu_Swarm_Old,     .Staryu_Swarm_Good,     .Staryu_Swarm_Super,     .Staryu_Swarm_Super_2
-	fishgroup 80 percent, .Shellder_Swarm_Old,   .Shellder_Swarm_Good,   .Shellder_Swarm_Super,   .Shellder_Swarm_Super_2
-	fishgroup 80 percent, .Corsola_Swarm_Old,    .Corsola_Swarm_Good,    .Corsola_Swarm_Super,    .Corsola_Swarm_Super_2
-	fishgroup 80 percent, .Ocean_Old,            .Ocean_Good,            .Ocean_Super,            .Ocean_Super_2
-	fishgroup 80 percent, .Horsea_Old,           .Horsea_Good,           .Horsea_Super,           .Horsea_Super_2
-	fishgroup 80 percent, .Chinchou_Old,         .Chinchou_Good,         .Chinchou_Super,         .Chinchou_Super_2
-	fishgroup 80 percent, .Horsea_Swarm_Old,     .Horsea_Swarm_Good,     .Horsea_Swarm_Super,     .Horsea_Swarm_Super_2
-	fishgroup 80 percent, .Chinchou_Swarm_Old,   .Chinchou_Swarm_Good,   .Chinchou_Swarm_Super,   .Chinchou_Swarm_Super_2
-	fishgroup 80 percent, .Mantine_Swarm_Old,    .Mantine_Swarm_Good,    .Mantine_Swarm_Super,    .Mantine_Swarm_Super_2
-	fishgroup 80 percent, .Gyarados_Old,         .Gyarados_Good,         .Gyarados_Super,         .Gyarados_Super_2
-	fishgroup 80 percent, .Dratini_No_Swarm_Old, .Dratini_No_Swarm_Good, .Dratini_No_Swarm_Super, .Dratini_No_Swarm_Super_2
-	fishgroup 80 percent, .Dratini_Old,          .Dratini_Good,          .Dratini_Super,          .Dratini_Super_2
-	fishgroup 80 percent, .Dratini_Swarm_Old,    .Dratini_Swarm_Good,    .Dratini_Swarm_Super,    .Dratini_Swarm_Super_2
-	fishgroup 80 percent, .WhirlIslands_Old,     .WhirlIslands_Good,     .WhirlIslands_Super,     .WhirlIslands_Super_2
+	fishgroup 80 percent, .Pond_Old,              .Pond_Good,              .Pond_Super,              .Pond_Super_2
+	fishgroup 80 percent, .Remoraid_Old,          .Remoraid_Good,          .Remoraid_Super,          .Remoraid_Super_2
+	fishgroup 80 percent, .Remoraid_Swarm_Old,    .Remoraid_Swarm_Good,    .Remoraid_Swarm_Super,    .Remoraid_Swarm_Super_2
+	fishgroup 80 percent, .Lake_Old,              .Lake_Good,              .Lake_Super,              .Lake_Super_2
+	fishgroup 80 percent, .Chinchou_Lake_Old,     .Chinchou_Lake_Good,     .Chinchou_Lake_Super,     .Chinchou_Lake_Super_2
+;	fishgroup 80 percent, .Qwilfish_NoSwarm_Old,  .Qwilfish_NoSwarm_Good,  .Qwilfish_NoSwarm_Super,  .Qwilfish_NoSwarm_Super_2
+	fishgroup 80 percent, .Qwilfish_Old,          .Qwilfish_Good,          .Qwilfish_Super,          .Qwilfish_Super_2
+	fishgroup 80 percent, .Qwilfish_Swarm_Old,    .Qwilfish_Swarm_Good,    .Qwilfish_Swarm_Super,    .Qwilfish_Swarm_Super_2
+	fishgroup 80 percent, .Shore_Old,             .Shore_Good,             .Shore_Super,             .Shore_Super_2
+	fishgroup 80 percent, .Chinchou_No_Swarm_Old, .Chinchou_No_Swarm_Good, .Chinchou_No_Swarm_Super, .Chinchou_No_Swarm_Super_2
+	fishgroup 80 percent, .Chinchou_Old,          .Chinchou_Good,          .Chinchou_Super,          .Chinchou_Super_2
+	fishgroup 80 percent, .Staryu_Old,            .Staryu_Good,            .Staryu_Super,            .Staryu_Super_2
+	fishgroup 80 percent, .Shellder_Old,          .Shellder_Good,          .Shellder_Super,          .Shellder_Super_2
+	fishgroup 80 percent, .Staryu_Swarm_Old,      .Staryu_Swarm_Good,      .Staryu_Swarm_Super,      .Staryu_Swarm_Super_2
+	fishgroup 80 percent, .Shellder_Swarm_Old,    .Shellder_Swarm_Good,    .Shellder_Swarm_Super,    .Shellder_Swarm_Super_2
+	fishgroup 80 percent, .Corsola_Swarm_Old,     .Corsola_Swarm_Good,     .Corsola_Swarm_Super,     .Corsola_Swarm_Super_2
+	fishgroup 80 percent, .Chinchou_Swarm_Old,    .Chinchou_Swarm_Good,    .Chinchou_Swarm_Super,    .Chinchou_Swarm_Super_2
+	fishgroup 80 percent, .Ocean_Old,             .Ocean_Good,             .Ocean_Super,             .Ocean_Super_2
+	fishgroup 80 percent, .Horsea_Old,            .Horsea_Good,            .Horsea_Super,            .Horsea_Super_2
+	fishgroup 80 percent, .Horsea_Swarm_Old,      .Horsea_Swarm_Good,      .Horsea_Swarm_Super,      .Horsea_Swarm_Super_2
+	fishgroup 80 percent, .Gyarados_Old,          .Gyarados_Good,          .Gyarados_Super,          .Gyarados_Super_2
+	fishgroup 80 percent, .Dratini_No_Swarm_Old,  .Dratini_No_Swarm_Good,  .Dratini_No_Swarm_Super,  .Dratini_No_Swarm_Super_2
+	fishgroup 80 percent, .Dratini_Old,           .Dratini_Good,           .Dratini_Super,           .Dratini_Super_2
+	fishgroup 80 percent, .Dratini_Swarm_Old,     .Dratini_Swarm_Good,     .Dratini_Swarm_Super,     .Dratini_Swarm_Super_2
+	fishgroup 80 percent, .WhirlIslands_Old,      .WhirlIslands_Good,      .WhirlIslands_Super,      .WhirlIslands_Super_2
 	assert_table_length NUM_FISHGROUPS
 
 ; Pond
@@ -51,10 +52,6 @@ FishGroups:
 	db  90 percent, POLIWAG,    10 ; 10%
 	db 100 percent, POLIWAG,    10 ; 10%
 .Pond_Super:
-	db  60 percent, POLIWAG,    20 ; 60%
-	db  80 percent, MAGIKARP,   15 ; 20%
-	db  90 percent, POLIWAG,    20 ; 10%
-	db 100 percent, POLIWHIRL,  25 ; 10%
 .Pond_Super_2:
 	db  60 percent, POLIWAG,    20 ; 60%
 	db  80 percent, MAGIKARP,   15 ; 20%
@@ -63,10 +60,6 @@ FishGroups:
 
 ; Remoraid (shares Pond_Old and Pond_Good)
 .Remoraid_Super:
-	db  60 percent, POLIWAG,    20 ; 60%
-	db  80 percent, MAGIKARP,   15 ; 20%
-	db  90 percent, POLIWHIRL,  25 ; 10%
-	db 100 percent, REMORAID,   20 ; 10%
 .Remoraid_Super_2:
 	db  60 percent, POLIWAG,    20 ; 60%
 	db  80 percent, MAGIKARP,   15 ; 20%
@@ -79,46 +72,50 @@ FishGroups:
 	db  90 percent, MAGIKARP,    5 ; 40%
 	db 100 percent, REMORAID,    5 ; 10%
 .Remoraid_Swarm_Good:
-	db  50 percent, REMORAID,   10 ; 50%
-	db  80 percent, POLIWAG,    10 ; 30%
-	db  90 percent, MAGIKARP,   10 ; 10%
+	db  40 percent, REMORAID,   10 ; 40%
+	db  70 percent, POLIWAG,    10 ; 30%
+	db  90 percent, MAGIKARP,   10 ; 20%
 	db 100 percent, POLIWAG,    10 ; 10%
 .Remoraid_Swarm_Super:
+.Remoraid_Swarm_Super_2:
 	db  70 percent, REMORAID,   20 ; 70%
-	db  80 percent, MAGIKARP,   15 ; 10%
-	db  90 percent, POLIWAG,    20 ; 10%
-	db 100 percent, POLIWHIRL,  25 ; 10%
-.Remoraid_Swarm_Super_2
-	db  70 percent, REMORAID,   20 ; 70%
-	db  80 percent, MAGIKARP,   15 ; 10%
+	db  80 percent, POLIWAG,    20 ; 10%
 	db  90 percent, POLIWAG,    20 ; 10%
 	db 100 percent, POLIWHIRL,  25 ; 10%
 
 ; Lake / River
 .Lake_Old:
+.Chinchou_Lake_Old:
 	db  50 percent, MAGIKARP,    5 ; 50%
 	db  95 percent, MAGIKARP,    5 ; 45%
 	db 100 percent, GOLDEEN,     5 ;  5%
 .Lake_Good:
+.Chinchou_Lake_Good:
 	db  50 percent, GOLDEEN,    10 ; 50%
 	db  80 percent, MAGIKARP,   10 ; 30%
 	db  90 percent, GOLDEEN,    10 ; 10%
 	db 100 percent, GOLDEEN,    10 ; 10%
 .Lake_Super:
-	db  60 percent, GOLDEEN,    20 ; 60%
-	db  80 percent, MAGIKARP,   15 ; 20%
-	db  90 percent, GOLDEEN,    20 ; 10%
-	db 100 percent, SEAKING,    25 ; 10%
+.Chinchou_Lake_Super:
 .Lake_Super_2:
 	db  60 percent, GOLDEEN,    20 ; 60%
 	db  80 percent, MAGIKARP,   15 ; 20%
 	db  90 percent, GOLDEEN,    20 ; 10%
 	db 100 percent, SEAKING,    25 ; 10%
 
+; Chinchou Lake (shares Lake_Old, Lake_Good, and Lake_Super)
+.Chinchou_Lake_Super_2:
+	db  60 percent, GOLDEEN,    20 ; 60%
+	db  80 percent, CHINCHOU,   20 ; 20%
+	db  90 percent, MAGIKARP,   15 ; 10%
+	db 100 percent, SEAKING,    25 ; 10%
+
 ; Shore
 .Shore_Old:
 .Staryu_Old:
 .Shellder_Old:
+.Chinchou_Old:
+.Chinchou_No_Swarm_Old:
 	db  70 percent, MAGIKARP,    5 ; 70%
 	db  85 percent, TENTACOOL,   5 ; 15%
 	db 100 percent, TENTACOOL,   5 ; 15%
@@ -142,7 +139,23 @@ FishGroups:
 	db  40 percent, KRABBY,     20 ; 40%
 	db  70 percent, TENTACOOL,  20 ; 30%
 	db  90 percent, SHELLDER,   20 ; 20%
-;	db 100 percent, CORSOLA,    20 ; 10%
+	db 100 percent, time_group 0   ; 10%
+
+; Chinchou
+.Chinchou_Good:
+.Chinchou_No_Swarm_Good:
+	db  50 percent, KRABBY,     10 ; 50%
+	db  80 percent, TENTACOOL,  10 ; 30%
+	db  90 percent, CHINCHOU,   10 ; 10%
+	db 100 percent, SHELLDER,   10 ; 10%
+
+.Chinchou_Super:
+.Chinchou_No_Swarm_Super:
+.Chinchou_Super_2:
+.Chinchou_No_Swarm_Super_2:
+	db  50 percent, KRABBY,     20 ; 50%
+	db  70 percent, SHELLDER,   20 ; 20%
+	db  90 percent, CHINCHOU,   20 ; 20%
 	db 100 percent, time_group 0   ; 10%
 
 ; Staryu Swarm
@@ -151,15 +164,11 @@ FishGroups:
 	db  90 percent, TENTACOOL,   5 ; 40%
 	db 100 percent, STARYU,      5 ; 10%
 .Staryu_Swarm_Good:
-	db  50 percent, STARYU,     10 ; 50%
-	db  80 percent, KRABBY,     10 ; 30%
-	db  90 percent, TENTACOOL,  10 ; 10%
+	db  40 percent, STARYU,     10 ; 40%
+	db  70 percent, KRABBY,     10 ; 30%
+	db  90 percent, TENTACOOL,  10 ; 20%
 	db 100 percent, SHELLDER,   10 ; 10%
 .Staryu_Swarm_Super:
-	db  70 percent, STARYU,     20 ; 70%
-	db  80 percent, TENTACOOL,  20 ; 10%
-	db  90 percent, KRABBY,     20 ; 10%
-	db 100 percent, SHELLDER,   20 ; 10%
 .Staryu_Swarm_Super_2:
 	db  70 percent, STARYU,     20 ; 70%
 	db  80 percent, TENTACOOL,  20 ; 10%
@@ -172,9 +181,9 @@ FishGroups:
 	db  90 percent, TENTACOOL,   5 ; 40%
 	db 100 percent, SHELLDER,    5 ; 10%
 .Shellder_Swarm_Good:
-	db  50 percent, SHELLDER,   10 ; 50%
-	db  80 percent, TENTACOOL,  10 ; 30%
-	db  90 percent, KRABBY,     10 ; 10%
+	db  40 percent, SHELLDER,   10 ; 40%
+	db  70 percent, TENTACOOL,  10 ; 30%
+	db  90 percent, KRABBY,     10 ; 20%
 	db 100 percent, KRABBY,     10 ; 10%
 .Shellder_Swarm_Super:
 	db  70 percent, SHELLDER,   20 ; 70%
@@ -185,7 +194,6 @@ FishGroups:
 	db  70 percent, SHELLDER,   20 ; 70%
 	db  80 percent, TENTACOOL,  20 ; 10%
 	db  90 percent, KRABBY,     20 ; 10%
-;	db 100 percent, CORSOLA,    20 ; 10%
 	db 100 percent, time_group 0   ; 10%
 
 ; Corsola Swarm
@@ -194,49 +202,58 @@ FishGroups:
 	db  90 percent, TENTACOOL,   5 ; 40%
 	db 100 percent, CORSOLA,     5 ; 10%
 .Corsola_Swarm_Good:
-	db  50 percent, CORSOLA,    10 ; 50%
-	db  80 percent, KRABBY,     10 ; 30%
-	db  90 percent, TENTACOOL,  10 ; 10%
+	db  40 percent, CORSOLA,    10 ; 40%
+	db  70 percent, KRABBY,     10 ; 30%
+	db  90 percent, TENTACOOL,  10 ; 20%
 	db 100 percent, SHELLDER,   10 ; 10%
 .Corsola_Swarm_Super:
-	db  70 percent, CORSOLA,    20 ; 70%
-	db  80 percent, TENTACOOL,  20 ; 10%
-	db  90 percent, KRABBY,     20 ; 10%
-	db 100 percent, SHELLDER,   20 ; 10%
 .Corsola_Swarm_Super_2:
 	db  70 percent, CORSOLA,    20 ; 70%
-	db  80 percent, TENTACOOL,  20 ; 10%
-	db  90 percent, KRABBY,     20 ; 10%
+	db  80 percent, KRABBY,     20 ; 10%
+	db  90 percent, TENTACOOL,  20 ; 10%
 	db 100 percent, SHELLDER,   20 ; 10%
+
+; Chinchou Swarm
+.Chinchou_Swarm_Old:
+	db  60 percent, MAGIKARP,    5 ; 60%
+	db  90 percent, TENTACOOL,   5 ; 30%
+	db 100 percent, CHINCHOU,    5 ; 10%
+.Chinchou_Swarm_Good:
+	db  40 percent, CHINCHOU,   10 ; 40%
+	db  70 percent, KRABBY,     10 ; 30%
+	db  90 percent, TENTACOOL,  10 ; 20%
+	db 100 percent, SHELLDER,   10 ; 10%
+.Chinchou_Swarm_Super:
+.Chinchou_Swarm_Super_2:
+	db  70 percent, CHINCHOU,   20 ; 70%
+	db  80 percent, KRABBY,     20 ; 10%
+	db  90 percent, SHELLDER,   20 ; 10%
+	db 100 percent, time_group 0   ; 10%
 
 ; Ocean
 .Ocean_Old:
 .Horsea_Old:
-.Chinchou_Old:
 	db  70 percent, MAGIKARP,    5 ; 70%
 	db  85 percent, TENTACOOL,   5 ; 15%
 	db 100 percent, TENTACOOL,   5 ; 15%
 .Ocean_Good:
 .Horsea_Good:
-.Chinchou_Good:
 	db  50 percent, TENTACOOL,  10 ; 50%
 	db  80 percent, MAGIKARP,   10 ; 30%
 	db  90 percent, TENTACOOL,  10 ; 10%
 	db 100 percent, HORSEA,     10 ; 10%
 .Ocean_Super:
 .Horsea_Super:
-.Chinchou_Super:
 	db  50 percent, HORSEA,     20 ; 50%
 	db  80 percent, TENTACOOL,  20 ; 30%
 	db  90 percent, STARYU,     20 ; 10%
-	db 100 percent, MAGIKARP,   15 ; 10%
+	db 100 percent, TENTACRUEL, 20 ; 10%
 .Ocean_Super_2:
 .Horsea_Super_2:
-.Chinchou_Super_2:
 	db  50 percent, HORSEA,     20 ; 50%
 	db  80 percent, TENTACOOL,  20 ; 30%
-	db  90 percent, CHINCHOU,   20 ; 10%
-	db 100 percent, time_group 0   ; 10%
+	db  90 percent, time_group 0   ; 10%
+	db 100 percent, TENTACRUEL, 20 ; 10%
 
 ; Horsea Swarm
 .Horsea_Swarm_Old:
@@ -244,63 +261,19 @@ FishGroups:
 	db  90 percent, TENTACOOL,   5 ; 40%
 	db 100 percent, HORSEA,      5 ; 10%
 .Horsea_Swarm_Good:
-	db  50 percent, HORSEA,     10 ; 50%
-	db  80 percent, TENTACOOL,  10 ; 30%
-	db  90 percent, MAGIKARP,   10 ; 10%
-	db 100 percent, MAGIKARP,   10 ; 10%
+	db  40 percent, HORSEA,     10 ; 40%
+	db  70 percent, TENTACOOL,  10 ; 30%
+	db  90 percent, MAGIKARP,   10 ; 20%
+	db 100 percent, TENTACOOL,  10 ; 10%
 .Horsea_Swarm_Super:
 	db  70 percent, HORSEA,     20 ; 70%
 	db  80 percent, TENTACOOL,  20 ; 10%
-	db  90 percent, STARYU,     20 ; 10%
-	db 100 percent, MAGIKARP,   15 ; 10%
+	db  90 percent, TENTACOOL,  20 ; 10%
+	db 100 percent, STARYU,     20 ; 10%
 .Horsea_Swarm_Super_2:
 	db  70 percent, HORSEA,     20 ; 70%
 	db  80 percent, TENTACOOL,  20 ; 10%
 	db  90 percent, CHINCHOU,   20 ; 10%
-	db 100 percent, time_group 0   ; 10%
-
-; Chinchou Swarm
-.Chinchou_Swarm_Old:
-	db  50 percent, MAGIKARP,    5 ; 50%
-	db  90 percent, TENTACOOL,   5 ; 40%
-	db 100 percent, CHINCHOU,    5 ; 10%
-.Chinchou_Swarm_Good:
-	db  50 percent, CHINCHOU,   10 ; 50%
-	db  80 percent, TENTACOOL,  10 ; 30%
-	db  90 percent, MAGIKARP,   10 ; 10%
-	db 100 percent, HORSEA,     10 ; 10%
-.Chinchou_Swarm_Super:
-	db  70 percent, CHINCHOU,   20 ; 70%
-	db  80 percent, TENTACOOL,  20 ; 10%
-	db  90 percent, STARYU,     20 ; 10%
-	db 100 percent, HORSEA,     20 ; 10%
-.Chinchou_Swarm_Super_2:
-	db  70 percent, CHINCHOU,   20 ; 70%
-	db  80 percent, TENTACOOL,  20 ; 10%
-	db  90 percent, HORSEA,     20 ; 10%
-;	db 100 percent, CORSOLA,    20 ; 10%
-	db 100 percent, time_group 0   ; 10%
-
-; Mantine Swarm
-.Mantine_Swarm_Old:
-	db  50 percent, MAGIKARP,    5 ; 50%
-	db  90 percent, TENTACOOL,   5 ; 40%
-	db 100 percent, MANTINE,     5 ; 10%
-.Mantine_Swarm_Good:
-	db  50 percent, MANTINE,    10 ; 50%
-	db  80 percent, TENTACOOL,  10 ; 30%
-	db  90 percent, MAGIKARP,   10 ; 10%
-	db 100 percent, HORSEA,     10 ; 10%
-.Mantine_Swarm_Super:
-	db  70 percent, MANTINE,    20 ; 70%
-	db  80 percent, TENTACOOL,  20 ; 10%
-	db  90 percent, STARYU,     20 ; 10%
-	db 100 percent, HORSEA,     20 ; 10%
-.Mantine_Swarm_Super_2:
-	db  70 percent, MANTINE,    20 ; 70%
-	db  80 percent, TENTACOOL,  20 ; 10%
-	db  90 percent, HORSEA,     20 ; 10%
-;	db 100 percent, CORSOLA,    20 ; 10%
 	db 100 percent, time_group 0   ; 10%
 
 ; Gyarados
@@ -314,10 +287,6 @@ FishGroups:
 	db  99 percent, MAGIKARP,   10 ; 39%
 	db 100 percent, GYARADOS,   20 ;  1%
 .Gyarados_Super:
-	db  30 percent, MAGIKARP,   15 ; 30%
-	db  60 percent, MAGIKARP,   15 ; 30%
-	db  90 percent, MAGIKARP,   15 ; 30%
-	db 100 percent, GYARADOS,   25 ; 10%
 .Gyarados_Super_2:
 	db  30 percent, MAGIKARP,   15 ; 30%
 	db  60 percent, MAGIKARP,   15 ; 30%
@@ -338,10 +307,6 @@ FishGroups:
 	db 100 percent, DRATINI,    10 ;  5%
 .Dratini_Super:
 .Dratini_No_Swarm_Super:
-	db  40 percent, MAGIKARP,   15 ; 40%
-	db  88 percent, MAGIKARP,   15 ; 48%
-	db  98 percent, DRATINI,    20 ; 10%
-	db 100 percent, DRAGONAIR,  25 ;  2%
 .Dratini_Super_2:
 .Dratini_No_Swarm_Super_2:
 	db  40 percent, MAGIKARP,   15 ; 40%
@@ -355,41 +320,37 @@ FishGroups:
 	db  90 percent, MAGIKARP,    5 ; 20%
 	db 100 percent, DRATINI,     5 ; 10%
 .Dratini_Swarm_Good:
-	db  40 percent, MAGIKARP,   10 ; 40%
-	db  70 percent, DRATINI,    10 ; 30%
-	db  90 percent, DRATINI,    10 ; 20%
-	db 100 percent, DRATINI,    10 ; 10%
+	db  40 percent, DRATINI,    10 ; 40%
+	db  70 percent, MAGIKARP,   10 ; 30%
+	db  90 percent, MAGIKARP,   10 ; 20%
+	db 100 percent, MAGIKARP,   10 ; 10%
 .Dratini_Swarm_Super:
-	db  40 percent, DRATINI,    20 ; 40%
-	db  70 percent, DRATINI,    20 ; 30%
-	db  95 percent, MAGIKARP,   15 ; 25%
-	db 100 percent, DRAGONAIR,  25 ;  5%
-.Dratini_Swarm_Super_2
-	db  40 percent, DRATINI,    20 ; 40%
-	db  70 percent, DRATINI,    20 ; 30%
-	db  95 percent, MAGIKARP,   15 ; 25%
+.Dratini_Swarm_Super_2:
+	db  70 percent, DRATINI,    20 ; 70%
+	db  85 percent, DRATINI,    20 ; 15%
+	db  95 percent, MAGIKARP,   15 ; 10%
 	db 100 percent, DRAGONAIR,  25 ;  5%
 
 ; Qwilfish
-.Qwilfish_NoSwarm_Old:
 .Qwilfish_Old:
+;.Qwilfish_NoSwarm_Old:
 	db  70 percent, MAGIKARP,    5 ; 70%
 	db  90 percent, MAGIKARP,    5 ; 20%
 	db 100 percent, SLOWPOKE,    5 ; 10%
-.Qwilfish_NoSwarm_Good:
 .Qwilfish_Good:
+;.Qwilfish_NoSwarm_Good:
 	db  40 percent, MAGIKARP,   10 ; 40%
 	db  70 percent, SLOWPOKE,   10 ; 30%
 	db  90 percent, SLOWPOKE,   10 ; 20%
 	db 100 percent, SHELLDER,   10 ; 10%
-.Qwilfish_NoSwarm_Super:
 .Qwilfish_Super:
+;.Qwilfish_NoSwarm_Super:
 	db  40 percent, SLOWPOKE,   20 ; 40%
 	db  60 percent, SLOWPOKE,   20 ; 30%
 	db  80 percent, SHELLDER,   20 ; 20%
 	db 100 percent, MAGIKARP,   15 ; 20%
-.Qwilfish_NoSwarm_Super_2:
 .Qwilfish_Super_2:
+;.Qwilfish_NoSwarm_Super_2:
 	db  60 percent, SLOWPOKE,   20 ; 60%
 	db  85 percent, SHELLDER,   20 ; 20%
 	db  95 percent, MAGIKARP,   15 ; 10%
@@ -401,15 +362,11 @@ FishGroups:
 	db  90 percent, SLOWPOKE,    5 ; 20%
 	db 100 percent, QWILFISH,    5 ; 10%
 .Qwilfish_Swarm_Good:
-	db  50 percent, QWILFISH,   10 ; 50%
-	db  80 percent, SLOWPOKE,   10 ; 30%
-	db  90 percent, SHELLDER,   10 ; 10%
+	db  40 percent, QWILFISH,   10 ; 40%
+	db  70 percent, SLOWPOKE,   10 ; 30%
+	db  90 percent, SHELLDER,   10 ; 20%
 	db 100 percent, MAGIKARP,   10 ; 10%
 .Qwilfish_Swarm_Super:
-	db  70 percent, QWILFISH,   20 ; 70%
-	db  80 percent, SLOWPOKE,   20 ; 10%
-	db  90 percent, SHELLDER,   20 ; 10%
-	db 100 percent, MAGIKARP,   15 ; 10%
 .Qwilfish_Swarm_Super_2:
 	db  70 percent, QWILFISH,   20 ; 70%
 	db  80 percent, SLOWPOKE,   20 ; 10%
