@@ -1046,7 +1046,7 @@ SwarmGrassWildMonsChallenge:
 	db  7, RATTATA    ;  1% chance
 
 	; WOOPER (3/3)
-	def_grass_wildmons UNION_CAVE_B1F
+	def_grass_wildmons UNION_CAVE_B2F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; day
 	db 20, WOOPER     ; 20% chance
