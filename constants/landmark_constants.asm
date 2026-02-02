@@ -104,11 +104,12 @@ DEF KANTO_LANDMARK EQU const_value
 	const LANDMARK_TOHJO_FALLS       ; 62
 	const LANDMARK_ROUTE_28          ; 63
 ; end
-	const LANDMARK_UNDERGROUND_PATH  ; 64
-	const LANDMARK_SS_ANNE           ; 65
-	const LANDMARK_ROCKET_HIDEOUT    ; 66
-	const LANDMARK_FAST_SHIP         ; 67
-	const LANDMARK_NINJA_DEN         ; 68
+	const LANDMARK_BILLS_BACK_YARD   ; 64
+	const LANDMARK_UNDERGROUND_PATH  ; 65
+	const LANDMARK_SS_ANNE           ; 66
+	const LANDMARK_ROCKET_HIDEOUT    ; 67
+	const LANDMARK_FAST_SHIP         ; 68
+	const LANDMARK_NINJA_DEN         ; 69
 DEF NUM_LANDMARKS EQU const_value
 
 ; used in CaughtData
