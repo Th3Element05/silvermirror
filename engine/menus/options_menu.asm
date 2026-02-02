@@ -520,8 +520,9 @@ OptionsControl:
 	scf
 	ret
 
-.CheckMenuAccount: ; I have no idea why this exists...
+;.CheckMenuAccount: ; I have no idea why this exists...
 ;	cp OPT_MENU_ACCOUNT
+.CheckMenuClock: ; I have no idea why this exists...
 	cp OPT_MENU_CLOCK
 	jr nz, .Increase
 ;	ld [hl], OPT_MENU_ACCOUNT
