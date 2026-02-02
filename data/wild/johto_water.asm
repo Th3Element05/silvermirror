@@ -302,7 +302,7 @@ JohtoWaterWildMonsChallenge:
 	def_water_wildmons SILVER_CAVE_OUTSIDE
 	db 2 percent ; encounter rate
 	db 25, POLIWHIRL
-	db 25, GTARADOS
+	db 25, GYARADOS
 	db 20, POLIWAG
 	db 20, MAGIKARP
 	end_water_wildmons
