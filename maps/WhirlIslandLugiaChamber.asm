@@ -45,7 +45,7 @@ WhirlIslandLugiaChamber_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  9, 13, WHIRL_ISLAND_B2F, 3
+	warp_event  9, 13, WHIRL_ISLAND_B1F_B2F, 12 ;1 to B2F,3
 
 	def_coord_events
 

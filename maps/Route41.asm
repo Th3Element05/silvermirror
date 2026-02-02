@@ -1,14 +1,4 @@
 	object_const_def
-;	const ROUTE41_RIVAL1
-;	const ROUTE41_RIVAL2
-;	const ROUTE41_RIVAL3
-;	const ROUTE41_RIVAL4
-;	const ROUTE41_RIVAL5
-;	const ROUTE41_SWIMMER_GIRL1
-;	const ROUTE41_SWIMMER_GIRL2
-;	const ROUTE41_SWIMMER_GIRL3
-;	const ROUTE41_SWIMMER_GIRL4
-;	const ROUTE41_SWIMMER_GIRL5
 
 Route41_MapScripts:
 	def_scene_scripts
@@ -330,10 +320,10 @@ Route41_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 12, 17, WHIRL_ISLAND_NW, 1
-	warp_event 36, 19, WHIRL_ISLAND_NE, 1
-	warp_event 12, 37, WHIRL_ISLAND_SW, 1
-	warp_event 36, 45, WHIRL_ISLAND_SE, 1
+	warp_event 12, 17, WHIRL_ISLAND_CAVES, 1  ;1 to NW,1
+	warp_event 36, 19, WHIRL_ISLAND_CAVES, 5  ;2 to NE,1
+	warp_event 12, 37, WHIRL_ISLAND_CAVES, 8  ;3 to SW,1
+	warp_event 36, 45, WHIRL_ISLAND_CAVES, 13 ;4 to SE,1
 
 	def_coord_events
 

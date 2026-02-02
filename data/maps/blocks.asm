@@ -711,8 +711,8 @@ WhirlIslandCaves_Blocks:
 ;WhirlIslandCave_Blocks:
 ;	INCBIN "maps/WhirlIslandCave.blk"
 
-WhirlIslandB1F_Blocks:
-	INCBIN "maps/WhirlIslandB1F.blk"
+WhirlIslandB1FB2F_Blocks:
+	INCBIN "maps/WhirlIslandB1FB2F.blk"
 
 ;WhirlIslandB1F_Blocks:
 ;	INCBIN "maps/WhirlIslandB1F.blk"
