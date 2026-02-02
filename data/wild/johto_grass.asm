@@ -941,7 +941,6 @@ JohtoGrassWildMonsChallenge:
 
 	def_grass_wildmons ICE_PATH_B2F_B3F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
-	; morn
 	; day
 	db 22, SWINUB     ; 20% chance
 	db 23, SWINUB     ; 20% chance

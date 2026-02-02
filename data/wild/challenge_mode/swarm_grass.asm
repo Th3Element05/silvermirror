@@ -2,965 +2,1204 @@
 
 SwarmGrassWildMonsChallenge:
 
-; JIGGLYPUFF swarm
-	map_id ROUTE_3 ;SWARM2
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
-	; morn
-;	db  4, JIGGLYPUFF ; 20% chance 40
-;	db  5, JIGGLYPUFF ; 20% chance
-;	db  8, SPEAROW    ; 15% chance 20
-;	db  8, SENTRET    ; 10% chance 10
-;	db  8, SANDSHREW  ; 10% chance 10
-;	db  8, EKANS      ; 10% chance 10
-;	db  8, MANKEY     ;  5% chance 10
-;	db  9, MANKEY     ;  5% chance
-;	db  8, SPEAROW    ;  4% chance
-;	db  8, SPEAROW    ;  1% chance
+; KANTO swarms (GEN2)
+	; JIGGLYPUFF (same)
+	def_grass_wildmons ROUTE_3 ;GEN2
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; day
-	db  4, JIGGLYPUFF ; 20% chance 40
-	db  5, JIGGLYPUFF ; 20% chance
-	db  8, SPEAROW    ; 15% chance 20
-	db  8, SENTRET    ; 10% chance 10
-	db  8, SANDSHREW  ; 10% chance 10
-	db  8, EKANS      ; 10% chance 10
-	db  8, MANKEY     ;  5% chance 10
-	db  9, MANKEY     ;  5% chance
+	db  8, JIGGLYPUFF ; 20% chance
+	db  8, JIGGLYPUFF ; 20% chance
+	db  8, SPEAROW    ; 15% chance
+	db  8, RATTATA    ; 10% chance
+	db  8, SANDSHREW  ; 10% chance
+	db  8, MANKEY     ; 10% chance
+	db  8, RATTATA    ;  5% chance
+	db  8, SPEAROW    ;  5% chance
 	db  8, SPEAROW    ;  4% chance
 	db  8, SPEAROW    ;  1% chance
 	; nite
-	db  4, JIGGLYPUFF ; 20% chance 40
-	db  5, JIGGLYPUFF ; 20% chance
-	db  8, HOOTHOOT   ; 15% chance 15
-	db  8, RATTATA    ; 10% chance 10
-	db  8, SANDSHREW  ; 10% chance 10
-	db  8, EKANS      ; 10% chance 10
-	db  8, MANKEY     ;  5% chance 10
-	db  9, MANKEY     ;  5% chance
-	db  6, ZUBAT      ;  4% chance 5
-	db  7, ZUBAT      ;  1% chance
+	db  8, JIGGLYPUFF ; 20% chance
+	db  8, JIGGLYPUFF ; 20% chance
+	db  8, RATTATA    ; 15% chance
+	db  8, SPEAROW    ; 10% chance
+	db  7, ZUBAT      ; 10% chance
+	db  8, MANKEY     ; 10% chance
+	db  8, RATTATA    ;  5% chance
+	db  8, RATTATA    ;  5% chance
+	db  8, RATTATA    ;  4% chance
+	db  8, RATTATA    ;  1% chance
 
-; DITTO swarm
-	map_id ROUTE_5 ;SWARM2
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
-	; morn
-;	db 10, DITTO      ; 20% chance 30
-;	db 14, PIDGEY     ; 20% chance 20
-;	db 14, SENTRET    ; 15% chance 20
-;	db 10, DITTO      ; 10% chance
-;	db  8, ABRA       ; 10% chance 10
-;	db  6, JIGGLYPUFF ; 10% chance 10
-;	db 18, PIDGEOTTO  ;  5% chance 5
-;	db 14, SENTRET    ;  5% chance
-;	db  8, SNUBBULL   ;  4% chance 5
-;	db  8, SNUBBULL   ;  1% chance
+	; DITTO (GEN2)
+	def_grass_wildmons ROUTE_5 ;GEN2
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; day
-	db 10, DITTO      ; 20% chance 35
-	db 14, PIDGEY     ; 20% chance 20
-	db 14, SENTRET    ; 15% chance 20
-	db 10, DITTO      ; 10% chance
-	db  8, ABRA       ; 10% chance 10
-	db  6, JIGGLYPUFF ; 10% chance 10
-	db 18, PIDGEOTTO  ;  5% chance 5
-	db 14, SENTRET    ;  5% chance
-	db 10, DITTO      ;  4% chance
-	db 10, DITTO      ;  1% chance
+	db 10, DITTO      ; 20% chance
+	db 10, DITTO      ; 20% chance
+	db 14, PIDGEY     ; 15% chance
+	db 14, PIDGEY     ; 10% chance
+	db  8, ABRA       ; 10% chance
+	db 12, SNUBBULL   ; 10% chance
+	db 12, SNUBBULL   ;  5% chance
+	db 12, SNUBBULL   ;  5% chance
+	db  8, JIGGLYPUFF ;  4% chance
+	db  8, JIGGLYPUFF ;  1% chance
 	; nite
-	db 10, DITTO      ; 20% chance 35
-	db 14, HOOTHOOT   ; 20% chance 20
-	db 14, RATTATA    ; 15% chance 15
-	db 10, DITTO      ; 10% chance
-	db  8, ABRA       ; 10% chance 10
-	db 12, MEOWTH     ; 10% chance 15
-	db 20, NOCTOWL    ;  5% chance 5
-	db 12, MEOWTH     ;  5% chance
-	db 10, DITTO      ;  4% chance
-	db 10, DITTO      ;  1% chance
-
-; ABRA swarm
-	map_id ROUTE_6 ;SWARM2
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
-	; morn
-;	db  8, ABRA       ; 20% chance 40
-;	db  8, ABRA       ; 20% chance
-;	db 14, PIDGEY     ; 15% chance 20
-;	db 14, SENTRET    ; 10% chance 15
-;	db  6, JIGGLYPUFF ; 10% chance 10
-;	db 11, PSYDUCK    ; 10% chance 10
-;	db 14, PIDGEY     ;  5% chance
-;	db 14, SENTRET    ;  5% chance
-;	db 18, PIDGEOTTO  ;  4% chance 5
-;	db 18, PIDGEOTTO  ;  1% chance
-	; day
-	db  8, ABRA       ; 20% chance 40
-	db  8, ABRA       ; 20% chance
-	db 14, PIDGEY     ; 15% chance 20
-	db 14, SENTRET    ; 10% chance 15
-	db  6, JIGGLYPUFF ; 10% chance 10
-	db 11, PSYDUCK    ; 10% chance 10
-	db 14, PIDGEY     ;  5% chance
-	db 14, SENTRET    ;  5% chance
-	db 18, PIDGEOTTO  ;  4% chance 5
-	db 18, PIDGEOTTO  ;  1% chance
-	; nite
-	db  8, ABRA       ; 20% chance 40
-	db  8, ABRA       ; 20% chance
-	db 14, HOOTHOOT   ; 15% chance 20
-	db 14, RATTATA    ; 10% chance 15
-	db 12, MEOWTH     ; 10% chance 10
-	db 11, WOOPER     ; 10% chance 10
+	db 10, DITTO      ; 20% chance
+	db 10, DITTO      ; 20% chance
+	db 12, MEOWTH     ; 15% chance
+	db 12, MEOWTH     ; 10% chance
+	db  8, ABRA       ; 10% chance
+	db 14, HOOTHOOT   ; 10% chance
 	db 14, HOOTHOOT   ;  5% chance
-	db 14, RATTATA    ;  5% chance
-	db 20, NOCTOWL    ;  4% chance 5
-	db 20, NOCTOWL    ;  1% chance
+	db 14, HOOTHOOT   ;  5% chance
+	db  8, JIGGLYPUFF ;  4% chance
+	db  8, JIGGLYPUFF ;  1% chance
 
-; VULPIX swarm
-	map_id ROUTE_7 ;SWARM2
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
-	; morn
-;	db 18, VULPIX     ; 20% chance 40
-;	db 18, VULPIX     ; 20% chance
-;	db 20, PIDGEY     ; 15% chance 20
-;	db 12, ABRA       ; 10% chance 10
-;	db 20, SENTRET    ; 10% chance 20
-;	db 20, SENTRET    ; 10% chance
-;	db 20, PIDGEY     ;  5% chance
-;	db 23, PIDGEOTTO  ;  5% chance 5
-;	db 22, KADABRA    ;  4% chance 5
-;	db 22, KADABRA    ;  1% chance
+	; PSYDUCK (GEN2)
+	def_grass_wildmons ROUTE_6 ;GEN2
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; day
-	db 18, VULPIX     ; 20% chance 40
+	db 13, PSYDUCK    ; 20% chance
+	db 13, PSYDUCK    ; 20% chance
+	db 14, PIDGEY     ; 15% chance
+	db 14, PIDGEY     ; 10% chance
+	db 12, SNUBBULL   ; 10% chance
+	db 14, RATTATA    ; 10% chance
+	db  8, ABRA       ;  5% chance
+	db  8, JIGGLYPUFF ;  5% chance
+	db 11, MAGNEMITE  ;  4% chance
+	db 11, MAGNEMITE  ;  1% chance
+	; nite
+	db 13, PSYDUCK    ; 20% chance
+	db 13, PSYDUCK    ; 20% chance
+	db 12, RATTATA    ; 15% chance
+	db 14, RATTATA    ; 10% chance
+	db 12, MEOWTH     ; 10% chance
+	db 12, MEOWTH     ; 10% chance
+	db  8, JIGGLYPUFF ;  5% chance
+	db  8, ABRA       ;  5% chance
+	db 11, MAGNEMITE  ;  4% chance
+	db 11, MAGNEMITE  ;  1% chance
+
+	; VULPIX (GEN2)
+	def_grass_wildmons ROUTE_7 ;GEN2
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; day
 	db 18, VULPIX     ; 20% chance
-	db 20, PIDGEY     ; 15% chance 20
-	db 12, ABRA       ; 10% chance 10
-	db 20, SENTRET    ; 10% chance 20
-	db 20, SENTRET    ; 10% chance
-	db 20, PIDGEY     ;  5% chance
-	db 23, PIDGEOTTO  ;  5% chance 5
-	db 22, KADABRA    ;  4% chance 5
-	db 22, KADABRA    ;  1% chance
-	; nite
-	db 18, VULPIX     ; 20% chance 40
 	db 18, VULPIX     ; 20% chance
-	db 20, RATTATA    ; 15% chance 15
-	db 12, ABRA       ; 10% chance 10
-	db 17, MEOWTH     ; 10% chance 10
-	db 20, MURKROW    ; 10% chance 10
-	db 18, HOUNDOUR   ;  5% chance 5
-	db 23, PIDGEOTTO  ;  5% chance 5
-	db 22, KADABRA    ;  4% chance 5
-	db 22, KADABRA    ;  1% chance
+	db 20, SNUBBULL   ; 15% chance
+	db 20, SPEAROW    ; 10% chance
+	db 20, SPEAROW    ; 10% chance
+	db 18, GROWLITHE  ; 10% chance
+	db 20, SNUBBULL   ;  5% chance
+	db 12, ABRA       ;  5% chance
+	db 12, JIGGLYPUFF ;  4% chance
+	db 16, KADABRA    ;  1% chance
+	; nite
+	db 18, VULPIX     ; 20% chance
+	db 18, VULPIX     ; 20% chance
+	db 20, MEOWTH     ; 15% chance
+	db 20, MURKROW    ; 10% chance
+	db 20, MURKROW    ; 10% chance
+	db 18, HOUNDOUR   ; 10% chance
+	db 20, MEOWTH     ;  5% chance
+	db 12, ABRA       ;  5% chance
+	db 12, JIGGLYPUFF ;  4% chance
+	db 16, KADABRA    ;  1% chance
 
-; GROWLITHE swarm
-	map_id ROUTE_8 ;SWARM2
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
-	; morn
-;	db 18, GROWLITHE  ; 20% chance 40
-;	db 18, GROWLITHE  ; 20% chance
-;	db 20, PIDGEY     ; 15% chance 25
-;	db 20, SENTRET    ; 10% chance 15
-;	db 12, ABRA       ; 10% chance 10
-;	db 20, PIDGEY     ; 10% chance
-;	db 23, PIDGEOTTO  ;  5% chance 5
-;	db 20, SENTRET    ;  5% chance
-;	db 22, KADABRA    ;  4% chance 5
-;	db 22, KADABRA    ;  1% chance
+	; GROWLITHE (GEN2)
+	def_grass_wildmons ROUTE_8 ;GEN2
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; day
-	db 18, GROWLITHE  ; 20% chance 40
 	db 18, GROWLITHE  ; 20% chance
-	db 20, PIDGEY     ; 15% chance 25
-	db 20, SENTRET    ; 10% chance 15
-	db 12, ABRA       ; 10% chance 10
-	db 20, PIDGEY     ; 10% chance
-	db 23, PIDGEOTTO  ;  5% chance 5
-	db 20, SENTRET    ;  5% chance
-	db 22, KADABRA    ;  4% chance 5
-	db 22, KADABRA    ;  1% chance
-	; nite
-	db 18, GROWLITHE  ; 20% chance 40
 	db 18, GROWLITHE  ; 20% chance
-	db 17, MEOWTH     ; 15% chance 15
-	db 20, RATTATA    ; 10% chance 10
-	db 12, ABRA       ; 10% chance 10
-	db 16, GASTLY     ; 10% chance 10
-	db 20, MURKROW    ;  5% chance 5
-	db 18, HOUNDOUR   ;  5% chance
-	db 22, KADABRA    ;  4% chance 5
-	db 22, KADABRA    ;  1% chance
-
-; VOLTORB swarm
-	map_id ROUTE_10_NORTH ;SWARM2
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
-	; morn
-;	db 17, VOLTORB    ; 20% chance 40
-;	db 17, VOLTORB    ; 20% chance
-;	db 16, MAGNEMITE  ; 15% chance 20
-;	db 16, NIDORAN_M  ; 10% chance 10
-;	db 16, NIDORAN_F  ; 10% chance 10
-;	db 16, SPEAROW    ; 10% chance 15
-;	db 16, MAGNEMITE  ;  5% chance
-;	db 16, MAREEP     ;  5% chance 5
-;	db 16, SPEAROW    ;  4% chance 5
-;	db 16, SPEAROW    ;  1% chance
-	; day
-	db 17, VOLTORB    ; 20% chance 40
-	db 17, VOLTORB    ; 20% chance
-	db 16, MAGNEMITE  ; 15% chance 20
-	db 16, NIDORAN_M  ; 10% chance 10
-	db 16, NIDORAN_F  ; 10% chance 10
-	db 16, SPEAROW    ; 10% chance 15
-	db 16, MAGNEMITE  ;  5% chance
-	db 16, MAREEP     ;  5% chance 5
-	db 16, SPEAROW    ;  4% chance 5
-	db 16, SPEAROW    ;  1% chance
+	db 20, SNUBBULL   ; 15% chance
+	db 20, SNUBBULL   ; 10% chance
+	db 19, PIDGEY     ; 10% chance
+	db 19, PIDGEY     ; 10% chance
+	db 18, VULPIX     ;  5% chance
+	db 12, ABRA       ;  5% chance
+	db 12, JIGGLYPUFF ;  4% chance
+	db 16, KADABRA    ;  1% chance
 	; nite
-	db 17, VOLTORB    ; 20% chance 40
-	db 17, VOLTORB    ; 20% chance
-	db 16, MAGNEMITE  ; 15% chance 20
-	db 16, RATTATA    ; 10% chance 10
-	db 14, ZUBAT      ; 10% chance 10
-	db 16, HOOTHOOT   ; 10% chance 15
-	db 16, MAGNEMITE  ;  5% chance
-	db 16, MAREEP     ;  5% chance 5
-	db 16, HOOTHOOT   ;  4% chance 5
-	db 16, HOOTHOOT   ;  1% chance
+	db 18, GROWLITHE  ; 20% chance
+	db 18, GROWLITHE  ; 20% chance
+	db 20, HOOTHOOT   ; 15% chance
+	db 20, MEOWTH     ; 10% chance
+	db 20, MEOWTH     ; 10% chance
+	db 20, HOUNDOUR   ; 10% chance
+	db 12, ABRA       ;  5% chance
+	db 16, GASTLY     ;  5% chance
+	db 12, JIGGLYPUFF ;  4% chance
+	db 20, HOOTHOOT   ;  1% chance
 
-; DROWZEE swarm
-	map_id ROUTE_11 ;SWARM2
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
-	; morn
-;	db 15, DROWZEE    ; 20% chance 40
-;	db 15, DROWZEE    ; 20% chance
-;	db 15, SANDSHREW  ; 15% chance 20
-;	db 15, EKANS      ; 10% chance 20
-;	db 15, EKANS      ; 10% chance
-;	db 16, SPEAROW    ; 10% chance 10
-;	db 15, SANDSHREW  ;  5% chance
-;	db 10, HOPPIP     ;  5% chance 10
-;	db 10, HOPPIP     ;  4% chance
-;	db 10, HOPPIP     ;  1% chance
+	; VOLTORB (GEN2)
+	def_grass_wildmons ROUTE_10_NORTH ;GEN2
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; day
-	db 15, DROWZEE    ; 20% chance 40
-	db 15, DROWZEE    ; 20% chance
-	db 15, SANDSHREW  ; 15% chance 20
-	db 15, EKANS      ; 10% chance 20
-	db 15, EKANS      ; 10% chance
-	db 16, SPEAROW    ; 10% chance 10
-	db 15, SANDSHREW  ;  5% chance
-	db 10, HOPPIP     ;  5% chance 10
-	db 10, HOPPIP     ;  4% chance
-	db 10, HOPPIP     ;  1% chance
+	db 17, VOLTORB    ; 20% chance
+	db 17, VOLTORB    ; 20% chance
+	db 16, SPEAROW    ; 15% chance
+	db 16, MAGNEMITE  ; 10% chance
+	db 16, MAGNEMITE  ; 10% chance
+	db 17, SANDSHREW  ; 10% chance
+	db 16, EKANS      ;  5% chance
+	db 16, EKANS      ;  5% chance
+	db 16, MAREEP     ;  4% chance
+	db 16, MAREEP     ;  1% chance
 	; nite
-	db 15, DROWZEE    ; 20% chance 40
+	db 17, VOLTORB    ; 20% chance
+	db 17, VOLTORB    ; 20% chance
+	db 16, MAGNEMITE  ; 15% chance
+	db 16, RATTATA    ; 10% chance
+	db 16, RATTATA    ; 10% chance
+	db 15, ZUBAT      ; 10% chance
+	db 16, VENONAT    ;  5% chance
+	db 16, VENONAT    ;  5% chance
+	db 16, MAREEP     ;  4% chance
+	db 16, MAREEP     ;  1% chance
+
+	; DROWZEE
+	def_grass_wildmons ROUTE_11 ;GEN2
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; day
 	db 15, DROWZEE    ; 20% chance
-	db 15, SANDSHREW  ; 15% chance 20
-	db 15, EKANS      ; 10% chance 20
-	db 15, EKANS      ; 10% chance
-	db 16, HOOTHOOT   ; 10% chance 10
-	db 15, SANDSHREW  ;  5% chance
-	db 15, RATTATA    ;  5% chance 10
+	db 15, DROWZEE    ; 20% chance
+	db 15, EKANS      ; 15% chance
+	db 15, SANDSHREW  ; 10% chance
+	db 15, SANDSHREW  ; 10% chance
+	db 16, SPEAROW    ; 10% chance
+	db 16, SPEAROW    ;  5% chance
+	db 15, EKANS      ;  5% chance
 	db 15, RATTATA    ;  4% chance
 	db 15, RATTATA    ;  1% chance
-
-; FARFETCH_D swarm
-	map_id ROUTE_13 ;SWARM2
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
-	; morn
-;	db 26, FARFETCH_D ; 20% chance 35
-;	db 25, BELLSPROUT ; 20% chance 30
-;	db 26, FARFETCH_D ; 15% chance
-;	db 25, BELLSPROUT ; 10% chance
-;	db 24, PIDGEY     ; 10% chance 20
-;	db 24, PIDGEY     ; 10% chance
-;	db 27, PIDGEOTTO  ;  5% chance 5
-;	db 28, WEEPINBELL ;  5% chance 5
-;	db 22, HOPPIP     ;  4% chance 5
-;	db 22, HOPPIP     ;  1% chance
-	; day
-	db 26, FARFETCH_D ; 20% chance 35
-	db 25, BELLSPROUT ; 20% chance 30
-	db 26, FARFETCH_D ; 15% chance
-	db 25, BELLSPROUT ; 10% chance
-	db 24, PIDGEY     ; 10% chance 20
-	db 24, PIDGEY     ; 10% chance
-	db 27, PIDGEOTTO  ;  5% chance 5
-	db 28, WEEPINBELL ;  5% chance 5
-	db 22, HOPPIP     ;  4% chance 5
-	db 22, HOPPIP     ;  1% chance
 	; nite
-	db 26, FARFETCH_D ; 20% chance 35
-	db 25, ODDISH     ; 20% chance 30
-	db 26, FARFETCH_D ; 15% chance
-	db 25, ODDISH     ; 10% chance
-	db 24, HOOTHOOT   ; 10% chance 20
-	db 24, HOOTHOOT   ; 10% chance
-	db 27, NOCTOWL    ;  5% chance 5
-	db 28, GLOOM      ;  5% chance 5
-	db 22, WOOPER     ;  4% chance 5
-	db 22, WOOPER     ;  1% chance
+	db 15, DROWZEE    ; 20% chance
+	db 15, DROWZEE    ; 20% chance
+	db 15, RATTATA    ; 15% chance
+	db 15, DROWZEE    ; 10% chance
+	db 15, DROWZEE    ; 10% chance
+	db 16, RATTATA    ; 10% chance
+	db 16, RATTATA    ;  5% chance
+	db 20, RATICATE   ;  5% chance
+	db 15, SPEAROW    ;  4% chance
+	db 15, SPEAROW    ;  1% chance
 
-; PONYTA swarm
-	map_id ROUTE_17 ;SWARM2
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
-	; morn
-;	db 21, PONYTA     ; 20% chance 40
-;	db 21, PONYTA     ; 20% chance
-;	db 24, DODUO      ; 15% chance 15
-;	db 22, SPEAROW    ; 10% chance 10
-;	db 20, NATU       ; 10% chance 10
-;	db 23, SENTRET    ; 10% chance 15
-;	db 23, SENTRET    ;  5% chance
-;	db 25, FURRET     ;  5% chance 5
-;	db 26, DODRIO     ;  4% chance 5
-;	db 26, DODRIO     ;  1% chance
+	; FARFETCH_D
+	def_grass_wildmons ROUTE_13 ;GEN2
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; day
-	db 21, PONYTA     ; 20% chance 40
+	db 26, FARFETCH_D ; 20% chance
+	db 26, FARFETCH_D ; 20% chance
+	db 24, PIDGEY     ; 15% chance
+	db 25, BELLSPROUT ; 10% chance
+	db 24, PIDGEY     ; 10% chance
+	db 25, BELLSPROUT ; 10% chance
+	db 28, WEEPINBELL ;  5% chance
+	db 24, PIDGEY     ;  5% chance
+	db 27, PIDGEOTTO  ;  4% chance
+	db 27, PIDGEOTTO  ;  1% chance
+	; nite
+	db 26, FARFETCH_D ; 20% chance
+	db 26, FARFETCH_D ; 20% chance
+	db 25, BELLSPROUT ; 15% chance
+	db 25, ODDISH     ; 10% chance
+	db 25, ODDISH     ; 10% chance
+	db 24, VENONAT    ; 10% chance
+	db 28, WEEPINBELL ;  5% chance
+	db 28, GLOOM      ;  5% chance
+	db 25, BELLSPROUT ;  4% chance
+	db 25, BELLSPROUT ;  1% chance
+
+	; GRIMER
+	def_grass_wildmons ROUTE_16 ;GEN2
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; day
+	db 20, GRIMER     ; 20% chance
+	db 20, GRIMER     ; 20% chance
+	db 22, SPEAROW    ; 15% chance
+	db 22, DODUO      ; 10% chance
+	db 22, DODUO      ; 10% chance
+	db 22, DODUO      ; 10% chance
+	db 22, SPEAROW    ;  5% chance
+	db 23, RATTATA    ;  5% chance
+	db 25, FEAROW     ;  4% chance
+	db 26, RATICATE   ;  1% chance
+	; nite
+	db 20, GRIMER     ; 20% chance
+	db 20, GRIMER     ; 20% chance
+	db 23, RATTATA    ; 15% chance
+	db 20, GRIMER     ; 10% chance
+	db 23, RATTATA    ; 10% chance
+	db 23, RATTATA    ; 10% chance
+	db 22, DODUO      ;  5% chance
+	db 26, RATICATE   ;  5% chance
+	db 22, SPEAROW    ;  4% chance
+	db 25, FEAROW     ;  1% chance
+
+	; PONYTA
+	def_grass_wildmons ROUTE_17 ;GEN2
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; day
 	db 21, PONYTA     ; 20% chance
-	db 24, DODUO      ; 15% chance 15
-	db 22, SPEAROW    ; 10% chance 10
-	db 20, NATU       ; 10% chance 10
-	db 23, SENTRET    ; 10% chance 15
-	db 23, SENTRET    ;  5% chance
-	db 25, FURRET     ;  5% chance 5
-	db 26, DODRIO     ;  4% chance 5
+	db 21, PONYTA     ; 20% chance
+	db 24, DODUO      ; 15% chance
+	db 21, PONYTA     ; 10% chance
+	db 22, SPEAROW    ; 10% chance
+	db 24, DODUO      ; 10% chance
+	db 24, DODUO      ;  5% chance
+	db 24, GRIMER     ;  5% chance
+	db 25, FEAROW     ;  4% chance
 	db 26, DODRIO     ;  1% chance
 	; nite
-	db 21, PONYTA     ; 20% chance 40
 	db 21, PONYTA     ; 20% chance
-	db 24, HOOTHOOT   ; 15% chance 15
-	db 22, MURKROW    ; 10% chance 10
-	db 20, NATU       ; 10% chance 10
-	db 23, RATTATA    ; 10% chance 15
+	db 21, PONYTA     ; 20% chance
+	db 23, RATTATA    ; 15% chance
+	db 23, RATTATA    ; 10% chance
+	db 24, DODUO      ; 10% chance
+	db 20, GRIMER     ; 10% chance
+	db 20, GRIMER     ;  5% chance
 	db 23, RATTATA    ;  5% chance
-	db 25, RATICATE   ;  5% chance 5
-	db 26, NOCTOWL    ;  4% chance 5
-	db 26, NOCTOWL    ;  1% chance
+	db 25, RATICATE   ;  4% chance
+	db 25, RATICATE   ;  1% chance
 
-; MR__MIME swarm
-	map_id ROUTE_21 ;SWARM2
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
-	; morn
-;	db 26, MR__MIME   ; 20% chance 30
-;	db 16, PIDGEY     ; 20% chance 20
-;	db 14, SENTRET    ; 15% chance 15
-;	db 26, MR__MIME   ; 10% chance
-;	db 28, PIDGEOTTO  ; 10% chance 10
-;	db 25, TANGELA    ; 10% chance 10
-;	db 20, FURRET     ;  5% chance 5
-;	db 15, MARILL     ;  5% chance 10
-;	db 15, MARILL     ;  4% chance
-;	db 15, MARILL     ;  1% chance
+	; MR__MIME
+	def_grass_wildmons ROUTE_21 ;GEN2
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; day
-	db 26, MR__MIME   ; 20% chance 30
-	db 16, PIDGEY     ; 20% chance 20
-	db 14, SENTRET    ; 15% chance 15
-	db 26, MR__MIME   ; 10% chance
-	db 28, PIDGEOTTO  ; 10% chance 10
-	db 25, TANGELA    ; 10% chance 10
-	db 20, FURRET     ;  5% chance 5
-	db 15, MARILL     ;  5% chance 10
-	db 15, MARILL     ;  4% chance
-	db 15, MARILL     ;  1% chance
+	db 26, MR__MIME   ; 20% chance
+	db 26, MR__MIME   ; 20% chance
+	db 16, PIDGEY     ; 15% chance
+	db 16, PIDGEY     ; 10% chance
+	db 14, RATTATA    ; 10% chance
+	db 28, PIDGEOTTO  ; 10% chance
+	db 20, RATICATE   ;  5% chance
+	db 25, TANGELA    ;  5% chance
+	db 25, TANGELA    ;  4% chance
+	db 14, RATTATA    ;  1% chance
 	; nite
-	db 26, MR__MIME   ; 20% chance 30
-	db 16, HOOTHOOT   ; 20% chance 20
-	db 14, RATTATA    ; 15% chance 15
-	db 26, MR__MIME   ; 10% chance
-	db 28, NOCTOWL    ; 10% chance 10
-	db 25, TANGELA    ; 10% chance 10
-	db 20, RATICATE   ;  5% chance 5
-	db 15, MARILL     ;  5% chance 10
-	db 15, MARILL     ;  4% chance
-	db 15, MARILL     ;  1% chance
+	db 26, MR__MIME   ; 20% chance
+	db 26, MR__MIME   ; 20% chance
+	db 14, RATTATA    ; 15% chance
+	db 14, RATTATA    ; 10% chance
+	db 16, PIDGEY     ; 10% chance
+	db 20, RATICATE   ; 10% chance
+	db 28, PIDGEOTTO  ;  5% chance
+	db 25, TANGELA    ;  5% chance
+	db 25, TANGELA    ;  4% chance
+	db 14, RATTATA    ;  1% chance
 
-; PSYDUCK swarm
-	map_id ROUTE_24 ;SWARM2
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
-	; morn
-;	db 10, PSYDUCK    ; 20% chance 40
-;	db 10, PSYDUCK    ; 20% chance
-;	db 13, PIDGEY     ; 15% chance 20
-;	db 10, BELLSPROUT ; 10% chance 20
-;	db 10, BELLSPROUT ; 10% chance
-;	db  8, ABRA       ; 10% chance 10
-;	db 13, PIDGEY     ;  5% chance
-;	db 12, SUNKERN    ;  5% chance 9
-;	db 12, SUNKERN    ;  4% chance
-;	db 18, PIDGEOTTO  ;  1% chance 1
+	; NIDORAN_M
+	def_grass_wildmons ROUTE_22 ;GEN2
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; day
-	db 10, PSYDUCK    ; 20% chance 40
-	db 10, PSYDUCK    ; 20% chance
-	db 13, PIDGEY     ; 15% chance 20
-	db 10, BELLSPROUT ; 10% chance 20
+	db  2, NIDORAN_M  ; 20% chance
+	db  2, NIDORAN_M  ; 20% chance
+	db  2, MANKEY     ; 15% chance
+	db  2, NIDORAN_M  ; 10% chance
+	db  2, SPEAROW    ; 10% chance
+	db  2, NIDORAN_F  ; 10% chance
+	db  2, NIDORAN_F  ;  5% chance
+	db  2, RATTATA    ;  5% chance
+	db  2, SPEAROW    ;  4% chance
+	db  2, SPEAROW    ;  1% chance
+	; nite
+	db  2, NIDORAN_M  ; 20% chance
+	db  2, NIDORAN_M  ; 20% chance
+	db  2, MANKEY     ; 15% chance
+	db  2, NIDORAN_M  ; 10% chance
+	db  2, RATTATA    ; 10% chance
+	db  2, NIDORAN_F  ; 10% chance
+	db  2, NIDORAN_F  ;  5% chance
+	db  2, SPEAROW    ;  5% chance
+	db  2, RATTATA    ;  4% chance
+	db  2, RATTATA    ;  1% chance
+
+	; ABRA
+	def_grass_wildmons ROUTE_24 ;GEN2
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; day
+	db  8, ABRA       ; 20% chance
+	db  8, ABRA       ; 20% chance
+	db 10, BELLSPROUT ; 15% chance
 	db 10, BELLSPROUT ; 10% chance
-	db  8, ABRA       ; 10% chance 10
+	db 10, BELLSPROUT ; 10% chance
+	db 13, PIDGEY     ; 10% chance
 	db 13, PIDGEY     ;  5% chance
-	db 12, SUNKERN    ;  5% chance 9
-	db 12, SUNKERN    ;  4% chance
-	db 18, PIDGEOTTO  ;  1% chance 1
+	db 13, PIDGEY     ;  5% chance
+	db 18, PIDGEOTTO  ;  4% chance
+	db 13, PIDGEY     ;  1% chance
 	; nite
-	db 10, PSYDUCK    ; 20% chance 40
-	db 10, PSYDUCK    ; 20% chance
-	db 13, HOOTHOOT   ; 15% chance 20
-	db 10, ODDISH     ; 10% chance 20
-	db 10, ODDISH     ; 10% chance
-	db  8, ABRA       ; 10% chance 10
-	db 13, HOOTHOOT   ;  5% chance
-	db 12, VENONAT    ;  5% chance 9
-	db 12, VENONAT    ;  4% chance
-	db 18, NOCTOWL    ;  1% chance 1
+	db  8, ABRA       ; 20% chance
+	db  8, ABRA       ; 20% chance
+	db 10, ODDISH     ; 15% chance
+	db 12, VENONAT    ; 10% chance
+	db 10, PSYDUCK    ; 10% chance
+	db 10, BELLSPROUT ; 10% chance
+	db 10, BELLSPROUT ;  5% chance
+	db 10, ODDISH     ;  5% chance
+	db 10, ODDISH     ;  4% chance
+	db 10, ODDISH     ;  1% chance
 
-; PIKACHU swarm
-	map_id VIRIDIAN_FOREST ;SWARM2
+	; PIKACHU
+	def_grass_wildmons VIRIDIAN_FOREST ;GEN2
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
-	; morn
-;	db  3, PIKACHU    ; 20% chance 30
-;	db  3, CATERPIE   ; 20% chance 40
-;	db  3, LEDYBA     ; 15% chance 15
-;	db  3, CATERPIE   ; 10% chance
-;	db  4, METAPOD    ; 10% chance 10
-;	db  3, WEEDLE     ; 10% chance 10
-;	db  4, KAKUNA     ;  5% chance 5
-;	db  3, PIKACHU    ;  5% chance
-;	db  3, PIKACHU    ;  4% chance 5
-;	db  3, PIKACHU    ;  1% chance
 	; day
-	db  3, PIKACHU    ; 20% chance 30
-	db  3, CATERPIE   ; 20% chance 40
-	db  3, LEDYBA     ; 15% chance 15
+	db  3, PIKACHU    ; 20% chance
+	db  4, PIKACHU    ; 20% chance
+	db  3, WEEDLE     ; 15% chance
 	db  3, CATERPIE   ; 10% chance
-	db  4, METAPOD    ; 10% chance 10
-	db  3, WEEDLE     ; 10% chance 10
-	db  4, KAKUNA     ;  5% chance 5
-	db  3, PIKACHU    ;  5% chance
-	db  3, PIKACHU    ;  4% chance 5
-	db  3, PIKACHU    ;  1% chance
+	db  3, CATERPIE   ; 10% chance
+	db  3, CATERPIE   ; 10% chance
+	db  3, PIDGEY     ;  5% chance
+	db  4, METAPOD    ;  5% chance
+	db  4, KAKUNA     ;  4% chance
+	db  4, KAKUNA     ;  1% chance
 	; nite
-	db  3, PIKACHU    ; 20% chance 30
-	db  3, WEEDLE     ; 20% chance 40
-	db  3, SPINARAK   ; 15% chance 15
+	db  3, PIKACHU    ; 20% chance
+	db  4, PIKACHU    ; 20% chance
+	db  3, WEEDLE     ; 15% chance
+	db  3, CATERPIE   ; 10% chance
+	db  3, CATERPIE   ; 10% chance
+	db  3, CATERPIE   ; 10% chance
+	db  3, WEEDLE     ;  5% chance
+	db  4, METAPOD    ;  5% chance
+	db  4, KAKUNA     ;  4% chance
+	db  4, KAKUNA     ;  1% chance
+
+	; CLEFAIRY (1/2)
+	def_grass_wildmons MOUNT_MOON ;GEN2
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; day
+	db  8, CLEFAIRY   ; 20% chance
+	db  6, ZUBAT      ; 20% chance
+	db  7, ZUBAT      ; 15% chance
+	db  6, GEODUDE    ; 10% chance
+	db  6, GEODUDE    ; 10% chance
+	db  8, CLEFAIRY   ; 10% chance
+	db  6, PARAS      ;  5% chance
+	db  8, SANDSHREW  ;  5% chance
+	db  8, CLEFAIRY   ;  4% chance
+	db  8, CLEFAIRY   ;  1% chance
+	; nite
+	db  8, CLEFAIRY   ; 20% chance
+	db  8, CLEFAIRY   ; 20% chance
+	db  6, ZUBAT      ; 15% chance
+	db  7, ZUBAT      ; 10% chance
+	db  6, GEODUDE    ; 10% chance
+	db  6, GEODUDE    ; 10% chance
+	db  6, GEODUDE    ;  5% chance
+	db  6, PARAS      ;  5% chance
+	db  6, GEODUDE    ;  4% chance
+	db  6, GEODUDE    ;  1% chance
+
+	; CLEFAIRY (2/2)
+	def_grass_wildmons MOUNT_MOON_B2F ;GEN2
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; day
+	db  8, CLEFAIRY   ; 20% chance
+	db  9, CLEFAIRY   ; 20% chance
+	db  7, ZUBAT      ; 15% chance
+	db  6, ZUBAT      ; 10% chance
+	db  7, PARAS      ; 10% chance
+	db  6, GEODUDE    ; 10% chance
+	db  7, ZUBAT      ;  5% chance
+	db  6, ZUBAT      ;  5% chance
+	db  6, ZUBAT      ;  4% chance
+	db  6, ZUBAT      ;  1% chance
+	; nite
+	db  8, CLEFAIRY   ; 20% chance
+	db  9, CLEFAIRY   ; 20% chance
+	db  7, ZUBAT      ; 15% chance
+	db  6, ZUBAT      ; 10% chance
+	db  7, PARAS      ; 10% chance
+	db  6, GEODUDE    ; 10% chance
+	db  6, GEODUDE    ;  5% chance
+	db  6, GEODUDE    ;  5% chance
+	db  6, GEODUDE    ;  4% chance
+	db  6, GEODUDE    ;  1% chance
+
+	; ONIX (1/2)
+	def_grass_wildmons ROCK_TUNNEL_1F ;GEN2
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; day
+	db 14, ONIX       ; 20% chance
+	db 15, ONIX       ; 20% chance
+	db 16, GEODUDE    ; 15% chance
+	db 15, ZUBAT      ; 10% chance
+	db 15, ZUBAT      ; 10% chance
+	db 17, MACHOP     ; 10% chance
+	db 17, MACHOP     ;  5% chance
+	db 15, ZUBAT      ;  5% chance
+	db 16, GEODUDE    ;  4% chance
+	db 12, CUBONE     ;  1% chance
+	; nite
+	db 14, ONIX       ; 20% chance
+	db 15, ONIX       ; 20% chance
+	db 15, ZUBAT      ; 15% chance
+	db 16, GEODUDE    ; 10% chance
+	db 16, GEODUDE    ; 10% chance
+	db 17, MACHOP     ; 10% chance
+	db 17, MACHOP     ;  5% chance
+	db 16, GEODUDE    ;  5% chance
+	db 15, ZUBAT      ;  4% chance
+	db 12, CUBONE     ;  1% chance
+
+	; ONIX (2/2)
+	def_grass_wildmons ROCK_TUNNEL_B1F ;GEN2
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; day
+	db 16, ONIX       ; 20% chance
+	db 15, ONIX       ; 20% chance
+	db 16, ZUBAT      ; 15% chance
+	db 17, ZUBAT      ; 10% chance
+	db 16, GEODUDE    ; 10% chance
+	db 17, GEODUDE    ; 10% chance
+	db 17, MACHOP     ;  5% chance
+	db 17, MACHOP     ;  5% chance
+	db 12, CUBONE     ;  4% chance
+	db 16, ZUBAT      ;  1% chance
+	; nite
+	db 16, ONIX       ; 20% chance
+	db 15, ONIX       ; 20% chance
+	db 16, GEODUDE    ; 15% chance
+	db 17, GEODUDE    ; 10% chance
+	db 16, ZUBAT      ; 10% chance
+	db 17, ZUBAT      ; 10% chance
+	db 17, MACHOP     ;  5% chance
+	db 17, MACHOP     ;  5% chance
+	db 12, CUBONE     ;  4% chance
+	db 16, GEODUDE    ;  1% chance
+
+	; JYNX (1/2)
+	def_grass_wildmons SEAFOAM_ISLANDS_B3F ;GEN2
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; day
+	db 30, JYNX       ; 20% chance
+	db 30, JYNX       ; 20% chance
+	db 22, KRABBY     ; 15% chance
+	db 22, ZUBAT      ; 10% chance
+	db 28, GOLBAT     ; 10% chance
+	db 22, SEEL       ; 10% chance
+	db 28, KINGLER    ;  5% chance
+	db 34, DEWGONG    ;  5% chance
+	db 23, SHELLDER   ;  4% chance
+	db 23, SHELLDER   ;  1% chance
+	; nite
+	db 30, JYNX       ; 20% chance
+	db 30, JYNX       ; 20% chance
+	db 22, ZUBAT      ; 15% chance
+	db 22, KRABBY     ; 10% chance
+	db 22, KRABBY     ; 10% chance
+	db 28, GOLBAT     ; 10% chance
+	db 28, GOLBAT     ;  5% chance
+	db 28, KINGLER    ;  5% chance
+	db 23, SHELLDER   ;  4% chance
+	db 23, SHELLDER   ;  1% chance
+
+	; JYNX (2/2)
+	def_grass_wildmons SEAFOAM_ISLANDS_B4F ;GEN2
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; day
+	db 30, JYNX       ; 20% chance
+	db 30, JYNX       ; 20% chance
+	db 22, KRABBY     ; 15% chance
+	db 22, ZUBAT      ; 10% chance
+	db 28, GOLBAT     ; 10% chance
+	db 22, SEEL       ; 10% chance
+	db 28, KINGLER    ;  5% chance
+	db 34, DEWGONG    ;  5% chance
+	db 23, SHELLDER   ;  4% chance
+	db 23, SHELLDER   ;  1% chance
+	; nite
+	db 30, JYNX       ; 20% chance
+	db 30, JYNX       ; 20% chance
+	db 22, ZUBAT      ; 15% chance
+	db 22, KRABBY     ; 10% chance
+	db 22, KRABBY     ; 10% chance
+	db 28, GOLBAT     ; 10% chance
+	db 28, GOLBAT     ;  5% chance
+	db 28, KINGLER    ;  5% chance
+	db 23, SHELLDER   ;  4% chance
+	db 23, SHELLDER   ;  1% chance
+
+	; E
+	def_grass_wildmons POWER_PLANT ;GEN2
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; day
+	db 30, ELECTABUZZ ; 20% chance
+	db 30, ELECTABUZZ ; 20% chance
+	db 22, VOLTORB    ; 15% chance
+	db 22, VOLTORB    ; 10% chance
+	db 30, PIKACHU    ; 10% chance
+	db 21, MAGNEMITE  ; 10% chance
+	db 20, PIKACHU    ;  5% chance
+	db 23, MAGNEMITE  ;  5% chance
+	db 30, MAGNETON   ;  4% chance
+	db 30, MAGNETON   ;  1% chance
+	; nite
+	db 30, ELECTABUZZ ; 20% chance
+	db 30, ELECTABUZZ ; 20% chance
+	db 22, VOLTORB    ; 15% chance
+	db 22, VOLTORB    ; 10% chance
+	db 30, PIKACHU    ; 10% chance
+	db 21, MAGNEMITE  ; 10% chance
+	db 20, PIKACHU    ;  5% chance
+	db 23, MAGNEMITE  ;  5% chance
+	db 30, MAGNETON   ;  4% chance
+	db 30, MAGNETON   ;  1% chance
+
+	; MAGMAR (1/4)
+	def_grass_wildmons POKEMON_MANSION_1F ;GEN2
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; day
+	db 34, MAGMAR     ; 20% chance
+	db 34, MAGMAR     ; 20% chance
+	db 28, KOFFING    ; 15% chance
+	db 27, GROWLITHE  ; 10% chance
+	db 26, VULPIX     ; 10% chance
+	db 28, GRIMER     ; 10% chance
+	db 28, GRIMER     ;  5% chance
+	db 35, WEEZING    ;  5% chance
+	db 38, MUK        ;  4% chance
+	db 38, MUK        ;  1% chance
+	; nite
+	db 34, MAGMAR     ; 20% chance
+	db 34, MAGMAR     ; 20% chance
+	db 28, KOFFING    ; 15% chance
+	db 27, GROWLITHE  ; 10% chance
+	db 26, VULPIX     ; 10% chance
+	db 28, GRIMER     ; 10% chance
+	db 28, GRIMER     ;  5% chance
+	db 35, WEEZING    ;  5% chance
+	db 38, MUK        ;  4% chance
+	db 38, MUK        ;  1% chance
+
+	; MAGMAR (2/4)
+	def_grass_wildmons POKEMON_MANSION_2F ;GEN2
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; day
+	db 34, MAGMAR     ; 20% chance
+	db 34, MAGMAR     ; 20% chance
+	db 28, KOFFING    ; 15% chance
+	db 27, GROWLITHE  ; 10% chance
+	db 26, VULPIX     ; 10% chance
+	db 28, GRIMER     ; 10% chance
+	db 28, GRIMER     ;  5% chance
+	db 35, WEEZING    ;  5% chance
+	db 38, MUK        ;  4% chance
+	db 38, MUK        ;  1% chance
+	; nite
+	db 34, MAGMAR     ; 20% chance
+	db 34, MAGMAR     ; 20% chance
+	db 28, KOFFING    ; 15% chance
+	db 27, GROWLITHE  ; 10% chance
+	db 26, VULPIX     ; 10% chance
+	db 28, GRIMER     ; 10% chance
+	db 28, GRIMER     ;  5% chance
+	db 35, WEEZING    ;  5% chance
+	db 38, MUK        ;  4% chance
+	db 38, MUK        ;  1% chance
+
+	; MAGMAR (3/4)
+	def_grass_wildmons POKEMON_MANSION_3F ;GEN2
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; day
+	db 34, MAGMAR     ; 20% chance
+	db 34, MAGMAR     ; 20% chance
+	db 28, KOFFING    ; 15% chance
+	db 27, GROWLITHE  ; 10% chance
+	db 36, VULPIX     ; 10% chance
+	db 28, GRIMER     ; 10% chance
+	db 28, KOFFING    ;  5% chance
+	db 36, WEEZING    ;  5% chance
+	db 35, WEEZING    ;  4% chance
+	db 38, MUK        ;  1% chance
+	; nite
+	db 34, MAGMAR     ; 20% chance
+	db 34, MAGMAR     ; 20% chance
+	db 28, KOFFING    ; 15% chance
+	db 27, GROWLITHE  ; 10% chance
+	db 36, VULPIX     ; 10% chance
+	db 28, GRIMER     ; 10% chance
+	db 28, KOFFING    ;  5% chance
+	db 36, WEEZING    ;  5% chance
+	db 35, WEEZING    ;  4% chance
+	db 38, MUK        ;  1% chance
+
+	; MAGMAR (4/4)
+	def_grass_wildmons POKEMON_MANSION_B1F ;GEN2
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; day
+	db 34, MAGMAR     ; 20% chance
+	db 34, MAGMAR     ; 20% chance
+	db 28, GRIMER     ; 15% chance
+	db 27, GROWLITHE  ; 10% chance
+	db 26, VULPIX     ; 10% chance
+	db 28, KOFFING    ; 10% chance
+	db 28, GRIMER     ;  5% chance
+	db 38, MUK        ;  5% chance
+	db 20, DITTO      ;  4% chance
+	db 36, WEEZING    ;  1% chance
+	; nite
+	db 34, MAGMAR     ; 20% chance
+	db 34, MAGMAR     ; 20% chance
+	db 28, GRIMER     ; 15% chance
+	db 27, GROWLITHE  ; 10% chance
+	db 26, VULPIX     ; 10% chance
+	db 28, KOFFING    ; 10% chance
+	db 28, GRIMER     ;  5% chance
+	db 38, MUK        ;  5% chance
+	db 20, DITTO      ;  4% chance
+	db 36, WEEZING    ;  1% chance
+
+	; GEODUDE (1/3)
+	def_grass_wildmons VICTORY_ROAD_1F ;GEN2
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; day
+	db 34, GEODUDE    ; 20% chance
+	db 34, GEODUDE    ; 20% chance
+	db 36, ZUBAT      ; 15% chance
+	db 42, ONIX       ; 10% chance
+	db 34, MACHOP     ; 10% chance
+	db 42, GOLBAT     ; 10% chance
+	db 40, MACHOKE    ;  5% chance
+	db 38, GRAVELER   ;  5% chance
+	db 40, MAROWAK    ;  4% chance
+	db 42, ONIX       ;  1% chance
+	; nite
+	db 34, GEODUDE    ; 20% chance
+	db 34, GEODUDE    ; 20% chance
+	db 36, ZUBAT      ; 15% chance
+	db 42, ONIX       ; 10% chance
+	db 34, MACHOP     ; 10% chance
+	db 42, GOLBAT     ; 10% chance
+	db 40, MACHOKE    ;  5% chance
+	db 38, GRAVELER   ;  5% chance
+	db 40, MAROWAK    ;  4% chance
+	db 42, ONIX       ;  1% chance
+
+	; GEODUDE (2/3)
+	def_grass_wildmons VICTORY_ROAD_2F ;GEN2
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; day
+	db 34, GEODUDE    ; 20% chance
+	db 34, GEODUDE    ; 20% chance
+	db 36, ZUBAT      ; 15% chance
+	db 42, ONIX       ; 10% chance
+	db 34, MACHOP     ; 10% chance
+	db 42, GOLBAT     ; 10% chance
+	db 40, MACHOKE    ;  5% chance
+	db 38, GRAVELER   ;  5% chance
+	db 40, MAROWAK    ;  4% chance
+	db 42, ONIX       ;  1% chance
+	; nite
+	db 34, GEODUDE    ; 20% chance
+	db 34, GEODUDE    ; 20% chance
+	db 36, ZUBAT      ; 15% chance
+	db 42, ONIX       ; 10% chance
+	db 34, MACHOP     ; 10% chance
+	db 42, GOLBAT     ; 10% chance
+	db 40, MACHOKE    ;  5% chance
+	db 38, GRAVELER   ;  5% chance
+	db 40, MAROWAK    ;  4% chance
+	db 42, ONIX       ;  1% chance
+
+	; GEODUDE (3/3)
+	def_grass_wildmons VICTORY_ROAD_3F ;GEN2
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; day
+	db 34, GEODUDE    ; 20% chance
+	db 34, GEODUDE    ; 20% chance
+	db 36, ZUBAT      ; 15% chance
+	db 42, ONIX       ; 10% chance
+	db 34, MACHOP     ; 10% chance
+	db 42, GOLBAT     ; 10% chance
+	db 40, MACHOKE    ;  5% chance
+	db 38, GRAVELER   ;  5% chance
+	db 40, MAROWAK    ;  4% chance
+	db 42, ONIX       ;  1% chance
+	; nite
+	db 34, GEODUDE    ; 20% chance
+	db 34, GEODUDE    ; 20% chance
+	db 36, ZUBAT      ; 15% chance
+	db 42, ONIX       ; 10% chance
+	db 34, MACHOP     ; 10% chance
+	db 42, GOLBAT     ; 10% chance
+	db 40, MACHOKE    ;  5% chance
+	db 38, GRAVELER   ;  5% chance
+	db 40, MAROWAK    ;  4% chance
+	db 42, ONIX       ;  1% chance
+
+	; EEVEE
+	def_grass_wildmons BEHIND_BILLS_HOUSE ;GEN2
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; day
+	db 10, EEVEE      ; 20% chance
+	db 10, EEVEE      ; 20% chance
+	db 12, BELLSPROUT ; 15% chance
+	db 16, PIDGEY     ; 10% chance
+	db 16, PIDGEY     ; 10% chance
+	db 12, ABRA       ; 10% chance
+	db  7, BULBASAUR  ;  5% chance
+	db  7, CHARMANDER ;  5% chance
+	db  7, SQUIRTLE   ;  4% chance
+	db  7, SQUIRTLE   ;  1% chance
+	; nite
+	db 10, EEVEE      ; 20% chance
+	db 10, EEVEE      ; 20% chance
+	db 12, ODDISH     ; 15% chance
+	db 12, VENONAT    ; 10% chance
+	db 12, ABRA       ; 10% chance
+	db 12, BELLSPROUT ; 10% chance
+	db  7, BULBASAUR  ;  5% chance
+	db  7, CHARMANDER ;  5% chance
+	db  7, SQUIRTLE   ;  4% chance
+	db  7, SQUIRTLE   ;  1% chance
+
+
+; JOHTO swarms
+	; PINECO
+	def_grass_wildmons ROUTE_29
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; day
+	db 10, PINECO     ; 20% chance
+	db 11, PINECO     ; 20% chance
+	db  4, SENTRET    ; 15% chance
+	db  3, PIDGEY     ; 10% chance
+	db  4, PIDGEY     ; 10% chance
+	db  5, PIDGEY     ; 10% chance
+	db  5, SENTRET    ;  5% chance
+	db  3, RATTATA    ;  5% chance
+	db  4, HOPPIP     ;  4% chance
+	db  5, HOPPIP     ;  1% chance
+	; nite
+	db 10, PINECO     ; 20% chance
+	db 11, PINECO     ; 20% chance
+	db  3, HOOTHOOT   ; 15% chance
+	db  4, HOOTHOOT   ; 10% chance
+	db  5, HOOTHOOT   ; 10% chance
+	db  3, RATTATA    ; 10% chance
+	db  4, RATTATA    ;  5% chance
+	db  5, RATTATA    ;  5% chance
+	db  6, RATTATA    ;  4% chance
+	db  7, RATTATA    ;  1% chance
+
+	; LEDYBA
+	def_grass_wildmons ROUTE_30
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; day
+	db  3, LEDYBA     ; 20% chance
+	db  4, LEDYBA     ; 20% chance
+	db  3, PIDGEY     ; 15% chance
+	db  5, LEDYBA     ; 10% chance
 	db  3, WEEDLE     ; 10% chance
-	db  4, KAKUNA     ; 10% chance 10
-	db  3, CATERPIE   ; 10% chance 10
-	db  4, METAPOD    ;  5% chance 5
-	db  3, PIKACHU    ;  5% chance
-	db  3, PIKACHU    ;  4% chance 5
-	db  3, PIKACHU    ;  1% chance
+	db  3, CATERPIE   ; 10% chance
+	db  4, CATERPIE   ;  5% chance
+	db  4, PIDGEY     ;  5% chance
+	db  4, HOPPIP     ;  4% chance
+	db  5, HOPPIP     ;  1% chance
+	; nite
+	db  3, LEDYBA     ; 20% chance
+	db  4, LEDYBA     ; 20% chance
+	db  3, HOOTHOOT   ; 15% chance
+	db  4, HOOTHOOT   ; 10% chance
+	db  4, POLIWAG    ; 10% chance
+	db  3, SPINARAK   ; 10% chance
+	db  4, SPINARAK   ;  5% chance
+	db  5, HOOTHOOT   ;  5% chance
+	db  3, ZUBAT      ;  4% chance
+	db  4, ZUBAT      ;  1% chance
 
-; CLEFAIRY swarm
-	map_id MOUNT_MOON ;SWARM2
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
-	; morn
-;	db  8, CLEFAIRY   ; 20% chance 30
-;	db  6, ZUBAT      ; 20% chance 50
-;	db  6, ZUBAT      ; 15% chance
-;	db  7, ZUBAT      ; 10% chance
-;	db  8, CLEFAIRY   ; 10% chance
-;	db  6, GEODUDE    ; 10% chance 15
-;	db  6, GEODUDE    ;  5% chance
-;	db  4, PARAS      ;  5% chance 5
-;	db  7, ZUBAT      ;  4% chance
-;	db  7, ZUBAT      ;  1% chance 1
+	; YANMA
+	def_grass_wildmons ROUTE_35
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; day
-	db  8, CLEFAIRY   ; 20% chance 30
-	db  6, ZUBAT      ; 20% chance 50
+	db 12, YANMA      ; 20% chance
+	db 12, YANMA      ; 20% chance
+	db 14, PIDGEY     ; 15% chance
+	db 14, GROWLITHE  ; 10% chance
+	db 12, ABRA       ; 10% chance
+	db 12, SNUBBULL   ; 10% chance
+	db 13, SNUBBULL   ;  5% chance
+	db 12, JIGGLYPUFF ;  5% chance
+	db 10, DITTO      ;  4% chance
+	db 12, YANMA      ;  1% chance
+	; nite
+	db 12, YANMA      ; 20% chance
+	db 12, YANMA      ; 20% chance
+	db 14, HOOTHOOT   ; 15% chance
+	db 14, PSYDUCK    ; 10% chance
+	db 12, ABRA       ; 10% chance
+	db 12, DROWZEE    ; 10% chance
+	db 13, DROWZEE    ;  5% chance
+	db 12, JIGGLYPUFF ;  5% chance
+	db 10, DITTO      ;  4% chance
+	db 12, YANMA      ;  1% chance
+
+	; STANTLER
+	def_grass_wildmons ROUTE_37
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; day
+	db 14, STANTLER   ; 20% chance
+	db 15, STANTLER   ; 20% chance
+	db 14, LEDYBA     ; 15% chance
+	db 17, GROWLITHE  ; 10% chance
+	db 16, VULPIX     ; 10% chance
+	db 15, PIDGEY     ; 10% chance
+	db 15, PIDGEY     ;  5% chance
+	db 18, PIDGEOTTO  ;  5% chance
+	db 18, LEDIAN     ;  4% chance
+	db 18, LEDIAN     ;  1% chance
+	; nite
+	db 14, STANTLER   ; 20% chance
+	db 15, STANTLER   ; 20% chance
+	db 14, SPINARAK   ; 15% chance
+	db 16, STANTLER   ; 10% chance
+	db 16, HOUNDOUR   ; 10% chance
+	db 15, HOOTHOOT   ; 10% chance
+	db 20, NOCTOWL    ;  5% chance
+	db 22, ARIADOS    ;  5% chance
+	db 16, HOOTHOOT   ;  4% chance
+	db 17, HOOTHOOT   ;  1% chance
+
+	; TAUROS
+	def_grass_wildmons ROUTE_38
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; day
+	db 13, TAUROS     ; 20% chance
+	db 14, TAUROS     ; 20% chance
+	db 17, MAGNEMITE  ; 15% chance
+	db 18, PIDGEOTTO  ; 10% chance
+	db 20, RATICATE   ; 10% chance
+	db 16, RATTATA    ; 10% chance
+	db 16, RATTATA    ;  5% chance
+	db 13, MILTANK    ;  5% chance
+	db 20, RATICATE   ;  4% chance
+	db 20, RATICATE   ;  1% chance
+	; nite
+	db 13, TAUROS     ; 20% chance
+	db 14, TAUROS     ; 20% chance
+	db 20, RATICATE   ; 15% chance
+	db 16, MEOWTH     ; 10% chance
+	db 17, MEOWTH     ; 10% chance
+	db 16, MAGNEMITE  ; 10% chance
+	db 17, MAGNEMITE  ;  5% chance
+	db 16, RATTATA    ;  5% chance
+	db 20, NOCTOWL    ;  4% chance
+	db 20, NOCTOWL    ;  1% chance
+
+	; MARILL
+	def_grass_wildmons ROUTE_42
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; day
+	db 15, MARILL     ; 20% chance
+	db 16, MARILL     ; 20% chance
+	db 15, RATTATA    ; 15% chance
+	db 15, SPEAROW    ; 10% chance
+	db 14, EKANS      ; 10% chance
+	db 20, RATICATE   ; 10% chance
+	db 15, MANKEY     ;  5% chance
+	db 22, ARBOK      ;  5% chance
+	db 16, MAREEP     ;  4% chance
+	db 16, MAREEP     ;  1% chance
+	; nite
+	db 15, MARILL     ; 20% chance
+	db 16, MARILL     ; 20% chance
+	db 20, RATICATE   ; 15% chance
+	db 15, RATTATA    ; 10% chance
+	db 15, ZUBAT      ; 10% chance
+	db 22, GOLBAT     ; 10% chance
+	db 15, MANKEY     ;  5% chance
+	db 20, RATICATE   ;  5% chance
+	db 16, MAREEP     ;  4% chance
+	db 16, MAREEP     ;  1% chance
+
+	; SKARMORY
+	def_grass_wildmons ROUTE_45
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; day
+	db 27, SKARMORY   ; 20% chance
+	db 27, SKARMORY   ; 20% chance
+	db 23, GEODUDE    ; 15% chance
+	db 25, GRAVELER   ; 10% chance
+	db 24, GLIGAR     ; 10% chance
+	db 25, DONPHAN    ; 10% chance
+	db 27, SKARMORY   ;  5% chance
+	db 20, PHANPY     ;  5% chance
+	db 15, LARVITAR   ;  4% chance
+	db 21, PHANPY     ;  1% chance
+	; nite
+	db 27, SKARMORY   ; 20% chance
+	db 27, SKARMORY   ; 20% chance
+	db 23, GEODUDE    ; 15% chance
+	db 21, MURKROW    ; 10% chance
+	db 25, GRAVELER   ; 10% chance
+	db 24, GLIGAR     ; 10% chance
+	db 25, GLIGAR     ;  5% chance
+	db 24, GEODUDE    ;  5% chance
+	db 15, LARVITAR   ;  4% chance
+	db 22, MURKROW    ;  1% chance
+
+	; SUNKERN
+	def_grass_wildmons NATIONAL_PARK
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; day
+	db 14, SUNKERN    ; 20% chance
+	db 15, SUNKERN    ; 20% chance
+	db 14, LEDYBA     ; 15% chance
+	db 14, SUNKERN    ; 10% chance
+	db 12, NIDORAN_M  ; 10% chance
+	db 12, NIDORAN_F  ; 10% chance
+	db 13, PIDGEY     ;  5% chance
+	db 10, CATERPIE   ;  5% chance
+	db 10, WEEDLE     ;  4% chance
+	db 11, WEEDLE     ;  1% chance
+	; nite
+	db 14, SUNKERN    ; 20% chance
+	db 15, SUNKERN    ; 20% chance
+	db 14, SPINARAK   ; 15% chance
+	db 13, HOOTHOOT   ; 10% chance
+	db 14, HOOTHOOT   ; 10% chance
+	db 12, PSYDUCK    ; 10% chance
+	db 13, PSYDUCK    ;  5% chance
+	db 10, VENONAT    ;  5% chance
+	db 11, VENONAT    ;  4% chance
+	db 12, VENONAT    ;  1% chance
+
+	; ODDISH
+	def_grass_wildmons ILEX_FOREST
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	; day
+	db  6, ODDISH     ; 20% chance
+	db  7, ODDISH     ; 20% chance
+	db  5, WEEDLE     ; 15% chance
+	db  5, CATERPIE   ; 10% chance
+	db  6, CATERPIE   ; 10% chance
+	db  7, METAPOD    ; 10% chance
+	db  7, KAKUNA     ;  5% chance
+	db  6, PARAS      ;  5% chance
+	db  7, PIDGEY     ;  4% chance
+	db  8, PIDGEY     ;  1% chance
+	; nite
+	db  5, ODDISH     ; 20% chance
+	db  6, ODDISH     ; 20% chance
+	db  5, VENONAT    ; 15% chance
+	db  7, ODDISH     ; 10% chance
+	db  7, ODDISH     ; 10% chance
+	db  6, VENONAT    ; 10% chance
+	db  7, PSYDUCK    ;  5% chance
+	db  6, PARAS      ;  5% chance
+	db  7, HOOTHOOT   ;  4% chance
+	db  8, HOOTHOOT   ;  1% chance
+
+	; WOOPER (1/3)
+	def_grass_wildmons UNION_CAVE_1F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; day
+	db  5, WOOPER     ; 20% chance
+	db  6, WOOPER     ; 20% chance
+	db  5, ZUBAT      ; 15% chance
+	db  7, GEODUDE    ; 10% chance
+	db  7, SANDSHREW  ; 10% chance
+	db  4, RATTATA    ; 10% chance
+	db  6, GEODUDE    ;  5% chance
+	db  7, SANDSHREW  ;  5% chance
+	db  6, ONIX       ;  4% chance
+	db  7, ONIX       ;  1% chance
+	; nite
+	db  6, WOOPER     ; 20% chance
+	db  6, WOOPER     ; 20% chance
+	db  5, RATTATA    ; 15% chance
+	db  7, WOOPER     ; 10% chance
+	db  7, GEODUDE    ; 10% chance
+	db  5, GEODUDE    ; 10% chance
+	db  6, ZUBAT      ;  5% chance
+	db  6, ZUBAT      ;  5% chance
+	db  6, ONIX       ;  4% chance
+	db  7, ONIX       ;  1% chance
+
+	; WOOPER (2/3)
+	def_grass_wildmons UNION_CAVE_B1F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; day
+	db  8, WOOPER     ; 20% chance
+	db  9, WOOPER     ; 20% chance
 	db  6, ZUBAT      ; 15% chance
 	db  7, ZUBAT      ; 10% chance
-	db  8, CLEFAIRY   ; 10% chance
-	db  6, GEODUDE    ; 10% chance 15
-	db  6, GEODUDE    ;  5% chance
-	db  4, PARAS      ;  5% chance 5
-	db  7, ZUBAT      ;  4% chance
-	db  7, ZUBAT      ;  1% chance 1
+	db  8, ONIX       ; 10% chance
+	db  8, GEODUDE    ; 10% chance
+	db  9, GEODUDE    ;  5% chance
+	db  6, RATTATA    ;  5% chance
+	db  7, RATTATA    ;  4% chance
+	db  8, RATTATA    ;  1% chance
 	; nite
-	db  8, CLEFAIRY   ; 20% chance 30
-	db  6, ZUBAT      ; 20% chance 50
-	db  6, ZUBAT      ; 15% chance
+	db  8, WOOPER     ; 20% chance
+	db  9, WOOPER     ; 20% chance
+	db  8, GEODUDE    ; 15% chance
+	db  8, WOOPER     ; 10% chance
 	db  7, ZUBAT      ; 10% chance
-	db  8, CLEFAIRY   ; 10% chance
-	db  6, GEODUDE    ; 10% chance 15
-	db  6, GEODUDE    ;  5% chance
-	db  4, PARAS      ;  5% chance 5
-	db  7, ZUBAT      ;  4% chance
-	db  7, ZUBAT      ;  1% chance 1
+	db  6, ZUBAT      ; 10% chance
+	db  9, GEODUDE    ;  5% chance
+	db  8, ONIX       ;  5% chance
+	db  6, RATTATA    ;  4% chance
+	db  7, RATTATA    ;  1% chance
 
-	map_id MOUNT_MOON_B2F ;SWARM2
+	; WOOPER (3/3)
+	def_grass_wildmons UNION_CAVE_B1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
-	; morn
-;	db  8, CLEFAIRY   ; 20% chance 30
-;	db  7, ZUBAT      ; 20% chance 40
-;	db  6, GEODUDE    ; 15% chance 20
-;	db  8, CLEFAIRY   ; 10% chance
-;	db  7, ZUBAT      ; 10% chance
-;	db  7, PARAS      ; 10% chance 10
-;	db  7, ZUBAT      ;  5% chance
-;	db  6, GEODUDE    ;  5% chance
-;	db  7, ZUBAT      ;  4% chance 4
-;	db  8, DUNSPARCE  ;  1% chance 1
 	; day
-	db  8, CLEFAIRY   ; 20% chance 30
-	db  7, ZUBAT      ; 20% chance 40
-	db  6, GEODUDE    ; 15% chance 20
-	db  8, CLEFAIRY   ; 10% chance
-	db  7, ZUBAT      ; 10% chance
-	db  7, PARAS      ; 10% chance 10
-	db  7, ZUBAT      ;  5% chance
-	db  6, GEODUDE    ;  5% chance
-	db  7, ZUBAT      ;  4% chance 4
-	db  8, DUNSPARCE  ;  1% chance 1
+	db 20, WOOPER     ; 20% chance
+	db 21, WOOPER     ; 20% chance
+	db 22, ZUBAT      ; 15% chance
+	db 23, ZUBAT      ; 10% chance
+	db 23, GOLBAT     ; 10% chance
+	db 24, GOLBAT     ; 10% chance
+	db 21, RATICATE   ;  5% chance
+	db 20, GEODUDE    ;  5% chance
+	db 23, ONIX       ;  4% chance
+	db 24, ONIX       ;  1% chance
 	; nite
-	db  8, CLEFAIRY   ; 20% chance 30
-	db  7, ZUBAT      ; 20% chance 40
-	db  6, GEODUDE    ; 15% chance 20
-	db  8, CLEFAIRY   ; 10% chance
-	db  7, ZUBAT      ; 10% chance
-	db  7, PARAS      ; 10% chance 10
-	db  7, ZUBAT      ;  5% chance
-	db  6, GEODUDE    ;  5% chance
-	db  7, ZUBAT      ;  4% chance 4
-	db  8, DUNSPARCE  ;  1% chance 1
+	db 20, WOOPER     ; 20% chance
+	db 21, WOOPER     ; 20% chance
+	db 22, QUAGSIRE   ; 15% chance
+	db 22, ZUBAT      ; 10% chance
+	db 23, ZUBAT      ; 10% chance
+	db 23, GOLBAT     ; 10% chance
+	db 21, RATICATE   ;  5% chance
+	db 20, GEODUDE    ;  5% chance
+	db 23, ONIX       ;  4% chance
+	db 24, ONIX       ;  1% chance
 
-; CUBONE swarm (1)
-	map_id ROCK_TUNNEL_1F ;SWARM2
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
-	; morn
-;	db 12, CUBONE     ; 20% chance 25
-;	db 15, ZUBAT      ; 20% chance 30
-;	db 17, MACHOP     ; 15% chance 15
-;	db 16, ZUBAT      ; 10% chance
-;	db 16, GEODUDE    ; 10% chance 20
-;	db 16, GEODUDE    ; 10% chance
-;	db 15, PHANPY     ;  5% chance 5
-;	db 14, ONIX       ;  5% chance 5
-;	db 12, CUBONE     ;  4% chance
-;	db 12, CUBONE     ;  1% chance
+	; DUNSPARCE (1/2)
+	def_grass_wildmons DARK_CAVE_VIOLET_ENTRANCE
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; day
-	db 12, CUBONE     ; 20% chance 25
-	db 15, ZUBAT      ; 20% chance 30
-	db 17, MACHOP     ; 15% chance 15
-	db 16, ZUBAT      ; 10% chance
-	db 16, GEODUDE    ; 10% chance 20
-	db 16, GEODUDE    ; 10% chance
-	db 15, PHANPY     ;  5% chance 5
-	db 14, ONIX       ;  5% chance 5
-	db 12, CUBONE     ;  4% chance
-	db 12, CUBONE     ;  1% chance
+	db 18, DUNSPARCE  ; 20% chance
+	db 18, DUNSPARCE  ; 20% chance
+	db 23, GEODUDE    ; 15% chance
+	db 25, GRAVELER   ; 10% chance
+	db 23, ZUBAT      ; 10% chance
+	db 20, TEDDIURSA  ; 10% chance
+	db 25, URSARING   ;  5% chance
+	db 23, GOLBAT     ;  5% chance
+	db 24, ZUBAT      ;  4% chance
+	db 24, ZUBAT      ;  1% chance
 	; nite
-	db 12, CUBONE     ; 20% chance 25
-	db 15, ZUBAT      ; 20% chance 30
-	db 17, MACHOP     ; 15% chance 15
-	db 16, ZUBAT      ; 10% chance
-	db 16, GEODUDE    ; 10% chance 20
-	db 16, GEODUDE    ; 10% chance
-	db 15, PHANPY     ;  5% chance 5
-	db 14, ONIX       ;  5% chance 5
-	db 12, CUBONE     ;  4% chance
-	db 12, CUBONE     ;  1% chance
+	db 18, DUNSPARCE  ; 20% chance
+	db 18, DUNSPARCE  ; 20% chance
+	db 23, GEODUDE    ; 15% chance
+	db 25, GRAVELER   ; 10% chance
+	db 23, ZUBAT      ; 10% chance
+	db 20, WOBBUFFET  ; 10% chance
+	db 21, WOBBUFFET  ;  5% chance
+	db 23, GOLBAT     ;  5% chance
+	db 24, ZUBAT      ;  4% chance
+	db 24, ZUBAT      ;  1% chance
 
-; CUBONE swarm (2)
-	map_id ROCK_TUNNEL_B1F ;SWARM2
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
-	; morn
-;	db 12, CUBONE     ; 20% chance 30
-;	db 16, ZUBAT      ; 20% chance 30
-;	db 16, GEODUDE    ; 15% chance 20
-;	db 17, ZUBAT      ; 10% chance
-;	db 17, MACHOP     ; 10% chance 10
-;	db 12, CUBONE     ; 10% chance
-;	db 17, GEODUDE    ;  5% chance
-;	db 12, PHANPY     ;  5% chance 5
-;	db 15, ONIX       ;  4% chance 5
-;	db 16, ONIX       ;  1% chance
+	; DUNSPARCE (2/2)
+	def_grass_wildmons DARK_CAVE_BLACKTHORN_ENTRANCE
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; day
-	db 12, CUBONE     ; 20% chance 30
-	db 16, ZUBAT      ; 20% chance 30
-	db 16, GEODUDE    ; 15% chance 20
-	db 17, ZUBAT      ; 10% chance
-	db 17, MACHOP     ; 10% chance 10
-	db 12, CUBONE     ; 10% chance
-	db 17, GEODUDE    ;  5% chance
-	db 12, PHANPY     ;  5% chance 5
-	db 15, ONIX       ;  4% chance 5
-	db 16, ONIX       ;  1% chance
+	db 18, DUNSPARCE  ; 20% chance
+	db 18, DUNSPARCE  ; 20% chance
+	db 23, GEODUDE    ; 15% chance
+	db 25, GRAVELER   ; 10% chance
+	db 23, ZUBAT      ; 10% chance
+	db 20, TEDDIURSA  ; 10% chance
+	db 25, URSARING   ;  5% chance
+	db 23, GOLBAT     ;  5% chance
+	db 24, ZUBAT      ;  4% chance
+	db 24, ZUBAT      ;  1% chance
 	; nite
-	db 12, CUBONE     ; 20% chance 30
-	db 16, ZUBAT      ; 20% chance 30
-	db 16, GEODUDE    ; 15% chance 20
-	db 17, ZUBAT      ; 10% chance
-	db 17, MACHOP     ; 10% chance 10
-	db 12, CUBONE     ; 10% chance
-	db 17, GEODUDE    ;  5% chance
-	db 12, PHANPY     ;  5% chance 5
-	db 15, ONIX       ;  4% chance 5
-	db 16, ONIX       ;  1% chance
+	db 18, DUNSPARCE  ; 20% chance
+	db 18, DUNSPARCE  ; 20% chance
+	db 23, GEODUDE    ; 15% chance
+	db 25, GRAVELER   ; 10% chance
+	db 23, ZUBAT      ; 10% chance
+	db 20, WOBBUFFET  ; 10% chance
+	db 21, WOBBUFFET  ;  5% chance
+	db 23, GOLBAT     ;  5% chance
+	db 24, ZUBAT      ;  4% chance
+	db 24, ZUBAT      ;  1% chance
 
-; JYNX swarm (1)
-	map_id SEAFOAM_ISLANDS_B1F ;SWARM2
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
-	; morn
-;	db 30, JYNX       ; 20% chance 30
-;	db 21, SEEL       ; 20% chance 21
-;	db 21, KRABBY     ; 15% chance 15
-;	db 21, SHELLDER   ; 10% chance 10
-;	db 30, JYNX       ; 10% chance
-;	db 20, SWINUB     ; 10% chance 10
-;	db 28, KINGLER    ;  5% chance 5
-;	db 34, DEWGONG    ;  5% chance 5
-;	db 25, SNEASEL    ;  4% chance 4
-;	db 21, SEEL       ;  1% chance
+	; SNEASEL (1/3)
+	def_grass_wildmons ICE_PATH_1F
+	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; day
-	db 30, JYNX       ; 20% chance 30
-	db 21, SEEL       ; 20% chance 21
-	db 21, KRABBY     ; 15% chance 15
-	db 21, SHELLDER   ; 10% chance 10
-	db 30, JYNX       ; 10% chance
-	db 20, SWINUB     ; 10% chance 10
-	db 28, KINGLER    ;  5% chance 5
-	db 34, DEWGONG    ;  5% chance 5
-	db 25, SNEASEL    ;  4% chance 4
-	db 21, SEEL       ;  1% chance
+	db 22, SNEASEL    ; 20% chance
+	db 23, SNEASEL    ; 20% chance
+	db 21, SWINUB     ; 15% chance
+	db 22, SWINUB     ; 10% chance
+	db 23, GOLBAT     ; 10% chance
+	db 22, ZUBAT      ; 10% chance
+	db 23, ZUBAT      ;  5% chance
+	db 21, DELIBIRD   ;  5% chance
+	db 22, JYNX       ;  4% chance
+	db 23, JYNX       ;  1% chance
 	; nite
-	db 30, JYNX       ; 20% chance 30
-	db 21, SEEL       ; 20% chance 21
-	db 21, KRABBY     ; 15% chance 15
-	db 21, SHELLDER   ; 10% chance 10
-	db 30, JYNX       ; 10% chance
-	db 20, SWINUB     ; 10% chance 10
-	db 28, KINGLER    ;  5% chance 5
-	db 34, DEWGONG    ;  5% chance 5
-	db 25, SNEASEL    ;  4% chance 4
-	db 21, SEEL       ;  1% chance
+	db 22, SNEASEL    ; 20% chance
+	db 23, SNEASEL    ; 20% chance
+	db 21, SWINUB     ; 15% chance
+	db 22, SWINUB     ; 10% chance
+	db 23, GOLBAT     ; 10% chance
+	db 22, ZUBAT      ; 10% chance
+	db 23, ZUBAT      ;  5% chance
+	db 21, DELIBIRD   ;  5% chance
+	db 22, ZUBAT      ;  4% chance
+	db 23, JYNX       ;  1% chance
 
-; JYNX swarm (2)
-	map_id SEAFOAM_ISLANDS_B2F ;SWARM2
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
-	; morn
-;	db 30, JYNX       ; 20% chance 30
-;	db 22, SEEL       ; 20% chance 21
-;	db 21, KRABBY     ; 15% chance 15
-;	db 22, SHELLDER   ; 10% chance 10
-;	db 30, JYNX       ; 10% chance
-;	db 21, SWINUB     ; 10% chance 10
-;	db 28, KINGLER    ;  5% chance 5
-;	db 34, DEWGONG    ;  5% chance 5
-;	db 25, SNEASEL    ;  4% chance 4
-;	db 22, SEEL       ;  1% chance
+	; SNEASEL (2/3)
+	def_grass_wildmons ICE_PATH_B1F
+	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; day
-	db 30, JYNX       ; 20% chance 30
-	db 22, SEEL       ; 20% chance 21
-	db 21, KRABBY     ; 15% chance 15
-	db 22, SHELLDER   ; 10% chance 10
-	db 30, JYNX       ; 10% chance
-	db 21, SWINUB     ; 10% chance 10
-	db 28, KINGLER    ;  5% chance 5
-	db 34, DEWGONG    ;  5% chance 5
-	db 25, SNEASEL    ;  4% chance 4
-	db 22, SEEL       ;  1% chance
+	db 22, SNEASEL    ; 20% chance
+	db 23, SNEASEL    ; 20% chance
+	db 21, SWINUB     ; 15% chance
+	db 22, SWINUB     ; 10% chance
+	db 23, GOLBAT     ; 10% chance
+	db 22, ZUBAT      ; 10% chance
+	db 23, ZUBAT      ;  5% chance
+	db 21, DELIBIRD   ;  5% chance
+	db 22, JYNX       ;  4% chance
+	db 23, JYNX       ;  1% chance
 	; nite
-	db 30, JYNX       ; 20% chance 30
-	db 22, SEEL       ; 20% chance 21
-	db 21, KRABBY     ; 15% chance 15
-	db 22, SHELLDER   ; 10% chance 10
-	db 30, JYNX       ; 10% chance
-	db 21, SWINUB     ; 10% chance 10
-	db 28, KINGLER    ;  5% chance 5
-	db 34, DEWGONG    ;  5% chance 5
-	db 25, SNEASEL    ;  4% chance 4
-	db 22, SEEL       ;  1% chance
+	db 22, SNEASEL    ; 20% chance
+	db 23, SNEASEL    ; 20% chance
+	db 21, SWINUB     ; 15% chance
+	db 22, SWINUB     ; 10% chance
+	db 23, GOLBAT     ; 10% chance
+	db 22, ZUBAT      ; 10% chance
+	db 23, ZUBAT      ;  5% chance
+	db 21, DELIBIRD   ;  5% chance
+	db 22, ZUBAT      ;  4% chance
+	db 23, JYNX       ;  1% chance
 
-; JYNX swarm (3)
-	map_id SEAFOAM_ISLANDS_B3F ;SWARM2
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; SNEASEL (3/3)
+	def_grass_wildmons ICE_PATH_B2F_B3F
+	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-;	db 30, JYNX       ; 20% chance 30
-;	db 23, SEEL       ; 20% chance 21
-;	db 22, KRABBY     ; 15% chance 15
-;	db 23, SHELLDER   ; 10% chance 10
-;	db 30, JYNX       ; 10% chance
-;	db 22, SWINUB     ; 10% chance 10
-;	db 28, KINGLER    ;  5% chance 5
-;	db 34, DEWGONG    ;  5% chance 5
-;	db 25, SNEASEL    ;  4% chance 4
-;	db 23, SEEL       ;  1% chance
 	; day
-	db 30, JYNX       ; 20% chance 30
-	db 23, SEEL       ; 20% chance 21
-	db 22, KRABBY     ; 15% chance 15
-	db 23, SHELLDER   ; 10% chance 10
-	db 30, JYNX       ; 10% chance
-	db 22, SWINUB     ; 10% chance 10
-	db 28, KINGLER    ;  5% chance 5
-	db 34, DEWGONG    ;  5% chance 5
-	db 25, SNEASEL    ;  4% chance 4
-	db 23, SEEL       ;  1% chance
+	db 22, SNEASEL    ; 20% chance
+	db 23, SNEASEL    ; 20% chance
+	db 23, SWINUB     ; 15% chance
+	db 24, GOLBAT     ; 10% chance
+	db 23, DELIBIRD   ; 10% chance
+	db 24, ZUBAT      ; 10% chance
+	db 25, ZUBAT      ;  5% chance
+	db 23, JYNX       ;  5% chance
+	db 23, JYNX       ;  4% chance
+	db 24, JYNX       ;  1% chance
 	; nite
-	db 30, JYNX       ; 20% chance 30
-	db 23, SEEL       ; 20% chance 21
-	db 22, KRABBY     ; 15% chance 15
-	db 23, SHELLDER   ; 10% chance 10
-	db 30, JYNX       ; 10% chance
-	db 22, SWINUB     ; 10% chance 10
-	db 28, KINGLER    ;  5% chance 5
-	db 34, DEWGONG    ;  5% chance 5
-	db 25, SNEASEL    ;  4% chance 4
-	db 23, SEEL       ;  1% chance
-
-; JYNX swarm (4)
-	map_id SEAFOAM_ISLANDS_B4F ;SWARM2
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
-	; morn
-;	db 30, JYNX       ; 20% chance 30
-;	db 24, SEEL       ; 20% chance 20
-;	db 22, KRABBY     ; 15% chance 15
-;	db 24, SHELLDER   ; 10% chance 10
-;	db 30, JYNX       ; 10% chance
-;	db 23, SWINUB     ; 10% chance 10
-;	db 28, KINGLER    ;  5% chance 5
-;	db 34, DEWGONG    ;  5% chance 5
-;	db 25, SNEASEL    ;  4% chance 5
-;	db 25, SNEASEL    ;  1% chance
-	; day
-	db 30, JYNX       ; 20% chance 30
-	db 24, SEEL       ; 20% chance 20
-	db 22, KRABBY     ; 15% chance 15
-	db 24, SHELLDER   ; 10% chance 10
-	db 30, JYNX       ; 10% chance
-	db 23, SWINUB     ; 10% chance 10
-	db 28, KINGLER    ;  5% chance 5
-	db 34, DEWGONG    ;  5% chance 5
-	db 25, SNEASEL    ;  4% chance 5
-	db 25, SNEASEL    ;  1% chance
-	; nite
-	db 30, JYNX       ; 20% chance 30
-	db 24, SEEL       ; 20% chance 20
-	db 22, KRABBY     ; 15% chance 15
-	db 24, SHELLDER   ; 10% chance 10
-	db 30, JYNX       ; 10% chance
-	db 23, SWINUB     ; 10% chance 10
-	db 28, KINGLER    ;  5% chance 5
-	db 34, DEWGONG    ;  5% chance 5
-	db 25, SNEASEL    ;  4% chance 5
-	db 25, SNEASEL    ;  1% chance
-
-; ELECTABUZZ swarm
-	map_id POWER_PLANT ;SWARM2
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
-	; morn
-;	db 30, ELECTABUZZ ; 20% chance 30
-;	db 23, MAGNEMITE  ; 20% chance 25
-;	db 20, PIKACHU    ; 15% chance 15
-;	db 23, VOLTORB    ; 10% chance 10
-;	db 24, GRIMER     ; 10% chance 10
-;	db 30, MAGNETON   ; 10% chance 10
-;	db 23, MAGNEMITE  ;  5% chance
-;	db 30, ELECTABUZZ ;  5% chance
-;	db 30, ELECTABUZZ ;  4% chance
-;	db 30, ELECTABUZZ ;  1% chance
-	; day
-	db 30, ELECTABUZZ ; 20% chance 30
-	db 23, MAGNEMITE  ; 20% chance 25
-	db 20, PIKACHU    ; 15% chance 15
-	db 23, VOLTORB    ; 10% chance 10
-	db 24, GRIMER     ; 10% chance 10
-	db 30, MAGNETON   ; 10% chance 10
-	db 23, MAGNEMITE  ;  5% chance
-	db 30, ELECTABUZZ ;  5% chance
-	db 30, ELECTABUZZ ;  4% chance
-	db 30, ELECTABUZZ ;  1% chance
-	; nite
-	db 30, ELECTABUZZ ; 20% chance 30
-	db 23, MAGNEMITE  ; 20% chance 25
-	db 20, PIKACHU    ; 15% chance 15
-	db 23, VOLTORB    ; 10% chance 10
-	db 24, GRIMER     ; 10% chance 10
-	db 30, MAGNETON   ; 10% chance 10
-	db 23, MAGNEMITE  ;  5% chance
-	db 30, ELECTABUZZ ;  5% chance
-	db 30, ELECTABUZZ ;  4% chance
-	db 30, ELECTABUZZ ;  1% chance
-
-; MAGMAR swarm (1)
-	map_id POKEMON_MANSION_1F ;SWARM2
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
-	; morn
-;	db 33, MAGMAR     ; 20% chance 30
-;	db 28, GRIMER     ; 20% chance 20
-;	db 28, KOFFING    ; 15% chance 20
-;	db 33, MAGMAR     ; 10% chance
-;	db 25, HOUNDOUR   ; 10% chance 10
-;	db 25, SLUGMA     ; 10% chance 10
-;	db 35, WEEZING    ;  5% chance 5
-;	db 38, MUK        ;  5% chance 5
-;	db 28, GRIMER     ;  4% chance
-;	db 28, GRIMER     ;  1% chance
-	; day
-	db 33, MAGMAR     ; 20% chance 30
-	db 28, GRIMER     ; 20% chance 20
-	db 28, KOFFING    ; 15% chance 20
-	db 33, MAGMAR     ; 10% chance
-	db 25, HOUNDOUR   ; 10% chance 10
-	db 25, SLUGMA     ; 10% chance 10
-	db 35, WEEZING    ;  5% chance 5
-	db 38, MUK        ;  5% chance 5
-	db 28, GRIMER     ;  4% chance
-	db 28, GRIMER     ;  1% chance
-	; nite
-	db 33, MAGMAR     ; 20% chance 30
-	db 28, GRIMER     ; 20% chance 20
-	db 28, KOFFING    ; 15% chance 20
-	db 33, MAGMAR     ; 10% chance
-	db 25, HOUNDOUR   ; 10% chance 10
-	db 25, SLUGMA     ; 10% chance 10
-	db 35, WEEZING    ;  5% chance 5
-	db 38, MUK        ;  5% chance 5
-	db 28, GRIMER     ;  4% chance
-	db 28, GRIMER     ;  1% chance
-
-; MAGMAR swarm (2)
-	map_id POKEMON_MANSION_2F ;SWARM2
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
-	; morn
-;	db 33, MAGMAR     ; 20% chance 30
-;	db 28, GRIMER     ; 20% chance 20
-;	db 28, KOFFING    ; 15% chance 20
-;	db 33, MAGMAR     ; 10% chance
-;	db 25, HOUNDOUR   ; 10% chance 10
-;	db 25, SLUGMA     ; 10% chance 10
-;	db 35, WEEZING    ;  5% chance 5
-;	db 38, MUK        ;  5% chance 5
-;	db 28, GRIMER     ;  4% chance
-;	db 28, GRIMER     ;  1% chance
-	; day
-	db 33, MAGMAR     ; 20% chance 30
-	db 28, GRIMER     ; 20% chance 20
-	db 28, KOFFING    ; 15% chance 20
-	db 33, MAGMAR     ; 10% chance
-	db 25, HOUNDOUR   ; 10% chance 10
-	db 25, SLUGMA     ; 10% chance 10
-	db 35, WEEZING    ;  5% chance 5
-	db 38, MUK        ;  5% chance 5
-	db 28, GRIMER     ;  4% chance
-	db 28, GRIMER     ;  1% chance
-	; nite
-	db 33, MAGMAR     ; 20% chance 30
-	db 28, GRIMER     ; 20% chance 20
-	db 28, KOFFING    ; 15% chance 20
-	db 33, MAGMAR     ; 10% chance
-	db 25, HOUNDOUR   ; 10% chance 10
-	db 25, SLUGMA     ; 10% chance 10
-	db 35, WEEZING    ;  5% chance 5
-	db 38, MUK        ;  5% chance 5
-	db 28, GRIMER     ;  4% chance
-	db 28, GRIMER     ;  1% chance
-
-; MAGMAR swarm (3)
-	map_id POKEMON_MANSION_3F ;SWARM2
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
-	; morn
-;	db 34, MAGMAR     ; 20% chance 30
-;	db 28, KOFFING    ; 20% chance 25
-;	db 28, GRIMER     ; 15% chance 15
-;	db 34, MAGMAR     ; 10% chance
-;	db 25, HOUNDOUR   ; 10% chance 10
-;	db 25, SLUGMA     ; 10% chance 10
-;	db 36, WEEZING    ;  5% chance 5
-;	db 38, MUK        ;  5% chance 5
-;	db 28, KOFFING    ;  4% chance
-;	db 28, KOFFING    ;  1% chance
-	; day
-	db 34, MAGMAR     ; 20% chance 30
-	db 28, KOFFING    ; 20% chance 25
-	db 28, GRIMER     ; 15% chance 15
-	db 34, MAGMAR     ; 10% chance
-	db 25, HOUNDOUR   ; 10% chance 10
-	db 25, SLUGMA     ; 10% chance 10
-	db 36, WEEZING    ;  5% chance 5
-	db 38, MUK        ;  5% chance 5
-	db 28, KOFFING    ;  4% chance
-	db 28, KOFFING    ;  1% chance
-	; nite
-	db 34, MAGMAR     ; 20% chance 30
-	db 28, KOFFING    ; 20% chance 25
-	db 28, GRIMER     ; 15% chance 15
-	db 34, MAGMAR     ; 10% chance
-	db 25, HOUNDOUR   ; 10% chance 10
-	db 25, SLUGMA     ; 10% chance 10
-	db 36, WEEZING    ;  5% chance 5
-	db 38, MUK        ;  5% chance 5
-	db 28, KOFFING    ;  4% chance
-	db 28, KOFFING    ;  1% chance
-
-; MAGMAR swarm (4)
-	map_id POKEMON_MANSION_B1F ;SWARM2
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
-	; morn
-;	db 34, MAGMAR     ; 20% chance 30
-;	db 28, GRIMER     ; 20% chance 20
-;	db 28, KOFFING    ; 15% chance 15
-;	db 34, MAGMAR     ; 10% chance
-;	db 25, HOUNDOUR   ; 10% chance 10
-;	db 25, SLUGMA     ; 10% chance 10
-;	db 36, WEEZING    ;  5% chance 5
-;	db 38, MUK        ;  5% chance 5
-;	db 20, DITTO      ;  4% chance 5
-;	db 20, DITTO      ;  1% chance
-	; day
-	db 34, MAGMAR     ; 20% chance 30
-	db 28, GRIMER     ; 20% chance 20
-	db 28, KOFFING    ; 15% chance 15
-	db 34, MAGMAR     ; 10% chance
-	db 25, HOUNDOUR   ; 10% chance 10
-	db 25, SLUGMA     ; 10% chance 10
-	db 36, WEEZING    ;  5% chance 5
-	db 38, MUK        ;  5% chance 5
-	db 20, DITTO      ;  4% chance 5
-	db 20, DITTO      ;  1% chance
-	; nite
-	db 34, MAGMAR     ; 20% chance 30
-	db 28, GRIMER     ; 20% chance 20
-	db 28, KOFFING    ; 15% chance 15
-	db 34, MAGMAR     ; 10% chance
-	db 25, HOUNDOUR   ; 10% chance 10
-	db 25, SLUGMA     ; 10% chance 10
-	db 36, WEEZING    ;  5% chance 5
-	db 38, MUK        ;  5% chance 5
-	db 20, DITTO      ;  4% chance 5
-	db 20, DITTO      ;  1% chance
-
-; JOHTO swarm
-	map_id ROUTE_29
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
-	; morn
-;	db 20, DITTO      ; 20% chance
-;	db 20, DITTO      ; 20% chance
-;	db 20, DITTO      ; 15% chance
-;	db 20, DITTO      ; 10% chance
-;	db 20, DITTO      ; 10% chance
-;	db 20, DITTO      ; 10% chance
-;	db 20, DITTO      ;  5% chance
-;	db 20, DITTO      ;  5% chance
-;	db 20, DITTO      ;  4% chance
-;	db 20, DITTO      ;  1% chance
-	; day
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
-	; nite
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 20% chance
-	db 20, DITTO      ; 15% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ; 10% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  5% chance
-	db 20, DITTO      ;  4% chance
-	db 20, DITTO      ;  1% chance
+	db 22, SNEASEL    ; 20% chance
+	db 23, SNEASEL    ; 20% chance
+	db 24, ZUBAT      ; 15% chance
+	db 23, SWINUB     ; 10% chance
+	db 24, SWINUB     ; 10% chance
+	db 24, GOLBAT     ; 10% chance
+	db 23, DELIBIRD   ;  5% chance
+	db 24, DELIBIRD   ;  5% chance
+	db 24, ZUBAT      ;  4% chance
+	db 22, JYNX       ;  1% chance
 
 	db -1 ; end
