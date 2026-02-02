@@ -111,6 +111,7 @@ Landmarks:
 	landmark  12, 100, TohjoFallsName
 	landmark  16,  76, Route28Name
 ; end
+	landmark 120,  34, BillsBackYardName
 	landmark 108,  76, UndergroundName
 	landmark 100,  92, SSAnneName
 	landmark  84,  68, RocketHideoutName
@@ -286,3 +287,7 @@ SpecialMapName:      db "SPECIAL@"
 ;SafariZoneGateName:  db "SAFARI ZONE¯GATE@"
 RocketHideoutName:   db "ROCKET¯HIDEOUT@"
 NinjaDenName:        db "NINJA¯DEN@"
+BillsBackYardName:   db "BILL's¯BACK YARD@"
+;                       "SILVER CAVE/" one line on map screen
+;                       "CHERRYGROVE CITY" one line on fly screen
+;                                           also nearly full banner
