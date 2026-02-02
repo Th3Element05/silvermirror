@@ -56,14 +56,14 @@ WhirlIslandB1FB2F_MapEvents:
 	warp_event 31, 31, WHIRL_ISLAND_CAVES, 10 ;4 to SW,3
 	warp_event 45, 31, WHIRL_ISLAND_CAVES, 9  ;5 to SW,2
 	warp_event 53, 29, WHIRL_ISLAND_CAVES, 14 ;6 to SE,2
-	warp_event 47, 21, WHIRL_ISLAND_B2F, 1    ;7
-	warp_event 35, 27, WHIRL_ISLAND_B2F, 2    ;8
+	warp_event 47, 21, WHIRL_ISLAND_B1F_B2F, 10 ;7 to B2F,1
+	warp_event 35, 27, WHIRL_ISLAND_B1F_B2F, 11 ;8 to B2F,2
 	warp_event 39, 21, WHIRL_ISLAND_CAVES, 15 ;9 to Cave1
 ;B2F
-	warp_event 11,  5, WHIRL_ISLAND_B1F, 7
-	warp_event  7, 11, WHIRL_ISLAND_B1F, 8
-	warp_event  7, 25, WHIRL_ISLAND_LUGIA_CHAMBER, 1
-	warp_event 13, 31, WHIRL_ISLAND_CAVES, 12 ;SW,5
+	warp_event 11,  5, WHIRL_ISLAND_B1F_B2F, 7 ;10 to B1F,7
+	warp_event  7, 11, WHIRL_ISLAND_B1F_B2F, 8 ;11 to B1F,8
+	warp_event  7, 25, WHIRL_ISLAND_LUGIA_CHAMBER, 1 ;12
+	warp_event 13, 31, WHIRL_ISLAND_CAVES, 12 ;13 to SW,5
 
 	def_coord_events
 
