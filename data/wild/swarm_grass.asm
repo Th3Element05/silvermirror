@@ -319,8 +319,8 @@ SwarmGrassWildMons:
 	def_grass_wildmons ROUTE_24 ;GEN1
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; day
-	db  8, ABRA       ; 20% chance
-	db  8, ABRA       ; 20% chance
+	db 12, ABRA       ; 20% chance
+	db 12, ABRA       ; 20% chance
 	db 10, BELLSPROUT ; 15% chance
 	db 10, BELLSPROUT ; 10% chance
 	db 10, BELLSPROUT ; 10% chance
@@ -330,8 +330,8 @@ SwarmGrassWildMons:
 	db 18, PIDGEOTTO  ;  4% chance
 	db 13, PIDGEY     ;  1% chance
 	; nite
-	db  8, ABRA       ; 20% chance
-	db  8, ABRA       ; 20% chance
+	db 12, ABRA       ; 20% chance
+	db 12, ABRA       ; 20% chance
 	db 10, ODDISH     ; 15% chance
 	db 12, VENONAT    ; 10% chance
 	db 10, PSYDUCK    ; 10% chance
@@ -523,7 +523,7 @@ SwarmGrassWildMons:
 	db 23, SHELLDER   ;  4% chance
 	db 23, SHELLDER   ;  1% chance
 
-	; E
+	; ELECTABUZZ
 	def_grass_wildmons POWER_PLANT ;GEN1
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; day

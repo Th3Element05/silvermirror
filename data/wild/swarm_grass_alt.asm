@@ -538,8 +538,8 @@ SwarmGrassWildMonsAlt:
 	db 18, GASTLY     ;  4% chance
 	db 25, HAUNTER    ;  1% chance
 	; nite
-	db 18, GASTLY     ; 20% chance
-	db 18, GASTLY     ; 20% chance
+	db 18, MISDREAVUS ; 20% chance
+	db 18, MISDREAVUS ; 20% chance
 	db 18, GASTLY     ; 15% chance
 	db 18, ZUBAT      ; 10% chance
 	db 18, GASTLY     ; 10% chance
@@ -564,8 +564,8 @@ SwarmGrassWildMonsAlt:
 	db 18, GASTLY     ;  4% chance
 	db 25, HAUNTER    ;  1% chance
 	; nite
-	db 18, GASTLY     ; 20% chance
-	db 18, GASTLY     ; 20% chance
+	db 18, MISDREAVUS ; 20% chance
+	db 18, MISDREAVUS ; 20% chance
 	db 18, GASTLY     ; 15% chance
 	db 18, ZUBAT      ; 10% chance
 	db 18, GASTLY     ; 10% chance
@@ -590,8 +590,8 @@ SwarmGrassWildMonsAlt:
 	db 25, HAUNTER    ;  4% chance
 	db 18, GASTLY     ;  1% chance
 	; nite
-	db 18, GASTLY     ; 20% chance
-	db 18, GASTLY     ; 20% chance
+	db 18, MISDREAVUS ; 20% chance
+	db 18, MISDREAVUS ; 20% chance
 	db 18, GASTLY     ; 15% chance
 	db 18, ZUBAT      ; 10% chance
 	db 18, GASTLY     ; 10% chance
@@ -616,8 +616,8 @@ SwarmGrassWildMonsAlt:
 	db 20, CUBONE     ;  4% chance
 	db 20, CUBONE     ;  1% chance
 	; nite
-	db 18, GASTLY     ; 20% chance
-	db 18, GASTLY     ; 20% chance
+	db 18, MISDREAVUS ; 20% chance
+	db 18, MISDREAVUS ; 20% chance
 	db 19, GASTLY     ; 15% chance
 	db 18, GASTLY     ; 10% chance
 	db 20, GASTLY     ; 10% chance
@@ -642,8 +642,8 @@ SwarmGrassWildMonsAlt:
 	db 20, CUBONE     ;  4% chance
 	db 20, CUBONE     ;  1% chance
 	; nite
-	db 18, GASTLY     ; 20% chance
-	db 18, GASTLY     ; 20% chance
+	db 18, MISDREAVUS ; 20% chance
+	db 18, MISDREAVUS ; 20% chance
 	db 19, GASTLY     ; 15% chance
 	db 18, GASTLY     ; 10% chance
 	db 20, GASTLY     ; 10% chance
