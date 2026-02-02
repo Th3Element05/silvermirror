@@ -138,7 +138,6 @@ DEF JOHTO_FLYPOINT EQU const_value
 	const FLY_MAHOGANY
 	const FLY_LAKE_OF_RAGE
 	const FLY_CIANWOOD
-;	const FLY_SAFARI
 	const FLY_MT_SILVER
 ; kanto
 DEF KANTO_FLYPOINT EQU const_value
@@ -147,7 +146,7 @@ DEF KANTO_FLYPOINT EQU const_value
 	const FLY_PEWTER
 	const FLY_CERULEAN
 	const FLY_VERMILION
-	const FLY_ROCK_TUNNEL
+;	const FLY_ROCK_TUNNEL
 	const FLY_LAVENDER
 	const FLY_CELADON
 	const FLY_FUCHSIA
