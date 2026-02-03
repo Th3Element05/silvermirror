@@ -5,7 +5,7 @@ SECTION "Evolutions and Attacks", ROMX
 ;    * db EVOLVE_LEVEL, level, species
 ;    * db EVOLVE_ITEM, used item, species
 ;    * db EVOLVE_TRADE, held item (or -1 for none), species
-;    * db EVOLVE_HAPPINESS, TR_* constant (ANYTIME, MORNDAY, NITE), species
+;    * db EVOLVE_HAPPINESS, TR_* constant (ANYTIME, MORNDAYEVE, NITE), species
 ;    * db EVOLVE_STAT, level, ATK_*_DEF constant (LT, GT, EQ), species
 ; - db 0 ; no more evolutions
 ; - Learnset (in increasing level order):
@@ -13,6 +13,7 @@ SECTION "Evolutions and Attacks", ROMX
 ; - db 0 ; no more level-up moves
 
 INCLUDE "data/pokemon/evos_attacks_pointers.asm"
+
 
 BulbasaurEvosAttacks: ;silvermirror modified
 	db EVOLVE_LEVEL, 16, IVYSAUR
@@ -1618,18 +1619,38 @@ ChanseyEvosAttacks:
 	db 0 ; no more level-up moves
 
 TangelaEvosAttacks:
+;	db EVOLVE_MOVE, ANCIENTPOWER, TANGROWTH
 	db 0 ; no more evolutions
 	db 1, CONSTRICT
 	db 4, SLEEP_POWDER
-	db 10, ABSORB
-	db 13, POISONPOWDER
+	db 8, ABSORB
+	db 12, GROWTH
+	db 15, POISONPOWDER
 	db 19, VINE_WHIP
-	db 25, BIND
-	db 31, MEGA_DRAIN
-	db 34, STUN_SPORE
-	db 40, SLAM
-	db 46, GROWTH
+	db 22, BIND
+	db 26, MEGA_DRAIN
+	db 29, STUN_SPORE
+	db 33, ANCIENTPOWER ; make this TM-only to restrict evo?
+	db 36, GIGA_DRAIN
+	db 40, SYNTHESIS
+	db 44, SLAM
+	db 47, THEIF
+	db 50, SUNNY_DAY
+	db 54, SOLARBEAM
 	db 0 ; no more level-up moves
+;TangelaEvosAttacks:
+;	db 0 ; no more evolutions
+;	db 1, CONSTRICT
+;	db 4, SLEEP_POWDER
+;	db 10, ABSORB
+;	db 13, POISONPOWDER
+;	db 19, VINE_WHIP
+;	db 25, BIND
+;	db 31, MEGA_DRAIN
+;	db 34, STUN_SPORE
+;	db 40, SLAM
+;	db 46, GROWTH
+;	db 0 ; no more level-up moves
 
 KangaskhanEvosAttacks:
 	db 0 ; no more evolutions
@@ -2643,16 +2664,34 @@ JumpluffEvosAttacks:
 	db 0 ; no more level-up moves
 
 AipomEvosAttacks:
+;	db EVOLVE_MOVE, DOUBLESLAP, AMBIPOM
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, TAIL_WHIP
-	db 6, SAND_ATTACK
-	db 12, BATON_PASS
-	db 19, FURY_SWIPES
-	db 27, SWIFT
-	db 36, SCREECH
-	db 46, AGILITY
+	db 6, MUD_SLAP ; Sand-Attack
+	db 8, LICK ; Astonish
+	db 11, BATON_PASS
+	db 15, THEIF ; Tickle
+	db 18, FURY_SWIPES
+	db 22, SWIFT
+	db 25, SCREECH
+	db 29, AGILITY
+	db 32, DOUBLESLAP ; Double Hit
+	db 36, BARRAGE ; Fling
+	db 39, FOCUS_ENERGY ; Nasty Plot
+	db 43, DOUBLE_EDGE ; Last Resort
 	db 0 ; no more level-up moves
+;AipomEvosAttacks:
+;	db 0 ; no more evolutions
+;	db 1, SCRATCH
+;	db 1, TAIL_WHIP
+;	db 6, SAND_ATTACK
+;	db 12, BATON_PASS
+;	db 19, FURY_SWIPES
+;	db 27, SWIFT
+;	db 36, SCREECH
+;	db 46, AGILITY
+;	db 0 ; no more level-up moves
 
 SunkernEvosAttacks:
 	db EVOLVE_ITEM, SUN_STONE, SUNFLORA
@@ -2677,17 +2716,34 @@ SunfloraEvosAttacks:
 	db 0 ; no more level-up moves
 
 YanmaEvosAttacks:
+;	db EVOLVE_MOVE, ANCIENTPOWER, YANMEGA
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, FORESIGHT
-	db 7, QUICK_ATTACK
-	db 13, DOUBLE_TEAM
-	db 19, SONICBOOM
-	db 25, DETECT
-	db 31, SUPERSONIC
-	db 37, WING_ATTACK
-	db 43, SCREECH
+	db 6, QUICK_ATTACK
+	db 11, DOUBLE_TEAM
+	db 14, SONICBOOM
+	db 17, DETECT
+	db 22, SUPERSONIC
+	db 27, SWIFT
+	db 30, PURSUIT
+	db 33, ANCIENTPOWER
+	db 38, HYPNOSIS
+	db 43, WING_ATTACK
+	db 46, SCREECH
 	db 0 ; no more level-up moves
+;YanmaEvosAttacks:
+;	db 0 ; no more evolutions
+;	db 1, TACKLE
+;	db 1, FORESIGHT
+;	db 7, QUICK_ATTACK
+;	db 13, DOUBLE_TEAM
+;	db 19, SONICBOOM
+;	db 25, DETECT
+;	db 31, SUPERSONIC
+;	db 37, WING_ATTACK
+;	db 43, SCREECH
+;	db 0 ; no more level-up moves
 
 WooperEvosAttacks:
 	db EVOLVE_LEVEL, 20, QUAGSIRE
@@ -3019,28 +3075,64 @@ MagcargoEvosAttacks:
 SwinubEvosAttacks:
 	db EVOLVE_LEVEL, 33, PILOSWINE
 	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 10, POWDER_SNOW
-	db 19, ENDURE
-	db 28, TAKE_DOWN
-	db 37, MIST
-	db 46, BLIZZARD
-	db 55, AMNESIA
-	db 0 ; no more level-up moves
-
-PiloswineEvosAttacks:
-	db 0 ; no more evolutions
+	db 1, ANCIENTPOWER
 	db 1, HORN_ATTACK
 	db 1, POWDER_SNOW
 	db 1, ENDURE
-	db 10, POWDER_SNOW
-	db 19, ENDURE
+	db 8, POWDER_SNOW
+	db 13, MUD_SLAP
+	db 16, BITE
+	db 20, MAGNITUDE
+	db 25, ICY_WIND
 	db 28, TAKE_DOWN
-	db 33, FURY_ATTACK
-	db 42, MIST
-	db 56, BLIZZARD
-	db 70, AMNESIA
+	db 32, THRASH
+	db 37, EARTHQUAKE
+	db 44, BLIZZARD
+	db 48, AMNESIA
 	db 0 ; no more level-up moves
+;SwinubEvosAttacks:
+;	db EVOLVE_LEVEL, 33, PILOSWINE
+;	db 0 ; no more evolutions
+;	db 1, TACKLE
+;	db 10, POWDER_SNOW
+;	db 19, ENDURE
+;	db 28, TAKE_DOWN
+;	db 37, MIST
+;	db 46, BLIZZARD
+;	db 55, AMNESIA
+;	db 0 ; no more level-up moves
+
+PiloswineEvosAttacks:
+;	db EVOLVE_MOVE, ANCIENTPOWER, MAMOSWINE
+	db 0 ; no more evolutions
+	db 1, ANCIENTPOWER
+	db 1, HORN_ATTACK
+	db 1, POWDER_SNOW
+	db 1, ENDURE
+	db 8, POWDER_SNOW
+	db 13, MUD_SLAP
+	db 16, BITE
+	db 20, MAGNITUDE
+	db 25, ICY_WIND
+	db 28, TAKE_DOWN
+	db 33, THRASH
+	db 40, EARTHQUAKE
+	db 52, BLIZZARD
+	db 58, AMNESIA
+	db 0 ; no more level-up moves
+;PiloswineEvosAttacks:
+;	db 0 ; no more evolutions
+;	db 1, HORN_ATTACK
+;	db 1, POWDER_SNOW
+;	db 1, ENDURE
+;	db 10, POWDER_SNOW
+;	db 19, ENDURE
+;	db 28, TAKE_DOWN
+;	db 33, FURY_ATTACK
+;	db 42, MIST
+;	db 56, BLIZZARD
+;	db 70, AMNESIA
+;	db 0 ; no more level-up moves
 
 CorsolaEvosAttacks:
 	db 0 ; no more evolutions
