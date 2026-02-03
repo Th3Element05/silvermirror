@@ -2037,7 +2037,7 @@ KantoGrassWildMonsChallenge:
 	db 21, SLOWPOKE   ;  1% chance
 	end_grass_wildmons
 
-	def_grass_wildmons BEHIND_BILLS_HOUSE ;GEN2
+	def_grass_wildmons BILLS_BACK_YARD ;GEN2
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 ;	db 13, PIDGEY     ; 20% chance 40
