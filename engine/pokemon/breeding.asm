@@ -235,14 +235,14 @@ HatchEggs:
 	dec a
 	call SetSeenAndCaughtMon
 
-	ld a, [wCurPartySpecies]
-	cp TOGEPI
-	jr nz, .nottogepi
-	; set the event flag for hatching togepi
+;	ld a, [wCurPartySpecies]
+;	cp TOGEPI
+;	jr nz, .nottogepi
+;	; set the event flag for hatching togepi
 ;	ld de, EVENT_TOGEPI_HATCHED             ;silvermirror, removed
 ;	ld b, SET_FLAG
 ;	call EventFlagAction
-.nottogepi
+;.nottogepi
 
 	pop de
 
