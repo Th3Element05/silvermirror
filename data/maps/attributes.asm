@@ -386,10 +386,10 @@ ENDM
 
 ;	map_attributes Route25, ROUTE_25, $2c, WEST
 	map_attributes Route25, ROUTE_25, $2c, NORTH | WEST
-	connection north, BehindBillsHouse, BEHIND_BILLS_HOUSE, 20
+	connection north, BillsBackYard, BILLS_BACK_YARD, 20
 	connection west, Route24, ROUTE_24, 0
 
-	map_attributes BehindBillsHouse, BEHIND_BILLS_HOUSE, $2c, SOUTH
+	map_attributes BillsBackYard, BILLS_BACK_YARD, $2c, SOUTH
 	connection south, Route25, ROUTE_25, -20
 
 	map_attributes Route3, ROUTE_3, $2c, WEST | EAST

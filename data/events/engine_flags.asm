@@ -131,7 +131,7 @@ EngineFlags:
 	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE2NORTH_FRUIT
 	engine_flag wDailyFlags1, DAILYFLAGS_PEWTERCITY_FRUIT
 	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE24_FRUIT
-	engine_flag wDailyFlags1, DAILYFLAGS_BEHIND_BILLS_HOUSE_FRUIT
+	engine_flag wDailyFlags1, DAILYFLAGS_BILLS_BACK_YARD_FRUIT
 	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE8_FRUIT
 	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE11_FRUIT
 	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE16_FRUIT

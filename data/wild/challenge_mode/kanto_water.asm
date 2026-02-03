@@ -235,7 +235,7 @@ KantoWaterWildMonsChallenge:
 	db 15, SEAKING    ; 10
 	end_water_wildmons
 
-	def_water_wildmons BEHIND_BILLS_HOUSE ;GEN2
+	def_water_wildmons BILLS_BACK_YARD ;GEN2
 	db 6 percent ; encounter rate
 	db 10, GOLDEEN    ; 50
 	db 10, PSYDUCK    ; 30

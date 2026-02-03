@@ -92,8 +92,7 @@ ENDM
 	map_const ROUTE_9,                                     30,  9 ; 14
 	map_const ROUTE_10_NORTH,                              10, 30 ; 15 ; 10, 24 ; 15
 	map_const ROUTE_10_POKECENTER_1F,                       7,  4 ; 16
-	map_const BEHIND_BILLS_HOUSE,                          10, 12 ; 17
-;	map_const BILLS_BACK_YARD,                             10, 12 ; 17
+	map_const BILLS_BACK_YARD,                             10, 12 ; 17
 	endgroup
 
 	newgroup VERMILION                                            ;  5

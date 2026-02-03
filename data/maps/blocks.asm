@@ -90,8 +90,8 @@ PalletTown_Blocks:
 Route25_Blocks:
 	INCBIN "maps/Route25.blk"
 
-BehindBillsHouse_Blocks:
-	INCBIN "maps/BehindBillsHouse.blk"
+BillsBackYard_Blocks:
+	INCBIN "maps/BillsBackYard.blk"
 
 Route24_Blocks:
 	INCBIN "maps/Route24.blk"
