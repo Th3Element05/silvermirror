@@ -430,6 +430,22 @@ PlayersHouseBookshelfChallengeModeDeactivatedText:
 	line "DEACTIVATED!"
 	done
 
+PlayersHouseDebugPlayer:
+	opentext
+	writetext PlayersHouseDebugText
+	waitbutton
+	givepoke BULBASAUR, 10
+	givepoke CHARMANDER, 10
+	givepoke SQUIRTLE, 10
+	giveitem RARE_CANDY, 20
+	giveitem TM_GIGA_DRAIN
+	closetext
+	end
+
+PlayersHouseDebugText:
+	text "DEBUG STUFF"
+	done
+
 PlayersHouse2F_MapEvents:
 	db 0, 0 ; filler
 
@@ -451,3 +467,4 @@ PlayersHouse2F_MapEvents:
 	object_event  4,  4, SPRITE_DOLL_1, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PlayersHouseDoll1Script, EVENT_PLAYERS_HOUSE_2F_DOLL_1
 	object_event  5,  4, SPRITE_DOLL_2, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PlayersHouseDoll2Script, EVENT_PLAYERS_HOUSE_2F_DOLL_2
 	object_event  0,  1, SPRITE_BIG_DOLL, SPRITEMOVEDATA_BIGDOLL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PlayersHouseBigDollScript, EVENT_PLAYERS_HOUSE_2F_BIG_DOLL
+	object_event  1,  1, SPRITE_CHRIS, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PlayersHouseDebugPlayer, -1
