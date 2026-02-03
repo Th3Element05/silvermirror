@@ -1406,7 +1406,7 @@ KantoGrassWildMons:
 	db 20, RATTATA    ;  1% chance
 	end_grass_wildmons
 
-	def_grass_wildmons BEHIND_BILLS_HOUSE ;GEN1
+	def_grass_wildmons BILLS_BACK_YARD ;GEN1
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; day
 	db 16, PIDGEY     ; 20% chance

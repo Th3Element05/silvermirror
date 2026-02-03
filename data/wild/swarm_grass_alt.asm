@@ -836,7 +836,7 @@ SwarmGrassWildMonsAlt:
 	db 40, MAROWAK    ;  1% chance
 
 	; EEVEE
-	def_grass_wildmons BEHIND_BILLS_HOUSE ;GEN1
+	def_grass_wildmons BILLS_BACK_YARD ;GEN1
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; day
 	db 10, EEVEE      ; 20% chance

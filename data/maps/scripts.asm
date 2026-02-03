@@ -73,7 +73,7 @@ INCLUDE "maps/CeruleanCave2F.asm"
 INCLUDE "maps/CeruleanCaveB1F.asm"
 INCLUDE "maps/Route25.asm"
 INCLUDE "maps/BillsHouse.asm"
-INCLUDE "maps/BehindBillsHouse.asm"
+INCLUDE "maps/BillsBackYard.asm"
 
 
 SECTION "Map Scripts 8", ROMX
