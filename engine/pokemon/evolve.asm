@@ -66,7 +66,7 @@ EvolveAfterBattle_MasterLoop:
 	ld b, a
 
 	cp EVOLVE_TRADE
-	jr z, .trade
+	jp z, .trade
 
 	ld a, [wLinkMode]
 	and a
@@ -86,6 +86,12 @@ EvolveAfterBattle_MasterLoop:
 
 	cp EVOLVE_HAPPINESS
 	jr z, .happiness
+
+	cp EVOLVE_HOLD
+	jr z, .hold
+
+	cp EVOLVE_MOVE
+	jr z, .move
 
 ; EVOLVE_STAT
 	ld a, [wTempMonLevel]
@@ -113,7 +119,56 @@ EvolveAfterBattle_MasterLoop:
 	jp nz, .dont_evolve_2
 
 	inc hl
+	jp .proceed
+
+
+.move
+	ld a, [hli]
+	push hl
+	push bc
+	ld b, a
+	ld hl, wTempMonMoves
+rept NUM_MOVES - 1
+	ld a, [hli]
+	cp b
+	jr z, .move_proceed
+endr
+	ld a, [hl]
+	cp b
+.move_proceed
+	pop bc
+	pop hl
+	jp nz, .dont_evolve_3
+	jp .proceed
+
+
+.hold
+	ld a, [hli]
+	ld b, a
+	ld a, [hli]
+	cp TR_ANYTIME
+	jr z, .check_held_item
+	cp TR_MORNDAYEVE
+	jr z, .holding_daylight
+; TR_NITE
+	ld a, [wTimeOfDay]
+	cp NITE_F
+	jp nz, .dont_evolve_3
+	jr .check_held_item
+
+.holding_daylight
+	ld a, [wTimeOfDay]
+	cp NITE_F
+	jp z, .dont_evolve_3
+
+.check_held_item
+	ld a, [wTempMonItem]
+	cp b
+	jp nz, .dont_evolve_3
+	xor a
+	ld [wTempMonItem], a
 	jr .proceed
+
 
 .happiness
 ;	ld a, [wCurPartyMon]
@@ -161,6 +216,7 @@ EvolveAfterBattle_MasterLoop:
 	jp z, .dont_evolve_3
 	jr .proceed
 
+
 .trade
 	ld a, [wLinkMode]
 	and a
@@ -186,6 +242,7 @@ EvolveAfterBattle_MasterLoop:
 	ld [wTempMonItem], a
 	jr .proceed
 
+
 .item
 	ld a, [hli]
 	ld b, a
@@ -201,6 +258,7 @@ EvolveAfterBattle_MasterLoop:
 	jp nz, .dont_evolve_3
 	jr .proceed
 
+
 .level
 	ld a, [hli]
 	ld b, a
@@ -209,6 +267,7 @@ EvolveAfterBattle_MasterLoop:
 	jp c, .dont_evolve_3
 	call IsMonHoldingEverstone
 	jp z, .dont_evolve_3
+
 
 .proceed
 	ld a, [wTempMonLevel]
