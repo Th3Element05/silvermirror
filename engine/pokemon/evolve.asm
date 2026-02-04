@@ -85,13 +85,16 @@ EvolveAfterBattle_MasterLoop:
 	jp z, .level
 
 	cp EVOLVE_HAPPINESS
-	jr z, .happiness
+	jp z, .happiness
 
 	cp EVOLVE_HOLD
 	jr z, .hold
 
 	cp EVOLVE_MOVE
 	jr z, .move
+
+	cp EVOLVE_LOCATION
+	jr z, .location
 
 ; EVOLVE_STAT
 	ld a, [wTempMonLevel]
@@ -119,6 +122,21 @@ EvolveAfterBattle_MasterLoop:
 	jp nz, .dont_evolve_2
 
 	inc hl
+	jp .proceed
+
+
+.location
+	ld a, [wMapGroup]
+	ld b, a
+	ld a, [wMapNumber]
+	ld c, a
+	push hl
+	call GetWorldMapLocation
+	pop hl
+	ld b, a
+	ld a, [hli]
+	cp b
+	jp nz, .dont_evolve_3
 	jp .proceed
 
 
