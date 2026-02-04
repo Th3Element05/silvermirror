@@ -164,9 +164,9 @@ ItemNames::
 	li "HEART SCALE"  ; "BRICK PIECE"
 	li "FLOWER MAIL"
 	li "SUPER ROD"    ; SUPER_ROD_2
-	li "CARD KEY"     ; CARD_KEY_N
-	li "ITEM-A6"      ; ITEM_A6
-	li "ITEM-A7"      ; ITEM_A7
+	li "DUSK STONE"
+	li "RAZOR FANG"
+	li "RAZOR CLAW"
 	li "ITEM-A8"      ; ITEM_A8
 	li "ITEM-A9"      ; ITEM_A9
 	assert_list_length NUM_ITEMS

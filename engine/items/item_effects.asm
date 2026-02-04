@@ -178,9 +178,9 @@ ItemEffects:
 	dw NoEffect            ; HEART_SCALE ; BRICK_PIECE
 	dw NoEffect            ; FLOWER_MAIL
 	dw SuperRod2Effect     ; SUPER_ROD_2
-	dw NoEffect            ; ITEM_A5
-	dw NoEffect            ; ITEM_A6
-	dw NoEffect            ; ITEM_A7
+	dw EvoStoneEffect      ; DUSK_STONE
+	dw NoEffect            ; RAZOR_FANG
+	dw NoEffect            ; RAZOR_CLAW
 	dw NoEffect            ; ITEM_A8
 	dw NoEffect            ; ITEM_A9
 	assert_table_length NUM_ITEMS ; assert_table_length ITEM_B3
