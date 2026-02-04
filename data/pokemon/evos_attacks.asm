@@ -1112,6 +1112,8 @@ MagnemiteEvosAttacks:
 	db 0 ; no more level-up moves
 
 MagnetonEvosAttacks:
+;	db EVOLVE_ITEM, THUNDERSTONE, MAGNEZONE
+;	db EVOLVE_LOCATION, POWER_PLANT, MAGNEZONE
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, THUNDERSHOCK
