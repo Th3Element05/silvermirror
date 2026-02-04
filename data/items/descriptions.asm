@@ -165,9 +165,9 @@ ItemDescriptions:
 	dw HeartScaleDesc ; BrickPieceDesc
 	dw FlowerMailDesc
 	dw SuperRod2Desc
-	dw CardKeyNDesc
-	dw TeruSama0Desc ; ITEM_A6
-	dw TeruSama0Desc ; ITEM_A7
+	dw DuskStoneDesc
+	dw RazorFangDesc ; ITEM_A6
+	dw RazorClawDesc ; ITEM_A7
 	dw TeruSama0Desc ; ITEM_A8
 	dw TeruSama0Desc ; ITEM_A9
 	assert_table_length NUM_ITEMS
@@ -302,6 +302,7 @@ LeafStoneDesc:
 MetalCoatDesc:
 DragonScaleDesc:
 SunStoneDesc:
+DuskStoneDesc:
 	db   "Evolves certain"
 	next "kinds of #MON.@"
 
@@ -597,6 +598,7 @@ PoisonBarbDesc:
 	next "type moves. (HOLD)@"
 
 KingsRockDesc:
+RazorFangDesc:
 	db   "May make the foe"
 	next "flinch. (HOLD)@"
 
@@ -833,6 +835,7 @@ BerryJuiceDesc:
 	next "HP by 20.@"
 
 ScopeLensDesc:
+RazorClawDesc:
 	db   "Raises critical"
 	next "hit ratio. (HOLD)@"
 

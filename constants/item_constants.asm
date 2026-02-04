@@ -170,9 +170,9 @@
 	const HEART_SCALE  ; a2 ; BRICK_PIECE
 	const FLOWER_MAIL  ; a3
 	const SUPER_ROD_2  ; a4 ; ITEM_BE
-	const CARD_KEY_N   ; a5
-	const ITEM_A6      ; a6
-	const ITEM_A7      ; a7
+	const DUSK_STONE   ; a5
+	const RAZOR_FANG   ; a6
+	const RAZOR_CLAW   ; a7
 	const ITEM_A8      ; a8
 	const ITEM_A9      ; a9
 DEF NUM_ITEMS EQU const_value - 1
