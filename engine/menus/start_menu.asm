@@ -439,7 +439,7 @@ endr
 ._DrawMenuClockTextBox
 	call .IsMenuClockOn
 	ret z
-	hlcoord 0, 9 ;0, 15
+	hlcoord 0, 0 ;0, 15
 ;	ld bc, 1, 8
 	ld b, 1
 	ld c, 8
