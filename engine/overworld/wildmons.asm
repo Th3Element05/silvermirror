@@ -397,15 +397,23 @@ ChooseWildEncounter:
 
 ; If the Pokemon is encountered in a special way, skip randomizing level.
 	ld a, [wBattleType]
-	cp BATTLETYPE_NO_CATCH
+;	cp BATTLETYPE_NORMAL ;skip random if battle type is NOT normal.
+;	jr nz, .ok
+	cp BATTLETYPE_ROAMING
+	jr z, .ok
+	cp BATTLETYPE_FORCESHINY
 	jr z, .ok
 	cp BATTLETYPE_FORCEITEM
 	jr z, .ok
+	cp BATTLETYPE_CELEBI
+	jr z, .ok
+	cp BATTLETYPE_HO_OH
+	jr z, .ok
+	cp BATTLETYPE_LUGIA
+	jr z, .ok
 	cp BATTLETYPE_KANTO_LEGEND
 	jr z, .ok
-	cp BATTLETYPE_ROAMING ;BATTLETYPE_SUICUNE
-	jr z, .ok
-	cp BATTLETYPE_FORCESHINY
+	cp BATTLETYPE_NO_CATCH
 	jr z, .ok
 
 ;; Boost wild pokemon levels by 2 for each badge obtained, up to 8 badges (+16).
