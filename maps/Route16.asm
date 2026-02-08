@@ -87,7 +87,7 @@ Route16RadioWakesSnorlax:
 	waitbutton
 	closetext
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
-	loadwildmon SNORLAX, 32
+	loadwildmon SNORLAX, 30
 	startbattle
 	reloadmapafterbattle
 	disappear ROUTE16_SNORLAX
