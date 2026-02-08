@@ -103,11 +103,14 @@ RockItemEncounter:
 	
 .RockItems:
 ;	db 1, PP_UP
-	db 1, HP_UP
-	db 1, PROTEIN
-	db 1, IRON
-	db 1, CARBOS
-;	db 1, NUGGET ;10000
+;	db 1, HP_UP
+;	db 1, PROTEIN
+;	db 1, IRON
+;	db 1, CARBOS
+	db 1, HELIX_FOSSIL
+	db 1, DOME_FOSSIL
+	db 1, OLD_AMBER
+	db 1, NUGGET ;10000
 	db 2, STAR_PIECE ;9800
 	db 4, BIG_PEARL ;7500
 	db 8, GOLD_LEAF ;1000
