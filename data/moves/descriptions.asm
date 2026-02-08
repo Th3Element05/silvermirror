@@ -252,7 +252,6 @@ MoveDescriptions::
 	dw RockSmashDescription
 	dw WhirlpoolDescription
 	dw BeatUpDescription
-;	dw DoubleHitDescription
 	assert_table_length NUM_ATTACKS
 	dw MoveFCDescription
 	dw MoveFDDescription
@@ -522,7 +521,7 @@ HyperBeamDescription:
 
 PeckDescription:
 	db   "Jabs the foe with"
-	next "a beak, etc.@"
+	next "a beak or horn.@"
 
 DrillPeckDescription:
 	db   "A strong, spin-"
@@ -549,12 +548,15 @@ StrengthDescription:
 	next "cal attack.@"
 
 AbsorbDescription:
+MegaDrainDescription:
+LeechLifeDescription:
+GigaDrainDescription:
 	db   "Steals 1/2 of the"
 	next "damage inflicted.@"
 
-MegaDrainDescription:
-	db   "Steals 1/2 of the"
-	next "damage inflicted.@"
+;MegaDrainDescription:
+;	db   "Steals 1/2 of the"
+;	next "damage inflicted.@"
 
 LeechSeedDescription:
 	db   "Steals HP from the"
@@ -828,9 +830,9 @@ BarrageDescription:
 	db   "Throws orbs to hit"
 	next "2-5 times.@"
 
-LeechLifeDescription:
-	db   "Steals 1/2 of the"
-	next "damage inflicted.@"
+;LeechLifeDescription:
+;	db   "Steals 1/2 of the"
+;	next "damage inflicted.@"
 
 LovelyKissDescription:
 	db   "May cause the foe"
@@ -1072,9 +1074,9 @@ SandstormDescription:
 	db   "Inflicts damage"
 	next "every turn.@"
 
-GigaDrainDescription:
-	db   "Steals 1/2 of the"
-	next "damage inflicted.@"
+;GigaDrainDescription:
+;	db   "Steals 1/2 of the"
+;	next "damage inflicted.@"
 
 EndureDescription:
 	db   "Always leaves at"
@@ -1271,7 +1273,3 @@ WhirlpoolDescription:
 BeatUpDescription:
 	db   "Party #MON join"
 	next "in the attack.@"
-
-;DoubleHitDescription:
-;	db   "The foe is hit"
-;	next "twice in a row.@"
