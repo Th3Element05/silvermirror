@@ -7,7 +7,8 @@ remove:
 	MAGBY		magmar
 	  TOGEPI
 	  TOGETIC
-	    253
+	    DELIBIRD
+	253
 
 add:
 	gliscor		H_razor_fang @night
