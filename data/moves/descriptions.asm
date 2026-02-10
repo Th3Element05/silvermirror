@@ -252,8 +252,8 @@ MoveDescriptions::
 	dw RockSmashDescription
 	dw WhirlpoolDescription
 	dw BeatUpDescription
+	dw GyroBallDescription
 	assert_table_length NUM_ATTACKS
-	dw MoveFCDescription
 	dw MoveFDDescription
 	dw MoveFEDescription
 	dw MoveFFDescription
@@ -1273,3 +1273,7 @@ WhirlpoolDescription:
 BeatUpDescription:
 	db   "Party #MON join"
 	next "in the attack.@"
+
+GyroBallDescription:
+	db   "Power doubles if"
+	next "user is slower.@"

@@ -253,8 +253,8 @@ BattleAnimations::
 	dw BattleAnim_RockSmash
 	dw BattleAnim_Whirlpool
 	dw BattleAnim_BeatUp
+	dw BattleAnim_GyroBall
 	assert_table_length NUM_ATTACKS + 1
-	dw BattleAnim_Dummy
 	dw BattleAnim_Dummy
 	dw BattleAnim_Dummy
 	dw BattleAnim_HeldItemTrigger
@@ -3912,6 +3912,7 @@ BattleAnim_Charm:
 	anim_wait 4
 	anim_ret
 
+BattleAnim_GyroBall:
 BattleAnim_Rollout:
 	anim_1gfx BATTLE_ANIM_GFX_HIT
 	anim_sound 0, 0, SFX_SPARK

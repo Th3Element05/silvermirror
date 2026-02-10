@@ -2073,9 +2073,12 @@ BattleCommand_StatUpDownAnim:
 	jp PlayFXAnimID
 
 BattleCommand_SwitchTurn:
+; Preserves all registers.
+	push af
 	ldh a, [hBattleTurn]
 	xor 1
 	ldh [hBattleTurn], a
+	pop af
 	ret
 
 BattleCommand_RaiseSub:
@@ -5886,6 +5889,8 @@ EndRechargeOpp:
 	ret
 
 INCLUDE "engine/battle/move_effects/rage.asm"
+
+INCLUDE "engine/battle/move_effects/gyro_ball.asm"
 
 BattleCommand_DoubleFlyingDamage:
 	ld a, BATTLE_VARS_SUBSTATUS3_OPP

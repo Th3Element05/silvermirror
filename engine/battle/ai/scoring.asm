@@ -387,6 +387,7 @@ AI_Smart_EffectHandlers:
 	dbw EFFECT_SOLARBEAM,        AI_Smart_Solarbeam
 	dbw EFFECT_THUNDER,          AI_Smart_Thunder
 	dbw EFFECT_FLY,              AI_Smart_Fly
+	dbw EFFECT_GYRO_BALL,        AI_Smart_GyroBall
 	db -1 ; end
 
 AI_Smart_Sleep:
@@ -2660,6 +2661,19 @@ AI_Smart_Thunder:
 	ret c
 
 	inc [hl]
+	ret
+
+AI_Smart_GyroBall:
+; 80% chance to encourage this move if enemy is slower than player.
+
+	call AICompareSpeed
+	ret c
+
+	call Random
+	cp 20 percent
+	ret c
+
+	dec [hl]
 	ret
 
 AICompareSpeed:
