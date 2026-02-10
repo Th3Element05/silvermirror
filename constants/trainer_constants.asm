@@ -70,6 +70,8 @@ DEF KRIS EQU __trainer_class__
 	const RIVAL1_3_BULBASAUR
 	const RIVAL1_3_CHARMANDER
 	const RIVAL1_3_SQUIRTLE
+;DEBUG
+	const RIVAL_DEBUG
 
 	trainerclass RIVAL2 ; 0b
 ; SS_ANNE
