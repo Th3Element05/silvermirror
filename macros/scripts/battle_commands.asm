@@ -180,8 +180,9 @@ ENDM
 	command startloop               ; ad
 	command curl                    ; ae
 	command defrosttarget           ; af
-	command weightdamage            ; b0
-	command growth                  ; b1
+	command gyroball                ; b0
+;	command weightdamage            ; b0
+;	command growth                  ; b1
 DEF NUM_EFFECT_COMMANDS EQU const_value - 1
 
 	const_def -1, -1

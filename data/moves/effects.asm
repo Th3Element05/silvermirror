@@ -2104,16 +2104,18 @@ DefenseCurl:
 	statupfailtext
 	endmove
 
-WeightDamage:
+GyroBall:
 	checkobedience
 	usedmovetext
 	doturn
 	critical
-	weightdamage
+	damagestats
 	damagecalc
 	stab
 	damagevariation
+	gyroball
 	checkhit
+	effectchance
 	moveanim
 	failuretext
 	applydamage
@@ -2121,12 +2123,31 @@ WeightDamage:
 	supereffectivetext
 	checkfaint
 	buildopponentrage
-	kingsrock
 	endmove
 
-Growth:
-	checkobedience
-	usedmovetext
-	doturn
-	growth
-	endmove
+;WeightDamage:
+;	checkobedience
+;	usedmovetext
+;	doturn
+;	critical
+;	weightdamage
+;	damagecalc
+;	stab
+;	damagevariation
+;	checkhit
+;	moveanim
+;	failuretext
+;	applydamage
+;	criticaltext
+;	supereffectivetext
+;	checkfaint
+;	buildopponentrage
+;	kingsrock
+;	endmove
+
+;Growth:
+;	checkobedience
+;	usedmovetext
+;	doturn
+;	growth
+;	endmove
