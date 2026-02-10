@@ -194,8 +194,8 @@ DEF JOHTO_POKEMON EQU const_value
 	const PICHU      ; ac ; baby
 	const CLEFFA     ; ad ; baby
 	const IGGLYBUFF  ; ae ; baby
-	const TOGEPI     ; af ; removable?
-	const TOGETIC    ; b0 ; removable?
+	const TOGEPI     ; af ; replace
+	const TOGETIC    ; b0 ; replace
 	const NATU       ; b1
 	const XATU       ; b2
 	const MAREEP     ; b3
@@ -244,7 +244,7 @@ DEF JOHTO_POKEMON EQU const_value
 	const CORSOLA    ; de
 	const REMORAID   ; df
 	const OCTILLERY  ; e0
-	const DELIBIRD   ; e1
+	const DELIBIRD   ; e1 ; removable?
 	const MANTINE    ; e2
 	const SKARMORY   ; e3
 	const HOUNDOUR   ; e4
