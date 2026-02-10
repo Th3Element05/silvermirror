@@ -434,12 +434,41 @@ PlayersHouseDebugPlayer:
 	opentext
 	writetext PlayersHouseDebugText
 	waitbutton
-	givepoke BULBASAUR, 10
-	givepoke CHARMANDER, 10
-	givepoke SQUIRTLE, 10
+;	givepoke BULBASAUR, 10
+;	givepoke CHARMANDER, 10
+;	givepoke SQUIRTLE, 10
+	givepoke MISSINGNO, 40
+	givepoke MISSINGNO, 50
+
+	loadmem wPartyMon1Moves+0, GYRO_BALL
+	loadmem wPartyMon1Moves+1, ICE_BEAM
+	loadmem wPartyMon1Moves+2, THUNDERBOLT
+	loadmem wPartyMon1Moves+3, PSYCHIC_M
+	loadmem wPartyMon1DVs+0, $ea
+	loadmem wPartyMon1DVs+1, $aa
+
+	loadmem wPartyMon2Moves+0, LEER
+	loadmem wPartyMon2Moves+1, GYRO_BALL
+	loadmem wPartyMon2Moves+2, THUNDERBOLT
+	loadmem wPartyMon2Moves+3, PSYCHIC_M
+	loadmem wPartyMon2DVs+0, $eb
+	loadmem wPartyMon2DVs+1, $aa
+
 	giveitem RARE_CANDY, 20
-	giveitem TM_GIGA_DRAIN
+	giveitem CARBOS, 20
+;	giveitem TM_GIGA_DRAIN
 	closetext
+	end
+
+TrainerRivalDebug:
+	trainer RIVAL1, RIVAL_DEBUG, EVENT_BEAT_GRUNTM_1, PlayersHouseDebugText, PlayersHouseDebugText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext PlayersHouseDebugText
+	waitbutton
+	closetext
+	clearevent EVENT_BEAT_GRUNTM_1
 	end
 
 PlayersHouseDebugText:
@@ -468,3 +497,4 @@ PlayersHouse2F_MapEvents:
 	object_event  5,  4, SPRITE_DOLL_2, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PlayersHouseDoll2Script, EVENT_PLAYERS_HOUSE_2F_DOLL_2
 	object_event  0,  1, SPRITE_BIG_DOLL, SPRITEMOVEDATA_BIGDOLL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PlayersHouseBigDollScript, EVENT_PLAYERS_HOUSE_2F_BIG_DOLL
 	object_event  1,  1, SPRITE_CHRIS, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PlayersHouseDebugPlayer, -1
+	object_event  0,  1, SPRITE_CHRIS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerRivalDebug, -1
