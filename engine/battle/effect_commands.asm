@@ -3944,6 +3944,19 @@ SapHealth:
 	call RefreshBattleHuds
 	jp UpdateBattleMonInParty
 
+BattleCommand_FangEffect: ;BattleCommand_Unused3C:
+	ld a, BATTLE_VARS_MOVE_TYPE
+	call GetBattleVarAddr
+	cp FIRE
+	jr z, BattleCommand_BurnTarget
+	cp ICE
+	jr z, BattleCommand_FreezeTarget
+	cp ELECTRIC
+	jp z, BattleCommand_ParalyzeTarget
+;	cp POISON
+;	jr z, BattleCommand_PoisonTarget
+	ret
+
 BattleCommand_BurnTarget:
 	xor a
 	ld [wNumHits], a
@@ -5592,10 +5605,6 @@ BattleCommand_Charge:
 	text_far _BattleDugText
 	text_end
 
-BattleCommand_Unused3C:
-; effect0x3c
-	ret
-
 BattleCommand_TrapTarget:
 	ld a, [wAttackMissed]
 	and a
@@ -6286,9 +6295,9 @@ INCLUDE "engine/battle/move_effects/sandstorm.asm"
 
 INCLUDE "engine/battle/move_effects/rollout.asm"
 
-BattleCommand_Unused5D:
-; effect0x5d
-	ret
+;BattleCommand_Unused5D: ;now BattleCommand_GyroBall (gyroball.asm)
+;; effect0x5d
+;	ret
 
 INCLUDE "engine/battle/move_effects/fury_cutter.asm"
 

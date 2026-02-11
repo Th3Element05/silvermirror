@@ -14,7 +14,7 @@ ENDM
 Moves:
 ; entries correspond to move ids (see constants/move_constants.asm)
 	table_width MOVE_LENGTH, Moves
-	move POUND,        EFFECT_NORMAL_HIT,         40, NORMAL,       100, 35,   0
+	move TACKLE,       EFFECT_NORMAL_HIT,         35, NORMAL,       100, 35,   0 ; OLD ACCURACY: 95
 	move KARATE_CHOP,  EFFECT_NORMAL_HIT,         50, FIGHTING,     100, 25,   0
 	move DOUBLESLAP,   EFFECT_MULTI_HIT,          15, NORMAL,        85, 10,   0
 	move COMET_PUNCH,  EFFECT_MULTI_HIT,          18, NORMAL,        85, 15,   0
@@ -46,7 +46,7 @@ Moves:
 	move HORN_ATTACK,  EFFECT_NORMAL_HIT,         65, NORMAL,       100, 25,   0
 	move FURY_ATTACK,  EFFECT_MULTI_HIT,          15, NORMAL,        85, 20,   0
 	move HORN_DRILL,   EFFECT_OHKO,                1, NORMAL,        30,  5,   0
-	move TACKLE,       EFFECT_NORMAL_HIT,         35, NORMAL,       100, 35,   0 ; OLD ACCURACY: 95
+	move POUND,        EFFECT_NORMAL_HIT,         40, NORMAL,       100, 35,   0
 	move BODY_SLAM,    EFFECT_BODY_SLAM,          85, NORMAL,       100, 15,  30 ; OLD EFFECT: EFFECT_PARALYZE_HIT
 	move WRAP,         EFFECT_TRAP_TARGET,        15, NORMAL,        85, 20,   0
 	move TAKE_DOWN,    EFFECT_RECOIL_HIT,         90, NORMAL,        85, 20,   0
@@ -265,7 +265,10 @@ Moves:
 	move ROCK_SMASH,   EFFECT_DEFENSE_DOWN_HIT,   20, FIGHTING,     100, 15,  50
 	move WHIRLPOOL,    EFFECT_TRAP_TARGET,        15, WATER,         70, 15,   0
 	move BEAT_UP,      EFFECT_BEAT_UP,            10, DARK,         100, 10,   0
-	move GYRO_BALL,    EFFECT_GYRO_BALL,          50, STEEL,        100,  5,   0
+	move FIRE_FANG,    EFFECT_FANG_HIT,           65, FIRE,         100, 15,  10 ;new effect
+	move ICE_FANG,     EFFECT_FANG_HIT,           65, ICE,          100, 15,  10 ;new effect
+	move THUNDER_FANG, EFFECT_FANG_HIT,           65, ELECTRIC,     100, 15,  10 ;new effect
+;	move GYRO_BALL,    EFFECT_GYRO_BALL,          50, STEEL,        100,  5,   0
 	assert_table_length NUM_ATTACKS
 
 ;	move BUG_BITE,     EFFECT_NORMAL_HIT,         60, BUG,          100, 20,   0

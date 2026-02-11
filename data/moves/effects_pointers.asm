@@ -38,13 +38,13 @@ MoveEffectsPointers:
 	dw PayDay
 	dw LightScreen
 	dw TriAttack
-	dw NormalHit
+	dw FangHit
 	dw OHKOHit
 	dw RazorWind
 	dw SuperFang
 	dw StaticDamage
 	dw TrapTarget
-	dw NormalHit
+	dw GyroBall
 	dw MultiHit
 	dw NormalHit
 	dw Mist
@@ -159,7 +159,6 @@ MoveEffectsPointers:
 	dw BeatUp
 	dw Fly
 	dw DefenseCurl
-	dw GyroBall
 ;	dw WeightDamage
 ;	dw Growth
 	assert_table_length NUM_MOVE_EFFECTS

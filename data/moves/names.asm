@@ -1,6 +1,6 @@
 MoveNames::
 	list_start MoveNames
-	li "POUND"
+	li "TACKLE"
 	li "KARATE CHOP"
 	li "DOUBLESLAP"
 	li "COMET PUNCH"
@@ -32,7 +32,7 @@ MoveNames::
 	li "HORN ATTACK"
 	li "FURY ATTACK"
 	li "HORN DRILL"
-	li "TACKLE"
+	li "POUND"
 	li "BODY SLAM"
 	li "WRAP"
 	li "TAKE DOWN"
@@ -251,7 +251,8 @@ MoveNames::
 	li "ROCK SMASH"
 	li "WHIRLPOOL"
 	li "BEAT UP"
-	li "GYRO BALL"
-; 253
-; 254
+	li "FIRE FANG"
+	li "ICE FANG"
+	li "THUNDER FANG"
+;	li "GYRO BALL"
 	assert_list_length NUM_ATTACKS

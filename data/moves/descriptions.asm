@@ -1,7 +1,7 @@
 MoveDescriptions::
 ; entries correspond to move ids (see constants/move_constants.asm)
 	table_width 2, MoveDescriptions
-	dw PoundDescription
+	dw TackleDescription
 	dw KarateChopDescription
 	dw DoubleslapDescription
 	dw CometPunchDescription
@@ -33,7 +33,7 @@ MoveDescriptions::
 	dw HornAttackDescription
 	dw FuryAttackDescription
 	dw HornDrillDescription
-	dw TackleDescription
+	dw PoundDescription
 	dw BodySlamDescription
 	dw WrapDescription
 	dw TakeDownDescription
@@ -252,18 +252,14 @@ MoveDescriptions::
 	dw RockSmashDescription
 	dw WhirlpoolDescription
 	dw BeatUpDescription
-	dw GyroBallDescription
+	dw FireFangDescription
+	dw IceFangDescription
+	dw ThunderFangDescription
 	assert_table_length NUM_ATTACKS
-	dw MoveFDDescription
-	dw MoveFEDescription
-	dw MoveFFDescription
+	dw GyroBallDescription
 	dw Move00Description
 	assert_table_length $100
 
-MoveFCDescription:
-MoveFDDescription:
-MoveFEDescription:
-MoveFFDescription:
 Move00Description:
 	db "?@"
 
@@ -1273,6 +1269,18 @@ WhirlpoolDescription:
 BeatUpDescription:
 	db   "Party #MON join"
 	next "in the attack.@"
+
+FireFangDescription:
+	db   "A fiery bite. May"
+	next "cause a burn.@"
+
+IceFangDescription:
+	db   "An icy bite. May"
+	next "cause freezing.@"
+
+ThunderFangDescription:
+	db   "An electric bite."
+	line "It may paralyze.@"
 
 GyroBallDescription:
 	db   "Power doubles if"

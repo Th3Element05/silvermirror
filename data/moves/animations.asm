@@ -2,7 +2,7 @@ BattleAnimations::
 ; entries correspond to constants/move_constants.asm
 	table_width 2, BattleAnimations
 	dw BattleAnim_Dummy
-	dw BattleAnim_Pound
+	dw BattleAnim_Tackle
 	dw BattleAnim_KarateChop
 	dw BattleAnim_Doubleslap
 	dw BattleAnim_CometPunch
@@ -34,7 +34,7 @@ BattleAnimations::
 	dw BattleAnim_HornAttack
 	dw BattleAnim_FuryAttack
 	dw BattleAnim_HornDrill
-	dw BattleAnim_Tackle
+	dw BattleAnim_Pound
 	dw BattleAnim_BodySlam
 	dw BattleAnim_Wrap
 	dw BattleAnim_TakeDown
@@ -253,10 +253,11 @@ BattleAnimations::
 	dw BattleAnim_RockSmash
 	dw BattleAnim_Whirlpool
 	dw BattleAnim_BeatUp
-	dw BattleAnim_GyroBall
+	dw BattleAnim_FireFang
+	dw BattleAnim_IceFang
+	dw BattleAnim_ThunderFang
+;	dw BattleAnim_GyroBall
 	assert_table_length NUM_ATTACKS + 1
-	dw BattleAnim_Dummy
-	dw BattleAnim_Dummy
 	dw BattleAnim_HeldItemTrigger
 	assert_table_length $100
 ; $100
@@ -1595,6 +1596,9 @@ BattleAnim_Clamp:
 	anim_wait 16
 	anim_ret
 
+BattleAnim_FireFang:
+BattleAnim_IceFang:
+BattleAnim_ThunderFang:
 BattleAnim_Bite:
 	anim_2gfx BATTLE_ANIM_GFX_CUT, BATTLE_ANIM_GFX_HIT
 	anim_obj BATTLE_ANIM_OBJ_BITE, 136, 56, $98
