@@ -178,7 +178,7 @@ Moves:
 	move SUPER_FANG,   EFFECT_SUPER_FANG,          1, NORMAL,        90, 10,   0
 	move SLASH,        EFFECT_NORMAL_HIT,         70, NORMAL,       100, 20,   0
 	move SUBSTITUTE,   EFFECT_SUBSTITUTE,          0, NORMAL,       100, 10,   0
-	move STRUGGLE,     EFFECT_RECOIL_HIT,         50, NORMAL,       100,  1,   0
+	move GYRO_BALL,    EFFECT_GYRO_BALL,          50, STEEL,        100,  5,   0
 	move SKETCH,       EFFECT_SKETCH,              0, NORMAL,       100,  1,   0
 	move TRIPLE_KICK,  EFFECT_TRIPLE_KICK,        10, FIGHTING,      90, 10,   0
 	move THIEF,        EFFECT_THIEF,              40, DARK,         100, 10, 100
@@ -268,7 +268,7 @@ Moves:
 	move FIRE_FANG,    EFFECT_FANG_HIT,           65, FIRE,         100, 15,  10 ;new effect
 	move ICE_FANG,     EFFECT_FANG_HIT,           65, ICE,          100, 15,  10 ;new effect
 	move THUNDER_FANG, EFFECT_FANG_HIT,           65, ELECTRIC,     100, 15,  10 ;new effect
-;	move GYRO_BALL,    EFFECT_GYRO_BALL,          50, STEEL,        100,  5,   0
+	move STRUGGLE,     EFFECT_RECOIL_HIT,         50, NORMAL,       100,  1,   0
 	assert_table_length NUM_ATTACKS
 
 ;	move BUG_BITE,     EFFECT_NORMAL_HIT,         60, BUG,          100, 20,   0

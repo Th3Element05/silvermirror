@@ -211,14 +211,7 @@ CheckBTMonMovesForErrors:
 	ld hl, wBT_OTTempMon1Moves
 .loop
 	push hl
-	ld a, [hl]
-	cp NUM_ATTACKS + 1
-	jr c, .okay
-	ld a, TACKLE ;POUND
-	ld [hl], a
-
-.okay
-	inc hl
+	ld a, [hli]
 	ld b, NUM_MOVES - 1
 .loop2
 	ld a, [hl]

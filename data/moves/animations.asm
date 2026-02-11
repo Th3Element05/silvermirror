@@ -166,7 +166,7 @@ BattleAnimations::
 	dw BattleAnim_SuperFang
 	dw BattleAnim_Slash
 	dw BattleAnim_Substitute
-	dw BattleAnim_Struggle
+	dw BattleAnim_GyroBall
 	dw BattleAnim_Sketch
 	dw BattleAnim_TripleKick
 	dw BattleAnim_Thief
@@ -256,7 +256,7 @@ BattleAnimations::
 	dw BattleAnim_FireFang
 	dw BattleAnim_IceFang
 	dw BattleAnim_ThunderFang
-;	dw BattleAnim_GyroBall
+	dw BattleAnim_Struggle
 	assert_table_length NUM_ATTACKS + 1
 	dw BattleAnim_HeldItemTrigger
 	assert_table_length $100
