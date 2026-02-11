@@ -3944,85 +3944,7 @@ SapHealth:
 	call RefreshBattleHuds
 	jp UpdateBattleMonInParty
 
-BattleCommand_FangEffect: ;BattleCommand_Unused3C:
-	ld a, BATTLE_VARS_MOVE_TYPE
-	call GetBattleVarAddr
-	cp FIRE
-	jr z, BattleCommand_BurnTarget
-	cp ICE
-	jr z, BattleCommand_FreezeTarget
-	cp ELECTRIC
-	jp z, BattleCommand_ParalyzeTarget
-;	cp POISON
-;	jr z, BattleCommand_PoisonTarget
-	ret
-
-BattleCommand_BurnTarget:
-	xor a
-	ld [wNumHits], a
-	call CheckSubstituteOpp
-	ret nz
-	ld a, BATTLE_VARS_STATUS_OPP
-	call GetBattleVarAddr
-	and a
-	jp nz, Defrost
-	ld a, [wTypeModifier]
-	and $7f
-	ret z
-	ld a, FIRE ; Don't burn a Fire-type
-	call CheckIfTargetIsGivenType
-	ret z
-	call GetOpponentItem
-	ld a, b
-	cp HELD_PREVENT_BURN
-	ret z
-	ld a, [wEffectFailed]
-	and a
-	ret nz
-	call SafeCheckSafeguard
-	ret nz
-	ld a, BATTLE_VARS_STATUS_OPP
-	call GetBattleVarAddr
-	set BRN, [hl]
-	call UpdateOpponentInParty
-	ld hl, ApplyBrnEffectOnAttack
-	call CallBattleCore
-	ld de, ANIM_BRN
-	call PlayOpponentBattleAnim
-	call RefreshBattleHuds
-
-	ld hl, WasBurnedText
-	call StdBattleTextbox
-
-	farcall UseHeldStatusHealingItem
-	ret
-
-Defrost:
-	ld a, [hl]
-	and 1 << FRZ
-	ret z
-
-	xor a
-	ld [hl], a
-
-	ldh a, [hBattleTurn]
-	and a
-	ld a, [wCurOTMon]
-	ld hl, wOTPartyMon1Status
-	jr z, .ok
-	ld hl, wPartyMon1Status
-	ld a, [wCurBattleMon]
-.ok
-
-	call GetPartyLocation
-	xor a
-	ld [hl], a
-	call UpdateOpponentInParty
-
-	ld hl, DefrostedOpponentText
-	jp StdBattleTextbox
-
-BattleCommand_FreezeTarget:
+BattleCommand_FreezeTarget: ;101
 	xor a
 	ld [wNumHits], a
 	call CheckSubstituteOpp
@@ -4074,7 +3996,18 @@ BattleCommand_FreezeTarget:
 	ld [hl], $1
 	ret
 
-BattleCommand_ParalyzeTarget:
+BattleCommand_FangEffect: ;BattleCommand_Unused3C:
+	ld a, BATTLE_VARS_MOVE_TYPE
+	call GetBattleVarAddr
+	cp FIRE
+	jr z, BattleCommand_BurnTarget
+	cp ICE
+	jr z, BattleCommand_FreezeTarget
+	cp ELECTRIC
+	ret nz
+	; fallthrough if ELECTRIC
+
+BattleCommand_ParalyzeTarget: ;71
 	xor a
 	ld [wNumHits], a
 	call CheckSubstituteOpp
@@ -4107,6 +4040,71 @@ BattleCommand_ParalyzeTarget:
 	call PrintParalyze
 	ld hl, UseHeldStatusHealingItem
 	jp CallBattleCore
+
+BattleCommand_BurnTarget: ;85
+	xor a
+	ld [wNumHits], a
+	call CheckSubstituteOpp
+	ret nz
+	ld a, BATTLE_VARS_STATUS_OPP
+	call GetBattleVarAddr
+	and a
+	jp nz, Defrost
+	ld a, [wTypeModifier]
+	and $7f
+	ret z
+	ld a, FIRE ; Don't burn a Fire-type
+	call CheckIfTargetIsGivenType
+	ret z
+	call GetOpponentItem
+	ld a, b
+	cp HELD_PREVENT_BURN
+	ret z
+	ld a, [wEffectFailed]
+	and a
+	ret nz
+	call SafeCheckSafeguard
+	ret nz
+	ld a, BATTLE_VARS_STATUS_OPP
+	call GetBattleVarAddr
+	set BRN, [hl]
+	call UpdateOpponentInParty
+	ld hl, ApplyBrnEffectOnAttack
+	call CallBattleCore
+	ld de, ANIM_BRN
+	call PlayOpponentBattleAnim
+	call RefreshBattleHuds
+
+	ld hl, WasBurnedText
+	call StdBattleTextbox
+
+	farcall UseHeldStatusHealingItem
+	ret
+
+Defrost: ;37
+	ld a, [hl]
+	and 1 << FRZ
+	ret z
+
+	xor a
+	ld [hl], a
+
+	ldh a, [hBattleTurn]
+	and a
+	ld a, [wCurOTMon]
+	ld hl, wOTPartyMon1Status
+	jr z, .ok
+	ld hl, wPartyMon1Status
+	ld a, [wCurBattleMon]
+.ok
+
+	call GetPartyLocation
+	xor a
+	ld [hl], a
+	call UpdateOpponentInParty
+
+	ld hl, DefrostedOpponentText
+	jp StdBattleTextbox
 
 BattleCommand_AttackUp:
 	ld b, ATTACK
