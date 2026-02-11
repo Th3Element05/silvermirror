@@ -6,23 +6,23 @@ MoveGrammar:
 ; 0: originally "[mon]の¯[move]¯つかった!" ("[mon]¯used¯[move]!")
 	db SWORDS_DANCE
 	db GROWTH
-	db STRENGTH
+;	db STRENGTH
 	db HARDEN
 	db MINIMIZE
 	db SMOKESCREEN
-	db WITHDRAW
+;	db WITHDRAW
 	db DEFENSE_CURL
-	db EGG_BOMB
+;	db EGG_BOMB
 	db SMOG
 	db BONE_CLUB
 	db FLASH
 	db SPLASH
-	db ACID_ARMOR
+;	db ACID_ARMOR
 	db BONEMERANG
 	db REST
 	db SHARPEN
 	db SUBSTITUTE
-	db MIND_READER
+;	db MIND_READER
 	db SNORE
 	db PROTECT
 	db SPIKES
@@ -31,7 +31,7 @@ MoveGrammar:
 	db SWAGGER
 	db SLEEP_TALK
 	db HIDDEN_POWER
-	db PSYCH_UP
+;	db PSYCH_UP
 	db EXTREMESPEED
 	db 0 ; end set
 
@@ -41,32 +41,32 @@ MoveGrammar:
 	db BIDE
 	db SELFDESTRUCT
 	db AMNESIA
-	db FLAIL
+;	db FLAIL
 	db 0 ; end set
 
 ; 2: originally "[mon]の¯[move]¯した!" ("[mon]¯did¯[move]!")
-	db MEDITATE
+;	db MEDITATE
 	db AGILITY
-	db MIMIC
+;	db MIMIC
 	db DOUBLE_TEAM
-	db BARRAGE
+;	db BARRAGE
 	db TRANSFORM
-	db STRUGGLE
+;	db STRUGGLE
 	db SCARY_FACE
 	db 0 ; end set
 
 ; 3: originally "[mon]の¯[move]　こうげき!" ("[mon]'s¯[move] attack!")
-	db POUND
+;	db POUND
 	db SCRATCH
 	db VICEGRIP
 	db WING_ATTACK
-	db FLY
+;	db FLY
 	db BIND
-	db SLAM
+;	db SLAM
 	db HORN_ATTACK
-	db WRAP
+;	db WRAP
 	db THRASH
-	db TAIL_WHIP
+;	db TAIL_WHIP
 	db LEER
 	db BITE
 	db GROWL
@@ -82,13 +82,13 @@ MoveGrammar:
 	db SCREECH
 	db METRONOME
 	db LICK
-	db CLAMP
-	db CONSTRICT
-	db POISON_GAS
-	db BUBBLE
+;	db CLAMP
+;	db CONSTRICT
+;	db POISON_GAS
+;	db BUBBLE
 	db SLASH
 	db SPIDER_WEB
-	db NIGHTMARE
+;	db NIGHTMARE
 	db CURSE
 	db FORESIGHT
 	db CHARM
