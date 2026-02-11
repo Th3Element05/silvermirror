@@ -2,7 +2,7 @@ BadEgg:
 ; Failsafe if there is a checksum error
 	db BULBASAUR
 	db NO_ITEM
-	db POUND, NO_MOVE, NO_MOVE, NO_MOVE
+	db TACKLE, NO_MOVE, NO_MOVE, NO_MOVE
 	dw 0 ; OT ID
 	db 0, 0, 0 ; Exp
 	; Stat exp
