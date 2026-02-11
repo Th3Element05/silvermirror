@@ -170,7 +170,7 @@
 	const SUPER_FANG   ; a2
 	const SLASH        ; a3
 	const SUBSTITUTE   ; a4
-	const STRUGGLE     ; a5
+	const GYRO_BALL    ; a5
 	const SKETCH       ; a6
 	const TRIPLE_KICK  ; a7
 	const THIEF        ; a8
@@ -260,7 +260,7 @@
 	const FIRE_FANG    ; fc
 	const ICE_FANG     ; fd
 	const THUNDER_FANG ; fe
-;	const GYRO_BALL    ; ff
+	const STRUGGLE     ; ff
 DEF NUM_ATTACKS EQU const_value - 1
 
 ; Battle animations use the same constants as the moves up to this point

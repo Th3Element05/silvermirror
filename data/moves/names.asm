@@ -164,7 +164,7 @@ MoveNames::
 	li "SUPER FANG"
 	li "SLASH"
 	li "SUBSTITUTE"
-	li "STRUGGLE"
+	li "GYRO BALL"
 	li "SKETCH"
 	li "TRIPLE KICK"
 	li "THIEF"
@@ -254,5 +254,5 @@ MoveNames::
 	li "FIRE FANG"
 	li "ICE FANG"
 	li "THUNDER FANG"
-;	li "GYRO BALL"
+	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS

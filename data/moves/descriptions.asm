@@ -165,7 +165,7 @@ MoveDescriptions::
 	dw SuperFangDescription
 	dw SlashDescription
 	dw SubstituteDescription
-	dw StruggleDescription
+	dw GyroBallDescription
 	dw SketchDescription
 	dw TripleKickDescription
 	dw ThiefDescription
@@ -255,8 +255,8 @@ MoveDescriptions::
 	dw FireFangDescription
 	dw IceFangDescription
 	dw ThunderFangDescription
+	dw StruggleDescription
 	assert_table_length NUM_ATTACKS
-	dw GyroBallDescription
 	dw Move00Description
 	assert_table_length $100
 
@@ -268,6 +268,11 @@ PoundDescription:
 	next "legs or tail.@"
 
 KarateChopDescription:
+RazorLeafDescription:
+CrabhammerDescription:
+SlashDescription:
+AeroblastDescription:
+CrossChopDescription:
 	db   "Has a high criti-"
 	next "cal hit ratio.@"
 
@@ -562,9 +567,7 @@ GrowthDescription:
 	db   "Raises the user's"
 	next "ATK and SP.ATK.@"
 
-RazorLeafDescription:
-	db   "Has a high criti-"
-	next "cal hit ratio.@"
+
 
 SolarbeamDescription:
 	db   "1st turn: Prepare"
@@ -870,9 +873,7 @@ AcidArmorDescription:
 	db   "Sharply raises the"
 	next "user's DEFENSE.@"
 
-CrabhammerDescription:
-	db   "Has a high criti-"
-	next "cal hit ratio.@"
+
 
 ExplosionDescription:
 	db   "Very powerful but"
@@ -914,9 +915,7 @@ SuperFangDescription:
 	db   "Cuts the foe's HP"
 	next "by 1/2.@"
 
-SlashDescription:
-	db   "Has a high criti-"
-	next "cal hit ratio.@"
+
 
 SubstituteDescription:
 	db   "Makes a decoy with"
@@ -970,9 +969,7 @@ Conversion2Description:
 	db   "The user's type is"
 	next "made resistant.@"
 
-AeroblastDescription:
-	db   "Has a high criti-"
-	next "cal hit ratio.@"
+
 
 CottonSporeDescription:
 	db   "Sharply reduces"
@@ -1214,9 +1211,7 @@ HiddenPowerDescription:
 	db   "The type varies"
 	next "with the #MON.@"
 
-CrossChopDescription:
-	db   "Has a high criti-"
-	next "cal hit ratio.@"
+
 
 TwisterDescription:
 	db   "Whips up a tornado"
