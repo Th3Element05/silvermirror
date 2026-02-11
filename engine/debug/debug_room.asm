@@ -1286,10 +1286,10 @@ DebugRoomMenu_PokemonGet_Page1Values:
 	db 8
 	paged_value wDebugRoomMonSpecies,       1,   NUM_POKEMON, BULBASAUR,      DebugRoom_BoxStructStrings.Pokemon,   DebugRoom_PrintPokemonName, FALSE
 	paged_value wDebugRoomMonItem,          1,   $ff,         MASTER_BALL,    DebugRoom_BoxStructStrings.Item,      DebugRoom_PrintItemName2,   FALSE
-	paged_value wDebugRoomMonMoves+0,       1,   NUM_ATTACKS, POUND,          DebugRoom_BoxStructStrings.Move1,     DebugRoom_PrintMoveName,    FALSE
-	paged_value wDebugRoomMonMoves+1,       1,   NUM_ATTACKS, POUND,          DebugRoom_BoxStructStrings.Move2,     DebugRoom_PrintMoveName,    FALSE
-	paged_value wDebugRoomMonMoves+2,       1,   NUM_ATTACKS, POUND,          DebugRoom_BoxStructStrings.Move3,     DebugRoom_PrintMoveName,    FALSE
-	paged_value wDebugRoomMonMoves+3,       1,   NUM_ATTACKS, POUND,          DebugRoom_BoxStructStrings.Move4,     DebugRoom_PrintMoveName,    FALSE
+	paged_value wDebugRoomMonMoves+0,       1,   NUM_ATTACKS, TACKLE,         DebugRoom_BoxStructStrings.Move1,     DebugRoom_PrintMoveName,    FALSE
+	paged_value wDebugRoomMonMoves+1,       1,   NUM_ATTACKS, TACKLE,         DebugRoom_BoxStructStrings.Move2,     DebugRoom_PrintMoveName,    FALSE
+	paged_value wDebugRoomMonMoves+2,       1,   NUM_ATTACKS, TACKLE,         DebugRoom_BoxStructStrings.Move3,     DebugRoom_PrintMoveName,    FALSE
+	paged_value wDebugRoomMonMoves+3,       1,   NUM_ATTACKS, TACKLE,         DebugRoom_BoxStructStrings.Move4,     DebugRoom_PrintMoveName,    FALSE
 	paged_value wDebugRoomMonID+0,          $00, $ff,         HIGH(1234),     DebugRoom_BoxStructStrings.ID0,       NULL,                       FALSE
 	paged_value wDebugRoomMonID+1,          $00, $ff,         LOW(1234),      DebugRoom_BoxStructStrings.ID1,       NULL,                       FALSE
 
