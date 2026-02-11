@@ -2104,6 +2104,29 @@ DefenseCurl:
 	statupfailtext
 	endmove
 
+FangHit:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	effectchance
+	flinchtarget
+	effectchance
+	fangeffect
+	endmove
+
 GyroBall:
 	checkobedience
 	usedmovetext

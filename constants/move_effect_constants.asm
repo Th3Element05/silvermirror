@@ -1,4 +1,5 @@
 ; MoveEffectsPointers indexes (see data/moves/effects_pointers.asm)
+; (aligns lines with data/moves/effects_pointers.asm)
 	const_def
 	const EFFECT_NORMAL_HIT
 	const EFFECT_SLEEP
@@ -37,13 +38,13 @@
 	const EFFECT_PAY_DAY
 	const EFFECT_LIGHT_SCREEN
 	const EFFECT_TRI_ATTACK
-	const EFFECT_UNUSED_25
+	const EFFECT_FANG_HIT ;EFFECT_UNUSED_25
 	const EFFECT_OHKO
 	const EFFECT_RAZOR_WIND
 	const EFFECT_SUPER_FANG
 	const EFFECT_STATIC_DAMAGE
 	const EFFECT_TRAP_TARGET
-	const EFFECT_UNUSED_2B
+	const EFFECT_GYRO_BALL ;EFFECT_UNUSED_2B
 	const EFFECT_DOUBLE_HIT
 	const EFFECT_JUMP_KICK
 	const EFFECT_MIST
@@ -158,7 +159,6 @@
 	const EFFECT_BEAT_UP
 	const EFFECT_FLY
 	const EFFECT_DEFENSE_CURL
-	const EFFECT_GYRO_BALL
 ;	const EFFECT_WEIGHT_DAMAGE
 ;	const EFFECT_GROWTH
 DEF NUM_MOVE_EFFECTS EQU const_value

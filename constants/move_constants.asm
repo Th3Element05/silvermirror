@@ -6,7 +6,7 @@
 ; - BattleAnimations (see data/moves/animations.asm)
 	const_def
 	const NO_MOVE      ; 00
-	const POUND        ; 01
+	const TACKLE       ; 01 ; MOVE TACKLE HERE!
 	const KARATE_CHOP  ; 02
 	const DOUBLESLAP   ; 03
 	const COMET_PUNCH  ; 04
@@ -38,7 +38,7 @@
 	const HORN_ATTACK  ; 1e
 	const FURY_ATTACK  ; 1f
 	const HORN_DRILL   ; 20
-	const TACKLE       ; 21
+	const POUND        ; 21
 	const BODY_SLAM    ; 22
 	const WRAP         ; 23
 	const TAKE_DOWN    ; 24
@@ -257,9 +257,10 @@
 	const ROCK_SMASH   ; f9
 	const WHIRLPOOL    ; fa
 	const BEAT_UP      ; fb
-	const GYRO_BALL    ; fc
-; fd
-; fe
+	const FIRE_FANG    ; fc
+	const ICE_FANG     ; fd
+	const THUNDER_FANG ; fe
+;	const GYRO_BALL    ; ff
 DEF NUM_ATTACKS EQU const_value - 1
 
 ; Battle animations use the same constants as the moves up to this point
