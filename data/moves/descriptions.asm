@@ -4,7 +4,7 @@ MoveDescriptions::
 	dw TackleDescription
 	dw KarateChopDescription
 	dw DoubleslapDescription
-	dw CometPunchDescription
+	dw FuryStrikesDescription ;CometPunchDescription
 	dw MegaPunchDescription
 	dw PayDayDescription
 	dw FirePunchDescription
@@ -280,9 +280,12 @@ DoubleslapDescription:
 	db   "Repeatedly slaps"
 	next "2-5 times.@"
 
-CometPunchDescription:
-	db   "Repeatedly punches"
+FuryStrikesDescription:
+	text "Scratches or jabs"
 	next "2-5 times.@"
+;CometPunchDescription:
+;	db   "Repeatedly punches"
+;	next "2-5 times.@"
 
 MegaPunchDescription:
 	db   "A powerful punch"
@@ -405,8 +408,10 @@ BodySlamDescription:
 	next "cause paralysis.@"
 
 WrapDescription:
-	db   "Squeezes the foe"
+	db   "Binds the target"
 	next "for 2-5 turns.@"
+;	db   "Squeezes the foe"
+;	next "for 2-5 turns.@"
 
 TakeDownDescription:
 	db   "A tackle that also"

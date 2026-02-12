@@ -5,7 +5,7 @@ BattleAnimations::
 	dw BattleAnim_Tackle
 	dw BattleAnim_KarateChop
 	dw BattleAnim_Doubleslap
-	dw BattleAnim_CometPunch
+	dw BattleAnim_FuryStrikes ;BattleAnim_CometPunch
 	dw BattleAnim_MegaPunch
 	dw BattleAnim_PayDay
 	dw BattleAnim_FirePunch
@@ -259,7 +259,7 @@ BattleAnimations::
 	dw BattleAnim_Struggle
 	assert_table_length NUM_ATTACKS + 1
 	dw BattleAnim_HeldItemTrigger
-	assert_table_length $100
+	assert_table_length $101
 ; $100
 	dw BattleAnim_ThrowPokeBall
 	dw BattleAnim_SendOutMon
@@ -2281,6 +2281,7 @@ BattleAnim_HornAttack:
 	anim_wait 16
 	anim_ret
 
+BattleAnim_FuryStrikes:
 BattleAnim_FuryAttack:
 	anim_2gfx BATTLE_ANIM_GFX_HORN, BATTLE_ANIM_GFX_HIT
 	anim_obj BATTLE_ANIM_OBJ_HORN, 72, 72, $2
@@ -4252,7 +4253,7 @@ BattleAnim_Megahorn:
 	anim_ret
 
 BattleAnim_Dragonbreath:
-	anim_setobjpal PAL_BATTLE_OB_RED, PAL_BTLCUSTOM_DRAGONBREATH
+	anim_setobjpal PAL_BATTLE_OB_RED, PAL_BTLCUSTOM_HP_DRAGON ;PAL_BTLCUSTOM_DRAGONBREATH
 	anim_1gfx BATTLE_ANIM_GFX_FIRE
 	anim_sound 6, 2, SFX_EMBER
 .loop

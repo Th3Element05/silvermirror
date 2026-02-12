@@ -3,7 +3,7 @@ MoveNames::
 	li "TACKLE"
 	li "KARATE CHOP"
 	li "DOUBLESLAP"
-	li "COMET PUNCH"
+	li "FURY STRIKES" ;"COMET PUNCH"
 	li "MEGA PUNCH"
 	li "PAY DAY"
 	li "FIRE PUNCH"
