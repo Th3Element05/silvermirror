@@ -61,7 +61,7 @@ MoveGrammar:
 	db VICEGRIP
 	db WING_ATTACK
 ;	db FLY
-	db BIND
+;	db BIND
 ;	db SLAM
 	db HORN_ATTACK
 ;	db WRAP
@@ -87,7 +87,7 @@ MoveGrammar:
 ;	db POISON_GAS
 ;	db BUBBLE
 	db SLASH
-	db SPIDER_WEB
+;	db SPIDER_WEB
 ;	db NIGHTMARE
 	db CURSE
 	db FORESIGHT
