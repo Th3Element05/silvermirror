@@ -1217,7 +1217,7 @@ DebugAllTMs:
 	yesorno
 	iffalse .End
 	giveitem TM_DYNAMICPUNCH
-	giveitem TM_RAZOR_WIND
+	giveitem TM_TRANSFORM ; TM_RAZOR_WIND
 	giveitem TM_SWORDS_DANCE
 	giveitem TM_FALSE_SWIPE ; TM_WHIRLWIND
 	giveitem TM_MEGA_KICK
