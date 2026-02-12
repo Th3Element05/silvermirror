@@ -112,9 +112,11 @@ BattleCommand_CheckTurn:
 ; Repurposed as hardcoded turn handling. Useless as a command.
 
 ; Move $ff immediately ends the turn.
+; NO_MOVE immediately ends the turn.
 	ld a, BATTLE_VARS_MOVE
 	call GetBattleVar
-	inc a
+;	inc a
+	and a ; NO_MOVE?
 	jp z, EndTurn
 
 	xor a
@@ -5553,9 +5555,9 @@ BattleCommand_Charge:
 	text_asm
 	ld a, BATTLE_VARS_MOVE_ANIM
 	call GetBattleVar
-	cp RAZOR_WIND
-	ld hl, .BattleMadeWhirlwindText
-	jr z, .done
+;	cp RAZOR_WIND ;removed
+;	ld hl, .BattleMadeWhirlwindText
+;	jr z, .done
 
 	cp SOLARBEAM
 	ld hl, .BattleTookSunlightText
@@ -5651,7 +5653,7 @@ BattleCommand_TrapTarget:
 	jp StdBattleTextbox
 
 .Traps:
-	dbw BIND,      UsedBindText      ; 'used BIND on'
+;	dbw BIND,      UsedBindText      ; 'used BIND on'
 	dbw WRAP,      WrappedByText     ; 'was WRAPPED by'
 	dbw FIRE_SPIN, FireSpinTrapText  ; 'was trapped!'
 	dbw CLAMP,     ClampedByText     ; 'was CLAMPED by'

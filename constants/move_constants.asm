@@ -6,11 +6,11 @@
 ; - BattleAnimations (see data/moves/animations.asm)
 	const_def
 	const NO_MOVE      ; 00
-	const TACKLE       ; 01 ; MOVE TACKLE HERE!
+	const TACKLE       ; 01 ;was POUND ;swapped
 	const KARATE_CHOP  ; 02
 	const DOUBLESLAP   ; 03
-	const COMET_PUNCH  ; 04
-	const MEGA_PUNCH   ; 05
+	const FURY_STRIKES ; 04 ;COMET_PUNCH, removed
+	const MEGA_PUNCH   ; 05 removed
 	const PAY_DAY      ; 06
 	const FIRE_PUNCH   ; 07
 	const ICE_PUNCH    ; 08
@@ -18,19 +18,19 @@
 	const SCRATCH      ; 0a
 	const VICEGRIP     ; 0b
 	const GUILLOTINE   ; 0c
-	const RAZOR_WIND   ; 0d
+	const RAZOR_WIND   ; 0d ;removed
 	const SWORDS_DANCE ; 0e
 	const CUT          ; 0f
 	const GUST         ; 10
 	const WING_ATTACK  ; 11
-	const WHIRLWIND    ; 12
+	const WHIRLWIND    ; 12 ;
 	const FLY          ; 13
-	const BIND         ; 14
-	const SLAM         ; 15
+	const BIND         ; 14 ;removed
+	const SLAM         ; 15 ;removed
 	const VINE_WHIP    ; 16
 	const STOMP        ; 17
 	const DOUBLE_KICK  ; 18
-	const MEGA_KICK    ; 19
+	const MEGA_KICK    ; 19 ;
 	const JUMP_KICK    ; 1a
 	const ROLLING_KICK ; 1b
 	const SAND_ATTACK  ; 1c
@@ -238,7 +238,7 @@
 	const SWEET_SCENT  ; e6
 	const IRON_TAIL    ; e7
 	const METAL_CLAW   ; e8
-	const VITAL_THROW  ; e9
+	const VITAL_THROW  ; e9 ;removed
 	const MORNING_SUN  ; ea
 	const SYNTHESIS    ; eb
 	const MOONLIGHT    ; ec
@@ -249,14 +249,14 @@
 	const SUNNY_DAY    ; f1
 	const CRUNCH       ; f2
 	const MIRROR_COAT  ; f3
-	const PSYCH_UP     ; f4
+	const PSYCH_UP     ; f4 ;
 	const EXTREMESPEED ; f5
 	const ANCIENTPOWER ; f6
 	const SHADOW_BALL  ; f7
 	const FUTURE_SIGHT ; f8
 	const ROCK_SMASH   ; f9
 	const WHIRLPOOL    ; fa
-	const BEAT_UP      ; fb
+	const BEAT_UP      ; fb ;removed
 	const FIRE_FANG    ; fc
 	const ICE_FANG     ; fd
 	const THUNDER_FANG ; fe
@@ -264,7 +264,7 @@
 DEF NUM_ATTACKS EQU const_value - 1
 
 ; Battle animations use the same constants as the moves up to this point
-	const_next $ff
+	const_next $100 ;STRUGGLE is $ff
 	const ANIM_HELD_ITEM_TRIGGER ; ff
 	const ANIM_THROW_POKE_BALL   ; 100
 	const ANIM_SEND_OUT_MON      ; 101

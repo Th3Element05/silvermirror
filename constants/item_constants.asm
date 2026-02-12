@@ -197,7 +197,7 @@ ENDM
 ; see data/moves/tmhm_moves.asm for moves
 DEF TM01 EQU const_value
 	add_tm DYNAMICPUNCH ; aa
-	add_tm RAZOR_WIND   ; ab
+	add_tm TRANSFORM    ; ab ;RAZOR_WIND ;removed (AERIAL_ACE)
 	add_tm SWORDS_DANCE ; ac
 	add_tm ROLLOUT      ; ad ;WHIRLWIND
 	add_tm MEGA_KICK    ; ae
