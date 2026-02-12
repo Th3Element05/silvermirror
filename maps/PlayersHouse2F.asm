@@ -50,7 +50,7 @@ if DEF(_DEBUG)
 ;	; full pokegear
 	setflag ENGINE_POKEGEAR
 	setflag ENGINE_PHONE_CARD
-;	setflag ENGINE_MAP_CARD
+	setflag ENGINE_MAP_CARD
 ;	setflag ENGINE_PAGER_CARD
 ;	setflag ENGINE_RADIO_CARD
 ;	setflag ENGINE_EXPN_CARD
@@ -80,160 +80,6 @@ if DEF(_DEBUG)
 ;	giveitem LOVE_BALL, 50
 ;	giveitem PARK_BALL, 50
 ;	giveitem SAFARI_BALL, 50
-;	giveitem TM_DYNAMICPUNCH
-;	giveitem TM_RAZOR_WIND
-;	giveitem TM_SWORDS_DANCE
-;	giveitem TM_WHIRLWIND
-;	giveitem TM_MEGA_KICK
-;	giveitem TM_TOXIC
-;	giveitem TM_HORN_DRILL
-;	giveitem TM_BODY_SLAM
-;	giveitem TM_TAKE_DOWN
-;	giveitem TM_DOUBLE_EDGE
-;	giveitem TM_BUBBLEBEAM
-;	giveitem TM_WATER_GUN
-;	giveitem TM_ICE_BEAM
-;	giveitem TM_BLIZZARD
-;	giveitem TM_HYPER_BEAM
-;	giveitem TM_PAY_DAY
-;	giveitem TM_SUBMISSION
-;	giveitem TM_COUNTER
-;	giveitem TM_SEISMIC_TOSS
-;	giveitem TM_RAGE
-;	giveitem TM_GIGA_DRAIN
-;	giveitem TM_SOLARBEAM
-;	giveitem TM_DRAGONBREATH
-;	giveitem TM_THUNDERBOLT
-;	giveitem TM_THUNDER
-;	giveitem TM_EARTHQUAKE
-;	giveitem TM_FISSURE
-;	giveitem TM_DIG
-;	giveitem TM_PSYCHIC_M
-;	giveitem TM_TELEPORT
-;	giveitem TM_MIMIC
-;	giveitem TM_DOUBLE_TEAM
-;	giveitem TM_REFLECT
-;	giveitem TM_BIDE
-;	giveitem TM_METRONOME
-;	giveitem TM_SELFDESTRUCT
-;	giveitem TM_EGG_BOMB
-;	giveitem TM_FIRE_BLAST
-;	giveitem TM_SWIFT
-;	giveitem TM_SKULL_BASH
-;	giveitem TM_SOFTBOILED
-;	giveitem TM_DREAM_EATER
-;	giveitem TM_SKY_ATTACK
-;	giveitem TM_REST
-;	giveitem TM_THUNDER_WAVE
-;	giveitem TM_PSYWAVE
-;	giveitem TM_EXPLOSION
-;	giveitem TM_ROCK_SLIDE
-;	giveitem TM_TRI_ATTACK
-;	giveitem TM_SUBSTITUTE
-;	giveitem TM_FLAMETHROWER
-;	giveitem TM_SPARK
-;	giveitem TM_ICY_WIND
-;	giveitem TM_HEADBUTT
-;	giveitem TM_CURSE
-;	giveitem TM_ROLLOUT
-;	giveitem TM_ROCK_SMASH
-;	giveitem TM_HIDDEN_POWER
-;	giveitem TM_SUNNY_DAY
-;	giveitem TM_SWEET_SCENT
-;	giveitem TM_SNORE
-;	giveitem TM_PROTECT
-;	giveitem TM_RAIN_DANCE
-;	giveitem TM_ENDURE
-;	;	giveitem TM_FRUSTRATION
-;	giveitem TM_IRON_TAIL
-;	giveitem TM_RETURN
-;	giveitem TM_SHADOW_BALL
-;	giveitem TM_MUD_SLAP
-;	;	giveitem TM_ICE_PUNCH
-;	giveitem TM_SWAGGER
-;	giveitem TM_SLEEP_TALK
-;	giveitem TM_SLUDGE_BOMB
-;	giveitem TM_SANDSTORM
-;	;	giveitem TM_THUNDERPUNCH
-;	giveitem TM_ATTRACT
-;	giveitem TM_THIEF
-;	giveitem TM_STEEL_WING
-;	;	giveitem TM_FIRE_PUNCH
-;	giveitem TM_FURY_CUTTER
-;	giveitem TM_NIGHTMARE
-;	giveitem HM_CUT
-;	giveitem HM_FLY
-;	giveitem HM_SURF
-;	giveitem HM_STRENGTH
-;	giveitem HM_FLASH
-;	giveitem HM_WHIRLPOOL
-;	giveitem HM_WATERFALL
-;	; all badges
-;	setflag ENGINE_ZEPHYRBADGE
-;	setflag ENGINE_HIVEBADGE
-;	setflag ENGINE_PLAINBADGE
-;	setflag ENGINE_FOGBADGE
-;	setflag ENGINE_STORMBADGE
-;	setflag ENGINE_MINERALBADGE
-;	setflag ENGINE_GLACIERBADGE
-;	setflag ENGINE_RISINGBADGE
-;	setflag ENGINE_BOULDERBADGE
-;	setflag ENGINE_CASCADEBADGE
-;	setflag ENGINE_THUNDERBADGE
-;	setflag ENGINE_RAINBOWBADGE
-;	setflag ENGINE_MARSHBADGE
-;	setflag ENGINE_SOULBADGE
-;	setflag ENGINE_VOLCANOBADGE
-;	setflag ENGINE_EARTHBADGE
-;	setevent EVENT_BEAT_FALKNER
-;	setevent EVENT_BEAT_BUGSY
-;	setevent EVENT_BEAT_WHITNEY
-;	setevent EVENT_BEAT_MORTY
-;	setevent EVENT_BEAT_CHUCK
-;	setevent EVENT_BEAT_JASMINE
-;	setevent EVENT_BEAT_PRYCE
-;	setevent EVENT_BEAT_CLAIR
-;	setevent EVENT_BEAT_BROCK
-;	setevent EVENT_BEAT_MISTY
-;	setevent EVENT_BEAT_LTSURGE
-;	setevent EVENT_BEAT_ERIKA
-;	setevent EVENT_BEAT_KOGA
-;	setevent EVENT_BEAT_SABRINA
-;	setevent EVENT_BEAT_BLAINE
-;	setevent EVENT_BEAT_GIOVANNI
-;	setevent EVENT_BEAT_ELITE_FOUR
-;	; fly anywhere
-;	setflag ENGINE_FLYPOINT_NEW_BARK
-;	setflag ENGINE_FLYPOINT_CHERRYGROVE
-;	setflag ENGINE_FLYPOINT_VIOLET
-;	setflag ENGINE_FLYPOINT_AZALEA
-;	setflag ENGINE_FLYPOINT_GOLDENROD
-;	setflag ENGINE_FLYPOINT_ECRUTEAK
-;	setflag ENGINE_FLYPOINT_OLIVINE
-;	setflag ENGINE_FLYPOINT_CIANWOOD
-;	setflag ENGINE_FLYPOINT_MAHOGANY
-;	setflag ENGINE_FLYPOINT_LAKE_OF_RAGE
-;	setflag ENGINE_FLYPOINT_BLACKTHORN
-;	setflag ENGINE_FLYPOINT_SILVER_CAVE
-;	setflag ENGINE_FLYPOINT_INDIGO_PLATEAU
-;	setflag ENGINE_FLYPOINT_PALLET
-;	setflag ENGINE_FLYPOINT_VIRIDIAN
-;	setflag ENGINE_FLYPOINT_PEWTER
-;	setflag ENGINE_FLYPOINT_CERULEAN
-;	setflag ENGINE_FLYPOINT_VERMILION
-;	setflag ENGINE_FLYPOINT_CELADON
-;	setflag ENGINE_FLYPOINT_ROCK_TUNNEL
-;	setflag ENGINE_FLYPOINT_LAVENDER
-;	setflag ENGINE_FLYPOINT_FUCHSIA
-;	setflag ENGINE_FLYPOINT_SAFFRON
-;	setflag ENGINE_FLYPOINT_CINNABAR
-;	setflag ENGINE_FLYPOINT_SAFARI_ZONE_GATE
-;	setflag ENGINE_UNLOCKED_UNOWNS_A_TO_K
-;	setflag ENGINE_UNLOCKED_UNOWNS_L_TO_R
-;	setflag ENGINE_UNLOCKED_UNOWNS_S_TO_W
-;	setflag ENGINE_UNLOCKED_UNOWNS_X_TO_Z
-;	; post-e4
-;	setflag ENGINE_CREDITS_SKIP
 	; good party
 	givepoke STARMIE, 90, LEFTOVERS
 	givepoke MAGMAR, 90, LEFTOVERS
@@ -437,22 +283,14 @@ PlayersHouseDebugPlayer:
 ;	givepoke BULBASAUR, 10
 ;	givepoke CHARMANDER, 10
 ;	givepoke SQUIRTLE, 10
-	givepoke MISSINGNO, 40
 	givepoke MISSINGNO, 50
 
-	loadmem wPartyMon1Moves+0, GYRO_BALL
-	loadmem wPartyMon1Moves+1, ICE_BEAM
-	loadmem wPartyMon1Moves+2, THUNDERBOLT
+	loadmem wPartyMon1Moves+0, FIRE_FANG
+	loadmem wPartyMon1Moves+1, ICE_FANG
+	loadmem wPartyMon1Moves+2, THUNDER_FANG
 	loadmem wPartyMon1Moves+3, PSYCHIC_M
-	loadmem wPartyMon1DVs+0, $ea
-	loadmem wPartyMon1DVs+1, $aa
-
-	loadmem wPartyMon2Moves+0, LEER
-	loadmem wPartyMon2Moves+1, GYRO_BALL
-	loadmem wPartyMon2Moves+2, THUNDERBOLT
-	loadmem wPartyMon2Moves+3, PSYCHIC_M
-	loadmem wPartyMon2DVs+0, $eb
-	loadmem wPartyMon2DVs+1, $aa
+;	loadmem wPartyMon1DVs+0, $ea
+;	loadmem wPartyMon1DVs+1, $aa
 
 	giveitem RARE_CANDY, 20
 	giveitem CARBOS, 20
