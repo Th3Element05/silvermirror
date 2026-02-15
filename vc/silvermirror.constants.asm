@@ -28,12 +28,12 @@ ENDM
 ; [FPA 004 Begin]
 	vc_const FLASH
 ; [FPA 005 Begin]
-	vc_const EXPLOSION
+	vc_const EXPLOSION ;removed
 ; [FPA 006 Begin]
 	vc_const HORN_DRILL
 ; [FPA 007 Begin]
 	vc_const HYPER_BEAM
 
 ; [FPA 042801 Begin]
-	vc_const PRESENT
+	vc_const PRESENT ;removed
 	vc_const anim_1gfx_command
