@@ -60,8 +60,8 @@ Copycat:
 	iffalse .DollNotForYou
 	writetext CopycatText_ThanksGiveTM
 	promptbutton
-	takeitem POKE_DOLL
-	verbosegiveitem TM_MIMIC
+;	takeitem POKE_DOLL
+;	verbosegiveitem TM_MIMIC
 	writetext CopycatText_ExplainTM
 	waitbutton
 	closetext
