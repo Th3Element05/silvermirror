@@ -2148,6 +2148,34 @@ GyroBall:
 	buildopponentrage
 	endmove
 
+CalmMind:
+	checkobedience
+	usedmovetext
+	doturn
+	lowersub
+	statupanim
+	raisesub
+	specialattackup
+	statupmessage
+	specialdefenseup
+	statupmessage
+	statupfailtext
+	endmove
+
+BulkUp:
+	checkobedience
+	usedmovetext
+	doturn
+	lowersub
+	statupanim
+	raisesub
+	attackup
+	statupmessage
+	defenseup
+	statupmessage
+	statupfailtext
+	endmove
+
 ;WeightDamage:
 ;	checkobedience
 ;	usedmovetext

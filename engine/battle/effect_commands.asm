@@ -1720,8 +1720,8 @@ BattleCommand_CheckHit:
 
 	cp GUST
 	ret z
-	cp WHIRLWIND
-	ret z
+;	cp WHIRLWIND ;removed
+;	ret z
 	cp THUNDER
 	ret z
 	cp TWISTER
@@ -5563,9 +5563,9 @@ BattleCommand_Charge:
 	ld hl, .BattleTookSunlightText
 	jr z, .done
 
-	cp SKULL_BASH
-	ld hl, .BattleLoweredHeadText
-	jr z, .done
+;	cp SKULL_BASH ;removed
+;	ld hl, .BattleLoweredHeadText
+;	jr z, .done
 
 	cp SKY_ATTACK
 	ld hl, .BattleGlowingText
@@ -5656,7 +5656,7 @@ BattleCommand_TrapTarget:
 ;	dbw BIND,      UsedBindText      ; 'used BIND on'
 	dbw WRAP,      WrappedByText     ; 'was WRAPPED by'
 	dbw FIRE_SPIN, FireSpinTrapText  ; 'was trapped!'
-	dbw CLAMP,     ClampedByText     ; 'was CLAMPED by'
+;	dbw CLAMP,     ClampedByText     ; 'was CLAMPED by'
 	dbw WHIRLPOOL, WhirlpoolTrapText ; 'was trapped!'
 
 INCLUDE "engine/battle/move_effects/mist.asm"
