@@ -197,10 +197,10 @@ ENDM
 ; see data/moves/tmhm_moves.asm for moves
 DEF TM01 EQU const_value
 	add_tm DYNAMICPUNCH ; aa
-	add_tm TRANSFORM    ; ab ;RAZOR_WIND ;removed (AERIAL_ACE)
+	add_tm TRANSFORM    ; ab ;RAZOR_WIND ;removed
 	add_tm SWORDS_DANCE ; ac
-	add_tm ROLLOUT      ; ad ;WHIRLWIND
-	add_tm MEGA_KICK    ; ae
+	add_tm ROLLOUT      ; ad
+	add_tm TRANSFORM    ; ae ;MEGA_KICK ;removed
 	add_tm TOXIC        ; af
 	add_tm HORN_DRILL   ; b0
 	add_tm BODY_SLAM    ; b1
@@ -226,32 +226,32 @@ DEF TM01 EQU const_value
 	add_tm DIG          ; c5
 	add_tm PSYCHIC_M    ; c6
 	add_tm TELEPORT     ; c7
-	add_tm MIMIC        ; c8
+	add_tm TRANSFORM    ; c8 ;MIMIC ;removed
 	add_tm DOUBLE_TEAM  ; c9
 	add_tm REFLECT      ; ca
 	add_tm BIDE         ; cb
 	add_tm METRONOME    ; cc
 	add_tm SELFDESTRUCT ; cd
-	add_tm EGG_BOMB     ; ce
+	add_tm TRANSFORM    ; ce ;EGG_BOMB ;removed
 	add_tm FIRE_BLAST   ; cf
 	add_tm SWIFT        ; d0
-	add_tm SKULL_BASH   ; d1
+	add_tm TRANSFORM    ; d1 ;SKULL_BASH ;removed
 	add_tm SOFTBOILED   ; d2
 	add_tm DREAM_EATER  ; d3
 	add_tm SKY_ATTACK   ; d4
 	add_tm REST         ; d5
 	add_tm THUNDER_WAVE ; d6
-	add_tm PSYWAVE      ; d7
-	add_tm EXPLOSION    ; d8
+	add_tm TRANSFORM    ; d7 ;PSYWAVE ;removed
+	add_tm TRANSFORM    ; d8 ;EXPLOSION ;removed
 	add_tm ROCK_SLIDE   ; d9
 	add_tm TRI_ATTACK   ; da
 	add_tm SUBSTITUTE   ; db
 	add_tm FLAMETHROWER ; dc
 	add_tm SPARK        ; dd
 	add_tm ICY_WIND     ; de
-	add_tm FALSE_SWIPE  ; df ;HEADBUTT
-	add_tm HEADBUTT     ; e0 ;CURSE
-	add_tm CURSE        ; e1 ;ROLLOUT
+	add_tm FALSE_SWIPE  ; df
+	add_tm HEADBUTT     ; e0
+	add_tm CURSE        ; e1
 	add_tm ROCK_SMASH   ; e2
 	add_tm HIDDEN_POWER ; e3
 	add_tm SUNNY_DAY    ; e4
