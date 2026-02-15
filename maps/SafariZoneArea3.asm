@@ -91,8 +91,8 @@ SafariZoneArea3TrainerTipsSign1Text:
 SafariZoneArea3Protein:
 	itemball PROTEIN
 
-SafariZoneArea3TMSkullBash:
-	itemball TM_SKULL_BASH
+;SafariZoneArea3TMSkullBash:
+;	itemball TM_SKULL_BASH
 
 SafariZoneArea3_MapEvents:
 	db 0, 0 ; filler
@@ -133,6 +133,6 @@ SafariZoneArea3_MapEvents:
 	object_event 31,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, NITE, 0, OBJECTTYPE_SCRIPT, 0, SafariZoneArea3Resting, EVENT_SAFARI_ZONE_AREA_3_NPC3
 ;
 	object_event 23,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, SafariZoneArea3Protein, EVENT_SAFARI_ZONE_AREA_3_PROTEIN
-	object_event 19,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, SafariZoneArea3TMSkullBash, EVENT_SAFARI_ZONE_AREA_3_TM_SKULL_BASH
+;	object_event 19,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, SafariZoneArea3TMSkullBash, EVENT_SAFARI_ZONE_AREA_3_TM_SKULL_BASH
 
 ;.RockOverTreeOBPalette

@@ -46,8 +46,8 @@ SaffronGymSabrinaScript:
 .FightDone:
 	checkevent EVENT_GOT_TM46_PSYWAVE
 	iftrue .GotPsywave
-	verbosegiveitem TM_PSYWAVE
-	setevent EVENT_GOT_TM46_PSYWAVE
+;	verbosegiveitem TM_PSYWAVE
+;	setevent EVENT_GOT_TM46_PSYWAVE
 	writetext SabrinaExplainTMText
 	waitbutton
 	closetext
