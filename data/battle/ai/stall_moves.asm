@@ -3,22 +3,22 @@
 
 StallMoves:
 	db SWORDS_DANCE
-	db TAIL_WHIP
+;	db TAIL_WHIP ;removed
 	db LEER
 	db GROWL
 	db DISABLE
-	db MIST
+;	db MIST ;removed
 	db COUNTER
 	db LEECH_SEED
 	db GROWTH
 	db STRING_SHOT
-	db MEDITATE
+	db BULK_UP ;MEDITATE ;removed
 	db AGILITY
 	db RAGE
-	db MIMIC
+;	db MIMIC ;removed
 	db SCREECH
 	db HARDEN
-	db WITHDRAW
+;	db WITHDRAW
 	db DEFENSE_CURL
 	db BARRIER
 	db LIGHT_SCREEN
@@ -29,7 +29,7 @@ StallMoves:
 	db AMNESIA
 	db TRANSFORM
 	db SPLASH
-	db ACID_ARMOR
+;	db ACID_ARMOR ;removed
 	db SHARPEN
 	db CONVERSION
 	db SUBSTITUTE

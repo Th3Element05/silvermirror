@@ -7,8 +7,8 @@ RainDanceMoves:
 	db BUBBLEBEAM
 	db THUNDER
 	db WATERFALL
-	db CLAMP
-	db BUBBLE
+;	db CLAMP ;removed
+;	db BUBBLE ;removed
 	db CRABHAMMER
 	db OCTAZOOKA
 	db WHIRLPOOL

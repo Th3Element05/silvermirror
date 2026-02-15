@@ -11,14 +11,14 @@ MoveDescriptions::
 	dw IcePunchDescription
 	dw ThunderpunchDescription
 	dw ScratchDescription
-	dw VicegripDescription
+	dw CrushClawDescription ;VicegripDescription
 	dw GuillotineDescription
 	dw RazorWindDescription
 	dw SwordsDanceDescription
 	dw CutDescription
 	dw GustDescription
 	dw WingAttackDescription
-	dw WhirlwindDescription
+	dw RoostDescription ;WhirlwindDescription
 	dw FlyDescription
 	dw BindDescription
 	dw SlamDescription
@@ -96,7 +96,7 @@ MoveDescriptions::
 	dw ConfusionDescription
 	dw PsychicMDescription
 	dw HypnosisDescription
-	dw MeditateDescription
+	dw BulkUpDescription ;MeditateDescription
 	dw AgilityDescription
 	dw QuickAttackDescription
 	dw RageDescription
@@ -131,7 +131,7 @@ MoveDescriptions::
 	dw ClampDescription
 	dw SwiftDescription
 	dw SkullBashDescription
-	dw SpikeCannonDescription
+	dw IcicleSpearDescription ;SpikeCannonDescription
 	dw ConstrictDescription
 	dw AmnesiaDescription
 	dw KinesisDescription
@@ -244,7 +244,7 @@ MoveDescriptions::
 	dw SunnyDayDescription
 	dw CrunchDescription
 	dw MirrorCoatDescription
-	dw PsychUpDescription
+	dw CalmMindDescription ;PsychUpDescription
 	dw ExtremespeedDescription
 	dw AncientpowerDescription
 	dw ShadowBallDescription
@@ -311,9 +311,16 @@ ScratchDescription:
 	db   "Scratches with"
 	next "sharp claws.@"
 
-VicegripDescription:
-	db   "Grips with power-"
-	next "ful pincers.@"
+CrushClawDescription:
+;	db   "Crush with strong"
+;	feed "claws. May lower"
+;	feed "the foe's DEFENSE.@"
+	db   "Strong claws crush"
+	feed "the opponent and"
+	feed "may lower DEFENSE.@"
+;VicegripDescription:
+;	db   "Grips with power-"
+;	next "ful pincers.@"
 
 GuillotineDescription:
 	db   "A one-hit KO,"
@@ -339,9 +346,13 @@ WingAttackDescription:
 	db   "Strikes the target"
 	next "with wings.@"
 
-WhirlwindDescription:
-	db   "Blows away the foe"
-	next "& ends battle.@"
+RoostDescription:
+	db   "The user lands to"
+	feed "rest its body."
+	feed "Restores HP."
+;WhirlwindDescription:
+;	db   "Blows away the foe"
+;	next "& ends battle.@"
 
 FlyDescription:
 	db   "1st turn: Fly"
@@ -572,8 +583,6 @@ GrowthDescription:
 	db   "Raises the user's"
 	next "ATK and SP.ATK.@"
 
-
-
 SolarbeamDescription:
 	db   "1st turn: Prepare"
 	next "2nd turn: Attack@"
@@ -654,9 +663,16 @@ HypnosisDescription:
 	db   "May put the foe to"
 	next "sleep.@"
 
-MeditateDescription:
-	db   "Raises the user's"
-	next "ATTACK.@"
+BulkUpDescription:
+;	db   "User flexes to"
+;	feed "raise their ATTACK"
+;	feed "and DEFENSE.@"
+	db   "User flexes their"
+	feed "muscles to raise"
+	feed "ATTACK & DEFENSE.@"
+;MeditateDescription:
+;	db   "Raises the user's"
+;	next "ATTACK.@"
 
 AgilityDescription:
 	db   "Sharply increases"
@@ -794,9 +810,12 @@ SkullBashDescription:
 	db   "1st turn: Prepare"
 	next "2nd turn: Attack@"
 
-SpikeCannonDescription:
-	db   "Fires spikes to"
+IcicleSpearDescription:
+	db   "Fires icicles to"
 	next "hit 2-5 times.@"
+;SpikeCannonDescription:
+;	db   "Fires spikes to"
+;	next "hit 2-5 times.@"
 
 ConstrictDescription:
 	db   "An attack that may"
@@ -878,8 +897,6 @@ AcidArmorDescription:
 	db   "Sharply raises the"
 	next "user's DEFENSE.@"
 
-
-
 ExplosionDescription:
 	db   "Very powerful but"
 	next "makes user faint.@"
@@ -907,10 +924,15 @@ HyperFangDescription:
 SharpenDescription:
 	db   "A move that raises"
 	next "the user's ATTACK.@"
+;	db   "Raises the user's"
+;	next "ATK and ACCURACY.@"
 
 ConversionDescription:
-	db   "Change user's type"
-	next "to a move's type.@"
+;	db   "Change user's type"
+;	next "to a move's type.@"
+	db   "User changes type"
+	feed "to match one of"
+	feed "its own moves.@"
 
 TriAttackDescription:
 	db   "Fires three kinds"
@@ -919,8 +941,6 @@ TriAttackDescription:
 SuperFangDescription:
 	db   "Cuts the foe's HP"
 	next "by 1/2.@"
-
-
 
 SubstituteDescription:
 	db   "Makes a decoy with"
@@ -959,22 +979,32 @@ FlameWheelDescription:
 	next "cause a burn.@"
 
 SnoreDescription:
-	db   "An attack useable"
-	next "only while asleep.@"
+;	db   "An attack useable"
+;	next "only while asleep.@"
+	db   "An attack which"
+	feed "can only be used"
+	feed "while asleep.@"
 
 CurseDescription:
-	db   "Works differently"
-	next "for ghost-types.@"
+;	db   "Works differently"
+;	next "for ghost-types.@"
+	db   "Except GHOST-type,"
+	feed "raises ATK & DEF"
+	feed "but lowers SPEED.@"
 
 FlailDescription:
-	db   "Stronger if the"
-	next "user's HP is low.@"
+;	db   "Stronger if the"
+;	next "user's HP is low.@"
+	db   "Flails aimlessly."
+	feed "More powerful when"
+	feed "used with low HP.@"
 
 Conversion2Description:
-	db   "The user's type is"
-	next "made resistant.@"
-
-
+;	db   "The user's type is"
+;	next "made resistant.@"
+	db   "User changes type"
+	feed "to resist the last"
+	feed "attack.@"
 
 CottonSporeDescription:
 	db   "Sharply reduces"
@@ -1238,9 +1268,16 @@ MirrorCoatDescription:
 	db   "Counters a SP."
 	next "ATK move double.@"
 
-PsychUpDescription:
-	db   "Copies the foe's"
-	next "stat changes.@"
+CalmMindDescription:
+;	db   "Focuses the mind"
+;	feed "to raise SP.ATTACK"
+;	feed "and SP.DEFENSE.@"
+	db   "User focuses their"
+	feed "mind to raise"
+	feed "SP.ATK & SP.DEF.@"
+;PsychUpDescription:
+;	db   "Copies the foe's"
+;	next "stat changes.@"
 
 ExtremespeedDescription:
 	db   "A powerful first-"
@@ -1285,3 +1322,5 @@ ThunderFangDescription:
 GyroBallDescription:
 	db   "Power doubles if"
 	next "user is slower.@"
+
+; &

@@ -4,11 +4,11 @@ MetronomeExcepts:
 	db NO_MOVE
 	db METRONOME
 	db SKETCH
-	db MIMIC
+;	db MIMIC ;removed
 	db COUNTER
 	db MIRROR_COAT
 	db PROTECT
-	db DETECT
+;	db DETECT ;removed
 	db ENDURE
 	db DESTINY_BOND
 	db SLEEP_TALK

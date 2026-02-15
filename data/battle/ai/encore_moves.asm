@@ -2,16 +2,16 @@
 
 EncoreMoves:
 	db SWORDS_DANCE
-	db WHIRLWIND
+;	db WHIRLWIND ;removed
 	db LEER
 	db ROAR
 	db DISABLE
-	db MIST
+;	db MIST ;removed
 	db LEECH_SEED
 	db GROWTH
 	db POISONPOWDER
 	db STRING_SHOT
-;	db BULK_UP ;MEDITATE ;removed
+	db BULK_UP ;MEDITATE ;removed
 	db AGILITY
 	db TELEPORT
 	db SCREECH
