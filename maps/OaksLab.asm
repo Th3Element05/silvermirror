@@ -1217,10 +1217,10 @@ DebugAllTMs:
 	yesorno
 	iffalse .End
 	giveitem TM_DYNAMICPUNCH
-	giveitem TM_TRANSFORM ; TM_RAZOR_WIND
+;	giveitem TM_RAZOR_WIND ;removed
 	giveitem TM_SWORDS_DANCE
 	giveitem TM_FALSE_SWIPE ; TM_WHIRLWIND
-	giveitem TM_MEGA_KICK
+;	giveitem TM_MEGA_KICK ;removed
 	giveitem TM_TOXIC
 	giveitem TM_HORN_DRILL
 	giveitem TM_BODY_SLAM
@@ -1246,23 +1246,23 @@ DebugAllTMs:
 	giveitem TM_DIG
 	giveitem TM_PSYCHIC_M
 	giveitem TM_TELEPORT
-	giveitem TM_MIMIC
+;	giveitem TM_MIMIC
 	giveitem TM_DOUBLE_TEAM
 	giveitem TM_REFLECT
 	giveitem TM_BIDE
 	giveitem TM_METRONOME
 	giveitem TM_SELFDESTRUCT
-	giveitem TM_EGG_BOMB
+;	giveitem TM_EGG_BOMB
 	giveitem TM_FIRE_BLAST
 	giveitem TM_SWIFT
-	giveitem TM_SKULL_BASH
+;	giveitem TM_SKULL_BASH
 	giveitem TM_SOFTBOILED
 	giveitem TM_DREAM_EATER
 	giveitem TM_SKY_ATTACK
 	giveitem TM_REST
 	giveitem TM_THUNDER_WAVE
-	giveitem TM_PSYWAVE
-	giveitem TM_EXPLOSION
+;	giveitem TM_PSYWAVE
+;	giveitem TM_EXPLOSION
 	giveitem TM_ROCK_SLIDE
 	giveitem TM_TRI_ATTACK
 	giveitem TM_SUBSTITUTE

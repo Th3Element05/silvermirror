@@ -112,7 +112,7 @@ if DEF(_DEBUG)
 	loadmem wPartyMon4Moves+0, SLUDGE_BOMB
 	loadmem wPartyMon4Moves+1, SMOKESCREEN
 	loadmem wPartyMon4Moves+2, FEINT_ATTACK
-	loadmem wPartyMon4Moves+3, EXPLOSION
+	loadmem wPartyMon4Moves+3, SELFDESTRUCT
 ;	loadmem wPartyMon4DVs+0, $ea
 ;	loadmem wPartyMon4DVs+1, $aa
 ;
@@ -126,7 +126,7 @@ if DEF(_DEBUG)
 ;	loadmem wPartyMon6Moves+0, WING_ATTACK
 ;	loadmem wPartyMon6Moves+1, SWIFT
 ;	loadmem wPartyMon6Moves+2, DOUBLE_TEAM
-;	loadmem wPartyMon6Moves+3, WHIRLWIND
+;	loadmem wPartyMon6Moves+3, ROAR
 ;	loadmem wPartyMon6DVs+0, $ea
 ;	loadmem wPartyMon6DVs+1, $aa
 ;	; Grant All Pokemon                     ;commented out Grant All Pokemon
