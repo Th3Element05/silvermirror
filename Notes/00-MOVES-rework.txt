@@ -7,6 +7,9 @@ OftenFleeMons:
 silver cave pokecenter map messed up
 elm gives starter
 
+constants\menu_constants.asm
+data\mon_menu.asm
+show field moves?
 
 FORESIGHT > hit DARK too
 
@@ -20,18 +23,67 @@ KAKUNA		HARDEN
 
 
 MOVE REWORK NOTES
+go through data\trainers\parties.asm and fix TRANSFORM
+Cerulean City Slowbro uses WITHDRAW
+
 data\moves\metronome_exception_moves.asm
+data\pokemon\egg_moves.asm
+what is going on with `vc\silvermirror.constants.asm`? PRESENT, EXPLOSION
 
 
 removed TMs
 RAZOR_WIND	RocketHideoutB4F.asm
+EGG_BOMB	SafariZoneArea2.asm
+SKULL_BASH	SafariZoneArea3.asm
+MEGA_KICK	VictoryRoad2F.asm
+EXPLOSION	VictoryRoad3F.asm
+PSYWAVE		SaffronGym.asm	Reward>	CALM_MIND ?
+MIMIC		CopycatsHouse2F.asm
+
+
+
++tutor moves
+SOFTBOILED	celadon
+SNORE		
+SLEEP_TALK	
+SWEET_SCENT	
+
+
+
+animations
+WITHDRAW gfx can probably be changed/reused
+CLAMP gfx possibly changed/reused
+SWEET_KISS angel gfx possibly changed/reused
+SPIDER_WEB web gfx maybe changed/repurposed
+MIND_READER gfx can probably be changed/repurposed
+SEISMIC_TOSS large gfx could be reused if move is removed or animation changed.
+	or could be good in SHADOW_BALL as-is (purple)
+
+
+STRENGTH good for STONE_EDGE or something
+PSYCHIC good for WATER_PULSE, maybe change sound/color
+POISON_GAS better for SMOKESCREEN?
+PETAL_DANCE flower gfx white=feathers for ROOST?
+HEAL_BELL should be AROMATHERAPY but animation will need to be changed
+	(then bell can be changed/reused)
+
+
+SHARPEN animation will need to be changed if it will become HONE_CLAWS
+
+?how does egg gfx work for EGG_BOMB vs SOFTBOILED? 
+	?can it be removed from softboiled and changed/reused?
+?modify SKETCH so pencil gfx can be changed/reused?
+
+?remove particles from SUNNY_DAY animation?
+?can RAIN_DANCE particles be blue? swap for sunny_day particles?
+
+?modify SMOKESCREEN to be visually compatible with SAND_ATTACK?
 
 
 
 
 
-
-
+133
 
 
 
