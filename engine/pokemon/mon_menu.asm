@@ -141,7 +141,7 @@ PokemonActionSubmenu:
 	dbw MONMENUITEM_DIG,        MonMenu_Dig
 	dbw MONMENUITEM_TELEPORT,   MonMenu_Teleport
 	dbw MONMENUITEM_SOFTBOILED, MonMenu_Softboiled_MilkDrink
-	dbw MONMENUITEM_MILKDRINK,  MonMenu_Softboiled_MilkDrink
+;	dbw MONMENUITEM_MILKDRINK,  MonMenu_Softboiled_MilkDrink ;removed
 	dbw MONMENUITEM_HEADBUTT,   MonMenu_Headbutt
 	dbw MONMENUITEM_SWEETSCENT, MonMenu_SweetScent
 	dbw MONMENUITEM_STATS,      OpenPartyStats
