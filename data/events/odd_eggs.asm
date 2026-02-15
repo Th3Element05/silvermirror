@@ -15,37 +15,40 @@ OddEggProbabilities:
 DEF prob_total = 0
 ; Bulbasaur (petal_dance)
 	prob 6
-	prob 6
-	prob 2
+	prob 5
+	prob 3
 	prob 2
 ; Charmander (outrage, bite)
 	prob 6
-	prob 6
-	prob 2
+	prob 5
+	prob 3
 	prob 2
 ; Squirtle (confusion)
 	prob 6
-	prob 6
-	prob 2
+	prob 5
+	prob 3
 	prob 2
 ; Chikorita (ancientpower, leech_seed)
 	prob 6
-	prob 6
+	prob 5
+	prob 3
 	prob 2
-	prob 2
-; Cyndaquil (reversal)
+; Cyndaquil (extrasensory) ;reversal
 	prob 6
-	prob 6
-	prob 2
+	prob 5
+	prob 3
 	prob 2
 ; Totodile (crunch, thrash)
 	prob 6
-	prob 6
+	prob 5
+	prob 3
+	prob 2
+; Eevee (always shiny)
 	prob 2
 	prob 2
-; Togepi (shiny) (peck, present)
-	prob 2
-	prob 2
+; Togepi (shiny) (peck, heal_bell)
+;	prob 2
+;	prob 2
 
 	assert_table_length NUM_ODD_EGGS
 	assert prob_total == 100, "OddEggProbabilities do not sum to 100%!"
@@ -78,7 +81,7 @@ OddEggs:
 	bigdw 6 ; Spd
 	bigdw 6 ; SAtk
 	bigdw 6 ; SDef
-	db "ODD EGG@@@@"
+	db "RARE EGG@@@"
 
 ; female
 	db BULBASAUR
@@ -105,7 +108,7 @@ OddEggs:
 	bigdw 6 ; Spd
 	bigdw 6 ; SAtk
 	bigdw 6 ; SDef
-	db "ODD EGG@@@@"
+	db "RARE EGG@@@"
 
 ; male shiny
 	db BULBASAUR
@@ -132,7 +135,7 @@ OddEggs:
 	bigdw 6 ; Spd
 	bigdw 6 ; SAtk
 	bigdw 6 ; SDef
-	db "ODD EGG@@@@"
+	db "RARE EGG@@@"
 
 ; female shiny
 	db BULBASAUR
@@ -159,7 +162,7 @@ OddEggs:
 	bigdw 6 ; Spd
 	bigdw 6 ; SAtk
 	bigdw 6 ; SDef
-	db "ODD EGG@@@@"
+	db "RARE EGG@@@"
 
 ; male
 	db CHARMANDER
@@ -186,7 +189,7 @@ OddEggs:
 	bigdw 6 ; Spd
 	bigdw 6 ; SAtk
 	bigdw 6 ; SDef
-	db "ODD EGG@@@@"
+	db "RARE EGG@@@"
 
 ; female
 	db CHARMANDER
@@ -213,7 +216,7 @@ OddEggs:
 	bigdw 6 ; Spd
 	bigdw 6 ; SAtk
 	bigdw 6 ; SDef
-	db "ODD EGG@@@@"
+	db "RARE EGG@@@"
 
 ; male shiny
 	db CHARMANDER
@@ -240,7 +243,7 @@ OddEggs:
 	bigdw 6 ; Spd
 	bigdw 6 ; SAtk
 	bigdw 6 ; SDef
-	db "ODD EGG@@@@"
+	db "RARE EGG@@@"
 
 ; female shiny
 	db CHARMANDER
@@ -267,12 +270,12 @@ OddEggs:
 	bigdw 6 ; Spd
 	bigdw 6 ; SAtk
 	bigdw 6 ; SDef
-	db "ODD EGG@@@@"
+	db "RARE EGG@@@"
 
 ; male
 	db SQUIRTLE
 	db NO_ITEM
-	db TACKLE, TAIL_WHIP, CONFUSION, 0
+	db TACKLE, LEER, CONFUSION, 0
 	dw 02048 ; OT ID
 	dt 1 ; Exp
 	; Stat exp
@@ -294,12 +297,12 @@ OddEggs:
 	bigdw 6 ; Spd
 	bigdw 6 ; SAtk
 	bigdw 6 ; SDef
-	db "ODD EGG@@@@"
+	db "RARE EGG@@@"
 
 ; female
 	db SQUIRTLE
 	db NO_ITEM
-	db TACKLE, TAIL_WHIP, CONFUSION, 0
+	db TACKLE, LEER, CONFUSION, 0
 	dw 02048 ; OT ID
 	dt 1 ; Exp
 	; Stat exp
@@ -321,12 +324,12 @@ OddEggs:
 	bigdw 6 ; Spd
 	bigdw 6 ; SAtk
 	bigdw 6 ; SDef
-	db "ODD EGG@@@@"
+	db "RARE EGG@@@"
 
 ; male shiny
 	db SQUIRTLE
 	db NO_ITEM
-	db TACKLE, TAIL_WHIP, CONFUSION, 0
+	db TACKLE, LEER, CONFUSION, 0
 	dw 02048 ; OT ID
 	dt 1 ; Exp
 	; Stat exp
@@ -348,12 +351,12 @@ OddEggs:
 	bigdw 6 ; Spd
 	bigdw 6 ; SAtk
 	bigdw 6 ; SDef
-	db "ODD EGG@@@@"
+	db "RARE EGG@@@"
 
 ; female shiny
 	db SQUIRTLE
 	db NO_ITEM
-	db TACKLE, TAIL_WHIP, CONFUSION, 0
+	db TACKLE, LEER, CONFUSION, 0
 	dw 02048 ; OT ID
 	dt 1 ; Exp
 	; Stat exp
@@ -375,7 +378,7 @@ OddEggs:
 	bigdw 6 ; Spd
 	bigdw 6 ; SAtk
 	bigdw 6 ; SDef
-	db "ODD EGG@@@@"
+	db "RARE EGG@@@"
 
 ; male
 	db CHIKORITA
@@ -402,7 +405,7 @@ OddEggs:
 	bigdw 6 ; Spd
 	bigdw 6 ; SAtk
 	bigdw 6 ; SDef
-	db "ODD EGG@@@@"
+	db "RARE EGG@@@"
 
 ; female
 	db CHIKORITA
@@ -429,7 +432,7 @@ OddEggs:
 	bigdw 6 ; Spd
 	bigdw 6 ; SAtk
 	bigdw 6 ; SDef
-	db "ODD EGG@@@@"
+	db "RARE EGG@@@"
 
 ; male shiny
 	db CHIKORITA
@@ -456,7 +459,7 @@ OddEggs:
 	bigdw 6 ; Spd
 	bigdw 6 ; SAtk
 	bigdw 6 ; SDef
-	db "ODD EGG@@@@"
+	db "RARE EGG@@@"
 
 ; female shiny
 	db CHIKORITA
@@ -483,12 +486,12 @@ OddEggs:
 	bigdw 6 ; Spd
 	bigdw 6 ; SAtk
 	bigdw 6 ; SDef
-	db "ODD EGG@@@@"
+	db "RARE EGG@@@"
 
 ; male
 	db CYNDAQUIL
 	db NO_ITEM
-	db TACKLE, LEER, REVERSAL, 0
+	db TACKLE, LEER, EXTRASENSORY, 0
 	dw 02048 ; OT ID
 	dt 1 ; Exp
 	; Stat exp
@@ -510,12 +513,12 @@ OddEggs:
 	bigdw 6 ; Spd
 	bigdw 6 ; SAtk
 	bigdw 6 ; SDef
-	db "ODD EGG@@@@"
+	db "RARE EGG@@@"
 
 ; female
 	db CYNDAQUIL
 	db NO_ITEM
-	db TACKLE, LEER, REVERSAL, 0
+	db TACKLE, LEER, EXTRASENSORY, 0
 	dw 02048 ; OT ID
 	dt 1 ; Exp
 	; Stat exp
@@ -537,12 +540,12 @@ OddEggs:
 	bigdw 6 ; Spd
 	bigdw 6 ; SAtk
 	bigdw 6 ; SDef
-	db "ODD EGG@@@@"
+	db "RARE EGG@@@"
 
 ; male shiny
 	db CYNDAQUIL
 	db NO_ITEM
-	db TACKLE, LEER, REVERSAL, 0
+	db TACKLE, LEER, EXTRASENSORY, 0
 	dw 02048 ; OT ID
 	dt 1 ; Exp
 	; Stat exp
@@ -564,12 +567,12 @@ OddEggs:
 	bigdw 6 ; Spd
 	bigdw 6 ; SAtk
 	bigdw 6 ; SDef
-	db "ODD EGG@@@@"
+	db "RARE EGG@@@"
 
 ; female shiny
 	db CYNDAQUIL
 	db NO_ITEM
-	db TACKLE, LEER, REVERSAL, 0
+	db TACKLE, LEER, EXTRASENSORY, 0
 	dw 02048 ; OT ID
 	dt 1 ; Exp
 	; Stat exp
@@ -591,7 +594,7 @@ OddEggs:
 	bigdw 6 ; Spd
 	bigdw 6 ; SAtk
 	bigdw 6 ; SDef
-	db "ODD EGG@@@@"
+	db "RARE EGG@@@"
 
 ; male
 	db TOTODILE
@@ -618,7 +621,7 @@ OddEggs:
 	bigdw 6 ; Spd
 	bigdw 6 ; SAtk
 	bigdw 6 ; SDef
-	db "ODD EGG@@@@"
+	db "RARE EGG@@@"
 
 ; female
 	db TOTODILE
@@ -645,7 +648,7 @@ OddEggs:
 	bigdw 6 ; Spd
 	bigdw 6 ; SAtk
 	bigdw 6 ; SDef
-	db "ODD EGG@@@@"
+	db "RARE EGG@@@"
 
 ; male shiny
 	db TOTODILE
@@ -672,7 +675,7 @@ OddEggs:
 	bigdw 6 ; Spd
 	bigdw 6 ; SAtk
 	bigdw 6 ; SDef
-	db "ODD EGG@@@@"
+	db "RARE EGG@@@"
 
 ; female shiny
 	db TOTODILE
@@ -699,12 +702,12 @@ OddEggs:
 	bigdw 6 ; Spd
 	bigdw 6 ; SAtk
 	bigdw 6 ; SDef
-	db "ODD EGG@@@@"
+	db "RARE EGG@@@"
 
 ; male shiny
-	db TOGEPI
+	db EEVEE
 	db NO_ITEM
-	db GROWL, CHARM, PECK, PRESENT
+	db TACKLE, LEER, 0, 0
 	dw 02048 ; OT ID
 	dt 1 ; Exp
 	; Stat exp
@@ -726,12 +729,12 @@ OddEggs:
 	bigdw 5 ; Spd
 	bigdw 6 ; SAtk
 	bigdw 6 ; SDef
-	db "ODD EGG@@@@"
+	db "RARE EGG@@@"
 
 ; female shiny
-	db TOGEPI
+	db EEVEE
 	db NO_ITEM
-	db GROWL, CHARM, PECK, PRESENT
+	db TACKLE, LEER, 0, 0
 	dw 02048 ; OT ID
 	dt 1 ; Exp
 	; Stat exp
@@ -753,9 +756,65 @@ OddEggs:
 	bigdw 5 ; Spd
 	bigdw 6 ; SAtk
 	bigdw 6 ; SDef
-	db "ODD EGG@@@@"
+	db "RARE EGG@@@"
 
 	assert_table_length NUM_ODD_EGGS
+
+;; male shiny
+;	db TOGEPI
+;	db NO_ITEM
+;	db GROWL, CHARM, PECK, HEAL_BELL
+;	dw 02048 ; OT ID
+;	dt 1 ; Exp
+;	; Stat exp
+;	bigdw 0
+;	bigdw 0
+;	bigdw 0
+;	bigdw 0
+;	bigdw 0
+;	dn 10, 10, 10, 10 ; DVs
+;	db 40, 20, 35, 15 ; PP
+;	db 20 ; Step cycles to hatch
+;	db 0, 0, 0 ; Pokerus, Caught data
+;	db 1 ; Level
+;	db 0, 0 ; Status
+;	bigdw 0 ; HP
+;	bigdw 12 ; Max HP
+;	bigdw 5 ; Atk
+;	bigdw 6 ; Def
+;	bigdw 5 ; Spd
+;	bigdw 6 ; SAtk
+;	bigdw 6 ; SDef
+;	db "ODD EGG@@@@"
+
+;; female shiny
+;	db TOGEPI
+;	db NO_ITEM
+;	db GROWL, CHARM, PECK, HEAL_BELL
+;	dw 02048 ; OT ID
+;	dt 1 ; Exp
+;	; Stat exp
+;	bigdw 0
+;	bigdw 0
+;	bigdw 0
+;	bigdw 0
+;	bigdw 0
+;	dn 7, 10, 10, 10 ; DVs
+;	db 40, 20, 35, 15 ; PP
+;	db 20 ; Step cycles to hatch
+;	db 0, 0, 0 ; Pokerus, Caught data
+;	db 1 ; Level
+;	db 0, 0 ; Status
+;	bigdw 0 ; HP
+;	bigdw 12 ; Max HP
+;	bigdw 5 ; Atk
+;	bigdw 6 ; Def
+;	bigdw 5 ; Spd
+;	bigdw 6 ; SAtk
+;	bigdw 6 ; SDef
+;	db "ODD EGG@@@@"
+
+; OG
 
 ;	db PICHU
 ;	db NO_ITEM
