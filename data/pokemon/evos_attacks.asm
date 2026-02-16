@@ -237,7 +237,7 @@ BeedrillEvosAttacks: ;GEN4
 	db 31, AGILITY
 	db 34, FEINT_ATTACK ;ASSURANCE
 ;	db 37, POISON_JAB
-	db 40, REVERSAL ;ENDEAVOR
+	db 40, FLAIL ;ENDEAVOR
 	db 0 ; no more level-up moves
 
 PidgeyEvosAttacks: ;GEN4
@@ -308,7 +308,7 @@ RattataEvosAttacks: ;GEN4
 ;	db 25, ;ASSURANCE
 	db 28, SUPER_FANG
 	db 31, DOUBLE_EDGE
-	db 34, REVERSAL ;ENDEAVOR
+	db 34, FLAIL ;ENDEAVOR
 	db 0 ; no more level-up moves
 
 RaticateEvosAttacks: ;GEN4
@@ -327,7 +327,7 @@ RaticateEvosAttacks: ;GEN4
 ;	db 29, ;ASSURANCE
 	db 34, SUPER_FANG
 	db 39, DOUBLE_EDGE
-	db 44, REVERSAL ;ENDEAVOR
+	db 44, FLAIL ;ENDEAVOR
 	db 0 ; no more level-up moves
 
 SpearowEvosAttacks: ;GEN4
@@ -631,7 +631,7 @@ JigglypuffEvosAttacks: ;GEN4
 	db 33, GYRO_BALL
 ;	db 37, WAKE_UP_SLAP
 ;	db 41, ;MIMIC, removed
-;	db 45, LOUD_VOICE ;HYPER_VOICE
+	db 45, LOUD_VOICE ;HYPER_VOICE
 	db 49, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
@@ -946,7 +946,7 @@ GrowlitheEvosAttacks: ;GEN4
 ;	db 14, ;ODOR_SLEUTH
 ;	db 17, ;HELPING_HAND
 	db 20, FLAME_WHEEL
-	db 25, REVERSAL
+	db 25, FLAIL ;REVERSAL, removed
 ;	db 28, FIRE_FANG
 	db 31, TAKE_DOWN
 	db 34, FLAMETHROWER
@@ -1330,7 +1330,7 @@ MagnemiteEvosAttacks: ;GEN4
 	db 1, TACKLE
 	db 6, THUNDERSHOCK
 	db 11, SUPERSONIC
-	db 14, SONICBOOM
+	db 14, LOUD_VOICE ;SONICBOOM, removed
 	db 17, THUNDER_WAVE
 	db 22, SPARK
 	db 27, LOCK_ON
@@ -1353,7 +1353,7 @@ MagnetonEvosAttacks: ;GEN4
 	db 1, TACKLE
 	db 6, THUNDERSHOCK
 	db 11, SUPERSONIC
-	db 14, SONICBOOM
+	db 14, LOUD_VOICE ;SONICBOOM, removed
 	db 17, THUNDER_WAVE
 	db 22, SPARK
 	db 27, LOCK_ON
@@ -1373,7 +1373,7 @@ MagnetonEvosAttacks: ;GEN4
 ;	db 1, TACKLE
 ;	db 6, THUNDERSHOCK
 ;	db 11, SUPERSONIC
-;	db 14, SONICBOOM
+;	db 14, LOUD_VOICE ;SONICBOOM, removed
 ;	db 17, THUNDER_WAVE
 ;	db 22, SPARK
 ;	db 27, LOCK_ON
@@ -1414,12 +1414,12 @@ DoduoEvosAttacks: ;GEN4
 	db 10, RAGE
 	db 14, FURY_STRIKES ;FURY_ATTACK, removed
 	db 19, PURSUIT
-;	db 23, LOUD_VOICE ;UPROAR
+	db 23, LOUD_VOICE ;UPROAR
 ;	db 28, ;ACCUPRESSURE
 	db 32, DOUBLESLAP ;DOUBLE_HIT
 	db 37, AGILITY
 	db 41, DRILL_PECK
-	db 46, REVERSAL ;ENDEAVOR
+	db 46, FLAIL ;ENDEAVOR
 	db 0 ; no more level-up moves
 
 DodrioEvosAttacks: ;GEN4
@@ -1430,12 +1430,12 @@ DodrioEvosAttacks: ;GEN4
 	db 10, RAGE
 	db 14, FURY_STRIKES ;FURY_ATTACK, removed
 	db 19, PURSUIT
-;	db 23, LOUD_VOICE ;UPROAR
+	db 23, LOUD_VOICE ;UPROAR
 ;	db 28, ;ACCUPRESSURE
 	db 34, TRI_ATTACK
 	db 41, AGILITY
 	db 47, DRILL_PECK
-	db 54, REVERSAL ;ENDEAVOR
+	db 54, FLAIL ;ENDEAVOR
 	db 0 ; no more level-up moves
 
 SeelEvosAttacks: ;GEN4
@@ -1682,7 +1682,7 @@ KrabbyEvosAttacks: ;GEN4
 	db 35, BODY_SLAM ;SLAM, removed
 ;	db 39, ;BRINE
 	db 41, CRABHAMMER
-	db 45, REVERSAL ;FLAIL
+	db 45, FLAIL
 	db 0 ; no more level-up moves
 
 KinglerEvosAttacks: ;GEN4
@@ -1700,7 +1700,7 @@ KinglerEvosAttacks: ;GEN4
 	db 44, BODY_SLAM ;SLAM, removed
 ;	db 51, ;BRINE
 	db 56, CRABHAMMER
-	db 63, REVERSAL ;FLAIL
+	db 63, FLAIL
 	db 0 ; no more level-up moves
 
 VoltorbEvosAttacks: ;GEN4
@@ -1708,7 +1708,7 @@ VoltorbEvosAttacks: ;GEN4
 	db 0 ; no more evolutions
 ;	db 1, ;CHARGE
 	db 1, TACKLE
-	db 8, SONICBOOM
+	db 8, LOUD_VOICE ;SONICBOOM, removed
 	db 12, SPARK
 	db 15, ROLLOUT
 	db 19, SCREECH
@@ -1726,7 +1726,7 @@ ElectrodeEvosAttacks: ;GEN4
 	db 0 ; no more evolutions
 ;	db 1, ;CHARGE
 	db 1, TACKLE
-	db 8, SONICBOOM
+	db 8, LOUD_VOICE ;SONICBOOM, removed
 	db 12, SPARK
 	db 15, ROLLOUT
 	db 19, SCREECH
@@ -1744,7 +1744,7 @@ ExeggcuteEvosAttacks: ;GEN4
 	db EVOLVE_ITEM, LEAF_STONE, EXEGGUTOR
 	db 0 ; no more evolutions
 ;	db 1, BULLET_SEED ;BARRAGE, removed
-;	db 1, LOUD_VOICE ;UPROAR
+	db 1, LOUD_VOICE ;UPROAR
 	db 1, HYPNOSIS
 	db 7, REFLECT
 	db 11, LEECH_SEED
@@ -1786,7 +1786,7 @@ CuboneEvosAttacks: ;GEN4
 	db 31, THRASH
 ;	db 33, ;FLING
 	db 37, FURY_STRIKES ;BONE_RUSH, removed
-	db 41, REVERSAL ;ENDEAVOR
+	db 41, FLAIL ;ENDEAVOR
 	db 43, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
@@ -1804,7 +1804,7 @@ MarowakEvosAttacks: ;GEN4
 	db 33, THRASH
 ;	db 37, ;FLING
 	db 43, FURY_STRIKES ;BONE_RUSH, removed
-	db 49, REVERSAL ;ENDEAVOR
+	db 49, FLAIL ;ENDEAVOR
 	db 53, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
@@ -1823,9 +1823,9 @@ HitmonleeEvosAttacks: ;GEN4
 	db 37, FORESIGHT
 ;	db 41, BLAZE_KICK
 	db 45, ENDURE
-;	db 49, MEGA_KICK, removed
-;	db 53, ;CLOSE_COMBAT
-	db 57, REVERSAL
+;	db 49, ;MEGA_KICK, removed
+;	db 53, CLOSE_COMBAT
+	db 57, FLAIL ;REVERSAL, removed
 	db 0 ; no more level-up moves
 
 HitmonchanEvosAttacks: ;GEN4
@@ -2033,7 +2033,7 @@ KangaskhanEvosAttacks: ;GEN4
 	db 37, OUTRAGE
 	db 43, DOUBLESLAP ;DOUBLE_HIT
 ;	db 46, ;SUCKER_PUNCH
-	db 49, REVERSAL
+	db 49, FLAIL ;REVERSAL, removed
 	db 0 ; no more level-up moves
 
 HorseaEvosAttacks: ;GEN4
@@ -2233,7 +2233,7 @@ PinsirEvosAttacks: ;GEN4
 	db 4, WRAP ;BIND, removed
 	db 8, SEISMIC_TOSS
 	db 13, HARDEN
-	db 18, REVERSAL ;REVENGE
+	db 18, FLAIL ;REVENGE
 	db 21, ROCK_SMASH ;BRICK_BREAK
 ;	db 25, BRICK_BREAK ;VITAL_THROW, removed
 ;	db 30, X_SCISSOR
@@ -2782,13 +2782,13 @@ TotodileEvosAttacks: ;GEN4
 	db 8, RAGE
 	db 13, BITE
 	db 15, SCARY_FACE
-;	db 20, ICE_FANG
-	db 22, REVERSAL ;FLAIL
+	db 20, ICE_FANG
+	db 22, FLAIL
 	db 27, CRUNCH
 	db 29, SLASH
 	db 34, SCREECH
 	db 36, THRASH
-;	db 41, ;AQUA_TAIL
+;	db 41, AQUA_TAIL
 ;	db 43, CLOSE_COMBAT ;SUPERPOWER
 	db 48, HYDRO_PUMP
 	db 0 ; no more level-up moves
@@ -2802,13 +2802,13 @@ CroconawEvosAttacks: ;GEN4
 	db 8, RAGE
 	db 13, BITE
 	db 15, SCARY_FACE
-;	db 21, ICE_FANG
-	db 24, REVERSAL ;FLAIL
+	db 21, ICE_FANG
+	db 24, FLAIL
 	db 30, CRUNCH
 	db 33, SLASH
 	db 39, SCREECH
 	db 42, THRASH
-;	db 48, ;AQUA_TAIL
+;	db 48, AQUA_TAIL
 ;	db 51, CLOSE_COMBAT ;SUPERPOWER
 	db 57, HYDRO_PUMP
 	db 0 ; no more level-up moves
@@ -2821,14 +2821,14 @@ FeraligatrEvosAttacks: ;GEN4
 	db 8, RAGE
 	db 13, BITE
 	db 15, SCARY_FACE
-;	db 21, ICE_FANG
-	db 24, REVERSAL ;FLAIL
+	db 21, ICE_FANG
+	db 24, FLAIL
 	db 30, AGILITY
 	db 32, CRUNCH
 	db 37, SLASH
 	db 45, SCREECH
 	db 50, THRASH
-;	db 58, ;AQUA_TAIL
+;	db 58, AQUA_TAIL
 ;	db 63, CLOSE_COMBAT ;SUPERPOWER
 	db 71, HYDRO_PUMP
 	db 0 ; no more level-up moves
@@ -2878,7 +2878,7 @@ HoothootEvosAttacks: ;GEN4
 	db 1, FORESIGHT
 	db 5, HYPNOSIS
 	db 9, PECK
-;	db 13, LOUD_VOICE ;UPROAR
+	db 13, LOUD_VOICE ;UPROAR
 	db 17, REFLECT
 	db 21, CONFUSION
 	db 25, TAKE_DOWN
@@ -2898,7 +2898,7 @@ NoctowlEvosAttacks: ;GEN4
 	db 1, FORESIGHT
 	db 5, HYPNOSIS
 	db 9, PECK
-;	db 13, LOUD_VOICE ;UPROAR
+	db 13, LOUD_VOICE ;UPROAR
 	db 17, REFLECT
 	db 22, CONFUSION
 	db 27, TAKE_DOWN
@@ -3152,10 +3152,10 @@ MareepEvosAttacks: ;GEN4
 	db 5, GROWL
 	db 10, THUNDERSHOCK
 	db 14, THUNDER_WAVE
-	db 19, COTTON_SPORE
+;	db 19, ;COTTON_SPORE, removed
 ;	db 23, ;CHARGE
-;	db 28, ;DISCHARGE
-;	db 32, ;SIGNAL_BEAM
+;	db 28, DISCHARGE
+;	db 32, SIGNAL_BEAM
 	db 37, LIGHT_SCREEN
 ;	db 41, POWER_GEM
 	db 46, THUNDER
@@ -3168,10 +3168,10 @@ FlaaffyEvosAttacks: ;GEN4
 	db 5, GROWL
 	db 10, THUNDERSHOCK
 	db 14, THUNDER_WAVE
-	db 20, COTTON_SPORE
+;	db 20, ;COTTON_SPORE, removed
 ;	db 25, ;CHARGE
-;	db 31, ;DISCHARGE
-;	db 36, ;SIGNAL_BEAM
+;	db 31, DISCHARGE
+;	db 36, SIGNAL_BEAM
 	db 42, LIGHT_SCREEN
 ;	db 47, POWER_GEM
 	db 53, THUNDER
@@ -3184,11 +3184,11 @@ AmpharosEvosAttacks: ;GEN4
 	db 5, GROWL
 	db 10, THUNDERSHOCK
 	db 14, THUNDER_WAVE
-	db 20, COTTON_SPORE
+;	db 20, ;COTTON_SPORE, removed
 ;	db 25, ;CHARGE
 	db 30, THUNDERPUNCH
-;	db 34, ;DISCHARGE
-;	db 42, ;SIGNAL_BEAM
+;	db 34, DISCHARGE
+;	db 42, SIGNAL_BEAM
 	db 51, LIGHT_SCREEN
 ;	db 59, POWER_GEM
 	db 68, THUNDER
@@ -3242,7 +3242,7 @@ SudowoodoEvosAttacks: ;GEN4
 ;	db 1, ;COPYCAT
 	db 1, ROCK_THROW
 ;	db 1, ;MIMIC, removed
-	db 6, REVERSAL ;FLAIL
+	db 6, FLAIL
 	db 9, LOW_SWEEP ;LOW_KICK
 	db 14, ROCK_THROW
 ;	db 17, ;MIMIC, removed
@@ -3277,14 +3277,14 @@ HoppipEvosAttacks: ;GEN4
 	db 12, POISONPOWDER
 	db 14, STUN_SPORE
 	db 16, SLEEP_POWDER
-;	db 19, ;BULLET_SEED
+;	db 19, BULLET_SEED
 	db 22, LEECH_SEED
 	db 25, MEGA_DRAIN
-	db 28, COTTON_SPORE
-;	db 31, U_TURN
+;	db 28, ;COTTON_SPORE, removed
+;	db 31, ;U_TURN
 ;	db 34, ;WORRY_SEED
 	db 37, GIGA_DRAIN
-;	db 40, ;BOUNCE
+;	db 40, BOUNCE
 ;	db 43, ;MEMENTO
 	db 0 ; no more level-up moves
 
@@ -3302,11 +3302,11 @@ JumpluffEvosAttacks: ;GEN4
 ;	db 20, ;BULLET_SEED
 	db 24, LEECH_SEED
 	db 28, MEGA_DRAIN
-	db 32, COTTON_SPORE
-;	db 36, U_TURN
+;	db 32, ;COTTON_SPORE, removed
+;	db 36, ;U_TURN
 ;	db 40, ;WORRY_SEED
 	db 34, GIGA_DRAIN
-;	db 48, ;BOUNCE
+;	db 48, BOUNCE
 ;	db 52, ;MEMENTO
 	db 0 ; no more level-up moves
 
@@ -3323,11 +3323,11 @@ JumpluffEvosAttacks: ;GEN4
 ;;	db 20, ;BULLET_SEED
 ;	db 24, LEECH_SEED
 ;	db 28, MEGA_DRAIN
-;	db 32, COTTON_SPORE
-;;	db 36, U_TURN
+;;	db 32, ;COTTON_SPORE, removed
+;;	db 36, ;U_TURN
 ;;	db 40, ;WORRY_SEED
 ;	db 34, GIGA_DRAIN
-;;	db 48, ;BOUNCE
+;;	db 48, BOUNCE
 ;;	db 52, ;MEMENTO
 ;	db 0 ; no more level-up moves
 
@@ -3412,10 +3412,10 @@ YanmaEvosAttacks: ;GEN4
 	db 1, FORESIGHT
 	db 6, QUICK_ATTACK
 	db 11, DOUBLE_TEAM
-	db 14, SONICBOOM
+	db 14, LOUD_VOICE ;SONICBOOM, removed
 	db 17, PROTECT ;DETECT, removed
 	db 22, SUPERSONIC
-;	db 27, LOUD_VOICE ;UPROAR
+	db 27, LOUD_VOICE ;UPROAR
 	db 30, PURSUIT
 	db 33, ANCIENTPOWER
 	db 38, HYPNOSIS
@@ -3434,10 +3434,10 @@ YanmaEvosAttacks: ;GEN4
 ;	db 1, FORESIGHT
 ;	db 6, QUICK_ATTACK
 ;	db 11, DOUBLE_TEAM
-;	db 14, SONICBOOM
+;	db 14, LOUD_VOICE ;SONICBOOM, removed
 ;	db 17, PROTECT ;DETECT, removed
 ;	db 22, SUPERSONIC
-;;	db 27, LOUD_VOICE ;UPROAR
+;	db 27, LOUD_VOICE ;UPROAR
 ;	db 30, PURSUIT
 ;	db 33, ANCIENTPOWER
 ;	db 38, SLASH
@@ -3850,8 +3850,8 @@ HeracrossEvosAttacks: ;GEN4
 	db 19, ROCK_SMASH ;BRICK_BREAK
 	db 25, COUNTER
 	db 31, TAKE_DOWN
-;	db 37, ;CLOSE_COMBAT
-	db 43, REVERSAL
+;	db 37, CLOSE_COMBAT
+	db 43, FLAIL ;REVERSAL, removed
 ;	db 49, ;FEINT
 	db 55, MEGAHORN
 	db 0 ; no more level-up moves
@@ -4198,7 +4198,7 @@ PhanpyEvosAttacks: ;GEN4
 	db 1, TACKLE
 	db 1, GROWL
 	db 1, DEFENSE_CURL
-	db 6, REVERSAL ;FLAIL
+	db 6, FLAIL
 	db 10, TAKE_DOWN
 	db 15, ROLLOUT
 	db 19, MAGNITUDE ;NATURAL_GIFT
@@ -4216,7 +4216,7 @@ DonphanEvosAttacks: ;GEN4
 	db 1, HORN_ATTACK
 	db 1, GROWL
 	db 1, DEFENSE_CURL
-	db 1, REVERSAL ;FLAIL
+	db 1, FLAIL
 	db 6, RAPID_SPIN
 ;	db 10, ;KNOCK_OFF
 	db 15, ROLLOUT
@@ -4307,7 +4307,7 @@ HitmontopEvosAttacks: ;GEN4
 ;	db 42, ;GYRO_BALL
 	db 46, PROTECT ;DETECT, removed
 ;	db 51, CLOSE_COMBAT
-	db 55, REVERSAL
+	db 55, FLAIL ;REVERSAL, removed
 	db 0 ; no more level-up moves
 
 SmoochumEvosAttacks: ;GEN4
@@ -4369,7 +4369,7 @@ MiltankEvosAttacks: ;GEN4
 	db 3, GROWL
 	db 5, DEFENSE_CURL
 	db 8, STOMP
-	db 11, RECOVERE ;MILK_DRINK, removed
+	db 11, RECOVER ;MILK_DRINK, removed
 	db 15, BIDE
 	db 19, ROLLOUT
 	db 24, BODY_SLAM
