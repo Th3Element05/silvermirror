@@ -1309,49 +1309,49 @@ DebugAllHMs:
 	writetext DebugAskCutText
 	yesorno
 	iffalse .fly
-	giveitem HM_CUT
+;	giveitem TM_CUT
 	setflag ENGINE_PAGER_CUT
 	setevent EVENT_GOT_HM01_CUT
 .fly
 	writetext DebugAskFlyText
 	yesorno
 	iffalse .surf
-	giveitem HM_FLY
+;	giveitem TM_FLY
 	setflag ENGINE_PAGER_FLY
 	setevent EVENT_GOT_HM02_FLY
 .surf
 	writetext DebugAskSurfText
 	yesorno
 	iffalse .strength
-	giveitem HM_SURF
+	giveitem TM_SURF
 	setflag ENGINE_PAGER_SURF
 	setevent EVENT_GOT_HM03_SURF
 .strength
 	writetext DebugAskStrengthText
 	yesorno
 	iffalse .flash
-	giveitem HM_STRENGTH
+;	giveitem TM_STRENGTH
 	setflag ENGINE_PAGER_STRENGTH
 	setevent EVENT_GOT_HM04_STRENGTH
 .flash
 	writetext DebugAskFlashText
 	yesorno
 	iffalse .whirlpool
-	giveitem HM_FLASH
+	giveitem TM_FLASH
 	setflag ENGINE_PAGER_FLASH
 	setevent EVENT_GOT_HM05_FLASH
 .whirlpool
 	writetext DebugAskWhirlpoolText
 	yesorno
 	iffalse .waterfall
-	giveitem HM_WHIRLPOOL
+	giveitem TM_WHIRLPOOL
 	setflag ENGINE_PAGER_WHIRLPOOL
 	setevent EVENT_GOT_HM06_WHIRLPOOL
 .waterfall
 	writetext DebugAskWaterfallText
 	yesorno
 	iffalse .rocksmash
-	giveitem HM_WATERFALL
+	giveitem TM_WATERFALL
 	setevent EVENT_GOT_HM07_WATERFALL
 	setflag ENGINE_CAN_USE_WATERFALL
 .rocksmash

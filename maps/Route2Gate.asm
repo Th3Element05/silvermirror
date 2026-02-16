@@ -26,7 +26,7 @@ Route2GateOaksAideScript:
 	promptbutton
 	writetext Route2GateOaksAideExplainPagerGiveFlashText
 	promptbutton
-	verbosegiveitem HM_FLASH
+	verbosegiveitem TM_FLASH
 	setevent EVENT_GOT_HM05_FLASH
 ;	clearevent EVENT_OAK_CALLED_ABOUT_FLASH
 .GotFlash

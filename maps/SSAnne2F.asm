@@ -163,7 +163,7 @@ SSAnne2FRubCaptainsBack:
 	promptbutton
 	writetext SSAnne2FCaptainExplainPagerGiveCutText
 	promptbutton
-	verbosegiveitem HM_CUT
+;	verbosegiveitem TM_CUT
 	setevent EVENT_GOT_HM01_CUT
 	writetext SSAnne2FCaptianExplainCutText
 	waitbutton
