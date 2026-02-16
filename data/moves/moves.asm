@@ -28,7 +28,7 @@ Moves:
 	move GUILLOTINE,   EFFECT_OHKO,                0, NORMAL,        30,  5,   0
 	move RAZOR_WIND,   EFFECT_RAZOR_WIND,         80, FLYING,        75, 10,   0 ;removed
 	move SWORDS_DANCE, EFFECT_ATTACK_UP_2,         0, NORMAL,       100, 30,   0
-	move CUT,          EFFECT_NORMAL_HIT,         50, NORMAL,       100, 30,   0 ; OLD ACCURACY: 95
+	move CUT,          EFFECT_NORMAL_HIT,         50, NORMAL,       100, 30,   0 ;removed
 	move GUST,         EFFECT_GUST,               40, FLYING,       100, 35,   0
 	move WING_ATTACK,  EFFECT_NORMAL_HIT,         60, FLYING,       100, 35,   0
 	move ROOST,        EFFECT_HEAL,                0, FLYING,       100, 10,   0 ;WHIRLWIND, removed
@@ -62,7 +62,7 @@ Moves:
 	move ROAR,         EFFECT_FORCE_SWITCH,        0, NORMAL,       100, 20,   0
 	move SING,         EFFECT_SLEEP,               0, NORMAL,        55, 15,   0
 	move SUPERSONIC,   EFFECT_CONFUSE,             0, NORMAL,        55, 20,   0
-	move SONICBOOM,    EFFECT_STATIC_DAMAGE,      20, NORMAL,        90, 20,   0
+	move LOUD_VOICE,   EFFECT_WAKE_UP_SLAP,       50, NORMAL,       100, 10,   0 ;SONICBOOM, removed
 	move DISABLE,      EFFECT_DISABLE,             0, NORMAL,        55, 20,   0
 	move ACID,         EFFECT_DEFENSE_DOWN_HIT,   40, POISON,       100, 30,  10
 	move EMBER,        EFFECT_BURN_HIT,           40, FIRE,         100, 25,  10
@@ -191,8 +191,8 @@ Moves:
 	move FLAIL,        EFFECT_REVERSAL,            1, NORMAL,       100, 15,   0
 	move CONVERSION2,  EFFECT_CONVERSION2,         0, NORMAL,       100, 30,   0 ;removed
 	move AEROBLAST,    EFFECT_NORMAL_HIT,        100, FLYING,        95,  5,   0
-	move COTTON_SPORE, EFFECT_SPEED_DOWN_2,        0, GRASS,         85, 40,   0
-	move REVERSAL,     EFFECT_REVERSAL,            1, FIGHTING,     100, 15,   0
+	move COTTON_SPORE, EFFECT_SPEED_DOWN_2,        0, GRASS,         85, 40,   0 ;removed
+	move REVERSAL,     EFFECT_REVERSAL,            1, FIGHTING,     100, 15,   0 ;removed
 	move SPITE,        EFFECT_SPITE,               0, GHOST,        100, 10,   0 ;removed
 	move POWDER_SNOW,  EFFECT_FREEZE_HIT,         40, ICE,          100, 25,  10
 	move PROTECT,      EFFECT_PROTECT,             0, NORMAL,       100, 10,   0
@@ -257,7 +257,7 @@ Moves:
 	move SUNNY_DAY,    EFFECT_SUNNY_DAY,           0, FIRE,         100,  5,   0 ; OLD ACCURACY: 90
 	move CRUNCH,       EFFECT_DEFENSE_DOWN_HIT,   80, DARK,         100, 15,  20 ; OLD EFFECT: SP_DEF_DOWN_HIT
 	move MIRROR_COAT,  EFFECT_MIRROR_COAT,         1, PSYCHIC_TYPE, 100, 20,   0
-	move CALM_MIND,    EFFECT_CALM_MIND,           0, PSYCHIC,      100, 20,   0 ;PSYCH_UP ;removed
+	move CALM_MIND,    EFFECT_CALM_MIND,           0, PSYCHIC_TYPE, 100, 20,   0 ;PSYCH_UP ;removed
 	move EXTREMESPEED, EFFECT_PRIORITY_HIT,       80, NORMAL,       100,  5,   0
 	move ANCIENTPOWER, EFFECT_ALL_UP_HIT,         60, ROCK,         100,  5,  10
 	move SHADOW_BALL,  EFFECT_SP_DEF_DOWN_HIT,    80, GHOST,        100, 15,  20
@@ -319,7 +319,7 @@ Moves:
 ;;	move FURY_STRIKES, EFFECT_MULTI_HIT,          20, NORMAL,        85, 20,   0
 ;	move DOUBLE_HIT,   EFFECT_DOUBLE_HIT,         35, NORMAL,        90, 10,   0
 ;	move GIGA_IMPACT,  EFFECT_HYPER_BEAM,        150, NORMAL,        90,  5,   0
-;	move LOUD_VOICE,   EFFECT_WAKE_HIT,           50, NORMAL,       100, 10,   0 ;new effect
+;;	move LOUD_VOICE,   EFFECT_WAKE_HIT,           50, NORMAL,       100, 10,   0 ;new effect
 ;;	move CRUSH_CLAW,   EFFECT_DEFENSE_DOWN_HIT,   75, NORMAL,        95, 10,  50
 ;
 ;	move POISON_JAB,   EFFECT_POISON_HIT,         80, POISON,       100, 20,  30

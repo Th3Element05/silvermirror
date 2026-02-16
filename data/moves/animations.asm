@@ -50,7 +50,7 @@ BattleAnimations::
 	dw BattleAnim_Roar
 	dw BattleAnim_Sing
 	dw BattleAnim_Supersonic
-	dw BattleAnim_Sonicboom
+	dw BattleAnim_LoudVoice ;BattleAnim_Sonicboom
 	dw BattleAnim_Disable
 	dw BattleAnim_Acid
 	dw BattleAnim_Ember
@@ -1887,6 +1887,7 @@ BattleAnim_Growl:
 	anim_wait 8
 	anim_ret
 
+BattleAnim_LoudVoice:
 BattleAnim_Roar:
 	anim_1gfx BATTLE_ANIM_GFX_NOISE
 	anim_bgeffect BATTLE_BG_EFFECT_CYCLE_OBPALS_GRAY_AND_YELLOW, $0, $2, $0
@@ -2200,7 +2201,7 @@ BattleAnim_Submission:
 
 BattleAnim_Roost:
 	anim_setobjpal PAL_BATTLE_OB_RED, PAL_BTLCUSTOM_HP_FLYING
-	anim_2gfx BATTLE_ANIM_GFX_FLOWER
+	anim_1gfx BATTLE_ANIM_GFX_FLOWER
 	anim_sound 0, 1, SFX_GAME_FREAK_LOGO_GS
 	anim_bgeffect BATTLE_BG_EFFECT_CYCLE_MON_LIGHT_DARK_REPEATING, $0, BG_EFFECT_USER, $20
 .loop

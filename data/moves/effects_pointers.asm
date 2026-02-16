@@ -38,13 +38,13 @@ MoveEffectsPointers:
 	dw PayDay
 	dw LightScreen
 	dw TriAttack
-	dw FangHit
+	dw FangHit ;UNUSED_25
 	dw OHKOHit
 	dw RazorWind
 	dw SuperFang
 	dw StaticDamage
 	dw TrapTarget
-	dw GyroBall
+	dw GyroBall ;UNUSED_2B
 	dw MultiHit
 	dw NormalHit
 	dw Mist
@@ -79,7 +79,7 @@ MoveEffectsPointers:
 	dw SkyAttack
 	dw ConfuseHit
 	dw PoisonMultiHit
-	dw NormalHit
+	dw WakeUpSlap ;UNUSED_4E
 	dw Substitute
 	dw HyperBeam
 	dw Rage
@@ -131,8 +131,8 @@ MoveEffectsPointers:
 	dw BatonPass
 	dw Pursuit
 	dw RapidSpin
-	dw CalmMind ;NormalHit
-	dw BulkUp ;NormalHit
+	dw CalmMind ;EFFECT_UNUSED_82
+	dw BulkUp ;EFFECT_UNUSED_83
 	dw MorningSun
 	dw Synthesis
 	dw Moonlight

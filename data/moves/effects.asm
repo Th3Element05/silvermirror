@@ -2148,6 +2148,28 @@ GyroBall:
 	buildopponentrage
 	endmove
 
+WakeUpSlap:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	doublesleepingdamage
+	checkhit
+	effectchance
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	wakeupslap
+	checkfaint
+	buildopponentrage
+	endmove
+
 CalmMind:
 	checkobedience
 	usedmovetext

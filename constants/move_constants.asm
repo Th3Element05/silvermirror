@@ -20,7 +20,7 @@
 	const GUILLOTINE   ; 0c
 	const RAZOR_WIND   ; 0d ;removed
 	const SWORDS_DANCE ; 0e
-	const CUT          ; 0f
+	const CUT          ; 0f ;removed
 	const GUST         ; 10
 	const WING_ATTACK  ; 11
 	const ROOST        ; 12 ;WHIRLWIND, removed
@@ -54,7 +54,7 @@
 	const ROAR         ; 2e
 	const SING         ; 2f
 	const SUPERSONIC   ; 30
-	const SONICBOOM    ; 31
+	const LOUD_VOICE   ; 31 ;SONICBOOM, removed
 	const DISABLE      ; 32
 	const ACID         ; 33
 	const EMBER        ; 34
@@ -183,8 +183,8 @@
 	const FLAIL        ; af
 	const CONVERSION2  ; b0 ;removed
 	const AEROBLAST    ; b1
-	const COTTON_SPORE ; b2 ;
-	const REVERSAL     ; b3 ;
+	const COTTON_SPORE ; b2 ;removed
+	const REVERSAL     ; b3 ;removed
 	const SPITE        ; b4 ;removed
 	const POWDER_SNOW  ; b5
 	const PROTECT      ; b6
