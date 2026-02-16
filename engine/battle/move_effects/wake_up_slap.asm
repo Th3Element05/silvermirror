@@ -1,11 +1,11 @@
 BattleCommand_WakeUpSlap:
 	ld a, BATTLE_VARS_STATUS_OPP
-	call GetBattleVar
+	call GetBattleVarAddr
 	and SLP_MASK
 	ret z
 
-;	xor a
-;	ld [hl], a
+	xor a
+	ld [hl], a
 
 	ldh a, [hBattleTurn]
 	and a
