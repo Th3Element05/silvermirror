@@ -52,7 +52,7 @@ SafariZoneWardenScript:
 	promptbutton
 	writetext SafariZoneWardenGiveStrengthText
 	promptbutton
-	verbosegiveitem HM_STRENGTH
+;	verbosegiveitem TM_STRENGTH
 	setevent EVENT_GOT_HM04_STRENGTH
 	writetext SafariZoneWardenExplainStrengthText
 	waitbutton

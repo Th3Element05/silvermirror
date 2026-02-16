@@ -66,7 +66,7 @@ CianwoodGymChuckScript:
 	setflag ENGINE_PAGER_WHIRLPOOL
 	writetext GotWhirlpoolPagerText
 	promptbutton
-	giveitem HM_WHIRLPOOL
+	giveitem TM_WHIRLPOOL
 	setevent EVENT_GOT_HM06_WHIRLPOOL
 	writetext ChuckExplainPagerText
 	waitbutton

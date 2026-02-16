@@ -11,7 +11,7 @@ SafariSecretHouseOfficer:
 	iftrue .AlreadyGotSurf
 	opentext
 	writetext SafariSecretHouseGiveSurfText
-	verbosegiveitem HM_SURF
+	verbosegiveitem TM_SURF
 	writetext SafariSecretHouseExplainSurfText
 	promptbutton
 	writetext SafariSecretHouseGivePagerText

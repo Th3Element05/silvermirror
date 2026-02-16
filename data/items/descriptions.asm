@@ -249,14 +249,21 @@ ItemDescriptions:
 	dw TeruSama1Desc
 	dw TeruSama1Desc
 	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
+	dw TeruSama1Desc
 	assert_table_length NUM_ITEMS + NUM_TMS
-	dw TeruSama2Desc
-	dw TeruSama2Desc
-	dw TeruSama2Desc
-	dw TeruSama2Desc
-	dw TeruSama2Desc
-	dw TeruSama2Desc
-	dw TeruSama2Desc
+;	dw TeruSama2Desc
+;	dw TeruSama2Desc
+;	dw TeruSama2Desc
+;	dw TeruSama2Desc
+;	dw TeruSama2Desc
+;	dw TeruSama2Desc
+;	dw TeruSama2Desc
 	assert_table_length NUM_ITEMS + NUM_TMS + NUM_HMS
 ;	dw TeruSama0Desc ; ITEM_FF
 ;	assert_table_length $ff ;include ITEM_FF

@@ -244,7 +244,7 @@ RadioTower4FOakScript:
 	opentext
 	writetext RadioTower4FBlue_GiveWaterfallText
 	promptbutton
-	verbosegiveitem HM_WATERFALL
+	verbosegiveitem TM_WATERFALL
 	setflag ENGINE_CAN_USE_WATERFALL
 	setevent EVENT_GOT_HM07_WATERFALL
 	setevent EVENT_OAK_REMIND_ABOUT_WATERFALL

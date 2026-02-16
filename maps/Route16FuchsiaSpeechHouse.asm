@@ -19,7 +19,7 @@ Route16FlyHouseLassScript:
 	promptbutton
 	writetext Route16FlyHouseExplainPagerGiveFlyText
 	promptbutton
-	verbosegiveitem HM_FLY
+;	verbosegiveitem TM_FLY
 	setevent EVENT_GOT_HM02_FLY
 	writetext Route16FlyHouseExplainFlyText
 	waitbutton

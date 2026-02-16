@@ -197,10 +197,10 @@ ENDM
 ; see data/moves/tmhm_moves.asm for moves
 DEF TM01 EQU const_value
 	add_tm DYNAMICPUNCH ; aa
-	add_tm TRANSFORM    ; ab ;RAZOR_WIND ;removed
+	add_tm VINE_WHIP   ; ab ;RAZOR_WIND ;removed
 	add_tm SWORDS_DANCE ; ac
 	add_tm ROLLOUT      ; ad
-	add_tm TRANSFORM    ; ae ;MEGA_KICK ;removed
+	add_tm KARATE_CHOP    ; ae ;MEGA_KICK ;removed
 	add_tm TOXIC        ; af
 	add_tm HORN_DRILL   ; b0
 	add_tm BODY_SLAM    ; b1
@@ -226,23 +226,23 @@ DEF TM01 EQU const_value
 	add_tm DIG          ; c5
 	add_tm PSYCHIC_M    ; c6
 	add_tm TELEPORT     ; c7
-	add_tm TRANSFORM    ; c8 ;MIMIC ;removed
+	add_tm DOUBLESLAP     ; c8 ;MIMIC ;removed
 	add_tm DOUBLE_TEAM  ; c9
 	add_tm REFLECT      ; ca
 	add_tm BIDE         ; cb
 	add_tm METRONOME    ; cc
 	add_tm SELFDESTRUCT ; cd
-	add_tm TRANSFORM    ; ce ;EGG_BOMB ;removed
+	add_tm FIRE_FANG     ; ce ;EGG_BOMB ;removed
 	add_tm FIRE_BLAST   ; cf
 	add_tm SWIFT        ; d0
-	add_tm TRANSFORM    ; d1 ;SKULL_BASH ;removed
+	add_tm ICE_FANG   ; d1 ;SKULL_BASH ;removed
 	add_tm SOFTBOILED   ; d2
 	add_tm DREAM_EATER  ; d3
 	add_tm SKY_ATTACK   ; d4
 	add_tm REST         ; d5
 	add_tm THUNDER_WAVE ; d6
-	add_tm TRANSFORM    ; d7 ;PSYWAVE ;removed
-	add_tm TRANSFORM    ; d8 ;EXPLOSION ;removed
+	add_tm THUNDER_FANG      ; d7 ;PSYWAVE ;removed
+	add_tm SCRATCH    ; d8 'EXPLOSION ;removed
 	add_tm ROCK_SLIDE   ; d9
 	add_tm TRI_ATTACK   ; da
 	add_tm SUBSTITUTE   ; db
@@ -273,7 +273,14 @@ DEF TM01 EQU const_value
 	add_tm FURY_CUTTER  ; f4
 	add_tm NIGHTMARE    ; f5
 	add_tm ANCIENTPOWER ; f6
-	add_tm TACKLE       ; f7 ;unused
+	add_tm TACKLE       ; f7
+	add_tm WRAP          ; f8 ;CUT ;removed
+	add_tm THRASH          ; f9 ;FLY ;removed
+	add_tm SURF         ; fa
+	add_tm POISON_STING     ; fb ;STRENGTH ;removed
+	add_tm FLASH        ; fc
+	add_tm WHIRLPOOL    ; fd
+	add_tm WATERFALL    ; fe
 DEF NUM_TMS EQU __tmhm_value__ - 1
 
 MACRO add_hm
@@ -288,13 +295,13 @@ MACRO add_hm
 ENDM
 
 DEF HM01 EQU const_value
-	add_hm CUT          ; f8
-	add_hm FLY          ; f9
-	add_hm SURF         ; fa
-	add_hm STRENGTH     ; fb
-	add_hm FLASH        ; fc
-	add_hm WHIRLPOOL    ; fd
-	add_hm WATERFALL    ; fe
+;	add_hm CUT          ; f8
+;	add_hm FLY          ; f9
+;	add_hm SURF         ; fa
+;	add_hm STRENGTH     ; fb
+;	add_hm FLASH        ; fc
+;	add_hm WHIRLPOOL    ; fd
+;	add_hm WATERFALL    ; fe
 DEF NUM_HMS EQU __tmhm_value__ - NUM_TMS - 1
 
 MACRO add_mt
