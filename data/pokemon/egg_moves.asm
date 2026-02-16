@@ -49,7 +49,7 @@ RattataEggMoves:
 	db FURY_STRIKES ;FURY_SWIPES ;removed
 	db BITE
 ;	db COUNTER      ;tm18
-	db REVERSAL
+	db FLAIL        ;REVERSAL ;removed
 	db -1 ; end
 
 SpearowEggMoves:
@@ -173,7 +173,7 @@ MankeyEggMoves:
 	db FORESIGHT
 	db BULK_UP    ;MEDITATE
 ;	db COUNTER    ;tm18
-	db REVERSAL
+	db FLAIL      ;REVERSAL ;removed
 ;	db BEAT_UP    ;removed
 ;	db DETECT     ;removed
 	db -1 ; end
@@ -348,7 +348,7 @@ KoffingEggMoves:
 
 RhyhornEggMoves:
 	db CRUNCH
-	db REVERSAL
+	db FLAIL      ;REVERSAL ;removed
 ;	db ROCK_SLIDE ;tm48
 	db THRASH
 	db PURSUIT
@@ -404,7 +404,7 @@ ScytherEggMoves:
 	db SAFEGUARD
 	db BATON_PASS
 ;	db AIR_SLICE    ;RAZOR_WIND ;removed
-	db REVERSAL
+	db FLAIL        ;REVERSAL ;removed
 	db LIGHT_SCREEN
 ;	db DETECT       ;removed
 	db -1 ; end
@@ -473,7 +473,7 @@ ChikoritaEggMoves:
 CyndaquilEggMoves:
 	db FURY_STRIKES ;FURY_SWIPES ;removed
 	db QUICK_ATTACK
-	db REVERSAL
+	db FLAIL        ;REVERSAL ;removed
 	db THRASH
 	db FORESIGHT
 ;	db SUBMISSION   ;tm17
@@ -495,7 +495,7 @@ SentretEggMoves:
 	db PURSUIT
 	db SLASH
 	db FOCUS_ENERGY
-	db REVERSAL
+	db FLAIL        ;REVERSAL ;removed
 ;	db DETECT       ;removed
 	db -1 ; end
 
@@ -518,7 +518,7 @@ LedybaEggMoves:
 SpinarakEggMoves:
 	db PSYBEAM
 	db DISABLE
-	db SONICBOOM
+;	db LOUD_VOICE ;SONICBOOM, removed
 	db BATON_PASS
 	db PURSUIT
 	db -1 ; end
@@ -530,7 +530,7 @@ ChinchouEggMoves:
 	db -1 ; end
 
 PichuEggMoves:
-	db REVERSAL
+	db FLAIL      ;REVERSAL ;removed
 ;	db BIDE       ;tm34
 ;	db PRESENT    ;removed
 	db ENCORE
@@ -624,7 +624,7 @@ AipomEggMoves:
 
 YanmaEggMoves:
 ;	db WHIRLWIND  ;removed
-	db REVERSAL
+	db FLAIL      ;REVERSAL ;removed
 	db LEECH_LIFE
 ;	db DETECT     ;removed
 	db -1 ; end
@@ -790,7 +790,7 @@ HoundourEggMoves:
 	db PURSUIT
 ;	db COUNTER   ;tm18
 	db DISABLE   ;SPITE ;removed
-	db REVERSAL
+	db FLAIL     ;REVERSAL ;removed
 ;	db BEAT_UP   ;removed
 ;	db DETECT    ;removed
 	db -1 ; end
@@ -845,7 +845,7 @@ MagbyEggMoves:
 
 MiltankEggMoves:
 ;	db PRESENT      ;removed
-	db REVERSAL
+	db FLAIL        ;REVERSAL ;removed
 ;	db SEISMIC_TOSS ;tm19
 	db -1 ; end
 

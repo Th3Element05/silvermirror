@@ -29,6 +29,6 @@ EncoreMoves:
 	db LOCK_ON ;MIND_READER ;removed
 	db FLAME_WHEEL
 	db AEROBLAST
-	db COTTON_SPORE
-	db ICY_WIND ;POWDER_SNOW ;removed
+;	db COTTON_SPORE ;removed
+	db POWDER_SNOW
 	db -1 ; end
