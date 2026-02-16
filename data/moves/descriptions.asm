@@ -49,7 +49,7 @@ MoveDescriptions::
 	dw RoarDescription
 	dw SingDescription
 	dw SupersonicDescription
-	dw SonicboomDescription
+	dw LoudVoiceDescription ;SonicboomDescription
 	dw DisableDescription
 	dw AcidDescription
 	dw EmberDescription
@@ -476,9 +476,14 @@ SupersonicDescription:
 	db   "Sound waves that"
 	next "cause confusion.@"
 
-SonicboomDescription:
-	db   "Always inflicts"
-	next "20HP damage.@"
+WakeUpSlapDescription:
+LoudVoiceDescription:
+	db   "Extra damage to"
+	feed "sleeping foes, but"
+	feed "wakes them up.@"
+;SonicboomDescription:
+;	db   "Always inflicts"
+;	next "20HP damage.@"
 
 DisableDescription:
 	db   "Disables the foe's"

@@ -325,7 +325,6 @@ AI_Smart_EffectHandlers:
 	dbw EFFECT_RAZOR_WIND,       AI_Smart_RazorWind
 	dbw EFFECT_SUPER_FANG,       AI_Smart_SuperFang
 	dbw EFFECT_TRAP_TARGET,      AI_Smart_TrapTarget
-	dbw EFFECT_GYRO_BALL,        AI_Smart_GyroBall
 	dbw EFFECT_CONFUSE,          AI_Smart_Confuse
 	dbw EFFECT_SP_DEF_UP_2,      AI_Smart_SpDefenseUp2
 	dbw EFFECT_REFLECT,          AI_Smart_Reflect
@@ -387,6 +386,8 @@ AI_Smart_EffectHandlers:
 	dbw EFFECT_SOLARBEAM,        AI_Smart_Solarbeam
 	dbw EFFECT_THUNDER,          AI_Smart_Thunder
 	dbw EFFECT_FLY,              AI_Smart_Fly
+	dbw EFFECT_GYRO_BALL,        AI_Smart_GyroBall
+	dbw EFFECT_WAKE_UP_SLAP,     AI_Smart_WakeUpOpponent
 	db -1 ; end
 
 AI_Smart_Sleep:
@@ -1455,6 +1456,7 @@ AI_Smart_PainSplit:
 	inc [hl]
 	ret
 
+
 AI_Smart_Snore:
 AI_Smart_SleepTalk:
 ; Greatly encourage this move if enemy is fast asleep.
@@ -1476,6 +1478,7 @@ AI_Smart_SleepTalk:
 	inc [hl]
 	ret
 
+
 AI_Smart_DefrostOpponent:
 ; Greatly encourage this move if enemy is frozen.
 ; No move has EFFECT_DEFROST_OPPONENT, so this layer is unused.
@@ -1487,6 +1490,19 @@ AI_Smart_DefrostOpponent:
 	dec [hl]
 	dec [hl]
 	ret
+
+
+AI_Smart_WakeUpOpponent:
+; Greatly encourage this move if enemy is asleep.
+
+	ld a, [wEnemyMonStatus]
+	and 1 << SLP_MASK
+	ret z
+	dec [hl]
+	dec [hl]
+	dec [hl]
+	ret
+
 
 AI_Smart_Spite:
 	ld a, [wLastPlayerCounterMove]

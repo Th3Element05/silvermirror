@@ -48,7 +48,7 @@ MoveNames::
 	li "ROAR"
 	li "SING"
 	li "SUPERSONIC"
-	li "SONICBOOM"
+	li "LOUD VOICE" ;"SONICBOOM"
 	li "DISABLE"
 	li "ACID"
 	li "EMBER"

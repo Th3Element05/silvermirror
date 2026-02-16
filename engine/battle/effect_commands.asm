@@ -5901,6 +5901,15 @@ INCLUDE "engine/battle/move_effects/rage.asm"
 
 INCLUDE "engine/battle/move_effects/gyro_ball.asm"
 
+INCLUDE "engine/battle/move_effects/wake_up_slap.asm"
+
+BattleCommand_DoubleSleepingDamage:
+	ld a, BATTLE_VARS_STATUS_OPP
+	call GetBattleVar
+	and SLP_MASK
+	ret z
+	jr DoubleDamage
+
 BattleCommand_DoubleFlyingDamage:
 	ld a, BATTLE_VARS_SUBSTATUS3_OPP
 	call GetBattleVar
