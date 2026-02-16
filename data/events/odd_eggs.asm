@@ -491,7 +491,7 @@ OddEggs:
 ; male
 	db CYNDAQUIL
 	db NO_ITEM
-	db TACKLE, LEER, EXTRASENSORY, 0
+	db TACKLE, LEER, 0, 0 ;EXTRASENSORY
 	dw 02048 ; OT ID
 	dt 1 ; Exp
 	; Stat exp
@@ -518,7 +518,7 @@ OddEggs:
 ; female
 	db CYNDAQUIL
 	db NO_ITEM
-	db TACKLE, LEER, EXTRASENSORY, 0
+	db TACKLE, LEER, 0, 0 ;EXTRASENSORY
 	dw 02048 ; OT ID
 	dt 1 ; Exp
 	; Stat exp
@@ -545,7 +545,7 @@ OddEggs:
 ; male shiny
 	db CYNDAQUIL
 	db NO_ITEM
-	db TACKLE, LEER, EXTRASENSORY, 0
+	db TACKLE, LEER, 0, 0 ;EXTRASENSORY
 	dw 02048 ; OT ID
 	dt 1 ; Exp
 	; Stat exp
@@ -572,7 +572,7 @@ OddEggs:
 ; female shiny
 	db CYNDAQUIL
 	db NO_ITEM
-	db TACKLE, LEER, EXTRASENSORY, 0
+	db TACKLE, LEER, 0, 0 ;EXTRASENSORY
 	dw 02048 ; OT ID
 	dt 1 ; Exp
 	; Stat exp
