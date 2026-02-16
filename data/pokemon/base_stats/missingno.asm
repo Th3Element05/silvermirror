@@ -1,7 +1,7 @@
 	db MISSINGNO ; 252 ;missingno
 
 ;	db  33, 136,   0,  29,   6,   6
-	db  250, 10, 250,  29,  10, 250
+	db  250, 50, 150,  29,  50, 150
 	;   hp  atk  def  spd  sat  sdf
 
 	db NORMAL, NORMAL ; type

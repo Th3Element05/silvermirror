@@ -285,15 +285,16 @@ PlayersHouseDebugPlayer:
 ;	givepoke SQUIRTLE, 10
 	givepoke MISSINGNO, 50
 
-	loadmem wPartyMon1Moves+0, FIRE_FANG
-	loadmem wPartyMon1Moves+1, ICE_FANG
-	loadmem wPartyMon1Moves+2, THUNDER_FANG
-	loadmem wPartyMon1Moves+3, PSYCHIC_M
+	loadmem wPartyMon1Moves+0, LOUD_VOICE
+	loadmem wPartyMon1Moves+1, CRUSH_CLAW
+	loadmem wPartyMon1Moves+2, BULK_UP
+	loadmem wPartyMon1Moves+3, HYPNOSIS
 ;	loadmem wPartyMon1DVs+0, $ea
 ;	loadmem wPartyMon1DVs+1, $aa
 
 	giveitem RARE_CANDY, 20
 	giveitem CARBOS, 20
+	giveitem X_ACCURACY, 20
 ;	giveitem TM_GIGA_DRAIN
 	closetext
 	end
