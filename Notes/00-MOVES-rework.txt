@@ -24,6 +24,10 @@ KAKUNA		HARDEN
 
 MOVE REWORK NOTES
 go through data\trainers\parties.asm and fix TRANSFORM
+check all Pager/HM obtain scripts
+data\pager_system.asm pager names "HM0X" should be adjusted
+	data\text\common_2.asm also has pager text.
+check mon menu stuff, engine\pokemon\mon_menu.asm +others
 Cerulean City Slowbro uses WITHDRAW
 
 data\moves\metronome_exception_moves.asm
@@ -118,6 +122,14 @@ WokeUpOpponentText:
 	line "woke up!"
 	prompt
 
+\
+warning: main.asm(134) -> engine/link/link.asm(2151): [-Wtruncation]
+    Expression must be 8-bit
 
+warning: main.asm(182) -> engine/battle/core.asm(4510): [-Wtruncation]
+    Expression must be 8-bit
+
+warning: main.asm(602) -> mobile/mobile_5c.asm(220): [-Wtruncation]
+    Expression must be 8-bit
 
 
