@@ -212,7 +212,11 @@ Rival1Group:
 
 	; RIVAL1_DEBUG
 	db "DEBUG@", TRAINERTYPE_MOVES
-	db 50, MISSINGNO,   FIRE_FANG, ICE_FANG, THUNDER_FANG, NO_MOVE
+	db 50, MISSINGNO,   HAZE, SHARPEN, CONVERSION, ENDURE
+	db 50, MISSINGNO,   HAZE, SHARPEN, CONVERSION, ENDURE
+	db 50, MISSINGNO,   HAZE, SHARPEN, CONVERSION, ENDURE
+	db 50, MISSINGNO,   HAZE, SHARPEN, CONVERSION, ENDURE
+	db 50, MISSINGNO,   HAZE, SHARPEN, CONVERSION, ENDURE
 	db -1 ; end
 
 Rival2Group:
@@ -4584,7 +4588,7 @@ RedGroup:
 ;	const GUST         ; 10
 ;	const WING_ATTACK  ; 11
 ;	const ROOST        ; 12 ;whirlwind ;removed
-;	const FLY          ; 13
+;	const fly          ; 13 ;removed
 ;	const bind         ; 14 ;removed
 ;	const slam         ; 15 ;removed
 ;	const VINE_WHIP    ; 16
@@ -4635,7 +4639,7 @@ RedGroup:
 ;	const LOW_SWEEP    ; 43 ;low_kick ;removed
 ;	const COUNTER      ; 44
 ;	const SEISMIC_TOSS ; 45
-;	const STRENGTH     ; 46
+;	const strength     ; 46 ;removed
 ;	const ABSORB       ; 47
 ;	const MEGA_DRAIN   ; 48
 ;	const LEECH_SEED   ; 49
@@ -4717,7 +4721,7 @@ RedGroup:
 ;	const psywave      ; 95 ;removed
 ;	const SPLASH       ; 96
 ;	const acid_armor   ; 97 ;removed
-;	const CRABHAMMER   ; 98
+;	const crabhammer   ; 98 ;removed
 ;	const explosion    ; 99 ;removed
 ;	const fury_swipes  ; 9a ;removed
 ;	const BONEMERANG   ; 9b
