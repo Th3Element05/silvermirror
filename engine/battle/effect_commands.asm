@@ -347,7 +347,11 @@ CantMove:
 
 	ld a, BATTLE_VARS_MOVE_ANIM
 	call GetBattleVar
-	cp FLY
+
+	cp SKY_ATTACK
+	jr z, .fly_dig
+
+	cp BOUNCE ;FLY, removed
 	jr z, .fly_dig
 
 	cp DIG
@@ -1015,10 +1019,10 @@ BattleCommand_DoTurn:
 
 .player
 	call GetPartyLocation
-	push hl
-	call CheckMimicUsed
-	pop hl
-	ret c
+;	push hl
+;	call CheckMimicUsed
+;	pop hl
+;	ret c
 
 .consume_pp
 	ldh a, [hBattleTurn]
@@ -1045,18 +1049,18 @@ BattleCommand_DoTurn:
 	ld b, 0
 	add hl, bc
 	ld a, [hl]
-	cp MIMIC
-	jr z, .mimic
+;	cp MIMIC
+;	jr z, .mimic
 	ld hl, wWildMonMoves
 	add hl, bc
 	ld a, [hl]
-	cp MIMIC
-	ret z
+;	cp MIMIC
+;	ret z
 
-.mimic
-	ld hl, wWildMonPP
-	call .consume_pp
-	ret
+;.mimic
+;	ld hl, wWildMonPP
+;	call .consume_pp
+;	ret
 
 .out_of_pp
 	call BattleCommand_MoveDelay
@@ -1089,35 +1093,35 @@ BattleCommand_DoTurn:
 	db EFFECT_RAMPAGE
 	db -1
 
-CheckMimicUsed:
-	ldh a, [hBattleTurn]
-	and a
-	ld a, [wCurMoveNum]
-	jr z, .player
-	ld a, [wCurEnemyMoveNum]
-
-.player
-	ld c, a
-	ld a, MON_MOVES
-	call UserPartyAttr
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	cp MIMIC
-	jr z, .mimic
-
-	ld b, 0
-	add hl, bc
-	ld a, [hl]
-	cp MIMIC
-	jr nz, .mimic
-
-	scf
-	ret
-
-.mimic
-	and a
-	ret
+;CheckMimicUsed:
+;	ldh a, [hBattleTurn]
+;	and a
+;	ld a, [wCurMoveNum]
+;	jr z, .player
+;	ld a, [wCurEnemyMoveNum]
+;
+;.player
+;	ld c, a
+;	ld a, MON_MOVES
+;	call UserPartyAttr
+;
+;	ld a, BATTLE_VARS_MOVE
+;	call GetBattleVar
+;	cp MIMIC
+;	jr z, .mimic
+;
+;	ld b, 0
+;	add hl, bc
+;	ld a, [hl]
+;	cp MIMIC
+;	jr nz, .mimic
+;
+;	scf
+;	ret
+;
+;.mimic
+;	and a
+;	ret
 
 BattleCommand_Critical:
 ; Determine whether this attack's hit will be critical.
@@ -2004,7 +2008,9 @@ BattleCommand_MoveAnimNoSub:
 
 	ld a, BATTLE_VARS_MOVE_ANIM
 	call GetBattleVar
-	cp FLY
+	cp SKY_ATTACK
+	jr z, .clear_sprite
+	cp BOUNCE ;FLY, removed
 	jr z, .clear_sprite
 	cp DIG
 	ret nz
@@ -2112,7 +2118,9 @@ BattleCommand_FailureText:
 	ld a, BATTLE_VARS_MOVE_ANIM
 	call GetBattleVarAddr
 
-	cp FLY
+	cp SKY_ATTACK
+	jr z, .fly_dig
+	cp BOUNCE ;FLY, removed
 	jr z, .fly_dig
 	cp DIG
 	jr z, .fly_dig
@@ -3775,6 +3783,11 @@ BattleCommand_Poison:
 	ld a, [wAttackMissed]
 	and a
 	jr nz, .failed
+;effect chance \/
+	ld a, [wEffectFailed]
+	and a
+	ret nz
+;effect chance /\
 	call .check_toxic
 	jr z, .toxic
 
@@ -5502,7 +5515,9 @@ BattleCommand_Charge:
 	call LoadMoveAnim
 	ld a, BATTLE_VARS_MOVE_ANIM
 	call GetBattleVar
-	cp FLY
+	cp SKY_ATTACK
+	jr z, .flying
+	cp BOUNCE ;FLY, removed
 	jr z, .flying
 	cp DIG
 	jr z, .flying
@@ -5517,7 +5532,9 @@ BattleCommand_Charge:
 	ld a, BATTLE_VARS_MOVE_ANIM
 	call GetBattleVar
 	ld b, a
-	cp FLY
+	cp SKY_ATTACK
+	jr z, .set_flying
+	cp BOUNCE ;FLY, removed
 	jr z, .set_flying
 	cp DIG
 	jr nz, .dont_set_digging
@@ -5567,13 +5584,16 @@ BattleCommand_Charge:
 ;	ld hl, .BattleLoweredHeadText
 ;	jr z, .done
 
-	cp SKY_ATTACK
-	ld hl, .BattleGlowingText
+	cp SKY_ATTACK ;Fly, removed
+	ld hl, .BattleFlewText ;.BattleGlowingText
 	jr z, .done
 
-	cp FLY
-	ld hl, .BattleFlewText
+	cp BOUNCE
+	ld hl, .BattleBouncedText
 	jr z, .done
+;	cp FLY, removed
+;	ld hl, .BattleFlewText
+;	jr z, .done
 
 	cp DIG
 	ld hl, .BattleDugText
@@ -5599,6 +5619,10 @@ BattleCommand_Charge:
 
 .BattleFlewText:
 	text_far _BattleFlewText
+	text_end
+
+.BattleBouncedText:
+	text_far _BattleBouncedText
 	text_end
 
 .BattleDugText:

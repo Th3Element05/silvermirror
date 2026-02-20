@@ -54,15 +54,62 @@ SWEET_SCENT
 
 
 
+animation mapping notes
+FURY_ATTACK horn gfx for ICICLE_SPEAR?
+FURY_SWIPES gfx 3 slashes
+METAL_CLAW gfx 3 slashes
+SCRATCH gfx 2 slashes
+GULLOTINE claw gfx w/o invert for CRUSH_CLAW
+
+DRAGON_CLAW = METAL_CLAW with diff intro, SLASH finish
+SHADOW_CLAW = SLASH, color
+WATER_PULSE = PSYWAVE with blue rings
+GYRO_BALL = RAPID_SPIN anim
+~MAGICAL_LEAF = RAZOR_LEAF, maybe something from PETAL_DANCE
+~MAGICAL_LEAF = SWEET_SCENT but all gfx are leaves
+NIGHT_SLASH = SLASH but dark color
+~DRAGON_DANCE = PETAL_DANCE start, but fire gfx
+~DRAGON_DANCE = SWORDS_DANCE but dragonfire gfx
+LOUD_VOICE = is SNORE diff than GROWL?
+BRICK_BREAK = STOMP but hand gfx (thrash has it)
+DISCHARGE = SPARK
+STONE_EDGE = STRENGTH
+CRUSH_CLAW = parallel slashes?
+
+
+WRAP = CONSTRICT anim
+WHIRLPOOL = blue?
+WATERFALL = blue?
+VINE_WHIP = green?
+TWISTER = blue?
+SPARK = SPARK but THUNDERSHOCK (smaller)
+TOXIC = purple?
+MUD_SLAP = SAND_ATTACK but brown
+SHADOW_BALL = use SIESMIC_TOSS globe, purple
+SHARPEN = METAL_CLAW "metal"
+SLUDGE = purple?
+SLUDGE_BOMB = purple
+
+
+
+
+
+
 animations
+reduced anim_wait after BattleAnimSun_Metallic to 32 - test it
+
+are CLAMP jaws rotated BITE/CRUNCH? if not - reuse, if yes - how?
+
 WITHDRAW gfx can probably be changed/reused
 CLAMP gfx possibly changed/reused
 SWEET_KISS angel gfx possibly changed/reused
 SPIDER_WEB web gfx maybe changed/repurposed
 MIND_READER gfx can probably be changed/repurposed
+MILK_DRINK milk gfx can probably be changed/repurposed
 SEISMIC_TOSS large gfx could be reused if move is removed or animation changed.
 	or could be good in SHADOW_BALL as-is (purple)
 
+SPRITE_ANIM_OBJ_FLY_LEAF ?
 
 STRENGTH good for STONE_EDGE or something
 PSYCHIC good for WATER_PULSE, maybe change sound/color
@@ -87,40 +134,8 @@ SHARPEN animation will need to be changed if it will become HONE_CLAWS
 
 
 
-133
 
 
-
-
-(wake up)
-Defrost:
-	ld a, [hl]
-	and 1 << FRZ
-	ret z
-
-	xor a
-	ld [hl], a
-
-	ldh a, [hBattleTurn]
-	and a
-	ld a, [wCurOTMon]
-	ld hl, wOTPartyMon1Status
-	jr z, .ok
-	ld hl, wPartyMon1Status
-	ld a, [wCurBattleMon]
-.ok
-	call GetPartyLocation
-	xor a
-	ld [hl], a
-	call UpdateOpponentInParty
-
-	ld hl, DefrostedOpponentText
-	jp StdBattleTextbox
-
-WokeUpOpponentText:
-	text "<TARGET>"
-	line "woke up!"
-	prompt
 
 \
 warning: main.asm(134) -> engine/link/link.asm(2151): [-Wtruncation]
@@ -128,8 +143,10 @@ warning: main.asm(134) -> engine/link/link.asm(2151): [-Wtruncation]
 
 warning: main.asm(182) -> engine/battle/core.asm(4510): [-Wtruncation]
     Expression must be 8-bit
+>	ld a, ANIM_HELD_ITEM_TRIGGER ;unchanged
 
 warning: main.asm(602) -> mobile/mobile_5c.asm(220): [-Wtruncation]
     Expression must be 8-bit
+>	cp NUM_ATTACKS; + 1
 
 

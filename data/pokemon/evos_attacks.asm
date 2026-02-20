@@ -229,7 +229,7 @@ BeedrillEvosAttacks: ;GEN4
 	db 1, FURY_STRIKES ;FURY_ATTACK, removed
 	db 10, FURY_STRIKES ;FURY_ATTACK, removed
 	db 13, FOCUS_ENERGY
-	db 16, PIN_MISSILE ;TWINEEDLE, removed
+;	db 16, POISON_TAIL ;TWINEEDLE, removed
 	db 19, RAGE
 	db 22, PURSUIT
 ;	db 25, ;TOXIC_SPIKES
@@ -373,7 +373,7 @@ EkansEvosAttacks: ;GEN4
 	db 17, SCREECH
 	db 20, ACID
 ;	db 25, ;STOCKPILE, SWALLOW, SPIT_UP
-;	db 28, ;MUD_BOMB
+;	db 28, MUD_BOMB
 ;	db 33, ;GASTRO_ACID
 	db 36, HAZE
 ;	db 41, POISON_JAB ;GUNK_SHOT
@@ -566,17 +566,17 @@ ClefairyEvosAttacks: ;GEN4
 	db 7, SING
 	db 10, DOUBLESLAP
 	db 13, DEFENSE_CURL
-;	db 16, ;FOLLOW_ME
+;	db 16, ;FOLLOW_ME    ;support   ;DIZZY_PUNCH
 	db 19, MINIMIZE
-;	db 22, ;WAKE_UP_SLAP
-;	db 25, ;COSMIC_POWER
-;	db 28, ;LUCKY_CHANT
+;	db 22, WAKE_UP_SLAP
+;	db 25, ;COSMIC_POWER ;def stats ;REFLECT, LIGHT_SCREEN
+;	db 28, ;LUCKY_CHANT  ;no crit   ;CHARM
 	db 31, METRONOME
-;	db 34, ;GRAVITY
+;	db 34, ;GRAVITY      ;no fly    ;EXTRASENSORY
 	db 37, MOONLIGHT
-	db 40, LIGHT_SCREEN
-;	db 43, ;METEOR_MASH
-;	db 56, ;HEALING_WISH
+	db 40, LIGHT_SCREEN             ;TRI_ATTACK
+;	db 43, ;METEOR_MASH  ;steel     ;FLASH_CANNON
+;	db 56, ;HEALING_WISH ;faintheal ;AROMATHERAPY
 	db 0 ; no more level-up moves
 
 ClefableEvosAttacks: ;GEN4
@@ -1681,7 +1681,7 @@ KrabbyEvosAttacks: ;GEN4
 	db 31, GUILLOTINE
 	db 35, BODY_SLAM ;SLAM, removed
 ;	db 39, ;BRINE
-	db 41, CRABHAMMER
+	db 41, WATERFALL ;CRABHAMMER, removed
 	db 45, FLAIL
 	db 0 ; no more level-up moves
 
@@ -1699,7 +1699,7 @@ KinglerEvosAttacks: ;GEN4
 	db 37, GUILLOTINE
 	db 44, BODY_SLAM ;SLAM, removed
 ;	db 51, ;BRINE
-	db 56, CRABHAMMER
+	db 56, WATERFALL ;CRABHAMMER, removed
 	db 63, FLAIL
 	db 0 ; no more level-up moves
 
@@ -1768,7 +1768,7 @@ ExeggutorEvosAttacks: ;GEN4
 	db 17, STOMP
 	db 27, SEED_BOMB ;EGG_BOMB, removed
 ;	db 37, ;WOOD_HAMMER
-;	db 47, LEAF_STORM
+;	db 47, ;LEAF_STORM
 	db 0 ; no more level-up moves
 
 CuboneEvosAttacks: ;GEN4
@@ -1831,12 +1831,12 @@ HitmonleeEvosAttacks: ;GEN4
 HitmonchanEvosAttacks: ;GEN4
 	db 0 ; no more evolutions
 	db 1, BULK_UP
-;	db 1, FURY_STRIKES ;COMET_PUNCH, removed
+	db 1, FURY_STRIKES ;COMET_PUNCH, removed
 	db 6, AGILITY
 	db 11, PURSUIT
 	db 16, MACH_PUNCH
 ;	db 16, BULLET_PUNCH
-;	db 21, ;FEINT
+	db 21, DIZZY_PUNCH ;FEINT
 ;	db 26, ;VACUUM_WAVE
 	db 31, THUNDERPUNCH
 	db 31, ICE_PUNCH
@@ -2020,14 +2020,14 @@ TangelaEvosAttacks: ;GEN4
 
 KangaskhanEvosAttacks: ;GEN4
 	db 0 ; no more evolutions
-;	db 1, FURY_STRIKES ;COMET_PUNCH, removed
+	db 1, FURY_STRIKES ;COMET_PUNCH, removed
 	db 1, LEER
 ;	db 7, ASTONISH ;FAKE_OUT
 	db 10, LEER ;TAIL_WHIP, removed
 	db 13, BITE
-	db 19, DYNAMICPUNCH ;MEGA_PUNCH, removed
+	db 19, DIZZY_PUNCH ;MEGA_PUNCH, removed
 	db 22, RAGE
-	db 25, DIZZY_PUNCH
+	db 25, DYNAMICPUNCH ;DIZZY_PUNCH
 	db 31, CRUNCH
 	db 34, ENDURE
 	db 37, OUTRAGE
@@ -4091,7 +4091,7 @@ DelibirdEvosAttacks: ;GEN4
 	db 33, AURORA_BEAM
 	db 37, BODY_SLAM
 	db 41, ROOST
-;	db 45, FLY
+;	db 45, ;FLY, removed
 	db 49, BELLY_DRUM
 	db 53, BLIZZARD
 	db 0 ; no more level-up moves
@@ -4563,7 +4563,7 @@ CelebiEvosAttacks: ;GEN4
 ;	db 55, ;HEAL_BLOCK
 	db 64, FUTURE_SIGHT
 ;	db 73, ;HEALING_WISH
-;	db 82, LEAF_STORM
+;	db 82, ;LEAF_STORM
 	db 91, PERISH_SONG
 	db 0 ; no more level-up moves
 

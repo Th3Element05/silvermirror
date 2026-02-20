@@ -1,10 +1,15 @@
 CriticalHitMoves:
 	db KARATE_CHOP
-;	db RAZOR_WIND ;removed
+	db SHADOW_CLAW
+	db AIR_SLICE ;RAZOR_WIND, removed
+	db POISON_TAIL
 	db RAZOR_LEAF
 	db SKY_ATTACK
 	db CRABHAMMER
 	db SLASH
+	db LEAF_BLADE
 	db AEROBLAST
+	db STONE_EDGE
+	db NIGHT_SLASH
 	db CROSS_CHOP
 	db -1

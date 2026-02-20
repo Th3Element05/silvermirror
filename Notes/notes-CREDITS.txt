@@ -12,3 +12,51 @@ gfx\credits\pichu.png
 gfx\credits\smoochum.png
 gfx\credits\ditto.png
 gfx\credits\igglybuff.png
+
+
+
+
+
+big help from discord
+Grate Oracle Lewot
+Narishma-gb
+pq
+SatoMew
+Darkshade
+RaJa239
+plenty of others
+
+Sour Crystal contributors
+SourApple - creator
+FIQ - custom palette stuff
+
+
+Gen2Plus credits (Polished Crystal)
+Ranji42
+
+GLISCOR		
+HONCHKROW	BloodlessNS
+MAMOSWINE	
+MISMAGIUS	BloodlessNS, SoupPotato
+WEAVILE		
+YANMEGA		
+AMBIPOM		Scarlax
+TANGROWTH	
+MAGNEZONE	Scarlax (BloodlessNS, SoupPotato)
+
+mauvesea sprites (most of them)
+ShadowOne333 sprites (most of them)
+BloodlessNS sprites (most of them)
+Scarlax
+SoupPotato
+
+Blue Emerald
+solo993
+Chamber
+Lake
+Neslug
+Pikachu25
+metalflygon08
+JaceDeane
+
+Satoshi Tajiri, Game Freak, and Nintendo for creating Pokémon Crystal in the first place.

@@ -9,8 +9,8 @@
 	const TACKLE       ; 01 ;POUND, swapped
 	const KARATE_CHOP  ; 02
 	const DOUBLESLAP   ; 03
-	const FURY_STRIKES ; 04 ;COMET_PUNCH, removed
-	const MEGA_PUNCH   ; 05 ;removed
+	const DRAGON_CLAW  ; 04 ;COMET_PUNCH, removed
+	const SHADOW_CLAW  ; 05 ;MEGA_PUNCH, removed
 	const PAY_DAY      ; 06
 	const FIRE_PUNCH   ; 07
 	const ICE_PUNCH    ; 08
@@ -18,35 +18,35 @@
 	const SCRATCH      ; 0a
 	const CRUSH_CLAW   ; 0b ;VICEGRIP, removed
 	const GUILLOTINE   ; 0c
-	const RAZOR_WIND   ; 0d ;removed
+	const AIR_SLICE    ; 0d ;RAZOR_WIND, removed
 	const SWORDS_DANCE ; 0e
-	const CUT          ; 0f ;removed
+	const AERIAL_ACE   ; 0f ;CUT, removed
 	const GUST         ; 10
 	const WING_ATTACK  ; 11
 	const ROOST        ; 12 ;WHIRLWIND, removed
-	const FLY          ; 13
-	const BIND         ; 14 ;removed
-	const SLAM         ; 15 ;removed
+	const BOUNCE       ; 13 ;FLY, removed
+	const BUG_BITE     ; 14 ;BIND, removed
+	const WAKE_UP_SLAP ; 15 ;SLAM, removed
 	const VINE_WHIP    ; 16
 	const STOMP        ; 17
 	const DOUBLE_KICK  ; 18
-	const MEGA_KICK    ; 19 ;removed
+	const CLOSE_COMBAT ; 19 ;MEGA_KICK, removed
 	const JUMP_KICK    ; 1a
-	const ROLLING_KICK ; 1b ;removed
-	const SAND_ATTACK  ; 1c ;removed
+	const FOCUS_BLAST  ; 1b ;ROLLING_KICK, removed
+	const MUD_BOMB     ; 1c ;SAND_ATTACK, removed
 	const HEADBUTT     ; 1d
 	const HORN_ATTACK  ; 1e
-	const FURY_ATTACK  ; 1f ;removed
+	const FURY_STRIKES ; 1f ;FURY_ATTACK, removed
 	const HORN_DRILL   ; 20
-	const POUND        ; 21 ;removed
+	const DRAIN_PUNCH  ; 21 ;POUND, removed
 	const BODY_SLAM    ; 22
 	const WRAP         ; 23
 	const TAKE_DOWN    ; 24
 	const THRASH       ; 25
 	const DOUBLE_EDGE  ; 26
-	const TAIL_WHIP    ; 27 ;removed
+	const METAL_SOUND  ; 27 ;TAIL_WHIP, removed
 	const POISON_STING ; 28
-	const TWINEEDLE    ; 29 ;removed
+	const POISON_TAIL  ; 29 ;TWINEEDLE, removed
 	const PIN_MISSILE  ; 2a
 	const LEER         ; 2b
 	const BITE         ; 2c
@@ -59,7 +59,7 @@
 	const ACID         ; 33
 	const EMBER        ; 34
 	const FLAMETHROWER ; 35
-	const MIST         ; 36 ;removed
+	const DRAGON_DANCE ; 36 ;MIST, removed
 	const WATER_GUN    ; 37
 	const HYDRO_PUMP   ; 38
 	const SURF         ; 39
@@ -75,7 +75,7 @@
 	const LOW_SWEEP    ; 43 ;LOW_KICK, removed
 	const COUNTER      ; 44
 	const SEISMIC_TOSS ; 45
-	const STRENGTH     ; 46
+	const GIGA_IMPACT  ; 46 ;STRENGTH, removed
 	const ABSORB       ; 47
 	const MEGA_DRAIN   ; 48
 	const LEECH_SEED   ; 49
@@ -107,7 +107,7 @@
 	const RAGE         ; 63
 	const TELEPORT     ; 64
 	const NIGHT_SHADE  ; 65
-	const MIMIC        ; 66 ;removed
+	const NASTY_PLOT   ; 66 ;MIMIC, removed
 	const SCREECH      ; 67
 	const DOUBLE_TEAM  ; 68
 	const RECOVER      ; 69
@@ -115,7 +115,7 @@
 	const MINIMIZE     ; 6b
 	const SMOKESCREEN  ; 6c
 	const CONFUSE_RAY  ; 6d
-	const WITHDRAW     ; 6e ;removed
+	const TICKLE       ; 6e ;WITHDRAW, removed
 	const DEFENSE_CURL ; 6f
 	const BARRIER      ; 70
 	const LIGHT_SCREEN ; 71
@@ -124,7 +124,7 @@
 	const FOCUS_ENERGY ; 74
 	const BIDE         ; 75
 	const METRONOME    ; 76
-	const MIRROR_MOVE  ; 77 ;removed
+	const MIRROR_SHOT  ; 77 ;MIRROR_MOVE, removed
 	const SELFDESTRUCT ; 78
 	const SEED_BOMB    ; 79 ;EGG_BOMB, removed
 	const LICK         ; 7a
@@ -133,65 +133,65 @@
 	const BONE_CLUB    ; 7d
 	const FIRE_BLAST   ; 7e
 	const WATERFALL    ; 7f
-	const CLAMP        ; 80 ;removed
+	const X_SCISSOR    ; 80 ;CLAMP, removed
 	const SWIFT        ; 81
-	const SKULL_BASH   ; 82 ;removed
+	const ASTONISH     ; 82 ;SKULL_BASH, removed
 	const ICICLE_SPEAR ; 83 ;SPIKE_CANNON, removed
-	const CONSTRICT    ; 84 ;removed
+	const ROCK_POLISH  ; 84 ;CONSTRICT, removed
 	const AMNESIA      ; 85
-	const KINESIS      ; 86 ;removed
+	const SIGNAL_BEAM  ; 86 ;KINESIS, removed
 	const SOFTBOILED   ; 87
-	const HI_JUMP_KICK ; 88 ;removed
+	const LAVA_PLUME   ; 88 ;HI_JUMP_KICK, removed
 	const GLARE        ; 89
 	const DREAM_EATER  ; 8a
-	const POISON_GAS   ; 8b ;removed
-	const BARRAGE      ; 8c ;removed
+	const POISON_JAB   ; 8b ;POISON_GAS, removed
+	const BULLET_SEED  ; 8c ;BARRAGE, removed
 	const LEECH_LIFE   ; 8d
-	const LOVELY_KISS  ; 8e ;removed
+	const POISON_FANG  ; 8e ;LOVELY_KISS, removed
 	const SKY_ATTACK   ; 8f
 	const TRANSFORM    ; 90
-	const BUBBLE       ; 91 ;removed
+	const WATER_PULSE  ; 91 ;BUBBLE, removed
 	const DIZZY_PUNCH  ; 92
 	const SPORE        ; 93
 	const FLASH        ; 94
-	const PSYWAVE      ; 95 ;removed
+	const EXTRASENSORY ; 95 ;PSYWAVE, removed
 	const SPLASH       ; 96
-	const ACID_ARMOR   ; 97 ;removed
-	const CRABHAMMER   ; 98
-	const EXPLOSION    ; 99 ;removed
-	const FURY_SWIPES  ; 9a ;removed
+	const AQUA_TAIL    ; 97 ;ACID_ARMOR, removed
+	const CRABHAMMER   ; 98 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; restore
+	const FLASH_CANNON ; 99 ;EXPLOSION, removed
+	const ROCK_BLAST   ; 9a ;FURY_SWIPES, removed
 	const BONEMERANG   ; 9b
 	const REST         ; 9c
 	const ROCK_SLIDE   ; 9d
 	const HYPER_FANG   ; 9e
-	const SHARPEN      ; 9f ;hone_claws functionality?
+	const SHARPEN      ; 9f ;hone_claws functionality, animation
 	const CONVERSION   ; a0
 	const TRI_ATTACK   ; a1
 	const SUPER_FANG   ; a2
 	const SLASH        ; a3
 	const SUBSTITUTE   ; a4
-	const GYRO_BALL    ; a5
+	const GYRO_BALL    ; a5 ;STRUGGLE, moved $ff
 	const SKETCH       ; a6
-	const TRIPLE_KICK  ; a7 ;removed
+	const BULLET_PUNCH ; a7 ;TRIPLE_KICK, removed
 	const THIEF        ; a8
-	const SPIDER_WEB   ; a9 ;removed
-	const MIND_READER  ; aa ;removed
+	const LEAF_BLADE   ; a9 ;SPIDER_WEB, removed
+	const ENERGY_BALL  ; aa ;MIND_READER, removed
 	const NIGHTMARE    ; ab
 	const FLAME_WHEEL  ; ac
 	const SNORE        ; ad
 	const CURSE        ; ae
 	const FLAIL        ; af
-	const CONVERSION2  ; b0 ;removed
+	const DRAGON_PULSE ; b0 ;CONVERSION2, removed
 	const AEROBLAST    ; b1
-	const COTTON_SPORE ; b2 ;removed
-	const REVERSAL     ; b3 ;removed
-	const SPITE        ; b4 ;removed
+	const MAGICAL_LEAF ; b2 ;COTTON_SPORE, removed
+	const STONE_EDGE   ; b3 ;REVERSAL, removed
+	const NIGHT_SLASH  ; b4 ;SPITE, removed
 	const POWDER_SNOW  ; b5
 	const PROTECT      ; b6
 	const MACH_PUNCH   ; b7
 	const SCARY_FACE   ; b8
 	const FEINT_ATTACK ; b9
-	const SWEET_KISS   ; ba ;removed
+	const BUG_BUZZ     ; ba ;SWEET_KISS, removed
 	const BELLY_DRUM   ; bb
 	const SLUDGE_BOMB  ; bc
 	const MUD_SLAP     ; bd
@@ -202,8 +202,8 @@
 	const DESTINY_BOND ; c2
 	const PERISH_SONG  ; c3
 	const ICY_WIND     ; c4
-	const DETECT       ; c5 ;removed
-	const BONE_RUSH    ; c6 ;removed
+	const ICE_SHARD    ; c5 ;DETECT, removed
+	const EARTH_POWER  ; c6 ;BONE_RUSH, removed
 	const LOCK_ON      ; c7
 	const OUTRAGE      ; c8
 	const SANDSTORM    ; c9
@@ -213,7 +213,7 @@
 	const ROLLOUT      ; cd
 	const FALSE_SWIPE  ; ce
 	const SWAGGER      ; cf
-	const MILK_DRINK   ; d0 ;removed
+	const MUD_SHOT     ; d0 ;MILK_DRINK, removed
 	const SPARK        ; d1
 	const FURY_CUTTER  ; d2
 	const STEEL_WING   ; d3
@@ -221,9 +221,9 @@
 	const ATTRACT      ; d5
 	const SLEEP_TALK   ; d6
 	const HEAL_BELL    ; d7
-	const RETURN       ; d8 ;removed
-	const PRESENT      ; d9 ;removed
-	const FRUSTRATION  ; da ;removed
+	const POWER_GEM    ; d8 ;RETURN, removed
+	const DISCHARGE    ; d9 ;PRESENT, removed
+	const OMINOUS_WIND ; da ;FRUSTRATION, removed
 	const SAFEGUARD    ; db
 	const PAIN_SPLIT   ; dc
 	const SACRED_FIRE  ; dd
@@ -238,7 +238,7 @@
 	const SWEET_SCENT  ; e6
 	const IRON_TAIL    ; e7
 	const METAL_CLAW   ; e8
-	const VITAL_THROW  ; e9 ;removed
+	const ZEN_HEADBUTT ; e9 ;VITAL_THROW, removed
 	const MORNING_SUN  ; ea
 	const SYNTHESIS    ; eb
 	const MOONLIGHT    ; ec
@@ -256,7 +256,7 @@
 	const FUTURE_SIGHT ; f8
 	const ROCK_SMASH   ; f9 ;brick_break?
 	const WHIRLPOOL    ; fa
-	const BEAT_UP      ; fb ;removed
+	const DARK_PULSE   ; fb ;BEAT_UP, removed
 	const FIRE_FANG    ; fc
 	const ICE_FANG     ; fd
 	const THUNDER_FANG ; fe

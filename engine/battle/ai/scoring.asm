@@ -2584,9 +2584,12 @@ AI_Smart_Twister:
 AI_Smart_Gust:
 ; Greatly encourage this move if the player is flying and the enemy is faster.
 	ld a, [wLastPlayerCounterMove]
-	cp FLY
+	cp SKY_ATTACK
+	jr z, .is_flying
+	cp BOUNCE ;FLY, removed
 	ret nz
 
+.is_flying
 	ld a, [wPlayerSubStatus3]
 	bit SUBSTATUS_FLYING, a
 	jr z, .couldFly
