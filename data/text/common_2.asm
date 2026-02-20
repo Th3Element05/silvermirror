@@ -789,6 +789,11 @@ _BattleFlewText::
 	line "flew up high!"
 	prompt
 
+_BattleBouncedText::
+	text_start
+	line "bounced up high!"
+	prompt
+
 _BattleDugText::
 	text_start
 	line "dug a hole!"
