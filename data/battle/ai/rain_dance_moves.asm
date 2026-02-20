@@ -9,7 +9,7 @@ RainDanceMoves:
 	db WATERFALL
 ;	db CLAMP ;removed
 ;	db BUBBLE ;removed
-	db CRABHAMMER
+;	db CRABHAMMER ;removed
 	db OCTAZOOKA
 	db WHIRLPOOL
 	db -1 ; end

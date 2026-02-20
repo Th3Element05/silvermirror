@@ -577,6 +577,7 @@ DefenseDownHit:
 	buildopponentrage
 	defensedown
 	statdownmessage
+	kingsrock
 	endmove
 
 SpeedDownHit:
@@ -599,6 +600,7 @@ SpeedDownHit:
 	buildopponentrage
 	speeddown
 	statdownmessage
+	kingsrock
 	endmove
 
 SpecialAttackDownHit:
@@ -709,6 +711,7 @@ DefenseUpHit:
 	statupmessage
 	checkfaint
 	buildopponentrage
+	kingsrock
 	endmove
 
 AttackUpHit:
@@ -731,6 +734,7 @@ AttackUpHit:
 	statupmessage
 	checkfaint
 	buildopponentrage
+	kingsrock
 	endmove
 
 AllUpHit:
@@ -909,6 +913,7 @@ FlinchHit:
 	checkfaint
 	buildopponentrage
 	flinchtarget
+	kingsrock
 	endmove
 
 OHKOHit:
@@ -1183,7 +1188,7 @@ RazorWind:
 	supereffectivetext
 	checkfaint
 	buildopponentrage
-	kingsrock
+;	kingsrock
 	endmove
 
 Fly:
@@ -1206,6 +1211,8 @@ Fly:
 	supereffectivetext
 	checkfaint
 	buildopponentrage
+	effectchance
+	paralyzetarget
 	kingsrock
 	endmove
 
@@ -1313,7 +1320,7 @@ Snore:
 	checkfaint
 	buildopponentrage
 	flinchtarget
-	kingsrock
+;	kingsrock
 	endmove
 
 Conversion2:
@@ -1480,6 +1487,7 @@ FlameWheel:
 	checkfaint
 	buildopponentrage
 	burntarget
+	kingsrock
 	endmove
 
 Curse:
@@ -1712,7 +1720,7 @@ Magnitude:
 	supereffectivetext
 	checkfaint
 	buildopponentrage
-	kingsrock
+;	kingsrock
 	endmove
 
 BatonPass:
@@ -1988,6 +1996,7 @@ Stomp:
 	checkfaint
 	buildopponentrage
 	flinchtarget
+	kingsrock
 	endmove
 
 BodySlam:
@@ -2010,6 +2019,7 @@ BodySlam:
 	checkfaint
 	buildopponentrage
 	paralyzetarget
+	kingsrock
 	endmove
 
 Solarbeam:
@@ -2138,7 +2148,6 @@ GyroBall:
 	damagevariation
 	gyroball
 	checkhit
-	effectchance
 	moveanim
 	failuretext
 	applydamage
@@ -2146,6 +2155,7 @@ GyroBall:
 	supereffectivetext
 	checkfaint
 	buildopponentrage
+	kingsrock
 	endmove
 
 WakeUpSlap:
@@ -2159,7 +2169,6 @@ WakeUpSlap:
 	damagevariation
 	doublesleepingdamage
 	checkhit
-	effectchance
 	moveanim
 	failuretext
 	applydamage
@@ -2168,6 +2177,35 @@ WakeUpSlap:
 	wakeupslap
 	checkfaint
 	buildopponentrage
+	kingsrock
+	endmove
+
+CloseCombat:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	switchturn
+	defensedown
+	statdownmessage
+	statdownfailtext
+	specialdefensedown
+	statdownmessage
+	statdownfailtext
+	switchturn
+	buildopponentrage
+	kingsrock
 	endmove
 
 CalmMind:
@@ -2175,10 +2213,12 @@ CalmMind:
 	usedmovetext
 	doturn
 	lowersub
+;	moveanim
 	statupanim
 	raisesub
 	specialattackup
 	statupmessage
+	statupfailtext
 	specialdefenseup
 	statupmessage
 	statupfailtext
@@ -2189,13 +2229,70 @@ BulkUp:
 	usedmovetext
 	doturn
 	lowersub
+;	moveanim
 	statupanim
 	raisesub
 	attackup
 	statupmessage
+	statupfailtext
 	defenseup
 	statupmessage
 	statupfailtext
+	endmove
+
+DragonDance:
+	checkobedience
+	usedmovetext
+	doturn
+	lowersub
+;	moveanim
+	statupanim
+	raisesub
+	attackup
+	statupmessage
+	statupfailtext
+	speedup
+	statupmessage
+	statupfailtext
+	endmove
+
+ToxicHit:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	effectchance
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	effectchance
+	poison
+	endmove
+
+Tickle:
+	checkobedience
+	usedmovetext
+	doturn
+	checkhit
+	lowersub
+;	moveanim
+	statdownanim
+	raisesub
+	attackdown
+	statdownmessage
+	statdownfailtext
+	defensedown
+	statdownmessage
+	statdownfailtext
 	endmove
 
 ;WeightDamage:

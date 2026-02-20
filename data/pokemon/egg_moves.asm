@@ -718,7 +718,7 @@ SneaselEggMoves:
 	db FORESIGHT
 ;	db REFLECT   ;tm33
 	db BITE
-	db DETECT ;removed
+;	db DETECT ;removed
 	db LOW_SWEEP
 	db -1 ; end
 

@@ -38,13 +38,13 @@ MoveEffectsPointers:
 	dw PayDay
 	dw LightScreen
 	dw TriAttack
-	dw FangHit ;UNUSED_25
+	dw FangHit ;EFFECT_UNUSED_25
 	dw OHKOHit
 	dw RazorWind
 	dw SuperFang
 	dw StaticDamage
 	dw TrapTarget
-	dw GyroBall ;UNUSED_2B
+	dw GyroBall ;EFFECT_UNUSED_2B
 	dw MultiHit
 	dw NormalHit
 	dw Mist
@@ -79,7 +79,7 @@ MoveEffectsPointers:
 	dw SkyAttack
 	dw ConfuseHit
 	dw PoisonMultiHit
-	dw WakeUpSlap ;UNUSED_4E
+	dw WakeUpSlap ;EFFECT_UNUSED_4E
 	dw Substitute
 	dw HyperBeam
 	dw Rage
@@ -111,7 +111,7 @@ MoveEffectsPointers:
 	dw Nightmare
 	dw FlameWheel
 	dw Curse
-	dw NormalHit
+	dw CloseCombat ;EFFECT_UNUSED_6E
 	dw Protect
 	dw Spikes
 	dw Foresight
@@ -159,6 +159,9 @@ MoveEffectsPointers:
 	dw BeatUp
 	dw Fly
 	dw DefenseCurl
+	dw DragonDance ;NEW
+	dw ToxicHit    ;NEW
+	dw Tickle      ;NEW
 ;	dw WeightDamage
 ;	dw Growth
 	assert_table_length NUM_MOVE_EFFECTS
