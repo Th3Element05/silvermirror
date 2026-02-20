@@ -217,7 +217,7 @@ CheckBTMonMovesForErrors:
 	ld a, [hl]
 	and a
 	jr z, .loop3
-	cp NUM_ATTACKS + 1
+	cp NUM_ATTACKS; + 1
 	jr c, .next
 
 .loop3
