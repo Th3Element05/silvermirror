@@ -156,7 +156,7 @@ Moves:
 	move BULLET_SEED,  EFFECT_MULTI_HIT,          10, GRASS,        100, 30,   0 ;BARRAGE, removed
 	move LEECH_LIFE,   EFFECT_LEECH_HIT,          20, BUG,          100, 15,   0
 	move POISON_FANG,  EFFECT_TOXIC_HIT,          50, POISON,       100, 15,  30 ;LOVELY_KISS, removed
-	move SKY_ATTACK,   EFFECT_SKY_ATTACK,        140, FLYING,        90,  5,   0
+	move SKY_ATTACK,   EFFECT_FLY,               140, FLYING,        90,  5,   0 ; OLD: EFFECT_SKY_ATTACK
 	move TRANSFORM,    EFFECT_TRANSFORM,           0, NORMAL,       100, 10,   0
 	move WATER_PULSE,  EFFECT_CONFUSE_HIT,        60, WATER,        100, 20,  20 ;BUBBLE, removed
 	move DIZZY_PUNCH,  EFFECT_CONFUSE_HIT,        70, NORMAL,       100, 10,  20
