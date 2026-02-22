@@ -177,7 +177,7 @@ DEF BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const BATTLE_ANIM_OBJ_DRAGONBREATH        ; 90
 	const BATTLE_ANIM_OBJ_CONVERSION          ; 91
 	const BATTLE_ANIM_OBJ_SPIDER_WEB          ; 92
-	const BATTLE_ANIM_OBJ_CAKE_UNUSED         ; 93
+	const BATTLE_ANIM_OBJ_SHARPEN_RIGHT       ; 93 ; BATTLE_ANIM_OBJ_CAKE_UNUSED
 	const BATTLE_ANIM_OBJ_NIGHTMARE           ; 94
 	const BATTLE_ANIM_OBJ_IN_NIGHTMARE        ; 95
 	const BATTLE_ANIM_OBJ_LOVELY_KISS         ; 96
@@ -206,7 +206,7 @@ DEF BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const BATTLE_ANIM_OBJ_BETA_PURSUIT        ; ad
 	const BATTLE_ANIM_OBJ_SHOOTING_SPARKLE    ; ae
 	const BATTLE_ANIM_OBJ_RAIN                ; af
-	const BATTLE_ANIM_OBJ_B0                  ; b0
+	const BATTLE_ANIM_OBJ_SHARPEN_LEFT        ; b0 ; BATTLE_ANIM_OBJ_B0
 	const BATTLE_ANIM_OBJ_PSYCH_UP            ; b1
 	const BATTLE_ANIM_OBJ_ANCIENTPOWER        ; b2
 	const BATTLE_ANIM_OBJ_AEROBLAST           ; b3
