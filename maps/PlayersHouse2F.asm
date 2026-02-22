@@ -285,26 +285,26 @@ PlayersHouseDebugPlayer:
 ;	givepoke SQUIRTLE, 10
 	givepoke BULBASAUR, 50
 	givepoke CHARMANDER, 50
-	givepoke SQUIRTLE, 50
+;	givepoke SQUIRTLE, 50
 
-	loadmem wPartyMon1Moves+0, DRAGON_CLAW
-	loadmem wPartyMon1Moves+1, SHADOW_CLAW
-	loadmem wPartyMon1Moves+2, CRUSH_CLAW
-	loadmem wPartyMon1Moves+3, AIR_SLICE
+	loadmem wPartyMon1Moves+0, FIRE_FANG
+	loadmem wPartyMon1Moves+1, ICE_FANG
+	loadmem wPartyMon1Moves+2, THUNDER_FANG
+	loadmem wPartyMon1Moves+3, POISON_FANG
 ;	loadmem wPartyMon1DVs+0, $ea
 ;	loadmem wPartyMon1DVs+1, $aa
 
-	loadmem wPartyMon2Moves+0, AERIAL_ACE
-	loadmem wPartyMon2Moves+1, ROOST
-	loadmem wPartyMon2Moves+2, BOUNCE
-	loadmem wPartyMon2Moves+3, BUG_BITE
+	loadmem wPartyMon2Moves+0, FIRE_PUNCH
+	loadmem wPartyMon2Moves+1, ICE_PUNCH
+	loadmem wPartyMon2Moves+2, THUNDERPUNCH
+	loadmem wPartyMon2Moves+3, METAL_CLAW
 ;	loadmem wPartyMon1DVs+0, $ea
 ;	loadmem wPartyMon1DVs+1, $aa
 
-	loadmem wPartyMon3Moves+0, WAKE_UP_SLAP
-	loadmem wPartyMon3Moves+1, CLOSE_COMBAT
-	loadmem wPartyMon3Moves+2, FOCUS_BLAST
-	loadmem wPartyMon3Moves+3, MUD_BOMB
+;	loadmem wPartyMon3Moves+0, SEED_BOMB
+;	loadmem wPartyMon3Moves+1, X_SCISSOR
+;	loadmem wPartyMon3Moves+2, ASTONISH
+;	loadmem wPartyMon3Moves+3, ICICLE_SPEAR
 ;	loadmem wPartyMon1DVs+0, $ea
 ;	loadmem wPartyMon1DVs+1, $aa
 
