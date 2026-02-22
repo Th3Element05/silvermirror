@@ -182,6 +182,7 @@ BattleCommandPointers:
 	dw BattleCommand_DefrostTarget
 	dw BattleCommand_DoubleSleepingDamage
 	dw BattleCommand_WakeUpSlap
+	dw BattleCommand_Hex
 ;	dw BattleCommand_WeightDamage
 ;	dw BattleCommand_Growth
 	assert_table_length NUM_EFFECT_COMMANDS

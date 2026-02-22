@@ -155,7 +155,7 @@ Moves:
 	move POISON_JAB,   EFFECT_POISON_HIT,         80, POISON,       100, 20,  30 ;POISON_GAS, removed
 	move BULLET_SEED,  EFFECT_MULTI_HIT,          10, GRASS,        100, 30,   0 ;BARRAGE, removed
 	move LEECH_LIFE,   EFFECT_LEECH_HIT,          20, BUG,          100, 15,   0
-	move POISON_FANG,  EFFECT_TOXIC_HIT,          50, POISON,       100, 15,  30 ;LOVELY_KISS, removed
+	move POISON_FANG,  EFFECT_POISON_HIT,         50, POISON,       100, 15,  30 ;LOVELY_KISS, removed
 	move SKY_ATTACK,   EFFECT_FLY,               140, FLYING,        90,  5,   0 ; OLD: EFFECT_SKY_ATTACK
 	move TRANSFORM,    EFFECT_TRANSFORM,           0, NORMAL,       100, 10,   0
 	move WATER_PULSE,  EFFECT_CONFUSE_HIT,        60, WATER,        100, 20,  20 ;BUBBLE, removed
@@ -231,7 +231,7 @@ Moves:
 	move HEAL_BELL,    EFFECT_HEAL_BELL,           0, NORMAL,       100,  5,   0
 	move POWER_GEM,    EFFECT_NORMAL_HIT,         70, ROCK,         100, 20,   0 ;RETURN, removed
 	move DISCHARGE,    EFFECT_PARALYZE_HIT,       80, ELECTRIC,     100, 15,  10 ;PRESENT, removed
-	move OMINOUS_WIND, EFFECT_ALL_UP_HIT,         60, GHOST,        100,  5,  10 ;FRUSTRATION, removed
+	move HEX,          EFFECT_HEX,                50, GHOST,        100, 10,   0 ;FRUSTRATION, removed
 	move SAFEGUARD,    EFFECT_SAFEGUARD,           0, NORMAL,       100, 25,   0
 	move PAIN_SPLIT,   EFFECT_PAIN_SPLIT,          0, NORMAL,       100, 20,   0
 	move SACRED_FIRE,  EFFECT_SACRED_FIRE,       100, FIRE,          95,  5,  50
@@ -302,6 +302,7 @@ Moves:
 ;;	move ASTONISH,     EFFECT_FLINCH_HIT,         30, GHOST,        100, 15,  30 ;
 ;;	move SHADOW_CLAW,  EFFECT_NORMAL_HIT,         70, GHOST,        100, 15,   0 ;crit+
 ;;	move OMINOUS_WIND, EFFECT_ALL_UP_HIT,         60, GHOST,        100,  5,  10 ;
+;;	move HEX,          EFFECT_HEX,                50, GHOST,        100, 10,   0 ;new effect
 ;
 ;;	move BULLET_SEED,  EFFECT_MULTI_HIT,          10, GRASS,        100, 30,   0 ;
 ;;	move SEED_BOMB,    EFFECT_NORMAL_HIT,         80, GRASS,        100, 15,   0 ;
@@ -323,7 +324,7 @@ Moves:
 ;;	move CRUSH_CLAW,   EFFECT_DEFENSE_DOWN_HIT,   75, NORMAL,        95, 10,  50 ;
 ;
 ;;	move POISON_JAB,   EFFECT_POISON_HIT,         80, POISON,       100, 20,  30 ;
-;;	move POISON_FANG,  EFFECT_TOXIC_HIT,          50, POISON,       100, 15,  30 ;
+;;	move POISON_FANG,  EFFECT_POISON_HIT,         50, POISON,       100, 15,  30 ;
 ;;	move POISON_TAIL,  EFFECT_POISON_HIT,         50, POISON,       100, 25,  10 ;crit+
 ;
 ;;	move ZEN_HEADBUTT, EFFECT_FLINCH_HIT,         80, PSYCHIC_TYPE,  90, 15,  20 ;
