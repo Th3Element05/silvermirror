@@ -512,18 +512,18 @@ ConditionValueC = {dws_ FLASH    }
 ; include 2 pieces of animationl.
 ;ji ba lu  011607
 
-[FPA 005 Begin@Reduce_move_anim_flashing]                                                   
-Mode = 3                                                          
-Type = 0                                                          
-Address = {hex @}   
-DarkEnable0 = 1
-Dark0 = 4  
-MotionBEnable0 = 3                                            
-MotionBlur0 = 15                                                   
-ConditionType = 0                                                 
-ConditionValueA = {dws_ wFXAnimID}  
-ConditionValueB = {dws_ ==       }
-ConditionValueC = {dws_ EXPLOSION}
+;[FPA 005 Begin@Reduce_move_anim_flashing]                                                   
+;Mode = 3                                                          
+;Type = 0                                                          
+;Address = {hex @}   
+;DarkEnable0 = 1
+;Dark0 = 4  
+;MotionBEnable0 = 3                                            
+;MotionBlur0 = 15                                                   
+;ConditionType = 0                                                 
+;ConditionValueA = {dws_ wFXAnimID}  
+;ConditionValueB = {dws_ ==       }
+;ConditionValueC = {dws_ EXPLOSION}
 
 
 ;skill name 1 : ..............Mem Write: pc32 = 0x30db addr = 0xcf87 value = 0x30
@@ -580,18 +580,18 @@ ConditionValueC = {dws_ HYPER_BEAM}
 ;000cc497h: FE 4F D0 CD                                     ; 﨩型
 ; -------------0xd4170xd4170xd4170xd417---------------   Mem Write: pc32 = 0x3a89 addr = 0xd417 value = 0xd1
 ;000cc486h: FE 4F D0 CD 7D 3A 22 FA 19 D4 22 C5 E5 6F 26 00 ; 﨩型}:"??佩o&.                                                                                                                                                    
-[FPA 042801 Begin@Reduce_move_anim_flashing_PRESENT]                                                                                                                               
-Mode = 3                                                                                                                                         
-Type = 0                                                                                                                                         
-Address = {HEX @}                                                                                                                       
-DarkEnable0 = 1                                                                                                                                  
-Dark0 = 5                                                                                                                                        
-MotionBEnable0 = 3                                                                                                                               
-MotionBlur0 = 11                                                                                                                                 
-ConditionType = 0                                                                                                                                
-ConditionValueA = {dws_ wFXAnimID wBattleAnimByte  }                                                                              
-ConditionValueB = {dws_ ==        ==               }                                                                                 
-ConditionValueC = {dws_ PRESENT   anim_1gfx_command}                                                                                 
+;[FPA 042801 Begin@Reduce_move_anim_flashing_PRESENT]                                                                                                                               
+;Mode = 3                                                                                                                                         
+;Type = 0                                                                                                                                         
+;Address = {HEX @}                                                                                                                       
+;DarkEnable0 = 1                                                                                                                                  
+;Dark0 = 5                                                                                                                                        
+;MotionBEnable0 = 3                                                                                                                               
+;MotionBlur0 = 11                                                                                                                                 
+;ConditionType = 0                                                                                                                                
+;ConditionValueA = {dws_ wFXAnimID wBattleAnimByte  }                                                                              
+;ConditionValueB = {dws_ ==        ==               }                                                                                 
+;ConditionValueC = {dws_ PRESENT   anim_1gfx_command}                                                                                 
 
     
 
