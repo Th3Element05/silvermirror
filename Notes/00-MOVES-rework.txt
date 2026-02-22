@@ -91,6 +91,8 @@ SLUDGE = purple?
 SLUDGE_BOMB = purple
 
 
+brick_break = karate_chop into rock_smash
+
 
 
 
