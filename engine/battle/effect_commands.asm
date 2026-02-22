@@ -5927,6 +5927,8 @@ INCLUDE "engine/battle/move_effects/gyro_ball.asm"
 
 INCLUDE "engine/battle/move_effects/wake_up_slap.asm"
 
+INCLUDE "engine/battle/move_effects/hex.asm"
+
 BattleCommand_DoubleSleepingDamage:
 	ld a, BATTLE_VARS_STATUS_OPP
 	call GetBattleVar

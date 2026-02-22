@@ -2256,28 +2256,6 @@ DragonDance:
 	statupfailtext
 	endmove
 
-ToxicHit:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	effectchance
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	effectchance
-	poison
-	endmove
-
 Tickle:
 	checkobedience
 	usedmovetext
@@ -2293,6 +2271,27 @@ Tickle:
 	defensedown
 	statdownmessage
 	statdownfailtext
+	endmove
+
+Hex:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	hex
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
 	endmove
 
 ;WeightDamage:

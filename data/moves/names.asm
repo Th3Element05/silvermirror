@@ -217,7 +217,7 @@ MoveNames::
 	li "HEAL BELL"
 	li "POWER GEM"    ;"RETURN"
 	li "DISCHARGE"    ;"PRESENT"
-	li "OMINOUS WIND" ;"FRUSTRATION"
+	li "HEX"          ;"FRUSTRATION"
 	li "SAFEGUARD"
 	li "PAIN SPLIT"
 	li "SACRED FIRE"

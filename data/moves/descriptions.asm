@@ -218,7 +218,7 @@ MoveDescriptions::
 	dw HealBellDescription
 	dw PowerGemDescription ;ReturnDescription
 	dw DischargeDescription ;PresentDescription
-	dw OminousWindDescription ;FrustrationDescription
+	dw HexDescription ;FrustrationDescription
 	dw SafeguardDescription
 	dw PainSplitDescription
 	dw SacredFireDescription
@@ -1374,10 +1374,14 @@ DischargeDescription:
 ;	db   "A bomb that may"
 ;	next "restore HP.@"
 
-OminousWindDescription:
-	db   "A gust of ominous"
-	feed "It may raise all"
-	feed "the user's stats.@"
+HexDescription:
+	db   "Deals more damage"
+	feed "to targets with a"
+	feed "status problem.@"
+;OminousWindDescription:
+;	db   "A gust of ominous"
+;	feed "It may raise all"
+;	feed "the user's stats.@"
 ;FrustrationDescription:
 ;	db   "An attack based on"
 ;	next "lack of loyalty.@"

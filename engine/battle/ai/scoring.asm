@@ -388,6 +388,7 @@ AI_Smart_EffectHandlers:
 	dbw EFFECT_FLY,              AI_Smart_Fly
 	dbw EFFECT_GYRO_BALL,        AI_Smart_GyroBall
 	dbw EFFECT_WAKE_UP_SLAP,     AI_Smart_WakeUpOpponent
+	dbw EFFECT_HEX,              AI_Smart_Hex
 	db -1 ; end
 
 AI_Smart_Sleep:
@@ -1497,6 +1498,18 @@ AI_Smart_WakeUpOpponent:
 
 	ld a, [wEnemyMonStatus]
 	and 1 << SLP_MASK
+	ret z
+	dec [hl]
+	dec [hl]
+	dec [hl]
+	ret
+
+
+AI_Smart_Hex:
+; Greatly encourage this move if the player has a status condition.
+
+	ld a, [wBattleMonStatus]
+	and a
 	ret z
 	dec [hl]
 	dec [hl]

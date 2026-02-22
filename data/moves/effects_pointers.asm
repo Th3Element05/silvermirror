@@ -160,8 +160,8 @@ MoveEffectsPointers:
 	dw Fly
 	dw DefenseCurl
 	dw DragonDance ;NEW
-	dw ToxicHit    ;NEW
 	dw Tickle      ;NEW
+	dw Hex         ;NEW
 ;	dw WeightDamage
 ;	dw Growth
 	assert_table_length NUM_MOVE_EFFECTS

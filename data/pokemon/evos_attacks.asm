@@ -1681,7 +1681,7 @@ KrabbyEvosAttacks: ;GEN4
 	db 31, GUILLOTINE
 	db 35, BODY_SLAM ;SLAM, removed
 ;	db 39, ;BRINE
-	db 41, WATERFALL ;CRABHAMMER, removed
+	db 41, CRABHAMMER
 	db 45, FLAIL
 	db 0 ; no more level-up moves
 
@@ -1699,7 +1699,7 @@ KinglerEvosAttacks: ;GEN4
 	db 37, GUILLOTINE
 	db 44, BODY_SLAM ;SLAM, removed
 ;	db 51, ;BRINE
-	db 56, WATERFALL ;CRABHAMMER, removed
+	db 56, CRABHAMMER
 	db 63, FLAIL
 	db 0 ; no more level-up moves
 

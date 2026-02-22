@@ -157,7 +157,7 @@
 	const EXTRASENSORY ; 95 ;PSYWAVE, removed
 	const SPLASH       ; 96
 	const AQUA_TAIL    ; 97 ;ACID_ARMOR, removed
-	const CRABHAMMER   ; 98 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; restore
+	const CRABHAMMER   ; 98
 	const FLASH_CANNON ; 99 ;EXPLOSION, removed
 	const ROCK_BLAST   ; 9a ;FURY_SWIPES, removed
 	const BONEMERANG   ; 9b
@@ -223,7 +223,7 @@
 	const HEAL_BELL    ; d7
 	const POWER_GEM    ; d8 ;RETURN, removed
 	const DISCHARGE    ; d9 ;PRESENT, removed
-	const OMINOUS_WIND ; da ;FRUSTRATION, removed
+	const HEX          ; da ;FRUSTRATION, removed
 	const SAFEGUARD    ; db
 	const PAIN_SPLIT   ; dc
 	const SACRED_FIRE  ; dd
