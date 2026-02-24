@@ -196,91 +196,91 @@ ENDM
 
 ; see data/moves/tmhm_moves.asm for moves
 DEF TM01 EQU const_value
-	add_tm DYNAMICPUNCH ; aa
-	add_tm VINE_WHIP   ; ab ;RAZOR_WIND ;removed
-	add_tm SWORDS_DANCE ; ac
-	add_tm ROLLOUT      ; ad
-	add_tm KARATE_CHOP    ; ae ;MEGA_KICK ;removed
-	add_tm TOXIC        ; af
-	add_tm HORN_DRILL   ; b0
-	add_tm BODY_SLAM    ; b1
-	add_tm TAKE_DOWN    ; b2
-	add_tm DOUBLE_EDGE  ; b3
-	add_tm BUBBLEBEAM   ; b4
-	add_tm WATER_GUN    ; b5
-	add_tm ICE_BEAM     ; b6
-	add_tm BLIZZARD     ; b7
-	add_tm HYPER_BEAM   ; b8
-	add_tm PAY_DAY      ; b9
-	add_tm SUBMISSION   ; ba
-	add_tm COUNTER      ; bb
-	add_tm SEISMIC_TOSS ; bc
-	add_tm RAGE         ; bd
-	add_tm GIGA_DRAIN   ; be
-	add_tm SOLARBEAM    ; bf
-	add_tm DRAGONBREATH ; c0
-	add_tm THUNDERBOLT  ; c1
-	add_tm THUNDER      ; c2
-	add_tm EARTHQUAKE   ; c3
-	add_tm FISSURE      ; c4
-	add_tm DIG          ; c5
-	add_tm PSYCHIC_M    ; c6
-	add_tm TELEPORT     ; c7
-	add_tm DOUBLESLAP     ; c8 ;MIMIC ;removed
-	add_tm DOUBLE_TEAM  ; c9
-	add_tm REFLECT      ; ca
-	add_tm BIDE         ; cb
-	add_tm METRONOME    ; cc
-	add_tm SELFDESTRUCT ; cd
-	add_tm FIRE_FANG     ; ce ;EGG_BOMB ;removed
-	add_tm FIRE_BLAST   ; cf
-	add_tm SWIFT        ; d0
-	add_tm ICE_FANG   ; d1 ;SKULL_BASH ;removed
-	add_tm SOFTBOILED   ; d2
-	add_tm DREAM_EATER  ; d3
-	add_tm SKY_ATTACK   ; d4
-	add_tm REST         ; d5
-	add_tm THUNDER_WAVE ; d6
-	add_tm THUNDER_FANG      ; d7 ;PSYWAVE ;removed
-	add_tm SCRATCH    ; d8 'EXPLOSION ;removed
-	add_tm ROCK_SLIDE   ; d9
-	add_tm TRI_ATTACK   ; da
-	add_tm SUBSTITUTE   ; db
-	add_tm FLAMETHROWER ; dc
-	add_tm SPARK        ; dd
-	add_tm ICY_WIND     ; de
-	add_tm FALSE_SWIPE  ; df
-	add_tm HEADBUTT     ; e0
-	add_tm CURSE        ; e1
-	add_tm ROCK_SMASH   ; e2
-	add_tm HIDDEN_POWER ; e3
-	add_tm SUNNY_DAY    ; e4
-	add_tm SWEET_SCENT  ; e5
-	add_tm SNORE        ; e6
-	add_tm PROTECT      ; e7
-	add_tm RAIN_DANCE   ; e8
-	add_tm ENDURE       ; e9
-	add_tm IRON_TAIL    ; ea
-	add_tm SHADOW_BALL  ; eb
-	add_tm MUD_SLAP     ; ec
-	add_tm SWAGGER      ; ed
-	add_tm SLEEP_TALK   ; ee
-	add_tm SLUDGE_BOMB  ; ef
-	add_tm SANDSTORM    ; f0
-	add_tm ATTRACT      ; f1
-	add_tm THIEF        ; f2
-	add_tm STEEL_WING   ; f3
-	add_tm FURY_CUTTER  ; f4
-	add_tm NIGHTMARE    ; f5
-	add_tm ANCIENTPOWER ; f6
-	add_tm TACKLE       ; f7
-	add_tm WRAP          ; f8 ;CUT ;removed
-	add_tm THRASH          ; f9 ;FLY ;removed
-	add_tm SURF         ; fa
-	add_tm POISON_STING     ; fb ;STRENGTH ;removed
-	add_tm FLASH        ; fc
-	add_tm WHIRLPOOL    ; fd
-	add_tm WATERFALL    ; fe
+	add_tm DYNAMICPUNCH ;TM01 ; aa
+	add_tm DRAGON_CLAW  ;TM02 ; ab ;new, done
+	add_tm SURF         ;TM03 ; ac
+	add_tm CALM_MIND    ;TM04 ; ad ;new, done
+	add_tm FLASH        ;TM05 ; ae
+	add_tm TOXIC        ;TM06 ; af
+	add_tm BULK_UP      ;TM07 ; b0 ;new, done
+	add_tm BODY_SLAM    ;TM08 ; b1
+	add_tm BULLET_SEED  ;TM09 ; b2 ;new, done
+	add_tm HIDDEN_POWER ;TM10 ; b3
+	add_tm BUBBLEBEAM   ;TM11 ; b4
+	add_tm WATER_GUN    ;TM12 ; b5
+	add_tm ICE_BEAM     ;TM13 ; b6
+	add_tm BLIZZARD     ;TM14 ; b7
+	add_tm HYPER_BEAM   ;TM15 ; b8
+	add_tm PAY_DAY      ;TM16 ; b9
+	add_tm PROTECT      ;TM17 ; ba
+	add_tm COUNTER      ;TM18 ; bb
+	add_tm SEISMIC_TOSS ;TM19 ; bc
+	add_tm ENDURE       ;TM20 ; bd
+	add_tm GIGA_DRAIN   ;TM21 ; be
+	add_tm SOLARBEAM    ;TM22 ; bf
+	add_tm IRON_TAIL    ;TM23 ; c0
+	add_tm THUNDERBOLT  ;TM24 ; c1
+	add_tm THUNDER      ;TM25 ; c2
+	add_tm EARTHQUAKE   ;TM26 ; c3
+	add_tm FISSURE      ;TM27 ; c4
+	add_tm DIG          ;TM28 ; c5
+	add_tm PSYCHIC_M    ;TM29 ; c6
+	add_tm WATER_PULSE  ;TM30 ; c7 ;new, done
+	add_tm MUD_SLAP     ;TM31 ; c8
+	add_tm DOUBLE_TEAM  ;TM32 ; c9
+	add_tm REFLECT      ;TM33 ; ca
+	add_tm BIDE         ;TM34 ; cb
+	add_tm METRONOME    ;TM35 ; cc
+	add_tm SELFDESTRUCT ;TM36 ; cd
+	add_tm SUBMISSION   ;TM37 ; ce
+	add_tm FIRE_BLAST   ;TM38 ; cf
+	add_tm SWIFT        ;TM39 ; d0
+	add_tm AERIAL_ACE   ;TM40 ; d1 ;new, done
+	add_tm FLAMETHROWER ;TM41 ; d2
+	add_tm SPARK        ;TM42 ; d3
+	add_tm SKY_ATTACK   ;TM43 ; d4
+	add_tm REST         ;TM44 ; d5
+	add_tm THUNDER_WAVE ;TM45 ; d6
+	add_tm SHARPEN      ;TM46 ; d7 ;new, done
+	add_tm ICY_WIND     ;TM47 ; d8
+	add_tm ROCK_SLIDE   ;TM48 ; d9
+	add_tm TRI_ATTACK   ;TM49 ; da
+	add_tm SUBSTITUTE   ;TM50 ; db
+	add_tm ROOST        ;TM51 ; dc ;new, done
+	add_tm FOCUS_BLAST  ;TM52 ; dd ;new, done
+	add_tm ENERGY_BALL  ;TM53 ; de ;new, done
+	add_tm FALSE_SWIPE  ;TM54 ; df
+	add_tm ROCK_SMASH   ;TM55 ; e0
+	add_tm HEADBUTT     ;TM56 ; e1
+	add_tm AIR_SLICE    ;TM57 ; e2 ;new, done
+	add_tm DOUBLE_EDGE  ;TM58 ; e3
+	add_tm DRAGON_PULSE ;TM59 ; e4 ;new, done
+	add_tm DRAIN_PUNCH  ;TM60 ; e5 ;new, done
+	add_tm ROLLOUT      ;TM61 ; e6
+	add_tm CURSE        ;TM62 ; e7
+	add_tm SLUDGE_BOMB  ;TM63 ; e8
+	add_tm SWAGGER      ;TM64 ; e9
+	add_tm SHADOW_CLAW  ;TM65 ; ea ;new, done
+	add_tm THIEF        ;TM66 ; eb
+	add_tm STEEL_WING   ;TM67 ; ec
+	add_tm GIGA_IMPACT  ;TM68 ; ed ;new, done
+	add_tm ROCK_POLISH  ;TM69 ; ee ;new, done
+	add_tm SHADOW_BALL  ;TM70 ; ef
+	add_tm STONE_EDGE   ;TM71 ; f0 ;new, done
+	add_tm DRAGONBREATH ;TM72 ; f1
+	add_tm ATTRACT      ;TM73 ; f2
+	add_tm GYRO_BALL    ;TM74 ; f3 ;new, done
+	add_tm SWORDS_DANCE ;TM75 ; f4
+	add_tm SUNNY_DAY    ;TM76 ; f5
+	add_tm RAIN_DANCE   ;TM77 ; f6
+	add_tm SANDSTORM    ;TM78 ; f7
+	add_tm DARK_PULSE   ;TM79 ; f8 ;new, done
+	add_tm ANCIENTPOWER ;TM80 ; f9 ;new, done
+	add_tm X_SCISSOR    ;TM81 ; fa ;new, done
+	add_tm WHIRLPOOL    ;TM82 ; fb
+	add_tm WATERFALL    ;TM83 ; fc
+	add_tm POISON_JAB   ;TM84 ; fd ;new, done
+	add_tm FLASH_CANNON ;TM85 ; fe ;new, done
 DEF NUM_TMS EQU __tmhm_value__ - 1
 
 MACRO add_hm
@@ -314,9 +314,15 @@ MACRO add_mt
 ENDM
 
 DEF MT01 EQU const_value
-	add_mt FIRE_PUNCH ; FLAMETHROWER
-	add_mt THUNDERPUNCH ; THUNDERBOLT
-	add_mt ICE_PUNCH ; ICE_BEAM
+	add_mt FIRE_PUNCH
+	add_mt THUNDERPUNCH
+	add_mt ICE_PUNCH
+	add_mt SOFTBOILED
+	add_mt DREAM_EATER
+	add_mt NIGHTMARE
+	add_mt SNORE
+	add_mt SLEEP_TALK
+	add_mt SWEET_SCENT
 DEF NUM_TUTORS = __tmhm_value__ - NUM_TMS - NUM_HMS - 1
 
 DEF NUM_TM_HM_TUTOR EQU NUM_TMS + NUM_HMS + NUM_TUTORS
