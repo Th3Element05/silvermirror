@@ -14,13 +14,6 @@ show field moves?
 FORESIGHT > hit DARK too
 
 
-evolution moves
-PRIMEAPE	RAGE
-OCTILLERY	OCTAZOOKA
-METAPOD		HARDEN
-KAKUNA		HARDEN
-
-
 
 MOVE REWORK NOTES
 go through data\trainers\parties.asm and fix TRANSFORM
@@ -43,6 +36,15 @@ MEGA_KICK	VictoryRoad2F.asm
 EXPLOSION	VictoryRoad3F.asm
 PSYWAVE		SaffronGym.asm	Reward>	CALM_MIND ?
 MIMIC		CopycatsHouse2F.asm
+TAKE_DOWN       SilphCo5F.asm
+SOFTBOILED	CeladonCity.asm
+HORN_DRILL	RocketHideoutB2F.asm
+TELEPORT	Route9.asm
+SNORE		Route12.asm	??Route39Farmhouse.asm
+RAGE		Route15.asm
+SLEEP_TALK	Route16.asm
+FURY_CUTTER	AzaleaGym.asm
+DREAM_EATER	ViridianCity.asm
 
 
 
@@ -54,87 +56,163 @@ SWEET_SCENT
 
 
 
-animation mapping notes
-FURY_ATTACK horn gfx for ICICLE_SPEAR?
-FURY_SWIPES gfx 3 slashes
-METAL_CLAW gfx 3 slashes
-SCRATCH gfx 2 slashes
-GULLOTINE claw gfx w/o invert for CRUSH_CLAW
 
-DRAGON_CLAW = METAL_CLAW with diff intro, SLASH finish
-SHADOW_CLAW = SLASH, color
-WATER_PULSE = PSYWAVE with blue rings
-GYRO_BALL = RAPID_SPIN anim
-~MAGICAL_LEAF = RAZOR_LEAF, maybe something from PETAL_DANCE
-~MAGICAL_LEAF = SWEET_SCENT but all gfx are leaves
-NIGHT_SLASH = SLASH but dark color
-~DRAGON_DANCE = PETAL_DANCE start, but fire gfx
-~DRAGON_DANCE = SWORDS_DANCE but dragonfire gfx
-LOUD_VOICE = is SNORE diff than GROWL?
-BRICK_BREAK = STOMP but hand gfx (thrash has it)
-DISCHARGE = SPARK
-STONE_EDGE = STRENGTH
-CRUSH_CLAW = parallel slashes?
-
-
-WRAP = CONSTRICT anim
-WHIRLPOOL = blue?
-WATERFALL = blue?
-VINE_WHIP = green?
-TWISTER = blue?
-SPARK = SPARK but THUNDERSHOCK (smaller)
-TOXIC = purple?
-MUD_SLAP = SAND_ATTACK but brown
-SHADOW_BALL = use SIESMIC_TOSS globe, purple
-SHARPEN = METAL_CLAW "metal"
-SLUDGE = purple?
-SLUDGE_BOMB = purple
-
-
-brick_break = karate_chop into rock_smash
 
 
 
 
 
 animations
+ROCKSLIDE and ROCK_THROW can be anim_call
+ENDURE can use BattleAnimSub_Focus
+
+brick_break = karate_chop into rock_smash
+
+HEAL_BELL should be AROMATHERAPY but animation will need to be changed
+
 reduced anim_wait after BattleAnimSun_Metallic to 32 - test it
 
-are CLAMP jaws rotated BITE/CRUNCH? if not - reuse, if yes - how?
-
-WITHDRAW gfx can probably be changed/reused
-CLAMP gfx possibly changed/reused
-SWEET_KISS angel gfx possibly changed/reused
-SPIDER_WEB web gfx maybe changed/repurposed
-MIND_READER gfx can probably be changed/repurposed
-MILK_DRINK milk gfx can probably be changed/repurposed
-SEISMIC_TOSS large gfx could be reused if move is removed or animation changed.
-	or could be good in SHADOW_BALL as-is (purple)
-
-SPRITE_ANIM_OBJ_FLY_LEAF ?
-
-STRENGTH good for STONE_EDGE or something
-PSYCHIC good for WATER_PULSE, maybe change sound/color
-POISON_GAS better for SMOKESCREEN?
-PETAL_DANCE flower gfx white=feathers for ROOST?
-HEAL_BELL should be AROMATHERAPY but animation will need to be changed
-	(then bell can be changed/reused)
 
 
-SHARPEN animation will need to be changed if it will become HONE_CLAWS
+Can I make movement data for:
 
-?how does egg gfx work for EGG_BOMB vs SOFTBOILED? 
-	?can it be removed from softboiled and changed/reused?
-?modify SKETCH so pencil gfx can be changed/reused?
+BATTLE_ANIM_OBJ_FIRE_BLAST
+BATTLE_ANIM_OBJ_GROWTH
+BATTLE_ANIM_OBJ_FOCUS
 
-?remove particles from SUNNY_DAY animation?
-?can RAIN_DANCE particles be blue? swap for sunny_day particles?
+to FLIP_Y and/or go DOWN?
 
-?modify SMOKESCREEN to be visually compatible with SAND_ATTACK?
+UP anim
+SWORDS_DANCE uses WHIP(7,8,9,10)
+GROWTH uses CHARGE(7,8,9)
+SLUDGE uses POISON(5,6,7,8,9)
+FOCUS uses SPEED(?,6)
+FLAME_WHEEL uses FIRE(5,6)
+ANCIENTPOWER uses ROCKS(1,2,3,4)(big)
+
+DOWN anim
+STUN_SPORE uses POWDER(1,2)
+PETAL_DANCE uses FLOWER(1-8)
+
+AROUND anim
+CONSUSED uses STATUS(1-8)
+NIGHTMARE uses ANGELS(20-32)
+
+MISC
+FLASH uses SPEED?(1,2,7,8)
+FLAME_WHEEL uses FIRE(1,2)?(3,4)(big)
+
+(reflect 5,6,7)
 
 
 
 
+
+
+StatsUp:
+	anim_1gfx BATTLE_ANIM_GFX_MISC
+.loop
+	anim_sound 0, 0, SFX_SWORDS_DANCE
+	anim_obj BATTLE_ANIM_OBJ_STAT_UP, 32, 112, $2
+	anim_wait 4
+	anim_obj BATTLE_ANIM_OBJ_STAT_UP, 50, 112, $2
+	anim_wait 4
+	anim_obj BATTLE_ANIM_OBJ_STAT_UP, 41, 112, $3
+	anim_wait 4
+	anim_obj BATTLE_ANIM_OBJ_STAT_UP, 59, 112, $3
+	anim_wait 4
+	anim_obj BATTLE_ANIM_OBJ_STAT_UP, 23, 112, $4
+	anim_wait 4
+	anim_obj BATTLE_ANIM_OBJ_STAT_UP, 68, 112, $4
+	anim_wait 4
+	anim_loop 2, .loop
+	anim_wait 8
+	anim_ret
+
+
+
+
+
+
+
+EvolutionMoves::
+	db PETAL_DANCE  ; VENUSAUR
+	db WING_ATTACK  ; CHARIZARD
+	db FLASH_CANNON ; BLASTOISE
+	db HARDEN       ; METAPOD
+	db GUST         ; BUTTERFREE
+	db HARDEN       ; KAKUNA
+	db U_TURN       ; BEEDRILL
+	db SCARY_FACE   ; RATICATE
+	db CRUNCH       ; ARBOK
+	db THUNDERBOLT  ; RAICHU
+	db SLASH        ; SANDSLASH
+	db NASTY_PLOT   ; NINETALES
+	db SHADOW_CLAW  ; PARASECT
+	db GUST         ; VENOMOTH
+	db TRI_ATTACK   ; DUGTRIO
+	db SWIFT        ; PERSIAN
+	db RAGE         ; PRIMEAPE
+	db EXTREMESPEED ; ARCANINE
+	db CLOSE_COMBAT ; POLIWRATH
+	db FORESIGHT    ; KADABRA
+	db FORESIGHT    ; ALAKAZAM
+	db STRENGTH     ; MACHAMP
+	db POWER_WHIP   ; TENTACRUEL
+	db PLAY_ROUGH   ; RAPIDASH
+	db DEFENSE_CURL ; SLOWBRO
+	db TRI_ATTACK   ; MAGNETON
+	db TRI_ATTACK   ; DODRIO
+	db ICICLE_SPEAR ; DEWGONG
+	db SPIKES       ; CLOYSTER
+	db SHADOW_CLAW  ; HAUNTER
+	db SHADOW_CLAW  ; GENGAR
+	db STOMP        ; EXEGGUTOR
+	db SWORDS_DANCE ; MAROWAK
+	db DOUBLE_KICK  ; HITMONLEE
+	db DIZZY_PUNCH  ; HITMONCHAN
+	db OUTRAGE      ; RHYDON
+	db BITE         ; GYARADOS
+	db WATER_GUN    ; VAPOREON
+	db THUNDERSHOCK ; JOLTEON
+	db EMBER        ; FLAREON
+	db ICICLE_SPEAR ; OMASTAR
+	db SLASH        ; KABUTOPS
+	db WING_ATTACK  ; DRAGONITE
+	db PETAL_DANCE  ; MEGANIUM
+	db FIRE_PUNCH   ; TYPHLOSION
+	db NIGHT_SLASH  ; FERALIGATR
+	db AGILITY      ; FURRET
+	db SWORDS_DANCE ; LEDIAN
+	db BUG_BITE     ; ARIADOS
+	db X_SCISSOR    ; CROBAT
+	db DISARM_VOICE ; TOGETIC
+	db AIR_SLASH    ; XATU
+	db THUNDERPUNCH ; AMPHAROS
+	db PETAL_DANCE  ; BELLOSSOM
+	db STONE_EDGE   ; SUDOWOODO
+	db GIGA_DRAIN   ; POLITOED
+	db ANCIENTPOWER ; QUAGSIRE
+	db CONFUSION    ; ESPEON
+	db PURSUIT      ; UMBREON
+	db RECOVER      ; WOBBUFFET
+	db FLASH_CANNON ; FORRETRESS
+	db IRON_TAIL    ; STEELIX
+	db METAL_CLAW   ; SCIZOR
+	db SHELL_SMASH  ; MAGCARGO
+	db FURY_STRIKES ; PILOSWINE
+	db OCTAZOOKA    ; OCTILLERY
+	db DRAGONBREATH ; KINGDRA
+	db FURY_STRIKES ; DONPHAN
+	db LOW_KICK     ; HITMONTOP
+	db DEFENSE_CURL ; PUPITAR
+	db STOMP        ; TYRANITAR
+	db DAZZLINGLEAM ; MISMAGIUS
+	db TRI_ATTACK   ; MAGNEZONE
+	db DRAGONBREATH ; YANMEGA
+	db RAZOR_LEAF   ; LEAFEON
+	db ICY_WIND     ; GLACEON
+	assert_table_length NUM_SPECIES
 
 
 
