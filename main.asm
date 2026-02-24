@@ -134,21 +134,28 @@ SECTION "bankA", ROMX
 INCLUDE "engine/link/link.asm"
 INCLUDE "engine/battle/link_result.asm"
 INCLUDE "data/battle/effect_command_pointers.asm"
+;
+INCLUDE "engine/battle/ai/redundant.asm"
+INCLUDE "engine/link/mystery_gift_2.asm"
 
 
 SECTION "Own Section", ROMX
 
 INCLUDE "engine/battle/swarm_shiny.asm"
 INCLUDE "engine/battle/swarm_shiny_alt.asm"
+;
+INCLUDE "engine/events/move_deleter.asm"
+INCLUDE "engine/events/move_reminder.asm"
+
 
 SECTION "bankB", ROMX
 
 INCLUDE "engine/battle/trainer_huds.asm"
 INCLUDE "data/trainers/class_names.asm"
-INCLUDE "engine/battle/ai/redundant.asm"
-INCLUDE "engine/events/move_deleter.asm"
-INCLUDE "engine/events/move_reminder.asm"
-INCLUDE "engine/link/mystery_gift_2.asm"
+;INCLUDE "engine/battle/ai/redundant.asm"  ;moved
+;INCLUDE "engine/events/move_deleter.asm"  ;moved
+;INCLUDE "engine/events/move_reminder.asm" ;moved
+;INCLUDE "engine/link/mystery_gift_2.asm"  ;moved
 INCLUDE "engine/items/tmhm.asm"
 INCLUDE "engine/pokemon/print_move_description.asm"
 INCLUDE "engine/events/pokerus/pokerus.asm"
