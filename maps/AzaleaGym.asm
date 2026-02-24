@@ -34,7 +34,7 @@ AzaleaGymBugsyScript:
 	setevent EVENT_BEAT_BUG_CATCHER_ABEL
 	writetext BugsyText_HiveBadgeSpeech
 	promptbutton
-	verbosegiveitem TM_FURY_CUTTER
+;	verbosegiveitem TM_FURY_CUTTER
 	iffalse .NoRoomForFuryCutter
 	setevent EVENT_GOT_TM75_FURY_CUTTER
 	writetext BugsyText_FuryCutterSpeech
