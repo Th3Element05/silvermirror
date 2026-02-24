@@ -162,6 +162,7 @@ MoveEffectsPointers:
 	dw DragonDance ;NEW
 	dw Tickle      ;NEW
 	dw Hex         ;NEW
+	dw HoneClaws   ;NEW
 ;	dw WeightDamage
 ;	dw Growth
 	assert_table_length NUM_MOVE_EFFECTS

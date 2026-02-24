@@ -2294,6 +2294,21 @@ Hex:
 	kingsrock
 	endmove
 
+HoneClaws:
+	checkobedience
+	usedmovetext
+	doturn
+	lowersub
+	statupanim
+	raisesub
+	attackup
+	statupmessage
+	statupfailtext
+	accuracyup
+	statupmessage
+	statupfailtext
+	endmove
+
 ;WeightDamage:
 ;	checkobedience
 ;	usedmovetext

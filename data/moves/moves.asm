@@ -172,7 +172,7 @@ Moves:
 	move REST,         EFFECT_HEAL,                0, PSYCHIC_TYPE, 100, 10,   0
 	move ROCK_SLIDE,   EFFECT_FLINCH_HIT,         75, ROCK,          90, 10,  30
 	move HYPER_FANG,   EFFECT_FLINCH_HIT,         80, NORMAL,        90, 15,  10
-	move SHARPEN,      EFFECT_ATTACK_UP,           0, NORMAL,       100, 30,   0
+	move SHARPEN,      EFFECT_HONE_CLAWS,          0, NORMAL,       100, 30,   0 ; OLD EFFECT_ATTACK_UP
 	move CONVERSION,   EFFECT_CONVERSION,          0, NORMAL,       100, 30,   0
 	move TRI_ATTACK,   EFFECT_TRI_ATTACK,         80, NORMAL,       100, 10,  20
 	move SUPER_FANG,   EFFECT_SUPER_FANG,          1, NORMAL,        90, 10,   0
