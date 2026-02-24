@@ -247,7 +247,7 @@ ViridianCityDreamEaterFisher:
 	iftrue .GotDreamEater
 	writetext ViridianCityDreamEaterFisherText
 	promptbutton
-	verbosegiveitem TM_DREAM_EATER
+;	verbosegiveitem TM_DREAM_EATER
 ;	iffalse .NoRoomForDreamEater
 	setevent EVENT_GOT_TM42_DREAM_EATER
 .GotDreamEater:

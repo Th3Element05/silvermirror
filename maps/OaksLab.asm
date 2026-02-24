@@ -1222,9 +1222,9 @@ DebugAllTMs:
 	giveitem TM_FALSE_SWIPE ; TM_WHIRLWIND
 ;	giveitem TM_MEGA_KICK ;removed
 	giveitem TM_TOXIC
-	giveitem TM_HORN_DRILL
+;	giveitem TM_HORN_DRILL
 	giveitem TM_BODY_SLAM
-	giveitem TM_TAKE_DOWN
+;	giveitem TM_TAKE_DOWN
 	giveitem TM_DOUBLE_EDGE
 	giveitem TM_BUBBLEBEAM
 	giveitem TM_WATER_GUN
@@ -1235,7 +1235,7 @@ DebugAllTMs:
 	giveitem TM_SUBMISSION
 	giveitem TM_COUNTER
 	giveitem TM_SEISMIC_TOSS
-	giveitem TM_RAGE
+;	giveitem TM_RAGE
 	giveitem TM_GIGA_DRAIN
 	giveitem TM_SOLARBEAM
 	giveitem TM_DRAGONBREATH
@@ -1245,7 +1245,7 @@ DebugAllTMs:
 	giveitem TM_FISSURE
 	giveitem TM_DIG
 	giveitem TM_PSYCHIC_M
-	giveitem TM_TELEPORT
+;	giveitem TM_TELEPORT
 ;	giveitem TM_MIMIC
 	giveitem TM_DOUBLE_TEAM
 	giveitem TM_REFLECT
@@ -1256,8 +1256,8 @@ DebugAllTMs:
 	giveitem TM_FIRE_BLAST
 	giveitem TM_SWIFT
 ;	giveitem TM_SKULL_BASH
-	giveitem TM_SOFTBOILED
-	giveitem TM_DREAM_EATER
+;	giveitem TM_SOFTBOILED
+;	giveitem TM_DREAM_EATER
 	giveitem TM_SKY_ATTACK
 	giveitem TM_REST
 	giveitem TM_THUNDER_WAVE
@@ -1275,8 +1275,8 @@ DebugAllTMs:
 	giveitem TM_ROCK_SMASH
 	giveitem TM_HIDDEN_POWER
 	giveitem TM_SUNNY_DAY
-	giveitem TM_SWEET_SCENT
-	giveitem TM_SNORE
+;	giveitem TM_SWEET_SCENT
+;	giveitem TM_SNORE
 	giveitem TM_PROTECT
 	giveitem TM_RAIN_DANCE
 	giveitem TM_ENDURE
@@ -1284,14 +1284,14 @@ DebugAllTMs:
 	giveitem TM_SHADOW_BALL
 	giveitem TM_MUD_SLAP
 	giveitem TM_SWAGGER
-	giveitem TM_SLEEP_TALK
+;	giveitem TM_SLEEP_TALK
 	giveitem TM_SLUDGE_BOMB
 	giveitem TM_SANDSTORM
 	giveitem TM_ATTRACT
 	giveitem TM_THIEF
 	giveitem TM_STEEL_WING
-	giveitem TM_FURY_CUTTER
-	giveitem TM_NIGHTMARE
+;	giveitem TM_FURY_CUTTER
+;	giveitem TM_NIGHTMARE
 .End
 	closetext
 	end

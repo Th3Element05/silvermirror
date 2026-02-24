@@ -56,7 +56,7 @@ CeladonCityGramps1Script:
 	iftrue .GotSoftboiled
 	writetext CeladonCityGramps1GiveSoftboiledText
 	promptbutton
-	verbosegiveitem TM_SOFTBOILED
+;	verbosegiveitem TM_SOFTBOILED
 ;	iffalse .NoRoomForSoftboiled
 	setevent EVENT_GOT_TM41_SOFTBOILED
 	; fallthrough
