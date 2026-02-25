@@ -1,3 +1,4 @@
+https://pret.github.io/pokecrystal/design_flaws.html#pic-banks-are-offset-by-pics_fix
 
 TEST
 berserk gene after mewtwo battle
@@ -61,7 +62,6 @@ SWEET_SCENT
 
 
 
-
 animations
 ROCKSLIDE and ROCK_THROW can be anim_call
 ENDURE can use BattleAnimSub_Focus
@@ -74,40 +74,11 @@ reduced anim_wait after BattleAnimSun_Metallic to 32 - test it
 
 
 
-Can I make movement data for:
-
-BATTLE_ANIM_OBJ_FIRE_BLAST
-BATTLE_ANIM_OBJ_GROWTH
-BATTLE_ANIM_OBJ_FOCUS
-
-to FLIP_Y and/or go DOWN?
-
-UP anim
-SWORDS_DANCE uses WHIP(7,8,9,10)
-GROWTH uses CHARGE(7,8,9)
-SLUDGE uses POISON(5,6,7,8,9)
-FOCUS uses SPEED(?,6)
-FLAME_WHEEL uses FIRE(5,6)
-ANCIENTPOWER uses ROCKS(1,2,3,4)(big)
-
-DOWN anim
-STUN_SPORE uses POWDER(1,2)
-PETAL_DANCE uses FLOWER(1-8)
-
-AROUND anim
-CONSUSED uses STATUS(1-8)
-NIGHTMARE uses ANGELS(20-32)
-
-MISC
-FLASH uses SPEED?(1,2,7,8)
-FLAME_WHEEL uses FIRE(1,2)?(3,4)(big)
-
-(reflect 5,6,7)
 
 
 
-
-
+; BATTLE_ANIM_OBJ_STAT_UP
+	battleanimobj RELATIVE_X, $b0, BATTLE_ANIM_FRAMESET_STAT_UP, BATTLE_ANIM_FUNC_MOVE_UP, PAL_BATTLE_OB_YELLOW, BATTLE_ANIM_GFX_MISC
 
 StatsUp:
 	anim_1gfx BATTLE_ANIM_GFX_MISC
@@ -128,6 +99,79 @@ StatsUp:
 	anim_loop 2, .loop
 	anim_wait 8
 	anim_ret
+
+
+; BATTLE_ANIM_OBJ_STAT_DOWN
+	battleanimobj RELATIVE_X, $90, BATTLE_ANIM_FRAMESET_STAT_DOWN, BATTLE_ANIM_FUNC_BETA_PURSUIT, PAL_BATTLE_OB_BLUE, BATTLE_ANIM_GFX_OBJECTS
+
+StatsDown:
+	anim_1gfx BATTLE_ANIM_GFX_OBJECTS
+.loop
+	anim_sound 0, 0, SFX_SWORDS_DANCE
+	anim_obj BATTLE_ANIM_OBJ_STAT_DOWN, 122, 50, $0
+	anim_wait 4
+	anim_obj BATTLE_ANIM_OBJ_STAT_DOWN, 140, 50, $0
+	anim_wait 4
+	anim_obj BATTLE_ANIM_OBJ_STAT_DOWN, 131, 50, $0
+	anim_wait 4
+	anim_obj BATTLE_ANIM_OBJ_STAT_DOWN, 149, 50, $0
+	anim_wait 4
+	anim_obj BATTLE_ANIM_OBJ_STAT_DOWN, 113, 50, $0
+	anim_wait 4
+	anim_obj BATTLE_ANIM_OBJ_STAT_DOWN, 158, 50, $0
+	anim_wait 4
+	anim_loop 2, .loop
+	anim_wait 8
+	anim_ret
+
+
+BattleAnimSub_Focus:
+.loop
+	anim_sound 0, 0, SFX_SWORDS_DANCE
+	anim_obj BATTLE_ANIM_OBJ_FOCUS, 44, 108, $6
+	anim_wait 2
+	anim_obj BATTLE_ANIM_OBJ_FOCUS, 36, 108, $6
+	anim_wait 2
+	anim_obj BATTLE_ANIM_OBJ_FOCUS, 52, 108, $8
+	anim_wait 2
+	anim_obj BATTLE_ANIM_OBJ_FOCUS, 28, 108, $8
+	anim_wait 2
+	anim_obj BATTLE_ANIM_OBJ_FOCUS, 60, 108, $6
+	anim_wait 2
+	anim_obj BATTLE_ANIM_OBJ_FOCUS, 20, 108, $8
+	anim_wait 2
+	anim_obj BATTLE_ANIM_OBJ_FOCUS, 68, 108, $8
+	anim_wait 2
+	anim_loop 3, .loop
+	anim_wait 8
+	anim_ret
+
+
+; BATTLE_ANIM_FUNC_MOVE_UP
+BattleAnimFunc_MoveUp:
+; Moves object up for 41 frames
+; Obj Param: Movement speed
+	ld hl, BATTLEANIMSTRUCT_YOFFSET
+	add hl, bc
+	ld a, [hl]
+	and a
+	jr z, .move
+	cp $d8
+	jr nc, .move
+	call DeinitBattleAnimation
+	ret
+
+.move
+	ld hl, BATTLEANIMSTRUCT_PARAM
+	add hl, bc
+	ld d, [hl]
+	ld hl, BATTLEANIMSTRUCT_YOFFSET
+	add hl, bc
+	ld a, [hl]
+	sub d
+	ld [hl], a
+	ret
+
 
 
 
