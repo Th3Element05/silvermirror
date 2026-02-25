@@ -3311,6 +3311,33 @@ BattleAnim_PoisonFang:
 ;	anim_ret
 
 BattleAnim_SkyAttack:
+;BattleAnim_Fly: (modified)
+	anim_if_param_equal $1, .turn1
+	anim_if_param_equal $2, .miss
+	anim_1gfx BATTLE_ANIM_GFX_HIT
+	anim_sound 6, 2, SFX_WHIRLWIND ;0, 1, SFX_WING_ATTACK
+	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 120, 40, $0
+	anim_wait 6
+	anim_sound 0, 1, SFX_WING_ATTACK
+	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 128, 56, $0
+	anim_wait 6
+	anim_sound 0, 1, SFX_WING_ATTACK
+	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 136, 72, $0
+	anim_wait 32
+.miss:
+	anim_bgeffect BATTLE_BG_EFFECT_SHOW_MON, $0, BG_EFFECT_USER, $0
+	anim_wait 32
+	anim_ret
+
+.turn1:
+	anim_1gfx BATTLE_ANIM_GFX_SPEED
+	anim_bgeffect BATTLE_BG_EFFECT_CYCLE_OBPALS_GRAY_AND_YELLOW, $0, $1, $0
+	anim_bgeffect BATTLE_BG_EFFECT_HIDE_MON, $0, BG_EFFECT_USER, $0
+	anim_sound 6, 2, SFX_WHIRLWIND
+	anim_call BattleAnimSub_WarpAway
+	anim_wait 64
+	anim_ret
+
 ;	anim_if_param_equal $1, BattleAnim_FocusEnergy
 ;	anim_1gfx BATTLE_ANIM_GFX_SKY_ATTACK
 ;	anim_bgeffect BATTLE_BG_EFFECT_HIDE_MON, $0, BG_EFFECT_USER, $0
@@ -3329,35 +3356,6 @@ BattleAnim_SkyAttack:
 ;	anim_bgeffect BATTLE_BG_EFFECT_SHOW_MON, $0, BG_EFFECT_USER, $0
 ;	anim_wait 16
 ;	anim_ret
-;BattleAnim_Fly: (modified)
-	anim_if_param_equal $1, .turn1
-	anim_if_param_equal $2, .miss
-	anim_1gfx BATTLE_ANIM_GFX_SKY_ATTACK
-	anim_bgeffect BATTLE_BG_EFFECT_HIDE_MON, $0, BG_EFFECT_USER, $0
-	anim_bgeffect BATTLE_BG_EFFECT_REMOVE_MON, $0, BG_EFFECT_USER, $0
-	anim_wait 8
-	anim_sound 0, 0, SFX_WHIRLWIND ;HYPER_BEAM
-	anim_obj BATTLE_ANIM_OBJ_SKY_ATTACK, 48, 88, $40
-	anim_wait 64
-	anim_incobj 1
-	anim_wait 21
-	anim_sound 0, 1, SFX_WING_ATTACK ;HYPER_BEAM
-;	anim_bgeffect BATTLE_BG_EFFECT_ALTERNATE_HUES, $0, $2, $0
-	anim_wait 64
-	anim_incobj 1
-	anim_wait 32
-.miss:
-	anim_bgeffect BATTLE_BG_EFFECT_SHOW_MON, $0, BG_EFFECT_USER, $0
-	anim_wait 16
-	anim_ret
-
-.turn1:
-	anim_1gfx BATTLE_ANIM_GFX_SPEED
-	anim_bgeffect BATTLE_BG_EFFECT_CYCLE_OBPALS_GRAY_AND_YELLOW, $0, $1, $0
-	anim_bgeffect BATTLE_BG_EFFECT_HIDE_MON, $0, BG_EFFECT_USER, $0
-	anim_call BattleAnimSub_WarpAway
-	anim_wait 64
-	anim_ret
 
 BattleAnim_Transform:
 	anim_1gfx BATTLE_ANIM_GFX_HIT
