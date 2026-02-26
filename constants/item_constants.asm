@@ -255,7 +255,7 @@ DEF TM01 EQU const_value
 	add_tm AIR_SLICE    ;TM57 ; e2 ;new, done
 	add_tm DOUBLE_EDGE  ;TM58 ; e3
 	add_tm DRAGON_PULSE ;TM59 ; e4 ;new, done
-	add_tm DRAIN_PUNCH  ;TM60 ; e5 ;new, done
+	add_tm FLASH_CANNON ;TM60 ; e5 ;new, done
 	add_tm ROLLOUT      ;TM61 ; e6
 	add_tm CURSE        ;TM62 ; e7
 	add_tm SLUDGE_BOMB  ;TM63 ; e8
@@ -280,7 +280,7 @@ DEF TM01 EQU const_value
 	add_tm WHIRLPOOL    ;TM82 ; fb
 	add_tm WATERFALL    ;TM83 ; fc
 	add_tm POISON_JAB   ;TM84 ; fd ;new, done
-	add_tm FLASH_CANNON ;TM85 ; fe ;new, done
+;	add_tm TACKLE       ;TM85 ; fe
 DEF NUM_TMS EQU __tmhm_value__ - 1
 
 MACRO add_hm

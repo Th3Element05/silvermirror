@@ -46,7 +46,7 @@ Moves:
 	move HORN_ATTACK,  EFFECT_NORMAL_HIT,         65, NORMAL,       100, 25,   0
 	move FURY_STRIKES, EFFECT_MULTI_HIT,          20, NORMAL,        85, 20,   0 ;FURY_ATTACK, removed
 	move HORN_DRILL,   EFFECT_OHKO,                1, NORMAL,        30,  5,   0
-	move DRAIN_PUNCH,  EFFECT_LEECH_HIT,          75, FIGHTING,     100, 10,   0 ;POUND, removed
+	move FLARE_BLITZ,  EFFECT_RECOIL_HIT,        120, FIRE,         100, 15,  10 ;POUND, removed
 	move BODY_SLAM,    EFFECT_BODY_SLAM,          85, NORMAL,       100, 15,  30 ; OLD: EFFECT_PARALYZE_HIT
 	move WRAP,         EFFECT_TRAP_TARGET,        15, NORMAL,        85, 20,   0
 	move TAKE_DOWN,    EFFECT_RECOIL_HIT,         90, NORMAL,        85, 20,   0
@@ -149,7 +149,7 @@ Moves:
 	move AMNESIA,      EFFECT_SP_DEF_UP_2,         0, PSYCHIC_TYPE, 100, 20,   0
 	move SIGNAL_BEAM,  EFFECT_CONFUSE_HIT,        75, BUG,          100, 15,  10 ;KINESIS, removed
 	move SOFTBOILED,   EFFECT_HEAL,                0, NORMAL,       100, 10,   0
-	move LAVA_PLUME,   EFFECT_BURN_HIT,           80, FIRE,         100, 15,  30 ;HI_JUMP_KICK, removed
+	move HEAT_WAVE,    EFFECT_BURN_HIT,          100, FIRE,          90, 10,  20 ;HI_JUMP_KICK, removed ; OLD: %10
 	move GLARE,        EFFECT_PARALYZE,            0, NORMAL,        75, 30,   0
 	move DREAM_EATER,  EFFECT_DREAM_EATER,       100, PSYCHIC_TYPE, 100, 15,   0
 	move POISON_JAB,   EFFECT_POISON_HIT,         80, POISON,       100, 20,  30 ;POISON_GAS, removed
@@ -293,7 +293,8 @@ Moves:
 ;	move BRICK_BREAK,  EFFECT_BRICK_BREAK,        75, FIGHTING,     100, 15,   0 ;new effect
 ;
 ;;	move FIRE_FANG,    EFFECT_FANG_HIT,           65, FIRE,         100, 15,  10 ;new effect
-;;	move LAVA_PLUME,   EFFECT_BURN_HIT,           80, FIRE,         100, 15,  30 ;
+;	move LAVA_PLUME,   EFFECT_BURN_HIT,           80, FIRE,         100, 15,  30 ;replaced by heat_wave
+;;	move HEAT_WAVE,    EFFECT_BURN_HIT,          100, FIRE,          90, 10,  20 ; OLD EFFECT%: 10
 ;
 ;;	move AERIAL_ACE,   EFFECT_ALWAYS_HIT,         60, FLYING,       100, 20,   0 ;
 ;;	move BOUNCE,       EFFECT_BOUNCE,             85, FLYING,        85,  5,  30 ;EFFECT_FLY (add paralyze? fly/dig have 0 effect chance)

@@ -33,7 +33,7 @@ MoveDescriptions::
 	dw HornAttackDescription
 	dw FuryStrikesDescription ;FuryAttackDescription
 	dw HornDrillDescription
-	dw DrainPunchDescription ;PoundDescription
+	dw FlareBlitzDescription ;PoundDescription
 	dw BodySlamDescription
 	dw WrapDescription
 	dw TakeDownDescription
@@ -136,7 +136,7 @@ MoveDescriptions::
 	dw AmnesiaDescription
 	dw SignalBeamDescription ;KinesisDescription
 	dw SoftboiledDescription
-	dw LavaPlumeDescription ;HiJumpKickDescription
+	dw HeatWaveDescription ;HiJumpKickDescription
 	dw GlareDescription
 	dw DreamEaterDescription
 	dw PoisonJabDescription ;PoisonGasDescription
@@ -513,10 +513,13 @@ HornDrillDescription:
 ;	db   "A one-hit KO,"
 ;	next "drill attack.@"
 
-DrainPunchDescription:
-	db   "A draining punch."
-	feed "User is healed by"
-	feed "1/2 damage dealt.@"
+FlareBlitzDescription:
+	db   "User charges while"
+	feed "cloaked in flames."
+	feed "Also hurts user.@"
+;	db   "A draining punch."
+;	feed "User is healed by"
+;	feed "1/2 damage dealt.@"
 ;PoundDescription:
 ;	db   "Pounds with fore-"
 ;	next "legs or tail.@"
@@ -1254,9 +1257,9 @@ SoftboiledDescription:
 ;	db   "Restores HP by 1/2"
 ;	next "the user's max HP.@"
 
-LavaPlumeDescription:
-	db   "A wave of lava"
-	feed "sweeps the field."
+HeatWaveDescription:
+	db   "Superheated breath"
+	feed "scorches the foe."
 	feed "May inflict burn.@"
 ;HiJumpKickDescription:
 ;	db   "May miss and hurt"

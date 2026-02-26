@@ -38,7 +38,7 @@
 	const HORN_ATTACK  ; 1e
 	const FURY_STRIKES ; 1f ;FURY_ATTACK, removed
 	const HORN_DRILL   ; 20
-	const DRAIN_PUNCH  ; 21 ;POUND, removed
+	const FLARE_BLITZ  ; 21 ;POUND, removed
 	const BODY_SLAM    ; 22
 	const WRAP         ; 23
 	const TAKE_DOWN    ; 24
@@ -141,7 +141,7 @@
 	const AMNESIA      ; 85
 	const SIGNAL_BEAM  ; 86 ;KINESIS, removed
 	const SOFTBOILED   ; 87
-	const LAVA_PLUME   ; 88 ;HI_JUMP_KICK, removed
+	const HEAT_WAVE    ; 88 ;HI_JUMP_KICK, removed
 	const GLARE        ; 89
 	const DREAM_EATER  ; 8a
 	const POISON_JAB   ; 8b ;POISON_GAS, removed
