@@ -3672,18 +3672,18 @@ BattleCommand_SleepTarget:
 	jr nz, .fail
 
 	call AnimateCurrentMove
-	ld b, SLP_MASK
-	ld a, [wInBattleTowerBattle]
-	and a
-	jr z, .random_loop
+;	ld b, SLP_MASK
+;	ld a, [wInBattleTowerBattle]
+;	and a
+;	jr z, .random_loop ; Sleep for 1-3 turns instead of 2-7
 	ld b, %011
 
 .random_loop
 	call BattleRandom
 	and b
 	jr z, .random_loop
-	cp SLP_MASK
-	jr z, .random_loop
+;	cp SLP_MASK
+;	jr z, .random_loop ; Sleep for 1-3 turns instead of 2-7
 	inc a
 	ld [de], a
 	call UpdateOpponentInParty
