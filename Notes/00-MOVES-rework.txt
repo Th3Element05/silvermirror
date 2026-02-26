@@ -63,6 +63,7 @@ SWEET_SCENT
 
 
 animations
+FLARE_BLITZ replace DRAIN_PUNCH ?
 ROCKSLIDE and ROCK_THROW can be anim_call
 ENDURE can use BattleAnimSub_Focus
 
@@ -177,9 +178,26 @@ BattleAnimFunc_MoveUp:
 
 
 
-
-
 EvolutionMoves::
+	db PETAL_DANCE	; VENUSAUR
+	db WING_ATTACK	; CHARIZARD
+	db HARDEN	; METAPOD
+	db GUST		; BUTTERFREE (16)
+	db HARDEN	; KAKUNA
+	db PIN_MISSILE	; BEEDRILL
+	db SCARY_FACE	; RAITCATE
+	db CRUSH_CLAW	; SANDSLASH
+	db SCREECH	; GOLBAT
+	db GUST		; VENOMOTH
+	db SWIFT	; PERSIAN
+	db RAGE		; PRIMEAPE
+	db EXTREMESPEED	; ARCANINE
+	db CONFUSION	; KADABRA
+	db TRI_ATTACK	; DODRIO
+
+
+
+EvolutionMoves:: ;polished crystal
 	db PETAL_DANCE  ; VENUSAUR
 	db WING_ATTACK  ; CHARIZARD
 	db FLASH_CANNON ; BLASTOISE
