@@ -4602,7 +4602,7 @@ RedGroup:
 ;	const HORN_ATTACK  ; 1e
 ;	const FURY_STRIKES ; 1f ;fury_attack, removed
 ;	const HORN_DRILL   ; 20
-;	const DRAIN_PUNCH  ; 21 ;pound, removed
+;	const FLARE_BLITZ  ; 21 ;pound, removed
 ;	const BODY_SLAM    ; 22
 ;	const WRAP         ; 23
 ;	const TAKE_DOWN    ; 24
@@ -4705,7 +4705,7 @@ RedGroup:
 ;	const AMNESIA      ; 85
 ;	const SIGNAL_BEAM  ; 86 ;kinesis, removed
 ;	const SOFTBOILED   ; 87
-;	const LAVA_PLUME   ; 88 ;hi_jump_kick, removed
+;	const HEAT_WAVE    ; 88 ;hi_jump_kick, removed
 ;	const GLARE        ; 89
 ;	const DREAM_EATER  ; 8a
 ;	const POISON_JAB   ; 8b ;poison_gas, removed
