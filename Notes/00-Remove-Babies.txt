@@ -7,7 +7,7 @@ remove:
 	MAGBY		magmar
 	  TOGEPI
 	  TOGETIC
-	    DELIBIRD
+	    UNOWN
 	253
 
 add:
@@ -18,10 +18,30 @@ add:
 	weavile		H_razor_claw @night
 	yanmega		M_ancientpower
 	  tangrowth	M_ancientpower
-	  magnezone	thunderstone
-	    ambipom	M_double_hit
+	  magnezone	power_plant, thunderstone? 
+	    leafeon	viridian_forest
+	    glaceon	seafoam, ice_path
 	not:
 	togekiss	shiny_stone (happiness?)
+
+order:
+	pichu = MAGNEZONE
+	cleffa = TANGROWTH
+	igglybuff = LEAFEON
+	togepi = GLACEON
+shift up skip togetic
+	yanma > YANMEGA (togetic)
+	murkrow > HONCHKROW (smoochum)
+	unown = MISMAGIUS
+	gligar > GLISCOR (elekid)
+	sneasel > WEAVILE (magby)
+	piloswine > MAMOSWINE (253)
+shift up skip smoochum
+shift up skip elekid
+shift up skip magby
+	CELEBI = 252
+	MISSINGNO = 253
+
 
 
 credits (Polished Crystal)
