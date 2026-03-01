@@ -191,9 +191,10 @@ INCLUDE "engine/battle/core.asm"
 
 SECTION "bank10", ROMX
 
-INCLUDE "engine/pokedex/pokedex.asm"
+;INCLUDE "engine/pokedex/pokedex.asm" ;move to "bank11"
 INCLUDE "data/moves/moves.asm"
 INCLUDE "engine/pokemon/evolve.asm"
+INCLUDE "engine/pokemon/mail.asm" ;moved from "bank11"
 
 
 SECTION "bank11", ROMX
@@ -201,7 +202,8 @@ SECTION "bank11", ROMX
 INCLUDE "engine/events/fruit_trees.asm"
 INCLUDE "engine/battle/ai/move.asm"
 INCLUDE "engine/pokedex/pokedex_2.asm"
-INCLUDE "engine/pokemon/mail.asm"
+;INCLUDE "engine/pokemon/mail.asm" ;moved to "bank10"
+INCLUDE "engine/pokedex/pokedex.asm" ;moved from "bank10"
 
 
 SECTION "Crystal Features 1", ROMX
