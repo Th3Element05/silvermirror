@@ -93,7 +93,7 @@ MoveGrammar:
 	db FORESIGHT
 	db CHARM
 	db ATTRACT
-	db ROCK_SMASH
+	db BRICK_BREAK
 	db 0 ; end set
 
 ; 4: originally "[mon]の¯[move]!" ("[mon]'s¯[move]!")
