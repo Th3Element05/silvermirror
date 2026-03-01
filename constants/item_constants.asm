@@ -250,21 +250,21 @@ DEF TM01 EQU const_value
 	add_tm FOCUS_BLAST  ;TM52 ; dd ;new, done
 	add_tm ENERGY_BALL  ;TM53 ; de ;new, done
 	add_tm FALSE_SWIPE  ;TM54 ; df
-	add_tm ROCK_SMASH   ;TM55 ; e0
+	add_tm BRICK_BREAK  ;TM55 ; e0
 	add_tm HEADBUTT     ;TM56 ; e1
 	add_tm AIR_SLICE    ;TM57 ; e2 ;new, done
 	add_tm DOUBLE_EDGE  ;TM58 ; e3
 	add_tm DRAGON_PULSE ;TM59 ; e4 ;new, done
 	add_tm FLASH_CANNON ;TM60 ; e5 ;new, done
 	add_tm ROLLOUT      ;TM61 ; e6
-	add_tm CURSE        ;TM62 ; e7
+	add_tm SILVER_WIND  ;TM62 ; e7 ;new, 
 	add_tm SLUDGE_BOMB  ;TM63 ; e8
 	add_tm SWAGGER      ;TM64 ; e9
 	add_tm SHADOW_CLAW  ;TM65 ; ea ;new, done
 	add_tm THIEF        ;TM66 ; eb
 	add_tm STEEL_WING   ;TM67 ; ec
 	add_tm GIGA_IMPACT  ;TM68 ; ed ;new, done
-	add_tm ROCK_POLISH  ;TM69 ; ee ;new, done
+	add_tm CURSE        ;TM69 ; ee
 	add_tm SHADOW_BALL  ;TM70 ; ef
 	add_tm STONE_EDGE   ;TM71 ; f0 ;new, done
 	add_tm DRAGONBREATH ;TM72 ; f1
