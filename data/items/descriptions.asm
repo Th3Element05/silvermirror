@@ -255,7 +255,7 @@ ItemDescriptions:
 	dw TeruSama1Desc
 	dw TeruSama1Desc
 	dw TeruSama1Desc
-	dw TeruSama1Desc
+;	dw TeruSama1Desc
 	assert_table_length NUM_ITEMS + NUM_TMS
 ;	dw TeruSama2Desc
 ;	dw TeruSama2Desc

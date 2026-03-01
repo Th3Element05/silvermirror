@@ -111,7 +111,7 @@ BattleAnimations::
 	dw BattleAnim_Minimize
 	dw BattleAnim_Smokescreen
 	dw BattleAnim_ConfuseRay
-	dw BattleAnim_Tickle ;_Withdraw ;
+	dw BattleAnim_SilverWind ;_Withdraw ;
 	dw BattleAnim_DefenseCurl
 	dw BattleAnim_Barrier
 	dw BattleAnim_LightScreen
@@ -133,7 +133,7 @@ BattleAnimations::
 	dw BattleAnim_Swift
 	dw BattleAnim_Astonish ;_SkullBash ;
 	dw BattleAnim_IcicleSpear ;_SpikeCannon
-	dw BattleAnim_RockPolish ;_Constrict ;
+	dw BattleAnim_AquaJet ;_Constrict ;
 	dw BattleAnim_Amnesia
 	dw BattleAnim_SignalBeam ;_Kinesis ;
 	dw BattleAnim_Softboiled
@@ -2613,17 +2613,22 @@ BattleAnim_ConfuseRay:
 	anim_wait 32
 	anim_ret
 
-BattleAnim_Tickle:
-	anim_1gfx BATTLE_ANIM_GFX_OBJECTS
-	anim_call BattleAnim_TargetObj_1Row
-	anim_bgeffect BATTLE_BG_EFFECT_WOBBLE_MON, $0, BG_EFFECT_USER, $0
-	anim_sound 0, 0, SFX_ATTRACT
+BattleAnim_SilverWind:
+	anim_setobjpal PAL_BATTLE_OB_YELLOW, PAL_BTLCUSTOM_HP_BUG
+	anim_jump BattleAnimSub_Wind
+;	anim_ret
+
+;BattleAnim_Tickle:
+;	anim_1gfx BATTLE_ANIM_GFX_OBJECTS
+;	anim_call BattleAnim_TargetObj_1Row
+;	anim_bgeffect BATTLE_BG_EFFECT_WOBBLE_MON, $0, BG_EFFECT_USER, $0
+;	anim_sound 0, 0, SFX_ATTRACT
 ;	anim_obj BATTLE_ANIM_OBJ_HEART, 64, 80, $0
-	anim_wait 32
-	anim_incbgeffect BATTLE_BG_EFFECT_WOBBLE_MON
-	anim_call BattleAnim_ShowMon_0
-	anim_wait 4
-	anim_ret
+;	anim_wait 32
+;	anim_incbgeffect BATTLE_BG_EFFECT_WOBBLE_MON
+;	anim_call BattleAnim_ShowMon_0
+;	anim_wait 4
+;	anim_ret
 
 ;BattleAnim_Withdraw:
 ;	anim_1gfx BATTLE_ANIM_GFX_REFLECT
@@ -3039,36 +3044,50 @@ BattleAnim_IcicleSpear:
 	anim_wait 16
 	anim_ret
 
-BattleAnim_RockPolish:
-	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_HP_ROCK
-	anim_2gfx BATTLE_ANIM_GFX_SHAPES, BATTLE_ANIM_GFX_SPEED
-	anim_call BattleAnim_TargetObj_1Row
-	anim_sound 0, 0, SFX_RAZOR_WIND
-	anim_bgeffect BATTLE_BG_EFFECT_FADE_MON_TO_LIGHT_REPEATING, $0, BG_EFFECT_USER, $40
-	anim_obj BATTLE_ANIM_OBJ_DEFENSE_CURL, 48, 88, $0
-	anim_wait 18
-.loop
-	anim_sound 0, 0, SFX_SWORDS_DANCE
-	anim_obj BATTLE_ANIM_OBJ_FOCUS, 44, 108, $6
-	anim_wait 2
-	anim_obj BATTLE_ANIM_OBJ_FOCUS, 36, 108, $6
-	anim_wait 2
-	anim_obj BATTLE_ANIM_OBJ_FOCUS, 52, 108, $8
-	anim_wait 2
-	anim_obj BATTLE_ANIM_OBJ_FOCUS, 28, 108, $8
-	anim_wait 2
-	anim_obj BATTLE_ANIM_OBJ_FOCUS, 60, 108, $6
-	anim_wait 2
-	anim_obj BATTLE_ANIM_OBJ_FOCUS, 20, 108, $8
-	anim_wait 2
-	anim_obj BATTLE_ANIM_OBJ_FOCUS, 68, 108, $8
-	anim_wait 2
-	anim_loop 5, .loop
-	anim_wait 8
-	anim_incobj 2
-	anim_incbgeffect BATTLE_BG_EFFECT_FADE_MON_TO_LIGHT_REPEATING
-	anim_call BattleAnim_ShowMon_0
+BattleAnim_AquaJet:
+	anim_setobjpal PAL_BATTLE_OB_BLUE, PAL_BTLCUSTOM_WATER
+	anim_2gfx BATTLE_ANIM_GFX_SPEED, BATTLE_ANIM_GFX_WATER
+	anim_sound 0, 0, SFX_MENU
+	anim_bgeffect BATTLE_BG_EFFECT_HIDE_MON, $0, BG_EFFECT_USER, $0
+	anim_call BattleAnimSub_QuickAttack
+	anim_wait 12
+	anim_sound 0, 1, SFX_HYDRO_PUMP
+	anim_obj BATTLE_ANIM_OBJ_HYDRO_PUMP, 132, 72, $0
+	anim_wait 32
+	anim_bgeffect BATTLE_BG_EFFECT_SHOW_MON, $0, BG_EFFECT_USER, $0
+	anim_wait 16
 	anim_ret
+
+;BattleAnim_RockPolish:
+;	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_HP_ROCK
+;	anim_2gfx BATTLE_ANIM_GFX_SHAPES, BATTLE_ANIM_GFX_SPEED
+;	anim_call BattleAnim_TargetObj_1Row
+;	anim_sound 0, 0, SFX_RAZOR_WIND
+;	anim_bgeffect BATTLE_BG_EFFECT_FADE_MON_TO_LIGHT_REPEATING, $0, BG_EFFECT_USER, $40
+;	anim_obj BATTLE_ANIM_OBJ_DEFENSE_CURL, 48, 88, $0
+;	anim_wait 18
+;.loop
+;	anim_sound 0, 0, SFX_SWORDS_DANCE
+;	anim_obj BATTLE_ANIM_OBJ_FOCUS, 44, 108, $6
+;	anim_wait 2
+;	anim_obj BATTLE_ANIM_OBJ_FOCUS, 36, 108, $6
+;	anim_wait 2
+;	anim_obj BATTLE_ANIM_OBJ_FOCUS, 52, 108, $8
+;	anim_wait 2
+;	anim_obj BATTLE_ANIM_OBJ_FOCUS, 28, 108, $8
+;	anim_wait 2
+;	anim_obj BATTLE_ANIM_OBJ_FOCUS, 60, 108, $6
+;	anim_wait 2
+;	anim_obj BATTLE_ANIM_OBJ_FOCUS, 20, 108, $8
+;	anim_wait 2
+;	anim_obj BATTLE_ANIM_OBJ_FOCUS, 68, 108, $8
+;	anim_wait 2
+;	anim_loop 5, .loop
+;	anim_wait 8
+;	anim_incobj 2
+;	anim_incbgeffect BATTLE_BG_EFFECT_FADE_MON_TO_LIGHT_REPEATING
+;	anim_call BattleAnim_ShowMon_0
+;	anim_ret
 
 ;BattleAnim_Constrict:
 ;	anim_1gfx BATTLE_ANIM_GFX_ROPE
@@ -4536,6 +4555,7 @@ BattleAnim_PerishSong:
 
 BattleAnim_IcyWind:
 	anim_setobjpal PAL_BATTLE_OB_YELLOW, PAL_BTLCUSTOM_ICE
+BattleAnimSub_Wind:
 	anim_1gfx BATTLE_ANIM_GFX_SPEED
 	anim_bgeffect BATTLE_BG_EFFECT_CYCLE_OBPALS_GRAY_AND_YELLOW, $0, $2, $0
 	anim_bgeffect BATTLE_BG_EFFECT_ALTERNATE_HUES, $0, $2, $0

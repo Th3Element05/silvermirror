@@ -115,7 +115,7 @@
 	const MINIMIZE     ; 6b
 	const SMOKESCREEN  ; 6c
 	const CONFUSE_RAY  ; 6d
-	const TICKLE       ; 6e ;WITHDRAW, removed
+	const SILVER_WIND  ; 6e ;WITHDRAW, removed
 	const DEFENSE_CURL ; 6f
 	const BARRIER      ; 70
 	const LIGHT_SCREEN ; 71
@@ -137,7 +137,7 @@
 	const SWIFT        ; 81
 	const ASTONISH     ; 82 ;SKULL_BASH, removed
 	const ICICLE_SPEAR ; 83 ;SPIKE_CANNON, removed
-	const ROCK_POLISH  ; 84 ;CONSTRICT, removed
+	const AQUA_JET     ; 84 ;CONSTRICT, removed
 	const AMNESIA      ; 85
 	const SIGNAL_BEAM  ; 86 ;KINESIS, removed
 	const SOFTBOILED   ; 87
@@ -254,7 +254,7 @@
 	const ANCIENTPOWER ; f6
 	const SHADOW_BALL  ; f7
 	const FUTURE_SIGHT ; f8
-	const ROCK_SMASH   ; f9 ;brick_break?
+	const BRICK_BREAK  ; f9 ;ROCK_SMASH, removed
 	const WHIRLPOOL    ; fa
 	const DARK_PULSE   ; fb ;BEAT_UP, removed
 	const FIRE_FANG    ; fc
