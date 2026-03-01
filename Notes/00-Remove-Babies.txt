@@ -7,7 +7,7 @@ remove:
 	MAGBY		magmar
 	  TOGEPI
 	  TOGETIC
-	    UNOWN
+	    UNOWN (PORYGON2 instead? also?)
 	253
 
 add:
@@ -32,7 +32,7 @@ order:
 shift up skip togetic
 	yanma > YANMEGA (togetic)
 	murkrow > HONCHKROW (smoochum)
-	unown = MISMAGIUS
+	misdreavus > MISMAGIUS (porygon2)
 	gligar > GLISCOR (elekid)
 	sneasel > WEAVILE (magby)
 	piloswine > MAMOSWINE (253)
