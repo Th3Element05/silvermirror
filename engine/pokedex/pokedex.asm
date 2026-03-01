@@ -1199,9 +1199,9 @@ Pokedex_DrawOptionScreenBG:
 	db $3b, " OPTION ", $3c, -1
 
 .Modes:
-	db   "KANTO #DEX" ; "NEW #DEX MODE"
-	next "JOHTO #DEX" ; "OLD #DEX MODE"
-	next "A to Z MODE"
+	db   "NUMBER ORDER" ;"KANTO #DEX" ; "NEW #DEX MODE"
+;	next "JOHTO #DEX" ; "OLD #DEX MODE"
+	next "ALPHABETICAL" ;"A to Z MODE"
 	db   "@"
 
 .UnownMode:
@@ -1619,7 +1619,7 @@ Pokedex_OrderMonsByMode:
 
 .Jumptable:
 	dw .NewMode
-	dw .OldMode
+;	dw .OldMode
 	dw Pokedex_ABCMode
 
 .NewMode:
@@ -1636,19 +1636,19 @@ Pokedex_OrderMonsByMode:
 	call .FindLastSeen
 	ret
 
-.OldMode:
-;	ld hl, wPokedexOrder
-;	ld a, $1
-;	ld c, NUM_POKEMON
-;.loopold
-;	ld [hli], a
-;	inc a
-;	dec c
-;	jr nz, .loopold
-;	call .FindLastSeen
-;	ret
-	ld de, OldPokedexOrder ;silvermirror
-	jr .do_dex             ;silvermirror
+;.OldMode:
+;;	ld hl, wPokedexOrder
+;;	ld a, $1
+;;	ld c, NUM_POKEMON
+;;.loopold
+;;	ld [hli], a
+;;	inc a
+;;	dec c
+;;	jr nz, .loopold
+;;	call .FindLastSeen
+;;	ret
+;	ld de, OldPokedexOrder ;silvermirror
+;	jr .do_dex             ;silvermirror
 
 .FindLastSeen:
 	ld hl, wPokedexOrder + NUM_POKEMON - 1
@@ -1707,7 +1707,7 @@ INCLUDE "data/pokemon/dex_order_alpha.asm"
 
 INCLUDE "data/pokemon/dex_order_new.asm"
 
-INCLUDE "data/pokemon/dex_order_old.asm" ;silvermirror
+;INCLUDE "data/pokemon/dex_order_old.asm" ;silvermirror
 
 Pokedex_DisplayModeDescription:
 	xor a
@@ -1728,25 +1728,31 @@ Pokedex_DisplayModeDescription:
 
 .Modes:
 	dw .NewMode
-	dw .OldMode
+;	dw .OldMode
 	dw .ABCMode
 	dw .UnownMode
 
 .NewMode:
-	db   "<PK><MN> are listed by"
-	next "evolution type.@"
+	db   " <PK><MN> are listed in"
+	next " numerical order.@"
+;	db   "<PK><MN> are listed by"
+;	next "evolution type.@"
 
-.OldMode:
-	db   "<PK><MN> are listed by"
-	next "official type.@"
+;.OldMode:
+;	db   "<PK><MN> are listed by"
+;	next "official type.@"
 
 .ABCMode:
-	db   "<PK><MN> are listed"
-	next "alphabetically.@"
+	db   " <PK><MN> are listed"
+	next " alphabetically.@"
+;	db   "<PK><MN> are listed"
+;	next "alphabetically.@"
 
 .UnownMode:
-	db   "UNOWN are listed"
-	next "in catching order.@"
+	db   " UNOWN are listed in"
+	next " the order caught.@"
+;	db   "UNOWN are listed"
+;	next "in catching order.@"
 
 Pokedex_DisplayChangingModesMessage:
 	xor a
