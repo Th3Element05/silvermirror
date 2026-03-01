@@ -29,7 +29,7 @@ CeladonMansionEeveePokeballScript:
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	promptbutton
-	givepoke EEVEE, 5
+	givepoke EEVEE, 10
 	closetext
 	setevent EVENT_GOT_EEVEE_FROM_CELADON_MANSION
 	end
