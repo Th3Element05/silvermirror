@@ -254,7 +254,7 @@ ItemNames::
 	li "TM82"
 	li "TM83"
 	li "TM84"
-	li "TM85"
+;	li "TM85"
 	assert_list_length NUM_ITEMS + NUM_TMS; + 2 ; count ITEM_C3 and ITEM_DC
 ;	li "HM01"
 ;	li "HM02"

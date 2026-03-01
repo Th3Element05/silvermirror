@@ -110,7 +110,7 @@ MoveDescriptions::
 	dw MinimizeDescription
 	dw SmokescreenDescription
 	dw ConfuseRayDescription
-	dw TickleDescription ;WithdrawDescription
+	dw SilverWindDescription ;WithdrawDescription
 	dw DefenseCurlDescription
 	dw BarrierDescription
 	dw LightScreenDescription
@@ -132,7 +132,7 @@ MoveDescriptions::
 	dw SwiftDescription
 	dw AstonishDescription ;SkullBashDescription
 	dw IcicleSpearDescription ;SpikeCannonDescription
-	dw RockPolishDescription ;ConstrictDescription
+	dw AquaJetDescription ;ConstrictDescription
 	dw AmnesiaDescription
 	dw SignalBeamDescription ;KinesisDescription
 	dw SoftboiledDescription
@@ -249,7 +249,7 @@ MoveDescriptions::
 	dw AncientpowerDescription
 	dw ShadowBallDescription
 	dw FutureSightDescription
-	dw RockSmashDescription
+	dw BrickBreakDescription ;RockSmashDescription
 	dw WhirlpoolDescription
 	dw DarkPulseDescription ;BeatUpDescription
 	dw FireFangDescription
@@ -1066,10 +1066,15 @@ ConfuseRayDescription:
 ;	db   "A move that causes"
 ;	next "confusion.@"
 
-TickleDescription:
-	db   "Tickles the foe"
-	feed "to lower their"
-	feed "ATTACK & DEFENSE.@"
+SilverWindDescription:
+	db   "Special BUG-type"
+	feed "attack. May raise"
+	feed "all stats of user.@"
+	
+;TickleDescription:
+;	db   "Tickles the foe"
+;	feed "to lower their"
+;	feed "ATTACK & DEFENSE.@"
 ;WithdrawDescription:
 ;	db   "Heightens the"
 ;	next "user's DEFENSE.@"
@@ -1227,6 +1232,10 @@ IcicleSpearDescription:
 ;	db   "Fires spikes to"
 ;	next "hit 2-5 times.@"
 
+AquaJetDescription:
+	db   "User lunges at"
+	feed "blinding speed."
+	feed "Always goes first.@"
 RockPolishDescription:
 	db   "User polishes its"
 	feed "body to greatly"
@@ -2088,7 +2097,7 @@ ExtremespeedDescription:
 AncientpowerDescription:
 	db   "Prehistoric attack"
 	feed "that might raise"
-	feed "all stats at once.@"
+	feed "all stats of user.@"
 ;	db   "An attack that may"
 ;	next "raise all stats.@"
 
@@ -2106,7 +2115,8 @@ FutureSightDescription:
 ;	db   "An attack that"
 ;	next "hits on 3rd turn.@"
 
-RockSmashDescription:
+BrickBreakDescription:
+;RockSmashDescription:
 	db   "Attack with tough"
 	feed "fists that can"
 ;	feed "destroy barriers.@"

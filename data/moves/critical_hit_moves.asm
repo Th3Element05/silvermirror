@@ -1,7 +1,7 @@
 CriticalHitMoves:
 	db KARATE_CHOP
 	db SHADOW_CLAW
-	db AIR_SLICE ;RAZOR_WIND, removed
+;	db AIR_SLICE ;RAZOR_WIND, removed
 	db POISON_TAIL
 	db RAZOR_LEAF
 	db SKY_ATTACK

@@ -671,6 +671,7 @@ DunsparceEggMoves:
 ;	db ROCK_SLIDE   ;tm48
 	db BITE
 ;	db RAGE         ;tm20
+	db HEX
 	db -1 ; end
 
 GligarEggMoves:
