@@ -402,6 +402,7 @@ DeliverOaksParcelScript:
 	setmapscene ROUTE_22, SCENE_ROUTE22_RIVAL
 	setscene SCENE_OAKSLAB_NOOP
 	special RestartMapMusic
+	setlasttalked OAKSLAB_OAK
 	faceplayer
 	opentext
 	writetext OaksLabOakGivePhoneNumberText
@@ -1272,7 +1273,7 @@ DebugAllTMs:
 	giveitem TM_HEADBUTT
 	giveitem TM_CURSE
 	giveitem TM_ROLLOUT
-	giveitem TM_ROCK_SMASH
+	giveitem TM_BRICK_BREAK
 	giveitem TM_HIDDEN_POWER
 	giveitem TM_SUNNY_DAY
 ;	giveitem TM_SWEET_SCENT
@@ -1358,7 +1359,7 @@ DebugAllHMs:
 	writetext DebugAskRockSmashText
 	yesorno
 	iffalse .End
-	giveitem TM_ROCK_SMASH
+	giveitem TM_BRICK_BREAK
 	setflag ENGINE_PAGER_ROCK_SMASH
 	setevent EVENT_GOT_TM58_ROCK_SMASH
 .End

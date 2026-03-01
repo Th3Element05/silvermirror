@@ -77,7 +77,7 @@ Route20RockSmashGuyScript:
 	promptbutton
 	writetext Route20RockSmashGuyGiveTMText
 	promptbutton
-	verbosegiveitem TM_ROCK_SMASH
+	verbosegiveitem TM_BRICK_BREAK
 	setevent EVENT_GOT_TM58_ROCK_SMASH
 	turnobject ROUTE_20_COOLTRAINERM, LEFT
 	writetext Route20RockSmashGuyLetsGoText
