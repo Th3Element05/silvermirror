@@ -1249,6 +1249,7 @@ BattleCommand_Stab:
 .go
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVarAddr
+	and TYPE_MASK ;phys/spec split
 	ld [wCurType], a
 
 	push hl
@@ -1297,6 +1298,7 @@ BattleCommand_Stab:
 .SkipStab:
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVar
+	and TYPE_MASK ;phys/spec split
 	ld b, a
 	ld hl, TypeMatchups
 
@@ -1411,6 +1413,7 @@ BattleCheckTypeMatchup:
 .get_type
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVar ; preserves hl, de, and bc
+	and TYPE_MASK ;phys/spec split
 	; fallthrough
 CheckTypeMatchup:
 	push hl
@@ -2020,6 +2023,7 @@ BattleCommand_MoveAnimNoSub:
 .hidden_power
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVar
+	and TYPE_MASK ;phys/spec split
 	ld [wBattleAnimParam], a
 	ld a, [wLinkMode]
 	and a
@@ -3070,6 +3074,7 @@ ConfusionDamageCalc:
 	ld b, a
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVar
+	and TYPE_MASK ;phys/spec split
 	cp b
 	jr nz, .DoneItem
 
@@ -4014,6 +4019,7 @@ BattleCommand_FreezeTarget: ;101
 BattleCommand_FangEffect: ;BattleCommand_Unused3C:
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVarAddr
+	and TYPE_MASK ;phys/spec split
 	cp FIRE
 	jr z, BattleCommand_BurnTarget
 	cp ICE
@@ -6509,6 +6515,7 @@ BattleCommand_DefrostTarget:
 ; Thaw target if it's a fire-type move
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVar
+	and TYPE_MASK ;phys/spec split
 	cp FIRE
 	ret nz
 
