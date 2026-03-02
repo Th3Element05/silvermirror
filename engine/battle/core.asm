@@ -6013,15 +6013,29 @@ MoveInfoBox:
 	ld b, a
 	farcall GetMoveCategoryName
 	hlcoord 1, 9
-;	ld de, .Type
+
+	ld a, [wOptions2]
+	bit PHYS_SPEC_SPLIT, a
+	jr nz, .classic
+
+; split
 	ld de, wStringBuffer1
 	call PlaceString
 
-	hlcoord 7, 11
 	ld h, b
 	ld l, c
 	ld [hl], "/"
+	jr .print_it
 
+.classic
+	ld de, .Type
+	call PlaceString
+	hlcoord 7, 11
+	ld [hl], "/"
+	callfar UpdateMoveData
+	; fallthrough
+
+.print_it
 ;	callfar UpdateMoveData
 	ld a, [wPlayerMoveStruct + MOVE_ANIM]
 	ld b, a
@@ -6033,8 +6047,8 @@ MoveInfoBox:
 
 .Disabled:
 	db "Disabled!@"
-;.Type:
-;	db "TYPE/@"
+.Type:
+	db "TYPE/@"
 
 .PrintPP:
 	hlcoord 5, 11

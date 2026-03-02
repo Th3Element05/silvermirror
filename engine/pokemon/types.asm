@@ -149,6 +149,7 @@ PrintBattleMoveType:
 	ld a, BANK(Moves)
 	call FarCopyBytes
 	ld a, [wStringBuffer1 + MOVE_TYPE]
+	and TYPE_MASK ;phys/spec split
 	pop hl
 
 	ld b, a

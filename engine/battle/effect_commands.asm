@@ -2590,11 +2590,24 @@ PlayerAttackDamage:
 	ld d, a
 	ret z
 
+	ld a, [wOptions2]
+	bit PHYS_SPEC_SPLIT, a
+	jr nz, .classic
+
+; split
 	ld a, [hl]
 	cp SPECIAL
 	jr nc, .special
+	jr .physical
+	
+.classic
+	ld a, [hl]
+	and TYPE_MASK
+	cp SPECIAL_C
+	jr nc, .special
 
 ; physical
+.physical
 	ld hl, wEnemyMonDefense
 	ld a, [hli]
 	ld b, a
@@ -2840,11 +2853,24 @@ EnemyAttackDamage:
 	and a
 	ret z
 
+	ld a, [wOptions2]
+	bit PHYS_SPEC_SPLIT, a
+	jr nz, .classic
+
+; split
 	ld a, [hl]
 	cp SPECIAL
 	jr nc, .special
+	jr .physical
+	
+.classic
+	ld a, [hl]
+	and TYPE_MASK
+	cp SPECIAL_C
+	jr nc, .special
 
 ; physical
+.physical
 	ld hl, wBattleMonDefense
 	ld a, [hli]
 	ld b, a

@@ -3,8 +3,9 @@
 	const OPT_TEXT_SPEED    ; 0
 	const OPT_BATTLE_SCENE  ; 1
 	const OPT_BATTLE_STYLE  ; 2
+	const OPT_PHYS_SPEC
 	const OPT_SOUND         ; 3
-	const OPT_PRINT         ; 4
+;	const OPT_PRINT         ; 4
 	const OPT_MENU_CLOCK    ; 5 ;OPT_MENU_ACCOUNT  ; 5
 	const OPT_FRAME         ; 6
 	const OPT_CANCEL        ; 7
@@ -81,10 +82,12 @@ StringOptions:
 	db "        :<LF>"
 	db "BATTLE STYLE<LF>"
 	db "        :<LF>"
+	db "PHYSCIAL/SPECIAL<LF>"
+	db "        :<LF>"
 	db "SOUND<LF>"
 	db "        :<LF>"
-	db "PRINT<LF>"
-	db "        :<LF>"
+;	db "PRINT<LF>"
+;	db "        :<LF>"
 	db "MENU CLOCK<LF>" ;"MENU ACCOUNT<LF>"
 	db "        :<LF>"
 	db "FRAME<LF>"
@@ -99,8 +102,9 @@ GetOptionPointer:
 	dw Options_TextSpeed
 	dw Options_BattleScene
 	dw Options_BattleStyle
+	dw Options_Phys_Spec
 	dw Options_Sound
-	dw Options_Print
+;	dw Options_Print
 	dw Options_MenuClock ;Options_MenuAccount
 	dw Options_Frame
 	dw Options_Cancel
@@ -268,6 +272,44 @@ Options_BattleStyle:
 .Shift: db "SHIFT@"
 .Set:   db "SET  @"
 
+Options_Phys_Spec:
+	ld hl, wOptions2
+	ldh a, [hJoyPressed]
+	bit D_LEFT_F, a
+	jr nz, .LeftPressed
+	bit D_RIGHT_F, a
+	jr z, .NonePressed
+	bit PHYS_SPEC_SPLIT, [hl]
+	jr nz, .ToggleSplit
+	jr .ToggleClassic
+
+.LeftPressed:
+	bit PHYS_SPEC_SPLIT, [hl]
+	jr z, .ToggleClassic
+	jr .ToggleSplit
+
+.NonePressed:
+	bit PHYS_SPEC_SPLIT, [hl]
+	jr nz, .ToggleClassic
+
+.ToggleSplit:
+	res PHYS_SPEC_SPLIT, [hl]
+	ld de, .Split
+	jr .Display
+
+.ToggleClassic:
+	set PHYS_SPEC_SPLIT, [hl]
+	ld de, .Classic
+
+.Display:
+	hlcoord 11, 9 ;7
+	call PlaceString
+	and a
+	ret
+
+.Split:   db "SPLIT  @"
+.Classic: db "CLASSIC@"
+
 Options_Sound:
 	ld hl, wOptions
 	ldh a, [hJoyPressed]
@@ -305,7 +347,7 @@ Options_Sound:
 	ld de, .Stereo
 
 .Display:
-	hlcoord 11, 9
+	hlcoord 11, 11 ;9
 	call PlaceString
 	and a
 	ret
