@@ -4,7 +4,7 @@
 	db  33, 136,   0,  29,   6,   6
 	;   hp  atk  def  spd  sat  sdf
 
-	db NORMAL, NORMAL ; type
+	db BIRD, NORMAL ; type ;NORMAL, NORMAL ; type
 	db 29 ; catch rate
 	db 255 ; base exp
 	db RARE_CANDY, RARE_CANDY ; items
