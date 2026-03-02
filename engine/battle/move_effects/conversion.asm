@@ -23,6 +23,7 @@ BattleCommand_Conversion:
 	dec a
 	ld hl, Moves + MOVE_TYPE
 	call GetMoveAttr
+	and TYPE_MASK ;phys/spec split
 	ld [de], a
 	inc de
 	pop bc
