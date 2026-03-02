@@ -980,7 +980,8 @@ MoveScreenLoop:
 	hlcoord 1, 12
 	lb bc, 5, SCREEN_WIDTH - 2
 	call ClearBox
-	hlcoord 1, 12
+;	hlcoord 1, 12
+	hlcoord 2, 13
 	ld de, String_MoveWhere
 	call PlaceString
 	jp .joy_loop
@@ -1152,7 +1153,9 @@ MoveScreen2DMenuData:
 	db D_UP | D_DOWN | D_LEFT | D_RIGHT | A_BUTTON | B_BUTTON ; accepted buttons
 
 String_MoveWhere:
-	db "Where?@"
+;	db "Where?@"
+	db   "Swap with"
+	feed "which move?@"
 
 SetUpMoveScreenBG:
 	call ClearBGPalettes
@@ -1171,8 +1174,10 @@ SetUpMoveScreenBG:
 	ld [wTempIconSpecies], a
 	ld e, MONICON_MOVES
 	farcall LoadMenuMonIcon
-	hlcoord 0, 1
-	ld b, 9
+;	hlcoord 0, 1
+	hlcoord 0, -1
+;	ld b, 9
+	ld b, 1
 	ld c, 18
 	call Textbox
 	hlcoord 0, 11
@@ -1246,6 +1251,7 @@ PrepareToPlaceMoveData:
 PlaceMoveData:
 	xor a
 	ldh [hBGMapMode], a
+; Print UI element
 	hlcoord 0, 10
 	ld de, String_MoveType_Top
 	call PlaceString
@@ -1255,6 +1261,11 @@ PlaceMoveData:
 	hlcoord 12, 12
 	ld de, String_MoveAtk
 	call PlaceString
+	hlcoord 12, 13
+	ld de, String_MoveAcc
+	call PlaceString
+
+; Print move type
 	ld a, [wCurSpecies]
 	ld b, a
 	hlcoord 2, 12
@@ -1276,6 +1287,8 @@ PlaceMoveData:
 
 .classic
 	predef PrintMoveType
+
+; Print move power
 	ld a, [wCurSpecies]
 	dec a
 	ld hl, Moves + MOVE_POWER
@@ -1290,12 +1303,37 @@ PlaceMoveData:
 	ld de, wTextDecimalByte
 	lb bc, 1, 3
 	call PrintNum
-	jr .description
+;	jr .description
+	jr .accuracy
 
 .no_power
-	ld de, String_MoveNoPower
+	ld de, String_NoValue
 	call PlaceString
 
+; Print move accuracy
+.accuracy
+	ld a, [wCurSpecies]
+	ld bc, MOVE_LENGTH
+	ld hl, (Moves + MOVE_ACC) - MOVE_LENGTH
+	call AddNTimes
+	ld a, BANK(Moves)
+	call GetFarByte
+	cp 101
+	jr c, .no_acc
+	Call ConvertPercentages
+	ld [wBuffer1], a
+	ld de, wBuffer1
+	lb bc, 1, 3
+	hlcoord 16, 13
+	call PrintNum
+	jr .description
+
+.no_acc
+	hlcoord 16, 13
+	ld de, String_NoValue
+	call PlaceString
+
+; Print move description
 .description
 	hlcoord 1, 14
 	predef PrintMoveDescription
@@ -1303,6 +1341,7 @@ PlaceMoveData:
 	ldh [hBGMapMode], a
 	ret
 
+; UI elements
 String_MoveType_Top:
 ;	db "┌─────┐@"
 	db "┌────────┐@" ;phys/spec split
@@ -1311,8 +1350,59 @@ String_MoveType_Bottom:
 	db "│TYPE/   └@" ;phys/spec split
 String_MoveAtk:
 	db "ATK/@"
-String_MoveNoPower:
+String_MoveAcc:
+	db "ACC/@"
+String_NoValue:
 	db "---@"
+
+; This converts values out of 256 into a value
+; out of 100. It achieves this by multiplying
+; the value by 100 and dividing it by 256.
+ConvertPercentages:
+
+	; Overwrite the "hl" register.
+	ld l, a
+	ld h, 0
+	push af
+
+	; Multiplies the value of the "hl" register by 3.
+	add hl, hl
+	add a, l
+	ld l, a
+	adc h
+	sub l
+	ld h, a
+
+	; Multiplies the value of the "hl" register
+	; by 8. The value of the "hl" register
+	; is now 24 times its original value.
+	add hl, hl
+	add hl, hl
+	add hl, hl
+
+	; Add the original value of the "hl" value to itself,
+	; making it 25 times its original value.
+	pop af
+	add a, l
+	ld l, a
+	adc h
+	sbc l
+	ld h, a
+
+	; Multiply the value of the "hl" register by
+	; 4, making it 100 times its original value.
+	add hl, hl
+	add hl, hl
+
+	; Set the "l" register to 0.5, otherwise the rounded
+	; value may be lower than expected. Round the
+	; high byte to nearest and drop the low byte.
+	ld l, 0.5
+	sla l
+	sbc a
+	and 1
+	add a, h
+	ret
 
 PlaceMoveScreenArrows:
 	call PlaceMoveScreenLeftArrow
