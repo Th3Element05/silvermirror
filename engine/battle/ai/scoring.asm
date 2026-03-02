@@ -1366,10 +1366,21 @@ AI_Smart_Counter:
 	and a
 	jr z, .skipmove
 
+	ld a, [wOptions2]
+	bit PHYS_SPEC_SPLIT, a
+	jr nz, .classic1
+
 	ld a, [wEnemyMoveStruct + MOVE_TYPE]
 	cp SPECIAL
 	jr nc, .skipmove
+	inc b
+	jr .skipmove
 
+.classic1
+	ld a, [wEnemyMoveStruct + MOVE_TYPE]
+	and TYPE_MASK
+	cp SPECIAL_C
+	jr nc, .skipmove
 	inc b
 
 .skipmove
@@ -1394,8 +1405,19 @@ AI_Smart_Counter:
 	and a
 	jr z, .done
 
+	ld a, [wOptions2]
+	bit PHYS_SPEC_SPLIT, a
+	jr nz, .classic2
+
 	ld a, [wEnemyMoveStruct + MOVE_TYPE]
 	cp SPECIAL
+	jr nc, .done
+	jr .encourage
+
+.classic2
+	ld a, [wEnemyMoveStruct + MOVE_TYPE]
+	and TYPE_MASK
+	cp SPECIAL_C
 	jr nc, .done
 
 .encourage
@@ -2577,10 +2599,21 @@ AI_Smart_MirrorCoat:
 	and a
 	jr z, .skipmove
 
+	ld a, [wOptions2]
+	bit PHYS_SPEC_SPLIT, a
+	jr nz, .classic1
+
 	ld a, [wEnemyMoveStruct + MOVE_TYPE]
 	cp SPECIAL
 	jr c, .skipmove
+	inc b
+	jr .skipmove
 
+.classic1
+	ld a, [wEnemyMoveStruct + MOVE_TYPE]
+	and TYPE_MASK
+	cp SPECIAL_C
+	jr c, .skipmove
 	inc b
 
 .skipmove
@@ -2605,8 +2638,19 @@ AI_Smart_MirrorCoat:
 	and a
 	jr z, .done
 
+	ld a, [wOptions2]
+	bit PHYS_SPEC_SPLIT, a
+	jr nz, .classic2
+
 	ld a, [wEnemyMoveStruct + MOVE_TYPE]
 	cp SPECIAL
+	jr c, .done
+	jr .encourage
+
+.classic2
+	ld a, [wEnemyMoveStruct + MOVE_TYPE]
+	and TYPE_MASK
+	cp SPECIAL_C
 	jr c, .done
 
 .encourage

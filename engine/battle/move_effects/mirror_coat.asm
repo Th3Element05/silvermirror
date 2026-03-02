@@ -31,10 +31,23 @@ BattleCommand_MirrorCoat:
 	and a
 	ret z
 
+	ld a, [wOptions2]
+	bit PHYS_SPEC_SPLIT, a
+	jr nz, .classic
+
+; split
 	ld a, [wStringBuffer1 + MOVE_TYPE]
 	cp SPECIAL
 	ret c
+	jr .proceed
 
+.classic
+	ld a, [wStringBuffer1 + MOVE_TYPE]
+	and TYPE_MASK
+	cp SPECIAL_C
+	ret c
+
+.proceed
 	ld hl, wCurDamage
 	ld a, [hli]
 	or [hl]

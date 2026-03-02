@@ -1870,6 +1870,7 @@ wGBPrinterBrightness::
 wOptions2::
 ;; bit 1; menu account off/on
 ; bit 1: menu clock off/on
+; bit 2: phys/spec split off/on
 	db
 	ds 2
 wOptionsEnd::

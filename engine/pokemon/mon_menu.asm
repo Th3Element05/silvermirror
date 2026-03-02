@@ -1255,22 +1255,26 @@ PlaceMoveData:
 	hlcoord 12, 12
 	ld de, String_MoveAtk
 	call PlaceString
-
 	ld a, [wCurSpecies]
 	ld b, a
+	hlcoord 2, 12
+
+;phys/spec split
+	ld a, [wOptions2]
+	bit PHYS_SPEC_SPLIT, a
+	jr nz, .classic
+
 	farcall GetMoveCategoryName
 	hlcoord 1, 11
 	ld de, wStringBuffer1
 	call PlaceString
-
 	ld a, [wCurSpecies]
 	ld b, a
-;	hlcoord 2, 12
-
 	hlcoord 1, 12
 	ld [hl], "/"
 	inc hl
 
+.classic
 	predef PrintMoveType
 	ld a, [wCurSpecies]
 	dec a
@@ -1304,7 +1308,7 @@ String_MoveType_Top:
 	db "┌────────┐@" ;phys/spec split
 String_MoveType_Bottom:
 ;	db "│TYPE/└@"
-	db "│        └@" ;phys/spec split
+	db "│TYPE/   └@" ;phys/spec split
 String_MoveAtk:
 	db "ATK/@"
 String_MoveNoPower:
