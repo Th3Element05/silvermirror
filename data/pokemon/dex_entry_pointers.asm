@@ -172,7 +172,7 @@ PokedexDataPointerTable:
 	dw CrobatPokedexEntry
 	dw ChinchouPokedexEntry
 	dw LanturnPokedexEntry
-	dw PichuPokedexEntry
+;dw PichuPokedexEntry
 	dw CleffaPokedexEntry
 	dw IgglybuffPokedexEntry
 	dw TogepiPokedexEntry
@@ -194,13 +194,16 @@ PokedexDataPointerTable:
 	dw SunkernPokedexEntry
 	dw SunfloraPokedexEntry
 	dw YanmaPokedexEntry
+	dw YanmegaPokedexEntry ;NEW
 	dw WooperPokedexEntry
 	dw QuagsirePokedexEntry
 	dw EspeonPokedexEntry
 	dw UmbreonPokedexEntry
 	dw MurkrowPokedexEntry
+;	dw HonchkrowPokedexEntry
 	dw SlowkingPokedexEntry
 	dw MisdreavusPokedexEntry
+;	dw MismagiusPokedexEntry
 	dw UnownPokedexEntry
 	dw WobbuffetPokedexEntry
 	dw GirafarigPokedexEntry
@@ -208,6 +211,7 @@ PokedexDataPointerTable:
 	dw ForretressPokedexEntry
 	dw DunsparcePokedexEntry
 	dw GligarPokedexEntry
+;	dw GliscorPokedexEntry
 	dw SteelixPokedexEntry
 	dw SnubbullPokedexEntry
 	dw GranbullPokedexEntry
@@ -216,12 +220,14 @@ PokedexDataPointerTable:
 	dw ShucklePokedexEntry
 	dw HeracrossPokedexEntry
 	dw SneaselPokedexEntry
+;	dw WeavilePokedexEntry
 	dw TeddiursaPokedexEntry
 	dw UrsaringPokedexEntry
 	dw SlugmaPokedexEntry
 	dw MagcargoPokedexEntry
 	dw SwinubPokedexEntry
 	dw PiloswinePokedexEntry
+;	dw MamoswinePokedexEntry
 	dw CorsolaPokedexEntry
 	dw RemoraidPokedexEntry
 	dw OctilleryPokedexEntry
@@ -239,8 +245,12 @@ PokedexDataPointerTable:
 	dw TyroguePokedexEntry
 	dw HitmontopPokedexEntry
 	dw SmoochumPokedexEntry
+;	dw MagnezonePokedexEntry
 	dw ElekidPokedexEntry
+;	dw TangrowthPokedexEntry
 	dw MagbyPokedexEntry
+;	dw LeafeonPokedexEntry
+;	dw GlaceonPokedexEntry
 	dw MiltankPokedexEntry
 	dw BlisseyPokedexEntry
 	dw RaikouPokedexEntry

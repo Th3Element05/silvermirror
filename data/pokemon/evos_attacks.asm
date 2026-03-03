@@ -3114,16 +3114,16 @@ LanturnEvosAttacks:
 ;	db 57, MEAN_LOOK ;block, x
 ;	db 0 ; no more level-up moves
 
-PichuEvosAttacks:
-	db EVOLVE_HAPPINESS, TR_ANYTIME, PIKACHU
-	db 0 ; no more evolutions
-	db 1, THUNDERSHOCK
-	db 1, CHARM
-	db 5, LEER ;tail_whip, removed
-	db 10, THUNDER_WAVE
-	db 13, CONFUSE_RAY ;sweet_kiss, removed
-	db 18, NASTY_PLOT
-	db 0 ; no more level-up moves
+;PichuEvosAttacks:
+;	db EVOLVE_HAPPINESS, TR_ANYTIME, PIKACHU
+;	db 0 ; no more evolutions
+;	db 1, THUNDERSHOCK
+;	db 1, CHARM
+;	db 5, LEER ;tail_whip, removed
+;	db 10, THUNDER_WAVE
+;	db 13, CONFUSE_RAY ;sweet_kiss, removed
+;	db 18, NASTY_PLOT
+;	db 0 ; no more level-up moves
 
 CleffaEvosAttacks:
 	db EVOLVE_HAPPINESS, TR_ANYTIME, CLEFAIRY
@@ -3462,7 +3462,7 @@ SunfloraEvosAttacks:
 	db 0 ; no more level-up moves
 
 YanmaEvosAttacks:
-;	db EVOLVE_MOVE, ANCIENTPOWER, YANMEGA
+	db EVOLVE_MOVE, ANCIENTPOWER, YANMEGA
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, FORESIGHT
@@ -3482,27 +3482,27 @@ YanmaEvosAttacks:
 	db 57, BUG_BUZZ
 	db 0 ; no more level-up moves
 
-;YanmegaEvosAttacks: ;GEN4
-;	db 0 ; no more evolutions
-;	db 1, NIGHT_SLASH
-;	db 1, BUG_BITE
-;	db 1, TACKLE
-;	db 1, FORESIGHT
-;	db 6, QUICK_ATTACK
-;	db 11, DOUBLE_TEAM
-;	db 14, GUST ;sonicboom, removed
-;	db 17, PROTECT ;detect, removed
-;	db 22, SUPERSONIC
-;	db 27, LOUD_VOICE ;uproar, x
-;	db 30, PURSUIT
-;	db 33, ANCIENTPOWER
-;	db 38, FEINT_ATTACK
-;	db 43, SLASH
-;	db 46, SCREECH
-;	db 49, BUG_BITE ;u_turn
-;	db 54, AIR_SLICE ;air_slash, ~
-;	db 57, BUG_BUZZ
-;	db 0 ; no more level-up moves
+YanmegaEvosAttacks:
+	db 0 ; no more evolutions
+	db 1, NIGHT_SLASH
+	db 1, BUG_BITE
+	db 1, TACKLE
+	db 1, FORESIGHT
+	db 6, QUICK_ATTACK
+	db 11, DOUBLE_TEAM
+	db 14, GUST ;sonicboom, removed
+	db 17, PROTECT ;detect, removed
+	db 22, SUPERSONIC
+	db 27, LOUD_VOICE ;uproar, x
+	db 30, PURSUIT
+	db 33, ANCIENTPOWER
+	db 38, FEINT_ATTACK
+	db 43, SLASH
+	db 46, SCREECH
+	db 49, BUG_BITE ;u_turn
+	db 54, AIR_SLICE ;air_slash, ~
+	db 57, BUG_BUZZ
+	db 0 ; no more level-up moves
 
 WooperEvosAttacks:
 	db EVOLVE_LEVEL, 20, QUAGSIRE

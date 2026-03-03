@@ -173,7 +173,7 @@ NewPokedexOrder:
 	db CROBAT
 	db CHINCHOU
 	db LANTURN
-	db PICHU
+;db PICHU
 	db CLEFFA
 	db IGGLYBUFF
 	db TOGEPI
@@ -195,13 +195,16 @@ NewPokedexOrder:
 	db SUNKERN
 	db SUNFLORA
 	db YANMA
+	db YANMEGA ;YANMEGA
 	db WOOPER
 	db QUAGSIRE
 	db ESPEON
 	db UMBREON
 	db MURKROW
+;	db HONCHKROW
 	db SLOWKING
 	db MISDREAVUS
+;	db MISMAGIUS
 	db UNOWN
 	db WOBBUFFET
 	db GIRAFARIG
@@ -209,6 +212,7 @@ NewPokedexOrder:
 	db FORRETRESS
 	db DUNSPARCE
 	db GLIGAR
+;	db GLISCOR
 	db STEELIX
 	db SNUBBULL
 	db GRANBULL
@@ -217,12 +221,14 @@ NewPokedexOrder:
 	db SHUCKLE
 	db HERACROSS
 	db SNEASEL
+;	db WEAVILE
 	db TEDDIURSA
 	db URSARING
 	db SLUGMA
 	db MAGCARGO
 	db SWINUB
 	db PILOSWINE
+;	db MAMOSWINE
 	db CORSOLA
 	db REMORAID
 	db OCTILLERY
@@ -240,8 +246,12 @@ NewPokedexOrder:
 	db TYROGUE
 	db HITMONTOP
 	db SMOOCHUM
+;	db MAGNEZONE
 	db ELEKID
+;	db TANGROWTH
 	db MAGBY
+;	db LEAFEON
+;	db GLACEON
 	db MILTANK
 	db BLISSEY
 	db RAIKOU
@@ -253,5 +263,5 @@ NewPokedexOrder:
 	db LUGIA
 	db HO_OH
 	db CELEBI
-	db MISSINGNO ;missingno
+	db MISSINGNO ;MISSINGNO
 	assert_table_length NUM_POKEMON

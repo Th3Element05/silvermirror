@@ -171,11 +171,11 @@ EggMovePointers::
 	dw NoEggMoves
 	dw ChinchouEggMoves
 	dw NoEggMoves
-	dw PichuEggMoves
-	dw CleffaEggMoves
-	dw IgglybuffEggMoves
-	dw TogepiEggMoves
-	dw NoEggMoves
+;	dw PichuEggMoves     ;remove
+	dw CleffaEggMoves    ;remove
+	dw IgglybuffEggMoves ;remove
+	dw TogepiEggMoves    ;remove
+	dw NoEggMoves        ;remove
 	dw NatuEggMoves
 	dw NoEggMoves
 	dw MareepEggMoves
@@ -193,13 +193,16 @@ EggMovePointers::
 	dw NoEggMoves
 	dw NoEggMoves
 	dw YanmaEggMoves
+	dw NoEggMoves ;YANMEGA
 	dw WooperEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw MurkrowEggMoves
+;	dw NoEggMoves ;HONCHKROW
 	dw NoEggMoves
 	dw MisdreavusEggMoves
+;	dw NoEggMoves ;MISMAGIUS
 	dw NoEggMoves
 	dw NoEggMoves
 	dw GirafarigEggMoves
@@ -207,6 +210,7 @@ EggMovePointers::
 	dw NoEggMoves
 	dw DunsparceEggMoves
 	dw GligarEggMoves
+;	dw NoEggMoves ;GLISCOR
 	dw NoEggMoves
 	dw SnubbullEggMoves
 	dw NoEggMoves
@@ -215,12 +219,14 @@ EggMovePointers::
 	dw ShuckleEggMoves
 	dw HeracrossEggMoves
 	dw SneaselEggMoves
+;	dw NoEggMoves ;WEAVILE
 	dw TeddiursaEggMoves
 	dw NoEggMoves
 	dw SlugmaEggMoves
 	dw NoEggMoves
 	dw SwinubEggMoves
 	dw NoEggMoves
+;	dw NoEggMoves ;MAMOSWINE
 	dw CorsolaEggMoves
 	dw RemoraidEggMoves
 	dw NoEggMoves
@@ -237,9 +243,13 @@ EggMovePointers::
 	dw NoEggMoves
 	dw TyrogueEggMoves
 	dw NoEggMoves
-	dw SmoochumEggMoves
-	dw ElekidEggMoves
-	dw MagbyEggMoves
+	dw SmoochumEggMoves ;remove
+;	dw NoEggMoves ;MAGNEZONE
+	dw ElekidEggMoves   ;remove
+;	dw NoEggMoves ;TANGROWTH
+	dw MagbyEggMoves    ;remove
+;	dw NoEggMoves ;LEAFEON
+;	dw NoEggMoves ;GLACEON
 	dw MiltankEggMoves
 	dw NoEggMoves
 	dw NoEggMoves

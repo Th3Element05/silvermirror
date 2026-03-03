@@ -529,14 +529,14 @@ ChinchouEggMoves:
 	db SCREECH
 	db -1 ; end
 
-PichuEggMoves:
-	db FLAIL      ;REVERSAL ;removed
-;	db BIDE       ;tm34
-;	db PRESENT    ;removed
-	db ENCORE
-	db DOUBLESLAP
-;	db DETECT     ;removed
-	db -1 ; end
+;PichuEggMoves:
+;	db FLAIL      ;REVERSAL ;removed
+;;	db BIDE       ;tm34
+;;	db PRESENT    ;removed
+;	db ENCORE
+;	db DOUBLESLAP
+;;	db DETECT     ;removed
+;	db -1 ; end
 
 CleffaEggMoves:
 ;	db PRESENT    ;removed

@@ -170,7 +170,7 @@ BitmasksPointers:
 	dw CrobatBitmasks
 	dw ChinchouBitmasks
 	dw LanturnBitmasks
-	dw PichuBitmasks
+;dw PichuBitmasks
 	dw CleffaBitmasks
 	dw IgglybuffBitmasks
 	dw TogepiBitmasks
@@ -192,13 +192,16 @@ BitmasksPointers:
 	dw SunkernBitmasks
 	dw SunfloraBitmasks
 	dw YanmaBitmasks
+	dw YanmegaBitmasks ;YANMEGA
 	dw WooperBitmasks
 	dw QuagsireBitmasks
 	dw EspeonBitmasks
 	dw UmbreonBitmasks
 	dw MurkrowBitmasks
+;	dw HonchkrowBitmasks ;HONCHKROW
 	dw SlowkingBitmasks
 	dw MisdreavusBitmasks
+;	dw MismagiusBitmasks ;MISMAGIUS
 	dw UnownBitmasks
 	dw WobbuffetBitmasks
 	dw GirafarigBitmasks
@@ -206,6 +209,7 @@ BitmasksPointers:
 	dw ForretressBitmasks
 	dw DunsparceBitmasks
 	dw GligarBitmasks
+;	dw GliscorBitmasks ;GLISCOR
 	dw SteelixBitmasks
 	dw SnubbullBitmasks
 	dw GranbullBitmasks
@@ -214,12 +218,14 @@ BitmasksPointers:
 	dw ShuckleBitmasks
 	dw HeracrossBitmasks
 	dw SneaselBitmasks
+;	dw WeavileBitmasks ;WEAVILE
 	dw TeddiursaBitmasks
 	dw UrsaringBitmasks
 	dw SlugmaBitmasks
 	dw MagcargoBitmasks
 	dw SwinubBitmasks
 	dw PiloswineBitmasks
+;	dw MamoswineBitmasks ;MAMOSWINE
 	dw CorsolaBitmasks
 	dw RemoraidBitmasks
 	dw OctilleryBitmasks
@@ -237,8 +243,12 @@ BitmasksPointers:
 	dw TyrogueBitmasks
 	dw HitmontopBitmasks
 	dw SmoochumBitmasks
+;	dw MagnezoneBitmasks ;MAGNEZONE
 	dw ElekidBitmasks
+;	dw TangrowthBitmasks ;TANGROWTH
 	dw MagbyBitmasks
+;	dw LeafeonBitmasks ;LEAFEON
+;	dw GlaceonBitmasks ;GLACEON
 	dw MiltankBitmasks
 	dw BlisseyBitmasks
 	dw RaikouBitmasks
@@ -250,4 +260,4 @@ BitmasksPointers:
 	dw LugiaBitmasks
 	dw HoOhBitmasks
 	dw CelebiBitmasks
-	dw MissingnoBitmasks
+	dw MissingnoBitmasks ;MISSINGO
