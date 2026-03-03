@@ -191,60 +191,66 @@ DEF JOHTO_POKEMON EQU const_value
 	const CROBAT     ; a9
 	const CHINCHOU   ; aa
 	const LANTURN    ; ab
-	const PICHU      ; ac ; baby
+;const PICHU      ; ac ; baby
 	const CLEFFA     ; ad ; baby
 	const IGGLYBUFF  ; ae ; baby
 	const TOGEPI     ; af ; replace
 	const TOGETIC    ; b0 ; replace
-	const NATU       ; b1
-	const XATU       ; b2
-	const MAREEP     ; b3
-	const FLAAFFY    ; b4
-	const AMPHAROS   ; b5
-	const BELLOSSOM  ; b6
-	const MARILL     ; b7
-	const AZUMARILL  ; b8
-	const SUDOWOODO  ; b9
-	const POLITOED   ; ba
-	const HOPPIP     ; bb
-	const SKIPLOOM   ; bc
-	const JUMPLUFF   ; bd
-	const AIPOM      ; be
-	const SUNKERN    ; bf
-	const SUNFLORA   ; c0
-	const YANMA      ; c1
-	const WOOPER     ; c2
-	const QUAGSIRE   ; c3
-	const ESPEON     ; c4
-	const UMBREON    ; c5
-	const MURKROW    ; c6
-	const SLOWKING   ; c7
-	const MISDREAVUS ; c8
-	const UNOWN      ; c9 ; removable?
-	const WOBBUFFET  ; ca
-	const GIRAFARIG  ; cb
-	const PINECO     ; cc
-	const FORRETRESS ; cd
-	const DUNSPARCE  ; ce
-	const GLIGAR     ; cf
-	const STEELIX    ; d0
-	const SNUBBULL   ; d1
-	const GRANBULL   ; d2
-	const QWILFISH   ; d3
-	const SCIZOR     ; d4
-	const SHUCKLE    ; d5
-	const HERACROSS  ; d6
-	const SNEASEL    ; d7
+	const NATU       ; ac
+	const XATU       ; ad
+	const MAREEP     ; ae
+	const FLAAFFY    ; af
+	const AMPHAROS   ; b0
+	const BELLOSSOM  ; b1
+	const MARILL     ; b2
+	const AZUMARILL  ; b3
+	const SUDOWOODO  ; b4
+	const POLITOED   ; b5
+	const HOPPIP     ; b6
+	const SKIPLOOM   ; b7
+	const JUMPLUFF   ; b8
+	const AIPOM      ; b9
+	const SUNKERN    ; ba
+	const SUNFLORA   ; bb
+	const YANMA      ; bc
+	const YANMEGA    ; bd ;NEW
+	const WOOPER     ; be
+	const QUAGSIRE   ; bf
+	const ESPEON     ; c0
+	const UMBREON    ; c1
+	const MURKROW    ; c2
+;	const HONCHKROW  ; c3 ;NEW
+	const SLOWKING   ; c4
+	const MISDREAVUS ; c5
+;	const MISMAGIUS  ; c6 ;NEW
+	const UNOWN      ; c7 ; removable?
+	const WOBBUFFET  ; c8
+	const GIRAFARIG  ; c9
+	const PINECO     ; ca
+	const FORRETRESS ; cb
+	const DUNSPARCE  ; cc
+	const GLIGAR     ; cd
+;	const GLISCOR    ; ce ;NEW
+	const STEELIX    ; cf
+	const SNUBBULL   ; d0
+	const GRANBULL   ; d1
+	const QWILFISH   ; d2
+	const SCIZOR     ; d3
+	const SHUCKLE    ; d4
+	const HERACROSS  ; d5
+	const SNEASEL    ; d6
+;	const WEAVILE    ; d7 ;NEW
 	const TEDDIURSA  ; d8
 	const URSARING   ; d9
 	const SLUGMA     ; da
 	const MAGCARGO   ; db
 	const SWINUB     ; dc
 	const PILOSWINE  ; dd
-	const CORSOLA    ; de
-	const REMORAID   ; df
-	const OCTILLERY  ; e0
-	const DELIBIRD   ; e1 ; removable?
+;	const MAMOSWINE  ; de ;NEW
+	const CORSOLA    ; df
+	const REMORAID   ; e0
+	const OCTILLERY  ; e1
+	const DELIBIRD   ; e2 ; replace
 	const MANTINE    ; e2
 	const SKARMORY   ; e3
 	const HOUNDOUR   ; e4
@@ -258,21 +264,24 @@ DEF JOHTO_POKEMON EQU const_value
 	const TYROGUE    ; ec
 	const HITMONTOP  ; ed
 	const SMOOCHUM   ; ee ; baby
+;	const MAGNEZONE  ; ee ;NEW
 	const ELEKID     ; ef ; baby
+;	const TANGROWTH  ; ef ;NEW
 	const MAGBY      ; f0 ; baby
-	const MILTANK    ; f1
-	const BLISSEY    ; f2
-	const RAIKOU     ; f3
-	const ENTEI      ; f4
-	const SUICUNE    ; f5
-	const LARVITAR   ; f6
-	const PUPITAR    ; f7
-	const TYRANITAR  ; f8
-	const LUGIA      ; f9
-	const HO_OH      ; fa
-	const CELEBI     ; fb
-	const MISSINGNO  ; fc ;missingno
-;	const_skip       ; fd
+;	const LEAFEON    ; f0 ;NEW
+;	const GLACEON    ; f1 ;NEW
+	const MILTANK    ; f2
+	const BLISSEY    ; f3
+	const RAIKOU     ; f4
+	const ENTEI      ; f5
+	const SUICUNE    ; f6
+	const LARVITAR   ; f7
+	const PUPITAR    ; f8
+	const TYRANITAR  ; f9
+	const LUGIA      ; fa
+	const HO_OH      ; fb
+	const CELEBI     ; fc
+	const MISSINGNO  ; fd ;missingno
 DEF NUM_POKEMON EQU const_value - 1
 	const EGG        ; fe
 

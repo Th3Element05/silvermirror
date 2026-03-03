@@ -345,8 +345,8 @@ PokemonPicPointers::
 	dba_pic ChinchouBackpic
 	dba_pic LanturnFrontpic
 	dba_pic LanturnBackpic
-	dba_pic PichuFrontpic
-	dba_pic PichuBackpic
+;dba_pic PichuFrontpic
+;dba_pic PichuBackpic
 	dba_pic CleffaFrontpic
 	dba_pic CleffaBackpic
 	dba_pic IgglybuffFrontpic
@@ -389,6 +389,8 @@ PokemonPicPointers::
 	dba_pic SunfloraBackpic
 	dba_pic YanmaFrontpic
 	dba_pic YanmaBackpic
+	dba_pic YanmegaFrontpic ;YANMEGA
+	dba_pic YanmegaBackpic  ;YANMEGA
 	dba_pic WooperFrontpic
 	dba_pic WooperBackpic
 	dba_pic QuagsireFrontpic
@@ -399,10 +401,14 @@ PokemonPicPointers::
 	dba_pic UmbreonBackpic
 	dba_pic MurkrowFrontpic
 	dba_pic MurkrowBackpic
+;	dba_pic HonchkrowFrontpic ;HONCHKROW
+;	dba_pic HonchkrowBackpic  ;HONCHKROW
 	dba_pic SlowkingFrontpic
 	dba_pic SlowkingBackpic
 	dba_pic MisdreavusFrontpic
 	dba_pic MisdreavusBackpic
+;	dba_pic MismagiusFrontpic ;MISMAGIUS
+;	dba_pic MismagiusBackpic  ;MISMAGIUS
 
 	; Unown pics have their own table. See UnownPicPointers
 	dbw -1, -1
@@ -420,6 +426,8 @@ PokemonPicPointers::
 	dba_pic DunsparceBackpic
 	dba_pic GligarFrontpic
 	dba_pic GligarBackpic
+;	dba_pic GliscorFrontpic ;GLISCOR
+;	dba_pic GliscorBackpic  ;GLISCOR
 	dba_pic SteelixFrontpic
 	dba_pic SteelixBackpic
 	dba_pic SnubbullFrontpic
@@ -436,6 +444,8 @@ PokemonPicPointers::
 	dba_pic HeracrossBackpic
 	dba_pic SneaselFrontpic
 	dba_pic SneaselBackpic
+;	dba_pic WeavileFrontpic ;WEAVILE
+;	dba_pic WeavileBackpic  ;WEAVILE
 	dba_pic TeddiursaFrontpic
 	dba_pic TeddiursaBackpic
 	dba_pic UrsaringFrontpic
@@ -448,6 +458,8 @@ PokemonPicPointers::
 	dba_pic SwinubBackpic
 	dba_pic PiloswineFrontpic
 	dba_pic PiloswineBackpic
+;	dba_pic MamoswineFrontpic ;MAMOSWINE
+;	dba_pic MamoswineBackpic  ;MAMOSWINE
 	dba_pic CorsolaFrontpic
 	dba_pic CorsolaBackpic
 	dba_pic RemoraidFrontpic
@@ -482,10 +494,18 @@ PokemonPicPointers::
 	dba_pic HitmontopBackpic
 	dba_pic SmoochumFrontpic
 	dba_pic SmoochumBackpic
+;	dba_pic MagnezoneFrontpic ;MAGNEZONE
+;	dba_pic MagnezoneBackpic  ;MAGNEZONE
 	dba_pic ElekidFrontpic
 	dba_pic ElekidBackpic
+;	dba_pic TangrowthFrontpic ;TANGROWTH
+;	dba_pic TangrowthBackpic  ;TANGROWTH
 	dba_pic MagbyFrontpic
 	dba_pic MagbyBackpic
+;	dba_pic LeafeonFrontpic ;LEAFEON
+;	dba_pic LeafeonBackpic  ;LEAFEON
+;	dba_pic GlaceonFrontpic ;GLACEON
+;	dba_pic GlaceonBackpic  ;GLACEON
 	dba_pic MiltankFrontpic
 	dba_pic MiltankBackpic
 	dba_pic BlisseyFrontpic
@@ -508,8 +528,8 @@ PokemonPicPointers::
 	dba_pic HoOhBackpic
 	dba_pic CelebiFrontpic
 	dba_pic CelebiBackpic
-	dba_pic MissingnoFrontPic
-	dba_pic MissingnoBackPic
+	dba_pic MissingnoFrontPic ;MISSINGNO
+	dba_pic MissingnoBackPic  ;MISSINGNO
 	assert_table_length NUM_POKEMON
 ;	dbw -1, -1 ; unused
 ;	dbw -1, -1 ; unused

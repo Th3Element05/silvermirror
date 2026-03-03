@@ -170,7 +170,7 @@ FramesPointers:
 	dw CrobatFrames
 	dw ChinchouFrames
 	dw LanturnFrames
-	dw PichuFrames
+;dw PichuFrames
 	dw CleffaFrames
 	dw IgglybuffFrames
 	dw TogepiFrames
@@ -192,13 +192,16 @@ FramesPointers:
 	dw SunkernFrames
 	dw SunfloraFrames
 	dw YanmaFrames
+	dw YanmegaFrames ;YANMEGA
 	dw WooperFrames
 	dw QuagsireFrames
 	dw EspeonFrames
 	dw UmbreonFrames
 	dw MurkrowFrames
+;	dw HonchkrowFrames ;HONCHKROW
 	dw SlowkingFrames
 	dw MisdreavusFrames
+;	dw MismagiusFrames ;MISMAGIUS
 	dw UnownFrames
 	dw WobbuffetFrames
 	dw GirafarigFrames
@@ -206,6 +209,7 @@ FramesPointers:
 	dw ForretressFrames
 	dw DunsparceFrames
 	dw GligarFrames
+;	dw GliscorFrames ;GLISCOR
 	dw SteelixFrames
 	dw SnubbullFrames
 	dw GranbullFrames
@@ -214,12 +218,14 @@ FramesPointers:
 	dw ShuckleFrames
 	dw HeracrossFrames
 	dw SneaselFrames
+;	dw WeavileFrames ;WEAVILE
 	dw TeddiursaFrames
 	dw UrsaringFrames
 	dw SlugmaFrames
 	dw MagcargoFrames
 	dw SwinubFrames
 	dw PiloswineFrames
+;	dw MamoswineFrames ;MAMOSWINE
 	dw CorsolaFrames
 	dw RemoraidFrames
 	dw OctilleryFrames
@@ -237,8 +243,12 @@ FramesPointers:
 	dw TyrogueFrames
 	dw HitmontopFrames
 	dw SmoochumFrames
+;	dw MagnezoneFrames ;MAGNEZONE
 	dw ElekidFrames
+;	dw TangrowthFrames ;TANGROWTH
 	dw MagbyFrames
+;	dw LeafeonFrames ;LEAFEON
+;	dw GlaceonFrames ;GLACEON
 	dw MiltankFrames
 	dw BlisseyFrames
 	dw RaikouFrames
@@ -250,4 +260,4 @@ FramesPointers:
 	dw LugiaFrames
 	dw HoOhFrames
 	dw CelebiFrames
-	dw MissingnoFrames ;missingno
+	dw MissingnoFrames ;MISSINGO

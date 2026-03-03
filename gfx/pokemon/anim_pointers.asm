@@ -170,7 +170,7 @@ AnimationPointers:
 	dw CrobatAnimation
 	dw ChinchouAnimation
 	dw LanturnAnimation
-	dw PichuAnimation
+;dw PichuAnimation
 	dw CleffaAnimation
 	dw IgglybuffAnimation
 	dw TogepiAnimation
@@ -192,13 +192,16 @@ AnimationPointers:
 	dw SunkernAnimation
 	dw SunfloraAnimation
 	dw YanmaAnimation
+	dw YanmegaAnimation ;YANMEGA
 	dw WooperAnimation
 	dw QuagsireAnimation
 	dw EspeonAnimation
 	dw UmbreonAnimation
 	dw MurkrowAnimation
+;	dw HonchkrowAnimation ;HONCHKROW
 	dw SlowkingAnimation
 	dw MisdreavusAnimation
+;	dw MismagiusAnimation ;MISMAGIUS
 	dw UnownAnimation
 	dw WobbuffetAnimation
 	dw GirafarigAnimation
@@ -206,6 +209,7 @@ AnimationPointers:
 	dw ForretressAnimation
 	dw DunsparceAnimation
 	dw GligarAnimation
+;	dw GliscorAnimation ;GLISCOR
 	dw SteelixAnimation
 	dw SnubbullAnimation
 	dw GranbullAnimation
@@ -214,12 +218,14 @@ AnimationPointers:
 	dw ShuckleAnimation
 	dw HeracrossAnimation
 	dw SneaselAnimation
+;	dw WeavileAnimation ;WEAVILE
 	dw TeddiursaAnimation
 	dw UrsaringAnimation
 	dw SlugmaAnimation
 	dw MagcargoAnimation
 	dw SwinubAnimation
 	dw PiloswineAnimation
+;	dw MamoswineAnimation ;MAMOSWINE
 	dw CorsolaAnimation
 	dw RemoraidAnimation
 	dw OctilleryAnimation
@@ -237,8 +243,12 @@ AnimationPointers:
 	dw TyrogueAnimation
 	dw HitmontopAnimation
 	dw SmoochumAnimation
+;	dw MagnezoneAnimation ;MAGNEZONE
 	dw ElekidAnimation
+;	dw TangrowthAnimation ;TANGROWTH
 	dw MagbyAnimation
+;	dw LeafeonAnimation ;LEAFEON
+;	dw GlaceonAnimation ;GLACEON
 	dw MiltankAnimation
 	dw BlisseyAnimation
 	dw RaikouAnimation
@@ -250,4 +260,4 @@ AnimationPointers:
 	dw LugiaAnimation
 	dw HoOhAnimation
 	dw CelebiAnimation
-	dw MissingnoAnimation ;missingno
+	dw MissingnoAnimation ;MISSINGNO

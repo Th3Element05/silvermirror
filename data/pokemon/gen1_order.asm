@@ -86,6 +86,7 @@ Pokered_MonIndices:
 	db PIKACHU
 	db RAICHU
 	db DELIBIRD ; MISSINGNO.
+;	db LEAFEON
 	db MANTINE ; MISSINGNO.
 	db DRATINI
 	db DRAGONAIR
@@ -156,10 +157,13 @@ Pokered_MonIndices:
 	db VENUSAUR
 	db TENTACRUEL
 	db SMOOCHUM ; MISSINGNO.
+;	db MAGNEZONE
 	db GOLDEEN
 	db SEAKING
 	db ELEKID ; MISSINGNO.
+;	db TANGROWTH
 	db MAGBY ; MISSINGNO.
+;	db GLACEON
 	db MILTANK ; MISSINGNO.
 	db BLISSEY ; MISSINGNO.
 	db PONYTA
@@ -211,11 +215,16 @@ Pokered_MonIndices:
 	db CROBAT
 	db CHINCHOU
 	db LANTURN
-	db PICHU
-	db CLEFFA
-	db IGGLYBUFF
-	db TOGEPI
-	db TOGETIC
+;	db PICHU
+	db YANMEGA
+	db CLEFFA    ;
+;	db HONCHKROW
+	db IGGLYBUFF ;
+;	db MISMAGIUS
+	db TOGEPI    ;
+;	db GLISCOR
+	db TOGETIC   ;
+;	db WEAVILE
 	db NATU
 	db XATU
 	db MAREEP
@@ -233,6 +242,7 @@ Pokered_MonIndices:
 	db SUNKERN
 	db SUNFLORA
 	db YANMA
+	db YANMEGA
 	db WOOPER
 	db QUAGSIRE
 	db ESPEON
@@ -251,7 +261,8 @@ Pokered_MonIndices:
 	db SNUBBULL
 	db GRANBULL
 	db QWILFISH
-	db WOBBUFFET
-	db WOBBUFFET
+	db CELEBI
 	db MISSINGNO ;missingno
+;	db MISSINGNO
+;	db MAMOSWINE
 	assert_table_length NUM_POKEMON + 1

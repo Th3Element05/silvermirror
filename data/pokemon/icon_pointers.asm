@@ -173,7 +173,7 @@ IconPointers:
 	dw CrobatIcon
 	dw ChinchouIcon
 	dw LanturnIcon
-	dw PichuIcon
+;dw PichuIcon
 	dw CleffaIcon
 	dw IgglybuffIcon
 	dw TogepiIcon
@@ -195,13 +195,16 @@ IconPointers:
 	dw SunkernIcon
 	dw SunfloraIcon
 	dw YanmaIcon
+	dw YanmegaIcon
 	dw WooperIcon
 	dw QuagsireIcon
 	dw EspeonIcon
 	dw UmbreonIcon
 	dw MurkrowIcon
+;	db HonchkrowIcon
 	dw SlowkingIcon
 	dw MisdreavusIcon
+;	dw MismagiusIcon
 	dw UnownIcon
 	dw WobbuffetIcon
 	dw GirafarigIcon
@@ -209,6 +212,7 @@ IconPointers:
 	dw ForretressIcon
 	dw DunsparceIcon
 	dw GligarIcon
+;	dw GliscorIcon
 	dw SteelixIcon
 	dw SnubbullIcon
 	dw GranbullIcon
@@ -217,12 +221,14 @@ IconPointers:
 	dw ShuckleIcon
 	dw HeracrossIcon
 	dw SneaselIcon
+;	dw WeavileIcon
 	dw TeddiursaIcon
 	dw UrsaringIcon
 	dw SlugmaIcon
 	dw MagcargoIcon
 	dw SwinubIcon
 	dw Piloswine
+;	dw MamoswineIcon
 	dw CorsolaIcon
 	dw RemoraidIcon
 	dw OctilleryIcon
@@ -240,8 +246,12 @@ IconPointers:
 	dw TyrogueIcon
 	dw HitmontopIcon
 	dw SmoochumIcon
+;	dw MagnezoneIcon
 	dw ElekidIcon
+;	dw TangrowthIcon
 	dw MagbyIcon
+;	dw LeafeonIcon
+;	dw GlaceonIcon
 	dw MiltankIcon
 	dw BlisseyIcon
 	dw RaikouIcon
@@ -255,6 +265,5 @@ IconPointers:
 	dw CelebiIcon
 	dw MissingnoIcon ;missingno
 	assert_table_length NUM_POKEMON + 1
-;	dw NullIcon ; unused
 	dw EggIcon
 	assert_table_length EGG + 1

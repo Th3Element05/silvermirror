@@ -171,11 +171,11 @@ PokemonNames::
 	db "CROBAT@@@@"
 	db "CHINCHOU@@"
 	db "LANTURN@@@"
-	db "PICHU@@@@@"
-	db "CLEFFA@@@@"
-	db "IGGLYBUFF@"
-	db "TOGEPI@@@@"
-	db "TOGETIC@@@"
+;db "PICHU@@@@@" ;
+	db "CLEFFA@@@@" ;
+	db "IGGLYBUFF@" ;
+	db "TOGEPI@@@@" ;
+	db "TOGETIC@@@" ;
 	db "NATU@@@@@@"
 	db "XATU@@@@@@"
 	db "MAREEP@@@@"
@@ -193,13 +193,16 @@ PokemonNames::
 	db "SUNKERN@@@"
 	db "SUNFLORA@@"
 	db "YANMA@@@@@"
+	db "YANMEGA@@@" ;NEW
 	db "WOOPER@@@@"
 	db "QUAGSIRE@@"
 	db "ESPEON@@@@"
 	db "UMBREON@@@"
 	db "MURKROW@@@"
+;	db "HONCHKROW@"
 	db "SLOWKING@@"
 	db "MISDREAVUS"
+;	db "MISMAGIUS@"
 	db "UNOWN@@@@@"
 	db "WOBBUFFET@"
 	db "GIRAFARIG@"
@@ -207,6 +210,7 @@ PokemonNames::
 	db "FORRETRESS"
 	db "DUNSPARCE@"
 	db "GLIGAR@@@@"
+;	db "GLISCOR@@@"
 	db "STEELIX@@@"
 	db "SNUBBULL@@"
 	db "GRANBULL@@"
@@ -215,16 +219,18 @@ PokemonNames::
 	db "SHUCKLE@@@"
 	db "HERACROSS@"
 	db "SNEASEL@@@"
+;	db "WEAVILE@@@"
 	db "TEDDIURSA@"
 	db "URSARING@@"
 	db "SLUGMA@@@@"
 	db "MAGCARGO@@"
 	db "SWINUB@@@@"
 	db "PILOSWINE@"
+;	db "MAMOSWINE@"
 	db "CORSOLA@@@"
 	db "REMORAID@@"
 	db "OCTILLERY@"
-	db "DELIBIRD@@"
+	db "DELIBIRD@@" ;
 	db "MANTINE@@@"
 	db "SKARMORY@@"
 	db "HOUNDOUR@@"
@@ -237,9 +243,13 @@ PokemonNames::
 	db "SMEARGLE@@"
 	db "TYROGUE@@@"
 	db "HITMONTOP@"
-	db "SMOOCHUM@@"
-	db "ELEKID@@@@"
-	db "MAGBY@@@@@"
+	db "SMOOCHUM@@" ;
+;	db "MAGNEZONE@"
+	db "ELEKID@@@@" ;
+;	db "TANGROWTH@"
+	db "MAGBY@@@@@" ;
+;	db "LEAFEON@@@"
+;	db "GLACEON@@@"
 	db "MILTANK@@@"
 	db "BLISSEY@@@"
 	db "RAIKOU@@@@"
@@ -253,7 +263,6 @@ PokemonNames::
 	db "CELEBI@@@@"
 	db "MISSINGNO." ;missingno
 	assert_table_length NUM_POKEMON
-;	db "?????@@@@@"
 	db "EGG@@@@@@@"
 	assert_table_length EGG
 	db "?????@@@@@"

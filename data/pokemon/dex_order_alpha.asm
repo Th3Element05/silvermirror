@@ -158,7 +158,7 @@ AlphabeticalPokedexOrder:
 	db PARASECT
 	db PERSIAN
 	db PHANPY
-	db PICHU
+;db PICHU
 	db PIDGEOT
 	db PIDGEOTTO
 	db PIDGEY
@@ -251,7 +251,8 @@ AlphabeticalPokedexOrder:
 	db WOOPER
 	db XATU
 	db YANMA
+	db YANMEGA ;YANMEGA
 	db ZAPDOS
 	db ZUBAT
-	db MISSINGNO ;missingno
+	db MISSINGNO ;MISSINGNO
 	assert_table_length NUM_POKEMON

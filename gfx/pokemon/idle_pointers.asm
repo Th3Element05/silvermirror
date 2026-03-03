@@ -170,7 +170,7 @@ AnimationIdlePointers:
 	dw CrobatAnimationIdle
 	dw ChinchouAnimationIdle
 	dw LanturnAnimationIdle
-	dw PichuAnimationIdle
+;dw PichuAnimationIdle
 	dw CleffaAnimationIdle
 	dw IgglybuffAnimationIdle
 	dw TogepiAnimationIdle
@@ -192,13 +192,16 @@ AnimationIdlePointers:
 	dw SunkernAnimationIdle
 	dw SunfloraAnimationIdle
 	dw YanmaAnimationIdle
+	dw YanmegaAnimationIdle ;YANMEGA
 	dw WooperAnimationIdle
 	dw QuagsireAnimationIdle
 	dw EspeonAnimationIdle
 	dw UmbreonAnimationIdle
 	dw MurkrowAnimationIdle
+
 	dw SlowkingAnimationIdle
 	dw MisdreavusAnimationIdle
+
 	dw UnownAnimationIdle
 	dw WobbuffetAnimationIdle
 	dw GirafarigAnimationIdle
@@ -206,6 +209,7 @@ AnimationIdlePointers:
 	dw ForretressAnimationIdle
 	dw DunsparceAnimationIdle
 	dw GligarAnimationIdle
+
 	dw SteelixAnimationIdle
 	dw SnubbullAnimationIdle
 	dw GranbullAnimationIdle
@@ -214,12 +218,14 @@ AnimationIdlePointers:
 	dw ShuckleAnimationIdle
 	dw HeracrossAnimationIdle
 	dw SneaselAnimationIdle
+
 	dw TeddiursaAnimationIdle
 	dw UrsaringAnimationIdle
 	dw SlugmaAnimationIdle
 	dw MagcargoAnimationIdle
 	dw SwinubAnimationIdle
 	dw PiloswineAnimationIdle
+
 	dw CorsolaAnimationIdle
 	dw RemoraidAnimationIdle
 	dw OctilleryAnimationIdle
@@ -237,8 +243,12 @@ AnimationIdlePointers:
 	dw TyrogueAnimationIdle
 	dw HitmontopAnimationIdle
 	dw SmoochumAnimationIdle
+
 	dw ElekidAnimationIdle
+
 	dw MagbyAnimationIdle
+
+
 	dw MiltankAnimationIdle
 	dw BlisseyAnimationIdle
 	dw RaikouAnimationIdle
@@ -250,4 +260,4 @@ AnimationIdlePointers:
 	dw LugiaAnimationIdle
 	dw HoOhAnimationIdle
 	dw CelebiAnimationIdle
-	dw MissingnoAnimationIdle ;missingno
+	dw MissingnoAnimationIdle ;MISSINGNO
