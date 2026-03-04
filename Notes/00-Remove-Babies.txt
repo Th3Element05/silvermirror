@@ -1,3 +1,14 @@
+TO DO
+leafeon + glaceon tm/hm list
+test evo methods
+
+
+
+
+
+
+
+
 remove:
 	PICHU		pikachu
 	CLEFFA		clefairy
@@ -19,7 +30,7 @@ add:
 	yanmega		M_ancientpower
 	  tangrowth	M_ancientpower
 	  magnezone	power_plant, thunderstone? 
-	    leafeon	viridian_forest
+	    leafeon	viridian_forest, ilex_forest
 	    glaceon	seafoam, ice_path
 	not:
 	togekiss	shiny_stone (happiness?)
