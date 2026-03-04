@@ -39,7 +39,7 @@ DayCareManScript_Inside:
 	readvar VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, .PartyFull
 ;	special GiveOddEgg
-	giveegg TOGEPI, EGG_LEVEL
+	giveegg EEVEE, EGG_LEVEL
 	getstring STRING_BUFFER_4, .eggname
 	opentext
 	writetext DayCareText_GotOddEgg

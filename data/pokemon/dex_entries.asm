@@ -180,10 +180,10 @@ CrobatPokedexEntry::     INCLUDE "data/pokemon/dex_entries/crobat.asm"
 ChinchouPokedexEntry::   INCLUDE "data/pokemon/dex_entries/chinchou.asm"
 LanturnPokedexEntry::    INCLUDE "data/pokemon/dex_entries/lanturn.asm"
 ;PichuPokedexEntry::      INCLUDE "data/pokemon/dex_entries/pichu.asm"
-CleffaPokedexEntry::     INCLUDE "data/pokemon/dex_entries/cleffa.asm"
-IgglybuffPokedexEntry::  INCLUDE "data/pokemon/dex_entries/igglybuff.asm"
-TogepiPokedexEntry::     INCLUDE "data/pokemon/dex_entries/togepi.asm"
-TogeticPokedexEntry::    INCLUDE "data/pokemon/dex_entries/togetic.asm"
+;CleffaPokedexEntry::     INCLUDE "data/pokemon/dex_entries/cleffa.asm"
+;IgglybuffPokedexEntry::  INCLUDE "data/pokemon/dex_entries/igglybuff.asm"
+;TogepiPokedexEntry::     INCLUDE "data/pokemon/dex_entries/togepi.asm"
+;TogeticPokedexEntry::    INCLUDE "data/pokemon/dex_entries/togetic.asm"
 NatuPokedexEntry::       INCLUDE "data/pokemon/dex_entries/natu.asm"
 XatuPokedexEntry::       INCLUDE "data/pokemon/dex_entries/xatu.asm"
 MareepPokedexEntry::     INCLUDE "data/pokemon/dex_entries/mareep.asm"
@@ -201,20 +201,20 @@ AipomPokedexEntry::      INCLUDE "data/pokemon/dex_entries/aipom.asm"
 SunkernPokedexEntry::    INCLUDE "data/pokemon/dex_entries/sunkern.asm"
 SunfloraPokedexEntry::   INCLUDE "data/pokemon/dex_entries/sunflora.asm"
 YanmaPokedexEntry::      INCLUDE "data/pokemon/dex_entries/yanma.asm"
-
-
-SECTION "Pokedex Entries 193-251", ROMX
-
 YanmegaPokedexEntry::    INCLUDE "data/pokemon/dex_entries/yanmega.asm" ;YANMEGA
 WooperPokedexEntry::     INCLUDE "data/pokemon/dex_entries/wooper.asm"
 QuagsirePokedexEntry::   INCLUDE "data/pokemon/dex_entries/quagsire.asm"
 EspeonPokedexEntry::     INCLUDE "data/pokemon/dex_entries/espeon.asm"
+
+
+SECTION "Pokedex Entries 193-251", ROMX
+
 UmbreonPokedexEntry::    INCLUDE "data/pokemon/dex_entries/umbreon.asm"
 MurkrowPokedexEntry::    INCLUDE "data/pokemon/dex_entries/murkrow.asm"
-;HonchkrowPokedexEntry::  INCLUDE "data/pokemon/dex_entries/honchkrow.asm"
+HonchkrowPokedexEntry::  INCLUDE "data/pokemon/dex_entries/honchkrow.asm" ;HONCHKROW
 SlowkingPokedexEntry::   INCLUDE "data/pokemon/dex_entries/slowking.asm"
 MisdreavusPokedexEntry:: INCLUDE "data/pokemon/dex_entries/misdreavus.asm"
-;MismagiusPokedexEntry::  INCLUDE "data/pokemon/dex_entries/mismagius.asm"
+MismagiusPokedexEntry::  INCLUDE "data/pokemon/dex_entries/mismagius.asm" ;MISMAGIUS
 UnownPokedexEntry::      INCLUDE "data/pokemon/dex_entries/unown.asm"
 WobbuffetPokedexEntry::  INCLUDE "data/pokemon/dex_entries/wobbuffet.asm"
 GirafarigPokedexEntry::  INCLUDE "data/pokemon/dex_entries/girafarig.asm"
@@ -222,7 +222,7 @@ PinecoPokedexEntry::     INCLUDE "data/pokemon/dex_entries/pineco.asm"
 ForretressPokedexEntry:: INCLUDE "data/pokemon/dex_entries/forretress.asm"
 DunsparcePokedexEntry::  INCLUDE "data/pokemon/dex_entries/dunsparce.asm"
 GligarPokedexEntry::     INCLUDE "data/pokemon/dex_entries/gligar.asm"
-;GliscorPokedexEntry::    INCLUDE "data/pokemon/dex_entries/gliscor.asm"
+GliscorPokedexEntry::    INCLUDE "data/pokemon/dex_entries/gliscor.asm" ;GLISCOR
 SteelixPokedexEntry::    INCLUDE "data/pokemon/dex_entries/steelix.asm"
 SnubbullPokedexEntry::   INCLUDE "data/pokemon/dex_entries/snubbull.asm"
 GranbullPokedexEntry::   INCLUDE "data/pokemon/dex_entries/granbull.asm"
@@ -231,18 +231,18 @@ ScizorPokedexEntry::     INCLUDE "data/pokemon/dex_entries/scizor.asm"
 ShucklePokedexEntry::    INCLUDE "data/pokemon/dex_entries/shuckle.asm"
 HeracrossPokedexEntry::  INCLUDE "data/pokemon/dex_entries/heracross.asm"
 SneaselPokedexEntry::    INCLUDE "data/pokemon/dex_entries/sneasel.asm"
-;WeavilePokedexEntry::    INCLUDE "data/pokemon/dex_entries/weavile.asm"
+WeavilePokedexEntry::    INCLUDE "data/pokemon/dex_entries/weavile.asm" ;WEAVILE
 TeddiursaPokedexEntry::  INCLUDE "data/pokemon/dex_entries/teddiursa.asm"
 UrsaringPokedexEntry::   INCLUDE "data/pokemon/dex_entries/ursaring.asm"
 SlugmaPokedexEntry::     INCLUDE "data/pokemon/dex_entries/slugma.asm"
 MagcargoPokedexEntry::   INCLUDE "data/pokemon/dex_entries/magcargo.asm"
 SwinubPokedexEntry::     INCLUDE "data/pokemon/dex_entries/swinub.asm"
 PiloswinePokedexEntry::  INCLUDE "data/pokemon/dex_entries/piloswine.asm"
-;MamoswinePokedexEntry::  INCLUDE "data/pokemon/dex_entries/mamoswine.asm"
+MamoswinePokedexEntry::  INCLUDE "data/pokemon/dex_entries/mamoswine.asm" ;MAMOSWINE
 CorsolaPokedexEntry::    INCLUDE "data/pokemon/dex_entries/corsola.asm"
 RemoraidPokedexEntry::   INCLUDE "data/pokemon/dex_entries/remoraid.asm"
 OctilleryPokedexEntry::  INCLUDE "data/pokemon/dex_entries/octillery.asm"
-DelibirdPokedexEntry::   INCLUDE "data/pokemon/dex_entries/delibird.asm"
+;DelibirdPokedexEntry::   INCLUDE "data/pokemon/dex_entries/delibird.asm"
 MantinePokedexEntry::    INCLUDE "data/pokemon/dex_entries/mantine.asm"
 SkarmoryPokedexEntry::   INCLUDE "data/pokemon/dex_entries/skarmory.asm"
 HoundourPokedexEntry::   INCLUDE "data/pokemon/dex_entries/houndour.asm"
@@ -255,13 +255,13 @@ StantlerPokedexEntry::   INCLUDE "data/pokemon/dex_entries/stantler.asm"
 SmearglePokedexEntry::   INCLUDE "data/pokemon/dex_entries/smeargle.asm"
 TyroguePokedexEntry::    INCLUDE "data/pokemon/dex_entries/tyrogue.asm"
 HitmontopPokedexEntry::  INCLUDE "data/pokemon/dex_entries/hitmontop.asm"
-SmoochumPokedexEntry::   INCLUDE "data/pokemon/dex_entries/smoochum.asm"
-;MagnezonePokedexEntry::  INCLUDE "data/pokemon/dex_entries/magnezone.asm"
-ElekidPokedexEntry::     INCLUDE "data/pokemon/dex_entries/elekid.asm"
-;TangrowthPokedexEntry::  INCLUDE "data/pokemon/dex_entries/tangrowth.asm"
-MagbyPokedexEntry::      INCLUDE "data/pokemon/dex_entries/magby.asm"
-;LeafeonPokedexEntry::    INCLUDE "data/pokemon/dex_entries/leafeon.asm"
-;GlaceonPokedexEntry::    INCLUDE "data/pokemon/dex_entries/glaceon.asm"
+;SmoochumPokedexEntry::   INCLUDE "data/pokemon/dex_entries/smoochum.asm"
+MagnezonePokedexEntry::  INCLUDE "data/pokemon/dex_entries/magnezone.asm" ;MAGNEZONE
+;ElekidPokedexEntry::     INCLUDE "data/pokemon/dex_entries/elekid.asm"
+TangrowthPokedexEntry::  INCLUDE "data/pokemon/dex_entries/tangrowth.asm" ;TANGROWTH
+;MagbyPokedexEntry::      INCLUDE "data/pokemon/dex_entries/magby.asm"
+LeafeonPokedexEntry::    INCLUDE "data/pokemon/dex_entries/leafeon.asm" ;LEAFEON
+GlaceonPokedexEntry::    INCLUDE "data/pokemon/dex_entries/glaceon.asm" ;GLACEON
 MiltankPokedexEntry::    INCLUDE "data/pokemon/dex_entries/miltank.asm"
 BlisseyPokedexEntry::    INCLUDE "data/pokemon/dex_entries/blissey.asm"
 RaikouPokedexEntry::     INCLUDE "data/pokemon/dex_entries/raikou.asm"

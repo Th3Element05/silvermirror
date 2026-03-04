@@ -172,11 +172,11 @@ PokedexDataPointerTable:
 	dw CrobatPokedexEntry
 	dw ChinchouPokedexEntry
 	dw LanturnPokedexEntry
-;dw PichuPokedexEntry
-	dw CleffaPokedexEntry
-	dw IgglybuffPokedexEntry
-	dw TogepiPokedexEntry
-	dw TogeticPokedexEntry
+;	dw PichuPokedexEntry
+;	dw CleffaPokedexEntry
+;	dw IgglybuffPokedexEntry
+;	dw TogepiPokedexEntry
+;	dw TogeticPokedexEntry
 	dw NatuPokedexEntry
 	dw XatuPokedexEntry
 	dw MareepPokedexEntry
@@ -194,16 +194,16 @@ PokedexDataPointerTable:
 	dw SunkernPokedexEntry
 	dw SunfloraPokedexEntry
 	dw YanmaPokedexEntry
-	dw YanmegaPokedexEntry ;NEW
+	dw YanmegaPokedexEntry ;YANMEGA
 	dw WooperPokedexEntry
 	dw QuagsirePokedexEntry
 	dw EspeonPokedexEntry
 	dw UmbreonPokedexEntry
 	dw MurkrowPokedexEntry
-;	dw HonchkrowPokedexEntry
+	dw HonchkrowPokedexEntry ;HONCHKROW
 	dw SlowkingPokedexEntry
 	dw MisdreavusPokedexEntry
-;	dw MismagiusPokedexEntry
+	dw MismagiusPokedexEntry ;MISMAGIUS
 	dw UnownPokedexEntry
 	dw WobbuffetPokedexEntry
 	dw GirafarigPokedexEntry
@@ -211,7 +211,7 @@ PokedexDataPointerTable:
 	dw ForretressPokedexEntry
 	dw DunsparcePokedexEntry
 	dw GligarPokedexEntry
-;	dw GliscorPokedexEntry
+	dw GliscorPokedexEntry ;GLISCOR
 	dw SteelixPokedexEntry
 	dw SnubbullPokedexEntry
 	dw GranbullPokedexEntry
@@ -220,18 +220,18 @@ PokedexDataPointerTable:
 	dw ShucklePokedexEntry
 	dw HeracrossPokedexEntry
 	dw SneaselPokedexEntry
-;	dw WeavilePokedexEntry
+	dw WeavilePokedexEntry ;WEAVILE
 	dw TeddiursaPokedexEntry
 	dw UrsaringPokedexEntry
 	dw SlugmaPokedexEntry
 	dw MagcargoPokedexEntry
 	dw SwinubPokedexEntry
 	dw PiloswinePokedexEntry
-;	dw MamoswinePokedexEntry
+	dw MamoswinePokedexEntry ;MAMOSWINE
 	dw CorsolaPokedexEntry
 	dw RemoraidPokedexEntry
 	dw OctilleryPokedexEntry
-	dw DelibirdPokedexEntry
+;	dw DelibirdPokedexEntry
 	dw MantinePokedexEntry
 	dw SkarmoryPokedexEntry
 	dw HoundourPokedexEntry
@@ -244,13 +244,13 @@ PokedexDataPointerTable:
 	dw SmearglePokedexEntry
 	dw TyroguePokedexEntry
 	dw HitmontopPokedexEntry
-	dw SmoochumPokedexEntry
-;	dw MagnezonePokedexEntry
-	dw ElekidPokedexEntry
-;	dw TangrowthPokedexEntry
-	dw MagbyPokedexEntry
-;	dw LeafeonPokedexEntry
-;	dw GlaceonPokedexEntry
+;	dw SmoochumPokedexEntry
+	dw MagnezonePokedexEntry ;MAGNEZONE
+;	dw ElekidPokedexEntry
+	dw TangrowthPokedexEntry ;TANGROWTH
+;	dw MagbyPokedexEntry
+	dw LeafeonPokedexEntry ;LEAFEON
+	dw GlaceonPokedexEntry ;GLACEON
 	dw MiltankPokedexEntry
 	dw BlisseyPokedexEntry
 	dw RaikouPokedexEntry
@@ -262,5 +262,5 @@ PokedexDataPointerTable:
 	dw LugiaPokedexEntry
 	dw HoOhPokedexEntry
 	dw CelebiPokedexEntry
-	dw MissingnoPokedexEntry ;missingno
+	dw MissingnoPokedexEntry ;MISSINGNO
 	assert_table_length NUM_POKEMON

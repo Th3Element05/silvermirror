@@ -173,11 +173,11 @@ IconPointers:
 	dw CrobatIcon
 	dw ChinchouIcon
 	dw LanturnIcon
-;dw PichuIcon
-	dw CleffaIcon
-	dw IgglybuffIcon
-	dw TogepiIcon
-	dw TogeticIcon
+;	dw PichuIcon
+;	dw CleffaIcon
+;	dw IgglybuffIcon
+;	dw TogepiIcon
+;	dw TogeticIcon
 	dw NatuIcon
 	dw XatuIcon
 	dw MareepIcon
@@ -195,16 +195,16 @@ IconPointers:
 	dw SunkernIcon
 	dw SunfloraIcon
 	dw YanmaIcon
-	dw YanmegaIcon
+	dw YanmegaIcon ;YANMEGA
 	dw WooperIcon
 	dw QuagsireIcon
 	dw EspeonIcon
 	dw UmbreonIcon
 	dw MurkrowIcon
-;	db HonchkrowIcon
+	dw HonchkrowIcon ;HONCHKROW
 	dw SlowkingIcon
 	dw MisdreavusIcon
-;	dw MismagiusIcon
+	dw MismagiusIcon ;MISMAGIUS
 	dw UnownIcon
 	dw WobbuffetIcon
 	dw GirafarigIcon
@@ -212,7 +212,7 @@ IconPointers:
 	dw ForretressIcon
 	dw DunsparceIcon
 	dw GligarIcon
-;	dw GliscorIcon
+	dw GliscorIcon ;GLISCOR
 	dw SteelixIcon
 	dw SnubbullIcon
 	dw GranbullIcon
@@ -221,18 +221,18 @@ IconPointers:
 	dw ShuckleIcon
 	dw HeracrossIcon
 	dw SneaselIcon
-;	dw WeavileIcon
+	dw WeavileIcon ;WEAVILE
 	dw TeddiursaIcon
 	dw UrsaringIcon
 	dw SlugmaIcon
 	dw MagcargoIcon
 	dw SwinubIcon
 	dw Piloswine
-;	dw MamoswineIcon
+	dw MamoswineIcon ;MAMOSWINE
 	dw CorsolaIcon
 	dw RemoraidIcon
 	dw OctilleryIcon
-	dw DelibirdIcon
+;	dw DelibirdIcon
 	dw MantineIcon
 	dw SkarmoryIcon
 	dw HoundourIcon
@@ -245,13 +245,13 @@ IconPointers:
 	dw SmeargleIcon
 	dw TyrogueIcon
 	dw HitmontopIcon
-	dw SmoochumIcon
-;	dw MagnezoneIcon
-	dw ElekidIcon
-;	dw TangrowthIcon
-	dw MagbyIcon
-;	dw LeafeonIcon
-;	dw GlaceonIcon
+;	dw SmoochumIcon
+	dw MagnezoneIcon ;MAGNEZONE
+;	dw ElekidIcon
+	dw TangrowthIcon ;TANGROWTH
+;	dw MagbyIcon
+	dw LeafeonIcon ;LEAFEON
+	dw GlaceonIcon ;GLACEON
 	dw MiltankIcon
 	dw BlisseyIcon
 	dw RaikouIcon
@@ -263,7 +263,7 @@ IconPointers:
 	dw LugiaIcon
 	dw HoOhIcon
 	dw CelebiIcon
-	dw MissingnoIcon ;missingno
+	dw MissingnoIcon ;MISSINGNO
 	assert_table_length NUM_POKEMON + 1
 	dw EggIcon
 	assert_table_length EGG + 1

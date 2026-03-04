@@ -171,11 +171,11 @@ PokemonNames::
 	db "CROBAT@@@@"
 	db "CHINCHOU@@"
 	db "LANTURN@@@"
-;db "PICHU@@@@@" ;
-	db "CLEFFA@@@@" ;
-	db "IGGLYBUFF@" ;
-	db "TOGEPI@@@@" ;
-	db "TOGETIC@@@" ;
+;	db "PICHU@@@@@" ; baby
+;	db "CLEFFA@@@@" ; baby
+;	db "IGGLYBUFF@" ; baby
+;	db "TOGEPI@@@@" ; replaced
+;	db "TOGETIC@@@" ; replaced
 	db "NATU@@@@@@"
 	db "XATU@@@@@@"
 	db "MAREEP@@@@"
@@ -193,16 +193,16 @@ PokemonNames::
 	db "SUNKERN@@@"
 	db "SUNFLORA@@"
 	db "YANMA@@@@@"
-	db "YANMEGA@@@" ;NEW
+	db "YANMEGA@@@" ;YANMEGA
 	db "WOOPER@@@@"
 	db "QUAGSIRE@@"
 	db "ESPEON@@@@"
 	db "UMBREON@@@"
 	db "MURKROW@@@"
-;	db "HONCHKROW@"
+	db "HONCHKROW@" ;HONCHKROW
 	db "SLOWKING@@"
 	db "MISDREAVUS"
-;	db "MISMAGIUS@"
+	db "MISMAGIUS@" ;MISMAGIUS
 	db "UNOWN@@@@@"
 	db "WOBBUFFET@"
 	db "GIRAFARIG@"
@@ -210,7 +210,7 @@ PokemonNames::
 	db "FORRETRESS"
 	db "DUNSPARCE@"
 	db "GLIGAR@@@@"
-;	db "GLISCOR@@@"
+	db "GLISCOR@@@" ;GLISCOR
 	db "STEELIX@@@"
 	db "SNUBBULL@@"
 	db "GRANBULL@@"
@@ -219,18 +219,18 @@ PokemonNames::
 	db "SHUCKLE@@@"
 	db "HERACROSS@"
 	db "SNEASEL@@@"
-;	db "WEAVILE@@@"
+	db "WEAVILE@@@" ;WEAVILE
 	db "TEDDIURSA@"
 	db "URSARING@@"
 	db "SLUGMA@@@@"
 	db "MAGCARGO@@"
 	db "SWINUB@@@@"
 	db "PILOSWINE@"
-;	db "MAMOSWINE@"
+	db "MAMOSWINE@" ;MAMOSWINE
 	db "CORSOLA@@@"
 	db "REMORAID@@"
 	db "OCTILLERY@"
-	db "DELIBIRD@@" ;
+;	db "DELIBIRD@@" ;replaced
 	db "MANTINE@@@"
 	db "SKARMORY@@"
 	db "HOUNDOUR@@"
@@ -243,13 +243,13 @@ PokemonNames::
 	db "SMEARGLE@@"
 	db "TYROGUE@@@"
 	db "HITMONTOP@"
-	db "SMOOCHUM@@" ;
-;	db "MAGNEZONE@"
-	db "ELEKID@@@@" ;
-;	db "TANGROWTH@"
-	db "MAGBY@@@@@" ;
-;	db "LEAFEON@@@"
-;	db "GLACEON@@@"
+;	db "SMOOCHUM@@" ; baby
+	db "MAGNEZONE@" ;MAGNEZONE
+;	db "ELEKID@@@@" ; baby
+	db "TANGROWTH@" ;TANGROWTH
+;	db "MAGBY@@@@@" ; baby
+	db "LEAFEON@@@" ;LEAFEON
+	db "GLACEON@@@" ;GLACEON
 	db "MILTANK@@@"
 	db "BLISSEY@@@"
 	db "RAIKOU@@@@"
@@ -261,11 +261,10 @@ PokemonNames::
 	db "LUGIA@@@@@"
 	db "HO-OH@@@@@"
 	db "CELEBI@@@@"
-	db "MISSINGNO." ;missingno
+	db "MISSINGNO." ;MISSINGNO
 	assert_table_length NUM_POKEMON
 	db "EGG@@@@@@@"
 	assert_table_length EGG
-	db "?????@@@@@"
 	db "?????@@@@@"
 	db "?????@@@@@"
 	assert_table_length $100

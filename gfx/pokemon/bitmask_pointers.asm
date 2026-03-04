@@ -170,11 +170,11 @@ BitmasksPointers:
 	dw CrobatBitmasks
 	dw ChinchouBitmasks
 	dw LanturnBitmasks
-;dw PichuBitmasks
-	dw CleffaBitmasks
-	dw IgglybuffBitmasks
-	dw TogepiBitmasks
-	dw TogeticBitmasks
+;	dw PichuBitmasks
+;	dw CleffaBitmasks
+;	dw IgglybuffBitmasks
+;	dw TogepiBitmasks
+;	dw TogeticBitmasks
 	dw NatuBitmasks
 	dw XatuBitmasks
 	dw MareepBitmasks
@@ -198,10 +198,10 @@ BitmasksPointers:
 	dw EspeonBitmasks
 	dw UmbreonBitmasks
 	dw MurkrowBitmasks
-;	dw HonchkrowBitmasks ;HONCHKROW
+	dw HonchkrowBitmasks ;HONCHKROW
 	dw SlowkingBitmasks
 	dw MisdreavusBitmasks
-;	dw MismagiusBitmasks ;MISMAGIUS
+	dw MismagiusBitmasks ;MISMAGIUS
 	dw UnownBitmasks
 	dw WobbuffetBitmasks
 	dw GirafarigBitmasks
@@ -209,7 +209,7 @@ BitmasksPointers:
 	dw ForretressBitmasks
 	dw DunsparceBitmasks
 	dw GligarBitmasks
-;	dw GliscorBitmasks ;GLISCOR
+	dw GliscorBitmasks ;GLISCOR
 	dw SteelixBitmasks
 	dw SnubbullBitmasks
 	dw GranbullBitmasks
@@ -218,18 +218,18 @@ BitmasksPointers:
 	dw ShuckleBitmasks
 	dw HeracrossBitmasks
 	dw SneaselBitmasks
-;	dw WeavileBitmasks ;WEAVILE
+	dw WeavileBitmasks ;WEAVILE
 	dw TeddiursaBitmasks
 	dw UrsaringBitmasks
 	dw SlugmaBitmasks
 	dw MagcargoBitmasks
 	dw SwinubBitmasks
 	dw PiloswineBitmasks
-;	dw MamoswineBitmasks ;MAMOSWINE
+	dw MamoswineBitmasks ;MAMOSWINE
 	dw CorsolaBitmasks
 	dw RemoraidBitmasks
 	dw OctilleryBitmasks
-	dw DelibirdBitmasks
+;	dw DelibirdBitmasks
 	dw MantineBitmasks
 	dw SkarmoryBitmasks
 	dw HoundourBitmasks
@@ -242,13 +242,13 @@ BitmasksPointers:
 	dw SmeargleBitmasks
 	dw TyrogueBitmasks
 	dw HitmontopBitmasks
-	dw SmoochumBitmasks
-;	dw MagnezoneBitmasks ;MAGNEZONE
-	dw ElekidBitmasks
-;	dw TangrowthBitmasks ;TANGROWTH
-	dw MagbyBitmasks
-;	dw LeafeonBitmasks ;LEAFEON
-;	dw GlaceonBitmasks ;GLACEON
+;	dw SmoochumBitmasks
+	dw MagnezoneBitmasks ;MAGNEZONE
+;	dw ElekidBitmasks
+	dw TangrowthBitmasks ;TANGROWTH
+;	dw MagbyBitmasks
+	dw LeafeonBitmasks ;LEAFEON
+	dw GlaceonBitmasks ;GLACEON
 	dw MiltankBitmasks
 	dw BlisseyBitmasks
 	dw RaikouBitmasks

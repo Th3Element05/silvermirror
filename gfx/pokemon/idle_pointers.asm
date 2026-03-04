@@ -170,11 +170,11 @@ AnimationIdlePointers:
 	dw CrobatAnimationIdle
 	dw ChinchouAnimationIdle
 	dw LanturnAnimationIdle
-;dw PichuAnimationIdle
-	dw CleffaAnimationIdle
-	dw IgglybuffAnimationIdle
-	dw TogepiAnimationIdle
-	dw TogeticAnimationIdle
+;	dw PichuAnimationIdle
+;	dw CleffaAnimationIdle
+;	dw IgglybuffAnimationIdle
+;	dw TogepiAnimationIdle
+;	dw TogeticAnimationIdle
 	dw NatuAnimationIdle
 	dw XatuAnimationIdle
 	dw MareepAnimationIdle
@@ -198,10 +198,10 @@ AnimationIdlePointers:
 	dw EspeonAnimationIdle
 	dw UmbreonAnimationIdle
 	dw MurkrowAnimationIdle
-
+	dw HonchkrowAnimationIdle ;HONCHKROW
 	dw SlowkingAnimationIdle
 	dw MisdreavusAnimationIdle
-
+	dw MismagiusAnimationIdle ;MISMAGIUS
 	dw UnownAnimationIdle
 	dw WobbuffetAnimationIdle
 	dw GirafarigAnimationIdle
@@ -209,7 +209,7 @@ AnimationIdlePointers:
 	dw ForretressAnimationIdle
 	dw DunsparceAnimationIdle
 	dw GligarAnimationIdle
-
+	dw GliscorAnimationIdle ;GLISCOR
 	dw SteelixAnimationIdle
 	dw SnubbullAnimationIdle
 	dw GranbullAnimationIdle
@@ -218,18 +218,18 @@ AnimationIdlePointers:
 	dw ShuckleAnimationIdle
 	dw HeracrossAnimationIdle
 	dw SneaselAnimationIdle
-
+	dw WeavileAnimationIdle ;WEAVILE
 	dw TeddiursaAnimationIdle
 	dw UrsaringAnimationIdle
 	dw SlugmaAnimationIdle
 	dw MagcargoAnimationIdle
 	dw SwinubAnimationIdle
 	dw PiloswineAnimationIdle
-
+	dw MamoswineAnimationIdle ;MAMOSWINE
 	dw CorsolaAnimationIdle
 	dw RemoraidAnimationIdle
 	dw OctilleryAnimationIdle
-	dw DelibirdAnimationIdle
+;	dw DelibirdAnimationIdle
 	dw MantineAnimationIdle
 	dw SkarmoryAnimationIdle
 	dw HoundourAnimationIdle
@@ -242,13 +242,13 @@ AnimationIdlePointers:
 	dw SmeargleAnimationIdle
 	dw TyrogueAnimationIdle
 	dw HitmontopAnimationIdle
-	dw SmoochumAnimationIdle
-
-	dw ElekidAnimationIdle
-
-	dw MagbyAnimationIdle
-
-
+;	dw SmoochumAnimationIdle
+	dw MagnezoneAnimationIdle ;MAGNEZONE
+;	dw ElekidAnimationIdle
+	dw TangrowthAnimationIdle ;TANGROWTH
+;	dw MagbyAnimationIdle
+	dw LeafeonAnimationIdle ;LEAFEON
+	dw GlaceonAnimationIdle ;GLACEON
 	dw MiltankAnimationIdle
 	dw BlisseyAnimationIdle
 	dw RaikouAnimationIdle

@@ -170,11 +170,11 @@ FramesPointers:
 	dw CrobatFrames
 	dw ChinchouFrames
 	dw LanturnFrames
-;dw PichuFrames
-	dw CleffaFrames
-	dw IgglybuffFrames
-	dw TogepiFrames
-	dw TogeticFrames
+;	dw PichuFrames
+;	dw CleffaFrames
+;	dw IgglybuffFrames
+;	dw TogepiFrames
+;	dw TogeticFrames
 	dw NatuFrames
 	dw XatuFrames
 	dw MareepFrames
@@ -198,10 +198,10 @@ FramesPointers:
 	dw EspeonFrames
 	dw UmbreonFrames
 	dw MurkrowFrames
-;	dw HonchkrowFrames ;HONCHKROW
+	dw HonchkrowFrames ;HONCHKROW
 	dw SlowkingFrames
 	dw MisdreavusFrames
-;	dw MismagiusFrames ;MISMAGIUS
+	dw MismagiusFrames ;MISMAGIUS
 	dw UnownFrames
 	dw WobbuffetFrames
 	dw GirafarigFrames
@@ -209,7 +209,7 @@ FramesPointers:
 	dw ForretressFrames
 	dw DunsparceFrames
 	dw GligarFrames
-;	dw GliscorFrames ;GLISCOR
+	dw GliscorFrames ;GLISCOR
 	dw SteelixFrames
 	dw SnubbullFrames
 	dw GranbullFrames
@@ -218,18 +218,18 @@ FramesPointers:
 	dw ShuckleFrames
 	dw HeracrossFrames
 	dw SneaselFrames
-;	dw WeavileFrames ;WEAVILE
+	dw WeavileFrames ;WEAVILE
 	dw TeddiursaFrames
 	dw UrsaringFrames
 	dw SlugmaFrames
 	dw MagcargoFrames
 	dw SwinubFrames
 	dw PiloswineFrames
-;	dw MamoswineFrames ;MAMOSWINE
+	dw MamoswineFrames ;MAMOSWINE
 	dw CorsolaFrames
 	dw RemoraidFrames
 	dw OctilleryFrames
-	dw DelibirdFrames
+;	dw DelibirdFrames
 	dw MantineFrames
 	dw SkarmoryFrames
 	dw HoundourFrames
@@ -242,13 +242,13 @@ FramesPointers:
 	dw SmeargleFrames
 	dw TyrogueFrames
 	dw HitmontopFrames
-	dw SmoochumFrames
-;	dw MagnezoneFrames ;MAGNEZONE
-	dw ElekidFrames
-;	dw TangrowthFrames ;TANGROWTH
-	dw MagbyFrames
-;	dw LeafeonFrames ;LEAFEON
-;	dw GlaceonFrames ;GLACEON
+;	dw SmoochumFrames
+	dw MagnezoneFrames ;MAGNEZONE
+;	dw ElekidFrames
+	dw TangrowthFrames ;TANGROWTH
+;	dw MagbyFrames
+	dw LeafeonFrames ;LEAFEON
+	dw GlaceonFrames ;GLACEON
 	dw MiltankFrames
 	dw BlisseyFrames
 	dw RaikouFrames
