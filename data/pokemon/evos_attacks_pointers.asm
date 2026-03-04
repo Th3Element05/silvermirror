@@ -173,11 +173,11 @@ EvosAttacksPointers::
 	dw CrobatEvosAttacks
 	dw ChinchouEvosAttacks
 	dw LanturnEvosAttacks
-;dw PichuEvosAttacks     ;remove
-	dw CleffaEvosAttacks    ;remove
-	dw IgglybuffEvosAttacks ;remove
-	dw TogepiEvosAttacks    ;remove
-	dw TogeticEvosAttacks   ;remove
+;	dw PichuEvosAttacks     ; baby
+;	dw CleffaEvosAttacks    ; baby
+;	dw IgglybuffEvosAttacks ; baby
+;	dw TogepiEvosAttacks    ; replaced
+;	dw TogeticEvosAttacks   ; replaced
 	dw NatuEvosAttacks
 	dw XatuEvosAttacks
 	dw MareepEvosAttacks
@@ -195,16 +195,16 @@ EvosAttacksPointers::
 	dw SunkernEvosAttacks
 	dw SunfloraEvosAttacks
 	dw YanmaEvosAttacks
-	dw YanmegaEvosAttacks ;NEW
+	dw YanmegaEvosAttacks ;YANMEGA
 	dw WooperEvosAttacks
 	dw QuagsireEvosAttacks
 	dw EspeonEvosAttacks
 	dw UmbreonEvosAttacks
 	dw MurkrowEvosAttacks
-;	dw HonchkrowEvosAttacks
+	dw HonchkrowEvosAttacks ;HONCHKROW
 	dw SlowkingEvosAttacks
 	dw MisdreavusEvosAttacks
-;	dw MismagiusEvosAttacks
+	dw MismagiusEvosAttacks ;MISMAGIUS
 	dw UnownEvosAttacks
 	dw WobbuffetEvosAttacks
 	dw GirafarigEvosAttacks
@@ -212,7 +212,7 @@ EvosAttacksPointers::
 	dw ForretressEvosAttacks
 	dw DunsparceEvosAttacks
 	dw GligarEvosAttacks
-;	dw GliscorEvosAttacks
+	dw GliscorEvosAttacks ;GLISCOR
 	dw SteelixEvosAttacks
 	dw SnubbullEvosAttacks
 	dw GranbullEvosAttacks
@@ -221,18 +221,18 @@ EvosAttacksPointers::
 	dw ShuckleEvosAttacks
 	dw HeracrossEvosAttacks
 	dw SneaselEvosAttacks
-;	dw WeavileEvosAttacks
+	dw WeavileEvosAttacks ;WEAVILE
 	dw TeddiursaEvosAttacks
 	dw UrsaringEvosAttacks
 	dw SlugmaEvosAttacks
 	dw MagcargoEvosAttacks
 	dw SwinubEvosAttacks
 	dw PiloswineEvosAttacks
-;	dw MamoswineEvosAttacks
+	dw MamoswineEvosAttacks ;MAMOSWINE
 	dw CorsolaEvosAttacks
 	dw RemoraidEvosAttacks
 	dw OctilleryEvosAttacks
-	dw DelibirdEvosAttacks ;remove
+;	dw DelibirdEvosAttacks ; replaced
 	dw MantineEvosAttacks
 	dw SkarmoryEvosAttacks
 	dw HoundourEvosAttacks
@@ -245,13 +245,13 @@ EvosAttacksPointers::
 	dw SmeargleEvosAttacks
 	dw TyrogueEvosAttacks
 	dw HitmontopEvosAttacks
-	dw SmoochumEvosAttacks ;remove
-;	dw MagnezoneEvosAttacks
-	dw ElekidEvosAttacks   ;remove
-;	dw TangrowthEvosAttacks
-	dw MagbyEvosAttacks    ;remove
-;	dw LeafeonEvosAttacks
-;	dw GlaceonEvosAttacks
+;	dw SmoochumEvosAttacks ; baby
+	dw MagnezoneEvosAttacks ;MAGNEZONE
+;	dw ElekidEvosAttacks   ; baby
+	dw TangrowthEvosAttacks ;TANGROWTH
+;	dw MagbyEvosAttacks    ; baby
+	dw LeafeonEvosAttacks ;LEAFEON
+	dw GlaceonEvosAttacks ;GLACEON
 	dw MiltankEvosAttacks
 	dw BlisseyEvosAttacks
 	dw RaikouEvosAttacks
@@ -263,5 +263,5 @@ EvosAttacksPointers::
 	dw LugiaEvosAttacks
 	dw HoOhEvosAttacks
 	dw CelebiEvosAttacks
-	dw MissingnoEvosAttacks ;missingno
+	dw MissingnoEvosAttacks ;MISSINGNO
 	assert_table_length NUM_POKEMON

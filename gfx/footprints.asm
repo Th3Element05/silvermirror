@@ -183,10 +183,10 @@ INCBIN "gfx/footprints/crobat.1bpp"
 INCBIN "gfx/footprints/chinchou.1bpp"
 INCBIN "gfx/footprints/lanturn.1bpp"
 ;INCBIN "gfx/footprints/pichu.1bpp"
-INCBIN "gfx/footprints/cleffa.1bpp"
-INCBIN "gfx/footprints/igglybuff.1bpp"
-INCBIN "gfx/footprints/togepi.1bpp"
-INCBIN "gfx/footprints/togetic.1bpp"
+;INCBIN "gfx/footprints/cleffa.1bpp"
+;INCBIN "gfx/footprints/igglybuff.1bpp"
+;INCBIN "gfx/footprints/togepi.1bpp"
+;INCBIN "gfx/footprints/togetic.1bpp"
 INCBIN "gfx/footprints/natu.1bpp"
 INCBIN "gfx/footprints/xatu.1bpp"
 INCBIN "gfx/footprints/mareep.1bpp"
@@ -210,10 +210,10 @@ INCBIN "gfx/footprints/quagsire.1bpp"
 INCBIN "gfx/footprints/espeon.1bpp"
 INCBIN "gfx/footprints/umbreon.1bpp"
 INCBIN "gfx/footprints/murkrow.1bpp"
-;INCBIN "gfx/footprints/honchkrow.1bpp" ;HONCHKROW
+INCBIN "gfx/footprints/honchkrow.1bpp" ;HONCHKROW
 INCBIN "gfx/footprints/slowking.1bpp"
 INCBIN "gfx/footprints/misdreavus.1bpp"
-;INCBIN "gfx/footprints/mismagius.1bpp" ;MISMAGIUS
+INCBIN "gfx/footprints/mismagius.1bpp" ;MISMAGIUS
 INCBIN "gfx/footprints/unown.1bpp"
 INCBIN "gfx/footprints/wobbuffet.1bpp"
 INCBIN "gfx/footprints/girafarig.1bpp"
@@ -221,7 +221,7 @@ INCBIN "gfx/footprints/pineco.1bpp"
 INCBIN "gfx/footprints/forretress.1bpp"
 INCBIN "gfx/footprints/dunsparce.1bpp"
 INCBIN "gfx/footprints/gligar.1bpp"
-;INCBIN "gfx/footprints/gliscor.1bpp" ;GLISCOR
+INCBIN "gfx/footprints/gliscor.1bpp" ;GLISCOR
 INCBIN "gfx/footprints/steelix.1bpp"
 INCBIN "gfx/footprints/snubbull.1bpp"
 INCBIN "gfx/footprints/granbull.1bpp"
@@ -230,18 +230,18 @@ INCBIN "gfx/footprints/scizor.1bpp"
 INCBIN "gfx/footprints/shuckle.1bpp"
 INCBIN "gfx/footprints/heracross.1bpp"
 INCBIN "gfx/footprints/sneasel.1bpp"
-;INCBIN "gfx/footprints/weavile.1bpp" ;WEAVILE
+INCBIN "gfx/footprints/weavile.1bpp" ;WEAVILE
 INCBIN "gfx/footprints/teddiursa.1bpp"
 INCBIN "gfx/footprints/ursaring.1bpp"
 INCBIN "gfx/footprints/slugma.1bpp"
 INCBIN "gfx/footprints/magcargo.1bpp"
 INCBIN "gfx/footprints/swinub.1bpp"
 INCBIN "gfx/footprints/piloswine.1bpp"
-;INCBIN "gfx/footprints/mamoswine.1bpp" ;MAMOSWINE
+INCBIN "gfx/footprints/mamoswine.1bpp" ;MAMOSWINE
 INCBIN "gfx/footprints/corsola.1bpp"
 INCBIN "gfx/footprints/remoraid.1bpp"
 INCBIN "gfx/footprints/octillery.1bpp"
-INCBIN "gfx/footprints/delibird.1bpp"
+;INCBIN "gfx/footprints/delibird.1bpp"
 INCBIN "gfx/footprints/mantine.1bpp"
 INCBIN "gfx/footprints/skarmory.1bpp"
 INCBIN "gfx/footprints/houndour.1bpp"
@@ -254,13 +254,13 @@ INCBIN "gfx/footprints/stantler.1bpp"
 INCBIN "gfx/footprints/smeargle.1bpp"
 INCBIN "gfx/footprints/tyrogue.1bpp"
 INCBIN "gfx/footprints/hitmontop.1bpp"
-INCBIN "gfx/footprints/smoochum.1bpp"
-;INCBIN "gfx/footprints/magnezone.1bpp" ;MAGNEZONE
-INCBIN "gfx/footprints/elekid.1bpp"
-;INCBIN "gfx/footprints/tangrowth.1bpp" ;TANGROWTH
-INCBIN "gfx/footprints/magby.1bpp"
-;INCBIN "gfx/footprints/leafeon.1bpp" ;LEAFEON
-;INCBIN "gfx/footprints/glaceon.1bpp" ;GLACEON
+;INCBIN "gfx/footprints/smoochum.1bpp"
+INCBIN "gfx/footprints/magnezone.1bpp" ;MAGNEZONE
+;INCBIN "gfx/footprints/elekid.1bpp"
+INCBIN "gfx/footprints/tangrowth.1bpp" ;TANGROWTH
+;INCBIN "gfx/footprints/magby.1bpp"
+INCBIN "gfx/footprints/leafeon.1bpp" ;LEAFEON
+INCBIN "gfx/footprints/glaceon.1bpp" ;GLACEON
 INCBIN "gfx/footprints/miltank.1bpp"
 INCBIN "gfx/footprints/blissey.1bpp"
 INCBIN "gfx/footprints/raikou.1bpp"
@@ -273,7 +273,7 @@ INCBIN "gfx/footprints/lugia.1bpp"
 INCBIN "gfx/footprints/ho_oh.1bpp"
 INCBIN "gfx/footprints/celebi.1bpp"
 INCBIN "gfx/footprints/missingno.1bpp" ;MISSINGNO
-INCBIN "gfx/footprints/253.1bpp"
+;INCBIN "gfx/footprints/253.1bpp"
 INCBIN "gfx/footprints/254.1bpp"
 INCBIN "gfx/footprints/255.1bpp"
 INCBIN "gfx/footprints/256.1bpp"

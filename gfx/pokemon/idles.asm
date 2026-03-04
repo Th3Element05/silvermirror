@@ -170,10 +170,10 @@ CrobatAnimationIdle:     INCLUDE "gfx/pokemon/crobat/anim_idle.asm"
 ChinchouAnimationIdle:   INCLUDE "gfx/pokemon/chinchou/anim_idle.asm"
 LanturnAnimationIdle:    INCLUDE "gfx/pokemon/lanturn/anim_idle.asm"
 ;PichuAnimationIdle:      INCLUDE "gfx/pokemon/pichu/anim_idle.asm"
-CleffaAnimationIdle:     INCLUDE "gfx/pokemon/cleffa/anim_idle.asm"
-IgglybuffAnimationIdle:  INCLUDE "gfx/pokemon/igglybuff/anim_idle.asm"
-TogepiAnimationIdle:     INCLUDE "gfx/pokemon/togepi/anim_idle.asm"
-TogeticAnimationIdle:    INCLUDE "gfx/pokemon/togetic/anim_idle.asm"
+;CleffaAnimationIdle:     INCLUDE "gfx/pokemon/cleffa/anim_idle.asm"
+;IgglybuffAnimationIdle:  INCLUDE "gfx/pokemon/igglybuff/anim_idle.asm"
+;TogepiAnimationIdle:     INCLUDE "gfx/pokemon/togepi/anim_idle.asm"
+;TogeticAnimationIdle:    INCLUDE "gfx/pokemon/togetic/anim_idle.asm"
 NatuAnimationIdle:       INCLUDE "gfx/pokemon/natu/anim_idle.asm"
 XatuAnimationIdle:       INCLUDE "gfx/pokemon/xatu/anim_idle.asm"
 MareepAnimationIdle:     INCLUDE "gfx/pokemon/mareep/anim_idle.asm"
@@ -197,10 +197,10 @@ QuagsireAnimationIdle:   INCLUDE "gfx/pokemon/quagsire/anim_idle.asm"
 EspeonAnimationIdle:     INCLUDE "gfx/pokemon/espeon/anim_idle.asm"
 UmbreonAnimationIdle:    INCLUDE "gfx/pokemon/umbreon/anim_idle.asm"
 MurkrowAnimationIdle:    INCLUDE "gfx/pokemon/murkrow/anim_idle.asm"
-;HonchkrowAnimationIdle:  INCLUDE "gfx/pokemon/honchkrow/anim_idle.asm" ;HONCHKROW
+HonchkrowAnimationIdle:  INCLUDE "gfx/pokemon/honchkrow/anim_idle.asm" ;HONCHKROW
 SlowkingAnimationIdle:   INCLUDE "gfx/pokemon/slowking/anim_idle.asm"
 MisdreavusAnimationIdle: INCLUDE "gfx/pokemon/misdreavus/anim_idle.asm"
-;MismagiusAnimationIdle:  INCLUDE "gfx/pokemon/mismagius/anim_idle.asm" ;MISMAGIUS
+MismagiusAnimationIdle:  INCLUDE "gfx/pokemon/mismagius/anim_idle.asm" ;MISMAGIUS
 UnownAnimationIdle:      INCLUDE "gfx/pokemon/unown/anim_idle.asm"
 WobbuffetAnimationIdle:  INCLUDE "gfx/pokemon/wobbuffet/anim_idle.asm"
 GirafarigAnimationIdle:  INCLUDE "gfx/pokemon/girafarig/anim_idle.asm"
@@ -208,7 +208,7 @@ PinecoAnimationIdle:     INCLUDE "gfx/pokemon/pineco/anim_idle.asm"
 ForretressAnimationIdle: INCLUDE "gfx/pokemon/forretress/anim_idle.asm"
 DunsparceAnimationIdle:  INCLUDE "gfx/pokemon/dunsparce/anim_idle.asm"
 GligarAnimationIdle:     INCLUDE "gfx/pokemon/gligar/anim_idle.asm"
-;GliscorAnimationIdle:    INCLUDE "gfx/pokemon/gliscor/anim_idle.asm" ;GLISCOR
+GliscorAnimationIdle:    INCLUDE "gfx/pokemon/gliscor/anim_idle.asm" ;GLISCOR
 SteelixAnimationIdle:    INCLUDE "gfx/pokemon/steelix/anim_idle.asm"
 SnubbullAnimationIdle:   INCLUDE "gfx/pokemon/snubbull/anim_idle.asm"
 GranbullAnimationIdle:   INCLUDE "gfx/pokemon/granbull/anim_idle.asm"
@@ -217,18 +217,18 @@ ScizorAnimationIdle:     INCLUDE "gfx/pokemon/scizor/anim_idle.asm"
 ShuckleAnimationIdle:    INCLUDE "gfx/pokemon/shuckle/anim_idle.asm"
 HeracrossAnimationIdle:  INCLUDE "gfx/pokemon/heracross/anim_idle.asm"
 SneaselAnimationIdle:    INCLUDE "gfx/pokemon/sneasel/anim_idle.asm"
-;WeavileAnimationIdle:    INCLUDE "gfx/pokemon/weavile/anim_idle.asm" ;WEAVILE
+WeavileAnimationIdle:    INCLUDE "gfx/pokemon/weavile/anim_idle.asm" ;WEAVILE
 TeddiursaAnimationIdle:  INCLUDE "gfx/pokemon/teddiursa/anim_idle.asm"
 UrsaringAnimationIdle:   INCLUDE "gfx/pokemon/ursaring/anim_idle.asm"
 SlugmaAnimationIdle:     INCLUDE "gfx/pokemon/slugma/anim_idle.asm"
 MagcargoAnimationIdle:   INCLUDE "gfx/pokemon/magcargo/anim_idle.asm"
 SwinubAnimationIdle:     INCLUDE "gfx/pokemon/swinub/anim_idle.asm"
 PiloswineAnimationIdle:  INCLUDE "gfx/pokemon/piloswine/anim_idle.asm"
-;MamoswineAnimationIdle:  INCLUDE "gfx/pokemon/mamoswine/anim_idle.asm" ;MAMOSWINE
+MamoswineAnimationIdle:  INCLUDE "gfx/pokemon/mamoswine/anim_idle.asm" ;MAMOSWINE
 CorsolaAnimationIdle:    INCLUDE "gfx/pokemon/corsola/anim_idle.asm"
 RemoraidAnimationIdle:   INCLUDE "gfx/pokemon/remoraid/anim_idle.asm"
 OctilleryAnimationIdle:  INCLUDE "gfx/pokemon/octillery/anim_idle.asm"
-DelibirdAnimationIdle:   INCLUDE "gfx/pokemon/delibird/anim_idle.asm"
+;DelibirdAnimationIdle:   INCLUDE "gfx/pokemon/delibird/anim_idle.asm"
 MantineAnimationIdle:    INCLUDE "gfx/pokemon/mantine/anim_idle.asm"
 SkarmoryAnimationIdle:   INCLUDE "gfx/pokemon/skarmory/anim_idle.asm"
 HoundourAnimationIdle:   INCLUDE "gfx/pokemon/houndour/anim_idle.asm"
@@ -241,13 +241,13 @@ StantlerAnimationIdle:   INCLUDE "gfx/pokemon/stantler/anim_idle.asm"
 SmeargleAnimationIdle:   INCLUDE "gfx/pokemon/smeargle/anim_idle.asm"
 TyrogueAnimationIdle:    INCLUDE "gfx/pokemon/tyrogue/anim_idle.asm"
 HitmontopAnimationIdle:  INCLUDE "gfx/pokemon/hitmontop/anim_idle.asm"
-SmoochumAnimationIdle:   INCLUDE "gfx/pokemon/smoochum/anim_idle.asm"
-;MagnezoneAnimationIdle:  INCLUDE "gfx/pokemon/magnezone/anim_idle.asm" ;MAGNEZONE
-ElekidAnimationIdle:     INCLUDE "gfx/pokemon/elekid/anim_idle.asm"
-;TangrowthAnimationIdle:  INCLUDE "gfx/pokemon/tangrowth/anim_idle.asm" ;TANGROWTH
-MagbyAnimationIdle:      INCLUDE "gfx/pokemon/magby/anim_idle.asm"
-;LeafeonAnimationIdle:    INCLUDE "gfx/pokemon/leafeon/anim_idle.asm" ;LEAFEON
-;GlaceonAnimationIdle:    INCLUDE "gfx/pokemon/glaceon/anim_idle.asm" ;GLACEON
+;SmoochumAnimationIdle:   INCLUDE "gfx/pokemon/smoochum/anim_idle.asm"
+MagnezoneAnimationIdle:  INCLUDE "gfx/pokemon/magnezone/anim_idle.asm" ;MAGNEZONE
+;ElekidAnimationIdle:     INCLUDE "gfx/pokemon/elekid/anim_idle.asm"
+TangrowthAnimationIdle:  INCLUDE "gfx/pokemon/tangrowth/anim_idle.asm" ;TANGROWTH
+;MagbyAnimationIdle:      INCLUDE "gfx/pokemon/magby/anim_idle.asm"
+LeafeonAnimationIdle:    INCLUDE "gfx/pokemon/leafeon/anim_idle.asm" ;LEAFEON
+GlaceonAnimationIdle:    INCLUDE "gfx/pokemon/glaceon/anim_idle.asm" ;GLACEON
 MiltankAnimationIdle:    INCLUDE "gfx/pokemon/miltank/anim_idle.asm"
 BlisseyAnimationIdle:    INCLUDE "gfx/pokemon/blissey/anim_idle.asm"
 RaikouAnimationIdle:     INCLUDE "gfx/pokemon/raikou/anim_idle.asm"

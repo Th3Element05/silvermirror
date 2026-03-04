@@ -30,8 +30,8 @@ Pokered_MonIndices:
 	db BLASTOISE
 	db PINSIR
 	db TANGELA
-	db SCIZOR ; MISSINGNO.
-	db SHUCKLE ; MISSINGNO.
+	db SCIZOR ; missingno.
+	db SHUCKLE ; missingno.
 	db GROWLITHE
 	db ONIX
 	db FEAROW
@@ -49,26 +49,26 @@ Pokered_MonIndices:
 	db PSYDUCK
 	db DROWZEE
 	db GOLEM
-	db HERACROSS ; MISSINGNO.
+	db HERACROSS ; missingno.
 	db MAGMAR
-	db HO_OH ; MISSINGNO.
+	db HO_OH ; missingno.
 	db ELECTABUZZ
 	db MAGNETON
 	db KOFFING
-	db SNEASEL ; MISSINGNO.
+	db SNEASEL ; missingno.
 	db MANKEY
 	db SEEL
 	db DIGLETT
 	db TAUROS
-	db TEDDIURSA ; MISSINGNO.
-	db URSARING ; MISSINGNO.
-	db SLUGMA ; MISSINGNO.
+	db TEDDIURSA ; missingno.
+	db URSARING ; missingno.
+	db SLUGMA ; missingno.
 	db FARFETCH_D
 	db VENONAT
 	db DRAGONITE
-	db MAGCARGO ; MISSINGNO.
-	db SWINUB ; MISSINGNO.
-	db PILOSWINE ; MISSINGNO.
+	db MAGCARGO ; missingno.
+	db SWINUB ; missingno.
+	db PILOSWINE ; missingno.
 	db DODUO
 	db POLIWAG
 	db JYNX
@@ -78,24 +78,24 @@ Pokered_MonIndices:
 	db DITTO
 	db MEOWTH
 	db KRABBY
-	db CORSOLA ; MISSINGNO.
-	db REMORAID ; MISSINGNO.
-	db OCTILLERY ; MISSINGNO.
+	db CORSOLA ; missingno.
+	db REMORAID ; missingno.
+	db OCTILLERY ; missingno.
 	db VULPIX
 	db NINETALES
 	db PIKACHU
 	db RAICHU
-	db DELIBIRD ; MISSINGNO.
-;	db LEAFEON
-	db MANTINE ; MISSINGNO.
+;	db DELIBIRD ; missingno.
+	db LEAFEON ;LEAFEON
+	db MANTINE ; missingno.
 	db DRATINI
 	db DRAGONAIR
 	db KABUTO
 	db KABUTOPS
 	db HORSEA
 	db SEADRA
-	db SKARMORY ; MISSINGNO.
-	db HOUNDOUR ; MISSINGNO.
+	db SKARMORY ; missingno.
+	db HOUNDOUR ; missingno.
 	db SANDSHREW
 	db SANDSLASH
 	db OMANYTE
@@ -115,38 +115,38 @@ Pokered_MonIndices:
 	db WEEDLE
 	db KAKUNA
 	db BEEDRILL
-	db HOUNDOOM ; MISSINGNO.
+	db HOUNDOOM ; missingno.
 	db DODRIO
 	db PRIMEAPE
 	db DUGTRIO
 	db VENOMOTH
 	db DEWGONG
-	db KINGDRA ; MISSINGNO.
-	db PHANPY ; MISSINGNO.
+	db KINGDRA ; missingno.
+	db PHANPY ; missingno.
 	db CATERPIE
 	db METAPOD
 	db BUTTERFREE
 	db MACHAMP
-	db DONPHAN ; MISSINGNO.
+	db DONPHAN ; missingno.
 	db GOLDUCK
 	db HYPNO
 	db GOLBAT
 	db MEWTWO
 	db SNORLAX
 	db MAGIKARP
-	db PORYGON2 ; MISSINGNO.
-	db STANTLER ; MISSINGNO.
+	db PORYGON2 ; missingno.
+	db STANTLER ; missingno.
 	db MUK
-	db SMEARGLE ; MISSINGNO.
+	db SMEARGLE ; missingno.
 	db KINGLER
 	db CLOYSTER
-	db TYROGUE ; MISSINGNO.
+	db TYROGUE ; missingno.
 	db ELECTRODE
 	db CLEFABLE
 	db WEEZING
 	db PERSIAN
 	db MAROWAK
-	db HITMONTOP ; MISSINGNO.
+	db HITMONTOP ; missingno.
 	db HAUNTER
 	db ABRA
 	db ALAKAZAM
@@ -156,16 +156,16 @@ Pokered_MonIndices:
 	db BULBASAUR
 	db VENUSAUR
 	db TENTACRUEL
-	db SMOOCHUM ; MISSINGNO.
-;	db MAGNEZONE
+;	db SMOOCHUM ; missingno.
+	db MAGNEZONE ;MAGNEZONE
 	db GOLDEEN
 	db SEAKING
-	db ELEKID ; MISSINGNO.
-;	db TANGROWTH
-	db MAGBY ; MISSINGNO.
-;	db GLACEON
-	db MILTANK ; MISSINGNO.
-	db BLISSEY ; MISSINGNO.
+;	db ELEKID ; missingno.
+	db TANGROWTH ;TANGROWTH
+;	db MAGBY ; missingno.
+	db GLACEON ;GLACEON
+	db MILTANK ; missingno.
+	db BLISSEY ; missingno.
 	db PONYTA
 	db RAPIDASH
 	db RATTATA
@@ -175,19 +175,19 @@ Pokered_MonIndices:
 	db GEODUDE
 	db PORYGON
 	db AERODACTYL
-	db RAIKOU ; MISSINGNO.
+	db RAIKOU ; missingno.
 	db MAGNEMITE
-	db ENTEI ; MISSINGNO.
-	db SUICUNE ; MISSINGNO.
+	db ENTEI ; missingno.
+	db SUICUNE ; missingno.
 	db CHARMANDER
 	db SQUIRTLE
 	db CHARMELEON
 	db WARTORTLE
 	db CHARIZARD
-	db LARVITAR ; MISSINGNO.
-	db PUPITAR ; MISSINGNO. KABUTOPS FOSSIL
-	db TYRANITAR ; MISSINGNO. AERODACTYL FOSSIL
-	db LUGIA ; MISSINGNO. GHOST
+	db LARVITAR ; missingno.
+	db PUPITAR ; missingno. KABUTOPS FOSSIL
+	db TYRANITAR ; missingno. AERODACTYL FOSSIL
+	db LUGIA ; missingno. GHOST
 	db ODDISH
 	db GLOOM
 	db VILEPLUME
@@ -216,15 +216,15 @@ Pokered_MonIndices:
 	db CHINCHOU
 	db LANTURN
 ;	db PICHU
-	db YANMEGA
-	db CLEFFA    ;
-;	db HONCHKROW
-	db IGGLYBUFF ;
-;	db MISMAGIUS
-	db TOGEPI    ;
-;	db GLISCOR
-	db TOGETIC   ;
-;	db WEAVILE
+	db YANMEGA ;YANMEGA
+;	db CLEFFA
+	db HONCHKROW ;HONCHKROW
+;	db IGGLYBUFF
+	db MISMAGIUS ;MISMAGIUS
+;	db TOGEPI
+	db GLISCOR ;GLISCOR
+;	db TOGETIC
+	db WEAVILE
 	db NATU
 	db XATU
 	db MAREEP
@@ -242,7 +242,6 @@ Pokered_MonIndices:
 	db SUNKERN
 	db SUNFLORA
 	db YANMA
-	db YANMEGA
 	db WOOPER
 	db QUAGSIRE
 	db ESPEON
@@ -262,7 +261,7 @@ Pokered_MonIndices:
 	db GRANBULL
 	db QWILFISH
 	db CELEBI
-	db MISSINGNO ;missingno
-;	db MISSINGNO
-;	db MAMOSWINE
+	db MISSINGNO ;MISSINGNO
+	db MAMOSWINE ;MAMOSWINE
+	db MISSINGNO
 	assert_table_length NUM_POKEMON + 1

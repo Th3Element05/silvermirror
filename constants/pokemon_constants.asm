@@ -191,11 +191,11 @@ DEF JOHTO_POKEMON EQU const_value
 	const CROBAT     ; a9
 	const CHINCHOU   ; aa
 	const LANTURN    ; ab
-;const PICHU      ; ac ; baby
-	const CLEFFA     ; ad ; baby
-	const IGGLYBUFF  ; ae ; baby
-	const TOGEPI     ; af ; replace
-	const TOGETIC    ; b0 ; replace
+;	const PICHU      ; ac ; baby
+;	const CLEFFA     ; ad ; baby
+;	const IGGLYBUFF  ; ae ; baby
+;	const TOGEPI     ; af ; replace
+;	const TOGETIC    ; b0 ; replace
 	const NATU       ; ac
 	const XATU       ; ad
 	const MAREEP     ; ae
@@ -213,16 +213,16 @@ DEF JOHTO_POKEMON EQU const_value
 	const SUNKERN    ; ba
 	const SUNFLORA   ; bb
 	const YANMA      ; bc
-	const YANMEGA    ; bd ;NEW
+	const YANMEGA    ; bd ;YANMEGA
 	const WOOPER     ; be
 	const QUAGSIRE   ; bf
 	const ESPEON     ; c0
 	const UMBREON    ; c1
 	const MURKROW    ; c2
-;	const HONCHKROW  ; c3 ;NEW
+	const HONCHKROW  ; c3 ;HONCHKROW
 	const SLOWKING   ; c4
 	const MISDREAVUS ; c5
-;	const MISMAGIUS  ; c6 ;NEW
+	const MISMAGIUS  ; c6 ;MISMAGIUS
 	const UNOWN      ; c7 ; removable?
 	const WOBBUFFET  ; c8
 	const GIRAFARIG  ; c9
@@ -230,7 +230,7 @@ DEF JOHTO_POKEMON EQU const_value
 	const FORRETRESS ; cb
 	const DUNSPARCE  ; cc
 	const GLIGAR     ; cd
-;	const GLISCOR    ; ce ;NEW
+	const GLISCOR    ; ce ;GLISCOR
 	const STEELIX    ; cf
 	const SNUBBULL   ; d0
 	const GRANBULL   ; d1
@@ -239,18 +239,18 @@ DEF JOHTO_POKEMON EQU const_value
 	const SHUCKLE    ; d4
 	const HERACROSS  ; d5
 	const SNEASEL    ; d6
-;	const WEAVILE    ; d7 ;NEW
+	const WEAVILE    ; d7 ;WEAVILE
 	const TEDDIURSA  ; d8
 	const URSARING   ; d9
 	const SLUGMA     ; da
 	const MAGCARGO   ; db
 	const SWINUB     ; dc
 	const PILOSWINE  ; dd
-;	const MAMOSWINE  ; de ;NEW
+	const MAMOSWINE  ; de ;MAMOSWINE
 	const CORSOLA    ; df
 	const REMORAID   ; e0
 	const OCTILLERY  ; e1
-	const DELIBIRD   ; e2 ; replace
+;	const DELIBIRD   ; e2 ; replace
 	const MANTINE    ; e2
 	const SKARMORY   ; e3
 	const HOUNDOUR   ; e4
@@ -263,13 +263,13 @@ DEF JOHTO_POKEMON EQU const_value
 	const SMEARGLE   ; eb
 	const TYROGUE    ; ec
 	const HITMONTOP  ; ed
-	const SMOOCHUM   ; ee ; baby
-;	const MAGNEZONE  ; ee ;NEW
-	const ELEKID     ; ef ; baby
-;	const TANGROWTH  ; ef ;NEW
-	const MAGBY      ; f0 ; baby
-;	const LEAFEON    ; f0 ;NEW
-;	const GLACEON    ; f1 ;NEW
+;	const SMOOCHUM   ; ee ; baby
+	const MAGNEZONE  ; ee ;MAGNEZONE
+;	const ELEKID     ; ef ; baby
+	const TANGROWTH  ; ef ;TANGROWTH
+;	const MAGBY      ; f0 ; baby
+	const LEAFEON    ; f0 ;LEAFEON
+	const GLACEON    ; f1 ;GLACEON
 	const MILTANK    ; f2
 	const BLISSEY    ; f3
 	const RAIKOU     ; f4
@@ -281,7 +281,7 @@ DEF JOHTO_POKEMON EQU const_value
 	const LUGIA      ; fa
 	const HO_OH      ; fb
 	const CELEBI     ; fc
-	const MISSINGNO  ; fd ;missingno
+	const MISSINGNO  ; fd ;MISSINGNO
 DEF NUM_POKEMON EQU const_value - 1
 	const EGG        ; fe
 

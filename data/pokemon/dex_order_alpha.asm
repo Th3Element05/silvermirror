@@ -30,14 +30,14 @@ AlphabeticalPokedexOrder:
 	db CHINCHOU
 	db CLEFABLE
 	db CLEFAIRY
-	db CLEFFA
+;	db CLEFFA
 	db CLOYSTER
 	db CORSOLA
 	db CROBAT
 	db CROCONAW
 	db CUBONE
 	db CYNDAQUIL
-	db DELIBIRD
+;	db DELIBIRD
 	db DEWGONG
 	db DIGLETT
 	db DITTO
@@ -54,7 +54,7 @@ AlphabeticalPokedexOrder:
 	db EKANS
 	db ELECTABUZZ
 	db ELECTRODE
-	db ELEKID
+;	db ELEKID
 	db ENTEI
 	db ESPEON
 	db EXEGGCUTE
@@ -70,7 +70,9 @@ AlphabeticalPokedexOrder:
 	db GENGAR
 	db GEODUDE
 	db GIRAFARIG
+	db GLACEON ;GLACEON
 	db GLIGAR
+	db GLISCOR ;GLISCOR
 	db GLOOM
 	db GOLBAT
 	db GOLDEEN
@@ -87,13 +89,14 @@ AlphabeticalPokedexOrder:
 	db HITMONLEE
 	db HITMONTOP
 	db HO_OH
+	db HONCHKROW ;HONCHKROW
 	db HOOTHOOT
 	db HOPPIP
 	db HORSEA
 	db HOUNDOOM
 	db HOUNDOUR
 	db HYPNO
-	db IGGLYBUFF
+;	db IGGLYBUFF
 	db IVYSAUR
 	db JIGGLYPUFF
 	db JOLTEON
@@ -111,6 +114,7 @@ AlphabeticalPokedexOrder:
 	db LANTURN
 	db LAPRAS
 	db LARVITAR
+	db LEAFEON ;LEAFEON
 	db LEDIAN
 	db LEDYBA
 	db LICKITUNG
@@ -118,12 +122,14 @@ AlphabeticalPokedexOrder:
 	db MACHAMP
 	db MACHOKE
 	db MACHOP
-	db MAGBY
+;	db MAGBY
 	db MAGCARGO
 	db MAGIKARP
 	db MAGMAR
 	db MAGNEMITE
 	db MAGNETON
+	db MAGNEZONE ;MAGNEZONE
+	db MAMOSWINE ;MAMOSWINE
 	db MANKEY
 	db MANTINE
 	db MAREEP
@@ -136,6 +142,7 @@ AlphabeticalPokedexOrder:
 	db MEWTWO
 	db MILTANK
 	db MISDREAVUS
+	db MISMAGIUS ;MISMAGIUS
 	db MOLTRES
 	db MR__MIME
 	db MUK
@@ -158,7 +165,7 @@ AlphabeticalPokedexOrder:
 	db PARASECT
 	db PERSIAN
 	db PHANPY
-;db PICHU
+;	db PICHU
 	db PIDGEOT
 	db PIDGEOTTO
 	db PIDGEY
@@ -204,7 +211,7 @@ AlphabeticalPokedexOrder:
 	db SLOWPOKE
 	db SLUGMA
 	db SMEARGLE
-	db SMOOCHUM
+;	db SMOOCHUM
 	db SNEASEL
 	db SNORLAX
 	db SNUBBULL
@@ -221,12 +228,13 @@ AlphabeticalPokedexOrder:
 	db SUNKERN
 	db SWINUB
 	db TANGELA
+	db TANGROWTH ;TANGROWTH
 	db TAUROS
 	db TEDDIURSA
 	db TENTACOOL
 	db TENTACRUEL
-	db TOGEPI
-	db TOGETIC
+;	db TOGEPI
+;	db TOGETIC
 	db TOTODILE
 	db TYPHLOSION
 	db TYRANITAR
@@ -243,6 +251,7 @@ AlphabeticalPokedexOrder:
 	db VOLTORB
 	db VULPIX
 	db WARTORTLE
+	db WEAVILE ;WEAVILE
 	db WEEDLE
 	db WEEPINBELL
 	db WEEZING

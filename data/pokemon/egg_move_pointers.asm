@@ -171,11 +171,11 @@ EggMovePointers::
 	dw NoEggMoves
 	dw ChinchouEggMoves
 	dw NoEggMoves
-;	dw PichuEggMoves     ;remove
-	dw CleffaEggMoves    ;remove
-	dw IgglybuffEggMoves ;remove
-	dw TogepiEggMoves    ;remove
-	dw NoEggMoves        ;remove
+;	dw PichuEggMoves     ; baby
+;	dw CleffaEggMoves    ; baby
+;	dw IgglybuffEggMoves ; baby
+;	dw TogepiEggMoves    ; replaced
+;	dw NoEggMoves        ; replaced
 	dw NatuEggMoves
 	dw NoEggMoves
 	dw MareepEggMoves
@@ -199,10 +199,10 @@ EggMovePointers::
 	dw NoEggMoves
 	dw NoEggMoves
 	dw MurkrowEggMoves
-;	dw NoEggMoves ;HONCHKROW
+	dw NoEggMoves ;HONCHKROW
 	dw NoEggMoves
 	dw MisdreavusEggMoves
-;	dw NoEggMoves ;MISMAGIUS
+	dw NoEggMoves ;MISMAGIUS
 	dw NoEggMoves
 	dw NoEggMoves
 	dw GirafarigEggMoves
@@ -210,7 +210,7 @@ EggMovePointers::
 	dw NoEggMoves
 	dw DunsparceEggMoves
 	dw GligarEggMoves
-;	dw NoEggMoves ;GLISCOR
+	dw NoEggMoves ;GLISCOR
 	dw NoEggMoves
 	dw SnubbullEggMoves
 	dw NoEggMoves
@@ -219,18 +219,18 @@ EggMovePointers::
 	dw ShuckleEggMoves
 	dw HeracrossEggMoves
 	dw SneaselEggMoves
-;	dw NoEggMoves ;WEAVILE
+	dw NoEggMoves ;WEAVILE
 	dw TeddiursaEggMoves
 	dw NoEggMoves
 	dw SlugmaEggMoves
 	dw NoEggMoves
 	dw SwinubEggMoves
 	dw NoEggMoves
-;	dw NoEggMoves ;MAMOSWINE
+	dw NoEggMoves ;MAMOSWINE
 	dw CorsolaEggMoves
 	dw RemoraidEggMoves
 	dw NoEggMoves
-	dw DelibirdEggMoves
+;	dw DelibirdEggMoves ; replaced
 	dw MantineEggMoves
 	dw SkarmoryEggMoves
 	dw HoundourEggMoves
@@ -243,13 +243,13 @@ EggMovePointers::
 	dw NoEggMoves
 	dw TyrogueEggMoves
 	dw NoEggMoves
-	dw SmoochumEggMoves ;remove
-;	dw NoEggMoves ;MAGNEZONE
-	dw ElekidEggMoves   ;remove
-;	dw NoEggMoves ;TANGROWTH
-	dw MagbyEggMoves    ;remove
-;	dw NoEggMoves ;LEAFEON
-;	dw NoEggMoves ;GLACEON
+;	dw SmoochumEggMoves ; baby
+	dw NoEggMoves ;MAGNEZONE
+;	dw ElekidEggMoves   ; baby
+	dw NoEggMoves ;TANGROWTH
+;	dw MagbyEggMoves    ; baby
+	dw NoEggMoves ;LEAFEON
+	dw NoEggMoves ;GLACEON
 	dw MiltankEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
@@ -261,5 +261,5 @@ EggMovePointers::
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw NoEggMoves ;missingno
+	dw NoEggMoves ;MISSINGO
 	assert_table_length NUM_POKEMON

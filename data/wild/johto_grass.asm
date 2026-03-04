@@ -894,21 +894,21 @@ JohtoGrassWildMonsChallenge:
 	db 22, SWINUB     ; 20% chance
 	db 22, ZUBAT      ; 15% chance
 	db 23, ZUBAT      ; 10% chance
-	db 21, DELIBIRD   ; 10% chance
+	db 21, ZUBAT      ; 10% chance
 	db 22, GOLBAT     ; 10% chance
 	db 23, GOLBAT     ;  5% chance
-	db 22, DELIBIRD   ;  5% chance
+	db 22, GOLBAT     ;  5% chance
 	db 22, JYNX       ;  4% chance
 	db 23, JYNX       ;  1% chance
 	; nite
 	db 21, SWINUB     ; 20% chance
-	db 21, DELIBIRD   ; 20% chance
+	db 21, SWINUB     ; 20% chance
 	db 22, ZUBAT      ; 15% chance
 	db 23, ZUBAT      ; 10% chance
-	db 22, SWINUB     ; 10% chance
+	db 22, ZUBAT      ; 10% chance
 	db 22, GOLBAT     ; 10% chance
 	db 23, GOLBAT     ;  5% chance
-	db 22, DELIBIRD   ;  5% chance
+	db 22, GOLBAT     ;  5% chance
 	db 22, SNEASEL    ;  4% chance
 	db 22, JYNX       ;  1% chance
 	end_grass_wildmons
@@ -920,21 +920,21 @@ JohtoGrassWildMonsChallenge:
 	db 22, SWINUB     ; 20% chance
 	db 22, ZUBAT      ; 15% chance
 	db 23, ZUBAT      ; 10% chance
-	db 21, DELIBIRD   ; 10% chance
+	db 21, ZUBAT      ; 10% chance
 	db 22, GOLBAT     ; 10% chance
 	db 23, GOLBAT     ;  5% chance
-	db 22, DELIBIRD   ;  5% chance
+	db 22, GOLBAT     ;  5% chance
 	db 22, JYNX       ;  4% chance
 	db 23, JYNX       ;  1% chance
 	; nite
 	db 21, SWINUB     ; 20% chance
-	db 21, DELIBIRD   ; 20% chance
+	db 21, SWINUB     ; 20% chance
 	db 22, ZUBAT      ; 15% chance
 	db 23, ZUBAT      ; 10% chance
-	db 22, SWINUB     ; 10% chance
+	db 22, ZUBAT      ; 10% chance
 	db 22, GOLBAT     ; 10% chance
 	db 23, GOLBAT     ;  5% chance
-	db 22, DELIBIRD   ;  5% chance
+	db 22, GOLBAT     ;  5% chance
 	db 22, SNEASEL    ;  4% chance
 	db 22, JYNX       ;  1% chance
 	end_grass_wildmons
@@ -946,7 +946,7 @@ JohtoGrassWildMonsChallenge:
 	db 23, SWINUB     ; 20% chance
 	db 23, ZUBAT      ; 15% chance
 	db 24, ZUBAT      ; 10% chance
-	db 22, DELIBIRD   ; 10% chance
+	db 22, SWINUB     ; 10% chance
 	db 23, GOLBAT     ; 10% chance
 	db 24, GOLBAT     ;  5% chance
 	db 23, JYNX       ;  5% chance
@@ -954,7 +954,7 @@ JohtoGrassWildMonsChallenge:
 	db 24, JYNX       ;  1% chance
 	; nite
 	db 22, SWINUB     ; 20% chance
-	db 22, DELIBIRD   ; 20% chance
+	db 22, SWINUB     ; 20% chance
 	db 23, ZUBAT      ; 15% chance
 	db 24, ZUBAT      ; 10% chance
 	db 23, SWINUB     ; 10% chance

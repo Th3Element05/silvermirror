@@ -21,10 +21,10 @@ CrobatFrames:     INCLUDE "gfx/pokemon/crobat/frames.asm"
 ChinchouFrames:   INCLUDE "gfx/pokemon/chinchou/frames.asm"
 LanturnFrames:    INCLUDE "gfx/pokemon/lanturn/frames.asm"
 ;PichuFrames:      INCLUDE "gfx/pokemon/pichu/frames.asm"
-CleffaFrames:     INCLUDE "gfx/pokemon/cleffa/frames.asm"
-IgglybuffFrames:  INCLUDE "gfx/pokemon/igglybuff/frames.asm"
-TogepiFrames:     INCLUDE "gfx/pokemon/togepi/frames.asm"
-TogeticFrames:    INCLUDE "gfx/pokemon/togetic/frames.asm"
+;CleffaFrames:     INCLUDE "gfx/pokemon/cleffa/frames.asm"
+;IgglybuffFrames:  INCLUDE "gfx/pokemon/igglybuff/frames.asm"
+;TogepiFrames:     INCLUDE "gfx/pokemon/togepi/frames.asm"
+;TogeticFrames:    INCLUDE "gfx/pokemon/togetic/frames.asm"
 NatuFrames:       INCLUDE "gfx/pokemon/natu/frames.asm"
 XatuFrames:       INCLUDE "gfx/pokemon/xatu/frames.asm"
 MareepFrames:     INCLUDE "gfx/pokemon/mareep/frames.asm"
@@ -48,10 +48,10 @@ QuagsireFrames:   INCLUDE "gfx/pokemon/quagsire/frames.asm"
 EspeonFrames:     INCLUDE "gfx/pokemon/espeon/frames.asm"
 UmbreonFrames:    INCLUDE "gfx/pokemon/umbreon/frames.asm"
 MurkrowFrames:    INCLUDE "gfx/pokemon/murkrow/frames.asm"
-;HonchkrowFrames:  INCLUDE "gfx/pokemon/honchkrow/frames.asm" ;HONCHKROW
+HonchkrowFrames:  INCLUDE "gfx/pokemon/honchkrow/frames.asm" ;HONCHKROW
 SlowkingFrames:   INCLUDE "gfx/pokemon/slowking/frames.asm"
 MisdreavusFrames: INCLUDE "gfx/pokemon/misdreavus/frames.asm"
-;MismagiusFrames:  INCLUDE "gfx/pokemon/mismagius/frames.asm" ;MISMAGIUS
+MismagiusFrames:  INCLUDE "gfx/pokemon/mismagius/frames.asm" ;MISMAGIUS
 UnownFrames:      INCLUDE "gfx/pokemon/unown/frames.asm"
 WobbuffetFrames:  INCLUDE "gfx/pokemon/wobbuffet/frames.asm"
 GirafarigFrames:  INCLUDE "gfx/pokemon/girafarig/frames.asm"
@@ -59,7 +59,7 @@ PinecoFrames:     INCLUDE "gfx/pokemon/pineco/frames.asm"
 ForretressFrames: INCLUDE "gfx/pokemon/forretress/frames.asm"
 DunsparceFrames:  INCLUDE "gfx/pokemon/dunsparce/frames.asm"
 GligarFrames:     INCLUDE "gfx/pokemon/gligar/frames.asm"
-;GliscorFrames:    INCLUDE "gfx/pokemon/gliscor/frames.asm" ;GLISCOR
+GliscorFrames:    INCLUDE "gfx/pokemon/gliscor/frames.asm" ;GLISCOR
 SteelixFrames:    INCLUDE "gfx/pokemon/steelix/frames.asm"
 SnubbullFrames:   INCLUDE "gfx/pokemon/snubbull/frames.asm"
 GranbullFrames:   INCLUDE "gfx/pokemon/granbull/frames.asm"
@@ -68,18 +68,18 @@ ScizorFrames:     INCLUDE "gfx/pokemon/scizor/frames.asm"
 ShuckleFrames:    INCLUDE "gfx/pokemon/shuckle/frames.asm"
 HeracrossFrames:  INCLUDE "gfx/pokemon/heracross/frames.asm"
 SneaselFrames:    INCLUDE "gfx/pokemon/sneasel/frames.asm"
-;WeavileFrames:    INCLUDE "gfx/pokemon/weavile/frames.asm" ;WEAVILE
+WeavileFrames:    INCLUDE "gfx/pokemon/weavile/frames.asm" ;WEAVILE
 TeddiursaFrames:  INCLUDE "gfx/pokemon/teddiursa/frames.asm"
 UrsaringFrames:   INCLUDE "gfx/pokemon/ursaring/frames.asm"
 SlugmaFrames:     INCLUDE "gfx/pokemon/slugma/frames.asm"
 MagcargoFrames:   INCLUDE "gfx/pokemon/magcargo/frames.asm"
 SwinubFrames:     INCLUDE "gfx/pokemon/swinub/frames.asm"
 PiloswineFrames:  INCLUDE "gfx/pokemon/piloswine/frames.asm"
-;MamoswineFrames:  INCLUDE "gfx/pokemon/mamoswine/frames.asm" ;MAMOSWINE
+MamoswineFrames:  INCLUDE "gfx/pokemon/mamoswine/frames.asm" ;MAMOSWINE
 CorsolaFrames:    INCLUDE "gfx/pokemon/corsola/frames.asm"
 RemoraidFrames:   INCLUDE "gfx/pokemon/remoraid/frames.asm"
 OctilleryFrames:  INCLUDE "gfx/pokemon/octillery/frames.asm"
-DelibirdFrames:   INCLUDE "gfx/pokemon/delibird/frames.asm"
+;DelibirdFrames:   INCLUDE "gfx/pokemon/delibird/frames.asm"
 MantineFrames:    INCLUDE "gfx/pokemon/mantine/frames.asm"
 SkarmoryFrames:   INCLUDE "gfx/pokemon/skarmory/frames.asm"
 HoundourFrames:   INCLUDE "gfx/pokemon/houndour/frames.asm"
@@ -92,13 +92,13 @@ StantlerFrames:   INCLUDE "gfx/pokemon/stantler/frames.asm"
 SmeargleFrames:   INCLUDE "gfx/pokemon/smeargle/frames.asm"
 TyrogueFrames:    INCLUDE "gfx/pokemon/tyrogue/frames.asm"
 HitmontopFrames:  INCLUDE "gfx/pokemon/hitmontop/frames.asm"
-SmoochumFrames:   INCLUDE "gfx/pokemon/smoochum/frames.asm"
-;MagnezoneFrames:  INCLUDE "gfx/pokemon/magnezone/frames.asm" ;MAGNEZONE
-ElekidFrames:     INCLUDE "gfx/pokemon/elekid/frames.asm"
-;TangrowthFrames:  INCLUDE "gfx/pokemon/tangrowth/frames.asm" ;TANGROWTH
-MagbyFrames:      INCLUDE "gfx/pokemon/magby/frames.asm"
-;LeafeonFrames:    INCLUDE "gfx/pokemon/leafeon/frames.asm" ;LEAFEON
-;GlaceonFrames:    INCLUDE "gfx/pokemon/glaceon/frames.asm" ;GLACEON
+;SmoochumFrames:   INCLUDE "gfx/pokemon/smoochum/frames.asm"
+MagnezoneFrames:  INCLUDE "gfx/pokemon/magnezone/frames.asm" ;MAGNEZONE
+;ElekidFrames:     INCLUDE "gfx/pokemon/elekid/frames.asm"
+TangrowthFrames:  INCLUDE "gfx/pokemon/tangrowth/frames.asm" ;TANGROWTH
+;MagbyFrames:      INCLUDE "gfx/pokemon/magby/frames.asm"
+LeafeonFrames:    INCLUDE "gfx/pokemon/leafeon/frames.asm" ;LEAFEON
+GlaceonFrames:    INCLUDE "gfx/pokemon/glaceon/frames.asm" ;GLACEON
 MiltankFrames:    INCLUDE "gfx/pokemon/miltank/frames.asm"
 BlisseyFrames:    INCLUDE "gfx/pokemon/blissey/frames.asm"
 RaikouFrames:     INCLUDE "gfx/pokemon/raikou/frames.asm"

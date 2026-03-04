@@ -1,4 +1,4 @@
-DEF GOLDENRODGAMECORNER_TOGEPI_COINS       EQU 1000
+;DEF GOLDENRODGAMECORNER_TOGEPI_COINS       EQU 1000
 DEF GOLDENRODGAMECORNER_MURKROW_COINS      EQU 2000
 DEF GOLDENRODGAMECORNER_SLUGMA_COINS       EQU 3000
 DEF GOLDENRODGAMECORNER_LARVITAR_COINS     EQU 4000
@@ -78,29 +78,29 @@ GoldenrodGameCornerPokemonVendor:
 	loadmenu GoldenrodGameCornerMonVendorMenuHeader
 	verticalmenu
 	closewindow
-	ifequal 1, .Togepi
-	ifequal 2, .Murkrow
-	ifequal 3, .Slugma
-	ifequal 4, .Larvitar
+;	ifequal 1, .Togepi
+	ifequal 1, .Murkrow
+	ifequal 2, .Slugma
+	ifequal 3, .Larvitar
 	sjump GoldenrodGameCorner_CancelPurchaseScript
 
-.Togepi:
-	checkcoins GOLDENRODGAMECORNER_TOGEPI_COINS
-	ifequal HAVE_LESS, GoldenrodGameCorner_NotEnoughCoinsScript
-	readvar VAR_PARTYCOUNT
-	ifequal PARTY_LENGTH, GoldenrodGameCorner_NoRoomScript
-	getmonname STRING_BUFFER_3, TOGEPI
-	scall GoldenrodGameCorner_ConfirmPurchaseScript
-	iffalse GoldenrodGameCorner_CancelPurchaseScript
-	waitsfx
-	playsound SFX_TRANSACTION
-	farwritetext GameCornerPrize_HereYouGoText
-	waitbutton
-	setval TOGEPI
-	special GameCornerPrizeMonCheckDex
-	givepoke TOGEPI, 10
-	takecoins GOLDENRODGAMECORNER_TOGEPI_COINS
-	sjump .loop
+;.Togepi:
+;	checkcoins GOLDENRODGAMECORNER_TOGEPI_COINS
+;	ifequal HAVE_LESS, GoldenrodGameCorner_NotEnoughCoinsScript
+;	readvar VAR_PARTYCOUNT
+;	ifequal PARTY_LENGTH, GoldenrodGameCorner_NoRoomScript
+;	getmonname STRING_BUFFER_3, TOGEPI
+;	scall GoldenrodGameCorner_ConfirmPurchaseScript
+;	iffalse GoldenrodGameCorner_CancelPurchaseScript
+;	waitsfx
+;	playsound SFX_TRANSACTION
+;	farwritetext GameCornerPrize_HereYouGoText
+;	waitbutton
+;	setval TOGEPI
+;	special GameCornerPrizeMonCheckDex
+;	givepoke TOGEPI, 10
+;	takecoins GOLDENRODGAMECORNER_TOGEPI_COINS
+;	sjump .loop
 
 .Murkrow:
 	checkcoins GOLDENRODGAMECORNER_MURKROW_COINS
@@ -163,8 +163,8 @@ GoldenrodGameCornerMonVendorMenuHeader:
 	db 1 ; default option
 .MenuDataMons:
 	db STATICMENU_CURSOR ; flags
-	db 5 ; items
-	db "TOGEPI     {d:GOLDENRODGAMECORNER_TOGEPI_COINS}@"
+	db 4 ; items
+;	db "TOGEPI     {d:GOLDENRODGAMECORNER_TOGEPI_COINS}@"
 	db "MURKROW    {d:GOLDENRODGAMECORNER_MURKROW_COINS}@"
 	db "SLUGMA     {d:GOLDENRODGAMECORNER_SLUGMA_COINS}@"
 	db "LARVITAR   {d:GOLDENRODGAMECORNER_LARVITAR_COINS}@"
