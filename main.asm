@@ -504,14 +504,16 @@ INCLUDE "gfx/pokemon/unown_idle_pointers.asm"
 INCLUDE "gfx/pokemon/unown_idles.asm"
 INCLUDE "gfx/pokemon/bitmask_pointers.asm"
 INCLUDE "gfx/pokemon/bitmasks.asm"
-INCLUDE "gfx/pokemon/unown_bitmask_pointers.asm"
-INCLUDE "gfx/pokemon/unown_bitmasks.asm"
+;INCLUDE "gfx/pokemon/unown_bitmask_pointers.asm" ;moved to "Pic Animations 2"
+;INCLUDE "gfx/pokemon/unown_bitmasks.asm"         ;moved to "Pic Animations 2"
 
 
 SECTION "Pic Animations 2", ROMX
 
 INCLUDE "gfx/pokemon/frame_pointers.asm"
 INCLUDE "gfx/pokemon/kanto_frames.asm"
+INCLUDE "gfx/pokemon/unown_bitmask_pointers.asm" ;moved from "Pic Animations 1"
+INCLUDE "gfx/pokemon/unown_bitmasks.asm"         ;moved from "Pic Animations 1"
 
 
 SECTION "Pic Animations 3", ROMX
