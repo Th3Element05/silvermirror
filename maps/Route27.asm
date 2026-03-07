@@ -165,7 +165,7 @@ Route27_MapScripts:
 ;	end
 
 
-;TrainerCooltrainermBlake:
+;TrainerCooltrainermBlake: ; COOLTRAINERM, FELIX ; const EVENT_BEAT_COOLTRAINERM_FELIX
 ;	trainer COOLTRAINERM, BLAKE, EVENT_BEAT_COOLTRAINERM_BLAKE, CooltrainermBlakeSeenText, CooltrainermBlakeBeatenText, 0, .Script
 ;
 ;.Script:
@@ -276,7 +276,7 @@ Route27_MapScripts:
 ;	closetext
 ;	end
 
-;TrainerCooltrainerfMegan:
+;TrainerCooltrainerfMegan: ; COOLTRAINERF, MIRA ; const EVENT_BEAT_COOLTRAINERF_MIRA
 ;	trainer COOLTRAINERF, MEGAN, EVENT_BEAT_COOLTRAINERF_MEGAN, CooltrainerfMeganSeenText, CooltrainerfMeganBeatenText, 0, .Script
 
 ;.Script:
