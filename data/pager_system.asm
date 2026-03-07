@@ -1,11 +1,11 @@
 PagerCardNames:
-	db "HM01 CUT@" ;silvermirror -"SCYTHER CHOP@"
-	db "HM02 FLY@" ;silvermirror -"PIDGEOT FLY@"
-	db "HM03 SURF@" ;silvermirror -"LAPRAS SURF@"
-	db "HM04 STRENGTH@" ;silvermirror -"MACHOKE PUSH@"
-	db "HM05 FLASH@" ;silvermirror -"MAREEP SHINE@"
-	db "HM06 WHIRLPOOL@" ;silvermirror -"REMORAID WHIRL@"
-	db "TM58 ROCKSMASH@" ;silvermirror -"CUBONE SMASH@"
+	db "CUT@" ;silvermirror -"SCYTHER CHOP@"
+	db "FLY@" ;silvermirror -"PIDGEOT FLY@"
+	db "SURF@" ;silvermirror -"LAPRAS SURF@"
+	db "STRENGTH@" ;silvermirror -"MACHOKE PUSH@"
+	db "FLASH@" ;silvermirror -"MAREEP SHINE@"
+	db "WHIRLPOOL@" ;silvermirror -"REMORAID WHIRL@"
+	db "ROCK SMASH@" ;silvermirror -"CUBONE SMASH@"
 
 PagerMissingName:
 	db "----------@"
