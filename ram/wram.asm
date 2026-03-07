@@ -3196,7 +3196,7 @@ wMahoganyMart1FSceneID::                          db
 wTeamRocketBaseB1FSceneID::                       db
 ;wTeamRocketBaseB2FSceneID::                       db
 wTeamRocketBaseB3FSceneID::                       db
-wDragonsDenB1FSceneID::                           db
+;wDragonsDenB1FSceneID::                           db
 wDragonShrineSceneID::                            db
 wBattleTower1FSceneID::                           db
 wBattleTowerBattleRoomSceneID::                   db
