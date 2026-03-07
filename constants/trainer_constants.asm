@@ -366,12 +366,14 @@ DEF KRIS EQU __trainer_class__
 	const MIKE
 	const GAVEN1
 	const RYAN
+	const LEVI
+	const FINN
+	const FELIX
 ; johto
 	const JAKE
 	const BRIAN
 	const KEVIN
 	const COLT
-	const CALLUM
 	const ZANE
 	const AXEL
 	const MILES
@@ -385,10 +387,13 @@ DEF KRIS EQU __trainer_class__
 	const LOIS
 	const BETH1
 	const FRAN
+	const JOYCE
+	const ANNIE
+	const MIRA
 ; johto
 	const SALMA
 	const LOLA
-	const REENA1
+	const REENA
 	const JENN
 	const CARA
 	const QUINN
@@ -510,6 +515,7 @@ DEF KRIS EQU __trainer_class__
 	const KYLE1
 	const MARTIN
 	const STEPHEN
+	const LUCA
 ; johto
 	const BARNEY
 	const WILTON1
@@ -754,6 +760,7 @@ DEF KRIS EQU __trainer_class__
 	const FRANKLIN
 	const HERMAN
 	const GREG
+	const CALEB
 ; johto
 	const NORMAN
 	const MARK
@@ -895,11 +902,13 @@ DEF KRIS EQU __trainer_class__
 
 	trainerclass KIMONO_GIRL ; 40
 ; johto
-	const NAOKO
-	const SAYO
-	const ZUKI
-	const KUNI
-	const MIKI
+	const NAOKO ;flareon
+	const SAYO  ;espeon
+	const ZUKI  ;umbreon
+	const KUNI  ;vaporeon
+	const MIKI  ;jolteon
+	const AOKI  ;leafeon
+	const YUKI  ;glaceon
 
 	trainerclass TWINS ; 41
 ; kanto (BEAUTYs r13)
