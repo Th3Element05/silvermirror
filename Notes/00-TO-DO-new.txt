@@ -1,0 +1,28 @@
+New TO DO list
+
+
+TEST
+celadon move tutor
+viridian move tutor
+fighting dojo move tutor
+new fighting dojo map script
+lavender town curse girl script
+dragon shrine script
+
+
+
+
+DO
+
+route 26/27 trainers
+
+go through data/trainers/parties levels/moves
+
+trades?
+does fossil revival script still need to be fixed?
+move kurt's son outside of silph
+add phys/spec gfx
+
+
+
+
