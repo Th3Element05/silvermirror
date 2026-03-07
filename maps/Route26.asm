@@ -51,8 +51,10 @@ Route26_NoFruit:
 	farsjump Std_NoFruitScript
 
 
-;TrainerCooltrainermJake:
+
+;TrainerCooltrainermJake: ; COOLTRAINERM, LEVI ; const EVENT_BEAT_COOLTRAINERM_LEVI
 ;	trainer COOLTRAINERM, JAKE, EVENT_BEAT_COOLTRAINERM_JAKE, CooltrainermJakeSeenText, CooltrainermJakeBeatenText, 0, .Script
+;parasect33, golduck35
 ;
 ;.Script:
 ;	endifjustbattled
@@ -62,9 +64,39 @@ Route26_NoFruit:
 ;	closetext
 ;	end
 
-;TrainerCooltrainermGaven3:
-;	trainer COOLTRAINERM, GAVEN3, EVENT_BEAT_COOLTRAINERM_GAVEN, CooltrainermGaven3SeenText, CooltrainermGaven3BeatenText, 0, .Script
+;CooltrainermJakeSeenText:
+;	text "I'm making my"
+;	line "final preparations"
+;
+;	para "for the #MON"
+;	line "LEAGUE."
+;	done
+;
+;CooltrainermJakeBeatenText:
+;	text "I blew it!"
+;	done
+;
+;CooltrainermJakeAfterBattleText:
+;	text "It's going to be"
+;	line "tough to win at"
+;	cont "the LEAGUE."
+;
+;	para "I need to do some"
+;	line "more training."
+;
+;	para "I hear that the"
+;	line "LEAGUE's ELITE"
+;
+;	para "FOUR are tougher"
+;	line "than GYM LEADERs."
+;	done
 
+
+
+;TrainerCooltrainermGaven3: ; COOLTRAINERM, FINN ; const EVENT_BEAT_COOLTRAINERM_FINN
+;	trainer COOLTRAINERM, GAVEN3, EVENT_BEAT_COOLTRAINERM_GAVEN, CooltrainermGaven3SeenText, CooltrainermGaven3BeatenText, 0, .Script
+;victreebel, kingler, flareon, 32,34,38
+;
 ;.Script:
 ;	loadvar VAR_CALLERID, PHONE_COOLTRAINERM_GAVEN
 ;	opentext
@@ -151,8 +183,36 @@ Route26_NoFruit:
 ;	closetext
 ;	end
 
-;TrainerCooltrainerfJoyce:
+;CooltrainermGaven3SeenText:
+;	text "By experiencing"
+;	line "tough battles, you"
+;	cont "gain power."
+;	done
+;
+;CooltrainermGaven3BeatenText:
+;	text "Gaah! Life is even"
+;	line "tougher!"
+;	done
+;
+;CooltrainermGavenAfterText:
+;	text "To get to #MON"
+;	line "LEAGUE, you have"
+;
+;	para "to get through"
+;	line "VICTORY ROAD."
+;
+;	para "But VICTORY ROAD"
+;	line "is tough."
+;
+;	para "Practically nobody"
+;	line "goes there!"
+;	done
+
+
+
+;TrainerCooltrainerfJoyce: ; COOLTRAINERF, JOYCE ; const EVENT_BEAT_COOLTRAINERF_JOYCE
 ;	trainer COOLTRAINERF, JOYCE, EVENT_BEAT_COOLTRAINERF_JOYCE, CooltrainerfJoyceSeenText, CooltrainerfJoyceBeatenText, 0, .Script
+;pikachu36, blastoise32
 ;
 ;.Script:
 ;	endifjustbattled
@@ -162,9 +222,38 @@ Route26_NoFruit:
 ;	closetext
 ;	end
 
-;TrainerCooltrainerfBeth1:
-;	trainer COOLTRAINERF, BETH1, EVENT_BEAT_COOLTRAINERF_BETH, CooltrainerfBeth1SeenText, CooltrainerfBeth1BeatenText, 0, .Script
+;CooltrainerfJoyceSeenText:
+;	text "Since you've come"
+;	line "this far, you must"
+;	cont "be good."
+;
+;	para "I'm going to give"
+;	line "this battle every-"
+;	cont "thing I've got!"
+;	done
+;
+;CooltrainerfJoyceBeatenText:
+;	text "No! I don't"
+;	line "believe this!"
+;	done
+;
+;CooltrainerfJoyceAfterBattleText:
+;	text "I've defeated"
+;	line "eight GYM LEADERs,"
+;
+;	para "so I was feeling"
+;	line "confident."
+;
+;	para "I'll have to try"
+;	line "harder next time."
+;	done
 
+
+
+;TrainerCooltrainerfBeth1: ; COOLTRAINERF, ANNIE ; const EVENT_BEAT_COOLTRAINERF_ANNIE
+;	trainer COOLTRAINERF, BETH1, EVENT_BEAT_COOLTRAINERF_BETH, CooltrainerfBeth1SeenText, CooltrainerfBeth1BeatenText, 0, .Script
+;rapidash36,39,43
+;
 ;.Script:
 ;	loadvar VAR_CALLERID, PHONE_COOLTRAINERF_BETH
 ;	opentext
@@ -251,106 +340,6 @@ Route26_NoFruit:
 ;	closetext
 ;	end
 
-;TrainerPsychicRichard:
-;	trainer PSYCHIC_T, RICHARD, EVENT_BEAT_PSYCHIC_RICHARD, PsychicRichardSeenText, PsychicRichardBeatenText, 0, .Script
-
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext PsychicRichardAfterBattleText
-;	waitbutton
-;	closetext
-;	end
-
-;TrainerFisherScott:
-;	trainer FISHER, SCOTT, EVENT_BEAT_FISHER_SCOTT, FisherScottSeenText, FisherScottBeatenText, 0, .Script
-
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext FisherScottAfterBattleText
-;	waitbutton
-;	closetext
-;	end
-
-;CooltrainermJakeSeenText:
-;	text "I'm making my"
-;	line "final preparations"
-;
-;	para "for the #MON"
-;	line "LEAGUE."
-;	done
-;
-;CooltrainermJakeBeatenText:
-;	text "I blew it!"
-;	done
-;
-;CooltrainermJakeAfterBattleText:
-;	text "It's going to be"
-;	line "tough to win at"
-;	cont "the LEAGUE."
-;
-;	para "I need to do some"
-;	line "more training."
-;
-;	para "I hear that the"
-;	line "LEAGUE's ELITE"
-;
-;	para "FOUR are tougher"
-;	line "than GYM LEADERs."
-;	done
-;
-;CooltrainermGaven3SeenText:
-;	text "By experiencing"
-;	line "tough battles, you"
-;	cont "gain power."
-;	done
-;
-;CooltrainermGaven3BeatenText:
-;	text "Gaah! Life is even"
-;	line "tougher!"
-;	done
-;
-;CooltrainermGavenAfterText:
-;	text "To get to #MON"
-;	line "LEAGUE, you have"
-;
-;	para "to get through"
-;	line "VICTORY ROAD."
-;
-;	para "But VICTORY ROAD"
-;	line "is tough."
-;
-;	para "Practically nobody"
-;	line "goes there!"
-;	done
-;
-;CooltrainerfJoyceSeenText:
-;	text "Since you've come"
-;	line "this far, you must"
-;	cont "be good."
-;
-;	para "I'm going to give"
-;	line "this battle every-"
-;	cont "thing I've got!"
-;	done
-;
-;CooltrainerfJoyceBeatenText:
-;	text "No! I don't"
-;	line "believe this!"
-;	done
-;
-;CooltrainerfJoyceAfterBattleText:
-;	text "I've defeated"
-;	line "eight GYM LEADERs,"
-;
-;	para "so I was feeling"
-;	line "confident."
-;
-;	para "I'll have to try"
-;	line "harder next time."
-;	done
-;
 ;CooltrainerfBeth1SeenText:
 ;	text "I lost to a train-"
 ;	line "er named <RIVAL>."
@@ -376,7 +365,21 @@ Route26_NoFruit:
 ;	line "valuable, lifelong"
 ;	cont "partners."
 ;	done
+
+
+
+;TrainerPsychicRichard: ; PSYCHIC_T, CALEB ; const EVENT_BEAT_PSYCHIC_CALEB
+;	trainer PSYCHIC_T, RICHARD, EVENT_BEAT_PSYCHIC_RICHARD, PsychicRichardSeenText, PsychicRichardBeatenText, 0, .Script
+;sunkern36
 ;
+;.Script:
+;	endifjustbattled
+;	opentext
+;	writetext PsychicRichardAfterBattleText
+;	waitbutton
+;	closetext
+;	end
+
 ;PsychicRichardSeenText:
 ;	text "Wow, look at all"
 ;	line "those BADGEs!"
@@ -398,10 +401,24 @@ Route26_NoFruit:
 ;	line "grow from their"
 ;	cont "experiences."
 ;
-;	para "Don't get lazy and"
-;	line "complacent."
+;	para "Don't be lazy and"
+;	line "get complacent."
 ;	done
+
+
+
+;TrainerFisherScott: ; FISHER, LUCA ; const EVENT_BEAT_FISHER_LUCA
+;	trainer FISHER, SCOTT, EVENT_BEAT_FISHER_SCOTT, FisherScottSeenText, FisherScottBeatenText, 0, .Script
+;qwilfish30,qwilfish30,seaking34
 ;
+;.Script:
+;	endifjustbattled
+;	opentext
+;	writetext FisherScottAfterBattleText
+;	waitbutton
+;	closetext
+;	end
+
 ;FisherScottSeenText:
 ;	text "I'm feeling great"
 ;	line "today!"
@@ -424,6 +441,8 @@ Route26_NoFruit:
 ;	line "give up."
 ;	done
 
+
+
 Route26Sign:
 	jumptext Route26SignText
 Route26SignText:
@@ -439,8 +458,8 @@ Route26_MapEvents:
 	def_warp_events
 	warp_event  7,  1, ROUTE_26_GATE, 3
 	warp_event  5, 67, DAY_OF_WEEK_SIBLINGS_HOUSE, 1
+	warp_event 15, 53, ROUTE_26_HEAL_HOUSE, 1
 ;	warp_event  7,  5, VICTORY_ROAD_GATE, 3
-;	warp_event 15, 53, ROUTE_26_HEAL_HOUSE, 1
 
 	def_coord_events
 
