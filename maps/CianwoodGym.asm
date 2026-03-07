@@ -76,7 +76,7 @@ CianwoodGymChuckScript:
 .AlreadyGotWhirlpool:
 	writetext ChuckAfterText
 	waitbutton
-.BagFull:
+;.BagFull:
 	closetext
 	end
 

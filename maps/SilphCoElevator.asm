@@ -9,8 +9,8 @@ SilphCoElevatorSignText:
 	text "The directory has"
 	line "been vandalized!"
 
-	para "It says: TEAM"
-	line "ROCKET RULES!"
+	para "It says:"
+	line "TEAM ROCKET RULES!"
 	done
 
 SilphCoElevatorScript:

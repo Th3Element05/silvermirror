@@ -120,7 +120,7 @@ CeruleanCityRivalBeforeBattleText:
 	para "I'm doing great!"
 	line "I caught a bunch"
 	cont "of strong and"
-	cont "smart #MON!"
+	roll "smart #MON!"
 
 	para "Here, let me see"
 	line "what you caught,"
@@ -146,7 +146,7 @@ CeruleanCityRivalAfterBattleText:
 	para "I went to BILL's"
 	line "and got him to"
 	cont "show me his rare"
-	cont "#MON!"
+	roll "#MON!"
 
 	para "That added a lot"
 	line "of pages to my"
@@ -178,7 +178,7 @@ CeruleanCityOfficerText:
 	para "It's obvious that"
 	line "TEAM ROCKET is"
 	cont "behind this most"
-	cont "heinous crime!"
+	roll "heinous crime!"
 
 	para "Even our POLICE"
 	line "force has trouble"
@@ -358,7 +358,7 @@ CeruleanCityObedienceSpeechText:
 	para "Your #MON's"
 	line "obedience depends"
 	cont "on your abilities"
-	cont "as a trainer!"
+	roll "as a trainer!"
 	done
 
 CeruleanCitySuperNerd1Script:
@@ -367,7 +367,7 @@ CeruleanCitySuperNerd1Text:
 	text "That trainer in"
 	line "front of the shop"
 	cont "can't control her"
-	cont "SLOWBRO."
+	roll "SLOWBRO."
 	
 	para "Its blocking the"
 	line "path…"
@@ -382,7 +382,7 @@ CeruleanCityCooltrainerMText:
 	text "You're a trainer"
 	line "too? Collecting,"
 	cont "fighting, it's a"
-	cont "tough life."
+	roll "tough life."
 	done
 
 CeruleanCitySuperNerd2Script:
@@ -391,7 +391,7 @@ CeruleanCitySuperNerd2Text:
 	text "You're making an"
 	line "encyclopedia on"
 	cont "#MON? That"
-	cont "sounds amusing."
+	roll "sounds amusing."
 	done
 
 CeruleanCityCooltrainerFScript:
@@ -411,12 +411,12 @@ CeruleanCaveCooltrainerMText:
 	text "This is CERULEAN"
 	line "CAVE! Horribly"
 	cont "strong #MON"
-	cont "live in there!"
+	roll "live in there!"
 
 	para "The #MON LEAGUE"
 	line "CHAMPION is the"
 	cont "only person who"
-	cont "is allowed in!"
+	roll "is allowed in!"
 	done
 
 ; signs
@@ -456,7 +456,7 @@ CeruleanCityTrainerTipsText:
 	para "Pressing B Button"
 	line "during evolution"
 	cont "cancels the whole"
-	cont "process."
+	roll "process."
 	done
 
 CeruleanCityPokecenterSign:

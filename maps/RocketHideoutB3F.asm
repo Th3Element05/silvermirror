@@ -26,7 +26,7 @@ RocketGruntM12AfterBattleText:
 	text "Go ahead and go!"
 	line "But, you need the"
 	cont "LIFT KEY to run"
-	cont "the elevator!"
+	roll "the elevator!"
 	done
 
 TrainerRocketGruntM13:
@@ -50,7 +50,7 @@ RocketGruntM13AfterBattleText:
 	text "SILPH SCOPE?"
 	line "The machine the"
 	cont "BOSS stole. It's"
-	cont "here somewhere."
+	roll "here somewhere."
 	done
 
 RocketHideoutB3FRareCandy:
@@ -69,7 +69,7 @@ RocketHideoutB3F_MapEvents:
 	warp_event 17, 15, ROCKET_HIDEOUT_ELEVATOR, 1 ; 1
 	warp_event 16, 15, ROCKET_HIDEOUT_ELEVATOR, 1 ; 2
 	warp_event 19,  2, ROCKET_HIDEOUT_B2F, 5 ; 3
-	warp_event 11, 14, ROCKET_HIDEOUT_B4F, 3 ; 4
+	warp_event 11, 18, ROCKET_HIDEOUT_B4F, 3 ; 4
 
 	def_coord_events
 

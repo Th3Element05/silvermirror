@@ -67,7 +67,7 @@ MistyIntroText:
 	para "Trainers who want"
 	line "to turn pro have"
 	cont "to have a policy"
-	cont "about #MON!"
+	roll "about #MON!"
 
 	para "What is your"
 	line "approach when you"
@@ -76,7 +76,7 @@ MistyIntroText:
 	para "My policy is an"
 	line "all-out offensive"
 	cont "with water-type"
-	cont "#MON!"
+	roll "#MON!"
 	done
 
 MistyWinLossText:
@@ -179,7 +179,7 @@ PicnickerSophiaAfterBattleText:
 	text "You have to face"
 	line "other trainers to"
 	cont "find out how good"
-	cont "you really are."
+	roll "you really are."
 	done
 
 CeruleanGymGuideScript:

@@ -393,7 +393,7 @@ CinnabarGymQuestion3Text: ;false
 	text "POLIWAG's belly"
 	line "swirls go in the"
 	cont "same direction as"
-	cont "POLIWHIRL's?"
+	roll "POLIWHIRL's?"
 	done
 
 CinnabarGymQuestion4Text: ;false
@@ -416,7 +416,7 @@ CinnabarGymQuestion5Text: ;true
 	text "#MON of the"
 	line "same species'"
 	cont "stats can grow at"
-	cont "different rates?"
+	roll "different rates?"
 	done
 
 CinnabarGymQuestion6Text: ;false
@@ -612,7 +612,7 @@ SuperNerdCaryAfterBattleText:
 	text "BLAINE was lost"
 	line "in the mountains"
 	cont "when a fiery bird"
-	cont "#MON appeared."
+	roll "#MON appeared."
 
 	para "Its light enabled"
 	line "BLAINE to find"

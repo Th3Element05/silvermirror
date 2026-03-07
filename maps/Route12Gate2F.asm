@@ -37,7 +37,7 @@ Route12Gate2FLassExplainSwiftText:
 	para "It's very accurate,"
 	line "so use it when"
 	cont "you can't afford"
-	cont "to miss."
+	roll "to miss."
 	done
 
 Route12Gate2FBinocularsL:

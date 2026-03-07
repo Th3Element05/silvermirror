@@ -87,7 +87,7 @@ BrockIntroText:
 	para "Do you still want"
 	line "to challenge me?"
 	cont "Fine then! Show"
-	cont "me your best!"
+	roll "me your best!"
 	done
 
 BrockWinLossText:
@@ -136,19 +136,19 @@ BrockTMBideText:
 	para "Your #MON will"
 	line "absorb damage in"
 	cont "battle then pay"
-	cont "it back double!"
+	roll "it back double!"
 	done
 
 BrockAfterBattleText:
 	text "By using a TM, a"
 	line "#MON will"
 	cont "instantly learn"
-	cont "a new move."
+	roll "a new move."
 
 	para "Don't worry, TMs"
 	line "are reusable so"
 	cont "use them however"
-	cont "you like."
+	roll "you like."
 	done
 
 TrainerCamperIsaac:
@@ -196,7 +196,7 @@ PewterGymGuideText:
 	text "Hiya! I can tell"
 	line "you have what it"
 	cont "takes to become a"
-	cont "#MON CHAMP!"
+	roll "#MON CHAMP!"
 
 	para "I'm no trainer,"
 	line "but I can tell"
@@ -208,12 +208,12 @@ PewterGymGuideText:
 	para "The 1st #MON"
 	line "out in a match is"
 	cont "at the top of the"
-	cont "#MON LIST!"
+	roll "#MON LIST!"
 
 	para "By changing the"
 	line "order of #MON,"
 	cont "matches could be"
-	cont "made easier!"
+	roll "made easier!"
 	done
 
 PewterGymGuideWinText:

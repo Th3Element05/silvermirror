@@ -21,7 +21,7 @@ SafariZoneArea1YoungsterText:
 	text "Even in the"
 	line "SAFARI ZONE,"
 	cont "certain #MON"
-	cont "are still rare!"
+	roll "are still rare!"
 	done
 
 SafariZoneArea1Lass:
@@ -41,7 +41,7 @@ SafariZoneArea1CooltrainersText:
 	text "SAFARI ZONE has"
 	line "rare #MON that"
 	cont "can't normally be"
-	cont "found in KANTO!"
+	roll "found in KANTO!"
 	done
 
 SafariZoneArea1Officer:

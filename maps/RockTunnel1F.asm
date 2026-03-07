@@ -86,11 +86,18 @@ HikerNolandBeatenText:
 	done
 
 HikerNolandAfterBattleText:
-	text "That sleeping"
-	line "#MON on ROUTE"
-	cont "12 forced me to"
-	cont "take this detour."
+	text "I had to take this"
+	line "detour because of"
+	cont "that sleeping"
+	roll "#MON blocking"
+	cont "ROUTE 12."
 	done
+	
+;	text "That sleeping"
+;	line "#MON on ROUTE"
+;	cont "12 forced me to"
+;	roll "take this detour."
+;	done
 
 TrainerHikerTim:
 	trainer HIKER, TIM, EVENT_BEAT_HIKER_TIM, HikerTimSeenText, HikerTimBeatenText, 0, .Script
@@ -134,8 +141,7 @@ PicnickerEdnaSeenText:
 	done
 
 PicnickerEdnaBeatenText:
-	text "It"
-	line "was too dark!"
+	text "It was too dark!"
 	done
 
 PicnickerEdnaAfterBattleText:
@@ -155,12 +161,11 @@ TrainerPicnickerKim:
 
 PicnickerKimSeenText:
 	text "You have #MON!"
-	line "Let's start!"
+	line "Let's play!"
 	done
 
 PicnickerKimBeatenText:
-	text "You"
-	line "play hard!"
+	text "You play hard!"
 	done
 
 PicnickerKimAfterBattleText:
@@ -184,8 +189,8 @@ PicnickerBrookeSeenText:
 	done
 
 PicnickerBrookeBeatenText:
-	text "I'm"
-	line "out of #MON!"
+	text "I'm out of"
+	line "#MON!"
 	done
 
 PicnickerBrookeAfterBattleText:
@@ -197,7 +202,8 @@ RockTunnel1FSign:
 	jumptext RockTunnel1FSignText
 RockTunnel1FSignText:
 	text "ROCK TUNNEL"
-	line "CERULEAN CITY -"
+
+	para "CERULEAN CITY -"
 	cont "LAVENDER TOWN"
 	done
 
@@ -228,7 +234,7 @@ RockTunnel1F_MapEvents:
 	object_event  7,  5, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerHikerBailey, -1
 	object_event 21,  7, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 3, TrainerPokemaniacAndrew, -1
 	object_event  4, 12, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerHikerNoland, -1
-	object_event 18, 15, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerHikerTim, -1
+	object_event 17, 15, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerHikerTim, -1
 	object_event 33, 18, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerPicnickerEdna, -1
 	object_event 29, 21, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerPicnickerKim, -1
 	object_event 20, 22, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerPicnickerBrooke, -1

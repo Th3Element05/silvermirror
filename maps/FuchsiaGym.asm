@@ -76,12 +76,12 @@ KogaIntroText:
 	para "Very well, I"
 	line "shall show you"
 	cont "true terror as a"
-	cont "NINJA MASTER!"
+	roll "NINJA MASTER!"
 
 	para "You shall feel"
 	line "the despair of"
 	cont "poison and sleep"
-	cont "techniques!"
+	roll "techniques!"
 	done
 
 KogaBeaten1Text:
@@ -105,7 +105,7 @@ KogaExplainSoulbadgeText:
 ;	cont "use SURF outside"
 ;	cont "of battle!"
 	cont "you are one step"
-	cont "closer to the"
+	roll "closer to the"
 	cont "#MON LEAGUE!"
 
 	para "Ah! Take this"
@@ -125,7 +125,7 @@ KogaAfterBattleText:
 	text "When afflicted by"
 	line "TOXIC, #MON"
 	cont "suffer more and"
-	cont "more as battle"
+	roll "more as battle"
 	cont "progresses!"
 
 	para "It will surely"

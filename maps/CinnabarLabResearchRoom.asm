@@ -36,7 +36,7 @@ CinnabarLabMetronomeScientistMetronomeText:
 	para "It tricks your"
 	line "#MON's brain"
 	cont "into using moves"
-	cont "it doesn't know!"
+	roll "it doesn't know!"
 	done
 
 CinnabarLabEeveeScientist:
@@ -48,7 +48,7 @@ CinnabarLabEeveeScientistText:
 	para "My research is"
 	line "to discover if it"
 	cont "has any other"
-	cont "evolutions!"
+	roll "evolutions!"
 	done
 
 CinnabarLabEevee:
@@ -71,12 +71,12 @@ CinnabarLabEeveePCText:
 	para "I've been unable"
 	line "to get EEVEE to"
 	cont "evolve without"
-	cont "using a STONE."
+	roll "using a STONE."
 
 	para "EEVEE seems to be"
 	line "frustrated from"
 	cont "running tests"
-	cont "all day."
+	roll "all day."
 	done
 
 CinnabarLabLegendsPC:
@@ -91,7 +91,7 @@ CinnabarLabLegendsPCText:
 	para "The 3 legendary"
 	line "bird #MON are"
 	cont "ARTICUNO, ZAPDOS"
-	cont "and MOLTRES."
+	roll "and MOLTRES."
 
 	para "Their whereabouts"
 	line "are unknown."
