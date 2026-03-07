@@ -115,14 +115,17 @@ MartMedSix:
 
 ;MartCeladon3F:
 MartTMs1:
-	db 7 ; # items
-	db TM_PROTECT ; TM_BODY_SLAM
-	db TM_SUBSTITUTE ; TM_REST
+	db 10 ; # items
+	db TM_PROTECT
+	db TM_SUBSTITUTE
 	db TM_COUNTER
+	db TM_DOUBLE_TEAM
+	db TM_BULK_UP
 	db TM_ICY_WIND
 	db TM_ROCK_SLIDE
 	db TM_TRI_ATTACK
 	db TM_HYPER_BEAM
+	db TM_GIGA_IMPACT
 	db -1 ; end
 
 ;MartCeladon4F:

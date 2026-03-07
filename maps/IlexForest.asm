@@ -173,13 +173,13 @@ Text_IlexForestLass:
 IlexForestHeadbuttGuyScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_TM55_HEADBUTT
+	checkevent EVENT_GOT_TM56_HEADBUTT
 	iftrue .AlreadyGotHeadbutt
 	writetext Text_HeadbuttIntro
 	promptbutton
 	verbosegiveitem TM_HEADBUTT
 	iffalse .BagFull
-	setevent EVENT_GOT_TM55_HEADBUTT
+	setevent EVENT_GOT_TM56_HEADBUTT
 .AlreadyGotHeadbutt:
 	writetext Text_HeadbuttOutro
 	waitbutton

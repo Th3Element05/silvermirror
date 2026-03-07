@@ -100,10 +100,10 @@ VictoryRoad2FMoltres:
 	iffalse .NoCatch
 	setflag ENGINE_PLAYER_CAUGHT_MOLTRES
 .NoCatch
-	checkevent EVENT_GOT_TM51_FLAMETHROWER
+	checkevent EVENT_GOT_TM41_FLAMETHROWER
 	iftrue .GotFlamethrower
 	appear VICTORYROAD2F_FLAMETHROWER
-	setevent EVENT_GOT_TM51_FLAMETHROWER
+	setevent EVENT_GOT_TM41_FLAMETHROWER
 .GotFlamethrower
 	end
 
@@ -125,7 +125,7 @@ PokemaniacRonSeenText:
 	text "If you can get"
 	line "through here, you"
 	cont "can go meet the"
-	cont "ELITE FOUR!"
+	roll "ELITE FOUR!"
 	done
 
 PokemaniacRonBeatenText:
@@ -137,7 +137,7 @@ PokemaniacRonAfterBattleText:
 	text "I can beat you"
 	line "when it comes to"
 	cont "knowledge about"
-	cont "#MON!"
+	roll "#MON!"
 	done
 
 TrainerJugglerDario:
@@ -267,14 +267,14 @@ VictoryRoad2FTMFlamethrower:
 VictoryRoad2FGuardSpec:
 	itemball GUARD_SPEC
 
-VictoryRoad2FTMSubmission:
-	itemball TM_SUBMISSION
+VictoryRoad2FTMFocusBlast:
+	itemball TM_FOCUS_BLAST
 
 VictoryRoad2FFullHeal:
 	itemball FULL_HEAL
 
-;VictoryRoad2FTMMegaKick:
-;	itemball TM_MEGA_KICK
+VictoryRoad2FTMShadowClaw:
+	itemball TM_SHADOW_CLAW
 
 ; hidden items
 VictoryRoad2FHiddenUltraBall:
@@ -314,6 +314,6 @@ VictoryRoad2F_MapEvents:
 	object_event 13,  9, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_TRAINER, 4, TrainerBlackbeltYoshi, -1
 	object_event 20, 19, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerJugglerGilbert, -1
 	object_event  4,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoad2FGuardSpec, EVENT_VICTORY_ROAD_2F_GUARD_SPEC
-	object_event 27,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoad2FTMSubmission, EVENT_VICTORY_ROAD_2F_TM_SUBMISSION
+	object_event 27,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoad2FTMFocusBlast, EVENT_VICTORY_ROAD_2F_TM_FOCUS_BLAST
 	object_event 19,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoad2FFullHeal, EVENT_VICTORY_ROAD_2F_FULL_HEAL
-;	object_event 10, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoad2FTMMegaKick, EVENT_VICTORY_ROAD_2F_TM_MEGA_KICK
+	object_event 10, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, VictoryRoad2FTMShadowClaw, EVENT_VICTORY_ROAD_2F_TM_SHADOW_CLAW

@@ -45,11 +45,11 @@ SafariSecretHouseGiveSurfText:
 
 	para "Anyone who finds"
 	line "the SECRET HOUSE"
-	cont "wins an HM03!"
+	cont "wins a TM03!"
 	done
 
 SafariSecretHouseExplainSurfText:
-	text "HM03 is SURF!"
+	text "TM03 is SURF!"
 
 	para "It's a powerful"
 	line "WATER attack!"
@@ -59,7 +59,7 @@ SafariSecretHouseGivePagerText:
 	text "And since you are"
 	line "the first trainer"
 	cont "to make it here,"
-	cont "you also win a"
+	roll "you also win a"
 	cont "SURF PAGER!"
 	done
 

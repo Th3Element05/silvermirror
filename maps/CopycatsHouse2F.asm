@@ -43,7 +43,7 @@ Copycat:
 	variablesprite SPRITE_COPYCAT, SPRITE_KRIS
 .Default_Merge_1:
 	special LoadUsedSpritesGFX
-	checkevent EVENT_GOT_TM31_MIMIC
+;	checkevent EVENT_GOT_TM31_MIMIC
 	iftrue .GotMimic
 	opentext
 	writetext CopycatText_Default
@@ -66,7 +66,7 @@ Copycat:
 	waitbutton
 	closetext
 	appear COPYCATSHOUSE2F_POKEDOLL
-	setevent EVENT_GOT_TM31_MIMIC
+;	setevent EVENT_GOT_TM31_MIMIC
 	end
 
 .DollNotForYou

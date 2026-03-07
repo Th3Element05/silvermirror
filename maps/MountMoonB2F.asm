@@ -64,7 +64,7 @@ MtMoonB2FSuperNerdCinnabarLabText:
 	text "Far away, on"
 	line "CINNABAR ISLAND,"
 	cont "there's a #MON"
-	cont "LAB."
+	roll "LAB."
 
 	para "They do research"
 	line "on regenerating"
@@ -168,7 +168,7 @@ RocketGruntM2SeenText:
 	text "TEAM ROCKET will"
 	line "find the fossils,"
 	cont "revive and sell"
-	cont "them for cash!"
+	roll "them for cash!"
 	done
 
 RocketGruntM2BeatenText:
@@ -244,8 +244,8 @@ MtMoonB2FSuperNerdTakesFossilMovement:
 	step UP
 	step_end
 
-MtMoonB2FTMDynamicPunch:
-	itemball TM_DYNAMICPUNCH
+MtMoonB2FTMMudSlap:
+	itemball TM_MUD_SLAP
 
 MtMoonB2FHPUp:
 	itemball HP_UP
@@ -280,5 +280,5 @@ MountMoonB2F_MapEvents:
 	object_event 11, 18, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerRocketGruntM2, -1
 	object_event 28, 19, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 4, TrainerRocketGruntF1, -1
 	object_event 17, 25, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerRocketGruntM3, -1
-	object_event 31,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, MtMoonB2FTMDynamicPunch, EVENT_MT_MOON_B2F_TM_DYNAMICPUNCH
+	object_event 31,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, MtMoonB2FTMMudSlap, EVENT_MT_MOON_B2F_TM_MUD_SLAP
 	object_event 25, 25, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, MtMoonB2FHPUp, EVENT_MT_MOON_B2F_HP_UP

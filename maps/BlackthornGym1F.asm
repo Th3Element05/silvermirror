@@ -44,7 +44,7 @@ BlackthornGymClairScript:
 	waitsfx
 	setflag ENGINE_RISINGBADGE
 .FightDone:
-	checkevent EVENT_GOT_TM23_DRAGONBREATH
+	checkevent EVENT_GOT_TM72_DRAGONBREATH
 	iftrue .SpeechAfterTM
 	setevent EVENT_BEAT_COOLTRAINERF_LAYLA
 	setevent EVENT_BEAT_COOLTRAINERM_ZANE
@@ -54,8 +54,8 @@ BlackthornGymClairScript:
 	writetext ClairText_RisingBadgeSpeech
 	promptbutton
 	verbosegiveitem TM_DRAGONBREATH
-	iffalse .SpeechAfterTM ;.NoRoomForDragonbreath
-	setevent EVENT_GOT_TM23_DRAGONBREATH
+;	iffalse .SpeechAfterTM ;.NoRoomForDragonbreath
+	setevent EVENT_GOT_TM72_DRAGONBREATH
 	writetext ClairText_DragonbreathSpeech
 	promptbutton
 .SpeechAfterTM
@@ -70,7 +70,15 @@ BlackthornGymClairScript:
 	end
 
 .AfterDragonsDen:
-	writetext ClairTextAfterDragonsDen
+	checkevent EVENT_ANSWERED_DRAGON_MASTER_QUIZ_WRONG
+	iftrue .FailedTest
+	writetext ClairTextAfterDragonsDenPassedText
+	waitbutton
+	closetext
+	end
+
+.FailedTest
+	writetext ClairTextAfterDragonsDenFailedText
 	waitbutton
 	closetext
 	end
@@ -79,7 +87,7 @@ ClairIntroText:
 	text "CLAIR: Welcome to"
 	line "BLACKTHORN GYM,"
 	cont "the home of the"
-	cont "Dragon Clan:"
+	roll "Dragon Clan:"
 
 	para "The world's best"
 	line "dragon masters."
@@ -87,7 +95,7 @@ ClairIntroText:
 	para "As one of them,"
 	line "I can hold my own"
 	cont "against even the"
-	cont "#MON LEAGUE's"
+	roll "#MON LEAGUE's"
 	cont "ELITE FOUR."
 
 	para "Do you still want"
@@ -103,7 +111,7 @@ ClairWinText:
 	para "I don't believe"
 	line "it. I've only ever"
 	cont "lost to my cousin,"
-	cont "LANCE."
+	roll "LANCE."
 	done
 
 ClairText_AdmitDefeat:
@@ -111,7 +119,7 @@ ClairText_AdmitDefeat:
 	line "even LANCE…"
 
 	para "You're the newest"
-	cont "#MON LEAGUE"
+	line "#MON LEAGUE"
 	cont "CHAMPION."
 
 	para "I can't deny that"
@@ -161,7 +169,7 @@ ClairText_GoToDragonsDen:
 ;	cont "what it takes."
 	done
 
-ClairTextAfterDragonsDen:
+ClairTextAfterDragonsDenPassedText:
 	text "You met our elders"
 	line "and passed their"
 	cont "test…"
@@ -169,6 +177,15 @@ ClairTextAfterDragonsDen:
 	para "You are a truly"
 	line "exceptional #-"
 	cont "MON trainer."
+	done
+
+ClairTextAfterDragonsDenFailedText:
+	text "You met our elders"
+	line "and took their"
+	cont "test…"
+
+	para "That's a very rare"
+	line "honor."
 	done
 
 TrainerCooltrainermZane:

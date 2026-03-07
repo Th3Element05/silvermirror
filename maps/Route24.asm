@@ -117,7 +117,7 @@ Route24NuggetRocketAfterBattleText:
 	text "With your ability,"
 	line "you could become"
 	cont "a top leader in"
-	cont "TEAM ROCKET!"
+	roll "TEAM ROCKET!"
 	done
 
 ; trainers
@@ -215,7 +215,7 @@ BugCatcherWayneSeenText:
 	text "This is NUGGET"
 	line "BRIDGE! Beat us 5"
 	cont "trainers and win"
-	cont "a fabulous prize!"
+	roll "a fabulous prize!"
 
 	para "Think you got"
 	line "what it takes?"
@@ -257,7 +257,7 @@ CamperTannerAfterBattleText:
 	cont "bridge scared me!"
 	done
 
-; items
+; itemballs
 Route24TMThunderWave:
 	itemball TM_THUNDER_WAVE
 

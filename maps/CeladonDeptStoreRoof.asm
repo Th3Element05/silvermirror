@@ -211,7 +211,7 @@ CeladonDeptStoreRoofGirlScript:
 	sjump .GiveLemonade
 
 .GiveFreshWater:
-	checkevent EVENT_GOT_TM71_SANDSTORM
+	checkevent EVENT_GOT_TM78_SANDSTORM
 	iftrue .GotTM
 	takeitem FRESH_WATER, 1
 ;	writetext CeladonDeptStoreRoofGaveDrinkText
@@ -219,14 +219,14 @@ CeladonDeptStoreRoofGirlScript:
 	writetext CeladonDeptStoreRoofSandstormText
 	promptbutton
 	verbosegiveitem TM_SANDSTORM
-	setevent EVENT_GOT_TM71_SANDSTORM
+	setevent EVENT_GOT_TM78_SANDSTORM
 ;	writetext CeladonDeptStoreRoofIcyWindText
 ;	waitbutton
 	closetext
 	end
 
 .GiveSodaPop:
-	checkevent EVENT_GOT_TM63_RAIN_DANCE
+	checkevent EVENT_GOT_TM77_RAIN_DANCE
 	iftrue .GotTM
 	takeitem SODA_POP, 1
 ;	writetext CeladonDeptStoreRoofGaveDrinkText
@@ -234,14 +234,14 @@ CeladonDeptStoreRoofGirlScript:
 	writetext CeladonDeptStoreRoofRainDanceText
 	promptbutton
 	verbosegiveitem TM_RAIN_DANCE
-	setevent EVENT_GOT_TM63_RAIN_DANCE
+	setevent EVENT_GOT_TM77_RAIN_DANCE
 ;	writetext CeladonDeptStoreRoofRockSlideText
 ;	waitbutton
 	closetext
 	end
 
 .GiveLemonade:
-	checkevent EVENT_GOT_TM59_SUNNY_DAY
+	checkevent EVENT_GOT_TM76_SUNNY_DAY
 	iftrue .GotTM
 	takeitem LEMONADE, 1
 ;	writetext CeladonDeptStoreRoofGaveDrinkText
@@ -249,7 +249,7 @@ CeladonDeptStoreRoofGirlScript:
 	writetext CeladonDeptStoreRoofSunnyDayText
 	promptbutton
 	verbosegiveitem TM_SUNNY_DAY
-	setevent EVENT_GOT_TM59_SUNNY_DAY
+	setevent EVENT_GOT_TM76_SUNNY_DAY
 ;	writetext CeladonDeptStoreRoofTriAttackText
 ;	waitbutton
 	closetext

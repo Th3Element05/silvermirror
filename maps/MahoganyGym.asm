@@ -26,7 +26,7 @@ MahoganyGymPryceScript:
 ;	readvar VAR_BADGES
 ;	scall MahoganyGymActivateRockets
 .FightDone:
-	checkevent EVENT_GOT_TM77_ANCIENTPOWER
+	checkevent EVENT_GOT_TM80_ANCIENTPOWER
 	iftrue .SpeechAfterTM
 	setevent EVENT_BEAT_BOARDER_SHAUN
 	setevent EVENT_BEAT_SKIER_ROXANNE
@@ -36,8 +36,8 @@ MahoganyGymPryceScript:
 	writetext PryceText_GlacierBadgeSpeech
 	promptbutton
 	verbosegiveitem TM_ANCIENTPOWER
-	iffalse .NoRoomForAncientpower
-	setevent EVENT_GOT_TM77_ANCIENTPOWER
+;	iffalse .NoRoomForAncientpower
+	setevent EVENT_GOT_TM80_ANCIENTPOWER
 	writetext PryceText_AncientpowerSpeech
 	waitbutton
 	closetext
@@ -46,7 +46,7 @@ MahoganyGymPryceScript:
 .SpeechAfterTM:
 	writetext PryceText_CherishYourPokemon
 	waitbutton
-.NoRoomForAncientpower:
+;.NoRoomForAncientpower:
 	closetext
 	end
 

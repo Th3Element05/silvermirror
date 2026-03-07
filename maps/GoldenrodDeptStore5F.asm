@@ -20,9 +20,34 @@ GoldenrodDeptStore5F_MapScripts:
 GoldenrodDeptStore5FClerkScript:
 	faceplayer
 	opentext
-	pokemart MARTTYPE_STANDARD, MART_TMS_2 ; MART_GOLDENROD_5F
+	checkevent EVENT_GOT_TM64_SWAGGER
+	iffalse .GiveSwagger
+	pokemart MARTTYPE_STANDARD, MART_TMS_1
 	closetext
 	end
+
+.GiveCounter
+	writetext GoldenrodDeptStore5FFreeTMText
+	promptbutton
+	verbosegiveitem TM_SWAGGER
+	setevent EVENT_GOT_TM64_SWAGGER
+	closetext
+	end
+
+GoldenrodDeptStore5FFreeTMText:
+	text "Welcome to the"
+	line "TM SHOP!"
+
+	para "Its your lucky"
+	line "day!"
+
+	para "We aren't selling"
+	line "this TM anymore,"
+	cont "but I still have"
+	roll "one left."
+
+	para "You can have it!"
+	done
 
 Mike:
 	faceplayer

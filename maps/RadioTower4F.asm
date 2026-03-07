@@ -331,7 +331,7 @@ RadioTower4FBlue_GiveWaterfallText:
 	done
 
 RadioTower4FBlue_ExplainWaterfallText:
-	text "<RIVAL>: That HM"
+	text "<RIVAL>: That TM"
 	line "teaches WATERFALL."
 
 	para "LAPRAS can use"
@@ -343,7 +343,9 @@ RadioTower4FBlue_ExplainWaterfallText:
 	cont "the LAPRAS PAGER."
 
 	para "DARK CAVE has a"
-	line "waterfall in it."
+	line "waterfall in it,"
+	cont "if you want to"
+	roll "try it out."
 
 	para "There's a way in"
 	line "from ROUTE 31."

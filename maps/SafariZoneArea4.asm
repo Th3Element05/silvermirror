@@ -21,7 +21,7 @@ SafariZoneArea4LassText:
 	text "I feel like I've"
 	line "looked everywhere"
 	cont "for the SECRET"
-	cont "HOUSE!"
+	roll "HOUSE!"
 
 	para "Do you know"
 	line "where it is?"
@@ -40,7 +40,7 @@ SafariZoneArea4FisherText:
 	text "I've heard you can"
 	line "even hook DRATINI"
 	cont "with a rod in the"
-	cont "SAFARI ZONE!"
+	roll "SAFARI ZONE!"
 	done
 
 SafariZoneArea4Cooltrainers:
@@ -95,8 +95,9 @@ SafariZoneArea4SignText:
 ;	line "the SECRET HOUSE!"
 ;	done
 
-SafariZoneArea4TMDoubleTeam:
-	itemball TM_DOUBLE_TEAM
+; itemballs
+SafariZoneArea4TMRoost:
+	itemball TM_ROOST
 
 SafariZoneArea4GoldTeeth:
 	itemball GOLD_TEETH
@@ -141,7 +142,7 @@ SafariZoneArea4_MapEvents:
 	object_event 22, 25, SPRITE_LASS, SPRITEMOVEDATA_WALK_UP_DOWN, 2, 2, -1, DAY, 0, OBJECTTYPE_SCRIPT, 0, SafariZoneArea4Lass, EVENT_SAFARI_ZONE_AREA_4_NPC2
 	object_event 15, 25, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, NITE, 0, OBJECTTYPE_SCRIPT, 0, SafariZoneArea4Cooltrainers, EVENT_SAFARI_ZONE_AREA_4_NPC2
 ;
-	object_event  9, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, SafariZoneArea4TMDoubleTeam, EVENT_SAFARI_ZONE_AREA_4_TM_DOUBLE_TEAM
+	object_event  9, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, SafariZoneArea4TMRoost, EVENT_SAFARI_ZONE_AREA_4_TM_ROOST
 	object_event 19, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, SafariZoneArea4GoldTeeth, EVENT_SAFARI_ZONE_AREA_4_GOLD_TEETH
 	object_event 18, 22, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, SafariZoneArea4MaxRevive, EVENT_SAFARI_ZONE_AREA_4_MAX_REVIVE
 	object_event  8, 24, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, SafariZoneArea4MaxPotion, EVENT_SAFARI_ZONE_AREA_4_MAX_POTION

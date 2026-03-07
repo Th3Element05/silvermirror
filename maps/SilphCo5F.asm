@@ -269,7 +269,7 @@ SilphCo5FKurtsSon_HelpUsText:
 	para "If you can get rid"
 	line "of TEAM ROCKET, I"
 	cont "might be able to"
-	cont "help you!"
+	roll "help you!"
 	done
 
 SilphCo5FKurtsSon_ThankYouText:
@@ -284,7 +284,7 @@ SilphCo5FKurtsSon_ThankYouText:
 	para "I study #BALLs for"
 	line "work, but I craft"
 	cont "them traditionally"
-	cont "as a hobby."
+	roll "as a hobby."
 
 	para "Its a skill that"
 	line "my dad taught me."
@@ -294,7 +294,7 @@ SilphCo5F_BallsFromApricornsText:
 	text "If you bring me"
 	line "APRICORNs, I can"
 	cont "make them into"
-	cont "#BALLs."
+	roll "#BALLs."
 	done
 
 SilphCo5F_StartRightAwayText:
@@ -352,7 +352,7 @@ SilphCo5FClerkText:
 	text "TEAM ROCKET is"
 	line "in an uproar over"
 	cont "some intruder."
-	cont "That's you right?"
+	roll "That's you right?"
 	done
 
 SilphCo5FClerkSavedText:
@@ -386,7 +386,7 @@ ScientistRichAfterBattleText:
 	text "We worked on the"
 	line "ultimate #BALL"
 	cont "which could catch"
-	cont "anything!"
+	roll "anything!"
 	done
 
 TrainerRocketGruntM21:
@@ -476,7 +476,7 @@ SilphCo5FReport1Text:
 	para "#MON LAB"
 	line "created PORYGON,"
 	cont "the first virtual"
-	cont "reality #MON."
+	roll "reality #MON."
 	done
 
 SilphCo5FReport2:
@@ -485,7 +485,7 @@ SilphCo5FReport2Text:
 	text "It's a #MON"
 	line "REPORT!"
 
-	para "Over 160 #MON"
+	para "Over 200 #MON"
 	line "techniques have"
 	cont "been confirmed."
 	done
@@ -496,8 +496,8 @@ SilphCo5FReport3Text:
 	text "It's a #MON"
 	line "REPORT!"
 
-	para "4 #MON evolve"
-	line "when traded"
+	para "Some #MON will"
+	line "evolve when traded"
 	cont "by link-cable."
 	done
 
@@ -505,8 +505,8 @@ SilphCo5FReport3Text:
 SilphCo5FProtein:
 	itemball PROTEIN
 
-;SilphCo5FTMTakeDown:
-;	itemball TM_TAKE_DOWN
+SilphCo5FTMSubmission:
+	itemball TM_SUBMISSION
 
 SilphCo5FCardKey:
 	itemball CARD_KEY
@@ -547,7 +547,7 @@ SilphCo5F_MapEvents:
 	object_event  8, 16, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerRocketGruntF5, EVENT_BEAT_GIOVANNI_SILPHCO
 	object_event 13,  9, SPRITE_CLERK, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilphCo5FClerk, -1
 	object_event  4,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SilphCo5FProtein, EVENT_SILPH_CO_5F_PROTEIN
-;	object_event  2, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, SilphCo5FTMTakeDown, EVENT_SILPH_CO_5F_TM_TAKE_DOWN
+	object_event  2, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, SilphCo5FTMSubmission, EVENT_SILPH_CO_5F_TM_SUBMISSION
 	object_event 21, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SilphCo5FCardKey, EVENT_SILPH_CO_5F_CARD_KEY
 	object_event 23,  6, SPRITE_PAPER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilphCo5FReport3, -1
 	object_event 25, 10, SPRITE_PAPER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilphCo5FReport2, -1

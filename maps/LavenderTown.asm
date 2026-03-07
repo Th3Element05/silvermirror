@@ -1,4 +1,5 @@
 	object_const_def
+	const LAVENDERTOWN_CURSE_GIRL
 
 LavenderTown_MapScripts:
 	def_scene_scripts
@@ -46,17 +47,29 @@ LavenderTownGirlScript:
 	faceplayer
 	opentext
 	writetext LavenderTownGirlGhostQuestionText
+	special FadeOutMusic
 	yesorno
 	iftrue .BelieveGhosts
 	writetext LavenderTownGirlGhostNoText
-	waitbutton
-	closetext
-	end
+	sjump .LavenderTownGirlDisappears
+;	waitbutton
+;	closetext
+;	end
 
 .BelieveGhosts
 	writetext LavenderTownGirlGhostYesText
+	; fallthrough
+
+.LavenderTownGirlDisappears
 	waitbutton
 	closetext
+	applymovement LAVENDERTOWN_CURSE_GIRL, LavenderTownRockSmashMovement
+	disappear LAVENDERTOWN_CURSE_GIRL
+	pause 16
+	verbosegiveitem TM_CURSE
+	setevent EVENT_GOT_TM69_CURSE
+	closetext
+	special RestartMapMusic
 	end
 
 LavenderTownGirlGhostQuestionText:
@@ -77,6 +90,10 @@ LavenderTownGirlGhostNoText:
 	line "on your shoulder,"
 	cont "it's not real."
 	done
+
+LavenderTownRockSmashMovement:
+	rock_smash 40
+	step_end
 
 LavenderTownSilphScopeSign:
 	jumptext LavenderTownSilphScopeSignText
@@ -142,6 +159,6 @@ LavenderTown_MapEvents:
 	bg_event 16, 13, BGEVENT_READ, LavenderMartSignText
 
 	def_object_events
+	object_event 14,  8, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LavenderTownGirlScript, EVENT_GOT_TM69_CURSE
 	object_event  8,  7, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LavenderTownSuperNerdScript, -1
-	object_event 15,  9, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LavenderTownGirlScript, -1
 	object_event  9, 10, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LavenderTownCooltrainerMScript, -1

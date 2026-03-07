@@ -21,28 +21,7 @@ CianwoodCityChucksWife:
 	jumptextfaceplayer CianwoodCityChucksWifeChuckBackText
 	
 .BeatChuck:
-	checkevent EVENT_GOT_TM64_ENDURE
-	iftrue .GotEndure
-	writetext ChucksWifeGiveTMText
-	promptbutton
-	verbosegiveitem TM_ENDURE
-	promptbutton
-	writetext ChucksWifeEndureSpeechText
-	waitbutton
-	closetext
-	end
-
-.GotEndure:
 	jumptextfaceplayer ChucksWifeChubbyText
-ChucksWifeChubbyText:
-	text "My husband lost to"
-	line "you, so he needs"
-	cont "to train harder."
-
-	para "That's good, since"
-	line "he was getting a"
-	cont "little chubby."
-	done
 
 CianwoodCityChucksWifeChuckGoneText:
 	text "The gym leader"
@@ -65,32 +44,16 @@ CianwoodCityChucksWifeChuckBackText:
 	para "He's in the gym"
 	line "if you'd like to"
 	cont "challenge him."
-
-	para "Come see me again"
-	line "if you beat him."
-
-	para "I'll have a nice"
-	line "gift for you."
 	done
 
-ChucksWifeGiveTMText:
-	text "That's CIANWOOD's"
-	line "GYM BADGE!"
+ChucksWifeChubbyText:
+	text "My husband lost to"
+	line "you, so he needs"
+	cont "to train harder."
 
-	para "Then you should"
-	line "take this."
-	done
-
-ChucksWifeEndureSpeechText:
-	text "That's ENDURE."
-
-	para "A #MON will"
-	line "endure any attack"
-	cont "after using it."
-
-	para "But it might fail"
-	line "if you use it too"
-	cont "often."
+	para "That's good, since"
+	line "he was getting a"
+	cont "little chubby."
 	done
 
 CianwoodCityYoungster:

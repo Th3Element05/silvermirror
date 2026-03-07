@@ -29,17 +29,17 @@ EcruteakGymMortyScript:
 ;	setevent EVENT_RANG_CLEAR_BELL_1
 ;	setevent EVENT_RANG_CLEAR_BELL_2
 .FightDone:
-	checkevent EVENT_GOT_TM30_SHADOW_BALL
+	checkevent EVENT_GOT_TM70_SHADOW_BALL
 	iftrue .GotShadowBall
-;	setevent EVENT_BEAT_SAGE_BO
-;	setevent EVENT_BEAT_SAGE_PING
-;	setevent EVENT_BEAT_MEDIUM_MINA
-;	setevent EVENT_BEAT_MEDIUM_LEONA
+	setevent EVENT_BEAT_SAGE_BO
+	setevent EVENT_BEAT_SAGE_PING
+	setevent EVENT_BEAT_MEDIUM_MINA
+	setevent EVENT_BEAT_MEDIUM_LEONA
 	writetext MortyText_FogBadgeSpeech
 	promptbutton
 	verbosegiveitem TM_SHADOW_BALL
-	iffalse .NoRoomForShadowBall
-	setevent EVENT_GOT_TM30_SHADOW_BALL
+;	iffalse .NoRoomForShadowBall
+	setevent EVENT_GOT_TM70_SHADOW_BALL
 	writetext MortyText_ShadowBallSpeech
 	waitbutton
 	closetext
@@ -48,7 +48,7 @@ EcruteakGymMortyScript:
 .GotShadowBall:
 	writetext MortyFightDoneText
 	waitbutton
-.NoRoomForShadowBall:
+;.NoRoomForShadowBall:
 	closetext
 	end
 

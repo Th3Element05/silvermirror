@@ -64,13 +64,13 @@ Route2GateOaksAideAskPokemonText:
 	para "If you caught 10"
 	line "kinds of #MON,"
 	cont "I'm supposed to"
-	cont "give you a"
+	roll "give you this"
 	cont "FLASH PAGER!"
 
 	para "So, <PLAYER>! Have"
 	line "you caught at"
 	cont "least 10 kinds of"
-	cont "#MON?"
+	roll "#MON?"
 	done
 
 Route2GateOaksAideNotEnoughText:
@@ -93,7 +93,8 @@ Route2GateOaksAideCongratsText:
 	text_ram wStringBuffer3
 	text " kinds"
 	cont "of #MON!"
-	cont "Congratulations!"
+
+	para "Congratulations!"
 	done
 
 Route2GateOaksAideExplainPagerGiveFlashText:
@@ -104,14 +105,18 @@ Route2GateOaksAideExplainPagerGiveFlashText:
 	para "PROF.OAK wanted"
 	line "you to have this,"
 	cont "too. So you can"
-	cont "teach FLASH to"
+	roll "teach FLASH to"
 	cont "your own #MON!"
 	done
 
 Route2GateOaksAideFlashExplainText:
-	text "The HM FLASH can"
-	line "light up even the"
-	cont "darkest dungeons."
+	text "FLASH can light up"
+	line "even the darkest"
+	cont "dungeons."
+;	
+;	text "The TM FLASH can"
+;	line "light up even the"
+;	cont "darkest dungeons."
 ;
 ;	para "You'll need it to"
 ;	line "get through the"

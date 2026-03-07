@@ -1,7 +1,7 @@
 	object_const_def
-	const ROUTE_20_COOLTRAINERM
-	const ROUTE_20_GEODUDE
-	const ROUTE_20_ROCK
+	const ROUTE20_COOLTRAINERM
+	const ROUTE20_GEODUDE
+	const ROUTE20_ROCK
 
 Route20_MapScripts:
 	def_scene_scripts
@@ -15,36 +15,36 @@ Route20Noop2Scene:
 	end
 
 Route20GetRocksmashScript:
-	showemote EMOTE_SHOCK, ROUTE_20_COOLTRAINERM, 20
+	showemote EMOTE_SHOCK, ROUTE20_COOLTRAINERM, 20
 	readvar VAR_FACING
 	ifequal DOWN, .ThruSeafoam
 	turnobject PLAYER, LEFT
-	applymovement ROUTE_20_COOLTRAINERM, Route20RockSmashGuyApproachMovement
+	applymovement ROUTE20_COOLTRAINERM, Route20RockSmashGuyApproachMovement
 	opentext
 	writetext Route20RockSmashGuyIntro_Cinnabar
 	waitbutton
 	closetext
-	follow ROUTE_20_COOLTRAINERM, PLAYER
-	applymovement ROUTE_20_COOLTRAINERM, Route20RockSmashGuyReturnMovement
+	follow ROUTE20_COOLTRAINERM, PLAYER
+	applymovement ROUTE20_COOLTRAINERM, Route20RockSmashGuyReturnMovement
 	stopfollow
 	pause 15
 	sjump Route20RockSmashGuyScript
 
 .ThruSeafoam
 	turnobject PLAYER, LEFT
-	applymovement ROUTE_20_COOLTRAINERM, Route20RockSmashGuyApproachMovement
+	applymovement ROUTE20_COOLTRAINERM, Route20RockSmashGuyApproachMovement
 	opentext
 	writetext Route20RockSmashGuyIntro_Seafoam
 	waitbutton
 	closetext
-	follow ROUTE_20_COOLTRAINERM, PLAYER
-	applymovement ROUTE_20_COOLTRAINERM, Route20RockSmashGuyReturnMovement
+	follow ROUTE20_COOLTRAINERM, PLAYER
+	applymovement ROUTE20_COOLTRAINERM, Route20RockSmashGuyReturnMovement
 	stopfollow
 	pause 15
 	; fallthrough ; sjump Route20RockSmashGuyScript
 
 Route20RockSmashGuyScript:
-;	setlasttalked ROUTE_20_COOLTRAINERM
+;	setlasttalked ROUTE20_COOLTRAINERM
 	faceplayer
 	opentext
 ;	checkevent EVENT_GOT_TM58_ROCK_SMASH
@@ -52,19 +52,19 @@ Route20RockSmashGuyScript:
 	writetext Route20RockSmashGuyIntroText
 	promptbutton
 	closetext
-	turnobject ROUTE_20_COOLTRAINERM, LEFT
+	turnobject ROUTE20_COOLTRAINERM, LEFT
 	pause 10
-	turnobject ROUTE_20_GEODUDE, LEFT
+	turnobject ROUTE20_GEODUDE, LEFT
 	scall Route20GeodudeScript
 	pause 10
 	playsound SFX_STRENGTH
 	earthquake 84
-	applymovement ROUTE_20_ROCK, Route20RockSmashMovement
+	applymovement ROUTE20_ROCK, Route20RockSmashMovement
 ;	waitsfx
-	disappear ROUTE_20_ROCK
-	turnobject ROUTE_20_GEODUDE, RIGHT
+	disappear ROUTE20_ROCK
+	turnobject ROUTE20_GEODUDE, RIGHT
 	pause 10
-;	setlasttalked ROUTE_20_COOLTRAINERM
+;	setlasttalked ROUTE20_COOLTRAINERM
 	faceplayer
 	opentext
 	writetext Route20RockSmashGuyGivePagerText
@@ -77,23 +77,23 @@ Route20RockSmashGuyScript:
 	promptbutton
 	writetext Route20RockSmashGuyGiveTMText
 	promptbutton
-	verbosegiveitem TM_BRICK_BREAK
+;	verbosegiveitem TM_BRICK_BREAK
 	setevent EVENT_GOT_TM58_ROCK_SMASH
-	turnobject ROUTE_20_COOLTRAINERM, LEFT
+	turnobject ROUTE20_COOLTRAINERM, LEFT
 	writetext Route20RockSmashGuyLetsGoText
 	promptbutton
 	closetext
 	playsound SFX_BALL_POOF
 	waitsfx
-	disappear ROUTE_20_GEODUDE
+	disappear ROUTE20_GEODUDE
 	pause 10
 	faceplayer
 	opentext
 	writetext Route20RockSmashGuyFarewellText
 	waitbutton
 	closetext
-	applymovement ROUTE_20_COOLTRAINERM, Route20RockSmashGuyLeaveMovement
-	disappear ROUTE_20_COOLTRAINERM
+	applymovement ROUTE20_COOLTRAINERM, Route20RockSmashGuyLeaveMovement
+	disappear ROUTE20_COOLTRAINERM
 	setscene SCENE_ROUTE20_NOOP
 	end
 
@@ -155,13 +155,14 @@ Route20RockSmashGuyGiveTMText:
 	text "You can call my"
 	line "GEODUDE any time"
 	cont "you need to use"
-	cont "ROCK SMASH!"
-
-	para "Teach your own"
-	line "#MON to use"
-	cont "ROCK SMASH with"
-	cont "this!"
+	roll "ROCK SMASH!"
 	done
+
+;	para "Teach your own"
+;	line "#MON to use"
+;	cont "ROCK SMASH with"
+;	cont "this!"
+;	done
 
 Route20RockSmashGuyLetsGoText:
 	text "Let's go, GEODUDE!"
@@ -258,7 +259,7 @@ SwimmerFHeidiAfterBattleText:
 	text "#MON have"
 	line "taken over an"
 	cont "abandoned mansion"
-	cont "on CINNABAR!"
+	roll "on CINNABAR!"
 	done
 
 TrainerSwimmerFSusie:
@@ -467,6 +468,10 @@ SeafoamIslandsSignText:
 	text "SEAFOAM ISLANDS"
 	done
 
+; items
+Route20TMBrickBreak:
+	itemball TM_BRICK_BREAK
+
 Route20RockScript:
 	jumpstd SmashRockScript
 
@@ -500,5 +505,7 @@ Route20_MapEvents:
 	object_event 77,  8, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSwimmerMJerome, -1
 	object_event 78, 12, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSwimmerMCameron, -1
 	object_event 50, 11, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route20RockScript, -1
+	object_event 48, 11, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route20RockScript, -1
+	object_event 49, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, Route20TMBrickBreak, EVENT_ROUTE_20_TM_BRICK_BREAK
 
 ;.GrayOverYellowOBPalette

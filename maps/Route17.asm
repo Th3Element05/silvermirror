@@ -238,7 +238,7 @@ Route17TrainerTips1Text:
 	para "Even #MON of"
 	line "the same type and"
 	cont "level grow at"
-	cont "different rates."
+	roll "different rates."
 	done
 
 Route17TrainerTips2:
@@ -249,7 +249,7 @@ Route17TrainerTips2Text:
 	para "Press the A or B"
 	line "Button to stay in"
 	cont "place while on a"
-	cont "slope."
+	roll "slope."
 	done
 
 Route17Sign:
@@ -293,6 +293,13 @@ Route17HiddenPPUp:
 Route17HiddenMaxElixer:
 	hiddenitem MAX_ELIXER, EVENT_ROUTE_17_HIDDEN_MAX_ELIXER
 
+; itemballs
+Route17SharpBeak:
+	itemball SHARP_BEAK
+
+Route17TMRollout:
+	itemball TM_ROLLOUT
+
 Route17_MapEvents:
 	db 0, 0 ; filler
 
@@ -324,3 +331,5 @@ Route17_MapEvents:
 	object_event  6, 97, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBikerEoin, -1
 	object_event 18, 91, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerJugglerMaximo, -1
 	object_event 11, 114, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerBikerNolan, -1
+	object_event 18, 54, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route17SharpBeak, EVENT_ROUTE_17_SHARP_BEAK
+	object_event 19, 111, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, Route17TMRollout, EVENT_ROUTE_17_TM_ROLLOUT
