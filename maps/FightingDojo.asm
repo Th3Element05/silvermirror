@@ -6,13 +6,151 @@
 FightingDojo_MapScripts:
 	def_scene_scripts
 	scene_script FightingDojoNoop1Scene, SCENE_FIGHTINGDOJO_CHALLENGE_1
-	scene_script FightingDojoNoop2Scene, SCENE_FIGHTINGDOJO_NOOP
+	scene_script FightingDojoNoop2Scene, SCENE_FIGHTINGDOJO_CHOOSE_POKEMON
+	scene_script FightingDojoNoop3Scene, SCENE_FIGHTINGDOJO_NOOP
 
 	def_callbacks
 
 FightingDojoNoop1Scene:
 FightingDojoNoop2Scene:
+FightingDojoNoop3Scene:
 	end
+
+FightingDojoMoveTutorScript:
+	checkevent EVENT_BEAT_BLACKBELT_MASTER
+	iffalse .NoTutor
+	faceplayer
+	opentext
+	writetext FightingDojoTutor_AskTeachMoveText
+;	yesorno
+;	iffalse .Refused
+;	writetext NewBarkTownStarterTutorWhichMoveShouldITeachText
+	loadmenu .MoveMenuHeader
+	verticalmenu
+	closewindow
+	ifequal 1, .FirePunch
+	ifequal 2, .Thunderpunch
+	ifequal 3, .IcePunch
+	sjump .Incompatible
+
+.FirePunch:
+	setval FIRE_PUNCH
+	sjump .ChoseMove
+;	writetext FightingDojoTutorMoveText
+;	special MoveTutor
+;	ifequal FALSE, .TeachMove
+;	sjump .Incompatible
+
+.Thunderpunch:
+	setval THUNDERPUNCH
+	sjump .ChoseMove
+;	writetext FightingDojoTutorMoveText
+;	special MoveTutor
+;	ifequal FALSE, .TeachMove
+;	sjump .Incompatible
+
+.IcePunch:
+	setval ICE_PUNCH
+;	sjump .ChoseMove
+;	writetext FightingDojoTutorMoveText
+;	special MoveTutor
+;	ifequal FALSE, .TeachMove
+;	sjump .Incompatible
+
+.ChoseMove:
+	writetext FightingDojoTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+;	sjump .Incompatible
+	
+.Incompatible:
+	writetext FightingDojoTutorIncompatibleText
+	waitbutton
+	closetext
+	end
+
+.TeachMove:
+	writetext FightingDojoTutorGoodChoiceText
+	promptbutton
+	writetext FightingDojoTutorRefusedText
+	waitbutton
+	closetext
+	end
+
+;.Refused:
+;	writetext FightingDojoTutorRefusedText
+;	waitbutton
+;	closetext
+;	end
+
+.MoveMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 2, 15, TEXTBOX_Y - 1
+	dw .MenuData
+	db 1 ; default option
+
+.MenuData:
+	db STATICMENU_CURSOR ; flags
+	db 4 ; items
+	db "FIRE PUNCH@"
+	db "THUNDERPUNCH@"
+	db "ICE PUNCH@"
+	db "CANCEL@"
+
+.NoTutor
+	jumptextfaceplayer FightingDojoTutor_NotYetText
+FightingDojoTutor_NotYetText:
+	text "I have nothing for"
+	line "you, outsider."
+
+	para "But, if you can"
+	line "manage to defeat"
+	cont "our MASTER…"
+
+	para "Perhaps then I may"
+	line "have something to"
+	cont "teach you."
+	done
+
+FightingDojoTutor_AskTeachMoveText:
+	text "You were able to"
+	line "defeat our MASTER."
+
+	para "You are worthy to"
+	line "learn the special"
+	cont "techniques of our"
+	roll "DOJO."
+
+	para "If your #MON"
+	line "are willing, I"
+	cont "will teach them."
+
+	para "Which move would"
+	line "you like to learn?"
+	done
+
+FightingDojoTutorMoveText:
+	text_start
+	done
+
+FightingDojoTutorGoodChoiceText:
+	text "Good choice!"
+
+	para "That attack is one"
+	line "of my favorites!"
+	done
+
+FightingDojoTutorRefusedText:
+	text "Come back anytime"
+	line "you want me to"
+	cont "teach your #MON"
+	roll "our techniques!"
+	done
+
+FightingDojoTutorIncompatibleText:
+	text "Your #MON can't"
+	line "learn this move…"
+	done
 
 FightingDojoKarateMasterLeftScript:
 	turnobject PLAYER, RIGHT
@@ -39,10 +177,19 @@ FightingDojoKarateMasterScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_BLACKBELT_MASTER
-	setscene SCENE_FIGHTINGDOJO_NOOP
+	setscene SCENE_FIGHTINGDOJO_CHOOSE_POKEMON
 	opentext
 .BeatMaster
-	writetext KarateMasterChoosePokemonText
+	checkevent EVENT_GOT_TM01_DYNAMICPUNCH
+	iftrue .GotDynamicpunch
+	writetext KarateMasterGiveTMText
+	promptbutton
+	verbosegiveitem TM_DYNAMICPUNCH
+	setevent EVENT_GOT_TM01_DYNAMICPUNCH
+.GotDynamicpunch
+	checkscene
+	ifequal SCENE_FIGHTINGDOJO_NOOP, .OfferedPokemon
+	writetext KarateMasterExplainTMText
 	waitbutton
 	closetext
 	end
@@ -60,6 +207,9 @@ FightingDojoKarateMasterScript:
 	applymovement PLAYER, FightingDojoStepDownMovement
 	turnobject FIGHTINGDOJO_KARATE_MASTER, DOWN
 	end
+
+.OfferedPokemon
+	jumptextfaceplayer KarateMasterOffersPokemonText
 
 .GotPokemon
 	jumptextfaceplayer KarateMasterTrainWithUsText
@@ -80,7 +230,7 @@ KarateMasterDefeatMyStudentsText:
 	text "Defeat all 4 of"
 	line "my students to"
 	cont "prove you posses"
-	cont "the strength to"
+	roll "the strength to"
 	cont "challenge me!"
 	done
 
@@ -103,20 +253,32 @@ KarateMasterWinLossText:
 	line "Arrgh! Beaten!"
 	done
 
-KarateMasterChoosePokemonText:
+KarateMasterGiveTMText:
 	text "Indeed, I have"
 	line "lost!"
 
-	para "I can not award"
-	line "a #MON LEAGUE"
-	cont "badge."
+	para "Unfortunately,"
+	line "I can not award"
+	cont "a #MON LEAGUE"
+	roll "badge."
 
-	para "Instead, I will"
-	line "give you a prized"
-	cont "fighting #MON!"
+	para "However, I cannot"
+	line "make you leave"
+	cont "empty-handed, so"
+	roll "please take this."
+	done
 
-	para "Choose whichever"
-	line "one you like!"
+KarateMasterExplainTMText:
+	text "That TM contains"
+	line "DYNAMICPUNCH!"
+
+	para "It's so powerful"
+	line "that #MON hit"
+	cont "by it are always"
+	roll "confused!"
+	
+	para "Make good use of"
+	line "it!"
 	done
 
 KarateMasterTrainWithUsText:
@@ -124,6 +286,38 @@ KarateMasterTrainWithUsText:
 
 	para "Stay and train at"
 	line "Karate with us!"
+	done
+
+FightingDojoKarateMasterOffersPokemonScript:
+	applymovement FIGHTINGDOJO_KARATE_MASTER, FightingDojoApproachPlayerMovement
+	turnobject PLAYER, RIGHT
+	opentext
+	writetext KarateMasterOffersPokemonText
+	waitbutton
+	closetext
+	applymovement FIGHTINGDOJO_KARATE_MASTER, FightingDojoStepDownMovement
+	setscene SCENE_FIGHTINGDOJO_NOOP
+	end
+
+FightingDojoApproachPlayerMovement:
+	step UP
+	turn_head LEFT
+	step_end
+
+KarateMasterOffersPokemonText:
+	text "These are two of"
+	line "our most prized"
+	cont "FIGHTING #MON."
+
+	para "You are a skilled"
+	line "trainer. I'm sure"
+	cont "that they would do"
+	roll "well in your care."
+
+	para "If you would like"
+	line "one, please choose"
+	cont "whichever one you"
+	roll "like."
 	done
 
 FightingDojoHitmonlee:
@@ -371,7 +565,8 @@ FightingDojo_MapEvents:
 	warp_event  5, 11, SAFFRON_CITY, 1
 
 	def_coord_events
-	coord_event  4,  3, SCENE_FIGHTINGDOJO_CHALLENGE_1, FightingDojoKarateMasterLeftScript
+	coord_event 4, 3, SCENE_FIGHTINGDOJO_CHALLENGE_1, FightingDojoKarateMasterLeftScript
+	coord_event 4, 2, SCENE_FIGHTINGDOJO_CHOOSE_POKEMON, FightingDojoKarateMasterOffersPokemonScript
 
 	def_bg_events
 	bg_event  1,  0, BGEVENT_READ, FightingDojoSign1
@@ -387,7 +582,8 @@ FightingDojo_MapEvents:
 	object_event  3,  5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 0, TrainerBlackbeltBruce, -1
 	object_event  6,  5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerBlackbeltJackie, -1
 	object_event  8,  5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerBlackbeltJet, -1
+	object_event  7,  9, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, FightingDojoMoveTutorScript, -1
 	object_event  1,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, FightingDojoFocusBand, EVENT_FIGHTING_DOJO_FOCUS_BAND
 	object_event  8,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, FightingDojoBlackBelt, EVENT_FIGHTING_DOJO_BLACK_BELT
 
-;.GrayOverYellowOBPalette
+;.GrayOverTreeOBPalette

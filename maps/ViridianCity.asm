@@ -146,8 +146,9 @@ ViridianCityCoffeeGrampsHeyText:
 ViridianCityCoffeeGrampsSorryText:
 	text "Sorry for stopping"
 	line "you earlier."
-	cont "I'm not myself"
-	cont "until I've had my"
+
+	para "I'm not myself"
+	line "until I've had my"
 	cont "coffee."
 	
 	para "You can go through"
@@ -158,7 +159,7 @@ ViridianCityCoffeeGrampsMapCardText:
 	text "You look like"
 	line "you have a long"
 	cont "journey ahead of"
-	cont "you. Take this."
+	roll "you. Take this."
 	done
 
 GotMapCardText:
@@ -176,8 +177,8 @@ ViridianCityCatchPokemonAsk:
 	done
 
 ViridianCityCatchTutorialAcceptedText:
-	text "I'll show you"
-	line "how to then."
+	text "Then I'll show you"
+	line "how!"
 	done
 
 ViridianCityCatchTutorialDeclinedText:
@@ -234,58 +235,240 @@ ViridianCityLeaderLeftText:
 	para "I wonder who will"
 	line "fill the role of"
 	cont "GYM LEADER in"
-	cont "VIRIDIAN now?"
+	roll "VIRIDIAN now?"
 	done
 
-ViridianCityDreamEaterFisher:
-;	showemote EMOTE_SLEEP, VIRIDIANCITY_FISHER, 30
-;	pause 20
+ViridianCityMoveTutorScript:
 	showemote EMOTE_SLEEP, VIRIDIANCITY_FISHER, 30
-	faceplayer
 	opentext
-	checkevent EVENT_GOT_TM42_DREAM_EATER
-	iftrue .GotDreamEater
-	writetext ViridianCityDreamEaterFisherText
-	promptbutton
-;	verbosegiveitem TM_DREAM_EATER
-;	iffalse .NoRoomForDreamEater
-	setevent EVENT_GOT_TM42_DREAM_EATER
-.GotDreamEater:
-	writetext ViridianCityDreamEaterFisherGotDreamEaterText
+	writetext ViridianCityTutorSleepingText
+	yesorno
+	iftrue ViridianCityWokeTutorScript
+	writetext ViridianCityTutorSleepingMovesText
+	loadmenu .MoveMenuHeader
+	verticalmenu
+	closewindow
+	ifequal 1, .Snore
+	ifequal 2, .SleepTalk
+	sjump .Incompatible
+
+.Snore:
+	setval SNORE
+	sjump .ChoseMove
+;	writetext ViridianCityTutorMoveText
+;	special MoveTutor
+;	ifequal FALSE, .TeachMove
+;	sjump .Incompatible
+
+.SleepTalk:
+	setval SLEEP_TALK
+;	sjump .ChoseMove
+;	writetext ViridianCityTutorMoveText
+;	special MoveTutor
+;	ifequal FALSE, .TeachMove
+;	sjump .Incompatible
+
+.ChoseMove:
+	writetext ViridianCityTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachSleepingMove
+;	sjump .Incompatible	
+
+.Incompatible:
+	writetext ViridianCityTutorIncompatibleText
 	waitbutton
-;.NoRoomForDreamEater:
 	closetext
 	end
 
-ViridianCityDreamEaterFisherText:
-	text "Yawn!"
+.TeachSleepingMove:
+	showemote EMOTE_SLEEP, VIRIDIANCITY_FISHER, 30
+	writetext ViridianCityTutorStillAsleepText
+	waitbutton
+	closetext
+	end
 
-	para "I must have dozed"
-	line "off in the sun."
+.MoveMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 2, 15, TEXTBOX_Y - 2
+	dw .MenuData
+	db 1 ; default option
 
-	para "…I had this dream"
-	line "about a DROWZEE"
+.MenuData:
+	db STATICMENU_CURSOR ; flags
+	db 3 ; items
+	db "SNORE@"
+	db "SLEEP TALK@"
+	db "CANCEL@"
 
-	para "eating my dream."
-	line "Weird, huh?"
-
-	para "Huh?"
-	line "What's this?"
-
-	para "Where did this TM"
-	line "come from?"
-
-	para "This is spooky!"
-	line "Here, you can have"
-	cont "this TM."
+ViridianCityTutorSleepingText:
+	text "He's sound asleep."
+	line "Wake him up?"
 	done
 
-ViridianCityDreamEaterFisherGotDreamEaterText:
-	text "TM42 contains"
-	line "DREAM EATER…"
+ViridianCityTutorSleepingMovesText:
+	text "He's snoring very"
+	line "loudly."
+
+	para "Your #MON could"
+	line "learn from him."
+	done
+
+ViridianCityTutorStillAsleepText:
+	text "The man is still"
+	line "sound asleep."
+	done
+
+ViridianCityWokeTutorScript:
+	closetext
+	showemote EMOTE_SLEEP, VIRIDIANCITY_FISHER, 20
+	showemote EMOTE_QUESTION, VIRIDIANCITY_FISHER, 20
+	faceplayer
+	opentext
+	writetext ViridianCityTutorDreamEatenText
+	loadmenu .MoveMenuHeader
+	verticalmenu
+	closewindow
+	ifequal 1, .DreamEater
+	ifequal 2, .Nightmare
+	sjump .Incompatible
+
+.DreamEater:
+	setval DREAM_EATER
+	sjump .ChoseMove
+;	writetext ViridianCityTutorMoveText
+;	special MoveTutor
+;	ifequal FALSE, .TeachMove
+;	sjump .Incompatible
+
+.Nightmare:
+	setval NIGHTMARE
+;	sjump .ChoseMove
+;	writetext ViridianCityTutorMoveText
+;	special MoveTutor
+;	ifequal FALSE, .TeachMove
+;	sjump .Incompatible
+
+.ChoseMove:
+	writetext ViridianCityTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachWokenMove
+;	sjump .Incompatible	
+
+.Incompatible:
+	writetext ViridianCityTutorIncompatibleText
+	waitbutton
+	closetext
+	end
+
+.TeachWokenMove:
+	writetext ViridianCityTutorBackToSleepText
+	waitbutton
+	closetext
+	end
+
+.MoveMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 2, 15, TEXTBOX_Y - 2
+	dw .MenuData
+	db 1 ; default option
+
+.MenuData:
+	db STATICMENU_CURSOR ; flags
+	db 3 ; items
+	db "DREAM EATER@"
+	db "NIGHTMARE@"
+	db "CANCEL@"
+
+ViridianCityTutorDreamEatenText:
+	text "…yawn!"
+
+	para "I must have dozed"
+	line "off…"
+
+	para "…I had the worst"
+	line "nightmare about a"
+	cont "DROWZEE eating my"
+	roll "dream!"
+
+	para "It was so vivid!"
+	line "I could probably"
+	cont "teach your #MON"
+	roll "how to do it."
+
+	para "Do you want me to"
+	line "teach them?"
+	done
+
+ViridianCityTutorBackToSleepText:
+	text "Teaching your"
+	line "#MON really"
+	cont "wore me out."
+
+	para "I think I'll just"
+	line "shut my eyes for"
+	cont "a few minutes…"
+
+	para "<……>"
 
 	para "…Zzzzz…"
 	done
+
+ViridianCityTutorMoveText:
+	text_start
+	done
+
+ViridianCityTutorIncompatibleText:
+	text "Your #MON can't"
+	line "learn this move…"
+	done
+
+;ViridianCityDreamEaterFisher:
+;	showemote EMOTE_SLEEP, VIRIDIANCITY_FISHER, 30
+;	faceplayer
+;	opentext
+;	checkevent EVENT_GOT_TM42_DREAM_EATER
+;	iftrue .GotDreamEater
+;	writetext ViridianCityDreamEaterFisherText
+;	promptbutton
+;	verbosegiveitem TM_DREAM_EATER
+;	iffalse .NoRoomForDreamEater
+;	setevent EVENT_GOT_TM42_DREAM_EATER
+;.GotDreamEater:
+;	writetext ViridianCityDreamEaterFisherGotDreamEaterText
+;	waitbutton
+;.NoRoomForDreamEater:
+;	closetext
+;	end
+
+;ViridianCityDreamEaterFisherText:
+;	text "Yawn!"
+;
+;	para "I must have dozed"
+;	line "off in the sun."
+;
+;	para "…I had this dream"
+;	line "about a DROWZEE"
+;
+;	para "eating my dream."
+;	line "Weird, huh?"
+;
+;	para "Huh?"
+;	line "What's this?"
+;
+;	para "Where did this TM"
+;	line "come from?"
+;
+;	para "This is spooky!"
+;	line "Here, you can have"
+;	cont "this TM."
+;	done
+;
+;ViridianCityDreamEaterFisherGotDreamEaterText:
+;	text "TM42 contains"
+;	line "DREAM EATER…"
+;
+;	para "…Zzzzz…"
+;	done
 
 ViridianCityYoungster1Script:
 	jumptextfaceplayer ViridianCityYoungster1Text
@@ -472,7 +655,7 @@ ViridianCity_MapEvents:
 	def_object_events
 	object_event 18,  9, SPRITE_SLEEPING, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ViridianCityCoffeeGrampsScript, EVENT_VIRIDIAN_CITY_COFFEE_GRAMPS
 	object_event 17,  5, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityTutorialGrampsScript, EVENT_VIRIDIAN_CITY_CATCHING_GRAMPS
-	object_event  6, 23, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ViridianCityDreamEaterFisher, -1
+	object_event  6, 23, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ViridianCityMoveTutorScript, -1
 	object_event 27,  7, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityGymGramps, -1
 	object_event 13, 20, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ViridianCityYoungster1Script, -1
 	object_event 30, 25, SPRITE_BOY, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ViridianCityYoungster2Script, -1

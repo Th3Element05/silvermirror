@@ -49,46 +49,97 @@ CeladonCityPoliwrathText:
 	line "ribit!"
 	done
 
-CeladonCityGramps1Script:
+CeladonCityTutorGrampsScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_TM41_SOFTBOILED
-	iftrue .GotSoftboiled
-	writetext CeladonCityGramps1GiveSoftboiledText
-	promptbutton
-;	verbosegiveitem TM_SOFTBOILED
-;	iffalse .NoRoomForSoftboiled
-	setevent EVENT_GOT_TM41_SOFTBOILED
-	; fallthrough
-.GotSoftboiled:
-	writetext CeladonCityGramps1TellSoftboiledText
+	writetext CeladonCityTutorSoftboiledText
+	yesorno
+	iffalse .TutorRefused
+	setval SOFTBOILED
+	writetext CeladonCityTutorSoftboiledClear
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+.TutorRefused
+	writetext CeladonCityTutorSoftboiledRefused
 	waitbutton
-	; fallthrough
-;.NoRoomForSoftboiled:
 	closetext
 	end
 
-CeladonCityGramps1GiveSoftboiledText:
-	text "Hello, there!"
+.TeachMove
+	writetext CeladonCityTutorSoftboiledTaught
+	waitbutton
+	closetext
+	end
 
-	para "I've seen you,"
-	line "but I never had a"
-	cont "chance to talk!"
+CeladonCityTutorSoftboiledText:
+	text "Hello there!"
 
-	para "Here's a gift for"
-	line "dropping by!"
+	para "I've seen you"
+	line "running around."
+
+	para "It must be good"
+	line "luck that brought"
+	cont "us together."
+
+	para "Would you like me"
+	line "to teach your"
+	cont "#MON to use"
+	roll "SOFTBOILED?"
+
+CeladonCityTutorSoftboiledRefused:
+	text "OK then."
 	done
 
-CeladonCityGramps1TellSoftboiledText:
-	text "TM41 teaches"
-	line "SOFTBOILED!"
-
-	para "Only one #MON"
-	line "can use it!"
-
-	para "That #MON is"
-	line "CHANSEY!"
+CeladonCityTutorSoftboiledClear:
+	text_start
 	done
+
+CeladonCityTutorSoftboiledTaught:
+	text "Now when your"
+	line "#MON is in a"
+	cont "pinch, they can"
+	roll "eat an egg to"
+	cont "restore HP."
+
+	para "Or if they are"
+	line "just feeling a bit"
+	cont "hungry, hohoho!"
+	done
+
+;CeladonCityGramps1Script:
+;	faceplayer
+;	opentext
+;	checkevent EVENT_GOT_TM41_SOFTBOILED
+;	iftrue .GotSoftboiled
+;	writetext CeladonCityGramps1GiveSoftboiledText
+;	promptbutton
+;	setevent EVENT_GOT_TM41_SOFTBOILED
+;	writetext CeladonCityGramps1TellSoftboiledText
+;	waitbutton
+;	closetext
+;	end
+
+;CeladonCityGramps1GiveSoftboiledText:
+;	text "Hello, there!"
+;
+;	para "I've seen you,"
+;	line "but I never had a"
+;	cont "chance to talk!"
+;
+;	para "Here's a gift for"
+;	line "dropping by!"
+;	done
+
+;CeladonCityGramps1TellSoftboiledText:
+;	text "TM41 teaches"
+;	line "SOFTBOILED!"
+;
+;	para "Only one #MON"
+;	line "can use it!"
+;
+;	para "That #MON is"
+;	line "CHANSEY!"
+;	done
 
 CeladonCityGirlScript:
 	jumptextfaceplayer CeladonCityGirlText
@@ -257,7 +308,7 @@ CeladonCity_MapEvents:
 	object_event 30, 29, SPRITE_ROCKET, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonCityRocket2Script, EVENT_CELADON_CITY_ROCKETS
 	object_event 30, 12, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonCityFisherScript, -1
 	object_event 28, 12, SPRITE_POLIWRATH, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeladonCityPoliwrath, -1
-	object_event 21, 16, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonCityGramps1Script, -1
+	object_event 21, 16, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonCityTutorGrampsScript, -1
 	object_event  6, 17, SPRITE_TWIN, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeladonCityGirlScript, -1
 	object_event 14, 19, SPRITE_TEACHER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeladonCityLassScript, -1
 	object_event 23, 22, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonCityGramps2Script, -1
