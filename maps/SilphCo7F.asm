@@ -150,7 +150,7 @@ SilphCo7FRivalBeforeBattleText:
 	text "<RIVAL>: Hahaha!"
 	line "I thought you'd"
 	cont "turn up if I"
-	cont "waited here!"
+	roll "waited here!"
 
 	para "I guess TEAM"
 	line "ROCKET slowed you"
@@ -161,7 +161,7 @@ SilphCo7FRivalBeforeBattleText:
 	para "I saw you in"
 	line "SAFFRON, so I"
 	cont "decided to see if"
-	cont "you got better!"
+	roll "you got better!"
 	done
 
 SilphCo7FRivalBattleWinText:
@@ -188,22 +188,22 @@ SilphCo7FRivalAfterBattleText:
 	para "By checking my"
 	line "#DEX, I'm"
 	cont "starting to see"
-	cont "what's strong and"
+	roll "what's strong and"
 	cont "how they evolve!"
 
 	para "I'm going to the"
 	line "#MON LEAGUE"
 	cont "to boot out the"
-	cont "ELITE FOUR!"
+	roll "ELITE FOUR!"
 
 	para "I'll become the"
 	line "world's most"
 	cont "powerful trainer!"
 
-	para "<PLAYER>, well"
+	para "<PLAYER>, well,"
 	line "good luck to you!"
 	cont "Don't sweat it!"
-	cont "Smell ya!"
+	roll "Smell ya later!"
 	done
 
 SilphCo7FLaprasGiftScript:
@@ -235,7 +235,8 @@ SilphCo7FGiveLaprasText:
 	text "Oh! Hi! You're"
 	line "not a ROCKET! You"
 	cont "came to save us?"
-	cont "Why, thank you!"
+
+	para "Why, thank you!"
 
 	para "I want you to"
 	line "have this #MON"
@@ -254,7 +255,7 @@ SilphCo7FExplainLaprasText:
 	para "We kept it in our"
 	line "lab, but it will"
 	cont "be much better"
-	cont "off with you!"
+	roll "off with you!"
 
 	para "I think you will"
 	line "be a good trainer"
@@ -265,7 +266,7 @@ SilphCo7FClerkText:
 	text "TEAM ROCKET's"
 	line "BOSS went to the"
 	cont "boardroom! Is our"
-	cont "PRESIDENT OK?"
+	roll "PRESIDENT OK?"
 	done
 
 SilphCo7FClerkSavedText:
@@ -283,8 +284,9 @@ SilphCo7FReceptionist:
 SilphCo7FReceptionistText:
 	text "You! It's really"
 	line "dangerous here!"
-	cont "You came to save"
-	cont "me? You can't!"
+
+	para "You came to save"
+	line "me? You can't!"
 	done
 
 SilphCo7FReceptionistSavedText:
@@ -303,14 +305,14 @@ SilphCo7FClerk1Text:
 	text "TEAM ROCKET was"
 	line "after the MASTER"
 	cont "BALL which will"
-	cont "catch any #MON!"
+	roll "catch any #MON!"
 	done
 
 SilphCo7FClerk1SavedText:
 	text "We canceled the"
 	line "MASTER BALL"
 	cont "project because"
-	cont "of TEAM ROCKET."
+	roll "of TEAM ROCKET."
 	done
 
 SilphCo7FClerk2:
@@ -324,7 +326,7 @@ SilphCo7FClerk2Text:
 	text "It would be bad"
 	line "if TEAM ROCKET"
 	cont "took over SILPH"
-	cont "or our #MON!"
+	roll "or our #MON!"
 	done
 
 SilphCo7FClerk2SavedText:

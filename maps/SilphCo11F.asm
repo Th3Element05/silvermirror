@@ -102,7 +102,7 @@ SilphCo11FGiovanniIntroText:
 	para "The PRESIDENT and"
 	line "I are discussing"
 	cont "a vital business"
-	cont "proposition."
+	roll "proposition."
 
 	para "Keep your nose"
 	line "out of grown-up"
@@ -128,7 +128,7 @@ SilphCo11FGiovanniAfterBattleText:
 	para "<PLAYER>! Never"
 	line "forget that all"
 	cont "#MON exist"
-	cont "for TEAM ROCKET!"
+	roll "for TEAM ROCKET!"
 
 	para "I must go, but I"
 	line "shall return!"
@@ -170,7 +170,7 @@ SilphCo11FPresidentThanksText:
 	para "I will never"
 	line "forget you saved"
 	cont "us in our moment"
-	cont "of peril!"
+	roll "of peril!"
 
 	para "I have to thank"
 	line "you in some way!"

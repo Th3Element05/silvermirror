@@ -92,7 +92,7 @@ ScientistMarcAfterBattleText:
 	text "The doors are"
 	line "electronically"
 	cont "locked! A CARD"
-	cont "KEY opens them!"
+	roll "KEY opens them!"
 	done
 
 TrainerRocketGruntM19:

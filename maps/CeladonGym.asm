@@ -84,12 +84,12 @@ ErikaIntroText:
 	para "I teach the art of"
 	line "flower arranging."
 	cont "My #MON are of"
-	cont "the grass-type."
+	roll "the grass-type."
 
 	para "Oh, I'm sorry, I"
 	line "had no idea that"
 	cont "you wished to"
-	cont "challenge me."
+	roll "challenge me."
 
 	para "Very well, but I"
 	line "shall not lose."
@@ -132,7 +132,7 @@ ErikaExplainTMText:
 	para "Half the damage"
 	line "it inflicts is"
 	cont "drained to heal"
-	cont "your #MON!"
+	roll "your #MON!"
 	done
 
 ErikaAfterBattleText:
@@ -143,7 +143,7 @@ ErikaAfterBattleText:
 	para "I would never"
 	line "collect #MON"
 	cont "if they were"
-	cont "unattractive."
+	roll "unattractive."
 	done
 
 TrainerBeautyVictoria:
@@ -171,7 +171,7 @@ BeautyVictoriaAfterBattleText:
 	text "I have a blind"
 	line "date coming up."
 	cont "I have to learn"
-	cont "to be polite."
+	roll "to be polite."
 	done
 
 TrainerCooltrainerFGwen:
@@ -231,7 +231,7 @@ LassCoraAfterBattleText:
 	text "Our LEADER, ERIKA,"
 	line "might be quiet,"
 	cont "but she's also"
-	cont "very skilled!"
+	roll "very skilled!"
 	done
 
 TrainerBeautySteph:

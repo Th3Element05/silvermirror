@@ -27,7 +27,7 @@ BlackthornPokecenter1FTwinText:
 	text "I came to see the"
 	line "MOVE REMINDER."
 
-	para "He can help ####-"
+	para "He can help #-"
 	line "MON remember moves"
 	cont "they forgot."
 	done

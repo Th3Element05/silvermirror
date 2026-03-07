@@ -107,14 +107,14 @@ PokemonMansionB1FBlaineText:
 	para "I came here to see"
 	line "what I could find"
 	cont "out about the dis-"
-	cont "aster that caused"
+	roll "aster that caused"
 	cont "the scientists to"
-	cont "abandon the lab."
+	roll "abandon the lab."
 
 	para "But so much has"
 	line "been looted, there"
 	cont "isn't much left to"
-	cont "find…"
+	roll "find…"
 
 	para "I imagine you want"
 	line "to challenge the"

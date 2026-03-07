@@ -66,22 +66,22 @@ GiovanniIntroText:
 	para "But, you have"
 	line "caught me again!"
 	cont "So be it! This"
-	cont "time, I'm not"
+	roll "time, I'm not"
 	cont "holding back!"
 
 	para "Once more, you"
 	line "shall face"
 	cont "GIOVANNI, the"
-	cont "greatest trainer!"
+	roll "greatest trainer!"
 	done
 
 GiovanniWinLossText:
 	text "Ha!"
 	line "That was a truly"
 	cont "intense fight!"
-	cont "You have won!"
+	roll "You have won!"
 	cont "As proof, here is"
-	cont "the EARTHBADGE!"
+	roll "the EARTHBADGE!"
 	done
 
 ReceivedEarthbadgeText:
@@ -111,7 +111,7 @@ GiovanniExplainTMText:
 	text "TM27 is FISSURE!"
 	line "It will take out"
 	cont "#MON with just"
-	cont "one hit!"
+	roll "one hit!"
 
 	para "I made it when I"
 	line "ran the GYM here,"
@@ -122,8 +122,8 @@ GiovanniAfterBattleText:
 	text "Having lost, I"
 	line "cannot face my"
 	cont "underlings!"
-	cont "TEAM ROCKET is"
-	cont "finished forever!"
+	roll "TEAM ROCKET is"
+	cont "finished!"
 
 	para "I will dedicate my"
 	line "life to the study"
@@ -174,7 +174,7 @@ CooltrainerMPaulSeenText:
 	text "VIRIDIAN GYM was"
 	line "closed for a long"
 	cont "time, but now our"
-	cont "LEADER is back!"
+	roll "LEADER is back!"
 	done
 
 CooltrainerMPaulBeatenText:
@@ -186,7 +186,7 @@ CooltrainerMPaulAfterBattleText:
 	text "You can go onto"
 	line "#MON LEAGUE"
 	cont "only by defeating"
-	cont "our GYM LEADER!"
+	roll "our GYM LEADER!"
 	done
 
 TrainerCooltrainerMNick:
@@ -375,7 +375,7 @@ ViridianGymGuideText:
 	para "I heard that the"
 	line "trainers here"
 	cont "like ground-type"
-	cont "#MON!"
+	roll "#MON!"
 	done
 
 ViridianGymGuideWinText:

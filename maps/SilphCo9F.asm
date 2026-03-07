@@ -166,7 +166,7 @@ ScientistIsaiahAfterBattleText:
 	text "Exploiting weak"
 	line "spots does work!"
 	cont "Think about"
-	cont "element types!"
+	roll "element types!"
 	done
 
 TrainerRocketGruntF9:

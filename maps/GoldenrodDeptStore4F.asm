@@ -29,7 +29,7 @@ GoldenrodDeptStore4FGameboyKidScript:
 	end
 
 GoldenrodDeptStore4FGameboyKidText:
-	text "Some #MON### only"
+	text "Some #MON only"
 	line "evolve by being"
 	cont "exposed to a"
 	cont "Game Link cable."

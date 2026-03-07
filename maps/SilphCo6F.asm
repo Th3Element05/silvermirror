@@ -91,7 +91,7 @@ SilphCo6FReceptionist2Text:
 	text "TEAM ROCKET is"
 	line "trying to conquer"
 	cont "the world with"
-	cont "#MON!"
+	roll "#MON!"
 	done
 
 SilphCo6FReceptionist2SavedText:
@@ -110,7 +110,7 @@ SilphCo6FClerk3Text:
 	text "They must have"
 	line "targeted SILPH"
 	cont "for our #MON"
-	cont "products."
+	roll "products."
 	done
 
 SilphCo6FClerk3SavedText:

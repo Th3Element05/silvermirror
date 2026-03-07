@@ -72,8 +72,9 @@ SilphCo2FReceptionistTakeThisText:
 	text "Oh, you're not"
 	line "with TEAM ROCKET."
 	cont "I thought…"
-	cont "I'm sorry. Here,"
-	cont "please take this!"
+
+	para "I'm sorry. Here,"
+	line "please take this!"
 	done
 
 SilphCo2FReceptionistExplainText:
@@ -83,7 +84,7 @@ SilphCo2FReceptionistExplainText:
 	para "It's powerful, but"
 	line "the #MON that"
 	cont "uses it faints!"
-	cont "Be careful."
+	roll "Be careful."
 	done
 
 TrainerRocketGruntM16:
@@ -131,12 +132,12 @@ GruntM17BeatenText:
 	done
 
 GruntM17AfterBattleText:
-	text "Diamond shaped"
+	text "Diamond-shaped"
 	line "tiles are"
-	cont "teleport blocks!"
+	cont "warp panels!"
 
 	para "They're hi-tech"
-	line "transporters!"
+	line "teleporters!"
 	done
 
 TrainerScientistRoss:

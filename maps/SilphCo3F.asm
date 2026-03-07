@@ -115,7 +115,7 @@ ScientistJedAfterBattleText:
 	para "TEAM ROCKET said"
 	line "that if I helped"
 	cont "them, they'd let"
-	cont "me study #MON!"
+	roll "me study #MON!"
 	done
 
 ;  itemballs

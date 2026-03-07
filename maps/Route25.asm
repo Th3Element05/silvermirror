@@ -77,7 +77,7 @@ YoungsterSamuelAfterBattleText:
 	text "All #MON have"
 	line "weaknesses. It's"
 	cont "best to raise"
-	cont "different kinds."
+	roll "different kinds."
 	done
 
 TrainerYoungsterRicky:
@@ -104,7 +104,7 @@ YoungsterRickyAfterBattleText:
 	text "If your #MON"
 	line "gets confused or"
 	cont "falls asleep,"
-	cont "switch it!"
+	roll "switch it!"
 	done
 
 TrainerHikerRussell:
@@ -201,7 +201,7 @@ YoungsterMikeySeenText:
 	text "Dad took me to a"
 	line "great party on"
 	cont "S.S.ANNE at"
-	cont "VERMILION CITY!"
+	roll "VERMILION CITY!"
 	done
 
 YoungsterMikeyBeatenText:
@@ -310,7 +310,6 @@ Route25BillsHouseSignText:
 	text "SEA COTTAGE"
 	line "BILL lives here!"
 	done
-
 
 Route25_MapEvents:
 	db 0, 0 ; filler

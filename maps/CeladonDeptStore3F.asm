@@ -40,10 +40,10 @@ CeladonDeptStore3FGameboyKid1Script:
 	end
 
 CeladonDeptStore3FGameboyKid1Text:
-	text "#MON are"
-	line "registered with"
-	cont "an ID No. of the"
-	cont "Original Trainer"
+	text "Caught #MON are"
+	line "registered with an"
+	cont "ID No. of the"
+	roll "Original Trainer"
 	cont "that caught it!"
 	done
 
@@ -62,7 +62,7 @@ CeladonDeptStore3FGameboyKid2Text:
 	para "My buddy's going"
 	line "to trade me his"
 	cont "KANGASKHAN for my"
-	cont "GRAVELER!"
+	roll "GRAVELER!"
 	done
 
 CeladonDeptStore3FGameboyKid3Script:
@@ -93,7 +93,7 @@ CeladonDeptStore3FYoungsterText:
 	text "I can't decide"
 	line "which #MON I"
 	cont "should use this TM"
-	cont "on…"
+	roll "on…"
 
 	para "Lucky for me,"
 	line "it's reusable!"
