@@ -2609,7 +2609,7 @@ DratiniEvosAttacks:
 	db 1, LEER
 	db 5, THUNDER_WAVE
 	db 11, TWISTER
-	db 15, DRAGON_RAGE
+	db 16, DRAGON_RAGE
 	db 21, BODY_SLAM ;slam, removed
 	db 25, AGILITY
 	db 31, AQUA_TAIL
@@ -2627,15 +2627,15 @@ DragonairEvosAttacks:
 	db 1, LEER
 	db 5, THUNDER_WAVE
 	db 11, TWISTER
-	db 15, DRAGON_RAGE
+	db 16, DRAGON_RAGE
 	db 21, BODY_SLAM ;slam, removed
 	db 25, AGILITY
-	db 33, AQUA_TAIL
-	db 39, IRON_TAIL ;dragon_rush
-	db 47, SAFEGUARD
-	db 53, DRAGON_DANCE
-	db 61, OUTRAGE
-	db 67, HYPER_BEAM
+	db 32, AQUA_TAIL
+	db 37, IRON_TAIL ;dragon_rush
+	db 44, SAFEGUARD
+	db 49, DRAGON_DANCE
+	db 56, OUTRAGE
+	db 61, HYPER_BEAM
 	db 0 ; no more level-up moves
 
 DragoniteEvosAttacks:
@@ -2648,16 +2648,16 @@ DragoniteEvosAttacks:
 	db 1, LEER
 	db 5, THUNDER_WAVE
 	db 11, TWISTER
-	db 15, DRAGON_RAGE
+	db 16, DRAGON_RAGE
 	db 21, BODY_SLAM ;slam, removed
 	db 25, AGILITY
-	db 33, AQUA_TAIL
-	db 39, IRON_TAIL ;dragon_rush
-	db 47, SAFEGUARD
-	db 53, DRAGON_DANCE
+	db 32, AQUA_TAIL
+	db 37, IRON_TAIL ;dragon_rush
+	db 44, SAFEGUARD
+	db 49, DRAGON_DANCE
 	db 55, WING_ATTACK ;evolution move?
-	db 64, OUTRAGE
-	db 73, HYPER_BEAM
+	db 60, OUTRAGE
+	db 66, HYPER_BEAM
 	db 0 ; no more level-up moves
 
 MewtwoEvosAttacks: ;CUSTSOM
