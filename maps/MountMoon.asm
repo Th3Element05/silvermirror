@@ -162,7 +162,7 @@ BugCatcherKenAfterBattleText:
 	text "ZUBAT is tough!"
 	line "But, it can be"
 	cont "useful if you"
-	cont "catch one."
+	roll "catch one."
 	done
 
 TrainerSuperNerdEric:
@@ -202,7 +202,7 @@ MtMoonEscapeRope:
 MtMoonRareCandy:
 	itemball RARE_CANDY
 
-MtMoonTM12WaterGun:
+MtMoonTMWaterGun:
 	itemball TM_WATER_GUN
 
 MtMoonPotion2:
@@ -253,7 +253,7 @@ MountMoon_MapEvents:
 	object_event  2, 19, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, MtMoonPotion1, EVENT_MT_MOON_POTION1
 	object_event 36, 23, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, MtMoonEscapeRope, EVENT_MT_MOON_ESCAPE_ROPE
 	object_event 35, 31, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, MtMoonRareCandy, EVENT_MT_MOON_RARE_CANDY
-	object_event  4, 32, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, MtMoonTM12WaterGun, EVENT_MT_MOON_TM12_WATER_GUN
+	object_event  4, 32, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, MtMoonTMWaterGun, EVENT_MT_MOON_TM_WATER_GUN
 	object_event 20, 33, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, MtMoonPotion2, EVENT_MT_MOON_POTION2
 	object_event 33, 45, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MtMoonRock, -1
 ;	object_event 36, 48, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MtMoonRock, -1

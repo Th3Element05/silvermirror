@@ -26,7 +26,7 @@ VioletGymFalknerScript:
 ;	readvar VAR_BADGES
 ;	scall VioletGymActivateRockets
 .FightDone:
-	checkevent EVENT_GOT_TM43_SKY_ATTACK ;EVENT_GOT_TM31_MUD_SLAP
+	checkevent EVENT_GOT_TM43_SKY_ATTACK
 	iftrue .SpeechAfterTM
 	setevent EVENT_BEAT_BIRD_KEEPER_RICK
 	setevent EVENT_BEAT_BIRD_KEEPER_LUCAS
@@ -34,9 +34,9 @@ VioletGymFalknerScript:
 ;	specialphonecall SPECIALCALL_ASSISTANT
 	writetext FalknerZephyrBadgeText
 	promptbutton
-	verbosegiveitem TM_SKY_ATTACK ;TM_MUD_SLAP
+	verbosegiveitem TM_SKY_ATTACK
 	iffalse .NoRoomForSkyAttack
-	setevent EVENT_GOT_TM43_SKY_ATTACK ;EVENT_GOT_TM31_MUD_SLAP
+	setevent EVENT_GOT_TM43_SKY_ATTACK
 	writetext FalknerTMMudSlapText
 	waitbutton
 	closetext

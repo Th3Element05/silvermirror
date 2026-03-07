@@ -1218,81 +1218,90 @@ DebugAllTMs:
 	yesorno
 	iffalse .End
 	giveitem TM_DYNAMICPUNCH
-;	giveitem TM_RAZOR_WIND ;removed
-	giveitem TM_SWORDS_DANCE
-	giveitem TM_FALSE_SWIPE ; TM_WHIRLWIND
-;	giveitem TM_MEGA_KICK ;removed
-	giveitem TM_TOXIC
-;	giveitem TM_HORN_DRILL
-	giveitem TM_BODY_SLAM
-;	giveitem TM_TAKE_DOWN
-	giveitem TM_DOUBLE_EDGE
-	giveitem TM_BUBBLEBEAM
-	giveitem TM_WATER_GUN
-	giveitem TM_ICE_BEAM
-	giveitem TM_BLIZZARD
-	giveitem TM_HYPER_BEAM
-	giveitem TM_PAY_DAY
-	giveitem TM_SUBMISSION
-	giveitem TM_COUNTER
-	giveitem TM_SEISMIC_TOSS
-;	giveitem TM_RAGE
-	giveitem TM_GIGA_DRAIN
-	giveitem TM_SOLARBEAM
-	giveitem TM_DRAGONBREATH
-	giveitem TM_THUNDERBOLT
-	giveitem TM_THUNDER
-	giveitem TM_EARTHQUAKE
-	giveitem TM_FISSURE
-	giveitem TM_DIG
-	giveitem TM_PSYCHIC_M
-;	giveitem TM_TELEPORT
-;	giveitem TM_MIMIC
-	giveitem TM_DOUBLE_TEAM
-	giveitem TM_REFLECT
-	giveitem TM_BIDE
-	giveitem TM_METRONOME
-	giveitem TM_SELFDESTRUCT
-;	giveitem TM_EGG_BOMB
-	giveitem TM_FIRE_BLAST
-	giveitem TM_SWIFT
-;	giveitem TM_SKULL_BASH
-;	giveitem TM_SOFTBOILED
-;	giveitem TM_DREAM_EATER
-	giveitem TM_SKY_ATTACK
-	giveitem TM_REST
-	giveitem TM_THUNDER_WAVE
-;	giveitem TM_PSYWAVE
-;	giveitem TM_EXPLOSION
-	giveitem TM_ROCK_SLIDE
-	giveitem TM_TRI_ATTACK
-	giveitem TM_SUBSTITUTE
-	giveitem TM_FLAMETHROWER
-	giveitem TM_SPARK
-	giveitem TM_ICY_WIND
-	giveitem TM_HEADBUTT
-	giveitem TM_CURSE
-	giveitem TM_ROLLOUT
-	giveitem TM_BRICK_BREAK
-	giveitem TM_HIDDEN_POWER
-	giveitem TM_SUNNY_DAY
-;	giveitem TM_SWEET_SCENT
-;	giveitem TM_SNORE
-	giveitem TM_PROTECT
-	giveitem TM_RAIN_DANCE
-	giveitem TM_ENDURE
-	giveitem TM_IRON_TAIL
-	giveitem TM_SHADOW_BALL
-	giveitem TM_MUD_SLAP
-	giveitem TM_SWAGGER
-;	giveitem TM_SLEEP_TALK
-	giveitem TM_SLUDGE_BOMB
-	giveitem TM_SANDSTORM
-	giveitem TM_ATTRACT
-	giveitem TM_THIEF
-	giveitem TM_STEEL_WING
-;	giveitem TM_FURY_CUTTER
-;	giveitem TM_NIGHTMARE
+	giveitem TM_DYNAMICPUNCH ;TM01 ; aa
+	giveitem TM_DRAGON_CLAW  ;TM02 ; ab
+	giveitem TM_SURF         ;TM03 ; ac
+	giveitem TM_CALM_MIND    ;TM04 ; ad
+	giveitem TM_FLASH        ;TM05 ; ae
+	giveitem TM_TOXIC        ;TM06 ; af
+	giveitem TM_BULK_UP      ;TM07 ; b0
+	giveitem TM_BODY_SLAM    ;TM08 ; b1
+	giveitem TM_BULLET_SEED  ;TM09 ; b2
+	giveitem TM_HIDDEN_POWER ;TM10 ; b3
+	giveitem TM_BUBBLEBEAM   ;TM11 ; b4
+	giveitem TM_WATER_GUN    ;TM12 ; b5
+	giveitem TM_ICE_BEAM     ;TM13 ; b6
+	giveitem TM_BLIZZARD     ;TM14 ; b7
+	giveitem TM_HYPER_BEAM   ;TM15 ; b8
+	giveitem TM_PAY_DAY      ;TM16 ; b9
+	giveitem TM_PROTECT      ;TM17 ; ba
+	giveitem TM_COUNTER      ;TM18 ; bb
+	giveitem TM_SEISMIC_TOSS ;TM19 ; bc
+	giveitem TM_ENDURE       ;TM20 ; bd
+	giveitem TM_GIGA_DRAIN   ;TM21 ; be
+	giveitem TM_SOLARBEAM    ;TM22 ; bf
+	giveitem TM_IRON_TAIL    ;TM23 ; c0
+	giveitem TM_THUNDERBOLT  ;TM24 ; c1
+	giveitem TM_THUNDER      ;TM25 ; c2
+	giveitem TM_EARTHQUAKE   ;TM26 ; c3
+	giveitem TM_FISSURE      ;TM27 ; c4
+	giveitem TM_DIG          ;TM28 ; c5
+	giveitem TM_PSYCHIC_M    ;TM29 ; c6
+	giveitem TM_WATER_PULSE  ;TM30 ; c7
+	giveitem TM_MUD_SLAP     ;TM31 ; c8
+	giveitem TM_DOUBLE_TEAM  ;TM32 ; c9
+	giveitem TM_REFLECT      ;TM33 ; ca
+	giveitem TM_BIDE         ;TM34 ; cb
+	giveitem TM_METRONOME    ;TM35 ; cc
+	giveitem TM_SELFDESTRUCT ;TM36 ; cd
+	giveitem TM_SUBMISSION   ;TM37 ; ce
+	giveitem TM_FIRE_BLAST   ;TM38 ; cf
+	giveitem TM_SWIFT        ;TM39 ; d0
+	giveitem TM_AERIAL_ACE   ;TM40 ; d1
+	giveitem TM_FLAMETHROWER ;TM41 ; d2
+	giveitem TM_SPARK        ;TM42 ; d3
+	giveitem TM_SKY_ATTACK   ;TM43 ; d4
+	giveitem TM_REST         ;TM44 ; d5
+	giveitem TM_THUNDER_WAVE ;TM45 ; d6
+	giveitem TM_SHARPEN      ;TM46 ; d7
+	giveitem TM_ICY_WIND     ;TM47 ; d8
+	giveitem TM_ROCK_SLIDE   ;TM48 ; d9
+	giveitem TM_TRI_ATTACK   ;TM49 ; da
+	giveitem TM_SUBSTITUTE   ;TM50 ; db
+	giveitem TM_ROOST        ;TM51 ; dc
+	giveitem TM_FOCUS_BLAST  ;TM52 ; dd
+	giveitem TM_ENERGY_BALL  ;TM53 ; de
+	giveitem TM_FALSE_SWIPE  ;TM54 ; df
+	giveitem TM_BRICK_BREAK  ;TM55 ; e0
+	giveitem TM_HEADBUTT     ;TM56 ; e1
+	giveitem TM_AIR_SLICE    ;TM57 ; e2
+	giveitem TM_DOUBLE_EDGE  ;TM58 ; e3
+	giveitem TM_DRAGON_PULSE ;TM59 ; e4
+	giveitem TM_FLASH_CANNON ;TM60 ; e5
+	giveitem TM_ROLLOUT      ;TM61 ; e6
+	giveitem TM_SILVER_WIND  ;TM62 ; e7 ;new, where?
+	giveitem TM_SLUDGE_BOMB  ;TM63 ; e8
+	giveitem TM_SWAGGER      ;TM64 ; e9
+	giveitem TM_SHADOW_CLAW  ;TM65 ; ea
+	giveitem TM_THIEF        ;TM66 ; eb
+	giveitem TM_STEEL_WING   ;TM67 ; ec
+	giveitem TM_GIGA_IMPACT  ;TM68 ; ed
+	giveitem TM_CURSE        ;TM69 ; ee
+	giveitem TM_SHADOW_BALL  ;TM70 ; ef
+	giveitem TM_STONE_EDGE   ;TM71 ; f0
+	giveitem TM_DRAGONBREATH ;TM72 ; f1
+	giveitem TM_ATTRACT      ;TM73 ; f2
+	giveitem TM_GYRO_BALL    ;TM74 ; f3
+	giveitem TM_SWORDS_DANCE ;TM75 ; f4
+	giveitem TM_SUNNY_DAY    ;TM76 ; f5
+	giveitem TM_RAIN_DANCE   ;TM77 ; f6
+	giveitem TM_SANDSTORM    ;TM78 ; f7
+	giveitem TM_DARK_PULSE   ;TM79 ; f8
+	giveitem TM_ANCIENTPOWER ;TM80 ; f9
+	giveitem TM_X_SCISSOR    ;TM81 ; fa
+	giveitem TM_WHIRLPOOL    ;TM82 ; fb
+	giveitem TM_WATERFALL    ;TM83 ; fc
+	giveitem TM_POISON_JAB   ;TM84 ; fd
 .End
 	closetext
 	end

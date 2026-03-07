@@ -238,7 +238,7 @@ GuitaristVincentAfterBattleText:
 	text "Water conducts"
 	line "electricity, so"
 	cont "you should zap"
-	cont "sea #MON!"
+	roll "sea #MON!"
 	done
 
 TrainerFisherRaymond:
@@ -296,9 +296,6 @@ CamperTedAfterBattleText:
 Route12TMPayDay:
 	itemball TM_PAY_DAY
 
-;Route12TMSnore:
-;	itemball TM_SNORE
-
 Route12Iron:
 	itemball IRON
 
@@ -349,5 +346,4 @@ Route12_MapEvents:
 	object_event  8, 83, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerFisherRaymond, -1
 	object_event 13, 88, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerCamperTed, -1
 	object_event 16, 33, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, Route12TMPayDay, EVENT_ROUTE_12_TM_PAY_DAY
-;	object_event 11, 62, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, Route12TMSnore, EVENT_ROUTE_12_TM_SNORE
 	object_event  7, 85, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route12Iron, EVENT_ROUTE_12_IRON

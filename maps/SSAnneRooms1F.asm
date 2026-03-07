@@ -4,14 +4,14 @@ SSAnneRooms1F_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
-	callback MAPCALLBACK_NEWMAP, SSAnneRooms1FTMCallback
-
-SSAnneRooms1FTMCallback:
-	checkitem TM_BODY_SLAM
-	iffalse .Skip
-	setevent EVENT_SS_ANNE_ROOMS_1F_TM_BODY_SLAM
-.Skip
-	endcallback
+;	callback MAPCALLBACK_NEWMAP, SSAnneRooms1FTMCallback
+;
+;SSAnneRooms1FTMCallback: ;this was for if you could buy this TM in celadon
+;	checkitem TM_BODY_SLAM
+;	iffalse .Skip
+;	setevent EVENT_SS_ANNE_ROOMS_1F_TM_BODY_SLAM
+;.Skip
+;	endcallback
 
 TrainerLassSadie:
 	trainer LASS, SADIE, EVENT_BEAT_LASS_SADIE, LassSadieSeenText, LassSadieBeatenText, 0, .Script

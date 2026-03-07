@@ -12,17 +12,19 @@ IcePathB2FMahoganySideBoulderText:
 	line "imbedded in ice."
 	done
 
+; hidden items
 IcePathB2FMahoganySideHiddenCarbos:
 	hiddenitem CARBOS, EVENT_ICE_PATH_B2F_MAHOGANY_SIDE_HIDDEN_CARBOS
 
+; itemballs
 IcePathB2FMahoganySideFullHeal:
 	itemball FULL_HEAL
 
 IcePathB2FMahoganySideMaxPotion:
 	itemball MAX_POTION
 
-IcePathB2FBlackthornSideTMRest:
-	itemball ICE_HEAL
+IcePathB2FBlackthornSideTMFlashCannon:
+	itemball TM_FLASH_CANNON
 
 IcePathB2FB3F_MapEvents:
 	db 0, 0 ; filler
@@ -55,5 +57,4 @@ IcePathB2FB3F_MapEvents:
 	object_event 11, 13, SPRITE_BOULDER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IcePathB2FMahoganySideBoulder, EVENT_BOULDER_IN_ICE_PATH_4A
 	object_event  2, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IcePathB2FMahoganySideFullHeal, EVENT_ICE_PATH_B2F_MAHOGANY_SIDE_FULL_HEAL
 	object_event  0,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IcePathB2FMahoganySideMaxPotion, EVENT_ICE_PATH_B2F_MAHOGANY_SIDE_MAX_POTION
-;
-	object_event 31, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IcePathB2FBlackthornSideTMRest, EVENT_ICE_PATH_B2F_BLACKTHORN_SIDE_ICE_HEAL
+	object_event 31, 17, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, IcePathB2FBlackthornSideTMFlashCannon, EVENT_ICE_PATH_B2F_BLACKTHORN_SIDE_TM_FLASH_CANNON

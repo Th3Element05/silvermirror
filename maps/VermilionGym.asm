@@ -91,10 +91,10 @@ VermilionGymSurgeScript:
 	scall VermilionGymCheckBadges
 	; fallthrough
 .FightDone:
-	checkevent EVENT_GOT_TM52_SPARK
+	checkevent EVENT_GOT_TM42_SPARK
 	iftrue .GotSpark
 	verbosegiveitem TM_SPARK
-	setevent EVENT_GOT_TM52_SPARK
+	setevent EVENT_GOT_TM42_SPARK
 	writetext SurgeExplainTMText
 	waitbutton
 	closetext
@@ -135,7 +135,7 @@ LtSurgeIntroText:
 	para "I tell you kid,"
 	line "electric #MON"
 	cont "saved me during"
-	cont "the war!"
+	roll "the war!"
 
 	para "They zapped my"
 	line "enemies into"
@@ -278,7 +278,7 @@ SailorKennethAfterBattleText:
 	para "When you open the"
 	line "1st lock, the 2nd"
 	cont "lock is right"
-	cont "next to it!"
+	roll "next to it!"
 	done
 
 VermilionGymGuideScript:
@@ -295,9 +295,8 @@ VermilionGymGuideText:
 
 	para "LT.SURGE has a"
 	line "nickname. People"
-	cont "refer to him as"
-	cont "the Lightning"
-	cont "Warrior!"
+	cont "call him the"
+	roll "Lightning Warrior!"
 
 	para "He's an expert on"
 	line "electric #MON!"
@@ -305,7 +304,7 @@ VermilionGymGuideText:
 	para "Birds and water"
 	line "#MON are at"
 	cont "risk! Beware of"
-	cont "paralysis too!"
+	roll "paralysis too!"
 
 	para "LT.SURGE is very"
 	line "cautious!"

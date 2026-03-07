@@ -26,7 +26,7 @@ AzaleaGymBugsyScript:
 ;	readvar VAR_BADGES
 ;	scall AzaleaGymActivateRockets
 .FightDone:
-	checkevent EVENT_GOT_TM75_FURY_CUTTER
+	checkevent EVENT_GOT_TM81_X_SCISSOR
 	iftrue .GotFuryCutter
 	setevent EVENT_BEAT_TWINS_MEGANDPEG
 	setevent EVENT_BEAT_BUG_CATCHER_FINLEY
@@ -34,9 +34,9 @@ AzaleaGymBugsyScript:
 	setevent EVENT_BEAT_BUG_CATCHER_ABEL
 	writetext BugsyText_HiveBadgeSpeech
 	promptbutton
-;	verbosegiveitem TM_FURY_CUTTER
-	iffalse .NoRoomForFuryCutter
-	setevent EVENT_GOT_TM75_FURY_CUTTER
+	verbosegiveitem TM_X_SCISSOR
+;	iffalse .NoRoomForXScissor
+	setevent EVENT_GOT_TM81_X_SCISSOR
 	writetext BugsyText_FuryCutterSpeech
 	waitbutton
 	closetext
@@ -45,7 +45,7 @@ AzaleaGymBugsyScript:
 .GotFuryCutter:
 	writetext BugsyText_BugMonsAreDeep
 	waitbutton
-.NoRoomForFuryCutter:
+;.NoRoomForXScissor:
 	closetext
 	end
 

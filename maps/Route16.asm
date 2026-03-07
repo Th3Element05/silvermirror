@@ -216,7 +216,7 @@ BikerJosephAfterBattleText:
 	text "You can also get"
 	line "to FUCHSIA from"
 	cont "VERMILION using a"
-	cont "coastal road."
+	roll "coastal road."
 	done
 
 TrainerJugglerBurt:
@@ -282,11 +282,8 @@ BikerTeddyAfterBattleText:
 	done
 
 ; itemballs
-Route16SharpBeak:
-	itemball SHARP_BEAK
-
-;Route16TMSleepTalk:
-;	itemball TM_SLEEP_TALK
+Route16TMAerialAce:
+	itemball TM_AERIAL_ACE
 
 ; signs
 CyclingRoadSign:
@@ -302,8 +299,9 @@ Route16Sign:
 	jumptext Route16SignText
 Route16SignText:
 	text "ROUTE 16"
-	line "CELADON CITY -"
-	cont "FUCHSIA CITY"
+
+	para "CELADON CITY -"
+	line "FUCHSIA CITY"
 	done
 
 Route16_MapEvents:
@@ -332,5 +330,4 @@ Route16_MapEvents:
 	object_event 11, 14, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerJugglerBurt, -1
 	object_event 14, 15, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerJugglerFinnley, -1
 	object_event 17, 14, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBikerTeddy, -1
-	object_event  4,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route16SharpBeak, EVENT_ROUTE_16_SHARP_BEAK
-;	object_event 23, 14, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, Route16TMSleepTalk, EVENT_ROUTE_16_TM_SLEEP_TALK
+	object_event  4,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, Route16TMAerialAce, EVENT_ROUTE_16_TM_AERIAL_ACE

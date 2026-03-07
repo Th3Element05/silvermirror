@@ -73,24 +73,21 @@ SSAnne2FRivalGoesAroundScript:
 SSAnne2FRivalBeforeBattleText:
 	text "<RIVAL>: Bonjour!"
 	line "<PLAYER>!"
+	cont "Imagine seeing"
+	roll "you here!"
 
-	para "Imagine seeing"
-	line "you here!"
-
-	para "<PLAYER>, were you"
-	line "really invited?"
+;	para "<PLAYER>, were you"
+;	line "really invited?"
 
 	para "So how's your"
 	line "#DEX coming?"
-
-	para "I already caught"
-	line "40 kinds, pal!"
+	cont "I already caught"
+	roll "40 kinds, pal!"
 
 	para "Different kinds"
 	line "are everywhere!"
-
-	para "Crawl around in"
-	line "grassy areas!"
+	cont "Crawl around in"
+	roll "grassy areas!"
 	done
 
 SSAnne2FRivalBattleWinText:
@@ -112,16 +109,14 @@ SSAnne2FRivalBattleLossText:
 SSAnne2FRivalAfterBattleText:
 	text "<RIVAL>: I heard"
 	line "there was a CUT"
-	cont "master on board."
-
-	para "But, he was just a"
-	line "seasick, old man!"
+	cont "master on board,"
+	roll "but he was just a"
+	cont "seasick old man!"
 
 	para "But, CUT itself is"
-	line "really useful!"
-
-	para "You should go see"
-	line "him! Smell ya!"
+	line "really useful, so"
+	cont "you should go see"
+	roll "him! Smell ya!"
 	done
 
 SSAnne2FCaptainScript:
@@ -163,9 +158,9 @@ SSAnne2FRubCaptainsBack:
 	promptbutton
 	writetext SSAnne2FCaptainExplainPagerGiveCutText
 	promptbutton
-;	verbosegiveitem TM_CUT
+;	verbosegiveitem TM_CUT ;removed
 	setevent EVENT_GOT_HM01_CUT
-	writetext SSAnne2FCaptianExplainCutText
+	writetext SSAnne2FCaptainSetSailText
 	waitbutton
 	closetext
 	setmapscene VERMILION_CITY, SCENE_VERMILIONCITY_SSANNE_LEAVES
@@ -220,28 +215,7 @@ SSAnne2FCaptainExplainPagerGiveCutText:
 	para "It lets you"
 	line "summon a #MON"
 	cont "to cut small"
-	cont "trees."
-
-	para "Of course, you"
-	line "need to have the"
-
-	para "GYM BADGE from"
-	line "CERULEAN CITY"
-	cont "to use it."
-
-	para "Oh here take this"
-	line "too!"
-	done
-
-SSAnne2FCaptianExplainCutText:
-	text "Use that to teach"
-	line "your own #MON"
-	cont "to use CUT!"
-	
-	para "Don't worry!"
-	line "HM moves are as"
-	cont "easy to forget as"
-	cont "any other moves!"
+	roll "trees."
 	done
 
 SSAnne2FCaptainSetSailText:
@@ -250,7 +224,7 @@ SSAnne2FCaptainSetSailText:
 	para "Now that I'm not"
 	line "sick any more, I"
 	cont "guess it's time"
-	cont "to set sail!"
+	roll "to set sail!"
 	done
 
 SSAnne2FWaiterScript:

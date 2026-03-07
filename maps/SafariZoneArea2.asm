@@ -39,7 +39,7 @@ SafariZoneArea2FisherText:
 	text "There are even"
 	line "rare #MON in"
 	cont "the water at the"
-	cont "SAFARI ZONE!"
+	roll "SAFARI ZONE!"
 
 	para "Try using a"
 	line "fishing rod!"
@@ -59,7 +59,7 @@ SafariZoneArea2SuperLassText:
 	text "If I spend all"
 	line "my time looking"
 	cont "for #MON, I'll"
-	cont "never find the"
+	roll "never find the"
 	cont "SECRET HOUSE!"
 	done
 
@@ -69,7 +69,7 @@ SafariZoneArea2CooltrainersText:
 	text "I'm saving my"
 	line "SAFARI BALLs for"
 	cont "strong looking"
-	cont "#MON!"
+	roll "#MON!"
 	done
 
 SafariZoneArea2Sign:
@@ -94,6 +94,7 @@ SafariZoneArea2RestHouseSignText:
 ;	cont "while you walk!"
 ;	done
 
+; itemballs
 SafariZoneArea2MaxPotion:
 	itemball MAX_POTION
 
@@ -102,6 +103,8 @@ SafariZoneArea2FullRestore:
 
 ;SafariZoneArea2TMEggBomb:
 ;	itemball TM_EGG_BOMB
+SafariZoneArea2TMBulletSeed:
+	itemball TM_BULLET_SEED
 
 SafariZoneArea2Carbos:
 	itemball CARBOS
@@ -141,4 +144,5 @@ SafariZoneArea2_MapEvents:
 	object_event  7,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, SafariZoneArea2MaxPotion, EVENT_SAFARI_ZONE_AREA_2_MAX_POTION
 	object_event 25, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, SafariZoneArea2FullRestore, EVENT_SAFARI_ZONE_AREA_2_FULL_RESTORE
 ;	object_event 19, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, SafariZoneArea2TMEggBomb, EVENT_SAFARI_ZONE_AREA_2_TM_EGG_BOMB
+	object_event 19, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, SafariZoneArea2TMBulletSeed, EVENT_SAFARI_ZONE_AREA_2_TM_BULLET_SEED
 	object_event 24, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, SafariZoneArea2Carbos, EVENT_SAFARI_ZONE_AREA_2_CARBOS

@@ -53,7 +53,7 @@ RocketHideoutGiovanniAfterBattleText:
 	para "A child like you"
 	line "would never"
 	cont "understand what I"
-	cont "hope to achieve."
+	roll "hope to achieve."
 
 	para "I shall step"
 	line "aside this time!"
@@ -150,8 +150,8 @@ RocketHideoutB4FLiftKey:
 RocketHideoutB4FSilphScope:
 	itemball SILPH_SCOPE
 
-;RocketHideoutB4FTMRazorWind:
-;	itemball TM_RAZOR_WIND (AERIAL_ACE)?
+RocketHideoutB4FTMAirSlice:
+	itemball TM_AIR_SLICE
 
 RocketHideoutB4FHPUp:
 	itemball HP_UP
@@ -182,6 +182,6 @@ RocketHideoutB4F_MapEvents:
 	object_event  3,  2, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerRocketGruntF3, -1
 	object_event 18, 14, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerRocketExecutiveF1, EVENT_BEAT_GIOVANNI_HIDEOUT
 	object_event 15, 14, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerRocketExecutiveM1, EVENT_BEAT_GIOVANNI_HIDEOUT
-;	object_event  1,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RocketHideoutB4FTMRazorWind, EVENT_ROCKET_HIDEOUT_B4F_TM_RAZOR_WIND
+	object_event  1,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RocketHideoutB4FTMAirSlice, EVENT_ROCKET_HIDEOUT_B4F_TM_AIR_SLICE
 	object_event  2, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RocketHideoutB4FHPUp, EVENT_ROCKET_HIDEOUT_B4F_HP_UP
 	object_event  4, 20, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RocketHideoutB4FIron, EVENT_ROCKET_HIDEOUT_B4F_IRON

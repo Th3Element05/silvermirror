@@ -89,7 +89,7 @@ BirdKeeperBobAfterBattleText:
 	text "Did you know moves"
 	line "like EARTHQUAKE"
 	cont "don't have any"
-	cont "effect on birds?"
+	roll "effect on birds?"
 	done
 
 TrainerBeautyValerie:
@@ -135,7 +135,7 @@ PicnickerCarrieAfterBattleText:
 	text "You can't change"
 	line "the nickname of"
 	cont "any #MON you"
-	cont "get in a trade."
+	roll "get in a trade."
 
 	para "Only the Original"
 	line "Trainer can."
@@ -181,7 +181,7 @@ BikerGlennAfterBattleText:
 	text "You only live"
 	line "once, so I live"
 	cont "as an outlaw!"
-	cont "TEAM ROCKET RULES!"
+	roll "TEAM ROCKET RULES!"
 	done
 
 TrainerPicnickerTiffany:
@@ -236,8 +236,8 @@ Route15SignText:
 	line "LAVENDER TOWN"
 	done
 
-;Route15TMRage:
-;	itemball TM_RAGE
+Route15TMWaterPulse:
+	itemball TM_WATER_PULSE
 
 Route15_MapEvents:
 	db 0, 0 ; filler
@@ -262,4 +262,4 @@ Route15_MapEvents:
 	object_event 38, 10, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBikerGlenn, -1
 	object_event 43, 10, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerPicnickerTiffany, -1
 	object_event 43, 11, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerBeautyOlivia, -1
-;	object_event  8,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, Route15TMRage, EVENT_ROUTE_15_TM_RAGE
+	object_event  8,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, Route15TMWaterPulse, EVENT_ROUTE_15_TM_WATER_PULSE

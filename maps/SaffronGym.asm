@@ -44,10 +44,10 @@ SaffronGymSabrinaScript:
 	scall SaffronGymCheckBadges
 	; fallthrough
 .FightDone:
-	checkevent EVENT_GOT_TM46_PSYWAVE
+	checkevent EVENT_GOT_TM04_CALM_MIND
 	iftrue .GotPsywave
-;	verbosegiveitem TM_PSYWAVE
-;	setevent EVENT_GOT_TM46_PSYWAVE
+	verbosegiveitem TM_CALM_MIND
+	setevent EVENT_GOT_TM04_CALM_MIND
 	writetext SabrinaExplainTMText
 	waitbutton
 	closetext
@@ -93,7 +93,7 @@ SabrinaIntroText:
 	para "I dislike fight-"
 	line "ing, but if you"
 	cont "wish, I will show"
-	cont "you my powers!"
+	roll "you my powers!"
 	done
 
 SabrinaBeatenText:
@@ -122,7 +122,7 @@ SabrinaExplainMarshbadgeText:
 	para "Stronger #MON"
 	line "will become wild,"
 	cont "ignoring your"
-	cont "orders in battle!"
+	roll "orders in battle!"
 
 	para "Just don't raise"
 	line "your #MON too"
@@ -133,10 +133,17 @@ SabrinaExplainMarshbadgeText:
 	done
 
 SabrinaExplainTMText:
-	text "TM46 is PSYWAVE!"
-	line "It uses powerful"
-	cont "psychic waves to"
-	cont "inflict damage!"
+;	text "TM46 is PSYWAVE!"
+;	line "It uses powerful"
+;	cont "psychic waves to"
+;	cont "inflict damage!"
+;
+	text "TM04 is CALM MIND."
+	line "By focusing their"
+	cont "mind, #MON can"
+	roll "raise both their"
+	cont "SPECIAL ATTACK and"
+	roll "SPECIAL DEFENSE!"
 
 	para "Good luck on your"
 	line "#MON LEAGUE"
@@ -145,14 +152,14 @@ SabrinaExplainTMText:
 	para "You can use this"
 	line "red warp panel"
 	cont "to go right to"
-	cont "the exit."
+	roll "the exit."
 	done
 
 SabrinaAfterBattleText:
 	text "Everyone has"
 	line "psychic power!"
 	cont "People just don't"
-	cont "realize it!"
+	roll "realize it!"
 	done
 
 TrainerPsychicNathan:
@@ -210,7 +217,7 @@ MediumHazelAfterBattleText:
 	text "In a battle of"
 	line "equals, the one"
 	cont "with the stronger"
-	cont "will wins!"
+	roll "will wins!"
 
 	para "If you wish"
 	line "to beat SABRINA,"
@@ -352,15 +359,15 @@ PsychicGregBeatenText:
 	done
 
 PsychicGregAfterBattleText:
-	text "There used to be"
-	line "2 #MON GYMs in"
-	cont "SAFFRON."
+	text "The FIGHTING DOJO"
+	line "next door used to"
+	cont "be an official"
+	roll "#MON GYM."
 
-	para "The FIGHTING DOJO"
-	line "next door lost"
-	cont "its GYM status"
-	cont "when we went and"
-	cont "creamed them!"
+	para "But we challenged"
+	line "them, and #MON"
+	cont "LEAGUE gave their"
+	roll "GYM status to us."
 	done
 
 SaffronGymGuideScript:

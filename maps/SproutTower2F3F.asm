@@ -9,7 +9,7 @@ SproutTower2F3F_MapScripts:
 SageLiScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_TM58_HIDDEN_POWER
+	checkevent EVENT_GOT_TM10_HIDDEN_POWER
 	iftrue .GotHiddenPower
 	writetext SageLiSeenText
 	waitbutton
@@ -24,7 +24,7 @@ SageLiScript:
 	setevent EVENT_BEAT_SAGE_LI
 	verbosegiveitem TM_HIDDEN_POWER
 	iffalse .NoRoomForHiddenPower
-	setevent EVENT_GOT_TM58_HIDDEN_POWER
+	setevent EVENT_GOT_TM10_HIDDEN_POWER
 	writetext SageLiHiddenPowerText
 	waitbutton
 	closetext

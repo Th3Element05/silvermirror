@@ -10,7 +10,7 @@ RockTunnelB1F_MapScripts:
 .RockTunnelB1FLadderCallback:
 	checkevent EVENT_GOT_HM05_FLASH
 	iftrue .Skip
-	changeblock 30, 22, $51 ; yellow ladder
+	changeblock 30, 22, $52 ; yellow ladder
 	checkitem ESCAPE_ROPE
 	iftrue .Skip
 	appear ROCKTUNNELB1F_ESCAPE_ROPE
@@ -231,6 +231,9 @@ PokemaniacBenAfterBattleText:
 RockTunnelB1FEscapeRope:
 	itemball ESCAPE_ROPE
 
+RockTunnelB1FTMGyroBall:
+	itemball TM_GYRO_BALL
+
 RockTunnelB1F_MapEvents:
 	db 0, 0 ; filler
 
@@ -254,3 +257,4 @@ RockTunnelB1F_MapEvents:
 	object_event 18, 17, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 3, TrainerPokemaniacShane, -1
 	object_event 12, 24, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerPicnickerHope, -1
 	object_event 24, 26, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 3, TrainerPokemaniacBen, -1
+	object_event 20,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, RockTunnelB1FTMGyroBall, EVENT_ROCK_TUNNEL_B1F_TM_GYRO_BALL

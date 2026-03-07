@@ -1,63 +1,80 @@
 	object_const_def
-	const ROUTE_26HEALHOUSE_TEACHER
 
 Route26HealHouse_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
 
-Route26HealHouseTeacherScript:
+Celebrity:
 	faceplayer
 	opentext
-	writetext Route26HealHouseRestAWhileText
-	waitbutton
+	checkevent EVENT_GOT_TM67_STEEL_WING
+	iftrue .AlreadyGotItem
+	writetext CelebrityText1
+	promptbutton
+	verbosegiveitem TM_STEEL_WING
+	iffalse .Done
+	setevent EVENT_GOT_TM67_STEEL_WING
+.Done:
 	closetext
-	special FadeBlackQuickly
-	special ReloadSpritesNoPalettes
-	special StubbedTrainerRankings_Healings
-	playmusic MUSIC_HEAL
-	special HealParty
-	pause 60
-	special FadeInQuickly
-	special RestartMapMusic
-	opentext
-	writetext Route26HealHouseKeepAtItText
+	end
+.AlreadyGotItem:
+	writetext CelebrityText2
 	waitbutton
 	closetext
 	end
 
-Route26HealHouseBookshelf:
-	jumpstd PictureBookshelfScript
+CelebritysFearow:
+	opentext
+	writetext CelebritysFearowText
+	cry FEAROW
+	waitbutton
+	closetext
+	end
 
-Route26HealHouseRestAWhileText:
-	text "Your #MON look"
-	line "a little tired."
+CelebrityHouseBookshelf:
+	jumpstd MagazineBookshelfScript
 
-	para "You should rest"
-	line "them a while."
+CelebrityText1:
+	text "Oh, dear."
+	line "You've found me."
+
+	para "Please don't tell"
+	line "anyone about me."
+
+	para "I'll give you this"
+	line "for keeping my"
+	cont "secret. Please?"
 	done
 
-Route26HealHouseKeepAtItText:
-	text "There!"
+CelebrityText2:
+	text "It's tough being a"
+	line "top celebrity."
 
-	para "Your #MON are"
-	line "looking good!"
+	para "Everywhere I go,"
+	line "people chase me."
 
-	para "Keep at it!"
+	para "I just want to be"
+	line "left alone…"
+	done
+
+CelebritysFearowText:
+	text "FEAROW: Feero!"
 	done
 
 Route26HealHouse_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, ROUTE_26, 2
-	warp_event  3,  7, ROUTE_26, 2
+	warp_event  2,  7, ROUTE_26, 3
+	warp_event  3,  7, ROUTE_26, 3
 
 	def_coord_events
 
 	def_bg_events
-	bg_event  0,  1, BGEVENT_READ, Route26HealHouseBookshelf
-	bg_event  1,  1, BGEVENT_READ, Route26HealHouseBookshelf
+	bg_event  0,  1, BGEVENT_READ, CelebrityHouseBookshelf
+	bg_event  1,  1, BGEVENT_READ, CelebrityHouseBookshelf
 
 	def_object_events
-	object_event  2,  3, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route26HealHouseTeacherScript, -1
+	object_event  2,  3, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Celebrity, -1
+	object_event  6,  5, SPRITE_FEAROW, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CelebritysFearow, -1
