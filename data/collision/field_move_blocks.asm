@@ -6,7 +6,7 @@ CutTreeBlockPointers:
 	dbw TILESET_KANTO,        .kanto
 	dbw TILESET_PARK,         .park
 	dbw TILESET_FOREST,       .forest
-	dbw TILESET_TRAIN_STATION, .gym
+	dbw TILESET_TRAIN_STATION, .train_station
 	db -1 ; end
 
 .johto:
@@ -35,16 +35,36 @@ CutTreeBlockPointers:
 
 .park:
 ; facing block, replacement block, animation
-	db $13, $03, 1 ; grass
+;	db $13, $03, 1 ; grass
 	db $03, $04, 1 ; grass
+	db $07, $04, 1 ; grass
+	db $24, $8c, 1 ; grass
+	db $21, $8d, 1 ; grass
+	db $22, $8e, 1 ; grass
+	db $27, $8f, 1 ; grass
+	db $20, $1c, 1 ; grass
+	db $25, $1d, 1 ; grass
+	db $26, $1e, 1 ; grass
+	db $23, $1f, 1 ; grass
 	db -1 ; end
 
 .forest:
 ; facing block, replacement block, animation
-	db $0f, $17, 0
+;	db $0f, $17, 0 ; tree
+	db $2f, $2b, 0 ; tree
+	db $07, $01, 1 ; grass
+	db $18, $01, 1 ; grass
+	db $19, $01, 1 ; grass
+	db $1a, $01, 1 ; grass
+	db $1b, $01, 1 ; grass
+	db $0c, $0b, 1 ; grass
+	db $0e, $09, 1 ; grass
+	db $1c, $24, 1 ; grass
+	db $1d, $21, 1 ; grass
+	db $1e, $26, 1 ; grass
 	db -1 ; end
 
-.gym:
+.train_station:
 ; facing block, replacement block, animation
 	db $21, $4c, 0 ; tree
 	db $22, $4c, 0 ; tree
