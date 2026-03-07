@@ -133,8 +133,8 @@ VictoryRoadGate_MapEvents:
 	def_warp_events
 	warp_event 14, 15, ROUTE_22, 1
 	warp_event 15, 15, ROUTE_22, 1
-	warp_event  2,  7, ROUTE_28, 2
-	warp_event  3,  7, ROUTE_28, 2
+	warp_event  2,  7, ROUTE_28, 1
+	warp_event  3,  7, ROUTE_28, 1
 	warp_event 14,  0, ROUTE_23, 6
 	warp_event 15,  0, ROUTE_23, 7
 
