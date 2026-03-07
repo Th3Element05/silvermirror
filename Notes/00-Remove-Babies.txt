@@ -1,13 +1,3 @@
-TO DO
-leafeon + glaceon tm/hm list
-test evo methods
-
-
-
-
-
-
-
 
 remove:
 	PICHU		pikachu
