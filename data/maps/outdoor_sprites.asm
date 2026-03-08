@@ -77,6 +77,10 @@ PewterGroupSprites:
 ;ViridianForest BUG_CATCHER, berry, apricorn, poke_ball
 ;Route2North    berry, apricorn
 ;Route3         LASS, YOUNGSTER, SUPER_NERD
+IndigoGroupSprites:
+;Route23        none
+;Route26        COOLTRAINER_M, COOLTRAINER_F, YOUNGSTER, fisher, berry, apricorn
+;Route27East    COOLTRAINER_M, COOLTRAINER_F, pokeball
 	db SPRITE_YOUNGSTER
 	db SPRITE_BUG_CATCHER
 	db SPRITE_SUPER_NERD
@@ -236,6 +240,7 @@ SilverGroupSprites:
 	db SPRITE_BERRY
 	db SPRITE_APRICORN
 	db SPRITE_POKE_BALL
+	db 0 ; end
 
 ; Route29 and CherrygroveCity are connected
 NewBarkGroupSprites:
@@ -417,6 +422,16 @@ DungeonsGroupSprites:
 
 IndigoGroupSprites:
 ;Route23        none
+;Route26
+	db SPRITE_COOLTRAINER_M
+	db SPRITE_COOLTRAINER_F
+	db SPRITE_YOUNGSTER
+	db SPRITE_FISHER
+	; 4 of 9 max walking sprites
+	db SPRITE_BERRY
+	db SPRITE_APRICORN
+	db SPRITE_POKEBALL
+
 SafariZoneGateGroupSprites:
 CableClubGroupSprites:
 	db 0 ; end
