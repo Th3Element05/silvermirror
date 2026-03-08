@@ -1,0 +1,85 @@
+BETH1
+
+TrainerCooltrainerfBeth1:  COOLTRAINERF, ANNIE  const EVENT_BEAT_COOLTRAINERF_ANNIE
+	trainer COOLTRAINERF, BETH1, EVENT_BEAT_COOLTRAINERF_BETH, CooltrainerfBeth1SeenText, CooltrainerfBeth1BeatenText, 0, .Script
+rapidash36,39,43
+
+.Script:
+	loadvar VAR_CALLERID, PHONE_COOLTRAINERF_BETH
+	opentext
+	checkflag ENGINE_BETH_READY_FOR_REMATCH
+	iftrue .WantsBattle
+	checkcellnum PHONE_COOLTRAINERF_BETH
+	iftrue .BethDefeated
+	checkevent EVENT_BETH_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskedAlready
+	writetext CooltrainerfBethAfterText
+	promptbutton
+	setevent EVENT_BETH_ASKED_FOR_PHONE_NUMBER
+	scall .AskNumber1
+	jump .AskForNumber
+
+.AskedAlready:
+	scall .AskNumber2
+.AskForNumber:
+	askforphonenumber PHONE_COOLTRAINERF_BETH
+	ifequal PHONE_CONTACTS_FULL, .PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
+	gettrainername STRING_BUFFER_3, COOLTRAINERF, BETH1
+	scall .RegisteredNumber
+	jump .NumberAccepted
+
+.WantsBattle:
+	scall .Rematch
+	winlosstext CooltrainerfBeth1BeatenText, 0
+	checkevent EVENT_RESTORED_POWER_TO_KANTO
+	iftrue .LoadFight2
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .LoadFight1
+	loadtrainer COOLTRAINERF, BETH1
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_BETH_READY_FOR_REMATCH
+	end
+
+.LoadFight1:
+	loadtrainer COOLTRAINERF, BETH2
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_BETH_READY_FOR_REMATCH
+	end
+
+.LoadFight2:
+	loadtrainer COOLTRAINERF, BETH3
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_BETH_READY_FOR_REMATCH
+	end
+
+.AskNumber1:
+	jumpstd AskNumber1FScript
+	end
+
+.AskNumber2:
+	jumpstd AskNumber2FScript
+	end
+
+.RegisteredNumber:
+	jumpstd RegisteredNumberFScript
+	end
+
+.NumberAccepted:
+	jumpstd NumberAcceptedFScript
+	end
+
+.NumberDeclined:
+	jumpstd NumberDeclinedFScript
+	end
+
+.PhoneFull:
+	jumpstd PhoneFullFScript
+	end
+
+.Rematch:
+	jumpstd RematchFScript
+	end
