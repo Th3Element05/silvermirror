@@ -172,6 +172,7 @@ FightingDojoKarateMasterScript:
 	checkevent EVENT_BEAT_BLACKBELT_JET
 	iffalse .NoChallenge
 	writetext KarateMasterChallengeText
+	waitbutton
 	winlosstext KarateMasterWinLossText, 0
 	loadtrainer BLACKBELT_T, MASTER
 	startbattle
@@ -236,7 +237,7 @@ KarateMasterDefeatMyStudentsText:
 
 KarateMasterChallengeText:
 	text "Ha! Well met,"
-	cont "Challenger!"
+	line "Challenger!"
 
 	para "My students are"
 	line "formidable!"

@@ -85,6 +85,7 @@ CeladonCityTutorSoftboiledText:
 	line "to teach your"
 	cont "#MON to use"
 	roll "SOFTBOILED?"
+	done
 
 CeladonCityTutorSoftboiledRefused:
 	text "OK then."
