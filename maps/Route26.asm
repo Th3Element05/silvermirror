@@ -50,398 +50,215 @@ Route26_SitrusBerry:
 Route26_NoFruit:
 	farsjump Std_NoFruitScript
 
+; trainers
+TrainerCooltrainerMLevi:
+	trainer COOLTRAINERM, LEVI, EVENT_BEAT_COOLTRAINERM_LEVI, CooltrainerMLeviSeenText, CooltrainerMLeviBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext CooltrainerMLeviAfterBattleText
+	waitbutton
+	closetext
+	end
 
+CooltrainerMLeviSeenText:
+	text "I got eight GYM"
+	line "BADGES in JOHTO."
 
-;TrainerCooltrainermJake: ; COOLTRAINERM, LEVI ; const EVENT_BEAT_COOLTRAINERM_LEVI
-;	trainer COOLTRAINERM, JAKE, EVENT_BEAT_COOLTRAINERM_JAKE, CooltrainermJakeSeenText, CooltrainermJakeBeatenText, 0, .Script
-;parasect33, golduck35
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext CooltrainermJakeAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+	para "I'm on my way to"
+	line "take the #MON"
+	cont "LEAGUE challenge!"
+	done
 
-;CooltrainermJakeSeenText:
-;	text "I'm making my"
-;	line "final preparations"
-;
-;	para "for the #MON"
-;	line "LEAGUE."
-;	done
-;
-;CooltrainermJakeBeatenText:
-;	text "I blew it!"
-;	done
-;
-;CooltrainermJakeAfterBattleText:
-;	text "It's going to be"
-;	line "tough to win at"
-;	cont "the LEAGUE."
-;
-;	para "I need to do some"
-;	line "more training."
-;
-;	para "I hear that the"
-;	line "LEAGUE's ELITE"
-;
-;	para "FOUR are tougher"
-;	line "than GYM LEADERs."
-;	done
+CooltrainerMLeviBeatenText:
+	text "I blew it!"
+	done
 
+CooltrainerMLeviAfterBattleText:
+	text "It's going to be"
+	line "tough to beat the"
+	cont "#MON LEAGUE."
 
+	para "They say that the"
+	line "ELITE FOUR are"
+	cont "way tougher than"
+	roll "GYM LEADERS."
 
-;TrainerCooltrainermGaven3: ; COOLTRAINERM, FINN ; const EVENT_BEAT_COOLTRAINERM_FINN
-;	trainer COOLTRAINERM, GAVEN3, EVENT_BEAT_COOLTRAINERM_GAVEN, CooltrainermGaven3SeenText, CooltrainermGaven3BeatenText, 0, .Script
-;victreebel, kingler, flareon, 32,34,38
-;
-;.Script:
-;	loadvar VAR_CALLERID, PHONE_COOLTRAINERM_GAVEN
-;	opentext
-;	checkflag ENGINE_GAVEN_READY_FOR_REMATCH
-;	iftrue .WantsBattle
-;	checkcellnum PHONE_COOLTRAINERM_GAVEN
-;	iftrue .GavenDefeated
-;	checkevent EVENT_GAVEN_ASKED_FOR_PHONE_NUMBER
-;	iftrue .AskedAlready
-;	writetext CooltrainermGavenAfterText
-;	promptbutton
-;	setevent EVENT_GAVEN_ASKED_FOR_PHONE_NUMBER
-;	scall .AskNumber1
-;	jump .AskForNumber
+	para "I need to do some"
+	line "more training."
+	done
 
-;.AskedAlready:
-;	scall .AskNumber2
-;.AskForNumber:
-;	askforphonenumber PHONE_COOLTRAINERM_GAVEN
-;	ifequal PHONE_CONTACTS_FULL, .PhoneFull
-;	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
-;	gettrainername STRING_BUFFER_3, COOLTRAINERM, GAVEN3
-;	scall .RegisteredNumber
-;	jump .NumberAccepted
+TrainerCooltrainerMFinn: ; COOLTRAINERM, FINN ; const EVENT_BEAT_COOLTRAINERM_FINN
+	trainer COOLTRAINERM, FINN, EVENT_BEAT_COOLTRAINERM_FINN, CooltrainerMFinnSeenText, CooltrainerMFinnBeatenText, 0, .Script
+victreebel, kingler, flareon, 32,34,38
 
-;.WantsBattle:
-;	scall .Rematch
-;	winlosstext CooltrainermGaven3BeatenText, 0
-;	checkevent EVENT_RESTORED_POWER_TO_KANTO
-;	iftrue .LoadFight2
-;	checkevent EVENT_BEAT_ELITE_FOUR
-;	iftrue .LoadFight1
-;	loadtrainer COOLTRAINERM, GAVEN3
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_GAVEN_READY_FOR_REMATCH
-;	end
+.Script:
+	endifjustbattled
+	opentext
+	writetext CooltrainerMFinnAfterBattleText
+	waitbutton
+	closetext
+	end
 
-;.LoadFight1:
-;	loadtrainer COOLTRAINERM, GAVEN1
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_GAVEN_READY_FOR_REMATCH
-;	end
+.GavenDefeated:
+	writetext CooltrainermGavenAfterText
+	promptbutton
+	closetext
+	end
 
-;.LoadFight2:
-;	loadtrainer COOLTRAINERM, GAVEN2
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_GAVEN_READY_FOR_REMATCH
-;	end
+CooltrainerMFinnSeenText:
+	text "By experiencing"
+	line "tough battles, you"
+	cont "gain power."
+	done
 
-;.AskNumber1:
-;	jumpstd AskNumber1MScript
-;	end
+CooltrainerMFinnBeatenText:
+	text "Gaah! Life is even"
+	line "tougher!"
+	done
 
-;.AskNumber2:
-;	jumpstd AskNumber2MScript
-;	end
+CooltrainermGavenAfterText:
+	text "To get to #MON"
+	line "LEAGUE, you have"
+	cont "to get through"
+	roll "VICTORY ROAD."
 
-;.RegisteredNumber:
-;	jumpstd RegisteredNumberMScript
-;	end
+	para "But VICTORY ROAD"
+	line "is tough."
 
-;.NumberAccepted:
-;	jumpstd NumberAcceptedMScript
-;	end
+	para "They won't even"
+	line "you in without"
+	cont "eight GYM BADGES."
+	done
 
-;.NumberDeclined:
-;	jumpstd NumberDeclinedMScript
-;	end
+TrainerCooltrainerFJoyce:
+	trainer COOLTRAINERF, JOYCE, EVENT_BEAT_COOLTRAINERF_JOYCE, CooltrainerFJoyceSeenText, CooltrainerFJoyceBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext CooltrainerFJoyceAfterBattleText
+	waitbutton
+	closetext
+	end
 
-;.PhoneFull:
-;	jumpstd PhoneFullMScript
-;	end
+CooltrainerFJoyceSeenText:
+	text "You look like a"
+	line "good trainer."
 
-;.Rematch:
-;	jumpstd RematchMScript
-;	end
+	para "I'm going to give"
+	line "this battle every-"
+	cont "thing I've got!"
+	done
 
-;.GavenDefeated:
-;	writetext CooltrainermGavenAfterText
-;	promptbutton
-;	closetext
-;	end
+CooltrainerFJoyceBeatenText:
+	text "No! I don't"
+	line "believe this!"
+	done
 
-;CooltrainermGaven3SeenText:
-;	text "By experiencing"
-;	line "tough battles, you"
-;	cont "gain power."
-;	done
-;
-;CooltrainermGaven3BeatenText:
-;	text "Gaah! Life is even"
-;	line "tougher!"
-;	done
-;
-;CooltrainermGavenAfterText:
-;	text "To get to #MON"
-;	line "LEAGUE, you have"
-;
-;	para "to get through"
-;	line "VICTORY ROAD."
-;
-;	para "But VICTORY ROAD"
-;	line "is tough."
-;
-;	para "Practically nobody"
-;	line "goes there!"
-;	done
+CooltrainerFJoyceAfterBattleText:
+	text "I've defeated"
+	line "eight GYM LEADERs,"
+	cont "so I was feeling"
+	roll "confident."
 
+	para "I'll have to try"
+	line "harder next time."
+	done
 
+TrainerCooltrainerFAnnie:
+	trainer COOLTRAINERF, ANNIE, EVENT_BEAT_COOLTRAINERF_ANNIE, CooltrainerFAnnieSeenText, CooltrainerFAnnieBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext CooltrainerFAnnieAfterBattleText
+	waitbutton
+	closetext
+	end
 
-;TrainerCooltrainerfJoyce: ; COOLTRAINERF, JOYCE ; const EVENT_BEAT_COOLTRAINERF_JOYCE
-;	trainer COOLTRAINERF, JOYCE, EVENT_BEAT_COOLTRAINERF_JOYCE, CooltrainerfJoyceSeenText, CooltrainerfJoyceBeatenText, 0, .Script
-;pikachu36, blastoise32
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext CooltrainerfJoyceAfterBattleText
-;	waitbutton
-;	closetext
-;	end
+CooltrainerFAnnieSeenText:
+	text "Some of the train-"
+	line "ers on their way"
+	cont "to #MON LEAGUE"
+	roll "are so serious."
 
-;CooltrainerfJoyceSeenText:
-;	text "Since you've come"
-;	line "this far, you must"
-;	cont "be good."
-;
-;	para "I'm going to give"
-;	line "this battle every-"
-;	cont "thing I've got!"
-;	done
-;
-;CooltrainerfJoyceBeatenText:
-;	text "No! I don't"
-;	line "believe this!"
-;	done
-;
-;CooltrainerfJoyceAfterBattleText:
-;	text "I've defeated"
-;	line "eight GYM LEADERs,"
-;
-;	para "so I was feeling"
-;	line "confident."
-;
-;	para "I'll have to try"
-;	line "harder next time."
-;	done
+	para "They try so hard"
+	line "to win no matter"
+	cont "the cost."
 
+	para "I feel sorry for"
+	line "their #MON."
+	done
 
+CooltrainerFAnnieBeatenText:
+	text "#MON aren't"
+	line "just tools."
+	done
 
-;TrainerCooltrainerfBeth1: ; COOLTRAINERF, ANNIE ; const EVENT_BEAT_COOLTRAINERF_ANNIE
-;	trainer COOLTRAINERF, BETH1, EVENT_BEAT_COOLTRAINERF_BETH, CooltrainerfBeth1SeenText, CooltrainerfBeth1BeatenText, 0, .Script
-;rapidash36,39,43
-;
-;.Script:
-;	loadvar VAR_CALLERID, PHONE_COOLTRAINERF_BETH
-;	opentext
-;	checkflag ENGINE_BETH_READY_FOR_REMATCH
-;	iftrue .WantsBattle
-;	checkcellnum PHONE_COOLTRAINERF_BETH
-;	iftrue .BethDefeated
-;	checkevent EVENT_BETH_ASKED_FOR_PHONE_NUMBER
-;	iftrue .AskedAlready
-;	writetext CooltrainerfBethAfterText
-;	promptbutton
-;	setevent EVENT_BETH_ASKED_FOR_PHONE_NUMBER
-;	scall .AskNumber1
-;	jump .AskForNumber
+CooltrainerFAnnieAfterBattleText:
+	text "#MON are in-"
+	line "valuable, lifelong"
+	cont "partners."
+	done
 
-;.AskedAlready:
-;	scall .AskNumber2
-;.AskForNumber:
-;	askforphonenumber PHONE_COOLTRAINERF_BETH
-;	ifequal PHONE_CONTACTS_FULL, .PhoneFull
-;	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
-;	gettrainername STRING_BUFFER_3, COOLTRAINERF, BETH1
-;	scall .RegisteredNumber
-;	jump .NumberAccepted
+TrainerPsychicCaleb:
+	trainer PSYCHIC_T, CALEB, EVENT_BEAT_PSYCHIC_CALEB, PsychicCalebSeenText, PsychicCalebBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext PsychicCalebAfterBattleText
+	waitbutton
+	closetext
+	end
 
-;.WantsBattle:
-;	scall .Rematch
-;	winlosstext CooltrainerfBeth1BeatenText, 0
-;	checkevent EVENT_RESTORED_POWER_TO_KANTO
-;	iftrue .LoadFight2
-;	checkevent EVENT_BEAT_ELITE_FOUR
-;	iftrue .LoadFight1
-;	loadtrainer COOLTRAINERF, BETH1
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_BETH_READY_FOR_REMATCH
-;	end
+PsychicCalebSeenText:
+	text "Do you have enough"
+	line "BADGES to get to"
+	cont "#MON LEAGUE?"
+	done
 
-;.LoadFight1:
-;	loadtrainer COOLTRAINERF, BETH2
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_BETH_READY_FOR_REMATCH
-;	end
+PsychicCalebBeatenText:
+	text "Good battle!"
+	done
 
-;.LoadFight2:
-;	loadtrainer COOLTRAINERF, BETH3
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_BETH_READY_FOR_REMATCH
-;	end
+PsychicCalebAfterBattleText:
+	text "People and #MON"
+	line "grow from their"
+	cont "experiences."
 
-;.AskNumber1:
-;	jumpstd AskNumber1FScript
-;	end
+	para "Don't be lazy and"
+	line "get complacent."
+	done
 
-;.AskNumber2:
-;	jumpstd AskNumber2FScript
-;	end
+TrainerFisherLuca:
+	trainer FISHER, LUCA, EVENT_BEAT_FISHER_LUCA, FisherLucaSeenText, FisherLucaBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext FisherLucaAfterBattleText
+	waitbutton
+	closetext
+	end
 
-;.RegisteredNumber:
-;	jumpstd RegisteredNumberFScript
-;	end
+FisherLucaSeenText:
+	text "I'm feeling great"
+	line "today!"
 
-;.NumberAccepted:
-;	jumpstd NumberAcceptedFScript
-;	end
+	para "I feel like I"
+	line "could boot even"
+	cont "the LEAGUE CHAMP!"
+	done
 
-;.NumberDeclined:
-;	jumpstd NumberDeclinedFScript
-;	end
+FisherLucaBeatenText:
+	text "No! Not in this"
+	line "battle!"
+	done
 
-;.PhoneFull:
-;	jumpstd PhoneFullFScript
-;	end
-
-;.Rematch:
-;	jumpstd RematchFScript
-;	end
-
-;.BethDefeated:
-;	writetext CooltrainerfBethAfterText
-;	promptbutton
-;	closetext
-;	end
-
-;CooltrainerfBeth1SeenText:
-;	text "I lost to a train-"
-;	line "er named <RIVAL>."
-;
-;	para "He was really"
-;	line "strong, but…"
-;
-;	para "It was as if he"
-;	line "absolutely had to"
-;	cont "win at any cost."
-;
-;	para "I felt sorry for"
-;	line "his #MON."
-;	done
-;
-;CooltrainerfBeth1BeatenText:
-;	text "#MON aren't"
-;	line "tools of war."
-;	done
-;
-;CooltrainerfBethAfterText:
-;	text "#MON are in-"
-;	line "valuable, lifelong"
-;	cont "partners."
-;	done
-
-
-
-;TrainerPsychicRichard: ; PSYCHIC_T, CALEB ; const EVENT_BEAT_PSYCHIC_CALEB
-;	trainer PSYCHIC_T, RICHARD, EVENT_BEAT_PSYCHIC_RICHARD, PsychicRichardSeenText, PsychicRichardBeatenText, 0, .Script
-;sunkern36
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext PsychicRichardAfterBattleText
-;	waitbutton
-;	closetext
-;	end
-
-;PsychicRichardSeenText:
-;	text "Wow, look at all"
-;	line "those BADGEs!"
-;	cont "I'm impressed."
-;
-;	para "But you're not"
-;	line "satisfied by just"
-;
-;	para "collecting them,"
-;	line "right?"
-;	done
-;
-;PsychicRichardBeatenText:
-;	text "Good battle!"
-;	done
-;
-;PsychicRichardAfterBattleText:
-;	text "People and #MON"
-;	line "grow from their"
-;	cont "experiences."
-;
-;	para "Don't be lazy and"
-;	line "get complacent."
-;	done
-
-
-
-;TrainerFisherScott: ; FISHER, LUCA ; const EVENT_BEAT_FISHER_LUCA
-;	trainer FISHER, SCOTT, EVENT_BEAT_FISHER_SCOTT, FisherScottSeenText, FisherScottBeatenText, 0, .Script
-;qwilfish30,qwilfish30,seaking34
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext FisherScottAfterBattleText
-;	waitbutton
-;	closetext
-;	end
-
-;FisherScottSeenText:
-;	text "I'm feeling great"
-;	line "today!"
-;
-;	para "I feel like I"
-;	line "could boot even"
-;	cont "the LEAGUE CHAMP!"
-;	done
-;
-;FisherScottBeatenText:
-;	text "No! Not in this"
-;	line "battle!"
-;	done
-;
-;FisherScottAfterBattleText:
-;	text "Just like in fish-"
-;	line "ing, it's all over"
-;
-;	para "in #MON if you"
-;	line "give up."
-;	done
-
-
+FisherLucaAfterBattleText:
+	text "Just like in fish-"
+	line "ing, it's all over"
+	cont "in #MON if you"
+	roll "give up."
+	done
 
 Route26Sign:
 	jumptext Route26SignText
@@ -471,10 +288,10 @@ Route26_MapEvents:
 	def_object_events
 	object_event 13, 49, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route26_LeppaBerry, EVENT_ROUTE_26_LEPPA_BERRY
 	object_event 14, 50, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, Route26_SitrusBerry, EVENT_ROUTE_26_SITRUS_BERRY
-;	object_event 14, 24, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerCooltrainermJake, -1
-;	object_event  9, 38, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerCooltrainermGaven3, -1
-;	object_event 10, 56, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerCooltrainerfJoyce, -1
-;	object_event  5,  8, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerCooltrainerfBeth1, -1
-;	object_event 13, 79, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerPsychicRichard, -1
-;	object_event 10, 92, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerFisherScott, -1
+	object_event 14, 24, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerCooltrainerMLevi, -1
+	object_event  9, 38, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerCooltrainerMFinn, -1
+	object_event 10, 56, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerCooltrainerFJoyce, -1
+	object_event  5,  8, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerCooltrainerFAnnie, -1
+	object_event 13, 79, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 2, TrainerPsychicCaleb, -1
+	object_event 10, 92, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerFisherLuca, -1
 	object_event  9, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route26MaxElixer, EVENT_ROUTE_26_MAX_ELIXER
