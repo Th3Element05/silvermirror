@@ -393,7 +393,7 @@ DEF KRIS EQU __trainer_class__
 ; johto
 	const SALMA
 	const LOLA
-	const REENA
+	const REENA1
 	const JENN
 	const CARA
 	const QUINN

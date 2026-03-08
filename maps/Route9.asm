@@ -269,8 +269,8 @@ Route9SignText:
 	done
 
 ; item balls
-;Route9TMEndure:
-;	itemball TM_ENDURE
+Route9TMEndure:
+	itemball TM_ENDURE
 
 ; hidden items
 Route9HiddenEther:

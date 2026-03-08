@@ -10,7 +10,7 @@ TrainerCooltrainerMFelix:
 .Script:
 	endifjustbattled
 	opentext
-	writetext CooltrainermBlakeAfterBattleText
+	writetext CooltrainerMFelixAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -31,7 +31,7 @@ CooltrainerMFelixAfterBattleText:
 	done
 
 TrainerCooltrainerFMira:
-	trainer COOLTRAINERF, MEGAN, EVENT_BEAT_COOLTRAINERF_MEGAN, CooltrainerFMiraSeenText, CooltrainerFMiraBeatenText, 0, .Script
+	trainer COOLTRAINERF, MEGAN, EVENT_BEAT_COOLTRAINERF_MIRA, CooltrainerFMiraSeenText, CooltrainerFMiraBeatenText, 0, .Script
 .Script:
 	endifjustbattled
 	opentext
@@ -111,5 +111,5 @@ Route27East_MapEvents:
 
 	def_object_events
 	object_event 46,  7, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerCooltrainerMFelix, -1
-	object_event 23,  5, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerCooltrainerfReena, -1
+	object_event 23,  5, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerCooltrainerFMira, -1
 	object_event 25, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route27RareCandy, EVENT_ROUTE_27_RARE_CANDY

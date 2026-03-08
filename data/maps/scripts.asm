@@ -325,7 +325,7 @@ SECTION "Map Scripts 25", ROMX
 
 INCLUDE "maps/Route26.asm"
 INCLUDE "maps/Route26Gate.asm"
-;INCLUDE "maps/Route26HealHouse.asm"
+INCLUDE "maps/Route26HealHouse.asm"
 INCLUDE "maps/DayOfWeekSiblingsHouse.asm"
 INCLUDE "maps/Route27West.asm"
 INCLUDE "maps/TohjoFalls.asm"
