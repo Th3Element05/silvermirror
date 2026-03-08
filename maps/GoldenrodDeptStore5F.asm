@@ -26,7 +26,7 @@ GoldenrodDeptStore5FClerkScript:
 	closetext
 	end
 
-.GiveCounter
+.GiveSwagger
 	writetext GoldenrodDeptStore5FFreeTMText
 	promptbutton
 	verbosegiveitem TM_SWAGGER

@@ -35,7 +35,7 @@ CooltrainerMJakeAfterBattleText:
 	done
 
 TrainerCooltrainerFReena:
-	trainer COOLTRAINERF, REENA, EVENT_BEAT_COOLTRAINERF_REENA, CooltrainerFReenaSeenText, CooltrainerFReenaBeatenText, 0, .Script
+	trainer COOLTRAINERF, REENA1, EVENT_BEAT_COOLTRAINERF_REENA, CooltrainerFReenaSeenText, CooltrainerFReenaBeatenText, 0, .Script
 .Script:
 	endifjustbattled
 	opentext
@@ -150,7 +150,6 @@ DragonsDenB1F_MapEvents:
 	warp_event 19, 27, DRAGON_SHRINE, 1
 
 	def_coord_events
-	coord_event 19, 28, SCENE_DRAGONSDENB1F_CLAIR_GIVES_TM, DragonsDenB1F_ClairScene
 
 	def_bg_events
 	bg_event 18, 22, BGEVENT_READ, DragonShrineSignpost

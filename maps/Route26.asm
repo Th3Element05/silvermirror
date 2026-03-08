@@ -88,21 +88,13 @@ CooltrainerMLeviAfterBattleText:
 	line "more training."
 	done
 
-TrainerCooltrainerMFinn: ; COOLTRAINERM, FINN ; const EVENT_BEAT_COOLTRAINERM_FINN
+TrainerCooltrainerMFinn:
 	trainer COOLTRAINERM, FINN, EVENT_BEAT_COOLTRAINERM_FINN, CooltrainerMFinnSeenText, CooltrainerMFinnBeatenText, 0, .Script
-victreebel, kingler, flareon, 32,34,38
-
 .Script:
 	endifjustbattled
 	opentext
 	writetext CooltrainerMFinnAfterBattleText
 	waitbutton
-	closetext
-	end
-
-.GavenDefeated:
-	writetext CooltrainermGavenAfterText
-	promptbutton
 	closetext
 	end
 
@@ -117,7 +109,7 @@ CooltrainerMFinnBeatenText:
 	line "tougher!"
 	done
 
-CooltrainermGavenAfterText:
+CooltrainerMFinnAfterBattleText:
 	text "To get to #MON"
 	line "LEAGUE, you have"
 	cont "to get through"

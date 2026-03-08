@@ -742,12 +742,11 @@
 	const EVENT_SAFARI_ZONE_AREA_1_NUGGET
 	const EVENT_SAFARI_ZONE_AREA_2_MAX_POTION
 	const EVENT_SAFARI_ZONE_AREA_2_FULL_RESTORE
-;	const EVENT_SAFARI_ZONE_AREA_2_TM_EGG_BOMB ;replaced by bullet seed
 	const EVENT_SAFARI_ZONE_AREA_2_TM_BULLET_SEED
 	const EVENT_SAFARI_ZONE_AREA_2_CARBOS
 	const EVENT_SAFARI_ZONE_AREA_3_PROTEIN
 	const EVENT_SAFARI_ZONE_AREA_3_TM_POISON_JAB
-	const EVENT_SAFARI_ZONE_AREA_3_TM_ROOST
+	const EVENT_SAFARI_ZONE_AREA_4_TM_ROOST
 	const EVENT_SAFARI_ZONE_AREA_4_GOLD_TEETH
 	const EVENT_SAFARI_ZONE_AREA_4_MAX_REVIVE
 	const EVENT_SAFARI_ZONE_AREA_4_MAX_POTION
@@ -819,8 +818,8 @@
 	const EVENT_CERULEAN_CAVE_B1F_MAX_REVIVE
 	const EVENT_CERULEAN_CAVE_B1F_BERSERK_GENE
 	const EVENT_ROUTE_27_RARE_CANDY
-; used 138
-; running total used 738
+; used 145
+; running total used 745
 ;
 ; Johto itemballs
 ; Sprite visibility flags
@@ -829,7 +828,7 @@
 ; The map script command macros `setevent` and `clearevent` set/clear these flags, and their effects will be seen when the map is reloaded.
 	const EVENT_BURNED_TOWER_1F_HP_UP
 ;	const EVENT_ROUTE_42_ULTRA_BALL
-	const EVENT_ROUTE_42_MAX_POTION ;EVENT_ROUTE_42_SUPER_POTION
+	const EVENT_ROUTE_42_MAX_POTION
 	const EVENT_MOUNT_MORTAR_1F_OUTSIDE_ETHER
 	const EVENT_MOUNT_MORTAR_1F_OUTSIDE_REVIVE
 	const EVENT_MOUNT_MORTAR_1F_INSIDE_ESCAPE_ROPE
@@ -850,7 +849,6 @@
 	const EVENT_MOUNT_MORTAR_B1F_FULL_RESTORE
 	const EVENT_MOUNT_MORTAR_B1F_MAX_ETHER
 	const EVENT_MOUNT_MORTAR_B1F_PP_UP
-;	const EVENT_NATIONAL_PARK_PARLYZ_HEAL
 	const EVENT_GOLDENROD_DEPT_STORE_B1F_ETHER
 	const EVENT_GOLDENROD_DEPT_STORE_B1F_BURN_HEAL
 	const EVENT_GOLDENROD_DEPT_STORE_B1F_ULTRA_BALL
@@ -972,11 +970,11 @@
 ;	const EVENT_ROUTE_35_TM_ROLLOUT
 ;	const EVENT_ROUTE_30_ANTIDOTE
 ;
-; used 67
-; group total used 205
-; running total 805
+; used 115
+; group total used 260
+; running total 860
 
-	const_next 850
+	const_next 900 ;850
 ; Kanto hidden items (silvermirror)
 	const EVENT_VIRIDIAN_CITY_HIDDEN_POTION                ;done
 	const EVENT_VIRIDIAN_FOREST_HIDDEN_POTION              ;done
@@ -1097,9 +1095,9 @@
 	const EVENT_WHIRL_ISLAND_B1F_HIDDEN_FULL_RESTORE
 	const EVENT_ROUTE_28_HIDDEN_RARE_CANDY
 	const EVENT_SILVER_CAVE_OUTSIDE_HIDDEN_FULL_RESTORE
-;	const EVENT_SILVER_CAVE_ROOM_1_HIDDEN_DIRE_HIT
-;	const EVENT_SILVER_CAVE_ROOM_1_HIDDEN_ULTRA_BALL
-;	const EVENT_SILVER_CAVE_ROOM_2_HIDDEN_MAX_POTION
+	const EVENT_SILVER_CAVE_ROOM_1_HIDDEN_DIRE_HIT
+	const EVENT_SILVER_CAVE_ROOM_1_HIDDEN_ULTRA_BALL
+	const EVENT_SILVER_CAVE_ROOM_2_HIDDEN_MAX_POTION
 ;
 ; in place above this line
 ;
@@ -1109,11 +1107,11 @@
 ;	const EVENT_ICE_PATH_B2F_BLACKTHORN_SIDE_HIDDEN_ICE_HEAL
 ;	const EVENT_ROUTE_30_HIDDEN_POTION
 
-; used 36
-; group total used 103
-; running total used 953
+; used 51
+; group total used 118
+; running total used 1018
 
-	const_next 1000
+	const_next 1050
 ; Trainer flags
 ; Johto Gym Leaders
 	const EVENT_BEAT_FALKNER
@@ -1703,8 +1701,8 @@
 	const EVENT_BEAT_COOL_DUO_THOMANDKAE
 	const EVENT_BEAT_COOL_DUO_ZACANDJEN
 	const EVENT_BEAT_COOL_DUO_ELANANDIDA
-; used 515
-; running total used 1515
+; used 535
+; running total used 1535
 
 	const_next 1600
 ; Phone events

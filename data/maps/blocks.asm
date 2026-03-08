@@ -178,7 +178,7 @@ PokeSeersHouse_Blocks:
 ViridianNicknameSpeechHouse_Blocks:
 Route2NuggetHouse_Blocks:
 PlayersNeighborsHouse_Blocks:
-;Route26HealHouse_Blocks:
+Route26HealHouse_Blocks:
 DayOfWeekSiblingsHouse_Blocks:
 MrPsychicsHouse_Blocks:
 CherrygroveGymSpeechHouse_Blocks:
