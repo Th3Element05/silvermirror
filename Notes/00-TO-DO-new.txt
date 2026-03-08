@@ -14,6 +14,8 @@ dragon shrine script
 
 DO
 
+route29 farmhouse??
+
 route 26/27 trainers
 
 go through data/trainers/parties levels/moves
