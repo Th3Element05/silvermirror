@@ -2,12 +2,6 @@ New TO DO list
 
 
 TEST
-celadon move tutor
-viridian move tutor
-fighting dojo move tutor
-new fighting dojo map script
-lavender town curse girl script
-dragon shrine script
 
 
 
