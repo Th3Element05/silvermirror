@@ -165,10 +165,10 @@ SSAnneGroupSprites:
 	;updated
 
 LavenderGroupSprites:
-;LavenderTown   SUPER_NERD, twin, cooltrainer_m
+;LavenderTown   SUPER_NERD, (TWIN), cooltrainer_m
 ;Route10South   SUPER_NERD, POKEFAN_M, LASS
 ;Route8         SUPER_NERD, POKEFAN_M, LASS
-;Route12        FISHER, ROCKER, YOUNGSTER, poke_ball
+;Route12        FISHER, YOUNGSTER, rocker, poke_ball
 ;Route13        COOLTRAINER_M, BIKER, LASS, twin
 ;Route14        COOLTRAINER_M, BIKER
 ;Route15        COOLTRAINER_M, BIKER, BEAUTY, LASS, poke_ball
@@ -176,13 +176,13 @@ LavenderGroupSprites:
 	db SPRITE_POKEFAN_M
 	db SPRITE_SUPER_NERD
 	db SPRITE_FISHER
-	db SPRITE_ROCKER
 	db SPRITE_YOUNGSTER
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_BIKER
 	db SPRITE_BEAUTY
-	; 9 of 9 walking
 	db SPRITE_TWIN
+	; 9 of 9 walking
+	db SPRITE_ROCKER
 	db SPRITE_BIG_SNORLAX
 	db SPRITE_POKE_BALL
 	db SPRITE_BERRY
