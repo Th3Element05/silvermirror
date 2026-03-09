@@ -93,11 +93,13 @@ DragonShrineTakeTestScript:
 	sjump .NextQuestion
 
 .RightAnswer:
-	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_6
-	iftrue .TestComplete
+;	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_6
+;	iftrue .TestComplete
 	writetext DragonShrineRightAnswerText
 	promptbutton
 .NextQuestion
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_6
+	iftrue .TestComplete
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_5
 	iftrue .Question5
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_4
@@ -116,9 +118,10 @@ DragonShrineTakeTestScript:
 .FailedTestDialogue
 	writetext DragonShrineTestCompleteText
 	waitbutton
+	closetext
 	applymovement DRAGONSHRINE_ELDER1, DragonShrineElderPlaceDratiniMovement
 	appear DRAGONSHRINE_DRATINI_POKEBALL
-	pause 5
+	pause 15
 	applymovement DRAGONSHRINE_ELDER1, DragonShrineElderStepDown1Movement
 	setevent EVENT_CLEARED_DRAGONS_DEN
 	setscene SCENE_DRAGONSHRINE_NOOP
@@ -145,7 +148,7 @@ DragonShrineTakeTestScript:
 
 DragonShrineQuestion1_MenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 8, 4, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 10, 4, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
 	dw .MenuData
 	db 1 ; default option
 
@@ -171,7 +174,7 @@ DragonShrineQuestion2_MenuHeader:
 
 DragonShrineQuestion3_MenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 5, 4, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 10, 4, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
 	dw .MenuData
 	db 1 ; default option
 
@@ -184,7 +187,7 @@ DragonShrineQuestion3_MenuHeader:
 
 DragonShrineQuestion4_MenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 8, 4, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 7, 4, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
 	dw .MenuData
 	db 1 ; default option
 
@@ -197,7 +200,7 @@ DragonShrineQuestion4_MenuHeader:
 
 DragonShrineQuestion5_MenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 12, 4, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 11, 4, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
 	dw .MenuData
 	db 1 ; default option
 
@@ -350,6 +353,7 @@ DragonShrineElderStepDown1Movement:
 DragonShrineElderPlaceDratiniMovement:
 	slow_step UP
 	turn_head LEFT
+	step_sleep 10
 	step_end
 
 DragonShrineElderWalkAwayMovement:
@@ -372,6 +376,7 @@ DragonShrineDratiniPokeballScript:
 	iffalse .MaybeLater
 	readvar VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, .PartyFull
+	disappear DRAGONSHRINE_DRATINI_POKEBALL
 	writetext DragonShrinePlayerReceivedDratiniText
 	playsound SFX_CAUGHT_MON
 	waitsfx
@@ -379,7 +384,6 @@ DragonShrineDratiniPokeballScript:
 	checkevent EVENT_ANSWERED_DRAGON_MASTER_QUIZ_WRONG
 	special GiveDratini
 	setevent EVENT_GOT_DRATINI
-	waitbutton
 	closetext
 	end
 
