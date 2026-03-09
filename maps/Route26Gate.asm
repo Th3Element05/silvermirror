@@ -9,10 +9,10 @@ Route26Gate_MapScripts:
 	def_callbacks
 
 Route26GateClosedScene:
-	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
-	iffalse .Gen1
-	setscene SCENE_ROUTE26GATE_NOOP
-.Gen1
+;	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
+;	iffalse .Gen1
+;	setscene SCENE_ROUTE26GATE_NOOP
+;.Gen1
 	checkevent EVENT_GAVE_SAFFRON_GUARD_DRINK
 	iffalse .CannotPass
 	setscene SCENE_ROUTE26GATE_NOOP
