@@ -92,7 +92,7 @@ LavenderTownGirlGhostNoText:
 	done
 
 LavenderTownRockSmashMovement:
-	rock_smash 40
+	rock_smash 50
 	step_end
 
 LavenderTownSilphScopeSign:
