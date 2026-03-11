@@ -31,7 +31,7 @@ BattleCommandPointers:
 	dw BattleCommand_FreezeTarget
 	dw BattleCommand_ParalyzeTarget
 	dw BattleCommand_Selfdestruct
-	dw BattleCommand_MirrorMove
+;	dw BattleCommand_MirrorMove
 	dw BattleCommand_StatUp
 	dw BattleCommand_StatDown
 	dw BattleCommand_PayDay
@@ -44,7 +44,7 @@ BattleCommandPointers:
 	dw BattleCommand_FlinchTarget
 	dw BattleCommand_OHKO
 	dw BattleCommand_Recoil
-	dw BattleCommand_Mist
+;	dw BattleCommand_Mist
 	dw BattleCommand_FocusEnergy
 	dw BattleCommand_Confuse
 	dw BattleCommand_ConfuseTarget
@@ -55,7 +55,7 @@ BattleCommandPointers:
 	dw BattleCommand_Paralyze
 	dw BattleCommand_Substitute
 	dw BattleCommand_RechargeNextTurn
-	dw BattleCommand_Mimic
+;	dw BattleCommand_Mimic
 	dw BattleCommand_Metronome
 	dw BattleCommand_LeechSeed
 	dw BattleCommand_Splash
@@ -78,12 +78,12 @@ BattleCommandPointers:
 	dw BattleCommand_DefrostOpponent
 	dw BattleCommand_SleepTalk
 	dw BattleCommand_DestinyBond
-	dw BattleCommand_Spite
+;	dw BattleCommand_Spite
 	dw BattleCommand_FalseSwipe
 	dw BattleCommand_HealBell
 	dw BattleCommand_HeldFlinch
-	dw BattleCommand_TripleKick
-	dw BattleCommand_KickCounter
+;	dw BattleCommand_TripleKick
+;	dw BattleCommand_KickCounter
 	dw BattleCommand_Thief
 	dw BattleCommand_ArenaTrap
 	dw BattleCommand_Nightmare
@@ -100,10 +100,10 @@ BattleCommandPointers:
 	dw BattleCommand_GyroBall
 	dw BattleCommand_FuryCutter
 	dw BattleCommand_Attract
-	dw BattleCommand_HappinessPower
-	dw BattleCommand_Present
+;	dw BattleCommand_HappinessPower
+;	dw BattleCommand_Present
 	dw BattleCommand_DamageCalc
-	dw BattleCommand_FrustrationPower
+;	dw BattleCommand_FrustrationPower
 	dw BattleCommand_Safeguard
 	dw BattleCommand_CheckSafeguard
 	dw BattleCommand_GetMagnitude
@@ -154,7 +154,7 @@ BattleCommandPointers:
 	dw BattleCommand_SwitchTurn
 	dw BattleCommand_FakeOut
 	dw BattleCommand_BellyDrum
-	dw BattleCommand_PsychUp
+;	dw BattleCommand_PsychUp
 	dw BattleCommand_Rage
 	dw BattleCommand_DoubleFlyingDamage
 	dw BattleCommand_DoubleUndergroundDamage
@@ -165,13 +165,13 @@ BattleCommandPointers:
 	dw BattleCommand_SkipSunCharge
 	dw BattleCommand_ThunderAccuracy
 	dw BattleCommand_Teleport
-	dw BattleCommand_BeatUp
+;	dw BattleCommand_BeatUp
 	dw BattleCommand_ResetTypeMatchup
 	dw BattleCommand_AllStatsUp
 	dw BattleCommand_BideFailText
 	dw BattleCommand_RaiseSubNoAnim
 	dw BattleCommand_LowerSubNoAnim
-	dw BattleCommand_BeatUpFailText
+;	dw BattleCommand_BeatUpFailText
 	dw BattleCommand_ClearMissDamage
 	dw BattleCommand_MoveDelay
 	dw BattleCommand_MoveAnim
