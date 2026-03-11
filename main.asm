@@ -743,7 +743,7 @@ INCLUDE "engine/overworld/landmarks.asm"
 SECTION "Print Party", ROMX
 
 INCLUDE "engine/printer/print_party.asm"
-
+INCLUDE "gfx/rangi_gfx.asm"
 
 SECTION "bank77", ROMX
 

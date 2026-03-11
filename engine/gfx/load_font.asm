@@ -43,7 +43,8 @@ _LoadFontsExtra2::
 _LoadFontsBattleExtra::
 	ld de, FontBattleExtra
 	ld hl, vTiles2 tile $60
-	lb bc, BANK(FontBattleExtra), 25
+;	lb bc, BANK(FontBattleExtra), 25
+	lb bc, BANK(FontBattleExtra), 16
 	call Get2bppViaHDMA
 	jr LoadFrame
 
@@ -69,10 +70,10 @@ LoadBattleFontsHPBar:
 	ld hl, vTiles2 tile $60
 	lb bc, BANK(FontBattleExtra), 12
 	call Get2bppViaHDMA
-	ld hl, vTiles2 tile $70
-	ld de, FontBattleExtra + 16 tiles ; "<DO>"
-	lb bc, BANK(FontBattleExtra), 3 ; "<DO>" to "『"
-	call Get2bppViaHDMA
+;	ld hl, vTiles2 tile $70
+;	ld de, FontBattleExtra + 16 tiles ; "<DO>"
+;	lb bc, BANK(FontBattleExtra), 3 ; "<DO>" to "『"
+;	call Get2bppViaHDMA
 	call LoadFrame
 
 LoadHPBar:
@@ -80,9 +81,14 @@ LoadHPBar:
 	ld hl, vTiles2 tile $6c
 	lb bc, BANK(EnemyHPBarBorderGFX), 4
 	call Get1bppViaHDMA
-	ld de, HPExpBarBorderGFX
-	ld hl, vTiles2 tile $73
-	lb bc, BANK(HPExpBarBorderGFX), 6
+
+;	ld de, HPExpBarBorderGFX
+;	ld hl, vTiles2 tile $73
+;	lb bc, BANK(HPExpBarBorderGFX), 6
+	ld de, HPExpBarBorderGFX + 1 * LEN_1BPP_TILE
+	ld hl, vTiles2 tile $74
+	lb bc, BANK(HPExpBarBorderGFX), 5
+
 	call Get1bppViaHDMA
 	ld de, ExpBarGFX
 	ld hl, vTiles2 tile $55
@@ -112,9 +118,16 @@ StatsScreen_LoadFont:
 	ld hl, vTiles2 tile $55
 	lb bc, BANK(ExpBarGFX), 8
 	call Get2bppViaHDMA
+
+	ld de, FontBattleExtra + 17 tiles ; Starting at the 18th Tile of the FontBattleExtra PNG
+	ld hl, vTiles2 tile $71 ; loading that 18th Tile into Tile $71
+	lb bc, BANK(FontBattleExtra), 4 ; 4 Tiles, left arrow, ID + No. Tiles
+	call Get2bppViaHDMA
+
 LoadStatsScreenPageTilesGFX:
 	ld de, StatsScreenPageTilesGFX
 	ld hl, vTiles2 tile $31
-	lb bc, BANK(StatsScreenPageTilesGFX), 17
+;	lb bc, BANK(StatsScreenPageTilesGFX), 17 ; loads 17 tiles
+	lb bc, BANK(StatsScreenPageTilesGFX), 27 ; Loading More Tiles than in Vanilla
 	call Get2bppViaHDMA
 	ret

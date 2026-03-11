@@ -122,6 +122,13 @@ UpdateEnemyMonInParty::
 	ld bc, wEnemyMonMaxHP - wEnemyMonLevel
 	jp CopyBytes
 
+RefreshBattlePalettes::
+	ld b, SCGB_BATTLE_COLORS
+	call GetSGBLayout
+	call SetPalettes
+	call DelayFrame
+	; fallthrough
+
 RefreshBattleHuds::
 	call UpdateBattleHuds
 	ld c, 3

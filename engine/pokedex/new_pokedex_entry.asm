@@ -29,7 +29,7 @@ NewPokedexEntry:
 	pop af
 	ld [wPokedexStatus], a
 	call MaxVolume
-	call RotateThreePalettesRight
+	farcall Pokedex_BlackOutBG ;call RotateThreePalettesRight
 	ldh a, [hSCX]
 	add -POKEDEX_SCX
 	ldh [hSCX], a

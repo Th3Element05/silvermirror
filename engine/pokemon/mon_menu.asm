@@ -982,7 +982,8 @@ MoveScreenLoop:
 	ld a, " "
 	hlcoord 1, 11
 ;	ld bc, 5
-	ld bc, 8 ;phys/spec split
+;	ld bc, 8 ;phys/spec split
+	ld bc, 7 ;type icons
 	call ByteFill
 	hlcoord 1, 12
 	lb bc, 5, SCREEN_WIDTH - 2
@@ -1265,36 +1266,211 @@ PlaceMoveData:
 	hlcoord 0, 11
 	ld de, String_MoveType_Bottom
 	call PlaceString
-	hlcoord 12, 12
+;	hlcoord 12, 12
+	hlcoord 1, 11 ;type icons
 	ld de, String_MoveAtk
 	call PlaceString
-	hlcoord 12, 13
+;	hlcoord 12, 13
+	hlcoord 1, 12 ;type icons
 	ld de, String_MoveAcc
 	call PlaceString
 
-; Print move type
-	ld a, [wCurSpecies]
-	ld b, a
-	hlcoord 2, 12
+;; Print move type
+;	ld a, [wCurSpecies]
+;	ld b, a
+;	hlcoord 2, 12
+;
+;;phys/spec split
+;	ld a, [wOptions2]
+;	bit PHYS_SPEC_SPLIT, a
+;	jr nz, .classic
+;
+;	farcall GetMoveCategoryName
+;	hlcoord 1, 11
+;	ld de, wStringBuffer1
+;	call PlaceString
+;	ld a, [wCurSpecies]
+;	ld b, a
+;	hlcoord 1, 12
+;	ld [hl], "/"
+;	inc hl
+;
+;.classic
+;	predef PrintMoveType
+
+;; Print move power
+;	ld a, [wCurSpecies]
+;	dec a
+;	ld hl, Moves + MOVE_POWER
+;	ld bc, MOVE_LENGTH
+;	call AddNTimes
+;	ld a, BANK(Moves)
+;	call GetFarByte
+;	hlcoord 16, 12
+;;	hlcoord 5, 11 ;type icons
+;	cp 2
+;	jr c, .no_power
+;	ld [wTextDecimalByte], a
+;	ld de, wTextDecimalByte
+;	lb bc, 1, 3
+;	call PrintNum
+;;	jr .description
+;	jr .accuracy
+;
+;.no_power
+;	ld de, String_NoValue
+;	call PlaceString
+
+;; Print move accuracy
+;.accuracy
+;	ld a, [wCurSpecies]
+;	ld bc, MOVE_LENGTH
+;	ld hl, (Moves + MOVE_ACC) - MOVE_LENGTH
+;	call AddNTimes
+;	ld a, BANK(Moves)
+;	call GetFarByte
+;	cp 101
+;	jr c, .no_acc
+;	Call ConvertPercentages
+;	ld [wBuffer1], a
+;	ld de, wBuffer1
+;	lb bc, 1, 3
+;	hlcoord 16, 13
+;;	hlcoord 5, 12 ;type icons
+;	call PrintNum
+;	jr .description
+;
+;.no_acc
+;	hlcoord 16, 13
+;	ld de, String_NoValue
+;	call PlaceString
 
 ;phys/spec split
 	ld a, [wOptions2]
 	bit PHYS_SPEC_SPLIT, a
-	jr nz, .classic
+	jr nz, .no_category
 
-	farcall GetMoveCategoryName
-	hlcoord 1, 11
-	ld de, wStringBuffer1
-	call PlaceString
+; Place Move Cateogry
 	ld a, [wCurSpecies]
-	ld b, a
-	hlcoord 1, 12
-	ld [hl], "/"
-	inc hl
+	dec a
+	ld hl, Moves + MOVE_TYPE
+	ld bc, MOVE_LENGTH
+	call AddNTimes
+	ld a, BANK(Moves)
+	call GetFarByte
+;	push af ; raw Move Type+category Byte, unmasked
+	and ~TYPE_MASK ; Specific to Phys/Spec split
+	swap a ; Specific to Phys/Spec split
+	srl a  ; Specific to Phys/Spec split
+	srl a  ; Specific to Phys/Spec split
+	dec a  ; Specific to Phys/Spec split
+	ld hl, CategoryIconGFX ; ptr to Category GFX loaded from PNG(2bpp)
+	ld bc, 2 tiles
+	call AddNTimes
+	ld d, h
+	ld e, l
+	ld hl, vTiles2 tile $59 ; category icon tile slot in VRAM, destination
+	lb bc, BANK(CategoryIconGFX), 2
+	call Request2bpp ; Load 2bpp at b:de to occupy c tiles of hl.
+;	hlcoord 7, 13
+;	hlcoord 12, 12
+	hlcoord 17, 12
+	ld a, $59 ; category icon tile 1
+	ld [hli], a
+	ld [hl], $5a ; category icon tile 2
 
-.classic
-	predef PrintMoveType
+.no_category
+; Place Move Type
+	ld a, [wCurSpecies]
+	dec a
+	ld hl, Moves + MOVE_TYPE
+	ld bc, MOVE_LENGTH
+	call AddNTimes
+	ld a, BANK(Moves)
+	call GetFarByte
+;	pop af ; raw Move Type+category Byte, unmasked
+	and TYPE_MASK ; Phys/Spec Split specific
+	ld c, a
+	farcall GetMonTypeIndex
+	ld a, c
+; Type Index adjust done
+; Load Type GFX Tiles, color will be in Slot 4 of Palette
+	ld hl, TypeIconGFX ; ptr for PNG w/ black Tiles, since this screen is using Slot 4 in the Palette for Type color
+	ld bc, 4 * LEN_1BPP_TILE ; purely Black and White tiles are 1bpp. Type Tiles are 4 Tiles wide
+	call AddNTimes ; increments pointer based on Type Index
+	ld d, h
+	ld e, l ; de is the source Pointer
+	ld hl, vTiles2 tile $5b ; $5b is destination Tile for first Type Tile
+	lb bc, BANK(TypeIconGFX), 4 ; Bank in 'b', num of Tiles to load in 'c'
+	call Request1bpp
+;	hlcoord 2, 13
+;	hlcoord 15, 12
+	hlcoord 13, 12
+	ld a, $5b ; first Type Tile
+	ld [hli], a
+	inc a ; Tile $5c
+	ld [hli], a
+	inc a ; Tile $5d
+	ld [hli], a
+	ld [hl], $5e ; final Type Tile
 
+;;.power
+;; Print Move Power
+;	ld a, [wCurSpecies]
+;	dec a
+;	ld hl, Moves + MOVE_POWER
+;	ld bc, MOVE_LENGTH
+;	call AddNTimes
+;	ld a, BANK(Moves)
+;	call GetFarByte
+;	hlcoord 6, 12
+;	cp 2
+;	jr c, .no_power ; means it's a status move
+;	ld [wTextDecimalByte], a
+;	ld de, wTextDecimalByte
+;	lb bc, 1, 3 ; number of bytes of num being printed in 'b', max digits in 'c'
+;	call PrintNum
+;; Print Move Description
+;	jr .accuracy ; printed BP, don't overwrite with "---", jump to print accuracy
+;.no_power
+;	ld de, String_NoValue ; string for "---"
+;	call PlaceString
+;
+;.accuracy
+;; Place Move Accuracy
+;;	hlcoord 10, 12
+;	hlcoord 1, 12
+;	ld de, String_MoveAcc ; string for "ACC"
+;	call PlaceString
+;;	hlcoord 18, 12
+;	hlcoord 8, 12
+;	ld [hl], " " ;"<%>"
+;
+;	; getting the actual Move's accuracy
+;	ld a, [wCurSpecies]
+;	dec a
+;	ld hl, Moves + MOVE_ACC
+;	ld bc, MOVE_LENGTH
+;	call AddNTimes
+;	ld a, BANK(Moves)
+;	call GetFarByte
+;	cp 101
+;	jr c, .no_acc
+;	call Adjust_percent ; outputs accuracy in decimal instead of hex to print appropiatley
+;;	hlcoord 15, 12
+;	hlcoord 5, 12
+;	ld [wTextDecimalByte], a
+;	ld de, wTextDecimalByte
+;	lb bc, 1, 3 ; number of bytes of num being printed in 'b', max digits in 'c'
+;	call PrintNum
+;	jr .description ; printed ACC, don't overwrite with "---", jump to print description
+;.no_acc
+;;	hlcoord 16, 13
+;	hlcoord 5, 12
+;	ld de, String_NoValue ; string for "---"
+;	call PlaceString
+
+;.power
 ; Print move power
 	ld a, [wCurSpecies]
 	dec a
@@ -1303,22 +1479,22 @@ PlaceMoveData:
 	call AddNTimes
 	ld a, BANK(Moves)
 	call GetFarByte
-	hlcoord 16, 12
+;	hlcoord 16, 12
+	hlcoord 5, 11 ;type icons
 	cp 2
 	jr c, .no_power
 	ld [wTextDecimalByte], a
 	ld de, wTextDecimalByte
 	lb bc, 1, 3
+	set 6, b
 	call PrintNum
-;	jr .description
 	jr .accuracy
-
 .no_power
 	ld de, String_NoValue
 	call PlaceString
 
-; Print move accuracy
 .accuracy
+; Print move accuracy
 	ld a, [wCurSpecies]
 	ld bc, MOVE_LENGTH
 	ld hl, (Moves + MOVE_ACC) - MOVE_LENGTH
@@ -1331,30 +1507,37 @@ PlaceMoveData:
 	ld [wBuffer1], a
 	ld de, wBuffer1
 	lb bc, 1, 3
-	hlcoord 16, 13
+;	hlcoord 16, 13
+	hlcoord 5, 12 ;type icons
+	set 6, b
 	call PrintNum
 	jr .description
-
 .no_acc
-	hlcoord 16, 13
+;	hlcoord 16, 13
+	hlcoord 5, 12 ;type icons
 	ld de, String_NoValue
 	call PlaceString
 
-; Print move description
 .description
+; Print Move Description
 	hlcoord 1, 14
 	predef PrintMoveDescription
-	ld a, $1
+
+	ld b, SCGB_MOVE_LIST
+	call GetSGBLayout ; reload proper palettes for new Move Type and Category, and apply
+	ld a, $1 ; done editing the screen
 	ldh [hBGMapMode], a
 	ret
 
 ; UI elements
 String_MoveType_Top:
 ;	db "┌─────┐@"
-	db "┌────────┐@" ;phys/spec split
+;	db "┌────────┐@" ;phys/spec split
+	db "┌───────┐@" ;type icons
 String_MoveType_Bottom:
 ;	db "│TYPE/└@"
-	db "│TYPE/   └@" ;phys/spec split
+;	db "│TYPE/   └@" ;phys/spec split
+	db "│       └@" ;type icons
 String_MoveAtk:
 	db "ATK/@"
 String_MoveAcc:
@@ -1411,6 +1594,27 @@ ConvertPercentages:
 	add a, h
 	ret
 
+;Adjust_percent:
+;	; hMultiplicand 
+;	; hMultiplier. Result in hProduct.
+;	ldh [hMultiplicand], a
+;	ld a, 100
+;	ldh [hMultiplier], a
+;	call Multiply
+;	; Divide hDividend length b (max 4 bytes) by hDivisor. Result in hQuotient.
+;	; All values are big endian.
+;	ld b, 2
+;	; ldh a, [hProduct]
+;	; ldh [hDividend], a
+;	ld a, 255
+;	ldh [hDivisor], a
+;	call Divide
+;	ldh a, [hQuotient + 3]
+;	cp 100
+;	ret z
+;	inc a
+;	ret
+
 PlaceMoveScreenArrows:
 	call PlaceMoveScreenLeftArrow
 	call PlaceMoveScreenRightArrow
@@ -1442,7 +1646,8 @@ PlaceMoveScreenLeftArrow:
 
 .legal
 	hlcoord 16, 0
-	ld [hl], "◀"
+;	ld [hl], "◀"
+	ld [hl], "▶"
 	ret
 
 PlaceMoveScreenRightArrow:
