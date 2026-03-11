@@ -1,15 +1,26 @@
-; pink
-	RGB 31, 31, 31
-	RGB 31, 19, 31
-	RGB 31, 15, 31
-	RGB 00, 00, 00
-; green
-	RGB 31, 31, 31
-	RGB 21, 31, 14
-	RGB 17, 31, 00
-	RGB 00, 00, 00
-; blue
-	RGB 31, 31, 31
-	RGB 17, 31, 31
-	RGB 17, 31, 31
-	RGB 00, 00, 00
+; pink & green
+	RGB 31, 31, 31 ; White, color 1
+	RGB 31, 15, 31 ; pink, color 2
+	RGB 17, 31, 00 ; green, color 3
+	RGB 00, 00, 00 ; black, color 4
+; blue & orange
+	RGB 31, 31, 31 ; White, color 1
+	RGB 17, 31, 31 ; blue, color 2
+	RGB 30, 22, 12 ; orange, color 3
+	RGB 00, 00, 00 ; black, color 4
+
+;; pink
+;	RGB 31, 31, 31
+;	RGB 31, 19, 31
+;	RGB 31, 15, 31
+;	RGB 00, 00, 00
+;; green
+;	RGB 31, 31, 31
+;	RGB 21, 31, 14
+;	RGB 17, 31, 00
+;	RGB 00, 00, 00
+;; blue
+;	RGB 31, 31, 31
+;	RGB 17, 31, 31
+;	RGB 17, 31, 31
+;	RGB 00, 00, 00

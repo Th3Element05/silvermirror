@@ -35,6 +35,7 @@ InitPartyMenuLayout:
 	ret
 
 LoadPartyMenuGFX:
+	call LoadStatusIconSet
 	call LoadFontsBattleExtra
 	callfar InitPartyMenuPalettes
 	callfar ClearSpriteAnims2
@@ -269,7 +270,8 @@ PlacePartyMonStatus:
 	ret z
 	ld c, a
 	ld b, 0
-	hlcoord 5, 2
+;	hlcoord 5, 2 ; where the Status Condition Text was being printed
+	hlcoord 11, 2 ;6, 2 ; aligning the Status Tiles with the left-hand side of the Party Menu ;3, 2
 .loop
 	push bc
 	push hl
@@ -283,7 +285,17 @@ PlacePartyMonStatus:
 	ld e, l
 	ld d, h
 	pop hl
-	call PlaceStatusString
+;	call PlaceStatusString
+	call GetStatusConditionIndex
+	jr z, .next
+	; get the right tile nums
+	dec a
+	add a
+	ld b, $50 ; PSN tiles are in Tile $50 and $51
+	add b     ;  add the index to $50 to get the right Tiles for the actual Status Condition
+	ld [hli], a
+	inc a
+	ld [hl], a
 
 .next
 	pop hl
@@ -852,4 +864,73 @@ PrintPartyMenuActionText:
 	call PrintText
 	pop af
 	ld [wOptions], a
+	ret
+
+
+
+LoadStatusIconSet:
+	push bc
+	push hl
+	; status index in a
+	ld a, $1 ; PSN Index
+	ld hl, StatusIconGFX ; Uses the Light Gray pixels, aka Pal Color 2
+	ld bc, 2 * LEN_2BPP_TILE ; Status GFX is 2 Tiles Wide
+	call AddNTimes
+	ld d, h
+	ld e, l
+	ld hl, vTiles2 tile $50 ; Destination Tile address
+	lb bc, BANK(StatusIconGFX), 2 ; bank in 'b', number of Tiles in 'c'
+	call Request2bpp
+
+	ld a, $2 ; PAR Index
+	ld hl, StatusIconGFX ; Uses the Light Gray pixels, aka Pal Color 2
+	ld bc, 2 * LEN_2BPP_TILE ; Status GFX is 2 Tiles Wide
+	call AddNTimes
+	ld d, h
+	ld e, l
+	ld hl, vTiles2 tile $52
+	lb bc, BANK(StatusIconGFX), 2 ; bank in 'b', number of Tiles in 'c'
+	call Request2bpp
+
+	ld a, $3 ; SLP
+	ld hl, StatusIconGFX ; Uses the Light Gray pixels, aka Pal Color 2
+	ld bc, 2 * LEN_2BPP_TILE ; Status GFX is 2 Tiles Wide
+	call AddNTimes
+	ld d, h
+	ld e, l
+	ld hl, vTiles2 tile $54
+	lb bc, BANK(StatusIconGFX), 2 ; bank in 'b', number of Tiles in 'c'
+	call Request2bpp
+
+	ld a, $4 ; BRN
+	ld hl, EnemyStatusIconGFX ; Uses the Dark Gray pixels, aka Pal Color 3
+	ld bc, 2 * LEN_2BPP_TILE ; Status GFX is 2 Tiles Wide
+	call AddNTimes
+	ld d, h
+	ld e, l
+	ld hl, vTiles2 tile $56
+	lb bc, BANK(EnemyStatusIconGFX), 2 ; bank in 'b', number of Tiles in 'c'
+	call Request2bpp
+
+	ld a, $5 ; FRZ
+	ld hl, EnemyStatusIconGFX ; Uses the Dark Gray pixels, aka Pal Color 3
+	ld bc, 2 * LEN_2BPP_TILE ; Status GFX is 2 Tiles Wide
+	call AddNTimes
+	ld d, h
+	ld e, l
+	ld hl, vTiles2 tile $58
+	lb bc, BANK(EnemyStatusIconGFX), 2 ; bank in 'b', number of Tiles in 'c'
+	call Request2bpp
+
+	ld a, $6 ; FNT Index
+	ld hl, StatusIconGFX ; FNT is only in the Player's set of Icons aka gfx\battle\status.png
+	ld bc, 2 * LEN_2BPP_TILE ; Status GFX is 2 Tiles Wide
+	call AddNTimes
+	ld d, h
+	ld e, l
+	ld hl, vTiles2 tile $5a
+	lb bc, BANK(StatusIconGFX), 2 ; bank in 'b', number of Tiles in 'c'
+	call Request2bpp
+	pop hl
+	pop bc
 	ret

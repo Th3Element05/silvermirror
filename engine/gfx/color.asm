@@ -76,28 +76,28 @@ Unused_CheckShininess:
 	and a
 	ret
 
-SGB_ApplyCreditsPals: ; unreferenced
-	push de
-	push bc
-	ld hl, PalPacket_Pal01
-	ld de, wSGBPals
-	ld bc, PALPACKET_LENGTH
-	call CopyBytes
-	pop bc
-	pop de
-	ld a, c
-	ld [wSGBPals + 3], a
-	ld a, b
-	ld [wSGBPals + 4], a
-	ld a, e
-	ld [wSGBPals + 5], a
-	ld a, d
-	ld [wSGBPals + 6], a
-	ld hl, wSGBPals
-	call PushSGBPals
-	ld hl, BlkPacket_AllPal0
-	call PushSGBPals
-	ret
+;SGB_ApplyCreditsPals: ; unreferenced
+;	push de
+;	push bc
+;	ld hl, PalPacket_Pal01
+;	ld de, wSGBPals
+;	ld bc, PALPACKET_LENGTH
+;	call CopyBytes
+;	pop bc
+;	pop de
+;	ld a, c
+;	ld [wSGBPals + 3], a
+;	ld a, b
+;	ld [wSGBPals + 4], a
+;	ld a, e
+;	ld [wSGBPals + 5], a
+;	ld a, d
+;	ld [wSGBPals + 6], a
+;	ld hl, wSGBPals
+;	call PushSGBPals
+;	ld hl, BlkPacket_AllPal0
+;	call PushSGBPals
+;	ret
 
 InitPartyMenuPalettes:
 	ld hl, PalPacket_PartyMenu + 1
@@ -133,104 +133,104 @@ SGB_ApplyPartyMenuHPPals:
 	ld [hl], e
 	ret
 
-Intro_LoadMagikarpPalettes: ; unreferenced
-	call CheckCGB
-	ret z
+;Intro_LoadMagikarpPalettes: ; unreferenced
+;	call CheckCGB
+;	ret z
+;
+;; CGB only
+;	ld hl, .MagikarpBGPal
+;	ld de, wBGPals1
+;	ld bc, 1 palettes
+;	ld a, BANK(wBGPals1)
+;	call FarCopyWRAM
+;
+;	ld hl, .MagikarpOBPal
+;	ld de, wOBPals1
+;	ld bc, 1 palettes
+;	ld a, BANK(wOBPals1)
+;	call FarCopyWRAM
+;
+;	call ApplyPals
+;	ld a, TRUE
+;	ldh [hCGBPalUpdate], a
+;	ret
+;
+;.MagikarpBGPal:
+;INCLUDE "gfx/intro/gs_magikarp_bg.pal"
+;
+;.MagikarpOBPal:
+;INCLUDE "gfx/intro/gs_magikarp_ob.pal"
 
-; CGB only
-	ld hl, .MagikarpBGPal
-	ld de, wBGPals1
-	ld bc, 1 palettes
-	ld a, BANK(wBGPals1)
-	call FarCopyWRAM
+;Intro_LoadAllPal0: ; unreferenced
+;	call CheckCGB
+;	ret nz
+;	ldh a, [hSGB]
+;	and a
+;	ret z
+;	ld hl, BlkPacket_AllPal0
+;	jp PushSGBPals
 
-	ld hl, .MagikarpOBPal
-	ld de, wOBPals1
-	ld bc, 1 palettes
-	ld a, BANK(wOBPals1)
-	call FarCopyWRAM
+;Intro_LoadBetaIntroVenusaurPalettes: ; unreferenced
+;	call CheckCGB
+;	jr nz, .cgb
+;	ldh a, [hSGB]
+;	and a
+;	ret z
+;	ld hl, PalPacket_BetaIntroVenusaur
+;	jp PushSGBPals
+;
+;.cgb
+;	ld de, wOBPals1
+;	ld a, PREDEFPAL_BETA_INTRO_VENUSAUR
+;	call GetPredefPal
+;	jp LoadHLPaletteIntoDE
 
-	call ApplyPals
-	ld a, TRUE
-	ldh [hCGBPalUpdate], a
-	ret
+;Intro_LoadPackPalettes: ; unreferenced
+;	call CheckCGB
+;	jr nz, .cgb
+;	ldh a, [hSGB]
+;	and a
+;	ret z
+;	ld hl, PalPacket_Pack
+;	jp PushSGBPals
+;
+;.cgb
+;	ld de, wOBPals1
+;	ld a, PREDEFPAL_PACK
+;	call GetPredefPal
+;	jp LoadHLPaletteIntoDE
 
-.MagikarpBGPal:
-INCLUDE "gfx/intro/gs_magikarp_bg.pal"
-
-.MagikarpOBPal:
-INCLUDE "gfx/intro/gs_magikarp_ob.pal"
-
-Intro_LoadAllPal0: ; unreferenced
-	call CheckCGB
-	ret nz
-	ldh a, [hSGB]
-	and a
-	ret z
-	ld hl, BlkPacket_AllPal0
-	jp PushSGBPals
-
-Intro_LoadBetaIntroVenusaurPalettes: ; unreferenced
-	call CheckCGB
-	jr nz, .cgb
-	ldh a, [hSGB]
-	and a
-	ret z
-	ld hl, PalPacket_BetaIntroVenusaur
-	jp PushSGBPals
-
-.cgb
-	ld de, wOBPals1
-	ld a, PREDEFPAL_BETA_INTRO_VENUSAUR
-	call GetPredefPal
-	jp LoadHLPaletteIntoDE
-
-Intro_LoadPackPalettes: ; unreferenced
-	call CheckCGB
-	jr nz, .cgb
-	ldh a, [hSGB]
-	and a
-	ret z
-	ld hl, PalPacket_Pack
-	jp PushSGBPals
-
-.cgb
-	ld de, wOBPals1
-	ld a, PREDEFPAL_PACK
-	call GetPredefPal
-	jp LoadHLPaletteIntoDE
-
-GSIntro_LoadMonPalette: ; unreferenced
-	call CheckCGB
-	jr nz, .cgb
-	ldh a, [hSGB]
-	and a
-	ret z
-	ld a, c
-	push af
-	ld hl, PalPacket_Pal01
-	ld de, wSGBPals
-	ld bc, PALPACKET_LENGTH
-	call CopyBytes
-	pop af
-	call GetMonPalettePointer
-	ld a, [hli]
-	ld [wSGBPals + 3], a
-	ld a, [hli]
-	ld [wSGBPals + 4], a
-	ld a, [hli]
-	ld [wSGBPals + 5], a
-	ld a, [hl]
-	ld [wSGBPals + 6], a
-	ld hl, wSGBPals
-	jp PushSGBPals
-
-.cgb
-	ld de, wOBPals1
-	ld a, c
-	call GetMonPalettePointer
-	call LoadPalette_White_Col1_Col2_Black
-	ret
+;GSIntro_LoadMonPalette: ; unreferenced
+;	call CheckCGB
+;	jr nz, .cgb
+;	ldh a, [hSGB]
+;	and a
+;	ret z
+;	ld a, c
+;	push af
+;	ld hl, PalPacket_Pal01
+;	ld de, wSGBPals
+;	ld bc, PALPACKET_LENGTH
+;	call CopyBytes
+;	pop af
+;	call GetMonPalettePointer
+;	ld a, [hli]
+;	ld [wSGBPals + 3], a
+;	ld a, [hli]
+;	ld [wSGBPals + 4], a
+;	ld a, [hli]
+;	ld [wSGBPals + 5], a
+;	ld a, [hl]
+;	ld [wSGBPals + 6], a
+;	ld hl, wSGBPals
+;	jp PushSGBPals
+;
+;.cgb
+;	ld de, wOBPals1
+;	ld a, c
+;	call GetMonPalettePointer
+;	call LoadPalette_White_Col1_Col2_Black
+;	ret
 
 LoadTrainerClassPaletteAsNthBGPal:
 	ld a, [wTrainerClass]
@@ -268,35 +268,35 @@ LoadNthMiddleBGPal:
 	call LoadPalette_White_Col1_Col2_Black
 	ret
 
-LoadBetaPokerPalettes: ; unreferenced
-	ldh a, [hCGB]
-	and a
-	jr nz, .cgb
-	ld hl, wBetaPokerSGBPals
-	jp PushSGBPals
-
-.cgb
-	ld a, [wBetaPokerSGBCol]
-	ld c, a
-	ld a, [wBetaPokerSGBRow]
-	hlcoord 0, 0, wAttrmap
-	ld de, SCREEN_WIDTH
-.loop
-	and a
-	jr z, .done
-	add hl, de
-	dec a
-	jr .loop
-
-.done
-	ld b, 0
-	add hl, bc
-	lb bc, 6, 4
-	ld a, [wBetaPokerSGBAttr]
-	and $3
-	call FillBoxCGB
-	call CopyTilemapAtOnce
-	ret
+;LoadBetaPokerPalettes: ; unreferenced
+;	ldh a, [hCGB]
+;	and a
+;	jr nz, .cgb
+;	ld hl, wBetaPokerSGBPals
+;	jp PushSGBPals
+;
+;.cgb
+;	ld a, [wBetaPokerSGBCol]
+;	ld c, a
+;	ld a, [wBetaPokerSGBRow]
+;	hlcoord 0, 0, wAttrmap
+;	ld de, SCREEN_WIDTH
+;.loop
+;	and a
+;	jr z, .done
+;	add hl, de
+;	dec a
+;	jr .loop
+;
+;.done
+;	ld b, 0
+;	add hl, bc
+;	lb bc, 6, 4
+;	ld a, [wBetaPokerSGBAttr]
+;	and $3
+;	call FillBoxCGB
+;	call CopyTilemapAtOnce
+;	ret
 
 ApplyMonOrTrainerPals:
 	call CheckCGB
@@ -382,17 +382,116 @@ LoadStatsScreenPals:
 	push af
 	ld a, BANK(wBGPals1)
 	ldh [rSVBK], a
-	ld a, [hli]
-	ld [wBGPals1 palette 0], a
-	ld [wBGPals1 palette 2], a
+
+	ld a, [hli] ; byte 1 of the stats screen page color
+	ld [wBGPals1 palette 0], a ; into slot 1 byte 1 of pal 0
+	ld [wBGPals1 palette 2], a ; into slot 1 byte 1 of pal 2
+	ld [wBGPals1 palette 6], a ; into slot 1 byte 1 of pal 6
+	ld [wBGPals1 palette 7], a ; into slot 1 byte 1 of pal 7
 	ld a, [hl]
-	ld [wBGPals1 palette 0 + 1], a
-	ld [wBGPals1 palette 2 + 1], a
+	ld [wBGPals1 palette 0 + 1], a ; into slot 1 byte 2 of pal 0
+	ld [wBGPals1 palette 2 + 1], a ; into slot 1 byte 2 of pal 2
+	ld [wBGPals1 palette 6 + 1], a ; into slot 1 byte 2 of pal 6
+	ld [wBGPals1 palette 7 + 1], a ; into slot 1 byte 2 of pal 7
+	dec hl
+
+	ld a, [hli]
+;	ld [wBGPals1 palette 0], a
+;	ld [wBGPals1 palette 2], a
+	cp $7f ; half of pink page color, which is $7E7F but bytes are reversed when stored in data (endianness), 
+	; so check $7F first since it will be the first one read
+	jr nz, .notpinkpage
+
+	ld a, [hl]
+;	ld [wBGPals1 palette 0 + 1], a
+;	ld [wBGPals1 palette 2 + 1], a
+	cp $7e ; first half of pink page color
+	jr nz, .notpinkpage
+
+	; if we're here, we're on the pink page
+	; set slot 4 (the "text" slot) of Pal 7 to WHITE (FFFF or 7FFF)
+	; pal 6 too, status condition, if slot 2 of pal 6 isnt white
+	; if it is white, means we are "OK", and dont change slot 4 of pal 6
+	ld a, $FF ; loading white into slot 4 of pal 6 and 7, checking pal 6 after
+	ld [wBGPals1 palette 7 + 6], a ; slot 4 of Palette 7, byte 1
+	ld [wBGPals1 palette 7 + 7], a ; slot 4 of palette 7, byte 2
+	ld [wBGPals1 palette 6 + 6], a ; slot 4 of palette 6, byte 1
+	ld [wBGPals1 palette 6 + 7], a ; slot 4 of palette 6, byte 2
+
+	; check if $7F $FF is loaded into pal 6 + 2, means we are "OK" and need black in slot 4 of pal 6
+	ld a, [wBGPals1 palette 6 + 2] ; pal 6 slot 2 byte 1
+	cp $FF ; white color by default will be $7FFF but $ff will be read first
+	jr nz, .done
+	ld a, [wBGPals1 palette 6 + 3] ; pal 6 slot 2 byte 1
+	cp $7F
+	jr nz, .done
+	xor a ; loading black into slot 4 of pal 6
+	ld [wBGPals1 palette 6 + 6], a
+	ld [wBGPals1 palette 6 + 7], a
+	jr .done
+.notpinkpage
+	xor a ; loading black into slot 4 of pal 6 and 7
+	ld [wBGPals1 palette 6 + 6], a
+	ld [wBGPals1 palette 6 + 7], a
+	ld [wBGPals1 palette 7 + 6], a
+	ld [wBGPals1 palette 7 + 7], a
+.done
+
 	pop af
 	ldh [rSVBK], a
 	call ApplyPals
 	ld a, $1
 	ret
+
+
+
+LoadCPaletteBytesFromHLIntoDE:
+	; Loads the number of Palettes passed in 'c' when called
+	; Source address is 'hl'
+	; Destination address is 'de'
+	ldh a, [rSVBK]
+	push af
+	ld a, BANK("GBC Video")
+	ldh [rSVBK], a
+.loop
+	ld a, [hli]
+	ld [de], a
+	inc de
+	dec c
+	jr nz, .loop
+	pop af
+	ldh [rSVBK], a
+	ret
+
+LoadMonBaseTypePal:
+	; destination address of Palette and Slot is passed in 'de'
+	; Type Index (already fixed/adjusted if a Special Type) is passed in 'c'
+	ld hl, TypeIconPals ; pointer to the Type Colors designated in gfx\types_cats_status_pals.asm
+	ld a, c ; c is the Type Index
+	add a
+	ld c, a
+	ld b, 0
+	add hl, bc
+	ld bc, 2
+	jp FarCopyColorWRAM
+
+LoadSingleBlackPal:
+	; Destination address of the Palette and Slot is passed in 'de'
+	ldh a, [rSVBK]
+	push af
+	ld a, BANK(wBGPals1)
+	ldh [rSVBK], a
+	xor a ; the color black is $0000
+	ld [de], a
+	inc de
+	ld [de], a
+	inc de
+
+	pop af
+	ldh [rSVBK], a
+	ret
+
+
 
 LoadMailPalettes:
 	ld l, e
@@ -764,42 +863,42 @@ GetMonPalettePointer:
 	call _GetMonPalettePointer
 	ret
 
-CGBCopyBattleObjectPals: ; unreferenced
-; dummied out
-	ret
-	call CheckCGB
-	ret z
-	ld hl, BattleObjectPals
-	ld a, (1 << rOBPI_AUTO_INCREMENT) | $10
-	ldh [rOBPI], a
-	ld c, 6 palettes
-.loop
-	ld a, [hli]
-	ldh [rOBPD], a
-	dec c
-	jr nz, .loop
-	ld hl, BattleObjectPals
-	ld de, wOBPals1 palette 2
-	ld bc, 2 palettes
-	ld a, BANK(wOBPals1)
-	call FarCopyWRAM
-	ret
+;CGBCopyBattleObjectPals: ; unreferenced
+;; dummied out
+;	ret
+;	call CheckCGB
+;	ret z
+;	ld hl, BattleObjectPals
+;	ld a, (1 << rOBPI_AUTO_INCREMENT) | $10
+;	ldh [rOBPI], a
+;	ld c, 6 palettes
+;.loop
+;	ld a, [hli]
+;	ldh [rOBPD], a
+;	dec c
+;	jr nz, .loop
+;	ld hl, BattleObjectPals
+;	ld de, wOBPals1 palette 2
+;	ld bc, 2 palettes
+;	ld a, BANK(wOBPals1)
+;	call FarCopyWRAM
+;	ret
 
 BattleObjectPals:
 INCLUDE "gfx/battle_anims/battle_anims.pal"
 
-CGBCopyTwoPredefObjectPals: ; unreferenced
-	call CheckCGB
-	ret z
-	ld a, (1 << rOBPI_AUTO_INCREMENT) | $10
-	ldh [rOBPI], a
-	ld a, PREDEFPAL_TRADE_TUBE
-	call GetPredefPal
-	call .PushPalette
-	ld a, PREDEFPAL_RB_GREENMON
-	call GetPredefPal
-	call .PushPalette
-	ret
+;CGBCopyTwoPredefObjectPals: ; unreferenced
+;	call CheckCGB
+;	ret z
+;	ld a, (1 << rOBPI_AUTO_INCREMENT) | $10
+;	ldh [rOBPI], a
+;	ld a, PREDEFPAL_TRADE_TUBE
+;	call GetPredefPal
+;	call .PushPalette
+;	ld a, PREDEFPAL_RB_GREENMON
+;	call GetPredefPal
+;	call .PushPalette
+;	ret
 
 .PushPalette:
 	ld c, 1 palettes
@@ -1001,19 +1100,19 @@ _InitSGBBorderPals:
 	dw DataSndPacket7
 	dw DataSndPacket8
 
-UpdateSGBBorder: ; unreferenced
-	di
-	xor a
-	ldh [rJOYP], a
-	ld hl, MaskEnFreezePacket
-	call _PushSGBPals
-	call PushSGBBorder
-	call SGBDelayCycles
-	call SGB_ClearVRAM
-	ld hl, MaskEnCancelPacket
-	call _PushSGBPals
-	ei
-	ret
+;UpdateSGBBorder: ; unreferenced
+;	di
+;	xor a
+;	ldh [rJOYP], a
+;	ld hl, MaskEnFreezePacket
+;	call _PushSGBPals
+;	call PushSGBBorder
+;	call SGBDelayCycles
+;	call SGB_ClearVRAM
+;	ld hl, MaskEnCancelPacket
+;	call _PushSGBPals
+;	ei
+;	ret
 
 PushSGBBorder:
 	call .LoadSGBBorderPointers
@@ -1418,6 +1517,8 @@ LoadMapPals:
 
 INCLUDE "data/maps/environment_colors.asm"
 
+INCLUDE "gfx/types_cats_status_pals.asm"
+
 PartyMenuBGMobilePalette:
 INCLUDE "gfx/stats/party_menu_bg_mobile.pal"
 
@@ -1454,8 +1555,8 @@ INCLUDE "gfx/diploma/diploma.pal"
 PartyMenuOBPals:
 INCLUDE "gfx/stats/party_menu_ob.pal"
 
-UnusedBattleObjectPals: ; unreferenced
-INCLUDE "gfx/battle_anims/unused_battle_anims.pal"
+;UnusedBattleObjectPals: ; unreferenced
+;INCLUDE "gfx/battle_anims/unused_battle_anims.pal"
 
 UnusedGSTitleBGPals:
 INCLUDE "gfx/title/unused_gs_bg.pal"
@@ -1474,3 +1575,209 @@ INCLUDE "gfx/beta_poker/beta_poker.pal"
 
 SlotMachinePals:
 INCLUDE "gfx/slots/slots.pal"
+
+
+InitPartyMenuStatusPals:
+	ld hl, StatusIconPals
+	ld c, $1 ; PSN Index
+	ld b, 0
+	add hl, bc
+	add hl, bc
+	ld de, wBGPals1 palette 4 + 2 ; Color 2 of Palette 4 (Light Gray Pixels)
+	ld bc, 2 ; 1 Color (2 bytes)
+	call FarCopyColorWRAM
+
+	ld hl, StatusIconPals
+	ld c, $2 ; PAR Index
+	ld b, 0
+	add hl, bc
+	add hl, bc
+	ld de, wBGPals1 palette 5 + 2 ; Color 2 of Palette 5 (Light Gray Pixels)
+	ld bc, 2 ; 1 Color (2 bytes)
+	call FarCopyColorWRAM
+
+	ld hl, StatusIconPals
+	ld c, $3 ; SLP Index
+	ld b, 0
+	add hl, bc
+	add hl, bc
+ 	ld de, wBGPals1 palette 6 + 2 ; Color 2 of Palette 6 (Light Gray Pixels)
+	ld bc, 2 ; 1 Color (2 bytes)
+	call FarCopyColorWRAM
+
+	ld hl, StatusIconPals
+	ld c, $4 ; BRN Index
+	ld b, 0
+	add hl, bc
+	add hl, bc
+	ld de, wBGPals1 palette 4 + 4 ; Color 3 of Palette 4 (Dark Gray Pixels)
+	ld bc, 2 ; 1 Color (2 bytes)
+	call FarCopyColorWRAM
+
+	ld hl, StatusIconPals
+	ld c, $5 ; FRZ Index
+	ld b, 0
+	add hl, bc
+	add hl, bc
+	ld de, wBGPals1 palette 5 + 4 ; Color 3 of Palette 5 (Dark Gray Pixels)
+	ld bc, 2 ; 1 Color (2 bytes)
+	call FarCopyColorWRAM
+	
+	; put white (7fff) into the slot 4 of pals 4, 5, 6
+	ldh a, [rSVBK]
+	push af
+	ld a, BANK(wBGPals1)
+	ldh [rSVBK], a
+	ld a, $FF
+	ld [wBGPals1 palette 4 + 6], a ; pal 4, slot 4, byte 1
+	ld [wBGPals1 palette 5 + 6], a ; pal 5, slot 4, byte 1
+	ld [wBGPals1 palette 6 + 6], a ; pal 6, slot 4, byte 1
+	ld [wBGPals1 palette 4 + 7], a ; pal 4, slot 4, byte 2
+	ld [wBGPals1 palette 5 + 7], a ; pal 5, slot 4, byte 2
+	ld [wBGPals1 palette 6 + 7], a ; pal 6, slot 4, byte 2
+	pop af
+	ldh [rSVBK], a
+	ret
+
+
+
+LoadBattleCategoryAndTypePals:
+	ld a, [wPlayerMoveStruct + MOVE_TYPE]
+	and ~TYPE_MASK ; Phys/Spec split only
+	swap a ; Phys/Spec split only
+	srl a ; Phys/Spec split only
+	srl a ; Phys/Spec split only
+	dec a ; Phys/Spec split only
+	ld b, a ; Move Category Index
+	ld a, [wPlayerMoveStruct + MOVE_TYPE]
+	ld c, a ; farcall will clobber a for the bank
+	farcall GetMonTypeIndex
+	; type index is already in c
+	ld de, wBGPals1 palette 5
+	; fallthrough
+
+LoadCategoryAndTypePals:
+	; given: de holds the address of destination Palette and Slot
+	; adding a single white pal the way vanilla game does it
+	ldh a, [rSVBK]
+	push af
+	ld a, BANK(wBGPals1)
+	ldh [rSVBK], a
+	ld a, LOW(PALRGB_WHITE)
+	ld [de], a
+	inc de ; slot 1 + 1 byte, now pointing at 2nd byte of slot 1
+	ld a, HIGH(PALRGB_WHITE)
+	ld [de], a
+	inc de ; now pointing at slot 2
+	pop af
+	ldh [rSVBK], a
+	; done adding the single white pal
+
+	ld hl, CategoryIconPals ; from gfx\types_cats_status_pals.asm
+	ld a, b
+	add a ; doubles the Category Index
+	add a ; Quadruples the Category Index
+	; each Category has two colors, so each entry is 4 bytes long, 2 bytes per Color
+	push bc
+	ld c, a
+	ld b, 0
+	add hl, bc
+	ld bc, 4 ; 4 bytes worth of colors means 2 slots are being filled at the same time, the two category colors
+	push de
+	call FarCopyColorWRAM
+	pop de ; still pointing to Slot 2 of the Palette
+
+	ld hl, TypeIconPals ; from gfx\types_cats_status_pals.asm
+	pop bc
+	ld a, c
+	add a ; doubles the Index, since each color is 2 bytes
+	ld c, a
+	ld b, 0
+	add hl, bc
+	inc de 
+	inc de
+	inc de
+	inc de ; incs 4 bytes, skips 2 slots of a Palette, now at Slot 4
+	ld bc, 2 ; 2 bytes, 1 color, the type color in slot 4
+	jp FarCopyColorWRAM
+
+
+LoadPlayerBattleCGBLayoutStatusIconPalette:
+	ld bc, 0	
+	farcall Player_CheckToxicStatus
+	jr nc, .check_status_nottoxic
+	ld c, 7
+.check_status_nottoxic
+	ld a, 7
+	cp c ; checking if we are Toxic'd
+	jr z, .player_gotstatus ; yes, we are toxic
+	ld de, wBattleMonStatus
+	farcall GetStatusConditionIndex
+	ld a, d
+	and a
+	ret z ; .no_status
+	cp $6 ; faint
+	ret z
+.player_gotstatus
+	ld d, a
+	jp LoadPlayerStatusIconPalette
+LoadStatsScreenStatusIconPalette:
+	ld de, wTempMonStatus
+	predef GetStatusConditionIndex
+	; index is in 'd'
+	jr LoadPlayerStatusIconPalette.phase2 ; do not load the white pal in slot 4 of pal 6
+LoadPlayerStatusIconPalette:
+	; given: Status condition index in 'd'
+	; load single white color in slot 4 of palette 6
+	ldh a, [rSVBK]
+	push af
+	ld a, BANK(wBGPals1)
+	ldh [rSVBK], a
+	ld hl, wBGPals1 palette 6 + 6 ; slot 4 of pal 6
+	ld a, $FF
+	ld [hli], a
+	ld [hl], a
+	pop af
+	ldh [rSVBK], a
+	; done loading white color directly into slot 4 of pal 6
+.phase2 
+	ld hl, StatusIconPals
+	ld c, d
+	ld b, 0
+	add hl, bc ; pointers are 2 bytes long, so double the index to point at the right color
+	add hl, bc
+	ld de, wBGPals1 palette 6 + 2 ; slot 2 of pal 6
+	ld bc, 2 ; number of bytes of the color, 2 bytes per slot
+	jp FarCopyColorWRAM
+
+
+LoadEnemyBattleCGBLayoutStatusIconPalette:
+	ld bc, 0	
+	farcall Enemy_CheckToxicStatus
+	jr nc, .check_status_nottoxic
+	ld c, 7
+.check_status_nottoxic
+	ld a, 7
+	cp c ; checking if we are Toxic'd
+	jr z, .enemy_gotstatus ; yes, we are toxic
+	ld de, wEnemyMonStatus
+	predef GetStatusConditionIndex
+	ld a, d
+	and a
+	ret z ; .no_status
+	cp $6 ; faint
+	ret z
+.enemy_gotstatus
+	ld d, a
+LoadEnemyStatusIconPalette:
+	ld a, [wEnemySubStatus2]
+	ld de, wEnemyMonStatus
+	farcall GetStatusConditionIndex ; status cond. index returned in 'd'
+	ld hl, StatusIconPals ; from gfx\types_cats_status_pals.asm
+	ld c, d
+	ld b, 0
+	add hl, bc ; add the index twice because file is list of colors 2 bytes each
+	add hl, bc
+	ld de, wBGPals1 palette 6 + 4 ; slot 3 of Palette 6
+	ld bc, 2 ; two bytes, 1 color
+	jp FarCopyColorWRAM

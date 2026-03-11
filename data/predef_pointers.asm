@@ -39,7 +39,7 @@ PredefPointers::
 	add_predef TradeAnimation
 	add_predef CopyMonToTempMon
 	add_predef ListMoves
-	add_predef PlaceNonFaintStatus
+;	add_predef PlaceNonFaintStatus
 	add_predef Unused_PlaceEnemyHPLevel
 	add_predef ListMovePP
 	add_predef GetGender
@@ -76,9 +76,13 @@ PredefPointers::
 	add_predef ConvertMon_1to2
 	add_predef NewPokedexEntry
 	add_predef Unused_AnimateMon_Slow_Normal
-	add_predef PlaceStatusString
+;	add_predef PlaceStatusString
 	add_predef LoadMonAnimation
 	add_predef AnimateFrontpic
 	add_predef Unused_HOF_AnimateAlignedFrontpic
 	add_predef HOF_AnimateFrontpic
+	add_predef GetStatusConditionIndex
+	add_predef GetMonTypeIndex
+	add_predef Player_LoadNonFaintStatus
+	add_predef Enemy_LoadNonFaintStatus
 	dbw -1, DummyEndPredef ; pointless

@@ -21,17 +21,17 @@ ParseMailLanguage:
 	ld c, MAIL_LANG_ENGLISH
 	ret
 
-; The regular font.
-StandardEnglishFont:
-INCBIN "gfx/font/english.1bpp"
+;; The regular font.
+;StandardEnglishFont:
+;INCBIN "gfx/font/english.1bpp"
 
-; An extended font.
-FrenchGermanFont:
-INCBIN "gfx/font/french_german.1bpp"
+;; An extended font.
+;FrenchGermanFont:
+;INCBIN "gfx/font/french_german.1bpp"
 
-; An even more extended font.
-SpanishItalianFont:
-INCBIN "gfx/font/spanish_italian.1bpp"
+;; An even more extended font.
+;SpanishItalianFont:
+;INCBIN "gfx/font/spanish_italian.1bpp"
 
 ConvertFrenchGermanMailToEnglish:
 ; Called if mail is French or German
