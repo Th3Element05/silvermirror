@@ -8,7 +8,7 @@ remove:
 	MAGBY		magmar
 	  TOGEPI
 	  TOGETIC
-	    UNOWN (PORYGON2 instead? also?)
+	    DELIBIRD (PORYGON2 instead? also?)
 	253
 
 add:
