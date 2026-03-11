@@ -2,7 +2,8 @@ New TO DO list
 
 
 TEST
-
+enter HOF a second time, legitimately
+safari zone after battle/core changes for icon gfx
 
 
 
@@ -15,8 +16,37 @@ go through data/trainers/parties levels/moves
 trades?
 does fossil revival script still need to be fixed?
 move kurt's son outside of silph
+
 add phys/spec gfx
 
+DEF PHYSICAL EQU const_value
+	const NORMAL
+	const FIGHTING
+	const FLYING
+	const POISON
+	const GROUND
+	const ROCK
+	const BIRD
+	const BUG
+	const GHOST
+	const STEEL
 
+DEF UNUSED_TYPES EQU const_value
+	const_next 19
+	const CURSE_TYPE
+DEF UNUSED_TYPES_END EQU const_value
 
+DEF SPECIAL EQU const_value
+	const FIRE
+	const WATER
+	const GRASS
+	const ELECTRIC
+	const PSYCHIC_TYPE
+	const ICE
+	const DRAGON
+	const DARK
+DEF TYPES_END EQU const_value
 
+DEF NUM_TYPES EQU TYPES_END + UNUSED_TYPES - UNUSED_TYPES_END - 1 ; discount BIRD
+
+DEF POKEDEX_TYPE_STRING_LENGTH EQU 9
