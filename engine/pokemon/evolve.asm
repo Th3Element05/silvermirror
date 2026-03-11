@@ -65,6 +65,9 @@ EvolveAfterBattle_MasterLoop:
 
 	ld b, a
 
+	cp EVOLVE_LEVEL
+	jp z, .level
+
 	cp EVOLVE_TRADE
 	jp z, .trade
 
@@ -80,10 +83,17 @@ EvolveAfterBattle_MasterLoop:
 	and a
 	jp nz, .dont_evolve_2
 
-	ld a, b
-	cp EVOLVE_LEVEL
-	jp z, .level
+; Check Mode, Check HOF
+	ld a, [wChallengeMode]
+	bit GAME_CHALLENGE_MODE_F, a
+	jp nz, .do_gen_2_evos
 
+	ld a, [wStatusFlags]
+	bit STATUSFLAGS_HALL_OF_FAME_F, a
+	jp z, .dont_evolve_2
+
+.do_gen_2_evos
+	ld a, b
 	cp EVOLVE_HAPPINESS
 	jp z, .happiness
 
@@ -96,7 +106,10 @@ EvolveAfterBattle_MasterLoop:
 	cp EVOLVE_LOCATION
 	jr z, .location
 
-; EVOLVE_STAT
+;	cp EVOLVE_STAT
+;	jr z, .stat
+;
+;.stat
 	ld a, [wTempMonLevel]
 	cp [hl]
 	jp c, .dont_evolve_1
