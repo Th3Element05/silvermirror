@@ -15,8 +15,7 @@ DEF PHYSICAL_C EQU const_value
 	const ROCK
 	const BIRD
 	const BUG
-	const DRAGON
-	const DARK
+	const GHOST
 	const STEEL
 
 DEF UNUSED_TYPES EQU const_value
@@ -31,7 +30,8 @@ DEF SPECIAL_C EQU const_value
 	const ELECTRIC
 	const PSYCHIC_TYPE
 	const ICE
-	const GHOST
+	const DRAGON
+	const DARK
 DEF TYPES_END EQU const_value
 
 DEF TYPE_MASK EQU %00111111 ;phys/spec split
