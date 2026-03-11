@@ -169,7 +169,7 @@ Moves:
 	move FLASH,        EFFECT_ACCURACY_DOWN,       0, NORMAL,       STATUS,   100, 20,   0 ; OLD ACC:70
 	move EXTRASENSORY, EFFECT_FLINCH_HIT,         80, PSYCHIC_TYPE, SPECIAL,  100, 30,  10 ;PSYWAVE, removed
 	move SPLASH,       EFFECT_SPLASH,              0, NORMAL,       PHYSICAL, 100, 40,   0
-	move AQUA_TAIL,    EFFECT_NORMAL_HIT,         90, WATER,        PHYSICAL,  90,  5,   0 ;ACID_ARMOR, removed
+	move AQUA_TAIL,    EFFECT_NORMAL_HIT,         90, WATER,        PHYSICAL,  90, 10,   0 ;ACID_ARMOR, removed
 	move CRABHAMMER,   EFFECT_NORMAL_HIT,         90, WATER,        PHYSICAL,  85, 10,   0
 	move FLASH_CANNON, EFFECT_SP_DEF_DOWN_HIT,    80, STEEL,        SPECIAL,  100, 10,  10 ;EXPLOSION, removed
 	move ROCK_BLAST,   EFFECT_MULTI_HIT,          25, ROCK,         PHYSICAL,  80, 10,   0 ;FURY_SWIPES, removed
