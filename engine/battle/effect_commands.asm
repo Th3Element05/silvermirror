@@ -1215,7 +1215,7 @@ INCLUDE "data/moves/critical_hit_moves.asm"
 
 INCLUDE "data/battle/critical_hit_chances.asm"
 
-INCLUDE "engine/battle/move_effects/triple_kick.asm"
+;INCLUDE "engine/battle/move_effects/triple_kick.asm"
 
 BattleCommand_Stab:
 ; STAB = Same Type Attack Bonus
@@ -1995,8 +1995,8 @@ BattleCommand_MoveAnimNoSub:
 	jr z, .alternate_anim
 	cp EFFECT_POISON_MULTI_HIT
 	jr z, .alternate_anim
-	cp EFFECT_TRIPLE_KICK
-	jr z, .triplekick
+;	cp EFFECT_TRIPLE_KICK
+;	jr z, .triplekick
 	cp EFFECT_HIDDEN_POWER
 	jr z, .hidden_power
 	xor a
@@ -2139,8 +2139,8 @@ BattleCommand_FailureText:
 	jr z, .multihit
 	cp EFFECT_POISON_MULTI_HIT
 	jr z, .multihit
-	cp EFFECT_BEAT_UP
-	jr z, .multihit
+;	cp EFFECT_BEAT_UP
+;	jr z, .multihit
 	jp EndMoveEffect
 
 .multihit
@@ -2465,10 +2465,10 @@ BattleCommand_CheckFaint:
 	cp EFFECT_DOUBLE_HIT
 	jr z, .multiple_hit_raise_sub
 	cp EFFECT_POISON_MULTI_HIT
-	jr z, .multiple_hit_raise_sub
-	cp EFFECT_TRIPLE_KICK
-	jr z, .multiple_hit_raise_sub
-	cp EFFECT_BEAT_UP
+;	jr z, .multiple_hit_raise_sub
+;	cp EFFECT_TRIPLE_KICK
+;	jr z, .multiple_hit_raise_sub
+;	cp EFFECT_BEAT_UP
 	jr nz, .finish
 
 .multiple_hit_raise_sub
@@ -2936,7 +2936,7 @@ EnemyAttackDamage:
 	and a
 	ret
 
-INCLUDE "engine/battle/move_effects/beat_up.asm"
+;INCLUDE "engine/battle/move_effects/beat_up.asm"
 
 BattleCommand_ClearMissDamage:
 	ld a, [wAttackMissed]
@@ -3429,7 +3429,7 @@ INCLUDE "engine/battle/move_effects/sleep_talk.asm"
 
 INCLUDE "engine/battle/move_effects/destiny_bond.asm"
 
-INCLUDE "engine/battle/move_effects/spite.asm"
+;INCLUDE "engine/battle/move_effects/spite.asm"
 
 INCLUDE "engine/battle/move_effects/false_swipe.asm"
 
@@ -3640,10 +3640,10 @@ DoSubstituteDamage:
 	jr z, .ok
 	cp EFFECT_POISON_MULTI_HIT
 	jr z, .ok
-	cp EFFECT_TRIPLE_KICK
-	jr z, .ok
-	cp EFFECT_BEAT_UP
-	jr z, .ok
+;	cp EFFECT_TRIPLE_KICK
+;	jr z, .ok
+;	cp EFFECT_BEAT_UP
+;	jr z, .ok
 	xor a
 	ld [hl], a
 .ok
@@ -3718,7 +3718,16 @@ BattleCommand_SleepTarget:
 	inc a
 	ld [de], a
 	call UpdateOpponentInParty
-	call RefreshBattleHuds
+;	call RefreshBattleHuds
+	call RefreshBattlePalettes
+;	ld b, SCGB_BATTLE_COLORS
+;	call GetSGBLayout
+;	call SetPalettes
+;	call DelayFrame	
+;	call UpdateBattleHuds
+;	ld c, 3
+;	call DelayFrames
+;	call WaitBGMap
 
 	ld hl, FellAsleepText
 	call StdBattleTextbox
@@ -3763,7 +3772,16 @@ BattleCommand_PoisonTarget:
 	call PoisonOpponent
 	ld de, ANIM_PSN
 	call PlayOpponentBattleAnim
-	call RefreshBattleHuds
+;	call RefreshBattleHuds
+	call RefreshBattlePalettes
+;	ld b, SCGB_BATTLE_COLORS
+;	call GetSGBLayout
+;	call SetPalettes
+;	call DelayFrame	
+;	call UpdateBattleHuds
+;	ld c, 3
+;	call DelayFrames
+;	call WaitBGMap
 
 	ld hl, WasPoisonedText
 	call StdBattleTextbox
@@ -3814,11 +3832,13 @@ BattleCommand_Poison:
 	ld a, [wAttackMissed]
 	and a
 	jr nz, .failed
+
 ;effect chance \/
 	ld a, [wEffectFailed]
 	and a
 	ret nz
 ;effect chance /\
+
 	call .check_toxic
 	jr z, .toxic
 
@@ -3849,7 +3869,17 @@ BattleCommand_Poison:
 .apply_poison
 	call AnimateCurrentMove
 	call PoisonOpponent
-	jp RefreshBattleHuds
+;	jp RefreshBattleHuds
+	call RefreshBattlePalettes
+;	ld b, SCGB_BATTLE_COLORS
+;	call GetSGBLayout
+;	call SetPalettes
+;	call DelayFrame	
+;	call UpdateBattleHuds
+;	ld c, 3
+;	call DelayFrames
+;	call WaitBGMap
+	ret
 
 .check_toxic
 	ld a, BATTLE_VARS_SUBSTATUS5_OPP
@@ -4023,7 +4053,16 @@ BattleCommand_FreezeTarget: ;101
 	call UpdateOpponentInParty
 	ld de, ANIM_FRZ
 	call PlayOpponentBattleAnim
-	call RefreshBattleHuds
+;	call RefreshBattleHuds
+	call RefreshBattlePalettes
+;	ld b, SCGB_BATTLE_COLORS
+;	call GetSGBLayout
+;	call SetPalettes
+;	call DelayFrame	
+;	call UpdateBattleHuds
+;	ld c, 3
+;	call DelayFrames
+;	call WaitBGMap
 
 	ld hl, WasFrozenText
 	call StdBattleTextbox
@@ -4083,7 +4122,17 @@ BattleCommand_ParalyzeTarget: ;71
 	call CallBattleCore
 	ld de, ANIM_PAR
 	call PlayOpponentBattleAnim
-	call RefreshBattleHuds
+;	call RefreshBattleHuds
+	call RefreshBattlePalettes
+;	ld b, SCGB_BATTLE_COLORS
+;	call GetSGBLayout
+;	call SetPalettes
+;	call DelayFrame	
+;	call UpdateBattleHuds
+;	ld c, 3
+;	call DelayFrames
+;	call WaitBGMap
+
 	call PrintParalyze
 	ld hl, UseHeldStatusHealingItem
 	jp CallBattleCore
@@ -4120,7 +4169,16 @@ BattleCommand_BurnTarget: ;85
 	call CallBattleCore
 	ld de, ANIM_BRN
 	call PlayOpponentBattleAnim
-	call RefreshBattleHuds
+;	call RefreshBattleHuds
+	call RefreshBattlePalettes
+;	ld b, SCGB_BATTLE_COLORS
+;	call GetSGBLayout
+;	call SetPalettes
+;	call DelayFrame	
+;	call UpdateBattleHuds
+;	ld c, 3
+;	call DelayFrames
+;	call WaitBGMap
 
 	ld hl, WasBurnedText
 	call StdBattleTextbox
@@ -5273,10 +5331,10 @@ BattleCommand_EndLoop:
 	ld a, 1
 	jr z, .double_hit
 	ld a, [hl]
-	cp EFFECT_BEAT_UP
-	jr z, .beat_up
-	cp EFFECT_TRIPLE_KICK
-	jr nz, .not_triple_kick
+;	cp EFFECT_BEAT_UP
+;	jr z, .beat_up
+;	cp EFFECT_TRIPLE_KICK
+;	jr nz, .not_triple_kick
 .reject_triple_kick_sample
 	call BattleRandom
 	and $3
@@ -5345,8 +5403,8 @@ BattleCommand_EndLoop:
 
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
-	cp EFFECT_BEAT_UP
-	jr nz, .not_beat_up
+;	cp EFFECT_BEAT_UP
+;	jr nz, .not_beat_up
 	ld a, [wBeatUpHitAtLeastOnce]
 	and a
 	jr z, .end
@@ -5715,7 +5773,7 @@ BattleCommand_TrapTarget:
 ;	dbw CLAMP,     ClampedByText     ; 'was CLAMPED by'
 	dbw WHIRLPOOL, WhirlpoolTrapText ; 'was trapped!'
 
-INCLUDE "engine/battle/move_effects/mist.asm"
+;INCLUDE "engine/battle/move_effects/mist.asm"
 
 INCLUDE "engine/battle/move_effects/focus_energy.asm"
 
@@ -5884,10 +5942,10 @@ BattleCommand_Paralyze:
 	ld a, BATTLE_VARS_STATUS_OPP
 	call GetBattleVar
 	bit PAR, a
-	jr nz, .paralyzed
+	jp nz, .paralyzed
 	ld a, [wTypeModifier]
 	and $7f
-	jr z, .didnt_affect
+	jp z, .didnt_affect
 	call GetOpponentItem
 	ld a, b
 	cp HELD_PREVENT_PARALYZE
@@ -5920,6 +5978,12 @@ BattleCommand_Paralyze:
 	call UpdateOpponentInParty
 	ld hl, ApplyPrzEffectOnSpeed
 	call CallBattleCore
+
+	ld b, SCGB_BATTLE_COLORS
+	call GetSGBLayout
+	call SetPalettes
+	call DelayFrame
+
 	call UpdateBattleHuds
 	call PrintParalyze
 	ld hl, UseHeldStatusHealingItem
@@ -5996,7 +6060,7 @@ DoubleDamage:
 .quit
 	ret
 
-INCLUDE "engine/battle/move_effects/mimic.asm"
+;INCLUDE "engine/battle/move_effects/mimic.asm"
 
 INCLUDE "engine/battle/move_effects/leech_seed.asm"
 
@@ -6110,7 +6174,17 @@ BattleCommand_Heal:
 	call CallBattleCore
 	call BattleCommand_SwitchTurn
 	call UpdateUserInParty
-	call RefreshBattleHuds
+;	call RefreshBattleHuds
+	call RefreshBattlePalettes
+;	ld b, SCGB_BATTLE_COLORS
+;	call GetSGBLayout
+;	call SetPalettes
+;	call DelayFrame	
+;	call UpdateBattleHuds
+;	ld c, 3
+;	call DelayFrames
+;	call WaitBGMap
+
 	ld hl, RegainedHealthText
 	jp StdBattleTextbox
 
@@ -6247,7 +6321,7 @@ CheckSubstituteOpp:
 
 INCLUDE "engine/battle/move_effects/selfdestruct.asm"
 
-INCLUDE "engine/battle/move_effects/mirror_move.asm"
+;INCLUDE "engine/battle/move_effects/mirror_move.asm"
 
 INCLUDE "engine/battle/move_effects/metronome.asm"
 
@@ -6342,7 +6416,17 @@ BattleCommand_Defrost:
 	res FRZ, [hl]
 
 .done
-	call RefreshBattleHuds
+;	call RefreshBattleHuds
+	call RefreshBattlePalettes
+;	ld b, SCGB_BATTLE_COLORS
+;	call GetSGBLayout
+;	call SetPalettes
+;	call DelayFrame	
+;	call UpdateBattleHuds
+;	ld c, 3
+;	call DelayFrames
+;	call WaitBGMap
+
 	ld hl, WasDefrostedText
 	jp StdBattleTextbox
 
@@ -6370,11 +6454,11 @@ INCLUDE "engine/battle/move_effects/fury_cutter.asm"
 
 INCLUDE "engine/battle/move_effects/attract.asm"
 
-INCLUDE "engine/battle/move_effects/return.asm"
+;INCLUDE "engine/battle/move_effects/return.asm"
 
-INCLUDE "engine/battle/move_effects/present.asm"
+;INCLUDE "engine/battle/move_effects/present.asm"
 
-INCLUDE "engine/battle/move_effects/frustration.asm"
+;INCLUDE "engine/battle/move_effects/frustration.asm"
 
 INCLUDE "engine/battle/move_effects/safeguard.asm"
 
@@ -6496,7 +6580,7 @@ INCLUDE "engine/battle/move_effects/sunny_day.asm"
 
 INCLUDE "engine/battle/move_effects/belly_drum.asm"
 
-INCLUDE "engine/battle/move_effects/psych_up.asm"
+;INCLUDE "engine/battle/move_effects/psych_up.asm"
 
 INCLUDE "engine/battle/move_effects/mirror_coat.asm"
 
