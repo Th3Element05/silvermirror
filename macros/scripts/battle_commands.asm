@@ -31,7 +31,7 @@ ENDM
 	command freezetarget            ; 18
 	command paralyzetarget          ; 19
 	command selfdestruct            ; 1a
-	command mirrormove              ; 1b
+;	command mirrormove              ; 1b
 	command statup                  ; 1c
 	command statdown                ; 1d
 	command payday                  ; 1e
@@ -44,7 +44,7 @@ ENDM
 	command flinchtarget            ; 25
 	command ohko                    ; 26
 	command recoil                  ; 27
-	command mist                    ; 28
+;	command mist                    ; 28
 	command focusenergy             ; 29
 	command confuse                 ; 2a
 	command confusetarget           ; 2b
@@ -55,7 +55,7 @@ ENDM
 	command paralyze                ; 30
 	command substitute              ; 31
 	command rechargenextturn        ; 32
-	command mimic                   ; 33
+;	command mimic                   ; 33
 	command metronome               ; 34
 	command leechseed               ; 35
 	command splash                  ; 36
@@ -78,12 +78,12 @@ ENDM
 	command defrostopponent         ; 47
 	command sleeptalk               ; 48
 	command destinybond             ; 49
-	command spite                   ; 4a
+;	command spite                   ; 4a
 	command falseswipe              ; 4b
 	command healbell                ; 4c
 	command kingsrock               ; 4d
-	command triplekick              ; 4e
-	command kickcounter             ; 4f
+;	command triplekick              ; 4e
+;	command kickcounter             ; 4f
 	command thief                   ; 50
 	command arenatrap               ; 51
 	command nightmare               ; 52
@@ -100,10 +100,10 @@ ENDM
 	command gyroball                ; 5d
 	command furycutter              ; 5e
 	command attract                 ; 5f
-	command happinesspower          ; 60
-	command present                 ; 61
+;	command happinesspower          ; 60
+;	command present                 ; 61
 	command damagecalc              ; 62
-	command frustrationpower        ; 63
+;	command frustrationpower        ; 63
 	command safeguard               ; 64
 	command checksafeguard          ; 65
 	command getmagnitude            ; 66
@@ -154,7 +154,7 @@ ENDM
 	command switchturn              ; 93
 	command fakeout                 ; 94
 	command bellydrum               ; 95
-	command psychup                 ; 96
+;	command psychup                 ; 96
 	command rage                    ; 97
 	command doubleflyingdamage      ; 98
 	command doubleundergrounddamage ; 99
@@ -165,13 +165,13 @@ ENDM
 	command skipsuncharge           ; 9e
 	command thunderaccuracy         ; 9f
 	command teleport                ; a0
-	command beatup                  ; a1
+;	command beatup                  ; a1
 	command resettypematchup        ; a2
 	command allstatsup              ; a3
 	command bidefailtext            ; a4
 	command raisesubnoanim          ; a5
 	command lowersubnoanim          ; a6
-	command beatupfailtext          ; a7
+;	command beatupfailtext          ; a7
 	command clearmissdamage         ; a8
 	command movedelay               ; a9
 	command moveanim                ; aa
