@@ -509,8 +509,8 @@ HornAttackDescription:
 
 FuryStrikesDescription:
 	db   "Scratches or jabs"
-	next "the foe furiously."
-	next "Hits 2-5 times.@"
+	feed "the foe furiously."
+	feed "Hits 2-5 times.@"
 ;FuryAttackDescription:
 ;	db   "Jabs the target"
 ;	next "2-5 times.@"
@@ -654,7 +654,7 @@ SupersonicDescription:
 DisableDescription:
 	db   "A psychic block."
 	feed "Disables the foe's"
-	next "most recent move.@"
+	feed "most recent move.@"
 ;	db   "Disables the foe's"
 ;	next "most recent move.@"
 
@@ -1394,7 +1394,7 @@ ExtrasensoryDescription:
 
 SplashDescription:
 	db   "Has no effect"
-	next "whatsoever.@"
+	feed "whatsoever.@"
 ;	db   "The user splashes"
 ;	feed "around uselessly"
 ;	feed "with no effect.@"
