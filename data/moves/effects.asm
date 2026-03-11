@@ -177,12 +177,12 @@ DreamEater:
 	buildopponentrage
 	endmove
 
-MirrorMove:
-	checkobedience
-	usedmovetext
-	doturn
-	mirrormove
-	endmove
+;MirrorMove:
+;	checkobedience
+;	usedmovetext
+;	doturn
+;	mirrormove
+;	endmove
 
 AttackUp:
 	checkobedience
@@ -952,12 +952,12 @@ RecoilHit:
 	kingsrock
 	endmove
 
-Mist:
-	checkobedience
-	usedmovetext
-	doturn
-	mist
-	endmove
+;Mist:
+;	checkobedience
+;	usedmovetext
+;	doturn
+;	mist
+;	endmove
 
 FocusEnergy:
 	checkobedience
@@ -1131,13 +1131,13 @@ Rage:
 	kingsrock
 	endmove
 
-Mimic:
-	checkobedience
-	usedmovetext
-	doturn
-	checkhit
-	mimic
-	endmove
+;Mimic:
+;	checkobedience
+;	usedmovetext
+;	doturn
+;	checkhit
+;	mimic
+;	endmove
 
 Metronome:
 	checkobedience
@@ -1367,13 +1367,13 @@ DestinyBond:
 	destinybond
 	endmove
 
-Spite:
-	checkobedience
-	usedmovetext
-	doturn
-	checkhit
-	spite
-	endmove
+;Spite:
+;	checkobedience
+;	usedmovetext
+;	doturn
+;	checkhit
+;	spite
+;	endmove
 
 FalseSwipe:
 	checkobedience
@@ -1403,33 +1403,33 @@ HealBell:
 	healbell
 	endmove
 
-TripleKick:
-	checkobedience
-	usedmovetext
-	doturn
-	startloop
-	lowersub
-	checkhit
-	critical
-	damagestats
-	damagecalc
-	triplekick
-	stab
-	damagevariation
-	clearmissdamage
-	moveanimnosub
-	failuretext
-	applydamage
-	criticaltext
-	cleartext
-	supereffectivelooptext
-	checkfaint
-	buildopponentrage
-	kickcounter
-	endloop
-	raisesub
-	kingsrock
-	endmove
+;TripleKick:
+;	checkobedience
+;	usedmovetext
+;	doturn
+;	startloop
+;	lowersub
+;	checkhit
+;	critical
+;	damagestats
+;	damagecalc
+;	triplekick
+;	stab
+;	damagevariation
+;	clearmissdamage
+;	moveanimnosub
+;	failuretext
+;	applydamage
+;	criticaltext
+;	cleartext
+;	supereffectivelooptext
+;	checkfaint
+;	buildopponentrage
+;	kickcounter
+;	endloop
+;	raisesub
+;	kingsrock
+;	endmove
 
 Thief:
 	checkobedience
@@ -1609,68 +1609,68 @@ Attract:
 	attract
 	endmove
 
-Return:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	happinesspower
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	kingsrock
-	endmove
+;Return:
+;	checkobedience
+;	usedmovetext
+;	doturn
+;	critical
+;	damagestats
+;	happinesspower
+;	damagecalc
+;	stab
+;	damagevariation
+;	checkhit
+;	moveanim
+;	failuretext
+;	applydamage
+;	criticaltext
+;	supereffectivetext
+;	checkfaint
+;	buildopponentrage
+;	kingsrock
+;	endmove
 
-Present:
-	checkobedience
-	usedmovetext
-	doturn
-	checkhit
-	critical
-	damagestats
-	present
-	damagecalc
-	stab
-	damagevariation
-	clearmissdamage
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	kingsrock
-	endmove
+;Present:
+;	checkobedience
+;	usedmovetext
+;	doturn
+;	checkhit
+;	critical
+;	damagestats
+;	present
+;	damagecalc
+;	stab
+;	damagevariation
+;	clearmissdamage
+;	failuretext
+;	applydamage
+;	criticaltext
+;	supereffectivetext
+;	checkfaint
+;	buildopponentrage
+;	kingsrock
+;	endmove
 
-Frustration:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	frustrationpower
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	kingsrock
-	endmove
+;Frustration:
+;	checkobedience
+;	usedmovetext
+;	doturn
+;	critical
+;	damagestats
+;	frustrationpower
+;	damagecalc
+;	stab
+;	damagevariation
+;	checkhit
+;	moveanim
+;	failuretext
+;	applydamage
+;	criticaltext
+;	supereffectivetext
+;	checkfaint
+;	buildopponentrage
+;	kingsrock
+;	endmove
 
 Safeguard:
 	checkobedience
@@ -1847,12 +1847,12 @@ BellyDrum:
 	bellydrum
 	endmove
 
-PsychUp:
-	checkobedience
-	usedmovetext
-	doturn
-	psychup
-	endmove
+;PsychUp:
+;	checkobedience
+;	usedmovetext
+;	doturn
+;	psychup
+;	endmove
 
 MirrorCoat:
 	checkobedience
@@ -2074,32 +2074,32 @@ Teleport:
 	teleport
 	endmove
 
-BeatUp:
-	checkobedience
-	usedmovetext
-	doturn
-	startloop
-	lowersub
-	checkhit
-	critical
-	beatup
-	damagecalc
-	stab
-	damagevariation
-	clearmissdamage
-	moveanimnosub
-	failuretext
-	applydamage
-	criticaltext
-	cleartext
-	supereffectivelooptext
-	checkfaint
-	buildopponentrage
-	endloop
-	beatupfailtext
-	raisesub
-	kingsrock
-	endmove
+;BeatUp:
+;	checkobedience
+;	usedmovetext
+;	doturn
+;	startloop
+;	lowersub
+;	checkhit
+;	critical
+;	beatup
+;	damagecalc
+;	stab
+;	damagevariation
+;	clearmissdamage
+;	moveanimnosub
+;	failuretext
+;	applydamage
+;	criticaltext
+;	cleartext
+;	supereffectivelooptext
+;	checkfaint
+;	buildopponentrage
+;	endloop
+;	beatupfailtext
+;	raisesub
+;	kingsrock
+;	endmove
 
 DefenseCurl:
 	checkobedience
@@ -2256,22 +2256,22 @@ DragonDance:
 	statupfailtext
 	endmove
 
-Tickle:
-	checkobedience
-	usedmovetext
-	doturn
-	checkhit
-	lowersub
-;	moveanim
-	statdownanim
-	raisesub
-	attackdown
-	statdownmessage
-	statdownfailtext
-	defensedown
-	statdownmessage
-	statdownfailtext
-	endmove
+;Tickle:
+;	checkobedience
+;	usedmovetext
+;	doturn
+;	checkhit
+;	lowersub
+;;	moveanim
+;	statdownanim
+;	raisesub
+;	attackdown
+;	statdownmessage
+;	statdownfailtext
+;	defensedown
+;	statdownmessage
+;	statdownfailtext
+;	endmove
 
 Hex:
 	checkobedience

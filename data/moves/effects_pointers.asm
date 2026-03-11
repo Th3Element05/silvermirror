@@ -10,7 +10,7 @@ MoveEffectsPointers:
 	dw ParalyzeHit
 	dw Selfdestruct
 	dw DreamEater
-	dw MirrorMove
+;	dw MirrorMove
 	dw AttackUp
 	dw DefenseUp
 	dw SpeedUp
@@ -47,7 +47,7 @@ MoveEffectsPointers:
 	dw GyroBall ;EFFECT_UNUSED_2B
 	dw MultiHit
 	dw NormalHit
-	dw Mist
+;	dw Mist
 	dw FocusEnergy
 	dw RecoilHit
 	dw DoConfuse
@@ -83,7 +83,7 @@ MoveEffectsPointers:
 	dw Substitute
 	dw HyperBeam
 	dw Rage
-	dw Mimic
+;	dw Mimic
 	dw Metronome
 	dw LeechSeed
 	dw Splash
@@ -101,11 +101,11 @@ MoveEffectsPointers:
 	dw SleepTalk
 	dw DestinyBond
 	dw Reversal
-	dw Spite
+;	dw Spite
 	dw FalseSwipe
 	dw HealBell
 	dw NormalHit
-	dw TripleKick
+;	dw TripleKick
 	dw Thief
 	dw MeanLook
 	dw Nightmare
@@ -122,9 +122,9 @@ MoveEffectsPointers:
 	dw Swagger
 	dw FuryCutter
 	dw Attract
-	dw Return
-	dw Present
-	dw Frustration
+;	dw Return
+;	dw Present
+;	dw Frustration
 	dw Safeguard
 	dw SacredFire
 	dw Magnitude
@@ -144,7 +144,7 @@ MoveEffectsPointers:
 	dw AllUpHit
 	dw FakeOut
 	dw BellyDrum
-	dw PsychUp
+;	dw PsychUp
 	dw MirrorCoat
 	dw SkullBash
 	dw Twister
@@ -156,11 +156,11 @@ MoveEffectsPointers:
 	dw Solarbeam
 	dw Thunder
 	dw Teleport
-	dw BeatUp
+;	dw BeatUp
 	dw Fly
 	dw DefenseCurl
 	dw DragonDance ;NEW
-	dw Tickle      ;NEW
+;	dw Tickle      ;NEW
 	dw Hex         ;NEW
 	dw HoneClaws   ;NEW
 ;	dw WeightDamage
