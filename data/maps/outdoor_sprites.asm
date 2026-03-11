@@ -420,17 +420,17 @@ DungeonsGroupSprites:
 	db SPRITE_POKE_BALL
 	db 0 ; end
 
-IndigoGroupSprites:
-;Route23        none
-;Route26
-	db SPRITE_COOLTRAINER_M
-	db SPRITE_COOLTRAINER_F
-	db SPRITE_YOUNGSTER
-	db SPRITE_FISHER
-	; 4 of 9 max walking sprites
-	db SPRITE_BERRY
-	db SPRITE_APRICORN
-	db SPRITE_POKEBALL
+;IndigoGroupSprites:
+;;Route23        none
+;;Route26
+;	db SPRITE_COOLTRAINER_M
+;	db SPRITE_COOLTRAINER_F
+;	db SPRITE_YOUNGSTER
+;	db SPRITE_FISHER
+;	; 4 of 9 max walking sprites
+;	db SPRITE_BERRY
+;	db SPRITE_APRICORN
+;	db SPRITE_POKEBALL
 
 SafariZoneGateGroupSprites:
 CableClubGroupSprites:
