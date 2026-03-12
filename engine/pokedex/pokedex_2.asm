@@ -180,7 +180,9 @@ DisplayDexEntry:
 ;	inc hl
 ;	ld [hl], $57 ; 1
 	hlcoord 18, 15
-	ld [hl], $ee ; Down Arrow
+	ld [hl], $57 ;$ee ; Down Arrow
+	hlcoord 6, 17
+	ld [hl], $57 ; Down Arrow
 
 	pop de
 	inc de
@@ -214,7 +216,9 @@ DisplayDexEntry:
 ;	inc hl
 ;	ld [hl], $58 ; 2
 	hlcoord 2, 10
-	ld [hl], $d8 ; Up Arrow
+	ld [hl], $58 ;$d8 ; Up Arrow
+	hlcoord 6, 17
+	ld [hl], $58 ; Up Arrow
 
 	pop de
 	inc de
