@@ -9,25 +9,15 @@ safari zone after battle/core changes for icon gfx
 
 DO
 
+pokedex crash when returning from printer error. remove printer
+
+game corner UPGRADE prize, remove
+
 prevent location evolution in Classic Mode before HOF
 where can you get evo-use items in kanto?
 	?make hold/evo-trade items into hold/level-up? and prevent in Classic
 
-~HAPPINESS
-GOLBAT
-EEVEE
-CHANSEY
-
-~MOVES
-TANGELA		ancientpower
-yanma		ancientpower
-piloswine	ancientpower
-
-~LOCATION
-MAGNETON
-EEVEE
-
-~HOLD-TRADE
+~HOLD-TRADE(ITEM)
 ONIX
 POLIWHIRL
 PORYGON
@@ -40,7 +30,7 @@ sneasel
 gligar
 
 
-remove PORYGON2 instead of DELIBIRD
+
 
 reduce long animations? (*magnezone)
 
