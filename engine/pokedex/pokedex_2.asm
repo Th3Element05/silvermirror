@@ -155,33 +155,37 @@ DisplayDexEntry:
 	ld hl, sp+0
 	ld d, h
 	ld e, l
-	hlcoord 11, 9
+	hlcoord 11, 8 ;11, 9
 	lb bc, 2, (4 << 4) | 5
 	call PrintNum
 	pop de
 
 .skip_weight
 ; Page 1
-	lb bc, 5, SCREEN_WIDTH - 2
-	hlcoord 2, 11
+;	lb bc, 5, SCREEN_WIDTH - 2
+	lb bc, 6, SCREEN_WIDTH - 1
+	hlcoord 1, 10 ;2, 11 ; Pokedex Entry Text Box
 	call ClearBox
-	hlcoord 1, 10
+	hlcoord 1, 9 ;1, 10
 	ld bc, SCREEN_WIDTH - 1
 	ld a, $61 ; horizontal divider
 	call ByteFill
 	; page number
-	hlcoord 1, 9
-	ld [hl], $55
-	inc hl
-	ld [hl], $55
-	hlcoord 1, 10
-	ld [hl], $56 ; P.
-	inc hl
-	ld [hl], $57 ; 1
+;	hlcoord 1, 9 ; Horizontal line above P.#
+;	ld [hl], $55
+;	inc hl
+;	ld [hl], $55
+;	hlcoord 1, 10
+;	ld [hl], $56 ; P.
+;	inc hl
+;	ld [hl], $57 ; 1
+	hlcoord 18, 15
+	ld [hl], $ee ; Down Arrow
+
 	pop de
 	inc de
 	pop af
-	hlcoord 2, 11
+	hlcoord 2, 10 ;2, 11 ; Pokedex Entry Text Start
 	push af
 	call PlaceFarString
 	pop bc
@@ -192,26 +196,30 @@ DisplayDexEntry:
 ; Page 2
 	push bc
 	push de
-	lb bc, 5, SCREEN_WIDTH - 2
-	hlcoord 2, 11
+;	lb bc, 5, SCREEN_WIDTH - 2
+	lb bc, 6, SCREEN_WIDTH - 1
+	hlcoord 1, 10 ;2, 11 ; Pokedex Entry Text Box
 	call ClearBox
-	hlcoord 1, 10
+	hlcoord 1, 9 ;1, 10
 	ld bc, SCREEN_WIDTH - 1
-	ld a, $61
+	ld a, $61 ; horizontal divider
 	call ByteFill
 	; page number
-	hlcoord 1, 9
-	ld [hl], $55
-	inc hl
-	ld [hl], $55
-	hlcoord 1, 10
-	ld [hl], $56 ; P.
-	inc hl
-	ld [hl], $58 ; 2
+;	hlcoord 1, 9
+;	ld [hl], $55
+;	inc hl
+;	ld [hl], $55
+;	hlcoord 1, 10
+;	ld [hl], $56 ; P.
+;	inc hl
+;	ld [hl], $58 ; 2
+	hlcoord 2, 10
+	ld [hl], $d8 ; Up Arrow
+
 	pop de
 	inc de
 	pop af
-	hlcoord 2, 11
+	hlcoord 2, 11 ;2, 11 ; Pokedex Entry Text Start
 	call PlaceFarString
 	ret
 
