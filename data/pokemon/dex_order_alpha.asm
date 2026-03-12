@@ -37,7 +37,7 @@ AlphabeticalPokedexOrder:
 	db CROCONAW
 	db CUBONE
 	db CYNDAQUIL
-;	db DELIBIRD
+	db DELIBIRD
 	db DEWGONG
 	db DIGLETT
 	db DITTO
@@ -179,7 +179,7 @@ AlphabeticalPokedexOrder:
 	db POLIWRATH
 	db PONYTA
 	db PORYGON
-	db PORYGON2
+;	db PORYGON2
 	db PRIMEAPE
 	db PSYDUCK
 	db PUPITAR

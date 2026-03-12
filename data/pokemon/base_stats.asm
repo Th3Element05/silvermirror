@@ -253,7 +253,7 @@ INCLUDE "data/pokemon/base_stats/mamoswine.asm" ;MAMOSWINE
 INCLUDE "data/pokemon/base_stats/corsola.asm"
 INCLUDE "data/pokemon/base_stats/remoraid.asm"
 INCLUDE "data/pokemon/base_stats/octillery.asm"
-;INCLUDE "data/pokemon/base_stats/delibird.asm" ; replaced
+INCLUDE "data/pokemon/base_stats/delibird.asm" ; replaced
 INCLUDE "data/pokemon/base_stats/mantine.asm"
 INCLUDE "data/pokemon/base_stats/skarmory.asm"
 INCLUDE "data/pokemon/base_stats/houndour.asm"
@@ -261,7 +261,7 @@ INCLUDE "data/pokemon/base_stats/houndoom.asm"
 INCLUDE "data/pokemon/base_stats/kingdra.asm"
 INCLUDE "data/pokemon/base_stats/phanpy.asm"
 INCLUDE "data/pokemon/base_stats/donphan.asm"
-INCLUDE "data/pokemon/base_stats/porygon2.asm"
+;INCLUDE "data/pokemon/base_stats/porygon2.asm"
 INCLUDE "data/pokemon/base_stats/stantler.asm"
 INCLUDE "data/pokemon/base_stats/smeargle.asm"
 INCLUDE "data/pokemon/base_stats/tyrogue.asm"

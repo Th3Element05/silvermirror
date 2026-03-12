@@ -85,7 +85,7 @@ Pokered_MonIndices:
 	db NINETALES
 	db PIKACHU
 	db RAICHU
-;	db DELIBIRD ; missingno.
+	db DELIBIRD ; missingno.
 	db LEAFEON ;LEAFEON
 	db MANTINE ; missingno.
 	db DRATINI
@@ -134,7 +134,7 @@ Pokered_MonIndices:
 	db MEWTWO
 	db SNORLAX
 	db MAGIKARP
-	db PORYGON2 ; missingno.
+;	db PORYGON2 ; missingno.
 	db STANTLER ; missingno.
 	db MUK
 	db SMEARGLE ; missingno.

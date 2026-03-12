@@ -229,7 +229,7 @@ AnimationPointers:
 	dw CorsolaAnimation
 	dw RemoraidAnimation
 	dw OctilleryAnimation
-;	dw DelibirdAnimation
+	dw DelibirdAnimation
 	dw MantineAnimation
 	dw SkarmoryAnimation
 	dw HoundourAnimation
@@ -237,7 +237,7 @@ AnimationPointers:
 	dw KingdraAnimation
 	dw PhanpyAnimation
 	dw DonphanAnimation
-	dw Porygon2Animation
+;	dw Porygon2Animation
 	dw StantlerAnimation
 	dw SmeargleAnimation
 	dw TyrogueAnimation

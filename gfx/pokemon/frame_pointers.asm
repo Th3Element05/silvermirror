@@ -229,7 +229,7 @@ FramesPointers:
 	dw CorsolaFrames
 	dw RemoraidFrames
 	dw OctilleryFrames
-;	dw DelibirdFrames
+	dw DelibirdFrames
 	dw MantineFrames
 	dw SkarmoryFrames
 	dw HoundourFrames
@@ -237,7 +237,7 @@ FramesPointers:
 	dw KingdraFrames
 	dw PhanpyFrames
 	dw DonphanFrames
-	dw Porygon2Frames
+;	dw Porygon2Frames
 	dw StantlerFrames
 	dw SmeargleFrames
 	dw TyrogueFrames

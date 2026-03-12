@@ -232,7 +232,7 @@ IconPointers:
 	dw CorsolaIcon
 	dw RemoraidIcon
 	dw OctilleryIcon
-;	dw DelibirdIcon
+	dw DelibirdIcon
 	dw MantineIcon
 	dw SkarmoryIcon
 	dw HoundourIcon
@@ -240,7 +240,7 @@ IconPointers:
 	dw KingdraIcon
 	dw PhanpyIcon
 	dw DonphanIcon
-	dw Porygon2Icon
+;	dw Porygon2Icon ;replaced
 	dw StantlerIcon
 	dw SmeargleIcon
 	dw TyrogueIcon

@@ -232,7 +232,7 @@ NewPokedexOrder:
 	db CORSOLA
 	db REMORAID
 	db OCTILLERY
-;	db DELIBIRD
+	db DELIBIRD
 	db MANTINE
 	db SKARMORY
 	db HOUNDOUR
@@ -240,7 +240,7 @@ NewPokedexOrder:
 	db KINGDRA
 	db PHANPY
 	db DONPHAN
-	db PORYGON2
+;	db PORYGON2
 	db STANTLER
 	db SMEARGLE
 	db TYROGUE
