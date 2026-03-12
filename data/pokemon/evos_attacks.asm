@@ -2417,8 +2417,8 @@ GlaceonEvosAttacks: ; GEN6/7
 	db 0 ; no more level-up moves
 
 PorygonEvosAttacks:
-	db EVOLVE_ITEM, UP_GRADE, PORYGON2
-	db EVOLVE_TRADE, UP_GRADE, PORYGON2
+;	db EVOLVE_ITEM, UP_GRADE, PORYGON2
+;	db EVOLVE_TRADE, UP_GRADE, PORYGON2
 	db 0 ; no more evolutions
 ;	db 1, conversion2, removed
 	db 1, TACKLE
@@ -4299,25 +4299,25 @@ DonphanEvosAttacks:
 	db 54, GIGA_IMPACT
 	db 0 ; no more level-up moves
 
-Porygon2EvosAttacks:
-	db 0 ; no more evolutions
-;	db 1, conversion2, removed
-	db 1, TACKLE
-	db 1, CONVERSION
-	db 1, SWORDS_DANCE ;SHARPEN, tm
-	db 7, PSYBEAM
-	db 12, AGILITY
-	db 18, RECOVER
-	db 23, BARRIER ;magnet_rise, x
-	db 29, SIGNAL_BEAM
-	db 34, THUNDER_WAVE ;recycle
-	db 40, DISCHARGE
-	db 45, LOCK_ON
-	db 51, TRI_ATTACK
-	db 56, MIRROR_COAT ;magic_coat, x
-	db 62, ZAP_CANNON
-	db 67, HYPER_BEAM
-	db 0 ; no more level-up moves
+;Porygon2EvosAttacks:
+;	db 0 ; no more evolutions
+;;	db 1, conversion2, removed
+;	db 1, TACKLE
+;	db 1, CONVERSION
+;	db 1, SWORDS_DANCE ;SHARPEN, tm
+;	db 7, PSYBEAM
+;	db 12, AGILITY
+;	db 18, RECOVER
+;	db 23, BARRIER ;magnet_rise, x
+;	db 29, SIGNAL_BEAM
+;	db 34, THUNDER_WAVE ;recycle
+;	db 40, DISCHARGE
+;	db 45, LOCK_ON
+;	db 51, TRI_ATTACK
+;	db 56, MIRROR_COAT ;magic_coat, x
+;	db 62, ZAP_CANNON
+;	db 67, HYPER_BEAM
+;	db 0 ; no more level-up moves
 
 StantlerEvosAttacks:
 	db 0 ; no more evolutions

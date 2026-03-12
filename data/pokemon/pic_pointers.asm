@@ -466,8 +466,8 @@ PokemonPicPointers::
 	dba_pic RemoraidBackpic
 	dba_pic OctilleryFrontpic
 	dba_pic OctilleryBackpic
-;	dba_pic DelibirdFrontpic
-;	dba_pic DelibirdBackpic
+	dba_pic DelibirdFrontpic
+	dba_pic DelibirdBackpic
 	dba_pic MantineFrontpic
 	dba_pic MantineBackpic
 	dba_pic SkarmoryFrontpic
@@ -482,8 +482,8 @@ PokemonPicPointers::
 	dba_pic PhanpyBackpic
 	dba_pic DonphanFrontpic
 	dba_pic DonphanBackpic
-	dba_pic Porygon2Frontpic
-	dba_pic Porygon2Backpic
+;	dba_pic Porygon2Frontpic
+;	dba_pic Porygon2Backpic
 	dba_pic StantlerFrontpic
 	dba_pic StantlerBackpic
 	dba_pic SmeargleFrontpic

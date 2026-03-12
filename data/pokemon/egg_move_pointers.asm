@@ -230,7 +230,7 @@ EggMovePointers::
 	dw CorsolaEggMoves
 	dw RemoraidEggMoves
 	dw NoEggMoves
-;	dw DelibirdEggMoves ; replaced
+	dw DelibirdEggMoves ; replaced
 	dw MantineEggMoves
 	dw SkarmoryEggMoves
 	dw HoundourEggMoves
@@ -238,7 +238,7 @@ EggMovePointers::
 	dw NoEggMoves
 	dw PhanpyEggMoves
 	dw NoEggMoves
-	dw NoEggMoves
+;	dw NoEggMoves ;PORYGON2
 	dw StantlerEggMoves
 	dw NoEggMoves
 	dw TyrogueEggMoves

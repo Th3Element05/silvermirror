@@ -761,14 +761,14 @@ RemoraidEggMoves:
 	db SCREECH
 	db -1 ; end
 
-;DelibirdEggMoves:
-;	db AURORA_BEAM
-;	db QUICK_ATTACK
-;	db FUTURE_SIGHT
-;	db SPLASH
-;	db RAPID_SPIN
-;;	db DETECT       ;removed
-;	db -1 ; end
+DelibirdEggMoves:
+	db AURORA_BEAM
+	db QUICK_ATTACK
+	db FUTURE_SIGHT
+	db SPLASH
+	db RAPID_SPIN
+;	db DETECT       ;removed
+	db -1 ; end
 
 MantineEggMoves:
 	db TWISTER

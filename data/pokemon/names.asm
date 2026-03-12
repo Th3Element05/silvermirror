@@ -230,7 +230,7 @@ PokemonNames::
 	db "CORSOLA@@@"
 	db "REMORAID@@"
 	db "OCTILLERY@"
-;	db "DELIBIRD@@" ;replaced
+	db "DELIBIRD@@" ;replaced
 	db "MANTINE@@@"
 	db "SKARMORY@@"
 	db "HOUNDOUR@@"
@@ -238,7 +238,7 @@ PokemonNames::
 	db "KINGDRA@@@"
 	db "PHANPY@@@@"
 	db "DONPHAN@@@"
-	db "PORYGON2@@"
+;	db "PORYGON2@@"
 	db "STANTLER@@"
 	db "SMEARGLE@@"
 	db "TYROGUE@@@"

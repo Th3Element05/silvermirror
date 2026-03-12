@@ -236,7 +236,7 @@ MonMenuIconPals:
 	icon_pals PINK,   BLUE     ; CORSOLA
 	icon_pals BLUE,   PURPLE   ; REMORAID
 	icon_pals RED,    GREEN    ; OCTILLERY
-;	icon_pals RED,    PURPLE   ; DELIBIRD
+	icon_pals RED,    PURPLE   ; DELIBIRD
 	icon_pals BLUE,   GRAY     ; MANTINE
 	icon_pals GRAY,   BROWN    ; SKARMORY
 	icon_pals RED,    BLUE     ; HOUNDOUR
@@ -244,7 +244,7 @@ MonMenuIconPals:
 	icon_pals BLUE,   PURPLE   ; KINGDRA
 	icon_pals GRAY,   GRAY     ; PHANPY
 	icon_pals GRAY,   BROWN    ; DONPHAN
-	icon_pals BLUE,   GRAY     ; PORYGON2
+;	icon_pals BLUE,   GRAY     ; PORYGON2
 	icon_pals BROWN,  GREEN    ; STANTLER
 	icon_pals BROWN,  GREEN    ; SMEARGLE
 	icon_pals BROWN,  BLUE     ; TYROGUE
