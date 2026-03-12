@@ -111,7 +111,7 @@ Landmarks:
 	landmark  12, 100, TohjoFallsName
 	landmark  16,  76, Route28Name
 ; end
-	landmark 120,  34, BillsBackYardName
+	landmark 116,  27, BillsBackYardName
 	landmark 108,  76, UndergroundName
 	landmark 100,  92, SSAnneName
 	landmark  84,  68, RocketHideoutName
