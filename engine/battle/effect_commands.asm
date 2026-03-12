@@ -1060,7 +1060,7 @@ BattleCommand_DoTurn:
 ;.mimic
 ;	ld hl, wWildMonPP
 ;	call .consume_pp
-;	ret
+	ret
 
 .out_of_pp
 	call BattleCommand_MoveDelay
