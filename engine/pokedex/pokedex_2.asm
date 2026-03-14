@@ -179,7 +179,7 @@ DisplayDexEntry:
 ;	ld [hl], $56 ; P.
 ;	inc hl
 ;	ld [hl], $57 ; 1
-	hlcoord 18, 15
+	hlcoord 1, 15 ;18, 15
 	ld [hl], $57 ;$ee ; Down Arrow
 	hlcoord 6, 17
 	ld [hl], $57 ; Down Arrow
@@ -215,7 +215,7 @@ DisplayDexEntry:
 ;	ld [hl], $56 ; P.
 ;	inc hl
 ;	ld [hl], $58 ; 2
-	hlcoord 2, 10
+	hlcoord 1, 10
 	ld [hl], $58 ;$d8 ; Up Arrow
 	hlcoord 6, 17
 	ld [hl], $58 ; Up Arrow
