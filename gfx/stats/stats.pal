@@ -1,6 +1,19 @@
 ; pink
-	RGB 31, 19, 31
+	RGB 31, 26, 31
 ; green
-	RGB 21, 31, 14
+	RGB 28, 31, 26
 ; blue
-	RGB 17, 31, 31
+	RGB 26, 31, 31
+;; orange
+;	RGB 31, 28, 25
+
+
+; OG page bg colors
+;; pink
+;	RGB 31, 19, 31
+;; green
+;	RGB 21, 31, 14
+;; blue
+;	RGB 17, 31, 31
+;;; orange
+;;	RGB 30, 24, 16

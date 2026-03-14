@@ -604,7 +604,6 @@ LoadPinkPage:
 ;	pop hl
 ;	jr nz, .done_status
 ;	jr .StatusOK
-
 	predef GetStatusConditionIndex
 	ld a, d
 	and a
@@ -625,7 +624,6 @@ LoadPinkPage:
 	ld [hli], a
 	inc a ; status tile 2nd half
 	ld [hl], a
-	
 	jr .done_status
 
 .HasPokerus:
@@ -634,6 +632,7 @@ LoadPinkPage:
 	call PlaceString
 ;	jr .done_status
 	jr .NotImmuneToPkrs
+
 .StatusOK:
 	hlcoord 7, 12
 	ld de, .OK_str
@@ -802,7 +801,6 @@ PrintMonTypeTiles:
 	inc hl
 	ld [hl], $5f
 	ret
-
 
 
 LoadGreenPage:
@@ -1223,9 +1221,11 @@ StatsScreen_LoadPageIndicators:
 	ld [hl], a
 	pop bc
 	ret
+
 .load_highlighted_square_alt
 	ld a, $46 ; first of 4 large square tiles, alternate Gray pixels for use of 3rd color slot
 	jr .load_square
+
 
 CopyNickname:
 	ld de, wStringBuffer1

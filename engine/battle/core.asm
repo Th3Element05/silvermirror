@@ -2016,24 +2016,24 @@ GetMaxHP:
 	ld c, a
 	ret
 
-GetHalfHP: ; unreferenced
-	ld hl, wBattleMonHP
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .ok
-	ld hl, wEnemyMonHP
-.ok
-	ld a, [hli]
-	ld b, a
-	ld a, [hli]
-	ld c, a
-	srl b
-	rr c
-	ld a, [hli]
-	ld [wHPBuffer1 + 1], a
-	ld a, [hl]
-	ld [wHPBuffer1], a
-	ret
+;GetHalfHP: ; unreferenced
+;	ld hl, wBattleMonHP
+;	ldh a, [hBattleTurn]
+;	and a
+;	jr z, .ok
+;	ld hl, wEnemyMonHP
+;.ok
+;	ld a, [hli]
+;	ld b, a
+;	ld a, [hli]
+;	ld c, a
+;	srl b
+;	rr c
+;	ld a, [hli]
+;	ld [wHPBuffer1 + 1], a
+;	ld a, [hl]
+;	ld [wHPBuffer1], a
+;	ret
 
 CheckUserHasEnoughHP:
 	ld hl, wBattleMonHP + 1
@@ -4858,8 +4858,8 @@ PrintPlayerHUD:
 	ld [hl], $70
 	inc hl
 	ld [hl], $71
-.status_done
 
+.status_done
 ;	hlcoord 14, 8
 ;	push af ; back up gender
 ;	push hl
@@ -4874,9 +4874,7 @@ PrintPlayerHUD:
 ;	dec hl ; genderless
 ;
 ;.copy_level
-
 	hlcoord 14, 8 ; where the player mon's lvl is printed
-
 	ld a, [wBattleMonLevel]
 	ld [wTempMonLevel], a
 	jp PrintLevel
@@ -4949,8 +4947,8 @@ DrawEnemyHUD:
 	ld [hl], $72 ; enemy status left half
 	inc hl
 	ld [hl], $73 ; enemy status left half
-.status_done
 
+.status_done
 ;	hlcoord 6, 1
 ;	push af
 ;	push hl
@@ -4964,9 +4962,7 @@ DrawEnemyHUD:
 ;	jr nz, .print_level
 ;	dec hl
 ;.print_level
-
 	hlcoord 6, 1 ; enemy's level
-
 	ld a, [wEnemyMonLevel]
 	ld [wTempMonLevel], a
 	call PrintLevel
@@ -6004,9 +6000,9 @@ MoveInfoBox:
 ;	hlcoord 0, 8
 ;	ld b, 3
 ;	ld c, 9
-	hlcoord 0, 9 ;0, 7 ; upper right corner of the textbox ;0, 9 ;
-	ld b, 2 ;4 ; Box height ;2 ;
-	ld c, 8 ;7 ; Box length ;8 ;
+	hlcoord 0, 9 ; upper left corner of the MoveInfoBox
+	ld b, 2 ; box height (not including border)
+	ld c, 8 ; box width (not including border)
 
 	call Textbox
 	call MobileTextBorder
@@ -6022,8 +6018,8 @@ MoveInfoBox:
 	cp b
 	jr nz, .not_disabled
 
-;	hlcoord 1, 10
-	hlcoord 1, 11
+;	hlcoord 1, 10 ; location for "Disabled" text
+	hlcoord 1, 11 ; location for "Disabled" text
 	ld de, .Disabled
 	call PlaceString
 ;	jr .done
@@ -6080,17 +6076,17 @@ MoveInfoBox:
 	call AddNTimes
 	ld d, h
 	ld e, l
-	ld hl, vTiles2 tile $55 
+	ld hl, vTiles2 tile $79 ;$55 
 	lb bc, BANK(TypeIconGFX), 4 ; bank in 'b', Num of Tiles in 'c'
 	call Request1bpp
 	hlcoord 1, 10 ;4, 11 ; placing the Type Tiles in  the MoveInfoBox
-	ld [hl], $55
+	ld [hl], $79 ;$55
 	inc hl
-	ld [hl], $56
+	ld [hl], $7a ;$56
 	inc hl
-	ld [hl], $57
+	ld [hl], $7b ;$57
 	inc hl
-	ld [hl], $58
+	ld [hl], $7c ;$58
 
 ;	ld h, b
 ;	ld l, c
@@ -6113,13 +6109,13 @@ MoveInfoBox:
 	call AddNTimes
 	ld d, h
 	ld e, l
-	ld hl, vTiles2 tile $59
+	ld hl, vTiles2 tile $7d ;$59
 	lb bc, BANK(CategoryIconGFX), 2 ; bank in 'b', Num of Tiles in 'c'
 	call Request2bpp ; Load 2bpp at b:de to occupy c tiles of hl.
 	hlcoord 5, 10 ;1, 11 ; placing the Category Tiles in the MoveInfoBox
-	ld [hl], $59
+	ld [hl], $7d ;$59
 	inc hl
-	ld [hl], $5a
+	ld [hl], $7e ;$5a
 
 .classic
 
@@ -6182,7 +6178,7 @@ MoveInfoBox:
 	ret
 
 .Disabled:
-	db "DISABLED@" ;"Disabled!@"
+	db "DISABLED@"
 .Type:
 	db "TYPE/@"
 
@@ -6193,7 +6189,7 @@ MoveInfoBox:
 ;	jr c, .ok
 ;	hlcoord 5, 11
 ;.ok
-	hlcoord 3, 11 ;3, 10
+	hlcoord 4, 11 ; location of PP values
 	push hl
 	ld de, wStringBuffer1
 	lb bc, 1, 2
@@ -6207,8 +6203,8 @@ MoveInfoBox:
 	lb bc, 1, 2
 	set 6, b
 	call PrintNum
-	hlcoord 1, 11 ;1, 10
-	ld a, "P"
+	hlcoord 1, 11
+	ld a, $75 ;"P"
 	ld [hli], a
 	ld [hl], a
 	ret
@@ -6219,7 +6215,6 @@ MoveInfoBox:
 ;	db "---@"
 ;.accuracy_string:
 ;	db "AC@"
-
 
 CheckPlayerHasUsableMoves:
 	ld a, STRUGGLE
@@ -7013,16 +7008,16 @@ CheckUnownLetter:
 
 INCLUDE "data/wild/unlocked_unowns.asm"
 
-SwapBattlerLevels: ; unreferenced
-	push bc
-	ld a, [wBattleMonLevel]
-	ld b, a
-	ld a, [wEnemyMonLevel]
-	ld [wBattleMonLevel], a
-	ld a, b
-	ld [wEnemyMonLevel], a
-	pop bc
-	ret
+;SwapBattlerLevels: ; unreferenced
+;	push bc
+;	ld a, [wBattleMonLevel]
+;	ld b, a
+;	ld a, [wEnemyMonLevel]
+;	ld [wBattleMonLevel], a
+;	ld a, b
+;	ld [wEnemyMonLevel], a
+;	pop bc
+;	ret
 
 BattleWinSlideInEnemyTrainerFrontpic:
 	xor a
@@ -7378,19 +7373,19 @@ _LoadHPBar:
 	callfar LoadHPBar
 	ret
 
-LoadHPExpBarGFX: ; unreferenced
-	ld de, EnemyHPBarBorderGFX
-	ld hl, vTiles2 tile $6c
-	lb bc, BANK(EnemyHPBarBorderGFX), 4
-	call Get1bpp
-	ld de, HPExpBarBorderGFX
-	ld hl, vTiles2 tile $73
-	lb bc, BANK(HPExpBarBorderGFX), 6
-	call Get1bpp
-	ld de, ExpBarGFX
-	ld hl, vTiles2 tile $55
-	lb bc, BANK(ExpBarGFX), 8
-	jp Get2bpp
+;LoadHPExpBarGFX: ; unreferenced
+;	ld de, EnemyHPBarBorderGFX
+;	ld hl, vTiles2 tile $6c
+;	lb bc, BANK(EnemyHPBarBorderGFX), 4
+;	call Get1bpp
+;	ld de, HPExpBarBorderGFX
+;	ld hl, vTiles2 tile $73
+;	lb bc, BANK(HPExpBarBorderGFX), 6
+;	call Get1bpp
+;	ld de, ExpBarGFX
+;	ld hl, vTiles2 tile $55
+;	lb bc, BANK(ExpBarGFX), 8
+;	jp Get2bpp
 
 EmptyBattleTextbox:
 	ld hl, .empty
@@ -8302,9 +8297,9 @@ GoodComeBackText:
 	text_far _GoodComeBackText
 	text_end
 
-TextJump_ComeBack: ; unreferenced
-	ld hl, ComeBackText
-	ret
+;TextJump_ComeBack: ; unreferenced
+;	ld hl, ComeBackText
+;	ret
 
 ComeBackText:
 	text_far _ComeBackText
@@ -8469,21 +8464,7 @@ PlaceExpBar:
 .next
 	add $8
 	jr z, .loop2
-;	add $54 ; tile to the left of small exp bar tile
-
-	push hl
-	push af
-	hlcoord 9, 0 ; coord of HP bar label, usually 0,9
-	ld a, [hl]
-	ld b, $62
-	cp $e8 ; if we are in stats screen
-	jr nz, .inbattle
-	ld b, $54
-.inbattle
-	pop af
-	pop hl
-	add b
-
+	add $54 ; tile to the left of small exp bar tile
 	jr .skip
 
 .loop2
@@ -8577,9 +8558,9 @@ StartBattle:
 	scf
 	ret
 
-CallDoBattle: ; unreferenced
-	call DoBattle
-	ret
+;CallDoBattle: ; unreferenced
+;	call DoBattle
+;	ret
 
 BattleIntro:
 	farcall StubbedTrainerRankings_Battles ; mobile
@@ -8752,56 +8733,56 @@ InitEnemyWildmon:
 	predef PlaceGraphic
 	ret
 
-FillEnemyMovesFromMoveIndicesBuffer: ; unreferenced
-	ld hl, wEnemyMonMoves
-	ld de, wListMoves_MoveIndicesBuffer
-	ld b, NUM_MOVES
-.loop
-	ld a, [de]
-	inc de
-	ld [hli], a
-	and a
-	jr z, .clearpp
-
-	push bc
-	push hl
-
-	push hl
-	dec a
-	ld hl, Moves + MOVE_PP
-	ld bc, MOVE_LENGTH
-	call AddNTimes
-	ld a, BANK(Moves)
-	call GetFarByte
-	pop hl
-
-	ld bc, wEnemyMonPP - (wEnemyMonMoves + 1)
-	add hl, bc
-	ld [hl], a
-
-	pop hl
-	pop bc
-
-	dec b
-	jr nz, .loop
-	ret
-
-.clear
-	xor a
-	ld [hli], a
-
-.clearpp
-	push bc
-	push hl
-	ld bc, wEnemyMonPP - (wEnemyMonMoves + 1)
-	add hl, bc
-	xor a
-	ld [hl], a
-	pop hl
-	pop bc
-	dec b
-	jr nz, .clear
-	ret
+;FillEnemyMovesFromMoveIndicesBuffer: ; unreferenced
+;	ld hl, wEnemyMonMoves
+;	ld de, wListMoves_MoveIndicesBuffer
+;	ld b, NUM_MOVES
+;.loop
+;	ld a, [de]
+;	inc de
+;	ld [hli], a
+;	and a
+;	jr z, .clearpp
+;
+;	push bc
+;	push hl
+;
+;	push hl
+;	dec a
+;	ld hl, Moves + MOVE_PP
+;	ld bc, MOVE_LENGTH
+;	call AddNTimes
+;	ld a, BANK(Moves)
+;	call GetFarByte
+;	pop hl
+;
+;	ld bc, wEnemyMonPP - (wEnemyMonMoves + 1)
+;	add hl, bc
+;	ld [hl], a
+;
+;	pop hl
+;	pop bc
+;
+;	dec b
+;	jr nz, .loop
+;	ret
+;
+;.clear
+;	xor a
+;	ld [hli], a
+;
+;.clearpp
+;	push bc
+;	push hl
+;	ld bc, wEnemyMonPP - (wEnemyMonMoves + 1)
+;	add hl, bc
+;	xor a
+;	ld [hl], a
+;	pop hl
+;	pop bc
+;	dec b
+;	jr nz, .clear
+;	ret
 
 ExitBattle:
 	call .HandleEndOfBattle

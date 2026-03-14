@@ -116,8 +116,8 @@ PrintTempMonStats:
 .StatNames:
 	db   "ATTACK"
 	next "DEFENSE"
-	next "SPCL.ATK"
-	next "SPCL.DEF"
+	next "SP.ATK"
+	next "SP.DEF"
 	next "SPEED"
 	next "@"
 
@@ -383,7 +383,7 @@ Unused_PlaceEnemyHPLevel:
 ;
 ;FntString:
 ;	db "FNT@"
-;
+
 ;CopyStatusString:
 ;	ld a, [de]
 ;	inc de
@@ -394,7 +394,7 @@ Unused_PlaceEnemyHPLevel:
 ;	ld a, [de]
 ;	ld [hl], a
 ;	ret
-;
+
 ;PlaceNonFaintStatus:
 ;	push de
 ;	ld a, [de]
@@ -422,7 +422,7 @@ Unused_PlaceEnemyHPLevel:
 ;.no_status
 ;	pop de
 ;	ret
-;
+
 ;SlpString: db "SLP@"
 ;PsnString: db "PSN@"
 ;BrnString: db "BRN@"
@@ -481,68 +481,6 @@ ListMoves:
 	jr nz, .nonmove_loop
 
 .done
-	ret
-
-
-
-GetMonTypeIndex:
-	; type in c, because farcall clobbers a
-	ld a, c
-	and TYPE_MASK ; Phys/Spec Split only
-	; Skip Bird
-	cp BIRD
-	jr c, .done
-	cp UNUSED_TYPES
-	dec a
-	jr c, .done
-	sub UNUSED_TYPES
-.done
-	ld c, a
-	ret
-
-
-GetStatusConditionIndex:
-; de points to status condition bytes of a pokemon from a party_struct or battle_struct
-; return the status condition index in 'a', and also 'd' for those who farcall
-	push de
-	inc de
-	inc de
-	ld a, [de]
-	ld b, a
-	inc de
-	ld a, [de]
-	or b
-	pop de
-	jr z, .fnt
-	ld a, [de]
-	ld b, a
-	and SLP_MASK
-	ld a, 0
-	jr nz, .slp
-	bit PSN, b
-	jr nz, .psn
-	bit PAR, b
-	jr nz, .par
-	bit BRN, b
-	jr nz, .brn
-	bit FRZ, b
-	jr nz, .frz
-	ld d, a
-	ret
-	
-.fnt
-	inc a ; 6
-.frz
-	inc a ; 5
-.brn
-	inc a ; 4
-.slp
-	inc a ; 3
-.par
-	inc a ; 2
-.psn
-	inc a ; 1
-	ld d, a
 	ret
 
 
@@ -633,4 +571,65 @@ Enemy_LoadNonFaintStatus:
 .enemy_fnt
 	xor a ; status condition index
 	ld c, a
+	ret
+
+
+GetMonTypeIndex:
+	; type in c, because farcall clobbers a
+	ld a, c
+	and TYPE_MASK ; Phys/Spec Split only
+	; Skip Bird
+	cp BIRD
+	jr c, .done
+	cp UNUSED_TYPES
+	dec a
+	jr c, .done
+	sub UNUSED_TYPES
+.done
+	ld c, a
+	ret
+
+
+GetStatusConditionIndex:
+; de points to status condition bytes of a pokemon from a party_struct or battle_struct
+; return the status condition index in 'a', and also 'd' for those who farcall
+	push de
+	inc de
+	inc de
+	ld a, [de]
+	ld b, a
+	inc de
+	ld a, [de]
+	or b
+	pop de
+	jr z, .fnt
+	ld a, [de]
+	ld b, a
+	and SLP_MASK
+	ld a, 0
+	jr nz, .slp
+	bit PSN, b
+	jr nz, .psn
+	bit PAR, b
+	jr nz, .par
+	bit BRN, b
+	jr nz, .brn
+	bit FRZ, b
+	jr nz, .frz
+	ld d, a
+	ret
+	
+.fnt
+	inc a ; 6
+.frz
+	inc a ; 5
+.brn
+	inc a ; 4
+.slp
+	inc a ; 3
+.par
+	inc a ; 2
+.psn
+	inc a ; 1
+	ld d, a
 	ret

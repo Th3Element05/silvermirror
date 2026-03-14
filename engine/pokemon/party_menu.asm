@@ -867,7 +867,6 @@ PrintPartyMenuActionText:
 	ret
 
 
-
 LoadStatusIconSet:
 	push bc
 	push hl
