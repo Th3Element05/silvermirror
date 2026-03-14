@@ -139,7 +139,7 @@
 	charmap "☎",        $d9
 	charmap "<BOLD_V>",  $da
 	charmap "<BOLD_S>",  $db
-	charmap "<lb>",      $dc ; small "lb" ; "<COLON>" ; colon with tinier dots than ":"
+	charmap "<lb>",      $dc ; small "lb" ;was "<COLON>" ; colon with tinier dots than ":"
 	charmap "“",         $dd ; opening quote
 	charmap "”",         $de ; closing quote
 
