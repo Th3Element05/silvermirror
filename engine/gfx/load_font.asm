@@ -43,8 +43,7 @@ _LoadFontsExtra2::
 _LoadFontsBattleExtra::
 	ld de, FontBattleExtra
 	ld hl, vTiles2 tile $60
-;	lb bc, BANK(FontBattleExtra), 25
-	lb bc, BANK(FontBattleExtra), 16
+	lb bc, BANK(FontBattleExtra), 16 ;25
 	call Get2bppViaHDMA
 	jr LoadFrame
 
@@ -123,11 +122,12 @@ StatsScreen_LoadFont:
 	ld hl, vTiles2 tile $71 ; loading that 18th Tile into Tile $71
 	lb bc, BANK(FontBattleExtra), 4 ; 4 Tiles, left arrow, ID + No. Tiles
 	call Get2bppViaHDMA
+	; fallthrough
 
 LoadStatsScreenPageTilesGFX:
 	ld de, StatsScreenPageTilesGFX
 	ld hl, vTiles2 tile $31
-;	lb bc, BANK(StatsScreenPageTilesGFX), 17 ; loads 17 tiles
+;	lb bc, BANK(StatsScreenPageTilesGFX), 17 ; loads 17 Tiles
 	lb bc, BANK(StatsScreenPageTilesGFX), 27 ; Loading More Tiles than in Vanilla
 	call Get2bppViaHDMA
 	ret

@@ -1369,15 +1369,15 @@ PlaceMoveData:
 	call AddNTimes
 	ld d, h
 	ld e, l
-	ld hl, vTiles2 tile $59 ; category icon tile slot in VRAM, destination
+	ld hl, vTiles2 tile $79 ;$59 ; category icon tile slot in VRAM, destination
 	lb bc, BANK(CategoryIconGFX), 2
 	call Request2bpp ; Load 2bpp at b:de to occupy c tiles of hl.
 ;	hlcoord 7, 13
 ;	hlcoord 12, 12
 	hlcoord 17, 12
-	ld a, $59 ; category icon tile 1
+	ld a, $79 ;$59 ; category icon tile 1
 	ld [hli], a
-	ld [hl], $5a ; category icon tile 2
+	ld [hl], $7a ;$5a ; category icon tile 2
 
 .no_category
 ; Place Move Type
@@ -1400,19 +1400,19 @@ PlaceMoveData:
 	call AddNTimes ; increments pointer based on Type Index
 	ld d, h
 	ld e, l ; de is the source Pointer
-	ld hl, vTiles2 tile $5b ; $5b is destination Tile for first Type Tile
+	ld hl, vTiles2 tile $7b ;$5b ; $5b is destination Tile for first Type Tile
 	lb bc, BANK(TypeIconGFX), 4 ; Bank in 'b', num of Tiles to load in 'c'
 	call Request1bpp
 ;	hlcoord 2, 13
 ;	hlcoord 15, 12
 	hlcoord 13, 12
-	ld a, $5b ; first Type Tile
+	ld a, $7b ;$5b ; first Type Tile
 	ld [hli], a
 	inc a ; Tile $5c
 	ld [hli], a
 	inc a ; Tile $5d
 	ld [hli], a
-	ld [hl], $5e ; final Type Tile
+	ld [hl], $7e ;$5e ; final Type Tile
 
 ;;.power
 ;; Print Move Power

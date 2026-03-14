@@ -109,12 +109,10 @@ DrawPlayerHUDBorder:
 	jr PlaceHUDBorderTiles
 
 .tiles
-;	db $73 ; right side
-	db $6d ; right side
+	db $6d ;$73 ; right side
 	db $77 ; bottom right
 	db $6f ; bottom left
-;	db $76 ; bottom side
-	db $62 ; bottom side
+	db $62 ;$76 ; bottom side
 .tiles_end
 
 DrawPlayerPartyIconHUDBorder:
@@ -127,12 +125,10 @@ DrawPlayerPartyIconHUDBorder:
 	jr PlaceHUDBorderTiles
 
 .tiles
-;	db $73 ; right side
-	db $6d ; right side
+	db $6d ;$73 ; right side
 	db $5c ; bottom right
 	db $6f ; bottom left
-;	db $76 ; bottom side
-	db $62 ; bottom side
+	db $62 ;$76 ; bottom side
 .tiles_end
 
 DrawEnemyHUDBorder:
@@ -158,8 +154,7 @@ DrawEnemyHUDBorder:
 	db $6d ; left side
 	db $74 ; bottom left
 	db $78 ; bottom right
-;	db $76 ; bottom side
-	db $62 ; bottom side
+	db $62 ;$76 ; bottom side
 .tiles_end
 
 PlaceHUDBorderTiles:

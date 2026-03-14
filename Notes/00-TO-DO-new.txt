@@ -9,14 +9,13 @@ safari zone after battle/core changes for icon gfx
 
 DO
 
-pokedex crash when returning from printer error. remove printer
+restore delibird wild encounters, trainer parties
 
 game corner UPGRADE prize, remove
 
-prevent location evolution in Classic Mode before HOF
+
 where can you get evo-use items in kanto?
 	?make hold/evo-trade items into hold/level-up? and prevent in Classic
-
 ~HOLD-TRADE(ITEM)
 ONIX
 POLIWHIRL
@@ -24,12 +23,9 @@ PORYGON
 SCYTHER
 SEADRA
 SLOWPOKE
-
 ~HOLD-LEVELUP
 sneasel
 gligar
-
-
 
 
 reduce long animations? (*magnezone)
@@ -45,6 +41,40 @@ move kurt's son outside of silph
 
 
 add phys/spec gfx
-move party menu icons next to :L(evel)
-battle move info palettes are still backsprite
-status icon doesn't flash inverted, even when invisible
+
+notes
+engine\pokemon\party_menu.asm
+LoadStatusIconSet:
+	status gfx override exp bar gfx
+PlacePartyMonStatus:
+	invokes these gfx locations
+
+
+~~~DIDN'T DO THIS~~~
+    Edit the function PlaceExpBar in engine\battle\core.asm:
+	...
+.next
+	add $8
+	jr z, .loop2
+-	add $54 ; tile to the left of small exp bar tile
++	push hl
++	push af
++	hlcoord 9, 0 ; coord of HP bar label, usually 0,9
++	ld a, [hl]
++	ld b, $62
++	cp $e8 ; if we are in stats screen
++	jr nz, .inbattle
++	ld b, $54
++.inbattle
++	pop af
++	pop hl
++	add b
+	jr .skip
+	...
+~~~ ~~~ ~~~ ~~~ ~~~
+
+
+small page indicator boxes wrong colors
+
+
+https://github.com/Nayru62/Nayru62-Pokecrystal-Tutorials/wiki/Gen3--Type-and-Status-Tiles#8-stats-screen-

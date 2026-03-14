@@ -202,20 +202,21 @@ _CGB_FinishBattleScreenLayout:
 	ld a, PAL_BATTLE_BG_TEXT
 	call ByteFill
 
-; flip reused tiles
 ; HUD vertical bar thingy
-	hlcoord 18, 10, wAttrmap
+; flip enemy vertical bar tile
+	hlcoord 1, 2, wAttrmap
 	ld bc, 1
-	ld a, PAL_BATTLE_BG_PLAYER_HP
+	ld a, PAL_BATTLE_BG_ENEMY_HP ;PAL_BATTLE_BG_PLAYER_HP
 	set 5, a ; flips tiles on x axis
 	call ByteFill
 
-; player exp
-	hlcoord 10, 11, wAttrmap
-	lb bc, 1, 8
-	ld a, PAL_BATTLE_BG_EXP
-	set 5, a ; flips tiles on x axis
-	call FillBoxCGB
+;; player exp
+;; flip reused hp tiles
+;	hlcoord 10, 11, wAttrmap
+;	lb bc, 1, 8
+;	ld a, PAL_BATTLE_BG_EXP
+;	set 5, a ; flips tiles on x axis
+;	call FillBoxCGB
 
 ; status icons
 	; enemy
@@ -232,11 +233,11 @@ _CGB_FinishBattleScreenLayout:
 ; check if we're in the MoveInfoBox
 	hlcoord 0, 12
 	ld a, [hl]
-	cp $be ;$7d
+	cp $be ;$7d ; lower left border tile
 	jr nz, .done
 
 	; Move Type and Category pal
-	hlcoord 1, 10, wAttrmap ;1, 11, wAttrmap
+	hlcoord 1, 10, wAttrmap ;1, 11, wAttrmap ; Move Type and Category location
 	ld bc, 7
 	ld a, $5
 	call ByteFill
@@ -310,16 +311,17 @@ _CGB_StatsScreenHPPals:
 	call LoadPalette_White_Col1_Col2_Black ; mon palette, palette 1
 	ld hl, ExpBarPalette
 	call LoadPalette_White_Col1_Col2_Black ; exp palette, palette 2
+
 	ld hl, StatsScreenPagePals
 	ld de, wBGPals1 palette 3 ; palettes 3 & 4
 ;	ld bc, 3 palettes ; pink, green, and blue page palettes
 	ld bc, 2 palettes ; pink, green, blue, ( and orange page) palettes
-	                  ; NOTE: Won't hurt anything if you don't have a 4th stats page, just leave it
+	; NOTE: Won't hurt anything if you don't have a 4th stats page, just leave it
+
 	ld a, BANK(wBGPals1)
 	call FarCopyWRAM
 
 	call LoadStatsScreenStatusIconPalette
-
 ; Load Pokemon's Type Palette(s)
 	call GetBaseData
 	ld a, [wBaseType1]
@@ -358,7 +360,7 @@ _CGB_StatsScreenHPPals:
 	hlcoord 13, 5, wAttrmap ; If 4th Stats Page implemented use this instead -> hlcoord 11, 5, wAttrmap
 ;	lb bc, 2, 2
 	lb bc, 2, 4 ; 2 Tiles in HEIGHT, 4 Tiles in WIDTH
-	ld a, $3 ; pink & green page palette
+	ld a, $3 ; pink & green page palette 
 	call FillBoxCGB
 
 ;	hlcoord 15, 5, wAttrmap
@@ -367,7 +369,6 @@ _CGB_StatsScreenHPPals:
 ;	call FillBoxCGB
 
 	hlcoord 17, 5, wAttrmap ; If 4th Stats Page implemented use this instead -> hlcoord 15, 5, wAttrmap
-;	lb bc, 2, 2
 	lb bc, 2, 2 ; 2 Tiles in HEIGHT, 2 Tiles in WIDTH 
 	; If 4th Stats Page implemented use this instead -> lb bc, 2, 4 ; 2 Tiles in HEIGHT, 4 Tiles in WIDTH
 ;	ld a, $5 ; blue page palette
@@ -412,13 +413,12 @@ _CGB_Pokedex:
 
 .is_pokemon
 	call GetMonPalettePointer
-	call LoadPalette_White_Col1_Col2_Black ; mon palette, pal 1, auto inc's de to next pal
-
+	call LoadPalette_White_Col1_Col2_Black ; mon palette
 
 ; black background for Pal 7
 	ld de, wBGPals1 palette 7 ; First color slot of Pal 7	
 	call LoadSingleBlackPal ; loads black into slot 1 of pal 7, since it is normally white
-                            ; but pokedex has black background
+							; but pokedex has black background
 ; mon type 1	
 	ld a, [wTempSpecies]
 	ld [wCurSpecies], a	
@@ -439,15 +439,12 @@ _CGB_Pokedex:
 	ld de, wBGPals1 palette 7 + 4 ; slot 3 of pal 7
 	farcall LoadMonBaseTypePal ; loads type color into slot 3 of pal 7
 
-
 .got_palette
-	; pokemon sprite or question mark if unseen
 	call WipeAttrmap
 	hlcoord 1, 1, wAttrmap
 	lb bc, 7, 7
 	ld a, $1 ; green question mark palette
 	call FillBoxCGB
-
 
 	; Both mon types
 	; if no 2nd Type, those 4 Squares will appear normally as blank Black Tiles
@@ -455,7 +452,6 @@ _CGB_Pokedex:
 	lb bc, 1, 8 ; box 1 tile in HEIGHT, 8 tiles in WIDTH
 	ld a, $7 ; mon base type pals
 	call FillBoxCGB
-
 
 	call InitPartyMenuOBPals
 	ld hl, PokedexCursorPalette
@@ -758,7 +754,7 @@ _CGB_PartyMenu:
 	ret z
 	ld c, a ; max number of Party Mons
 	ld b, 0 ; how many checked so far
-	hlcoord 11, 2, wAttrmap ;3, 2, wAttrmap ; matches the new location specified in PlacePartyMonStatus, in party_menu.asm
+	hlcoord 11, 2, wAttrmap ; (3, 2,) matches the new location specified in PlacePartyMonStatus, in party_menu.asm
 .loop
 	push bc ; party pokemon count (up to six) left, in 'c', number already done in 'b'
 	push hl ; hlcoord 3, 2, wAttrmap, will become adjusted based on which Party member we're working on
@@ -1376,8 +1372,7 @@ _CGB_MoveList:
 	call LoadCPaletteBytesFromHLIntoDE
 
 ; Type and Category tiles
-;	hlcoord 2, 13, wAttrmap
-	hlcoord 11, 12, wAttrmap
+	hlcoord 11, 12, wAttrmap ;2, 13, wAttrmap
 	ld bc, 8 ; area 1 Tile in HEIGHT, 8 Tiles in WIDTH
 	ld a, $2 ; Palette 2
 	call ByteFill

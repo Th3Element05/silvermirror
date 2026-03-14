@@ -398,14 +398,14 @@ LoadStatsScreenPals:
 	ld a, [hli]
 ;	ld [wBGPals1 palette 0], a
 ;	ld [wBGPals1 palette 2], a
-	cp $7f ; half of pink page color, which is $7E7F but bytes are reversed when stored in data (endianness), 
+	cp $5f ;$7f ; half of pink page color, which is $7E7F but bytes are reversed when stored in data (endianness), 
 	; so check $7F first since it will be the first one read
 	jr nz, .notpinkpage
 
 	ld a, [hl]
 ;	ld [wBGPals1 palette 0 + 1], a
 ;	ld [wBGPals1 palette 2 + 1], a
-	cp $7e ; first half of pink page color
+	cp $7f ;$7e ; first half of pink page color
 	jr nz, .notpinkpage
 
 	; if we're here, we're on the pink page
@@ -442,56 +442,6 @@ LoadStatsScreenPals:
 	call ApplyPals
 	ld a, $1
 	ret
-
-
-
-LoadCPaletteBytesFromHLIntoDE:
-	; Loads the number of Palettes passed in 'c' when called
-	; Source address is 'hl'
-	; Destination address is 'de'
-	ldh a, [rSVBK]
-	push af
-	ld a, BANK("GBC Video")
-	ldh [rSVBK], a
-.loop
-	ld a, [hli]
-	ld [de], a
-	inc de
-	dec c
-	jr nz, .loop
-	pop af
-	ldh [rSVBK], a
-	ret
-
-LoadMonBaseTypePal:
-	; destination address of Palette and Slot is passed in 'de'
-	; Type Index (already fixed/adjusted if a Special Type) is passed in 'c'
-	ld hl, TypeIconPals ; pointer to the Type Colors designated in gfx\types_cats_status_pals.asm
-	ld a, c ; c is the Type Index
-	add a
-	ld c, a
-	ld b, 0
-	add hl, bc
-	ld bc, 2
-	jp FarCopyColorWRAM
-
-LoadSingleBlackPal:
-	; Destination address of the Palette and Slot is passed in 'de'
-	ldh a, [rSVBK]
-	push af
-	ld a, BANK(wBGPals1)
-	ldh [rSVBK], a
-	xor a ; the color black is $0000
-	ld [de], a
-	inc de
-	ld [de], a
-	inc de
-
-	pop af
-	ldh [rSVBK], a
-	ret
-
-
 
 LoadMailPalettes:
 	ld l, e
@@ -1343,6 +1293,54 @@ INCLUDE "data/pokemon/palettes.asm"
 
 INCLUDE "data/trainers/palettes.asm"
 
+
+LoadCPaletteBytesFromHLIntoDE:
+	; Loads the number of Palettes passed in 'c' when called
+	; Source address is 'hl'
+	; Destination address is 'de'
+	ldh a, [rSVBK]
+	push af
+	ld a, BANK("GBC Video")
+	ldh [rSVBK], a
+.loop
+	ld a, [hli]
+	ld [de], a
+	inc de
+	dec c
+	jr nz, .loop
+	pop af
+	ldh [rSVBK], a
+	ret
+
+LoadMonBaseTypePal:
+	; destination address of Palette and Slot is passed in 'de'
+	; Type Index (already fixed/adjusted if a Special Type) is passed in 'c'
+	ld hl, TypeIconPals ; pointer to the Type Colors designated in gfx\types_cats_status_pals.asm
+	ld a, c ; c is the Type Index
+	add a
+	ld c, a
+	ld b, 0
+	add hl, bc
+	ld bc, 2
+	jp FarCopyColorWRAM
+
+LoadSingleBlackPal:
+	; Destination address of the Palette and Slot is passed in 'de'
+	ldh a, [rSVBK]
+	push af
+	ld a, BANK(wBGPals1)
+	ldh [rSVBK], a
+	xor a ; the color black is $0000
+	ld [de], a
+	inc de
+	ld [de], a
+	inc de
+
+	pop af
+	ldh [rSVBK], a
+	ret
+
+
 LoadMapPals:
 	farcall LoadSpecialMapPalette
 	jr c, .got_pals
@@ -1623,22 +1621,21 @@ InitPartyMenuStatusPals:
 	ld bc, 2 ; 1 Color (2 bytes)
 	call FarCopyColorWRAM
 	
-	; put white (7fff) into the slot 4 of pals 4, 5, 6
-	ldh a, [rSVBK]
-	push af
-	ld a, BANK(wBGPals1)
-	ldh [rSVBK], a
-	ld a, $FF
-	ld [wBGPals1 palette 4 + 6], a ; pal 4, slot 4, byte 1
-	ld [wBGPals1 palette 5 + 6], a ; pal 5, slot 4, byte 1
-	ld [wBGPals1 palette 6 + 6], a ; pal 6, slot 4, byte 1
-	ld [wBGPals1 palette 4 + 7], a ; pal 4, slot 4, byte 2
-	ld [wBGPals1 palette 5 + 7], a ; pal 5, slot 4, byte 2
-	ld [wBGPals1 palette 6 + 7], a ; pal 6, slot 4, byte 2
-	pop af
-	ldh [rSVBK], a
+;	; put white (7fff) into the slot 4 of pals 4, 5, 6
+;	ldh a, [rSVBK]
+;	push af
+;	ld a, BANK(wBGPals1)
+;	ldh [rSVBK], a
+;	ld a, $FF
+;	ld [wBGPals1 palette 4 + 6], a ; pal 4, slot 4, byte 1
+;	ld [wBGPals1 palette 5 + 6], a ; pal 5, slot 4, byte 1
+;	ld [wBGPals1 palette 6 + 6], a ; pal 6, slot 4, byte 1
+;	ld [wBGPals1 palette 4 + 7], a ; pal 4, slot 4, byte 2
+;	ld [wBGPals1 palette 5 + 7], a ; pal 5, slot 4, byte 2
+;	ld [wBGPals1 palette 6 + 7], a ; pal 6, slot 4, byte 2
+;	pop af
+;	ldh [rSVBK], a
 	ret
-
 
 
 LoadBattleCategoryAndTypePals:
@@ -1721,26 +1718,29 @@ LoadPlayerBattleCGBLayoutStatusIconPalette:
 .player_gotstatus
 	ld d, a
 	jp LoadPlayerStatusIconPalette
+
 LoadStatsScreenStatusIconPalette:
 	ld de, wTempMonStatus
 	predef GetStatusConditionIndex
 	; index is in 'd'
-	jr LoadPlayerStatusIconPalette.phase2 ; do not load the white pal in slot 4 of pal 6
+;	jr LoadPlayerStatusIconPalette.phase2 ; do not load the white pal in slot 4 of pal 6
+	; now fallthrough
 LoadPlayerStatusIconPalette:
-	; given: Status condition index in 'd'
-	; load single white color in slot 4 of palette 6
-	ldh a, [rSVBK]
-	push af
-	ld a, BANK(wBGPals1)
-	ldh [rSVBK], a
-	ld hl, wBGPals1 palette 6 + 6 ; slot 4 of pal 6
-	ld a, $FF
-	ld [hli], a
-	ld [hl], a
-	pop af
-	ldh [rSVBK], a
-	; done loading white color directly into slot 4 of pal 6
-.phase2 
+;	; given: Status condition index in 'd'
+;	
+;	; load single white color in slot 4 of palette 6
+;	ldh a, [rSVBK]
+;	push af
+;	ld a, BANK(wBGPals1)
+;	ldh [rSVBK], a
+;	ld hl, wBGPals1 palette 6 + 6 ; slot 4 of pal 6
+;	ld a, $FF
+;	ld [hli], a
+;	ld [hl], a
+;	pop af
+;	ldh [rSVBK], a
+;	; done loading white color directly into slot 4 of pal 6
+;.phase2 
 	ld hl, StatusIconPals
 	ld c, d
 	ld b, 0
