@@ -1432,4 +1432,112 @@ KantoGrassWildMons:
 	db  7, SQUIRTLE   ;  1% chance
 	end_grass_wildmons
 
+; these are dummys for pokedex habitat marker for safari zone mons
+	def_grass_wildmons SAFARI_ZONE_AREA_1
+	db 0 percent, 0 percent, 0 percent ; encounter rates: morn/day/nite
+	; day
+	db 20, NIDORAN_M
+	db 20, NIDORAN_F
+	db 10, EXEGGCUTE
+	db 24, DODUO
+	db  5, NIDORINO
+	db  5, NIDORINA
+	db  5, TAUROS
+	db  5, LICKITUNG
+	db  5, CHANSEY
+	db  1, EEVEE
+	; nite
+	db 20, NIDORAN_M
+	db 20, NIDORAN_F
+	db 10, EXEGGCUTE
+	db 24, DODUO
+	db  5, NIDORINO
+	db  5, NIDORINA
+	db  5, TAUROS
+	db  5, LICKITUNG
+	db  5, CHANSEY
+	db  1, EEVEE
+	end_grass_wildmons
+
+; these are dummys for pokedex habitat marker for safari zone mons
+	def_grass_wildmons SAFARI_ZONE_AREA_2
+	db 0 percent, 0 percent, 0 percent ; encounter rates: morn/day/nite
+	; day
+	db 20, NIDORAN_M
+	db 20, NIDORAN_F
+	db 10, EXEGGCUTE
+	db  8, PARAS
+	db  8, PARAS
+	db  8, PARAS
+	db  5, PARASECT
+	db 10, SCYTHER
+	db 10, PINSIR
+	db  1, CHANSEY
+	; nite
+	db 20, NIDORAN_M
+	db 20, NIDORAN_F
+	db 10, EXEGGCUTE
+	db  4, PARAS
+	db 10, VENONAT
+	db 10, VENONAT
+	db  5, VENOMOTH
+	db 10, SCYTHER
+	db 10, PINSIR
+	db  1, CHANSEY
+	end_grass_wildmons
+
+; these are dummys for pokedex habitat marker for safari zone mons
+	def_grass_wildmons SAFARI_ZONE_AREA_3
+	db 0 percent, 0 percent, 0 percent ; encounter rates: morn/day/nite
+	; day
+	db 20, NIDORAN_M
+	db 20, NIDORAN_F
+	db 10, EXEGGCUTE
+	db  5, NIDORINO
+	db  5, NIDORINA
+	db 14, RHYHORN
+	db 10, TAUROS
+	db 10, KANGASKHAN
+	db  5, CUBONE
+	db  1, CHANSEY
+	; nite
+	db 20, NIDORAN_M
+	db 20, NIDORAN_F
+	db 10, EXEGGCUTE
+	db  5, NIDORINO
+	db  5, NIDORINA
+	db 14, RHYHORN
+	db 10, TAUROS
+	db 10, KANGASKHAN
+	db  5, CUBONE
+	db  1, CHANSEY
+	end_grass_wildmons
+
+; these are dummys for pokedex habitat marker for safari zone mons
+	def_grass_wildmons SAFARI_ZONE_AREA_4
+	db 0 percent, 0 percent, 0 percent ; encounter rates: morn/day/nite
+	; day
+	db 20, NIDORAN_M
+	db 20, NIDORAN_F
+	db 20, EXEGGCUTE
+	db 10, TANGELA
+	db  5, TANGELA
+	db  5, NIDORINO
+	db  5, NIDORINA
+	db 10, FARFETCH_D
+	db  4, CHANSEY
+	db  1, CHANSEY
+	; nite
+	db 20, NIDORAN_M
+	db 20, NIDORAN_F
+	db 20, EXEGGCUTE
+	db 10, TANGELA
+	db  5, TANGELA
+	db  5, NIDORINO
+	db  5, NIDORINA
+	db 10, FARFETCH_D
+	db  4, CHANSEY
+	db  1, CHANSEY
+	end_grass_wildmons
+
 	db -1 ; end
