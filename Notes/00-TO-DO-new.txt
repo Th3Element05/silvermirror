@@ -12,6 +12,7 @@ DO
 restore delibird wild encounters, trainer parties
 
 game corner UPGRADE prize, remove
+game corner prizes double check after removing mons, etc
 
 
 where can you get evo-use items in kanto?
@@ -30,7 +31,6 @@ gligar
 
 reduce long animations? (*magnezone)
 
-
 route29 farmhouse??
 
 go through data/trainers/parties levels/moves
@@ -40,7 +40,13 @@ does fossil revival script still need to be fixed?
 move kurt's son outside of silph
 
 
+
+
+
+
+DONE
 add phys/spec gfx
+https://github.com/Nayru62/Nayru62-Pokecrystal-Tutorials/wiki/Gen3--Type-and-Status-Tiles
 
 notes
 engine\pokemon\party_menu.asm
@@ -73,8 +79,3 @@ PlacePartyMonStatus:
 	...
 ~~~ ~~~ ~~~ ~~~ ~~~
 
-
-small page indicator boxes wrong colors
-
-
-https://github.com/Nayru62/Nayru62-Pokecrystal-Tutorials/wiki/Gen3--Type-and-Status-Tiles#8-stats-screen-
