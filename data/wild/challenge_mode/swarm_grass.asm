@@ -1134,14 +1134,14 @@ SwarmGrassWildMonsChallenge:
 	db 23, GOLBAT     ; 10% chance
 	db 22, ZUBAT      ; 10% chance
 	db 23, ZUBAT      ;  5% chance
-	db 21, SWINUB     ;  5% chance
+	db 21, DELIBIRD   ;  5% chance
 	db 22, JYNX       ;  4% chance
 	db 23, JYNX       ;  1% chance
 	; nite
 	db 22, SNEASEL    ; 20% chance
 	db 23, SNEASEL    ; 20% chance
 	db 21, SWINUB     ; 15% chance
-	db 22, SWINUB     ; 10% chance
+	db 22, DELIBIRD   ; 10% chance
 	db 23, GOLBAT     ; 10% chance
 	db 22, ZUBAT      ; 10% chance
 	db 23, ZUBAT      ;  5% chance
@@ -1160,14 +1160,14 @@ SwarmGrassWildMonsChallenge:
 	db 23, GOLBAT     ; 10% chance
 	db 22, ZUBAT      ; 10% chance
 	db 23, ZUBAT      ;  5% chance
-	db 21, SWINUB     ;  5% chance
+	db 21, DELIBIRD   ;  5% chance
 	db 22, JYNX       ;  4% chance
 	db 23, JYNX       ;  1% chance
 	; nite
 	db 22, SNEASEL    ; 20% chance
 	db 23, SNEASEL    ; 20% chance
 	db 21, SWINUB     ; 15% chance
-	db 22, SWINUB     ; 10% chance
+	db 22, DELIBIRD   ; 10% chance
 	db 23, GOLBAT     ; 10% chance
 	db 22, ZUBAT      ; 10% chance
 	db 23, ZUBAT      ;  5% chance
@@ -1184,7 +1184,7 @@ SwarmGrassWildMonsChallenge:
 	db 23, SNEASEL    ; 20% chance
 	db 23, SWINUB     ; 15% chance
 	db 24, GOLBAT     ; 10% chance
-	db 23, SWINUB     ; 10% chance
+	db 23, DELIBIRD   ; 10% chance
 	db 24, ZUBAT      ; 10% chance
 	db 25, ZUBAT      ;  5% chance
 	db 23, JYNX       ;  5% chance
@@ -1195,10 +1195,10 @@ SwarmGrassWildMonsChallenge:
 	db 23, SNEASEL    ; 20% chance
 	db 24, ZUBAT      ; 15% chance
 	db 23, SWINUB     ; 10% chance
-	db 24, SWINUB     ; 10% chance
+	db 24, DELIBIRD   ; 10% chance
 	db 24, GOLBAT     ; 10% chance
 	db 23, SWINUB     ;  5% chance
-	db 23, ZUBAT      ;  5% chance
+	db 23, DELIBIRD   ;  5% chance
 	db 24, ZUBAT      ;  4% chance
 	db 22, JYNX       ;  1% chance
 

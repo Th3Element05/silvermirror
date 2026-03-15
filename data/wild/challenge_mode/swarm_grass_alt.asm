@@ -1368,8 +1368,8 @@ SwarmGrassWildMonsAltChallenge:
 	db 21, SWINUB     ; 10% chance
 	db 22, SWINUB     ; 10% chance
 	db 22, GOLBAT     ; 10% chance
-	db 21, GOLBAT     ;  5% chance
-	db 21, ZUBAT      ;  5% chance
+	db 21, DELIBIRD   ;  5% chance
+	db 21, DELIBIRD   ;  5% chance
 	db 22, JYNX       ;  4% chance
 	db 23, JYNX       ;  1% chance
 	; nite
@@ -1379,8 +1379,8 @@ SwarmGrassWildMonsAltChallenge:
 	db 21, SWINUB     ; 10% chance
 	db 22, SWINUB     ; 10% chance
 	db 22, GOLBAT     ; 10% chance
-	db 21, GOLBAT     ;  5% chance
-	db 21, ZUBAT      ;  5% chance
+	db 21, DELIBIRD   ;  5% chance
+	db 22, DELIBIRD   ;  5% chance
 	db 22, SNEASEL    ;  4% chance
 	db 22, JYNX       ;  1% chance
 
@@ -1394,8 +1394,8 @@ SwarmGrassWildMonsAltChallenge:
 	db 21, SWINUB     ; 10% chance
 	db 22, SWINUB     ; 10% chance
 	db 22, GOLBAT     ; 10% chance
-	db 21, GOLBAT     ;  5% chance
-	db 21, ZUBAT      ;  5% chance
+	db 21, DELIBIRD   ;  5% chance
+	db 21, DELIBIRD   ;  5% chance
 	db 22, JYNX       ;  4% chance
 	db 23, JYNX       ;  1% chance
 	; nite
@@ -1405,8 +1405,8 @@ SwarmGrassWildMonsAltChallenge:
 	db 21, SWINUB     ; 10% chance
 	db 22, SWINUB     ; 10% chance
 	db 22, GOLBAT     ; 10% chance
-	db 21, GOLBAT     ;  5% chance
-	db 21, ZUBAT      ;  5% chance
+	db 21, DELIBIRD   ;  5% chance
+	db 22, DELIBIRD   ;  5% chance
 	db 22, SNEASEL    ;  4% chance
 	db 22, JYNX       ;  1% chance
 
@@ -1420,7 +1420,7 @@ SwarmGrassWildMonsAltChallenge:
 	db 21, SWINUB     ; 10% chance
 	db 22, SWINUB     ; 10% chance
 	db 22, GOLBAT     ; 10% chance
-	db 21, ZUBAT      ;  5% chance
+	db 21, DELIBIRD   ;  5% chance
 	db 22, JYNX       ;  5% chance
 	db 22, JYNX       ;  4% chance
 	db 23, JYNX       ;  1% chance
@@ -1431,7 +1431,7 @@ SwarmGrassWildMonsAltChallenge:
 	db 21, SWINUB     ; 10% chance
 	db 22, SWINUB     ; 10% chance
 	db 22, GOLBAT     ; 10% chance
-	db 21, ZUBAT      ;  5% chance
+	db 22, DELIBIRD   ;  5% chance
 	db 22, SNEASEL    ;  5% chance
 	db 22, SNEASEL    ;  4% chance
 	db 22, JYNX       ;  1% chance
