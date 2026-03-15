@@ -219,7 +219,7 @@ RockTunnelName:      db "ROCK TUNNEL@"
 ;LavRadioTowerName:   db "LAV¯RADIO TOWER@"
 PokemonTowerName:    db "POKéMON¯TOWER@"
 SilphCoName:         db "SILPH CO.@"
-KantoSafariZoneName: db "SAFARI ZONE@"
+;KantoSafariZoneName: db "SAFARI ZONE@" ; unreferenced
 SeafoamIslandsName:  db "SEAFOAM¯ISLANDS@"
 Route1Name:          db "ROUTE 1@"
 Route2Name:          db "ROUTE 2@"
