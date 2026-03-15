@@ -2074,116 +2074,112 @@ KantoGrassWildMonsChallenge:
 	db  7, SQUIRTLE   ;  1% chance 1
 	end_grass_wildmons
 
-	db -1 ; end
+; these are dummys for pokedex habitat marker for safari zone mons
+	def_grass_wildmons SAFARI_ZONE_AREA_1
+	db 0 percent, 0 percent, 0 percent ; encounter rates: morn/day/nite
+	; morn
+	db 20, GIRAFARIG
+	db 20, STANTLER
+	db 10, EXEGGCUTE
+	db 20, AIPOM
+	db  5, MILTANK
+	db  5, MILTANK
+	db  5, TAUROS
+	db  5, TAUROS
+	db  5, CHANSEY
+	db  5, EEVEE
+	; nite
+	db 20, GIRAFARIG
+	db 20, STANTLER
+	db 10, EXEGGCUTE
+	db 20, AIPOM
+	db  5, MILTANK
+	db  5, MILTANK
+	db  5, TAUROS
+	db  5, TAUROS
+	db  5, CHANSEY
+	db  5, EEVEE
+	end_grass_wildmons
 
-;
-;	def_grass_wildmons SAFARI_ZONE_AREA_1 ;GEN2
-;	db 0 percent, 0 percent, 0 percent ; encounter rates: morn/day/nite
-;;	; morn
-;;	db 10, CHANSEY    ; 20% chance
-;;	db 10, CHANSEY    ; 20% chance
-;;	db 10, CHANSEY    ; 15% chance
-;;	db 10, CHANSEY    ; 10% chance
-;;	db 10, CHANSEY    ; 10% chance
-;;	db 10, CHANSEY    ; 10% chance
-;;	db 10, CHANSEY    ;  5% chance
-;;	db 10, CHANSEY    ;  5% chance
-;;	db 10, CHANSEY    ;  4% chance
-;;	db 10, CHANSEY    ;  1% chance
-;	; day
-;	db 10, GIRAFARIG  ; 20% chance
-;	db 10, STANTLER   ; 20% chance
-;	db 10, EXEGGCUTE  ; 15% chance
-;	db 10, AIPOM      ; 10% chance
-;	db 10, MILTANK    ; 10% chance
-;	db 10, TAUROS     ; 10% chance
-;	db 10, CHANSEY    ;  5% chance
-;	db 10, EEVEE      ;  5% chance
-;	db 10, LEDYBA     ;  4% chance
-;	db 10, YANMA      ;  1% chance
-;	; nite
-;	db 10, PARAS      ; 20% chance
-;	db 10, LEDIAN     ; 20% chance
-;	db 10, SCYTHER    ; 15% chance
-;	db 10, PINSIR     ; 10% chance
-;	db 10, HERACROSS  ; 10% chance
-;	db 10, SPINARAK   ; 10% chance
-;	db 10, VENONAT    ;  5% chance
-;	db 10, ARIADOS    ;  5% chance
-;	db 10, PHANPY     ;  4% chance
-;	db 10, GLIGAR     ;  1% chance
-;	end_grass_wildmons
-;
-;	def_grass_wildmons SAFARI_ZONE_AREA_2 ;GEN2
-;	db 0 percent, 0 percent, 0 percent ; encounter rates: morn/day/nite
-;;	; morn
-;;	db 10, CHANSEY    ; 20% chance
-;;	db 10, CHANSEY    ; 20% chance
-;;	db 10, CHANSEY    ; 15% chance
-;;	db 10, CHANSEY    ; 10% chance
-;;	db 10, CHANSEY    ; 10% chance
-;;	db 10, CHANSEY    ; 10% chance
-;;	db 10, CHANSEY    ;  5% chance
-;;	db 10, CHANSEY    ;  5% chance
-;;	db 10, CHANSEY    ;  4% chance
-;;	db 10, CHANSEY    ;  1% chance
-;	; day
-;	db 10, SKARMORY   ; 20% chance
-;	db 10, RHYHORN    ; 20% chance
-;	db 10, KANGASKHAN ; 15% chance
-;	db 10, CUBONE     ; 10% chance
-;	db 10, LARVITAR   ; 10% chance
-;	db 10, HOPPIP     ; 10% chance
-;	db 10, TANGELA    ;  5% chance
-;	db 10, SMEARGLE   ;  5% chance
-;	db 10, WOOPER     ;  4% chance
-;	db 10, CHANSEY    ;  1% chance
-;	; nite
-;	db 10, SLOWPOKE   ; 20% chance
-;	db 10, MARILL     ; 20% chance
-;	db 10, PSYDUCK    ; 15% chance
-;	db 10, MAGIKARP   ; 10% chance
-;	db 10, DRATINI    ; 10% chance
-;	db 10, DRAGONAIR  ; 10% chance
-;	db 10, CHANSEY    ;  5% chance
-;	db 10, CHANSEY    ;  5% chance
-;	db 10, CHANSEY    ;  4% chance
-;	db 10, CHANSEY    ;  1% chance
-;	end_grass_wildmons
-;
-;	def_grass_wildmons SAFARI_ZONE_ENTRANCE ;GEN2
-;	db 0 percent, 0 percent, 0 percent ; encounter rates: morn/day/nite
-;;	; morn
-;;	db 10, GIRAFARIG  ; 20% chance
-;;	db 10, STANTLER   ; 20% chance
-;;	db 10, EXEGGCUTE  ; 15% chance
-;;	db 10, AIPOM      ; 10% chance
-;;	db 10, MILTANK    ; 10% chance
-;;	db 10, TAUROS     ; 10% chance
-;;	db 10, SMEARGLE   ;  5% chance
-;;	db 10, EEVEE      ;  5% chance
-;;	db 10, LEDYBA     ;  4% chance
-;;	db 10, YANMA      ;  1% chance
-;	; day
-;	db 10, PARAS      ; 20% chance
-;	db 10, LEDIAN     ; 20% chance
-;	db 10, SCYTHER    ; 15% chance
-;	db 10, PINSIR     ; 10% chance
-;	db 10, HERACROSS  ; 10% chance
-;	db 10, PHANPY     ; 10% chance
-;	db 10, HOPPIP     ;  5% chance
-;	db 10, SUNKERN    ;  5% chance
-;	db 10, RHYHORN    ;  4% chance
-;	db 10, LARVITAR   ;  1% chance
-;	; nite
-;	db 10, SPINARAK   ; 20% chance
-;	db 10, VENONAT    ; 20% chance
-;	db 10, ARIADOS    ; 15% chance
-;	db 10, WOOPER     ; 10% chance
-;	db 10, KANGASKHAN ; 10% chance
-;	db 10, GLIGAR     ; 10% chance
-;	db 10, SKARMORY   ;  5% chance
-;	db 10, TANGELA    ;  5% chance
-;	db 10, CUBONE     ;  4% chance
-;	db 10, CHANSEY    ;  1% chance
-;	end_grass_wildmons
+; these are dummys for pokedex habitat marker for safari zone mons
+	def_grass_wildmons SAFARI_ZONE_AREA_2
+	db 0 percent, 0 percent, 0 percent ; encounter rates: morn/day/nite
+	; morn
+	db 20, LEDYBA
+	db 10, YANMA
+	db 10, EXEGGCUTE
+	db 20, PARAS
+	db  4, PARAS
+	db  5, LEDIAN
+	db 10, SCYTHER
+	db 10, PINSIR
+	db 10, HERACROSS
+	db  1, CHANSEY
+	; nite
+	db 20, SPINARAK
+	db 10, YANMA
+	db 10, EXEGGCUTE
+	db 20, VENONAT
+	db  4, VENOMOTH
+	db  5, ARIADOS
+	db 10, SCYTHER
+	db 10, PINSIR
+	db 10, HERACROSS
+	db  1, CHANSEY
+	end_grass_wildmons
+
+; these are dummys for pokedex habitat marker for safari zone mons
+	def_grass_wildmons SAFARI_ZONE_AREA_3
+	db 0 percent, 0 percent, 0 percent ; encounter rates: morn/day/nite
+	; morn
+	db 20, PHANPY
+	db 20, GLIGAR
+	db 10, EXEGGCUTE
+	db 10, SKARMORY
+	db 10, RHYHORN
+	db 10, TAUROS
+	db 10, KANGASKHAN
+	db  5, CUBONE
+	db  4, LARVITAR
+	db  1, CHANSEY
+	; nite
+	db 20, PHANPY
+	db 20, GLIGAR
+	db 10, EXEGGCUTE
+	db 10, SKARMORY
+	db 10, RHYHORN
+	db 10, TAUROS
+	db 10, KANGASKHAN
+	db  5, CUBONE
+	db  4, LARVITAR
+	db  1, CHANSEY
+	end_grass_wildmons
+
+; these are dummys for pokedex habitat marker for safari zone mons
+	def_grass_wildmons SAFARI_ZONE_AREA_4
+	db 0 percent, 0 percent, 0 percent ; encounter rates: morn/day/nite
+	; morn
+	db 15, HOPPIP
+	db 10, SUNKERN
+	db  5, SUNKERN
+	db 15, MARILL
+	db 20, EXEGGCUTE
+	db 14, TANGELA
+	db 10, AIPOM
+	db  5, MILTANK
+	db  5, SMEARGLE
+	db  1, CHANSEY
+	; nite
+	db 10, MARILL
+	db  5, MARILL
+	db 20, WOOPER
+	db  4, WOOPER
+	db 20, EXEGGCUTE
+	db 20, TANGELA
+	db 10, AIPOM
+	db  5, MILTANK
+	db  5, SMEARGLE
+	db  1, CHANSEY
+	end_grass_wildmons
+
+	db -1 ; end
