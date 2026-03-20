@@ -715,11 +715,11 @@ EnemyWithdrewText:
 	text_far _EnemyWithdrewText
 	text_end
 
-EnemyUsedFullHealRed: ; unreferenced
-	call AIUsedItemSound
-	call AI_HealStatus
-	ld a, FULL_HEAL_RED ; X_SPEED
-	jp PrintText_UsedItemOn_AND_AIUpdateHUD
+;EnemyUsedFullHealRed: ; unreferenced
+;	call AIUsedItemSound
+;	call AI_HealStatus
+;	ld a, FULL_HEAL_RED ; X_SPEED
+;	jp PrintText_UsedItemOn_AND_AIUpdateHUD
 
 AI_HealStatus:
 	ld a, [wCurOTMon]
