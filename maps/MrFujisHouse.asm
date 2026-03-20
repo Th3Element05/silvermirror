@@ -48,7 +48,7 @@ MrFujisHouseMrFujiGivePokeFluteText:
 	para "Your #DEX quest"
 	line "may fail without"
 	cont "love for your"
-	cont "#MON."
+	roll "#MON."
 
 	para "I think this may"
 	line "help your quest."
@@ -58,29 +58,29 @@ MrFujisHouseMrFujiExplainFluteText:
 	text "MR.FUJI: Upon"
 	line "hearing the #-"
 	cont "FLUTE, sleeping"
-	cont "#MON will"
+	roll "#MON will"
 	cont "spring awake!"
 
 	para "It works on any"
 	line "sleeping #MON."
 ;	done
 
-	para "And, even if you"
-	line "can't play the"
-	cont "FLUTE, you can"
-	cont "use this."
-;
 ;	para "And, even if you"
-;	line "don't know how to"
-;	cont "play the FLUTE,"
-;	cont "you can use this."
+;	line "can't play the"
+;	cont "FLUTE, you can"
+;	roll "use this."
+;
+	para "And, even if you"
+	line "don't know how to"
+	cont "play the FLUTE,"
+	roll "you can use this."
 	done
 
 MrFujisHouseMrFujiExplainRadioText:
 	text "That will enable"
 	line "the radio on your"
 	cont "# GEAR to pick"
-	cont "up more channels!"
+	roll "up more channels!"
 
 	para "Now you can listen"
 	line "to the #FLUTE"
