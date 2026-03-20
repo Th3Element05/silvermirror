@@ -280,6 +280,7 @@ Route39_Blocks:
 PlayersHouse1F_Blocks:
 BluesHouse_Blocks:
 CopycatsHouse1F_Blocks:
+KurtsSonsHouse1F_Blocks:
 RedsHouse1F_Blocks:
 	INCBIN "maps/PlayersHouse1F.blk"
 

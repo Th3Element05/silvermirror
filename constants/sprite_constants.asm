@@ -408,6 +408,6 @@ DEF SPRITE_VARS EQU const_value
 	const SPRITE_COPYCAT             ; f4
 	const SPRITE_BILL_TRANSFORM      ; f5
 	const SPRITE_VOLTORB_TRAP        ; f6
-	const SPRITE_VARIABLE            ; f7
-;	const SPRITE_JANINE_TRANSFORM    ; f8
+	const SPRITE_VARIABLE_1          ; f7
+	const SPRITE_VARIABLE_2          ; f8
 ;	const SPRITE_KOGA_TRANSFORM      ; f9

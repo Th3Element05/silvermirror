@@ -1,13 +1,20 @@
 	object_const_def
 	const SAFFRONCITY_ROCKET_GUARD
 	const SAFFRONCITY_ROCKET_SLEEP
+	const SAFFRONCITY_KURTS_SON
 
 SaffronCity_MapScripts:
 	def_scene_scripts
+	scene_script SaffronCityNoop1Scene, SCENE_SAFFRONCITY_NOOP
+	scene_script SaffronCityNoop2Scene, SCENE_SAFFRONCITY_MEET_KURTS_SON
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, SaffronCityFlypointCallback
 ;	callback MAPCALLBACK_OBJECTS, SaffronCityMoveRocketCallback
+
+SaffronCityNoop1Scene:
+SaffronCityNoop2Scene:
+	end
 
 SaffronCityFlypointCallback:
 	setflag ENGINE_FLYPOINT_SAFFRON
@@ -21,6 +28,93 @@ SaffronCityFlypointCallback:
 ;	turnobject SAFFRONCITY_SILPHROCKET, UP
 ;.SavedFuji
 ;	endcallback
+
+
+SaffronCityMeetKurtsSonScene:
+	showemote EMOTE_SHOCK, SAFFRONCITY_KURTS_SON, 20
+	applymovement SAFFRONCITY_KURTS_SON, SaffronCityKurtsSon_ApproachMovement
+;	turnobject PLAYER, RIGHT
+	setlasttalked SAFFRONCITY_KURTS_SON
+	;fallthrough
+
+SaffronCityKurtsSonTalkScript:
+	faceplayer
+	opentext
+	writetext SaffronCityKurtsSon_IntroText
+	waitbutton
+	closetext
+	readvar VAR_XCOORD
+	ifnotequal 23, .SkipStepDown
+	applymovement PLAYER, SaffronCityPlayerStepsDownMovement
+.SkipStepDown
+	follow SAFFRONCITY_KURTS_SON, PLAYER
+	readvar VAR_XCOORD
+	ifnotequal 18, .NotExitSilph
+	applymovement SAFFRONCITY_KURTS_SON, SaffromCityKurtsSon_FromSilphExitMovement
+.NotExitSilph
+	applymovement SAFFRONCITY_KURTS_SON, SaffronCityKurtsSon_GoToHomeMovement
+	turnobject PLAYER, UP
+	disappear SAFFRONCITY_KURTS_SON
+	playsound SFX_ENTER_DOOR ;SFX_EXIT_BUILDING
+	waitsfx
+	setscene SCENE_SAFFRONCITY_NOOP
+	setevent EVENT_SAFFRON_CITY_KURTS_SON
+	clearevent EVENT_KURTS_SONS_HOUSE_1F_KURTS_SON
+	applymovement PLAYER, SaffronCityPlayerStepsUpMovement
+;	warp KURTS_SONS_HOUSE_1F, 4, 7
+	warpfacing UP, KURTS_SONS_HOUSE_1F, 4, 7
+	end
+
+SaffronCityKurtsSon_IntroText:
+	text "Those ROCKETs all"
+	line "ran off all of the"
+	cont "sudden."
+
+	para "<……><……>"
+
+	para "Wow, you took down"
+	line "their boss?"
+
+	para "That must be what"
+	line "scared them off!"
+
+	para "I have to thank"
+	line "you somehow!"
+
+	para "You're a trainer,"
+	line "so you must catch"
+	cont "a lot of #MON?"
+
+	para "I think I can help"
+	line "you! Come with me!"
+	done
+
+SaffronCityKurtsSon_ApproachMovement:
+	step LEFT
+	step LEFT
+	step LEFT
+	step_end
+
+SaffronCityPlayerStepsDownMovement:
+	step DOWN
+	step LEFT
+	step_end
+
+SaffromCityKurtsSon_FromSilphExitMovement:
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step_end
+
+SaffronCityKurtsSon_GoToHomeMovement:
+	step RIGHT
+	step RIGHT
+	step RIGHT
+SaffronCityPlayerStepsUpMovement:
+	step UP
+	step_end
+
+
 
 SaffronCityRocketGuard:
 ;	checkevent EVENT_POKEMON_TOWER_7F_MR_FUJI
@@ -155,7 +249,7 @@ SaffronCityGentlemanText:
 ;	text "I flew here on my"
 ;	line "PIDGEOT when I"
 ;	cont "read about SILPH."
-;	
+;
 	text "I came right away"
 	line "when I read about"
 	cont "ROCKETs at SILPH!"
@@ -262,8 +356,10 @@ SaffronCity_MapEvents:
 	warp_event 39, 23, ROUTE_8_SAFFRON_GATE, 2  ; 14
 	warp_event  8, 11, SAFFRON_MAGNET_TRAIN_STATION, 2 ; 15
 	warp_event 11,  5, SAFFRON_PIDGEY_HOUSE, 1  ; 16
+	warp_event 25, 21, KURTS_SONS_HOUSE_1F, 1 ;17
 
 	def_coord_events
+	coord_event 18, 22, SCENE_SAFFRONCITY_MEET_KURTS_SON, SaffronCityMeetKurtsSonScene
 
 	def_bg_events
 	bg_event 17,  5, BGEVENT_READ, SaffronCitySign
@@ -281,17 +377,19 @@ SaffronCity_MapEvents:
 
 	def_object_events
 	object_event 18, 22, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronCityRocketGuard, EVENT_SAFFRON_CITY_ROCKET_GUARD
-	object_event 19, 22, SPRITE_SLEEPING, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SaffronCityRocketSleep, EVENT_SAFFRON_CITY_ROCKET_SLEEP
-	object_event  7,  6, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronCityRocketScript, EVENT_SAFFRON_CITY_ROCKETS
+	object_event 19, 22, SPRITE_VARIABLE_2, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SaffronCityRocketSleep, EVENT_SAFFRON_CITY_ROCKET_SLEEP
+;	object_event 19, 22, SPRITE_SLEEPING, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SaffronCityRocketSleep, EVENT_SAFFRON_CITY_ROCKET_SLEEP
+	object_event 22, 22, SPRITE_VARIABLE_2, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, SaffronCityKurtsSonTalkScript, EVENT_SAFFRON_CITY_KURTS_SON
+;	object_event  7,  6, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronCityRocketScript, EVENT_SAFFRON_CITY_ROCKETS
 	object_event  8, 12, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronCityRocketScript, EVENT_SAFFRON_CITY_ROCKETS
 	object_event 34,  4, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronCityRocketScript, EVENT_SAFFRON_CITY_ROCKETS
 	object_event 31, 15, SPRITE_ROCKET, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronCityRocketScript, EVENT_SAFFRON_CITY_ROCKETS
-	object_event 11, 25, SPRITE_ROCKET, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronCityRocketScript, EVENT_SAFFRON_CITY_ROCKETS
-	object_event 24, 30, SPRITE_ROCKET, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronCityRocketScript, EVENT_SAFFRON_CITY_ROCKETS
+	object_event 11, 24, SPRITE_ROCKET, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronCityRocketScript, EVENT_SAFFRON_CITY_ROCKETS
+	object_event 23, 30, SPRITE_ROCKET, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronCityRocketScript, EVENT_SAFFRON_CITY_ROCKETS
 	object_event 19,  7, SPRITE_ROCKET, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronCityRocketScript, EVENT_SAFFRON_CITY_ROCKETS
 	object_event 14, 30, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SaffronCityCivilianScript, EVENT_SAFFRON_CITY_CIVILIANS
-	object_event 23, 24, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SaffronCityCivilianScript, EVENT_SAFFRON_CITY_CIVILIANS
+	object_event 13, 24, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SaffronCityCivilianScript, EVENT_SAFFRON_CITY_CIVILIANS
 	object_event 11, 14, SPRITE_SCIENTIST, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronCityCivilianScript, EVENT_SAFFRON_CITY_CIVILIANS
 	object_event 20,  8, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SaffronCityCivilianScript, EVENT_SAFFRON_CITY_CIVILIANS
 	object_event 35, 13, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronCityGentleman, EVENT_SAFFRON_CITY_CIVILIANS
-;	object_event 35, 13, SPRITE_PIDGEOT, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SaffronCityPidgeot, EVENT_SAFFRON_CITY_CIVILIANS
+	object_event 35, 13, SPRITE_PIDGEOT, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SaffronCityPidgeot, EVENT_SAFFRON_CITY_CIVILIANS

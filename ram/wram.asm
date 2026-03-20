@@ -3148,6 +3148,7 @@ wRoute8SaffronGateSceneID::                       db
 wFightingDojoSceneID::                            db
 wSilphCo7FSceneID::                               db
 wSilphCo11FSceneID::                              db
+wSaffronCitySceneID::                             db
 wSaffronMagnetTrainStationSceneID::               db
 wRoute16GateSceneID::                             db
 wRoute18GateSceneID::                             db

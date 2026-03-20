@@ -800,6 +800,7 @@ ENDM
 	map_attributes FuchsiaGoodRodHouse, FUCHSIA_GOOD_ROD_HOUSE, $00, 0
 	map_attributes FuchsiaMovesHouse, FUCHSIA_MOVES_HOUSE, $00, 0
 	map_attributes SaffronPidgeyHouse, SAFFRON_PIDGEY_HOUSE, $00, 0
+	map_attributes KurtsSonsHouse1F, KURTS_SONS_HOUSE_1F, $00, 0
 ;
 	map_attributes SilphCo1F, SILPH_CO_1F, $00, 0
 	map_attributes SilphCo2F, SILPH_CO_2F, $00, 0

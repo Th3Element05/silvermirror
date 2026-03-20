@@ -250,6 +250,7 @@ INCLUDE "maps/GoldenrodMagnetTrainStation.asm"
 INCLUDE "maps/CopycatsHouse1F.asm"
 INCLUDE "maps/CopycatsHouse2F.asm"
 INCLUDE "maps/SaffronPidgeyHouse.asm"
+INCLUDE "maps/KurtsSonsHouse1F.asm"
 
 
 SECTION "Map Scripts 21", ROMX
