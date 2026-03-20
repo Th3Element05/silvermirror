@@ -387,10 +387,10 @@ _CantUseTeleportText::
 	para ""
 	done
 
-_AlreadyUsingStrengthText::
-	text "A #MON is using"
-	line "STRENGTH already."
-	prompt
+;_AlreadyUsingStrengthText::
+;	text "A #MON is using"
+;	line "STRENGTH already."
+;	prompt
 
 _UseStrengthText::
 	text "Called MACHOKE" ;silvermirror -"<PLAYER> summoned a"
@@ -749,7 +749,7 @@ Text_BattleFoeEffectActivate::
 	text_ram wStringBuffer2
 	text_end
 
-	text_end ; unreferenced
+;	text_end ; unreferenced
 
 _BattleStatSharplyFellText::
 	text_pause
@@ -863,7 +863,7 @@ _BreedEggHatchText::
 	text_promptbutton
 	text_end
 
-	text_end ; unreferenced
+;	text_end ; unreferenced
 
 _BreedAskNicknameText::
 	text "Give a nickname to"
@@ -955,26 +955,26 @@ _MailMovedFromBoxText::
 	line "from the MAILBOX."
 	prompt
 
-_YesPromptText:: ; unreferenced
-	text "Yes"
-	prompt
+;_YesPromptText:: ; unreferenced
+;	text "Yes"
+;	prompt
 
-_NoPromptText:: ; unreferenced
-	text "No"
-	prompt
+;_NoPromptText:: ; unreferenced
+;	text "No"
+;	prompt
 
-_AnimationTypeText:: ; unreferenced
-	text_decimal wcf64, 1, 3
-	text " @"
-	text_ram wStringBuffer1
-	text_start
-	line "Animation type @"
-	text_ram wStringBuffer2
-	text_end
+;_AnimationTypeText:: ; unreferenced
+;	text_decimal wcf64, 1, 3
+;	text " @"
+;	text_ram wStringBuffer1
+;	text_start
+;	line "Animation type @"
+;	text_ram wStringBuffer2
+;	text_end
 
-_MonNumberText:: ; unreferenced
-	text "#MON number?"
-	done
+;_MonNumberText:: ; unreferenced
+;	text "#MON number?"
+;	done
 
 _WasSentToBillsPCText::
 	text_ram wStringBuffer1
@@ -1118,7 +1118,7 @@ _KarpGuruRecordText::
 	text_promptbutton
 	text_end
 
-	text_end ; unreferenced
+;	text_end ; unreferenced
 
 _LuckyNumberMatchPartyText::
 	text "Congratulations!"
@@ -1126,10 +1126,10 @@ _LuckyNumberMatchPartyText::
 	para "We have a match"
 	line "with the ID number"
 
-	para "of @"
+	cont "of @"              ;para
 	text_decimal wBufferMonID, 2, 5
 	text " in"
-	line "your party."
+	roll "your party."       ;line
 	prompt
 
 _LuckyNumberMatchPCText::
@@ -1138,10 +1138,10 @@ _LuckyNumberMatchPCText::
 	para "We have a match"
 	line "with the ID number"
 
-	para "of @"
+	cont "of @"              ;para
 	text_decimal wBufferMonID, 2, 5
 	text " in Box"
-	line "“@"
+	cont "“@"                ;line
 	text_ram wStringBuffer1
 	text "”."
 	prompt
@@ -1409,26 +1409,26 @@ _OakPCText4::
 	line "OAK's PC closed."
 	done
 
-_TrainerRankingExplanationText:: ; unreferenced
-	text "Triple-theme"
-	line "trainer ranking!"
-;
-;	para "The SAVE file you"
-;	line "just sent might"
-;	cont "make the rankings!"
+;_TrainerRankingExplanationText:: ; unreferenced
+;	text "Triple-theme"
+;	line "trainer ranking!"
+
+;;	para "The SAVE file you"
+;;	line "just sent might"
+;;	cont "make the rankings!"
 ;
 ;	para ""
-	done
+;	done
 
-_TrainerRankingNoDataText:: ; unreferenced
-	text "There is no"
-	line "ranking data."
-;
-;	para "Link to obtain"
+;_TrainerRankingNoDataText:: ; unreferenced
+;	text "There is no"
 ;	line "ranking data."
 ;
+;;	para "Link to obtain"
+;;	line "ranking data."
+;;
 ;	para ""
-	done
+;	done
 
 _MemoryGameYeahText::
 	text " , yeah!"
@@ -1491,8 +1491,8 @@ _PokemonSwapItemText::
 	text_ram wStringBuffer1
 	text " and"
 
-	para "made it hold"
-	line "@"
+	cont "made it hold"      ;para
+	roll "@"                 ;line
 	text_ram wStringBuffer2
 	text "."
 	prompt
@@ -1536,10 +1536,10 @@ _PokemonAskSwapItemText::
 	text " is"
 	line "already holding"
 
-	para "@"
+	cont "@"                 ;para
 	text_ram wStringBuffer1
 	text "."
-	line "Switch items?"
+	roll "Switch items?"     ;line
 	done
 
 _ItemCantHeldText::

@@ -13,7 +13,7 @@ _OakText8::
 	text "This is my grand-"
 	line "son. He's been"
 	cont "your rival since"
-	cont "you were a baby."
+	roll "you were little."
 
 	para "…Erm, what is"
 	line "his name again?"
@@ -42,7 +42,7 @@ if !DEF(_DEBUG)
 	para "A world of dreams"
 	line "and adventures"
 	cont "with #MON"
-	cont "awaits! Let's go!"
+	roll "awaits! Let's go!"
 
 endc
 	para "I'll be seeing you"
@@ -125,24 +125,20 @@ _MobileBattleRulesText::
 
 	para "The maximum daily"
 	line "play time is ten"
-
-	para "minutes for each"
-	line "linked player."
+	cont "minutes for each"
+	roll "linked player."
 
 	para "If a battle isn't"
 	line "finished within"
-
-	para "the time limit,"
-	line "the player with"
-
-	para "the fewest fainted"
-	line "#MON wins."
+	cont "the time limit,"
+	roll "the player with"
+	cont "the fewest fainted"
+	roll "#MON wins."
 
 	para "If tied, the team"
 	line "that lost the"
-
-	para "least amount of HP"
-	line "wins."
+	cont "least amount of HP"
+	roll "wins."
 	done
 
 _WouldYouLikeToMobileBattleText::
@@ -229,19 +225,19 @@ _SaveFileCorruptedText::
 	line "corrupted!"
 	prompt
 
-_WindowAreaExceededErrorText:: ; unreferenced
-	text "The window save"
-	line "area was exceeded."
-	done
+;_WindowAreaExceededErrorText:: ; unreferenced
+;	text "The window save"
+;	line "area was exceeded."
+;	done
 
 _WindowPoppingErrorText::
 	text "No windows avail-"
 	line "able for popping."
 	done
 
-_CorruptedEventText:: ; unreferenced
-	text "Corrupted event!"
-	prompt
+;_CorruptedEventText:: ; unreferenced
+;	text "Corrupted event!"
+;	prompt
 
 _ObjectEventText::
 	text "Object event"
@@ -375,7 +371,7 @@ _SeerMoreCareText::
 	para "It would be wise"
 	line "to raise your"
 	cont "#MON with a"
-	cont "little more care."
+	roll "little more care."
 	done
 
 _SeerMoreConfidentText::
@@ -412,7 +408,7 @@ _SeerMightyText::
 	text_start
 	line "must have come"
 	cont "through numerous"
-	cont "#MON battles."
+	roll "#MON battles."
 
 	para "It looks brimming"
 	line "with confidence."
@@ -427,18 +423,18 @@ _SeerImpressedText::
 	para "It's been a long"
 	line "time since I've"
 	cont "seen a #MON as"
-	cont "mighty as this"
-	cont "@"
-	text_ram wSeerNickname
-	text "."
+	roll "mighty as this."
+;	cont "@"
+;	text_ram wSeerNickname
+;	text "."
 
 	para "I'm sure that"
 	line "seeing @"
 	text_ram wSeerNickname
 	text_start
 
-	para "in battle would"
-	line "excite anyone."
+	cont "in battle would"   ;para
+	roll "excite anyone."    ;line
 	done
 
 _CongratulationsYourPokemonText::
@@ -447,13 +443,13 @@ _CongratulationsYourPokemonText::
 	text_ram wStringBuffer2
 	text_end
 
-	text_end ; unreferenced
+;	text_end ; unreferenced
 
 _EvolvedIntoText::
 	text_start
 
-	para "evolved into"
-	line "@"
+	cont "evolved into"      ;para
+	roll "@"                 ;line
 	text_ram wStringBuffer1
 	text "!"
 	done
@@ -547,7 +543,7 @@ _BargainShopIntroText::
 	para "I sell rare items"
 	line "that nobody else"
 	cont "carries--but only"
-	cont "one of each item."
+	roll "one of each item."
 	done
 
 _BargainShopFinalPriceText::
@@ -720,7 +716,7 @@ _MobileStadiumEntryText::
 	text "Data for use in"
 	line "the MOBILE STADIUM"
 	cont "of the N64 #MON"
-	cont "STADIUM 2 can be"
+	roll "STADIUM 2 can be"
 	cont "read here."
 
 	para "Read the data?"
@@ -733,7 +729,7 @@ _MobileStadiumSuccessText::
 	para "We hope you enjoy"
 	line "MOBILE STADIUM"
 	cont "battles in the N64"
-	cont "#MON STADIUM 2."
+	roll "#MON STADIUM 2."
 
 	para ""
 	done
@@ -779,12 +775,12 @@ _MobileCardFolderIntro1Text::
 	text "The CARD FOLDER"
 	line "stores your and"
 	cont "your friends'"
-	cont "CARDs."
+	roll "CARDs."
 
 	para "A CARD contains"
 	line "information like"
 	cont "the person's name,"
-	cont "phone number and"
+	roll "phone number and"
 	cont "profile."
 
 	para ""
@@ -796,7 +792,7 @@ _MobileCardFolderIntro2Text::
 	para "Once you've"
 	line "entered your phone"
 	cont "number, you can"
-	cont "trade CARDs with"
+	roll "trade CARDs with"
 	cont "your friends."
 
 	para ""
@@ -806,9 +802,9 @@ _MobileCardFolderIntro3Text::
 	text "If you have your"
 	line "friend's CARD, you"
 	cont "can use it to make"
-	cont "a call from a"
+	roll "a call from a"
 	cont "mobile phone on"
-	cont "the 2nd floor of a"
+	roll "the 2nd floor of a"
 	cont "#MON CENTER."
 
 	para ""
@@ -818,7 +814,7 @@ _MobileCardFolderIntro4Text::
 	text "To safely store"
 	line "your collection of"
 	cont "CARDs, you must"
-	cont "set a PASSCODE for"
+	roll "set a PASSCODE for"
 	cont "your CARD FOLDER."
 
 	para ""
@@ -828,7 +824,7 @@ _MobileCardFolderAskDeleteText::
 	text "If the CARD FOLDER"
 	line "is deleted, all"
 	cont "its CARDs and the"
-	cont "PASSCODE will also"
+	roll "PASSCODE will also"
 	cont "be deleted."
 
 	para "Beware--a deleted"
@@ -897,9 +893,9 @@ _PhoneThankYouText::
 	text "Thank you!"
 	done
 
-_SpaceSpaceColonText:: ; unreferenced
-	text "  :"
-	done
+;_SpaceSpaceColonText:: ; unreferenced
+;	text "  :"
+;	done
 
 _PasswordAskResetText::
 	text "Select CONTINUE &"
@@ -934,7 +930,7 @@ _LearnedMoveText::
 	text_promptbutton
 	text_end
 
-	text_end ; unreferenced
+;	text_end ; unreferenced
 
 _MoveAskForgetText::
 	text "Which move should"
@@ -971,9 +967,13 @@ _AskForgetMoveText::
 	line "can't learn more"
 	cont "than four moves."
 
-	para "Delete an older"
-	line "move to make room"
-	cont "for @"
+;	para "Delete an older"
+;	line "move to make room"
+;	cont "for @"
+;	text_ram wStringBuffer2
+;	text "?"
+	para "Replace a move"
+	line "with @"
 	text_ram wStringBuffer2
 	text "?"
 	done
@@ -983,7 +983,7 @@ Text_MoveForgetCount::
 	text_pause
 	text_end
 
-	text_end ; unreferenced
+;	text_end ; unreferenced
 
 _MoveForgotText::
 	text " Poof!@"
@@ -1218,13 +1218,13 @@ Text_BallCaught::
 	sound_caught_mon
 	text_end
 
-	text_end ; unreferenced
+;	text_end ; unreferenced
 
 _WaitButtonText::
 	text_promptbutton
 	text_end
 
-	text_end ; unreferenced
+;	text_end ; unreferenced
 
 _BallSentToPCText::
 	text_ram wMonOrItemNameBuffer
@@ -1243,7 +1243,7 @@ _NewDexDataText::
 	text_promptbutton
 	text_end
 
-	text_end ; unreferenced
+;	text_end ; unreferenced
 
 _AskGiveNicknameText::
 	text "Give a nickname to"
@@ -1303,7 +1303,7 @@ _CoinCaseCountText::
 	text_decimal wCoins, 2, 4
 	text_end
 
-	text_end ; unreferenced
+;	text_end ; unreferenced
 
 _RaiseThePPOfWhichMoveText::
 	text "Raise the PP of"
@@ -1528,8 +1528,8 @@ _TimesetAskAdjustDSTText::
 	text "Do you want to"
 	line "adjust your clock"
 
-	para "for Daylight"
-	line "Saving Time?"
+	cont "for Daylight"      ;para
+	roll "Saving Time?"      ;line
 	done
 
 _MomLostGearBookletText::
