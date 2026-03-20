@@ -34,6 +34,7 @@ MapScenes::
 	scene_var FIGHTING_DOJO,                               wFightingDojoSceneID
 	scene_var SILPH_CO_7F,                                 wSilphCo7FSceneID
 	scene_var SILPH_CO_11F,                                wSilphCo11FSceneID
+	scene_var SAFFRON_CITY,                                wSaffronCitySceneID
 	scene_var SAFFRON_MAGNET_TRAIN_STATION,                wSaffronMagnetTrainStationSceneID
 	scene_var ROUTE_16_GATE,                               wRoute16GateSceneID
 	scene_var ROUTE_18_GATE,                               wRoute18GateSceneID

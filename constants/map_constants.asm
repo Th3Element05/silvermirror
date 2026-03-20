@@ -232,6 +232,7 @@ ENDM
 	map_const ROUTE_5,                                     10, 16 ; 11
 	map_const ROUTE_5_UNDERGROUND_PATH_ENTRANCE,            4,  4 ; 12
 	map_const ROUTE_5_SAFFRON_GATE,                         4,  4 ; 13
+	map_const KURTS_SONS_HOUSE_1F,                          5,  4 ; 14
 	endgroup
 
 	newgroup CINNABAR                                             ; 12
@@ -427,7 +428,7 @@ ENDM
 	newgroup SILVER                                               ; 26
 	map_const ROUTE_28,                                    20,  9 ;  6
 	map_const SILVER_CAVE_OUTSIDE,                         20, 15 ;  7
-	map_const SILVER_CAVE_POKECENTER_1F,                    5,  4 ;  8
+	map_const SILVER_CAVE_POKECENTER_1F,                    7,  4 ;  8
 	map_const ROUTE_28_STEEL_WING_HOUSE,                    4,  4 ;  9
 	endgroup
 

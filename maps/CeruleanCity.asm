@@ -97,6 +97,7 @@ CeruleanCityRivalEncounterL:
 	applymovement CERULEANCITY_RIVAL, CeruleanCityRivalLeavesMovement
 	disappear CERULEANCITY_RIVAL
 	setscene SCENE_CERULEANCITY_NOOP
+	variablesprite SPRITE_VARIABLE_2, SPRITE_SLEEPING
 	special RestartMapMusic
 	end
 
@@ -515,7 +516,8 @@ CeruleanCity_MapEvents:
 	bg_event 15,  8, BGEVENT_ITEM, CeruleanCityHiddenRareCandy
 
 	def_object_events
-	object_event 20,  2, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CERULEAN_CITY_RIVAL
+	object_event 20,  2, SPRITE_VARIABLE_2, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CERULEAN_CITY_RIVAL
+;	object_event 20,  2, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CERULEAN_CITY_RIVAL
 	object_event 28, 12, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeruleanCityOfficerScript, -1
 	object_event 30,  8, SPRITE_ROCKET, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerRocketGruntM4, EVENT_CERULEAN_CITY_ROCKET
 	object_event 20, 26, SPRITE_SLOWBRO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, CeruleanCitySlowbroScript, -1

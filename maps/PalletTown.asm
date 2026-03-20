@@ -48,8 +48,8 @@ PalletTownOakHeyWaitScriptL:
 	setmapscene OAKS_LAB, SCENE_OAKSLAB_MEET_OAK
 	clearevent EVENT_OAKS_LAB_OAK
 	applymovement PLAYER, PalletTownEnterLabMovement
-	warp OAKS_LAB, 5, 11
-;	warpfacing UP, OAKS_LAB, 5, 11
+;	warp OAKS_LAB, 5, 11
+	warpfacing UP, OAKS_LAB, 5, 11
 	end
 
 PalletTownOakHeyWaitText:
@@ -259,7 +259,7 @@ PalletTown_MapEvents:
 
 	def_object_events
 ;	object_event 8,  5, SPRITE_OAK, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PALLET_TOWN_OAK
-	object_event 8,  5, SPRITE_VARIABLE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PALLET_TOWN_OAK
+	object_event 8,  5, SPRITE_VARIABLE_1, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PALLET_TOWN_OAK
 	object_event  4,  8, SPRITE_TEACHER, SPRITEMOVEDATA_WANDER, 2, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PalletTownTeacherScript, -1
 	object_event 12, 14, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PalletTownFisherScript, -1
 ;	object_event  1,  2, SPRITE_OAK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TradeNPCTest, -1
