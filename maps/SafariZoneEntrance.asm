@@ -60,6 +60,7 @@ SafariZoneEntranceMainOfficerScript:
 	faceplayer
 	opentext
 	writetext SafariZoneEntranceMainOfficer_Text
+	special PlaceMoneyTopRight
 	yesorno
 	iffalse .SafariZoneEntranceMainOfficer_Declined
 	readvar VAR_BOXSPACE
