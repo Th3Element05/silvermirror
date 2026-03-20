@@ -13,7 +13,7 @@ DEF GOLDENRODGAMECORNER_NUGGET_COINS       EQU 500
 DEF GOLDENRODGAMECORNER_KINGS_ROCK_COINS   EQU 1000
 DEF GOLDENRODGAMECORNER_METAL_COAT_COINS   EQU 1000
 DEF GOLDENRODGAMECORNER_DRAGON_SCALE_COINS EQU 1000
-DEF GOLDENRODGAMECORNER_UP_GRADE_COINS     EQU 1000
+;DEF GOLDENRODGAMECORNER_UP_GRADE_COINS     EQU 1000
 ;
 DEF GOLDENRODGAMECORNER_EGG_COINS          EQU 5000
 ;50 coins = $1000
@@ -163,7 +163,7 @@ GoldenrodGameCornerMonVendorMenuHeader:
 	db 1 ; default option
 .MenuDataMons:
 	db STATICMENU_CURSOR ; flags
-	db 4 ; items
+	db 4 ;5 ; items
 ;	db "TOGEPI     {d:GOLDENRODGAMECORNER_TOGEPI_COINS}@"
 	db "MURKROW    {d:GOLDENRODGAMECORNER_MURKROW_COINS}@"
 	db "SLUGMA     {d:GOLDENRODGAMECORNER_SLUGMA_COINS}@"
@@ -265,7 +265,7 @@ GoldenrodGameCornerEvolveVendorLoop:
 	ifequal 1, .KingsRock
 	ifequal 2, .MetalCoat
 	ifequal 3, .DragonScale
-	ifequal 4, .UpGrade
+;	ifequal 4, .UpGrade
 	sjump GoldenrodGameCorner_CancelPurchaseScript
 
 .KingsRock:
@@ -301,16 +301,16 @@ GoldenrodGameCornerEvolveVendorLoop:
 	takecoins GOLDENRODGAMECORNER_DRAGON_SCALE_COINS
 	sjump GoldenrodGameCornerEvolveVendor_FinishScript
 
-.UpGrade:
-	checkcoins GOLDENRODGAMECORNER_UP_GRADE_COINS
-	ifequal HAVE_LESS, GoldenrodGameCorner_NotEnoughCoinsScript
-	getitemname STRING_BUFFER_3, UP_GRADE
-	scall GoldenrodGameCorner_ConfirmPurchaseScript
-	iffalse GoldenrodGameCorner_CancelPurchaseScript
-	giveitem UP_GRADE
-	iffalse GoldenrodGameCorner_NoRoomScript
-	takecoins GOLDENRODGAMECORNER_UP_GRADE_COINS
-	sjump GoldenrodGameCornerEvolveVendor_FinishScript
+;.UpGrade:
+;	checkcoins GOLDENRODGAMECORNER_UP_GRADE_COINS
+;	ifequal HAVE_LESS, GoldenrodGameCorner_NotEnoughCoinsScript
+;	getitemname STRING_BUFFER_3, UP_GRADE
+;	scall GoldenrodGameCorner_ConfirmPurchaseScript
+;	iffalse GoldenrodGameCorner_CancelPurchaseScript
+;	giveitem UP_GRADE
+;	iffalse GoldenrodGameCorner_NoRoomScript
+;	takecoins GOLDENRODGAMECORNER_UP_GRADE_COINS
+;	sjump GoldenrodGameCornerEvolveVendor_FinishScript
 
 GoldenrodGameCornerEvolveVendorMenuHeader:
 	db MENU_BACKUP_TILES ; flags
@@ -319,11 +319,11 @@ GoldenrodGameCornerEvolveVendorMenuHeader:
 	db 1 ; default option
 .MenuDataItems:
 	db STATICMENU_CURSOR ; flags
-	db 5 ; items
+	db 4 ;5 ; items
 	db "KING's ROCK  {d:GOLDENRODGAMECORNER_KINGS_ROCK_COINS}@"
 	db "METAL COAT   {d:GOLDENRODGAMECORNER_METAL_COAT_COINS}@"
 	db "DRAGON SCALE {d:GOLDENRODGAMECORNER_DRAGON_SCALE_COINS}@"
-	db "UP-GRADE     {d:GOLDENRODGAMECORNER_UP_GRADE_COINS}@"
+;	db "UP-GRADE     {d:GOLDENRODGAMECORNER_UP_GRADE_COINS}@"
 	db "CANCEL@"
 
 ; egg vendor
