@@ -50,10 +50,10 @@
 	tilecoll TOWN_MAP, WALL, FLOOR, FLOOR ; 31
 	tilecoll WALL, WALL, WALL, WALL ; 32
 	tilecoll WALL, FLOOR, WALL, FLOOR ; 33
-	tilecoll FF, FF, FF, FF ; 34
-	tilecoll FF, FF, FF, FF ; 35
-	tilecoll FF, FF, FF, FF ; 36
-	tilecoll FF, FF, FF, FF ; 37
+	tilecoll FLOOR, FLOOR, FLOOR, WALL ; 34
+	tilecoll WALL, FLOOR, FLOOR, FLOOR ; 35
+	tilecoll FLOOR, FLOOR, WALL, FLOOR ; 36
+	tilecoll FLOOR, WALL, FLOOR, FLOOR ; 37
 	tilecoll FF, FF, FF, FF ; 38
 	tilecoll FF, FF, FF, FF ; 39
 	tilecoll FF, FF, FF, FF ; 3a
