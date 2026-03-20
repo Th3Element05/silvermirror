@@ -66,6 +66,7 @@ LavenderTownGirlScript:
 	applymovement LAVENDERTOWN_CURSE_GIRL, LavenderTownRockSmashMovement
 	disappear LAVENDERTOWN_CURSE_GIRL
 	pause 16
+	opentext
 	verbosegiveitem TM_CURSE
 	setevent EVENT_GOT_TM69_CURSE
 	closetext
