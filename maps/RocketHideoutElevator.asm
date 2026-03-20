@@ -5,7 +5,7 @@ RocketHideoutElevator_MapScripts:
 	callback MAPCALLBACK_TILES, .RocketHideoutElevatorCallback
 
 .RocketHideoutElevatorCallback:
-	changeblock 0, 0, $3f ; elevator exit
+	changeblock 0, 0, $0c ; elevator exit
 	changeblock 0, 2, $25 ; floor
 	changeblock 2, 2, $25 ; floor
 	endcallback
