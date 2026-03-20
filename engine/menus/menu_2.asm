@@ -132,8 +132,8 @@ ShowMoney_TerminatorString:
 	db "@"
 
 StartMenu_DrawSafariZoneStatusBox:
-	hlcoord 0, 0
-	ld b, 4
+	hlcoord 0, 2 ;0, 0
+	ld b, 2 ;4
 	ld c, 8
 	jp Textbox
 
@@ -143,31 +143,43 @@ StartMenu_PrintSafariZoneStatus:
 	push af
 	set NO_TEXT_SCROLL, [hl]
 	call StartMenu_DrawSafariZoneStatusBox
-	hlcoord 1, 2
-	ld de, wSafariTimeRemaining
-	lb bc, 2, 3
-	call PrintNum
-	hlcoord 1, 1
-	ld de, .step_remaining
-	call PlaceString
-	hlcoord 4, 2
-	ld de, .step_count
-	call PlaceString
-	hlcoord 1, 4
+
+; balls
+	hlcoord 1, 3 ;1, 4
 	ld de, .balls_remaining
 	call PlaceString
-	hlcoord 5, 4
+
+; balls amount
+	hlcoord 5, 3 ;5, 4
 	ld de, wSafariBallsRemaining
 	lb bc, 1, 4
 	call PrintNum
+
+; time(steps)
+	hlcoord 1, 4 ;1, 1
+	ld de, .step_remaining
+	call PlaceString
+
+; time(steps) total
+;	hlcoord 4, 2
+;	ld de, .step_count
+;	call PlaceString
+
+; time(steps) amount
+	hlcoord 6, 4 ;1, 2
+	ld de, wSafariTimeRemaining
+	lb bc, 2, 3
+	call PrintNum
+
 	pop af
 	ld [wOptions], a
 	ret
 
 .step_remaining
-	db "Steps:@"
-.step_count
-	db "/500@"
+;	db "Steps:@"
+	db "TIME:@"
+;.step_count
+;	db "/500@"
 .balls_remaining
 	db "BALLS×@"
 
