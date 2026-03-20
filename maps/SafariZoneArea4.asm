@@ -58,7 +58,7 @@ SafariZoneArea4CooltrainersText:
 SafariZoneArea4WardensTeethSign:
 	jumptext SafariZoneArea4WardensTeethSignText
 SafariZoneArea4WardensTeethSignText:
-	text "REQUEST NOTICE"
+	text "  REQUEST NOTICE"
 
 	para "Please find the"
 	line "SAFARI WARDEN's"

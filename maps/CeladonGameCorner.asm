@@ -364,15 +364,17 @@ CeladonGameCornerCardFlipScript:
 CeladonGameCornerOutOfOrderScript:
 	jumptext CeladonGameCornerOutOfOrderText
 CeladonGameCornerOutOfOrderText:
-	text "OUT OF ORDER"
-	line "This is broken."
+	text "   OUT OF ORDER"
+
+	para "This is broken."
 	done
 
 CeladonGameCornerOutToLunchScript:
 	jumptext CeladonGameCornerOutToLunchText
 CeladonGameCornerOutToLunchText:
-	text "OUT TO LUNCH"
-	line "This is reserved."
+	text "   OUT TO LUNCH"
+
+	para "This is reserved."
 	done
 
 CeladonGameCornerSomeonesKeysScript:
