@@ -40,6 +40,39 @@ engine\evnets\overworld.asm
 
 
 
+remove WHIRLPOOL notes
+
+constants/engine_flags.asm
+	const ENGINE_PAGER_WHIRLPOOL
+	>
+data/events/engine_flags.asm
+	engine_flag wPagerFlags, PAGER_WHIRLPOOL_F
+	>
+constants/wram_constants.asm
+	const PAGER_WHIRLPOOL_F
+	>	(NUM_PAGER_FLAGS)
+
+data/pager_system.asm
+	db POLIWRATH
+
+engine/pokegear/pokegear.asm
+PagerCardRoutines:
+	...
+	dw FlashPagerRoutine
+
+
+engine\events\overworld.asm (1 hit)
+TryWhirlpoolOW::
+;	ld de, ENGINE_GLACIERBADGE ;silvermirror remove HM badge requirements
+;	call CheckEngineFlag
+;	jr c, .failed
+
+	ld de, ENGINE_PAGER_WHIRLPOOL
+	call CheckEngineFlag
+	jr c, .failed
+(use ENGINE_STORMBADGE)
+
+
 
 
 
