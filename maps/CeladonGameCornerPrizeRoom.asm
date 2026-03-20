@@ -16,7 +16,7 @@ DEF CELADONGAMECORNER_LEAF_STONE_COINS   EQU 250
 DEF CELADONGAMECORNER_KINGS_ROCK_COINS   EQU 1000
 DEF CELADONGAMECORNER_METAL_COAT_COINS   EQU 1000
 DEF CELADONGAMECORNER_DRAGON_SCALE_COINS EQU 1000
-DEF CELADONGAMECORNER_UP_GRADE_COINS     EQU 1000
+;DEF CELADONGAMECORNER_UP_GRADE_COINS     EQU 1000
 ;50 coins = $1000
 ;500 coins = $10000
 
@@ -320,7 +320,7 @@ CeladonPrizeRoomEvolveVendorLoop:
 	ifequal 1, .KingsRock
 	ifequal 2, .MetalCoat
 	ifequal 3, .DragonScale
-	ifequal 4, .UpGrade
+;	ifequal 4, .UpGrade
 	sjump CeladonPrizeRoom_CancelPurchaseScript
 
 .KingsRock:
@@ -356,16 +356,16 @@ CeladonPrizeRoomEvolveVendorLoop:
 	takecoins CELADONGAMECORNER_DRAGON_SCALE_COINS
 	sjump CeladonPrizeRoomStoneVendor_FinishScript
 
-.UpGrade:
-	checkcoins CELADONGAMECORNER_UP_GRADE_COINS
-	ifequal HAVE_LESS, CeladonPrizeRoom_NotEnoughCoinsScript
-	getitemname STRING_BUFFER_3, UP_GRADE
-	scall CeladonPrizeRoom_ConfirmPurchaseScript
-	iffalse CeladonPrizeRoom_CancelPurchaseScript
-	giveitem UP_GRADE
-	iffalse CeladonPrizeRoom_NoRoomScript
-	takecoins CELADONGAMECORNER_UP_GRADE_COINS
-	sjump CeladonPrizeRoomStoneVendor_FinishScript
+;.UpGrade:
+;	checkcoins CELADONGAMECORNER_UP_GRADE_COINS
+;	ifequal HAVE_LESS, CeladonPrizeRoom_NotEnoughCoinsScript
+;	getitemname STRING_BUFFER_3, UP_GRADE
+;	scall CeladonPrizeRoom_ConfirmPurchaseScript
+;	iffalse CeladonPrizeRoom_CancelPurchaseScript
+;	giveitem UP_GRADE
+;	iffalse CeladonPrizeRoom_NoRoomScript
+;	takecoins CELADONGAMECORNER_UP_GRADE_COINS
+;	sjump CeladonPrizeRoomStoneVendor_FinishScript
 
 CeladonPrizeRoomEvolveVendorMenuHeader:
 	db MENU_BACKUP_TILES ; flags
@@ -374,11 +374,11 @@ CeladonPrizeRoomEvolveVendorMenuHeader:
 	db 1 ; default option
 .MenuDataItems:
 	db STATICMENU_CURSOR ; flags
-	db 5 ; items
+	db 4 ;5 ; items
 	db "KING's ROCK  {d:CELADONGAMECORNER_KINGS_ROCK_COINS}@"
 	db "METAL COAT   {d:CELADONGAMECORNER_METAL_COAT_COINS}@"
 	db "DRAGON SCALE {d:CELADONGAMECORNER_DRAGON_SCALE_COINS}@"
-	db "UP-GRADE     {d:CELADONGAMECORNER_UP_GRADE_COINS}@"
+;	db "UP-GRADE     {d:CELADONGAMECORNER_UP_GRADE_COINS}@"
 	db "CANCEL@"
 
 ; vendor universal scripts
