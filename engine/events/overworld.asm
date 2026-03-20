@@ -974,15 +974,15 @@ StrengthFunction:
 ;	jr c, .Failed
 	jr .UseStrength
 
-.AlreadyUsingStrength: ; unreferenced
-	ld hl, .AlreadyUsingStrengthText
-	call MenuTextboxBackup
-	ld a, $80
-	ret
+;.AlreadyUsingStrength: ; unreferenced
+;	ld hl, .AlreadyUsingStrengthText
+;	call MenuTextboxBackup
+;	ld a, $80
+;	ret
 
-.AlreadyUsingStrengthText:
-	text_far _AlreadyUsingStrengthText
-	text_end
+;.AlreadyUsingStrengthText:
+;	text_far _AlreadyUsingStrengthText
+;	text_end
 
 .Failed:
 	ld a, $80
@@ -1104,9 +1104,9 @@ WhirlpoolFunction:
 	dw .FailWhirlpool
 
 .TryWhirlpool:
-;	ld de, ENGINE_GLACIERBADGE ;silvermirror remove HM badge requirements
-;	call CheckBadge
-;	jr c, .noglacierbadge
+	ld de, ENGINE_STORMBADGE ;ENGINE_GLACIERBADGE ;silvermirror remove HM badge requirements
+	call CheckBadge
+	jr c, .noglacierbadge
 	call TryWhirlpoolMenu
 	jr c, .failed
 	ld a, $1
@@ -1171,7 +1171,7 @@ Script_WhirlpoolFromMenu:
 
 Script_UsedWhirlpool:
 	writetext UseWhirlpoolText
-	cry POLIWRATH ;silvermirror -REMORAID
+	cry LAPRAS ;POLIWRATH ;silvermirror -REMORAID
 	waitbutton
 	reloadmappart
 	callasm DisappearWhirlpool
@@ -1200,7 +1200,7 @@ TryWhirlpoolOW::
 ;	call CheckEngineFlag
 ;	jr c, .failed
 
-	ld de, ENGINE_PAGER_WHIRLPOOL
+	ld de, ENGINE_STORMBADGE ;ENGINE_PAGER_WHIRLPOOL
 	call CheckEngineFlag
 	jr c, .failed
 

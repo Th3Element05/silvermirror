@@ -624,7 +624,7 @@ PagerCardRoutines:
 	dw SurfPagerRoutine
 	dw StrengthPagerRoutine
 	dw FlashPagerRoutine
-	dw WhirlpoolPagerRoutine
+;	dw WhirlpoolPagerRoutine
 	dw RockSmashPagerRoutine
 
 FlyPagerRoutine:

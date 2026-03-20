@@ -61,14 +61,16 @@ CianwoodGymChuckScript:
 	iftrue .AlreadyGotWhirlpool
 	writetext ChuckExplainBadgeText
 	promptbutton
-	stringtotext .pagercardname, MEM_BUFFER_1
-	scall .JumpstdReceiveItem
-	setflag ENGINE_PAGER_WHIRLPOOL
-	writetext GotWhirlpoolPagerText
-	promptbutton
-	giveitem TM_WHIRLPOOL
+;	stringtotext .pagercardname, MEM_BUFFER_1
+;	scall .JumpstdReceiveItem
+;	setflag ENGINE_PAGER_WHIRLPOOL
+;	writetext GotWhirlpoolPagerText
+;	promptbutton
+;	giveitem TM_WHIRLPOOL
+;	writetext ChuckExplainPagerText
+	verbosegiveitem TM_WHIRLPOOL
+	writetext ChuckExplainWhirlpoolText
 	setevent EVENT_GOT_HM06_WHIRLPOOL
-	writetext ChuckExplainPagerText
 	waitbutton
 	closetext
 	end
@@ -163,13 +165,41 @@ ChuckExplainBadgeText:
 	para "Take this, too!"
 	done
 
-ChuckExplainPagerText:
-	text "That's a PAGER"
-	line "for WHIRLPOOL!"
+;ChuckExplainPagerText:
+;	text "That's a PAGER"
+;	line "for WHIRLPOOL!"
+;
+;	para "With that, you can"
+;	line "cross the turbulent"
+;	cont "waters around the"
+;	roll "WHIRL ISLANDS."
+;
+;	para "People say that a"
+;	line "powerful #MON"
+;	cont "lurks deep within"
+;	roll "WHIRL ISLANDs."
+;
+;	para "But I've searched"
+;	line "there and never"
+;	cont "found anything."
+;
+;	para "It's still a"
+;	line "dangerous place."
+;	cont "But I know you can"
+;	roll "handle yourself."
+;	done
+
+ChuckExplainWhirlpoolText:
+	text "That's WHIRLPOOL!"
+
+	para "LAPRAS from your"
+	line "SURF PAGER can use"
+	cont "WHIRLPOOL calm"
+	roll "turbulent water."
 
 	para "With that, you can"
-	line "cross the turbulent"
-	cont "waters around the"
+	line "get past the whirl-"
+	cont "pools around the"
 	roll "WHIRL ISLANDS."
 
 	para "People say that a"
@@ -181,14 +211,9 @@ ChuckExplainPagerText:
 	line "there and never"
 	cont "found anything."
 
-	para "It's still a"
-	line "dangerous place."
-	cont "But I know you can"
-	roll "handle yourself."
-;
-;	para "That's a dangerous"
-;	line "place. But I know"
-;	cont "you can handle it!"
+	para "That's a dangerous"
+	line "place. But I know"
+	cont "you can handle it!"
 	done
 
 ChuckAfterText:
