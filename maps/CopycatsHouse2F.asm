@@ -8,10 +8,10 @@ CopycatsHouse2F_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
-	callback MAPCALLBACK_TILES, CopycatsHouse2FHouseTilesCallback
+	callback MAPCALLBACK_TILES, CopycatsHouse2FTilesCallback
 ;	callback MAPCALLBACK_OBJECTS, CopycatsHouse2FWhichGenderCallback
 
-CopycatsHouse2FHouseTilesCallback:
+CopycatsHouse2FTilesCallback:
 	changeblock 2, 0, $32 ; table
 	changeblock 0, 4, $1c ; pink bed
 	endcallback
@@ -43,7 +43,7 @@ Copycat:
 	variablesprite SPRITE_COPYCAT, SPRITE_KRIS
 .Default_Merge_1:
 	special LoadUsedSpritesGFX
-;	checkevent EVENT_GOT_TM31_MIMIC
+	checkevent EVENT_GOT_METAL_POWDER_FROM_COPYCAT
 	iftrue .GotMimic
 	opentext
 	writetext CopycatText_Default
@@ -60,13 +60,13 @@ Copycat:
 	iffalse .DollNotForYou
 	writetext CopycatText_ThanksGiveTM
 	promptbutton
-;	takeitem POKE_DOLL
-;	verbosegiveitem TM_MIMIC
-	writetext CopycatText_ExplainTM
-	waitbutton
+	takeitem POKE_DOLL
+	verbosegiveitem METAL_POWDER
+;	writetext CopycatText_ExplainTM
+;	waitbutton
 	closetext
 	appear COPYCATSHOUSE2F_POKEDOLL
-;	setevent EVENT_GOT_TM31_MIMIC
+	setevent EVENT_GOT_METAL_POWDER_FROM_COPYCAT
 	end
 
 .DollNotForYou
@@ -125,8 +125,8 @@ CopycatText_Default:
 	text "<PLAYER>: Hi! Do"
 	line "you like #MON?"
 
-	para "<PLAYER>: Uh, no, I"
-	line "just asked you."
+	para "<PLAYER>: Uh, no,"
+	line "I just asked you."
 
 	para "<PLAYER>: Huh?"
 	line "You're strange!"
@@ -166,28 +166,29 @@ CopycatText_ThanksGiveTM:
 	line "have this!"
 	done
 
-CopycatText_ExplainTM:
-	text "TM31 contains my"
-	line "favorite, MIMIC!"
-
-	para "It will copy an"
-	line "opponent's move!"
-	cont "But only for one"
-	cont "battle!"
-
-	para "Use it on a good"
-	line "#MON!"
-	done
+;CopycatText_ExplainTM:
+;	text "TM31 contains my"
+;	line "favorite, MIMIC!"
+;
+;	para "It will copy an"
+;	line "opponent's move!"
+;	cont "But only for one"
+;	cont "battle!"
+;
+;	para "Use it on a good"
+;	line "#MON!"
+;	done
 
 CopycatText_ThanksForTM:
 	text "<PLAYER>: Hi!"
-	line "Thanks for TM31!"
+	line "Thanks for the"
+	cont "METAL POWDER!"
 
 	para "<PLAYER>: Pardon?"
 
 	para "<PLAYER>: Is it"
-	line "that fun to mimic"
-	cont "my every move?"
+	line "fun to mimic my"
+	cont "every move?"
 	done
 
 CopycatText_YouBet:
@@ -200,9 +201,8 @@ CopycatsDoduoText:
 
 	para "MIRROR, MIRROR,"
 	line "ON THE WALL,"
-
-	para "WHO'S THE FAIREST"
-	line "ONE OF ALL?"
+	cont "WHO'S THE FAIREST"
+	roll "ONE OF ALL?"
 	done
 
 CopycatsHouse2FDollText:
@@ -226,7 +226,7 @@ CopycatsHouse2F_MapEvents:
 
 	def_bg_events
 	bg_event  5,  1, BGEVENT_READ, CopycatsHouse2FBookshelf
-	bg_event  3,  1, BGEVENT_ITEM, CopycatsHouse2FHiddenNugget
+	bg_event  2,  1, BGEVENT_ITEM, CopycatsHouse2FHiddenNugget
 
 	def_object_events
 ;	object_event  2,  4, SPRITE_COPYCAT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Copycat, EVENT_COPYCAT_1
@@ -235,9 +235,9 @@ CopycatsHouse2F_MapEvents:
 	object_event  1,  5, SPRITE_CLEFAIRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, EVENT_COPYCATS_HOUSE_2F_DOLL
 	object_event  6,  4, SPRITE_DODUO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CopycatsDoduo, -1
 	object_event  0,  1, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_BIGDOLLSYM, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, -1
-	object_event  2,  1, SPRITE_EEVEE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, -1
-	object_event  4,  4, SPRITE_SHELLDER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, -1
-	object_event  5,  4, SPRITE_JIGGLYPUFF, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, -1
+	object_event  3,  1, SPRITE_EEVEE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, -1
+;	object_event  4,  4, SPRITE_SHELLDER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, -1
+	object_event  4,  4, SPRITE_JIGGLYPUFF, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, -1
 ;	object_event  2,  1, SPRITE_PIDGEY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, -1
 
 ;.PinkOverYellowOBPalette
