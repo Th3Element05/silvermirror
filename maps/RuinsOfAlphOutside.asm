@@ -9,10 +9,10 @@ RuinsOfAlphOutside_MapScripts:
 RuinsOfAlphOutsideCavesCallback:
 	checkevent EVENT_MADE_UNOWN_APPEAR_IN_RUINS
 	iftrue .RuinsAreOpen
-	changeblock 10, 12, $b0 ; closed ruins
-	changeblock 2, 16, $b0 ; closed ho-oh
-	changeblock 2, 28, $b0 ; closed omanyte
-	changeblock 16, 32, $b0 ; closed aerodactyl
+	changeblock 10, 12, $b4 ; closed ruins
+	changeblock 2, 16, $b4 ; closed ho-oh
+	changeblock 2, 28, $b4 ; closed omanyte
+	changeblock 16, 32, $b4 ; closed aerodactyl
 .RuinsAreOpen
 	endcallback
 
