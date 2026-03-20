@@ -23,7 +23,7 @@ OaksLabMeetOakScene:
 	applymovement PLAYER, OaksLabPlayerWalkInMovement
 	turnobject OAKSLAB_BLUE, UP
 	setscene SCENE_OAKSLAB_RIVAL_BATTLE
-	variablesprite SPRITE_VARIABLE, SPRITE_GEODUDE_MOVE
+	variablesprite SPRITE_VARIABLE_1, SPRITE_GEODUDE_MOVE
 	jumptext OaksLabIntroConversationText
 
 ;scripts
@@ -1164,7 +1164,7 @@ DebugFullPokegear:
 	setflag ENGINE_PAGER_SURF
 	setflag ENGINE_PAGER_STRENGTH
 	setflag ENGINE_PAGER_FLASH
-	setflag ENGINE_PAGER_WHIRLPOOL
+;	setflag ENGINE_PAGER_WHIRLPOOL
 	setflag ENGINE_PAGER_ROCK_SMASH
 	setflag ENGINE_BOULDERBADGE
 	setflag ENGINE_CASCADEBADGE
@@ -1355,7 +1355,7 @@ DebugAllHMs:
 	yesorno
 	iffalse .waterfall
 	giveitem TM_WHIRLPOOL
-	setflag ENGINE_PAGER_WHIRLPOOL
+	setflag ENGINE_STORMBADGE ;ENGINE_PAGER_WHIRLPOOL
 	setevent EVENT_GOT_HM06_WHIRLPOOL
 .waterfall
 	writetext DebugAskWaterfallText
@@ -1612,7 +1612,7 @@ DebugCompleteKanto:
 	setflag ENGINE_PAGER_SURF
 	setflag ENGINE_PAGER_STRENGTH
 	setflag ENGINE_PAGER_FLASH
-;	setflag ENGINE_PAGER_WHIRLPOOL
+	setflag ENGINE_STORMBADGE ;ENGINE_PAGER_WHIRLPOOL
 	setflag ENGINE_PAGER_ROCK_SMASH
 	setevent EVENT_GOT_HM01_CUT
 	setevent EVENT_GOT_HM02_FLY

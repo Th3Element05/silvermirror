@@ -22,7 +22,7 @@ EngineFlags:
 	engine_flag wPagerFlags, PAGER_SURF_F
 	engine_flag wPagerFlags, PAGER_STRENGTH_F
 	engine_flag wPagerFlags, PAGER_FLASH_F
-	engine_flag wPagerFlags, PAGER_WHIRLPOOL_F
+;	engine_flag wPagerFlags, PAGER_WHIRLPOOL_F
 	engine_flag wPagerFlags, PAGER_ROCK_SMASH_F
 
 	; day-care

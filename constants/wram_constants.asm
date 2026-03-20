@@ -260,7 +260,7 @@ POKEGEAR_OBTAINED_F EQU 7
 	const PAGER_SURF_F       ; 2
 	const PAGER_STRENGTH_F   ; 3
 	const PAGER_FLASH_F      ; 4
-	const PAGER_WHIRLPOOL_F  ; 5
+;	const PAGER_WHIRLPOOL_F  ; 5
 	const PAGER_ROCK_SMASH_F ; 6
 NUM_PAGER_FLAGS EQU const_value
 
