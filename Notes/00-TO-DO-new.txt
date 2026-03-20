@@ -2,6 +2,17 @@ New TO DO list
 
 
 TEST
+
+changed slot machine result bias for normal/lucky
+
+copycat
+safari zone entrance money top right
+
+kurts son
+(can you get out of silph with ESCAPE_ROPE, DIG, or TELEPORT?)
+(where do you respawn if you faint inside SILPH?)
+(sneak out either way and test Talk event script anyway)
+
 enter HOF a second time, legitimately
 safari zone after battle/core changes for icon gfx
 
@@ -9,14 +20,20 @@ safari zone after battle/core changes for icon gfx
 
 DO
 
-restore delibird wild encounters, trainer parties
+mon_menu use field moves if can learn (removed moves?) IF have pager (or badge?)
 
-game corner UPGRADE prize, remove
-game corner prizes double check after removing mons, etc
+darkness object palettes are still dark
+
+evolution moves need only be moves that pre-evolved form would miss
 
 
 where can you get evo-use items in kanto?
 	?make hold/evo-trade items into hold/level-up? and prevent in Classic
+~
+~HOLD-LEVELUP
+sneasel
+gligar
+~
 ~HOLD-TRADE(ITEM)
 ONIX
 POLIWHIRL
@@ -24,9 +41,6 @@ PORYGON
 SCYTHER
 SEADRA
 SLOWPOKE
-~HOLD-LEVELUP
-sneasel
-gligar
 
 
 reduce long animations? (*magnezone)
@@ -37,9 +51,6 @@ go through data/trainers/parties levels/moves
 
 trades?
 does fossil revival script still need to be fixed?
-move kurt's son outside of silph
-
-
 
 
 
@@ -54,7 +65,6 @@ LoadStatusIconSet:
 	status gfx override exp bar gfx
 PlacePartyMonStatus:
 	invokes these gfx locations
-
 
 ~~~DIDN'T DO THIS~~~
     Edit the function PlaceExpBar in engine\battle\core.asm:
