@@ -236,42 +236,42 @@ SlotsLoop:
 	call PrintNum
 	ret
 
-DebugPrintSlotBias: ; unreferenced
-	ld a, [wSlotBias]
-	add 0
-	daa
-	ld e, a
-	and $f
-	add "0"
-	hlcoord 1, 0
-	ld [hl], a
-	ld a, e
-	swap a
-	and $f
-	add "0"
-	hlcoord 0, 0
-	ld [hl], a
-	ret
+;DebugPrintSlotBias: ; unreferenced
+;	ld a, [wSlotBias]
+;	add 0
+;	daa
+;	ld e, a
+;	and $f
+;	add "0"
+;	hlcoord 1, 0
+;	ld [hl], a
+;	ld a, e
+;	swap a
+;	and $f
+;	add "0"
+;	hlcoord 0, 0
+;	ld [hl], a
+;	ret
 
-AnimateSlotReelIcons: ; unreferenced
-; This animation was present in pokegold-spaceworld.
-	ld hl, wUnusedSlotReelIconDelay
-	ld a, [hl]
-	inc [hl]
-	and $7
-	ret nz
-	ld hl, wShadowOAMSprite16TileID
-	ld c, NUM_SPRITE_OAM_STRUCTS - 16
-.loop
-	ld a, [hl]
-	xor $20 ; alternate between $00-$1f and $20-$3f
-	ld [hli], a ; tile id
-rept SPRITEOAMSTRUCT_LENGTH - 1
-	inc hl
-endr
-	dec c
-	jr nz, .loop
-	ret
+;AnimateSlotReelIcons: ; unreferenced
+;; This animation was present in pokegold-spaceworld.
+;	ld hl, wUnusedSlotReelIconDelay
+;	ld a, [hl]
+;	inc [hl]
+;	and $7
+;	ret nz
+;	ld hl, wShadowOAMSprite16TileID
+;	ld c, NUM_SPRITE_OAM_STRUCTS - 16
+;.loop
+;	ld a, [hl]
+;	xor $20 ; alternate between $00-$1f and $20-$3f
+;	ld [hli], a ; tile id
+;rept SPRITEOAMSTRUCT_LENGTH - 1
+;	inc hl
+;endr
+;	dec c
+;	jr nz, .loop
+;	ret
 
 SlotsJumptable:
 	jumptable .Jumptable, wJumptableIndex
@@ -850,30 +850,30 @@ Slots_UpdateReelPositionAndOAM:
 	jr nz, .loop
 	ret
 
-GetUnknownSlotReelData: ; unreferenced
-; Used to get OAM attribute values for slot reels?
-; (final Slots_UpdateReelPositionAndOAM above reuses tile IDs as OAM palettes)
-	push hl
-	srl a
-	srl a
-	add LOW(.data)
-	ld l, a
-	ld a, 0
-	adc HIGH(.data)
-	ld h, a
-	ld a, [hl]
-	pop hl
-	ret
-
-.data:
-	table_width 1, GetUnknownSlotReelData.data
-	db 0 ; SLOTS_SEVEN
-	db 1 ; SLOTS_POKEBALL
-	db 2 ; SLOTS_CHERRY
-	db 3 ; SLOTS_PIKACHU
-	db 4 ; SLOTS_SQUIRTLE
-	db 5 ; SLOTS_STARYU
-	assert_table_length NUM_SLOT_REELS
+;GetUnknownSlotReelData: ; unreferenced
+;; Used to get OAM attribute values for slot reels?
+;; (final Slots_UpdateReelPositionAndOAM above reuses tile IDs as OAM palettes)
+;	push hl
+;	srl a
+;	srl a
+;	add LOW(.data)
+;	ld l, a
+;	ld a, 0
+;	adc HIGH(.data)
+;	ld h, a
+;	ld a, [hl]
+;	pop hl
+;	ret
+;
+;.data:
+;	table_width 1, GetUnknownSlotReelData.data
+;	db 0 ; SLOTS_SEVEN
+;	db 1 ; SLOTS_POKEBALL
+;	db 2 ; SLOTS_CHERRY
+;	db 3 ; SLOTS_PIKACHU
+;	db 4 ; SLOTS_SQUIRTLE
+;	db 5 ; SLOTS_STARYU
+;	assert_table_length NUM_SLOT_REELS
 
 ReelActionJumptable:
 	ld hl, REEL_ACTION
@@ -1663,21 +1663,37 @@ Slots_InitBias:
 	ret
 
 .Normal:
-	db   1 percent - 1, SLOTS_SEVEN
-	db   1 percent + 1, SLOTS_POKEBALL
+;	db   1 percent - 1, SLOTS_SEVEN
+;	db   1 percent + 1, SLOTS_POKEBALL
+;	db   4 percent,     SLOTS_STARYU
+;	db   8 percent,     SLOTS_SQUIRTLE
+;	db  16 percent,     SLOTS_PIKACHU
+;	db  19 percent,     SLOTS_CHERRY
+;	db 100 percent,     SLOTS_NO_BIAS
+;
+	db   1 percent,     SLOTS_SEVEN
+	db   2 percent,     SLOTS_POKEBALL
 	db   4 percent,     SLOTS_STARYU
 	db   8 percent,     SLOTS_SQUIRTLE
 	db  16 percent,     SLOTS_PIKACHU
-	db  19 percent,     SLOTS_CHERRY
+	db  32 percent,     SLOTS_CHERRY
 	db 100 percent,     SLOTS_NO_BIAS
 
 .Lucky:
-	db   1 percent,     SLOTS_SEVEN
-	db   1 percent + 1, SLOTS_POKEBALL
-	db   3 percent + 1, SLOTS_STARYU
-	db   6 percent + 1, SLOTS_SQUIRTLE
-	db  12 percent,     SLOTS_PIKACHU
-	db  31 percent + 1, SLOTS_CHERRY
+;	db   1 percent,     SLOTS_SEVEN
+;	db   1 percent + 1, SLOTS_POKEBALL
+;	db   3 percent + 1, SLOTS_STARYU
+;	db   6 percent + 1, SLOTS_SQUIRTLE
+;	db  12 percent,     SLOTS_PIKACHU
+;	db  31 percent + 1, SLOTS_CHERRY
+;	db 100 percent,     SLOTS_NO_BIAS
+;
+	db   1 percent + 1, SLOTS_SEVEN
+	db   3 percent + 1, SLOTS_POKEBALL
+	db   6 percent + 1, SLOTS_STARYU
+	db  11 percent + 1, SLOTS_SQUIRTLE
+	db  23 percent + 1, SLOTS_PIKACHU
+	db  32 percent + 1, SLOTS_CHERRY
 	db 100 percent,     SLOTS_NO_BIAS
 
 Slots_IlluminateBetLights:
@@ -1845,10 +1861,10 @@ Slots_GetPayout:
 	table_width 2, Slots_GetPayout.PayoutTable
 	dw 300 ; SLOTS_SEVEN
 	dw 100 ; SLOTS_POKEBALL
-	dw  10 ; SLOTS_CHERRY
-	dw  15 ; SLOTS_PIKACHU
-	dw  20 ; SLOTS_SQUIRTLE
-	dw  25 ; SLOTS_STARYU
+	dw   6 ; SLOTS_CHERRY
+	dw  12 ; SLOTS_PIKACHU
+	dw  16 ; SLOTS_SQUIRTLE
+	dw  24 ; SLOTS_STARYU
 ;	dw 300 ; SLOTS_SEVEN
 ;	dw  50 ; SLOTS_POKEBALL
 ;	dw   6 ; SLOTS_CHERRY
@@ -1900,11 +1916,11 @@ Slots_PayoutText:
 .PayoutStrings:
 	table_width 6, Slots_PayoutText.PayoutStrings
 	dbw "300@", .LinedUpSevens      ; SLOTS_SEVEN
-	dbw "50@@", .LinedUpPokeballs   ; SLOTS_POKEBALL
+	dbw "100@", .LinedUpPokeballs   ; SLOTS_POKEBALL
 	dbw "6@@@", .LinedUpMonOrCherry ; SLOTS_CHERRY
-	dbw "8@@@", .LinedUpMonOrCherry ; SLOTS_PIKACHU
-	dbw "10@@", .LinedUpMonOrCherry ; SLOTS_SQUIRTLE
-	dbw "15@@", .LinedUpMonOrCherry ; SLOTS_STARYU
+	dbw "12@@", .LinedUpMonOrCherry ; SLOTS_PIKACHU
+	dbw "16@@", .LinedUpMonOrCherry ; SLOTS_SQUIRTLE
+	dbw "24@@", .LinedUpMonOrCherry ; SLOTS_STARYU
 	assert_table_length NUM_SLOT_REELS
 
 .Text_PrintPayout:
