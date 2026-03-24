@@ -20,7 +20,14 @@ safari zone after battle/core changes for icon gfx
 
 DO
 
+headbutt, no encounters?
+headbutt, forest tree palette too bright
+
+
+PARTYMENUACTION_EVO_STONE?
+
 mon_menu use field moves if can learn (removed moves?) IF have pager (or badge?)
+TELEPORT move tutor?
 
 darkness object palettes are still dark
 
