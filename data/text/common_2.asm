@@ -311,15 +311,17 @@ _CutNothingText::
 	prompt
 
 _BlindingFlashText::
-	text "Called PIKACHU" ;silvermirror -"<PLAYER> summoned a"
-	line "to use FLASH!" ;silvermirror -"MAREEP to use "
-;	cont "FLASH!" ;silvermirror -
+;	text "Called PIKACHU"
+;	line "to use FLASH!"
+;	done
+	text_ram wStringBuffer3
+	text " used"
+	line "FLASH!"
 	done
 
 _UsedSurfText::
-	text "Called LAPRAS" ;silvermirror -"<PLAYER> summoned a"
-	line "to use SURF!" ;silvermirror -"LAPRAS to use"
-;	cont "SURF!" ;silvermirror -
+	text "Called LAPRAS"
+	line "to use SURF!"
 	done
 
 _CantSurfText::
@@ -334,14 +336,18 @@ _AlreadySurfingText::
 
 _AskSurfText::
 	text "The water is calm."
-	line "Do you want to use" ;silvermirror -"Want to use"
-	cont "SURF?" ;silvermirror -"LAPRAS SURF?"
+
+	para "Do you want to use"
+	line "SURF?" 
 	done
 
 _UsedFlyText::
-	text "Called PIDGEOT" ;silvermirror -"<PLAYER> summoned a"
-	line "to use FLY!" ;silvermirror -"PIDGEOT to use"
-;	cont "FLY!" ;silvermirror -
+;	text "Called PIDGEOT"
+;	line "to use FLY!"
+;	done
+	text_ram wStringBuffer3
+	text " used"
+	line "FLY!"
 	done
 
 _UseWaterfallText::
@@ -393,9 +399,8 @@ _CantUseTeleportText::
 ;	prompt
 
 _UseStrengthText::
-	text "Called MACHOKE" ;silvermirror -"<PLAYER> summoned a"
-	line "to use STRENGTH!" ;silvermirror -"MACHOKE to use"
-;	cont "STRENGTH!" ;silvermirror -
+	text "Called MACHOKE"
+	line "to use STRENGTH!"
 	done
 
 _MoveBoulderText::
@@ -407,8 +412,8 @@ _AskStrengthText::
 	text "A #MON may be"
 	line "able to move this."
 
-	para "Do you want to use" ;silvermirror -"Want to use"
-	line "STRENGTH?" ;silvermirror -"MACHOKE STRENGTH?"
+	para "Do you want to use"
+	line "STRENGTH?"
 	done
 
 _BouldersMoveText::
@@ -422,9 +427,10 @@ _BouldersMayMoveText::
 	done
 
 _UseWhirlpoolText::
-	text "Called POLIWRATH" ;silvermirror -"<PLAYER> summoned a"
-	line "to use WHIRLPOOL!" ;silvermirror -"REMORAID to use"
-;	cont "WHIRLPOOL!" ;silvermirror -
+;	text "Called POLIWRATH"
+;	line "to use WHIRLPOOL!"
+	text "LAPRAS calmed the"
+	line "WHIRLPOOL!"
 	done
 
 _MayPassWhirlpoolText::
@@ -439,8 +445,8 @@ _AskWhirlpoolText::
 	text "A whirlpool is in"
 	line "the way."
 
-	para "Do you want to use" ;silvermirror -"Want to use"
-	line "WHIRLPOOL?" ;silvermirror -"REMORAID WHIRL?"
+	para "Do you want to use"
+	line "WHIRLPOOL?"
 	done
 
 _UseHeadbuttText::
@@ -469,7 +475,7 @@ _UseRockSmashText::
 
 _MaySmashText::
 	text "Maybe a #MON"
-	line "can break this."
+	line "could break this."
 	done
 
 _AskRockSmashText::

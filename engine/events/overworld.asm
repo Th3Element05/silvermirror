@@ -300,9 +300,9 @@ FlashFunction:
 	ld a, $80
 	ret
 
-.nozephyrbadge
-	ld a, $80
-	ret
+;.nozephyrbadge
+;	ld a, $80
+;	ret
 
 UseFlash:
 	ld hl, Script_UseFlash
@@ -584,9 +584,9 @@ FlyFunction:
 	ld a, $1
 	ret
 
-.nostormbadge
-	ld a, $82
-	ret
+;.nostormbadge
+;	ld a, $82
+;	ret
 
 .indoors
 	ld a, $2

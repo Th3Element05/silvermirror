@@ -45,7 +45,7 @@
 ;	const MONMENUITEM_FLY        ; 2
 ;	const MONMENUITEM_SURF       ; 3
 ;	const MONMENUITEM_STRENGTH   ; 4
-;	const MONMENUITEM_FLASH      ; 5
+	const MONMENUITEM_FLASH      ; 5
 ;	const MONMENUITEM_WHIRLPOOL  ; 6
 ;	const MONMENUITEM_WATERFALL  ; 7
 ;	const MONMENUITEM_ROCKSMASH  ; 8
@@ -53,7 +53,7 @@
 	const MONMENUITEM_TELEPORT   ; 2
 	const MONMENUITEM_SOFTBOILED ; 3
 ;	const MONMENUITEM_MILKDRINK  ; 4 ;removed
-	const MONMENUITEM_HEADBUTT   ; 5
+;	const MONMENUITEM_HEADBUTT   ; 5
 	const MONMENUITEM_SWEETSCENT ; 6
 	; options
 	const MONMENUITEM_STATS      ; 7
@@ -63,6 +63,7 @@
 	const MONMENUITEM_MOVE       ; 11
 	const MONMENUITEM_MAIL       ; 12
 	const MONMENUITEM_ERROR      ; 13
+	const MONMENUITEM_FLY        ; 2
 DEF NUM_MONMENUITEMS EQU const_value - 1
 
 ; MonMenuOptions categories

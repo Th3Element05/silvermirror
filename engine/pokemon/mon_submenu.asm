@@ -146,6 +146,10 @@ GetMonSubmenuItems:
 	dec c
 	jr nz, .loop
 
+	call IsMonFlyUser
+	call IsMonFlashUser
+	call IsMonSweetScentUser
+
 .skip_moves
 	ld a, MONMENUITEM_STATS
 	call AddMonMenuItem
@@ -288,3 +292,128 @@ BattleMonMenu:
 	db "SWITCH@"
 	db "STATS@"
 	db "CANCEL@"
+
+
+CheckMonKnowsMove:
+	ld b, a
+	ld a, MON_MOVES
+	call GetPartyParamLocation
+	ld d, h
+	ld e, l
+	ld c, NUM_MOVES
+.loop
+	ld a, [de]
+	and a
+	jr z, .next
+	cp b
+	jr z, .found ; knows move
+.next
+	inc de
+	dec c
+	jr nz, .loop
+	ld a, -1
+	scf ; mon doesnt know move
+	ret
+.found
+	xor a
+	ret z
+
+IsMonFlyUser:
+; Check if we have Pager
+	ld de, ENGINE_PAGER_FLY
+	ld b, CHECK_FLAG
+	farcall EngineFlagAction
+	ld a, c
+	and a
+	ret z ; .fail, dont have Pager yet
+
+;; Check if outdoors
+;	call GetMapEnvironment
+;	call CheckOutdoorMap
+;	ret nz ; not outdoors, cant fly
+
+;; Check if Mon knows Move (don't add twice)
+;	ld a, FLY
+;	call CheckMonKnowsMove
+;	and a
+;	ret z
+
+; Check if Mon can use move
+	ld a, [wCurPartySpecies]
+	ld de, 1
+	ld hl, CanUseFlyMons
+	call IsInArray
+	ret nc
+
+; Add move to Mon Menu
+	ld a, [wMonSubmenuCount]
+	cp NUM_MONMENU_ITEMS - 4
+	jr z, .toomanymoves
+	ld a, MONMENUITEM_FLY
+	call AddMonMenuItem
+.toomanymoves
+	ret
+
+IsMonFlashUser:
+; Check if we have Pager
+	ld de, ENGINE_PAGER_FLASH
+	ld b, CHECK_FLAG
+	farcall EngineFlagAction
+	ld a, c
+	and a
+	ret z ; .fail, dont have Pager yet
+
+; Check if Mon knows Move (don't add twice)
+	ld a, FLASH
+	call CheckMonKnowsMove
+	and a
+	ret z
+
+; Check if Mon can use move
+	ld a, [wCurPartySpecies]
+	ld de, 1
+	ld hl, CanUseFlashMons
+	call IsInArray
+	ret nc
+
+; Add move to Mon Menu
+	ld a, [wMonSubmenuCount]
+	cp NUM_MONMENU_ITEMS - 4
+	jr z, .toomanymoves
+	ld a, MONMENUITEM_FLASH
+	call AddMonMenuItem
+.toomanymoves
+	ret
+
+IsMonSweetScentUser:
+;; Location check
+;	farcall CanUseSweetScent ; instead of CanEncounterWildMon for older versions of pokecrystal
+;	ret nc
+;	farcall GetMapEncounterRate
+;	ld a, b
+;	and a
+;	ret z
+
+; Check if mon knows Move (don't add twice)
+	ld a, SWEET_SCENT
+	call CheckMonKnowsMove
+	and a
+	ret z
+
+; Check if Mon can use move
+	ld a, [wCurPartySpecies]
+	ld de, 1
+	ld hl, CanUseSweetScentMons
+	call IsInArray
+	ret nc
+
+; Add move to Mon Menu
+	ld a, [wMonSubmenuCount]
+	cp NUM_MONMENU_ITEMS - 4
+	jr z, .toomanymoves
+	ld a, MONMENUITEM_SWEETSCENT
+	call AddMonMenuItem
+.toomanymoves
+	ret
+
+INCLUDE "data/moves/hm_move_users.asm"
