@@ -134,7 +134,7 @@ PokemonActionSubmenu:
 ;	dbw MONMENUITEM_FLY,        MonMenu_Fly
 ;	dbw MONMENUITEM_SURF,       MonMenu_Surf
 ;	dbw MONMENUITEM_STRENGTH,   MonMenu_Strength
-;	dbw MONMENUITEM_FLASH,      MonMenu_Flash
+	dbw MONMENUITEM_FLASH,      MonMenu_Flash
 ;	dbw MONMENUITEM_WHIRLPOOL,  MonMenu_Whirlpool
 ;	dbw MONMENUITEM_WATERFALL,  MonMenu_Waterfall
 ;	dbw MONMENUITEM_ROCKSMASH,  MonMenu_RockSmash
@@ -142,7 +142,7 @@ PokemonActionSubmenu:
 	dbw MONMENUITEM_TELEPORT,   MonMenu_Teleport
 	dbw MONMENUITEM_SOFTBOILED, MonMenu_Softboiled_MilkDrink
 ;	dbw MONMENUITEM_MILKDRINK,  MonMenu_Softboiled_MilkDrink ;removed
-	dbw MONMENUITEM_HEADBUTT,   MonMenu_Headbutt
+;	dbw MONMENUITEM_HEADBUTT,   MonMenu_Headbutt
 	dbw MONMENUITEM_SWEETSCENT, MonMenu_SweetScent
 	dbw MONMENUITEM_STATS,      OpenPartyStats
 	dbw MONMENUITEM_SWITCH,     SwitchPartyMons
@@ -150,6 +150,7 @@ PokemonActionSubmenu:
 	dbw MONMENUITEM_CANCEL,     CancelPokemonAction
 	dbw MONMENUITEM_MOVE,       ManagePokemonMoves
 	dbw MONMENUITEM_MAIL,       MonMailAction
+	dbw MONMENUITEM_FLY,        MonMenu_Fly
 
 SwitchPartyMons:
 ; Don't try if there's nothing to switch!
@@ -667,6 +668,7 @@ _OpenPartyStats:
 	ret
 
 MonMenu_Cut:
+MonMenu_CutPager:
 	farcall CutFunction
 	ld a, [wFieldMoveSucceeded]
 	cp $1
@@ -680,6 +682,8 @@ MonMenu_Cut:
 	ret
 
 MonMenu_Fly:
+	farcall GetPartyNickname
+MonMenu_FlyPager:
 	farcall FlyFunction
 	ld a, [wFieldMoveSucceeded]
 	cp $2
@@ -704,6 +708,8 @@ MonMenu_Fly:
 	ret
 
 MonMenu_Flash:
+	farcall GetPartyNickname
+MonMenu_FlashPager:
 	farcall FlashFunction
 	ld a, [wFieldMoveSucceeded]
 	cp $1
@@ -717,6 +723,7 @@ MonMenu_Flash:
 	ret
 
 MonMenu_Strength:
+MonMenu_StrengthPager:
 	farcall StrengthFunction
 	ld a, [wFieldMoveSucceeded]
 	cp $1
@@ -769,6 +776,7 @@ MonMenu_Teleport:
 	ret
 
 MonMenu_Surf:
+MonMenu_SurfPager:
 	farcall SurfFunction
 	ld a, [wFieldMoveSucceeded]
 	and a

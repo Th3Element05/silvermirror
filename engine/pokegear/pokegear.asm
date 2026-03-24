@@ -636,8 +636,15 @@ FlyPagerRoutine:
 	ld [hWY], a
 
 .FlyStartUp
-	farcall MonMenu_Fly   ;Regardless this code must trigger if the player is outside or not.
-	jr nz, FinishPagerRoutine
+;	push de
+;	push hl
+	ld de, .FlyPagerMon
+	ld hl, wStringBuffer3
+	call CopyName2
+;	pop hl
+;	pop de
+	farcall MonMenu_FlyPager   ;Regardless this code must trigger if the player is outside or not.
+	jp nz, FinishPagerRoutine
 	call GetMapEnvironment
 	call CheckOutdoorMap
 	ret nz
@@ -662,6 +669,9 @@ FlyPagerRoutine:
 	ld [wJumptableIndex], a
 	ret
 
+.FlyPagerMon:
+	db "PIDGEOT@"
+
 ; all other pager functions had to be mvoed below FlyPagerRoutine due to its code setup
 CutPagerRoutine:
 	farcall MonMenu_Cut
@@ -679,14 +689,24 @@ StrengthPagerRoutine:
 	jr FinishPagerRoutine
 
 FlashPagerRoutine:
-	farcall MonMenu_Flash
+;	push de
+;	push hl
+	ld de, .FlashPagerMon
+	ld hl, wStringBuffer3
+	call CopyName2
+;	pop hl
+;	pop de
+	farcall MonMenu_FlashPager
 	ret nz
 	jr FinishPagerRoutine
 
-WhirlpoolPagerRoutine:
-	farcall MonMenu_Whirlpool
-	ret nz
-	jr FinishPagerRoutine
+.FlashPagerMon:
+	db "PIKACHU@"
+
+;WhirlpoolPagerRoutine:
+;	farcall MonMenu_WhirlpoolPager
+;	ret nz
+;	jr FinishPagerRoutine
 
 RockSmashPagerRoutine:
 	farcall MonMenu_RockSmash
