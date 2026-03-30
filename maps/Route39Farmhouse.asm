@@ -65,51 +65,23 @@ FarmerMScript_Milking:
 	closetext
 	end
 
-PokefanF_SnoreFarmer:
-	faceplayer
-;	opentext
-;	checkevent EVENT_GOT_TM61_SNORE
-;	iftrue FarmerFScript_GotSnore
-;	checkevent EVENT_HEALED_MOOMOO
-;	iftrue FarmerFScript_GiveSnore
-;	writetext FarmerFText_InTrouble
-;	waitbutton
-;	closetext
-;	end
+;FarmerMText_SickCow:
+;	text "My MILTANK ain't"
+;	line "givin' me milk"
+;	cont "n'more."
 ;
-;FarmerFScript_GiveSnore:
-;	writetext FarmerFText_HealedMiltank
-;	promptbutton
-;	verbosegiveitem TM_SNORE
-;	iffalse FarmerFScript_NoRoomForSnore
-;	setevent EVENT_GOT_TM61_SNORE
-;FarmerFScript_GotSnore:
-;	writetext FarmerFText_SnoreSpeech
-;	waitbutton
-;FarmerFScript_NoRoomForSnore:
-;	closetext
-	end
-
-FarmhouseBookshelf:
-	jumpstd PictureBookshelfScript
-
-FarmerMText_SickCow:
-	text "My MILTANK ain't"
-	line "givin' me milk"
-	cont "n'more."
-
-	para "This here FARM's"
-	line "got famous milk."
-
-	para "Most everyone"
-	line "wants a drink."
-
-	para "It'll give me lots"
-	line "o' milk if'n I"
-
-	para "feed it lots o'"
-	line "BERRIES, I reckon."
-	done
+;	para "This here FARM's"
+;	line "got famous milk."
+;
+;	para "Most everyone"
+;	line "wants a drink."
+;
+;	para "It'll give me lots"
+;	line "o' milk if'n I"
+;
+;	para "feed it lots o'"
+;	line "BERRIES, I reckon."
+;	done
 
 FarmerMText_BuyMilk:
 	text "How'd you like my"
@@ -150,47 +122,85 @@ FarmerMText_Milking:
 	line "milkin'."
 	done
 
-FarmerFText_InTrouble:
-	text "Our milk even goes"
-	line "out to KANTO."
+PokefanF_SnoreFarmer:
+	jumptextfaceplayer FarmerFText_Generic
+FarmerFText_Generic:
+	text "We do alright as"
+	line "long as MILTANK"
+	cont "keeps givin' milk."
 
-	para "So if our own"
-	line "MILTANK won't give"
-
-	para "us any milk, we're"
-	line "in trouble."
+	para "Our milk even goes"
+	line "out to KANTO!"
 	done
 
-FarmerFText_HealedMiltank:
-	text "You fixed our"
-	line "MILTANK, hon. Now"
+;	faceplayer
+;	opentext
+;	checkevent EVENT_GOT_TM61_SNORE
+;	iftrue FarmerFScript_GotSnore
+;	checkevent EVENT_HEALED_MOOMOO
+;	iftrue FarmerFScript_GiveSnore
+;	writetext FarmerFText_InTrouble
+;	waitbutton
+;	closetext
+;	end
+;
+;FarmerFScript_GiveSnore:
+;	writetext FarmerFText_HealedMiltank
+;	promptbutton
+;	verbosegiveitem TM_SNORE
+;	iffalse FarmerFScript_NoRoomForSnore
+;	setevent EVENT_GOT_TM61_SNORE
+;FarmerFScript_GotSnore:
+;	writetext FarmerFText_SnoreSpeech
+;	waitbutton
+;FarmerFScript_NoRoomForSnore:
+;	closetext
+;	end
 
-	para "it gives MOOMOO"
-	line "MILK again."
+;FarmerFText_InTrouble:
+;	text "Our milk even goes"
+;	line "out to KANTO."
+;
+;	para "So if our own"
+;	line "MILTANK won't give"
+;
+;	para "us any milk, we're"
+;	line "in trouble."
+;	done
 
-	para "Here's somethin'"
-	line "fer your trouble."
-	done
+;FarmerFText_HealedMiltank:
+;	text "You fixed our"
+;	line "MILTANK, hon. Now"
+;
+;	para "it gives MOOMOO"
+;	line "MILK again."
+;
+;	para "Here's somethin'"
+;	line "fer your trouble."
+;	done
 
-Text_ReceivedTM13: ; unreferenced
-	text "<PLAYER> received"
-	line "TM13."
-	done
+;Text_ReceivedTM13: ; unreferenced
+;	text "<PLAYER> received"
+;	line "TM13."
+;	done
 
-FarmerFText_SnoreSpeech:
-	text "That there's"
-	line "SNORE."
+;FarmerFText_SnoreSpeech:
+;	text "That there's"
+;	line "SNORE."
+;
+;	para "It's a rare move"
+;	line "that only works"
+;
+;	para "while the #MON"
+;	line "is asleep."
+;
+;	para "You best think how"
+;	line "you ought to use"
+;	cont "it, hon."
+;	done
 
-	para "It's a rare move"
-	line "that only works"
-
-	para "while the #MON"
-	line "is asleep."
-
-	para "You best think how"
-	line "you ought to use"
-	cont "it, hon."
-	done
+FarmhouseBookshelf:
+	jumpstd PictureBookshelfScript
 
 Route39Farmhouse_MapEvents:
 	db 0, 0 ; filler
