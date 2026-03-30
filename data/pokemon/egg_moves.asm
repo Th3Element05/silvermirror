@@ -34,6 +34,7 @@ SquirtleEggMoves:
 	db CONFUSION
 	db FORESIGHT
 	db FLAIL
+	db FAKE_OUT
 	db -1 ; end
 
 PidgeyEggMoves:
@@ -272,6 +273,7 @@ SeelEggMoves:
 	db PECK
 ;	db SLAM ;removed
 	db ENCORE
+	db FAKE_OUT
 	db -1 ; end
 
 GrimerEggMoves:
@@ -530,15 +532,18 @@ ChinchouEggMoves:
 	db -1 ; end
 
 ;PichuEggMoves:
-;	db FLAIL      ;REVERSAL ;removed
-;;	db BIDE       ;tm34
-;;	db PRESENT    ;removed
-;	db ENCORE
-;	db DOUBLESLAP
-;;	db DETECT     ;removed
-;	db -1 ; end
+PikachuEggMoves:
+	db FLAIL      ;REVERSAL ;removed
+;	db BIDE       ;tm34
+;	db PRESENT    ;removed
+	db ENCORE
+	db DOUBLESLAP
+;	db DETECT     ;removed
+	db FAKE_OUT
+	db -1 ; end
 
-CleffaEggMoves:
+;CleffaEggMoves:
+ClefairyEggMoves:
 ;	db PRESENT    ;removed
 ;	db METRONOME  ;tm35
 	db AMNESIA
@@ -548,21 +553,22 @@ CleffaEggMoves:
 ;	db DETECT     ;removed
 	db -1 ; end
 
-IgglybuffEggMoves:
+;IgglybuffEggMoves:
+JigglypuffEggMoves:
 	db PERISH_SONG
 ;	db PRESENT      ;removed
 	db FEINT_ATTACK
 ;	db DETECT       ;removed
 	db -1 ; end
 
-TogepiEggMoves:
-;	db PRESENT      ;removed
-;	db MIRROR_MOVE  ;removed
-	db PECK
-	db FORESIGHT
-	db FUTURE_SIGHT
-;	db DETECT       ;removed
-	db -1 ; end
+;TogepiEggMoves:
+;;	db PRESENT      ;removed
+;;	db MIRROR_MOVE  ;removed
+;	db PECK
+;	db FORESIGHT
+;	db FUTURE_SIGHT
+;;	db DETECT       ;removed
+;	db -1 ; end
 
 NatuEggMoves:
 	db HAZE
@@ -620,6 +626,7 @@ AipomEggMoves:
 ;	db BEAT_UP    ;removed
 ;	db DETECT     ;removed
 	db LOW_SWEEP
+;	db FAKE_OUT
 	db -1 ; end
 
 YanmaEggMoves:
@@ -721,6 +728,7 @@ SneaselEggMoves:
 	db BITE
 ;	db DETECT ;removed
 	db LOW_SWEEP
+	db FAKE_OUT
 	db -1 ; end
 
 TeddiursaEggMoves:
@@ -768,6 +776,7 @@ DelibirdEggMoves:
 	db SPLASH
 	db RAPID_SPIN
 ;	db DETECT       ;removed
+	db FAKE_OUT
 	db -1 ; end
 
 MantineEggMoves:
@@ -821,11 +830,14 @@ TyrogueEggMoves:
 	db LOW_SWEEP
 	db -1 ; end
 
-SmoochumEggMoves:
+;SmoochumEggMoves:
+JynxEggMoves:
 	db BULK_UP ;MEDITATE ;removed
+	db FAKE_OUT
 	db -1 ; end
 
-ElekidEggMoves:
+;ElekidEggMoves:
+ElectabuzzEggMoves:
 	db KARATE_CHOP
 	db BARRIER
 	db LOW_SWEEP    ;ROLLING_KICK ;removed
@@ -834,7 +846,8 @@ ElekidEggMoves:
 ;	db DETECT       ;removed
 	db -1 ; end
 
-MagbyEggMoves:
+;MagbyEggMoves:
+MagmarEggMoves:
 	db KARATE_CHOP
 	db DYNAMICPUNCH ;MEGA_PUNCH ;removed
 	db BARRIER

@@ -126,7 +126,7 @@ BattleAnimations::
 	dw BattleAnim_Lick
 	dw BattleAnim_Smog
 	dw BattleAnim_Sludge
-	dw BattleAnim_BoneClub
+	dw BattleAnim_FakeOut ;_BoneClub
 	dw BattleAnim_FireBlast
 	dw BattleAnim_Waterfall
 	dw BattleAnim_XScissor ;_Clamp ;
@@ -629,6 +629,7 @@ BattleAnim_Shake:
 	anim_ret
 
 BattleAnim_Tackle:
+BattleAnim_FakeOut:
 	anim_1gfx BATTLE_ANIM_GFX_HIT
 	anim_call BattleAnim_TargetObj_1Row
 	anim_bgeffect BATTLE_BG_EFFECT_TACKLE, $0, BG_EFFECT_USER, $0
@@ -2862,14 +2863,14 @@ BattleAnim_Sludge:
 	anim_1gfx BATTLE_ANIM_GFX_POISON
 	anim_jump BattleAnimSub_Sludge
 
-BattleAnim_BoneClub:
-	anim_2gfx BATTLE_ANIM_GFX_HIT, BATTLE_ANIM_GFX_MISC
-	anim_obj BATTLE_ANIM_OBJ_BONE_CLUB, 64, 88, $2
-	anim_wait 32
-	anim_sound 0, 1, SFX_BONE_CLUB
-	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 136, 56, $0
-	anim_wait 16
-	anim_ret
+;BattleAnim_BoneClub:
+;	anim_2gfx BATTLE_ANIM_GFX_HIT, BATTLE_ANIM_GFX_MISC
+;	anim_obj BATTLE_ANIM_OBJ_BONE_CLUB, 64, 88, $2
+;	anim_wait 32
+;	anim_sound 0, 1, SFX_BONE_CLUB
+;	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 136, 56, $0
+;	anim_wait 16
+;	anim_ret
 
 BattleAnim_FireBlast:
 	anim_setobjpal PAL_BATTLE_OB_RED, PAL_BTLCUSTOM_FIRE

@@ -130,7 +130,7 @@
 	const LICK         ; 7a
 	const SMOG         ; 7b
 	const SLUDGE       ; 7c
-	const BONE_CLUB    ; 7d
+	const FAKE_OUT     ; 7d ;BONE_CLUB ;removed
 	const FIRE_BLAST   ; 7e
 	const WATERFALL    ; 7f
 	const X_SCISSOR    ; 80 ;CLAMP, removed

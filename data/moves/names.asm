@@ -124,7 +124,7 @@ MoveNames::
 	li "LICK"
 	li "SMOG"
 	li "SLUDGE"
-	li "BONE CLUB"
+	li "FAKE OUT"     ;"BONE CLUB"
 	li "FIRE BLAST"
 	li "WATERFALL"
 	li "X-SCISSOR"    ;"CLAMP"

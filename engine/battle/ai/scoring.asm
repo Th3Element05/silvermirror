@@ -376,6 +376,7 @@ AI_Smart_EffectHandlers:
 	dbw EFFECT_HIDDEN_POWER,     AI_Smart_HiddenPower
 	dbw EFFECT_RAIN_DANCE,       AI_Smart_RainDance
 	dbw EFFECT_SUNNY_DAY,        AI_Smart_SunnyDay
+	dbw EFFECT_FAKE_OUT,         AI_Smart_FakeOut
 	dbw EFFECT_BELLY_DRUM,       AI_Smart_BellyDrum
 ;	dbw EFFECT_PSYCH_UP,         AI_Smart_PsychUp
 	dbw EFFECT_MIRROR_COAT,      AI_Smart_MirrorCoat
@@ -2502,6 +2503,29 @@ AIGoodWeatherType:
 	ret
 
 INCLUDE "data/battle/ai/sunny_day_moves.asm"
+
+;AI_Smart_FakeOut:
+;; greatly encourage this move if its their first turn
+;	ld a, [wEnemyTurnsTaken]
+;	dec a
+;	jp nz, AIDiscourageMove
+;
+;	dec [hl]
+;	dec [hl]
+;	dec [hl]
+;	ret
+
+AI_Smart_FakeOut:
+; 90% chance to greatly encourage this move.
+; The AI_Basic layer will make sure that Fake Out is only used on the enemy's first turn out.
+	call Random
+	cp 10 percent
+    ret c
+
+    dec [hl]
+    dec [hl]
+    dec [hl]
+    ret
 
 AI_Smart_BellyDrum:
 ; Dismiss this move if enemy's attack is higher than +2 or if enemy's HP is below 50%.
