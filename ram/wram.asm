@@ -3242,7 +3242,7 @@ wKenjiFightCount::   db ; unreferenced
 wParryFightCount::   db
 wErinFightCount::    db
 
-	ds 100 ;(88 makes room for 16 map objects)
+	ds 69 ;ds 100 - 31 = 69 (room for 2 more map objects)
 
 wEventFlags:: flag_array NUM_EVENTS
 
