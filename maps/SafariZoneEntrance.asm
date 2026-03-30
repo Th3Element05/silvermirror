@@ -178,7 +178,7 @@ SafariZoneArea3NPCs:
 	end
 
 SafariZoneArea4NPCs:
-	random 3
+	random 4
 	ifequal 1, .Area4NPC1
 	ifequal 2, .Area4NPC2
 	end
