@@ -1,6 +1,6 @@
 	object_const_def
-	const ROUTE_39BARN_TWIN1
-	const ROUTE_39BARN_TWIN2
+;	const ROUTE_39BARN_TWIN1
+;	const ROUTE_39BARN_TWIN2
 	const ROUTE_39BARN_MOOMOO
 
 Route39Barn_MapScripts:
@@ -44,8 +44,8 @@ Route39Barn_MapScripts:
 ;	turnobject ROUTE_39BARN_TWIN2, LEFT
 ;	end
 
-;MoomooScript:
-;	opentext
+MoomooScript:
+	opentext
 ;	checkevent EVENT_HEALED_MOOMOO
 ;	iftrue .HappyCow
 ;	writetext MoomooWeakMooText
@@ -119,73 +119,73 @@ Route39Barn_MapScripts:
 ;	end
 ;
 ;.HappyCow:
-;	writetext MoomooHappyMooText
-;	cry MILTANK
-;	waitbutton
-;	closetext
-;	end
+	writetext MoomooHappyMooText
+	cry MILTANK
+	waitbutton
+	closetext
+	end
 
-Route39BarnTwinMoomooIsSickText:
-	text "MOOMOO is sick…"
+;Route39BarnTwinMoomooIsSickText:
+;	text "MOOMOO is sick…"
+;
+;	para "She needs lots of"
+;	line "ORAN BERRIES."
+;	done
 
-	para "She needs lots of"
-	line "ORAN BERRIES."
-	done
+;Route39BarnTwinWereFeedingMoomooText:
+;	text "We're feeding"
+;	line "MOOMOO!"
+;	done
 
-Route39BarnTwinWereFeedingMoomooText:
-	text "We're feeding"
-	line "MOOMOO!"
-	done
+;MoomooWeakMooText:
+;	text "MILTANK: …Moo…"
+;	done
 
-MoomooWeakMooText:
-	text "MILTANK: …Moo…"
-	done
-
-Route39BarnItsCryIsWeakText:
-	text "Its cry is weak…"
-	done
+;Route39BarnItsCryIsWeakText:
+;	text "Its cry is weak…"
+;	done
 
 MoomooHappyMooText:
 	text "MILTANK: Mooo!"
 	done
 
-Route39BarnAskGiveBerryText:
-	text "Give an ORAN BERRY"
-	line "to MILTANK?"
-	done
+;Route39BarnAskGiveBerryText:
+;	text "Give an ORAN BERRY"
+;	line "to MILTANK?"
+;	done
 
-Route39BarnGaveBerryText:
-	text "<PLAYER> gave"
-	line "an ORAN BERRY to"
-	cont "MILTANK."
-	done
+;Route39BarnGaveBerryText:
+;	text "<PLAYER> gave"
+;	line "an ORAN BERRY to"
+;	cont "MILTANK."
+;	done
 
-Route39BarnLittleHealthierText:
-	text "MILTANK became a"
-	line "little healthier!"
-	done
+;Route39BarnLittleHealthierText:
+;	text "MILTANK became a"
+;	line "little healthier!"
+;	done
 
-Route39BarnQuiteHealthyText:
-	text "MILTANK became"
-	line "quite healthy!"
-	done
+;Route39BarnQuiteHealthyText:
+;	text "MILTANK became"
+;	line "quite healthy!"
+;	done
 
-Route39BarnTotallyHealthyText:
-	text "MILTANK became"
-	line "totally healthy!"
-	done
+;Route39BarnTotallyHealthyText:
+;	text "MILTANK became"
+;	line "totally healthy!"
+;	done
 
-Route39BarnNoBerriesText:
-	text "<PLAYER> has no"
-	line "ORAN BERRIES…"
-	done
+;Route39BarnNoBerriesText:
+;	text "<PLAYER> has no"
+;	line "ORAN BERRIES…"
+;	done
 
-Route39BarnRefusedBerryText:
-	text "<PLAYER> wouldn't"
-	line "give a ORAN BERRY."
-
-	para "MILTANK looks sad."
-	done
+;Route39BarnRefusedBerryText:
+;	text "<PLAYER> wouldn't"
+;	line "give a ORAN BERRY."
+;
+;	para "MILTANK looks sad."
+;	done
 
 Route39Barn_MapEvents:
 	db 0, 0 ; filler
@@ -201,4 +201,4 @@ Route39Barn_MapEvents:
 	def_object_events
 ;	object_event  2,  3, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route39BarnTwin1Script, -1
 ;	object_event  4,  3, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route39BarnTwin2Script, -1
-;	object_event  3,  3, SPRITE_MILTANK, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, MoomooScript, -1
+	object_event  3,  3, SPRITE_MILTANK, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, MoomooScript, -1
