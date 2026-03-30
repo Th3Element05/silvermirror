@@ -25,7 +25,9 @@ OlivineCityCheckEnterPortScript:
 	readvar VAR_WEEKDAY
 	ifequal SUNDAY, .SSAquaAtVermilion
 	ifequal MONDAY, .SSAquaAtOlivine
-	ifequal WEDNESDAY, .SSAquaAtVermilion
+	ifequal TUESDAY, .SSAquaAtVermilion
+	ifequal WEDNESDAY, .SSAquaAtOlivine
+	ifequal THURSDAY, .SSAquaAtVermilion
 	ifequal FRIDAY, .SSAquaAtOlivine
 	end
 
@@ -55,7 +57,8 @@ OlivineCityPortSailorText:
 ;	done
 	text "The S.S.AQUA"
 	line "sails to KANTO on "
-	cont "MONDAY and FRIDAY."
+	cont "MONDAY, WEDNESDAY,"
+	roll "and FRIDAY."
 	done
 
 OlivineCitySailor1Script:

@@ -36,7 +36,6 @@ VermilionCitySSAnneLeavesScene:
 	setscene SCENE_VERMILIONCITY_BEFORE_HOF
 	setmapscene VERMILION_PORT, SCENE_VERMILIONPORT_NO_SHIP
 	setevent EVENT_SS_ANNE_SET_SAIL
-	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 .Skip
 	end
 
@@ -60,11 +59,13 @@ VermilionCitySSAquaStoryBeatScript:
 
 VermilionCityCheckEnterPortScript:
 	setmapscene VERMILION_PORT, SCENE_VERMILIONPORT_NO_SHIP
-	setevent EVENT_VERMILION_PORT_TICKET_SAILOR
+	setevent EVENT_VERMILION_PORT_TICKET_SAILOR ;disappear
 	readvar VAR_WEEKDAY
 	ifequal SUNDAY, .SSAquaAtVermilion
 	ifequal MONDAY, .SSAquaAtOlivine
-	ifequal WEDNESDAY, .SSAquaAtVermilion
+	ifequal TUESDAY, .SSAquaAtVermilion
+	ifequal WEDNESDAY, .SSAquaAtOlivine
+	ifequal THURSDAY, .SSAquaAtVermilion
 	ifequal FRIDAY, .SSAquaAtOlivine
 	ifequal SATURDAY, .SSAnneAtVermilion
 	end
@@ -73,7 +74,7 @@ VermilionCityCheckEnterPortScript:
 	checkflag ENGINE_RODE_SSAQUA_TODAY
 	iftrue .SailedToOlivine
 	setmapscene VERMILION_PORT, SCENE_VERMILIONPORT_SS_AQUA
-	clearevent EVENT_VERMILION_PORT_TICKET_SAILOR
+	clearevent EVENT_VERMILION_PORT_TICKET_SAILOR ;appear
 .SailedToOlivine
 	end
 
@@ -81,7 +82,7 @@ VermilionCityCheckEnterPortScript:
 	checkflag ENGINE_RODE_SSAQUA_TODAY
 	iffalse .StillAtOlivine
 	setmapscene VERMILION_PORT, SCENE_VERMILIONPORT_SS_AQUA
-	clearevent EVENT_VERMILION_PORT_TICKET_SAILOR
+	clearevent EVENT_VERMILION_PORT_TICKET_SAILOR ;appear
 .StillAtOlivine
 	end
 
@@ -90,59 +91,154 @@ VermilionCityCheckEnterPortScript:
 	setevent EVENT_VERMILION_PORT_TICKET_SAILOR
 	checkflag ENGINE_RODE_SSAQUA_TODAY
 	iftrue .DontResetSSAnneTrainers
-;	clearevent EVENT_BEAT_COOLTRAINERM_SEAN
-;	clearevent EVENT_BEAT_COOLTRAINERF_CAROL
-;	clearevent EVENT_BEAT_GENTLEMAN_EDWARD
-;	clearevent EVENT_BEAT_BEAUTY_CASSIE
-;	clearevent EVENT_BEAT_PSYCHIC_RODNEY
-;	clearevent EVENT_BEAT_SUPER_NERD_SHAWN
-;	clearevent EVENT_BEAT_SAILOR_GARRETT
-;	clearevent EVENT_BEAT_FISHER_JONAH
-;	clearevent EVENT_BEAT_BLACKBELT_WAI
+; hide all variable trainers
+	setevent EVENT_SSANNE_FIRST_VISIT_NPCS ;disappear
+	setevent EVENT_SSANNE_TRAINERS_1A
+	setevent EVENT_SSANNE_TRAINERS_2A
+	setevent EVENT_SSANNE_TRAINERS_3A
+	setevent EVENT_SSANNE_TRAINERS_4A
+	setevent EVENT_SSANNE_TRAINERS_5A
+	setevent EVENT_SSANNE_TRAINERS_1B
+	setevent EVENT_SSANNE_TRAINERS_2B
+	setevent EVENT_SSANNE_TRAINERS_3B
+	setevent EVENT_SSANNE_TRAINERS_4B
+	setevent EVENT_SSANNE_TRAINERS_5B
+	setevent EVENT_SSANNE_TRAINERS_1C
+	setevent EVENT_SSANNE_TRAINERS_2C
+	setevent EVENT_SSANNE_TRAINERS_3C
+	setevent EVENT_SSANNE_TRAINERS_4C
+	setevent EVENT_SSANNE_TRAINERS_5C
+; reset all battles
+	clearevent EVENT_BEAT_COOLTRAINERM_ANDRE
+	clearevent EVENT_BEAT_GENTLEMAN_BLAKE
+	clearevent EVENT_BEAT_BURGLAR_BARRY
+	clearevent EVENT_BEAT_LASS_ELENA
+	clearevent EVENT_BEAT_POKEFANF_AUDREY
+	clearevent EVENT_BEAT_MEDIUM_CHEL
+	clearevent EVENT_BEAT_COOLTRAINERF_MIA
+	clearevent EVENT_BEAT_POKEMANIAC_HORTON
+	clearevent EVENT_BEAT_TEACHER_KATE
+	clearevent EVENT_BEAT_POKEFANM_AUSTIN
+	clearevent EVENT_BEAT_COUPLE_VICANDTARA
+	clearevent EVENT_BEAT_COOLTRAINERF_ELLA
+	clearevent EVENT_BEAT_GENTLEMAN_ALFRED
+	clearevent EVENT_BEAT_BEAUTY_ADELINE
+	clearevent EVENT_BEAT_SUPER_NERD_EMMETT
+	clearevent EVENT_BEAT_COOL_DUO_ZACANDJEN
+	clearevent EVENT_BEAT_FISHER_NELSON
+	clearevent EVENT_BEAT_SAILOR_JARED
+
+; reroll variable trainers
+	random 3
+	ifequal 1, .Trainers1AB
+	ifequal 2, .Trainers1BC
+;.Trainers1CA
+	clearevent EVENT_SSANNE_TRAINERS_1C
+	clearevent EVENT_SSANNE_TRAINERS_1A
+	sjump .Roll2
+.Trainers1AB
+	clearevent EVENT_SSANNE_TRAINERS_1A
+	clearevent EVENT_SSANNE_TRAINERS_1B
+	sjump .Roll2
+.Trainers1BC
+	clearevent EVENT_SSANNE_TRAINERS_1B
+	clearevent EVENT_SSANNE_TRAINERS_1C
+	; fallthrough
+
+.Roll2
+	random 3
+	ifequal 1, .Trainers2AB
+	ifequal 2, .Trainers2BC
+;.Trainers2CA
+	clearevent EVENT_SSANNE_TRAINERS_2C
+	clearevent EVENT_SSANNE_TRAINERS_2A
+	sjump .Roll3
+.Trainers2AB
+	clearevent EVENT_SSANNE_TRAINERS_2A
+	clearevent EVENT_SSANNE_TRAINERS_2B
+	sjump .Roll3
+.Trainers2BC
+	clearevent EVENT_SSANNE_TRAINERS_2B
+	clearevent EVENT_SSANNE_TRAINERS_2C
+	; fallthrough
+
+.Roll3
+	random 3
+	ifequal 1, .Trainers3AB
+	ifequal 2, .Trainers3BC
+;.Trainers3CA
+	clearevent EVENT_SSANNE_TRAINERS_3C
+	clearevent EVENT_SSANNE_TRAINERS_3A
+	sjump .Roll4
+.Trainers3AB
+	clearevent EVENT_SSANNE_TRAINERS_3A
+	clearevent EVENT_SSANNE_TRAINERS_3B
+	sjump .Roll4
+.Trainers3BC
+	clearevent EVENT_SSANNE_TRAINERS_3B
+	clearevent EVENT_SSANNE_TRAINERS_3C
+	; fallthrough
+
+.Roll4
+	random 3
+	ifequal 1, .Trainers4AB
+	ifequal 2, .Trainers4BC
+;.Trainers4CA
+	clearevent EVENT_SSANNE_TRAINERS_4C
+	clearevent EVENT_SSANNE_TRAINERS_4A
+	sjump .Roll5
+.Trainers4AB
+	clearevent EVENT_SSANNE_TRAINERS_4A
+	clearevent EVENT_SSANNE_TRAINERS_4B
+	sjump .Roll5
+.Trainers4BC
+	clearevent EVENT_SSANNE_TRAINERS_4B
+	clearevent EVENT_SSANNE_TRAINERS_4C
+	; fallthrough
+
+.Roll5
+	random 3
+	ifequal 1, .Trainers5AB
+	ifequal 2, .Trainers5BC
+;.Trainers5CA
+	clearevent EVENT_SSANNE_TRAINERS_5C
+	clearevent EVENT_SSANNE_TRAINERS_5A
+	sjump .Finished
+.Trainers5AB
+	clearevent EVENT_SSANNE_TRAINERS_5A
+	clearevent EVENT_SSANNE_TRAINERS_5B
+	sjump .Finished
+.Trainers5BC
+	clearevent EVENT_SSANNE_TRAINERS_5B
+	clearevent EVENT_SSANNE_TRAINERS_5C
+	; fallthrough
+
+.Finished
 	setflag ENGINE_RODE_SSAQUA_TODAY
 .DontResetSSAnneTrainers
 	end
 
-VermilionCityPortSailorScript:
-	checkevent EVENT_GOT_HM01_CUT
-	iffalse .SSAnneWelcomeText
-	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
-	iftrue .SSAnneSetSail
-	checkevent EVENT_SS_ANNE_SET_SAIL
-	iftrue .SSAnneBeforeHoF
-	; else
-	jumptextfaceplayer VermilionCityPortSailorNoShipText
 
-.SSAnneBeforeHoF
-	jumptextfaceplayer VermilionCityPortSailorBeforeHoFText
+VermilionCityPortSailorScript:
+;	checkevent EVENT_GOT_HM01_CUT
+;	iffalse .SSAnneWelcomeText
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .AfterHOF
+	checkevent EVENT_SS_ANNE_SET_SAIL
+	iftrue .SSAnneSetSail
+	; else
+	jumptextfaceplayer VermilionCityPortSailorWelcomeText
 
 .SSAnneSetSail
 	jumptextfaceplayer VermilionCityPortSailorSetSailText
 
-.SSAnneWelcomeText
-	jumptextfaceplayer VermilionCityPortSailorWelcomeText
+.AfterHOF
+	checkevent EVENT_FAST_SHIP_COMPLETED_FIRST_TRIP
+	iffalse .SSAquaFirstTrip
+	jumptextfaceplayer VermilionCityPortSailorScheduleText
 
-VermilionCityPortSailorNoShipText:
-	text "S.S.AQUA sails to"
-	line "OLIVINE CITY in"
-	cont "JOHTO on SUNDAY"
-	cont "and WEDNESDAY."
-
-	para "S.S.ANNE docks"
-	line "here on SATURDAY."
-	done
-
-VermilionCityPortSailorBeforeHoFText:
-	text "S.S.AQUA sails to"
-	line "OLIVINE CITY in"
-	cont "JOHTO on SUNDAY"
-	cont "and WEDNESDAY."
-	done
-
-VermilionCityPortSailorSetSailText:
-	text "The S.S.ANNE has"
-	line "set sail!"
-	done
+.SSAquaFirstTrip
+	jumptextfaceplayer VermilionCityPortSailorSSAquaText
 
 VermilionCityPortSailorWelcomeText:
 	text "Welcome to the"
@@ -154,6 +250,28 @@ VermilionCityPortSailorWelcomeText:
 	cont "set sail again!"
 	done
 
+VermilionCityPortSailorSetSailText:
+	text "The S.S.ANNE has"
+	line "set sail!"
+	done
+
+VermilionCityPortSailorSSAquaText:
+	text "Welcome! S.S.AQUA"
+	line "is docked, but you"
+	cont "will need a ticket"
+	roll "to go aboard."
+	done
+
+VermilionCityPortSailorScheduleText:
+	text "S.S.AQUA sails to"
+	line "OLIVINE CITY on"
+	cont "SUNDAY, TUESDAY,"
+	cont "and WEDNESDAY."
+
+	para "S.S.ANNE docks"
+	line "here on SATURDAY."
+	done
+
 VermilionCityGamblerScript:
 	checkscene
 	ifequal SCENE_VERMILIONCITY_CHECK_ENTER_PORT, .CheckDay
@@ -162,17 +280,18 @@ VermilionCityGamblerScript:
 	jumptextfaceplayer VermilionCityGamblerSSAnneDepartedText
 
 .CheckDay
-	checkflag ENGINE_RODE_SSAQUA_TODAY
-	iftrue .SSAquaLeft
 	readvar VAR_WEEKDAY
 	ifequal SUNDAY, .SSAquaDocked
-	ifequal WEDNESDAY, .SSAquaDocked
+	ifequal TUESDAY, .SSAquaDocked
+	ifequal THURSDAY, .SSAquaDocked
 	ifequal SATURDAY, .SSAnneDocked
 	; else
 	jumptextfaceplayer VermilionCityGamblerRelaxingText
 	end
 
 .SSAquaDocked
+	checkflag ENGINE_RODE_SSAQUA_TODAY
+	iftrue .SSAquaLeft
 	jumptextfaceplayer VermilionCityGamblerSSAquaText
 
 .SSAquaLeft
@@ -182,9 +301,9 @@ VermilionCityGamblerScript:
 	jumptextfaceplayer VermilionCityGamblerSSAnneText
 
 VermilionCityGamblerSSAquaText:
-	text "Did you see S.S."
-	line "AQUA moored in"
-	cont "the harbor?"
+	text "Did you see the"
+	line "S.S.AQUA moored"
+	cont "in the harbor?"
 	done
 
 VermilionCityGamblerSSAquaDepartedText:
@@ -194,9 +313,9 @@ VermilionCityGamblerSSAquaDepartedText:
 	done
 
 VermilionCityGamblerSSAnneText:
-	text "Did you see S.S."
-	line "ANNE moored in"
-	cont "the harbor?"
+	text "Did you see the"
+	line "S.S.ANNE moored"
+	cont "in the harbor?"
 	done
 
 VermilionCityGamblerSSAnneDepartedText:
@@ -346,6 +465,18 @@ VermilionCityDebugSSTicket:
 VermilionCityDebugPokeFlute:
 	hiddenitem POKE_FLUTE, EVENT_ROUTE_12_HIDDEN_HYPER_POTION
 
+VermilionCityDebugSetScene:
+	opentext
+	writetext DebugSetSceneText
+	waitbutton
+	setscene SCENE_VERMILIONCITY_CHECK_ENTER_PORT
+	closetext
+	end
+
+DebugSetSceneText:
+	text "check enter port"
+	done
+
 ;VermilionCitySetTwoDayTimer:
 ;	ld a, 2
 ;	ld hl, wUnusedTwoDayTimer
@@ -385,6 +516,7 @@ VermilionCity_MapEvents:
 	bg_event 14, 11, BGEVENT_ITEM, VermilionCityHiddenMaxEther
 	bg_event 35,  2, BGEVENT_ITEM, VermilionCityDebugSSTicket
 	bg_event 35,  3, BGEVENT_ITEM, VermilionCityDebugPokeFlute
+	bg_event 35,  4, BGEVENT_READ, VermilionCityDebugSetScene
 
 	def_object_events
 	object_event 19, 30, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionCityPortSailorScript, -1

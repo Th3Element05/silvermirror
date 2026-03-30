@@ -145,6 +145,37 @@ FastShipEngineRoomUnconsciousSailorText:
 	line "unconscious!"
 	done
 
+TrainerSailorPedro:
+	trainer SAILOR, PEDRO, EVENT_BEAT_SAILOR_PEDRO, SailorPedroSeenText, SailorPedroBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext SailorPedroAfterBattleText
+	waitbutton
+	closetext
+	end
+
+SailorPedroSeenText:
+	text "It'll be smooth"
+	line "sailing until we"
+	cont "get closer to our"
+	roll "destination!"
+
+	para "I've got time for"
+	line "a battle!"
+	done
+
+SailorPedroBeatenText:
+	text "That was rough."
+	done
+
+SailorPedroAfterBattleText:
+	text "Good thing I'm"
+	line "better at sailing"
+	cont "than I am at #-"
+	roll "MON battles!"
+	done
+
 FastShipEngineRoomSailor:
 	jumptextfaceplayer FastShipEngineRoomSailorText
 FastShipEngineRoomSailorText:
@@ -179,9 +210,11 @@ FastShipEngineRoom_MapEvents:
 	object_event 11,  7, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FastShipEngineRoomSailor_FirstTrip, EVENT_FAST_SHIP_COMPLETED_FIRST_TRIP
 	object_event 21,  6, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FastShipEngineRoomSailor_FirstTrip, EVENT_FAST_SHIP_COMPLETED_FIRST_TRIP
 	object_event 21,  7, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FastShipEngineRoomSailor_FirstTrip, EVENT_FAST_SHIP_COMPLETED_FIRST_TRIP
-;
+; after first trip
 	object_event  4,  5, SPRITE_SAILOR, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FastShipEngineRoomSailor, EVENT_FAST_SHIP_SAILORS
 	object_event 11,  7, SPRITE_SAILOR, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FastShipEngineRoomSailor, EVENT_FAST_SHIP_SAILORS
 	object_event  4,  9, SPRITE_SAILOR, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FastShipEngineRoomSailor, EVENT_FAST_SHIP_SAILORS
 	object_event 16,  3, SPRITE_SAILOR, SPRITEMOVEDATA_WANDER, 2, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FastShipEngineRoomSailor, EVENT_FAST_SHIP_SAILORS
 	object_event 17, 10, SPRITE_SAILOR, SPRITEMOVEDATA_WANDER, 2, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FastShipEngineRoomSailor, EVENT_FAST_SHIP_SAILORS
+; rematch trainers
+	object_event  8, 10, SPRITE_SAILOR, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerSailorPedro, EVENT_FAST_SHIP_SAILORS
