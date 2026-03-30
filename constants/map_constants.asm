@@ -116,16 +116,16 @@ ENDM
 	map_const VERMILION_PORT,                              10,  9 ;  1
 	map_const OLIVINE_PORT,                                10,  9 ;  2
 	map_const SS_ANNE_1F,                                  18,  8 ;  3
-	map_const SS_ANNE_ROOMS_1F,                             7, 16 ;  4
-	map_const SS_ANNE_ROOMS_B1F,                            7, 16 ;  5
+	map_const SS_ANNE_ROOMS_NORTH,                         18,  4 ;  4
+	map_const SS_ANNE_ROOMS_SOUTH,                         18,  4 ;  5
 	map_const SS_ANNE_KITCHEN,                              7,  7 ;  6
 	map_const SS_ANNE_2F,                                  19,  9 ;  7
-	map_const SS_ANNE_ROOMS_2F,                            12,  8 ;  8
+	map_const SS_ANNE_ROOMS_2F,                            18,  4 ;  8
 	map_const SS_ANNE_BOW,                                 10,  7 ;  9
-	map_const FAST_SHIP_1F,                                18,  8 ; 10
+	map_const FAST_SHIP_1F,                                14, 11 ; 10
 	map_const FAST_SHIP_B1F,                               17,  8 ; 11
-	map_const FAST_SHIP_CABINS_NORTH,                       4, 22 ; 12
-	map_const FAST_SHIP_CABINS_SOUTH,                       4, 22 ; 13
+	map_const FAST_SHIP_CABINS_NORTH,                      22,  4 ; 12
+	map_const FAST_SHIP_CABINS_SOUTH,                      22,  4 ; 13
 	map_const FAST_SHIP_CAPTAINS_CABIN,                    19,  9 ; 14
 	map_const FAST_SHIP_ENGINE_ROOM,                       12,  7 ; 15
 ;	map_const FAST_SHIP_CABINS_NNW_NNE_NE,                  4, 16 ; 12
