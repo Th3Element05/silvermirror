@@ -848,7 +848,7 @@ Route36NationalParkGate_Blocks:
 SSAnne1F_Blocks: ;silvermirror
 	INCBIN "maps/SSAnne1F.blk"
 
-SSAnneRooms1F_Blocks: ;silvermirror
+SSAnneRoomsNorth_Blocks: ;silvermirror
 	INCBIN "maps/SSAnneRoomsNorth.blk"
 
 SSAnneKitchen_Blocks: ;silvermirror
@@ -858,7 +858,7 @@ SSAnne2F_Blocks: ;silvermirror
 FastShipCaptainsCabin_Blocks:
 	INCBIN "maps/SSAnne2F.blk"
 
-SSAnneRoomsB1F_Blocks:
+SSAnneRoomsSouth_Blocks:
 SSAnneRooms2F_Blocks: ;silvermirror
 	INCBIN "maps/SSAnneRoomsSouth.blk"
 

@@ -772,8 +772,8 @@ ENDM
 	map_attributes MountMoonB2F, MOUNT_MOON_B2F, $02, 0
 	map_attributes CeruleanTrashedHouse, CERULEAN_TRASHED_HOUSE, $00, 0
 	map_attributes SSAnne1F, SS_ANNE_1F, $00, 0
-	map_attributes SSAnneRooms1F, SS_ANNE_ROOMS_1F, $00, 0
-	map_attributes SSAnneRoomsB1F, SS_ANNE_ROOMS_B1F, $00, 0
+	map_attributes SSAnneRoomsNorth, SS_ANNE_ROOMS_NORTH, $00, 0
+	map_attributes SSAnneRoomsSouth, SS_ANNE_ROOMS_SOUTH, $00, 0
 	map_attributes SSAnneKitchen, SS_ANNE_KITCHEN, $00, 0
 	map_attributes SSAnne2F, SS_ANNE_2F, $00, 0
 	map_attributes SSAnneRooms2F, SS_ANNE_ROOMS_2F, $00, 0
