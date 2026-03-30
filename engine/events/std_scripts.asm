@@ -112,7 +112,7 @@ PokecenterNurseScript:
 ;	iftrue .nite_comcenter
 	farwritetext NurseNiteText
 	promptbutton
-	sjump .ok
+;	sjump .ok
 ;.nite_comcenter
 ;	farwritetext PokeComNurseNiteText
 ;	promptbutton
