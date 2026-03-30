@@ -3,6 +3,14 @@ New TO DO list
 
 TEST
 
+FAKE_OUT
+
+how many walking sprites in SSANNE ROOMS NORTH? (pokefan F)
+
+test entering route 23 and blacking out
+
+headbutt, forest tree palette too bright
+
 changed slot machine result bias for normal/lucky
 
 copycat
@@ -16,20 +24,108 @@ kurts son
 enter HOF a second time, legitimately
 safari zone after battle/core changes for icon gfx
 
+berserk gene after mewtwo battle
+whirl islands
+OftenFleeMons:
+
 
 
 DO
 
-headbutt, no encounters?
-headbutt, forest tree palette too bright
+gyroball animation gfx glitch?
 
+
+SSANNE REMATCHES
+reset ssanne trainers in vermilion city map script
+
+rooms 1f (north)	
++>; COOLTRAINERM, ANDRE
++>; GENTLEMAN, BLAKE
++>; BURGLAR, BARRY
++>; LASS, ELENA
++>; POKEFANF, AUDREY
++>; MEDIUM, CHEL
+
+rooms b1f (south)
++>; COOLTRAINERF, MIA
++>; POKEMANIAC, HORTON
++>; TEACHER, KATE
++>; POKEFANM, AUSTIN
++>; COUPLE, VICANDTARA
+
+rooms 2f (uses south)
++>; COOLTRAINERF, ELLA
++>; GENTLEMAN, ALFRED1
++>; BEAUTY, ADELINE
++>; SUPER_NERD, EMMETT
++>; COOL_DUO, ZACANDJEN
+
+bow
+>; FISHER, NELSON
+add another fisher
+>; SAILOR, JARED (two locations)
+
+	dw EVENT_SSANNE_TRAINERS_1A
+;dw EVENT_SSANNE_TRAINERS_2A ;first trip NPCs
+	dw EVENT_SSANNE_TRAINERS_3A
+	dw EVENT_SSANNE_TRAINERS_4A
+	dw EVENT_SSANNE_TRAINERS_5A
+;dw EVENT_SSANNE_TRAINERS_6A
+	dw EVENT_SSANNE_TRAINERS_1B
+	dw EVENT_SSANNE_TRAINERS_2B
+	dw EVENT_SSANNE_TRAINERS_3B
+	dw EVENT_SSANNE_TRAINERS_4B
+;dw EVENT_SSANNE_TRAINERS_5B ;first trip NPCs
+	dw EVENT_SSANNE_TRAINERS_6B
+	dw EVENT_SSANNE_TRAINERS_1C
+	dw EVENT_SSANNE_TRAINERS_2C
+	dw EVENT_SSANNE_TRAINERS_3C
+;dw EVENT_SSANNE_TRAINERS_4C ;first trip NPCs
+	dw EVENT_SSANNE_TRAINERS_5C
+	dw EVENT_SSANNE_TRAINERS_6C
+
+SSAQUA REMATCHES
+NEED NPCS
+ALSO NEED FIRST TRIP TRAINERS?
+
+cabins north (4)
++>; GENTLEMAN, RICHARD
++>; TWINS, JOANDZOE
++>; PICNICKER, ROBIN
++>; COOL_DUO, ELANANDIDA
+
+cabins south (4)
++>; COOLTRAINERM, ADAM
++>; GUITARIST, EDGAR
++>; JUGGLER, RODNEY
+>; GENTLEMAN, VICTOR
+>; BURGLAR, JERRY
+
+b1f
++>; TEACHER, IRENE
++>; SCHOOLBOY, BRAD
++>; SAILOR, ENZO
++>; SAILOR, LOUIS
+
+engine room
++>; SAILOR, PEDRO
+
+
+
+new evos to johto gym parties? (mamoswine, mismagius?)
+
+tohjo falls xp grind area?
+high xp mons:
+255 chansey
+215 gyarados
+205 tentacruel
+200 heracross
+200 miltank
+200 pinsir
+
+headbutt, no encounters?
 
 PARTYMENUACTION_EVO_STONE?
-
-mon_menu use field moves if can learn (removed moves?) IF have pager (or badge?)
-TELEPORT move tutor?
-
-darkness object palettes are still dark
 
 evolution moves need only be moves that pre-evolved form would miss
 
@@ -51,8 +147,6 @@ SLOWPOKE
 
 
 reduce long animations? (*magnezone)
-
-route29 farmhouse??
 
 go through data/trainers/parties levels/moves
 
