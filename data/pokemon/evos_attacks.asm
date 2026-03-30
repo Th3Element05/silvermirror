@@ -316,7 +316,7 @@ RattataEvosAttacks:
 	db 16, HYPER_FANG
 	db 19, FEINT_ATTACK ;sucker_punch, x
 	db 22, CRUNCH
-	db 25, THIEF ;assurance, x
+	db 25, FAKE_OUT ;assurance, x
 	db 28, SUPER_FANG
 	db 31, DOUBLE_EDGE
 	db 34, FLAIL ;endeavor, x
@@ -335,7 +335,7 @@ RaticateEvosAttacks:
 	db 19, FEINT_ATTACK ;sucker_punch, x
 	db 20, SCARY_FACE ;evolution move?
 	db 24, CRUNCH
-	db 29, THIEF ;assurance, x
+	db 29, FAKE_OUT ;assurance, x
 	db 34, SUPER_FANG
 	db 39, DOUBLE_EDGE
 	db 44, FLAIL ;endeavor, x
@@ -853,12 +853,12 @@ MeowthEvosAttacks:
 	db 1, SCRATCH
 	db 1, GROWL
 	db 6, BITE
-	db 9, PAY_DAY ;fake_out, x
-	db 14, FURY_STRIKES ;fury_swipes, removed
+	db 9, FURY_STRIKES ;fury_swipes, removed
+	db 14, PAY_DAY ;fake_out, x
 	db 17, SCREECH
 	db 22, FEINT_ATTACK
 	db 25, SWAGGER ;taunt, x
-	db 30, FLAIL ;PAY_DAY, 9
+	db 30, FAKE_OUT ;PAY_DAY, 9
 	db 33, SLASH
 	db 38, NASTY_PLOT
 	db 41, CRUSH_CLAW ;assurance, x
@@ -868,12 +868,12 @@ MeowthEvosAttacks:
 
 PersianEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, THIEF ;switcheroo, x
+	db 1, FAKE_OUT ;switcheroo, x
 	db 1, SCRATCH
 	db 1, GROWL
 	db 6, BITE
-	db 9, PAY_DAY ;fake_out, x
-	db 14, FURY_STRIKES ;fury_swipes, removed
+	db 9, FURY_STRIKES ;fury_swipes, removed
+	db 14, PAY_DAY ;fake_out, x
 	db 17, SCREECH
 	db 22, FEINT_ATTACK
 	db 25, SWAGGER ;taunt, x
@@ -1554,10 +1554,10 @@ ShellderEvosAttacks:
 CloysterEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, OCTAZOOKA ;toxic_spikes, x
-	db 1, ROCK_BLAST ;new
 	db 1, DEFENSE_CURL ;withdraw, removed
 	db 1, SUPERSONIC
 	db 1, AURORA_BEAM
+	db 1, ROCK_BLAST ;new
 	db 1, PROTECT
 	db 28, SPIKES
 	db 40, ICICLE_SPEAR ;spike_cannon, removed ;evolution move?
@@ -1796,7 +1796,7 @@ CuboneEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, GROWL
 	db 3, TACKLE ;tail_whip, removed
-	db 7, BONE_CLUB
+	db 7, MUD_SHOT ;bone_club, removed
 	db 11, HEADBUTT
 	db 13, LEER
 	db 17, FOCUS_ENERGY
@@ -1814,7 +1814,7 @@ MarowakEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, GROWL
 	db 3, TACKLE ;tail_whip, removed
-	db 7, BONE_CLUB
+	db 7, MUD_SHOT ;bone_club, removed
 	db 11, HEADBUTT
 	db 13, LEER
 	db 17, FOCUS_ENERGY
@@ -1988,7 +1988,7 @@ TangelaEvosAttacks:
 	db 26, MEGA_DRAIN
 	db 29, STUN_SPORE
 	db 33, ANCIENTPOWER
-	db 36, THIEF ;knock_off, x
+	db 36, FAKE_OUT ;knock_off, x
 	db 40, SYNTHESIS ;natural_gift, x
 	db 43, BODY_SLAM ;slam, removed
 	db 47, SUNNY_DAY ;tickle, x
@@ -2002,11 +2002,11 @@ KangaskhanEvosAttacks:
 	db 1, ICE_PUNCH
 	db 1, THUNDERPUNCH
 	; relearner
+	db 1, ASTONISH ;fake_out
 	db 1, ENDURE
 	db 1, FURY_STRIKES ;comet_punch, removed
-	db 1, ASTONISH ;fake_out, x
 	db 1, LEER
-	db 7, ASTONISH ;fake_out, x
+	db 7, FAKE_OUT
 	db 10, LEER ;tail_whip, removed
 	db 13, BITE
 	db 19, DIZZY_PUNCH ;mega_punch, removed
@@ -2111,9 +2111,9 @@ StaryuEvosAttacks:
 
 StarmieEvosAttacks:
 	db 0 ; no more evolutions
+	db 1, RECOVER
 	db 1, WATER_GUN
 	db 1, RAPID_SPIN
-	db 1, RECOVER
 	db 1, SWIFT
 	db 28, CONFUSE_RAY
 	db 0 ; no more level-up moves
@@ -2132,7 +2132,7 @@ MrMimeEvosAttacks:
 	db 35, PSYBEAM
 	db 29, SUBSTITUTE
 	db 32, CONFUSE_RAY ;recycle, x
-	db 36, THIEF ;trick, x
+	db 36, FAKE_OUT ;trick, x
 	db 43, FUTURE_SIGHT ;role_play, x
 	db 46, BATON_PASS
 	db 50, SAFEGUARD
@@ -3105,7 +3105,7 @@ TangrowthEvosAttacks:
 	db 26, MEGA_DRAIN
 	db 29, STUN_SPORE
 	db 33, ANCIENTPOWER
-	db 36, THIEF ;knock_off, x
+	db 36, FAKE_OUT ;knock_off, x
 	db 40, SYNTHESIS ;natural_gift, x
 	db 43, BODY_SLAM ;slam, removed
 	db 47, SUNNY_DAY ;tickle, x
@@ -3420,7 +3420,7 @@ AipomEvosAttacks:
 	db 25, SCREECH
 	db 29, AGILITY
 	db 32, DOUBLESLAP ;double_hit, x
-	db 36, THIEF ;fling, x
+	db 36, FAKE_OUT ;fling, x
 	db 39, NASTY_PLOT
 	db 43, DOUBLE_EDGE ;last_resort, x
 	db 0 ; no more level-up moves
@@ -3584,7 +3584,7 @@ MurkrowEvosAttacks:
 	db 11, HAZE
 	db 15, WING_ATTACK
 	db 21, NIGHT_SHADE
-	db 25, THIEF ;assurance, x
+	db 25, FAKE_OUT ;assurance, x
 	db 31, SWAGGER ;taunt, x
 	db 35, FEINT_ATTACK
 	db 41, MEAN_LOOK
@@ -3646,11 +3646,11 @@ MisdreavusEvosAttacks:
 MismagiusEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, CHARM ;lucky_chant, x
-	db 1, MAGICAL_LEAF
 	db 1, GROWL
+	db 1, ASTONISH
 	db 1, PSYBEAM ;psywave, removed
 	db 1, DISABLE ;spite, removed
-	db 1, ASTONISH
+	db 1, MAGICAL_LEAF
 	db 0 ; no more level-up moves
 
 UnownEvosAttacks:
@@ -3753,7 +3753,7 @@ GligarEvosAttacks:
 	db 1, POISON_STING
 	db 5, MUD_SLAP ;sand_attack, removed
 	db 9, HARDEN
-	db 12, THIEF ;knock_off, x
+	db 12, FAKE_OUT ;knock_off, x
 	db 16, QUICK_ATTACK
 	db 20, FURY_CUTTER
 	db 23, FEINT_ATTACK
@@ -3773,7 +3773,7 @@ GliscorEvosAttacks:
 	db 1, POISON_JAB
 	db 5, MUD_SLAP ;sand_attack, removed
 	db 9, HARDEN
-	db 12, THIEF ;knock_off, x
+	db 12, FAKE_OUT ;knock_off, x
 	db 16, QUICK_ATTACK
 	db 20, FURY_CUTTER
 	db 23, FEINT_ATTACK
@@ -3969,7 +3969,7 @@ WeavileEvosAttacks:
 TeddiursaEvosAttacks:
 	db EVOLVE_LEVEL, 30, URSARING
 	db 0 ; no more evolutions
-	db 1, THIEF ;covet, x
+	db 1, FAKE_OUT ;covet, x
 	db 1, SCRATCH
 	db 1, LEER
 	db 1, LICK
@@ -3987,7 +3987,7 @@ TeddiursaEvosAttacks:
 
 UrsaringEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, THIEF ;covet, x
+	db 1, FAKE_OUT ;covet, x
 	db 1, SCRATCH
 	db 1, LEER
 	db 1, LICK
@@ -4288,7 +4288,7 @@ DonphanEvosAttacks:
 	db 1, DEFENSE_CURL
 	db 1, FLAIL
 	db 6, RAPID_SPIN
-	db 10, THIEF ;knock_off, x
+	db 10, FAKE_OUT ;knock_off, x
 	db 15, ROLLOUT
 	db 19, MAGNITUDE
 	db 24, BODY_SLAM ;slam, removed
@@ -4357,7 +4357,7 @@ TyrogueEvosAttacks:
 	db EVOLVE_STAT, 20, ATK_EQ_DEF, HITMONTOP
 	db 0 ; no more evolutions
 	db 1, TACKLE
-	db 1, ASTONISH ;fake_out, x
+	db 1, FAKE_OUT
 	db 1, RAGE ;helping_hand, x
 	db 1, FORESIGHT
 	db 0 ; no more level-up moves

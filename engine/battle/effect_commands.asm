@@ -5437,25 +5437,63 @@ BattleCommand_EndLoop:
 	ret
 
 BattleCommand_FakeOut:
-	ld a, [wAttackMissed]
+	; Only allow this move on the first turn.
+	ldh a, [hBattleTurn]
 	and a
-	ret nz
-
-	call CheckSubstituteOpp
+	ld hl, wPlayerTurnsTaken
+	ld b, 0
+	jr z, .got_turns_taken
+	ld hl, wEnemyTurnsTaken
+	inc b
+.got_turns_taken
+	; Fail if we didn't move first.
+	ld a, [wEnemyGoesFirst]
+	xor b
 	jr nz, .fail
 
-	ld a, BATTLE_VARS_STATUS_OPP
-	call GetBattleVar
-	and 1 << FRZ | SLP_MASK
-	jr nz, .fail
+	; Only allow on the first turn.
+	ld a, [hl]
+	dec a
+	ret z
 
-	call CheckOpponentWentFirst
-	jr z, FlinchTarget
+;BattleCommand_FakeOut:
+;	ldh a, [hBattleTurn]
+;	and a
+;	jr nz, .enemyturn
+;
+;	ld a, [wPlayerTurnsTaken]
+;	dec a
+;	jr nz, .fail
+;	jr .success
+;
+;.enemyturn
+;	ld a, [wEnemyTurnsTaken]
+;	dec a
+;	jr nz, .fail
+;
+;.success
+;	ld a, [wAttackMissed]
+;	and a
+;	ret nz
+;
+;	call CheckSubstituteOpp
+;;	jr nz, .fail
+;	ret nz
+;
+;	ld a, BATTLE_VARS_STATUS_OPP
+;	call GetBattleVar
+;	and 1 << FRZ | SLP_MASK
+;	jr nz, .fail
+;
+;	call CheckOpponentWentFirst
+;	jr z, FlinchTarget
 
 .fail
-	ld a, 1
-	ld [wAttackMissed], a
-	ret
+;	ld a, 1
+;	ld [wAttackMissed], a
+;	ret
+	call FailMove
+	jp EndMoveEffect
 
 BattleCommand_FlinchTarget:
 	call CheckSubstituteOpp

@@ -143,7 +143,8 @@ Moves:
 	move LICK,         EFFECT_PARALYZE_HIT,       20, GHOST,        PHYSICAL, 100, 30,  30
 	move SMOG,         EFFECT_POISON_HIT,         20, POISON,       SPECIAL,   90, 20,  50 ; OLD ACC:70 %:40
 	move SLUDGE,       EFFECT_POISON_HIT,         65, POISON,       SPECIAL,  100, 20,  30
-	move BONE_CLUB,    EFFECT_FLINCH_HIT,         65, GROUND,       PHYSICAL,  85, 20,  10
+;	move BONE_CLUB,    EFFECT_FLINCH_HIT,         65, GROUND,       PHYSICAL,  85, 20,  10
+	move FAKE_OUT,     EFFECT_FAKE_OUT,           40, NORMAL,       PHYSICAL, 100, 10, 100 ;BONE_CLUB, to be removed
 	move FIRE_BLAST,   EFFECT_BURN_HIT,          120, FIRE,         SPECIAL,   85,  5,  10
 	move WATERFALL,    EFFECT_FLINCH_HIT,         80, WATER,        PHYSICAL, 100, 15,  30 ; OLD EFFECT_NORMAL_HIT
 	move X_SCISSOR,    EFFECT_NORMAL_HIT,         80, BUG,          PHYSICAL, 100, 15,   0 ;CLAMP, removed
@@ -228,7 +229,7 @@ Moves:
 	move SWAGGER,      EFFECT_SWAGGER,             0, NORMAL,       STATUS,    90, 15, 100
 	move MUD_SHOT,     EFFECT_SPEED_DOWN_HIT,     55, GROUND,       SPECIAL,   95, 15, 100 ;MILK_DRINK, removed
 	move SPARK,        EFFECT_PARALYZE_HIT,       65, ELECTRIC,     PHYSICAL, 100, 20,  30
-	move FURY_CUTTER,  EFFECT_FURY_CUTTER,        20, BUG,          PHYSICAL,  95, 20,   0 ; OLD POW:10
+	move FURY_CUTTER,  EFFECT_FURY_CUTTER,        40, BUG,          PHYSICAL,  95, 20,   0 ; OLD POW:10
 	move STEEL_WING,   EFFECT_DEFENSE_UP_HIT,     70, STEEL,        PHYSICAL,  90, 25,  10
 	move MEAN_LOOK,    EFFECT_MEAN_LOOK,           0, NORMAL,       STATUS,   100,  5,   0
 	move ATTRACT,      EFFECT_ATTRACT,             0, NORMAL,       STATUS,   100, 15,   0

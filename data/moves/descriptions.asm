@@ -125,7 +125,7 @@ MoveDescriptions::
 	dw LickDescription
 	dw SmogDescription
 	dw SludgeDescription
-	dw BoneClubDescription
+	dw FakeOutDescription ;BoneClubDescription
 	dw FireBlastDescription
 	dw WaterfallDescription
 	dw XScissorDescription ;ClampDescription
@@ -1196,12 +1196,16 @@ SludgeDescription:
 ;	db   "An attack that may"
 ;	next "poison the foe.@"
 
-BoneClubDescription:
-	db   "The foe is struck"
-	feed "with a bone."
-	feed "Foe may flinch.@"
-;	db   "An attack that may"
-;	next "cause flinching.@"
+FakeOutDescription:
+	db   "Only works on the"
+	feed "user's first turn."
+	feed "Causes flinching.@"
+;BoneClubDescription:
+;	db   "The foe is struck"
+;	feed "with a bone."
+;	feed "Foe may flinch.@"
+;;	db   "An attack that may"
+;;	next "cause flinching.@"
 
 FireBlastDescription:
 	db   "An intense blast"

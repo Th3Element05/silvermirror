@@ -43,6 +43,7 @@ AI_Redundant:
 	dbw EFFECT_SYNTHESIS,    .Synthesis
 	dbw EFFECT_MOONLIGHT,    .Moonlight
 	dbw EFFECT_SWAGGER,      .Swagger
+	dbw EFFECT_FAKE_OUT,     .FakeOut
 	dbw EFFECT_FUTURE_SIGHT, .FutureSight
 	db -1
 
@@ -173,6 +174,11 @@ AI_Redundant:
 .Swagger:
 	ld a, [wPlayerSubStatus3]
 	bit SUBSTATUS_CONFUSED, a
+	ret
+
+.FakeOut:
+	ld a, [wEnemyTurnsTaken]
+	and a
 	ret
 
 .FutureSight:
