@@ -379,8 +379,10 @@ TrainerOfficerRex:
 	end
 
 OfficerRexSeenText:
-	text "I'm practicing"
-	line "for a show!"
+;	text "I'm practicing"
+;	line "for a show!"
+	text "I'm doing my"
+	line "patrol!"
 	done
 
 OfficerRexBeatenText:
@@ -389,8 +391,8 @@ OfficerRexBeatenText:
 	done
 
 OfficerRexAfterBattleText:
-	text "Well, better get"
-	line "back to work."
+	text "Well, I'd better"
+	line "get back to work."
 	done
 
 TrainerYoungsterJason:
@@ -484,19 +486,20 @@ TrainerOfficerCarter:
 .Script:
 	endifjustbattled
 	opentext
-	writetext OfficerCarterAfterBattleText
+	writetext OfficerRexAfterBattleText ;OfficerCarterAfterBattleText
 	waitbutton
 	closetext
 	end
 
 OfficerCarterSeenText:
 	text "Watch out for"
-	line "live wires!"
+;	line "live wires!"
+	line "criminals!"
 	done
 
 OfficerCarterBeatenText:
 	text "Whoa!"
-	line "You spark plug!"
+;	line "You spark plug!"
 	done
 
 OfficerCarterAfterBattleText:
