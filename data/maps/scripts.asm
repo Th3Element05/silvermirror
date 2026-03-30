@@ -100,17 +100,20 @@ INCLUDE "maps/VermilionDiglettsCaveSpeechHouse.asm"
 INCLUDE "maps/VermilionMagnetTrainSpeechHouse.asm"
 
 
-SECTION "Map Scripts 10", ROMX
+SECTION "Map Scripts 10A", ROMX
 
 INCLUDE "maps/VermilionPort.asm"
+INCLUDE "maps/OlivinePort.asm"
+
+SECTION "Map Scripts 10", ROMX
+
 INCLUDE "maps/SSAnne1F.asm"
-INCLUDE "maps/SSAnneRooms1F.asm"
-INCLUDE "maps/SSAnneRoomsB1F.asm"
+INCLUDE "maps/SSAnneRoomsNorth.asm"
+INCLUDE "maps/SSAnneRoomsSouth.asm"
 INCLUDE "maps/SSAnneKitchen.asm"
 INCLUDE "maps/SSAnne2F.asm"
 INCLUDE "maps/SSAnneRooms2F.asm"
 INCLUDE "maps/SSAnneBow.asm"
-INCLUDE "maps/OlivinePort.asm"
 INCLUDE "maps/FastShip1F.asm"
 INCLUDE "maps/FastShipB1F.asm"
 INCLUDE "maps/FastShipCabins_North.asm"
