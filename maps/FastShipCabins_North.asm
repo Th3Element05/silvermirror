@@ -1,157 +1,9 @@
 	object_const_def
-;	const FASTSHIPCABINS_SW_SSW_NW_FISHER
-;	const FASTSHIPCABINS_SW_SSW_NW_BUG_CATCHER
-;	const FASTSHIPCABINS_SW_SSW_NW_BEAUTY
-;	const FASTSHIPCABINS_SW_SSW_NW_ROCKER
 
 FastShipCabins_North_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
-
-;TrainerFirebreatherLyle:
-;	trainer FIREBREATHER, LYLE, EVENT_BEAT_FIREBREATHER_LYLE, FirebreatherLyleSeenText, FirebreatherLyleBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext FirebreatherLyleAfterBattleText
-;	waitbutton
-;	closetext
-;	end
-
-;TrainerBugCatcherKen:
-;	trainer BUG_CATCHER, KEN, EVENT_BEAT_BUG_CATCHER_KEN, BugCatcherKenSeenText, BugCatcherKenBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext BugCatcherKenAfterBattleText
-;	waitbutton
-;	closetext
-;	end
-
-;TrainerBeautyCassie:
-;	trainer BEAUTY, CASSIE, EVENT_BEAT_BEAUTY_CASSIE, BeautyCassieSeenText, BeautyCassieBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext BeautyCassieAfterBattleText
-;	waitbutton
-;	closetext
-;	end
-
-;TrainerGuitaristClyde:
-;	trainer GUITARIST, CLYDE, EVENT_BEAT_GUITARIST_CLYDE, GuitaristClydeSeenText, GuitaristClydeBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	special CheckMobileAdapterStatusSpecial
-;	iftrue .mobile
-;;	opentext
-;	writetext GuitaristClydeAfterBattleText
-;	waitbutton
-;	closetext
-;	end
-
-;.mobile
-;	opentext
-;	writetext GuitaristClydeAfterBattleMobileText
-;	waitbutton
-;	closetext
-;	end
-
-
-
-;FirebreatherLyleSeenText:
-;	text "I'm going to KANTO"
-;	line "to put on fire-"
-;	cont "breathing shows!"
-;	done
-;
-;FirebreatherLyleBeatenText:
-;	text "Fizzle… The"
-;	line "flame's tiny…"
-;	done
-;
-;FirebreatherLyleAfterBattleText:
-;	text "I guess fire is"
-;	line "weak on the sea."
-;
-;	para "It doesn't matter?"
-;	line "Really?"
-;	done
-;
-;BugCatcherKenSeenText:
-;	text "I'm visiting my"
-;	line "grandma to catch"
-;	cont "me some bugs!"
-;	done
-;
-;BugCatcherKenBeatenText:
-;	text "Ooh, wow."
-;	line "You're tough!"
-;	done
-;
-;BugCatcherKenAfterBattleText:
-;	text "You can find lots"
-;	line "of #MON in the"
-;	cont "trees of JOHTO!"
-;	done
-;
-;BeautyCassieSeenText:
-;	text "I'm trying to"
-;	line "forget my woes."
-;	cont "Let's battle!"
-;	done
-;
-;BeautyCassieBeatenText:
-;	text "My heart weeps…"
-;	done
-;
-;BeautyCassieAfterBattleText:
-;	text "A voyage is best"
-;	line "for getting over"
-;	cont "a broken heart."
-;
-;	para "But a FAST SHIP"
-;	line "trip is too short"
-;	cont "for grieving."
-;	done
-;
-;GuitaristClydeSeenText:
-;	text "I'm going to audi-"
-;	line "tion my songs at"
-;
-;	para "GOLDENROD's RADIO"
-;	line "STATION."
-;	done
-;
-;GuitaristClydeBeatenText:
-;	text "Yowza!"
-;	line "Total distortion!"
-;	done
-;
-;GuitaristClydeAfterBattleMobileText:
-;	text "I was going to"
-;	line "make my debut at"
-;	cont "the BATTLE TOWER…"
-;
-;	para "I should go back"
-;	line "to VERMILION and"
-;	cont "redo my training…"
-;	done
-;
-;GuitaristClydeAfterBattleText:
-;	text "Speaking of the"
-;	line "RADIO STATION,"
-;
-;	para "what's today's"
-;	line "lucky number?"
-;	done
-
-
 
 FastShipBed:
 	opentext
@@ -219,17 +71,150 @@ FastShipArrivedVermilionText:
 	cont "VERMILION CITY."
 	done
 
+
+; trainers
+TrainerGentlemanRichard:
+	trainer GENTLEMAN, RICHARD, EVENT_BEAT_GENTLEMAN_RICHARD, GentlemanRichardSeenText, GentlemanRichardBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext GentlemanRichardAfterBattleText
+	waitbutton
+	closetext
+	end
+
+GentlemanRichardSeenText:
+	text "I love going on"
+	line "trips with my"
+	cont "granddaughters!"
+	done
+
+GentlemanRichardBeatenText:
+	text "Oh…"
+	done
+
+GentlemanRichardAfterBattleText:
+	text "My granddaughters"
+	line "are pretty good"
+	cont "trainers, too!"
+	done
+
+TrainerTwinsJoAndZoe:
+	trainer TWINS, JOANDZOE, EVENT_BEAT_TWINS_JOANDZOE, TwinsJoAndZoeSeenText, TwinsJoAndZoeBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext TwinsJoAndZoeAfterBattleText
+	waitbutton
+	closetext
+	end
+
+TwinsJoAndZoeSeenText:
+	text "ZOE: We're bored."
+	line "JO: Play with us!"
+	done
+
+TwinsJoAndZoeBeatenText:
+	text "Hey, losing isn't"
+	line "fun!"
+	done
+
+TwinsJoAndZoeAfterBattleText:
+	text "Grandpa teaches us"
+	line "all about #MON!"
+	done
+
+TrainerPicnickerRobin:
+	trainer PICNICKER, ROBIN, EVENT_BEAT_PICNICKER_ROBIN, PicnickerRobinSeenText, PicnickerRobinBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext PicnickerRobinAfterBattleText
+	waitbutton
+	closetext
+	end
+
+PicnickerRobinSeenText:
+	text "Eek!"
+	done
+
+PicnickerRobinBeatenText:
+	text "This is a private"
+	line "cabin!"
+	done
+
+PicnickerRobinAfterBattleText:
+	text "What are you doing"
+	line "barging into other"
+	cont "people's rooms?"
+	done
+
+TrainerCoolDuoElanAndIda:
+	trainer COOL_DUO, ELANANDIDA, EVENT_BEAT_COOL_DUO_ELANANDIDA, CoolDuoElanAndIdaSeenText, CoolDuoElanAndIdaBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext CoolDuoElanAndIdaAfterBattleText
+	waitbutton
+	closetext
+	end
+
+CoolDuoElanAndIdaSeenText:
+	text "Excuse me, we're"
+	line "a little busy."
+	done
+
+CoolDuoElanAndIdaBeatenText:
+	text "Ooh, wow."
+	line "You're tough!"
+	done
+
+CoolDuoElanAndIdaAfterBattleText:
+	text "Would you mind"
+	line "giving us some"
+	cont "privacy?"
+	done
+
+
+; npcs
+FastShipCabinsNorthGranny:
+	checkevent EVENT_FAST_SHIP_TRAINERS_1A
+	iftrue .NoFamily
+	jumptextfaceplayer FastShipCabinsNorthGrannyFamilyText
+
+.NoFamily
+	jumptextfaceplayer FastShipCabinsNorthGrannyAloneText
+
+FastShipCabinsNorthGrannyFamilyText:
+	text "I love taking my"
+	line "granddaughters on"
+	cont "trips!"
+
+	para "Everything seems"
+	line "more exciting with"
+	cont "them around!"
+	done
+
+FastShipCabinsNorthGrannyAloneText:
+	text "Its nice to get"
+	line "away on your own"
+	cont "from time to time."
+	done
+
+
+; bg events
 FastShipCabinsNorthwestCabinTrashcan:
 	jumpstd TrashCanScript
+
 
 FastShipCabins_North_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
 	warp_event  4,  1, FAST_SHIP_1F, 2
-	warp_event  2, 13, FAST_SHIP_1F, 3
-	warp_event  2, 25, FAST_SHIP_1F, 4
-	warp_event  2, 37, FAST_SHIP_1F, 5
+	warp_event 14,  1, FAST_SHIP_1F, 3
+	warp_event 26,  1, FAST_SHIP_1F, 4
+	warp_event 38,  1, FAST_SHIP_1F, 5
 
 	def_coord_events
 
@@ -237,12 +222,15 @@ FastShipCabins_North_MapEvents:
 	bg_event  7,  2, BGEVENT_READ, FastShipBed
 	bg_event  7,  3, BGEVENT_READ, FastShipBed
 	bg_event  7,  7, BGEVENT_READ, FastShipCabinsNorthwestCabinTrashcan
-	bg_event  4, 14, BGEVENT_READ, FastShipCabinsNorthwestCabinTrashcan
-	bg_event  7, 31, BGEVENT_READ, FastShipCabinsNorthwestCabinTrashcan
-	bg_event  6, 38, BGEVENT_READ, FastShipCabinsNorthwestCabinTrashcan
+	bg_event 16,  2, BGEVENT_READ, FastShipCabinsNorthwestCabinTrashcan
+	bg_event 30,  2, BGEVENT_READ, FastShipCabinsNorthwestCabinTrashcan
+	bg_event 42,  2, BGEVENT_READ, FastShipCabinsNorthwestCabinTrashcan
 
 	def_object_events
-;	object_event  1, 15, SPRITE_FISHER, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerFirebreatherLyle, EVENT_FAST_SHIP_PASSENGERS_FIRST_TRIP
-;	object_event  6, 15, SPRITE_BOY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBugCatcherKen, EVENT_FAST_SHIP_PASSENGERS_WESTBOUND
-;	object_event  1, 26, SPRITE_BEAUTY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBeautyCassie, EVENT_FAST_SHIP_PASSENGERS_EASTBOUND
-;	object_event  3, 28, SPRITE_ROCKER, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerGuitaristClyde, EVENT_FAST_SHIP_PASSENGERS_WESTBOUND
+	object_event 13,  4, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerGentlemanRichard, EVENT_FAST_SHIP_TRAINERS_1A
+	object_event 17,  4, SPRITE_TWIN, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 1, TrainerTwinsJoAndZoe, EVENT_FAST_SHIP_TRAINERS_1A
+	object_event 17,  5, SPRITE_TWIN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 1, TrainerTwinsJoAndZoe, EVENT_FAST_SHIP_TRAINERS_1A
+	object_event 13,  5, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FastShipCabinsNorthGranny, EVENT_FAST_SHIP_TRAINERS_1B
+	object_event 26,  3, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerPicnickerRobin, EVENT_FAST_SHIP_TRAINERS_2A
+	object_event 39,  6, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 0, TrainerCoolDuoElanAndIda, EVENT_FAST_SHIP_TRAINERS_3A
+	object_event 40,  6, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 0, TrainerCoolDuoElanAndIda, EVENT_FAST_SHIP_TRAINERS_3A

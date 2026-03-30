@@ -49,8 +49,8 @@ SailorHarrySeenText:
 	done
 
 SailorHarryBeatenText:
-	text "I was"
-	line "just careless!"
+	text "I was just"
+	line "careless!"
 	done
 
 SailorHarryAfterBattleText:
@@ -59,6 +59,64 @@ SailorHarryAfterBattleText:
 	cont "#MON. I think"
 	cont "there are more."
 	done
+
+
+; rematch trainers
+TrainerFisherNelson:
+	trainer FISHER, NELSON, EVENT_BEAT_FISHER_NELSON, FisherNelsonSeenText, FisherNelsonBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext FisherNelsonAfterBattleText
+	waitbutton
+	closetext
+	end
+
+FisherNelsonSeenText:
+	text "Out at sea, you"
+	line "can hook different"
+	cont "#MON than you"
+	roll "can from shore!"
+	done
+
+FisherNelsonBeatenText:
+	text "Sinker!"
+	done
+
+FisherNelsonAfterBattleText:
+	text "I like to fish at"
+	line "lots of different"
+	cont "locations to see"
+	roll "what's biting!"
+	done
+
+TrainerSailorJared:
+	trainer SAILOR, JARED, EVENT_BEAT_SAILOR_JARED, SailorJaredSeenText, SailorJaredBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext SailorJaredAfterBattleText
+	waitbutton
+	closetext
+	end
+
+SailorJaredSeenText:
+	text "Ahoy there!"
+	line "Are you seasick?"
+	done
+
+SailorJaredBeatenText:
+	text "I was just"
+	line "careless!"
+	done
+
+SailorJaredAfterBattleText:
+	text "Fresh air can help"
+	line "if the movement of"
+	cont "the ship is making"
+	roll "you feel sick."
+	done
+
 
 ; npc
 SSAnneBowSuperNerdScript:
@@ -77,7 +135,14 @@ SSAnneBowSailorText:
 	done
 
 SSAnneBowCooltrainerMScript:
-	jumptextfaceplayer SSAnneBowCooltrainerMText
+	faceplayer
+	opentext
+	writetext SSAnneBowCooltrainerMText
+	waitbutton
+	closetext
+	turnobject LAST_TALKED, DOWN
+	end
+
 SSAnneBowCooltrainerMText:
 	text "Urf. I feel ill."
 
@@ -96,8 +161,14 @@ SSAnneBow_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  5,  2, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneBowSuperNerdScript, -1
 	object_event  4,  4, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSailorEugene, -1
 	object_event 10,  8, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSailorHarry, -1
+; rematch trainers
+	object_event  7,  2, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 0, TrainerFisherNelson, EVENT_SSANNE_TRAINERS_3A
+	object_event 10,  2, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 0, TrainerFisherNelson, EVENT_SSANNE_TRAINERS_4B
+	object_event  6,  7, SPRITE_SAILOR, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSailorJared, EVENT_SSANNE_TRAINERS_1A
+	object_event  9,  5, SPRITE_SAILOR, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSailorJared, EVENT_SSANNE_TRAINERS_2B
+; npcs
+	object_event  5,  2, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneBowSuperNerdScript, EVENT_SSANNE_FIRST_VISIT_NPCS
 	object_event  4,  9, SPRITE_SAILOR, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneBowSailorScript, -1
-	object_event  7, 11, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneBowCooltrainerMScript, -1
+	object_event  7, 11, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneBowCooltrainerMScript, EVENT_SSANNE_TRAINERS_5B

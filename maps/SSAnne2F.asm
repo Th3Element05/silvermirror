@@ -14,7 +14,7 @@ SSAnne2FNoop2Scene:
 	end
 
 SSAnne2FRivalEncounterL:
-	moveobject SSANNE2F_RIVAL, 34, 4
+	moveobject SSANNE2F_RIVAL, 34, 6
 	; fallthrough
 SSAnne2FRivalEncounterR:
 	playmusic MUSIC_RIVAL_ENCOUNTER
@@ -294,17 +294,16 @@ SSAnne2F_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  4,  6, SS_ANNE_1F, 2        ; 1
-	warp_event  2, 10, SS_ANNE_BOW, 1       ; 2
-	warp_event 34,  6, SS_ANNE_2F, 10       ; 3
-	warp_event  9, 13, SS_ANNE_ROOMS_2F, 1  ; 4
-	warp_event 13, 13, SS_ANNE_ROOMS_2F, 3  ; 5
-	warp_event 17, 13, SS_ANNE_ROOMS_2F, 5  ; 6
-	warp_event 21, 13, SS_ANNE_ROOMS_2F, 7  ; 7
-	warp_event 25, 13, SS_ANNE_ROOMS_2F, 9  ; 8
-	warp_event 29, 13, SS_ANNE_ROOMS_2F, 11 ; 9
-	warp_event 20,  7, SS_ANNE_2F, 3        ; 10
-	warp_event 21,  7, SS_ANNE_2F, 3        ; 11
+	warp_event  8,  6, SS_ANNE_1F, 2       ; 1
+	warp_event  6, 10, SS_ANNE_BOW, 1      ; 2
+	warp_event 34,  6, SS_ANNE_2F, 9       ; 3
+	warp_event 13, 13, SS_ANNE_ROOMS_2F, 1 ; 4
+	warp_event 17, 13, SS_ANNE_ROOMS_2F, 3 ; 5
+	warp_event 21, 13, SS_ANNE_ROOMS_2F, 5 ; 6
+	warp_event 25, 13, SS_ANNE_ROOMS_2F, 7 ; 7
+	warp_event 29, 13, SS_ANNE_ROOMS_2F, 9 ; 8
+	warp_event 20,  7, SS_ANNE_2F, 3       ; 9
+	warp_event 21,  7, SS_ANNE_2F, 3       ; 10
 
 	def_coord_events
 	coord_event 34, 11, SCENE_SSANNE2F_RIVAL_BATTLE, SSAnne2FRivalEncounterL

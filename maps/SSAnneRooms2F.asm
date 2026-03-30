@@ -5,6 +5,7 @@ SSAnneRooms2F_MapScripts:
 
 	def_callbacks
 
+; trainers
 TrainerGentlemanGregory:
 	trainer GENTLEMAN, GREGORY, EVENT_BEAT_GENTLEMAN_GREGORY, GentlemanGregorySeenText, GentlemanGregoryBeatenText, 0, .Script
 .Script:
@@ -111,6 +112,157 @@ GentlemanWesleyAfterBattleText:
 	line "and rare #MON."
 	done
 
+
+; rematch trainers
+TrainerGentlemanAlfred:
+	trainer GENTLEMAN, ALFRED1, EVENT_BEAT_GENTLEMAN_ALFRED, GentlemanAlfredSeenText, GentlemanAlfredBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext GentlemanAlfredAfterBattleText
+	waitbutton
+	closetext
+	end
+
+GentlemanAlfredSeenText:
+	text "By battling with"
+	line "young trainers, I"
+	cont "keep myself young"
+	roll "at heart!"
+	done
+
+GentlemanAlfredBeatenText:
+	text "Whippersnapper!"
+	done
+
+GentlemanAlfredAfterBattleText:
+	text "Youth is wasted"
+	line "on the young."
+	done
+
+TrainerBeautyAdeline:
+	trainer BEAUTY, ADELINE, EVENT_BEAT_BEAUTY_ADELINE, BeautyAdelineSeenText, BeautyAdelineBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext BeautyAdelineAfterBattleText
+	waitbutton
+	closetext
+	end
+
+BeautyAdelineSeenText:
+	text "I'm trying to"
+	line "forget my woes."
+	cont "Let's battle!"
+	done
+
+BeautyAdelineBeatenText:
+	text "My heart weeps…"
+	done
+
+BeautyAdelineAfterBattleText:
+	text "A voyage is best"
+	line "for getting over"
+	cont "a broken heart."
+	done
+
+TrainerCoolDuoZacAndJen_Zac:
+	trainer COOL_DUO, ZACANDJEN, EVENT_BEAT_COOL_DUO_ZACANDJEN, CoolDuoZacAndJenSeenText, CoolDuoZacAndJenBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext CoolDuoZacAfterBattleText
+	waitbutton
+	closetext
+	end
+
+TrainerCoolDuoZacAndJen_Jen:
+	trainer COOL_DUO, ZACANDJEN, EVENT_BEAT_COOL_DUO_ZACANDJEN, CoolDuoZacAndJenSeenText, CoolDuoZacAndJenBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext CoolDuoJenAfterBattleText
+	waitbutton
+	closetext
+	end
+
+CoolDuoZacAndJenSeenText:
+	text "We have a new"
+	line "strategy that we"
+	cont "are eager to try!"
+	done
+
+CoolDuoZacAndJenBeatenText:
+	text "You're very good!"
+	done
+
+CoolDuoZacAfterBattleText:
+	text "My strategy didn't"
+	line "work, next time we"
+	cont "can try hers."
+	done
+
+CoolDuoJenAfterBattleText:
+	text "His strategy didn't"
+	line "work, next time we"
+	cont "will try mine!"
+	done
+
+TrainerSuperNerdEmmett:
+	trainer SUPER_NERD, EMMETT, EVENT_BEAT_SUPER_NERD_EMMETT, SuperNerdEmmettSeenText, SuperNerdEmmettBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext SuperNerdEmmettAfterBattleText
+	waitbutton
+	closetext
+	end
+
+SuperNerdEmmettSeenText:
+	text "I wish I had"
+	line "something clever"
+	cont "to say before we"
+	roll "battle…"
+	done
+
+SuperNerdEmmettBeatenText:
+	text "I got it!"
+	line "Huh? It's over?"
+	done
+
+SuperNerdEmmettAfterBattleText:
+	text "I'll have a clever"
+	line "intro for my next"
+	cont "battle!"
+	done
+
+TrainerCooltrainerFElla:
+	trainer COOLTRAINERF, ELLA, EVENT_BEAT_COOLTRAINERF_ELLA, CooltrainerFEllaSeenText, CooltrainerFEllaBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext CooltrainerFEllaAfterBattleText
+	waitbutton
+	closetext
+	end
+
+CooltrainerFEllaSeenText:
+	text "Every battle makes"
+	line "me and my #MON"
+	cont "sharper!"
+	done
+
+CooltrainerFEllaBeatenText:
+	text "Thank you."
+	done
+
+CooltrainerFEllaAfterBattleText:
+	text "Win or lose, every"
+	line "battle makes us"
+	cont "stronger!"
+	done
+
+
 ; npc
 SSAnneRooms2FGentleman1Script:
 	faceplayer
@@ -135,12 +287,12 @@ SSAnneRooms2FGentleman1Text:
 	line "like this!"
 	done
 
-SSAnneRooms2FGrampsScript:
-	jumptextfaceplayer SSAnneRooms2FGrampsText
-SSAnneRooms2FGrampsText:
-	text "#MON can CUT"
-	line "down small bushes."
-	done
+;SSAnneRooms2FGrampsScript:
+;	jumptextfaceplayer SSAnneRooms2FGrampsText
+;SSAnneRooms2FGrampsText:
+;	text "#MON can CUT"
+;	line "down small bushes."
+;	done
 
 SSAnneRooms2FGentleman2Script:
 	jumptextfaceplayer SSAnneRooms2FGentleman2Text
@@ -162,9 +314,9 @@ SSAnneRooms2FGentleman3Text:
 	line "kinds of #MON!!"
 	done
 
-SSAnneRooms2FBugCatcherScript:
-	jumptextfaceplayer SSAnneRooms2FBugCatcherText
-SSAnneRooms2FBugCatcherText:
+SSAnneRooms2FBoyScript:
+	jumptextfaceplayer SSAnneRooms2FBoyText
+SSAnneRooms2FBoyText:
 	text "Me and my Daddy"
 	line "think the SAFARI"
 	cont "ZONE is awesome!"
@@ -173,17 +325,17 @@ SSAnneRooms2FBugCatcherText:
 SSAnneRooms2FBeautyScript:
 	jumptextfaceplayer SSAnneRooms2FBeautyText
 SSAnneRooms2FBeautyText:
-	text "I hear many people"
-	line "get seasick!"
-	done
-
-SSAnneRooms2FLassScript:
-	jumptextfaceplayer SSAnneRooms2FLassText
-SSAnneRooms2FLassText:
 	text "The CAPTAIN looked"
 	line "really sick and"
 	cont "pale!"
 	done
+
+;SSAnneRooms2FLassScript:
+;	jumptextfaceplayer SSAnneRooms2FLassText
+;SSAnneRooms2FLassText:
+;	text "I hear many people"
+;	line "get seasick!"
+;	done
 
 ; item balls
 SSAnneRooms2FMaxEther:
@@ -197,33 +349,37 @@ SSAnneRooms2F_MapEvents:
 
 	def_warp_events
 	warp_event  2,  7, SS_ANNE_2F, 4 ; 1
-	warp_event  3,  7, SS_ANNE_2F, 4 ; 2
-	warp_event 12,  7, SS_ANNE_2F, 5 ; 3
-	warp_event 13,  7, SS_ANNE_2F, 5 ; 4
-	warp_event  2, 19, SS_ANNE_2F, 6 ; 5
-	warp_event  3, 19, SS_ANNE_2F, 6 ; 6
-	warp_event 12, 19, SS_ANNE_2F, 7 ; 7
-	warp_event 13, 19, SS_ANNE_2F, 7 ; 8
-	warp_event  2, 31, SS_ANNE_2F, 8 ; 9
-	warp_event  3, 31, SS_ANNE_2F, 8 ; 10
-	warp_event 12, 31, SS_ANNE_2F, 9 ; 11
-	warp_event 13, 31, SS_ANNE_2F, 9 ; 12
+	warp_event  3,  7, SS_ANNE_2F, 4 ;2
+	warp_event 10,  7, SS_ANNE_2F, 5 ; 3
+	warp_event 11,  7, SS_ANNE_2F, 5 ;4
+	warp_event 18,  7, SS_ANNE_2F, 6 ; 5
+	warp_event 19,  7, SS_ANNE_2F, 6 ;6
+	warp_event 26,  7, SS_ANNE_2F, 7 ; 7
+	warp_event 27,  7, SS_ANNE_2F, 7 ;8
+	warp_event 34,  7, SS_ANNE_2F, 8 ; 9
+	warp_event 35,  7, SS_ANNE_2F, 8 ;10
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event  1,  4, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SSAnneRooms2FGentleman1Script, -1
-	object_event 10,  4, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerGentlemanGregory, -1
-	object_event 13,  5, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerFisherJustin, -1
-	object_event  2, 15, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneRooms2FGrampsScript, -1
-	object_event  1, 16, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SSAnneRooms2FGentleman2Script, -1
-	object_event 12, 15, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerLassEllen, -1
-	object_event 10, 18, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerGentlemanWesley, -1
-	object_event  2, 27, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SSAnneRooms2FGentleman3Script, -1
-	object_event  1, 29, SPRITE_BOY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneRooms2FBugCatcherScript, -1
-	object_event 10, 28, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SSAnneRooms2FBeautyScript, -1
-	object_event 12, 28, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SSAnneRooms2FLassScript, -1
-	object_event 12,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SSAnneRooms2FMaxEther, EVENT_SS_ANNE_ROOMS_2F_MAX_ETHER
-	object_event 10, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SSAnneRooms2FRareCandy, EVENT_SS_ANNE_ROOMS_2F_RARE_CANDY
+	object_event  0,  4, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerGentlemanGregory, EVENT_SSANNE_FIRST_VISIT_NPCS
+	object_event  3,  5, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerFisherJustin, EVENT_SSANNE_FIRST_VISIT_NPCS
+	object_event 18,  3, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerLassEllen, EVENT_SSANNE_FIRST_VISIT_NPCS
+	object_event 16,  6, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerGentlemanWesley, EVENT_SSANNE_FIRST_VISIT_NPCS
+;rematch trainers
+	object_event  0,  7, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerGentlemanAlfred, EVENT_SSANNE_TRAINERS_1C
+	object_event 10,  3, SPRITE_BEAUTY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerBeautyAdeline, EVENT_SSANNE_TRAINERS_2C
+	object_event 17,  4, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 0, TrainerCoolDuoZacAndJen_Zac, EVENT_SSANNE_TRAINERS_3C
+	object_event 17,  5, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerCoolDuoZacAndJen_Jen, EVENT_SSANNE_TRAINERS_3C
+	object_event 33,  3, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_TRAINER, 1, TrainerSuperNerdEmmett, EVENT_SSANNE_TRAINERS_3A
+	object_event 33,  5, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerCooltrainerFElla, EVENT_SSANNE_TRAINERS_5C
+; npcs
+	object_event  9,  3, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SSAnneRooms2FGentleman1Script, EVENT_SSANNE_FIRST_VISIT_NPCS
+	object_event  8,  5, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SSAnneRooms2FGentleman2Script, EVENT_SSANNE_FIRST_VISIT_NPCS
+	object_event 26,  3, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SSAnneRooms2FGentleman3Script, EVENT_SSANNE_TRAINERS_4C
+	object_event 25,  5, SPRITE_BOY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneRooms2FBoyScript, EVENT_SSANNE_TRAINERS_4C
+	object_event 32,  4, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SSAnneRooms2FBeautyScript, EVENT_SSANNE_FIRST_VISIT_NPCS
+	object_event  2,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SSAnneRooms2FMaxEther, EVENT_SS_ANNE_ROOMS_2F_MAX_ETHER
+	object_event 16,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SSAnneRooms2FRareCandy, EVENT_SS_ANNE_ROOMS_2F_RARE_CANDY

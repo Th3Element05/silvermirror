@@ -38,6 +38,7 @@ FastShip1FEnterShipScript:
 
 .DoRockets:
 	setscene SCENE_FASTSHIP1F_ROCKETS
+	blackoutmod VERMILION_CITY
 	end
 
 FastShip1FSeeRocketsScript:
@@ -201,13 +202,18 @@ FastShip1FSailor3Script:
 	jumptextfaceplayer FastShip1FSailor3Text
 
 FastShip1FSailor3Text:
-	text "The passengers are"
-	line "all trainers."
-
-	para "They're all itch-"
-	line "ing to battle in"
-	cont "their cabins."
+	text "Most of the other"
+	line "passengers are"
+	cont "trainers."
 	done
+
+;	text "The passengers are"
+;	line "all trainers."
+;
+;	para "They're all itch-"
+;	line "ing to battle in"
+;	cont "their cabins."
+;	done
 
 FastShip1F_SailorStepAsideMovement:
 	slow_step LEFT
@@ -262,18 +268,18 @@ FastShip1F_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 25,  1, FAST_SHIP_1F, -1
-	warp_event 15,  6, FAST_SHIP_CABINS_NORTH, 1
-	warp_event 19,  6, FAST_SHIP_CABINS_NORTH, 2
-	warp_event 23,  6, FAST_SHIP_CABINS_NORTH, 3
-	warp_event 27,  6, FAST_SHIP_CABINS_NORTH, 4
-	warp_event 15, 11, FAST_SHIP_CABINS_SOUTH, 1
-	warp_event 19, 11, FAST_SHIP_CABINS_SOUTH, 2
-	warp_event 23, 11, FAST_SHIP_CABINS_SOUTH, 3
-	warp_event 27, 11, FAST_SHIP_CABINS_SOUTH, 4
-	warp_event 32,  8, FAST_SHIP_B1F, 1
-	warp_event  2,  8, FAST_SHIP_B1F, 2
-	warp_event  5,  7, FAST_SHIP_CAPTAINS_CABIN, 1
+	warp_event 17,  7, FAST_SHIP_1F, -1
+	warp_event  7, 12, FAST_SHIP_CABINS_NORTH, 1
+	warp_event 11, 12, FAST_SHIP_CABINS_NORTH, 2
+	warp_event 15, 12, FAST_SHIP_CABINS_NORTH, 3
+	warp_event 19, 12, FAST_SHIP_CABINS_NORTH, 4
+	warp_event  7, 17, FAST_SHIP_CABINS_SOUTH, 1
+	warp_event 11, 17, FAST_SHIP_CABINS_SOUTH, 2
+	warp_event 15, 17, FAST_SHIP_CABINS_SOUTH, 3
+	warp_event 19, 17, FAST_SHIP_CABINS_SOUTH, 4
+	warp_event 24, 14, FAST_SHIP_B1F, 1
+	warp_event  2,  2, FAST_SHIP_B1F, 2
+	warp_event  5,  1, FAST_SHIP_CAPTAINS_CABIN, 1
 
 	def_coord_events
 ;	coord_event 24,  4, SCENE_FASTSHIP1F_ROCKETS, FastShip1FSeeRocketsSceneLeft
@@ -282,8 +288,8 @@ FastShip1F_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event 25,  2, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FastShip1FExitSailorScript, -1
-	object_event 20,  5, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FAST_SHIP_1F_ROCKETS
-	object_event 20,  4, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FAST_SHIP_1F_ROCKETS
-	object_event 14,  5, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FastShip1FGuideSailorScript, -1
-	object_event 21, 13, SPRITE_SAILOR, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FastShip1FSailor3Script, -1
+	object_event 17,  8, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FastShip1FExitSailorScript, -1
+	object_event 12, 11, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FAST_SHIP_1F_ROCKETS
+	object_event 12, 10, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FAST_SHIP_1F_ROCKETS
+	object_event  6, 11, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FastShip1FGuideSailorScript, -1
+	object_event 13, 19, SPRITE_SAILOR, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FastShip1FSailor3Script, -1

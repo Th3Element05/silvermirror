@@ -269,8 +269,9 @@ DEF KRIS EQU __trainer_class__
 ;	none
 ; johto
 	const TORIN1
-	const JACK1
 	const CHAD1
+	const JACK1
+	const BRAD
 ; rematch
 	const TORIN2
 	const TORIN3
@@ -334,6 +335,7 @@ DEF KRIS EQU __trainer_class__
 	const NORA
 	const CORA
 	const ZOEY
+	const ELENA
 ; johto
 	const CONNIE
 	const HAILEY
@@ -353,8 +355,8 @@ DEF KRIS EQU __trainer_class__
 
 	trainerclass TEACHER ; 24
 ; johto
-	const SHIRLEY
 	const KATE
+	const SHIRLEY
 	const IRENE
 
 	trainerclass COOLTRAINERM ; 25
@@ -369,6 +371,7 @@ DEF KRIS EQU __trainer_class__
 	const LEVI
 	const FINN
 	const FELIX
+	const ANDRE
 ; johto
 	const JAKE
 	const BRIAN
@@ -377,6 +380,7 @@ DEF KRIS EQU __trainer_class__
 	const ZANE
 	const AXEL
 	const MILES
+	const ADAM
 ; reamtch
 	const GAVEN2
 	const GAVEN3
@@ -390,6 +394,8 @@ DEF KRIS EQU __trainer_class__
 	const JOYCE
 	const ANNIE
 	const MIRA
+	const MIA
+	const ELLA
 ; johto
 	const SALMA
 	const LOLA
@@ -414,6 +420,7 @@ DEF KRIS EQU __trainer_class__
 	const JULIA
 	const VALERIE
 	const OLIVIA
+	const ADELINE
 ; johto
 	const CAROL
 	const EMMA
@@ -431,8 +438,9 @@ DEF KRIS EQU __trainer_class__
 	const RON
 	const ETHAN
 	const DONALD
+	const HORTON
 ; johto
-	const ZACH ; unused (route42)
+	const ZACH
 	const MILLER
 	const ROLAND
 	const MAX
@@ -452,9 +460,11 @@ DEF KRIS EQU __trainer_class__
 	const GREGORY
 	const WESLEY
 	const MILTON
-; johto
 	const BLAKE
 	const ALFRED1
+; johto
+	const RICHARD
+	const VICTOR
 ; reamtch
 	const ALFRED2
 	const ALFRED3
@@ -516,6 +526,7 @@ DEF KRIS EQU __trainer_class__
 	const MARTIN
 	const STEPHEN
 	const LUCA
+	const NELSON
 ; johto
 	const BARNEY
 	const WILTON1
@@ -593,9 +604,13 @@ DEF KRIS EQU __trainer_class__
 	const JEFF
 	const GARRETT
 	const KENNETH
+	const JARED
 ; johto
 	const STANLEY
 	const HUEY1
+	const PEDRO
+	const ENZO
+	const LOUIS
 ; rematch
 	const HUEY2
 	const HUEY3
@@ -612,6 +627,7 @@ DEF KRIS EQU __trainer_class__
 	const HUGH
 	const MARKUS
 	const CARY
+	const EMMETT
 ; johto
 	const WALDO
 	const JAMES
@@ -625,7 +641,6 @@ DEF KRIS EQU __trainer_class__
 	const VINCENT
 ; johto
 	const EDGAR
-	const ANDRE
 
 	trainerclass HIKER ; 32
 ; kanto
@@ -680,9 +695,7 @@ DEF KRIS EQU __trainer_class__
 	const EOIN1
 	const NOLAN
 ; johto
-	const RICHARD
-	const VICTOR
-	const PEDRO
+	; none
 ; rematch
 	const REESE2
 	const REESE3
@@ -696,8 +709,8 @@ DEF KRIS EQU __trainer_class__
 	const DUNCAN
 	const EDDIE
 	const COREY
-; johto
 	const BARRY
+; johto
 	const JERRY
 
 	trainerclass FIREBREATHER ; 35
@@ -726,15 +739,10 @@ DEF KRIS EQU __trainer_class__
 	const DARIUS ; cueball
 	const JULIEN ; cueball
 	const MAXIMO ; cueball
-	const HORTON ;unused
-	const ADAM ;unused
-	const AUSTIN ;unused
-	const EMMETT ;unused
 	const DARIO
 	const GILBERT
 ; johto
 	const IRWIN1 ; no rematch
-	const JARED
 	const RODNEY
 
 	trainerclass BLACKBELT_T ; 37
@@ -824,7 +832,6 @@ DEF KRIS EQU __trainer_class__
 	const SPENCER
 	const DILAN
 	const TERRY
-	const NELSON
 ; rematch
 	const TANNER2
 	const TANNER3
@@ -870,16 +877,15 @@ DEF KRIS EQU __trainer_class__
 	const HAZEL
 	const NAOMI
 	const STELLA
+	const CHEL
 ; johto
 	const MINA
 	const LEONA
-	const CHEL
 
 	trainerclass BOARDER ; 3d
 ; johto
 	const RONALD
 	const SHAUN
-	const BRAD
 
 	trainerclass POKEFANM ; 3e
 ; kanto (GAMBLER)
@@ -887,6 +893,7 @@ DEF KRIS EQU __trainer_class__
 	const WILLIAM
 	const ROBERT
 	const JOSHUA
+	const AUSTIN
 ; johto
 	const DEREK1 ; no rematch
 	const COLIN
@@ -896,6 +903,7 @@ DEF KRIS EQU __trainer_class__
 ; kanto (GAMBLER)
 	const BEVERLY1 ; no rematch
 	const GEORGIA
+	const AUDREY
 ; johto
 	const ELEANOR
 	const RUTH
@@ -953,19 +961,20 @@ DEF KRIS EQU __trainer_class__
 	trainerclass COUPLE ; 44
 ; kanto (JR TRAINERs r6)
 	const TIMANDSUE1
+	const VICANDTARA
 ; johto
 	const DUFFANDEDA_DUFF
 	const DUFFANDEDA_EDA
 	const MOEANDLULU
-	const VICANDTARA
 ; rematch
 	const TIMANDSUE2
 	const TIMANDSUE3
 
 	trainerclass COOL_DUO ; 45
+; kanto
+	const ZACANDJEN
 ; johto
 	const THOMANDKAE
-	const ZACANDJEN
 	const ELANANDIDA
 
 	trainerclass RED ; 46

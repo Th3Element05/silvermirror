@@ -74,41 +74,33 @@ VermilionPortTicketSailorScript:
 	waitsfx
 	checkevent EVENT_FAST_SHIP_COMPLETED_FIRST_TRIP
 	iffalse .FirstTime
-	setevent EVENT_FAST_SHIP_PASSENGERS_FIRST_TRIP
-;	clearevent EVENT_BEAT_COOLTRAINERM_SEAN
-;	clearevent EVENT_BEAT_COOLTRAINERF_CAROL
-;	clearevent EVENT_BEAT_GENTLEMAN_EDWARD
-;	clearevent EVENT_BEAT_BEAUTY_CASSIE
-;	clearevent EVENT_BEAT_PSYCHIC_RODNEY
-;	clearevent EVENT_BEAT_SUPER_NERD_SHAWN
-;	clearevent EVENT_BEAT_SAILOR_GARRETT
-;	clearevent EVENT_BEAT_FISHER_JONAH
-;	clearevent EVENT_BEAT_BLACKBELT_WAI
+	scall ResetAndRerollFastShipTrainers
 .FirstTime:
-	clearevent EVENT_FAST_SHIP_PASSENGERS_JOHTOBOUND ;show
-	setevent EVENT_FAST_SHIP_PASSENGERS_KANTOBOUND   ;hide
+	; first trip trainer config are hidden by initevents
 	setevent EVENT_FAST_SHIP_DESTINATION_OLIVINE     ;set / to olivine
 	setmapscene FAST_SHIP_1F, SCENE_FASTSHIP1F_ENTER_SHIP
-	warp FAST_SHIP_1F, 25, 1
+	warp FAST_SHIP_1F, 17, 7
 	end
 
 .AlreadyRodeToday
 	readvar VAR_WEEKDAY
-	ifequal SUNDAY, .NextShipWednesday
-	ifequal MONDAY, .NextShipWednesday
-	ifequal TUESDAY, .NextShipWednesday
-	ifequal WEDNESDAY, .NextShipSunday
-	ifequal THURSDAY, .NextShipSunday
-	ifequal FRIDAY, .NextShipSunday
-	ifequal SATURDAY, .NextShipSunday
-	; else
-	end
-
-.NextShipWednesday
-	jumptextfaceplayer VermilionPortNextShipWednesdayText
-
-.NextShipSunday
+	ifequal SUNDAY, .NextShipTuesday
+	ifequal MONDAY, .NextShipTuesday
+	ifequal TUESDAY, .NextShipThursday
+	ifequal WEDNESDAY, .NextShipThursday
+;	ifequal THURSDAY, .NextShipSunday
+;	ifequal FRIDAY, .NextShipSunday
+;	ifequal SATURDAY, .NextShipSunday
+;	; else
+;	end
+;.NextShipSunday
 	jumptextfaceplayer VermilionPortNextShipSundayText
+
+.NextShipTuesday
+	jumptextfaceplayer VermilionPortNextShipTuesdayText
+
+.NextShipThursday
+	jumptextfaceplayer VermilionPortNextShipThursdayText
 
 .Declined
 	writetext VermilionPortSSAquaScheduleText
@@ -129,14 +121,14 @@ VermilionPortNoTicketText:
 	para "SAILOR: Sorry. I"
 	line "can't let you on"
 	cont "the ship without"
-	cont "an S.S.TICKET."
+	roll "an S.S.TICKET."
 	done
 
 VermilionPortSSAquaScheduleText:
 	text "S.S.AQUA sails to"
-	line "OLIVINE CITY in"
-	cont "JOHTO on SUNDAY"
-	cont "and WEDNESDAY."
+	line "OLIVINE CITY on"
+	cont "SUNDAY, TUESDAY,"
+	roll "and THURSDAY."
 	done
 
 VermilionPortWelcomeToSSAquaText:
@@ -152,7 +144,7 @@ VermilionPortFlashTicketText:
 	para "SAILOR: Would you"
 	line "like to sail to"
 	cont "OLIVINE CITY with"
-	cont "us today?"
+	roll "us today?"
 	done
 
 VermilionPortSailorGetOnBoardText:
@@ -161,16 +153,22 @@ VermilionPortSailorGetOnBoardText:
 	cont "on board."
 	done
 
-VermilionPortNextShipWednesdayText:
-	text "S.S.AQUA's next"
-	line "trip to OLIVINE"
-	cont "is on WEDNESDAY."
+VermilionPortNextShipTuesdayText:
+	text "The S.S.AQUA will"
+	line "sail to OLIVINE"
+	cont "again on TUESDAY."
+	done
+
+VermilionPortNextShipThursdayText:
+	text "The S.S.AQUA will"
+	line "sail to OLIVINE"
+	cont "again on THURSDAY."
 	done
 
 VermilionPortNextShipSundayText:
-	text "S.S.AQUA's next"
-	line "trip to OLIVINE"
-	cont "is on SUNDAY."
+	text "The S.S.AQUA will"
+	line "sail to OLIVINE"
+	cont "again on SUNDAY."
 	done
 
 VermilionPortEnterFastShipMovement:
@@ -186,6 +184,77 @@ VermilionPortTruckText:
 	para "Better leave it"
 	line "alone."
 	done
+
+ResetAndRerollFastShipTrainers:
+;Hide Trainers
+	setevent EVENT_FAST_SHIP_TRAINERS_1A
+	setevent EVENT_FAST_SHIP_TRAINERS_2A
+	setevent EVENT_FAST_SHIP_TRAINERS_3A
+	setevent EVENT_FAST_SHIP_TRAINERS_1B
+	setevent EVENT_FAST_SHIP_TRAINERS_2B
+	setevent EVENT_FAST_SHIP_TRAINERS_3B
+	setevent EVENT_FAST_SHIP_TRAINERS_4B
+	setevent EVENT_FAST_SHIP_B1F_FIELD_TRIP
+	setevent EVENT_FAST_SHIP_B1F_SAILOR_A
+	setevent EVENT_FAST_SHIP_B1F_SAILOR_B
+;Reset Battles
+	clearevent EVENT_BEAT_GENTLEMAN_RICHARD
+	clearevent EVENT_BEAT_TWINS_JOANDZOE
+	clearevent EVENT_BEAT_PICNICKER_ROBIN
+	clearevent EVENT_BEAT_COOL_DUO_ELANANDIDA
+	clearevent EVENT_BEAT_COOLTRAINERM_ADAM
+	clearevent EVENT_BEAT_GUITARIST_EDGAR
+	clearevent EVENT_BEAT_JUGGLER_RODNEY
+	clearevent EVENT_BEAT_GENTLEMAN_VICTOR
+	clearevent EVENT_BEAT_BURGLAR_JERRY
+	clearevent EVENT_BEAT_TEACHER_IRENE
+	clearevent EVENT_BEAT_SCHOOLBOY_BRAD
+	clearevent EVENT_BEAT_SAILOR_ENZO
+	clearevent EVENT_BEAT_SAILOR_LOUIS
+	clearevent EVENT_BEAT_SAILOR_PEDRO
+;Reroll Trainers
+	random 3
+	ifequal 1, .Next0
+	clearevent EVENT_FAST_SHIP_TRAINERS_1A
+.Next0
+	random 3
+	ifequal 1, .Next1
+	clearevent EVENT_FAST_SHIP_TRAINERS_2A
+.Next1
+	random 3
+	ifequal 1, .Next2
+	clearevent EVENT_FAST_SHIP_TRAINERS_3A
+.Next2
+	random 3
+	ifequal 1, .Next3
+	clearevent EVENT_FAST_SHIP_TRAINERS_1B
+.Next3
+	random 3
+	ifequal 1, .Next4
+	clearevent EVENT_FAST_SHIP_TRAINERS_2B
+.Next4
+	random 3
+	ifequal 1, .Next5
+	clearevent EVENT_FAST_SHIP_TRAINERS_3B
+.Next5
+	random 3
+	ifequal 1, .Next6
+	clearevent EVENT_FAST_SHIP_TRAINERS_4B
+.Next6
+	random 3
+	ifequal 1, .Next7
+	clearevent EVENT_FAST_SHIP_B1F_FIELD_TRIP
+.Next7
+	random 3
+	ifequal 1, .Next8
+	clearevent EVENT_FAST_SHIP_B1F_SAILOR_A
+.Next8
+	random 3
+	ifequal 1, .End
+	clearevent EVENT_FAST_SHIP_B1F_SAILOR_B
+.End
+	end
+
 
 VermilionPort_MapEvents:
 	db 0, 0 ; filler
