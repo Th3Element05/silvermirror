@@ -53,17 +53,17 @@ MoveReminder:
 
 .take_mushroom
 	ld a, [wMoveReminderItem]
-	cp BIG_MUSHROOM
-	jr z, .have_big_mushroom
-
-	ld [wCurItem], a
-	ld hl, wNumItems
-	ld a, 2
-	ld [wItemQuantityChange], a
-	call TossItem
-	jr .finish
-
-.have_big_mushroom
+;	cp BIG_MUSHROOM
+;	jr z, .have_big_mushroom
+;
+;	ld [wCurItem], a
+;	ld hl, wNumItems
+;	ld a, 2
+;	ld [wItemQuantityChange], a
+;	call TossItem
+;	jr .finish
+;
+;.have_big_mushroom
 	ld [wCurItem], a
 	ld hl, wNumItems
 	ld a, 1
@@ -318,6 +318,133 @@ ChooseMoveToLearn:
 	cp -1
 	jr z, .cancel_border_fix
 
+.print_move_stat_strings
+	hlcoord 0, 10
+	ld de, MoveTypeTop
+	call PlaceString
+	hlcoord 0, 11
+	ld de, MoveType
+	call PlaceString
+	hlcoord 1, 11
+	ld de, MoveAttack
+	call PlaceString
+	hlcoord 1, 12
+	ld de, MoveAcc
+	call PlaceString
+
+;phys/spec split
+	ld a, [wOptions2]
+	bit PHYS_SPEC_SPLIT, a
+	jr nz, .no_category
+
+; Place Move Cateogry
+;	ld a, [wCurSpecies]
+;	dec a
+	ld a, [wMenuSelection]
+	ld bc, MOVE_LENGTH
+	ld hl, (Moves + MOVE_TYPE) - MOVE_LENGTH
+	call AddNTimes
+	ld a, BANK(Moves)
+	call GetFarByte
+	and ~TYPE_MASK ; Specific to Phys/Spec split
+	swap a ; Specific to Phys/Spec split
+	srl a  ; Specific to Phys/Spec split
+	srl a  ; Specific to Phys/Spec split
+	dec a  ; Specific to Phys/Spec split
+	ld hl, CategoryIconGFX ; ptr to Category GFX loaded from PNG(2bpp)
+	ld bc, 2 tiles
+	call AddNTimes
+	ld d, h
+	ld e, l
+	ld hl, vTiles2 tile $79 ;$59 ; category icon tile slot in VRAM, destination
+	lb bc, BANK(CategoryIconGFX), 2
+	call Request2bpp ; Load 2bpp at b:de to occupy c tiles of hl.
+	hlcoord 17, 12
+	ld a, $79 ;$59 ; category icon tile 1
+	ld [hli], a
+	ld [hl], $7a ;$5a ; category icon tile 2
+
+.no_category
+; Place Move Type
+;	ld a, [wCurSpecies]
+;	dec a
+	ld a, [wMenuSelection]
+;	ld b, a
+	ld bc, MOVE_LENGTH
+	ld hl, (Moves + MOVE_TYPE) - MOVE_LENGTH
+	call AddNTimes
+	ld a, BANK(Moves)
+	call GetFarByte
+	and TYPE_MASK ; Phys/Spec Split specific
+	ld c, a
+	farcall GetMonTypeIndex
+	ld a, c
+; Type Index adjust done
+; Load Type GFX Tiles, color will be in Slot 4 of Palette
+	ld hl, TypeIconGFX ; ptr for PNG w/ black Tiles, since this screen is using Slot 4 in the Palette for Type color
+	ld bc, 4 * LEN_1BPP_TILE ; purely Black and White tiles are 1bpp. Type Tiles are 4 Tiles wide
+	call AddNTimes ; increments pointer based on Type Index
+	ld d, h
+	ld e, l ; de is the source Pointer
+	ld hl, vTiles2 tile $7b ;$5b ; $5b is destination Tile for first Type Tile
+	lb bc, BANK(TypeIconGFX), 4 ; Bank in 'b', num of Tiles to load in 'c'
+	call Request1bpp
+	hlcoord 13, 12
+	ld a, $7b ;$5b ; first Type Tile
+	ld [hli], a
+	inc a ; Tile $5c
+	ld [hli], a
+	inc a ; Tile $5d
+	ld [hli], a
+	ld [hl], $7e ;$5e ; final Type Tile
+
+;.power
+; Print move power
+;	ld a, [wCurSpecies]
+;	dec a
+	ld a, [wMenuSelection]
+	ld bc, MOVE_LENGTH
+	ld hl, (Moves + MOVE_POWER) - MOVE_LENGTH
+	call AddNTimes
+	ld a, BANK(Moves)
+	call GetFarByte
+	hlcoord 5, 11 ;type icons
+	cp 2
+	jr c, .no_power
+	ld [wTextDecimalByte], a
+	ld de, wTextDecimalByte
+	lb bc, 1, 3
+	set 6, b
+	call PrintNum
+	jr .print_move_acc
+.no_power
+	ld de, MoveNoAttack
+	call PlaceString
+
+.print_move_acc
+; Print move accuracy
+;	ld a, [wCurSpecies]
+	ld a, [wMenuSelection]
+	ld bc, MOVE_LENGTH
+	ld hl, (Moves + MOVE_ACC) - MOVE_LENGTH
+	call AddNTimes
+	ld a, BANK(Moves)
+	call GetFarByte
+	cp 101
+	jr c, .no_acc
+	call ConvertPercentages
+	ld [wBuffer1], a
+	ld de, wBuffer1
+	lb bc, 1, 3
+	hlcoord 5, 12 ;type icons
+	set 6, b
+	call PrintNum
+	jr .print_move_desc
+.no_acc
+	hlcoord 5, 12 ;type icons
+	ld de, MoveNoAttack
+	call PlaceString
+
 .print_move_desc
 	push de
 	ld a, [wMenuSelection]
@@ -329,55 +456,69 @@ ChooseMoveToLearn:
 	hlcoord 1, 14
 	predef PrintMoveDescription
 
-.print_move_type
-	ld a, [wCurSpecies]
-	ld b, a
-	hlcoord 2, 12
-	predef PrintMoveType
-
-.print_move_stat_strings
-	hlcoord 0, 10
-	ld de, MoveTypeTop
-	call PlaceString
-	hlcoord 0, 11
-	ld de, MoveType
-	call PlaceString
-	hlcoord 12, 12
-	ld de, MoveAttack
-	call PlaceString
-
-.print_move_attack
-	ld a, [wMenuSelection]
-	ld bc, MOVE_LENGTH
-	ld hl, (Moves + MOVE_POWER) - MOVE_LENGTH
-	call AddNTimes
-	ld a, BANK(Moves)
-	call GetFarByte
-	cp 2
-	jr c, .print_move_no_attack
-	ld [wBuffer1], a
-	ld de, wBuffer1
-	lb bc, 1, 3
-	hlcoord 16, 12
-	jp PrintNum
-
-.print_move_no_attack
-	hlcoord 16, 12
-	ld de, MoveNoAttack
-	ld bc, 3
-	jp PlaceString
+	ld b, SCGB_MOVE_LIST
+	call GetSGBLayout ; reload proper palettes for new Move Type and Category, and apply
+	ld a, $1 ; done editing the screen
+	ldh [hBGMapMode], a
+	ret
 
 MoveTypeTop:
-	db "┌─────┐@"
-
+;	db "┌─────┐@"
+	db "┌───────┐@" ;type icons
 MoveType:
-	db "│TYPE/└@"
-
+;	db "│TYPE/└@"
+	db "│       └@" ;type icons
 MoveAttack:
 	db "ATK/@"
-
+MoveAcc:
+	db "ACC/@"
 MoveNoAttack:
 	db "---@"
+
+;ConvertPercentages2:
+;	; Overwrite the "hl" register.
+;	ld l, a
+;	ld h, 0
+;	push af
+;
+;	; Multiplies the value of the "hl" register by 3.
+;	add hl, hl
+;	add a, l
+;	ld l, a
+;	adc h
+;	sub l
+;	ld h, a
+;
+;	; Multiplies the value of the "hl" register
+;	; by 8. The value of the "hl" register
+;	; is now 24 times its original value.
+;	add hl, hl
+;	add hl, hl
+;	add hl, hl
+;
+;	; Add the original value of the "hl" value to itself,
+;	; making it 25 times its original value.
+;	pop af
+;	add a, l
+;	ld l, a
+;	adc h
+;	sbc l
+;	ld h, a
+;
+;	; Multiply the value of the "hl" register by
+;	; 4, making it 100 times its original value.
+;	add hl, hl
+;	add hl, hl
+;
+;	; Set the "l" register to 0.5, otherwise the rounded
+;	; value may be lower than expected. Round the
+;	; high byte to nearest and drop the low byte.
+;	ld l, 0.5
+;	sla l
+;	sbc a
+;	and 1
+;	add a, h
+;	ret
 
 MoveReminderWhichMonText:
 	text "Which #MON"
@@ -386,7 +527,7 @@ MoveReminderWhichMonText:
 
 MoveReminderWhichMoveText:
 	text "Which move should"
-	line "it remember, then?"
+	line "it remember?"
 	prompt
 
 MoveReminderCancelText:
@@ -416,5 +557,10 @@ MoveReminderNoMovesText:
 MoveReminderMoveLearnedText:
 	text "Done! Your #MON"
 	line "remembered the"
-	cont "move."
+	cont "move!"
+
+	para "<PLAYER> gave one"
+	line "@"
+	text_ram wStringBuffer3
+	text "!"
 	done
