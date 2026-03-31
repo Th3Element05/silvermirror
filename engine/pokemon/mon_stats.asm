@@ -77,6 +77,7 @@ DrawHP:
 ; Print max HP
 	ld de, wTempMonMaxHP
 	lb bc, 2, 3
+	set 6, b
 	call PrintNum
 	pop hl
 	pop de
@@ -292,6 +293,7 @@ ListMovePP:
 	ld [hli], a
 	ld de, wTempPP
 	lb bc, 1, 2
+	set 6, b
 	call PrintNum
 	pop hl
 	ld a, [wListMovesLineSpacing]
