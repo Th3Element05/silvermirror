@@ -250,9 +250,165 @@ TMHM_ShowTMMoveDescription:
 	predef GetTMHMMove
 	ld a, [wTempTMHM]
 	ld [wCurSpecies], a
+
+; Print UI element
+	hlcoord 0, 11
+	ld de, String_TMHMType_Top
+	call PlaceString
+	hlcoord 0, 12
+	ld de, String_TMHMType_Bottom
+	call PlaceString
+	hlcoord 1, 12 ;type icons
+	ld de, String_TMHMAtk
+	call PlaceString
+	hlcoord 1, 13 ;type icons
+	ld de, String_TMHMAcc
+	call PlaceString
+
+;phys/spec split
+	ld a, [wOptions2]
+	bit PHYS_SPEC_SPLIT, a
+	jr nz, .no_category
+
+; Place Move Cateogry
+	ld a, [wCurSpecies]
+	dec a
+	ld hl, Moves + MOVE_TYPE
+	ld bc, MOVE_LENGTH
+	call AddNTimes
+	ld a, BANK(Moves)
+	call GetFarByte
+;	push af ; raw Move Type+category Byte, unmasked
+	and ~TYPE_MASK ; Specific to Phys/Spec split
+	swap a ; Specific to Phys/Spec split
+	srl a  ; Specific to Phys/Spec split
+	srl a  ; Specific to Phys/Spec split
+	dec a  ; Specific to Phys/Spec split
+	ld hl, CategoryIconGFX ; ptr to Category GFX loaded from PNG(2bpp)
+	ld bc, 2 tiles
+	call AddNTimes
+	ld d, h
+	ld e, l
+	ld hl, vTiles2 tile $79 ;$59 ; category icon tile slot in VRAM, destination
+	lb bc, BANK(CategoryIconGFX), 2
+	call Request2bpp ; Load 2bpp at b:de to occupy c tiles of hl.
+	hlcoord 13, 13 ;17, 13
+	ld a, $79 ;$59 ; category icon tile 1
+	ld [hli], a
+	ld [hl], $7a ;$5a ; category icon tile 2
+
+.no_category
+; Place Move Type
+	ld a, [wCurSpecies]
+	dec a
+	ld hl, Moves + MOVE_TYPE
+	ld bc, MOVE_LENGTH
+	call AddNTimes
+	ld a, BANK(Moves)
+	call GetFarByte
+;	pop af ; raw Move Type+category Byte, unmasked
+	and TYPE_MASK ; Phys/Spec Split specific
+	ld c, a
+	farcall GetMonTypeIndex
+	ld a, c
+; Type Index adjust done
+; Load Type GFX Tiles, color will be in Slot 4 of Palette
+	ld hl, TypeIconGFX ; ptr for PNG w/ black Tiles, since this screen is using Slot 4 in the Palette for Type color
+	ld bc, 4 * LEN_1BPP_TILE ; purely Black and White tiles are 1bpp. Type Tiles are 4 Tiles wide
+	call AddNTimes ; increments pointer based on Type Index
+	ld d, h
+	ld e, l ; de is the source Pointer
+	ld hl, vTiles2 tile $7b ;$5b ; $5b is destination Tile for first Type Tile
+	lb bc, BANK(TypeIconGFX), 4 ; Bank in 'b', num of Tiles to load in 'c'
+	call Request1bpp
+
+	hlcoord 15, 13
+;	ld a, [wOptions2]
+;	bit PHYS_SPEC_SPLIT, a
+;	jr nz, .no_cat_shift_type
+;
+;	hlcoord 13, 13
+;.no_cat_shift_type
+	ld a, $7b ;$5b ; first Type Tile
+	ld [hli], a
+	inc a ; Tile $5c
+	ld [hli], a
+	inc a ; Tile $5d
+	ld [hli], a
+	ld [hl], $7e ;$5e ; final Type Tile
+
+;.power
+; Print move power
+	ld a, [wCurSpecies]
+	dec a
+	ld hl, Moves + MOVE_POWER
+	ld bc, MOVE_LENGTH
+	call AddNTimes
+	ld a, BANK(Moves)
+	call GetFarByte
+	hlcoord 5, 12 ;type icons
+	cp 2
+	jr c, .no_power
+	ld [wTextDecimalByte], a
+	ld de, wTextDecimalByte
+	lb bc, 1, 3
+	set 6, b
+	call PrintNum
+	jr .accuracy
+.no_power
+	ld de, String_TMHMNoValue
+	call PlaceString
+
+.accuracy
+; Print move accuracy
+	ld a, [wCurSpecies]
+	ld bc, MOVE_LENGTH
+	ld hl, (Moves + MOVE_ACC) - MOVE_LENGTH
+	call AddNTimes
+	ld a, BANK(Moves)
+	call GetFarByte
+	cp 101
+	jr c, .no_acc
+	call ConvertPercentages
+	ld [wBuffer1], a
+	ld de, wBuffer1
+	lb bc, 1, 3
+	hlcoord 5, 13 ;type icons
+	set 6, b
+	call PrintNum
+	jr .description
+.no_acc
+	hlcoord 5, 13 ;type icons
+	ld de, String_TMHMNoValue
+	call PlaceString
+
+.description
+; Print Move Description
 	hlcoord 1, 14
-	call PrintMoveDescription
+	predef PrintMoveDescription
+
+; Apply Type/Category Icon colors
+	ld b, SCGB_PACKPALS ;SCGB_MOVE_LIST
+	call GetSGBLayout ; reload proper palettes for new Move Type and Category, and apply
+	ld a, $1 ; done editing the screen
+	ldh [hBGMapMode], a
+
+;	hlcoord 1, 14
+;	call PrintMoveDescription
 	jp TMHM_JoypadLoop
+
+; UI elements
+String_TMHMType_Top:
+	db "┌───────┐@" ;type icons
+String_TMHMType_Bottom:
+	db "│       └@" ;type icons
+;	db "│                  │@" ;type icons
+String_TMHMAtk:
+	db "ATK/@"
+String_TMHMAcc:
+	db "ACC/@"
+String_TMHMNoValue:
+	db "---@"
 
 TMHM_ChooseTMorHM:
 	call TMHM_PlaySFX_ReadText2
@@ -334,7 +490,7 @@ TMHM_DisplayPocketItems:
 	jp z, Tutorial_TMHMPocket
 
 	hlcoord 5, 2
-	lb bc, 10, 15
+	lb bc, 9, 15 ;10, 15
 	ld a, " "
 	call ClearBox
 	call TMHM_GetCurrentPocketPosition

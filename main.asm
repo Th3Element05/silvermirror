@@ -146,6 +146,8 @@ INCLUDE "engine/battle/swarm_shiny_alt.asm"
 ;
 INCLUDE "engine/events/move_deleter.asm"
 INCLUDE "engine/events/move_reminder.asm"
+;
+INCLUDE "engine/items/tmhm.asm"
 
 
 SECTION "bankB", ROMX
@@ -156,7 +158,7 @@ INCLUDE "data/trainers/class_names.asm"
 ;INCLUDE "engine/events/move_deleter.asm"  ;moved
 ;INCLUDE "engine/events/move_reminder.asm" ;moved
 ;INCLUDE "engine/link/mystery_gift_2.asm"  ;moved
-INCLUDE "engine/items/tmhm.asm"
+;INCLUDE "engine/items/tmhm.asm"           ;moved
 INCLUDE "engine/pokemon/print_move_description.asm"
 INCLUDE "engine/events/pokerus/pokerus.asm"
 INCLUDE "engine/battle/start_battle.asm"
