@@ -1242,7 +1242,7 @@ Pokedex_DrawSearchScreenBG:
 	db   "@"
 
 .Menu:
-	db   "BEGIN SEARCH!!"
+	db   "BEGIN SEARCH"
 	next "CANCEL"
 	db   "@"
 
