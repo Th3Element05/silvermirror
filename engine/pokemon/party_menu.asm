@@ -210,6 +210,7 @@ PlacePartyMenuHPDigits:
 	inc de
 	inc de
 	lb bc, 2, 3
+	set 6, b
 	call PrintNum
 
 .next
