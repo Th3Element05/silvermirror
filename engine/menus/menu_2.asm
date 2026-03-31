@@ -132,7 +132,7 @@ ShowMoney_TerminatorString:
 	db "@"
 
 StartMenu_DrawSafariZoneStatusBox:
-	hlcoord 0, 2 ;0, 0
+	hlcoord 10, 14 ;0, 2 ;0, 0
 	ld b, 2 ;4
 	ld c, 8
 	jp Textbox
@@ -145,18 +145,18 @@ StartMenu_PrintSafariZoneStatus:
 	call StartMenu_DrawSafariZoneStatusBox
 
 ; balls
-	hlcoord 1, 3 ;1, 4
+	hlcoord 11, 15 ;1, 3 ;1, 4
 	ld de, .balls_remaining
 	call PlaceString
 
 ; balls amount
-	hlcoord 5, 3 ;5, 4
+	hlcoord 15, 15 ;5, 3 ;5, 4
 	ld de, wSafariBallsRemaining
 	lb bc, 1, 4
 	call PrintNum
 
-; time(steps)
-	hlcoord 1, 4 ;1, 1
+; time(label)
+	hlcoord 11, 16 ;1, 4 ;1, 1
 	ld de, .step_remaining
 	call PlaceString
 
@@ -166,7 +166,7 @@ StartMenu_PrintSafariZoneStatus:
 ;	call PlaceString
 
 ; time(steps) amount
-	hlcoord 6, 4 ;1, 2
+	hlcoord 16, 16 ;1, 2
 	ld de, wSafariTimeRemaining
 	lb bc, 2, 3
 	call PrintNum

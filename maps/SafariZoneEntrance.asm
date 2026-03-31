@@ -70,6 +70,7 @@ SafariZoneEntranceMainOfficerScript:
 	setflag ENGINE_SAFARI_ZONE
 	playsound SFX_TRANSACTION
 	takemoney YOUR_MONEY, 500
+	special PlaceMoneyTopRight
 	writetext SafariZoneEntranceMainOfficer_Text3
 	promptbutton
 	writetext SafariZoneEntranceReceivedBalls_Text
