@@ -1310,9 +1310,7 @@ PlaceMoveData:
 	ld hl, vTiles2 tile $79 ;$59 ; category icon tile slot in VRAM, destination
 	lb bc, BANK(CategoryIconGFX), 2
 	call Request2bpp ; Load 2bpp at b:de to occupy c tiles of hl.
-;	hlcoord 7, 13
-;	hlcoord 12, 12
-	hlcoord 17, 12
+	hlcoord 13, 12
 	ld a, $79 ;$59 ; category icon tile 1
 	ld [hli], a
 	ld [hl], $7a ;$5a ; category icon tile 2
@@ -1341,9 +1339,14 @@ PlaceMoveData:
 	ld hl, vTiles2 tile $7b ;$5b ; $5b is destination Tile for first Type Tile
 	lb bc, BANK(TypeIconGFX), 4 ; Bank in 'b', num of Tiles to load in 'c'
 	call Request1bpp
-;	hlcoord 2, 13
-;	hlcoord 15, 12
-	hlcoord 13, 12
+
+	hlcoord 15, 12
+;	ld a, [wOptions2]
+;	bit PHYS_SPEC_SPLIT, a
+;	jr nz, .no_cat_shift_type
+;
+;	hlcoord 13, 12
+;.no_cat_shift_type
 	ld a, $7b ;$5b ; first Type Tile
 	ld [hli], a
 	inc a ; Tile $5c

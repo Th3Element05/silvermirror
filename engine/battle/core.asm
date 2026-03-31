@@ -6079,7 +6079,7 @@ MoveInfoBox:
 	ld hl, vTiles2 tile $79 ;$55 
 	lb bc, BANK(TypeIconGFX), 4 ; bank in 'b', Num of Tiles in 'c'
 	call Request1bpp
-	hlcoord 1, 10 ;4, 11 ; placing the Type Tiles in  the MoveInfoBox
+	hlcoord 1, 10 ; placing the Type Tiles in  the MoveInfoBox
 	ld [hl], $79 ;$55
 	inc hl
 	ld [hl], $7a ;$56
@@ -6112,66 +6112,12 @@ MoveInfoBox:
 	ld hl, vTiles2 tile $7d ;$59
 	lb bc, BANK(CategoryIconGFX), 2 ; bank in 'b', Num of Tiles in 'c'
 	call Request2bpp ; Load 2bpp at b:de to occupy c tiles of hl.
-	hlcoord 5, 10 ;1, 11 ; placing the Category Tiles in the MoveInfoBox
+	hlcoord 5, 10 ; placing the Category Tiles in the MoveInfoBox
 	ld [hl], $7d ;$59
 	inc hl
 	ld [hl], $7e ;$5a
 
 .classic
-
-;;	ld a, [wPlayerMoveStruct + MOVE_ANIM]
-;;	ld b, a
-;;	hlcoord 2, 10
-;;	predef PrintMoveType
-
-;; print move BP (Base Power)
-;	ld de, .power_string ; "BP"
-;	hlcoord 1, 8
-;	call PlaceString
-;
-;	hlcoord 4, 8
-;	ld a, [wPlayerMoveStruct + MOVE_POWER]
-;	and a
-;	jr nz, .haspower
-;	ld de, .nopower_string ; "---"
-;	call PlaceString
-;	jr .print_acc
-;.haspower	
-;	ld [wTextDecimalByte], a
-;	ld de, wTextDecimalByte
-;	lb bc, 1, 3 ; number of bytes this number is in, in 'b', number of possible digits in 'c'
-;	call PrintNum
-	
-;; print move ACC
-;.print_acc
-;	hlcoord 1, 9
-;	ld de, .accuracy_string ; "ACC"
-;	call PlaceString
-;	hlcoord 7, 9
-;	ld [hl], "<%>"
-;	hlcoord 4, 9
-;	ld a, [wPlayerMoveStruct + MOVE_ACC]
-;; convert from hex to decimal
-;; this is the same code used in function "Adjust_Percent" in engine\pokemon\mon_stats.asm
-;	ldh [hMultiplicand], a
-;	ld a, 100
-;	ldh [hMultiplier], a
-;	call Multiply
-;	; Divide hDividend length b (max 4 bytes) by hDivisor. Result in hQuotient.
-;	ld b, 2
-;	ld a, 255
-;	ldh [hDivisor], a
-;	call Divide
-;	ldh a, [hQuotient + 3]
-;	cp 100
-;	jr z, .print_num
-;	inc a
-;.print_num
-;	ld [wTextDecimalByte], a
-;	ld de, wTextDecimalByte
-;	lb bc, 1, 3 ; number of bytes this number is in, in 'b', number of possible digits in 'c'
-;	call PrintNum
-
 	ld b, SCGB_BATTLE_COLORS
 	call GetSGBLayout
 .done

@@ -1442,10 +1442,10 @@ _CGB_PackPals:
 	lb bc, 1, 10
 	ld a, $1
 	call FillBoxCGB
-	hlcoord 10, 0, wAttrmap
-	lb bc, 1, 10
-	ld a, $2
-	call FillBoxCGB
+;	hlcoord 10, 0, wAttrmap
+;	lb bc, 1, 10
+;	ld a, $2
+;	call FillBoxCGB
 	hlcoord 7, 2, wAttrmap
 	lb bc, 9, 1
 	ld a, $3
@@ -1462,7 +1462,69 @@ _CGB_PackPals:
 	call ApplyPals
 	ld a, TRUE
 	ldh [hCGBPalUpdate], a
+;	ret
+
+	ld hl, Moves + MOVE_TYPE
+	ld a, [wCurSpecies]
+	dec a
+	ld bc, MOVE_LENGTH
+	call AddNTimes
+	ld a, BANK(Moves)
+	call GetFarByte
+	and ~TYPE_MASK ; Specific to Phys/Spec split
+	swap a ; Specific to Phys/Spec split
+	srl a  ; Specific to Phys/Spec split
+	srl a  ; Specific to Phys/Spec split
+	dec a  ; Specific to Phys/Spec split
+	add a ; double the index
+	add a ; quadrouple the index
+	; since entries of CategoryIconPals are 4 bytes (2 colors, 2 bytes each) instead of normal 2 bytes (1 color) 
+	ld hl, CategoryIconPals
+	ld c, a
+	ld b, 0
+	add hl, bc
+	ld de, wBGPals1 palette 2 + 2 ; slot 2 of pal 2
+	ld c, 4 ; 2 colors (4 bytes)
+	call LoadCPaletteBytesFromHLIntoDE
+
+	ld hl, Moves + MOVE_TYPE
+	ld a, [wCurSpecies]
+	dec a
+	ld bc, MOVE_LENGTH
+	call AddNTimes
+	ld a, BANK(Moves)
+	call GetFarByte
+	and TYPE_MASK
+	ld c, a ; farcall will clobber a for the bank
+	farcall GetMonTypeIndex
+	ld a, c
+	ld hl, TypeIconPals
+	add a ; double the index, entries of TypeIconPals are 2 bytes (1 color). Same as a list of pointers
+	ld c, a
+	ld b, 0
+	add hl, bc
+	ld de, wBGPals1 palette 2 + 6 ; slot 4 of palette 2
+	ld c, 2 ; 1 color (2 bytes)
+	call LoadCPaletteBytesFromHLIntoDE
+
+; Type and Category tiles
+	hlcoord 11, 13, wAttrmap ;2, 13, wAttrmap
+	ld bc, 8 ; area 1 Tile in HEIGHT, 8 Tiles in WIDTH
+	ld a, $2 ; Palette 2
+	call ByteFill
+	
+; fix left menu arrow, since we dont have left facing arrow
+;	hlcoord 16, 0, wAttrmap
+;	ld bc, 1 ; 1x1 Square
+;	xor a ; pal 0, default palette
+;	set 5, a ; flip on x axis
+;	call ByteFill
+	call ApplyAttrmap
+	call ApplyPals
+	ld a, TRUE
+	ldh [hCGBPalUpdate], a
 	ret
+
 
 .ChrisPackPals:
 INCLUDE "gfx/pack/pack.pal"

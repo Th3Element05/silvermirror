@@ -66,6 +66,7 @@ Pack:
 	ret
 
 .InitItemsPocket:
+	call Pack_ReInitBG
 	xor a ; ITEM_POCKET
 	ld [wCurPocket], a
 	call ClearPocketList
@@ -94,6 +95,7 @@ Pack:
 	ret
 
 .InitKeyItemsPocket:
+	call Pack_ReInitBG
 	ld a, KEY_ITEM_POCKET
 	ld [wCurPocket], a
 	call ClearPocketList
@@ -1441,6 +1443,7 @@ Pack_InitGFX:
 	ld bc, $60 tiles
 	ld a, BANK(PackMenuGFX)
 	call FarCopyBytes
+Pack_ReInitBG:
 ; Background (blue if male, pink if female)
 	hlcoord 0, 1
 	ld bc, 11 * SCREEN_WIDTH
