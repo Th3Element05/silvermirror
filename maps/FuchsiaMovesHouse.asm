@@ -13,8 +13,6 @@ FuchsiaMoveDeleter:
 	closetext
 	end
 
-;HEART_SCALE
-
 FuchsiaMoveReminder:
 	faceplayer
 	opentext
@@ -29,14 +27,15 @@ FuchsiaMoveReminder:
 	end
 
 .have_a_heart_scale:
-	writetext FuchsiaMovesHouse_GiveMeWhatText
-	loadmenu HeartScaleMenuDataHeader
-	verticalmenu
-	closewindow
-	ifequal $1, .HeartScaleChoice
-	jump .refused
-
-.HeartScaleChoice:
+;	writetext FuchsiaMovesHouse_GiveMeWhatText
+;	loadmenu HeartScaleMenuDataHeader
+;	verticalmenu
+;	closewindow
+;	ifequal $1, .HeartScaleChoice
+;	jump .refused
+;
+;.HeartScaleChoice:
+	getitemname STRING_BUFFER_3, HEART_SCALE
 	callasm LoadHeartScale
 	special MoveReminder
 	waitbutton
@@ -54,19 +53,19 @@ LoadHeartScale:
 	ld [wMoveReminderItem], a
 	ret
 
-HeartScaleMenuDataHeader:
-	db $40 ; flags
-	db 05, 00 ; start coords
-	db 11, 18 ; end coords
-	dw .MenuData
-	db 1 ; default option
-
-.MenuData:
-	db $80 ; flags
-	db 2 ; items
-	db "HEART SCALE@"
-;	db "1× BIG MUSHROOM@"
-	db "CANCEL@"
+;HeartScaleMenuDataHeader:
+;	db $40 ; flags
+;	db 05, 00 ; start coords
+;	db 11, 18 ; end coords
+;	dw .MenuData
+;	db 1 ; default option
+;
+;.MenuData:
+;	db $80 ; flags
+;	db 2 ; items
+;	db "HEART SCALE@"
+;;	db "1× BIG MUSHROOM@"
+;	db "CANCEL@"
 
 FuchsiaMovesHouse_MoveReminderIntroText:
 	text "Hi, I'm the"
@@ -75,12 +74,16 @@ FuchsiaMovesHouse_MoveReminderIntroText:
 	para "But I'm also a"
 	line "COLLECTOR."
 
-	para "If you bring me"
-	line "a HEART SCALE…"
+;	para "If you bring me"
+;	line "a HEART SCALE,"
+;	cont "I can help your"
+;	roll "#MON remember"
+;	cont "old moves."
 
-	para "I can make your"
-	line "#MON remember"
-	cont "it's moves."
+	para "If you give me a"
+	line "HEART SCALE, I can"
+	cont "help your #MON"
+	roll "relearn old moves."
 
 	para "Are you"
 	line "interested?"
@@ -99,10 +102,10 @@ FuchsiaMovesHouse_MoveReminderNoScaleText:
 	line "we can talk."
 	done
 
-FuchsiaMovesHouse_GiveMeWhatText:
-	text "What are you going"
-	line "to give me?"
-	done
+;FuchsiaMovesHouse_GiveMeWhatText:
+;	text "What are you going"
+;	line "to give me?"
+;	done
 
 FuchsiaMovesHouseBookshelf:
 	jumpstd DifficultBookshelfScript

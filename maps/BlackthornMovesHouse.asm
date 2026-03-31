@@ -11,6 +11,7 @@ BlackthornMoveDeleter:
 	special MoveDeletion
 	waitbutton
 	closetext
+	giveitem SILVER_LEAF
 	end
 
 BlackthornMoveReminder:
@@ -56,10 +57,12 @@ BlackthornMoveReminder:
 	jump .refused
 
 .SilverLeafChoice:
+	getitemname STRING_BUFFER_3, SILVER_LEAF
 	callasm LoadSilverLeaf
 	sjump .relearn_move
 
 .GoldLeafChoice:
+	getitemname STRING_BUFFER_3, GOLD_LEAF
 	callasm LoadGoldLeaf
 ;fallthrough
 
@@ -87,8 +90,8 @@ LoadGoldLeaf:
 
 GoldLeafMenuDataHeader:
 	db $40 ; flags
-	db 05, 00 ; start coords
-	db 11, 18 ; end coords
+	db 06, 00 ; start coords
+	db 11, 14 ; end coords
 	dw .MenuData
 	db 1 ; default option
 
@@ -101,8 +104,8 @@ GoldLeafMenuDataHeader:
 
 SilverLeafMenuDataHeader:
 	db $40 ; flags
-	db 05, 00 ; start coords
-	db 11, 18 ; end coords
+	db 06, 00 ; start coords
+	db 11, 14 ; end coords
 	dw .MenuData
 	db 1 ; default option
 
@@ -116,7 +119,7 @@ SilverLeafMenuDataHeader:
 BothLeavesMenuDataHeader:
 	db $40 ; flags
 	db 04, 00 ; start coords
-	db 11, 18 ; end coords
+	db 11, 14 ; end coords
 	dw .MenuData
 	db 1 ; default option
 
@@ -145,6 +148,10 @@ BlackthornMovesHouse_MoveReminderIntroText:
 	para "I can make your"
 	line "#MON remember"
 	cont "it's moves."
+
+	para "I could help your"
+	line "#MON remember"
+	cont "its old moves."
 
 	para "Are you"
 	line "interested?"
