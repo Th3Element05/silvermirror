@@ -3,8 +3,6 @@ New TO DO list
 
 TEST
 
-FAKE_OUT
-
 how many walking sprites in SSANNE ROOMS NORTH? (pokefan F)
 
 test entering route 23 and blacking out
@@ -14,7 +12,6 @@ headbutt, forest tree palette too bright
 changed slot machine result bias for normal/lucky
 
 copycat
-safari zone entrance money top right
 
 kurts son
 (can you get out of silph with ESCAPE_ROPE, DIG, or TELEPORT?)
@@ -31,6 +28,14 @@ OftenFleeMons:
 
 
 DO
+
+"BEGIN SEARCH!!" in pokedex
+Move reminder text and "what will you give me?"
+Move reminder doesn't take heart scale when teaching?
+heart scale from rocks odds?
+rocksmash "received" item text
+
+move reminder selection screen needs updated for type/acc
 
 gyroball animation gfx glitch?
 
