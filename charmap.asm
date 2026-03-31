@@ -123,6 +123,8 @@
 	charmap "└",         $be
 	charmap "┘",         $bf
 
+	charmap "<ID#>",     $cc
+	charmap "<#>",       $cd
 	charmap "′",         $ce
 	charmap "″",         $cf
 
