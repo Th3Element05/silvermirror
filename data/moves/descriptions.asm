@@ -941,7 +941,7 @@ EarthquakeDescription:
 
 FissureDescription:
 	db   "A fissure opens to"
-	feed "instantly KO foe."
+	feed "instantly KO foe.@"
 ;	feed "foe if it hits.@"
 ;	db   "A ground-type,"
 ;	next "one-hit KO attack.@"
