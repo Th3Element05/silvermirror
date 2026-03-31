@@ -29,11 +29,9 @@ OftenFleeMons:
 
 DO
 
-"BEGIN SEARCH!!" in pokedex
-Move reminder text and "what will you give me?"
-Move reminder doesn't take heart scale when teaching?
 heart scale from rocks odds?
-rocksmash "received" item text
+rocksmash "received" item text (itemball [tm] says "found")
+
 
 move reminder selection screen needs updated for type/acc
 
