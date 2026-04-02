@@ -148,6 +148,8 @@ GetMonSubmenuItems:
 
 	call IsMonFlyUser
 	call IsMonFlashUser
+	call IsMonDigUser
+	call IsMonTeleportUser
 	call IsMonSweetScentUser
 
 .skip_moves
@@ -381,6 +383,52 @@ IsMonFlashUser:
 	cp NUM_MONMENU_ITEMS - 4
 	jr z, .toomanymoves
 	ld a, MONMENUITEM_FLASH
+	call AddMonMenuItem
+.toomanymoves
+	ret
+
+IsMonDigUser:
+; Check if Mon knows Move (don't add twice)
+	ld a, DIG
+	call CheckMonKnowsMove
+	and a
+	ret z
+
+; Check if Mon can use move
+	ld a, [wCurPartySpecies]
+	ld de, 1
+	ld hl, CanUseDigMons
+	call IsInArray
+	ret nc
+
+; Add move to Mon Menu
+	ld a, [wMonSubmenuCount]
+	cp NUM_MONMENU_ITEMS - 4
+	jr z, .toomanymoves
+	ld a, MONMENUITEM_DIG
+	call AddMonMenuItem
+.toomanymoves
+	ret
+
+IsMonTeleportUser:
+; Check if Mon knows Move (don't add twice)
+	ld a, TELEPORT
+	call CheckMonKnowsMove
+	and a
+	ret z
+
+; Check if Mon can use move
+	ld a, [wCurPartySpecies]
+	ld de, 1
+	ld hl, CanUseTeleportMons
+	call IsInArray
+	ret nc
+
+; Add move to Mon Menu
+	ld a, [wMonSubmenuCount]
+	cp NUM_MONMENU_ITEMS - 4
+	jr z, .toomanymoves
+	ld a, MONMENUITEM_TELEPORT
 	call AddMonMenuItem
 .toomanymoves
 	ret
