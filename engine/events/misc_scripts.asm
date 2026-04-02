@@ -28,7 +28,7 @@ FindItemInBallScript::
 	end
 
 .FoundItemText:
-	text_far _FoundItemText
+	text_far _PlayerFoundItemText ;_FoundItemText
 	text_end
 
 .CantCarryItemText:
