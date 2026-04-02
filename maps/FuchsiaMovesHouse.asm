@@ -98,6 +98,10 @@ FuchsiaMovesHouse_MoveReminderNoScaleText:
 	text "You don't have any"
 	line "HEART SCALEs."
 
+	para "Sometimes you'll"
+	line "find them when"
+	cont "smashing rocks."
+
 	para "Go find some, then"
 	line "we can talk."
 	done
