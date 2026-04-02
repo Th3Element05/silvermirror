@@ -107,7 +107,7 @@ CanUseFlyMons:
 	db LUGIA
 	db HO_OH
 	db HONCHKROW
-	db MISSINGNO
+;	db MISSINGNO
 	db -1
 
 ;CanUseStrengthMons:
@@ -339,6 +339,24 @@ CanUseFlashMons:
 ;	db LEAFEON
 	db -1
 
+CanUseDigMons:
+	db SANDSHREW
+	db SANDSLASH
+	db DIGLETT
+	db DUGTRIO
+	db DUNSPARCE
+	db -1
+
+CanUseTeleportMons:
+	db ABRA
+	db KADABRA
+	db ALAKAZAM
+	db MEWTWO
+	db MEW
+	db NATU
+	db XATU
+	db -1
+
 CanUseSweetScentMons:
 	db BULBASAUR
 	db IVYSAUR
@@ -355,7 +373,7 @@ CanUseSweetScentMons:
 	db BELLSPROUT
 	db WEEPINBELL
 	db VICTREEBEL
-	db TANGELA
+;	db TANGELA
 ;	db JYNX
 ;	db MEW
 	db CHIKORITA
@@ -369,8 +387,8 @@ CanUseSweetScentMons:
 	db JUMPLUFF
 	db SUNKERN
 	db SUNFLORA
-	db PINECO
-	db FORRETRESS
+;	db PINECO
+;	db FORRETRESS
 ;	db MILTANK
 	db CELEBI
 	db -1
