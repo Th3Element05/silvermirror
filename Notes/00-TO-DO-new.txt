@@ -3,11 +3,15 @@ New TO DO list
 
 TEST
 
+headbutt tree items (calculate drop rate) 32/32
+headbutt tree get item?
+headbutt tree shake gfx
+rocksmash "received" item text (itemball [tm] says "found")
+
+goldenrod game corner egg vendor coins text
+game corner prize vendor scripts (all)
+
 how many walking sprites in SSANNE ROOMS NORTH? (pokefan F)
-
-test entering route 23 and blacking out
-
-headbutt, forest tree palette too bright
 
 changed slot machine result bias for normal/lucky
 
@@ -19,7 +23,7 @@ kurts son
 (sneak out either way and test Talk event script anyway)
 
 enter HOF a second time, legitimately
-safari zone after battle/core changes for icon gfx
+safari zone, after battle/core changes for icon gfx
 
 berserk gene after mewtwo battle
 whirl islands
@@ -29,93 +33,21 @@ OftenFleeMons:
 
 DO
 
+get dusk stone from?
+
 heart scale from rocks odds?
-rocksmash "received" item text (itemball [tm] says "found")
-
-
-move reminder selection screen needs updated for type/acc
-
-gyroball animation gfx glitch?
-
-
-SSANNE REMATCHES
-reset ssanne trainers in vermilion city map script
-
-rooms 1f (north)	
-+>; COOLTRAINERM, ANDRE
-+>; GENTLEMAN, BLAKE
-+>; BURGLAR, BARRY
-+>; LASS, ELENA
-+>; POKEFANF, AUDREY
-+>; MEDIUM, CHEL
-
-rooms b1f (south)
-+>; COOLTRAINERF, MIA
-+>; POKEMANIAC, HORTON
-+>; TEACHER, KATE
-+>; POKEFANM, AUSTIN
-+>; COUPLE, VICANDTARA
-
-rooms 2f (uses south)
-+>; COOLTRAINERF, ELLA
-+>; GENTLEMAN, ALFRED1
-+>; BEAUTY, ADELINE
-+>; SUPER_NERD, EMMETT
-+>; COOL_DUO, ZACANDJEN
-
-bow
->; FISHER, NELSON
-add another fisher
->; SAILOR, JARED (two locations)
-
-	dw EVENT_SSANNE_TRAINERS_1A
-;dw EVENT_SSANNE_TRAINERS_2A ;first trip NPCs
-	dw EVENT_SSANNE_TRAINERS_3A
-	dw EVENT_SSANNE_TRAINERS_4A
-	dw EVENT_SSANNE_TRAINERS_5A
-;dw EVENT_SSANNE_TRAINERS_6A
-	dw EVENT_SSANNE_TRAINERS_1B
-	dw EVENT_SSANNE_TRAINERS_2B
-	dw EVENT_SSANNE_TRAINERS_3B
-	dw EVENT_SSANNE_TRAINERS_4B
-;dw EVENT_SSANNE_TRAINERS_5B ;first trip NPCs
-	dw EVENT_SSANNE_TRAINERS_6B
-	dw EVENT_SSANNE_TRAINERS_1C
-	dw EVENT_SSANNE_TRAINERS_2C
-	dw EVENT_SSANNE_TRAINERS_3C
-;dw EVENT_SSANNE_TRAINERS_4C ;first trip NPCs
-	dw EVENT_SSANNE_TRAINERS_5C
-	dw EVENT_SSANNE_TRAINERS_6C
-
-SSAQUA REMATCHES
-NEED NPCS
-ALSO NEED FIRST TRIP TRAINERS?
-
-cabins north (4)
-+>; GENTLEMAN, RICHARD
-+>; TWINS, JOANDZOE
-+>; PICNICKER, ROBIN
-+>; COOL_DUO, ELANANDIDA
-
-cabins south (4)
-+>; COOLTRAINERM, ADAM
-+>; GUITARIST, EDGAR
-+>; JUGGLER, RODNEY
->; GENTLEMAN, VICTOR
->; BURGLAR, JERRY
-
-b1f
-+>; TEACHER, IRENE
-+>; SCHOOLBOY, BRAD
-+>; SAILOR, ENZO
-+>; SAILOR, LOUIS
-
-engine room
-+>; SAILOR, PEDRO
-
 
 
 new evos to johto gym parties? (mamoswine, mismagius?)
+Falkner: Hoothoot and Noctowl
+Bugsy: Metapod/Kakuna, Pineco, Scyther
+Whitney: Snubbull and Miltank
+Morty: Misdreavus, Haunter, Gengar
+Chuck: Heracross and Poliwrath
+Jasmine: Magnemite and Steelix
+Pryce: Swinub, Sneasel and Piloswine
+Clair: Dragonair and Kingdra
+
 
 tohjo falls xp grind area?
 high xp mons:
@@ -125,8 +57,6 @@ high xp mons:
 200 heracross
 200 miltank
 200 pinsir
-
-headbutt, no encounters?
 
 PARTYMENUACTION_EVO_STONE?
 
@@ -141,12 +71,14 @@ sneasel
 gligar
 ~
 ~HOLD-TRADE(ITEM)
-ONIX
-POLIWHIRL
-PORYGON
-SCYTHER
-SEADRA
-SLOWPOKE
+ok	SUN_STONE	GLOOM
+ok	KINGS_ROCK	POLIWHIRL
+ok	KINGS_ROCK	SLOWPOKE
+x	thunderstone	MAGNETON
+ok	METAL_COAT	ONIX
+ok	METAL_COAT	SCYTHER
+ok	DRAGON_SCALE	SEADRA
+
 
 
 reduce long animations? (*magnezone)
