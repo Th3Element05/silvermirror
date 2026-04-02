@@ -141,9 +141,8 @@ BlackthornMovesHouse_MoveReminderIntroText:
 
 	para "If you bring me"
 	line "a GOLD LEAF…"
-
-	para "Or, perhaps a"
-	line "SILVER LEAF…"
+	cont "Or, perhaps a"
+	roll "SILVER LEAF…"
 
 	para "I can make your"
 	line "#MON remember"
@@ -184,8 +183,12 @@ BlackthornMovesHouse_MoveReminderCancelText:
 
 BlackthornMovesHouse_MoveReminderNoLeavesText:
 	text "You don't have any"
-	line "GOLD LEAVES or"
-	cont "SILVER LEAVES."
+	line "SILVER LEAVES or"
+	cont "GOLD LEAVES."
+
+	para "Sometimes they'll"
+	line "fall out of trees"
+	cont "if you shake them."
 
 	para "Go find some, then"
 	line "we can talk."
