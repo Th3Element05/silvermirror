@@ -1,7 +1,7 @@
 DEF CELADONGAMECORNER_CLEFAIRY_COINS     EQU 1000
-DEF CELADONGAMECORNER_DRATINI_COINS      EQU 3000
-DEF CELADONGAMECORNER_CHANSEY_COINS      EQU 5000
-DEF CELADONGAMECORNER_PORYGON_COINS      EQU 7000
+DEF CELADONGAMECORNER_DRATINI_COINS      EQU 2000
+DEF CELADONGAMECORNER_CHANSEY_COINS      EQU 3000
+DEF CELADONGAMECORNER_PORYGON_COINS      EQU 4000
 ;
 DEF CELADONGAMECORNER_ETHER_COINS        EQU 200
 DEF CELADONGAMECORNER_PP_UP_COINS        EQU 300
@@ -13,10 +13,12 @@ DEF CELADONGAMECORNER_THUNDERSTONE_COINS EQU 250
 DEF CELADONGAMECORNER_WATER_STONE_COINS  EQU 250
 DEF CELADONGAMECORNER_LEAF_STONE_COINS   EQU 250
 ;
-DEF CELADONGAMECORNER_KINGS_ROCK_COINS   EQU 1000
-DEF CELADONGAMECORNER_METAL_COAT_COINS   EQU 1000
-DEF CELADONGAMECORNER_DRAGON_SCALE_COINS EQU 1000
-;DEF CELADONGAMECORNER_UP_GRADE_COINS     EQU 1000
+;DEF CELADONGAMECORNER_SUN_STONE_COINS    EQU 1000
+;DEF CELADONGAMECORNER_DUSK_STONE_COINS   EQU 1000
+;DEF CELADONGAMECORNER_KINGS_ROCK_COINS   EQU 1000
+;DEF CELADONGAMECORNER_METAL_COAT_COINS   EQU 1000
+;DEF CELADONGAMECORNER_DRAGON_SCALE_COINS EQU 1000
+;;DEF CELADONGAMECORNER_UP_GRADE_COINS     EQU 1000
 ;50 coins = $1000
 ;500 coins = $10000
 
@@ -121,29 +123,16 @@ CeladonPrizeRoomPokemonVendor:
 
 CeladonPrizeRoomMonVendorMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 2, 19, TEXTBOX_Y - -1
+	menu_coords 0, 2, 19, TEXTBOX_Y ;- -1
 	dw .MenuDataMons
 	db 1 ; default option
 .MenuDataMons:
 	db STATICMENU_CURSOR ; flags
-	db 5 ; items
-	db "CLEFAIRY   {d:CELADONGAMECORNER_CLEFAIRY_COINS}@"
-	db "DRATINI    {d:CELADONGAMECORNER_DRATINI_COINS}@"
-	db "CHANSEY    {d:CELADONGAMECORNER_CHANSEY_COINS}@"
-	db "PORYGON    {d:CELADONGAMECORNER_PORYGON_COINS}@"
-	db "CANCEL@"
-;
-;CeladonPrizeRoomMonVendorMenuHeader:
-;	db MENU_BACKUP_TILES ; flags
-;	menu_coords 0, 2, 17, TEXTBOX_Y - 1
-;	dw .MenuData
-;	db 1 ; default option
-;.MenuData:
-;	db STATICMENU_CURSOR ; flags
-;	db 4 ; items
-;	db "DRATINI    {d:CELADONGAMECORNER_DRATINI_COINS}@"
-;	db "CHANSEY    {d:CELADONGAMECORNER_CHANSEY_COINS}@"
-;	db "PORYGON    {d:CELADONGAMECORNER_PORYGON_COINS}@"
+	db 4 ; items
+	db "CLEFAIRY     {d:CELADONGAMECORNER_CLEFAIRY_COINS}@"
+	db "DRATINI      {d:CELADONGAMECORNER_DRATINI_COINS}@"
+	db "CHANSEY      {d:CELADONGAMECORNER_CHANSEY_COINS}@"
+	db "PORYGON      {d:CELADONGAMECORNER_PORYGON_COINS}@"
 ;	db "CANCEL@"
 
 ; item prize vendor
@@ -212,17 +201,17 @@ CeladonPrizeRoomItemVendorLoop:
 
 CeladonPrizeRoomItemVendorMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 2, 19, TEXTBOX_Y - -1
+	menu_coords 0, 2, 19, TEXTBOX_Y ;- -1
 	dw .MenuDataItems
 	db 1 ; default option
 .MenuDataItems:
 	db STATICMENU_CURSOR ; flags
-	db 5 ; items
-	db "ETHER      {d:CELADONGAMECORNER_ETHER_COINS}@"
-	db "PP UP      {d:CELADONGAMECORNER_PP_UP_COINS}@"
-	db "RARE CANDY {d:CELADONGAMECORNER_RARE_CANDY_COINS}@"
-	db "NUGGET     {d:CELADONGAMECORNER_NUGGET_COINS}@"
-	db "CANCEL@"
+	db 4 ; items
+	db "ETHER        {d:CELADONGAMECORNER_ETHER_COINS}@"
+	db "PP UP        {d:CELADONGAMECORNER_PP_UP_COINS}@"
+	db "RARE CANDY   {d:CELADONGAMECORNER_RARE_CANDY_COINS}@"
+	db "NUGGET       {d:CELADONGAMECORNER_NUGGET_COINS}@"
+;	db "CANCEL@"
 
 ; stone prize vendor
 CeladonPrizeRoomStoneVendor:
@@ -235,7 +224,7 @@ CeladonPrizeRoomStoneVendor:
 	writetext GameCornerPrize_WhichPrizeText
 CeladonPrizeRoomStoneVendorLoop:
 	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
-	iftrue CeladonPrizeRoomEvolveVendorLoop
+	iftrue GoldenrodGameCornerEvolveVendorLoop
 	special DisplayCoinCaseBalance
 	loadmenu CeladonPrizeRoomStoneVendorMenuHeader
 	verticalmenu
@@ -292,94 +281,113 @@ CeladonPrizeRoomStoneVendorLoop:
 
 CeladonPrizeRoomStoneVendorMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 2, 19, TEXTBOX_Y - -1
+	menu_coords 0, 2, 19, TEXTBOX_Y ;- -1
 	dw .MenuDataItems
 	db 1 ; default option
 .MenuDataItems:
 	db STATICMENU_CURSOR ; flags
-	db 5 ; items
+	db 4 ; items
 	db "FIRE STONE   {d:CELADONGAMECORNER_FIRE_STONE_COINS}@"
 	db "THUNDERSTONE {d:CELADONGAMECORNER_THUNDERSTONE_COINS}@"
 	db "WATER STONE  {d:CELADONGAMECORNER_WATER_STONE_COINS}@"
 	db "LEAF STONE   {d:CELADONGAMECORNER_LEAF_STONE_COINS}@"
-	db "CANCEL@"
+;	db "CANCEL@"
 
-;CeladonPrizeRoomEvolveVendor:
-;	faceplayer
-;	opentext
-;	writetext GameCornerPrize_IntroText
-;	waitbutton
-;	checkitem COIN_CASE
-;	iffalse CeladonPrizeRoom_NoCoinCaseScript
-;	writetext GameCornerPrize_WhichPrizeText
-CeladonPrizeRoomEvolveVendorLoop:
-	special DisplayCoinCaseBalance
-	loadmenu CeladonPrizeRoomEvolveVendorMenuHeader
-	verticalmenu
-	closewindow
-	ifequal 1, .KingsRock
-	ifequal 2, .MetalCoat
-	ifequal 3, .DragonScale
-;	ifequal 4, .UpGrade
-	sjump CeladonPrizeRoom_CancelPurchaseScript
-
-.KingsRock:
-	checkcoins CELADONGAMECORNER_KINGS_ROCK_COINS
-	ifequal HAVE_LESS, CeladonPrizeRoom_NotEnoughCoinsScript
-	getitemname STRING_BUFFER_3, KINGS_ROCK
-	scall CeladonPrizeRoom_ConfirmPurchaseScript
-	iffalse CeladonPrizeRoom_CancelPurchaseScript
-	giveitem KINGS_ROCK
-	iffalse CeladonPrizeRoom_NoRoomScript
-	takecoins CELADONGAMECORNER_KINGS_ROCK_COINS
-	sjump CeladonPrizeRoomStoneVendor_FinishScript
-
-.MetalCoat:
-	checkcoins CELADONGAMECORNER_METAL_COAT_COINS
-	ifequal HAVE_LESS, CeladonPrizeRoom_NotEnoughCoinsScript
-	getitemname STRING_BUFFER_3, METAL_COAT
-	scall CeladonPrizeRoom_ConfirmPurchaseScript
-	iffalse CeladonPrizeRoom_CancelPurchaseScript
-	giveitem METAL_COAT
-	iffalse CeladonPrizeRoom_NoRoomScript
-	takecoins CELADONGAMECORNER_METAL_COAT_COINS
-	sjump CeladonPrizeRoomStoneVendor_FinishScript
-
-.DragonScale:
-	checkcoins CELADONGAMECORNER_DRAGON_SCALE_COINS
-	ifequal HAVE_LESS, CeladonPrizeRoom_NotEnoughCoinsScript
-	getitemname STRING_BUFFER_3, DRAGON_SCALE
-	scall CeladonPrizeRoom_ConfirmPurchaseScript
-	iffalse CeladonPrizeRoom_CancelPurchaseScript
-	giveitem DRAGON_SCALE
-	iffalse CeladonPrizeRoom_NoRoomScript
-	takecoins CELADONGAMECORNER_DRAGON_SCALE_COINS
-	sjump CeladonPrizeRoomStoneVendor_FinishScript
-
-;.UpGrade:
-;	checkcoins CELADONGAMECORNER_UP_GRADE_COINS
+;; evolve prize vendor
+;CeladonPrizeRoomEvolveVendorLoop:
+;	writetext GameCornerPrize_WhichPrizeText_Short
+;	special DisplayCoinCaseBalance
+;	loadmenu CeladonPrizeRoomEvolveVendorMenuHeader
+;	verticalmenu
+;	closewindow
+;	ifequal 1, .SunStone
+;	ifequal 2, .DuskStone
+;	ifequal 3, .KingsRock
+;	ifequal 4, .MetalCoat
+;	ifequal 5, .DragonScale
+;	sjump CeladonPrizeRoom_CancelPurchaseScript
+;
+;.SunStone:
+;	checkcoins CELADONGAMECORNER_SUN_STONE_COINS
 ;	ifequal HAVE_LESS, CeladonPrizeRoom_NotEnoughCoinsScript
-;	getitemname STRING_BUFFER_3, UP_GRADE
+;	getitemname STRING_BUFFER_3, SUN_STONE
 ;	scall CeladonPrizeRoom_ConfirmPurchaseScript
 ;	iffalse CeladonPrizeRoom_CancelPurchaseScript
-;	giveitem UP_GRADE
+;	giveitem SUN_STONE
 ;	iffalse CeladonPrizeRoom_NoRoomScript
-;	takecoins CELADONGAMECORNER_UP_GRADE_COINS
+;	takecoins CELADONGAMECORNER_SUN_STONE_COINS
 ;	sjump CeladonPrizeRoomStoneVendor_FinishScript
-
-CeladonPrizeRoomEvolveVendorMenuHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 2, 19, TEXTBOX_Y - -1
-	dw .MenuDataItems
-	db 1 ; default option
-.MenuDataItems:
-	db STATICMENU_CURSOR ; flags
-	db 4 ;5 ; items
-	db "KING's ROCK  {d:CELADONGAMECORNER_KINGS_ROCK_COINS}@"
-	db "METAL COAT   {d:CELADONGAMECORNER_METAL_COAT_COINS}@"
-	db "DRAGON SCALE {d:CELADONGAMECORNER_DRAGON_SCALE_COINS}@"
-;	db "UP-GRADE     {d:CELADONGAMECORNER_UP_GRADE_COINS}@"
-	db "CANCEL@"
+;
+;.DuskStone:
+;	checkcoins CELADONGAMECORNER_DUSK_STONE_COINS
+;	ifequal HAVE_LESS, CeladonPrizeRoom_NotEnoughCoinsScript
+;	getitemname STRING_BUFFER_3, DUSK_STONE
+;	scall CeladonPrizeRoom_ConfirmPurchaseScript
+;	iffalse CeladonPrizeRoom_CancelPurchaseScript
+;	giveitem DUSK_STONE
+;	iffalse CeladonPrizeRoom_NoRoomScript
+;	takecoins CELADONGAMECORNER_DUSK_STONE_COINS
+;	sjump CeladonPrizeRoomStoneVendor_FinishScript
+;
+;.KingsRock:
+;	checkcoins CELADONGAMECORNER_KINGS_ROCK_COINS
+;	ifequal HAVE_LESS, CeladonPrizeRoom_NotEnoughCoinsScript
+;	getitemname STRING_BUFFER_3, KINGS_ROCK
+;	scall CeladonPrizeRoom_ConfirmPurchaseScript
+;	iffalse CeladonPrizeRoom_CancelPurchaseScript
+;	giveitem KINGS_ROCK
+;	iffalse CeladonPrizeRoom_NoRoomScript
+;	takecoins CELADONGAMECORNER_KINGS_ROCK_COINS
+;	sjump CeladonPrizeRoomStoneVendor_FinishScript
+;
+;.MetalCoat:
+;	checkcoins CELADONGAMECORNER_METAL_COAT_COINS
+;	ifequal HAVE_LESS, CeladonPrizeRoom_NotEnoughCoinsScript
+;	getitemname STRING_BUFFER_3, METAL_COAT
+;	scall CeladonPrizeRoom_ConfirmPurchaseScript
+;	iffalse CeladonPrizeRoom_CancelPurchaseScript
+;	giveitem METAL_COAT
+;	iffalse CeladonPrizeRoom_NoRoomScript
+;	takecoins CELADONGAMECORNER_METAL_COAT_COINS
+;	sjump CeladonPrizeRoomStoneVendor_FinishScript
+;
+;.DragonScale:
+;	checkcoins CELADONGAMECORNER_DRAGON_SCALE_COINS
+;	ifequal HAVE_LESS, CeladonPrizeRoom_NotEnoughCoinsScript
+;	getitemname STRING_BUFFER_3, DRAGON_SCALE
+;	scall CeladonPrizeRoom_ConfirmPurchaseScript
+;	iffalse CeladonPrizeRoom_CancelPurchaseScript
+;	giveitem DRAGON_SCALE
+;	iffalse CeladonPrizeRoom_NoRoomScript
+;	takecoins CELADONGAMECORNER_DRAGON_SCALE_COINS
+;	sjump CeladonPrizeRoomStoneVendor_FinishScript
+;
+;;.UpGrade:
+;;	checkcoins CELADONGAMECORNER_UP_GRADE_COINS
+;;	ifequal HAVE_LESS, CeladonPrizeRoom_NotEnoughCoinsScript
+;;	getitemname STRING_BUFFER_3, UP_GRADE
+;;	scall CeladonPrizeRoom_ConfirmPurchaseScript
+;;	iffalse CeladonPrizeRoom_CancelPurchaseScript
+;;	giveitem UP_GRADE
+;;	iffalse CeladonPrizeRoom_NoRoomScript
+;;	takecoins CELADONGAMECORNER_UP_GRADE_COINS
+;;	sjump CeladonPrizeRoomStoneVendor_FinishScript
+;
+;CeladonPrizeRoomEvolveVendorMenuHeader:
+;	db MENU_BACKUP_TILES ; flags
+;	menu_coords 0, 2, 19, TEXTBOX_Y - -2
+;	dw .MenuDataItems
+;	db 1 ; default option
+;.MenuDataItems:
+;	db STATICMENU_CURSOR ; flags
+;	db 5 ; items
+;	db "SUN STONE    {d:CELADONGAMECORNER_SUN_STONE_COINS}@"
+;	db "DUSK STONE   {d:CELADONGAMECORNER_DUSK_STONE_COINS}@"
+;	db "KING's ROCK   {d:CELADONGAMECORNER_KINGS_ROCK_COINS}@"
+;	db "METAL COAT   {d:CELADONGAMECORNER_METAL_COAT_COINS}@"
+;	db "DRAGON SCALE {d:CELADONGAMECORNER_DRAGON_SCALE_COINS}@"
+;;	db "UP-GRADE     {d:CELADONGAMECORNER_UP_GRADE_COINS}@"
+;;	db "CANCEL@"
 
 ; vendor universal scripts
 CeladonPrizeRoomItemVendor_FinishScript:
@@ -426,7 +434,7 @@ CeladonPrizeRoom_NoCoinCaseScript:
 	end
 
 ; vendor texts
-GameCornerPrize_IntroText::
+GameCornerPrize_IntroText:
 	text "Welcome!"
 
 	para "We exchange your"
@@ -434,39 +442,44 @@ GameCornerPrize_IntroText::
 	cont "prizes!"
 	done
 
-GameCornerPrize_WhichPrizeText::
+GameCornerPrize_WhichPrizeText:
 	text "Which prize would"
 	line "you like?"
 	done
 
-GameCornerPrize_NotEnoughCoinsText::
+GameCornerPrize_WhichPrizeText_Short:
+	text " "
+	line "Which prize?"
+	done
+
+GameCornerPrize_NotEnoughCoinsText:
 	text "You don't have"
 	line "enough coins."
 	done
 
-GameCornerPrize_NoRoomText::
+GameCornerPrize_NoRoomText:
 	text "You have no room"
 	line "for it."
 	done
 
-GameCornerPrize_ConfirmPurchaseText::
+GameCornerPrize_ConfirmPurchaseText:
 	text "OK, so you wanted"
 	line "a @"
 	text_ram wStringBuffer3
 	text "?"
 	done
 
-GameCornerPrize_HereYouGoText::
+GameCornerPrize_HereYouGoText:
 	text "Here you go!"
 	done
 
-GameCornerPrize_ComeAgainText::
+GameCornerPrize_ComeAgainText:
 	text "OK. Please save"
 	line "your coins and"
 	cont "come again!"
 	done
 
-GameCornerPrize_NoCoinCaseText::
+GameCornerPrize_NoCoinCaseText:
 	text "Oh? You don't have"
 	line "a COIN CASE."
 	done
@@ -491,16 +504,19 @@ CeladonGameCornerPrizeRoom_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  3,  5, CELADON_CITY, 7
-	warp_event  4,  5, CELADON_CITY, 7
+	warp_event  3,  7, CELADON_CITY, 7
+	warp_event  4,  7, CELADON_CITY, 7
 
 	def_coord_events
 
 	def_bg_events
-	bg_event  2,  1, BGEVENT_READ, CeladonPrizeRoomPokemonVendor
-	bg_event  4,  1, BGEVENT_READ, CeladonPrizeRoomItemVendor
-	bg_event  6,  1, BGEVENT_READ, CeladonPrizeRoomStoneVendor
+;	bg_event  2,  2, BGEVENT_READ, CeladonPrizeRoomPokemonVendor
+;	bg_event  4,  2, BGEVENT_READ, CeladonPrizeRoomItemVendor
+;	bg_event  6,  2, BGEVENT_READ, CeladonPrizeRoomStoneVendor
 
 	def_object_events
-	object_event  0,  2, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeladonPrizeRoomGentlemanScript, -1
-	object_event  6,  4, SPRITE_PHARMACIST, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonPrizeRoomPharmacistScript, -1
+	object_event  2,  2, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonPrizeRoomPokemonVendor, -1
+	object_event  4,  2, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonPrizeRoomItemVendor, -1
+	object_event  6,  2, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonPrizeRoomStoneVendor, -1
+	object_event  0,  4, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeladonPrizeRoomGentlemanScript, -1
+	object_event  6,  6, SPRITE_PHARMACIST, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonPrizeRoomPharmacistScript, -1
