@@ -113,8 +113,8 @@ RockItemEncounter:
 	db 1, NUGGET ;10000
 	db 2, STAR_PIECE ;9800
 	db 4, BIG_PEARL ;7500
-	db 8, GOLD_LEAF ;1000
-	db 8, SILVER_LEAF ;1000
+;	db 8, GOLD_LEAF ;1000
+;	db 8, SILVER_LEAF ;1000
 	db 16, STARDUST ;2000
 	db 24, PEARL ;1400
 	db 64, HEART_SCALE
@@ -131,4 +131,41 @@ RockItemEncounter:
 ;	db 51, SILVER_LEAF ;2000
 ;	db 64, BRICK_PIECE ;50
 ;	db -1
-;
+
+
+TreeItemEncounter:
+	ld hl, .TreeItems
+	call Random
+.loop
+	sub [hl]
+	jr c, .ok
+	inc hl
+	inc hl
+	jr .loop
+
+.ok
+	ld a, [hli]
+	inc a
+	jr z, .done
+	ld a, [hli]
+.done
+	ld [wScriptVar], a
+	ret
+
+.TreeItems:
+	db 64, SILVER_LEAF
+	db 64, GOLD_LEAF
+	db -1
+
+;.TreeItems:
+;	db 1, BLK_APRICORN
+;	db 2, PNK_APRICORN
+;	db 4, YLW_APRICORN
+;	db 6, WHT_APRICORN
+;	db 12, RED_APRICORN
+;	db 18, BLU_APRICORN
+;	db 24, GRN_APRICORN
+;	db 24, SILVER_LEAF
+;	db 48, GOLD_LEAF
+;	db 64, GOLD_LEAF
+;	db -1
