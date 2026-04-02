@@ -242,6 +242,9 @@ FuchsiaCityPokecenterSign:
 FuchsiaCityMartSign:
 	jumpstd MartSignScript
 
+FuchsiaCityRockScript:
+	jumpstd SmashRockScript
+
 FuchsiaCity_MapEvents:
 	db 0, 0 ; filler
 
@@ -283,7 +286,7 @@ FuchsiaCity_MapEvents:
 	def_object_events
 	object_event  6, 10, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, FuchsiaCity_AspearBerry, EVENT_FUCHSIA_CITY_ASPEAR_BERRY
 	object_event  5, 10, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FuchsiaCity_REDApricorn, EVENT_FUCHSIA_CITY_RED_APRICORN
-	object_event 26,  5, SPRITE_DRATINI_MOVE, SPRITEMOVEDATA_WANDER, 3, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, FuchsiaCityPokemon, -1
+	object_event 26,  5, SPRITE_DRATINI_MOVE, SPRITEMOVEDATA_WANDER, 2, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, FuchsiaCityPokemon, -1
 	object_event 12,  5, SPRITE_PINSIR_MOVE, SPRITEMOVEDATA_WANDER, 2, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FuchsiaCityPokemon, -1
 	object_event  6,  5, SPRITE_SCYTHER_MOVE, SPRITEMOVEDATA_WANDER, 2, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, FuchsiaCityPokemon, -1
 	object_event 33,  5, SPRITE_CHANSEY_MOVE, SPRITEMOVEDATA_WANDER, 2, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, FuchsiaCityPokemon, -1
@@ -292,6 +295,8 @@ FuchsiaCity_MapEvents:
 	object_event 10,  9, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FuchsiaCityYoungster, -1
 	object_event 28,  8, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FuchsiaCityErik, -1
 	object_event 19, 18, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FuchsiaCityGramps, -1
+	object_event 11, 33, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FuchsiaCityRockScript, -1
+	object_event  9, 34, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FuchsiaCityRockScript, -1
 
 ;.PinkOverPurpleOBPalette
 ;
