@@ -73,6 +73,7 @@ TreeMonMaps:
 	treemon_map ROUTE_1,                   TREEMON_SET_NORTHERN_KANTO
 	treemon_map VIRIDIAN_CITY,             TREEMON_SET_NORTHERN_KANTO
 	treemon_map ROUTE_2_SOUTH,             TREEMON_SET_NORTHERN_KANTO
+	treemon_map VIRIDIAN_FOREST,           TREEMON_SET_NORTHERN_KANTO
 	treemon_map ROUTE_2_NORTH,             TREEMON_SET_NORTHERN_KANTO
 	treemon_map PEWTER_CITY,               TREEMON_SET_NORTHERN_KANTO
 	treemon_map ROUTE_3,                   TREEMON_SET_NORTHERN_KANTO
