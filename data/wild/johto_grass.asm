@@ -170,8 +170,8 @@ JohtoGrassWildMonsChallenge:
 	db 12, ABRA       ; 10% chance
 	db 14, GROWLITHE  ;  5% chance
 	db 12, JIGGLYPUFF ;  5% chance
-	db 10, DITTO      ;  4% chance
-	db 12, YANMA      ;  1% chance
+	db 12, YANMA      ;  4% chance
+	db 10, DITTO      ;  1% chance
 	; nite
 	db 14, HOOTHOOT   ; 20% chance
 	db 12, DROWZEE    ; 20% chance
@@ -181,8 +181,8 @@ JohtoGrassWildMonsChallenge:
 	db 12, ABRA       ; 10% chance
 	db 14, PSYDUCK    ;  5% chance
 	db 12, JIGGLYPUFF ;  5% chance
-	db 10, DITTO      ;  4% chance
-	db 12, YANMA      ;  1% chance
+	db 12, YANMA      ;  4% chance
+	db 10, DITTO      ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_36
@@ -584,10 +584,10 @@ JohtoGrassWildMonsChallenge:
 	db 14, SUNKERN    ; 10% chance
 	db 15, SUNKERN    ; 10% chance
 	db 13, PIDGEY     ; 10% chance
+	db 14, PIDGEY     ;  5% chance
 	db 15, LEDYBA     ;  5% chance
-	db 10, CATERPIE   ;  5% chance
-	db 10, WEEDLE     ;  4% chance
-	db 11, WEEDLE     ;  1% chance
+	db 10, EEVEE      ;  4% chance
+	db 11, EEVEE      ;  1% chance
 	; nite
 	db 13, HOOTHOOT   ; 20% chance
 	db 14, HOOTHOOT   ; 20% chance
@@ -597,8 +597,8 @@ JohtoGrassWildMonsChallenge:
 	db 15, SPINARAK   ; 10% chance
 	db 14, PSYDUCK    ;  5% chance
 	db 10, VENONAT    ;  5% chance
-	db 11, VENONAT    ;  4% chance
-	db 12, VENONAT    ;  1% chance
+	db 12, VENONAT    ;  4% chance
+	db 10, EEVEE      ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons ILEX_FOREST
@@ -818,16 +818,16 @@ JohtoGrassWildMonsChallenge:
 	db  6, RATTATA    ; 10% chance
 	db  7, RATTATA    ; 10% chance
 	db  8, RATTATA    ; 10% chance
-	db  9, RATTATA    ;  5% chance
+	db  9, GASTLY     ;  5% chance
 	db 20, RATICATE   ;  5% chance
 	db 20, RATICATE   ;  4% chance
 	db 20, RATICATE   ;  1% chance
 	; nite
-	db  3, GASTLY     ; 20% chance
-	db  4, GASTLY     ; 20% chance
-	db  5, GASTLY     ; 15% chance
-	db  6, GASTLY     ; 10% chance
-	db  7, GASTLY     ; 10% chance
+	db  8, GASTLY     ; 20% chance
+	db  9, GASTLY     ; 20% chance
+	db 10, GASTLY     ; 15% chance
+	db 11, MISDREAVUS ; 10% chance
+	db 12, MISDREAVUS ; 10% chance
 	db  8, RATTATA    ; 10% chance
 	db  9, RATTATA    ;  5% chance
 	db 20, RATICATE   ;  5% chance
