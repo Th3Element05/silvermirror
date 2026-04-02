@@ -60,7 +60,7 @@ RockMonEncounter:
 	xor a
 	ret
 
-	db $05 ; ????
+;	db $05 ; ????
 
 GetTreeMonSet:
 ; Return carry and treemon set in a
@@ -142,10 +142,10 @@ GetTreeMon:
 	ret
 
 .bad
-	; 10% chance of an encounter
 	ld a, 10
 	call RandomRange
-	and a
+;	and a ; 10% chance of an encounter
+	cp 2 ; 20% chance of an encounter
 	jr nz, NoTreeMon
 	jr SelectTreeMon
 

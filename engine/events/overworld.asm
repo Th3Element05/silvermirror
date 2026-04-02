@@ -105,6 +105,116 @@ CheckPartyMove:
 	scf
 	ret
 
+
+CheckPartyCanLearnMove:
+; CHECK IF MONSTER IN PARTY CAN LEARN MOVE D
+	ld e, 0
+	xor a
+	ld [wCurPartyMon], a
+.loop
+	ld c, e
+	ld b, 0
+	ld hl, wPartySpecies
+	add hl, bc
+	ld a, [hl]
+	and a
+	jr z, .no
+	cp -1
+	jr z, .no
+	cp EGG
+	jr z, .next
+
+	ld [wCurPartySpecies], a
+	ld a, d
+; Check the TM/HM/Move Tutor list
+	ld [wPutativeTMHMMove], a
+	push de
+	farcall CanLearnTMHMMove
+	pop de
+.check
+	ld a, c
+	and a
+	jr nz, .yes
+; Check the Pokemon's Level-Up Learnset
+	ld b,b
+	ld a, d
+	push de
+	call OW_CheckLvlUpMoves
+	pop de
+	jr nc, .yes
+; done checking
+
+.next
+	inc e
+	jr .loop
+
+.yes
+	ld a, e
+	; which mon can learn the move
+	ld [wCurPartyMon], a
+	xor a
+	ret
+.no
+	ld a, 1
+	ret
+
+OW_CheckLvlUpMoves:
+; move looking for in a
+	ld d, a
+	ld a, [wCurPartySpecies]
+	dec a
+	ld b, 0
+	ld c, a
+	ld hl, EvosAttacksPointers
+	add hl, bc
+	add hl, bc
+	ld a, BANK(EvosAttacksPointers)
+	ld b, a
+	call GetFarWord
+	ld a, b
+	call GetFarByte
+	inc hl
+	and a
+	jr z, .find_move ; no evolutions
+	dec hl ; does have evolution(s)
+	call OW_SkipEvolutions
+.find_move
+	call OW_GetNextEvoAttackByte
+	and a
+	jr z, .notfound ; end of mon's lvl up learnset
+	call OW_GetNextEvoAttackByte
+	cp d
+	jr z, .found
+	jr .find_move
+.found
+	xor a
+	ret ; move is in lvl up learnset
+.notfound
+	scf ; move isnt in lvl up learnset
+	ret
+
+OW_SkipEvolutions:
+; Receives a pointer to the evos and attacks, and skips to the attacks.
+	ld a, b
+	call GetFarByte
+	inc hl
+	and a
+	ret z
+	cp EVOLVE_STAT
+	jr nz, .no_extra_skip
+	inc hl
+.no_extra_skip
+	inc hl
+	inc hl
+	jr OW_SkipEvolutions
+
+OW_GetNextEvoAttackByte:
+	ld a, BANK(EvosAttacksPointers)
+	call GetFarByte
+	inc hl
+	ret
+
+
 FieldMoveFailed:
 	ld hl, .CantUseItemText
 	call MenuTextboxBackup
@@ -1279,11 +1389,34 @@ HeadbuttScript:
 	callasm ShakeHeadbuttTree
 
 	callasm TreeMonEncounter
-	iffalse .no_battle
+;	iffalse .no_battle
+	iffalse .try_tree_item
 	closetext
 	randomwildmon
 	startbattle
 	reloadmapafterbattle
+	end
+
+.try_tree_item
+	callasm TreeItemEncounter
+	iffalse .no_battle
+	getitemname STRING_BUFFER_3, USE_SCRIPT_VAR
+	opentext
+;	verbosegiveitem ITEM_FROM_MEM
+	farwritetext _PlayerFoundItemText
+	giveitem ITEM_FROM_MEM
+	iffalse .bag_full
+	playsound SFX_ITEM
+	waitsfx
+	waitbutton
+	closetext
+	end
+
+.bag_full
+	promptbutton
+	farwritetext _ButNoSpaceText
+	waitbutton
+	closetext
 	end
 
 .no_battle
@@ -1293,10 +1426,38 @@ HeadbuttScript:
 	end
 
 TryHeadbuttOW::
+;	ld d, HEADBUTT
+;	call CheckPartyMove
+;	jr c, .no
+;
+;	ld a, BANK(AskHeadbuttScript)
+;	ld hl, AskHeadbuttScript
+;	call CallScript
+;	scf
+;	ret
+;
+;.no
+;	xor a
+;	ret
+
+; Step 1: Obtained TM_HEADBUTT?
+	ld a, TM_HEADBUTT
+	ld [wCurItem], a
+	ld hl, wNumItems
+	call CheckItem
+	jr z, .no
+
+; Step 2: Can party mon learn HEADBUTT?
+	ld d, HEADBUTT
+	call CheckPartyCanLearnMove
+	and a
+	jr z, .can_use ; cannot learn headbutt
+
+; Step 3: Does party mon already know HEADBUTT?
 	ld d, HEADBUTT
 	call CheckPartyMove
 	jr c, .no
-
+.can_use
 	ld a, BANK(AskHeadbuttScript)
 	ld hl, AskHeadbuttScript
 	call CallScript
@@ -1391,10 +1552,24 @@ RockSmashScript:
 .no_battle
 	callasm RockItemEncounter
 	iffalse .no_item
+	getitemname STRING_BUFFER_3, USE_SCRIPT_VAR
 	opentext
-	verbosegiveitem ITEM_FROM_MEM
+;	verbosegiveitem ITEM_FROM_MEM
+	farwritetext _PlayerFoundItemText
+	giveitem ITEM_FROM_MEM
+	iffalse .bag_full
+	playsound SFX_ITEM
+	waitsfx
+	waitbutton
 	closetext
 .no_item
+	end
+
+.bag_full
+	promptbutton
+	farwritetext _ButNoSpaceText
+	waitbutton
+	closetext
 	end
 
 MovementData_RockSmash:
