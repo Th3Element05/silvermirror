@@ -178,7 +178,8 @@
 	tilecoll WATER, FLOOR, WATER, FLOOR ; b1
 	tilecoll FLOOR, FLOOR, WATER, WATER ; b2
 	tilecoll FLOOR, WATER, FLOOR, WATER ; b3
-	tilecoll FLOOR, FLOOR, WALL, WALL ; b4
-	tilecoll FLOOR, WALL, FLOOR, FLOOR ; b5
-	tilecoll WALL, WALL, FLOOR, FLOOR ; b6
-	tilecoll WATER, WATER, BUOY, BUOY ; b7
+	tilecoll HOP_DOWN, HOP_DOWN, WALL, WALL ; b4
+	tilecoll HOP_DOWN, HOP_DOWN, WALL, WALL ; b5
+	tilecoll HOP_DOWN, HOP_DOWN, WALL, WALL ; b6
+	tilecoll HOP_DOWN, HOP_DOWN, WALL, WALL ; b7
+	tilecoll FLOOR, FLOOR, WALL, WALL ; b8
