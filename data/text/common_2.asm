@@ -532,12 +532,12 @@ _CanCutText::
 	line "be CUT!"
 	done
 
-_FoundItemText::
-	text "<PLAYER> found"
-	line "@"
-	text_ram wStringBuffer3
-	text "!"
-	done
+;_FoundItemText:: ; unreferenced ; redundant to _PlayerFoundItemText:: (in common_1.asm)
+;	text "<PLAYER> found"
+;	line "@"
+;	text_ram wStringBuffer3
+;	text "!"
+;	done
 
 _CantCarryItemText::
 	text "But <PLAYER> can't"
