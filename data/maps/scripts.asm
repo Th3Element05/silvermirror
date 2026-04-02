@@ -190,7 +190,7 @@ INCLUDE "maps/CeladonHotel.asm"
 SECTION "Map Scripts 16", ROMX
 
 INCLUDE "maps/CeladonGameCorner.asm"
-INCLUDE "maps/CeladonGameCornerPrizeRoom.asm"
+;INCLUDE "maps/CeladonGameCornerPrizeRoom.asm" ;moved to Goldenrod SECTION for script overlap
 INCLUDE "maps/RocketHideoutB1F.asm"
 INCLUDE "maps/RocketHideoutB2F.asm"
 INCLUDE "maps/RocketHideoutB3F.asm"
@@ -451,6 +451,7 @@ INCLUDE "maps/GoldenrodHappinessRater.asm"
 INCLUDE "maps/BillsFamilysHouse.asm"
 INCLUDE "maps/GoldenrodFlowerShop.asm"
 INCLUDE "maps/GoldenrodPPSpeechHouse.asm"
+INCLUDE "maps/CeladonGameCornerPrizeRoom.asm"
 
 
 SECTION "Map Scripts 35", ROMX
