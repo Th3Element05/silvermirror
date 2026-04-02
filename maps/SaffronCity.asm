@@ -255,21 +255,22 @@ SaffronCityGentlemanText:
 	cont "ROCKETs at SILPH!"
 
 	para "It's already over?"
-	line "I missed the"
-	cont "media action."
+
+	para "I missed all the"
+	line "excitement!"
 	done
 
-SaffronCityPidgeot:
-	opentext
-	writetext SaffronCityPidgeotText
-	cry PIDGEOT
-	waitbutton
-	closetext
-	end
-
-SaffronCityPidgeotText:
-	text "PIDGEOT: Bi bibii!"
-	done
+;SaffronCityPidgeot:
+;	opentext
+;	writetext SaffronCityPidgeotText
+;	cry PIDGEOT
+;	waitbutton
+;	closetext
+;	end
+;
+;SaffronCityPidgeotText:
+;	text "PIDGEOT: Bi bibii!"
+;	done
 
 ; signs
 SaffronCitySign:
@@ -392,6 +393,6 @@ SaffronCity_MapEvents:
 	object_event 11, 14, SPRITE_SCIENTIST, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronCityCivilianScript, EVENT_SAFFRON_CITY_CIVILIANS
 	object_event 20,  8, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SaffronCityCivilianScript, EVENT_SAFFRON_CITY_CIVILIANS
 	object_event 35, 13, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronCityGentleman, EVENT_SAFFRON_CITY_CIVILIANS
-	object_event 35, 13, SPRITE_PIDGEOT, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SaffronCityPidgeot, EVENT_SAFFRON_CITY_CIVILIANS
+;	object_event 35, 13, SPRITE_PIDGEOT, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SaffronCityPidgeot, EVENT_SAFFRON_CITY_CIVILIANS
 ;
 ;	17 max map objects

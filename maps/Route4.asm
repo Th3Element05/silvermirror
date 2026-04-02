@@ -47,6 +47,63 @@ LassAliceAfterBattleText:
 	line "them all."
 	done
 
+
+Route4HeadbuttGuy:
+	checkevent EVENT_GOT_TM56_HEADBUTT
+	iftrue .AfterGotHeadbutt
+	opentext
+	writetext Route4HeadbuttGuyOuchText
+	promptbutton
+	closetext
+	faceplayer
+	opentext
+	writetext Route4HeadbuttGuyIntroText
+	promptbutton
+	verbosegiveitem TM_HEADBUTT
+	writetext Route4HeadbuttGuyOutroText
+	waitbutton
+	closetext
+	setevent EVENT_GOT_TM56_HEADBUTT
+	end
+
+.AfterGotHeadbutt
+	jumptextfaceplayer Route4HeadbuttGuyAfterText
+
+Route4HeadbuttGuyOuchText:
+	text "Ow!"
+	done
+
+Route4HeadbuttGuyIntroText:
+	text "This rock is"
+	line "blocking the path."
+
+	para "I tried to smash"
+	line "it with HEADBUTT,"
+	cont "but I just hurt"
+	roll "myself…"
+
+	para "HEADBUTT works"
+	line "better on trees,"
+	cont "why don't you try"
+	roll "it!"
+	done
+
+Route4HeadbuttGuyOutroText:
+	text "Some of your #-"
+	line "MON should be able"
+	cont "to HEADBUTT trees,"
+	roll "even if they don't"
+	cont "know the attack."
+
+Route4HeadbuttGuyAfterText:
+	text "I have a headache…"
+
+	para "Don't use HEADBUTT"
+	line "on rocks, your"
+	cont "#MON will hurt"
+	roll "themselves."
+	done
+
 Route4Sign:
 	jumptext Route4SignText
 Route4SignText:
@@ -82,8 +139,9 @@ Route4_MapEvents:
 	def_object_events
 	object_event 64,  4, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0,ObjectEvent, EVENT_BEAT_ELITE_FOUR
 	object_event 37,  3, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerLassAlice, -1
+	object_event 51, 10, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, Route4HeadbuttGuy, EVENT_GOT_TM56_HEADBUTT
 	object_event 31,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, Route4TMFalseSwipe, EVENT_ROUTE_4_TM_FALSE_SWIPE
-	object_event 50,  9, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route4Rock, -1
+	object_event 51,  9, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route4Rock, -1
 	object_event 48,  5, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route4Rock, -1
 	object_event 51,  2, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route4Rock, -1
 	object_event 12,  2, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route4Rock, -1
