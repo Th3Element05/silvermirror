@@ -823,8 +823,8 @@ SwarmGrassWildMons:
 	db 12, SNUBBULL   ; 10% chance
 	db 13, SNUBBULL   ;  5% chance
 	db 12, JIGGLYPUFF ;  5% chance
-	db 10, DITTO      ;  4% chance
-	db 12, YANMA      ;  1% chance
+	db 12, YANMA      ;  4% chance
+	db 10, DITTO      ;  1% chance
 	; nite
 	db 12, YANMA      ; 20% chance
 	db 12, YANMA      ; 20% chance
@@ -834,8 +834,8 @@ SwarmGrassWildMons:
 	db 12, DROWZEE    ; 10% chance
 	db 13, DROWZEE    ;  5% chance
 	db 12, JIGGLYPUFF ;  5% chance
-	db 10, DITTO      ;  4% chance
-	db 12, YANMA      ;  1% chance
+	db 12, YANMA      ;  4% chance
+	db 10, DITTO      ;  1% chance
 
 	; STANTLER
 	def_grass_wildmons ROUTE_37
