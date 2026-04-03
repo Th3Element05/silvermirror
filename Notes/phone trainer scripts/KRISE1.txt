@@ -1,0 +1,101 @@
+KRISE1
+
+;TrainerLassKrise:
+;	trainer LASS, KRISE1, EVENT_BEAT_LASS_KRISE, LassKriseSeenText, LassKriseBeatenText, 0, .Script
+;.Script:
+;	loadvar VAR_CALLERID, PHONE_LASS_KRISE
+;	opentext
+;	checkflag ENGINE_KRISE_READY_FOR_REMATCH
+;	iftrue .Rematch
+;	checkcellnum PHONE_LASS_KRISE
+;	iftrue .KriseDefeated
+;	checkevent EVENT_KRISE_ASKED_FOR_PHONE_NUMBER
+;	iftrue .AskAgain
+;	writetext LassKriseAfterBattleText
+;	promptbutton
+;	setevent EVENT_KRISE_ASKED_FOR_PHONE_NUMBER
+;	scall NationalParkAskNumber1F
+;	sjump .RequestNumber
+;
+;.AskAgain:
+;	scall NationalParkAskNumber2F
+;.RequestNumber:
+;	askforphonenumber PHONE_LASS_KRISE
+;	ifequal PHONE_CONTACTS_FULL, NationalParkPhoneFullF
+;	ifequal PHONE_CONTACT_REFUSED, NationalParkNumberDeclinedF
+;	gettrainername STRING_BUFFER_3, LASS, KRISE1
+;	scall NationalParkRegisteredNumberF
+;	sjump NationalParkNumberAcceptedF
+
+;.Rematch:
+;	scall .RematchStd
+;	winlosstext LassKriseBeatenText, 0
+;	checkevent EVENT_RESTORED_POWER_TO_KANTO
+;	iftrue .LoadFight4
+;	checkevent EVENT_BEAT_ELITE_FOUR
+;	iftrue .LoadFight3
+;	checkevent EVENT_CLEARED_RADIO_TOWER
+;	iftrue .LoadFight2
+;	checkflag ENGINE_FLYPOINT_OLIVINE
+;	iftrue .LoadFight1
+;	loadtrainer LASS, KRISE1
+;	startbattle
+;	reloadmapafterbattle
+;	clearflag ENGINE_KRISE_READY_FOR_REMATCH
+;	end
+
+;.LoadFight1:
+;	loadtrainer LASS, KRISE2
+;	startbattle
+;	reloadmapafterbattle
+;	clearflag ENGINE_KRISE_READY_FOR_REMATCH
+;	end
+
+;.LoadFight2:
+;	loadtrainer LASS, KRISE3
+;	startbattle
+;	reloadmapafterbattle
+;	clearflag ENGINE_KRISE_READY_FOR_REMATCH
+;	end
+
+;.LoadFight3:
+;	loadtrainer LASS, KRISE4
+;	startbattle
+;	reloadmapafterbattle
+;	clearflag ENGINE_KRISE_READY_FOR_REMATCH
+;	end
+
+;.LoadFight4:
+;	loadtrainer LASS, KRISE5
+;	startbattle
+;	reloadmapafterbattle
+;	clearflag ENGINE_KRISE_READY_FOR_REMATCH
+;	end
+
+;.RematchStd:
+;	jumpstd RematchFScript
+;	end
+
+;.KriseDefeated:
+;	writetext LassKriseAfterBattleText
+;	promptbutton
+;	closetext
+;	end
+
+
+;LassKriseSeenText:
+;	text "Hello? Why are you"
+;	line "staring at me?"
+;
+;	para "Oh, a battle?"
+;	done
+;
+;LassKriseBeatenText:
+;	text "…Hmmm…"
+;	done
+;
+;LassKriseAfterBattleText:
+;	text "I thought you were"
+;	line "staring at me"
+;	cont "because I'm cute!"
+;	done

@@ -1,0 +1,114 @@
+JACK1
+
+;TrainerSchoolboyJack1:
+;	trainer SCHOOLBOY, JACK1, EVENT_BEAT_SCHOOLBOY_JACK, SchoolboyJack1SeenText, SchoolboyJack1BeatenText, 0, .Script
+
+;.Script:
+;	loadvar VAR_CALLERID, PHONE_SCHOOLBOY_JACK
+;	opentext
+;	checkflag ENGINE_JACK_READY_FOR_REMATCH
+;	iftrue .Rematch
+;	checkcellnum PHONE_SCHOOLBOY_JACK
+;	iftrue .JackDefeated
+;	checkevent EVENT_JACK_ASKED_FOR_PHONE_NUMBER
+;	iftrue .AskAgain
+;	writetext SchoolboyJackTradeMonText
+;	promptbutton
+;	setevent EVENT_JACK_ASKED_FOR_PHONE_NUMBER
+;	scall NationalParkAskNumber1M
+;	sjump .RequestNumber
+
+;.AskAgain:
+;	scall NationalParkAskNumber2M
+;.RequestNumber:
+;	askforphonenumber PHONE_SCHOOLBOY_JACK
+;	ifequal PHONE_CONTACTS_FULL, NationalParkPhoneFullM
+;	ifequal PHONE_CONTACT_REFUSED, NationalParkNumberDeclinedM
+;	gettrainername STRING_BUFFER_3, SCHOOLBOY, JACK1
+;	scall NationalParkRegisteredNumberM
+;	sjump NationalParkNumberAcceptedM
+
+;.Rematch:
+;	scall .RematchStd
+;	winlosstext SchoolboyJack1BeatenText, 0
+;	checkevent EVENT_RESTORED_POWER_TO_KANTO
+;	iftrue .LoadFight4
+;	checkevent EVENT_BEAT_ELITE_FOUR
+;	iftrue .LoadFight3
+;	checkevent EVENT_CLEARED_RADIO_TOWER
+;	iftrue .LoadFight2
+;	checkflag ENGINE_FLYPOINT_OLIVINE
+;	iftrue .LoadFight1
+;	loadtrainer SCHOOLBOY, JACK1
+;	startbattle
+;	reloadmapafterbattle
+;	clearflag ENGINE_JACK_READY_FOR_REMATCH
+;	end
+
+;.LoadFight1:
+;	loadtrainer SCHOOLBOY, JACK2
+;	startbattle
+;	reloadmapafterbattle
+;	clearflag ENGINE_JACK_READY_FOR_REMATCH
+;	end
+
+;.LoadFight2:
+;	loadtrainer SCHOOLBOY, JACK3
+;	startbattle
+;	reloadmapafterbattle
+;	clearflag ENGINE_JACK_READY_FOR_REMATCH
+;	end
+
+;.LoadFight3:
+;	loadtrainer SCHOOLBOY, JACK4
+;	startbattle
+;	reloadmapafterbattle
+;	clearflag ENGINE_JACK_READY_FOR_REMATCH
+;	end
+
+;.LoadFight4:
+;	loadtrainer SCHOOLBOY, JACK5
+;	startbattle
+;	reloadmapafterbattle
+;	clearflag ENGINE_JACK_READY_FOR_REMATCH
+;	end
+
+;.JackDefeated:
+;	writetext SchoolboyJackTradeMonText
+;	promptbutton
+;	closetext
+;	end
+
+;.RematchStd:
+;	jumpstd RematchMScript
+;	end
+
+
+;SchoolboyJack1SeenText:
+;	text "The world of"
+;	line "#MON is deep."
+;
+;	para "There are still"
+;	line "lots of things we"
+;	cont "don't know."
+;
+;	para "But I know more"
+;	line "than you do!"
+;	done
+;
+;SchoolboyJack1BeatenText:
+;	text "Wha-wha-what?"
+;	done
+;
+;SchoolboyJackTradeMonText:
+;	text "There is a lot"
+;	line "to learn."
+;
+;	para "For example…"
+;
+;	para "There are {d:NUM_TMS} kinds"
+;	line "of TMs."
+;
+;	para "Traded #MON"
+;	line "level up faster."
+;	done
