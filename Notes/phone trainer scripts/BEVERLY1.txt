@@ -1,0 +1,122 @@
+BEVERLY1
+
+;TrainerPokefanfBeverly:
+;	trainer POKEFANF, BEVERLY, EVENT_BEAT_POKEFANF_BEVERLY, PokefanfBeverlySeenText, PokefanfBeverlyBeatenText, 0, .Script
+
+;.Script:
+;	loadvar VAR_CALLERID, PHONE_POKEFAN_BEVERLY
+;	opentext
+;	checkflag ENGINE_BEVERLY_HAS_NUGGET
+;	iftrue .GiveNugget
+;	checkcellnum PHONE_POKEFAN_BEVERLY
+;	iftrue .BeverlyDefeated
+;	checkevent EVENT_BEVERLY_ASKED_FOR_PHONE_NUMBER
+;	iftrue .AskAgain
+;	writetext PokefanBeverlyCuteMonText
+;	promptbutton
+;	setevent EVENT_BEVERLY_ASKED_FOR_PHONE_NUMBER
+;	scall NationalParkAskNumber1F
+;	sjump .RequestNumber
+
+;.AskAgain:
+;	scall NationalParkAskNumber2F
+;.RequestNumber:
+;	askforphonenumber PHONE_POKEFAN_BEVERLY
+;	ifequal PHONE_CONTACTS_FULL, NationalParkPhoneFullF
+;	ifequal PHONE_CONTACT_REFUSED, NationalParkNumberDeclinedF
+;	gettrainername STRING_BUFFER_3, POKEFANF, BEVERLY
+;	scall NationalParkRegisteredNumberF
+;	sjump NationalParkNumberAcceptedF
+;
+;.GiveNugget:
+;	scall NationalParkGiftF
+;	verbosegiveitem NUGGET
+;	iffalse .NoRoom
+;	clearflag ENGINE_BEVERLY_HAS_NUGGET
+;	sjump NationalParkNumberAcceptedF
+
+;.NoRoom:
+;	sjump NationalParkPackFullF
+;
+;.BeverlyDefeated:
+;	writetext PokefanBeverlyCuteMonText
+;	promptbutton
+;	closetext
+;	end
+;
+;NationalParkAskNumber1F:
+;	jumpstd AskNumber1FScript
+;	end
+;
+;NationalParkAskNumber2F:
+;	jumpstd AskNumber2FScript
+;	end
+;
+;NationalParkAskNumber1M:
+;	jumpstd AskNumber1MScript
+;	end
+;
+;NationalParkAskNumber2M:
+;	jumpstd AskNumber2MScript
+;	end
+;
+;NationalParkRegisteredNumberF:
+;	jumpstd RegisteredNumberFScript
+;	end
+;
+;NationalParkRegisteredNumberM:
+;	jumpstd RegisteredNumberMScript
+;	end
+;
+;NationalParkNumberAcceptedF:
+;	jumpstd NumberAcceptedFScript
+;	end
+;
+;NationalParkNumberAcceptedM:
+;	jumpstd NumberAcceptedMScript
+;	end
+;
+;NationalParkNumberDeclinedF:
+;	jumpstd NumberDeclinedFScript
+;	end
+;
+;NationalParkNumberDeclinedM:
+;	jumpstd NumberDeclinedMScript
+;	end
+;
+;NationalParkPhoneFullF:
+;	jumpstd PhoneFullFScript
+;	end
+;
+;NationalParkPhoneFullM:
+;	jumpstd PhoneFullMScript
+;	end
+;
+;NationalParkGiftF:
+;	jumpstd GiftFScript
+;	end
+;
+;NationalParkPackFullF:
+;	jumpstd PackFullFScript
+;	end
+
+
+;PokefanfBeverlySeenText:
+;	text "My #MON are"
+;	line "simply darling."
+;
+;	para "Let me tell you"
+;	line "how proud my"
+;	cont "darlings make me."
+;	done
+;
+;PokefanfBeverlyBeatenText:
+;	text "I can beat you in"
+;	line "pride, but…"
+;	done
+;
+;PokefanBeverlyCuteMonText:
+;	text "I must say, your"
+;	line "#MON are quite"
+;	cont "cute, too."
+;	done
