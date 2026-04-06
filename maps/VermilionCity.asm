@@ -435,7 +435,7 @@ VermilionCityPortSignText:
 VermilionCityNoticeSign:
 	jumptext VermilionCityNoticeSignText
 VermilionCityNoticeSignText:
-	text "NOTICE!"
+	text "     NOTICE!"
 
 	para "ROUTE 12 may be"
 	line "blocked off by a"
