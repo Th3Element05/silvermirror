@@ -17,12 +17,12 @@ CeladonDeptStoreElevatorScript:
 
 CeladonDeptStoreElevatorData:
 	db 5 ; floors
-	elevfloor FLOOR_1F, 1, CELADON_DEPT_STORE_1F
-	elevfloor FLOOR_2F, 1, CELADON_DEPT_STORE_2F
-	elevfloor FLOOR_3F, 1, CELADON_DEPT_STORE_3F
-	elevfloor FLOOR_4F, 1, CELADON_DEPT_STORE_4F
-	elevfloor FLOOR_5F, 1, CELADON_DEPT_STORE_5F
 ;	elevfloor FLOOR_6F, 1, CELADON_DEPT_STORE_6F
+	elevfloor FLOOR_5F, 1, CELADON_DEPT_STORE_5F
+	elevfloor FLOOR_4F, 1, CELADON_DEPT_STORE_4F
+	elevfloor FLOOR_3F, 1, CELADON_DEPT_STORE_3F
+	elevfloor FLOOR_2F, 1, CELADON_DEPT_STORE_2F
+	elevfloor FLOOR_1F, 1, CELADON_DEPT_STORE_1F
 	db -1 ; end
 
 CeladonDeptStoreElevatorDirectory:
@@ -51,6 +51,6 @@ CeladonDeptStoreElevator_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  2,  0, BGEVENT_READ, CeladonDeptStoreElevatorScript
-	bg_event  1,  0, BGEVENT_READ, CeladonDeptStoreElevatorDirectory
+	bg_event  1,  0, BGEVENT_READ, CeladonDeptStoreElevatorScript
+	bg_event  2,  0, BGEVENT_READ, CeladonDeptStoreElevatorDirectory
 	def_object_events

@@ -100,34 +100,6 @@ OlivineLighthouse6F_MapScripts:
 ;.Unused: ; unreferenced
 ;	end
 
-;OlivineLighthouseAmphy:
-;	faceplayer
-;	opentext
-;	checkevent EVENT_JASMINE_RETURNED_TO_GYM
-;	iftrue .HealthyNow
-;	writetext AmphyPalPalooText
-;	setval AMPHAROS
-;	special PlaySlowCry
-;	promptbutton
-;	writetext AmphyBreathingLaboredText
-;	waitbutton
-;	closetext
-;	end
-;
-;.HealthyNow:
-;	writetext AmphyPaluPaluluText
-;	cry AMPHAROS
-;	waitbutton
-;	closetext
-;	special FadeOutPalettes
-;	special FadeInPalettes
-;	special FadeOutPalettes
-;	special FadeInPalettes
-;	end
-
-;OlivineLighthouse6FSuperPotion:
-;	itemball SUPER_POTION
-
 ;OlivineLighthouseJasmineLeavesUpMovement:
 ;	slow_step UP
 ;	slow_step UP
@@ -240,6 +212,31 @@ OlivineLighthouse6F_MapScripts:
 ;	text "…AMPHY, hang on!"
 ;	done
 
+OlivineLighthouseAmphy:
+;	faceplayer
+	opentext
+;	checkevent EVENT_JASMINE_RETURNED_TO_GYM
+;	iftrue .HealthyNow
+;	writetext AmphyPalPalooText
+;	setval AMPHAROS
+;	special PlaySlowCry
+;	promptbutton
+;	writetext AmphyBreathingLaboredText
+;	waitbutton
+;	closetext
+;	end
+;
+;.HealthyNow:
+	writetext AmphyPaluPaluluText
+	cry AMPHAROS
+	waitbutton
+	closetext
+	special FadeOutPalettes
+	special FadeInPalettes
+	special FadeOutPalettes
+	special FadeInPalettes
+	end
+
 ;AmphyPalPalooText:
 ;	text "AMPHY: …"
 ;	line "…Pa… paloo…"
@@ -250,10 +247,16 @@ OlivineLighthouse6F_MapScripts:
 ;	line "terribly labored…"
 ;	done
 
-;AmphyPaluPaluluText:
-;	text "AMPHY: Palu!"
-;	line "Palulu!"
-;	done
+AmphyPaluPaluluText:
+	text "AMPHY: Palu!"
+	line "Palulu!"
+	done
+
+
+; itemballs
+OlivineLighthouse6FMetalCoat:
+	itemball METAL_COAT
+
 
 OlivineLighthouse6F_MapEvents:
 	db 0, 0 ; filler
@@ -270,5 +273,5 @@ OlivineLighthouse6F_MapEvents:
 	def_object_events
 ;	object_event  8,  8, SPRITE_JASMINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineLighthouseJasmine, EVENT_OLIVINE_LIGHTHOUSE_JASMINE
 ;	object_event  9,  8, SPRITE_AMPHY_SICK, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 1, OlivineLighthouseAmphy, EVENT_JASMINE_RETURNED_TO_GYM
-;	object_event  3,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, OlivineLighthouse6FSuperPotion, EVENT_OLIVINE_LIGHTHOUSE_6F_SUPER_POTION
-;	object_event 9,  8, SPRITE_AMPHAROS, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 1, OlivineLighthouseAmphy, EVENT_OLIVINE_LIGHTHOUSE_AMPHY_SICK
+	object_event 9,  8, SPRITE_AMPHAROS, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 1, OlivineLighthouseAmphy, EVENT_OLIVINE_LIGHTHOUSE_AMPHY_SICK
+	object_event  3,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, OlivineLighthouse6FMetalCoat, EVENT_OLIVINE_LIGHTHOUSE_6F_METAL_COAT

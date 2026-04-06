@@ -6,6 +6,7 @@ RocketHideoutElevator_MapScripts:
 
 .RocketHideoutElevatorCallback:
 	changeblock 0, 0, $0c ; elevator exit
+	changeblock 2, 0, $3d ; elevator panel
 	changeblock 0, 2, $25 ; floor
 	changeblock 2, 2, $25 ; floor
 	endcallback
@@ -50,6 +51,6 @@ RocketHideoutElevator_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  2,  0, BGEVENT_READ, RocketHideoutElevatorScript
+	bg_event  3,  0, BGEVENT_READ, RocketHideoutElevatorScript
 
 	def_object_events

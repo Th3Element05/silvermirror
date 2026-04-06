@@ -523,12 +523,13 @@ ENDM
 	map_const UNION_CAVE_B2F,                              10, 18 ; 79
 	map_const SLOWPOKE_WELL_B1F,                           10,  9 ; 80
 	map_const SLOWPOKE_WELL_B2F,                           10,  9 ; 81
-	map_const OLIVINE_LIGHTHOUSE_1F,                        9,  8 ; 82
+	map_const OLIVINE_LIGHTHOUSE_1F,                       10,  9 ; 82
 	map_const OLIVINE_LIGHTHOUSE_2F,                       10,  9 ; 83
 	map_const OLIVINE_LIGHTHOUSE_3F,                       10,  9 ; 84
 	map_const OLIVINE_LIGHTHOUSE_4F,                       10,  9 ; 85
-	map_const OLIVINE_LIGHTHOUSE_5F,                        9,  8 ; 86
-	map_const OLIVINE_LIGHTHOUSE_6F,                        9,  8 ; 87
+	map_const OLIVINE_LIGHTHOUSE_5F,                       10,  9 ; 86
+	map_const OLIVINE_LIGHTHOUSE_6F,                       10,  9 ; 87
+	map_const OLIVINE_LIGHTHOUSE_ELEVATOR,                  2,  2
 	map_const MAHOGANY_MART_1F,                             4,  4 ; 88
 	map_const TEAM_ROCKET_BASE_B1F,                        15,  9 ; 89
 	map_const TEAM_ROCKET_BASE_B2F,                        15,  9 ; 90

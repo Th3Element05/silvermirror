@@ -99,10 +99,12 @@ OlivineLighthouse5F_MapEvents:
 	warp_event 17,  7, OLIVINE_LIGHTHOUSE_4F, 10
 	warp_event 16,  5, OLIVINE_LIGHTHOUSE_6F, 2
 	warp_event 17,  5, OLIVINE_LIGHTHOUSE_6F, 3
+	warp_event  8,  9, OLIVINE_LIGHTHOUSE_ELEVATOR, 1
 
 	def_coord_events
 
 	def_bg_events
+	bg_event  9,  9, BGEVENT_READ, OlivineLighthouseElevatorSign
 ;	bg_event  3, 13, BGEVENT_ITEM, OlivineLighthouse5FHiddenHyperPotion
 
 	def_object_events
