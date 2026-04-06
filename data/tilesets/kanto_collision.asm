@@ -183,3 +183,5 @@
 	tilecoll HOP_DOWN, HOP_DOWN, WALL, WALL ; b6
 	tilecoll HOP_DOWN, HOP_DOWN, WALL, WALL ; b7
 	tilecoll WALL, WALL, WALL, WALL ; b8
+	tilecoll WALL, WALL, WALL, WALL ; b9
+	tilecoll WALL, WALL, WALL, WALL ; ba
