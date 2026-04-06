@@ -233,11 +233,13 @@ Route36OfficerScriptContest:
 Route36Officer_ContestHasConcluded:
 	checkevent EVENT_CONTEST_OFFICER_HAS_SUN_STONE
 	iftrue .Sunstone
+	checkevent EVENT_CONTEST_OFFICER_HAS_DUSK_STONE
+	iftrue .Duskstone
 	checkevent EVENT_CONTEST_OFFICER_HAS_EVERSTONE
 	iftrue .Everstone
+	checkevent EVENT_CONTEST_OFFICER_HAS_LUM_BERRY
+	iftrue .LumBerry
 	checkevent EVENT_CONTEST_OFFICER_HAS_SITRUS_BERRY
-	iftrue .SitrusBerry
-	checkevent EVENT_CONTEST_OFFICER_HAS_ORAN_BERRY
 	iftrue .OranBerry
 	writetext Route36NationalParkGateOfficer1ContestIsOverText
 	waitbutton
@@ -253,6 +255,15 @@ Route36Officer_ContestHasConcluded:
 	closetext
 	end
 
+.Duskstone
+	writetext Route36NationalParkGateOfficer1HeresThePrizeText
+	promptbutton
+	verbosegiveitem DUSK_STONE
+	iffalse .BagFull
+	clearevent EVENT_CONTEST_OFFICER_HAS_DUSK_STONE
+	closetext
+	end
+
 .Everstone:
 	writetext Route36NationalParkGateOfficer1HeresThePrizeText
 	promptbutton
@@ -262,21 +273,21 @@ Route36Officer_ContestHasConcluded:
 	closetext
 	end
 
-.SitrusBerry:
+.LumBerry:
 	writetext Route36NationalParkGateOfficer1HeresThePrizeText
 	promptbutton
-	verbosegiveitem SITRUS_BERRY
+	verbosegiveitem LUM_BERRY
 	iffalse .BagFull
-	clearevent EVENT_CONTEST_OFFICER_HAS_SITRUS_BERRY
+	clearevent EVENT_CONTEST_OFFICER_HAS_LUM_BERRY
 	closetext
 	end
 
 .OranBerry:
 	writetext Route36NationalParkGateOfficer1HeresThePrizeText
 	promptbutton
-	verbosegiveitem ORAN_BERRY
+	verbosegiveitem SITRUS_BERRY
 	iffalse .BagFull
-	clearevent EVENT_CONTEST_OFFICER_HAS_ORAN_BERRY
+	clearevent EVENT_CONTEST_OFFICER_HAS_SITRUS_BERRY
 	closetext
 	end
 
