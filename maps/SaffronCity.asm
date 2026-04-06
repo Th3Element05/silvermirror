@@ -33,7 +33,7 @@ SaffronCityFlypointCallback:
 SaffronCityMeetKurtsSonScene:
 	showemote EMOTE_SHOCK, SAFFRONCITY_KURTS_SON, 20
 	applymovement SAFFRONCITY_KURTS_SON, SaffronCityKurtsSon_ApproachMovement
-;	turnobject PLAYER, RIGHT
+	turnobject PLAYER, RIGHT
 	setlasttalked SAFFRONCITY_KURTS_SON
 	;fallthrough
 
