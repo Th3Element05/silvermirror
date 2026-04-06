@@ -31,7 +31,7 @@ CianwoodPokecenter1FSuperNerdText:
 	para "I'm going to get"
 	line "into a bunch of"
 	cont "battles, and show"
-	cont "off my #MON!"
+	roll "off my #MON!"
 	done
 
 CianwoodPokecenter1F_MapEvents:

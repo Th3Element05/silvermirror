@@ -46,7 +46,7 @@ CeladonMansionManagerText:
 	text "My dear #MON"
 	line "keep me company,"
 	cont "so I don't ever"
-	cont "feel lonely."
+	roll "feel lonely."
 
 	para "MEOWTH even brings"
 	line "money home!"

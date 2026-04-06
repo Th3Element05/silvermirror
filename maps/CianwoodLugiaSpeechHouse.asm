@@ -28,7 +28,7 @@ CianwoodLugiaSpeechHouseTeacherText:
 	para "I heard that a"
 	line "mythical sea crea-"
 	cont "ture is hiding in"
-	cont "them."
+	roll "them."
 	done
 
 CianwoodLugiaSpeechHouseLassText:
@@ -46,7 +46,7 @@ CianwoodLugiaSpeechHouseTwinText:
 	text "I've heard that"
 	line "the whirlpools"
 	cont "around the islands"
-	cont "are caused by the"
+	roll "are caused by the"
 	cont "sea creature."
 
 	para "You might need a"

@@ -14,7 +14,7 @@ CopycatsHouse1FPokefanMText:
 	para "Her mimicry has"
 	line "earned her the"
 	cont "nickname COPYCAT"
-	cont "around here."
+	roll "around here."
 	done
 
 CopycatsHouse1FPokefanFScript:

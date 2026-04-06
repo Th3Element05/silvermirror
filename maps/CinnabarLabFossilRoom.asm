@@ -311,14 +311,14 @@ CinnabarLabFossilScientistIsFossilText:
 	text_ram wStringBuffer3
 	text ", a"
 	cont "#MON that is"
-	cont "being extinct!"
+	roll "being extinct!"
 
 	para "You are wanting"
 	line "me to bring the"
 	cont "@"
 	text_ram wStringBuffer3
 	text " back"
-	cont "to life?"
+	roll "to life?"
 	done
 
 CinnabarLabFossilScientistGaveFossilText:
@@ -341,7 +341,7 @@ CinnabarLabFossilScientistDoneText:
 	line "@"
 	text_ram wStringBuffer3
 	text "!"
-	cont "like I think!"
+	cont "Like I think!"
 	done
 
 CinnabarLabFossilScientistNoRoomForFossilPokemonText:

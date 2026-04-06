@@ -24,7 +24,7 @@ AzaleaMartCooltrainerMText:
 	text "Normal #BALLs"
 	line "are alright, but"
 	cont "I wish KURT would"
-	cont "make me some of"
+	roll "make me some of"
 	cont "his custom BALLs."
 	done
 
@@ -34,7 +34,7 @@ AzaleaMartBugCatcherText:
 	text "A GREAT BALL is"
 	line "better for catch-"
 	cont "ing #MON than"
-	cont "a #BALL."
+	roll "a #BALL."
 
 	para "But KURT's might"
 	line "be better some-"

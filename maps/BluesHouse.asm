@@ -114,7 +114,7 @@ BluesHouseDaisyIdleText:
 	text "#MON are living"
 	line "things! If they"
 	cont "get tired, give"
-	cont "them a rest!"
+	roll "them a rest!"
 	done
 
 DaisyOutLateText:
@@ -132,7 +132,7 @@ DaisyOutLateText:
 	para "My grandpa OAK"
 	line "is lucky to have"
 	cont "you and <RIVAL>"
-	cont "helping him!"
+	roll "helping him!"
 	done
 
 DaisyOfferGroomingText:
@@ -191,7 +191,7 @@ DaisyRefusedText:
 	text "DAISY: You don't"
 	line "want to have one"
 	cont "groomed? OK, we'll"
-	cont "just have tea."
+	roll "just have tea."
 	done
 
 DaisyCantGroomEggText:

@@ -365,65 +365,56 @@ Text_RightThisWayToYourBattleRoom:
 	line "your BATTLE ROOM."
 	done
 
-Text_BattleTowerIntroduction_1: ; unreferenced
-	text "BATTLE TOWER is a"
-	line "facility made for"
-	cont "#MON battles."
-
-	para "Countless #MON"
-	line "trainers gather"
-
-	para "from all over to"
-	line "hold battles in"
-
-	para "specially designed"
-	line "BATTLE ROOMs."
-
-	para "There are many"
-	line "BATTLE ROOMs in"
-	cont "the BATTLE TOWER."
-
-	para "Each ROOM holds"
-	line "seven trainers."
-
-	para "If you defeat the"
-	line "seven in a ROOM,"
-
-	para "and you have a"
-	line "good record, you"
-
-	para "could become the"
-	line "ROOM's LEADER."
-
-	para "All LEADERs will"
-	line "be recorded in the"
-
-	para "HONOR ROLL for"
-	line "posterity."
-
-	para "You may challenge"
-	line "in up to five"
-
-	para "BATTLE ROOMs each"
-	line "day."
-
-	para "However, you may"
-	line "battle only once a"
-
-	para "day in any given"
-	line "ROOM."
-
-	para "To interrupt a"
-	line "session, you must"
-
-	para "SAVE. If not, you"
-	line "won't be able to"
-
-	para "resume your ROOM"
-	line "challenge."
-
-	para ""
-	done
+;Text_BattleTowerIntroduction_1: ; unreferenced
+;	text "BATTLE TOWER is a"
+;	line "facility made for"
+;	cont "#MON battles."
+;
+;	para "Countless #MON"
+;	line "trainers gather"
+;	cont "from all over to"
+;	roll "hold battles in"
+;	cont "specially designed"
+;	roll "BATTLE ROOMs."
+;
+;	para "There are many"
+;	line "BATTLE ROOMs in"
+;	cont "the BATTLE TOWER."
+;
+;	para "Each ROOM holds"
+;	line "seven trainers."
+;
+;	para "If you defeat the"
+;	line "seven in a ROOM,"
+;	cont "and you have a"
+;	roll "good record, you"
+;	cont "could become the"
+;	roll "ROOM's LEADER."
+;
+;	para "All LEADERs will"
+;	line "be recorded in the"
+;	cont "HONOR ROLL for"
+;	roll "posterity."
+;
+;	para "You may challenge"
+;	line "in up to five"
+;	cont "BATTLE ROOMs each"
+;	roll "day."
+;
+;	para "However, you may"
+;	line "battle only once a"
+;	cont "day in any given"
+;	roll "ROOM."
+;
+;	para "To interrupt a"
+;	line "session, you must"
+;	cont "SAVE. If not, you"
+;	roll "won't be able to"
+;	cont "resume your ROOM"
+;	roll "challenge."
+;
+;	para ""
+;	done
 
 Text_BattleTowerIntroduction_2:
 	text "BATTLE TOWER is a"
@@ -432,12 +423,10 @@ Text_BattleTowerIntroduction_2:
 
 	para "Countless #MON"
 	line "trainers gather"
-
-	para "from all over to"
-	line "hold battles in"
-
-	para "specially designed"
-	line "BATTLE ROOMs."
+	cont "from all over to"
+	roll "hold battles in"
+	cont "specially designed"
+	roll "BATTLE ROOMs."
 
 	para "There are many"
 	line "BATTLE ROOMs in"
@@ -451,12 +440,10 @@ Text_BattleTowerIntroduction_2:
 
 	para "To interrupt a"
 	line "session, you must"
-
-	para "SAVE. If not, you"
-	line "won't be able to"
-
-	para "resume your ROOM"
-	line "challenge."
+	cont "SAVE. If not, you"
+	roll "won't be able to"
+	cont "resume your ROOM"
+	roll "challenge."
 
 	para ""
 	done
@@ -485,23 +472,21 @@ Text_ThanksForVisiting:
 	line "visiting!"
 	done
 
-Text_BeatenAllTheTrainers_Mobile: ; unreferenced
-	text "Congratulations!"
-
-	para "You've beaten all"
-	line "the trainers!"
-
-	para "Your feat may be"
-	line "worth registering,"
-
-	para "<PLAYER>. With your"
-	line "results, you may"
-
-	para "be chosen as a"
-	line "ROOM LEADER."
-
-	para ""
-	done
+;Text_BeatenAllTheTrainers_Mobile: ; unreferenced
+;	text "Congratulations!"
+;
+;	para "You've beaten all"
+;	line "the trainers!"
+;
+;	para "Your feat may be"
+;	line "worth registering,"
+;	cont "<PLAYER>. With your"
+;	roll "results, you may"
+;	cont "be chosen as a"
+;	roll "ROOM LEADER."
+;
+;	para ""
+;	done
 
 Text_CongratulationsYouveBeatenAllTheTrainers:
 	text "Congratulations!"
@@ -515,13 +500,12 @@ Text_CongratulationsYouveBeatenAllTheTrainers:
 	para ""
 	done
 
-Text_AskRegisterRecord_Mobile: ; unreferenced
-	text "Would you like to"
-	line "register your"
-
-	para "record with the"
-	line "CENTER?"
-	done
+;Text_AskRegisterRecord_Mobile: ; unreferenced
+;	text "Would you like to"
+;	line "register your"
+;	cont "record with the"
+;	roll "CENTER?"
+;	done
 
 Text_PlayerGotFive:
 	text "<PLAYER> got five"
@@ -540,12 +524,12 @@ Text_YourPackIsStuffedFull:
 	line "and come back."
 	done
 
-Text_YourRegistrationIsComplete: ; unreferenced
-	text "Your registration"
-	line "is complete."
-
-	para "Please come again!"
-	done
+;Text_YourRegistrationIsComplete: ; unreferenced
+;	text "Your registration"
+;	line "is complete."
+;
+;	para "Please come again!"
+;	done
 
 Text_WeHopeToServeYouAgain:
 	text "We hope to serve"
@@ -574,19 +558,18 @@ Text_CantBeRegistered:
 Text_CantBeRegistered_PreviousRecordDeleted:
 	text "Your record from"
 	line "the previous"
-
-	para "BATTLE ROOM can't"
-	line "be registered."
+	cont "BATTLE ROOM can't"
+	roll "be registered."
 
 	para "Also, the existing"
 	line "record will be"
 	cont "deleted. OK?"
 	done
 
-Text_CheckTheLeaderHonorRoll: ; unreferenced
-	text "Check the LEADER"
-	line "HONOR ROLL?"
-	done
+;Text_CheckTheLeaderHonorRoll: ; unreferenced
+;	text "Check the LEADER"
+;	line "HONOR ROLL?"
+;	done
 
 Text_ReadBattleTowerRules:
 	text "BATTLE TOWER rules"
@@ -608,23 +591,20 @@ Text_BattleTowerRules:
 
 	para "Certain #MON"
 	line "may also have"
-
-	para "level restrictions"
-	line "placed on them."
+	cont "level restrictions"
+	roll "placed on them."
 	done
 
 Text_BattleTower_LeftWithoutSaving:
 	text "Excuse me!"
 	line "You didn't SAVE"
-
-	para "before exiting"
-	line "the BATTLE ROOM."
+	cont "before exiting"
+	roll "the BATTLE ROOM."
 
 	para "I'm awfully sorry,"
 	line "but your challenge"
-
-	para "will be declared"
-	line "invalid."
+	cont "will be declared"
+	roll "invalid."
 	done
 
 Text_YourMonWillBeHealedToFullHealth:
@@ -640,20 +620,18 @@ Text_NextUpOpponentNo:
 	text ". Ready?"
 	done
 
-Text_SaveBeforeConnecting_Mobile: ; unreferenced
-	text "Your session will"
-	line "be SAVED before"
-
-	para "connecting with"
-	line "the CENTER."
-	done
+;Text_SaveBeforeConnecting_Mobile: ; unreferenced
+;	text "Your session will"
+;	line "be SAVED before"
+;	cont "connecting with"
+;	roll "the CENTER."
+;	done
 
 Text_SaveBeforeEnteringBattleRoom:
 	text "Before entering"
 	line "the BATTLE ROOM,"
-
-	para "your progress will"
-	line "be saved."
+	cont "your progress will"
+	roll "be saved."
 	done
 
 Text_SaveAndEndTheSession:
@@ -664,9 +642,8 @@ Text_SaveAndEndTheSession:
 Text_SaveBeforeReentry:
 	text "Your record will"
 	line "be SAVED before"
-
-	para "you go back into"
-	line "the previous ROOM."
+	cont "you go back into"
+	roll "the previous ROOM."
 	done
 
 Text_CancelYourBattleRoomChallenge:
@@ -674,21 +651,19 @@ Text_CancelYourBattleRoomChallenge:
 	line "ROOM challenge?"
 	done
 
-Text_RegisterRecordOnFile_Mobile: ; unreferenced
-	text "We have your"
-	line "previous record on"
-
-	para "file. Would you"
-	line "like to register"
-	cont "it at the CENTER?"
-	done
+;Text_RegisterRecordOnFile_Mobile: ; unreferenced
+;	text "We have your"
+;	line "previous record on"
+;	cont "file. Would you"
+;	roll "like to register"
+;	cont "it at the CENTER?"
+;	done
 
 Text_WeveBeenWaitingForYou:
 	text "We've been waiting"
 	line "for you. This way"
-
-	para "to a BATTLE ROOM,"
-	line "please."
+	cont "to a BATTLE ROOM,"
+	roll "please."
 	done
 
 Text_FiveDayBattleLimit_Mobile:
@@ -703,33 +678,30 @@ Text_FiveDayBattleLimit_Mobile:
 Text_TooMuchTimeElapsedNoRegister:
 	text "Sorry, but it's"
 	line "not possible to"
-
-	para "register your"
-	line "current record at"
-
-	para "the CENTER because"
-	line "too much time has"
-
-	para "elapsed since the"
-	line "start of your"
+	cont "register your"
+	roll "current record at"
+	cont "the CENTER because"
+	roll "too much time has"
+	cont "elapsed since the"
+	roll "start of your"
 	cont "challenge."
 	done
 
-Text_RegisterRecordTimedOut_Mobile: ; unreferenced
-; duplicate of Text_TooMuchTimeElapsedNoRegister
-	text "Sorry, but it's"
-	line "not possible to"
-
-	para "register your most"
-	line "recent record at"
-
-	para "the CENTER because"
-	line "too much time has"
-
-	para "elapsed since the"
-	line "start of your"
-	cont "challenge."
-	done
+;Text_RegisterRecordTimedOut_Mobile: ; unreferenced
+;; duplicate of Text_TooMuchTimeElapsedNoRegister
+;	text "Sorry, but it's"
+;	line "not possible to"
+;
+;	para "register your most"
+;	line "recent record at"
+;
+;	para "the CENTER because"
+;	line "too much time has"
+;
+;	para "elapsed since the"
+;	line "start of your"
+;	cont "challenge."
+;	done
 
 Text_AMonLevelExceeds:
 	text "One or more of"
@@ -754,42 +726,37 @@ Text_MayNotEnterABattleRoomUnderL70:
 Text_BattleTowerYoungster:
 	text "Destroyed by the"
 	line "first opponent in"
-
-	para "no time at all…"
-	line "I'm no good…"
+	cont "no time at all…"
+	roll "I'm no good…"
 	done
 
 Text_BattleTowerCooltrainerF:
 	text "There are lots of"
 	line "BATTLE ROOMs, but"
-
-	para "I'm going to win"
-	line "them all!"
+	cont "I'm going to win"
+	roll "them all!"
 	done
 
 Text_BattleTowerGranny:
 	text "It's a grueling"
 	line "task, not being"
-
-	para "able to use items"
-	line "in battle."
+	cont "able to use items"
+	roll "in battle."
 
 	para "Making your"
 	line "#MON hold items"
-
-	para "is the key to"
-	line "winning battles."
+	cont "is the key to"
+	roll "winning battles."
 	done
 
 Text_BattleTowerBugCatcher:
 	text "I'm trying to see"
 	line "how far I can go"
-
-	para "using just bug"
-	line "#MON."
-
-	para "Don't let there be"
-	line "any fire #MON…"
+	cont "using just bug"
+	roll "#MON."
+;
+;	para "Don't let there be"
+;	line "any fire #MON…"
 	done
 
 BattleTower1F_MapEvents:

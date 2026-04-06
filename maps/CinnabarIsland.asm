@@ -38,7 +38,7 @@ CinnabarGymDoorLockedText:
 	para "I've gone to the"
 	line "abandoned lab to"
 	cont "investigate some-"
-	cont "thing.    -BLAINE"
+	roll "thing.    -BLAINE"
 	done
 
 CinnabarIslandGirl:
@@ -47,7 +47,7 @@ CinnabarIslandGirlText:
 	text "The GYM LEADER,"
 	line "BLAINE, is an odd"
 	cont "man who has lived"
-	cont "here for decades."
+	roll "here for decades."
 	done
 
 CinnabarIslandGramps:
@@ -56,7 +56,7 @@ CinnabarIslandGrampsText:
 	text "The old laboratory"
 	line "was abandoned"
 	cont "because of some"
-	cont "disaster."
+	roll "disaster."
 	done
 
 CinnabarIslandLabSign:
@@ -103,6 +103,7 @@ CinnabarIslandMissingNoScript:
 	setevent EVENT_CAUGHT_MISSINGNO
 .nocatch
 	setscene SCENE_CINNABARISLAND_NOOP
+;	giveitem RARE_CANDY, 10
 .End
 	end
 

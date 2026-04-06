@@ -36,7 +36,7 @@ CherrygroveGymSpeechHouseBugCatcherText:
 	para "I make my #MON"
 	line "battle with my"
 	cont "friend's to make"
-	cont "them tougher!"
+	roll "them tougher!"
 	done
 
 CherrygroveGymSpeechHouseBookshelf:

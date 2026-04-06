@@ -66,7 +66,7 @@ CeruleanMartCooltrainerMText:
 	para "Put your strongest"
 	line "#MON at the"
 	cont "top of the list"
-	cont "for best results!"
+	roll "for best results!"
 	done
 
 CeruleanMart_MapEvents:

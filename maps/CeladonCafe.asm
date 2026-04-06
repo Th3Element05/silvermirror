@@ -20,7 +20,7 @@ CeladonCafeWomanText:
 	text "My #MON are"
 	line "weak, so I often"
 	cont "have to go to the"
-	cont "DRUG STORE."
+	roll "DRUG STORE."
 	done
 
 CeladonCafeFisher:
@@ -86,7 +86,7 @@ EatathonContestPosterText:
 	para "A battle without"
 	line "end! The biggest"
 	cont "muncher gets it"
-	cont "all for free!"
+	roll "all for free!"
 	done
 
 CeladonCafe_MapEvents:

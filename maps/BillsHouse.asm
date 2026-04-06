@@ -166,7 +166,7 @@ BillsHouseBillReminderText:
 	text "I need you to run"
 	line "the program on my"
 	cont "PC while I'm in"
-	cont "the teleporter!"
+	roll "the teleporter!"
 
 	para "I can't do this"
 	line "by myself, chief!"
@@ -232,13 +232,13 @@ BillsHouseBillIntroText:
 	para "Call me BILL!"
 	line "I'm a true blue"
 	cont "#MANIAC! Hey!"
-	cont "What's with that"
+	roll "What's with that"
 	cont "skeptical look?"
 
 	para "I'm not joshing"
 	line "you, I screwed up"
 	cont "an experiment and"
-	cont "got combined with"
+	roll "got combined with"
 	cont "a #MON!"
 
 	para "So, how about it?"
@@ -249,7 +249,7 @@ BillsHouseTeleporterText:
 	text "When I'm in the"
 	line "TELEPORTER, go to"
 	cont "my PC and run the"
-	cont "Cell Separation"
+	roll "Cell Separation"
 	cont "System!"
 	done
 
@@ -301,7 +301,7 @@ BillsHouseBillExplainRadioCardText:
 	text "BILL: There's a"
 	line "radio station that"
 	cont "reports swarms of"
-	cont "rare #MON!"
+	roll "rare #MON!"
 
 	para "You should give it"
 	line "a listen sometime!"
@@ -317,7 +317,7 @@ BillOffersNumberText:
 	text "If you save my"
 	line "phone number, you"
 	cont "can call about my"
-	cont "#MON STORAGE"
+	roll "#MON STORAGE"
 	cont "system any time."
 	done 
 
@@ -544,9 +544,8 @@ RecordedBillsNumberText:
 ;
 ;	para "He's in JOHTO. He"
 ;	line "does something"
-;
-;	para "with PCs, so I'm"
-;	line "house-sitting."
+;	cont "with PCs, so I'm"
+;	roll "house-sitting."
 ;	done
 ;
 ;BillsGrandpaAskToSeeMonText:
@@ -595,9 +594,8 @@ RecordedBillsNumberText:
 ;
 ;	para "I really enjoyed"
 ;	line "myself. I'm glad"
-;
-;	para "I've lived such a"
-;	line "long life."
+;	cont "I've lived such a"
+;	roll "long life."
 ;	done
 ;
 ;BillsGrandpaWrongPokemonText:
@@ -611,26 +609,23 @@ RecordedBillsNumberText:
 ;BillsGrandpaLickitungText:
 ;	text "My grandson BILL"
 ;	line "told me about a"
-;
-;	para "#MON that has a"
-;	line "long tongue."
+;	cont "#MON that has a"
+;	roll "long tongue."
 ;	done
 ;
 ;BillsGrandpaOddishText:
 ;	text "Ah, my grandson"
 ;	line "mentioned a round,"
-;
-;	para "green #MON that"
-;	line "has leaves growing"
+;	cont "green #MON that"
+;	roll "has leaves growing"
 ;	cont "on its head."
 ;	done
 ;
 ;BillsGrandpaStaryuText:
 ;	text "Do you know of a"
 ;	line "sea #MON that"
-;
-;	para "has a red sphere"
-;	line "in its body?"
+;	cont "has a red sphere"
+;	roll "in its body?"
 ;
 ;	para "You know, the one"
 ;	line "that's shaped like"
@@ -646,9 +641,8 @@ RecordedBillsNumberText:
 ;BillsGrandpaGrowlitheText:
 ;	text "BILL told me about"
 ;	line "a #MON that is"
-;
-;	para "very loyal to its"
-;	line "trainer."
+;	cont "very loyal to its"
+;	roll "trainer."
 ;
 ;	para "It's supposed to"
 ;	line "ROAR well."
@@ -675,9 +669,8 @@ RecordedBillsNumberText:
 ;
 ;	para "I would love to"
 ;	line "see what it looks"
-;
-;	para "like before it"
-;	line "evolves."
+;	cont "like before it"
+;	roll "evolves."
 ;	done
 
 BillsHouse_MapEvents:

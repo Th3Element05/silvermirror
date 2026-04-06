@@ -177,14 +177,14 @@ CeladonMansion3FGameProgramText:
 	text "It's the game"
 	line "program. Messing"
 	cont "with it could put"
-	cont "a bug in the game!"
+	roll "a bug in the game!"
 	done
 
 CeladonMansion3FReferenceMaterialText:
 	text "It's crammed with"
 	line "reference materi-"
 	cont "als. There's even"
-	cont "a #DOLL."
+	roll "a #DOLL."
 	done
 
 CeladonMansion3F_MapEvents:

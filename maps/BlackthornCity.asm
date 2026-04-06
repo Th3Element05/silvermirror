@@ -180,7 +180,7 @@ Text_ClairIsIn:
 	para "However, it would"
 	line "be impossible for"
 	cont "any old trainer to"
-	cont "to beat her."
+	roll "to beat her."
 	done
 
 Text_ClairIsBeaten:
@@ -192,7 +192,7 @@ Text_ClairIsBeaten:
 	para "I've never heard"
 	line "of her losing to"
 	cont "anyone other than"
-	cont "LANCE."
+	roll "LANCE."
 	done
 
 BlackthornYoungsterScript:
@@ -222,7 +222,7 @@ BlackthornCooltrainerF1Text:
 	para "It was tough, but"
 	line "it's the only way"
 	cont "out of MAHOGANY"
-	cont "until ROUTE 42 is"
+	roll "until ROUTE 42 is"
 	cont "cleared."
 	done
 

@@ -29,7 +29,7 @@ CeladonDeptStore4FYoungsterText:
 	para "You can run from"
 	line "wild #MON by"
 	cont "distracting them"
-	cont "with a #DOLL!"
+	roll "with a #DOLL!"
 	done
 
 CeladonDeptStore4FDirectory:

@@ -26,7 +26,7 @@ CeruleanTradeSpeechHouseGrannyText:
 	para "If you are a"
 	line "collector, would"
 	cont "you please trade"
-	cont "with him?"
+	roll "with him?"
 	done
 
 ;CeruleanTradeSpeechHouseRhydonScript:

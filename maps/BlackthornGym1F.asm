@@ -236,7 +236,7 @@ CooltrainerfLaylaSeenText:
 	para "If you're not"
 	line "serious, you won't"
 	cont "be able to beat"
-	cont "them."
+	roll "them."
 	done
 
 CooltrainerfLaylaBeatenText:
@@ -315,7 +315,7 @@ BlackthornGymGuideText:
 	para "They resist a lot"
 	line "of types, but ice-"
 	cont "type moves are"
-	cont "their weakness."
+	roll "their weakness."
 	done
 
 BlackthornGymGuideWinText:
@@ -325,7 +325,7 @@ BlackthornGymGuideWinText:
 	para "I always knew that"
 	line "there was nothing"
 	cont "that could stand"
-	cont "in your way!"
+	roll "in your way!"
 	done
 
 BlackthornGymStatue:

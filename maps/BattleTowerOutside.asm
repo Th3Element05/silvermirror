@@ -33,9 +33,8 @@ BattleTowerOutsideSign:
 BattleTowerOutsideYoungsterText_NotYetOpen: ; unreferenced
 	text "Wow, the BATTLE"
 	line "TOWER is huge! My"
-
-	para "neck is tired from"
-	line "looking up at it."
+	cont "neck is tired from"
+	roll "looking up at it."
 	done
 
 BattleTowerOutsideYoungsterText_Mobile: ; unreferenced
@@ -44,12 +43,10 @@ BattleTowerOutsideYoungsterText_Mobile: ; unreferenced
 
 	para "Since there are a"
 	line "whole bunch of"
-
-	para "trainers inside,"
-	line "there must also be"
-
-	para "a wide variety of"
-	line "#MON."
+	cont "trainers inside,"
+	roll "there must also be"
+	cont "a wide variety of"
+	roll "#MON."
 	done
 
 BattleTowerOutsideYoungsterText:
@@ -61,16 +58,15 @@ BattleTowerOutsideYoungsterText:
 	cont "in there!"
 	done
 
-BattleTowerOutsideBeautyText_NotYetOpen: ; unreferenced
-	text "What on earth do"
-	line "they do here?"
-
-	para "If the name says"
-	line "anything, I guess"
-
-	para "it must be for"
-	line "#MON battles."
-	done
+;BattleTowerOutsideBeautyText_NotYetOpen: ; unreferenced
+;	text "What on earth do"
+;	line "they do here?"
+;
+;	para "If the name says"
+;	line "anything, I guess"
+;	cont "it must be for"
+;	roll "#MON battles."
+;	done
 
 BattleTowerOutsideBeautyText:
 	text "You can use only"
@@ -78,20 +74,19 @@ BattleTowerOutsideBeautyText:
 
 	para "It's so hard to"
 	line "decide which three"
-
-	para "should go into"
-	line "battle…"
+	cont "should go into"
+	roll "battle…"
 	done
 
-BattleTowerOutsideSailorText_Mobile: ; unreferenced
-	text "Ehehehe…"
-	line "I sneaked out of"
-	cont "work to come here."
-
-	para "I'm never giving"
-	line "up until I become"
-	cont "a LEADER!"
-	done
+;BattleTowerOutsideSailorText_Mobile: ; unreferenced
+;	text "Ehehehe…"
+;	line "I sneaked out of"
+;	cont "work to come here."
+;
+;	para "I'm never giving"
+;	line "up until I become"
+;	cont "a LEADER!"
+;	done
 
 BattleTowerOutsideSailorText:
 	text "Hehehe, I snuck"
@@ -101,13 +96,13 @@ BattleTowerOutsideSailorText:
 	line "until I've won!"
 
 	para "I have to win it"
-	line "all. That I must!"
+	line "all. I must!"
 	done
 
-BattleTowerOutsideSignText_NotYetOpen: ; unreferenced
-; originally shown when the Battle Tower was closed
-	text "BATTLE TOWER"
-	done
+;BattleTowerOutsideSignText_NotYetOpen: ; unreferenced
+;; originally shown when the Battle Tower was closed
+;	text "BATTLE TOWER"
+;	done
 
 BattleTowerOutsideSignText:
 	text "BATTLE TOWER"
@@ -116,16 +111,16 @@ BattleTowerOutsideSignText:
 	line "Trainer Challenge!"
 	done
 
-BattleTowerOutsideText_DoorsClosed: ; unreferenced
-; originally shown when the Battle Tower was closed
-	text "The BATTLE TOWER's"
-	line "doors are closed…"
-	done
+;BattleTowerOutsideText_DoorsClosed: ; unreferenced
+;; originally shown when the Battle Tower was closed
+;	text "The BATTLE TOWER's"
+;	line "doors are closed…"
+;	done
 
-BattleTowerOutsideText_DoorsOpen: ; unreferenced
-; originally shown after the Battle Tower opened
-	text "It's open!"
-	done
+;BattleTowerOutsideText_DoorsOpen: ; unreferenced
+;; originally shown after the Battle Tower opened
+;	text "It's open!"
+;	done
 
 BattleTowerOutside_MapEvents:
 	db 0, 0 ; filler

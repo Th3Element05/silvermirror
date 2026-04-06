@@ -14,7 +14,7 @@ CherrygrovePokecenter1FFisherText:
 	text "It's great. I can"
 	line "store any number"
 	cont "of #MON, and"
-	cont "it's all free."
+	roll "it's all free."
 	done
 
 CherrygrovePokecenter1FGentlemanScript:
