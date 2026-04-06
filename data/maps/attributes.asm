@@ -469,6 +469,7 @@ ENDM
 	map_attributes OlivineLighthouse4F, OLIVINE_LIGHTHOUSE_4F, $00, 0
 	map_attributes OlivineLighthouse5F, OLIVINE_LIGHTHOUSE_5F, $00, 0
 	map_attributes OlivineLighthouse6F, OLIVINE_LIGHTHOUSE_6F, $00, 0
+	map_attributes OlivineLighthouseElevator, OLIVINE_LIGHTHOUSE_ELEVATOR, $00, 0
 	map_attributes MahoganyMart1F, MAHOGANY_MART_1F, $00, 0
 	map_attributes TeamRocketBaseB1F, TEAM_ROCKET_BASE_B1F, $00, 0
 	map_attributes TeamRocketBaseB2F, TEAM_ROCKET_BASE_B2F, $00, 0

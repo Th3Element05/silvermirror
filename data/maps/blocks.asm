@@ -420,11 +420,11 @@ GoldenrodDeptStoreRoof_Blocks:
 CeladonDeptStoreRoof_Blocks:
 	INCBIN "maps/DeptStoreRoof.blk"
 
-
-GoldenrodDeptStoreElevator_Blocks:
 CeladonDeptStoreElevator_Blocks:
 RocketHideoutElevator_Blocks:
 SilphCoElevator_Blocks:
+GoldenrodDeptStoreElevator_Blocks:
+OlivineLighthouseElevator_Blocks:
 	INCBIN "maps/DeptStoreElevator.blk"
 
 CeladonMansion1F_Blocks:
