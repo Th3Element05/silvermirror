@@ -334,8 +334,8 @@ BugContestResultsScript:
 	clearevent EVENT_WARPED_FROM_ROUTE_35_NATIONAL_PARK_GATE
 	clearevent EVENT_CONTEST_OFFICER_HAS_SUN_STONE
 	clearevent EVENT_CONTEST_OFFICER_HAS_EVERSTONE
+	clearevent EVENT_CONTEST_OFFICER_HAS_LUM_BERRY
 	clearevent EVENT_CONTEST_OFFICER_HAS_SITRUS_BERRY
-	clearevent EVENT_CONTEST_OFFICER_HAS_ORAN_BERRY
 	opentext
 	farwritetext ContestResults_ReadyToJudgeText
 	waitbutton
@@ -347,8 +347,16 @@ BugContestResultsScript:
 	farwritetext ContestResults_ConsolationPrizeText
 	promptbutton
 	waitsfx
-	verbosegiveitem ORAN_BERRY
-	iffalse BugContestResults_NoRoomForBerry
+	verbosegiveitem SITRUS_BERRY
+;	iffalse .NoRoomForBerry ;BugContestResults_NoRoomForBerry
+	iftrue BugContestResults_DidNotWin
+
+.NoRoomForBerry:
+	farwritetext BugContestPrizeNoRoomText
+	promptbutton
+	setevent EVENT_CONTEST_OFFICER_HAS_SITRUS_BERRY
+;	sjump BugContestResults_DidNotWin
+	; fallthrough
 
 BugContestResults_DidNotWin:
 	farwritetext ContestResults_DidNotWinText
@@ -402,11 +410,34 @@ BugContestResults_CleanUp:
 
 BugContestResults_FirstPlace:
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	checktime NITE
+	iftrue .Duskstone
+;.Sunstone:
 	getitemname STRING_BUFFER_4, SUN_STONE
 	farwritetext ContestResults_PlayerWonAPrizeText
 	waitbutton
 	verbosegiveitem SUN_STONE
-	iffalse BugContestResults_NoRoomForSunStone
+	iffalse .NoRoomForSunStone ;BugContestResults_NoRoomForSunStone
+	sjump BugContestResults_ReturnAfterWinnersPrize
+
+.NoRoomForSunStone:
+	farwritetext BugContestPrizeNoRoomText
+	promptbutton
+	setevent EVENT_CONTEST_OFFICER_HAS_SUN_STONE
+	sjump BugContestResults_ReturnAfterWinnersPrize
+
+.Duskstone:
+	getitemname STRING_BUFFER_4, DUSK_STONE
+	farwritetext ContestResults_PlayerWonAPrizeText
+	waitbutton
+	verbosegiveitem DUSK_STONE
+	iffalse .NoRoomForDuskStone ;BugContestResults_NoRoomForDuskStone
+	sjump BugContestResults_ReturnAfterWinnersPrize
+
+.NoRoomForDuskStone:
+	farwritetext BugContestPrizeNoRoomText
+	promptbutton
+	setevent EVENT_CONTEST_OFFICER_HAS_DUSK_STONE
 	sjump BugContestResults_ReturnAfterWinnersPrize
 
 BugContestResults_SecondPlace:
@@ -414,40 +445,28 @@ BugContestResults_SecondPlace:
 	farwritetext ContestResults_PlayerWonAPrizeText
 	waitbutton
 	verbosegiveitem EVERSTONE
-	iffalse BugContestResults_NoRoomForEverstone
+	iffalse .NoRoomForEverstone ;BugContestResults_NoRoomForEverstone
 	sjump BugContestResults_ReturnAfterWinnersPrize
 
-BugContestResults_ThirdPlace:
-	getitemname STRING_BUFFER_4, SITRUS_BERRY
-	farwritetext ContestResults_PlayerWonAPrizeText
-	waitbutton
-	verbosegiveitem SITRUS_BERRY
-	iffalse BugContestResults_NoRoomForSitrusBerry
-	sjump BugContestResults_ReturnAfterWinnersPrize
-
-BugContestResults_NoRoomForSunStone:
-	farwritetext BugContestPrizeNoRoomText
-	promptbutton
-	setevent EVENT_CONTEST_OFFICER_HAS_SUN_STONE
-	sjump BugContestResults_ReturnAfterWinnersPrize
-
-BugContestResults_NoRoomForEverstone:
+.NoRoomForEverstone:
 	farwritetext BugContestPrizeNoRoomText
 	promptbutton
 	setevent EVENT_CONTEST_OFFICER_HAS_EVERSTONE
 	sjump BugContestResults_ReturnAfterWinnersPrize
 
-BugContestResults_NoRoomForSitrusBerry:
-	farwritetext BugContestPrizeNoRoomText
-	promptbutton
-	setevent EVENT_CONTEST_OFFICER_HAS_SITRUS_BERRY
+BugContestResults_ThirdPlace:
+	getitemname STRING_BUFFER_4, LUM_BERRY
+	farwritetext ContestResults_PlayerWonAPrizeText
+	waitbutton
+	verbosegiveitem LUM_BERRY
+	iffalse .NoRoomForLumBerry ;BugContestResults_NoRoomForLumBerry
 	sjump BugContestResults_ReturnAfterWinnersPrize
 
-BugContestResults_NoRoomForBerry:
+.NoRoomForLumBerry:
 	farwritetext BugContestPrizeNoRoomText
 	promptbutton
-	setevent EVENT_CONTEST_OFFICER_HAS_ORAN_BERRY
-	sjump BugContestResults_DidNotWin
+	setevent EVENT_CONTEST_OFFICER_HAS_LUM_BERRY
+	sjump BugContestResults_ReturnAfterWinnersPrize
 
 BugContestResults_CopyContestantsToResults:
 	checkevent EVENT_BUG_CATCHING_CONTESTANT_1A
