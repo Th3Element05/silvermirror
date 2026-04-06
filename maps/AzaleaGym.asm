@@ -70,7 +70,7 @@ BugsyText_INeverLose:
 	para "My research is"
 	line "going to make me"
 	cont "the authority on"
-	cont "bug #MON!"
+	roll "bug #MON!"
 
 	para "Let me demonstrate"
 	line "what I've learned"
@@ -115,7 +115,7 @@ BugsyText_FuryCutterSpeech:
 BugsyText_BugMonsAreDeep:
 	text "Bug #MON have"
 	line "many mysteries to"
-	line "explore."
+	cont "explore."
 
 	para "Study your favor-"
 	line "ites thoroughly."
@@ -200,7 +200,7 @@ BugCatcherJonAfterBattleText:
 	text "They're so cool,"
 	line "but most girls"
 	cont "don't like bug"
-	cont "#MON."
+	roll "#MON."
 
 	para "I don't know why…"
 	done
@@ -274,7 +274,7 @@ AzaleaGymGuideText:
 	para "BUGSY's young, but"
 	line "his knowledge of"
 	cont "bug #MON is for"
-	cont "real."
+	roll "real."
 
 	para "Remember… Bug"
 	line "#MON don't like"
@@ -289,7 +289,7 @@ AzaleaGymGuideWinText:
 	text "Well done! That"
 	line "was a great clash"
 	cont "of talented young"
-	cont "trainers."
+	roll "trainers."
 
 	para "With people like"
 	line "you, the future of"

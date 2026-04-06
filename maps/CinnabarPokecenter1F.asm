@@ -17,7 +17,7 @@ CinnabarPokecenter1FBenchGuyText:
 	text "#MON can still"
 	line "learn techniques"
 	cont "after canceling"
-	cont "evolution."
+	roll "evolution."
 
 	para "Evolution can wait"
 	line "until new moves"
@@ -27,12 +27,22 @@ CinnabarPokecenter1FBenchGuyText:
 CinnabarPokecenter1FGentlemanScript:
 	jumptextfaceplayer CinnabarPokecenter1FGentlemanText
 CinnabarPokecenter1FGentlemanText:
-	text "#MON you get"
-	line "in trades grow"
-	cont "very quickly."
+;	text "#MON you get"
+;	line "in trades grow"
+;	cont "very quickly."
+;
+;	para "I think it's"
+;	line "worth a try!"
+;	done
+;
+	text "Evolved #MON"
+	line "typically learn"
+	cont "moves more slowly."
 
-	para "I think it's"
-	line "worth a try!"
+	para "You might want to"
+	line "postpone evolution"
+	cont "to learn certain"
+	roll "attacks sooner!"
 	done
 
 CinnabarPokecenter1FCooltrainerFScript:
@@ -44,7 +54,7 @@ CinnabarPokecenter1FCooltrainerFText:
 	para "When a #MON is"
 	line "evolving, you can"
 	cont "stop it and leave"
-	cont "it the way it is."
+	roll "it the way it is."
 	done
 
 CinnabarPokecenter1F_MapEvents:

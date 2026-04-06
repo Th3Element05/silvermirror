@@ -66,7 +66,7 @@ BurnedTowerGirl_BeforeText:
 	text "I came looking for"
 	line "some legendary"
 	cont "#MON that they"
-	cont "say lived here."
+	roll "say lived here."
 
 	para "But there's"
 	line "nothing here!"

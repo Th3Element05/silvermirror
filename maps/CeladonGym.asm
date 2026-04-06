@@ -119,7 +119,7 @@ ErikaExplainRainbowbadgeText:
 ;	para "It also allows"
 ;	line "#MON to use"
 ;	cont "the move STRENGTH"
-;	cont "to move boulders."
+;	roll "to move boulders."
 ;
 	para "Please also take"
 	line "this with you."

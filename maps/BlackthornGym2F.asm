@@ -82,7 +82,7 @@ CooltrainermAxelAfterBattleText:
 	text "Members of the"
 	line "dragon-clan can"
 	cont "only train dragon"
-	cont "#MON after our"
+	roll "#MON after our"
 	cont "MASTER allows it."
 	done
 

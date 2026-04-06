@@ -28,7 +28,7 @@ CeruleanTrashedHouseManText1:
 	para "They stole a TM"
 	line "for teaching"
 	cont "#MON how to"
-	cont "DIG holes!"
+	roll "DIG holes!"
 
 	para "That cost me a"
 	line "bundle, it did!"
@@ -47,7 +47,7 @@ CeruleanTrashedHouseWomanText:
 	text "TEAM ROCKET must"
 	line "be trying to DIG"
 	cont "their way into no"
-	cont "good!"
+	roll "good!"
 	done
 
 CeruleanTrashedHouseWallHoleText:
@@ -62,7 +62,6 @@ CeruleanTrashedHouse_MapEvents:
 	warp_event  3,  0, CERULEAN_CITY, 1
 	warp_event  2,  7, CERULEAN_CITY, 4
 	warp_event  3,  7, CERULEAN_CITY, 4
-
 
 	def_coord_events
 

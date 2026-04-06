@@ -67,12 +67,12 @@ BillsFamilysHouseBill_GiveGSBallText:
 	para "I'm here working"
 	line "on an experimental"
 	cont "#MON trading"
-	cont "program."
+	roll "program."
 
 	para "I'm trying to see"
 	line "if #MON can be"
 	cont "traded between the"
-	cont "past and future."
+	roll "past and future."
 
 	para "I'm calling it the"
 	line "TIME CAPSULE!"
@@ -80,7 +80,7 @@ BillsFamilysHouseBill_GiveGSBallText:
 	para "Its not ready yet,"
 	line "but this object"
 	cont "came through when"
-	cont "I was running one"
+	roll "I was running one"
 	cont "of my tests."
 
 	para "I think you should"
@@ -95,10 +95,9 @@ BillsFamilysHouseBill_ExplainGSBallText:
 	para "I'm not an expert"
 	line "on #BALLs."
 
-	para "But maybe you"
-	line "will meet someone"
-	cont "who can tell you"
-	cont "more about it."
+	para "But maybe you know"
+	line "somebody who can"
+	cont "tell you about it?"
 
 	para "Anyway, I need to"
 	line "get back to my"

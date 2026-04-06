@@ -370,26 +370,16 @@ CinnabarGymQuizIntroText:
 	done
 
 CinnabarGymQuestion1Text: ;true
-;	text "CATERPIE evolves"
-;	line "into MEDAPOD?"
-;	done
 	text "CATERPIE evolves"
 	line "at level 7?"
 	done
 
 CinnabarGymQuestion2Text: ;false
-;	text "KANTO has 9"
-;	line "certified #MON"
-;	cont "LEAGUE GYMs?"
-;	done
 	text "PIKACHU is no.24"
 	line "in the #DEX?"
 	done
 
 CinnabarGymQuestion3Text: ;false
-;	text "POLIWAG evolves"
-;	line "3 times?"
-;	done
 	text "POLIWAG's belly"
 	line "swirls go in the"
 	cont "same direction as"
@@ -397,22 +387,12 @@ CinnabarGymQuestion3Text: ;false
 	done
 
 CinnabarGymQuestion4Text: ;false
-;	text "ELECTRIC moves are"
-;	line "super-effective"
-;	line "against GROUND-"
-;	cont "type #MON?"
-;	done
 	text "PSYCHIC moves are"
 	line "super-effectve vs"
 	cont "the GHOST-type?"
 	done
 
 CinnabarGymQuestion5Text: ;true
-;	text "#MON of the"
-;	line "same species and"
-;	cont "same level are"
-;	cont "not identical?"
-;	done
 	text "#MON of the"
 	line "same species'"
 	cont "stats can grow at"
@@ -420,11 +400,8 @@ CinnabarGymQuestion5Text: ;true
 	done
 
 CinnabarGymQuestion6Text: ;false
-;	text "TM28 contains"
-;	line "TOMBSTONER?"
-;	done
 	text "TM28 contains"
-	line "EARTHQUAKE?"
+	line "TOMBSTONER?"
 	done
 
 CinnabarGymQuizCorrectText:

@@ -97,9 +97,8 @@ CianwoodCityLass:
 CianwoodCityLassText:
 	text "CHUCK, the GYM"
 	line "LEADER, spars with"
-
-	para "his fighting #-"
-	line "MON."
+	cont "his fighting #-"
+	roll "MON."
 	done
 
 CianwoodCitySign:

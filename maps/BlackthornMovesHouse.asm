@@ -144,9 +144,9 @@ BlackthornMovesHouse_MoveReminderIntroText:
 	cont "Or, perhaps a"
 	roll "SILVER LEAF…"
 
-	para "I can make your"
-	line "#MON remember"
-	cont "it's moves."
+;	para "I can make your"
+;	line "#MON remember"
+;	cont "it's moves."
 
 	para "I could help your"
 	line "#MON remember"

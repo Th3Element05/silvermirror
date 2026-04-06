@@ -20,13 +20,13 @@ CeladonDeptStore1FGentlemanScript:
 	jumptextfaceplayer CeladonDeptStore1FGentlemanText
 CeladonDeptStore1FGentlemanText:
 	text "The DEPT.STORE"
-	line "has a decent se-"
-	cont "lection."
+	line "has a pretty good"
+	cont "selection."
 
 	para "But some items"
 	line "are only available"
 	cont "as GAME CORNER"
-	cont "prizes."
+	roll "prizes."
 	done
 
 CeladonDeptStore1FDirectory:

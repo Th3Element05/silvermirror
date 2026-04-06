@@ -310,7 +310,7 @@ CianwoodGymGuideScript:
 CianwoodGymGuideText:
 	text "The GYM LEADER"
 	cont "here uses the"
-	cont "fighting-type."
+	roll "fighting-type."
 
 	para "So you should"
 	line "confound him with"

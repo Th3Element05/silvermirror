@@ -88,7 +88,7 @@ CeladonMansionRoofPharmacistText:
 	text "That #MON"
 	line "is EEVEE. It was"
 	cont "given to me as"
-	cont "a gift."
+	roll "a gift."
 
 	para "But, I'm not a"
 	line "#MON trainer."
@@ -96,7 +96,7 @@ CeladonMansionRoofPharmacistText:
 	para "EEVEE would be"
 	line "happier with a"
 	cont "#MON trainer"
-	cont "like you."
+	roll "like you."
 
 	para "Please, take"
 	line "EEVEE and make"
@@ -126,14 +126,11 @@ CeladonMansionRoofBookText:
 	para "It evolves into"
 	line "different forms"
 	cont "when exposed to"
-	cont "special STONEs."
+	roll "special STONEs."
 
-	para "But EEVEE will"
-	line "also evolve under"
-	cont "other conditions!"
-
-	para "As long as it is"
-	line "happy enough!"
+	para "But EEVEE can also"
+	line "evolve under other"
+	cont "conditions!"
 	done
 
 CeladonMansionRoofHouse_MapEvents:

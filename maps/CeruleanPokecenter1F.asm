@@ -46,8 +46,8 @@ CeruleanPokecenter1FSuperNerdText:
 
 	para "I heard that"
 	line "he'll do whatever"
-	cont "it takes to get"
-	cont "rare #MON!"
+	cont "it takes to see"
+	roll "rare #MON!"
 	done
 
 CeruleanPokecenter1F_MapEvents:

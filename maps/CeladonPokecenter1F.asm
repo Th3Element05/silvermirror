@@ -26,7 +26,7 @@ CeladonPokecenter1FGentlemanText:
 	text "#FLUTE awakens"
 	line "#MON with a"
 	cont "sound that only"
-	cont "they can hear!"
+	roll "they can hear!"
 	done
 
 CeladonPokecenter1FBeautyScript:

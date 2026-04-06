@@ -11,7 +11,7 @@ CherrygroveEvolutionSpeechHouseYoungsterText:
 	text "#MON gain expe-"
 	line "rience in battle"
 	cont "and change their"
-	cont "form."
+	roll "form."
 	done
 
 CherrygroveEvolutionSpeechHouseLassScript:

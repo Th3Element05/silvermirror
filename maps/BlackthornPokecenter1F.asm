@@ -18,7 +18,7 @@ BlackthornPokecenter1FGentlemanText:
 	para "I hear the best"
 	line "trainers gather"
 	cont "there from around"
-	cont "the region."
+	roll "the region."
 	done
 
 BlackthornPokecenter1FTwinScript:

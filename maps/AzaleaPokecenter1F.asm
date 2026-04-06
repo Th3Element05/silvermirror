@@ -18,7 +18,7 @@ AzaleaPokecenter1FGentlemanText:
 	para "You don't need to"
 	line "teach HM moves to"
 	cont "your own #MON"
-	cont "to get around!"
+	roll "to get around!"
 	done
 
 AzaleaPokecenter1FFishingGuruScript:
@@ -38,7 +38,7 @@ AzaleaPokecenter1FPokefanFText:
 	para "Crack one open,"
 	line "hollow it out and"
 	cont "fit it with a"
-	cont "special device."
+	roll "special device."
 
 	para "Then you can catch"
 	line "#MON with it!"
@@ -46,7 +46,7 @@ AzaleaPokecenter1FPokefanFText:
 	para "Before #BALLs"
 	line "were invented,"
 	cont "everyone used"
-	cont "APRICORNs."
+	roll "APRICORNs."
 	done
 
 AzaleaPokecenter1F_MapEvents:

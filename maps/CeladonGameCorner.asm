@@ -27,7 +27,7 @@ CeladonGameCornerReceptionistText:
 	para "You may exchange"
 	line "your coins for"
 	cont "fabulous prizes"
-	cont "next door."
+	roll "next door."
 	done
 
 TrainerRocketGruntM6:
@@ -195,7 +195,7 @@ CeladonGameCornerGymGuideText:
 	para "CELADON GYM's"
 	line "LEADER is ERIKA!"
 	cont "She uses grass-"
-	cont "type #MON!"
+	roll "type #MON!"
 
 	para "She might appear"
 	line "docile, but don't"
@@ -206,7 +206,7 @@ CeladonGameCornerGymGuideAfterText:
 	text "They offer rare"
 	line "#MON that can"
 	cont "be exchanged for"
-	cont "your coins."
+	roll "your coins."
 
 	para "But, I just can't"
 	line "seem to win!"
@@ -301,7 +301,7 @@ CeladonGameCornerGentlemanCoinsText:
 	text "Hey, what? You're"
 	line "throwing me off!"
 	cont "Here are some"
-	cont "coins, shoo!"
+	roll "coins, shoo!"
 	done
 
 CeladonGameCornerGentlemanText:

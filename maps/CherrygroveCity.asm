@@ -176,7 +176,7 @@ CherrygroveYoungsterText_HavePokedex:
 	para "My #MON lost."
 	line "They're a mess! I"
 	cont "must take them to"
-	cont "a #MON CENTER."
+	roll "a #MON CENTER."
 	done
 
 MysticWaterGuy:

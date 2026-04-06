@@ -209,7 +209,7 @@ SlowpokeWellSignText:
 	para "Records show that"
 	line "a SLOWPOKE's yawn"
 	cont "ended a drought"
-	cont "400 years ago."
+	roll "400 years ago."
 	done
 
 CharcoalKilnSign:
