@@ -1,24 +1,34 @@
-DEF CELADONGAMECORNER_CLEFAIRY_COINS     EQU 1000
-DEF CELADONGAMECORNER_DRATINI_COINS      EQU 2000
-DEF CELADONGAMECORNER_CHANSEY_COINS      EQU 3000
-DEF CELADONGAMECORNER_PORYGON_COINS      EQU 4000
+DEF GAMECORNER_CLEFAIRY_COINS     EQU 1000
+DEF GAMECORNER_DRATINI_COINS      EQU 2000
+DEF GAMECORNER_CHANSEY_COINS      EQU 3000
+DEF GAMECORNER_PORYGON_COINS      EQU 4000
 ;
-DEF CELADONGAMECORNER_ETHER_COINS        EQU 200
-DEF CELADONGAMECORNER_PP_UP_COINS        EQU 300
-DEF CELADONGAMECORNER_RARE_CANDY_COINS   EQU 400
-DEF CELADONGAMECORNER_NUGGET_COINS       EQU 500
+DEF GAMECORNER_DUNSPARCE_COINS    EQU 1000
+DEF GAMECORNER_MURKROW_COINS      EQU 2000
+DEF GAMECORNER_SLUGMA_COINS       EQU 3000
+DEF GAMECORNER_LARVITAR_COINS     EQU 4000
 ;
-DEF CELADONGAMECORNER_FIRE_STONE_COINS   EQU 250
-DEF CELADONGAMECORNER_THUNDERSTONE_COINS EQU 250
-DEF CELADONGAMECORNER_WATER_STONE_COINS  EQU 250
-DEF CELADONGAMECORNER_LEAF_STONE_COINS   EQU 250
+DEF GAMECORNER_ETHER_COINS        EQU 200
+DEF GAMECORNER_PP_UP_COINS        EQU 300
+DEF GAMECORNER_RARE_CANDY_COINS   EQU 400
+DEF GAMECORNER_NUGGET_COINS       EQU 500
 ;
-;DEF CELADONGAMECORNER_SUN_STONE_COINS    EQU 1000
-;DEF CELADONGAMECORNER_DUSK_STONE_COINS   EQU 1000
-;DEF CELADONGAMECORNER_KINGS_ROCK_COINS   EQU 1000
-;DEF CELADONGAMECORNER_METAL_COAT_COINS   EQU 1000
-;DEF CELADONGAMECORNER_DRAGON_SCALE_COINS EQU 1000
-;;DEF CELADONGAMECORNER_UP_GRADE_COINS     EQU 1000
+;DEF GAMECORNER_FIRE_STONE_COINS   EQU 250
+;DEF GAMECORNER_THUNDERSTONE_COINS EQU 250
+;DEF GAMECORNER_WATER_STONE_COINS  EQU 250
+;DEF GAMECORNER_LEAF_STONE_COINS   EQU 250
+DEF GAMECORNER_EVO_STONE_COINS    EQU 250
+;
+;DEF GAMECORNER_KINGS_ROCK_COINS   EQU 1000
+;DEF GAMECORNER_METAL_COAT_COINS   EQU 1000
+;DEF GAMECORNER_DRAGON_SCALE_COINS EQU 1000
+;DEF GAMECORNER_RAZOR_CLAW_COINS   EQU 1000
+;DEF GAMECORNER_RAZOR_FANG_COINS   EQU 1000
+DEF GAMECORNER_EVO_ITEM_COINS     EQU 1000
+;DEF GAMECORNER_SUN_STONE_COINS    EQU 1000
+;DEF GAMECORNER_DUSK_STONE_COINS   EQU 1000
+;DEF GAMECORNER_UP_GRADE_COINS     EQU 1000
+;
 ;50 coins = $1000
 ;500 coins = $10000
 
@@ -29,34 +39,34 @@ CeladonGameCornerPrizeRoom_MapScripts:
 
 	def_callbacks
 
-; pokemon prize vendor
-CeladonPrizeRoomPokemonVendor:
+; kanto pokemon prize vendor
+GameCornerPrizesKantoPokemonVendor:
 	faceplayer
 	opentext
 	writetext GameCornerPrize_IntroText
 	waitbutton
 	checkitem COIN_CASE
-	iffalse CeladonPrizeRoom_NoCoinCaseScript
+	iffalse GameCorner_NoCoinCaseScript
 .loop
 	writetext GameCornerPrize_WhichPrizeText
 	special DisplayCoinCaseBalance
-	loadmenu CeladonPrizeRoomMonVendorMenuHeader
+	loadmenu GameCornerPrizesKantoMonMenuHeader
 	verticalmenu
 	closewindow
 	ifequal 1, .Clefairy
 	ifequal 2, .Dratini
 	ifequal 3, .Chansey
 	ifequal 4, .Porygon
-	sjump CeladonPrizeRoom_CancelPurchaseScript
+	sjump GameCorner_CancelPurchaseScript
 
 .Clefairy:
-	checkcoins CELADONGAMECORNER_CLEFAIRY_COINS
-	ifequal HAVE_LESS, CeladonPrizeRoom_NotEnoughCoinsScript
+	checkcoins GAMECORNER_CLEFAIRY_COINS
+	ifequal HAVE_LESS, GameCorner_NotEnoughCoinsScript
 	readvar VAR_PARTYCOUNT
-	ifequal PARTY_LENGTH, CeladonPrizeRoom_NoRoomScript
+	ifequal PARTY_LENGTH, GameCorner_NoRoomScript
 	getmonname STRING_BUFFER_3, CLEFAIRY
-	scall CeladonPrizeRoom_ConfirmPurchaseScript
-	iffalse CeladonPrizeRoom_CancelPurchaseScript
+	scall GameCorner_ConfirmPurchaseScript
+	iffalse GameCorner_CancelPurchaseScript
 	waitsfx
 	playsound SFX_TRANSACTION
 	writetext GameCornerPrize_HereYouGoText
@@ -64,17 +74,17 @@ CeladonPrizeRoomPokemonVendor:
 	setval CLEFAIRY
 	special GameCornerPrizeMonCheckDex
 	givepoke CLEFAIRY, 12
-	takecoins CELADONGAMECORNER_CLEFAIRY_COINS
+	takecoins GAMECORNER_CLEFAIRY_COINS
 	sjump .loop
 
 .Dratini:
-	checkcoins CELADONGAMECORNER_DRATINI_COINS
-	ifequal HAVE_LESS, CeladonPrizeRoom_NotEnoughCoinsScript
+	checkcoins GAMECORNER_DRATINI_COINS
+	ifequal HAVE_LESS, GameCorner_NotEnoughCoinsScript
 	readvar VAR_PARTYCOUNT
-	ifequal PARTY_LENGTH, CeladonPrizeRoom_NoRoomScript
+	ifequal PARTY_LENGTH, GameCorner_NoRoomScript
 	getmonname STRING_BUFFER_3, DRATINI
-	scall CeladonPrizeRoom_ConfirmPurchaseScript
-	iffalse CeladonPrizeRoom_CancelPurchaseScript
+	scall GameCorner_ConfirmPurchaseScript
+	iffalse GameCorner_CancelPurchaseScript
 	waitsfx
 	playsound SFX_TRANSACTION
 	writetext GameCornerPrize_HereYouGoText
@@ -82,17 +92,17 @@ CeladonPrizeRoomPokemonVendor:
 	setval DRATINI
 	special GameCornerPrizeMonCheckDex
 	givepoke DRATINI, 24
-	takecoins CELADONGAMECORNER_DRATINI_COINS
+	takecoins GAMECORNER_DRATINI_COINS
 	sjump .loop
 
 .Chansey:
-	checkcoins CELADONGAMECORNER_CHANSEY_COINS
-	ifequal HAVE_LESS, CeladonPrizeRoom_NotEnoughCoinsScript
+	checkcoins GAMECORNER_CHANSEY_COINS
+	ifequal HAVE_LESS, GameCorner_NotEnoughCoinsScript
 	readvar VAR_PARTYCOUNT
-	ifequal PARTY_LENGTH, CeladonPrizeRoom_NoRoomScript
+	ifequal PARTY_LENGTH, GameCorner_NoRoomScript
 	getmonname STRING_BUFFER_3, CHANSEY
-	scall CeladonPrizeRoom_ConfirmPurchaseScript
-	iffalse CeladonPrizeRoom_CancelPurchaseScript
+	scall GameCorner_ConfirmPurchaseScript
+	iffalse GameCorner_CancelPurchaseScript
 	waitsfx
 	playsound SFX_TRANSACTION
 	writetext GameCornerPrize_HereYouGoText
@@ -100,17 +110,17 @@ CeladonPrizeRoomPokemonVendor:
 	setval CHANSEY
 	special GameCornerPrizeMonCheckDex
 	givepoke CHANSEY, 18
-	takecoins CELADONGAMECORNER_CHANSEY_COINS
+	takecoins GAMECORNER_CHANSEY_COINS
 	sjump .loop
 
 .Porygon:
-	checkcoins CELADONGAMECORNER_PORYGON_COINS
-	ifequal HAVE_LESS, CeladonPrizeRoom_NotEnoughCoinsScript
+	checkcoins GAMECORNER_PORYGON_COINS
+	ifequal HAVE_LESS, GameCorner_NotEnoughCoinsScript
 	readvar VAR_PARTYCOUNT
-	ifequal PARTY_LENGTH, CeladonPrizeRoom_NoRoomScript
+	ifequal PARTY_LENGTH, GameCorner_NoRoomScript
 	getmonname STRING_BUFFER_3, PORYGON
-	scall CeladonPrizeRoom_ConfirmPurchaseScript
-	iffalse CeladonPrizeRoom_CancelPurchaseScript
+	scall GameCorner_ConfirmPurchaseScript
+	iffalse GameCorner_CancelPurchaseScript
 	waitsfx
 	playsound SFX_TRANSACTION
 	writetext GameCornerPrize_HereYouGoText
@@ -118,88 +128,194 @@ CeladonPrizeRoomPokemonVendor:
 	setval PORYGON
 	special GameCornerPrizeMonCheckDex
 	givepoke PORYGON, 10
-	takecoins CELADONGAMECORNER_PORYGON_COINS
+	takecoins GAMECORNER_PORYGON_COINS
 	sjump .loop
 
-CeladonPrizeRoomMonVendorMenuHeader:
+GameCornerPrizesKantoMonMenuHeader:
 	db MENU_BACKUP_TILES ; flags
 	menu_coords 0, 2, 19, TEXTBOX_Y ;- -1
 	dw .MenuDataMons
 	db 1 ; default option
-.MenuDataMons:
+.MenuDataKantoMons:
 	db STATICMENU_CURSOR ; flags
 	db 4 ; items
-	db "CLEFAIRY     {d:CELADONGAMECORNER_CLEFAIRY_COINS}@"
-	db "DRATINI      {d:CELADONGAMECORNER_DRATINI_COINS}@"
-	db "CHANSEY      {d:CELADONGAMECORNER_CHANSEY_COINS}@"
-	db "PORYGON      {d:CELADONGAMECORNER_PORYGON_COINS}@"
+	db "CLEFAIRY     {d:GAMECORNER_CLEFAIRY_COINS}@"
+	db "DRATINI      {d:GAMECORNER_DRATINI_COINS}@"
+	db "CHANSEY      {d:GAMECORNER_CHANSEY_COINS}@"
+	db "PORYGON      {d:GAMECORNER_PORYGON_COINS}@"
 ;	db "CANCEL@"
 
-; item prize vendor
-CeladonPrizeRoomItemVendor:
+; johto pokemon prize vendor
+GameCornerPrizesJohtoPokemonVendor:
 	faceplayer
 	opentext
 	writetext GameCornerPrize_IntroText
 	waitbutton
 	checkitem COIN_CASE
-	iffalse CeladonPrizeRoom_NoCoinCaseScript
+	iffalse GameCorner_NoCoinCaseScript
+.loop
 	writetext GameCornerPrize_WhichPrizeText
-CeladonPrizeRoomItemVendorLoop:
 	special DisplayCoinCaseBalance
-	loadmenu CeladonPrizeRoomItemVendorMenuHeader
+	loadmenu GameCornerPrizesJohtoMonMenuHeader
+	verticalmenu
+	closewindow
+	ifequal 1, .Dunsparce
+	ifequal 2, .Murkrow
+	ifequal 3, .Slugma
+	ifequal 4, .Larvitar
+	sjump GameCorner_CancelPurchaseScript
+
+.Dunsparce:
+	checkcoins GAMECORNER_DUNSPARCE_COINS
+	ifequal HAVE_LESS, GameCorner_NotEnoughCoinsScript
+	readvar VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, GameCorner_NoRoomScript
+	getmonname STRING_BUFFER_3, DUNSPARCE
+	scall GameCorner_ConfirmPurchaseScript
+	iffalse GameCorner_CancelPurchaseScript
+	waitsfx
+	playsound SFX_TRANSACTION
+	writetext GameCornerPrize_HereYouGoText
+	waitbutton
+	setval DUNSPARCE
+	special GameCornerPrizeMonCheckDex
+	givepoke DUNSPARCE, 10
+	takecoins GAMECORNER_CLEFAIRY_COINS
+	sjump .loop
+
+.Murkrow:
+	checkcoins GAMECORNER_MURKROW_COINS
+	ifequal HAVE_LESS, GameCorner_NotEnoughCoinsScript
+	readvar VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, GameCorner_NoRoomScript
+	getmonname STRING_BUFFER_3, MURKROW
+	scall GameCorner_ConfirmPurchaseScript
+	iffalse GameCorner_CancelPurchaseScript
+	waitsfx
+	playsound SFX_TRANSACTION
+	writetext GameCornerPrize_HereYouGoText
+	waitbutton
+	setval MURKROW
+	special GameCornerPrizeMonCheckDex
+	givepoke DRATINI, 18
+	takecoins GAMECORNER_MURKROW_COINS
+	sjump .loop
+
+.Slugma:
+	checkcoins GAMECORNER_SLUGMA_COINS
+	ifequal HAVE_LESS, GameCorner_NotEnoughCoinsScript
+	readvar VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, GameCorner_NoRoomScript
+	getmonname STRING_BUFFER_3, SLUGMA
+	scall GameCorner_ConfirmPurchaseScript
+	iffalse GameCorner_CancelPurchaseScript
+	waitsfx
+	playsound SFX_TRANSACTION
+	writetext GameCornerPrize_HereYouGoText
+	waitbutton
+	setval SLUGMA
+	special GameCornerPrizeMonCheckDex
+	givepoke CHANSEY, 24
+	takecoins GAMECORNER_SLUGMA_COINS
+	sjump .loop
+
+.Larvitar:
+	checkcoins GAMECORNER_LARVITAR_COINS
+	ifequal HAVE_LESS, GameCorner_NotEnoughCoinsScript
+	readvar VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, GameCorner_NoRoomScript
+	getmonname STRING_BUFFER_3, LARVITAR
+	scall GameCorner_ConfirmPurchaseScript
+	iffalse GameCorner_CancelPurchaseScript
+	waitsfx
+	playsound SFX_TRANSACTION
+	writetext GameCornerPrize_HereYouGoText
+	waitbutton
+	setval LARVITAR
+	special GameCornerPrizeMonCheckDex
+	givepoke PORYGON, 10
+	takecoins GAMECORNER_LARVITAR_COINS
+	sjump .loop
+
+GameCornerPrizesJohtoMonMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 2, 19, TEXTBOX_Y ;- -1
+	dw .MenuDataJohtoMons
+	db 1 ; default option
+.MenuDataJohtoMons:
+	db STATICMENU_CURSOR ; flags
+	db 4 ; items
+	db "DUNSPARCE    {d:GAMECORNER_DUNSPARCE_COINS}@"
+	db "MURKROW      {d:GAMECORNER_MURKROW_COINS}@"
+	db "SLUGMA       {d:GAMECORNER_SLUGMA_COINS}@"
+	db "LARVITAR     {d:GAMECORNER_LARVITAR_COINS}@"
+;	db "CANCEL@"
+
+; item prize vendor
+GameCornerPrizesItemVendor:
+	faceplayer
+	opentext
+	writetext GameCornerPrize_IntroText
+	waitbutton
+	checkitem COIN_CASE
+	iffalse GameCorner_NoCoinCaseScript
+	writetext GameCornerPrize_WhichPrizeText
+GameCornerPrizesItemVendorLoop:
+	special DisplayCoinCaseBalance
+	loadmenu GameCornerPrizesItemMenuHeader
 	verticalmenu
 	closewindow
 	ifequal 1, .Ether
 	ifequal 2, .PPUp
 	ifequal 3, .RareCandy
 	ifequal 4, .Nugget
-	sjump CeladonPrizeRoom_CancelPurchaseScript
+	sjump GameCorner_CancelPurchaseScript
 
 .Ether:
-	checkcoins CELADONGAMECORNER_ETHER_COINS
-	ifequal HAVE_LESS, CeladonPrizeRoom_NotEnoughCoinsScript
+	checkcoins GAMECORNER_ETHER_COINS
+	ifequal HAVE_LESS, GameCorner_NotEnoughCoinsScript
 	getitemname STRING_BUFFER_3, ETHER
-	scall CeladonPrizeRoom_ConfirmPurchaseScript
-	iffalse CeladonPrizeRoom_CancelPurchaseScript
+	scall GameCorner_ConfirmPurchaseScript
+	iffalse GameCorner_CancelPurchaseScript
 	giveitem ETHER
-	iffalse CeladonPrizeRoom_NoRoomScript
-	takecoins CELADONGAMECORNER_ETHER_COINS
-	sjump CeladonPrizeRoomItemVendor_FinishScript
+	iffalse GameCorner_NoRoomScript
+	takecoins GAMECORNER_ETHER_COINS
+	sjump GameCornerPrizesItemVendor_FinishScript
 
 .PPUp:
-	checkcoins CELADONGAMECORNER_PP_UP_COINS
-	ifequal HAVE_LESS, CeladonPrizeRoom_NotEnoughCoinsScript
+	checkcoins GAMECORNER_PP_UP_COINS
+	ifequal HAVE_LESS, GameCorner_NotEnoughCoinsScript
 	getitemname STRING_BUFFER_3, PP_UP
-	scall CeladonPrizeRoom_ConfirmPurchaseScript
-	iffalse CeladonPrizeRoom_CancelPurchaseScript
+	scall GameCorner_ConfirmPurchaseScript
+	iffalse GameCorner_CancelPurchaseScript
 	giveitem PP_UP
-	iffalse CeladonPrizeRoom_NoRoomScript
-	takecoins CELADONGAMECORNER_PP_UP_COINS
-	sjump CeladonPrizeRoomItemVendor_FinishScript
+	iffalse GameCorner_NoRoomScript
+	takecoins GAMECORNER_PP_UP_COINS
+	sjump GameCornerPrizesItemVendor_FinishScript
 
 .RareCandy:
-	checkcoins CELADONGAMECORNER_RARE_CANDY_COINS
-	ifequal HAVE_LESS, CeladonPrizeRoom_NotEnoughCoinsScript
+	checkcoins GAMECORNER_RARE_CANDY_COINS
+	ifequal HAVE_LESS, GameCorner_NotEnoughCoinsScript
 	getitemname STRING_BUFFER_3, RARE_CANDY
-	scall CeladonPrizeRoom_ConfirmPurchaseScript
-	iffalse CeladonPrizeRoom_CancelPurchaseScript
+	scall GameCorner_ConfirmPurchaseScript
+	iffalse GameCorner_CancelPurchaseScript
 	giveitem RARE_CANDY
-	iffalse CeladonPrizeRoom_NoRoomScript
-	takecoins CELADONGAMECORNER_RARE_CANDY_COINS
-	sjump CeladonPrizeRoomItemVendor_FinishScript
+	iffalse GameCorner_NoRoomScript
+	takecoins GAMECORNER_RARE_CANDY_COINS
+	sjump GameCornerPrizesItemVendor_FinishScript
 
 .Nugget:
-	checkcoins CELADONGAMECORNER_NUGGET_COINS
-	ifequal HAVE_LESS, CeladonPrizeRoom_NotEnoughCoinsScript
+	checkcoins GAMECORNER_NUGGET_COINS
+	ifequal HAVE_LESS, GameCorner_NotEnoughCoinsScript
 	getitemname STRING_BUFFER_3, NUGGET
-	scall CeladonPrizeRoom_ConfirmPurchaseScript
-	iffalse CeladonPrizeRoom_CancelPurchaseScript
+	scall GameCorner_ConfirmPurchaseScript
+	iffalse GameCorner_CancelPurchaseScript
 	giveitem NUGGET
-	iffalse CeladonPrizeRoom_NoRoomScript
-	takecoins CELADONGAMECORNER_NUGGET_COINS
-	sjump CeladonPrizeRoomItemVendor_FinishScript
+	iffalse GameCorner_NoRoomScript
+	takecoins GAMECORNER_NUGGET_COINS
+	sjump GameCornerPrizesItemVendor_FinishScript
 
-CeladonPrizeRoomItemVendorMenuHeader:
+GameCornerPrizesItemMenuHeader:
 	db MENU_BACKUP_TILES ; flags
 	menu_coords 0, 2, 19, TEXTBOX_Y ;- -1
 	dw .MenuDataItems
@@ -207,79 +323,79 @@ CeladonPrizeRoomItemVendorMenuHeader:
 .MenuDataItems:
 	db STATICMENU_CURSOR ; flags
 	db 4 ; items
-	db "ETHER        {d:CELADONGAMECORNER_ETHER_COINS}@"
-	db "PP UP        {d:CELADONGAMECORNER_PP_UP_COINS}@"
-	db "RARE CANDY   {d:CELADONGAMECORNER_RARE_CANDY_COINS}@"
-	db "NUGGET       {d:CELADONGAMECORNER_NUGGET_COINS}@"
+	db "ETHER        {d:GAMECORNER_ETHER_COINS}@"
+	db "PP UP        {d:GAMECORNER_PP_UP_COINS}@"
+	db "RARE CANDY   {d:GAMECORNER_RARE_CANDY_COINS}@"
+	db "NUGGET       {d:GAMECORNER_NUGGET_COINS}@"
 ;	db "CANCEL@"
 
 ; stone prize vendor
-CeladonPrizeRoomStoneVendor:
+GameCornerPrizesStoneVendor:
 	faceplayer
 	opentext
 	writetext GameCornerPrize_IntroText
 	waitbutton
 	checkitem COIN_CASE
-	iffalse CeladonPrizeRoom_NoCoinCaseScript
+	iffalse GameCorner_NoCoinCaseScript
 	writetext GameCornerPrize_WhichPrizeText
-CeladonPrizeRoomStoneVendorLoop:
+GameCornerPrizesStoneVendorLoop:
 	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
-	iftrue GoldenrodGameCornerEvolveVendorLoop
+	iftrue GameCornerPrizesEvolveVendor
 	special DisplayCoinCaseBalance
-	loadmenu CeladonPrizeRoomStoneVendorMenuHeader
+	loadmenu GameCornerPrizesStoneMenuHeader
 	verticalmenu
 	closewindow
 	ifequal 1, .FireStone
 	ifequal 2, .Thunderstone
 	ifequal 3, .WaterStone
 	ifequal 4, .LeafStone
-	sjump CeladonPrizeRoom_CancelPurchaseScript
+	sjump GameCorner_CancelPurchaseScript
 
 .FireStone:
-	checkcoins CELADONGAMECORNER_FIRE_STONE_COINS
-	ifequal HAVE_LESS, CeladonPrizeRoom_NotEnoughCoinsScript
+	checkcoins GAMECORNER_EVO_STONE_COINS
+	ifequal HAVE_LESS, GameCorner_NotEnoughCoinsScript
 	getitemname STRING_BUFFER_3, FIRE_STONE
-	scall CeladonPrizeRoom_ConfirmPurchaseScript
-	iffalse CeladonPrizeRoom_CancelPurchaseScript
+	scall GameCorner_ConfirmPurchaseScript
+	iffalse GameCorner_CancelPurchaseScript
 	giveitem FIRE_STONE
-	iffalse CeladonPrizeRoom_NoRoomScript
-	takecoins CELADONGAMECORNER_FIRE_STONE_COINS
-	sjump CeladonPrizeRoomStoneVendor_FinishScript
+	iffalse GameCorner_NoRoomScript
+	takecoins GAMECORNER_EVO_STONE_COINS
+	sjump GameCornerPrizesStoneVendor_FinishScript
 
 .Thunderstone:
-	checkcoins CELADONGAMECORNER_THUNDERSTONE_COINS
-	ifequal HAVE_LESS, CeladonPrizeRoom_NotEnoughCoinsScript
+	checkcoins GAMECORNER_EVO_STONE_COINS
+	ifequal HAVE_LESS, GameCorner_NotEnoughCoinsScript
 	getitemname STRING_BUFFER_3, THUNDERSTONE
-	scall CeladonPrizeRoom_ConfirmPurchaseScript
-	iffalse CeladonPrizeRoom_CancelPurchaseScript
+	scall GameCorner_ConfirmPurchaseScript
+	iffalse GameCorner_CancelPurchaseScript
 	giveitem THUNDERSTONE
-	iffalse CeladonPrizeRoom_NoRoomScript
-	takecoins CELADONGAMECORNER_THUNDERSTONE_COINS
-	sjump CeladonPrizeRoomStoneVendor_FinishScript
+	iffalse GameCorner_NoRoomScript
+	takecoins GAMECORNER_EVO_STONE_COINS
+	sjump GameCornerPrizesStoneVendor_FinishScript
 
 .WaterStone:
-	checkcoins CELADONGAMECORNER_WATER_STONE_COINS
-	ifequal HAVE_LESS, CeladonPrizeRoom_NotEnoughCoinsScript
+	checkcoins GAMECORNER_EVO_STONE_COINS
+	ifequal HAVE_LESS, GameCorner_NotEnoughCoinsScript
 	getitemname STRING_BUFFER_3, WATER_STONE
-	scall CeladonPrizeRoom_ConfirmPurchaseScript
-	iffalse CeladonPrizeRoom_CancelPurchaseScript
+	scall GameCorner_ConfirmPurchaseScript
+	iffalse GameCorner_CancelPurchaseScript
 	giveitem WATER_STONE
-	iffalse CeladonPrizeRoom_NoRoomScript
-	takecoins CELADONGAMECORNER_WATER_STONE_COINS
-	sjump CeladonPrizeRoomStoneVendor_FinishScript
+	iffalse GameCorner_NoRoomScript
+	takecoins GAMECORNER_EVO_STONE_COINS
+	sjump GameCornerPrizesStoneVendor_FinishScript
 
 .LeafStone:
-	checkcoins CELADONGAMECORNER_LEAF_STONE_COINS
-	ifequal HAVE_LESS, CeladonPrizeRoom_NotEnoughCoinsScript
+	checkcoins GAMECORNER_EVO_STONE_COINS
+	ifequal HAVE_LESS, GameCorner_NotEnoughCoinsScript
 	getitemname STRING_BUFFER_3, LEAF_STONE
-	scall CeladonPrizeRoom_ConfirmPurchaseScript
-	iffalse CeladonPrizeRoom_CancelPurchaseScript
+	scall GameCorner_ConfirmPurchaseScript
+	iffalse GameCorner_CancelPurchaseScript
 	giveitem LEAF_STONE
-	iffalse CeladonPrizeRoom_NoRoomScript
-	takecoins CELADONGAMECORNER_LEAF_STONE_COINS
-	sjump CeladonPrizeRoomStoneVendor_FinishScript
+	iffalse GameCorner_NoRoomScript
+	takecoins GAMECORNER_EVO_STONE_COINS
+	sjump GameCornerPrizesStoneVendor_FinishScript
 
-CeladonPrizeRoomStoneVendorMenuHeader:
+GameCornerPrizesStoneMenuHeader:
 	db MENU_BACKUP_TILES ; flags
 	menu_coords 0, 2, 19, TEXTBOX_Y ;- -1
 	dw .MenuDataItems
@@ -287,147 +403,188 @@ CeladonPrizeRoomStoneVendorMenuHeader:
 .MenuDataItems:
 	db STATICMENU_CURSOR ; flags
 	db 4 ; items
-	db "FIRE STONE   {d:CELADONGAMECORNER_FIRE_STONE_COINS}@"
-	db "THUNDERSTONE {d:CELADONGAMECORNER_THUNDERSTONE_COINS}@"
-	db "WATER STONE  {d:CELADONGAMECORNER_WATER_STONE_COINS}@"
-	db "LEAF STONE   {d:CELADONGAMECORNER_LEAF_STONE_COINS}@"
+	db "FIRE STONE   {d:GAMECORNER_EVO_STONE_COINS}@"
+	db "THUNDERSTONE {d:GAMECORNER_EVO_STONE_COINS}@"
+	db "WATER STONE  {d:GAMECORNER_EVO_STONE_COINS}@"
+	db "LEAF STONE   {d:GAMECORNER_EVO_STONE_COINS}@"
 ;	db "CANCEL@"
 
-;; evolve prize vendor
-;CeladonPrizeRoomEvolveVendorLoop:
-;	writetext GameCornerPrize_WhichPrizeText_Short
-;	special DisplayCoinCaseBalance
-;	loadmenu CeladonPrizeRoomEvolveVendorMenuHeader
-;	verticalmenu
-;	closewindow
-;	ifequal 1, .SunStone
-;	ifequal 2, .DuskStone
-;	ifequal 3, .KingsRock
-;	ifequal 4, .MetalCoat
-;	ifequal 5, .DragonScale
-;	sjump CeladonPrizeRoom_CancelPurchaseScript
-;
+; evolve prize vendor
+GameCornerPrizesEvolveVendor:
+	faceplayer
+	opentext
+	writetext GameCornerPrize_IntroText
+	waitbutton
+	checkitem COIN_CASE
+	iffalse GameCorner_NoCoinCaseScript
+	writetext GameCornerPrize_WhichPrizeText
+GameCornerPrizesEvolveVendorLoop:
+	writetext GameCornerPrize_WhichPrizeText_Short
+	special DisplayCoinCaseBalance
+	loadmenu GameCornerPrizesEvolveMenuHeader
+	verticalmenu
+	closewindow
+	ifequal 1, .KingsRock
+	ifequal 2, .MetalCoat
+	ifequal 3, .DragonScale
+	ifequal 4, .RazorClaw
+	ifequal 5, .RazorFang
+;	ifequal 4, .SunStone
+;	ifequal 5, .DuskStone
+	sjump GameCorner_CancelPurchaseScript
+
+.KingsRock:
+	checkcoins GAMECORNER_EVO_ITEM_COINS
+	ifequal HAVE_LESS, GameCorner_NotEnoughCoinsScript
+	getitemname STRING_BUFFER_3, KINGS_ROCK
+	scall GameCorner_ConfirmPurchaseScript
+	iffalse GameCorner_CancelPurchaseScript
+	giveitem KINGS_ROCK
+	iffalse GameCorner_NoRoomScript
+	takecoins GAMECORNER_EVO_ITEM_COINS
+	sjump GameCornerPrizesEvolveVendor_FinishScript
+
+.MetalCoat:
+	checkcoins GAMECORNER_EVO_ITEM_COINS
+	ifequal HAVE_LESS, GameCorner_NotEnoughCoinsScript
+	getitemname STRING_BUFFER_3, METAL_COAT
+	scall GameCorner_ConfirmPurchaseScript
+	iffalse GameCorner_CancelPurchaseScript
+	giveitem METAL_COAT
+	iffalse GameCorner_NoRoomScript
+	takecoins GAMECORNER_EVO_ITEM_COINS
+	sjump GameCornerPrizesEvolveVendor_FinishScript
+
+.DragonScale:
+	checkcoins GAMECORNER_EVO_ITEM_COINS
+	ifequal HAVE_LESS, GameCorner_NotEnoughCoinsScript
+	getitemname STRING_BUFFER_3, DRAGON_SCALE
+	scall GameCorner_ConfirmPurchaseScript
+	iffalse GameCorner_CancelPurchaseScript
+	giveitem DRAGON_SCALE
+	iffalse GameCorner_NoRoomScript
+	takecoins GAMECORNER_EVO_ITEM_COINS
+	sjump GameCornerPrizesEvolveVendor_FinishScript
+
+.RazorClaw:
+	checkcoins GAMECORNER_EVO_ITEM_COINS
+	ifequal HAVE_LESS, GameCorner_NotEnoughCoinsScript
+	getitemname STRING_BUFFER_3, RAZOR_CLAW
+	scall GameCorner_ConfirmPurchaseScript
+	iffalse GameCorner_CancelPurchaseScript
+	giveitem RAZOR_CLAW
+	iffalse GameCorner_NoRoomScript
+	takecoins GAMECORNER_EVO_ITEM_COINS
+	sjump GameCornerPrizesEvolveVendor_FinishScript
+
+.RazorFang:
+	checkcoins GAMECORNER_EVO_ITEM_COINS
+	ifequal HAVE_LESS, GameCorner_NotEnoughCoinsScript
+	getitemname STRING_BUFFER_3, RAZOR_FANG
+	scall GameCorner_ConfirmPurchaseScript
+	iffalse GameCorner_CancelPurchaseScript
+	giveitem RAZOR_FANG
+	iffalse GameCorner_NoRoomScript
+	takecoins GAMECORNER_EVO_ITEM_COINS
+	sjump GameCornerPrizesEvolveVendor_FinishScript
+
 ;.SunStone:
-;	checkcoins CELADONGAMECORNER_SUN_STONE_COINS
-;	ifequal HAVE_LESS, CeladonPrizeRoom_NotEnoughCoinsScript
+;	checkcoins GAMECORNER_SUN_STONE_COINS
+;	ifequal HAVE_LESS, GameCorner_NotEnoughCoinsScript
 ;	getitemname STRING_BUFFER_3, SUN_STONE
-;	scall CeladonPrizeRoom_ConfirmPurchaseScript
-;	iffalse CeladonPrizeRoom_CancelPurchaseScript
+;	scall GameCorner_ConfirmPurchaseScript
+;	iffalse GameCorner_CancelPurchaseScript
 ;	giveitem SUN_STONE
-;	iffalse CeladonPrizeRoom_NoRoomScript
-;	takecoins CELADONGAMECORNER_SUN_STONE_COINS
-;	sjump CeladonPrizeRoomStoneVendor_FinishScript
-;
+;	iffalse GameCorner_NoRoomScript
+;	takecoins GAMECORNER_SUN_STONE_COINS
+;	sjump GameCornerPrizesEvolveVendor_FinishScript
+
 ;.DuskStone:
-;	checkcoins CELADONGAMECORNER_DUSK_STONE_COINS
-;	ifequal HAVE_LESS, CeladonPrizeRoom_NotEnoughCoinsScript
+;	checkcoins GAMECORNER_DUSK_STONE_COINS
+;	ifequal HAVE_LESS, GameCorner_NotEnoughCoinsScript
 ;	getitemname STRING_BUFFER_3, DUSK_STONE
-;	scall CeladonPrizeRoom_ConfirmPurchaseScript
-;	iffalse CeladonPrizeRoom_CancelPurchaseScript
+;	scall GameCorner_ConfirmPurchaseScript
+;	iffalse GameCorner_CancelPurchaseScript
 ;	giveitem DUSK_STONE
-;	iffalse CeladonPrizeRoom_NoRoomScript
-;	takecoins CELADONGAMECORNER_DUSK_STONE_COINS
-;	sjump CeladonPrizeRoomStoneVendor_FinishScript
-;
-;.KingsRock:
-;	checkcoins CELADONGAMECORNER_KINGS_ROCK_COINS
-;	ifequal HAVE_LESS, CeladonPrizeRoom_NotEnoughCoinsScript
-;	getitemname STRING_BUFFER_3, KINGS_ROCK
-;	scall CeladonPrizeRoom_ConfirmPurchaseScript
-;	iffalse CeladonPrizeRoom_CancelPurchaseScript
-;	giveitem KINGS_ROCK
-;	iffalse CeladonPrizeRoom_NoRoomScript
-;	takecoins CELADONGAMECORNER_KINGS_ROCK_COINS
-;	sjump CeladonPrizeRoomStoneVendor_FinishScript
-;
-;.MetalCoat:
-;	checkcoins CELADONGAMECORNER_METAL_COAT_COINS
-;	ifequal HAVE_LESS, CeladonPrizeRoom_NotEnoughCoinsScript
-;	getitemname STRING_BUFFER_3, METAL_COAT
-;	scall CeladonPrizeRoom_ConfirmPurchaseScript
-;	iffalse CeladonPrizeRoom_CancelPurchaseScript
-;	giveitem METAL_COAT
-;	iffalse CeladonPrizeRoom_NoRoomScript
-;	takecoins CELADONGAMECORNER_METAL_COAT_COINS
-;	sjump CeladonPrizeRoomStoneVendor_FinishScript
-;
-;.DragonScale:
-;	checkcoins CELADONGAMECORNER_DRAGON_SCALE_COINS
-;	ifequal HAVE_LESS, CeladonPrizeRoom_NotEnoughCoinsScript
-;	getitemname STRING_BUFFER_3, DRAGON_SCALE
-;	scall CeladonPrizeRoom_ConfirmPurchaseScript
-;	iffalse CeladonPrizeRoom_CancelPurchaseScript
-;	giveitem DRAGON_SCALE
-;	iffalse CeladonPrizeRoom_NoRoomScript
-;	takecoins CELADONGAMECORNER_DRAGON_SCALE_COINS
-;	sjump CeladonPrizeRoomStoneVendor_FinishScript
-;
-;;.UpGrade:
-;;	checkcoins CELADONGAMECORNER_UP_GRADE_COINS
-;;	ifequal HAVE_LESS, CeladonPrizeRoom_NotEnoughCoinsScript
-;;	getitemname STRING_BUFFER_3, UP_GRADE
-;;	scall CeladonPrizeRoom_ConfirmPurchaseScript
-;;	iffalse CeladonPrizeRoom_CancelPurchaseScript
-;;	giveitem UP_GRADE
-;;	iffalse CeladonPrizeRoom_NoRoomScript
-;;	takecoins CELADONGAMECORNER_UP_GRADE_COINS
-;;	sjump CeladonPrizeRoomStoneVendor_FinishScript
-;
-;CeladonPrizeRoomEvolveVendorMenuHeader:
-;	db MENU_BACKUP_TILES ; flags
-;	menu_coords 0, 2, 19, TEXTBOX_Y - -2
-;	dw .MenuDataItems
-;	db 1 ; default option
-;.MenuDataItems:
-;	db STATICMENU_CURSOR ; flags
-;	db 5 ; items
-;	db "SUN STONE    {d:CELADONGAMECORNER_SUN_STONE_COINS}@"
-;	db "DUSK STONE   {d:CELADONGAMECORNER_DUSK_STONE_COINS}@"
-;	db "KING's ROCK   {d:CELADONGAMECORNER_KINGS_ROCK_COINS}@"
-;	db "METAL COAT   {d:CELADONGAMECORNER_METAL_COAT_COINS}@"
-;	db "DRAGON SCALE {d:CELADONGAMECORNER_DRAGON_SCALE_COINS}@"
-;;	db "UP-GRADE     {d:CELADONGAMECORNER_UP_GRADE_COINS}@"
-;;	db "CANCEL@"
+;	iffalse GameCorner_NoRoomScript
+;	takecoins GAMECORNER_DUSK_STONE_COINS
+;	sjump GameCornerPrizesEvolveVendor_FinishScript
+
+;.UpGrade:
+;	checkcoins GAMECORNER_UP_GRADE_COINS
+;	ifequal HAVE_LESS, GameCorner_NotEnoughCoinsScript
+;	getitemname STRING_BUFFER_3, UP_GRADE
+;	scall GameCorner_ConfirmPurchaseScript
+;	iffalse GameCorner_CancelPurchaseScript
+;	giveitem UP_GRADE
+;	iffalse GameCorner_NoRoomScript
+;	takecoins GAMECORNER_UP_GRADE_COINS
+;	sjump GameCornerPrizesStoneVendor_FinishScript
+
+GameCornerPrizesEvolveMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 2, 19, TEXTBOX_Y - -2
+	dw .MenuDataEvolve
+	db 1 ; default option
+.MenuDataEvolve:
+	db STATICMENU_CURSOR ; flags
+	db 5 ; items
+	db "KING's ROCK   {d:GAMECORNER_EVO_ITEM_COINS}@"
+	db "METAL COAT   {d:GAMECORNER_EVO_ITEM_COINS}@"
+	db "DRAGON SCALE {d:GAMECORNER_EVO_ITEM_COINS}@"
+	db "RAZOR CLAW   {d:GAMECORNER_EVO_ITEM_COINS}@"
+	db "RAZOR FANG   {d:GAMECORNER_EVO_ITEM_COINS}@"
+;	db "SUN STONE    {d:GAMECORNER_SUN_STONE_COINS}@"
+;	db "DUSK STONE   {d:GAMECORNER_DUSK_STONE_COINS}@"
+;	db "UP-GRADE     {d:GAMECORNER_UP_GRADE_COINS}@"
+;	db "CANCEL@"
 
 ; vendor universal scripts
-CeladonPrizeRoomItemVendor_FinishScript:
+GameCornerPrizesItemVendor_FinishScript:
 	waitsfx
 	playsound SFX_TRANSACTION
 	writetext GameCornerPrize_HereYouGoText
 	waitbutton
-	sjump CeladonPrizeRoomItemVendorLoop
+	sjump GameCornerPrizesItemVendorLoop
 
-CeladonPrizeRoomStoneVendor_FinishScript:
+GameCornerPrizesStoneVendor_FinishScript:
 	waitsfx
 	playsound SFX_TRANSACTION
 	writetext GameCornerPrize_HereYouGoText
 	waitbutton
-	sjump CeladonPrizeRoomStoneVendorLoop
+	sjump GameCornerPrizesStoneVendorLoop
 
-CeladonPrizeRoom_NotEnoughCoinsScript:
+GameCornerPrizesEvolveVendor_FinishScript:
+	waitsfx
+	playsound SFX_TRANSACTION
+	writetext GameCornerPrize_HereYouGoText
+	waitbutton
+	sjump GameCornerPrizesEvolveVendorLoop
+
+GameCorner_NotEnoughCoinsScript:
 	writetext GameCornerPrize_NotEnoughCoinsText
 	waitbutton
 	closetext
 	end
 
-CeladonPrizeRoom_NoRoomScript:
+GameCorner_NoRoomScript:
 	writetext GameCornerPrize_NoRoomText
 	waitbutton
 	closetext
 	end
 
-CeladonPrizeRoom_ConfirmPurchaseScript:
+GameCorner_ConfirmPurchaseScript:
 	writetext GameCornerPrize_ConfirmPurchaseText
 	yesorno
 	end
 
-CeladonPrizeRoom_CancelPurchaseScript:
+GameCorner_CancelPurchaseScript:
 	writetext GameCornerPrize_ComeAgainText
 	waitbutton
 	closetext
 	end
 
-CeladonPrizeRoom_NoCoinCaseScript:
+GameCorner_NoCoinCaseScript:
 	writetext GameCornerPrize_NoCoinCaseText
 	waitbutton
 	closetext
@@ -510,13 +667,13 @@ CeladonGameCornerPrizeRoom_MapEvents:
 	def_coord_events
 
 	def_bg_events
-;	bg_event  2,  2, BGEVENT_READ, CeladonPrizeRoomPokemonVendor
-;	bg_event  4,  2, BGEVENT_READ, CeladonPrizeRoomItemVendor
-;	bg_event  6,  2, BGEVENT_READ, CeladonPrizeRoomStoneVendor
+;	bg_event  2,  2, BGEVENT_READ, GameCornerPrizesKantoPokemonVendor
+;	bg_event  4,  2, BGEVENT_READ, GameCornerPrizesItemVendor
+;	bg_event  6,  2, BGEVENT_READ, GameCornerPrizesStoneVendor
 
 	def_object_events
-	object_event  2,  2, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonPrizeRoomPokemonVendor, -1
-	object_event  4,  2, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonPrizeRoomItemVendor, -1
-	object_event  6,  2, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonPrizeRoomStoneVendor, -1
+	object_event  3,  2, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GameCornerPrizesKantoPokemonVendor, -1
+	object_event  4,  2, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GameCornerPrizesItemVendor, -1
+	object_event  5,  2, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GameCornerPrizesStoneVendor, -1
 	object_event  0,  4, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeladonPrizeRoomGentlemanScript, -1
 	object_event  6,  6, SPRITE_PHARMACIST, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonPrizeRoomPharmacistScript, -1
