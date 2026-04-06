@@ -257,39 +257,6 @@ SailorStanleyAfterBattleText:
 	cont "voyages."
 	done
 
-;TrainerPokefanfRuth:
-;	trainer POKEFANF, RUTH, EVENT_BEAT_POKEFANF_RUTH, PokefanfRuthSeenText, PokefanfRuthBeatenText, 0, .Script
-;
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext PokefanfRuthAfterBattleText
-;	waitbutton
-;	closetext
-;	end
-;
-;PokefanfRuthSeenText:
-;	text "Such darling"
-;	line "#MON."
-;
-;	para "Let's show our"
-;	line "#MON together"
-;	cont "at the same time."
-;	done
-;
-;PokefanfRuthBeatenText:
-;	text "I don't mind"
-;	line "losing."
-;	done
-;
-;PokefanfRuthAfterBattleText:
-;	text "Do you know about"
-;	line "baby #MON?"
-;
-;	para "I bet they're just"
-;	line "adorable!"
-;	done
-
 Route39Miltank:
 	opentext
 	writetext Route39MiltankText
@@ -370,5 +337,3 @@ Route39_MapEvents:
 	object_event  4, 22, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, TrainerPokefanfEleanor, -1 ;jaime
 	object_event 10, 22, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerPokefanmDerek, -1 ;derek
 	object_event 13, 29, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TrainerSailorStanley, -1 ;eugene
-;	object_event 11, 19, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 4, TrainerPokefanfRuth, -1
-; -1
