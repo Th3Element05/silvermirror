@@ -25,7 +25,7 @@ FastShipEngineRoomRocketSpeechText:
 	text "ROCKET: Just do"
 	line "as I say, and no"
 	cont "one else needs to"
-	cont "get hurt!"
+	roll "get hurt!"
 	done
 
 TrainerRocketGruntM29:
@@ -78,7 +78,7 @@ ExecutiveM3SeenText:
 	para "I'll show you what"
 	line "happens to people"
 	cont "who stand up to"
-	cont "TEAM ROCKET!"
+	roll "TEAM ROCKET!"
 	done
 
 ExecutiveM3BeatenText:
@@ -128,7 +128,7 @@ FastShipEngineRoomHelpText:
 	text "TEAM ROCKET is"
 	line "trying to take"
 	cont "control of the"
-	cont "the ship!"
+	roll "the ship!"
 
 	para "Please, help us!"
 	done
@@ -182,7 +182,7 @@ FastShipEngineRoomSailorText:
 	text "It's important to"
 	line "keep any ship's"
 	cont "engine well"
-	cont "maintained."
+	roll "maintained."
 
 	para "But especially so"
 	line "for a FAST SHIP"

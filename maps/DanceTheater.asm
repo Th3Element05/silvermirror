@@ -216,10 +216,9 @@ KimonoGirlYukiBeatenText:
 
 KimonoGirlYukiAfterBattleText:
 	text "Dancing is fun,"
-	line "but when I train"
-	cont "my #MON I go to"
-	roll "the harsh ICE PATH"
-	cont "to toughen up."
+	line "but I go to the"
+	cont "harsh ICE PATH to"
+	roll "train my #MON."
 	done
 
 DanceTheaterGentelmanScript:

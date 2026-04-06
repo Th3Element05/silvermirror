@@ -278,7 +278,7 @@ LanceBattleIntroText:
 	para "I lead the ELITE"
 	line "FOUR! You can"
 	cont "call me LANCE the"
-	cont "dragon trainer!"
+	roll "dragon trainer!"
 
 	para "You know that"
 	line "dragons are"
@@ -287,7 +287,7 @@ LanceBattleIntroText:
 	para "They're hard to"
 	line "catch and raise,"
 	cont "but their powers"
-	cont "are superior!"
+	roll "are superior!"
 
 	para "They're virtually"
 	line "indestructible!"
@@ -312,7 +312,7 @@ LanceBattleAfterText_1:
 	text "I still can't"
 	line "believe my"
 	cont "dragons lost to"
-	cont "you, <PLAYER>!"
+	roll "you, <PLAYER>!"
 
 	para "You are now the"
 	line "#MON LEAGUE"
@@ -323,7 +323,7 @@ LanceBattleAfterText_2:
 	text "…Or, you would"
 	line "have been, but"
 	cont "you have one more"
-	cont "challenge ahead."
+	roll "challenge ahead."
 
 	para "You have to face"
 	line "another trainer!"
@@ -348,7 +348,7 @@ LanceDefeatText:
 	para "I am eager to see"
 	line "which of you will"
 	cont "claim the title"
-	cont "of CHAMPION!"
+	roll "of CHAMPION!"
 	done
 ;
 ;	para "Shall I heal your"
@@ -375,7 +375,7 @@ ChampionBattleIntroText:
 	para "Not only that, I"
 	line "assembled teams"
 	cont "that would beat"
-	cont "any #MON type!"
+	roll "any #MON type!"
 
 	para "And now!"
 
@@ -417,7 +417,7 @@ ChampionBattleLossText:
 	para "You did well to"
 	line "even reach me,"
 	cont "<RIVAL>, the"
-	cont "#MON genius!"
+	roll "#MON genius!"
 
 	para "Nice try, loser!"
 	line "Hahaha!"
@@ -447,13 +447,13 @@ LancesRoomOakCongratulationsText:
 	text "OAK: So, you won!"
 	line "Congratulations!"
 	cont "You're the new"
-	cont "#MON LEAGUE"
+	roll "#MON LEAGUE"
 	cont "CHAMPION!"
 
 	para "You've grown up so"
 	line "much since you"
 	cont "first left with"
-	cont "@"
+	roll "@"
 	text_ram wStringBuffer3
 	text "!"
 	done
@@ -477,7 +477,7 @@ LancesRoomOakDisappointedText:
 	para "You have forgotten"
 	line "to treat your"
 	cont "#MON with"
-	cont "trust and love!"
+	roll "trust and love!"
 
 	para "Without them, you"
 	line "will never become"
@@ -490,7 +490,7 @@ LancesRoomOakComeWithMeText:
 	para "You understand"
 	line "that your victory"
 	cont "was not just your"
-	cont "own doing!"
+	roll "own doing!"
 
 	para "The bond you share"
 	line "with your #MON"

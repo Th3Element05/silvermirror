@@ -144,7 +144,7 @@ ElmsLabElm_MeetElmText:
 	para "I wonder if its"
 	line "finally returning"
 	cont "to its roost on"
-	cont "TIN TOWER?"
+	roll "TIN TOWER?"
 
 	para "<PLAYER>, I think"
 	line "you should show"

@@ -62,17 +62,17 @@ EcruteakCityGramps1AfterText:
 	para "This tower burned"
 	line "in a fire. Three"
 	cont "nameless #MON"
-	cont "perished in it."
+	roll "perished in it."
 
 	para "A rainbow-colored"
 	line "#MON descended"
 	cont "from the sky and"
-	cont "resurrected them…"
+	roll "resurrected them…"
 
 	para "It's a legend that"
 	line "has been passed"
 	cont "down by ECRUTEAK"
-	cont "GYM LEADERs."
+	roll "GYM LEADERs."
 
 	para "Me?"
 
@@ -87,7 +87,7 @@ EcruteakCityGirlText:
 	text "After grandpa ran"
 	line "into the tower,"
 	cont "three big #MON"
-	cont "ran out!"
+	roll "ran out!"
 
 	para "Were those the"
 	line "legendary #MON"

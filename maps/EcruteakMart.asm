@@ -31,7 +31,7 @@ EcruteakMartSuperNerdText:
 	para "I wonder why? We"
 	line "both were raising"
 	cont "our EEVEE in the"
-	cont "same way…"
+	roll "same way…"
 	done
 
 EcruteakMartGrannyScript:
@@ -40,7 +40,7 @@ EcruteakMartGrannyText:
 	text "If you use REVIVE"
 	line "on a #MON that's"
 	cont "fainted, it will"
-	cont "wake right up."
+	roll "wake right up."
 	done
 
 EcruteakMart_MapEvents:

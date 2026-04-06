@@ -67,7 +67,7 @@ FishingGuruGoodGiveRodText:
 	para "From the seas to"
 	line "rivers, go out"
 	cont "and land the big"
-	cont "one, young one!"
+	roll "one, young one!"
 	done
 
 FishingGuruGoodRefusedText:

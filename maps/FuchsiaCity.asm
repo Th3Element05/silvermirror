@@ -70,7 +70,7 @@ FuchsiaCityDratiniText:
 	para "Seen so rarely in"
 	line "the wild, it is"
 	cont "often call the"
-	cont "MIRAGE #MON!"
+	roll "MIRAGE #MON!"
 	done
 
 FuchsiaPinsirExhibit:
@@ -103,7 +103,7 @@ FuchsiaCityScytherText:
 	para "Wields it's razor-"
 	line "sharp blades with"
 	cont "ninja-like speed"
-	cont "and agility!"
+	roll "and agility!"
 	done
 
 FuchsiaChanseyExhibit:
@@ -150,7 +150,7 @@ FuchsiaCityKangaskhanText:
 	para "A maternal #MON"
 	line "that raises its"
 	cont "young in a pouch"
-	cont "on its belly."
+	roll "on its belly."
 	done
 
 FuchsiaCityYoungster:
@@ -159,7 +159,7 @@ FuchsiaCityYoungsterText:
 	text "Did you try the"
 	line "SAFARI ZONE? Some"
 	cont "#MON can only"
-	cont "be caught there."
+	roll "be caught there."
 	done
 
 FuchsiaCityErik:

@@ -71,13 +71,13 @@ MortyIntroText:
 	para "It's said that a"
 	line "rainbow-colored"
 	cont "#MON will appear"
-	cont "before a truly"
+	roll "before a truly"
 	cont "powerful trainer."
 
 	para "I believed that"
 	line "tale, so I have"
 	cont "trained here all"
-	cont "my life."
+	roll "my life."
 
 	para "As a result, I can"
 	line "now see what"
@@ -88,7 +88,7 @@ MortyIntroText:
 	para "With a little"
 	line "more, I could see"
 	cont "a future in which"
-	cont "I meet the #MON"
+	roll "I meet the #MON"
 	cont "of rainbow colors."
 
 	para "You're going to"
@@ -130,7 +130,7 @@ MortyText_ShadowBallSpeech:
 	text "It's SHADOW BALL."
 	line "It causes damage"
 	cont "and may reduce"
-	cont "SP.DEF."
+	roll "SP.DEF."
 
 	para "Use it if it"
 	line "appeals to you."
@@ -171,7 +171,7 @@ SageBoSeenText:
 	para "Then spring came"
 	line "again. We have"
 	cont "lived together"
-	cont "for a long time."
+	roll "for a long time."
 	done
 
 SageBoBeatenText:
@@ -261,9 +261,8 @@ MediumLeonaBeatenText:
 MediumLeonaAfterBattleText:
 	text "Fine. I shall tell"
 	line "you the secret of"
-
-	para "the invisible"
-	line "floor."
+	cont "the invisible"
+	roll "floor."
 
 	para "The path is right"
 	line "before our eyes!"
@@ -292,7 +291,7 @@ EcruteakGymGuideText:
 	para "If you win, they"
 	line "may tell you some"
 	cont "deep secrets about"
-	cont "ECRUTEAK."
+	roll "ECRUTEAK."
 	done
 
 EcruteakGymGuideWinText:

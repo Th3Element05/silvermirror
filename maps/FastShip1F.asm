@@ -144,7 +144,7 @@ FastShip1FSailor1Text_Bed:
 	text "You can use the"
 	line "bed in your cabin"
 	cont "to pass the time"
-	cont "until we arrive."
+	roll "until we arrive."
 	done
 
 FastShip1FSailor1Text_InOlivine:

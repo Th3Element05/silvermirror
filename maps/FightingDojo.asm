@@ -100,12 +100,11 @@ FightingDojoMoveTutorScript:
 .NoTutor
 	jumptextfaceplayer FightingDojoTutor_NotYetText
 FightingDojoTutor_NotYetText:
-	text "I have nothing for"
-	line "you, outsider."
+	text "I have nothing to"
+	line "teach an outsider."
 
 	para "But, if you can"
-	line "manage to defeat"
-	cont "our MASTER…"
+	line "defeat our MASTER…"
 
 	para "Perhaps then I may"
 	line "have something to"
@@ -415,7 +414,7 @@ FightingDojoDontGetGreedyText:
 ;	para "We would like you"
 ;	line "to challenge us"
 ;	cont "again! When we"
-;	cont "are stronger!"
+;	roll "are stronger!"
 ;	done
 
 TrainerBlackbeltTakeshi:
