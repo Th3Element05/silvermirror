@@ -135,12 +135,12 @@ EcruteakThreeMonText:
 	text "ECRUTEAK was also"
 	line "home to three"
 	cont "#MON that raced"
-	cont "around the town."
+	roll "around the town."
 
 	para "They were said to"
 	line "have been born of"
 	cont "water, lightning"
-	cont "and fire."
+	roll "and fire."
 
 	para "But they could not"
 	line "contain their"
@@ -149,7 +149,7 @@ EcruteakThreeMonText:
 	para "So they say the"
 	line "three ran like the"
 	cont "wind off into the"
-	cont "grassland."
+	roll "grassland."
 	done
 
 ItemFinderHouseRadio:

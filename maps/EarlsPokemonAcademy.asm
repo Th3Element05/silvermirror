@@ -140,8 +140,8 @@ AcademyNotebook:
 	closetext
 	end
 
-AcademyStickerMachine: ; unreferenced
-	jumptext AcademyStickerMachineText
+;AcademyStickerMachine: ; unreferenced
+;	jumptext AcademyStickerMachineText
 
 AcademyBookshelf:
 	jumpstd DifficultBookshelfScript
@@ -205,9 +205,8 @@ AcademyEarlTeachHowToRaiseWellText:
 
 	para "If #MON come"
 	line "out in battle even"
-
-	para "briefly, some EXP."
-	line "Points it gets."
+	cont "briefly, some EXP."
+	roll "Points it gets."
 
 	para "At top of list put"
 	line "weak #MON."
@@ -283,9 +282,8 @@ AcademyPoisonText:
 
 	para "Poison lingers"
 	line "after the battle,"
-
-	para "and HP is lost as"
-	line "you walk."
+	cont "and HP is lost as"
+	roll "you walk."
 
 	para "To cure it, use an"
 	line "ANTIDOTE."
@@ -383,31 +381,28 @@ AcademyNotebookText2:
 AcademyNotebookText3:
 	text "People who catch"
 	line "and use #MON"
-
-	para "in battle are"
-	line "#MON trainers."
+	cont "in battle are"
+	roll "#MON trainers."
 
 	para "They are expected"
 	line "to visit #MON"
-
-	para "GYMs and defeat"
-	line "other trainers."
+	cont "GYMs and battle"
+	roll "other trainers."
 
 	para "The next page"
 	line "is… Blank!"
 
-	para "Boy: E-he-he…"
+	para "BOY: E-he-he…"
 
 	para "I haven't written"
 	line "anymore…"
 	done
 
-AcademyStickerMachineText:
-	text "This super machine"
-	line "prints data out as"
-
-	para "stickers!"
-	done
+;AcademyStickerMachineText:
+;	text "This super machine"
+;	line "prints data out as"
+;	cont "stickers!"
+;	done
 
 EarlsPokemonAcademy_MapEvents:
 	db 0, 0 ; filler

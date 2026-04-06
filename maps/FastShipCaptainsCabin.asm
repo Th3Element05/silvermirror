@@ -86,7 +86,7 @@ ExecutiveF2SeenText:
 	para "We're going to"
 	line "JOHTO to regroup"
 	cont "until our BOSS"
-	cont "returns!"
+	roll "returns!"
 	done
 
 ExecutiveF2BeatenText:
@@ -145,7 +145,7 @@ SSAquaCaptainTakeThisText:
 	text "CAPTAIN: I don't"
 	line "know what we would"
 	cont "have done if you"
-	cont "hadn't been here!"
+	roll "hadn't been here!"
 
 	para "Please, take this!"
 	done
@@ -154,7 +154,7 @@ SSAquaCaptainSmokeBallText:
 	text "A #MON holding"
 	line "that SMOKE BALL"
 	cont "can flee from any"
-	cont "wild #MON."
+	roll "wild #MON."
 
 	para "Too bad it doesn't"
 	line "work on trainers!"

@@ -29,7 +29,7 @@ DarkCaveBlackthornEntrancePharmacistText1:
 	para "I had my BLACK-"
 	line "GLASSES on, so I"
 	cont "didn't notice you"
-	cont "at all."
+	roll "at all."
 
 	para "What am I doing"
 	line "here?"
@@ -40,7 +40,7 @@ DarkCaveBlackthornEntrancePharmacistText1:
 	para "I'll give you a"
 	line "pair of BLACK-"
 	cont "GLASSES, so forget"
-	cont "you saw me, OK?"
+	roll "you saw me, OK?"
 	done
 
 DarkCaveBlackthornEntrancePharmacistText2:

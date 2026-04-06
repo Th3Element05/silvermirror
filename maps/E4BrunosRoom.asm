@@ -83,7 +83,7 @@ BrunoScript_BrunoBeforeText:
 	para "Through rigorous"
 	line "training, people"
 	cont "and #MON can"
-	cont "become stronger!"
+	roll "become stronger!"
 
 	para "I've weight"
 	line "trained with"

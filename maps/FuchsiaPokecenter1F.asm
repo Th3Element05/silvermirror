@@ -37,14 +37,14 @@ FuchsiaPokecenter1FRockerText:
 FuchsiaPokecenter1FCooltrainerFScript:
 	jumptextfaceplayer FuchsiaPokecenter1FCooltrainerFText
 FuchsiaPokecenter1FCooltrainerFText:
-	text "There's a narrow"
-	line "trail west of"
+	text "There's a route"
+	line "to the west of"
 	cont "VIRIDIAN CITY."
 
-	para "It goes to #MON"
-	line "LEAGUE HQ."
-	cont "The HQ governs"
-	cont "all trainers."
+	para "It goes north to"
+	line "#MON LEAGUE,"
+	cont "which oversees all"
+	roll "#MON trainers."
 	done
 
 FuchsiaPokecenter1F_MapEvents:

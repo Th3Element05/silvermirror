@@ -20,17 +20,14 @@ ElmsHouseBookshelf:
 	jumpstd DifficultBookshelfScript
 
 ElmsWifeText:
-	text "Hi, <PLAY_G>! My"
-	line "husband's always"
-
-	para "so busy--I hope"
-	line "he's OK."
+	text "My husband's always"
+	line "so busy."
+	cont "I hope he's OK."
 
 	para "When he's caught"
 	line "up in his #MON"
-
-	para "research, he even"
-	line "forgets to eat."
+	cont "research, he even"
+	roll "forgets to eat."
 	done
 
 ElmsSonText:
@@ -43,21 +40,21 @@ ElmsSonText:
 	cont "professor!"
 	done
 
-ElmsHouseLabFoodText: ; unreferenced
-	text "There's some food"
-	line "here. It must be"
-	cont "for the LAB."
-	done
+;ElmsHouseLabFoodText: ; unreferenced
+;	text "There's some food"
+;	line "here. It must be"
+;	cont "for the LAB."
+;	done
 
-ElmsHousePokemonFoodText: ; unreferenced
-	text "There's some food"
-	line "here. This must be"
-	cont "for #MON."
-	done
+;ElmsHousePokemonFoodText: ; unreferenced
+;	text "There's some food"
+;	line "here. This must be"
+;	cont "for #MON."
+;	done
 
 ElmsHousePCText:
 	text "#MON. Where do"
-	line "they come from? "
+	line "they come from?"
 
 	para "Where are they"
 	line "going?"
@@ -68,9 +65,8 @@ ElmsHousePCText:
 
 	para "I want to know! I"
 	line "will dedicate my"
-
-	para "life to the study"
-	line "of #MON!"
+	cont "life to the study"
+	roll "of #MON!"
 
 	para "…"
 

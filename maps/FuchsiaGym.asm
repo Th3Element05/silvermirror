@@ -102,7 +102,7 @@ KogaExplainSoulbadgeText:
 	text "Now that you have"
 	line "the SOULBADGE,"
 ;	cont "your #MON can"
-;	cont "use SURF outside"
+;	roll "use SURF outside"
 ;	cont "of battle!"
 	cont "you are one step"
 	roll "closer to the"

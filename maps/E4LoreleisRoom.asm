@@ -93,7 +93,7 @@ LoreleiScript_LoreleiBeforeText:
 	para "Your #MON will"
 	line "be at my mercy"
 	cont "when they are"
-	cont "frozen solid!"
+	roll "frozen solid!"
 
 	para "Hahaha!"
 	line "Are you ready?"
