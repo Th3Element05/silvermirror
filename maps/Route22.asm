@@ -201,7 +201,7 @@ Route22RivalBeforeBattleText2:
 	text "<RIVAL>: What?"
 	line "<PLAYER>! What a"
 	cont "surprise to see"
-	cont "you here!"
+	roll "you here!"
 
 	para "So you're going to"
 	line "#MON LEAGUE?"
@@ -213,7 +213,7 @@ Route22RivalBeforeBattleText2:
 	para "Then I'll whip you"
 	line "<PLAYER> as a"
 	cont "warm up for"
-	cont "#MON LEAGUE!"
+	roll "#MON LEAGUE!"
 
 	para "Come on!"
 	done
@@ -242,7 +242,7 @@ Route22RivalBattleLossText2:
 	text "<RIVAL>: Hahaha!"
 	line "<PLAYER>! That's"
 	cont "your best? You're"
-	cont "nowhere near as"
+	roll "nowhere near as"
 	cont "good as me, pal!"
 
 	para "Go train some"

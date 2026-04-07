@@ -43,13 +43,13 @@ Route15Gate2FOaksAideAskPokemonText:
 	para "If you caught 50"
 	line "kinds of #MON,"
 	cont "I'm supposed to"
-	cont "give you an"
+	roll "give you an"
 	cont "EXP.SHARE!"
 
 	para "So, <PLAYER>! Have"
 	line "you caught at"
 	cont "least 50 kinds of"
-	cont "#MON?"
+	roll "#MON?"
 	done
 
 Route15Gate2FOaksAideNotEnoughText:
@@ -72,14 +72,15 @@ Route15Gate2FOaksAideCongratsText:
 	text_ram wStringBuffer3
 	text " kinds"
 	cont "of #MON!"
-	cont "Congratulations!"
+
+	para "Congratulations!"
 	done
 
 Route15Gate2FOaksAideExpShareExplainText:
 	text "EXP.SHARE will"
 	line "share experience"
 	cont "from battles with"
-	cont "the #MON that"
+	roll "the #MON that"
 	cont "holds it!"
 
 	para "Even if they"

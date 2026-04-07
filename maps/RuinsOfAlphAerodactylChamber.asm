@@ -81,7 +81,7 @@ RuinsOfAlphAerodactylChamberDescriptionText:
 	text "This flying #-"
 	line "MON attacked its"
 	cont "prey with saw-like"
-	cont "fangs."
+	roll "fangs."
 	done
 
 RuinsOfAlphAerodactylChamberWallPattern:

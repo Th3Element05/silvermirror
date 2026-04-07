@@ -22,7 +22,7 @@ Route12GateGuardBeforeSnorlaxText:
 	text "There have been"
 	line "fewer people pass-"
 	cont "ing through here"
-	cont "lately."
+	roll "lately."
 
 	para "I wonder why?"
 	done
@@ -68,7 +68,7 @@ Route12GateGuardAfterSnorlaxText:
 ;	para "It's very accurate,"
 ;	line "so use it when"
 ;	cont "you can't afford"
-;	cont "to miss."
+;	roll "to miss."
 ;	done
 
 Route12Gate_MapEvents:

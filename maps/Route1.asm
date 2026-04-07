@@ -100,7 +100,7 @@ Route1PotionSampleText:
 	para "It's a convenient"
 	line "shop, so please"
 	cont "visit us in"
-	cont "VIRIDIAN CITY."
+	roll "VIRIDIAN CITY."
 
 	para "I know, I'll give"
 	line "you a sample!"

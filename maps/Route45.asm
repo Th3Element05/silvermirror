@@ -80,7 +80,7 @@ HikerQuentinAfterBattleText:
 	text "I'll head back to"
 	line "BLACKTHORN's ICE"
 	cont "PATH and train"
-	cont "some more."
+	roll "some more."
 	done
 
 TrainerCooltrainermColt:
@@ -115,11 +115,6 @@ CooltrainermColtAfterBattleText:
 	done
 
 
-
-
-
-
-
 TrainerCooltrainerfQuinn:
 	trainer COOLTRAINERF, QUINN, EVENT_BEAT_COOLTRAINERF_QUINN, CooltrainerfQuinnSeenText, CooltrainerfQuinnBeatenText, 0, .Script
 .Script:
@@ -152,10 +147,6 @@ CooltrainerfQuinnAfterBattleText:
 	line "I also don't want"
 	cont "to harm #MON."
 	done
-
-
-
-
 
 TrainerHikerParry:
 	trainer HIKER, PARRY1, EVENT_BEAT_HIKER_PARRY, HikerParrySeenText, HikerParryBeatenText, 0, .Script
@@ -362,7 +353,7 @@ BlackbeltKenjiNightText:
 	text "We had plenty of"
 	line "rest at lunch, so"
 	cont "now we're ready"
-	cont "to train more!"
+	roll "to train more!"
 	done
 
 Route45AskNumber1M:

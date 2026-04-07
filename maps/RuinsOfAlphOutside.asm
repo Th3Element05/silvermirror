@@ -70,7 +70,7 @@ RuinsOfAlphOutside_DoneForText:
 	para "I thought you were"
 	line "done for when you"
 	cont "fell through the"
-	cont "floor!"
+	roll "floor!"
 
 	para "The earth shook"
 	line "when that hole"
@@ -81,7 +81,7 @@ RuinsOfAlphOutside_TellMeText:
 	text "The tremor seems"
 	line "to have opened up"
 	cont "other chambers in"
-	cont "the ruins!"
+	roll "the ruins!"
 
 	para "There's so much"
 	line "more to study"
@@ -90,7 +90,7 @@ RuinsOfAlphOutside_TellMeText:
 	para "Please, come tell"
 	line "me if you discover"
 	cont "anything in these"
-	cont "ruins."
+	roll "ruins."
 	done
 
 ;RuinsOfAlphOutsideScientistText:
@@ -104,12 +104,12 @@ RuinsOfAlphOutside_GiveUnownDexText:
 	para "They look like the"
 	line "strange symbols on"
 	cont "the walls of the"
-	cont "RUINS."
+	roll "RUINS."
 
 	para "If those symbols"
 	line "represent #MON,"
 	cont "there should be"
-	cont "many more."
+	roll "many more."
 
 	para "Hm? That's a #-"
 	line "DEX, isn't it?"
@@ -117,7 +117,7 @@ RuinsOfAlphOutside_GiveUnownDexText:
 	para "Let me upgrade it"
 	line "to keep track of"
 	cont "the forms of this"
-	cont "new #MON."
+	roll "new #MON."
 	done
 
 RuinsOfAlphOutside_ModifiedDexText:
@@ -173,7 +173,7 @@ RuinsOfAlphOutside_AllUnownText:
 	para "I'm going to set"
 	line "up a permanent"
 	cont "facility here to"
-	cont "conduct research."
+	roll "conduct research."
 	done
 
 TrainerPsychicIdris:

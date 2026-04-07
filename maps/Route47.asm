@@ -74,7 +74,7 @@ Route47_MapScripts:
 ;	text "I'm not good with"
 ;	line "crowds, so I'm"
 ;	cont "camping out here"
-;	cont "with my #MON!"
+;	roll "with my #MON!"
 ;	done
 ;
 ;CamperGrantBeatenText:

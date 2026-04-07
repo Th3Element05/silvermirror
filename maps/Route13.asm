@@ -26,7 +26,7 @@ BirdKeeperJamieAfterBattleText:
 	text "You have some HMs"
 	line "right? Those moves"
 	cont "are useful for"
-	cont "getting around."
+	roll "getting around."
 	done
 
 TrainerBirdKeeperDennis:
@@ -39,7 +39,7 @@ BirdKeeperDennisSeenText:
 	text "TMs are on sale"
 	line "in CELADON!"
 	cont "But, only a few"
-	cont "people have HMs!"
+	roll "people have HMs!"
 	done
 
 BirdKeeperDennisBeatenText:
@@ -50,7 +50,7 @@ BirdKeeperDennisAfterBattleText:
 	text "Teach #MON"
 	line "moves of the same"
 	cont "element type for"
-	cont "more power."
+	roll "more power."
 	done
 
 TrainerBirdKeeperPerry:
@@ -233,7 +233,7 @@ TwinsKayAndTia2AfterBattleText:
 	text "I don't know"
 	line "anything about"
 	cont "#MON. I just"
-	cont "like cute ones!"
+	roll "like cute ones!"
 	done
 
 TrainerPicnickerPiper:

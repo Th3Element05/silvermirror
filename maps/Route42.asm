@@ -205,10 +205,10 @@ HikerAnthonyBeatenText:
 	done
 
 HikerAnthonyAfterBattleText:
-	text "Losing feels in-"
-	line "significant if you"
-	cont "look up at the big"
-	cont "sky!"
+	text "Losing feels"
+	line "insignificant when"
+	cont "you look up at the"
+	roll "big sky!"
 	done
 
 ;TrainerPokemaniacZach:
@@ -271,7 +271,7 @@ FisherBarneyAfterBattleText:
 	text "I want to become"
 	line "the #MON CHAMP"
 	cont "using the #MON"
-	cont "I caught."
+	roll "I caught."
 
 	para "That's the best"
 	line "part of fishing!"

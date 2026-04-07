@@ -67,7 +67,7 @@ PokemaniacMaxSeenText:
 	para "That's why I"
 	line "started--and why"
 	cont "I'll keep on col-"
-	cont "lecting #MON!"
+	roll "lecting #MON!"
 	done
 
 PokemaniacMaxBeatenText:
@@ -200,7 +200,7 @@ CamperSpencerAfterBattleText:
 ;	text "It's okay for"
 ;	line "people to like"
 ;	cont "different types"
-;	cont "of #MON."
+;	roll "of #MON."
 ;
 ;	para "#MON isn't just"
 ;	line "about having the"
@@ -236,7 +236,7 @@ CamperSpencerAfterBattleText:
 ;	text "KURT's LURE BALL"
 ;	line "is the best for"
 ;	cont "catching hooked"
-;	cont "#MON."
+;	roll "#MON."
 ;
 ;	para "It's much more"
 ;	line "effective than a"
@@ -260,21 +260,18 @@ Route43TrainerTipsText:
 
 	para "All #MON have"
 	line "pros and cons"
-
-	para "depending on their"
-	line "types."
+	cont "depending on their"
+	roll "types."
 
 	para "If their types"
 	line "differ, a higher-"
-
-	para "level #MON may"
-	line "lose in battle."
+	cont "level #MON may"
+	roll "lose in battle."
 
 	para "Learn which types"
 	line "are strong and"
-
-	para "weak against your"
-	line "#MON's type."
+	cont "weak against your"
+	roll "#MON's type."
 	done
 
 Route43MaxEther:

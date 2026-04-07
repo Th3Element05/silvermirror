@@ -30,7 +30,7 @@ YoungsterAsherAfterBattleText:
 	text "Are you storing"
 	line "your #MON on"
 	cont "PC? Each BOX can"
-	cont "hold 20 #MON!"
+	roll "hold 20 #MON!"
 	done
 
 TrainerLassBridget:
@@ -84,7 +84,7 @@ BugCatcherAlAfterBattleText:
 	text "If a #MON BOX"
 	line "on the PC gets"
 	cont "full, just switch"
-	cont "to another BOX!"
+	roll "to another BOX!"
 	done
 
 TrainerBugCatcherJosh:
@@ -112,7 +112,7 @@ BugCatcherJoshAfterBattleText:
 	text "There are other"
 	line "kinds of #MON"
 	cont "than those found"
-	cont "in the forest!"
+	roll "in the forest!"
 	done
 
 TrainerBugCatcherDion:

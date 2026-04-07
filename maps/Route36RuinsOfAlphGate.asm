@@ -30,7 +30,7 @@ Route36RuinsOfAlphGateOfficerText:
 	text "Don't you wonder"
 	line "who'd make some-"
 	cont "thing like this?"
-	cont "And why?"
+	roll "And why?"
 	done
 
 Route36RuinsOfAlphGateGrampsScript:

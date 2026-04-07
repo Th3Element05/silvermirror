@@ -105,7 +105,7 @@ CoolDuoKaeAfterBattleText:
 	text "We've been to many"
 	line "GYMs, but the GYM"
 	cont "in GOLDENROD is my"
-	cont "favorite."
+	roll "favorite."
 
 	para "It's filled with"
 	line "pretty flowers!"

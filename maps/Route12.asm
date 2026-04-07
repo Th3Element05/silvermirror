@@ -110,7 +110,7 @@ Route12RadioWakesSnorlax:
 ;	text "SNORLAX calmed"
 ;	line "down! With a big"
 ;	cont "yawn, it returned"
-;	cont "to the mountains!"
+;	roll "to the mountains!"
 ;	done
 
 TrainerFisherScott:

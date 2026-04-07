@@ -30,9 +30,9 @@ Route10Pokecenter1FGentlemanText:
 	text "The element types"
 	line "of #MON make"
 	cont "them stronger"
-	cont "than some types"
+	roll "than some types"
 	cont "and weaker than"
-	cont "others!"
+	roll "others!"
 	done
 
 Route10Pokecenter1FFisherScript:

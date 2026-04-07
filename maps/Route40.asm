@@ -81,7 +81,7 @@ Route40_MapScripts:
 ;	text "MONICA: My broth-"
 ;	line "ers and sisters"
 ;	cont "are all over the"
-;	cont "place."
+;	roll "place."
 ;
 ;	para "See if you could"
 ;	line "find them all!"
@@ -259,7 +259,7 @@ Route40Lass2Text:
 	text "I came to OLIVINE"
 	line "by ship to see the"
 	cont "sights and soak up"
-	cont "the atmosphere."
+	roll "the atmosphere."
 
 	para "Being a port, it"
 	line "feels so different"
@@ -275,12 +275,12 @@ Route40StandingYoungsterText:
 	para "I think a lot of"
 	line "tough trainers"
 	cont "have gathered"
-	cont "there already."
+	roll "there already."
 
 	para "But since you have"
 	line "so many BADGEs,"
 	cont "you shouldn't do"
-	cont "badly at all."
+	roll "badly at all."
 	done
 
 ;Route40PokefanMScript:
@@ -301,7 +301,7 @@ Route40StandingYoungsterText:
 ;	text "Hm! Look at all"
 ;	line "those serious-"
 ;	cont "looking trainers"
-;	cont "streaming in."
+;	roll "streaming in."
 ;
 ;	para "What? What?"
 ;	done

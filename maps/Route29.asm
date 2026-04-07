@@ -253,7 +253,7 @@ PokemaniacZachAfterTextNite:
 	text "I'm waiting for"
 	line "#MON that only"
 	cont "appear during the"
-	cont "daytime."
+	roll "daytime."
 	done
 
 
@@ -285,7 +285,7 @@ TeacherShirleyAfterBattleText:
 	para "But you can go to"
 	line "NEW BARK without"
 	cont "walking through"
-	cont "the grass."
+	roll "the grass."
 	done
 
 TrainerSuperNerdMerle:
@@ -313,7 +313,7 @@ SuperNerdMerleAfterBattleText:
 	text "If your #MON"
 	line "aren't ready for"
 	cont "battle, keep out"
-	cont "of the grass."
+	roll "of the grass."
 	done
 
 ; bg text

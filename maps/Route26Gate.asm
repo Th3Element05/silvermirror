@@ -72,7 +72,7 @@ Route26ComeBackLaterText:
 	text "The #MON past"
 	line "here are somewhat"
 	cont "stronger than the"
-	cont "ones on ROUTE 22!"
+	roll "ones on ROUTE 22!"
 	
 	para "I don't think you"
 	line "can handle them."

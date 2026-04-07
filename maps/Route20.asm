@@ -161,7 +161,7 @@ Route20RockSmashGuyGiveTMText:
 ;	para "Teach your own"
 ;	line "#MON to use"
 ;	cont "ROCK SMASH with"
-;	cont "this!"
+;	roll "this!"
 ;	done
 
 Route20RockSmashGuyLetsGoText:

@@ -205,7 +205,7 @@ SwimmerMPatonAfterBattleText:
 	text "I'm beat!"
 	line "But, I still have"
 	cont "the bike race and"
-	cont "marathon left!"
+	roll "marathon left!"
 	done
 
 TrainerSwimmerMBrandon:

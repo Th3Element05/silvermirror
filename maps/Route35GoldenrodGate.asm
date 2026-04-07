@@ -30,7 +30,7 @@ Route35GoldenrodGateFisherText:
 	text "I wonder how many"
 	line "kinds of #MON"
 	cont "there are in the"
-	cont "world?"
+	roll "world?"
 	done
 
 Route35GoldenrodGate_MapEvents:

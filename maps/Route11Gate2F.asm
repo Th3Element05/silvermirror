@@ -51,13 +51,13 @@ Route11Gate2FOaksAideAskPokemonText:
 	para "If you caught 30"
 	line "kinds of #MON,"
 	cont "I'm supposed to"
-	cont "give you an"
+	roll "give you an"
 	cont "ITEMFINDER!"
 
 	para "So, <PLAYER>! Have"
 	line "you caught at"
 	cont "least 30 kinds of"
-	cont "#MON?"
+	roll "#MON?"
 	done
 
 Route11Gate2FOaksAideNotEnoughText:
@@ -80,7 +80,8 @@ Route11Gate2FOaksAideCongratsText:
 	text_ram wStringBuffer3
 	text " kinds"
 	cont "of #MON!"
-	cont "Congratulations!"
+	
+	para "Congratulations!"
 	done
 
 Route11Gate2FOaksAideItemfinderExplainText:
@@ -114,7 +115,7 @@ Route11Gate2FSnorlaxText:
 	para "The only way to"
 	line "get from CERULEAN"
 	cont "CITY to LAVENDER"
-	cont "is by way of the"
+	roll "is by way of the"
 	cont "ROCK TUNNEL."
 	done
 

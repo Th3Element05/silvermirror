@@ -74,7 +74,7 @@ GaveSuperRodText:
 	para "From the seas to"
 	line "rivers, go out"
 	cont "and land the big"
-	cont "one!"
+	roll "one!"
 	done
 
 DontWantSuperRodText:
@@ -88,12 +88,15 @@ Route12SuperRodHouseTryFishingText:
 
 	para "Use the SUPER ROD"
 	line "in any water!"
-	cont "You can catch"
-	cont "different kinds"
+
+	para "You can catch"
+	line "different kinds"
 	cont "of #MON."
 
 	para "Try fishing"
 	line "wherever you can!"
+	done
+
 
 Route12SuperRodHouse_MapEvents:
 	db 0, 0 ; filler

@@ -121,7 +121,7 @@ Route2GateOaksAideFlashExplainText:
 ;	para "You'll need it to"
 ;	line "get through the"
 ;	cont "ROCK TUNNEL to"
-;	cont "LAVENDER TOWN!"
+;	roll "LAVENDER TOWN!"
 	done
 
 Route2GateOfficerScript:
