@@ -23,8 +23,16 @@ PokemonTower6FGhostScript:
 	writetext PokemonTower6FBegoneText
 	sjump .PushBack
 
-.GetOut:
+.GetOut
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
+	iftrue .GetOutGetOut
 	writetext PokemonTower6FGetOutText
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
+	sjump .PushBack
+
+.GetOutGetOut
+	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
+	writetext PokemonTower6FGetOutGetOutText
 	; fallthrough
 .PushBack
 	waitbutton
@@ -59,6 +67,11 @@ PokemonTower6FBegoneText:
 PokemonTower6FGetOutText:
 	text "         Get out!"
 	line "   Get out!"
+	done
+
+PokemonTower6FGetOutGetOutText:
+	text "Get out! Get out! Get out! get out!"
+	line "out! Get out! Get out! Get out! Get out!"
 	done
 
 PokemonTower6FSilphScopeText:
