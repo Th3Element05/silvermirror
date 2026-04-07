@@ -183,6 +183,7 @@ LancesRoomRivalBattleScript:
 ;	disappear PLAYER
 	applymovement PLAYER, Movement_CameraPansUp
 	pause 20
+;	setmapscene HALL_OF_FAME, SCENE_HALLOFFAME_ENTER ;should be set in IndigoPlateauPokecenter1F.asm
 	warpfacing UP, HALL_OF_FAME, 4, 9
 	end
 
