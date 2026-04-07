@@ -18,121 +18,31 @@ NationalParkBugContest_MapScripts:
 	def_callbacks
 
 BugCatchingContestant1AScript:
-	faceplayer
-	opentext
-	writetext BugCatchingContestant1AText
-	waitbutton
-	closetext
-	end
-
-BugCatchingContestant2AScript:
-	faceplayer
-	opentext
-	writetext BugCatchingContestant2AText
-	waitbutton
-	closetext
-	end
-
-BugCatchingContestant3AScript:
-	faceplayer
-	opentext
-	writetext BugCatchingContestant3AText
-	waitbutton
-	closetext
-	end
-
-BugCatchingContestant4AScript:
-	faceplayer
-	opentext
-	writetext BugCatchingContestant4AText
-	waitbutton
-	closetext
-	end
-
-BugCatchingContestant5AScript:
-	faceplayer
-	opentext
-	writetext BugCatchingContestant5AText
-	waitbutton
-	closetext
-	end
-
-BugCatchingContestant6AScript:
-	faceplayer
-	opentext
-	writetext BugCatchingContestant6AText
-	waitbutton
-	closetext
-	end
-
-BugCatchingContestant7AScript:
-	faceplayer
-	opentext
-	writetext BugCatchingContestant7AText
-	waitbutton
-	closetext
-	end
-
-BugCatchingContestant8AScript:
-	faceplayer
-	opentext
-	writetext BugCatchingContestant8AText
-	waitbutton
-	closetext
-	end
-
-BugCatchingContestant9AScript:
-	faceplayer
-	opentext
-	writetext BugCatchingContestant9AText
-	waitbutton
-	closetext
-	end
-
-BugCatchingContestant10AScript:
-	faceplayer
-	opentext
-	writetext BugCatchingContestant10AText
-	waitbutton
-	closetext
-	end
-
-NationalParkBugContestRelaxationSquareSign:
-	jumptext NationalParkBugContestRelaxationSquareText
-
-NationalParkBugContestBattleNoticeSign:
-	jumptext NationalParkBugContestBattleNoticeText
-
-NationalParkBugContestTrainerTipsSign:
-	jumptext NationalParkBugContestTrainerTipsText
-
-;NationalParkBugContestParlyzHeal:
-;	itemball PARLYZ_HEAL
-
-;NationalParkBugContestTMDig:
-;	itemball TM_DIG
-
-;NationalParkBugContestHiddenFullHeal:
-;	hiddenitem FULL_HEAL, EVENT_NATIONAL_PARK_HIDDEN_FULL_HEAL
-
+	jumptextfaceplayer BugCatchingContestant1AText
 BugCatchingContestant1AText:
 	text "DON: I'm going to"
 	line "win! Don't bother"
 	cont "me."
 	done
 
+BugCatchingContestant2AScript:
+	jumptextfaceplayer BugCatchingContestant2AText
 BugCatchingContestant2AText:
 	text "ED: My PARASECT"
 	line "puts #MON to"
 	cont "sleep with SPORE."
 	done
 
+BugCatchingContestant3AScript:
+	jumptextfaceplayer BugCatchingContestant3AText
 BugCatchingContestant3AText:
 	text "NICK: I'm raising"
 	line "fast #MON for"
 	cont "battles."
 	done
 
+BugCatchingContestant4AScript:
+	jumptextfaceplayer BugCatchingContestant4AText
 BugCatchingContestant4AText:
 	text "WILLIAM: I'm not"
 	line "concerned about"
@@ -142,6 +52,8 @@ BugCatchingContestant4AText:
 	line "for rare #MON."
 	done
 
+BugCatchingContestant5AScript:
+	jumptextfaceplayer BugCatchingContestant5AText
 BugCatchingContestant5AText:
 	text "BENNY: Ssh! You'll"
 	line "scare off SCYTHER."
@@ -150,14 +62,17 @@ BugCatchingContestant5AText:
 	line "later."
 	done
 
+BugCatchingContestant6AScript:
+	jumptextfaceplayer BugCatchingContestant6AText
 BugCatchingContestant6AText:
 	text "BARRY: You should"
 	line "weaken bug #MON"
-
-	para "first, then throw"
-	line "a BALL."
+	cont "first, then throw"
+	roll "a BALL."
 	done
 
+BugCatchingContestant7AScript:
+	jumptextfaceplayer BugCatchingContestant7AText
 BugCatchingContestant7AText:
 	text "CINDY: I love bug"
 	line "#MON."
@@ -166,25 +81,29 @@ BugCatchingContestant7AText:
 	line "like them too."
 	done
 
+BugCatchingContestant8AScript:
+	jumptextfaceplayer BugCatchingContestant8AText
 BugCatchingContestant8AText:
 	text "JOSH: I've been"
 	line "collecting bug"
-
-	para "#MON since I"
-	line "was just a baby."
+	cont "#MON since I"
+	roll "was a baby."
 
 	para "There's no way I'm"
 	line "going to lose!"
 	done
 
+BugCatchingContestant9AScript:
+	jumptextfaceplayer BugCatchingContestant9AText
 BugCatchingContestant9AText:
 	text "SAMUEL: If you've"
 	line "got the time to"
-
-	para "chat, go find some"
-	line "bug #MON."
+	cont "chat, go find some"
+	roll "bug #MON."
 	done
 
+BugCatchingContestant10AScript:
+	jumptextfaceplayer BugCatchingContestant10AText
 BugCatchingContestant10AText:
 	text "KIPP: I've studied"
 	line "about bug #MON"
@@ -194,29 +113,36 @@ BugCatchingContestant10AText:
 	line "for sure."
 	done
 
-NationalParkBugContestRelaxationSquareText:
-	text "RELAXATION SQUARE"
-	line "NATIONAL PARK"
-	done
 
-NationalParkBugContestBattleNoticeText:
-	text "What is this"
-	line "notice?"
+; bg text, itemballs, and hidden items are all in NationalPark.asm
+;NationalParkRelaxationSquareSign:
+;	jumptext NationalParkRelaxationSquareText
+;NationalParkRelaxationSquareText:
+;	text "RELAXATION SQUARE"
+;	line "NATIONAL PARK"
+;	done
 
-	para "Please battle only"
-	line "in the grass."
+;NationalParkBattleNoticeSign:
+;	jumptext NationalParkBattleNoticeText
+;NationalParkBattleNoticeText:
+;	text "     NOTICE!"
+;
+;	para "Please battle only"
+;	line "in the grass."
+;
+;	para "NATIONAL PARK"
+;	line "WARDEN's OFFICE"
+;	done
 
-	para "NATIONAL PARK"
-	line "WARDEN's OFFICE"
-	done
+;NationalParkHiddenFullHeal:
+;	hiddenitem FULL_HEAL, EVENT_NATIONAL_PARK_HIDDEN_FULL_HEAL
 
-NationalParkBugContestTrainerTipsText:
-	text "TRAINER TIPS"
+;NationalParkSunStone:
+;	itemball SUN_STONE
 
-	para "Print out MAIL by"
-	line "opening it then"
-	cont "pressing START."
-	done
+;NationalParkTMEnergyBall:
+;	itemball TM_ENERGY_BALL
+
 
 NationalParkBugContest_MapEvents:
 	db 0, 0 ; filler
@@ -230,10 +156,9 @@ NationalParkBugContest_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 14, 44, BGEVENT_READ, NationalParkBugContestRelaxationSquareSign
-	bg_event 27, 31, BGEVENT_READ, NationalParkBugContestBattleNoticeSign
-;	bg_event  6, 47, BGEVENT_ITEM, NationalParkBugContestHiddenFullHeal
-	bg_event 12,  4, BGEVENT_READ, NationalParkBugContestTrainerTipsSign
+	bg_event 14, 44, BGEVENT_READ, NationalParkRelaxationSquareSign
+	bg_event 26, 30, BGEVENT_READ, NationalParkBattleNoticeSign
+	bg_event  6, 47, BGEVENT_ITEM, NationalParkHiddenFullHeal
 
 	def_object_events
 	object_event 19, 29, SPRITE_BOY, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, BugCatchingContestant1AScript, EVENT_BUG_CATCHING_CONTESTANT_1A
@@ -246,5 +171,6 @@ NationalParkBugContest_MapEvents:
 	object_event 11, 27, SPRITE_BOY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, BugCatchingContestant8AScript, EVENT_BUG_CATCHING_CONTESTANT_8A
 	object_event 16,  8, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BugCatchingContestant9AScript, EVENT_BUG_CATCHING_CONTESTANT_9A
 	object_event 17, 34, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 3, 3, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BugCatchingContestant10AScript, EVENT_BUG_CATCHING_CONTESTANT_10A
-;	object_event 35, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NationalParkBugContestParlyzHeal, EVENT_NATIONAL_PARK_PARLYZ_HEAL
-;	object_event  1, 43, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NationalParkBugContestTMDig, EVENT_NATIONAL_PARK_TM_DIG
+
+	object_event 35, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NationalParkSunStone, EVENT_NATIONAL_PARK_SUN_STONE
+	object_event  1, 43, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NationalParkTMEnergyBall, EVENT_NATIONAL_PARK_TM_ENERGY_BALL
