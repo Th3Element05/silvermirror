@@ -152,7 +152,7 @@ PewterMuseum1F_Scientist_TakeTheAmberText:
 	text "Ssh! I think that"
 	line "this chunk of"
 	cont "AMBER contains"
-	cont "#MON DNA!"
+	roll "#MON DNA!"
 
 	para "But, my colleagues"
 	line "just ignore me!"
@@ -167,14 +167,14 @@ PewterMuseum1F_Scientist_TakeTheAmberText:
 	para "I hear there is a"
 	line "good team of"
 	cont "researchers on"
-	cont "CINNABAR ISLAND!"
+	roll "CINNABAR ISLAND!"
 	done
 
 PewterMuseum1F_CinnabarIslandText:
 	text "I hear there is a"
 	line "good team of"
 	cont "researchers on"
-	cont "CINNABAR ISLAND!"
+	roll "CINNABAR ISLAND!"
 	done
 
 PewterMuseum1F_AmberText:

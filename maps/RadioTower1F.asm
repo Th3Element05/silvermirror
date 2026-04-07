@@ -121,9 +121,9 @@ RadioTower1FLuckyNumberManScript:
 	end
 
 RadioTower1FLuckyNumberManAskToPlayText:
-	text "Hi, are you here"
-	line "for the LUCKY NUM-"
-	cont "BER SHOW?"
+	text "Hello, are you"
+	line "here for the LUCKY"
+	cont "NUMBER SHOW?"
 
 	para "Want me to check"
 	line "the ID numbers of"
@@ -419,7 +419,7 @@ RadioTower1FReceptionistNoToursText:
 	text "Hello. I'm sorry,"
 	line "but we're not"
 	cont "offering any tours"
-	cont "today."
+	roll "today."
 	done
 
 RadioTower1FLassScript:

@@ -356,7 +356,7 @@ RadioTower2FBuenaTuneInAfterSixText:
 	text "BUENA: Tune in to"
 	line "PASSWORD every"
 	cont "night from five"
-	cont "to midnight!"
+	roll "to midnight!"
 
 	para "Tune in, then drop"
 	line "in for a visit!"
@@ -376,7 +376,7 @@ RadioTower2FBuenaOfferPhoneNumberText:
 	text "BUENA: Oh! Your"
 	line "BLUE CARD reached"
 	cont "{d:BLUE_CARD_POINT_CAP} points today!"
-	cont "That's so wild!"
+	roll "That's so wild!"
 
 	para "Hmm… There isn't a"
 	line "prize for hitting"

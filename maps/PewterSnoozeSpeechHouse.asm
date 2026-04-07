@@ -24,7 +24,7 @@ PewterSnoozeSpeechHouseYoungsterText:
 	text "#MON become"
 	line "easier to catch"
 	cont "when they are"
-	cont "hurt or asleep!"
+	roll "hurt or asleep!"
 
 	para "But, it's not a"
 	line "sure thing!"

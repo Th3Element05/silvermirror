@@ -30,7 +30,7 @@ PokemaniacMillerAfterBattleText:
 	text "A while back, this"
 	line "karate dude wanted"
 	cont "to battle. He was"
-	cont "ridiculously good."
+	roll "ridiculously good."
 
 	para "He just thrashed"
 	line "us silly."
@@ -38,7 +38,7 @@ PokemaniacMillerAfterBattleText:
 	para "He went in deeper"
 	line "saying it was for"
 	cont "his training. I"
-	cont "wonder how he is?"
+	roll "wonder how he is?"
 	done
 
 TrainerSupernerdWaldo:
@@ -64,7 +64,7 @@ SupernerdWaldoAfterBattleText:
 	text "I came to explore"
 	line "MT.MORTAR, but I"
 	cont "got separated from"
-	cont "my partner…"
+	roll "my partner…"
 
 	para "Did you run into"
 	line "a trainer with a"

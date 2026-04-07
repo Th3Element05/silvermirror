@@ -16,7 +16,7 @@ MahoganyTownGrampsText:
 	text "A #MON with an"
 	line "unusual color was"
 	cont "spotted swimming"
-	cont "in LAKE OF RAGE."
+	roll "in LAKE OF RAGE."
 
 	para "All of the anglers"
 	line "in the area have"
@@ -32,7 +32,7 @@ MahoganyTownFisherText:
 	text "Since you came"
 	line "this far, take the"
 	cont "time to do some"
-	cont "sightseeing."
+	roll "sightseeing."
 
 	para "You should head"
 	line "north to check out"
@@ -45,7 +45,7 @@ MahoganyTownLassText:
 	text "Visit my grandma's"
 	line "shop, she sells"
 	cont "stuff that nobody"
-	cont "else has!"
+	roll "else has!"
 
 	para "But she's only"
 	line "here on weekdays."
@@ -53,7 +53,7 @@ MahoganyTownLassText:
 	para "She runs a table"
 	line "in GOLDENROD's"
 	cont "UNDERGROUND on the"
-	cont "weekend."
+	roll "weekend."
 	done
 
 MahoganyTownSign:

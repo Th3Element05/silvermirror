@@ -154,7 +154,7 @@ PalletTownFisherText:
 	para "You can now store"
 	line "and recall items"
 	cont "and #MON as"
-	cont "data via PC!"
+	roll "data via PC!"
 	done
 
 PalletTownExitRMovement:

@@ -46,13 +46,13 @@ RedsMomWhenBoyGrowsUpText:
 ;	para "He hasn't called"
 ;	line "either, so I have"
 ;	cont "no idea where he"
-;	cont "is or what he's"
+;	roll "is or what he's"
 ;	cont "been doing."
 ;
 ;	para "They say that no"
 ;	line "word is proof that"
 ;	cont "he's doing fine,"
-;	cont "but I do worry"
+;	roll "but I do worry"
 ;	cont "about him."
 ;	done
 

@@ -218,8 +218,9 @@ PewterCityYoungsterFollowMeText:
 	text "You're a trainer"
 	line "right? BROCK is"
 	cont "looking for new"
-	cont "challengers!"
-	cont "Follow me!"
+	roll "challengers!"
+
+	para "Follow me!"
 	done
 
 PewterCityYoungsterBrockText:
@@ -242,7 +243,7 @@ PewterCityYoungsterExplainItemText:
 	text_ram wStringBuffer4
 	text " will"
 	cont "boost a #MON's"
-	cont "@"
+	roll "@"
 	text_ram wStringBuffer2
 	text "-attacks!"
 	done
@@ -311,8 +312,9 @@ PewterCityMuseumGuyHereText:
 	text "It's right here!"
 	line "You have to pay"
 	cont "to get in, but"
-	cont "it's worth it!"
-	cont "See you around!"
+	roll "it's worth it!"
+
+	para "See you around!"
 	done
 
 PewterCitySuperNerd1AmazingFossilsText:
@@ -370,7 +372,7 @@ PewterCityYoungsterText:
 	para "They're all like"
 	line "BUG CATCHERs, but"
 	cont "the GYM LEADER,"
-	cont "BROCK, is totally"
+	roll "BROCK, is totally"
 	cont "into it!"
 	done
 
@@ -410,9 +412,9 @@ PewterCityPoliceNoticeSignText:
 ;	para "Thieves have been"
 ;	line "stealing #MON"
 ;	cont "fossils at MT."
-;	cont "MOON! Please call"
+;	roll "MOON! Please call"
 ;	cont "PEWTER POLICE"
-;	cont "with any info!"
+;	roll "with any info!"
 ;	done
 
 PewterCitySign:
@@ -431,7 +433,7 @@ PewterCityTrainerTipsText:
 	para "Any #MON that"
 	line "takes part in"
 	cont "battle, however"
-	cont "short, earns EXP!"
+	roll "short, earns EXP!"
 	done
 
 PewterCityPokecenterSign:

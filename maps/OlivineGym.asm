@@ -90,7 +90,7 @@ Jasmine_BetterTrainer:
 	para "In accordance with"
 	line "LEAGUE rules, I"
 	cont "confer upon you"
-	cont "this BADGE."
+	roll "this BADGE."
 	done
 
 Text_ReceivedMineralBadge:

@@ -17,7 +17,7 @@ MtMoonPokecenter1FBenchGuyText:
 	text "If you have too"
 	line "many #MON, you"
 	cont "should store them"
-	cont "via PC!"
+	roll "via PC!"
 	done
 
 MtMoonPokecenter1FYoungsterScript:
@@ -88,7 +88,7 @@ MtMoonPokecenterSalesmanDealText:
 	para "I'll let you have"
 	line "a swell MAGIKARP"
 	cont "for just ¥500!"
-	cont "What do you say?"
+	roll "What do you say?"
 	done
 
 MtMoonPokecenterGotMagikarpText:

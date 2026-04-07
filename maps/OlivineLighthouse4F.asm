@@ -70,7 +70,7 @@ OlivineLighthouse4F_MapScripts:
 ;	text "Right. Anybody"
 ;	line "would be worried"
 ;	cont "if his or her own"
-;	cont "#MON were hurt."
+;	roll "#MON were hurt."
 ;
 ;	para "I'll pray for the"
 ;	line "#MON here, so"

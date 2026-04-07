@@ -173,12 +173,12 @@ NewBarkTownRival_BeenThinkingText:
 	text "I've been doing a"
 	line "lot of thinking"
 	cont "since I lost as"
-	cont "#MON CHAMPION."
+	roll "#MON CHAMPION."
 
 	para "There's more to"
 	line "being a trainer"
 	cont "than just being"
-	cont "the best."
+	roll "the best."
 
 	para "<PLAYER>, you're"
 	line "a really strong"
@@ -213,7 +213,7 @@ Text_ProfElm:
 	text "PROF.ELM is the"
 	line "most well-known"
 	cont "#MON researcher"
-	cont "in JOHTO."
+	roll "in JOHTO."
 	done
 
 NewBarkTownSign:
