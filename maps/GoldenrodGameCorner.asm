@@ -127,7 +127,7 @@ GoldenrodGameCornerPharmacistText:
 	text "I always play this"
 	line "slot machine. It"
 	cont "pays out more than"
-	cont "others, I think."
+	roll "others, I think."
 	done
 
 GoldenrodGameCornerPokefanM1Script:
@@ -180,7 +180,7 @@ GoldenrodGameCornerPokefanFText:
 	para "I prefer it over"
 	line "the slots because"
 	cont "it's easier to"
-	cont "figure the odds."
+	roll "figure the odds."
 
 	para "But the payout is"
 	line "much lower."

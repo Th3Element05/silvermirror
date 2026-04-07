@@ -82,7 +82,7 @@ HallOfFame_OakText:
 	para "#MON LEAGUE"
 	line "CHAMPIONs are"
 	cont "honored for their"
-	cont "achievments here!"
+	roll "achievments here!"
 
 	para "Their #MON are"
 	line "also recorded in"
@@ -91,12 +91,12 @@ HallOfFame_OakText:
 	para "<PLAYER>! You have"
 	line "endeavored hard"
 	cont "to become the new"
-	cont "LEAGUE CHAMPION!"
+	roll "LEAGUE CHAMPION!"
 
 	para "Congratulations,"
 	line "<PLAYER>, you and"
 	cont "your #MON are"
-	cont "HALL OF FAMERs!"
+	roll "HALL OF FAMERs!"
 	done
 
 HallOfFame_MapEvents:

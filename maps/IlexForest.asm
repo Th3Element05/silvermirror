@@ -201,7 +201,7 @@ Text_HeadbuttOutro:
 	text "Rattle trees with"
 	line "HEADBUTT. Some-"
 	cont "times, sleeping"
-	cont "#MON fall out."
+	roll "#MON fall out."
 	done
 
 TrainerBugCatcherArnie:
@@ -231,7 +231,7 @@ BugCatcherArnieAfterBattleText:
 	text "A #MON I've"
 	line "never seen before"
 	cont "fell out of the"
-	cont "tree when I used"
+	roll "tree when I used"
 	cont "HEADBUTT."
 
 	para "I ought to use"
@@ -245,7 +245,7 @@ IlexForestSignpostText:
 	text "ILEX FOREST is"
 	line "so overgrown with"
 	cont "trees that you"
-	cont "can't see the sky."
+	roll "can't see the sky."
 
 	para "Please watch out"
 	line "for items that may"

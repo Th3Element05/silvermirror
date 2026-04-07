@@ -199,7 +199,7 @@ GoldenrodMagnetTrainStationGentlemanText:
 	para "My dream was to"
 	line "build a train that"
 	cont "is faster than any"
-	cont "#MON."
+	roll "#MON."
 
 	para "It really brings"
 	line "JOHTO much closer"
@@ -226,7 +226,7 @@ GoldenrodMagnetTrainStationGentleman_TrainsText:
 	para "Did I mention?"
 	line "Streamlined…"
 	cont "modern… powerful…"
-	cont "high-speed…"
+	roll "high-speed…"
 	
 	para "Oops! Look at the"
 	line "time! I've kept"

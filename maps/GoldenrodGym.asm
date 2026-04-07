@@ -146,7 +146,7 @@ WhitneyAttractText:
 	text "It's ATTRACT!"
 	line "It makes full use"
 	cont "of a #MON's"
-	cont "charm."
+	roll "charm."
 
 	para "Isn't it perfect"
 	line "for a cutie like"
@@ -181,7 +181,7 @@ LassWhitneyCriesText:
 	para "It's OK. She'll"
 	line "stop soon. She"
 	cont "always cries when"
-	cont "she loses."
+	roll "she loses."
 	done
 
 LassWalksUpMovement:
@@ -226,7 +226,7 @@ LassRubyAfterBattleText:
 	para "I'm okay! If I"
 	line "lose, I'll just"
 	cont "try harder next"
-	cont "time!"
+	roll "time!"
 	done
 
 TrainerBeautyCybil:

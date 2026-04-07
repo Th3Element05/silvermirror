@@ -230,7 +230,7 @@ KurtsSonsHouse1FKurtsSon_HelpUsText:
 ;
 ;	para "But TEAM ROCKET"
 ;	cont "has locked us out"
-;	cont "of the system!"
+;	roll "of the system!"
 ;
 ;	para "You're a trainer?"
 ;
@@ -317,7 +317,6 @@ KurtsSonsHouse1F_BallInProgressText:
 	para "It's being turned"
 	line "into a #BALL."
 	done
-
 
 
 KurtsSonsHouse1FStoveScript:

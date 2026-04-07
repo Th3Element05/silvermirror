@@ -112,7 +112,7 @@ GoldenrodUndergroundWarehouse_MapScripts:
 ;	text "TEAM ROCKET will"
 ;	line "keep going, wait-"
 ;	cont "ing for the return"
-;	cont "of GIOVANNI."
+;	roll "of GIOVANNI."
 ;
 ;	para "We'll do whatever"
 ;	line "it takes."

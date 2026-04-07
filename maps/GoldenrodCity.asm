@@ -198,7 +198,7 @@ GoldenrodCityPokefanMText:
 	text "They built a new"
 	line "RADIO TOWER to"
 	cont "replace the old,"
-	cont "creaky one."
+	roll "creaky one."
 	done
 
 GoldenrodCityYoungster1Script:
@@ -229,7 +229,7 @@ GoldenrodCityYoungster2Text:
 	para "I got in trouble"
 	line "for playing in the"
 	cont "basement of the"
-	cont "DEPT.STORE."
+	roll "DEPT.STORE."
 	done
 
 GoldenrodCityLassScript:
@@ -273,14 +273,14 @@ GoldenrodCityGrampsText:
 ;	text "Is that man in"
 ;	line "black dressed up"
 ;	cont "like a TEAM ROCKET"
-;	cont "member? How silly!"
+;	roll "member? How silly!"
 ;	done
 ;
 ;GoldenrodCityCooltrainerF1Text_ClearedRadioTower:
 ;	text "Was that man in"
 ;	line "black really part"
 ;	cont "of TEAM ROCKET? I"
-;	cont "can't believe it!"
+;	roll "can't believe it!"
 ;	done
 
 ;GoldenrodCityRocketScoutScript:

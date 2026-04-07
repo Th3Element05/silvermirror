@@ -103,9 +103,8 @@ GoldenrodPokecenter1FLassText:
 
 	para "I don't think"
 	line "there is a single"
-
-	para "#MON that is"
-	line "the toughest."
+	cont "#MON that is"
+	roll "the toughest."
 	done
 
 ;GoldenrodPokecenter1FGameboyKidScript:

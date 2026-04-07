@@ -25,28 +25,25 @@ GoldenrodPPSpeechHouseRadio:
 GoldenrodPPSpeechHouseFisherText:
 	text "Once while I was"
 	line "battling, my"
-
-	para "#MON couldn't"
-	line "make any moves."
+	cont "#MON couldn't"
+	roll "make any moves."
 
 	para "The POWER POINTS,"
 	line "or PP, of its"
-
-	para "moves were all"
-	line "gone."
+	cont "moves were all"
+	roll "gone."
 	done
 
 GoldenrodPPSpeechHouseLassText:
 	text "Sometimes, a"
 	line "healthy #MON"
-
-	para "may be unable to"
-	line "use its moves."
+	cont "may be unable to"
+	roll "use its moves."
 
 	para "If that happens,"
 	line "heal it at a #-"
 	cont "MON CENTER or use"
-	cont "an item."
+	roll "an item."
 	done
 
 GoldenrodPPSpeechHouse_MapEvents:

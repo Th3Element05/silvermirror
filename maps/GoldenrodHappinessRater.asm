@@ -72,9 +72,8 @@ HappinessRatersHouseRadio:
 GoldenrodHappinessRaterTeacherText:
 	text "If you treat your"
 	line "#MON nicely,"
-
-	para "they will love you"
-	line "in return."
+	cont "they will love you"
+	roll "in return."
 
 	para "Oh? Let me see"
 	line "your @"
@@ -119,9 +118,8 @@ GoldenrodHappinessRatingText_LooksMean:
 GoldenrodHappinessRaterPokefanMText:
 	text "I keep losing in"
 	line "battles, and my"
-
-	para "#MON end up"
-	line "fainting…"
+	cont "#MON end up"
+	roll "fainting…"
 
 	para "Maybe that's why"
 	line "my #MON don't"

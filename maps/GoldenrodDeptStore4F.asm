@@ -32,12 +32,12 @@ GoldenrodDeptStore4FGameboyKidText:
 	text "Some #MON only"
 	line "evolve by being"
 	cont "exposed to a"
-	cont "Game Link cable."
+	roll "Game Link cable."
 
 	para "I know of four:"
 	line "MACHOKE, KADABRA,"
 	cont "HAUNTER and, um,"
-	cont "GRAVELER."
+	roll "GRAVELER."
 
 	para "I heard there are"
 	line "others too."

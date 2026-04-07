@@ -147,10 +147,10 @@ MagikarpLengthRaterText_WorldsLargestMagikarp:
 
 MagikarpLengthRaterText_YouHaveAMagikarp:
 	text "Ah, you have a"
-	line "MAGIKARP! Let's"
+	line "MAGIKARP!"
 
-	para "see how big that"
-	line "baby is."
+	para "Let's see how big"
+	line "that baby is!"
 	done
 
 MagikarpLengthRaterText_Memento:
@@ -173,15 +173,21 @@ MagikarpLengthRaterText_Bonus:
 	done
 
 MagikarpLengthRaterText_TooShort:
-	text "Wow! This one is"
-	line "outstanding!"
+;	text "Wow! This one is"
+;	line "outstanding!"
+;
+;	para "…I wish I could"
+;	line "say that, but I've"
+;	cont "seen a bigger one"
+;	roll "before."
+;	done
 
-	para "…I wish I could"
-	line "say that, but I've"
-
-	para "seen a bigger one"
-	line "before."
+	text "This is a fine"
+	line "MAGIKARP, but I've"
+	cont "seen bigger ones"
+	roll "before."
 	done
+
 
 MagikarpLengthRaterText_NotMagikarp:
 	text "What? That's not a"
