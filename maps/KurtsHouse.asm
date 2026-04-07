@@ -351,7 +351,7 @@ KurtsHouseKurtTurnedOutGreatText:
 ;	text "KURT: Now that my"
 ;	line "granddaughter is"
 ;	cont "helping me, I can"
-;	cont "work much faster."
+;	roll "work much faster."
 ;	done
 
 KurtsHouseKurtWhatIsThatText:
@@ -363,7 +363,7 @@ KurtsHouseKurtWhatIsThatText:
 	para "It looks a lot"
 	line "like a #BALL,"
 	cont "but it appears to"
-	cont "be something else."
+	roll "be something else."
 
 	para "Let me check it"
 	line "for you."
@@ -443,7 +443,7 @@ KurtsHouseKurtThisBallStartedToShakeText:
 ;	para "I would be honored"
 ;	line "to make BALLs for"
 ;	cont "a trainer like"
-;	cont "you."
+;	roll "you."
 ;
 ;	para "This is all I have"
 ;	line "now, but take it."

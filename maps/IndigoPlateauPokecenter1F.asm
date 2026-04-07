@@ -69,12 +69,12 @@ IndigoPlateauPokecenter1FGymGuideText:
 	para "At #MON LEAGUE,"
 	line "you have to face"
 	cont "the ELITE FOUR in"
-	cont "succession."
+	roll "succession."
 
 	para "If you lose, you"
 	line "have to start all"
 	cont "over again! This"
-	cont "is it! Go for it!"
+	roll "is it! Go for it!"
 	done
 
 IndigoPokecenterFirstVisitScript:
@@ -89,23 +89,16 @@ IndigoPlateauPokecenter1FCooltrainerMText:
 	line "be tested by the"
 	cont "ELITE FOUR!"
 
-	para "Once you enter,"
-	line "you need to beat"
-	cont "them all. If you"
-	cont "lose you need to"
-	cont "start all over!"
-	done
-;
 ;	text "At the #MON"
 ;	line "LEAGUE, you'll get"
 ;	cont "tested by the"
-;	cont "ELITE FOUR."
+;	roll "ELITE FOUR."
 ;
-;	para "You have to beat"
-;	line "them all. If you"
-;	cont "lose, you have to"
-;	cont "start all over!"
-;	done
+	para "You have to beat"
+	line "them all. If you"
+	cont "lose, you have to"
+	roll "start all over!"
+	done
 
 ;IndigoPokecenterLanceGiftScript:
 ;	setscene SCENE_INDIGOPLATEAUPOKECENTER1F_NOOP

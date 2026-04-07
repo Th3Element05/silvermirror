@@ -51,7 +51,7 @@ GoldenrodDeptStoreRoofPokefanFText:
 	para "I sometimes come"
 	line "up to the rooftop"
 	cont "to take a break"
-	cont "from shopping."
+	roll "from shopping."
 	done
 
 GoldenrodDeptStoreRoofFisherScript:
@@ -71,7 +71,7 @@ GoldenrodDeptStoreRoofFisherText:
 	para "I'm going to be"
 	line "back every day to"
 	cont "collect all the"
-	cont "dolls!"
+	roll "dolls!"
 	done
 
 GoldenrodDeptStoreRoofTwinScript:
@@ -110,7 +110,7 @@ GoldenrodDeptStoreRoofPokefanMText:
 	text "There's something"
 	line "I really want,"
 	cont "but I don't have"
-	cont "enough money…"
+	roll "enough money…"
 
 	para "Maybe I'll sell"
 	line "all these BERRIES"

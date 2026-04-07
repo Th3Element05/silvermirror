@@ -27,7 +27,7 @@ LavenderPokecenter1FGirlText:
 	text "I saw CUBONE's"
 	line "mother die trying"
 	cont "to escape from"
-	cont "TEAM ROCKET!"
+	roll "TEAM ROCKET!"
 	done
 
 LavenderPokecenter1FGentlemanScript:

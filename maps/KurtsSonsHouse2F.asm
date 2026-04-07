@@ -23,11 +23,6 @@ KurtsSonsHouse2FApricornBallCallback:
 	endcallback
 
 
-
-
-
-
-
 KurtSonsHouse2FBookshelf:
 	jumpstd DifficultBookshelfScript
 

@@ -67,7 +67,7 @@ LakeOfRageFlypointCallback:
 ;	para "Seeing as how it's"
 ;	line "Wednesday today,"
 ;	cont "I'm WESLEY of"
-;	cont "Wednesday."
+;	roll "Wednesday."
 ;	done
 
 ;WesleyGivesGiftText:
@@ -86,7 +86,7 @@ LakeOfRageFlypointCallback:
 ;	text "WESLEY: Since you"
 ;	line "found me, you must"
 ;	cont "have met my broth-"
-;	cont "ers and sisters."
+;	roll "ers and sisters."
 ;
 ;	para "Or did you just"
 ;	line "get lucky?"
@@ -196,7 +196,7 @@ LakeOfRageClairFirstText:
 	text "They say LAKE OF"
 	line "RAGE was created"
 	cont "by a rampaging"
-	cont "GYARADOS."
+	roll "GYARADOS."
 
 	para "But these days it"
 	line "is just full of"
@@ -225,7 +225,7 @@ LakeOfRageClairMagikarpText:
 	para "If you have the"
 	line "discipline and the"
 	cont "patience to train"
-	cont "them anyway…"
+	roll "them anyway…"
 
 	para "There is a lot of"
 	line "potential in that"
@@ -296,7 +296,7 @@ FisherMarcoBeatenText:
 	text "I might be an ex-"
 	line "pert angler, but"
 	cont "I stink as a #-"
-	cont "MON trainer…"
+	roll "MON trainer…"
 	done
 
 FisherMarcoAfterBattleText:
@@ -319,7 +319,7 @@ FisherArchieSeenText:
 	text "No matter what I"
 	line "do, all I catch"
 	cont "are the same #-"
-	cont "MON…"
+	roll "MON…"
 	done
 
 FisherArchieBeatenText:
@@ -346,7 +346,7 @@ CooltrainermKevinSeenText:
 	text "If a trainer spots"
 	line "another trainer,"
 	cont "he has to make a"
-	cont "challenge."
+	roll "challenge."
 	done
 
 CooltrainermKevinBeatenText:
@@ -358,7 +358,7 @@ CooltrainermKevinAfterBattleText:
 	text "#MON and their"
 	line "trainer become"
 	cont "powerful through"
-	cont "constant battling."
+	roll "constant battling."
 	done
 
 TrainerCooltrainerfCara:

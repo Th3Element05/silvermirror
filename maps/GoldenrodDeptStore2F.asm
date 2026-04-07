@@ -47,7 +47,7 @@ GoldenrodDeptStore2FGentlemanText:
 	text "This DEPT.STORE"
 	line "makes me realize"
 	cont "that GOLDENROD is"
-	cont "a big city."
+	roll "a big city."
 
 	para "The selection here"
 	line "is unmatched any-"

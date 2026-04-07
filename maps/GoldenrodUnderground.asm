@@ -393,7 +393,7 @@ GoldenrodUndergroundYoungerHaircutBrotherText:
 ;	para "I'm the younger"
 ;	line "and less expen-"
 ;	cont "sive of the two"
-;	cont "HAIRCUT BROTHERS."
+;	roll "HAIRCUT BROTHERS."
 ;
 ;	para "I'll spiff up your"
 ;	line "#MON for just"
