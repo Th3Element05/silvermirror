@@ -24,7 +24,7 @@ OlivineMartCooltrainerFText:
 	text "Do your #MON"
 	line "already know the"
 	cont "move for carrying"
-	cont "people on water?"
+	roll "people on water?"
 	done
 
 OlivineMartLassScript:

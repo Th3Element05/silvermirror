@@ -40,7 +40,7 @@ RadioTower5FDirectorText:
 	para "I built this RADIO"
 	line "TOWER so I could"
 	cont "express my love"
-	cont "of #MON."
+	roll "of #MON."
 
 	para "Its nice when"
 	line "people enjoy our"

@@ -65,7 +65,7 @@ RadioTower3FCooltrainerFLockedGateText:
 	text "Some maniac ran"
 	line "through and locked"
 	cont "the security gate"
-	cont "behind him!"
+	roll "behind him!"
 
 	para "But the DIRECTOR"
 	line "can open it."
@@ -100,7 +100,7 @@ RadioTower3FCooltrainerFYoureAHeroText:
 ;
 ;	para "A #MON will be"
 ;	cont "harder to hit if"
-;	cont "it holds it."
+;	roll "it holds it."
 ;	done
 
 RadioTower3FCooltrainerFYouWereMarvelousText:
@@ -115,7 +115,7 @@ RadioTower3FGymGuideText:
 	text "We run 24 hours a"
 	line "day to broadcast"
 	cont "entertaining pro-"
-	cont "grams."
+	roll "grams."
 
 	para "I'll do my best to"
 	line "run around the"
@@ -129,7 +129,7 @@ RadioTower3FSuperNerdText:
 	text "We have recordings"
 	line "of the cries of"
 	cont "all #MON that"
-	cont "have been found."
+	roll "have been found."
 
 	para "We must have over"
 	line "200 kinds."

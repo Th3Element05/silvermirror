@@ -183,13 +183,16 @@ PokemonFanClubChairmanRapidashText:
 	cont "spectacular…"
 	cont "ravishing… simply"
 	cont "divine…"
-	cont "Oops! Look at the"
-	cont "time! I've kept"
-	cont "you too long!"
+
+	para "Oops!"
+	line "Look at the time!"
+	cont "I've kept you too"
+	roll "long!"
 
 	para "Thanks for hearing"
-	line "me out. I want you"
-	cont "to have this!"
+	line "me out."
+	cont "I want you to have"
+	roll "this!"
 	done
 
 PokemonFanClubChairmanVoucherText:

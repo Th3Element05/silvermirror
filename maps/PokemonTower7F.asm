@@ -115,7 +115,7 @@ RocketGruntF4SeenText:
 	text "This old guy came"
 	line "and complained"
 	cont "about us harming"
-	cont "useless #MON!"
+	roll "useless #MON!"
 
 	para "We're talking it"
 	line "over as adults!"

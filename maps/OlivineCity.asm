@@ -53,7 +53,7 @@ OlivineCityPortSailorText:
 ;	text "S.S.AQUA sails to"
 ;	line "VERMILION CITY in"
 ;	cont "KANTO on MONDAY"
-;	cont "and FRIDAY."
+;	roll "and FRIDAY."
 ;	done
 	text "The S.S.AQUA"
 	line "sails to KANTO on "
@@ -71,12 +71,12 @@ OlivineCitySailor1Text:
 	para "But in the pitch-"
 	line "black of night,"
 	cont "the sea is even"
-	cont "more treacherous!"
+	roll "more treacherous!"
 
 	para "Without the beacon"
 	line "of the LIGHTHOUSE"
 	cont "to guide it, no"
-	cont "ship can sail."
+	roll "ship can sail."
 	done
 
 OlivineCitySailor2Script:
@@ -112,7 +112,7 @@ OlivineCityStandingYoungsterPokegearText:
 	text "That thing you"
 	line "have--it's a #-"
 	cont "GEAR, right? Wow,"
-	cont "that's cool."
+	roll "that's cool."
 	done
 
 OlivineCityStandingYoungsterPokedexText:

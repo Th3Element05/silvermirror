@@ -205,7 +205,7 @@ ElmsLookingForYouText:
 	text "Oh, <PLAYER>…! Our"
 	line "neighbor, PROF."
 	cont "OAK, was looking"
-	cont "for you."
+	roll "for you."
 
 	para "He said he had"
 	line "something to give"
@@ -214,7 +214,7 @@ ElmsLookingForYouText:
 	para "Oh! I almost for-"
 	line "got! Your #MON"
 	cont "GEAR is back from"
-	cont "the repair shop."
+	roll "the repair shop."
 
 	para "Here you go!"
 	done
@@ -243,7 +243,7 @@ ComeHomeForDSTText:
 	text "Come home to"
 	line "adjust your clock"
 	cont "for Daylight"
-	cont "Saving Time."
+	roll "Saving Time."
 
 	para "By the way, do you"
 	line "know how to use"
@@ -331,7 +331,7 @@ NeighborText:
 	para "My daughter is"
 	line "adamant about"
 	cont "becoming PROF."
-	cont "OAK's assistant."
+	roll "OAK's assistant."
 
 	para "She really loves"
 	line "#MON!"
@@ -370,7 +370,7 @@ PlayersHouse1FTVText:
 	text "There's a movie on"
 	line "TV: Stars dot the"
 	cont "sky as two boys"
-	cont "ride on a train…"
+	roll "ride on a train…"
 	done
 
 PlayersHouse1FBookshelf:

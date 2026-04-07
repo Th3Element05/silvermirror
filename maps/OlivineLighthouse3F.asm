@@ -96,7 +96,7 @@ OlivineLighthouse3F_MapScripts:
 ;	text "I travel the world"
 ;	line "to train my #-"
 ;	cont "MON. I wish to"
-;	cont "battle with you."
+;	roll "battle with you."
 ;	done
 
 ;GentlemanPrestonBeatenText:

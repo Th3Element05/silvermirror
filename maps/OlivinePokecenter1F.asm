@@ -17,7 +17,7 @@ OlivinePokecenter1FFisherText:
 	text "The SAILOR in the"
 	line "OLIVINE CAFE next"
 	cont "door is really"
-	cont "generous."
+	roll "generous."
 
 	para "He taught my"
 	line "#MON STRENGTH."

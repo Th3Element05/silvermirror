@@ -289,13 +289,13 @@ RadioTower4FOak_ThanksBlueText:
 	para "You've always been"
 	line "a great trainer,"
 	cont "but today I saw"
-	cont "something more in"
+	roll "something more in"
 	cont "you."
 
 	para "It turns out there"
 	line "is an opening for"
 	cont "a GYM LEADER in"
-	cont "VIRIDIAN CITY."
+	roll "VIRIDIAN CITY."
 
 	para "I think you should"
 	line "apply to lead the"
@@ -362,7 +362,7 @@ RadioTower4FBlue_GymLeaderText:
 	text "<RIVAL>: GRAMPS"
 	line "told me to apply"
 	cont "to be VIRIDIAN's"
-	cont "GYM LEADER."
+	roll "GYM LEADER."
 
 	para "Maybe I will…"
 
@@ -460,7 +460,7 @@ RadioTower4FDJMaryText_GiveBrightPowder:
 	text "MARY: When a"
 	line "#MON holds that"
 	cont "it lowers the"
-	cont "foe's ACCURACY."
+	roll "foe's ACCURACY."
 	done
 
 RadioTower4FDJMaryText_Default:

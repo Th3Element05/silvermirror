@@ -65,7 +65,7 @@ PryceText_Intro:
 	text "#MON have many"
 	line "experiences in"
 	cont "their lives, just "
-	cont "like we do. "
+	roll "like we do. "
 
 	para "I, too, have seen"
 	line "and suffered much"
@@ -78,7 +78,7 @@ PryceText_Intro:
 	para "I have been with"
 	line "#MON since"
 	cont "before you were"
-	cont "born."
+	roll "born."
 
 	para "I do not lose"
 	line "easily."
@@ -86,7 +86,7 @@ PryceText_Intro:
 	para "I, PRYCE--the"
 	line "winter trainer--"
 	cont "shall demonstrate"
-	cont "my power!"
+	roll "my power!"
 	done
 
 PryceText_Impressed:
@@ -96,7 +96,7 @@ PryceText_Impressed:
 	para "With your strong"
 	line "will, I know you"
 	cont "will overcome all"
-	cont "life's obstacles."
+	roll "life's obstacles."
 
 	para "You are worthy of"
 	line "this BADGE!"
@@ -119,13 +119,13 @@ PryceText_AncientpowerSpeech:
 	para "It's a special"
 	line "rock-type attack"
 	cont "which may raise"
-	cont "all of the user's"
+	roll "all of the user's"
 	cont "stats at once."
 ;
 ;	para "And, some #MON"
 ;	line "will only evolve"
 ;	cont "when they know"
-;	cont "ANCIENTPOWER."
+;	roll "ANCIENTPOWER."
 	done
 
 PryceText_CherishYourPokemon:
@@ -136,7 +136,7 @@ PryceText_CherishYourPokemon:
 	para "You and your #-"
 	line "MON will be to-"
 	cont "gether for many"
-	cont "years to come."
+	roll "years to come."
 
 	para "Cherish your time"
 	line "together!"
@@ -169,7 +169,7 @@ BoarderShaunAfterBattleText:
 	para "He meditates under"
 	line "a waterfall daily"
 	cont "to strengthen his"
-	cont "mind and body."
+	roll "mind and body."
 	done
 
 TrainerSkierRoxanne:
@@ -186,7 +186,7 @@ SkierRoxanneSeenText:
 	text "To get to PRYCE,"
 	line "our GYM LEADER,"
 	cont "you need to think"
-	cont "before you skate."
+	roll "before you skate."
 	done
 
 SkierRoxanneBeatenText:
@@ -198,7 +198,7 @@ SkierRoxanneAfterBattleText:
 	text "If you don't skate"
 	line "with precision,"
 	cont "you won't get far"
-	cont "in this GYM."
+	roll "in this GYM."
 	done
 
 TrainerBoarderRonald:
@@ -226,7 +226,7 @@ BoarderRonaldAfterBattleText:
 	text "I think there's a"
 	line "move a #MON"
 	cont "can use while it's"
-	cont "frozen."
+	roll "frozen."
 	done
 
 TrainerSkierClarissa:
@@ -308,17 +308,17 @@ MahoganyGymGuideText:
 	text "PRYCE is a veteran"
 	line "who has trained"
 	cont "#MON for over"
-	cont "40 years."
+	roll "40 years."
 
 	para "He's said to be"
 	line "good at freezing"
 	cont "opponents with"
-	cont "ice-type moves."
+	roll "ice-type moves."
 
 	para "That means you"
 	line "should melt him"
 	cont "with your burning"
-	cont "ambition!"
+	roll "ambition!"
 	done
 
 MahoganyGymGuideWinText:

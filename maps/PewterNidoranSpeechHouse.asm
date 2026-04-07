@@ -19,7 +19,7 @@ PewterNidoranHouseManText:
 	para "It grows fast, but"
 	line "it may ignore an"
 	cont "unskilled trainer"
-	cont "in battle!"
+	roll "in battle!"
 
 	para "If only we had"
 	line "some BADGES…"

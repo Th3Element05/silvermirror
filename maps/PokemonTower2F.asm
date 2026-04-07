@@ -73,8 +73,9 @@ PokemonTower2FRivalBeforeBattleText:
 	text "<RIVAL>: Hey,"
 	line "<PLAYER>! What"
 	cont "brings you here?"
-	cont "Your #MON"
-	cont "don't look dead!"
+
+	para "Your #MON"
+	line "don't look dead!"
 
 	para "I can at least"
 	line "make them faint!"
@@ -102,12 +103,12 @@ PokemonTower2FRivalAfterBattleText:
 	text "How's your #DEX"
 	line "coming, pal?"
 	cont "I just caught a"
-	cont "CUBONE!"
+	roll "CUBONE!"
 
 	para "I can't find the"
 	line "grown-up MAROWAK"
 	cont "yet! I doubt there"
-	cont "are any left!"
+	roll "are any left!"
 	
 	para "Well, I better get"
 	line "going! I've got a"

@@ -22,7 +22,7 @@ MahoganyPokecenter1FPokefanMText:
 	text "I saw CLAIR, the"
 	line "GYM LEADER from"
 	cont "BLACKTHORN CITY"
-	cont "passing through."
+	roll "passing through."
 
 	para "Sometimes she goes"
 	line "to LAKE OF RAGE."
@@ -38,7 +38,7 @@ MahoganyPokecenter1FYoungsterText:
 	para "I make them learn"
 	line "certain moves be-"
 	cont "fore I let them"
-	cont "evolve."
+	roll "evolve."
 	done
 
 MahoganyPokecenter1FCooltrainerFScript:

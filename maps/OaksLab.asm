@@ -631,7 +631,7 @@ OaksLabIntroConversationText:
 	para "In my old age, I"
 	line "have only 3 left,"
 	cont "but you can have"
-	cont "one!"
+	roll "one!"
 
 	para "Choose!"
 
@@ -662,7 +662,7 @@ OaksLabWildPokemonText:
 	text "OAK: If a wild"
 	line "#MON appears,"
 	cont "your #MON can"
-	cont "fight against it!"
+	roll "fight against it!"
 	done
 
 OaksLabDontLeaveText:
@@ -724,7 +724,7 @@ OaksLabRivalBattleChallengeText:
 	text "<RIVAL>: Wait"
 	line "<PLAYER>!"
 	cont "Let's check out"
-	cont "our #MON!"
+	roll "our #MON!"
 
 	para "Come on, I'll take"
 	line "you on!"
@@ -734,7 +734,7 @@ OaksLabRivalBattleWinText:
 	text "<RIVAL>: WHAT?"
 	line "Unbelievable!"
 	cont "I picked the"
-	cont "wrong #MON!"
+	roll "wrong #MON!"
 	done
 
 OaksLabRivalBattleLossText:
@@ -746,7 +746,7 @@ OaksLabAfterRivalBattleText:
 	text "<RIVAL>: Okay!"
 	line "I'll make my"
 	cont "#MON fight to"
-	cont "toughen it up!"
+	roll "toughen it up!"
 
 	para "<PLAYER>! GRAMPS!"
 	line "Smell you later!"
@@ -756,7 +756,7 @@ OaksLabRaisePokemonText:
 	text "OAK: <PLAYER>,"
 	line "raise your young"
 	cont "#MON by making"
-	cont "it fight!"
+	roll "it fight!"
 	done
 
 OaksLabHowIsMyPokemonText:
@@ -808,7 +808,7 @@ OaksLabOakHaveRequestText:
 	para "It automatically"
 	line "records data on"
 	cont "#MON you've"
-	cont "seen or caught!"
+	roll "seen or caught!"
 
 	para "It's a hi-tech"
 	line "encyclopedia!"
@@ -826,7 +826,7 @@ OaksLabOaksDreamGivePagerText:
 	text "OAK: To make a"
 	line "complete guide"
 	cont "on all the #MON"
-	cont "in the world…"
+	roll "in the world…"
 
 	para "That was my dream!"
 
@@ -870,7 +870,7 @@ OaksLabOakExplainsPagerText:
 	para "It allows you to"
 	line "call on special"
 	cont "#MON to aid you"
-	cont "on your travels."
+	roll "on your travels."
 
 	para "But you need to"
 	line "get #MON PAGERs"
@@ -889,19 +889,19 @@ OaksLabRivalLeavesAfterPokedexText:
 	para "I know! I'll"
 	line "borrow a MAP CARD"
 	cont "for my #GEAR"
-	cont "from my sis!"
+	roll "from my sis!"
 	done
 
 OaksLabOakGivePhoneNumberText:
 	text "OAK: <PLAYER>,"
 	line "completing the"
 	cont "#DEX is a big"
-	cont "responsibility."
+	roll "responsibility."
 	
 	para "So, here is my"
 	line "phone number. You"
 	cont "can call me if"
-	cont "anything comes up!"
+	roll "anything comes up!"
 	done
 
 GotOaksNumberText:
@@ -929,12 +929,12 @@ OaksLabGetPokeballsText:
 	text "OAK: You can't get"
 	line "detailed data on"
 	cont "#MON by just"
-	cont "seeing them."
+	roll "seeing them."
 
 	para "You must catch"
 	line "them! Use these"
 	cont "to capture wild"
-	cont "#MON."
+	roll "#MON."
 
 	para "<PLAYER> received"
 	line "#BALLs."
@@ -989,7 +989,7 @@ OakGiveTicketText2:
 	para "I'm sure he would"
 	line "love to see how"
 	cont "your #DEX is"
-	cont "coming along!"
+	roll "coming along!"
 	done
 
 ; bg text

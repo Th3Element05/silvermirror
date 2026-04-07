@@ -107,7 +107,7 @@ MrPokemonsHouse_OakExplainsVisitText:
 	text "I travel to JOHTO"
 	line "from time to time"
 	cont "to tape segments"
-	cont "for my RADIO show."
+	roll "for my RADIO show."
 
 	para "Speaking of which,"
 	line "I must be going."
@@ -126,7 +126,7 @@ MrPokemonsHouse_OakSaysFarewellText:
 	text "OAK: MR.#MON,"
 	line "I wish I had more"
 	cont "time to chat, but"
-	cont "I must be going."
+	roll "I must be going."
 
 	para "Farewell!"
 	done
@@ -142,7 +142,7 @@ MrPokemonText_Invaluable:
 	text "PROF.OAK told me"
 	line "that you've been"
 	cont "helping with his"
-	cont "#DEX project."
+	roll "#DEX project."
 
 	para "He said your cont-"
 	line "ributions have"
@@ -240,7 +240,7 @@ MrPokemonText_RainbowWing:
 	para "That sounds like"
 	line "the #MON from"
 	cont "the legend of the"
-	cont "TIN TOWER in"
+	roll "TIN TOWER in"
 	cont "ECRUTEAK CITY!"
 
 	para "PROF.ELM claims he"
@@ -262,13 +262,13 @@ MrPokemonText_SilverWing:
 	para "It reminds me of"
 	line "the legend of a"
 	cont "#MON from the"
-	cont "BRASS TOWER in"
+	roll "BRASS TOWER in"
 	cont "ECRUTEAK CITY."
 
 	para "But that tower"
 	line "burned down, and"
 	cont "the #MON hasn't"
-	cont "been seen since."
+	roll "been seen since."
 
 	para "I wonder, where"
 	line "has it been hiding"
@@ -319,7 +319,7 @@ MrPokemonText_VisitElm:
 	para "If you go south to"
 	line "CHERRYGROVE first,"
 	cont "NEW BARK is east"
-	cont "from there."
+	roll "from there."
 	done
 
 MrPokemonsHouse_ForeignMagazines:
