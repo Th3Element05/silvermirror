@@ -1,4 +1,5 @@
 	object_const_def
+	const PEWTERPOKECENTER_BENCH_GUY
 
 PewterPokecenter1F_MapScripts:
 	def_scene_scripts
@@ -28,11 +29,18 @@ PewterPokecenter1FBenchGuyText:
 PewterPokecenterJigglypuff:
 	opentext
 	writetext PewterJigglypuffText
-;	cry JIGGLYPUFF
-	playmusic MUSIC_JIGGLYPUFF_SONG
-	pause 200
-	special RestartMapMusic
+	cry JIGGLYPUFF
+	waitbutton
 	closetext
+	playmusic MUSIC_JIGGLYPUFF_SONG
+;	pause 200 ;total
+	pause 100
+	showemote EMOTE_SLEEP, PEWTERPOKECENTER_BENCH_GUY, 20
+	pause 20
+	showemote EMOTE_SLEEP, PEWTERPOKECENTER_BENCH_GUY, 20
+	pause 20
+	showemote EMOTE_SLEEP, PEWTERPOKECENTER_BENCH_GUY, 20
+	special RestartMapMusic
 	end
 
 PewterJigglypuffText:
@@ -84,9 +92,9 @@ PewterPokecenter1F_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event  0,  4, SPRITE_BENCH_GUY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterPokecenter1FBenchGuyScript, -1
 	object_event  3,  1, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, PewterPokecenter1FNurseScript, -1
 	object_event 11,  2, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PewterPokecenter1FReceptionistScript, -1
-	object_event  0,  4, SPRITE_BENCH_GUY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterPokecenter1FBenchGuyScript, -1
 	object_event  1,  3, SPRITE_JIGGLYPUFF, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, PewterPokecenterJigglypuff, -1
 	object_event 11,  6, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterPokecenter1FGentlemanScript, -1
 
