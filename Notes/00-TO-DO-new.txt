@@ -3,6 +3,11 @@ New TO DO list
 
 TEST
 
+pewter city bench guy emote
+ghost getoutgetout text
+
+missingno encounter gives rare candies, overflow x99?
+
 game corner prize vendor scripts (all)
 
 how many walking sprites in SSANNE ROOMS NORTH? (pokefan F)
@@ -27,18 +32,32 @@ OftenFleeMons:
 
 DO
 
-national park still needs doing?
+lake of rage hidden power house?
+
+not done route1
+go through all maps for:
+text, cont, roll
+documentation of item locations, etc
+
+kurts son GS BALL, tell player to see kurt
+
+sweet scent match level
+flower shop sweet scent move tutor?
+
+phone trainers
+johto trades?
+
 bug contest?
 QUICK_CLAW obtain in kanto instead of nat park?
 
 
-SUN_STONE	natl park(1), bug contest(R), phone trainer(r?)
-KINGS_ROCK	slowpoke well(1)
-DRAGON_SCALE	mt mortar(1)
-DUSK_STONE 	burned tower(1), ?phone trainer?
-METAL_COAT		?lighthouse?
-RAZOR_FANG		where?	
-RAZOR_CLAW		where?	
+(2) SUN_STONE		natlpark(1), sunkern, bugcontest(R), phonetrainer(r?)
+(2) DUSK_STONE 		burnedtower(1), murkrow, bugcontest(R), ?phonetrainer?
+(2) KINGS_ROCK		slowpokewell(1), gamecorner
+(1) DRAGON_SCALE	mtmortar(1), gamecorner
+(2) METAL_COAT		lighthouse(1), gamecorner
+(1) RAZOR_FANG		gamecorner, gligar(h)
+(1) RAZOR_CLAW		gamecorner, sneasel(h)
 all of these in goldenrod underground?
 
 
