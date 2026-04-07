@@ -19,7 +19,7 @@ PicnickerAzrielSeenText:
 	text "I've been to a"
 	line "#MON GYM a few"
 	cont "times. But, I"
-	cont "lost each time."
+	roll "lost each time."
 	done
 
 PicnickerAzrielBeatenText:
@@ -47,7 +47,7 @@ PokemaniacBrentSeenText:
 	text "Wow, are you a"
 	line "#MANIAC too?"
 	cont "Want to see my"
-	cont "collection?"
+	roll "collection?"
 	done
 
 PokemaniacBrentBeatenText:

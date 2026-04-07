@@ -76,7 +76,7 @@ PokemaniacRolandAfterBattleText:
 	text "If a #MON has"
 	line "different colors"
 	cont "from usual, it's"
-	cont "more valuable."
+	roll "more valuable."
 
 	para "What? You mean"
 	line "that's not true?"

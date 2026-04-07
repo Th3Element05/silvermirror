@@ -63,7 +63,7 @@ PsychicNormanAfterBattleText:
 	para "People are like"
 	line "that too. Every-"
 	cont "one has different"
-	cont "potential."
+	roll "potential."
 	done
 
 TrainerPokefanfEleanor:
@@ -121,12 +121,12 @@ PokefanfEleanorAfterBattleText:
 	para "I'm not sure why,"
 	line "but it seems to"
 	cont "like it when I"
-	cont "train here."
+	roll "train here."
 
 	para "It seems to become"
 	line "friendlier by"
 	cont "training here than"
-	cont "anywhere else."
+	roll "anywhere else."
 	done
 
 TrainerPokefanmDerek:
@@ -222,7 +222,7 @@ PokefanMDerekText_NotBragging:
 	para "We #FANs have"
 	line "a policy of not"
 	cont "listening to other"
-	cont "people brag!"
+	roll "people brag!"
 	done
 
 TrainerSailorStanley:

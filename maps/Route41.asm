@@ -32,7 +32,7 @@ SwimmerfBrianaAfterBattleText:
 	text "There's supposed"
 	line "to be a big #-"
 	cont "MON deep beneath"
-	cont "WHIRL ISLANDS."
+	roll "WHIRL ISLANDS."
 
 	para "I wonder what it"
 	line "could be?"

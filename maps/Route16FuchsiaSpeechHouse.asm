@@ -15,13 +15,13 @@ Route16FlyHouseLassScript:
 	stringtotext .pagercardname, MEM_BUFFER_1
 	scall .JumpstdReceiveItem
 	setflag ENGINE_PAGER_FLY
+	setevent EVENT_GOT_HM02_FLY
 	writetext GotFlyPagerText
 	promptbutton
 	writetext Route16FlyHouseExplainPagerGiveFlyText
-	promptbutton
+;	promptbutton
 ;	verbosegiveitem TM_FLY
-	setevent EVENT_GOT_HM02_FLY
-	writetext Route16FlyHouseExplainFlyText
+;	writetext Route16FlyHouseExplainFlyText
 	waitbutton
 	closetext
 	end
@@ -48,7 +48,7 @@ Route16FlyHouseLassText:
 	para "Please don't tell"
 	line "anyone I'm here."
 	cont "I'll make it up"
-	cont "to you with this!"
+	roll "to you with this!"
 	done
 
 Route16FlyHouseExplainPagerGiveFlyText:
@@ -58,21 +58,22 @@ Route16FlyHouseExplainPagerGiveFlyText:
 	para "It lets you"
 	line "summon a #MON"
 	cont "to take you back"
-	cont "to any town."
+	roll "to any town."
 
 	para "Please keep my"
-	line "secret! You can"
-	cont "have this too!"
+	line "secret!"
+;	cont "You can have this,"
+;	roll "too!"
 	done
 
-Route16FlyHouseExplainFlyText:
-	text "Use that to teach"
-	line "your own #MON"
-	cont "to use FLY!"
-	
-	para "Put it to good"
-	line "use!"
-	done
+;Route16FlyHouseExplainFlyText:
+;	text "Use that to teach"
+;	line "your own #MON"
+;	cont "to use FLY!"
+;	
+;	para "Put it to good"
+;	line "use!"
+;	done
 
 Route16FlyHouseFearowScript:
 	opentext

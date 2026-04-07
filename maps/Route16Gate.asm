@@ -102,7 +102,7 @@ Route16GateOfficerText:
 	text "CYCLING ROAD is a"
 	line "downhill course"
 	cont "by the sea. It's"
-	cont "a great ride."
+	roll "a great ride."
 	done
 
 Route16GateStopText:

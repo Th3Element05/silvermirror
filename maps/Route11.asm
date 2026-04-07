@@ -159,7 +159,7 @@ Route11_SnorlaxWentHomeText:
 	text "SNORLAX calmed"
 	line "down! With a big"
 	cont "yawn, it returned"
-	cont "to the mountains!"
+	roll "to the mountains!"
 	done
 
 ; trainers
@@ -179,7 +179,7 @@ PokefanFGeorgiaSeenText:
 	para "#MON get more"
 	line "friendly if you"
 	cont "train them in a"
-	cont "place that they"
+	roll "place that they"
 	cont "remember."
 	done
 
@@ -192,7 +192,7 @@ PokefanFGeorgiaAfterBattleText:
 	text "If only there were"
 	line "an easy way to"
 	cont "identify where I"
-	cont "got my #MON…"
+	roll "got my #MON…"
 	done
 
 TrainerYoungsterOwen:
@@ -246,7 +246,7 @@ YoungsterAlanAfterBattleText:
 	text "There's a big"
 	line "#MON that"
 	cont "comes down from"
-	cont "the mountains."
+	roll "the mountains."
 
 	para "It's strong if"
 	line "you can get it."
@@ -304,7 +304,7 @@ PokefanMWilliamAfterBattleText:
 	text "I lost the battle,"
 	line "but my #MON win"
 	cont "the prize for"
-	cont "being most lovely."
+	roll "being most lovely."
 	done
 
 TrainerPokefanFBeverly:

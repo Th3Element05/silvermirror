@@ -217,7 +217,7 @@ FisherFredAfterText:
 	text "Freshly caught"
 	line "#MON are no"
 	cont "match for properly"
-	cont "trained ones."
+	roll "trained ones."
 	done
 
 TrainerFisherWilton:

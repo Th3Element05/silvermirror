@@ -50,13 +50,13 @@ Route11GateTilesCallback:
 ;	para "If you caught 30"
 ;	line "kinds of #MON,"
 ;	cont "I'm supposed to"
-;	cont "give you an"
+;	roll "give you an"
 ;	cont "ITEMFINDER!"
 ;
 ;	para "So, <PLAYER>! Have"
 ;	line "you caught at"
 ;	cont "least 30 kinds of"
-;	cont "#MON?"
+;	roll "#MON?"
 ;	done
 ;
 ;Route11GateOaksAideNotEnoughText:
@@ -79,7 +79,7 @@ Route11GateTilesCallback:
 ;	text_ram wStringBuffer3
 ;	text " kinds"
 ;	cont "of #MON!"
-;	cont "Congratulations!"
+;	roll "Congratulations!"
 ;	done
 ;
 ;Route11GateOaksAideItemfinderExplainText:
@@ -102,12 +102,12 @@ Route11GateOfficerText:
 	text "When you catch"
 	line "lots of #MON,"
 	cont "isn't it hard to"
-	cont "think up names?"
+	roll "think up names?"
 
 	para "In LAVENDER TOWN,"
 	line "there's a man who"
 	cont "rates #MON"
-	cont "nicknames."
+	roll "nicknames."
 
 	para "He'll help you"
 	line "rename them too!"

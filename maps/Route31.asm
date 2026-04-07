@@ -179,7 +179,7 @@ BugCatcherWade1AfterText:
 	text "I catch a lot of"
 	line "#MON, so my PC"
 	cont "BOXES are always"
-	cont "filling up."
+	roll "filling up."
 	done
 ;	text "You can catch"
 ;	line "#MON even if"
@@ -201,7 +201,7 @@ Route31FisherPlantedBerryText:
 	para "It will take time,"
 	line "but it will grow"
 	cont "and bear fruit"
-	cont "someday."
+	roll "someday."
 	done
 ;
 ;	faceplayer

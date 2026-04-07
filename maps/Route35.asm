@@ -132,7 +132,7 @@ BugCatcherDarinAfterBattleText:
 	text "My VENOMOTH won"
 	line "the Bug-Catching"
 	cont "Contest at the"
-	cont "NATIONAL PARK."
+	roll "NATIONAL PARK."
 	done
 
 TrainerFirebreatherWalt:

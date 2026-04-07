@@ -585,7 +585,7 @@ RuinsOfAlphResearchCenter_MapScripts:
 ;	para "They must be the"
 ;	line "keys for unravel-"
 ;	cont "ing the mystery"
-;	cont "of the RUINS."
+;	roll "of the RUINS."
 ;	done
 
 ;RuinsOfAlphResearchCenterScientist2Text_UnownAppeared:
@@ -728,7 +728,7 @@ RuinsOfAlphResearchCenter_MapScripts:
 ;	para "Is fossil of"
 ;	line "OMANYTE, a"
 ;	cont "#MON that is"
-;	cont "being extinct!"
+;	roll "being extinct!"
 ;
 ;	para "You are wanting"
 ;	line "me to bring the"
@@ -744,7 +744,7 @@ RuinsOfAlphResearchCenter_MapScripts:
 ;	para "Is fossil of"
 ;	line "KABUTO, a"
 ;	cont "#MON that is"
-;	cont "being extinct!"
+;	roll "being extinct!"
 ;
 ;	para "You are wanting"
 ;	line "me to bring the"
@@ -760,7 +760,7 @@ RuinsOfAlphResearchCenter_MapScripts:
 ;	para "Is fossil of"
 ;	line "AERODACTYL, a"
 ;	cont "#MON that is"
-;	cont "being extinct!"
+;	roll "being extinct!"
 ;
 ;	para "You are wanting"
 ;	line "me to bring the"

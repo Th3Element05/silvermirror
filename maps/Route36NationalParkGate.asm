@@ -474,9 +474,9 @@ BugCatchingContestant10BScript:
 	closetext
 	end
 
-UnusedBugCatchingContestExplanationSign: ; unreferenced
-; duplicate of BugCatchingContestExplanationSign in Route35NationalParkGate.asm
-	jumptext UnusedBugCatchingContestExplanationText
+;UnusedBugCatchingContestExplanationSign: ; unreferenced
+;; duplicate of BugCatchingContestExplanationSign in Route35NationalParkGate.asm
+;	jumptext UnusedBugCatchingContestExplanationText
 
 Route36NationalParkGatePlayerWaitWithContestantsMovement:
 	big_step DOWN
@@ -521,7 +521,7 @@ Route36NationalParkGateOfficer1ExplainsRulesText:
 	text "The person who"
 	line "gets the strong-"
 	cont "est bug #MON"
-	cont "is the winner."
+	roll "is the winner."
 
 	para "You have {d:BUG_CONTEST_MINUTES}"
 	line "minutes."

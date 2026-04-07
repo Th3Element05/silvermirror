@@ -22,7 +22,7 @@ Route2TradeHouseScientistText:
 	para "You can still use"
 	line "techniques like"
 	cont "CUT, even if your"
-	cont "own #MON haven't"
+	roll "own #MON haven't"
 	cont "learned them!"
 	done
 

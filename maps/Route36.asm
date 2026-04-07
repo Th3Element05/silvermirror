@@ -235,7 +235,7 @@ FloriaText1:
 	para "When I sprinkled"
 	line "water on that"
 	cont "weird tree, it"
-	cont "jumped right up!"
+	roll "jumped right up!"
 
 	para "It just has to be"
 	line "a #MON."
@@ -253,7 +253,7 @@ FloriaText1:
 ;	text "When I told my sis"
 ;	line "about the wiggly"
 ;	cont "tree, she said"
-;	cont "it's dangerous."
+;	roll "it's dangerous."
 ;	done
 
 FloriaMovement2:
@@ -476,7 +476,7 @@ PsychicPhilAfterBattleText:
 	text "I'd be stronger"
 	line "if I could tell"
 	cont "what my opponent"
-	cont "was thinking."
+	roll "was thinking."
 	done
 
 TrainerSchoolboyTorin:
@@ -566,7 +566,7 @@ Route36TrainerTips1Text:
 	para "However, differ-"
 	line "ences will become"
 	cont "pronounced as the"
-	cont "#MON grow."
+	roll "#MON grow."
 	done
 
 Route36TrainerTips2:
@@ -581,7 +581,7 @@ Route36TrainerTips2Text:
 	para "It is convenient"
 	line "for exploring"
 	cont "caves and other"
-	cont "landmarks."
+	roll "landmarks."
 	done
 
 Route36_MapEvents:

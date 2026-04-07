@@ -87,26 +87,32 @@ Route34IlexForestGateTeacherReturnsMovement:
 	step RIGHT
 	step_end
 
-Route34IlexForestGateTeacherText:
-	text "Oh, honey. You're"
-	line "making a #DEX?"
-
-	para "It must be hard if"
-	line "#MON won't"
-
-	para "appear. Try using"
-	line "this TM."
-	done
+;Route34IlexForestGateTeacherText:
+;	text "Oh, honey. You're"
+;	line "making a #DEX?"
+;
+;	para "It must be hard if"
+;	line "#MON won't"
+;
+;	para "appear. Try using"
+;	line "this TM."
+;	done
 
 Route34IlexForestGateTeacher_GotSweetScent:
-	text "It's SWEET SCENT."
-
-	para "Use it wherever"
-	line "#MON appear."
-
-	para "#MON will be"
-	line "enticed by it."
+	text "Some #MON can"
+	line "use SWEET SCENT to"
+	cont "attract wild #-"
+	roll "MON to battle!"
 	done
+;
+;	text "It's SWEET SCENT."
+;
+;	para "Use it wherever"
+;	line "#MON appear."
+;
+;	para "#MON will be"
+;	line "enticed by it."
+;	done
 
 Route34IlexForestGateTeacher_ForestIsRestless:
 	text "Something's wrong"

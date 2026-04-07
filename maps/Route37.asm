@@ -167,7 +167,7 @@ Route37_NoFruit:
 ;	text "SUNNY: My sisters"
 ;	line "and brothers are"
 ;	cont "MONICA, TUSCANY,"
-;	cont "WESLEY, ARTHUR,"
+;	roll "WESLEY, ARTHUR,"
 ;	cont "FRIEDA and SANTOS."
 ;
 ;	para "They're all older"
@@ -209,7 +209,7 @@ PsychicMarkAfterBattleText:
 	text "Putting #MON to"
 	line "sleep or paralyz-"
 	cont "ing them are good"
-	cont "battle techniques."
+	roll "battle techniques."
 	done
 
 TrainerTwinsAnnandanne1:

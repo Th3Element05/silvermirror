@@ -83,7 +83,7 @@ RuinsOfAlphOmanyteChamberDescriptionText:
 	text "This #MON"
 	line "drifted in the"
 	cont "sea by twisting"
-	cont "its ten tentacles."
+	roll "its ten tentacles."
 	done
 
 RuinsOfAlphOmanyteChamberWallPattern:

@@ -127,7 +127,7 @@ LassDanaAfterBattleText:
 	text "When #MON grow"
 	line "up they get ugly!"
 	cont "They shouldn't"
-	cont "evolve!"
+	roll "evolve!"
 	done
 
 TrainerSuperNerdTom:
@@ -206,7 +206,7 @@ LassChloeAfterBattleText:
 	text "SAFFRON's gate"
 	line "keeper won't let"
 	cont "us through."
-	cont "He's so mean!"
+	roll "He's so mean!"
 	done
 
 TrainerSuperNerdShawn:
@@ -289,7 +289,7 @@ LassNoraAfterBattleText:
 	text "I heard that"
 	line "CLEFAIRY evolves"
 	cont "when it's exposed"
-	cont "to a MOON STONE."
+	roll "to a MOON STONE."
 	done
 
 Route8UndergroundPathSign:

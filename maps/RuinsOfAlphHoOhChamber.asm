@@ -84,7 +84,7 @@ RuinsOfAlphHoOhChamberDescriptionText:
 	text "A #MON that"
 	line "flew gracefully on"
 	cont "rainbow-colored"
-	cont "wings."
+	roll "wings."
 	done
 
 RuinsOfAlphHoOhChamberWallPattern:

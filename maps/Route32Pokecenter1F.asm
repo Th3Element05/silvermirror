@@ -112,7 +112,7 @@ Route32Pokecenter1FFishingGuruText_GiveSuperRod:
 	para "If there's water,"
 	line "be it the sea or a"
 	cont "stream, try out"
-	cont "your ROD."
+	roll "your ROD."
 	done
 
 Route32Pokecenter1FFishingGuruText_No:
@@ -129,7 +129,7 @@ Route32Pokecenter1FFishingGuruText_OfferLure:
 	text "I have a special"
 	line "lure that can hook"
 	cont "exotic #MON in"
-	cont "KANTO."
+	roll "KANTO."
 
 	para "Would you like to"
 	line "borrow it?"
@@ -142,7 +142,7 @@ Route32Pokecenter1FFishingGuruText_AskTakeLure:
 	para "Do you want me to"
 	line "take my special"
 	cont "lure off of your"
-	cont "SUPER ROD?"
+	roll "SUPER ROD?"
 	done
 
 Route32Pokecenter1FFishingGuruText_SwapAnytime:

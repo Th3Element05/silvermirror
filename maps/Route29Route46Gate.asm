@@ -26,7 +26,7 @@ Route29Route46GateYoungsterText:
 	para "If you want to"
 	line "catch them all,"
 	cont "you have to look"
-	cont "everywhere."
+	roll "everywhere."
 	done
 
 Route29Route46Gate_MapEvents:

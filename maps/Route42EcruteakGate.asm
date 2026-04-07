@@ -21,7 +21,7 @@ Route42EcruteakGateRouteBlockedText:
 	para "The GYM LEADER"
 	line "from CIANWOOD is"
 	cont "has come all this"
-	cont "way to help!"
+	roll "way to help!"
 	done
 
 Route42EcruteakGateRouteClearText:
@@ -45,7 +45,7 @@ Route42EcruteakGateOfficerBlockedText:
 	text "MT.MORTAR is this"
 	line "way, but you can't"
 	cont "get to MAHOGANY"
-	cont "right now."
+	roll "right now."
 
 	para "There was a land-"
 	line "slide and the road"

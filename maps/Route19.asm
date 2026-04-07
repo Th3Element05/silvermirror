@@ -41,7 +41,7 @@ Route19_MapScripts:
 ;	text "I'll be sure to"
 ;	line "watch out for"
 ;	cont "TENTACOOL from"
-;	cont "now on!"
+;	roll "now on!"
 ;	done
 
 Route19Boy:

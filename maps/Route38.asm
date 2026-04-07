@@ -98,7 +98,7 @@ SailorHueySeenText:
 	text "I've been over-"
 	line "seas, so I know"
 	cont "about all sorts of"
-	cont "#MON!"
+	roll "#MON!"
 	done
 
 SailorHueyBeatenText:
@@ -110,7 +110,7 @@ SailorHueyAfterBattleText:
 	text "All kinds of peo-"
 	line "ple around the"
 	cont "world live happily"
-	cont "with #MON."
+	roll "with #MON."
 	done
 
 TrainerBeautyEmma:
@@ -195,7 +195,7 @@ BirdKeeperJoeAfterBattleText:
 	text "I plan to train in"
 	line "CIANWOOD CITY to"
 	cont "teach my #MON"
-	cont "how to FLY."
+	roll "how to FLY."
 	done
 
 Route38Sign:
@@ -216,9 +216,8 @@ Route38TrainerTipsText:
 	line "trying to evolve,"
 	cont "you can stop it."
 
-	para "Press the B But-"
-	line "ton during evolu-"
-	cont "tion."
+	para "Press the B-button"
+	line "during evolution."
 
 	para "That startles the"
 	line "#MON and stops"

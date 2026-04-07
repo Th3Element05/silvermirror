@@ -19,7 +19,7 @@ Route10South_MapScripts:
 ;	text "Wow, are you a"
 ;	line "#MANIAC too?"
 ;	cont "Want to see my"
-;	cont "collection?"
+;	roll "collection?"
 ;	done
 ;
 ;PokemaniacBrentBeatenText:
@@ -56,8 +56,9 @@ PicnickerErinBeatenText:
 PicnickerErinAfterBattleText:
 	text "The #MON here"
 	line "are so chunky!"
-	cont "There should be a"
-	cont "pink one with a"
+
+	para "There should be a"
+	line "pink one with a"
 	cont "floral pattern!"
 	done
 
@@ -79,7 +80,7 @@ HikerJimBeatenText:
 	text "Ha-haha!"
 	line "Not laughing!"
 	cont "Ha-hay fever!"
-	cont "Haha-ha-choo!"
+	roll "Haha-ha-choo!"
 	done
 
 HikerJimAfterBattleText:
