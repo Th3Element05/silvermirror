@@ -816,10 +816,10 @@ Text_TradeReceptionistMobile:
 	line "mobile phone?"
 	done
 
-Text_ThisWayToMobileRoom: ; unreferenced
-	text "This way to the"
-	line "MOBILE ROOM."
-	done
+;Text_ThisWayToMobileRoom: ; unreferenced
+;	text "This way to the"
+;	line "MOBILE ROOM."
+;	done
 
 Text_BattleReceptionistIntro:
 	text "Welcome to CABLE"
@@ -885,15 +885,15 @@ Text_PleaseComeAgain:
 	text "Please come again."
 	prompt
 
-Text_PleaseComeInDuplicate: ; unreferenced
-	text "Please come in."
-	prompt
+;Text_PleaseComeInDuplicate: ; unreferenced
+;	text "Please come in."
+;	prompt
 
-Text_TemporaryStagingInLinkRoom: ; unreferenced
-	text "We'll put you in"
-	line "the link room for"
-	cont "the time being."
-	done
+;Text_TemporaryStagingInLinkRoom: ; unreferenced
+;	text "We'll put you in"
+;	line "the link room for"
+;	cont "the time being."
+;	done
 
 Text_CantLinkToThePast:
 	text "You can't link to"
@@ -909,9 +909,9 @@ Text_PleaseComeIn:
 	text "Please come in."
 	done
 
-Text_PleaseEnter: ; unreferenced
-	text "Please enter."
-	prompt
+;Text_PleaseEnter: ; unreferenced
+;	text "Please enter."
+;	prompt
 
 Text_RejectNewMon:
 	text "Sorry--@"
