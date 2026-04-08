@@ -100,9 +100,8 @@ NurseGoodbyeText:
 NursePokerusText:
 	text "Your #MON"
 	line "appear to be"
-
-	para "infected by tiny"
-	line "life forms."
+	cont "infected by tiny"
+	roll "life forms."
 
 	para "Your #MON are"
 	line "healthy and seem"
@@ -110,9 +109,8 @@ NursePokerusText:
 
 	para "But we can't tell"
 	line "you anything more"
-
-	para "at a #MON"
-	line "CENTER."
+	cont "at a #MON"
+	roll "CENTER."
 	done
 
 ;PokeComNursePokerusText:
@@ -144,9 +142,8 @@ PictureBookshelfText:
 MagazineBookshelfText:
 	text "#MON magazines…"
 	line "#MON PAL,"
-
-	para "#MON HANDBOOK,"
-	line "#MON GRAPH…"
+	cont "#MON HANDBOOK,"
+	roll "#MON GRAPH…"
 	done
 
 TeamRocketOathText:
@@ -180,7 +177,7 @@ LookTownMapText:
 	done
 
 WindowText:
-	text "My reflection!"
+	text "Your reflection!"
 	line "Lookin' good!"
 	done
 
@@ -196,38 +193,37 @@ HomepageText:
 	line "updated…"
 	done
 
-; not used
-	text "#MON RADIO!"
-
-	para "Call in with your"
-	line "requests now!"
-	done
+;; not used
+;	text "#MON RADIO!"
+;
+;	para "Call in with your"
+;	line "requests now!"
+;	done
 
 TrashCanText:
 	text "There's nothing in"
 	line "here…"
 	done
 
-; not used
-	text "A #MON may be"
-	line "able to move this."
-	done
+;; not used
+;	text "A #MON may be"
+;	line "able to move this."
+;	done
 
-; not used
-	text "Maybe a #MON"
-	line "can break this."
-	done
+;; not used
+;	text "Maybe a #MON"
+;	line "can break this."
+;	done
 
 PokecenterSignText:
-	text "Heal Your #MON!"
-	line "#MON CENTER"
+	text "#MON CENTER"
+	line "Heal Your #MON!"
 	done
 
 MartSignText:
-	text "For All Your"
-	line "#MON Needs"
-
-	para "#MON MART"
+	text "#MART"
+	line "For All Your"
+	cont "#MON Needs"
 	done
 
 ContestResults_ReadyToJudgeText:
@@ -269,9 +265,14 @@ ContestResults_JoinUsNextTimeText:
 
 ContestResults_ConsolationPrizeText:
 	text "Everyone else gets"
-	line "an ORAN BERRY as a"
-	cont "consolation prize!"
+	line "a SITRUS BERRY for"
+	cont "participating!"
 	done
+;
+;	text "Everyone else gets"
+;	line "an ORAN BERRY as a"
+;	cont "consolation prize!"
+;	done
 
 ContestResults_DidNotWinText:
 	text "We hope you do"
@@ -281,17 +282,15 @@ ContestResults_DidNotWinText:
 ContestResults_ReturnPartyText:
 	text "We'll return the"
 	line "#MON we kept"
-
-	para "for you."
-	line "Here you go!"
+	cont "for you."
+	roll "Here you go!"
 	done
 
 ContestResults_PartyFullText:
 	text "Your party's full,"
 	line "so the #MON was"
-
-	para "sent to your BOX"
-	line "in BILL's PC."
+	cont "sent to your BOX"
+	roll "in BILL's PC."
 	done
 
 GymStatue_CityGymText:
@@ -380,9 +379,8 @@ BugContestPrizeNoRoomText:
 
 	para "We'll keep this"
 	line "for you today, so"
-
-	para "come back when you"
-	line "make room for it."
+	cont "come back when you"
+	roll "make room for it."
 	done
 
 HappinessText3:
@@ -394,9 +392,8 @@ HappinessText3:
 HappinessText2:
 	text "#MON get more"
 	line "friendly if you"
-
-	para "spend time with"
-	line "them."
+	cont "spend time with"
+	roll "them."
 	done
 
 HappinessText1:
@@ -425,7 +422,7 @@ PokecenterReceptionistText: ;silvermirror+
 	text "You can use the"
 	line "PC in the corner"
 	cont "to access the"
-	cont "#MON or ITEM"
+	roll "#MON or ITEM"
 	cont "Storage Systems!"
 	done
 
@@ -482,7 +479,7 @@ SaffronGateOpenText: ;silvermirror+
 	para "You can go on"
 	line "through. I'll"
 	cont "share this with"
-	cont "the other guards!"
+	roll "the other guards!"
 	
 	para "Just be careful"
 	line "with TEAM ROCKET"
