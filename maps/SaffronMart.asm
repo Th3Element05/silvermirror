@@ -36,7 +36,7 @@ SaffronMartCooltrainerMText:
 	text "MAX REPEL lasts"
 	line "longer than SUPER"
 	cont "REPEL for keeping"
-	cont "weaker #MON"
+	roll "weaker #MON"
 	cont "away!"
 	done
 

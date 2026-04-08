@@ -247,7 +247,7 @@ VermilionCityPortSailorWelcomeText:
 	para "All trainers are"
 	line "welcome on board"
 	cont "until its time to"
-	cont "set sail again!"
+	roll "set sail again!"
 	done
 
 VermilionCityPortSailorSetSailText:
@@ -266,7 +266,7 @@ VermilionCityPortSailorScheduleText:
 	text "S.S.AQUA sails to"
 	line "OLIVINE CITY on"
 	cont "SUNDAY, TUESDAY,"
-	cont "and WEDNESDAY."
+	roll "and WEDNESDAY."
 
 	para "S.S.ANNE docks"
 	line "here on SATURDAY."

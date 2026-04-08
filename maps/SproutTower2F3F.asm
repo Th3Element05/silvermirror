@@ -47,7 +47,7 @@ SageLiSeenText:
 	para "People and #MON"
 	line "test their bonds"
 	cont "to build a bright"
-	cont "future together."
+	roll "future together."
 
 	para "I am the final"
 	line "test."
@@ -55,7 +55,7 @@ SageLiSeenText:
 	para "Allow me to test"
 	line "the bond between"
 	cont "you and your"
-	cont "#MON!"
+	roll "#MON!"
 	done
 
 SageLiBeatenText:
@@ -82,7 +82,7 @@ SageLiHiddenPowerText:
 	para "Its strength and"
 	line "effect varies for"
 	cont "every individual"
-	cont "#MON."
+	roll "#MON."
 	done
 
 SageLiAfterBattleText:
@@ -121,7 +121,7 @@ SageJinAfterBattleText:
 	para "No, wait. As the"
 	line "trainer grows"
 	cont "stronger, so do"
-	cont "the #MON."
+	roll "the #MON."
 	done
 
 ;3f trainer
@@ -204,7 +204,7 @@ SageNicoAfterBattleText:
 	text "The flexible pil-"
 	line "lar protects the"
 	cont "TOWER, even from"
-	cont "earthquakes."
+	roll "earthquakes."
 	done
 
 ;2f trainer
@@ -231,7 +231,7 @@ SageNoeAfterBattleText:
 	text "I tried to copy"
 	line "BELLSPROUT's"
 	cont "gentle movements"
-	cont "for battle…"
+	roll "for battle…"
 
 	para "But I didn't train"
 	line "well enough."

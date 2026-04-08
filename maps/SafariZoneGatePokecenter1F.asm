@@ -17,9 +17,9 @@ SafariZoneGatePokecenter1FHikerText:
 	text "After a long walk"
 	line "in the mountains"
 	cont "to find a #MON"
-	cont "CENTER, when you"
+	roll "CENTER, when you"
 	cont "are just about to"
-	cont "fall flat…"
+	roll "fall flat…"
 	
 	para "Then it feels like"
 	line "you are in para-"

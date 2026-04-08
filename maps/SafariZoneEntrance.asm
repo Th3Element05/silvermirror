@@ -268,17 +268,17 @@ SafariZoneEntranceOfficer_Text3:
 	para "Use the SAFARI"
 	line "BALLs we provide"
 	cont "to catch whatever"
-	cont "#MON you want!"
+	roll "#MON you want!"
 	
 	para "When you run out"
 	line "of time or SAFARI"
 	cont "BALLs, it's game"
-	cont "over for you!"
+	roll "over for you!"
 	
 	para "Before you enter,"
 	line "make sure you have"
 	cont "room in your PC"
-	cont "for new #MON!"
+	roll "for new #MON!"
 	done
 
 SafariZoneEntranceOfficer_Text4:
@@ -297,7 +297,7 @@ SafariZoneEntranceMainOfficer_Text:
 	para "For just ¥500,"
 	line "you can catch all"
 	cont "the #MON you"
-	cont "want in the park!"
+	roll "want in the park!"
 	
 	para "Would you like to"
 	line "play?"
@@ -321,7 +321,7 @@ SafariZoneEntranceMainOfficer_Text4:
 	text "We'll call you on"
 	line "the PA when you"
 	cont "run out of time"
-	cont "or SAFARI BALLs!"
+	roll "or SAFARI BALLs!"
 	
 	para "Good luck!"
 	done

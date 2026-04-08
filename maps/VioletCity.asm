@@ -202,7 +202,7 @@ VioletCityGrampsText:
 	text "FALKNER, from the"
 	line "VIOLET #MON"
 	cont "GYM, is a fine"
-	cont "trainer!"
+	roll "trainer!"
 
 	para "He inherited his"
 	line "father's gym and"
@@ -210,7 +210,7 @@ VioletCityGrampsText:
 ;	cont "job with it."
 ;	done
 	cont "I'm sure he'll do"
-	cont "a great job."
+	roll "a great job."
 	done
 
 VioletCityYoungsterScript:
@@ -233,7 +233,7 @@ VioletCityYoungsterText:
 ;	para "If you beat the"
 ;	line "GYM LEADER here,"
 ;	cont "you'll be ready"
-;	cont "for prime time!"
+;	roll "for prime time!"
 ;	done
 
 VioletCitySign:

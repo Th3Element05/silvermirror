@@ -15,7 +15,7 @@ SafariRestHouseArea3GentlemanText:
 	para "But, you'll run"
 	line "out of time if"
 	cont "you just search"
-	cont "for items."
+	roll "for items."
 	done
 
 SafariRestHouseArea3Scientist:
@@ -27,7 +27,7 @@ SafariRestHouseArea3ScientistText:
 	para "But, a friend's"
 	line "EEVEE turned into"
 	cont "a VAPOREON!"
-	cont "I wonder why?"
+	roll "I wonder why?"
 	done
 
 SafariRestHouseArea3Officer:
@@ -36,7 +36,7 @@ SafariRestHouseArea3OfficerText:
 	text "If you can make"
 	line "it all the way to"
 	cont "the SECRET HOUSE,"
-	cont "you win a prize!"
+	roll "you win a prize!"
 	done
 
 SafariRestHouseArea3_MapEvents:

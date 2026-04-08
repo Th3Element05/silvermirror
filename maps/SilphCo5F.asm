@@ -262,7 +262,7 @@ SilphCo5F_Door3:
 ;
 ;	para "But TEAM ROCKET"
 ;	cont "has locked us out"
-;	cont "of the system!"
+;	roll "of the system!"
 ;
 ;	para "You're a trainer?"
 ;

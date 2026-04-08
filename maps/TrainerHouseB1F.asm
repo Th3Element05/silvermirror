@@ -140,20 +140,18 @@ TrainerHouseB1FGoRightInText:
 TrainerHouseB1FPleaseComeAgainText:
 	text "Sorry. Only those"
 	line "trainers who will"
-
-	para "be battling are"
-	line "allowed to go in."
+	cont "be battling are"
+	roll "allowed to go in."
 	done
 
 TrainerHouseB1FSecondChallengeDeniedText:
 	text "I'm sorry."
 	line "This would be your"
+	cont "second time today."
 
-	para "second time today."
-	line "You're permitted"
-
-	para "to enter just once"
-	line "a day."
+	para "You're permitted"
+	line "to enter just once"
+	cont "a day."
 	done
 
 TrainerHouseB1FCalBeatenText:

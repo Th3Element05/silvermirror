@@ -51,7 +51,7 @@ VermilionMartCooltrainerFText:
 	text "I think #MON"
 	line "can be good or"
 	cont "evil. It depends"
-	cont "on the trainer."
+	roll "on the trainer."
 	done
 
 VermilionMartCooltrainerMScript:
@@ -60,7 +60,7 @@ VermilionMartCooltrainerMText:
 	text "There are evil"
 	line "people who will"
 	cont "use #MON for"
-	cont "criminal acts."
+	roll "criminal acts."
 
 	para "TEAM ROCKET"
 	line "traffics in rare"
@@ -69,7 +69,7 @@ VermilionMartCooltrainerMText:
 	para "They also abandon"
 	line "#MON that they"
 	cont "consider not to"
-	cont "be popular or"
+	roll "be popular or"
 	cont "useful."
 	done
 

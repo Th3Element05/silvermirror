@@ -46,7 +46,7 @@ SageLiSeenText:
 	para "People and #MON"
 	line "test their bonds"
 	cont "to build a bright"
-	cont "future together."
+	roll "future together."
 
 	para "I am the final"
 	line "test."
@@ -54,7 +54,7 @@ SageLiSeenText:
 	para "Allow me to test"
 	line "the bond between"
 	cont "you and your"
-	cont "#MON!"
+	roll "#MON!"
 	done
 
 SageLiBeatenText:
@@ -81,7 +81,7 @@ SageLiHiddenPowerText:
 	para "Its strength and"
 	line "effect varies for"
 	cont "every individual"
-	cont "#MON."
+	roll "#MON."
 	done
 
 SageLiAfterBattleText:
@@ -119,7 +119,7 @@ SageJinAfterBattleText:
 	para "No, wait. As the"
 	line "trainer grows"
 	cont "stronger, so do"
-	cont "the #MON."
+	roll "the #MON."
 	done
 
 TrainerSageKyro:

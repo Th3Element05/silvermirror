@@ -281,7 +281,7 @@ SSAnneRooms2FGentleman1Text:
 	text "In all my travels"
 	line "I've never seen"
 	cont "any #MON sleep"
-	cont "like this one!"
+	roll "like this one!"
 
 	para "It was something"
 	line "like this!"
@@ -300,7 +300,7 @@ SSAnneRooms2FGentleman2Text:
 	text "Ah yes, I have"
 	line "seen some #MON"
 	cont "ferry people"
-	cont "across the water!"
+	roll "across the water!"
 	done
 
 SSAnneRooms2FGentleman3Script:

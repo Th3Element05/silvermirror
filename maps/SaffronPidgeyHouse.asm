@@ -15,7 +15,7 @@ SaffronPidgeyHouseBoyText:
 ;	para "I tried to give"
 ;	line "her a new one,"
 ;	cont "but she only wants"
-;	cont "her old doll back."
+;	roll "her old doll back."
 ;	done
 	text "My neighbor the"
 	line "COPYCAT is cute!"

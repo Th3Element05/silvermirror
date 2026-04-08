@@ -136,7 +136,7 @@ SabrinaExplainTMText:
 ;	text "TM46 is PSYWAVE!"
 ;	line "It uses powerful"
 ;	cont "psychic waves to"
-;	cont "inflict damage!"
+;	roll "inflict damage!"
 ;
 	text "TM04 is CALM MIND."
 	line "By focusing their"

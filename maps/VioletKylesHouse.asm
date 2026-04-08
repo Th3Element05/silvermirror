@@ -26,7 +26,7 @@ VioletKylesHousePokefanMText:
 	para "But if you don't"
 	line "have enough GYM"
 	cont "BADGEs, they may"
-	line "disobey you."
+	roll "disobey you."
 	done
 
 VioletKylesHouse_MapEvents:

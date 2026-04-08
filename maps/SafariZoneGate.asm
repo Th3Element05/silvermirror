@@ -119,7 +119,7 @@ SafariZoneGateTwinText:
 	text "I've always want-"
 	line "ed to catch my"
 	cont "first #MON at"
-	cont "the SAFARI ZONE."
+	roll "the SAFARI ZONE."
 	done
 	
 SafariZoneGatePokefanFText:
@@ -157,9 +157,9 @@ SafariZoneGateBuenaText:
 	text "There are many"
 	line "cute #MON to"
 	cont "choose from, but"
-	cont "nothing beats the"
+	roll "nothing beats the"
 	cont "cuteness of SLOW-"
-	cont "POKE."
+	roll "POKE."
 
 	para "People often say"
 	line "that I look like"

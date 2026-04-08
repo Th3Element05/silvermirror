@@ -25,7 +25,8 @@ ViridianForestGateSLittleGirlText:
 	text "RATTATA may be"
 	line "small, but its"
 	cont "bite is wicked!"
-	cont "Did you get one?"
+
+	para "Did you get one?"
 	done
 
 ViridianForestGateS_MapEvents:

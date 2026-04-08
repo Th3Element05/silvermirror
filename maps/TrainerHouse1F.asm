@@ -37,18 +37,16 @@ TrainerHouseIllegibleBook:
 TrainerHouse1FReceptionistText:
 	text "Welcome to TRAINER"
 	line "HOUSE, the newest"
-
-	para "and most happening"
-	line "place in VIRIDIAN."
+	cont "and most happening"
+	roll "place in VIRIDIAN."
 
 	para "We're open to"
 	line "trainers only."
 
 	para "You can battle"
 	line "against the best"
-
-	para "of the best right"
-	line "downstairs."
+	cont "of the best right"
+	roll "downstairs."
 	done
 
 TrainerHouse1FCooltrainerMText:
@@ -58,12 +56,10 @@ TrainerHouse1FCooltrainerMText:
 
 	para "They built this"
 	line "place because so"
-
-	para "many trainers pass"
-	line "through on their"
-
-	para "way up to INDIGO"
-	line "PLATEAU."
+	cont "many trainers pass"
+	roll "through on their"
+	cont "way up to INDIGO"
+	roll "PLATEAU."
 	done
 
 TrainerHouse1FCooltrainerFText:
@@ -73,26 +69,22 @@ TrainerHouse1FCooltrainerFText:
 
 	para "I would love to"
 	line "see how well a"
-
-	para "trainer from JOHTO"
-	line "battles."
+	cont "trainer from JOHTO"
+	roll "battles."
 	done
 
 TrainerHouse1FYoungsterText:
 	text "I guess you can't"
 	line "become the CHAMP"
-
-	para "unless you go all"
-	line "over the place and"
-
-	para "battle all kinds"
-	line "of people."
+	cont "unless you go all"
+	roll "over the place and"
+	cont "battle all kinds"
+	roll "of people."
 
 	para "The CHAMPION from"
 	line "PALLET traveled to"
-
-	para "all the cities and"
-	line "towns in KANTO."
+	cont "all the cities and"
+	roll "towns in KANTO."
 	done
 
 TrainerHouse1FGentlemanText:
@@ -104,9 +96,8 @@ TrainerHouse1FGentlemanText:
 TrainerHouseSign1Text:
 	text "Practice battles"
 	line "are held in the"
-
-	para "TRAINING HALL"
-	line "downstairs."
+	cont "TRAINING HALL"
+	roll "downstairs."
 
 	para "Skilled trainers"
 	line "are invited to"
@@ -116,12 +107,10 @@ TrainerHouseSign1Text:
 TrainerHouseSign2Text:
 	text "There are no rules"
 	line "or regulations for"
-
-	para "practice matches."
-	line "Just like in field"
-
-	para "battles, anything"
-	line "goes!"
+	cont "practice matches."
+	roll "Just like in field"
+	cont "battles, anything"
+	roll "goes!"
 	done
 
 TrainerHouseIllegibleText:
@@ -139,8 +128,8 @@ TrainerHouse1F_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2, 13, VIRIDIAN_CITY, 3
-	warp_event  3, 13, VIRIDIAN_CITY, 3
+	warp_event  2, 13, VIOLET_CITY, 3
+	warp_event  3, 13, VIOLET_CITY, 3
 	warp_event  8,  2, TRAINER_HOUSE_B1F, 1
 
 	def_coord_events

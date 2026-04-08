@@ -275,7 +275,7 @@ SageGakuAfterBattleText:
 
 ;	text "You claim to have"
 ;	cont "seen SUICUNE,"
-;	cont "ENTEI and RAIKOU"
+;	roll "ENTEI and RAIKOU"
 ;	cont "while they slept?"
 ;
 ;	para "Unbelievable!"
@@ -465,7 +465,7 @@ WiseTriosRoomCaughtHoohText:
 ;	text "A rainbow-winged"
 ;	line "#MON used to"
 ;	cont "roost at the peak"
-;	cont "of TIN TOWER."
+;	roll "of TIN TOWER."
 ;
 ;	para "It flew off after"
 ;	line "the BRASS TOWER"
