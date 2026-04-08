@@ -480,7 +480,7 @@ ViridianCityYoungster1Text:
 	para "It's great that"
 	line "you can carry and"
 	cont "use #MON any"
-	cont "time, anywhere!"
+	roll "time, anywhere!"
 	done
 
 ViridianCityYoungster2Script:
@@ -503,7 +503,7 @@ ViridianCityYoungster2QuestionText:
 	text "You want to know"
 	line "about the 2 kinds"
 	cont "of caterpillar"
-	cont "#MON?"
+	roll "#MON?"
 	done
 
 ViridianCityYoungster2DeclinedText:
@@ -530,7 +530,7 @@ ViridianCityGirlGoShoppingText:
 	text "When I go shop in"
 	line "PEWTER CITY, I"
 	cont "have to take the"
-	cont "winding trail in"
+	roll "winding trail in"
 	cont "VIRIDIAN FOREST."
 	done
 
@@ -538,7 +538,7 @@ ViridianCityGirlNoCoffeYetText:
 	text "Oh Grandpa! You're"
 	line "always so mean"
 	cont "before you've had"
-	cont "your coffee!"
+	roll "your coffee!"
 	done
 
 ; movements
@@ -607,12 +607,12 @@ ViridianCityTrainerTips2SignText:
 	para "The battle moves"
 	line "of #MON are"
 	cont "limited by their"
-	cont "POWER POINTs, PP."
+	roll "POWER POINTs, PP."
 
 	para "To replenish PP,"
 	line "rest your tired"
 	cont "#MON at a"
-	cont "#MON CENTER!"
+	roll "#MON CENTER!"
 	done
 
 ViridianCityMartSign:

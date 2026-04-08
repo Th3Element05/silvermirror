@@ -17,7 +17,7 @@ ViridianPokecenter1FBenchGuyText:
 	text "#MON CENTERs"
 	line "heal your tired,"
 	cont "hurt or fainted"
-	cont "#MON!"
+	roll "#MON!"
 	done
 
 ViridianPokecenter1FCooltrainerMScript:

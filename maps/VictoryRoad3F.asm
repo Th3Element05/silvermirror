@@ -167,7 +167,7 @@ CooltrainerMRyanAfterBattleText:
 	text "All trainers here"
 	line "are headed to the"
 	cont "#MON LEAGUE!"
-	cont "Be careful!"
+	roll "Be careful!"
 	done
 
 VictoryRoad3FGateSign:

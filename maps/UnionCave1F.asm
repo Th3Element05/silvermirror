@@ -194,7 +194,7 @@ PokemaniacMicahAfterBattleText:
 	text "Every Friday, you"
 	line "can hear #MON"
 	cont "roars from deep"
-	cont "inside the cave."
+	roll "inside the cave."
 	done
 
 TrainerHikerDiego:
@@ -252,7 +252,7 @@ FirebreatherLeoAfterBattleText:
 	text "On weekends, you"
 	line "can hear strange"
 	cont "roars from deep in"
-	cont "the cave."
+	roll "the cave."
 	done
 
 TrainerFirebreatherAlex:

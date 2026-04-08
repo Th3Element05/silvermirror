@@ -30,7 +30,7 @@ SageNicoAfterBattleText:
 	text "The flexible pil-"
 	line "lar protects the"
 	cont "TOWER, even from"
-	cont "earthquakes."
+	roll "earthquakes."
 	done
 
 TrainerSageNoe:
@@ -56,7 +56,7 @@ SageNoeAfterBattleText:
 	text "I tried to copy"
 	line "BELLSPROUT's"
 	cont "gentle movements"
-	cont "for battle…"
+	roll "for battle…"
 
 	para "But I didn't train"
 	line "well enough."

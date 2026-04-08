@@ -200,7 +200,7 @@ SaffronRocketText7:
 	text "With SILPH under"
 	line "control, we can"
 	cont "exploit #MON"
-	cont "around the world!"
+	roll "around the world!"
 	done
 
 SaffronCityCivilianScript:
@@ -228,7 +228,7 @@ SaffronCivilianText2:
 	text "Yeah! TEAM ROCKET"
 	line "is gone!"
 	cont "It's safe to go"
-	cont "out again!"
+	roll "out again!"
 	done
 
 SaffronCivilianText3:

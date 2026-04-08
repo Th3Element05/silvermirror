@@ -44,7 +44,7 @@ VioletMartCooltrainerMText:
 	para "But they don't"
 	line "appear to know how"
 	cont "to use manmade"
-	cont "items."
+	roll "items."
 	done
 
 VioletMart_MapEvents:

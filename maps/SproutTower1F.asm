@@ -51,7 +51,7 @@ SproutTower1FSage2Text:
 	text "SPROUT TOWER was"
 	line "built long ago"
 	cont "as a place for"
-	cont "#MON training."
+	roll "#MON training."
 	done
 
 SproutTower1FGrannyScript:

@@ -27,7 +27,7 @@ SafariRestHouseArea4ScientistText:
 	text "Tossing ROCKs at"
 	line "#MON makes them"
 	cont "easier to catch,"
-	cont "but they might"
+	roll "but they might"
 	cont "run away!"
 	done
 

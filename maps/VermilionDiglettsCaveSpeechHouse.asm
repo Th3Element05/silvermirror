@@ -11,7 +11,7 @@ VermilionPidgeyHouseYoungsterText:
 	text "I'm getting my"
 	line "PIDGEY to fly a"
 	cont "letter to SAFFRON"
-	cont "to the north!"
+	roll "to the north!"
 	done
 
 VermilionPidgeyHousePidgeyScript:

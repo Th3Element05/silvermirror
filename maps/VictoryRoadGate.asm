@@ -44,7 +44,7 @@ VictoryRoadGateNotEnoughBadgesText:
 	para "I'm sorry, but I"
 	line "can't let you pass"
 	cont "without at least"
-	cont "eight GYM BADGEs."
+	roll "eight GYM BADGEs."
 	done
 
 VictoryRoadGateEightBadgesText:
@@ -69,7 +69,7 @@ VictoryRoadGateOfficerText:
 	para "They're all eager"
 	line "to battle as a"
 	cont "warm-up for the"
-	cont "ELITE FOUR."
+	roll "ELITE FOUR."
 	done
 
 VictoryRoadGateRightOfficerScript:
@@ -81,7 +81,7 @@ VictoryRoadGateRightOfficerText:
 	para "The ELITE FOUR are"
 	line "so strong it's"
 	cont "scary, and they're"
-	cont "ready for you!"
+	roll "ready for you!"
 	done
 
 VictoryRoadGateBlackBeltScript1:
@@ -107,7 +107,7 @@ VictoryRoadGateLeftBlackBeltChampionText:
 	para "Only trainers who"
 	line "are permitted by"
 	cont "#MON LEAGUE are"
-	cont "allowed through."
+	roll "allowed through."
 	done
 
 VictoryRoadGateBlackBeltScript2:

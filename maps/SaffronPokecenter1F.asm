@@ -17,7 +17,7 @@ SaffronPokecenter1FBenchGuyText:
 	text "It would be great"
 	line "if the ELITE FOUR"
 	cont "came and stomped"
-	cont "TEAM ROCKET!"
+	roll "TEAM ROCKET!"
 	done
 
 SaffronPokecenter1FBeautyScript:
@@ -34,7 +34,7 @@ SaffronPokecenter1FGentlemanText:
 	text "SILPH CO. is very"
 	line "famous. That's"
 	cont "why it attracted"
-	cont "TEAM ROCKET!"
+	roll "TEAM ROCKET!"
 	done
 
 SaffronPokecenter1F_MapEvents:

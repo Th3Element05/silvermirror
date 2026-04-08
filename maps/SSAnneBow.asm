@@ -57,7 +57,7 @@ SailorHarryAfterBattleText:
 	text "My Pa said there"
 	line "are 150 kinds of"
 	cont "#MON. I think"
-	cont "there are more."
+	roll "there are more."
 	done
 
 

@@ -89,7 +89,7 @@ SaffronMagnetTrainStationOfficer_ClosedForRepairsText:
 	para "We need to perform"
 	line "regular tune-ups"
 	cont "to make sure its"
-	cont "safe to ride."
+	roll "safe to ride."
 	done
 
 SaffronMagnetTrainStationOfficer_AreYouComingAboardText:
@@ -212,14 +212,14 @@ SaffronMagnetTrainStationGymGuideText1:
 	para "It uses magnets"
 	line "and electricity to"
 	cont "reach incredible"
-	cont "speeds!"
+	roll "speeds!"
 	done
 
 SaffronMagnetTrainStationGymGuideText2A:
 	para "They need to"
 	line "perform regular"
 	cont "maintainance to"
-	cont "keep everything"
+	roll "keep everything"
 	cont "running smoothly…"
 	done
 
@@ -229,7 +229,7 @@ SaffronMagnetTrainStationGymGuideText2B:
 	para "How many times"
 	line "have I gone back"
 	cont "and forth between"
-	cont "KANTO and JOHTO?"
+	roll "KANTO and JOHTO?"
 	done
 
 SaffronMagnetTrainStationLassScript:
@@ -252,7 +252,7 @@ SaffronMagnetTrainStationLassText:
 	para "All the people in"
 	line "SAFFRON who ride"
 	cont "the MAGNET TRAIN"
-	cont "have a RAIL PASS."
+	roll "have a RAIL PASS."
 	done
 
 SaffronMagentTrainStationLassText2:

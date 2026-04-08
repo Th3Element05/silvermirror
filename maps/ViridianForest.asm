@@ -77,6 +77,7 @@ BugCatcherBennyAfterBattleText:
 	text "Sometimes, you"
 	line "can find stuff on"
 	cont "the ground!"
+
 	para "I'm looking for"
 	line "the stuff I"
 	cont "dropped!"
@@ -166,7 +167,7 @@ ViridianForestTrainerTips1Text:
 	para "If you want to"
 	line "avoid battles,"
 	cont "stay away from"
-	cont "grassy areas!"
+	roll "grassy areas!"
 	done
 
 ViridianForestUseAntidoteSign:
@@ -185,7 +186,7 @@ ViridianForestTrainerTips2Text:
 	para "Contact PROF.OAK"
 	line "via PC to get"
 	cont "your #DEX"
-	cont "evaluated!"
+	roll "evaluated!"
 	done
 
 ViridianForestTrainerTips3:
@@ -196,7 +197,7 @@ ViridianForestTrainerTips3Text:
 	para "No stealing of"
 	line "#MON from"
 	cont "other trainers!"
-	cont "Catch only wild"
+	roll "Catch only wild"
 	cont "#MON!"
 	done
 

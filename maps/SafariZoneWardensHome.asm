@@ -103,12 +103,12 @@ SafariZoneWardenThanksGivePagerText:
 	para "WARDEN: Thanks,"
 	line "kid! No one could"
 	cont "understand a word"
-	cont "that I said."
+	roll "that I said."
 
 	para "I couldn't work"
 	line "that way."
 	cont "Let me give you"
-	cont "something for"
+	roll "something for"
 	cont "your trouble."
 	done
 
@@ -123,7 +123,7 @@ SafariZoneWardenExplainStrengthText:
 	para "It lets #MON"
 	line "move boulders"
 	cont "when you're out-"
-	cont "side of battle."
+	roll "side of battle."
 
 	para "Oh yes, did you"
 	line "find SECRET HOUSE"

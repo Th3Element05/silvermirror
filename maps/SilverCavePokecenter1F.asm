@@ -17,12 +17,12 @@ SilverCavePokecenter1FBenchGuyText:
 	text "Powerful trainers"
 	line "climb MT.SILVER"
 	cont "despite its many"
-	cont "dangers…"
+	roll "dangers…"
 
 	para "With their trusted"
 	line "#MON, they must"
 	cont "feel they can go"
-	cont "anywhere…"
+	roll "anywhere…"
 	done
 
 ;SilverCavePokecenter1FGrannyScript:
@@ -31,12 +31,12 @@ SilverCavePokecenter1FBenchGuyText:
 ;	text "Powerful trainers"
 ;	line "climb MT.SILVER"
 ;	cont "despite its many"
-;	cont "dangers…"
+;	roll "dangers…"
 ;
 ;	para "With their trusted"
 ;	line "#MON, they must"
 ;	cont "feel they can go"
-;	cont "anywhere…"
+;	roll "anywhere…"
 ;	done
 
 SilverCavePokecenter1F_MapEvents:

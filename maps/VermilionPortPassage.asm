@@ -13,7 +13,7 @@ VermilionPortPassageTeacherText:
 	text "The FAST SHIP"
 	line "sails on Wednes-"
 	cont "days and Sundays"
-	cont "every week."
+	roll "every week."
 	done
 
 VermilionPortPassage_MapEvents:

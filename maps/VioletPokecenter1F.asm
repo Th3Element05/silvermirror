@@ -156,9 +156,9 @@ VioletPokecenter1FGameboyKidText:
 	text "I've been thinking"
 	line "it'd be great to"
 	cont "be able to link up"
-	cont "and battle with my"
+	roll "and battle with my"
 	cont "friends who live"
-	cont "far away."
+	roll "far away."
 	done
 
 VioletPokecenter1FGentlemanScript:
@@ -181,12 +181,12 @@ VioletPokecenter1FGentlemanText:
 	para "There have been"
 	line "reports about TEAM"
 	cont "ROCKET causing"
-	cont "trouble lately."
+	roll "trouble lately."
 
 	para "I hope they don't"
 	line "get any ideas"
 	cont "about coming over"
-	cont "here to JOHTO."
+	roll "here to JOHTO."
 	done
 
 VioletPokecenter1FYoungsterScript:
@@ -195,12 +195,12 @@ VioletPokecenter1FYoungsterText:
 	text "#MON are smart."
 	line "They won't obey a"
 	cont "trainer they don't"
-	cont "respect."
+	roll "respect."
 
 	para "Without the right"
 	line "GYM BADGEs, they"
 	cont "will just do as"
-	cont "they please."
+	roll "they please."
 	done
 
 VioletPokecenter1F_MapEvents:

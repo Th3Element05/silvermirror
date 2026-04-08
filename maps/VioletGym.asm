@@ -68,7 +68,7 @@ FalknerIntroText:
 	para "People say you can"
 	line "clip flying-type"
 	cont "#MON's wings"
-	cont "with a jolt of"
+	roll "with a jolt of"
 	cont "electricity…"
 
 	para "I won't allow such"
@@ -111,7 +111,7 @@ FalknerTMMudSlapText:
 	para "Enegy is stored"
 	line "up, then released"
 	cont "all at once on"
-	cont "the next turn."
+	roll "the next turn."
 	done
 
 ;	text "By using a TM, a"
@@ -144,7 +144,7 @@ FalknerFightDoneText:
 	text "I'm going to train"
 	line "harder to become"
 	cont "the greatest bird"
-	cont "#MON master!"
+	roll "#MON master!"
 	done
 
 TrainerBirdKeeperRick:
@@ -164,7 +164,7 @@ BirdKeeperRickSeenText:
 	para "Those here are"
 	line "training night and"
 	cont "day to become bird"
-	cont "#MON masters."
+	roll "#MON masters."
 
 	para "Come on!"
 	done
