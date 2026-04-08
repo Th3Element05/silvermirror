@@ -8,61 +8,61 @@
 ; Most of these texts seem to be associated with a single NPC.
 ; The last text is associated with a second NPC, probably a Butterfree.
 
-UnusedSweetHoneyText: ; unreferenced
-	text "My #MON is an"
-	line "expert at collect-"
-	cont "ing SWEET HONEY."
+;UnusedSweetHoneyText: ; unreferenced
+;	text "My #MON is an"
+;	line "expert at collect-"
+;	cont "ing SWEET HONEY."
+;
+;	para "I'll share some"
+;	line "with you."
+;	done
 
-	para "I'll share some"
-	line "with you."
-	done
+;UnusedSweetHoneyBagFullText: ; unreferenced
+;	text "I want to give you"
+;	line "some SWEET HONEY,"
+;
+;	para "but you have no"
+;	line "room for it."
+;	done
 
-UnusedSweetHoneyBagFullText: ; unreferenced
-	text "I want to give you"
-	line "some SWEET HONEY,"
+;UnusedSweetHoneyGiveText: ; unreferenced
+;	text "Here you go! Have"
+;	line "some SWEET HONEY!"
+;	done
 
-	para "but you have no"
-	line "room for it."
-	done
+;UnusedGotSweetHoneyText: ; unreferenced
+;	text "<PLAYER> received"
+;	line "SWEET HONEY."
+;	done
 
-UnusedSweetHoneyGiveText: ; unreferenced
-	text "Here you go! Have"
-	line "some SWEET HONEY!"
-	done
+;UnusedSweetHoneyAfterText1: ; unreferenced
+;	text "My little brother"
+;	line "takes SWEET HONEY"
+;
+;	para "and goes somewhere"
+;	line "with it."
+;
+;	para "I wonder what he's"
+;	line "up to?"
+;	done
 
-UnusedGotSweetHoneyText: ; unreferenced
-	text "<PLAYER> received"
-	line "SWEET HONEY."
-	done
+;UnusedSweetHoneyAfterText2: ; unreferenced
+;	text "Did you put SWEET"
+;	line "HONEY on a tree?"
+;
+;	para "What happened to"
+;	line "it?"
+;	done
 
-UnusedSweetHoneyAfterText1: ; unreferenced
-	text "My little brother"
-	line "takes SWEET HONEY"
+;UnusedSweetHoneyAfterText3: ; unreferenced
+;	text "Did you put SWEET"
+;	line "HONEY on a tree?"
+;
+;	para "It takes about a"
+;	line "day for #MON to"
+;	cont "be drawn to it."
+;	done
 
-	para "and goes somewhere"
-	line "with it."
-
-	para "I wonder what he's"
-	line "up to?"
-	done
-
-UnusedSweetHoneyAfterText2: ; unreferenced
-	text "Did you put SWEET"
-	line "HONEY on a tree?"
-
-	para "What happened to"
-	line "it?"
-	done
-
-UnusedSweetHoneyAfterText3: ; unreferenced
-	text "Did you put SWEET"
-	line "HONEY on a tree?"
-
-	para "It takes about a"
-	line "day for #MON to"
-	cont "be drawn to it."
-	done
-
-UnusedSweetHoneyButterfreeText: ; unreferenced
-	text "BUTTERFREE: Freeh!"
-	done
+;UnusedSweetHoneyButterfreeText: ; unreferenced
+;	text "BUTTERFREE: Freeh!"
+;	done
