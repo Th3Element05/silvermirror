@@ -32,9 +32,15 @@ OftenFleeMons:
 
 DO
 
+trainer house
+
+national park gates can share a lot of text
+
+double check all pager gifts for TM/HM giving
+
 lake of rage hidden power house?
 
-not done route1
+unioncaveb2f
 go through all maps for:
 text, cont, roll
 documentation of item locations, etc
@@ -111,6 +117,41 @@ go through data/trainers/parties levels/moves
 
 trades?
 does fossil revival script still need to be fixed?
+
+
+
+
+; Decompress running Suicune gfx
+	ld a, BANK(sPlayerData)
+	call OpenSRAM
+
+	ld hl, $AEB1 ;sPlayerData3 + wEventFlags - wPlayerData3
+	ld b, CHECK_FLAG
+	ld de, EVENT_GOT_BULBASAUR_FROM_OAK
+	call FlagAction ;EventFlagAction
+	ld hl, TitleBulbasaurGFX
+	jr nz, .gotstarter
+
+	ld hl, $AEB1 ;sPlayerData3 + wEventFlags - wPlayerData3
+	ld b, CHECK_FLAG
+	ld de, EVENT_GOT_CHARMANDER_FROM_OAK
+	call FlagAction ;EventFlagAction
+	ld hl, TitleSuicuneGFX
+	jr nz, .gotstarter
+
+	ld hl, $AEB1 ;sPlayerData3 + wEventFlags - wPlayerData3
+	ld b, CHECK_FLAG
+	ld de, EVENT_GOT_SQUIRTLE_FROM_OAK
+	call FlagAction ;EventFlagAction
+	ld hl, TitleSquirtleGFX
+	jr z, .nostarter
+
+.gotstarter
+	ld de, vTiles1
+	call Decompress
+.nostarter
+	call CloseSRAM
+
 
 
 
