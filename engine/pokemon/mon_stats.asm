@@ -580,14 +580,14 @@ GetMonTypeIndex:
 	; type in c, because farcall clobbers a
 	ld a, c
 	and TYPE_MASK ; Phys/Spec Split only
-	; Skip Bird
-	cp BIRD
-	jr c, .done
-	cp UNUSED_TYPES
-	dec a
-	jr c, .done
-	sub UNUSED_TYPES
-.done
+;	; Skip Bird
+;	cp BIRD_TYPE
+;	jr c, .done
+;	cp UNUSED_TYPES
+;	dec a
+;	jr c, .done
+;	sub UNUSED_TYPES
+;.done
 	ld c, a
 	ret
 
