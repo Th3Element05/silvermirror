@@ -3212,35 +3212,37 @@ wBattleTowerHallwaySceneID::                      db
 
 	ds 49 ;total ds 128 - 79 used = ds 49
 
-; fight counts
-wJackFightCount::    db
-wBeverlyFightCount:: db ; unreferenced
-wHueyFightCount::    db
-wGavenFightCount::   db
-wBethFightCount::    db
-wJoseFightCount::    db
-wReenaFightCount::   db
-wJoeyFightCount::    db
-wWadeFightCount::    db
-wRalphFightCount::   db
-wLizFightCount::     db
-wAnthonyFightCount:: db
-wToddFightCount::    db
-wGinaFightCount::    db
-wIrwinFightCount::   db ; unreferenced
-wArnieFightCount::   db
-wAlanFightCount::    db
-wDanaFightCount::    db
-wChadFightCount::    db
-wDerekFightCount::   db ; unreferenced
-wTullyFightCount::   db
-wBrentFightCount::   db
-wTiffanyFightCount:: db
-wVanceFightCount::   db
-wWiltonFightCount::  db
-wKenjiFightCount::   db ; unreferenced
-wParryFightCount::   db
-wErinFightCount::    db
+;; fight counts ; unused
+;wJackFightCount::    db
+;wBeverlyFightCount:: db ; unreferenced
+;wHueyFightCount::    db
+;wGavenFightCount::   db
+;wBethFightCount::    db
+;wJoseFightCount::    db
+;wReenaFightCount::   db
+;wJoeyFightCount::    db
+;wWadeFightCount::    db
+;wRalphFightCount::   db
+;wLizFightCount::     db
+;wAnthonyFightCount:: db
+;wToddFightCount::    db
+;wGinaFightCount::    db
+;wIrwinFightCount::   db ; unreferenced
+;wArnieFightCount::   db
+;wAlanFightCount::    db
+;wDanaFightCount::    db
+;wChadFightCount::    db
+;wDerekFightCount::   db ; unreferenced
+;wTullyFightCount::   db
+;wBrentFightCount::   db
+;wTiffanyFightCount:: db
+;wVanceFightCount::   db
+;wWiltonFightCount::  db
+;wKenjiFightCount::   db ; unreferenced
+;wParryFightCount::   db
+;wErinFightCount::    db
+
+	ds 28 ;unreferenced wTrainerFightCount:: bytes
 
 	ds 69 ;ds 100 - 31 = 69 (room for 2 more map objects)
 
