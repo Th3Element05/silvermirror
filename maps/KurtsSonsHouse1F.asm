@@ -53,6 +53,18 @@ KurtsSonsHouse1FKurtsSon:
 	iftrue .GiveHeavyBall
 	checkevent EVENT_GAVE_KURT_SON_PNK_APRICORN
 	iftrue .GiveLoveBall
+	checkevent EVENT_CAN_GIVE_GS_BALL_TO_KURT
+	iffalse .CheckApricorns
+;.CanGiveGSBallToKurt
+	checkevent EVENT_KURTS_SON_SAW_GS_BALL
+	iftrue .RemindAboutKurt
+	writetext KurtsSonWhatIsThatBallText
+	setevent EVENT_KURTS_SON_SAW_GS_BALL
+	promptbutton
+.RemindAboutKurt
+	writetext KurtsSonRemindAboutGSBallText
+	promptbutton
+	; fallthrough
 
 .CheckApricorns:
 	checkitem RED_APRICORN
@@ -267,11 +279,10 @@ KurtsSonsHouse1F_BallsFromApricornsText:
 	done
 
 KurtsSonsHouse1F_AskHaveApricornText:
-	text "KURT: You have an"
-	line "APRICORN for me?"
-
-	para "I'll turn it into"
-	line "a #BALL!"
+	text "If you have an"
+	line "APRICORN, I can"
+	cont "turn it into a"
+	roll "#BALL!"
 	done
 
 KurtsSonsHouse1F_StartRightAwayText:
@@ -307,6 +318,34 @@ KurtsSonsHouse1FKurtsSon_FinishedYourBallText:
 KurtsSonsHouse1FKurtsSon_TryCatchingText:
 	text "Try catching"
 	line "#MON with it."
+	done
+
+KurtsSonWhatIsThatBallText:
+	text "You've got an odd"
+	line "#BALL? Let me"
+	cont "have a look."
+
+	para "<……>"
+
+	para "Hm…"
+	line "This looks like a"
+	cont "#BALL, but it's"
+	roll "not like any that"
+	cont "I've ever seen."
+	done
+
+KurtsSonRemindAboutGSBallText:
+	text "You should show"
+	line "that odd BALL to"
+	cont "my father."
+
+	para "He lives in JOHTO,"
+	line "in AZALEA TOWN."
+
+	para "Maybe he can tell"
+	line "you more about it!"
+
+	para "Anyway…"
 	done
 
 KurtsSonsHouse1FApricornBall:
