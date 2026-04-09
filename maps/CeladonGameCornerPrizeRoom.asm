@@ -134,7 +134,7 @@ GameCornerPrizesKantoPokemonVendor:
 GameCornerPrizesKantoMonMenuHeader:
 	db MENU_BACKUP_TILES ; flags
 	menu_coords 0, 2, 19, TEXTBOX_Y ;- -1
-	dw .MenuDataMons
+	dw .MenuDataKantoMons
 	db 1 ; default option
 .MenuDataKantoMons:
 	db STATICMENU_CURSOR ; flags
