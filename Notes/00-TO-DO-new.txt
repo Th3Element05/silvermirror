@@ -32,25 +32,18 @@ OftenFleeMons:
 
 DO
 
-trainer house
-
-national park gates can share a lot of text
-
 double check all pager gifts for TM/HM giving
 
 lake of rage hidden power house?
 
-unioncaveb2f
 go through all maps for:
-text, cont, roll
 documentation of item locations, etc
-
-kurts son GS BALL, tell player to see kurt
 
 sweet scent match level
 flower shop sweet scent move tutor?
 
 phone trainers
+\data\phone\text\* "roll text"
 johto trades?
 
 bug contest?
