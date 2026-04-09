@@ -27,7 +27,7 @@ Route16FlyHouseLassScript:
 	end
 
 .AlreadyGotFly
-	jumptextfaceplayer Route16FlyHouseExplainFlyText
+	jumptextfaceplayer Route16FlyHouseGoodUseText
 
 .JumpstdReceiveItem:
 	jumpstd ReceiveItemScript
@@ -74,6 +74,11 @@ Route16FlyHouseExplainPagerGiveFlyText:
 ;	para "Put it to good"
 ;	line "use!"
 ;	done
+
+Route16FlyHouseGoodUseText:
+	text "Please don't tell"
+	line "anyone I'm here."
+	done
 
 Route16FlyHouseFearowScript:
 	opentext
