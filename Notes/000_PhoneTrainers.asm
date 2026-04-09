@@ -831,7 +831,6 @@ Route17Rematch:
 .ChadRematch:
 	scall .Rematch
 	winlosstext SchoolboyChad1BeatenText, 0
-	readmem wChadFightCount
 	checkevent EVENT_RESTORED_POWER_TO_KANTO
 	iftrue .LoadFight4
 	checkevent EVENT_BEAT_ELITE_FOUR
@@ -850,7 +849,6 @@ Route17Rematch:
 	loadtrainer SCHOOLBOY, CHAD2
 	startbattle
 	reloadmapafterbattle
-	loadmem wChadFightCount, 2
 	clearflag ENGINE_CHAD_READY_FOR_REMATCH
 	end
 
@@ -858,7 +856,6 @@ Route17Rematch:
 	loadtrainer SCHOOLBOY, CHAD3
 	startbattle
 	reloadmapafterbattle
-	loadmem wChadFightCount, 3
 	clearflag ENGINE_CHAD_READY_FOR_REMATCH
 	end
 
@@ -866,7 +863,6 @@ Route17Rematch:
 	loadtrainer SCHOOLBOY, CHAD4
 	startbattle
 	reloadmapafterbattle
-	loadmem wChadFightCount, 4
 	clearflag ENGINE_CHAD_READY_FOR_REMATCH
 	end
 
