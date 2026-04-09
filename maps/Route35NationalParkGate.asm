@@ -58,7 +58,7 @@ Route35NationalParkGateLeavingContestEarlyScript:
 	readvar VAR_CONTESTMINUTES
 	addval 1
 	getnum STRING_BUFFER_3
-	writetext Route35NationalParkGateOfficer1WantToFinishText
+	writetext Route36NationalParkGateOfficer1WantToFinishText
 	yesorno
 	iffalse .GoBackToContest
 	writetext Route35NationalParkGateOfficer1WaitAtNorthGateText
@@ -67,7 +67,7 @@ Route35NationalParkGateLeavingContestEarlyScript:
 	jumpstd BugContestResultsWarpScript
 
 .GoBackToContest:
-	writetext Route35NationalParkGateOfficer1OkGoFinishText
+	writetext Route36NationalParkGateOfficer1OkGoFinishText
 	waitbutton
 	closetext
 	scall Route35NationalParkGate_EnterContest
@@ -88,7 +88,7 @@ Route35OfficerScriptContest:
 	checkflag ENGINE_DAILY_BUG_CONTEST
 	iftrue Route35NationalParkGate_ContestIsOver
 	scall Route35NationalParkGate_GetDayOfWeek
-	writetext Route35NationalParkGateOfficer1AskToParticipateText
+	writetext Route36NationalParkGateOfficer1AskToParticipateText
 	yesorno
 	iffalse Route35NationalParkGate_DeclinedToParticipate
 	readvar VAR_PARTYCOUNT
@@ -98,12 +98,12 @@ Route35OfficerScriptContest:
 Route35NationalParkGate_OkayToProceed:
 	setflag ENGINE_BUG_CONTEST_TIMER
 	special PlayMapMusic
-	writetext Route35NationalParkGateOfficer1GiveParkBallsText
+	writetext Route36NationalParkGateOfficer1GiveParkBallsText
 	promptbutton
-	writetext Route35NationalParkGatePlayerReceivedParkBallsText
+	writetext Route36NationalParkGatePlayerReceivedParkBallsText
 	playsound SFX_ITEM
 	waitsfx
-	writetext Route35NationalParkGateOfficer1ExplainsRulesText
+	writetext Route36NationalParkGateOfficer1ExplainsRulesText
 	waitbutton
 	closetext
 	special GiveParkBalls
@@ -134,52 +134,52 @@ Route35NationalParkGate_LeaveTheRestBehind:
 Route35NationalParkGate_LessThanFullParty:
 	special CheckFirstMonIsEgg
 	ifequal TRUE, Route35NationalParkGate_FirstMonIsEgg
-	writetext Route35NationalParkGateOfficer1AskToUseFirstMonText
+	writetext Route36NationalParkGateOfficer1AskToUseFirstMonText
 	yesorno
 	iffalse Route35NationalParkGate_DeclinedToLeaveMonsBehind
 	special ContestDropOffMons
 	iftrue Route35NationalParkGate_FirstMonIsFainted
 	setevent EVENT_LEFT_MONS_WITH_CONTEST_OFFICER
-	writetext Route35NationalParkGateOfficer1WellHoldYourMonText
+	writetext Route36NationalParkGateOfficer1WellHoldYourMonText
 	promptbutton
-	writetext Route35NationalParkGatePlayersMonLeftWithHelperText
+	writetext Route36NationalParkGatePlayersMonLeftWithHelperText
 	playsound SFX_GOT_SAFARI_BALLS
 	waitsfx
 	promptbutton
 	sjump Route35NationalParkGate_OkayToProceed
 
 Route35NationalParkGate_DeclinedToParticipate:
-	writetext Route35NationalParkGateOfficer1TakePartInFutureText
+	writetext Route36NationalParkGateOfficer1TakePartInFutureText
 	waitbutton
 	closetext
 	end
 
 Route35NationalParkGate_DeclinedToLeaveMonsBehind:
-	writetext Route35NationalParkGateOfficer1ChooseMonAndComeBackText
+	writetext Route36NationalParkGateOfficer1ChooseMonAndComeBackText
 	waitbutton
 	closetext
 	end
 
 Route35NationalParkGate_FirstMonIsFainted:
-	writetext Route35NationalParkGateOfficer1FirstMonCantBattleText
+	writetext Route36NationalParkGateOfficer1FirstMonCantBattleText
 	waitbutton
 	closetext
 	end
 
 Route35NationalParkGate_NoRoomInBox:
-	writetext Route35NationalParkGateOfficer1MakeRoomText
+	writetext Route36NationalParkGateOfficer1MakeRoomText
 	waitbutton
 	closetext
 	end
 
 Route35NationalParkGate_FirstMonIsEgg:
-	writetext Route35NationalParkGateOfficer1EggAsFirstMonText
+	writetext Route36NationalParkGateOfficer1EggAsFirstMonText
 	waitbutton
 	closetext
 	end
 
 Route35NationalParkGate_ContestIsOver:
-	writetext Route35NationalParkGateOfficer1ContestIsOverText
+	writetext Route36NationalParkGateOfficer1ContestIsOverText
 	waitbutton
 	closetext
 	end
@@ -222,151 +222,151 @@ Route35NationalParkGatePlayerEnterParkMovement:
 	step UP
 	step_end
 
-Route35NationalParkGateOfficer1AskToParticipateText:
-	text "Today's @"
-	text_ram wStringBuffer3
-	text "."
-	line "That means the"
-	cont "Bug-Catching Con-"
-	roll "test is on today."
+;Route35NationalParkGateOfficer1AskToParticipateText:
+;	text "Today's @"
+;	text_ram wStringBuffer3
+;	text "."
+;	line "That means the"
+;	cont "Bug-Catching Con-"
+;	roll "test is on today."
+;
+;	para "The rules are sim-"
+;	line "ple."
+;
+;	para "Using one of your"
+;	line "#MON, catch a"
+;	cont "bug #MON to be"
+;	roll "judged."
+;
+;	para "Would you like to"
+;	line "give it a try?"
+;	done
 
-	para "The rules are sim-"
-	line "ple."
+;Route35NationalParkGateOfficer1GiveParkBallsText:
+;	text "Here are the PARK"
+;	line "BALLs for the"
+;	cont "Contest."
+;	done
 
-	para "Using one of your"
-	line "#MON, catch a"
-	cont "bug #MON to be"
-	roll "judged."
+;Route35NationalParkGatePlayerReceivedParkBallsText:
+;	text "<PLAYER> received"
+;	line "{d:BUG_CONTEST_BALLS} PARK BALLs."
+;	done
 
-	para "Would you like to"
-	line "give it a try?"
-	done
+;Route35NationalParkGateOfficer1ExplainsRulesText:
+;	text "The person who"
+;	line "gets the strong-"
+;	cont "est bug #MON"
+;	roll "is the winner."
+;
+;	para "You have {d:BUG_CONTEST_MINUTES}"
+;	line "minutes."
+;
+;	para "If you run out of"
+;	line "PARK BALLs, you're"
+;	cont "done."
+;
+;	para "You can keep the"
+;	line "last #MON you"
+;	cont "catch as your own."
+;
+;	para "Go out and catch"
+;	line "the strongest bug"
+;	cont "#MON you can"
+;	roll "find!"
+;	done
 
-Route35NationalParkGateOfficer1GiveParkBallsText:
-	text "Here are the PARK"
-	line "BALLs for the"
-	cont "Contest."
-	done
+;Route35NationalParkGateOfficer1AskToUseFirstMonText:
+;	text "Uh-oh…"
+;
+;	para "You have more than"
+;	line "one #MON."
+;
+;	para "You'll have to use"
+;	line "@"
+;	text_ram wStringBuffer3
+;	text ", the"
+;	cont "first #MON in"
+;	roll "your party."
+;
+;	para "Is that OK with"
+;	line "you?"
+;	done
 
-Route35NationalParkGatePlayerReceivedParkBallsText:
-	text "<PLAYER> received"
-	line "{d:BUG_CONTEST_BALLS} PARK BALLs."
-	done
+;Route35NationalParkGateOfficer1WellHoldYourMonText:
+;	text "Fine, we'll hold"
+;	line "your other #MON"
+;	cont "while you compete."
+;	done
 
-Route35NationalParkGateOfficer1ExplainsRulesText:
-	text "The person who"
-	line "gets the strong-"
-	cont "est bug #MON"
-	roll "is the winner."
+;Route35NationalParkGatePlayersMonLeftWithHelperText:
+;	text "<PLAYER>'s #MON"
+;	line "were left with the"
+;	cont "CONTEST HELPER."
+;	done
 
-	para "You have {d:BUG_CONTEST_MINUTES}"
-	line "minutes."
+;Route35NationalParkGateOfficer1ChooseMonAndComeBackText:
+;	text "Please choose the"
+;	line "#MON to be used"
+;	cont "in the Contest,"
+;	roll "then come see me."
+;	done
 
-	para "If you run out of"
-	line "PARK BALLs, you're"
-	cont "done."
+;Route35NationalParkGateOfficer1TakePartInFutureText:
+;	text "OK. We hope you'll"
+;	line "take part in the"
+;	cont "future."
+;	done
 
-	para "You can keep the"
-	line "last #MON you"
-	cont "catch as your own."
+;Route35NationalParkGateOfficer1FirstMonCantBattleText:
+;	text "Uh-oh…"
+;	line "The first #MON"
+;	cont "in your party"
+;	roll "can't battle."
+;
+;	para "Please switch it"
+;	line "with the #MON"
+;	cont "you want to use,"
+;	roll "then come see me."
+;	done
 
-	para "Go out and catch"
-	line "the strongest bug"
-	cont "#MON you can"
-	roll "find!"
-	done
+;Route35NationalParkGateOfficer1MakeRoomText:
+;	text "Uh-oh…"
+;	line "Both your party"
+;	cont "and your PC BOX"
+;	roll "are full."
+;
+;	para "You have no room"
+;	line "to put the bug"
+;	cont "#MON you catch."
+;
+;	para "Please make room"
+;	line "in your party or"
+;	cont "your PC BOX, then"
+;	roll "come see me."
+;	done
 
-Route35NationalParkGateOfficer1AskToUseFirstMonText:
-	text "Uh-oh…"
+;Route35NationalParkGateOfficer1EggAsFirstMonText:
+;	text "Uh-oh…"
+;	line "You have an EGG as"
+;	cont "the first #MON"
+;	roll "in your party."
+;
+;	para "Please switch it"
+;	line "with the #MON"
+;	cont "you want to use,"
+;	roll "then come see me."
+;	done
 
-	para "You have more than"
-	line "one #MON."
-
-	para "You'll have to use"
-	line "@"
-	text_ram wStringBuffer3
-	text ", the"
-	cont "first #MON in"
-	roll "your party."
-
-	para "Is that OK with"
-	line "you?"
-	done
-
-Route35NationalParkGateOfficer1WellHoldYourMonText:
-	text "Fine, we'll hold"
-	line "your other #MON"
-	cont "while you compete."
-	done
-
-Route35NationalParkGatePlayersMonLeftWithHelperText:
-	text "<PLAYER>'s #MON"
-	line "were left with the"
-	cont "CONTEST HELPER."
-	done
-
-Route35NationalParkGateOfficer1ChooseMonAndComeBackText:
-	text "Please choose the"
-	line "#MON to be used"
-	cont "in the Contest,"
-	roll "then come see me."
-	done
-
-Route35NationalParkGateOfficer1TakePartInFutureText:
-	text "OK. We hope you'll"
-	line "take part in the"
-	cont "future."
-	done
-
-Route35NationalParkGateOfficer1FirstMonCantBattleText:
-	text "Uh-oh…"
-	line "The first #MON"
-	cont "in your party"
-	roll "can't battle."
-
-	para "Please switch it"
-	line "with the #MON"
-	cont "you want to use,"
-	roll "then come see me."
-	done
-
-Route35NationalParkGateOfficer1MakeRoomText:
-	text "Uh-oh…"
-	line "Both your party"
-	cont "and your PC BOX"
-	roll "are full."
-
-	para "You have no room"
-	line "to put the bug"
-	cont "#MON you catch."
-
-	para "Please make room"
-	line "in your party or"
-	cont "your PC BOX, then"
-	roll "come see me."
-	done
-
-Route35NationalParkGateOfficer1EggAsFirstMonText:
-	text "Uh-oh…"
-	line "You have an EGG as"
-	cont "the first #MON"
-	roll "in your party."
-
-	para "Please switch it"
-	line "with the #MON"
-	cont "you want to use,"
-	roll "then come see me."
-	done
-
-Route35NationalParkGateOfficer1WantToFinishText:
-	text "You still have @"
-	text_ram wStringBuffer3
-	text_start
-	line "minute(s) left."
-
-	para "Do you want to"
-	line "finish now?"
-	done
+;Route35NationalParkGateOfficer1WantToFinishText:
+;	text "You still have @"
+;	text_ram wStringBuffer3
+;	text_start
+;	line "minute(s) left."
+;
+;	para "Do you want to"
+;	line "finish now?"
+;	done
 
 Route35NationalParkGateOfficer1WaitAtNorthGateText:
 	text "OK. Please wait at"
@@ -375,18 +375,18 @@ Route35NationalParkGateOfficer1WaitAtNorthGateText:
 	roll "of the winners."
 	done
 
-Route35NationalParkGateOfficer1OkGoFinishText:
-	text "OK. Please get"
-	line "back outside and"
-	cont "finish up."
-	done
+;Route35NationalParkGateOfficer1OkGoFinishText:
+;	text "OK. Please get"
+;	line "back outside and"
+;	cont "finish up."
+;	done
 
-Route35NationalParkGateOfficer1ContestIsOverText:
-	text "Today's Contest is"
-	line "over. We hope you"
-	cont "will participate"
-	roll "in the future."
-	done
+;Route35NationalParkGateOfficer1ContestIsOverText:
+;	text "Today's Contest is"
+;	line "over. We hope you"
+;	cont "will participate"
+;	roll "in the future."
+;	done
 
 Route35NationalParkGateOfficer1WeHoldContestsText:
 	text "We hold Contests"
