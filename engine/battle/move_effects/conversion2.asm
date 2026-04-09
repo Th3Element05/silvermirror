@@ -27,13 +27,13 @@ BattleCommand_Conversion2:
 .loop
 	call BattleRandom
 	maskbits TYPES_END
-	cp UNUSED_TYPES
-	jr c, .okay
-	cp UNUSED_TYPES_END
-	jr c, .loop
-	cp TYPES_END
-	jr nc, .loop
-.okay
+;	cp UNUSED_TYPES
+;	jr c, .okay
+;	cp UNUSED_TYPES_END
+;	jr c, .loop
+;	cp TYPES_END
+;	jr nc, .loop
+;.okay
 	ld [hli], a
 	ld [hld], a
 	push hl
