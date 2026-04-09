@@ -22,9 +22,35 @@ _TitleScreen:
 	ldh [rVBK], a
 
 ; Decompress running Suicune gfx
-	ld hl, TitleSuicuneGFX
+	ld a, BANK(sPlayerData)
+	call OpenSRAM
+
+	ld hl, sPlayerData + wEventFlags - wPlayerData
+	ld b, CHECK_FLAG
+	ld de, EVENT_GOT_BULBASAUR_FROM_OAK
+	call FlagAction
+	ld hl, TitleBulbasaurGFX
+	jr nz, .gotstarter
+
+	ld hl, sPlayerData + wEventFlags - wPlayerData
+	ld b, CHECK_FLAG
+	ld de, EVENT_GOT_CHARMANDER_FROM_OAK
+	call FlagAction
+	ld hl, TitleCharmanderGFX
+	jr nz, .gotstarter
+
+	ld hl, sPlayerData + wEventFlags - wPlayerData
+	ld b, CHECK_FLAG
+	ld de, EVENT_GOT_SQUIRTLE_FROM_OAK
+	call FlagAction
+	ld hl, TitleSquirtleGFX
+	jr z, .nostarter
+
+.gotstarter
 	ld de, vTiles1
 	call Decompress
+.nostarter
+	call CloseSRAM
 
 ; Clear screen palettes
 	hlbgcoord 0, 0
@@ -48,29 +74,29 @@ _TitleScreen:
 
 ; lines 3-4
 	hlbgcoord 0, 3
-	ld bc, 2 * BG_MAP_WIDTH
+	ld bc, 8 * BG_MAP_WIDTH
 	ld a, 2
 	call ByteFill
-; line 5
-	hlbgcoord 0, 5
-	ld bc, BG_MAP_WIDTH
-	ld a, 3
-	call ByteFill
-; line 6
-	hlbgcoord 0, 6
-	ld bc, BG_MAP_WIDTH
-	ld a, 4
-	call ByteFill
-; line 7
-	hlbgcoord 0, 7
-	ld bc, BG_MAP_WIDTH
-	ld a, 5
-	call ByteFill
-; lines 8-9
-	hlbgcoord 0, 8
-	ld bc, 2 * BG_MAP_WIDTH
-	ld a, 6
-	call ByteFill
+;; line 5
+;	hlbgcoord 0, 5
+;	ld bc, BG_MAP_WIDTH
+;	ld a, 3
+;	call ByteFill
+;; line 6
+;	hlbgcoord 0, 6
+;	ld bc, BG_MAP_WIDTH
+;	ld a, 4
+;	call ByteFill
+;; line 7
+;	hlbgcoord 0, 7
+;	ld bc, BG_MAP_WIDTH
+;	ld a, 5
+;	call ByteFill
+;; lines 8-9
+;	hlbgcoord 0, 8
+;	ld bc, 2 * BG_MAP_WIDTH
+;	ld a, 6
+;	call ByteFill
 
 ; 'CRYSTAL VERSION'
 	hlbgcoord 5, 9
@@ -248,8 +274,8 @@ SuicuneFrameIterator:
 .Frames:
 	db $80 ; vTiles3 tile $80
 	db $88 ; vTiles3 tile $88
-	db $00 ; vTiles5 tile $00
-	db $08 ; vTiles5 tile $08
+	db $f0 ; vTiles5 tile $00
+	db $f8 ; vTiles5 tile $08
 
 LoadSuicuneFrame:
 	hlcoord 6, 11 ; 6, 12
@@ -364,8 +390,14 @@ endr
 
 	ret
 
-TitleSuicuneGFX:
-INCBIN "gfx/title/suicune.2bpp.lz"
+TitleBulbasaurGFX:
+INCBIN "gfx/title/title_bulbasaur.2bpp.lz"
+
+TitleCharmanderGFX:
+INCBIN "gfx/title/title_charmander.2bpp.lz"
+
+TitleSquirtleGFX:
+INCBIN "gfx/title/title_squirtle.2bpp.lz"
 
 TitleLogoGFX:
 INCBIN "gfx/title/logo.2bpp.lz"
