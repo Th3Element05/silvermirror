@@ -103,7 +103,9 @@ CinnabarIslandMissingNoScript:
 	setevent EVENT_CAUGHT_MISSINGNO
 .nocatch
 	setscene SCENE_CINNABARISLAND_NOOP
-;	giveitem RARE_CANDY, 10
+	giveitem RARE_CANDY, 10
+	giveitem RARE_CANDY, 5
+	giveitem RARE_CANDY, 1
 .End
 	end
 
