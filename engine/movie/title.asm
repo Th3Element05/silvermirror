@@ -113,11 +113,21 @@ _TitleScreen:
 	ld a, 1
 	call ByteFill
 
-;; Red palette (unecessary?)
-;	hlbgcoord 10, 11 ;10, 11
-;	ld bc, 7 * BG_MAP_WIDTH
-;	ld a, 0
-;	call ByteFill
+; Red palette
+	ld a, BANK(sCrystalData)
+	call OpenSRAM
+
+	ld a, [sCrystalData + wPlayerGender - wCrystalData]
+	cp 0
+	jr z, .malepalette
+
+	hlbgcoord 10, 11 ;10, 11
+	ld bc, 7 * BG_MAP_WIDTH
+	ld a, 6
+	call ByteFill
+
+.malepalette
+	call CloseSRAM
 
 ;; Suicune gfx
 ;	hlbgcoord 0, 11 ; 0, 12
@@ -210,12 +220,24 @@ _TitleScreen:
 	ld e, 20
 	call DrawTitleGraphic
 
-; Draw Red
+; Draw trainer
+	ld a, BANK(sCrystalData)
+	call OpenSRAM
+
+	ld a, [sCrystalData + wPlayerGender - wCrystalData]
+	cp 0
+	ld d, $1a
+	jr z, .malegfx
+
+;female
+	ld d, $36
+.malegfx
 	hlcoord 10, 11 ;10, 11
 	lb bc, 7, 4
-	ld d, $1a
+;	ld d, $1a
 	ld e, 4
 	call DrawTitleGraphic
+	call CloseSRAM
 
 ;; Draw starter (static)
 ;	hlcoord 6, 13 ;6, 13
