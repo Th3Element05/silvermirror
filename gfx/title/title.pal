@@ -1,9 +1,9 @@
 ; BG
 ;all shades of grey in suicune.png 
 	RGB 31, 31, 31
-	RGB 31, 13, 04 ; 31, 14, 04
-	RGB 22, 05, 05 ; 07, 22, 12
-	RGB 01, 01, 01 ; 08, 16, 31
+	RGB 31, 24, 10 ;31, 13, 04
+	RGB 25, 06, 06 ;22, 05, 05
+	RGB 01, 01, 01
 ;version title text
 	RGB 31, 31, 31
 	RGB 24, 24, 26
@@ -14,21 +14,21 @@
 	RGB 29, 28, 12 ; 31, 31, 31
 	RGB 02, 03, 30
 	RGB 05, 05, 05
-;next line of POKEMON logo
+;next line of POKEMON logo (bulbasaur)
 	RGB 31, 31, 31
-	RGB 29, 28, 12 ; 31, 31, 18
-	RGB 02, 03, 30
-	RGB 05, 05, 05
-;next line of POKEMON logo
+	RGB 09, 28, 15
+	RGB 31, 10, 06
+	RGB 01, 01, 01
+;next line of POKEMON logo (charmander)
 	RGB 31, 31, 31
-	RGB 29, 28, 12
-	RGB 02, 03, 30
-	RGB 05, 05, 05
-;next line of POKEMON logo
+	RGB 31, 13, 04
+	RGB 22, 05, 05
+	RGB 01, 01, 01
+;next line of POKEMON logo (squirtle)
 	RGB 31, 31, 31
-	RGB 29, 28, 12 ; 28, 25, 06
-	RGB 02, 03, 30
-	RGB 05, 05, 05
+	RGB 22, 18, 08
+	RGB 09, 16, 31
+	RGB 01, 01, 01
 ;bottom of POKEMON logo (and TM)
 	RGB 31, 31, 31
 	RGB 29, 28, 12 ; 26, 21, 00
@@ -40,13 +40,12 @@
 	RGB 00, 00, 00
 	RGB 00, 00, 00
 
-
 ; OBJ
 ;All shades of grey in crystal.png
 	RGB 31, 31, 31
-	RGB 17, 19, 31
-	RGB 00, 07, 24
-	RGB 00, 04, 18
+	RGB 19, 24, 31 ;17, 19, 31
+	RGB 00, 16, 28 ;00, 07, 24
+	RGB 00, 12, 23 ;00, 04, 18
 ;nothing?
 	RGB 00, 00, 00
 	RGB 00, 00, 00

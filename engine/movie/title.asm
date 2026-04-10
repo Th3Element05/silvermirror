@@ -21,7 +21,7 @@ _TitleScreen:
 	ld a, 1
 	ldh [rVBK], a
 
-; Decompress running Suicune gfx
+; Decompress running starter gfx
 	ld a, BANK(sPlayerData)
 	call OpenSRAM
 
@@ -39,12 +39,12 @@ _TitleScreen:
 	ld hl, TitleCharmanderGFX
 	jr nz, .gotstarter
 
-	ld hl, sPlayerData + wEventFlags - wPlayerData
-	ld b, CHECK_FLAG
-	ld de, EVENT_GOT_SQUIRTLE_FROM_OAK
-	call FlagAction
+;	ld hl, sPlayerData + wEventFlags - wPlayerData
+;	ld b, CHECK_FLAG
+;	ld de, EVENT_GOT_SQUIRTLE_FROM_OAK
+;	call FlagAction
 	ld hl, TitleSquirtleGFX
-	jr z, .nostarter
+;	jr z, .nostarter
 
 .gotstarter
 	ld de, vTiles1
@@ -72,11 +72,16 @@ _TitleScreen:
 
 ; Apply logo gradient:
 
-; lines 3-4
+; full logo
 	hlbgcoord 0, 3
 	ld bc, 8 * BG_MAP_WIDTH
 	ld a, 2
 	call ByteFill
+;; lines 3-4
+;	hlbgcoord 0, 3
+;	ld bc, 2 * BG_MAP_WIDTH
+;	ld a, 2
+;	call ByteFill
 ;; line 5
 ;	hlbgcoord 0, 5
 ;	ld bc, BG_MAP_WIDTH
@@ -104,11 +109,61 @@ _TitleScreen:
 	ld a, 1
 	call ByteFill
 
-; Suicune gfx
-	hlbgcoord 0, 11 ; 0, 12
-;	ld bc, 6 * BG_MAP_WIDTH ; the rest of the screen
-	ld bc, 7 * BG_MAP_WIDTH ; the rest of the screen
-	ld a, 0 | VRAM_BANK_1
+;; Red palette (unecessary?)
+;	hlbgcoord 10, 11 ;10, 11
+;	ld bc, 7 * BG_MAP_WIDTH
+;	ld a, 0
+;	call ByteFill
+
+;; Suicune gfx
+;	hlbgcoord 0, 11 ; 0, 12
+;	ld bc, 7 * BG_MAP_WIDTH ; the rest of the screen
+;	ld a, 0 | VRAM_BANK_1
+;	call ByteFill
+
+; Starter gfx
+	ld a, BANK(sPlayerData)
+	call OpenSRAM
+
+	ld hl, sPlayerData + wEventFlags - wPlayerData
+	ld b, CHECK_FLAG
+	ld de, EVENT_GOT_BULBASAUR_FROM_OAK
+	call FlagAction
+	ld a, 3 | VRAM_BANK_1
+	jr nz, .gotpalette
+
+	ld hl, sPlayerData + wEventFlags - wPlayerData
+	ld b, CHECK_FLAG
+	ld de, EVENT_GOT_CHARMANDER_FROM_OAK
+	call FlagAction
+	ld a, 4 | VRAM_BANK_1
+	jr nz, .gotpalette
+
+;	ld hl, sPlayerData + wEventFlags - wPlayerData
+;	ld b, CHECK_FLAG
+;	ld de, EVENT_GOT_SQUIRTLE_FROM_OAK
+;	call FlagAction
+	ld a, 5 | VRAM_BANK_1
+;	jr nz, .gotpalette
+
+.gotpalette
+	call CloseSRAM
+	hlbgcoord 6, 13 ; 0, 11
+;	ld bc, 7 * BG_MAP_WIDTH ; the rest of the screen
+	ld bc, 5
+;	ld a, 0 | VRAM_BANK_1
+	call ByteFill
+	hlbgcoord 6, 14
+	ld bc, 5
+	call ByteFill
+	hlbgcoord 6, 15
+	ld bc, 5
+	call ByteFill
+	hlbgcoord 6, 16
+	ld bc, 5
+	call ByteFill
+	hlbgcoord 6, 17
+	ld bc, 5
 	call ByteFill
 
 ; Back to VRAM bank 0
@@ -138,6 +193,20 @@ _TitleScreen:
 	ld e, 20
 	call DrawTitleGraphic
 
+; Draw Red
+	hlcoord 10, 11 ;10, 11
+	lb bc, 7, 4
+	ld d, $1a
+	ld e, 4
+	call DrawTitleGraphic
+
+; Draw starter
+	hlcoord 6, 13 ;6, 13
+	lb bc, 5, 5
+	ld d, $80 ;$36 ;$00(vTiles2)
+	ld e, 5
+	call DrawTitleGraphic
+
 ; Draw copyright text
 	hlbgcoord 3, 0, vBGMap1
 	lb bc, 1, 13
@@ -145,9 +214,9 @@ _TitleScreen:
 	ld e, 16
 	call DrawTitleGraphic
 
-; Initialize running Suicune?
-	ld d, $0
-	call LoadSuicuneFrame
+;; Initialize running Suicune?
+;	ld d, $0
+;	call LoadSuicuneFrame
 
 ; Initialize background crystal
 	call InitializeBackground
@@ -233,8 +302,8 @@ _TitleScreen:
 ; Update BG Map 0 (bank 0)
 	ldh [hBGMapMode], a
 
-	xor a
-	ld [wSuicuneFrame], a
+;	xor a
+;	ld [wSuicuneFrame], a
 
 ; Play starting sound effect
 	call SFXChannelsOff
