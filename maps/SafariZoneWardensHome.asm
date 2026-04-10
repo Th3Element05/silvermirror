@@ -37,7 +37,7 @@ SafariZoneWardenScript:
 	end
 
 .AlreadyGotStrength
-	jumptextfaceplayer SafariZoneWardenExplainStrengthText
+	jumptextfaceplayer SafariZoneWardenAskSurfText
 
 .GiveWardenTeeth
 	writetext GaveSafariZoneWardenTeethText
@@ -50,11 +50,11 @@ SafariZoneWardenScript:
 	setflag ENGINE_PAGER_STRENGTH
 	writetext GotStrengthPagerText
 	promptbutton
-	writetext SafariZoneWardenGiveStrengthText
-	promptbutton
+;	writetext SafariZoneWardenGiveStrengthText
+;	promptbutton
 ;	verbosegiveitem TM_STRENGTH
 	setevent EVENT_GOT_HM04_STRENGTH
-	writetext SafariZoneWardenExplainStrengthText
+	writetext SafariZoneWardenAskSurfText
 	waitbutton
 	closetext
 	end
@@ -67,8 +67,12 @@ SafariZoneWardenScript:
 	db "STRENGTH PAGER@"
 
 GotStrengthPagerText:
-	text "MACHOKE was"
-	line "added to the PPS!"
+	text "MACHOKE was added"
+	line "to the PPS!"
+
+	para "Now you can call"
+	line "MACHOKE to push"
+	cont "boulders around!"
 	done
 
 SafariZoneWardenGibberishText1:
@@ -107,8 +111,9 @@ SafariZoneWardenThanksGivePagerText:
 
 	para "I couldn't work"
 	line "that way."
-	cont "Let me give you"
-	roll "something for"
+
+	para "Let me give you"
+	line "something for"
 	cont "your trouble."
 	done
 
@@ -116,25 +121,37 @@ SafariZoneWardenGiveStrengthText:
 	text "WARDEN: And this!"
 	done
 
-SafariZoneWardenExplainStrengthText:
-	text "WARDEN: HM04"
-	line "teaches STRENGTH!"
-
-	para "It lets #MON"
-	line "move boulders"
-	cont "when you're out-"
-	roll "side of battle."
-
-	para "Oh yes, did you"
-	line "find SECRET HOUSE"
-	cont "in SAFARI ZONE?"
+SafariZoneWardenAskSurfText:
+	text "WARDEN: Oh,"
+	line "did you find the"
+	cont "SECRET HOUSE in"
+	roll "the SAFARI ZONE?"
 
 	para "If you do, you"
-	line "win an HM!"
+	line "win a TM!"
 
 	para "I hear it's the"
-	line "rare SURF HM."
+	line "rare TM for SURF."
 	done
+
+;	text "WARDEN: HM04"
+;	line "teaches STRENGTH!"
+;
+;	para "It lets #MON"
+;	line "move boulders"
+;	cont "when you're out-"
+;	roll "side of battle."
+;
+;	para "Oh yes, did you"
+;	line "find SECRET HOUSE"
+;	cont "in SAFARI ZONE?"
+;
+;	para "If you do, you"
+;	line "win an HM!"
+;
+;	para "I hear it's the"
+;	line "rare SURF HM."
+;	done
 
 SafariWardensHouseBoulder:
 	jumpstd StrengthBoulderScript

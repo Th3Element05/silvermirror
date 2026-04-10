@@ -84,8 +84,9 @@ Route20RockSmashGuyScript:
 	promptbutton
 	closetext
 	playsound SFX_BALL_POOF
-	waitsfx
+	applymovement ROUTE20_GEODUDE, Route20RockSmashMovement
 	disappear ROUTE20_GEODUDE
+;	waitsfx
 	pause 10
 	faceplayer
 	opentext

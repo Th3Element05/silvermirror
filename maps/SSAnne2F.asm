@@ -120,6 +120,8 @@ SSAnne2FRivalAfterBattleText:
 	done
 
 SSAnne2FCaptainScript:
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .Postgame
 	checkevent EVENT_GOT_HM01_CUT
 	iftrue .AlreadyGotCut
 	opentext
@@ -130,6 +132,9 @@ SSAnne2FCaptainScript:
 	ifequal RIGHT, .RightMovement
 	ifequal LEFT, .LeftMovement
 	sjump SSAnne2FRubCaptainsBack
+
+.Postgame
+	jumptextfaceplayer SSAnne2FCaptainWelcomeBackText
 
 .AlreadyGotCut
 	jumptextfaceplayer SSAnne2FCaptainSetSailText
@@ -156,8 +161,8 @@ SSAnne2FRubCaptainsBack:
 	setflag ENGINE_PAGER_CUT
 	writetext GotCutPagerText
 	promptbutton
-	writetext SSAnne2FCaptainExplainPagerGiveCutText
-	promptbutton
+;	writetext SSAnne2FCaptainExplainPagerGiveCutText
+;	promptbutton
 ;	verbosegiveitem TM_CUT ;removed
 	setevent EVENT_GOT_HM01_CUT
 	writetext SSAnne2FCaptainSetSailText
@@ -174,20 +179,29 @@ SSAnne2FRubCaptainsBack:
 	db "CUT PAGER@"
 
 GotCutPagerText:
-	text "SCYTHER was"
-	line "added to the PPS!"
+	text "SCYTHER was added"
+	line "to the PPS!"
+
+	para "CAPTAIN: That's a"
+	line "CUT PAGER."
+
+	para "It lets you call"
+	line "SCYTHER to chop"
+	cont "down small trees!"
 	done
 
 SSAnne2FCaptainIntroText:
 	text "CAPTAIN: Ooargh…"
-	line "I feel hideous…"
-	cont "Urrp! Seasick…"
+
+	para "I feel hideous…"
+
+	para "Urrp! Seasick…"
 	done
 
 SSAnne2FRubCaptainsBackText:
 	text "<PLAYER> rubbed"
-	line "the CAPTAIN's"
-	cont "back!"
+	line "the CAPTAIN's back!"
+;	cont "back!"
 
 	para "Rub-rub…"
 	line "Rub-rub…"
@@ -195,8 +209,8 @@ SSAnne2FRubCaptainsBackText:
 
 SSAnne2FCaptainThanksGivePagerText:
 	text "CAPTAIN: Whew!"
-	line "Thank you! I"
-	cont "feel much better!"
+	line "Thank you! I feel"
+	cont "much better!"
 
 	para "You want to see"
 	line "my CUT technique?"
@@ -209,23 +223,33 @@ SSAnne2FCaptainThanksGivePagerText:
 	done
 
 SSAnne2FCaptainExplainPagerGiveCutText:
-	text "That's a"
+	text "CAPTAIN: That's a"
 	line "CUT PAGER."
 
-	para "It lets you"
-	line "summon a #MON"
-	cont "to cut small"
-	roll "trees."
+	para "It lets you call"
+	line "SCYTHER to chop"
+	cont "down small trees!"
 	done
 
 SSAnne2FCaptainSetSailText:
 	text "CAPTAIN: Whew!"
 
 	para "Now that I'm not"
-	line "sick any more, I"
-	cont "guess it's time"
+	line "seasick anymore,"
+	cont "I guess it's time"
 	roll "to set sail!"
 	done
+
+SSAnne2FCaptainWelcomeBackText:
+	text "CAPTAIN: Welcome"
+	line "back!"
+
+	para "I hoped I might"
+	line "see you again when"
+	cont "we docked here at"
+	roll "VERMILION CITY!"
+	done
+
 
 SSAnne2FWaiterScript:
 	jumptextfaceplayer SSAnne2FWaiterText
@@ -235,9 +259,15 @@ SSAnne2FWaiterText:
 	cont "for trainers!"
 
 	para "At every port, we"
-	line "hold parties with"
-	cont "invited trainers!"
+	line "let local trainers"
+	cont "on board to battle"
+	roll "our passengers!"
 	done
+
+;	para "At every port, we"
+;	line "hold parties with"
+;	cont "invited trainers!"
+;	done
 
 SSAnne2FRivalLeftMovement:
 	slow_step LEFT

@@ -38,6 +38,10 @@ SafariSecretHouseOfficer:
 GotSurfPagerText:
 	text "LAPRAS was"
 	line "added to the PPS!"
+
+	para "Now you can call"
+	line "LAPRAS to ride"
+	cont "across the water!"
 	done
 
 SafariSecretHouseGiveSurfText:

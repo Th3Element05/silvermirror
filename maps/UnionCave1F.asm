@@ -40,7 +40,8 @@ UnionCave1FGeodude:
 	playsound SFX_BALL_POOF
 	applymovement UNIONCAVE1F_GEODUDE, UnionCave1FRockSmashMovement
 	disappear UNIONCAVE1F_GEODUDE
-	pause 5
+;	waitsfx
+	pause 10
 	writetext UnionCave1FGeodudeFainted
 	waitbutton
 	closetext

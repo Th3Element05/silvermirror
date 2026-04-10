@@ -52,8 +52,16 @@ Route2GateOaksAideScript:
 	db "FLASH PAGER@"
 
 GotFlashPagerText:
-	text "PIKACHU was"
-	line "added to the PPS!"
+	text "PIKACHU was added"
+	line "to the PPS!"
+
+	para "PIKACHU can use"
+	line "FLASH to light up"
+	cont "dark caves!"
+
+	para "Call PIKACHU from"
+	line "the PAGER CARD in"
+	cont "your #GEAR!"
 	done
 
 Route2GateOaksAideAskPokemonText:
@@ -98,11 +106,8 @@ Route2GateOaksAideCongratsText:
 	done
 
 Route2GateOaksAideExplainPagerGiveFlashText:
-	text "Use that PAGER"
-	line "to summon PIKACHU"
-	cont "to use FLASH!"
 
-	para "PROF.OAK wanted"
+	text "PROF.OAK wanted"
 	line "you to have this,"
 	cont "too. So you can"
 	roll "teach FLASH to"

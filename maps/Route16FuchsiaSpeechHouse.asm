@@ -52,13 +52,10 @@ Route16FlyHouseLassText:
 	done
 
 Route16FlyHouseExplainPagerGiveFlyText:
-	text "That's a"
-	line "FLY PAGER."
-
-	para "It lets you"
-	line "summon a #MON"
-	cont "to take you back"
-	roll "to any town."
+	text "That FLY PAGER"
+	line "will let you call"
+	cont "PIDGEOT to fly you"
+	roll "back to any town."
 
 	para "Please keep my"
 	line "secret!"
@@ -76,8 +73,8 @@ Route16FlyHouseExplainPagerGiveFlyText:
 ;	done
 
 Route16FlyHouseGoodUseText:
-	text "Please don't tell"
-	line "anyone I'm here."
+	text "Please, don't tell"
+	line "anyone I'm here!"
 	done
 
 Route16FlyHouseFearowScript:
