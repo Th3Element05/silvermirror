@@ -21,7 +21,10 @@ _TitleScreen:
 	ld a, 1
 	ldh [rVBK], a
 
-; Decompress running starter gfx
+; Decompress running Suicune gfx
+	farcall CheckPrimarySaveFile
+	jr nz, .nostarter
+
 	ld a, BANK(sPlayerData)
 	call OpenSRAM
 
@@ -39,17 +42,18 @@ _TitleScreen:
 	ld hl, TitleCharmanderGFX
 	jr nz, .gotstarter
 
-;	ld hl, sPlayerData + wEventFlags - wPlayerData
-;	ld b, CHECK_FLAG
-;	ld de, EVENT_GOT_SQUIRTLE_FROM_OAK
-;	call FlagAction
+	ld hl, sPlayerData + wEventFlags - wPlayerData
+	ld b, CHECK_FLAG
+	ld de, EVENT_GOT_SQUIRTLE_FROM_OAK
+	call FlagAction
 	ld hl, TitleSquirtleGFX
-;	jr z, .nostarter
+	jr nz, .gotstarter
 
+.nostarter
+	ld hl, TitleNoStarterGFX
 .gotstarter
 	ld de, vTiles1
 	call Decompress
-.nostarter
 	call CloseSRAM
 
 ; Clear screen palettes
@@ -122,6 +126,9 @@ _TitleScreen:
 ;	call ByteFill
 
 ; Starter gfx
+	farcall CheckPrimarySaveFile
+	jr nz, .nopalette
+
 	ld a, BANK(sPlayerData)
 	call OpenSRAM
 
@@ -134,37 +141,47 @@ _TitleScreen:
 
 	ld hl, sPlayerData + wEventFlags - wPlayerData
 	ld b, CHECK_FLAG
-	ld de, EVENT_GOT_CHARMANDER_FROM_OAK
+	ld de, EVENT_GOT_SQUIRTLE_FROM_OAK
 	call FlagAction
-	ld a, 4 | VRAM_BANK_1
+	ld a, 5 | VRAM_BANK_1
 	jr nz, .gotpalette
 
 ;	ld hl, sPlayerData + wEventFlags - wPlayerData
 ;	ld b, CHECK_FLAG
-;	ld de, EVENT_GOT_SQUIRTLE_FROM_OAK
+;	ld de, EVENT_GOT_CHARMANDER_FROM_OAK
 ;	call FlagAction
-	ld a, 5 | VRAM_BANK_1
+;	ld a, 4 | VRAM_BANK_1
 ;	jr nz, .gotpalette
 
+.nopalette
+	ld a, 4 | VRAM_BANK_1
 .gotpalette
 	call CloseSRAM
-	hlbgcoord 6, 13 ; 0, 11
-;	ld bc, 7 * BG_MAP_WIDTH ; the rest of the screen
+;	hlbgcoord 6, 13 ; 0, 11
+;	ld bc, 5 ; the rest of the screen ; 7 * BG_MAP_WIDTH
+;	call ByteFill
+;	hlbgcoord 6, 14
+;	ld bc, 5
+;	call ByteFill
+;	hlbgcoord 6, 15
+;	ld bc, 5
+;	call ByteFill
+;	hlbgcoord 6, 16
+;	ld bc, 5
+;	call ByteFill
+;	hlbgcoord 6, 17
+;	ld bc, 5
+;	call ByteFill
+
+	ld e, 5
+	hlbgcoord 6, 13
+.loopfill
 	ld bc, 5
-;	ld a, 0 | VRAM_BANK_1
 	call ByteFill
-	hlbgcoord 6, 14
-	ld bc, 5
-	call ByteFill
-	hlbgcoord 6, 15
-	ld bc, 5
-	call ByteFill
-	hlbgcoord 6, 16
-	ld bc, 5
-	call ByteFill
-	hlbgcoord 6, 17
-	ld bc, 5
-	call ByteFill
+	ld bc, BG_MAP_WIDTH - 5
+	add hl, bc
+	dec e
+	jr nz, .loopfill
 
 ; Back to VRAM bank 0
 	ld a, 0
@@ -200,12 +217,12 @@ _TitleScreen:
 	ld e, 4
 	call DrawTitleGraphic
 
-; Draw starter
-	hlcoord 6, 13 ;6, 13
-	lb bc, 5, 5
-	ld d, $80 ;$36 ;$00(vTiles2)
-	ld e, 5
-	call DrawTitleGraphic
+;; Draw starter (static)
+;	hlcoord 6, 13 ;6, 13
+;	lb bc, 5, 5
+;	ld d, $80 ;$36 ;$00(vTiles2)
+;	ld e, 5
+;	call DrawTitleGraphic
 
 ; Draw copyright text
 	hlbgcoord 3, 0, vBGMap1
@@ -214,9 +231,9 @@ _TitleScreen:
 	ld e, 16
 	call DrawTitleGraphic
 
-;; Initialize running Suicune?
-;	ld d, $0
-;	call LoadSuicuneFrame
+; Initialize running Suicune?
+	ld d, $0
+	call LoadSuicuneFrame
 
 ; Initialize background crystal
 	call InitializeBackground
@@ -342,28 +359,28 @@ SuicuneFrameIterator:
 
 .Frames:
 	db $80 ; vTiles3 tile $80
-	db $88 ; vTiles3 tile $88
-	db $f0 ; vTiles5 tile $00
-	db $f8 ; vTiles5 tile $08
+	db $85 ; vTiles3 tile $88
+	db $b2 ; vTiles5 tile $00
+	db $b7 ; vTiles5 tile $08
 
 LoadSuicuneFrame:
-	hlcoord 6, 11 ; 6, 12
-	ld b, 7 ; 6 ; how many tiles of the suicune graphic to draw, from top to bottom.
+	hlcoord 6, 13 ; 6, 12
+	ld b, 5 ; 6 ; how many tiles of the suicune graphic to draw, from top to bottom.
 .bgrows
-	ld c, 8 ; 8 ; how many tiles wide the suicune graphic is?
+	ld c, 5 ; 8 ; how many tiles wide the suicune graphic is?
 .col
 	ld a, d
 	ld [hli], a
 	inc d
 	dec c
 	jr nz, .col
-	ld a, SCREEN_WIDTH - 8
+	ld a, SCREEN_WIDTH - 5 ;8
 	add l
 	ld l, a
 	ld a, 0
 	adc h
 	ld h, a
-	ld a, 8
+	ld a, 5 ;8
 	add d
 	ld d, a
 	dec b
