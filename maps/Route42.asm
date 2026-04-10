@@ -98,9 +98,9 @@ Route42ChuckScript:
 	promptbutton
 	closetext
 	playsound SFX_BALL_POOF
-;	waitsfx
 	applymovement ROUTE42_PRIMEAPE, Route42RockSmashMovement
 	disappear ROUTE42_PRIMEAPE
+;	waitsfx
 	pause 10
 	turnobject ROUTE42_CHUCK, RIGHT
 	opentext

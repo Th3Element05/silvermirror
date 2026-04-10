@@ -1,7 +1,4 @@
 	object_const_def
-;	const CHERRYGROVECITY_GRAMPS
-;	const CHERRYGROVECITY_GEODUDE
-;	const CHERRYGROVECITY_ROCK
 
 CherrygroveCity_MapScripts:
 	def_scene_scripts
@@ -12,104 +9,6 @@ CherrygroveCity_MapScripts:
 CherrygroveCityFlypointCallback:
 	setflag ENGINE_FLYPOINT_CHERRYGROVE
 	endcallback
-
-; script
-;CherrygroveRockSmashGuyScript:
-;	faceplayer
-;	opentext
-;	checkevent EVENT_GOT_TM58_ROCK_SMASH
-;	iftrue .AlreadyGotRockSmash
-;	writetext CherrygroveRockSmashGuyIntroText
-;	cry GEODUDE
-;	promptbutton
-;	closetext
-;	turnobject CHERRYGROVECITY_GRAMPS, RIGHT
-;	pause 20
-;	scall CherrygroveCityGeodudeScript
-;	applymovement CHERRYGROVECITY_GEODUDE, CherrygroveGeodudeRockSmashMovement
-;	pause 10
-;	applymovement CHERRYGROVECITY_ROCK, CherrygroveGeodudeSmashesRockMovement
-;	pause 20
-;	setlasttalked CHERRYGROVECITY_GRAMPS
-;	faceplayer
-;	opentext
-;	writetext CherrygroveRockSmashGuyGiveTMText
-;	promptbutton
-;	verbosegiveitem TM_ROCK_SMASH
-;	setevent EVENT_GOT_TM58_ROCK_SMASH
-;	promptbutton
-;	writetext CherrygroveRockSmashGuyGivePagerText
-;	promptbutton
-;	stringtotext .pagercardname, MEM_BUFFER_1
-;	scall .JumpstdReceiveItem
-;	setflag ENGINE_PAGER_ROCK_SMASH
-;	writetext GotRockSmashPagerText
-;	promptbutton
-;.AlreadyGotRockSmash:
-;	writetext CherrygroveRockSmashGuyCallAnytimeText
-;	waitbutton
-;	closetext
-;	end
-;
-;.JumpstdReceiveItem:
-;	jumpstd ReceiveItemScript
-;	end
-;
-;.pagercardname
-;	db "ROCKSMASH PAGER@"
-;
-;CherrygroveRockSmashGuyIntroText:
-;	text "My GEODUDE loves"
-;	line "smashing rocks!"
-;
-;	para "Look!"
-;	done
-;
-;CherrygroveRockSmashGuyGiveTMText:
-;	text "Here, you should"
-;	line "take this!"
-;	done
-;
-;CherrygroveRockSmashGuyGivePagerText:
-;	text "Now you can teach"
-;	line "ROCK SMASH to your"
-;	cont "own #MON!"
-;
-;	para "And you can have"
-;	line "this, too!"
-;	done
-;
-;GotRockSmashPagerText:
-;	text "GEODUDE was"
-;	line "added to the PPS!"
-;	done
-;
-;CherrygroveRockSmashGuyCallAnytimeText:
-;	text "Call GEODUDE"
-;	line "whenever you need"
-;	cont "to use ROCK SMASH!"
-;	done
-;
-;CherrygroveGeodudeRockSmashMovement: ;test?
-;	step_shake 10;needs time specified? or displacement?
-;	step_end
-;
-;CherrygroveGeodudeSmashesRockMovement:
-;	rock_smash 10
-;	step_end
-;
-;CherrygroveCityGeodudeScript:
-;	opentext
-;	writetext CherrygroveCityGeodudeText
-;	cry GEODUDE
-;	waitbutton
-;	closetext
-;	end
-;
-;CherrygroveCityGeodudeText:
-;	text "GEODUDE: Geo!"
-;	line "Geo-dude!"
-;	done
 
 ; npc
 CherrygroveTeacherScript:
@@ -240,8 +139,8 @@ CherrygroveCityPokecenterSign:
 CherrygroveCityMartSign:
 	jumpstd MartSignScript
 
-;CherrygroveCityRock:
-;	jumpstd SmashRockScript
+CherrygroveCityRock:
+	jumpstd SmashRockScript
 
 CherrygroveCity_MapEvents:
 	db 0, 0 ; filler
@@ -261,10 +160,9 @@ CherrygroveCity_MapEvents:
 	bg_event 30,  3, BGEVENT_READ, CherrygroveCityPokecenterSign
 
 	def_object_events
-;	object_event 22,  8, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygroveRockSmashGuyScript, -1
-;	object_event 23,  8, SPRITE_GEODUDE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_SCRIPT, 0, CherrygroveCityGeodudeScript, -1
-;	object_event 23,  9, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygroveCityRock, -1
-	object_event 27, 12, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CherrygroveTeacherScript, -1
+	object_event 12,  4, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygroveCityRock, -1
+	object_event 10,  6, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygroveCityRock, -1
+	object_event 26, 12, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CherrygroveTeacherScript, -1
 	object_event 27,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CherrygroveYoungsterScript, -1
 	object_event  7, 12, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MysticWaterGuy, -1
 
