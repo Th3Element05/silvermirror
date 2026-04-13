@@ -1,0 +1,131 @@
+TANNER1
+
+TrainerCamperTanner:
+	trainer CAMPER, TANNER1, EVENT_BEAT_CAMPER_TANNER, CamperTannerSeenText, CamperTannerBeatenText, 0, .Script
+.Script:
+	loadvar VAR_CALLERID, PHONE_CAMPER_TANNER
+	opentext
+	checkflag ENGINE_TANNER_READY_FOR_REMATCH
+	iftrue .ChooseRematch
+	checkflag ENGINE_TANNER_HAS_SUN_STONE
+	iftrue .GiveSunStone
+	checkcellnum PHONE_CAMPER_TANNER
+	iftrue .TannerDefeated
+	checkevent EVENT_TANNER_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskAgainForPhoneNumber
+	writetext CamperTannerAfterBattleText
+	waitbutton
+	setevent EVENT_TANNER_ASKED_FOR_PHONE_NUMBER
+	scall Route13AskNumber1
+	jump .ContinueAskForPhoneNumber
+
+.AskAgainForPhoneNumber:
+	scall Route13AskNumber2
+.ContinueAskForPhoneNumber:
+	askforphonenumber PHONE_CAMPER_TANNER
+	ifequal PHONE_CONTACTS_FULL, Route13PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, Route13NumberDeclined
+	gettrainername STRING_BUFFER_3, CAMPER, TANNER1
+	scall Route13RegisteredNumber
+	jump Route13NumberAccepted
+
+.ChooseRematch:
+	scall Route13Rematch
+	winlosstext CamperTannerBeatenText, 0
+	checkflag EVENT_BEAT_BLUE
+	iftrue .LoadFight2
+	checkflag ENGINE_FLYPOINT_PEWTER
+	iftrue .LoadFight1
+	loadtrainer CAMPER, TANNER1
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_TANNER_READY_FOR_REMATCH
+	end
+
+.LoadFight1:
+	loadtrainer CAMPER, TANNER2
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_TANNER_READY_FOR_REMATCH
+	end
+
+.LoadFight2:
+	loadtrainer CAMPER, TANNER3
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_TANNER_READY_FOR_REMATCH
+	end
+
+.GiveSunStone:
+	scall .Gift
+	verbosegiveitem SUN_STONE
+	iffalse .BagFull
+	clearflag ENGINE_TANNER_HAS_SUN_STONE
+	setevent ENGINE_TANNER_GAVE_SUN_STONE
+	jump Route13NumberAccepted
+
+.BagFull:
+	jump .PackFull
+
+.Gift:
+	jumpstd GiftMScript
+	end
+
+.PackFull:
+	jumpstd PackFullMScript
+	end
+
+.TannerDefeated:
+	writetext CamperTannerAfterBattleText
+	waitbutton
+	closetext
+	end
+
+Route13AskNumber1:
+	jumpstd AskNumber1MScript
+	end
+
+Route13AskNumber2:
+	jumpstd AskNumber2MScript
+	end
+
+Route13RegisteredNumber:
+	jumpstd RegisteredNumberMScript
+	end
+
+Route13NumberAccepted:
+	jumpstd NumberAcceptedMScript
+	end
+
+Route13NumberDeclined:
+	jumpstd NumberDeclinedMScript
+	end
+
+Route13PhoneFull:
+	jumpstd PhoneFullMScript
+	end
+
+Route13Rematch:
+	jumpstd RematchMScript
+	end
+
+
+
+CamperTannerSeenText:
+	text "I can fit in a"
+	line "quick battle while"
+
+	para "I'm in the midst"
+	line "of preparing a"
+	cont "meal!"
+	done
+
+CamperTannerBeatenText:
+	text "Oh, I'm hungry…"
+	done
+
+CamperTannerAfterBattleText:
+	text "I figured it would"
+	line "be easy to knock"
+	cont "you out…"
+	done

@@ -1,0 +1,106 @@
+BILLY1
+
+TrainerSchoolboyBilly:
+	trainer SCHOOLBOY, BILLY1, EVENT_BEAT_SCHOOLBOY_BILLY, SchoolboyBillySeenText, SchoolboyBillyBeatenText, 0, .Script
+.Script:
+	loadvar VAR_CALLERID, PHONE_SCHOOLBOY_BILLY
+	opentext
+	checkflag ENGINE_BILLY_READY_FOR_REMATCH
+	iftrue .WantsBattle
+	checkcellnum PHONE_SCHOOLBOY_BILLY
+	iftrue .BillyDefeated
+	checkevent EVENT_BILLY_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskedBefore
+	writetext SchoolboyBillyAfterBattleText
+	waitbutton
+	setevent EVENT_BILLY_ASKED_FOR_PHONE_NUMBER
+	scall .AskNumber1
+	jump .AskForNumber
+
+.AskedBefore:
+	scall .AskNumber2
+.AskForNumber:
+	askforphonenumber PHONE_SCHOOLBOY_BILLY
+	ifequal PHONE_CONTACTS_FULL, .PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
+	gettrainername STRING_BUFFER_3, SCHOOLBOY, BILLY1
+	scall .RegisteredNumber
+	jump .NumberAccepted
+
+.WantsBattle:
+	scall .Rematch
+	winlosstext SchoolboyBillyBeatenText, 0
+	checkevent EVENT_BEAT_BLUE
+	iftrue .LoadFight2
+	checkevent ENGINE_FLYPOINT_PEWTER
+	iftrue .LoadFight1
+	loadtrainer SCHOOLBOY, BILLY1
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_BILLY_READY_FOR_REMATCH
+	end
+
+.LoadFight1:
+	loadtrainer SCHOOLBOY, BILLY2
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_BILLY_READY_FOR_REMATCH
+	end
+
+.LoadFight2:
+	loadtrainer SCHOOLBOY, BILLY3
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_BILLY_READY_FOR_REMATCH
+	end
+
+.BillyDefeated:
+	writetext SchoolboyBillyAfterBattleText
+	waitbutton
+	closetext
+	end
+
+.AskNumber1:
+	jumpstd AskNumber1MScript
+	end
+
+.AskNumber2:
+	jumpstd AskNumber2MScript
+	end
+
+.RegisteredNumber:
+	jumpstd RegisteredNumberMScript
+	end
+
+.NumberAccepted:
+	jumpstd NumberAcceptedMScript
+	end
+
+.NumberDeclined:
+	jumpstd NumberDeclinedMScript
+	end
+
+.PhoneFull:
+	jumpstd PhoneFullMScript
+	end
+
+.Rematch:
+	jumpstd RematchMScript
+	end
+
+
+SchoolboyBillySeenText:
+	text "My favorite class"
+	line "is gym!"
+	done
+
+SchoolboyBillyBeatenText:
+	text "Oh, no!"
+	line "How could I lose?"
+	done
+
+SchoolboyBillyAfterBattleText:
+	text "If #MON were a"
+	line "subject at school,"
+	cont "I'd be the best!"
+	done
