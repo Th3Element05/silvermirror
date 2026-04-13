@@ -1,82 +1,82 @@
 ; BG
-;all shades of grey in suicune.png 
+;male trainer palette 
 	RGB 31, 31, 31
-	RGB 31, 24, 10 ;31, 13, 04
-	RGB 25, 06, 06 ;22, 05, 05
+	RGB 31, 20, 12
+	RGB 25, 05, 00
 	RGB 01, 01, 01
-;version title text
+;version title palette (silvermirror)
 	RGB 31, 31, 31
 	RGB 24, 24, 26
 	RGB 06, 06, 06
 	RGB 00, 00, 00
-;top of POKEMON logo
+;POKEMON logo
 	RGB 31, 31, 31
-	RGB 29, 28, 12 ; 31, 31, 31
+	RGB 29, 28, 12
 	RGB 02, 03, 30
 	RGB 05, 05, 05
-;next line of POKEMON logo (bulbasaur)
+;Bulbasaur palette
 	RGB 31, 31, 31
 	RGB 09, 28, 15
 	RGB 31, 10, 06
 	RGB 01, 01, 01
-;next line of POKEMON logo (charmander)
+;Charmander palette
 	RGB 31, 31, 31
 	RGB 31, 13, 04
 	RGB 22, 05, 05
 	RGB 01, 01, 01
-;next line of POKEMON logo (squirtle)
+;Squirtle palette
 	RGB 31, 31, 31
 	RGB 22, 18, 08
 	RGB 09, 16, 31
 	RGB 01, 01, 01
-;bottom of POKEMON logo (and TM)
+;female trainer palette
 	RGB 31, 31, 31
-	RGB 29, 28, 12 ; 26, 21, 00
-	RGB 02, 03, 30
-	RGB 05, 05, 05
-;c2001 GAME GREAK inc.
+	RGB 31, 20, 12
+	RGB 05, 18, 02
+	RGB 01, 01, 01
+;(c)2001 GAME GREAK inc.
 	RGB 31, 31, 31
 	RGB 16, 16, 16
 	RGB 00, 00, 00
 	RGB 00, 00, 00
 
 ; OBJ
-;All shades of grey in crystal.png
+;crystal.png palette
 	RGB 31, 31, 31
 	RGB 19, 24, 31 ;17, 19, 31
 	RGB 00, 16, 28 ;00, 07, 24
 	RGB 00, 12, 23 ;00, 04, 18
-;nothing?
+;unused
 	RGB 00, 00, 00
 	RGB 00, 00, 00
 	RGB 00, 00, 00
 	RGB 00, 00, 00
-;nothing?
+;unused
 	RGB 00, 00, 00
 	RGB 00, 00, 00
 	RGB 00, 00, 00
 	RGB 00, 00, 00
-;nothing?
+;unused
 	RGB 00, 00, 00
 	RGB 00, 00, 00
 	RGB 00, 00, 00
 	RGB 00, 00, 00
-;nothing?
+;unused
 	RGB 00, 00, 00
 	RGB 00, 00, 00
 	RGB 00, 00, 00
 	RGB 00, 00, 00
-;nothing?
+;unused
 	RGB 00, 00, 00
 	RGB 00, 00, 00
 	RGB 00, 00, 00
 	RGB 00, 00, 00
-;nothing?
+;unused
 	RGB 00, 00, 00
 	RGB 00, 00, 00
 	RGB 00, 00, 00
 	RGB 00, 00, 00
-;nothing?
+;unused
 	RGB 00, 00, 00
 	RGB 00, 00, 00
 	RGB 00, 00, 00
