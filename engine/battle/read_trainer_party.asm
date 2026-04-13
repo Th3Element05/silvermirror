@@ -449,17 +449,61 @@ SetTeamMaxLevel:
 SetDynamicLevel:
 	cp MAX_LEVEL + 1
 	ret c
-	cp 199
-	ret c
+	cp BADGE_LEVEL - 20
+	jr nc, .badgelevel
+;	cp 199
+;	ret c
 	sub PLAYER_LEVEL
 	ld b, a
 	ld a, [wTeamMaxLevel]
 	add b
+	cp MIN_DYNAMIC_LEVEL
+	jr c, .minlevel
 	cp MAX_LEVEL
 	ret c
-; cap overflowflow at level 100
+; cap overflow at level 100
 	cp PLAYER_LEVEL
 	ld a, MAX_LEVEL
 	ret c
 ; cap overflow at level 2
 	ld a, 2
+	ret
+; minimum dynamic level 50
+.minlevel
+	ld a, MIN_DYNAMIC_LEVEL
+	ret
+
+.badgelevel
+	sub BADGE_LEVEL
+	ld b, a
+
+	push hl
+	push bc
+	ld hl, wBadges
+	ld b, 2
+	call CountSetBits
+	ld a, [wNumSetBits]
+	ld c, 5
+	call SimpleMultiply
+	pop bc
+	pop hl
+
+	add 9
+	add b
+	cp MAX_LEVEL
+	ret c
+; cap overflow at level 100
+	cp BADGE_LEVEL
+	ld a, MAX_LEVEL
+	ret c
+; cap overflow at level 2
+	ld a, 2
+	ret
+
+;.CountBadges:
+;; Number of owned badges.
+;	ld hl, wBadges
+;	ld b, 2
+;	call CountSetBits
+;	ld a, [wNumSetBits]
+;	jp .loadstringbuffer2
