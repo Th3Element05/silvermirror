@@ -1,0 +1,152 @@
+TIMANDSUE1
+
+TrainerCoupleTimandSue1:
+	trainer COUPLE, TIMANDSUE1, EVENT_BEAT_COUPLE_TIMANDSUE, CoupleTimandSueSeenText, CoupleTimandSueBeatenText, 0, .Script
+.Script:
+	loadvar VAR_CALLERID, PHONE_COUPLE_TIM_AND_SUE
+	opentext
+	checkflag ENGINE_TIM_AND_SUE_READY_FOR_REMATCH
+	iftrue TimAndSueWantsBattle
+	checkcellnum PHONE_COUPLE_TIM_AND_SUE
+	iftrue TimAndSue1Defeated
+	checkevent EVENT_TIM_AND_SUE_ASKED_FOR_PHONE_NUMBER
+	iftrue TimAndSueAskedBefore
+	writetext CoupleTimandSueAfterBattleText1
+	waitbutton
+	setevent EVENT_TIM_AND_SUE_ASKED_FOR_PHONE_NUMBER
+	scall TimAndSueAskNumber1
+	jump TimAndSueAskForNumber
+
+TimAndSueAskedBefore:
+	scall TimAndSueAskNumber2
+TimAndSueAskForNumber:
+	askforphonenumber PHONE_COUPLE_TIM_AND_SUE
+	ifequal PHONE_CONTACTS_FULL, TimAndSuePhoneFull
+	ifequal PHONE_CONTACT_REFUSED, TimAndSueNumberDeclined
+	gettrainername STRING_BUFFER_3, COUPLE, TIMANDSUE1
+	scall TimAndSueRegisteredNumber
+	jump TimAndSueNumberAccepted
+
+TimAndSueWantsBattle:
+	scall TimAndSueRematch
+	winlosstext CoupleTimandSueBeatenText, 0
+	checkevent EVENT_BEAT_BLUE
+	iftrue TimAndSueLoadFight2
+	checkevent ENGINE_FLYPOINT_PEWTER
+	iftrue TimAndSueLoadFight1
+	loadtrainer COUPLE, TIMANDSUE1
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_TIM_AND_SUE_READY_FOR_REMATCH
+	end
+
+TrainerCoupleTimandSue2:
+	trainer COUPLE, TIMANDSUE1, EVENT_BEAT_COUPLE_TIMANDSUE, CoupleTimandSueSeenText, CoupleTimandSueBeatenText, 0, .Script
+.Script:
+	loadvar VAR_CALLERID, PHONE_COUPLE_TIM_AND_SUE
+	opentext
+	checkflag ENGINE_TIM_AND_SUE_READY_FOR_REMATCH
+	iftrue TimAndSueWantsBattle
+	checkcellnum PHONE_COUPLE_TIM_AND_SUE
+	iftrue TimAndSue2Defeated
+	checkevent EVENT_TIM_AND_SUE_ASKED_FOR_PHONE_NUMBER
+	iftrue TimAndSueAskedBefore
+	writetext CoupleTimandSueAfterBattleText2
+	waitbutton
+	setevent EVENT_TIM_AND_SUE_ASKED_FOR_PHONE_NUMBER
+	scall TimAndSueAskNumber1
+	jump TimAndSueAskForNumber
+
+TimAndSueLoadFight1:
+	loadtrainer COUPLE, TIMANDSUE2
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_TIM_AND_SUE_READY_FOR_REMATCH
+	end
+
+TimAndSueLoadFight2:
+	loadtrainer COUPLE, TIMANDSUE3
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_TIM_AND_SUE_READY_FOR_REMATCH
+	end
+
+TimAndSue1Defeated:
+	writetext CoupleTimandSueAfterBattleText1
+	waitbutton
+	closetext
+	end
+
+TimAndSue2Defeated:
+	writetext CoupleTimandSueAfterBattleText2
+	waitbutton
+	closetext
+	end
+
+TimAndSueAskNumber1:
+	jumpstd AskNumber1FScript
+	end
+
+TimAndSueAskNumber2:
+	jumpstd AskNumber2FScript
+	end
+
+TimAndSueRegisteredNumber:
+	jumpstd RegisteredNumberFScript
+	end
+
+TimAndSueNumberAccepted:
+	jumpstd NumberAcceptedFScript
+	end
+
+TimAndSueNumberDeclined:
+	jumpstd NumberDeclinedFScript
+	end
+
+TimAndSuePhoneFull:
+	jumpstd PhoneFullFScript
+	end
+
+TimAndSueRematch:
+	jumpstd RematchFScript
+	end
+
+
+CoupleTimandSueSeenText:
+	text "TIM: I'll give you"
+	line "a little hint."
+
+	para "Don't you think my"
+	line "girlfriend's much"
+
+	para "stronger than"
+	line "I am?"
+
+	para "SUE: Women who"
+	line "don't take love"
+
+	para "seriously and who"
+	line "are reckless might"
+	cont "get hurt."
+	done
+
+CoupleTimandSueBeatenText:
+	text "TIM: You're the"
+	line "strongest!"
+
+	para "SUE: Wa ha…"
+	done
+
+CoupleTimandSueAfterBattleText1:
+	text "TIM: If you've"
+	line "beaten her, you"
+	cont "must be strong!"
+	done
+
+CoupleTimandSueAfterBattleText2:
+	text "SUE: That strength"
+	line "of yours…"
+
+	para "I've got it!"
+	line "Are you in love?"
+	done

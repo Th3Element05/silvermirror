@@ -3,6 +3,8 @@ New TO DO list
 
 TEST
 
+cyan over brown rawst berry (route8, route36)
+
 pewter city bench guy emote
 ghost getoutgetout text
 
@@ -32,18 +34,40 @@ OftenFleeMons:
 
 DO
 
-double check all pager gifts for TM/HM giving
-
 lake of rage hidden power house?
+tell hidden power?
 
 go through all maps for:
 documentation of item locations, etc
 
-sweet scent match level
-flower shop sweet scent move tutor?
-
 phone trainers
 \data\phone\text\* "roll text"
+
+EVENT_BEAT_BROCK
+EVENT_BEAT_MISTY
+EVENT_BEAT_LTSURGE
+EVENT_BEAT_ERIKA
+EVENT_BEAT_KOGA
+EVENT_BEAT_SABRINA
+EVENT_BEAT_BLAINE
+EVENT_BEAT_GIOVANNI
+
+
+checkflag ENGINE_FLYPOINT_CERULEAN
+checkflag ENGINE_FLYPOINT_VERMILION
+		checkevent EVENT_GOT_HM01_CUT
+checkflag ENGINE_FLYPOINT_LAVENDER
+checkflag ENGINE_FLYPOINT_CELADON
+		checkevent EVENT_BEAT_GIOVANNI_HIDEOUT
+checkflag ENGINE_FLYPOINT_FUCHSIA
+		checkevent EVENT_GOT_HM03_SURF
+checkflag ENGINE_FLYPOINT_CINNABAR
+checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
+		checkevent EVENT_BEAT_ELITE_FOUR
+
+
+
+
 johto trades?
 
 bug contest?

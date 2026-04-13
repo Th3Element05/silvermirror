@@ -1,4 +1,4 @@
-MACRO map	
+MACRO map
 ;\1: map name: for the MapAttributes pointer (see data/maps/attributes.asm)	
 ;\2: tileset: a TILESET_* constant	
 ;\3: environment: TOWN, ROUTE, INDOOR, CAVE, ENVIRONMENT_5, GATE, or DUNGEON	
@@ -12,8 +12,8 @@ MACRO map
 	db \4, \5
 	dn \6, \7
 	db \8
-ENDM	
-	
+ENDM
+
 MapGroupPointers::	
 ; pointers to the first map of each map group	
 	table_width 2, MapGroupPointers

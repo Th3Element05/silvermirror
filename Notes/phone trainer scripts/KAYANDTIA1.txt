@@ -1,0 +1,149 @@
+KAYANDTIA1
+
+TrainerTwinsKayandTia1:
+	trainer TWINS, KAYANDTIA1, EVENT_BEAT_TWINS_KAYANDTIA, TwinsKayandTiaSeenText, TwinsKayandTiaBeatenText, 0, .Script
+.Script:
+	loadvar VAR_CALLERID, PHONE_TWINS_KAY_AND_TIA
+	opentext
+	checkflag ENGINE_KAY_AND_TIA_READY_FOR_REMATCH
+	iftrue KayandTiaWantsBattle
+	checkcellnum PHONE_TWINS_KAY_AND_TIA
+	iftrue KayandTia1Defeated
+	checkevent EVENT_KAY_AND_TIA_ASKED_FOR_PHONE_NUMBER
+	iftrue KayandTiaAskedBefore
+	writetext TwinsKayandTiaAfterBattleText1
+	waitbutton
+	setevent EVENT_KAY_AND_TIA_ASKED_FOR_PHONE_NUMBER
+	scall Route15FAskNumber1
+	jump KayandTiaAskForNumber
+
+KayandTiaAskedBefore:
+	scall Route15FAskNumber2
+KayandTiaAskForNumber:
+	askforphonenumber PHONE_TWINS_KAY_AND_TIA
+	ifequal PHONE_CONTACTS_FULL, Route15FPhoneFull
+	ifequal PHONE_CONTACT_REFUSED, Route15FNumberDeclined
+	gettrainername STRING_BUFFER_3, TWINS, KAYANDTIA1
+	scall Route15FRegisteredNumber
+	jump Route15FNumberAccepted
+
+KayandTiaWantsBattle:
+	scall Route15FRematch
+	winlosstext TwinsKayandTiaBeatenText, 0
+	checkevent EVENT_BEAT_BLUE
+	iftrue KayandTiaLoadFight2
+	checkevent ENGINE_FLYPOINT_PEWTER
+	iftrue KayandTiaLoadFight1
+	loadtrainer TWINS, KAYANDTIA1
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_KAY_AND_TIA_READY_FOR_REMATCH
+	end
+
+TrainerTwinsKayandTia2:
+	trainer TWINS, KAYANDTIA1, EVENT_BEAT_TWINS_KAYANDTIA, TwinsKayandTiaSeenText, TwinsKayandTiaBeatenText, 0, .Script
+
+.Script:
+	loadvar VAR_CALLERID, PHONE_TWINS_KAY_AND_TIA
+	opentext
+	checkflag ENGINE_KAY_AND_TIA_READY_FOR_REMATCH
+	iftrue KayandTiaWantsBattle
+	checkcellnum PHONE_TWINS_KAY_AND_TIA
+	iftrue KayandTia2Defeated
+	checkevent EVENT_KAY_AND_TIA_ASKED_FOR_PHONE_NUMBER
+	iftrue KayandTiaAskedBefore
+	writetext TwinsKayandTiaAfterBattleText2
+	waitbutton
+	setevent EVENT_KAY_AND_TIA_ASKED_FOR_PHONE_NUMBER
+	scall Route15FAskNumber1
+	jump KayandTiaAskForNumber
+
+KayandTiaLoadFight1:
+	loadtrainer TWINS, KAYANDTIA2
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_KAY_AND_TIA_READY_FOR_REMATCH
+	end
+
+KayandTiaLoadFight2:
+	loadtrainer TWINS, KAYANDTIA3
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_KAY_AND_TIA_READY_FOR_REMATCH
+	end
+
+KayandTia1Defeated:
+	writetext TwinsKayandTiaAfterBattleText1
+	waitbutton
+	closetext
+	end
+
+KayandTia2Defeated:
+	writetext TwinsKayandTiaAfterBattleText2
+	waitbutton
+	closetext
+	end
+
+
+Route15FAskNumber1:
+	jumpstd AskNumber1FScript
+	end
+
+Route15FAskNumber2:
+	jumpstd AskNumber2FScript
+	end
+
+Route15FRegisteredNumber:
+	jumpstd RegisteredNumberFScript
+	end
+
+Route15FNumberAccepted:
+	jumpstd NumberAcceptedFScript
+	end
+
+Route15FNumberDeclined:
+	jumpstd NumberDeclinedFScript
+	end
+
+Route15FPhoneFull:
+	jumpstd PhoneFullFScript
+	end
+
+Route15FRematch:
+	jumpstd RematchFScript
+	end
+
+
+TwinsKayandTiaSeenText:
+	text "We're the twins"
+	line "KAY and TIA!"
+
+	para "Do you know which"
+	line "one I am?"
+
+	para "We're the twins"
+	line "KAY and TIA!"
+
+	para "Do you know which"
+	line "one I am?"
+	done
+
+TwinsKayandTiaBeatenText:
+	text "TIA and KAY"
+	line "both lost…"
+
+	para "KAY and TIA"
+	line "both lost…"
+	done
+
+TwinsKayandTiaAfterBattleText1:
+	text "Maybe truth--"
+	line "I'm TIA!"
+	cont "Absolutely!"
+	done
+
+TwinsKayandTiaAfterBattleText2:
+	text "Absolute truth--"
+	line "I'm KAY!"
+	cont "Maybe…"
+	done

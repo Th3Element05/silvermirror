@@ -1,0 +1,112 @@
+KENNY1
+
+TrainerHikerKenny:
+	trainer HIKER, KENNY1, EVENT_BEAT_HIKER_KENNY, HikerKennySeenText, HikerKennyBeatenText, 0, .Script
+.Script:
+	loadvar VAR_CALLERID, PHONE_HIKER_KENNY
+	opentext
+	checkflag ENGINE_KENNY_READY_FOR_REMATCH
+	iftrue .WantsBattle
+	checkcellnum PHONE_HIKER_KENNY
+	iftrue .KennyDefeated
+	checkevent EVENT_KENNY_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskedBefore
+	writetext HikerKennyAfterBattleText
+	waitbutton
+	setevent EVENT_KENNY_ASKED_FOR_PHONE_NUMBER
+	scall Route13AskNumber1
+	jump .AskForNumber
+
+.AskedBefore:
+	scall Route13AskNumber2
+.AskForNumber:
+	askforphonenumber PHONE_HIKER_KENNY
+	ifequal PHONE_CONTACTS_FULL, Route13PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, Route13NumberDeclined
+	gettrainername STRING_BUFFER_3, HIKER, KENNY1
+	scall Route13RegisteredNumber
+	jump Route13NumberAccepted
+
+.WantsBattle:
+	scall Route13Rematch
+	winlosstext HikerKennyBeatenText, 0
+	checkevent EVENT_BEAT_BLUE
+	iftrue .LoadFight2
+	checkevent ENGINE_FLYPOINT_PEWTER
+	iftrue .LoadFight1
+	loadtrainer HIKER, KENNY1
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_KENNY_READY_FOR_REMATCH
+	end
+
+.LoadFight1:
+	loadtrainer HIKER, KENNY2
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_KENNY_READY_FOR_REMATCH
+	end
+
+.LoadFight2:
+	loadtrainer HIKER, KENNY3
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_KENNY_READY_FOR_REMATCH
+	end
+
+.KennyDefeated:
+	writetext HikerKennyAfterBattleText
+	waitbutton
+	closetext
+	end
+
+
+Route13AskNumber1:
+	jumpstd AskNumber1MScript
+	end
+
+Route13AskNumber2:
+	jumpstd AskNumber2MScript
+	end
+
+Route13RegisteredNumber:
+	jumpstd RegisteredNumberMScript
+	end
+
+Route13NumberAccepted:
+	jumpstd NumberAcceptedMScript
+	end
+
+Route13NumberDeclined:
+	jumpstd NumberDeclinedMScript
+	end
+
+Route13PhoneFull:
+	jumpstd PhoneFullMScript
+	end
+
+Route13Rematch:
+	jumpstd RematchMScript
+	end
+
+
+
+HikerKennySeenText:
+	text "I should go to"
+	line "ROCK TUNNEL to get"
+	cont "myself an ONIX."
+	done
+
+HikerKennyBeatenText:
+	text "I lost…"
+	done
+
+HikerKennyAfterBattleText:
+	text "Geological fea-"
+	line "tures don't appear"
+	cont "to change."
+
+	para "But they actually"
+	line "change, little by"
+	cont "little."
+	done
