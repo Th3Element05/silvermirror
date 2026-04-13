@@ -31,36 +31,131 @@ BugCatcherAbnerAfterBattleText:
 	cont "VIRIDIAN FOREST."
 	done
 
-TrainerCoupleTimAndSue_Tim:
-	trainer COUPLE, TIMANDSUE1, EVENT_BEAT_COUPLE_TIMANDSUE, CoupleTimSeenText, CoupleTimAndSueBeatenText, 0, .Script
+TrainerCoupleTimAndSue_Sue:
+	trainer COUPLE, TIMANDSUE1, EVENT_BEAT_COUPLE_TIMANDSUE, CoupleSueSeenText, CoupleTimAndSueBeatenText, 0, .Script
 .Script:
-	endifjustbattled
-	turnobject LAST_TALKED, RIGHT
+;	endifjustbattled
+;	turnobject LAST_TALKED, LEFT
+;	opentext
+;	writetext CoupleTimAndSueAfterBattleText
+;	waitbutton
+;	closetext
+;	end
+
+	loadvar VAR_CALLERID, PHONE_COUPLE_TIM_AND_SUE
 	opentext
-	writetext CoupleTimAndSueAfterBattleText
+	checkflag ENGINE_TIM_AND_SUE_READY_FOR_REMATCH
+	iftrue TimAndSueWantsBattle
+	checkcellnum PHONE_COUPLE_TIM_AND_SUE
+	iftrue TrainerCoupleTimAndSue_SueDefeated
+	checkevent EVENT_TIM_AND_SUE_ASKED_FOR_PHONE_NUMBER
+	iftrue TimAndSueAskedBefore
+	writetext CoupleTimandSue_SueAfterBattleText
+	waitbutton
+	setevent EVENT_TIM_AND_SUE_ASKED_FOR_PHONE_NUMBER
+	scall TimAndSueAskNumber1
+	jump TimAndSueAskForNumber
+
+TrainerCoupleTimAndSue_Tim:
+	trainer COUPLE, TIMANDSUE1, EVENT_BEAT_COUPLE_TIMANDSUE, CoupleTimSeenText, CoupleTimandSueBeatenText, 0, .Script
+.Script:
+;	endifjustbattled
+;	turnobject LAST_TALKED, LEFT
+;	opentext
+;	writetext CoupleTimAndSueAfterBattleText
+;	waitbutton
+;	closetext
+;	end
+
+	loadvar VAR_CALLERID, PHONE_COUPLE_TIM_AND_SUE
+	opentext
+	checkflag ENGINE_TIM_AND_SUE_READY_FOR_REMATCH
+	iftrue TimAndSueWantsBattle
+	checkcellnum PHONE_COUPLE_TIM_AND_SUE
+	iftrue CoupleTimAndSue_TimDefeated
+	checkevent EVENT_TIM_AND_SUE_ASKED_FOR_PHONE_NUMBER
+	iftrue TimAndSueAskedBefore
+	writetext CoupleTimAndSue_TimAfterBattleText
+	waitbutton
+	setevent EVENT_TIM_AND_SUE_ASKED_FOR_PHONE_NUMBER
+	scall TimAndSueAskNumber1
+	jump TimAndSueAskForNumber
+
+TimAndSueAskedBefore:
+	scall TimAndSueAskNumber2
+TimAndSueAskForNumber:
+	askforphonenumber PHONE_COUPLE_TIM_AND_SUE
+	ifequal PHONE_CONTACTS_FULL, TimAndSuePhoneFull
+	ifequal PHONE_CONTACT_REFUSED, TimAndSueNumberDeclined
+	gettrainername STRING_BUFFER_3, COUPLE, TIMANDSUE1
+	scall TimAndSueRegisteredNumber
+	jump TimAndSueNumberAccepted
+
+TimAndSueWantsBattle:
+	scall TimAndSueRematch
+	winlosstext CoupleTimandSueBeatenText, 0
+	checkevent ENGINE_FLYPOINT_INDIGO_PLATEAU
+	iftrue TimAndSueLoadFight0
+	checkevent ENGINE_FLYPOINT_LAVENDER
+	iftrue TimAndSueLoadFight3
+	loadtrainer COUPLE, TIMANDSUE_2
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_TIM_AND_SUE_READY_FOR_REMATCH
+	end
+
+TimAndSueLoadFight3:
+	loadtrainer COUPLE, TIMANDSUE_3
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_TIM_AND_SUE_READY_FOR_REMATCH
+	end
+
+TimAndSueLoadFight0:
+	loadtrainer COUPLE, TIMANDSUE_0
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_TIM_AND_SUE_READY_FOR_REMATCH
+	end
+
+TrainerCoupleTimAndSue_SueDefeated:
+	writetext CoupleTimandSue_SueAfterBattleText
 	waitbutton
 	closetext
 	end
 
-CoupleTimSeenText:
-	text "TIM: Who's there?"
-	line "Quit listening in"
-	cont "on us!"
-
-	para "SUE: Excuse me!"
-	line "This is a private"
-	cont "conversation!"
-	done
-
-TrainerCoupleTimAndSue_Sue:
-	trainer COUPLE, TIMANDSUE1, EVENT_BEAT_COUPLE_TIMANDSUE, CoupleSueSeenText, CoupleTimAndSueBeatenText, 0, .Script
-.Script:
-	endifjustbattled
-	turnobject LAST_TALKED, LEFT
-	opentext
-	writetext CoupleTimAndSueAfterBattleText
+CoupleTimAndSue_TimDefeated:
+	writetext CoupleTimAndSue_TimAfterBattleText
 	waitbutton
 	closetext
+	end
+
+TimAndSueAskNumber1:
+	jumpstd AskNumber1FScript
+	end
+
+TimAndSueAskNumber2:
+	jumpstd AskNumber2FScript
+	end
+
+TimAndSueRegisteredNumber:
+	jumpstd RegisteredNumberFScript
+	end
+
+TimAndSueNumberAccepted:
+	jumpstd NumberAcceptedFScript
+	end
+
+TimAndSueNumberDeclined:
+	jumpstd NumberDeclinedFScript
+	end
+
+TimAndSuePhoneFull:
+	jumpstd PhoneFullFScript
+	end
+
+TimAndSueRematch:
+	jumpstd RematchFScript
 	end
 
 CoupleSueSeenText:
@@ -72,13 +167,37 @@ CoupleSueSeenText:
 	line "dropping!"
 	done
 
+CoupleTimSeenText:
+	text "TIM: Who's there?"
+	line "Quit listening in"
+	cont "on us!"
+
+	para "SUE: Excuse me!"
+	line "This is a private"
+	cont "conversation!"
+	done
+
 CoupleTimAndSueBeatenText:
 	text "We just can't win!"
 	done
 
-CoupleTimAndSueAfterBattleText:
-	text "Whisper…"
-	line "whisper…"
+;CoupleTimAndSueAfterBattleText:
+;	text "Whisper…"
+;	line "whisper…"
+;	done
+
+CoupleTimandSue_TimAfterBattleText:
+	text "TIM: If you've"
+	line "beaten her, you"
+	cont "must be strong!"
+	done
+
+CoupleTimandSue_SueAfterBattleText:
+	text "SUE: That strength"
+	line "of yours…"
+
+	para "I've got it!"
+	line "Are you in love?"
 	done
 
 TrainerBugCatcherEllis:

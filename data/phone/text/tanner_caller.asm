@@ -7,7 +7,6 @@ TannerGiftReminderText:
 	line "@"
 	text_from_ram wStringBuffer5
 	text ","
-
-	para "so come and get it"
-	line "when you can!"
+	cont "so come and get it"
+	roll "when you can!"
 	done

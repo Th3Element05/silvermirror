@@ -31,9 +31,8 @@ BillyNumberAcceptedText:
 
 	para "I need time to"
 	line "prepare, so I'll"
-
-	para "let you know by"
-	line "phone!"
+	cont "let you know by"
+	roll "phone!"
 	done
 
 BillyNumberDeclinedText:

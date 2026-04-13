@@ -163,11 +163,96 @@ CamperElliotAfterBattleText:
 TrainerLassHillary:
 	trainer LASS, HILLARY1, EVENT_BEAT_LASS_HILLARY, LassHillarySeenText, LassHillaryBeatenText, 0, .Script
 .Script:
-	endifjustbattled
+;	endifjustbattled
+;	opentext
+;	writetext LassHillaryAfterBattleText
+;	waitbutton
+;	closetext
+;	end
+
+	loadvar VAR_CALLERID, PHONE_TEACHER_HILLARY
 	opentext
+	checkflag ENGINE_HILLARY_READY_FOR_REMATCH
+	iftrue .WantsBattle
+	checkcellnum PHONE_TEACHER_HILLARY
+	iftrue .HillaryDefeated
+	checkevent EVENT_HILLARY_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskedBefore
+	writetext LassHillaryAfterBattleText
+	waitbutton
+	setevent EVENT_HILLARY_ASKED_FOR_PHONE_NUMBER
+	scall .AskNumber1
+	jump .AskForNumber
+
+.AskedBefore:
+	scall .AskNumber2
+.AskForNumber:
+	askforphonenumber PHONE_TEACHER_HILLARY
+	ifequal PHONE_CONTACTS_FULL, .PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
+	gettrainername STRING_BUFFER_3, TEACHER, HILLARY1
+	scall .RegisteredNumber
+	jump .NumberAccepted
+
+.WantsBattle:
+	scall .Rematch
+	winlosstext LassHillaryBeatenText, 0
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .LoadFight0
+	checkflag ENGINE_FLYPOINT_SAFFRON
+	iftrue .LoadFight3
+	loadtrainer TEACHER, HILLARY_2
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_HILLARY_READY_FOR_REMATCH
+	end
+
+.LoadFight3:
+	loadtrainer TEACHER, HILLARY_3
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_HILLARY_READY_FOR_REMATCH
+	end
+
+.LoadFight0:
+	loadtrainer TEACHER, HILLARY_0
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_HILLARY_READY_FOR_REMATCH
+	end
+
+.HillaryDefeated:
 	writetext LassHillaryAfterBattleText
 	waitbutton
 	closetext
+	end
+
+.AskNumber1:
+	jumpstd AskNumber1FScript
+	end
+
+.AskNumber2:
+	jumpstd AskNumber2FScript
+	end
+
+.RegisteredNumber:
+	jumpstd RegisteredNumberFScript
+	end
+
+.NumberAccepted:
+	jumpstd NumberAcceptedFScript
+	end
+
+.NumberDeclined:
+	jumpstd NumberDeclinedFScript
+	end
+
+.PhoneFull:
+	jumpstd PhoneFullFScript
+	end
+
+.Rematch:
+	jumpstd RematchFScript
 	end
 
 LassHillarySeenText:

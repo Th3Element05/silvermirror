@@ -45,9 +45,8 @@ TimAndSueReminderText:
 
 	para "I'm here with TIM,"
 	line "so I'm not getting"
-
-	para "too bored, but"
-	line "still…"
+	cont "too bored, but"
+	roll "still…"
 
 	para "We're waiting on"
 	line "@"

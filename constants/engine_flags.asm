@@ -1,5 +1,6 @@
 ; EngineFlags indexes (see data/events/engine_flags.asm)
 	const_def
+
 ; wPokegearFlags
 	const ENGINE_RADIO_CARD
 	const ENGINE_MAP_CARD
@@ -284,8 +285,8 @@
 	const ENGINE_DOUG_GAVE_BERRY
 	const ENGINE_ROB_HAS_BERRY
 	const ENGINE_ROB_GAVE_BERRY
-	const ENGINE_TANNER_HAS_SUN_STONE
-	const ENGINE_TANNER_GAVE_SUN_STONE
+	const ENGINE_TANNER_HAS_STONE
+	const ENGINE_TANNER_GAVE_STONE
 	const ENGINE_JAMIE_HAS_MOON_STONE
 	const ENGINE_JAMIE_GAVE_MOON_STONE
 ; wDailyPhoneTimeOfDayFlags

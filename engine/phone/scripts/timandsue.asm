@@ -14,7 +14,7 @@ TimAndSuePhoneCalleeScript: ; You call Tim & Sue
 	farjump TimAndSueWildMon
 
 .WaitingForBattle:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_13
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_6
 	farjump TimAndSueReminderScript
 
 TimAndSuePhoneCallerScript: ; Calls you
@@ -26,12 +26,12 @@ TimAndSuePhoneCallerScript: ; Calls you
 	iftrue TimAndSueWantsBattle
 	checktime EVE
 	iftrue TimAndSueWantsBattle
-	jump .GenericTimAndSueCall
+;	jump .GenericTimAndSueCall
 
 .GenericTimAndSueCall:
 	farjump Phone_GenericCall_Female
 
 TimAndSueWantsBattle:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_13
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_6
 	setflag ENGINE_TIM_AND_SUE_READY_FOR_REMATCH
 	farjump PhoneScript_WantsToBattle_Female

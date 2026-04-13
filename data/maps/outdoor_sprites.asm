@@ -76,7 +76,7 @@ PewterGroupSprites:
 ;PewterCity     YOUNGSTER, SUPER_NERD, COOLTRAINER_M, COOLTRAINER_F, berry, apricorn
 ;ViridianForest BUG_CATCHER, berry, apricorn, poke_ball
 ;Route2North    berry, apricorn
-;Route3         LASS, YOUNGSTER, SUPER_NERD
+;Route3         LASS, YOUNGSTER, SUPER_NERD, BOY
 IndigoGroupSprites:
 ;Route23        none
 ;Route26        COOLTRAINER_M, COOLTRAINER_F, YOUNGSTER, fisher, berry, apricorn
@@ -89,7 +89,8 @@ IndigoGroupSprites:
 	db SPRITE_COOLTRAINER_F
 	db SPRITE_SCIENTIST ; safari zone
 	db SPRITE_FISHER    ; safari zone
-	; 8 of 9 walking
+	db SPRITE_BOY
+	; 9 of 9 walking
 	db SPRITE_POKE_BALL
 	db SPRITE_BERRY
 	db SPRITE_APRICORN
