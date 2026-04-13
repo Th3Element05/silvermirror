@@ -1,12 +1,10 @@
 RobStoryText:
 	text "While I was walk-"
 	line "ing around the"
-	
-	para "forest trying to"
-	line "find #MON,"
-
-	para "I cut my finger"
-	line "on a leaf!"
+	cont "forest trying to"
+	roll "find #MON,"
+	cont "I cut my finger"
+	roll "on a leaf!"
 
 	para "It bled a little,"
 	line "but I'm fine."

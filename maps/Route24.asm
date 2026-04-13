@@ -234,11 +234,129 @@ NuggetBridgeAfterBattleText:
 TrainerCamperTanner:
 	trainer CAMPER, TANNER1, EVENT_BEAT_CAMPER_TANNER, CamperTannerSeenText, CamperTannerBeatenText, 0, .Script
 .Script:
-	endifjustbattled
+;	endifjustbattled
+;	opentext
+;	writetext CamperTannerAfterBattleText
+;	waitbutton
+;	closetext
+;	end
+
+	loadvar VAR_CALLERID, PHONE_CAMPER_TANNER
 	opentext
+	checkflag ENGINE_TANNER_READY_FOR_REMATCH
+	iftrue .ChooseRematch
+	checkflag ENGINE_TANNER_HAS_STONE
+	iftrue .GiveStone
+	checkcellnum PHONE_CAMPER_TANNER
+	iftrue .TannerDefeated
+	checkevent EVENT_TANNER_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskAgainForPhoneNumber
+	writetext CamperTannerAfterBattleText
+	waitbutton
+	setevent EVENT_TANNER_ASKED_FOR_PHONE_NUMBER
+	scall .AskNumber1
+	jump .ContinueAskForPhoneNumber
+
+.AskAgainForPhoneNumber:
+	scall .AskNumber2
+.ContinueAskForPhoneNumber:
+	askforphonenumber PHONE_CAMPER_TANNER
+	ifequal PHONE_CONTACTS_FULL, .PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
+	gettrainername STRING_BUFFER_3, CAMPER, TANNER1
+	scall .RegisteredNumber
+	jump .NumberAccepted
+
+.ChooseRematch:
+	scall .Rematch
+	winlosstext CamperTannerBeatenText, 0
+	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
+	iftrue .LoadFight0
+	checkflag ENGINE_FLYPOINT_LAVENDER
+	iftrue .LoadFight3
+	loadtrainer CAMPER, TANNER_2
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_TANNER_READY_FOR_REMATCH
+	end
+
+.LoadFight3:
+	loadtrainer CAMPER, TANNER_3
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_TANNER_READY_FOR_REMATCH
+	end
+
+.LoadFight0:
+	loadtrainer CAMPER, TANNER_0
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_TANNER_READY_FOR_REMATCH
+	end
+
+.GiveStone:
+	scall .Gift
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .SunStone
+	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
+	iftrue .SunStone
+;LeafStone
+	verbosegiveitem LEAF_STONE
+	iffalse .BagFull
+	clearflag ENGINE_TANNER_HAS_STONE
+	setevent ENGINE_TANNER_GAVE_STONE
+	jump .NumberAccepted
+
+.SunStone
+	verbosegiveitem SUN_STONE
+	iffalse .BagFull
+	clearflag ENGINE_TANNER_HAS_STONE
+	setevent ENGINE_TANNER_GAVE_STONE
+	jump .NumberAccepted
+
+.BagFull:
+	jump .PackFull
+
+.Gift:
+	jumpstd GiftMScript
+	end
+
+.PackFull:
+	jumpstd PackFullMScript
+	end
+
+.TannerDefeated:
 	writetext CamperTannerAfterBattleText
 	waitbutton
 	closetext
+	end
+
+.AskNumber1:
+	jumpstd AskNumber1MScript
+	end
+
+.AskNumber2:
+	jumpstd AskNumber2MScript
+	end
+
+.RegisteredNumber:
+	jumpstd RegisteredNumberMScript
+	end
+
+.NumberAccepted:
+	jumpstd NumberAcceptedMScript
+	end
+
+.NumberDeclined:
+	jumpstd NumberDeclinedMScript
+	end
+
+.PhoneFull:
+	jumpstd PhoneFullMScript
+	end
+
+.Rematch:
+	jumpstd RematchMScript
 	end
 
 CamperTannerSeenText:
@@ -253,7 +371,7 @@ CamperTannerBeatenText:
 
 CamperTannerAfterBattleText:
 	text "I hid because the"
-	line "people on the"
+	line "trainers on the"
 	cont "bridge scared me!"
 	done
 

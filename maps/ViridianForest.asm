@@ -114,11 +114,147 @@ BugCatcherEdAfterBattleText:
 TrainerBugCatcherRob:
 	trainer BUG_CATCHER, ROB1, EVENT_BEAT_BUG_CATCHER_ROB, BugCatcherRobSeenText, BugCatcherRobBeatenText, 0, .Script
 .Script:
-	endifjustbattled
+;	endifjustbattled
+;	opentext
+;	writetext BugCatcherRobAfterBattleText
+;	waitbutton
+;	closetext
+;	end
+
+	loadvar VAR_CALLERID, PHONE_BUG_CATCHER_ROB
 	opentext
+	checkflag ENGINE_ROB_READY_FOR_REMATCH
+	iftrue .WantsBattle
+	checkflag ENGINE_ROB_HAS_BERRY
+	iftrue .RobItem
+	checkcellnum PHONE_BUG_CATCHER_ROB
+	iftrue .RobDefeated
+	checkevent EVENT_ROB_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskedBefore
 	writetext BugCatcherRobAfterBattleText
-	waitbutton
+	promptbutton
+	setevent EVENT_ROB_ASKED_FOR_PHONE_NUMBER
+	scall .AskNumber1
+	jump .AskForNumber
+
+.AskedBefore:
+	scall .AskNumber2
+.AskForNumber:
+	askforphonenumber PHONE_BUG_CATCHER_ROB
+	ifequal PHONE_CONTACTS_FULL, .PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
+	gettrainername STRING_BUFFER_3, BUG_CATCHER, ROB1
+	scall .RegisteredNumber
+	jump .NumberAccepted
+
+.WantsBattle:
+	scall .Rematch
+	winlosstext BugCatcherRobBeatenText, 0
+	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
+	iftrue .LoadFight0
+	checkflag ENGINE_FLYPOINT_CELADON
+	iftrue .LoadFight3
+	checkflag ENGINE_FLYPOINT_CERULEAN
+	iftrue .LoadFight2
+	loadtrainer BUG_CATCHER, ROB1
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_ROB_READY_FOR_REMATCH
+	end
+
+.LoadFight2:
+	loadtrainer BUG_CATCHER, ROB_2
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_ROB_READY_FOR_REMATCH
+	end
+
+.LoadFight3:
+	loadtrainer BUG_CATCHER, ROB_3
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_ROB_READY_FOR_REMATCH
+	end
+
+.LoadFight0:
+	loadtrainer BUG_CATCHER, ROB_0
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_ROB_READY_FOR_REMATCH
+	end
+
+.RobItem:
+	scall .GiftItem
+	random 4
+	ifequal 0, .chestoberry
+	ifequal 1, .leppaberry
+	ifequal 2, .lumberry
+	ifequal 3, .sitrusberry
+
+.chestoberry:
+	verbosegiveitem CHESTO_BERRY
+	iffalse .PackFull
+	jump .Done
+
+.leppaberry:
+	verbosegiveitem LEPPA_BERRY
+	iffalse .PackFull
+	jump .Done
+
+.lumberry:
+	verbosegiveitem LUM_BERRY
+	iffalse .PackFull
+	jump .Done
+
+.sitrusberry:
+	verbosegiveitem SITRUS_BERRY
+	iffalse .PackFull
+
+.Done:
+	clearflag ENGINE_ROB_HAS_BERRY
+	setflag ENGINE_ROB_GAVE_BERRY
+	jump .NumberAccepted
+
+.RobDefeated:
+	writetext BugCatcherRobAfterBattleText
+	promptbutton
 	closetext
+	end
+
+.AskNumber1:
+	jumpstd AskNumber1MScript
+	end
+
+.AskNumber2:
+	jumpstd AskNumber2MScript
+	end
+
+.RegisteredNumber:
+	jumpstd RegisteredNumberMScript
+	end
+
+.NumberAccepted:
+	jumpstd NumberAcceptedMScript
+	end
+
+.NumberDeclined:
+	jumpstd NumberDeclinedMScript
+	end
+
+.PhoneFull:
+	jumpstd PhoneFullMScript
+	end
+
+.Rematch:
+	jumpstd RematchMScript
+	end
+
+.GiftItem:
+	jumpstd GiftMScript
+	end
+
+.PackFull:
+	jumpstd PackFullMScript
 	end
 
 BugCatcherRobSeenText:
@@ -128,15 +264,19 @@ BugCatcherRobSeenText:
 	done
 
 BugCatcherRobBeatenText:
-	text "No!"
-	line "CATERPIE can't"
-	cont "cut it!"
+	text "No! CATERPIE"
+	line "can't cut it!"
 	done
 
 BugCatcherRobAfterBattleText:
-	text "Ssh! You'll scare"
-	line "the bugs away!"
+	text "I'm going to look"
+	line "for stronger bug"
+	cont "#MON."
 	done
+
+;	text "Ssh! You'll scare"
+;	line "the bugs away!"
+;	done
 
 ; npc
 ViridianForestYoungster1:

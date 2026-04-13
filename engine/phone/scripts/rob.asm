@@ -23,11 +23,11 @@ RobPhoneCalleeScript: ; You call Rob
 	farjump RobStory
 
 .WaitingForBattle:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_2
+	getlandmarkname STRING_BUFFER_5, LANDMARK_VIRIDIAN_FOREST
 	farjump RobReminderScript
 
 .HasBerry:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_2
+	getlandmarkname STRING_BUFFER_5, LANDMARK_VIRIDIAN_FOREST
 	farjump RobBerryReminderScript
 
 RobPhoneCallerScript: ; Calls you
@@ -42,7 +42,7 @@ RobPhoneCallerScript: ; Calls you
 	jump CheckRobBerryNotFriday2
 
 .HasBerry:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_2
+	getlandmarkname STRING_BUFFER_5, LANDMARK_VIRIDIAN_FOREST
 	farjump RobBerryReminderScript
 
 CheckRobBerryNotFriday2:
@@ -61,13 +61,13 @@ RobCheckBerry:
 	setflag ENGINE_ROB_GAVE_BERRY
 
 RobWantsBattle:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_2
+	getlandmarkname STRING_BUFFER_5, LANDMARK_VIRIDIAN_FOREST
 	setflag ENGINE_ROB_READY_FOR_REMATCH
 	farjump PhoneScript_WantsToBattle_Male
 
 RobHasBerry:
 	setflag ENGINE_ROB_HAS_BERRY
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_2
+	getlandmarkname STRING_BUFFER_5, LANDMARK_VIRIDIAN_FOREST
 	farjump PhoneScript_FoundItem_Male
 
 GenericRobCall:

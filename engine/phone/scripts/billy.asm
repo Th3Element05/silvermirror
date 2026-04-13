@@ -12,7 +12,7 @@ BillyPhoneCalleeScript: ; You call Billy
 	farjump BillyResearch
 
 .WaitingForBattle:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_15
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_3
 	farjump BillyReminderScript
 
 BillyPhoneCallerScript: ; Calls you
@@ -28,6 +28,6 @@ BillyPhoneCallerScript: ; Calls you
 	farjump Phone_GenericCall_Male
 
 BillyWantsBattle:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_15
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_3
 	setflag ENGINE_BILLY_READY_FOR_REMATCH
 	farjump PhoneScript_WantsToBattle_Male

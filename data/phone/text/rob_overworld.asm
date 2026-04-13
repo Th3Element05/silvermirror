@@ -18,9 +18,8 @@ RobNumberAcceptedText:
 RobNumberDeclinedText:
 	text "I figured that if"
 	line "I find anything in"
-
-	para "the area, I'd give"
-	line "it to you…"
+	cont "the area, I'd give"
+	roll "it to you…"
 	done
 
 RobRematchText:
@@ -32,9 +31,8 @@ RobRematchText:
 RobGiftText:
 	text "Good to see you!"
 	line "See? This is what"
-
-	para "I found."
-	line "It's for you!"
+	cont "I found."
+	roll "It's for you!"
 	done
 
 RobPackFullText:

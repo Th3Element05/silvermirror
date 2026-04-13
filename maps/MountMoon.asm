@@ -111,7 +111,7 @@ BugCatcherDaneAfterBattleText:
 	cont "TEAM ROCKET!"
 	done
 
-TrainerLassKrise:
+TrainerLassKrise: ;no rematch, no phone service in mt moon
 	trainer LASS, KRISE1, EVENT_BEAT_LASS_KRISE, LassKriseSeenText, LassKriseBeatenText, 0, .Script
 .Script:
 	endifjustbattled

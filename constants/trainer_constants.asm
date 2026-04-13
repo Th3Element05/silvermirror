@@ -231,7 +231,6 @@ DEF KRIS EQU __trainer_class__
 	trainerclass YOUNGSTER ; 20
 ; kanto
 	const ASHER
-	const BILLY1
 	const GORDON
 	const ALBERT
 	const SAMUEL
@@ -249,40 +248,27 @@ DEF KRIS EQU __trainer_class__
 	const THOMAS
 	const BRADY
 ; rematch
-	const BILLY2
-	const BILLY3
-	const ALAN2
-	const ALAN3
-	const ALAN4
-	const ALAN5
-	const IAN2
-	const IAN3
-	const IAN4
-	const IAN5
-	const JOEY2
-	const JOEY3
-	const JOEY4
-	const JOEY5
+	const ALAN_2
+	const ALAN_0
+	const IAN_2
+	const IAN_0
+	const JOEY_0
 
 	trainerclass SCHOOLBOY ; 21
 ; kanto
-;	none
+	const BILLY1
 ; johto
 	const TORIN1
 	const CHAD1
 	const JACK1
 	const BRAD
 ; rematch
-	const TORIN2
-	const TORIN3
-	const JACK2
-	const JACK3
-	const JACK4
-	const JACK5
-	const CHAD2
-	const CHAD3
-	const CHAD4
-	const CHAD5
+	const BILLY_2
+	const BILLY_3
+	const BILLY_0
+	const TORIN_0
+	const CHAD_0
+	const JACK_0
 
 	trainerclass BIRD_KEEPER ; 22
 ; kanto
@@ -308,12 +294,12 @@ DEF KRIS EQU __trainer_class__
 	const RICK
 	const LUCAS
 ; rematch
-	const JAMIE2
-	const JAMIE3
-	const JOSE2
-	const JOSE3
-	const VANCE2
-	const VANCE3
+	const JAMIE_2
+	const JAMIE_0
+	const JOSE_2
+	const JOSE_0
+	const VANCE_2
+	const VANCE_0
 
 	trainerclass LASS ; 23
 ; kanto
@@ -342,16 +328,12 @@ DEF KRIS EQU __trainer_class__
 	const KELLY
 	const RUBY
 ; rematch
-	const KRISE2
-	const KRISE3
-	const KRISE4
-	const KRISE5
-	const HILLARY2
-	const HILLARY3
-	const DANA2
-	const DANA3
-	const DANA4
-	const DANA5
+;	const KRISE_2 ; no phone service
+;	const KRISE_0 ; no phone service
+	const HILLARY_2
+	const HILLARY_0
+	const DANA_2
+	const DANA_0
 
 	trainerclass TEACHER ; 24
 ; johto
@@ -382,8 +364,8 @@ DEF KRIS EQU __trainer_class__
 	const MILES
 	const ADAM
 ; reamtch
-	const GAVEN2
-	const GAVEN3
+	const GAVEN_2
+	const GAVEN_0
 
 	trainerclass COOLTRAINERF ; 26
 ; kanto
@@ -408,10 +390,9 @@ DEF KRIS EQU __trainer_class__
 	const LILY
 	const RIVER
 ; rematch
-	const BETH2
-	const BETH3
-	const REENA2
-	const REENA3
+	const BETH_2
+	const BETH_0
+	const REENA_0
 
 	trainerclass BEAUTY ; 27
 ; kanto
@@ -449,9 +430,8 @@ DEF KRIS EQU __trainer_class__
 	const CARSON
 	const JUDE
 ; rematch
-	const BRENT2
-	const BRENT3
-	const BRENT4
+	const BRENT_2
+	const BRENT_0
 
 	trainerclass GENTLEMAN ; 29
 ; kanto
@@ -466,9 +446,8 @@ DEF KRIS EQU __trainer_class__
 	const RICHARD
 	const VICTOR
 ; reamtch
-	const ALFRED2
-	const ALFRED3
-	const ALFRED4
+	const ALFRED_2
+	const ALFRED_0
 
 	trainerclass SKIER ; 2a
 ; johto
@@ -499,18 +478,13 @@ DEF KRIS EQU __trainer_class__
 	const JON
 	const ABEL
 ; rematch
-	const ROB2
-	const ROB3
-	const DOUG2
-	const DOUG3
-	const ARNIE2
-	const ARNIE3
-	const ARNIE4
-	const ARNIE5
-	const WADE2
-	const WADE3
-	const WADE4
-	const WADE5
+	const ROB_2
+	const ROB_3
+	const ROB_0
+	const DOUG_2
+	const DOUG_0
+	const ARNIE_0
+	const WADE_0
 
 	trainerclass FISHER ; 2c
 ; kanto
@@ -537,17 +511,12 @@ DEF KRIS EQU __trainer_class__
 	const ROYCE
 	const RALPH1
 ; rematch
-	const TULLY2
-	const TULLY3
-	const TULLY4
-	const KYLE2
-	const KYLE3
-	const WILTON2
-	const WILTON3
-	const RALPH2
-	const RALPH3
-	const RALPH4
-	const RALPH5
+	const TULLY_2
+	const TULLY_0
+	const KYLE_2
+	const KYLE_0
+	const WILTON_0
+	const RALPH_0
 
 	trainerclass SWIMMERM ; 2d
 ; kanto
@@ -612,9 +581,7 @@ DEF KRIS EQU __trainer_class__
 	const ENZO
 	const LOUIS
 ; rematch
-	const HUEY2
-	const HUEY3
-	const HUEY4
+	const HUEY_0
 
 	trainerclass SUPER_NERD ; 30
 ; kanto
@@ -668,14 +635,10 @@ DEF KRIS EQU __trainer_class__
 	const DIEGO
 	const LEONEL
 ; rematch
-	const KENNY2
-	const KENNY3
-	const PARRY2
-	const PARRY3
-	const ANTHONY2
-	const ANTHONY3
-	const ANTHONY4
-	const ANTHONY5
+	const KENNY_2
+	const KENNY_0
+	const ANTHONY_0
+	const PARRY_0
 
 	trainerclass BIKER ; 33
 ; kanto
@@ -697,12 +660,12 @@ DEF KRIS EQU __trainer_class__
 ; johto
 	; none
 ; rematch
-	const REESE2
-	const REESE3
-	const AIDEN2
-	const AIDEN3
-	const EOIN2
-	const EOIN3
+	const REESE_2
+	const REESE_0
+	const AIDEN_2
+	const AIDEN_0
+	const EOIN_2
+	const EOIN_0
 
 	trainerclass BURGLAR ; 34
 ; kanto
@@ -723,10 +686,7 @@ DEF KRIS EQU __trainer_class__
 	const LEO
 	const ALEX
 ; rematch
-	const WALT2
-	const WALT3
-;	const WALT4
-;	const WALT5
+	const WALT_0
 
 	trainerclass JUGGLER ; 36
 ; kanto
@@ -805,15 +765,14 @@ DEF KRIS EQU __trainer_class__
 	const ROBIN
 	const LIZ1
 ; rematch
-	const GINA2
-	const GINA3
-	const GINA4
-	const GINA5
-	const ERIN2
-	const ERIN3
-	const TIFFANY2
-	const TIFFANY3
-	const TIFFANY4
+	const GINA_2
+	const GINA_0
+	const ERIN_2
+	const ERIN_0
+	const TIFFANY_2
+	const TIFFANY_0
+	const LIZ_2
+	const LIZ_0
 
 	trainerclass CAMPER ; 3a
 ; kanto (JR TRAINER M)
@@ -833,12 +792,10 @@ DEF KRIS EQU __trainer_class__
 	const DILAN
 	const TERRY
 ; rematch
-	const TANNER2
-	const TANNER3
-	const TODD2
-	const TODD3
-	const TODD4
-	const TODD5
+	const TANNER_2
+	const TANNER_3
+	const TANNER_0
+	const TODD_0
 
 	trainerclass SAGE ; 3b
 ; kanto (FUCHSIA GYM (jugglers))
@@ -927,8 +884,8 @@ DEF KRIS EQU __trainer_class__
 	const MEGANDPEG
 	const JOANDZOE
 ; rematch
-	const KAYANDTIA2
-	const KAYANDTIA3
+	const KAYANDTIA_2
+	const KAYANDTIA_0
 
 	trainerclass OFFICER ; 42
 ; kanto
@@ -967,8 +924,8 @@ DEF KRIS EQU __trainer_class__
 	const DUFFANDEDA_EDA
 	const MOEANDLULU
 ; rematch
-	const TIMANDSUE2
-	const TIMANDSUE3
+	const TIMANDSUE_2
+	const TIMANDSUE_0
 
 	trainerclass COOL_DUO ; 45
 ; kanto

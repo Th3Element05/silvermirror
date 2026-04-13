@@ -4,15 +4,15 @@ HillaryPhoneCalleeScript: ; You call Hillary
 	iftrue .WaitingForBattle
 	farscall PhoneScript_AnswerPhone_Female
 	checkcode VAR_WEEKDAY
-	ifnotequal THURSDAY, .NotFriday
+	ifnotequal THURSDAY, .NotThursday
 	checktime NITE
 	iftrue HillaryWantsBattle
 
-.NotFriday:
+.NotThursday:
 	farjump HillaryCutestThing
 
 .WaitingForBattle:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_15
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_25
 	farjump HillaryReminderScript
 
 HillaryPhoneCallerScript: ; Calls you
@@ -28,6 +28,6 @@ HillaryPhoneCallerScript: ; Calls you
 	farjump Phone_GenericCall_Female
 
 HillaryWantsBattle:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_15
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_25
 	setflag ENGINE_HILLARY_READY_FOR_REMATCH
 	farjump PhoneScript_WantsToBattle_Female

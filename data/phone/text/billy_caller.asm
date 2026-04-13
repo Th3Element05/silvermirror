@@ -2,9 +2,7 @@ BillyResearchText:
 	text "If I need to"
 	line "battle you again"
 	cont "for research,"
-
-	para "I'll be sure to"
-	line "call you!"
+	roll "I'll call you!"
 	done
 
 BillyReminderText:

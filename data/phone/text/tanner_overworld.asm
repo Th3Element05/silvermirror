@@ -1,8 +1,7 @@
 TannerAskNumber1Text:
 	text "Hey, how about we"
 	line "exchange phone"
-	cont "numbers before we"
-	cont "eat?"
+	cont "numbers?"
 	done
 
 TannerAskNumber2Text:
@@ -14,25 +13,21 @@ TannerAskNumber2Text:
 TannerNumberAcceptedText:
 	text "I've always got my"
 	line "#GEAR in reach,"
-
-	para "so if you want to"
-	line "give me a call,"
-
-	para "I'll answer pretty"
-	line "quick!"
+	cont "so if you want to"
+	roll "give me a call,"
+	cont "I'll answer pretty"
+	roll "quick!"
 	done
 
 TannerNumberDeclinedText:
 	text "Don't worry!"
 
 	para "I'm a really nice"
-	line "CAMPER…"
+	line "guy…"
 	done
 
 TannerRematchText:
 	text "Hey, you're back!"
 	
-	para "I haven't eaten"
-	line "anything while I"
-	cont "waited!"
+	para "I've been waiting!"
 	done

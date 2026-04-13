@@ -167,27 +167,111 @@ LassColetteAfterBattleText:
 	cont "about #MON!"
 	done
 
-TrainerYoungsterBilly:
-	trainer YOUNGSTER, BILLY1, EVENT_BEAT_YOUNGSTER_BILLY, YoungsterBillySeenText, YoungsterBillyBeatenText, 0, .Script
+TrainerSchoolboyBilly:
+	trainer SCHOOLBOY, BILLY1, EVENT_BEAT_SCHOOLBOY_BILLY, SchoolboyBillySeenText, SchoolboyBillyBeatenText, 0, .Script
 .Script:
-	endifjustbattled
+;	endifjustbattled
+;	opentext
+;	writetext SchoolboyBillyAfterBattleText
+;	waitbutton
+;	closetext
+;	end
+
+	loadvar VAR_CALLERID, PHONE_SCHOOLBOY_BILLY
 	opentext
-	writetext YoungsterBillyAfterBattleText
+	checkflag ENGINE_BILLY_READY_FOR_REMATCH
+	iftrue .WantsBattle
+	checkcellnum PHONE_SCHOOLBOY_BILLY
+	iftrue .BillyDefeated
+	checkevent EVENT_BILLY_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskedBefore
+	writetext SchoolboyBillyAfterBattleText
+	waitbutton
+	setevent EVENT_BILLY_ASKED_FOR_PHONE_NUMBER
+	scall .AskNumber1
+	jump .AskForNumber
+
+.AskedBefore:
+	scall .AskNumber2
+.AskForNumber:
+	askforphonenumber PHONE_SCHOOLBOY_BILLY
+	ifequal PHONE_CONTACTS_FULL, .PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
+	gettrainername STRING_BUFFER_3, SCHOOLBOY, BILLY1
+	scall .RegisteredNumber
+	jump .NumberAccepted
+
+.WantsBattle:
+	scall .Rematch
+	winlosstext SchoolboyBillyBeatenText, 0
+	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
+	iftrue .LoadFight0
+	checkflag ENGINE_FLYPOINT_CELADON
+	iftrue .LoadFight3
+	loadtrainer SCHOOLBOY, BILLY_2
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_BILLY_READY_FOR_REMATCH
+	end
+
+.LoadFight3:
+	loadtrainer SCHOOLBOY, BILLY_3
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_BILLY_READY_FOR_REMATCH
+	end
+
+.LoadFight0:
+	loadtrainer SCHOOLBOY, BILLY_0
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_BILLY_READY_FOR_REMATCH
+	end
+
+.BillyDefeated:
+	writetext SchoolboyBillyAfterBattleText
 	waitbutton
 	closetext
 	end
 
-YoungsterBillySeenText:
+.AskNumber1:
+	jumpstd AskNumber1MScript
+	end
+
+.AskNumber2:
+	jumpstd AskNumber2MScript
+	end
+
+.RegisteredNumber:
+	jumpstd RegisteredNumberMScript
+	end
+
+.NumberAccepted:
+	jumpstd NumberAcceptedMScript
+	end
+
+.NumberDeclined:
+	jumpstd NumberDeclinedMScript
+	end
+
+.PhoneFull:
+	jumpstd PhoneFullMScript
+	end
+
+.Rematch:
+	jumpstd RematchMScript
+	end
+
+SchoolboyBillySeenText:
 	text "Hey! You're not"
 	line "wearing shorts!"
 	done
 
-YoungsterBillyBeatenText:
+SchoolboyBillyBeatenText:
 	text "Lost!"
-	line "Lost! Lost!"
 	done
 
-YoungsterBillyAfterBattleText:
+SchoolboyBillyAfterBattleText:
 	text "I always wear"
 	line "shorts, even in"
 	cont "winter!"
@@ -277,7 +361,7 @@ Route3_MapEvents:
 	object_event  6, 24, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerBugCatcherJosh, -1
 	object_event 20, 24, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherDion, -1
 	object_event 12, 27, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerLassColette, -1
-	object_event 18, 27, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerYoungsterBilly, -1
+	object_event 18, 27, SPRITE_BOY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSchoolboyBilly, -1
 	object_event 27, 28, SPRITE_LASS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerLassEvelyn, -1
 	object_event 47, 29, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route3SuperNerdScript, -1
 	object_event 47,  8, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route3CooltrainerScript, -1

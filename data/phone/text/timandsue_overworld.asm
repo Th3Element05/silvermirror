@@ -26,18 +26,16 @@ TimAndSueRematchText:
 
 	para "While we were"
 	line "waiting for you,"
+	cont "we became much"
+	roll "stronger!"
 
-	para "we became much"
-	line "stronger!"
-
-	para "Well, she did."
+	para "Well, SUE did."
 
 	para "SUE: A woman in"
 	line "love is impatient."
-	
+
 	para "But if she's with" 
 	line "her boyfriend,"
-	
-	para "waiting is never"
-	line "a chore!"
+	cont "waiting is never"
+	roll "a chore!"
 	done
