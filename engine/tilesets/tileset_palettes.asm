@@ -194,8 +194,9 @@ MapSpecificOBPalettes:
 	_use_palette_routine_for_map PEWTER_POKECENTER_1F, .PinkOverYellowOBPalette     ;jigglypuff
 	_use_palette_routine_for_map CERULEAN_CITY, .PinkOverYellowOBPalette            ;slowbro
 	_use_palette_routine_for_map VERMILION_CITY, .GrayOverYellowOBPalette           ;machop
-	_use_palette_routine_for_map SS_ANNE_ROOMS_NORTH, .PinkOverYellowOBPalette         ;clefairy
-	_use_palette_routine_for_map SS_ANNE_ROOMS_SOUTH, .GrayOverYellowOBPalette        ;machoke
+	_use_palette_routine_for_map SS_ANNE_ROOMS_NORTH, .PinkOverYellowOBPalette      ;clefairy
+	_use_palette_routine_for_map SS_ANNE_ROOMS_SOUTH, .GrayOverYellowOBPalette      ;machoke
+	_use_palette_routine_for_map ROUTE_8, .CyanOverBrownOBPalette                   ;rawst
 	_use_palette_routine_for_map CELADON_MANSION_1F, .PinkOverYellowOBPalette       ;clefairy
 	_use_palette_routine_for_map FUCHSIA_CITY, .PinkOverPurpleOBPalette             ;chansey (aspear)
 	_use_palette_routine_for_map FUCHSIA_GYM, .GrayOverTreeOBPalette                ;ninja
@@ -209,6 +210,7 @@ MapSpecificOBPalettes:
 	_use_palette_routine_for_map DANCE_THEATER, .GrayOverTreeOBPalette              ;kimonogirl
 	_use_palette_routine_for_map ROUTE_42, .PinkOverPurpleOBPalette                 ;pnk
 	_use_palette_routine_for_map ROUTE_37, .GrayOverYellowOBPalette                 ;blk
+	_use_palette_routine_for_map ROUTE_36, .CyanOverBrownOBPalette                  ;rawst
 	_use_palette_routine_for_map GOLDENROD_DEPT_STORE_B1F, .GrayOverYellowOBPalette ;machoke
 	_use_palette_routine_for_map AZALEA_TOWN, .PinkOverYellowOBPalette              ;slowpoke
 	_use_palette_routine_for_map ROUTE_33, .GrayOverYellowOBPalette                 ;blk
@@ -256,6 +258,13 @@ MapSpecificOBPalettes:
 	ld bc, 8 palettes
 	ld hl, RockOverTree
 	jr .finish
+
+.CyanOverBrownOBPalette
+	ld a, [wTimeOfDayPal]
+	maskbits NUM_DAYTIMES
+	ld bc, 8 palettes
+	ld hl, CyanOverBrown
+;	jr .finish
 
 .finish
 	call AddNTimes
