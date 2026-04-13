@@ -110,14 +110,22 @@ Route11Gate2FSnorlaxText:
 	line "binoculars."
 
 	para "A big #MON is"
-	line "asleep on a road!"
+	line "blocking the road!"
 
 	para "The only way to"
-	line "get from CERULEAN"
-	cont "CITY to LAVENDER"
-	roll "is by way of the"
-	cont "ROCK TUNNEL."
+	line "get to LAVENDER"
+	cont "TOWN from here is"
+	roll "by going through"
+	cont "ROCK TUNNEL, to"
+	roll "the north."
 	done
+
+;	para "The only way to"
+;	line "get from CERULEAN"
+;	cont "CITY to LAVENDER"
+;	roll "is by way of the"
+;	cont "ROCK TUNNEL."
+;	done
 
 Route11Gate2FBeautifulViewText:
 	text "Looked into the"
