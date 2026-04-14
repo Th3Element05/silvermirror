@@ -237,7 +237,6 @@ DEF KRIS EQU __trainer_class__
 	const MIKEY
 	const RICKY
 	const JIMMY
-	const ALAN1
 	const OWEN
 	const IAN1
 	const JASON
@@ -248,8 +247,6 @@ DEF KRIS EQU __trainer_class__
 	const THOMAS
 	const BRADY
 ; rematch
-	const ALAN_2
-	const ALAN_0
 	const IAN_2
 	const IAN_0
 	const JOEY_0
@@ -257,6 +254,7 @@ DEF KRIS EQU __trainer_class__
 	trainerclass SCHOOLBOY ; 21
 ; kanto
 	const BILLY1
+	const ALAN1
 ; johto
 	const TORIN1
 	const CHAD1
@@ -266,6 +264,8 @@ DEF KRIS EQU __trainer_class__
 	const BILLY_2
 	const BILLY_3
 	const BILLY_0
+	const ALAN_2
+	const ALAN_0
 	const TORIN_0
 	const CHAD_0
 	const JACK_0
@@ -331,6 +331,7 @@ DEF KRIS EQU __trainer_class__
 ;	const KRISE_2 ; no phone service
 ;	const KRISE_0 ; no phone service
 	const HILLARY_2
+	const HILLARY_3
 	const HILLARY_0
 	const DANA_2
 	const DANA_0
@@ -925,6 +926,7 @@ DEF KRIS EQU __trainer_class__
 	const MOEANDLULU
 ; rematch
 	const TIMANDSUE_2
+	const TIMANDSUE_3
 	const TIMANDSUE_0
 
 	trainerclass COOL_DUO ; 45

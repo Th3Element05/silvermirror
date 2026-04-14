@@ -258,7 +258,7 @@ TrainerYoungsterJoey:
 ;	end
 ;
 .LoadFight4:
-	loadtrainer YOUNGSTER, JOEY5
+	loadtrainer YOUNGSTER, JOEY_0
 	startbattle
 	reloadmapafterbattle
 	clearflag ENGINE_JOEY_READY_FOR_REMATCH

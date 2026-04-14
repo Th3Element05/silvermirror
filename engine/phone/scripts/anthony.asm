@@ -1,5 +1,5 @@
 AnthonyPhoneCalleeScript:
-	gettrainername STRING_BUFFER_3, HIKER, ANTHONY2
+	gettrainername STRING_BUFFER_3, HIKER, ANTHONY1
 	checkflag ENGINE_ANTHONY_READY_FOR_REMATCH
 	iftrue .WantsBattle
 	farscall PhoneScript_AnswerPhone_Male
@@ -13,7 +13,7 @@ AnthonyPhoneCalleeScript:
 	farsjump AnthonyReminderScript
 
 AnthonyPhoneCallerScript:
-	gettrainername STRING_BUFFER_3, HIKER, ANTHONY2
+	gettrainername STRING_BUFFER_3, HIKER, ANTHONY1
 	farscall PhoneScript_GreetPhone_Male
 	farscall PhoneScript_Random2
 	ifequal 0, AnthonyWantsBattle
