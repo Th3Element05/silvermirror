@@ -194,10 +194,10 @@ ArnieHangUpScript:
 	promptbutton
 	sjump PhoneScript_HangUpText_Male
 
-AlanHangUpScript:
-	farwritetext AlanHaventPickedUpAnythingText
-	promptbutton
-	sjump PhoneScript_HangUpText_Male
+;AlanHangUpScript: ; moved to Alan script
+;	farwritetext AlanHaventPickedUpAnythingText
+;	promptbutton
+;	sjump PhoneScript_HangUpText_Male
 
 DanaHangUpScript:
 	farwritetext DanaCanYouWaitABitLongerText

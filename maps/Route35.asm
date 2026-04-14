@@ -180,14 +180,14 @@ TrainerFirebreatherWalt:
 ;	end
 ;
 ;.LoadFight2:
-	loadtrainer FIREBREATHER, WALT2
+	loadtrainer FIREBREATHER, WALT_0
 	startbattle
 	reloadmapafterbattle
 	clearflag ENGINE_WALT_READY_FOR_REMATCH
 	end
 
 .LoadFight3:
-	loadtrainer FIREBREATHER, WALT3
+	loadtrainer FIREBREATHER, WALT_0
 	startbattle
 	reloadmapafterbattle
 	clearflag ENGINE_WALT_READY_FOR_REMATCH

@@ -57,7 +57,7 @@ TrainerCoupleTimAndSue_Sue:
 	jump TimAndSueAskForNumber
 
 TrainerCoupleTimAndSue_Tim:
-	trainer COUPLE, TIMANDSUE1, EVENT_BEAT_COUPLE_TIMANDSUE, CoupleTimSeenText, CoupleTimandSueBeatenText, 0, .Script
+	trainer COUPLE, TIMANDSUE1, EVENT_BEAT_COUPLE_TIMANDSUE, CoupleTimSeenText, CoupleTimAndSueBeatenText, 0, .Script
 .Script:
 ;	endifjustbattled
 ;	turnobject LAST_TALKED, LEFT
@@ -93,7 +93,7 @@ TimAndSueAskForNumber:
 
 TimAndSueWantsBattle:
 	scall TimAndSueRematch
-	winlosstext CoupleTimandSueBeatenText, 0
+	winlosstext CoupleTimAndSueBeatenText, 0
 	checkevent ENGINE_FLYPOINT_INDIGO_PLATEAU
 	iftrue TimAndSueLoadFight0
 	checkevent ENGINE_FLYPOINT_LAVENDER
@@ -186,7 +186,7 @@ CoupleTimAndSueBeatenText:
 ;	line "whisper…"
 ;	done
 
-CoupleTimandSue_TimAfterBattleText:
+CoupleTimAndSue_TimAfterBattleText:
 	text "TIM: If you've"
 	line "beaten her, you"
 	cont "must be strong!"

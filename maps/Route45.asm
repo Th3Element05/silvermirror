@@ -189,14 +189,14 @@ TrainerHikerParry:
 	end
 
 .LoadFight2:
-	loadtrainer HIKER, PARRY2
+	loadtrainer HIKER, PARRY_0
 	startbattle
 	reloadmapafterbattle
 	clearflag ENGINE_PARRY_READY_FOR_REMATCH
 	end
 
 .LoadFight3:
-	loadtrainer HIKER, PARRY3
+	loadtrainer HIKER, PARRY_0
 	startbattle
 	reloadmapafterbattle
 	clearflag ENGINE_PARRY_READY_FOR_REMATCH

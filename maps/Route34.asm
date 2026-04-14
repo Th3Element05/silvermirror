@@ -52,28 +52,28 @@ TrainerCamperTodd:
 	end
 
 .LoadFight1:
-	loadtrainer CAMPER, TODD2
+	loadtrainer CAMPER, TODD_0
 	startbattle
 	reloadmapafterbattle
 	clearflag ENGINE_TODD_READY_FOR_REMATCH
 	end
 
 .LoadFight2:
-	loadtrainer CAMPER, TODD3
+	loadtrainer CAMPER, TODD_0
 	startbattle
 	reloadmapafterbattle
 	clearflag ENGINE_TODD_READY_FOR_REMATCH
 	end
 
 .LoadFight3:
-	loadtrainer CAMPER, TODD4
+	loadtrainer CAMPER, TODD_0
 	startbattle
 	reloadmapafterbattle
 	clearflag ENGINE_TODD_READY_FOR_REMATCH
 	end
 
 .LoadFight4:
-	loadtrainer CAMPER, TODD5
+	loadtrainer CAMPER, TODD_0
 	startbattle
 	reloadmapafterbattle
 	clearflag ENGINE_TODD_READY_FOR_REMATCH

@@ -82,7 +82,7 @@ TrainerBugCatcherWade1:
 ;	end
 ;
 .LoadFight4:
-	loadtrainer BUG_CATCHER, WADE5
+	loadtrainer BUG_CATCHER, WADE_0
 	startbattle
 	reloadmapafterbattle
 	clearflag ENGINE_WADE_READY_FOR_REMATCH

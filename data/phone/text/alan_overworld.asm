@@ -29,17 +29,15 @@ AlanAskNumber2Text:
 AlanNumberAcceptedText:
 	text "I'll call you as"
 	line "soon as I find"
-
-	para "something. You can"
-	line "count on it!"
+	cont "something. You can"
+	roll "count on it!"
 	done
 
 AlanNumberDeclinedText:
 	text "Oh… I thought it"
 	line "would be a good"
-
-	para "break to call you"
-	line "when I'm studying…"
+	cont "break to call you"
+	roll "when I'm studying…"
 	done
 
 AlanPhoneFullText:

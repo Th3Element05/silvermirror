@@ -701,7 +701,7 @@ PhoneScript_HangUpText_Male:
 	ifequal PHONE_CAMPER_TODD, .Todd
 	ifequal PHONE_JUGGLER_IRWIN, .Irwin
 	ifequal PHONE_BUG_CATCHER_ARNIE, .Arnie
-	ifequal PHONE_SCHOOLBOY_ALAN, .Alan
+;	ifequal PHONE_SCHOOLBOY_ALAN, .Alan ; moved to Alan script
 	ifequal PHONE_SCHOOLBOY_CHAD, .Chad
 	ifequal PHONE_POKEFANM_DEREK, .Derek
 	ifequal PHONE_FISHER_TULLY, .Tully
@@ -755,9 +755,9 @@ PhoneScript_HangUpText_Male:
 	farwritetext ArnieHangUpText
 	end
 
-.Alan:
-	farwritetext AlanHangUpText
-	end
+;.Alan:
+;	farwritetext AlanHangUpText
+;	end
 
 .Chad:
 	farwritetext ChadHangUpText

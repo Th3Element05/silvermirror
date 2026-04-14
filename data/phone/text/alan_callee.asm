@@ -3,8 +3,8 @@ AlanAnswerPhoneText:
 	text_ram wStringBuffer3
 	text "!"
 
-	para "Is this <PLAY_G>?"
-	line "Good morning!"
+	para "Good morning,"
+	line "<PLAYER>!"
 	done
 
 AlanAnswerPhoneDayText:
@@ -12,7 +12,7 @@ AlanAnswerPhoneDayText:
 	text_ram wStringBuffer3
 	text "!"
 
-	para "Is that <PLAY_G>?"
+	para "Is this <PLAYER>?"
 	done
 
 AlanAnswerPhoneNiteText:
@@ -20,24 +20,12 @@ AlanAnswerPhoneNiteText:
 	text_ram wStringBuffer3
 	text "!"
 
-	para "Is that <PLAY_G>?"
-	line "Good evening!"
+	para "Good evening,"
+	line "<PLAYER>!"
 	done
 
 AlanGreetText:
-	text "Hello! It's me,"
-	line "@"
-	text_ram wStringBuffer3
-	text "!"
-	done
-
 AlanGreetDayText:
-	text "Hello! It's me,"
-	line "@"
-	text_ram wStringBuffer3
-	text "!"
-	done
-
 AlanGreetNiteText:
 	text "Hello! It's me,"
 	line "@"
@@ -45,15 +33,27 @@ AlanGreetNiteText:
 	text "!"
 	done
 
+;AlanGreetDayText:
+;	text "Hello! It's me,"
+;	line "@"
+;	text_ram wStringBuffer3
+;	text "!"
+;	done
+
+;AlanGreetNiteText:
+;	text "Hello! It's me,"
+;	line "@"
+;	text_ram wStringBuffer3
+;	text "!"
+;	done
+
 AlanGenericText:
-	text "<PLAY_G>, are you"
+	text "<PLAYER>, are you"
 	line "raising your"
 	cont "#MON properly?"
 
 	para "I read in a book"
 	line "that you should"
-
-	para "raise any #MON"
-	line "you catch with"
-	cont "love and care."
+	cont "raise any #MON"
+	roll "you catch care."
 	done
