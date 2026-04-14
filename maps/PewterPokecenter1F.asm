@@ -34,12 +34,12 @@ PewterPokecenterJigglypuff:
 	closetext
 	playmusic MUSIC_JIGGLYPUFF_SONG
 ;	pause 200 ;total
-	pause 100
-	showemote EMOTE_SLEEP, PEWTERPOKECENTER_BENCH_GUY, 20
-	pause 20
-	showemote EMOTE_SLEEP, PEWTERPOKECENTER_BENCH_GUY, 20
-	pause 20
-	showemote EMOTE_SLEEP, PEWTERPOKECENTER_BENCH_GUY, 20
+	pause 90
+	showemote EMOTE_SLEEP, PEWTERPOKECENTER_BENCH_GUY, 30
+	pause 10
+	showemote EMOTE_SLEEP, PEWTERPOKECENTER_BENCH_GUY, 30
+	pause 10
+	showemote EMOTE_SLEEP, PEWTERPOKECENTER_BENCH_GUY, 30
 	special RestartMapMusic
 	end
 
