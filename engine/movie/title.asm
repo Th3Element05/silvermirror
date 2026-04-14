@@ -113,20 +113,27 @@ _TitleScreen:
 	ld a, 1
 	call ByteFill
 
-; Red palette
+; Trainer palette
 	ld a, BANK(sCrystalData)
 	call OpenSRAM
 
-	ld a, [sCrystalData + wPlayerGender - wCrystalData]
-	cp 0
-	jr z, .malepalette
-
+;female (green)
 	hlbgcoord 10, 11 ;10, 11
 	ld bc, 7 * BG_MAP_WIDTH
 	ld a, 6
 	call ByteFill
 
-.malepalette
+	ld a, [sCrystalData + wPlayerGender - wCrystalData]
+	cp 1
+	jr z, .femalepalette
+
+;male (red)
+	hlbgcoord 10, 11 ;10, 11
+	ld bc, 7 * BG_MAP_WIDTH
+	ld a, 0
+	call ByteFill
+
+.femalepalette
 	call CloseSRAM
 
 ;; Suicune gfx
@@ -225,13 +232,13 @@ _TitleScreen:
 	call OpenSRAM
 
 	ld a, [sCrystalData + wPlayerGender - wCrystalData]
-	cp 0
-	ld d, $1a
-	jr z, .malegfx
-
-;female
+	cp 1
 	ld d, $36
-.malegfx
+	jr z, .femalegfx
+
+;male
+	ld d, $1a
+.femalegfx
 	hlcoord 10, 11 ;10, 11
 	lb bc, 7, 4
 ;	ld d, $1a
@@ -497,6 +504,9 @@ endr
 	jr nz, .loop
 
 	ret
+
+TitleNoStarterGFX:
+INCBIN "gfx/title/title_nostarter.2bpp.lz"
 
 TitleBulbasaurGFX:
 INCBIN "gfx/title/title_bulbasaur.2bpp.lz"
