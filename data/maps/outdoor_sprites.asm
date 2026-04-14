@@ -141,12 +141,10 @@ SaffronGroupSprites:
 VermilionGroupSprites:
 ;VermilionCity   SAILOR, BEAUTY, sage, machop
 ;Route6          YOUNGSTER, BUG_CATCHER, LASS
-;Route11         YOUNGSTER, POKEFAN_M, POKEFAN_F, OFFICER, snorlax
+;Route11         YOUNGSTER, POKEFAN_M, POKEFAN_F, OFFICER, BOY, snorlax
 SSAnneGroupSprites:
 ;VermilionPort   none
 ;OlivinePort     none
-;MountMoonSquare CLEFAIRY
-;TinTowerRoof    ho_oh
 	db SPRITE_BUG_CATCHER
 	db SPRITE_YOUNGSTER
 	db SPRITE_LASS
@@ -155,12 +153,11 @@ SSAnneGroupSprites:
 	db SPRITE_OFFICER
 	db SPRITE_SAILOR
 	db SPRITE_BEAUTY
-	db SPRITE_CLEFAIRY_MOVE
+	db SPRITE_BOY
 	; 9 of 9 walking
 	db SPRITE_SAGE
 	db SPRITE_MACHOP
 	db SPRITE_BIG_SNORLAX
-	db SPRITE_HO_OH
 	db SPRITE_ROCK
 	db SPRITE_BERRY
 	db SPRITE_APRICORN
@@ -409,19 +406,26 @@ BlackthornGroupSprites:
 	db 0 ; end
 
 DungeonsGroupSprites:
-; NationalPark, NationalParkBugContest, RuinsOfAlphOutside
-	db SPRITE_LASS
-	db SPRITE_POKEFAN_F
-	db SPRITE_TEACHER
+;NationalPark,           YOUNGSTER, LASS, POKEFAN_M, POKEFAN_F, BOY, teacher, meowth, pokeball
+;NationalParkBugContest, YOUNGSTER, LASS, POKEFAN_M, BUG_CATCHER, cooltrainer_m, pokeball
+;RuinsOfAlphOutside      YOUNGSTER, scientist
+;MountMoonSquare         CLEFAIRY_MOVE, rock
+;TinTowerRoof            ho_oh
 	db SPRITE_YOUNGSTER
+	db SPRITE_LASS
 	db SPRITE_POKEFAN_M
-	db SPRITE_COOLTRAINER_M
-	db SPRITE_FISHER
-	db SPRITE_SCIENTIST
+	db SPRITE_POKEFAN_F
 	db SPRITE_BOY
-	; 8 of 9 max walking sprites
-	db SPRITE_GAMEBOY_KID
+	db SPRITE_BUG_CATCHER
+	db SPRITE_CLEFAIRY_MOVE
+	; 7 of 9 max walking sprites
+	db SPRITE_SCIENTIST
+	db SPRITE_COOLTRAINER_M
+	db SPRITE_TEACHER
+	db SPRITE_MEOWTH
+	db SPRITE_HO_OH
 	db SPRITE_POKE_BALL
+	db SPRITE_ROCK
 	db 0 ; end
 
 ;IndigoGroupSprites:
