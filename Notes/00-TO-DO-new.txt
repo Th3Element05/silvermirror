@@ -3,12 +3,10 @@ New TO DO list
 
 TEST
 
-cyan over brown rawst berry (route8, route36)
-
 pewter city bench guy emote
-ghost getoutgetout text
 
 missingno encounter gives rare candies, overflow x99?
+(should be okay but test with missingno anyway)
 
 game corner prize vendor scripts (all)
 
@@ -24,7 +22,6 @@ KURTS SON
 test making all apricorn balls
 
 enter HOF a second time, legitimately
-safari zone, after battle/core changes for icon gfx
 
 berserk gene after mewtwo battle
 whirl islands
@@ -34,24 +31,16 @@ OftenFleeMons:
 
 DO
 
-lake of rage hidden power house?
-tell hidden power?
+\gfx\stats\party_menu_ob.pal
+the skin tone in this might be better? > \gfx\overworld\npc_sprites.pal
 
-go through all maps for:
-documentation of item locations, etc
+new evos front gfx....
+check dewgong animation
+
 
 phone trainers
-\data\phone\text\* "roll text"
-
-EVENT_BEAT_BROCK
-EVENT_BEAT_MISTY
-EVENT_BEAT_LTSURGE
-EVENT_BEAT_ERIKA
-EVENT_BEAT_KOGA
-EVENT_BEAT_SABRINA
-EVENT_BEAT_BLAINE
-EVENT_BEAT_GIOVANNI
-
+\data\phone\text\*   "roll text"
+\engine\phone\scripts
 
 checkflag ENGINE_FLYPOINT_CERULEAN
 checkflag ENGINE_FLYPOINT_VERMILION
@@ -67,6 +56,13 @@ checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
 
 
 
+
+
+lake of rage hidden power house?
+tell hidden power?
+
+go through all maps for:
+documentation of item locations, etc
 
 johto trades?
 
