@@ -1098,11 +1098,6 @@ YoungsterGroup:
 	db 21, NIDORAN_M ;FocusEnergy@23
 	db -1 ; end
 
-	; YOUNGSTER, ALAN1 (ROUTE 11) ;21
-	db "ALAN@", TRAINERTYPE_NORMAL
-	db 21, EKANS
-	db -1 ; end
-
 	; YOUNGSTER, OWEN (ROUTE 11) ;19
 	db "OWEN@", TRAINERTYPE_NORMAL
 	db 20, SANDSHREW
@@ -1177,6 +1172,11 @@ SchoolboyGroup:
 	; SCHOOLBOY, BILLY1 (ROUTE 3) ;14
 	db "BILLY@", TRAINERTYPE_NORMAL
 	db 14, SPEAROW
+	db -1 ; end
+
+	; SCHOOLBOY, ALAN1 (ROUTE 11) ;21
+	db "ALAN@", TRAINERTYPE_NORMAL
+	db 21, EKANS
 	db -1 ; end
 
 ; johto

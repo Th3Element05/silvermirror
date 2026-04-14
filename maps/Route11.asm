@@ -221,28 +221,152 @@ YoungsterOwenAfterBattleText:
 	line "Leave me alone!"
 	done
 
-TrainerYoungsterAlan:
-	trainer YOUNGSTER, ALAN1, EVENT_BEAT_YOUNGSTER_ALAN, YoungsterAlanSeenText, YoungsterAlanBeatenText, 0, .Script
+TrainerSchoolboyAlan:
+	trainer SCHOOLBOY, ALAN1, EVENT_BEAT_SCHOOLBOY_ALAN, SchoolboyAlanSeenText, SchoolboyAlanBeatenText, 0, .Script
 .Script:
-	endifjustbattled
+;	endifjustbattled
+;	opentext
+;	writetext SchoolboyAlanAfterBattleText
+;	waitbutton
+;	closetext
+;	end
+
+	loadvar VAR_CALLERID, PHONE_SCHOOLBOY_ALAN
 	opentext
-	writetext YoungsterAlanAfterBattleText
-	waitbutton
+	checkflag ENGINE_ALAN_READY_FOR_REMATCH
+	iftrue .ChooseRematch
+	checkflag ENGINE_ALAN_HAS_FIRE_STONE
+	iftrue .GiveFireStone
+	checkcellnum PHONE_SCHOOLBOY_ALAN
+	iftrue .AlanDefeated
+	checkevent EVENT_ALAN_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskAgainForPhoneNumber
+	writetext SchoolboyAlan1AfterBattleText
+	promptbutton
+	setevent EVENT_ALAN_ASKED_FOR_PHONE_NUMBER
+	scall .AskNumber1
+	sjump .ContinueAskForPhoneNumber
+
+.AskAgainForPhoneNumber:
+	scall .AskNumber2
+.ContinueAskForPhoneNumber:
+	askforphonenumber PHONE_SCHOOLBOY_ALAN
+	ifequal PHONE_CONTACTS_FULL, .PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
+	gettrainername STRING_BUFFER_3, SCHOOLBOY, ALAN1
+	scall .RegisteredNumber
+	sjump .NumberAccepted
+
+.ChooseRematch:
+	scall .Rematch
+	winlosstext SchoolboyAlan1BeatenText, 0
+	checkevent EVENT_RESTORED_POWER_TO_KANTO
+	iftrue .LoadFight4
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .LoadFight3
+	checkflag ENGINE_FLYPOINT_BLACKTHORN
+	iftrue .LoadFight2
+	checkflag ENGINE_FLYPOINT_OLIVINE
+	iftrue .LoadFight1
+	loadtrainer SCHOOLBOY, ALAN1
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_ALAN_READY_FOR_REMATCH
+	end
+
+.LoadFight1:
+	loadtrainer SCHOOLBOY, ALAN2
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_ALAN_READY_FOR_REMATCH
+	end
+
+.LoadFight2:
+	loadtrainer SCHOOLBOY, ALAN3
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_ALAN_READY_FOR_REMATCH
+	end
+
+.LoadFight3:
+	loadtrainer SCHOOLBOY, ALAN4
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_ALAN_READY_FOR_REMATCH
+	end
+
+.LoadFight4:
+	loadtrainer SCHOOLBOY, ALAN5
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_ALAN_READY_FOR_REMATCH
+	end
+
+.GiveFireStone:
+	scall .Gift
+	verbosegiveitem FIRE_STONE
+	iffalse .BagFull
+	clearflag ENGINE_ALAN_HAS_FIRE_STONE
+	setevent ENGINE_ALAN_GAVE_FIRE_STONE
+	sjump .NumberAccepted
+
+.BagFull:
+	sjump .PackFull
+
+.AskNumber1:
+	jumpstd AskNumber1MScript
+	end
+
+.AskNumber2:
+	jumpstd AskNumber2MScript
+	end
+
+.RegisteredNumber:
+	jumpstd RegisteredNumberMScript
+	end
+
+.NumberAccepted:
+	jumpstd NumberAcceptedMScript
+	end
+
+.NumberDeclined:
+	jumpstd NumberDeclinedMScript
+	end
+
+.PhoneFull:
+	jumpstd PhoneFullMScript
+	end
+
+.Rematch:
+	jumpstd RematchMScript
+	end
+
+.Gift:
+	jumpstd GiftMScript
+	end
+
+.PackFull:
+	jumpstd PackFullMScript
+	end
+
+.AlanDefeated:
+	writetext SchoolboyAlan1AfterBattleText
+	promptbutton
 	closetext
 	end
 
-YoungsterAlanSeenText:
+SchoolboyAlanSeenText:
 	text "I'm the best in"
 	line "my class!"
 	done
 
-YoungsterAlanBeatenText:
+SchoolboyAlanBeatenText:
 	text "Darn!"
 	line "I need to make my"
 	cont "#MON stronger!"
 	done
 
-YoungsterAlanAfterBattleText:
+SchoolboyAlanAfterBattleText:
 	text "There's a big"
 	line "#MON that"
 	cont "comes down from"
@@ -307,7 +431,7 @@ PokefanMWilliamAfterBattleText:
 	roll "being most lovely."
 	done
 
-TrainerPokefanFBeverly:
+TrainerPokefanFBeverly: ;no rematch, give nugget
 	trainer POKEFANF, BEVERLY1, EVENT_BEAT_POKEFANF_BEVERLY, PokefanFBeverlySeenText, PokefanFBeverlyBeatenText, 0, .Script
 .Script:
 	endifjustbattled
@@ -540,7 +664,7 @@ Route11_MapEvents:
 	object_event 48, 11, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_BIGDOLLSYM, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route11Snorlax, EVENT_ROUTE_11_SNORLAX_RESPAWN
 	object_event 33,  3, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 3, TrainerPokefanFGeorgia, -1
 	object_event 22,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerYoungsterOwen, -1
-	object_event 13,  5, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerYoungsterAlan, -1
+	object_event 13,  5, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSchoolboyAlan, -1
 	object_event 43,  5, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerYoungsterIan, -1
 	object_event 45,  7, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerPokefanMWilliam, -1
 	object_event 26,  9, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 2, TrainerPokefanFBeverly, -1
