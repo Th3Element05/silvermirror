@@ -131,10 +131,6 @@ ENDM
 ;	map_const FAST_SHIP_CABINS_NNW_NNE_NE,                  4, 16 ; 12
 ;	map_const FAST_SHIP_CABINS_SW_SSW_NW,                   4, 16 ; 13
 ;	map_const FAST_SHIP_CABINS_SE_SSE_CAPTAINS_CABIN,       5, 17 ; 14
-
-	map_const MOUNT_MOON_SQUARE,                           15,  9 ; 15
-	map_const MOUNT_MOON_GIFT_SHOP,                         4,  4 ; 16
-	map_const TIN_TOWER_ROOF,                               8,  8 ; 17
 	endgroup
 
 	newgroup LAVENDER                                             ;  7
@@ -436,6 +432,8 @@ ENDM
 ; kanto
 	map_const MOUNT_MOON,                                  20, 27 ;  1
 	map_const MOUNT_MOON_B2F,                              20, 19 ;  2
+	map_const MOUNT_MOON_SQUARE,                           15,  9 ; 15
+	map_const MOUNT_MOON_GIFT_SHOP,                         4,  4 ; 16
 	map_const UNDERGROUND_PATH,                             3, 14 ;  3
 	map_const DIGLETTS_CAVE,                               19, 17 ;  4
 	map_const ROCK_TUNNEL_1F,                              18, 16 ;  5
@@ -497,6 +495,7 @@ ENDM
 ;	map_const TIN_TOWER_7F,                                 8,  8    ; 54
 ;	map_const TIN_TOWER_8F,                                 8,  8    ; 55
 ;	map_const TIN_TOWER_9F,                                 8,  8    ; 56
+	map_const TIN_TOWER_ROOF,                               8,  8 ; 17
 	map_const BURNED_TOWER_1F,                             10,  9 ; 57
 	map_const BURNED_TOWER_B1F,                            10,  9 ; 58
 	map_const NATIONAL_PARK,                               20, 27 ; 59
