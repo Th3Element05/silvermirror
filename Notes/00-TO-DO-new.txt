@@ -29,14 +29,12 @@ OftenFleeMons:
 
 
 
+
 DO
 
-\gfx\stats\party_menu_ob.pal
-the skin tone in this might be better? > \gfx\overworld\npc_sprites.pal
-
-new evos front gfx....
-check dewgong animation
-
+only later trainers with evolved mons should have randomMon text?
+original pary use BADGE_LEVEL? or...
+use VAR_BADGES instead of FLYPOINT to set rematch?
 
 phone trainers
 \data\phone\text\*   "roll text"
@@ -55,6 +53,16 @@ checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
 		checkevent EVENT_BEAT_ELITE_FOUR
 
 
+
+input challenge mode wild data from spreadsheet
+check all wild data against spreadsheet
+
+
+\gfx\stats\party_menu_ob.pal
+the skin tone in this might be better? > \gfx\overworld\npc_sprites.pal
+
+new evos front gfx....
+check dewgong animation
 
 
 
