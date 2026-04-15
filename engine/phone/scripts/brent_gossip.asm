@@ -1,6 +1,6 @@
 BrentBillTriviaScript:
-	random 10
-	ifequal 0, .Father
+	random 9 ;10
+;	ifequal 0, .Father
 	ifequal 1, .Grandpa
 	ifequal 2, .Goldenrod
 	ifequal 3, .Route25
@@ -8,8 +8,8 @@ BrentBillTriviaScript:
 	ifequal 5, .Sister
 	ifequal 6, .Milk
 	ifequal 7, .Battling
-	ifequal 8, .FlowerShop
-	ifequal 9, .KimonoGirl
+	ifequal 8, .KimonoGirl
+;	ifequal 9, .FlowerShop
 
 .Father:
 	farwritetext BrentFatherGossipText

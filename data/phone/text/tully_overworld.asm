@@ -1,15 +1,13 @@
 TullyAskNumber1Text:
 	text "Hey, you're trying"
 	line "to be the ultimate"
-
-	para "trainer too? Then"
-	line "we're comrades!"
+	cont "trainer too? Then"
+	roll "we're comrades!"
 
 	para "If I find any more"
 	line "items by the"
-
-	para "water, I'll give"
-	line "you some."
+	cont "water, I'll give"
+	roll "you some."
 
 	para "Just give me your"
 	line "phone number."
@@ -18,9 +16,8 @@ TullyAskNumber1Text:
 TullyAskNumber2Text:
 	text "If I find any more"
 	line "items by the"
-
-	para "water, I'll give"
-	line "you some."
+	cont "water, I'll give"
+	roll "you some."
 
 	para "Just give me your"
 	line "phone number."
@@ -49,9 +46,8 @@ TullyPhoneFullText:
 TullyRematchText:
 	text "I've been doing"
 	line "more than just"
-
-	para "fishing since we"
-	line "last met."
+	cont "fishing since we"
+	roll "last met."
 
 	para "You're in for a"
 	line "big surprise!"

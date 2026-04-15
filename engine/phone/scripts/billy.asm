@@ -1,11 +1,10 @@
  ; You call Billy
 BillyPhoneCalleeScript: 
 	gettrainername STRING_BUFFER_3, SCHOOLBOY, BILLY1
+	farscall PhoneScript_AnswerPhone_Male
 
 	checkflag ENGINE_BILLY_READY_FOR_REMATCH
-	iftrue .WaitingForBattle
-
-	farscall PhoneScript_AnswerPhone_Male
+	iftrue BillyWaitingForBattle
 
 	checkcode VAR_WEEKDAY
 	ifequal FRIDAY, BillyWantsBattle
@@ -16,15 +15,14 @@ BillyPhoneCalleeScript:
 .NotFriday:
 	farjump BillyResearch
 
-.WaitingForBattle:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_3
-	farjump BillyReminderScript
-
 
  ; Calls you
 BillyPhoneCallerScript:
 	gettrainername STRING_BUFFER_3, SCHOOLBOY, BILLY1
 	farscall PhoneScript_GreetPhone_Male
+
+	checkflag ENGINE_BILLY_READY_FOR_REMATCH
+	iftrue BillyWaitingForBattle
 
 	checkcode VAR_WEEKDAY
 	ifequal FRIDAY, BillyWantsBattle
@@ -40,6 +38,9 @@ BillyWantsBattle:
 	setflag ENGINE_BILLY_READY_FOR_REMATCH
 	farjump PhoneScript_WantsToBattle_Male
 
+BillyWaitingForBattle:
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_3
+	farjump BillyReminderScript
 
 
 ; ; You call Billy

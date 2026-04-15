@@ -18,21 +18,95 @@ Route9CheckFlashScene:
 Route9NoopScene:
 	end
 
+
 TrainerBugCatcherDoug:
 	trainer BUG_CATCHER, DOUG1, EVENT_BEAT_BUG_CATCHER_DOUG, BugCatcherDougSeenText, BugCatcherDougBeatenText, 0, .Script
 .Script:
-	endifjustbattled
+;	endifjustbattled
+;	opentext
+;	writetext BugCatcherDougAfterBattleText
+;	waitbutton
+;	closetext
+;	end
+
+	loadvar VAR_CALLERID, PHONE_BUG_CATCHER_DOUG
 	opentext
+	checkflag ENGINE_DOUG_READY_FOR_REMATCH
+	iftrue .WantsBattle
+	checkflag ENGINE_DOUG_HAS_BERRY
+	iftrue .DougItem
+	checkcellnum PHONE_BUG_CATCHER_DOUG
+	iftrue .DougDefeated
+	checkevent EVENT_DOUG_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskedBefore
 	writetext BugCatcherDougAfterBattleText
-	waitbutton
+	promptbutton
+	setevent EVENT_DOUG_ASKED_FOR_PHONE_NUMBER
+	scall Route9AskNumber1
+	jump .AskForNumber
+
+.AskedBefore:
+	scall Route9AskNumber2
+.AskForNumber:
+	askforphonenumber PHONE_BUG_CATCHER_DOUG
+	ifequal PHONE_CONTACTS_FULL, Route9PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, Route9NumberDeclined
+	gettrainername STRING_BUFFER_3, BUG_CATCHER, DOUG1
+	scall Route9RegisteredNumber
+	jump Route9NumberAccepted
+
+.WantsBattle:
+	scall Route9Rematch
+	winlosstext BugCatcherDougBeatenText, 0
+	loadtrainer BUG_CATCHER, DOUG_0
+	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
+	iftrue .LoadFight
+	loadtrainer BUG_CATCHER, DOUG_2
+.LoadFight:
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_DOUG_READY_FOR_REMATCH
+	end
+
+.DougItem:
+	scall Route9GiftItem
+	random 4
+	random 4
+;	ifequal 0, .lumberry
+;	ifequal 1, .lumberry
+	ifequal 2, .leppaberry
+	ifequal 3, .sitrusberry
+
+.lumberry:
+	verbosegiveitem LUM_BERRY
+	iffalse .PackFull
+	jump .Done
+
+.leppaberry:
+	verbosegiveitem LEPPA_BERRY
+	iffalse .PackFull
+	jump .Done
+
+.sitrusberry:
+	verbosegiveitem SITRUS_BERRY
+	iffalse .PackFull
+
+.Done:
+	clearflag ENGINE_DOUG_HAS_BERRY
+	setflag ENGINE_DOUG_GAVE_BERRY
+	jump Route9NumberAccepted
+
+.DougDefeated:
+	writetext BugCatcherDougAfterBattleText
+	promptbutton
 	closetext
 	end
 
 BugCatcherDougSeenText:
 	text "I got up early"
 	line "every day to"
-	cont "raise my #MON"
-	roll "from cocoons!"
+	cont "raise my #MON!"
+;	roll "from cocoons!"
 	done
 
 BugCatcherDougBeatenText:
@@ -47,6 +121,7 @@ BugCatcherDougAfterBattleText:
 	line "more than bugs to"
 	cont "get stronger…"
 	done
+
 
 TrainerHikerBenjamin:
 	trainer HIKER, BENJAMIN, EVENT_BEAT_HIKER_BENJAMIN, HikerBenjaminSeenText, HikerBenjaminBeatenText, 0, .Script
@@ -73,6 +148,7 @@ HikerBenjaminAfterBattleText:
 	line "should be tough!"
 	done
 
+
 TrainerCamperDean:
 	trainer CAMPER, DEAN, EVENT_BEAT_CAMPER_DEAN, CamperDeanSeenText, CamperDeanBeatenText, 0, .Script
 .Script:
@@ -97,6 +173,7 @@ CamperDeanBeatenText:
 CamperDeanAfterBattleText:
 	text "Keep walking!"
 	done
+
 
 TrainerCamperSid:
 	trainer CAMPER, SID, EVENT_BEAT_CAMPER_SID, CamperSidSeenText, CamperSidBeatenText, 0, .Script
@@ -124,6 +201,7 @@ CamperSidAfterBattleText:
 	line "ROCK TUNNEL too?"
 	done
 
+
 TrainerBugCatcherDon:
 	trainer BUG_CATCHER, DON, EVENT_BEAT_BUG_CATCHER_DON, BugCatcherDonSeenText, BugCatcherDonBeatenText, 0, .Script
 .Script:
@@ -148,6 +226,7 @@ BugCatcherDonAfterBattleText:
 	line "bug #MON, you"
 	cont "bug me!"
 	done
+
 
 TrainerPicnickerEllie:
 	trainer PICNICKER, ELLIE, EVENT_BEAT_PICNICKER_ELLIE, PicnickerEllieSeenText, PicnickerEllieBeatenText, 0, .Script
@@ -175,13 +254,70 @@ PicnickerEllieAfterBattleText:
 	cont "luck to you!"
 	done
 
+
 TrainerPicnickerGina:
 	trainer PICNICKER, GINA1, EVENT_BEAT_PICNICKER_GINA, PicnickerGinaSeenText, PicnickerGinaBeatenText, 0, .Script
 .Script:
-	endifjustbattled
+;	endifjustbattled
+;	opentext
+;	writetext PicnickerGinaAfterBattleText
+;	waitbutton
+;	closetext
+;	end
+
+	loadvar VAR_CALLERID, PHONE_PICNICKER_GINA
 	opentext
+	checkflag ENGINE_GINA_READY_FOR_REMATCH
+	iftrue .Rematch
+	checkflag ENGINE_GINA_HAS_LEAF_STONE
+	iftrue .LeafStone
+	checkcellnum PHONE_PICNICKER_GINA
+	iftrue .GinaDefeated
+	checkevent EVENT_GINA_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskAgain
 	writetext PicnickerGinaAfterBattleText
-	waitbutton
+	promptbutton
+	setevent EVENT_GINA_ASKED_FOR_PHONE_NUMBER
+	scall Route9AskNumber1
+	sjump .FinishAsk
+
+.AskAgain:
+	scall Route9AskNumber2
+.FinishAsk:
+	askforphonenumber PHONE_PICNICKER_GINA
+	ifequal PHONE_CONTACTS_FULL, Route9PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, Route9NumberDeclined
+	gettrainername STRING_BUFFER_3, PICNICKER, GINA1
+	scall Route9RegisteredNumber
+	sjump Route9NumberAccepted
+
+.Rematch:
+	scall Route9Rematch
+	winlosstext PicnickerGinaBeatenText, 0
+	loadtrainer PICNICKER, GINA_0
+	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
+	iftrue .LoadFight
+	loadtrainer PICNICKER, GINA_3
+	checkflag ENGINE_FLYPOINT_CELADON
+	iftrue .LoadFight
+	loadtrainer PICNICKER, GINA_2
+.LoadFight:
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_GINA_READY_FOR_REMATCH
+	end
+
+.LeafStone:
+	scall Route9GiftItem
+	verbosegiveitem LEAF_STONE
+	iffalse Route9PackFull
+	clearflag ENGINE_GINA_HAS_LEAF_STONE
+	setflag ENGINE_GINA_GAVE_LEAF_STONE
+	sjump Route9NumberAccepted
+
+.GinaDefeated:
+	writetext PicnickerGinaAfterBattleText
+	promptbutton
 	closetext
 	end
 
@@ -192,15 +328,55 @@ PicnickerGinaSeenText:
 	done
 
 PicnickerGinaBeatenText:
-	text "You"
-	line "deceived me!"
+	text "You deceived me!"
 	done
 
 PicnickerGinaAfterBattleText:
-	text "You need light to"
-	line "get through that"
-	cont "dark tunnel ahead."
+;	text "You need light to"
+;	line "get through that"
+;	cont "dark tunnel ahead."
+;	done
+	text "You're too strong"
+	line "to be a practice"
+	cont "partner."
 	done
+
+Route9AskNumber1:
+	jumpstd AskNumber1MScript
+	end
+
+Route9AskNumber2:
+	jumpstd AskNumber2MScript
+	end
+
+Route9RegisteredNumber:
+	jumpstd RegisteredNumberMScript
+	end
+
+Route9NumberAccepted:
+	jumpstd NumberAcceptedMScript
+	end
+
+Route9NumberDeclined:
+	jumpstd NumberDeclinedMScript
+	end
+
+Route9PhoneFull:
+	jumpstd PhoneFullMScript
+	end
+
+Route9Rematch:
+	jumpstd RematchMScript
+	end
+
+Route9GiftItem:
+	jumpstd GiftMScript
+	end
+
+Route9PackFull:
+	jumpstd PackFullMScript
+	end
+
 
 TrainerHikerErik:
 	trainer HIKER, ERIK, EVENT_BEAT_HIKER_ERIK, HikerErikSeenText, HikerErikBeatenText, 0, .Script
@@ -232,6 +408,7 @@ HikerErikAfterBattleText:
 	cont "there, eh?"
 	done
 
+
 TrainerHikerMichael:
 	trainer HIKER, MICHAEL, EVENT_BEAT_HIKER_MICHAEL, HikerMichaelSeenText, HikerMichaelBeatenText, 0, .Script
 .Script:
@@ -258,6 +435,7 @@ HikerMichaelAfterBattleText:
 	cont "always laugh!"
 	done
 
+
 ; signs
 Route9Sign:
 	jumptext Route9SignText
@@ -268,13 +446,16 @@ Route9SignText:
 	line "ROCK TUNNEL"
 	done
 
+
 ; item balls
 Route9TMEndure:
 	itemball TM_ENDURE
 
+
 ; hidden items
 Route9HiddenEther:
 	hiddenitem ETHER, EVENT_ROUTE_9_HIDDEN_ETHER
+
 
 Route9_MapEvents:
 	db 0, 0 ; filler

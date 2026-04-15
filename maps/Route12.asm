@@ -113,6 +113,7 @@ Route12RadioWakesSnorlax:
 ;	roll "to the mountains!"
 ;	done
 
+
 TrainerFisherScott:
 	trainer FISHER, SCOTT, EVENT_BEAT_FISHER_SCOTT, FisherScottSeenText, FisherScottBeatenText, 0, .Script
 .Script:
@@ -137,6 +138,7 @@ FisherScottAfterBattleText:
 	text "Hang on! My line's"
 	line "snagged!"
 	done
+
 
 TrainerFisherHenry:
 	trainer FISHER, HENRY, EVENT_BEAT_FISHER_HENRY, FisherHenrySeenText, FisherHenryBeatenText, 0, .Script
@@ -165,6 +167,7 @@ FisherHenryAfterBattleText:
 	cont "better #MON!"
 	done
 
+
 TrainerFisherMarvin:
 	trainer FISHER, MARVIN, EVENT_BEAT_FISHER_MARVIN, FisherMarvinSeenText, FisherMarvinBeatenText, 0, .Script
 .Script:
@@ -190,19 +193,110 @@ FisherMarvinAfterBattleText:
 	cont "good at fishing!"
 	done
 
+
 TrainerFisherTully:
 	trainer FISHER, TULLY1, EVENT_BEAT_FISHER_TULLY, FisherTullySeenText, FisherTullyBeatenText, 0, .Script
 .Script:
-	endifjustbattled
+;	endifjustbattled
+;	opentext
+;	writetext FisherTullyAfterBattleText
+;	waitbutton
+;	closetext
+;	end
+
+	loadvar VAR_CALLERID, PHONE_FISHER_TULLY
 	opentext
+	checkflag ENGINE_TULLY_READY_FOR_REMATCH
+	iftrue .WantsBattle
+	checkflag ENGINE_TULLY_HAS_WATER_STONE
+	iftrue .HasWaterStone
+	checkcellnum PHONE_FISHER_TULLY
+	iftrue .TullyDefeated
+	checkevent EVENT_TULLY_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskedAlready
 	writetext FisherTullyAfterBattleText
-	waitbutton
+	promptbutton
+	setevent EVENT_TULLY_ASKED_FOR_PHONE_NUMBER
+	scall .AskNumber1
+	sjump .AskForNumber
+
+.AskedAlready:
+	scall .AskNumber2
+.AskForNumber:
+	askforphonenumber PHONE_FISHER_TULLY
+	ifequal PHONE_CONTACTS_FULL, .PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
+	gettrainername STRING_BUFFER_3, FISHER, TULLY1
+	scall .RegisteredNumber
+	sjump .NumberAccepted
+
+.WantsBattle:
+	scall .Rematch
+	winlosstext FisherTullyBeatenText, 0
+	loadtrainer FISHER, TULLY_0
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .LoadFight
+	loadtrainer FISHER, TULLY_2
+.LoadFight:
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_TULLY_READY_FOR_REMATCH
+	end
+
+.HasWaterStone:
+	scall .Gift
+	verbosegiveitem WATER_STONE
+	iffalse .PackFull
+	clearflag ENGINE_TULLY_HAS_WATER_STONE
+	setevent ENGINE_TULLY_GAVE_WATER_STONE
+	sjump .NumberAccepted
+
+.TullyDefeated:
+	writetext FisherTullyAfterBattleText
+	promptbutton
 	closetext
 	end
 
+.AskNumber1:
+	jumpstd AskNumber1MScript
+	end
+
+.AskNumber2:
+	jumpstd AskNumber2MScript
+	end
+
+.RegisteredNumber:
+	jumpstd RegisteredNumberMScript
+	end
+
+.NumberAccepted:
+	jumpstd NumberAcceptedMScript
+	end
+
+.NumberDeclined:
+	jumpstd NumberDeclinedMScript
+	end
+
+.PhoneFull:
+	jumpstd PhoneFullMScript
+	end
+
+.Rematch:
+	jumpstd RematchMScript
+	end
+
+.Gift:
+	jumpstd GiftMScript
+	end
+
+.PackFull:
+	jumpstd PackFullMScript
+	end
+
 FisherTullySeenText:
-	text "I'd rather be"
-	line "working!"
+	text "Let me demonstrate"
+	line "the power of the"
+	cont "#MON I caught!"
 	done
 
 FisherTullyBeatenText:
@@ -214,6 +308,7 @@ FisherTullyAfterBattleText:
 	line "Losing doesn't"
 	cont "bug me any more."
 	done
+
 
 TrainerGuitaristVincent:
 	trainer GUITARIST, VINCENT, EVENT_BEAT_GUITARIST_VINCENT, GuitaristVincentSeenText, GuitaristVincentBeatenText, 0, .Script
@@ -241,6 +336,7 @@ GuitaristVincentAfterBattleText:
 	roll "sea #MON!"
 	done
 
+
 TrainerFisherRaymond:
 	trainer FISHER, RAYMOND, EVENT_BEAT_FISHER_RAYMOND, FisherRaymondSeenText, FisherRaymondBeatenText, 0, .Script
 .Script:
@@ -267,6 +363,7 @@ FisherRaymondAfterBattleText:
 	cont "they're so weak!"
 	done
 
+
 TrainerCamperTed:
 	trainer CAMPER, TED, EVENT_BEAT_CAMPER_TED, CamperTedSeenText, CamperTedBeatenText, 0, .Script
 .Script:
@@ -292,6 +389,7 @@ CamperTedAfterBattleText:
 	cont "with MOON STONE!"
 	done
 
+
 ; items
 Route12TMPayDay:
 	itemball TM_PAY_DAY
@@ -301,6 +399,7 @@ Route12Iron:
 
 Route12HiddenHyperPotion:
 	hiddenitem HYPER_POTION, EVENT_ROUTE_12_HIDDEN_HYPER_POTION
+
 
 ; signs
 Route12Sign:
@@ -317,6 +416,7 @@ FishingSpotSign:
 FishingSpotSignText:
 	text "FISHING SPOT"
 	done
+
 
 Route12_MapEvents:
 	db 0, 0 ; filler

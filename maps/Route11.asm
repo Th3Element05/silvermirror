@@ -162,6 +162,7 @@ Route11_SnorlaxWentHomeText:
 	roll "to the mountains!"
 	done
 
+
 ; trainers
 TrainerPokefanFGeorgia:
 	trainer POKEFANF, GEORGIA, EVENT_BEAT_POKEFANF_GEORGIA, PokefanFGeorgiaSeenText, PokefanFGeorgiaBeatenText, 0, .Script
@@ -195,6 +196,7 @@ PokefanFGeorgiaAfterBattleText:
 	roll "got my #MON…"
 	done
 
+
 TrainerYoungsterOwen:
 	trainer YOUNGSTER, OWEN, EVENT_BEAT_YOUNGSTER_OWEN, YoungsterOwenSeenText, YoungsterOwenBeatenText, 0, .Script
 .Script:
@@ -221,6 +223,7 @@ YoungsterOwenAfterBattleText:
 	line "Leave me alone!"
 	done
 
+
 TrainerSchoolboyAlan:
 	trainer SCHOOLBOY, ALAN1, EVENT_BEAT_SCHOOLBOY_ALAN, SchoolboyAlanSeenText, SchoolboyAlanBeatenText, 0, .Script
 .Script:
@@ -241,62 +244,33 @@ TrainerSchoolboyAlan:
 	iftrue .AlanDefeated
 	checkevent EVENT_ALAN_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskAgainForPhoneNumber
-	writetext SchoolboyAlan1AfterBattleText
+	writetext SchoolboyAlanAfterBattleText
 	promptbutton
 	setevent EVENT_ALAN_ASKED_FOR_PHONE_NUMBER
-	scall .AskNumber1
+	scall Route11AskNumber1
 	sjump .ContinueAskForPhoneNumber
 
 .AskAgainForPhoneNumber:
-	scall .AskNumber2
+	scall Route11AskNumber2
 .ContinueAskForPhoneNumber:
 	askforphonenumber PHONE_SCHOOLBOY_ALAN
-	ifequal PHONE_CONTACTS_FULL, .PhoneFull
-	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
+	ifequal PHONE_CONTACTS_FULL, Route11PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, Route11NumberDeclined
 	gettrainername STRING_BUFFER_3, SCHOOLBOY, ALAN1
-	scall .RegisteredNumber
-	sjump .NumberAccepted
+	scall Route11RegisteredNumber
+	sjump Route11NumberAccepted
 
 .ChooseRematch:
-	scall .Rematch
+	scall Route11Rematch
 	winlosstext SchoolboyAlan1BeatenText, 0
-	checkevent EVENT_RESTORED_POWER_TO_KANTO
-	iftrue .LoadFight4
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .LoadFight3
-	checkflag ENGINE_FLYPOINT_BLACKTHORN
-	iftrue .LoadFight2
-	checkflag ENGINE_FLYPOINT_OLIVINE
-	iftrue .LoadFight1
-	loadtrainer SCHOOLBOY, ALAN1
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_ALAN_READY_FOR_REMATCH
-	end
-
-.LoadFight1:
-	loadtrainer SCHOOLBOY, ALAN2
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_ALAN_READY_FOR_REMATCH
-	end
-
-.LoadFight2:
-	loadtrainer SCHOOLBOY, ALAN3
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_ALAN_READY_FOR_REMATCH
-	end
-
-.LoadFight3:
-	loadtrainer SCHOOLBOY, ALAN4
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_ALAN_READY_FOR_REMATCH
-	end
-
-.LoadFight4:
-	loadtrainer SCHOOLBOY, ALAN5
+	loadtrainer SCHOOLBOY, ALAN_0
+	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
+	iftrue .LoadFight
+	loadtrainer SCHOOLBOY, ALAN_3
+	checkflag ENGINE_FLYPOINT_SAFFRON
+	iftrue .LoadFight
+	loadtrainer SCHOOLBOY, ALAN_2
+.LoadFight:
 	startbattle
 	reloadmapafterbattle
 	clearflag ENGINE_ALAN_READY_FOR_REMATCH
@@ -305,54 +279,19 @@ TrainerSchoolboyAlan:
 .GiveFireStone:
 	scall .Gift
 	verbosegiveitem FIRE_STONE
-	iffalse .BagFull
+	iffalse Route11PackFull
 	clearflag ENGINE_ALAN_HAS_FIRE_STONE
-	setevent ENGINE_ALAN_GAVE_FIRE_STONE
-	sjump .NumberAccepted
+	setevent EVENT_ALAN_GAVE_FIRE_STONE
+	sjump Route11NumberAccepted
 
-.BagFull:
-	sjump .PackFull
-
-.AskNumber1:
-	jumpstd AskNumber1MScript
-	end
-
-.AskNumber2:
-	jumpstd AskNumber2MScript
-	end
-
-.RegisteredNumber:
-	jumpstd RegisteredNumberMScript
-	end
-
-.NumberAccepted:
-	jumpstd NumberAcceptedMScript
-	end
-
-.NumberDeclined:
-	jumpstd NumberDeclinedMScript
-	end
-
-.PhoneFull:
-	jumpstd PhoneFullMScript
-	end
-
-.Rematch:
-	jumpstd RematchMScript
+.AlanDefeated:
+	writetext SchoolboyAlanAfterBattleText
+	promptbutton
+	closetext
 	end
 
 .Gift:
 	jumpstd GiftMScript
-	end
-
-.PackFull:
-	jumpstd PackFullMScript
-	end
-
-.AlanDefeated:
-	writetext SchoolboyAlan1AfterBattleText
-	promptbutton
-	closetext
 	end
 
 SchoolboyAlanSeenText:
@@ -376,13 +315,74 @@ SchoolboyAlanAfterBattleText:
 	line "you can get it."
 	done
 
+
 TrainerYoungsterIan:
 	trainer YOUNGSTER, IAN1, EVENT_BEAT_YOUNGSTER_IAN, YoungsterIanSeenText, YoungsterIanBeatenText, 0, .Script
 .Script:
-	endifjustbattled
+;	endifjustbattled
+;	opentext
+;	writetext YoungsterIanAfterBattleText
+;	waitbutton
+;	closetext
+;	end
+
+	loadvar VAR_CALLERID, PHONE_YOUNGSTER_IAN
 	opentext
-	writetext YoungsterIanAfterBattleText
+	checkevent EVENT_YOUNGSTER_IAN_HAS_GIFT
+	iftrue .TryHeartScale
+	checkflag ENGINE_IAN_READY_FOR_REMATCH
+	iftrue .WantsBattle
+	checkcellnum PHONE_YOUNGSTER_IAN
+	iftrue .IanDefeated
+	checkevent EVENT_IAN_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskedAlready
+	writetext YoungsterIanAfterText
+	promptbutton
+	setevent EVENT_IAN_ASKED_FOR_PHONE_NUMBER
+	scall Route11AskNumber1
+	sjump .AskForNumber
+
+.AskedAlready:
+	scall Route11AskNumber2
+.AskForNumber:
+	askforphonenumber PHONE_YOUNGSTER_IAN
+	ifequal PHONE_CONTACTS_FULL, Route11PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, Route11NumberDeclined
+	gettrainername STRING_BUFFER_3, YOUNGSTER, IAN1
+	scall Route11RegisteredNumber
+	sjump Route11NumberAccepted
+
+.WantsBattle:
+	scall Route11Rematch
+	winlosstext YoungsterIanBeatenText, 0
+	loadtrainer YOUNGSTER, IAN_0
+	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
+	iftrue .LoadFight
+	loadtrainer YOUNGSTER, IAN_3
+	checkflag ENGINE_FLYPOINT_FUCHSIA
+	iftrue .LoadFight
+	loadtrainer YOUNGSTER, IAN_2
+.LoadFight:
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_IAN_READY_FOR_REMATCH
+	opentext
+	sjump .TryHeartScale
+	end
+
+.TryHeartScale:
+	setevent EVENT_YOUNGSTER_IAN_HAS_GIFT
+	writetext YoungsterIanRematchGiftText
 	waitbutton
+	verbosegiveitem HEART_SCALE
+	iffalse Route11PackFull
+	clearevent EVENT_YOUNGSTER_IAN_HAS_GIFT
+	closetext
+	end
+
+.IanDefeated:
+	writetext YoungsterIanAfterText
+	promptbutton
 	closetext
 	end
 
@@ -397,9 +397,58 @@ YoungsterIanBeatenText:
 	done
 
 YoungsterIanAfterBattleText:
-	text "I did my best! I"
-	line "have no regrets!"
+	text "I'm trying hard so"
+	line "I can be the best"
+	cont "in my class."
 	done
+
+YoungsterIanRematchGiftText:
+	text "I lost again…"
+	line "but thats alright."
+
+	para "I'm getting better"
+	line "at this and soon I"
+	cont "will be the star"
+	roll "of my class again!"
+
+	para "Thanks for helping"
+	line "me get stronger,"
+	cont "I want you to have"
+	roll "this."
+	done
+
+Route11AskNumber1:
+	jumpstd AskNumber1MScript
+	end
+	
+Route11AskNumber2:
+	jumpstd AskNumber2MScript
+	end
+	
+Route11RegisteredNumber:
+	jumpstd RegisteredNumberMScript
+	end
+	
+Route11NumberAccepted:
+	jumpstd NumberAcceptedMScript
+	end
+	
+Route11NumberDeclined:
+	jumpstd NumberDeclinedMScript
+	end
+	
+Route11PhoneFull:
+	jumpstd PhoneFullMScript
+	end
+	
+Route11Rematch:
+	jumpstd RematchMScript
+	end
+	
+Route11PackFull:
+	jumpstd PackFullMScript
+	end
+
 
 TrainerPokefanMWilliam:
 	trainer POKEFANM, WILLIAM, EVENT_BEAT_POKEFANM_WILLIAM, PokefanMWilliamSeenText, PokefanMWilliamBeatenText, 0, .Script
@@ -431,6 +480,7 @@ PokefanMWilliamAfterBattleText:
 	roll "being most lovely."
 	done
 
+
 TrainerPokefanFBeverly: ;no rematch, give nugget
 	trainer POKEFANF, BEVERLY1, EVENT_BEAT_POKEFANF_BEVERLY, PokefanFBeverlySeenText, PokefanFBeverlyBeatenText, 0, .Script
 .Script:
@@ -461,36 +511,6 @@ PokefanFBeverlyAfterBattleText:
 	cont "cute, too."
 	done
 
-;OfficerKeithScript:
-;	faceplayer
-;	opentext
-;	checktime NITE
-;	iffalse .NoFight
-;	checkevent EVENT_BEAT_OFFICER_KEITH
-;	iftrue .AfterScript
-;	playmusic MUSIC_TRAINER_ENCOUNTER ; MUSIC_OFFICER_ENCOUNTER
-;	writetext OfficerKeithSeenText
-;	waitbutton
-;	closetext
-;	winlosstext OfficerKeithWinText, 0
-;	loadtrainer OFFICER, KEITH
-;	startbattle
-;	reloadmapafterbattle
-;	setevent EVENT_BEAT_OFFICER_KEITH
-;	closetext
-;	end
-
-;.AfterScript:
-;	writetext OfficerKeithAfterText
-;	waitbutton
-;	closetext
-;	end
-
-;.NoFight:
-;	writetext OfficerKeithDaytimeText
-;;	waitbutton
-;	closetext
-;	end
 
 TrainerOfficerRex:
 	trainer OFFICER, REX, EVENT_BEAT_OFFICER_REX, OfficerRexSeenText, OfficerRexBeatenText, 0, .Script
@@ -519,6 +539,7 @@ OfficerRexAfterBattleText:
 	line "get back to work."
 	done
 
+
 TrainerYoungsterJason:
 	trainer YOUNGSTER, JASON, EVENT_BEAT_YOUNGSTER_JASON, YoungsterJasonSeenText, YoungsterJasonBeatenText, 0, .Script
 .Script:
@@ -543,6 +564,7 @@ YoungsterJasonAfterBattleText:
 	text "I better go find"
 	line "stronger ones!"
 	done
+
 
 TrainerPokefanMRobert:
 	trainer POKEFANM, ROBERT, EVENT_BEAT_POKEFANM_ROBERT, PokefanMRobertSeenText, PokefanMRobertBeatenText, 0, .Script
@@ -574,36 +596,6 @@ PokefanMRobertAfterBattleText:
 	line "this…"
 	done
 
-;OfficerKeithScript:
-;	faceplayer
-;	opentext
-;	checktime NITE
-;	iffalse .NoFight
-;	checkevent EVENT_BEAT_OFFICER_KEITH
-;	iftrue .AfterScript
-;	playmusic MUSIC_TRAINER_ENCOUNTER ; MUSIC_OFFICER_ENCOUNTER
-;	writetext OfficerKeithSeenText
-;	waitbutton
-;	closetext
-;	winlosstext OfficerKeithWinText, 0
-;	loadtrainer OFFICER, KEITH
-;	startbattle
-;	reloadmapafterbattle
-;	setevent EVENT_BEAT_OFFICER_KEITH
-;	closetext
-;	end
-
-;.AfterScript:
-;	writetext OfficerKeithAfterText
-;	waitbutton
-;	closetext
-;	end
-
-;.NoFight:
-;	writetext OfficerKeithDaytimeText
-;;	waitbutton
-;	closetext
-;	end
 
 TrainerOfficerCarter:
 	trainer OFFICER, CARTER, EVENT_BEAT_OFFICER_CARTER, OfficerCarterSeenText, OfficerCarterBeatenText, 0, .Script
@@ -631,12 +623,14 @@ OfficerCarterAfterBattleText:
 	line "are electrifying!"
 	done
 
+
 ; bg text
 Route11DiglettsCaveSign:
 	jumptext Route11DiglettsCaveSignText
 Route11DiglettsCaveSignText:
 	text "DIGLETT's CAVE"
 	done
+
 
 ; items
 Route11HiddenEscapeRope:

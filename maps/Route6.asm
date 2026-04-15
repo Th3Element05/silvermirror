@@ -94,9 +94,9 @@ TimAndSueAskForNumber:
 TimAndSueWantsBattle:
 	scall TimAndSueRematch
 	winlosstext CoupleTimAndSueBeatenText, 0
-	checkevent ENGINE_FLYPOINT_INDIGO_PLATEAU
+	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
 	iftrue TimAndSueLoadFight0
-	checkevent ENGINE_FLYPOINT_LAVENDER
+	checkflag ENGINE_FLYPOINT_LAVENDER
 	iftrue TimAndSueLoadFight3
 	loadtrainer COUPLE, TIMANDSUE_2
 	startbattle

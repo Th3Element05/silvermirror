@@ -2,9 +2,9 @@ AidenReminderScript:
 	farwritetext AidenReminderText
 	end
 
-;AlanReminderScript: ; moved to Alan script
-;	farwritetext AlanReminderText
-;	end
+AlanReminderScript:
+	farwritetext AlanReminderText
+	end
 
 AlfredReminderScript:
 	farwritetext AlfredReminderText

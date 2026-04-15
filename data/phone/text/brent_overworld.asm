@@ -6,27 +6,24 @@ BrentAskNumber1Text:
 	line "Yes, you are."
 
 	para "But your knowledge"
-	line "is shallow still!"
+	line "is still shallow!"
 
 	para "Do you know BILL?"
 	line "He's an incredible"
-
-	para "#MANIAC."
-	line "I revere him."
+	cont "#MANIAC."
+	roll "I revere him."
 
 	para "I'll teach you all"
 	line "I know about BILL,"
-
-	para "so leave me your"
-	line "phone number."
+	cont "if you'll give me"
+	roll "your phone number."
 	done
 
 BrentAskNumber2Text:
 	text "I'll teach you all"
 	line "I know about BILL,"
-
-	para "so leave me your"
-	line "phone number."
+	cont "if you'll give me"
+	roll "your phone number."
 	done
 
 BrentNumberAcceptedText:

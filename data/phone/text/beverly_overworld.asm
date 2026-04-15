@@ -47,9 +47,8 @@ BeverlyPhoneFullText:
 BeverlyGiftText:
 	text "Oh? <PLAYER>? "
 	line "I waited here for"
-
-	para "you. I brought you"
-	line "a little gift."
+	cont "you. I brought you"
+	roll "a little gift."
 	done
 
 BeverlyPackFullText:

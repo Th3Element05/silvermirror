@@ -22,9 +22,8 @@ IanAskNumber2Text:
 IanNumberAcceptedText:
 	text "Cool."
 	line "I'll call you when"
-
-	para "I'm ready to for"
-	line "another battle!"
+	cont "I'm ready to for"
+	roll "another battle!"
 	done
 
 IanNumberDeclinedText:

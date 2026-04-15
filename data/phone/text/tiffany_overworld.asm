@@ -52,8 +52,8 @@ TiffanyGiftText:
 	text "You took a long"
 	line "time. See this?"
 
-	para "Isn't it cute?"
-	line "It's a PINK BOW."
+	para "Isn't it neat?"
+;	line "It's a DUSK STONE."
 	done
 
 TiffanyPackFullText:

@@ -12,7 +12,8 @@ AlanAnswerPhoneDayText:
 	text_ram wStringBuffer3
 	text "!"
 
-	para "Is this <PLAYER>?"
+	para "How are you,"
+	line "<PLAYER>?"
 	done
 
 AlanAnswerPhoneNiteText:

@@ -1,9 +1,8 @@
 DougAskNumber1Text:
 	text "We should trade"
 	line "phone numbers,"
-
-	para "so I can teach you"
-	line "the merits of BUG-"
+	cont "so I can teach you"
+	roll "the merits of BUG-"
 	cont "type #MON!"
 	done
 
@@ -29,17 +28,14 @@ DougNumberDeclinedText:
 DougRematchText:
 	text "Have you come to"
 	line "understand the"
-
-	para "merits of BUG"
-	line "#MON?"
+	cont "strengths of BUG"
+	roll "#MON?"
 	done
 
 DougGiftText:
 	text "Good to see you!"
-	line "See? This is what"
-
-	para "I found."
-	line "It's for you!"
+	line "Look what I found!"
+	cont "It's for you!"
 	done
 
 DougPackFullText:

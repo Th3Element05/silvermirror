@@ -48,9 +48,8 @@ WiltonGiftText:
 
 	para "See this?"
 	line "I snagged it just"
-
-	para "a little while"
-	line "ago. It's yours."
+	cont "a little while"
+	roll "ago. It's yours."
 	done
 
 WiltonPackFullText:

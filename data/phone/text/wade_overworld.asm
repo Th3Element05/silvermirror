@@ -53,13 +53,12 @@ WadeRematchText:
 	line "you. Let's battle!"
 	done
 
-WadeGiftText:
-	text "Good to see you!"
-	line "See? This is what"
-
-	para "I found."
-	line "It's for you!"
-	done
+;WadeGiftText:
+;	text "Good to see you!"
+;	line "See? This is what"
+;	cont "I found."
+;	roll "It's for you!"
+;	done
 
 WadePackFullText:
 	text "Oops, your PACK's"

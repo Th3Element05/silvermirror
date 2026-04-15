@@ -4,15 +4,13 @@ DanaAskNumber1Text:
 
 	para "Boys give me items"
 	line "after battles, but"
-
-	para "sometimes they"
-	line "give me too much."
+	cont "sometimes they"
+	roll "give me too much."
 
 	para "Next time, I can"
 	line "share some if you"
-
-	para "want. Let me get"
-	line "your phone number."
+	cont "want. Let me get"
+	roll "your phone number."
 	done
 
 DanaAskNumber2Text:
@@ -26,12 +24,11 @@ DanaAskNumber2Text:
 DanaNumberAcceptedText:
 	text "Next time a boy"
 	line "gives me something"
-
-	para "after a battle,"
-	line "I'll share some!"
-
-	para "Does that make me"
-	line "bad?"
+	cont "after a battle,"
+	roll "I'll share some!"
+;
+;	para "Does that make me"
+;	line "bad?"
 	done
 
 DanaNumberDeclinedText:

@@ -7,9 +7,8 @@ ErinAskNumber1Text:
 
 	para "Here's my number."
 	line "I'm ERIN--don't"
-
-	para "forget! Want to"
-	line "battle me again?"
+	cont "forget! Want to"
+	roll "battle me again?"
 	done
 
 ErinAskNumber2Text:
@@ -29,9 +28,8 @@ ErinNumberAcceptedText:
 ErinNumberDeclinedText:
 	text "Oh… I'm sad…"
 	line "If you do want to"
-
-	para "battle, come see"
-	line "ERIN--that's me!"
+	cont "battle, come see"
+	roll "ERIN--that's me!"
 	done
 
 ErinPhoneFullText:
@@ -59,5 +57,5 @@ ErinRematchGiftText:
 	line "times that is…"
 
 	para "Thanks for coming!"
-	line "Here's a present!"
+	line "Here's a gift!"
 	done

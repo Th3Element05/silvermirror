@@ -1,9 +1,8 @@
 GinaAskNumber1Text:
 	text "Whenever I see a"
 	line "strong trainer, I"
-
-	para "want to be their"
-	line "cheerleader."
+	cont "want to be their"
+	roll "cheerleader."
 
 	para "When I'm on my"
 	line "walk, I sometimes"

@@ -1,9 +1,8 @@
 BrentRareTradeText:
 	text "Oh yeah, I got an"
 	line "extremely rare"
-
-	para "#MON in a trade"
-	line "a while back."
+	cont "#MON in a trade"
+	roll "a while back."
 
 	para "Do you want to"
 	line "know what it is?"
@@ -15,14 +14,13 @@ BrentRareTradeText:
 BrentDefeatedMonText:
 	text "Oh yeah, I took"
 	line "down this wild"
-
-	para "@"
+	cont "@"
 	text_ram wStringBuffer4
 	text "."
-	line "It wasn't rare"
 
-	para "enough to bother"
-	line "catching."
+	para "It wasn't rare"
+	line "enough to bother"
+	cont "catching."
 	done
 
 BrentLostAMonText:
@@ -32,9 +30,8 @@ BrentLostAMonText:
 
 	para "It was my first"
 	line "sighting. But I"
-
-	para "didn't have any"
-	line "#BALLS…"
+	cont "didn't have any"
+	roll "#BALLS…"
 
 	para "Would BILL laugh"
 	line "at my mistakes?"
@@ -49,9 +46,8 @@ BrentBattleRematchText:
 
 	para "It'll be a chance"
 	line "to see my rare"
-
-	para "#MON. It'll be"
-	line "worth your time!"
+	cont "#MON. It'll be"
+	roll "worth your time!"
 
 	para "You know where--"
 	line "@"
@@ -66,17 +62,15 @@ BrentHangUpText:
 BrentFatherGossipText:
 	text "Did you know…?"
 	line "BILL's father is"
-
-	para "supposed to be a"
-	line "great #MANIAC."
+	cont "supposed to be a"
+	roll "great #MANIAC."
 	done
 
 BrentGrandpaGossipText:
 	text "Did you know…?"
 	line "Apparently BILL's"
-
-	para "grandpa isn't a"
-	line "#MANIAC."
+	cont "grandpa isn't a"
+	roll "#MANIAC."
 	done
 
 BrentGoldenrodGossipText:
@@ -88,65 +82,58 @@ BrentGoldenrodGossipText:
 BrentRoute25GossipText:
 	text "Did you know…?"
 	line "BILL evidently"
-
-	para "lives on ROUTE 25"
-	line "in KANTO."
+	cont "lives on ROUTE 25"
+	roll "in KANTO."
 	done
 
 BrentAbraGossipText:
 	text "Did you know…?"
 	line "ABRA was the first"
-
-	para "#MON that BILL"
-	line "ostensibly caught."
+	cont "#MON that BILL"
+	roll "ostensibly caught."
 	done
 
 BrentSisterGossipText:
 	text "Did you know…?"
 	line "BILL's younger"
-
-	para "sister apparently"
-	line "can't wink."
+	cont "sister apparently"
+	roll "can't wink."
 	done
 
 BrentMilkGossipText:
 	text "Did you know…?"
 	line "BILL supposedly"
-
-	para "hates milk and"
-	line "can't drink it."
+	cont "hates milk and"
+	roll "can't drink it."
 	done
 
 BrentBattlingGossipText:
 	text "Did you know…?"
 	line "Evidently, BILL"
-
-	para "isn't very good at"
-	line "battling."
-	done
-
-BrentFlowerShopGossipText:
-	text "Did you know…?"
-	line "BILL appears to"
-
-	para "like the lady at"
-	line "the FLOWER SHOP."
+	cont "isn't very good at"
+	roll "battling."
 	done
 
 BrentKimonoGirlGossipText:
 	text "Did you know…?"
 	line "BILL's mother is"
-
-	para "said to have been"
-	line "a KIMONO GIRL."
+	cont "said to have been"
+	roll "a KIMONO GIRL."
 	done
+
+;BrentFlowerShopGossipText:
+;	text "Did you know…?"
+;	line "BILL appears to"
+;	cont "like the lady at"
+;	roll "the FLOWER SHOP."
+;	done
 
 BrentSorryImTooBusyText:
 	text "You wanted to hear"
 	line "about BILL?"
 
 	para "Sorry, but I'm too"
-	line "busy for you."
+	line "busy right now."
 
 	para "I'll call when I"
 	line "have time."
