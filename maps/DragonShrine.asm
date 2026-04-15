@@ -370,7 +370,7 @@ DragonShrineDratiniPokeballScript:
 	waitbutton
 	closepokepic
 	setval DRATINI
-	special UnusedSetSeenMon
+	special SilentSetSeenMon
 	writetext DragonShrineTakeThisDratiniText
 	yesorno
 	iffalse .MaybeLater
