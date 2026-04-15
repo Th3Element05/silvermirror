@@ -29,6 +29,7 @@ BirdKeeperJamieAfterBattleText:
 	roll "getting around."
 	done
 
+
 TrainerBirdKeeperDennis:
 	trainer BIRD_KEEPER, DENNIS, EVENT_BEAT_BIRD_KEEPER_DENNIS, BirdKeeperDennisSeenText, BirdKeeperDennisBeatenText, 0, .Script
 .Script:
@@ -53,6 +54,7 @@ BirdKeeperDennisAfterBattleText:
 	roll "more power."
 	done
 
+
 TrainerBirdKeeperPerry:
 	trainer BIRD_KEEPER, PERRY, EVENT_BEAT_BIRD_KEEPER_PERRY, BirdKeeperPerrySeenText, BirdKeeperPerryBeatenText, 0, .Script
 .Script:
@@ -74,6 +76,7 @@ BirdKeeperPerryAfterBattleText:
 	text "Bird #MON are"
 	line "my true love!"
 	done
+
 
 TrainerBirdKeeperToby:
 	trainer BIRD_KEEPER, TOBY, EVENT_BEAT_BIRD_KEEPER_TOBY, BirdKeeperTobySeenText, BirdKeeperTobyBeatenText, 0, .Script
@@ -97,6 +100,7 @@ BirdKeeperTobyAfterBattleText:
 	line "better moves."
 	done
 
+
 TrainerBirdKeeperRoy:
 	trainer BIRD_KEEPER, ROY, EVENT_BEAT_BIRD_KEEPER_ROY, BirdKeeperRoySeenText, BirdKeeperRoyBeatenText, 0, .Script
 .Script:
@@ -118,6 +122,7 @@ BirdKeeperRoyAfterBattleText:
 	cont "and PIDGEOTTO…"
 	done
 
+
 TrainerBikerDwayne:
 	trainer BIKER, DWAYNE, EVENT_BEAT_BIKER_DWAYNE, BikerDwayneSeenText, BikerDwayneBeatenText, 0, .Script
 .Script:
@@ -138,6 +143,7 @@ BikerDwayneAfterBattleText:
 	text "Get lost!"
 	done
 
+
 TrainerBirdKeeperRod:
 	trainer BIRD_KEEPER, ROD, EVENT_BEAT_BIRD_KEEPER_ROD, BirdKeeperRodSeenText, BirdKeeperRodBeatenText, 0, .Script
 .Script:
@@ -157,6 +163,7 @@ BirdKeeperRodAfterBattleText:
 	text "I'm beat. I guess"
 	line "I'll FLY home."
 	done
+
 
 TrainerPicnickerSelina:
 	trainer PICNICKER, SELINA, EVENT_BEAT_PICNICKER_SELINA, PicnickerSelinaSeenText, PicnickerSelinaBeatenText, 0, .Script
@@ -181,6 +188,7 @@ PicnickerSelinaAfterBattleText:
 	cont "toughen them up!"
 	done
 
+
 TrainerPicnickerTanya:
 	trainer PICNICKER, TANYA, EVENT_BEAT_PICNICKER_TANYA, PicnickerTanyaSeenText, PicnickerTanyaBeatenText, 0, .Script
 .Script:
@@ -201,6 +209,7 @@ PicnickerTanyaAfterBattleText:
 	line "BADGEs from GYM"
 	cont "LEADERs. I know!"
 	done
+
 
 TrainerTwinsKayAndTia1:
 	trainer TWINS, KAYANDTIA1, EVENT_BEAT_TWINS_KAYANDTIA, TwinsKayAndTiaSeenText, TwinsKayAndTiaBeatenText, 0, .Script
@@ -236,6 +245,7 @@ TwinsKayAndTia2AfterBattleText:
 	roll "like cute ones!"
 	done
 
+
 TrainerPicnickerPiper:
 	trainer PICNICKER, PIPER, EVENT_BEAT_PICNICKER_PIPER, PicnickerPiperSeenText, PicnickerPiperBeatenText, 0, .Script
 .Script:
@@ -257,6 +267,7 @@ PicnickerPiperAfterBattleText:
 	line "a good trainer."
 	cont "I'll train hard."
 	done
+
 
 TrainerBirdKeeperAbe:
 	trainer BIRD_KEEPER, ABE, EVENT_BEAT_BIRD_KEEPER_ABE, BirdKeeperAbeSeenText, BirdKeeperAbeBeatenText, 0, .Script
@@ -280,6 +291,7 @@ BirdKeeperAbeAfterBattleText:
 	cont "they lost."
 	done
 
+
 TrainerPicnickerDebra:
 	trainer PICNICKER, DEBRA, EVENT_BEAT_PICNICKER_DEBRA, PicnickerDebraSeenText, PicnickerDebraBeatenText, 0, .Script
 .Script:
@@ -300,6 +312,7 @@ PicnickerDebraAfterBattleText:
 	line "the SPEED of my"
 	cont "#MON."
 	done
+
 
 Route13TrainerTips1:
 	jumptext Route13TrainerTips1Text
@@ -329,11 +342,13 @@ Route13SignText:
 	line "SILENCE BRIDGE"
 	done
 
+
 Route13HiddenCalcium:
 	hiddenitem CALCIUM, EVENT_ROUTE_13_HIDDEN_CALCIUM
 
 Route13HiddenPPUp:
 	hiddenitem PP_UP, EVENT_ROUTE_13_HIDDEN_PP_UP
+
 
 Route13_MapEvents:
 	db 0, 0 ; filler

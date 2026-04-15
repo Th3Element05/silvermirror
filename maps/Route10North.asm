@@ -5,6 +5,7 @@ Route10North_MapScripts:
 
 	def_callbacks
 
+
 TrainerPicnickerAzriel:
 	trainer PICNICKER, AZRIEL, EVENT_BEAT_PICNICKER_AZRIEL, PicnickerAzrielSeenText, PicnickerAzrielBeatenText, 0, .Script
 .Script:
@@ -33,14 +34,86 @@ PicnickerAzrielAfterBattleText:
 	cont "prowling around."
 	done
 
+
 TrainerPokemaniacBrent:
 	trainer POKEMANIAC, BRENT1, EVENT_BEAT_POKEMANIAC_BRENT, PokemaniacBrentSeenText, PokemaniacBrentBeatenText, 0, .Script
 .Script:
-	endifjustbattled
+;	endifjustbattled
+;	opentext
+;	writetext PokemaniacBrentAfterBattleText
+;	waitbutton
+;	closetext
+;	end
+
+	loadvar VAR_CALLERID, PHONE_POKEMANIAC_BRENT
 	opentext
+	checkflag ENGINE_BRENT_READY_FOR_REMATCH
+	iftrue .WantsBattle
+	checkcellnum PHONE_POKEMANIAC_BRENT
+	iftrue .BrentDefeated
+	checkevent EVENT_BRENT_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskedAlready
 	writetext PokemaniacBrentAfterBattleText
-	waitbutton
+	promptbutton
+	setevent EVENT_BRENT_ASKED_FOR_PHONE_NUMBER
+	scall .AskNumber1
+	sjump .AskForNumber
+
+.AskedAlready:
+	scall .AskNumber2
+.AskForNumber:
+	askforphonenumber PHONE_POKEMANIAC_BRENT
+	ifequal PHONE_CONTACTS_FULL, .PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
+	gettrainername STRING_BUFFER_3, POKEMANIAC, BRENT1
+	scall .RegisteredNumber
+	sjump .NumberAccepted
+
+.WantsBattle:
+	scall .Rematch
+	winlosstext PokemaniacBrentBeatenText, 0
+	loadtrainer POKEMANIAC, BRENT_0
+	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
+	iftrue .LoadFight
+	loadtrainer POKEMANIAC, BRENT_2
+.LoadFight:
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_BRENT_READY_FOR_REMATCH
+	end
+
+.BrentDefeated:
+	writetext PokemaniacBrentAfterBattleText
+	promptbutton
 	closetext
+	end
+
+.AskNumber1:
+	jumpstd AskNumber1MScript
+	end
+
+.AskNumber2:
+	jumpstd AskNumber2MScript
+	end
+
+.RegisteredNumber:
+	jumpstd RegisteredNumberMScript
+	end
+
+.NumberAccepted:
+	jumpstd NumberAcceptedMScript
+	end
+
+.NumberDeclined:
+	jumpstd NumberDeclinedMScript
+	end
+
+.PhoneFull:
+	jumpstd PhoneFullMScript
+	end
+
+.Rematch:
+	jumpstd RematchMScript
 	end
 
 PokemaniacBrentSeenText:
@@ -59,6 +132,7 @@ PokemaniacBrentAfterBattleText:
 	text "I have more rare"
 	line "#MON at home!"
 	done
+
 
 Route10NorthRockTunnelSign:
 	jumptext Route10NorthRockTunnelSignText

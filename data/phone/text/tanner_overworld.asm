@@ -2,7 +2,24 @@ TannerAskNumber1Text:
 	text "Hey, how about we"
 	line "exchange phone"
 	cont "numbers?"
+;
+;	para "If I find anything"
+;	line "on the ground, I'd"
+;	cont "gladly share!"
 	done
+
+;	text "I came across a"
+;	line "SUN STONE in the"
+;	cont "grass last week."
+;
+;	text "Hey, how about we"
+;	line "exchange phone"
+;	cont "numbers?"
+;
+;	para "If I find another"
+;	line "SUN STONE, I'll be"
+;	cont "happy to share!"
+;	done
 
 TannerAskNumber2Text:
 	text "Did you decide to"

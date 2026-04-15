@@ -1,5 +1,17 @@
 RobAskNumber1Text:
-	text "Shall we trade"
+;	text "Shall we trade"
+;	line "phone numbers?"
+;	done
+
+	text "I spend a lot of"
+	line "time outdoors, so"
+	cont "I find a lot of"
+	roll "berries."
+
+	para "I'll share them"
+	line "if you want."
+
+	para "Shall we trade"
 	line "phone numbers?"
 	done
 
@@ -28,12 +40,12 @@ RobRematchText:
 	cont "ing for you!"
 	done
 
-RobGiftText:
-	text "Good to see you!"
-	line "See? This is what"
-	cont "I found."
-	roll "It's for you!"
-	done
+;RobGiftText:
+;	text "Good to see you!"
+;	line "See? This is what"
+;	cont "I found."
+;	roll "It's for you!"
+;	done
 
 RobPackFullText:
 	text "Oops, your PACK's"

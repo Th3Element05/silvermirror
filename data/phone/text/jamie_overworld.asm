@@ -1,6 +1,6 @@
 JamieAskNumber1Text:
-	text "It was fun battl-"
-	line "ing you!"
+	text "That was a fun"
+	line "battle!"
 
 	para "I'd love to trade"
 	line "phone numbers with"

@@ -245,7 +245,7 @@ TrainerCamperTanner:
 	opentext
 	checkflag ENGINE_TANNER_READY_FOR_REMATCH
 	iftrue .ChooseRematch
-	checkflag ENGINE_TANNER_HAS_STONE
+	checkflag ENGINE_TANNER_HAS_SUN_STONE
 	iftrue .GiveStone
 	checkcellnum PHONE_CAMPER_TANNER
 	iftrue .TannerDefeated
@@ -270,25 +270,14 @@ TrainerCamperTanner:
 .ChooseRematch:
 	scall .Rematch
 	winlosstext CamperTannerBeatenText, 0
-	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
-	iftrue .LoadFight0
-	checkflag ENGINE_FLYPOINT_LAVENDER
-	iftrue .LoadFight3
-	loadtrainer CAMPER, TANNER_2
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_TANNER_READY_FOR_REMATCH
-	end
-
-.LoadFight3:
-	loadtrainer CAMPER, TANNER_3
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_TANNER_READY_FOR_REMATCH
-	end
-
-.LoadFight0:
 	loadtrainer CAMPER, TANNER_0
+	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
+	iftrue .LoadFight
+	loadtrainer CAMPER, TANNER_3
+	checkflag ENGINE_FLYPOINT_LAVENDER
+	iftrue .LoadFight
+	loadtrainer CAMPER, TANNER_2
+.LoadFight:
 	startbattle
 	reloadmapafterbattle
 	clearflag ENGINE_TANNER_READY_FOR_REMATCH
@@ -303,15 +292,15 @@ TrainerCamperTanner:
 ;LeafStone
 	verbosegiveitem LEAF_STONE
 	iffalse .BagFull
-	clearflag ENGINE_TANNER_HAS_STONE
-	setevent ENGINE_TANNER_GAVE_STONE
+	clearflag ENGINE_TANNER_HAS_SUN_STONE
+;	setevent ENGINE_TANNER_GAVE_SUN_STONE
 	jump .NumberAccepted
 
 .SunStone
 	verbosegiveitem SUN_STONE
 	iffalse .BagFull
-	clearflag ENGINE_TANNER_HAS_STONE
-	setevent ENGINE_TANNER_GAVE_STONE
+	clearflag ENGINE_TANNER_HAS_SUN_STONE
+	setevent EVENT_TANNER_GAVE_SUN_STONE
 	jump .NumberAccepted
 
 .BagFull:

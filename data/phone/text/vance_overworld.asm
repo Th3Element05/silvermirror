@@ -63,11 +63,10 @@ VanceRematchGiftText:
 	line "really strong!"
 
 	para "Thanks for taking"
-	line "me on so often--I"
+	line "me on so often--"
+	cont "I learned a whole"
+	roll "lot from you."
 
-	para "learned a whole"
-	line "lot from you."
-
-	para "I know! This will"
-	line "do as my thanks!"
+	para "I know! Take this"
+	line "as my thanks!"
 	done

@@ -54,6 +54,5 @@ HillaryRematchText:
 
 	text "You're back!"
 
-	para "For a ####MON"
-	line "battle?"
+	para "For a battle?"
 	done

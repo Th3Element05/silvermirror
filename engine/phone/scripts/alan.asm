@@ -1,14 +1,13 @@
  ; You call Alan
 AlanPhoneCalleeScript:
 	gettrainername STRING_BUFFER_3, SCHOOLBOY, ALAN1
-
-	checkflag ENGINE_ALAN_READY_FOR_REMATCH
-	iftrue .RemindBattle
-
 	farscall PhoneScript_AnswerPhone_Male
 
+	checkflag ENGINE_ALAN_READY_FOR_REMATCH
+	iftrue AlanRemindBattle
+
 	checkflag ENGINE_ALAN_HAS_FIRE_STONE
-	iftrue .RemindFireStone
+	iftrue AlanRemindFireStone
 
 	readvar VAR_WEEKDAY
 	ifequal WEDNESDAY, AlanWantsBattle
@@ -17,19 +16,15 @@ AlanPhoneCalleeScript:
 	ifequal 0, AlanWantsBattle
 
 .NotWednesday:
-	farsjump AlanHangUpScript
+	farsjump AlanHangUpScript ;Haven't picked anything up
 
-.RemindBattle:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_11
-	farwritetext AlanReminderText
-	end
+;.RemindBattle:
+;	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_11
+;	farsjump AlanReminderScript
 
-.RemindFireStone:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_11
-	farwritetext AlanComePickUpGiftText
-	promptbutton
-	farwritetext AlanHangUpText
-	end
+;.RemindFireStone:
+;	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_11
+;	farsjump AlanComePickUpScript
 
 
  ; Calls you
@@ -38,27 +33,31 @@ AlanPhoneCallerScript:
 	farscall PhoneScript_GreetPhone_Male
 
 	checkflag ENGINE_ALAN_READY_FOR_REMATCH
-	iftrue .Generic
-
-	checkflag ENGINE_ALAN_WEDNESDAY_AFTERNOON
-	iftrue .Generic
+	iftrue AlanRemindBattle
 
 	checkflag ENGINE_ALAN_HAS_FIRE_STONE
-	iftrue .Generic
+	iftrue AlanRemindFireStone
 
-	farscall PhoneScript_Random3
+	readvar VAR_WEEKDAY
+	ifequal WEDNESDAY, AlanWantsBattle
+
+;	farscall PhoneScript_Random3
+	random 4
 	ifequal 0, AlanWantsBattle
-;	checkevent EVENT_ALAN_GAVE_FIRE_STONE
-;	iftrue .FireStone
 
-	farscall PhoneScript_Random2
+	checkevent EVENT_ALAN_GAVE_FIRE_STONE
+	iftrue .FireStoneChance
+
+;	farscall PhoneScript_Random2
+	random 2
 	ifequal 0, AlanHasFireStone
 
-.FireStone:
-	farscall PhoneScript_Random11
+.FireStoneChance:
+;	farscall PhoneScript_Random11
+	random 10
 	ifequal 0, AlanHasFireStone
 
-.Generic:
+.GenericCall:
 	farsjump Phone_GenericCall_Male
 
 AlanWantsBattle:
@@ -66,11 +65,18 @@ AlanWantsBattle:
 	setflag ENGINE_ALAN_READY_FOR_REMATCH
 	farsjump PhoneScript_WantsToBattle_Male
 
+AlanRemindBattle:
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_11
+	farsjump AlanReminderScript
+
 AlanHasFireStone:
 	setflag ENGINE_ALAN_HAS_FIRE_STONE
 	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_11
 	farsjump PhoneScript_FoundItem_Male
 
+AlanRemindFireStone:
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_11
+	farsjump AlanComePickUpScript
 
 
 ; ; You call Alan

@@ -2,11 +2,23 @@ RobBerryReminderText:
 	text "How come you're"
 	line "not here yet?"
 
-	para "@"
+	para "I'm waiting in"
+	line "@"
 	text_from_ram wStringBuffer5
-	text " is"
-	line "where I am."
+	text "."
 
 	para "Please get here as"
 	line "soon as you can!"
 	done
+
+;	text "How come you're"
+;	line "not here yet?"
+;
+;	para "@"
+;	text_from_ram wStringBuffer5
+;	text " is"
+;	line "where I am."
+;
+;	para "Please get here as"
+;	line "soon as you can!"
+;	done

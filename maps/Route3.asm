@@ -204,25 +204,14 @@ TrainerSchoolboyBilly:
 .WantsBattle:
 	scall .Rematch
 	winlosstext SchoolboyBillyBeatenText, 0
-	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
-	iftrue .LoadFight0
-	checkflag ENGINE_FLYPOINT_CELADON
-	iftrue .LoadFight3
-	loadtrainer SCHOOLBOY, BILLY_2
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_BILLY_READY_FOR_REMATCH
-	end
-
-.LoadFight3:
-	loadtrainer SCHOOLBOY, BILLY_3
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_BILLY_READY_FOR_REMATCH
-	end
-
-.LoadFight0:
 	loadtrainer SCHOOLBOY, BILLY_0
+	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
+	iftrue .LoadFight
+	loadtrainer SCHOOLBOY, BILLY_3
+	checkflag ENGINE_FLYPOINT_CELADON
+	iftrue .LoadFight
+	loadtrainer SCHOOLBOY, BILLY_2
+.LoadFight:
 	startbattle
 	reloadmapafterbattle
 	clearflag ENGINE_BILLY_READY_FOR_REMATCH

@@ -18,10 +18,10 @@ GinaComePickUpScript:
 	promptbutton
 	sjump PhoneScript_HangUpText_Female
 
-;AlanComePickUpScript: ; moved to Alan script
-;	farwritetext AlanComePickUpGiftText
-;	promptbutton
-;	sjump PhoneScript_HangUpText_Male
+AlanComePickUpScript:
+	farwritetext AlanComePickUpGiftText
+	promptbutton
+	sjump PhoneScript_HangUpText_Male
 
 DanaComePickUpScript:
 	farwritetext DanaComePickUpText

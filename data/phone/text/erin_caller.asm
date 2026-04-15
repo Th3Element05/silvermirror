@@ -10,9 +10,9 @@ ErinMonIsMuchStrongerText:
 ErinDefeatedMonText:
 	text "And, and…"
 	line "I just battled and"
-	cont "beat @"
-	text_ram wStringBuffer4
-	text "!"
+	cont "beat ONIX!"
+;	text_ram wStringBuffer4 ; there aren't any wild encounters on Route10South
+;	text "!"
 
 	para "I've raised my"
 	line "#MON properly!"
@@ -21,13 +21,13 @@ ErinDefeatedMonText:
 ErinLostAMonText:
 	text "But, but…"
 
-	para "A wild @"
-	text_ram wStringBuffer4
-	text_start
+	para "A wild CUBONE"
+;	para "A wild @"
+;	text_ram wStringBuffer4 ; there aren't any wild encounters on Route10South
+;	text_start
 	line "got away from me"
-
-	para "again. It's just"
-	line "not fair!"
+	cont "again. It's just"
+	roll "not fair!"
 	done
 
 ErinBattleRematchText:

@@ -197,25 +197,15 @@ TrainerLassHillary:
 .WantsBattle:
 	scall .Rematch
 	winlosstext LassHillaryBeatenText, 0
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .LoadFight0
-	checkflag ENGINE_FLYPOINT_SAFFRON
-	iftrue .LoadFight3
-	loadtrainer TEACHER, HILLARY_2
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_HILLARY_READY_FOR_REMATCH
-	end
-
-.LoadFight3:
-	loadtrainer TEACHER, HILLARY_3
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_HILLARY_READY_FOR_REMATCH
-	end
-
-.LoadFight0:
 	loadtrainer TEACHER, HILLARY_0
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .LoadFight
+	loadtrainer TEACHER, HILLARY_3
+	checkflag ENGINE_FLYPOINT_SAFFRON
+	iftrue .LoadFight
+	loadtrainer TEACHER, HILLARY_2
+.LoadFight:
+	loadtrainer TEACHER, HILLARY_3
 	startbattle
 	reloadmapafterbattle
 	clearflag ENGINE_HILLARY_READY_FOR_REMATCH
@@ -256,8 +246,8 @@ TrainerLassHillary:
 	end
 
 LassHillarySeenText:
-	text "My favorite are"
-	line "cute #MON."
+	text "Cute #MON are"
+	line "my favorite."
 	cont "They're adorable!"
 	done
 
@@ -267,9 +257,9 @@ LassHillaryBeatenText:
 	done
 
 LassHillaryAfterBattleText:
-	text "You came from MT."
-	line "MOON? Did you see"
-	cont "any CLEFAIRY?"
+	text "You went through"
+	line "MT.MOON? Did you"
+	cont "see any CLEFAIRY?"
 	done
 
 TrainerYoungsterMikey:

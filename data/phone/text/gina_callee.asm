@@ -4,7 +4,7 @@ GinaAnswerPhoneText:
 	text_ram wStringBuffer3
 	text "…"
 
-	para "Oh, <PLAY_G>!"
+	para "Oh, <PLAYER>!"
 	line "Good morning!"
 	done
 
@@ -14,7 +14,7 @@ GinaAnswerPhoneDayText:
 	text_ram wStringBuffer3
 	text "…"
 
-	para "Oh, <PLAY_G>!"
+	para "Oh, <PLAYER>!"
 	line "Hi, how are you?"
 	done
 
@@ -24,12 +24,12 @@ GinaAnswerPhoneNiteText:
 	text_ram wStringBuffer3
 	text "…"
 
-	para "Oh, <PLAY_G>!"
+	para "Oh, <PLAYER>!"
 	line "Good evening!"
 	done
 
 GinaGreetText:
-	text "<PLAY_G>?"
+	text "<PLAYER>?"
 
 	para "It's @"
 	text_ram wStringBuffer3
@@ -38,7 +38,7 @@ GinaGreetText:
 	done
 
 GinaGreetDayText:
-	text "<PLAY_G>?"
+	text "<PLAYER>?"
 
 	para "It's @"
 	text_ram wStringBuffer3
@@ -47,7 +47,7 @@ GinaGreetDayText:
 	done
 
 GinaGreetNiteText:
-	text "<PLAY_G>?"
+	text "<PLAYER>?"
 
 	para "It's @"
 	text_ram wStringBuffer3

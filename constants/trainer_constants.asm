@@ -248,6 +248,7 @@ DEF KRIS EQU __trainer_class__
 	const BRADY
 ; rematch
 	const IAN_2
+	const IAN_3
 	const IAN_0
 	const JOEY_0
 
@@ -265,6 +266,7 @@ DEF KRIS EQU __trainer_class__
 	const BILLY_3
 	const BILLY_0
 	const ALAN_2
+	const ALAN_3
 	const ALAN_0
 	const TORIN_0
 	const CHAD_0
@@ -767,6 +769,7 @@ DEF KRIS EQU __trainer_class__
 	const LIZ1
 ; rematch
 	const GINA_2
+	const GINA_3
 	const GINA_0
 	const ERIN_2
 	const ERIN_0

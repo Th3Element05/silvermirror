@@ -4,31 +4,31 @@ ErinAnswerPhoneText:
 	text_ram wStringBuffer3
 	text "…"
 
-	para "Oh. Hi, <PLAY_G>!"
+	para "Oh. Hi, <PLAYER>!"
 	line "Good morning!"
 	done
 
 ErinAnswerPhoneDayText:
-	text "Yes, this is"
-	line "@"
-	text_ram wStringBuffer3
-	text "…"
-
-	para "Oh, hi, <PLAY_G>!"
-	line "Yahoo!"
-	done
-
+;	text "Yes, this is"
+;	line "@"
+;	text_ram wStringBuffer3
+;	text "…"
+;
+;	para "Oh, hi, <PLAYER>!"
+;	line "Yahoo!"
+;	done
+;
 ErinAnswerPhoneNiteText:
 	text "Yes, this is"
 	line "@"
 	text_ram wStringBuffer3
 	text "…"
 
-	para "Oh, hi, <PLAY_G>!"
+	para "Oh, hi, <PLAYER>!"
 	done
 
 ErinGreetText:
-	text "<PLAY_G>!"
+	text "<PLAYER>!"
 
 	para "It's @"
 	text_ram wStringBuffer3
@@ -37,7 +37,7 @@ ErinGreetText:
 	done
 
 ErinGreetDayText:
-	text "<PLAY_G>!"
+	text "<PLAYER>!"
 
 	para "It's @"
 	text_ram wStringBuffer3
@@ -58,11 +58,15 @@ ErinGenericText:
 	text "Are you raising"
 	line "your #MON?"
 
-	para "Hey, @"
-	text_ram wStringBuffer3
-	text "'s"
-	line "@"
-	text_ram wStringBuffer4
-	text " is"
-	cont "looking good!"
+	para "Don't push them"
+	line "too hard, ok?"
 	done
+
+;	para "Hey, @"
+;	text_ram wStringBuffer3
+;	text "'s"
+;	line "@"
+;	text_ram wStringBuffer4
+;	text " is"
+;	cont "looking good!"
+;	done

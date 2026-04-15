@@ -2,19 +2,19 @@ IrwinAskNumber1Text:
 	text "You're the best"
 	line "I've ever battled!"
 
-	para "Huh? You're the"
-	line "one who saved all"
-	cont "the SLOWPOKE?"
+;	para "Huh? You're the"
+;	line "one who saved all"
+;	cont "the SLOWPOKE?"
 
-	para "Well, no wonder I"
-	line "couldn't beat you!"
+;	para "Well, no wonder I"
+;	line "couldn't beat you!"
 
 	para "Would it be OK to"
 	line "get your number?"
 
-	para "I don't want to"
-	line "miss anything you"
-	cont "do from now on!"
+;	para "I don't want to"
+;	line "miss anything you"
+;	cont "do from now on!"
 	done
 
 IrwinAskNumber2Text:

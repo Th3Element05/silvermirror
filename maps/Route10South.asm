@@ -35,11 +35,108 @@ Route10South_MapScripts:
 TrainerPicnickerErin:
 	trainer PICNICKER, ERIN1, EVENT_BEAT_PICNICKER_ERIN, PicnickerErinSeenText, PicnickerErinBeatenText, 0, .Script
 .Script:
-	endifjustbattled
+;	endifjustbattled
+;	opentext
+;	writetext PicnickerErinAfterBattleText
+;	waitbutton
+;	closetext
+;	end
+
+	loadvar VAR_CALLERID, PHONE_PICNICKER_ERIN
 	opentext
+	checkflag ENGINE_ERIN_READY_FOR_REMATCH
+	iftrue .WantsBattle
+	checkcellnum PHONE_PICNICKER_ERIN
+	iftrue .ErinDefeated
+	checkevent EVENT_ERIN_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskedAlready
 	writetext PicnickerErinAfterBattleText
+	promptbutton
+	setevent EVENT_ERIN_ASKED_FOR_PHONE_NUMBER
+	scall .AskNumber1F
+	sjump .AskForNumber
+
+.AskedAlready:
+	scall .AskNumber2F
+.AskForNumber:
+	askforphonenumber PHONE_PICNICKER_ERIN
+	ifequal PHONE_CONTACTS_FULL, .PhoneFullF
+	ifequal PHONE_CONTACT_REFUSED, .NumberDeclinedF
+	gettrainername STRING_BUFFER_3, PICNICKER, ERIN1
+	scall .RegisteredNumberF
+	sjump .NumberAcceptedF
+
+.WantsBattle:
+	scall .RematchF
+	winlosstext PicnickerErin1BeatenText, 0
+	loadtrainer PICNICKER, ERIN_0
+	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
+	iftrue .LoadFight
+	loadtrainer PICNICKER, ERIN_2
+.LoadFight:
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_ERIN_READY_FOR_REMATCH
+	end
+
+.GiveCalcium
+	scall .RematchGiftF
+	verbosegiveitem CALCIUM
+	iffalse .NoRoomForCalcium
+	setevent EVENT_GOT_CALCIUM_FROM_ERIN
+	sjump .NumberAcceptedF
+
+.HasCalcium:
+	opentext
+	writetext PicnickerErinBeatenGiftText
 	waitbutton
+	verbosegiveitem CALCIUM
+	iffalse .NoRoomForCalcium
+	clearevent EVENT_ERIN_HAS_CALCIUM
+	setevent EVENT_GOT_CALCIUM_FROM_ERIN
+	sjump .NumberAcceptedF
+
+.NoRoomForCalcium:
+	setevent EVENT_ERIN_HAS_CALCIUM
+	jumpstd PackFullFScript
+	end
+
+.ErinDefeated:
+	writetext PicnickerErinAfterBattleText
+	promptbutton
 	closetext
+	end
+
+.AskNumber1F:
+	jumpstd AskNumber1FScript
+	end
+
+.AskNumber2F:
+	jumpstd AskNumber2FScript
+	end
+
+.RegisteredNumberF:
+	jumpstd RegisteredNumberFScript
+	end
+
+.NumberAcceptedF:
+	jumpstd NumberAcceptedFScript
+	end
+
+.NumberDeclinedF:
+	jumpstd NumberDeclinedFScript
+	end
+
+.PhoneFullF:
+	jumpstd PhoneFullFScript
+	end
+
+.RematchF:
+	jumpstd RematchFScript
+	end
+
+.RematchGiftF:
+	jumpstd RematchGiftFScript
 	end
 
 PicnickerErinSeenText:
@@ -61,6 +158,21 @@ PicnickerErinAfterBattleText:
 	line "pink one with a"
 	cont "floral pattern!"
 	done
+
+PicnickerErinBeatenGiftText:
+	text "Aww… I keep losing"
+	line "all the time!"
+
+	para "I'll just have to"
+	line "try harder!"
+
+	para "Anyway, thanks for"
+	line "battling me again"
+	cont "and again. Here's"
+	roll "that present from"
+	cont "before."
+	done
+
 
 TrainerHikerJim:
 	trainer HIKER, JIM, EVENT_BEAT_HIKER_JIM, HikerJimSeenText, HikerJimBeatenText, 0, .Script

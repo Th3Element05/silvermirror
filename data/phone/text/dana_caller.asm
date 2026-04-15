@@ -17,9 +17,8 @@ DanaDefeatedMonText:
 
 	para "It must be because"
 	line "you gave me some"
-
-	para "battling tips last"
-	line "time."
+	cont "battling tips last"
+	roll "time."
 	done
 
 DanaLostAMonText:
@@ -27,14 +26,13 @@ DanaLostAMonText:
 	line "A wild @"
 	text_ram wStringBuffer4
 	text_start
-	para "got away from me"
-	line "again."
+	cont "got away from me"
+	roll "again."
 
 	para "It was so close!"
 	line "Really, just a"
-
-	para "little bit more,"
-	line "and I would've…"
+	cont "little bit more,"
+	roll "and I would've…"
 	done
 
 DanaBattleRematchText:
@@ -43,8 +41,8 @@ DanaBattleRematchText:
 	text_ram wStringBuffer5
 	text "."
 
-	para "If you're close"
-	line "by, let's battle!"
+	para "If you're nearby,"
+	line "let's battle!"
 
 	para "I'll be waiting"
 	line "for you!"
@@ -63,9 +61,8 @@ DanaFoundItemText:
 
 	para "I'm sure you'd"
 	line "like it. Come get"
-
-	para "it! I'm waiting on"
-	line "@"
+	cont "it! I'm waiting on"
+	roll "@"
 	text_ram wStringBuffer5
 	text "!"
 	done
@@ -84,9 +81,8 @@ DanaCanYouWaitABitLongerText:
 DanaReminderText:
 	text "Hi! You haven't"
 	line "forgotten about"
-
-	para "your promise to"
-	line "battle me?"
+	cont "your promise to"
+	roll "battle me?"
 
 	para "I'm waiting on"
 	line "@"
@@ -99,9 +95,8 @@ DanaComePickUpText:
 
 	para "If you don't come"
 	line "get your present"
-
-	para "soon, I'll give it"
-	line "to someone else."
+	cont "soon, I'll give it"
+	roll "to someone else."
 
 	para "I'm waiting on"
 	line "@"

@@ -94,6 +94,7 @@ Route4HeadbuttGuyOutroText:
 	cont "to HEADBUTT trees,"
 	roll "even if they don't"
 	cont "know the attack."
+	done
 
 Route4HeadbuttGuyAfterText:
 	text "I have a headache…"

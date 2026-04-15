@@ -3,9 +3,8 @@ GinaGettingInSyncWithMonText:
 	text_ram wStringBuffer4
 	text " and"
 	line "I are getting more"
-
-	para "in sync with each"
-	line "other."
+	cont "in sync with each"
+	roll "other."
 	done
 
 GinaDefeatedMonText:
@@ -13,9 +12,8 @@ GinaDefeatedMonText:
 	line "@"
 	text_ram wStringBuffer4
 	text " and"
-
-	para "managed to drop it"
-	line "in a close match."
+	cont "managed to drop it"
+	roll "in a close match."
 
 	para "We're getting into"
 	line "the groove!"
@@ -57,9 +55,9 @@ GinaRocketTakeoverRumorText:
 	text "Have you heard"
 	line "about TEAM ROCKET?"
 
-	para "They've taken over"
-	line "the RADIO TOWER in"
-	cont "GOLDENROD."
+	para "They're in SAFFRON"
+	line "and they took over"
+	cont "SILPH CO.!"
 
 	para "Are the people"
 	line "inside safe?"
@@ -84,20 +82,17 @@ GinaFoundItemText:
 GinaHaventFoundAnythingYetText:
 	text "Sorry, I haven't"
 	line "found anything"
-
-	para "useful yet…"
-	line "I promise, if I"
-
-	para "find anything, you"
-	line "can have it!"
+	cont "useful yet…"
+	roll "I promise, if I"
+	cont "find anything, you"
+	roll "can have it!"
 	done
 
 GinaReminderText:
-	text "Oh, <PLAY_G>!"
+	text "Oh, <PLAYER>!"
 	line "How soon can I"
-
-	para "expect to see you"
-	line "for our battle?"
+	cont "expect to see you"
+	roll "for our battle?"
 
 	para "Don't forget,"
 	line "@"
@@ -108,9 +103,8 @@ GinaReminderText:
 GinaComePickUpText:
 	text "I'm getting really"
 	line "impatient, waiting"
-
-	para "to give you my"
-	line "present!"
+	cont "to give you your"
+	roll "present!"
 
 	para "Hurry over to"
 	line "@"

@@ -1,22 +1,20 @@
 DougStoryText:
 	text "You know, my dad"
 	line "was a researcher"
-	
-	para "studying BUG-type"
-	line "#MON."
+	cont "studying BUG-type"
+	roll "#MON."
 
 	para "Ever since I was"
 	line "young, there's"
-
-	para "always been BUG-"
-	line "type #MON scat-"
+	cont "always been BUG-"
+	roll "type #MON scat-"
 	cont "tered all over my"
-	cont "house."
+	roll "house."
 
 	para "That's why I"
 	line "started to like"
 	cont "BUG-type #MON"
-	cont "so much."
+	roll "so much."
 
 	para "My mom…"
 	line "Well, she screamed"

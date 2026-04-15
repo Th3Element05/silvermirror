@@ -150,34 +150,17 @@ TrainerBugCatcherRob:
 .WantsBattle:
 	scall .Rematch
 	winlosstext BugCatcherRobBeatenText, 0
-	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
-	iftrue .LoadFight0
-	checkflag ENGINE_FLYPOINT_CELADON
-	iftrue .LoadFight3
-	checkflag ENGINE_FLYPOINT_CERULEAN
-	iftrue .LoadFight2
-	loadtrainer BUG_CATCHER, ROB1
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_ROB_READY_FOR_REMATCH
-	end
-
-.LoadFight2:
-	loadtrainer BUG_CATCHER, ROB_2
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_ROB_READY_FOR_REMATCH
-	end
-
-.LoadFight3:
-	loadtrainer BUG_CATCHER, ROB_3
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_ROB_READY_FOR_REMATCH
-	end
-
-.LoadFight0:
 	loadtrainer BUG_CATCHER, ROB_0
+	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
+	iftrue .LoadFight
+	loadtrainer BUG_CATCHER, ROB_3
+	checkflag ENGINE_FLYPOINT_CELADON
+	iftrue .LoadFight
+	loadtrainer BUG_CATCHER, ROB_2
+	checkflag ENGINE_FLYPOINT_CERULEAN
+	iftrue .LoadFight
+	loadtrainer BUG_CATCHER, ROB1
+.LoadFight:
 	startbattle
 	reloadmapafterbattle
 	clearflag ENGINE_ROB_READY_FOR_REMATCH
@@ -186,13 +169,13 @@ TrainerBugCatcherRob:
 .RobItem:
 	scall .GiftItem
 	random 4
-	ifequal 0, .chestoberry
-	ifequal 1, .leppaberry
-	ifequal 2, .lumberry
-	ifequal 3, .sitrusberry
+;	ifequal 0, .sitrusberry
+;	ifequal 1, .sitrusberry
+	ifequal 2, .leppaberry
+	ifequal 3, .lumberry
 
-.chestoberry:
-	verbosegiveitem CHESTO_BERRY
+;.sitrusberry:
+	verbosegiveitem SITRUS_BERRY
 	iffalse .PackFull
 	jump .Done
 
@@ -204,15 +187,10 @@ TrainerBugCatcherRob:
 .lumberry:
 	verbosegiveitem LUM_BERRY
 	iffalse .PackFull
-	jump .Done
-
-.sitrusberry:
-	verbosegiveitem SITRUS_BERRY
-	iffalse .PackFull
 
 .Done:
 	clearflag ENGINE_ROB_HAS_BERRY
-	setflag ENGINE_ROB_GAVE_BERRY
+;	setflag ENGINE_ROB_GAVE_BERRY
 	jump .NumberAccepted
 
 .RobDefeated:

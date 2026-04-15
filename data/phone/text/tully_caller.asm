@@ -6,9 +6,8 @@ TullyMonHasGrownText:
 
 	para "It was only about"
 	line "so big when I"
-
-	para "caught it, but now"
-	line "it's way bigger."
+	cont "caught it, but now"
+	roll "it's way bigger."
 	done
 
 TullyDefeatedMonText:
@@ -82,9 +81,7 @@ TullyNoItemText:
 	done
 
 TullyReminderText:
-	text "Yup, TULLY here…"
-
-	para "<PLAY_G>? What?"
+	text "<PLAYER>? What?"
 	line "You're lost?"
 
 	para "Our battle will be"
