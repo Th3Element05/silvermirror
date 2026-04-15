@@ -115,7 +115,7 @@ CharmanderPokeBallScript:
 	waitbutton
 	closepokepic
 	setval CHARMANDER
-	special UnusedSetSeenMon
+	special SilentSetSeenMon
 	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
 	iftrue OaksLastPokemonScript
 	turnobject OAKSLAB_OAK, DOWN
@@ -150,7 +150,7 @@ SquirtlePokeBallScript:
 	waitbutton
 	closepokepic
 	setval SQUIRTLE
-	special UnusedSetSeenMon
+	special SilentSetSeenMon
 	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
 	iftrue OaksLastPokemonScript
 	turnobject OAKSLAB_OAK, DOWN
@@ -185,7 +185,7 @@ BulbasaurPokeBallScript:
 	waitbutton
 	closepokepic
 	setval BULBASAUR
-	special UnusedSetSeenMon
+	special SilentSetSeenMon
 	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
 	iftrue OaksLastPokemonScript
 	turnobject OAKSLAB_OAK, DOWN
