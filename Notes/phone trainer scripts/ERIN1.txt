@@ -1,7 +1,7 @@
 ERIN1
+
 TrainerPicnickerErin1:
 	trainer PICNICKER, ERIN1, EVENT_BEAT_PICNICKER_ERIN, PicnickerErin1SeenText, PicnickerErin1BeatenText, 0, .Script
-
 .Script:
 	loadvar VAR_CALLERID, PHONE_PICNICKER_ERIN
 	opentext
