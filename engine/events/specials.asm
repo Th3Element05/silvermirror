@@ -50,7 +50,7 @@ ShowPokedexEntry: ; silvermirror+
 	call ExitAllMenus
 	ret
 
-UnusedSetSeenMon:
+SilentSetSeenMon:
 	ld a, [wScriptVar]
 	dec a
 	call SetSeenMon
