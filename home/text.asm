@@ -726,7 +726,7 @@ TextCommand_NAMETAG::
 ;	push bc
 	ld d, h
 	ld e, l
-	hlcoord TEXTBOX_X, TEXTBOX_Y
+	hlcoord TEXTBOX_INNERX, TEXTBOX_Y
 	call PlaceString
 	inc de
 	push de
