@@ -1,6 +1,17 @@
 New TO DO list
 
 
+;ntagUsageExampleText:
+;	ntag "SUPERNERD:"
+;	text "Did you check out"
+;	line "the MUSEUM?@" <- @ terminator before new ntag
+;	text_promptbutton   <- promptbutton before new ntag
+;
+;	ntag "NEW SPEAKER:"
+;	text "text test"
+;	done
+
+
 TEST
 
 these use overworld phone scripts from Route20
@@ -43,6 +54,8 @@ OftenFleeMons:
 
 
 DO
+
+apricorn pop in route 2 north from pewter
 
 only later trainers with evolved mons should have randomMon text?
 original pary use BADGE_LEVEL? or...
