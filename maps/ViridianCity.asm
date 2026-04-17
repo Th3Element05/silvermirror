@@ -76,6 +76,7 @@ ViridianCityTutorialGrampsScript:
 
 .DoCatchTutorial
 	writetext ViridianCityCatchTutorialAcceptedText
+	waitbutton
 	loadwildmon WEEDLE, 5
 	catchtutorial BATTLETYPE_TUTORIAL
 	refreshscreen
@@ -524,7 +525,7 @@ ViridianCityGirlScript:
 	iffalse .Skip
 	jumptextfaceplayer ViridianCityGirlGoShoppingText
 .Skip
-	jumptextfaceplayer ViridianCityGirlNoCoffeYetText
+	jumptext ViridianCityGirlNoCoffeYetText
 
 ViridianCityGirlGoShoppingText:
 	text "When I go shop in"
