@@ -1,58 +1,58 @@
-GAVEN1
+GAVIN1
 
-TrainerCooltrainermGaven3:  COOLTRAINERM, FINN  const EVENT_BEAT_COOLTRAINERM_FINN
-	trainer COOLTRAINERM, GAVEN3, EVENT_BEAT_COOLTRAINERM_GAVEN, CooltrainermGaven3SeenText, CooltrainermGaven3BeatenText, 0, .Script
+TrainerCooltrainermGavin3:
+	trainer COOLTRAINERM, GAVIN3, EVENT_BEAT_COOLTRAINERM_GAVIN, CooltrainermGavin3SeenText, CooltrainermGavin3BeatenText, 0, .Script
 
 .Script:
-	loadvar VAR_CALLERID, PHONE_COOLTRAINERM_GAVEN
+	loadvar VAR_CALLERID, PHONE_COOLTRAINERM_GAVIN
 	opentext
-	checkflag ENGINE_GAVEN_READY_FOR_REMATCH
+	checkflag ENGINE_Gavin_READY_FOR_REMATCH
 	iftrue .WantsBattle
-	checkcellnum PHONE_COOLTRAINERM_GAVEN
-	iftrue .GavenDefeated
-	checkevent EVENT_GAVEN_ASKED_FOR_PHONE_NUMBER
+	checkcellnum PHONE_COOLTRAINERM_GAVIN
+	iftrue .GavinDefeated
+	checkevent EVENT_GAVIN_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskedAlready
-	writetext CooltrainermGavenAfterText
+	writetext CooltrainermGavinAfterText
 	promptbutton
-	setevent EVENT_GAVEN_ASKED_FOR_PHONE_NUMBER
+	setevent EVENT_GAVIN_ASKED_FOR_PHONE_NUMBER
 	scall .AskNumber1
 	jump .AskForNumber
 
 .AskedAlready:
 	scall .AskNumber2
 .AskForNumber:
-	askforphonenumber PHONE_COOLTRAINERM_GAVEN
+	askforphonenumber PHONE_COOLTRAINERM_Gavin
 	ifequal PHONE_CONTACTS_FULL, .PhoneFull
 	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
-	gettrainername STRING_BUFFER_3, COOLTRAINERM, GAVEN3
+	gettrainername STRING_BUFFER_3, COOLTRAINERM, Gavin3
 	scall .RegisteredNumber
 	jump .NumberAccepted
 
 .WantsBattle:
 	scall .Rematch
-	winlosstext CooltrainermGaven3BeatenText, 0
+	winlosstext CooltrainermGavin3BeatenText, 0
 	checkevent EVENT_RESTORED_POWER_TO_KANTO
 	iftrue .LoadFight2
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight1
-	loadtrainer COOLTRAINERM, GAVEN3
+	loadtrainer COOLTRAINERM, GAVIN3
 	startbattle
 	reloadmapafterbattle
-	clearflag ENGINE_GAVEN_READY_FOR_REMATCH
+	clearflag ENGINE_GAVIN_READY_FOR_REMATCH
 	end
 
 .LoadFight1:
-	loadtrainer COOLTRAINERM, GAVEN1
+	loadtrainer COOLTRAINERM, GAVIN1
 	startbattle
 	reloadmapafterbattle
-	clearflag ENGINE_GAVEN_READY_FOR_REMATCH
+	clearflag ENGINE_Gavin_READY_FOR_REMATCH
 	end
 
 .LoadFight2:
-	loadtrainer COOLTRAINERM, GAVEN2
+	loadtrainer COOLTRAINERM, GAVIN2
 	startbattle
 	reloadmapafterbattle
-	clearflag ENGINE_GAVEN_READY_FOR_REMATCH
+	clearflag ENGINE_GAVIN_READY_FOR_REMATCH
 	end
 
 .AskNumber1:
