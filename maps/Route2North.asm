@@ -55,10 +55,10 @@ Route2North_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 13,  3, BGEVENT_READ, Route2N_NoFruit
+	bg_event 13,  4, BGEVENT_READ, Route2N_NoFruit
 	bg_event 11, 11, BGEVENT_READ, Route2DiglettsCaveSign
 
 	def_object_events
-	object_event 13,  3, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, Route2N_PNKApricorn, EVENT_ROUTE_2N_PNK_APRICORN
+	object_event 13,  4, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, Route2N_PNKApricorn, EVENT_ROUTE_2N_PNK_APRICORN
 
 ;.PinkOverYellowOBPalette
