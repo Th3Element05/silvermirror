@@ -4,7 +4,7 @@ VanceAnswerPhoneText:
 	text_ram wStringBuffer3
 	text " here!"
 
-	para "Morning, <PLAY_G>!"
+	para "Morning, <PLAYER>!"
 
 	para "Are you using bird"
 	line "#MON?"
@@ -16,7 +16,7 @@ VanceAnswerPhoneDayText:
 	text_ram wStringBuffer3
 	text " here!"
 
-	para "Hi, <PLAY_G>!"
+	para "Hi, <PLAYER>!"
 
 	para "Are your bird"
 	line "#MON flying?"
@@ -28,16 +28,15 @@ VanceAnswerPhoneNiteText:
 	text_ram wStringBuffer3
 	text " here!"
 
-	para "Evening, <PLAY_G>!"
+	para "Evening, <PLAYER>!"
 	line "Are you letting"
-
-	para "your bird #MON"
-	line "see some action?"
+	cont "your bird #MON"
+	roll "see some action?"
 	done
 
 VanceGreetText:
 	text "Good morning,"
-	line "<PLAY_G>!"
+	line "<PLAYER>!"
 
 	para "It's @"
 	text_ram wStringBuffer3
@@ -46,7 +45,7 @@ VanceGreetText:
 	done
 
 VanceGreetDayText:
-	text "Hi, <PLAY_G>!"
+	text "Hi, <PLAYER>!"
 
 	para "It's @"
 	text_ram wStringBuffer3
@@ -56,7 +55,7 @@ VanceGreetDayText:
 
 VanceGreetNiteText:
 	text "Good evening,"
-	line "<PLAY_G>!"
+	line "<PLAYER>!"
 
 	para "It's @"
 	text_ram wStringBuffer3
@@ -72,10 +71,8 @@ VanceGenericText:
 	text_ram wStringBuffer4
 	text_start
 	line "looks like it will"
-
-	para "get tough enough"
-	line "to face and beat"
-
-	para "the legendary bird"
-	line "#MON!"
+	cont "get tough enough"
+	roll "to face and beat"
+	cont "the legendary bird"
+	roll "#MON!"
 	done

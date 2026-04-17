@@ -15,9 +15,8 @@ EoinAskNumber1Text:
 EoinAskNumber2Text:
 	text "Oh, I see you've"
 	line "finally figured"
-	
-	para "out just how"
-	line "amazing I am?"
+	cont "out just how"
+	roll "amazing I am?"
 	
 	para "Well, that's to be"
 	line "expected."

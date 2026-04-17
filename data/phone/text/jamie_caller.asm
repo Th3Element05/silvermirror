@@ -4,16 +4,13 @@ JamieSneezingText:
 	para "Oh, it's nothing."
 
 	para "It's just that my"
-	line "bird #MON sud-"
+	line "bird #MON was"
+	cont "just flapping its"
+	roll "wings…"
 
-	para "denly began flap-"
-	line "ping its wings…"
-
-	para "so there's dust"
-	line "and stuff from"
-
-	para "their wings float-"
-	line "ing near my face…"
+	para "So there's dust"
+	line "and stuff floating"
+	cont "near my face…"
 
 	para "Ah… Ah… Now my"
 	line "nose is itchy…"

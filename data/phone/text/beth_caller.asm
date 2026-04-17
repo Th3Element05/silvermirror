@@ -6,14 +6,13 @@ BethExhilaratingRideText:
 
 	para "@"
 	text_ram wStringBuffer4
-	text " runs"
-	line "very fast."
+	text " gets"
+	line "very hot."
 
-	para "It's exhilarating"
-	line "to ride on its"
-
-	para "back when it"
-	line "really gets going."
+	para "When I get chilly"
+	line "I let it out of"
+	cont "its #BALL and"
+	roll "I warm right up!"
 	done
 
 BethDefeatedMonText:
@@ -44,16 +43,14 @@ BethLostAMonText:
 
 	para "I was trying to"
 	line "catch it when I"
-
-	para "noticed that I was"
-	line "all out of #-"
+	cont "noticed that I was"
+	roll "all out of #-"
 	cont "BALLs."
 
 	para "If you don't check"
 	line "your items, you"
-
-	para "may run out at the"
-	line "worst time."
+	cont "may run out at the"
+	roll "worst time."
 
 	para "I hope you learn"
 	line "from my mistake."
@@ -83,7 +80,7 @@ BethLetsBattleAgainSometimeText:
 	done
 
 BethReminderText:
-	text "Um… <PLAY_G>?"
+	text "Um… <PLAYER>?"
 	line "What's wrong?"
 
 	para "Did you forget our"

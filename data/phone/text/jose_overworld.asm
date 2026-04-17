@@ -1,10 +1,7 @@
 JoseAskNumber1Text:
-	text "If my @"
-	text_ram wStringBuffer4
-	text_start
+	text "If my FEAROW"
 	line "sees anything"
-
-	para "pretty, it goes"
+	cont "pretty, it goes"
 	line "and gets it."
 
 	para "Do you like pretty"
@@ -25,8 +22,8 @@ JoseAskNumber2Text:
 	line "things?"
 
 	para "I could share if"
-	line "FARFETCH'D goes"
-	cont "and gets more."
+	line "FEAROW finds any"
+	cont "more."
 
 	para "What's your phone"
 	line "number? I'll call."
@@ -53,7 +50,7 @@ JoseRematchText:
 	text "Tweet! Tweeeet!"
 
 	para "Kept me waiting!"
-	line "Go, FARFETCH'D!"
+	line "Go, FEAROW!"
 	done
 
 JoseGiftText:
@@ -67,7 +64,6 @@ JoseGiftText:
 JosePackFullText:
 	text "Huh? You don't"
 	line "have anywhere to"
-
-	para "put this. Better"
-	line "come back for it."
+	cont "put this. Better"
+	roll "come back for it."
 	done

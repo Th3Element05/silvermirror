@@ -79,17 +79,17 @@ TrainerBugCatcherDoug:
 
 .lumberry:
 	verbosegiveitem LUM_BERRY
-	iffalse .PackFull
+	iffalse Route9PackFull
 	jump .Done
 
 .leppaberry:
 	verbosegiveitem LEPPA_BERRY
-	iffalse .PackFull
+	iffalse Route9PackFull
 	jump .Done
 
 .sitrusberry:
 	verbosegiveitem SITRUS_BERRY
-	iffalse .PackFull
+	iffalse Route9PackFull
 
 .Done:
 	clearflag ENGINE_DOUG_HAS_BERRY

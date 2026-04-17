@@ -24,25 +24,22 @@ JackDefeatedMonText:
 JackLostAMonText:
 	text "Oh, and listen."
 	line "I missed catching"
-
-	para "a @"
+	cont "a @"
 	text_ram wStringBuffer4
 	text " by"
-	line "just a tiny bit."
+	roll "just a tiny bit."
 
 	para "If I'd been a bit"
 	line "more informed, I'm"
-
-	para "sure I would've"
-	line "caught it…"
+	cont "sure I would've"
+	roll "caught it…"
 	done
 
 JackBattleRematchText:
 	text "Do you want to"
 	line "battle? I'll show"
-
-	para "you how to battle"
-	line "logically."
+	cont "you how to battle"
+	roll "logically."
 
 	para "I'll be in"
 	line "@"
@@ -70,9 +67,8 @@ JackRolloutTriviaText:
 
 	para "If you use DEFENSE"
 	line "CURL, ROLLOUT's"
-
-	para "power goes way up"
-	line "past normal."
+	cont "power goes way up"
+	roll "past normal."
 	done
 
 JackSolarbeamTriviaText:
@@ -80,9 +76,8 @@ JackSolarbeamTriviaText:
 
 	para "If the sunlight is"
 	line "harsh, SOLARBEAM"
-
-	para "doesn't need to be"
-	line "charged up."
+	cont "doesn't need to be"
+	roll "charged up."
 	done
 
 JackStompTriviaText:
@@ -90,9 +85,8 @@ JackStompTriviaText:
 
 	para "If the opponent"
 	line "uses MINIMIZE,"
-
-	para "your STOMP becomes"
-	line "more powerful."
+	cont "your STOMP becomes"
+	roll "more powerful."
 	done
 
 JackGustTriviaText:
@@ -101,7 +95,7 @@ JackGustTriviaText:
 	para "If your opponent"
 	line "is using FLY, your"
 	cont "GUST becomes much"
-	cont "more powerful."
+	roll "more powerful."
 	done
 
 JackTwisterTriviaText:
@@ -110,7 +104,7 @@ JackTwisterTriviaText:
 	para "If your opponent"
 	line "is using FLY, your"
 	cont "TWISTER becomes"
-	cont "more powerful."
+	roll "more powerful."
 	done
 
 JackEarthquakeTriviaText:
@@ -119,7 +113,7 @@ JackEarthquakeTriviaText:
 	para "If your opponent"
 	line "is using DIG, your"
 	cont "EARTHQUAKE becomes"
-	cont "more powerful."
+	roll "more powerful."
 	done
 
 JackMagnitudeTriviaText:
@@ -128,7 +122,7 @@ JackMagnitudeTriviaText:
 	para "If your opponent"
 	line "is using DIG, your"
 	cont "MAGNITUDE becomes"
-	cont "more powerful."
+	roll "more powerful."
 	done
 
 JackSandstormTriviaText:
@@ -136,9 +130,8 @@ JackSandstormTriviaText:
 
 	para "The rock, ground"
 	line "and steel types"
-
-	para "can't be hurt by"
-	line "SANDSTORM."
+	cont "can't be hurt by"
+	roll "SANDSTORM."
 	done
 
 JackSunnyDayTriviaText:
@@ -146,9 +139,8 @@ JackSunnyDayTriviaText:
 
 	para "If the sunlight is"
 	line "harsh, water-type"
-
-	para "moves become much"
-	line "weaker."
+	cont "moves become much"
+	roll "weaker."
 	done
 
 JackRainDanceTriviaText:
@@ -156,9 +148,8 @@ JackRainDanceTriviaText:
 
 	para "When it's raining,"
 	line "fire-type moves"
-
-	para "become much weaker"
-	line "than usual."
+	cont "become much weaker"
+	roll "than usual."
 	done
 
 JackHeardSomeGreatTipsText:
@@ -174,7 +165,7 @@ JackHeardSomeGreatTipsText:
 	done
 
 JackReminderText:
-	text "Hey, <PLAY_G>!"
+	text "Hey, <PLAYER>!"
 
 	para "Do you remember"
 	line "your promise?"

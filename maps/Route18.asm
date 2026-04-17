@@ -18,11 +18,101 @@ Route18AlwaysOnBikeCallback:
 	clearflag ENGINE_ALWAYS_ON_BIKE
 	endcallback
 
+
+; trainers
 TrainerBirdKeeperJose:
 	trainer BIRD_KEEPER, JOSE1, EVENT_BEAT_BIRD_KEEPER_JOSE, BirdKeeperJoseSeenText, BirdKeeperJoseBeatenText, 0, .Script
 .Script:
-	endifjustbattled
-	jumptextfaceplayer BirdKeeperJoseAfterBattleText
+;	endifjustbattled
+;	jumptextfaceplayer BirdKeeperJoseAfterBattleText
+
+	loadvar VAR_CALLERID, PHONE_BIRDKEEPER_JOSE
+	opentext
+	checkflag ENGINE_JOSE_READY_FOR_REMATCH
+	iftrue .WantsBattle
+	checkflag ENGINE_JOSE_HAS_STAR_PIECE
+	iftrue .HasStarPiece
+	checkcellnum PHONE_BIRDKEEPER_JOSE
+	iftrue .JoseDefeated
+	checkevent EVENT_JOSE_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskedAlready
+	writetext BirdKeeperJoseAfterBattleText
+	promptbutton
+	setevent EVENT_JOSE_ASKED_FOR_PHONE_NUMBER
+	scall Route17AskNumber1
+	sjump .AskForNumber
+
+.AskedAlready:
+	scall Route17AskNumber2
+.AskForNumber:
+	askforphonenumber PHONE_BIRDKEEPER_JOSE
+	ifequal PHONE_CONTACTS_FULL, Route17PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, Route17NumberDeclined
+	gettrainername STRING_BUFFER_3, BIRD_KEEPER, JOSE1
+	scall Route17RegisteredNumber
+	sjump Route17NumberAccepted
+
+.WantsBattle:
+	scall Route17Rematch
+	winlosstext BirdKeeperJoseBeatenText, 0
+	loadtrainer BIRD_KEEPER, JOSE_0
+	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
+	iftrue .LoadFight
+	loadtrainer BIRD_KEEPER, JOSE_2
+.LoadFight:
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_JOSE_READY_FOR_REMATCH
+	end
+
+.HasStarPiece:
+	scall .Gift
+	verbosegiveitem STAR_PIECE
+	iffalse .PackFull
+	clearflag ENGINE_JOSE_HAS_STAR_PIECE
+	sjump Route17NumberAccepted
+
+.JoseDefeated:
+	writetext BirdKeeperJoseAfterBattleText
+	promptbutton
+	closetext
+	end
+
+.Gift:
+	jumpstd GiftMScript
+	end
+
+.PackFull:
+	jumpstd PackFullMScript
+	end
+
+;.AskNumber1:
+;	jumpstd AskNumber1MScript
+;	end
+;
+;.AskNumber2:
+;	jumpstd AskNumber2MScript
+;	end
+;
+;.RegisteredNumber:
+;	jumpstd RegisteredNumberMScript
+;	end
+;
+;.NumberAccepted:
+;	jumpstd NumberAcceptedMScript
+;	end
+;
+;.NumberDeclined:
+;	jumpstd NumberDeclinedMScript
+;	end
+;
+;.PhoneFull:
+;	jumpstd PhoneFullMScript
+;	end
+;
+;.Rematch:
+;	jumpstd RematchMScript
+;	end
 
 BirdKeeperJoseSeenText:
 	text "I always check"
@@ -38,6 +128,7 @@ BirdKeeperJoseAfterBattleText:
 	text "I wish I had a"
 	line "BIKE!"
 	done
+
 
 TrainerBirdKeeperBryan:
 	trainer BIRD_KEEPER, BRYAN, EVENT_BEAT_BIRD_KEEPER_BRYAN, BirdKeeperBryanSeenText, BirdKeeperBryanBeatenText, 0, .Script
@@ -59,6 +150,7 @@ BirdKeeperBryanAfterBattleText:
 	line "#MON hunting"
 	cont "area!"
 	done
+
 
 TrainerBirdKeeperPeter:
 	trainer BIRD_KEEPER, PETER, EVENT_BEAT_BIRD_KEEPER_PETER, BirdKeeperPeterSeenText, BirdKeeperPeterBeatenText, 0, .Script
@@ -83,6 +175,8 @@ BirdKeeperPeterAfterBattleText:
 	cont "weekends!"
 	done
 
+
+; bg text
 Route18CyclingRoadSign:
 	jumptext Route18CyclingRoadSignText
 Route18CyclingRoadSignText:
@@ -99,6 +193,7 @@ Route18SignText:
 	para "CELADON CITY -"
 	line "FUCHSIA CITY"
 	done
+
 
 Route18_MapEvents:
 	db 0, 0 ; filler

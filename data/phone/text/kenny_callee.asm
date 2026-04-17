@@ -6,7 +6,7 @@ KennyReminderText:
 	text ","
 	cont "remember?"
 
-	para "I'm out here wait-"
-	line "ing in the midst"
+	para "I'm waiting out"
+	line "here in the midst"
 	cont "of nature!"
 	done

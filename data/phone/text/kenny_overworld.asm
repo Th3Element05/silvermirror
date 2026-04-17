@@ -1,9 +1,8 @@
 KennyAskNumber1Text:
 	text "The same opponent,"
 	line "the same #MON,"
-	
-	para "but the results"
-	line "are different"
+	cont "but the results"
+	roll "are different"
 	cont "every time!"
 	
 	para "I'd like to battle"
@@ -33,8 +32,8 @@ KennyNumberDeclinedText:
 	para "Well, that's fine"
 	line "by me."
 
-	para "I've always got my"
-	line "mountain!"
+	para "I always have the"
+	line "great outdoors!"
 	done
 
 KennyRematchText:

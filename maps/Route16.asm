@@ -47,6 +47,7 @@ Route16_SitrusBerry:
 Route16_NoFruit:
 	farsjump Std_NoFruitScript
 
+
 ; scripts
 Route16Snorlax:
 	opentext
@@ -154,26 +155,100 @@ Route16RadioWakesSnorlax:
 ;	roll "to the mountains!"
 ;	done
 
+
 TrainerBikerAiden:
 	trainer BIKER, AIDEN1, EVENT_BEAT_BIKER_AIDEN, BikerAidenSeenText, BikerAidenBeatenText, 0, .Script
 .Script:
-	endifjustbattled
-	jumptextfaceplayer BikerAidenAfterBattleText
+;	endifjustbattled
+;	jumptextfaceplayer BikerAidenAfterBattleText
+
+	loadvar VAR_CALLERID, PHONE_BIKER_AIDEN
+	opentext
+	checkflag ENGINE_AIDEN_READY_FOR_REMATCH
+	iftrue .WantsBattle
+	checkcellnum PHONE_BIKER_AIDEN
+	iftrue .AidenDefeated
+	checkevent EVENT_AIDEN_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskedBefore
+	writetext BikerAidenAfterBattleText
+	waitbutton
+	setevent EVENT_AIDEN_ASKED_FOR_PHONE_NUMBER
+	scall Route17AskNumber1
+	jump .AskForNumber
+
+.AskedBefore:
+	scall Route17AskNumber2
+.AskForNumber:
+	askforphonenumber PHONE_BIKER_AIDEN
+	ifequal PHONE_CONTACTS_FULL, Route17PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, Route17NumberDeclined
+	gettrainername STRING_BUFFER_3, BIKER, AIDEN1
+	scall Route17RegisteredNumber
+	jump Route17NumberAccepted
+
+.WantsBattle:
+	scall Route17Rematch
+	winlosstext BikerAidenBeatenText, 0
+	loadtrainer BIKER, AIDEN_0
+	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
+	iftrue .LoadFight
+	loadtrainer BIKER, AIDEN_2
+.LoadFight:
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_AIDEN_READY_FOR_REMATCH
+	end
+
+.AidenDefeated:
+	writetext BikerAidenAfterBattleText
+	waitbutton
+	closetext
+	end
+
+;Route17AskNumber1:
+;	jumpstd AskNumber1MScript
+;	end
+;
+;Route17AskNumber2:
+;	jumpstd AskNumber2MScript
+;	end
+;
+;Route17RegisteredNumber:
+;	jumpstd RegisteredNumberMScript
+;	end
+;
+;Route17NumberAccepted:
+;	jumpstd NumberAcceptedMScript
+;	end
+;
+;Route17NumberDeclined:
+;	jumpstd NumberDeclinedMScript
+;	end
+;
+;Route17PhoneFull:
+;	jumpstd PhoneFullMScript
+;	end
+;
+;Route17Rematch:
+;	jumpstd RematchMScript
+;	end
 
 BikerAidenSeenText:
-	text "Sure, I'll go!"
+	text "Hey, who told you"
+	line "you could ride up"
+	cont "and down this"
+	roll "road?"
 	done
 
 BikerAidenBeatenText:
-	text "Don't make"
-	line "me mad!"
+	text "Crash!"
 	done
 
 BikerAidenAfterBattleText:
-	text "I like harassing"
-	line "people with my"
-	cont "vicious #MON!"
+	text "See you later!"
+	line "Come back anytime!"
 	done
+
 
 TrainerJugglerOtis:
 	trainer JUGGLER, OTIS, EVENT_BEAT_JUGGLER_OTIS, JugglerOtisSeenText, JugglerOtisBeatenText, 0, .Script
@@ -197,6 +272,7 @@ JugglerOtisAfterBattleText:
 	cont "tear up enemies!"
 	done
 
+
 TrainerBikerJoseph:
 	trainer BIKER, JOSEPH, EVENT_BEAT_BIKER_JOSEPH, BikerJosephSeenText, BikerJosephBeatenText, 0, .Script
 .Script:
@@ -219,6 +295,7 @@ BikerJosephAfterBattleText:
 	roll "coastal road."
 	done
 
+
 TrainerJugglerBurt:
 	trainer JUGGLER, BURT, EVENT_BEAT_JUGGLER_BURT, JugglerBurtSeenText, JugglerBurtBeatenText, 0, .Script
 .Script:
@@ -240,6 +317,7 @@ JugglerBurtAfterBattleText:
 	line "Get away from me!"
 	done
 
+
 TrainerJugglerFinnley:
 	trainer JUGGLER, FINNLEY, EVENT_BEAT_JUGGLER_FINNLEY, JugglerFinnleySeenText, JugglerFinnleyBeatenText, 0, .Script
 .Script:
@@ -259,6 +337,7 @@ JugglerFinnleyAfterBattleText:
 	text "Forget it, who"
 	line "needs your BIKE!"
 	done
+
 
 TrainerBikerTeddy:
 	trainer BIKER, TEDDY, EVENT_BEAT_BIKER_TEDDY, BikerTeddySeenText, BikerTeddyBeatenText, 0, .Script
@@ -281,9 +360,11 @@ BikerTeddyAfterBattleText:
 	cont "what's it to you?"
 	done
 
+
 ; itemballs
 Route16TMAerialAce:
 	itemball TM_AERIAL_ACE
+
 
 ; signs
 CyclingRoadSign:
@@ -303,6 +384,7 @@ Route16SignText:
 	para "CELADON CITY -"
 	line "FUCHSIA CITY"
 	done
+
 
 Route16_MapEvents:
 	db 0, 0 ; filler

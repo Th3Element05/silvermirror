@@ -351,9 +351,9 @@ DEF KRIS EQU __trainer_class__
 	const AARON
 	const SEAN
 	const MIKE
-	const GAVEN1
-	const RYAN
 	const LEVI
+	const RYAN
+	const GAVIN1
 	const FINN
 	const FELIX
 	const ANDRE
@@ -367,17 +367,16 @@ DEF KRIS EQU __trainer_class__
 	const MILES
 	const ADAM
 ; reamtch
-	const GAVEN_2
-	const GAVEN_0
+	const GAVIN_0
 
 	trainerclass COOLTRAINERF ; 26
 ; kanto
 	const GWEN
 	const LOIS
-	const BETH1
+	const ANNIE
 	const FRAN
 	const JOYCE
-	const ANNIE
+	const BETH1
 	const MIRA
 	const MIA
 	const ELLA
@@ -393,9 +392,8 @@ DEF KRIS EQU __trainer_class__
 	const LILY
 	const RIVER
 ; rematch
-	const BETH_2
 	const BETH_0
-	const REENA_0
+;	const REENA_0
 
 	trainerclass BEAUTY ; 27
 ; kanto
@@ -449,8 +447,8 @@ DEF KRIS EQU __trainer_class__
 	const RICHARD
 	const VICTOR
 ; reamtch
-	const ALFRED_2
-	const ALFRED_0
+;	const ALFRED_2
+;	const ALFRED_0
 
 	trainerclass SKIER ; 2a
 ; johto
@@ -621,14 +619,14 @@ DEF KRIS EQU __trainer_class__
 	const BENJAMIN
 	const ERIK
 	const MICHAEL
-	const JIM
+	const KENNY1
 	const TIMOTHY
 	const BAILEY
 	const TIM
 	const NOLAND
 	const SIDNEY
 	const WALTER
-	const KENNY1
+	const JIM
 ; johto
 	const ANTHONY1
 	const QUENTIN
@@ -766,7 +764,7 @@ DEF KRIS EQU __trainer_class__
 	const NICOLE
 	const MEGAN
 	const ROBIN
-	const LIZ1
+	const LIZ1 ; unused
 ; rematch
 	const GINA_2
 	const GINA_3
@@ -775,8 +773,8 @@ DEF KRIS EQU __trainer_class__
 	const ERIN_0
 	const TIFFANY_2
 	const TIFFANY_0
-	const LIZ_2
-	const LIZ_0
+;	const LIZ_2
+;	const LIZ_0
 
 	trainerclass CAMPER ; 3a
 ; kanto (JR TRAINER M)
@@ -888,8 +886,8 @@ DEF KRIS EQU __trainer_class__
 	const MEGANDPEG
 	const JOANDZOE
 ; rematch
-	const KAYANDTIA_2
-	const KAYANDTIA_0
+;	const KAYANDTIA_2
+;	const KAYANDTIA_0
 
 	trainerclass OFFICER ; 42
 ; kanto

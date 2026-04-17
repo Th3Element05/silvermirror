@@ -1,11 +1,9 @@
 JoseMonsStickHasADeliciousAromaText:
 	text "Hey listen, my"
-	line "@"
-	text_ram wStringBuffer4
-	text "'s stick"
-
-	para "has this really"
-	line "delicious aroma."
+	line "FARFETCH'D has a"
+	cont "stick with this"
+	roll "really delicious"
+	cont "aroma."
 
 	para "That aroma gets my"
 	line "appetite going!"
@@ -20,9 +18,8 @@ JoseDefeatedMonText:
 
 	para "You should have"
 	line "seen FARFETCH'D"
-
-	para "wield that stick."
-	line "Amazing stuff!"
+	cont "wield that stick."
+	roll "Amazing stuff!"
 	done
 
 JoseLostAMonText:
@@ -33,12 +30,10 @@ JoseLostAMonText:
 
 	para "I was trying to"
 	line "catch it, but it"
-
-	para "took off faster"
-	line "than I thought it"
-
-	para "would. It was a"
-	line "bit disappointing."
+	cont "took off faster"
+	roll "than I thought it"
+	cont "would. It was a"
+	roll "bit disappointing."
 	done
 
 JoseBattleRematchText:
@@ -47,9 +42,8 @@ JoseBattleRematchText:
 
 	para "For some reason,"
 	line "my FARFETCH'D is"
-
-	para "all worked up and"
-	line "raring to go."
+	cont "all worked up and"
+	roll "raring to go."
 
 	para "@"
 	text_ram wStringBuffer5
@@ -76,9 +70,8 @@ JoseFoundItemText:
 	line "@"
 	text_ram wStringBuffer5
 	text ","
-
-	para "and I'll let you"
-	line "have it."
+	cont "and I'll let you"
+	roll "have it."
 	done
 
 JoseHaventGottenItemYetText:
@@ -88,13 +81,12 @@ JoseHaventGottenItemYetText:
 
 	para "I'll call you as"
 	line "soon as I get it,"
-
-	para "so could you wait"
-	line "a little longer?"
+	cont "so could you wait"
+	roll "a little longer?"
 	done
 
 JoseReminderText:
-	text "<PLAY_G>, could you"
+	text "<PLAYER>, could you"
 	line "hurry over?"
 
 	para "FARFETCH'D is"
@@ -102,9 +94,8 @@ JoseReminderText:
 
 	para "If you don't come"
 	line "soon, it might"
-
-	para "smack me with its"
-	line "stick!"
+	cont "smack me with its"
+	roll "stick!"
 
 	para "@"
 	text_ram wStringBuffer5
@@ -124,7 +115,6 @@ JoseComePickUpText:
 	line "@"
 	text_ram wStringBuffer5
 	text ","
-
-	para "and I'll let you"
-	line "have it."
+	cont "and I'll let you"
+	roll "have it."
 	done

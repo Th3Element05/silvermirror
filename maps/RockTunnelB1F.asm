@@ -96,29 +96,29 @@ HikerWalterAfterBattleText:
 	cont "thinking!"
 	done
 
-TrainerHikerKenny:
-	trainer HIKER, KENNY1, EVENT_BEAT_HIKER_KENNY, HikerKennySeenText, HikerKennyBeatenText, 0, .Script
+TrainerHikerJim:
+	trainer HIKER, JIM, EVENT_BEAT_HIKER_JIM, HikerJimSeenText, HikerJimBeatenText, 0, .Script
 .Script:
 	endifjustbattled
 	opentext
-	writetext HikerKennyAfterBattleText
+	writetext HikerJimAfterBattleText
 	waitbutton
 	closetext
 	end
 
-HikerKennySeenText:
+HikerJimSeenText:
 	text "My #MON"
 	line "techniques will"
 	cont "leave you crying!"
 	done
 
-HikerKennyBeatenText:
+HikerJimBeatenText:
 	text "I give!"
 	line "You're a better"
 	cont "technician!"
 	done
 
-HikerKennyAfterBattleText:
+HikerJimAfterBattleText:
 	text "In mountains,"
 	line "you'll often find"
 	cont "rock-type #MON."
@@ -252,7 +252,7 @@ RockTunnelB1F_MapEvents:
 	object_event  3,  5, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 3, TrainerPokemaniacCalvin, -1
 	object_event 30,  4, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerHikerSidney, -1
 	object_event  7,  7, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerHikerWalter, -1
-	object_event 29,  7, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerHikerKenny, -1
+	object_event 29,  7, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerHikerJim, -1
 	object_event 12,  9, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerPicnickerCindy, -1
 	object_event 18, 17, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 3, TrainerPokemaniacShane, -1
 	object_event 12, 24, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerPicnickerHope, -1

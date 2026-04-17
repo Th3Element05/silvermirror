@@ -3216,7 +3216,7 @@ wBattleTowerHallwaySceneID::                      db
 ;wJackFightCount::    db
 ;wBeverlyFightCount:: db ; unreferenced
 ;wHueyFightCount::    db
-;wGavenFightCount::   db
+;wGavinFightCount::   db
 ;wBethFightCount::    db
 ;wJoseFightCount::    db
 ;wReenaFightCount::   db

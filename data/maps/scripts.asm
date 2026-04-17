@@ -98,6 +98,10 @@ INCLUDE "maps/PokemonFanClub.asm"
 INCLUDE "maps/VermilionFishingSpeechHouse.asm"
 INCLUDE "maps/VermilionDiglettsCaveSpeechHouse.asm"
 INCLUDE "maps/VermilionMagnetTrainSpeechHouse.asm"
+INCLUDE "maps/DiglettsCave.asm"
+INCLUDE "maps/Route11.asm"
+INCLUDE "maps/Route11Gate.asm"
+INCLUDE "maps/Route11Gate2F.asm"
 
 
 SECTION "Map Scripts 10A", ROMX
@@ -274,10 +278,10 @@ INCLUDE "maps/SilphCoElevator.asm"
 
 SECTION "Map Scripts 22", ROMX
 
-INCLUDE "maps/Route11.asm"
-INCLUDE "maps/Route11Gate.asm"
-INCLUDE "maps/Route11Gate2F.asm"
-INCLUDE "maps/DiglettsCave.asm"
+;INCLUDE "maps/Route11.asm"
+;INCLUDE "maps/Route11Gate.asm"
+;INCLUDE "maps/Route11Gate2F.asm"
+;INCLUDE "maps/DiglettsCave.asm"
 INCLUDE "maps/Route12.asm"
 INCLUDE "maps/Route12Gate.asm"
 INCLUDE "maps/Route12Gate2F.asm"
@@ -331,9 +335,8 @@ INCLUDE "maps/Route26.asm"
 INCLUDE "maps/Route26Gate.asm"
 INCLUDE "maps/Route26HealHouse.asm"
 INCLUDE "maps/DayOfWeekSiblingsHouse.asm"
-INCLUDE "maps/Route27West.asm"
-INCLUDE "maps/TohjoFalls.asm"
 INCLUDE "maps/Route27East.asm"
+INCLUDE "maps/TohjoFalls.asm"
 
 
 SECTION "Map Scripts 26", ROMX
@@ -345,6 +348,7 @@ INCLUDE "maps/PlayersNeighborsHouse.asm"
 INCLUDE "maps/RedsHouse1F.asm"
 INCLUDE "maps/RedsHouse2F.asm"
 INCLUDE "maps/Route29.asm"
+INCLUDE "maps/Route27West.asm"
 
 
 SECTION "Map Scripts 27", ROMX

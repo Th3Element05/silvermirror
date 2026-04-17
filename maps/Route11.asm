@@ -262,7 +262,7 @@ TrainerSchoolboyAlan:
 
 .ChooseRematch:
 	scall Route11Rematch
-	winlosstext SchoolboyAlan1BeatenText, 0
+	winlosstext SchoolboyAlanBeatenText, 0
 	loadtrainer SCHOOLBOY, ALAN_0
 	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
 	iftrue .LoadFight
@@ -336,7 +336,7 @@ TrainerYoungsterIan:
 	iftrue .IanDefeated
 	checkevent EVENT_IAN_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskedAlready
-	writetext YoungsterIanAfterText
+	writetext YoungsterIanAfterBattleText
 	promptbutton
 	setevent EVENT_IAN_ASKED_FOR_PHONE_NUMBER
 	scall Route11AskNumber1
@@ -381,7 +381,7 @@ TrainerYoungsterIan:
 	end
 
 .IanDefeated:
-	writetext YoungsterIanAfterText
+	writetext YoungsterIanAfterBattleText
 	promptbutton
 	closetext
 	end

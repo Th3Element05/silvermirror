@@ -5,6 +5,7 @@ Route21_MapScripts:
 
 	def_callbacks
 
+
 TrainerFisherJonah:
 	trainer FISHER, JONAH, EVENT_BEAT_FISHER_JONAH, FisherJonahSeenText, FisherJonahBeatenText, 0, .Script
 .Script:
@@ -30,15 +31,87 @@ FisherJonahAfterBattleText:
 	line "anything good!"
 	done
 
+
 TrainerFisherKyle:
 	trainer FISHER, KYLE1, EVENT_BEAT_FISHER_KYLE, FisherKyleSeenText, FisherKyleBeatenText, 0, .Script
 .Script:
-	endifjustbattled
+;	endifjustbattled
+;	opentext
+;	writetext FisherKyleAfterBattleText
+;	waitbutton
+;	closetext
+;	end
+
+	loadvar VAR_CALLERID, PHONE_FISHER_KYLE
 	opentext
+	checkflag ENGINE_KYLE_READY_FOR_REMATCH
+	iftrue .WantsBattle
+	checkcellnum PHONE_FISHER_KYLE
+	iftrue .KyleDefeated
+	checkevent EVENT_KYLE_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskedBefore
 	writetext FisherKyleAfterBattleText
-	waitbutton
+	promptbutton
+	setevent EVENT_KYLE_ASKED_FOR_PHONE_NUMBER
+	scall Route20AskNumber1
+	jump .AskForNumber
+
+.AskedBefore:
+	scall Route20AskNumber2
+.AskForNumber:
+	askforphonenumber PHONE_FISHER_KYLE
+	ifequal PHONE_CONTACTS_FULL, Route20PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, Route20NumberDeclined
+	gettrainername STRING_BUFFER_3, FISHER, KYLE1
+	scall Route20RegisteredNumber
+	jump Route20NumberAccepted
+
+.WantsBattle:
+	scall Route20Rematch
+	winlosstext FisherKyleBeatenText, 0
+	loadtrainer FISHER, KYLE_0
+	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
+	iftrue .LoadFight
+	loadtrainer FISHER, KYLE1
+.LoadFight:
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_KYLE_READY_FOR_REMATCH
+	end
+
+.KyleDefeated:
+	writetext FisherKyleAfterBattleText
+	promptbutton
 	closetext
 	end
+
+;Route20AskNumber1:
+;	jumpstd AskNumber1MScript
+;	end
+;
+;Route20AskNumber2:
+;	jumpstd AskNumber2MScript
+;	end
+;
+;Route20RegisteredNumber:
+;	jumpstd RegisteredNumberMScript
+;	end
+;
+;Route20NumberAccepted:
+;	jumpstd NumberAcceptedMScript
+;	end
+;
+;Route20NumberDeclined:
+;	jumpstd NumberDeclinedMScript
+;	end
+;
+;Route20PhoneFull:
+;	jumpstd PhoneFullMScript
+;	end
+;
+;Route20Rematch:
+;	jumpstd RematchMScript
+;	end
 
 FisherKyleSeenText:
 	text "I got a big haul!"
@@ -54,6 +127,7 @@ FisherKyleAfterBattleText:
 	text "I seem to only"
 	line "catch MAGIKARP!"
 	done
+
 
 TrainerSwimmerMSeth:
 	trainer SWIMMERM, SETH, EVENT_BEAT_SWIMMERM_SETH, SwimmerMSethSeenText, SwimmerMSethBeatenText, 0, .Script
@@ -81,6 +155,7 @@ SwimmerMSethAfterBattleText:
 	cont "tube? Get lost!"
 	done
 
+
 TrainerSwimmerMLewis:
 	trainer SWIMMERM, LEWIS, EVENT_BEAT_SWIMMERM_LEWIS, SwimmerMLewisSeenText, SwimmerMLewisBeatenText, 0, .Script
 .Script:
@@ -104,6 +179,7 @@ SwimmerMLewisAfterBattleText:
 	text "I like the"
 	line "mountains too!"
 	done
+
 
 TrainerFisherMartin:
 	trainer FISHER, MARTIN, EVENT_BEAT_FISHER_MARTIN, FisherMartinSeenText, FisherMartinBeatenText, 0, .Script
@@ -131,6 +207,7 @@ FisherMartinAfterBattleText:
 	cont "catch anything."
 	done
 
+
 TrainerFisherStephen:
 	trainer FISHER, STEPHEN, EVENT_BEAT_FISHER_STEPHEN, FisherStephenSeenText, FisherStephenBeatenText, 0, .Script
 .Script:
@@ -156,6 +233,7 @@ FisherStephenAfterBattleText:
 	line "bite! Yeah!"
 	done
 
+
 TrainerSwimmerMHal:
 	trainer SWIMMERM, HAL, EVENT_BEAT_SWIMMERM_HAL, SwimmerMHalSeenText, SwimmerMHalBeatenText, 0, .Script
 .Script:
@@ -180,6 +258,7 @@ SwimmerMHalAfterBattleText:
 	text "Where'd you catch"
 	line "your #MON?"
 	done
+
 
 TrainerSwimmerMPaton:
 	trainer SWIMMERM, PATON, EVENT_BEAT_SWIMMERM_PATON, SwimmerMPatonSeenText, SwimmerMPatonBeatenText, 0, .Script
@@ -208,6 +287,7 @@ SwimmerMPatonAfterBattleText:
 	roll "marathon left!"
 	done
 
+
 TrainerSwimmerMBrandon:
 	trainer SWIMMERM, BRANDON, EVENT_BEAT_SWIMMERM_BRANDON, SwimmerMBrandonSeenText, SwimmerMBrandonBeatenText, 0, .Script
 .Script:
@@ -232,6 +312,7 @@ SwimmerMBrandonAfterBattleText:
 	text "I'm sunburnt to a"
 	line "crisp!"
 	done
+
 
 Route21_MapEvents:
 	db 0, 0 ; filler

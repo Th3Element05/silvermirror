@@ -1,6 +1,6 @@
 TiffanyAskNumber1Text:
 	text "Hi! You like"
-	line "CLEFAIRY too?"
+	line "PIKACHU too?"
 
 	para "They're so very"
 	line "cute, aren't they?"
@@ -12,7 +12,7 @@ TiffanyAskNumber1Text:
 	line "your phone number!"
 
 	para "Let's talk about"
-	line "CLEFAIRY!"
+	line "PIKACHU!"
 	done
 
 TiffanyAskNumber2Text:
@@ -20,20 +20,19 @@ TiffanyAskNumber2Text:
 	line "your phone number!"
 
 	para "Let's talk about"
-	line "CLEFAIRY!"
+	line "PIKACHU!"
 	done
 
 TiffanyNumberAcceptedText:
-	text "Isn't my CLEFAIRY"
+	text "Isn't my PIKACHU"
 	line "super-adorable?"
 	done
 
 TiffanyNumberDeclinedText:
 	text "Aww… Oh well."
 	line "Look for me if you"
-
-	para "want to talk about"
-	line "CLEFAIRY."
+	cont "want to talk about"
+	roll "PIKACHU."
 	done
 
 TiffanyPhoneFullText:
@@ -44,7 +43,7 @@ TiffanyPhoneFullText:
 TiffanyRematchText:
 	text "There you are!"
 
-	para "CLEFAIRY, I want"
+	para "PIKACHU, I want"
 	line "you to try hard!"
 	done
 

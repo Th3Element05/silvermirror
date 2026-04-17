@@ -134,8 +134,8 @@ HueyHangUpScript:
 	promptbutton
 	sjump PhoneScript_HangUpText_Male
 
-GavenHangUpNotThursdayScript:
-	farwritetext GavenHangUpNotThursdayText
+GavinHangUpNotThursdayScript:
+	farwritetext GavinHangUpNotThursdayText
 	promptbutton
 	sjump PhoneScript_HangUpText_Male
 

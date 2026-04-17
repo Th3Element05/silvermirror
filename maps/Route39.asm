@@ -33,6 +33,7 @@ Route39_OranBerry:
 Route39_NoFruit:
 	farsjump Std_NoFruitScript
 
+
 ; trainers
 TrainerPsychicNorman:
 	trainer PSYCHIC_T, NORMAN, EVENT_BEAT_PSYCHIC_NORMAN, PsychicNormanSeenText, PsychicNormanBeatenText, 0, .Script
@@ -65,6 +66,7 @@ PsychicNormanAfterBattleText:
 	cont "one has different"
 	roll "potential."
 	done
+
 
 TrainerPokefanfEleanor:
 	faceplayer
@@ -128,6 +130,7 @@ PokefanfEleanorAfterBattleText:
 	cont "training here than"
 	roll "anywhere else."
 	done
+
 
 TrainerPokefanmDerek:
 	trainer POKEFANM, DEREK1, EVENT_BEAT_POKEFANM_DEREK, PokefanmDerekSeenText, PokefanmDerekBeatenText, 0, .Script
@@ -225,6 +228,7 @@ PokefanMDerekText_NotBragging:
 	roll "people brag!"
 	done
 
+
 TrainerSailorStanley:
 	trainer SAILOR, STANLEY, EVENT_BEAT_SAILOR_STANLEY, SailorStanleySeenText, SailorStanleyBeatenText, 0, .Script
 .Script:
@@ -257,6 +261,7 @@ SailorStanleyAfterBattleText:
 	cont "voyages."
 	done
 
+
 Route39Miltank:
 	opentext
 	writetext Route39MiltankText
@@ -268,6 +273,7 @@ Route39Miltank:
 Route39MiltankText:
 	text "MILTANK: Mooo!"
 	done
+
 
 Route39Sign:
 	jumptext Route39SignText
@@ -304,8 +310,10 @@ Route39TrainerTipsText:
 	line "any tree you see!"
 	done
 
+
 Route39HiddenNugget:
 	hiddenitem NUGGET, EVENT_ROUTE_39_HIDDEN_NUGGET
+
 
 Route39_MapEvents:
 	db 0, 0 ; filler

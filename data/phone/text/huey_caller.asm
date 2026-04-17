@@ -9,9 +9,8 @@ HueyBattleRematchText:
 	text_ram wStringBuffer5
 	text "'s"
 	line "where I'm waiting"
-
-	para "for you. Hustle"
-	line "over here pronto!"
+	cont "for you. Hustle"
+	roll "over here pronto!"
 	done
 
 HueyHangUpText:

@@ -2,22 +2,22 @@ AnthonyMonAteSomeBerriesText:
 	text "The other day, I"
 	line "was watching my"
 
-	para "@"
-	text_ram wStringBuffer4
-	text " eat"
-	line "some BERRIES."
+	para "#MON eat some"
+	line "BERRIES."
+;	para "@"
+;	text_ram wStringBuffer4
+;	text " eat"
+;	line "some BERRIES."
 
 	para "It looked like it"
-	line "was enjoying its"
-
-	para "meal, so I decided"
-	line "to try some."
+	line "was enjoying them,"
+	cont "so I decided to"
+	line "try some."
 
 	para "I'm not sure if"
 	line "people should eat"
-
-	para "that stuff, but it"
-	line "was delicious!"
+	cont "that stuff, but it"
+	roll "was delicious!"
 	done
 
 AnthonyDefeatedMonText:

@@ -3,7 +3,7 @@ GinaPhoneCalleeScript: ; You call Gina
 	farscall PhoneScript_AnswerPhone_Female
 
 	checkflag ENGINE_GINA_READY_FOR_REMATCH
-	iftrue GinaRemindBattle
+	iftrue GinaWaitingForBattle
 
 	checkflag ENGINE_GINA_HAS_LEAF_STONE
 	iftrue GinaRemindLeafStone
@@ -29,7 +29,7 @@ GinaPhoneCallerScript: ; Calls you
 	iftrue GinaRockets
 
 	checkflag ENGINE_GINA_READY_FOR_REMATCH
-	iftrue GinaRemindBattle
+	iftrue GinaWaitingForBattle
 
 	checkflag ENGINE_GINA_HAS_LEAF_STONE
 	iftrue GinaRemindLeafStone

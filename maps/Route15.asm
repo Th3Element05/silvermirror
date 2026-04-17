@@ -5,6 +5,7 @@ Route15_MapScripts:
 
 	def_callbacks
 
+
 TrainerPicnickerMaria:
 	trainer PICNICKER, MARIA, EVENT_BEAT_PICNICKER_MARIA, PicnickerMariaSeenText, PicnickerMariaBeatenText, 0, .Script
 .Script:
@@ -24,6 +25,7 @@ PicnickerMariaAfterBattleText:
 	text "I trade #MON"
 	line "with my friends!"
 	done
+
 
 TrainerPicnickerLucy:
 	trainer PICNICKER, LUCY, EVENT_BEAT_PICNICKER_LUCY, PicnickerLucySeenText, PicnickerLucyBeatenText, 0, .Script
@@ -46,6 +48,7 @@ PicnickerLucyAfterBattleText:
 	line "weaker people."
 	done
 
+
 TrainerBirdKeeperBoris:
 	trainer BIRD_KEEPER, BORIS, EVENT_BEAT_BIRD_KEEPER_BORIS, BirdKeeperBorisSeenText, BirdKeeperBorisBeatenText, 0, .Script
 .Script:
@@ -67,6 +70,7 @@ BirdKeeperBorisAfterBattleText:
 	text "Maybe I'm not cut"
 	line "out for battles."
 	done
+
 
 TrainerBirdKeeperBob:
 	trainer BIRD_KEEPER, BOB, EVENT_BEAT_BIRD_KEEPER_BOB, BirdKeeperBobSeenText, BirdKeeperBobBeatenText, 0, .Script
@@ -92,6 +96,7 @@ BirdKeeperBobAfterBattleText:
 	roll "effect on birds?"
 	done
 
+
 TrainerBeautyValerie:
 	trainer BEAUTY, VALERIE, EVENT_BEAT_BEAUTY_VALERIE, BeautyValerieSeenText, BeautyValerieBeatenText, 0, .Script
 .Script:
@@ -114,6 +119,7 @@ BeautyValerieAfterBattleText:
 	line "home to be with"
 	cont "my #MON!"
 	done
+
 
 TrainerPicnickerCarrie:
 	trainer PICNICKER, CARRIE, EVENT_BEAT_PICNICKER_CARRIE, PicnickerCarrieSeenText, PicnickerCarrieBeatenText, 0, .Script
@@ -141,6 +147,7 @@ PicnickerCarrieAfterBattleText:
 	line "Trainer can."
 	done
 
+
 TrainerBikerJoel:
 	trainer BIKER, JOEL, EVENT_BEAT_BIKER_JOEL, BikerJoelSeenText, BikerJoelBeatenText, 0, .Script
 .Script:
@@ -161,6 +168,7 @@ BikerJoelAfterBattleText:
 	text "I was just joking"
 	line "about the money!"
 	done
+
 
 TrainerBikerGlenn:
 	trainer BIKER, GLENN, EVENT_BEAT_BIKER_GLENN, BikerGlennSeenText, BikerGlennBeatenText, 0, .Script
@@ -184,11 +192,114 @@ BikerGlennAfterBattleText:
 	roll "TEAM ROCKET RULES!"
 	done
 
+
 TrainerPicnickerTiffany:
 	trainer PICNICKER, TIFFANY1, EVENT_BEAT_PICNICKER_TIFFANY, PicnickerTiffanySeenText, PicnickerTiffanyBeatenText, 0, .Script
 .Script:
-	endifjustbattled
-	jumptextfaceplayer PicnickerTiffanyAfterBattleText
+;	endifjustbattled
+;	jumptextfaceplayer PicnickerTiffanyAfterBattleText
+
+	loadvar VAR_CALLERID, PHONE_PICNICKER_TIFFANY
+	opentext
+	checkflag ENGINE_TIFFANY_READY_FOR_REMATCH
+	iftrue .WantsBattle
+	checkflag ENGINE_TIFFANY_HAS_DUSK_STONE
+	iftrue .HasDuskStone
+	checkcellnum PHONE_PICNICKER_TIFFANY
+	iftrue .TiffanyDefeated
+	checkevent EVENT_TIFFANY_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskedAlready
+	writetext PicnickerTiffanyAfterBattleText
+	promptbutton
+	setevent EVENT_TIFFANY_ASKED_FOR_PHONE_NUMBER
+	scall .AskNumber1
+	sjump .AskForNumber
+
+.AskedAlready:
+	scall .AskNumber2
+.AskForNumber:
+	askforphonenumber PHONE_PICNICKER_TIFFANY
+	ifequal PHONE_CONTACTS_FULL, .PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
+	gettrainername STRING_BUFFER_3, PICNICKER, TIFFANY1
+	scall .RegisteredNumber
+	sjump .NumberAccepted
+
+.WantsBattle:
+	scall .Rematch
+	winlosstext PicnickerTiffanyBeatenText, 0
+	loadtrainer PICNICKER, TIFFANY_0
+	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
+	iftrue .LoadFight
+	loadtrainer PICNICKER, TIFFANY_2
+.LoadFight:
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_TIFFANY_READY_FOR_REMATCH
+	end
+
+.HasDuskStone:
+	scall .Gift
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .DuskStone
+	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
+	iftrue .DuskStone
+
+;NotDuskStone
+	verbosegiveitem NUGGET
+	iffalse .PackFull
+	clearflag ENGINE_TIFFANY_HAS_DUSK_STONE
+;	setevent EVENT_TIFFANY_GAVE_DUSK_STONE
+	sjump .NumberAccepted
+
+.DuskStone
+	verbosegiveitem DUSK_STONE
+	iffalse .PackFull
+	clearflag ENGINE_TIFFANY_HAS_DUSK_STONE
+	setevent EVENT_TIFFANY_GAVE_DUSK_STONE
+	sjump .NumberAccepted
+
+.TiffanyDefeated:
+	writetext PicnickerTiffanyAfterBattleText
+	promptbutton
+	closetext
+	end
+
+.AskNumber1:
+	jumpstd AskNumber1FScript
+	end
+
+.AskNumber2:
+	jumpstd AskNumber2FScript
+	end
+
+.RegisteredNumber:
+	jumpstd RegisteredNumberFScript
+	end
+
+.NumberAccepted:
+	jumpstd NumberAcceptedFScript
+	end
+
+.NumberDeclined:
+	jumpstd NumberDeclinedFScript
+	end
+
+.PhoneFull:
+	jumpstd PhoneFullFScript
+	end
+
+.Rematch:
+	jumpstd RematchFScript
+	end
+
+.Gift:
+	jumpstd GiftFScript
+	end
+
+.PackFull:
+	jumpstd PackFullFScript
+	end
 
 PicnickerTiffanySeenText:
 	text "You look gentle,"
@@ -205,6 +316,7 @@ PicnickerTiffanyAfterBattleText:
 	line "BIKERs, they look"
 	cont "so ugly and mean!"
 	done
+
 
 TrainerBeautyOlivia:
 	trainer BEAUTY, OLIVIA, EVENT_BEAT_BEAUTY_OLIVIA, BeautyOliviaSeenText, BeautyOliviaBeatenText, 0, .Script
@@ -227,6 +339,7 @@ BeautyOliviaAfterBattleText:
 	line "I can take it!"
 	done
 
+
 Route15Sign:
 	jumptext Route15SignText
 Route15SignText:
@@ -236,8 +349,10 @@ Route15SignText:
 	line "LAVENDER TOWN"
 	done
 
+
 Route15TMWaterPulse:
 	itemball TM_WATER_PULSE
+
 
 Route15_MapEvents:
 	db 0, 0 ; filler

@@ -51,12 +51,12 @@ BrentBillTriviaScript:
 	promptbutton
 	sjump PhoneScript_HangUpText_Male
 
-.FlowerShop:
-	farwritetext BrentFlowerShopGossipText
-	promptbutton
-	sjump PhoneScript_HangUpText_Male
-
 .KimonoGirl:
 	farwritetext BrentKimonoGirlGossipText
 	promptbutton
 	sjump PhoneScript_HangUpText_Male
+
+;.FlowerShop:
+;	farwritetext BrentFlowerShopGossipText
+;	promptbutton
+;	sjump PhoneScript_HangUpText_Male
