@@ -68,9 +68,8 @@ BugCatcherBennySeenText:
 	done
 
 BugCatcherBennyBeatenText:
-	text "I"
-	line "give! You're good"
-	cont "at this!"
+	text "I give! You're"
+	line "good at this!"
 	done
 
 BugCatcherBennyAfterBattleText:
