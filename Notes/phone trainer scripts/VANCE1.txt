@@ -80,40 +80,6 @@ TrainerBirdKeeperVance1:
 	closetext
 	end
 
-BirdKeeperVance1SeenText:
-	text "Do you know about"
-	line "the legendary bird"
-	cont "#MON?"
-	done
-
-BirdKeeperVance1BeatenText:
-	text "Whew! You're hot"
-	line "stuff."
-	done
-
-BirdKeeperVanceLegendaryBirdsText:
-	text "ARTICUNO, ZAPDOS"
-	line "and MOLTRES are"
-
-	para "the three legend-"
-	line "ary bird #MON."
-
-	para "I heard there are"
-	line "other legendary"
-	cont "birds, though."
-	done
-
-BirdKeeperVance2BeatenText:
-	text "Why can't I ever"
-	line "beat you?"
-
-	para "Oh yeah, here you"
-	line "go. It's that gift"
-
-	para "I couldn't give"
-	line "you last time."
-	done
-
 Route44AskNumber1M:
 	jumpstd AskNumber1MScript
 	end
@@ -158,3 +124,38 @@ VancePackFull:
 Route44RematchGiftM:
 	jumpstd RematchGiftMScript
 	end
+
+
+BirdKeeperVance1SeenText:
+	text "Do you know about"
+	line "the legendary bird"
+	cont "#MON?"
+	done
+
+BirdKeeperVance1BeatenText:
+	text "Whew! You're hot"
+	line "stuff."
+	done
+
+BirdKeeperVanceLegendaryBirdsText:
+	text "ARTICUNO, ZAPDOS"
+	line "and MOLTRES are"
+
+	para "the three legend-"
+	line "ary bird #MON."
+
+	para "I heard there are"
+	line "other legendary"
+	cont "birds, though."
+	done
+
+BirdKeeperVance2BeatenText:
+	text "Why can't I ever"
+	line "beat you?"
+
+	para "Oh yeah, here you"
+	line "go. It's that gift"
+
+	para "I couldn't give"
+	line "you last time."
+	done

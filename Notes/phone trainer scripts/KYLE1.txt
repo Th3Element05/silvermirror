@@ -1,0 +1,111 @@
+KYLE1
+
+TrainerFisherKyle:
+	trainer FISHER, KYLE1, EVENT_BEAT_FISHER_KYLE, FisherKyleSeenText, FisherKyleBeatenText, 0, .Script
+
+.Script:
+	loadvar VAR_CALLERID, PHONE_FISHER_KYLE
+	opentext
+	checkflag ENGINE_KYLE_READY_FOR_REMATCH
+	iftrue .WantsBattle
+	checkcellnum PHONE_FISHER_KYLE
+	iftrue .KyleDefeated
+	checkevent EVENT_KYLE_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskedBefore
+	writetext FisherKyleAfterBattleText
+	promptbutton
+	setevent EVENT_KYLE_ASKED_FOR_PHONE_NUMBER
+	scall .AskNumber1
+	jump .AskForNumber
+
+.AskedBefore:
+	scall .AskNumber2
+.AskForNumber:
+	askforphonenumber PHONE_FISHER_KYLE
+	ifequal PHONE_CONTACTS_FULL, .PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
+	gettrainername STRING_BUFFER_3, FISHER, KYLE1
+	scall .RegisteredNumber
+	jump .NumberAccepted
+
+.WantsBattle:
+	scall .Rematch
+	winlosstext FisherKyleBeatenText, 0
+	checkevent EVENT_BEAT_BLUE
+	iftrue .LoadFight2
+	checkevent ENGINE_FLYPOINT_PEWTER
+	iftrue .LoadFight1
+	loadtrainer FISHER, KYLE1
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_KYLE_READY_FOR_REMATCH
+	end
+
+.LoadFight1:
+	loadtrainer FISHER, KYLE2
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_KYLE_READY_FOR_REMATCH
+	end
+
+.LoadFight2:
+	loadtrainer FISHER, KYLE3
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_KYLE_READY_FOR_REMATCH
+	end
+
+.KyleDefeated:
+	writetext FisherKyleAfterBattleText
+	promptbutton
+	closetext
+	end
+
+.AskNumber1:
+	jumpstd AskNumber1MScript
+	end
+
+.AskNumber2:
+	jumpstd AskNumber2MScript
+	end
+
+.RegisteredNumber:
+	jumpstd RegisteredNumberMScript
+	end
+
+.NumberAccepted:
+	jumpstd NumberAcceptedMScript
+	end
+
+.NumberDeclined:
+	jumpstd NumberDeclinedMScript
+	end
+
+.PhoneFull:
+	jumpstd PhoneFullMScript
+	end
+
+.Rematch:
+	jumpstd RematchMScript
+	end
+
+
+FisherKyleSeenText:
+	text "Do you remember?"
+	done
+
+FisherKyleBeatenText:
+	text "You do remember?"
+	done
+
+FisherKyleAfterBattleText:
+	text "The tug you feel"
+	line "on the ROD when"
+
+	para "you hook a #-"
+	line "MON…"
+
+	para "That's the best"
+	line "feeling ever for"
+	cont "an angler like me."
+	done

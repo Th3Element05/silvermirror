@@ -3,7 +3,19 @@ New TO DO list
 
 TEST
 
-pewter city bench guy emote
+these use overworld phone scripts from Route20
+(they are in the same bank so should be fine)
+Fisher Kyle (route 21)
+
+these use overworld phone scripts from Route17
+(they are in the same bank so should be fine)
+Fisher Tully (route 12)
+Bird Keeper Jamie (route 13)
+Biker Reese (route 14)
+Biker Aiden (route 16)
+Bird Keeper Jose (route 18)
+
+pewter city bench guy emote (new timings)
 
 missingno encounter gives rare candies, overflow x99?
 (should be okay but test with missingno anyway)
@@ -35,6 +47,8 @@ DO
 only later trainers with evolved mons should have randomMon text?
 original pary use BADGE_LEVEL? or...
 use VAR_BADGES instead of FLYPOINT to set rematch?
+
+rematch text, check for having AnswerPhone first
 
 phone trainers
 \data\phone\text\*   "roll text"
