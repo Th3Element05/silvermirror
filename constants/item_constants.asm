@@ -197,14 +197,14 @@ ENDM
 ; see data/moves/tmhm_moves.asm for moves
 DEF TM01 EQU const_value
 	add_tm DYNAMICPUNCH ;TM01 ; aa
-	add_tm DRAGON_CLAW  ;TM02 ; ab ;new, done
+	add_tm DRAGON_CLAW  ;TM02 ; ab ;new
 	add_tm SURF         ;TM03 ; ac
-	add_tm CALM_MIND    ;TM04 ; ad ;new, done
+	add_tm CALM_MIND    ;TM04 ; ad ;new
 	add_tm FLASH        ;TM05 ; ae
 	add_tm TOXIC        ;TM06 ; af
-	add_tm BULK_UP      ;TM07 ; b0 ;new, done
+	add_tm BULK_UP      ;TM07 ; b0 ;new
 	add_tm BODY_SLAM    ;TM08 ; b1
-	add_tm BULLET_SEED  ;TM09 ; b2 ;new, done
+	add_tm BULLET_SEED  ;TM09 ; b2 ;new
 	add_tm HIDDEN_POWER ;TM10 ; b3
 	add_tm BUBBLEBEAM   ;TM11 ; b4
 	add_tm WATER_GUN    ;TM12 ; b5
@@ -225,7 +225,7 @@ DEF TM01 EQU const_value
 	add_tm FISSURE      ;TM27 ; c4
 	add_tm DIG          ;TM28 ; c5
 	add_tm PSYCHIC_M    ;TM29 ; c6
-	add_tm WATER_PULSE  ;TM30 ; c7 ;new, done
+	add_tm WATER_PULSE  ;TM30 ; c7 ;new
 	add_tm MUD_SLAP     ;TM31 ; c8
 	add_tm DOUBLE_TEAM  ;TM32 ; c9
 	add_tm REFLECT      ;TM33 ; ca
@@ -235,51 +235,51 @@ DEF TM01 EQU const_value
 	add_tm SUBMISSION   ;TM37 ; ce
 	add_tm FIRE_BLAST   ;TM38 ; cf
 	add_tm SWIFT        ;TM39 ; d0
-	add_tm AERIAL_ACE   ;TM40 ; d1 ;new, done
+	add_tm AERIAL_ACE   ;TM40 ; d1 ;new
 	add_tm FLAMETHROWER ;TM41 ; d2
 	add_tm SPARK        ;TM42 ; d3
 	add_tm SKY_ATTACK   ;TM43 ; d4
 	add_tm REST         ;TM44 ; d5
 	add_tm THUNDER_WAVE ;TM45 ; d6
-	add_tm SHARPEN      ;TM46 ; d7 ;new, done
+	add_tm SHARPEN      ;TM46 ; d7 ;new
 	add_tm ICY_WIND     ;TM47 ; d8
 	add_tm ROCK_SLIDE   ;TM48 ; d9
 	add_tm TRI_ATTACK   ;TM49 ; da
 	add_tm SUBSTITUTE   ;TM50 ; db
-	add_tm ROOST        ;TM51 ; dc ;new, done
-	add_tm FOCUS_BLAST  ;TM52 ; dd ;new, done
-	add_tm ENERGY_BALL  ;TM53 ; de ;new, done
+	add_tm ROOST        ;TM51 ; dc ;new
+	add_tm FOCUS_BLAST  ;TM52 ; dd ;new
+	add_tm ENERGY_BALL  ;TM53 ; de ;new
 	add_tm FALSE_SWIPE  ;TM54 ; df
 	add_tm BRICK_BREAK  ;TM55 ; e0
 	add_tm HEADBUTT     ;TM56 ; e1
-	add_tm AIR_SLICE    ;TM57 ; e2 ;new, done
+	add_tm AIR_SLICE    ;TM57 ; e2 ;new
 	add_tm DOUBLE_EDGE  ;TM58 ; e3
-	add_tm DRAGON_PULSE ;TM59 ; e4 ;new, done
-	add_tm FLASH_CANNON ;TM60 ; e5 ;new, done
+	add_tm DRAGON_PULSE ;TM59 ; e4 ;new
+	add_tm FLASH_CANNON ;TM60 ; e5 ;new
 	add_tm ROLLOUT      ;TM61 ; e6
-	add_tm SILVER_WIND  ;TM62 ; e7 ;new, 
+	add_tm SILVER_WIND  ;TM62 ; e7 ;new
 	add_tm SLUDGE_BOMB  ;TM63 ; e8
 	add_tm SWAGGER      ;TM64 ; e9
-	add_tm SHADOW_CLAW  ;TM65 ; ea ;new, done
+	add_tm SHADOW_CLAW  ;TM65 ; ea ;new
 	add_tm THIEF        ;TM66 ; eb
 	add_tm STEEL_WING   ;TM67 ; ec
-	add_tm GIGA_IMPACT  ;TM68 ; ed ;new, done
+	add_tm GIGA_IMPACT  ;TM68 ; ed ;new
 	add_tm CURSE        ;TM69 ; ee
 	add_tm SHADOW_BALL  ;TM70 ; ef
-	add_tm STONE_EDGE   ;TM71 ; f0 ;new, done
+	add_tm STONE_EDGE   ;TM71 ; f0 ;new
 	add_tm DRAGONBREATH ;TM72 ; f1
 	add_tm ATTRACT      ;TM73 ; f2
-	add_tm GYRO_BALL    ;TM74 ; f3 ;new, done
+	add_tm GYRO_BALL    ;TM74 ; f3 ;new
 	add_tm SWORDS_DANCE ;TM75 ; f4
 	add_tm SUNNY_DAY    ;TM76 ; f5
 	add_tm RAIN_DANCE   ;TM77 ; f6
 	add_tm SANDSTORM    ;TM78 ; f7
-	add_tm DARK_PULSE   ;TM79 ; f8 ;new, done
-	add_tm ANCIENTPOWER ;TM80 ; f9 ;new, done
-	add_tm X_SCISSOR    ;TM81 ; fa ;new, done
+	add_tm DARK_PULSE   ;TM79 ; f8 ;new
+	add_tm ANCIENTPOWER ;TM80 ; f9 ;new
+	add_tm X_SCISSOR    ;TM81 ; fa ;new
 	add_tm WHIRLPOOL    ;TM82 ; fb
 	add_tm WATERFALL    ;TM83 ; fc
-	add_tm POISON_JAB   ;TM84 ; fd ;new, done
+	add_tm POISON_JAB   ;TM84 ; fd ;new
 ;	add_tm TACKLE       ;TM85 ; fe
 DEF NUM_TMS EQU __tmhm_value__ - 1
 
