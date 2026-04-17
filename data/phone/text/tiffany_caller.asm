@@ -1,26 +1,22 @@
 TiffanyMonIsAdorableText:
-	text "My @"
-	text_ram wStringBuffer4
-	text "'s"
+	text "My PIKACHU's"
 	line "adorable, don't"
+	cont "you think so?"
 
-	para "you think so?"
-	line "I always sleep"
-
-	para "with it--it's so"
-	line "fluffy and warm!"
+	para "I always sleep"
+	line "with it--it's so"
+	cont "fluffy and warm!"
 	done
 
 TiffanyDefeatedMonText:
 	text "Oh, and we had to"
 	line "battle a wild"
-
-	para "@"
+	cont "@"
 	text_ram wStringBuffer4
 	text " a while"
-	line "ago…"
+	roll "ago…"
 
-	para "My CLEFAIRY came"
+	para "My PIKACHU came"
 	line "close to fainting!"
 
 	para "Isn't that awful?"
@@ -34,32 +30,29 @@ TiffanyDefeatedMonText:
 TiffanyLostAMonText:
 	text "Oh, and we had to"
 	line "battle a wild"
-
-	para "@"
+	cont "@"
 	text_ram wStringBuffer4
 	text " a while"
-	line "ago…"
+	roll "ago…"
 
-	para "My CLEFAIRY got"
+	para "My PIKACHU got"
 	line "frightened, so we"
-
-	para "ran away as fast"
-	line "as we could!"
+	cont "ran away as fast"
+	roll "as we could!"
 
 	para "I just can't help"
 	line "feeling protective"
-	cont "of my CLEFAIRY."
+	cont "of my PIKACHU."
 	done
 
 TiffanyBattleRematchText:
 	text "I know this might"
 	line "surprise you, but"
-
-	para "would you like to"
-	line "battle?"
+	cont "would you like to"
+	roll "battle?"
 
 	para "I'll be waiting"
-	line "with CLEFAIRY on"
+	line "with PIKACHU on"
 	cont "@"
 	text_ram wStringBuffer5
 	text "."
@@ -70,9 +63,9 @@ TiffanyItsAwfulText:
 	text "!"
 
 	para "It's awful."
-	line "My CLEFAIRY…"
+	line "My PIKACHU…"
 
-	para "Huh? <PLAY_G>?"
+	para "Huh? <PLAYER>?"
 
 	para "Oh, sorry! I was"
 	line "in a hurry, and I…"
@@ -86,12 +79,22 @@ TiffanyHangUpText:
 	done
 
 TiffanyFoundItemText:
-	text "I bought a"
-	line "SILK SCARF for"
-	cont "my CLEFAIRY."
+	text "I found this odd"
+	line "STONE recently."
 
-	para "I bought an extra"
-	line "one to give you!"
+	para "It turns out it's"
+	line "a DUSK STONE!"
+
+	para "It's useless for"
+	line "my PIKACHU, so you"
+	cont "can have it!"
+
+;	text "I bought a"
+;	line "SILK SCARF for"
+;	cont "my PIKACHU."
+;
+;	para "I bought an extra"
+;	line "one to give you!"
 
 	para "Come collect it on"
 	line "@"
@@ -101,14 +104,14 @@ TiffanyFoundItemText:
 
 TiffanyNoItemText:
 	text "I love dressing up"
-	line "my CLEFAIRY!"
+	line "my PIKACHU!"
 	done
 
 TiffanyReminderText:
 	text "What's wrong?"
 	line "Can't you visit?"
 
-	para "CLEFAIRY got tired"
+	para "PIKACHU got tired"
 	line "and fell asleep."
 
 	para "I'm not sure if I"
@@ -124,9 +127,9 @@ TiffanyHurryText:
 	text "What's wrong?"
 	line "Can't you visit?"
 
-	para "I'm sure this will"
-	line "look good on your"
-	cont "CLEFAIRY."
+;	para "I'm sure this will"
+;	line "look good on your"
+;	cont "PIKACHU."
 
 	para "Please hurry to"
 	line "@"

@@ -13,6 +13,7 @@ Route14_MapScripts:
 ;	closetext
 ;	end
 
+
 TrainerBikerHarris:
 	trainer BIKER, HARRIS, EVENT_BEAT_BIKER_HARRIS, BikerHarrisSeenText, BikerHarrisBeatenText, 0, .Script
 .Script:
@@ -33,6 +34,7 @@ BikerHarrisAfterBattleText:
 	text "Raising #MON"
 	line "is a drag, man."
 	done
+
 
 TrainerBikerZeke:
 	trainer BIKER, ZEKE, EVENT_BEAT_BIKER_ZEKE, BikerZekeSeenText, BikerZekeBeatenText, 0, .Script
@@ -59,6 +61,7 @@ BikerZekeAfterBattleText:
 	line "And you know it!"
 	done
 
+
 TrainerBikerCharles:
 	trainer BIKER, CHARLES, EVENT_BEAT_BIKER_CHARLES, BikerCharlesSeenText, BikerCharlesBeatenText, 0, .Script
 .Script:
@@ -79,6 +82,7 @@ BikerCharlesAfterBattleText:
 	line "win, you and me"
 	cont "one on one!"
 	done
+
 
 TrainerBirdKeeperHank:
 	trainer BIRD_KEEPER, HANK, EVENT_BEAT_BIRD_KEEPER_HANK, BirdKeeperHankSeenText, BirdKeeperHankBeatenText, 0, .Script
@@ -103,11 +107,83 @@ BirdKeeperHankAfterBattleText:
 	cont "birds of prey."
 	done
 
+
 TrainerBikerReese:
 	trainer BIKER, REESE1, EVENT_BEAT_BIKER_REESE, BikerReeseSeenText, BikerReeseBeatenText, 0, .Script
 .Script:
-	endifjustbattled
-	jumptextfaceplayer BikerReeseAfterBattleText
+;	endifjustbattled
+;	jumptextfaceplayer BikerReeseAfterBattleText
+
+	loadvar VAR_CALLERID, PHONE_BIKER_REESE
+	opentext
+	checkflag ENGINE_REESE_READY_FOR_REMATCH
+	iftrue .WantsBattle
+	checkcellnum PHONE_BIKER_REESE
+	iftrue .ReeseDefeated
+	checkevent EVENT_REESE_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskedBefore
+	writetext BikerReeseAfterBattleText
+	waitbutton
+	setevent EVENT_REESE_ASKED_FOR_PHONE_NUMBER
+	scall Route17AskNumber1
+	jump .AskForNumber
+
+.AskedBefore:
+	scall Route17AskNumber2
+.AskForNumber:
+	askforphonenumber PHONE_BIKER_REESE
+	ifequal PHONE_CONTACTS_FULL, Route17PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, Route17NumberDeclined
+	gettrainername STRING_BUFFER_3, BIKER, REESE1
+	scall Route17RegisteredNumber
+	jump Route17NumberAccepted
+
+.WantsBattle:
+	scall Route17Rematch
+	winlosstext BikerReeseBeatenText, 0
+	loadtrainer BIKER, REESE_0
+	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
+	iftrue .LoadFight
+	loadtrainer BIKER, REESE_2
+.LoadFight:
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_REESE_READY_FOR_REMATCH
+	end
+
+.ReeseDefeated:
+	writetext BikerReeseAfterBattleText
+	waitbutton
+	closetext
+	end
+
+;.AskNumber1:
+;	jumpstd AskNumber1MScript
+;	end
+;
+;.AskNumber2:
+;	jumpstd AskNumber2MScript
+;	end
+;
+;.RegisteredNumber:
+;	jumpstd RegisteredNumberMScript
+;	end
+;
+;.NumberAccepted:
+;	jumpstd NumberAcceptedMScript
+;	end
+;
+;.NumberDeclined:
+;	jumpstd NumberDeclinedMScript
+;	end
+;
+;.PhoneFull:
+;	jumpstd PhoneFullMScript
+;	end
+;
+;.Rematch:
+;	jumpstd RematchMScript
+;	end
 
 BikerReeseSeenText:
 	text "C'mon, c'mon."
@@ -117,13 +193,14 @@ BikerReeseSeenText:
 
 BikerReeseBeatenText:
 	text "Arrg!"
-	line "Lost! Get lost!"
+	line "Lost!"
 	done
 
 BikerReeseAfterBattleText:
 	text "What, what, what?"
 	line "What do you want?"
 	done
+
 
 TrainerBirdKeeperTheo:
 	trainer BIRD_KEEPER, THEO, EVENT_BEAT_BIRD_KEEPER_THEO, BirdKeeperTheoSeenText, BirdKeeperTheoBeatenText, 0, .Script
@@ -145,6 +222,7 @@ BirdKeeperTheoAfterBattleText:
 	line "it doesn't matter"
 	cont "in the long run!"
 	done
+
 
 Route14_MapEvents:
 	db 0, 0 ; filler

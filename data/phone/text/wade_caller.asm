@@ -4,17 +4,15 @@ WadeAreYourMonGrowingText:
 
 	para "My #MON are"
 	line "growing a bit too"
-
-	para "quickly for me."
-	line "It's overwhelming!"
+	cont "quickly for me."
+	roll "It's overwhelming!"
 
 	para "@"
 	text_ram wStringBuffer4
 	text "'s grow-"
 	line "ing especially"
-
-	para "quickly. I think"
-	line "it'll get tough."
+	cont "quickly. I think"
+	roll "it'll get tough."
 	done
 
 WadeDefeatedMonText:
@@ -22,14 +20,13 @@ WadeDefeatedMonText:
 	line "wild @"
 	text_ram wStringBuffer4
 	text_start
-	para "with one hit a"
-	line "while back."
+	cont "with one hit a"
+	roll "while back."
 
 	para "It went down so"
 	line "easily, I felt a"
-
-	para "little sorry for"
-	line "the poor thing."
+	cont "little sorry for"
+	roll "the poor thing."
 	done
 
 WadeLostAMonText:
@@ -74,12 +71,11 @@ WadeHangUpText:
 WadeBugCatchingContestText:
 	text "The Bug-Catching"
 	line "Contest is at the"
-
-	para "NATIONAL PARK"
-	line "today."
+	cont "NATIONAL PARK"
+	roll "today."
 
 	para "Are you going,"
-	line "<PLAY_G>?"
+	line "<PLAYER>?"
 
 	para "I'm trying to make"
 	line "up my mind."
@@ -88,9 +84,8 @@ WadeBugCatchingContestText:
 WadeFoundItemText:
 	text "I found all kinds"
 	line "of BERRIES. If you"
-
-	para "want, I'll share"
-	line "some with you."
+	cont "want, I'll share"
+	roll "some with you."
 
 	para "I'll be waiting on"
 	line "@"

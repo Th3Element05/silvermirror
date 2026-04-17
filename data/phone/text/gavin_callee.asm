@@ -1,34 +1,34 @@
-GavenAnswerPhoneText:
+GavinAnswerPhoneText:
 	text "Hello, this is"
 	line "@"
 	text_ram wStringBuffer3
 	text " speaking…"
 
-	para "Hi, <PLAY_G>!"
+	para "Hi, <PLAYER>!"
 	line "Good morning!"
 	done
 
-GavenAnswerPhoneDayText:
+GavinAnswerPhoneDayText:
 	text "Hello, this is"
 	line "@"
 	text_ram wStringBuffer3
 	text " speaking…"
 
-	para "Hi, <PLAY_G>!"
+	para "Hi, <PLAYER>!"
 	done
 
-GavenAnswerPhoneNiteText:
+GavinAnswerPhoneNiteText:
 	text "Hello, this is"
 	line "@"
 	text_ram wStringBuffer3
 	text " speaking…"
 
-	para "Hi, <PLAY_G>!"
+	para "Hi, <PLAYER>!"
 	line "Good evening!"
 	done
 
-GavenGreetText:
-	text "<PLAY_G>, good"
+GavinGreetText:
+	text "<PLAYER>, good"
 	line "morning!"
 
 	para "It's me, @"
@@ -37,8 +37,8 @@ GavenGreetText:
 	line "How are you doing?"
 	done
 
-GavenGreetDayText:
-	text "Hi, <PLAY_G>!"
+GavinGreetDayText:
+	text "Hi, <PLAYER>!"
 
 	para "It's me, @"
 	text_ram wStringBuffer3
@@ -46,8 +46,8 @@ GavenGreetDayText:
 	line "How are you doing?"
 	done
 
-GavenGreetNiteText:
-	text "<PLAY_G>, good"
+GavinGreetNiteText:
+	text "<PLAYER>, good"
 	line "evening!"
 
 	para "It's me, @"
@@ -56,7 +56,7 @@ GavenGreetNiteText:
 	line "How are you doing?"
 	done
 
-GavenGenericText:
+GavinGenericText:
 	text "How are your"
 	line "#MON doing?"
 

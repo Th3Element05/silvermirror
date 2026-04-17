@@ -5,6 +5,7 @@ Route10South_MapScripts:
 
 	def_callbacks
 
+
 ;TrainerPokemaniacBrent:
 ;	trainer POKEMANIAC, BRENT1, EVENT_BEAT_POKEMANIAC_BRENT, PokemaniacBrentSeenText, PokemaniacBrentBeatenText, 0, .Script
 ;.Script:
@@ -32,6 +33,7 @@ Route10South_MapScripts:
 ;	line "#MON at home!"
 ;	done
 
+
 TrainerPicnickerErin:
 	trainer PICNICKER, ERIN1, EVENT_BEAT_PICNICKER_ERIN, PicnickerErinSeenText, PicnickerErinBeatenText, 0, .Script
 .Script:
@@ -44,6 +46,8 @@ TrainerPicnickerErin:
 
 	loadvar VAR_CALLERID, PHONE_PICNICKER_ERIN
 	opentext
+	checkevent EVENT_ERIN_HAS_CALCIUM
+	iftrue .HasCalcium
 	checkflag ENGINE_ERIN_READY_FOR_REMATCH
 	iftrue .WantsBattle
 	checkcellnum PHONE_PICNICKER_ERIN
@@ -68,7 +72,7 @@ TrainerPicnickerErin:
 
 .WantsBattle:
 	scall .RematchF
-	winlosstext PicnickerErin1BeatenText, 0
+	winlosstext PicnickerErinBeatenText, 0
 	loadtrainer PICNICKER, ERIN_0
 	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
 	iftrue .LoadFight
@@ -77,6 +81,10 @@ TrainerPicnickerErin:
 	startbattle
 	reloadmapafterbattle
 	clearflag ENGINE_ERIN_READY_FOR_REMATCH
+	checkevent EVENT_GOT_CALCIUM_FROM_ERIN
+	iffalse .GiveCalcium
+	random 10
+	ifequal 0, .GiveCalcium
 	end
 
 .GiveCalcium
@@ -160,46 +168,127 @@ PicnickerErinAfterBattleText:
 	done
 
 PicnickerErinBeatenGiftText:
-	text "Aww… I keep losing"
-	line "all the time!"
+	text "Thanks a lot for"
+	line "battling with me!"
 
-	para "I'll just have to"
-	line "try harder!"
-
-	para "Anyway, thanks for"
-	line "battling me again"
-	cont "and again. Here's"
-	roll "that present from"
-	cont "before."
+	para "Here's that gift"
+	line "from before."
 	done
 
+;	text "Aww… I keep losing"
+;	line "all the time!"
+;
+;	para "I'll just have to"
+;	line "try harder!"
+;
+;	para "Anyway, thanks for"
+;	line "battling me again"
+;	cont "and again. Here's"
+;	roll "that present from"
+;	cont "before."
+;	done
 
-TrainerHikerJim:
-	trainer HIKER, JIM, EVENT_BEAT_HIKER_JIM, HikerJimSeenText, HikerJimBeatenText, 0, .Script
+
+TrainerHikerKenny:
+	trainer HIKER, KENNY1, EVENT_BEAT_HIKER_KENNY, HikerKennySeenText, HikerKennyBeatenText, 0, .Script
 .Script:
-	endifjustbattled
+;	endifjustbattled
+;	opentext
+;	writetext HikerKennyAfterBattleText
+;	waitbutton
+;	closetext
+;	end
+
+	loadvar VAR_CALLERID, PHONE_HIKER_KENNY
 	opentext
-	writetext HikerJimAfterBattleText
+	checkflag ENGINE_KENNY_READY_FOR_REMATCH
+	iftrue .WantsBattle
+	checkcellnum PHONE_HIKER_KENNY
+	iftrue .KennyDefeated
+	checkevent EVENT_KENNY_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskedBefore
+	writetext HikerKennyAfterBattleText
+	waitbutton
+	setevent EVENT_KENNY_ASKED_FOR_PHONE_NUMBER
+	scall .AskNumber1
+	jump .AskForNumber
+
+.AskedBefore:
+	scall .AskNumber2
+.AskForNumber:
+	askforphonenumber PHONE_HIKER_KENNY
+	ifequal PHONE_CONTACTS_FULL, .PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
+	gettrainername STRING_BUFFER_3, HIKER, KENNY1
+	scall .RegisteredNumber
+	jump .NumberAccepted
+
+.WantsBattle:
+	scall .Rematch
+	winlosstext HikerKennyBeatenText, 0
+	loadtrainer HIKER, KENNY_0
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .LoadFight
+	loadtrainer HIKER, KENNY_2
+.LoadFight:
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_KENNY_READY_FOR_REMATCH
+	end
+
+.KennyDefeated:
+	writetext HikerKennyAfterBattleText
 	waitbutton
 	closetext
 	end
 
-HikerJimSeenText:
-	text "Ha-hahah-ah-ha!"
+.AskNumber1:
+	jumpstd AskNumber1MScript
+	end
+
+.AskNumber2:
+	jumpstd AskNumber2MScript
+	end
+
+.RegisteredNumber:
+	jumpstd RegisteredNumberMScript
+	end
+
+.NumberAccepted:
+	jumpstd NumberAcceptedMScript
+	end
+
+.NumberDeclined:
+	jumpstd NumberDeclinedMScript
+	end
+
+.PhoneFull:
+	jumpstd PhoneFullMScript
+	end
+
+.Rematch:
+	jumpstd RematchMScript
+	end
+
+HikerKennySeenText:
+	text "I caught my ONIX"
+	line "in ROCK TUNNEL!"
 	done
 
-HikerJimBeatenText:
-	text "Ha-haha!"
-	line "Not laughing!"
-	cont "Ha-hay fever!"
-	roll "Haha-ha-choo!"
+HikerKennyBeatenText:
+	text "I lost…"
 	done
 
-HikerJimAfterBattleText:
-	text "Haha-ha-choo!"
-	line "Ha-choo!"
-	cont "Snort! Snivel!"
+HikerKennyAfterBattleText:
+	text "Geological fea-"
+	line "tures don't appear"
+	cont "to change."
+
+	para "But they actually"
+	line "change, little by"
+	cont "little."
 	done
+
 
 TrainerHikerTimothy:
 	trainer HIKER, TIMOTHY, EVENT_BEAT_HIKER_TIMOTHY, HikerTimothySeenText, HikerTimothyBeatenText, 0, .Script
@@ -226,6 +315,7 @@ HikerTimothyAfterBattleText:
 	line "mountain air!"
 	done
 
+
 TrainerPokemaniacLarry:
 	trainer POKEMANIAC, LARRY, EVENT_BEAT_POKEMANIAC_LARRY, PokemaniacLarrySeenText, PokemaniacLarryBeatenText, 0, .Script
 .Script:
@@ -251,6 +341,7 @@ PokemaniacLarryAfterBattleText:
 	line "for beating me!"
 	done
 
+
 ; signs
 Route10Sign:
 	jumptext Route10SignText
@@ -270,9 +361,11 @@ Route10SignText:
 ;Route10SouthRock:
 ;	jumpstd SmashRockScript
 
+
 ; hidden items
 Route10HiddenMaxEther:
 	hiddenitem MAX_ETHER, EVENT_ROUTE_10_HIDDEN_MAX_ETHER
+
 
 Route10South_MapEvents:
 	db 0, 0 ; filler
@@ -290,7 +383,7 @@ Route10South_MapEvents:
 	def_object_events
 ;	object_event 10, 14, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerPokemaniacBrent, -1
 	object_event  7,  4, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerPicnickerErin, -1
-	object_event  3,  7, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerHikerJim, -1
+	object_event  3,  7, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerHikerKenny, -1
 	object_event  3, 11, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerHikerTimothy, -1
 	object_event 12, 14, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 4, TrainerPokemaniacLarry, -1
 ;	object_event 14,  6, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route10SouthRock, -1

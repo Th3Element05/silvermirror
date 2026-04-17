@@ -4,7 +4,7 @@ BethAnswerPhoneText:
 	text_ram wStringBuffer3
 	text "."
 
-	para "Oh, <PLAY_G>."
+	para "Oh, <PLAYER>."
 	line "Good morning."
 
 	para ""
@@ -16,7 +16,7 @@ BethAnswerPhoneDayText:
 	text_ram wStringBuffer3
 	text "."
 
-	para "Oh. Hi, <PLAY_G>."
+	para "Oh. Hi, <PLAYER>."
 	done
 
 BethAnswerPhoneNiteText:
@@ -25,13 +25,13 @@ BethAnswerPhoneNiteText:
 	text_ram wStringBuffer3
 	text "."
 
-	para "Oh, <PLAY_G>."
+	para "Oh, <PLAYER>."
 	line "Good evening."
 	done
 
 BethGreetText:
 	text "Good morning,"
-	line "<PLAY_G>!"
+	line "<PLAYER>!"
 
 	para "This is @"
 	text_ram wStringBuffer3
@@ -40,7 +40,7 @@ BethGreetText:
 	done
 
 BethGreetDayText:
-	text "<PLAY_G>, hi!"
+	text "<PLAYER>, hi!"
 	line "This is @"
 	text_ram wStringBuffer3
 	text "."
@@ -50,7 +50,7 @@ BethGreetDayText:
 	done
 
 BethGreetNiteText:
-	text "Hi, <PLAY_G>."
+	text "Hi, <PLAYER>."
 	line "Good evening."
 
 	para "This is @"
@@ -64,16 +64,13 @@ BethGreetNiteText:
 BethGenericText:
 	text "Are you the kind"
 	line "of person who goes"
-
-	para "to #MON CENTERs"
-	line "often?"
+	cont "to #MON CENTERs"
+	roll "often?"
 
 	para "I go every day."
 	line "Watching out for"
-
-	para "the health of your"
-	line "#MON is a basic"
-
-	para "part of being a"
-	line "#MON trainer."
+	cont "the health of your"
+	roll "#MON is a basic"
+	cont "part of being a"
+	roll "#MON trainer."
 	done

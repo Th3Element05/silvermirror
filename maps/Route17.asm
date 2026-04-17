@@ -11,6 +11,8 @@ Route17AlwaysOnBikeCallback:
 	setflag ENGINE_DOWNHILL
 	endcallback
 
+
+; trainers
 TrainerJugglerDustin:
 	trainer JUGGLER, DUSTIN, EVENT_BEAT_JUGGLER_DUSTIN, JugglerDustinSeenText, JugglerDustinBeatenText, 0, .Script
 .Script:
@@ -31,6 +33,7 @@ JugglerDustinAfterBattleText:
 	line "bump you outta"
 	cont "here!"
 	done
+
 
 TrainerBikerMarkey:
 	trainer BIKER, MARKEY, EVENT_BEAT_BIKER_MARKEY, BikerMarkeySeenText, BikerMarkeyBeatenText, 0, .Script
@@ -53,6 +56,7 @@ BikerMarkeyAfterBattleText:
 	line "downhill!"
 	done
 
+
 TrainerJugglerLyle:
 	trainer JUGGLER, LYLE, EVENT_BEAT_JUGGLER_LYLE, JugglerLyleSeenText, JugglerLyleBeatenText, 0, .Script
 .Script:
@@ -74,6 +78,7 @@ JugglerLyleAfterBattleText:
 	cont "CYCLING ROAD!"
 	done
 
+
 TrainerBikerRiley:
 	trainer BIKER, RILEY, EVENT_BEAT_BIKER_RILEY, BikerRileySeenText, BikerRileyBeatenText, 0, .Script
 .Script:
@@ -93,6 +98,7 @@ BikerRileyAfterBattleText:
 	text "Are you looking"
 	line "for adventure?"
 	done
+
 
 TrainerBikerTheron:
 	trainer BIKER, THERON, EVENT_BEAT_BIKER_THERON, BikerTheronSeenText, BikerTheronBeatenText, 0, .Script
@@ -116,6 +122,7 @@ BikerTheronAfterBattleText:
 	cont "POWER PLANT."
 	done
 
+
 TrainerJugglerDarius:
 	trainer JUGGLER, DARIUS, EVENT_BEAT_JUGGLER_DARIUS, JugglerDariusSeenText, JugglerDariusBeatenText, 0, .Script
 .Script:
@@ -136,6 +143,7 @@ JugglerDariusAfterBattleText:
 	line "need element"
 	cont "STONEs to evolve."
 	done
+
 
 TrainerJugglerJulien:
 	trainer JUGGLER, JULIEN, EVENT_BEAT_JUGGLER_JULIEN, JugglerJulienSeenText, JugglerJulienBeatenText, 0, .Script
@@ -158,11 +166,84 @@ JugglerJulienAfterBattleText:
 	line "weight there!"
 	done
 
+
 TrainerBikerEoin:
 	trainer BIKER, EOIN1, EVENT_BEAT_BIKER_EOIN, BikerEoinSeenText, BikerEoinBeatenText, 0, .Script
 .Script:
-	endifjustbattled
-	jumptextfaceplayer BikerEoinAfterBattleText
+;	endifjustbattled
+;	jumptextfaceplayer BikerEoinAfterBattleText
+
+	loadvar VAR_CALLERID, PHONE_BIKER_EOIN
+	opentext
+	checkflag ENGINE_EOIN_READY_FOR_REMATCH
+	iftrue .WantsBattle
+	checkcellnum PHONE_BIKER_EOIN
+	iftrue .EoinDefeated
+	checkevent EVENT_EOIN_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskedBefore
+	writetext BikerEoinAfterBattleText
+	waitbutton
+	setevent EVENT_EOIN_ASKED_FOR_PHONE_NUMBER
+	scall Route17AskNumber1
+	jump .AskForNumber
+
+.AskedBefore:
+	scall Route17AskNumber2
+.AskForNumber:
+	askforphonenumber PHONE_BIKER_EOIN
+	ifequal PHONE_CONTACTS_FULL, Route17PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, Route17NumberDeclined
+	gettrainername STRING_BUFFER_3, BIKER, EOIN1
+	scall Route17RegisteredNumber
+	jump Route17NumberAccepted
+
+.WantsBattle:
+	scall Route17Rematch
+	winlosstext BikerEoinBeatenText, 0
+	loadtrainer BIKER, EOIN_0
+	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
+	iftrue .LoadFight
+	loadtrainer BIKER, EOIN_2
+.LoadFight:
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_EOIN_READY_FOR_REMATCH
+	end
+
+.EoinDefeated:
+	writetext BikerEoinAfterBattleText
+	waitbutton
+	closetext
+	end
+
+Route17AskNumber1:
+	jumpstd AskNumber1MScript
+	end
+
+Route17AskNumber2:
+	jumpstd AskNumber2MScript
+	end
+
+Route17RegisteredNumber:
+	jumpstd RegisteredNumberMScript
+	end
+
+Route17NumberAccepted:
+	jumpstd NumberAcceptedMScript
+	end
+
+Route17NumberDeclined:
+	jumpstd NumberDeclinedMScript
+	end
+
+Route17PhoneFull:
+	jumpstd PhoneFullMScript
+	end
+
+Route17Rematch:
+	jumpstd RematchMScript
+	end
+
 
 BikerEoinSeenText:
 	text "Nice BIKE!"
@@ -177,6 +258,7 @@ BikerEoinAfterBattleText:
 	text "The slope makes"
 	line "it hard to steer!"
 	done
+
 
 TrainerJugglerMaximo:
 	trainer JUGGLER, MAXIMO, EVENT_BEAT_JUGGLER_MAXIMO, JugglerMaximoSeenText, JugglerMaximoBeatenText, 0, .Script
@@ -196,6 +278,7 @@ JugglerMaximoAfterBattleText:
 	text "Be ready to fight"
 	line "for your beliefs!"
 	done
+
 
 TrainerBikerNolan:
 	trainer BIKER, NOLAN, EVENT_BEAT_BIKER_NOLAN, BikerNolanSeenText, BikerNolanBeatenText, 0, .Script
@@ -218,6 +301,8 @@ BikerNolanAfterBattleText:
 	line "a few Zs!"
 	done
 
+
+; bg text
 Route17NoticeSign:
 	jumptext Route17NoticeSignText
 Route17NoticeSignText:
@@ -277,6 +362,7 @@ Route17CyclingRoadEndsSignText:
 	line "Slope ends here!"
 	done
 
+
 ; hidden items
 Route17HiddenRareCandy:
 	hiddenitem RARE_CANDY, EVENT_ROUTE_17_HIDDEN_RARE_CANDY
@@ -293,12 +379,14 @@ Route17HiddenPPUp:
 Route17HiddenMaxElixer:
 	hiddenitem MAX_ELIXER, EVENT_ROUTE_17_HIDDEN_MAX_ELIXER
 
+
 ; itemballs
 Route17SharpBeak:
 	itemball SHARP_BEAK
 
 Route17TMRollout:
 	itemball TM_ROLLOUT
+
 
 Route17_MapEvents:
 	db 0, 0 ; filler

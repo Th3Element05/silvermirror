@@ -67,54 +67,54 @@ VictoryRoad3FBoulderFellText:
 	line "through!"
 	done
 
-TrainerCooltrainerFBeth:
-	trainer COOLTRAINERF, BETH1, EVENT_BEAT_COOLTRAINERF_BETH, CooltrainerFBethSeenText, CooltrainerFBethBeatenText, 0, .Script
+TrainerCooltrainerFAnnie:
+	trainer COOLTRAINERF, ANNIE, EVENT_BEAT_COOLTRAINERF_ANNIE, CooltrainerFAnnieSeenText, CooltrainerFAnnieBeatenText, 0, .Script
 .Script:
 	endifjustbattled
 	opentext
-	writetext CooltrainerFBethAfterBattleText
+	writetext CooltrainerFAnnieAfterBattleText
 	waitbutton
 	closetext
 	end
 
-CooltrainerFBethSeenText:
+CooltrainerFAnnieSeenText:
 	text "Trainers live to"
 	line "seek stronger"
 	cont "opponents!"
 	done
 
-CooltrainerFBethBeatenText:
+CooltrainerFAnnieBeatenText:
 	text "Oh!"
 	line "So strong!"
 	done
 
-CooltrainerFBethAfterBattleText:
+CooltrainerFAnnieAfterBattleText:
 	text "By fighting tough"
 	line "battles, you get"
 	cont "stronger!"
 	done
 
-TrainerCooltrainerMGaven:
-	trainer COOLTRAINERM, GAVEN1, EVENT_BEAT_COOLTRAINERM_GAVEN, CooltrainerMGavinSeenText, CooltrainerMGavinBeatenText, 0, .Script
+TrainerCooltrainerMLevi:
+	trainer COOLTRAINERM, LEVI, EVENT_BEAT_COOLTRAINERM_LEVI, CooltrainerMLeviSeenText, CooltrainerMLeviBeatenText, 0, .Script
 .Script:
 	endifjustbattled
 	opentext
-	writetext CooltrainerMGavinAfterBattleText
+	writetext CooltrainerMLeviAfterBattleText
 	waitbutton
 	closetext
 	end
 
-CooltrainerMGavinSeenText:
+CooltrainerMLeviSeenText:
 	text "I heard rumors of"
 	line "a child prodigy!"
 	done
 
-CooltrainerMGavinBeatenText:
+CooltrainerMLeviBeatenText:
 	text "The rumors"
 	line "were true!"
 	done
 
-CooltrainerMGavinAfterBattleText:
+CooltrainerMLeviAfterBattleText:
 	text "You beat GIOVANNI"
 	line "of TEAM ROCKET?"
 	done
@@ -222,8 +222,8 @@ VictoryRoad3F_MapEvents:
 	object_event 15,  8, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoad3FBoulder, EVENT_VICTORY_ROAD_3F_BOULDER1
 	object_event 21, 21, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoad3FBoulder, EVENT_VICTORY_ROAD_3F_BOULDER2
 	object_event 15, 18, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoad3FBoulder, -1
-	object_event 12, 11, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerCooltrainerFBeth, -1
-	object_event 24, 17, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerCooltrainerMGaven, -1
+	object_event 12, 11, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerCooltrainerFAnnie, -1
+	object_event 24, 17, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerCooltrainerMLevi, -1
 	object_event  6, 19, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerCooltrainerFFran, -1
 	object_event  5, 20, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerCooltrainerMRyan, -1
 	object_event  7, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, VictoryRoad3FTMSludgeBomb, EVENT_VICTORY_ROAD_3F_TM_SLUDGE_BOMB

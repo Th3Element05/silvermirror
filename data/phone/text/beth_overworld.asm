@@ -10,9 +10,8 @@ BethAskNumber1Text:
 
 	para "By challenging a"
 	line "tough trainer like"
-
-	para "you, I think I can"
-	line "get better too."
+	cont "you, I think I can"
+	roll "get better too."
 
 	para "So how about it?"
 
@@ -23,9 +22,8 @@ BethAskNumber1Text:
 BethAskNumber2Text:
 	text "By challenging a"
 	line "tough trainer like"
-
-	para "you, I think I can"
-	line "get better too."
+	cont "you, I think I can"
+	roll "get better too."
 
 	para "So how about it?"
 

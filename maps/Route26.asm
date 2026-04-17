@@ -50,18 +50,90 @@ Route26_SitrusBerry:
 Route26_NoFruit:
 	farsjump Std_NoFruitScript
 
+
 ; trainers
-TrainerCooltrainerMLevi:
-	trainer COOLTRAINERM, LEVI, EVENT_BEAT_COOLTRAINERM_LEVI, CooltrainerMLeviSeenText, CooltrainerMLeviBeatenText, 0, .Script
+TrainerCooltrainerMGavin:
+	trainer COOLTRAINERM, GAVIN1, EVENT_BEAT_COOLTRAINERM_GAVIN, CooltrainerMGavinSeenText, CooltrainerMGavinBeatenText, 0, .Script
 .Script:
-	endifjustbattled
+;	endifjustbattled
+;	opentext
+;	writetext CooltrainerMGavinAfterBattleText
+;	waitbutton
+;	closetext
+;	end
+
+	loadvar VAR_CALLERID, PHONE_COOLTRAINERM_GAVIN
 	opentext
-	writetext CooltrainerMLeviAfterBattleText
-	waitbutton
+	checkflag ENGINE_GAVIN_READY_FOR_REMATCH
+	iftrue .WantsBattle
+	checkcellnum PHONE_COOLTRAINERM_GAVIN
+	iftrue .GavinDefeated
+	checkevent EVENT_GAVIN_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskedAlready
+	writetext CooltrainerMGavinAfterBattleText
+	promptbutton
+	setevent EVENT_GAVIN_ASKED_FOR_PHONE_NUMBER
+	scall .AskNumber1
+	jump .AskForNumber
+
+.AskedAlready:
+	scall .AskNumber2
+.AskForNumber:
+	askforphonenumber PHONE_COOLTRAINERM_GAVIN
+	ifequal PHONE_CONTACTS_FULL, .PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
+	gettrainername STRING_BUFFER_3, COOLTRAINERM, GAVIN1
+	scall .RegisteredNumber
+	jump .NumberAccepted
+
+.WantsBattle:
+	scall .Rematch
+	winlosstext CooltrainerMGavinBeatenText, 0
+	loadtrainer COOLTRAINERM, GAVIN_0
+	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
+	iftrue .LoadFight
+	loadtrainer COOLTRAINERM, GAVIN1
+.LoadFight:
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_GAVIN_READY_FOR_REMATCH
+	end
+
+.GavinDefeated:
+	writetext CooltrainerMGavinAfterBattleText
+	promptbutton
 	closetext
 	end
 
-CooltrainerMLeviSeenText:
+.AskNumber1:
+	jumpstd AskNumber1MScript
+	end
+
+.AskNumber2:
+	jumpstd AskNumber2MScript
+	end
+
+.RegisteredNumber:
+	jumpstd RegisteredNumberMScript
+	end
+
+.NumberAccepted:
+	jumpstd NumberAcceptedMScript
+	end
+
+.NumberDeclined:
+	jumpstd NumberDeclinedMScript
+	end
+
+.PhoneFull:
+	jumpstd PhoneFullMScript
+	end
+
+.Rematch:
+	jumpstd RematchMScript
+	end
+
+CooltrainerMGavinSeenText:
 	text "I got eight GYM"
 	line "BADGES in JOHTO."
 
@@ -70,11 +142,11 @@ CooltrainerMLeviSeenText:
 	cont "LEAGUE challenge!"
 	done
 
-CooltrainerMLeviBeatenText:
+CooltrainerMGavinBeatenText:
 	text "I blew it!"
 	done
 
-CooltrainerMLeviAfterBattleText:
+CooltrainerMGavinAfterBattleText:
 	text "It's going to be"
 	line "tough to beat the"
 	cont "#MON LEAGUE."
@@ -87,6 +159,7 @@ CooltrainerMLeviAfterBattleText:
 	para "I need to do some"
 	line "more training."
 	done
+
 
 TrainerCooltrainerMFinn:
 	trainer COOLTRAINERM, FINN, EVENT_BEAT_COOLTRAINERM_FINN, CooltrainerMFinnSeenText, CooltrainerMFinnBeatenText, 0, .Script
@@ -123,6 +196,7 @@ CooltrainerMFinnAfterBattleText:
 	cont "eight GYM BADGES."
 	done
 
+
 TrainerCooltrainerFJoyce:
 	trainer COOLTRAINERF, JOYCE, EVENT_BEAT_COOLTRAINERF_JOYCE, CooltrainerFJoyceSeenText, CooltrainerFJoyceBeatenText, 0, .Script
 .Script:
@@ -157,17 +231,89 @@ CooltrainerFJoyceAfterBattleText:
 	line "harder next time."
 	done
 
-TrainerCooltrainerFAnnie:
-	trainer COOLTRAINERF, ANNIE, EVENT_BEAT_COOLTRAINERF_ANNIE, CooltrainerFAnnieSeenText, CooltrainerFAnnieBeatenText, 0, .Script
+
+TrainerCooltrainerFBeth:
+	trainer COOLTRAINERF, BETH1, EVENT_BEAT_COOLTRAINERF_BETH, CooltrainerFBethSeenText, CooltrainerFBethBeatenText, 0, .Script
 .Script:
-	endifjustbattled
+;	endifjustbattled
+;	opentext
+;	writetext CooltrainerFBethAfterBattleText
+;	waitbutton
+;	closetext
+;	end
+
+	loadvar VAR_CALLERID, PHONE_COOLTRAINERF_BETH
 	opentext
-	writetext CooltrainerFAnnieAfterBattleText
-	waitbutton
+	checkflag ENGINE_BETH_READY_FOR_REMATCH
+	iftrue .WantsBattle
+	checkcellnum PHONE_COOLTRAINERF_BETH
+	iftrue .BethDefeated
+	checkevent EVENT_BETH_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskedAlready
+	writetext CooltrainerFBethAfterBattleText
+	promptbutton
+	setevent EVENT_BETH_ASKED_FOR_PHONE_NUMBER
+	scall .AskNumber1
+	jump .AskForNumber
+
+.AskedAlready:
+	scall .AskNumber2
+.AskForNumber:
+	askforphonenumber PHONE_COOLTRAINERF_BETH
+	ifequal PHONE_CONTACTS_FULL, .PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
+	gettrainername STRING_BUFFER_3, COOLTRAINERF, BETH1
+	scall .RegisteredNumber
+	jump .NumberAccepted
+
+.WantsBattle:
+	scall .Rematch
+	winlosstext CooltrainerFBethBeatenText, 0
+	loadtrainer COOLTRAINERF, BETH_0
+	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
+	iftrue .LoadFight
+	loadtrainer COOLTRAINERF, BETH1
+.LoadFight:
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_BETH_READY_FOR_REMATCH
+	end
+
+.BethDefeated:
+	writetext CooltrainerFBethAfterBattleText
+	promptbutton
 	closetext
 	end
 
-CooltrainerFAnnieSeenText:
+.AskNumber1:
+	jumpstd AskNumber1FScript
+	end
+
+.AskNumber2:
+	jumpstd AskNumber2FScript
+	end
+
+.RegisteredNumber:
+	jumpstd RegisteredNumberFScript
+	end
+
+.NumberAccepted:
+	jumpstd NumberAcceptedFScript
+	end
+
+.NumberDeclined:
+	jumpstd NumberDeclinedFScript
+	end
+
+.PhoneFull:
+	jumpstd PhoneFullFScript
+	end
+
+.Rematch:
+	jumpstd RematchFScript
+	end
+
+CooltrainerFBethSeenText:
 	text "Some of the train-"
 	line "ers on their way"
 	cont "to #MON LEAGUE"
@@ -181,16 +327,17 @@ CooltrainerFAnnieSeenText:
 	line "their #MON."
 	done
 
-CooltrainerFAnnieBeatenText:
+CooltrainerFBethBeatenText:
 	text "#MON aren't"
 	line "just tools."
 	done
 
-CooltrainerFAnnieAfterBattleText:
+CooltrainerFBethAfterBattleText:
 	text "#MON are in-"
 	line "valuable, lifelong"
 	cont "partners."
 	done
+
 
 TrainerPsychicCaleb:
 	trainer PSYCHIC_T, CALEB, EVENT_BEAT_PSYCHIC_CALEB, PsychicCalebSeenText, PsychicCalebBeatenText, 0, .Script
@@ -220,6 +367,7 @@ PsychicCalebAfterBattleText:
 	para "Don't be lazy and"
 	line "get complacent."
 	done
+
 
 TrainerFisherLuca:
 	trainer FISHER, LUCA, EVENT_BEAT_FISHER_LUCA, FisherLucaSeenText, FisherLucaBeatenText, 0, .Script
@@ -252,14 +400,19 @@ FisherLucaAfterBattleText:
 	roll "give up."
 	done
 
+
+; bg text
 Route26Sign:
 	jumptext Route26SignText
 Route26SignText:
 	text "ROUTE 26"
 	done
 
+
+; items
 Route26MaxElixer:
 	itemball MAX_ELIXER
+
 
 Route26_MapEvents:
 	db 0, 0 ; filler
@@ -280,10 +433,10 @@ Route26_MapEvents:
 	def_object_events
 	object_event 13, 49, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route26_LeppaBerry, EVENT_ROUTE_26_LEPPA_BERRY
 	object_event 14, 50, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, Route26_SitrusBerry, EVENT_ROUTE_26_SITRUS_BERRY
-	object_event 14, 24, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerCooltrainerMLevi, -1
+	object_event 14, 24, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerCooltrainerMGavin, -1
 	object_event  9, 38, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerCooltrainerMFinn, -1
 	object_event 10, 56, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerCooltrainerFJoyce, -1
-	object_event  5,  8, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerCooltrainerFAnnie, -1
+	object_event  5,  8, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerCooltrainerFBeth, -1
 	object_event 13, 79, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 2, TrainerPsychicCaleb, -1
 	object_event 10, 92, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerFisherLuca, -1
 	object_event  9, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route26MaxElixer, EVENT_ROUTE_26_MAX_ELIXER

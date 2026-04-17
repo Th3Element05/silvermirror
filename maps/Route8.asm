@@ -126,7 +126,7 @@ TrainerLassDana:
 	iftrue .DanaDefeated
 	checkevent EVENT_DANA_ASKED_FOR_PHONE_NUMBER
 	iftrue .SecondTimeAsking
-	writetext LassDana1AfterBattleText
+	writetext LassDanaAfterBattleText
 	promptbutton
 	setevent EVENT_DANA_ASKED_FOR_PHONE_NUMBER
 	scall .AskNumber1F
@@ -144,7 +144,7 @@ TrainerLassDana:
 
 .DanaRematch:
 	scall .Rematch
-	winlosstext LassDana1BeatenText, 0
+	winlosstext LassDanaBeatenText, 0
 	loadtrainer LASS, DANA_0
 	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
 	iftrue .LoadFight
@@ -164,7 +164,7 @@ TrainerLassDana:
 	sjump .NumberAccepted
 
 .DanaDefeated:
-	writetext LassDana1AfterBattleText
+	writetext LassDanaAfterBattleText
 	promptbutton
 	closetext
 	end

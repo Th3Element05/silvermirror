@@ -5,11 +5,101 @@ Route13_MapScripts:
 
 	def_callbacks
 
+
 TrainerBirdKeeperJamie:
 	trainer BIRD_KEEPER, JAMIE1, EVENT_BEAT_BIRD_KEEPER_JAMIE, BirdKeeperJamieSeenText, BirdKeeperJamieBeatenText, 0, .Script
 .Script:
-	endifjustbattled
-	jumptextfaceplayer BirdKeeperJamieAfterBattleText
+;	endifjustbattled
+;	jumptextfaceplayer BirdKeeperJamieAfterBattleText
+
+	loadvar VAR_CALLERID, PHONE_BIRDKEEPER_JAMIE
+	opentext
+	checkflag ENGINE_JAMIE_READY_FOR_REMATCH
+	iftrue .ChooseRematch
+	checkflag ENGINE_JAMIE_HAS_MOON_STONE
+	iftrue .GiveMoonStone
+	checkcellnum PHONE_BIRDKEEPER_JAMIE
+	iftrue .JamieDefeated
+	checkevent EVENT_JAMIE_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskAgainForPhoneNumber
+	writetext BirdKeeperJamieAfterBattleText
+	waitbutton
+	setevent EVENT_JAMIE_ASKED_FOR_PHONE_NUMBER
+	scall Route17AskNumber1
+	jump .ContinueAskForPhoneNumber
+
+.AskAgainForPhoneNumber:
+	scall Route17AskNumber2
+.ContinueAskForPhoneNumber:
+	askforphonenumber PHONE_BIRDKEEPER_JAMIE
+	ifequal PHONE_CONTACTS_FULL, Route17PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, Route17NumberDeclined
+	gettrainername STRING_BUFFER_3, BIRD_KEEPER, JAMIE1
+	scall Route17RegisteredNumber
+	jump Route17NumberAccepted
+
+.ChooseRematch:
+	scall Route17Rematch
+	winlosstext BirdKeeperJamieBeatenText, 0
+	loadtrainer BIRD_KEEPER, JAMIE_0
+	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
+	iftrue .LoadFight
+	loadtrainer BIRD_KEEPER, JAMIE_2
+.LoadFight:
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_JAMIE_READY_FOR_REMATCH
+	end
+
+.GiveMoonStone:
+	scall .Gift
+	verbosegiveitem MOON_STONE
+	iffalse .PackFull
+	clearflag ENGINE_JAMIE_HAS_MOON_STONE
+	setevent EVENT_JAMIE_GAVE_MOON_STONE
+	jump Route17NumberAccepted
+
+.JamieDefeated:
+	writetext BirdKeeperJamieAfterBattleText
+	waitbutton
+	closetext
+	end
+
+;.AskNumber1:
+;	jumpstd AskNumber1MScript
+;	end
+;
+;.AskNumber2:
+;	jumpstd AskNumber2MScript
+;	end
+;
+;.RegisteredNumber:
+;	jumpstd RegisteredNumberMScript
+;	end
+;
+;.NumberAccepted:
+;	jumpstd NumberAcceptedMScript
+;	end
+;
+;.NumberDeclined:
+;	jumpstd NumberDeclinedMScript
+;	end
+;
+;.PhoneFull:
+;	jumpstd PhoneFullMScript
+;	end
+;
+;.Rematch:
+;	jumpstd RematchMScript
+;	end
+
+.Gift:
+	jumpstd GiftMScript
+	end
+
+.PackFull:
+	jumpstd PackFullMScript
+	end
 
 BirdKeeperJamieSeenText:
 	text "You need to use"
@@ -23,10 +113,9 @@ BirdKeeperJamieBeatenText:
 	done
 
 BirdKeeperJamieAfterBattleText:
-	text "You have some HMs"
-	line "right? Those moves"
-	cont "are useful for"
-	roll "getting around."
+	text "You have some ride"
+	line "PAGERs, right?"
+	cont "Those are useful!"
 	done
 
 

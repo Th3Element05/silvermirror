@@ -34,9 +34,8 @@ JamieNumberDeclinedText:
 
 	para "Do you think I'm"
 	line "so weak, I don't"
-
-	para "measure up as an"
-	line "opponent?"
+	cont "measure up as an"
+	roll "opponent?"
 	done
 
 JamieRematchText:

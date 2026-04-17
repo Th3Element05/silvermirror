@@ -50,8 +50,8 @@ ErinReminderScript:
 	farwritetext ErinReminderText
 	end
 
-GavenReminderScript:
-	farwritetext GavenReminderText
+GavinReminderScript:
+	farwritetext GavinReminderText
 	end
 
 GinaReminderScript:

@@ -1,26 +1,23 @@
 KennyBathsText:
 	text "That's right… I'm"
-	line "on this mountain"
-
-	para "almost the whole"
-	line "year round…"
+	line "out on the trails"
+	cont "almost the whole"
+	roll "year round…"
 
 	para "Baths? There's no"
-	line "such thing on a"
-	cont "mountain!"
+	line "such thing on the"
+	cont "trails!"
 
 	para "Instead, I just"
 	line "look for a river,"
-
-	para "and wash myself"
-	line "off in that."
+	cont "and wash myself"
+	roll "off in that."
 
 	para "That's right!"
 
 	para "A few days ago,"
 	line "when I was bathing"
 	cont "in the river,"
-
-	para "someone mistook me"
-	line "for a SWIMMER!"
+	roll "someone mistook me"
+	cont "for a SWIMMER!"
 	done

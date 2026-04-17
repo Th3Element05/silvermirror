@@ -1,4 +1,4 @@
-GavenMonGreaterThanImaginedText:
+GavinMonGreaterThanImaginedText:
 	text "My @"
 	text_ram wStringBuffer4
 	text_start
@@ -12,14 +12,13 @@ GavenMonGreaterThanImaginedText:
 	cont "better than mine."
 	done
 
-GavenDefeatedMonText:
+GavinDefeatedMonText:
 	text "Oh, and I managed"
-	line "to barely defeat"
-
-	para "@"
+	line "to barely defeat a"
+	cont "@"
 	text_ram wStringBuffer4
 	text " the"
-	line "other day."
+	roll "other day."
 
 	para "I've never seen a"
 	line "@"
@@ -29,13 +28,12 @@ GavenDefeatedMonText:
 
 	para "You shouldn't let"
 	line "your guard down,"
-
-	para "even against a"
-	line "#MON you're"
+	cont "even against a"
+	roll "#MON you're"
 	cont "used to seeing."
 	done
 
-GavenLostAMonText:
+GavinLostAMonText:
 	text "And a while back,"
 	line "I tried to catch a"
 	cont "wild @"
@@ -47,12 +45,11 @@ GavenLostAMonText:
 
 	para "One wrong decision"
 	line "could mean total"
-
-	para "failure… You ought"
-	line "to be careful too."
+	cont "failure… You ought"
+	roll "to be careful too."
 	done
 
-GavenBattleRematchText:
+GavinBattleRematchText:
 	text "Let's battle!"
 
 	para "I'll be waiting on"
@@ -64,18 +61,18 @@ GavenBattleRematchText:
 	line "when you're close."
 	done
 
-GavenHangUpText:
+GavinHangUpText:
 	text "OK, I'll talk to"
 	line "you soon!"
 	done
 
-GavenHangUpNotThursdayText:
+GavinHangUpNotThursdayText:
 	text "I obsess over how"
 	line "to beat you."
 	done
 
-GavenReminderText:
-	text "<PLAY_G>, why"
+GavinReminderText:
+	text "<PLAYER>, why"
 	line "aren't you here?"
 
 	para "I'll take you down"

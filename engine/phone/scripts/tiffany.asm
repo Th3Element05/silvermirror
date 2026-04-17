@@ -1,59 +1,78 @@
 TiffanyPhoneCalleeScript:
 	gettrainername STRING_BUFFER_3, PICNICKER, TIFFANY1
-	checkflag ENGINE_TIFFANY_READY_FOR_REMATCH
-	iftrue .WantsBattle
 	farscall PhoneScript_AnswerPhone_Female
-	checkflag ENGINE_TIFFANY_TUESDAY_AFTERNOON
-	iftrue .NotTuesday
-	checkflag ENGINE_TIFFANY_HAS_SILK_SCARF
-	iftrue .HasItem
-	readvar VAR_WEEKDAY
-	ifnotequal TUESDAY, .NotTuesday
-	checktime DAY
-	iftrue TiffanyWantsBattle
-	checktime EVE
-	iftrue TiffanyWantsBattle
 
-.NotTuesday:
+	checkflag ENGINE_TIFFANY_READY_FOR_REMATCH
+	iftrue TiffanyWaitingForBattle
+
+	checkflag ENGINE_TIFFANY_HAS_DUSK_STONE
+	iftrue TiffanyRemindItem
+
+	readvar VAR_WEEKDAY
+	ifequal TUESDAY, TiffanyWantsBattle
+
+	random 2
+	ifequal 0, TiffanyWantsBattle
+
+;NotTuesday:
 	farsjump TiffanyNoItemScript
 
-.WantsBattle:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_43
-	farsjump TiffanyReminderScript
-
-.HasItem:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_43
-	farsjump TiffanyHurryScript
 
 TiffanyPhoneCallerScript:
 	gettrainername STRING_BUFFER_3, PICNICKER, TIFFANY1
-	farscall PhoneScript_Random4
+
+	random 4
 	ifequal 0, TiffanysFamilyMembers
 	farscall PhoneScript_GreetPhone_Female
+
 	checkflag ENGINE_TIFFANY_READY_FOR_REMATCH
-	iftrue .Generic
-	checkflag ENGINE_TIFFANY_TUESDAY_AFTERNOON
-	iftrue .Generic
-	checkflag ENGINE_TIFFANY_HAS_SILK_SCARF
-	iftrue .Generic
-	farscall PhoneScript_Random3
+	iftrue TiffanyWaitingForBattle
+
+	checkflag ENGINE_TIFFANY_HAS_DUSK_STONE
+	iftrue TiffanyRemindItem
+
+	readvar VAR_WEEKDAY
+	ifequal TUESDAY, TiffanyWantsBattle
+
+	random 4
 	ifequal 0, TiffanyWantsBattle
-;	checkevent EVENT_TIFFANY_GAVE_SILK_SCARF
-;	iftrue .SilkScarf
-	farscall PhoneScript_Random2
-	ifequal 0, TiffanyHasSilkScarf
 
-.SilkScarf:
-	farscall PhoneScript_Random11
-	ifequal 0, TiffanyHasSilkScarf
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .CheckDuskStone
+	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
+	iffalse .NoDuskStone
 
-.Generic:
+.CheckDuskStone
+	checkevent EVENT_TIFFANY_GAVE_DUSK_STONE
+	iftrue .DuskStoneChance
+
+	random 2
+	ifequal 0, TiffanyHasDuskStone
+
+.DuskStoneChance:
+	random 10
+	ifequal 0, TiffanyHasDuskStone
+
+.NoDuskStone
 	farsjump Phone_GenericCall_Female
 
 TiffanyWantsBattle:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_43
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_15
 	setflag ENGINE_TIFFANY_READY_FOR_REMATCH
 	farsjump PhoneScript_WantsToBattle_Female
+
+TiffanyWaitingForBattle:
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_15
+	farsjump TiffanyReminderScript
+
+TiffanyHasDuskStone:
+	setflag ENGINE_TIFFANY_HAS_DUSK_STONE
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_15
+	farsjump PhoneScript_FoundItem_Female
+
+TiffanyRemindItem:
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_15
+	farsjump TiffanyHurryScript
 
 TiffanysFamilyMembers:
 	random 6
@@ -90,8 +109,3 @@ TiffanysFamilyMembers:
 
 .PoorClefairy:
 	farsjump TiffanyItsAwful
-
-TiffanyHasSilkScarf:
-	setflag ENGINE_TIFFANY_HAS_SILK_SCARF
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_43
-	farsjump PhoneScript_FoundItem_Female

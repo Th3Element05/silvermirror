@@ -14,6 +14,7 @@ Route20Noop1Scene:
 Route20Noop2Scene:
 	end
 
+
 Route20GetRocksmashScript:
 	showemote EMOTE_SHOCK, ROUTE20_COOLTRAINERM, 20
 	readvar VAR_FACING
@@ -211,15 +212,13 @@ Route20RockSmashGuyLeaveMovement:
 	step UP
 	step_end
 
+
+; trainers
 TrainerSwimmerFDenise:
 	trainer SWIMMERF, DENISE, EVENT_BEAT_SWIMMERF_DENISE, SwimmerFDeniseSeenText, SwimmerFDeniseBeatenText, 0, .Script
 .Script:
 	endifjustbattled
-	opentext
-	writetext SwimmerFDeniseAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer SwimmerFDeniseAfterBattleText
 
 SwimmerFDeniseSeenText:
 	text "CINNABAR, in the"
@@ -236,15 +235,12 @@ SwimmerFDeniseAfterBattleText:
 	line "volcanic island!"
 	done
 
+
 TrainerSwimmerFHeidi:
 	trainer SWIMMERF, HEIDI, EVENT_BEAT_SWIMMERF_HEIDI, SwimmerFHeidiSeenText, SwimmerFHeidiBeatenText, 0, .Script
 .Script:
 	endifjustbattled
-	opentext
-	writetext SwimmerFHeidiAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer SwimmerFHeidiAfterBattleText
 
 SwimmerFHeidiSeenText:
 	text "I swam here from"
@@ -263,15 +259,12 @@ SwimmerFHeidiAfterBattleText:
 	roll "on CINNABAR!"
 	done
 
+
 TrainerSwimmerFSusie:
 	trainer SWIMMERF, SUSIE, EVENT_BEAT_SWIMMERF_SUSIE, SwimmerFSusieSeenText, SwimmerFSusieBeatenText, 0, .Script
 .Script:
 	endifjustbattled
-	opentext
-	writetext SwimmerFSusieAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer SwimmerFSusieAfterBattleText
 
 SwimmerFSusieSeenText:
 	text "My boy friend gave"
@@ -289,14 +282,113 @@ SwimmerFSusieAfterBattleText:
 	cont "inside CLOYSTER?"
 	done
 
+
 TrainerBirdKepperVance:
 	trainer BIRD_KEEPER, VANCE1, EVENT_BEAT_BIRD_KEEPER_VANCE, BirdKepperVanceSeenText, BirdKepperVanceBeatenText, 0, .Script
 .Script:
-	endifjustbattled
+;	endifjustbattled
+;	jumptextfaceplayer BirdKepperVanceAfterBattleText
+
+	loadvar VAR_CALLERID, PHONE_BIRDKEEPER_VANCE
 	opentext
-	writetext BirdKepperVanceAfterBattleText
+	checkevent EVENT_VANCE_HAS_CARBOS
+	iftrue .HasCarbos
+	checkflag ENGINE_VANCE_READY_FOR_REMATCH
+	iftrue .WantsBattle
+	checkcellnum PHONE_BIRDKEEPER_VANCE
+	iftrue .VanceDefeated
+	checkevent EVENT_VANCE_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskedAlready
+	writetext BirdKeeperVanceLegendaryBirdsText
+	promptbutton
+	setevent EVENT_VANCE_ASKED_FOR_PHONE_NUMBER
+	scall Route20AskNumber1
+	sjump .AskForNumber
+
+.AskedAlready:
+	scall Route20AskNumber2
+.AskForNumber:
+	askforphonenumber PHONE_BIRDKEEPER_VANCE
+	ifequal PHONE_CONTACTS_FULL, Route20PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, Route20NumberDeclined
+	gettrainername STRING_BUFFER_3, BIRD_KEEPER, VANCE1
+	scall Route20RegisteredNumber
+	sjump Route20NumberAccepted
+
+.WantsBattle:
+	scall Route20Rematch
+	winlosstext BirdKepperVanceBeatenText, 0
+	loadtrainer BIRD_KEEPER, VANCE_0
+	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
+	loadtrainer BIRD_KEEPER, VANCE_2
+.LoadFight:
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_VANCE_READY_FOR_REMATCH
+	checkevent EVENT_GOT_CARBOS_FROM_VANCE
+	iffalse .GiveCarbos
+	random 10
+	ifequal 0, .GiveCarbos
+	end
+
+.GiveCarbos
+	scall .RematchGift
+	verbosegiveitem CARBOS
+	iffalse .PackFull
+	setevent EVENT_GOT_CARBOS_FROM_VANCE
+	sjump Route20NumberAccepted
+
+.HasCarbos:
+	opentext
+	writetext BirdKepperVanceBeatenGiftText
 	waitbutton
+	verbosegiveitem CARBOS
+	iffalse .PackFull
+	clearevent EVENT_VANCE_HAS_CARBOS
+	setevent EVENT_GOT_CARBOS_FROM_VANCE
+	sjump Route20NumberAccepted
+
+.VanceDefeated:
+	writetext BirdKeeperVanceLegendaryBirdsText
+	promptbutton
 	closetext
+	end
+
+.PackFull:
+	setevent EVENT_VANCE_HAS_CARBOS
+	jumpstd PackFullMScript
+	end
+
+.RematchGift:
+	jumpstd RematchGiftMScript
+	end
+
+Route20AskNumber1:
+	jumpstd AskNumber1MScript
+	end
+
+Route20AskNumber2:
+	jumpstd AskNumber2MScript
+	end
+
+Route20RegisteredNumber:
+	jumpstd RegisteredNumberMScript
+	end
+
+Route20NumberAccepted:
+	jumpstd NumberAcceptedMScript
+	end
+
+Route20NumberDeclined:
+	jumpstd NumberDeclinedMScript
+	end
+
+Route20PhoneFull:
+	jumpstd PhoneFullMScript
+	end
+
+Route20Rematch:
+	jumpstd RematchMScript
 	end
 
 BirdKepperVanceSeenText:
@@ -305,23 +397,38 @@ BirdKepperVanceSeenText:
 	done
 
 BirdKepperVanceBeatenText:
-	text "Oh no!"
-	done
-
-BirdKepperVanceAfterBattleText:
+;	text "Oh no!"
+;	done
+;
+;BirdKepperVanceAfterBattleText:
 	text "My birds can't"
 	line "FLY me back!"
+	done
+
+BirdKeeperVanceLegendaryBirdsText:
+	text "ARTICUNO, ZAPDOS"
+	line "and MOLTRES are"
+	cont "the three legend-"
+	roll "ary bird #MON."
+
+	para "I heard there are"
+	line "other legendary"
+	cont "birds, though."
+	done
+
+BirdKepperVanceBeatenGiftText:
+	text "Thanks a lot for"
+	line "battling with me!"
+
+	para "Here's that gift"
+	line "from before."
 	done
 
 TrainerSwimmerMTucker:
 	trainer SWIMMERM, TUCKER, EVENT_BEAT_SWIMMERM_TUCKER, SwimmerMTuckerSeenText, SwimmerMTuckerBeatenText, 0, .Script
 .Script:
 	endifjustbattled
-	opentext
-	writetext SwimmerMTuckerAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer SwimmerMTuckerAfterBattleText
 
 SwimmerMTuckerSeenText:
 	text "Check out my buff"
@@ -338,15 +445,12 @@ SwimmerMTuckerAfterBattleText:
 	cont "#MON, not me!"
 	done
 
+
 TrainerSwimmerFKara:
 	trainer SWIMMERF, KARA, EVENT_BEAT_SWIMMERF_KARA, SwimmerFKaraSeenText, SwimmerFKaraBeatenText, 0, .Script
 .Script:
 	endifjustbattled
-	opentext
-	writetext SwimmerFKaraAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer SwimmerFKaraAfterBattleText
 
 SwimmerFKaraSeenText:
 	text "I love floating"
@@ -362,15 +466,12 @@ SwimmerFKaraAfterBattleText:
 	line "with me?"
 	done
 
+
 TrainerSwimmerFGinger:
 	trainer SWIMMERF, GINGER, EVENT_BEAT_SWIMMERF_GINGER, SwimmerFGingerSeenText, SwimmerFGingerBeatenText, 0, .Script
 .Script:
 	endifjustbattled
-	opentext
-	writetext SwimmerFGingerAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer SwimmerFGingerAfterBattleText
 
 SwimmerFGingerSeenText:
 	text "Are you on"
@@ -388,15 +489,12 @@ SwimmerFGingerAfterBattleText:
 	cont "colder recently!"
 	done
 
+
 TrainerSwimmerFWendy:
 	trainer SWIMMERF, WENDY, EVENT_BEAT_SWIMMERF_WENDY, SwimmerFWendySeenText, SwimmerFWendyBeatenText, 0, .Script
 .Script:
 	endifjustbattled
-	opentext
-	writetext SwimmerFWendyAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer SwimmerFWendyAfterBattleText
 
 SwimmerFWendySeenText:
 	text "SEAFOAM is a"
@@ -413,15 +511,12 @@ SwimmerFWendyAfterBattleText:
 	cont "this island."
 	done
 
+
 TrainerSwimmerMJerome:
 	trainer SWIMMERM, JEROME, EVENT_BEAT_SWIMMERM_JEROME, SwimmerMJeromeSeenText, SwimmerMJeromeBeatenText, 0, .Script
 .Script:
 	endifjustbattled
-	opentext
-	writetext SwimmerMJeromeAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer SwimmerMJeromeAfterBattleText
 
 SwimmerMJeromeSeenText:
 	text "The water is"
@@ -437,15 +532,12 @@ SwimmerMJeromeAfterBattleText:
 	line "ride my #MON."
 	done
 
+
 TrainerSwimmerMCameron:
 	trainer SWIMMERM, CAMERON, EVENT_BEAT_SWIMMERM_CAMERON, SwimmerMCameronSeenText, SwimmerMCameronBeatenText, 0, .Script
 .Script:
 	endifjustbattled
-	opentext
-	writetext SwimmerMCameronAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer SwimmerMCameronAfterBattleText
 
 SwimmerMCameronSeenText:
 	text "Why are you"
@@ -463,11 +555,14 @@ SwimmerMCameronAfterBattleText:
 	line "sure looks fun!"
 	done
 
+
+; bg text
 SeafoamIslandsSign:
 	jumptext SeafoamIslandsSignText
 SeafoamIslandsSignText:
 	text "SEAFOAM ISLANDS"
 	done
+
 
 ; items
 Route20TMBrickBreak:
@@ -475,6 +570,7 @@ Route20TMBrickBreak:
 
 Route20RockScript:
 	jumpstd SmashRockScript
+
 
 Route20_MapEvents:
 	db 0, 0 ; filler

@@ -26,7 +26,7 @@ PhoneScript_AnswerPhone_Male:
 	readvar VAR_CALLERID
 	ifequal PHONE_SCHOOLBOY_JACK, .Jack
 	ifequal PHONE_SAILOR_HUEY, .Huey
-	ifequal PHONE_COOLTRAINERM_GAVEN, .Gaven
+	ifequal PHONE_COOLTRAINERM_GAVIN, .Gavin
 	ifequal PHONE_BIRDKEEPER_JOSE, .Jose
 	ifequal PHONE_YOUNGSTER_JOEY, .Joey
 	ifequal PHONE_BUG_CATCHER_WADE, .Wade
@@ -55,8 +55,8 @@ PhoneScript_AnswerPhone_Male:
 	promptbutton
 	end
 
-.Gaven:
-	farwritetext GavenAnswerPhoneText
+.Gavin:
+	farwritetext GavinAnswerPhoneText
 	promptbutton
 	end
 
@@ -149,7 +149,7 @@ PhoneScript_AnswerPhone_Male_Day:
 	readvar VAR_CALLERID
 	ifequal PHONE_SCHOOLBOY_JACK, .Jack
 	ifequal PHONE_SAILOR_HUEY, .Huey
-	ifequal PHONE_COOLTRAINERM_GAVEN, .Gaven
+	ifequal PHONE_COOLTRAINERM_GAVIN, .Gavin
 	ifequal PHONE_BIRDKEEPER_JOSE, .Jose
 	ifequal PHONE_YOUNGSTER_JOEY, .Joey
 	ifequal PHONE_BUG_CATCHER_WADE, .Wade
@@ -178,8 +178,8 @@ PhoneScript_AnswerPhone_Male_Day:
 	promptbutton
 	end
 
-.Gaven:
-	farwritetext GavenAnswerPhoneDayText
+.Gavin:
+	farwritetext GavinAnswerPhoneDayText
 	promptbutton
 	end
 
@@ -272,7 +272,7 @@ PhoneScript_AnswerPhone_Male_Nite:
 	readvar VAR_CALLERID
 	ifequal PHONE_SCHOOLBOY_JACK, .Jack
 	ifequal PHONE_SAILOR_HUEY, .Huey
-	ifequal PHONE_COOLTRAINERM_GAVEN, .Gaven
+	ifequal PHONE_COOLTRAINERM_GAVIN, .Gavin
 	ifequal PHONE_BIRDKEEPER_JOSE, .Jose
 	ifequal PHONE_YOUNGSTER_JOEY, .Joey
 	ifequal PHONE_BUG_CATCHER_WADE, .Wade
@@ -301,8 +301,8 @@ PhoneScript_AnswerPhone_Male_Nite:
 	promptbutton
 	end
 
-.Gaven:
-	farwritetext GavenAnswerPhoneNiteText
+.Gavin:
+	farwritetext GavinAnswerPhoneNiteText
 	promptbutton
 	end
 
@@ -556,7 +556,7 @@ PhoneScript_GreetPhone_Male:
 	readvar VAR_CALLERID
 	ifequal PHONE_SCHOOLBOY_JACK, .Jack
 	ifequal PHONE_SAILOR_HUEY, .Huey
-	ifequal PHONE_COOLTRAINERM_GAVEN, .Gaven
+	ifequal PHONE_COOLTRAINERM_GAVIN, .Gavin
 	ifequal PHONE_BIRDKEEPER_JOSE, .Jose
 	ifequal PHONE_YOUNGSTER_JOEY, .Joey
 	ifequal PHONE_BUG_CATCHER_WADE, .Wade
@@ -585,8 +585,8 @@ PhoneScript_GreetPhone_Male:
 	promptbutton
 	end
 
-.Gaven:
-	farwritetext GavenGreetText
+.Gavin:
+	farwritetext GavinGreetText
 	promptbutton
 	end
 
@@ -679,7 +679,7 @@ PhoneScript_GreetPhone_Male_Day:
 	readvar VAR_CALLERID
 	ifequal PHONE_SCHOOLBOY_JACK, .Jack
 	ifequal PHONE_SAILOR_HUEY, .Huey
-	ifequal PHONE_COOLTRAINERM_GAVEN, .Gaven
+	ifequal PHONE_COOLTRAINERM_GAVIN, .Gavin
 	ifequal PHONE_BIRDKEEPER_JOSE, .Jose
 	ifequal PHONE_YOUNGSTER_JOEY, .Joey
 	ifequal PHONE_BUG_CATCHER_WADE, .Wade
@@ -708,8 +708,8 @@ PhoneScript_GreetPhone_Male_Day:
 	promptbutton
 	end
 
-.Gaven:
-	farwritetext GavenGreetDayText
+.Gavin:
+	farwritetext GavinGreetDayText
 	promptbutton
 	end
 
@@ -802,7 +802,7 @@ PhoneScript_GreetPhone_Male_Nite:
 	readvar VAR_CALLERID
 	ifequal PHONE_SCHOOLBOY_JACK, .Jack
 	ifequal PHONE_SAILOR_HUEY, .Huey
-	ifequal PHONE_COOLTRAINERM_GAVEN, .Gaven
+	ifequal PHONE_COOLTRAINERM_GAVIN, .Gavin
 	ifequal PHONE_BIRDKEEPER_JOSE, .Jose
 	ifequal PHONE_YOUNGSTER_JOEY, .Joey
 	ifequal PHONE_BUG_CATCHER_WADE, .Wade
@@ -831,8 +831,8 @@ PhoneScript_GreetPhone_Male_Nite:
 	promptbutton
 	end
 
-.Gaven:
-	farwritetext GavenGreetNiteText
+.Gavin:
+	farwritetext GavinGreetNiteText
 	promptbutton
 	end
 
@@ -1081,7 +1081,7 @@ PhoneScript_GreetPhone_Female_Nite:
 PhoneScript_Generic_Male:
 	readvar VAR_CALLERID
 	ifequal PHONE_SCHOOLBOY_JACK, .Jack
-	ifequal PHONE_COOLTRAINERM_GAVEN, .Gaven
+	ifequal PHONE_COOLTRAINERM_GAVIN, .Gavin
 	ifequal PHONE_BIRDKEEPER_JOSE, .Jose
 	ifequal PHONE_YOUNGSTER_JOEY, .Joey
 	ifequal PHONE_BUG_CATCHER_WADE, .Wade
@@ -1108,8 +1108,8 @@ PhoneScript_Generic_Male:
 	promptbutton
 	end
 
-.Gaven:
-	farwritetext GavenGenericText
+.Gavin:
+	farwritetext GavinGenericText
 	promptbutton
 	end
 

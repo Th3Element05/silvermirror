@@ -8,32 +8,30 @@ BeverlyMadeMonEvenCuterText:
 	line "than before!"
 	done
 
-BeverlyDefeatedMonText:
-	text "I happened to come"
-	line "across a wild"
-	cont "SNUBBULL recently."
-
-	para "My SNUBBULL, I"
-	line "assure you, was"
-
-	para "far cuter than the"
-	line "wild one."
-	done
+;BeverlyDefeatedMonText:
+;	text "I happened to come"
+;	line "across a wild"
+;	cont "SNUBBULL recently."
+;
+;	para "My SNUBBULL, I"
+;	line "assure you, was"
+;
+;	para "far cuter than the"
+;	line "wild one."
+;	done
 
 BeverlyLostAMonText:
 	text "I happened to see"
 	line "a wild MARILL the"
-
-	para "other day."
-	line "Or so I thought."
+	cont "other day."
+	roll "Or so I thought."
 
 	para "A closer look"
 	line "showed it was"
-
-	para "@"
+	cont "@"
 	text_ram wStringBuffer4
 	text ". I was"
-	line "quite miffed."
+	roll "quite miffed."
 	done
 
 BeverlyHangUpText:
