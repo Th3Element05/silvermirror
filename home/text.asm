@@ -706,6 +706,7 @@ TextCommands::
 	dw TextCommand_STRINGBUFFER  ; TX_STRINGBUFFER
 	dw TextCommand_DAY           ; TX_DAY
 	dw TextCommand_FAR           ; TX_FAR
+	dw TextCommand_NAMETAG       ; TX_NAMETAG ; ntag
 	assert_table_length NUM_TEXT_CMDS
 
 TextCommand_START::
@@ -718,6 +719,26 @@ TextCommand_START::
 	ld h, d
 	ld l, e
 	inc hl
+	ret
+
+TextCommand_NAMETAG::
+; write on the top line of the textbox
+;	push bc
+	ld d, h
+	ld e, l
+	hlcoord TEXTBOX_X, TEXTBOX_Y
+	call PlaceString
+	inc de
+	push de
+	hlcoord TEXTBOX_INNERX, TEXTBOX_INNERY - 1
+	lb bc, TEXTBOX_INNERH, TEXTBOX_INNERW
+	call ClearBox
+;	pop de
+;	ld h, d
+;	ld l, e
+	pop hl
+	bccoord TEXTBOX_INNERX, TEXTBOX_INNERY
+;	pop bc
 	ret
 
 TextCommand_RAM::
