@@ -14,7 +14,7 @@ GameFreakGameDesignerScript:
 	opentext
 	writetext GameFreakGameDesignerText
 	readvar VAR_DEXCAUGHT
-	ifgreater NUM_POKEMON - 2 - 1, .CompletedPokedex ; ignore Mew and Celebi
+	ifgreater NUM_POKEMON - 3 - 1, .CompletedPokedex ; -2 :ignore Mew and Celebi, -3 :also ignore missingno
 	waitbutton
 	closetext
 	end
@@ -30,61 +30,11 @@ GameFreakGameDesignerScript:
 	writetext GameFreakGameDesignerAfterDiplomaText
 	waitbutton
 	closetext
-	setevent EVENT_ENABLE_DIPLOMA_PRINTING
+;	setevent EVENT_ENABLE_DIPLOMA_PRINTING
 	end
-
-GameFreakGraphicArtistScript:
-	faceplayer
-	opentext
-	checkevent EVENT_ENABLE_DIPLOMA_PRINTING
-	iftrue .CanPrintDiploma
-	writetext GameFreakGraphicArtistText
-	waitbutton
-	closetext
-	end
-
-.CanPrintDiploma:
-	writetext GameFreakGraphicArtistPrintDiplomaText
-	yesorno
-	iffalse .Refused
-	special PrintDiploma
-	closetext
-	end
-
-.Refused:
-	writetext GameFreakGraphicArtistRefusedText
-	waitbutton
-	closetext
-	end
-
-.CancelPrinting: ; unreferenced
-	writetext GameFreakGraphicArtistErrorText
-	waitbutton
-	closetext
-	end
-
-GameFreakProgrammerScript:
-	jumptextfaceplayer GameFreakProgrammerText
-
-GameFreakCharacterDesignerScript:
-	jumptextfaceplayer GameFreakCharacterDesignerText
-
-CeladonMansion3FDevRoomSign:
-	jumptext CeladonMansion3FDevRoomSignText
-
-CeladonMansion3FDrawing:
-	jumptext CeladonMansion3FDrawingText
-
-CeladonMansion3FGameProgram:
-	jumptext CeladonMansion3FGameProgramText
-
-CeladonMansion3FReferenceMaterial:
-	jumptext CeladonMansion3FReferenceMaterialText
 
 GameFreakGameDesignerText:
-	text "Is that right?"
-
-	para "I'm the GAME"
+	text "I'm the GAME"
 	line "DESIGNER!"
 
 	para "Filling up your"
@@ -97,7 +47,10 @@ GameFreakGameDesignerCompletedPokedexText:
 	line "You completed your"
 	cont "#DEX!"
 
-	para "Congratulations!"
+;	para "Congratulations!"
+;	done
+	para "Here! You earned"
+	line "this!"
 	done
 
 GameFreakGameDesignerPauseForDiplomaText:
@@ -105,13 +58,46 @@ GameFreakGameDesignerPauseForDiplomaText:
 	done
 
 GameFreakGameDesignerAfterDiplomaText:
-	text "The GRAPHIC ARTIST"
-	line "will print out a"
-	cont "DIPLOMA for you."
-
-	para "You should go show"
-	line "it off."
+;	text "The GRAPHIC ARTIST"
+;	line "will print out a"
+;	cont "DIPLOMA for you."
+;
+;	para "You should go show"
+;	line "it off."
+;	done
+	text "Congratulations!"
 	done
+
+
+GameFreakGraphicArtistScript:
+	faceplayer
+	opentext
+	checkevent EVENT_ENABLE_DIPLOMA_PRINTING
+;	iftrue .CanPrintDiploma
+	writetext GameFreakGraphicArtistText
+	waitbutton
+	closetext
+	end
+
+;.CanPrintDiploma:
+;	writetext GameFreakGraphicArtistPrintDiplomaText
+;	yesorno
+;	iffalse .Refused
+;	special PrintDiploma
+;	closetext
+;	end
+;
+;.Refused:
+;	writetext GameFreakGraphicArtistRefusedText
+;	waitbutton
+;	closetext
+;	end
+;
+;.CancelPrinting: ; unreferenced
+;	writetext GameFreakGraphicArtistErrorText
+;	waitbutton
+;	closetext
+;	end
 
 GameFreakGraphicArtistText:
 	text "I'm the GRAPHIC"
@@ -120,29 +106,32 @@ GameFreakGraphicArtistText:
 	para "I drew you!"
 	done
 
-GameFreakGraphicArtistPrintDiplomaText:
-	text "I'm the GRAPHIC"
-	line "ARTIST."
+;GameFreakGraphicArtistPrintDiplomaText:
+;	text "I'm the GRAPHIC"
+;	line "ARTIST."
+;
+;	para "Oh, you completed"
+;	line "your #DEX?"
+;
+;	para "Want me to print"
+;	line "out your DIPLOMA?"
+;	done
 
-	para "Oh, you completed"
-	line "your #DEX?"
+;GameFreakGraphicArtistRefusedText:
+;	text "Give me a shout if"
+;	line "you want your"
+;	cont "DIPLOMA printed."
+;	done
 
-	para "Want me to print"
-	line "out your DIPLOMA?"
-	done
+;GameFreakGraphicArtistErrorText:
+;	text "Something's wrong."
+;	line "I'll have to can-"
+;	cont "cel printing."
+;	done
 
-GameFreakGraphicArtistRefusedText:
-	text "Give me a shout if"
-	line "you want your"
-	cont "DIPLOMA printed."
-	done
 
-GameFreakGraphicArtistErrorText:
-	text "Something's wrong."
-	line "I'll have to can-"
-	cont "cel printing."
-	done
-
+GameFreakProgrammerScript:
+	jumptextfaceplayer GameFreakProgrammerText
 GameFreakProgrammerText:
 	text "Who, me? I'm the"
 	line "PROGRAMMER."
@@ -151,6 +140,9 @@ GameFreakProgrammerText:
 	line "machines!"
 	done
 
+
+GameFreakCharacterDesignerScript:
+	jumptextfaceplayer GameFreakCharacterDesignerText
 GameFreakCharacterDesignerText:
 	text "I wrote the story!"
 	line "Isn't ERIKA cute?"
@@ -162,17 +154,24 @@ GameFreakCharacterDesignerText:
 	line "I like her!"
 	done
 
+
+CeladonMansion3FDevRoomSign:
+	jumptext CeladonMansion3FDevRoomSignText
 CeladonMansion3FDevRoomSignText:
 	text "GAME FREAK"
 	line "DEVELOPMENT ROOM"
 	done
 
+CeladonMansion3FDrawing:
+	jumptext CeladonMansion3FDrawingText
 CeladonMansion3FDrawingText:
 	text "It's a detailed"
 	line "drawing of a"
 	cont "pretty girl."
 	done
 
+CeladonMansion3FGameProgram:
+	jumptext CeladonMansion3FGameProgramText
 CeladonMansion3FGameProgramText:
 	text "It's the game"
 	line "program. Messing"
@@ -180,12 +179,62 @@ CeladonMansion3FGameProgramText:
 	roll "a bug in the game!"
 	done
 
+CeladonMansion3FReferenceMaterial:
+	jumptext CeladonMansion3FReferenceMaterialText
 CeladonMansion3FReferenceMaterialText:
 	text "It's crammed with"
 	line "reference materi-"
 	cont "als. There's even"
 	roll "a #DOLL."
 	done
+
+
+CeladonMansion3FGameProgram:
+	jumptext CeladonMansion3FGameProgramText
+;	opentext
+;	writetext CeladonMansion3FGameProgramText
+;	yesorno
+;	iffalse .abort
+;	writetext CeladonMansion3FAreYouSureText
+;	yesorno
+;	iffalse .abort
+;	writetext CeladonMansion3FFinalWarningText
+;	yesorno
+;	iffalse .abort
+;	callasm .FMessedWithGameCode
+;.abort
+;	closetext
+;	end
+;
+;.FMessedWithGameCode:
+;	farjump Init
+
+CeladonMansion3FGameProgramText:
+	text "It's the game"
+	line "program. Messing"
+	cont "with it could"
+	roll "crash the game!"
+	done
+
+;	para "…"
+;
+;	para "Do you want to"
+;	line "mess with it?"
+;	done
+;
+;CeladonMansion3FAreYouSureText:
+;	text "Are you absolutely"
+;	line "sure you want to"
+;	cont "mess with it?"
+;	done
+;
+;CeladonMansion3FFinalWarningText:
+;	text "Final warning."
+;
+;	para "Mess around with"
+;	line "the code?"
+;	done
+
 
 CeladonMansion3F_MapEvents:
 	db 0, 0 ; filler
