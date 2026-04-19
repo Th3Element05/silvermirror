@@ -723,10 +723,19 @@ TextCommand_START::
 
 TextCommand_NAMETAG::
 ; write on the top line of the textbox
-;	push bc
 	ld d, h
 	ld e, l
 	hlcoord TEXTBOX_INNERX, TEXTBOX_Y
+;; clear possible existing nametag before printing one
+;	push hl
+;	ld a, "─"
+;	ld b, SCREEN_WIDTH - 2 ; adjust this if you change TEXTBOX_INNERX above
+;.loop
+;	ld [hli], a
+;	dec b
+;	jr nz, .loop
+;	pop hl
+
 	call PlaceString
 	inc de
 	push de
@@ -738,7 +747,6 @@ TextCommand_NAMETAG::
 ;	ld l, e
 	pop hl
 	bccoord TEXTBOX_INNERX, TEXTBOX_INNERY
-;	pop bc
 	ret
 
 TextCommand_RAM::
