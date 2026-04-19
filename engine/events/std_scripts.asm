@@ -2471,7 +2471,7 @@ HappinessCheckScript:
 	faceplayer
 	opentext
 	special GetFirstPokemonHappiness
-	ifless 50, .Unhappy
+	ifless 75, .Unhappy ;50
 	ifless 150, .KindaHappy
 	farwritetext HappinessText3
 	waitbutton
