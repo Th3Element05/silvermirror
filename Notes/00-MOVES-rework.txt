@@ -1,19 +1,10 @@
 https://pret.github.io/pokecrystal/design_flaws.html#pic-banks-are-offset-by-pics_fix
 
-TEST
-berserk gene after mewtwo battle
-whirl islands
-OftenFleeMons:
-
 
 
 elm gives starter?
 
-constants\menu_constants.asm
-data\mon_menu.asm
-show field moves?
-
-FORESIGHT > hit DARK too
+FORESIGHT > hit DARK too ?
 
 
 
@@ -31,7 +22,7 @@ what is going on with `vc\silvermirror.constants.asm`? PRESENT, EXPLOSION
 
 
 +tutor moves
-SWEET_SCENT	?
+SWEET_SCENT	where?
 
 
 

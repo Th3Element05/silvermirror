@@ -14,6 +14,16 @@ New TO DO list
 
 TEST
 
+
+_MomLeavingText1:: ntag
+MomMoneyText
+
+_TeleportReturnText::
+	text "Return to the last"
+	line "#MON CENTER."
+	done
+(is this a question?)
+
 these use overworld phone scripts from Route20
 (they are in the same bank so should be fine)
 Fisher Kyle (route 21)
@@ -37,7 +47,7 @@ how many walking sprites in SSANNE ROOMS NORTH? (pokefan F)
 
 changed slot machine result bias for normal/lucky
 
-copycat
+copycat ntags
 
 KURTS SON
 (where do you respawn if you faint inside SILPH?)
@@ -55,7 +65,18 @@ OftenFleeMons:
 
 DO
 
-apricorn pop in route 2 north from pewter
+what to use EVENT_CAUGHT_MISSINGNO for?
+
+cianwood photo studio
+charcoal kiln
+
+jumpstd HappinessCheckScript ;in pokecenters? oak's aide?
+
+use gender character in NIDORAN names?
+
+lucky number show only in johto
+buena's password only in johto
+all of these only after expansion card, or after E4?
 
 only later trainers with evolved mons should have randomMon text?
 original pary use BADGE_LEVEL? or...
