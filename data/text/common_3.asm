@@ -1,15 +1,18 @@
 _OakText6::
+	ntag "PROF.OAK:"
 	text "First, what is" ;silvermirror -"Now, what did you"
 	line "your name?" ;silvermirror -"say your name was?"
 	prompt
 
 _OakText7::
+	ntag "PROF.OAK:"
 ;silvermirror +starthere
 	text "Right! So your"
 	line "name is <PLAYER>!"
 	prompt
 
 _OakText8::
+	ntag "PROF.OAK:"
 	text "This is my grand-"
 	line "son. He's been"
 	cont "your rival since"
@@ -20,12 +23,14 @@ _OakText8::
 	prompt
 
 _OakText9::
+	ntag "PROF.OAK:"
 	text "That's right! I"
 	line "remember now! His"
 	cont "name is <RIVAL>!"
 	prompt
 
 _OakText10::
+	ntag "PROF.OAK:"
 ;silvermirror +endhere
 	text "<PLAYER>!" ;silvermirror -"<PLAYER>, are you"
 ;	line "ready?" ;silvermirror -
@@ -106,9 +111,8 @@ _LinkAskTradeForText::
 _MobileBattleMustPickThreeMonText::
 	text "To enter a mobile"
 	line "battle, you must"
-
-	para "pick a team of"
-	line "three #MON."
+	cont "pick a team of"
+	roll "three #MON."
 
 	para "Is that OK?"
 	done
@@ -335,12 +339,13 @@ _SeerTradeText::
 	prompt
 
 _SeerNoLocationText::
-	text "What!? Incredible!"
+;	text "What!? Incredible!"
+	text "What!? Impossible!"
 
-	para "I don't understand"
-	line "how, but it is"
-	cont "incredible!"
-;	cont "You are special."
+;	para "I don't understand"
+;	line "how, but it is"
+;	cont "incredible!"
+;;	cont "You are special."
 
 	para "I can't tell where"
 	line "you met it, but it"
@@ -348,7 +353,7 @@ _SeerNoLocationText::
 	text_ram wSeerCaughtLevelString
 	text "."
 
-	para "Am I good or what?"
+;	para "Am I good or what?"
 	prompt
 
 _SeerEggText::
@@ -481,7 +486,7 @@ _MartFinalPriceText::
 	text_decimal wItemQuantityChange, 1, 2
 	text " @"
 	text_ram wStringBuffer2
-	text "(S)"
+	text "(s)" ;"(S)"
 	line "will be ¥@"
 	text_decimal hMoneyTemp, 3, 6
 	text "."
@@ -510,7 +515,7 @@ _HerbalLadyFinalPriceText::
 	text_decimal wItemQuantityChange, 1, 2
 	text " @"
 	text_ram wStringBuffer2
-	text "(S)"
+	text "(s)" ;"(S)"
 	line "will be ¥@"
 	text_decimal hMoneyTemp, 3, 6
 	text "."
@@ -560,7 +565,7 @@ _BargainShopThanksText::
 
 _BargainShopPackFullText::
 	text "Uh-oh, your PACK"
-	line "is chock-full."
+	line "is stuffed full."
 	done
 
 _BargainShopSoldOutText::
@@ -592,7 +597,7 @@ _PharmacyFinalPriceText::
 	text_decimal wItemQuantityChange, 1, 2
 	text " @"
 	text_ram wStringBuffer2
-	text "(S)"
+	text "(s)" ;"(S)"
 	line "will cost ¥@"
 	text_decimal hMoneyTemp, 3, 6
 	text "."
@@ -675,7 +680,7 @@ _MartBoughtText::
 	text " for"
 	line "@"
 	text_ram wStringBuffer2
-	text "(S)."
+	text "(s)" ;"(S)."
 	done
 
 _SlotsBetHowManyCoinsText::
@@ -885,8 +890,12 @@ _PhoneOutOfAreaText::
 	done
 
 _PhoneJustTalkToThemText::
-	text "Just go talk to"
-	line "that person!"
+;	text "Just go talk to"
+;	line "that person!"
+;	done
+	text "That person is in"
+	line "this area! Just go"
+	cont "talk to them!"
 	done
 
 _PhoneThankYouText::
@@ -1066,7 +1075,10 @@ _PokegearPressButtonText::
 	done
 
 _PokegearSelectPagerText::
-	text "Select a PAGER"
+;	text "Select a PAGER"
+;	line "to summon."
+;	done
+	text "Select a #MON"
 	line "to summon."
 	done
 
@@ -1353,9 +1365,14 @@ _ItemCantUseOnEggText::
 	prompt
 
 _ItemOakWarningText::
-	text "OAK: <PLAYER>!"
-	line "This isn't the"
-	cont "time to use that!"
+;	ntag "PROF.OAK:"
+;	text "<PLAYER>!"
+;	line "This isn't the"
+;	cont "time to use that!"
+;	prompt
+	ntag "PROF.OAK:"
+	text "This isn't the"
+	line "time to use that!"
 	prompt
 
 _ItemBelongsToSomeoneElseText::
@@ -1493,46 +1510,53 @@ _DeleterAskWhichMonText::
 	prompt
 
 _DSTIsThatOKText::
+	ntag "MOM:"
 	text " DST,"
 	line "is that OK?"
 	done
 
 _TimeAskOkayText::
+	ntag "MOM:"
 	text ","
 	line "is that OK?"
 	done
 
 _TimesetAskDSTText::
+	ntag "MOM:"
 	text "Do you want to"
 	line "switch to Daylight"
 	cont "Saving Time?"
 	done
 
 _TimesetDSTText::
+	ntag "MOM:"
 	text "I set the clock"
 	line "forward by one"
 	cont "hour."
 	prompt
 
 _TimesetAskNotDSTText::
+	ntag "MOM:"
 	text "Is Daylight Saving"
 	line "Time over?"
 	done
 
 _TimesetNotDSTText::
+	ntag "MOM:"
 	text "I put the clock"
 	line "back one hour."
 	prompt
 
 _TimesetAskAdjustDSTText::
+	ntag "MOM:"
 	text "Do you want to"
 	line "adjust your clock"
-
 	cont "for Daylight"      ;para
 	roll "Saving Time?"      ;line
 	done
 
 _MomLostGearBookletText::
+	ntag "MOM:"
 	text "I lost the in-"
 	line "struction booklet"
 	cont "for the #GEAR."
