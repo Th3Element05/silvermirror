@@ -2471,21 +2471,47 @@ HappinessCheckScript:
 	faceplayer
 	opentext
 	special GetFirstPokemonHappiness
-	ifless 75, .Unhappy ;50
-	ifless 150, .KindaHappy
-	farwritetext HappinessText3
+	farwritetext HappinessRaterIntroText
+	promptbutton
+	ifgreater 250 - 1, .LovesYouALot
+	ifgreater 200 - 1, .ReallyTrustsYou
+	ifgreater 150 - 1, .SortOfHappy
+	ifgreater 100 - 1, .QuiteCute
+	ifgreater  50 - 1, .NotUsedToYou
+;	sjump .LooksMean
+
+.LooksMean:
+	farwritetext HappinessRatingText_LooksMean
 	waitbutton
 	closetext
 	end
 
-.KindaHappy:
-	farwritetext HappinessText2
+.NotUsedToYou:
+	writetext GoldenrodHappinessRatingText_NotUsedToYou
 	waitbutton
 	closetext
 	end
 
-.Unhappy:
-	farwritetext HappinessText1
+.QuiteCute:
+	writetext GoldenrodHappinessRatingText_QuiteCute
+	waitbutton
+	closetext
+	end
+
+.SortOfHappy:
+	writetext GoldenrodHappinessRatingText_SortOfHappy
+	waitbutton
+	closetext
+	end
+
+.ReallyTrustsYou:
+	writetext GoldenrodHappinessRatingText_ReallyTrustsYou
+	waitbutton
+	closetext
+	end
+
+.LovesYouALot:
+	writetext GoldenrodHappinessRatingText_LovesYouALot
 	waitbutton
 	closetext
 	end
