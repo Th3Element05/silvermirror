@@ -1,22 +1,26 @@
 NurseMornText:
+;	ntag "NURSE:"
 	text "Good morning!"
 	line "Welcome to our"
 	cont "#MON CENTER."
 	done
 
 NurseDayText:
+;	ntag "NURSE:"
 	text "Hello!"
 	line "Welcome to our"
 	cont "#MON CENTER."
 	done
 
 NurseEveText:
+;	ntag "NURSE:"
 	text "Good evening!"
 	line "Welcome to our"
 	cont "#MON CENTER."
 	done
 
 NurseNiteText:
+;	ntag "NURSE:"
 	text "Good evening!"
 	line "You're out late."
 
@@ -66,6 +70,7 @@ NurseNiteText:
 ;	done
 
 NurseAskHealText:
+;	ntag "NURSE:"
 	text "We can heal your"
 	line "#MON to perfect"
 	cont "health."
@@ -75,11 +80,13 @@ NurseAskHealText:
 	done
 
 NurseTakePokemonText:
+;	ntag "NURSE:"
 	text "OK, may I see your"
 	line "#MON?"
 	done
 
 NurseReturnPokemonText:
+;	ntag "NURSE:"
 	text "Thank you for"
 	line "waiting."
 
@@ -88,29 +95,44 @@ NurseReturnPokemonText:
 	done
 
 NurseGoodbyeText:
+;	ntag "NURSE:"
 	text "We hope to see you"
 	line "again."
 	done
 
-; not used
-	text "We hope to see you"
-	line "again."
-	done
+;; not used
+;	text "We hope to see you"
+;	line "again."
+;	done
 
 NursePokerusText:
-	text "Your #MON"
-	line "appear to be"
-	cont "infected by tiny"
-	roll "life forms."
+;	ntag "NURSE:"
+	text "Your #MON seems"
+	line "to be infected by"
+	cont "tiny life forms."
 
 	para "Your #MON are"
 	line "healthy and seem"
 	cont "to be fine."
 
+;	para "But we can't tell"
+;	line "you anything more"
+;	cont "at a #MON### CENTER."
+;	roll "CENTER."
+;	done
+
+;	para "But we can't tell"
+;	line "you much more at"
+;	cont "a #MON CENTER."
+;	done
+
 	para "But we can't tell"
-	line "you anything more"
-	cont "at a #MON"
-	roll "CENTER."
+	line "what other effects"
+	cont "there may be."
+
+	para "A #MON PROF."
+	line "might be able to"
+	cont "tell you more."
 	done
 
 ;PokeComNursePokerusText:
@@ -217,13 +239,13 @@ TrashCanText:
 
 PokecenterSignText:
 	text "#MON CENTER"
-	line "Heal Your #MON!"
+;	line "Heal Your #MON!"
 	done
 
 MartSignText:
 	text "#MART"
-	line "For All Your"
-	cont "#MON Needs"
+;	line "For All Your"
+;	cont "#MON Needs"
 	done
 
 ContestResults_ReadyToJudgeText:
@@ -281,8 +303,8 @@ ContestResults_DidNotWinText:
 
 ContestResults_ReturnPartyText:
 	text "We'll return the"
-	line "#MON we kept"
-	cont "for you."
+	line "#MON we were"
+	cont "holding for you."
 	roll "Here you go!"
 	done
 
@@ -383,25 +405,80 @@ BugContestPrizeNoRoomText:
 	roll "make room for it."
 	done
 
-HappinessText3:
-	text "Wow! You and your"
-	line "#MON are really"
-	cont "close!"
+;HappinessText3:
+;	text "Wow! You and your"
+;	line "#MON are really"
+;	cont "close!"
+;	done
+
+;HappinessText2:
+;	text "#MON get more"
+;	line "friendly if you"
+;	cont "spend time with"
+;	roll "them."
+;	done
+
+;HappinessText1:
+;	text "You haven't tamed"
+;	line "your #MON."
+;
+;;	para "If you aren't"
+;;	line "nice, it'll pout."
+;;	done
+;
+;	para "You need to earn"
+;	line "its respect."
+;	done
+
+HappinessRaterIntroText:
+	text "If you treat your"
+	line "#MON nicely,"
+	cont "they will love you"
+	roll "in return."
+
+	para "Oh? Let me see"
+	line "your @"
+	text_ram wStringBuffer3
+	text "…"
 	done
 
-HappinessText2:
-	text "#MON get more"
-	line "friendly if you"
-	cont "spend time with"
-	roll "them."
+HappinessRatingText_LooksMean:
+	text "It doesn't seem to"
+	line "like you at all."
+	cont "It looks mean."
 	done
 
-HappinessText1:
-	text "You haven't tamed"
-	line "your #MON."
+HappinessRatingText_NotUsedToYou:
+;	text "You should treat"
+;	line "it better. It's"
+;	cont "not used to you."
+;	done
+	text "It's not used to"
+	line "you yet. You still"
+	cont "need to earn its"
+	roll "respect."
+	done
 
-	para "If you aren't"
-	line "nice, it'll pout."
+HappinessRatingText_QuiteCute:
+	text "It's quite cute."
+	done
+
+HappinessRatingText_SortOfHappy:
+	text "It's friendly to-"
+	line "ward you. It looks"
+	cont "sort of happy."
+	done
+
+HappinessRatingText_ReallyTrustsYou:
+	text "I get the feeling"
+	line "that it really"
+	cont "trusts you."
+	done
+
+HappinessRatingText_LovesYouALot:
+	text "It looks really"
+	line "happy! It must"
+	cont "love you a lot."
 	done
 
 RegisteredNumber1Text:
@@ -471,7 +548,7 @@ SaffronGateOpenText: ;silvermirror+
 	text "…"
 	line "Glug glug…"
 	cont "…"
-	cont "Gulp…"
+	cont "Gulp…" ;cont on purpose, not roll
 
 	para "If you want to go"
 	line "to SAFFRON CITY…"

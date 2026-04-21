@@ -11,7 +11,7 @@ _HeyItsFruitText::
 	done
 
 _ObtainedFruitText::
-	text "Obtained"
+	text "Obtained some"
 	line "@"
 	text_ram wStringBuffer3
 	text "!"
@@ -47,13 +47,13 @@ _RecoveredSomeHPText::
 
 _CuredOfPoisonText::
 	text_ram wStringBuffer1
-	text "'s"
+	text " was" ;"'s"
 	line "cured of poison."
 	done
 
 _RidOfParalysisText::
 	text_ram wStringBuffer1
-	text "'s"
+	text " was" ;"'s"
 	line "rid of paralysis."
 	done
 
@@ -313,8 +313,8 @@ _PutAwayAndSetUpText::
 	text_ram wStringBuffer3
 	text_start
 
-	para "and set up the"
-	line "@"
+	cont "and set up the"
+	roll "@"
 	text_ram wStringBuffer4
 	text "."
 	prompt
@@ -513,12 +513,12 @@ _MobileTradeCameBackText::
 _OPT_IntroText1::
 	text_start
 ;	line "MARY: PROF.OAK's"
-	line "MARY: Welcome to"
+	line "Hello! And welcome"
 	done
 
 _OPT_IntroText2::
 	text_start
-	line "#MON TALK!"
+	line "to #MON TALK!"
 	done
 
 _OPT_IntroText3::
@@ -791,7 +791,7 @@ _PokedexShowText::
 
 _BenIntroText1::
 	text_start
-	line "BEN: #MON MUSIC"
+	line "#MON MUSIC"
 	done
 
 _BenIntroText2::
@@ -806,7 +806,7 @@ _BenIntroText3::
 
 _FernIntroText1::
 	text_start
-	line "FERN: #MUSIC!"
+	line "#MUSIC!"
 	done
 
 _FernIntroText2::
@@ -845,12 +845,12 @@ _BenFernText3B::
 
 _LC_Text1::
 	text_start
-	line "REED: Yeehaw! How"
+	line "Yeehaw! How y'all"
 	done
 
 _LC_Text2::
 	text_start
-	line "y'all doin' now?"
+	line "doin' now?"
 	done
 
 _LC_Text3::
@@ -1096,7 +1096,7 @@ _RocketRadioText10::
 
 _BuenaRadioText1::
 	text_start
-	line "BUENA: BUENA here!"
+	line "BUENA here!"
 	done
 
 _BuenaRadioText2::
@@ -1133,7 +1133,7 @@ _BuenaRadioText7::
 
 _BuenaRadioMidnightText1::
 	text_start
-	line "BUENA: Oh my…"
+	line "Oh my…"
 	done
 
 _BuenaRadioMidnightText2::
@@ -1379,29 +1379,34 @@ _BugCatchingContestTimeUpText::
 ;
 ;	para "Time's up!"
 ;	done
-	text "PA: Ding-dong!"
+	ntag "ANNOUNCER:"
+	text "Ding-dong!"
 	
 	para "Time's up!"
 	done
 
 _BugCatchingContestIsOverText::
-	text "ANNOUNCER: The"
+	ntag "ANNOUNCER:"
+	text "The Bug-Catching"
 	line "Contest is over!"
 	done
 
 _SafariTimeUpText::
-	text "PA: Ding-dong!"
+	ntag "ANNOUNCER:"
+	text "Ding-dong!"
 	
 	para "Time's up!"
 	prompt
 
 _SafariGameOverText::
-	text "PA: Your SAFARI"
-	line "Game is over!"
+	ntag "ANNOUNCER:"
+	text "Your SAFARI game"
+	line "is over!"
 	done
 
 _SafariOutOfBallsText::
-	text "PA: Ding-dong!"
+	ntag "ANNOUNCER:"
+	text "Ding-dong!"
 
 	para "You are out of"
 	line "SAFARI BALLs!"
@@ -1660,6 +1665,7 @@ _NPCTradeAfterText3::
 ;	done
 
 _MomLeavingText1::
+	ntag "MOM:"
 	text "Wow, that's a neat"
 	line "device. You say"
 	cont "it's a #DEX?"
@@ -1689,6 +1695,7 @@ _MomLeavingText1::
 	done
 
 _MomLeavingText2::
+	ntag "MOM:"
 	text "OK, I'll take care"
 	line "of your money."
 
@@ -1696,6 +1703,7 @@ _MomLeavingText2::
 	prompt
 
 _MomLeavingText3::
+	ntag "MOM:"
 	text "Be careful."
 
 	para "#MON are your"
@@ -1706,6 +1714,7 @@ _MomLeavingText3::
 	done
 
 _MomIsThisAboutYourMoneyText::
+	ntag "MOM:"
 	text "Hi! Welcome home!"
 	line "You're trying very"
 	cont "hard, I see."
@@ -1718,46 +1727,55 @@ _MomIsThisAboutYourMoneyText::
 	done
 
 _MomBankWhatDoYouWantToDoText::
+	ntag "MOM:"
 	text "What do you want"
 	line "to do?"
 	done
 
 _MomStoreMoneyText::
+	ntag "MOM:"
 	text "How much do you"
 	line "want to save?"
 	done
 
 _MomTakeMoneyText::
+	ntag "MOM:"
 	text "How much do you"
 	line "want to take?"
 	done
 
 _MomSaveMoneyText::
+	ntag "MOM:"
 	text "Do you want to"
 	line "save some money?"
 	done
 
 _MomHaventSavedThatMuchText::
+	ntag "MOM:"
 	text "You haven't saved"
 	line "that much."
 	prompt
 
 _MomNotEnoughRoomInWalletText::
+	ntag "MOM:"
 	text "You can't take"
 	line "that much."
 	prompt
 
 _MomInsufficientFundsInWalletText::
+	ntag "MOM:"
 	text "You don't have"
 	line "that much."
 	prompt
 
 _MomNotEnoughRoomInBankText::
+	ntag "MOM:"
 	text "You can't save"
 	line "that much."
 	prompt
 
 _MomStartSavingMoneyText::
+	ntag "MOM:"
 	text "OK, I'll save your"
 	line "money. Trust me!"
 
@@ -1766,16 +1784,19 @@ _MomStartSavingMoneyText::
 	done
 
 _MomStoredMoneyText::
+	ntag "MOM:"
 	text "Your money's safe"
 	line "here! Get going!"
 	done
 
 _MomTakenMoneyText::
+	ntag "MOM:"
 	text "<PLAYER>, don't"
 	line "give up!"
 	done
 
 _MomJustDoWhatYouCanText::
+	ntag "MOM:"
 	text "Just do what"
 	line "you can."
 	done

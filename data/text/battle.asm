@@ -60,18 +60,18 @@ BattleText_EnemyFled:
 	prompt
 
 HurtByPoisonText:
-	text "<USER>"
-	line "is hurt by poison!"
+	text "<USER> is" ;"<USER>"
+	line "hurt by poison!"
 	prompt
 
 HurtByBurnText:
-	text "<USER>'s"
+	text "<USER> is" ;"<USER>'s"
 	line "hurt by its burn!"
 	prompt
 
 LeechSeedSapsText:
 	text "LEECH SEED saps"
-	line "<USER>!"
+	line "<USER>'s HP!" ;"<USER>!"
 	prompt
 
 HasANightmareText:
@@ -80,7 +80,7 @@ HasANightmareText:
 	prompt
 
 HurtByCurseText:
-	text "<USER>'s"
+	text "<USER> is"
 	line "hurt by the CURSE!"
 	prompt
 
@@ -113,9 +113,9 @@ BattleText_UserRecoveredPPUsing:
 	prompt
 
 BattleText_TargetWasHitByFutureSight:
-	text "<TARGET>"
-	line "was hit by FUTURE"
-	cont "SIGHT!"
+	text "<TARGET> was hit"
+	line "by FUTURE SIGHT!"
+;	cont "SIGHT!"
 	prompt
 
 BattleText_SafeguardFaded:
@@ -124,13 +124,13 @@ BattleText_SafeguardFaded:
 	prompt
 
 BattleText_MonsLightScreenFell:
-	text_ram wStringBuffer1
+	text_ram wStringBuffer1 ;"Your" or "Enemy"
 	text " #MON's"
 	line "LIGHT SCREEN fell!"
 	prompt
 
 BattleText_MonsReflectFaded:
-	text_ram wStringBuffer1
+	text_ram wStringBuffer1 ;"Your" or "Enemy"
 	text " #MON's"
 	line "REFLECT faded!"
 	prompt
@@ -281,9 +281,12 @@ BattleText_CantEscape2:
 	prompt
 
 BattleText_TheresNoEscapeFromTrainerBattle:
-	text "No! There's no"
-	line "running from a"
-	cont "trainer battle!"
+;	text "No! There's no"
+;	line "running from a"
+;	cont "trainer battle!"
+;	prompt
+	text "You can't run from"
+	line "a trainer battle!"
 	prompt
 
 BattleText_GotAwaySafely:
@@ -303,7 +306,7 @@ BattleText_CantEscape:
 	prompt
 
 BattleText_UserHurtBySpikes:
-	text "<USER>'s"
+	text "<USER> is"
 	line "hurt by SPIKES!"
 	prompt
 
@@ -402,8 +405,8 @@ BattleText_ThrewBait:
 	done
 
 FastAsleepText:
-	text "<USER>"
-	line "is fast asleep!"
+	text "<USER> is"
+	line "fast asleep!"
 	prompt
 
 WokeUpText:
@@ -412,8 +415,8 @@ WokeUpText:
 	prompt
 
 FrozenSolidText:
-	text "<USER>"
-	line "is frozen solid!"
+	text "<USER> is"
+	line "frozen solid!"
 	prompt
 
 FlinchedText:
@@ -427,13 +430,13 @@ MustRechargeText:
 	prompt
 
 DisabledNoMoreText:
-	text "<USER>'s"
-	line "disabled no more!"
+	text "<USER> is no"
+	line "longer DISABLED!"
 	prompt
 
 IsConfusedText:
-	text "<USER>"
-	line "is confused!"
+	text "<USER> is"
+	line "confused!"
 	prompt
 
 HurtItselfText:
@@ -442,7 +445,7 @@ HurtItselfText:
 	prompt
 
 ConfusedNoMoreText:
-	text "<USER>'s"
+	text "<USER> is"
 	line "confused no more!"
 	prompt
 
@@ -460,12 +463,12 @@ BattleText_ItemHealedConfusion:
 	prompt
 
 AlreadyConfusedText:
-	text "<TARGET>'s"
+	text "<TARGET> is"
 	line "already confused!"
 	prompt
 
 BattleText_UsersHurtByStringBuffer1:
-	text "<USER>'s"
+	text "<USER> is"
 	line "hurt by"
 	cont "@"
 	text_ram wStringBuffer1
@@ -509,8 +512,8 @@ ClampedByText:
 	prompt
 
 StoringEnergyText:
-	text "<USER>"
-	line "is storing energy!"
+	text "<USER> is"
+	line "storing energy!"
 	prompt
 
 UnleashedEnergyText:
@@ -584,7 +587,7 @@ IgnoredOrdersText:
 IgnoredSleepingText:
 	text_ram wBattleMonNickname
 	text " ignored"
-	line "orders…sleeping!"
+	line "orders… sleeping!"
 	prompt
 
 NoPPLeftText:
@@ -627,14 +630,14 @@ AttackMissed2Text:
 	prompt
 
 CrashedText:
-	text "<USER>"
-	line "kept going and"
-	cont "crashed!"
+	text "<USER> kept"
+	line "going and crashed!"
+;	cont "crashed!"
 	prompt
 
 UnaffectedText:
-	text "<TARGET>'s"
-	line "unaffected!"
+	text "<TARGET> was"
+	line "not affected!"
 	prompt
 
 DoesntAffectText:
@@ -661,9 +664,13 @@ NotVeryEffectiveText:
 	prompt
 
 TookDownWithItText:
-	text "<TARGET>"
-	line "took down with it,"
-	cont "<USER>!"
+;	text "<TARGET>"
+;	line "took down with it,"
+;	cont "<USER>!"
+;	prompt
+	text "<TARGET> took"
+	line "<USER> down"
+	cont "with it!"
 	prompt
 
 RageBuildingText:
@@ -695,7 +702,7 @@ SketchedText:
 	prompt
 
 DestinyBondEffectText:
-	text "<USER>'s"
+	text "<USER> is"
 	line "trying to take its"
 	cont "opponent with it!"
 	prompt
@@ -721,7 +728,7 @@ FellAsleepText:
 	prompt
 
 AlreadyAsleepText:
-	text "<TARGET>'s"
+	text "<TARGET> is"
 	line "already asleep!"
 	prompt
 
@@ -731,18 +738,18 @@ WasPoisonedText:
 	prompt
 
 BadlyPoisonedText:
-	text "<TARGET>'s"
+	text "<TARGET> was"
 	line "badly poisoned!"
 	prompt
 
 AlreadyPoisonedText:
-	text "<TARGET>'s"
+	text "<TARGET> is"
 	line "already poisoned!"
 	prompt
 
 SuckedHealthText:
-	text "Sucked health from"
-	line "<TARGET>!"
+	text "Drained health"
+	line "from <TARGET>!"
 	prompt
 
 DreamEatenText:
@@ -761,8 +768,8 @@ DefrostedOpponentText:
 	prompt
 
 WasFrozenText:
-	text "<TARGET>"
-	line "was frozen solid!"
+	text "<TARGET> was"
+	line "frozen solid!"
 	prompt
 
 WontRiseAnymoreText:
@@ -823,34 +830,34 @@ SingularPluralHitTimesText:
 	prompt
 
 MistText:
-	text "<USER>'s"
+	text "<USER> is"
 	line "shrouded in MIST!"
 	prompt
 
 ProtectedByMistText:
-	text "<TARGET>'s"
+	text "<TARGET> is"
 	line "protected by MIST."
 	prompt
 
 GettingPumpedText:
 	text_pause
-	text "<USER>'s"
+	text "<USER> is"
 	line "getting pumped!"
 	prompt
 
 RecoilText:
-	text "<USER>'s"
+	text "<USER> is"
 	line "hit with recoil!"
 	prompt
 
 MadeSubstituteText:
-	text "<USER>"
-	line "made a SUBSTITUTE!"
+	text "<USER> made"
+	line "a SUBSTITUTE!"
 	prompt
 
 HasSubstituteText:
-	text "<USER>"
-	line "has a SUBSTITUTE!"
+	text "<USER> has"
+	line "a SUBSTITUTE!"
 	prompt
 
 TooWeakSubText:
@@ -965,23 +972,23 @@ DraggedOutText:
 	prompt
 
 ParalyzedText:
-	text "<TARGET>'s"
+	text "<TARGET> is"
 	line "paralyzed! Maybe"
 	cont "it can't attack!"
 	prompt
 
 FullyParalyzedText:
-	text "<USER>'s"
+	text "<USER> is"
 	line "fully paralyzed!"
 	prompt
 
 AlreadyParalyzedText:
-	text "<TARGET>'s"
+	text "<TARGET> is"
 	line "already paralyzed!"
 	prompt
 
 ProtectedByText:
-	text "<TARGET>'s"
+	text "<TARGET> is"
 	line "protected by"
 	cont "@"
 	text_ram wStringBuffer1
@@ -1018,11 +1025,15 @@ WasDefrostedText:
 	prompt
 
 PutACurseText:
-	text "<USER>"
-	line "cut its own HP and"
-
-	para "put a CURSE on"
-	line "<TARGET>!"
+;	text "<USER>"
+;	line "cut its own HP and"
+;
+;	para "put a CURSE on"
+;	line "<TARGET>!"
+;	prompt
+	text "<USER> cut its"
+	line "own HP to CURSE"
+	cont "<TARGET>!"
 	prompt
 
 ProtectedItselfText:
@@ -1031,14 +1042,14 @@ ProtectedItselfText:
 	prompt
 
 ProtectingItselfText:
-	text "<TARGET>'s"
+	text "<TARGET> is"
 	line "PROTECTING itself!"
 	done
 
 SpikesText:
 	text "SPIKES scattered"
-	line "all around"
-	cont "<TARGET>!"
+	line "around <TARGET>!"
+;	cont "<TARGET>!"
 	prompt
 
 IdentifiedText:
@@ -1068,7 +1079,7 @@ FellInLoveText:
 	prompt
 
 CoveredByVeilText:
-	text "<USER>'s"
+	text "<USER> is"
 	line "covered by a veil!"
 	prompt
 
@@ -1091,13 +1102,13 @@ ReleasedByText:
 	prompt
 
 ShedLeechSeedText:
-	text "<USER>"
-	line "shed LEECH SEED!"
+	text "<USER> shook"
+	line "off LEECH SEED!"
 	prompt
 
 BlewSpikesText:
-	text "<USER>"
-	line "blew away SPIKES!"
+	text "<USER> blew"
+	line "away the SPIKES!"
 	prompt
 
 StartedToRainText:
@@ -1117,16 +1128,23 @@ BellyDrumText:
 	prompt
 
 CopiedStatsText:
-	text "<USER>"
-	line "copied the stat"
-
-	para "changes of"
-	line "<TARGET>!"
+;	text "<USER>"
+;	line "copied the stat"
+;
+;	para "changes of"
+;	line "<TARGET>!"
+;	prompt
+	text "<USER> copied"
+	line "the stat changes"
+	cont "of <TARGET>!"
 	prompt
 
 ForesawAttackText:
-	text "<USER>"
-	line "foresaw an attack!"
+;	text "<USER>"
+;	line "foresaw an attack!"
+;	prompt
+	text "<USER> foresaw"
+	line "a future attack!"
 	prompt
 
 BeatUpAttackText:

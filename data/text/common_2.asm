@@ -29,15 +29,20 @@ _NameRaterBetterNameText::
 	text "Hm… @"
 	text_ram wStringBuffer1
 	text "…"
-	line "That's a fairly"
-	cont "decent name."
 
-	para "But, how about a"
-	line "slightly better"
-	cont "nickname?"
+	para "That's a pretty"
+	line "good name."
 
-	para "Want me to give it"
-	line "a better name?"
+;	para "But, how about a"
+;	line "slightly better"
+;	cont "nickname?"
+;
+;	para "Want me to give it"
+;	line "a better name?"
+;	done
+
+	para "But, would you"
+	line "like to rename it?"
 	done
 
 _NameRaterWhatNameText::
@@ -47,10 +52,14 @@ _NameRaterWhatNameText::
 	prompt
 
 _NameRaterFinishedText::
-	text "That's a better"
-	line "name than before!"
+;	text "That's a better"
+;	line "name than before!"
+;
+;	para "Well done!"
+;	done
 
-	para "Well done!"
+	text "That's a good"
+	line "name! Well done!"
 	done
 
 _NameRaterComeAgainText::
@@ -62,8 +71,9 @@ _NameRaterPerfectNameText::
 	text "Hm… @"
 	text_ram wStringBuffer1
 	text "?"
-	line "What a great name!"
-	cont "It's perfect."
+	
+	para "What a great name!"
+	line "It's perfect."
 
 	para "Treat @"
 	text_ram wStringBuffer1
@@ -72,7 +82,7 @@ _NameRaterPerfectNameText::
 	done
 
 _NameRaterEggText::
-	text "Whoa… That's just"
+	text "Huh…? That's just"
 	line "an EGG."
 	done
 
@@ -80,7 +90,7 @@ _NameRaterSameNameText::
 	text "It might look the"
 	line "same as before,"
 	cont "but this new name"
-	cont "is much better!"
+	roll "is much better!"
 
 	para "Well done!"
 	done
@@ -162,36 +172,50 @@ _ComeBackText::
 	done
 
 _BootedTMText::
-	text "Booted up a TM."
+	text "Booted up the TM."
 	prompt
 
 _BootedHMText::
-	text "Booted up an HM."
+	text "Booted up the HM."
 	prompt
 
 _ContainedMoveText::
-	text "It contained"
-	line "@"
-	text_ram wStringBuffer2
-	text "."
+;	text "It contained"
+;	line "@"
+;	text_ram wStringBuffer2
+;	text "."
+;
+;	para "Teach @"
+;	text_ram wStringBuffer2
+;	text_start
+;	line "to a #MON?"
+;	done
 
-	para "Teach @"
+	text "Teach @"
 	text_ram wStringBuffer2
 	text_start
 	line "to a #MON?"
 	done
 
 _TMHMNotCompatibleText::
-	text_ram wStringBuffer2
-	text " is"
-	line "not compatible"
-	cont "with @"
-	text_ram wStringBuffer1
-	text "."
+;	text_ram wStringBuffer2
+;	text " is"
+;	line "not compatible"
+;	cont "with @"
+;	text_ram wStringBuffer1
+;	text "."
+;
+;	para "It can't learn"
+;	line "@"
+;	text_ram wStringBuffer2
+;	text "."
+;	prompt
 
-	para "It can't learn"
-	line "@"
 	text_ram wStringBuffer2
+	text " "
+	line "cannot learn"
+	cont "@"
+	text_ram wStringBuffer1
 	text "."
 	prompt
 
@@ -200,7 +224,7 @@ _NoRoomTMHMText::
 	line "for any more"
 	cont "@"
 	text_ram wStringBuffer1
-	text "S."
+	text "s." ;"S."
 	prompt
 
 _ReceivedTMHMText::
@@ -338,7 +362,7 @@ _AskSurfText::
 	text "The water is calm."
 
 	para "Do you want to use"
-	line "SURF?" 
+	line "SURF?"
 	done
 
 _UsedFlyText::
@@ -417,8 +441,10 @@ _AskStrengthText::
 	done
 
 _BouldersMoveText::
-	text "Boulders may now"
-	line "be moved!"
+;	text "Boulders may now"
+;	line "be moved!"
+	text "Now you can push"
+	line "boulders!"
 	done
 
 _BouldersMayMoveText::
@@ -451,7 +477,7 @@ _AskWhirlpoolText::
 
 _UseHeadbuttText::
 	text_ram wStringBuffer2
-	text " did a"
+	text " used" ;" did a"
 	line "HEADBUTT!"
 	prompt
 
@@ -460,8 +486,8 @@ _HeadbuttNothingText::
 	done
 
 _AskHeadbuttText::
-	text "A #MON could be"
-	line "in this tree."
+	text "A #MON could"
+	line "be in this tree."
 
 	para "Want to HEADBUTT"
 	line "it?"
@@ -506,8 +532,8 @@ _CantGetOffBikeText::
 	done
 
 _GotOnBikeText::
-	text "<PLAYER> got on the"
-	line "@"
+	text "<PLAYER> got on"
+	line "the @"
 	text_ram wStringBuffer2
 	text "."
 	done
@@ -540,9 +566,12 @@ _CanCutText::
 ;	done
 
 _CantCarryItemText::
-	text "But <PLAYER> can't"
-	line "carry any more"
-	cont "items."
+;	text "But <PLAYER> can't"
+;	line "carry any more"
+;	cont "items."
+;	done
+	text "But <PLAYER>'s PACK"
+	line "if full."
 	done
 
 _WhitedOutText::
@@ -649,20 +678,22 @@ _AskQuantityThrowAwayText::
 	text_start
 	line "@"
 	text_ram wStringBuffer2
-	text "(S)?"
+	text "(s)?" ;"(S)?"
 	done
 
 _ThrewAwayText::
 	text "Threw away"
 	line "@"
 	text_ram wStringBuffer2
-	text "(S)."
+	text "(s)." ;"(S)."
 	prompt
 
 _OakThisIsntTheTimeText::
-	text "OAK: <PLAYER>!"
-	line "This isn't the"
-	cont "time to use that!"
+_ItemsOakWarningText::
+	ntag "PROF.OAK:"
+;	text "<PLAYER>!"
+	text "This isn't the"
+	line "time to use that!"
 	prompt
 
 _YouDontHaveAMonText::
@@ -683,8 +714,10 @@ _CantRegisterText::
 	prompt
 
 _AskItemMoveText::
-	text "Where should this"
-	line "be moved to?"
+;	text "Where should this"
+;	line "be moved to?"
+;	done
+	text "Move where?"
 	done
 
 _PackEmptyText::
@@ -742,7 +775,7 @@ Text_BattleEffectActivate::
 
 _BattleStatWentWayUpText::
 	text_pause
-	text "<SCROLL>sharply rose!"
+	text "<SCROLL>rose sharply!"
 	prompt
 
 _BattleStatWentUpText::
@@ -863,8 +896,8 @@ _BreedClearboxText::
 
 _BreedEggHatchText::
 	text_ram wStringBuffer1
-	text " came"
-	line "out of its EGG!@"
+	text " hatched" ;" came"
+	line "from the EGG!@" ;"out of its EGG!@"
 	sound_caught_mon
 	text_promptbutton
 	text_end
@@ -1147,7 +1180,7 @@ _LuckyNumberMatchPCText::
 	cont "of @"              ;para
 	text_decimal wBufferMonID, 2, 5
 	text " in Box"
-	cont "“@"                ;line
+	roll "“@"                ;line
 	text_ram wStringBuffer1
 	text "”."
 	prompt
@@ -1187,7 +1220,7 @@ _PlayersPCWithdrewItemsText::
 	text_start
 	line "@"
 	text_ram wStringBuffer2
-	text "(S)."
+	text "(s)." ;"(S)."
 	prompt
 
 _PlayersPCNoRoomWithdrawText::
@@ -1210,12 +1243,12 @@ _PlayersPCDepositItemsText::
 	text_start
 	line "@"
 	text_ram wStringBuffer2
-	text "(S)."
+	text "(s)." ;"(S)."
 	prompt
 
 _PlayersPCNoRoomDepositText::
 	text "There's no room to"
-	line "store items."
+	line "store more items."
 	prompt
 
 _PokecenterPCTurnOnText::
@@ -1277,17 +1310,20 @@ _OakPCText3::
 	done
 
 _OakRating01::
+	ntag "PROF.OAK:"
 	text "Look for #MON"
 	line "in grassy areas!"
 	done
 
 _OakRating02::
+	ntag "PROF.OAK:"
 	text "Good. I see you"
 	line "understand how to"
 	cont "use #BALLs."
 	done
 
 _OakRating03::
+	ntag "PROF.OAK:"
 	text "You're getting"
 	line "good at this."
 
@@ -1296,6 +1332,7 @@ _OakRating03::
 	done
 
 _OakRating04::
+	ntag "PROF.OAK:"
 	text "You need to fill"
 	line "up the #DEX."
 
@@ -1304,6 +1341,7 @@ _OakRating04::
 	done
 
 _OakRating05::
+	ntag "PROF.OAK:"
 	text "You're trying--I"
 	line "can see that."
 
@@ -1312,61 +1350,69 @@ _OakRating05::
 	done
 
 _OakRating06::
+	ntag "PROF.OAK:"
 	text "To evolve, some"
 	line "#MON grow,"
 	cont "others use the"
-	cont "effects of STONEs."
+	roll "effects of STONEs."
 	done
 
 _OakRating07::
+	ntag "PROF.OAK:"
 	text "Have you gotten a"
 	line "fishing ROD? You"
 	cont "can catch #MON"
-	cont "by fishing."
+	roll "by fishing."
 	done
 
 _OakRating08::
+	ntag "PROF.OAK:"
 	text "Excellent! You"
 	line "seem to like col-"
 	cont "lecting things!"
 	done
 
 _OakRating09::
+	ntag "PROF.OAK:"
 	text "Some #MON only"
 	line "appear during"
 	cont "certain times of"
-	cont "the day."
+	roll "the day."
 	done
 
 _OakRating10::
+	ntag "PROF.OAK:"
 	text "Your #DEX is"
 	line "filling up. Keep"
 	cont "up the good work!"
 	done
 
 _OakRating11::
-_OakRating12::
+_OakRating13::
+	ntag "PROF.OAK:"
 	text "I'm impressed."
 	line "You're evolving"
 	cont "#MON, not just"
-	cont "catching them."
+	roll "catching them."
 	done
 
 ;_OakRating12::
+;	ntag "PROF.OAK:"
 ;	text "Have you met KURT?"
 ;	line "His custom BALLs"
 ;	cont "should help."
 ;	done
 
-_OakRating13::
-_OakRating14::
-	text "Wow. You've found"
-	line "more #MON than"
-	cont "the last #DEX"
-	cont "research project."
-	done
+;_OakRating13::
+;	ntag "PROF.OAK:"
+;	text "Wow. You've found"
+;	line "more #MON than"
+;	cont "the last #DEX"
+;	roll "research project."
+;	done
 
 ;_OakRating14::
+;	ntag "PROF.OAK:"
 ;	text "Are you trading"
 ;	line "your #MON?"
 ;
@@ -1375,12 +1421,16 @@ _OakRating14::
 ;	done
 
 _OakRating15::
+	ntag "PROF.OAK:"
 	text "Wow! You've hit"
 	line "200! Your #DEX"
 	cont "is looking great!"
 	done
 
+_OakRating12::
+_OakRating14::
 _OakRating16::
+	ntag "PROF.OAK:"
 	text "You've found so"
 	line "many #MON!"
 
@@ -1389,23 +1439,35 @@ _OakRating16::
 	done
 
 _OakRating17::
+	ntag "PROF.OAK:"
 	text "Magnificent! You"
 	line "could become a"
 	cont "#MON professor"
-	cont "right now!"
+	roll "right now!"
 	done
 
 _OakRating18::
+	ntag "PROF.OAK:"
 	text "Your #DEX is"
 	line "amazing! You're"
 	cont "ready to turn"
-	cont "professional!"
+	roll "professional!"
 	done
 
 _OakRating19::
+	ntag "PROF.OAK:"
 	text "Whoa! A perfect"
 	line "#DEX! I've"
 	cont "dreamt about this!"
+
+	para "Congratulations!"
+	done
+	ntag "PROF.OAK:"
+	text "Whoa! A complete"
+	line "#DEX!"; I've"
+;	cont "dreamt about this!"
+	para "I've dreamt about"
+	line "this day!"
 
 	para "Congratulations!"
 	done
@@ -1459,7 +1521,7 @@ _ItemsTossOutHowManyText::
 	text "Toss out how many"
 	line "@"
 	text_ram wStringBuffer2
-	text "(S)?"
+	text "(s)." ;"(S)?"
 	done
 
 _ItemsThrowAwayText::
@@ -1468,14 +1530,14 @@ _ItemsThrowAwayText::
 	text_start
 	line "@"
 	text_ram wStringBuffer2
-	text "(S)?"
+	text "(s)." ;"(S)?"
 	done
 
 _ItemsDiscardedText::
 	text "Discarded"
 	line "@"
 	text_ram wStringBuffer1
-	text "(S)."
+	text "(s)." ;"(S)."
 	prompt
 
 _ItemsTooImportantText::
@@ -1483,11 +1545,12 @@ _ItemsTooImportantText::
 	line "tant to toss out!"
 	prompt
 
-_ItemsOakWarningText::
-	text "OAK: <PLAYER>!"
-	line "This isn't the"
-	cont "time to use that!"
-	done
+;_ItemsOakWarningText::
+;	ntag "PROF.OAK:"
+;;	text "OAK: <PLAYER>!"
+;	text "This isn't the"
+;	line "time to use that!"
+;	done
 
 _PokemonSwapItemText::
 	text "Took @"
@@ -1598,10 +1661,11 @@ _MayRegisterItemText::
 	text "An item in your"
 	line "PACK may be"
 	cont "registered for use"
-	cont "on SELECT Button."
+	roll "on SELECT Button."
 	done
 
 _OakText1::
+	ntag "PROF.OAK:"
 	text "Hello there!" ;silvermirror -"Hello! Sorry to"
 ;	line "keep you waiting!" ;silvermirror -
 
@@ -1617,10 +1681,11 @@ endc
 	prompt
 
 _OakText2::
+	ntag "PROF.OAK:"
 	text "This world is" ;silvermirror -"This world is in-"
 	line "inhabited by" ;silvermirror -"habited by crea-"
 	cont "creatures called" ;silvermirror -"tures that we call"
-	cont "#MON.@"
+	roll "#MON.@"
 	text_end
 
 _OakText3::
@@ -1628,10 +1693,11 @@ _OakText3::
 	text_end
 
 _OakText4::
+	ntag "PROF.OAK:"
 	text "For some people," ;silvermirror -"People and #MON"
 	line "#MON are pets" ;silvermirror -"live together by"
 	cont "Others use them" ;silvermirror +
-	cont "for fights." ;silvermirror +
+	roll "for fights." ;silvermirror +
 
 ;	para "supporting each" ;silvermirror -
 ;	line "other." ;silvermirror -
@@ -1642,6 +1708,7 @@ _OakText4::
 	prompt
 
 _OakText5::
+	ntag "PROF.OAK:"
 	text "Myself…" ;silvermirror -"But we don't know"
 ;	line "everything about" ;silvermirror -
 ;	cont "#MON yet." ;silvermirror -
