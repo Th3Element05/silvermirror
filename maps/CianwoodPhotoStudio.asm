@@ -16,6 +16,10 @@ CianwoodPhotoStudioFishingGuruScript:
 	waitbutton
 	special PhotoStudio
 	waitbutton
+	refreshscreen
+	callasm PhotoStudioPokepic
+	waitbutton
+	closepokepic
 	closetext
 	end
 
@@ -24,6 +28,10 @@ CianwoodPhotoStudioFishingGuruScript:
 	waitbutton
 	closetext
 	end
+
+PhotoStudioPokepic:
+	farcall Pokepic
+	ret
 
 CianwoodPhotoStudioFishingGuruText_Question:
 	text "You have magnifi-"
