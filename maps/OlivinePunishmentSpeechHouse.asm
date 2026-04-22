@@ -20,9 +20,8 @@ OlivinePunishmentSpeechHouseBookshelf1:
 OlivinePunishmentSpeechHouseDadText:
 	text "Along the way to"
 	line "CIANWOOD, there"
-
-	para "are four deserted"
-	line "islands."
+	cont "are four deserted"
+	roll "islands."
 
 	para "Bad kids are taken"
 	line "to the islands as"

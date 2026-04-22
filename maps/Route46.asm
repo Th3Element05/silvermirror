@@ -52,7 +52,7 @@ Route46_NoFruit:
 
 ; trainers
 TrainerCoolDuoThomAndKae_Thom:
-	trainer COOL_DUO, THOMANDKAE, EVENT_BEAT_COOL_DUO_THOMANDKAE, CoolDuoThomSeenText, CoolDuoThomAndKaeBeatenText, 0, .Script
+	trainer COOL_DUO, THOMANDKAE, EVENT_BEAT_COOL_DUO_THOMANDKAE, CoolDuoThomAndKaeSeenText, CoolDuoThomAndKaeBeatenText, 0, .Script
 .Script:
 	endifjustbattled
 	opentext
@@ -62,7 +62,7 @@ TrainerCoolDuoThomAndKae_Thom:
 	end
 
 TrainerCoolDuoThomAndKae_Kae:
-	trainer COOL_DUO, THOMANDKAE, EVENT_BEAT_COOL_DUO_THOMANDKAE, CoolDuoKaeSeenText, CoolDuoThomAndKaeBeatenText, 0, .Script
+	trainer COOL_DUO, THOMANDKAE, EVENT_BEAT_COOL_DUO_THOMANDKAE, CoolDuoThomAndKaeSeenText, CoolDuoThomAndKaeBeatenText, 0, .Script
 .Script:
 	endifjustbattled
 	opentext
@@ -71,19 +71,10 @@ TrainerCoolDuoThomAndKae_Kae:
 	closetext
 	end
 
-CoolDuoThomSeenText:
-	text "THOM: We've been"
-	line "raising our #-"
-	cont "MON together!"
-
-	para "Will you battle"
-	line "with us?"
-	done
-
-CoolDuoKaeSeenText:
-	text "KAE: We've been"
-	line "raising our #-"
-	cont "MON together!"
+CoolDuoThomAndKaeSeenText:
+	text "We've been raising"
+	line "our #MON to-"
+	cont "gether!"
 
 	para "Will you battle"
 	line "with us?"

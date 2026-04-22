@@ -197,10 +197,10 @@ VioletPokecenter1FYoungsterText:
 	cont "trainer they don't"
 	roll "respect."
 
-	para "Without the right"
-	line "GYM BADGEs, they"
-	cont "will just do as"
-	roll "they please."
+;	para "Without the right"
+;	line "GYM BADGEs, they"
+;	cont "will just do as"
+;	roll "they please."
 	done
 
 VioletPokecenter1F_MapEvents:

@@ -47,6 +47,7 @@ SafariZoneArea1CooltrainersText:
 SafariZoneArea1Officer:
 	jumptextfaceplayer SafariZoneArea1OfficerText
 SafariZoneArea1OfficerText:
+	ntag "RANGER:"
 	text "Welcome to the"
 	line "SAFARI ZONE!"
 

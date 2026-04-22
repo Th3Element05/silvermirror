@@ -67,7 +67,8 @@ FuchsiaGymCheckBadges:
 	end
 
 KogaIntroText:
-	text "KOGA: Fwahahaha!"
+	ntag "KOGA:"
+	text "Fwahahaha!"
 
 	para "A mere child like"
 	line "you dares to"
@@ -85,6 +86,7 @@ KogaIntroText:
 	done
 
 KogaBeaten1Text:
+	ntag "KOGA:"
 	text "Humph!"
 	line "You have proven"
 	cont "your worth!"
@@ -99,6 +101,7 @@ PlayerReceivedSoulbadgeText:
 	done
 
 KogaExplainSoulbadgeText:
+	ntag "KOGA:"
 	text "Now that you have"
 	line "the SOULBADGE,"
 ;	cont "your #MON can"
@@ -113,6 +116,7 @@ KogaExplainSoulbadgeText:
 	done
 
 KogaExplainTMText:
+	ntag "KOGA:"
 	text "TM06 contains"
 	line "TOXIC!"
 
@@ -122,6 +126,7 @@ KogaExplainTMText:
 	done
 
 KogaAfterBattleText:
+	ntag "KOGA:"
 	text "When afflicted by"
 	line "TOXIC, #MON"
 	cont "suffer more and"

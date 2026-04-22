@@ -126,14 +126,6 @@ TeleportGuyScript:
 	closetext
 	end
 
-AbraScript:
-	opentext
-	writetext AbraText
-	cry ABRA
-	waitbutton
-	closetext
-	end
-
 TeleportGuyText1:
 	text "Ah! You're chal-"
 	line "lenging the ELITE"
@@ -165,8 +157,17 @@ TeleportGuyNoText:
 	line "of luck to you!"
 	done
 
+AbraScript:
+	opentext
+	writetext AbraText
+	cry ABRA
+	waitbutton
+	closetext
+	end
+
 AbraText:
-	text "ABRA: Aabra…"
+	ntag "ABRA:"
+	text "Aabra…"
 	done
 
 IndigoPlateauPokecenter1F_MapEvents:

@@ -43,17 +43,20 @@ TrainerKimonoGirlKuni: ;vaporeon
 	end
 
 KimonoGirlKuniSeenText:
+	ntag "KUNI:"
 	text "Oh, you're a cute"
 	line "trainer. Would you"
 	cont "like to battle?"
 	done
 
 KimonoGirlKuniBeatenText:
+	ntag "KUNI:"
 	text "You're stronger"
 	line "than you look."
 	done
 
 KimonoGirlKuniAfterBattleText:
+	ntag "KUNI:"
 	text "I trained a lot,"
 	line "so I thought I was"
 	cont "a strong trainer."
@@ -70,17 +73,20 @@ TrainerKimonoGirlMiki: ;jolteon
 	end
 
 KimonoGirlMikiSeenText:
+	ntag "MIKI:"
 	text "Do you like my"
 	line "dancing? I'm good"
 	cont "at #MON too."
 	done
 
 KimonoGirlMikiBeatenText:
+	ntag "MIKI:"
 	text "Ooh, you're good"
 	line "at #MON too."
 	done
 
 KimonoGirlMikiAfterBattleText:
+	ntag "MIKI:"
 	text "I can keep dancing"
 	line "because there are"
 	cont "people who enjoy"
@@ -101,6 +107,7 @@ TrainerKimonoGirlSayo: ;espeon
 	end
 
 KimonoGirlSayoSeenText:
+	ntag "SAYO:"
 	text "I always dance"
 	line "with my #MON."
 
@@ -109,11 +116,13 @@ KimonoGirlSayoSeenText:
 	done
 
 KimonoGirlSayoBeatenText:
+	ntag "SAYO:"
 	text "Oh, so close!"
 	line "I almost had you."
 	done
 
 KimonoGirlSayoAfterBattleText:
+	ntag "SAYO:"
 	text "The warm sunlight"
 	line "gives me and my"
 	cont "#MON the energy"
@@ -137,6 +146,7 @@ TrainerKimonoGirlZuki: ;umbreon
 	end
 
 KimonoGirlZukiSeenText:
+	ntag "ZUKI:"
 	text "Isn't my barrette"
 	line "pretty?"
 
@@ -145,11 +155,13 @@ KimonoGirlZukiSeenText:
 	done
 
 KimonoGirlZukiBeatenText:
+	ntag "ZUKI:"
 	text "I don't have any"
 	line "#MON left…"
 	done
 
 KimonoGirlZukiAfterBattleText:
+	ntag "ZUKI:"
 	text "My #MON and I"
 	line "like to dance and"
 	cont "train in the moon-"
@@ -172,6 +184,7 @@ TrainerKimonoGirlAoki: ;leafeon
 	end
 
 KimonoGirlAokiSeenText:
+	ntag "AOKI:"
 	text "Gracefully, like"
 	line "flower petals"
 	cont "floating on the"
@@ -179,11 +192,13 @@ KimonoGirlAokiSeenText:
 	done
 
 KimonoGirlAokiBeatenText:
+	ntag "AOKI:"
 	text "Your #MON are"
 	line "graceful, too!"
 	done
 
 KimonoGirlAokiAfterBattleText:
+	ntag "AOKI:"
 	text "ILEX FOREST is so"
 	line "peaceful, its my"
 	cont "favorite place."
@@ -203,6 +218,7 @@ TrainerKimonoGirlYuki: ;glaceon
 	end
 
 KimonoGirlYukiSeenText:
+	ntag "YUKI:"
 	text "Would you like to"
 	line "battle?"
 
@@ -211,10 +227,12 @@ KimonoGirlYukiSeenText:
 	done
 
 KimonoGirlYukiBeatenText:
+	ntag "YUKI:"
 	text "Harsh."
 	done
 
 KimonoGirlYukiAfterBattleText:
+	ntag "YUKI:"
 	text "Dancing is fun,"
 	line "but I go to the"
 	cont "harsh ICE PATH to"
@@ -353,7 +371,8 @@ DanceTheaterRhyhorn:
 	end
 
 DanceTheaterRhyhornText:
-	text "RHYHORN: Gugooh"
+	ntag "RHYHORN:"
+	text "Gugooh"
 	line "gugogooh!"
 	done
 

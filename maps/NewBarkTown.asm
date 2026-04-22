@@ -88,6 +88,7 @@ NewBarkTown_PlayerStepsBackMovement:
 	step_end
 
 NewBarkTownRival_IntroText:
+	ntag "<RIVAL>:"
 	text "<PLAYER>!"
 
 	para "I didn't expect to"
@@ -106,13 +107,14 @@ NewBarkTownRival_IntroText:
 	done
 
 NewBarkTownRival_WinText:
-	text "<RIVAL>: Darn,"
-	line "I still couldn't"
-	cont "beat you!"
+	ntag "<RIVAL>:"
+	text "Darn, I still"
+	line "can't beat you!"
 	done
 
 NewBarkTownRival_LossText:
-	text "<RIVAL>: I won!"
+	ntag "<RIVAL>:"
+	text "I won!"
 
 	para "Too bad I couldn't"
 	line "beat you at the"
@@ -120,6 +122,7 @@ NewBarkTownRival_LossText:
 	done
 
 NewBarkTownRival_LookingForGrampsText:
+	ntag "<RIVAL>:"
 	text "I'm looking for"
 	line "GRAMPS, he didn't"
 	cont "answer his phone."
@@ -165,11 +168,12 @@ NewBarkTownRivalBacktackMovement:
 	step_end
 
 NewBarkTownRival_HeyPlayerText:
-	text "<RIVAL>: Hey,"
-	line "<PLAYER>?"
+	ntag "<RIVAL>:"
+	text "Hey, <PLAYER>?"
 	done
 
 NewBarkTownRival_BeenThinkingText:
+	ntag "<RIVAL>:"
 	text "I've been doing a"
 	line "lot of thinking"
 	cont "since I lost as"

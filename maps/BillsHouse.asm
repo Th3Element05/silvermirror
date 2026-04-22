@@ -158,11 +158,13 @@ BillsHouseDontLeaveScript:
 	end
 
 BillsHouseBillDontLeaveText:
-	text "BILL: Hey pal!"
+	ntag "BILL?:"
+	text "Hey pal!"
 	line "Don't leave!"
 	done
 
 BillsHouseBillReminderText:
+	ntag "BILL?:"
 	text "I need you to run"
 	line "the program on my"
 	cont "PC while I'm in"
@@ -225,10 +227,14 @@ BillsHousePlayerDontLeaveMovement:
 	step_end
 
 BillsHouseBillIntroText:
-	text "Hiya! I'm a"
-	line "#MON…"
-	cont "…No I'm not!"
+	ntag "A #MON?:"
+	text "Hiya!"
+	line "I'm a #MON…"
+	cont "…No I'm not!@"
 
+	text_promptbutton
+	ntag "───────────"
+	ntag "BILL?:"
 	para "Call me BILL!"
 	line "I'm a true blue"
 	cont "#MANIAC! Hey!"
@@ -246,6 +252,7 @@ BillsHouseBillIntroText:
 	done
 
 BillsHouseTeleporterText:
+	ntag "BILL?:"
 	text "When I'm in the"
 	line "TELEPORTER, go to"
 	cont "my PC and run the"
@@ -254,12 +261,14 @@ BillsHouseTeleporterText:
 	done
 
 BillsHouseBillInsideTeleporterText:
-	text "BILL: Go run the"
-	line "Cell Separation"
-	cont "Program on my PC!"
+	ntag "BILL?:"
+	text "Go run the Cell"
+	line "Separation Program"
+	cont "on my PC!"
 	done
 
 BillsHouseWontHelpBillText:
+	ntag "BILL?:"
 	text "No!? Come on, you"
 	line "gotta help a guy"
 	cont "in deep trouble!"
@@ -276,9 +285,10 @@ BillsHouseRunCellSeparatorText:
 	done
 
 BillsHouseBillThanksText:
-	text "BILL: Yeehah!"
-	line "Thanks, bud! I"
-	cont "owe you one!"
+	ntag "BILL:"
+	text "Yeehah!"
+	line "Thanks, bud!"
+	cont "I owe you one!"
 
 ;	para "So, did you come"
 ;	line "to see my #MON"
@@ -298,8 +308,9 @@ BillsHousePokegearIsARadioText:
 	done
 
 BillsHouseBillExplainRadioCardText:
-	text "BILL: There's a"
-	line "radio station that"
+	ntag "BILL:"
+	text "There's a channel"
+	line "on the radio that"
 	cont "reports swarms of"
 	roll "rare #MON!"
 
@@ -314,6 +325,7 @@ BillsHouseComputerCodeText:
 	done
 
 BillOffersNumberText:
+	ntag "BILL:"
 	text "If you save my"
 	line "phone number, you"
 	cont "can call about my"
@@ -322,11 +334,13 @@ BillOffersNumberText:
 	done 
 
 BillsHousePhoneFullText:
+	ntag "BILL:"
 	text "You can't record"
 	line "any more numbers."
 	done
 
 BillsHouseBummerText:
+	ntag "BILL:"
 	text "That's a bummer."
 	done
 

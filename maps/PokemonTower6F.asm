@@ -60,16 +60,19 @@ PokemonTower6FGhostScript:
 	end
 
 PokemonTower6FBegoneText:
+	ntag "???????:"
 	text "  Be gone…"
 	line "       Intruders…"
 	done
 
 PokemonTower6FGetOutText:
+	ntag "???????:"
 	text "         Get out!"
 	line "   Get out!"
 	done
 
 PokemonTower6FGetOutGetOutText:
+	ntag "???????:"
 	text "Get out! Get out! Get out! get out!"
 	line "out! Get out! Get out! Get out! Get out!"
 	done

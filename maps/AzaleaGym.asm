@@ -61,6 +61,7 @@ AzaleaGymBugsyScript:
 ;	jumpstd RadioTowerRocketsScript
 
 BugsyText_INeverLose:
+	ntag "BUGSY:"
 	text "I'm BUGSY!"
 
 	para "I never lose when"
@@ -78,6 +79,7 @@ BugsyText_INeverLose:
 	done
 
 BugsyText_ResearchIncomplete:
+	ntag "BUGSY:"
 	text "Whoa, amazing!"
 	line "You're an expert"
 	cont "on #MON!"
@@ -95,11 +97,13 @@ Text_ReceivedHiveBadge:
 	done
 
 BugsyText_HiveBadgeSpeech:
+	ntag "BUGSY:"
 	text "Here, I also want"
 	line "you to have this."
 	done
 
 BugsyText_FuryCutterSpeech:
+	ntag "BUGSY:"
 	text "TM75 contains"
 	line "FURY CUTTER."
 
@@ -113,6 +117,7 @@ BugsyText_FuryCutterSpeech:
 	done
 
 BugsyText_BugMonsAreDeep:
+	ntag "BUGSY:"
 	text "Bug #MON have"
 	line "many mysteries to"
 	cont "explore."
@@ -226,28 +231,46 @@ TrainerTwinsMegAndPeg2:
 	end
 
 TwinsMegAndPegSeenText:
-	text "MEG: Hi! Are you"
-	line "challenging the"
-	cont "LEADER? No way!"
+;	text "MEG: Hi! Are you"
+;	line "challenging the"
+;	cont "LEADER? No way!"
+;
+;	para "PEG: If you want"
+;	line "to see the LEADER,"
+;	cont "we come first!"
+;	done
+	text "You're planning on"
+	line "challenging BUGSY?"
+	cont "No way!"
 
-	para "PEG: If you want"
-	line "see the LEADER,"
+	para "If you want to"
+	line "challenge BUSGY,"
 	cont "we come first!"
 	done
 
 TwinsMegAndPegBeatenText:
-	text "MEG & PEG: Oh,"
-	line "double goodness!"
+;	text "MEG & PEG: Oh,"
+;	line "double darn!"
+;	done
+	text "Oh!"
+	line "Double darn!"
 	done
 
 TwinsMegAndPeg1AfterBattleText:
-	text "MEG: You're"
-	line "really strong!"
+;	text "MEG: You're"
+;	line "really strong!"
+;	done
+	text "You're really"
+	line "strong!"
 	done
 
 TwinsMegAndPeg2AfterBattleText:
-	text "PEG: Our precious"
-	line "bug #MON lost!"
+;	text "PEG: Our precious"
+;	line "bug #MON lost!"
+;	cont "What a shame."
+;	done
+	text "Our precious bug"
+	line "#MON lost!"
 	cont "What a shame."
 	done
 

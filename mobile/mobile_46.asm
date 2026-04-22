@@ -5472,9 +5472,8 @@ Text_UberRestriction:
 	text_ram wcd49
 	text " may go"
 	line "only to BATTLE"
-
-	para "ROOMS that are"
-	line "Lv.70 or higher."
+	cont "ROOMS that are"
+	roll "Lv.70 or higher."
 	done
 
 Text_CancelBattleRoomChallenge:

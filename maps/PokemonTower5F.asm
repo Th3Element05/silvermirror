@@ -53,8 +53,8 @@ MediumDorisSeenText:
 	done
 
 MediumDorisBeatenText:
-	text "What"
-	line "a nightmare!"
+	text "What a"
+	line "nightmare!"
 	done
 
 MediumDorisAfterBattleText:

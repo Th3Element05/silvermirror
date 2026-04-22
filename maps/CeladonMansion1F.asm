@@ -11,37 +11,6 @@ CeladonMansion1F_MapScripts:
 
 CeladonMansionManager:
 	jumptextfaceplayer CeladonMansionManagerText
-
-CeladonMansion1FMeowth:
-	opentext
-	writetext CeladonMansion1FMeowthText
-	cry MEOWTH
-	waitbutton
-	closetext
-	end
-
-CeladonMansion1FClefairy:
-	opentext
-	writetext CeladonMansion1FClefairyText
-	cry CLEFAIRY
-	waitbutton
-	closetext
-	end
-
-CeladonMansion1FNidoranF:
-	opentext
-	writetext CeladonMansion1FNidoranFText
-	cry NIDORAN_F
-	waitbutton
-	closetext
-	end
-
-CeladonMansionManagersSuiteSign:
-	jumptext CeladonMansionManagersSuiteSignText
-
-CeladonMansion1FBookshelf:
-	jumpstd PictureBookshelfScript
-
 CeladonMansionManagerText:
 	text "My dear #MON"
 	line "keep me company,"
@@ -52,24 +21,54 @@ CeladonMansionManagerText:
 	line "money home!"
 	done
 
+CeladonMansion1FMeowth:
+	opentext
+	writetext CeladonMansion1FMeowthText
+	cry MEOWTH
+	waitbutton
+	closetext
+	end
+
 CeladonMansion1FMeowthText:
-	text "MEOWTH: Meow!"
+	ntag "MEOWTH:"
+	text "Meow!"
 	done
+
+CeladonMansion1FClefairy:
+	opentext
+	writetext CeladonMansion1FClefairyText
+	cry CLEFAIRY
+	waitbutton
+	closetext
+	end
 
 CeladonMansion1FClefairyText:
-	text "CLEFAIRY: Clef"
-	line "cleff!"
+	ntag "CLEFAIRY:"
+	text "Clef! cleff!"
 	done
+
+CeladonMansion1FNidoranF:
+	opentext
+	writetext CeladonMansion1FNidoranFText
+	cry NIDORAN_F
+	waitbutton
+	closetext
+	end
 
 CeladonMansion1FNidoranFText:
-	text "NIDORAN: Kya"
-	line "kyaoo!"
+	ntag "NIDORAN♀:"
+	text "Kya kyaoo!"
 	done
 
+CeladonMansionManagersSuiteSign:
+	jumptext CeladonMansionManagersSuiteSignText
 CeladonMansionManagersSuiteSignText:
 	text "CELADON MANSION"
 	line "MANAGER's SUITE"
 	done
+
+CeladonMansion1FBookshelf:
+	jumpstd PictureBookshelfScript
 
 CeladonMansion1F_MapEvents:
 	db 0, 0 ; filler

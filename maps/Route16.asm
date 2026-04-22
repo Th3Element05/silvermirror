@@ -262,8 +262,7 @@ JugglerOtisSeenText:
 	done
 
 JugglerOtisBeatenText:
-	text "Bad,"
-	line "bad, bad!"
+	text "Bad, bad, bad!"
 	done
 
 JugglerOtisAfterBattleText:
@@ -308,8 +307,7 @@ JugglerBurtSeenText:
 	done
 
 JugglerBurtBeatenText:
-	text "You"
-	line "little rat!"
+	text "You little rat!"
 	done
 
 JugglerBurtAfterBattleText:

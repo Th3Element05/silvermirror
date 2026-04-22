@@ -44,6 +44,7 @@ Route11Gate2FOaksAideScript:
 	end
 
 Route11Gate2FOaksAideAskPokemonText:
+	ntag "AIDE:"
 	text "Hi! Remember me?"
 	line "I'm PROF.OAK's"
 	cont "AIDE."
@@ -61,6 +62,7 @@ Route11Gate2FOaksAideAskPokemonText:
 	done
 
 Route11Gate2FOaksAideNotEnoughText:
+	ntag "AIDE:"
 	text "You have only"
 	line "caught @"
 	text_ram wStringBuffer3
@@ -69,12 +71,14 @@ Route11Gate2FOaksAideNotEnoughText:
 	done
 
 Route11Gate2FOaksAideLookForPokemonText:
+	ntag "AIDE:"
 	text "Look for more"
 	line "#MON in caves"
 	cont "and tall grass!"
 	done
 
 Route11Gate2FOaksAideCongratsText:
+	ntag "AIDE:"
 	text "Great! You have"
 	line "caught @"
 	text_ram wStringBuffer3
@@ -85,6 +89,7 @@ Route11Gate2FOaksAideCongratsText:
 	done
 
 Route11Gate2FOaksAideItemfinderExplainText:
+	ntag "AIDE:"
 	text "There are items on"
 	line "the ground that"
 	cont "can't be seen."

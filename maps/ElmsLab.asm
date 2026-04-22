@@ -48,11 +48,13 @@ ElmsAideScript:
 	jumptextfaceplayer ElmsLabAide_ElmsNotHereText
 
 ElmsLabAide_DefaultText:
+	ntag "AIDE:"
 	text "I study #MON as"
 	line "PROF.ELM's AIDE."
 	done
 
 ElmsLabAide_ElmsNotHereText:
+	ntag "AIDE:"
 	text "PROF.ELM isn't"
 	line "here right now."
 
@@ -106,6 +108,7 @@ ElmsLabElmScript:
 	end
 
 ElmsLabElm_MeetElmText:
+	ntag "PROF.ELM:"
 	text "I'm PROF.ELM, nice"
 	line "to meet you."
 
@@ -155,17 +158,20 @@ ElmsLabElm_MeetElmText:
 	done
 
 ElmsLabElm_ThanksForShowingMeText:
+	ntag "PROF.ELM:"
 	text "Thanks for showing"
 	line "the RAINBOW WING"
 	cont "to me!"
 	done
 
 ElmsLabElm_OakIsOkayText:
+	ntag "PROF.ELM:"
 	text "PROF.OAK is okay?"
 	line "That's a relief!"
 	done
 
 ElmsLabElm_RemindEcruteakText:
+	ntag "PROF.ELM:"
 	text "Did you ever show"
 	line "the RAINBOW WING"
 	cont "to the sages at"
@@ -194,7 +200,8 @@ ElmsLabTellElmAboutPhoneCall:
 	end
 
 ElmsLabElm_OverheardPhoneCallText:
-	text "ELM: <PLAYER>?"
+	ntag "PROF.ELM:"
+	text "<PLAYER>?"
 	line "You look worried…"
 
 	para "Who was that on"
@@ -204,6 +211,7 @@ ElmsLabElm_OverheardPhoneCallText:
 	done
 
 ElmsLabElm_SaveOakText:
+	ntag "PROF.ELM:"
 	text "PROF.OAK is held"
 	line "hostage at the"
 	cont "RADIO TOWER!"

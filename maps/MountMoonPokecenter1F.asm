@@ -23,11 +23,11 @@ MtMoonPokecenter1FBenchGuyText:
 MtMoonPokecenter1FYoungsterScript:
 	jumptextfaceplayer MtMoonPokecenter1FYoungsterText
 MtMoonPokecenter1FYoungsterText:
-	text "I've 6 #BALLs"
-	line "set in my belt."
+	text "I have six #-"
+	line "BALLs on my belt."
 
-	para "At most, you can"
-	line "carry 6 #MON."
+	para "You can carry six"
+	line "#MON at once."
 	done
 
 MtMoonPokecenter1FGentlemanScript:

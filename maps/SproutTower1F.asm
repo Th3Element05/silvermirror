@@ -42,7 +42,7 @@ SproutTower1FSage1Script:
 SproutTower1FSage1Text:
 	text "Only if you reach"
 	line "the top will you"
-	cont "obtain an HM."
+	cont "obtain a TM."
 	done
 
 SproutTower1FSage2Script:

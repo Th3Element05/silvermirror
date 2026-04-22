@@ -37,7 +37,8 @@ CopycatsHouse1FChanseyScript:
 	end
 
 CopycatsHouse1FChanseyText:
-	text "CHANSEY: Chan-si!"
+	ntag "CHANSEY:"
+	text "Chan-si!"
 	done
 
 CopycatsHouse1FStoveScript:

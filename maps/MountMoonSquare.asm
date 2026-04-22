@@ -55,7 +55,7 @@ ClefairyDance:
 	applymovement MOUNTMOONSQUARE_FAIRY1, MountMoonSquareDanceUp
 	cry CLEFAIRY
 	applymovement MOUNTMOONSQUARE_FAIRY1, MountMoonSquareDanceSpin
-	applymovement MOUNTMOONSQUARE_FAIRY1, MountMoonSquareDanceLeft
+	applymovement MOUNTMOONSQUARE_FAIRY1, MountMoonSquareDanceRight
 	cry CLEFAIRY
 	applymovement MOUNTMOONSQUARE_FAIRY1, MountMoonSquareDanceSpin
 	applymovement MOUNTMOONSQUARE_FAIRY1, MountMoonSquareDanceDown

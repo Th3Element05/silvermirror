@@ -12,11 +12,10 @@ IndigoPlateauSign:
 	jumptext IndigoPlateauSignText
 IndigoPlateauSignText:
 	text "INDIGO PLATEAU"
+	line "#MON LEAGUE HQ"
 
-	para "The Ultimate Goal"
-	line "for Trainers!"
-
-	para "#MON LEAGUE HQ"
+;	para "The Ultimate Goal"
+;	line "for Trainers!"
 	done
 
 VictoryRoadSign:

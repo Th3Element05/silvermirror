@@ -157,8 +157,7 @@ FisherHenrySeenText:
 	done
 
 FisherHenryBeatenText:
-	text "That"
-	line "one got away!"
+	text "That one got away!"
 	done
 
 FisherHenryAfterBattleText:

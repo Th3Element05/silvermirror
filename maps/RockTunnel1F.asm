@@ -55,8 +55,7 @@ PokemaniacAndrewSeenText:
 	done
 
 PokemaniacAndrewBeatenText:
-	text "Game"
-	line "over!"
+	text "Game over!"
 	done
 
 PokemaniacAndrewAfterBattleText:

@@ -66,6 +66,7 @@ SaffronCityKurtsSonTalkScript:
 	end
 
 SaffronCityKurtsSon_IntroText:
+	ntag "BURT:"
 	text "Those ROCKETs all"
 	line "ran off all of the"
 	cont "sudden."

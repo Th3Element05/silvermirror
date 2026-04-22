@@ -163,6 +163,7 @@ AcademyEarlSpinMovement:
 	step_end
 
 AcademyEarlIntroText:
+	ntag "EARL:"
 	text "EARL, I am!"
 
 	para "Wonderful are"
@@ -178,6 +179,7 @@ AcademyEarlIntroText:
 	done
 
 AcademyEarlTeachHowToWinText:
+	ntag "EARL:"
 	text "Good! Teach you,"
 	line "I will!"
 
@@ -194,12 +196,14 @@ AcademyEarlTeachHowToWinText:
 	done
 
 AcademyEarlTeachMoreText:
+	ntag "EARL:"
 	text "So, want to know"
 	line "how to raise"
 	cont "#MON well?"
 	done
 
 AcademyEarlTeachHowToRaiseWellText:
+	ntag "EARL:"
 	text "Fine! Teach you,"
 	line "I will!"
 
@@ -220,6 +224,7 @@ AcademyEarlTeachHowToRaiseWellText:
 	done
 
 AcademyEarlNoMoreToTeachText:
+	ntag "EARL:"
 	text "Oh! Smart student"
 	line "you are! Nothing"
 	cont "more do I teach!"
@@ -390,9 +395,11 @@ AcademyNotebookText3:
 	roll "other trainers."
 
 	para "The next page"
-	line "is… Blank!"
+	line "is… Blank!@"
 
-	para "BOY: E-he-he…"
+	text_promptbutton
+	ntag "BOY:"
+	text "E-he-he…"
 
 	para "I haven't written"
 	line "anymore…"

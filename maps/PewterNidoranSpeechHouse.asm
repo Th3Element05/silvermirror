@@ -40,7 +40,8 @@ PewterNidoran:
 	end
 
 PewterNidoranText:
-	text "NIDORAN: Bowbow!"
+	ntag "NIDORAN♂:"
+	text "Bowbow!"
 	done
 
 PewterNidoranSpeechHouse_MapEvents:

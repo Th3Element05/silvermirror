@@ -69,6 +69,7 @@ MrPokemonsHouseMrPokemonEventScript:
 	end
 
 MrPokemonsHouse_OakIntroText:
+	ntag "PROF.OAK:"
 	text "<PLAYER>!"
 	line "Come in!"
 
@@ -84,6 +85,7 @@ MrPokemonsHouse_PlayerWalksToMrPokemonMovement:
 	step_end
 
 MrPokemonText_Intro:
+	ntag "MR.#MON:"
 	text "Hello, hello! You"
 	line "must be <PLAYER>."
 
@@ -104,6 +106,7 @@ MrPokemonsHouse_OakWalksToPlayerMovement:
 	step_end
 
 MrPokemonsHouse_OakExplainsVisitText:
+	ntag "PROF.OAK:"
 	text "I travel to JOHTO"
 	line "from time to time"
 	cont "to tape segments"
@@ -123,7 +126,8 @@ MrPokemonsHouse_OakWalksToMrPokemonMovement:
 	step_end
 
 MrPokemonsHouse_OakSaysFarewellText:
-	text "OAK: MR.#MON,"
+	ntag "PROF.OAK:"
+	text "MR.#MON,"
 	line "I wish I had more"
 	cont "time to chat, but"
 	roll "I must be going."
@@ -139,6 +143,7 @@ MrPokemonsHouse_OakLeavesMovement:
 	step_end
 
 MrPokemonText_Invaluable:
+	ntag "MR.#MON:"
 	text "PROF.OAK told me"
 	line "that you've been"
 	cont "helping with his"
@@ -222,6 +227,7 @@ MrPokemonsHouse_MrPokemonScript:
 	end
 
 MrPokemonText_AlwaysNewDiscoveries:
+	ntag "MR.#MON:"
 	text "Life is delight-"
 	line "ful! Always, new"
 	cont "discoveries to be"
@@ -233,6 +239,7 @@ MrPokemonText_AlwaysNewDiscoveries:
 	done
 
 MrPokemonText_RainbowWing:
+	ntag "MR.#MON:"
 	text "What's that?"
 	line "A rainbow-colored"
 	cont "#MON flew by?"
@@ -256,6 +263,7 @@ MrPokemonText_RainbowWing:
 	done
 
 MrPokemonText_SilverWing:
+	ntag "MR.#MON:"
 	text "Hm? That FEATHER?"
 	line "It's silver!"
 
@@ -276,6 +284,7 @@ MrPokemonText_SilverWing:
 	done
 
 MrPokemonText_GimmeTheScale:
+	ntag "MR.#MON:"
 	text "Hm? That SCALE!"
 	line "What's that?"
 	cont "A gold MAGIKARP?"
@@ -296,12 +305,14 @@ MrPokemonText_GimmeTheScale:
 	done
 
 MrPokemonText_Disappointed:
+	ntag "MR.#MON:"
 	text "That's disappoint-"
 	line "ing. That happens"
 	cont "to be very rare."
 	done
 
 MrPokemonText_SaveOak:
+	ntag "MR.#MON:"
 	text "There's trouble at"
 	line "the RADIO TOWER?"
 
@@ -310,6 +321,7 @@ MrPokemonText_SaveOak:
 	done
 
 MrPokemonText_VisitElm:
+	ntag "MR.#MON:"
 	text "You should pay"
 	line "PROF.ELM a visit."
 

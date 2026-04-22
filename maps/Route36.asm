@@ -227,6 +227,7 @@ Route36FloriaScript:
 ;	end
 
 FloriaText1:
+	ntag "FLORIA:"
 	text "I'm FLORIA from"
 	line "the FLOWER SHOP!"
 

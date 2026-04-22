@@ -233,10 +233,8 @@ OlderHaircutBrotherScript:
 	end
 
 GoldenrodUndergroundOlderHaircutBrotherOfferHaircutText:
-	text "Welcome!"
-
-	para "I run the #MON"
-	line "SALON!"
+	text "Welcome to my"
+	line "#MON SALON!"
 
 ;	para "I'm the older and"
 ;	line "better of the two"
@@ -618,32 +616,33 @@ GoldenrodUndergroundWeAreNotOpenTodayText:
 ;	done
 
 BasementDoorScript::
-	opentext
-	checkevent EVENT_USED_BASEMENT_KEY
-	iftrue .Open
-	checkitem LIFT_KEY ; 83 ; BASEMENT_KEY
-	iftrue .Unlock
-	writetext GoldenrodUndergroundTheDoorsLockedText
-	waitbutton
-	closetext
-	end
-
-.Unlock:
-	playsound SFX_TRANSACTION
-	writetext GoldenrodUndergroundBasementKeyOpenedDoorText
-	waitbutton
-	closetext
-	changeblock 18, 6, $07 ; unlocked door
-	reloadmappart
-	closetext
-	setevent EVENT_USED_BASEMENT_KEY
-	end
-
-.Open:
-	writetext GoldenrodUndergroundTheDoorIsOpenText
-	waitbutton
-	closetext
-	end
+	jumptext GoldenrodUndergroundTheDoorsLockedText
+;	opentext
+;	checkevent EVENT_USED_BASEMENT_KEY
+;	iftrue .Open
+;	checkitem LIFT_KEY ; 83 ; BASEMENT_KEY
+;	iftrue .Unlock
+;	writetext GoldenrodUndergroundTheDoorsLockedText
+;	waitbutton
+;	closetext
+;	end
+;
+;.Unlock:
+;	playsound SFX_TRANSACTION
+;	writetext GoldenrodUndergroundBasementKeyOpenedDoorText
+;	waitbutton
+;	closetext
+;	changeblock 18, 6, $07 ; unlocked door
+;	reloadmappart
+;	closetext
+;	setevent EVENT_USED_BASEMENT_KEY
+;	end
+;
+;.Open:
+;	writetext GoldenrodUndergroundTheDoorIsOpenText
+;	waitbutton
+;	closetext
+;	end
 
 GoldenrodUndergroundTheDoorsLockedText:
 	text "The door's locked…"

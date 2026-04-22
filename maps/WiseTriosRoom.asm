@@ -75,6 +75,7 @@ WiseTriosRoomExplainClearBellScript:
 	end
 
 WiseTriosRoomThatFeatherText:
+;	ntag "GAKU:"
 	text "That feather!"
 	line "The RAINBOW WING!"
 
@@ -96,6 +97,7 @@ WiseTriosRoomThatFeatherText:
 	done
 
 WiseTriosRoomExplainTowersText:
+;	ntag "MASA:"
 	text "A long time ago"
 	line "a rainbow-winged"
 	cont "#MON made its"
@@ -141,6 +143,7 @@ WiseTriosRoomExplainTowersText:
 	done
 
 WiseTriosRoomExplainClearBellText:
+;	ntag "KOJI:"
 	text "If you wish to"
 	line "prove the quality"
 	cont "of your spirit,"
@@ -234,6 +237,7 @@ TrainerSageGaku:
 	jumptextfaceplayer SageKojiAfterBattleFinalText
 
 SageGakuSeenText:
+;	ntag "GAKU:"
 	text "Ah!"
 
 	para "The sound of that"
@@ -256,6 +260,7 @@ SageGakuSeenText:
 	done
 
 SageGakuBeatenText:
+;	ntag "GAKU:"
 	text "The CLEAR BELL you"
 	line "hold…"
 	cont "Its sound is so"
@@ -263,6 +268,7 @@ SageGakuBeatenText:
 	done
 
 SageGakuAfterBattleText:
+;	ntag "GAKU:"
 	text "The rainbow-winged"
 	line "#MON has not"
 	cont "been seen for"
@@ -301,6 +307,7 @@ TrainerSageMasa:
 	jumptextfaceplayer SageKojiAfterBattleFinalText
 
 SageMasaSeenText:
+;	ntag "MASA:"
 	text "That bell's chime"
 	line "is indicative of"
 	cont "the bearer's soul."
@@ -316,11 +323,13 @@ SageMasaSeenText:
 	done
 
 SageMasaBeatenText:
+;	ntag "MASA:"
 	text "Strong enough?"
 	line "Perhaps…"
 	done
 
 SageMasaAfterBattleText:
+;	ntag "MASA:"
 	text "You might just be"
 	line "worthy to climb"
 	cont "TIN TOWER and face"
@@ -351,6 +360,7 @@ TrainerSageKoji:
 	jumptextfaceplayer SageKojiAfterBattleFinalText
 
 SageKojiSeenText:
+;	ntag "KOJI:"
 	text "Let me see your"
 	line "power!"
 
@@ -359,6 +369,7 @@ SageKojiSeenText:
 	done
 
 SageKojiBeatenText:
+;	ntag "KOJI:"
 	text "That crystal clear"
 	line "sound…"
 	done
@@ -369,6 +380,7 @@ SageKojiBeatenText:
 ;	done
 
 SageKojiAfterBattleSpeechText:
+;	ntag "KOJI:"
 	text "The sound of your"
 	line "CLEAR BELL ringing"
 	cont "is undeniable."
@@ -383,6 +395,7 @@ SageKojiAfterBattleSpeechText:
 	done
 
 SageKojiAfterBattleFinalText:
+;	ntag "KOJI:"
 	text "Please, go on,"
 	line "and enter the TIN"
 	cont "TOWER ahead."

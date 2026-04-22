@@ -55,6 +55,7 @@ OlivineCityPortSailorText:
 ;	cont "KANTO on MONDAY"
 ;	roll "and FRIDAY."
 ;	done
+
 	text "The S.S.AQUA"
 	line "sails to KANTO on "
 	cont "MONDAY, WEDNESDAY,"

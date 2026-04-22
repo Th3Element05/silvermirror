@@ -279,8 +279,10 @@ LanceBattleIntroText:
 	para "I lead the ELITE"
 	line "FOUR! You can"
 	cont "call me LANCE the"
-	roll "dragon trainer!"
+	roll "DRAGON MASTER!@"
 
+	text_promptbutton
+	ntag "LANCE:"
 	para "You know that"
 	line "dragons are"
 	cont "mythical #MON!"
@@ -302,6 +304,7 @@ LanceBattleIntroText:
 	done
 
 LanceBattleWinText:
+	ntag "LANCE:"
 	text "That's it!"
 
 	para "I hate to admit"
@@ -310,6 +313,7 @@ LanceBattleWinText:
 	done
 
 LanceBattleAfterText_1:
+	ntag "LANCE:"
 	text "I still can't"
 	line "believe my"
 	cont "dragons lost to"
@@ -321,6 +325,7 @@ LanceBattleAfterText_1:
 	done
 
 LanceBattleAfterText_2:
+	ntag "LANCE:"
 	text "…Or, you would"
 	line "have been, but"
 	cont "you have one more"
@@ -332,6 +337,7 @@ LanceBattleAfterText_2:
 	done
 
 LanceRivalIntroText:
+	ntag "LANCE:"
 	text "<RIVAL>!"
 
 	para "He beat the ELITE"
@@ -343,6 +349,7 @@ LanceRivalIntroText:
 	done
 
 LanceDefeatText:
+	ntag "LANCE:"
 	text "You are both very"
 	line "talented trainers!"
 
@@ -358,7 +365,8 @@ LanceDefeatText:
 ;	done
 
 ChampionBattleIntroText:
-	text "<RIVAL>: Hey!"
+	ntag "<RIVAL>:"
+	text "Hey!"
 
 	para "I was looking"
 	line "forward to seeing"
@@ -395,6 +403,7 @@ ChampionBattleIntroText:
 	done
 
 ChampionBattleWinText:
+	ntag "<RIVAL>:"
 	text "NO!"
 	line "That can't be!"
 	cont "You beat my best!"
@@ -409,6 +418,7 @@ ChampionBattleWinText:
 	done
 
 ChampionBattleLossText:
+	ntag "<RIVAL>:"
 	text "Hahaha!"
 	line "I won, I won!"
 
@@ -425,6 +435,7 @@ ChampionBattleLossText:
 	done
 
 ChampionBattleAfterText:
+	ntag "<RIVAL>:"
 	text "Why?"
 	line "Why did I lose?"
 
@@ -441,11 +452,13 @@ ChampionBattleAfterText:
 	done
 
 LancesRoomOakSaysPlayerNameText:
-	text "OAK: <PLAYER>!"
+	ntag "PROF.OAK:"
+	text "<PLAYER>!"
 	done
 
 LancesRoomOakCongratulationsText:
-	text "OAK: So, you won!"
+	ntag "PROF.OAK:"
+	text "So, you won!"
 	line "Congratulations!"
 	cont "You're the new"
 	roll "#MON LEAGUE"
@@ -460,8 +473,9 @@ LancesRoomOakCongratulationsText:
 	done
 
 LancesRoomOakDisappointedText:
-	text "OAK: <RIVAL>! I'm"
-	line "disappointed!"
+	ntag "PROF.OAK:"
+	text "<RIVAL>!"
+	line "I'm disappointed!"
 
 	para "I came when I"
 	line "heard you beat"
@@ -486,7 +500,8 @@ LancesRoomOakDisappointedText:
 	done
 
 LancesRoomOakComeWithMeText:
-	text "OAK: <PLAYER>!"
+	ntag "PROF.OAK:"
+	text "<PLAYER>!"
 
 	para "You understand"
 	line "that your victory"

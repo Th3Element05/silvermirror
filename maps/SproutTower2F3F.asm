@@ -38,6 +38,7 @@ SageLiScript:
 	end
 
 SageLiSeenText:
+	ntag "SAGE:"
 	text "So good of you to"
 	line "come here!"
 
@@ -59,10 +60,12 @@ SageLiSeenText:
 	done
 
 SageLiBeatenText:
+	ntag "SAGE:"
 	text "Ah, excellent!"
 	done
 
 SageLiGiftText:
+	ntag "SAGE:"
 	text "The trust between"
 	line "you and your #-"
 	cont "MON is strong."
@@ -72,6 +75,7 @@ SageLiGiftText:
 	done
 
 SageLiHiddenPowerText:
+	ntag "SAGE:"
 	text "That TM teaches"
 	line "HIDDEN POWER."
 
@@ -86,6 +90,7 @@ SageLiHiddenPowerText:
 	done
 
 SageLiAfterBattleText:
+	ntag "SAGE:"
 	text "I hope you learn"
 	line "and grow from your"
 	cont "journey."

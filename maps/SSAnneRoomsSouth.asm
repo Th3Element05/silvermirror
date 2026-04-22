@@ -87,8 +87,8 @@ SailorErnestSeenText:
 	done
 
 SailorErnestBeatenText:
-	text "OK, "
-	line "you're not bad."
+	text "OK, you're not"
+	line "bad."
 	done
 
 SailorErnestAfterBattleText:
@@ -139,8 +139,8 @@ SailorJeffSeenText:
 	done
 
 SailorJeffBeatenText:
-	text "Your"
-	line "spirit sank me!"
+	text "Your spirit sank"
+	line "me!"
 	done
 
 SailorJeffAfterBattleText:
@@ -329,7 +329,8 @@ SSAnneRoomsSouthMachokeScript:
 	closetext
 	end
 SSAnneRoomsSouthMachokeText:
-	text "MACHOKE: Gwoh!"
+	ntag "MACHOKE:"
+	text "Gwoh!"
 	line "Goggoh!"
 	done
 

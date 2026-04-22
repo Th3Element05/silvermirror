@@ -43,8 +43,8 @@ Route25CaptainQuestionText:
 
 Route25CaptainMysticWaterText:
 	text "I like you."
-	line "I want you to"
-	cont "have this."
+	line "I want you to have"
+	cont "this."
 	done
 
 Route25CaptainEnjoyTheWaterText:
@@ -69,8 +69,7 @@ YoungsterSamuelSeenText:
 	done
 
 YoungsterSamuelBeatenText:
-	text "You're"
-	line "decent."
+	text "You're decent."
 	done
 
 YoungsterSamuelAfterBattleText:
@@ -96,8 +95,8 @@ YoungsterRickySeenText:
 	done
 
 YoungsterRickyBeatenText:
-	text "I knew"
-	line "I'd lose too!"
+	text "I knew I'd lose,"
+	line "too!"
 	done
 
 YoungsterRickyAfterBattleText:
@@ -124,8 +123,7 @@ HikerRussellSeenText:
 	done
 
 HikerRussellBeatenText:
-	text "You"
-	line "worked hard!"
+	text "You worked hard!"
 	done
 
 HikerRussellAfterBattleText:
@@ -151,8 +149,7 @@ CamperElliotSeenText:
 	done
 
 CamperElliotBeatenText:
-	text "Aww,"
-	line "darn…"
+	text "Aww, darn…"
 	done
 
 CamperElliotAfterBattleText:
@@ -280,8 +277,7 @@ YoungsterMikeySeenText:
 	done
 
 YoungsterMikeyBeatenText:
-	text "I'm"
-	line "not mad!"
+	text "I'm not mad!"
 	done
 
 YoungsterMikeyAfterBattleText:
@@ -307,8 +303,7 @@ HikerPhillipSeenText:
 	done
 
 HikerPhillipBeatenText:
-	text "You're"
-	line "something."
+	text "You're something."
 	done
 
 HikerPhillipAfterBattleText:
@@ -333,8 +328,8 @@ LassMichelleSeenText:
 	done
 
 LassMichelleBeatenText:
-	text "I was in"
-	line "bad condition!"
+	text "I was in bad"
+	line "condition!"
 	done
 
 LassMichelleAfterBattleText:
@@ -359,8 +354,7 @@ HikerLeonardSeenText:
 	done
 
 HikerLeonardBeatenText:
-	text "You"
-	line "got me."
+	text "You got me."
 	done
 
 HikerLeonardAfterBattleText:

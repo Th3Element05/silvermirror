@@ -21,7 +21,8 @@ RadioTower3FCardKeyShutterCallback:
 RadioTower3FBlueScript:
 	jumptextfaceplayer RadioTower3FBlueText
 RadioTower3FBlueText:
-	text "<RIVAL>: <PLAYER>!"
+	ntag "<RIVAL>:"
+	text "<PLAYER>!"
 	
 	para "GRAMPS is through"
 	line "here, but the gate"
@@ -206,8 +207,9 @@ RadioTower3FWrongCardKeyText:
 	done
 
 RadioTower3FBlue_GateOpenText:
-	text "<RIVAL>: You got"
-	line "the gate open!"
+	ntag "<RIVAL>:"
+	text "You got the gate"
+	line "open!"
 
 	para "Let's go!"
 	done

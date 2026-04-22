@@ -121,9 +121,8 @@ FisherRoyceBeatenText:
 FisherRoyceAfterBattleText:
 	text "KURT's LURE BALL"
 	line "is the best for"
-
-	para "catching hooked"
-	line "#MON."
+	cont "catching hooked"
+	roll "#MON."
 
 	para "It's much more"
 	line "effective than a"
@@ -248,9 +247,8 @@ Route40Lass1Script:
 Route40Lass1Text:
 	text "Although you can't"
 	line "see it from here,"
-
-	para "CIANWOOD is across"
-	line "the sea."
+	cont "CIANWOOD is across"
+	roll "the sea."
 	done
 
 Route40Lass2Script:

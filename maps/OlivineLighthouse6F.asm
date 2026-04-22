@@ -248,8 +248,8 @@ OlivineLighthouseAmphy:
 ;	done
 
 AmphyPaluPaluluText:
-	text "AMPHY: Palu!"
-	line "Palulu!"
+	ntag "AMPHAROS:"
+	text "Palu! Palulu!"
 	done
 
 

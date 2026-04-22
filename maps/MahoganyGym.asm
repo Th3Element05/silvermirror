@@ -62,6 +62,7 @@ MahoganyGymPryceScript:
 ;	jumpstd RadioTowerRocketsScript
 
 PryceText_Intro:
+	ntag "PRYCE:"
 	text "#MON have many"
 	line "experiences in"
 	cont "their lives, just "
@@ -90,6 +91,7 @@ PryceText_Intro:
 	done
 
 PryceText_Impressed:
+	ntag "PRYCE:"
 	text "Ah, I am impressed"
 	line "by your prowess."
 
@@ -108,11 +110,13 @@ Text_ReceivedGlacierBadge:
 	done
 
 PryceText_GlacierBadgeSpeech:
+	ntag "PRYCE:"
 	text "And this… This is"
 	line "a gift from me!"
 	done
 
 PryceText_AncientpowerSpeech:
+	ntag "PRYCE:"
 	text "That TM contains"
 	line "ANCIENTPOWER."
 
@@ -129,6 +133,7 @@ PryceText_AncientpowerSpeech:
 	done
 
 PryceText_CherishYourPokemon:
+	ntag "PRYCE:"
 	text "When the ice and"
 	line "snow melt, spring"
 	cont "arrives."

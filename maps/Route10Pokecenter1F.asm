@@ -19,9 +19,9 @@ Route10Pokecenter1FReceptionistScript:
 Route10Pokecenter1FBenchGuyScript:
 	jumptext Route10Pokecenter1FBenchGuyText
 Route10Pokecenter1FBenchGuyText:
-	text "I heard that"
-	line "GHOSTs haunt"
-	cont "LAVENDER TOWN!"
+	text "I've heard that"
+	line "LAVENDER TOWN is"
+	cont "haunted by ghosts!"
 	done
 
 Route10Pokecenter1FGentlemanScript:
@@ -30,8 +30,8 @@ Route10Pokecenter1FGentlemanText:
 	text "The element types"
 	line "of #MON make"
 	cont "them stronger"
-	roll "than some types"
-	cont "and weaker than"
+	roll "against some types"
+	cont "and weaker against"
 	roll "others!"
 	done
 

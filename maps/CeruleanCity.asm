@@ -38,9 +38,11 @@ CeruleanCityBlockersCallback:
 ;CeruleanCityMoveSlowbroCallback:
 	checkevent EVENT_BEAT_GRUNTM_4 ;EVENT_BEAT_LTSURGE
 	iftrue .ObtainedDig
-	moveobject CERULEANCITY_SLOWBRO, 20, 27
-	moveobject CERULEANCITY_SLOWBRO_TRAINER, 21, 27
+	endcallback
+
 .ObtainedDig
+	moveobject CERULEANCITY_SLOWBRO, 20, 26
+	moveobject CERULEANCITY_SLOWBRO_TRAINER, 21, 26
 	endcallback
 	; fallthrough
 ;CeruleanCaveBlockCallback:
@@ -111,8 +113,8 @@ CeruleanCityRivalGoesAroundScript:
 	end
 
 CeruleanCityRivalBeforeBattleText:
-	text "<RIVAL>: Yo!"
-	line "<PLAYER>!"
+	ntag "<RIVAL>:"
+	text "Yo! <PLAYER>!"
 
 	para "You're still"
 	line "struggling along"
@@ -129,20 +131,22 @@ CeruleanCityRivalBeforeBattleText:
 	done
 
 CeruleanCityRivalBattleWinText:
+	ntag "<RIVAL>:"
 	text "Hey!"
 	line "Take it easy!"
 	cont "You won already!"
 	done
 
 CeruleanCityRivalBattleLossText:
+	ntag "<RIVAL>:"
 	text "Heh!"
 	line "You're no match"
 	cont "for my genius!"
 	done
 
 CeruleanCityRivalAfterBattleText:
-	text "<RIVAL>: Hey,"
-	line "guess what?"
+	ntag "<RIVAL>:"
+	text "Hey, guess what?"
 
 	para "I went to BILL's"
 	line "and got him to"
@@ -251,12 +255,14 @@ CeruleanCitySlowbroScript:
 	end
 
 CeruleanCitySlowbroText1:
-	text "SLOWBRO: …"
+	ntag "SLOWBRO:"
+	text "<……> <……> <……>"
 
 	para "<……> <……> <……>"
 	done
 
 CeruleanCitySlowbroText2:
+	ntag "SLOWBRO:"
 	text "<……> <……>Yarah?"
 	done
 
@@ -363,7 +369,13 @@ CeruleanCityObedienceSpeechText:
 	done
 
 CeruleanCitySuperNerd1Script:
+	checkevent EVENT_BEAT_GRUNTM_4
+	iftrue .PathClear
 	jumptextfaceplayer CeruleanCitySuperNerd1Text
+
+.PathClear
+	jumptextfaceplayer CeruleanCitySuperNerd1Text2
+
 CeruleanCitySuperNerd1Text:
 	text "That trainer in"
 	line "front of the shop"
@@ -375,6 +387,13 @@ CeruleanCitySuperNerd1Text:
 
 	para "There might be a"
 	line "way around."
+	done
+
+CeruleanCitySuperNerd1Text2:
+	text "That trainer in"
+	line "front of the shop"
+	cont "can't control her"
+	roll "SLOWBRO."
 	done
 
 CeruleanCityCooltrainerMScript:
@@ -520,8 +539,8 @@ CeruleanCity_MapEvents:
 ;	object_event 20,  2, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CERULEAN_CITY_RIVAL
 	object_event 28, 12, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeruleanCityOfficerScript, -1
 	object_event 30,  8, SPRITE_ROCKET, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerRocketGruntM4, EVENT_CERULEAN_CITY_ROCKET
-	object_event 20, 26, SPRITE_SLOWBRO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, CeruleanCitySlowbroScript, -1
-	object_event 21, 26, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCitySlowbroTrainerScript, -1
+	object_event 20, 27, SPRITE_SLOWBRO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, CeruleanCitySlowbroScript, -1
+	object_event 21, 27, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCitySlowbroTrainerScript, -1
 	object_event  4, 12, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, CeruleanCaveCooltrainerMScript, EVENT_BEAT_ELITE_FOUR
 	object_event 15, 18, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WALK_UP_DOWN, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeruleanCitySuperNerd1Script, -1
 	object_event 31, 20, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanCityCooltrainerMScript, -1

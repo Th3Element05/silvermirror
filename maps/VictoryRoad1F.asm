@@ -64,8 +64,7 @@ CooltrainerMSeanSeenText:
 	done
 
 CooltrainerMSeanBeatenText:
-	text "I had a"
-	line "chance…"
+	text "I had a chance…"
 	done
 
 CooltrainerMSeanAfterBattleText:

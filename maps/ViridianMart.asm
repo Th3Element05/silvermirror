@@ -58,6 +58,7 @@ ViridianMartClerkScript:
 	end
 
 ViridianMartSayHiToOakText:
+	ntag "CLERK:"
 	text "Okay! Say hi to"
 	line "PROF.OAK for me!"
 	done
@@ -111,18 +112,22 @@ ViridianMartApproachCounterMovement:
 
 ; npc text
 ViridianMartFromPalletText:
+	ntag "CLERK:"
 	text "Hey! You came from"
 	line "PALLET TOWN?"
 	done
 
 ViridianMartOaksParcelText:
+	ntag "CLERK:"
 	text "You know PROF."
 	line "OAK, right?"
 
 	para "His order came in."
 	line "Will you take it"
-	cont "to him?"
+	cont "to him?@"
 	
+	text_promptbutton
+	ntag "─────"
 	para "<PLAYER> got"
 	line "OAK's PARCEL!"
 	done

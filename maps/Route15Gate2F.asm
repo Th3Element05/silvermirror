@@ -36,6 +36,7 @@ Route15Gate2FOaksAideScript:
 	end
 
 Route15Gate2FOaksAideAskPokemonText:
+	ntag "AIDE:"
 	text "Hi! Remember me?"
 	line "I'm PROF.OAK's"
 	cont "AIDE."
@@ -53,6 +54,7 @@ Route15Gate2FOaksAideAskPokemonText:
 	done
 
 Route15Gate2FOaksAideNotEnoughText:
+	ntag "AIDE:"
 	text "You have only"
 	line "caught @"
 	text_ram wStringBuffer3
@@ -61,12 +63,14 @@ Route15Gate2FOaksAideNotEnoughText:
 	done
 
 Route15Gate2FOaksAideLookForPokemonText:
+	ntag "AIDE:"
 	text "Look for more"
 	line "#MON in caves"
 	cont "and tall grass!"
 	done
 
 Route15Gate2FOaksAideCongratsText:
+	ntag "AIDE:"
 	text "Great! You have"
 	line "caught @"
 	text_ram wStringBuffer3
@@ -77,6 +81,7 @@ Route15Gate2FOaksAideCongratsText:
 	done
 
 Route15Gate2FOaksAideExpShareExplainText:
+	ntag "AIDE:"
 	text "EXP.SHARE will"
 	line "share experience"
 	cont "from battles with"

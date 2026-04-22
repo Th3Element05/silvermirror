@@ -50,7 +50,8 @@ BillScript:
 ;	end
 
 BillsFamilysHouseBill_GiveGSBallText:
-	text "BILL: <PLAYER>!"
+	ntag "BILL:"
+	text "<PLAYER>!"
 	line "What are you doing"
 	cont "in GOLDENROD?"
 
@@ -88,9 +89,10 @@ BillsFamilysHouseBill_GiveGSBallText:
 	done
 
 BillsFamilysHouseBill_ExplainGSBallText:
-	text "BILL: It resembles"
-	line "a #BALL, but"
-	cont "it isn't one."
+	ntag "BILL:"
+	text "It resembles a"
+	line "#BALL, but it's"
+	cont "something else."
 
 	para "I'm not an expert"
 	line "on #BALLs."

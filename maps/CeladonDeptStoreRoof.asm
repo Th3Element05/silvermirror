@@ -370,7 +370,7 @@ CeladonDeptStoreRoofSuperNerdText:
 CeladonDeptStoreRoofDirectory:
 	jumptext CeladonDeptStoreRoofDirectoryText
 CeladonDeptStoreRoofDirectoryText:
-	text "ROOFTOP SQUARE"
+	text "ROOFTOP SQUARE:"
 	line "VENDING MACHINES"
 	done
 

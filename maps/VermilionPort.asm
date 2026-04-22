@@ -116,15 +116,18 @@ VermilionPortTicketSailorScript:
 
 VermilionPortNoTicketText:
 	text "<PLAYER> doesn't"
-	line "have a ticket."
+	line "have a ticket.@"
 
-	para "SAILOR: Sorry. I"
-	line "can't let you on"
-	cont "the ship without"
-	roll "an S.S.TICKET."
+	text_promptbutton
+	ntag "SAILOR:"
+	text "I'm sorry. I can't"
+	line "let you board the"
+	cont "ship without an"
+	roll "S.S.TICKET."
 	done
 
 VermilionPortSSAquaScheduleText:
+	ntag "SAILOR:"
 	text "S.S.AQUA sails to"
 	line "OLIVINE CITY on"
 	cont "SUNDAY, TUESDAY,"
@@ -132,40 +135,48 @@ VermilionPortSSAquaScheduleText:
 	done
 
 VermilionPortWelcomeToSSAquaText:
-	text "SAILOR: Welcome to"
+	ntag "SAILOR:"
+	text "Welcome to the"
 	line "S.S.AQUA! Do you"
 	cont "have a ticket?"
 	done
 
 VermilionPortFlashTicketText:
 	text "<PLAYER> flashed"
-	line "the S.S.TICKET."
+	line "the S.S.TICKET.@"
 
-	para "SAILOR: Would you"
-	line "like to sail to"
-	cont "OLIVINE CITY with"
-	roll "us today?"
+	text_promptbutton
+	ntag "SAILOR:"
+	text "Our destination is"
+	line "OLIVINE CITY."
+
+	para "Would you like to"
+	line "come aboard?"
 	done
 
 VermilionPortSailorGetOnBoardText:
+	ntag "SAILOR:"
 	text "We're departing"
 	line "soon. Please get"
 	cont "on board."
 	done
 
 VermilionPortNextShipTuesdayText:
+	ntag "SAILOR:"
 	text "The S.S.AQUA will"
 	line "sail to OLIVINE"
 	cont "again on TUESDAY."
 	done
 
 VermilionPortNextShipThursdayText:
+	ntag "SAILOR:"
 	text "The S.S.AQUA will"
 	line "sail to OLIVINE"
 	cont "again on THURSDAY."
 	done
 
 VermilionPortNextShipSundayText:
+	ntag "SAILOR:"
 	text "The S.S.AQUA will"
 	line "sail to OLIVINE"
 	cont "again on SUNDAY."
@@ -176,13 +187,31 @@ VermilionPortEnterFastShipMovement:
 	step_end
 
 VermilionPortTruck:
+	checkevent EVENT_FOUGHT_MEW
+	iftrue .NoCry
+	cry MEW
+	waitsfx
 	jumptext VermilionPortTruckText
+
+.NoCry
+	jumptext VermilionPortTruckNothingText
+
 VermilionPortTruckText:
 	text "There's something"
-	line "under this truck."
+	line "under this truck…"
 
 	para "Better leave it"
 	line "alone."
+	done
+
+VermilionPortTruckNothingText:
+	text "<PLAYER> looked"
+	line "under the truck."
+
+	para "…"
+
+	para "There's nothing"
+	line "here."
 	done
 
 ResetAndRerollFastShipTrainers:

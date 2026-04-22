@@ -36,7 +36,8 @@ VioletNicknameSpeechHouseLassText:
 	done
 
 VioletNicknameSpeechHouseBirdText:
-	text "STRAWBERRY: Pijji!"
+	ntag "STRAWBERRY:"
+	text "Pijji!"
 	done
 
 VioletNicknameSpeechHouse_MapEvents:

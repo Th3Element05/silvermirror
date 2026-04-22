@@ -100,9 +100,8 @@ PokefanMJoshuaBeatenText:
 PokefanMJoshuaAfterBattleText:
 	text "You look like you"
 	line "have many #MON,"
-
-	para "but POLIWAG is"
-	line "still the best."
+	cont "but POLIWAG is"
+	roll "still the best."
 	done
 
 

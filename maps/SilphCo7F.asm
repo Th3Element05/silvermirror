@@ -142,12 +142,14 @@ SilphCo7FRivalGoesAroundScript:
 	end
 
 SilphCo7FRivalSeenText:
-	text "<RIVAL>: What"
-	line "kept you <PLAYER>?"
+	ntag "<RIVAL>:"
+	text "What kept you,"
+	line "<PLAYER>?"
 	done
 
 SilphCo7FRivalBeforeBattleText:
-	text "<RIVAL>: Hahaha!"
+	ntag "<RIVAL>:"
+	text "Hahaha!"
 	line "I thought you'd"
 	cont "turn up if I"
 	roll "waited here!"
@@ -165,14 +167,16 @@ SilphCo7FRivalBeforeBattleText:
 	done
 
 SilphCo7FRivalBattleWinText:
+	ntag "<RIVAL>:"
 	text "Oh ho!"
 	line "So, you are ready"
 	cont "for BOSS ROCKET!"
 	done
 
 SilphCo7FRivalBattleLossText:
-	text "<RIVAL>: How can"
-	line "I put this?"
+	ntag "<RIVAL>:"
+	text "How can I put"
+	line "this?"
 
 	para "You're not good"
 	line "enough to play"
@@ -180,6 +184,7 @@ SilphCo7FRivalBattleLossText:
 	done
 
 SilphCo7FRivalAfterBattleText:
+	ntag "<RIVAL>:"
 	text "Well, <PLAYER>!"
 
 	para "I'm moving on up"
@@ -232,6 +237,7 @@ SilphCo7FLaprasGiftScript:
 	jumptextfaceplayer SilphCo7FClerkSavedText
 
 SilphCo7FGiveLaprasText:
+;	ntag "MAN:"
 	text "Oh! Hi! You're"
 	line "not a ROCKET! You"
 	cont "came to save us?"
@@ -249,6 +255,7 @@ SilphCo7FReceivedLaprasText:
 	done
 
 SilphCo7FExplainLaprasText:
+;	ntag "MAN:"
 	text "It's LAPRAS. It's"
 	line "very intelligent."
 
@@ -263,13 +270,15 @@ SilphCo7FExplainLaprasText:
 	done
 
 SilphCo7FClerkText:
+;	ntag "MAN:"
 	text "TEAM ROCKET's"
 	line "BOSS went to the"
 	cont "boardroom! Is our"
-	roll "PRESIDENT OK?"
+	roll "PRESIDENT ok?"
 	done
 
 SilphCo7FClerkSavedText:
+;	ntag "MAN:"
 	text "Saved at last!"
 	line "Thank you!"
 	done
@@ -424,7 +433,7 @@ TrainerRocketGruntM24:
 	end
 
 GruntM24SeenText:
-	text "I am one of the 4"
+	text "I am one of four"
 	line "ROCKET BROTHERS!"
 	done
 

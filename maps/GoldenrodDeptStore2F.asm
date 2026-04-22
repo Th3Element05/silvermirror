@@ -22,9 +22,13 @@ GoldenrodDeptStore2FMedClerkScript:
 GoldenrodDeptStore2FYoungsterScript:
 	jumptextfaceplayer GoldenrodDeptStore2FYoungsterText
 GoldenrodDeptStore2FYoungsterText:
-	text "#GEAR can store"
-	line "up to ten phone"
-	cont "numbers."
+;	text "#GEAR can store"
+;	line "up to ten phone"
+;	cont "numbers."
+;
+	text "#GEAR can save"
+	line "up to twelve"
+	cont "phone numbers."
 
 	para "It's hard to de-"
 	line "cide which numbers"

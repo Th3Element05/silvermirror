@@ -165,8 +165,7 @@ BirdKeeperPeterSeenText:
 	done
 
 BirdKeeperPeterBeatenText:
-	text "I had to"
-	line "bug you!"
+	text "I had to bug you!"
 	done
 
 BirdKeeperPeterAfterBattleText:

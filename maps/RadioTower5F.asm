@@ -32,7 +32,8 @@ Director:
 	jumptextfaceplayer RadioTower5FDirectorThankYouText
 
 RadioTower5FDirectorText:
-	text "DIRECTOR: Hello!"
+	ntag "DIRECTOR:"
+	text "Hello!"
 
 	para "You know, I love"
 	line "#MON."
@@ -48,12 +49,12 @@ RadioTower5FDirectorText:
 	done
 
 RadioTower5FDirectorEmergencyText:
-	text "DIRECTOR: Sorry,"
-	line "I'm very busy."
+	ntag "DIRECTOR:"
+	text "Sorry, I'm very"
+	line "busy right now."
 
 	para "We are dealing"
-	line "with an emergency"
-	cont "right now."
+	line "with an emergency!"
 
 	para "<……>"
 
@@ -69,14 +70,16 @@ RadioTower5FDirectorEmergencyText:
 	done
 
 RadioTower5FDirectorCountingOnYouText:
-	text "DIRECTOR: I'm"
-	line "counting on you!"
+	ntag "DIRECTOR:"
+	text "I'm counting on"
+	line "you!"
 	done
 
 RadioTower5FDirectorThankYouText:
-	text "DIRECTOR: Your"
-	line "courageous actions"
-	cont "saved many people."
+	ntag "DIRECTOR:"
+	text "Your courageous"
+	line "actions saved"
+	cont "many people."
 
 	para "We are all in your"
 	line "debt."
@@ -151,8 +154,10 @@ RadioTower5FDirectorThankYouText:
 DJBen:
 	jumptextfaceplayer BenText
 BenText:
-	text "BEN: Do you listen"
-	line "to our music?"
+	ntag "DJ BEN:"
+	ntag "BEN:"
+	text "Do you listen to"
+	line "our music?"
 	done
 
 RadioTower5FDirectorsOfficeSign:

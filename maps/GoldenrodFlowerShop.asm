@@ -111,6 +111,7 @@ FlowerShopFloriaScript:
 	jumptextfaceplayer GoldenrodFlowerShopFloriaYouBeatWhitneyText
 
 GoldenrodFlowerShopFloriaToldSisText:
+	ntag "FLORIA:"
 	text "I told my sis"
 	line "about the weird"
 	cont "tree on ROUTE 36."
@@ -120,11 +121,13 @@ GoldenrodFlowerShopFloriaToldSisText:
 	done
 
 GoldenrodFlowerShopFloriaYouBeatWhitneyText:
+	ntag "FLORIA:"
 	text "Wow, you beat"
 	line "WHITNEY? Cool!"
 	done
 
 GoldenrodFlowerShopFloriaItReallyWasAMonText:
+	ntag "FLORIA:"
 	text "So the tree really"
 	line "was a #MON!"
 	done
@@ -151,4 +154,4 @@ GoldenrodFlowerShop_MapEvents:
 
 	def_object_events
 	object_event  2,  4, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FlowerShopTeacherScript, -1
-	object_event  5,  6, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, FlowerShopFloriaScript, EVENT_FLORIA_AT_FLOWER_SHOP
+	object_event  5,  6, SPRITE_TWIN, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, FlowerShopFloriaScript, EVENT_FLORIA_AT_FLOWER_SHOP

@@ -368,7 +368,8 @@ VermilionMachop:
 	end
 
 VermilionMachopText1:
-	text "MACHOP: Guoh!"
+	ntag "MACHOP:"
+	text "Guoh!"
 	line "Gogogoh!"
 	done
 
@@ -403,8 +404,9 @@ VermilionCitySign:
 	jumptext VermilionCitySignText
 VermilionCitySignText:
 	text "VERMILION CITY"
-	line "The Port of"
-	cont "Exquisite Sunsets"
+
+	para "The Port of"
+	line "Exquisite Sunsets"
 	done
 
 VermilionGymSign:
@@ -422,8 +424,9 @@ PokemonFanClubSign:
 	jumptext PokemonFanClubSignText
 PokemonFanClubSignText:
 	text "#MON FAN CLUB"
-	line "All #MON fans"
-	cont "welcome!"
+
+	para "All #MON fans"
+	line "welcome!"
 	done
 
 VermilionCityPortSign:
@@ -445,7 +448,7 @@ VermilionCityNoticeSignText:
 	line "ROCK TUNNEL to"
 	cont "LAVENDER TOWN."
 
-	para "VERMILION POLICE"
+	para "-VERMILION POLICE"
 	done
 
 VermilionCityPokecenterSign:

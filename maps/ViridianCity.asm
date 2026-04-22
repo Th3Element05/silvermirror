@@ -52,6 +52,7 @@ ViridianCityCoffeeGrampsScript:
 	end
 
 ViridianCityCoffeeGrampsBlockText:
+	ntag "GRAMPS:"
 	text "You can't go"
 	line "through here!"
 
@@ -141,10 +142,12 @@ ViridianCityMapCardScript:
 	db "MAP CARD@"
 
 ViridianCityCoffeeGrampsHeyText:
+	ntag "GRAMPS:"
 	text "Hey! You!"
 	done
 
 ViridianCityCoffeeGrampsSorryText:
+	ntag "GRAMPS:"
 	text "Sorry for stopping"
 	line "you earlier."
 
@@ -157,6 +160,7 @@ ViridianCityCoffeeGrampsSorryText:
 	done
 
 ViridianCityCoffeeGrampsMapCardText:
+	ntag "GRAMPS:"
 	text "You look like"
 	line "you have a long"
 	cont "journey ahead of"
@@ -169,6 +173,7 @@ GotMapCardText:
 	done
 
 ViridianCityCatchPokemonAsk:
+	ntag "GRAMPS:"
 	text "I used to catch"
 	line "lots of #MON"
 	cont "when I was young."
@@ -178,15 +183,18 @@ ViridianCityCatchPokemonAsk:
 	done
 
 ViridianCityCatchTutorialAcceptedText:
+	ntag "GRAMPS:"
 	text "Then I'll show you"
 	line "how!"
 	done
 
 ViridianCityCatchTutorialDeclinedText:
+	ntag "GRAMPS:"
 	text "Oh! Good!"
 	done
 
 CatchingTutorialDebriefText:
+	ntag "GRAMPS:"
 	text "That's how you do"
 	line "it."
 
@@ -196,6 +204,7 @@ CatchingTutorialDebriefText:
 	done
 
 ViridianCityCoffeeGrampsTravelText:
+	ntag "GRAMPS:"
 	text "I used to travel"
 	line "when I was young."
 	

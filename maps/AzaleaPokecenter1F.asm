@@ -14,11 +14,11 @@ AzaleaPokecenter1FGentlemanText:
 	text "The PAGER SYSTEM"
 	line "on the #GEAR"
 	cont "is so convenient!"
-
-	para "You don't need to"
-	line "teach HM moves to"
-	cont "your own #MON"
-	roll "to get around!"
+;
+;	para "You don't need to"
+;	line "teach HM moves to"
+;	cont "your own #MON"
+;	roll "to get around!"
 	done
 
 AzaleaPokecenter1FFishingGuruScript:

@@ -114,8 +114,8 @@ Route42ChuckScript:
 	end
 
 Route42ChuckTellRocksmashText:
-	text "CHUCK: Great work"
-	line "so far, PRIMEAPE!"
+	text "Great work so far,"
+	line "PRIMEAPE!"
 
 	para "One more! Make it"
 	line "a big one!"
@@ -133,13 +133,24 @@ Route42ChuckWellDoneText:
 
 Route42ChuckFarewellText:
 	text "That's it! The"
-	line "path is clear!"
+	line "path is clear!@"
 
-	para "I should get back"
-	line "to CIANWOOD CITY!"
+	text_promptbutton
+	ntag "CHUCK:"
+	text "My name is CHUCK,"
+	line "I'm the GYM LEADER"
+	cont "in CIANWOOD CITY!"
 
-	para "I am the GYM"
-	line "LEADER there!"
+	para "I need to get back"
+	line "there in case any"
+	cont "trainers want to"
+	roll "challenge me!"
+
+;	para "I should get back"
+;	line "to CIANWOOD CITY!"
+;
+;	para "I am the GYM"
+;	line "LEADER there!"
 
 	para "You look like a"
 	line "tough trainer!"
@@ -179,8 +190,9 @@ Route42PrimeapeScript:
 	end
 
 Route42PrimeapeText:
-	text "PRIMEAPE: Prruh!"
-	line "Prruh! Priii!"
+	ntag "PRIMEAPE:"
+	text "Prruh! Prruh!"
+	line "Priii!"
 	done
 
 ; trainers

@@ -47,8 +47,7 @@ BikerMarkeySeenText:
 	done
 
 BikerMarkeyBeatenText:
-	text "Crash and"
-	line "burn!"
+	text "Crash and burn!"
 	done
 
 BikerMarkeyAfterBattleText:
@@ -112,8 +111,7 @@ BikerTheronSeenText:
 	done
 
 BikerTheronBeatenText:
-	text "Grounded"
-	line "out!"
+	text "Grounded out!"
 	done
 
 BikerTheronAfterBattleText:
@@ -292,8 +290,7 @@ BikerNolanSeenText:
 	done
 
 BikerNolanBeatenText:
-	text "Are you"
-	line "satisfied?"
+	text "Are you satisfied?"
 	done
 
 BikerNolanAfterBattleText:

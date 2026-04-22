@@ -8,9 +8,9 @@ SafariRestHouseArea1_MapScripts:
 SafariRestHouseArea1Lass:
 	jumptextfaceplayer SafariRestHouseArea1LassText
 SafariRestHouseArea1LassText:
-	text "SARA: Where did"
-	line "my boy friend,"
-	cont "ERIK, go?"
+	ntag "SARA:"
+	text "Have you seen my"
+	line "boyfriend, ERIK?"
 	done
 
 SafariRestHouseArea1Scientist:

@@ -60,6 +60,8 @@ OakScript:
 	end
 
 .OakGiveBalls
+	writetext OaksLabOakGivesPokeballsText
+	promptbutton
 	writetext OaksLabGetPokeballsText
 	playsound SFX_ITEM
 	waitsfx
@@ -452,6 +454,7 @@ BlueScript:
 OaksAssistantScript:
 	jumptextfaceplayer OaksAssistantText
 OaksAssistantText:
+	ntag "AIDE:"
 	text "I study #MON as"
 	line "PROF.OAK's AIDE."
 	done
@@ -597,17 +600,20 @@ OaksLabRivalWalksInMovementShort:
 
 ; npc text
 OaksLabRivalOakNotHereText:
-	text "<RIVAL>: Yo"
-	line "<PLAYER>! GRAMPS"
-	cont "isn't around!"
+	ntag "<RIVAL>:"
+	text "Yo, <PLAYER>!"
+	line "GRAMPS isn't here!"
 	done
-	
-OaksLabIntroConversationText:
-	text "<RIVAL>: GRAMPS!"
-	line "I'm fed up with"
-	cont "waiting!"
 
-	para "OAK: <RIVAL>?"
+OaksLabIntroConversationText:
+	ntag "<RIVAL>:"
+	text "GRAMPS! I'm fed"
+	line "up with waiting!@"
+
+	text_promptbutton
+	ntag "──────────"
+	ntag "PROF.OAK:"
+	text "<RIVAL>?"
 	line "Let me think…"
 
 	para "Oh, that's right,"
@@ -633,25 +639,32 @@ OaksLabIntroConversationText:
 	cont "but you can have"
 	roll "one!"
 
-	para "Choose!"
+	para "Choose!@"
 
-	para "<RIVAL>: Hey!"
-	line "GRAMPS! What"
-	cont "about me?"
+	text_promptbutton
+	ntag "──────────"
+	ntag "<RIVAL>:"
+	text "Hey! GRAMPS!"
+	line "What about me?@"
 
-	para "OAK: Be patient!"
+	text_promptbutton
+	ntag "──────────"
+	ntag "PROF.OAK:"
+	text "Be patient!"
 	line "<RIVAL>, you can"
 	cont "have one too!"
 	done
 
 OaksLabWhichPokemonDoYouWantText:
-	text "OAK: Now, <PLAYER>,"
-	line "which #MON do"
-	cont "you want?"
+	ntag "PROF.OAK:"
+	text "<PLAYER>, which"
+	line "#MON would you"
+	cont "like?"
 	done
 
 OaksLabDidntChooseStarterText:
-	text "OAK: Think it over"
+	ntag "PROF.OAK:"
+	text "Think it over"
 	line "carefully."
 
 	para "Your partner is"
@@ -659,24 +672,26 @@ OaksLabDidntChooseStarterText:
 	done
 
 OaksLabWildPokemonText:
-	text "OAK: If a wild"
-	line "#MON appears,"
-	cont "your #MON can"
-	roll "fight against it!"
+	ntag "PROF.OAK:"
+	text "If a wild #MON"
+	line "appears, your"
+	cont "#MON can fight"
+	roll "against it!"
 	done
 
 OaksLabDontLeaveText:
-	text "OAK: Hey! Don't go"
-	line "away yet!"
+	ntag "PROF.OAK:"
+	text "Hey! Don't leave"
+	line "yet!"
 	done
 
 OaksLabRivalNotGreedyText:
-	text "<RIVAL>: Heh, I"
-	line "don't need to be"
-	cont "greedy like you!"
+	ntag "<RIVAL>:"
+	text "Heh, I don't need"
+	line "to be greedy."
 
-	para "Go ahead and"
-	line "choose, <PLAYER>!"
+	para "You choose first,"
+	line "<PLAYER>!"
 	done
 
 OaksLabTakeCharmanderText:
@@ -710,57 +725,84 @@ OaksLabReceivedStarterText:
 	done
 
 OaksLabRivalTakesPokemonText:
-	text "<RIVAL>: I'll take"
-	line "this one, then!"
+	ntag "<RIVAL>:"
+	text "Then I'll take"
+	line "this one!"
 	done
 
 OaksLabRivalMineLooksStrongerText:
-	text "<RIVAL>: My"
-	line "#MON looks a"
-	cont "lot stronger."
+	ntag "<RIVAL>:"
+	text "My #MON looks"
+	line "a lot stronger."
 	done
 
 OaksLabRivalBattleChallengeText:
-	text "<RIVAL>: Wait"
-	line "<PLAYER>!"
-	cont "Let's check out"
-	roll "our #MON!"
+	ntag "<RIVAL>:"
+	text "Wait <PLAYER>!"
+	
+	para "Let's check out"
+	line "our #MON!"
 
 	para "Come on, I'll take"
 	line "you on!"
 	done
 
 OaksLabRivalBattleWinText:
-	text "<RIVAL>: WHAT?"
+;	text "<RIVAL>: WHAT?"
+;	line "Unbelievable!"
+;	cont "I picked the"
+;	roll "wrong #MON!"
+;	done
+
+	ntag "<RIVAL>:"
+	text "WHAT?"
 	line "Unbelievable!"
 	cont "I picked the"
 	roll "wrong #MON!"
 	done
 
 OaksLabRivalBattleLossText:
-	text "<RIVAL>: Yeah! Am"
-	line "I great or what?"
+;	text "<RIVAL>: Yeah! Am"
+;	line "I great or what?"
+;	done
+
+	ntag "<RIVAL>:"
+	text "Yeah! Am I great,"
+	line "or what?"
 	done
 
 OaksLabAfterRivalBattleText:
-	text "<RIVAL>: Okay!"
-	line "I'll make my"
-	cont "#MON fight to"
-	roll "toughen it up!"
+	ntag "<RIVAL>:"
+	text "Okay! I'll make"
+	line "my #MON fight"
+	cont "to toughen it up!"
 
 	para "<PLAYER>! GRAMPS!"
 	line "Smell you later!"
 	done
 
 OaksLabRaisePokemonText:
-	text "OAK: <PLAYER>,"
-	line "raise your young"
-	cont "#MON by making"
-	roll "it fight!"
+	ntag "PROF.OAK:"
+	text "<PLAYER>, #MON"
+	line "grow by gaining"
+	cont "experience points"
+	roll "from battles."
+
+	para "Raise your young"
+	line "#MON by making"
+	cont "it fight!"
 	done
 
+;	ntag "PROF.OAK:"
+;	text "<PLAYER>,"
+;	line "raise your young"
+;	cont "#MON by making"
+;	roll "it fight!"
+;	done
+
 OaksLabHowIsMyPokemonText:
-	text "OAK: Oh, <PLAYER>!"
+	ntag "PROF.OAK:"
+	text "Oh, <PLAYER>!"
 
 	para "How is my old"
 	line "#MON?"
@@ -780,25 +822,29 @@ OaksLabHowIsMyPokemonText:
 	done
 
 OaksLabParcelThanksText:
-	text "OAK: Ah! This is"
-	line "the custom #-"
-	cont "BALL I ordered."
+	ntag "PROF.OAK:"
+	text "Ah! This is the"
+	line "custom #BALL I"
+	cont "ordered."
 
 	para "Thank you!"
 	done
 
 OaksLabRivalGrampsText:
-	text "<RIVAL>: GRAMPS!"
+	ntag "<RIVAL>:"
+	text "GRAMPS!"
 	done
 
 OaksLabWhatDidYouCallMeForText:
-	text "<RIVAL>: What did"
-	line "you call me for?"
+	ntag "<RIVAL>:"
+	text "What did you call"
+	line "me for?"
 	done
 
 OaksLabOakHaveRequestText:
-	text "OAK: Oh right! I"
-	line "have a request"
+	ntag "PROF.OAK:"
+	text "Oh right!"
+	line "I have a request"
 	cont "of you two."
 
 	para "On the desk there"
@@ -823,10 +869,11 @@ OaksLabOakHaveRequestText:
 
 ;OaksLabOaksDreamText:
 OaksLabOaksDreamGivePagerText:
-	text "OAK: To make a"
-	line "complete guide"
-	cont "on all the #MON"
-	roll "in the world…"
+	ntag "PROF.OAK:"
+	text "To make a complete"
+	line "guide on all the"
+	cont "#MON in the"
+	roll "world…"
 
 	para "That was my dream!"
 
@@ -860,9 +907,10 @@ GotPagerCardText:
 	done
 
 OaksLabOakExplainsPagerText:
-	text "OAK: That's the"
-	line "latest #GEAR"
-	cont "expansion card."
+	ntag "PROF.OAK:"
+	text "That's the latest"
+	line "#GEAR expansion."
+;	cont "card."
 
 	para "The #MON"
 	line "PAGER SYSTEM."
@@ -874,33 +922,37 @@ OaksLabOakExplainsPagerText:
 
 	para "But you need to"
 	line "get #MON PAGERs"
-	cont "to call with it."
+	cont "to call with it.@"
 
-	para "<RIVAL>: Alright"
-	line "GRAMPS! Leave it"
-	cont "all to me!"
+	text_promptbutton
+	ntag "──────────"
+	ntag "<RIVAL>:"
+	text "Alright, GRAMPS!"
+	line "Leave it all to"
+	cont "me!"
 	done
 
 OaksLabRivalLeavesAfterPokedexText:
+	ntag "<RIVAL>:"
 	text "<PLAYER>, I hate to"
-	line "say it, but I"
-	cont "don't need you!"
+	line "say it, but I don't"
+	cont "need you!"
 
 	para "I know! I'll"
 	line "borrow a MAP CARD"
-	cont "for my #GEAR"
+	cont "for the #GEAR"
 	roll "from my sis!"
 	done
 
 OaksLabOakGivePhoneNumberText:
-	text "OAK: <PLAYER>,"
-	line "completing the"
-	cont "#DEX is a big"
-	roll "responsibility."
+	ntag "PROF.OAK:"
+	text "<PLAYER>, filling"
+	line "the #DEX is a"
+	cont "big undertaking."
 	
 	para "So, here is my"
-	line "phone number. You"
-	cont "can call me if"
+	line "phone number."
+	cont "You can call me if"
 	roll "anything comes up!"
 	done
 
@@ -910,9 +962,10 @@ GotOaksNumberText:
 	done
 
 OaksLabOakTalkToMomText:
-	text "OAK: You have a"
-	line "long journey ahead"
-	cont "of you."
+	ntag "PROF.OAK:"
+	text "You have a long"
+	line "journey ahead of"
+	cont "you."
 
 	para "Make sure that you"
 	line "talk to your mom"
@@ -920,13 +973,15 @@ OaksLabOakTalkToMomText:
 	done
 
 OaksLabPokemonAwaitText:
-	text "OAK: <PLAYER>!"
+	ntag "PROF.OAK:"
+	text "<PLAYER>!"
 	line "#MON around the"
 	cont "world await you!"
 	done
 
-OaksLabGetPokeballsText:
-	text "OAK: You can't get"
+OaksLabOakGivesPokeballsText:
+	ntag "PROF.OAK:"
+	text "You can't record"
 	line "detailed data on"
 	cont "#MON by just"
 	roll "seeing them."
@@ -936,14 +991,16 @@ OaksLabGetPokeballsText:
 	cont "to capture wild"
 	roll "#MON."
 
-	para "<PLAYER> received"
+OaksLabGetPokeballsText:
+	text "<PLAYER> received"
 	line "#BALLs."
 	done
 
 OaksLabPokeballExplainationText:
-	text "OAK: When a wild"
-	line "#MON appears,"
-	cont "it's fair game."
+	ntag "PROF.OAK:"
+	text "When a wild #-"
+	line "MON appears, it's"
+	cont "fair game."
 
 	para "Just throw a #-"
 	line "BALL at it and"
@@ -960,7 +1017,8 @@ OaksLabPokeballExplainationText:
 	done
 
 OakGiveTicketText1:
-	text "OAK: <PLAYER>!"
+	ntag "PROF.OAK:"
+	text "<PLAYER>!"
 	line "There you are!"
 
 	para "I called because"
@@ -975,6 +1033,7 @@ OakGiveTicketText1:
 	done
 
 OakGiveTicketText2:
+	ntag "PROF.OAK:"
 	text "Board the ship at"
 	line "VERMILION CITY!"
 
@@ -1010,13 +1069,15 @@ OaksLabThoseArePokeballsText:
 	done
 
 OakLabEvaluateDexText:
-	text "How is your"
-	line "#DEX coming?"
+	ntag "PROF.OAK:"
+	text "How is your #-"
+	line "DEX coming?"
 
 	para "Let's see…"
 	done
 
 OakLabOakGoodbyeText:
+	ntag "PROF.OAK:"
 	text "If you're in the"
 	line "area, I hope you"
 	cont "come visit again."

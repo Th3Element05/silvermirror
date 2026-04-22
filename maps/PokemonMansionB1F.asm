@@ -98,8 +98,10 @@ PokemonMansionB1FBlaineText:
 	para "<……>"
 
 	para "I see, you are a"
-	line "#MON trianer!"
+	line "#MON trianer!@"
 
+	text_promptbutton
+	ntag "BLAINE:"
 	para "I am BLAINE! I"
 	line "am the LEADER of"
 	cont "CINNABAR GYM!"

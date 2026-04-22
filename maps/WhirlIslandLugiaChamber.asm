@@ -38,6 +38,7 @@ Lugia:
 	end
 
 LugiaText:
+	ntag "LUGIA:"
 	text "Gyaaas!"
 	done
 

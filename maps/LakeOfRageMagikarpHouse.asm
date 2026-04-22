@@ -92,21 +92,18 @@ MagikarpHouseBookshelf:
 MagikarpLengthRaterText_LakeOfRageHistory:
 	text "LAKE OF RAGE is"
 	line "actually a crater"
-
-	para "made by rampaging"
-	line "GYARADOS."
+	cont "made by rampaging"
+	roll "GYARADOS."
 
 	para "The crater filled"
 	line "up with rainwater"
-
-	para "and the LAKE was"
-	line "formed."
+	cont "and the LAKE was"
+	roll "formed."
 
 	para "That's the story"
 	line "passed on from my"
-
-	para "Grandpa's great-"
-	line "great-grandpa."
+	cont "Grandpa's great-"
+	roll "great-grandpa."
 ;
 ;	para "It used to be that"
 ;	line "you could catch"
@@ -184,8 +181,7 @@ MagikarpLengthRaterText_TooShort:
 
 	text "This is a fine"
 	line "MAGIKARP, but I've"
-	cont "seen bigger ones"
-	roll "before."
+	cont "seen bigger."
 	done
 
 
@@ -196,10 +192,10 @@ MagikarpLengthRaterText_NotMagikarp:
 
 MagikarpLengthRaterText_Refused:
 	text "Oh… So you didn't"
-	line "get one good"
+	line "get one big enough"
+	cont "to show me?"
 
-	para "enough to show me?"
-	line "Maybe next time."
+	para "Maybe next time."
 	done
 
 LakeOfRageMagikarpHouseUnusedRecordText:

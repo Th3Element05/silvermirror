@@ -77,6 +77,7 @@ AgathasRoom_EnterMovement:
 	step_end
 
 AgathaScript_AgathaBeforeText:
+	ntag "AGATHA:"
 	text "I am AGATHA of"
 	line "the ELITE FOUR!"
 
@@ -103,12 +104,14 @@ AgathaScript_AgathaBeforeText:
 	done
 
 AgathaScript_AgathaBeatenText:
+	ntag "AGATHA:"
 	text "Oh ho!"
 	line "You're something"
 	cont "special, child!"
 	done
 
 AgathaScript_AgathaDefeatText:
+	ntag "AGATHA:"
 	text "You win! I see"
 	line "what the old duff"
 	cont "sees in you now!"

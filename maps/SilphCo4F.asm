@@ -46,17 +46,21 @@ SilphCo4F_Door2:
 	end
 
 SilphCo4FClerk:
-	checkevent EVENT_BEAT_GIOVANNI_SILPHCO
-	iftrue .Cleared
 	faceplayer
 	opentext
 	writetext SilphCo4FClerkText
+	checkevent EVENT_BEAT_GIOVANNI_SILPHCO
+	iftrue .Cleared
 	waitbutton
 	closetext
 	turnobject LAST_TALKED, DOWN
 	end
 .Cleared
-	jumptextfaceplayer SilphCo4FClerkSavedText
+	promptbutton
+	writetext SilphCo4FClerkSavedText
+	waitbutton
+	closetext
+	end
 
 SilphCo4FClerkText:
 	text "Sssh! Can't you"

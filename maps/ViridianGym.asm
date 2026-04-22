@@ -56,6 +56,7 @@ ViridianGymGiovanniScript:
 	end
 
 GiovanniIntroText:
+	ntag "GIOVANNI:"
 	text "Fwahahaha! This is"
 	line "my hideout!"
 
@@ -76,6 +77,7 @@ GiovanniIntroText:
 	done
 
 GiovanniWinLossText:
+	ntag "GIOVANNI:"
 	text "Ha!"
 	line "That was a truly"
 	cont "intense fight!"
@@ -90,6 +92,7 @@ ReceivedEarthbadgeText:
 	done
 
 GiovanniEarthbadgeText:
+	ntag "GIOVANNI:"
 	text "The EARTHBADGE"
 	line "makes #MON of"
 	cont "any level obey!"
@@ -108,6 +111,7 @@ GiovanniEarthbadgeText:
 	done
 
 GiovanniExplainTMText:
+	ntag "GIOVANNI:"
 	text "TM27 is FISSURE!"
 	line "It will take out"
 	cont "#MON with just"
@@ -119,6 +123,7 @@ GiovanniExplainTMText:
 	done
 
 GiovanniAfterBattleText:
+	ntag "GIOVANNI:"
 	text "Having lost, I"
 	line "cannot face my"
 	cont "underlings!"
@@ -178,8 +183,7 @@ CooltrainerMPaulSeenText:
 	done
 
 CooltrainerMPaulBeatenText:
-	text "I was"
-	line "beaten?"
+	text "I was beaten?"
 	done
 
 CooltrainerMPaulAfterBattleText:
@@ -205,8 +209,7 @@ CooltrainerMNickSeenText:
 	done
 
 CooltrainerMNickBeatenText:
-	text "I lost"
-	line "my grip!"
+	text "I lost my grip!"
 	done
 
 CooltrainerMNickAfterBattleText:
@@ -284,8 +287,7 @@ CooltrainerMAaronSeenText:
 	done
 
 CooltrainerMAaronBeatenText:
-	text "I ran out"
-	line "of gas!"
+	text "I ran out of gas!"
 	done
 
 CooltrainerMAaronAfterBattleText:

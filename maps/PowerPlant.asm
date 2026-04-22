@@ -47,6 +47,7 @@ PowerPlantZapdos:
 	end
 
 ZapdosText:
+	ntag "ZAPDOS:"
 	text "Gyaoo!"
 	done
 

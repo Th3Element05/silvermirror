@@ -64,11 +64,13 @@ SilphCo2FReceptionist:
 	end
 	
 SilphCo2FReceptionistEeekText:
+;	ntag "GIRL:"
 	text "Eeek!"
 	line "No! Stop! Help!"
 	done
 
 SilphCo2FReceptionistTakeThisText:
+;	ntag "GIRL:"
 	text "Oh, you're not"
 	line "with TEAM ROCKET."
 	cont "I thought…"
@@ -78,6 +80,7 @@ SilphCo2FReceptionistTakeThisText:
 	done
 
 SilphCo2FReceptionistExplainText:
+;	ntag "GIRL:"
 	text "TM36 is"
 	line "SELFDESTRUCT!"
 

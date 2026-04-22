@@ -44,19 +44,30 @@ SaffronPidgeyHousePidgey:
 	end
 
 SaffronPidgeyHousePidgeyText:
-	text "PIDGEY: Kurukkoo!"
+	ntag "PIDGEY:"
+	text "Kurukkoo!"
 	done
 
 SaffronPidgeyHousePaper:
 	jumptext SaffronPidgeyHousePaperText
 SaffronPidgeyHousePaperText:
-	text "I was given a PP"
-	line "UP as a gift."
+	text "It's an ad for"
+	line "PP UP…"
 
-	para "It's used for"
-	line "increasing the PP"
-	cont "of techniques!"
+	para "Get more PP"
+	line "…!@"
+	text_promptbutton
+	text "for your #MON's"
+	line "moves!"
 	done
+
+;	text "I was given a PP"
+;	line "UP as a gift."
+;
+;	para "It's used for"
+;	line "increasing the PP"
+;	cont "of moves!"
+;	done
 
 SaffronPidgeyHouse_MapEvents:
 	db 0, 0 ; filler

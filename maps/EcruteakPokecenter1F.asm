@@ -37,9 +37,12 @@ EcruteakPokecenter1FPokefanMText:
 EcruteakPokecenter1FCooltrainerFScript:
 	jumptextfaceplayer EcruteakPokecenter1FCooltrainerFText
 EcruteakPokecenter1FCooltrainerFText:
-	text "MORTY, the GYM"
-	line "LEADER, is soooo"
-	cont "cool."
+;	text "MORTY, the GYM"
+;	line "LEADER, is soooo"
+;	cont "cool."
+;
+	text "The GYM LEADER,"
+	line "MORTY, is so cool!"
 
 	para "His #MON are"
 	line "really tough too."

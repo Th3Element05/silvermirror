@@ -26,8 +26,8 @@ PewterSnoozeSpeechHouseYoungsterText:
 	cont "when they are"
 	roll "hurt or asleep!"
 
-	para "But, it's not a"
-	line "sure thing!"
+	para "But, it's never"
+	line "a sure thing!"
 	done
 
 PewterSnoozeSpeechHouseBookshelf:

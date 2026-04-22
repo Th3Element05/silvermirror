@@ -18,9 +18,9 @@ RedsHouse2FYoungChris:
 	promptbutton
 	checkpokemail RedsHouse2FDummyText
 	ifequal POKEMAIL_REFUSED, .Refused
-;	ifequal POKEMAIL_WRONG_MAIL, .Proceed
-;	ifequal POKEMAIL_NO_MAIL, .Proceed
-;	ifequal POKEMAIL_LAST_MON, .Proceed
+;	ifequal POKEMAIL_WRONG_MAIL, .GiveGift
+;	ifequal POKEMAIL_NO_MAIL, .GiveGift
+;	ifequal POKEMAIL_LAST_MON, .GiveGift
 	; POKEMAIL_CORRECT
 	sjump .GiveGift
 
@@ -29,9 +29,9 @@ RedsHouse2FYoungChris:
 	promptbutton
 	checkpokemail RedsHouse2FDummyText
 	ifequal POKEMAIL_REFUSED, .Refused
-;	ifequal POKEMAIL_WRONG_MAIL, .Proceed
-;	ifequal POKEMAIL_NO_MAIL, .Proceed
-;	ifequal POKEMAIL_LAST_MON, .Proceed
+;	ifequal POKEMAIL_WRONG_MAIL, .GiveGift
+;	ifequal POKEMAIL_NO_MAIL, .GiveGift
+;	ifequal POKEMAIL_LAST_MON, .GiveGift
 	; POKEMAIL_CORRECT
 	; fallthrough
 
@@ -44,22 +44,12 @@ RedsHouse2FYoungChris:
 	writetext RedsHouse2FChrisHappyText
 	promptbutton
 	random 3
-;	ifequal 0, .sitrus ;fallthrough
-	ifequal 1, .leppa
-	ifequal 2, .lum
+;	ifequal 0, .heartscale ;fallthrough
+	ifequal 1, .goldleaf
+	ifequal 2, .silverleaf
 
-;.sitrus
-	verbosegiveitem SITRUS_BERRY
-	closetext
-	end
-
-.leppa
-	verbosegiveitem LEPPA_BERRY
-	closetext
-	end
-
-.lum
-	verbosegiveitem LUM_BERRY
+;.heartscale
+	verbosegiveitem HEART_SCALE
 	closetext
 	end
 
@@ -68,7 +58,17 @@ RedsHouse2FYoungChris:
 	opentext
 	writetext RedsHouse2FChrisLoveText
 	promptbutton
-	verbosegiveitem BIG_MUSHROOM
+	verbosegiveitem HEART_SCALE
+	random 2
+	ifequal 0, .silverleaf
+
+.goldleaf
+	verbosegiveitem GOLD_LEAF
+	closetext
+	end
+
+.silverleaf
+	verbosegiveitem SILVER_LEAF
 	closetext
 	end
 

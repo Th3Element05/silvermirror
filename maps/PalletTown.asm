@@ -53,12 +53,14 @@ PalletTownOakHeyWaitScriptL:
 	end
 
 PalletTownOakHeyWaitText:
-	text "OAK: Hey! Wait!"
+	ntag "PROF.OAK:"
+	text "Hey! Wait!"
 	line "Don't go out!"
 	done
 
 PalletTownOakUnsafeText:
-	text "OAK: It's unsafe!"
+	ntag "PROF.OAK:"
+	text "It's unsafe!"
 	line "Wild #MON live"
 	cont "in tall grass!"
 
@@ -204,6 +206,11 @@ PalletTownSignText:
 	para "Shades of your"
 	line "journey await!"
 	done
+
+;	ntag "PALLET TOWN"
+;	text "Shades of your"
+;	line "journey await!"
+;	done
 
 PlayersHouseSign:
 	jumptext PlayersHouseSignText

@@ -26,8 +26,9 @@ PokemonTower7FMrFujiScript:
 	end
 
 PokemonTower7FMrFujiText:
-	text "MR.FUJI: Heh? You"
-	line "came to save me?"
+	ntag "MR.FUJI:"
+	text "Heh? You came to"
+	line "save me?"
 
 	para "Thank you. But, I"
 	line "came here of my"

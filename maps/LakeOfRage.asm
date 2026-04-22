@@ -133,7 +133,8 @@ GoldMagikarp:
 	end
 
 LakeOfRageMagikarpCryText:
-	text "MAGIKARP: Karp?"
+	ntag "MAGIKARP:"
+	text "Karp?"
 	done
 
 LakeOfRageGotGoldScaleText:
@@ -209,15 +210,18 @@ LakeOfRageClairIntroText:
 	para "You look like a"
 	line "#MON trainer."
 
-	para "Nice to meet you."
+	para "Nice to meet you.@"
 
-	para "I'm CLAIR, the"
+	text_promptbutton
+	ntag "CLAIR:"
+	text "I'm CLAIR, the"
 	line "GYM LEADER from"
 	cont "BLACKTHORN CITY."
 	done
 
 LakeOfRageClairMagikarpText:
-	text "CLAIR: MAGIKARP…"
+	ntag "CLAIR:"
+	text "MAGIKARP…"
 
 	para "They are a weak"
 	line "#MON, and yet…"
@@ -233,11 +237,13 @@ LakeOfRageClairMagikarpText:
 	done
 
 LakeOfRageClairChallengeText:
-	text "CLAIR: I suppose"
-	line "you want a BADGE?"
+	ntag "CLAIR:"
+	text "I suppose want a"
+	line "GYM BADGE?"
 	done
 
 LakeOfRageClairStayLongerText:
+	ntag "CLAIR:"
 	text "You don't look"
 	line "like you're ready"
 	cont "to challenge me."
@@ -253,6 +259,7 @@ LakeOfRageGetMoreBadgesText:
 	done
 
 LakeOfRageClairReturnsToGymText:
+	ntag "CLAIR:"
 	text "Alright, meet me"
 	line "back at my GYM in"
 	cont "BLACKTHORN CITY."
@@ -450,9 +457,9 @@ LakeOfRageCooltrainerFText:
 LakeOfRageSign:
 	jumptext LakeOfRageSignText
 LakeOfRageSignText:
-	text "LAKE OF RAGE,"
-	line "also known as"
-	cont "GYARADOS LAKE."
+	text "LAKE OF RAGE"
+;	line "also known as"
+;	cont "GYARADOS LAKE."
 	done
 
 MagikarpHouseSignScript:

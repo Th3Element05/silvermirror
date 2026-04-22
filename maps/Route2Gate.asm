@@ -53,9 +53,11 @@ Route2GateOaksAideScript:
 
 GotFlashPagerText:
 	text "PIKACHU was added"
-	line "to the PPS!"
+	line "to the PPS!@"
 
-	para "PIKACHU can use"
+	text_promptbutton
+	ntag "AIDE:"
+	text "PIKACHU can use"
 	line "FLASH to light up"
 	cont "dark caves!"
 
@@ -65,6 +67,7 @@ GotFlashPagerText:
 	done
 
 Route2GateOaksAideAskPokemonText:
+	ntag "AIDE:"
 	text "Hi! Remember me?"
 	line "I'm PROF.OAK's"
 	cont "AIDE."
@@ -82,6 +85,7 @@ Route2GateOaksAideAskPokemonText:
 	done
 
 Route2GateOaksAideNotEnoughText:
+	ntag "AIDE:"
 	text "You have only"
 	line "caught @"
 	text_ram wStringBuffer3
@@ -90,12 +94,14 @@ Route2GateOaksAideNotEnoughText:
 	done
 
 Route2GateOaksAideLookForPokemonText:
+	ntag "AIDE:"
 	text "Look for more"
 	line "#MON in caves"
 	cont "and tall grass!"
 	done
 
 Route2GateOaksAideCongratsText:
+	ntag "AIDE:"
 	text "Great! You have"
 	line "caught @"
 	text_ram wStringBuffer3
@@ -106,7 +112,7 @@ Route2GateOaksAideCongratsText:
 	done
 
 Route2GateOaksAideExplainPagerGiveFlashText:
-
+	ntag "AIDE:"
 	text "PROF.OAK wanted"
 	line "you to have this,"
 	cont "too. So you can"
@@ -115,6 +121,7 @@ Route2GateOaksAideExplainPagerGiveFlashText:
 	done
 
 Route2GateOaksAideFlashExplainText:
+	ntag "AIDE:"
 	text "FLASH can light up"
 	line "even the darkest"
 	cont "dungeons."

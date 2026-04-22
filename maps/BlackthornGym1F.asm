@@ -84,7 +84,8 @@ BlackthornGymClairScript:
 	end
 
 ClairIntroText:
-	text "CLAIR: Welcome to"
+	ntag "CLAIR:"
+	text "Welcome to"
 	line "BLACKTHORN GYM,"
 	cont "the home of the"
 	roll "Dragon Clan:"
@@ -106,6 +107,7 @@ ClairIntroText:
 	done
 
 ClairWinText:
+	ntag "CLAIR:"
 	text "I lost?"
 
 	para "I don't believe"
@@ -115,6 +117,7 @@ ClairWinText:
 	done
 
 ClairText_AdmitDefeat:
+	ntag "CLAIR:"
 	text "I see, you bested"
 	line "even LANCE…"
 
@@ -135,12 +138,14 @@ Text_ReceivedRisingBadge:
 	done
 
 ClairText_RisingBadgeSpeech:
+	ntag "CLAIR:"
 	text "And, I think you"
 	line "will can make good"
 	cont "use of this."
 	done
 
 ClairText_DragonbreathSpeech:
+	ntag "CLAIR:"
 	text "That contains"
 	line "DRAGONBREATH."
 
@@ -150,6 +155,7 @@ ClairText_DragonbreathSpeech:
 	done
 
 ClairText_GoToDragonsDen:
+	ntag "CLAIR:"
 	text "You've beaten me,"
 	line "and even LANCE."
 
@@ -170,6 +176,7 @@ ClairText_GoToDragonsDen:
 	done
 
 ClairTextAfterDragonsDenPassedText:
+	ntag "CLAIR:"
 	text "You met our elders"
 	line "and passed their"
 	cont "test…"
@@ -180,6 +187,7 @@ ClairTextAfterDragonsDenPassedText:
 	done
 
 ClairTextAfterDragonsDenFailedText:
+	ntag "CLAIR:"
 	text "You met our elders"
 	line "and took their"
 	cont "test…"

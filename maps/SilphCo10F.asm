@@ -60,8 +60,7 @@ ScientistWestonSeenText:
 	done
 
 ScientistWestonBeatenText:
-	text "No continues"
-	line "left!"
+	text "No continues left!"
 	done
 
 ScientistWestonAfterBattleText:

@@ -233,34 +233,30 @@ TrainerTwinsAnnandanne2:
 	end
 
 TwinsAnnandanne1SeenText:
-	text "ANN: ANNE and I"
-	line "are in this to-"
-	cont "gether!"
+	text "ANNE and I are in"
+	line "this together!"
 	done
 
 TwinsAnnandanne2SeenText:
-	text "ANNE: ANN and I"
-	line "are in this to-"
-	cont "gether!"
+	text "ANN and I are in"
+	line "this together!"
 	done
 
 TwinsAnnandanneBeatenText:
-	text "ANN & ANNE: Nnn… A"
-	line "little too strong."
+	text "Nnn… A little too"
+	line "strong."
 	done
 
 TwinsAnnandanne1AfterBattleText:
-	text "ANN: I can tell"
-	line "what my sister and"
-
-	para "my #MON are"
-	line "thinking."
+	text "I can tell what my"
+	line "sister and #MON"
+	cont "are thinking."
 	done
 
 TwinsAnnandanne2AfterBattleText:
-	text "ANNE: We share the"
-	line "same feelings as"
-	cont "our #MON."
+	text "We share the same"
+	line "feelings as our"
+	cont "#MON."
 	done
 
 ; items

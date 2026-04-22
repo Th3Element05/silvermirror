@@ -72,6 +72,7 @@ PewterGymCheckBadges:
 	end
 
 BrockIntroText:
+	ntag "BROCK:"
 	text "I'm BROCK!"
 	line "I'm PEWTER's GYM"
 	cont "LEADER!"
@@ -91,8 +92,9 @@ BrockIntroText:
 	done
 
 BrockWinLossText:
-	text "BROCK: I took"
-	line "you for granted."
+	ntag "BROCK:"
+	text "I took you for"
+	line "granted."
 
 	para "As proof of your"
 	line "victory, here's"
@@ -105,6 +107,7 @@ ReceivedBoulderbadgeText:
 	done
 
 BrockBoulderbadgeText:
+	ntag "BROCK:"
 	text "That's an official"
 	line "POKEMON LEAGUE"
 	cont "BADGE!"
@@ -130,6 +133,7 @@ BrockBoulderbadgeText:
 	done
 
 BrockTMBideText:
+	ntag "BROCK:"
 	text "TM34 contains"
 	line "BIDE!"
 
@@ -140,6 +144,7 @@ BrockTMBideText:
 	done
 
 BrockAfterBattleText:
+	ntag "BROCK:"
 	text "By using a TM, a"
 	line "#MON will"
 	cont "instantly learn"

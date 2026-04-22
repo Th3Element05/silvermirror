@@ -657,14 +657,15 @@ Route36NationalParkGateOfficer1SomeMonOnlySeenInParkText:
 	done
 
 BugCatchingContestant1BText:
-	text "DON: Wow, you beat"
-	line "me. You're pretty"
-	cont "good."
+	ntag "DON:"
+	text "Wow, you beat me."
+	line "You're good."
 	done
 
 BugCatchingContestant1BStillCompetingText:
-	text "DON: Luck plays a"
-	line "big part in this."
+	ntag "DON:"
+	text "Luck plays a big"
+	line "part in this."
 
 	para "You never know"
 	line "what #MON will"
@@ -672,68 +673,75 @@ BugCatchingContestant1BStillCompetingText:
 	done
 
 BugCatchingContestant2BText:
-	text "ED: I envy you."
+	ntag "ED:"
+	text "I envy you."
 	line "I just couldn't"
 	cont "do it this time."
 	done
 
 BugCatchingContestant2BStillCompetingText:
-	text "ED: Maybe you win"
-	line "with big #MON?"
+	ntag "ED:"
+	text "Maybe you win with"
+	line "a big #MON?"
 	done
 
 BugCatchingContestant3BText:
-	text "NICK: Well done!"
+	ntag "NICK:"
+	text "Well done!"
 	line "I'm going to raise"
 	cont "my #MON better."
 	done
 
 BugCatchingContestant3BStillCompetingText:
-	text "NICK: Maybe you"
-	line "get a higher score"
-
-	para "for a #MON of"
-	line "an unusual color."
+	ntag "NICK:"
+	text "Maybe you get a"
+	line "higher score for"
+	cont "an unusual-color"
+	roll "#MON."
 	done
 
 BugCatchingContestant4BText:
-	text "WILLIAM: You're"
-	line "the winner? What"
-	cont "did you catch?"
+	ntag "WILLIAM:"
+	text "You're the winner?"
+	line "What #MON did"
+	cont "you catch?"
 	done
 
 BugCatchingContestant4BStillCompetingText:
-	text "WILLIAM: Well, I'm"
-	line "satisfied because"
-
-	para "I caught a #MON"
-	line "that I wanted."
+	ntag "WILLIAM:"
+	text "I'm satisfied"
+	line "because I caught"
+	cont "a #MON that I"
+	roll "wanted."
 	done
 
 BugCatchingContestant5BText:
-	text "BENNY: Congrats!"
-	line "You have earned my"
+	ntag "BENNY:"
+	text "Congrats!"
+	line "You've earned my"
 	cont "respect!"
 	done
 
 BugCatchingContestant5BStillCompetingText:
-	text "BENNY: I caught a"
+	ntag "BENNY:"
+	text "I've caught a"
 	line "SCYTHER before,"
 	cont "but I didn't win."
 	done
 
 BugCatchingContestant6BText:
-	text "BARRY: That #-"
-	line "MON you caught…"
-	cont "it's awesome!"
+	ntag "BARRY:"
+	text "That #MON you"
+	line "caught…"
+	cont "It's awesome!"
 	done
 
 BugCatchingContestant6BStillCompetingText:
-	text "BARRY: It's easier"
-	line "to win if you get"
-
-	para "a high-level bug"
-	line "#MON."
+	ntag "BARRY:"
+	text "It's easier to"
+	line "win if you get a"
+	cont "high-level bug"
+	roll "#MON."
 
 	para "But I think they"
 	line "also consider some"
@@ -741,7 +749,8 @@ BugCatchingContestant6BStillCompetingText:
 	done
 
 BugCatchingContestant7BText:
-	text "CINDY: You won?"
+	ntag "CINDY:"
+	text "You won?"
 	line "That's great!"
 
 	para "Do you feel like"
@@ -750,47 +759,52 @@ BugCatchingContestant7BText:
 	done
 
 BugCatchingContestant7BStillCompetingText:
-	text "CINDY: I really"
-	line "love bug #MON!"
+	ntag "CINDY:"
+	text "I really love bug"
+	line "#MON!"
 	done
 
 BugCatchingContestant8BText:
-	text "JOSH: I… I can't"
-	line "believe I lost at"
-	cont "bug-catching…"
+	ntag "JOSH:"
+	text "I… I can't believe"
+	line "it. I lost at bug-"
+	cont "catching…"
 	done
 
 BugCatchingContestant8BStillCompetingText:
-	text "JOSH: I heard that"
-	line "somebody won with"
-	cont "a CATERPIE!"
+	ntag "JOSH:"
+	text "I heard that some-"
+	line "body won with a"
+	cont "CATERPIE once!"
 	done
 
 BugCatchingContestant9BText:
-	text "SAMUEL: Next time,"
-	line "I'm going to win."
+	ntag "SAMUEL:"
+	text "Next time, I'm"
+	line "going to win."
 	done
 
 BugCatchingContestant9BStillCompetingText:
-	text "SAMUEL: Darn."
+	ntag "SAMUEL:"
+	text "Darn."
 	line "I thought I would"
 	cont "score higher…"
 	done
 
 BugCatchingContestant10BText:
-	text "KIPP: Could you"
-	line "give me some tips?"
+	ntag "KIPP:"
+	text "Could you give me"
+	line "some tips?"
 
 	para "I want to study"
 	line "your style."
 	done
 
 BugCatchingContestant10BStillCompetingText:
-	text "KIPP: I study a"
-	line "lot, but that's"
-
-	para "not good enough to"
-	line "win."
+	ntag "KIPP:"
+	text "I study a lot,"
+	line "but that's not"
+	cont "enough to win."
 	done
 
 ;UnusedSilphScope2Text: ; unreferenced

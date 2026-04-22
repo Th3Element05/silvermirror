@@ -78,8 +78,10 @@ LoreleisRoom_EnterMovement:
 
 LoreleiScript_LoreleiBeforeText:
 	text "Welcome to"
-	line "#MON LEAGUE!"
+	line "#MON LEAGUE!@"
 
+	text_promptbutton
+	ntag "LORELEI:"
 	para "I am LORELEI of"
 	line "the ELITE FOUR!"
 
@@ -100,11 +102,13 @@ LoreleiScript_LoreleiBeforeText:
 	done
 
 LoreleiScript_LoreleiBeatenText:
+	ntag "LORELEI:"
 	text "I… I can't…"
 	line "believe it…"
 	done
 
 LoreleiScript_LoreleiDefeatText:
+	ntag "LORELEI:"
 	text "You're better"
 	line "than I thought!"
 	cont "Go on ahead!"

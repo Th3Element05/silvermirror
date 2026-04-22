@@ -35,10 +35,9 @@ MahoganyPokecenter1FYoungsterText:
 	line "from evolving too"
 	cont "early."
 
-	para "I make them learn"
-	line "certain moves be-"
-	cont "fore I let them"
-	roll "evolve."
+	para "I wait for them"
+	line "to learn certain"
+	cont "moves first."
 	done
 
 MahoganyPokecenter1FCooltrainerFScript:
@@ -46,9 +45,8 @@ MahoganyPokecenter1FCooltrainerFScript:
 MahoganyPokecenter1FCooltrainerFText:
 	text "#MON do become"
 	line "stronger when they"
-
-	para "evolve, but they"
-	line "also learn moves"
+	cont "evolve, but they"
+	roll "also learn moves"
 	cont "more slowly."
 	done
 

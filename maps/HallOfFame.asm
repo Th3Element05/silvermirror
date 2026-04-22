@@ -71,7 +71,8 @@ HallOfFame_SlowlyApproachMachine:
 	step_end
 
 HallOfFame_OakText:
-	text "OAK: Er-hem!"
+	ntag "PROF.OAK:"
+	text "Er-hem!"
 	line "Congratulations"
 	cont "<PLAYER>!"
 

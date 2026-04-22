@@ -11,6 +11,7 @@ SafariSecretHouseOfficer:
 	iftrue .AlreadyGotSurf
 	opentext
 	writetext SafariSecretHouseGiveSurfText
+	promptbutton
 	verbosegiveitem TM_SURF
 	writetext SafariSecretHouseExplainSurfText
 	promptbutton
@@ -45,6 +46,7 @@ GotSurfPagerText:
 	done
 
 SafariSecretHouseGiveSurfText:
+	ntag "RANGER:"
 	text "Congratulations!"
 
 	para "Anyone who finds"
@@ -53,6 +55,7 @@ SafariSecretHouseGiveSurfText:
 	done
 
 SafariSecretHouseExplainSurfText:
+	ntag "RANGER:"
 	text "TM03 is SURF!"
 
 	para "It's a powerful"
@@ -60,6 +63,7 @@ SafariSecretHouseExplainSurfText:
 	done
 
 SafariSecretHouseGivePagerText:
+	ntag "RANGER:"
 	text "And since you are"
 	line "the first trainer"
 	cont "to make it here,"

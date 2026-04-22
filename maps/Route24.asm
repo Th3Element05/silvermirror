@@ -74,6 +74,7 @@ Route24NuggetRocketScript:
 	end
 
 Route24NuggetRocketIntroText:
+	ntag "ROCKET:"
 	text "Congratulations!"
 	line "You beat our 5"
 	cont "contest trainers!"
@@ -83,6 +84,7 @@ Route24NuggetRocketIntroText:
 	done
 
 Route24NuggetRocketJoinText:
+	ntag "ROCKET:"
 	text "By the way, would"
 	line "you like to join"
 	cont "TEAM ROCKET?"
@@ -109,11 +111,13 @@ Route24NuggetRocketJoinText:
 	done
 
 Route24NuggetRocketBeatenText:
+	ntag "ROCKET:"
 	text "Arrgh!"
 	line "You are good!"
 	done
 
 Route24NuggetRocketAfterBattleText:
+	ntag "ROCKET:"
 	text "With your ability,"
 	line "you could become"
 	cont "a top leader in"
@@ -354,8 +358,7 @@ CamperTannerSeenText:
 	done
 
 CamperTannerBeatenText:
-	text "I thought"
-	line "not!"
+	text "I thought not!"
 	done
 
 CamperTannerAfterBattleText:

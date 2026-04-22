@@ -66,6 +66,7 @@ AzaleaTownCelebiScene:
 	end
 
 AzaleaTownKurtText1:
+	ntag "KURT:"
 	text "ILEX FOREST is"
 	line "restless!"
 
@@ -73,6 +74,7 @@ AzaleaTownKurtText1:
 	done
 
 AzaleaTownKurtText2:
+	ntag "KURT:"
 	text "<PLAYER>, here's"
 	line "your GS BALL back!"
 	done
@@ -94,6 +96,7 @@ AzaleaTownKurtScript:
 	end
 
 AzaleaTownKurtText3:
+	ntag "KURT:"
 	text "Could you go see"
 	line "why ILEX FOREST is"
 	cont "so restless?"
@@ -144,27 +147,16 @@ AzaleaTownSlowpokeScript:
 	end
 
 AzaleaTownSlowpokeText1:
-	text "SLOWPOKE: …"
+	ntag "SLOWPOKE:"
+	text "<……> <……> <……>"
 
 	para "<……> <……> <……>"
 	done
 
 AzaleaTownSlowpokeText2:
+	ntag "SLOWPOKE:"
 	text "<……> <……>Yawn?"
 	done
-
-;UnusedWoosterScript: ; unreferenced
-;	faceplayer
-;	opentext
-;	writetext WoosterText
-;	cry QUAGSIRE
-;	waitbutton
-;	closetext
-;	end
-
-;WoosterText:
-;	text "WOOSTER: Gugyoo…"
-;	done
 
 AzaleaTownSign:
 	jumptext AzaleaTownSignText

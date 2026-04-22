@@ -184,7 +184,8 @@ Route20GeodudeScript:
 	end
 
 Route20GeodudeText:
-	text "GEODUDE: Geo!"
+	ntag "GEODUDE:"
+	text "Geo!"
 	line "Geo-dude!"
 	done
 
@@ -272,8 +273,8 @@ SwimmerFSusieSeenText:
 	done
 
 SwimmerFSusieBeatenText:
-	text "Don't touch"
-	line "my pearls!"
+	text "Don't touch my"
+	line "pearls!"
 	done
 
 SwimmerFSusieAfterBattleText:
@@ -479,8 +480,7 @@ SwimmerFGingerSeenText:
 	done
 
 SwimmerFGingerBeatenText:
-	text "No mercy"
-	line "at all!"
+	text "No mercy at all!"
 	done
 
 SwimmerFGingerAfterBattleText:

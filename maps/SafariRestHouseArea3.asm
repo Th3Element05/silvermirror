@@ -27,12 +27,12 @@ SafariRestHouseArea3ScientistText:
 	para "But, a friend's"
 	line "EEVEE turned into"
 	cont "a VAPOREON!"
-	roll "I wonder why?"
 	done
 
 SafariRestHouseArea3Officer:
 	jumptextfaceplayer SafariRestHouseArea3OfficerText
 SafariRestHouseArea3OfficerText:
+	ntag "RANGER:"
 	text "If you can make"
 	line "it all the way to"
 	cont "the SECRET HOUSE,"

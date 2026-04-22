@@ -76,20 +76,22 @@ GotStrengthPagerText:
 	done
 
 SafariZoneWardenGibberishText1:
-	text "WARDEN: Hif fuff"
-	line "hefifoo!"
+	ntag "WARDEN:"
+	text "Hif fuff hefifoo!"
 
 	para "Ha lof ha feef ee"
-	line "hafahi ho. Heff"
-	cont "hee fwee!"
+	line "hafahi ho."
+	cont "Heff hee fwee!"
 	done
 
 SafariZoneWardenGibberishText2:
+	ntag "WARDEN:"
 	text "Ah howhee ho hoo!"
 	line "Eef ee hafahi ho!"
 	done
 
 SafariZoneWardenGibberishText3:
+	ntag "WARDEN:"
 	text "Ha? He ohay heh"
 	line "ha hoo ee haheh!"
 	done
@@ -102,12 +104,14 @@ GaveSafariZoneWardenTeethText:
 
 SafariZoneWardenThanksGivePagerText:
 	text "The WARDEN popped"
-	line "in his teeth!"
+	line "in his teeth!@"
 
-	para "WARDEN: Thanks,"
-	line "kid! No one could"
-	cont "understand a word"
-	roll "that I said."
+	text_waitbutton
+	ntag "WARDEN:"
+	text "Thanks, kid!"
+	line "No one understood"
+	cont "a word that I said"
+	roll "without my teeth."
 
 	para "I couldn't work"
 	line "that way."
@@ -117,15 +121,16 @@ SafariZoneWardenThanksGivePagerText:
 	cont "your trouble."
 	done
 
-SafariZoneWardenGiveStrengthText:
-	text "WARDEN: And this!"
-	done
+;SafariZoneWardenGiveStrengthText:
+;	ntag "WARDEN:"
+;	text "And this!"
+;	done
 
 SafariZoneWardenAskSurfText:
-	text "WARDEN: Oh,"
-	line "did you find the"
-	cont "SECRET HOUSE in"
-	roll "the SAFARI ZONE?"
+	ntag "WARDEN:"
+	text "Oh, did you find"
+	line "the SECRET HOUSE"
+	cont "in my SAFARI ZONE?"
 
 	para "If you do, you"
 	line "win a TM!"

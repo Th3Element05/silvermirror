@@ -79,6 +79,7 @@ SaffronGymCheckBadges:
 	end
 
 SabrinaIntroText:
+	ntag "SABRINA:"
 	text "I had a vision of"
 	line "your arrival!"
 
@@ -97,6 +98,7 @@ SabrinaIntroText:
 	done
 
 SabrinaBeatenText:
+	ntag "SABRINA:"
 	text "I'm shocked!"
 	line "But, a loss is"
 	cont "a loss."
@@ -115,6 +117,7 @@ PlayerReceivedMarshbadgeText:
 	done
 
 SabrinaExplainMarshbadgeText:
+	ntag "SABRINA:"
 	text "The MARSHBADGE"
 	line "makes #MON up"
 	cont "to L70 obey you!"
@@ -133,6 +136,7 @@ SabrinaExplainMarshbadgeText:
 	done
 
 SabrinaExplainTMText:
+	ntag "SABRINA:"
 ;	text "TM46 is PSYWAVE!"
 ;	line "It uses powerful"
 ;	cont "psychic waves to"
@@ -156,6 +160,7 @@ SabrinaExplainTMText:
 	done
 
 SabrinaAfterBattleText:
+	ntag "SABRINA:"
 	text "Everyone has"
 	line "psychic power!"
 	cont "People just don't"

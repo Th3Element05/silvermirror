@@ -69,13 +69,15 @@ CeladonGymCheckBadges:
 	end
 
 ErikaIntroText:
+	ntag "ERIKA:"
 	text "Hello. Lovely"
 	line "weather isn't it?"
 	cont "It's so pleasant."
 
 	para "…Oh dear…"
-	line "I must have dozed"
-	cont "off. Welcome."
+	
+	para "I must have dozed"
+	line "off. Welcome."
 
 	para "My name is ERIKA."
 	line "I am the LEADER"
@@ -96,6 +98,7 @@ ErikaIntroText:
 	done
 
 ErikaBeatenText:
+	ntag "ERIKA:"
 	text "Oh!"
 	line "I concede defeat."
 
@@ -112,6 +115,7 @@ PlayerReceivedRainbowbadgeText:
 	done
 
 ErikaExplainRainbowbadgeText:
+	ntag "ERIKA:"
 	text "The RAINBOWBADGE"
 	line "will make #MON"
 	cont "up to L50 obey."
@@ -126,6 +130,7 @@ ErikaExplainRainbowbadgeText:
 	done
 
 ErikaExplainTMText:
+	ntag "ERIKA:"
 	text "TM21 contains"
 	line "GIGA DRAIN."
 
@@ -136,6 +141,7 @@ ErikaExplainTMText:
 	done
 
 ErikaAfterBattleText:
+	ntag "ERIKA:"
 	text "You are cataloging"
 	line "#MON? I must"
 	cont "say I'm impressed."

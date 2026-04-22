@@ -60,13 +60,14 @@ CinnabarLabEevee:
 	end
 
 CinnabarLabEeveeText:
-	text "EEVEE: Vee-vee!"
+	ntag "EEVEE:"
+	text "Vee-vee!"
 	done
 
 CinnabarLabEeveePC:
 	jumptext CinnabarLabEeveePCText
 CinnabarLabEeveePCText:
-	text "Experiment 741:"
+	text "Experiment 742:"
 
 	para "I've been unable"
 	line "to get EEVEE to"
@@ -75,8 +76,8 @@ CinnabarLabEeveePCText:
 
 	para "EEVEE seems to be"
 	line "frustrated from"
-	cont "running tests"
-	roll "all day."
+	cont "running tests all"
+	roll "day."
 	done
 
 CinnabarLabLegendsPC:

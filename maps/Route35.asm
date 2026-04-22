@@ -323,7 +323,8 @@ CoupleMoeAndLulu_LuluSeenText:
 	done
 
 CoupleMoeAndLulu_LuluBeatenText:
-	text "LULU: Oh, my!"
+	ntag "LULU:"
+	text "Oh, my!"
 	line "You're so strong!"
 	done
 
@@ -350,9 +351,9 @@ CoupleMoeAndLulu_MoeSeenText:
 	done
 
 CoupleMoeAndLulu_MoeBeatenText:
-	text "MOE: I wish you"
-	line "would have lost"
-	cont "for me…"
+	ntag "MOE:"
+	text "I wish you would"
+	line "have lost for me…"
 	done
 
 CoupleMoeAndLulu_MoeAfterBattleText:
