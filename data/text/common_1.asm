@@ -1528,9 +1528,9 @@ _NPCTradeIntroText2::
 	text "?"
 	done
 
-_NPCTradeIntroText3::
+_NPCTradeIntroText3:: ;TRADE_DIALOGSET_GIRL
 	text_ram wMonOrItemNameBuffer
-	text "'s cute,"
+	text "♀'s cute,"
 	line "but I don't have"
 	cont "one. Do you have"
 	roll "@"                 ;cont
@@ -1540,7 +1540,7 @@ _NPCTradeIntroText3::
 	para "Want to trade it"
 	line "for my @"
 	text_ram wStringBuffer2
-	text "?"
+	text "♂?"
 	done
 
 _NPCTradeIntroText4::
