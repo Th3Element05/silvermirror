@@ -14,9 +14,12 @@ New TO DO list
 
 TEST
 
+silver mirror sprite
+
+olivine good rod house uses route32pokecenter lure script
 
 _MomLeavingText1:: ntag
-MomMoneyText
+MomMoneyText	ntag
 
 _TeleportReturnText::
 	text "Return to the last"
@@ -64,6 +67,12 @@ OftenFleeMons:
 
 
 DO
+
+oak in mt silver, silver mirror battle after
+
+named bug-catching contestants, sprite continuity with route36 gate judging
+
+fossil revive script still broken
 
 what to use EVENT_CAUGHT_MISSINGNO for?
 
@@ -185,7 +194,7 @@ reduce long animations? (*magnezone)
 go through data/trainers/parties levels/moves
 
 trades?
-does fossil revival script still need to be fixed?
+
 
 
 
