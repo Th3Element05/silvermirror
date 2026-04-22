@@ -97,6 +97,7 @@ ApricornSpriteGFX::            INCBIN "gfx/sprites/apricorn.2bpp"
 FossilSpriteGFX::              INCBIN "gfx/sprites/fossil.2bpp"
 DomeFossilSpriteGFX::          INCBIN "gfx/sprites/dome_fossil.2bpp"
 OldAmberSpriteGFX::            INCBIN "gfx/sprites/old_amber.2bpp"
+MirrorSpriteGFX::              INCBIN "gfx/sprites/mirror.2bpp"
 
 
 SECTION "Sprites 4", ROMX
