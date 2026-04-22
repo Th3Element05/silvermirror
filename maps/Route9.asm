@@ -136,7 +136,7 @@ TrainerHikerBenjamin:
 HikerBenjaminSeenText:
 	text "Hahaha!"
 	line "Aren't you a"
-	cont "little toughie!"
+	cont "tough little one!"
 	done
 
 HikerBenjaminBeatenText:
@@ -166,8 +166,7 @@ CamperDeanSeenText:
 	done
 
 CamperDeanBeatenText:
-	text "Out"
-	line "like a light!"
+	text "Out like a light!"
 	done
 
 CamperDeanAfterBattleText:
@@ -192,8 +191,7 @@ CamperSidSeenText:
 	done
 
 CamperSidBeatenText:
-	text "Can't"
-	line "measure up!"
+	text "Can't measure up!"
 	done
 
 CamperSidAfterBattleText:
@@ -395,8 +393,7 @@ HikerErikSeenText:
 	done
 
 HikerErikBeatenText:
-	text "Keep it"
-	line "coming, eh!"
+	text "Keep it coming!"
 
 	para "Oh wait. I'm out"
 	line "of #MON!"

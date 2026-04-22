@@ -123,6 +123,7 @@ Text_ShrineCelebiEventTakeTwo:
 	done
 
 Text_KurtCaughtCelebi:
+	ntag "KURT:"
 	text "Whew, wasn't that"
 	line "something!"
 

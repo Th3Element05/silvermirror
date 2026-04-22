@@ -39,8 +39,8 @@ PicnickerLucySeenText:
 	done
 
 PicnickerLucyBeatenText:
-	text "I was"
-	line "too impatient!"
+	text "I was too"
+	line "impatient!"
 	done
 
 PicnickerLucyAfterBattleText:
@@ -85,8 +85,7 @@ BirdKeeperBobSeenText:
 	done
 
 BirdKeeperBobBeatenText:
-	text "Just as I"
-	line "thought!"
+	text "Just as I thought!"
 	done
 
 BirdKeeperBobAfterBattleText:
@@ -110,8 +109,8 @@ BeautyValerieSeenText:
 	done
 
 BeautyValerieBeatenText:
-	text "I didn't"
-	line "ask for this!"
+	text "I didn't ask for"
+	line "this!"
 	done
 
 BeautyValerieAfterBattleText:
@@ -330,8 +329,8 @@ BeautyOliviaSeenText:
 	done
 
 BeautyOliviaBeatenText:
-	text "You looked"
-	line "so cute too!"
+	text "You looked so"
+	line "cute too!"
 	done
 
 BeautyOliviaAfterBattleText:

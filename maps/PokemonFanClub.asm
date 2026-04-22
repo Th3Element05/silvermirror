@@ -127,7 +127,8 @@ PokemonFanClubPsyduckScript:
 	end
 
 PokemonFanClubPsyduckText:
-	text "PSYDUCK: Psy!"
+	ntag "PSYDUCK:"
+	text "Psy!"
 	line "Psy, Duck!"
 	done
 
@@ -140,11 +141,13 @@ PokemonFanClubPikachuScript:
 	end
 
 PokemonFanClubPikachuText:
-	text "PIKACHU: Chu!"
+	ntag "PIKACHU:"
+	text "Chu!"
 	line "Pikachu!"
 	done
 
 PokemonFanClubChairmanIntroText:
+	ntag "CHAIRMAN:"
 	text "I chair the"
 	line "#MON Fan Club!"
 
@@ -163,6 +166,7 @@ PokemonFanClubChairmanIntroText:
 	done
 
 PokemonFanClubChairmanRapidashText:
+	ntag "CHAIRMAN:"
 	text "Good!"
 	line "Then listen up!"
 
@@ -196,6 +200,7 @@ PokemonFanClubChairmanRapidashText:
 	done
 
 PokemonFanClubChairmanVoucherText:
+	ntag "CHAIRMAN:"
 	text "Exchange that for"
 	line "a BICYCLE!"
 
@@ -211,7 +216,8 @@ PokemonFanClubChairmanVoucherText:
 	done
 
 PokemonFanClubChairmanAfterText:
-	text "Hello, <PLAY_G>!"
+	ntag "CHAIRMAN:"
+	text "Hello, <PLAYER>!"
 
 	para "Did you come to"
 	line "hear about my"
@@ -222,6 +228,7 @@ PokemonFanClubChairmanAfterText:
 	done
 
 PokemonFanClubChairmanHowDisappointingText:
+	ntag "CHAIRMAN:"
 	text "How disappointing…"
 
 	para "Come back if you"
@@ -229,6 +236,7 @@ PokemonFanClubChairmanHowDisappointingText:
 	done
 
 PokemonFanClubChairmanMasterBallText:
+	ntag "CHAIRMAN:"
 	text "I won that in a"
 	line "contest!  But you"
 	cont "can have it."

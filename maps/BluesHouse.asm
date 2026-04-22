@@ -94,12 +94,14 @@ DaisyScript:
 	end
 
 BluesHouseBlueAtLabText:
+	ntag "DAISY:"
 	text "Hi <PLAYER>!"
 	line "<RIVAL> is out at"
 	cont "Grandpa's lab."
 	done
 
 BluesHouseNoMapText:
+	ntag "DAISY:"
 	text "You want to borrow"
 	line "a MAP CARD?"
 
@@ -111,6 +113,7 @@ BluesHouseNoMapText:
 	done
 
 BluesHouseDaisyIdleText:
+	ntag "DAISY:"
 	text "#MON are living"
 	line "things! If they"
 	cont "get tired, give"
@@ -118,8 +121,9 @@ BluesHouseDaisyIdleText:
 	done
 
 DaisyOutLateText:
-	text "DAISY: Hi! You're"
-	line "out late tonight!"
+	ntag "DAISY:"
+	text "Hi! You're out"
+	line "late tonight!"
 
 	para "How is your"
 	line "#DEX coming"
@@ -136,9 +140,10 @@ DaisyOutLateText:
 	done
 
 DaisyOfferGroomingText:
-	text "DAISY: Hi! Good"
-	line "timing. I'm about"
-	cont "to have some tea."
+	ntag "DAISY:"
+	text "Hi! Good timing!"
+	line "I'm about to have"
+	cont "some tea."
 
 	para "Would you like to"
 	line "join me?"
@@ -151,14 +156,16 @@ DaisyOfferGroomingText:
 	done
 
 DaisyWhichMonText:
-	text "DAISY: Which one"
-	line "should I groom?"
+	ntag "DAISY:"
+	text "Which one should"
+	line "I groom?"
 	done
 
 DaisyAlrightText:
-	text "DAISY: OK, I'll"
-	line "get it looking"
-	cont "nice in no time."
+	ntag "DAISY:"
+	text "OK, I'll get it"
+	line "all cleaned up in"
+	cont "no time."
 	done
 
 GroomedMonLooksContentText:
@@ -168,8 +175,9 @@ GroomedMonLooksContentText:
 	done
 
 DaisyAllDoneText:
-	text "DAISY: There you"
-	line "go! All done."
+	ntag "DAISY:"
+	text "There you go!"
+	line "All done."
 
 	para "See? Doesn't it"
 	line "look nice?"
@@ -179,25 +187,26 @@ DaisyAllDoneText:
 	done
 
 DaisyAlreadyGroomedText:
-	text "DAISY: I always"
-	line "enjoy a nice cup"
-	cont "of tea!"
+	ntag "DAISY:"
+	text "I always enjoy a"
+	line "nice cup of tea!"
 
 	para "Come visit again"
 	line "soon!"
 	done
 
 DaisyRefusedText:
-	text "DAISY: You don't"
-	line "want to have one"
-	cont "groomed? OK, we'll"
-	roll "just have tea."
+	ntag "DAISY:"
+	text "You don't want tp"
+	line "have one groomed?"
+	cont "OK, we can just"
+	roll "have tea."
 	done
 
 DaisyCantGroomEggText:
-	text "DAISY: Oh, sorry."
-	line "I can't groom an"
-	cont "EGG."
+	ntag "DAISY:"
+	text "Oh, sorry. I can't"
+	line "groom an EGG."
 	done
 
 BluesHouse1FStoveScript:

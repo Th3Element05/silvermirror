@@ -130,12 +130,13 @@ RadioTower4FBlueScript:
 	end
 
 RadioTower4FBlue_HeyPlayerText:
-	text "<RIVAL>: <PLAYER>!"
+	ntag "<RIVAL>:"
+	text "<PLAYER>!"
 	done
 
 RadioTower4FBlue_CrazyText:
-	text "<RIVAL>: That guy"
-	line "is crazy!"
+	ntag "<RIVAL>:"
+	text "That guy is crazy!"
 
 	para "He said he'll tell"
 	line "his ELECTRODE to"
@@ -149,13 +150,15 @@ RadioTower4FBlue_CrazyText:
 	done
 
 RadioTower4FBlue_LetsGoText:
-	text "<RIVAL>: Let's go!"
+	ntag "<RIVAL>:"
+	text "Let's go!"
 	done
 
 RocketFanaticSeenText:
-	text "FANATIC: Everyone"
-	line "says TEAM ROCKET"
-	cont "was disbanded!"
+	ntag "FANATIC:"
+	text "Everyone says"
+	line "TEAM ROCKET was"
+	cont "disbanded!"
 
 	para "They're wrong!"
 	line "All wrong!"
@@ -173,12 +176,14 @@ RocketFanaticSeenText:
 	done
 
 RocketFanaticBeatenText:
-	text "FANATIC: Ha!"
+	ntag "FANATIC:"
+	text "Ha! Ha ha!"
 	line "Ha ha ha ha ha!"
 	done
 
 RocketFanaticAfterBattleText:
-	text "FANATIC: Ha ha ha!"
+	ntag "FANATIC:"
+	text "Ha ha ha!"
 	line "Ha ha HA HA HA!"
 
 	para "ELECTRODE!"
@@ -186,11 +191,13 @@ RocketFanaticAfterBattleText:
 	done
 
 RadioTower4FBlue_NopeText:
-	text "<RIVAL>: Nope."
+	ntag "<RIVAL>:"
+	text "Nope."
 	done
 
 RadioTower4FFanatic_RiseAgainText:
-	text "FANATIC: No! NO!"
+	ntag "FANATIC:"
+	text "No! No no! NO!"
 	line "How can this be?"
 
 	para "Is TEAM ROCKET"
@@ -206,7 +213,8 @@ RadioTower4FFanatic_RiseAgainText:
 	done
 
 RadioTower4FOfficer_AfterBattleText:
-	text "OFFICER: Ok, pal."
+	ntag "OFFICER:"
+	text "Yeah, ok, pal."
 	line "We'll see…"
 
 	para "For now, you're"
@@ -273,7 +281,8 @@ RadioTower4FOakScript:
 	end
 
 RadioTower4FOak_ThanksText:
-	text "OAK: <PLAYER>!"
+	ntag "PROF.OAK:"
+	text "<PLAYER>!"
 	line "That was amazing!"
 
 	para "It's no wonder"
@@ -282,9 +291,9 @@ RadioTower4FOak_ThanksText:
 	done
 
 RadioTower4FOak_ThanksBlueText:
-	text "OAK: <RIVAL>,"
-	line "that was very well"
-	cont "done!"
+	ntag "PROF.OAK:"
+	text "<RIVAL>, that was"
+	line "very well done!"
 
 	para "You've always been"
 	line "a great trainer,"
@@ -307,7 +316,8 @@ RadioTower4FOak_ThanksBlueText:
 	done
 
 RadioTower4FOak_SorryMaryText:
-	text "OAK: Sorry, MARY."
+	ntag "PROF.OAK:"
+	text "Sorry, MARY."
 
 	para "We will need to"
 	line "finish recording"
@@ -321,8 +331,9 @@ RadioTower4FOak_SorryMaryText:
 	done
 
 RadioTower4FBlue_GiveWaterfallText:
-	text "<RIVAL>: Thanks"
-	line "for the assist."
+	ntag "<RIVAL>:"
+	text "Thanks for the"
+	line "assist."
 
 	para "I couldn't have"
 	line "done that alone."
@@ -331,8 +342,9 @@ RadioTower4FBlue_GiveWaterfallText:
 	done
 
 RadioTower4FBlue_ExplainWaterfallText:
-	text "<RIVAL>: That TM"
-	line "teaches WATERFALL."
+	ntag "<RIVAL>:"
+	text "That TM teaches"
+	line "WATERFALL."
 
 	para "LAPRAS can use"
 	line "that technique to"
@@ -352,17 +364,19 @@ RadioTower4FBlue_ExplainWaterfallText:
 	done
 
 RadioTower4FBlue_PonderingText:
-	text "<RIVAL>: Hmm…"
+	ntag "<RIVAL>:"
+	text "Hmm…"
 
 	para "Could I really be"
 	line "a GYM LEADER?"
 	done
 
 RadioTower4FBlue_GymLeaderText:
-	text "<RIVAL>: GRAMPS"
-	line "told me to apply"
-	cont "to be VIRIDIAN's"
-	roll "GYM LEADER."
+	ntag "<RIVAL>:"
+	text "GRAMPS told me I"
+	line "should apply to be"
+	cont "the GYM LEADER in"
+	roll "VIRIDIAN CITY."
 
 	para "Maybe I will…"
 
@@ -449,24 +463,26 @@ RadioTower4FDJMaryScript:
 ;	done
 
 RadioTower4FDJMaryText_ClearedRockets:
-	text "MARY: Oh! You're"
-	line "my little savior!"
+	ntag "MARY:"
+	text "Oh! You're my"
+	line "savior!"
 
 	para "Will you take this"
 	line "as my thanks?"
 	done
 
 RadioTower4FDJMaryText_GiveBrightPowder:
-	text "MARY: When a"
-	line "#MON holds that"
-	cont "it lowers the"
-	roll "foe's ACCURACY."
+	ntag "MARY:"
+	text "When a #MON"
+	line "holds that it"
+	cont "lowers the foe's"
+	roll "ACCURACY."
 	done
 
 RadioTower4FDJMaryText_Default:
-	text "MARY: Please tune"
-	line "in to PROF.OAK's"
-	cont "#MON TALK."
+	ntag "MARY:"
+	text "Please tune in to"
+	line "#MON TALK!"
 	done
 
 RadioTowerMeowth:
@@ -478,7 +494,8 @@ RadioTowerMeowth:
 	end
 
 RadioTowerMeowthText:
-	text "MEOWTH: Meowth…"
+	ntag "MEOWTH:"
+	text "Meow…th…"
 	done
 
 RadioTower4FFisherScript:

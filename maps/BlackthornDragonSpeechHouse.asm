@@ -30,7 +30,8 @@ BlackthornDragonSpeechHouseDratiniScript:
 	end
 
 BlackthornDragonSpeechHouseDratiniText:
-	text "DRATINI: Draa!"
+	ntag "DRATINI:"
+	text "Draa!"
 	done
 
 ;BlackthornDragonSpeechHousePictureBookshelf: ; unreferenced

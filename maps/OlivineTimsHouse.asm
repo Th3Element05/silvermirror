@@ -1,18 +1,18 @@
 	object_const_def
-	const OLIVINETIMSHOUSE_TIM
+;	const OLIVINETIMSHOUSE_TIM
 
 OlivineTimsHouse_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
 
-Tim:
-	faceplayer
-	opentext
+;Tim:
+;	faceplayer
+;	opentext
 ;	trade NPC_TRADE_TIM
-	waitbutton
-	closetext
-	end
+;	waitbutton
+;	closetext
+;	end
 
 TimsHouseBookshelf:
 	jumpstd MagazineBookshelfScript
@@ -31,4 +31,4 @@ OlivineTimsHouse_MapEvents:
 	bg_event  1,  1, BGEVENT_READ, TimsHouseBookshelf
 
 	def_object_events
-	object_event  2,  3, SPRITE_FISHING_GURU, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Tim, -1
+;	object_event  2,  3, SPRITE_FISHING_GURU, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Tim, -1

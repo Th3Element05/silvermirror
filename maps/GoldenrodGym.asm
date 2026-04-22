@@ -59,7 +59,7 @@ GoldenrodGymWhitneyScript:
 	writetext WhitneyPlainBadgeText
 	promptbutton
 	verbosegiveitem TM_ATTRACT
-;	iffalse .NoRoomForAttract
+	iffalse .NoRoomForAttract
 	setevent EVENT_GOT_TM73_ATTRACT
 	writetext WhitneyAttractText
 	waitbutton
@@ -69,7 +69,7 @@ GoldenrodGymWhitneyScript:
 .GotAttract:
 	writetext WhitneyGoodCryText
 	waitbutton
-;.NoRoomForAttract:
+.NoRoomForAttract:
 	closetext
 	end
 
@@ -85,6 +85,7 @@ GoldenrodGymWhitneyScript:
 ;	jumpstd RadioTowerRocketsScript
 
 WhitneyIntroText:
+	ntag "WHITNEY:"
 	text "Hi! I'm WHITNEY!"
 
 	para "Everyone was into"
@@ -100,6 +101,7 @@ WhitneyIntroText:
 	done
 
 WhitneyShouldntBeSoSeriousText:
+	ntag "WHITNEY:"
 	text "Sob…"
 
 	para "…Waaaaaaah!"
@@ -110,6 +112,7 @@ WhitneyShouldntBeSoSeriousText:
 	done
 
 WhitneyYouMeanieText:
+	ntag "WHITNEY:"
 	text "Waaaaah!"
 
 	para "Waaaaah!"
@@ -119,6 +122,7 @@ WhitneyYouMeanieText:
 	done
 
 WhitneyWhatDoYouWantText:
+	ntag "WHITNEY:"
 	text "…Sniff…"
 
 	para "What? What do you"
@@ -135,6 +139,7 @@ PlayerReceivedPlainBadgeText:
 	done
 
 WhitneyPlainBadgeText:
+	ntag "WHITNEY:"
 	text "Sorry for calling"
 	line "you a meanie…"
 
@@ -143,6 +148,7 @@ WhitneyPlainBadgeText:
 	done
 
 WhitneyAttractText:
+	ntag "WHITNEY:"
 	text "It's ATTRACT!"
 	line "It makes full use"
 	cont "of a #MON's"
@@ -154,6 +160,7 @@ WhitneyAttractText:
 	done
 
 WhitneyGoodCryText:
+	ntag "WHITNEY:"
 	text "Ah, that was a"
 	line "good cry!"
 

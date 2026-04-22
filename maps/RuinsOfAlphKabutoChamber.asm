@@ -48,6 +48,7 @@ RuinsOfAlphKabutoChamberWallOpenScript:
 RuinsOfAlphKabutoChamberScientistScript:
 	jumptextfaceplayer RuinsOfAlphKabutoChamberScientistText
 RuinsOfAlphKabutoChamberScientistText:
+	ntag "SCIENTIST:"
 	text "I came here to"
 	line "study the ruins."
 

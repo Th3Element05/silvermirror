@@ -77,6 +77,7 @@ BrunosRoom_EnterMovement:
 	step_end
 
 BrunoScript_BrunoBeforeText:
+	ntag "BRUNO:"
 	text "I am BRUNO of"
 	line "the ELITE FOUR!"
 
@@ -99,11 +100,13 @@ BrunoScript_BrunoBeforeText:
 	done
 
 BrunoScript_BrunoBeatenText:
+	ntag "BRUNO:"
 	text "Why? How could we"
 	line "lose?"
 	done
 
 BrunoScript_BrunoDefeatText:
+	ntag "BRUNO:"
 	text "My job is done!"
 	line "Go face your next"
 	cont "challenge!"

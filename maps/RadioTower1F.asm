@@ -419,7 +419,7 @@ RadioTower1FReceptionistNoToursText:
 	text "Hello. I'm sorry,"
 	line "but we're not"
 	cont "offering any tours"
-	roll "today."
+	roll "right now."
 	done
 
 RadioTower1FLassScript:

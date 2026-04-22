@@ -101,6 +101,7 @@ SilphCo11FGiovanniEncounter:
 	end
 
 SilphCo11FGiovanniIntroText:
+	ntag "GIOVANNI:"
 	text "Ah <PLAYER>!"
 	line "So we meet again!"
 
@@ -118,11 +119,13 @@ SilphCo11FGiovanniIntroText:
 	done
 
 SilphCo11FGiovanniBeatenText:
+	ntag "GIOVANNI:"
 	text "Arrgh!!"
 	line "I lost again!?"
 	done
 
 SilphCo11FGiovanniAfterBattleText:
+	ntag "GIOVANNI:"
 	text "Blast it all!"
 	line "You ruined our"
 	cont "plans for SILPH!"
@@ -142,9 +145,9 @@ SilphCo11FGiovanniAfterBattleText:
 SilphCo11FReceptionist:
 	jumptextfaceplayer SilphCo11FReceptionistText
 SilphCo11FReceptionistText:
-	text "SECRETARY: Thank"
-	line "you for rescuing"
-	cont "all of us!"
+	ntag "SECRETARY:"
+	text "Thank you for"
+	cont "saving all of us!"
 
 	para "We admire your"
 	line "courage."
@@ -168,9 +171,9 @@ SilphCo11FPresident:
 	end
 
 SilphCo11FPresidentThanksText:
-	text "PRESIDENT: Thank"
-	line "you for saving"
-	cont "SILPH!"
+	ntag "PRESIDENT:"
+	text "Thank you for"
+	line "saving SILPH CO.!"
 
 	para "I will never"
 	line "forget you saved"
@@ -189,13 +192,13 @@ SilphCo11FPresidentThanksText:
 	done
 
 SilphCo11FPresidentMasterBallText:
-	text "PRESIDENT: You"
-	line "can't buy that"
-	cont "anywhere!"
+	ntag "PRESIDENT:"
+	text "You can't buy that"
+	line "anywhere!"
 
 	para "It's our secret"
-	line "prototype MASTER"
-	cont "BALL!"
+	line "prototype:"
+	cont "MASTER BALL!"
 
 	para "It will catch any"
 	line "#MON without"

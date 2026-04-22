@@ -74,6 +74,7 @@ GoldenrodMagnetTrainStationOfficerScript:
 	end
 
 GoldenrodMagnetTrainStationOfficer_AreYouComingAboardText:
+	ntag "CONDUCTOR:"
 	text "We'll soon depart"
 	line "for SAFFRON."
 
@@ -121,6 +122,7 @@ Script_ArriveFromSaffron:
 	end
 
 GoldenrodMagnetTrainStationOfficer_ArrivedInGoldenrodText:
+	ntag "CONDUCTOR:"
 	text "We have arrived in"
 	line "GOLDENROD."
 
@@ -194,7 +196,9 @@ GoldenrodMagnetTrainStationGentleman_DisappointedText:
 	done
 
 GoldenrodMagnetTrainStationGentlemanText:
-	text "I'm the PRESIDENT."
+	ntag "GENTLEMAN:"
+	text "I'm the owner of"
+	line "this railway."
 
 	para "My dream was to"
 	line "build a train that"
@@ -207,11 +211,13 @@ GoldenrodMagnetTrainStationGentlemanText:
 	done
 
 GoldenrodMagnetTrainStationGentleman_DoYouLikeTrainsText:
+	ntag "GENTLEMAN:"
 	text "Do you like trains"
 	line "as much as I do?"
 	done
 
 GoldenrodMagnetTrainStationGentleman_TrainsText:
+	ntag "GENTLEMAN:"
 	text "Wonderful! Let me"
 	line "tell you more!"
 

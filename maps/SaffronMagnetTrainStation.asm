@@ -82,6 +82,7 @@ SaffronMagnetTrainStationOfficerScript:
 	end
 
 SaffronMagnetTrainStationOfficer_ClosedForRepairsText:
+	ntag "CONDUCTOR:"
 	text "I'm sorry, but the"
 	line "MAGNET TRAIN isn't"
 	cont "operating now."
@@ -93,6 +94,7 @@ SaffronMagnetTrainStationOfficer_ClosedForRepairsText:
 	done
 
 SaffronMagnetTrainStationOfficer_AreYouComingAboardText:
+	ntag "CONDUCTOR:"
 	text "We'll soon depart"
 	line "for GOLDENROD."
 
@@ -101,6 +103,7 @@ SaffronMagnetTrainStationOfficer_AreYouComingAboardText:
 	done
 
 SaffronMagnetTrainStation_OfficerSellsPassText:
+	ntag "CONDUCTOR:"
 	text "You don't have a"
 	line "RAIL PASS."
 
@@ -112,17 +115,20 @@ SaffronMagnetTrainStation_OfficerSellsPassText:
 	done
 
 SaffronMagnetTrainStation_NotEnoughMoneyText:
+	ntag "CONDUCTOR:"
 	text "You don't have"
 	line "enough money."
 	done
 
 SaffronMagnetTrainStationOfficer_BoughtPassText:
+	ntag "CONDUCTOR:"
 	text "Thank you! Here is"
 	line "your RAIL PASS."
 	done
 
 
 SaffronMagnetTrainStationOfficer_RightThisWayText:
+	ntag "CONDUCTOR:"
 	text "May I see your"
 	line "RAIL PASS?"
 
@@ -131,6 +137,7 @@ SaffronMagnetTrainStationOfficer_RightThisWayText:
 	done
 
 SaffronMagnetTrainStationOfficer_HopeToSeeYouAgainText:
+	ntag "CONDUCTOR:"
 	text "We hope to see you"
 	line "again!"
 	done
@@ -146,6 +153,7 @@ Script_ArriveFromGoldenrod:
 	end
 
 SaffronMagnetTrainStationOfficer_ArrivedInSaffronText:
+	ntag "CONDUCTOR:"
 	text "We have arrived in"
 	line "SAFFRON."
 

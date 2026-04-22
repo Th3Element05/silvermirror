@@ -191,7 +191,8 @@ NationalParkMeowth:
 
 NationalParkMeowthText:
 ;	text "PERSIAN: Fufushaa!"
-	text "MEOWTH: Fufushaa!"
+	ntag "MEOWTH:"
+	text "Fufushaa!"
 	done
 
 NationalParkPokefanFScript:

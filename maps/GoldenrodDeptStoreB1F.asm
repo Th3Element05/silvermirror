@@ -67,7 +67,8 @@ GoldenrodDeptStoreB1FMachokeScript:
 	end
 
 GoldenrodDeptStoreB1FMachokeText:
-	text "MACHOKE: Maaacho!"
+	ntag "MACHOKE:"
+	text "Maaaacho!"
 	done
 
 GoldenrodDeptStoreB1FEther:

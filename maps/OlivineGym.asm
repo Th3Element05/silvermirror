@@ -69,6 +69,7 @@ Jasmine_SteelTypeIntro:
 ;	para "allow me to intro-"
 ;	line "duce myself."
 ;
+	ntag "JASMINE:"
 	text "I am JASMINE, a"
 	line "GYM LEADER. I use"
 	cont "the steel-type."
@@ -84,6 +85,7 @@ Jasmine_SteelTypeIntro:
 	done
 
 Jasmine_BetterTrainer:
+	ntag "JASMINE:"
 	text "…You are a better"
 	line "trainer than me…"
 
@@ -103,17 +105,20 @@ Jasmine_BadgeSpeech:
 ;	line "raises #MON's"
 ;	cont "DEFENSE."
 ;
+	ntag "JASMINE:"
 	text "…Um… Please take"
 	line "this too…"
 	done
 
 Jasmine_IronTailSpeech:
+	ntag "JASMINE:"
 	text "…You could use"
 	line "that TM to teach"
 	cont "IRON TAIL."
 	done
 
 Jasmine_GoodLuck:
+	ntag "JASMINE:"
 	text "Um… I don't know"
 	line "how to say this,"
 	cont "but good luck…"

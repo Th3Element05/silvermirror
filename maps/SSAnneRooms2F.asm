@@ -23,9 +23,8 @@ GentlemanGregorySeenText:
 	done
 
 GentlemanGregoryBeatenText:
-	text "Good"
-	line "fight! Ah, I feel"
-	cont "young again!"
+	text "Good fight! Ah, I""
+	cont "feel young again!"
 	done
 
 GentlemanGregoryAfterBattleText:
@@ -49,8 +48,7 @@ FisherJustinSeenText:
 	done
 
 FisherJustinBeatenText:
-	text "I'm"
-	line "all out!"
+	text "I'm all out!"
 	done
 
 FisherJustinAfterBattleText:
@@ -77,8 +75,7 @@ LassEllenSeenText:
 	done
 
 LassEllenBeatenText:
-	text "Take"
-	line "it easy!"
+	text "Take it easy!"
 	done
 
 LassEllenAfterBattleText:
@@ -103,8 +100,7 @@ GentlemanWesleySeenText:
 	done
 
 GentlemanWesleyBeatenText:
-	text "I must"
-	line "salute you!"
+	text "I must salute you!"
 	done
 
 GentlemanWesleyAfterBattleText:

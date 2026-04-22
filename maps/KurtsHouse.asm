@@ -301,7 +301,8 @@ Kurt2:
 	end
 
 KurtsHouseKurtBallsFromApricornsText:
-	text "KURT: I make BALLs"
+	ntag "KURT:"
+	text "I make #BALLs"
 	line "from APRICORNs."
 
 	para "Collect them from"
@@ -313,15 +314,17 @@ KurtsHouseKurtBallsFromApricornsText:
 	done
 
 KurtsHouseKurtAskYouHaveAnApricornText:
-	text "KURT: You have an"
+	ntag "KURT:"
+	text "Do you have an"
 	line "APRICORN for me?"
 
 	para "Fine! I'll turn it"
-	line "into a BALL."
+	line "into a #BALL."
 	done
 
 KurtsHouseKurtIllStartRightAwayText:
-	text "KURT: Splendid!"
+	ntag "KURT:"
+	text "Splendid!"
 
 	para "I'll get started"
 	line "right away, it"
@@ -329,19 +332,22 @@ KurtsHouseKurtIllStartRightAwayText:
 	done
 
 KurtsHouseKurtThatsALetdownText:
-	text "KURT: Oh…"
+	ntag "KURT:"
+	text "Oh…"
 	line "That's a letdown."
 	done
 
 KurtsHouseKurtJustFinishedYourBallText:
-	text "KURT: Ah, <PLAYER>!"
+	ntag "KURT:"
+	text "Ah, <PLAYER>!"
 	line "I just finished"
-	cont "your BALL. Here!"
+	cont "your #BALL."
 	done
 
 KurtsHouseKurtTurnedOutGreatText:
-	text "KURT: That turned"
-	line "out great."
+	ntag "KURT:"
+	text "That turned out"
+	line "great."
 
 	para "Try catching"
 	line "#MON with it."
@@ -355,6 +361,7 @@ KurtsHouseKurtTurnedOutGreatText:
 ;	done
 
 KurtsHouseKurtWhatIsThatText:
+	ntag "KURT:"
 	text "Wh-what is that?"
 
 	para "I've never seen"
@@ -370,16 +377,19 @@ KurtsHouseKurtWhatIsThatText:
 	done
 
 KurtsHouseKurtImCheckingItNowText:
+	ntag "KURT:"
 	text "I'm checking it"
 	line "now."
 	done
 
 KurtsHouseKurtAhHaISeeText:
+	ntag "KURT:"
 	text "Ah-ha! I see!"
 	line "So…"
 	done
 
 KurtsHouseKurtThisBallStartedToShakeText:
+	ntag "KURT:"
 	text "<PLAYER>!"
 
 	para "This BALL started"
@@ -562,12 +572,14 @@ KurtsHouseSlowpoke:
 	end
 
 KurtsHouseSlowpokeText1:
-	text "SLOWPOKE: …"
+	ntag "SLOWPOKE:"
+	text "<……> <……> <……>"
 
 	para "<……> <……> <……>"
 	done
 
 KurtsHouseSlowpokeText2:
+	ntag "SLOWPOKE:"
 	text "<……> <……>Yawn?"
 	done
 

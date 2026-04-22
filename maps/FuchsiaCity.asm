@@ -165,9 +165,10 @@ FuchsiaCityYoungsterText:
 FuchsiaCityErik:
 	jumptextfaceplayer FuchsiaCityErikText
 FuchsiaCityErikText:
-	text "ERIK: Where's"
-	line "SARA? I said I'd"
-	cont "meet her here."
+	ntag "ERIK:"
+	text "Where's SARA?"
+	line "I said I'd meet"
+	cont "her here."
 	done
 
 FuchsiaCityGramps:
@@ -299,7 +300,3 @@ FuchsiaCity_MapEvents:
 	object_event  9, 34, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FuchsiaCityRockScript, -1
 
 ;.PinkOverPurpleOBPalette
-;
-; electabuzz
-; magamar
-; ditto

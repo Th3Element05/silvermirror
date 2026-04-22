@@ -118,8 +118,7 @@ GentlemanPrestonSeenText:
 	done
 
 GentlemanPrestonBeatenText:
-	text "My, my"
-	line "friends…"
+	text "My, my friends…"
 	done
 
 GentlemanPrestonAfterBattleText:
@@ -296,7 +295,7 @@ PokefanFAudreyAfterBattleText:
 ; npcs
 SSAnneRoomsNorthGentlemanScript:
 	jumptextfaceplayer SSAnneRoomsNorthGentlemanText
-SSAnneRoomsNorthGentlemanText: 
+SSAnneRoomsNorthGentlemanText:
 	text "Ssh! I'm a GLOBAL"
 	line "POLICE agent!"
 
@@ -342,7 +341,8 @@ SSAnneRoomsNorthClefairyScript:
 	closetext
 	end
 SSAnneRoomsNorthClefairyText:
-	text "CLEFAIRY: Puup"
+	ntag "CLEFAIRY:"
+	text "Puup"
 	line "pupuu!"
 	done
 

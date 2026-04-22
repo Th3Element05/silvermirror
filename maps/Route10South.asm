@@ -154,8 +154,7 @@ PicnickerErinSeenText:
 	done
 
 PicnickerErinBeatenText:
-	text "I'm"
-	line "not up to it!"
+	text "I'm not up to it!"
 	done
 
 PicnickerErinAfterBattleText:
@@ -285,8 +284,8 @@ HikerKennyAfterBattleText:
 	cont "to change."
 
 	para "But they actually"
-	line "change, little by"
-	cont "little."
+	line "do change, little"
+	cont "by little."
 	done
 
 
@@ -306,12 +305,12 @@ HikerTimothySeenText:
 	done
 
 HikerTimothyBeatenText:
-	text "That"
-	line "cleared my head!"
+	text "That cleared my"
+	line "head!"
 	done
 
 HikerTimothyAfterBattleText:
-	text "I feel bloated on"
+	text "I feel high on"
 	line "mountain air!"
 	done
 

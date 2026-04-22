@@ -49,9 +49,9 @@ GoldenrodDeptStore4FCooltrainerMText:
 	text "Hey. I love strong"
 	line "#MON."
 
-	para "I feed them PRO-"
-	line "TEIN to crank up"
-	cont "their ATTACK."
+	para "I feed them"
+	line "PROTEIN to crank"
+	cont "up their ATTACK."
 	done
 
 GoldenrodDeptStore4FBugCatcherScript:

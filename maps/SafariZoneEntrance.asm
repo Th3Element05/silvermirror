@@ -246,17 +246,20 @@ MovementData_PlayerReEntersSafari:
 	step_end
 
 SafariZoneEntranceOfficer_Text:
+	ntag "RANGER:"
 	text "Hi! Is it your"
 	line "first time here at"
 	cont "the SAFARI ZONE?"
 	done
 
 SafariZoneEntranceOfficer_Text2:
+	ntag "RANGER:"
 	text "Have fun at the"
 	line "SAFARI ZONE!"
 	done
 
 SafariZoneEntranceOfficer_Text3:
+	ntag "RANGER:"
 	text "SAFARI ZONE has 4"
 	line "areas for you to"
 	cont "explore."
@@ -282,6 +285,7 @@ SafariZoneEntranceOfficer_Text3:
 	done
 
 SafariZoneEntranceOfficer_Text4:
+	ntag "RANGER:"
 	text "We're running an"
 	line "event right now!"
 
@@ -291,6 +295,7 @@ SafariZoneEntranceOfficer_Text4:
 	done
 
 SafariZoneEntranceMainOfficer_Text:
+	ntag "RANGER:"
 	text "Welcome to the"
 	line "SAFARI ZONE!"
 	
@@ -304,11 +309,13 @@ SafariZoneEntranceMainOfficer_Text:
 	done
 
 SafariZoneEntranceMainOfficer_Text2:
+	ntag "RANGER:"
 	text "OK! Please come"
 	line "again!"
 	done
 
 SafariZoneEntranceMainOfficer_Text3:
+	ntag "RANGER:"
 	text "That'll be ¥500"
 	line "please!"
 	
@@ -318,6 +325,7 @@ SafariZoneEntranceMainOfficer_Text3:
 	done
 
 SafariZoneEntranceMainOfficer_Text4:
+	ntag "RANGER:"
 	text "We'll call you on"
 	line "the PA when you"
 	cont "run out of time"
@@ -327,21 +335,25 @@ SafariZoneEntranceMainOfficer_Text4:
 	done
 
 SafariZoneEntranceMainOfficer_Text5:
+	ntag "RANGER:"
 	text "Oh, are you"
 	line "leaving early?"
 	done
 
 SafariZoneEntranceMainOfficer_Text6:
+	ntag "RANGER:"
 	text "Good luck!"
 	done
 
 SafariZoneEntranceMainOfficer_Text7:
+	ntag "RANGER:"
 	text "Please return any"
 	line "SAFARI BALLs you"
 	cont "have left."
 	done
 
 SafariZoneEntranceMainOfficer_Text8:
+	ntag "RANGER:"
 	text "We look foward to"
 	line "your next visit!"
 	done
@@ -352,11 +364,13 @@ SafariZoneEntranceReceivedBalls_Text:
 	done
 
 SafariZoneEntranceMainOfficer_NotEnoughMoneyText:
+	ntag "RANGER:"
 	text "Oh dear, you don't"
 	line "have enough money."
 	done
 
 SafariZoneBoxFullText:
+	ntag "RANGER:"
 	text "Uh-oh…"
 	line "Your PC BOX is"
 	line "full of #MON!"

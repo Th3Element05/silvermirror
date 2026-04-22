@@ -23,9 +23,11 @@ RocketGruntM11BeatenText:
 
 RocketGruntM11AfterBattleText:
 	text "The TEAM ROCKET"
-	line "HQ has 4 basement"
-	cont "floors. Can you"
-	roll "reach the BOSS?"
+	line "HIDEOUT has four"
+	cont "basement floors."
+
+	para "Can you reach our"
+	roll "BOSS?"
 	done
 
 RocketHideoutB2FNugget:

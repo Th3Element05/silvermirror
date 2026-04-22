@@ -59,7 +59,8 @@ FastShipB1FHuhText:
 	done
 
 FastShipB1FRocketsText:
-	text "ROCKET: They have"
+	ntag "ROCKET:"
+	text "The others have"
 	line "the engine room"
 	cont "under control."
 
@@ -90,8 +91,7 @@ FastShipB1FUnconsciousSailorText:
 	done
 
 FastShipB1FRestingSailorText:
-	text "SAILOR: I'll be"
-	line "alright."
+	text "I'll be alright."
 
 	para "I'm just resting."
 	done

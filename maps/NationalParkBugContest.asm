@@ -20,33 +20,34 @@ NationalParkBugContest_MapScripts:
 BugCatchingContestant1AScript:
 	jumptextfaceplayer BugCatchingContestant1AText
 BugCatchingContestant1AText:
-	text "DON: I'm going to"
-	line "win! Don't bother"
-	cont "me."
+	ntag "DON:"
+	text "I'm going to win!"
+	line "Don't bother me."
 	done
 
 BugCatchingContestant2AScript:
 	jumptextfaceplayer BugCatchingContestant2AText
 BugCatchingContestant2AText:
-	text "ED: My PARASECT"
-	line "puts #MON to"
-	cont "sleep with SPORE."
+	ntag "ED:"
+	text "My PARASECT puts"
+	line "#MON to sleep"
+	cont "with SPORE."
 	done
 
 BugCatchingContestant3AScript:
 	jumptextfaceplayer BugCatchingContestant3AText
 BugCatchingContestant3AText:
-	text "NICK: I'm raising"
-	line "fast #MON for"
-	cont "battles."
+	ntag "NICK:"
+	text "I'm raising fast"
+	line "#MON to battle!"
 	done
 
 BugCatchingContestant4AScript:
 	jumptextfaceplayer BugCatchingContestant4AText
 BugCatchingContestant4AText:
-	text "WILLIAM: I'm not"
-	line "concerned about"
-	cont "winning."
+	ntag "WILLIAM:"
+	text "I'm not concerned"
+	line "about winning."
 
 	para "I'm just looking"
 	line "for rare #MON."
@@ -55,8 +56,9 @@ BugCatchingContestant4AText:
 BugCatchingContestant5AScript:
 	jumptextfaceplayer BugCatchingContestant5AText
 BugCatchingContestant5AText:
-	text "BENNY: Ssh! You'll"
-	line "scare off SCYTHER."
+	ntag "BENNY:"
+	text "Ssh! You'll scare"
+	line "off SCYTHER."
 
 	para "I'll talk to you"
 	line "later."
@@ -65,16 +67,17 @@ BugCatchingContestant5AText:
 BugCatchingContestant6AScript:
 	jumptextfaceplayer BugCatchingContestant6AText
 BugCatchingContestant6AText:
-	text "BARRY: You should"
-	line "weaken bug #MON"
-	cont "first, then throw"
-	roll "a BALL."
+	ntag "BARRY:"
+	text "You should weaken"
+	line "bug #MON first,"
+	cont "then throw a BALL."
 	done
 
 BugCatchingContestant7AScript:
 	jumptextfaceplayer BugCatchingContestant7AText
 BugCatchingContestant7AText:
-	text "CINDY: I love bug"
+	ntag "CINDY:"
+	text "I love BUG-type"
 	line "#MON."
 
 	para "I guess you must"
@@ -84,10 +87,10 @@ BugCatchingContestant7AText:
 BugCatchingContestant8AScript:
 	jumptextfaceplayer BugCatchingContestant8AText
 BugCatchingContestant8AText:
-	text "JOSH: I've been"
-	line "collecting bug"
-	cont "#MON since I"
-	roll "was a baby."
+	ntag "JOSH:"
+	text "I've been collect-"
+	line "ing bug #MON"
+	cont "since forever."
 
 	para "There's no way I'm"
 	line "going to lose!"
@@ -96,18 +99,18 @@ BugCatchingContestant8AText:
 BugCatchingContestant9AScript:
 	jumptextfaceplayer BugCatchingContestant9AText
 BugCatchingContestant9AText:
-	text "SAMUEL: If you've"
-	line "got the time to"
-	cont "chat, go find some"
-	roll "bug #MON."
+	ntag "SAMUEL:"
+	text "If you've got the"
+	line "time to chat, go"
+	cont "find some #MON."
 	done
 
 BugCatchingContestant10AScript:
 	jumptextfaceplayer BugCatchingContestant10AText
 BugCatchingContestant10AText:
-	text "KIPP: I've studied"
-	line "about bug #MON"
-	cont "a lot."
+	ntag "KIPP:"
+	text "I've studied bug"
+	line "#MON a lot."
 
 	para "I'm going to win"
 	line "for sure."

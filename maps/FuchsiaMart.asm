@@ -33,9 +33,11 @@ FuchsiaMartMedScript:
 FuchsiaMartPokefanMScript:
 	jumptextfaceplayer FuchsiaMartPokefanMText
 FuchsiaMartPokefanMText:
-	text "I'm looking for"
-	line "SAFARI ZONE"
-	cont "souvenirs."
+	text "Do you have a"
+	line "SAFARI ZONE flag?"
+
+	para "What about cards"
+	line "or calendars?"
 	done
 
 FuchsiaMartCooltrainerFScript:

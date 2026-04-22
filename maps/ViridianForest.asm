@@ -99,9 +99,8 @@ BugCatcherEdSeenText:
 	done
 
 BugCatcherEdBeatenText:
-	text "Huh?"
-	line "I ran out of"
-	cont "#MON!"
+	text "Huh? I ran out of"
+	line "#MON!"
 	done
 
 BugCatcherEdAfterBattleText:

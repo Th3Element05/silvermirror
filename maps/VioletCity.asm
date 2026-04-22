@@ -105,93 +105,94 @@ VioletCity_NoFruit:
 ;	cont "you study here!"
 ;	done
 
-VioletCityFollowEarl_MovementData:
-	big_step DOWN
-	big_step DOWN
-	turn_head DOWN
-	turn_head LEFT
-	turn_head UP
-	turn_head RIGHT
-	turn_head DOWN
-	turn_head LEFT
-	turn_head UP
-	turn_head RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	turn_head RIGHT
-	turn_head DOWN
-	turn_head LEFT
-	turn_head UP
-	turn_head RIGHT
-	turn_head DOWN
-	turn_head LEFT
-	turn_head UP
-	turn_head RIGHT
-	turn_head DOWN
-	big_step DOWN
-	turn_head DOWN
-	turn_head LEFT
-	turn_head UP
-	turn_head RIGHT
-	turn_head DOWN
-	turn_head LEFT
-	turn_head UP
-	turn_head RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	turn_head RIGHT
-	turn_head DOWN
-	turn_head LEFT
-	turn_head UP
-	turn_head RIGHT
-	turn_head DOWN
-	turn_head LEFT
-	turn_head UP
-	big_step UP
-	turn_head DOWN
-	step_end
+;VioletCityFollowEarl_MovementData:
+;	big_step DOWN
+;	big_step DOWN
+;	turn_head DOWN
+;	turn_head LEFT
+;	turn_head UP
+;	turn_head RIGHT
+;	turn_head DOWN
+;	turn_head LEFT
+;	turn_head UP
+;	turn_head RIGHT
+;	big_step RIGHT
+;	big_step RIGHT
+;	big_step RIGHT
+;	big_step RIGHT
+;	big_step RIGHT
+;	big_step RIGHT
+;	big_step RIGHT
+;	big_step RIGHT
+;	big_step RIGHT
+;	turn_head RIGHT
+;	turn_head DOWN
+;	turn_head LEFT
+;	turn_head UP
+;	turn_head RIGHT
+;	turn_head DOWN
+;	turn_head LEFT
+;	turn_head UP
+;	turn_head RIGHT
+;	turn_head DOWN
+;	big_step DOWN
+;	turn_head DOWN
+;	turn_head LEFT
+;	turn_head UP
+;	turn_head RIGHT
+;	turn_head DOWN
+;	turn_head LEFT
+;	turn_head UP
+;	turn_head RIGHT
+;	big_step RIGHT
+;	big_step RIGHT
+;	big_step RIGHT
+;	big_step RIGHT
+;	big_step RIGHT
+;	big_step RIGHT
+;	big_step RIGHT
+;	big_step RIGHT
+;	turn_head RIGHT
+;	turn_head DOWN
+;	turn_head LEFT
+;	turn_head UP
+;	turn_head RIGHT
+;	turn_head DOWN
+;	turn_head LEFT
+;	turn_head UP
+;	big_step UP
+;	turn_head DOWN
+;	step_end
 
-VioletCityFinishFollowEarl_MovementData:
-	step UP
-	step_end
+;VioletCityFinishFollowEarl_MovementData:
+;	step UP
+;	step_end
 
-VioletCitySpinningEarl_MovementData:
-	turn_head DOWN
-	turn_head LEFT
-	turn_head UP
-	turn_head RIGHT
-	turn_head DOWN
-	turn_head LEFT
-	turn_head UP
-	turn_head RIGHT
-	turn_head DOWN
-	turn_head LEFT
-	turn_head UP
-	turn_head RIGHT
-	turn_head DOWN
-	step_end
+;VioletCitySpinningEarl_MovementData:
+;	turn_head DOWN
+;	turn_head LEFT
+;	turn_head UP
+;	turn_head RIGHT
+;	turn_head DOWN
+;	turn_head LEFT
+;	turn_head UP
+;	turn_head RIGHT
+;	turn_head DOWN
+;	turn_head LEFT
+;	turn_head UP
+;	turn_head RIGHT
+;	turn_head DOWN
+;	step_end
 
 VioletCityLassScript:
 	jumptextfaceplayer VioletCityLassText
 VioletCityLassText:
-	text "Ghosts are rumored"
-	line "to appear in"
-	cont "SPROUT TOWER."
+	text "There are rumors"
+	line "that ghosts appear"
+	cont "in SPROUT TOWER"
+	roll "at night!"
 
-	para "They said normal-"
+	para "They say NORMAL-"
 	line "type attacks don't"
 	cont "effect ghosts."
 	done

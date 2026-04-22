@@ -78,6 +78,7 @@ Route19BoyGoesHome:
 	end
 
 Route19BoyStungText:
+	ntag "BOY:"
 	text "Ouch! Ouch! Ouch!"
 
 	para "TENTACOOL got me"
@@ -93,6 +94,7 @@ Route19GaveAntidoteText:
 	done
 
 Route19BoyThanksText:
+	ntag "BOY:"
 	text "Wow, thanks!"
 	line "You're a life-"
 	cont "saver!"
@@ -103,6 +105,7 @@ Route19BoyThanksText:
 	done
 
 Route19BoyNoAntidoteText:
+	ntag "BOY:"
 	text "Oh no, you don't"
 	line "have any?"
 
@@ -373,8 +376,9 @@ Route19Sign:
 	jumptext Route19SignText
 Route19SignText:
 	text "SEA ROUTE 19"
-	line "FUCHSIA CITY -"
-	cont "SEAFOAM ISLANDS"
+
+	para "FUCHSIA CITY -"
+	line "SEAFOAM ISLANDS"
 	done
 
 

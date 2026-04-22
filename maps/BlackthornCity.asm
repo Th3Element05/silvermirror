@@ -60,7 +60,8 @@ BlackthornCityFlypointCallback:
 ;	end
 
 ;MeetSantosText:
-;	text "SANTOS: …"
+;	ntag "SANTOS:"
+;	text "…"
 ;
 ;	para "It's Saturday…"
 ;
@@ -69,11 +70,13 @@ BlackthornCityFlypointCallback:
 ;	done
 
 ;SantosGivesGiftText:
+;	ntag "SANTOS:"
 ;	text "You can have this…"
 ;	done
 
 ;SantosGaveGiftText:
-;	text "SANTOS: …"
+;	ntag "SANTOS:"
+;	text "…"
 ;
 ;	para "SPELL TAG…"
 ;
@@ -85,7 +88,8 @@ BlackthornCityFlypointCallback:
 ;	done
 
 ;SantosSaturdayText:
-;	text "SANTOS: …"
+;	ntag "SANTOS:"
+;	text "…"
 ;
 ;	para "See you again on"
 ;	line "another Saturday…"
@@ -95,8 +99,9 @@ BlackthornCityFlypointCallback:
 ;	done
 
 ;SantosNotSaturdayText:
-;	text "SANTOS: Today's"
-;	line "not Saturday…"
+;	ntag "SANTOS:"
+;	text "Today's not"
+;	line "Saturday…"
 ;	done
 
 BlackthornGramps1Script:

@@ -184,7 +184,7 @@ TrainerRocketGruntM22:
 	end
 
 GruntM22SeenText:
-	text "I am one of the 4"
+	text "I am one of four"
 	line "ROCKET BROTHERS!"
 	done
 

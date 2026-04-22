@@ -136,10 +136,12 @@ NinjaJoninSeenText:
 	done
 
 NinjaJoninBeatenText:
+	ntag "JONIN:"
 	text "Such power!"
 	done
 
 NinjaJoninAfterBattleText:
+	ntag "JONIN:"
 	text "I understand now"
 	line "how you got past"
 	cont "our guards."
@@ -152,16 +154,18 @@ NinjaJoninAfterBattleText:
 	done
 
 TeamRocketBaseB2FJanineQuestionText:
-	text "JANINE: What is"
-	line "this?"
+	ntag "JANINE:"
+	text "What is this?"
 
 	para "You know better"
 	line "than to bring an"
 	cont "outsider into our"
-	roll "den!"
+	roll "den!@"
 
-	para "JONIN: I do,"
-	line "JANINE."
+	text_promptbutton
+	ntag "────────"
+	ntag "JONIN:"
+	text "I do, JANINE."
 
 	para "But this outsider"
 	line "has found their"
@@ -178,9 +182,10 @@ TeamRocketBaseB2FJanineQuestionText:
 	done
 
 TeamRocketBaseB2FJanineIntroText:
-	text "JANINE: We do not"
-	line "get unexpected"
-	cont "guests here."
+	ntag "JANINE:"
+	text "We do not get"
+	line "unexpected guests"
+	cont "here."
 
 	para "No one has found"
 	line "the entrance to"
@@ -196,22 +201,26 @@ TeamRocketBaseB2FJanineIntroText:
 
 	para "<……> <……>"
 
-	para "JANINE: You seek"
-	line "the CLEAR BELL?"
+	para "You seek the"
+	line "CLEAR BELL?"
 
 	para "As if we would"
 	line "just hand such an"
 	cont "artifact to some"
 	roll "outsider!"
 
-	para "Impossible!"
+	para "Impossible!@"
 
-	para "KOGA: JANINE!"
+	text_promptbutton
+	ntag "────────"
+	ntag "KOGA:"
+	text "JANINE!"
 	done
 
 TeamRocketBaseB2FKogaExplainsText:
-	text "KOGA: Can you not"
-	line "see the SOULBADGE"
+	ntag "KOGA:"
+	text "Can you not see"
+	line "the SOULBADGE"
 	cont "pinned to this"
 	roll "trainer's shirt?"
 
@@ -228,26 +237,30 @@ TeamRocketBaseB2FKogaExplainsText:
 	done
 
 TeamRocketBaseB2FKogaWelcomeText:
-	text "KOGA: It is quite"
-	line "a surprise to find"
-	cont "you here."
+	ntag "KOGA:"
+	text "It is quite a"
+	line "surprise to find"
+	cont "you here, <PLAYER>."
 
-	para "<PLAYER>, welcome"
-	line "to the den of the"
-	cont "NINJA CLAN."
+	para "Welcome to the den"
+	line "of the NINJA CLAN."
 	done
 
 TeamRocketBaseB2FJanineInterjectsText:
-	text "JANINE: Father,"
-	line "no matter who this"
-	cont "is, you know we"
-	roll "cannot just hand"
-	cont "the CLEAR BELL to"
-	roll "an outsider."
+	ntag "JANINE:"
+	text "Father, no matter"
+	line "who this is, you"
+	cont "know we cannot"
+	roll "just hand over the"
+	cont "CLEAR BELL to an"
+	roll "outsider.@"
 
-	para "KOGA: Yes, you're"
-	line "right. Our clan"
-	cont "has protected the"
+	text_promptbutton
+	ntag "────────"
+	ntag "KOGA:"
+	text "Yes, you're right."
+	line "Our clan has been"
+	cont "protecting the"
 	roll "CLEAR BELL for"
 	cont "generations."
 
@@ -261,24 +274,28 @@ TeamRocketBaseB2FJanineInterjectsText:
 	done
 
 TeamRocketBaseB2FPlayerExplainsText:
-	text "<……> <……>"
+	text "<……> <……>@"
 
-	para "KOGA: I see…"
+	text_promptbutton
+	ntag "KOGA:"
+	text "I see…"
 	line "HO-OH has returned"
 	cont "to the TIN TOWER?"
 	done
 
 TeamRocketBaseB2FKogaPerhapsLugiaText:
-	text "KOGA: HO-OH…"
+	ntag "KOGA:"
+	text "So HO-OH…"
 
 	para "Then perhaps…"
 	line "LUGIA, too…?"
 	done
 
 TeamRocketBaseB2FKogaProposesChallengeText:
-	text "KOGA: JANINE, our"
-	line "clan has protected"
-	cont "the CLEAR BELL for"
+	ntag "KOGA:"
+	text "JANINE, our clan"
+	line "has protected the"
+	cont "CLEAR BELL for"
 	roll "centuries, but we"
 	cont "knew a time would"
 	roll "come when someone"
@@ -296,15 +313,18 @@ TeamRocketBaseB2FKogaProposesChallengeText:
 	roll "CLEAR BELL."
 
 	para "We should test"
-	line "them."
+	line "them.@"
 
-	para "JANINE: If you say"
-	line "so, then we shall"
-	cont "test them."
+	text_promptbutton
+	ntag "────────"
+	ntag "JANINE:"
+	text "If you say so, I"
+	line "will test them."
 	done
 
 TeamRocketBaseB2FJanineExplainsChallengeText:
-	text "JANINE: <PLAYER>,"
+	ntag "JANINE:"
+	text "<PLAYER>, you must"
 	line "find us somewhere"
 	cont "within this den."
 
@@ -376,17 +396,19 @@ TeamRocketBaseB2FNinjaJoninScript:
 	jumptextfaceplayer TeamRocketBaseB2FNinjaJoninChallengeText
 
 TeamRocketBaseB2FNinjaJoninImpressedText:
-	text "JONIN: You have"
-	line "been accepted by"
-	cont "both JANINE and"
-	roll "MASTER KOGA."
+	ntag "JONIN:"
+	text "You have been"
+	line "accepted by both"
+	cont "MASTER KOGA, and"
+	roll "JANINE."
 
 	para "You are welcome"
 	line "here any time."
 	done
 
 TeamRocketBaseB2FNinjaJoninChallengeText:
-	text "JONIN: Good luck."
+	ntag "JONIN:"
+	text "Good luck."
 	done
 
 TrainerNinjaGenin:

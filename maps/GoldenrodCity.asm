@@ -239,7 +239,7 @@ GoldenrodCityLassText:
 	line "house rates your"
 	cont "#MON names."
 
-	para "He can even rename"
+	para "He can help rename"
 	line "your #MON."
 	done
 
@@ -368,7 +368,7 @@ GoldenrodCityStationSign:
 	jumptext GoldenrodCityStationSignText
 GoldenrodCityStationSignText:
 	text "GOLDENROD CITY"
-	line "STATION"
+	line "TRAIN STATION"
 	done
 
 GoldenrodCityRadioTowerSign:

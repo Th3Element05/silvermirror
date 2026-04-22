@@ -35,17 +35,31 @@ TrainerRocketHideoutGiovanni:
 	end
 
 RocketHideoutGiovanniSeenText:
+;	ntag "GIOVANNI:"
 	text "So! I must say, I"
 	line "am impressed you"
-	cont "got here!"
+	cont "got here!@"
+
+	text_promptbutton
+	ntag "GIOVANNI:"
+	text "You may call me"
+	line "GIOVANNI."
+
+	para "I am the BOSS of"
+	line "TEAM ROCKET, and I"
+	cont "will not let you"
+	roll "keep meddling in"
+	cont "our affairs!"
 	done
 
 RocketHideoutGiovanniBeatenText:
+	ntag "GIOVANNI:"
 	text "WHAT!"
 	line "This cannot be!"
 	done
 
 RocketHideoutGiovanniAfterBattleText:
+	ntag "GIOVANNI:"
 	text "I see that you"
 	line "raise #MON"
 	cont "with utmost care."

@@ -154,8 +154,7 @@ BugCatcherKenSeenText:
 	done
 
 BugCatcherKenBeatenText:
-	text "I"
-	line "lost."
+	text "I lost."
 	done
 
 BugCatcherKenAfterBattleText:

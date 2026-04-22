@@ -152,7 +152,7 @@ LavenderTown_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  9,  3, BGEVENT_READ, LavenderTownSilphScopeSign
+;	bg_event  9,  3, BGEVENT_READ, LavenderTownSilphScopeSign
 	bg_event 15,  7, BGEVENT_READ, LavenderTownPokemonTowerSign
 	bg_event  5,  9, BGEVENT_READ, LavenderTownPokemonHouseSign
 	bg_event 11,  9, BGEVENT_READ, LavenderTownSign

@@ -159,8 +159,8 @@ CooltrainerMRyanSeenText:
 	done
 
 CooltrainerMRyanBeatenText:
-	text "I don't"
-	line "believe it!"
+	text "I don't believe"
+	line "it!"
 	done
 
 CooltrainerMRyanAfterBattleText:

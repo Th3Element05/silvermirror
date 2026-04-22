@@ -72,9 +72,10 @@ TeamRocketBaseB3FPlayerText:
 	done
 
 TeamRocketBaseB3FFoundKogaText:
-	text "KOGA: You've found"
-	line "me. Now see if you"
-	cont "can defeat me."
+	ntag "KOGA:"
+	text "You've found me."
+	line "Now see if you can"
+	cont "defeat me."
 
 	para "In FUCHSIA CITY,"
 	line "our battle was for"
@@ -87,10 +88,12 @@ TeamRocketBaseB3FFoundKogaText:
 	done
 
 KogaBeatenNinjaText:
+	ntag "KOGA:"
 	text "Incredible."
 	done
 
 TeamRocketBaseB3FKogaAfterBattleText:
+	ntag "KOGA:"
 	text "<PLAYER>, you must"
 	line "still find JANINE,"
 	cont "and defeat her, as"
@@ -255,6 +258,7 @@ TeamRocketBaseB3FJanineIntroText:
 	done
 
 TeamRocketBaseB3FJaninePreBattleText:
+	ntag "JANINE:"
 	text "I don't like the"
 	line "idea of giving the"
 	cont "CLEAR BELL to any-"
@@ -280,16 +284,19 @@ TeamRocketBaseB3FJaninePreBattleText:
 	done
 
 JanineBeatenText:
+	ntag "JANINE:"
 	text "I… lost…?"
 	done
 
 TeamRocketBaseB3FKogaPlayerText:
-	text "KOGA: <PLAYER>!"
+	ntag "KOGA:"
+	text "<PLAYER>!"
 	done
 
 TeamRocketBaseB3FKogaCongratulationsText:
-	text "KOGA: I knew you"
-	line "could do it."
+	ntag "KOGA:"
+	text "I knew you could"
+	line "do it."
 
 	para "After battling you"
 	line "myself, I had no"
@@ -300,9 +307,9 @@ TeamRocketBaseB3FKogaCongratulationsText:
 	done
 
 TeamRocketBaseB3FJanineAdmitsDefeatText:
-	text "JANINE: Yes…"
-	line "I truly wasn't"
-	cont "expecting to lose."
+	ntag "JANINE:"
+	text "Yes… I truly didn't"
+	line "expect to lose."
 
 	para "But after facing"
 	line "<PLAYER> in battle"
@@ -318,14 +325,14 @@ TeamRocketBaseB3FJanineAdmitsDefeatText:
 	done
 
 TeamRocketBaseB3FJanineGivesClearBellText:
-	text "JANINE: <PLAYER>,"
-	line "on behalf of the"
-	cont "NINJA CLAN, I deem"
-	roll "you worthy of the"
-	cont "CLEAR BELL."
+	ntag "JANINE:"
+	text "On behalf of the"
+	line "NINJA CLAN, I deem"
+	cont "you worthy of the"
+	roll "CLEAR BELL."
 
 	para "Receive it with"
-	line "resepect."
+	line "honor."
 	done
 
 TeamRocketBaseB3FReceivedClearBellText:
@@ -334,8 +341,9 @@ TeamRocketBaseB3FReceivedClearBellText:
 	done
 
 TeamRocketBaseB3FKogaGivesSilverWingText:
-	text "KOGA: One more"
-	line "thing, <PLAYER>."
+	ntag "KOGA:"
+	text "One more thing,"
+	line "<PLAYER>."
 
 	para "I want you to have"
 	line "this as well."
@@ -347,9 +355,10 @@ TeamRocketBaseB3FReceivedSilverWingText:
 	done
 
 TeamRocketBaseB3FKogaExplainsSilverWingText:
-	text "KOGA: I found that"
-	line "at BURNED TOWER,"
-	cont "a long time ago."
+	ntag "KOGA:"
+	text "I found that at"
+	line "BURNED TOWER, a"
+	cont "long time ago."
 
 	para "I believe it is a"
 	line "feather from the"
@@ -366,8 +375,9 @@ TeamRocketBaseB3FKogaExplainsSilverWingText:
 	done
 
 TeamRocketBaseB3FKogaFarewellText:
-	text "KOGA: I need to"
-	line "get going."
+	ntag "KOGA:"
+	text "I need to get"
+	line "going."
 
 	para "I've been away"
 	line "from FUCHSIA GYM"
@@ -420,6 +430,7 @@ TeamRocketBaseB3FOneStepDownMovement:
 TeamRocketBaseB3FJanine:
 	jumptextfaceplayer TeamRocketBaseB3FJanineText
 TeamRocketBaseB3FJanineText:
+	ntag "JANINE:"
 	text "Though you are not"
 	line "a NINJA, you will"
 	cont "always be welcome"

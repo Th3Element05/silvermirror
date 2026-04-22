@@ -107,6 +107,7 @@ OlivinePortTicketSailorScript:
 ;	done
 
 OlivinePortSSAquaScheduleText:
+	ntag "SAILOR:"
 	text "S.S.AQUA sails to"
 	line "VERMILION CITY on"
 	cont "MONDAY, WEDNESDAY,"
@@ -114,40 +115,48 @@ OlivinePortSSAquaScheduleText:
 	done
 
 OlivinePortWelcomeToSSAquaText:
-	text "SAILOR: Welcome to"
+	ntag "SAILOR:"
+	text "Welcome to the"
 	line "S.S.AQUA! Do you"
 	cont "have a ticket?"
 	done
 
 OlivinePortFlashTicketText:
 	text "<PLAYER> flashed"
-	line "the S.S.TICKET."
+	line "the S.S.TICKET.@"
 
-	para "SAILOR: Would you"
-	line "like to sail to"
-	cont "VERMILION CITY"
-	roll "with us today?"
+	text_promptbutton
+	ntag "SAILOR:"
+	text "Our destination is"
+	line "VERMILION CITY."
+
+	para "Would you like to"
+	line "come aboard?"
 	done
 
 OlivinePortSailorGetOnBoardText:
+	ntag "SAILOR:"
 	text "We're departing"
 	line "soon. Please get"
 	cont "on board."
 	done
 
 OlivinePortNextShipMondayText:
+	ntag "SAILOR:"
 	text "The S.S.AQUA will"
 	line "sail to VERMILION"
 	cont "again on MONDAY."
 	done
 
 OlivinePortNextShipWednesdayText:
+	ntag "SAILOR:"
 	text "S.S.AQUA's next"
 	line "trip to VERMILION"
 	cont "is on WEDNESDAY."
 	done
 
 OlivinePortNextShipFridayText:
+	ntag "SAILOR:"
 	text "The S.S.AQUA will"
 	line "sail to VERMILION"
 	cont "again on FRIDAY."

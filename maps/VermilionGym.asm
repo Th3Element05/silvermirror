@@ -124,6 +124,7 @@ VermilionGymCheckBadges:
 	end
 
 LtSurgeIntroText:
+	ntag "LT.SURGE:"
 	text "Hey, kid! What do"
 	line "you think you're"
 	cont "doing here?"
@@ -146,6 +147,7 @@ LtSurgeIntroText:
 	done
 
 LtSurgeWinLossText:
+	ntag "LT.SURGE:"
 	text "Whoa!"
 
 	para "You're the real"
@@ -161,6 +163,7 @@ ReceivedThunderbadgeText:
 	done
 
 LtSurgeThunderbadgeText:
+	ntag "LT.SURGE:"
 ;	text "The THUNDERBADGE"
 ;	line "lets your #MON"
 ;	cont "use FLY anytime!"
@@ -174,6 +177,7 @@ LtSurgeThunderbadgeText:
 	done
 
 SurgeExplainTMText:
+	ntag "LT.SURGE:"
 	text "TM52 contains"
 	line "SPARK!"
 
@@ -182,6 +186,7 @@ SurgeExplainTMText:
 	done
 
 LtSurgeAfterBattleText:
+	ntag "LT.SURGE:"
 	text "A little word of"
 	line "advice, kid!"
 

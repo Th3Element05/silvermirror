@@ -39,7 +39,8 @@ ViridianNicknameSpeechHouseSpearyScript:
 	closetext
 	end
 ViridianNicknameSpeechHouseSpearyText:
-	text "SPEARY: Tetweet!"
+	ntag "SPEARY:"
+	text "Tetweet!"
 	done
 
 ViridianNicknameSpeechHouse_MapEvents:

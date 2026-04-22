@@ -61,6 +61,7 @@ VioletGymFalknerScript:
 ;	jumpstd RadioTowerRocketsScript
 
 FalknerIntroText:
+	ntag "FALKNER:"
 	text "I'm FALKNER, the"
 	line "VIOLET #MON GYM"
 	cont "leader!"
@@ -81,6 +82,7 @@ FalknerIntroText:
 	done
 
 FalknerWinLossText:
+	ntag "FALKNER:"
 	text "…Darn! My dad's"
 	line "cherished bird"
 	cont "#MON…"
@@ -99,11 +101,13 @@ ReceivedZephyrBadgeText:
 	done
 
 FalknerZephyrBadgeText:
+	ntag "FALKNER:"
 	text "Here--take this"
 	line "too."
 	done
 
 FalknerTMMudSlapText:
+	ntag "FALKNER:"
 	text "SKY ATTACK is the"
 	line "strongest flying-"
 	cont "type attack!"
@@ -141,6 +145,7 @@ FalknerTMMudSlapText:
 ;	done
 
 FalknerFightDoneText:
+	ntag "FALKNER:"
 	text "I'm going to train"
 	line "harder to become"
 	cont "the greatest bird"
@@ -229,9 +234,8 @@ VioletGymGuideText:
 
 	para "The grass-type is"
 	line "weak against the"
-
-	para "flying-type. Keep"
-	line "this in mind."
+	cont "flying-type. Keep"
+	roll "this in mind."
 	done
 
 VioletGymGuideWinText:

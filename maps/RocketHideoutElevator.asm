@@ -38,7 +38,7 @@ RocketHideoutElevatorData:
 	db 3 ; floors
 	elevfloor FLOOR_B1F, 1, ROCKET_HIDEOUT_B1F
 	elevfloor FLOOR_B2F, 1, ROCKET_HIDEOUT_B2F
-;	elevfloor FLOOR_B3F, 1, ROCKET_HIDEOUT_B3F
+	elevfloor FLOOR_B3F, 1, ROCKET_HIDEOUT_B3F
 	elevfloor FLOOR_B4F, 1, ROCKET_HIDEOUT_B4F
 	db -1 ; end
 

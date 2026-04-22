@@ -99,6 +99,7 @@ CinnabarGymCheckBadges:
 	end
 
 BlaineIntroText:
+	ntag "BLAINE:"
 	text "Hah!"
 
 ;	para "I am BLAINE! I"
@@ -118,8 +119,8 @@ BlaineIntroText:
 	done
 
 BlaineWinLossText:
-	text "I have"
-	line "burnt out!"
+	ntag "BLAINE:"
+	text "I have burnt out!"
 
 	para "You have earned"
 	line "the VOLCANOBADGE!"
@@ -131,6 +132,7 @@ ReceivedVolcanobadgeText:
 	done
 
 BlaineVolcanobadgeText:
+	ntag "BLAINE:"
 	text "Hah!"
 
 	para "Here, you can"
@@ -138,6 +140,7 @@ BlaineVolcanobadgeText:
 	done
 
 BlaineExplainTMText:
+	ntag "BLAINE:"
 	text "TM38 contains"
 	line "FIRE BLAST!"
 
@@ -146,6 +149,7 @@ BlaineExplainTMText:
 	done
 
 BlaineAfterBattleText:
+	ntag "BLAINE:"
 	text "FIRE BLAST is the"
 	line "ultimate fire"
 	cont "technique!"

@@ -9,53 +9,55 @@ GoldenrodHappinessRater_MapScripts:
 	def_callbacks
 
 GoldenrodHappinessRaterTeacherScript:
-	faceplayer
-	opentext
-	special GetFirstPokemonHappiness
-	writetext GoldenrodHappinessRaterTeacherText
-	promptbutton
-	ifgreater 250 - 1, .LovesYouALot
-	ifgreater 200 - 1, .ReallyTrustsYou
-	ifgreater 150 - 1, .SortOfHappy
-	ifgreater 100 - 1, .QuiteCute
-	ifgreater  50 - 1, .NotUsedToYou
-	sjump .LooksMean
+	jumpstd HappinessCheckScript
 
-.LovesYouALot:
-	writetext GoldenrodHappinessRatingText_LovesYouALot
-	waitbutton
-	closetext
-	end
-
-.ReallyTrustsYou:
-	writetext GoldenrodHappinessRatingText_ReallyTrustsYou
-	waitbutton
-	closetext
-	end
-
-.SortOfHappy:
-	writetext GoldenrodHappinessRatingText_SortOfHappy
-	waitbutton
-	closetext
-	end
-
-.QuiteCute:
-	writetext GoldenrodHappinessRatingText_QuiteCute
-	waitbutton
-	closetext
-	end
-
-.NotUsedToYou:
-	writetext GoldenrodHappinessRatingText_NotUsedToYou
-	waitbutton
-	closetext
-	end
-
-.LooksMean:
-	writetext GoldenrodHappinessRatingText_LooksMean
-	waitbutton
-	closetext
-	end
+;	faceplayer
+;	opentext
+;	special GetFirstPokemonHappiness
+;	writetext GoldenrodHappinessRaterTeacherText
+;	promptbutton
+;	ifgreater 250 - 1, .LovesYouALot
+;	ifgreater 200 - 1, .ReallyTrustsYou
+;	ifgreater 150 - 1, .SortOfHappy
+;	ifgreater 100 - 1, .QuiteCute
+;	ifgreater  50 - 1, .NotUsedToYou
+;	sjump .LooksMean
+;
+;.LovesYouALot:
+;	writetext GoldenrodHappinessRatingText_LovesYouALot
+;	waitbutton
+;	closetext
+;	end
+;
+;.ReallyTrustsYou:
+;	writetext GoldenrodHappinessRatingText_ReallyTrustsYou
+;	waitbutton
+;	closetext
+;	end
+;
+;.SortOfHappy:
+;	writetext GoldenrodHappinessRatingText_SortOfHappy
+;	waitbutton
+;	closetext
+;	end
+;
+;.QuiteCute:
+;	writetext GoldenrodHappinessRatingText_QuiteCute
+;	waitbutton
+;	closetext
+;	end
+;
+;.NotUsedToYou:
+;	writetext GoldenrodHappinessRatingText_NotUsedToYou
+;	waitbutton
+;	closetext
+;	end
+;
+;.LooksMean:
+;	writetext GoldenrodHappinessRatingText_LooksMean
+;	waitbutton
+;	closetext
+;	end
 
 GoldenrodHappinessRaterPokefanMScript:
 	jumptextfaceplayer GoldenrodHappinessRaterPokefanMText

@@ -245,7 +245,7 @@ PewterCityYoungsterExplainItemText:
 	cont "boost a #MON's"
 	roll "@"
 	text_ram wStringBuffer2
-	text "-attacks!"
+	text " attacks!"
 	done
 
 PewterCityGrass:

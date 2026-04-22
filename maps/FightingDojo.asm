@@ -215,6 +215,7 @@ FightingDojoKarateMasterScript:
 	jumptextfaceplayer KarateMasterTrainWithUsText
 
 KarateMasterIntroText:
+	ntag "MASTER:"
 	text "Hwa!"
 
 	para "I am the KARATE"
@@ -227,6 +228,7 @@ KarateMasterIntroText:
 	done
 
 KarateMasterDefeatMyStudentsText:
+	ntag "MASTER:"
 	text "Defeat all 4 of"
 	line "my students to"
 	cont "prove you posses"
@@ -235,6 +237,7 @@ KarateMasterDefeatMyStudentsText:
 	done
 
 KarateMasterChallengeText:
+	ntag "MASTER:"
 	text "Ha! Well met,"
 	line "Challenger!"
 
@@ -249,11 +252,13 @@ KarateMasterChallengeText:
 	done
 
 KarateMasterWinLossText:
+	ntag "MASTER:"
 	text "Hwa!"
 	line "Arrgh! Beaten!"
 	done
 
 KarateMasterGiveTMText:
+	ntag "MASTER:"
 	text "Indeed, I have"
 	line "lost!"
 
@@ -269,6 +274,7 @@ KarateMasterGiveTMText:
 	done
 
 KarateMasterExplainTMText:
+	ntag "MASTER:"
 	text "That TM contains"
 	line "DYNAMICPUNCH!"
 
@@ -282,6 +288,7 @@ KarateMasterExplainTMText:
 	done
 
 KarateMasterTrainWithUsText:
+	ntag "MASTER:"
 	text "Ho!"
 
 	para "Stay and train at"
@@ -305,6 +312,7 @@ FightingDojoApproachPlayerMovement:
 	step_end
 
 KarateMasterOffersPokemonText:
+	ntag "MASTER:"
 	text "These are two of"
 	line "our most prized"
 	cont "FIGHTING #MON."

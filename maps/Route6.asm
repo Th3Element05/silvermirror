@@ -159,22 +159,27 @@ TimAndSueRematch:
 	end
 
 CoupleSueSeenText:
-	text "SUE: Excuse me!"
+;	ntag "SUE:"
+	text "Excuse me!"
 	line "This is a private"
-	cont "conversation!"
+	cont "conversation!";@"
 
-	para "TIM: Stop eaves-"
-	line "dropping!"
+;	ntag "────────"
+;	ntag "TIM:"
+;	para "No eavesdropping!"
 	done
 
 CoupleTimSeenText:
-	text "TIM: Who's there?"
+;	ntag "TIM:"
+	text "Who's there?"
 	line "Quit listening in"
-	cont "on us!"
+	cont "on us!";@"
 
-	para "SUE: Excuse me!"
-	line "This is a private"
-	cont "conversation!"
+;	ntag "────────"
+;	ntag "SUE:"
+;	para "Excuse me!"
+;	line "This is a private"
+;	cont "conversation!"
 	done
 
 CoupleTimAndSueBeatenText:
@@ -187,14 +192,16 @@ CoupleTimAndSueBeatenText:
 ;	done
 
 CoupleTimAndSue_TimAfterBattleText:
-	text "TIM: If you've"
-	line "beaten her, you"
-	cont "must be strong!"
+;	ntag "TIM:"
+	text "If you've beaten"
+	line "her, you must be"
+	cont "strong!"
 	done
 
 CoupleTimandSue_SueAfterBattleText:
-	text "SUE: That strength"
-	line "of yours…"
+;	ntag "SUE:"
+	text "That strength of"
+	line "yours…"
 
 	para "I've got it!"
 	line "Are you in love?"

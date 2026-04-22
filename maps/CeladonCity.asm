@@ -45,8 +45,8 @@ CeladonCityPoliwrath:
 	closetext
 	end
 CeladonCityPoliwrathText:
-	text "POLIWRATH: Ribi"
-	line "ribit!"
+	ntag "POLIWRATH:"
+	text "Ribi! ribit!"
 	done
 
 CeladonCityTutorGrampsScript:
@@ -209,9 +209,10 @@ CeladonCityMansionSignText:
 CeladonCityGameCornerSign:
 	jumptext CeladonCityGameCornerSignText
 CeladonCityGameCornerSignText:
-	text "ROCKET GAME CORNER"
-	line "The playground"
-	cont "for grown-ups!"
+	text "GAME CORNER"
+
+	para "The playground"
+	line "for grown-ups!"
 	done
 
 CeladonCityPrizeExchangeSign:

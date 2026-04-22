@@ -155,8 +155,8 @@ CoupleDuffAndEda_EdaSeenText:
 	done
 
 CoupleDuffAndEda_EdaBeatenText:
-	text "EDA: I hung up,"
-	line "and I still lost?"
+	text "I hung up, and I"
+	line "still lost?"
 	done
 
 CoupleDuffAndEda_EdaAfterText:

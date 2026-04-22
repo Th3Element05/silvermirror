@@ -122,18 +122,44 @@ CopycatSpinAroundMovementData:
 	step_end
 
 CopycatText_Default:
-	text "<PLAYER>: Hi! Do"
-	line "you like #MON?"
+	ntag "<PLAYER>:"
+	text "Hi! Do you like"
+	line "#MON?@"
 
-	para "<PLAYER>: Uh, no,"
-	line "I just asked you."
+	text_promptbutton
+	ntag "────────"
+	ntag "COPYCAT:"
+	text " Hi! Do you like"
+	line " #MON?@"
 
-	para "<PLAYER>: Huh?"
-	line "You're strange!"
+	text_promptbutton
+	ntag "────────"
+	ntag "<PLAYER>:"
+	text "Uh, no, I just"
+	line "asked you.@"
+
+	text_promptbutton
+	ntag "────────"
+	ntag "COPYCAT:"
+	text " Uh, no, I just"
+	line " asked you.@"
+
+	text_promptbutton
+	ntag "────────"
+	ntag "<PLAYER>:"
+	text "Huh?"
+	line "You're strange!@"
+
+	text_promptbutton
+	ntag "────────"
+	ntag "COPYCAT:"
+	para " Huh?"
+	line " You're strange!"
 	done
 
 CopycatText_QuitMimicking:
-	text "COPYCAT: Hmm?"
+	ntag "COPYCAT:"
+	text "Hmm?"
 	line "Quit mimicking?"
 
 	para "But that's my"
@@ -148,6 +174,7 @@ CopycatText_QuitMimicking:
 	done
 
 CopycatText_IsThatAPokedoll:
+	ntag "COPYCAT:"
 	text "Oh wow!"
 	line "A #DOLL?"
 
@@ -155,11 +182,13 @@ CopycatText_IsThatAPokedoll:
 	done
 
 CopycatText_DidntGiveDoll:
-	text "COPYCAT: Awww!"
+	ntag "COPYCAT:"
+	text "Awww!"
 	line "That's too bad!"
 	done
 
 CopycatText_ThanksGiveTM:
+	ntag "COPYCAT:"
 	text "Thank you!"
 
 	para "Here, you can"
@@ -180,24 +209,44 @@ CopycatText_ThanksGiveTM:
 ;	done
 
 CopycatText_ThanksForTM:
-	text "<PLAYER>: Hi!"
+	ntag "<PLAYER>:"
+	text "Hi!"
 	line "Thanks for the"
-	cont "METAL POWDER!"
+	cont "METAL POWDER!@"
 
-	para "<PLAYER>: Pardon?"
+	text_promptbutton
+	ntag "────────"
+	ntag "COPYCAT:"
+	text " Hi!"
+	line " Thanks for the"
+	cont " METAL POWDER!@"
 
-	para "<PLAYER>: Is it"
-	line "fun to mimic my"
-	cont "every move?"
+	text_promptbutton
+	ntag "────────"
+	ntag "<PLAYER>:"
+	text "Pardon?@"
+
+	text_promptbutton
+	ntag "────────"
+	ntag "COPYCAT:"
+	text " Pardon?@"
+
+	text_promptbutton
+	ntag "────────"
+	ntag "<PLAYER>:"
+	text "Is it fun to mimic"
+	line "my every move?"
 	done
 
 CopycatText_YouBet:
-	text "COPYCAT: You bet!"
+	ntag "COPYCAT:"
+	text "You bet!"
 	line "It's a scream!"
 	done
 
 CopycatsDoduoText:
-	text "DODRIO: Gii giii!"
+	ntag "DODRIO:"
+	text "Gii giii!"
 
 	para "MIRROR, MIRROR,"
 	line "ON THE WALL,"

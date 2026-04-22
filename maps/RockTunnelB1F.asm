@@ -60,8 +60,7 @@ HikerSidneySeenText:
 	done
 
 HikerSidneyBeatenText:
-	text "Fired"
-	line "away!"
+	text "Fired away!"
 	done
 
 HikerSidneyAfterBattleText:
@@ -165,8 +164,7 @@ PokemaniacShaneSeenText:
 	done
 
 PokemaniacShaneBeatenText:
-	text "Well,"
-	line "that's that."
+	text "Well, that's that."
 	done
 
 PokemaniacShaneAfterBattleText:

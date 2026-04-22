@@ -64,6 +64,7 @@ EcruteakGymMortyScript:
 ;	jumpstd RadioTowerRocketsScript
 
 MortyIntroText:
+	ntag "MORTY:"
 	text "Here in ECRUTEAK,"
 	line "#MON have been"
 	cont "revered."
@@ -97,6 +98,7 @@ MortyIntroText:
 	done
 
 MortyWinLossText:
+	ntag "MORTY:"
 	text "I'm not good"
 	line "enough yet…"
 
@@ -110,6 +112,7 @@ Text_ReceivedFogBadge:
 	done
 
 MortyText_FogBadgeSpeech:
+	ntag "MORTY:"
 ;	text "By having FOG-"
 ;	line "BADGE, #MON up"
 ;
@@ -127,6 +130,7 @@ MortyText_FogBadgeSpeech:
 	done
 
 MortyText_ShadowBallSpeech:
+	ntag "MORTY:"
 	text "It's SHADOW BALL."
 	line "It causes damage"
 	cont "and may reduce"
@@ -137,6 +141,7 @@ MortyText_ShadowBallSpeech:
 	done
 
 MortyFightDoneText:
+	ntag "MORTY:"
 	text "I see…"
 
 	para "Your journey has"

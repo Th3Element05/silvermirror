@@ -8,6 +8,7 @@ SafariZoneArea2_MapScripts:
 SafariZoneArea2Officer:
 	jumptextfaceplayer SafariZoneArea2OfficerText
 SafariZoneArea2OfficerText:
+	ntag "RANGER:"
 	text "Here's a tip for"
 	line "the SAFARI ZONE:"
 

@@ -150,8 +150,8 @@ Route22RivalLeavesMovement2:
 
 ; npc text
 Route22RivalBeforeBattleText1:
-	text "<RIVAL>: Hey!"
-	line "<PLAYER>!"
+	ntag "<RIVAL>:"
+	text "Hey! <PLAYER>!"
 
 	para "You're going to"
 	line "#MON LEAGUE?"
@@ -169,6 +169,7 @@ Route22RivalBeforeBattleText1:
 	done
 
 Route22RivalAfterBattleText1:
+	ntag "<RIVAL>:"
 	text "I heard #MON"
 	line "LEAGUE has many"
 	cont "tough trainers!"
@@ -183,25 +184,26 @@ Route22RivalAfterBattleText1:
 	done
 
 Route22RivalBattleWinText1:
+	ntag "<RIVAL>:"
 	text "Awww!"
 	line "You just lucked"
 	cont "out!"
 	done
 
 Route22RivalBattleLossText1:
-	text "<RIVAL>: What?"
-	line "Why do I have 2"
-	cont "#MON?"
+	ntag "<RIVAL>:"
+	text "What? Why do I"
+	line "have two #MON?"
 
 	para "You should catch"
 	line "some more too!"
 	done
 
 Route22RivalBeforeBattleText2:
-	text "<RIVAL>: What?"
-	line "<PLAYER>! What a"
-	cont "surprise to see"
-	roll "you here!"
+	ntag "<RIVAL>:"
+	text "What? <PLAYER>!"
+	line "What a surprise"
+	cont "to see you here!"
 
 	para "So you're going to"
 	line "#MON LEAGUE?"
@@ -219,6 +221,7 @@ Route22RivalBeforeBattleText2:
 	done
 
 Route22RivalAfterBattleText2:
+	ntag "<RIVAL>:"
 	text "That loosened me"
 	line "up! I'm ready for"
 	cont "#MON LEAGUE!"
@@ -232,6 +235,7 @@ Route22RivalAfterBattleText2:
 	done
 
 Route22RivalBattleWinText2:
+	ntag "<RIVAL>:"
 	text "What!?"
 
 	para "I was just"
@@ -239,11 +243,12 @@ Route22RivalBattleWinText2:
 	done
 
 Route22RivalBattleLossText2:
-	text "<RIVAL>: Hahaha!"
-	line "<PLAYER>! That's"
-	cont "your best? You're"
-	roll "nowhere near as"
-	cont "good as me, pal!"
+	ntag "<RIVAL>:"
+	text "Hahaha! <PLAYER>!"
+	line "That's your best?"
+	cont "You're not even"
+	roll "close to as good"
+	cont "as me, pal!"
 
 	para "Go train some"
 	line "more! You loser!"

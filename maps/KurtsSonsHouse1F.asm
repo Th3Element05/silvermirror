@@ -220,6 +220,7 @@ KurtsSonsHouse1FKurtsSon:
 	end
 
 KurtsSonsHouse1FKurtsSon_HelpUsText:
+	ntag "BURT:"
 	text "I work at SILPH,"
 	line "but I was late for"
 	cont "work today."
@@ -261,6 +262,7 @@ KurtsSonsHouse1FKurtsSon_ThankYouText:
 ;	para "I need to thank"
 ;	line "you somehow."
 ;
+	ntag "BURT:"
 	text "I study #BALLs"
 	line "for work, but I"
 	cont "like to craft them"
@@ -272,6 +274,7 @@ KurtsSonsHouse1FKurtsSon_ThankYouText:
 	done
 
 KurtsSonsHouse1F_BallsFromApricornsText:
+	ntag "BURT:"
 	text "If you bring me"
 	line "APRICORNs, I can"
 	cont "make them into"
@@ -279,6 +282,7 @@ KurtsSonsHouse1F_BallsFromApricornsText:
 	done
 
 KurtsSonsHouse1F_AskHaveApricornText:
+	ntag "BURT:"
 	text "If you have an"
 	line "APRICORN, I can"
 	cont "turn it into a"
@@ -286,6 +290,7 @@ KurtsSonsHouse1F_AskHaveApricornText:
 	done
 
 KurtsSonsHouse1F_StartRightAwayText:
+	ntag "BURT:"
 	text "Great!"
 
 	para "I'll start working"
@@ -293,6 +298,7 @@ KurtsSonsHouse1F_StartRightAwayText:
 	done
 
 KurtsSonsHouse1FKurtsSon_StillWorking:
+	ntag "BURT:"
 	text "I need more time"
 	line "to finish making"
 	cont "your BALL."
@@ -305,22 +311,26 @@ KurtsSonsHouse1FKurtsSon_StillWorking:
 	done
 
 KurtsSonsHouse1FKurtsSon_DeclinedText:
+	ntag "BURT:"
 	text "Let me know if you"
 	line "want me to make"
 	cont "you any #BALLs."
 	done
 
 KurtsSonsHouse1FKurtsSon_FinishedYourBallText:
+	ntag "BURT:"
 	text "I just finished"
-	line "your BALL. Here!"
+	line "your #BALL."
 	done
 
 KurtsSonsHouse1FKurtsSon_TryCatchingText:
+	ntag "BURT:"
 	text "Try catching"
 	line "#MON with it."
 	done
 
 KurtsSonWhatIsThatBallText:
+	ntag "BURT:"
 	text "You've got an odd"
 	line "#BALL? Let me"
 	cont "have a look."
@@ -335,6 +345,7 @@ KurtsSonWhatIsThatBallText:
 	done
 
 KurtsSonRemindAboutGSBallText:
+	ntag "BURT:"
 	text "You should show"
 	line "that odd BALL to"
 	cont "my father."

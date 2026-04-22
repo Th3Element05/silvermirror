@@ -70,12 +70,13 @@ PokemonTower2FRivalScript:
 	end
 
 PokemonTower2FRivalBeforeBattleText:
-	text "<RIVAL>: Hey,"
-	line "<PLAYER>! What"
-	cont "brings you here?"
+	ntag "<RIVAL>:"
+	text "Hey, <PLAYER>!"
+	line "What brings you"
+	cont "here?"
 
-	para "Your #MON"
-	line "don't look dead!"
+	para "Your #MON don't"
+	line "look dead!"
 
 	para "I can at least"
 	line "make them faint!"
@@ -83,6 +84,7 @@ PokemonTower2FRivalBeforeBattleText:
 	done
 
 PokemonTower2FRivalBattleWinText:
+	ntag "<RIVAL>:"
 	text "What?"
 	line "You stinker!"
 
@@ -91,22 +93,23 @@ PokemonTower2FRivalBattleWinText:
 	done
 
 PokemonTower2FRivalBattleLossText:
-	text "<RIVAL>: Well,"
-	line "look at all your"
-	cont "wimpy #MON!"
+	ntag "<RIVAL>:"
+	text "Look at all your"
+	line "wimpy #MON!"
 
 	para "Toughen them up a"
 	line "bit more!"
 	done
 
 PokemonTower2FRivalAfterBattleText:
+	ntag "<RIVAL>:"
 	text "How's your #DEX"
 	line "coming, pal?"
 	cont "I just caught a"
 	roll "CUBONE!"
 
 	para "I can't find the"
-	line "grown-up MAROWAK"
+	line "grown-up MAROWAK,"
 	cont "yet! I doubt there"
 	roll "are any left!"
 	

@@ -220,8 +220,8 @@ Buena:
 	end
 
 RadioTower2FBuenaShowIntroductionText:
-	text "BUENA: Hi! I'm"
-	line "BUENA!"
+	ntag "BUENA:"
+	text "Hi! I'm BUENA!"
 
 	para "Do you know about"
 	line "a radio program"
@@ -249,13 +249,14 @@ RadioTower2FBuenaShowIntroductionText:
 	done
 
 RadioTower2FBuenaTuneInToMyShowText:
-	text "BUENA: Tune in to"
-	line "my PASSWORD SHOW!"
+	ntag "BUENA:"
+	text "Tune in to my"
+	line "PASSWORD SHOW!"
 	done
 
 RadioTower2FBuenaDoYouKnowPasswordText:
-	text "BUENA: Hi!"
-	line "Did you tune in to"
+	ntag "BUENA:"
+	text "Did you tune in to"
 	cont "my radio show?"
 
 	para "Do you remember"
@@ -263,39 +264,40 @@ RadioTower2FBuenaDoYouKnowPasswordText:
 	done
 
 RadioTower2FBuenaJoinTheShowText:
-	text "BUENA: Oh, wow!"
+	ntag "BUENA:"
+	text "Oh, wow!"
 	line "Thank you!"
 
 	para "What was your name"
 	line "again?"
 
-	para "…<PLAY_G>, OK!"
+	para "…<PLAYER>, OK!"
 
-	para "Come on, <PLAY_G>."
+	para "Come on, <PLAYER>."
 	line "Join the show."
 	done
 
 RadioTower2FBuenaEveryoneSayPasswordText:
-	text "BUENA: Everyone"
-	line "ready?"
+	ntag "BUENA:"
+	text "Everyone ready?"
 
 	para "I want to hear you"
 	line "shout out today's"
-
-	para "password for"
-	line "<PLAY_G>!"
+	cont "password for"
+	roll "<PLAYER>!"
 	done
 
 RadioTower2FBuenaComeBackAfterListeningText:
-	text "BUENA: Come back"
-	line "after you listen"
-
-	para "to my show, OK?"
-	line "Catch ya later!"
+	ntag "BUENA:"
+	text "Come back after"
+	line "you listen to my"
+	cont "show, OK?"
+	roll "Catch ya later!"
 	done
 
 RadioTower2FBuenaAlreadyPlayedText:
-	text "BUENA: Sorry…"
+	ntag "BUENA:"
+	text "Sorry…"
 
 	para "You get just one"
 	line "chance each day."
@@ -305,7 +307,8 @@ RadioTower2FBuenaAlreadyPlayedText:
 	done
 
 RadioTower2FBuenaCorrectAnswerText:
-	text "BUENA: YIPPEE!"
+	ntag "BUENA:"
+	text "YIPPEE!"
 	line "That's right!"
 
 	para "You did tune in!"
@@ -316,7 +319,8 @@ RadioTower2FBuenaCorrectAnswerText:
 	done
 
 RadioTower2FBuenaDidYouForgetText:
-	text "BUENA: Aww…"
+	ntag "BUENA:"
+	text "Aww…"
 	line "That's not it…"
 
 	para "Did you forget the"
@@ -324,36 +328,37 @@ RadioTower2FBuenaDidYouForgetText:
 	done
 
 RadioTower2FBuenaThanksForComingText:
-	text "BUENA: Yup! Our"
-	line "contestant was"
+	ntag "BUENA:"
+	text "Our contestant was"
+	line "<PLAYER>."
+	cont "Thanks for coming!"
 
-	para "<PLAY_G>."
-	line "Thanks for coming!"
-
-	para "I hope all you"
+	para "I hope all of you"
 	line "listeners will"
-
-	para "come too!"
-	line "I'll be waiting!"
+	cont "come play too!"
+	roll "I'll be waiting!"
 	done
 
 RadioTower2FBuenaPasswordIsHelpText:
-	text "BUENA: Huh?"
+	ntag "BUENA:"
+	text "Huh?"
 	line "Today's password?"
 
 	para "HELP, of course!"
 	done
 
 RadioTower2FBuenaCardIsFullText:
-	text "BUENA: Your BLUE"
-	line "CARD's full."
+	ntag "BUENA:"
+	text "Your BLUE CARD is"
+	line "full."
 
 	para "Trade it in for a"
 	line "fabulous prize!"
 	done
 
 RadioTower2FBuenaTuneInAfterSixText:
-	text "BUENA: Tune in to"
+	ntag "BUENA:"
+	text "Tune in to BUENA's"
 	line "PASSWORD every"
 	cont "night from five"
 	roll "to midnight!"
@@ -363,9 +368,9 @@ RadioTower2FBuenaTuneInAfterSixText:
 	done
 
 RadioTower2FBuenaNoBlueCardText:
-	text "BUENA: Oh? You"
-	line "forgot to bring"
-	cont "your BLUE CARD?"
+	ntag "BUENA:"
+	text "You didn't bring"
+	line "your BLUE CARD?"
 
 	para "I can't give you"
 	line "points if you"
@@ -373,17 +378,17 @@ RadioTower2FBuenaNoBlueCardText:
 	done
 
 RadioTower2FBuenaOfferPhoneNumberText:
-	text "BUENA: Oh! Your"
-	line "BLUE CARD reached"
-	cont "{d:BLUE_CARD_POINT_CAP} points today!"
-	roll "That's so wild!"
+	ntag "BUENA:"
+	text "Oh! Your BLUE CARD"
+	line "reached {d:BLUE_CARD_POINT_CAP} points!"
+	cont "That's so wild!"
 
 	para "Hmm… There isn't a"
 	line "prize for hitting"
 	cont "{d:BLUE_CARD_POINT_CAP} points, but…"
 
 	para "You came by so"
-	line "often, <PLAY_G>."
+	line "often, <PLAYER>."
 
 	para "I'll make you a"
 	line "special deal!"
@@ -393,11 +398,10 @@ RadioTower2FBuenaOfferPhoneNumberText:
 	done
 
 RadioTower2FBuenaOfferNumberAgainText:
-	text "BUENA: <PLAY_G>,"
-	line "do you want to"
-
-	para "register my phone"
-	line "number?"
+	ntag "BUENA:"
+	text "<PLAYER>, do you"
+	line "want to register"
+	cont "my phone number?"
 	done
 
 RadioTower2FRegisteredBuenasNumberText:
@@ -406,22 +410,22 @@ RadioTower2FRegisteredBuenasNumberText:
 	done
 
 RadioTower2FBuenaCallMeText:
-	text "BUENA: I look"
-	line "forward to hearing"
-	cont "from you!"
+	ntag "BUENA:"
+	text "I look forward to"
+	line "hearing from you!"
 	done
 
 RadioTower2FBuenaSadRejectedText:
-	text "BUENA: Aww… It's a"
+	ntag "BUENA:"
+	text "Aww… But it's a"
 	line "special prize…"
 	done
 
 RadioTower2FBuenaYourPhoneIsFullText:
-	text "BUENA: <PLAY_G>,"
-	line "your phone list"
-
-	para "has no room left"
-	line "for me…"
+	ntag "BUENA:"
+	text "<PLAYER>, your"
+	line "phone list has no"
+	cont "room left for me…"
 	done
 
 RadioTower2FPlayerWalksToMicrophoneMovement:
@@ -463,38 +467,12 @@ RadioTower2FBuenaReceptionistNoCardText:
 	line "BLUE CARD!"
 	done
 
-RadioTower2FBlackBelt1Script:
-	jumptextfaceplayer RadioTower2FBlackBelt1Text
-RadioTower2FBlackBelt1Text:
-	text "Sorry. Authorized"
-	line "personnel only"
-	cont "beyond this point."
-
-	para "It wasn't that way"
-	line "before."
-
-	para "There's something"
-	line "wrong with the"
-	cont "DIRECTOR…"
-	done
-
-RadioTower2FBlackBelt2Script:
-	jumptextfaceplayer RadioTower2FBlackBelt2Text
-RadioTower2FBlackBelt2Text:
-	text "Feel free to look"
-	line "around anywhere."
-
-	para "The DIRECTOR is"
-	line "nice again, just"
-	cont "as he was before."
-	done
-
 RadioTower2FSuperNerdScript:
 	jumptextfaceplayer RadioTower2FSuperNerdText
 RadioTower2FSuperNerdText:
 	text "You can listen to"
-	line "the radio any-"
-	cont "where. Tune in!"
+	line "the radio almost"
+	cont "anywhere. Tune in!"
 	done
 
 RadioTower2FTeacherScript:
@@ -540,8 +518,8 @@ RadioTowerJigglypuff:
 	end
 
 RadioTowerJigglypuffText:
-	text "JIGGLYPUFF:"
-	line "Jiggly…"
+	ntag "JIGGLYPUFF:"
+	text "Jiggly…"
 	done
 
 RadioTower2FSalesSign:
@@ -553,8 +531,8 @@ RadioTower2FSalesSignText:
 RadioTower2FOaksPKMNTalkSign:
 	jumptext RadioTower2FOaksPKMNTalkSignText
 RadioTower2FOaksPKMNTalkSignText:
-	text "PROF.OAK's #MON"
-	line "TALK"
+	text "PROF.OAK's"
+	line "#MON TALK"
 
 	para "The Hottest Show"
 	line "on the Air!"
@@ -590,7 +568,6 @@ RadioTower2F_MapEvents:
 	def_object_events
 	object_event 14,  5, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Buena, -1
 	object_event 12,  7, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, RadioTowerBuenaPrizeReceptionist, EVENT_RADIO_TOWER_CIVILIANS
-;	object_event  0,  1, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RadioTower2FBlackBelt1Script, EVENT_RADIO_TOWER_CIVILIANS
 	object_event  6,  6, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, RadioTower2FSuperNerdScript, EVENT_RADIO_TOWER_CIVILIANS
 	object_event 17,  2, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RadioTower2FTeacherScript, -1
 	object_event 12,  1, SPRITE_JIGGLYPUFF, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RadioTowerJigglypuff, -1

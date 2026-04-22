@@ -8,7 +8,8 @@ SafariZoneArea3_MapScripts:
 SafariZoneArea3Officer:
 	jumptextfaceplayer SafariZoneArea3OfficerText
 SafariZoneArea3OfficerText:
-	text "Win a TM03 for"
+	ntag "RANGER:"
+	text "Win a prize for"
 	line "finding the"
 	cont "SECRET HOUSE!"
 	done

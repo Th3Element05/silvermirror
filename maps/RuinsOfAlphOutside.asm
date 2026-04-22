@@ -45,8 +45,8 @@ RuinsOfAlphOutsideScientistScript:
 	playsound SFX_TRANSACTION
 	pause 30
 	writetext RuinsOfAlphOutside_ModifiedDexText
-;	waitbutton
-;	writetext RuinsOfAlphOutside_DexUpgradedText
+	promptbutton
+	writetext RuinsOfAlphOutside_DexUpgradedText
 	playsound SFX_ITEM
 	waitsfx
 	setflag ENGINE_UNOWN_DEX
@@ -65,6 +65,7 @@ RuinsOfAlphOutsideScientistScript:
 	jumptextfaceplayer RuinsOfAlphOutside_AllUnownText
 
 RuinsOfAlphOutside_DoneForText:
+	ntag "SCIENTIST:"
 	text "You! You're okay!"
 
 	para "I thought you were"
@@ -78,6 +79,7 @@ RuinsOfAlphOutside_DoneForText:
 	done
 
 RuinsOfAlphOutside_TellMeText:
+	ntag "SCIENTIST:"
 	text "The tremor seems"
 	line "to have opened up"
 	cont "other chambers in"
@@ -95,6 +97,7 @@ RuinsOfAlphOutside_TellMeText:
 
 ;RuinsOfAlphOutsideScientistText:
 RuinsOfAlphOutside_GiveUnownDexText:
+	ntag "SCIENTIST:"
 	text "Hm? What's that?"
 
 	para "There are strange"
@@ -121,6 +124,7 @@ RuinsOfAlphOutside_GiveUnownDexText:
 	done
 
 RuinsOfAlphOutside_ModifiedDexText:
+	ntag "SCIENTIST:"
 	text "Done!"
 
 	para "I modified your"
@@ -133,14 +137,15 @@ RuinsOfAlphOutside_ModifiedDexText:
 	para "It records them in"
 	line "the sequence that"
 	cont "they were caught."
-;	done
+	done
 
-;RuinsOfAlphOutside_DexUpgradedText:
+RuinsOfAlphOutside_DexUpgradedText:
 	para "<PLAYER>'s #DEX"
 	line "was upgraded."
 	done
 
 RuinsOfAlphOutside_ExplainDexText:
+	ntag "SCIENTIST:"
 	text "The UNOWN you"
 	line "catch will all be"
 	cont "recorded."
@@ -150,6 +155,7 @@ RuinsOfAlphOutside_ExplainDexText:
 	done
 
 RuinsOfAlphOutside_RuinsAreOldText:
+	ntag "SCIENTIST:"
 	text "The RUINS are"
 	line "about 1500 years"
 	cont "old."
@@ -160,6 +166,7 @@ RuinsOfAlphOutside_RuinsAreOldText:
 	done
 
 RuinsOfAlphOutside_AllUnownText:
+	ntag "SCIENTIST:"
 	text "You caught all the"
 	line "UNOWN variations?"
 

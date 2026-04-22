@@ -22,8 +22,8 @@ YoungsterAsherSeenText:
 	done
 
 YoungsterAsherBeatenText:
-	text "I don't"
-	line "believe it!"
+	text "I don't believe"
+	line "it!"
 	done
 
 YoungsterAsherAfterBattleText:
@@ -75,9 +75,9 @@ BugCatcherAlSeenText:
 	done
 
 BugCatcherAlBeatenText:
-	text "If I had"
-	line "new #MON I"
-	cont "would've won!"
+	text "If I had new"
+	line "#MON I would"
+	cont "have won!"
 	done
 
 BugCatcherAlAfterBattleText:
@@ -131,8 +131,7 @@ BugCatcherDionSeenText:
 	done
 
 BugCatcherDionBeatenText:
-	text "Done"
-	line "like dinner!"
+	text "Done like dinner!"
 	done
 
 BugCatcherDionAfterBattleText:

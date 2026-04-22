@@ -43,7 +43,8 @@ MrFujisHouseMrFujiScript:
 	jumptextfaceplayer MrFujisHouseMrFujiFluteHelpedText
 
 MrFujisHouseMrFujiGivePokeFluteText:
-	text "MR.FUJI: <PLAYER>."
+	ntag "MR.FUJI:"
+	text "<PLAYER>."
 
 	para "Your #DEX quest"
 	line "may fail without"
@@ -55,11 +56,11 @@ MrFujisHouseMrFujiGivePokeFluteText:
 	done
 
 MrFujisHouseMrFujiExplainFluteText:
-	text "MR.FUJI: Upon"
-	line "hearing the #-"
-	cont "FLUTE, sleeping"
-	roll "#MON will"
-	cont "spring awake!"
+	ntag "MR.FUJI:"
+	text "Upon hearing the"
+	line "#FLUTE, sleep-"
+	cont "ing #MON will"
+	roll "spring awake!"
 
 	para "It works on any"
 	line "sleeping #MON."
@@ -77,6 +78,7 @@ MrFujisHouseMrFujiExplainFluteText:
 	done
 
 MrFujisHouseMrFujiExplainRadioText:
+	ntag "MR.FUJI:"
 	text "That will enable"
 	line "the radio on your"
 	cont "# GEAR to pick"
@@ -88,8 +90,9 @@ MrFujisHouseMrFujiExplainRadioText:
 	done
 
 MrFujisHouseMrFujiFluteHelpedText:
-	text "MR.FUJI: Has my"
-	line "FLUTE helped you?"
+	ntag "MR.FUJI:"
+	text "Has my FLUTE been"
+	line "helpful?"
 	done
 
 MrFujisHouseNidorino:
@@ -100,7 +103,8 @@ MrFujisHouseNidorino:
 	closetext
 	end
 MrFujisHouseNidorinoText:
-	text "NIDORINO: Gaoo!"
+	ntag "NIDORINO:"
+	text "Gaoo!"
 	done
 
 MrFujisHouseGirlScript:
@@ -135,7 +139,8 @@ MrFujisHousePsyduck:
 	closetext
 	end
 MrFujisHousePsyduckText:
-	text "PSYDUCK: Gwappa!"
+	ntag "PSYDUCK:"
+	text "Gwappa!"
 	done
 
 MrFujisHouseSuperNerdScript:

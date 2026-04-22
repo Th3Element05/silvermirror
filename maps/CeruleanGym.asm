@@ -61,6 +61,7 @@ CeruleanGymCheckBadges:
 	end
 
 MistyIntroText:
+	ntag "MISTY:"
 	text "Hi, you're a new"
 	line "face!"
 
@@ -80,6 +81,7 @@ MistyIntroText:
 	done
 
 MistyWinLossText:
+	ntag "MISTY:"
 	text "Wow!"
 	line "You're too much!"
 
@@ -96,6 +98,7 @@ ReceivedCascadebadgeText:
 	done
 
 MistyCascadebadgeText:
+	ntag "MISTY:"
 	text "The CASCADEBADGE"
 	line "makes all #MON"
 	cont "up to L30 obey!"
@@ -116,6 +119,7 @@ MistyCascadebadgeText:
 	done
 
 MistyTMBubblebeamText:
+	ntag "MISTY:"
 	text "TM11 teaches"
 	line "BUBBLEBEAM!"
 

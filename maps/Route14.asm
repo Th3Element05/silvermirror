@@ -197,8 +197,7 @@ BikerReeseBeatenText:
 	done
 
 BikerReeseAfterBattleText:
-	text "What, what, what?"
-	line "What do you want?"
+	text "Don't get cocky!"
 	done
 
 

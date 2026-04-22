@@ -108,6 +108,7 @@ VictoryRoad2FMoltres:
 	end
 
 MoltresText:
+	ntag "MOLTRES:"
 	text "Gyaoo!"
 	done
 

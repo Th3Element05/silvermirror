@@ -64,7 +64,8 @@ UnionCave1FGeodude:
 	end
 
 UnionCave1FGeodudeText:
-	text "GEODUDE: Geo?"
+	ntag "GEODUDE:"
+	text "Geo?"
 	done
 
 UnionCave1FGeodudeGotHit:
@@ -163,7 +164,8 @@ UnionCave1FKangaskhan:
 	end
 
 UnionCave1FKangaskhanText:
-	text "KANGASKHAN: Khan!"
+	ntag "KANGASKHAN:"
+	text "Khan!"
 	line "Shuaan!"
 	done
 
@@ -187,8 +189,8 @@ PokemaniacMicahSeenText:
 	done
 
 PokemaniacMicahBeatenText:
-	text "Ugh. My poor #-"
-	line "MON…"
+	text "Ugh. My poor"
+	line "#MON…"
 	done
 
 PokemaniacMicahAfterBattleText:

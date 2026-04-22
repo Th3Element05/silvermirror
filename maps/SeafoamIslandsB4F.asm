@@ -31,6 +31,7 @@ SeafoamIslandsArticuno:
 	end
 
 ArticunoText:
+	ntag "ARTICUNO:"
 	text "Gyaoo!"
 	done
 

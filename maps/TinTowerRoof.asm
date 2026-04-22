@@ -39,6 +39,7 @@ TinTowerHoOh:
 	end
 
 HoOhText:
+	ntag "HO-OH:"
 	text "Shaoooh!"
 	done
 

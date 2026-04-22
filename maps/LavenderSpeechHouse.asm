@@ -43,7 +43,8 @@ LavenderSpeechHouseCubone:
 	end
 
 LavenderSpeechHouseCuboneText:
-	text "CUBONE: Kyarugoo!"
+	ntag "CUBONE:"
+	text "Kyarugoo!"
 	done
 
 LavenderSpeechHouseBookshelf:

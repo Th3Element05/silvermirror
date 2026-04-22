@@ -106,6 +106,7 @@ GotWhirlpoolPagerText: ;change whirlpool pager to POLIWRATH?
 ;	jumpstd RadioTowerRocketsScript
 
 ChuckIntroText1:
+	ntag "CHUCK:"
 	text "WAHAHAH!"
 
 	para "So you've made"
@@ -122,13 +123,15 @@ ChuckIntroText1:
 	done
 
 ChuckIntroText2:
-	text "CHUCK: Urggh!"
+	ntag "CHUCK:"
+	text "Urggh!"
 	line "…"
 
 	para "Oooarrgh!"
 	done
 
 ChuckIntroText3:
+	ntag "CHUCK:"
 	text "There! Scared now,"
 	line "are you?"
 
@@ -143,6 +146,7 @@ ChuckIntroText3:
 	done
 
 ChuckLossText:
+	ntag "CHUCK:"
 	text "Wha? Huh?"
 	line "I lost?"
 
@@ -157,6 +161,7 @@ GetStormBadgeText:
 	done
 
 ChuckExplainBadgeText:
+	ntag "CHUCK:"
 	text "You're strong."
 	line "I think you might"
 	cont "your #MON could"
@@ -190,6 +195,7 @@ ChuckExplainBadgeText:
 ;	done
 
 ChuckExplainWhirlpoolText:
+	ntag "CHUCK:"
 	text "That's WHIRLPOOL!"
 
 	para "LAPRAS from your"
@@ -217,6 +223,7 @@ ChuckExplainWhirlpoolText:
 	done
 
 ChuckAfterText:
+	ntag "CHUCK:"
 	text "WAHAHAH! I enjoyed"
 	line "battling you!"
 

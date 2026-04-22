@@ -60,12 +60,14 @@ FastShipBedText2:
 	done
 
 FastShipArrivedOlivineText:
+	ntag "CAPTAIN:"
 	text "FAST SHIP S.S.AQUA"
 	line "has arrived in"
 	cont "OLIVINE CITY."
 	done
 
 FastShipArrivedVermilionText:
+	ntag "CAPTAIN:"
 	text "FAST SHIP S.S.AQUA"
 	line "has arrived in"
 	cont "VERMILION CITY."
@@ -110,8 +112,8 @@ TrainerTwinsJoAndZoe:
 	end
 
 TwinsJoAndZoeSeenText:
-	text "ZOE: We're bored."
-	line "JO: Play with us!"
+	text "We're bored."
+	line "Play with us!"
 	done
 
 TwinsJoAndZoeBeatenText:

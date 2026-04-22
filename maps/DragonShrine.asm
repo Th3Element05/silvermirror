@@ -212,6 +212,7 @@ DragonShrineQuestion5_MenuHeader:
 	db "Both@"
 
 DragonShrineElderGreetingText:
+	ntag "ELDER:"
 	text "Hm… Good to see"
 	line "you here."
 
@@ -236,28 +237,33 @@ DragonShrineElderGreetingText:
 	done
 
 DragonShrineQuestion1Text:
+	ntag "ELDER:"
 	text "What are #MON"
 	line "to you?"
 	done
 
 DragonShrineQuestion2Text:
+	ntag "ELDER:"
 	text "What helps you to"
 	line "win battles?"
 	done
 
 DragonShrineQuestion3Text:
+	ntag "ELDER:"
 	text "What kind of"
 	line "trainer do you"
 	cont "wish to battle?"
 	done
 
 DragonShrineQuestion4Text:
+	ntag "ELDER:"
 	text "What is most"
 	line "important when"
 	cont "raising #MON?"
 	done
 
 DragonShrineQuestion5Text:
+	ntag "ELDER:"
 	text "Strong #MON."
 	line "Weak #MON."
 
@@ -266,14 +272,17 @@ DragonShrineQuestion5Text:
 	done
 
 DragonShrineWrongAnswerText:
+	ntag "ELDER:"
 	text "Hm… I see…"
 	done
 
 DragonShrineRightAnswerText:
+	ntag "ELDER:"
 	text "Oh, I understand…"
 	done
 
 DragonShrinePassedTestText:
+	ntag "ELDER:"
 	text "Hm… I see…"
 
 	para "You care deeply"
@@ -291,6 +300,7 @@ DragonShrinePassedTestText:
 	done
 
 DragonShrineTestCompleteText:
+	ntag "ELDER:"
 	text "There will always"
 	line "be more to learn"
 	cont "about the nature"
@@ -307,6 +317,7 @@ DragonShrineTestCompleteText:
 	done
 
 DragonShrineOfferDratiniPassedText:
+	ntag "ELDER:"
 	text "I would like to"
 	line "offer you this"
 	cont "#MON."
@@ -320,6 +331,7 @@ DragonShrineOfferDratiniPassedText:
 	done
 
 DragonShrineOfferDratiniFailedText:
+	ntag "ELDER:"
 	text "I would like to"
 	line "offer you this"
 	cont "#MON."
@@ -430,6 +442,7 @@ DragonShrineElder1Script:
 	jumptextfaceplayer DragonShrineElderAfterFailedText
 
 DragonShrineSymbolicDragonText:
+	ntag "ELDER:"
 	text "Dragon #MON are"
 	line "symbolic of our"
 	cont "clan."
@@ -441,6 +454,7 @@ DragonShrineSymbolicDragonText:
 	done
 
 DragonShrineElderAfterFailedText:
+	ntag "ELDER:"
 	text "Dragon #MON are"
 	line "symbolic of our"
 	cont "clan."

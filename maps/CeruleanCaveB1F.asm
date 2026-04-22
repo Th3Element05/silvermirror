@@ -44,6 +44,7 @@ CeruleanCaveB1FMewtwo:
 	end
 
 MewtwoText:
+	ntag "MEWTWO:"
 	text "…!"
 	done
 

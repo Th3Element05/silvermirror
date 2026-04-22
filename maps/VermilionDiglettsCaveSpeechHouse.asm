@@ -22,7 +22,8 @@ VermilionPidgeyHousePidgeyScript:
 	closetext
 	end
 VermilionPidgeyHousePidgeyText:
-	text "PIDGEY: Kurukkoo!"
+	ntag "PIDGEY:"
+	text "Kurukkoo!"
 	done
 
 VermilionPidgeyHousePaperScript:

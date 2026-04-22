@@ -202,10 +202,10 @@ MomWalksBackMovement:
 	step_end
 
 ElmsLookingForYouText:
-	text "Oh, <PLAYER>…! Our"
-	line "neighbor, PROF."
-	cont "OAK, was looking"
-	roll "for you."
+	ntag "MOM:"
+	text "Oh, <PLAYER>…!"
+	line "PROF.OAK was look-"
+	cont "ing for you."
 
 	para "He said he had"
 	line "something to give"
@@ -220,6 +220,7 @@ ElmsLookingForYouText:
 	done
 
 MomGivesPokegearText:
+	ntag "MOM:"
 	text "#MON GEAR, or"
 	line "just #GEAR."
 
@@ -235,11 +236,13 @@ MomGivesPokegearText:
 	done
 
 IsItDSTText:
+	ntag "MOM:"
 	text "Is it Daylight"
 	line "Saving Time now?"
 	done
 
 ComeHomeForDSTText:
+	ntag "MOM:"
 	text "Come home to"
 	line "adjust your clock"
 	cont "for Daylight"
@@ -251,6 +254,7 @@ ComeHomeForDSTText:
 	done
 
 KnowTheInstructionsText:
+	ntag "MOM:"
 	text "Oh, I see."
 
 	para "Aren't you a"
@@ -258,6 +262,7 @@ KnowTheInstructionsText:
 	done
 
 DontKnowTheInstructionsText:
+	ntag "MOM:"
 	text "I'll read the"
 	line "instructions."
 
@@ -267,6 +272,7 @@ DontKnowTheInstructionsText:
 	done
 
 InstructionsNextText:
+	ntag "MOM:"
 	text "Phone numbers are"
 	line "stored in memory."
 
@@ -278,11 +284,13 @@ InstructionsNextText:
 	done
 
 HurryUpElmIsWaitingText:
+	ntag "MOM:"
 	text "PROF.OAK was"
 	line "looking for you."
 	done
 
 SoWhatWasProfElmsErrandText:
+	ntag "MOM:"
 	text "So, what did PROF."
 	line "OAK have for you?"
 
@@ -299,6 +307,7 @@ SoWhatWasProfElmsErrandText:
 	done
 
 ImBehindYouText:
+	ntag "MOM:"
 	text "<PLAYER>, do it!"
 
 	para "I'm behind you all"
@@ -313,7 +322,7 @@ NeighborMornIntroText:
 	done
 
 NeighborDayIntroText:
-	text "Hello, <PLAY_G>!"
+	text "Hello, <PLAYER>!"
 	line "I'm visiting!"
 	done
 
@@ -329,9 +338,9 @@ NeighborText:
 	line "heard?"
 
 	para "My daughter is"
-	line "adamant about"
-	cont "becoming PROF."
-	roll "OAK's assistant."
+	line "adamant about be-"
+	cont "coming PROF.OAK's"
+	roll "assistant."
 
 	para "She really loves"
 	line "#MON!"

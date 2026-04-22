@@ -53,15 +53,16 @@ TinTower1FTowerShookText:
 TinTower1FSage1Script:
 	jumptextfaceplayer TinTower1FSage1Text
 TinTower1FSage1Text:
+;	ntag "SAGE:"
 	text "HO-OH appears to"
 	line "have descended"
-	cont "upon this, the"
-	roll "TIN TOWER!"
+	cont "upon the TOWER!"
 	done
 
 TinTower1FSage2Script:
 	jumptextfaceplayer TinTower1FSage2Text
 TinTower1FSage2Text:
+;	ntag "SAGE:"
 	text "When the BRASS"
 	line "TOWER burned down,"
 	cont "three nameless"
@@ -90,6 +91,7 @@ TinTower1FSage2Text:
 TinTower1FSage3Script:
 	jumptextfaceplayer TinTower1FSage3Text
 TinTower1FSage3Text:
+;	ntag "SAGE:"
 	text "The legendary"
 	line "#MON are said"
 	cont "to embody three"
@@ -108,6 +110,7 @@ TinTower1FSage3Text:
 TinTower1FSage4Script:
 	jumptextfaceplayer TinTower1FSage4Text
 TinTower1FSage4Text:
+;	ntag "SAGE:"
 	text "The two TOWERs are"
 	line "said to have been"
 	cont "built to foster"
@@ -130,6 +133,7 @@ TinTower1FSage5Script:
 	jumptextfaceplayer TinTower1FSage5Text2
 
 TinTower1FSage5Text1:
+;	ntag "SAGE:"
 	text "I believe you are"
 	line "being tested."
 
@@ -139,6 +143,7 @@ TinTower1FSage5Text1:
 	done
 
 TinTower1FSage5Text2:
+;	ntag "SAGE:"
 	text "I have more time"
 	line "to meditate now"
 	cont "that things have"

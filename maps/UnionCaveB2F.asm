@@ -119,7 +119,7 @@ CooltrainerfRiverBeatenText:
 	done
 
 CooltrainerfRiverAfterBattleText:
-	text "Just once a week,"
+	text "On the weekends,"
 	line "a #MON comes to"
 	cont "the water's edge."
 

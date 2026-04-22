@@ -57,22 +57,15 @@ TrainerRocketExecutiveF2:
 ;
 	scall SSAquaCaptainSaved
 ;
-;	opentext
-;	writetext SSAquaCaptainTakeThisText
-;	promptbutton
-;	verbosegiveitem SMOKE_BALL
-;	iffalse .NoRoom
-;	setevent EVENT_GOT_SMOKE_BALL_FROM_CAPTAIN_ON_SS_AQUA
-;	writetext SSAquaCaptainSmokeBallText
-;	waitbutton
-;.NoRoom:
-;	closetext
-;
+	opentext
+	writetext FastShipCaptainExcuseMeText
+	waitbutton
+	closetext
 	waitsfx
 	playsound SFX_ELEVATOR_END
 	pause 30
 	opentext
-	writetext SSAquaHasArrivedOlivineText
+	writetext FastShipArrivedOlivineText ;SSAquaHasArrivedOlivineText
 	waitbutton
 	closetext
 	setevent EVENT_FAST_SHIP_HAS_ARRIVED
@@ -142,15 +135,17 @@ SSAquaCaptainSaved:
 	end
 
 SSAquaCaptainTakeThisText:
-	text "CAPTAIN: I don't"
-	line "know what we would"
-	cont "have done if you"
-	roll "hadn't been here!"
+	ntag "CAPTAIN:"
+	text "I don't know what"
+	line "we would have done"
+	cont "if you hadn't been"
+	roll "here!"
 
 	para "Please, take this!"
 	done
 
 SSAquaCaptainSmokeBallText:
+	ntag "CAPTAIN:"
 	text "A #MON holding"
 	line "that SMOKE BALL"
 	cont "can flee from any"
@@ -165,6 +160,7 @@ SSAquaCaptainSmokeBallText:
 	done
 
 SSAquaCaptainThanksText:
+	ntag "CAPTAIN:"
 	text "We owe everything"
 	line "to you for saving"
 	cont "the ship!"
@@ -174,6 +170,7 @@ SSAquaCaptainThanksText:
 	done
 
 SSAquaCaptainHelpText:
+	ntag "CAPTAIN:"
 	text "These ROCKETs are"
 	line "taking control of"
 	cont "the ship!"
@@ -183,6 +180,7 @@ SSAquaCaptainHelpText:
 	done
 
 SSAquaCaptainHowDoYouLikeText:
+	ntag "CAPTAIN:"
 	text "How do you like"
 	line "S.S.AQUA's ride?"
 
@@ -191,11 +189,24 @@ SSAquaCaptainHowDoYouLikeText:
 	cont "waves."
 	done
 
-SSAquaHasArrivedOlivineText:
-	text "FAST SHIP S.S.AQUA"
-	line "has arrived in"
-	cont "OLIVINE CITY."
+FastShipCaptainExcuseMeText:
+	ntag "CAPTAIN:"
+	text "Oh! It looks like"
+	line "we've arrived in"
+	cont "OLIVINE during the"
+	roll "commotion!"
+
+	para "Please excuse me"
+	line "while I make the"
+	cont "announcement!"
 	done
+
+;SSAquaHasArrivedOlivineText:
+;	ntag "CAPTAIN:"
+;	text "FAST SHIP S.S.AQUA"
+;	line "has arrived in"
+;	cont "OLIVINE CITY."
+;	done
 
 FastShipCaptainsCabinStepForwardMovement:
 	step UP

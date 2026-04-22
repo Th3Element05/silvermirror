@@ -144,8 +144,7 @@ RocketGruntM1SeenText:
 	done
 
 RocketGruntM1BeatenText:
-	text "So, you"
-	line "are good."
+	text "So, you are good."
 	done
 
 RocketGruntM1AfterBattleText:
@@ -167,7 +166,7 @@ TrainerRocketGruntM2:
 RocketGruntM2SeenText:
 	text "TEAM ROCKET will"
 	line "find the fossils,"
-	cont "revive and sell"
+	cont "revive, and sell"
 	roll "them for cash!"
 	done
 
@@ -199,8 +198,7 @@ RocketGruntF1SeenText:
 	done
 
 RocketGruntF1BeatenText:
-	text "I'm"
-	line "steamed!"
+	text "I'm steamed!"
 	done
 
 RocketGruntF1AfterBattleText:
@@ -226,8 +224,7 @@ RocketGruntM3SeenText:
 	done
 
 RocketGruntM3BeatenText:
-	text "I blew"
-	line "it!"
+	text "I blew it!"
 	done
 
 RocketGruntM3AfterBattleText:

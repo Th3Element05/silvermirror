@@ -22,10 +22,10 @@ FastShipRngineRoomRocketsSpeech:
 	end
 
 FastShipEngineRoomRocketSpeechText:
-	text "ROCKET: Just do"
-	line "as I say, and no"
-	cont "one else needs to"
-	roll "get hurt!"
+	ntag "ROCKET:"
+	text "Just do as I say,"
+	line "and no else needs"
+	cont "to get hurt!"
 	done
 
 TrainerRocketGruntM29:

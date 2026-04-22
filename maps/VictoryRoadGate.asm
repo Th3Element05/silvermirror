@@ -32,12 +32,14 @@ VictoryRoadGateBadgeCheckScript:
 	end
 
 VictoryRoadGateBadgeCheckText:
+;	ntag "OFFICER:"
 	text "Only trainers who"
 	line "have proven them-"
 	cont "selves may pass."
 	done
 
 VictoryRoadGateNotEnoughBadgesText:
+;	ntag "OFFICER:"
 	text "You don't have"
 	line "enough GYM BADGEs."
 
@@ -48,6 +50,7 @@ VictoryRoadGateNotEnoughBadgesText:
 	done
 
 VictoryRoadGateEightBadgesText:
+;	ntag "OFFICER:"
 	text "Oh! The eight"
 	line "BADGEs of KANTO!"
 

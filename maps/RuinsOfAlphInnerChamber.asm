@@ -70,9 +70,8 @@ RuinsOfAlphInnerChamberScientist2Text:
 RuinsOfAlphInnerChamberStatue:
 	jumptext RuinsOfAlphInnerChamber_StatueText
 RuinsOfAlphInnerChamber_StatueText:
-	text "It's a replica of"
-	line "an ancient #-"
-	cont "MON."
+	text "It's a statue of an"
+	line "ancient #MON."
 	done
 
 RuinsOfAlphInnerChamber_MapEvents:

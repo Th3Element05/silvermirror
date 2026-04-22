@@ -71,10 +71,10 @@ SSAnne2FRivalGoesAroundScript:
 	end
 
 SSAnne2FRivalBeforeBattleText:
-	text "<RIVAL>: Bonjour!"
-	line "<PLAYER>!"
-	cont "Imagine seeing"
-	roll "you here!"
+	ntag "<RIVAL>:"
+	text "Bonjour! <PLAYER>!"
+	line "Imagine seeing"
+	cont "you here!"
 
 ;	para "<PLAYER>, were you"
 ;	line "really invited?"
@@ -91,6 +91,7 @@ SSAnne2FRivalBeforeBattleText:
 	done
 
 SSAnne2FRivalBattleWinText:
+	ntag "<RIVAL>:"
 	text "Humph!"
 
 	para "At least you're"
@@ -99,6 +100,7 @@ SSAnne2FRivalBattleWinText:
 	done
 
 SSAnne2FRivalBattleLossText:
+	ntag "<RIVAL>:"
 	text "<PLAYER>! What are"
 	line "you, seasick?"
 
@@ -107,11 +109,12 @@ SSAnne2FRivalBattleLossText:
 	done
 
 SSAnne2FRivalAfterBattleText:
-	text "<RIVAL>: I heard"
-	line "there was a CUT"
-	cont "master on board,"
-	roll "but he was just a"
-	cont "seasick old man!"
+	ntag "<RIVAL>:"
+	text "I heard there was"
+	line "a CUT master on"
+	cont "board, but he was"
+	roll "just a seasick old"
+	cont "man!"
 
 	para "But, CUT itself is"
 	line "really useful, so"
@@ -180,10 +183,12 @@ SSAnne2FRubCaptainsBack:
 
 GotCutPagerText:
 	text "SCYTHER was added"
-	line "to the PPS!"
+	line "to the PPS!@"
 
-	para "CAPTAIN: That's a"
-	line "CUT PAGER."
+	text_promptbutton
+	ntag "CAPTAIN:"
+	text "That's a PAGER for"
+	line "the PPS."
 
 	para "It lets you call"
 	line "SCYTHER to chop"
@@ -191,7 +196,8 @@ GotCutPagerText:
 	done
 
 SSAnne2FCaptainIntroText:
-	text "CAPTAIN: Ooargh…"
+	ntag "CAPTAIN:"
+	text "Ooargh…"
 
 	para "I feel hideous…"
 
@@ -208,7 +214,8 @@ SSAnne2FRubCaptainsBackText:
 	done
 
 SSAnne2FCaptainThanksGivePagerText:
-	text "CAPTAIN: Whew!"
+	ntag "CAPTAIN:"
+	text "Whew!"
 	line "Thank you! I feel"
 	cont "much better!"
 
@@ -222,17 +229,19 @@ SSAnne2FCaptainThanksGivePagerText:
 	line "have this!"
 	done
 
-SSAnne2FCaptainExplainPagerGiveCutText:
-	text "CAPTAIN: That's a"
-	line "CUT PAGER."
-
-	para "It lets you call"
-	line "SCYTHER to chop"
-	cont "down small trees!"
-	done
+;SSAnne2FCaptainExplainPagerGiveCutText:
+;	ntag "CAPTAIN:"
+;	text "That's a"
+;	line "CUT PAGER."
+;
+;	para "It lets you call"
+;	line "SCYTHER to chop"
+;	cont "down small trees!"
+;	done
 
 SSAnne2FCaptainSetSailText:
-	text "CAPTAIN: Whew!"
+	ntag "CAPTAIN:"
+	text "Whew!"
 
 	para "Now that I'm not"
 	line "seasick anymore,"
@@ -241,8 +250,8 @@ SSAnne2FCaptainSetSailText:
 	done
 
 SSAnne2FCaptainWelcomeBackText:
-	text "CAPTAIN: Welcome"
-	line "back!"
+	ntag "CAPTAIN:"
+	text "Welcome back!"
 
 	para "I hoped I might"
 	line "see you again when"
@@ -316,7 +325,7 @@ SSAnne2FCaptainsBookText:
 	text "How to Conquer"
 	line "Seasickness…"
 
-	para "The CAPTAIN's"
+	para "The CAPTAIN is"
 	line "reading this!"
 	done
 

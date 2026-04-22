@@ -73,13 +73,14 @@ EcruteakCityGramps1AfterText:
 	line "has been passed"
 	cont "down by ECRUTEAK"
 	roll "GYM LEADERs."
-
-	para "Me?"
-
-	para "I was a trainer"
-	line "way back when."
-	cont "Hohoho!"
 	done
+
+;	para "Me?"
+;
+;	para "I was a trainer"
+;	line "way back when."
+;	cont "Hohoho!"
+;	done
 
 EcruteakCityGirlScript:
 	jumptextfaceplayer EcruteakCityGirlText
@@ -99,9 +100,8 @@ EcruteakCityGramps2Script:
 EcruteakCityGramps1Text:
 	text "ECRUTEAK used to"
 	line "have two towers:"
-
-	para "one each in the"
-	line "east and west."
+	cont "One each in the"
+	roll "east and west."
 	done
 
 EcruteakCityLass1Script:
@@ -109,9 +109,8 @@ EcruteakCityLass1Script:
 EcruteakCityLass1Text:
 	text "I'm going to prac-"
 	line "tice at the DANCE"
-
-	para "THEATER. Care to"
-	line "join me?"
+	cont "THEATER. Care to"
+	roll "join me?"
 	done
 
 EcruteakCityLass2Script:

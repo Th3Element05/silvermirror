@@ -146,7 +146,8 @@ MoomooScript:
 ;	done
 
 MoomooHappyMooText:
-	text "MILTANK: Mooo!"
+	ntag "MILTANK:"
+	text "Mooo!"
 	done
 
 ;Route39BarnAskGiveBerryText:

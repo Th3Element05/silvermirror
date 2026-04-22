@@ -108,8 +108,7 @@ BirdKeeperJamieSeenText:
 	done
 
 BirdKeeperJamieBeatenText:
-	text "Not good"
-	line "enough!"
+	text "Not good enough!"
 	done
 
 BirdKeeperJamieAfterBattleText:
@@ -157,8 +156,7 @@ BirdKeeperPerrySeenText:
 	done
 
 BirdKeeperPerryBeatenText:
-	text "Shot down"
-	line "in flames!"
+	text "Shot down!"
 	done
 
 BirdKeeperPerryAfterBattleText:
@@ -180,8 +178,7 @@ BirdKeeperTobySeenText:
 	done
 
 BirdKeeperTobyBeatenText:
-	text "Not ready"
-	line "yet!"
+	text "Not ready yet!"
 	done
 
 BirdKeeperTobyAfterBattleText:
