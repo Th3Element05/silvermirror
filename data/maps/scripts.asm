@@ -413,6 +413,7 @@ INCLUDE "maps/UnionCave1F.asm"
 INCLUDE "maps/UnionCaveB1F.asm"
 INCLUDE "maps/UnionCaveB2F.asm"
 INCLUDE "maps/Route33.asm"
+INCLUDE "maps/OlivineGoodRodHouse.asm" ; shared lure script with Route32Pokecenter1F
 
 
 SECTION "Map Scripts 32", ROMX
@@ -527,7 +528,7 @@ INCLUDE "maps/OlivineCity.asm"
 INCLUDE "maps/OlivinePokecenter1F.asm"
 INCLUDE "maps/OlivineMart.asm"
 INCLUDE "maps/OlivineGym.asm"
-INCLUDE "maps/OlivineGoodRodHouse.asm"
+;INCLUDE "maps/OlivineGoodRodHouse.asm" ; in "Map Scripts 31" for shared lure script
 INCLUDE "maps/OlivineCafe.asm"
 INCLUDE "maps/OlivineTimsHouse.asm"
 INCLUDE "maps/OlivinePunishmentSpeechHouse.asm"
