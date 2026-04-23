@@ -271,12 +271,12 @@ Serve1bppRequest::
 	and a
 	ret z
 
-; Back out if we're too far into VBlank
-	ldh a, [rLY]
-	cp LY_VBLANK
-	ret c
-	cp LY_VBLANK + 2
-	ret nc
+;; Back out if we're too far into VBlank
+;	ldh a, [rLY]
+;	cp LY_VBLANK
+;	ret c
+;	cp LY_VBLANK + 2
+;	ret nc
 
 ; Copy [wRequested1bppSize] 1bpp tiles from [wRequested1bppSource] to [wRequested1bppDest]
 
