@@ -2487,31 +2487,31 @@ HappinessCheckScript:
 	end
 
 .NotUsedToYou:
-	writetext GoldenrodHappinessRatingText_NotUsedToYou
+	writetext HappinessRatingText_NotUsedToYou
 	waitbutton
 	closetext
 	end
 
 .QuiteCute:
-	writetext GoldenrodHappinessRatingText_QuiteCute
+	writetext HappinessRatingText_QuiteCute
 	waitbutton
 	closetext
 	end
 
 .SortOfHappy:
-	writetext GoldenrodHappinessRatingText_SortOfHappy
+	writetext HappinessRatingText_SortOfHappy
 	waitbutton
 	closetext
 	end
 
 .ReallyTrustsYou:
-	writetext GoldenrodHappinessRatingText_ReallyTrustsYou
+	writetext HappinessRatingText_ReallyTrustsYou
 	waitbutton
 	closetext
 	end
 
 .LovesYouALot:
-	writetext GoldenrodHappinessRatingText_LovesYouALot
+	writetext HappinessRatingText_LovesYouALot
 	waitbutton
 	closetext
 	end
