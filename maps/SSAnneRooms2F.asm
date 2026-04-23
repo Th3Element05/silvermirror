@@ -23,7 +23,7 @@ GentlemanGregorySeenText:
 	done
 
 GentlemanGregoryBeatenText:
-	text "Good fight! Ah, I""
+	text "Good fight! Ah, I"
 	cont "feel young again!"
 	done
 

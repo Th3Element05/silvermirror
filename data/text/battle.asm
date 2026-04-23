@@ -748,8 +748,8 @@ AlreadyPoisonedText:
 	prompt
 
 SuckedHealthText:
-	text "Drained health"
-	line "from <TARGET>!"
+	text "Drained HP from"
+	line "<TARGET>!"
 	prompt
 
 DreamEatenText:
