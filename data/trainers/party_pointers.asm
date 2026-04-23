@@ -74,4 +74,5 @@ TrainerGroups:
 	dba CoupleGroup
 	dba CoolDuoGroup
 	dba RedGroup
+	dba GreenGroup
 	assert_table_length NUM_TRAINER_CLASSES - 3 ; exclude AERODACTYLE_FOSSIL, KABUTOPS_FOSSIL, POKEMON_GHOST

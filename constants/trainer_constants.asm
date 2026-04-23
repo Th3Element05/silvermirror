@@ -940,6 +940,9 @@ DEF KRIS EQU __trainer_class__
 	trainerclass RED ; 46
 	const RED1
 
+	trainerclass GREEN ; 47
+	const GREEN1
+
 	trainerclass KABUTOPS_FOSSIL ; 47
 
 	trainerclass AERODACTYL_FOSSIL ; 48

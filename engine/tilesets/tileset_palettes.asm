@@ -119,11 +119,19 @@ MapSpecificPalettes:
 	_use_palette_routine_for_map POWER_PLANT, .PowerPlantIndoorPalettes
 ;	_use_palette_routine_for_map VIRIDIAN_GYM, .ViridianGymBGPalettes
 	_use_palette_routine_for_map MAHOGANY_GYM, .AgathasRoomBGPalettes
+	_use_palette_routine_for_map SILVER_CAVE_ROOM_3, .SilverCaveBGPalettes
 	db -1 ; terminator
 
 ;.LavaOverRedCoalOverBrownBGPalette:
 ;	ld hl, LavaOverRedCoalOverBrown
 ;	jp .next
+.SilverCaveBGPalettes:
+	ld hl, SilverCaveBGPals
+	ld a, [wTimeOfDayPal]
+	maskbits NUM_DAYTIMES
+	ld bc, 8 palettes
+	call AddNTimes
+	jp .next_TimeOfDay
 ;.SandOverBrownBGPalette:
 ;	ld hl, SandOverRock
 ;	ld a, [wTimeOfDayPal]
@@ -222,6 +230,7 @@ MapSpecificOBPalettes:
 	_use_palette_routine_for_map TEAM_ROCKET_BASE_B2F, .GrayOverTreeOBPalette       ;ninja
 	_use_palette_routine_for_map TEAM_ROCKET_BASE_B3F, .GrayOverTreeOBPalette       ;ninja
 	_use_palette_routine_for_map ROUTE_43, .PinkOverYellowOBPalette                 ;persim
+	_use_palette_routine_for_map SILVER_CAVE_ROOM_3, .MirrorOverYellowOBPalette     ;mirror
 	db -1 ; terminator
 
 .PinkOverYellowOBPalette:
@@ -264,6 +273,13 @@ MapSpecificOBPalettes:
 	maskbits NUM_DAYTIMES
 	ld bc, 8 palettes
 	ld hl, CyanOverBrown
+	jr .finish
+
+.MirrorOverYellowOBPalette:
+	ld a, [wTimeOfDayPal]
+	maskbits NUM_DAYTIMES
+	ld bc, 8 palettes
+	ld hl, MirrorOverYellow
 ;	jr .finish
 
 .finish

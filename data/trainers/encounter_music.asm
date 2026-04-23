@@ -75,5 +75,6 @@ TrainerEncounterMusic::
 	db MUSIC_BEAUTY_ENCOUNTER      ; couple
 	db MUSIC_TRAINER_ENCOUNTER     ; coolduo
 	db MUSIC_TRAINER_ENCOUNTER     ; red
+	db MUSIC_TRAINER_ENCOUNTER     ; green
 	assert_table_length NUM_TRAINER_CLASSES - 2
 ;	db MUSIC_TRAINER_ENCOUNTER       ; unused
