@@ -81,6 +81,7 @@ CreditsScript:
 	db               CODING, 0
 	db              RAJA239, 2
 	db              ARDORIN, 3
+	db             NARISHMA, 4
 
 	db CREDITS_WAIT, 36
 
