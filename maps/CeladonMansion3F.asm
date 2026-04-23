@@ -170,15 +170,6 @@ CeladonMansion3FDrawingText:
 	cont "pretty girl."
 	done
 
-CeladonMansion3FGameProgram:
-	jumptext CeladonMansion3FGameProgramText
-CeladonMansion3FGameProgramText:
-	text "It's the game"
-	line "program. Messing"
-	cont "with it could put"
-	roll "a bug in the game!"
-	done
-
 CeladonMansion3FReferenceMaterial:
 	jumptext CeladonMansion3FReferenceMaterialText
 CeladonMansion3FReferenceMaterialText:
