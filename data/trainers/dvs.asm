@@ -72,5 +72,6 @@ TrainerClassDVs:
 	dn  9,  8,  8,  8 ; NINJA ; MYSTICALMAN
 	dn  9,  8,  8,  8 ; COUPLE
 	dn 10, 10, 10,  8 ; COOL_DUO
-	dn 15, 13, 13, 14 ; RED
+	dn 15, 10, 10, 10 ; RED   ;15, 13, 13, 14
+	dn  7, 10, 10, 10 ; GREEN ;15, 13, 13, 14
 	assert_table_length NUM_TRAINER_CLASSES - 3 ; exclude AERODACTYLE_FOSSIL, KABUTOPS_FOSSIL, POKEMON_GHOST

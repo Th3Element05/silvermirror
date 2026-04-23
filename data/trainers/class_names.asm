@@ -9,7 +9,7 @@ TrainerClassNames::
 	li "LEADER"         ;JASMINE
 	li "LEADER"         ;PRYCE
 	li "LEADER"         ;CLAIR
-	li "#MON PROF."     ;POKEMON_PROF
+	li "<PKMN> PROF."   ;POKEMON_PROF
 	li "RIVAL"          ;RIVAL1
 	li "RIVAL"          ;RIVAL2
 	li "LEADER"         ;BROCK
@@ -72,4 +72,5 @@ TrainerClassNames::
 	li "COUPLE"         ;COUPLE
 	li "COOLDUO"        ;COOL_DUO
 	li "<PKMN> TRAINER" ;RED
+	li "<PKMN> TRAINER" ;GREEN
 	assert_list_length NUM_TRAINER_CLASSES - 3 ; exclude AERODACTYLE_FOSSIL, KABUTOPS_FOSSIL, POKEMON_GHOST

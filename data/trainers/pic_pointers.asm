@@ -74,6 +74,7 @@ TrainerPicPointers::
 	dba_pic CouplePic
 	dba_pic CoolduoPic
 	dba_pic RedPic
+	dba_pic GreenPic
 	dba_pic KabutopsFossilPic
 	dba_pic AerodactylFossilPic
 	dba_pic PokemonGhostPic

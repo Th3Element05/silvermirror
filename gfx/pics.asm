@@ -525,6 +525,7 @@ SuperNerdPic:        INCBIN "gfx/trainers/super_nerd.2bpp.lz"
 HaunterBackpic:      INCBIN "gfx/pokemon/haunter/back.2bpp.lz"
 XatuBackpic:         INCBIN "gfx/pokemon/xatu/back.2bpp.lz"
 RedPic:              INCBIN "gfx/trainers/red.2bpp.lz"
+GreenPic:            INCBIN "gfx/trainers/green.2bpp.lz"
 ;Porygon2Backpic:     INCBIN "gfx/pokemon/porygon2/back.2bpp.lz"
 JasminePic:          INCBIN "gfx/trainers/jasmine.2bpp.lz"
 PinecoBackpic:       INCBIN "gfx/pokemon/pineco/back.2bpp.lz"
@@ -565,7 +566,7 @@ LarvitarBackpic:     INCBIN "gfx/pokemon/larvitar/back.2bpp.lz"
 PorygonBackpic:      INCBIN "gfx/pokemon/porygon/back.2bpp.lz"
 UnownHBackpic:       INCBIN "gfx/pokemon/unown_h/back.2bpp.lz"
 MamoswineFrontpic:   INCBIN "gfx/pokemon/mamoswine/front.animated.2bpp.lz"
-MismagiusBackpic:    INCBIN "gfx/pokemon/mismagius/back.2bpp.lz"
+
 
 
 SECTION "Pics 17", ROMX
@@ -700,6 +701,7 @@ XatuFrontpic:        INCBIN "gfx/pokemon/xatu/front.animated.2bpp.lz"
 GrimerFrontpic:      INCBIN "gfx/pokemon/grimer/front.animated.2bpp.lz"
 
 
+
 SECTION "Pics 19", ROMX
 ; Seems to be an accidental copy of the previous bank
 
@@ -745,6 +747,7 @@ YanmegaFrontpic:     INCBIN "gfx/pokemon/yanmega/front.animated.2bpp.lz"
 YanmegaBackpic:      INCBIN "gfx/pokemon/yanmega/back.2bpp.lz"
 
 
+
 SECTION "Pics 21", ROMX
 
 PokemonGhostPic:     INCBIN "gfx/trainers/pokemon_ghost.2bpp.lz"
@@ -757,6 +760,7 @@ LeafeonBackpic:      INCBIN "gfx/pokemon/leafeon/back.2bpp.lz"
 SECTION "Pics 22", ROMX
 
 GlaceonBackpic:      INCBIN "gfx/pokemon/glaceon/back.2bpp.lz"
+MismagiusBackpic:    INCBIN "gfx/pokemon/mismagius/back.2bpp.lz"
 
 
 SECTION "Pics 23", ROMX
