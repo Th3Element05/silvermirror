@@ -120,6 +120,7 @@ CreditsStringsPointers:
 	dw .Zumi
 	dw .RaJa239
 	dw .Ardorin
+	dw .Narishma
 	dw .BleeperWagon
 	dw .Exkzol
 	assert_table_length NUM_CREDITS_STRINGS
@@ -249,6 +250,7 @@ CreditsStringsPointers:
 .Zumi:                db "        Zumi@"
 .RaJa239:             db "      RaJa239@"
 .Ardorin:             db "       Ardorin@"
+.Narishma:            db "    Narishma-gb@"
 .BleeperWagon:        db "    BleeperWagon@"
 .Exkzol:              db "       Exkzol@"
 ;                      ; "12345678901234567890@" max length (screen width)

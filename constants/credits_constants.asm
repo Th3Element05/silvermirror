@@ -120,6 +120,7 @@
 	const ZUMI
 	const RAJA239
 	const ARDORIN
+	const NARISHMA
 	const BLEEPERWAGON
 	const EXKZOL
 DEF NUM_CREDITS_STRINGS EQU const_value
