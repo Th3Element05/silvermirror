@@ -1,4 +1,11 @@
 InitializeEvents:
+; zero out sMysteryGiftTrainerHouseFlag to prevent glitchy Cal
+	ld a, BANK(sMysteryGiftTrainerHouseFlag)
+	call OpenSRAM
+	xor a
+	ld [sMysteryGiftTrainerHouseFlag], a
+	call CloseSRAM
+
 ; initialize events
 	ld hl, InitialEvents
 .events_loop
