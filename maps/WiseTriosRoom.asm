@@ -7,6 +7,7 @@
 	const WISETRIOSROOM_SAGE6
 
 WiseTriosRoom_MapScripts:
+	def_scene_scripts
 	scene_script WiseTriosRoomNoop1Scene, SCENE_WISETRIOSROOM_EXPLAIN_CLEAR_BELL
 	scene_script WiseTriosRoomNoop2Scene, SCENE_WISETRIOSROOM_NOOP
 
@@ -45,6 +46,8 @@ WiseTriosRoomClearBellCheck:
 WiseTriosRoomExplainClearBellScript:
 	checkevent EVENT_WISE_TRIO_EXPLAINED_CLEAR_BELL
 	iftrue .AlreadyExplainedClearBell
+	checkitem RAINBOW_WING
+	iffalse .BringRainbowWing
 	showemote EMOTE_SHOCK, WISETRIOSROOM_SAGE1, 15
 	applymovement WISETRIOSROOM_SAGE1, WiseTriosRoomOneStepDownMovement
 	turnobject PLAYER, UP
@@ -60,22 +63,31 @@ WiseTriosRoomExplainClearBellScript:
 	promptbutton
 	closetext
 ;	applymovement WISETRIOSROOM_SAGE2, WiseTriosRoomStepBackDownMovement
+
 .AlreadyExplainedClearBell
 	applymovement WISETRIOSROOM_SAGE3, WiseTriosRoomOneStepLeftMovement
 	turnobject PLAYER, RIGHT
 	opentext
 	writetext WiseTriosRoomExplainClearBellText
+	setevent EVENT_WISE_TRIO_EXPLAINED_CLEAR_BELL
+	clearevent EVENT_MAHOGANY_MART_NINJA
+	setmapscene MAHOGANY_MART_1F, SCENE_MAHOGANYMART1F_NINJA
+.TurnAwayPlayer
 	waitbutton
 	closetext
 	applymovement WISETRIOSROOM_SAGE3, WiseTriosRoomStepBackRightMovement
 	applymovement PLAYER, WiseTriosRoomOneStepLeftMovement
-	setevent EVENT_WISE_TRIO_EXPLAINED_CLEAR_BELL
-	clearevent EVENT_MAHOGANY_MART_NINJA
-	setmapscene MAHOGANY_MART_1F, SCENE_MAHOGANYMART1F_NINJA
 	end
 
+.BringRainbowWing
+	applymovement WISETRIOSROOM_SAGE3, WiseTriosRoomOneStepLeftMovement
+	turnobject PLAYER, RIGHT
+	opentext
+	writetext WiseTriosRoomBringTheWingText
+	sjump .TurnAwayPlayer
+
 WiseTriosRoomThatFeatherText:
-;	ntag "GAKU:"
+	ntag "GAKU:"
 	text "That feather!"
 	line "The RAINBOW WING!"
 
@@ -97,7 +109,7 @@ WiseTriosRoomThatFeatherText:
 	done
 
 WiseTriosRoomExplainTowersText:
-;	ntag "MASA:"
+	ntag "MASA:"
 	text "A long time ago"
 	line "a rainbow-winged"
 	cont "#MON made its"
@@ -143,7 +155,7 @@ WiseTriosRoomExplainTowersText:
 	done
 
 WiseTriosRoomExplainClearBellText:
-;	ntag "KOJI:"
+	ntag "KOJI:"
 	text "If you wish to"
 	line "prove the quality"
 	cont "of your spirit,"
@@ -196,6 +208,21 @@ WiseTriosRoomExplainClearBellText:
 ;	roll "the BRASS TOWER."
 ;	done
 
+WiseTriosRoomBringTheWingText:
+	ntag "KOJI:"
+	text "We were told you"
+	line "had a feather from"
+	cont "a RAINBOW-colored"
+	roll "#MON…"
+
+	para "But you do not"
+	line "currently carry"
+	cont "that RAINBOW WING."
+
+	para "Please, bring that"
+	line "RAINBOW WING here!"
+	done
+
 ;WiseTriosRoomStepBackDownMovement:
 ;	fix_facing
 WiseTriosRoomOneStepDownMovement:
@@ -237,7 +264,7 @@ TrainerSageGaku:
 	jumptextfaceplayer SageKojiAfterBattleFinalText
 
 SageGakuSeenText:
-;	ntag "GAKU:"
+	ntag "GAKU:"
 	text "Ah!"
 
 	para "The sound of that"
@@ -260,7 +287,7 @@ SageGakuSeenText:
 	done
 
 SageGakuBeatenText:
-;	ntag "GAKU:"
+	ntag "GAKU:"
 	text "The CLEAR BELL you"
 	line "hold…"
 	cont "Its sound is so"
@@ -268,7 +295,7 @@ SageGakuBeatenText:
 	done
 
 SageGakuAfterBattleText:
-;	ntag "GAKU:"
+	ntag "GAKU:"
 	text "The rainbow-winged"
 	line "#MON has not"
 	cont "been seen for"
@@ -307,7 +334,7 @@ TrainerSageMasa:
 	jumptextfaceplayer SageKojiAfterBattleFinalText
 
 SageMasaSeenText:
-;	ntag "MASA:"
+	ntag "MASA:"
 	text "That bell's chime"
 	line "is indicative of"
 	cont "the bearer's soul."
@@ -323,13 +350,13 @@ SageMasaSeenText:
 	done
 
 SageMasaBeatenText:
-;	ntag "MASA:"
+	ntag "MASA:"
 	text "Strong enough?"
 	line "Perhaps…"
 	done
 
 SageMasaAfterBattleText:
-;	ntag "MASA:"
+	ntag "MASA:"
 	text "You might just be"
 	line "worthy to climb"
 	cont "TIN TOWER and face"
@@ -360,7 +387,7 @@ TrainerSageKoji:
 	jumptextfaceplayer SageKojiAfterBattleFinalText
 
 SageKojiSeenText:
-;	ntag "KOJI:"
+	ntag "KOJI:"
 	text "Let me see your"
 	line "power!"
 
@@ -369,7 +396,7 @@ SageKojiSeenText:
 	done
 
 SageKojiBeatenText:
-;	ntag "KOJI:"
+	ntag "KOJI:"
 	text "That crystal clear"
 	line "sound…"
 	done
@@ -380,7 +407,7 @@ SageKojiBeatenText:
 ;	done
 
 SageKojiAfterBattleSpeechText:
-;	ntag "KOJI:"
+	ntag "KOJI:"
 	text "The sound of your"
 	line "CLEAR BELL ringing"
 	cont "is undeniable."
@@ -395,7 +422,7 @@ SageKojiAfterBattleSpeechText:
 	done
 
 SageKojiAfterBattleFinalText:
-;	ntag "KOJI:"
+	ntag "KOJI:"
 	text "Please, go on,"
 	line "and enter the TIN"
 	cont "TOWER ahead."
@@ -418,6 +445,7 @@ WiseTriosRoomWanderingSageScript:
 	jumptextfaceplayer WiseTriosRoomCaughtHoohText
 
 WiseTriosRoomHoohDefeatedText:
+	ntag "SAGE:"
 	text "You faced HO-OH,"
 	line "and defeated it."
 
@@ -429,6 +457,7 @@ WiseTriosRoomHoohDefeatedText:
 	done
 
 WiseTriosRoomHoohReturnedText:
+	ntag "SAGE:"
 	text "HO-OH has returned"
 	line "to the TIN TOWER."
 
@@ -437,6 +466,7 @@ WiseTriosRoomHoohReturnedText:
 	done
 
 WiseTriosRoomCaughtHoohText:
+	ntag "SAGE:"
 	text "You faced HO-OH,"
 	line "and captured it!"
 
