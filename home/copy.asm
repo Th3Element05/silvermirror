@@ -120,15 +120,15 @@ GetFarWRAMByte::
 	ldh a, [hFarByte]
 	ret
 
-GetFarWRAMWord:: ; unreferenced
-	ldh [hTempBank], a
-	ldh a, [rSVBK]
-	push af
-	ldh a, [hTempBank]
-	ldh [rSVBK], a
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
-	pop af
-	ldh [rSVBK], a
-	ret
+;GetFarWRAMWord:: ; unreferenced
+;	ldh [hTempBank], a
+;	ldh a, [rSVBK]
+;	push af
+;	ldh a, [hTempBank]
+;	ldh [rSVBK], a
+;	ld a, [hli]
+;	ld h, [hl]
+;	ld l, a
+;	pop af
+;	ldh [rSVBK], a
+;	ret

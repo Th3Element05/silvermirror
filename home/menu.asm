@@ -287,7 +287,7 @@ MenuBoxCoord2Attr::
 	ld b, a
 	; fallthrough
 
-Coord2Attr:: ; unreferenced
+Coord2Attr:: ; unreferenced (fallen-through)
 ; Return the address of wAttrmap(c, b) in hl.
 	xor a
 	ld h, a
@@ -421,9 +421,9 @@ YesNoBox::
 PlaceYesNoBox::
 	jr _YesNoBox
 
-PlaceGenericTwoOptionBox:: ; unreferenced
-	call LoadMenuHeader
-	jr InterpretTwoOptionMenu
+;PlaceGenericTwoOptionBox:: ; unreferenced
+;	call LoadMenuHeader
+;	jr InterpretTwoOptionMenu
 
 NoYesBox::
 	newfarjp _NoYesBox
