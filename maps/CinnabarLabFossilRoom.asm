@@ -31,6 +31,8 @@ CinnabarLabFossilRoom_MapScripts:
 ;	endcallback
 
 CinnabarLabFossilScientistScript:
+	faceplayer
+	opentext
 	checkevent EVENT_FOSSIL_SCIENTIST_WORKING
 	iftrue .StillWorking
 	checkevent EVENT_FOSSIL_SCIENTIST_WORKING_HELIX
@@ -39,8 +41,6 @@ CinnabarLabFossilScientistScript:
 	iftrue .GiveKabuto
 	checkevent EVENT_FOSSIL_SCIENTIST_WORKING_AMBER
 	iftrue .GiveAerodactyl
-	faceplayer
-	opentext
 	writetext CinnabarLabFossilScientistDoYouHaveFossilText
 	waitbutton
 	checkitem HELIX_FOSSIL
@@ -55,7 +55,10 @@ CinnabarLabFossilScientistScript:
 	end
 
 .StillWorking
-	jumptextfaceplayer CinnabarLabFossilScientistGaveFossilText
+	writetext CinnabarLabFossilScientistGaveFossilText
+	waitbutton
+	closetext
+	end
 
 .GiveOmanyte
 	getmonname STRING_BUFFER_3, OMANYTE
@@ -118,14 +121,10 @@ CinnabarLabFossilScientistScript:
 	iftrue .ask_helix_amber
 	jump IsHelixFossil
 
-.own_dome
-	checkitem OLD_AMBER
-	iftrue .ask_dome_amber
-	jump IsDomeFossil
-
 .own_helix_and_dome
 	checkitem OLD_AMBER
 	iftrue .ask_helix_dome_amber
+	; else
 	loadmenu HelixDomeMenuDataHeader
 	verticalmenu
 	closewindow
@@ -140,6 +139,11 @@ CinnabarLabFossilScientistScript:
 	ifequal $1, IsHelixFossil
 	ifequal $2, IsOldAmber
 	jump .no_fossil
+
+.own_dome
+	checkitem OLD_AMBER
+	iftrue .ask_dome_amber
+	jump IsDomeFossil
 
 .ask_dome_amber
 	loadmenu DomeAmberMenuDataHeader
@@ -421,6 +425,37 @@ CinnabarLabFossilRoomOldAmberText:
 ;	ld [wScriptVar], a
 ;	ret
 
+;DebugGiveFossils:
+;	opentext
+;	writetext DebugHelixFossilText
+;	yesorno
+;	iffalse .nohelix
+;	giveitem HELIX_FOSSIL
+;.nohelix
+;	writetext DebugDomeFossilText
+;	yesorno
+;	iffalse .nodome
+;	giveitem DOME_FOSSIL
+;.nodome
+;	writetext DebugOldAmberText
+;	yesorno
+;	iffalse .noamber
+;	giveitem OLD_AMBER
+;.noamber
+;	end
+
+;DebugHelixFossilText:
+;	text "HELIX FOSSIL?"
+;	done
+
+;DebugDomeFossilText:
+;	text "DOME FOSSIL?"
+;	done
+
+;DebugOldAmberText:
+;	text "OLD AMBER?"
+;	done
+
 CinnabarLabFossilRoom_MapEvents:
 	db 0, 0 ; filler
 
@@ -431,10 +466,11 @@ CinnabarLabFossilRoom_MapEvents:
 	def_coord_events
 
 	def_bg_events
+;	bg_event  0,  0, BGEVENT_READ, DebugGiveFossils
 
 	def_object_events
 ;	object_event  3,  2, SPRITE_FOSSIL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CinnabarLabFossilRoomHelixFossil, EVENT_CINNABAR_LAB_HELIX_FOSSIL
 ;	object_event  3,  2, SPRITE_DOME_FOSSIL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CinnabarLabFossilRoomDomeFossil, EVENT_CINNABAR_LAB_DOME_FOSSIL
 ;	object_event  3,  2, SPRITE_OLD_AMBER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, CinnabarLabFossilRoomOldAmber, EVENT_CINNABAR_LAB_OLD_AMBER
-	object_event  4,  2, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarLabFossilScientistScript, -1
+	object_event  5,  2, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarLabFossilScientistScript, -1
 	object_event  6,  6, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarLabTradeScientistScript, -1
