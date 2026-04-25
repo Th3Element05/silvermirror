@@ -86,7 +86,7 @@ if DEF(_DEBUG)
 	givepoke VICTREEBEL, 90, LEFTOVERS
 	givepoke WEEZING, 90, LEFTOVERS
 	givepoke ELECTABUZZ, 90, LEFTOVERS
-;	givepoke PIDGEOT, 90, LEFTOVERS
+	givepoke PIDGEOT, 90, LEFTOVERS
 ;
 	loadmem wPartyMon1Moves+0, SURF
 	loadmem wPartyMon1Moves+1, ICE_BEAM
@@ -123,10 +123,10 @@ if DEF(_DEBUG)
 ;	loadmem wPartyMon5DVs+0, $ea
 ;	loadmem wPartyMon5DVs+1, $aa
 ;
-;	loadmem wPartyMon6Moves+0, WING_ATTACK
-;	loadmem wPartyMon6Moves+1, SWIFT
-;	loadmem wPartyMon6Moves+2, DOUBLE_TEAM
-;	loadmem wPartyMon6Moves+3, ROAR
+	loadmem wPartyMon6Moves+0, WING_ATTACK
+	loadmem wPartyMon6Moves+1, SWIFT
+	loadmem wPartyMon6Moves+2, DOUBLE_TEAM
+	loadmem wPartyMon6Moves+3, ROAR
 ;	loadmem wPartyMon6DVs+0, $ea
 ;	loadmem wPartyMon6DVs+1, $aa
 ;	; Grant All Pokemon                     ;commented out Grant All Pokemon
@@ -139,6 +139,7 @@ if DEF(_DEBUG)
 	setmapscene PLAYERS_HOUSE_1F, $1
 	setevent EVENT_PLAYERS_HOUSE_MOM_1
 	clearevent EVENT_PLAYERS_HOUSE_MOM_2
+	special HealParty
 	closetext
 	end
 else
@@ -312,6 +313,7 @@ PlayersHouseDebugPlayer:
 	giveitem CARBOS, 20
 	giveitem X_ACCURACY, 20
 ;	giveitem TM_GIGA_DRAIN
+	special HealParty
 	closetext
 	end
 

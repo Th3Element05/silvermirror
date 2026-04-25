@@ -55,6 +55,7 @@ TinTowerEntranceSageScript:
 	end
 
 TinTowerEntranceAccessDeniedText:
+	ntag "SAGE:"
 	text "I beg your pardon,"
 	line "but I must ask you"
 	cont "to leave."
@@ -71,6 +72,7 @@ TinTowerEntranceAccessDeniedText:
 	done
 
 TinTowerEntranceNoRainbowWingText:
+	ntag "SAGE:"
 	text "A momentous event"
 	line "has occurred!"
 
@@ -85,6 +87,7 @@ TinTowerEntranceNoRainbowWingText:
 	done
 
 TinTowerEntranceHaveRainbowWingText:
+	ntag "SAGE:"
 	text "Wait…"
 	line "What is that?"
 
@@ -101,10 +104,12 @@ TinTowerEntranceHaveRainbowWingText:
 	done
 
 TinTowerEntrancePleaseDoGoInText:
+	ntag "SAGE:"
 	text "Please, do go in."
 	done
 
 TinTowerEntranceSoothTheSoulText:
+	ntag "SAGE:"
 	text "…What soothes the"
 	line "soul…"
 
@@ -132,6 +137,7 @@ TinTowerEntranceWanderingSageScript:
 	jumptextfaceplayer TinTowerEntranceWanderingSageText
 
 TinTowerEntranceWanderingSageText:
+	ntag "SAGE:"
 	text "In the past, there"
 	line "were two nine-tier"
 	cont "towers here."
@@ -184,16 +190,18 @@ TinTowerEntranceGrampsScript:
 	jumptextfaceplayer TinTowerEntranceGrampsBeastsText
 
 TinTowerEntranceGrampsTowersText:
+;	ntag "GRAMPS:"
 	text "Two towers…"
 	line "Two #MON…"
 
 	para "But when one"
 	line "burned down, both"
-	cont "#MON flew away,"
-	roll "never to return."
+	cont "#MON flew away."
+;	roll "never to return."
 	done
 
 TinTowerEntranceGrampsHoohReturnedText:
+;	ntag "GRAMPS:"
 	text "The TIN TOWER"
 	line "shook! A #MON"
 	cont "must have returned"
@@ -201,6 +209,7 @@ TinTowerEntranceGrampsHoohReturnedText:
 	done
 
 TinTowerEntranceGrampsBeastsText:
+;	ntag "GRAMPS:"
 	text "The BURNED TOWER…"
 
 	para "They say the three"

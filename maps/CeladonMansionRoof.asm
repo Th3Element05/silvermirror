@@ -22,7 +22,7 @@ CeladonMansionRoofDrawGraffitiText:
 CeladonMansionRoofGraffitiText:
 	text "Haha! Its the"
 	line "funny face that"
-	cont "<PLAYER> drew!"
+	cont "you drew!"
 	done
 
 CeladonMansionRoofSign:
