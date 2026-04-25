@@ -263,7 +263,7 @@ OaksLastPokemonScript:
 LookAtPokeballsEarlyScript:
 	jumptext OaksLabThoseArePokeballsText
 ;	end
-	
+
 OaksLabRivalBattleScript:
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	turnobject OAKSLAB_BLUE, DOWN
@@ -611,7 +611,7 @@ OaksLabIntroConversationText:
 	line "up with waiting!@"
 
 	text_promptbutton
-	ntag "──────────"
+;	ntag "──────────"
 	ntag "PROF.OAK:"
 	text "<RIVAL>?"
 	line "Let me think…"
@@ -642,13 +642,13 @@ OaksLabIntroConversationText:
 	para "Choose!@"
 
 	text_promptbutton
-	ntag "──────────"
+;	ntag "──────────"
 	ntag "<RIVAL>:"
 	text "Hey! GRAMPS!"
 	line "What about me?@"
 
 	text_promptbutton
-	ntag "──────────"
+;	ntag "──────────"
 	ntag "PROF.OAK:"
 	text "Be patient!"
 	line "<RIVAL>, you can"
@@ -925,7 +925,7 @@ OaksLabOakExplainsPagerText:
 	cont "to call with it.@"
 
 	text_promptbutton
-	ntag "──────────"
+;	ntag "──────────"
 	ntag "<RIVAL>:"
 	text "Alright, GRAMPS!"
 	line "Leave it all to"

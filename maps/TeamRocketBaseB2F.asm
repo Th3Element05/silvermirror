@@ -163,7 +163,7 @@ TeamRocketBaseB2FJanineQuestionText:
 	roll "den!@"
 
 	text_promptbutton
-	ntag "────────"
+;	ntag "────────"
 	ntag "JONIN:"
 	text "I do, JANINE."
 
@@ -212,7 +212,7 @@ TeamRocketBaseB2FJanineIntroText:
 	para "Impossible!@"
 
 	text_promptbutton
-	ntag "────────"
+;	ntag "────────"
 	ntag "KOGA:"
 	text "JANINE!"
 	done
@@ -256,7 +256,7 @@ TeamRocketBaseB2FJanineInterjectsText:
 	roll "outsider.@"
 
 	text_promptbutton
-	ntag "────────"
+;	ntag "────────"
 	ntag "KOGA:"
 	text "Yes, you're right."
 	line "Our clan has been"
@@ -316,7 +316,7 @@ TeamRocketBaseB2FKogaProposesChallengeText:
 	line "them.@"
 
 	text_promptbutton
-	ntag "────────"
+;	ntag "────────"
 	ntag "JANINE:"
 	text "If you say so, I"
 	line "will test them."
