@@ -164,7 +164,7 @@ CoupleSueSeenText:
 	line "This is a private"
 	cont "conversation!";@"
 
-;	ntag "────────"
+;;	ntag "────────"
 ;	ntag "TIM:"
 ;	para "No eavesdropping!"
 	done
@@ -175,7 +175,7 @@ CoupleTimSeenText:
 	line "Quit listening in"
 	cont "on us!";@"
 
-;	ntag "────────"
+;;	ntag "────────"
 ;	ntag "SUE:"
 ;	para "Excuse me!"
 ;	line "This is a private"

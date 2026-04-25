@@ -127,7 +127,7 @@ ViridianMartOaksParcelText:
 	cont "to him?@"
 	
 	text_promptbutton
-	ntag "─────"
+;	ntag "─────"
 	para "<PLAYER> got"
 	line "OAK's PARCEL!"
 	done

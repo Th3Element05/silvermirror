@@ -127,31 +127,31 @@ CopycatText_Default:
 	line "#MON?@"
 
 	text_promptbutton
-	ntag "────────"
+;	ntag "────────"
 	ntag "COPYCAT:"
 	text " Hi! Do you like"
 	line " #MON?@"
 
 	text_promptbutton
-	ntag "────────"
+;	ntag "────────"
 	ntag "<PLAYER>:"
 	text "Uh, no, I just"
 	line "asked you.@"
 
 	text_promptbutton
-	ntag "────────"
+;	ntag "────────"
 	ntag "COPYCAT:"
 	text " Uh, no, I just"
 	line " asked you.@"
 
 	text_promptbutton
-	ntag "────────"
+;	ntag "────────"
 	ntag "<PLAYER>:"
 	text "Huh?"
 	line "You're strange!@"
 
 	text_promptbutton
-	ntag "────────"
+;	ntag "────────"
 	ntag "COPYCAT:"
 	para " Huh?"
 	line " You're strange!"
@@ -215,24 +215,24 @@ CopycatText_ThanksForTM:
 	cont "METAL POWDER!@"
 
 	text_promptbutton
-	ntag "────────"
+;	ntag "────────"
 	ntag "COPYCAT:"
 	text " Hi!"
 	line " Thanks for the"
 	cont " METAL POWDER!@"
 
 	text_promptbutton
-	ntag "────────"
+;	ntag "────────"
 	ntag "<PLAYER>:"
 	text "Pardon?@"
 
 	text_promptbutton
-	ntag "────────"
+;	ntag "────────"
 	ntag "COPYCAT:"
 	text " Pardon?@"
 
 	text_promptbutton
-	ntag "────────"
+;	ntag "────────"
 	ntag "<PLAYER>:"
 	text "Is it fun to mimic"
 	line "my every move?"

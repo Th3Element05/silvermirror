@@ -233,7 +233,7 @@ BillsHouseBillIntroText:
 	cont "…No I'm not!@"
 
 	text_promptbutton
-	ntag "───────────"
+;	ntag "───────────"
 	ntag "BILL?:"
 	para "Call me BILL!"
 	line "I'm a true blue"
