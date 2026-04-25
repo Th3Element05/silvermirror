@@ -60,18 +60,19 @@ BattleText_EnemyFled:
 	prompt
 
 HurtByPoisonText:
-	text "<USER> is" ;"<USER>"
+	text "<USER>'s"
 	line "hurt by poison!"
 	prompt
 
 HurtByBurnText:
-	text "<USER> is" ;"<USER>'s"
+	text "<USER>'s"
 	line "hurt by its burn!"
 	prompt
 
 LeechSeedSapsText:
-	text "LEECH SEED saps"
-	line "<USER>'s HP!" ;"<USER>!"
+	text "LEECH SEED"
+	line "saps HP from"
+	line "<USER>!" ;"<USER>!"
 	prompt
 
 HasANightmareText:
@@ -80,7 +81,7 @@ HasANightmareText:
 	prompt
 
 HurtByCurseText:
-	text "<USER> is"
+	text "<USER>'s"
 	line "hurt by the CURSE!"
 	prompt
 
@@ -113,9 +114,9 @@ BattleText_UserRecoveredPPUsing:
 	prompt
 
 BattleText_TargetWasHitByFutureSight:
-	text "<TARGET> was hit"
-	line "by FUTURE SIGHT!"
-;	cont "SIGHT!"
+	text "<TARGET>"
+	line "was hit by"
+	cont "FUTURE SIGHT!"
 	prompt
 
 BattleText_SafeguardFaded:
@@ -306,7 +307,7 @@ BattleText_CantEscape:
 	prompt
 
 BattleText_UserHurtBySpikes:
-	text "<USER> is"
+	text "<USER>'s"
 	line "hurt by SPIKES!"
 	prompt
 
@@ -405,8 +406,8 @@ BattleText_ThrewBait:
 	done
 
 FastAsleepText:
-	text "<USER> is"
-	line "fast asleep!"
+	text "<USER>"
+	line "is fast asleep!"
 	prompt
 
 WokeUpText:
@@ -415,8 +416,8 @@ WokeUpText:
 	prompt
 
 FrozenSolidText:
-	text "<USER> is"
-	line "frozen solid!"
+	text "<USER>"
+	line "is frozen solid!"
 	prompt
 
 FlinchedText:
@@ -430,13 +431,13 @@ MustRechargeText:
 	prompt
 
 DisabledNoMoreText:
-	text "<USER> is no"
-	line "longer DISABLED!"
+	text "<USER>'s"
+	line "DISABLED no more!"
 	prompt
 
 IsConfusedText:
-	text "<USER> is"
-	line "confused!"
+	text "<USER>"
+	line "is confused!"
 	prompt
 
 HurtItselfText:
@@ -445,7 +446,7 @@ HurtItselfText:
 	prompt
 
 ConfusedNoMoreText:
-	text "<USER> is"
+	text "<USER>'s"
 	line "confused no more!"
 	prompt
 
@@ -463,12 +464,12 @@ BattleText_ItemHealedConfusion:
 	prompt
 
 AlreadyConfusedText:
-	text "<TARGET> is"
+	text "<TARGET>'s"
 	line "already confused!"
 	prompt
 
 BattleText_UsersHurtByStringBuffer1:
-	text "<USER> is"
+	text "<USER>'s"
 	line "hurt by"
 	cont "@"
 	text_ram wStringBuffer1
@@ -512,8 +513,8 @@ ClampedByText:
 	prompt
 
 StoringEnergyText:
-	text "<USER> is"
-	line "storing energy!"
+	text "<USER>"
+	line "is storing energy!"
 	prompt
 
 UnleashedEnergyText:
@@ -630,14 +631,14 @@ AttackMissed2Text:
 	prompt
 
 CrashedText:
-	text "<USER> kept"
-	line "going and crashed!"
+	text "<USER>"
+	line "crashed!"
 ;	cont "crashed!"
 	prompt
 
 UnaffectedText:
-	text "<TARGET> was"
-	line "not affected!"
+	text "<TARGET>"
+	line "was not affected!"
 	prompt
 
 DoesntAffectText:
@@ -668,9 +669,9 @@ TookDownWithItText:
 ;	line "took down with it,"
 ;	cont "<USER>!"
 ;	prompt
-	text "<TARGET> took"
-	line "<USER> down"
-	cont "with it!"
+	text "<TARGET>"
+	line "took its opponent"
+	cont "down with it!"
 	prompt
 
 RageBuildingText:
@@ -702,7 +703,7 @@ SketchedText:
 	prompt
 
 DestinyBondEffectText:
-	text "<USER> is"
+	text "<USER>'s"
 	line "trying to take its"
 	cont "opponent with it!"
 	prompt
@@ -728,7 +729,7 @@ FellAsleepText:
 	prompt
 
 AlreadyAsleepText:
-	text "<TARGET> is"
+	text "<TARGET>'s"
 	line "already asleep!"
 	prompt
 
@@ -738,12 +739,12 @@ WasPoisonedText:
 	prompt
 
 BadlyPoisonedText:
-	text "<TARGET> was"
-	line "badly poisoned!"
+	text "<TARGET>"
+	line "is badly poisoned!"
 	prompt
 
 AlreadyPoisonedText:
-	text "<TARGET> is"
+	text "<TARGET>'s"
 	line "already poisoned!"
 	prompt
 
@@ -768,8 +769,8 @@ DefrostedOpponentText:
 	prompt
 
 WasFrozenText:
-	text "<TARGET> was"
-	line "frozen solid!"
+	text "<TARGET>"
+	line "was frozen solid!"
 	prompt
 
 WontRiseAnymoreText:
@@ -830,34 +831,34 @@ SingularPluralHitTimesText:
 	prompt
 
 MistText:
-	text "<USER> is"
+	text "<USER>'s"
 	line "shrouded in MIST!"
 	prompt
 
 ProtectedByMistText:
-	text "<TARGET> is"
+	text "<TARGET>'s"
 	line "protected by MIST."
 	prompt
 
 GettingPumpedText:
 	text_pause
-	text "<USER> is"
+	text "<USER>'s"
 	line "getting pumped!"
 	prompt
 
 RecoilText:
-	text "<USER> is"
+	text "<USER>'s"
 	line "hit with recoil!"
 	prompt
 
 MadeSubstituteText:
-	text "<USER> made"
-	line "a SUBSTITUTE!"
+	text "<USER>"
+	line "made a SUBSTITUTE!"
 	prompt
 
 HasSubstituteText:
-	text "<USER> has"
-	line "a SUBSTITUTE!"
+	text "<USER>"
+	line "has a SUBSTITUTE!"
 	prompt
 
 TooWeakSubText:
@@ -972,23 +973,23 @@ DraggedOutText:
 	prompt
 
 ParalyzedText:
-	text "<TARGET> is"
+	text "<TARGET>'s"
 	line "paralyzed! Maybe"
 	cont "it can't attack!"
 	prompt
 
 FullyParalyzedText:
-	text "<USER> is"
+	text "<USER>'s"
 	line "fully paralyzed!"
 	prompt
 
 AlreadyParalyzedText:
-	text "<TARGET> is"
+	text "<TARGET>'s"
 	line "already paralyzed!"
 	prompt
 
 ProtectedByText:
-	text "<TARGET> is"
+	text "<TARGET>'s"
 	line "protected by"
 	cont "@"
 	text_ram wStringBuffer1
@@ -1031,9 +1032,10 @@ PutACurseText:
 ;	para "put a CURSE on"
 ;	line "<TARGET>!"
 ;	prompt
-	text "<USER> cut its"
-	line "own HP to CURSE"
-	cont "<TARGET>!"
+	text "<USER>"
+	line "cut its own HP to"
+	cont "put a CURSE on"
+	roll "<TARGET>!"
 	prompt
 
 ProtectedItselfText:
@@ -1042,14 +1044,14 @@ ProtectedItselfText:
 	prompt
 
 ProtectingItselfText:
-	text "<TARGET> is"
+	text "<TARGET>'s"
 	line "PROTECTING itself!"
 	done
 
 SpikesText:
-	text "SPIKES scattered"
-	line "around <TARGET>!"
-;	cont "<TARGET>!"
+	text "SPIKES were"
+	line "scattered around"
+	cont "<TARGET>!"
 	prompt
 
 IdentifiedText:
@@ -1079,7 +1081,7 @@ FellInLoveText:
 	prompt
 
 CoveredByVeilText:
-	text "<USER> is"
+	text "<USER>'s"
 	line "covered by a veil!"
 	prompt
 
@@ -1102,13 +1104,15 @@ ReleasedByText:
 	prompt
 
 ShedLeechSeedText:
-	text "<USER> shook"
-	line "off LEECH SEED!"
+	text "<USER>"
+	line "shook off the"
+	cont "LEECH SEED!"
 	prompt
 
 BlewSpikesText:
-	text "<USER> blew"
-	line "away the SPIKES!"
+	text "<USER>"
+	line "blew away the"
+	cont "SPIKES!"
 	prompt
 
 StartedToRainText:
@@ -1134,17 +1138,18 @@ CopiedStatsText:
 ;	para "changes of"
 ;	line "<TARGET>!"
 ;	prompt
-	text "<USER> copied"
-	line "the stat changes"
-	cont "of <TARGET>!"
+	text "<USER>"
+	line "copied the"
+	cont "stat changes of"
+	roll "<TARGET>!"
 	prompt
 
 ForesawAttackText:
 ;	text "<USER>"
 ;	line "foresaw an attack!"
 ;	prompt
-	text "<USER> foresaw"
-	line "a future attack!"
+	text "<USER>"
+	line "foresaw an attack!"
 	prompt
 
 BeatUpAttackText:
