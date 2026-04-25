@@ -15,9 +15,9 @@ SilverCaveRoom3_MapScripts:
 
 SilverCaveRoom3TilesCallback:
 	readvar VAR_TIMEOFDAY
-	ifnotequal NITE, .nomoon
-	changeblock 8, 0, $5b ; moon
-.nomoon
+	ifequal NITE_F, .keepmoon
+	changeblock 8, 0, $5a ; no moon
+.keepmoon
 	endcallback
 
 SilverMirrorAppearCallback:
@@ -27,6 +27,8 @@ SilverMirrorAppearCallback:
 	disappear SILVERCAVEROOM3_SILVER_CHRIS
 	disappear SILVERCAVEROOM3_SILVER_KRIS
 	checkevent EVENT_BEAT_MT_SILVER_OAK
+	iffalse .done
+	checkevent EVENT_OAK_IN_MT_SILVER
 	iffalse .done
 	appear SILVERCAVEROOM3_SILVER_MIRROR
 .done
