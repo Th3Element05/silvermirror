@@ -1665,7 +1665,7 @@ _MayRegisterItemText::
 	done
 
 _OakText1::
-	ntag "PROF.OAK:"
+;	ntag "PROF.OAK:"
 	text "Hello there!" ;silvermirror -"Hello! Sorry to"
 ;	line "keep you waiting!" ;silvermirror -
 
@@ -1681,7 +1681,7 @@ endc
 	prompt
 
 _OakText2::
-	ntag "PROF.OAK:"
+;	ntag "PROF.OAK:"
 	text "This world is" ;silvermirror -"This world is in-"
 	line "inhabited by" ;silvermirror -"habited by crea-"
 	cont "creatures called" ;silvermirror -"tures that we call"
@@ -1693,7 +1693,7 @@ _OakText3::
 	text_end
 
 _OakText4::
-	ntag "PROF.OAK:"
+;	ntag "PROF.OAK:"
 	text "For some people," ;silvermirror -"People and #MON"
 	line "#MON are pets" ;silvermirror -"live together by"
 	cont "Others use them" ;silvermirror +
@@ -1708,7 +1708,7 @@ _OakText4::
 	prompt
 
 _OakText5::
-	ntag "PROF.OAK:"
+;	ntag "PROF.OAK:"
 	text "Myself…" ;silvermirror -"But we don't know"
 ;	line "everything about" ;silvermirror -
 ;	cont "#MON yet." ;silvermirror -

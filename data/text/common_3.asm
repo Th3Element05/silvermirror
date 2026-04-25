@@ -1,18 +1,18 @@
 _OakText6::
-	ntag "PROF.OAK:"
+;	ntag "PROF.OAK:"
 	text "First, what is" ;silvermirror -"Now, what did you"
 	line "your name?" ;silvermirror -"say your name was?"
 	prompt
 
 _OakText7::
-	ntag "PROF.OAK:"
+;	ntag "PROF.OAK:"
 ;silvermirror +starthere
 	text "Right! So your"
 	line "name is <PLAYER>!"
 	prompt
 
 _OakText8::
-	ntag "PROF.OAK:"
+;	ntag "PROF.OAK:"
 	text "This is my grand-"
 	line "son. He's been"
 	cont "your rival since"
@@ -23,14 +23,14 @@ _OakText8::
 	prompt
 
 _OakText9::
-	ntag "PROF.OAK:"
+;	ntag "PROF.OAK:"
 	text "That's right! I"
 	line "remember now! His"
 	cont "name is <RIVAL>!"
 	prompt
 
 _OakText10::
-	ntag "PROF.OAK:"
+;	ntag "PROF.OAK:"
 ;silvermirror +endhere
 	text "<PLAYER>!" ;silvermirror -"<PLAYER>, are you"
 ;	line "ready?" ;silvermirror -
