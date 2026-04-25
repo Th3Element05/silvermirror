@@ -69,9 +69,9 @@ CGBOnly_CopyTilemapAtOnce::
 CopyTilemapAtOnce::
 	jr _CopyTilemapAtOnce
 
-CopyAttrmapAndTilemapToWRAMBank3: ; unreferenced
-	farcall HDMATransferAttrmapAndTilemapToWRAMBank3
-	ret
+;CopyAttrmapAndTilemapToWRAMBank3: ; unreferenced
+;	farcall HDMATransferAttrmapAndTilemapToWRAMBank3
+;	ret
 
 _CopyTilemapAtOnce:
 	ldh a, [hBGMapMode]

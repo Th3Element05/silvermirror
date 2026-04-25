@@ -153,7 +153,7 @@ ENDM
 ;	line "the MUSEUM?@" <- @ terminator before new ntag
 ;	text_promptbutton   <- promptbutton before new ntag
 ;
-;	ntag "──────────"   <- need to write over existing tag
+;;	ntag "──────────"   <- need to write over existing tag
 ;	ntag "LASS:"           to clear it, or if the next tag
 ;	text "text test"       is shorter than the last one.
 ;	done

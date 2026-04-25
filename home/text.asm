@@ -722,30 +722,36 @@ TextCommand_START::
 	ret
 
 TextCommand_NAMETAG::
-; write on the top line of the textbox
+; target the top border of the textbox
 	ld d, h
 	ld e, l
 	hlcoord TEXTBOX_INNERX, TEXTBOX_Y
-;; clear possible existing nametag before printing one
-;	push hl
-;	ld a, "─"
-;	ld b, SCREEN_WIDTH - 2 ; adjust this if you change TEXTBOX_INNERX above
-;.loop
-;	ld [hli], a
-;	dec b
-;	jr nz, .loop
-;	pop hl
-
+; clear possible existing nametag
+	push hl
+	ld a, "─"
+	ld b, SCREEN_WIDTH - 2 ; adjust this if you change TEXTBOX_INNERX above
+.loop
+	ld [hli], a
+	dec b
+	jr nz, .loop
+; no text delay
+	ld hl, wTextboxFlags
+	ld a, [hl]
+	res NO_TEXT_DELAY_F, [hl]
+	pop hl ;<- need this
+	push af
+; print nametag
 	call PlaceString
+; restore text delay setting
+	pop af
+	ld [wTextboxFlags], a
+; clear the textbox and prep for printing `text`
 	inc de
 	push de
 	hlcoord TEXTBOX_INNERX, TEXTBOX_INNERY - 1
 	lb bc, TEXTBOX_INNERH, TEXTBOX_INNERW
 	call ClearBox
-;	pop de
-;	ld h, d
-;	ld l, e
-	pop hl
+	pop hl ;de into hl
 	bccoord TEXTBOX_INNERX, TEXTBOX_INNERY
 	ret
 
