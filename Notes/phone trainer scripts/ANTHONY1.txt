@@ -1,0 +1,127 @@
+ANTHONY1
+
+TrainerHikerAnthony:
+	trainer HIKER, ANTHONY2, EVENT_BEAT_HIKER_ANTHONY, HikerAnthony2SeenText, HikerAnthony2BeatenText, 0, .Script
+.Script:
+	loadvar VAR_CALLERID, PHONE_HIKER_ANTHONY
+	opentext
+	checkflag ENGINE_ANTHONY_READY_FOR_REMATCH
+	iftrue .Rematch
+	checkcellnum PHONE_HIKER_ANTHONY
+	iftrue .AnthonyDefeated
+	checkevent EVENT_ANTHONY_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskAgain
+	writetext HikerAnthony2AfterText
+	promptbutton
+	setevent EVENT_ANTHONY_ASKED_FOR_PHONE_NUMBER
+	scall .AskNumber1
+	jump .AskForPhoneNumber
+
+.AskAgain:
+	scall .AskNumber2
+.AskForPhoneNumber:
+	askforphonenumber PHONE_HIKER_ANTHONY
+	ifequal PHONE_CONTACTS_FULL, .PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
+	gettrainername STRING_BUFFER_3, HIKER, ANTHONY2
+	scall .RegisteredNumber
+	jump .NumberAccepted
+
+.Rematch:
+	scall .RematchStd
+	winlosstext HikerAnthony2BeatenText, 0
+	checkevent EVENT_RESTORED_POWER_TO_KANTO
+	iftrue .LoadFight4
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .LoadFight3
+	checkevent EVENT_CLEARED_RADIO_TOWER
+	iftrue .LoadFight2
+	checkflag ENGINE_FLYPOINT_OLIVINE
+	iftrue .LoadFight1
+	loadtrainer HIKER, ANTHONY2
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_ANTHONY_READY_FOR_REMATCH
+	end
+
+.LoadFight1:
+	loadtrainer HIKER, ANTHONY1
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_ANTHONY_READY_FOR_REMATCH
+	end
+
+.LoadFight2:
+	loadtrainer HIKER, ANTHONY3
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_ANTHONY_READY_FOR_REMATCH
+	end
+
+.LoadFight3:
+	loadtrainer HIKER, ANTHONY4
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_ANTHONY_READY_FOR_REMATCH
+	end
+
+.LoadFight4:
+	loadtrainer HIKER, ANTHONY5
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_ANTHONY_READY_FOR_REMATCH
+	end
+
+.AskNumber1:
+	jumpstd AskNumber1MScript
+	end
+
+.AskNumber2:
+	jumpstd AskNumber2MScript
+	end
+
+.RegisteredNumber:
+	jumpstd RegisteredNumberMScript
+	end
+
+.NumberAccepted:
+	jumpstd NumberAcceptedMScript
+	end
+
+.NumberDeclined:
+	jumpstd NumberDeclinedMScript
+	end
+
+.PhoneFull:
+	jumpstd PhoneFullMScript
+	end
+
+.RematchStd:
+	jumpstd RematchMScript
+	end
+	
+.AnthonyDefeated:
+	writetext HikerAnthony2AfterText
+	promptbutton
+	closetext
+	end
+
+
+HikerAnthony2SeenText:
+	text "I came through the"
+	line "tunnel, but I"
+
+	para "still have plenty"
+	line "of energy left."
+	done
+
+HikerAnthony2BeatenText:
+	text "Whoa! You've got"
+	line "more zip than me!"
+	done
+
+HikerAnthony2AfterText:
+	text "We HIKERS are at"
+	line "our best in the"
+	cont "mountains."
+	done
