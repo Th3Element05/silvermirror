@@ -1,16 +1,15 @@
 ChadAskNumber1Text:
-	text "Huh? Is that thing"
-	line "a #DEX? Have"
-	cont "you met PROF.OAK?"
+	text "Huh? Is that a"
+	line "#DEX? Have you"
+	cont "met PROF.OAK?"
 
 	para "Huh? You have? "
 	line "That's way cool!"
 
 	para "I have a dream of"
 	line "becoming a #MON"
-
-	para "researcher like"
-	line "PROF.OAK."
+	cont "researcher like"
+	roll "PROF.OAK."
 
 	para "May I please have"
 	line "your phone number?"

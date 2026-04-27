@@ -3,9 +3,8 @@ WaltNewTechniqueText:
 
 	para "What do you think?"
 	line "I discovered a new"
-	
-	para "technique for"
-	line "breathing fire!"
+	cont "technique for"
+	roll "breathing fire!"
 
 	para "Well, not like you"
 	line "can tell over the"

@@ -4,9 +4,8 @@ WiltonAskNumber1Text:
 
 	para "When I'm fishing,"
 	line "I sometimes snag"
-
-	para "items that people"
-	line "have dropped."
+	cont "items that people"
+	roll "have dropped."
 
 	para "Do you want them?"
 	line "What's the number?"
@@ -15,9 +14,8 @@ WiltonAskNumber1Text:
 WiltonAskNumber2Text:
 	text "If I snag an item"
 	line "while I'm fishing,"
-
-	para "it's yours. What's"
-	line "your number?"
+	cont "it's yours. What's"
+	roll "your number?"
 	done
 
 WiltonNumberAcceptedText:
@@ -38,9 +36,11 @@ WiltonPhoneFullText:
 	done
 
 WiltonRematchText:
-	text "Argh! You startled"
-	line "POLIWAG into"
-	cont "fleeing again!"
+	text "Argh! You scared"
+	line "away all the fish!"
+;	text "Argh! You startled"
+;	line "POLIWAG into"
+;	cont "fleeing again!"
 	done
 
 WiltonGiftText:

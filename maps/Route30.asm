@@ -222,42 +222,6 @@ TrainerYoungsterJoey:
 .Rematch:
 	scall .RematchStd
 	winlosstext YoungsterJoey1BeatenText, 0
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .LoadFight4
-;	checkevent EVENT_CLEARED_RADIO_TOWER
-;	iftrue .LoadFight3
-;	checkflag ENGINE_FLYPOINT_OLIVINE
-;	iftrue .LoadFight2
-;	checkflag ENGINE_FLYPOINT_GOLDENROD
-;	iftrue .LoadFight1
-	loadtrainer YOUNGSTER, JOEY1
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_JOEY_READY_FOR_REMATCH
-	end
-
-;.LoadFight1:
-;	loadtrainer YOUNGSTER, JOEY2
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_JOEY_READY_FOR_REMATCH
-;	end
-;
-;.LoadFight2:
-;	loadtrainer YOUNGSTER, JOEY3
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_JOEY_READY_FOR_REMATCH
-;	end
-;
-;.LoadFight3:
-;	loadtrainer YOUNGSTER, JOEY4
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_JOEY_READY_FOR_REMATCH
-;	end
-;
-.LoadFight4:
 	loadtrainer YOUNGSTER, JOEY_0
 	startbattle
 	reloadmapafterbattle
@@ -265,15 +229,18 @@ TrainerYoungsterJoey:
 	checkevent EVENT_JOEY_HP_UP
 	iftrue .GiveHPUp
 	checkevent EVENT_GOT_HP_UP_FROM_JOEY
-	iftrue .done
+	iffalse .gift
+	random 10
+	ifnotequal 0, .done
+.gift
 	scall .RematchGift
 	verbosegiveitem HP_UP
 	iffalse .PackFull
 	setevent EVENT_GOT_HP_UP_FROM_JOEY
-	sjump .NumberAccepted
-
 .done
-	end
+	sjump .NumberAccepted
+;.done
+;	end
 
 .GiveHPUp:
 	opentext

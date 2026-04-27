@@ -17,9 +17,8 @@ KenjiAskNumber1Text:
 KenjiAskNumber2Text:
 	text "My training makes"
 	line "chatting tough,"
-
-	para "but will you take"
-	line "down my number?"
+	cont "but will you take"
+	roll "down my number?"
 	done
 
 KenjiNumberAcceptedText:
@@ -58,10 +57,8 @@ KenjiGiftText:
 KenjiPackFullText:
 	text "Your strength will"
 	line "not let you carry"
-
-	para "another thing!"
-	line "I will hold this"
-
-	para "till you lighten"
-	line "your PACK!"
+	cont "another thing!"
+	roll "I will hold this"
+	cont "till you lighten"
+	roll "your PACK!"
 	done

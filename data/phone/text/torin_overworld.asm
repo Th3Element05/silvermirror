@@ -1,12 +1,10 @@
 TorinAskNumber1Text:
 	text "You know, I'm go-"
 	line "ing to practice a"
-
-	para "whole bunch so we"
-	line "can battle again"
-
-	para "the next time we"
-	line "meet."
+	cont "whole bunch so we"
+	roll "can battle again"
+	cont "the next time we"
+	roll "meet."
 	
 	para "That's right!"
 
@@ -20,8 +18,7 @@ TorinAskNumber2Text:
 	
 	para "You really want to"
 	line "trade phone num-"
-	cont "bers with me,"
-	cont "don't you?"
+	cont "bers, don't you?"
 	done
 
 TorinNumberAcceptedText:
@@ -38,7 +35,6 @@ TorinNumberDeclinedText:
 TorinRematchText:
 	text "I've made good use"
 	line "of the time I've"
-
-	para "been waiting and"
-	line "done a review!"
+	cont "been waiting and"
+	roll "done a review!"
 	done

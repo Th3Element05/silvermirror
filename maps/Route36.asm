@@ -97,9 +97,8 @@ Route36_NoFruit:
 ;ArthurGaveGiftText:
 ;	text "ARTHUR: A #MON"
 ;	line "that uses rock-"
-;
-;	para "type moves should"
-;	line "hold on to that."
+;	cont "type moves should"
+;	roll "hold on to that."
 ;
 ;	para "It pumps up rock-"
 ;	line "type attacks."
@@ -108,9 +107,8 @@ Route36_NoFruit:
 ;ArthurThursdayText:
 ;	text "ARTHUR: I'm ARTHUR"
 ;	line "of Thursday. I'm"
-;
-;	para "the second son out"
-;	line "of seven children."
+;	cont "the second son out"
+;	roll "of seven children."
 ;	done
 
 ;ArthurNotThursdayText:
@@ -271,135 +269,6 @@ FloriaMovement1:
 	step LEFT
 	step_end
 
-;Route36LassScript:
-;	faceplayer
-;	opentext
-;	checkevent EVENT_FOUGHT_SUDOWOODO
-;	iftrue .ClearedSudowoodo
-;	writetext Route36LassText
-;	waitbutton
-;	closetext
-;	end
-;
-;.ClearedSudowoodo:
-;	writetext Route36LassText_ClearedSudowoodo
-;	waitbutton
-;	closetext
-;	end
-
-;Route36LassText:
-;	text "An odd tree is"
-;	line "blocking the way"
-;	cont "to GOLDENROD CITY."
-;
-;	para "It's preventing"
-;	line "me from shopping."
-;
-;	para "Something should"
-;	line "be done about it."
-;	done
-
-;Route36LassText_ClearedSudowoodo:
-;	text "That odd tree dis-"
-;	line "appeared without a"
-;	cont "trace."
-;
-;	para "Oh! That tree was"
-;	line "really a #MON?"
-;	done
-
-;Route36RockSmashGuyScript:
-;	faceplayer
-;	opentext
-;	checkevent EVENT_GOT_TM58_ROCK_SMASH
-;	iftrue .AlreadyGotRockSmash
-;	checkevent EVENT_FOUGHT_SUDOWOODO
-;	iftrue .ClearedSudowoodo
-;	writetext RockSmashGuyText1
-;	waitbutton
-;	closetext
-;	end
-
-;.ClearedSudowoodo:
-;	writetext RockSmashGuyText2
-;	promptbutton
-;	verbosegiveitem TM_ROCK_SMASH
-;	iffalse .NoRoomForTM
-;	setevent EVENT_GOT_TM58_ROCK_SMASH
-;	writetext RockSmashGuyText3
-;	promptbutton
-;	stringtotext .pagercardname, MEM_BUFFER_1
-;	scall .JumpstdReceiveItem
-;	setflag ENGINE_PAGER_ROCK_SMASH
-;	writetext GotRockSmashPagerText
-;	promptbutton
-;.AlreadyGotRockSmash:
-;	writetext RockSmashGuyText4
-;	waitbutton
-;.NoRoomForTM:
-;	closetext
-;	end
-;
-;.JumpstdReceiveItem:
-;	jumpstd ReceiveItemScript
-;	end
-;
-;.pagercardname
-;	db "RCKSMSHPAGER@"
-
-;GotRockSmashPagerText:
-;	text "CUBONE was" ;silvermirror -"CUBONE SMASH was"
-;	line "added to the PPS!"
-;	done
-
-;RockSmashGuyText1:
-;	text "Wa-hey!"
-;
-;	para "I was going to"
-;	line "snap that tree"
-;
-;	para "with my straight-"
-;	line "arm punch."
-;
-;	para "But I couldn't!"
-;	line "I'm a failure!"
-;	done
-
-;RockSmashGuyText2:
-;	text "Did you clear that"
-;	line "wretched tree?"
-;
-;	para "I'm impressed!"
-;	line "I want you to"
-;	cont "have this."
-;	done
-
-;RockSmashGuyText3:
-;	text "That happens to be"
-;	line "ROCK SMASH."
-;
-;	para "It lowers the"
-;	line "target's DEFENSE"
-;	cont "with each hit."
-;
-;	para "You can have this"
-;	line "too!"
-;	done
-
-;RockSmashGuyText4:
-;	text "That's a"
-;	line "RCKSMSHPAGER."
-;
-;	para "With that you can"
-;	line "shatter rocks with"
-;
-;	para "just a single"
-;	line "well-aimed smack."
-;
-;	para "If any rocks are"
-;	line "in your way, just"
-;	cont "smash 'em up!"
-;	done
 
 Route36BlockingSchoolboyLeftScript:
 	faceplayer
@@ -483,11 +352,78 @@ PsychicPhilAfterBattleText:
 TrainerSchoolboyTorin:
 	trainer SCHOOLBOY, TORIN1, EVENT_BEAT_SCHOOLBOY_TORIN, SchoolboyTorinSeenText, SchoolboyTorinBeatenText, 0, .Script
 .Script:
-	endifjustbattled
+;	endifjustbattled
+;	opentext
+;	writetext SchoolboyTorinAfterBattleText
+;	waitbutton
+;	closetext
+;	end
+
+	loadvar VAR_CALLERID, PHONE_SCHOOLBOY_TORIN
 	opentext
+	checkflag ENGINE_TORIN_READY_FOR_REMATCH
+	iftrue .WantsBattle
+	checkcellnum PHONE_SCHOOLBOY_TORIN
+	iftrue .TorinDefeated
+	checkevent EVENT_TORIN_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskedBefore
+	writetext SchoolboyTorinAfterBattleText
+	waitbutton
+	setevent EVENT_TORIN_ASKED_FOR_PHONE_NUMBER
+	scall Route36AskNumber1
+	jump .AskForNumber
+
+.AskedBefore:
+	scall Route36AskNumber2
+.AskForNumber:
+	askforphonenumber PHONE_SCHOOLBOY_TORIN
+	ifequal PHONE_CONTACTS_FULL, Route36PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, Route36NumberDeclined
+	gettrainername STRING_BUFFER_3, SCHOOLBOY, TORIN1
+	scall Route36RegisteredNumber
+	jump Route36NumberAccepted
+
+.WantsBattle:
+	scall Route36Rematch
+	winlosstext SchoolboyTorinBeatenText, 0
+	loadtrainer SCHOOLBOY, TORIN_0
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_TORIN_READY_FOR_REMATCH
+	end
+
+.TorinDefeated:
 	writetext SchoolboyTorinAfterBattleText
 	waitbutton
 	closetext
+	end
+
+Route36AskNumber1:
+	jumpstd AskNumber1MScript
+	end
+
+Route36AskNumber2:
+	jumpstd AskNumber2MScript
+	end
+
+Route36RegisteredNumber:
+	jumpstd RegisteredNumberMScript
+	end
+
+Route36NumberAccepted:
+	jumpstd NumberAcceptedMScript
+	end
+
+Route36NumberDeclined:
+	jumpstd NumberDeclinedMScript
+	end
+
+Route36PhoneFull:
+	jumpstd PhoneFullMScript
+	end
+
+Route36Rematch:
+	jumpstd RematchMScript
 	end
 
 SchoolboyTorinSeenText:
@@ -513,10 +449,49 @@ SchoolboyTorinAfterBattleText:
 TrainerSchoolboyChad:
 	trainer SCHOOLBOY, CHAD1, EVENT_BEAT_SCHOOLBOY_CHAD, SchoolboyChadSeenText, SchoolboyChadBeatenText, 0, .Script
 .Script:
-	endifjustbattled
+;	endifjustbattled
+;	opentext
+;	writetext SchoolboyChadAfterBattleText
+;	waitbutton
+;	closetext
+;	end
+
+	loadvar VAR_CALLERID, PHONE_SCHOOLBOY_CHAD
 	opentext
-	writetext SchoolboyChadAfterBattleText
-	waitbutton
+	checkflag ENGINE_CHAD_READY_FOR_REMATCH
+	iftrue .ChadRematch
+	checkcellnum PHONE_SCHOOLBOY_CHAD
+	iftrue .ChadDefeated
+	checkevent EVENT_CHAD_ASKED_FOR_PHONE_NUMBER
+	iftrue .SecondTimeAsking
+	writetext SchoolboyChad1AfterBattleText
+	promptbutton
+	setevent EVENT_CHAD_ASKED_FOR_PHONE_NUMBER
+	scall Route36AskNumber1
+	sjump .AskToRegisterNumber
+
+.SecondTimeAsking:
+	scall Route36AskNumber2
+.AskToRegisterNumber:
+	askforphonenumber PHONE_SCHOOLBOY_CHAD
+	ifequal PHONE_CONTACTS_FULL, Route36PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, Route36NumberDeclined
+	gettrainername STRING_BUFFER_3, SCHOOLBOY, CHAD1
+	scall Route36RegisteredNumber
+	sjump Route36NumberAccepted
+
+.ChadRematch:
+	scall Route36Rematch
+	winlosstext SchoolboyChad1BeatenText, 0
+	loadtrainer SCHOOLBOY, CHAD_0
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_CHAD_READY_FOR_REMATCH
+	end
+
+.ChadDefeated:
+	writetext SchoolboyChad1AfterBattleText
+	promptbutton
 	closetext
 	end
 

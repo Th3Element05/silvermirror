@@ -1,15 +1,13 @@
 AnthonyAskNumber1Text:
 	text "By the way, I'm a"
 	line "HIKER, so I often"
-
-	para "go to mountains"
-	line "and caves."
+	cont "go to mountains"
+	roll "and caves."
 
 	para "I occasionally see"
 	line "rare #MON."
-
-	para "I could call you"
-	line "the next time I"
+	cont "I could call you"
+	roll "the next time I"
 	cont "see one."
 
 	para "Feel like swapping"

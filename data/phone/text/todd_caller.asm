@@ -3,9 +3,8 @@ ToddLooksCuteLikeMeText:
 	text_ram wStringBuffer4
 	text " is"
 	line "looking more and"
-
-	para "more like me. It's"
-	line "getting cuter!"
+	cont "more like me. It's"
+	roll "getting cuter!"
 	done
 
 ToddDefeatedMonText:
@@ -23,17 +22,15 @@ ToddDefeatedMonText:
 ToddLostAMonText:
 	text "And, you know?"
 	line "We just failed to"
-
-	para "beat @"
+	cont "beat @"
 	text_ram wStringBuffer4
 	text " by"
-	line "a tiny margin."
+	roll "a tiny margin."
 
 	para "I'm guessing my"
 	line "#MON's levels"
-
-	para "aren't high enough"
-	line "yet…"
+	cont "aren't high enough"
+	roll "yet…"
 	done
 
 ToddBattleRematchText:
@@ -42,9 +39,8 @@ ToddBattleRematchText:
 
 	para "How about showing"
 	line "me your technique"
-
-	para "in a real battle"
-	line "with me?"
+	cont "in a real battle?"
+;	roll "with me?"
 
 	para "I'll be waiting on"
 	line "@"
@@ -85,9 +81,8 @@ ToddDepartmentStoreBargainSaleText:
 ToddSavingUpForBargainSaleText:
 	text "I'm saving up for"
 	line "the next bargain"
-
-	para "sale. When's the"
-	line "next one?"
+	cont "sale. When's the"
+	roll "next one?"
 	done
 
 ToddReminderText:
@@ -105,9 +100,8 @@ ToddReminderText:
 ToddHaveYouGoneToDepartmentStoreText:
 	text "Haven't you gone"
 	line "to GOLDENROD DEPT."
-
-	para "STORE? I've scoped"
-	line "it out already!"
+	cont "STORE? I've scoped"
+	roll "it out already!"
 
 	para "They had some real"
 	line "bargains."

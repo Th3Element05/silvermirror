@@ -16,17 +16,15 @@ WiltonDefeatedMonText:
 
 	para "You know, I have"
 	line "more fun fishing"
-
-	para "than beating wild"
-	line "#MON."
+	cont "than beating wild"
+	roll "#MON."
 	done
 
 WiltonLostAMonText:
 	text "But a while back,"
 	line "we came this close"
-
-	para "to landing a wild"
-	line "@"
+	cont "to landing a wild"
+	roll "@"
 	text_ram wStringBuffer4
 	text "."
 
@@ -39,13 +37,12 @@ WiltonBattleRematchText:
 	line "@"
 	text_ram wStringBuffer5
 	text ","
+	cont "but nothing's"
+	roll "biting today."
 
-	para "but nothing's"
-	line "biting today."
-
-	para "Help me while my"
-	line "time away, come"
-	cont "over for a battle."
+	para "Help me pass the"
+	line "time, come by for"
+	cont "a battle."
 	done
 
 WiltonHangUpText:
@@ -65,9 +62,8 @@ WiltonFoundItemText:
 WiltonHaventFoundAnythingText:
 	text "Nah, I haven't"
 	line "found anything"
-
-	para "that's worth your"
-	line "time."
+	cont "that's worth your"
+	roll "time."
 
 	para "You have to have"
 	line "patience."
@@ -76,9 +72,8 @@ WiltonHaventFoundAnythingText:
 WiltonReminderText:
 	text "Sigh…"
 	line "They're not biting"
-
-	para "like before on"
-	line "@"
+	cont "like before on"
+	roll "@"
 	text_ram wStringBuffer5
 	text "…"
 
@@ -96,8 +91,6 @@ WiltonWantThisText:
 	para "@"
 	text_ram wStringBuffer5
 	text "…"
-	line "Just head from"
-
-	para "MAHOGANY toward"
-	line "BLACKTHORN!"
+	line "Just head south"
+	cont "from VIOLET!"
 	done

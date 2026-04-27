@@ -7,9 +7,8 @@ JoeyMonLookingSharperText:
 
 	para "I doubt there's a"
 	line "#MON as cool as"
-
-	para "this guy in your"
-	line "party!"
+	cont "this guy in your"
+	roll "party!"
 	done
 
 JoeyDefeatedMonText:
@@ -17,14 +16,13 @@ JoeyDefeatedMonText:
 	line "down a @"
 	text_ram wStringBuffer4
 	text_start
-	para "in the wild the"
-	line "other day."
+	cont "in the wild the"
+	roll "other day."
 
 	para "It was a cakewalk."
 	line "Well, I guess it"
-
-	para "can't be helped,"
-	line "us being so tough."
+	cont "can't be helped,"
+	roll "us being so tough."
 	done
 
 JoeyLostAMonText:
@@ -35,12 +33,9 @@ JoeyLostAMonText:
 
 	para "I thought about"
 	line "going for it, but"
-
-	para "I decided to work"
-	line "with my one-and-"
-
-	para "only right to the"
-	line "extreme end."
+	cont "I decided to stick"
+	roll "with my one-and-"
+	cont "only to the end!"
 	done
 
 JoeyBattleRematchText:
@@ -68,9 +63,8 @@ JoeyDevisingStrategiesText:
 	line "@"
 	text_ram wStringBuffer4
 	text "'s moves"
-
-	para "and devising some"
-	line "strategies."
+	cont "and devising some"
+	roll "strategies."
 
 	para "When I come up"
 	line "with a good one,"

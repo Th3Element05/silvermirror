@@ -1,12 +1,12 @@
 ToddAskNumber1Text:
 	text "From here, I can"
 	line "see GOLDENROD's"
+	cont "DEPT.STORE."
 
-	para "DEPT.STORE. They"
-	line "have bargain sales"
-
-	para "up on the rooftop"
-	line "every so often."
+	para "They have bargain"
+	line "sales up on the"
+	cont "rooftop every so"
+	roll "often."
 
 	para "Could I get your"
 	line "phone number?"
@@ -18,17 +18,15 @@ ToddAskNumber1Text:
 ToddAskNumber2Text:
 	text "If you give me"
 	line "your number, I'll"
-
-	para "call you when they"
-	line "have a sale."
+	cont "call you when they"
+	roll "have a sale."
 	done
 
 ToddNumberAcceptedText:
 	text "I check GOLDENROD"
 	line "DEPT.STORE every"
-
-	para "day, so I know"
-	line "when there's a"
+	cont "day, so I know"
+	roll "when there's a"
 	cont "sale."
 	done
 
@@ -52,16 +50,15 @@ ToddPhoneFullText:
 ToddRematchText:
 	text "I waited for you!"
 	line "I even cut back my"
-
-	para "shopping to raise"
-	line "my #MON better!"
+	cont "shopping to raise"
+	roll "my #MON better!"
 	done
 
-ToddSaleText: ; unreferenced
-; This is a duplicate of CamperToddSaleText in maps/Route34.asm.
-	text "Shopping under the"
-	line "sky!"
-
-	para "It feels so nice"
-	line "up on a rooftop."
-	done
+;ToddSaleText: ; unreferenced
+;; This is a duplicate of CamperToddSaleText in maps/Route34.asm.
+;	text "Shopping under the"
+;	line "sky!"
+;
+;	para "It feels so nice"
+;	line "up on a rooftop."
+;	done

@@ -34,18 +34,16 @@ WadeLostAMonText:
 	line "@"
 	text_ram wStringBuffer4
 	text " got"
-
-	para "away from me at"
-	line "the last second."
+	cont "away from me at"
+	roll "the last second."
 
 	para "I know it's a"
 	line "common #MON…"
 
 	para "But it does annoy"
 	line "me that it got"
-
-	para "away when I almost"
-	line "had it."
+	cont "away when I almost"
+	roll "had it."
 	done
 
 WadeBattleRematchText:

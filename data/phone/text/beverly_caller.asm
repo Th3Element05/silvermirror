@@ -3,9 +3,8 @@ BeverlyMadeMonEvenCuterText:
 	line "@"
 	text_ram wStringBuffer4
 	text " and"
-
-	para "made it even cuter"
-	line "than before!"
+	cont "made it even cuter"
+	roll "than before!"
 	done
 
 ;BeverlyDefeatedMonText:
@@ -22,7 +21,7 @@ BeverlyMadeMonEvenCuterText:
 
 BeverlyLostAMonText:
 	text "I happened to see"
-	line "a wild MARILL the"
+	line "a wild PIKACHU the"
 	cont "other day."
 	roll "Or so I thought."
 
@@ -40,14 +39,13 @@ BeverlyHangUpText:
 	done
 
 BeverlyFoundItemText:
-	text "My husband got"
+	text "My husband found"
 	line "some NUGGETs."
 
 	para "If you'd like, you"
 	line "could have one as"
-
-	para "thanks for helping"
-	line "me out."
+	cont "thanks for helping"
+	roll "me out."
 
 	para "I'll be at"
 	line "@"
@@ -72,9 +70,8 @@ BeverlyComePickUpText:
 
 	para "There's no need to"
 	line "hurry. Come see me"
-
-	para "in @"
+	cont "at @"
 	text_ram wStringBuffer5
 	text_start
-	line "when you can."
+	roll "when you can."
 	done

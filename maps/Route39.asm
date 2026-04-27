@@ -135,77 +135,78 @@ PokefanfEleanorAfterBattleText:
 TrainerPokefanmDerek:
 	trainer POKEFANM, DEREK1, EVENT_BEAT_POKEFANM_DEREK, PokefanmDerekSeenText, PokefanmDerekBeatenText, 0, .Script
 .Script:
-	endifjustbattled
-	opentext
-	writetext PokefanMDerekText_NotBragging
-	waitbutton
-	closetext
-	end
-;	loadvar VAR_CALLERID, PHONE_POKEFANM_DEREK
+;	endifjustbattled
 ;	opentext
-;	checkflag ENGINE_DEREK_HAS_NUGGET
-;	iftrue .HasNugget
-;	checkcellnum PHONE_POKEFANM_DEREK
-;	iftrue .NumberAccepted
-;	checkevent EVENT_DEREK_ASKED_FOR_PHONE_NUMBER
-;	iftrue .AskedAlready
 ;	writetext PokefanMDerekText_NotBragging
-;	promptbutton
-;	setevent EVENT_DEREK_ASKED_FOR_PHONE_NUMBER
-;	scall .AskNumber1
-;	sjump .AskForNumber
-;
-;.AskedAlready:
-;	scall .AskNumber2
-;.AskForNumber:
-;	askforphonenumber PHONE_POKEFANM_DEREK
-;	ifequal PHONE_CONTACTS_FULL, .PhoneFull
-;	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
-;	gettrainername STRING_BUFFER_3, POKEFANM, DEREK
-;	scall .RegisteredNumber
-;	sjump .NumberAccepted
-;
-;.HasNugget:
-;	scall .Gift
-;	verbosegiveitem NUGGET
-;	iffalse .NoRoom
-;	clearflag ENGINE_DEREK_HAS_NUGGET
-;	sjump .NumberAccepted
-;
-;.NoRoom:
-;	sjump .PackFull
-;
-;.AskNumber1:
-;	jumpstd AskNumber1MScript
+;	waitbutton
+;	closetext
 ;	end
-;
-;.AskNumber2:
-;	jumpstd AskNumber2MScript
-;	end
-;
-;.RegisteredNumber:
-;	jumpstd RegisteredNumberMScript
-;	end
-;
-;.NumberAccepted:
-;	jumpstd NumberAcceptedMScript
-;	end
-;
-;.NumberDeclined:
-;	jumpstd NumberDeclinedMScript
-;	end
-;
-;.PhoneFull:
-;	jumpstd PhoneFullMScript
-;	end
-;
-;.Gift:
-;	jumpstd GiftMScript
-;	end
-;
-;.PackFull:
-;	jumpstd PackFullMScript
-;	end
+
+	loadvar VAR_CALLERID, PHONE_POKEFANM_DEREK
+	opentext
+	checkflag ENGINE_DEREK_HAS_NUGGET
+	iftrue .HasNugget
+	checkcellnum PHONE_POKEFANM_DEREK
+	iftrue .NumberAccepted
+	checkevent EVENT_DEREK_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskedAlready
+	writetext PokefanMDerekText_NotBragging
+	promptbutton
+	setevent EVENT_DEREK_ASKED_FOR_PHONE_NUMBER
+	scall .AskNumber1
+	sjump .AskForNumber
+
+.AskedAlready:
+	scall .AskNumber2
+.AskForNumber:
+	askforphonenumber PHONE_POKEFANM_DEREK
+	ifequal PHONE_CONTACTS_FULL, .PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
+	gettrainername STRING_BUFFER_3, POKEFANM, DEREK
+	scall .RegisteredNumber
+	sjump .NumberAccepted
+
+.HasNugget:
+	scall .Gift
+	verbosegiveitem NUGGET
+	iffalse .NoRoom
+	clearflag ENGINE_DEREK_HAS_NUGGET
+	sjump .NumberAccepted
+
+.NoRoom:
+	sjump .PackFull
+
+.AskNumber1:
+	jumpstd AskNumber1MScript
+	end
+
+.AskNumber2:
+	jumpstd AskNumber2MScript
+	end
+
+.RegisteredNumber:
+	jumpstd RegisteredNumberMScript
+	end
+
+.NumberAccepted:
+	jumpstd NumberAcceptedMScript
+	end
+
+.NumberDeclined:
+	jumpstd NumberDeclinedMScript
+	end
+
+.PhoneFull:
+	jumpstd PhoneFullMScript
+	end
+
+.Gift:
+	jumpstd GiftMScript
+	end
+
+.PackFull:
+	jumpstd PackFullMScript
+	end
 
 PokefanmDerekSeenText:
 	text "This is a good"

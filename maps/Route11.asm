@@ -484,11 +484,80 @@ PokefanMWilliamAfterBattleText:
 TrainerPokefanFBeverly: ;no rematch, give nugget
 	trainer POKEFANF, BEVERLY1, EVENT_BEAT_POKEFANF_BEVERLY, PokefanFBeverlySeenText, PokefanFBeverlyBeatenText, 0, .Script
 .Script:
-	endifjustbattled
+;	endifjustbattled
+;	opentext
+;	writetext PokefanFBeverlyAfterBattleText
+;	waitbutton
+;	closetext
+;	end
+
+	loadvar VAR_CALLERID, PHONE_POKEFAN_BEVERLY
 	opentext
-	writetext PokefanFBeverlyAfterBattleText
-	waitbutton
+	checkflag ENGINE_BEVERLY_HAS_NUGGET
+	iftrue .GiveNugget
+	checkcellnum PHONE_POKEFAN_BEVERLY
+	iftrue .BeverlyDefeated
+	checkevent EVENT_BEVERLY_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskAgain
+	writetext PokefanBeverlyCuteMonText
+	promptbutton
+	setevent EVENT_BEVERLY_ASKED_FOR_PHONE_NUMBER
+	scall .AskNumber1F
+	sjump .RequestNumber
+
+.AskAgain:
+	scall .AskNumber2F
+.RequestNumber:
+	askforphonenumber PHONE_POKEFAN_BEVERLY
+	ifequal PHONE_CONTACTS_FULL, .PhoneFullF
+	ifequal PHONE_CONTACT_REFUSED, .NumberDeclinedF
+	gettrainername STRING_BUFFER_3, POKEFANF, BEVERLY
+	scall .RegisteredNumberF
+	sjump .NumberAcceptedF
+
+.GiveNugget:
+	scall .GiftF
+	verbosegiveitem NUGGET
+	iffalse .PackFullF
+	clearflag ENGINE_BEVERLY_HAS_NUGGET
+	sjump .NumberAcceptedF
+
+.GiftF:
+	jumpstd GiftFScript
+	end
+
+.PackFullF:
+	jumpstd PackFullFScript
+	end
+
+.BeverlyDefeated:
+	writetext PokefanBeverlyCuteMonText
+	promptbutton
 	closetext
+	end
+
+.AskNumber1F:
+	jumpstd AskNumber1FScript
+	end
+
+.AskNumber2F:
+	jumpstd AskNumber2FScript
+	end
+
+.RegisteredNumberF:
+	jumpstd RegisteredNumberFScript
+	end
+
+.NumberAcceptedF:
+	jumpstd NumberAcceptedFScript
+	end
+
+.NumberDeclinedF:
+	jumpstd NumberDeclinedFScript
+	end
+
+.PhoneFullF:
+	jumpstd PhoneFullFScript
 	end
 
 PokefanFBeverlySeenText:

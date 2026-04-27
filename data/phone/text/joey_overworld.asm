@@ -4,11 +4,12 @@ JoeyAskNumber1Text:
 
 	para "I'll ring you for"
 	line "some battles."
-
-	para "I'm a rookie too, "
-	line "so I think it'd be"
-	cont "a good motivator."
 	done
+
+;	para "I'm a rookie too, "
+;	line "so I think it'd be"
+;	cont "a good motivator."
+;	done
 
 JoeyAskNumber2Text:
 	text "Can I get your"
@@ -65,7 +66,6 @@ JoeyRematchGiftText:
 
 	para "Here, take this. "
 	line "Use it to get even"
-
-	para "tougher. That will"
-	line "toughen me up too!"
+	cont "tougher. That will"
+	roll "toughen me up too!"
 	done

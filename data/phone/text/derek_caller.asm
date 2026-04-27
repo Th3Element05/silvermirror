@@ -3,8 +3,8 @@ DerekCheekPinchingText:
 	line "My @"
 	text_ram wStringBuffer4
 	text_start
-	para "grins happily when"
-	line "I pinch its cheek."
+	cont "grins happily when"
+	roll "I pinch its cheek."
 
 	para "But it never grins"
 	line "for anyone else."
@@ -43,12 +43,10 @@ DerekLostAMonText:
 
 	para "But it wasn't very"
 	line "cute, so I left"
-
-	para "it…"
-	line "#MON have to be"
-
-	para "cute. They're no"
-	line "good otherwise."
+	cont "it…"
+	roll "#MON have to be"
+	cont "cute. They're no"
+	roll "good otherwise."
 	done
 
 DerekHangUpText:
@@ -66,9 +64,8 @@ DerekBugCatchingContestText:
 
 	para "I think I'll"
 	line "participate with"
-
-	para "PIKACHU to show"
-	line "off its cuteness."
+	cont "PIKACHU to show"
+	roll "off its cuteness."
 	done
 
 DerekFoundItemText:

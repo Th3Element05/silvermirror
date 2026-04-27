@@ -1,26 +1,26 @@
 DerekAnswerPhoneText:
-	text "Hi, <PLAY_G>?"
+	text "Hi, <PLAYER>?"
 
 	para "Good morning pika."
 	line "What's up pika?"
 	done
 
 DerekAnswerPhoneDayText:
-	text "Hi, <PLAY_G>?"
+	text "Hi, <PLAYER>?"
 
 	para "Good day pika,"
 	line "what's up pika?"
 	done
 
 DerekAnswerPhoneNiteText:
-	text "Hi, <PLAY_G>?"
+	text "Hi, <PLAYER>?"
 
 	para "Good evening pika,"
 	line "what's up pika?"
 	done
 
 DerekGreetText:
-	text "<PLAY_G> pika, good"
+	text "<PLAYER> pika, good"
 	line "morning!"
 
 	para "It's @"
@@ -30,7 +30,7 @@ DerekGreetText:
 	done
 
 DerekGreetDayText:
-	text "<PLAY_G> pika, good"
+	text "<PLAYER> pika, good"
 	line "pika day!"
 
 	para "It's @"
@@ -40,7 +40,7 @@ DerekGreetDayText:
 	done
 
 DerekGreetNiteText:
-	text "<PLAY_G> pika, good"
+	text "<PLAYER> pika, good"
 	line "evening!"
 
 	para "It's @"
@@ -52,11 +52,10 @@ DerekGreetNiteText:
 DerekGenericText:
 	text "You have to hear"
 	line "this! My lovable"
-
-	para "@"
+	cont "@"
 	text_ram wStringBuffer4
 	text " looked"
-	line "at me and grinned!"
+	roll "at me and grinned!"
 
 	para "It must be because"
 	line "our hearts beat"

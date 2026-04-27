@@ -65,7 +65,6 @@ JackGenericText:
 	text_ram wStringBuffer4
 	text " is"
 	line "so curious, it's a"
-
-	para "problem. Maybe"
-	line "it's like me…"
+	cont "problem. Maybe"
+	roll "it's like me…"
 	done

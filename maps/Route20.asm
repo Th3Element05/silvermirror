@@ -292,8 +292,6 @@ TrainerBirdKepperVance:
 
 	loadvar VAR_CALLERID, PHONE_BIRDKEEPER_VANCE
 	opentext
-	checkevent EVENT_VANCE_HAS_CARBOS
-	iftrue .HasCarbos
 	checkflag ENGINE_VANCE_READY_FOR_REMATCH
 	iftrue .WantsBattle
 	checkcellnum PHONE_BIRDKEEPER_VANCE
@@ -326,11 +324,13 @@ TrainerBirdKepperVance:
 	startbattle
 	reloadmapafterbattle
 	clearflag ENGINE_VANCE_READY_FOR_REMATCH
+	checkevent EVENT_VANCE_HAS_CARBOS
+	iftrue .HasCarbos
 	checkevent EVENT_GOT_CARBOS_FROM_VANCE
 	iffalse .GiveCarbos
 	random 10
 	ifequal 0, .GiveCarbos
-	end
+	sjump .VanceDefeated
 
 .GiveCarbos
 	scall .RematchGift

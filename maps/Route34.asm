@@ -37,42 +37,6 @@ TrainerCamperTodd:
 .Rematch:
 	scall .RematchStd
 	winlosstext CamperToddBeatenText, 0
-;	checkevent EVENT_RESTORED_POWER_TO_KANTO
-;	iftrue .LoadFight4
-;	checkevent EVENT_BEAT_ELITE_FOUR
-;	iftrue .LoadFight3
-	checkflag ENGINE_FLYPOINT_BLACKTHORN
-	iftrue .LoadFight2
-	checkflag ENGINE_FLYPOINT_CIANWOOD
-	iftrue .LoadFight1
-	loadtrainer CAMPER, TODD1
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_TODD_READY_FOR_REMATCH
-	end
-
-.LoadFight1:
-	loadtrainer CAMPER, TODD_0
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_TODD_READY_FOR_REMATCH
-	end
-
-.LoadFight2:
-	loadtrainer CAMPER, TODD_0
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_TODD_READY_FOR_REMATCH
-	end
-
-.LoadFight3:
-	loadtrainer CAMPER, TODD_0
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_TODD_READY_FOR_REMATCH
-	end
-
-.LoadFight4:
 	loadtrainer CAMPER, TODD_0
 	startbattle
 	reloadmapafterbattle
