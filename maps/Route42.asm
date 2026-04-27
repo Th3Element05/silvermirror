@@ -199,13 +199,80 @@ Route42PrimeapeText:
 TrainerHikerAnthony:
 	trainer HIKER, ANTHONY1, EVENT_BEAT_HIKER_ANTHONY, HikerAnthonySeenText, HikerAnthonyBeatenText, 0, .Script
 .Script:
-	endifjustbattled
+;	endifjustbattled
+;	opentext
+;	writetext HikerAnthonyAfterBattleText
+;	waitbutton
+;	closetext
+;	end
+
+	loadvar VAR_CALLERID, PHONE_HIKER_ANTHONY
 	opentext
-	writetext HikerAnthonyAfterBattleText
-	waitbutton
+	checkflag ENGINE_ANTHONY_READY_FOR_REMATCH
+	iftrue .Rematch
+	checkcellnum PHONE_HIKER_ANTHONY
+	iftrue .AnthonyDefeated
+	checkevent EVENT_ANTHONY_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskAgain
+	writetext HikerAnthony2AfterText
+	promptbutton
+	setevent EVENT_ANTHONY_ASKED_FOR_PHONE_NUMBER
+	scall .AskNumber1
+	jump .AskForPhoneNumber
+
+.AskAgain:
+	scall .AskNumber2
+.AskForPhoneNumber:
+	askforphonenumber PHONE_HIKER_ANTHONY
+	ifequal PHONE_CONTACTS_FULL, .PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
+	gettrainername STRING_BUFFER_3, HIKER, ANTHONY2
+	scall .RegisteredNumber
+	jump .NumberAccepted
+
+.Rematch:
+	scall .RematchStd
+	winlosstext HikerAnthony2BeatenText, 0
+	loadtrainer HIKER, ANTHONY_0
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_ANTHONY_READY_FOR_REMATCH
+	end
+
+.AnthonyDefeated:
+	writetext HikerAnthony2AfterText
+	promptbutton
 	closetext
 	end
 
+.AskNumber1:
+	jumpstd AskNumber1MScript
+	end
+
+.AskNumber2:
+	jumpstd AskNumber2MScript
+	end
+
+.RegisteredNumber:
+	jumpstd RegisteredNumberMScript
+	end
+
+.NumberAccepted:
+	jumpstd NumberAcceptedMScript
+	end
+
+.NumberDeclined:
+	jumpstd NumberDeclinedMScript
+	end
+
+.PhoneFull:
+	jumpstd PhoneFullMScript
+	end
+
+.RematchStd:
+	jumpstd RematchMScript
+	end
+	
 HikerAnthonySeenText:
 	text "Ah, it's good to"
 	line "be outside!"

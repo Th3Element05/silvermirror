@@ -23,9 +23,8 @@ HueyWeHaveToBattleAgainSometimeText:
 
 	para "You can bet I'm"
 	line "going to keep"
-
-	para "challenging you"
-	line "till I win."
+	cont "challenging you"
+	roll "till I win."
 	done
 
 HueyReminderText:

@@ -25,10 +25,10 @@ BeverlyAskNumber2Text:
 
 BeverlyNumberAcceptedText:
 	text "To be honest, I"
-	line "want a MARILL."
+	line "want a PIKACHU."
 
 	para "But I make do with"
-	line "my cute SNUBBULL."
+	line "my cute EEVEE."
 	done
 
 BeverlyNumberDeclinedText:
@@ -36,7 +36,7 @@ BeverlyNumberDeclinedText:
 	line "disappointing…"
 
 	para "Say goodbye,"
-	line "SNUBBULL…"
+	line "EEVEE…"
 	done
 
 BeverlyPhoneFullText:

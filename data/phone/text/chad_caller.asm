@@ -7,47 +7,41 @@ ChadObservingWildText:
 
 	para "I've been learning"
 	line "all sorts of new"
-
-	para "things through my"
-	line "observations."
+	cont "things through my"
+	roll "observations."
 
 	para "I wish I could"
 	line "become a #MON"
-
-	para "researcher like"
-	line "PROF.OAK soon."
+	cont "researcher like"
+	roll "PROF.OAK soon."
 	done
 
 ChadDefeatedMonText:
 	text "Oh yes, I managed"
 	line "to knock out a"
-
-	para "wild @"
+	cont "wild @"
 	text_ram wStringBuffer4
 	text " a"
-	line "while back."
+	roll "while back."
 
 	para "Well, considering"
 	line "all the studying I"
-
-	para "do every day, it"
-	line "was inevitable."
+	cont "do every day, it"
+	roll "was inevitable."
 	done
 
 ChadLostAMonText:
 	text "Oh yes, I came"
 	line "close to catching"
-
-	para "a wild @"
+	cont "a wild @"
 	text_ram wStringBuffer4
 	text ","
-	line "but it got away."
+	roll "but it got away."
 
 	para "For the longest"
 	line "time, I've been"
-
-	para "wanting to observe"
-	line "@"
+	cont "wanting to observe"
+	roll "@"
 	text_ram wStringBuffer4
 	text ". Rats…"
 	done
@@ -55,9 +49,8 @@ ChadLostAMonText:
 ChadBattleRematchText:
 	text "Want to battle?"
 	line "I have to battle"
-
-	para "every so often to"
-	line "avoid rusting out."
+	cont "every so often to"
+	roll "keep myself sharp."
 
 	para "I'll be on"
 	line "@"
@@ -70,13 +63,13 @@ ChadHangUpText:
 	done
 
 ChadBlueGossipText:
-	text "Do you know BLUE?"
+	text "Do you know"
+	line "<RIVAL>?"
 
 	para "He's PROF.OAK's"
-	line "grandson and a"
-
-	para "former #MON"
-	line "LEAGUE CHAMPION!"
+	line "grandson and I"
+	cont "heard he even beat"
+	roll "the ELITE FOUR!"
 
 	para "He's one super"
 	line "#MON trainer!"
@@ -89,9 +82,8 @@ ChadDaisyGossipText:
 
 	para "When she's around,"
 	line "even the most"
-
-	para "ferocious #MON"
-	line "calm right down."
+	cont "ferocious #MON"
+	roll "calm right down."
 	done
 
 ChadProfElmGossipText:
@@ -109,9 +101,8 @@ ChadProfElmGossipText:
 ChadProfOaksDreamGossipText:
 	text "PROF.OAK's dream"
 	line "is to compile a"
-
-	para "comprehensive"
-	line "#DEX."
+	cont "comprehensive"
+	roll "#DEX."
 
 	para "I envy you for"
 	line "taking part in"
@@ -120,7 +111,8 @@ ChadProfOaksDreamGossipText:
 
 ChadKurtGossipText:
 	text "Do you know KURT,"
-	line "the BALL creator?"
+	line "who crafts custom"
+	cont "#BALLs?"
 
 	para "He and PROF.OAK go"
 	line "back a long way."
@@ -134,15 +126,12 @@ ChadLeagueGossipText:
 	text "#MON LEAGUE is"
 	line "the great gather-"
 	cont "ing place for all"
-
-	para "trainers who wish"
-	line "to become CHAMP."
+	cont "trainers who wish"
+	roll "to become CHAMP."
 
 	para "PROF.OAK acts as"
 	line "an advisor to the"
-
-	para "#MON LEAGUE's"
-	line "headquarters."
+	cont "#MON LEAGUE."
 
 	para "He really is a"
 	line "great man."
@@ -155,9 +144,8 @@ ChadPokemonTalkGossipText:
 
 	para "Did you know that"
 	line "he was going to"
-
-	para "turn down the show"
-	line "at first?"
+	cont "turn down the show"
+	roll "at first?"
 
 	para "But MARY's energy"
 	line "and persistence"
@@ -174,15 +162,21 @@ ChadProfOakTrainerGossipText:
 
 	para "But rather than"
 	line "battling, he found"
+	cont "#MON themselves"
+	roll "to be interesting,"
 
-	para "#MON themselves"
-	line "to be interesting."
+	cont "so he focused on"
+	roll "#MON research."
 
-	para "So he abandoned"
-	line "his training to"
+	para "But I've heard he's"
+	line "secretly still a"
+	cont "strong trainer!"
 
-	para "focus on becoming"
-	line "a researcher."
+;	para "So he abandoned"
+;	line "his training to"
+;
+;	para "focus on becoming"
+;	line "a researcher."
 	done
 
 ChadDaisyTeaGossipText:
@@ -191,44 +185,39 @@ ChadDaisyTeaGossipText:
 	cont "named DAISY."
 
 	para "She has tea every"
-	line "day for an hour"
-
-	para "from three in the"
+;	line "day for an hour"
+;
+;	para "from three in the"
 	line "afternoon."
 
 	para "I wish I could"
 	line "join her for tea"
-
-	para "and chat about"
-	line "PROF.OAK."
+	cont "and chat about"
+	roll "PROF.OAK."
 	done
 
 ChadProfOakTravelingGossipText:
 	text "Did you know?"
 	line "PROF.OAK traveled"
-
-	para "all over the world"
-	line "when he was young."
+	cont "all over the world"
+	roll "when he was young."
 
 	para "While traveling,"
 	line "he must've learned"
-
-	para "about #MON"
-	line "naturally."
+	cont "about #MON"
+	roll "naturally."
 
 	para "I envy him…"
 	line "I'd like to travel"
-
-	para "and learn about"
-	line "things too…"
+	cont "and learn about"
+	roll "things too…"
 	done
 
 ChadGoingToStudyHardText:
 	text "I'm going to study"
 	line "hard so PROF.OAK"
-
-	para "will make me his"
-	line "assistant!"
+	cont "will make me his"
+	roll "assistant!"
 	done
 
 ChadReminderText:

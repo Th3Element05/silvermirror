@@ -178,24 +178,6 @@ TrainerHikerParry:
 .WantsBattle:
 	scall Route45RematchM
 	winlosstext HikerParryBeatenText, 0
-	checkevent EVENT_RESTORED_POWER_TO_KANTO
-	iftrue .LoadFight3
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .LoadFight2
-	loadtrainer HIKER, PARRY1
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_PARRY_READY_FOR_REMATCH
-	end
-
-.LoadFight2:
-	loadtrainer HIKER, PARRY_0
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_PARRY_READY_FOR_REMATCH
-	end
-
-.LoadFight3:
 	loadtrainer HIKER, PARRY_0
 	startbattle
 	reloadmapafterbattle
@@ -203,15 +185,17 @@ TrainerHikerParry:
 	checkevent EVENT_PARRY_IRON
 	iftrue .HasIron
 	checkevent EVENT_GOT_IRON_FROM_PARRY
-	iftrue .GotIron
+	iffalse .GiveIron
+	random 10
+	ifequal 0, .GiveIron
+	sjump .ParryDefeated
+
+.GiveIron
 	scall Route45RematchGiftM
 	verbosegiveitem IRON
 	iffalse HikerParryHasIron
 	setevent EVENT_GOT_IRON_FROM_PARRY
 	sjump Route45NumberAcceptedM
-
-.GotIron:
-	end
 
 .HasIron:
 	opentext
@@ -260,9 +244,8 @@ HikerParryGivesIronText:
 
 	para "Oh, and take this"
 	line "--it's the gift"
-
-	para "you couldn't take"
-	line "when we last met."
+	cont "you couldn't take"
+	roll "last time."
 	done
 
 TrainerBlackbeltKenji:

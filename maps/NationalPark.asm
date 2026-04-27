@@ -9,10 +9,49 @@ NationalPark_MapScripts:
 TrainerSchoolboyJack:
 	trainer SCHOOLBOY, JACK1, EVENT_BEAT_SCHOOLBOY_JACK, SchoolboyJackSeenText, SchoolboyJackBeatenText, 0, .Script
 .Script:
-	endifjustbattled
+;	endifjustbattled
+;	opentext
+;	writetext SchoolboyJackAfterBattleText
+;	waitbutton
+;	closetext
+;	end
+
+	loadvar VAR_CALLERID, PHONE_SCHOOLBOY_JACK
 	opentext
-	writetext SchoolboyJackAfterBattleText
-	waitbutton
+	checkflag ENGINE_JACK_READY_FOR_REMATCH
+	iftrue Route36Rematch
+	checkcellnum PHONE_SCHOOLBOY_JACK
+	iftrue .JackDefeated
+	checkevent EVENT_JACK_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskAgain
+	writetext SchoolboyJackTradeMonText
+	promptbutton
+	setevent EVENT_JACK_ASKED_FOR_PHONE_NUMBER
+	scall Route36AskNumber1
+	sjump .RequestNumber
+
+.AskAgain:
+	scall Route36AskNumber2
+.RequestNumber:
+	askforphonenumber PHONE_SCHOOLBOY_JACK
+	ifequal PHONE_CONTACTS_FULL, Route36PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, Route36NumberDeclined
+	gettrainername STRING_BUFFER_3, SCHOOLBOY, JACK1
+	scall Route36RegisteredNumber
+	sjump Route36NumberAccepted
+
+.Rematch:
+	scall Route36Rematch
+	winlosstext SchoolboyJack1BeatenText, 0
+	loadtrainer SCHOOLBOY, JACK_0
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_JACK_READY_FOR_REMATCH
+	end
+
+.JackDefeated:
+	writetext SchoolboyJackTradeMonText
+	promptbutton
 	closetext
 	end
 

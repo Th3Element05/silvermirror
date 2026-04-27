@@ -87,11 +87,110 @@ LassConnieAfterBattleText:
 TrainerSailorHuey:
 	trainer SAILOR, HUEY1, EVENT_BEAT_SAILOR_HUEY, SailorHueySeenText, SailorHueyBeatenText, 0, .Script
 .Script
-	endifjustbattled
+;	endifjustbattled
+;	opentext
+;	writetext SailorHueyAfterBattleText
+;	waitbutton
+;	closetext
+;	end
+
+	loadvar VAR_CALLERID, PHONE_SAILOR_HUEY
 	opentext
+	checkflag ENGINE_HUEY_READY_FOR_REMATCH
+	iftrue .WantsBattle
+	checkcellnum PHONE_SAILOR_HUEY
+	iftrue .HueyDefeated
+	checkevent EVENT_HUEY_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskedBefore
 	writetext SailorHueyAfterBattleText
+	promptbutton
+	setevent EVENT_HUEY_ASKED_FOR_PHONE_NUMBER
+	scall .AskNumber1
+	sjump .AskForNumber
+
+.AskedBefore:
+	scall .AskNumber2
+.AskForNumber:
+	askforphonenumber PHONE_SAILOR_HUEY
+	ifequal PHONE_CONTACTS_FULL, .PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
+	gettrainername STRING_BUFFER_3, SAILOR, HUEY1
+	scall .RegisteredNumber
+	sjump .NumberAccepted
+
+.WantsBattle:
+	scall .Rematch
+	winlosstext SailorHueyBeatenText, 0
+	loadtrainer SAILOR, HUEY_0
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_HUEY_READY_FOR_REMATCH
+	checkevent EVENT_HUEY_PROTEIN
+	iftrue .HasProtein
+	checkevent EVENT_GOT_PROTEIN_FROM_HUEY
+	iffalse .GiveProtein
+	random 10
+	ifequal 0, .GiveProtein
+	sjump .HueyDefeated
+
+.GiveProtein
+	scall .RematchGift
+	verbosegiveitem PROTEIN
+	iffalse .PackFull
+	setevent EVENT_GOT_PROTEIN_FROM_HUEY
+	sjump .NumberAccepted
+
+.HasProtein:
+	opentext
+	writetext SailorHueyGiveProteinText
 	waitbutton
+	verbosegiveitem PROTEIN
+	iffalse .PackFull
+	clearevent EVENT_HUEY_PROTEIN
+	setevent EVENT_GOT_PROTEIN_FROM_HUEY
+	sjump .NumberAccepted
+
+.RematchGift:
+	jumpstd RematchGiftMScript
+	end
+
+.PackFull:
+	setevent EVENT_HUEY_PROTEIN
+	jumpstd PackFullMScript
+	end
+
+.HueyDefeated:
+	writetext SailorHueyAfterBattleText
+	promptbutton
 	closetext
+	end
+
+.AskNumber1:
+	jumpstd AskNumber1MScript
+	end
+
+.AskNumber2:
+	jumpstd AskNumber2MScript
+	end
+
+.RegisteredNumber:
+	jumpstd RegisteredNumberMScript
+	end
+
+.NumberAccepted:
+	jumpstd NumberAcceptedMScript
+	end
+
+.NumberDeclined:
+	jumpstd NumberDeclinedMScript
+	end
+
+.PhoneFull:
+	jumpstd PhoneFullMScript
+	end
+
+.Rematch:
+	jumpstd RematchMScript
 	end
 
 SailorHueySeenText:
@@ -107,8 +206,8 @@ SailorHueyBeatenText:
 	done
 
 SailorHueyAfterBattleText:
-	text "All kinds of peo-"
-	line "ple around the"
+	text "All sorts of"
+	line "people around the"
 	cont "world live happily"
 	roll "with #MON."
 	done

@@ -3,9 +3,8 @@ JackIntelligenceKeepsRisingText:
 	text_ram wStringBuffer4
 	text "'s"
 	line "intelligence keeps"
-
-	para "rising. It might"
-	line "be smarter than"
+	cont "rising. It might"
+	roll "be smarter than"
 	cont "yours!"
 	done
 

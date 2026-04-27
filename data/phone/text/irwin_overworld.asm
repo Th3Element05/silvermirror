@@ -25,12 +25,10 @@ IrwinAskNumber2Text:
 IrwinNumberAcceptedText:
 	text "Wow! Gee, thanks!"
 	line "Now I can call you"
-
-	para "anytime, whether"
-	line "anything's up or"
-
-	para "not. You know,"
-	line "just to chat!"
+	cont "anytime, whether"
+	roll "anything's up or"
+	cont "not. You know,"
+	roll "just to chat!"
 	done
 
 IrwinNumberDeclinedText:
@@ -39,9 +37,8 @@ IrwinNumberDeclinedText:
 
 	para "I just want to"
 	line "call and chat"
-
-	para "about everything"
-	line "and nothing!"
+	cont "about everything"
+	roll "and nothing!"
 	done
 
 IrwinPhoneFullText:

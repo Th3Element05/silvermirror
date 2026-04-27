@@ -25,9 +25,8 @@ DerekAskNumber2Text:
 DerekNumberAcceptedText:
 	text "PIKACHU is the"
 	line "one! If anything"
-
-	para "comes up, I'll"
-	line "give you a jingle."
+	cont "comes up, I'll"
+	roll "give you a jingle."
 	done
 
 DerekNumberDeclinedText:
@@ -55,7 +54,6 @@ DerekGiftText:
 DerekPackFullText:
 	text "Uh-oh, too bad."
 	line "You don't have any"
-
-	para "room. Be sure to"
-	line "get it later."
+	cont "room. Be sure to"
+	roll "get it later."
 	done

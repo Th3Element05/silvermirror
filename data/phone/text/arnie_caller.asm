@@ -11,11 +11,10 @@ ArnieMonIsSoCuteText:
 ArnieDefeatedMonText:
 	text "Changing the topic"
 	line "here, I saw this"
-
-	para "@"
+	cont "@"
 	text_ram wStringBuffer4
 	text " for the"
-	line "first time."
+	roll "first time."
 
 	para "It was easy to"
 	line "beat, actually."
@@ -30,9 +29,8 @@ ArnieLostAMonText:
 
 	para "I can't seem to"
 	line "catch one. What is"
-
-	para "its weakness, I"
-	line "wonder."
+	cont "its weakness, I"
+	roll "wonder."
 	done
 
 ArnieBattleRematchText:
@@ -41,9 +39,8 @@ ArnieBattleRematchText:
 
 	para "I won't lose to"
 	line "you battling or in"
-
-	para "the Bug-Catching"
-	line "Contest!"
+	cont "the Bug-Catching"
+	roll "Contest!"
 
 	para "I'll be here on"
 	line "@"
@@ -64,9 +61,8 @@ ArnieSwarmText:
 	line "@"
 	text_ram wStringBuffer4
 	text " have"
-
-	para "appeared around"
-	line "@"
+	cont "appeared around"
+	roll "@"
 	text_ram wStringBuffer5
 	text "!"
 
@@ -98,8 +94,8 @@ ArnieHurryText:
 	text "Hello? Are you"
 	line "coming or what?"
 
-	para "You're missing out"
-	line "on seeing YANMA!"
+;	para "You're missing out"
+;	line "on seeing YANMA!"
 
 	para "Get down to ROUTE"
 	line "35 right now!"

@@ -223,11 +223,115 @@ FisherFredAfterText:
 TrainerFisherWilton:
 	trainer FISHER, WILTON1, EVENT_BEAT_FISHER_WILTON, FisherWiltonSeenText, FisherWiltonBeatenText, 0, .Script
 .Script
-	endifjustbattled
+;	endifjustbattled
+;	opentext
+;	writetext FisherWiltonAfterText
+;	waitbutton
+;	closetext
+;	end
+
+	loadvar VAR_CALLERID, PHONE_FISHER_WILTON
 	opentext
+	checkflag ENGINE_WILTON_READY_FOR_REMATCH
+	iftrue .WantsBattle
+	checkflag ENGINE_WILTON_HAS_BALL_ITEM
+	iftrue .HasItem
+	checkcellnum PHONE_FISHER_WILTON
+	iftrue .WiltonDefeated
+	checkevent EVENT_WILTON_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskedAlready
 	writetext FisherWiltonAfterText
-	waitbutton
+	promptbutton
+	setevent EVENT_WILTON_ASKED_FOR_PHONE_NUMBER
+	scall Route32AskNumber1M
+	sjump .AskForNumber
+
+.AskedAlready:
+	scall Route32AskNumber2M
+.AskForNumber:
+	askforphonenumber PHONE_FISHER_WILTON
+	ifequal PHONE_CONTACTS_FULL, Route32PhoneFullM
+	ifequal PHONE_CONTACT_REFUSED, Route32NumberDeclinedM
+	gettrainername STRING_BUFFER_3, FISHER, WILTON1
+	scall Route32RegisteredNumberM
+	sjump Route32NumberAcceptedM
+
+.WantsBattle:
+	scall Route32RematchM
+	winlosstext FisherWilton1BeatenText, 0
+	loadtrainer FISHER, WILTON_0
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_WILTON_READY_FOR_REMATCH
+	end
+
+.HasItem:
+	scall Route32GiftM
+	random 4
+	ifequal 0, .pokeball
+	ifequal 1, .greatball
+;	ifequal 2, .ultraball
+
+.ultraball:
+	verbosegiveitem ULTRA_BALL
+	iffalse Route32PackFullM
+	sjump .ItemReceived
+
+.greatball:
+	verbosegiveitem GREAT_BALL
+	iffalse Route32PackFullM
+	sjump .ItemReceived
+
+.pokeball:
+	verbosegiveitem POKE_BALL
+	iffalse Route32PackFullM
+;	sjump .ItemReceived
+
+.ItemReceived:
+	clearflag ENGINE_WILTON_HAS_BALL_ITEM
+;	setflag ENGINE_WILTON_GAVE_BALL_ITEM
+	sjump Route32NumberAcceptedM
+
+.WiltonDefeated:
+	writetext FisherWiltonAfterText
+	promptbutton
 	closetext
+	end
+
+Route32AskNumber1M:
+	jumpstd AskNumber1MScript
+	end
+
+Route32AskNumber2M:
+	jumpstd AskNumber2MScript
+	end
+
+Route32RegisteredNumberM:
+	jumpstd RegisteredNumberMScript
+	end
+
+Route32NumberAcceptedM:
+	jumpstd NumberAcceptedMScript
+	end
+
+Route32NumberDeclinedM:
+	jumpstd NumberDeclinedMScript
+	end
+
+Route32PhoneFullM:
+	jumpstd PhoneFullMScript
+	end
+
+Route32RematchM:
+	jumpstd RematchMScript
+	end
+
+Route32GiftM:
+	jumpstd GiftMScript
+	end
+
+Route32PackFullM:
+	jumpstd PackFullMScript
 	end
 
 FisherWiltonSeenText:
@@ -252,10 +356,49 @@ FisherWiltonAfterText:
 TrainerFisherRalph:
 	trainer FISHER, RALPH1, EVENT_BEAT_FISHER_RALPH, FisherRalphSeenText, FisherRalphBeatenText, 0, .Script
 .Script:
-	endifjustbattled
+;	endifjustbattled
+;	opentext
+;	writetext FisherRalphAfterText
+;	waitbutton
+;	closetext
+;	end
+
+	loadvar VAR_CALLERID, PHONE_FISHER_RALPH
 	opentext
+	checkflag ENGINE_RALPH_READY_FOR_REMATCH
+	iftrue .Rematch
+	checkcellnum PHONE_FISHER_RALPH
+	iftrue .RalphDefeated
+	checkevent EVENT_RALPH_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskAgain
 	writetext FisherRalphAfterText
-	waitbutton
+	promptbutton
+	setevent EVENT_RALPH_ASKED_FOR_PHONE_NUMBER
+	scall Route32AskNumber1M
+	sjump .AskForNumber
+
+.AskAgain:
+	scall Route32AskNumber2M
+.AskForNumber:
+	askforphonenumber PHONE_FISHER_RALPH
+	ifequal PHONE_CONTACTS_FULL, Route32PhoneFullM
+	ifequal PHONE_CONTACT_REFUSED, Route32NumberDeclinedM
+	gettrainername STRING_BUFFER_3, FISHER, RALPH1
+	scall Route32RegisteredNumberM
+	sjump Route32NumberAcceptedM
+
+.Rematch:
+	scall Route32RematchM
+	winlosstext FisherRalph1BeatenText, 0
+	loadtrainer FISHER, RALPH_0
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_RALPH_READY_FOR_REMATCH
+	end
+
+.RalphDefeated:
+	writetext FisherRalphAfterText
+	promptbutton
 	closetext
 	end
 

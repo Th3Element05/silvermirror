@@ -1,9 +1,8 @@
 ArnieAskNumber1Text:
 	text "Do you get the"
 	line "feeling that there"
-
-	para "are more rare"
-	line "#MON around?"
+	cont "are more rare"
+	roll "#MON around?"
 
 	para "I'm positive there"
 	line "are, so I look all"
@@ -11,9 +10,8 @@ ArnieAskNumber1Text:
 
 	para "If I find one, I"
 	line "want to share the"
-
-	para "good news with"
-	line "everyone I know."
+	cont "good news with"
+	roll "everyone I know."
 
 	para "I know! Give me"
 	line "your phone number."
@@ -31,9 +29,8 @@ ArnieAskNumber2Text:
 ArnieNumberAcceptedText:
 	text "If I spot any"
 	line "awesome #MON,"
-
-	para "I'll be sure to"
-	line "give you a call!"
+	cont "I'll be sure to"
+	roll "give you a call!"
 	done
 
 ArnieNumberDeclinedText:

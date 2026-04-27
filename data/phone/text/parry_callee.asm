@@ -1,23 +1,23 @@
 ParryAnswerPhoneText:
-	text "Yup, yup!"
-	line "It's @"
-	text_ram wStringBuffer3
-	text "!"
-
-	para "Hah, and here's"
-	line "<PLAY_G>!"
-	done
-
+;	text "Yup, yup!"
+;	line "It's @"
+;	text_ram wStringBuffer3
+;	text "!"
+;
+;	para "Hah, and here's"
+;	line "<PLAYER>!"
+;	done
+;
 ParryAnswerPhoneDayText:
-	text "Yup, yup!"
-	line "It's @"
-	text_ram wStringBuffer3
-	text "!"
-
-	para "Hah, and here's"
-	line "<PLAY_G>!"
-	done
-
+;	text "Yup, yup!"
+;	line "It's @"
+;	text_ram wStringBuffer3
+;	text "!"
+;
+;	para "Hah, and here's"
+;	line "<PLAYER>!"
+;	done
+;
 ParryAnswerPhoneNiteText:
 	text "Yup, yup!"
 	line "It's @"
@@ -25,7 +25,7 @@ ParryAnswerPhoneNiteText:
 	text "!"
 
 	para "Hah, and here's"
-	line "<PLAY_G>!"
+	line "<PLAYER>!"
 	done
 
 ParryGreetText:
@@ -66,7 +66,6 @@ ParryGenericText:
 	text_ram wStringBuffer4
 	text " and"
 	line "me--we're looking"
-
-	para "mighty dandy!"
-	line "Hahahah!"
+	cont "mighty dandy!"
+	roll "Hahahah!"
 	done

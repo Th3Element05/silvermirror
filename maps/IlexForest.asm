@@ -208,11 +208,78 @@ Text_HeadbuttOutro:
 TrainerBugCatcherArnie:
 	trainer BUG_CATCHER, ARNIE1, EVENT_BEAT_BUG_CATCHER_ARNIE, BugCatcherArnieSeenText, BugCatcherArnieBeatenText, 0, .Script
 .Script:
-	endifjustbattled
+;	endifjustbattled
+;	opentext
+;	writetext BugCatcherArnieAfterBattleText
+;	waitbutton
+;	closetext
+;	end
+
+	loadvar VAR_CALLERID, PHONE_BUG_CATCHER_ARNIE
 	opentext
+	checkflag ENGINE_ARNIE_READY_FOR_REMATCH
+	iftrue .WantsBattle
+	checkcellnum PHONE_BUG_CATCHER_ARNIE
+	iftrue .ArnieDefeated
+	checkevent EVENT_ARNIE_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskedAlready
 	writetext BugCatcherArnieAfterBattleText
-	waitbutton
+	promptbutton
+	setevent EVENT_ARNIE_ASKED_FOR_PHONE_NUMBER
+	scall .AskNumber1M
+	jump .AskForNumber
+
+.AskedAlready:
+	scall .AskNumber2M
+.AskForNumber:
+	askforphonenumber PHONE_BUG_CATCHER_ARNIE
+	ifequal PHONE_CONTACTS_FULL, .PhoneFullM
+	ifequal PHONE_CONTACT_REFUSED, .NumberDeclinedM
+	gettrainername STRING_BUFFER_3, BUG_CATCHER, ARNIE1
+	scall .RegisteredNumberM
+	jump .NumberAcceptedM
+
+.WantsBattle:
+	scall .RematchM
+	winlosstext BugCatcherArnieBeatenText, 0
+	loadtrainer BUG_CATCHER, ARNIE_0
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_ARNIE_READY_FOR_REMATCH
+	end
+
+.ArnieDefeated:
+	writetext BugCatcherArnieAfterBattleText
+	promptbutton
 	closetext
+	end
+
+.AskNumber1M:
+	jumpstd AskNumber1MScript
+	end
+
+.AskNumber2M:
+	jumpstd AskNumber2MScript
+	end
+
+.RegisteredNumberM:
+	jumpstd RegisteredNumberMScript
+	end
+
+.NumberAcceptedM:
+	jumpstd NumberAcceptedMScript
+	end
+
+.NumberDeclinedM:
+	jumpstd NumberDeclinedMScript
+	end
+
+.PhoneFullM:
+	jumpstd PhoneFullMScript
+	end
+
+Route35RematchM:
+	jumpstd RematchMScript
 	end
 
 BugCatcherArnieSeenText:

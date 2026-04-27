@@ -1,11 +1,10 @@
 RalphNeglectingKidsText:
 	text "I've been spending"
 	line "more time with my"
-
-	para "@"
+	cont "@"
 	text_ram wStringBuffer4
 	text " than I"
-	line "have with my kids."
+	roll "have with my kids."
 
 	para "That's a bit sad,"
 	line "actually."
@@ -19,9 +18,8 @@ RalphDefeatedMonText:
 
 	para "I told my kid, but"
 	line "he scoffed that he"
-
-	para "could do the same"
-	line "thing easily."
+	cont "could do the same"
+	roll "thing easily."
 
 	para "Boy, has he gotten"
 	line "cocky…"
@@ -32,15 +30,13 @@ RalphLostAMonText:
 	line "@"
 	text_ram wStringBuffer4
 	text " slipped"
-
-	para "away from me, in"
-	line "front of my kid."
+	cont "away from me, in"
+	roll "front of my kid."
 
 	para "I was feeling down"
 	line "about it until he"
-
-	para "shared his #"
-	line "BALLs with me."
+	cont "shared his #"
+	roll "BALLs with me."
 
 	para "Hahah, that sure"
 	line "made my day!"
@@ -74,12 +70,10 @@ RalphItemText:
 	line "@"
 	text_ram wStringBuffer4
 	text " are"
-
-	para "biting like there"
-	line "is no tomorrow"
-
-	para "over here on"
-	line "@"
+	cont "biting like there"
+	roll "is no tomorrow"
+	cont "over here on"
+	roll "@"
 	text_ram wStringBuffer5
 	text "!"
 
@@ -89,11 +83,10 @@ RalphItemText:
 	para "Heh, they're some"
 	line "kind of feisty!"
 
-	para "<PLAY_G>, you have"
+	para "<PLAYER>, you have"
 	line "to see this rare"
-
-	para "sight! Get ready"
-	line "to fish!"
+	cont "sight! Get ready"
+	roll "to fish!"
 	done
 
 RalphNoItemText:
@@ -110,9 +103,8 @@ RalphNoItemText:
 RalphReminderText:
 	text "So where are you?"
 	line "I'm waiting for"
-
-	para "you to show up on"
-	line "@"
+	cont "you to show up on"
+	roll "@"
 	text_ram wStringBuffer5
 	text "."
 
@@ -124,9 +116,9 @@ RalphHurryText:
 	text "Hey, what's the"
 	line "matter with you?"
 
-	para "Aren't you coming"
-	line "over to fish for"
-	cont "QWILFISH?"
+;	para "Aren't you coming"
+;	line "over to fish for"
+;	cont "QWILFISH?"
 
 	para "I'm on ROUTE 32,"
 	line "so hurry up!"

@@ -1,28 +1,28 @@
 ArnieAnswerPhoneText:
-	text "Yeah, hello."
-	line "This is @"
-	text_ram wStringBuffer3
-	text "."
-
-	para "…Huh, <PLAY_G>? Yo!"
-	done
-
+;	text "Yeah, hello."
+;	line "This is @"
+;	text_ram wStringBuffer3
+;	text "."
+;
+;	para "…Huh, <PLAYER>? Yo!"
+;	done
+;
 ArnieAnswerPhoneDayText:
-	text "Yeah, hello, you"
-	line "got @"
-	text_ram wStringBuffer3
-	text "."
-
-	para "…Huh, <PLAY_G>? Yo!"
-	done
-
+;	text "Yeah, hello, you"
+;	line "got @"
+;	text_ram wStringBuffer3
+;	text "."
+;
+;	para "…Huh, <PLAYER>? Yo!"
+;	done
+;
 ArnieAnswerPhoneNiteText:
 	text "Yeah, hello, you"
 	line "got @"
 	text_ram wStringBuffer3
 	text "."
 
-	para "…Huh, <PLAY_G>? Yo!"
+	para "…<PLAYER>? Yo!"
 	done
 
 ArnieGreetText:
@@ -32,7 +32,7 @@ ArnieGreetText:
 	text " calling."
 
 	para "What are you up"
-	line "to, <PLAY_G>?"
+	line "to, <PLAYER>?"
 	done
 
 ArnieGreetDayText:
@@ -42,7 +42,7 @@ ArnieGreetDayText:
 	text " calling."
 
 	para "Where are you now,"
-	line "<PLAY_G>?"
+	line "<PLAYER>?"
 	done
 
 ArnieGreetNiteText:
@@ -52,7 +52,7 @@ ArnieGreetNiteText:
 	text " calling."
 
 	para "Are you awake now,"
-	line "<PLAY_G>?"
+	line "<PLAYER>?"
 	done
 
 ArnieGenericText:

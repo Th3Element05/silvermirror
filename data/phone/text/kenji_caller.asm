@@ -16,9 +16,8 @@ KenjiRemainDedicatedText:
 KenjiCallMeBackAnotherTimeText:
 	text "I'm in training"
 	line "now. I apologize,"
-
-	para "but call me back"
-	line "another time."
+	cont "but call me back"
+	roll "another time."
 
 	para "Oooooaaarrrgh!"
 	done
@@ -26,9 +25,8 @@ KenjiCallMeBackAnotherTimeText:
 KenjiIllHaveTimeToChatTomorrowText:
 	text "I apologize, but I"
 	line "don't have time to"
-
-	para "chat while I am in"
-	line "training!"
+	cont "chat while I am in"
+	roll "training!"
 
 	para "I'll have time to"
 	line "chat tomorrow!"
@@ -39,9 +37,8 @@ KenjiIllHaveTimeToChatTomorrowText:
 KenjiHangUpMorningText:
 	text "I plan to take a"
 	line "lunch break, so"
-
-	para "come see me then!"
-	line "Ayiiiyah!"
+	cont "come see me then!"
+	roll "Ayiiiyah!"
 	done
 
 KenjiTakingABreakText:

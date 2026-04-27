@@ -33,9 +33,8 @@ RalphNumberAcceptedText:
 RalphNumberDeclinedText:
 	text "Oh…"
 	line "My own kids won't"
-
-	para "even give me their"
-	line "phone numbers…"
+	cont "even give me their"
+	roll "phone numbers…"
 
 	para "Is that how young"
 	line "people are today?"
@@ -53,6 +52,6 @@ RalphPhoneFullText:
 RalphRematchText:
 	text "Hey, kid!"
 
-	para "No losing for me"
-	line "this day!"
+	para "I'm not planning"
+	line "on losing today!"
 	done

@@ -4,7 +4,7 @@ ChadAnswerPhoneText:
 	text_ram wStringBuffer3
 	text "…"
 
-	para "Hi, <PLAY_G>!"
+	para "Hi, <PLAYER>!"
 	line "Good morning!"
 	done
 
@@ -14,7 +14,7 @@ ChadAnswerPhoneDayText:
 	text_ram wStringBuffer3
 	text "…"
 
-	para "Hi, <PLAY_G>, good"
+	para "Hi, <PLAYER>, good"
 	line "day!"
 	done
 
@@ -24,12 +24,12 @@ ChadAnswerPhoneNiteText:
 	text_ram wStringBuffer3
 	text "…"
 
-	para "Hi, <PLAY_G>, good"
+	para "Hi, <PLAYER>, good"
 	line "evening!"
 	done
 
 ChadGreetText:
-	text "Hi, <PLAY_G>, good"
+	text "Hi, <PLAYER>, good"
 	line "morning!"
 
 	para "It's @"
@@ -39,7 +39,7 @@ ChadGreetText:
 	done
 
 ChadGreetDayText:
-	text "Hi, <PLAY_G>, good"
+	text "Hi, <PLAYER>, good"
 	line "day!"
 
 	para "It's @"
@@ -49,7 +49,7 @@ ChadGreetDayText:
 	done
 
 ChadGreetNiteText:
-	text "Hi, <PLAY_G>, good"
+	text "Hi, <PLAYER>, good"
 	line "evening!"
 
 	para "It's @"
@@ -71,8 +71,7 @@ ChadGenericText:
 
 	para "But then, I am"
 	line "trying to become a"
-
-	para "#MON professor,"
-	line "so that shouldn't"
+	cont "#MON professor,"
+	roll "so that shouldn't"
 	cont "be a big surprise."
 	done

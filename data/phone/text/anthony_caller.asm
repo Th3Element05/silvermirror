@@ -1,13 +1,12 @@
 AnthonyMonAteSomeBerriesText:
 	text "The other day, I"
 	line "was watching my"
-
-	para "#MON eat some"
-	line "BERRIES."
-;	para "@"
-;	text_ram wStringBuffer4
-;	text " eat"
-;	line "some BERRIES."
+;	cont "#MON eat some"
+;	roll "BERRIES."
+	cont "@"
+	text_ram wStringBuffer4
+	text " eat"
+	roll "some BERRIES."
 
 	para "It looked like it"
 	line "was enjoying them,"
@@ -23,11 +22,10 @@ AnthonyMonAteSomeBerriesText:
 AnthonyDefeatedMonText:
 	text "Lately, I've been"
 	line "running across"
-
-	para "wild @"
+	cont "wild @"
 	text_ram wStringBuffer4
 	text_start
-	line "quite often."
+	roll "quite often."
 
 	para "They're easily"
 	line "taken care of."
@@ -36,11 +34,10 @@ AnthonyDefeatedMonText:
 AnthonyLostAMonText:
 	text "Oh yeah, I was"
 	line "battling this"
-
-	para "@"
+	cont "@"
 	text_ram wStringBuffer4
 	text " the"
-	line "other day…"
+	roll "other day…"
 
 	para "It took off when I"
 	line "got distracted by"
@@ -48,9 +45,8 @@ AnthonyLostAMonText:
 
 	para "Learn from my"
 	line "mistake--always"
-
-	para "stay focused on"
-	line "the job at hand!"
+	cont "stay focused on"
+	roll "the job at hand!"
 	done
 
 AnthonyBattleRematchText:
@@ -85,36 +81,34 @@ AnthonySwarmText:
 	line "tons of @"
 	text_ram wStringBuffer4
 	text_start
-	para "around! You have"
-	line "to see it!"
-
-	para "I get this feeling"
-	line "that @"
-	text_ram wStringBuffer4
-	text_start
-	para "may be timid."
-	line "I didn't see any"
-
-	para "where there are"
-	line "strong #MON."
+	cont "around! You have"
+	roll "to see it!"
 	done
+
+;	para "I get this feeling"
+;	line "that @"
+;	text_ram wStringBuffer4
+;	text_start
+;	cont "may be timid."
+;	roll "I didn't see any"
+;	cont "where there are"
+;	roll "strong #MON."
+;	done
 
 AnthonyWasntPayingAttentionText:
 	text "Rare #MON?"
 
 	para "Hey, sorry! I was"
 	line "too focused on my"
-
-	para "hike, so I wasn't"
-	line "paying attention."
+	cont "hike, so I wasn't"
+	roll "paying attention."
 	done
 
 AnthonyReminderText:
 	text "Hello! You haven't"
 	line "forgotten about"
-
-	para "our battle, have"
-	line "you?"
+	cont "our battle, have"
+	roll "you?"
 
 	para "@"
 	text_ram wStringBuffer5
@@ -127,13 +121,12 @@ AnthonyHurryText:
 	line "is DUNSPARCE?"
 
 	para "DARK CAVE! Hurry!"
-
-	para "I know I've said"
-	line "it before, but"
-
-	para "DUNSPARCE don't"
-	line "appear when there"
-
-	para "are strong #MON"
-	line "around."
 	done
+
+;	para "I know I've said"
+;	line "it before, but"
+;	cont "DUNSPARCE don't"
+;	roll "appear when there"
+;	cont "are strong #MON"
+;	roll "around."
+;	done

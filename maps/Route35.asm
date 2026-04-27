@@ -165,52 +165,44 @@ TrainerFirebreatherWalt:
 .WantsBattle:
 	scall Route35RematchM
 	winlosstext FirebreatherWaltBeatenText, 0
-;	checkevent EVENT_RESTORED_POWER_TO_KANTO
-;	iftrue .LoadFight5
-;	checkevent EVENT_BEAT_ELITE_FOUR
-;	iftrue .LoadFight4
-	checkflag ENGINE_FLYPOINT_BLACKTHORN ;checkevent EVENT_CLEARED_RADIO_TOWER
-	iftrue .LoadFight3
-;	checkflag ENGINE_FLYPOINT_CIANWOOD
-;	iftrue .LoadFight2
-;	loadtrainer FIREBREATHER, WALT1
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_WALT_READY_FOR_REMATCH
-;	end
-;
-;.LoadFight2:
 	loadtrainer FIREBREATHER, WALT_0
 	startbattle
 	reloadmapafterbattle
 	clearflag ENGINE_WALT_READY_FOR_REMATCH
 	end
-
-.LoadFight3:
-	loadtrainer FIREBREATHER, WALT_0
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_WALT_READY_FOR_REMATCH
-	end
-
-;.LoadFight4:
-;	loadtrainer FIREBREATHER, WALT4
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_WALT_READY_FOR_REMATCH
-;	end
-
-;.LoadFight5:
-;	loadtrainer FIREBREATHER, WALT5
-;	startbattle
-;	reloadmapafterbattle
-;	clearflag ENGINE_WALT_READY_FOR_REMATCH
-;	end
 
 .WaltDefeated:
 	writetext FirebreatherWaltAfterBattleText
 	promptbutton
 	closetext
+	end
+
+Route35AskNumber1M:
+	jumpstd AskNumber1MScript
+	end
+
+Route35AskNumber2M:
+	jumpstd AskNumber2MScript
+	end
+
+Route35RegisteredNumberM:
+	jumpstd RegisteredNumberMScript
+	end
+
+Route35NumberAcceptedM:
+	jumpstd NumberAcceptedMScript
+	end
+
+Route35NumberDeclinedM:
+	jumpstd NumberDeclinedMScript
+	end
+
+Route35PhoneFullM:
+	jumpstd PhoneFullMScript
+	end
+
+Route35RematchM:
+	jumpstd RematchMScript
 	end
 
 FirebreatherWaltSeenText:
@@ -232,33 +224,40 @@ FirebreatherWaltAfterBattleText:
 TrainerJugglerIrwin:
 	trainer JUGGLER, IRWIN1, EVENT_BEAT_JUGGLER_IRWIN, JugglerIrwinSeenText, JugglerIrwinBeatenText, 0, .Script
 .Script:
-	loadvar VAR_CALLERID, PHONE_JUGGLER_IRWIN
+	endifjustbattled
 	opentext
-	checkcellnum PHONE_JUGGLER_IRWIN
-	iftrue .IrwinDefeated
-	checkevent EVENT_IRWIN_ASKED_FOR_PHONE_NUMBER
-	iftrue .AskedAlready
 	writetext JugglerIrwinAfterBattleText
-	promptbutton
-	setevent EVENT_IRWIN_ASKED_FOR_PHONE_NUMBER
-	scall Route35AskNumber1M
-	jump .AskForNumber
-
-.AskedAlready:
-	scall Route35AskNumber2M
-.AskForNumber:
-	askforphonenumber PHONE_JUGGLER_IRWIN
-	ifequal PHONE_CONTACTS_FULL, Route35PhoneFullM
-	ifequal PHONE_CONTACT_REFUSED, Route35NumberDeclinedM
-	gettrainername STRING_BUFFER_3, JUGGLER, IRWIN1
-	scall Route35RegisteredNumberM
-	jump Route35NumberAcceptedM
-
-.IrwinDefeated:
-	writetext JugglerIrwinAfterBattleText
-	promptbutton
+	waitbutton
 	closetext
 	end
+
+;	loadvar VAR_CALLERID, PHONE_JUGGLER_IRWIN
+;	opentext
+;	checkcellnum PHONE_JUGGLER_IRWIN
+;	iftrue .IrwinDefeated
+;	checkevent EVENT_IRWIN_ASKED_FOR_PHONE_NUMBER
+;	iftrue .AskedAlready
+;	writetext JugglerIrwinAfterBattleText
+;	promptbutton
+;	setevent EVENT_IRWIN_ASKED_FOR_PHONE_NUMBER
+;	scall Route35AskNumber1M
+;	jump .AskForNumber
+;
+;.AskedAlready:
+;	scall Route35AskNumber2M
+;.AskForNumber:
+;	askforphonenumber PHONE_JUGGLER_IRWIN
+;	ifequal PHONE_CONTACTS_FULL, Route35PhoneFullM
+;	ifequal PHONE_CONTACT_REFUSED, Route35NumberDeclinedM
+;	gettrainername STRING_BUFFER_3, JUGGLER, IRWIN1
+;	scall Route35RegisteredNumberM
+;	jump Route35NumberAcceptedM
+;
+;.IrwinDefeated:
+;	writetext JugglerIrwinAfterBattleText
+;	promptbutton
+;	closetext
+;	end
 
 JugglerIrwinSeenText:
 	text "Behold my graceful"
@@ -428,33 +427,6 @@ BirdKeeperNateAfterBattleText:
 	line "custom BALL."
 	done
 
-Route35AskNumber1M:
-	jumpstd AskNumber1MScript
-	end
-
-Route35AskNumber2M:
-	jumpstd AskNumber2MScript
-	end
-
-Route35RegisteredNumberM:
-	jumpstd RegisteredNumberMScript
-	end
-
-Route35NumberAcceptedM:
-	jumpstd NumberAcceptedMScript
-	end
-
-Route35NumberDeclinedM:
-	jumpstd NumberDeclinedMScript
-	end
-
-Route35PhoneFullM:
-	jumpstd PhoneFullMScript
-	end
-
-Route35RematchM:
-	jumpstd RematchMScript
-	end
 
 Route35Sign:
 	jumptext Route35SignText

@@ -1,9 +1,8 @@
 ParryAskNumber1Text:
 	text "Sheesh, the way"
 	line "you attacked! That"
-
-	para "was something! We"
-	line "should meet again!"
+	cont "was something! We"
+	roll "should meet again!"
 
 	para "How about giving"
 	line "me your number?"
@@ -12,9 +11,8 @@ ParryAskNumber1Text:
 ParryAskNumber2Text:
 	text "So you want to"
 	line "register my phone"
-
-	para "number for a re-"
-	line "match, huh?"
+	cont "number for a re-"
+	roll "match, huh?"
 	done
 
 ParryNumberAcceptedText:
@@ -67,7 +65,6 @@ ParryRematchGiftText:
 
 	para "I want you to work"
 	line "and succeed for"
-
-	para "the both of us."
-	line "So take this, OK?"
+	cont "the both of us."
+	roll "So take this, OK?"
 	done

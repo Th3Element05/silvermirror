@@ -8,9 +8,8 @@ HueyAskNumber1Text:
 
 	para "You'd be fun to"
 	line "battle, so I'll"
-
-	para "call you when I"
-	line "get stronger!"
+	cont "call you when I"
+	roll "get stronger!"
 	done
 
 HueyAskNumber2Text:
@@ -19,9 +18,8 @@ HueyAskNumber2Text:
 
 	para "You'd be fun to"
 	line "battle, so I'll"
-
-	para "call you when I"
-	line "get stronger!"
+	cont "call you when I"
+	roll "get stronger!"
 	done
 
 HueyNumberAcceptedText:
@@ -56,15 +54,13 @@ HueyRematchGiftText:
 
 	para "I've battled you"
 	line "over and over, but"
-
-	para "<PLAYER>, I haven't"
-	line "won once."
+	cont "<PLAYER>, I haven't"
+	roll "won once."
 
 	para "I bought tons of"
 	line "items to toughen"
-
-	para "up my #MON, but"
-	line "to no avail…"
+	cont "up my #MON, but"
+	roll "to no avail…"
 
 	para "Items alone aren't"
 	line "the answer."

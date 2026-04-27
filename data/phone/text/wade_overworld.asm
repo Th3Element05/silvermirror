@@ -31,9 +31,8 @@ WadeAskNumber2Text:
 WadeNumberAcceptedText:
 	text "You'll hear from"
 	line "me as soon as I"
-
-	para "find anything that"
-	line "you might like."
+	cont "find anything that"
+	roll "you might like."
 	done
 
 WadeNumberDeclinedText:

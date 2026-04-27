@@ -37,9 +37,8 @@ ParryLostAMonText:
 ParryBattleRematchText:
 	text "You're thinking"
 	line "you'd like to"
-
-	para "battle me. Am I"
-	line "right or what?"
+	cont "battle me. Am I"
+	roll "right or what?"
 
 	para "Yep! We'll meet on"
 	line "@"

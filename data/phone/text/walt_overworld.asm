@@ -1,9 +1,8 @@
 WaltAskNumber1Text:
 	text "Mostly I breathe"
 	line "fire, but do you"
-	
-	para "want to exchange"
-	line "phone numbers?"
+	cont "want to exchange"
+	roll "phone numbers?"
 	done
 
 WaltAskNumber2Text:
@@ -25,11 +24,10 @@ WaltNumberAcceptedText:
 
 	para "Don't worry. I'll"
 	line "stop breathing"
+	cont "fire while we're"
+	roll "on the phone…"
 
-	para "fire while we're"
-	line "on the phone…"
-
-	para "so give me a call"
+	para "So give me a call"
 	line "sometime!"
 	done
 
@@ -49,5 +47,5 @@ WaltRematchText:
 	text "I have been prac-"
 	line "ticing my fire-"
 	cont "breathing while"
-	cont "waiting for you!"
+	roll "waiting for you!"
 	done

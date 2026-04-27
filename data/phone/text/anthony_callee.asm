@@ -1,4 +1,6 @@
 AnthonyAnswerPhoneText:
+AnthonyAnswerPhoneDayText:
+AnthonyAnswerPhoneNiteText:
 	text "Yeah, @"
 	text_ram wStringBuffer3
 	text " the"
@@ -7,35 +9,35 @@ AnthonyAnswerPhoneText:
 	para "Ah, <PLAYER>!"
 	done
 
-AnthonyAnswerPhoneDayText:
-	text "Yeah, @"
-	text_ram wStringBuffer3
-	text " the"
-	line "HIKER here."
+;AnthonyAnswerPhoneDayText:
+;	text "Yeah, @"
+;	text_ram wStringBuffer3
+;	text " the"
+;	line "HIKER here."
+;
+;	para "Ah, <PLAYER>,"
+;	line "right?"
+;	done
 
-	para "Ah, <PLAYER>,"
-	line "right?"
-	done
-
-AnthonyAnswerPhoneNiteText:
-	text "Yeah, @"
-	text_ram wStringBuffer3
-	text " the"
-	line "HIKER here."
-
-	para "Ah, <PLAYER>, isn't"
-	line "it?"
-	done
+;AnthonyAnswerPhoneNiteText:
+;	text "Yeah, @"
+;	text_ram wStringBuffer3
+;	text " the"
+;	line "HIKER here."
+;
+;	para "Ah, <PLAYER>, isn't"
+;	line "it?"
+;	done
 
 AnthonyGreetText:
-	text "Yo, <PLAYER>?"
-
-	para "This is @"
-	text_ram wStringBuffer3
-	text_start
-	line "the HIKER!"
-	done
-
+;	text "Yo, <PLAYER>?"
+;
+;	para "This is @"
+;	text_ram wStringBuffer3
+;	text_start
+;	line "the HIKER!"
+;	done
+;
 AnthonyGreetDayText:
 	text "Hey, is this"
 	line "<PLAYER>?"
@@ -64,10 +66,8 @@ AnthonyGenericText:
 	text_ram wStringBuffer4
 	text " and"
 	line "me--we have energy"
-
-	para "to burn. We hike"
-	line "up mountains every"
-
-	para "day to work out"
-	line "all our energy."
+	cont "to burn. We hike"
+	roll "up mountains every"
+	cont "day to work out"
+	roll "all our energy."
 	done

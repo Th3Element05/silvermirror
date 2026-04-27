@@ -1,84 +1,81 @@
 WadePhoneCalleeScript:
 	gettrainername STRING_BUFFER_3, BUG_CATCHER, WADE1
-	checkflag ENGINE_WADE_READY_FOR_REMATCH
-	iftrue .WantsBattle
 	farscall PhoneScript_AnswerPhone_Male
-	checkflag ENGINE_WADE_TUESDAY_NIGHT
-	iftrue .NotTuesday
-	checkflag ENGINE_WADE_HAS_BERRY
-	iftrue .HasItem
-	readvar VAR_WEEKDAY
-	ifnotequal TUESDAY, .NotTuesday
-	checktime NITE
-	iftrue WadeWantsBattle2
 
-.NotTuesday:
-	farscall PhoneScript_Random2
+	checkflag ENGINE_WADE_READY_FOR_REMATCH
+	iftrue WadeWaitingForBattle
+
+	checkflag ENGINE_WADE_HAS_BERRY
+	iftrue WadeRemindItem
+
+	readvar VAR_WEEKDAY
+	ifequal TUESDAY, WadeWantsBattle
+
+	random 2
+	ifequal 0, WadeWantsBattle
+
+;.NotTuesday:
+	random 2
 	ifequal 0, .NoContest
 	checkflag ENGINE_DAILY_BUG_CONTEST
 	iftrue .NoContest
 	readvar VAR_WEEKDAY
-	ifequal TUESDAY, .ContestToday
-	ifequal THURSDAY, .ContestToday
-	ifequal SATURDAY, .ContestToday
+	ifequal TUESDAY, WadeRemindContestToday
+	ifequal THURSDAY, WadeRemindContestToday
+	ifequal SATURDAY, WadeRemindContestToday
 
 .NoContest:
 	farsjump WadeNoBerriesScript
 
-.ContestToday:
-	farsjump PhoneScript_BugCatchingContest
-
-.WantsBattle:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_31
-	farsjump WadeReminderScript
-
-.HasItem:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_31
-	farsjump WadeComeQuickScript
 
 WadePhoneCallerScript:
 	gettrainername STRING_BUFFER_3, BUG_CATCHER, WADE1
 	farscall PhoneScript_GreetPhone_Male
-	farscall PhoneScript_Random2
+
+	random 2
 	ifequal 0, .NoContest
 	checkflag ENGINE_DAILY_BUG_CONTEST
 	iftrue .NoContest
 	readvar VAR_WEEKDAY
-	ifequal TUESDAY, .ContestToday
-	ifequal THURSDAY, .ContestToday
-	ifequal SATURDAY, .ContestToday
+	ifequal TUESDAY, WadeRemindContestToday
+	ifequal THURSDAY, WadeRemindContestToday
+	ifequal SATURDAY, WadeRemindContestToday
 
 .NoContest:
 	checkflag ENGINE_WADE_READY_FOR_REMATCH
-	iftrue .next
-	checkflag ENGINE_WADE_TUESDAY_NIGHT
-	iftrue .next
-	checkflag ENGINE_WADE_HAS_BERRY
-	iftrue .next
-	farscall PhoneScript_Random2
-	ifequal 0, WadeHasItem2
-	checkflag ENGINE_FLYPOINT_GOLDENROD
-	iffalse .next
-	farscall PhoneScript_Random2
-	ifequal 0, WadeWantsBattle2
+	iftrue WadeWaitingForBattle
 
-.next:
-	farscall PhoneScript_Random3
+	checkflag ENGINE_WADE_HAS_BERRY
+	iftrue WadeRemindItem
+
+	random 3
+	ifequal 0, WadeWantsBattle
+	ifequal 1, WadeHasItem
+
+	random 3
 	ifequal 0, WadeFoundRare
 	farsjump Phone_GenericCall_Male
 
-.ContestToday:
-	farsjump PhoneScript_BugCatchingContest
-
-WadeWantsBattle2:
+WadeWantsBattle:
 	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_31
 	setflag ENGINE_WADE_READY_FOR_REMATCH
 	farsjump PhoneScript_WantsToBattle_Male
 
-WadeFoundRare:
-	farsjump Phone_CheckIfUnseenRare_Male
+WadeWaitingForBattle:
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_31
+	farsjump WadeReminderScript
 
-WadeHasItem2:
+WadeHasItem:
 	setflag ENGINE_WADE_HAS_BERRY
 	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_31
 	farsjump PhoneScript_FoundItem_Male
+
+WadeRemindItem:
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_31
+	farsjump WadeComeQuickScript
+
+WadeRemindContestToday:
+	farsjump PhoneScript_BugCatchingContest
+
+WadeFoundRare:
+	farsjump Phone_CheckIfUnseenRare_Male
