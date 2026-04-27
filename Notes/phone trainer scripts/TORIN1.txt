@@ -1,0 +1,106 @@
+TORIN1
+
+TrainerSchoolboyTorin:
+	trainer SCHOOLBOY, TORIN1, EVENT_BEAT_SCHOOLBOY_TORIN, SchoolboyTorinSeenText, SchoolboyTorinBeatenText, 0, .Script
+.Script:
+	loadvar VAR_CALLERID, PHONE_SCHOOLBOY_TORIN
+	opentext
+	checkflag ENGINE_TORIN_READY_FOR_REMATCH
+	iftrue .WantsBattle
+	checkcellnum PHONE_SCHOOLBOY_TORIN
+	iftrue .TorinDefeated
+	checkevent EVENT_TORIN_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskedBefore
+	writetext SchoolboyTorinAfterBattleText
+	waitbutton
+	setevent EVENT_TORIN_ASKED_FOR_PHONE_NUMBER
+	scall Route14AskNumber1
+	jump .AskForNumber
+
+.AskedBefore:
+	scall Route14AskNumber2
+.AskForNumber:
+	askforphonenumber PHONE_SCHOOLBOY_TORIN
+	ifequal PHONE_CONTACTS_FULL, Route14PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, Route14NumberDeclined
+	gettrainername STRING_BUFFER_3, SCHOOLBOY, TORIN1
+	scall Route14RegisteredNumber
+	jump Route14NumberAccepted
+
+.WantsBattle:
+	scall Route14Rematch
+	winlosstext SchoolboyTorinBeatenText, 0
+	checkevent EVENT_BEAT_BLUE
+	iftrue .LoadFight2
+	checkevent ENGINE_FLYPOINT_PEWTER
+	iftrue .LoadFight1
+	loadtrainer SCHOOLBOY, TORIN1
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_TORIN_READY_FOR_REMATCH
+	end
+
+.LoadFight1:
+	loadtrainer SCHOOLBOY, TORIN2
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_TORIN_READY_FOR_REMATCH
+	end
+
+.LoadFight2:
+	loadtrainer SCHOOLBOY, TORIN3
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_TORIN_READY_FOR_REMATCH
+	end
+
+.TorinDefeated:
+	writetext SchoolboyTorinAfterBattleText
+	waitbutton
+	closetext
+	end
+
+Route14AskNumber1:
+	jumpstd AskNumber1MScript
+	end
+
+Route14AskNumber2:
+	jumpstd AskNumber2MScript
+	end
+
+Route14RegisteredNumber:
+	jumpstd RegisteredNumberMScript
+	end
+
+Route14NumberAccepted:
+	jumpstd NumberAcceptedMScript
+	end
+
+Route14NumberDeclined:
+	jumpstd NumberDeclinedMScript
+	end
+
+Route14PhoneFull:
+	jumpstd PhoneFullMScript
+	end
+
+Route14Rematch:
+	jumpstd RematchMScript
+	end
+
+
+SchoolboyTorinSeenText:
+	text "It's good to put"
+	line "what you learn to"
+	cont "use immediately!"
+	done
+
+SchoolboyTorinBeatenText:
+	text "I see. I see."
+	done
+
+SchoolboyTorinAfterBattleText:
+	text "All right!"
+	line "Next time, I won't"
+	cont "make any mistakes!"
+	done

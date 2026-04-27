@@ -1,24 +1,12 @@
 New TO DO list
-
-
-;ntagUsageExampleText:
-;	ntag "SUPERNERD:"
-;	text "Did you check out"
-;	line "the MUSEUM?@" <- @ terminator before new ntag
-;	text_promptbutton   <- promptbutton before new ntag
-;
-;	ntag "NEW SPEAKER:"
-;	text "text test"
-;	done
+playershouse2f debugstuff
+oakslab debugstuff
+celadongamecorner debugcoins
 
 
 TEST
 
-HallOfFame to enable MtSilverOak
-MtSilverOak script, battle
-SilverMirror script, battle
-
-silver mirror sprite
+fossil revive script still broken?
 
 olivine good rod house uses route32pokecenter lure script
 
@@ -72,20 +60,11 @@ OftenFleeMons:
 
 DO
 
-ask grate oracle lewot about CAL trainer pic
+confirm phone trainer stuff is all lined up
 
-
-tutorial: fight copy of your own party ~silvermirror
-
-battle text <TARGET> = "Enemy ####MON890"
-
-named bug-catching contestants, sprite continuity with route36 gate judging
-
-fossil revive script still broken
 
 what to use EVENT_CAUGHT_MISSINGNO for?
 
-cianwood photo studio
 charcoal kiln
 
 jumpstd HappinessCheckScript ;in pokecenters? oak's aide?
