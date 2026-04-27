@@ -233,11 +233,11 @@ _TitleScreen:
 
 	ld a, [sCrystalData + wPlayerGender - wCrystalData]
 	cp 1
-	ld d, $36
+	ld d, $3c
 	jr z, .femalegfx
 
 ;male
-	ld d, $1a
+	ld d, $20
 .femalegfx
 	hlcoord 10, 11 ;10, 11
 	lb bc, 7, 4
@@ -254,8 +254,8 @@ _TitleScreen:
 ;	call DrawTitleGraphic
 
 ; Draw copyright text
-	hlbgcoord 3, 0, vBGMap1
-	lb bc, 1, 13
+	hlbgcoord 0, 0, vBGMap1
+	lb bc, 1, 20
 	ld d, $c
 	ld e, 16
 	call DrawTitleGraphic
