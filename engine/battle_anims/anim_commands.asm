@@ -128,7 +128,9 @@ RunBattleAnimScript:
 	jr nz, .find
 
 .not_rollout
-	call BattleAnimDelayFrame
+	ld a, [wFXAnimID]
+	cp SURF
+	call nz, BattleAnimDelayFrame
 
 .done
 	ld a, [wBattleAnimFlags]
