@@ -507,7 +507,7 @@ SetDynamicLevel:
 	pop bc
 	pop hl
 
-	add 9
+	add 10
 	add b
 	cp MAX_LEVEL
 	ret c
