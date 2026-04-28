@@ -43,13 +43,17 @@ RedsHouse2FYoungChris:
 	opentext
 	writetext RedsHouse2FChrisHappyText
 	promptbutton
-	random 3
-;	ifequal 0, .heartscale ;fallthrough
-	ifequal 1, .goldleaf
-	ifequal 2, .silverleaf
+	random 2
+;	ifequal 0, .goldleaf ;fallthrough
+	ifequal 1, .silverleaf
 
-;.heartscale
-	verbosegiveitem HEART_SCALE
+.goldleaf
+	verbosegiveitem GOLD_LEAF
+	closetext
+	end
+
+.silverleaf
+	verbosegiveitem SILVER_LEAF
 	closetext
 	end
 
@@ -59,16 +63,6 @@ RedsHouse2FYoungChris:
 	writetext RedsHouse2FChrisLoveText
 	promptbutton
 	verbosegiveitem HEART_SCALE
-	random 2
-	ifequal 0, .silverleaf
-
-.goldleaf
-	verbosegiveitem GOLD_LEAF
-	closetext
-	end
-
-.silverleaf
-	verbosegiveitem SILVER_LEAF
 	closetext
 	end
 
