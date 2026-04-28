@@ -8,7 +8,7 @@ DEF done   EQUS "db \"<DONE>\""   ; End a text box.
 DEF prompt EQUS "db \"<PROMPT>\"" ; Prompt the player to end a text box (initiating some other event).
 DEF roll   EQUS "db \"<SCROLL>\"," ; _ContTextNoPause
 DEF feed   EQUS "db \"<LF>\","     ; Text on next line with no gap.
-;DEF ntag   EQUS "db TX_NAMETAG,"
+;DEF ntag   EQUS "db TX_NAMETAG," ;no comma?
 
 ; TextCommands indexes (see home/text.asm)
 	const_def
@@ -148,14 +148,13 @@ MACRO ntag ;text_nametag
 ENDM
 
 ;UsageExampleText:
-;	ntag "SUPERNERD:"
-;	text "Did you check out"
-;	line "the MUSEUM?@" <- @ terminator before new ntag
-;	text_promptbutton   <- promptbutton before new ntag
+;	ntag "SUPERNERD:"        <- ntag
+;	text "Did you check out" <- text
+;	line "the MUSEUM?@"      <- @ terminator before new ntag
+;	text_promptbutton        <- promptbutton before new ntag
 ;
-;;	ntag "──────────"   <- need to write over existing tag
-;	ntag "LASS:"           to clear it, or if the next tag
-;	text "text test"       is shorter than the last one.
+;	ntag "LASS:"         <- new ntag
+;	text "text test"     <- text again
 ;	done
 
 DEF NUM_TEXT_CMDS EQU const_value

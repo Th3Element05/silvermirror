@@ -734,11 +734,12 @@ TextCommand_NAMETAG::
 	ld [hli], a
 	dec b
 	jr nz, .loop
+;	pop hl ;<- restore this if remove 'no text delay'
 ; no text delay
 	ld hl, wTextboxFlags
 	ld a, [hl]
 	res NO_TEXT_DELAY_F, [hl]
-	pop hl ;<- need this
+	pop hl
 	push af
 ; print nametag
 	call PlaceString
