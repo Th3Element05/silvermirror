@@ -3,20 +3,17 @@ ReeseAskNumber2Text:
 	text "I wasn't feeling"
 	line "my best today,"
 	cont "that's all!"
-	
+
 	para "We should trade"
 	line "phone numbers,"
-	
-	para "then we can battle"
-	line "again!"
+	cont "then we can battle"
+	roll "again!"
 	done
 
 ReeseNumberAcceptedText:
 	text "The next time we"
 	line "meet, I'll be much"
-	cont "stronger,"
-	
-	para "I promise!"
+	cont "stronger, promise!"
 	done
 
 ReeseNumberDeclinedText:
@@ -28,9 +25,7 @@ ReeseNumberDeclinedText:
 
 ReeseRematchText:
 	text "Hey!"
-	
+
 	para "I've been waiting"
 	line "for you!"
-	
-	para "You JOHTO punk!"
 	done

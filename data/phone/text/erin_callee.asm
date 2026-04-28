@@ -46,7 +46,7 @@ ErinGreetDayText:
 	done
 
 ErinGreetNiteText:
-	text "<PLAY_G>!"
+	text "<PLAYER>!"
 
 	para "It's @"
 	text_ram wStringBuffer3

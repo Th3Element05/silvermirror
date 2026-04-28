@@ -25,7 +25,7 @@ TorinPhoneCallerScript: ; Calls you
 	checkcode VAR_WEEKDAY
 	ifequal WEDNESDAY, TorinWantsBattle
 
-	random 4
+	random 3
 	ifequal 0, TorinWantsBattle
 
 ;.GenericTorinCall:

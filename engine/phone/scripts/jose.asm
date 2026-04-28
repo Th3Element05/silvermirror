@@ -33,17 +33,10 @@ JosePhoneCallerScript:
 
 	random 4
 	ifequal 0, JoseWantsBattle
+	ifequal 1, JoseHasStarPiece
+	ifequal 2, JoseFoundRare
 
-	random 4
-	ifequal 0, JoseHasStarPiece
-
-;Generic:
-	random 3
-	ifequal 0, JoseFoundRare
 	farsjump Phone_GenericCall_Male
-
-JoseFoundRare:
-	farsjump Phone_CheckIfUnseenRare_Male
 
 JoseWantsBattle:
 	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_18
@@ -62,3 +55,6 @@ JoseHasStarPiece:
 JoseRemindItem:
 	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_18
 	farsjump JoseReminderScript
+
+JoseFoundRare:
+	farsjump Phone_CheckIfUnseenRare_Male

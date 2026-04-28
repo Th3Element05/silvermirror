@@ -28,19 +28,19 @@ BrentPhoneCallerScript:
 	readvar VAR_WEEKDAY
 	ifequal MONDAY, BrentWantsBattle
 
-	random 4
+	random 3
 	ifequal 0, BrentWantsBattle
 
 ;Generic:
 	farsjump Phone_GenericCall_Male
 
 BrentWantsBattle:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_43
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_10
 	setflag ENGINE_BRENT_READY_FOR_REMATCH
 	farsjump PhoneScript_WantsToBattle_Male
 
 BrentWaitingForBattle:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_43
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_10
 	farsjump BrentReminderScript
 
 BrentBillTrivia:

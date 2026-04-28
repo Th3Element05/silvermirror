@@ -1,7 +1,8 @@
 DanaTakingPhotosText:
-	text "My @"
-	text_ram wStringBuffer4
-	text " is"
+	text "My NIDORINA is"
+;	text "My @"
+;	text_ram wStringBuffer4
+;	text " is"
 	line "getting prettier!"
 
 	para "I've been taking"
@@ -9,7 +10,7 @@ DanaTakingPhotosText:
 	done
 
 DanaDefeatedMonText:
-	text "It took only an"
+	text "It only took an"
 	line "instant to KO a"
 	cont "wild @"
 	text_ram wStringBuffer4
@@ -72,7 +73,7 @@ DanaCanYouWaitABitLongerText:
 	line "gift, right?"
 
 	para "I got one, but I"
-	line "want to keep this."
+	line "want to keep it."
 
 	para "Can you wait a bit"
 	line "longer?"

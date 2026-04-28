@@ -50,11 +50,11 @@ AlanGreetNiteText:
 
 AlanGenericText:
 	text "<PLAYER>, are you"
-	line "raising your"
+	line "treating your"
 	cont "#MON properly?"
 
 	para "I read in a book"
 	line "that you should"
-	cont "raise any #MON"
-	roll "you catch care."
+	cont "raise you #MON"
+	roll "with care."
 	done

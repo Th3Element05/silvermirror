@@ -25,7 +25,7 @@ EoinPhoneCallerScript: ; Calls you
 	checkcode VAR_WEEKDAY
 	ifequal SUNDAY, EoinWantsBattle
 
-	random 4
+	random 3
 	ifequal 0, EoinWantsBattle
 
 ;GenericEoinCall:

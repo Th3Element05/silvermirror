@@ -32,16 +32,17 @@ AlanAskNumber1Text:
 
 
 AlanAskNumber2Text:
-	text "If I find some-"
-	line "thing, it's yours."
+	text "If I find another"
+	line "FIRE STONE, it's"
+	cont "yours."
 
 	para "So may I have your"
 	line "phone number?"
 	done
 
 AlanNumberAcceptedText:
-	text "I'll call you if I"
-	line "find anything."
+	text "I'll call you if"
+	line "I find anything."
 	cont "Count on it!"
 
 AlanNumberDeclinedText:

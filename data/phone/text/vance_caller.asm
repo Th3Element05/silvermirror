@@ -23,8 +23,8 @@ VanceLostAMonText:
 	line "wild @"
 	text_ram wStringBuffer4
 	text_start
-	para "just barely eluded"
-	line "us."
+	cont "just barely eluded"
+	roll "us."
 
 	para "I wanted to FLY"
 	line "after it…"

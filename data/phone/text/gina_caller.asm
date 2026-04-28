@@ -1,7 +1,8 @@
 GinaGettingInSyncWithMonText:
-	text "My @"
-	text_ram wStringBuffer4
-	text " and"
+	text "My #MON and"
+;	text "My @"
+;	text_ram wStringBuffer4
+;	text " and"
 	line "I are getting more"
 	cont "in sync with each"
 	roll "other."

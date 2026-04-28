@@ -64,10 +64,10 @@ JackThunderTriviaText:
 JackRolloutTriviaText:
 	text "Did you know…?"
 
-	para "If you use DEFENSE"
-	line "CURL, ROLLOUT's"
-	cont "power goes way up"
-	roll "past normal."
+	para "If a #MON uses"
+	line "DEFENSE CURL, then"
+	cont "ROLLOUT's power is"
+	roll "increased!"
 	done
 
 JackSolarbeamTriviaText:
@@ -82,29 +82,29 @@ JackSolarbeamTriviaText:
 JackStompTriviaText:
 	text "Did you know…?"
 
-	para "If the opponent"
-	line "uses MINIMIZE,"
-	cont "your STOMP becomes"
-	roll "more powerful."
+	para "If a #MON uses"
+	line "MINIMIZE, they'll"
+	cont "take more damage"
+	roll "from STOMP!"
 	done
 
-JackGustTriviaText:
-	text "Did you know…?"
+;JackGustTriviaText:
+;	text "Did you know…?"
+;
+;	para "If your opponent"
+;	line "is using FLY, your"
+;	cont "GUST becomes much"
+;	roll "more powerful."
+;	done
 
-	para "If your opponent"
-	line "is using FLY, your"
-	cont "GUST becomes much"
-	roll "more powerful."
-	done
-
-JackTwisterTriviaText:
-	text "Did you know…?"
-
-	para "If your opponent"
-	line "is using FLY, your"
-	cont "TWISTER becomes"
-	roll "more powerful."
-	done
+;JackTwisterTriviaText:
+;	text "Did you know…?"
+;
+;	para "If your opponent"
+;	line "is using FLY, your"
+;	cont "TWISTER becomes"
+;	roll "more powerful."
+;	done
 
 JackEarthquakeTriviaText:
 	text "Did you know…?"

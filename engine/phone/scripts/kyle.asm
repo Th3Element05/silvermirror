@@ -6,7 +6,7 @@ KylePhoneCalleeScript: ; You call Kyle
 	iftrue KyleWaitingForBattle
 
 	checkcode VAR_WEEKDAY
-	ifequal WEDNESDAY, KyleWantsBattle
+	ifequal TUESDAY, KyleWantsBattle
 
 	random 2
 	ifequal 0, KyleWantsBattle
@@ -23,19 +23,19 @@ KylePhoneCallerScript: ; Calls you
 	iftrue KyleWaitingForBattle
 
 	checkcode VAR_WEEKDAY
-	ifequal WEDNESDAY, KyleWantsBattle
+	ifequal TUESDAY, KyleWantsBattle
 
-	random 4
+	random 3
 	ifequal 0, KyleWantsBattle
 
 ;GenericKyleCall:
 	farjump Phone_GenericCall_Male
 
 KyleWantsBattle:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_12
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_21
 	setflag ENGINE_KYLE_READY_FOR_REMATCH
 	farjump PhoneScript_WantsToBattle_Male
 
 KyleWaitingForBattle:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_12
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_21
 	farjump KyleReminderScript

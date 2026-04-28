@@ -14,10 +14,6 @@ TimAndSuePhoneCalleeScript: ; You call Tim & Sue
 ;NotFriday:
 	farjump TimAndSueWildMon
 
-.WaitingForBattle:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_6
-	farjump TimAndSueReminderScript
-
 
 TimAndSuePhoneCallerScript: ; Calls you
 	gettrainername STRING_BUFFER_3, COUPLE, TIMANDSUE1
@@ -29,7 +25,7 @@ TimAndSuePhoneCallerScript: ; Calls you
 	checkcode VAR_WEEKDAY
 	ifequal FRIDAY, TimAndSueWantsBattle
 
-	random 4
+	random 3
 	ifequal 0, TimAndSueWantsBattle
 
 ;GenericTimAndSueCall:

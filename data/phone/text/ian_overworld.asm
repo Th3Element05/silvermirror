@@ -27,8 +27,8 @@ IanNumberAcceptedText:
 	done
 
 IanNumberDeclinedText:
-	text "Wait…are you ac-"
-	line "tually going to"
+	text "Wait… are you"
+	line "actually going to"
 	cont "join my class!?"
 	done
 

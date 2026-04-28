@@ -5,8 +5,8 @@ ArniePhoneCalleeScript:
 	checkflag ENGINE_ARNIE_READY_FOR_REMATCH
 	iftrue ArnieWaitingForBattle
 
-	checktime MORN
-	iftrue ArnieWantsBattle
+	readvar VAR_WEEKDAY
+	ifequal THURSDAY, ArnieWantsBattle
 
 	random 2
 	ifequal 0, ArnieWantsBattle
@@ -18,10 +18,10 @@ ArniePhoneCallerScript:
 	gettrainername STRING_BUFFER_3, BUG_CATCHER, ARNIE1
 	farscall PhoneScript_GreetPhone_Male
 
-	checktime MORN
-	iftrue ArnieWantsBattle
+	readvar VAR_WEEKDAY
+	ifequal THURSDAY, ArnieWantsBattle
 
-	random 4
+	random 3
 	ifequal 0, ArnieWantsBattle
 
 	farsjump Phone_GenericCall_Male

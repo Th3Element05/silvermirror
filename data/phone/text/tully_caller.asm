@@ -1,14 +1,22 @@
 TullyMonHasGrownText:
-	text "My @"
-	text_ram wStringBuffer4
-	text " has"
-	line "grown again."
-
-	para "It was only about"
-	line "so big when I"
-	cont "caught it, but now"
-	roll "it's way bigger."
+	text "My ####MON keep"
+	line "growing! They were"
+	cont "just small frys"
+	roll "when I caught 'em,"
+	cont "but now they're"
+	roll "way bigger!"
 	done
+
+;	text "My @"
+;	text_ram wStringBuffer4
+;	text " has"
+;	line "grown again."
+;
+;	para "It was only about"
+;	line "so big when I"
+;	cont "caught it, but now"
+;	roll "it's way bigger."
+;	done
 
 TullyDefeatedMonText:
 	text "Oh yeah, I KO'd a"

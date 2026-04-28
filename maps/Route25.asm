@@ -167,11 +167,11 @@ TrainerLassHillary:
 ;	closetext
 ;	end
 
-	loadvar VAR_CALLERID, PHONE_TEACHER_HILLARY
+	loadvar VAR_CALLERID, PHONE_LASS_HILLARY
 	opentext
 	checkflag ENGINE_HILLARY_READY_FOR_REMATCH
 	iftrue .WantsBattle
-	checkcellnum PHONE_TEACHER_HILLARY
+	checkcellnum PHONE_LASS_HILLARY
 	iftrue .HillaryDefeated
 	checkevent EVENT_HILLARY_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskedBefore
@@ -184,7 +184,7 @@ TrainerLassHillary:
 .AskedBefore:
 	scall .AskNumber2
 .AskForNumber:
-	askforphonenumber PHONE_TEACHER_HILLARY
+	askforphonenumber PHONE_LASS_HILLARY
 	ifequal PHONE_CONTACTS_FULL, .PhoneFull
 	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
 	gettrainername STRING_BUFFER_3, TEACHER, HILLARY1

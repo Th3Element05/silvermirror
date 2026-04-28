@@ -25,7 +25,7 @@ ParryPhoneCallerScript:
 	readvar VAR_WEEKDAY
 	ifequal FRIDAY, ParryWantsBattle
 
-	random 4
+	random 3
 	ifequal 0, ParryWantsBattle
 
 ;.GenericCall:

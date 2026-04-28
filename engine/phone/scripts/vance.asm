@@ -25,7 +25,7 @@ VancePhoneCallerScript:
 	readvar VAR_WEEKDAY
 	ifequal WEDNESDAY, VanceWantsRematch
 
-	random 4
+	random 3
 	ifequal 0, VanceWantsRematch
 
 ;WantsBattle:

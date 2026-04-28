@@ -263,10 +263,8 @@ DEF KRIS EQU __trainer_class__
 	const BRAD
 ; rematch
 	const BILLY_2
-	const BILLY_3
 	const BILLY_0
 	const ALAN_2
-	const ALAN_3
 	const ALAN_0
 	const TORIN_0
 	const CHAD_0
@@ -926,9 +924,9 @@ DEF KRIS EQU __trainer_class__
 	const DUFFANDEDA_EDA
 	const MOEANDLULU
 ; rematch
-	const TIMANDSUE_2
-	const TIMANDSUE_3
-	const TIMANDSUE_0
+;	const TIMANDSUE_2
+;	const TIMANDSUE_3
+;	const TIMANDSUE_0
 
 	trainerclass COOL_DUO ; 45
 ; kanto

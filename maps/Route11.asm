@@ -266,10 +266,10 @@ TrainerSchoolboyAlan:
 	loadtrainer SCHOOLBOY, ALAN_0
 	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
 	iftrue .LoadFight
-	loadtrainer SCHOOLBOY, ALAN_3
-	checkflag ENGINE_FLYPOINT_SAFFRON
-	iftrue .LoadFight
 	loadtrainer SCHOOLBOY, ALAN_2
+	readvar VAR_BADGES
+	ifgreater 2, .LoadFight
+	loadtrainer SCHOOLBOY, ALAN1
 .LoadFight:
 	startbattle
 	reloadmapafterbattle
@@ -358,17 +358,17 @@ TrainerYoungsterIan:
 	loadtrainer YOUNGSTER, IAN_0
 	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
 	iftrue .LoadFight
-	loadtrainer YOUNGSTER, IAN_3
-	checkflag ENGINE_FLYPOINT_FUCHSIA
-	iftrue .LoadFight
 	loadtrainer YOUNGSTER, IAN_2
+	readvar VAR_BADGES
+	ifgreater 2, .LoadFight
+	loadtrainer YOUNGSTER, IAN1
 .LoadFight:
 	startbattle
 	reloadmapafterbattle
 	clearflag ENGINE_IAN_READY_FOR_REMATCH
 	opentext
-	sjump .TryHeartScale
-	end
+;	sjump .TryHeartScale
+;	end
 
 .TryHeartScale:
 	setevent EVENT_YOUNGSTER_IAN_HAS_GIFT

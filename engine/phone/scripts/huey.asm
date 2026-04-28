@@ -21,12 +21,12 @@ HueyPhoneCallerScript:
 	farscall PhoneScript_GreetPhone_Male
 
 	checkflag ENGINE_HUEY_READY_FOR_REMATCH
-	iftrue .Flavor
+	iftrue HueyWaitingForBattle
 
 	readvar VAR_WEEKDAY
 	ifequal WEDNESDAY, HueyWantsBattle
 
-	random 4
+	random 3
 	ifequal 0, HueyWantsBattle
 
 ;.Flavor:

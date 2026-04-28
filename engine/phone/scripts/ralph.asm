@@ -5,8 +5,8 @@ RalphPhoneCalleeScript:
 	checkflag ENGINE_RALPH_READY_FOR_REMATCH
 	iftrue RalphWaitingForRematch
 
-	checktime MORN
-	iftrue RalphWantsBattle
+	readvar VAR_WEEKDAY
+	ifequal SATURDAY, RalphWantsBattle
 
 	random 2
 	ifequal 0, RalphWantsBattle
@@ -18,10 +18,10 @@ RalphPhoneCallerScript:
 	gettrainername STRING_BUFFER_3, FISHER, RALPH1
 	farscall PhoneScript_GreetPhone_Male
 
-	checktime MORN
-	iftrue RalphWantsBattle
+	readvar VAR_WEEKDAY
+	ifequal SATURDAY, RalphWantsBattle
 
-	random 4
+	random 3
 	ifequal 0, RalphWantsBattle
 
 	farsjump Phone_GenericCall_Male

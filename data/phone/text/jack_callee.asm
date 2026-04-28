@@ -5,7 +5,7 @@ JackAnswerPhoneText:
 	text "…"
 
 	para "Good morning,"
-	line "<PLAY_G>!"
+	line "<PLAYER>!"
 	done
 
 JackAnswerPhoneDayText:
@@ -15,7 +15,7 @@ JackAnswerPhoneDayText:
 	text "…"
 
 	para "How's it going,"
-	line "<PLAY_G>?"
+	line "<PLAYER>?"
 	done
 
 JackAnswerPhoneNiteText:
@@ -25,11 +25,11 @@ JackAnswerPhoneNiteText:
 	text "…"
 
 	para "Good evening,"
-	line "<PLAY_G>!"
+	line "<PLAYER>!"
 	done
 
 JackGreetText:
-	text "<PLAY_G>, good"
+	text "<PLAYER>, good"
 	line "morning!"
 
 	para "It's me, @"
@@ -39,7 +39,7 @@ JackGreetText:
 	done
 
 JackGreetDayText:
-	text "<PLAY_G>, howdy!"
+	text "<PLAYER>, howdy!"
 
 	para "It's me, @"
 	text_ram wStringBuffer3
@@ -48,7 +48,7 @@ JackGreetDayText:
 	done
 
 JackGreetNiteText:
-	text "<PLAY_G>, good"
+	text "<PLAYER>, good"
 	line "evening!"
 
 	para "It's me, @"

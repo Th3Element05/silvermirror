@@ -206,10 +206,10 @@ TrainerSchoolboyBilly:
 	loadtrainer SCHOOLBOY, BILLY_0
 	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
 	iftrue .LoadFight
-	loadtrainer SCHOOLBOY, BILLY_3
-	checkflag ENGINE_FLYPOINT_CELADON
-	iftrue .LoadFight
 	loadtrainer SCHOOLBOY, BILLY_2
+	readvar VAR_BADGES
+	ifgreater 2, .LoadFight ;3_BADGES
+	loadtrainer SCHOOLBOY, BILLY1
 .LoadFight:
 	startbattle
 	reloadmapafterbattle
