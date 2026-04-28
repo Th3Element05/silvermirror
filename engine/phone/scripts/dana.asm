@@ -50,22 +50,22 @@ DanaPhoneCallerScript:
 	farsjump Phone_GenericCall_Female
 
 DanaWantsBattle:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_38
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_8
 	setflag ENGINE_DANA_READY_FOR_REMATCH
 	farsjump PhoneScript_WantsToBattle_Female
 
 DanaWaitingForBattle:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_38
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_8
 	farsjump DanaReminderScript
 
 DanaHasThunderstone:
 	setflag ENGINE_DANA_HAS_THUNDERSTONE
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_38
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_8
 	farsjump PhoneScript_FoundItem_Female
 
 DanaRemindThunderstone:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_38
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_8
 	farsjump DanaComePickUpScript
 
 ;DanaFoundRare:
-;	farsjump Phone_CheckIfUnseenRare_Female\
+;	farsjump Phone_CheckIfUnseenRare_Female

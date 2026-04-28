@@ -1,5 +1,5 @@
 IanReminderText:
-	text "Hey, <PLAY_G>!"
+	text "Hey, <PLAYER>!"
 	line "You comming over?"
 
 	para "I'm itching to get"

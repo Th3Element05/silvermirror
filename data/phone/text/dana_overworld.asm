@@ -3,19 +3,40 @@ DanaAskNumber1Text:
 	line "at #MON!"
 
 	para "Boys give me items"
-	line "after battles, but"
-	cont "sometimes they"
-	roll "give me too much."
+	line "after battles…"
 
-	para "Next time, I can"
-	line "share some if you"
-	cont "want. Let me get"
-	roll "your phone number."
+	para "But they know I"
+	line "like THUNDERSTONEs"
+	cont "so they give me"
+	roll "too many!"
+
+	para "I can share with"
+	line "you the next time"
+	cont "I get one, if you"
+	roll "want?"
+
+	para "Let me get your"
+	line "phone number."
 	done
 
+;	para "Boys give me items"
+;	line "after battles, but"
+;	cont "sometimes they"
+;	roll "give me too much."
+;
+;	para "Next time, I can"
+;	line "share some if you"
+;	cont "want. Let me get"
+;	roll "your phone number."
+;	done
+
 DanaAskNumber2Text:
-	text "I'll share my"
-	line "gifts with you."
+	text "I'll share extra"
+	line "THUNDERSTONEs I"
+	cont "get as gifts."
+
+;	text "I'll share my"
+;	line "gifts with you."
 
 	para "Let me get your"
 	line "phone number."
@@ -23,9 +44,9 @@ DanaAskNumber2Text:
 
 DanaNumberAcceptedText:
 	text "Next time a boy"
-	line "gives me something"
-	cont "after a battle,"
-	roll "I'll share some!"
+	line "gives me another"
+	cont "THUNDERSTONE, I'll"
+	roll "share call you!"
 ;
 ;	para "Does that make me"
 ;	line "bad?"
@@ -35,8 +56,7 @@ DanaNumberDeclinedText:
 	text "Aww, you don't"
 	line "want anything?"
 
-	para "But it's all for"
-	line "free…"
+	para "But it's free…"
 	done
 
 DanaPhoneFullText:

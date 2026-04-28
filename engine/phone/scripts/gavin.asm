@@ -27,10 +27,7 @@ GavinPhoneCallerScript:
 
 	random 3
 	ifequal 0, GavinWantsRematch
-
-;WaitingForBattle:
-	random 3
-	ifequal 0, GavinFoundRare
+	ifequal 1, GavinFoundRare
 	farsjump Phone_GenericCall_Male
 
 GavinWantsRematch:

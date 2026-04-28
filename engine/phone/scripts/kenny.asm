@@ -25,7 +25,7 @@ KennyPhoneCallerScript: ; Calls you
 	checkcode VAR_WEEKDAY
 	ifequal SATURDAY, KennyWantsBattle
 
-	random 4
+	random 3
 	ifequal 0, KennyWantsBattle
 
 ;GenericKennyCall:

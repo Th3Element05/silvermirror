@@ -29,7 +29,6 @@ AidenRematchText:
 	
 	para "Do you think you"
 	line "could just pass"
-	
-	para "through here with-"
-	line "out stopping?"
+	cont "through here with-"
+	roll "out stopping?"
 	done

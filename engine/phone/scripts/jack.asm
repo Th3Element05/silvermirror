@@ -6,7 +6,7 @@ JackPhoneCalleeScript:
 	iftrue JackWaitingForBattle
 
 	readvar VAR_WEEKDAY
-	ifequal MONDAY, JackWantsToBattle
+	ifequal TUESDAY, JackWantsToBattle
 
 	random 2
 	ifequal 0, JackWantsToBattle
@@ -20,7 +20,7 @@ JackPhoneCallerScript:
 	farscall PhoneScript_GreetPhone_Male
 
 	readvar VAR_WEEKDAY
-	ifnotequal MONDAY, JackWantsToBattle
+	ifnotequal TUESDAY, JackWantsToBattle
 
 	random 4
 	ifequal 0, JackWantsToBattle

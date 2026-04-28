@@ -24,7 +24,7 @@ TrainerSchoolboyJack:
 	iftrue .JackDefeated
 	checkevent EVENT_JACK_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskAgain
-	writetext SchoolboyJackTradeMonText
+	writetext SchoolboyJackAfterBattleText
 	promptbutton
 	setevent EVENT_JACK_ASKED_FOR_PHONE_NUMBER
 	scall Route36AskNumber1
@@ -50,7 +50,7 @@ TrainerSchoolboyJack:
 	end
 
 .JackDefeated:
-	writetext SchoolboyJackTradeMonText
+	writetext SchoolboyJackAfterBattleText
 	promptbutton
 	closetext
 	end

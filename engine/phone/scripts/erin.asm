@@ -25,17 +25,17 @@ ErinPhoneCallerScript:
 	readvar VAR_WEEKDAY
 	ifequal SATURDAY, ErinWantsBattle
 
-	random 4
+	random 3
 	ifequal 0, ErinWantsBattle
 
 ;GenericCall:
 	farsjump Phone_GenericCall_Female
 
 ErinWantsBattle:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_46
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_10
 	setflag ENGINE_ERIN_READY_FOR_REMATCH
 	farsjump PhoneScript_WantsToBattle_Female
 
 ErinWaitinfForBattle:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_46
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_10
 	farsjump ErinReminderScript

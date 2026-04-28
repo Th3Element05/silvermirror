@@ -58,9 +58,10 @@ DanaGreetNiteText:
 ;	done
 
 DanaGenericText:
-	text "My @"
-	text_ram wStringBuffer4
-	text " is"
+	text "My NIDORINA is"
+;	text "My @"
+;	text_ram wStringBuffer4
+;	text " is"
 	line "so full of energy,"
 	cont "it's a little"
 	roll "scary."

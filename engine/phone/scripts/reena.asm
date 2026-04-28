@@ -24,7 +24,7 @@ ReenaPhoneCallerScript:
 	iftrue .Generic
 	checkflag ENGINE_REENA_SUNDAY_MORNING
 	iftrue .Generic
-	farscall PhoneScript_Random2
+	random 2
 	ifequal 0, ReenaWantsBattle
 
 .Generic:

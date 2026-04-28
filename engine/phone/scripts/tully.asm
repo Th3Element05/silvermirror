@@ -48,19 +48,19 @@ TullyPhoneCallerScript:
 	farsjump Phone_GenericCall_Male
 
 TullyWantsBattle:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_42
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_12
 	setflag ENGINE_TULLY_READY_FOR_REMATCH
 	farsjump PhoneScript_WantsToBattle_Male
 
 TullyWaitingForBattle:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_42
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_12
 	farsjump TullyReminderScript
 
 TullyFoundWaterStone:
 	setflag ENGINE_TULLY_HAS_WATER_STONE
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_42
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_12
 	farsjump PhoneScript_FoundItem_Male
 
 TullyRemindWaterStone:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_42
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_12
 	farsjump TullyHurryScript

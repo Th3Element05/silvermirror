@@ -48,12 +48,10 @@ WadePhoneCallerScript:
 	checkflag ENGINE_WADE_HAS_BERRY
 	iftrue WadeRemindItem
 
-	random 3
+	random 4
 	ifequal 0, WadeWantsBattle
 	ifequal 1, WadeHasItem
-
-	random 3
-	ifequal 0, WadeFoundRare
+	ifequal 2, WadeFoundRare
 	farsjump Phone_GenericCall_Male
 
 WadeWantsBattle:

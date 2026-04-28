@@ -167,10 +167,10 @@ TrainerBugCatcherRob:
 .RobItem:
 	scall .GiftItem
 	random 4
-;	ifequal 0, .sitrusberry
-;	ifequal 1, .sitrusberry
-	ifequal 2, .leppaberry
-	ifequal 3, .lumberry
+	ifequal 0, .leppaberry
+	ifequal 1, .lumberry
+;	ifequal 2, .sitrusberry
+;	ifequal 3, .sitrusberry
 
 ;.sitrusberry:
 	verbosegiveitem SITRUS_BERRY

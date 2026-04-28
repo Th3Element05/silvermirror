@@ -18,20 +18,18 @@ ParryDefeatedMonText:
 ParryLostAMonText:
 	text "And yesterday, we"
 	line "spotted a wild"
-
-	para "@"
+	cont "@"
 	text_ram wStringBuffer4
 	text "."
-	line "We were debating"
+	roll "We were debating"
 
-	para "whether to catch"
-	line "it or beat it."
+	cont "whether to catch"
+	roll "it or beat it."
 
 	para "When along came"
 	line "another guy who"
-
-	para "caught it!"
-	line "How about that!"
+	cont "caught it!"
+	roll "How about that!"
 	done
 
 ParryBattleRematchText:

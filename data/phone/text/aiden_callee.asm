@@ -1,12 +1,10 @@
 AidenTalkOnBikeText:
 	text "It's dangerous to"
 	line "talk on the phone"
-
-	para "while riding on"
-	line "a bike,"
-
-	para "but sometimes I've"
-	line "got no choice!"
+	cont "while riding on"
+	roll "a bike, but some-"
+	cont "times I've got no"
+	roll "choice!"
 
 	para "Make sure you"
 	line "don't!"
@@ -33,14 +31,13 @@ AidenReminderText:
 	
 	para "Time for us to"
 	line "have another"
-
-	para "battle, fair and"
-	line "square, so come"
+	cont "battle, fair and"
+	roll "square, so come"
 	cont "alone!"
 
 	para "Wait… Bring your"
 	line "#MON with you!"
 
-	para "Without a #MON,"
-	line "we can't battle!"
+	para "We can't battle"
+	line "without #MON!"
 	done

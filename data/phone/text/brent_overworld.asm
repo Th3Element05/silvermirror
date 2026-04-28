@@ -32,8 +32,7 @@ BrentNumberAcceptedText:
 
 	para "To be a #MANIAC"
 	line "like him someday…"
-
-	para "That's my dream."
+	cont "That's my dream."
 	done
 
 BrentNumberDeclinedText:

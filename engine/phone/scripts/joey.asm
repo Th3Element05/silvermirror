@@ -26,7 +26,7 @@ JoeyPhoneCallerScript:
 	readvar VAR_WEEKDAY
 	ifequal MONDAY, JoeyWantsBattle
 
-	random 4
+	random 3
 	ifequal 0, JoeyWantsBattle
 
 ;.Generic:

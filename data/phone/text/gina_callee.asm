@@ -59,8 +59,8 @@ GinaGenericText:
 	text "Are your #MON"
 	line "still tough?"
 
-	para "I train every day"
-	line "with @"
-	text_ram wStringBuffer4
-	text "."
+	para "I train every day!"
+;	line "with @"
+;	text_ram wStringBuffer4
+;	text "."
 	done

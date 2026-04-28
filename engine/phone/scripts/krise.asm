@@ -12,7 +12,7 @@ KrisePhoneCalleeScript:
 	farjump KriseMiniSkirt
 
 .WaitingForBattle:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_NATIONAL_PARK
+	getlandmarkname STRING_BUFFER_5, LANDMARK_MT_MOON
 	farjump KriseReminderScript
 
 KrisePhoneCallerScript:
@@ -24,12 +24,12 @@ KrisePhoneCallerScript:
 	iftrue KriseWantsToBattle
 
 .GenericKriseCall:
-	farscall PhoneScript_Random3
+	random 3
 	ifequal 0, KriseFoundRare
 	farjump Phone_GenericCall_Female
 
 KriseWantsToBattle:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_NATIONAL_PARK
+	getlandmarkname STRING_BUFFER_5, LANDMARK_MT_MOON
 	setflag ENGINE_KRISE_READY_FOR_REMATCH
 	farjump PhoneScript_WantsToBattle_Female
 

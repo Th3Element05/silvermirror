@@ -1,22 +1,22 @@
-PhoneScript_Random2:
-	random 2
-	end
+;PhoneScript_Random2:
+;	random 2
+;	end
 
-PhoneScript_Random3:
-	random 3
-	end
+;PhoneScript_Random3:
+;	random 3
+;	end
 
-PhoneScript_Random4:
-	random 4
-	end
+;PhoneScript_Random4:
+;	random 4
+;	end
 
-PhoneScript_Random5:
-	random 5
-	end
+;PhoneScript_Random5:
+;	random 5
+;	end
 
-PhoneScript_Random11:
-	random 11
-	end
+;PhoneScript_Random11:
+;	random 11
+;	end
 
 PhoneScript_AnswerPhone_Male:
 	checktime DAY
@@ -1241,7 +1241,7 @@ PhoneScript_Generic_Female:
 
 PhoneScript_MonFlavorText:
 	special RandomPhoneMon
-	farscall PhoneScript_Random2
+	random 2 ;farscall PhoneScript_Random2
 	ifequal $0, .TooEnergetic
 	farwritetext UnknownGenericText
 	promptbutton

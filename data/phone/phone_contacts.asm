@@ -27,7 +27,7 @@ PhoneContacts:
 	phone BIRD_KEEPER,  JOSE1,                 ROUTE_18,                  ANYTIME, JosePhoneCalleeScript,    ANYTIME, JosePhoneCallerScript
 	phone COOLTRAINERF, REENA1,              DRAGONS_DEN_B1F,           ANYTIME, ReenaPhoneCalleeScript,   ANYTIME, ReenaPhoneCallerScript
 	phone YOUNGSTER,    JOEY1,                 ROUTE_30,                  ANYTIME, JoeyPhoneCalleeScript,    ANYTIME, JoeyPhoneCallerScript
-	phone BUG_CATCHER,  WADE1,                 ROUTE_31,                  ANYTIME, WadePhoneCalleeScript,    ANYTIME, WadePhoneCallerScript
+	phone BUG_CATCHER,  WADE_0,                ROUTE_31,                  ANYTIME, WadePhoneCalleeScript,    ANYTIME, WadePhoneCallerScript
 	phone FISHER,       RALPH1,                ROUTE_32,                  ANYTIME, RalphPhoneCalleeScript,   ANYTIME, RalphPhoneCallerScript
 	phone PICNICKER,    LIZ1,                ROUTE_32,                  ANYTIME, LizPhoneCalleeScript,     ANYTIME, LizPhoneCallerScript
 	phone HIKER,        ANTHONY1,              ROUTE_42,                  ANYTIME, AnthonyPhoneCalleeScript, ANYTIME, AnthonyPhoneCallerScript
@@ -35,7 +35,7 @@ PhoneContacts:
 	phone PICNICKER,    GINA1,                 ROUTE_9,                   ANYTIME, GinaPhoneCalleeScript,    ANYTIME, GinaPhoneCallerScript
 	phone JUGGLER,      IRWIN1,              ROUTE_35,                  ANYTIME, IrwinPhoneCalleeScript,   ANYTIME, IrwinPhoneCallerScript
 	phone BUG_CATCHER,  ARNIE_0,               ILEX_FOREST,               ANYTIME, ArniePhoneCalleeScript,   ANYTIME, ArniePhoneCallerScript
-	phone SCHOOLBOY,    ALAN1,                 ROUTE_11,                  ANYTIME, AlanPhoneCalleeScript,    ANYTIME, AlanPhoneCallerScript
+	phone SCHOOLBOY,    ALAN_0,                ROUTE_11,                  ANYTIME, AlanPhoneCalleeScript,    ANYTIME, AlanPhoneCallerScript
 	phone GENTLEMAN,    ALFRED1,             OLIVINE_LIGHTHOUSE_2F,     ANYTIME, AlfredPhoneCalleeScript,  ANYTIME, AlfredPhoneCallerScript
 	phone LASS,         DANA1,                 ROUTE_8,                   ANYTIME, DanaPhoneCalleeScript,    ANYTIME, DanaPhoneCallerScript
 	phone SCHOOLBOY,    CHAD1,                 ROUTE_36,                  ANYTIME, ChadPhoneCalleeScript,    ANYTIME, ChadPhoneCallerScript
@@ -44,7 +44,7 @@ PhoneContacts:
 	phone POKEMANIAC,   BRENT1,                ROUTE_10_NORTH,            ANYTIME, BrentPhoneCalleeScript,   ANYTIME, BrentPhoneCallerScript
 	phone PICNICKER,    TIFFANY1,              ROUTE_15,                  ANYTIME, TiffanyPhoneCalleeScript, ANYTIME, TiffanyPhoneCallerScript
 	phone BIRD_KEEPER,  VANCE_2,               ROUTE_20,                  ANYTIME, VancePhoneCalleeScript,   ANYTIME, VancePhoneCallerScript
-	phone FISHER,       WILTON1,               ROUTE_32,                  ANYTIME, WiltonPhoneCalleeScript,  ANYTIME, WiltonPhoneCallerScript
+	phone FISHER,       WILTON_0,              ROUTE_32,                  ANYTIME, WiltonPhoneCalleeScript,  ANYTIME, WiltonPhoneCallerScript
 	phone BLACKBELT_T,  KENJI1,                ROUTE_45,                  ANYTIME, KenjiPhoneCalleeScript,   ANYTIME, KenjiPhoneCallerScript
 	phone HIKER,        PARRY1,                ROUTE_45,                  ANYTIME, ParryPhoneCalleeScript,   ANYTIME, ParryPhoneCallerScript
 	phone PICNICKER,    ERIN1,                 ROUTE_10_SOUTH,            ANYTIME, ErinPhoneCalleeScript,    ANYTIME, ErinPhoneCallerScript
@@ -53,11 +53,12 @@ PhoneContacts:
 	phone FISHER,       KYLE1,                 ROUTE_21,                  ANYTIME, KylePhoneCalleeScript,    ANYTIME, KylePhoneCallerScript
 	phone CAMPER,       TANNER1,               ROUTE_24,                  ANYTIME, TannerPhoneCalleeScript,  ANYTIME, TannerPhoneCallerScript
 	phone HIKER,        KENNY1,                ROUTE_10_SOUTH,            ANYTIME, KennyPhoneCalleeScript,   ANYTIME, KennyPhoneCallerScript
-	phone COUPLE,       TIMANDSUE1,            ROUTE_6,                   ANYTIME, TimAndSuePhoneCalleeScript, ANYTIME, TimAndSuePhoneCallerScript
+	phone COUPLE,       TIMANDSUE1,          ROUTE_6,                   ANYTIME, TimAndSuePhoneCalleeScript, ANYTIME, TimAndSuePhoneCallerScript
 	phone BIRD_KEEPER,  JAMIE1,                ROUTE_13,                  ANYTIME, JamiePhoneCalleeScript,   ANYTIME, JamiePhoneCallerScript
 	phone SCHOOLBOY,    TORIN1,                ROUTE_36,                  ANYTIME, TorinPhoneCalleeScript,   ANYTIME, TorinPhoneCallerScript
 	phone SCHOOLBOY,    BILLY1,                ROUTE_3,                   ANYTIME, BillyPhoneCalleeScript,   ANYTIME, BillyPhoneCallerScript
-	phone TEACHER,      HILLARY1,              ROUTE_25,                  ANYTIME, HillaryPhoneCalleeScript, ANYTIME, HillaryPhoneCallerScript
+;	phone TEACHER,      HILLARY1,            ROUTE_25,                  ANYTIME, HillaryPhoneCalleeScript, ANYTIME, HillaryPhoneCallerScript
+	phone LASS,         HILLARY1,              ROUTE_25,                  ANYTIME, HillaryPhoneCalleeScript, ANYTIME, HillaryPhoneCallerScript
 	phone TWINS,        KAYANDTIA1,          ROUTE_13,                  ANYTIME, KayAndTiaPhoneCalleeScript, ANYTIME, KayAndTiaPhoneCallerScript
 	phone BIKER,        AIDEN1,                ROUTE_16,                  ANYTIME, AidenPhoneCalleeScript,   ANYTIME, AidenPhoneCallerScript
 	phone BIKER,        EOIN1,                 ROUTE_17,                  ANYTIME, EoinPhoneCalleeScript,    ANYTIME, EoinPhoneCallerScript

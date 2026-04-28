@@ -34,129 +34,118 @@ BugCatcherAbnerAfterBattleText:
 TrainerCoupleTimAndSue_Sue:
 	trainer COUPLE, TIMANDSUE1, EVENT_BEAT_COUPLE_TIMANDSUE, CoupleSueSeenText, CoupleTimAndSueBeatenText, 0, .Script
 .Script:
-;	endifjustbattled
-;	turnobject LAST_TALKED, LEFT
-;	opentext
-;	writetext CoupleTimAndSueAfterBattleText
-;	waitbutton
-;	closetext
-;	end
-
-	loadvar VAR_CALLERID, PHONE_COUPLE_TIM_AND_SUE
+	endifjustbattled
+	turnobject LAST_TALKED, LEFT
 	opentext
-	checkflag ENGINE_TIM_AND_SUE_READY_FOR_REMATCH
-	iftrue TimAndSueWantsBattle
-	checkcellnum PHONE_COUPLE_TIM_AND_SUE
-	iftrue TrainerCoupleTimAndSue_SueDefeated
-	checkevent EVENT_TIM_AND_SUE_ASKED_FOR_PHONE_NUMBER
-	iftrue TimAndSueAskedBefore
-	writetext CoupleTimandSue_SueAfterBattleText
+	writetext CoupleTimAndSueAfterBattleText
 	waitbutton
-	setevent EVENT_TIM_AND_SUE_ASKED_FOR_PHONE_NUMBER
-	scall TimAndSueAskNumber1
-	jump TimAndSueAskForNumber
+	closetext
+	end
+
+;	loadvar VAR_CALLERID, PHONE_COUPLE_TIM_AND_SUE
+;	opentext
+;	checkflag ENGINE_TIM_AND_SUE_READY_FOR_REMATCH
+;	iftrue TimAndSueWantsBattle
+;	checkcellnum PHONE_COUPLE_TIM_AND_SUE
+;	iftrue TrainerCoupleTimAndSue_SueDefeated
+;	checkevent EVENT_TIM_AND_SUE_ASKED_FOR_PHONE_NUMBER
+;	iftrue TimAndSueAskedBefore
+;	writetext CoupleTimandSue_SueAfterBattleText
+;	waitbutton
+;	setevent EVENT_TIM_AND_SUE_ASKED_FOR_PHONE_NUMBER
+;	scall TimAndSueAskNumber1
+;	jump TimAndSueAskForNumber
 
 TrainerCoupleTimAndSue_Tim:
 	trainer COUPLE, TIMANDSUE1, EVENT_BEAT_COUPLE_TIMANDSUE, CoupleTimSeenText, CoupleTimAndSueBeatenText, 0, .Script
 .Script:
-;	endifjustbattled
-;	turnobject LAST_TALKED, LEFT
+	endifjustbattled
+	turnobject LAST_TALKED, LEFT
+	opentext
+	writetext CoupleTimAndSueAfterBattleText
+	waitbutton
+	closetext
+	end
+
+;	loadvar VAR_CALLERID, PHONE_COUPLE_TIM_AND_SUE
 ;	opentext
-;	writetext CoupleTimAndSueAfterBattleText
+;	checkflag ENGINE_TIM_AND_SUE_READY_FOR_REMATCH
+;	iftrue TimAndSueWantsBattle
+;	checkcellnum PHONE_COUPLE_TIM_AND_SUE
+;	iftrue CoupleTimAndSue_TimDefeated
+;	checkevent EVENT_TIM_AND_SUE_ASKED_FOR_PHONE_NUMBER
+;	iftrue TimAndSueAskedBefore
+;	writetext CoupleTimAndSue_TimAfterBattleText
+;	waitbutton
+;	setevent EVENT_TIM_AND_SUE_ASKED_FOR_PHONE_NUMBER
+;	scall TimAndSueAskNumber1
+;	jump TimAndSueAskForNumber
+;
+;TimAndSueAskedBefore:
+;	scall TimAndSueAskNumber2
+;TimAndSueAskForNumber:
+;	askforphonenumber PHONE_COUPLE_TIM_AND_SUE
+;	ifequal PHONE_CONTACTS_FULL, TimAndSuePhoneFull
+;	ifequal PHONE_CONTACT_REFUSED, TimAndSueNumberDeclined
+;	gettrainername STRING_BUFFER_3, COUPLE, TIMANDSUE1
+;	scall TimAndSueRegisteredNumber
+;	jump TimAndSueNumberAccepted
+;
+;TimAndSueWantsBattle:
+;	scall TimAndSueRematch
+;	winlosstext CoupleTimAndSueBeatenText, 0
+;	loadtrainer COUPLE, TIMANDSUE_0
+;	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
+;	iftrue .LoadFight
+;	loadtrainer COUPLE, TIMANDSUE_3
+;	checkflag ENGINE_FLYPOINT_LAVENDER
+;	iftrue .LoadFight
+;	loadtrainer COUPLE, TIMANDSUE_2
+;.LoadFight
+;	startbattle
+;	reloadmapafterbattle
+;	clearflag ENGINE_TIM_AND_SUE_READY_FOR_REMATCH
+;	end
+;
+;TrainerCoupleTimAndSue_SueDefeated:
+;	writetext CoupleTimandSue_SueAfterBattleText
 ;	waitbutton
 ;	closetext
 ;	end
-
-	loadvar VAR_CALLERID, PHONE_COUPLE_TIM_AND_SUE
-	opentext
-	checkflag ENGINE_TIM_AND_SUE_READY_FOR_REMATCH
-	iftrue TimAndSueWantsBattle
-	checkcellnum PHONE_COUPLE_TIM_AND_SUE
-	iftrue CoupleTimAndSue_TimDefeated
-	checkevent EVENT_TIM_AND_SUE_ASKED_FOR_PHONE_NUMBER
-	iftrue TimAndSueAskedBefore
-	writetext CoupleTimAndSue_TimAfterBattleText
-	waitbutton
-	setevent EVENT_TIM_AND_SUE_ASKED_FOR_PHONE_NUMBER
-	scall TimAndSueAskNumber1
-	jump TimAndSueAskForNumber
-
-TimAndSueAskedBefore:
-	scall TimAndSueAskNumber2
-TimAndSueAskForNumber:
-	askforphonenumber PHONE_COUPLE_TIM_AND_SUE
-	ifequal PHONE_CONTACTS_FULL, TimAndSuePhoneFull
-	ifequal PHONE_CONTACT_REFUSED, TimAndSueNumberDeclined
-	gettrainername STRING_BUFFER_3, COUPLE, TIMANDSUE1
-	scall TimAndSueRegisteredNumber
-	jump TimAndSueNumberAccepted
-
-TimAndSueWantsBattle:
-	scall TimAndSueRematch
-	winlosstext CoupleTimAndSueBeatenText, 0
-	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
-	iftrue TimAndSueLoadFight0
-	checkflag ENGINE_FLYPOINT_LAVENDER
-	iftrue TimAndSueLoadFight3
-	loadtrainer COUPLE, TIMANDSUE_2
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_TIM_AND_SUE_READY_FOR_REMATCH
-	end
-
-TimAndSueLoadFight3:
-	loadtrainer COUPLE, TIMANDSUE_3
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_TIM_AND_SUE_READY_FOR_REMATCH
-	end
-
-TimAndSueLoadFight0:
-	loadtrainer COUPLE, TIMANDSUE_0
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_TIM_AND_SUE_READY_FOR_REMATCH
-	end
-
-TrainerCoupleTimAndSue_SueDefeated:
-	writetext CoupleTimandSue_SueAfterBattleText
-	waitbutton
-	closetext
-	end
-
-CoupleTimAndSue_TimDefeated:
-	writetext CoupleTimAndSue_TimAfterBattleText
-	waitbutton
-	closetext
-	end
-
-TimAndSueAskNumber1:
-	jumpstd AskNumber1FScript
-	end
-
-TimAndSueAskNumber2:
-	jumpstd AskNumber2FScript
-	end
-
-TimAndSueRegisteredNumber:
-	jumpstd RegisteredNumberFScript
-	end
-
-TimAndSueNumberAccepted:
-	jumpstd NumberAcceptedFScript
-	end
-
-TimAndSueNumberDeclined:
-	jumpstd NumberDeclinedFScript
-	end
-
-TimAndSuePhoneFull:
-	jumpstd PhoneFullFScript
-	end
-
-TimAndSueRematch:
-	jumpstd RematchFScript
-	end
+;
+;CoupleTimAndSue_TimDefeated:
+;	writetext CoupleTimAndSue_TimAfterBattleText
+;	waitbutton
+;	closetext
+;	end
+;
+;TimAndSueAskNumber1:
+;	jumpstd AskNumber1FScript
+;	end
+;
+;TimAndSueAskNumber2:
+;	jumpstd AskNumber2FScript
+;	end
+;
+;TimAndSueRegisteredNumber:
+;	jumpstd RegisteredNumberFScript
+;	end
+;
+;TimAndSueNumberAccepted:
+;	jumpstd NumberAcceptedFScript
+;	end
+;
+;TimAndSueNumberDeclined:
+;	jumpstd NumberDeclinedFScript
+;	end
+;
+;TimAndSuePhoneFull:
+;	jumpstd PhoneFullFScript
+;	end
+;
+;TimAndSueRematch:
+;	jumpstd RematchFScript
+;	end
 
 CoupleSueSeenText:
 ;	ntag "SUE:"
@@ -186,26 +175,26 @@ CoupleTimAndSueBeatenText:
 	text "We just can't win!"
 	done
 
-;CoupleTimAndSueAfterBattleText:
-;	text "Whisper…"
-;	line "whisper…"
+CoupleTimAndSueAfterBattleText:
+	text "Whisper…"
+	line "whisper…"
+	done
+
+;CoupleTimAndSue_TimAfterBattleText:
+;;	ntag "TIM:"
+;	text "If you've beaten"
+;	line "her, you must be"
+;	cont "strong!"
 ;	done
 
-CoupleTimAndSue_TimAfterBattleText:
-;	ntag "TIM:"
-	text "If you've beaten"
-	line "her, you must be"
-	cont "strong!"
-	done
-
-CoupleTimandSue_SueAfterBattleText:
-;	ntag "SUE:"
-	text "That strength of"
-	line "yours…"
-
-	para "I've got it!"
-	line "Are you in love?"
-	done
+;CoupleTimandSue_SueAfterBattleText:
+;;	ntag "SUE:"
+;	text "That strength of"
+;	line "yours…"
+;
+;	para "I've got it!"
+;	line "Are you in love?"
+;	done
 
 TrainerBugCatcherEllis:
 	trainer BUG_CATCHER, ELLIS, EVENT_BEAT_BUG_CATCHER_ELLIS, BugCatcherEllisSeenText, BugCatcherEllisBeatenText, 0, .Script

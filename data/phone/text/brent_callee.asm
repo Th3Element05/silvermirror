@@ -70,11 +70,18 @@ BrentGenericText:
 	cont "don't you?"
 	roll "I'm impressed."
 
-	para "Heh, my @"
-	text_ram wStringBuffer4
-	text_start
+	para "Heh, my LICKITUNG"
 	line "is so tough, it"
 	cont "doesn't need to go"
 	roll "to #MON CENTERs"
 	cont "often. Heheh!"
 	done
+
+;	para "Heh, my @"
+;	text_ram wStringBuffer4
+;	text_start
+;	line "is so tough, it"
+;	cont "doesn't need to go"
+;	roll "to #MON CENTERs"
+;	cont "often. Heheh!"
+;	done

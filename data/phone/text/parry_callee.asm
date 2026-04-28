@@ -29,7 +29,7 @@ ParryAnswerPhoneNiteText:
 	done
 
 ParryGreetText:
-	text "<PLAY_G>, it's"
+	text "<PLAYER>, it's"
 	line "@"
 	text_ram wStringBuffer3
 	text "!"
@@ -39,7 +39,7 @@ ParryGreetText:
 	done
 
 ParryGreetDayText:
-	text "<PLAY_G>, it's"
+	text "<PLAYER>, it's"
 	line "@"
 	text_ram wStringBuffer3
 	text "!"
@@ -49,7 +49,7 @@ ParryGreetDayText:
 	done
 
 ParryGreetNiteText:
-	text "<PLAY_G>, it's"
+	text "<PLAYER>, it's"
 	line "@"
 	text_ram wStringBuffer3
 	text "!"

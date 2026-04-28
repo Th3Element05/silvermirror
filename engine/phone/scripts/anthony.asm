@@ -5,8 +5,8 @@ AnthonyPhoneCalleeScript:
 	checkflag ENGINE_ANTHONY_READY_FOR_REMATCH
 	iftrue AnthonyWaitingForBattle
 
-	checktime NITE
-	iftrue AnthonyWantsBattle
+	readvar VAR_WEEKDAY
+	ifequal SUNDAY, AnthonyWantsBattle
 
 	random 2
 	ifequal 0, AnthonyWantsBattle
@@ -18,8 +18,8 @@ AnthonyPhoneCallerScript:
 	gettrainername STRING_BUFFER_3, HIKER, ANTHONY1
 	farscall PhoneScript_GreetPhone_Male
 
-	checktime NITE
-	iftrue AnthonyWantsBattle
+	readvar VAR_WEEKDAY
+	ifequal SUNDAY, AnthonyWantsBattle
 
 	random 3
 	ifequal 0, AnthonyWantsBattle

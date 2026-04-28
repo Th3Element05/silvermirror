@@ -1885,7 +1885,7 @@ RematchGiftMScript:
 
 AskNumber1FScript:
 	readvar VAR_CALLERID
-	ifequal PHONE_TEACHER_HILLARY, .Hillary
+	ifequal PHONE_LASS_HILLARY, .Hillary
 	ifequal PHONE_POKEFAN_BEVERLY, .Beverly
 	ifequal PHONE_COOLTRAINERF_BETH, .Beth
 	ifequal PHONE_COOLTRAINERF_REENA, .Reena
@@ -1937,7 +1937,7 @@ AskNumber1FScript:
 
 AskNumber2FScript:
 	readvar VAR_CALLERID
-	ifequal PHONE_TEACHER_HILLARY, .Hillary
+	ifequal PHONE_LASS_HILLARY, .Hillary
 	ifequal PHONE_POKEFAN_BEVERLY, .Beverly
 	ifequal PHONE_COOLTRAINERF_BETH, .Beth
 	ifequal PHONE_COOLTRAINERF_REENA, .Reena
@@ -1996,7 +1996,7 @@ RegisteredNumberFScript:
 
 NumberAcceptedFScript:
 	readvar VAR_CALLERID
-	ifequal PHONE_TEACHER_HILLARY, .Hillary
+	ifequal PHONE_LASS_HILLARY, .Hillary
 	ifequal PHONE_POKEFAN_BEVERLY, .Beverly
 	ifequal PHONE_COOLTRAINERF_BETH, .Beth
 	ifequal PHONE_COOLTRAINERF_REENA, .Reena
@@ -2072,7 +2072,7 @@ NumberAcceptedFScript:
 
 NumberDeclinedFScript:
 	readvar VAR_CALLERID
-	ifequal PHONE_TEACHER_HILLARY, .Hillary
+	ifequal PHONE_LASS_HILLARY, .Hillary
 	ifequal PHONE_POKEFAN_BEVERLY, .Beverly
 	ifequal PHONE_COOLTRAINERF_BETH, .Beth
 	ifequal PHONE_COOLTRAINERF_REENA, .Reena
@@ -2217,7 +2217,7 @@ RematchFScript:
 	ifequal PHONE_PICNICKER_ERIN, .Erin
 	ifequal PHONE_LASS_KRISE, .Krise
 	ifequal PHONE_COUPLE_TIM_AND_SUE, .TimAndSue
-	ifequal PHONE_TEACHER_HILLARY, .Hillary
+	ifequal PHONE_LASS_HILLARY, .Hillary
 	ifequal PHONE_TWINS_KAY_AND_TIA, .KayAndTia
 
 .Beth:

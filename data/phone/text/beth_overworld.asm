@@ -4,9 +4,8 @@ BethAskNumber1Text:
 
 	para "You're very good"
 	line "at battling."
-
-	para "We should battle"
-	line "again sometime."
+	cont "We should battle"
+	roll "again sometime."
 
 	para "By challenging a"
 	line "tough trainer like"

@@ -8,13 +8,17 @@ WaltPhoneCalleeScript: ; You call Walt
 	random 2
 	ifequal 0, WaltWantsToBattle
 
+;	checkflag ENGINE_DAILY_BUG_CONTEST
+;	iftrue .NoContest
+
 	readvar VAR_WEEKDAY
 	ifequal MONDAY, WaltWantsToBattle
-
 ;.NotMonday:
-	ifequal TUESDAY, WaltContestToday
-	ifequal THURSDAY, WaltContestToday
-	ifequal SATURDAY, WaltContestToday
+;	ifequal TUESDAY, WaltContestToday
+;	ifequal THURSDAY, WaltContestToday
+;	ifequal SATURDAY, WaltContestToday
+
+;.NoContest
 	farjump WaltTypesOfPokemon
 
 
@@ -24,15 +28,19 @@ WaltPhoneCallerScript: ; Calls you
 
 	random 4
 	ifequal 0, WaltWantsToBattle
+;	ifequal 1, .NoContest
+
+;	checkflag ENGINE_DAILY_BUG_CONTEST
+;	iftrue .NoContest
 
 	readvar VAR_WEEKDAY
 	ifequal MONDAY, WaltWantsToBattle
-
 ;.NotMonday:
-	ifequal TUESDAY, WaltContestToday
-	ifequal THURSDAY, WaltContestToday
-	ifequal SATURDAY, WaltContestToday
+;	ifequal TUESDAY, WaltContestToday
+;	ifequal THURSDAY, WaltContestToday
+;	ifequal SATURDAY, WaltContestToday
 
+;.NoContest
 	random 3
 	ifequal 0, WaltFoundRare
 

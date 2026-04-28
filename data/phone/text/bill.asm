@@ -1,37 +1,31 @@
 BillPhoneMornGreetingText:
 	text "Good morning!"
 
-	para "This is the #-"
-	line "MON STORAGE SYSTEM"
-
-	para "ADMINISTRATION"
-	line "SERVICE."
+	para "This is the"
+	line "#MON STORAGE"
+	cont "MOBILE SERVICE."
 	done
 
 BillPhoneDayGreetingText:
 	text "Good day!"
 
-	para "This is the #-"
-	line "MON STORAGE SYSTEM"
-
-	para "ADMINISTRATION"
-	line "SERVICE."
+	para "This is the"
+	line "#MON STORAGE"
+	cont "MOBILE SERVICE."
 	done
 
 BillPhoneNiteGreetingText:
 	text "Good evening!"
 
-	para "This is the #-"
-	line "MON STORAGE SYSTEM"
-
-	para "ADMINISTRATION"
-	line "SERVICE."
+	para "This is the"
+	line "#MON STORAGE"
+	cont "MOBILE SERVICE."
 	done
 
 BillPhoneGenericText:
 	text "Who's calling?"
 
-	para "<PLAY_G>, is it?"
+	para "<PLAYER>, is it?"
 	line "Hang on a sec…"
 
 	para "<……>"
@@ -42,7 +36,7 @@ BillPhoneNotFullText:
 	text "Thanks for"
 	line "waiting!"
 
-	para "<PLAY_G>, your"
+	para "<PLAYER>, your"
 	line "database has a lot"
 	cont "of space left."
 
@@ -54,7 +48,7 @@ BillPhoneNearlyFullText:
 	text "Thanks for"
 	line "waiting!"
 
-	para "<PLAY_G>, your"
+	para "<PLAYER>, your"
 	line "database is almost"
 	cont "overtaxed!"
 
@@ -66,7 +60,7 @@ BillPhoneFullText:
 	text "Thanks for"
 	line "waiting!"
 
-	para "<PLAY_G>, your"
+	para "<PLAYER>, your"
 	line "database is"
 	cont "overtaxed."
 
@@ -76,7 +70,7 @@ BillPhoneFullText:
 	done
 
 BillPhoneNewlyFullText:
-	text "Hi, <PLAY_G>?"
+	text "Hi, <PLAYER>?"
 	line "It's me, BILL!"
 
 	para "Thanks for using"

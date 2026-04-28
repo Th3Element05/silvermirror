@@ -1,8 +1,9 @@
 ErinMonIsMuchStrongerText:
-	text_ram wStringBuffer3
-	text "'s @"
-	text_ram wStringBuffer4
-	text_start
+	text "My PIDGEOTTO"
+;	text_ram wStringBuffer3
+;	text "'s @"
+;	text_ram wStringBuffer4
+;	text_start
 	line "is much stronger"
 	cont "than before!"
 	done
@@ -57,7 +58,7 @@ ErinWorkingHardText:
 	done
 
 ErinReminderText:
-	text "Oh, <PLAY_G>!"
+	text "Oh, <PLAYER>!"
 	line "Come battle ERIN!"
 
 	para "I'll be waiting on"

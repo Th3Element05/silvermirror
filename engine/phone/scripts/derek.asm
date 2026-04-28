@@ -19,7 +19,6 @@ DerekPhoneCalleeScript:
 	farsjump DerekHangUpScript
 
 
-
 DerekPhoneCallerScript:
 	gettrainername STRING_BUFFER_3, POKEFANM, DEREK1
 	farscall PhoneScript_GreetPhone_Male

@@ -20,8 +20,8 @@ DerekAnswerPhoneNiteText:
 	done
 
 DerekGreetText:
-	text "<PLAYER> pika, good"
-	line "morning!"
+	text "<PLAYER> pika,"
+	line "good morning!"
 
 	para "It's @"
 	text_ram wStringBuffer3
@@ -30,8 +30,8 @@ DerekGreetText:
 	done
 
 DerekGreetDayText:
-	text "<PLAYER> pika, good"
-	line "pika day!"
+	text "<PLAYER> pika,"
+	line "good pika day!"
 
 	para "It's @"
 	text_ram wStringBuffer3
@@ -40,8 +40,8 @@ DerekGreetDayText:
 	done
 
 DerekGreetNiteText:
-	text "<PLAYER> pika, good"
-	line "evening!"
+	text "<PLAYER> pika,"
+	line "good evening!"
 
 	para "It's @"
 	text_ram wStringBuffer3

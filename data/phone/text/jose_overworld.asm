@@ -50,7 +50,7 @@ JoseRematchText:
 	text "Tweet! Tweeeet!"
 
 	para "Kept me waiting!"
-	line "Go, FEAROW!"
+	line "Go, FARFETCH'D!"
 	done
 
 JoseGiftText:

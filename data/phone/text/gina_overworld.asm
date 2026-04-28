@@ -1,26 +1,44 @@
 GinaAskNumber1Text:
-	text "Whenever I see a"
-	line "strong trainer, I"
-	cont "want to be their"
-	roll "cheerleader."
+;	text "Whenever I see a"
+;	line "strong trainer, I"
+;	cont "want to be their"
+;	roll "cheerleader."
+;
+	text "When I'm on my"
+	line "walks, I like to"
+	cont "pick up leaves."
 
-	para "When I'm on my"
-	line "walk, I sometimes"
-	cont "pick up items."
+	para "But, sometimes I"
+	line "accidentally find"
+	cont "LEAF STONEs!"
 
-	para "If I get anything,"
-	line "you can have it!"
+	para "If I find another"
+	line "LEAF STONE, I can"
+	cont "hang on to it and"
+	roll "give it to you."
 
 	para "Want to give me"
 	line "your number?"
-
-	para "I'll call as soon"
-	line "as I get anything."
 	done
 
+;	para "When I'm on my"
+;	line "walk, I sometimes"
+;	cont "pick up items."
+;
+;	para "If I get anything,"
+;	line "you can have it!"
+;
+;	para "Want to give me"
+;	line "your number?"
+;
+;	para "I'll call as soon"
+;	line "as I get anything."
+;	done
+
 GinaAskNumber2Text:
-	text "If I find an item,"
-	line "you can have it!"
+	text "If I find any"
+	line "LEAF STONEs, I'll"
+	cont "give them to you!"
 
 	para "Want to give me"
 	line "your number?"

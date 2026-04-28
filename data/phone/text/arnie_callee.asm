@@ -1,21 +1,5 @@
 ArnieAnswerPhoneText:
-;	text "Yeah, hello."
-;	line "This is @"
-;	text_ram wStringBuffer3
-;	text "."
-;
-;	para "…Huh, <PLAYER>? Yo!"
-;	done
-;
 ArnieAnswerPhoneDayText:
-;	text "Yeah, hello, you"
-;	line "got @"
-;	text_ram wStringBuffer3
-;	text "."
-;
-;	para "…Huh, <PLAYER>? Yo!"
-;	done
-;
 ArnieAnswerPhoneNiteText:
 	text "Yeah, hello, you"
 	line "got @"

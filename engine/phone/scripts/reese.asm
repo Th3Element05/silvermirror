@@ -25,7 +25,7 @@ ReesePhoneCallerScript: ; Calls you
 	checkcode VAR_WEEKDAY
 	ifequal SUNDAY, ReeseWantsBattle
 
-	random 4
+	random 3
 	ifequal 0, ReeseWantsBattle
 
 ;GenericReeseCall:

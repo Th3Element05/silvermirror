@@ -1,18 +1,16 @@
 KyleAskNumber1Text:
 	text "So I don't forget"
 	line "just how great it"
-
-	para "is to battle with"
-	line "you, how about we"
+	cont "is to battle with"
+	roll "you, how about we"
 	cont "exchange numbers?"
 	done
 
 KyleAskNumber2Text:
 	text "Oh, I see you've"
 	line "changed your mind"
-
-	para "about exchanging"
-	line "numbers with me!"
+	cont "about exchanging"
+	roll "numbers with me!"
 	done
 
 KyleNumberAcceptedText:
