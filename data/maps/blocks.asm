@@ -167,7 +167,7 @@ BillsBrothersHouse_Blocks:
 LavenderSpeechHouse_Blocks:
 LavenderNameRater_Blocks:
 Route12SuperRodHouse_Blocks:
-Route28SteelWingHouse_Blocks:
+;Route28SteelWingHouse_Blocks:
 CeladonMansionRoofHouse_Blocks:
 Route16FuchsiaSpeechHouse_Blocks:
 ManiasHouse_Blocks:
@@ -1174,6 +1174,9 @@ SafariSecretHouse_Blocks:
 
 SafariZoneEntrance_Blocks:
 	INCBIN "maps/SafariZoneEntrance.blk"
+
+TohjoFallsOutside_Blocks:
+	INCBIN "maps/TohjoFallsOutside.blk"
 
 DebugSoundRoom_Blocks:
 	INCBIN "maps/DebugSoundRoom.blk"

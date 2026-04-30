@@ -180,10 +180,13 @@ EnterMapWarp:
 	cp GROUP_MOUNT_MOON_SQUARE
 	jr nz, .not_mt_moon_square_or_tin_tower_roof
 	assert GROUP_MOUNT_MOON_SQUARE == GROUP_TIN_TOWER_ROOF
+	assert GROUP_MOUNT_MOON_SQUARE == GROUP_TOHJO_FALLS_OUTSIDE
 	ld a, [wPrevMapNumber]
 	cp MAP_MOUNT_MOON_SQUARE
 	ret z
 	cp MAP_TIN_TOWER_ROOF
+	ret z
+	cp MAP_TOHJO_FALLS_OUTSIDE
 	ret z
 .not_mt_moon_square_or_tin_tower_roof
 
