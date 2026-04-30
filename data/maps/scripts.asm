@@ -640,29 +640,29 @@ INCLUDE "maps/DragonsDen1F.asm"
 INCLUDE "maps/DragonsDenB1F.asm"
 INCLUDE "maps/DragonShrine.asm"
 INCLUDE "maps/BlackthornMovesHouse.asm"
-
-
-SECTION "Map Scripts 50", ROMX
-
 INCLUDE "maps/Route45.asm"
 INCLUDE "maps/DarkCaveBlackthornEntrance.asm"
 INCLUDE "maps/Route46.asm"
 INCLUDE "maps/Route29Route46Gate.asm"
 
 
-SECTION "Map Scripts 51", ROMX
+SECTION "Map Scripts 50", ROMX
 
 INCLUDE "maps/Route28.asm"
-INCLUDE "maps/Route28SteelWingHouse.asm"
+;INCLUDE "maps/Route28SteelWingHouse.asm"
 INCLUDE "maps/SilverCaveOutside.asm"
 INCLUDE "maps/SilverCavePokecenter1F.asm"
 INCLUDE "maps/SilverCaveRoom1.asm"
 INCLUDE "maps/SilverCaveRoom2.asm"
 INCLUDE "maps/SilverCaveRoom3.asm"
 INCLUDE "maps/SilverCaveItemRooms.asm"
+INCLUDE "maps/TohjoFallsOutside.asm"
 ;debug
 INCLUDE "maps/DebugSoundRoom.asm"
 
+
+;SECTION "Map Scripts 51", ROMX
+;
 ;
 ;SECTION "Map Scripts 52", ROMX
 ;

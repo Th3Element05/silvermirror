@@ -422,18 +422,20 @@ ENDM
 	endgroup
 
 	newgroup SILVER                                               ; 26
-	map_const ROUTE_28,                                    20,  9 ;  6
-	map_const SILVER_CAVE_OUTSIDE,                         20, 15 ;  7
-	map_const SILVER_CAVE_POKECENTER_1F,                    7,  4 ;  8
-	map_const ROUTE_28_STEEL_WING_HOUSE,                    4,  4 ;  9
+	map_const ROUTE_28,                                    20,  9 ;  1
+	map_const SILVER_CAVE_OUTSIDE,                         20, 15 ;  2
+	map_const SILVER_CAVE_POKECENTER_1F,                    7,  4 ;  3
+;	map_const ROUTE_28_STEEL_WING_HOUSE,                    4,  4 ;  4
+	map_const MOUNT_MOON_SQUARE,                           15,  9 ;  5
+	map_const MOUNT_MOON_GIFT_SHOP,                         4,  4 ;  6
+	map_const TIN_TOWER_ROOF,                               8,  8 ;  7
+	map_const TOHJO_FALLS_OUTSIDE,                          8,  7 ;  8
 	endgroup
 
 	newgroup DUNGEONS                                             ; 14
 ; kanto
 	map_const MOUNT_MOON,                                  20, 27 ;  1
 	map_const MOUNT_MOON_B2F,                              20, 19 ;  2
-	map_const MOUNT_MOON_SQUARE,                           15,  9 ; 15
-	map_const MOUNT_MOON_GIFT_SHOP,                         4,  4 ; 16
 	map_const UNDERGROUND_PATH,                             3, 14 ;  3
 	map_const DIGLETTS_CAVE,                               19, 17 ;  4
 	map_const ROCK_TUNNEL_1F,                              18, 16 ;  5
@@ -495,7 +497,6 @@ ENDM
 ;	map_const TIN_TOWER_7F,                                 8,  8    ; 54
 ;	map_const TIN_TOWER_8F,                                 8,  8    ; 55
 ;	map_const TIN_TOWER_9F,                                 8,  8    ; 56
-	map_const TIN_TOWER_ROOF,                               8,  8 ; 17
 	map_const BURNED_TOWER_1F,                             10,  9 ; 57
 	map_const BURNED_TOWER_B1F,                            10,  9 ; 58
 	map_const NATIONAL_PARK,                               20, 27 ; 59
@@ -567,7 +568,7 @@ ENDM
 	map_const DRAGONS_DEN_1F,                               5,  9 ; 120
 	map_const DRAGONS_DEN_B1F,                             20, 18 ; 121
 	map_const DRAGON_SHRINE,                                5,  5 ; 122
-	map_const TOHJO_FALLS,                                 15,  9 ; 123
+	map_const TOHJO_FALLS,                                 15, 14 ; 123
 ;debug
 	map_const DEBUG_SOUND_ROOM,                            18, 13 ; 124
 	endgroup
