@@ -1894,10 +1894,10 @@ KoffingEvosAttacks:
 	db 6, SMOG ;SMOG, 1
 	db 10, SMOKESCREEN
 	db 15, PURSUIT ;assurance, x
-	db 19, SELFDESTRUCT
+	db 19, HAZE ;SELFDESTRUCT
 	db 24, SLUDGE
-	db 28, HAZE
-	db 33, GYRO_BALL
+	db 28, GYRO_BALL ;HAZE
+	db 33, SELFDESTRUCT ;GYRO_BALL
 	db 37, DOUBLE_EDGE ;explosion, removed
 	db 42, SLUDGE_BOMB
 	db 46, DESTINY_BOND
@@ -1911,10 +1911,10 @@ WeezingEvosAttacks:
 	db 6, SMOG ;SMOG, 1
 	db 10, SMOKESCREEN
 	db 15, PURSUIT ;assurance, x
-	db 19, SELFDESTRUCT
+	db 19, HAZE ;SELFDESTRUCT
 	db 24, SLUDGE
-	db 28, HAZE
-	db 33, GYRO_BALL
+	db 28, GYRO_BALL ;HAZE
+	db 33, SELFDESTRUCT ;GYRO_BALL
 	db 40, DOUBLE_EDGE ;explosion, removed
 	db 48, SLUDGE_BOMB
 	db 55, DESTINY_BOND

@@ -464,7 +464,7 @@ TrainerSchoolboyChad:
 	iftrue .ChadDefeated
 	checkevent EVENT_CHAD_ASKED_FOR_PHONE_NUMBER
 	iftrue .SecondTimeAsking
-	writetext SchoolboyChad1AfterBattleText
+	writetext SchoolboyChadAfterBattleText
 	promptbutton
 	setevent EVENT_CHAD_ASKED_FOR_PHONE_NUMBER
 	scall Route36AskNumber1
@@ -482,7 +482,7 @@ TrainerSchoolboyChad:
 
 .ChadRematch:
 	scall Route36Rematch
-	winlosstext SchoolboyChad1BeatenText, 0
+	winlosstext SchoolboyChadBeatenText, 0
 	loadtrainer SCHOOLBOY, CHAD_0
 	startbattle
 	reloadmapafterbattle
@@ -490,7 +490,7 @@ TrainerSchoolboyChad:
 	end
 
 .ChadDefeated:
-	writetext SchoolboyChad1AfterBattleText
+	writetext SchoolboyChadAfterBattleText
 	promptbutton
 	closetext
 	end

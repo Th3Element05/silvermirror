@@ -277,10 +277,10 @@ TrainerCamperTanner:
 	loadtrainer CAMPER, TANNER_0
 	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
 	iftrue .LoadFight
-	loadtrainer CAMPER, TANNER_3
-	checkflag ENGINE_FLYPOINT_LAVENDER
-	iftrue .LoadFight
 	loadtrainer CAMPER, TANNER_2
+	readvar VAR_BADGES
+	ifgreater 2, .LoadFight ;3_BADGES
+	loadtrainer CAMPER, TANNER1
 .LoadFight:
 	startbattle
 	reloadmapafterbattle

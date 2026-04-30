@@ -212,6 +212,15 @@ SailorHueyAfterBattleText:
 	roll "with #MON."
 	done
 
+SailorHueyGiveProteinText:
+	text "Man! You're as"
+	line "tough as ever!"
+
+	para "Anyway, here's"
+	line "that medicine from"
+	cont "before."
+	done
+
 TrainerBeautyEmma:
 	trainer BEAUTY, EMMA, EVENT_BEAT_BEAUTY_EMMA, BeautyEmmaSeenText, BeautyEmmaBeatenText, 0, .Script
 

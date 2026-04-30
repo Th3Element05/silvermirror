@@ -499,7 +499,7 @@ TrainerPokefanFBeverly: ;no rematch, give nugget
 	iftrue .BeverlyDefeated
 	checkevent EVENT_BEVERLY_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskAgain
-	writetext PokefanBeverlyCuteMonText
+	writetext PokefanFBeverlyAfterBattleText
 	promptbutton
 	setevent EVENT_BEVERLY_ASKED_FOR_PHONE_NUMBER
 	scall .AskNumber1F
@@ -511,7 +511,7 @@ TrainerPokefanFBeverly: ;no rematch, give nugget
 	askforphonenumber PHONE_POKEFAN_BEVERLY
 	ifequal PHONE_CONTACTS_FULL, .PhoneFullF
 	ifequal PHONE_CONTACT_REFUSED, .NumberDeclinedF
-	gettrainername STRING_BUFFER_3, POKEFANF, BEVERLY
+	gettrainername STRING_BUFFER_3, POKEFANF, BEVERLY1
 	scall .RegisteredNumberF
 	sjump .NumberAcceptedF
 
@@ -531,7 +531,7 @@ TrainerPokefanFBeverly: ;no rematch, give nugget
 	end
 
 .BeverlyDefeated:
-	writetext PokefanBeverlyCuteMonText
+	writetext PokefanFBeverlyAfterBattleText
 	promptbutton
 	closetext
 	end

@@ -113,6 +113,7 @@ Route20RockSmashGuyScript:
 	db "ROCKSMASH PAGER@"
 
 Route20RockSmashGuyIntro_Seafoam:
+	ntag "COOLTRAINER:"
 	text "Whoa! Did you go"
 	line "through SEAFOAM"
 	cont "ISLANDS?"
@@ -125,6 +126,7 @@ Route20RockSmashGuyIntro_Seafoam:
 	done
 
 Route20RockSmashGuyIntro_Cinnabar:
+	ntag "COOLTRAINER:"
 	text "Wait! Are you"
 	line "gonna go through"
 	cont "SEAFOAM ISLANDS?"
@@ -134,6 +136,7 @@ Route20RockSmashGuyIntro_Cinnabar:
 	done
 
 Route20RockSmashGuyIntroText:
+	ntag "COOLTRAINER:"
 	text "My GEODUDE loves"
 	line "smashing rocks!"
 
@@ -141,6 +144,7 @@ Route20RockSmashGuyIntroText:
 	done
 
 Route20RockSmashGuyGivePagerText:
+	ntag "COOLTRAINER:"
 	text "You can make some"
 	line "shortcuts with"
 	cont "ROCK SMASH!"
@@ -154,6 +158,7 @@ GotRockSmashPagerText:
 	done
 
 Route20RockSmashGuyGiveTMText:
+	ntag "COOLTRAINER:"
 	text "You can call my"
 	line "GEODUDE any time"
 	cont "you need to use"
@@ -167,10 +172,12 @@ Route20RockSmashGuyGiveTMText:
 ;	done
 
 Route20RockSmashGuyLetsGoText:
+	ntag "COOLTRAINER:"
 	text "Let's go, GEODUDE!"
 	done
 
 Route20RockSmashGuyFarewellText:
+	ntag "COOLTRAINER:"
 	text "Have fun smashing!"
 	line "See ya!"
 	done
@@ -319,7 +326,11 @@ TrainerBirdKepperVance:
 	winlosstext BirdKepperVanceBeatenText, 0
 	loadtrainer BIRD_KEEPER, VANCE_0
 	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
+	iftrue .LoadFight
 	loadtrainer BIRD_KEEPER, VANCE_2
+	readvar VAR_BADGES
+	ifgreater 3, .LoadFight
+	loadtrainer BIRD_KEEPER, VANCE1
 .LoadFight:
 	startbattle
 	reloadmapafterbattle

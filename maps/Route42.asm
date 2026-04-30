@@ -214,7 +214,7 @@ TrainerHikerAnthony:
 	iftrue .AnthonyDefeated
 	checkevent EVENT_ANTHONY_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskAgain
-	writetext HikerAnthony2AfterText
+	writetext HikerAnthonyAfterBattleText
 	promptbutton
 	setevent EVENT_ANTHONY_ASKED_FOR_PHONE_NUMBER
 	scall .AskNumber1
@@ -226,13 +226,13 @@ TrainerHikerAnthony:
 	askforphonenumber PHONE_HIKER_ANTHONY
 	ifequal PHONE_CONTACTS_FULL, .PhoneFull
 	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
-	gettrainername STRING_BUFFER_3, HIKER, ANTHONY2
+	gettrainername STRING_BUFFER_3, HIKER, ANTHONY1
 	scall .RegisteredNumber
 	jump .NumberAccepted
 
 .Rematch:
 	scall .RematchStd
-	winlosstext HikerAnthony2BeatenText, 0
+	winlosstext HikerAnthonyBeatenText, 0
 	loadtrainer HIKER, ANTHONY_0
 	startbattle
 	reloadmapafterbattle
@@ -240,7 +240,7 @@ TrainerHikerAnthony:
 	end
 
 .AnthonyDefeated:
-	writetext HikerAnthony2AfterText
+	writetext HikerAnthonyAfterBattleText
 	promptbutton
 	closetext
 	end

@@ -162,7 +162,7 @@ TrainerPokefanmDerek:
 	askforphonenumber PHONE_POKEFANM_DEREK
 	ifequal PHONE_CONTACTS_FULL, .PhoneFull
 	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
-	gettrainername STRING_BUFFER_3, POKEFANM, DEREK
+	gettrainername STRING_BUFFER_3, POKEFANM, DEREK1
 	scall .RegisteredNumber
 	sjump .NumberAccepted
 

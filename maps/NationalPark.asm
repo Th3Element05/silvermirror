@@ -42,7 +42,7 @@ TrainerSchoolboyJack:
 
 .Rematch:
 	scall Route36Rematch
-	winlosstext SchoolboyJack1BeatenText, 0
+	winlosstext SchoolboyJackBeatenText, 0
 	loadtrainer SCHOOLBOY, JACK_0
 	startbattle
 	reloadmapafterbattle

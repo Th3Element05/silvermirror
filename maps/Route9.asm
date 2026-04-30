@@ -62,6 +62,9 @@ TrainerBugCatcherDoug:
 	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
 	iftrue .LoadFight
 	loadtrainer BUG_CATCHER, DOUG_2
+	readvar VAR_BADGES
+	ifgreater 2, .LoadFight
+	loadtrainer BUG_CATCHER, DOUG1
 .LoadFight:
 	startbattle
 	reloadmapafterbattle
@@ -71,25 +74,24 @@ TrainerBugCatcherDoug:
 .DougItem:
 	scall Route9GiftItem
 	random 4
-	random 4
-;	ifequal 0, .lumberry
-;	ifequal 1, .lumberry
-	ifequal 2, .leppaberry
-	ifequal 3, .sitrusberry
-
-.lumberry:
-	verbosegiveitem LUM_BERRY
-	iffalse Route9PackFull
-	jump .Done
-
-.leppaberry:
-	verbosegiveitem LEPPA_BERRY
-	iffalse Route9PackFull
-	jump .Done
+	ifequal 0, .lumberry
+	ifequal 1, .leppaberry
+;	ifequal 2, .sitrusberry
 
 .sitrusberry:
 	verbosegiveitem SITRUS_BERRY
 	iffalse Route9PackFull
+	sjump .Done
+
+.leppaberry:
+	verbosegiveitem LEPPA_BERRY
+	iffalse Route9PackFull
+	sjump .Done
+
+.lumberry:
+	verbosegiveitem LUM_BERRY
+	iffalse Route9PackFull
+;	sjump .Done
 
 .Done:
 	clearflag ENGINE_DOUG_HAS_BERRY
@@ -293,12 +295,12 @@ TrainerPicnickerGina:
 	scall Route9Rematch
 	winlosstext PicnickerGinaBeatenText, 0
 	loadtrainer PICNICKER, GINA_0
-	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
-	iftrue .LoadFight
-	loadtrainer PICNICKER, GINA_3
-	checkflag ENGINE_FLYPOINT_CELADON
+	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight
 	loadtrainer PICNICKER, GINA_2
+	readvar VAR_BADGES
+	ifgreater 2, .LoadFight
+	loadtrainer PICNICKER, GINA1
 .LoadFight:
 	startbattle
 	reloadmapafterbattle

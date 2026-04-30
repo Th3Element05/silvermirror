@@ -258,7 +258,7 @@ TrainerFisherWilton:
 
 .WantsBattle:
 	scall Route32RematchM
-	winlosstext FisherWilton1BeatenText, 0
+	winlosstext FisherWiltonBeatenText, 0
 	loadtrainer FISHER, WILTON_0
 	startbattle
 	reloadmapafterbattle
@@ -389,7 +389,7 @@ TrainerFisherRalph:
 
 .Rematch:
 	scall Route32RematchM
-	winlosstext FisherRalph1BeatenText, 0
+	winlosstext FisherRalphBeatenText, 0
 	loadtrainer FISHER, RALPH_0
 	startbattle
 	reloadmapafterbattle

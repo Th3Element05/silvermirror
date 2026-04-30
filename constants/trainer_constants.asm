@@ -417,7 +417,7 @@ DEF KRIS EQU __trainer_class__
 	const BEN
 	const RON
 	const ETHAN
-	const DONALD
+	const TYSON
 	const HORTON
 ; johto
 	const ZACH
@@ -512,7 +512,6 @@ DEF KRIS EQU __trainer_class__
 ; rematch
 	const TULLY_2
 	const TULLY_0
-	const KYLE_2
 	const KYLE_0
 	const WILTON_0
 	const RALPH_0
@@ -621,7 +620,7 @@ DEF KRIS EQU __trainer_class__
 	const TIMOTHY
 	const BAILEY
 	const TIM
-	const NOLAND
+	const HOLDEN
 	const SIDNEY
 	const WALTER
 	const JIM
@@ -793,7 +792,6 @@ DEF KRIS EQU __trainer_class__
 	const TERRY
 ; rematch
 	const TANNER_2
-	const TANNER_3
 	const TANNER_0
 	const TODD_0
 
@@ -811,7 +809,7 @@ DEF KRIS EQU __trainer_class__
 	const NOE
 	const JIN
 	const KYRO
-	const LI
+	const LI ;MASTER LI
 	const GAKU
 	const MASA
 	const KOJI
