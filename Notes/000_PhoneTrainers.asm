@@ -1609,11 +1609,11 @@ Route46RematchGiftF:
 ;	trainer TEACHER, HILLARY1, EVENT_BEAT_TEACHER_HILLARY, TeacherHillarySeenText, TeacherHillaryBeatenText, 0, .Script
 
 .Script:
-	loadvar VAR_CALLERID, PHONE_TEACHER_HILLARY
+	loadvar VAR_CALLERID, PHONE_LASS_HILLARY
 	opentext
 	checkflag ENGINE_HILLARY_READY_FOR_REMATCH
 	iftrue .WantsBattle
-	checkcellnum PHONE_TEACHER_HILLARY
+	checkcellnum PHONE_LASS_HILLARY
 	iftrue .HillaryDefeated
 	checkevent EVENT_HILLARY_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskedBefore
@@ -1626,7 +1626,7 @@ Route46RematchGiftF:
 .AskedBefore:
 	scall Route15FAskNumber2
 .AskForNumber:
-	askforphonenumber PHONE_TEACHER_HILLARY
+	askforphonenumber PHONE_LASS_HILLARY
 	ifequal PHONE_CONTACTS_FULL, Route15FPhoneFull
 	ifequal PHONE_CONTACT_REFUSED, Route15FNumberDeclined
 	gettrainername STRING_BUFFER_3, TEACHER, HILLARY1
