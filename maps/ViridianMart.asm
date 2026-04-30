@@ -17,6 +17,8 @@ ViridianMartOaksParcelScene:
 	applymovement PLAYER, ViridianMartApproachCounterMovement
 	opentext
 	writetext ViridianMartOaksParcelText
+	promptbutton
+	writetext ViridianMartGotParcelText
 	playsound SFX_KEY_ITEM
 	giveitem OAKS_PARCEL
 	waitsfx
@@ -124,11 +126,11 @@ ViridianMartOaksParcelText:
 
 	para "His order came in."
 	line "Will you take it"
-	cont "to him?@"
+	cont "to him?"
+	done
 	
-	text_promptbutton
-;	ntag "─────"
-	para "<PLAYER> got"
+ViridianMartGotParcelText:
+	text "<PLAYER> got"
 	line "OAK's PARCEL!"
 	done
 
