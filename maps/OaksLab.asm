@@ -367,11 +367,13 @@ DeliverOaksParcelScript:
 	special RestartMapMusic
 	opentext
 	writetext OaksLabOakHaveRequestText
+	promptbutton
+	writetext OaksLabGotPokedexText
 	playsound SFX_ITEM
-	waitsfx
 	setflag ENGINE_POKEDEX
 	disappear OAKSLAB_POKEDEX1
 	disappear OAKSLAB_POKEDEX2
+	waitsfx
 	promptbutton
 	writetext OaksLabOaksDreamGivePagerText
 ;	writetext OaksLabOaksDreamText
@@ -859,11 +861,12 @@ OaksLabOakHaveRequestText:
 	para "It's a hi-tech"
 	line "encyclopedia!"
 
-	para "<PLAYER> and"
-	line "<RIVAL>! Take"
-	cont "these with you!"
+	para "<PLAYER>, <RIVAL>!"
+	line "Take these with"
+	cont "you!"
 
-	para "<PLAYER> got a"
+OaksLabGotPokedexText:
+	text "<PLAYER> got a"
 	line "#DEX from OAK!"
 	done
 
@@ -909,7 +912,7 @@ GotPagerCardText:
 OaksLabOakExplainsPagerText:
 	ntag "PROF.OAK:"
 	text "That's the latest"
-	line "#GEAR expansion."
+	line "#GEAR upgrade."
 ;	cont "card."
 
 	para "The #MON"
@@ -920,9 +923,10 @@ OaksLabOakExplainsPagerText:
 	cont "#MON to aid you"
 	roll "on your travels."
 
-	para "But you need to"
-	line "get #MON PAGERs"
-	cont "to call with it.@"
+	para "But you'll need to"
+	line "get PAGER CARDs"
+	cont "to call them with.@"
+;	cont "to call with it.@"
 
 	text_promptbutton
 ;	ntag "──────────"
