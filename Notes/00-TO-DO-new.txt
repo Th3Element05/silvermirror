@@ -60,8 +60,11 @@ OftenFleeMons:
 
 DO
 
-confirm phone trainer stuff is all lined up
 
+fix mom DST show time before "is that okay?"
+
+input challenge mode wild data from spreadsheet
+check all wild data against spreadsheet
 
 what to use EVENT_CAUGHT_MISSINGNO for?
 
@@ -79,47 +82,22 @@ use VAR_BADGES instead of FLYPOINT to set rematch?
 
 rematch text, check for having AnswerPhone first
 
-phone trainers
-\data\phone\text\*   "roll text"
-\engine\phone\scripts
-
-checkflag ENGINE_FLYPOINT_CERULEAN
-checkflag ENGINE_FLYPOINT_VERMILION
-		checkevent EVENT_GOT_HM01_CUT
-checkflag ENGINE_FLYPOINT_LAVENDER
-checkflag ENGINE_FLYPOINT_CELADON
-		checkevent EVENT_BEAT_GIOVANNI_HIDEOUT
-checkflag ENGINE_FLYPOINT_FUCHSIA
-		checkevent EVENT_GOT_HM03_SURF
-checkflag ENGINE_FLYPOINT_CINNABAR
-checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
-		checkevent EVENT_BEAT_ELITE_FOUR
-
-
-
-input challenge mode wild data from spreadsheet
-check all wild data against spreadsheet
-
-
 \gfx\stats\party_menu_ob.pal
 the skin tone in this might be better? > \gfx\overworld\npc_sprites.pal
 
 new evos front gfx....
 check dewgong animation
 
-
-
 lake of rage hidden power house?
 tell hidden power?
 
 go through all maps for:
 documentation of item locations, etc
+(do this while playthrough)
 
 johto trades?
 
-bug contest?
 QUICK_CLAW obtain in kanto instead of nat park?
-
 
 (2) SUN_STONE		natlpark(1), sunkern, bugcontest(R), phonetrainer(r?)
 (2) DUSK_STONE 		burnedtower(1), murkrow, bugcontest(R), ?phonetrainer?
@@ -129,7 +107,6 @@ QUICK_CLAW obtain in kanto instead of nat park?
 (1) RAZOR_FANG		gamecorner, gligar(h)
 (1) RAZOR_CLAW		gamecorner, sneasel(h)
 all of these in goldenrod underground?
-
 
 
 new evos to johto gym parties? (mamoswine, mismagius?)
@@ -181,40 +158,6 @@ go through data/trainers/parties levels/moves
 
 trades?
 
-
-
-
-
-; Decompress running Suicune gfx
-	ld a, BANK(sPlayerData)
-	call OpenSRAM
-
-	ld hl, $AEB1 ;sPlayerData3 + wEventFlags - wPlayerData3
-	ld b, CHECK_FLAG
-	ld de, EVENT_GOT_BULBASAUR_FROM_OAK
-	call FlagAction ;EventFlagAction
-	ld hl, TitleBulbasaurGFX
-	jr nz, .gotstarter
-
-	ld hl, $AEB1 ;sPlayerData3 + wEventFlags - wPlayerData3
-	ld b, CHECK_FLAG
-	ld de, EVENT_GOT_CHARMANDER_FROM_OAK
-	call FlagAction ;EventFlagAction
-	ld hl, TitleSuicuneGFX
-	jr nz, .gotstarter
-
-	ld hl, $AEB1 ;sPlayerData3 + wEventFlags - wPlayerData3
-	ld b, CHECK_FLAG
-	ld de, EVENT_GOT_SQUIRTLE_FROM_OAK
-	call FlagAction ;EventFlagAction
-	ld hl, TitleSquirtleGFX
-	jr z, .nostarter
-
-.gotstarter
-	ld de, vTiles1
-	call Decompress
-.nostarter
-	call CloseSRAM
 
 
 
