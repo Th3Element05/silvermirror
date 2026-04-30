@@ -193,6 +193,9 @@ TrainerBikerAiden:
 	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
 	iftrue .LoadFight
 	loadtrainer BIKER, AIDEN_2
+	readvar VAR_BADGES
+	ifgreater 3, .LoadFight ;4_BADGES
+	loadtrainer BIKER, AIDEN1
 .LoadFight:
 	startbattle
 	reloadmapafterbattle

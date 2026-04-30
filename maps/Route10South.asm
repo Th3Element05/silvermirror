@@ -77,6 +77,9 @@ TrainerPicnickerErin:
 	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
 	iftrue .LoadFight
 	loadtrainer PICNICKER, ERIN_2
+	readvar VAR_BADGES
+	ifgreater 2, .LoadFight ;3_BADGES
+	loadtrainer PICNICKER, ERIN1
 .LoadFight:
 	startbattle
 	reloadmapafterbattle
@@ -229,6 +232,9 @@ TrainerHikerKenny:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight
 	loadtrainer HIKER, KENNY_2
+	readvar VAR_BADGES
+	ifgreater 2, .LoadFight ;3_BADGES
+	loadtrainer HIKER, KENNY1
 .LoadFight:
 	startbattle
 	reloadmapafterbattle

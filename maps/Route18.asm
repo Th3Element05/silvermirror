@@ -59,6 +59,9 @@ TrainerBirdKeeperJose:
 	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
 	iftrue .LoadFight
 	loadtrainer BIRD_KEEPER, JOSE_2
+	readvar VAR_BADGES
+	ifgreater 3, .LoadFight ;4_BADGES
+	loadtrainer BIRD_KEEPER, JOSE1
 .LoadFight:
 	startbattle
 	reloadmapafterbattle

@@ -236,6 +236,9 @@ TrainerFisherTully:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight
 	loadtrainer FISHER, TULLY_2
+	readvar VAR_BADGES
+	ifgreater 2, .LoadFight ;3_BADGES
+	loadtrainer FISHER, TULLY1
 .LoadFight:
 	startbattle
 	reloadmapafterbattle

@@ -278,7 +278,7 @@ TrainerBugCatcherArnie:
 	jumpstd PhoneFullMScript
 	end
 
-Route35RematchM:
+.RematchM:
 	jumpstd RematchMScript
 	end
 

@@ -231,6 +231,9 @@ TrainerPicnickerTiffany:
 	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
 	iftrue .LoadFight
 	loadtrainer PICNICKER, TIFFANY_2
+	readvar VAR_BADGES
+	ifgreater 3, .LoadFight ;4_BADGES
+	loadtrainer PICNICKER, TIFFANY1
 .LoadFight:
 	startbattle
 	reloadmapafterbattle

@@ -76,6 +76,9 @@ TrainerPokemaniacBrent:
 	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
 	iftrue .LoadFight
 	loadtrainer POKEMANIAC, BRENT_2
+	readvar VAR_BADGES
+	ifgreater 3, .LoadFight ;4_BADGES
+	loadtrainer POKEMANIAC, BRENT1
 .LoadFight:
 	startbattle
 	reloadmapafterbattle

@@ -26,7 +26,7 @@ ViridianGymGiovanniScript:
 	setevent EVENT_BEAT_POKEMANIAC_ETHAN
 	setevent EVENT_BEAT_COOLTRAINERM_AARON
 	setevent EVENT_BEAT_BLACKBELT_CHO
-	setevent EVENT_BEAT_POKEMANIAC_DONALD
+	setevent EVENT_BEAT_POKEMANIAC_TYSON
 	opentext
 	writetext ReceivedEarthbadgeText
 	playsound SFX_GET_BADGE
@@ -321,27 +321,27 @@ BlackbeltChoAfterBattleText:
 	line "worthy!"
 	done
 
-TrainerPokemaniacDonald:
-	trainer POKEMANIAC, DONALD, EVENT_BEAT_POKEMANIAC_DONALD, PokemaniacDonaldSeenText, PokemaniacDonaldBeatenText, 0, .Script
+TrainerPokemaniacTyson:
+	trainer POKEMANIAC, TYSON, EVENT_BEAT_POKEMANIAC_TYSON, PokemaniacTysonSeenText, PokemaniacTysonBeatenText, 0, .Script
 .Script:
 	endifjustbattled
 	opentext
-	writetext PokemaniacDonaldAfterBattleText
+	writetext PokemaniacTysonAfterBattleText
 	waitbutton
 	closetext
 	end
 
-PokemaniacDonaldSeenText:
+PokemaniacTysonSeenText:
 	text "Your #MON will"
 	line "cower before"
 	cont "my #MON!"
 	done
 
-PokemaniacDonaldBeatenText:
+PokemaniacTysonBeatenText:
 	text "Yowch!"
 	done
 
-PokemaniacDonaldAfterBattleText:
+PokemaniacTysonAfterBattleText:
 	text "Wait! I was just"
 	line "careless!"
 	done
@@ -439,6 +439,6 @@ ViridianGym_MapEvents:
 	object_event 10,  7, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 4, TrainerPokemaniacEthan, -1
 	object_event 12,  7, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerCooltrainerMAaron, -1
 	object_event 11, 11, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_TRAINER, 4, TrainerBlackbeltCho, -1
-	object_event  2, 16, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 3, TrainerPokemaniacDonald, -1
+	object_event  2, 16, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 3, TrainerPokemaniacTyson, -1
 	object_event 16, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianGymGuideScript, -1
 	object_event 16,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, ViridianGymRevive, EVENT_VIRIDIAN_GYM_REVIVE

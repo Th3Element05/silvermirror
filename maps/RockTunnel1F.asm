@@ -63,28 +63,28 @@ PokemaniacAndrewAfterBattleText:
 	line "a ZUBAT as I go!"
 	done
 
-TrainerHikerNoland:
-	trainer HIKER, NOLAND, EVENT_BEAT_HIKER_NOLAND, HikerNolandSeenText, HikerNolandBeatenText, 0, .Script
+TrainerHikerHolden:
+	trainer HIKER, HOLDEN, EVENT_BEAT_HIKER_HOLDEN, HikerHoldenSeenText, HikerHoldenBeatenText, 0, .Script
 .Script:
 	endifjustbattled
 	opentext
-	writetext HikerNolandAfterBattleText
+	writetext HikerHoldenAfterBattleText
 	waitbutton
 	closetext
 	end
 
-HikerNolandSeenText:
+HikerHoldenSeenText:
 	text "Hmm. Maybe I'm"
 	line "lost in here…"
 	done
 
-HikerNolandBeatenText:
+HikerHoldenBeatenText:
 	text "Ease up!"
 	line "What am I doing?"
 	cont "Which way is out?"
 	done
 
-HikerNolandAfterBattleText:
+HikerHoldenAfterBattleText:
 	text "I had to take this"
 	line "detour because of"
 	cont "that sleeping"
@@ -232,7 +232,7 @@ RockTunnel1F_MapEvents:
 	def_object_events
 	object_event  7,  5, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerHikerBailey, -1
 	object_event 21,  7, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 3, TrainerPokemaniacAndrew, -1
-	object_event  4, 12, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerHikerNoland, -1
+	object_event  4, 12, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerHikerHolden, -1
 	object_event 17, 15, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerHikerTim, -1
 	object_event 33, 18, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerPicnickerEdna, -1
 	object_event 29, 21, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerPicnickerKim, -1

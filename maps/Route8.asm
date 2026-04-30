@@ -148,6 +148,9 @@ TrainerLassDana:
 	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
 	iftrue .LoadFight
 	loadtrainer LASS, DANA_2
+	readvar VAR_BADGES
+	ifgreater 2, .LoadFight ;3_BADGES
+	loadtrainer LASS, DANA1
 .LoadFight:
 	startbattle
 	reloadmapafterbattle

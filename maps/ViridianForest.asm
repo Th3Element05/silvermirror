@@ -152,12 +152,9 @@ TrainerBugCatcherRob:
 	checkflag ENGINE_FLYPOINT_INDIGO_PLATEAU
 	iftrue .LoadFight
 	loadtrainer BUG_CATCHER, ROB_3
-	checkflag ENGINE_FLYPOINT_CELADON
-	iftrue .LoadFight
+	readvar VAR_BADGES
+	ifgreater 1, .LoadFight ;2_BADGES
 	loadtrainer BUG_CATCHER, ROB_2
-	checkflag ENGINE_FLYPOINT_CERULEAN
-	iftrue .LoadFight
-	loadtrainer BUG_CATCHER, ROB1
 .LoadFight:
 	startbattle
 	reloadmapafterbattle

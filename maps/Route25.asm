@@ -198,11 +198,10 @@ TrainerLassHillary:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight
 	loadtrainer TEACHER, HILLARY_3
-	checkflag ENGINE_FLYPOINT_SAFFRON
-	iftrue .LoadFight
+	readvar VAR_BADGES
+	ifgreater 3, .LoadFight ;4_BADGES
 	loadtrainer TEACHER, HILLARY_2
 .LoadFight:
-	loadtrainer TEACHER, HILLARY_3
 	startbattle
 	reloadmapafterbattle
 	clearflag ENGINE_HILLARY_READY_FOR_REMATCH
