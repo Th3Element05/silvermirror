@@ -14,8 +14,7 @@ BluesHouse2FHouseTilesCallback:
 BluesHouse2FDoll:
 	jumptext BluesHouse2FDollText
 BluesHouse2FDollText:
-	text "<RIVAL>'s"
-	line "#MON!"
+	text "<RIVAL>'s #MON!"
 
 	para "Huh?"
 	line "It's only a doll…"
