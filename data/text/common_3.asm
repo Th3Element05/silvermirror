@@ -1510,13 +1510,13 @@ _DeleterAskWhichMonText::
 	prompt
 
 _DSTIsThatOKText::
-	ntag "MOM:"
+;	ntag "MOM:"
 	text " DST,"
 	line "is that OK?"
 	done
 
 _TimeAskOkayText::
-	ntag "MOM:"
+;	ntag "MOM:"
 	text ","
 	line "is that OK?"
 	done
