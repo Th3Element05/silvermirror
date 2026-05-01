@@ -83,6 +83,7 @@ FindNest:
 	call .FindWater
 	call .RoamMon1
 	call .RoamMon2
+	call .RoamMon3
 	ret
 
 .kanto
@@ -223,6 +224,22 @@ FindNest:
 	ld a, [wRoamMon2MapGroup]
 	ld b, a
 	ld a, [wRoamMon2MapNumber]
+	ld c, a
+	call .AppendNest
+	ret nc
+	ld [de], a
+	inc de
+	ret
+
+.RoamMon3:
+	ld a, [wRoamMon3Species]
+	ld b, a
+	ld a, [wNamedObjectIndex]
+	cp b
+	ret nz
+	ld a, [wRoamMon3MapGroup]
+	ld b, a
+	ld a, [wRoamMon3MapNumber]
 	ld c, a
 	call .AppendNest
 	ret nc
