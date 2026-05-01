@@ -1,7 +1,6 @@
 ; Johto Pokémon in water
 
 JohtoWaterWildMons:
-JohtoWaterWildMonsChallenge:
 
 	def_water_wildmons ROUTE_27_WEST
 	db 6 percent ; encounter rate

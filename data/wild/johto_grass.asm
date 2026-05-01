@@ -1,7 +1,6 @@
 ; Johto Pokémon in grass
 
 JohtoGrassWildMons:
-JohtoGrassWildMonsChallenge:
 
 	def_grass_wildmons ROUTE_29
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
