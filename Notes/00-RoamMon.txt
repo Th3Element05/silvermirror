@@ -1,0 +1,234 @@
+; Randomly select a beast.
+    call Random
+    cp 100 ; 25/64 chance
+    jr nc, .DontEncounterRoamMon
+-   and %00000011 ; Of that, a 3/4 chance.  Running total: 75/256, or around 29.3%.
++   and %00000011 ; a is now in the range 0-3
+-   jr z, .DontEncounterRoamMon
+-   dec a ; 1/3 chance that it's Entei, 1/3 chance that it's Raikou
+; Compare its current location with yours
+    ld hl, wRoamMon1MapGroup
+    ld c, a
+    ld b, 0
+
+
+
+
+
+Search "RoamMon" (174 hits in 11 files of 2830 searched) [Extended]
+
+  C:\cygwin64\home\scrawford\silvermirror-local\constants\pokemon_data_constants.asm
+	Line 222: DEF NUM_ROAMMON_MAPS EQU 16 ; RoamMaps table size 
+	(see data/wild/roammon_maps.asm)
+
+  C:\cygwin64\home\scrawford\silvermirror-local\data\events\special_pointers.asm (1 hit)
+	Line 120: 	add_special InitRoamMons
+
+  C:\cygwin64\home\scrawford\silvermirror-local\data\maps\setup_scripts.asm (3 hits)
+	Line  27: 	mapsetup JumpRoamMons
+	Line  92: 	mapsetup UpdateRoamMons
+	Line 120: 	mapsetup UpdateRoamMons
+
+  C:\cygwin64\home\scrawford\silvermirror-local\data\maps\setup_script_pointers.asm	Line 45: 	add_mapsetup UpdateRoamMons ; 26
+	Line 46: 	add_mapsetup JumpRoamMons ; 27
+
+  C:\cygwin64\home\scrawford\silvermirror-local\data\wild\roammon_maps.asm (1 hit)
+	Line 34: 	assert_list_length NUM_ROAMMON_MAPS
+
+  C:\cygwin64\home\scrawford\silvermirror-local\engine\battle\core.asm (45 hits)
+	Line 6526: 	call GetRoamMonHP
+	Line 6534: 	call GetRoamMonDVs
+	Line 6542: ; If the RoamMon struct has already been initialized, we're done
+	Line 6547: 	call GetRoamMonDVs
+	Line 6732: ; ..unless it's a RoamMon
+	Line 6738: 	call GetRoamMonHP
+	Line 6749: ; HP only uses the lo byte in the RoamMon struct since
+	Line 8768: 	call BattleEnd_HandleRoamMons
+	Line 9081: BattleEnd_HandleRoamMons:
+	Line 9088: 	call GetRoamMonHP
+	Line 9094: 	call GetRoamMonHP
+	Line 9096: 	call GetRoamMonMapGroup
+	Line 9098: 	call GetRoamMonMapNumber
+	Line 9100: 	call GetRoamMonSpecies
+	Line 9110: 	callfar UpdateRoamMons
+	Line 9113: GetRoamMonMapGroup:
+	Line 9116: 	ld a, [wRoamMon1Species]
+	Line 9118: 	ld hl, wRoamMon1MapGroup
+	Line 9120: 	ld a, [wRoamMon2Species]
+	Line 9122: 	ld hl, wRoamMon2MapGroup
+	Line 9124: 	ld hl, wRoamMon3MapGroup
+	Line 9127: GetRoamMonMapNumber:
+	Line 9130: 	ld a, [wRoamMon1Species]
+	Line 9132: 	ld hl, wRoamMon1MapNumber
+	Line 9134: 	ld a, [wRoamMon2Species]
+	Line 9136: 	ld hl, wRoamMon2MapNumber
+	Line 9138: 	ld hl, wRoamMon3MapNumber
+	Line 9141: GetRoamMonHP:
+	Line 9142: ; output: hl = wRoamMonHP
+	Line 9145: 	ld a, [wRoamMon1Species]
+	Line 9147: 	ld hl, wRoamMon1HP
+	Line 9149: 	ld a, [wRoamMon2Species]
+	Line 9151: 	ld hl, wRoamMon2HP
+	Line 9153: 	ld hl, wRoamMon3HP
+	Line 9156: GetRoamMonDVs:
+	Line 9157: ; output: hl = wRoamMonDVs
+	Line 9160: 	ld a, [wRoamMon1Species]
+	Line 9162: 	ld hl, wRoamMon1DVs
+	Line 9164: 	ld a, [wRoamMon2Species]
+	Line 9166: 	ld hl, wRoamMon2DVs
+	Line 9168: 	ld hl, wRoamMon3DVs
+	Line 9171: GetRoamMonSpecies:
+	Line 9173: 	ld hl, wRoamMon1Species
+	Line 9176: 	ld hl, wRoamMon2Species
+	Line 9179: 	ld hl, wRoamMon3Species
+
+  C:\cygwin64\home\scrawford\silvermirror-local\engine\events\specials.asm (18 hits)
+	Line 523: 	ld hl, wRoamMon1Species
+	Line 532: 	ld hl, wRoamMon2Species
+	Line 541: 	ld hl, wRoamMon3Species
+	Line 569: 	ld [wRoamMon1Species], a
+	Line 571: 	ld [wRoamMon1Level], a
+	Line 573: 	ld [wRoamMon1MapGroup], a
+	Line 575: 	ld [wRoamMon1MapNumber], a
+	Line 577: 	ld [wRoamMon1HP], a
+	Line 582: 	ld [wRoamMon2Species], a
+	Line 584: 	ld [wRoamMon2Level], a
+	Line 586: 	ld [wRoamMon2MapGroup], a
+	Line 588: 	ld [wRoamMon2MapNumber], a
+	Line 590: 	ld [wRoamMon2HP], a
+	Line 595: 	ld [wRoamMon3Species], a
+	Line 597: 	ld [wRoamMon3Level], a
+	Line 599: 	ld [wRoamMon3MapGroup], a
+	Line 601: 	ld [wRoamMon3MapNumber], a
+	Line 603: 	ld [wRoamMon3HP], a
+
+  C:\cygwin64\home\scrawford\silvermirror-local\engine\menus\intro_menu.asm (10 hits)
+	Line  161: 	ld [wRoamMon1Species], a
+	Line  162: 	ld [wRoamMon2Species], a
+	Line  163: 	ld [wRoamMon3Species], a
+	Line  165: 	ld [wRoamMon1MapGroup], a
+	Line  166: 	ld [wRoamMon2MapGroup], a
+	Line  167: 	ld [wRoamMon3MapGroup], a
+	Line  168: 	ld [wRoamMon1MapNumber], a
+	Line  169: 	ld [wRoamMon2MapNumber], a
+	Line  170: 	ld [wRoamMon3MapNumber], a
+	Line  338: 	farcall JumpRoamMons
+
+  C:\cygwin64\home\scrawford\silvermirror-local\engine\overworld\wildmons.asm (81 hits)
+	Line   84: 	call .RoamMon1
+	Line   85: 	call .RoamMon2
+	Line   86: 	call .RoamMon3
+	Line  202: .RoamMon1:
+	Line  203: 	ld a, [wRoamMon1Species]
+	Line  208: 	ld a, [wRoamMon1MapGroup]
+	Line  210: 	ld a, [wRoamMon1MapNumber]
+	Line  218: .RoamMon2:
+	Line  219: 	ld a, [wRoamMon2Species]
+	Line  224: 	ld a, [wRoamMon2MapGroup]
+	Line  226: 	ld a, [wRoamMon2MapNumber]
+	Line  234: .RoamMon3:
+	Line  235: 	ld a, [wRoamMon3Species]
+	Line  240: 	ld a, [wRoamMon3MapGroup]
+	Line  242: 	ld a, [wRoamMon3MapNumber]
+	Line  336: 	call CheckEncounterRoamMon
+	Line  360: ;	call CheckEncounterRoamMon
+	Line  774: InitRoamMons:
+	Line  775: ; initialize wRoamMon structs
+	Line  779: 	ld [wRoamMon1Species], a
+	Line  781: 	ld [wRoamMon2Species], a
+	Line  783: 	ld [wRoamMon3Species], a
+	Line  787: 	ld [wRoamMon1Level], a
+	Line  788: 	ld [wRoamMon2Level], a
+	Line  789: 	ld [wRoamMon3Level], a
+	Line  793: 	ld [wRoamMon1MapGroup], a
+	Line  795: 	ld [wRoamMon1MapNumber], a
+	Line  799: 	ld [wRoamMon2MapGroup], a
+	Line  801: 	ld [wRoamMon2MapNumber], a
+	Line  805: 	ld [wRoamMon3MapGroup], a
+	Line  807: 	ld [wRoamMon3MapNumber], a
+	Line  811: 	ld [wRoamMon1HP], a
+	Line  812: 	ld [wRoamMon2HP], a
+	Line  813: 	ld [wRoamMon3HP], a
+	Line  818: CheckEncounterRoamMon:
+	Line  822: 	jr z, .DontEncounterRoamMon
+	Line  828: 	jr nc, .DontEncounterRoamMon
+	Line  830: 	jr z, .DontEncounterRoamMon
+	Line  833: 	ld hl, wRoamMon1MapGroup
+	Line  840: 	jr nz, .DontEncounterRoamMon
+	Line  844: 	jr nz, .DontEncounterRoamMon
+	Line  860: .DontEncounterRoamMon:
+	Line  866: UpdateRoamMons:
+	Line  867: 	ld a, [wRoamMon1MapGroup]
+	Line  871: 	ld a, [wRoamMon1MapNumber]
+	Line  875: 	ld [wRoamMon1MapGroup], a
+	Line  877: 	ld [wRoamMon1MapNumber], a
+	Line  880: 	ld a, [wRoamMon2MapGroup]
+	Line  884: 	ld a, [wRoamMon2MapNumber]
+	Line  888: 	ld [wRoamMon2MapGroup], a
+	Line  890: 	ld [wRoamMon2MapNumber], a
+	Line  893: 	ld a, [wRoamMon3MapGroup]
+	Line  897: 	ld a, [wRoamMon3MapNumber]
+	Line  901: 	ld [wRoamMon3MapGroup], a
+	Line  903: 	ld [wRoamMon3MapNumber], a
+	Line  942: 	jr z, JumpRoamMon
+	Line  951: 	ld a, [wRoamMons_LastMapGroup]
+	Line  955: 	ld a, [wRoamMons_LastMapNumber]
+	Line  966: JumpRoamMons:
+	Line  967: 	ld a, [wRoamMon1MapGroup]
+	Line  970: 	call JumpRoamMon
+	Line  972: 	ld [wRoamMon1MapGroup], a
+	Line  974: 	ld [wRoamMon1MapNumber], a
+	Line  977: 	ld a, [wRoamMon2MapGroup]
+	Line  980: 	call JumpRoamMon
+	Line  982: 	ld [wRoamMon2MapGroup], a
+	Line  984: 	ld [wRoamMon2MapNumber], a
+	Line  987: 	ld a, [wRoamMon3MapGroup]
+	Line  990: 	call JumpRoamMon
+	Line  992: 	ld [wRoamMon3MapGroup], a
+	Line  994: 	ld [wRoamMon3MapNumber], a
+	Line  999: JumpRoamMon:
+	Line 1004: 	maskbits NUM_ROAMMON_MAPS ;Mask the number to limit between 0-15.
+	Line 1005: 	cp NUM_ROAMMON_MAPS ;If the number is not less than 16,try again.
+	Line 1035: 	ld a, [wRoamMons_CurMapNumber]
+	Line 1036: 	ld [wRoamMons_LastMapNumber], a
+	Line 1037: 	ld a, [wRoamMons_CurMapGroup]
+	Line 1038: 	ld [wRoamMons_LastMapGroup], a
+	Line 1040: 	ld [wRoamMons_CurMapNumber], a
+	Line 1042: 	ld [wRoamMons_CurMapGroup], a
+	Line 1046: INCLUDE "data/wild/roammon_maps.asm"
+
+  C:\cygwin64\home\scrawford\silvermirror-local\maps\BurnedTowerB1F.asm (1 hit)
+	Line  86: 	special InitRoamMons
+
+  C:\cygwin64\home\scrawford\silvermirror-local\ram\wram.asm (10 hits)
+	Line 3481: wRoamMon1:: roam_struct wRoamMon1
+	Line 3482: wRoamMon2:: roam_struct wRoamMon2
+	Line 3483: wRoamMon3:: roam_struct wRoamMon3
+	Line 3485: wRoamMons_CurMapNumber:: db
+	Line 3486: wRoamMons_CurMapGroup:: db
+	Line 3487: wRoamMons_LastMapNumber:: db
+	Line 3488: wRoamMons_LastMapGroup:: db
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

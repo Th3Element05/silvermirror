@@ -61,7 +61,17 @@ OftenFleeMons:
 DO
 
 
-fix mom DST show time before "is that okay?"
+pokedex AREA nests are broken as hell
+only shows kanto map even in johto
+nests are wrong in challenge mode
+
+ssanne nite ship"water" pals
+
+make MEW roammon, triggered by checking truck (strength?)
+setval MEW
+special ShowPokedexEntry
+or
+special SilentSetSeenMon
 
 input challenge mode wild data from spreadsheet
 check all wild data against spreadsheet
