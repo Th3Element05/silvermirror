@@ -187,21 +187,42 @@ VermilionPortEnterFastShipMovement:
 	step_end
 
 VermilionPortTruck:
-	checkevent EVENT_FOUGHT_MEW
-	iftrue .NoCry
+	checkevent EVENT_FOUND_MEW
+	iftrue .NothingHere
+	opentext
+	writetext VermilionPortLookUnderTruckText
+	promptbutton
+	refreshscreen
+	pokepic MEW
 	cry MEW
 	waitsfx
-	jumptext VermilionPortTruckText
+	waitbutton
+	closepokepic
+	setval MEW
+	special SilentSetSeenMon
+	special InitRoamMonsKanto
+	opentext
+	writetext VermilionPortMewFlewOffText
+	waitbutton
+	closetext
+	setevent EVENT_FOUND_MEW
+	end
 
-.NoCry
+.NothingHere:
 	jumptext VermilionPortTruckNothingText
 
-VermilionPortTruckText:
-	text "There's something"
-	line "under this truck…"
+VermilionPortLookUnderTruckText:
+	text "<PLAYER> looked"
+	line "under the truck."
 
-	para "Better leave it"
-	line "alone."
+	para "…!"
+	done
+
+VermilionPortMewFlewOffText:
+	text "A #MON was"
+	line "under the truck!"
+
+	para "But it ran away!"
 	done
 
 VermilionPortTruckNothingText:
@@ -211,8 +232,16 @@ VermilionPortTruckNothingText:
 	para "…"
 
 	para "There's nothing"
-	line "here."
+	line "there."
 	done
+
+;VermilionPortTruckText:
+;	text "There's something"
+;	line "under this truck…"
+;
+;	para "Better leave it"
+;	line "alone."
+;	done
 
 ResetAndRerollFastShipTrainers:
 ;Hide Trainers
@@ -296,6 +325,7 @@ VermilionPort_MapEvents:
 
 	def_bg_events
 	bg_event 15,  6, BGEVENT_READ, VermilionPortTruck
+	bg_event 14,  6, BGEVENT_READ, VermilionPortTruck
 
 	def_object_events
 	object_event  5,  8, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionPortTicketSailorScript, EVENT_VERMILION_PORT_TICKET_SAILOR

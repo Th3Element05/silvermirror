@@ -511,44 +511,59 @@ RespawnOneOffs:
 	eventflagreset EVENT_MEWTWO_APPEAR
 .CaughtMewtwo
 
+;	ld de, ENGINE_PLAYER_CAUGHT_MEW
+;	farcall EngineFlagAction
+;	jr nz, .CaughtMew
+;	eventflagreset EVENT_FOUGHT_MEW
+;.CaughtMew
+	ld de, EVENT_FOUND_MEW
+	call EventFlagAction
+	jr z, .MewNoRespawn
+
 	ld de, ENGINE_PLAYER_CAUGHT_MEW
 	farcall EngineFlagAction
-	jr nz, .CaughtMew
-	eventflagreset EVENT_FOUGHT_MEW
-.CaughtMew
+	jr nz, .MewNoRespawn
+	ld hl, wRoamMon4Species
+	ld a, [hl]
+	and a
+	call z, RespawnRoamingMew
+.MewNoRespawn
+
+	ld de, EVENT_RELEASED_THE_BEASTS
+	call EventFlagAction
+	jr z, .SuicuneNoRespawn
 
 	ld de, ENGINE_PLAYER_CAUGHT_RAIKOU
 	farcall EngineFlagAction
-	jr nz, .CaughtRaikou
+	jr nz, .RaikouNoRespawn
 	ld hl, wRoamMon1Species
 	ld a, [hl]
 	and a
 	call z, RespawnRoamingRaikou
-.CaughtRaikou
+.RaikouNoRespawn
 
 	ld de, ENGINE_PLAYER_CAUGHT_ENTEI
 	farcall EngineFlagAction
-	jr nz, .CaughtEntei
+	jr nz, .EnteiNoRespawn
 	ld hl, wRoamMon2Species
 	ld a, [hl]
 	and a
 	call z, RespawnRoamingEntei
-.CaughtEntei
-
-	ld de, ENGINE_PLAYER_CAUGHT_SUICUNE
-	farcall EngineFlagAction
-	jr nz, .CaughtSuicune
-	ld hl, wRoamMon3Species
-	ld a, [hl]
-	and a
-	call z, RespawnRoamingSuicune
-.CaughtSuicune
+.EnteiNoRespawn
 
 ;	ld de, ENGINE_PLAYER_CAUGHT_SUICUNE
 ;	farcall EngineFlagAction
 ;	jr nz, .CaughtOrNeverFoughtSuicune
 ;	eventflagreset EVENT_TIN_TOWER_1F_SUICUNE
 ;.CaughtOrNeverFoughtSuicune
+	ld de, ENGINE_PLAYER_CAUGHT_SUICUNE
+	farcall EngineFlagAction
+	jr nz, .SuicuneNoRespawn
+	ld hl, wRoamMon3Species
+	ld a, [hl]
+	and a
+	call z, RespawnRoamingSuicune
+.SuicuneNoRespawn
 
 	ld de, ENGINE_PLAYER_CAUGHT_LUGIA
 	farcall EngineFlagAction
@@ -601,4 +616,17 @@ RespawnRoamingSuicune:
 	ld [wRoamMon3MapNumber], a
 	xor a ; generate new stats
 	ld [wRoamMon3HP], a
+	ret
+
+RespawnRoamingMew:
+	ld a, MEW
+	ld [wRoamMon4Species], a
+	ld a, 20
+	ld [wRoamMon4Level], a
+	ld a, GROUP_ROUTE_6
+	ld [wRoamMon4MapGroup], a
+	ld a, MAP_ROUTE_6
+	ld [wRoamMon4MapNumber], a
+	xor a ; generate new stats
+	ld [wRoamMon4HP], a
 	ret

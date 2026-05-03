@@ -1234,9 +1234,15 @@ RandomEncounter::
 	jr .done
 .notroamingraikou
 	cp ENTEI
-	jr nz, .notroaming
+	jr nz, .notroamingmew
 	ld a, BANK(RoamingEnteiBattleScript)
 	ld hl, RoamingEnteiBattleScript
+	jr .done
+.notroamingmew
+	cp ENTEI
+	jr nz, .notroaming
+	ld a, BANK(RoamingMewBattleScript)
+	ld hl, RoamingMewBattleScript
 	jr .done
 .notroaming
 	ld a, BANK(WildBattleScript)
@@ -1290,6 +1296,16 @@ RoamingEnteiBattleScript:
 	special CheckBattleCaughtResult
 	iffalse .nocatch
 	setflag ENGINE_PLAYER_CAUGHT_ENTEI
+.nocatch
+	end
+
+RoamingMewBattleScript:
+	randomwildmon
+	startbattle
+	reloadmapafterbattle
+	special CheckBattleCaughtResult
+	iffalse .nocatch
+	setflag ENGINE_PLAYER_CAUGHT_MEW
 .nocatch
 	end
 

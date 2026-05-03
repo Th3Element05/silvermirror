@@ -9121,7 +9121,11 @@ GetRoamMonMapGroup:
 	cp b
 	ld hl, wRoamMon2MapGroup
 	ret z
+	ld a, [wRoamMon3Species]
+	cp b
 	ld hl, wRoamMon3MapGroup
+	ret z
+	ld hl, wRoamMon4MapGroup
 	ret
 
 GetRoamMonMapNumber:
@@ -9135,7 +9139,11 @@ GetRoamMonMapNumber:
 	cp b
 	ld hl, wRoamMon2MapNumber
 	ret z
+	ld a, [wRoamMon3Species]
+	cp b
 	ld hl, wRoamMon3MapNumber
+	ret z
+	ld hl, wRoamMon4MapNumber
 	ret
 
 GetRoamMonHP:
@@ -9150,7 +9158,11 @@ GetRoamMonHP:
 	cp b
 	ld hl, wRoamMon2HP
 	ret z
+	ld a, [wRoamMon3Species]
+	cp b
 	ld hl, wRoamMon3HP
+	ret z
+	ld hl, wRoamMon4HP
 	ret
 
 GetRoamMonDVs:
@@ -9165,7 +9177,11 @@ GetRoamMonDVs:
 	cp b
 	ld hl, wRoamMon2DVs
 	ret z
+	ld a, [wRoamMon3Species]
+	cp b
 	ld hl, wRoamMon3DVs
+	ret z
+	ld hl, wRoamMon4DVs
 	ret
 
 GetRoamMonSpecies:
@@ -9177,6 +9193,9 @@ GetRoamMonSpecies:
 	cp [hl]
 	ret z
 	ld hl, wRoamMon3Species
+	cp [hl]
+	ret z
+	ld hl, wRoamMon4Species
 	ret
 
 AddLastLinkBattleToLinkRecord:

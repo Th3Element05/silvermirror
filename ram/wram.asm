@@ -3428,7 +3428,8 @@ wPartyMon{d:n}Nickname:: ds MON_NAME_LENGTH
 endr
 wPartyMonNicknamesEnd::
 
-	ds 20 ;22 -> DEF CONTACT_LIST_SIZE EQU 10 ;12
+;	ds 20 ;22 -> DEF CONTACT_LIST_SIZE EQU 10 ;12
+	ds 13 ;20 -> room for wRoamMon4:: roam_struct
 
 wPokedexCaught:: flag_array NUM_POKEMON
 wEndPokedexCaught::
@@ -3481,6 +3482,7 @@ wFishingSwarmFlag:: db
 wRoamMon1:: roam_struct wRoamMon1
 wRoamMon2:: roam_struct wRoamMon2
 wRoamMon3:: roam_struct wRoamMon3
+wRoamMon4:: roam_struct wRoamMon4
 
 wRoamMons_CurMapNumber:: db
 wRoamMons_CurMapGroup:: db

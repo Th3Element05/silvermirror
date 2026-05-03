@@ -314,6 +314,32 @@ KantoGrassWildMons:
 	db 15, DROWZEE    ;  1% chance
 	end_grass_wildmons
 
+	def_grass_wildmons ROUTE_12 ;GEN1
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; day
+	db 24, PIDGEY     ; 20% chance
+	db 25, BELLSPROUT ; 20% chance
+	db 24, PIDGEY     ; 15% chance
+	db 24, PIDGEY     ; 10% chance
+	db 25, BELLSPROUT ; 10% chance
+	db 27, PIDGEOTTO  ; 10% chance
+	db 28, WEEPINBELL ;  5% chance
+	db 24, PIDGEY     ;  5% chance
+	db 26, FARFETCH_D ;  4% chance
+	db 26, FARFETCH_D ;  1% chance
+	; nite
+	db 25, ODDISH     ; 20% chance
+	db 25, BELLSPROUT ; 20% chance
+	db 24, VENONAT    ; 15% chance
+	db 25, ODDISH     ; 10% chance
+	db 25, ODDISH     ; 10% chance
+	db 25, BELLSPROUT ; 10% chance
+	db 28, WEEPINBELL ;  5% chance
+	db 28, GLOOM      ;  5% chance
+	db 26, FARFETCH_D ;  4% chance
+	db 26, FARFETCH_D ;  1% chance
+	end_grass_wildmons
+
 	def_grass_wildmons ROUTE_13 ;GEN1
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; day
