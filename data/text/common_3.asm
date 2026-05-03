@@ -1,18 +1,17 @@
 _OakText6::
-;	ntag "PROF.OAK:"
-	text "First, what is" ;silvermirror -"Now, what did you"
-	line "your name?" ;silvermirror -"say your name was?"
+	ntag "PROF.OAK:"
+	text "First, what is"
+	line "your name?"
 	prompt
 
 _OakText7::
-;	ntag "PROF.OAK:"
-;silvermirror +starthere
+	ntag "PROF.OAK:"
 	text "Right! So your"
 	line "name is <PLAYER>!"
 	prompt
 
 _OakText8::
-;	ntag "PROF.OAK:"
+	ntag "PROF.OAK:"
 	text "This is my grand-"
 	line "son. He's been"
 	cont "your rival since"
@@ -23,26 +22,20 @@ _OakText8::
 	prompt
 
 _OakText9::
-;	ntag "PROF.OAK:"
+	ntag "PROF.OAK:"
 	text "That's right! I"
 	line "remember now! His"
 	cont "name is <RIVAL>!"
 	prompt
 
 _OakText10::
-;	ntag "PROF.OAK:"
-;silvermirror +endhere
-	text "<PLAYER>!" ;silvermirror -"<PLAYER>, are you"
-;	line "ready?" ;silvermirror -
+	ntag "PROF.OAK:"
+	text "<PLAYER>!"
 
 if !DEF(_DEBUG)
 	para "Your very own"
-	line "#MON legend is" ;silvermirror -"#MON story is"
+	line "#MON legend is"
 	cont "about to unfold."
-
-;	para "You'll face fun" ;silvermirror -
-;	line "times and tough" ;silvermirror -
-;	cont "challenges." ;silvermirror -
 
 	para "A world of dreams"
 	line "and adventures"
@@ -51,7 +44,7 @@ if !DEF(_DEBUG)
 
 endc
 	para "I'll be seeing you"
-	line "soon!" ;silvermirror -"later!"
+	line "soon!"
 	done
 
 _ClockTimeMayBeWrongText::
