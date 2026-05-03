@@ -4510,10 +4510,10 @@ SuicuneEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, BITE
 	db 1, LEER
-	db 8, BUBBLEBEAM
+	db 8, AURORA_BEAM ;BUBBLEBEAM
 	db 15, RAIN_DANCE
 	db 22, GUST
-	db 29, AURORA_BEAM
+	db 29, BUBBLEBEAM ;AURORA_BEAM
 	db 36, HAZE ;mist, removed
 	db 43, MIRROR_COAT
 	db 50, ICE_FANG
