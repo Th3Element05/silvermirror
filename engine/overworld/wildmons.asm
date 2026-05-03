@@ -105,7 +105,10 @@ FindNest:
 .KantoChallengeModeWater
 	ld hl, KantoWaterWildMonsChallenge
 .LoadedKantoWaterMons
-	jp .FindWater
+;	jp .FindWater
+	call .FindWater
+	call .RoamMon4
+	ret
 
 .FindGrass:
 	call GetNextWildMonDataByte
@@ -240,6 +243,22 @@ FindNest:
 	ld a, [wRoamMon3MapGroup]
 	ld b, a
 	ld a, [wRoamMon3MapNumber]
+	ld c, a
+	call .AppendNest
+	ret nc
+	ld [de], a
+	inc de
+	ret
+
+.RoamMon4:
+	ld a, [wRoamMon4Species]
+	ld b, a
+	ld a, [wNamedObjectIndex]
+	cp b
+	ret nz
+	ld a, [wRoamMon4MapGroup]
+	ld b, a
+	ld a, [wRoamMon4MapNumber]
 	ld c, a
 	call .AppendNest
 	ret nc
@@ -773,7 +792,6 @@ LookUpWildmonsForMapDE:
 
 InitRoamMons:
 ; initialize wRoamMon structs
-
 ; species
 	ld a, RAIKOU
 	ld [wRoamMon1Species], a
@@ -781,54 +799,72 @@ InitRoamMons:
 	ld [wRoamMon2Species], a
 	ld a, SUICUNE
 	ld [wRoamMon3Species], a
-
 ; level
-	ld a, 40
+	ld a, 50
 	ld [wRoamMon1Level], a
 	ld [wRoamMon2Level], a
 	ld [wRoamMon3Level], a
-
 ; raikou starting map
 	ld a, GROUP_ROUTE_42
 	ld [wRoamMon1MapGroup], a
 	ld a, MAP_ROUTE_42
 	ld [wRoamMon1MapNumber], a
-
 ; entei starting map
 	ld a, GROUP_ROUTE_37
 	ld [wRoamMon2MapGroup], a
 	ld a, MAP_ROUTE_37
 	ld [wRoamMon2MapNumber], a
-
 ; suicune starting map
 	ld a, GROUP_ROUTE_38
 	ld [wRoamMon3MapGroup], a
 	ld a, MAP_ROUTE_38
 	ld [wRoamMon3MapNumber], a
-
 ; hp
 	xor a ; generate new stats
 	ld [wRoamMon1HP], a
 	ld [wRoamMon2HP], a
 	ld [wRoamMon3HP], a
+; finished
+	ret
 
+
+InitRoamMonsKanto:
+; initialize wRoamMon structs
+; species
+	ld a, MEW
+	ld [wRoamMon4Species], a
+; level
+	ld a, 20
+	ld [wRoamMon4Level], a
+; mew starting map
+	ld a, GROUP_ROUTE_6
+	ld [wRoamMon4MapGroup], a
+	ld a, MAP_ROUTE_6
+	ld [wRoamMon4MapNumber], a
+; hp
+	xor a ; generate new stats
+	ld [wRoamMon4HP], a
+; finished
 	ret
 
 
 CheckEncounterRoamMon:
 	push hl
 ; Don't trigger an encounter if we're on water.
-	call CheckOnWater
-	jr z, .DontEncounterRoamMon
+;	call CheckOnWater
+;	jr z, .DontEncounterRoamMon
 ; Load the current map group and number to de
 	call CopyCurrMapDE
 ; Randomly select a beast.
 	call Random
 	cp 100 ; 25/64 chance
 	jr nc, .DontEncounterRoamMon
-	and %00000011 ; Of that, a 3/4 chance.  Running total: 75/256, or around 29.3%.
-	jr z, .DontEncounterRoamMon
-	dec a ; 1/3 chance that it's Entei, 1/3 chance that it's Raikou
+;	and %00000011 ; Of that, a 3/4 chance.  Running total: 75/256, or around 29.3%.
+;	jr z, .DontEncounterRoamMon
+;	dec a ; 1/3 chance that it's Entei, 1/3 chance that it's Raikou
+
+	and %00000011 ; a is now in the range 0-3
+
 ; Compare its current location with yours
 	ld hl, wRoamMon1MapGroup
 	ld c, a
@@ -892,7 +928,7 @@ UpdateRoamMons:
 .SkipEntei:
 	ld a, [wRoamMon3MapGroup]
 	cp GROUP_N_A
-	jr z, .Finished
+	jr z, .SkipSuicune
 	ld b, a
 	ld a, [wRoamMon3MapNumber]
 	ld c, a
@@ -902,9 +938,26 @@ UpdateRoamMons:
 	ld a, c
 	ld [wRoamMon3MapNumber], a
 
+.SkipSuicune:
+	ld a, [wRoamMon4MapGroup]
+	cp GROUP_N_A
+	jr z, .Finished
+	ld b, a
+	ld a, [wRoamMon4MapNumber]
+	ld c, a
+	call .UpdateKanto
+	ld a, b
+	ld [wRoamMon4MapGroup], a
+	ld a, c
+	ld [wRoamMon4MapNumber], a
+
 .Finished:
 	jp _BackUpMapIndices
 
+
+.UpdateKanto:
+	ld hl, RoamMapsKanto
+	jr .loop
 
 .Update:
 	ld hl, RoamMaps
@@ -986,12 +1039,22 @@ JumpRoamMons:
 .SkipEntei:
 	ld a, [wRoamMon3MapGroup]
 	cp GROUP_N_A
-	jr z, .Finished
+	jr z, .SkipSuicune
 	call JumpRoamMon
 	ld a, b
 	ld [wRoamMon3MapGroup], a
 	ld a, c
 	ld [wRoamMon3MapNumber], a
+
+.SkipSuicune:
+	ld a, [wRoamMon4MapGroup]
+	cp GROUP_N_A
+	jr z, .Finished
+	call JumpRoamMonKanto
+	ld a, b
+	ld [wRoamMon4MapGroup], a
+	ld a, c
+	ld [wRoamMon4MapNumber], a
 
 .Finished:
 	jp _BackUpMapIndices
@@ -1004,6 +1067,41 @@ JumpRoamMon:
 	maskbits NUM_ROAMMON_MAPS ; Mask the number to limit it between 0 and 15.
 	cp NUM_ROAMMON_MAPS       ; If the number is not less than 16, try again.
 	jr nc, .innerloop1        ; I'm sure you can guess why this check is bogus.
+	inc a
+	ld b, a
+.innerloop2 ; Loop to get hl to the address of the chosen roam map.
+	dec b
+	jr z, .ok
+.innerloop3 ; Loop to skip the current roam map, which is terminated by a 0.
+	ld a, [hli]
+	and a
+	jr nz, .innerloop3
+	jr .innerloop2
+; Check to see if the selected map is the one the player is currently in.  If so, try again.
+.ok
+	ld a, [wMapGroup]
+	cp [hl]
+	jr nz, .done
+	inc hl
+	ld a, [wMapNumber]
+	cp [hl]
+	jr z, .loop
+	dec hl
+; Return the map group and number in bc.
+.done
+	ld a, [hli]
+	ld b, a
+	ld c, [hl]
+	ret
+
+JumpRoamMonKanto:
+.loop
+	ld hl, RoamMapsKanto
+.innerloop1
+	call Random
+	maskbits %00011111        ; only roll 0-31 (up to 32 maps)
+	cp NUM_ROAMMON_MAPS_KANTO ; make sure it's a valid map
+	jr nc, .innerloop1        ; reroll if not a valid map
 	inc a
 	ld b, a
 .innerloop2 ; Loop to get hl to the address of the chosen roam map.
