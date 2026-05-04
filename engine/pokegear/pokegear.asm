@@ -2964,9 +2964,22 @@ Pokedex_GetArea:
 	call SetPalettes
 	xor a
 	ldh [hBGMapMode], a
-;	xor a ; JOHTO_REGION ;silvermirror- (dreams897 dex area changes)
-	ld a, KANTO_REGION   ;silvermirror+ (dreams897 dex area changes)
+;;	xor a ; JOHTO_REGION ;silvermirror- (dreams897 dex area changes)
+;	ld a, KANTO_REGION   ;silvermirror+ (dreams897 dex area changes)
+
+; Check which region to show first
+	ld a, [wTownMapPlayerIconLandmark]
+	cp KANTO_LANDMARK
+	jr nc, .KantoNests
+
+;JohtoNests
+	call .left ; Show Johto nests
+	jr .loop
+
+.KantoNests
+	ld a, KANTO_REGION
 	call .GetAndPlaceNest
+
 .loop
 	call JoyTextDelay
 	ld hl, hJoyPressed
