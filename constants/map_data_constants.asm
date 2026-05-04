@@ -141,18 +141,19 @@ DEF JOHTO_FLYPOINT EQU const_value
 	const FLY_MT_SILVER
 ; kanto
 DEF KANTO_FLYPOINT EQU const_value
-;	const FLY_PALLET
+;	const FLY_PALLET ; moved to bottom (default kanto flypoint)
 	const FLY_VIRIDIAN
 	const FLY_PEWTER
 	const FLY_CERULEAN
-	const FLY_VERMILION
-;	const FLY_ROCK_TUNNEL
 	const FLY_LAVENDER
+	const FLY_VERMILION
 	const FLY_CELADON
 	const FLY_FUCHSIA
-	const FLY_SAFFRON
 	const FLY_CINNABAR
 	const FLY_INDIGO
+	const FLY_SAFFRON
+;	const FLY_MT_MOON
+	const FLY_ROCK_TUNNEL
 	const FLY_PALLET
 DEF NUM_FLYPOINTS EQU const_value
 
