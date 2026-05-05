@@ -61,20 +61,13 @@ OftenFleeMons:
 DO
 
 
-pokedex AREA nests are broken as hell
-only shows kanto map even in johto
-nests are wrong in challenge mode
-
-ssanne nite ship"water" pals
-
-make MEW roammon, triggered by checking truck (strength?)
-setval MEW
-special ShowPokedexEntry
-or
-special SilentSetSeenMon
+all phone trainers should have jumps for their text
+then can add ntag to all text
 
 input challenge mode wild data from spreadsheet
-check all wild data against spreadsheet
+check/input all wild data against spreadsheet
+
+definitely need to check wild-data levels against evos-attacks
 
 what to use EVENT_CAUGHT_MISSINGNO for?
 
