@@ -28,31 +28,31 @@ KantoGrassWildMons:
 	db  5, PIDGEY     ;  1% chance
 	end_grass_wildmons
 
-	def_grass_wildmons ROUTE_2_SOUTH ;GEN1
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
-	; day
-	db  3, PIDGEY     ; 20% chance
-	db  2, PIDGEY     ; 20% chance
-	db  3, RATTATA    ; 15% chance
-	db  3, CATERPIE   ; 10% chance
-	db  2, WEEDLE     ; 10% chance
-	db  3, NIDORAN_M  ; 10% chance
-	db  2, CATERPIE   ;  5% chance
-	db  3, NIDORAN_F  ;  5% chance
-	db  2, NIDORAN_F  ;  4% chance
-	db  2, NIDORAN_M  ;  1% chance
-	; nite
-	db  3, RATTATA    ; 20% chance
-	db  3, RATTATA    ; 20% chance
-	db  3, PIDGEY     ; 15% chance
-	db  3, CATERPIE   ; 10% chance
-	db  2, WEEDLE     ; 10% chance
-	db  3, NIDORAN_M  ; 10% chance
-	db  2, CATERPIE   ;  5% chance
-	db  3, NIDORAN_F  ;  5% chance
-	db  2, NIDORAN_F  ;  4% chance
-	db  2, NIDORAN_M  ;  1% chance
-	end_grass_wildmons
+;	def_grass_wildmons ROUTE_2_SOUTH ;GEN1
+;	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+;	; day
+;	db  3, PIDGEY     ; 20% chance
+;	db  2, PIDGEY     ; 20% chance
+;	db  3, RATTATA    ; 15% chance
+;	db  3, CATERPIE   ; 10% chance
+;	db  2, WEEDLE     ; 10% chance
+;	db  3, NIDORAN_M  ; 10% chance
+;	db  2, CATERPIE   ;  5% chance
+;	db  3, NIDORAN_F  ;  5% chance
+;	db  2, NIDORAN_F  ;  4% chance
+;	db  2, NIDORAN_M  ;  1% chance
+;	; nite
+;	db  3, RATTATA    ; 20% chance
+;	db  3, RATTATA    ; 20% chance
+;	db  3, PIDGEY     ; 15% chance
+;	db  3, CATERPIE   ; 10% chance
+;	db  2, WEEDLE     ; 10% chance
+;	db  3, NIDORAN_M  ; 10% chance
+;	db  2, CATERPIE   ;  5% chance
+;	db  3, NIDORAN_F  ;  5% chance
+;	db  2, NIDORAN_F  ;  4% chance
+;	db  2, NIDORAN_M  ;  1% chance
+;	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_2_NORTH ;GEN1
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -366,7 +366,7 @@ KantoGrassWildMons:
 	db 26, FARFETCH_D ;  1% chance
 	end_grass_wildmons
 
-	def_grass_wildmons ROUTE_14; | ROUTE_15 ;GEN1
+	def_grass_wildmons ROUTE_14 ;GEN1
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; day
 	db 25, PIDGEY     ; 20% chance
@@ -655,23 +655,23 @@ KantoGrassWildMons:
 	def_grass_wildmons ROUTE_27_EAST
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; day
-	db 21, SANDSHREW  ; 20% chance
-	db 21, EKANS      ; 20% chance
+	db 20, SANDSHREW  ; 20% chance
+	db 20, EKANS      ; 20% chance
 	db 21, PONYTA     ; 15% chance
-	db 24, SANDSLASH  ; 10% chance
-	db 24, ARBOK      ; 10% chance
-	db 21, DODUO      ; 10% chance
-	db 21, DODUO      ;  5% chance
-	db 21, DODUO      ;  5% chance
+	db 22, SANDSLASH  ; 10% chance
+	db 22, ARBOK      ; 10% chance
+	db 20, DODUO      ; 10% chance
+	db 20, DODUO      ;  5% chance
+	db 20, DODUO      ;  5% chance
 	db 21, PONYTA     ;  4% chance
 	db 21, PONYTA     ;  1% chance
 	; nite
-	db 21, RATTATA    ; 20% chance
+	db 20, RATTATA    ; 20% chance
 	db 21, PONYTA     ; 20% chance
-	db 24, RATICATE   ; 15% chance
-	db 21, POLIWAG    ; 10% chance
-	db 21, POLIWAG    ; 10% chance
-	db 21, POLIWAG    ; 10% chance
+	db 23, RATICATE   ; 15% chance
+	db 20, POLIWAG    ; 10% chance
+	db 20, POLIWAG    ; 10% chance
+	db 20, POLIWAG    ; 10% chance
 	db 24, POLIWHIRL  ;  5% chance
 	db 24, POLIWHIRL  ;  5% chance
 	db 24, POLIWHIRL  ;  4% chance
@@ -770,11 +770,11 @@ KantoGrassWildMons:
 	db  8, CLEFAIRY   ;  4% chance
 	db  9, CLEFAIRY   ;  1% chance
 	; nite
-	db  7, ZUBAT      ; 20% chance
-	db  7, ZUBAT      ; 20% chance
+	db  6, GEODUDE    ; 20% chance
+	db  6, GEODUDE    ; 20% chance
 	db  7, ZUBAT      ; 15% chance
-	db  6, GEODUDE    ; 10% chance
-	db  6, GEODUDE    ; 10% chance
+	db  7, ZUBAT      ; 10% chance
+	db  6, ZUBAT      ; 10% chance
 	db  7, PARAS      ; 10% chance
 	db  6, ZUBAT      ;  5% chance
 	db  8, CLEFAIRY   ;  5% chance
@@ -794,7 +794,7 @@ KantoGrassWildMons:
 	db 18, DIGLETT    ;  5% chance
 	db 18, DIGLETT    ;  5% chance
 	db 26, DUGTRIO    ;  4% chance
-	db 27, DUGTRIO    ;  1% chance
+	db 21, DIGLETT    ;  1% chance
 	; nite
 	db 15, DIGLETT    ; 20% chance
 	db 15, DIGLETT    ; 20% chance
@@ -866,9 +866,9 @@ KantoGrassWildMons:
 	db 18, GASTLY     ; 20% chance
 	db 18, GASTLY     ; 20% chance
 	db 18, GASTLY     ; 15% chance
+	db 18, GASTLY     ; 10% chance
+	db 18, GASTLY     ; 10% chance
 	db 18, ZUBAT      ; 10% chance
-	db 18, GASTLY     ; 10% chance
-	db 18, GASTLY     ; 10% chance
 	db 18, GASTLY     ;  5% chance
 	db 18, GASTLY     ;  5% chance
 	db 18, GASTLY     ;  4% chance
@@ -877,9 +877,9 @@ KantoGrassWildMons:
 	db 18, GASTLY     ; 20% chance
 	db 18, GASTLY     ; 20% chance
 	db 18, GASTLY     ; 15% chance
+	db 18, GASTLY     ; 10% chance
+	db 18, GASTLY     ; 10% chance
 	db 18, ZUBAT      ; 10% chance
-	db 18, GASTLY     ; 10% chance
-	db 18, GASTLY     ; 10% chance
 	db 18, GASTLY     ;  5% chance
 	db 18, GASTLY     ;  5% chance
 	db 18, GASTLY     ;  4% chance
@@ -892,9 +892,9 @@ KantoGrassWildMons:
 	db 18, GASTLY     ; 20% chance
 	db 18, GASTLY     ; 20% chance
 	db 18, GASTLY     ; 15% chance
+	db 18, GASTLY     ; 10% chance
+	db 18, GASTLY     ; 10% chance
 	db 18, ZUBAT      ; 10% chance
-	db 18, GASTLY     ; 10% chance
-	db 18, GASTLY     ; 10% chance
 	db 19, GASTLY     ;  5% chance
 	db 19, GASTLY     ;  5% chance
 	db 18, GASTLY     ;  4% chance
@@ -903,9 +903,9 @@ KantoGrassWildMons:
 	db 18, GASTLY     ; 20% chance
 	db 18, GASTLY     ; 20% chance
 	db 18, GASTLY     ; 15% chance
+	db 18, GASTLY     ; 10% chance
+	db 18, GASTLY     ; 10% chance
 	db 18, ZUBAT      ; 10% chance
-	db 18, GASTLY     ; 10% chance
-	db 18, GASTLY     ; 10% chance
 	db 19, GASTLY     ;  5% chance
 	db 19, GASTLY     ;  5% chance
 	db 25, HAUNTER    ;  4% chance
@@ -918,9 +918,9 @@ KantoGrassWildMons:
 	db 18, GASTLY     ; 20% chance
 	db 18, GASTLY     ; 20% chance
 	db 18, GASTLY     ; 15% chance
-	db 18, ZUBAT      ; 10% chance
 	db 18, GASTLY     ; 10% chance
-	db 19, GASTLY     ; 10% chance
+	db 18, GASTLY     ; 10% chance
+	db 19, ZUBAT      ; 10% chance
 	db 20, GASTLY     ;  5% chance
 	db 20, GASTLY     ;  5% chance
 	db 25, HAUNTER    ;  4% chance
@@ -929,9 +929,9 @@ KantoGrassWildMons:
 	db 18, GASTLY     ; 20% chance
 	db 18, GASTLY     ; 20% chance
 	db 18, GASTLY     ; 15% chance
-	db 18, ZUBAT      ; 10% chance
 	db 18, GASTLY     ; 10% chance
-	db 19, GASTLY     ; 10% chance
+	db 18, GASTLY     ; 10% chance
+	db 19, ZUBAT      ; 10% chance
 	db 20, GASTLY     ;  5% chance
 	db 20, GASTLY     ;  5% chance
 	db 25, HAUNTER    ;  4% chance
@@ -1343,15 +1343,15 @@ KantoGrassWildMons:
 	db 48, MACHOKE    ;  1% chance
 	; nite
 	db 50, GOLBAT     ; 20% chance
-	db 50, GOLBAT     ; 20% chance
+	db 50, MACHOKE    ; 20% chance
 	db 48, MACHOKE    ; 15% chance
 	db 50, SANDSLASH  ; 10% chance
 	db 50, ARBOK      ; 10% chance
 	db 52, PARASECT   ; 10% chance
 	db 52, VENOMOTH   ;  5% chance
 	db 52, VENOMOTH   ;  5% chance
-	db 48, MACHOKE    ;  4% chance
-	db 48, MACHOKE    ;  1% chance
+	db 48, GOLBAT     ;  4% chance
+	db 48, GOLBAT     ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons CERULEAN_CAVE_2F ;GEN1
@@ -1411,22 +1411,22 @@ KantoGrassWildMons:
 	; day
 	db 22, ZUBAT      ; 20% chance
 	db 22, RATICATE   ; 20% chance
-	db 21, SLOWPOKE   ; 15% chance
-	db 22, ZUBAT      ; 10% chance
-	db 24, GOLBAT     ; 10% chance
-	db 24, GOLBAT     ; 10% chance
-	db 22, RATICATE   ;  5% chance
+	db 21, GOLBAT     ; 15% chance
+	db 22, SLOWPOKE   ; 10% chance
+	db 24, SLOWPOKE   ; 10% chance
+	db 24, ZUBAT      ; 10% chance
+	db 22, GOLBAT     ;  5% chance
 	db 20, RATTATA    ;  5% chance
 	db 20, RATTATA    ;  4% chance
 	db 20, RATTATA    ;  1% chance
 	; nite
 	db 22, ZUBAT      ; 20% chance
 	db 22, RATICATE   ; 20% chance
-	db 21, SLOWPOKE   ; 15% chance
-	db 21, SLOWPOKE   ; 10% chance
-	db 24, GOLBAT     ; 10% chance
-	db 22, RATICATE   ; 10% chance
-	db 20, RATTATA    ;  5% chance
+	db 21, GOLBAT     ; 15% chance
+	db 22, SLOWPOKE   ; 10% chance
+	db 24, SLOWPOKE   ; 10% chance
+	db 24, RATICATE   ; 10% chance
+	db 22, RATTATA    ;  5% chance
 	db 20, RATTATA    ;  5% chance
 	db 20, RATTATA    ;  4% chance
 	db 20, RATTATA    ;  1% chance
@@ -1462,108 +1462,108 @@ KantoGrassWildMons:
 	def_grass_wildmons SAFARI_ZONE_AREA_1
 	db 0 percent, 0 percent, 0 percent ; encounter rates: morn/day/nite
 	; day
-	db 20, NIDORAN_M
-	db 20, NIDORAN_F
-	db 10, EXEGGCUTE
-	db 24, DODUO
-	db  5, NIDORINO
-	db  5, NIDORINA
-	db  5, TAUROS
-	db  5, LICKITUNG
-	db  5, CHANSEY
-	db  1, EEVEE
+	db 12, NIDORAN_M  ; 20%
+	db 12, NIDORAN_F  ; 20%
+	db 12, EXEGGCUTE  ; 15%
+	db 12, DODUO      ; 10%
+	db 16, NIDORINO   ; 10%
+	db 16, NIDORINA   ; 10%
+	db 16, TAUROS     ;  5%
+	db 16, LICKITUNG  ;  5%
+	db 16, CHANSEY    ;  4%
+	db 10, EEVEE      ;  1%
 	; nite
-	db 20, NIDORAN_M
-	db 20, NIDORAN_F
-	db 10, EXEGGCUTE
-	db 24, DODUO
-	db  5, NIDORINO
-	db  5, NIDORINA
-	db  5, TAUROS
-	db  5, LICKITUNG
-	db  5, CHANSEY
-	db  1, EEVEE
+	db 12, NIDORAN_M  ; 20%
+	db 12, NIDORAN_F  ; 20%
+	db 12, EXEGGCUTE  ; 15%
+	db 12, DODUO      ; 10%
+	db 16, NIDORINO   ; 10%
+	db 16, NIDORINA   ; 10%
+	db 16, TAUROS     ;  5%
+	db 16, LICKITUNG  ;  5%
+	db 16, CHANSEY    ;  4%
+	db 10, EEVEE      ;  1%
 	end_grass_wildmons
 
 ; these are dummys for pokedex habitat marker for safari zone mons
 	def_grass_wildmons SAFARI_ZONE_AREA_2
 	db 0 percent, 0 percent, 0 percent ; encounter rates: morn/day/nite
 	; day
-	db 20, NIDORAN_M
-	db 20, NIDORAN_F
-	db 10, EXEGGCUTE
-	db  8, PARAS
-	db  8, PARAS
-	db  8, PARAS
-	db  5, PARASECT
-	db 10, SCYTHER
-	db 10, PINSIR
-	db  1, CHANSEY
+	db 12, NIDORAN_M  ; 20%
+	db 12, NIDORAN_F  ; 20%
+	db 12, EXEGGCUTE  ; 15%
+	db 10, PARAS      ; 10%
+	db 10, VENONAT    ; 10%
+	db 24, PARASECT   ; 10%
+	db 16, SCYTHER    ;  5%
+	db 16, PINSIR     ;  5%
+	db 24, VENOMOTH   ;  4%
+	db 16, CHANSEY    ;  1%
 	; nite
-	db 20, NIDORAN_M
-	db 20, NIDORAN_F
-	db 10, EXEGGCUTE
-	db  4, PARAS
-	db 10, VENONAT
-	db 10, VENONAT
-	db  5, VENOMOTH
-	db 10, SCYTHER
-	db 10, PINSIR
-	db  1, CHANSEY
+	db 12, NIDORAN_M  ; 20%
+	db 12, NIDORAN_F  ; 20%
+	db 12, EXEGGCUTE  ; 15%
+	db 10, PARAS      ; 10%
+	db 10, VENONAT    ; 10%
+	db 24, PARASECT   ; 10%
+	db 16, SCYTHER    ;  5%
+	db 16, PINSIR     ;  5%
+	db 24, VENOMOTH   ;  4%
+	db 16, CHANSEY    ;  1%
 	end_grass_wildmons
 
 ; these are dummys for pokedex habitat marker for safari zone mons
 	def_grass_wildmons SAFARI_ZONE_AREA_3
 	db 0 percent, 0 percent, 0 percent ; encounter rates: morn/day/nite
 	; day
-	db 20, NIDORAN_M
-	db 20, NIDORAN_F
-	db 10, EXEGGCUTE
-	db  5, NIDORINO
-	db  5, NIDORINA
-	db 14, RHYHORN
-	db 10, TAUROS
-	db 10, KANGASKHAN
-	db  5, CUBONE
-	db  1, CHANSEY
+	db 12, NIDORAN_M  ; 20%
+	db 12, NIDORAN_F  ; 20%
+	db 12, EXEGGCUTE  ; 15%
+	db 16, NIDORINO   ; 10%
+	db 16, NIDORINA   ; 10%
+	db 16, RHYHORN    ; 10%
+	db 16, TAUROS     ;  5%
+	db 16, KANGASKHAN ;  5%
+	db 12, CUBONE     ;  4%
+	db 16, CHANSEY    ;  1%
 	; nite
-	db 20, NIDORAN_M
-	db 20, NIDORAN_F
-	db 10, EXEGGCUTE
-	db  5, NIDORINO
-	db  5, NIDORINA
-	db 14, RHYHORN
-	db 10, TAUROS
-	db 10, KANGASKHAN
-	db  5, CUBONE
-	db  1, CHANSEY
+	db 12, NIDORAN_M  ; 20%
+	db 12, NIDORAN_F  ; 20%
+	db 12, EXEGGCUTE  ; 15%
+	db 16, NIDORINO   ; 10%
+	db 16, NIDORINA   ; 10%
+	db 16, RHYHORN    ; 10%
+	db 16, TAUROS     ;  5%
+	db 16, KANGASKHAN ;  5%
+	db 12, CUBONE     ;  4%
+	db 16, CHANSEY    ;  1%
 	end_grass_wildmons
 
 ; these are dummys for pokedex habitat marker for safari zone mons
 	def_grass_wildmons SAFARI_ZONE_AREA_4
 	db 0 percent, 0 percent, 0 percent ; encounter rates: morn/day/nite
 	; day
-	db 20, NIDORAN_M
-	db 20, NIDORAN_F
-	db 20, EXEGGCUTE
-	db 10, TANGELA
-	db  5, TANGELA
-	db  5, NIDORINO
-	db  5, NIDORINA
-	db 10, FARFETCH_D
-	db  4, CHANSEY
-	db  1, CHANSEY
+	db 12, NIDORAN_M  ; 20%
+	db 12, NIDORAN_F  ; 20%
+	db 12, EXEGGCUTE  ; 15%
+	db 16, TANGELA    ; 10%
+	db 16, NIDORINO   ; 10%
+	db 16, NIDORINA   ; 10%
+	db 16, FARFETCH_D ;  5%
+	db 12, NIDORAN_M  ;  5%
+	db 12, NIDORAN_F  ;  4%
+	db 16, CHANSEY    ;  1%
 	; nite
-	db 20, NIDORAN_M
-	db 20, NIDORAN_F
-	db 20, EXEGGCUTE
-	db 10, TANGELA
-	db  5, TANGELA
-	db  5, NIDORINO
-	db  5, NIDORINA
-	db 10, FARFETCH_D
-	db  4, CHANSEY
-	db  1, CHANSEY
+	db 12, NIDORAN_M  ; 20%
+	db 12, NIDORAN_F  ; 20%
+	db 12, EXEGGCUTE  ; 15%
+	db 16, TANGELA    ; 10%
+	db 16, NIDORINO   ; 10%
+	db 16, NIDORINA   ; 10%
+	db 16, FARFETCH_D ;  5%
+	db 12, NIDORAN_M  ;  5%
+	db 12, NIDORAN_F  ;  4%
+	db 16, CHANSEY    ;  1%
 	end_grass_wildmons
 
 	db -1 ; end

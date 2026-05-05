@@ -36,7 +36,7 @@ JohtoGrassWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	db  3, CATERPIE   ; 15% chance
 	db  3, LEDYBA     ; 10% chance
 	db  4, LEDYBA     ; 10% chance
-	db  2, WEEDLE     ; 10% chance
+	db  3, WEEDLE     ; 10% chance
 	db  4, CATERPIE   ;  5% chance
 	db  5, LEDYBA     ;  5% chance
 	db  4, HOPPIP     ;  4% chance
@@ -187,27 +187,27 @@ JohtoGrassWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	def_grass_wildmons ROUTE_36
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; day
-	db  4, PIDGEY     ; 20% chance
-	db  4, LEDYBA     ; 20% chance
-	db  5, BELLSPROUT ; 15% chance
-	db  5, PIDGEY     ; 10% chance
-	db  5, LEDYBA     ; 10% chance
-	db  5, VULPIX     ; 10% chance
-	db  6, BELLSPROUT ;  5% chance
-	db  5, GROWLITHE  ;  5% chance
-	db  6, GROWLITHE  ;  4% chance
-	db  6, GROWLITHE  ;  1% chance
+	db 14, PIDGEY     ; 20% chance
+	db 14, LEDYBA     ; 20% chance
+	db 15, BELLSPROUT ; 15% chance
+	db 15, PIDGEY     ; 10% chance
+	db 15, LEDYBA     ; 10% chance
+	db 15, VULPIX     ; 10% chance
+	db 16, BELLSPROUT ;  5% chance
+	db 15, GROWLITHE  ;  5% chance
+	db 16, GROWLITHE  ;  4% chance
+	db 16, GROWLITHE  ;  1% chance
 	; nite
-	db  5, BELLSPROUT ; 20% chance
-	db  4, HOOTHOOT   ; 20% chance
-	db  5, HOOTHOOT   ; 15% chance
-	db  5, HOUNDOUR   ; 10% chance
-	db  4, SPINARAK   ; 10% chance
-	db  5, SPINARAK   ; 10% chance
-	db  6, SPINARAK   ;  5% chance
-	db  6, HOUNDOUR   ;  5% chance
-	db  5, GASTLY     ;  4% chance
-	db  6, GASTLY     ;  1% chance
+	db 15, BELLSPROUT ; 20% chance
+	db 14, HOOTHOOT   ; 20% chance
+	db 15, HOOTHOOT   ; 15% chance
+	db 15, HOUNDOUR   ; 10% chance
+	db 14, SPINARAK   ; 10% chance
+	db 15, SPINARAK   ; 10% chance
+	db 16, SPINARAK   ;  5% chance
+	db 16, HOUNDOUR   ;  5% chance
+	db 15, GASTLY     ;  4% chance
+	db 16, GASTLY     ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_37
@@ -246,8 +246,8 @@ JohtoGrassWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	db 20, RATICATE   ; 10% chance
 	db 18, PIDGEOTTO  ; 10% chance
 	db 17, MAGNEMITE  ;  5% chance
-	db 13, MILTANK    ;  5% chance
-	db 13, TAUROS     ;  4% chance
+	db 13, TAUROS     ;  5% chance
+	db 13, MILTANK    ;  4% chance
 	db 14, TAUROS     ;  1% chance
 	; nite
 	db 16, MEOWTH     ; 20% chance
@@ -274,7 +274,7 @@ JohtoGrassWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	db 17, MAGNEMITE  ;  5% chance
 	db 13, MILTANK    ;  5% chance
 	db 13, TAUROS     ;  4% chance
-	db 14, TAUROS     ;  1% chance
+	db 14, MILTANK    ;  1% chance
 	; nite
 	db 16, MEOWTH     ; 20% chance
 	db 17, MEOWTH     ; 20% chance
@@ -395,27 +395,27 @@ JohtoGrassWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	def_grass_wildmons ROUTE_46
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; day
-	db 2, GEODUDE    ; 20% chance
-	db 3, GEODUDE    ; 20% chance
-	db 2, SPEAROW    ; 15% chance
-	db 3, SPEAROW    ; 10% chance
-	db 4, GEODUDE    ; 10% chance
-	db 2, RATTATA    ; 10% chance
-	db 3, RATTATA    ;  5% chance
-	db 4, SPEAROW    ;  5% chance
-	db 3, PHANPY     ;  4% chance
-	db 4, PHANPY     ;  1% chance
+	db 23, GEODUDE    ; 20% chance
+	db 25, GRAVELER   ; 20% chance
+	db 24, GLIGAR     ; 15% chance
+	db 24, GEODUDE    ; 10% chance
+	db 27, SKARMORY   ; 10% chance
+	db 25, DONPHAN    ; 10% chance
+	db 25, GLIGAR     ;  5% chance
+	db 20, PHANPY     ;  5% chance
+	db 15, PHANPY     ;  4% chance
+	db 21, PHANPY     ;  1% chance
 	; nite
-	db 2, GEODUDE    ; 20% chance
-	db 2, RATTATA    ; 20% chance
-	db 3, RATTATA    ; 15% chance
-	db 4, RATTATA    ; 10% chance
-	db 3, GEODUDE    ; 10% chance
-	db 4, GEODUDE    ; 10% chance
-	db 5, GEODUDE    ;  5% chance
-	db 6, GEODUDE    ;  5% chance
-	db 5, RATTATA    ;  4% chance
-	db 6, RATTATA    ;  1% chance
+	db 23, GEODUDE    ; 20% chance
+	db 25, GRAVELER   ; 20% chance
+	db 24, GEODUDE    ; 15% chance
+	db 21, MURKROW    ; 10% chance
+	db 24, GLIGAR     ; 10% chance
+	db 25, GLIGAR     ; 10% chance
+	db 26, GLIGAR     ;  5% chance
+	db 22, MURKROW    ;  5% chance
+	db 15, MURKROW    ;  4% chance
+	db 22, MURKROW    ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons BURNED_TOWER_1F
@@ -436,9 +436,9 @@ JohtoGrassWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	db 14, RATTATA    ; 20% chance
 	db 14, KOFFING    ; 15% chance
 	db 15, KOFFING    ; 10% chance
-	db 16, KOFFING    ; 10% chance
 	db 16, MISDREAVUS ; 10% chance
-	db 14, ZUBAT      ;  5% chance
+	db 16, MISDREAVUS ; 10% chance
+	db 14, KOFFING    ;  5% chance
 	db 15, ZUBAT      ;  5% chance
 	db 20, RATICATE   ;  4% chance
 	db 20, RATICATE   ;  1% chance
@@ -451,9 +451,9 @@ JohtoGrassWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	db 15, KOFFING    ; 20% chance
 	db 14, RATTATA    ; 15% chance
 	db 15, RATTATA    ; 10% chance
-	db 16, KOFFING    ; 10% chance
+	db 16, RATTATA    ; 10% chance
 	db 20, MAGMAR     ; 10% chance
-	db 16, RATTATA    ;  5% chance
+	db 16, SLUGMA     ;  5% chance
 	db 15, SLUGMA     ;  5% chance
 	db 15, ZUBAT      ;  4% chance
 	db 16, ZUBAT      ;  1% chance
@@ -462,9 +462,9 @@ JohtoGrassWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	db 15, KOFFING    ; 20% chance
 	db 14, RATTATA    ; 15% chance
 	db 15, RATTATA    ; 10% chance
-	db 16, KOFFING    ; 10% chance
+	db 16, RATTATA    ; 10% chance
 	db 16, MISDREAVUS ; 10% chance
-	db 16, RATTATA    ;  5% chance
+	db 16, MISDREAVUS ;  5% chance
 	db 20, MAGMAR     ;  5% chance
 	db 15, ZUBAT      ;  4% chance
 	db 16, ZUBAT      ;  1% chance
@@ -816,11 +816,11 @@ JohtoGrassWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	db  5, RATTATA    ; 15% chance
 	db  6, RATTATA    ; 10% chance
 	db  7, RATTATA    ; 10% chance
-	db  8, RATTATA    ; 10% chance
-	db  9, GASTLY     ;  5% chance
-	db 20, RATICATE   ;  5% chance
-	db 20, RATICATE   ;  4% chance
-	db 20, RATICATE   ;  1% chance
+	db  8, RATICATE   ; 10% chance
+	db  9, RATICATE   ;  5% chance
+	db 20, GASTLY     ;  5% chance
+	db 20, MISDREAVUS ;  4% chance
+	db 20, MISDREAVUS ;  1% chance
 	; nite
 	db  8, GASTLY     ; 20% chance
 	db  9, GASTLY     ; 20% chance
@@ -999,8 +999,8 @@ JohtoGrassWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	db 25, ZUBAT      ; 10% chance
 	db 23, SEEL       ; 10% chance
 	db 24, SEEL       ; 10% chance
-	db 25, SEEL       ;  5% chance
-	db 26, GOLBAT     ;  5% chance
+	db 34, DEWGONG    ;  5% chance
+	db 28, KINGLER    ;  5% chance
 	db 27, GOLBAT     ;  4% chance
 	db 28, GOLBAT     ;  1% chance
 	; nite
@@ -1010,7 +1010,7 @@ JohtoGrassWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	db 24, ZUBAT      ; 10% chance
 	db 25, ZUBAT      ; 10% chance
 	db 26, ZUBAT      ; 10% chance
-	db 26, KRABBY     ;  5% chance
+	db 28, KINGLER    ;  5% chance
 	db 26, GOLBAT     ;  5% chance
 	db 27, GOLBAT     ;  4% chance
 	db 28, GOLBAT     ;  1% chance
@@ -1025,8 +1025,8 @@ JohtoGrassWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	db 25, ZUBAT      ; 10% chance
 	db 23, SEEL       ; 10% chance
 	db 24, SEEL       ; 10% chance
-	db 25, SEEL       ;  5% chance
-	db 26, GOLBAT     ;  5% chance
+	db 34, DEWGONG    ;  5% chance
+	db 28, KINGLER    ;  5% chance
 	db 27, GOLBAT     ;  4% chance
 	db 28, GOLBAT     ;  1% chance
 	; nite
@@ -1036,7 +1036,7 @@ JohtoGrassWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	db 24, ZUBAT      ; 10% chance
 	db 25, ZUBAT      ; 10% chance
 	db 26, ZUBAT      ; 10% chance
-	db 26, KRABBY     ;  5% chance
+	db 28, KINGLER    ;  5% chance
 	db 26, GOLBAT     ;  5% chance
 	db 27, GOLBAT     ;  4% chance
 	db 28, GOLBAT     ;  1% chance
@@ -1051,8 +1051,8 @@ JohtoGrassWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	db 25, ZUBAT      ; 10% chance
 	db 23, SEEL       ; 10% chance
 	db 24, SEEL       ; 10% chance
-	db 25, SEEL       ;  5% chance
-	db 26, GOLBAT     ;  5% chance
+	db 34, DEWGONG    ;  5% chance
+	db 28, KINGLER    ;  5% chance
 	db 27, GOLBAT     ;  4% chance
 	db 28, GOLBAT     ;  1% chance
 	; nite
@@ -1062,7 +1062,7 @@ JohtoGrassWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	db 24, ZUBAT      ; 10% chance
 	db 25, ZUBAT      ; 10% chance
 	db 26, ZUBAT      ; 10% chance
-	db 26, KRABBY     ;  5% chance
+	db 28, KINGLER    ;  5% chance
 	db 26, GOLBAT     ;  5% chance
 	db 27, GOLBAT     ;  4% chance
 	db 28, GOLBAT     ;  1% chance
@@ -1089,7 +1089,7 @@ JohtoGrassWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	db 40, SNEASEL    ; 10% chance
 	db 38, POLIWHIRL  ; 10% chance
 	db 40, PONYTA     ;  5% chance
-	db 38, POLIWHIRL  ;  5% chance
+	db 40, SNEASEL    ;  5% chance
 	db 38, POLIWHIRL  ;  4% chance
 	db 38, POLIWHIRL  ;  1% chance
 	end_grass_wildmons
