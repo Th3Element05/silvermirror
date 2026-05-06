@@ -19,7 +19,7 @@ KantoWaterWildMons:
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_10_NORTH ;GEN1
-	db 2 percent ; encounter rate
+	db 4 percent ; encounter rate
 	db 10, GOLDEEN    ; 50
 	db  5, MAGIKARP   ; 30
 	db 10, GOLDEEN    ; 10
@@ -52,26 +52,26 @@ KantoWaterWildMons:
 
 	def_water_wildmons ROUTE_19 ;GEN1
 	db 6 percent ; encounter rate
-	db 15, TENTACOOL  ; 50
-	db 16, HORSEA     ; 30
-	db 10, TENTACOOL  ; 10
-	db 16, TENTACOOL  ; 10
+	db 10, TENTACOOL  ; 50
+	db 15, HORSEA     ; 30
+	db 15, TENTACOOL  ; 10
+	db 12, TENTACOOL  ; 10
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_20 ;GEN1
 	db 6 percent ; encounter rate
-	db 15, TENTACOOL  ; 50
-	db 16, HORSEA     ; 30
-	db 10, TENTACOOL  ; 10
-	db 16, TENTACOOL  ; 10
+	db 10, TENTACOOL  ; 50
+	db 15, HORSEA     ; 30
+	db 15, TENTACOOL  ; 10
+	db 12, TENTACOOL  ; 10
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_21 ;GEN1
 	db 6 percent ; encounter rate
-	db 15, TENTACOOL  ; 50
-	db 16, HORSEA     ; 30
-	db 10, TENTACOOL  ; 10
-	db 16, TENTACOOL  ; 10
+	db 10, TENTACOOL  ; 50
+	db 15, HORSEA     ; 30
+	db 15, TENTACOOL  ; 10
+	db 12, TENTACOOL  ; 10
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_22 ;GEN1
@@ -87,7 +87,7 @@ KantoWaterWildMons:
 	db 10, MAGIKARP   ; 50
 	db  5, MAGIKARP   ; 30
 	db 20, GYARADOS   ; 10
-	db 10, DRATINI    ; 10
+	db 15, DRATINI    ; 10
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_24 ;GEN1
@@ -124,18 +124,18 @@ KantoWaterWildMons:
 
 	def_water_wildmons ROUTE_28 ;GEN1
 	db 6 percent ; encounter rate
-	db 20, POLIWHIRL  ; 50
-	db 20, GYARADOS   ; 30
+	db 21, POLIWHIRL  ; 50
+	db 25, GYARADOS   ; 30
 	db 10, POLIWAG    ; 10
 	db 10, MAGIKARP   ; 10
 	end_water_wildmons
 
 	def_water_wildmons PALLET_TOWN ;GEN1
-	db 6 percent ; encounter rate
-	db 15, TENTACOOL  ; 50
-	db 16, HORSEA     ; 30
+	db 2 percent ; encounter rate
+	db 10, TENTACOOL  ; 50
+	db 15, HORSEA     ; 30
 	db 15, TENTACOOL  ; 10
-	db 16, TENTACOOL  ; 10
+	db 12, TENTACOOL  ; 10
 	end_water_wildmons
 
 	def_water_wildmons VIRIDIAN_CITY ;GEN1
@@ -164,18 +164,18 @@ KantoWaterWildMons:
 
 	def_water_wildmons VERMILION_PORT ;GEN1
 	db 6 percent ; encounter rate
-	db 15, TENTACOOL  ; 50
-	db 16, HORSEA     ; 30
+	db 10, TENTACOOL  ; 50
+	db 15, HORSEA     ; 30
 	db 15, TENTACOOL  ; 10
-	db 16, TENTACOOL  ; 10
+	db 12, TENTACOOL  ; 10
 	end_water_wildmons
 
 	def_water_wildmons CELADON_CITY ;GEN1
-	db 4 percent ; encounter rate
+	db 6 percent ; encounter rate
 	db  5, MAGIKARP   ; 50
 	db 10, GRIMER     ; 30
 	db  5, MAGIKARP   ; 10
-	db 15, MUK        ; 10
+	db 10, GRIMER     ; 10
 	end_water_wildmons
 
 	def_water_wildmons FUCHSIA_CITY ;GEN1
@@ -188,16 +188,16 @@ KantoWaterWildMons:
 
 	def_water_wildmons CINNABAR_ISLAND ;GEN1
 	db 2 percent ; encounter rate
-	db 15, TENTACOOL  ; 50
-	db 16, HORSEA     ; 30
+	db 10, TENTACOOL  ; 50
+	db 15, HORSEA     ; 30
 	db 15, TENTACOOL  ; 10
-	db 16, TENTACOOL  ; 10
+	db 12, TENTACOOL  ; 10
 	end_water_wildmons
 
 	def_water_wildmons CERULEAN_CAVE_1F ;GEN1
 	db 4 percent ; encounter rate
 	db 10, MAGIKARP   ; 50
-	db 15, GOLDUCK    ; 30
+	db 18, GOLDUCK    ; 30
 	db 20, SLOWBRO    ; 10
 	db 25, GYARADOS   ; 10
 	end_water_wildmons
@@ -205,7 +205,7 @@ KantoWaterWildMons:
 	def_water_wildmons CERULEAN_CAVE_B1F ;GEN1
 	db 4 percent ; encounter rate
 	db 10, MAGIKARP   ; 50
-	db 15, GOLDUCK    ; 30
+	db 18, GOLDUCK    ; 30
 	db 20, SLOWBRO    ; 10
 	db 25, GYARADOS   ; 10
 	end_water_wildmons
