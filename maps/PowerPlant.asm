@@ -60,8 +60,8 @@ PowerPlantVoltorbTrapScript:
 ;	pause 20
 	showemote EMOTE_BOLT, LAST_TALKED, 20
 	closetext
-	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
-	loadwildmon VOLTORB, 30
+	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM ;battletype prevents random level variation
+	loadwildmon VOLTORB, 29
 	startbattle
 	disappear LAST_TALKED
 	variablesprite SPRITE_VOLTORB_TRAP, SPRITE_POKE_BALL
@@ -76,7 +76,7 @@ PowerPlantElectrodeTrapScript:
 	cry ELECTRODE
 ;	pause 20
 	showemote EMOTE_BOLT, LAST_TALKED, 20
-	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
+	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM ;battletype prevents random level variation
 	loadwildmon ELECTRODE, 30
 	startbattle
 	disappear LAST_TALKED
@@ -94,7 +94,7 @@ PowerPlantShinyVoltorbTrapScript:
 	showemote EMOTE_BOLT, LAST_TALKED, 20
 	closetext
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCESHINY
-	loadwildmon VOLTORB, 30
+	loadwildmon VOLTORB, 29
 	startbattle
 	disappear LAST_TALKED
 	variablesprite SPRITE_VOLTORB_TRAP, SPRITE_POKE_BALL
