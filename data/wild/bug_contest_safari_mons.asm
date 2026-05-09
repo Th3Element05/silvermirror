@@ -46,35 +46,35 @@ ContestSafariMonsNormal:
 	db 20, NIDORAN_M,     10, 20
 	db 20, NIDORAN_F,     10, 20
 	db 10, EXEGGCUTE,     10, 20
-	db 24, DODUO,         10, 30
+	db 20, DODUO,         10, 30
 	db  5, NIDORINO,      16, 30
 	db  5, NIDORINA,      16, 30
 	db  5, TAUROS,        14, 30
 	db  5, LICKITUNG,     14, 30
-	db  5, CHANSEY,       14, 30
-	db  1, EEVEE,         10, 20
+	db  6, CHANSEY,       14, 30
+	db  4, EEVEE,         10, 20
 ; day/eve
 	db 20, NIDORAN_M,     10, 20
 	db 20, NIDORAN_F,     10, 20
 	db 10, EXEGGCUTE,     10, 20
-	db 24, DODUO,         10, 30
+	db 20, DODUO,         10, 30
 	db  5, NIDORINO,      16, 30
 	db  5, NIDORINA,      16, 30
 	db  5, TAUROS,        14, 30
 	db  5, LICKITUNG,     14, 30
-	db  5, CHANSEY,       14, 30
-	db  1, EEVEE,         10, 20
+	db  6, CHANSEY,       14, 30
+	db  4, EEVEE,         10, 20
 ; nite
 	db 20, NIDORAN_M,     10, 20
 	db 20, NIDORAN_F,     10, 20
 	db 10, EXEGGCUTE,     10, 20
-	db 24, DODUO,         10, 30
+	db 20, DODUO,         10, 30
 	db  5, NIDORINO,      16, 30
 	db  5, NIDORINA,      16, 30
 	db  5, TAUROS,        14, 30
 	db  5, LICKITUNG,     14, 30
-	db  5, CHANSEY,       14, 30
-	db  1, EEVEE,         10, 20
+	db  6, CHANSEY,       14, 30
+	db  4, EEVEE,         10, 20
 	assert_table_length 30
 	
 	map_id SAFARI_ZONE_AREA_2 ; FOREST ;silvermirror

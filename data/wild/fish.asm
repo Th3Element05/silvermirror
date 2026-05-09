@@ -384,13 +384,13 @@ FishGroups:
 	db  90 percent, KRABBY,     20 ; 20%
 	db 100 percent, HORSEA,     20 ; 10%
 .WhirlIslands_Super:
-	db  40 percent, KRABBY,     40 ; 40%
-	db  70 percent, HORSEA,     40 ; 30%
+	db  40 percent, KRABBY,     30 ; 40%
+	db  70 percent, HORSEA,     30 ; 30%
 	db  90 percent, KINGLER,    40 ; 20%
 	db 100 percent, SEADRA,     40 ; 10%
 .WhirlIslands_Super_2:
-	db  40 percent, KRABBY,     40 ; 40%
-	db  70 percent, HORSEA,     40 ; 30%
+	db  40 percent, KRABBY,     30 ; 40%
+	db  70 percent, HORSEA,     30 ; 30%
 	db  90 percent, KINGLER,    40 ; 20%
 	db 100 percent, SEADRA,     40 ; 10%
 
