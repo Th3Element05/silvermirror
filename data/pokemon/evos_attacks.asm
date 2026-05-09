@@ -444,11 +444,11 @@ SandshrewEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 3, DEFENSE_CURL
-	db 7, MUD_SLAP ;sand_attack, removed
-	db 9, POISON_STING
+	db 7, POISON_STING
+	db 9, MUD_SLAP ;sand_attack, removed
 	db 13, RAPID_SPIN
-	db 15, SWIFT
-	db 19, FURY_STRIKES ;fury_swipes, removed
+	db 15, FURY_STRIKES ;fury_swipes, removed
+	db 19, SWIFT
 	db 21, ROLLOUT
 	db 25, FURY_CUTTER
 	db 27, MUD_SHOT ;sand_tomb, x
@@ -462,8 +462,8 @@ SandslashEvosAttacks:
 	db 1, SLASH
 	db 1, SCRATCH
 	db 3, DEFENSE_CURL
-	db 7, MUD_SLAP ;sand_attack, removed
-	db 9, POISON_STING
+	db 7, POISON_STING
+	db 9, MUD_SLAP ;sand_attack, removed
 	db 13, RAPID_SPIN
 	db 15, SWIFT
 	db 19, FURY_STRIKES ;fury_swipes, removed
@@ -607,8 +607,8 @@ VulpixEvosAttacks: ;GEN4
 	db EVOLVE_ITEM, FIRE_STONE, NINETALES
 	db 0 ; no more evolutions
 	db 1, EMBER
-	db 4, LEER ;tail_whip, removed
-	db 7, ROAR
+	db 4, ROAR
+	db 7, LEER ;tail_whip, removed
 	db 11, QUICK_ATTACK
 	db 14, FIRE_SPIN ;will_o_wisp, x
 	db 17, CONFUSE_RAY
@@ -839,7 +839,7 @@ DugtrioEvosAttacks:
 	db 15, MUD_SHOT ;MUD_SLAP, 1
 	db 18, DIG
 	db 23, FEINT_ATTACK ;sucker_punch, x
-;	sb 26, SPIKES ;sand_tomb, x
+;	db 26, SPIKES ;sand_tomb, x
 	db 28, EARTH_POWER
 	db 33, MUD_BOMB
 	db 40, SLASH
@@ -963,7 +963,7 @@ GrowlitheEvosAttacks:
 	db 6, EMBER
 	db 9, LEER
 	db 14, FORESIGHT ;odor_sleuth, x
-;	db 17, ;HELPING_HAND
+	db 17, BITE ;HELPING_HAND
 	db 20, FLAME_WHEEL
 	db 25, FLAIL ;reversal, removed
 	db 28, FIRE_FANG
@@ -1046,10 +1046,10 @@ KadabraEvosAttacks:
 AlakazamEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TELEPORT
+	db 1, DISABLE
 	db 1, FLASH ;kinesis, removed
 	db 16, CONFUSION ;evolution move?
-	db 18, DISABLE
-	db 22, FORESIGHT ;miracle_eye, x
+	db 20, FORESIGHT ;miracle_eye, x
 	db 24, PSYBEAM
 	db 28, REFLECT
 	db 30, RECOVER
@@ -1140,8 +1140,8 @@ BellsproutEvosAttacks:
 	db 1, VINE_WHIP
 	db 7, GROWTH
 	db 11, WRAP
-	db 13, SLEEP_POWDER
-	db 15, POISONPOWDER
+	db 13, POISONPOWDER ;SLEEP_POWDER
+	db 15, SLEEP_POWDER ;POISONPOWDER
 	db 17, STUN_SPORE
 	db 23, ACID
 	db 27, BULLET_SEED ;knock_off, x
@@ -1158,8 +1158,8 @@ WeepinbellEvosAttacks:
 	db 1, VINE_WHIP
 	db 7, GROWTH
 	db 11, WRAP
-	db 13, SLEEP_POWDER
-	db 15, POISONPOWDER
+	db 13, POISONPOWDER ;SLEEP_POWDER
+	db 15, SLEEP_POWDER ;POISONPOWDER
 	db 17, STUN_SPORE
 	db 23, ACID
 	db 27, BULLET_SEED ;knock_off, x
@@ -1256,7 +1256,7 @@ GolemEvosAttacks:
 	db 33, EARTHQUAKE
 	db 38, SELFDESTRUCT ;explosion, removed
 	db 44, DOUBLE_EDGE
-	db 39, STONE_EDGE
+	db 49, STONE_EDGE
 	db 0 ; no more level-up moves
 
 ;GolemEvosAttacks:
@@ -1569,12 +1569,14 @@ GastlyEvosAttacks:
 	db 1, HYPNOSIS
 	db 1, LICK
 	db 5, DISABLE ;spite, removed
-	db 8, MEAN_LOOK
-	db 12, CURSE
+	db 8, CURSE
+	db 11, MEAN_LOOK
+	db 13, LICK
 	db 15, NIGHT_SHADE
-	db 19, CONFUSE_RAY
+	db 18, CONFUSE_RAY
 	db 22, FEINT_ATTACK ;sucker_punch, x
 	db 26, HEX ;payback, x
+	db 29, HYPNOSIS
 	db 29, DREAM_EATER ;SHADOW_BALL, 33
 	db 33, SHADOW_BALL ;DREAM_EATER, 29
 	db 36, DARK_PULSE
@@ -1588,15 +1590,16 @@ HaunterEvosAttacks:
 GengarEvosAttacks: ;GEN4  ;HEX
 	db 0 ; no more evolutions
 	db 1, SHADOW_CLAW ;evolution move? gengar
-	db 1, HYPNOSIS ;evolution move? haunter
+	db 1, HYPNOSIS
 	db 1, LICK
 	db 5, DISABLE ;spite, removed
-	db 8, MEAN_LOOK
-	db 12, CURSE
+	db 8, CURSE
+	db 11, MEAN_LOOK
 	db 15, NIGHT_SHADE
-	db 19, CONFUSE_RAY
+	db 18, CONFUSE_RAY
 	db 22, FEINT_ATTACK ;sucker_punch, x
 	db 28, HEX ;payback, x
+	db 33, HYPNOSIS
 	db 33, DREAM_EATER ;SHADOW_BALL, 33
 	db 39, SHADOW_BALL ;DREAM_EATER, 29
 	db 44, DARK_PULSE
@@ -1648,8 +1651,8 @@ DrowzeeEvosAttacks:
 	db EVOLVE_LEVEL, 26, HYPNO
 	db 0 ; no more evolutions
 	db 1, TACKLE ;pound, removed
-	db 1, HYPNOSIS
-	db 7, DISABLE
+	db 1, DISABLE
+	db 7, HYPNOSIS
 	db 9, CONFUSION
 	db 15, HEADBUTT
 	db 18, SMOG ;poison_gas, removed
@@ -1690,14 +1693,14 @@ KrabbyEvosAttacks:
 ;	db 1, mud_sport, x
 	db 1, WATER_GUN ;bubble, removed
 	db 5, LEER ;vicegrip, removed
-	db 9, METAL_CLAW ;LEER, 5
-	db 11, HARDEN
+	db 9, HARDEN ;LEER, 5
+	db 11, METAL_CLAW
 	db 15, BUBBLEBEAM
 	db 19, MUD_SHOT
 	db 21, CRUSH_CLAW ;METAL_CLAW, 9
 	db 25, STOMP
 	db 29, PROTECT
-	db 31, GUILLOTINE
+	db 32, GUILLOTINE
 	db 35, BODY_SLAM ;SLAM, removed
 	db 39, WATER_PULSE ;brine, x
 	db 41, CRABHAMMER
@@ -1709,8 +1712,8 @@ KinglerEvosAttacks:
 ;	db 1, mud_sport, x
 	db 1, WATER_GUN ;bubble, removed
 	db 5, LEER ;vicegrip, removed
-	db 9, METAL_CLAW ;LEER, 5
-	db 11, HARDEN
+	db 9, HARDEN ;LEER, 5
+	db 11, METAL_CLAW
 	db 15, BUBBLEBEAM
 	db 19, MUD_SHOT
 	db 21, CRUSH_CLAW ;METAL_CLAW, 9
@@ -2122,18 +2125,20 @@ MrMimeEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, MAGICAL_LEAF
 	db 1, BARRIER
-	db 4, CONFUSION
-	db 8, BULK_UP ;meditate, removed
-	db 11, ENCORE
-	db 15, DOUBLESLAP
+	db 1, LIGHT_SCREEN
+	db 1, REFLECT
+	db 1, CONFUSION
+	db 6, BULK_UP ;meditate, removed
+	db 10, ENCORE
+	db 14, DOUBLESLAP
 	db 18, PROTECT ;mimic, removed
 	db 22, LIGHT_SCREEN
 	db 22, REFLECT
-	db 35, PSYBEAM
+	db 26, PSYBEAM
 	db 29, SUBSTITUTE
 	db 32, CONFUSE_RAY ;recycle, x
 	db 36, FAKE_OUT ;trick, x
-	db 43, FUTURE_SIGHT ;role_play, x
+	db 41, FUTURE_SIGHT ;role_play, x
 	db 46, BATON_PASS
 	db 50, SAFEGUARD
 	db 0 ; no more level-up moves
@@ -2266,8 +2271,8 @@ GyaradosEvosAttacks:
 	db 23, DRAGON_RAGE
 	db 26, LEER
 	db 29, TWISTER
-	db 32, ICE_FANG
-	db 35, AQUA_TAIL
+	db 32, AQUA_TAIL ;ICE_FANG
+	db 35, ICE_FANG ;AQUA_TAIL
 	db 38, RAIN_DANCE
 	db 41, HYDRO_PUMP
 	db 44, DRAGON_DANCE
@@ -3038,8 +3043,8 @@ ChinchouEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, WATER_GUN ;bubble, removed
 	db 1, SUPERSONIC
-	db 6, THUNDER_WAVE
-	db 9, THUNDERSHOCK ;FLAIL, 12
+	db 6, THUNDERSHOCK
+	db 9, THUNDER_WAVE ;FLAIL, 12
 	db 12, FLAIL ;WATER_GUN, 1
 	db 17, CONFUSE_RAY
 	db 20, SPARK
@@ -3056,8 +3061,8 @@ LanturnEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, WATER_GUN ;bubble, removed
 	db 1, SUPERSONIC
-	db 6, THUNDER_WAVE
-	db 9, THUNDERSHOCK ;FLAIL, 12
+	db 6, THUNDERSHOCK
+	db 9, THUNDER_WAVE ;FLAIL, 12
 	db 12, FLAIL ;WATER_GUN, 1
 	db 17, CONFUSE_RAY
 	db 20, SPARK
@@ -3431,9 +3436,9 @@ SunkernEvosAttacks:
 ;	db 1, GROWTH, 5
 	db 1, ABSORB
 	db 5, GROWTH ;MEGA_DRAIN, 9
-	db 9, MEGA_DRAIN ;ingrain, x
-	db 13, HYPNOSIS ;grasswhistle, x
-	db 17, LEECH_SEED
+	db 9, LEECH_SEED
+	db 13, MEGA_DRAIN ;ingrain, x
+	db 17, HYPNOSIS ;grasswhistle, x
 	db 21, FOCUS_ENERGY ;endeavor, x
 	db 25, RAZOR_LEAF ;worry_seed, x
 	db 29, FLAIL ;RAZOR_LEAF, 25
@@ -3449,9 +3454,9 @@ SunfloraEvosAttacks:
 	db 1, TACKLE ;pound, removed
 	db 1, ABSORB
 	db 5, GROWTH ;MEGA_DRAIN, 9
-	db 9, MEGA_DRAIN ;ingrain, x
-	db 13, HYPNOSIS ;grasswhistle, x
-	db 17, LEECH_SEED
+	db 9, LEECH_SEED
+	db 13, MEGA_DRAIN ;ingrain, x
+	db 17, HYPNOSIS ;grasswhistle, x
 	db 21, BULLET_SEED
 	db 25, RAZOR_LEAF ;worry_seed, x
 	db 29, FLAIL ;RAZOR_LEAF, 25
@@ -3629,9 +3634,9 @@ MisdreavusEvosAttacks:
 	db EVOLVE_ITEM, DUSK_STONE, MISMAGIUS
 	db 0 ; no more evolutions
 	db 1, GROWL
-	db 1, PSYBEAM ;psywave, removed
+	db 1, ASTONISH
 	db 5, DISABLE ;spite, removed
-	db 10, ASTONISH
+	db 10, PSYBEAM ;psywave, removed
 	db 14, CONFUSE_RAY
 	db 19, MEAN_LOOK
 	db 23, HEX ;PSYBEAM, 1
@@ -3814,12 +3819,12 @@ SnubbullEvosAttacks:
 	db 1, ICE_FANG
 	db 1, FIRE_FANG
 	db 1, THUNDER_FANG
+	db 1, LEER ;tail_whip, removed
 	db 1, TACKLE
 	db 1, SCARY_FACE
-	db 1, LEER ;tail_whip, removed
 	db 1, CHARM
-	db 7, BITE
-	db 13, LICK
+	db 7, LICK ;BITE
+	db 13, BITE ;LICK
 	db 19, HEADBUTT
 	db 25, ROAR
 	db 31, RAGE
@@ -3997,8 +4002,8 @@ UrsaringEvosAttacks:
 	db 22, SWEET_SCENT
 	db 29, SLASH
 	db 38, SCARY_FACE
-	db 47, REST
-	db 49, SNORE
+	db 48, REST
+	db 48, SNORE
 	db 58, THRASH
 	db 67, CLOSE_COMBAT ;hammer_arm, x
 	db 0 ; no more level-up moves
@@ -4210,10 +4215,11 @@ HoundourEvosAttacks:
 	db EVOLVE_LEVEL, 24, HOUNDOOM
 	db 0 ; no more evolutions
 	db 1, LEER
+	db 1, ROAR
 	db 1, EMBER
-	db 4, SHARPEN ;howl, x
-	db 9, SMOG
-	db 14, ROAR
+	db 4, SMOG
+	db 9, EMBER
+	db 12, SHARPEN ;howl, x
 	db 17, BITE
 	db 22, FORESIGHT ;odor_sleuth, x
 	db 27, PURSUIT ;beat_up, removed
@@ -4229,10 +4235,11 @@ HoundoomEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, THUNDER_FANG
 	db 1, LEER
+	db 1, ROAR
 	db 1, EMBER
-	db 4, SHARPEN ;howl, x
-	db 9, SMOG
-	db 14, ROAR
+	db 4, SMOG
+	db 9, EMBER
+	db 12, SHARPEN ;howl, x
 	db 17, BITE
 	db 22, FORESIGHT ;odor_sleuth, x
 	db 28, PURSUIT ;beat_up, removed
