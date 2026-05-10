@@ -60,14 +60,18 @@ OftenFleeMons:
 
 DO
 
+finish checking all wild data vs evos-attacks
+do kanto first
+blue=encounter rates input
+orange=need to input rates and levels
+next, johto levels should be raised closer to endgame values.
+
+corsola(nite)=staryu is commented out (engine\overworld\wildmons.asm)
+due to corsola swarms.  explore options to restore this.
+
 
 all phone trainers should have jumps for their text
 then can add ntag to all text
-
-input challenge mode wild data from spreadsheet
-check/input all wild data against spreadsheet
-
-definitely need to check wild-data levels against evos-attacks
 
 what to use EVENT_CAUGHT_MISSINGNO for?
 
