@@ -8,15 +8,15 @@ SwarmWaterWildMonsChallenge:
 	db 6 percent ; encounter rate
 	db 16, STARYU     ; 50
 	db 15, TENTACOOL  ; 30
-	db 16, HORSEA     ; 10
-	db 15, MANTINE    ; 10
+	db 15, HORSEA     ; 10
+	db 16, MANTINE    ; 10
 
 	; HORSEA
 	def_water_wildmons ROUTE_20 ;GEN2
 	db 6 percent ; encounter rate
-	db 16, HORSEA     ; 50
+	db 15, HORSEA     ; 50
 	db 15, TENTACOOL  ; 30
-	db 16, HORSEA     ; 10
+	db 10, HORSEA     ; 10
 	db 15, MANTINE    ; 10
 
 	; SHELLDER
@@ -25,7 +25,7 @@ SwarmWaterWildMonsChallenge:
 	db 10, SHELLDER   ; 50
 	db 10, TENTACOOL  ; 30
 	db 10, HORSEA     ; 10
-	db 10, MANTINE    ; 10
+	db 10, HORSEA     ; 10
 
 
 ; JOHTO swarms

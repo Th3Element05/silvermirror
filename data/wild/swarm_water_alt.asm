@@ -17,7 +17,7 @@ SwarmWaterWildMonsAlt:
 	db 6 percent ; encounter rate
 	db 15, CORSOLA
 	db 15, TENTACOOL
-	db 16, HORSEA
-	db 16, HORSEA
+	db 15, HORSEA
+	db 15, HORSEA
 
 	db -1 ; end

@@ -8,15 +8,15 @@ SwarmWaterWildMons:
 	db 6 percent ; encounter rate
 	db 16, STARYU     ; 50
 	db 15, TENTACOOL  ; 30
-	db 16, HORSEA     ; 10
 	db 15, HORSEA     ; 10
+	db 10, HORSEA     ; 10
 
 	; HORSEA
 	def_water_wildmons ROUTE_20 ;GEN1
 	db 6 percent ; encounter rate
-	db 16, HORSEA     ; 50
+	db 15, HORSEA     ; 50
 	db 15, TENTACOOL  ; 30
-	db 16, HORSEA     ; 10
+	db 10, HORSEA     ; 10
 	db 15, TENTACOOL  ; 10
 
 	; SHELLDER
