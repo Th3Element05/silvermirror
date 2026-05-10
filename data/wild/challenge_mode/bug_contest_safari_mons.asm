@@ -43,36 +43,36 @@ ContestSafariMonsChallenge:
 .Safari1
 	table_width 4, .Safari1
 ; morning
-	db 20, GIRAFARIG,     14, 30
-	db 20, STANTLER,      14, 30
+	db 20, GIRAFARIG,     15, 30
+	db 20, STANTLER,      15, 30
 	db 10, EXEGGCUTE,     10, 20
-	db 20, AIPOM,         12, 30
-	db  5, MILTANK,       14, 30
-	db  5, MILTANK,       14, 30
-	db  5, TAUROS,        14, 30
-	db  5, TAUROS,        14, 30
+	db 20, AIPOM,         10, 30
+	db  5, MILTANK,       15, 30
+	db  5, MILTANK,       15, 30
+	db  5, TAUROS,        15, 30
+	db  5, TAUROS,        15, 30
 	db  5, CHANSEY,       14, 30
 	db  5, EEVEE,         10, 20
 ; day/eve
-	db 20, GIRAFARIG,     14, 30
-	db 20, STANTLER,      14, 30
+	db 20, GIRAFARIG,     15, 30
+	db 20, STANTLER,      15, 30
 	db 10, EXEGGCUTE,     10, 20
-	db 20, AIPOM,         12, 30
-	db  5, MILTANK,       14, 30
-	db  5, MILTANK,       14, 30
-	db  5, TAUROS,        14, 30
-	db  5, TAUROS,        14, 30
+	db 20, AIPOM,         10, 30
+	db  5, MILTANK,       15, 30
+	db  5, MILTANK,       15, 30
+	db  5, TAUROS,        15, 30
+	db  5, TAUROS,        15, 30
 	db  5, CHANSEY,       14, 30
 	db  5, EEVEE,         10, 20
 ; nite
-	db 20, GIRAFARIG,     14, 30
-	db 20, STANTLER,      14, 30
+	db 20, GIRAFARIG,     15, 30
+	db 20, STANTLER,      15, 30
 	db 10, EXEGGCUTE,     10, 20
-	db 20, AIPOM,         12, 30
-	db  5, MILTANK,       14, 30
-	db  5, MILTANK,       14, 30
-	db  5, TAUROS,        14, 30
-	db  5, TAUROS,        14, 30
+	db 20, AIPOM,         10, 30
+	db  5, MILTANK,       15, 30
+	db  5, MILTANK,       15, 30
+	db  5, TAUROS,        15, 30
+	db  5, TAUROS,        15, 30
 	db  5, CHANSEY,       14, 30
 	db  5, EEVEE,         10, 20
 	assert_table_length 30
@@ -85,7 +85,7 @@ ContestSafariMonsChallenge:
 	db 10, YANMA,         14, 30
 	db 10, EXEGGCUTE,     10, 20
 	db 20, PARAS,         10, 24
-	db  4, PARAS,         10, 24
+	db  4, PARASECT,      10, 24
 	db  5, LEDIAN,        18, 30
 	db 10, SCYTHER,       14, 30
 	db 10, PINSIR,        14, 30
@@ -96,7 +96,7 @@ ContestSafariMonsChallenge:
 	db 10, YANMA,         14, 30
 	db 10, EXEGGCUTE,     10, 20
 	db 20, PARAS,         10, 24
-	db  4, PARAS,         10, 24
+	db  4, PARASECT,      24, 30
 	db  5, LEDIAN,        18, 30
 	db 10, SCYTHER,       14, 30
 	db 10, PINSIR,        14, 30
@@ -163,7 +163,7 @@ ContestSafariMonsChallenge:
 	db 15, MARILL,        10, 20
 	db 20, EXEGGCUTE,     10, 20
 	db 14, TANGELA,       14, 30
-	db 10, AIPOM,         12, 30
+	db 10, AIPOM,         10, 30
 	db  5, MILTANK,       14, 30
 	db  5, SMEARGLE,      10, 20
 	db  1, CHANSEY,       14, 30
@@ -174,18 +174,18 @@ ContestSafariMonsChallenge:
 	db 15, MARILL,        10, 20
 	db 20, EXEGGCUTE,     10, 20
 	db 14, TANGELA,       14, 30
-	db 10, AIPOM,         12, 30
+	db 10, AIPOM,         10, 30
 	db  5, MILTANK,       14, 30
 	db  5, SMEARGLE,      10, 20
 	db  1, CHANSEY,       14, 30
 ; nite
-	db 10, MARILL,        10, 20
-	db  5, MARILL,        10, 20
-	db 20, WOOPER,        10, 20
-	db  4, WOOPER,        10, 20
+	db 15, HOPPIP,        10, 20
+	db 10, SUNKERN,       10, 20
+	db  5, SUNKERN,       10, 20
+	db 15, MARILL,        10, 20
 	db 20, EXEGGCUTE,     10, 20
-	db 20, TANGELA,       14, 30
-	db 10, AIPOM,         12, 30
+	db 14, TANGELA,       14, 30
+	db 10, AIPOM,         10, 30
 	db  5, MILTANK,       14, 30
 	db  5, SMEARGLE,      10, 20
 	db  1, CHANSEY,       14, 30

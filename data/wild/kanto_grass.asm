@@ -872,7 +872,7 @@ KantoGrassWildMons:
 	db 18, GASTLY     ;  5% chance
 	db 18, GASTLY     ;  5% chance
 	db 18, GASTLY     ;  4% chance
-	db 25, HAUNTER    ;  1% chance
+	db 20, CUBONE     ;  1% chance
 	; nite
 	db 18, GASTLY     ; 20% chance
 	db 18, GASTLY     ; 20% chance
@@ -883,7 +883,7 @@ KantoGrassWildMons:
 	db 18, GASTLY     ;  5% chance
 	db 18, GASTLY     ;  5% chance
 	db 18, GASTLY     ;  4% chance
-	db 25, HAUNTER    ;  1% chance
+	db 20, CUBONE     ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons POKEMON_TOWER_4F ;GEN1
@@ -898,7 +898,7 @@ KantoGrassWildMons:
 	db 19, GASTLY     ;  5% chance
 	db 19, GASTLY     ;  5% chance
 	db 19, GASTLY     ;  4% chance
-	db 25, HAUNTER    ;  1% chance
+	db 20, CUBONE     ;  1% chance
 	; nite
 	db 18, GASTLY     ; 20% chance
 	db 18, GASTLY     ; 20% chance
@@ -909,7 +909,7 @@ KantoGrassWildMons:
 	db 19, GASTLY     ;  5% chance
 	db 19, GASTLY     ;  5% chance
 	db 25, HAUNTER    ;  4% chance
-	db 20, GASTLY     ;  1% chance
+	db 20, CUBONE     ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons POKEMON_TOWER_5F ;GEN1
@@ -924,7 +924,7 @@ KantoGrassWildMons:
 	db 20, GASTLY     ;  5% chance
 	db 20, GASTLY     ;  5% chance
 	db 25, HAUNTER    ;  4% chance
-	db 20, GASTLY     ;  1% chance
+	db 20, CUBONE     ;  1% chance
 	; nite
 	db 18, GASTLY     ; 20% chance
 	db 18, GASTLY     ; 20% chance
@@ -935,7 +935,7 @@ KantoGrassWildMons:
 	db 20, GASTLY     ;  5% chance
 	db 20, GASTLY     ;  5% chance
 	db 25, HAUNTER    ;  4% chance
-	db 25, HAUNTER    ;  1% chance
+	db 20, CUBONE     ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons POKEMON_TOWER_6F ;GEN1
