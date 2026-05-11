@@ -1,4 +1,5 @@
 KriseAskNumber1Text:
+	ntag "KRISE:"
 	text "You…"
 	line "You think I'm cool"
 	cont "right?"
@@ -8,6 +9,7 @@ KriseAskNumber1Text:
 	done
 
 KriseAskNumber2Text:
+	ntag "KRISE:"
 	text "I knew it!"
 
 	para "I knew you'd think"
@@ -18,12 +20,14 @@ KriseAskNumber2Text:
 	done
 
 KriseNumberAcceptedText:
+	ntag "KRISE:"
 	text "Don't worry, you"
 	line "can call me any-"
 	cont "time!"
 	done
 
 KriseNumberDeclinedText:
+	ntag "KRISE:"
 	text "Oh, I see…"
 
 	para "Maybe I was over-"
@@ -31,11 +35,13 @@ KriseNumberDeclinedText:
 	done
 
 KrisePhoneFullText:
+	ntag "KRISE:"
 	text "But your phone's"
 	line "out of memory!"
 	done
 
 KriseRematchText:
+	ntag "KRISE:"
 	text "What?"
 	line "Staring at other"
 	cont "people's faces."

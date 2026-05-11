@@ -1,4 +1,5 @@
 BillyAskNumber1Text:
+	ntag "BILLY:"
 	text "I'm researching"
 	line "exercise for a"
 	cont "project at school!"
@@ -19,6 +20,7 @@ BillyAskNumber1Text:
 	done
 
 BillyAskNumber2Text:
+	ntag "BILLY:"
 	text "I knew it."
 
 	para "I knew you'd want"
@@ -27,6 +29,7 @@ BillyAskNumber2Text:
 	done
 
 BillyNumberAcceptedText:
+	ntag "BILLY:"
 	text "Excellent!"
 
 	para "I need time to"
@@ -36,6 +39,7 @@ BillyNumberAcceptedText:
 	done
 
 BillyNumberDeclinedText:
+	ntag "BILLY:"
 	text "Huh?"
 
 	para "Don't you want to"
@@ -43,7 +47,14 @@ BillyNumberDeclinedText:
 	cont "project?"
 	done
 
+BillyPhoneFullText:
+	ntag "BILLY:"
+	text "There's no room"
+	line "for my number."
+	done
+
 BillyRematchText:
+	ntag "BILLY:"
 	text "There you are!"
 
 	para "I'm ready to start"

@@ -1,4 +1,5 @@
 GavinAskNumber1Text:
+	ntag "GAVIN:"
 	text "Wow, you're tough."
 	line "I haven't battled"
 	cont "that seriously in"
@@ -15,6 +16,7 @@ GavinAskNumber1Text:
 	done
 
 GavinAskNumber2Text:
+	ntag "GAVIN:"
 	text "Could I get your"
 	line "phone number?"
 
@@ -26,6 +28,7 @@ GavinAskNumber2Text:
 	done
 
 GavinNumberAcceptedText:
+	ntag "GAVIN:"
 	text "How should I beat"
 	line "you? I'm tormented"
 	cont "by those thoughts"
@@ -33,6 +36,7 @@ GavinNumberAcceptedText:
 	done
 
 GavinNumberDeclinedText:
+	ntag "GAVIN:"
 	text "OK… I understand…"
 	line "But if you change"
 	cont "your mind, give me"
@@ -40,6 +44,7 @@ GavinNumberDeclinedText:
 	done
 
 GavinPhoneFullText:
+	ntag "GAVIN:"
 	text "Your phone's"
 	line "memory is full."
 
@@ -48,6 +53,7 @@ GavinPhoneFullText:
 	done
 
 GavinRematchText:
+	ntag "GAVIN:"
 	text "Hi! I've been"
 	line "waiting for you!"
 

@@ -1,4 +1,5 @@
 AlanAskNumber1Text:
+	ntag "ALAN:"
 	text "Reading textbooks"
 	line "is worthwhile"
 	cont "every so often."
@@ -32,6 +33,7 @@ AlanAskNumber1Text:
 
 
 AlanAskNumber2Text:
+	ntag "ALAN:"
 	text "If I find another"
 	line "FIRE STONE, it's"
 	cont "yours."
@@ -41,11 +43,13 @@ AlanAskNumber2Text:
 	done
 
 AlanNumberAcceptedText:
+	ntag "ALAN:"
 	text "I'll call you if"
 	line "I find anything."
 	cont "Count on it!"
 
 AlanNumberDeclinedText:
+	ntag "ALAN:"
 	text "Oh… I thought it"
 	line "would be a good"
 	cont "break to call you"
@@ -53,11 +57,13 @@ AlanNumberDeclinedText:
 	done
 
 AlanPhoneFullText:
+	ntag "ALAN:"
 	text "There's no room"
 	line "for my number."
 	done
 
 AlanRematchText:
+	ntag "ALAN:"
 	text "I waited around"
 	line "for you!"
 
@@ -66,16 +72,23 @@ AlanRematchText:
 	done
 
 AlanGiftText:
+	ntag "ALAN:"
 	text "This is for you!"
 	line "Ta-da!"
 	done
 
 AlanPackFullText:
+	ntag "ALAN:"
 	text "Whoops!"
 
 	para "You can't carry"
 	line "any more items!"
 
-	para "I'll hang on to it"
-	line "until next time."
+	para "I'll give this to"
+	line "you after you make"
+	cont "room for it."
 	done
+
+;	para "I'll hang on to it"
+;	line "until next time."
+;	done

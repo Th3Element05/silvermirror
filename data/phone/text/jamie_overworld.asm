@@ -1,4 +1,5 @@
 JamieAskNumber1Text:
+	ntag "JAMIE:"
 	text "That was a fun"
 	line "battle!"
 
@@ -11,6 +12,7 @@ JamieAskNumber1Text:
 	done
 
 JamieAskNumber2Text:
+	ntag "JAMIE:"
 	text "I'd do anything to"
 	line "get your number!"
 
@@ -19,6 +21,7 @@ JamieAskNumber2Text:
 	done
 
 JamieNumberAcceptedText:
+	ntag "JAMIE:"
 	text "Thanks!"
 	
 	para "Let's have another"
@@ -30,6 +33,7 @@ JamieNumberAcceptedText:
 	done
 
 JamieNumberDeclinedText:
+	ntag "JAMIE:"
 	text "Ulp!"
 
 	para "Do you think I'm"
@@ -38,10 +42,33 @@ JamieNumberDeclinedText:
 	roll "opponent?"
 	done
 
+JamiePhoneFullText:
+	ntag "JAMIE:"
+	text "There's no room"
+	line "for my number."
+	done
+
 JamieRematchText:
+	ntag "JAMIE:"
 	text "I'm a stubborn"
 	line "featherweight."
 	
 	para "I've been waiting"
 	line "here for you!"
+	done
+
+JamieGiftText:
+	ntag "JAMIE:"
+	text "One of my birds"
+	line "brought this back"
+	cont "after a flight."
+
+	para "You can have it!"
+	done
+
+JamiePackFullText:
+	ntag "JAMIE:"
+	text "Oh… Your PACK's"
+	line "full. I'll give it"
+	cont "to you later."
 	done

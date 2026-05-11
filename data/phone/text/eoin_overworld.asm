@@ -1,4 +1,5 @@
 EoinAskNumber1Text:
+	ntag "EOIN:"
 	text "You've got some"
 	line "nerve!"
 	
@@ -13,6 +14,7 @@ EoinAskNumber1Text:
 	done
 
 EoinAskNumber2Text:
+	ntag "EOIN:"
 	text "Oh, I see you've"
 	line "finally figured"
 	cont "out just how"
@@ -26,6 +28,7 @@ EoinAskNumber2Text:
 	done
 
 EoinNumberAcceptedText:
+	ntag "EOIN:"
 	text "All right!"
 	line "Call me anytime!"
 
@@ -34,11 +37,19 @@ EoinNumberAcceptedText:
 	done
 
 EoinNumberDeclinedText:
+	ntag "EOIN:"
 	text "Hey! What're you,"
 	line "nervous?"
 	done
 
+EoinPhoneFullText:
+	ntag "EOIN:"
+	text "There's no room"
+	line "for my number."
+	done
+
 EoinRematchText:
+	ntag "EOIN:"
 	text "Gaon gaooon!"
 	line "Buwaribaribari…!"
 	

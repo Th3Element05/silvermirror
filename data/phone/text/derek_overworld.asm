@@ -1,4 +1,5 @@
 DerekAskNumber1Text:
+	ntag "DEREK:"
 	text "Oh, wow! PIKACHU!"
 	line "It's so soft and"
 	cont "furry! How cute!"
@@ -15,6 +16,7 @@ DerekAskNumber1Text:
 	done
 
 DerekAskNumber2Text:
+	ntag "DEREK:"
 	text "Let's chat about"
 	line "our #MON!"
 
@@ -23,6 +25,7 @@ DerekAskNumber2Text:
 	done
 
 DerekNumberAcceptedText:
+	ntag "DEREK:"
 	text "PIKACHU is the"
 	line "one! If anything"
 	cont "comes up, I'll"
@@ -30,6 +33,7 @@ DerekNumberAcceptedText:
 	done
 
 DerekNumberDeclinedText:
+	ntag "DEREK:"
 	text "You…"
 
 	para "I bet you don't"
@@ -37,11 +41,13 @@ DerekNumberDeclinedText:
 	done
 
 DerekPhoneFullText:
+	ntag "DEREK:"
 	text "Wait a sec! Your"
 	line "phone list's full!"
 	done
 
 DerekGiftText:
+	ntag "DEREK:"
 	text "I've been looking"
 	line "for you! Here, see"
 	cont "this? This is it!"
@@ -52,6 +58,7 @@ DerekGiftText:
 	done
 
 DerekPackFullText:
+	ntag "DEREK:"
 	text "Uh-oh, too bad."
 	line "You don't have any"
 	cont "room. Be sure to"

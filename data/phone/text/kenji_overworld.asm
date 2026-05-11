@@ -1,4 +1,5 @@
 KenjiAskNumber1Text:
+	ntag "KENJI:"
 	text "Our battle was"
 	line "remarkable!"
 
@@ -15,6 +16,7 @@ KenjiAskNumber1Text:
 	done
 
 KenjiAskNumber2Text:
+	ntag "KENJI:"
 	text "My training makes"
 	line "chatting tough,"
 	cont "but will you take"
@@ -22,18 +24,21 @@ KenjiAskNumber2Text:
 	done
 
 KenjiNumberAcceptedText:
+	ntag "KENJI:"
 	text "I must train"
 	line "harder to become"
 	cont "the mightiest!"
 	done
 
 KenjiNumberDeclinedText:
+	ntag "KENJI:"
 	text "If you decide you"
 	line "want my number,"
 	cont "come see me."
 	done
 
 KenjiPhoneFullText:
+	ntag "KENJI:"
 	text "Your phone appears"
 	line "to be full."
 
@@ -41,6 +46,7 @@ KenjiPhoneFullText:
 	done
 
 KenjiGiftText:
+	ntag "KENJI:"
 	text "I wish to thank"
 	line "you, <PLAYER>!"
 
@@ -55,6 +61,7 @@ KenjiGiftText:
 	done
 
 KenjiPackFullText:
+	ntag "KENJI:"
 	text "Your strength will"
 	line "not let you carry"
 	cont "another thing!"

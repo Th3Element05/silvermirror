@@ -1,4 +1,5 @@
 KyleAskNumber1Text:
+	ntag "KYLE:"
 	text "So I don't forget"
 	line "just how great it"
 	cont "is to battle with"
@@ -7,6 +8,7 @@ KyleAskNumber1Text:
 	done
 
 KyleAskNumber2Text:
+	ntag "KYLE:"
 	text "Oh, I see you've"
 	line "changed your mind"
 	cont "about exchanging"
@@ -14,6 +16,7 @@ KyleAskNumber2Text:
 	done
 
 KyleNumberAcceptedText:
+	ntag "KYLE:"
 	text "Awesome!"
 
 	para "I won't forget"
@@ -21,11 +24,19 @@ KyleNumberAcceptedText:
 	done
 
 KyleNumberDeclinedText:
+	ntag "KYLE:"
 	text "I see…"
 	line "Too bad…"
 	done
 
+KylePhoneFullText:
+	ntag "KYLE:"
+	text "There's no room"
+	line "for my number."
+	done
+
 KyleRematchText:
+	ntag "KYLE:"
 	text "Ooooh!"
 	line "You did remember!"
 	done

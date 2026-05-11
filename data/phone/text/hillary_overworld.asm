@@ -1,9 +1,5 @@
 HillaryAskNumber1Text:
-;	text "I'd love to do"
-;	line "some more battle"
-;	cont "preparation and"
-;	roll "review with you…"
-
+	ntag "HILLARY:"
 	text "I'd love to have"
 	line "another battle"
 	cont "with you sometime…"
@@ -16,6 +12,7 @@ HillaryAskNumber1Text:
 	done
 
 HillaryAskNumber2Text:
+	ntag "HILLARY:"
 	text "Did you change"
 	line "your mind about"
 	cont "exchanging phone"
@@ -23,6 +20,7 @@ HillaryAskNumber2Text:
 	done
 
 HillaryNumberAcceptedText:
+	ntag "HILLARY:"
 	text "All right, I'm"
 	line "looking forward to"
 	cont "battling with you"
@@ -33,25 +31,19 @@ HillaryNumberAcceptedText:
 	done
 
 HillaryNumberDeclinedText:
-;	text "Hey, you should"
-;	line "listen when"
-;	cont "TEACHERs are talk-"
-;	cont "ing to you!"
-;	done
-
+	ntag "HILLARY:"
 	text "Oh, didn't you"
 	line "enjoy our battle?"
 	done
 
-HillaryRematchText:
-;	text "You're back."
-;
-;	para "To study?"
-;	
-;	para "Or to battle"
-;	line "#MON?"
-;	done
+HillaryPhoneFullText:
+	ntag "HILLARY:"
+	text "There's no room"
+	line "for my number."
+	done
 
+HillaryRematchText:
+	ntag "HILLARY:"
 	text "You're back!"
 
 	para "For a battle?"
