@@ -1,4 +1,5 @@
 WaltAskNumber1Text:
+	ntag "WALT:"
 	text "Mostly I breathe"
 	line "fire, but do you"
 	cont "want to exchange"
@@ -6,6 +7,7 @@ WaltAskNumber1Text:
 	done
 
 WaltAskNumber2Text:
+	ntag "WALT:"
 	text "Oh!"
 	
 	para "Would you like to"
@@ -20,6 +22,7 @@ WaltAskNumber2Text:
 	done
 
 WaltNumberAcceptedText:
+	ntag "WALT:"
 	text "All right!"
 
 	para "Don't worry. I'll"
@@ -32,18 +35,21 @@ WaltNumberAcceptedText:
 	done
 
 WaltNumberDeclinedText:
+	ntag "WALT:"
 	text "I knew you didn't"
 	line "particularly like"
 	cont "FIREBREATHERS…"
 	done
 
 WaltPhoneFullText:
+	ntag "WALT:"
 	text "Your phone list"
 	line "has no room for my"
 	cont "number."
 	done
 
 WaltRematchText:
+	ntag "WALT:"
 	text "I have been prac-"
 	line "ticing my fire-"
 	cont "breathing while"

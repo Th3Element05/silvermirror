@@ -1,4 +1,5 @@
 TorinAskNumber1Text:
+	ntag "TORIN:"
 	text "You know, I'm go-"
 	line "ing to practice a"
 	cont "whole bunch so we"
@@ -14,6 +15,7 @@ TorinAskNumber1Text:
 	done
 
 TorinAskNumber2Text:
+	ntag "TORIN:"
 	text "Hey!"
 	
 	para "You really want to"
@@ -22,6 +24,7 @@ TorinAskNumber2Text:
 	done
 
 TorinNumberAcceptedText:
+	ntag "TORIN:"
 	text "All right, regi-"
 	line "stration complete!"
 	
@@ -29,10 +32,18 @@ TorinNumberAcceptedText:
 	done
 
 TorinNumberDeclinedText:
+	ntag "TORIN:"
 	text "That's too bad…"
 	done
 
+TorinPhoneFullText:
+	ntag "TORIN:"
+	text "There's no room"
+	line "for my number."
+	done
+
 TorinRematchText:
+	ntag "TORIN:"
 	text "I've made good use"
 	line "of the time I've"
 	cont "been waiting and"

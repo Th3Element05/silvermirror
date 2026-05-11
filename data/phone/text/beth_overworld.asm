@@ -1,4 +1,5 @@
 BethAskNumber1Text:
+	ntag "BETH:"
 	text "It's been a while"
 	line "since I lost…"
 
@@ -19,6 +20,7 @@ BethAskNumber1Text:
 	done
 
 BethAskNumber2Text:
+	ntag "BETH:"
 	text "By challenging a"
 	line "tough trainer like"
 	cont "you, I think I can"
@@ -31,11 +33,13 @@ BethAskNumber2Text:
 	done
 
 BethNumberAcceptedText:
+	ntag "BETH:"
 	text "Let's battle again"
 	line "sometime!"
 	done
 
 BethNumberDeclinedText:
+	ntag "BETH:"
 	text "That's too bad…"
 
 	para "Let me know if you"
@@ -43,11 +47,13 @@ BethNumberDeclinedText:
 	done
 
 BethPhoneFullText:
+	ntag "BETH:"
 	text "Oh no. Your phone"
 	line "is out of memory."
 	done
 
 BethRematchText:
+	ntag "BETH:"
 	text "You sure kept me"
 	line "waiting! Let's go!"
 	done

@@ -1,4 +1,5 @@
 IrwinAskNumber1Text:
+	ntag "IRWIN:"
 	text "You're the best"
 	line "I've ever battled!"
 
@@ -18,11 +19,13 @@ IrwinAskNumber1Text:
 	done
 
 IrwinAskNumber2Text:
+	ntag "IRWIN:"
 	text "You will tell me"
 	line "your phone number?"
 	done
 
 IrwinNumberAcceptedText:
+	ntag "IRWIN:"
 	text "Wow! Gee, thanks!"
 	line "Now I can call you"
 	cont "anytime, whether"
@@ -32,6 +35,7 @@ IrwinNumberAcceptedText:
 	done
 
 IrwinNumberDeclinedText:
+	ntag "IRWIN:"
 	text "Oh, but…"
 	line "I'm not dangerous!"
 
@@ -42,6 +46,7 @@ IrwinNumberDeclinedText:
 	done
 
 IrwinPhoneFullText:
+	ntag "IRWIN:"
 	text "Your phone list is"
 	line "already full…"
 

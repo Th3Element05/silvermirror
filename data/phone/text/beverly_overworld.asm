@@ -1,4 +1,5 @@
 BeverlyAskNumber1Text:
+	ntag "BEVERLY:"
 	text "Your #MON is so"
 	line "cute and adorable!"
 
@@ -13,6 +14,7 @@ BeverlyAskNumber1Text:
 	done
 
 BeverlyAskNumber2Text:
+	ntag "BEVERLY:"
 	text "Your #MON is so"
 	line "cute and adorable!"
 
@@ -24,6 +26,7 @@ BeverlyAskNumber2Text:
 	done
 
 BeverlyNumberAcceptedText:
+	ntag "BEVERLY:"
 	text "To be honest, I"
 	line "want a PIKACHU."
 
@@ -32,6 +35,7 @@ BeverlyNumberAcceptedText:
 	done
 
 BeverlyNumberDeclinedText:
+	ntag "BEVERLY:"
 	text "Oh… That's"
 	line "disappointing…"
 
@@ -40,11 +44,13 @@ BeverlyNumberDeclinedText:
 	done
 
 BeverlyPhoneFullText:
+	ntag "BEVERLY:"
 	text "Oh? Your phone's"
 	line "memory is full."
 	done
 
 BeverlyGiftText:
+	ntag "BEVERLY:"
 	text "Oh? <PLAYER>? "
 	line "I waited here for"
 	cont "you. I brought you"
@@ -52,6 +58,7 @@ BeverlyGiftText:
 	done
 
 BeverlyPackFullText:
+	ntag "BEVERLY:"
 	text "Oh?"
 	line "You have no room."
 

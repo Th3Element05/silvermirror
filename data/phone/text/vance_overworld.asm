@@ -1,4 +1,5 @@
 VanceAskNumber1Text:
+	ntag "VANCE:"
 	text "You know, you are"
 	line "really strong."
 
@@ -13,6 +14,7 @@ VanceAskNumber1Text:
 	done
 
 VanceAskNumber2Text:
+	ntag "VANCE:"
 	text "I want to battle"
 	line "tough trainers as"
 	cont "often as I can!"
@@ -25,12 +27,14 @@ VanceAskNumber2Text:
 	done
 
 VanceNumberAcceptedText:
+	ntag "VANCE:"
 	text "Don't forget to"
 	line "come see me when I"
 	cont "challenge you!"
 	done
 
 VanceNumberDeclinedText:
+	ntag "VANCE:"
 	text "A bird-user friend"
 	line "isn't a bad thing"
 	cont "to have, I think…"
@@ -40,17 +44,20 @@ VanceNumberDeclinedText:
 	done
 
 VancePhoneFullText:
+	ntag "VANCE:"
 	text "Your phone's out"
 	line "of memory. Delete"
 	cont "a number for me!"
 	done
 
 VanceRematchText:
+	ntag "VANCE:"
 	text "Am I happy to see"
 	line "you! I won't lose!"
 	done
 
 VancePackFullText:
+	ntag "VANCE:"
 	text "Oh, too bad. You"
 	line "don't have room."
 
@@ -59,6 +66,7 @@ VancePackFullText:
 	done
 
 VanceRematchGiftText:
+	ntag "VANCE:"
 	text "You are really,"
 	line "really strong!"
 

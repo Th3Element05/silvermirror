@@ -1,9 +1,5 @@
 GinaAskNumber1Text:
-;	text "Whenever I see a"
-;	line "strong trainer, I"
-;	cont "want to be their"
-;	roll "cheerleader."
-;
+	ntag "GINA:"
 	text "When I'm on my"
 	line "walks, I like to"
 	cont "pick up leaves."
@@ -36,6 +32,7 @@ GinaAskNumber1Text:
 ;	done
 
 GinaAskNumber2Text:
+	ntag "GINA:"
 	text "If I find any"
 	line "LEAF STONEs, I'll"
 	cont "give them to you!"
@@ -45,22 +42,26 @@ GinaAskNumber2Text:
 	done
 
 GinaNumberAcceptedText:
+	ntag "GINA:"
 	text "I'll call as soon"
 	line "as I get anything!"
 	done
 
 GinaNumberDeclinedText:
+	ntag "GINA:"
 	text "Is that so? Well,"
 	line "I'll still be"
 	cont "rooting for you!"
 	done
 
 GinaPhoneFullText:
+	ntag "GINA:"
 	text "But your phone is"
 	line "all filled up!"
 	done
 
 GinaRematchText:
+	ntag "GINA:"
 	text "I've been waiting!"
 
 	para "I've gotten a bit"
@@ -68,6 +69,7 @@ GinaRematchText:
 	done
 
 GinaGiftText:
+	ntag "GINA:"
 	text "So you're finally"
 	line "here!"
 
@@ -76,6 +78,7 @@ GinaGiftText:
 	done
 
 GinaPackFullText:
+	ntag "GINA:"
 	text "Your PACK looks"
 	line "completely full."
 

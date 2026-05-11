@@ -1,4 +1,5 @@
 AidenAskNumber1Text:
+	ntag "AIDEN:"
 	text "Hey!"
 	
 	para "Trade numbers with"
@@ -6,6 +7,7 @@ AidenAskNumber1Text:
 	done
 
 AidenAskNumber2Text:
+	ntag "AIDEN:"
 	text "Hey, hey!"
 	
 	para "This time, let's"
@@ -14,6 +16,7 @@ AidenAskNumber2Text:
 	done
 
 AidenNumberAcceptedText:
+	ntag "AIDEN:"
 	text "Call me sometime!"
 
 	para "I'll call you"
@@ -21,10 +24,18 @@ AidenNumberAcceptedText:
 	done
 
 AidenNumberDeclinedText:
+	ntag "AIDEN:"
 	text "No way!"
 	done
 
+AidenPhoneFullText:
+	ntag "AIDEN:"
+	text "There's no room"
+	line "for my number."
+	done
+
 AidenRematchText:
+	ntag "AIDEN:"
 	text "Hey!"
 	
 	para "Do you think you"

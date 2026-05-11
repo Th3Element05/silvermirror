@@ -1,4 +1,5 @@
 KennyAskNumber1Text:
+	ntag "KENNY:"
 	text "The same opponent,"
 	line "the same #MON,"
 	cont "but the results"
@@ -13,6 +14,7 @@ KennyAskNumber1Text:
 	done
 
 KennyAskNumber2Text:
+	ntag "KENNY:"
 	text "I'd like to battle"
 	line "with you again."
 
@@ -21,12 +23,14 @@ KennyAskNumber2Text:
 	done
 
 KennyNumberAcceptedText:
+	ntag "KENNY:"
 	text "Once, I've gotten"
 	line "ready, I'll give"
 	cont "you a call!"
 	done
 
 KennyNumberDeclinedText:
+	ntag "KENNY:"
 	text "I see…"
 
 	para "Well, that's fine"
@@ -36,7 +40,14 @@ KennyNumberDeclinedText:
 	line "great outdoors!"
 	done
 
+KennyPhoneFullText:
+	ntag "KENNY:"
+	text "There's no room"
+	line "for my number."
+	done
+
 KennyRematchText:
+	ntag "KENNY:"
 	text "Hey, I still want-"
 	line "ed to battle you!"
 	done

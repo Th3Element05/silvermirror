@@ -1,4 +1,5 @@
 JoseAskNumber1Text:
+	ntag "JOSE:"
 	text "If my FEAROW"
 	line "sees anything"
 	cont "pretty, it goes"
@@ -18,6 +19,7 @@ JoseAskNumber1Text:
 	done
 
 JoseAskNumber2Text:
+	ntag "JOSE:"
 	text "Do you like pretty"
 	line "things?"
 
@@ -30,23 +32,27 @@ JoseAskNumber2Text:
 	done
 
 JoseNumberAcceptedText:
+	ntag "JOSE:"
 	text "I'll call you as"
 	line "soon as I get"
 	cont "something pretty."
 	done
 
 JoseNumberDeclinedText:
+	ntag "JOSE:"
 	text "You sure? Well,"
 	line "tell me if you"
 	cont "change your mind."
 	done
 
 JosePhoneFullText:
+	ntag "JOSE:"
 	text "Huh? Your phone"
 	line "list is full."
 	done
 
 JoseRematchText:
+	ntag "JOSE:"
 	text "Tweet! Tweeeet!"
 
 	para "Kept me waiting!"
@@ -54,6 +60,7 @@ JoseRematchText:
 	done
 
 JoseGiftText:
+	ntag "JOSE:"
 	text "Kept me waiting!"
 	line "Look, this is it!"
 
@@ -62,6 +69,7 @@ JoseGiftText:
 	done
 
 JosePackFullText:
+	ntag "JOSE:"
 	text "Huh? You don't"
 	line "have anywhere to"
 	cont "put this. Better"
