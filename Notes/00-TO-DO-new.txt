@@ -60,34 +60,27 @@ OftenFleeMons:
 
 DO
 
-finish checking all wild data vs evos-attacks
-do kanto first
-blue=encounter rates input
-orange=need to input rates and levels
-next, johto levels should be raised closer to endgame values.
+add ntags to all overworld text...
+TrainerHouseB1F... stuff?
 
-corsola(nite)=staryu is commented out (engine\overworld\wildmons.asm)
-due to corsola swarms.  explore options to restore this.
+jumpstd HappinessCheckScript ;in pokecenters?
+remove from elsewhere?, ensure ntag are appropriate
 
+ecruteak city FISHER, sailor instead?
 
-all phone trainers should have jumps for their text
-then can add ntag to all text
+additional starter-boost items in johto? 
+mystic water, charcoal, miracle seed.
+week siblings give second other boost items?
+
 
 what to use EVENT_CAUGHT_MISSINGNO for?
 
-charcoal kiln
+charcoal kiln 
 
-jumpstd HappinessCheckScript ;in pokecenters? oak's aide?
 
 lucky number show only in johto
 buena's password only in johto
 all of these only after expansion card, or after E4?
-
-only later trainers with evolved mons should have randomMon text?
-original pary use BADGE_LEVEL? or...
-use VAR_BADGES instead of FLYPOINT to set rematch?
-
-rematch text, check for having AnswerPhone first
 
 \gfx\stats\party_menu_ob.pal
 the skin tone in this might be better? > \gfx\overworld\npc_sprites.pal
@@ -163,7 +156,6 @@ reduce long animations? (*magnezone)
 
 go through data/trainers/parties levels/moves
 
-trades?
 
 
 
