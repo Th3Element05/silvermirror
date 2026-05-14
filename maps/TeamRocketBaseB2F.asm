@@ -129,6 +129,7 @@ TeamRocketBaseB2FMeetJanineAndKogaScene:
 	end
 
 NinjaJoninSeenText:
+	ntag "NINJA:"
 	text "Intruder!"
 
 	para "How did you get"
@@ -163,7 +164,6 @@ TeamRocketBaseB2FJanineQuestionText:
 	roll "den!@"
 
 	text_promptbutton
-;	ntag "────────"
 	ntag "JONIN:"
 	text "I do, JANINE."
 
@@ -212,7 +212,6 @@ TeamRocketBaseB2FJanineIntroText:
 	para "Impossible!@"
 
 	text_promptbutton
-;	ntag "────────"
 	ntag "KOGA:"
 	text "JANINE!"
 	done
@@ -256,7 +255,6 @@ TeamRocketBaseB2FJanineInterjectsText:
 	roll "outsider.@"
 
 	text_promptbutton
-;	ntag "────────"
 	ntag "KOGA:"
 	text "Yes, you're right."
 	line "Our clan has been"
@@ -274,7 +272,9 @@ TeamRocketBaseB2FJanineInterjectsText:
 	done
 
 TeamRocketBaseB2FPlayerExplainsText:
-	text "<……> <……>@"
+	ntag "<PLAYER>:"
+	text "<……> <……>"
+	line "<……> <……>@"
 
 	text_promptbutton
 	ntag "KOGA:"
@@ -316,7 +316,6 @@ TeamRocketBaseB2FKogaProposesChallengeText:
 	line "them.@"
 
 	text_promptbutton
-;	ntag "────────"
 	ntag "JANINE:"
 	text "If you say so, I"
 	line "will test them."
@@ -426,11 +425,13 @@ TrainerNinjaGenin:
 ;	done
 
 NinjaGeninBeatenText:
+	ntag "GENIN:"
 	text "I didn't stand a"
 	line "chance."
 	done
 
 NinjaGeninAfterBattleText:
+	ntag "NINJA:"
 	text "I want to get on"
 	line "the security team,"
 	cont "so I'm working my"
@@ -452,11 +453,13 @@ TrainerNinjaChunin:
 ;	done
 
 NinjaChuninBeatenText:
+	ntag "CHUNIN:"
 	text "I followed my"
 	line "orders."
 	done
 
 NinjaChuninAfterBattleText:
+	ntag "NINJA:"
 	text "I must train hard"
 	line "and challenge you"
 	cont "again to regain my"
@@ -471,6 +474,7 @@ TeamRocketBaseB2FNotWhoYouAreLookingForText:
 	done
 
 NinjaChallengeSeenText:
+	ntag "NINJA:"
 	text "We have orders to"
 	line "battle you if you"
 	cont "talk to us!"
@@ -489,6 +493,7 @@ TeamRocketBaseB2FBushNinjaScript:
 	end
 
 TeamRocketBaseB2FConcealmentText:
+	ntag "NINJA:"
 	text "Concealment is an"
 	line "important skill."
 
@@ -534,6 +539,7 @@ FinishSpeedNinja:
 	end
 
 TeamRocketBaseB2FSpeedText:
+	ntag "NINJA:"
 	text "Speed is an"
 	line "important skill."
 
@@ -543,6 +549,7 @@ TeamRocketBaseB2FSpeedText:
 TeamRocketBaseB2FKnowledgeNinjaScript:
 	jumptextfaceplayer TeamRocketBaseB2FKnowledgeText
 TeamRocketBaseB2FKnowledgeText:
+	ntag "NINJA:"
 	text "Knowledge is an"
 	line "important skill."
 
@@ -552,6 +559,7 @@ TeamRocketBaseB2FKnowledgeText:
 TeamRocketBaseB2FAccountantScript:
 	jumptextfaceplayer TeamRocketBaseB2FAccountantText
 TeamRocketBaseB2FAccountantText:
+	ntag "NINJA:"
 	text "Who am I?"
 
 	para "I'm just the"

@@ -63,11 +63,13 @@ SilphCo4FClerk:
 	end
 
 SilphCo4FClerkText:
+	ntag "MAN:"
 	text "Sssh! Can't you"
 	line "see I'm hiding?"
 	done
 
 SilphCo4FClerkSavedText:
+	ntag "MAN:"
 	text "Huh? TEAM ROCKET"
 	line "is gone?"
 	done
@@ -83,16 +85,19 @@ TrainerScientistMarc:
 	end
 
 ScientistMarcSeenText:
+	ntag "SCIENTIST:"
 	text "My #MON are my"
 	line "loyal soldiers!"
 	done
 
 ScientistMarcBeatenText:
+	ntag "MARC:"
 	text "Darn!"
 	line "You weak #MON!"
 	done
 
 ScientistMarcAfterBattleText:
+	ntag "SCIENTIST:"
 	text "The doors are"
 	line "electronically"
 	cont "locked! A CARD"
@@ -110,14 +115,17 @@ TrainerRocketGruntM19:
 	end
 
 GruntM19SeenText:
+	ntag "ROCKET:"
 	text "Intruder spotted!"
 	done
 
 GruntM19BeatenText:
+	ntag "ROCKET:"
 	text "Who are you?"
 	done
 
 GruntM19AfterBattleText:
+	ntag "ROCKET:"
 	text "I better tell the"
 	line "BOSS on 11F!"
 	done
@@ -133,16 +141,19 @@ TrainerRocketGruntM20:
 	end
 
 GruntM20SeenText:
+	ntag "ROCKET:"
 	text "TEAM ROCKET has"
 	line "taken command of"
 	cont "SILPH CO.!"
 	done
 
 GruntM20BeatenText:
+	ntag "ROCKET:"
 	text "Arrgh!"
 	done
 
 GruntM20AfterBattleText:
+	ntag "ROCKET:"
 	text "Fwahahaha!"
 	line "My BOSS has been"
 	cont "after this place!"

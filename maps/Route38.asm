@@ -62,6 +62,7 @@ TrainerLassConnie:
 	end
 
 LassConnieSeenText:
+	ntag "LASS:"
 	text "You seem to be"
 	line "good at #MON."
 
@@ -71,11 +72,13 @@ LassConnieSeenText:
 	done
 
 LassConnieBeatenText:
+	ntag "CONNIE:"
 	text "I see. So you can"
 	line "battle that way."
 	done
 
 LassConnieAfterBattleText:
+	ntag "LASS:"
 	text "I know something"
 	line "good!"
 
@@ -194,6 +197,7 @@ TrainerSailorHuey:
 	end
 
 SailorHueySeenText:
+	ntag "SAILOR:"
 	text "I've been over-"
 	line "seas, so I know"
 	cont "about all sorts of"
@@ -201,11 +205,13 @@ SailorHueySeenText:
 	done
 
 SailorHueyBeatenText:
+	ntag "HUEY:"
 	text "Your skill is"
 	line "world class!"
 	done
 
 SailorHueyAfterBattleText:
+	ntag "HUEY:"
 	text "All sorts of"
 	line "people around the"
 	cont "world live happily"
@@ -213,6 +219,7 @@ SailorHueyAfterBattleText:
 	done
 
 SailorHueyGiveProteinText:
+	ntag "HUEY:"
 	text "Man! You're as"
 	line "tough as ever!"
 
@@ -233,17 +240,20 @@ TrainerBeautyEmma:
 	end
 
 BeautyEmmaSeenText:
+	ntag "BEAUTY:"
 	text "Don't you think my"
 	line "#MON and I are"
 	cont "beautiful?"
 	done
 
 BeautyEmmaBeatenText:
+	ntag "EMMA:"
 	text "We drink MOOMOO"
 	line "MILK every day."
 	done
 
 BeautyEmmaAfterBattleText:
+	ntag "BEAUTY:"
 	text "MOOMOO MILK is"
 	line "good for beauty"
 	cont "and health."
@@ -260,6 +270,7 @@ TrainerBeautyCarol:
 	end
 
 BeautyCarolSeenText:
+	ntag "BEAUTY:"
 	text "Hi! Aren't you a"
 	line "cute trainer!"
 
@@ -268,11 +279,13 @@ BeautyCarolSeenText:
 	done
 
 BeautyCarolBeatenText:
+	ntag "CAROL:"
 	text "I'm glad I got to"
 	line "see your #MON!"
 	done
 
 BeautyCarolAfterBattleText:
+	ntag "BEAUTY:"
 	text "When I see #-"
 	line "MON, it seems to"
 	cont "soothe my nerves."
@@ -289,17 +302,20 @@ TrainerBirdKeeperJoe:
 	end
 
 BirdKeeperJoeSeenText:
+	ntag "BIRDKEEPER:"
 	text "Fly high into the"
 	line "sky, my beloved"
 	cont "bird #MON!"
 	done
 
 BirdKeeperJoeBeatenText:
+	ntag "JOE:"
 	text "I feel like just"
 	line "flying away now."
 	done
 
 BirdKeeperJoeAfterBattleText:
+	ntag "BIRDKEEPER:"
 	text "I plan to train in"
 	line "CIANWOOD CITY to"
 	cont "teach my #MON"

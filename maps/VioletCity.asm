@@ -187,6 +187,7 @@ VioletCity_NoFruit:
 VioletCityLassScript:
 	jumptextfaceplayer VioletCityLassText
 VioletCityLassText:
+	ntag "LASS:"
 	text "There are rumors"
 	line "that ghosts appear"
 	cont "in SPROUT TOWER"
@@ -200,6 +201,7 @@ VioletCityLassText:
 VioletCityGrampsScript:
 	jumptextfaceplayer VioletCityGrampsText
 VioletCityGrampsText:
+	ntag "GRAMPS:"
 	text "FALKNER, from the"
 	line "VIOLET #MON"
 	cont "GYM, is a fine"
@@ -217,6 +219,7 @@ VioletCityGrampsText:
 VioletCityYoungsterScript:
 	jumptextfaceplayer VioletCityYoungsterText
 VioletCityYoungsterText:
+	ntag "YOUNGSTER:"
 	text "There was an odd"
 	line "tree on ROUTE 32."
 

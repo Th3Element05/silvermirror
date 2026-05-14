@@ -125,16 +125,19 @@ TrainerFisherScott:
 	end
 
 FisherScottSeenText:
+	ntag "FISHER:"
 	text "Yeah! I got a"
 	line "bite, here!"
 	done
 
 FisherScottBeatenText:
+	ntag "SCOTT:"
 	text "Tch!"
 	line "Just a small fry!"
 	done
 
 FisherScottAfterBattleText:
+	ntag "FISHER:"
 	text "Hang on! My line's"
 	line "snagged!"
 	done
@@ -151,16 +154,19 @@ TrainerFisherHenry:
 	end
 
 FisherHenrySeenText:
+	ntag "FISHER:"
 	text "Be patient!"
 	line "Fishing is a"
 	cont "waiting game!"
 	done
 
 FisherHenryBeatenText:
+	ntag "HENRY:"
 	text "That one got away!"
 	done
 
 FisherHenryAfterBattleText:
+	ntag "FISHER:"
 	text "With a better ROD,"
 	line "I could catch"
 	cont "better #MON!"
@@ -178,15 +184,18 @@ TrainerFisherMarvin:
 	end
 
 FisherMarvinSeenText:
+	ntag "FISHER:"
 	text "The FISHING FOOL"
 	line "vs. #MON KID!"
 	done
 
 FisherMarvinBeatenText:
+	ntag "MARVIN:"
 	text "Too much!"
 	done
 
 FisherMarvinAfterBattleText:
+	ntag "FISHER:"
 	text "You beat me at"
 	line "#MON, but I'm"
 	cont "good at fishing!"
@@ -296,16 +305,19 @@ TrainerFisherTully:
 	end
 
 FisherTullySeenText:
+	ntag "FISHER:"
 	text "Let me demonstrate"
 	line "the power of the"
 	cont "#MON I caught!"
 	done
 
 FisherTullyBeatenText:
+	ntag "TULLY:"
 	text "It's not easy…"
 	done
 
 FisherTullyAfterBattleText:
+	ntag "TULLY:"
 	text "It's all right."
 	line "Losing doesn't"
 	cont "bug me any more."
@@ -323,15 +335,18 @@ TrainerGuitaristVincent:
 	end
 
 GuitaristVincentSeenText:
+	ntag "GUITARIST:"
 	text "Electricity is my"
 	line "specialty!"
 	done
 
 GuitaristVincentBeatenText:
+	ntag "VINCENT:"
 	text "Unplugged!"
 	done
 
 GuitaristVincentAfterBattleText:
+	ntag "GUITARIST:"
 	text "Water conducts"
 	line "electricity, so"
 	cont "you should zap"
@@ -350,16 +365,19 @@ TrainerFisherRaymond:
 	end
 
 FisherRaymondSeenText:
+	ntag "FISHER:"
 	text "You never know"
 	line "what you could"
 	cont "catch!"
 	done
 
 FisherRaymondBeatenText:
+	ntag "RAYMOND:"
 	text "Lost it!"
 	done
 
 FisherRaymondAfterBattleText:
+	ntag "FISHER:"
 	text "I catch MAGIKARP"
 	line "all the time, but"
 	cont "they're so weak!"
@@ -377,15 +395,18 @@ TrainerCamperTed:
 	end
 
 CamperTedSeenText:
+	ntag "CAMPER:"
 	text "Have you found a"
 	line "MOON STONE?"
 	done
 
 CamperTedBeatenText:
+	ntag "TED:"
 	text "Oww!"
 	done
 
 CamperTedAfterBattleText:
+	ntag "CAMPER:"
 	text "I could have made"
 	line "my #MON evolve"
 	cont "with MOON STONE!"

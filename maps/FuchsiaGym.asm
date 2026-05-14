@@ -148,6 +148,7 @@ TrainerNinjaKoa:
 	end
 
 NinjaKoaSeenText:
+	ntag "NINJA:"
 	text "I also study the"
 	line "way of the NINJA"
 	cont "with master KOGA!"
@@ -158,10 +159,12 @@ NinjaKoaSeenText:
 	done
 
 NinjaKoaBeatenText:
+	ntag "KOA:"
 	text "I'm defeated!"
 	done
 
 NinjaKoaAfterBattleText:
+	ntag "NINJA:"
 	text "I still have much"
 	line "to learn!"
 	done
@@ -177,6 +180,7 @@ TrainerNinjaKhai:
 	end
 
 NinjaKhaiSeenText:
+	ntag "NINJA:"
 	text "Stop right there!"
 
 	para "Our invisible"
@@ -185,11 +189,13 @@ NinjaKhaiSeenText:
 	done
 
 NinjaKhaiBeatenText:
+	ntag "KHAI:"
 	text "Whoa!"
 	line "He's got it!"
 	done
 
 NinjaKhaiAfterBattleText:
+	ntag "NINJA:"
 	text "You impressed me!"
 	line "Here's a hint!"
 
@@ -209,6 +215,7 @@ TrainerSageEzra:
 	end
 
 SageEzraSeenText:
+	ntag "SAGE:"
 	text "Master KOGA comes"
 	line "from a long line"
 	cont "of NINJAs!"
@@ -218,10 +225,12 @@ SageEzraSeenText:
 	done
 
 SageEzraBeatenText:
+	ntag "EZRA:"
 	text "Dropped my balls!"
 	done
 
 SageEzraAfterBattleText:
+	ntag "SAGE:"
 	text "Where there is"
 	line "light, there is"
 	cont "shadow!"
@@ -242,16 +251,19 @@ TrainerSageKylo:
 	end
 
 SageKyloSeenText:
+	ntag "SAGE:"
 	text "I want to become"
 	line "a NINJA, so I"
 	cont "joined this GYM!"
 	done
 
 SageKyloBeatenText:
+	ntag "KYLO:"
 	text "I'm done for!"
 	done
 
 SageKyloAfterBattleText:
+	ntag "SAGE:"
 	text "I will keep on"
 	line "training under"
 	cont "my NINJA MASTER,"
@@ -269,17 +281,20 @@ TrainerSageKoda:
 	end
 
 SageKodaSeenText:
+	ntag "SAGE:"
 	text "Let's see you"
 	line "beat my special"
 	cont "techniques!"
 	done
 
 SageKodaBeatenText:
+	ntag "KODA:"
 	text "You had me"
 	line "fooled!"
 	done
 
 SageKodaAfterBattleText:
+	ntag "SAGE:"
 	text "I like poison and"
 	line "sleep techniques,"
 	cont "since they linger"
@@ -297,6 +312,7 @@ TrainerSageMusa:
 	end
 
 SageMusaSeenText:
+	ntag "SAGE:"
 	text "Strength isn't"
 	line "the key for"
 	cont "#MON!"
@@ -309,11 +325,13 @@ SageMusaSeenText:
 	done
 
 SageMusaBeatenText:
+	ntag "MUSA:"
 	text "What?"
 	line "Extraordinary!"
 	done
 
 SageMusaAfterBattleText:
+	ntag "SAGE:"
 	text "So, you mix brawn"
 	line "with brains?"
 	cont "Good strategy!"
@@ -327,6 +345,7 @@ FuchsiaGymGuideScript:
 	jumptextfaceplayer FuchsiaGymGuideWinText
 
 FuchsiaGymGuideText:
+	ntag "GUIDE:"
 	text "Yo! CHAMP in the"
 	line "making!"
 
@@ -344,6 +363,7 @@ FuchsiaGymGuideText:
 	done
 
 FuchsiaGymGuideWinText:
+	ntag "GUIDE:"
 	text "It's amazing how"
 	line "NINJA can terrify"
 	cont "even now!"

@@ -223,17 +223,20 @@ TrainerRocketExecutiveM2:
 	end
 
 ExecutiveM2SeenText:
+	ntag "ROCKET:"
 	text "Halt! Do you have"
 	line "an appointment"
 	cont "with my BOSS?"
 	done
 
 ExecutiveM2BeatenText:
+	ntag "ROCKET:"
 	text "Gaah!"
 	line "Demolished!"
 	done
 
 ExecutiveM2AfterBattleText:
+	ntag "ROCKET:"
 	text "Watch your step,"
 	line "my BOSS likes his"
 	cont "#MON tough!"
@@ -250,16 +253,19 @@ TrainerRocketGruntM28:
 	end
 
 GruntM28SeenText:
+	ntag "ROCKET:"
 	text "Stop right there!"
 	line "Don't you move!"
 	done
 
 GruntM28BeatenText:
+	ntag "ROCKET:"
 	text "Don't…"
 	line "Please!"
 	done
 
 GruntM28AfterBattleText:
+	ntag "ROCKET:"
 	text "So, you want to"
 	line "see my BOSS?"
 	done

@@ -12,17 +12,20 @@ TrainerRocketGruntM12:
 	jumptextfaceplayer RocketGruntM12AfterBattleText
 
 RocketGruntM12SeenText:
+	ntag "ROCKET:"
 	text "We got word from"
 	line "upstairs that you"
 	cont "were coming!"
 	done
 
 RocketGruntM12BeatenText:
+	ntag "ROCKET:"
 	text "What?"
 	line "I lost? No!"
 	done
 
 RocketGruntM12AfterBattleText:
+	ntag "ROCKET:"
 	text "Go ahead and go!"
 	line "But, you need the"
 	cont "LIFT KEY to run"
@@ -36,17 +39,20 @@ TrainerRocketGruntM13:
 	jumptextfaceplayer RocketGruntM13AfterBattleText
 
 RocketGruntM13SeenText:
+	ntag "ROCKET:"
 	text "Stop meddling in"
 	line "TEAM ROCKET's"
 	cont "affairs!"
 	done
 
 RocketGruntM13BeatenText:
+	ntag "ROCKET:"
 	text "Oof!"
 	line "Taken down!"
 	done
 
 RocketGruntM13AfterBattleText:
+	ntag "ROCKET:"
 	text "SILPH SCOPE?"
 	line "The machine the"
 	cont "BOSS stole. It's"

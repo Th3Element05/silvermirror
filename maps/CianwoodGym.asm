@@ -11,6 +11,7 @@ GymClosedBlackbeltScript:
 	jumptextfaceplayer CianwoodGymClosedBlackbeltText
 
 CianwoodGymClosedBlackbeltText:
+	ntag "BLACKBELT:"
 	text "There was a land-"
 	line "slide on Route 42."
 
@@ -254,6 +255,7 @@ TrainerBlackbeltLee:
 	end
 
 BlackbeltLeeSeenText:
+	ntag "BLACKBELT:"
 	text "My #MON and I"
 	line "are bound togeth-"
 	cont "er by friendship."
@@ -263,10 +265,12 @@ BlackbeltLeeSeenText:
 	done
 
 BlackbeltLeeBeatenText:
+	ntag "LEE:"
 	text "This isn't real!"
 	done
 
 BlackbeltLeeAfterText:
+	ntag "BLACKBELT:"
 	text "You seem to have a"
 	line "strong bond with"
 	cont "your #MON too!"
@@ -283,15 +287,18 @@ TrainerBlackbeltLao:
 	end
 
 BlackbeltLaoSeenText:
+	ntag "BLACKBELT:"
 	text "We martial artists"
 	line "fear nothing!"
 	done
 
 BlackbeltLaoBeatenText:
+	ntag "LAO:"
 	text "That's shocking!"
 	done
 
 BlackbeltLaoAfterText:
+	ntag "BLACKBELT:"
 	text "Fighting #MON"
 	line "are afraid of"
 	cont "psychics…"
@@ -315,6 +322,7 @@ CianwoodGymGuideScript:
 	end
 
 CianwoodGymGuideText:
+	ntag "GUIDE:"
 	text "The GYM LEADER"
 	cont "here uses the"
 	roll "fighting-type."
@@ -330,6 +338,7 @@ CianwoodGymGuideText:
 	done
 
 CianwoodGymGuideWinText:
+	ntag "GUIDE:"
 	text "<PLAYER>! You won!"
 	line "I could tell by"
 	cont "looking at you!"

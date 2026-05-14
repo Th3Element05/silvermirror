@@ -23,6 +23,7 @@ DarkCaveBlackthornEntrancePharmacistScript:
 	end
 
 DarkCaveBlackthornEntrancePharmacistText1:
+	ntag "???:"
 	text "Whoa! You startled"
 	line "me there!"
 
@@ -44,6 +45,7 @@ DarkCaveBlackthornEntrancePharmacistText1:
 	done
 
 DarkCaveBlackthornEntrancePharmacistText2:
+	ntag "???:"
 	text "BLACKGLASSES ups"
 	line "the power of dark-"
 	cont "type moves."

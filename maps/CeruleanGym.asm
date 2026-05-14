@@ -138,6 +138,7 @@ TrainerSwimmerMHarold:
 	end
 
 SwimmerMHaroldSeenText:
+	ntag "SWIMMER:"
 	text "Splash!"
 
 	para "I'm first up!"
@@ -145,11 +146,13 @@ SwimmerMHaroldSeenText:
 	done
 
 SwimmerMHaroldBeatenText:
+	ntag "HAROLD:"
 	text "That"
 	line "can't be!"
 	done
 
 SwimmerMHaroldAfterBattleText:
+	ntag "SWIMMER:"
 	text "MISTY is going to"
 	line "keep improving!"
 
@@ -168,6 +171,7 @@ TrainerPicnickerSophia:
 	end
 
 PicnickerSophiaSeenText:
+	ntag "PICNICKER:"
 	text "I'm more than good"
 	line "enough for you!"
 
@@ -175,11 +179,13 @@ PicnickerSophiaSeenText:
 	done
 
 PicnickerSophiaBeatenText:
+	ntag "SOPHIA:"
 	text "You"
 	line "overwhelmed me!"
 	done
 
 PicnickerSophiaAfterBattleText:
+	ntag "PICNICKER:"
 	text "You have to face"
 	line "other trainers to"
 	cont "find out how good"
@@ -194,6 +200,7 @@ CeruleanGymGuideScript:
 	jumptextfaceplayer CeruleanGymGuideWinText
 
 CeruleanGymGuideText:
+	ntag "GUIDE:"
 	text "Yo! CHAMP in the"
 	line "making!"
 
@@ -212,6 +219,7 @@ CeruleanGymGuideText:
 	done
 
 CeruleanGymGuideWinText:
+	ntag "GUIDE:"
 	text "You beat MISTY!"
 	line "What'd I tell ya?"
 

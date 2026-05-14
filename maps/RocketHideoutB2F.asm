@@ -12,16 +12,19 @@ TrainerRocketGruntM11:
 	jumptextfaceplayer RocketGruntM11AfterBattleText
 
 RocketGruntM11SeenText:
+	ntag "ROCKET:"
 	text "BOSS said you can"
 	line "see GHOSTs with"
 	cont "the SILPH SCOPE!"
 	done
 
 RocketGruntM11BeatenText:
+	ntag "ROCKET:"
 	text "I surrender!"
 	done
 
 RocketGruntM11AfterBattleText:
+	ntag "ROCKET:"
 	text "The TEAM ROCKET"
 	line "HIDEOUT has four"
 	cont "basement floors."

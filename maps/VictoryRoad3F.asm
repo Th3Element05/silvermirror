@@ -78,17 +78,20 @@ TrainerCooltrainerFAnnie:
 	end
 
 CooltrainerFAnnieSeenText:
+	ntag "COOLTRAINER:"
 	text "Trainers live to"
 	line "seek stronger"
 	cont "opponents!"
 	done
 
 CooltrainerFAnnieBeatenText:
+	ntag "ANNIE:"
 	text "Oh!"
 	line "So strong!"
 	done
 
 CooltrainerFAnnieAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "By fighting tough"
 	line "battles, you get"
 	cont "stronger!"
@@ -105,16 +108,19 @@ TrainerCooltrainerMLevi:
 	end
 
 CooltrainerMLeviSeenText:
+	ntag "COOLTRAINER:"
 	text "I heard rumors of"
 	line "a child prodigy!"
 	done
 
 CooltrainerMLeviBeatenText:
-	text "The rumors"
-	line "were true!"
+	ntag "LEVI:"
+	text "The rumors were"
+	line "true!"
 	done
 
 CooltrainerMLeviAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "You beat GIOVANNI"
 	line "of TEAM ROCKET?"
 	done
@@ -130,15 +136,18 @@ TrainerCooltrainerFFran:
 	end
 
 CooltrainerFFranSeenText:
+	ntag "COOLTRAINER:"
 	text "I'll show you just"
 	line "how good you are!"
 	done
 
 CooltrainerFFranBeatenText:
+	ntag "FRAN:"
 	text "I'm furious!"
 	done
 
 CooltrainerFFranAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "You showed me just"
 	line "how good I was!"
 	done
@@ -154,16 +163,19 @@ TrainerCooltrainerMRyan:
 	end
 
 CooltrainerMRyanSeenText:
+	ntag "COOLTRAINER:"
 	text "Only the chosen"
 	line "can pass here!"
 	done
 
 CooltrainerMRyanBeatenText:
+	ntag "RYAN:"
 	text "I don't believe"
 	line "it!"
 	done
 
 CooltrainerMRyanAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "All trainers here"
 	line "are headed to the"
 	cont "#MON LEAGUE!"

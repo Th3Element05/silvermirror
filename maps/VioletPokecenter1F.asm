@@ -148,11 +148,7 @@ VioletPokecenterNurse:
 VioletPokecenter1FGameboyKidScript:
 	jumptextfaceplayer VioletPokecenter1FGameboyKidText
 VioletPokecenter1FGameboyKidText:
-;	text "A guy named BILL"
-;	line "made the #MON"
-;	cont "PC storage system."
-;	done
-;VioletPokecenterFarawayLinkText: ; unreferenced
+	ntag "KID:"
 	text "I've been thinking"
 	line "it'd be great to"
 	cont "be able to link up"
@@ -164,17 +160,7 @@ VioletPokecenter1FGameboyKidText:
 VioletPokecenter1FGentlemanScript:
 	jumptextfaceplayer VioletPokecenter1FGentlemanText
 VioletPokecenter1FGentlemanText:
-;	text "It was around"
-;	line "three years ago."
-;
-;	para "TEAM ROCKET was up"
-;	line "to no good with"
-;	cont "#MON."
-;
-;	para "But justice pre-"
-;	line "vailed--a young"
-;	cont "kid broke 'em up."
-;	done
+	ntag "GENTLEMAN:"
 	text "Have you heard the"
 	line "news from KANTO?"
 
@@ -192,15 +178,11 @@ VioletPokecenter1FGentlemanText:
 VioletPokecenter1FYoungsterScript:
 	jumptextfaceplayer VioletPokecenter1FYoungsterText
 VioletPokecenter1FYoungsterText:
+	ntag "YOUNGSTER:"
 	text "#MON are smart."
 	line "They won't obey a"
 	cont "trainer they don't"
 	roll "respect."
-
-;	para "Without the right"
-;	line "GYM BADGEs, they"
-;	cont "will just do as"
-;	roll "they please."
 	done
 
 VioletPokecenter1F_MapEvents:

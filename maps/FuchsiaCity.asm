@@ -156,6 +156,7 @@ FuchsiaCityKangaskhanText:
 FuchsiaCityYoungster:
 	jumptextfaceplayer FuchsiaCityYoungsterText
 FuchsiaCityYoungsterText:
+	ntag "YOUNGSTER:"
 	text "Did you try the"
 	line "SAFARI ZONE? Some"
 	cont "#MON can only"
@@ -174,6 +175,7 @@ FuchsiaCityErikText:
 FuchsiaCityGramps:
 	jumptextfaceplayer FuchsiaCityGrampsText
 FuchsiaCityGrampsText:
+	ntag "GRAMPS:"
 	text "The SAFARI ZONE"
 	line "is for catching"
 	cont "#MON!"

@@ -12,6 +12,7 @@ CeladonMansion1F_MapScripts:
 CeladonMansionManager:
 	jumptextfaceplayer CeladonMansionManagerText
 CeladonMansionManagerText:
+	ntag "MANAGER:"
 	text "My dear #MON"
 	line "keep me company,"
 	cont "so I don't ever"

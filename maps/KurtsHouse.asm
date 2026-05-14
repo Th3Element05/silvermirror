@@ -521,6 +521,7 @@ KurtsGranddaughterHelpScript:
 	end
 
 KurtsGranddaughterLonelyText:
+	ntag "GIRL:"
 	text "Grandpa's out…"
 
 	para "But I still have"
@@ -529,6 +530,7 @@ KurtsGranddaughterLonelyText:
 	done
 
 KurtsGranddaughterDadText:
+	ntag "GIRL:"
 	text "My dad works at"
 	line "SILPH researching"
 	cont "#BALLs."
@@ -539,20 +541,23 @@ KurtsGranddaughterDadText:
 	done
 
 KurtsGranddaughterHelpText:
+	ntag "GIRL:"
 	text "I get to help"
 	line "Grandpa now!"
 
 	para "We'll make good"
-	line "BALLs for you, so"
-	cont "please wait!"
+	line "#BALLs for you,"
+	cont "so please wait!"
 	done
 
 KurtsGranddaughterFunText:
+	ntag "GIRL:"
 	text "It's fun to make"
-	line "BALLs!"
+	line "#BALLs!"
 	done
 
 KurtsGranddaughterGSBallText:
+	ntag "GIRL:"
 	text "Grandpa's checking"
 	line "a BALL right now."
 

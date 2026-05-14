@@ -61,17 +61,20 @@ TrainerSuperNerdPat:
 	end
 
 SuperNerdPatSeenText:
+	ntag "SUPERNERD:"
 	text "You look good at"
 	line "#MON, but"
 	cont "how's your chem?"
 	done
 
 SuperNerdPatBeatenText:
+	ntag "PAT:"
 	text "Ow!"
 	line "Meltdown!"
 	done
 
 SuperNerdPatAfterBattleText:
+	ntag "SUPERNERD:"
 	text "I am better at"
 	line "school than this!"
 	done
@@ -88,16 +91,19 @@ TrainerPokefanMJoshua:
 	end
 
 PokefanMJoshuaSeenText:
+	ntag "#FAN:"
 	text "Nihihi! Would you"
 	line "like to battle my"
 	cont "POLIWAG gang?"
 	done
 
 PokefanMJoshuaBeatenText:
+	ntag "JOSHUA:"
 	text "PO- POLIWAG!"
 	done
 
 PokefanMJoshuaAfterBattleText:
+	ntag "#FAN:"
 	text "You look like you"
 	line "have many #MON,"
 	cont "but POLIWAG is"
@@ -208,15 +214,18 @@ TrainerLassDana:
 	end
 
 LassDanaSeenText:
+	ntag "LASS:"
 	text "I like NIDORAN, so"
 	line "I collect them!"
 	done
 
 LassDanaBeatenText:
+	ntag "DANA:"
 	text "Why? Why??"
 	done
 
 LassDanaAfterBattleText:
+	ntag "DANA:"
 	text "When #MON grow"
 	line "up they get ugly!"
 	cont "They shouldn't"
@@ -235,16 +244,19 @@ TrainerSuperNerdTom:
 	end
 
 SuperNerdTomSeenText:
+	ntag "SUPERNERD:"
 	text "School is fun, but"
 	line "so are #MON."
 	done
 
 SuperNerdTomBeatenText:
-	text "I'll"
-	line "stay with school."
+	ntag "TOM:"
+	text "I'll stay with"
+	line "school."
 	done
 
 SuperNerdTomAfterBattleText:
+	ntag "SUPERNERD:"
 	text "We're stuck here"
 	line "because of the"
 	cont "gates at SAFFRON."
@@ -262,15 +274,18 @@ TrainerLassSarah:
 	end
 
 LassSarahSeenText:
+	ntag "LASS:"
 	text "MEOWTH is so cute,"
 	line "meow, meow, meow!"
 	done
 
 LassSarahBeatenText:
+	ntag "SARAH:"
 	text "Meow!"
 	done
 
 LassSarahAfterBattleText:
+	ntag "LASS:"
 	text "I think PIDGEY"
 	line "and RATTATA"
 	cont "are cute too!"
@@ -288,17 +303,19 @@ TrainerLassChloe:
 	end
 
 LassChloeSeenText:
+	ntag "LASS:"
 	text "We must look"
 	line "silly standing"
 	cont "here like this!"
 	done
 
 LassChloeBeatenText:
-	text "Look what"
-	line "you did!"
+	ntag "CHLOE:"
+	text "Look what you did!"
 	done
 
 LassChloeAfterBattleText:
+	ntag "LASS:"
 	text "SAFFRON's gate"
 	line "keeper won't let"
 	cont "us through."
@@ -317,16 +334,18 @@ TrainerSuperNerdShawn:
 	end
 
 SuperNerdShawnSeenText:
+	ntag "SUPERNERD:"
 	text "You need strategy"
 	line "to win at this!"
 	done
 
 SuperNerdShawnBeatenText:
-	text "It's"
-	line "not logical!"
+	ntag "SHAWN:"
+	text "It's not logical!"
 	done
 
 SuperNerdShawnAfterBattleText:
+	ntag "SUPERNERD:"
 	text "Go with GRIMER"
 	line "first… and…"
 	cont "…and… then…"
@@ -344,17 +363,20 @@ TrainerPokefanMTrevor:
 	end
 
 PokefanMTrevorSeenText:
+	ntag "#FAN:"
 	text "I'm going to shop"
 	line "at the DEPT.STORE"
 	cont "and then…"
 	done
 
 PokefanMTrevorBeatenText:
+	ntag "TREVOR:"
 	text "What was I going"
 	line "to do?"
 	done
 
 PokefanMTrevorAfterBattleText:
+	ntag "#FAN:"
 	text "Oh, yes! I have to"
 	line "get my #MON out"
 	cont "of DAY-CARE!"
@@ -372,12 +394,14 @@ TrainerLassNora:
 	end
 
 LassNoraSeenText:
+	ntag "LASS:"
 	text "What's a cute,"
 	line "round and fluffy"
 	cont "#MON?"
 	done
 
 LassNoraBeatenText:
+	ntag "NORA:"
 	text "Stop!"
 
 	para "Don't be so mean"
@@ -385,6 +409,7 @@ LassNoraBeatenText:
 	done
 
 LassNoraAfterBattleText:
+	ntag "LASS:"
 	text "I heard that"
 	line "CLEFAIRY evolves"
 	cont "when it's exposed"

@@ -32,14 +32,14 @@ VictoryRoadGateBadgeCheckScript:
 	end
 
 VictoryRoadGateBadgeCheckText:
-;	ntag "OFFICER:"
+	ntag "OFFICER:"
 	text "Only trainers who"
 	line "have proven them-"
 	cont "selves may pass."
 	done
 
 VictoryRoadGateNotEnoughBadgesText:
-;	ntag "OFFICER:"
+	ntag "OFFICER:"
 	text "You don't have"
 	line "enough GYM BADGEs."
 
@@ -50,7 +50,7 @@ VictoryRoadGateNotEnoughBadgesText:
 	done
 
 VictoryRoadGateEightBadgesText:
-;	ntag "OFFICER:"
+	ntag "OFFICER:"
 	text "Oh! The eight"
 	line "BADGEs of KANTO!"
 
@@ -65,6 +65,7 @@ VictoryRoadGateStepDownMovement:
 VictoryRoadGateBadgeOfficerScript:
 	jumptextfaceplayer VictoryRoadGateOfficerText
 VictoryRoadGateOfficerText:
+	ntag "OFFICER:"
 	text "VICTORY ROAD is"
 	line "full of tough"
 	cont "trainers."
@@ -78,6 +79,7 @@ VictoryRoadGateOfficerText:
 VictoryRoadGateRightOfficerScript:
 	jumptextfaceplayer VictoryRoadGateRightOfficerText
 VictoryRoadGateRightOfficerText:
+	ntag "OFFICER:"
 	text "Off to the #MON"
 	line "LEAGUE, are you?"
 
@@ -95,6 +97,7 @@ VictoryRoadGateBlackBeltScript1:
 	jumptext VictoryRoadGateLeftBlackBeltChampionText
 
 VictoryRoadGateLeftBlackBeltFirstText:
+	ntag "BLACKBELT:"
 	text "This way leads to"
 	line "MT.SILVER."
 
@@ -104,6 +107,7 @@ VictoryRoadGateLeftBlackBeltFirstText:
 	done
 
 VictoryRoadGateLeftBlackBeltChampionText:
+	ntag "BLACKBELT:"
 	text "This way leads to"
 	line "MT.SILVER."
 
@@ -116,6 +120,7 @@ VictoryRoadGateLeftBlackBeltChampionText:
 VictoryRoadGateBlackBeltScript2:
 	jumptextfaceplayer VictoryRoadGateLeftBlackBeltAllowedText
 VictoryRoadGateLeftBlackBeltAllowedText:
+	ntag "BLACKBELT:"
 	text "LANCE has granted"
 	line "you permission to"
 	cont "enter MT.SILVER."

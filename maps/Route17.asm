@@ -20,15 +20,18 @@ TrainerJugglerDustin:
 	jumptextfaceplayer JugglerDustinAfterBattleText
 
 JugglerDustinSeenText:
+	ntag "JUGGLER:"
 	text "What do you want,"
 	line "kiddo?"
 	done
 
 JugglerDustinBeatenText:
+	ntag "DUSTIN:"
 	text "Whoo!"
 	done
 
 JugglerDustinAfterBattleText:
+	ntag "JUGGLER:"
 	text "I could belly-"
 	line "bump you outta"
 	cont "here!"
@@ -42,15 +45,18 @@ TrainerBikerMarkey:
 	jumptextfaceplayer BikerMarkeyAfterBattleText
 
 BikerMarkeySeenText:
+	ntag "BIKER:"
 	text "You heading to"
 	line "FUCHSIA?"
 	done
 
 BikerMarkeyBeatenText:
+	ntag "MARKEY:"
 	text "Crash and burn!"
 	done
 
 BikerMarkeyAfterBattleText:
+	ntag "BIKER:"
 	text "I love racing"
 	line "downhill!"
 	done
@@ -63,15 +69,18 @@ TrainerJugglerLyle:
 	jumptextfaceplayer JugglerLyleAfterBattleText
 
 JugglerLyleSeenText:
+	ntag "JUGGLER:"
 	text "There's no money"
 	line "in fighting kids!"
 	done
 
 JugglerLyleBeatenText:
+	ntag "LYLE:"
 	text "Burned out!"
 	done
 
 JugglerLyleAfterBattleText:
+	ntag "JUGGLER:"
 	text "Good stuff is"
 	line "lying around on"
 	cont "CYCLING ROAD!"
@@ -85,15 +94,18 @@ TrainerBikerRiley:
 	jumptextfaceplayer BikerRileyAfterBattleText
 
 BikerRileySeenText:
+	ntag "BIKER:"
 	text "We're BIKERs!"
 	line "Highway stars!"
 	done
 
 BikerRileyBeatenText:
+	ntag "RILEY:"
 	text "Smoked!"
 	done
 
 BikerRileyAfterBattleText:
+	ntag "BIKER:"
 	text "Are you looking"
 	line "for adventure?"
 	done
@@ -106,15 +118,18 @@ TrainerBikerTheron:
 	jumptextfaceplayer BikerTheronAfterBattleText
 
 BikerTheronSeenText:
+	ntag "BIKER:"
 	text "Let VOLTORB"
 	line "electrify you!"
 	done
 
 BikerTheronBeatenText:
+	ntag "THERON:"
 	text "Grounded out!"
 	done
 
 BikerTheronAfterBattleText:
+	ntag "BIKER:"
 	text "I got my VOLTORB"
 	line "at the abandoned"
 	cont "POWER PLANT."
@@ -128,15 +143,18 @@ TrainerJugglerDarius:
 	jumptextfaceplayer JugglerDariusAfterBattleText
 
 JugglerDariusSeenText:
+	ntag "JUGGLER:"
 	text "My #MON won't"
 	line "evolve! Why?"
 	done
 
 JugglerDariusBeatenText:
+	ntag "DARIUS:"
 	text "Why, you!"
 	done
 
 JugglerDariusAfterBattleText:
+	ntag "JUGGLER:"
 	text "Maybe some #MON"
 	line "need element"
 	cont "STONEs to evolve."
@@ -150,16 +168,19 @@ TrainerJugglerJulien:
 	jumptextfaceplayer JugglerJulienAfterBattleText
 
 JugglerJulienSeenText:
+	ntag "JUGGLER:"
 	text "I need a little"
 	line "exercise!"
 	done
 
 JugglerJulienBeatenText:
+	ntag "JULIEN:"
 	text "Whew!"
 	line "Good workout!"
 	done
 
 JugglerJulienAfterBattleText:
+	ntag "JUGGLER:"
 	text "I'm sure I lost"
 	line "weight there!"
 	done
@@ -247,15 +268,18 @@ Route17Rematch:
 
 
 BikerEoinSeenText:
+	ntag "BIKER:"
 	text "Nice BIKE!"
 	line "How's it handle?"
 	done
 
 BikerEoinBeatenText:
+	ntag "EOIN:"
 	text "Shoot!"
 	done
 
 BikerEoinAfterBattleText:
+	ntag "EOIN:"
 	text "The slope makes"
 	line "it hard to steer!"
 	done
@@ -268,14 +292,17 @@ TrainerJugglerMaximo:
 	jumptextfaceplayer JugglerMaximoAfterBattleText
 
 JugglerMaximoSeenText:
+	ntag "JUGGLER:"
 	text "Be a rebel!"
 	done
 
 JugglerMaximoBeatenText:
+	ntag "MAXIMO:"
 	text "Aaaargh!"
 	done
 
 JugglerMaximoAfterBattleText:
+	ntag "JUGGLER:"
 	text "Be ready to fight"
 	line "for your beliefs!"
 	done
@@ -288,15 +315,18 @@ TrainerBikerNolan:
 	jumptextfaceplayer BikerNolanAfterBattleText
 
 BikerNolanSeenText:
+	ntag "BIKER:"
 	text "Get lost kid!"
 	line "I'm bushed!"
 	done
 
 BikerNolanBeatenText:
+	ntag "NOLAN:"
 	text "Are you satisfied?"
 	done
 
 BikerNolanAfterBattleText:
+	ntag "BIKER:"
 	text "I need to catch"
 	line "a few Zs!"
 	done

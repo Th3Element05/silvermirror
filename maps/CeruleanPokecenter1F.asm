@@ -14,6 +14,7 @@ CeruleanPokecenter1FReceptionistScript:
 CeruleanPokecenter1FBenchGuyScript:
 	jumptext CeruleanPokecenter1FBenchGuyText
 CeruleanPokecenter1FBenchGuyText:
+	ntag "GUY:"
 	text "BILL has lots of"
 	line "#MON!"
 
@@ -24,6 +25,7 @@ CeruleanPokecenter1FBenchGuyText:
 CeruleanPokecenter1FGentlemanScript:
 	jumptextfaceplayer CeruleanPokecenter1FGentlemanText
 CeruleanPokecenter1FGentlemanText:
+	ntag "GENTLEMAN:"
 	text "Have you heard"
 	line "about BILL?"
 
@@ -42,6 +44,7 @@ CeruleanPokecenter1FGentlemanText:
 CeruleanPokecenter1FSuperNerdScript:
 	jumptextfaceplayer CeruleanPokecenter1FSuperNerdText
 CeruleanPokecenter1FSuperNerdText:
+	ntag "SUPERNERD:"
 	text "That BILL!"
 
 	para "I heard that"

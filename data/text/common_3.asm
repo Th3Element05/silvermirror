@@ -1456,11 +1456,13 @@ _KnowsMoveText::
 	prompt
 
 _MoveKnowsOneText::
+	ntag "GRAMPS:"
 	text "That #MON knows"
 	line "only one move."
 	done
 
 _AskDeleteMoveText::
+	ntag "GRAMPS:"
 	text "Oh, make it forget"
 	line "@"
 	text_ram wStringBuffer1
@@ -1468,26 +1470,31 @@ _AskDeleteMoveText::
 	done
 
 _DeleterForgotMoveText::
+	ntag "GRAMPS:"
 	text "Done! Your #MON"
 	line "forgot the move."
 	done
 
 _DeleterEggText::
+	ntag "GRAMPS:"
 	text "An EGG doesn't"
 	line "know any moves!"
 	done
 
 _DeleterNoComeAgainText::
+	ntag "GRAMPS:"
 	text "No? Come visit me"
 	line "again."
 	done
 
 _DeleterAskWhichMoveText::
+	ntag "GRAMPS:"
 	text "Which move should"
 	line "it forget, then?"
 	prompt
 
 _DeleterIntroText::
+	ntag "GRAMPS:"
 	text "Um… Oh, yes, I'm"
 	line "the MOVE DELETER."
 
@@ -1499,6 +1506,7 @@ _DeleterIntroText::
 	done
 
 _DeleterAskWhichMonText::
+	ntag "GRAMPS:"
 	text "Which #MON?"
 	prompt
 

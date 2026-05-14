@@ -8,6 +8,7 @@ GoldenrodDeptStore1F_MapScripts:
 GoldenrodDeptStore1FReceptionistScript:
 	jumptextfaceplayer GoldenrodDeptStore1FReceptionistText
 GoldenrodDeptStore1FReceptionistText:
+	ntag "RECEPTIONIST:"
 	text "Welcome to GOLDEN-"
 	line "ROD DEPT.STORE."
 	done
@@ -15,6 +16,7 @@ GoldenrodDeptStore1FReceptionistText:
 GoldenrodDeptStore1FPokefanFScript:
 	jumptextfaceplayer GoldenrodDeptStore1FPokefanFText
 GoldenrodDeptStore1FPokefanFText:
+	ntag "WOMAN:"
 	text "I'm raring to shop"
 	line "again today!"
 	done
@@ -22,6 +24,7 @@ GoldenrodDeptStore1FPokefanFText:
 GoldenrodDeptStore1FBugCatcherScript:
 	jumptextfaceplayer GoldenrodDeptStore1FBugCatcherText
 GoldenrodDeptStore1FBugCatcherText:
+	ntag "BOY:"
 	text "Mom's good at"
 	line "bargain hunting."
 

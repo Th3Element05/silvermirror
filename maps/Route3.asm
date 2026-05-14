@@ -16,17 +16,20 @@ TrainerYoungsterAsher:
 	end
 
 YoungsterAsherSeenText:
+	ntag "YOUNGSTER:"
 	text "Hi! I like shorts!"
 	line "They're comfy and"
 	cont "easy to wear!"
 	done
 
 YoungsterAsherBeatenText:
+	ntag "ASHER:"
 	text "I don't believe"
 	line "it!"
 	done
 
 YoungsterAsherAfterBattleText:
+	ntag "YOUNGSTER:"
 	text "Are you storing"
 	line "your #MON on"
 	cont "PC? Each BOX can"
@@ -44,16 +47,19 @@ TrainerLassBridget:
 	end
 
 LassBridgetSeenText:
+	ntag "LASS:"
 	text "That look you"
 	line "gave me, it's so"
 	cont "intriguing!"
 	done
 
 LassBridgetBeatenText:
+	ntag "BRIDGET:"
 	text "Be nice!"
 	done
 
 LassBridgetAfterBattleText:
+	ntag "LASS:"
 	text "Avoid fights by"
 	line "not letting"
 	cont "people see you!"
@@ -70,17 +76,20 @@ TrainerBugCatcherAl:
 	end
 
 BugCatcherAlSeenText:
+	ntag "BUGCATCHER:"
 	text "Are you a trainer?"
 	line "Let's fight!"
 	done
 
 BugCatcherAlBeatenText:
+	ntag "AL:"
 	text "If I had new"
 	line "#MON I would"
 	cont "have won!"
 	done
 
 BugCatcherAlAfterBattleText:
+	ntag "BUGCATCHER:"
 	text "If a #MON BOX"
 	line "on the PC gets"
 	cont "full, just switch"
@@ -98,17 +107,20 @@ TrainerBugCatcherJosh:
 	end
 
 BugCatcherJoshSeenText:
+	ntag "BUGCATCHER:"
 	text "Hey! I just caught"
 	line "new #MON in"
 	cont "VIRIDIAN FOREST!"
 	done
 
 BugCatcherJoshBeatenText:
+	ntag "JOSH:"
 	text "I should train"
 	line "some more!"
 	done
 
 BugCatcherJoshAfterBattleText:
+	ntag "BUGCATCHER:"
 	text "There are other"
 	line "kinds of #MON"
 	cont "than those found"
@@ -126,15 +138,18 @@ TrainerBugCatcherDion:
 	end
 
 BugCatcherDionSeenText:
+	ntag "BUGCATCHER:"
 	text "You can fight my"
 	line "new #MON!"
 	done
 
 BugCatcherDionBeatenText:
+	ntag "DION:"
 	text "Done like dinner!"
 	done
 
 BugCatcherDionAfterBattleText:
+	ntag "BUGCATCHER:"
 	text "Trained #MON"
 	line "are stronger than"
 	cont "the wild ones!"
@@ -151,16 +166,19 @@ TrainerLassColette:
 	end
 
 LassColetteSeenText:
+	ntag "LASS:"
 	text "Shouldn't you be"
 	line "at school?"
 	done
 
 LassColetteBeatenText:
+	ntag "COLETTE:"
 	text "You must have"
 	line "studied #MON!"
 	done
 
 LassColetteAfterBattleText:
+	ntag "LASS:"
 	text "There's always"
 	line "more to learn"
 	cont "about #MON!"
@@ -251,15 +269,18 @@ TrainerSchoolboyBilly:
 	end
 
 SchoolboyBillySeenText:
+	ntag "SCHOOLBOY:"
 	text "Hey! You're not"
 	line "wearing shorts!"
 	done
 
 SchoolboyBillyBeatenText:
+	ntag "BILLY:"
 	text "Lost!"
 	done
 
 SchoolboyBillyAfterBattleText:
+	ntag "BILLY:"
 	text "I always wear"
 	line "shorts, even in"
 	cont "winter!"
@@ -276,15 +297,18 @@ TrainerLassEvelyn:
 	end
 
 LassEvelynSeenText:
+	ntag "LASS:"
 	text "Eek! Did you"
 	line "touch me?"
 	done
 
 LassEvelynBeatenText:
+	ntag "EVELYN:"
 	text "That's it?"
 	done
 
 LassEvelynAfterBattleText:
+	ntag "LASS:"
 	text "ROUTE 4 is at the"
 	line "foot of MT.MOON."
 	done
@@ -292,6 +316,7 @@ LassEvelynAfterBattleText:
 Route3CooltrainerScript:
 	jumptextfaceplayer Route3CooltrainerText
 Route3CooltrainerText:
+	ntag "TRAINER:"
 	text "Ouch! I tripped"
 	line "over a rocky"
 	cont "#MON, GEODUDE!"
@@ -300,6 +325,7 @@ Route3CooltrainerText:
 Route3SuperNerdScript:
 	jumptextfaceplayer Route3SuperNerdText
 Route3SuperNerdText:
+	ntag "SUPERNERD:"
 	text "Whew… I better"
 	line "take a rest…"
 	cont "Groan…"

@@ -507,6 +507,7 @@ RadioTower4FFisherScript:
 	jumptextfaceplayer RadioTower4FFisherText
 
 RadioTower4FFisher_DirectorText:
+	ntag "EMPLOYEE:"
 	text "The DIRECTOR?"
 
 	para "His office is up"
@@ -514,6 +515,7 @@ RadioTower4FFisher_DirectorText:
 	done
 
 RadioTower4FFisherText:
+	ntag "EMPLOYEE:"
 	text "I listened to the"
 	line "radio while I was"
 	cont "at the RUINS."

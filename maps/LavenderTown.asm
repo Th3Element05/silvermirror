@@ -15,6 +15,7 @@ LavenderTownFlypointCallback:
 LavenderTownSuperNerdScript:
 	jumptextfaceplayer LavenderTownSuperNerdText
 LavenderTownSuperNerdText:
+	ntag "SUPERNERD:"
 	text "#MON TOWER is"
 	line "full of ghosts."
 
@@ -34,6 +35,7 @@ LavenderTownSuperNerdText:
 LavenderTownCooltrainerMScript:
 	jumptextfaceplayer LavenderTownCooltrainerMText
 LavenderTownCooltrainerMText:
+	ntag "TRAINER:"
 	text "This town is known"
 	line "as the grave site"
 	cont "of #MON."
@@ -74,16 +76,19 @@ LavenderTownGirlScript:
 	end
 
 LavenderTownGirlGhostQuestionText:
+	ntag "GIRL:"
 	text "Do you believe in"
 	line "ghosts?"
 	done
 
 LavenderTownGirlGhostYesText:
+	ntag "GIRL?:"
 	text "Really? So there"
 	line "are believers…"
 	done
 
 LavenderTownGirlGhostNoText:
+	ntag "GIRL?:"
 	text "Hahaha, I guess"
 	line "not."
 

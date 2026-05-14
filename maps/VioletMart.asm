@@ -21,6 +21,7 @@ VioletMartMedScript:
 VioletMartGrannyScript:
 	jumptextfaceplayer VioletMartGrannyText
 VioletMartGrannyText:
+	ntag "GRANNY:"
 	text "When you first"
 	line "catch a #MON,"
 	cont "it may be weak."
@@ -37,6 +38,7 @@ VioletMartGrannyText:
 VioletMartCooltrainerMScript:
 	jumptextfaceplayer VioletMartCooltrainerMText
 VioletMartCooltrainerMText:
+	ntag "TRAINER:"
 	text "#MON can hold"
 	line "items like POTION"
 	cont "and ANTIDOTE."

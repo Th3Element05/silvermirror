@@ -16,15 +16,18 @@ TrainerMediumMargret:
 	end
 
 MediumMargretSeenText:
+	ntag "MEDIUM:"
 	text "Be cursed with"
 	line "me! Kwaaah!"
 	done
 
 MediumMargretBeatenText:
+	ntag "MARGRET:"
 	text "What!"
 	done
 
 MediumMargretAfterBattleText:
+	ntag "MEDIUM:"
 	text "We can't crack"
 	line "the identity of"
 	cont "the GHOST."
@@ -41,16 +44,19 @@ TrainerMediumEthel:
 	end
 
 MediumEthelSeenText:
+	ntag "MEDIUM:"
 	text "GHOST! No!"
 	line "Kwaaah!"
 	done
 
 MediumEthelBeatenText:
-	text "Where"
-	line "is the GHOST?"
+	ntag "ETHEL:"
+	text "Where is the"
+	line "GHOST?"
 	done
 
 MediumEthelAfterBattleText:
+	ntag "MEDIUM:"
 	text "I must have been"
 	line "dreaming…"
 	done
@@ -66,16 +72,19 @@ TrainerMediumRebecca:
 	end
 
 MediumRebeccaSeenText:
+	ntag "MEDIUM:"
 	text "Huhuhu…"
 	line "Beat me not!"
 	done
 
 MediumRebeccaBeatenText:
+	ntag "REBECCA:"
 	text "Huh?"
 	line "Who? What?"
 	done
 
 MediumRebeccaAfterBattleText:
+	ntag "MEDIUM:"
 	text "May the departed"
 	line "souls of #MON"
 	cont "rest in peace…"

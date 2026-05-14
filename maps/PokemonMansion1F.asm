@@ -73,16 +73,19 @@ TrainerScientistSilas:
 	end
 
 ScientistSilasSeenText:
+	ntag "SCIENTIST:"
 	text "Who are you?"
 	line "There shouldn't"
 	cont "be anyone here."
 	done
 
 ScientistSilasBeatenText:
+	ntag "SILAS:"
 	text "Ouch!"
 	done
 
 ScientistSilasAfterBattleText:
+	ntag "SCIENTIST:"
 	text "BLAINE? I haven't"
 	line "seen him."
 	done

@@ -35,11 +35,13 @@ SilphCo10FReceptionist:
 	jumptextfaceplayer SilphCo10FReceptionistSavedText
 
 SilphCo10FReceptionistText:
+	ntag "GIRL:"
 	text "Waaaaa!"
 	line "I'm scared!"
 	done
 
 SilphCo10FReceptionistSavedText:
+	ntag "GIRL:"
 	text "Please keep quiet"
 	line "about my crying!"
 	done
@@ -55,15 +57,18 @@ TrainerScientistWeston:
 	end
 
 ScientistWestonSeenText:
+	ntag "SCIENTIST:"
 	text "Enough of your"
 	line "silly games!"
 	done
 
 ScientistWestonBeatenText:
+	ntag "WESTON:"
 	text "No continues left!"
 	done
 
 ScientistWestonAfterBattleText:
+	ntag "SCIENTIST:"
 	text "Are you satisfied"
 	line "with beating me?"
 	cont "Then go on home!"
@@ -80,16 +85,19 @@ TrainerRocketGruntM27:
 	end
 
 GruntM27SeenText:
+	ntag "ROCKET:"
 	text "Welcome to the"
 	line "10F! So good of"
 	cont "you to join me!"
 	done
 
 GruntM27BeatenText:
+	ntag "ROCKET:"
 	text "I'm stunned!"
 	done
 
 GruntM27AfterBattleText:
+	ntag "ROCKET:"
 	text "Nice try, but the"
 	line "boardroom is up"
 	cont "one more floor!"

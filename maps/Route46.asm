@@ -72,6 +72,7 @@ TrainerCoolDuoThomAndKae_Kae:
 	end
 
 CoolDuoThomAndKaeSeenText:
+	ntag "COOLTRAINER:"
 	text "We've been raising"
 	line "our #MON to-"
 	cont "gether!"
@@ -81,10 +82,12 @@ CoolDuoThomAndKaeSeenText:
 	done
 
 CoolDuoThomAndKaeBeatenText:
+	ntag "THOM&KAE:"
 	text "Wha…? We lost?"
 	done
 
 CoolDuoThomAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "We did our best,"
 	line "but came up short."
 
@@ -93,6 +96,7 @@ CoolDuoThomAfterBattleText:
 	done
 
 CoolDuoKaeAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "We've been to many"
 	line "GYMs, but the GYM"
 	cont "in GOLDENROD is my"
@@ -113,17 +117,20 @@ TrainerHikerAlec:
 	end
 
 HikerAlecSeenText:
+	ntag "HIKER:"
 	text "Awright! I'll show"
 	line "you the power of"
 	cont "mountain #MON!"
 	done
 
 HikerAlecBeatenText:
+	ntag "ALEC:"
 	text "Mercy! You showed"
 	line "me your power!"
 	done
 
 HikerAlecAfterBattleText:
+	ntag "HIKER:"
 	text "It's over. I don't"
 	line "mind. We HIKERs"
 	cont "are like that."

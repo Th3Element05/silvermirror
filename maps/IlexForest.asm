@@ -83,7 +83,7 @@ Text_IlexForestShrine:
 	text "ILEX FOREST"
 	line "SHRINE…"
 
-	para "It's in honor of"
+	para "In honor of"
 	line "the forest's"
 	cont "protector…"
 	done
@@ -92,7 +92,7 @@ Text_ShrineCelebiEvent:
 	text "ILEX FOREST"
 	line "SHRINE…"
 
-	para "It's in honor of"
+	para "In honor of"
 	line "the forest's"
 	cont "protector…"
 
@@ -166,6 +166,7 @@ IlexForestKurtStepsDownMovement:
 IlexForestLassScript:
 	jumptextfaceplayer Text_IlexForestLass
 Text_IlexForestLass:
+	ntag "LASS:"
 	text "Did something"
 	line "happen to the"
 	cont "forest's guardian?"
@@ -189,6 +190,7 @@ IlexForestHeadbuttGuyScript:
 	end
 
 Text_HeadbuttIntro:
+	ntag "ROCKER:"
 	text "What am I doing?"
 
 	para "I'm shaking trees"
@@ -199,6 +201,7 @@ Text_HeadbuttIntro:
 	done
 
 Text_HeadbuttOutro:
+	ntag "ROCKER:"
 	text "Rattle trees with"
 	line "HEADBUTT. Some-"
 	cont "times, sleeping"
@@ -283,6 +286,7 @@ TrainerBugCatcherArnie:
 	end
 
 BugCatcherArnieSeenText:
+	ntag "BUGCATCHER:"
 	text "Don't sneak up on"
 	line "me like that!"
 
@@ -291,11 +295,13 @@ BugCatcherArnieSeenText:
 	done
 
 BugCatcherArnieBeatenText:
+	ntag "ARNIE:"
 	text "I hadn't seen that"
 	line "#MON before…"
 	done
 
 BugCatcherArnieAfterBattleText:
+	ntag "ARNIE:"
 	text "A #MON I've"
 	line "never seen before"
 	cont "fell out of the"

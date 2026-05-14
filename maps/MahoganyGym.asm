@@ -158,16 +158,19 @@ TrainerBoarderShaun:
 	end
 
 BoarderShaunSeenText:
+	ntag "BOARDER:"
 	text "I know PRYCE's"
 	line "secret."
 	done
 
 BoarderShaunBeatenText:
+	ntag "SHAUN:"
 	text "OK. I'll tell you"
 	line "PRYCE's secret."
 	done
 
 BoarderShaunAfterBattleText:
+	ntag "BOARDER:"
 	text "The secret behind"
 	line "PRYCE's power…"
 
@@ -188,6 +191,7 @@ TrainerSkierRoxanne:
 	end
 
 SkierRoxanneSeenText:
+	ntag "SKIER:"
 	text "To get to PRYCE,"
 	line "our GYM LEADER,"
 	cont "you need to think"
@@ -195,11 +199,13 @@ SkierRoxanneSeenText:
 	done
 
 SkierRoxanneBeatenText:
+	ntag "ROXANNE:"
 	text "I wouldn't lose to"
 	line "you in skiing!"
 	done
 
 SkierRoxanneAfterBattleText:
+	ntag "SKIER:"
 	text "If you don't skate"
 	line "with precision,"
 	cont "you won't get far"
@@ -217,17 +223,20 @@ TrainerBoarderRonald:
 	end
 
 BoarderRonaldSeenText:
+	ntag "BOARDER:"
 	text "I'll freeze your"
 	line "#MON, so you"
 	cont "can't do a thing!"
 	done
 
 BoarderRonaldBeatenText:
+	ntag "RONALD:"
 	text "Darn. I couldn't"
 	line "do a thing."
 	done
 
 BoarderRonaldAfterBattleText:
+	ntag "BOARDER:"
 	text "I think there's a"
 	line "move a #MON"
 	cont "can use while it's"
@@ -245,16 +254,19 @@ TrainerSkierClarissa:
 	end
 
 SkierClarissaSeenText:
+	ntag "SKIER:"
 	text "Check out my"
 	line "parallel turn!"
 	done
 
 SkierClarissaBeatenText:
+	ntag "CLARISSA:"
 	text "No! You made me"
 	line "wipe out!"
 	done
 
 SkierClarissaAfterBattleText:
+	ntag "SKIER:"
 	text "I shouldn't have"
 	line "been bragging"
 	cont "about my skiing…"
@@ -310,6 +322,7 @@ MahoganyGymGuideScript:
 	end
 
 MahoganyGymGuideText:
+	ntag "GUIDE:"
 	text "PRYCE is a veteran"
 	line "who has trained"
 	cont "#MON for over"
@@ -327,6 +340,7 @@ MahoganyGymGuideText:
 	done
 
 MahoganyGymGuideWinText:
+	ntag "GUIDE:"
 	text "PRYCE is some-"
 	line "thing, but you're"
 	cont "something else!"

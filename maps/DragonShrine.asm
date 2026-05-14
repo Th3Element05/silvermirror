@@ -472,6 +472,7 @@ DragonShrineElder2Script:
 	jumptextfaceplayer DragonShrineElder2FailedText
 
 DragonShrineElder2Text:
+	ntag "ELDER:"
 	text "It's been quite"
 	line "some time since a"
 	cont "trainer has gained"
@@ -483,6 +484,7 @@ DragonShrineElder2Text:
 	done
 
 DragonShrineElder2FailedText:
+	ntag "ELDER:"
 	text "Few trainers ever"
 	line "truly pass our"
 	cont "MASTER's test."
@@ -496,6 +498,7 @@ DragonShrineElder2FailedText:
 DragonShrineElder3Script:
 	jumptextfaceplayer DragonShrineElder3Text
 DragonShrineElder3Text:
+	ntag "ELDER:"
 	text "You know young"
 	line "Master LANCE?"
 

@@ -22,6 +22,7 @@ CeladonCityRocket1Text:
 CeladonCityRocket2Script:
 	jumptextfaceplayer CeladonCityRocket2Text
 CeladonCityRocket2Text:
+	ntag "ROCKET:"
 	text "What are you"
 	line "staring at?"
 	done
@@ -29,6 +30,7 @@ CeladonCityRocket2Text:
 CeladonCityFisherScript:
 	jumptextfaceplayer CeladonCityFisherText
 CeladonCityFisherText:
+	ntag "FISHER:"
 	text "This is my trusted"
 	line "pal, POLIWRATH!"
 
@@ -72,6 +74,7 @@ CeladonCityTutorGrampsScript:
 	end
 
 CeladonCityTutorSoftboiledText:
+	ntag "GRAMPS:"
 	text "Hello there!"
 
 	para "I've seen you"
@@ -88,6 +91,7 @@ CeladonCityTutorSoftboiledText:
 	done
 
 CeladonCityTutorSoftboiledRefused:
+	ntag "GRAMPS:"
 	text "OK then."
 	done
 
@@ -96,6 +100,7 @@ CeladonCityTutorSoftboiledClear:
 	done
 
 CeladonCityTutorSoftboiledTaught:
+	ntag "GRAMPS:"
 	text "Now when your"
 	line "#MON is in a"
 	cont "pinch, they can"
@@ -145,6 +150,7 @@ CeladonCityTutorSoftboiledTaught:
 CeladonCityGirlScript:
 	jumptextfaceplayer CeladonCityGirlText
 CeladonCityGirlText:
+	ntag "GIRL:"
 	text "I got my KOFFING"
 	line "in CINNABAR!"
 
@@ -156,6 +162,7 @@ CeladonCityGirlText:
 CeladonCityLassScript:
 	jumptextfaceplayer CeladonCityLassText
 CeladonCityLassText:
+	ntag "LADY:"
 	text "The GAME CORNER"
 	line "is bad for our"
 	cont "city's image!"
@@ -164,6 +171,7 @@ CeladonCityLassText:
 CeladonCityGramps2Script:
 	jumptextfaceplayer CeladonCityGramps2Text
 CeladonCityGramps2Text:
+	ntag "GRAMPS:"
 	text "Moan! I blew it"
 	line "all at the slots!"
 
@@ -175,6 +183,7 @@ CeladonCityGramps2Text:
 CeladonCityGramps3Script:
 	jumptextfaceplayer CeladonCityGramps3Text
 CeladonCityGramps3Text:
+	ntag "GRAMPS:"
 	text "Heheh! This GYM"
 	line "is great! It's"
 	cont "full of women!"

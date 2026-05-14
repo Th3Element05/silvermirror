@@ -28,12 +28,14 @@ Route25Captain:
 	end
 
 Route25CaptainIntroText:
+	ntag "CAPTAIN:"
 	text "I come out to the"
 	line "cape to enjoy the"
 	cont "water."
 	done
 
 Route25CaptainQuestionText:
+	ntag "CAPTAIN:"
 	text "Did you come out"
 	line "here to enjoy the"
 	cont "water, too?"
@@ -42,12 +44,14 @@ Route25CaptainQuestionText:
 	done
 
 Route25CaptainMysticWaterText:
+	ntag "CAPTAIN:"
 	text "I like you."
 	line "I want you to have"
 	cont "this."
 	done
 
 Route25CaptainEnjoyTheWaterText:
+	ntag "CAPTAIN:"
 	text "Let's enjoy the"
 	line "water together."
 	done
@@ -63,16 +67,19 @@ TrainerYoungsterSamuel:
 	end
 
 YoungsterSamuelSeenText:
+	ntag "YOUNGSTER:"
 	text "Local trainers"
 	line "come here to"
 	cont "practice!"
 	done
 
 YoungsterSamuelBeatenText:
+	ntag "SAMUEL:"
 	text "You're decent."
 	done
 
 YoungsterSamuelAfterBattleText:
+	ntag "YOUNGSTER:"
 	text "All #MON have"
 	line "weaknesses. It's"
 	cont "best to raise"
@@ -90,16 +97,19 @@ TrainerYoungsterRicky:
 	end
 
 YoungsterRickySeenText:
+	ntag "YOUNGSTER:"
 	text "I knew I had to"
 	line "fight you!"
 	done
 
 YoungsterRickyBeatenText:
+	ntag "RICKY:"
 	text "I knew I'd lose,"
 	line "too!"
 	done
 
 YoungsterRickyAfterBattleText:
+	ntag "YOUNGSTER:"
 	text "If your #MON"
 	line "gets confused or"
 	cont "falls asleep,"
@@ -117,16 +127,19 @@ TrainerHikerRussell:
 	end
 
 HikerRussellSeenText:
+	ntag "HIKER:"
 	text "I just got down"
 	line "from MT.MOON,"
 	cont "but I'm ready!"
 	done
 
 HikerRussellBeatenText:
+	ntag "RUSSELL:"
 	text "You worked hard!"
 	done
 
 HikerRussellAfterBattleText:
+	ntag "HIKER:"
 	text "Drat!"
 	line "A ZUBAT bit me"
 	cont "back in there."
@@ -143,16 +156,19 @@ TrainerCamperElliot:
 	end
 
 CamperElliotSeenText:
+	ntag "CAMPER:"
 	text "I'm a cool guy."
 	line "I've got a girl"
 	cont "friend!"
 	done
 
 CamperElliotBeatenText:
+	ntag "ELLIOT:"
 	text "Aww, darn…"
 	done
 
 CamperElliotAfterBattleText:
+	ntag "CAMPER:"
 	text "Oh well. My girl"
 	line "will cheer me up."
 	done
@@ -242,17 +258,20 @@ TrainerLassHillary:
 	end
 
 LassHillarySeenText:
+	ntag "LASS:"
 	text "Cute #MON are"
 	line "my favorite."
 	cont "They're adorable!"
 	done
 
 LassHillaryBeatenText:
+	ntag "HILLARY:"
 	text "That's not so"
 	line "cute!"
 	done
 
 LassHillaryAfterBattleText:
+	ntag "HILLARY:"
 	text "You went through"
 	line "MT.MOON? Did you"
 	cont "see any CLEFAIRY?"
@@ -269,6 +288,7 @@ TrainerYoungsterMikey:
 	end
 
 YoungsterMikeySeenText:
+	ntag "YOUNGSTER:"
 	text "Dad took me to a"
 	line "great party on"
 	cont "S.S.ANNE at"
@@ -276,10 +296,12 @@ YoungsterMikeySeenText:
 	done
 
 YoungsterMikeyBeatenText:
+	ntag "MIKEY:"
 	text "I'm not mad!"
 	done
 
 YoungsterMikeyAfterBattleText:
+	ntag "YOUNGSTER:"
 	text "On S.S.ANNE, I"
 	line "saw trainers from"
 	cont "around the world."
@@ -296,16 +318,19 @@ TrainerHikerPhillip:
 	end
 
 HikerPhillipSeenText:
+	ntag "HIKER:"
 	text "You're going to"
 	line "see BILL? First,"
 	cont "let's fight!"
 	done
 
 HikerPhillipBeatenText:
+	ntag "PHILLIP:"
 	text "You're something."
 	done
 
 HikerPhillipAfterBattleText:
+	ntag "HIKER:"
 	text "The trail below"
 	line "is a shortcut to"
 	cont "CERULEAN CITY."
@@ -322,16 +347,19 @@ TrainerLassMichelle:
 	end
 
 LassMichelleSeenText:
+	ntag "LASS:"
 	text "Hi! My boy"
 	line "friend is cool!"
 	done
 
 LassMichelleBeatenText:
+	ntag "MICHELLE:"
 	text "I was in bad"
 	line "condition!"
 	done
 
 LassMichelleAfterBattleText:
+	ntag "LASS:"
 	text "I wish my guy was"
 	line "as good as you!"
 	done
@@ -347,16 +375,19 @@ TrainerHikerLeonard:
 	end
 
 HikerLeonardSeenText:
+	ntag "HIKER:"
 	text "I'm off to see a"
 	line "#MON collector"
 	cont "at the cape!"
 	done
 
 HikerLeonardBeatenText:
+	ntag "LEONARD:"
 	text "You got me."
 	done
 
 HikerLeonardAfterBattleText:
+	ntag "HIKER:"
 	text "The collector has"
 	line "many rare kinds"
 	cont "of #MON."
@@ -402,5 +433,5 @@ Route25_MapEvents:
 	object_event 13,  7, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerHikerPhillip, -1
 	object_event 18,  8, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerLassMichelle, -1
 	object_event 23,  9, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerHikerLeonard, -1
-	object_event 45,  9, SPRITE_CAPTAIN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route25Captain, -1
+	object_event 45,  9, SPRITE_CAPTAIN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route25Captain, EVENT_GOT_MYSTIC_WATER
 	object_event 22,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, Route25TMSeismicToss, EVENT_ROUTE_25_TM_SEISMIC_TOSS

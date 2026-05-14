@@ -21,6 +21,7 @@ AzaleaMartMedScript:
 AzaleaMartCooltrainerMScript:
 	jumptextfaceplayer AzaleaMartCooltrainerMText
 AzaleaMartCooltrainerMText:
+	ntag "TRAINER:"
 	text "Normal #BALLs"
 	line "are alright, but"
 	cont "I wish KURT would"
@@ -31,6 +32,7 @@ AzaleaMartCooltrainerMText:
 AzaleaMartBugCatcherScript:
 	jumptextfaceplayer AzaleaMartBugCatcherText
 AzaleaMartBugCatcherText:
+	ntag "BUGCATCHER:"
 	text "A GREAT BALL is"
 	line "better for catch-"
 	cont "ing #MON than"

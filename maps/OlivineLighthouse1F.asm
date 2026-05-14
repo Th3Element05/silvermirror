@@ -22,6 +22,7 @@ OlivineLighthouse1FSailorText:
 ;	cont "all the trainers."
 ;	done
 ;
+	ntag "SAILOR:"
 	text "Please use the"
 	line "elevator if you"
 	cont "want to visit the"
@@ -29,6 +30,7 @@ OlivineLighthouse1FSailorText:
 	done
 
 OlivineLighthouse1FPokefanFText:
+	ntag "WOMAN:"
 	text "In the past, #-"
 	line "MON used to light"
 	cont "the sea around"

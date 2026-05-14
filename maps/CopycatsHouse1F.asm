@@ -8,6 +8,7 @@ CopycatsHouse1F_MapScripts:
 CopycatsHouse1FPokefanMScript:
 	jumptextfaceplayer CopycatsHouse1FPokefanMText
 CopycatsHouse1FPokefanMText:
+	ntag "MAN:"
 	text "My daughter likes"
 	line "to mimic people."
 
@@ -20,6 +21,7 @@ CopycatsHouse1FPokefanMText:
 CopycatsHouse1FPokefanFScript:
 	jumptextfaceplayer CopycatsHouse1FPokefanFText
 CopycatsHouse1FPokefanFText:
+	ntag "WOMAN:"
 	text "My daughter is so"
 	line "self-centered…"
 

@@ -9,6 +9,7 @@ DiglettsCave_MapScripts:
 DiglettsCavePokefanMScript:
 	jumptextfaceplayer DiglettsCavePokefanMText
 DiglettsCavePokefanMText:
+	ntag "HIKER:"
 	text "A bunch of DIGLETT"
 	line "popped out of the"
 	cont "ground!"

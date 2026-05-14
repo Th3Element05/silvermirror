@@ -19,16 +19,19 @@ TrainerRocketGruntM30:
 	end
 
 GruntM30SeenText:
+	ntag "ROCKET:"
 	text "I thought I told"
 	line "you to stay out"
 	cont "of our way!"
 	done
 
 GruntM30BeatenText:
+	ntag "ROCKET:"
 	text "What? How?"
 	done
 
 GruntM30AfterBattleText:
+	ntag "ROCKET:"
 	text "You can't stop"
 	line "TEAM ROCKET!"
 	done
@@ -72,6 +75,7 @@ TrainerRocketExecutiveF2:
 	end
 
 ExecutiveF2SeenText:
+	ntag "ROCKET:"
 	text "We're taking over"
 	line "this ship for"
 	cont "TEAM ROCKET!"
@@ -83,10 +87,12 @@ ExecutiveF2SeenText:
 	done
 
 ExecutiveF2BeatenText:
+	ntag "ROCKET:"
 	text "No!"
 	done
 
 ExecutiveF2AfterBattleText:
+	ntag "ROCKET:"
 	text "Fine."
 	line "Keep your ship!"
 

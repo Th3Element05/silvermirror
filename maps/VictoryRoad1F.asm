@@ -58,16 +58,19 @@ TrainerCooltrainerMSean:
 	end
 
 CooltrainerMSeanSeenText:
+	ntag "COOLTRAINER:"
 	text "I can see you're"
 	line "good! Let me see"
 	cont "exactly how good!"
 	done
 
 CooltrainerMSeanBeatenText:
+	ntag "SEAN:"
 	text "I had a chance…"
 	done
 
 CooltrainerMSeanAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "I concede, you're"
 	line "better than me!"
 	done
@@ -83,16 +86,19 @@ TrainerCooltrainerFLois:
 	end
 
 CooltrainerFLoisSeenText:
+	ntag "COOLTRAINER:"
 	text "I wonder if you"
 	line "are good enough"
 	cont "for me!"
 	done
 
 CooltrainerFLoisBeatenText:
+	ntag "LOIS:"
 	text "I lost out!"
 	done
 
 CooltrainerFLoisAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "I never wanted to"
 	line "lose to anybody!"
 	done

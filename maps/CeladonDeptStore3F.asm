@@ -23,6 +23,7 @@ CeladonDeptStore3FClerkScript:
 	end
 
 CeladonDeptStore3FFreeSampleText:
+	ntag "CLERK:"
 	text "Welcome to the"
 	line "TM SHOP!"
 
@@ -40,6 +41,7 @@ CeladonDeptStore3FGameboyKid1Script:
 	end
 
 CeladonDeptStore3FGameboyKid1Text:
+	ntag "KID:"
 	text "Caught #MON are"
 	line "registered with an"
 	cont "ID No. of the"
@@ -57,6 +59,7 @@ CeladonDeptStore3FGameboyKid2Script:
 	end
 
 CeladonDeptStore3FGameboyKid2Text:
+	ntag "KID:"
 	text "All right!"
 
 	para "My buddy's going"
@@ -75,6 +78,7 @@ CeladonDeptStore3FGameboyKid3Script:
 	end
 
 CeladonDeptStore3FGameboyKid3Text:
+	ntag "KID:"
 	text "Come on GRAVELER!"
 
 	para "I love GRAVELER!"
@@ -90,6 +94,7 @@ CeladonDeptStore3FGameboyKid3Text:
 CeladonDeptStore3FYoungsterScript:
 	jumptextfaceplayer CeladonDeptStore3FYoungsterText
 CeladonDeptStore3FYoungsterText:
+	ntag "YOUNGSTER:"
 	text "I can't decide"
 	line "which #MON I"
 	cont "should use this TM"

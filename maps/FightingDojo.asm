@@ -100,6 +100,7 @@ FightingDojoMoveTutorScript:
 .NoTutor
 	jumptextfaceplayer FightingDojoTutor_NotYetText
 FightingDojoTutor_NotYetText:
+	ntag "SENSEI:"
 	text "I have nothing to"
 	line "teach an outsider."
 
@@ -112,6 +113,7 @@ FightingDojoTutor_NotYetText:
 	done
 
 FightingDojoTutor_AskTeachMoveText:
+	ntag "SENSEI:"
 	text "You were able to"
 	line "defeat our MASTER."
 
@@ -133,6 +135,7 @@ FightingDojoTutorMoveText:
 	done
 
 FightingDojoTutorGoodChoiceText:
+	ntag "SENSEI:"
 	text "Good choice!"
 
 	para "That attack is one"
@@ -140,6 +143,7 @@ FightingDojoTutorGoodChoiceText:
 	done
 
 FightingDojoTutorRefusedText:
+	ntag "SENSEI:"
 	text "Come back anytime"
 	line "you want me to"
 	cont "teach your #MON"
@@ -147,6 +151,7 @@ FightingDojoTutorRefusedText:
 	done
 
 FightingDojoTutorIncompatibleText:
+	ntag "SENSEI:"
 	text "Your #MON can't"
 	line "learn this move…"
 	done
@@ -436,15 +441,20 @@ TrainerBlackbeltTakeshi:
 	end
 
 BlackbeltTakeshiSeenText:
+	ntag "BLACKBELT:"
 	text "Hoargh! Take your"
 	line "shoes off!"
 	done
 
 BlackbeltTakeshiBeatenText:
-	text "I yield!"
+	ntag "TAKESHI:"
+	text "Judge!"
+	line "1 point!"
+
 	done
 
 BlackbeltTakeshiAfterBattleText:
+	ntag "BLACKBELT:"
 	text "You wait 'til you"
 	line "see our Master!"
 
@@ -463,16 +473,19 @@ TrainerBlackbeltBruce:
 	end
 
 BlackbeltBruceSeenText:
+	ntag "BLACKBELT:"
 	text "I hear you're"
 	line "good! Show me!"
 	done
 
 BlackbeltBruceBeatenText:
-	text "Judge!"
-	line "1 point!"
+	ntag "BRUCE:"
+	text "Oof!"
+	line "I give up!"
 	done
 
 BlackbeltBruceAfterBattleText:
+	ntag "BLACKBELT:"
 	text "Our Master is a"
 	line "pro fighter!"
 	done
@@ -488,6 +501,7 @@ TrainerBlackbeltJackie:
 	end
 
 BlackbeltJackieSeenText:
+	ntag "BLACKBELT:"
 	text "Nothing tough"
 	line "frightens me!"
 
@@ -496,11 +510,13 @@ BlackbeltJackieSeenText:
 	done
 
 BlackbeltJackieBeatenText:
+	ntag "JACKIE:"
 	text "Yow!"
 	line "Stubbed fingers!"
 	done
 
 BlackbeltJackieAfterBattleText:
+	ntag "BLACKBELT:"
 	text "The only thing"
 	line "that frightens us"
 	cont "is psychic power!"
@@ -517,19 +533,20 @@ TrainerBlackbeltJet:
 	end
 
 BlackbeltJetSeenText:
+	ntag "BLACKBELT:"
 	text "Hoohah!"
 
 	para "You're trespassing"
-	line "in our FIGHTING"
-	cont "DOJO!"
+	line "in our DOJO!"
 	done
 
 BlackbeltJetBeatenText:
-	text "Oof!"
-	line "I give up!"
+	ntag "JET:"
+	text "I yield!"
 	done
 
 BlackbeltJetAfterBattleText:
+	ntag "BLACKBELT:"
 	text "The prime fighters"
 	line "across the land"
 	cont "train here."

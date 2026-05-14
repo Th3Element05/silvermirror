@@ -49,6 +49,8 @@ SilphCo2FReceptionist:
 	opentext
 	checkevent EVENT_GOT_TM36_SELFDESTRUCT
 	iftrue .GotSelfdestruct
+	checkevent EVENT_BEAT_GIOVANNI_SILPHCO
+	iftrue .BeatGiovanni
 	writetext SilphCo2FReceptionistEeekText
 	waitbutton
 	faceplayer
@@ -56,6 +58,16 @@ SilphCo2FReceptionist:
 	promptbutton
 	verbosegiveitem TM_SELFDESTRUCT
 	setevent EVENT_GOT_TM36_SELFDESTRUCT
+	sjump .GotSelfdestruct
+
+.BeatGiovanni
+	faceplayer
+	writetext SilphCo2FReceptionistThanksText
+	promptbutton
+	verbosegiveitem TM_SELFDESTRUCT
+	setevent EVENT_GOT_TM36_SELFDESTRUCT
+	; fallthrough
+
 .GotSelfdestruct
 	faceplayer
 	writetext SilphCo2FReceptionistExplainText
@@ -64,13 +76,13 @@ SilphCo2FReceptionist:
 	end
 	
 SilphCo2FReceptionistEeekText:
-;	ntag "GIRL:"
+	ntag "GIRL:"
 	text "Eeek!"
 	line "No! Stop! Help!"
 	done
 
 SilphCo2FReceptionistTakeThisText:
-;	ntag "GIRL:"
+	ntag "GIRL:"
 	text "Oh, you're not"
 	line "with TEAM ROCKET."
 	cont "I thought…"
@@ -79,8 +91,17 @@ SilphCo2FReceptionistTakeThisText:
 	line "please take this!"
 	done
 
+SilphCo2FReceptionistThanksText:
+	ntag "GIRL:"
+	text "You fought off"
+	line "TEAM ROCKET?"
+
+	para "You saved us!"
+	line "Take this!"
+	done
+
 SilphCo2FReceptionistExplainText:
-;	ntag "GIRL:"
+	ntag "GIRL:"
 	text "TM36 is"
 	line "SELFDESTRUCT!"
 
@@ -101,15 +122,18 @@ TrainerRocketGruntM16:
 	end
 
 GruntM16SeenText:
+	ntag "ROCKET:"
 	text "Hey kid! What are"
 	line "you doing here?"
 	done
 
 GruntM16BeatenText:
+	ntag "ROCKET:"
 	text "I goofed!"
 	done
 
 GruntM16AfterBattleText:
+	ntag "ROCKET:"
 	text "SILPH CO. will"
 	line "be merged with"
 	cont "TEAM ROCKET!"
@@ -126,15 +150,18 @@ TrainerRocketGruntM17:
 	end
 
 GruntM17SeenText:
+	ntag "ROCKET:"
 	text "No kids are"
 	line "allowed in here!"
 	done
 
 GruntM17BeatenText:
+	ntag "ROCKET:"
 	text "Tough!"
 	done
 
 GruntM17AfterBattleText:
+	ntag "ROCKET:"
 	text "Diamond-shaped"
 	line "tiles are"
 	cont "warp panels!"
@@ -154,16 +181,19 @@ TrainerScientistRoss:
 	end
 
 ScientistRossSeenText:
+	ntag "SCIENTIST:"
 	text "Help! I'm a SILPH"
 	line "employee."
 	done
 
 ScientistRossBeatenText:
+	ntag "ROSS:"
 	text "How did you know"
 	line "I was a ROCKET?"
 	done
 
 ScientistRossAfterBattleText:
+	ntag "SCIENTIST:"
 	text "I work for both"
 	line "SILPH and TEAM"
 	cont "ROCKET!"
@@ -180,15 +210,18 @@ TrainerScientistMitch:
 	end
 
 ScientistMitchSeenText:
+	ntag "SCIENTIST:"
 	text "It's off limits"
 	line "here! Go home!"
 	done
 
 ScientistMitchBeatenText:
+	ntag "MITCH:"
 	text "You're good."
 	done
 
 ScientistMitchAfterBattleText:
+	ntag "SCIENTIST:"
 	text "The warp panels"
 	line "can be confusing!"
 

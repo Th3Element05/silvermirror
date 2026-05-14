@@ -27,7 +27,7 @@ MrPsychicsHouseBookshelf:
 	jumpstd DifficultBookshelfScript
 
 MrPsychicText1:
-;	ntag "MR.PSYCHIC:"
+	ntag "MR.PSYCHIC:"
 	text "…Wait! Don't say"
 	line "a word!"
 
@@ -39,6 +39,7 @@ MrPsychicText1:
 	done
 
 MrPsychicText2:
+	ntag "MR.PSYCHIC:"
 	text "TM29 is PSYCHIC."
 
 	para "It may lower the"

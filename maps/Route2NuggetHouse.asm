@@ -17,6 +17,7 @@ Route2TradeHouseMateoScript:
 Route2TradeHouseScientistScript:
 	jumptextfaceplayer Route2TradeHouseScientistText
 Route2TradeHouseScientistText:
+	ntag "SCIENTIST:"
 	text "The PPS is great!"
 
 	para "You can still use"

@@ -150,16 +150,19 @@ TrainerBlackbeltWai:
 	end
 
 BlackbeltWaiSeenText:
+	ntag "BLACKBELT:"
 	text "I'm the KARATE"
 	line "KING! Your fate"
 	cont "rests with me!"
 	done
 
 BlackbeltWaiBeatenText:
+	ntag "WAI:"
 	text "Ayah!"
 	done
 
 BlackbeltWaiAfterBattleText:
+	ntag "BLACKBELT:"
 	text "#MON LEAGUE?"
 	line "You? Don't get"
 	cont "cocky!"
@@ -176,6 +179,7 @@ TrainerCooltrainerMPaul:
 	end
 
 CooltrainerMPaulSeenText:
+	ntag "COOLTRAINER:"
 	text "VIRIDIAN GYM was"
 	line "closed for a long"
 	cont "time, but now our"
@@ -183,10 +187,12 @@ CooltrainerMPaulSeenText:
 	done
 
 CooltrainerMPaulBeatenText:
+	ntag "PAUL:"
 	text "I was beaten?"
 	done
 
 CooltrainerMPaulAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "You can go onto"
 	line "#MON LEAGUE"
 	cont "only by defeating"
@@ -204,15 +210,18 @@ TrainerCooltrainerMNick:
 	end
 
 CooltrainerMNickSeenText:
+	ntag "COOLTRAINER:"
 	text "The truly talented"
 	line "win with style!"
 	done
 
 CooltrainerMNickBeatenText:
+	ntag "NICK:"
 	text "I lost my grip!"
 	done
 
 CooltrainerMNickAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "The LEADER will"
 	line "scold me!"
 	done
@@ -228,19 +237,22 @@ TrainerBlackbeltTy:
 	end
 
 BlackbeltTySeenText:
+	ntag "BLACKBELT:"
 	text "Karate is the"
 	line "ultimate form of"
 	cont "martial arts!"
 	done
 
 BlackbeltTyBeatenText:
+	ntag "TY:"
 	text "Atcho!"
 	done
 
 BlackbeltTyAfterBattleText:
+	ntag "BLACKBELT:"
 	text "If my #MON"
 	line "were as good at"
-	cont "Karate as I…"
+	cont "karate as I am…"
 	done
 
 TrainerPokemaniacEthan:
@@ -254,17 +266,20 @@ TrainerPokemaniacEthan:
 	end
 
 PokemaniacEthanSeenText:
+	ntag "#MANIAC:"
 	text "#MON and I, we"
 	line "make wonderful"
 	cont "music together!"
 	done
 
 PokemaniacEthanBeatenText:
+	ntag "ETHAN:"
 	text "You are in"
 	line "perfect harmony!"
 	done
 
 PokemaniacEthanAfterBattleText:
+	ntag "#MANIAC:"
 	text "Do you know the"
 	line "identity of our"
 	cont "GYM LEADER?"
@@ -281,16 +296,19 @@ TrainerCooltrainerMAaron:
 	end
 
 CooltrainerMAaronSeenText:
+	ntag "COOLTRAINER:"
 	text "Heh! You must be"
 	line "running out of"
 	cont "steam by now!"
 	done
 
 CooltrainerMAaronBeatenText:
+	ntag "AARON:"
 	text "I ran out of gas!"
 	done
 
 CooltrainerMAaronAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "You need power to"
 	line "keep up with our"
 	cont "GYM LEADER!"
@@ -307,16 +325,19 @@ TrainerBlackbeltCho:
 	end
 
 BlackbeltChoSeenText:
+	ntag "BLACKBELT:"
 	text "Rrrroar! I'm"
 	line "working myself"
 	cont "into a rage!"
 	done
 
 BlackbeltChoBeatenText:
+	ntag "CHO:"
 	text "Wargh!"
 	done
 
 BlackbeltChoAfterBattleText:
+	ntag "BLACKBELT:"
 	text "I'm still not"
 	line "worthy!"
 	done
@@ -332,16 +353,19 @@ TrainerPokemaniacTyson:
 	end
 
 PokemaniacTysonSeenText:
+	ntag "#MANIAC:"
 	text "Your #MON will"
 	line "cower before"
 	cont "my #MON!"
 	done
 
 PokemaniacTysonBeatenText:
+	ntag "TYSON:"
 	text "Yowch!"
 	done
 
 PokemaniacTysonAfterBattleText:
+	ntag "#MANIAC:"
 	text "Wait! I was just"
 	line "careless!"
 	done
@@ -363,6 +387,7 @@ ViridianGymGuideScript:
 	end
 
 ViridianGymGuideText:
+	ntag "GUIDE:"
 	text "Yo! CHAMP in the"
 	line "making!"
 
@@ -381,6 +406,7 @@ ViridianGymGuideText:
 	done
 
 ViridianGymGuideWinText:
+	ntag "GUIDE:"
 	text "Blow me away!"
 	line "GIOVANNI was the"
 	cont "GYM LEADER here?"

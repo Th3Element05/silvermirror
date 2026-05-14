@@ -14,6 +14,7 @@ MtMoonPokecenter1FReceptionistScript:
 MtMoonPokecenter1FBenchGuyScript:
 	jumptext MtMoonPokecenter1FBenchGuyText
 MtMoonPokecenter1FBenchGuyText:
+	ntag "GUY:"
 	text "If you have too"
 	line "many #MON, you"
 	cont "should store them"
@@ -23,6 +24,7 @@ MtMoonPokecenter1FBenchGuyText:
 MtMoonPokecenter1FYoungsterScript:
 	jumptextfaceplayer MtMoonPokecenter1FYoungsterText
 MtMoonPokecenter1FYoungsterText:
+	ntag "YOUNGSTER:"
 	text "I have six #-"
 	line "BALLs on my belt."
 
@@ -33,6 +35,7 @@ MtMoonPokecenter1FYoungsterText:
 MtMoonPokecenter1FGentlemanScript:
 	jumptextfaceplayer MtMoonPokecenter1FGentlemanText
 MtMoonPokecenter1FGentlemanText:
+	ntag "GENTLEMAN:"
 	text "TEAM ROCKET"
 	line "attacks CERULEAN"
 	cont "citizens…"
@@ -81,6 +84,7 @@ MtMoonPokecenter1FSalesmanScript:
 	end
 
 MtMoonPokecenterSalesmanDealText:
+	ntag "SALESMAN:"
 	text "Hello, there!"
 	line "Have I got a deal"
 	cont "just for you!"
@@ -97,17 +101,20 @@ MtMoonPokecenterGotMagikarpText:
 	done
 
 MtMoonPokecenterSalesmanNoText:
+	ntag "SALESMAN:"
 	text "No? I'm only"
 	line "doing this as a"
 	cont "favor to you!"
 	done
 
 MtMoonPokecenterSalesmanNoMoneyText:
+	ntag "SALESMAN:"
 	text "You'll need more"
 	line "money than that!"
 	done
 
 MtMoonPokecenterSalesmanNoRefundsText:
+	ntag "SALESMAN:"
 	text "I don't give"
 	line "refunds!"
 	done

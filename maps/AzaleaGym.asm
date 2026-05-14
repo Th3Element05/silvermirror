@@ -137,15 +137,18 @@ TrainerBugCatcherAbel:
 	end
 
 BugCatcherAbelSeenText:
+	ntag "BUGCATCHER:"
 	text "My #MON are"
 	cont "pretty tough!"
 	done
 
 BugCatcherAbelBeatenText:
+	ntag "ABEL:"
 	text "Urrgggh!"
 	done
 
 BugCatcherAbelAfterBattleText:
+	ntag "BUGCATCHER:"
 	text "I guess I should"
 	line "teach them better"
 	cont "moves…"
@@ -162,17 +165,20 @@ TrainerBugCatcherFinley:
 	end
 
 BugCatcherFinleySeenText:
+	ntag "BUGCATCHER:"
 	text "Bug #MON evolve"
 	line "young. So they get"
 	cont "stronger quickly!"
 	done
 
 BugCatcherFinleyBeatenText:
+	ntag "FINLEY:"
 	text "Just evolving"
 	line "isn't enough!"
 	done
 
 BugCatcherFinleyAfterBattleText:
+	ntag "BUGCATCHER:"
 	text "#MON become"
 	line "stronger if they"
 	cont "evolve. Really!"
@@ -189,6 +195,7 @@ TrainerBugCatcherJon:
 	end
 
 BugCatcherJonSeenText:
+	ntag "BUGCATCHER:"
 	text "Bug #MON are"
 	line "cool and tough!"
 
@@ -197,11 +204,13 @@ BugCatcherJonSeenText:
 	done
 
 BugCatcherJonBeatenText:
+	ntag "JON:"
 	text "You proved how"
 	line "tough you are…"
 	done
 
 BugCatcherJonAfterBattleText:
+	ntag "BUGCATCHER:"
 	text "They're so cool,"
 	line "but most girls"
 	cont "don't like bug"
@@ -211,7 +220,7 @@ BugCatcherJonAfterBattleText:
 	done
 
 TrainerTwinsMegAndPeg1:
-	trainer TWINS, MEGANDPEG, EVENT_BEAT_TWINS_MEGANDPEG, TwinsMegAndPegSeenText, TwinsMegAndPegBeatenText, 0, .AfterScript
+	trainer TWINS, MEGANDPEG, EVENT_BEAT_TWINS_MEGANDPEG, TwinsMegAndPeg1SeenText, TwinsMegAndPegBeatenText, 0, .AfterScript
 .AfterScript:
 	endifjustbattled
 	opentext
@@ -221,7 +230,7 @@ TrainerTwinsMegAndPeg1:
 	end
 
 TrainerTwinsMegAndPeg2:
-	trainer TWINS, MEGANDPEG, EVENT_BEAT_TWINS_MEGANDPEG, TwinsMegAndPegSeenText, TwinsMegAndPegBeatenText, 0, .AfterScript
+	trainer TWINS, MEGANDPEG, EVENT_BEAT_TWINS_MEGANDPEG, TwinsMegAndPeg1SeenText, TwinsMegAndPegBeatenText, 0, .AfterScript
 .AfterScript:
 	endifjustbattled
 	opentext
@@ -230,15 +239,8 @@ TrainerTwinsMegAndPeg2:
 	closetext
 	end
 
-TwinsMegAndPegSeenText:
-;	text "MEG: Hi! Are you"
-;	line "challenging the"
-;	cont "LEADER? No way!"
-;
-;	para "PEG: If you want"
-;	line "to see the LEADER,"
-;	cont "we come first!"
-;	done
+TwinsMegAndPeg1SeenText:
+	ntag "TWIN:"
 	text "You're planning on"
 	line "challenging BUGSY?"
 	cont "No way!"
@@ -249,26 +251,19 @@ TwinsMegAndPegSeenText:
 	done
 
 TwinsMegAndPegBeatenText:
-;	text "MEG & PEG: Oh,"
-;	line "double darn!"
-;	done
+	ntag "MEG&PEG:"
 	text "Oh!"
 	line "Double darn!"
 	done
 
 TwinsMegAndPeg1AfterBattleText:
-;	text "MEG: You're"
-;	line "really strong!"
-;	done
+	ntag "TWIN:"
 	text "You're really"
 	line "strong!"
 	done
 
 TwinsMegAndPeg2AfterBattleText:
-;	text "PEG: Our precious"
-;	line "bug #MON lost!"
-;	cont "What a shame."
-;	done
+	ntag "TWIN:"
 	text "Our precious bug"
 	line "#MON lost!"
 	cont "What a shame."
@@ -292,6 +287,7 @@ AzaleaGymGuideScript:
 	end
 
 AzaleaGymGuideText:
+	ntag "GUIDE:"
 	text "Yo, CHAMP!"
 
 	para "BUGSY's young, but"
@@ -309,6 +305,7 @@ AzaleaGymGuideText:
 	done
 
 AzaleaGymGuideWinText:
+	ntag "GUIDE:"
 	text "Well done! That"
 	line "was a great clash"
 	cont "of talented young"

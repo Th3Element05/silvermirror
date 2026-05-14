@@ -8,6 +8,7 @@ SafariZoneMainOffice_MapScripts:
 SafariZoneMainOfficeReceptionist:
 	jumptextfaceplayer SafariZoneMainOfficeReceptionistText
 SafariZoneMainOfficeReceptionistText:
+	ntag "ASSISTANT:"
 	text "SLOWPOKE came in,"
 	line "but I couldn't"
 	cont "understand him."
@@ -19,6 +20,7 @@ SafariZoneMainOfficeReceptionistText:
 SafariZoneMainOfficeScientist:
 	jumptextfaceplayer SafariZoneMainOfficeScientistText
 SafariZoneMainOfficeScientistText:
+	ntag "SCIENTIST:"
 	text "SLOWPOKE is very"
 	line "knowledgeable"
 	cont "about #MON!"
@@ -31,6 +33,7 @@ SafariZoneMainOfficeScientistText:
 SafariZoneMainOfficeClerk:
 	jumptextfaceplayer SafariZoneMainOfficeClerkText
 SafariZoneMainOfficeClerkText:
+	ntag "CLERK:"
 	text "We nicknamed the"
 	line "WARDEN SLOWPOKE."
 

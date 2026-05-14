@@ -29,6 +29,7 @@ GoldenrodDeptStore4FGameboyKidScript:
 	end
 
 GoldenrodDeptStore4FGameboyKidText:
+	ntag "KID:"
 	text "Some #MON only"
 	line "evolve by being"
 	cont "exposed to a"
@@ -46,6 +47,7 @@ GoldenrodDeptStore4FGameboyKidText:
 GoldenrodDeptStore4FCooltrainerMScript:
 	jumptextfaceplayer GoldenrodDeptStore4FCooltrainerMText
 GoldenrodDeptStore4FCooltrainerMText:
+	ntag "TRAINER:"
 	text "Hey. I love strong"
 	line "#MON."
 
@@ -57,6 +59,7 @@ GoldenrodDeptStore4FCooltrainerMText:
 GoldenrodDeptStore4FBugCatcherScript:
 	jumptextfaceplayer GoldenrodDeptStore4FBugCatcherText
 GoldenrodDeptStore4FBugCatcherText:
+	ntag "BOY:"
 	text "IRON adds to your"
 	line "#MON's DEFENSE."
 	done

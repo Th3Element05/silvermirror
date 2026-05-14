@@ -44,6 +44,7 @@ FlowerShopTeacherScript:
 	end
 
 GoldenrodFlowerShopTeacherWeirdTreeText:
+	ntag "LADY:"
 	text "There's a weird"
 	line "tree on ROUTE 36."
 
@@ -57,6 +58,7 @@ GoldenrodFlowerShopTeacherWeirdTreeText:
 	done
 
 GoldenrodFlowerShopTeacherAskWantToBorrowWaterBottleText:
+	ntag "LADY:"
 	text "Do you want to"
 	line "borrow the water"
 	cont "bottle too?"
@@ -67,6 +69,7 @@ GoldenrodFlowerShopTeacherAskWantToBorrowWaterBottleText:
 	done
 
 GoldenrodFlowerShopTeacherHeresTheSquirtbottleText:
+	ntag "LADY:"
 	text "You want to borrow"
 	line "a SQUIRTBOTTLE?"
 
@@ -76,12 +79,14 @@ GoldenrodFlowerShopTeacherHeresTheSquirtbottleText:
 	done
 
 GoldenrodFlowerShopTeacherWaterPlantsText:
+	ntag "LADY:"
 	text "Give water to all"
 	line "the lovely plants"
 	cont "you meet!"
 	done
 
 GoldenrodFlowerShopTeacherLalalaHavePlentyOfWaterText:
+	ntag "LADY:"
 	text "Lalala lalalala."
 	line "Have plenty of"
 	cont "water, my lovely!"

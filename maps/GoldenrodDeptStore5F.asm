@@ -35,6 +35,7 @@ GoldenrodDeptStore5FClerkScript:
 	end
 
 GoldenrodDeptStore5FFreeTMText:
+	ntag "CLERK:"
 	text "Welcome to the"
 	line "TM SHOP!"
 
@@ -60,6 +61,7 @@ Mike:
 GoldenrodDeptStore5FPokefanMScript:
 	jumptextfaceplayer GoldenrodDeptStore5FPokefanMText
 GoldenrodDeptStore5FPokefanMText:
+	ntag "#FAN:"
 	text "You can't rename a"
 	line "#MON you get in"
 	cont "a trade."

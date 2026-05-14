@@ -11,6 +11,7 @@ AzaleaPokecenter1FNurseScript:
 AzaleaPokecenter1FGentlemanScript:
 	jumptextfaceplayer AzaleaPokecenter1FGentlemanText
 AzaleaPokecenter1FGentlemanText:
+	ntag "GENTLEMAN:"
 	text "The PAGER SYSTEM"
 	line "on the #GEAR"
 	cont "is so convenient!"
@@ -24,6 +25,7 @@ AzaleaPokecenter1FGentlemanText:
 AzaleaPokecenter1FFishingGuruScript:
 	jumptextfaceplayer AzaleaPokecenter1FFishingGuruText
 AzaleaPokecenter1FFishingGuruText:
+	ntag "FISHERMAN:"
 	text "BILL's PC can"
 	line "store up to 20"
 	cont "#MON per BOX."
@@ -32,6 +34,7 @@ AzaleaPokecenter1FFishingGuruText:
 AzaleaPokecenter1FPokefanFScript:
 	jumptextfaceplayer AzaleaPokecenter1FPokefanFText
 AzaleaPokecenter1FPokefanFText:
+	ntag "#FAN:"
 	text "Do you know about"
 	line "APRICORNs?"
 

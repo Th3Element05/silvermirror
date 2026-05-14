@@ -288,6 +288,7 @@ GiveOldAmber:
 	end
 
 CinnabarLabFossilScientistDoYouHaveFossilText:
+	ntag "SCIENTIST:"
 	text "Hiya!"
 
 	para "I am important"
@@ -301,10 +302,12 @@ CinnabarLabFossilScientistDoYouHaveFossilText:
 	done
 
 CinnabarLabFossilScientistNoFossilText:
+	ntag "SCIENTIST:"
 	text "No! Is too bad!"
 	done
 
 CinnabarLabFossilScientistIsFossilText:
+	ntag "SCIENTIST:"
 	text "Oh! That is"
 	line "@"
 	text_ram wStringBuffer4
@@ -326,6 +329,7 @@ CinnabarLabFossilScientistIsFossilText:
 	done
 
 CinnabarLabFossilScientistGaveFossilText:
+	ntag "SCIENTIST:"
 	text "Is good!"
 	
 	para "But I take a"
@@ -336,6 +340,7 @@ CinnabarLabFossilScientistGaveFossilText:
 	done
 
 CinnabarLabFossilScientistDoneText:
+	ntag "SCIENTIST:"
 	text "Where were you?"
 	
 	para "Your fossil is"
@@ -349,6 +354,7 @@ CinnabarLabFossilScientistDoneText:
 	done
 
 CinnabarLabFossilScientistNoRoomForFossilPokemonText:
+	ntag "SCIENTIST:"
 	text "You having no"
 	line "room for it!"
 
@@ -365,6 +371,7 @@ CinnabarLabReceivedPokemonText:
 	done
 
 CinnabarLabFossilScientistTakeGoodCareOfItText:
+	ntag "SCIENTIST:"
 	text "Is very good!"
 	
 	para "You take good"
@@ -382,6 +389,7 @@ CinnabarLabTradeScientistScript:
 	end
 
 CinnabarLabTradeScientistText:
+	ntag "SCIENTIST:"
 	text "I'm researching"
 	line "how #MON eggs"
 	cont "are created!"

@@ -3,7 +3,7 @@
 	const PEWTERCITY_PERSIM_BERRY
 	const PEWTERCITY_BLU_APRICORN
 	const PEWTERCITY_WHT_APRICORN
-	const PEWTERCITY_YOUNGSTER
+	const PEWTERCITY_COOLTRAINER
 	const PEWTERCITY_SUPER_NERD1
 
 PewterCity_MapScripts:
@@ -100,27 +100,27 @@ PewterCity_NoFruit:
 	farsjump Std_NoFruitScript
 
 ; scripts
-YoungsterTakesYouToGymScript1:
-	showemote EMOTE_SHOCK, PEWTERCITY_YOUNGSTER, 20
+BlockingGuyTakesYouToGymScript1:
+	showemote EMOTE_SHOCK, PEWTERCITY_COOLTRAINER, 20
 	opentext
-	writetext PewterCityYoungsterHeyText
+	writetext PewterCityBlockingGuyHeyText
 	waitbutton
 	closetext
 	turnobject PLAYER, UP
 	sjump PewterCityBlockingGuyScript
-YoungsterTakesYouToGymScript2:
-	showemote EMOTE_SHOCK, PEWTERCITY_YOUNGSTER, 20
+BlockingGuyTakesYouToGymScript2:
+	showemote EMOTE_SHOCK, PEWTERCITY_COOLTRAINER, 20
 	opentext
-	writetext PewterCityYoungsterHeyText
+	writetext PewterCityBlockingGuyHeyText
 	waitbutton
 	closetext
 	applymovement PLAYER, PewterCity1StepUpMovement
 	sjump PewterCityBlockingGuyScript
 
-YoungsterTakesYouToGymScript3:
-	showemote EMOTE_SHOCK, PEWTERCITY_YOUNGSTER, 20
+BlockingGuyTakesYouToGymScript3:
+	showemote EMOTE_SHOCK, PEWTERCITY_COOLTRAINER, 20
 	opentext
-	writetext PewterCityYoungsterHeyText
+	writetext PewterCityBlockingGuyHeyText
 	waitbutton
 	closetext
 	applymovement PLAYER, PewterCity2StepsUpMovement
@@ -132,37 +132,37 @@ PewterCityBlockingGuyScript:
 	opentext
 	checkevent EVENT_BEAT_BROCK
 	iftrue .GiveItem
-	writetext PewterCityYoungsterFollowMeText
+	writetext PewterCityBlockingGuyFollowMeText
 	waitbutton
 	closetext
 	playmusic MUSIC_SHOW_ME_AROUND
-	follow PEWTERCITY_YOUNGSTER, PLAYER
+	follow PEWTERCITY_COOLTRAINER, PLAYER
 	readvar VAR_FACING
 	ifequal RIGHT, .GoAround
-	applymovement PEWTERCITY_YOUNGSTER, PewterCityGoToGymMovement1
-	sjump .PewterCityYoungsterGoToGymScript
+	applymovement PEWTERCITY_COOLTRAINER, PewterCityGoToGymMovement1
+	sjump .PewterCityBlockingGuyGoToGymScript
 .GoAround
-	applymovement PEWTERCITY_YOUNGSTER, PewterCityGoToGymMovement1_Alt
+	applymovement PEWTERCITY_COOLTRAINER, PewterCityGoToGymMovement1_Alt
 	; fallthrough
 
-.PewterCityYoungsterGoToGymScript:
-	applymovement PEWTERCITY_YOUNGSTER, PewterCity14StepsLeftMovement
-	applymovement PEWTERCITY_YOUNGSTER, PewterCity5StepsUpMovement
-	applymovement PEWTERCITY_YOUNGSTER, PewterCityGoToGymMovement2
+.PewterCityBlockingGuyGoToGymScript:
+	applymovement PEWTERCITY_COOLTRAINER, PewterCity14StepsLeftMovement
+	applymovement PEWTERCITY_COOLTRAINER, PewterCity5StepsUpMovement
+	applymovement PEWTERCITY_COOLTRAINER, PewterCityGoToGymMovement2
 	turnobject PLAYER, UP
 	opentext
-	writetext PewterCityYoungsterBrockText
+	writetext PewterCityBlockingGuyBrockText
 	waitbutton
 	closetext
 	stopfollow
-	applymovement PEWTERCITY_YOUNGSTER, PewterCityYoungsterLeavesGymMovement
+	applymovement PEWTERCITY_COOLTRAINER, PewterCityBlockingGuyLeavesGymMovement
 	special RestartMapMusic
 	end
 
 .GiveItem
 	checkevent EVENT_GOT_PEWTER_BOOST_ITEM
 	iftrue .Skip
-	writetext PewterCityYoungsterBeatBrockText
+	writetext PewterCityBlockingGuyBeatBrockText
 	promptbutton
 	setscene SCENE_PEWTERCITY_NOOP
 .Skip
@@ -204,17 +204,19 @@ PewterCityBlockingGuyScript:
 	; fallthrough
 .GotPewterBoostItem:
 	setevent EVENT_GOT_PEWTER_BOOST_ITEM
-	writetext PewterCityYoungsterExplainItemText
+	writetext PewterCityBlockingGuyExplainItemText
 	waitbutton
 .BagFull:
 	closetext
 	end
 
-PewterCityYoungsterHeyText:
+PewterCityBlockingGuyHeyText:
+	ntag "TRAINER:"
 	text "Hey!"
 	done
 
-PewterCityYoungsterFollowMeText:
+PewterCityBlockingGuyFollowMeText:
+	ntag "TRAINER:"
 	text "You're a trainer"
 	line "right? BROCK is"
 	cont "looking for new"
@@ -223,13 +225,15 @@ PewterCityYoungsterFollowMeText:
 	para "Follow me!"
 	done
 
-PewterCityYoungsterBrockText:
+PewterCityBlockingGuyBrockText:
+	ntag "TRAINER:"
 	text "If you have the"
 	line "right stuff, go"
 	cont "take on BROCK!"
 	done
 
-PewterCityYoungsterBeatBrockText:
+PewterCityBlockingGuyBeatBrockText:
+	ntag "TRAINER:"
 	text "That BADGE! You"
 	line "beat BROCK?"
 
@@ -237,7 +241,8 @@ PewterCityYoungsterBeatBrockText:
 	line "you to have this!"
 	done
 
-PewterCityYoungsterExplainItemText:
+PewterCityBlockingGuyExplainItemText:
+	ntag "TRAINER:"
 	text "Holding that"
 	line "@"
 	text_ram wStringBuffer4
@@ -260,6 +265,8 @@ PewterCityWater:
 PewterCitySuperNerd1Script:
 	faceplayer
 	opentext
+	checkevent EVENT_BEEN_TO_PEWTER_MUSEUM
+	iftrue PewterCityBeenToMuseum
 	writetext PewterCitySuperNerd1QuestionText
 	yesorno
 	iftrue PewterCityBeenToMuseum
@@ -298,17 +305,20 @@ PewterCityBeenToMuseum:
 	end
 
 PewterCitySuperNerd1QuestionText:
+	ntag "SUPERNERD:"
 	text "Did you check out"
 	line "the MUSEUM?"
 	done
 
 PewterCitySuperNerd1GoToMuseumText:
+	ntag "SUPERNERD:"
 	text "Really?"
 	line "You absolutely"
 	cont "have to go!"
 	done
 
 PewterCityMuseumGuyHereText:
+	ntag "SUPERNERD:"
 	text "It's right here!"
 	line "You have to pay"
 	cont "to get in, but"
@@ -318,6 +328,7 @@ PewterCityMuseumGuyHereText:
 	done
 
 PewterCitySuperNerd1AmazingFossilsText:
+	ntag "SUPERNERD:"
 	text "Weren't those"
 	line "fossils from MT."
 	cont "MOON amazing?"
@@ -334,18 +345,21 @@ PewterCitySuperNerd2Script:
 	jumptext PewterCityThatsRightText
 
 PewterCityDoYouKnowWhatImDoingText:
+	ntag "GARDENER:"
 	text "Psssst!"
 	line "Do you know what"
 	cont "I'm doing?"
 	done
 
 PewterCityRepelText:
+	ntag "GARDENER:"
 	text "I'm spraying REPEL"
 	line "to keep #MON"
 	cont "out of my garden!"
 	done
 
 PewterCityThatsRightText:
+	ntag "GARDENER:"
 	text "That's right!"
 	line "It's hard work!"
 	done
@@ -353,6 +367,7 @@ PewterCityThatsRightText:
 PewterCityCooltrainerFScript:
 	jumptextfaceplayer PewterCityCooltrainerFText
 PewterCityCooltrainerFText:
+	ntag "TRAINER:"
 	text "It's rumored that"
 	line "CLEFAIRY came from"
 	cont "the moon!"
@@ -365,6 +380,7 @@ PewterCityCooltrainerFText:
 PewterCityYoungsterScript:
 	jumptextfaceplayer PewterCityYoungsterText
 PewterCityYoungsterText:
+	ntag "YOUNGSTER:"
 	text "There aren't many"
 	line "serious #MON"
 	cont "trainers here!"
@@ -509,7 +525,7 @@ PewterCityGoToGymMovement2:
 	turn_head DOWN
 	step_end
 
-PewterCityYoungsterLeavesGymMovement:
+PewterCityBlockingGuyLeavesGymMovement:
 	step LEFT
 	step LEFT
 	step LEFT
@@ -553,9 +569,9 @@ PewterCity_MapEvents:
 	warp_event 19,  5, PEWTER_MUSEUM_1F, 3
 
 	def_coord_events
-	coord_event 35, 17, SCENE_PEWTERCITY_FIGHT_BROCK, YoungsterTakesYouToGymScript1
-	coord_event 35, 18, SCENE_PEWTERCITY_FIGHT_BROCK, YoungsterTakesYouToGymScript2
-	coord_event 35, 19, SCENE_PEWTERCITY_FIGHT_BROCK, YoungsterTakesYouToGymScript3
+	coord_event 35, 17, SCENE_PEWTERCITY_FIGHT_BROCK, BlockingGuyTakesYouToGymScript1
+	coord_event 35, 18, SCENE_PEWTERCITY_FIGHT_BROCK, BlockingGuyTakesYouToGymScript2
+	coord_event 35, 19, SCENE_PEWTERCITY_FIGHT_BROCK, BlockingGuyTakesYouToGymScript3
 
 	def_bg_events
 	bg_event 29,  5, BGEVENT_READ, PewterCity_NoFruit
@@ -575,7 +591,7 @@ PewterCity_MapEvents:
 	object_event 29,  5, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, PewterCity_PersimBerry, EVENT_PEWTER_CITY_PERSIM_BERRY ;persim
 	object_event 31,  4, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PewterCity_BLUApricorn, EVENT_PEWTER_CITY_BLU_APRICORN ;blu
 	object_event 33,  3, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, PewterCity_WHTApricorn, EVENT_PEWTER_CITY_WHT_APRICORN ;wht
-	object_event 35, 16, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PewterCityBlockingGuyScript, -1 ;EVENT_PEWTER_CITY_BLOCKING_GUY
+	object_event 35, 16, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, PewterCityBlockingGuyScript, -1 ;EVENT_PEWTER_CITY_BLOCKING_GUY
 	object_event 27, 17, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PewterCitySuperNerd1Script, -1
 	object_event  8, 15, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterCityCooltrainerFScript, -1
 	object_event 17, 25, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterCityYoungsterScript, -1

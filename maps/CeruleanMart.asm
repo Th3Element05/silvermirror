@@ -48,6 +48,7 @@ CeruleanMartMedScript:
 CeruleanMartCooltrainerFScript:
 	jumptextfaceplayer CeruleanMartCooltrainerFText
 CeruleanMartCooltrainerFText:
+	ntag "TRAINER:"
 	text "Have you seen any"
 	line "RARE CANDY?"
 
@@ -59,6 +60,7 @@ CeruleanMartCooltrainerFText:
 CeruleanMartCooltrainerMScript:
 	jumptextfaceplayer CeruleanMartCooltrainerMText
 CeruleanMartCooltrainerMText:
+	ntag "TRAINER:"
 	text "Use REPEL to keep"
 	line "bugs and weak"
 	cont "#MON away."

@@ -123,6 +123,7 @@ TrainerPokemaniacRon:
 	end
 
 PokemaniacRonSeenText:
+	ntag "#MANIAC:"
 	text "If you can get"
 	line "through here, you"
 	cont "can go meet the"
@@ -130,11 +131,12 @@ PokemaniacRonSeenText:
 	done
 
 PokemaniacRonBeatenText:
-	text "No!"
-	line "Unbelievable!"
+	ntag "RON:"
+	text "Unbelievable!"
 	done
 
 PokemaniacRonAfterBattleText:
+	ntag "#MANIAC:"
 	text "I can beat you"
 	line "when it comes to"
 	cont "knowledge about"
@@ -152,15 +154,18 @@ TrainerJugglerDario:
 	end
 
 JugglerDarioSeenText:
+	ntag "JUGGLER:"
 	text "Is VICTORY ROAD"
 	line "too tough?"
 	done
 
 JugglerDarioBeatenText:
+	ntag "DARIO:"
 	text "Well done!"
 	done
 
 JugglerDarioAfterBattleText:
+	ntag "JUGGLER:"
 	text "Many trainers give"
 	line "up the challenge"
 	cont "here."
@@ -177,15 +182,18 @@ TrainerCooltrainerMMike:
 	end
 
 CooltrainerMMikeSeenText:
+	ntag "COOLTRAINER:"
 	text "Come on!"
 	line "I'll whip you!"
 	done
 
 CooltrainerMMikeBeatenText:
+	ntag "MIKE:"
 	text "I got whipped!"
 	done
 
 CooltrainerMMikeAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "You earned the"
 	line "right to be on"
 	cont "VICTORY ROAD!"
@@ -202,16 +210,19 @@ TrainerBlackbeltYoshi:
 	end
 
 BlackbeltYoshiSeenText:
+	ntag "BLACKBELT:"
 	text "VICTORY ROAD is"
 	line "the final test"
 	cont "for trainers!"
 	done
 
 BlackbeltYoshiBeatenText:
+	ntag "YOSHI:"
 	text "Aiyah!"
 	done
 
 BlackbeltYoshiAfterBattleText:
+	ntag "BLACKBELT:"
 	text "If you get stuck,"
 	line "try moving some"
 	cont "boulders around!"
@@ -228,16 +239,19 @@ TrainerJugglerGilbert:
 	end
 
 JugglerGilbertSeenText:
+	ntag "JUGGLER:"
 	text "Ah, so you wish"
 	line "to challenge the"
 	cont "ELITE FOUR?"
 	done
 
 JugglerGilbertBeatenText:
+	ntag "GILBERT:"
 	text "You got me!"
 	done
 
 JugglerGilbertAfterBattleText:
+	ntag "JUGGLER:"
 	text "A trainer named"
 	line "<RIVAL> also came"
 	cont "through here!"

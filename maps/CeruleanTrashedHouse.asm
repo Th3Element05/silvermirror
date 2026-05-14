@@ -19,6 +19,7 @@ CeruleanTrashedHouseWallHole:
 	jumptext CeruleanTrashedHouseWallHoleText
 
 CeruleanTrashedHouseManText1:
+	ntag "MAN:"
 	text "Those miserable"
 	line "ROCKETs!"
 
@@ -35,6 +36,7 @@ CeruleanTrashedHouseManText1:
 	done
 
 CeruleanTrashedHouseManText2:
+	ntag "MAN:"
 	text "I figured what's"
 	line "lost is lost!"
 
@@ -44,6 +46,7 @@ CeruleanTrashedHouseManText2:
 	done
 
 CeruleanTrashedHouseWomanText:
+	ntag "WOMAN:"
 	text "TEAM ROCKET must"
 	line "be trying to DIG"
 	cont "their way into no"

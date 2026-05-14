@@ -11,6 +11,7 @@ BlackthornPokecenter1FNurseScript:
 BlackthornPokecenter1FGentlemanScript:
 	jumptextfaceplayer BlackthornPokecenter1FGentlemanText
 BlackthornPokecenter1FGentlemanText:
+	ntag "GENTLEMAN:"
 	text "High up on the"
 	line "INDIGO PLATEAU is"
 	cont "#MON LEAGUE."
@@ -24,6 +25,7 @@ BlackthornPokecenter1FGentlemanText:
 BlackthornPokecenter1FTwinScript:
 	jumptextfaceplayer BlackthornPokecenter1FTwinText
 BlackthornPokecenter1FTwinText:
+	ntag "GIRL:"
 	text "I came to see the"
 	line "MOVE REMINDER."
 

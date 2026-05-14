@@ -24,6 +24,7 @@ CianwoodCityChucksWife:
 	jumptextfaceplayer ChucksWifeChubbyText
 
 CianwoodCityChucksWifeChuckGoneText:
+	ntag "WOMAN:"
 	text "The gym leader"
 	line "isn't here right"
 	cont "now."
@@ -37,6 +38,7 @@ CianwoodCityChucksWifeChuckGoneText:
 	done
 
 CianwoodCityChucksWifeChuckBackText:
+	ntag "WOMAN:"
 	text "My husband just"
 	line "got back from"
 	cont "MAHOGANY TOWN."
@@ -47,6 +49,7 @@ CianwoodCityChucksWifeChuckBackText:
 	done
 
 ChucksWifeChubbyText:
+	ntag "WOMAN:"
 	text "My husband lost to"
 	line "you, so he needs"
 	cont "to train harder."
@@ -59,6 +62,7 @@ ChucksWifeChubbyText:
 CianwoodCityYoungster:
 	jumptextfaceplayer CianwoodCityYoungsterText
 CianwoodCityYoungsterText:
+	ntag "YOUNGSTER:"
 	text "There are several"
 	line "islands between"
 	cont "here and OLIVINE."
@@ -80,6 +84,7 @@ CianwoodCityYoungsterText:
 CianwoodCityPokefanM:
 	jumptextfaceplayer CianwoodCityPokefanMText
 CianwoodCityPokefanMText:
+	ntag "MAN:"
 	text "Boulders to the"
 	line "north of town can"
 	cont "be crushed."
@@ -95,6 +100,7 @@ CianwoodCityPokefanMText:
 CianwoodCityLass:
 	jumptextfaceplayer CianwoodCityLassText
 CianwoodCityLassText:
+	ntag "LASS:"
 	text "CHUCK, the GYM"
 	line "LEADER, spars with"
 	cont "his fighting #-"

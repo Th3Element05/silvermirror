@@ -99,6 +99,7 @@ Route11GateTilesCallback:
 Route11GateOfficerScript:
 	jumptext Route11GateOfficerText
 Route11GateOfficerText:
+	ntag "OFFICER:"
 	text "When you catch"
 	line "lots of #MON,"
 	cont "isn't it hard to"

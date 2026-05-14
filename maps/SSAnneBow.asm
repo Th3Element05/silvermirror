@@ -16,6 +16,7 @@ TrainerSailorEugene:
 	end
 
 SailorEugeneSeenText:
+	ntag "SAILOR:"
 	text "Hey matey!"
 
 	para "Let's do a little"
@@ -23,11 +24,12 @@ SailorEugeneSeenText:
 	done
 
 SailorEugeneBeatenText:
-	text "You're"
-	line "impressive!"
+	ntag "EUGENE:"
+	text "You're impressive!"
 	done
 
 SailorEugeneAfterBattleText:
+	ntag "SAILOR:"
 	text "How many kinds of"
 	line "#MON do you"
 	cont "think there are?"
@@ -44,16 +46,18 @@ TrainerSailorHarry:
 	end
 
 SailorHarrySeenText:
+	ntag "SAILOR:"
 	text "Ahoy there!"
 	line "Are you seasick?"
 	done
 
 SailorHarryBeatenText:
-	text "I was just"
-	line "careless!"
+	ntag "HARRY:"
+	text "I was careless!"
 	done
 
 SailorHarryAfterBattleText:
+	ntag "SAILOR:"
 	text "My Pa said there"
 	line "are 150 kinds of"
 	cont "#MON. I think"
@@ -73,6 +77,7 @@ TrainerFisherNelson:
 	end
 
 FisherNelsonSeenText:
+	ntag "FISHER:"
 	text "Out at sea, you"
 	line "can hook different"
 	cont "#MON than you"
@@ -80,10 +85,12 @@ FisherNelsonSeenText:
 	done
 
 FisherNelsonBeatenText:
+	ntag "NELSON:"
 	text "Sinker!"
 	done
 
 FisherNelsonAfterBattleText:
+	ntag "FISHER:"
 	text "I like to fish at"
 	line "lots of different"
 	cont "locations to see"
@@ -101,16 +108,19 @@ TrainerSailorJared:
 	end
 
 SailorJaredSeenText:
+	ntag "SAILOR:"
 	text "Ahoy there!"
 	line "Are you seasick?"
 	done
 
 SailorJaredBeatenText:
+	ntag "JARED:"
 	text "I was just"
 	line "careless!"
 	done
 
 SailorJaredAfterBattleText:
+	ntag "SAILOR:"
 	text "Fresh air can help"
 	line "if the movement of"
 	cont "the ship is making"
@@ -122,6 +132,7 @@ SailorJaredAfterBattleText:
 SSAnneBowSuperNerdScript:
 	jumptextfaceplayer SSAnneBowSuperNerdText
 SSAnneBowSuperNerdText:
+	ntag "SUPERNERD:"
 	text "The party's over."
 	line "The ship will be"
 	cont "departing soon."
@@ -130,6 +141,7 @@ SSAnneBowSuperNerdText:
 SSAnneBowSailorScript:
 	jumptextfaceplayer SSAnneBowSailorText
 SSAnneBowSailorText:
+	ntag "SAILOR:"
 	text "Scrubbing decks"
 	line "is hard work!"
 	done
@@ -144,6 +156,7 @@ SSAnneBowCooltrainerMScript:
 	end
 
 SSAnneBowCooltrainerMText:
+	ntag "TRAINER:"
 	text "Urf. I feel ill."
 
 	para "I stepped out to"

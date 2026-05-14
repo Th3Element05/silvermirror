@@ -68,17 +68,20 @@ TrainerCooltrainermAxel:
 	end
 
 CooltrainermAxelSeenText:
+	ntag "COOLTRAINER:"
 	text "It's not as if we"
 	line "only use dragon-"
 	cont "type #MON."
 	done
 
 CooltrainermAxelBeatenText:
+	ntag "AXEL:"
 	text "Rats! If only I"
 	line "had a dragon!"
 	done
 
 CooltrainermAxelAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "Members of the"
 	line "dragon-clan can"
 	cont "only train dragon"
@@ -97,6 +100,7 @@ TrainerCooltrainerfIris:
 	end
 
 CooltrainerfIrisSeenText:
+	ntag "COOLTRAINER:"
 	text "I can't allow a"
 	line "nameless trainer"
 	cont "past me!"
@@ -106,10 +110,12 @@ CooltrainerfIrisSeenText:
 	done
 
 CooltrainerfIrisBeatenText:
+	ntag "IRIS:"
 	text "Awww… I lost…"
 	done
 
 CooltrainerfIrisAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "Uh-oh… CLAIR is"
 	line "going to be mad…"
 	done

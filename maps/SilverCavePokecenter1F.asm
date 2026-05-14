@@ -14,6 +14,7 @@ SilverCavePokecenter1FReceptionistScript:
 SilverCavePokecenter1FBenchGuyScript:
 	jumptext SilverCavePokecenter1FBenchGuyText
 SilverCavePokecenter1FBenchGuyText:
+	ntag "GUY:"
 	text "Powerful trainers"
 	line "climb MT.SILVER"
 	cont "despite its many"

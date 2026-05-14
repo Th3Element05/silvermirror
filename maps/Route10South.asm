@@ -151,16 +151,19 @@ TrainerPicnickerErin:
 	end
 
 PicnickerErinSeenText:
+	ntag "PICNICKER:"
 	text "I'm feeling a bit"
 	line "faint from this"
 	cont "tough hike."
 	done
 
 PicnickerErinBeatenText:
+	ntag "ERIN:"
 	text "I'm not up to it!"
 	done
 
 PicnickerErinAfterBattleText:
+	ntag "ERIN:"
 	text "The #MON here"
 	line "are so chunky!"
 
@@ -170,6 +173,7 @@ PicnickerErinAfterBattleText:
 	done
 
 PicnickerErinBeatenGiftText:
+	ntag "ERIN:"
 	text "Thanks a lot for"
 	line "battling with me!"
 
@@ -276,15 +280,18 @@ TrainerHikerKenny:
 	end
 
 HikerKennySeenText:
+	ntag "HIKER:"
 	text "I caught my ONIX"
 	line "in ROCK TUNNEL!"
 	done
 
 HikerKennyBeatenText:
+	ntag "KENNY:"
 	text "I lost…"
 	done
 
 HikerKennyAfterBattleText:
+	ntag "KENNY:"
 	text "Geological fea-"
 	line "tures don't appear"
 	cont "to change."
@@ -306,16 +313,19 @@ TrainerHikerTimothy:
 	end
 
 HikerTimothySeenText:
+	ntag "HIKER:"
 	text "Ah! This mountain"
 	line "air is delicious!"
 	done
 
 HikerTimothyBeatenText:
+	ntag "TIMOTHY:"
 	text "That cleared my"
 	line "head!"
 	done
 
 HikerTimothyAfterBattleText:
+	ntag "HIKER:"
 	text "I feel high on"
 	line "mountain air!"
 	done
@@ -332,16 +342,19 @@ TrainerPokemaniacLarry:
 	end
 
 PokemaniacLarrySeenText:
+	ntag "#MANIAC:"
 	text "Hi kid, want to"
 	line "see my #MON?"
 	done
 
 PokemaniacLarryBeatenText:
+	ntag "LARRY:"
 	text "Oh no!"
 	line "My #MON!"
 	done
 
 PokemaniacLarryAfterBattleText:
+	ntag "#MANIAC:"
 	text "I don't like you"
 	line "for beating me!"
 	done

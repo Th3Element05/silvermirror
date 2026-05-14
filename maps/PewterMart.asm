@@ -53,6 +53,7 @@ PewterMartMedScript:
 PewterMartYoungsterScript:
 	jumptextfaceplayer PewterMartYoungsterText
 PewterMartYoungsterText:
+	ntag "YOUNGSTER:"
 	text "A shady, old man"
 	line "got me to buy"
 	cont "this really weird"
@@ -65,6 +66,7 @@ PewterMartYoungsterText:
 PewterMartSuperNerdScript:
 	jumptextfaceplayer PewterMartSuperNerdText
 PewterMartSuperNerdText:
+	ntag "SUPERNERD:"
 	text "Good things can"
 	line "happen if you"
 	cont "raise #MON"

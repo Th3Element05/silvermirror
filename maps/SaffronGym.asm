@@ -118,18 +118,24 @@ PlayerReceivedMarshbadgeText:
 
 SabrinaExplainMarshbadgeText:
 	ntag "SABRINA:"
-	text "The MARSHBADGE"
-	line "makes #MON up"
-	cont "to L70 obey you!"
+;	text "The MARSHBADGE"
+;	line "makes #MON up"
+;	cont "to L70 obey you!"
+;
+;	para "Stronger #MON"
+;	line "will become wild,"
+;	cont "ignoring your"
+;	roll "orders in battle!"
+;
+;	para "Just don't raise"
+;	line "your #MON too"
+;	cont "much!"
+;
+	text "That MARSHBADGE"
+	line "is proof of your"
+	cont "strength."
 
-	para "Stronger #MON"
-	line "will become wild,"
-	cont "ignoring your"
-	roll "orders in battle!"
-
-	para "Just don't raise"
-	line "your #MON too"
-	cont "much!"
+	para "Wear it proudly."
 
 	para "Wait, please take"
 	line "this TM with you!"
@@ -178,6 +184,7 @@ TrainerPsychicNathan:
 	end
 
 PsychicNathanSeenText:
+	ntag "PSYCHIC:"
 	text "SAFFRON #MON"
 	line "GYM is famous for"
 	cont "its psychics!"
@@ -188,10 +195,12 @@ PsychicNathanSeenText:
 	done
 
 PsychicNathanBeatenText:
+	ntag "NATHAN:"
 	text "Arrrgh!"
 	done
 
 PsychicNathanAfterBattleText:
+	ntag "PSYCHIC:"
 	text "That's right! I"
 	line "used telepathy to"
 	cont "read your mind!"
@@ -208,17 +217,19 @@ TrainerMediumHazel:
 	end
 
 MediumHazelSeenText:
+	ntag "MEDIUM:"
 	text "SABRINA is younger"
 	line "than I, but I"
 	cont "respect her!"
 	done
 
 MediumHazelBeatenText:
-	text "Not"
-	line "good enough!"
+	ntag "HAZEL:"
+	text "Not good enough!"
 	done
 
 MediumHazelAfterBattleText:
+	ntag "MEDIUM:"
 	text "In a battle of"
 	line "equals, the one"
 	cont "with the stronger"
@@ -240,16 +251,19 @@ TrainerPsychicFranklin:
 	end
 
 PsychicFranklinSeenText:
+	ntag "PSYCHIC:"
 	text "Does our unseen"
 	line "power scare you?"
 	done
 
 PsychicFranklinBeatenText:
-	text "I never"
-	line "foresaw this!"
+	ntag "FARNKLIN:"
+	text "I never foresaw"
+	line "this!"
 	done
 
 PsychicFranklinAfterBattleText:
+	ntag "PSYCHIC:"
 	text "Psychic #MON"
 	line "fear only ghosts"
 	cont "and bugs!"
@@ -266,6 +280,7 @@ TrainerMediumNaomi:
 	end
 
 MediumNaomiSeenText:
+	ntag "MEDIUM:"
 	text "#MON take on"
 	line "the appearance of"
 	cont "their trainers."
@@ -275,11 +290,13 @@ MediumNaomiSeenText:
 	done
 
 MediumNaomiBeatenText:
+	ntag "NAOMI:"
 	text "I knew"
 	line "it!"
 	done
 
 MediumNaomiAfterBattleText:
+	ntag "MEDIUM:"
 	text "I must teach"
 	line "better techniques"
 	cont "to my #MON!"
@@ -296,17 +313,20 @@ TrainerPsychicHerman:
 	end
 
 PsychicHermanSeenText:
+	ntag "PSYCHIC:"
 	text "You know that"
 	line "power alone isn't"
 	cont "enough!"
 	done
 
 PsychicHermanBeatenText:
-	text "I don't"
-	line "believe this!"
+	ntag "HERMAN:"
+	text "I don't believe"
+	line "this!"
 	done
 
 PsychicHermanAfterBattleText:
+	ntag "PSYCHIC:"
 	text "SABRINA just wiped"
 	line "out the KARATE"
 	cont "MASTER next door!"
@@ -323,17 +343,19 @@ TrainerMediumStella:
 	end
 
 MediumStellaSeenText:
+	ntag "MEDIUM:"
 	text "You and I,"
 	line "our #MON"
-	cont "shall fight!"
+	line "shall fight!"
 	done
 
 MediumStellaBeatenText:
-	text "I lost"
-	line "after all!"
+	ntag "STELLA:"
+	text "I lost after all!"
 	done
 
 MediumStellaAfterBattleText:
+	ntag "MEDIUM:"
 	text "I knew that this"
 	line "was going to take"
 	cont "place."
@@ -350,6 +372,7 @@ TrainerPsychicGreg:
 	end
 
 PsychicGregSeenText:
+	ntag "PSYCHIC:"
 	text "SABRINA is young,"
 	line "but she's also"
 	cont "our LEADER!"
@@ -359,11 +382,13 @@ PsychicGregSeenText:
 	done
 
 PsychicGregBeatenText:
-	text "I lost"
-	line "my concentration!"
+	ntag "GREG:"
+	text "I lost my"
+	line "concentration!"
 	done
 
 PsychicGregAfterBattleText:
+	ntag "PSYCHIC:"
 	text "The FIGHTING DOJO"
 	line "next door used to"
 	cont "be an official"
@@ -384,6 +409,7 @@ SaffronGymGuideScript:
 	jumptextfaceplayer SaffronGymGuideWinText
 
 SaffronGymGuideText:
+	ntag "GUIDE:"
 	text "Yo! CHAMP in the"
 	line "making!"
 
@@ -401,6 +427,7 @@ SaffronGymGuideText:
 	done
 
 SaffronGymGuideWinText:
+	ntag "GUIDE:"
 	text "Psychic power,"
 	line "huh?"
 

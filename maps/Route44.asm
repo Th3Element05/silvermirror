@@ -62,17 +62,20 @@ TrainerPokemaniacRoland:
 	end
 
 PokemaniacRolandSeenText:
+	ntag "#MANIAC:"
 	text "I'll do anything"
 	line "to get my hands on"
 	cont "rare #MON!"
 	done
 
 PokemaniacRolandBeatenText:
+	ntag "ROLAND:"
 	text "Oooh, your #MON"
 	line "are so appealing."
 	done
 
 PokemaniacRolandAfterBattleText:
+	ntag "#MANIAC:"
 	text "If a #MON has"
 	line "different colors"
 	cont "from usual, it's"
@@ -93,6 +96,7 @@ TrainerFisherEmil:
 	end
 
 FisherEmilSeenText:
+	ntag "FISHER:"
 	text "I fish until I"
 	line "can't anymore."
 
@@ -105,11 +109,13 @@ FisherEmilSeenText:
 	done
 
 FisherEmilBeatenText:
+	ntag "EMIL:"
 	text "Hmmmm… "
 	line "This isn't right."
 	done
 
 FisherEmilAfterBattleText:
+	ntag "FISHER:"
 	text "That's 100 wins"
 	line "to 101 losses."
 
@@ -128,6 +134,7 @@ TrainerCooltrainermBrian:
 	end
 
 CooltrainermBrianSeenText:
+	ntag "COOLTRAINER:"
 	text "I can tell you're"
 	line "a good trainer by"
 	cont "looking at you."
@@ -137,11 +144,13 @@ CooltrainermBrianSeenText:
 	done
 
 CooltrainermBrianBeatenText:
+	ntag "BRIAN:"
 	text "Tch! It's a total"
 	line "loss on my part."
 	done
 
 CooltrainermBrianAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "Wow. You have a"
 	line "lot of BADGEs."
 
@@ -160,6 +169,7 @@ TrainerCooltrainerfJenn:
 	end
 
 CooltrainerfJennSeenText:
+	ntag "COOLTRAINER:"
 	text "You look strong."
 
 	para "Good trainers seek"
@@ -168,11 +178,13 @@ CooltrainerfJennSeenText:
 	done
 
 CooltrainerfJennBeatenText:
+	ntag "JENN:"
 	text "Nope! This won't"
 	line "do at all."
 	done
 
 CooltrainerfJennAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "We all get better"
 	line "by experiencing"
 	cont "many battles."
@@ -193,16 +205,19 @@ TrainerPsychicKenan:
 	end
 
 PsychicKenanSeenText:
+	ntag "PSYCHIC:"
 	text "I'm gonna win,"
 	line "for sure!"
 	done
 
 PsychicKenanBeatenText:
+	ntag "KENAN:"
 	text "Arrgh… That's a"
 	line "shocking loss…"
 	done
 
 PsychicKenanAfterBattleText:
+	ntag "PSYCHIC:"
 	text "It's important to"
 	line "have conviction"
 	cont "on your side."

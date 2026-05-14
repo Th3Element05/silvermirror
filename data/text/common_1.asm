@@ -1806,12 +1806,14 @@ _DaycareDummyText::
 	done
 
 _DayCareManIntroText::
+	ntag "DAYCARE:"
 	text "I'm the DAY-CARE"
 	line "MAN. Want me to"
 	cont "raise a #MON?"
 	done
 
 _DayCareManIntroEggText::
+	ntag "DAYCARE:"
 	text "I'm the DAY-CARE"
 	line "MAN. Do you know"
 	cont "about EGGs?"
@@ -1831,6 +1833,7 @@ _DayCareManIntroEggText::
 	done
 
 _DayCareLadyIntroText::
+	ntag "DAYCARE:"
 	text "I'm the DAY-CARE"
 	line "LADY."
 
@@ -1839,6 +1842,7 @@ _DayCareLadyIntroText::
 	done
 
 _DayCareLadyIntroEggText::
+	ntag "DAYCARE:"
 	text "I'm the DAY-CARE"
 	line "LADY. Do you know"
 	cont "about EGGs?"
@@ -1858,32 +1862,38 @@ _DayCareLadyIntroEggText::
 	done
 
 _WhatShouldIRaiseText::
+	ntag "DAYCARE:"
 	text "What should I"
 	line "raise for you?"
 	prompt
 
 _OnlyOneMonText::
+	ntag "DAYCARE:"
 	text "Oh? But you have"
 	line "just one #MON."
 	prompt
 
 _CantAcceptEggText::
+	ntag "DAYCARE:"
 	text "Sorry, but I can't"
 	line "accept an EGG."
 	prompt
 
 _RemoveMailText::
+	ntag "DAYCARE:"
 	text "Remove MAIL before"
 	line "you come see me."
 	prompt
 
 _LastHealthyMonText::
+	ntag "DAYCARE:"
 	text "If you give me"
 	line "that, what will"
 	cont "you battle with?"
 	prompt
 
 _IllRaiseYourMonText::
+	ntag "DAYCARE:"
 	text "OK. I'll raise"
 	line "your @"
 	text_ram wStringBuffer1
@@ -1891,11 +1901,13 @@ _IllRaiseYourMonText::
 	prompt
 
 _ComeBackLaterText::
+	ntag "DAYCARE:"
 	text "Come back for it"
 	line "later."
 	done
 
 _AreWeGeniusesText::
+	ntag "DAYCARE:"
 	text "Are we geniuses or"
 	line "what? Want to see"
 	cont "your @"
@@ -1904,6 +1916,7 @@ _AreWeGeniusesText::
 	done
 
 _YourMonHasGrownText::
+	ntag "DAYCARE:"
 	text "Your @"
 	text_ram wStringBuffer1
 	text_start
@@ -1922,6 +1935,7 @@ _YourMonHasGrownText::
 	done
 
 _PerfectHeresYourMonText::
+	ntag "DAYCARE:"
 	text "Perfect! Here's"
 	line "your #MON."
 	prompt
@@ -1934,6 +1948,7 @@ _GotBackMonText::
 	prompt
 
 _BackAlreadyText::
+	ntag "DAYCARE:"
 	text "Huh? Back already?"
 	line "Your @"
 	text_ram wStringBuffer1
@@ -1947,28 +1962,34 @@ _BackAlreadyText::
 	done
 
 _HaveNoRoomText::
+	ntag "DAYCARE:"
 	text "You have no room"
 	line "for it."
 	prompt
 
 _NotEnoughMoneyText::
+	ntag "DAYCARE:"
 	text "You don't have"
 	line "enough money."
 	prompt
 
 _OhFineThenText::
+	ntag "DAYCARE:"
 	text "Oh, fine then."
 	prompt
 
 _ComeAgainText::
+	ntag "DAYCARE:"
 	text "Come again."
 	done
 
 _NotYetText::
+	ntag "DAYCARE:"
 	text "Not yet…"
 	done
 
 _FoundAnEggText::
+	ntag "DAYCARE:"
 	text "Ah, it's you!"
 
 	para "We were raising"
@@ -1991,33 +2012,39 @@ _ReceivedEggText::
 	done
 
 _TakeGoodCareOfEggText::
+	ntag "DAYCARE:"
 	text "Take good care of"
 	line "it."
 	done
 
 _IllKeepItThanksText::
+	ntag "DAYCARE:"
 	text "Well then, I'll"
 	line "keep it. Thanks!"
 	done
 
 _NoRoomForEggText::
+	ntag "DAYCARE:"
 	text "You have no room"
 	line "in your party."
 	cont "Come back later."
 	done
 
 _WhichMonPhotoText::
+	ntag "PHOTOGRAPHER:"
 	text "Which #MON"
 	line "should I photo-"
 	cont "graph?"
 	prompt
 
 _HoldStillText::
+	ntag "PHOTOGRAPHER:"
 	text "All righty. Hold"
 	line "still for a bit."
 	prompt
 
 _PrestoAllDoneText::
+	ntag "PHOTOGRAPHER:"
 	text "Presto! All done."
 	line "Come again, OK?"
 	done

@@ -36,6 +36,7 @@ EcruteakCityGramps1Script:
 	jumptextfaceplayer EcruteakCityGramps1AfterText
 
 EcruteakCityGramps1BeforeText:
+	ntag "GRAMPS:"
 	text "Oh, no. Oh, no…"
 
 	para "My granddaughter"
@@ -56,6 +57,7 @@ EcruteakCityGramps1BeforeText:
 	done
 
 EcruteakCityGramps1AfterText:
+	ntag "GRAMPS:"
 	text "In the distant"
 	line "past…"
 
@@ -85,6 +87,7 @@ EcruteakCityGramps1AfterText:
 EcruteakCityGirlScript:
 	jumptextfaceplayer EcruteakCityGirlText
 EcruteakCityGirlText:
+	ntag "GIRL:"
 	text "After grandpa ran"
 	line "into the tower,"
 	cont "three big #MON"
@@ -98,6 +101,7 @@ EcruteakCityGirlText:
 EcruteakCityGramps2Script:
 	jumptextfaceplayer EcruteakCityGramps1Text
 EcruteakCityGramps1Text:
+	ntag "GRAMPS:"
 	text "ECRUTEAK used to"
 	line "have two towers:"
 	cont "One each in the"
@@ -107,6 +111,7 @@ EcruteakCityGramps1Text:
 EcruteakCityLass1Script:
 	jumptextfaceplayer EcruteakCityLass1Text
 EcruteakCityLass1Text:
+	ntag "LASS:"
 	text "I'm going to prac-"
 	line "tice at the DANCE"
 	cont "THEATER. Care to"
@@ -130,6 +135,7 @@ EcruteakCityLass2Script:
 	end
 
 EcruteakCityLass2Text:
+	ntag "LASS:"
 	text "The tower that"
 	line "used to be here…"
 
@@ -139,6 +145,7 @@ EcruteakCityLass2Text:
 	done
 
 EcruteakCityLass2Text_ReleasedBeasts:
+	ntag "LASS:"
 	text "Three big #MON"
 	line "ran off in differ-"
 	cont "ent directions."
@@ -149,6 +156,7 @@ EcruteakCityLass2Text_ReleasedBeasts:
 EcruteakCityFisherScript:
 	jumptextfaceplayer EcruteakCityFisherText
 EcruteakCityFisherText:
+	ntag "FISHER:"
 	text "OLIVINE LIGHTHOUSE"
 	line "uses a #MON as"
 	cont "the beacon."

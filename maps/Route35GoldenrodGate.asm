@@ -8,6 +8,7 @@ Route35GoldenrodGate_MapScripts:
 Route35GoldenrodGateOfficerScript:
 	jumptext Route35GoldenrodGateOfficerText
 Route35GoldenrodGateOfficerText:
+	ntag "OFFICER:"
 	text "People say the"
 	line "trees on ROUTE 36"
 	cont "can walk around!"
@@ -19,6 +20,7 @@ Route35GoldenrodGateOfficerText:
 Route35GoldenrodGatePokefanFScript:
 	jumptextfaceplayer Route35GoldenrodGatePokefanFText
 Route35GoldenrodGatePokefanFText:
+	ntag "MAN:"
 	text "I like the #MON"
 	line "Lullaby they play"
 	cont "on the radio."
@@ -27,6 +29,7 @@ Route35GoldenrodGatePokefanFText:
 Route35GoldenrodGateFisherScript:
 	jumptextfaceplayer Route35GoldenrodGateFisherText
 Route35GoldenrodGateFisherText:
+	ntag "FISHER:"
 	text "I wonder how many"
 	line "kinds of #MON"
 	cont "there are in the"

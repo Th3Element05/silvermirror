@@ -64,6 +64,7 @@ TrainerHikerQuentin:
 	end
 
 HikerQuentinSeenText:
+	ntag "HIKER:"
 	text "Be prepared for"
 	line "anything!"
 
@@ -73,10 +74,12 @@ HikerQuentinSeenText:
 	done
 
 HikerQuentinBeatenText:
+	ntag "QUENTIN:"
 	text "Oh, I lost that!"
 	done
 
 HikerQuentinAfterBattleText:
+	ntag "HIKER:"
 	text "I'll head back to"
 	line "BLACKTHORN's ICE"
 	cont "PATH and train"
@@ -94,17 +97,20 @@ TrainerCooltrainermColt:
 	end
 
 CooltrainermColtSeenText:
+	ntag "COOLTRAINER:"
 	text "What are your"
 	line "thoughts on rais-"
 	cont "ing #MON?"
 	done
 
 CooltrainermColtBeatenText:
+	ntag "COLT:"
 	text "You've won my"
 	line "respect."
 	done
 
 CooltrainermColtAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "I see you're rais-"
 	line "ing your #MON"
 	cont "with care."
@@ -126,6 +132,7 @@ TrainerCooltrainerfQuinn:
 	end
 
 CooltrainerfQuinnSeenText:
+	ntag "COOLTRAINER:"
 	text "What is your"
 	line "battle strategy?"
 
@@ -135,10 +142,12 @@ CooltrainerfQuinnSeenText:
 	done
 
 CooltrainerfQuinnBeatenText:
+	ntag "QUINN:"
 	text "Fine. I lost."
 	done
 
 CooltrainerfQuinnAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "I'm not in favor"
 	line "of overly power-"
 	cont "ful moves."
@@ -219,16 +228,19 @@ HikerParryHasIron:
 	end
 
 HikerParrySeenText:
+	ntag "HIKER:"
 	text "My #MON are"
 	line "power packed!"
 	done
 
 HikerParryBeatenText:
+	ntag "PARRY:"
 	text "Wahahah! I'm the"
 	line "big loser!"
 	done
 
 HikerParryAfterBattleText:
+	ntag "PARRY:"
 	text "I'm not much good"
 	line "at thinking, see?"
 
@@ -237,6 +249,7 @@ HikerParryAfterBattleText:
 	done
 
 HikerParryGivesIronText:
+	ntag "PARRY:"
 	text "I just can't find"
 	line "a way to win!"
 
@@ -306,6 +319,7 @@ TrainerBlackbeltKenji:
 	sjump Route45PackFullM
 
 BlackbeltKenjiSeenText:
+	ntag "BLACKBELT:"
 	text "I was training"
 	line "here alone."
 
@@ -314,10 +328,12 @@ BlackbeltKenjiSeenText:
 	done
 
 BlackbeltKenjiBeatenText:
+	ntag "KENJI:"
 	text "Waaaargh!"
 	done
 
 BlackbeltKenjiAfterBattleText:
+	ntag "KENJI:"
 	text "This calls for"
 	line "extreme measures."
 
@@ -327,12 +343,14 @@ BlackbeltKenjiAfterBattleText:
 	done
 
 BlackbeltKenjiMorningText:
+	ntag "KENJI:"
 	text "I'm going to train"
 	line "a bit more before"
 	cont "I break for lunch."
 	done
 
 BlackbeltKenjiNightText:
+	ntag "KENJI:"
 	text "We had plenty of"
 	line "rest at lunch, so"
 	cont "now we're ready"
@@ -390,6 +408,7 @@ TrainerHikerPatrick:
 	end
 
 HikerPatrickSeenText:
+	ntag "HIKER:"
 	text "Yo! You're spunky!"
 	line "But you know what?"
 
@@ -399,11 +418,13 @@ HikerPatrickSeenText:
 	done
 
 HikerPatrickBeatenText:
+	ntag "PATRICK:"
 	text "My #MON weren't"
 	line "spunky enough!"
 	done
 
 HikerPatrickAfterBattleText:
+	ntag "HIKER:"
 	text "Boy, do I love"
 	line "HP UP! Mmmm, yum!"
 
@@ -424,16 +445,19 @@ TrainerCamperDilan:
 	end
 
 CamperDilanSeenText:
+	ntag "CAMPER:"
 	text "I'm really, really"
 	line "tough!"
 	done
 
 CamperDilanBeatenText:
+	ntag "DILAN:"
 	text "I was tough at the"
 	line "BATTLE TOWER…"
 	done
 
 CamperDilanAfterBattleText:
+	ntag "CAMPER:"
 	text "Have you been to"
 	line "the BATTLE TOWER?"
 

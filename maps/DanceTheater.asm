@@ -16,17 +16,20 @@ TrainerKimonoGirlNaoko: ;flareon
 	end
 
 KimonoGirlNaokoSeenText:
+	ntag "NAOKO:"
 	text "You have lovely"
 	line "#MON. May I see"
 	cont "them in battle?"
 	done
 
 KimonoGirlNaokoBeatenText:
+	ntag "NAOKO:"
 	text "Oh, you are very"
 	line "strong."
 	done
 
 KimonoGirlNaokoAfterBattleText:
+	ntag "NAOKO:"
 	text "I enjoyed that."
 	line "I would like to"
 	cont "see you again."

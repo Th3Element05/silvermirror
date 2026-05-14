@@ -273,16 +273,15 @@ Movement_CameraPansUp:
 	step_end
 
 LanceBattleIntroText:
+	ntag "LANCE:"
 	text "Ah! I heard about"
 	line "you <PLAYER>!"
 
 	para "I lead the ELITE"
 	line "FOUR! You can"
 	cont "call me LANCE the"
-	roll "DRAGON MASTER!@"
+	roll "DRAGON MASTER!"
 
-	text_promptbutton
-	ntag "LANCE:"
 	para "You know that"
 	line "dragons are"
 	cont "mythical #MON!"

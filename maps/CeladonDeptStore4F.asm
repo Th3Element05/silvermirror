@@ -15,6 +15,7 @@ CeladonDeptStore4FClerkScript:
 CeladonDeptStore4FSuperNerdScript:
 	jumptextfaceplayer CeladonDeptStore4FSuperNerdText
 CeladonDeptStore4FSuperNerdText:
+	ntag "SUPERNERD:"
 	text "I'm getting a"
 	line "#DOLL for my"
 	cont "girl friend!"
@@ -23,6 +24,7 @@ CeladonDeptStore4FSuperNerdText:
 CeladonDeptStore4FYoungsterScript:
 	jumptextfaceplayer CeladonDeptStore4FYoungsterText
 CeladonDeptStore4FYoungsterText:
+	ntag "YOUNGSTER:"
 	text "I heard something"
 	line "useful."
 

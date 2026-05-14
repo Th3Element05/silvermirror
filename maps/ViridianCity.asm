@@ -225,6 +225,7 @@ ViridianCityGymGramps:
 	jumptextfaceplayer ViridianCityLeaderLeftText
 
 ViridianCityGymGrampsText:
+	ntag "GRAMPS:"
 	text "This #MON GYM"
 	line "is always closed."
 
@@ -233,11 +234,13 @@ ViridianCityGymGrampsText:
 	done
 
 ViridianCityLeaderReturnedText:
+	ntag "GRAMPS:"
 	text "VIRIDIAN GYM's"
 	line "LEADER returned!"
 	done
 
 ViridianCityLeaderLeftText:
+	ntag "GRAMPS:"
 	text "Looks like the"
 	line "LEADER left for"
 	cont "good this time."
@@ -390,6 +393,7 @@ ViridianCityWokeTutorScript:
 	db "CANCEL@"
 
 ViridianCityTutorDreamEatenText:
+	ntag "MAN:"
 	text "…yawn!"
 
 	para "I must have dozed"
@@ -410,6 +414,7 @@ ViridianCityTutorDreamEatenText:
 	done
 
 ViridianCityTutorBackToSleepText:
+	ntag "MAN:"
 	text "Teaching your"
 	line "#MON really"
 	cont "wore me out."
@@ -420,7 +425,7 @@ ViridianCityTutorBackToSleepText:
 
 	para "<……>"
 
-	para "…Zzzzz…"
+	para "…zzzzz…"
 	done
 
 ViridianCityTutorMoveText:
@@ -428,6 +433,7 @@ ViridianCityTutorMoveText:
 	done
 
 ViridianCityTutorIncompatibleText:
+	ntag "MAN:"
 	text "Your #MON can't"
 	line "learn this move…"
 	done
@@ -483,6 +489,7 @@ ViridianCityTutorIncompatibleText:
 ViridianCityYoungster1Script:
 	jumptextfaceplayer ViridianCityYoungster1Text
 ViridianCityYoungster1Text:
+	ntag "YOUNGSTER:"
 	text "Those #BALLs"
 	line "at your waist!"
 	cont "You have #MON!"
@@ -510,6 +517,7 @@ ViridianCityYoungster2Script:
 	end
 
 ViridianCityYoungster2QuestionText:
+	ntag "BOY:"
 	text "You want to know"
 	line "about the 2 kinds"
 	cont "of caterpillar"
@@ -517,13 +525,15 @@ ViridianCityYoungster2QuestionText:
 	done
 
 ViridianCityYoungster2DeclinedText:
+	ntag "BOY:"
 	text "Oh, OK then!"
 	done
 
 ViridianCityYoungster2AcceptedText:
+	ntag "BOY:"
 	text "CATERPIE has no"
-	line "poison, but"
-	cont "WEEDLE does."
+	line "poison, but WEEDLE"
+	cont "does."
 
 	para "Watch out for its"
 	line "POISON STING!"
@@ -537,6 +547,7 @@ ViridianCityGirlScript:
 	jumptext ViridianCityGirlNoCoffeYetText
 
 ViridianCityGirlGoShoppingText:
+	ntag "LADY:"
 	text "When I go shop in"
 	line "PEWTER CITY, I"
 	cont "have to take the"
@@ -545,6 +556,7 @@ ViridianCityGirlGoShoppingText:
 	done
 
 ViridianCityGirlNoCoffeYetText:
+	ntag "LADY:"
 	text "Oh Grandpa! You're"
 	line "always so mean"
 	cont "before you've had"

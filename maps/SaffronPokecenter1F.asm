@@ -14,6 +14,7 @@ SaffronPokecenter1FReceptionistScript:
 SaffronPokecenter1FBenchGuyScript:
 	jumptext SaffronPokecenter1FBenchGuyText
 SaffronPokecenter1FBenchGuyText:
+	ntag "GUY:"
 	text "It would be great"
 	line "if the ELITE FOUR"
 	cont "came and stomped"
@@ -23,6 +24,7 @@ SaffronPokecenter1FBenchGuyText:
 SaffronPokecenter1FBeautyScript:
 	jumptextfaceplayer SaffronPokecenter1FBeautyText
 SaffronPokecenter1FBeautyText:
+	ntag "LADY:"
 	text "Different #MON"
 	line "species grow at"
 	cont "different rates."
@@ -31,6 +33,7 @@ SaffronPokecenter1FBeautyText:
 SaffronPokecenter1FGentlemanScript:
 	jumptextfaceplayer SaffronPokecenter1FGentlemanText
 SaffronPokecenter1FGentlemanText:
+	ntag "GENTLEMAN:"
 	text "SILPH CO. is very"
 	line "famous. That's"
 	cont "why it attracted"

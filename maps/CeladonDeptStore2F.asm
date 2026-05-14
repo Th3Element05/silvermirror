@@ -36,9 +36,11 @@ CeladonMart2FMedScript:
 
 CeladonDeptStore2FElevatorButton:
 	jumpstd ElevatorButtonScript
+
 CeladonDeptStore2FPokefanMScript:
 	jumptextfaceplayer CeladonDeptStore2FPokefanMText
 CeladonDeptStore2FPokefanMText:
+	ntag "#FAN:"
 	text "SUPER REPEL keeps"
 	line "weak #MON at"
 	cont "bay…"
@@ -50,6 +52,7 @@ CeladonDeptStore2FPokefanMText:
 CeladonDeptStore2FYoungsterScript:
 	jumptextfaceplayer CeladonDeptStore2FYoungsterText
 CeladonDeptStore2FYoungsterText:
+	ntag "YOUNGSTER:"
 	text "For long outings,"
 	line "you should buy"
 	cont "REVIVE."

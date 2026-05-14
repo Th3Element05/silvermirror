@@ -91,6 +91,7 @@ PokemonMansionB1FBlaineScript:
 	end
 
 PokemonMansionB1FBlaineText:
+	ntag "BLAINE:"
 	text "What is a child"
 	line "doing in a place"
 	cont "like this?"
@@ -98,10 +99,8 @@ PokemonMansionB1FBlaineText:
 	para "<……>"
 
 	para "I see, you are a"
-	line "#MON trianer!@"
+	line "#MON trianer!"
 
-	text_promptbutton
-	ntag "BLAINE:"
 	para "I am BLAINE! I"
 	line "am the LEADER of"
 	cont "CINNABAR GYM!"
@@ -213,16 +212,18 @@ TrainerScientistEzekiel:
 	end
 
 ScientistEzekielSeenText:
+	ntag "SCIENTIST:"
 	text "This place is"
-	line "ideal for a lab."
+	line "ideal for my lab."
 	done
 
 ScientistEzekielBeatenText:
-	text "What was"
-	line "that for?"
+	ntag "EZEKIEL:"
+	text "What was that for?"
 	done
 
 ScientistEzekielAfterBattleText:
+	ntag "SCIENTIST:"
 	text "I like it here!"
 	line "It's conducive to"
 	cont "my studies!"
@@ -239,15 +240,18 @@ TrainerBurglarCorey:
 	end
 
 BurglarCoreySeenText:
+	ntag "BURGLAR:"
 	text "Uh-oh. Where am"
 	line "I now?"
 	done
 
 BurglarCoreyBeatenText:
+	ntag "COREY:"
 	text "Awooh!"
 	done
 
 BurglarCoreyAfterBattleText:
+	ntag "BURGLAR:"
 	text "You can find stuff"
 	line "lying around."
 	done

@@ -131,16 +131,19 @@ TrainerBugCatcherWade1:
 	end
 
 BugCatcherWade1SeenText:
+	ntag "BUGCATCHER:"
 	text "I caught a bunch"
 	line "of #MON. Let me"
 	cont "battle with you!"
 	done
 
 BugCatcherWade1BeatenText:
+	ntag "WADE:"
 	text "Awwwww…"
 	done
 
 BugCatcherWade1AfterText:
+	ntag "WADE:"
 	text "I catch a lot of"
 	line "#MON, so my PC"
 	cont "BOXES are always"
@@ -160,6 +163,7 @@ BugCatcherWade1AfterText:
 Route31MailRecipientScript:
 	jumptextfaceplayer Route31FisherPlantedBerryText
 Route31FisherPlantedBerryText:
+	ntag "MAN:"
 	text "I planted a BERRY"
 	line "in the ground."
 
@@ -331,6 +335,7 @@ Route31FisherPlantedBerryText:
 Route31YoungsterScript:
 	jumptextfaceplayer Route31YoungsterText
 Route31YoungsterText:
+	ntag "YOUNGSTER:"
 	text "I found a good"
 	line "#MON in DARK"
 	cont "CAVE."
@@ -346,6 +351,7 @@ Route31YoungsterText:
 Route31CooltrainerMScript:
 	jumptextfaceplayer Route31CooltrainerMText
 Route31CooltrainerMText:
+	ntag "TRAINER:"
 	text "DARK CAVE…"
 
 	para "If #MON could"

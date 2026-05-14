@@ -44,6 +44,7 @@ CinnabarGymDoorLockedText:
 CinnabarIslandGirl:
 	jumptextfaceplayer CinnabarIslandGirlText
 CinnabarIslandGirlText:
+	ntag "LADY:"
 	text "The GYM LEADER,"
 	line "BLAINE, is an odd"
 	cont "man who has lived"
@@ -53,6 +54,7 @@ CinnabarIslandGirlText:
 CinnabarIslandGramps:
 	jumptextfaceplayer CinnabarIslandGrampsText
 CinnabarIslandGrampsText:
+	ntag "GRAMPS:"
 	text "The old laboratory"
 	line "was abandoned"
 	cont "because of some"

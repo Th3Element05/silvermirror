@@ -8,6 +8,7 @@ CeladonCafe_MapScripts:
 CeladonCafeChef:
 	jumptextfaceplayer CeladonCafeChefText
 CeladonCafeChefText:
+	ntag "CHEF:"
 	text "Hi!"
 
 	para "We're taking a"
@@ -17,6 +18,7 @@ CeladonCafeChefText:
 CeladonCafeWoman:
 	jumptextfaceplayer CeladonCafeWomanText
 CeladonCafeWomanText:
+	ntag "WOMAN:"
 	text "My #MON are"
 	line "weak, so I often"
 	cont "have to go to the"
@@ -26,6 +28,7 @@ CeladonCafeWomanText:
 CeladonCafeFisher:
 	jumptextfaceplayer CeladonCafeFisherText
 CeladonCafeFisherText:
+	ntag "MAN:"
 	text "Munch…"
 
 	para "The man in the"
@@ -36,6 +39,7 @@ CeladonCafeFisherText:
 CeladonCafeMan:
 	jumptextfaceplayer CeladonCafeManText
 CeladonCafeManText:
+	ntag "MAN:"
 	text "Psst! There's a"
 	line "basement under"
 	cont "the GAME CORNER."
@@ -57,12 +61,14 @@ CeladonCafeGamblerScript:
 .Skip
 	jumptextfaceplayer CeladonCafeGamblerText
 CeladonCafeGamblerText:
+	ntag "GAMBLER:"
 	text "I always thought"
 	line "I was going to"
 	cont "win it back…"
 	done
 
 CeladonCafeLostItAllText:
+	ntag "GAMBLER:"
 	text "Go ahead! Laugh!"
 
 	para "I'm flat out"

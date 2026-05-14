@@ -16,17 +16,20 @@ TrainerLassLinda:
 	end
 
 LassLindaSeenText:
+	ntag "LASS:"
 	text "Wow! It's way"
 	line "bigger in here"
 	cont "than I thought!"
 	done
 
 LassLindaBeatenText:
+	ntag "LINDA:"
 	text "Oh!"
 	line "I lost it!"
 	done
 
-LassLindaAfterBattleText::
+LassLindaAfterBattleText:
+	ntag "LASS:"
 	text "How do you get"
 	line "out of here?"
 	done
@@ -42,17 +45,20 @@ TrainerHikerDaniel:
 	end
 
 HikerDanielSeenText:
+	ntag "HIKER:"
 	text "WHOA! You shocked"
 	line "me! Oh, you're"
 	cont "just a kid!"
 	done
 
 HikerDanielBeatenText:
+	ntag "DANIEL:"
 	text "Wow!"
 	line "Shocked again!"
 	done
 
 HikerDanielAfterBattleText:
+	ntag "HIKER:"
 	text "Kids like you"
 	line "shouldn't be"
 	cont "here!"
@@ -69,16 +75,19 @@ TrainerYoungsterGordon:
 	end
 
 YoungsterGordonSeenText:
+	ntag "YOUNGSTER:"
 	text "Did you come to"
 	line "explore too?"
 	done
 
 YoungsterGordonBeatenText:
+	ntag "GORDON:"
 	text "Losing"
 	line "stinks!"
 	done
 
 YoungsterGordonAfterBattleText:
+	ntag "YOUNGSTER:"
 	text "I came down here"
 	line "to show off to"
 	cont "girls."
@@ -95,17 +104,20 @@ TrainerBugCatcherDane:
 	end
 
 BugCatcherDaneSeenText:
+	ntag "BUGCATCHER:"
 	text "Suspicious men"
 	line "are in the cave."
 	cont "What about you?"
 	done
 
 BugCatcherDaneBeatenText:
+	ntag "DANE:"
 	text "You"
 	line "got me!"
 	done
 
 BugCatcherDaneAfterBattleText:
+	ntag "BUGCATCHER:"
 	text "I saw them! I'm"
 	line "sure they're from"
 	cont "TEAM ROCKET!"
@@ -122,16 +134,19 @@ TrainerLassKrise: ;no rematch, no phone service in mt moon
 	end
 
 LassKriseSeenText:
+	ntag "LASS:"
 	text "What? I'm waiting"
 	line "for my friends to"
 	cont "find me here."
 	done
 
 LassKriseBeatenText:
+	ntag "KRISE:"
 	text "I lost?"
 	done
 
 LassKriseAfterBattleText:
+	ntag "LASS:"
 	text "I heard there are"
 	line "some very rare"
 	cont "fossils here."
@@ -148,16 +163,19 @@ TrainerBugCatcherKen:
 	end
 
 BugCatcherKenSeenText:
+	ntag "BUGCATCHER:"
 	text "Go through this"
 	line "cave to get to"
 	cont "CERULEAN CITY!"
 	done
 
 BugCatcherKenBeatenText:
+	ntag "KEN:"
 	text "I lost."
 	done
 
 BugCatcherKenAfterBattleText:
+	ntag "BUGCATCHER:"
 	text "ZUBAT is tough!"
 	line "But, it can be"
 	cont "useful if you"
@@ -175,16 +193,19 @@ TrainerSuperNerdEric:
 	end
 
 SuperNerdEricSeenText:
+	ntag "SUPERNERD:"
 	text "What! Don't sneak"
 	line "up on me!"
 	done
 
 SuperNerdEricBeatenText:
-	text "My #MON"
-	line "won't do!"
+	ntag "ERIC:"
+	text "My #MON won't"
+	line "do!"
 	done
 
 SuperNerdEricAfterBattleText:
+	ntag "SUPERNERD:"
 	text "I have to find"
 	line "stronger #MON."
 	done

@@ -82,15 +82,18 @@ TrainerOfficerDirk:
 	end
 
 OfficerDirkSeenText:
+	ntag "OFFICER:"
 	text "Danger lurks in"
 	line "the night!"
 	done
 
 OfficerDirkBeatenText:
+	ntag "DIRK:"
 	text "Whoops!"
 	done
 
 OfficerDirkAfterBattleText:
+	ntag "OFFICER:"
 	text "You know, night-"
 	line "time is fun in its"
 	cont "own ways."
@@ -100,6 +103,7 @@ OfficerDirkAfterBattleText:
 	done
 
 OfficerDirkPrettyToughText:
+	ntag "OFFICER:"
 	text "Your #MON look"
 	line "pretty tough."
 
@@ -118,17 +122,20 @@ TrainerBugCatcherDarin:
 	end
 
 BugCatcherDarinSeenText:
+	ntag "BUGCATCHER:"
 	text "I'll go anywhere"
 	line "if bug #MON"
 	cont "appear there."
 	done
 
 BugCatcherDarinBeatenText:
+	ntag "DARIN:"
 	text "Huh? I shouldn't"
 	line "have lost that…"
 	done
 
 BugCatcherDarinAfterBattleText:
+	ntag "BUGCATCHER:"
 	text "My VENOMOTH won"
 	line "the Bug-Catching"
 	cont "Contest at the"
@@ -206,16 +213,19 @@ Route35RematchM:
 	end
 
 FirebreatherWaltSeenText:
+	ntag "FIREBREATHER:"
 	text "I'm practicing my"
 	line "fire breathing."
 	done
 
 FirebreatherWaltBeatenText:
+	ntag "WALT:"
 	text "Ow! I scorched the"
 	line "tip of my nose!"
 	done
 
 FirebreatherWaltAfterBattleText:
+	ntag "WALT:"
 	text "The #MON March"
 	line "on the radio lures"
 	cont "wild #MON."
@@ -260,16 +270,19 @@ TrainerJugglerIrwin:
 ;	end
 
 JugglerIrwinSeenText:
+	ntag "JUGGLER:"
 	text "Behold my graceful"
 	line "BALL dexterity!"
 	done
 
 JugglerIrwinBeatenText:
+	ntag "IRWIN:"
 	text "Whew! That was a"
 	line "jolt!"
 	done
 
 JugglerIrwinAfterBattleText:
+	ntag "JUGGLER:"
 	text "I was going to"
 	line "dazzle you with"
 	cont "my prize #MON."
@@ -289,6 +302,7 @@ TrainerCamperGrant:
 	end
 
 CamperGrantSeenText:
+	ntag "CAMPER:"
 	text "I've been getting"
 	line "#MON data from"
 	cont "the radio."
@@ -296,10 +310,12 @@ CamperGrantSeenText:
 	done
 
 CamperGrantBeatenText:
+	ntag "GRANT:"
 	text "I give!"
 	done
 
 CamperGrantAfterBattleText:
+	ntag "CAMPER:"
 	text "Music on the radio"
 	line "changes the moods"
 	cont "of wild #MON."
@@ -316,6 +332,7 @@ TrainerCoupleMoeAndLulu_Lulu:
 	end
 
 CoupleMoeAndLulu_LuluSeenText:
+	ntag "PICNICKER:"
 	text "My boyfriend's"
 	line "weak, so I can't"
 	cont "rely on him."
@@ -328,6 +345,7 @@ CoupleMoeAndLulu_LuluBeatenText:
 	done
 
 CoupleMoeAndLulu_LuluAfterBattleText:
+	ntag "PICNICKER:"
 	text "I can count on my"
 	line "#MON more than"
 	cont "my boyfriend."
@@ -344,6 +362,7 @@ TrainerCoupleMoeAndLulu_Moe:
 	end
 
 CoupleMoeAndLulu_MoeSeenText:
+	ntag "CAMPER:"
 	text "I'm gonna show my"
 	line "girlfriend I'm hot"
 	cont "stuff!"
@@ -356,13 +375,11 @@ CoupleMoeAndLulu_MoeBeatenText:
 	done
 
 CoupleMoeAndLulu_MoeAfterBattleText:
+	ntag "CAMPER:"
 	text "I was humiliated"
 	line "in front of my"
 	cont "girlfriend…"
 	done
-
-
-
 
 TrainerPicnickerDawn:
 	trainer PICNICKER, DAWN, EVENT_BEAT_PICNICKER_DAWN, PicnickerDawnSeenText, PicnickerDawnBeatenText, 0, .Script
@@ -375,16 +392,19 @@ TrainerPicnickerDawn:
 	end
 
 PicnickerDawnSeenText:
+	ntag "PICNICKER:"
 	text "Are you going to"
 	line "the GYM? Me too!"
 	done
 
 PicnickerDawnBeatenText:
+	ntag "DAWN:"
 	text "Oh. I couldn't"
 	line "win…"
 	done
 
 PicnickerDawnAfterBattleText:
+	ntag "PICNICKER:"
 	text "The GYM BADGEs are"
 	line "pretty. I collect"
 	cont "them."
@@ -401,16 +421,19 @@ TrainerBirdKeeperNate:
 	end
 
 BirdKeeperNateSeenText:
+	ntag "BIRDKEEPER:"
 	text "What kinds of"
 	line "BALLs do you use?"
 	done
 
 BirdKeeperNateBeatenText:
+	ntag "NATE:"
 	text "Yikes! Not fast"
 	line "enough!"
 	done
 
 BirdKeeperNateAfterBattleText:
+	ntag "BIRDKEEPER:"
 	text "Some #MON flee"
 	line "right away."
 

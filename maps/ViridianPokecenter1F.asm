@@ -14,6 +14,7 @@ ViridianPokecenter1FReceptionistScript:
 ViridianPokecenter1FBenchGuyScript:
 	jumptext ViridianPokecenter1FBenchGuyText
 ViridianPokecenter1FBenchGuyText:
+	ntag "GUY:"
 	text "#MON CENTERs"
 	line "heal your tired,"
 	cont "hurt or fainted"
@@ -23,6 +24,7 @@ ViridianPokecenter1FBenchGuyText:
 ViridianPokecenter1FCooltrainerMScript:
 	jumptextfaceplayer ViridianPokecenter1FCooltrainerMText
 ViridianPokecenter1FCooltrainerMText:
+	ntag "TRAINER:"
 	text "There's a #MON"
 	line "CENTER in every"
 	cont "town ahead."
@@ -34,6 +36,7 @@ ViridianPokecenter1FCooltrainerMText:
 ViridianPokecenter1FGentlemanScript:
 	jumptextfaceplayer ViridianPokecenter1FGentlemanText
 ViridianPokecenter1FGentlemanText:
+	ntag "GENTLEMAN:"
 	text "You can use that"
 	line "PC in the corner."
 

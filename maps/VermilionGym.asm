@@ -209,17 +209,20 @@ TrainerGentlemanMilton:
 	end
 
 GentlemanMiltonSeenText:
+	ntag "GENTLEMAN:"
 	text "When I was in the"
 	line "Army, LT.SURGE"
 	cont "was my strict CO!"
 	done
 
 GentlemanMiltonBeatenText:
+	ntag "MILTON:"
 	text "Stop!"
 	line "You're very good!"
 	done
 
 GentlemanMiltonAfterBattleText:
+	ntag "GENTLEMAN:"
 	text "The door won't"
 	line "open?"
 
@@ -238,16 +241,19 @@ TrainerGuitaristClyde:
 	end
 
 GuitaristClydeSeenText:
+	ntag "GUITARIST:"
 	text "I'm a lightweight,"
 	line "but I'm good with"
 	cont "electricity!"
 	done
 
 GuitaristClydeBeatenText:
+	ntag "CLYDE:"
 	text "Fried!"
 	done
 
 GuitaristClydeAfterBattleText:
+	ntag "GUITARIST:"
 	text "OK, I'll talk!"
 
 	para "LT.SURGE said he"
@@ -266,16 +272,19 @@ TrainerSailorKenneth:
 	end
 
 SailorKennethSeenText:
+	ntag "SAILOR:"
 	text "This is no place"
 	line "for kids!"
 	done
 
 SailorKennethBeatenText:
+	ntag "KENNETH:"
 	text "Wow!"
 	line "Surprised me!"
 	done
 
 SailorKennethAfterBattleText:
+	ntag "SAILOR:"
 	text "LT.SURGE set up"
 	line "double locks!"
 	cont "Here's a hint!"
@@ -295,6 +304,7 @@ VermilionGymGuideScript:
 	jumptextfaceplayer VermilionGymGuideWinText
 
 VermilionGymGuideText:
+	ntag "GUIDE:"
 	text "Yo! CHAMP in the"
 	line "making!"
 
@@ -320,6 +330,7 @@ VermilionGymGuideText:
 	done
 
 VermilionGymGuideWinText:
+	ntag "GUIDE:"
 	text "Whew! That match"
 	line "was electric!"
 	done

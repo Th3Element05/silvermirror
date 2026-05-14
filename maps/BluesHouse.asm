@@ -9,6 +9,7 @@ BluesHouse_MapScripts:
 BluesHouseNeighbor:
 	jumptextfaceplayer BluesHouseNeighborText
 BluesHouseNeighborText:
+	ntag "NEIGHBOR:"
 	text "Hi <PLAYER>!"
 
 	para "Are you back in"

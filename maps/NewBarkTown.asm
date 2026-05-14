@@ -207,6 +207,7 @@ NewBarkTownRivalLeavesMovement2:
 NewBarkTownTeacherScript:
 	jumptextfaceplayer Text_GearIsImpressive
 Text_GearIsImpressive:
+	ntag "LADY:"
 	text "Wow, your #GEAR"
 	line "is impressive!"
 	done
@@ -214,6 +215,7 @@ Text_GearIsImpressive:
 NewBarkTownFisherScript:
 	jumptextfaceplayer Text_ProfElm
 Text_ProfElm:
+	ntag "MAN:"
 	text "PROF.ELM is the"
 	line "most well-known"
 	cont "#MON researcher"

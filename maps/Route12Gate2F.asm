@@ -21,6 +21,7 @@ Route12Gate2FLassScript:
 	end
 
 Route12Gate2FLassGiveSwiftText:
+	ntag "LASS:"
 	text "My #MON's"
 	line "ashes are stored"
 	cont "in #MON TOWER."
@@ -31,6 +32,7 @@ Route12Gate2FLassGiveSwiftText:
 	done
 
 Route12Gate2FLassExplainSwiftText:
+	ntag "LASS:"
 	text "TM39 is a move"
 	line "called SWIFT."
 

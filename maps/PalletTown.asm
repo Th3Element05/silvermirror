@@ -108,6 +108,7 @@ PalletTownTeacherScript:
 ;	end
 
 PalletTownImpressiveGearText:
+	ntag "LADY:"
 	text "Wow, your #GEAR"
 	line "is impressive!"
 
@@ -116,13 +117,15 @@ PalletTownImpressiveGearText:
 	done
 
 PalletTownAdorableMonText:
+	ntag "LADY:"
 	text "Oh! Your #MON"
 	line "is adorable!"
 	cont "I wish I had one!"
 	done
 
 PalletTownTellMomText:
-	text "Hi, <PLAY_G>!"
+	ntag "LADY:"
+	text "Hi, <PLAYER>!"
 	line "Leaving again?"
 
 	para "You should tell"
@@ -131,6 +134,7 @@ PalletTownTellMomText:
 	done
 
 PalletTownCallMomText:
+	ntag "LADY:"
 	text "Call your mom on"
 	line "your #GEAR to"
 
@@ -150,6 +154,7 @@ PalletTownCallMomText:
 PalletTownFisherScript:
 	jumptextfaceplayer PalletTownFisherText
 PalletTownFisherText:
+	ntag "MAN:"
 	text "Technology is"
 	line "incredible!"
 

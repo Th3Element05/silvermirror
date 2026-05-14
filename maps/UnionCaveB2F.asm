@@ -43,16 +43,19 @@ TrainerCooltrainerfLily:
 	end
 
 CooltrainerfLilySeenText:
+	ntag "COOLTRAINER:"
 	text "I'm in training."
 	line "Care for a round?"
 	done
 
 CooltrainerfLilyBeatenText:
+	ntag "LILY:"
 	text "Aww, no! You're"
 	line "too good for me."
 	done
 
 CooltrainerfLilyAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "I'm going to train"
 	line "by myself until I"
 	cont "improve."
@@ -69,6 +72,7 @@ TrainerCooltrainermMiles:
 	end
 
 CooltrainermMilesSeenText:
+	ntag "COOLTRAINER:"
 	text "There are two"
 	line "kinds of people."
 
@@ -81,11 +85,13 @@ CooltrainermMilesSeenText:
 	done
 
 CooltrainermMilesBeatenText:
+	ntag "MILES:"
 	text "You've got"
 	line "dazzling style!"
 	done
 
 CooltrainermMilesAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "Your #MON style"
 	line "is stunning and"
 	cont "colorful, I admit."
@@ -105,6 +111,7 @@ TrainerCooltrainerfRiver:
 	end
 
 CooltrainerfRiverSeenText:
+	ntag "COOLTRAINER:"
 	text "If the #MON I"
 	line "liked were there,"
 	cont "I'd go anywhere."
@@ -114,11 +121,13 @@ CooltrainerfRiverSeenText:
 	done
 
 CooltrainerfRiverBeatenText:
+	ntag "RIVER:"
 	text "I'd rather pet my"
 	line "babies than this!"
 	done
 
 CooltrainerfRiverAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "On the weekends,"
 	line "a #MON comes to"
 	cont "the water's edge."

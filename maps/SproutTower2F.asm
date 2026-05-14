@@ -16,17 +16,20 @@ TrainerSageNico:
 	end
 
 SageNicoSeenText:
+	ntag "SAGE:"
 	text "However hard we"
 	line "battle, the TOWER"
 	cont "will stand strong."
 	done
 
 SageNicoBeatenText:
+	ntag "NICO:"
 	text "I fought hard but"
 	line "I'm too weak."
 	done
 
 SageNicoAfterBattleText:
+	ntag "SAGE:"
 	text "The flexible pil-"
 	line "lar protects the"
 	cont "TOWER, even from"
@@ -44,15 +47,18 @@ TrainerSageNoe:
 	end
 
 SageNoeSeenText:
+	ntag "SAGE:"
 	text "…Sway like leaves"
 	line "in the wind…"
 	done
 
 SageNoeBeatenText:
+	ntag "NOE:"
 	text "Oh, I'm weak!"
 	done
 
 SageNoeAfterBattleText:
+	ntag "SAGE:"
 	text "I tried to copy"
 	line "BELLSPROUT's"
 	cont "gentle movements"

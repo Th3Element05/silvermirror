@@ -6,6 +6,7 @@ Route6UndergroundPathEntrance_MapScripts:
 Route6UndergroundPathEntranceGirlScript:
 	jumptextfaceplayer Route6UndergroundPathEntranceGirlText
 Route6UndergroundPathEntranceGirlText:
+	ntag "GIRL:"
 	text "People often lose"
 	line "things in that"
 	cont "UNDERGROUND PATH."

@@ -71,6 +71,7 @@ FastShipB1FRocketsText:
 	done
 
 FastShipB1FStayOutOfTheWayText:
+	ntag "ROCKET:"
 	text "You better stay"
 	line "out of our way!"
 
@@ -91,6 +92,7 @@ FastShipB1FUnconsciousSailorText:
 	done
 
 FastShipB1FRestingSailorText:
+	ntag "SAILOR:"
 	text "I'll be alright."
 
 	para "I'm just resting."
@@ -141,16 +143,19 @@ TrainerSailorEnzo:
 	end
 
 SailorEnzoSeenText:
+	ntag "SAILOR:"
 	text "I'm on my break,"
 	line "but I'm always up"
 	cont "for a battle!"
 	done
 
 SailorEnzoBeatenText:
+	ntag "ENZO:"
 	text "Guh!"
 	done
 
 SailorEnzoAfterBattleText:
+	ntag "SAILOR:"
 	text "I need to get back"
 	line "to work soon."
 	done
@@ -166,16 +171,19 @@ TrainerSailorLouis:
 	end
 
 SailorLouisSeenText:
+	ntag "SAILOR:"
 	text "Hey! Only crew are"
 	line "allowed down here!"
 	done
 
 SailorLouisBeatenText:
+	ntag "LOUIS:"
 	text "So that's how it"
 	line "is?"
 	done
 
 SailorLouisAfterBattleText:
+	ntag "SAILOR:"
 	text "When you're that"
 	line "strong, I guess"
 	cont "you can go where-"
@@ -193,17 +201,20 @@ TrainerTeacherIrene:
 	end
 
 TeacherIreneSeenText:
+	ntag "TEACHER:"
 	text "We're on a field"
 	line "trip to learn all"
 	cont "about ships!"
 	done
 
 TeacherIreneBeatenText:
+	ntag "IRENE:"
 	text "Your #MON are"
 	line "very well behaved!"
 	done
 
 TeacherIreneAfterBattleText:
+	ntag "TEACHER:"
 	text "Having a battle"
 	line "during the field"
 	cont "trip probably sets"
@@ -221,6 +232,7 @@ TrainerSchoolboyBrad:
 	end
 
 SchoolboyBradSeenText:
+	ntag "SCHOOLBOY:"
 	text "I'm not allowed to"
 	line "bring my #MON"
 	cont "to school."
@@ -230,11 +242,13 @@ SchoolboyBradSeenText:
 	done
 
 SchoolboyBradBeatenText:
+	ntag "BRAD:"
 	text "I'm going to get"
 	line "in trouble!"
 	done
 
 SchoolboyBradAfterBattleText:
+	ntag "SCHOOLBOY:"
 	text "I should have been"
 	line "paying attention"
 	cont "instead of having"
@@ -260,6 +274,7 @@ FastShipB1FFieldTripSailor:
 	end
 
 FastShipB1FFieldTripSailorText1:
+	ntag "SAILOR:"
 	text "I can't chat right"
 	line "now."
 
@@ -269,6 +284,7 @@ FastShipB1FFieldTripSailorText1:
 	done
 
 FastShipB1FFieldTripSailorText2:
+	ntag "SAILOR:"
 	text "This is the mess"
 	line "hall where sailors"
 	cont "gather to eat!"
@@ -286,6 +302,7 @@ FastShipB1FFieldTripSailorText2:
 FastShipB1FFieldTripBoy:
 	jumptextfaceplayer FastShipB1FFieldTripBoyText
 FastShipB1FFieldTripBoyText:
+	ntag "SCHOOLBOY:"
 	text "Ships are so cool!"
 
 	para "I want to be a"
@@ -297,6 +314,7 @@ FastShipB1FFieldTripBoyText:
 FastShipB1FFieldTripGirl:
 	jumptextfaceplayer FastShipB1FFieldTripGirlText
 FastShipB1FFieldTripGirlText:
+	ntag "GIRL:"
 	text "These sailors are"
 	line "all a little bit"
 	cont "smelly…"

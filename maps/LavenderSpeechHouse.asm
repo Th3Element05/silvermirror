@@ -13,6 +13,7 @@ LavenderSpeechHouseTeacherScript:
 	jumptextfaceplayer LavenderSpeechHouseGhostText
 
 LavenderSpeechHouseRocketsText:
+	ntag "LADY:"
 	text "I hate those"
 	line "horrible ROCKETs!"
 
@@ -25,6 +26,7 @@ LavenderSpeechHouseRocketsText:
 	done
 
 LavenderSpeechHouseGhostText:
+	ntag "LADY:"
 	text "The GHOST of"
 	line "#MON TOWER is"
 	cont "gone!"

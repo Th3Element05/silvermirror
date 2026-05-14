@@ -16,6 +16,7 @@ SafariRestHouseArea1LassText:
 SafariRestHouseArea1Scientist:
 	jumptextfaceplayer SafariRestHouseArea1ScientistText
 SafariRestHouseArea1ScientistText:
+	ntag "SCIENTIST:"
 	text "I'm catching"
 	line "#MON to take"
 	cont "home as gifts!"

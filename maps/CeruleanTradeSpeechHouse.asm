@@ -20,6 +20,7 @@ CeruleanTradeSpeechHouseMasonScript:
 CeruleanTradeSpeechHouseGrannyScript:
 	jumptextfaceplayer CeruleanTradeSpeechHouseGrannyText
 CeruleanTradeSpeechHouseGrannyText:
+	ntag "GRANNY:"
 	text "My husband likes"
 	line "trading #MON."
 

@@ -234,6 +234,7 @@ AcademyEarlNoMoreToTeachText:
 	done
 
 EarlsPokemonAcademyYoungster1Text:
+	ntag "STUDENT:"
 	text "I'm taking notes"
 	line "of the teacher's"
 	cont "lecture."
@@ -244,18 +245,21 @@ EarlsPokemonAcademyYoungster1Text:
 	done
 
 EarlsPokemonAcademyGameboyKid1Text:
+	ntag "STUDENT:"
 	text "I traded my best"
 	line "#MON to the"
 	cont "guy beside me."
 	done
 
 EarlsPokemonAcademyGameboyKid2Text:
+	ntag "STUDENT:"
 	text "Huh? The #MON I"
 	line "just got is hold-"
 	cont "ing something!"
 	done
 
 EarlsPokemonAcademyYoungster2Text:
+	ntag "STUDENT:"
 	text "A #MON holding"
 	line "a BERRY will heal"
 	cont "itself in battle."
@@ -398,7 +402,7 @@ AcademyNotebookText3:
 	line "is… Blank!@"
 
 	text_promptbutton
-	ntag "BOY:"
+	ntag "STUDENT:"
 	text "E-he-he…"
 
 	para "I haven't written"

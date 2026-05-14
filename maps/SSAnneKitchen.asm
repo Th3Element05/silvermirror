@@ -17,6 +17,7 @@ SSAnneKitchen_MapScripts:
 SSAnneKitchenCook1Script:
 	jumptextfaceplayer SSAnneKitchenCook1Text
 SSAnneKitchenCook1Text:
+	ntag "COOK:"
 	text "You, mon petit!"
 	line "We're busy here!"
 	cont "Out of the way!"
@@ -25,6 +26,7 @@ SSAnneKitchenCook1Text:
 SSAnneKitchenCook2Script:
 	jumptextfaceplayer SSAnneKitchenCook2Text
 SSAnneKitchenCook2Text:
+	ntag "COOK:"
 	text "I saw an odd ball"
 	line "in the trash."
 	done
@@ -32,6 +34,7 @@ SSAnneKitchenCook2Text:
 SSAnneKitchenCook3Script:
 	jumptextfaceplayer SSAnneKitchenCook3Text
 SSAnneKitchenCook3Text:
+	ntag "COOK:"
 	text "I'm so busy I'm"
 	line "getting dizzy!"
 	done
@@ -46,6 +49,7 @@ SSAnneKitchenCook4Script:
 	end
 
 SSAnneKitchenCook4Text:
+	ntag "COOK:"
 	text "Hum-de-hum-de-"
 	line "ho…"
 
@@ -64,6 +68,7 @@ SSAnneKitchenCook5Script:
 	end
 
 SSAnneKitchenCook5Text:
+	ntag "COOK:"
 	text "Did you hear about"
 	line "SNORLAX?"
 
@@ -81,6 +86,7 @@ SSAnneKitchenCook6Script:
 	end
 
 SSAnneKitchenCook6Text:
+	ntag "COOK:"
 	text "Snivel… Sniff…"
 
 	para "I only get to"
@@ -91,6 +97,7 @@ SSAnneKitchenCook6Text:
 SSAnneKitchenCook7Script:
 	jumptextfaceplayer SSAnneKitchenCook7Text
 SSAnneKitchenCook7Text:
+	ntag "CHEF:"
 	text "Er-hem! Indeed I"
 	line "am le CHEF!"
 

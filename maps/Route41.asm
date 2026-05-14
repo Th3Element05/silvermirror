@@ -16,6 +16,7 @@ TrainerSwimmerfBriana:
 	end
 
 SwimmerfBrianaSeenText:
+	ntag "SWIMMER:"
 	text "I'm on my way to"
 	line "WHIRL ISLANDS."
 
@@ -24,11 +25,13 @@ SwimmerfBrianaSeenText:
 	done
 
 SwimmerfBrianaBeatenText:
+	ntag "BRIANA:"
 	text "Is that how you do"
 	line "it?"
 	done
 
 SwimmerfBrianaAfterBattleText:
+	ntag "SWIMMER:"
 	text "There's supposed"
 	line "to be a big #-"
 	cont "MON deep beneath"
@@ -49,6 +52,7 @@ TrainerSwimmermCody:
 	end
 
 SwimmermCodySeenText:
+	ntag "SWIMMER:"
 	text "The water's warm"
 	line "here. I'm loose"
 	cont "and limber."
@@ -58,11 +62,13 @@ SwimmermCodySeenText:
 	done
 
 SwimmermCodyBeatenText:
+	ntag "CODY:"
 	text "Yikes! I've got"
 	line "prune skin!"
 	done
 
 SwimmermCodyAfterBattleText:
+	ntag "SWIMMER:"
 	text "Isn't it relaxing"
 	line "just floating like"
 	cont "this?"
@@ -141,6 +147,7 @@ TrainerSwimmermWes:
 	end
 
 SwimmermWesSeenText:
+	ntag "SWIMMER:"
 	text "See those islands"
 	line "that are blocked"
 	cont "by whirlpools?"
@@ -150,11 +157,13 @@ SwimmermWesSeenText:
 	done
 
 SwimmermWesBeatenText:
+	ntag "WES:"
 	text "What's the secret"
 	line "to your strength?"
 	done
 
 SwimmermWesAfterBattleText:
+	ntag "SWIMMER:"
 	text "It was a dark and"
 	line "stormy night…"
 
@@ -178,6 +187,7 @@ TrainerSwimmerfHannah:
 	end
 
 SwimmerfHannahSeenText:
+	ntag "SWIMMER:"
 	text "If you need to"
 	line "rest, just tread"
 	cont "water."
@@ -188,11 +198,13 @@ SwimmerfHannahSeenText:
 	done
 
 SwimmerfHannahBeatenText:
+	ntag "HANNAH:"
 	text "Oh! You have more"
 	line "energy than I do."
 	done
 
 SwimmerfHannahAfterBattleText:
+	ntag "SWIMMER:"
 	text "I heard roars from"
 	line "deep inside the"
 	cont "ISLANDS."
@@ -209,6 +221,7 @@ TrainerSwimmermCarlos:
 	end
 
 SwimmermCarlosSeenText:
+	ntag "SWIMMER:"
 	text "The waves are wild"
 	line "here."
 
@@ -217,10 +230,12 @@ SwimmermCarlosSeenText:
 	done
 
 SwimmermCarlosBeatenText:
+	ntag "CARLOS:"
 	text "I'm beat!"
 	done
 
 SwimmermCarlosAfterBattleText:
+	ntag "SWIMMER:"
 	text "The currents keep"
 	line "me from reaching"
 	cont "that island."
@@ -237,16 +252,19 @@ TrainerSwimmerfEloise:
 	end
 
 SwimmerfEloiseSeenText:
+	ntag "SWIMMER:"
 	text "You look so ele-"
 	line "gant, riding your"
 	cont "#MON."
 	done
 
 SwimmerfEloiseBeatenText:
+	ntag "ELOISE:"
 	text "I'm crushed…"
 	done
 
 SwimmerfEloiseAfterBattleText:
+	ntag "SWIMMER:"
 	text "Wasn't there a hit"
 	line "song about a boy"
 	cont "riding a LAPRAS?"
@@ -263,17 +281,20 @@ TrainerSwimmermMack:
 	end
 
 SwimmermMackSeenText:
+	ntag "SWIMMER:"
 	text "Are you seeking"
 	line "the secrets of"
 	cont "WHIRL ISLANDS?"
 	done
 
 SwimmermMackBeatenText:
+	ntag "MACK:"
 	text "Ooh, you've got"
 	line "great endurance!"
 	done
 
 SwimmermMackAfterBattleText:
+	ntag "SWIMMER:"
 	text "A secret about"
 	line "WHIRL ISLANDS…"
 
@@ -292,16 +313,19 @@ TrainerSwimmerfKyrie:
 	end
 
 SwimmerfKyrieSeenText:
+	ntag "SWIMMER:"
 	text "At night, STARYU"
 	line "gather near the"
 	cont "water's surface."
 	done
 
 SwimmerfKyrieBeatenText:
+	ntag "KYRIE:"
 	text "Oh, dear…"
 	done
 
 SwimmerfKyrieAfterBattleText:
+	ntag "SWIMMER:"
 	text "The clusters of"
 	line "STARYU light up"
 	cont "at the same time."

@@ -85,6 +85,7 @@ CeladonMansionRoofHousePharmacistScript:
 	jumptextfaceplayer CeladonMansionRoofBetterOffText
 
 CeladonMansionRoofPharmacistText:
+	ntag "MAN:"
 	text "That #MON"
 	line "is EEVEE. It was"
 	cont "given to me as"
@@ -104,11 +105,13 @@ CeladonMansionRoofPharmacistText:
 	done
 
 CeladonMansionRoofTakeCareText:
+	ntag "MAN:"
 	text "Take good care of"
 	line "EEVEE for me!"
 	done
 
 CeladonMansionRoofBetterOffText:
+	ntag "MAN:"
 	text "EEVEE will be"
 	line "happier with a"
 	cont "trainer like you!"

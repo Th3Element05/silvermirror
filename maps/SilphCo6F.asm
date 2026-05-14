@@ -35,12 +35,14 @@ SilphCo6FClerk1:
 	jumptextfaceplayer SilphCo6FClerk1SavedText
 
 SilphCo6FClerk1Text:
+	ntag "MAN:"
 	text "The ROCKETs came"
 	line "and took over the"
 	cont "building!"
 	done
 
 SilphCo6FClerk1SavedText:
+	ntag "MAN:"
 	text "Well, better get"
 	line "back to work!"
 	done
@@ -53,11 +55,13 @@ SilphCo6FClerk2:
 	jumptextfaceplayer SilphCo6FClerk2SavedText
 
 SilphCo6FClerk2Text:
+	ntag "MAN:"
 	text "Oh dear, oh dear."
 	line "Help me please!"
 	done
 
 SilphCo6FClerk2SavedText:
+	ntag "MAN:"
 	text "We got engaged!"
 	line "Heheh!"
 	done
@@ -70,11 +74,13 @@ SilphCo6FReceptionist1:
 	jumptextfaceplayer SilphCo6FReceptionist1SavedText
 
 SilphCo6FReceptionist1Text:
+	ntag "GIRL:"
 	text "Look at him! He's"
 	line "such a coward!"
 	done
 
 SilphCo6FReceptionist1SavedText:
+	ntag "GIRL:"
 	text "I feel so sorry"
 	line "for him, I have"
 	cont "to marry him!"
@@ -88,6 +94,7 @@ SilphCo6FReceptionist2:
 	jumptextfaceplayer SilphCo6FReceptionist2SavedText
 
 SilphCo6FReceptionist2Text:
+	ntag "GIRL:"
 	text "TEAM ROCKET is"
 	line "trying to conquer"
 	cont "the world with"
@@ -95,6 +102,7 @@ SilphCo6FReceptionist2Text:
 	done
 
 SilphCo6FReceptionist2SavedText:
+	ntag "GIRL:"
 	text "TEAM ROCKET ran"
 	line "because of you!"
 	done
@@ -107,6 +115,7 @@ SilphCo6FClerk3:
 	jumptextfaceplayer SilphCo6FClerk3SavedText
 
 SilphCo6FClerk3Text:
+	ntag "MAN:"
 	text "They must have"
 	line "targeted SILPH"
 	cont "for our #MON"
@@ -114,6 +123,7 @@ SilphCo6FClerk3Text:
 	done
 
 SilphCo6FClerk3SavedText:
+	ntag "MAN:"
 	text "Come work for"
 	line "SILPH when you"
 	cont "get older!"
@@ -130,15 +140,18 @@ TrainerRocketGruntF6:
 	end
 
 GruntF6SeenText:
+	ntag "ROCKET:"
 	text "You dare betray"
 	line "TEAM ROCKET?"
 	done
 
 GruntF6BeatenText:
+	ntag "ROCKET:"
 	text "You traitor!"
 	done
 
 GruntF6AfterBattleText:
+	ntag "ROCKET:"
 	text "If you stand for"
 	line "justice, you"
 	cont "betray evil!"
@@ -155,6 +168,7 @@ TrainerScientistLowell:
 	end
 
 ScientistLowellSeenText:
+	ntag "SCIENTIST:"
 	text "That rotten"
 	line "PRESIDENT!"
 
@@ -164,10 +178,12 @@ ScientistLowellSeenText:
 	done
 
 ScientistLowellBeatenText:
+	ntag "LOWELL:"
 	text "Shoot!"
 	done
 
 ScientistLowellAfterBattleText:
+	ntag "SCIENTIST:"
 	text "TIKSI BRANCH?"
 	line "It's in northern"
 	cont "no man's land!"
@@ -184,15 +200,18 @@ TrainerRocketGruntM22:
 	end
 
 GruntM22SeenText:
+	ntag "ROCKET:"
 	text "I am one of four"
 	line "ROCKET BROTHERS!"
 	done
 
 GruntM22BeatenText:
+	ntag "ROCKET:"
 	text "Flame out!"
 	done
 
 GruntM22AfterBattleText:
+	ntag "ROCKET:"
 	text "No matter!"
 	line "My brothers will"
 	cont "avenge me!"

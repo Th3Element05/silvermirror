@@ -18,8 +18,8 @@ PewterMuseum1FNoop2Scene:
 
 ReceptionScene:
 	turnobject PLAYER, RIGHT
-	jump PewterMuseum1F_Reception_Scientist_Script
-	end
+;	jump PewterMuseum1F_Reception_Scientist_Script
+;	end
 
 PewterMuseum1F_Reception_Scientist_Script:
 	faceplayer
@@ -42,6 +42,7 @@ PewterMuseum1F_Reception_Scientist_Script:
 	writetext PewterMuseum1F_Scientist_TicketThankYouText
 	waitbutton
 	closetext
+	setevent EVENT_BEEN_TO_PEWTER_MUSEUM
 	setscene SCENE_PEWTER_MUSEUM_1F_RECEPTION_PAYED
 	end
 
@@ -69,11 +70,9 @@ PewterMuseum1F_Reception_Scientist_Script:
 
 .AlreadyPayed:
 	jumptext PewterMuseum1F_Scientist_TakeYourTimeText
-	end
 
 PewterMuseum1F_Fossil_Scientist_Script:
 	jumptextfaceplayer PewterMuseum1F_Scientist_PrideAndJoyText
-	end
 
 
 PewterMuseum1F_Old_Amber_Scientist_Script:
@@ -129,6 +128,7 @@ PewterMuseum1FAerodactylFossilDisplay:
 	end
 
 PewterMuseum1F_Scientist_ReceptionBackWayText:
+	ntag "RECEPTIONIST:"
 	text "Hey!"
 
 	para "You can't sneak in"
@@ -140,6 +140,7 @@ PewterMuseum1F_Scientist_ReceptionBackWayText:
 	done
 
 PewterMuseum1F_Scientist_PrideAndJoyText:
+	ntag "SCIENTIST:"
 	text "We found two"
 	line "fossils of rare,"
 	cont "extinct #MON!"
@@ -150,6 +151,7 @@ PewterMuseum1F_Scientist_PrideAndJoyText:
 	done
 
 PewterMuseum1F_Scientist_TakeTheAmberText:
+	ntag "SCIENTIST:"
 	text "Ssh! I think that"
 	line "this chunk of"
 	cont "AMBER contains"
@@ -172,6 +174,7 @@ PewterMuseum1F_Scientist_TakeTheAmberText:
 	done
 
 PewterMuseum1F_CinnabarIslandText:
+	ntag "SCIENTIST:"
 	text "I hear there is a"
 	line "good team of"
 	cont "researchers on"
@@ -187,6 +190,7 @@ PewterMuseum1F_AmberText:
 	done
 
 PewterMuseum1F_Scientist_ReceptionText:
+	ntag "RECEPTIONIST:"
 	text "Welcome!"
 	
 	para "It's ¥50 for a"
@@ -197,26 +201,31 @@ PewterMuseum1F_Scientist_ReceptionText:
 	done
 
 PewterMuseum1F_Scientist_ComeAgainText:
+	ntag "RECEPTIONIST:"
 	text "Come again!"
 	done
 
 PewterMuseum1F_Scientist_TicketThankYouText:
+	ntag "RECEPTIONIST:"
 	text "That's ¥50 then,"
 	line "thank you!"
 	done
 
 PewterMuseum1F_Scientist_NotEnoughMoneyText:
+	ntag "RECEPTIONIST:"
 	text "You don't have"
 	line "enough money!"
 	done
 
 PewterMuseum1F_Scientist_TakeYourTimeText:
+	ntag "RECEPTIONIST:"
 	text "Please take plenty"
 	line "of time to enjoy"
 	cont "the exhibit!"
 	done
 
 PewterMuseum1F_Gramps_Text:
+	ntag "GRAMPS:"
 	text "My, my, what an"
 	line "impressive fossil!"
 	done

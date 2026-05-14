@@ -16,16 +16,19 @@ TrainerMediumMartha:
 	end
 
 MediumMarthaSeenText:
+	ntag "MEDIUM:"
 	text "Urrg… Awaa…"
 	line "Huhu… graa…"
 	done
 
 MediumMarthaBeatenText:
+	ntag "MARTHA:"
 	text "Hwa!"
 	line "I'm saved!"
 	done
 
 MediumMarthaAfterBattleText:
+	ntag "MEDIUM:"
 	text "The GHOST can be"
 	line "identified by the"
 	cont "SILPH SCOPE."
@@ -42,16 +45,19 @@ TrainerMediumGrace:
 	end
 
 MediumGraceSeenText:
+	ntag "MEDIUM:"
 	text "Kekeke…"
 	line "Kwaaah!"
 	done
 
 MediumGraceBeatenText:
+	ntag "GRACE:"
 	text "Hmm?"
 	line "What am I doing?"
 	done
 
 MediumGraceAfterBattleText:
+	ntag "MEDIUM:"
 	text "Sorry! I was"
 	line "possessed!"
 	done
@@ -67,16 +73,19 @@ TrainerMediumBethany:
 	end
 
 MediumBethanySeenText:
+	ntag "MEDIUM:"
 	text "Be gone!"
 	line "Evil spirit!"
 	done
 
 MediumBethanyBeatenText:
+	ntag "BETHANY:"
 	text "Whew!"
 	line "The spirit left!"
 	done
 
 MediumBethanyAfterBattleText:
+	ntag "MEDIUM:"
 	text "My friends were"
 	line "possessed too!"
 	done

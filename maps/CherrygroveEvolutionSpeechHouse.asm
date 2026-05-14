@@ -8,6 +8,7 @@ CherrygroveEvolutionSpeechHouse_MapScripts:
 CherrygroveEvolutionSpeechHouseYoungsterScript:
 	jumptextfaceplayer CherrygroveEvolutionSpeechHouseYoungsterText
 CherrygroveEvolutionSpeechHouseYoungsterText:
+	ntag "YOUNGSTER:"
 	text "#MON gain expe-"
 	line "rience in battle"
 	cont "and change their"
@@ -17,6 +18,7 @@ CherrygroveEvolutionSpeechHouseYoungsterText:
 CherrygroveEvolutionSpeechHouseLassScript:
 	jumptextfaceplayer CherrygroveEvolutionSpeechHouseLassText
 CherrygroveEvolutionSpeechHouseLassText:
+	ntag "LASS:"
 	text "#MON change?"
 
 	para "I would be shocked"

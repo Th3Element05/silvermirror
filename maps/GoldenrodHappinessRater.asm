@@ -59,65 +59,56 @@ GoldenrodHappinessRaterTeacherScript:
 ;	closetext
 ;	end
 
+;GoldenrodHappinessRaterTeacherText:
+;	text "If you treat your"
+;	line "#MON nicely,"
+;	cont "they will love you"
+;	roll "in return."
+;
+;	para "Oh? Let me see"
+;	line "your @"
+;	text_ram wStringBuffer3
+;	text "…"
+;	done
+
+;GoldenrodHappinessRatingText_LovesYouALot:
+;	text "It looks really"
+;	line "happy! It must"
+;	cont "love you a lot."
+;	done
+
+;GoldenrodHappinessRatingText_ReallyTrustsYou:
+;	text "I get the feeling"
+;	line "that it really"
+;	cont "trusts you."
+;	done
+
+;GoldenrodHappinessRatingText_SortOfHappy:
+;	text "It's friendly to-"
+;	line "ward you. It looks"
+;	cont "sort of happy."
+;	done
+
+;GoldenrodHappinessRatingText_QuiteCute:
+;	text "It's quite cute."
+;	done
+
+;GoldenrodHappinessRatingText_NotUsedToYou:
+;	text "You should treat"
+;	line "it better. It's"
+;	cont "not used to you."
+;	done
+
+;GoldenrodHappinessRatingText_LooksMean:
+;	text "It doesn't seem to"
+;	line "like you at all."
+;	cont "It looks mean."
+;	done
+
 GoldenrodHappinessRaterPokefanMScript:
 	jumptextfaceplayer GoldenrodHappinessRaterPokefanMText
-
-GoldenrodHappinessRaterTwinScript:
-	jumptextfaceplayer GoldenrodHappinessRaterTwinText
-
-HappinessRatersHouseBookshelf:
-	jumpstd DifficultBookshelfScript
-
-HappinessRatersHouseRadio:
-	jumpstd Radio2Script
-
-GoldenrodHappinessRaterTeacherText:
-	text "If you treat your"
-	line "#MON nicely,"
-	cont "they will love you"
-	roll "in return."
-
-	para "Oh? Let me see"
-	line "your @"
-	text_ram wStringBuffer3
-	text "…"
-	done
-
-GoldenrodHappinessRatingText_LovesYouALot:
-	text "It looks really"
-	line "happy! It must"
-	cont "love you a lot."
-	done
-
-GoldenrodHappinessRatingText_ReallyTrustsYou:
-	text "I get the feeling"
-	line "that it really"
-	cont "trusts you."
-	done
-
-GoldenrodHappinessRatingText_SortOfHappy:
-	text "It's friendly to-"
-	line "ward you. It looks"
-	cont "sort of happy."
-	done
-
-GoldenrodHappinessRatingText_QuiteCute:
-	text "It's quite cute."
-	done
-
-GoldenrodHappinessRatingText_NotUsedToYou:
-	text "You should treat"
-	line "it better. It's"
-	cont "not used to you."
-	done
-
-GoldenrodHappinessRatingText_LooksMean:
-	text "It doesn't seem to"
-	line "like you at all."
-	cont "It looks mean."
-	done
-
 GoldenrodHappinessRaterPokefanMText:
+	ntag "#FAN:"
 	text "I keep losing in"
 	line "battles, and my"
 	cont "#MON end up"
@@ -128,11 +119,21 @@ GoldenrodHappinessRaterPokefanMText:
 	cont "like me much…"
 	done
 
+GoldenrodHappinessRaterTwinScript:
+	jumptextfaceplayer GoldenrodHappinessRaterTwinText
 GoldenrodHappinessRaterTwinText:
+	ntag "GIRL:"
 	text "When I use an item"
 	line "on my #MON, it"
 	cont "acts really glad!"
 	done
+
+HappinessRatersHouseBookshelf:
+	jumpstd DifficultBookshelfScript
+
+HappinessRatersHouseRadio:
+	jumpstd Radio2Script
+
 
 GoldenrodHappinessRater_MapEvents:
 	db 0, 0 ; filler

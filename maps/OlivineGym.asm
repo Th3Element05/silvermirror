@@ -142,6 +142,7 @@ OlivineGymGuideScript:
 	end
 
 OlivineGymGuideText:
+	ntag "GUIDE:"
 	text "Yo! CHAMP!"
 
 	para "JASMINE uses the"
@@ -153,6 +154,7 @@ OlivineGymGuideText:
 	done
 
 OlivineGymGuideWinText:
+	ntag "GUIDE:"
 	text "That was awesome."
 
 	para "The steel-type,"

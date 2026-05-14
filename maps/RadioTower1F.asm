@@ -121,6 +121,7 @@ RadioTower1FLuckyNumberManScript:
 	end
 
 RadioTower1FLuckyNumberManAskToPlayText:
+	ntag "GENTLEMAN:"
 	text "Hello, are you"
 	line "here for the LUCKY"
 	cont "NUMBER SHOW?"
@@ -134,6 +135,7 @@ RadioTower1FLuckyNumberManAskToPlayText:
 	done
 
 RadioTower1FLuckyNumberManThisWeeksIdIsText:
+	ntag "GENTLEMAN:"
 	text "Today's ID number"
 	line "is @"
 	text_ram wStringBuffer3
@@ -141,22 +143,26 @@ RadioTower1FLuckyNumberManThisWeeksIdIsText:
 	done
 
 RadioTower1FLuckyNumberManCheckIfMatchText:
+	ntag "GENTLEMAN:"
 	text "Let's see if you"
 	line "have a match."
 	done
 
 RadioTower1FLuckyNumberManDotDotDotText:
+	ntag "GENTLEMAN:"
 	text "<……>"
 	line "<……>"
 	done
 
 RadioTower1FLuckyNumberManComeAgainText:
+	ntag "GENTLEMAN:"
 	text "Please come back"
 	line "tomorrow for the"
 	cont "next LUCKY NUMBER."
 	done
 
 RadioTower1FLuckyNumberManPerfectMatchText:
+	ntag "GENTLEMAN:"
 	text "Wow! You have a"
 	line "perfect match of"
 	cont "all five numbers!"
@@ -169,6 +175,7 @@ RadioTower1FLuckyNumberManPerfectMatchText:
 	done
 
 RadioTower1FLuckyNumberManVeryGoodMatchText:
+	ntag "GENTLEMAN:"
 	text "Very nice! You've"
 	line "matched the last"
 	cont "four numbers!"
@@ -178,6 +185,7 @@ RadioTower1FLuckyNumberManVeryGoodMatchText:
 	done
 
 RadioTower1FLuckyNumberManGoodMatchText:
+	ntag "GENTLEMAN:"
 	text "Hey! You've"
 	line "matched the last"
 	cont "three numbers!"
@@ -187,6 +195,7 @@ RadioTower1FLuckyNumberManGoodMatchText:
 	done
 
 RadioTower1FLuckyNumberManOkayMatchText:
+	ntag "GENTLEMAN:"
 	text "Ooh, you've"
 	line "matched the last"
 	cont "two numbers."
@@ -196,6 +205,7 @@ RadioTower1FLuckyNumberManOkayMatchText:
 	done
 
 RadioTower1FLuckyNumberManWeakMatchText:
+	ntag "GENTLEMAN:"
 	text "Not bad, you've"
 	line "matched the last"
 	cont "number."
@@ -205,11 +215,13 @@ RadioTower1FLuckyNumberManWeakMatchText:
 	done
 
 RadioTower1FLuckyNumberManNoneOfYourIDNumbersMatchText:
+	ntag "GENTLEMAN:"
 	text "Nope, none of your"
 	line "ID numbers match."
 	done
 
 RadioTower1FLuckyNumberManNoRoomForYourPrizeText:
+	ntag "GENTLEMAN:"
 	text "You've got no room"
 	line "for your prize."
 
@@ -412,10 +424,12 @@ RadioTower1FReceptionistScript:
 	end
 
 RadioTower1FReceptionistWelcomeText:
+	ntag "RECEPTIONIST:"
 	text "Welcome!"
 	done
 
 RadioTower1FReceptionistNoToursText:
+	ntag "RECEPTIONIST:"
 	text "Hello. I'm sorry,"
 	line "but we're not"
 	cont "offering any tours"
@@ -425,6 +439,7 @@ RadioTower1FReceptionistNoToursText:
 RadioTower1FLassScript:
 	jumptextfaceplayer RadioTower1FLassText
 RadioTower1FLassText:
+	ntag "LASS:"
 	text "BEN is a fabulous"
 	line "DJ."
 
@@ -435,6 +450,7 @@ RadioTower1FLassText:
 RadioTower1FYoungsterScript:
 	jumptextfaceplayer RadioTower1FYoungsterText
 RadioTower1FYoungsterText:
+	ntag "YOUNGSTER:"
 	text "I love MARY, from"
 	line "#MON TALK."
 
@@ -443,9 +459,10 @@ RadioTower1FYoungsterText:
 	cont "though."
 	done
 
-RadioTower1FBlackBeltScript:
-	jumptextfaceplayer RadioTower1FBlackbeltText
-RadioTower1FBlackbeltText:
+RadioTower1FSecurityScript:
+	jumptextfaceplayer RadioTower1FSecurityText
+RadioTower1FSecurityText:
+	ntag "OFFICER:"
 	text "They hired me to"
 	line "guard the place."
 
@@ -501,5 +518,5 @@ RadioTower1F_MapEvents:
 	object_event  5,  6, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RadioTower1FReceptionistScript, -1
 	object_event 16,  4, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RadioTower1FLassScript, EVENT_RADIO_TOWER_CIVILIANS
 	object_event 15,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RadioTower1FYoungsterScript, EVENT_RADIO_TOWER_CIVILIANS
-	object_event 14,  1, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RadioTower1FBlackBeltScript, EVENT_RADIO_TOWER_CIVILIANS_AFTER
+	object_event 14,  1, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RadioTower1FSecurityScript, EVENT_RADIO_TOWER_CIVILIANS_AFTER
 ;	object_event 14,  1, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerGruntM3, EVENT_RADIO_TOWER_ROCKET_TAKEOVER

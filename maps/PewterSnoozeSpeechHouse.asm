@@ -9,6 +9,7 @@ PewterSnoozeSpeechHouse_MapScripts:
 PewterSnoozeSpeechHouseGamblerScript:
 	jumptextfaceplayer PewterSnoozeSpeechHouseGrampsText
 PewterSnoozeSpeechHouseGrampsText:
+	ntag "GRAMPS:"
 	text "#MON learn new"
 	line "techniques as"
 	cont "they grow!"
@@ -21,6 +22,7 @@ PewterSnoozeSpeechHouseGrampsText:
 PewterSnoozeSpeechHouseYoungsterScript:
 	jumptextfaceplayer PewterSnoozeSpeechHouseYoungsterText
 PewterSnoozeSpeechHouseYoungsterText:
+	ntag "YOUNGSTER:"
 	text "#MON become"
 	line "easier to catch"
 	cont "when they are"

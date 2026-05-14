@@ -65,10 +65,12 @@ Route26GateStopScript4:
 	jumptext Route26ComeBackLaterText
 
 Route26GateStopText:
+	ntag "OFFICER:"
 	text "Hey, wait!"
 	done
 
 Route26ComeBackLaterText:
+	ntag "OFFICER:"
 	text "The #MON past"
 	line "here are somewhat"
 	cont "stronger than the"
@@ -82,6 +84,7 @@ Route26ComeBackLaterText:
 	done
 
 Route26GateOpenText:
+	ntag "OFFICER:"
 	text "Your #MON look"
 	line "like they could"
 	cont "handle anything!"

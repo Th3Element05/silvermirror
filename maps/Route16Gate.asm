@@ -99,6 +99,7 @@ Route16GateStopMovement4:
 	step_end
 
 Route16GateOfficerText:
+	ntag "OFFICER:"
 	text "CYCLING ROAD is a"
 	line "downhill course"
 	cont "by the sea. It's"
@@ -106,10 +107,12 @@ Route16GateOfficerText:
 	done
 
 Route16GateStopText:
+	ntag "OFFICER:"
 	text "Hey! Whoa! Stop!"
 	done
 
 Route16GateCannotPassText:
+	ntag "OFFICER:"
 	text "You need to have"
 	line "a BICYCLE to ride"
 	cont "on CYCLING ROAD!"

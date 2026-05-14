@@ -163,6 +163,7 @@ TrainerBirdKeeperRick:
 	end
 
 BirdKeeperRickSeenText:
+	ntag "BIRDKEEPER:"
 	text "The keyword is"
 	line "guts!"
 
@@ -175,10 +176,12 @@ BirdKeeperRickSeenText:
 	done
 
 BirdKeeperRickBeatenText:
+	ntag "RICK:"
 	text "Gaaah!"
 	done
 
 BirdKeeperRickAfterBattleText:
+	ntag "BIRDKEEPER:"
 	text "FALKNER's skills"
 	line "are for real!"
 
@@ -198,17 +201,19 @@ TrainerBirdKeeperLucas:
 	end
 
 BirdKeeperLucasSeenText:
+	ntag "BIRDKEEPER:"
 	text "Let me see if you"
 	line "are good enough to"
 	cont "face FALKNER!"
 	done
 
 BirdKeeperLucasBeatenText:
-	text "This can't be"
-	line "true!"
+	ntag "LUCAS:"
+	text "This can't be!"
 	done
 
 BirdKeeperLucasAfterBattleText:
+	ntag "BIRDKEEPER:"
 	text "You're definitely"
 	line "good enough…"
 	done
@@ -230,6 +235,7 @@ VioletGymGuideScript:
 	end
 
 VioletGymGuideText:
+	ntag "GUIDE:"
 	text "Hey! CHAMP!"
 
 	para "The grass-type is"
@@ -239,6 +245,7 @@ VioletGymGuideText:
 	done
 
 VioletGymGuideWinText:
+	ntag "GUIDE:"
 	text "Nice battle!"
 
 	para "I expected no less"

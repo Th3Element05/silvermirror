@@ -74,7 +74,7 @@ Route24NuggetRocketScript:
 	end
 
 Route24NuggetRocketIntroText:
-	ntag "ROCKET:"
+	ntag "RECRUITER:"
 	text "Congratulations!"
 	line "You beat our 5"
 	cont "contest trainers!"
@@ -84,7 +84,7 @@ Route24NuggetRocketIntroText:
 	done
 
 Route24NuggetRocketJoinText:
-	ntag "ROCKET:"
+	ntag "RECRUITER:"
 	text "By the way, would"
 	line "you like to join"
 	cont "TEAM ROCKET?"
@@ -130,19 +130,29 @@ TrainerCamperIvan:
 .Script:
 	endifjustbattled
 	opentext
-	writetext NuggetBridgeAfterBattleText
+;	checkevent EVENT_HELPED_BILL
+;	iftrue AlternateText?
+	writetext CamperIvanAfterBattleText
 	waitbutton
 	closetext
 	end
 
 CamperIvanSeenText:
+	ntag "CAMPER:"
 	text "OK! I'm No. 5!"
 	line "I'll stomp you!"
 	done
 
 CamperIvanBeatenText:
+	ntag "IVAN:"
 	text "Whoa!"
 	line "Too much!"
+	done
+
+CamperIvanAfterBattleText:
+	ntag "CAMPER:"
+	text "I did my best, I"
+	line "have no regrets!"
 	done
 
 TrainerLassLaura:
@@ -150,19 +160,26 @@ TrainerLassLaura:
 .Script:
 	endifjustbattled
 	opentext
-	writetext NuggetBridgeAfterBattleText
+	writetext NuggetBridgeLassAfterBattleText
 	waitbutton
 	closetext
 	end
 
 LassLauraSeenText:
+	ntag "LASS:"
 	text "I'm No. 4!"
 	line "Getting tired?"
 	done
 
 LassLauraBeatenText:
-	text "I lost"
-	line "too!"
+	ntag "LAURA:"
+	text "I lost too!"
+	done
+
+NuggetBridgeLassAfterBattleText:
+	ntag "LASS:"
+	text "I did my best, I"
+	line "have no regrets!"
 	done
 
 TrainerYoungsterAlbert:
@@ -170,52 +187,68 @@ TrainerYoungsterAlbert:
 .Script:
 	endifjustbattled
 	opentext
-	writetext NuggetBridgeAfterBattleText
+	writetext YoungsterAlbertAfterBattleText
 	waitbutton
 	closetext
 	end
 
 YoungsterAlbertSeenText:
+	ntag "YOUNGSTER:"
 	text "Here's No. 3!"
 	line "I won't be easy!"
 	done
 
 YoungsterAlbertBeatenText:
+	ntag "ALBERT:"
 	text "Ow!"
 	line "Stomped flat!"
-	prompt
+	done
+
+YoungsterAlbertAfterBattleText:
+	ntag "YOUNGSTER:"
+	text "I did my best, I"
+	line "have no regrets!"
+	done
 
 TrainerLassShannon:
 	trainer LASS, SHANNON, EVENT_BEAT_LASS_SHANNON, LassShannonSeenText, LassShannonBeatenText, 0, .Script
 .Script:
 	endifjustbattled
 	opentext
-	writetext NuggetBridgeAfterBattleText
+	writetext NuggetBridgeLassAfterBattleText
 	waitbutton
 	closetext
 	end
 
 LassShannonSeenText:
+	ntag "LASS:"
 	text "I'm second!"
 	line "Now it's serious!"
 	done
 
 LassShannonBeatenText:
-	text "How could I"
-	line "lose?"
-	prompt
+	ntag "SHANNON:"
+	text "How could I lose?"
+	done
+
+;NuggetBridgeLassAfterBattleText:
+;	ntag "LASS:"
+;	text "I did my best, I"
+;	line "have no regrets!"
+;	done
 
 TrainerBugCatcherWayne:
 	trainer BUG_CATCHER, WAYNE, EVENT_BEAT_BUG_CATCHER_WAYNE, BugCatcherWayneSeenText, BugCatcherWayneBeatenText, 0, .Script
 .Script:
 	endifjustbattled
 	opentext
-	writetext NuggetBridgeAfterBattleText
+	writetext BugCatcherWayneAfterBattleText
 	waitbutton
 	closetext
 	end
 
 BugCatcherWayneSeenText:
+	ntag "BUGCATCHER:"
 	text "This is NUGGET"
 	line "BRIDGE! Beat us 5"
 	cont "trainers and win"
@@ -226,11 +259,13 @@ BugCatcherWayneSeenText:
 	done
 
 BugCatcherWayneBeatenText:
+	ntag "WAYNE:"
 	text "Whoo!"
 	line "Good stuff!"
 	done
 
-NuggetBridgeAfterBattleText:
+BugCatcherWayneAfterBattleText:
+	ntag "BUGCATCHER:"
 	text "I did my best, I"
 	line "have no regrets!"
 	done
@@ -353,19 +388,23 @@ TrainerCamperTanner:
 	end
 
 CamperTannerSeenText:
+	ntag "CAMPER:"
 	text "I saw your feat"
 	line "from the grass!"
 	done
 
 CamperTannerBeatenText:
+	ntag "TANNER:"
 	text "I thought not!"
 	done
 
 CamperTannerAfterBattleText:
+	ntag "TANNER:"
 	text "I hid because the"
 	line "trainers on the"
 	cont "bridge scared me!"
 	done
+
 
 ; itemballs
 Route24TMThunderWave:

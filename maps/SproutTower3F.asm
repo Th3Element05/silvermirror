@@ -37,6 +37,7 @@ SageLiScript:
 	end
 
 SageLiSeenText:
+	ntag "SAGE:"
 	text "So good of you to"
 	line "come here!"
 
@@ -58,10 +59,12 @@ SageLiSeenText:
 	done
 
 SageLiBeatenText:
+	ntag "LI:"
 	text "Ah, excellent!"
 	done
 
 SageLiGiftText:
+	ntag "SAGE:"
 	text "The trust between"
 	line "you and your #-"
 	cont "MON is strong."
@@ -71,6 +74,7 @@ SageLiGiftText:
 	done
 
 SageLiHiddenPowerText:
+	ntag "SAGE:"
 	text "That TM teaches"
 	line "HIDDEN POWER."
 
@@ -85,6 +89,7 @@ SageLiHiddenPowerText:
 	done
 
 SageLiAfterBattleText:
+	ntag "SAGE:"
 	text "I hope you learn"
 	line "and grow from your"
 	cont "journey."
@@ -101,17 +106,20 @@ TrainerSageJin:
 	end
 
 SageJinSeenText:
+	ntag "SAGE:"
 	text "I train to find"
 	line "enlightenment in"
 	cont "#MON!"
 	done
 
 SageJinBeatenText:
+	ntag "JIN:"
 	text "My training is"
 	line "incomplete…"
 	done
 
 SageJinAfterBattleText:
+	ntag "SAGE:"
 	text "As #MON grow"
 	line "stronger, so does"
 	cont "the trainer."
@@ -133,17 +141,20 @@ TrainerSageKyro:
 	end
 
 SageKyroSeenText:
+	ntag "SAGE:"
 	text "Let me see how"
 	line "much you trust"
 	cont "your #MON."
 	done
 
 SageKyroBeatenText:
+	ntag "KYRO:"
 	text "Yes, your trust is"
 	line "real!"
 	done
 
 SageKyroAfterBattleText:
+	ntag "SAGE:"
 	text "It is not far to"
 	line "the ELDER."
 	done

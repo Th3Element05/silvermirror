@@ -21,6 +21,7 @@ OlivineMartMedScript:
 OlivineMartCooltrainerFScript:
 	jumptextfaceplayer OlivineMartCooltrainerFText
 OlivineMartCooltrainerFText:
+	ntag "TRAINER:"
 	text "Do your #MON"
 	line "already know the"
 	cont "move for carrying"
@@ -30,6 +31,7 @@ OlivineMartCooltrainerFText:
 OlivineMartLassScript:
 	jumptextfaceplayer OlivineMartLassText
 OlivineMartLassText:
+	ntag "LASS:"
 	text "My BUTTERFREE came"
 	line "from my boyfriend"
 	cont "overseas."

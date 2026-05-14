@@ -56,6 +56,7 @@ TrainerSchoolboyJack:
 	end
 
 SchoolboyJackSeenText:
+	ntag "SCHOOLBOY:"
 	text "The world of"
 	line "#MON is deep."
 
@@ -68,10 +69,12 @@ SchoolboyJackSeenText:
 	done
 
 SchoolboyJackBeatenText:
+	ntag "JACK:"
 	text "Wha-wha-what?"
 	done
 
 SchoolboyJackAfterBattleText:
+	ntag "SCHOOLBOY:"
 	text "There is a lot"
 	line "to learn."
 
@@ -93,6 +96,7 @@ TrainerPokefanmColin:
 	end
 
 PokefanmColinSeenText:
+	ntag "#FAN:"
 	text "We adore our #-"
 	line "MON, even if they"
 	cont "dislike us."
@@ -102,10 +106,12 @@ PokefanmColinSeenText:
 	done
 
 PokefanmColinBeatenText:
+	ntag "COLIN:"
 	text "M-my #MON!"
 	done
 
 PokefanmColinAfterBattleText:
+	ntag "#FAN:"
 	text "I lost the battle,"
 	line "but my #MON win"
 
@@ -125,6 +131,7 @@ TrainerPokefanfRuth:
 	end
 
 PokefanfRuthSeenText:
+	ntag "#FAN:"
 	text "Such darling"
 	line "#MON."
 
@@ -134,11 +141,13 @@ PokefanfRuthSeenText:
 	done
 
 PokefanfRuthBeatenText:
+	ntag "RUTH:"
 	text "I don't mind"
 	line "losing."
 	done
 
 PokefanfRuthAfterBattleText:
+	ntag "#FAN:"
 	text "Do you know about"
 	line "baby #MON?"
 
@@ -158,6 +167,7 @@ TrainerLassHailey:
 	end
 
 LassHaileySeenText:
+	ntag "LASS:"
 	text "Hello? Why are you"
 	line "staring at me?"
 
@@ -165,10 +175,12 @@ LassHaileySeenText:
 	done
 
 LassHaileyBeatenText:
+	ntag "HAILEY:"
 	text "…Hmmm…"
 	done
 
 LassHaileyAfterBattleText:
+	ntag "LASS:"
 	text "I thought you were"
 	line "staring at me"
 	cont "because I'm cute!"
@@ -193,6 +205,7 @@ NationalParkTeacher1Script:
 	end
 
 NationalParkTeacher1Text:
+	ntag "TEACHER:"
 	text "Pay attention,"
 	line "please!"
 
@@ -211,6 +224,7 @@ NationalParkTeacher1Text:
 	done
 
 NationalParkTeacher1Text_GotQuickClaw:
+	ntag "TEACHER:"
 	text "Let a #MON hold"
 	line "that QUICK CLAW."
 
@@ -237,6 +251,7 @@ NationalParkMeowthText:
 NationalParkPokefanFScript:
 	jumptextfaceplayer NationalParkPokefanFText
 NationalParkPokefanFText:
+	ntag "WOMAN:"
 	text "This is MAIL I got"
 	line "from my daughter."
 	cont "It cheers me up."
@@ -245,6 +260,7 @@ NationalParkPokefanFText:
 NationalParkYoungster1Script:
 	jumptextfaceplayer NationalParkYoungster1Text
 NationalParkYoungster1Text:
+	ntag "YOUNGSTER:"
 	text "I'm playing with"
 	line "stickers I printed"
 	cont "from my #DEX."
@@ -253,6 +269,7 @@ NationalParkYoungster1Text:
 NationalParkYoungster2Script:
 	jumptextfaceplayer NationalParkYoungster2Text
 NationalParkYoungster2Text:
+	ntag "YOUNGSTER:"
 	text "I get the other"
 	line "guy's #DEX"
 	cont "sticker if I win."
@@ -261,6 +278,7 @@ NationalParkYoungster2Text:
 NationalParkTeacher2Script:
 	jumptextfaceplayer NationalParkTeacher2Text
 NationalParkTeacher2Text:
+	ntag "LADY:"
 	text "I take walks in"
 	line "the PARK, but I"
 	cont "never go into the"

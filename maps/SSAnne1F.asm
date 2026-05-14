@@ -8,6 +8,7 @@ SSAnne1F_MapScripts:
 SSAnne1FSailor1Script:
 	jumptextfaceplayer SSAnne1FSailor1Text
 SSAnne1FSailor1Text:
+	ntag "SAILOR:"
 	text "The passengers"
 	line "are restless!"
 
@@ -19,6 +20,7 @@ SSAnne1FSailor1Text:
 SSAnne1FWaiterScript:
 	jumptextfaceplayer SSAnne1FWaiterText
 SSAnne1FWaiterText:
+	ntag "WAITER:"
 	text "Bonjour!"
 	line "I am le waiter on"
 	cont "this ship!"
@@ -34,6 +36,7 @@ SSAnne1FWaiterText:
 SSAnne1FSailor2Script:
 	jumptextfaceplayer SSAnne1FSailor2Text
 SSAnne1FSailor2Text:
+	ntag "SAILOR:"
 	text "Our CAPTAIN is a"
 	line "sword master!"
 

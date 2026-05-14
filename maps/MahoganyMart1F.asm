@@ -102,6 +102,7 @@ MahoganyMartMerchantScript:
 	end
 
 MahoganyMartMerchantClosedText:
+	ntag "GRANNY:"
 	text "Sorry, we're not"
 	line "open at night."
 
@@ -112,6 +113,7 @@ MahoganyMartMerchantClosedText:
 	done
 
 MahoganyMartMerchantGoldenrodText:
+	ntag "GRANNY:"
 	text "Sorry, we're not"
 	line "open today."
 
@@ -206,6 +208,7 @@ MahoganyMart1FSomethingHereText:
 	done
 
 MahoganyMart1FYouSawNothingText:
+	ntag "GRANNY:"
 	text "You saw nothing."
 	done
 
@@ -280,11 +283,13 @@ MahoganyMart1FOldMuralText:
 	done
 
 MahoganyMart1FGrannyAreYouInterestedText:
+	ntag "GRANNY:"
 	text "Are you interested"
 	line "in that painting?"
 	done
 
 MahoganyMart1FGrannyHistorySpeechText:
+	ntag "GRANNY:"
 	text "A long time ago,"
 	line "my clan resided in"
 	cont "ECRUTEAK CITY."
@@ -332,6 +337,7 @@ MahoganyMart1FGrannyReturnMovement:
 MahoganyMartTwinScript:
 	jumptextfaceplayer MahoganyMart1FTwinText
 MahoganyMart1FTwinText:
+	ntag "GIRL:"
 	text "Granny's medicine"
 	line "works great!"
 

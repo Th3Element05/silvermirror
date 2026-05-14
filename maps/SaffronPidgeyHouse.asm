@@ -8,15 +8,7 @@ SaffronPidgeyHouse_MapScripts:
 SaffronPidgeyHouseBoy:
 	jumptextfaceplayer SaffronPidgeyHouseBoyText
 SaffronPidgeyHouseBoyText:
-;	text "My neighbor the"
-;	line "COPYCAT lost her"
-;	cont "favorite doll."
-;
-;	para "I tried to give"
-;	line "her a new one,"
-;	cont "but she only wants"
-;	roll "her old doll back."
-;	done
+	ntag "BOY:"
 	text "My neighbor the"
 	line "COPYCAT is cute!"
 
@@ -27,12 +19,15 @@ SaffronPidgeyHouseBoyText:
 SaffronPidgeyHouseLass:
 	jumptextfaceplayer SaffronPidgeyHouseLassText
 SaffronPidgeyHouseLassText:
-	text "Thank you for"
-	line "writing. I hope"
-	cont "to see you soon!"
+	ntag "LASS:"
+	text "My little brother"
+	line "likes the little"
+	cont "girl next door."
 
-	para "Hey! Don't look"
-	line "at my letter!"
+	para "He keeps bugging"
+	line "me to buy him a"
+	cont "#DOLL to give"
+	roll "her."
 	done
 
 SaffronPidgeyHousePidgey:

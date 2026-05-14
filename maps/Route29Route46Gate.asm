@@ -8,6 +8,7 @@ Route29Route46Gate_MapScripts:
 Route29Route46GateOfficerScript:
 	jumptextfaceplayer Route29Route46GateOfficerText
 Route29Route46GateOfficerText:
+	ntag "OFFICER:"
 	text "You can't climb"
 	line "ledges."
 
@@ -19,6 +20,7 @@ Route29Route46GateOfficerText:
 Route29Route46GateYoungsterScript:
 	jumptextfaceplayer Route29Route46GateYoungsterText
 Route29Route46GateYoungsterText:
+	ntag "YOUNGSTER:"
 	text "Different kinds of"
 	line "#MON appear"
 	cont "past here."

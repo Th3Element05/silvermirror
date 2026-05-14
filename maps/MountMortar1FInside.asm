@@ -17,16 +17,19 @@ TrainerPokemaniacMiller:
 	end
 
 PokemaniacMillerSeenText:
+	ntag "#MANIAC:"
 	text "I'm not losing"
 	line "this time!"
 	done
 
 PokemaniacMillerBeatenText:
+	ntag "MILLER:"
 	text "I lost to some"
 	line "kid…?"
 	done
 
 PokemaniacMillerAfterBattleText:
+	ntag "#MANIAC:"
 	text "A while back, this"
 	line "karate dude wanted"
 	cont "to battle. He was"
@@ -52,15 +55,18 @@ TrainerSupernerdWaldo:
 	end
 
 SupernerdWaldoSeenText:
+	ntag "SUPERNERD:"
 	text "Hey! JAMES!"
 	done
 
 SupernerdWaldoBeatenText:
+	ntag "WALDO:"
 	text "I mistook you for"
 	line "someone else…"
 	done
 
 SupernerdWaldoAfterBattleText:
+	ntag "SUPERNERD:"
 	text "I came to explore"
 	line "MT.MORTAR, but I"
 	cont "got separated from"
@@ -68,7 +74,7 @@ SupernerdWaldoAfterBattleText:
 
 	para "Did you run into"
 	line "a trainer with a"
-	cont "PORYGON2?"
+	cont "PORYGON?"
 	done
 
 MountMortar1FBoulder:

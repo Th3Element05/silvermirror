@@ -55,7 +55,7 @@ OlivineCityPortSailorText:
 ;	cont "KANTO on MONDAY"
 ;	roll "and FRIDAY."
 ;	done
-
+	ntag "SAILOR:"
 	text "The S.S.AQUA"
 	line "sails to KANTO on "
 	cont "MONDAY, WEDNESDAY,"
@@ -65,6 +65,7 @@ OlivineCityPortSailorText:
 OlivineCitySailor1Script:
 	jumptextfaceplayer OlivineCitySailor1Text
 OlivineCitySailor1Text:
+	ntag "SAILOR:"
 	text "Dark roads are"
 	line "dangerous at"
 	cont "night."
@@ -83,6 +84,7 @@ OlivineCitySailor1Text:
 OlivineCitySailor2Script:
 	jumptextfaceplayer OlivineCitySailor2Text
 OlivineCitySailor2Text:
+	ntag "SAILOR:"
 	text "The sea is sweet!"
 
 	para "Sunsets on the sea"
@@ -110,6 +112,7 @@ OlivineCityStandingYoungsterScript:
 	end
 
 OlivineCityStandingYoungsterPokegearText:
+	ntag "YOUNGSTER:"
 	text "That thing you"
 	line "have--it's a #-"
 	cont "GEAR, right? Wow,"
@@ -117,6 +120,7 @@ OlivineCityStandingYoungsterPokegearText:
 	done
 
 OlivineCityStandingYoungsterPokedexText:
+	ntag "YOUNGSTER:"
 	text "Wow, you have a"
 	line "#DEX!"
 

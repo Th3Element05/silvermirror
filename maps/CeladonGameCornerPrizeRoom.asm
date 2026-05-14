@@ -592,6 +592,7 @@ GameCorner_NoCoinCaseScript:
 
 ; vendor texts
 GameCornerPrize_IntroText:
+	ntag "CASHIER:"
 	text "Welcome!"
 
 	para "We exchange your"
@@ -600,26 +601,31 @@ GameCornerPrize_IntroText:
 	done
 
 GameCornerPrize_WhichPrizeText:
+	ntag "CASHIER:"
 	text "Which prize would"
 	line "you like?"
 	done
 
 GameCornerPrize_WhichPrizeText_Short:
+	ntag "CASHIER:"
 	text " "
 	line "Which prize?"
 	done
 
 GameCornerPrize_NotEnoughCoinsText:
+	ntag "CASHIER:"
 	text "You don't have"
 	line "enough coins."
 	done
 
 GameCornerPrize_NoRoomText:
+	ntag "CASHIER:"
 	text "You have no room"
 	line "for it."
 	done
 
 GameCornerPrize_ConfirmPurchaseText:
+	ntag "CASHIER:"
 	text "OK, so you wanted"
 	line "a @"
 	text_ram wStringBuffer3
@@ -627,16 +633,19 @@ GameCornerPrize_ConfirmPurchaseText:
 	done
 
 GameCornerPrize_HereYouGoText:
+	ntag "CASHIER:"
 	text "Here you go!"
 	done
 
 GameCornerPrize_ComeAgainText:
+	ntag "CASHIER:"
 	text "OK. Please save"
 	line "your coins and"
 	cont "come again!"
 	done
 
 GameCornerPrize_NoCoinCaseText:
+	ntag "CASHIER:"
 	text "Oh? You don't have"
 	line "a COIN CASE."
 	done
@@ -645,6 +654,7 @@ GameCornerPrize_NoCoinCaseText:
 CeladonPrizeRoomGentlemanScript:
 	jumptextfaceplayer CeladonPrizeRoomGentlemanText
 CeladonPrizeRoomGentlemanText:
+	ntag "GAMBLER:"
 	text "I want a PORYGON,"
 	line "but I'm short by"
 	cont "100 coins…"
@@ -653,6 +663,7 @@ CeladonPrizeRoomGentlemanText:
 CeladonPrizeRoomPharmacistScript:
 	jumptextfaceplayer CeladonPrizeRoomPharmacistText
 CeladonPrizeRoomPharmacistText:
+	ntag "GAMBLER:"
 	text "I had a major"
 	line "haul today!"
 	done

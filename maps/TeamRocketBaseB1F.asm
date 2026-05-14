@@ -183,16 +183,19 @@ NoNinjaSecurity:
 	end
 
 TeamRocketBaseB1FNinjaGuardSeenText0:
+	ntag "NINJA:"
 	text "How did you get"
 	line "in here?"
 	done
 
 TeamRocketBaseB1FNinjaGuardSeenText1:
+	ntag "NINJA:"
 	text "We can't permit"
 	line "you to be here."
 	done
 
 NinjaGuardBeatenText:
+	ntag "NINJA:"
 	text "I must vanish!"
 	done
 

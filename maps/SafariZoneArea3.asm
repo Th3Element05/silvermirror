@@ -14,9 +14,10 @@ SafariZoneArea3OfficerText:
 	cont "SECRET HOUSE!"
 	done
 
-SafariZoneArea3Resting:
-	jumptextfaceplayer SafariZoneArea3RestingText
-SafariZoneArea3RestingText:
+SafariZoneArea3SuperNerd:
+	jumptextfaceplayer SafariZoneArea3SuperNerdText
+SafariZoneArea3SuperNerdText:
+	ntag "SUPERNERD:"
 	text "Catching #MON"
 	line "is hard work!"
 
@@ -27,6 +28,7 @@ SafariZoneArea3RestingText:
 SafariZoneArea3Cooltrainers:
 	jumptextfaceplayer SafariZoneArea3CooltrainersText
 SafariZoneArea3CooltrainersText:
+	ntag "TRAINER:"
 	text "Shhh!"
 
 	para "You'll scare away"
@@ -36,6 +38,7 @@ SafariZoneArea3CooltrainersText:
 SafariZoneArea3Youngster:
 	jumptextfaceplayer SafariZoneArea3YoungsterText
 SafariZoneArea3YoungsterText:
+	ntag "YOUNGSTER:"
 	text "Catching #MON"
 	line "is so much fun!"
 	done
@@ -43,6 +46,7 @@ SafariZoneArea3YoungsterText:
 SafariZoneArea3Scientist:
 	jumptextfaceplayer SafariZoneArea3ScientistText
 SafariZoneArea3ScientistText:
+	ntag "SCIENTIST:"
 	text "I come to the"
 	line "SAFARI ZONE just"
 	cont "to observe rare"
@@ -122,17 +126,17 @@ SafariZoneArea3_MapEvents:
 	def_object_events
 	object_event 30, 27, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, 0, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SafariZoneArea3Officer, -1
 ;
-	object_event 35,  4, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, MORN, 0, OBJECTTYPE_SCRIPT, 0, SafariZoneArea3Resting, EVENT_SAFARI_ZONE_AREA_3_NPC1
+	object_event 35,  4, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, MORN, 0, OBJECTTYPE_SCRIPT, 0, SafariZoneArea3Cooltrainers, EVENT_SAFARI_ZONE_AREA_3_NPC1
 	object_event  5,  5, SPRITE_SCIENTIST, SPRITEMOVEDATA_WANDER, 2, 2, -1, DAY, 0, OBJECTTYPE_SCRIPT, 0, SafariZoneArea3Scientist, EVENT_SAFARI_ZONE_AREA_3_NPC1
 	object_event 12, 12, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WALK_UP_DOWN, 2, 2, -1, NITE, 0, OBJECTTYPE_SCRIPT, 0, SafariZoneArea3Cooltrainers, EVENT_SAFARI_ZONE_AREA_3_NPC1
 ;
 	object_event 22, 26, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 2, 2, -1, MORN, 0, OBJECTTYPE_SCRIPT, 0, SafariZoneArea3Youngster, EVENT_SAFARI_ZONE_AREA_3_NPC2
-	object_event 31,  4, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, DAY, 0, OBJECTTYPE_SCRIPT, 0, SafariZoneArea3Resting, EVENT_SAFARI_ZONE_AREA_3_NPC2
+	object_event 31,  4, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, DAY, 0, OBJECTTYPE_SCRIPT, 0, SafariZoneArea3SuperNerd, EVENT_SAFARI_ZONE_AREA_3_NPC2
 	object_event 27, 18, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WALK_UP_DOWN, 2, 2, -1, NITE, 0, OBJECTTYPE_SCRIPT, 0, SafariZoneArea3Cooltrainers, EVENT_SAFARI_ZONE_AREA_3_NPC2
 ;
 	object_event 28,  5, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WALK_UP_DOWN, 2, 2, -1, MORN, 0, OBJECTTYPE_SCRIPT, 0, SafariZoneArea3Cooltrainers, EVENT_SAFARI_ZONE_AREA_3_NPC3
 	object_event 29,  7, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, DAY, 0, OBJECTTYPE_SCRIPT, 0, SafariZoneArea3Scientist, EVENT_SAFARI_ZONE_AREA_3_NPC3
-	object_event 31,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, NITE, 0, OBJECTTYPE_SCRIPT, 0, SafariZoneArea3Resting, EVENT_SAFARI_ZONE_AREA_3_NPC3
+	object_event 31,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, NITE, 0, OBJECTTYPE_SCRIPT, 0, SafariZoneArea3Youngster, EVENT_SAFARI_ZONE_AREA_3_NPC3
 ;
 	object_event 23,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, SafariZoneArea3Protein, EVENT_SAFARI_ZONE_AREA_3_PROTEIN
 	object_event 19,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, SafariZoneArea3TMPoisonJab, EVENT_SAFARI_ZONE_AREA_3_TM_POISON_JAB

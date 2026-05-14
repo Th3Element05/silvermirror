@@ -16,6 +16,7 @@ TrainerSageChow:
 	end
 
 SageChowSeenText:
+	ntag "SAGE:"
 	text "We stand guard in"
 	line "this tower."
 
@@ -25,10 +26,12 @@ SageChowSeenText:
 	done
 
 SageChowBeatenText:
+	ntag "CHOW:"
 	text "Th-Thank you!"
 	done
 
 SageChowAfterBattleText:
+	ntag "SAGE:"
 	text "All living beings"
 	line "coexist through"
 	cont "cooperation."
@@ -40,6 +43,7 @@ SageChowAfterBattleText:
 SproutTower1FSage1Script:
 	jumptextfaceplayer SproutTower1FSage1Text
 SproutTower1FSage1Text:
+	ntag "SAGE:"
 	text "Only if you reach"
 	line "the top will you"
 	cont "obtain a TM."
@@ -48,6 +52,7 @@ SproutTower1FSage1Text:
 SproutTower1FSage2Script:
 	jumptextfaceplayer SproutTower1FSage2Text
 SproutTower1FSage2Text:
+	ntag "SAGE:"
 	text "SPROUT TOWER was"
 	line "built long ago"
 	cont "as a place for"
@@ -57,6 +62,7 @@ SproutTower1FSage2Text:
 SproutTower1FGrannyScript:
 	jumptextfaceplayer SproutTower1FGrannyText
 SproutTower1FGrannyText:
+	ntag "GRANNY:"
 	text "A BELLSPROUT over"
 	line "100 feet tall…"
 
@@ -68,6 +74,7 @@ SproutTower1FGrannyText:
 SproutTower1FTeacherScript:
 	jumptextfaceplayer SproutTower1FTeacherText
 SproutTower1FTeacherText:
+	ntag "LADY:"
 	text "See the pillar"
 	line "shaking?"
 

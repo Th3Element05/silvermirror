@@ -191,6 +191,7 @@ GoldenrodMagnetTrainStationGentlemanScript:
 	end
 
 GoldenrodMagnetTrainStationGentleman_DisappointedText:
+	ntag "GENTLEMAN:"
 	text "Oh, that's"
 	line "disappointing…"
 	done

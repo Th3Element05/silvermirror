@@ -109,6 +109,7 @@ UnionCave1FBlockingHiker:
 	jumptextfaceplayer UnionCave1FHikerDudeText
 
 UnionCave1FHikerToGeodudeText:
+	ntag "HIKER:"
 	text "Hang in there,"
 	line "GEODUDE!"
 
@@ -123,10 +124,12 @@ UnionCave1FGeodudeAttackMovement:
 	step_end
 
 UnionCave1FHikerToPlayerText:
+	ntag "HIKER:"
 	text "Don't distract us!"
 	done
 
 UnionCave1FHikerDudeText:
+	ntag "HIKER:"
 	text "Dude…"
 	line "Why?"
 	done
@@ -146,11 +149,13 @@ UnionCave1FBlockingPokemaniac:
 	jumptextfaceplayer UnionCave1FPokemaniacWonText
 
 UnionCave1FPokemaniacBattleText:
+	ntag "#MANIAC:"
 	text "I need to focus"
 	line "on this battle."
 	done
 
 UnionCave1FPokemaniacWonText:
+	ntag "#MANIAC:"
 	text "Way to go!"
 	line "KANGASKHAN!"
 	done
@@ -181,6 +186,7 @@ TrainerPokemaniacMicah:
 	end
 
 PokemaniacMicahSeenText:
+	ntag "#MANIAC:"
 	text "My last battle was"
 	line "great!"
 
@@ -189,11 +195,13 @@ PokemaniacMicahSeenText:
 	done
 
 PokemaniacMicahBeatenText:
+	ntag "MICAH:"
 	text "Ugh. My poor"
 	line "#MON…"
 	done
 
 PokemaniacMicahAfterBattleText:
+	ntag "#MANIAC:"
 	text "Every Friday, you"
 	line "can hear #MON"
 	cont "roars from deep"
@@ -211,15 +219,18 @@ TrainerHikerDiego:
 	end
 
 HikerDiegoSeenText:
+	ntag "HIKER:"
 	text "Let my #MON see"
 	line "how good you are."
 	done
 
 HikerDiegoBeatenText:
+	ntag "DIEGO:"
 	text "Oh, oh, oh!"
 	done
 
 HikerDiegoAfterBattleText:
+	ntag "HIKER:"
 	text "All right, then!"
 	line "I've decided."
 
@@ -239,6 +250,7 @@ TrainerFirebreatherLeo:
 	end
 
 FirebreatherLeoSeenText:
+	ntag "FIREBREATHER:"
 	text "ZUBAT's SUPERSONIC"
 	line "keeps confusing"
 	cont "my #MON."
@@ -248,10 +260,12 @@ FirebreatherLeoSeenText:
 	done
 
 FirebreatherLeoBeatenText:
+	ntag "LEO:"
 	text "I flamed out!"
 	done
 
 FirebreatherLeoAfterBattleText:
+	ntag "FIREBREATHER:"
 	text "On weekends, you"
 	line "can hear strange"
 	cont "roars from deep in"
@@ -269,6 +283,7 @@ TrainerFirebreatherAlex:
 	end
 
 FirebreatherAlexSeenText:
+	ntag "FIREBREATHER:"
 	text "If it's light, a"
 	line "cave isn't scary."
 
@@ -278,10 +293,12 @@ FirebreatherAlexSeenText:
 	done
 
 FirebreatherAlexBeatenText:
+	ntag "ALEX:"
 	text "FLASH!"
 	done
 
 FirebreatherAlexAfterBattleText:
+	ntag "FIREBREATHER:"
 	text "It's my #MON's"
 	line "fire that lights"
 	cont "up this cave."

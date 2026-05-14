@@ -111,31 +111,31 @@ Script_BeatenAllTrainers2:
 	writetext Text_CongratulationsYouveBeatenAllTheTrainers
 	sjump Script_GivePlayerHisPrize
 
-Script_TooMuchTimeElapsedNoRegister: ; unreferenced
-	setval BATTLETOWERACTION_CHALLENGECANCELED
-	special BattleTowerAction
-	opentext
-	writetext Text_TooMuchTimeElapsedNoRegister
-	waitbutton
-	closetext
-	end
+;Script_TooMuchTimeElapsedNoRegister: ; unreferenced
+;	setval BATTLETOWERACTION_CHALLENGECANCELED
+;	special BattleTowerAction
+;	opentext
+;	writetext Text_TooMuchTimeElapsedNoRegister
+;	waitbutton
+;	closetext
+;	end
 
-Script_ChallengeCanceled: ; unreferenced
-	setval BATTLETOWERACTION_CHALLENGECANCELED
-	special BattleTowerAction
-	setval BATTLETOWERACTION_06
-	special BattleTowerAction
-	opentext
-	writetext Text_ThanksForVisiting
-	writetext Text_WeHopeToServeYouAgain
-	waitbutton
-	closetext
-	end
+;Script_ChallengeCanceled: ; unreferenced
+;	setval BATTLETOWERACTION_CHALLENGECANCELED
+;	special BattleTowerAction
+;	setval BATTLETOWERACTION_06
+;	special BattleTowerAction
+;	opentext
+;	writetext Text_ThanksForVisiting
+;	writetext Text_WeHopeToServeYouAgain
+;	waitbutton
+;	closetext
+;	end
 
-Text_ReturnedAfterSave_Mobile: ; unreferenced
-	text "You'll be returned"
-	line "after you SAVE."
-	done
+;Text_ReturnedAfterSave_Mobile: ; unreferenced
+;	text "You'll be returned"
+;	line "after you SAVE."
+;	done
 
 BattleTowerBattleRoom_MapEvents:
 	db 0, 0 ; filler

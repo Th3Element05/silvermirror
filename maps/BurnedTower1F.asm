@@ -63,6 +63,7 @@ BurnedTowerLostGirlScript:
 	end
 
 BurnedTowerGirl_BeforeText:
+	ntag "GIRL:"
 	text "I came looking for"
 	line "some legendary"
 	cont "#MON that they"
@@ -81,6 +82,7 @@ BurnedTowerGirl_BeforeText:
 	done
 
 BurnedTowerGirl_AfterText:
+	ntag "GIRL:"
 	text "Oh no!"
 	line "Hang on!"
 	

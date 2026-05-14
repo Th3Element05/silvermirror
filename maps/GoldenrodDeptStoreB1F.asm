@@ -27,6 +27,7 @@ GoldenrodDeptStoreB1F_MapScripts:
 GoldenrodDeptStoreB1FBlackBelt1Script:
 	jumptextfaceplayer GoldenrodDeptStoreB1FBlackBelt1Text
 GoldenrodDeptStoreB1FBlackBelt1Text:
+	ntag "EMPLOYEE:"
 	text "Hey, kid! You're"
 	line "holding us up!"
 
@@ -42,6 +43,7 @@ GoldenrodDeptStoreB1FBlackBelt1Text:
 GoldenrodDeptStoreB1FBlackBelt2Script:
 	jumptextfaceplayer GoldenrodDeptStoreB1FBlackBelt2Text
 GoldenrodDeptStoreB1FBlackBelt2Text:
+	ntag "EMPLOYEE:"
 	text "Why aren't I"
 	line "working?"
 
@@ -51,6 +53,7 @@ GoldenrodDeptStoreB1FBlackBelt2Text:
 GoldenrodDeptStoreB1FBlackBelt3Script:
 	jumptextfaceplayer GoldenrodDeptStoreB1FBlackBelt3Text
 GoldenrodDeptStoreB1FBlackBelt3Text:
+	ntag "EMPLOYEE:"
 	text "The stuff on the"
 	line "ground's junk."
 

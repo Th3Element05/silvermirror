@@ -53,11 +53,13 @@ SilphCo3FClerk:
 	jumptextfaceplayer SilphCo3FClerkSavedText
 
 SilphCo3FClerkText:
+	ntag "MAN:"
 	text "I work for SILPH."
 	line "What should I do?"
 	done
 
 SilphCo3FClerkSavedText:
+	ntag "MAN:"
 	text "<PLAYER>! You"
 	line "and your #MON"
 	cont "saved us!"
@@ -74,15 +76,18 @@ TrainerRocketGruntM18:
 	end
 
 GruntM18SeenText:
+	ntag "ROCKET:"
 	text "Quit messing with"
 	line "us, kid!"
 	done
 
 GruntM18BeatenText:
+	ntag "ROCKET:"
 	text "I give up!"
 	done
 
 GruntM18AfterBattleText:
+	ntag "ROCKET:"
 	text "You can only open"
 	line "the doors with a"
 	cont "CARD KEY!"
@@ -99,17 +104,19 @@ TrainerScientistJed:
 	end
 
 ScientistJedSeenText:
+	ntag "SCIENTIST:"
 	text "I support TEAM"
 	line "ROCKET more than"
 	cont "I support SILPH!"
 	done
 
 ScientistJedBeatenText:
-	text "You really"
-	line "got me!"
+	ntag "JED:"
+	text "You got me!"
 	done
 
 ScientistJedAfterBattleText:
+	ntag "SCIENTIST:"
 	text "Humph…"
 
 	para "TEAM ROCKET said"

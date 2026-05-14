@@ -20,15 +20,18 @@ TrainerRocketGruntM7:
 	jumptextfaceplayer RocketGruntM7AfterBattleText
 
 RocketGruntM7SeenText:
+	ntag "ROCKET:"
 	text "You broke into"
 	line "our operation?"
 	done
 
 RocketGruntM7BeatenText:
+	ntag "ROCKET:"
 	text "Burnt!"
 	done
 
 RocketGruntM7AfterBattleText:
+	ntag "ROCKET:"
 	text "You're not going"
 	line "to get away with"
 	cont "this, brat!"
@@ -41,16 +44,19 @@ TrainerRocketGruntF2:
 	jumptextfaceplayer RocketGruntF2AfterBattleText
 
 RocketGruntF2SeenText:
+	ntag "ROCKET:"
 	text "Who are you? How"
 	line "did you get here?"
 	done
 
 RocketGruntF2BeatenText:
+	ntag "ROCKET:"
 	text "Oww!"
 	line "Beaten!"
 	done
 
 RocketGruntF2AfterBattleText:
+	ntag "ROCKET:"
 	text "Are you dissing"
 	line "TEAM ROCKET?"
 	done
@@ -62,14 +68,17 @@ TrainerRocketGruntM8:
 	jumptextfaceplayer RocketGruntM8AfterBattleText
 
 RocketGruntM8SeenText:
+	ntag "ROCKET:"
 	text "Intruder alert!"
 	done
 
 RocketGruntM8BeatenText:
+	ntag "ROCKET:"
 	text "I can't do it!"
 	done
 
 RocketGruntM8AfterBattleText:
+	ntag "ROCKET:"
 	text "SILPH SCOPE?"
 	line "I don't know"
 	cont "where it is!"
@@ -88,15 +97,18 @@ TrainerRocketGruntM9:
 	jumptext RocketGruntM9AfterBattleText
 
 RocketGruntM9SeenText:
+	ntag "ROCKET:"
 	text "Are you lost, you"
 	line "little rat?"
 	done
 
 RocketGruntM9BeatenText:
+	ntag "ROCKET:"
 	text "Why…?"
 	done
 
 RocketGruntM9AfterBattleText:
+	ntag "ROCKET:"
 	text "Uh-oh, that fight"
 	line "opened the door!"
 	done
@@ -108,15 +120,18 @@ TrainerRocketGruntM10:
 	jumptextfaceplayer RocketGruntM10AfterBattleText
 
 RocketGruntM10SeenText:
+	ntag "ROCKET:"
 	text "Why did you come"
 	line "here?"
 	done
 
 RocketGruntM10BeatenText:
+	ntag "ROCKET:"
 	text "This won't do!"
 	done
 
 RocketGruntM10AfterBattleText:
+	ntag "ROCKET:"
 	text "OK, I'll talk!"
 	line "Take the elevator"
 	cont "to see my BOSS!"

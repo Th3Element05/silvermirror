@@ -8,6 +8,7 @@ Route43Gate_MapScripts:
 Route43GateOfficer:
 	jumptext Route43GateOfficerText
 Route43GateOfficerText:
+	ntag "OFFICER:"
 	text "Use this gate to"
 	line "avoid walking in"
 	cont "the grass."

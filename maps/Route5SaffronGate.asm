@@ -57,11 +57,13 @@ Route5GateClosedScript:
 	end
 
 Route5GateStopText:
+	ntag "OFFICER:"
 	text "Wait, stop! The"
 	line "road is closed!"
 	done
 
 Route5GateThanksText:
+	ntag "OFFICER:"
 	text "Hi, thanks for"
 	line "the cool drinks!"
 	done

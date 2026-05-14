@@ -63,16 +63,19 @@ TrainerBugCatcherBenny:
 	end
 
 BugCatcherBennySeenText:
+	ntag "BUGCATCHER:"
 	text "Hey, wait up!"
 	line "What's the hurry?"
 	done
 
 BugCatcherBennyBeatenText:
+	ntag "BENNY:"
 	text "I give! You're"
 	line "good at this!"
 	done
 
 BugCatcherBennyAfterBattleText:
+	ntag "BUGCATCHER:"
 	text "Sometimes, you"
 	line "can find stuff on"
 	cont "the ground!"
@@ -93,17 +96,20 @@ TrainerBugCatcherEd:
 	end
 
 BugCatcherEdSeenText:
+	ntag "BUGCATCHER:"
 	text "Yo! You can't jam"
 	line "out if you're a"
 	cont "#MON trainer!"
 	done
 
 BugCatcherEdBeatenText:
+	ntag "ED:"
 	text "Huh? I ran out of"
 	line "#MON!"
 	done
 
 BugCatcherEdAfterBattleText:
+	ntag "BUGCATCHER:"
 	text "Darn! I'm going"
 	line "to catch some"
 	cont "stronger ones!"
@@ -231,30 +237,31 @@ TrainerBugCatcherRob:
 	end
 
 BugCatcherRobSeenText:
+	ntag "BUGCATCHER:"
 	text "Hey! You have"
 	line "#MON! Come on!"
 	cont "Let's battle'em!"
 	done
 
 BugCatcherRobBeatenText:
+	ntag "ROB:"
 	text "No! CATERPIE"
 	line "can't cut it!"
 	done
 
 BugCatcherRobAfterBattleText:
+	ntag "ROB:"
 	text "I'm going to look"
 	line "for stronger bug"
 	cont "#MON."
 	done
 
-;	text "Ssh! You'll scare"
-;	line "the bugs away!"
-;	done
 
 ; npc
 ViridianForestYoungster1:
 	jumptextfaceplayer ViridianForestYoungster1Text
 ViridianForestYoungster1Text:
+	ntag "YOUNGSTER:"
 	text "I came here with"
 	line "some friends!"
 	para "They're out for"
@@ -264,6 +271,7 @@ ViridianForestYoungster1Text:
 ViridianForestYoungster2:
 	jumptextfaceplayer ViridianForestYoungster2Text
 ViridianForestYoungster2Text:
+	ntag "YOUNGSTER:"
 	text "I ran out of #"
 	line "BALLs to catch"
 	cont "#MON with!"
@@ -288,7 +296,7 @@ ViridianForestUseAntidoteSign:
 ViridianForestUseAntidoteSignText:
 	text "For poison, use"
 	line "ANTIDOTE! Get it"
-	cont "at #MON MARTs!"
+	cont "at #MARTs!"
 	done
 
 ViridianForestTrainerTips2:

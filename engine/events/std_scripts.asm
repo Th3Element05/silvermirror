@@ -1885,9 +1885,9 @@ AskNumber1FScript:
 	ifequal PHONE_LASS_DANA, .Dana
 	ifequal PHONE_PICNICKER_TIFFANY, .Tiffany
 	ifequal PHONE_PICNICKER_ERIN, .Erin
-	ifequal PHONE_COUPLE_TIM_AND_SUE, .TimandSue
+	ifequal PHONE_COUPLE_TIM_AND_SUE, .TimAndSue
 	ifequal PHONE_LASS_HILLARY, .Hillary
-	ifequal PHONE_TWINS_KAY_AND_TIA, .KayandTia
+	ifequal PHONE_TWINS_KAY_AND_TIA, .KayAndTia
 
 ; failsafe
 	farwritetext NoNameAskNumber1Text
@@ -1940,9 +1940,9 @@ AskNumber2FScript:
 	ifequal PHONE_LASS_DANA, .Dana
 	ifequal PHONE_PICNICKER_TIFFANY, .Tiffany
 	ifequal PHONE_PICNICKER_ERIN, .Erin
-	ifequal PHONE_COUPLE_TIM_AND_SUE, .TimandSue
+	ifequal PHONE_COUPLE_TIM_AND_SUE, .TimAndSue
 	ifequal PHONE_LASS_HILLARY, .Hillary
-	ifequal PHONE_TWINS_KAY_AND_TIA, .KayandTia
+	ifequal PHONE_TWINS_KAY_AND_TIA, .KayAndTia
 
 ; failsafe
 	farwritetext NoNameAskNumber1Text
@@ -2002,9 +2002,9 @@ NumberAcceptedFScript:
 	ifequal PHONE_LASS_DANA, .Dana
 	ifequal PHONE_PICNICKER_TIFFANY, .Tiffany
 	ifequal PHONE_PICNICKER_ERIN, .Erin
-	ifequal PHONE_COUPLE_TIM_AND_SUE, .TimandSue
+	ifequal PHONE_COUPLE_TIM_AND_SUE, .TimAndSue
 	ifequal PHONE_LASS_HILLARY, .Hillary
-	ifequal PHONE_TWINS_KAY_AND_TIA, .KayandTia
+	ifequal PHONE_TWINS_KAY_AND_TIA, .KayAndTia
 
 ; failsafe
 	farwritetext NoNameNumberAcceptedText
@@ -2083,9 +2083,9 @@ NumberDeclinedFScript:
 	ifequal PHONE_LASS_DANA, .Dana
 	ifequal PHONE_PICNICKER_TIFFANY, .Tiffany
 	ifequal PHONE_PICNICKER_ERIN, .Erin
-	ifequal PHONE_COUPLE_TIM_AND_SUE, .TimandSue
+	ifequal PHONE_COUPLE_TIM_AND_SUE, .TimAndSue
 	ifequal PHONE_LASS_HILLARY, .Hillary
-	ifequal PHONE_TWINS_KAY_AND_TIA, .KayandTia
+	ifequal PHONE_TWINS_KAY_AND_TIA, .KayAndTia
 
 ; failsafe
 	farwritetext NoNameNumberDeclinedText
@@ -2235,9 +2235,9 @@ RematchFScript:
 	ifequal PHONE_LASS_DANA, .Dana
 	ifequal PHONE_PICNICKER_TIFFANY, .Tiffany
 	ifequal PHONE_PICNICKER_ERIN, .Erin
-	ifequal PHONE_COUPLE_TIM_AND_SUE, .TimandSue
+	ifequal PHONE_COUPLE_TIM_AND_SUE, .TimAndSue
 	ifequal PHONE_LASS_HILLARY, .Hillary
-	ifequal PHONE_TWINS_KAY_AND_TIA, .KayandTia
+	ifequal PHONE_TWINS_KAY_AND_TIA, .KayAndTia
 
 ; failsafe
 	farwritetext NoNameRematchText

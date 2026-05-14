@@ -113,7 +113,7 @@ Route20RockSmashGuyScript:
 	db "ROCKSMASH PAGER@"
 
 Route20RockSmashGuyIntro_Seafoam:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "Whoa! Did you go"
 	line "through SEAFOAM"
 	cont "ISLANDS?"
@@ -126,7 +126,7 @@ Route20RockSmashGuyIntro_Seafoam:
 	done
 
 Route20RockSmashGuyIntro_Cinnabar:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "Wait! Are you"
 	line "gonna go through"
 	cont "SEAFOAM ISLANDS?"
@@ -136,7 +136,7 @@ Route20RockSmashGuyIntro_Cinnabar:
 	done
 
 Route20RockSmashGuyIntroText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "My GEODUDE loves"
 	line "smashing rocks!"
 
@@ -144,7 +144,7 @@ Route20RockSmashGuyIntroText:
 	done
 
 Route20RockSmashGuyGivePagerText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "You can make some"
 	line "shortcuts with"
 	cont "ROCK SMASH!"
@@ -158,7 +158,7 @@ GotRockSmashPagerText:
 	done
 
 Route20RockSmashGuyGiveTMText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "You can call my"
 	line "GEODUDE any time"
 	cont "you need to use"
@@ -172,12 +172,12 @@ Route20RockSmashGuyGiveTMText:
 ;	done
 
 Route20RockSmashGuyLetsGoText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "Let's go, GEODUDE!"
 	done
 
 Route20RockSmashGuyFarewellText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "Have fun smashing!"
 	line "See ya!"
 	done
@@ -229,16 +229,19 @@ TrainerSwimmerFDenise:
 	jumptextfaceplayer SwimmerFDeniseAfterBattleText
 
 SwimmerFDeniseSeenText:
+	ntag "SWIMMER:"
 	text "CINNABAR, in the"
 	line "west, has a LAB"
 	cont "for #MON."
 	done
 
 SwimmerFDeniseBeatenText:
+	ntag "DENISE:"
 	text "Wait!"
 	done
 
 SwimmerFDeniseAfterBattleText:
+	ntag "SWIMMER:"
 	text "CINNABAR is a "
 	line "volcanic island!"
 	done
@@ -251,16 +254,19 @@ TrainerSwimmerFHeidi:
 	jumptextfaceplayer SwimmerFHeidiAfterBattleText
 
 SwimmerFHeidiSeenText:
+	ntag "SWIMMER:"
 	text "I swam here from"
 	line "CINNABAR ISLAND!"
 	done
 
 SwimmerFHeidiBeatenText:
+	ntag "HEIDI:"
 	text "I'm so"
 	line "disappointed!"
 	done
 
 SwimmerFHeidiAfterBattleText:
+	ntag "SWIMMER:"
 	text "#MON have"
 	line "taken over an"
 	cont "abandoned mansion"
@@ -275,16 +281,19 @@ TrainerSwimmerFSusie:
 	jumptextfaceplayer SwimmerFSusieAfterBattleText
 
 SwimmerFSusieSeenText:
+	ntag "SWIMMER:"
 	text "My boy friend gave"
 	line "me big pearls!"
 	done
 
 SwimmerFSusieBeatenText:
+	ntag "SUSIE:"
 	text "Don't touch my"
 	line "pearls!"
 	done
 
 SwimmerFSusieAfterBattleText:
+	ntag "SWIMMER:"
 	text "Will my pearls"
 	line "grow bigger"
 	cont "inside CLOYSTER?"
@@ -404,20 +413,19 @@ Route20Rematch:
 	end
 
 BirdKepperVanceSeenText:
+	ntag "BIRDKEEPER:"
 	text "I rode my bird"
 	line "#MON here!"
 	done
 
 BirdKepperVanceBeatenText:
-;	text "Oh no!"
-;	done
-;
-;BirdKepperVanceAfterBattleText:
+	ntag "VANCE:"
 	text "My birds can't"
 	line "FLY me back!"
 	done
 
 BirdKeeperVanceLegendaryBirdsText:
+	ntag "VANCE:"
 	text "ARTICUNO, ZAPDOS"
 	line "and MOLTRES are"
 	cont "the three legend-"
@@ -429,6 +437,7 @@ BirdKeeperVanceLegendaryBirdsText:
 	done
 
 BirdKepperVanceBeatenGiftText:
+	ntag "VANCE:"
 	text "Thanks a lot for"
 	line "battling with me!"
 
@@ -443,15 +452,18 @@ TrainerSwimmerMTucker:
 	jumptextfaceplayer SwimmerMTuckerAfterBattleText
 
 SwimmerMTuckerSeenText:
+	ntag "SWIMMER:"
 	text "Check out my buff"
 	line "physique!"
 	done
 
 SwimmerMTuckerBeatenText:
+	ntag "TUCKER:"
 	text "Wimpy!"
 	done
 
 SwimmerMTuckerAfterBattleText:
+	ntag "SWIMMER:"
 	text "I should've been"
 	line "buffing up my"
 	cont "#MON, not me!"
@@ -465,15 +477,18 @@ TrainerSwimmerFKara:
 	jumptextfaceplayer SwimmerFKaraAfterBattleText
 
 SwimmerFKaraSeenText:
+	ntag "SWIMMER:"
 	text "I love floating"
 	line "with the fishes!"
 	done
 
 SwimmerFKaraBeatenText:
+	ntag "KARA:"
 	text "Yowch!"
 	done
 
 SwimmerFKaraAfterBattleText:
+	ntag "SWIMMER:"
 	text "Want to float"
 	line "with me?"
 	done
@@ -486,18 +501,26 @@ TrainerSwimmerFGinger:
 	jumptextfaceplayer SwimmerFGingerAfterBattleText
 
 SwimmerFGingerSeenText:
+	ntag "SWIMMER:"
 	text "Are you on"
 	line "vacation too?"
 	done
 
 SwimmerFGingerBeatenText:
+	ntag "GINGER:"
 	text "No mercy at all!"
 	done
 
 SwimmerFGingerAfterBattleText:
-	text "SEAFOAM ISLANDS"
-	line "have gotten much"
-	cont "colder recently!"
+	ntag "SWIMMER:"
+;	text "SEAFOAM ISLANDS"
+;	line "have gotten much"
+;	cont "colder recently!"
+;	done
+	text "The waters around"
+	line "SEAFOAM ISLANDS"
+	cont "have gotten much"
+	roll "colder recently!"
 	done
 
 
@@ -508,15 +531,18 @@ TrainerSwimmerFWendy:
 	jumptextfaceplayer SwimmerFWendyAfterBattleText
 
 SwimmerFWendySeenText:
+	ntag "SWIMMER:"
 	text "SEAFOAM is a"
 	line "quiet getaway!"
 	done
 
 SwimmerFWendyBeatenText:
+	ntag "WENDY:"
 	text "Quit it!"
 	done
 
 SwimmerFWendyAfterBattleText:
+	ntag "SWIMMER:"
 	text "There's a huge"
 	line "cavern underneath"
 	cont "this island."
@@ -530,15 +556,18 @@ TrainerSwimmerMJerome:
 	jumptextfaceplayer SwimmerMJeromeAfterBattleText
 
 SwimmerMJeromeSeenText:
+	ntag "SWIMMER:"
 	text "The water is"
 	line "shallow here."
 	done
 
 SwimmerMJeromeBeatenText:
+	ntag "JEROME:"
 	text "Splash!"
 	done
 
 SwimmerMJeromeAfterBattleText:
+	ntag "SWIMMER:"
 	text "I wish I could"
 	line "ride my #MON."
 	done
@@ -551,17 +580,20 @@ TrainerSwimmerMCameron:
 	jumptextfaceplayer SwimmerMCameronAfterBattleText
 
 SwimmerMCameronSeenText:
+	ntag "SWIMMER:"
 	text "Why are you"
 	line "riding a #MON?"
 	cont "Can't you swim?"
 	done
 
 SwimmerMCameronBeatenText:
+	ntag "CAMERON:"
 	text "Ouch!"
 	line "Torpedoed!"
 	done
 
 SwimmerMCameronAfterBattleText:
+	ntag "SWIMMER:"
 	text "Riding a #MON"
 	line "sure looks fun!"
 	done

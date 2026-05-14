@@ -315,6 +315,7 @@ ImBehindYouText:
 	done
 
 NeighborMornIntroText:
+	ntag "NEIGHBOR:"
 	text "Good morning,"
 	line "<PLAYER>!"
 
@@ -322,11 +323,13 @@ NeighborMornIntroText:
 	done
 
 NeighborDayIntroText:
+	ntag "NEIGHBOR:"
 	text "Hello, <PLAYER>!"
 	line "I'm visiting!"
 	done
 
 NeighborNiteIntroText:
+	ntag "NEIGHBOR:"
 	text "Good evening,"
 	line "<PLAYER>!"
 
@@ -334,6 +337,7 @@ NeighborNiteIntroText:
 	done
 
 NeighborText:
+	ntag "NEIGHBOR:"
 	text "<PLAYER>, have you"
 	line "heard?"
 

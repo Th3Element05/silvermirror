@@ -41,6 +41,7 @@ FishingGuruGood:
 	end
 
 FishingGuruGoodQuestionText:
+	ntag "FISHERMAN:"
 	text "I'm the FISHING"
 	line "GURU's older"
 	cont "brother!"
@@ -53,6 +54,7 @@ FishingGuruGoodQuestionText:
 	done
 
 FishingGuruGoodYesText:
+	ntag "FISHERMAN:"
 	text "Grand! I like"
 	line "your style!"
 
@@ -61,6 +63,7 @@ FishingGuruGoodYesText:
 	done
 
 FishingGuruGoodGiveRodText:
+	ntag "FISHERMAN:"
 	text "Fishing is a way"
 	line "of life!"
 
@@ -71,11 +74,13 @@ FishingGuruGoodGiveRodText:
 	done
 
 FishingGuruGoodRefusedText:
+	ntag "FISHERMAN:"
 	text "Oh… That's so"
 	line "disappointing…"
 	done
 
 FishingGuruGoodAfterText:
+	ntag "FISHERMAN:"
 	text "Hello there,"
 	line "<PLAYER>!"
 

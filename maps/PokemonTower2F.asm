@@ -123,6 +123,7 @@ PokemonTower2FRivalAfterBattleText:
 PokemonTower2FMediumScript:
 	jumptextfaceplayer PokemonTower2FMediumText
 PokemonTower2FMediumText:
+	ntag "MEDIUM:"
 	text "Even we could not"
 	line "identify the"
 	cont "wayward ghost!"

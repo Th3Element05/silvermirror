@@ -114,6 +114,7 @@ Route42ChuckScript:
 	end
 
 Route42ChuckTellRocksmashText:
+	ntag "CHUCK:"
 	text "Great work so far,"
 	line "PRIMEAPE!"
 
@@ -124,6 +125,7 @@ Route42ChuckTellRocksmashText:
 	done
 
 Route42ChuckWellDoneText:
+	ntag "CHUCK:"
 	text "WAHAHAH!"
 	line "Well done!"
 
@@ -132,11 +134,10 @@ Route42ChuckWellDoneText:
 	done
 
 Route42ChuckFarewellText:
-	text "That's it! The"
-	line "path is clear!@"
-
-	text_promptbutton
 	ntag "CHUCK:"
+	text "That's it! The"
+	line "path is clear!"
+
 	text "My name is CHUCK,"
 	line "I'm the GYM LEADER"
 	cont "in CIANWOOD CITY!"
@@ -274,16 +275,19 @@ TrainerHikerAnthony:
 	end
 	
 HikerAnthonySeenText:
+	ntag "HIKER:"
 	text "Ah, it's good to"
 	line "be outside!"
 	cont "I feel so free!"
 	done
 
 HikerAnthonyBeatenText:
+	ntag "ANTHONY:"
 	text "Gahahah!"
 	done
 
 HikerAnthonyAfterBattleText:
+	ntag "ANTHONY:"
 	text "Losing feels"
 	line "insignificant when"
 	cont "you look up at the"
@@ -336,17 +340,20 @@ TrainerFisherBarney:
 	end
 
 FisherBarneySeenText:
+	ntag "FISHER:"
 	text "Let me demonstrate"
 	line "the power of the"
 	cont "#MON I caught!"
 	done
 
 FisherBarneyBeatenText:
+	ntag "BARNEY:"
 	text "What? That's not"
 	line "right."
 	done
 
 FisherBarneyAfterBattleText:
+	ntag "FISHER:"
 	text "I want to become"
 	line "the #MON CHAMP"
 	cont "using the #MON"
@@ -366,6 +373,7 @@ Route42HikerScript:
 	jumptextfaceplayer Route42HikerClearedText
 
 Route42HikerBlockedText:
+	ntag "MAN:"
 	text "Oh no! How am I"
 	line "going to get to"
 	cont "MAHOGANY TOWN?"
@@ -379,6 +387,7 @@ Route42HikerBlockedText:
 	done
 
 Route42HikerClearedText:
+	ntag "MAN:"
 	text "Aha! The boulders"
 	line "are all smashed!"
 

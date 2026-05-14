@@ -33,6 +33,7 @@ CinnabarMartMedScript:
 CinnabarMartSuperNerdScript:
 	jumptextfaceplayer CinnabarMartSuperNerdText
 CinnabarMartSuperNerdText:
+	ntag "SUPERNERD:"
 	text "Don't they have"
 	line "X ATTACK? It's"
 	cont "good for battles!"
@@ -41,6 +42,7 @@ CinnabarMartSuperNerdText:
 CinnabarMartScientistScript:
 	jumptextfaceplayer CinnabarMartScientistText
 CinnabarMartScientistText:
+	ntag "SCIENTIST:"
 	text "It never hurts to"
 	line "have extra items!"
 	done

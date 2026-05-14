@@ -8,6 +8,7 @@ EcruteakLugiaSpeechHouse_MapScripts:
 EcruteakLugiaSpeechHouseGrampsScript:
 	jumptextfaceplayer EcruteakLugiaSpeechHouseGrampsText
 EcruteakLugiaSpeechHouseGrampsText:
+	ntag "GRAMPS:"
 	text "This happened when"
 	line "I was young."
 
@@ -28,6 +29,7 @@ EcruteakLugiaSpeechHouseGrampsText:
 EcruteakLugiaSpeechHouseYoungsterScript:
 	jumptextfaceplayer EcruteakLugiaSpeechHouseYoungsterText
 EcruteakLugiaSpeechHouseYoungsterText:
+	ntag "YOUNGSTER:"
 	text "Is there really a"
 	line "#MON that big?"
 

@@ -120,6 +120,7 @@ GoldenrodVendingNoSpaceText:
 	done
 
 GoldenrodDeptStore6FLassText:
+	ntag "LASS:"
 	text "Do you listen to"
 	line "LUCKY CHANNEL?"
 
@@ -132,6 +133,7 @@ GoldenrodDeptStore6FLassText:
 	done
 
 GoldenrodDeptStore6FSuperNerdText:
+	ntag "SUPERNERD:"
 	text "If you're tired,"
 	line "try the vending"
 	cont "machine's drinks."

@@ -125,15 +125,18 @@ TrainerSwimmerMSimon:
 	end
 
 SwimmerMSimonSeenText:
+	ntag "SWIMMER:"
 	text "Have to warm up"
 	line "before my swim!"
 	done
 
 SwimmerMSimonBeatenText:
+	ntag "SIMON:"
 	text "All warmed up!"
 	done
 
 SwimmerMSimonAfterBattleText:
+	ntag "SWIMMER:"
 	text "Thanks, kid! I'm"
 	line "ready for a swim!"
 	done
@@ -150,16 +153,19 @@ TrainerSwimmerMRandall:
 	end
 
 SwimmerMRandallSeenText:
+	ntag "SWIMMER:"
 	text "Wait! You'll have"
 	line "a heart attack!"
 	done
 
 SwimmerMRandallBeatenText:
+	ntag "RANDALL:"
 	text "Ooh!"
 	line "That's chilly!"
 	done
 
 SwimmerMRandallAfterBattleText:
+	ntag "SWIMMER:"
 	text "Watch out for"
 	line "TENTACOOL!"
 	done
@@ -176,16 +182,19 @@ TrainerSwimmerMCharlie:
 	end
 
 SwimmerMCharlieSeenText:
+	ntag "SWIMMER:"
 	text "I look at the"
 	line "sea to forget!"
 	done
 
 SwimmerMCharlieBeatenText:
+	ntag "CHARLIE:"
 	text "Ooh!"
 	line "Traumatic!"
 	done
 
 SwimmerMCharlieAfterBattleText:
+	ntag "SWIMMER:"
 	text "I'm looking at the"
 	line "sea to forget!"
 	done
@@ -202,15 +211,18 @@ TrainerSwimmerMGeorge:
 	end
 
 SwimmerMGeorgeSeenText:
+	ntag "SWIMMER:"
 	text "I love swimming!"
 	line "What about you?"
 	done
 
 SwimmerMGeorgeBeatenText:
+	ntag "GEORGE:"
 	text "Belly flop!"
 	done
 
 SwimmerMGeorgeAfterBattleText:
+	ntag "SWIMMER:"
 	text "I can beat #MON"
 	line "at swimming!"
 	done
@@ -227,15 +239,18 @@ TrainerSwimmerMBerke:
 	end
 
 SwimmerMBerkeSeenText:
+	ntag "SWIMMER:"
 	text "What's beyond the"
 	line "horizon?"
 	done
 
 SwimmerMBerkeBeatenText:
+	ntag "BERKE:"
 	text "Glub!"
 	done
 
 SwimmerMBerkeAfterBattleText:
+	ntag "SWIMMER:"
 	text "I see a couple of"
 	line "islands!"
 	done
@@ -252,16 +267,19 @@ TrainerSwimmerMKirk:
 	end
 
 SwimmerMKirkSeenText:
+	ntag "SWIMMER:"
 	text "I tried diving"
 	line "for #MON, but"
 	cont "it was a no go!"
 	done
 
 SwimmerMKirkBeatenText:
+	ntag "KIRK:"
 	text "Help!"
 	done
 
 SwimmerMKirkAfterBattleText:
+	ntag "SWIMMER:"
 	text "You have to fish"
 	line "for sea #MON!"
 	done
@@ -278,16 +296,19 @@ TrainerSwimmerMMatthew:
 	end
 
 SwimmerMMatthewSeenText:
+	ntag "SWIMMER:"
 	text "These waters are"
 	line "treacherous!"
 	done
 
 SwimmerMMatthewBeatenText:
+	ntag "MATTHEW:"
 	text "Ooh!"
 	line "Dangerous!"
 	done
 
 SwimmerMMatthewAfterBattleText:
+	ntag "SWIMMER:"
 	text "I got a cramp!"
 	line "Glub, glub…"
 	done
@@ -304,17 +325,20 @@ TrainerSwimmerFElaine:
 	end
 
 SwimmerFElaineSeenText:
+	ntag "SWIMMER:"
 	text "Oh, I just love"
 	line "your ride! Can I"
 	cont "have it if I win?"
 	done
 
 SwimmerFElaineBeatenText:
+	ntag "ELAINE:"
 	text "Oh!"
 	line "I lost!"
 	done
 
 SwimmerFElaineAfterBattleText:
+	ntag "SWIMMER:"
 	text "It's still a long"
 	line "way to go to"
 	cont "SEAFOAM ISLANDS."
@@ -332,15 +356,18 @@ TrainerSwimmerFPaula:
 	end
 
 SwimmerFPaulaSeenText:
+	ntag "SWIMMER:"
 	text "Swimming's great!"
 	line "Sunburns aren't!"
 	done
 
 SwimmerFPaulaBeatenText:
+	ntag "ELAINE:"
 	text "Shocker!"
 	done
 
 SwimmerFPaulaAfterBattleText:
+	ntag "SWIMMER:"
 	text "My boy friend"
 	line "wanted to swim to"
 	cont "SEAFOAM ISLANDS."
@@ -358,15 +385,18 @@ TrainerSwimmerFKaylee:
 	end
 
 SwimmerFKayleeSeenText:
+	ntag "SWIMMER:"
 	text "I swam here, but"
 	line "I'm tired."
 	done
 
 SwimmerFKayleeBeatenText:
+	ntag "KAYLEE:"
 	text "I'm exhausted…"
 	done
 
 SwimmerFKayleeAfterBattleText:
+	ntag "SWIMMER:"
 	text "LAPRAS is so big,"
 	line "it must keep you"
 	cont "dry on water."

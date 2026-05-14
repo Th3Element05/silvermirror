@@ -21,6 +21,7 @@ CinnabarLabMetronomeScientist:
 	end
 
 CinnabarLabMetronomeScientistText:
+	ntag "SCIENTIST:"
 	text "Tch-tch-tch!"
 	line "I made a cool TM!"
 
@@ -29,6 +30,7 @@ CinnabarLabMetronomeScientistText:
 	done
 
 CinnabarLabMetronomeScientistMetronomeText:
+	ntag "SCIENTIST:"
 	text "Tch-tch-tch!"
 	line "That's the sound"
 	cont "of a METRONOME!"
@@ -42,6 +44,7 @@ CinnabarLabMetronomeScientistMetronomeText:
 CinnabarLabEeveeScientist:
 	jumptextfaceplayer CinnabarLabEeveeScientistText
 CinnabarLabEeveeScientistText:
+	ntag "SCIENTIST:"
 	text "EEVEE has 3 known"
 	line "evolutions!"
 

@@ -8,6 +8,7 @@ Route31VioletGate_MapScripts:
 Route31VioletGateOfficerScript:
 	jumptextfaceplayer Route31VioletGateOfficerText
 Route31VioletGateOfficerText:
+	ntag "OFFICER:"
 	text "Hi there!"
 	line "Did you visit"
 	cont "SPROUT TOWER?"
@@ -16,6 +17,7 @@ Route31VioletGateOfficerText:
 Route31VioletGateCooltrainerFScript:
 	jumptextfaceplayer Route31VioletGateCooltrainerFText
 Route31VioletGateCooltrainerFText:
+	ntag "TRAINER:"
 	text "I came too far"
 	line "out. I'd better"
 	cont "phone home!"

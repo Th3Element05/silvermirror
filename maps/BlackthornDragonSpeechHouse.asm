@@ -8,6 +8,7 @@ BlackthornDragonSpeechHouse_MapScripts:
 BlackthornDragonSpeechHouseGrannyScript:
 	jumptextfaceplayer BlackthornDragonSpeechHouseGrannyText
 BlackthornDragonSpeechHouseGrannyText:
+	ntag "GRANNY:"
 	text "A clan of trainers"
 	line "who can freely"
 	cont "command dragons"

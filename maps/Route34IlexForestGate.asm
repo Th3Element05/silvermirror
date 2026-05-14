@@ -99,6 +99,7 @@ Route34IlexForestGateTeacherReturnsMovement:
 ;	done
 
 Route34IlexForestGateTeacher_GotSweetScent:
+	ntag "LADY:"
 	text "Some #MON can"
 	line "use SWEET SCENT to"
 	cont "attract wild #-"
@@ -115,6 +116,7 @@ Route34IlexForestGateTeacher_GotSweetScent:
 ;	done
 
 Route34IlexForestGateTeacher_ForestIsRestless:
+	ntag "LADY:"
 	text "Something's wrong"
 	line "in ILEX FOREST…"
 
@@ -127,6 +129,7 @@ Route34IlexForestGateTeacher_ForestIsRestless:
 ;	done
 
 Route34IlexForestGateLassText:
+	ntag "LASS:"
 	text "Did you see the"
 	line "shrine honoring"
 	cont "the protector?"

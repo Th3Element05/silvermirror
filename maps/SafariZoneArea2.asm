@@ -17,15 +17,15 @@ SafariZoneArea2OfficerText:
 	cont "while you walk!"
 	done
 
-SafariZoneArea2Resting:
-	jumptextfaceplayer SafariZoneArea2RestingText
-SafariZoneArea2RestingText:
-	text "Catching #MON"
-	line "is hard work!"
-
-	para "I'm resting here"
-	line "for a moment."
-	done
+;SafariZoneArea2Resting:
+;	jumptextfaceplayer SafariZoneArea2RestingText
+;SafariZoneArea2RestingText:
+;	text "Catching #MON"
+;	line "is hard work!"
+;
+;	para "I'm resting here"
+;	line "for a moment."
+;	done
 
 SafariZoneArea2Fisher:
 	faceplayer
@@ -37,6 +37,7 @@ SafariZoneArea2Fisher:
 	end
 
 SafariZoneArea2FisherText:
+	ntag "FISHER:"
 	text "There are even"
 	line "rare #MON in"
 	cont "the water at the"
@@ -49,14 +50,27 @@ SafariZoneArea2FisherText:
 SafariZoneArea2Youngster:
 	jumptextfaceplayer SafariZoneArea2YoungsterText
 SafariZoneArea2YoungsterText:
+	ntag "YOUNGSTER:"
 	text "Certain BUG-type"
 	line "#MON are more"
 	cont "active at night!"
 	done
 
-SafariZoneArea2SuperLass:
-	jumptextfaceplayer SafariZoneArea2SuperLassText
-SafariZoneArea2SuperLassText:
+SafariZoneArea2Lass:
+	jumptextfaceplayer SafariZoneArea2LassText
+SafariZoneArea2LassText:
+	ntag "LASS:"
+	text "If I spend all"
+	line "my time looking"
+	cont "for #MON, I'll"
+	roll "never find the"
+	cont "SECRET HOUSE!"
+	done
+
+SafariZoneArea2SuperNerd:
+	jumptextfaceplayer SafariZoneArea2SuperNerdText
+SafariZoneArea2SuperNerdText:
+	ntag "SUPERNERD::"
 	text "If I spend all"
 	line "my time looking"
 	cont "for #MON, I'll"
@@ -67,6 +81,7 @@ SafariZoneArea2SuperLassText:
 SafariZoneArea2Cooltrainers:
 	jumptextfaceplayer SafariZoneArea2CooltrainersText
 SafariZoneArea2CooltrainersText:
+	ntag "TRAINER:"
 	text "I'm saving my"
 	line "SAFARI BALLs for"
 	cont "strong looking"
@@ -135,11 +150,11 @@ SafariZoneArea2_MapEvents:
 	object_event  9, 12, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 2, 2, -1, NITE, 0, OBJECTTYPE_SCRIPT, 0, SafariZoneArea2Youngster, EVENT_SAFARI_ZONE_AREA_2_NPC1
 ;
 	object_event 14, 15, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, MORN, 0, OBJECTTYPE_SCRIPT, 0, SafariZoneArea2Fisher, EVENT_SAFARI_ZONE_AREA_2_NPC2
-	object_event 27, 23, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, DAY, 0, OBJECTTYPE_SCRIPT, 0, SafariZoneArea2SuperLass, EVENT_SAFARI_ZONE_AREA_2_NPC2
-	object_event 29, 22, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WALK_UP_DOWN, 2, 2, -1, NITE, 0, OBJECTTYPE_SCRIPT, 0, SafariZoneArea2SuperLass, EVENT_SAFARI_ZONE_AREA_2_NPC2
+	object_event 27, 23, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, DAY, 0, OBJECTTYPE_SCRIPT, 0, SafariZoneArea2Lass, EVENT_SAFARI_ZONE_AREA_2_NPC2
+	object_event 29, 22, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WALK_UP_DOWN, 2, 2, -1, NITE, 0, OBJECTTYPE_SCRIPT, 0, SafariZoneArea2SuperNerd, EVENT_SAFARI_ZONE_AREA_2_NPC2
 ;
-	object_event 19,  2, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, MORN, 0, OBJECTTYPE_SCRIPT, 0, SafariZoneArea2SuperLass, EVENT_SAFARI_ZONE_AREA_2_NPC3
-	object_event 27,  9, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, DAY, 0, OBJECTTYPE_SCRIPT, 0, SafariZoneArea2Resting, EVENT_SAFARI_ZONE_AREA_2_NPC3
+	object_event 19,  2, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, MORN, 0, OBJECTTYPE_SCRIPT, 0, SafariZoneArea2SuperNerd, EVENT_SAFARI_ZONE_AREA_2_NPC3
+	object_event 27,  9, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, DAY, 0, OBJECTTYPE_SCRIPT, 0, SafariZoneArea2Lass, EVENT_SAFARI_ZONE_AREA_2_NPC3
 	object_event 28,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 2, 2, -1, NITE, 0, OBJECTTYPE_SCRIPT, 0, SafariZoneArea2Youngster, EVENT_SAFARI_ZONE_AREA_2_NPC3
 ;
 	object_event  7,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, SafariZoneArea2MaxPotion, EVENT_SAFARI_ZONE_AREA_2_MAX_POTION

@@ -17,6 +17,7 @@ CeruleanGymBadgeHouseTilesCallback:
 CeruleanGymBadgeSpeechHousePokefanMScript:
 	jumptextfaceplayer CeruleanGymBadgeSpeechHousePokefanMText
 CeruleanGymBadgeSpeechHousePokefanMText:
+	ntag "#FAN:"
 	text "Are you collecting"
 	line "GYM BADGEs?"
 	done

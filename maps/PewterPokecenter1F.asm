@@ -15,6 +15,7 @@ PewterPokecenter1FReceptionistScript:
 PewterPokecenter1FBenchGuyScript:
 	jumptext PewterPokecenter1FBenchGuyText
 PewterPokecenter1FBenchGuyText:
+	ntag "GUY:"
 	text "Yawn!"
 
 	para "When JIGGLYPUFF"
@@ -60,6 +61,7 @@ PewterPokecenter1FGentlemanScript:
 	end
 	
 PewterPokecenter1FGentlemanText1:
+	ntag "GENTLEMAN:"
 	text "What!?"
 
 	para "TEAM ROCKET is"
@@ -67,6 +69,7 @@ PewterPokecenter1FGentlemanText1:
 	done
 
 PewterPokecenter1FGentlemanText2:
+	ntag "GENTLEMAN:"
 	text "I'm on the phone!"
 
 	para "Scram!"

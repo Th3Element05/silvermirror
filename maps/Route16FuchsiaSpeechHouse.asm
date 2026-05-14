@@ -42,6 +42,7 @@ GotFlyPagerText:
 	done
 
 Route16FlyHouseLassText:
+	ntag "LASS:"
 	text "Oh, you found my"
 	line "secret retreat!"
 
@@ -52,6 +53,7 @@ Route16FlyHouseLassText:
 	done
 
 Route16FlyHouseExplainPagerGiveFlyText:
+	ntag "LASS:"
 	text "That FLY PAGER"
 	line "will let you call"
 	cont "PIDGEOT to fly you"
@@ -73,6 +75,7 @@ Route16FlyHouseExplainPagerGiveFlyText:
 ;	done
 
 Route16FlyHouseGoodUseText:
+	ntag "LASS:"
 	text "Please, don't tell"
 	line "anyone I'm here!"
 	done

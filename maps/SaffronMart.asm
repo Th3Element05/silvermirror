@@ -33,6 +33,7 @@ SaffronMartMedScript:
 SaffronMartCooltrainerMScript:
 	jumptextfaceplayer SaffronMartCooltrainerMText
 SaffronMartCooltrainerMText:
+	ntag "TRAINER:"
 	text "MAX REPEL lasts"
 	line "longer than SUPER"
 	cont "REPEL for keeping"
@@ -43,6 +44,7 @@ SaffronMartCooltrainerMText:
 SaffronMartCooltrainerFScript:
 	jumptextfaceplayer SaffronMartCooltrainerFText
 SaffronMartCooltrainerFText:
+	ntag "TRAINER:"
 	text "REVIVE is costly,"
 	line "but it revives"
 	cont "fainted #MON!"

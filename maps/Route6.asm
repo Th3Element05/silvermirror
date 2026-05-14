@@ -16,16 +16,19 @@ TrainerBugCatcherAbner:
 	end
 
 BugCatcherAbnerSeenText:
+	ntag "BUGCATCHER:"
 	text "There aren't many"
 	line "bugs out here."
 	done
 
 BugCatcherAbnerBeatenText:
+	ntag "ABNER:"
 	text "No!"
 	line "You're kidding!"
 	done
 
 BugCatcherAbnerAfterBattleText:
+	ntag "BUGCATCHER:"
 	text "I like bugs, so"
 	line "I'm going back to"
 	cont "VIRIDIAN FOREST."
@@ -148,30 +151,31 @@ TrainerCoupleTimAndSue_Tim:
 ;	end
 
 CoupleSueSeenText:
-;	ntag "SUE:"
+	ntag "PICNICKER:"
 	text "Excuse me!"
 	line "This is a private"
-	cont "conversation!";@"
+	cont "conversation!@"
 
-;;	ntag "────────"
-;	ntag "TIM:"
-;	para "No eavesdropping!"
+	text_promptbutton
+	ntag "CAMPER:"
+	text "No eavesdropping!"
 	done
 
 CoupleTimSeenText:
-;	ntag "TIM:"
+	ntag "CAMPER:"
 	text "Who's there?"
 	line "Quit listening in"
-	cont "on us!";@"
+	cont "on us!@"
 
-;;	ntag "────────"
-;	ntag "SUE:"
-;	para "Excuse me!"
-;	line "This is a private"
-;	cont "conversation!"
+	text_promptbutton
+	ntag "PICNICKER:"
+	text "Excuse me!"
+	line "This is a private"
+	cont "conversation!"
 	done
 
 CoupleTimAndSueBeatenText:
+	ntag "TIM&SUE:"
 	text "We just can't win!"
 	done
 
@@ -207,17 +211,19 @@ TrainerBugCatcherEllis:
 	end
 
 BugCatcherEllisSeenText:
+	ntag "BUGCATCHER:"
 	text "I've never seen"
 	line "you around!"
 	cont "Are you good?"
 	done
 
 BugCatcherEllisBeatenText:
-	text "You"
-	line "are too good!"
+	ntag "ELLIS:"
+	text "You are too good!"
 	done
 
 BugCatcherEllisAfterBattleText:
+	ntag "BUGCATCHER:"
 	text "Are my #MON"
 	line "weak? Or, am I"
 	cont "just bad?"
@@ -234,16 +240,18 @@ TrainerPicnickerEmily:
 	end
 
 PicnickerEmilySeenText:
+	ntag "PICNICKER:"
 	text "Me? Well, OK."
 	line "I'll play!"
 	done
 
 PicnickerEmilyBeatenText:
-	text "Just"
-	line "didn't work!"
+	ntag "EMILY:"
+	text "Just didn't work!"
 	done
 
 PicnickerEmilyAfterBattleText:
+	ntag "PICNICKER:"
 	text "I want to get"
 	line "stronger! What's"
 	cont "your secret?"
@@ -260,16 +268,18 @@ TrainerCamperLloyd:
 	end
 
 CamperLloydSeenText:
+	ntag "CAMPER:"
 	text "Huh? You want"
 	line "to talk to me?"
 	done
 
 CamperLloydBeatenText:
-	text "I"
-	line "didn't start it!"
+	ntag "LLOYD:"
+	text "I didn't start it!"
 	done
 
 CamperLloydAfterBattleText:
+	ntag "CAMPER:"
 	text "I should carry"
 	line "more #MON with"
 	cont "me for safety."

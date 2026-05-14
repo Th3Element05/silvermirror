@@ -167,6 +167,7 @@ TrainerSageBo:
 	end
 
 SageBoSeenText:
+	ntag "SAGE:"
 	text "I spent the spring"
 	line "with my #MON."
 
@@ -180,11 +181,13 @@ SageBoSeenText:
 	done
 
 SageBoBeatenText:
+	ntag "BO:"
 	text "Wins and losses, I"
 	line "experienced both."
 	done
 
 SageBoAfterBattleText:
+	ntag "SAGE:"
 	text "Where did #MON"
 	line "come from?"
 	done
@@ -200,16 +203,19 @@ TrainerSagePing:
 	end
 
 SagePingSeenText:
+	ntag "SAGE:"
 	text "Can you inflict"
 	line "any damage on our"
 	cont "#MON?"
 	done
 
 SagePingBeatenText:
+	ntag "PING:"
 	text "Ah! Well done!"
 	done
 
 SagePingAfterBattleText:
+	ntag "SAGE:"
 	text "We use only ghost-"
 	line "type #MON."
 
@@ -229,14 +235,17 @@ TrainerMediumMina:
 	end
 
 MediumMinaSeenText:
+	ntag "MEDIUM:"
 	text "I shall win!"
 	done
 
 MediumMinaBeatenText:
+	ntag "MINA:"
 	text "I, I, I lost!"
 	done
 
 MediumMinaAfterBattleText:
+	ntag "MEDIUM:"
 	text "The one who wants"
 	line "to win most--will!"
 	done
@@ -252,6 +261,7 @@ TrainerMediumLeona:
 	end
 
 MediumLeonaSeenText:
+	ntag "MEDIUM:"
 	text "Stumped by our in-"
 	line "visible floor?"
 
@@ -260,10 +270,12 @@ MediumLeonaSeenText:
 	done
 
 MediumLeonaBeatenText:
+	ntag "LEONA:"
 	text "Wha-what?"
 	done
 
 MediumLeonaAfterBattleText:
+	ntag "MEDIUM:"
 	text "Fine. I shall tell"
 	line "you the secret of"
 	cont "the invisible"
@@ -290,6 +302,7 @@ EcruteakGymGuideScript:
 	end
 
 EcruteakGymGuideText:
+	ntag "GUIDE:"
 	text "The trainers here"
 	line "know many secrets."
 
@@ -300,6 +313,7 @@ EcruteakGymGuideText:
 	done
 
 EcruteakGymGuideWinText:
+	ntag "GUIDE:"
 	text "Whew, <PLAYER>."
 	line "You did great!"
 

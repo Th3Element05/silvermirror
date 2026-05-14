@@ -84,6 +84,7 @@ TrainerCamperTodd:
 	end
 
 CamperToddSeenText:
+	ntag "CAMPER:"
 	text "I'm confident in"
 	line "my ability to"
 	cont "raise #MON."
@@ -92,16 +93,19 @@ CamperToddSeenText:
 	done
 
 CamperToddBeatenText:
+	ntag "TODD:"
 	text "Did I screw up my"
 	line "training?"
 	done
 
 CamperToddAfterText:
+	ntag "TODD:"
 	text "Maybe I should"
 	line "use vitamins…"
 	done
 
 CamperToddSaleText:
+	ntag "TODD:"
 	text "Shopping under the"
 	line "sky!"
 
@@ -141,17 +145,20 @@ OfficerKeithScript:
 	end
 
 OfficerKeithSeenText:
+	ntag "OFFICER:"
 	text "Who goes there?"
 	line "What are you up"
 	cont "to?"
 	done
 
 OfficerKeithWinText:
+	ntag "KEITH:"
 	text "You're a tough"
 	line "kid."
 	done
 
 OfficerKeithAfterText:
+	ntag "OFFICER:"
 	text "Yep, I see nothing"
 	line "wrong today."
 
@@ -160,6 +167,7 @@ OfficerKeithAfterText:
 	done
 
 OfficerKeithDaytimeText:
+	ntag "OFFICER:"
 	text "I'm on patrol for"
 	line "suspicious indi-"
 	cont "viduals."
@@ -176,6 +184,7 @@ TrainerPicnickerNicole:
 	end
 
 PicnickerNicoleSeenText:
+	ntag "PICNICKER:"
 	text "Are you a trainer?"
 
 	para "Let's have a"
@@ -183,11 +192,13 @@ PicnickerNicoleSeenText:
 	done
 
 PicnickerNicoleBeatenText:
+	ntag "NICOLE:"
 	text "Oh, no! I just"
 	line "can't win…"
 	done
 
 PicnickerNicoleAfterText:
+	ntag "PICNICKER:"
 	text "You're too strong"
 	line "to be a practice"
 	cont "partner."
@@ -204,16 +215,19 @@ TrainerPokefanmBrendan:
 	end
 
 PokefanmBrendanSeenText:
+	ntag "#FAN:"
 	text "I was best in my"
 	line "class at #MON."
 	done
 
 PokefanmBrendanBeatenText:
+	ntag "BRENDAN:"
 	text "No! There are bet-"
 	line "ter trainers…"
 	done
 
 PokefanmBrendanAfterText:
+	ntag "#FAN:"
 	text "Maybe I should go"
 	line "back to school?"
 	done
@@ -229,16 +243,19 @@ TrainerYoungsterDanny:
 	end
 
 YoungsterDannySeenText:
+	ntag "YOUNGSTER:"
 	text "This is where I do"
 	line "my training!"
 	done
 
 YoungsterDannyBeatenText:
+	ntag "DANNY:"
 	text "Beaten by a"
 	line "passing stranger!"
 	done
 
 YoungsterDannyAfterText:
+	ntag "YOUNGSTER:"
 	text "I'm going to train"
 	line "even harder."
 
@@ -258,6 +275,7 @@ TrainerCooltrainerfLola:
 	end
 
 CooltrainerfLolaSeenText:
+	ntag "COOLTRAINER:"
 	text "This is our spot!"
 
 	para "We thought it was"
@@ -265,11 +283,13 @@ CooltrainerfLolaSeenText:
 	done
 
 CooltrainerfLolaBeatenText:
+	ntag "LOLA:"
 	text "Ohhh!"
 	line "Too strong!"
 	done
 
 CooltrainerfLolaAfterText:
+	ntag "COOLTRAINER:"
 	text "The sunlight"
 	line "makes your body"
 	cont "stronger."
@@ -286,16 +306,19 @@ TrainerCooltrainerfSalma:
 	end
 
 CooltrainerfSalmaSeenText:
+	ntag "COOLTRAINER:"
 	text "Kyaaah!"
 	line "Someone found us!"
 	done
 
 CooltrainerfSalmaBeatenText:
+	ntag "SALMA:"
 	text "Ohhh!"
 	line "Too strong!"
 	done
 
 CooltrainerfSalmaAfterText:
+	ntag "COOLTRAINER:"
 	text "Isn't this"
 	line "beach great?"
 

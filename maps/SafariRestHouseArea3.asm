@@ -8,6 +8,7 @@ SafariRestHouseArea3_MapScripts:
 SafariRestHouseArea3Gentleman:
 	jumptextfaceplayer SafariRestHouseArea3GentlemanText
 SafariRestHouseArea3GentlemanText:
+	ntag "GENTLEMAN:"
 	text "You can keep any"
 	line "item you find on"
 	cont "the ground here."
@@ -21,6 +22,7 @@ SafariRestHouseArea3GentlemanText:
 SafariRestHouseArea3Scientist:
 	jumptextfaceplayer SafariRestHouseArea3ScientistText
 SafariRestHouseArea3ScientistText:
+	ntag "SCIENTIST:"
 	text "My EEVEE evolved"
 	line "into FLAREON!"
 

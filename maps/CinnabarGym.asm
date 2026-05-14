@@ -455,16 +455,19 @@ TrainerFirebreatherBill: ; quiz 1
 	jumptextfaceplayer FirebreatherBillAfterBattleText
 
 FirebreatherBillSeenText:
+	ntag "FIREBREATHER:"
 	text "I was a thief, but"
 	line "I became straight"
 	cont "as a trainer!"
 	done
 
 FirebreatherBillBeatenText:
+	ntag "BILL:"
 	text "I surrender!"
 	done
 
 FirebreatherBillAfterBattleText:
+	ntag "FIREBREATHER:"
 	text "Training #MON"
 	line "with BLAINE helped"
 	cont "me stop stealing!"
@@ -497,17 +500,20 @@ TrainerSuperNerdHugh: ; quiz 2
 	jumptextfaceplayer SuperNerdHughAfterBattleText
 
 SuperNerdHughSeenText:
+	ntag "SUPERNERD:"
 	text "You can't win!"
 	line "I have studied"
 	cont "#MON totally!"
 	done
 
 SuperNerdHughBeatenText:
+	ntag "HUGH:"
 	text "Waah!"
 	line "My studies!"
 	done
 
 SuperNerdHughAfterBattleText:
+	ntag "SUPERNERD:"
 	text "My theories are"
 	line "too complicated"
 	cont "for you!"
@@ -540,16 +546,19 @@ TrainerFirebreatherRay: ; quiz 3
 	jumptextfaceplayer FirebreatherRayAfterBattleText
 
 FirebreatherRaySeenText:
+	ntag "FIREBREATHER:"
 	text "I just like using"
 	line "fire #MON!"
 	done
 
 FirebreatherRayBeatenText:
+	ntag "RAY:"
 	text "Too hot"
 	line "to handle!"
 	done
 
 FirebreatherRayAfterBattleText:
+	ntag "FIREBREATHER:"
 	text "I just don't like"
 	line "water #MON!"
 	done
@@ -581,15 +590,18 @@ TrainerSuperNerdCary: ; quiz 4
 	jumptextfaceplayer SuperNerdCaryAfterBattleText
 
 SuperNerdCarySeenText:
+	ntag "SUPERNERD:"
 	text "I know why BLAINE"
 	line "became a trainer!"
 	done
 
 SuperNerdCaryBeatenText:
+	ntag "CARRY:"
 	text "Ow!"
 	done
 
 SuperNerdCaryAfterBattleText:
+	ntag "SUPERNERD:"
 	text "BLAINE was lost"
 	line "in the mountains"
 	cont "when a fiery bird"
@@ -627,17 +639,20 @@ TrainerFirebreatherEvan: ; quiz 5
 	jumptextfaceplayer FirebreatherEvanAfterBattleText
 
 FirebreatherEvanSeenText:
+	ntag "FIREBREATHER:"
 	text "I've been to many"
 	line "GYMs, but this is"
 	cont "my favorite!"
 	done
 
 FirebreatherEvanBeatenText:
+	ntag "EVAN:"
 	text "Yowza!"
 	line "Too hot!"
 	done
 
 FirebreatherEvanAfterBattleText:
+	ntag "FIREBREATHER:"
 	text "Us fire #MON"
 	line "fans like PONYTA"
 	cont "and NINETALES!"
@@ -670,16 +685,19 @@ TrainerSuperNerdMarkus: ; quiz 6
 	jumptextfaceplayer SuperNerdMarkusAfterBattleText
 
 SuperNerdMarkusSeenText:
+	ntag "SUPERNERD:"
 	text "Fire is weak"
 	line "against H2O!"
 	done
 
 SuperNerdMarkusBeatenText:
+	ntag "MARKUS:"
 	text "Oh!"
 	line "Snuffed out!"
 	done
 
 SuperNerdMarkusAfterBattleText:
+	ntag "SUPERNERD:"
 	text "Water beats fire!"
 	line "But, fire melts"
 	cont "ice #MON!"
@@ -696,17 +714,20 @@ TrainerSuperNerdTeru:
 	end
 
 SuperNerdTeruSeenText:
+	ntag "SUPERNERD:"
 	text "Do you know how"
 	line "hot #MON fire"
 	cont "breath can get?"
 	done
 
 SuperNerdTeruBeatenText:
+	ntag "TERU:"
 	text "Yow!"
 	line "Hot, hot, hot!"
 	done
 
 SuperNerdTeruAfterBattleText:
+	ntag "SUPERNERD:"
 	text "Fire, or to be"
 	line "more precise,"
 	cont "combustion…"
@@ -732,6 +753,7 @@ CinnabarGymGuideScript:
 	end
 
 CinnabarGymGuideText:
+	ntag "GUIDE:"
 	text "Yo! CHAMP in the"
 	line "making!"
 
@@ -747,6 +769,7 @@ CinnabarGymGuideText:
 	done
 
 CinnabarGymGuideWinText:
+	ntag "GUIDE:"
 	text "<PLAYER>! You beat"
 	line "that fire brand!"
 	done

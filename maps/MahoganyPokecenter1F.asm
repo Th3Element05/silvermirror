@@ -19,6 +19,8 @@ MahoganyPokecenter1FPokefanMText:
 ;	line "black at LAKE OF"
 ;	cont "RAGE…"
 ;	done
+
+	ntag "MAN:"
 	text "I saw CLAIR, the"
 	line "GYM LEADER from"
 	cont "BLACKTHORN CITY"
@@ -31,6 +33,7 @@ MahoganyPokecenter1FPokefanMText:
 MahoganyPokecenter1FYoungsterScript:
 	jumptextfaceplayer MahoganyPokecenter1FYoungsterText
 MahoganyPokecenter1FYoungsterText:
+	ntag "YOUNGSTER:"
 	text "I stop my #MON"
 	line "from evolving too"
 	cont "early."
@@ -43,6 +46,7 @@ MahoganyPokecenter1FYoungsterText:
 MahoganyPokecenter1FCooltrainerFScript:
 	jumptextfaceplayer MahoganyPokecenter1FCooltrainerFText
 MahoganyPokecenter1FCooltrainerFText:
+	ntag "TRAINER:"
 	text "#MON do become"
 	line "stronger when they"
 	cont "evolve, but they"
