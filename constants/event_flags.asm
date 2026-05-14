@@ -131,6 +131,7 @@
 	const EVENT_GOT_POKEDEX ;oaks lab pokedex visibility
 	const EVENT_GOT_POKEBALLS_FROM_OAK
 	const EVENT_GOT_MAP_CARD
+	const EVENT_BEEN_TO_PEWTER_MUSEUM
 	const EVENT_BOUGHT_MAGIKARP
 	const EVENT_MT_MOON_OBTAINED_FOSSIL ;mt moon fossils visibility
 	const EVENT_HELPED_BILL
