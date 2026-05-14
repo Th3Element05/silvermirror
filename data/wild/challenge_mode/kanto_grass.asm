@@ -188,7 +188,7 @@ KantoGrassWildMonsChallenge:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; day
 	db 19, SPEAROW    ; 20% chance
-	db 20, SNUBBUL    ; 20% chance
+	db 20, SNUBBULL   ; 20% chance
 	db 20, GROWLITHE  ; 15% chance
 	db 19, SPEAROW    ; 10% chance
 	db 18, VULPIX     ; 10% chance
