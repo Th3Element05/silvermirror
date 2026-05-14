@@ -14,6 +14,7 @@ LavenderPokecenter1FReceptionistScript:
 LavenderPokecenter1FBenchGuyScript:
 	jumptext LavenderPokecenter1FBenchGuyText
 LavenderPokecenter1FBenchGuyText:
+	ntag "GUY:"
 	text "CUBONE wears"
 	line "a skull, right?"
 
@@ -24,6 +25,7 @@ LavenderPokecenter1FBenchGuyText:
 LavenderPokecenter1FGirlScript:
 	jumptextfaceplayer LavenderPokecenter1FGirlText
 LavenderPokecenter1FGirlText:
+	ntag "GIRL:"
 	text "I saw CUBONE's"
 	line "mother die trying"
 	cont "to escape from"
@@ -33,6 +35,7 @@ LavenderPokecenter1FGirlText:
 LavenderPokecenter1FGentlemanScript:
 	jumptextfaceplayer LavenderPokecenter1FGentlemanText
 LavenderPokecenter1FGentlemanText:
+	ntag "GENTLEMAN:"
 	text "TEAM ROCKET will"
 	line "do anything for"
 	cont "the sake of gold!"

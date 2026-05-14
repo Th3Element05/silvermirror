@@ -15,6 +15,7 @@ CeladonPokecenter1FReceptionistScript:
 CeladonPokecenter1FBenchGuyScript:
 	jumptext CeladonPokecenter1FBenchGuyText
 CeladonPokecenter1FBenchGuyText:
+	ntag "GUY:"
 	text "If I had a BIKE,"
 	line "I would go to"
 	cont "CYCLING ROAD!"
@@ -23,6 +24,7 @@ CeladonPokecenter1FBenchGuyText:
 CeladonPokecenter1FGentlemanScript:
 	jumptextfaceplayer CeladonPokecenter1FGentlemanText
 CeladonPokecenter1FGentlemanText:
+	ntag "GENTLEMAN:"
 	text "#FLUTE awakens"
 	line "#MON with a"
 	cont "sound that only"
@@ -32,6 +34,7 @@ CeladonPokecenter1FGentlemanText:
 CeladonPokecenter1FBeautyScript:
 	jumptextfaceplayer CeladonPokecenter1FBeautyText
 CeladonPokecenter1FBeautyText:
+	ntag "LADY:"
 	text "I rode uphill on"
 	line "CYCLING ROAD from"
 	cont "FUCHSIA!"

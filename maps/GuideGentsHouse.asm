@@ -8,6 +8,7 @@ GuideGentsHouse_MapScripts:
 GuideGentsHouseGuideGent:
 	jumptextfaceplayer GuideGentsHouseGuideGentText
 GuideGentsHouseGuideGentText:
+	ntag "GRAMPS:"
 	text "When I was a wee"
 	line "lad, I was a hot-"
 	cont "shot trainer!"

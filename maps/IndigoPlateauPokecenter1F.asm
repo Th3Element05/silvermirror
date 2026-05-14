@@ -63,6 +63,7 @@ IndigoPlateauPokecenter1FClerkScript:
 IndigoPlateauPokecenter1FGymGuideScript:
 	jumptextfaceplayer IndigoPlateauPokecenter1FGymGuideText
 IndigoPlateauPokecenter1FGymGuideText:
+	ntag "GUIDE:"
 	text "Yo! CHAMP in the"
 	line "making!"
 
@@ -85,6 +86,7 @@ IndigoPlateauPokecenter1FCooltrainerMScript:
 	setscene SCENE_INDIGOPLATEAUPOKECENTER1F_NOOP
 	jumptextfaceplayer IndigoPlateauPokecenter1FCooltrainerMText
 IndigoPlateauPokecenter1FCooltrainerMText:
+	ntag "TRAINER:"
 	text "Past here, you'll"
 	line "be tested by the"
 	cont "ELITE FOUR!"
@@ -127,17 +129,16 @@ TeleportGuyScript:
 	end
 
 TeleportGuyText1:
+	ntag "GRAMPS:"
 	text "Ah! You're chal-"
 	line "lenging the ELITE"
-
-	para "FOUR? Are you sure"
-	line "you're ready?"
+	cont "FOUR? Are you sure"
+	roll "you're ready?"
 
 	para "If you need to"
 	line "train some more,"
-
-	para "my ABRA can help"
-	line "you."
+	cont "my ABRA can help"
+	roll "you."
 
 	para "It can TELEPORT"
 	line "you home."
@@ -147,12 +148,14 @@ TeleportGuyText1:
 	done
 
 TeleportGuyYesText:
+	ntag "GRAMPS:"
 	text "OK, OK. Picture"
 	line "your house in your"
 	cont "mind…"
 	done
 
 TeleportGuyNoText:
+	ntag "GRAMPS:"
 	text "OK, OK. The best"
 	line "of luck to you!"
 	done

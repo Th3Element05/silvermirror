@@ -42,6 +42,7 @@ MtMoonB2FFossilNerdScript:
 	end
 
 MtMoonB2FSuperNerdStopText:
+	ntag "SUPERNERD:"
 	text "Hey, stop!"
 
 	para "I found these"
@@ -50,17 +51,20 @@ MtMoonB2FSuperNerdStopText:
 	done
 
 MtMoonB2FSuperNerdBeatenText:
-	text "OK!"
+	ntag "SAM:"
+	text "OK! Fine!"
 	line "I'll share!"
 	done
 
 MtMoonB2FSuperNerdTakeOneText:
+	ntag "SUPERNERD:"
 	text "We'll each take"
 	line "one!"
 	cont "No being greedy!"
 	done
 
 MtMoonB2FSuperNerdCinnabarLabText:
+	ntag "SUPERNERD:"
 	text "Far away, on"
 	line "CINNABAR ISLAND,"
 	cont "there's a #MON"
@@ -123,6 +127,7 @@ MtMoonB2FWantHelixFossilText:
 	done
 
 MtMoonB2FSuperNerdTakesFossilText:
+	ntag "SUPERNERD:"
 	text "All right. Then"
 	line "this is mine!"
 	done
@@ -138,16 +143,19 @@ TrainerRocketGruntM1:
 	end
 
 RocketGruntM1SeenText:
+	ntag "ROCKET:"
 	text "We're pulling a"
 	line "big job here!"
 	cont "Get lost, kid!"
 	done
 
 RocketGruntM1BeatenText:
+	ntag "ROCKET:"
 	text "So, you are good."
 	done
 
 RocketGruntM1AfterBattleText:
+	ntag "ROCKET:"
 	text "If you find a"
 	line "fossil, give it"
 	cont "to me and scram!"
@@ -164,6 +172,7 @@ TrainerRocketGruntM2:
 	end
 
 RocketGruntM2SeenText:
+	ntag "ROCKET:"
 	text "TEAM ROCKET will"
 	line "find the fossils,"
 	cont "revive, and sell"
@@ -171,11 +180,13 @@ RocketGruntM2SeenText:
 	done
 
 RocketGruntM2BeatenText:
+	ntag "ROCKET:"
 	text "Urgh!"
 	line "Now I'm mad!"
 	done
 
 RocketGruntM2AfterBattleText:
+	ntag "ROCKET:"
 	text "You made me mad!"
 	line "TEAM ROCKET will"
 	cont "blacklist you!"
@@ -192,16 +203,19 @@ TrainerRocketGruntF1:
 	end
 
 RocketGruntF1SeenText:
+	ntag "ROCKET:"
 	text "Little kids"
 	line "should leave"
 	cont "grown-ups alone!"
 	done
 
 RocketGruntF1BeatenText:
+	ntag "ROCKET:"
 	text "I'm steamed!"
 	done
 
 RocketGruntF1AfterBattleText:
+	ntag "ROCKET:"
 	text "#MON lived"
 	line "here long before"
 	cont "people came."
@@ -218,16 +232,19 @@ TrainerRocketGruntM3:
 	end
 
 RocketGruntM3SeenText:
+	ntag "ROCKET:"
 	text "We, TEAM ROCKET,"
 	line "are #MON"
 	cont "gangsters!"
 	done
 
 RocketGruntM3BeatenText:
+	ntag "ROCKET:"
 	text "I blew it!"
 	done
 
 RocketGruntM3AfterBattleText:
+	ntag "ROCKET:"
 	text "Darn it all! My"
 	line "associates won't"
 	cont "stand for this!"

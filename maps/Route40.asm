@@ -104,6 +104,7 @@ TrainerFisherRoyce:
 	end
 
 FisherRoyceSeenText:
+	ntag "FISHER:"
 	text "I hooked some"
 	line "rare #MON!"
 
@@ -114,11 +115,13 @@ FisherRoyceSeenText:
 	done
 
 FisherRoyceBeatenText:
+	ntag "ROYCE:"
 	text "I'm still proud"
 	line "of my catch!"
 	done
 
 FisherRoyceAfterBattleText:
+	ntag "FISHER:"
 	text "KURT's LURE BALL"
 	line "is the best for"
 	cont "catching hooked"
@@ -140,6 +143,7 @@ TrainerSwimmermDaryl:
 	end
 
 SwimmermDarylSeenText:
+	ntag "SWIMMER:"
 	text "You have to warm"
 	line "up before going"
 	cont "into the water."
@@ -148,13 +152,15 @@ SwimmermDarylSeenText:
 	done
 
 SwimmermDarylBeatenText:
+	ntag "DARYL:"
 	text "OK! Uncle! I give!"
 	done
 
 SwimmermDarylAfterBattleText:
+	ntag "SWIMMER:"
 	text "CIANWOOD CITY is"
 	line "a good distance"
-	cont "away from here."
+	cont "from here."
 	done
 
 TrainerSwimmerfNikki:
@@ -168,6 +174,7 @@ TrainerSwimmerfNikki:
 	end
 
 SwimmerfNikkiSeenText:
+	ntag "SWIMMER:"
 	text "Are you going to"
 	line "CIANWOOD?"
 
@@ -176,10 +183,12 @@ SwimmerfNikkiSeenText:
 	done
 
 SwimmerfNikkiBeatenText:
+	ntag "NIKKI:"
 	text "I lost that one!"
 	done
 
 SwimmerfNikkiAfterBattleText:
+	ntag "SWIMMER:"
 	text "I'd say I'm a"
 	line "better swimmer"
 	cont "than you. Yeah!"
@@ -196,6 +205,7 @@ TrainerSwimmerfDiana:
 	end
 
 SwimmerfDianaSeenText:
+	ntag "SWIMMER:"
 	text "No inner tube for"
 	line "me."
 
@@ -204,11 +214,13 @@ SwimmerfDianaSeenText:
 	done
 
 SwimmerfDianaBeatenText:
+	ntag "DIANA:"
 	text "Ooh, I'm feeling"
 	line "dizzy!"
 	done
 
 SwimmerfDianaAfterBattleText:
+	ntag "SWIMMER:"
 	text "While I float like"
 	line "this, the waves"
 	cont "carry me along."
@@ -225,6 +237,7 @@ TrainerSwimmermTony:
 	end
 
 SwimmermTonySeenText:
+	ntag "SWIMMER:"
 	text "Hey, you're young"
 	line "and fit!"
 
@@ -233,10 +246,12 @@ SwimmermTonySeenText:
 	done
 
 SwimmermTonyBeatenText:
+	ntag "TONY:"
 	text "Uh-oh. I lost…"
 	done
 
 SwimmermTonyAfterBattleText:
+	ntag "SWIMMER:"
 	text "Swimming exercises"
 	line "your entire body."
 	cont "It's healthy."
@@ -245,6 +260,7 @@ SwimmermTonyAfterBattleText:
 Route40Lass1Script:
 	jumptextfaceplayer Route40Lass1Text
 Route40Lass1Text:
+	ntag "LASS:"
 	text "Although you can't"
 	line "see it from here,"
 	cont "CIANWOOD is across"
@@ -254,6 +270,7 @@ Route40Lass1Text:
 Route40Lass2Script:
 	jumptextfaceplayer Route40Lass2Text
 Route40Lass2Text:
+	ntag "LASS:"
 	text "I came to OLIVINE"
 	line "by ship to see the"
 	cont "sights and soak up"
@@ -267,6 +284,7 @@ Route40Lass2Text:
 Route40StandingYoungsterScript:
 	jumptextfaceplayer Route40StandingYoungsterText
 Route40StandingYoungsterText:
+	ntag "YOUNGSTER:"
 	text "Have you gone to"
 	line "the BATTLE TOWER?"
 

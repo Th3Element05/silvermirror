@@ -20,6 +20,7 @@ ElmsHouseBookshelf:
 	jumpstd DifficultBookshelfScript
 
 ElmsWifeText:
+	ntag "WOMAN:"
 	text "My husband's always"
 	line "so busy."
 	cont "I hope he's OK."
@@ -31,6 +32,7 @@ ElmsWifeText:
 	done
 
 ElmsSonText:
+	ntag "BOY:"
 	text "When I grow up,"
 	line "I'm going to help"
 	cont "my dad!"

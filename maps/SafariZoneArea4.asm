@@ -5,19 +5,20 @@ SafariZoneArea4_MapScripts:
 
 	def_callbacks
 
-SafariZoneArea4Resting:
-	jumptextfaceplayer SafariZoneArea4RestingText
-SafariZoneArea4RestingText:
-	text "Catching #MON"
-	line "is hard work!"
-
-	para "I'm resting here"
-	line "for a moment."
-	done
+;SafariZoneArea4Resting:
+;	jumptextfaceplayer SafariZoneArea4RestingText
+;SafariZoneArea4RestingText:
+;	text "Catching #MON"
+;	line "is hard work!"
+;
+;	para "I'm resting here"
+;	line "for a moment."
+;	done
 
 SafariZoneArea4Lass:
 	jumptextfaceplayer SafariZoneArea4LassText
 SafariZoneArea4LassText:
+	ntag "LASS:"
 	text "I feel like I've"
 	line "looked everywhere"
 	cont "for the SECRET"
@@ -37,6 +38,7 @@ SafariZoneArea4Fisher:
 	end
 
 SafariZoneArea4FisherText:
+	ntag "FISHER:"
 	text "I've heard you can"
 	line "even hook DRATINI"
 	cont "with a rod in the"
@@ -46,6 +48,7 @@ SafariZoneArea4FisherText:
 SafariZoneArea4Cooltrainers:
 	jumptextfaceplayer SafariZoneArea4CooltrainersText
 SafariZoneArea4CooltrainersText:
+	ntag "TRAINER:"
 	text "This is really"
 	line "far into the"
 	cont "SAFARI ZONE!"
@@ -136,7 +139,7 @@ SafariZoneArea4_MapEvents:
 	def_object_events
 	object_event 25, 24, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, MORN, 0, OBJECTTYPE_SCRIPT, 0, SafariZoneArea4Lass, EVENT_SAFARI_ZONE_AREA_4_NPC1
 	object_event  6, 18, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, DAY, 0, OBJECTTYPE_SCRIPT, 0, SafariZoneArea4Fisher, EVENT_SAFARI_ZONE_AREA_4_NPC1
-	object_event 10, 16, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 2, 2, -1, NITE, 0, OBJECTTYPE_SCRIPT, 0, SafariZoneArea4Resting, EVENT_SAFARI_ZONE_AREA_4_NPC1
+	object_event 10, 16, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 2, 2, -1, NITE, 0, OBJECTTYPE_SCRIPT, 0, SafariZoneArea4Cooltrainers, EVENT_SAFARI_ZONE_AREA_4_NPC1
 ;
 	object_event 20, 16, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 2, 2, -1, MORN, 0, OBJECTTYPE_SCRIPT, 0, SafariZoneArea4Cooltrainers, EVENT_SAFARI_ZONE_AREA_4_NPC2
 	object_event 22, 25, SPRITE_LASS, SPRITEMOVEDATA_WALK_UP_DOWN, 2, 2, -1, DAY, 0, OBJECTTYPE_SCRIPT, 0, SafariZoneArea4Lass, EVENT_SAFARI_ZONE_AREA_4_NPC2

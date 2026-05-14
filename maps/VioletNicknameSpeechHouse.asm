@@ -21,6 +21,7 @@ VioletNicknameSpeechHouseBirdScript:
 	end
 
 VioletNicknameSpeechHouseTeacherText:
+	ntag "LADY:"
 	text "She uses the names"
 	line "of her favorite"
 	cont "things to eat."
@@ -31,6 +32,7 @@ VioletNicknameSpeechHouseTeacherText:
 	done
 
 VioletNicknameSpeechHouseLassText:
+	ntag "LASS:"
 	text "I call my PIDGEY"
 	line "STRAWBERRY!"
 	done

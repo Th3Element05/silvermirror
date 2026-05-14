@@ -118,16 +118,19 @@ TrainerBirdKeeperJose:
 ;	end
 
 BirdKeeperJoseSeenText:
+	ntag "BIRDKEEPER:"
 	text "I always check"
 	line "every grassy area"
 	cont "for new #MON."
 	done
 
 BirdKeeperJoseBeatenText:
+	ntag "JOSE:"
 	text "Tch!"
 	done
 
 BirdKeeperJoseAfterBattleText:
+	ntag "JOSE:"
 	text "I wish I had a"
 	line "BIKE!"
 	done
@@ -140,15 +143,18 @@ TrainerBirdKeeperBryan:
 	jumptextfaceplayer BirdKeeperBryanAfterBattleText
 
 BirdKeeperBryanSeenText:
+	ntag "BIRDKEEPER:"
 	text "This is my turf!"
 	line "Get out of here!"
 	done
 
 BirdKeeperBryanBeatenText:
+	ntag "BRYAN:"
 	text "Darn!"
 	done
 
 BirdKeeperBryanAfterBattleText:
+	ntag "BIRDKEEPER:"
 	text "This is my fave"
 	line "#MON hunting"
 	cont "area!"
@@ -162,16 +168,19 @@ TrainerBirdKeeperPeter:
 	jumptextfaceplayer BirdKeeperPeterAfterBattleText
 
 BirdKeeperPeterSeenText:
+	ntag "BIRDKEEPER:"
 	text "Kurukkoo!"
 	line "How do you like"
 	cont "my bird call?"
 	done
 
 BirdKeeperPeterBeatenText:
+	ntag "PETER:"
 	text "I had to bug you!"
 	done
 
 BirdKeeperPeterAfterBattleText:
+	ntag "BIRDKEEPER:"
 	text "I also collect"
 	line "sea #MON on"
 	cont "weekends!"

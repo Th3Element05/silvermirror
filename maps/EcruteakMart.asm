@@ -21,6 +21,7 @@ EcruteakMartMedScript:
 EcruteakMartSuperNerdScript:
 	jumptextfaceplayer EcruteakMartSuperNerdText
 EcruteakMartSuperNerdText:
+	ntag "SUPERNERD:"
 	text "My EEVEE evolved"
 	line "into an ESPEON."
 
@@ -37,6 +38,7 @@ EcruteakMartSuperNerdText:
 EcruteakMartGrannyScript:
 	jumptextfaceplayer EcruteakMartGrannyText
 EcruteakMartGrannyText:
+	ntag "GRANNY:"
 	text "If you use REVIVE"
 	line "on a #MON that's"
 	cont "fainted, it will"

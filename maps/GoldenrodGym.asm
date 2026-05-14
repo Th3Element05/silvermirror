@@ -182,6 +182,7 @@ WhitneyCriesScript:
 	end
 
 LassWhitneyCriesText:
+	ntag "LASS:"
 	text "Oh, no. You made"
 	line "WHITNEY cry."
 
@@ -213,6 +214,7 @@ TrainerLassRuby:
 	end
 
 LassRubySeenText:
+	ntag "LASS:"
 	text "I like cute #-"
 	line "MON better than"
 	cont "strong #MON."
@@ -222,10 +224,12 @@ LassRubySeenText:
 	done
 
 LassRubyBeatenText:
+	ntag "RUBY:"
 	text "Oh, no, no, no!"
 	done
 
 LassRubyAfterBattleText:
+	ntag "LASS:"
 	text "I'm trying to beat"
 	line "WHITNEY, but…"
 	cont "It's depressing."
@@ -247,6 +251,7 @@ TrainerBeautyCybil:
 	end
 
 BeautyCybilSeenText:
+	ntag "BEAUTY:"
 	text "Oh, you are a cute"
 	line "little trainer! "
 
@@ -255,11 +260,13 @@ BeautyCybilSeenText:
 	done
 
 BeautyCybilBeatenText:
+	ntag "CYBIL:"
 	text "Let's see… Oops,"
 	line "it's over?"
 	done
 
 BeautyCybilAfterBattleText:
+	ntag "BEAUTY:"
 	text "Wow, you must be"
 	line "good to beat me!"
 	cont "Keep it up!"
@@ -276,17 +283,20 @@ TrainerBeautySamantha:
 	end
 
 BeautySamanthaSeenText:
+	ntag "BEAUTY:"
 	text "Give it your best"
 	line "shot, or I'll take"
 	cont "you down!"
 	done
 
 BeautySamanthaBeatenText:
+	ntag "SAMANTHA:"
 	text "Oh! TEDDIURSA,"
 	line "I'm so sorry!"
 	done
 
 BeautySamanthaAfterBattleText:
+	ntag "BEAUTY:"
 	text "I hate seeing my"
 	line "TEDDIURSA lose…"
 	done
@@ -302,6 +312,7 @@ TrainerLassKelly:
 	end
 
 LassKellySeenText:
+	ntag "LASS:"
 	text "Don't let my"
 	line "#MON's cute"
 	cont "looks fool you."
@@ -310,11 +321,13 @@ LassKellySeenText:
 	done
 
 LassKellyBeatenText:
+	ntag "KELLY:"
 	text "Darn… I thought"
 	line "you were weak…"
 	done
 
 LassKellyAfterBattleText:
+	ntag "BEAUTY:"
 	text "Do my #MON"
 	line "think I'm cute?"
 	done
@@ -337,6 +350,7 @@ GoldenrodGymGuideScript:
 	end
 
 GoldenrodGymGuideText:
+	ntag "GUIDE:"
 	text "Yo! CHAMP!"
 
 	para "This GYM is home"
@@ -349,6 +363,7 @@ GoldenrodGymGuideText:
 	done
 
 GoldenrodGymGuideWinText:
+	ntag "GUIDE:"
 	text "You won? Great! I"
 	line "was busy admiring"
 	cont "the ladies here."

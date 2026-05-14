@@ -68,6 +68,7 @@ LoadHeartScale:
 ;	db "CANCEL@"
 
 FuchsiaMovesHouse_MoveReminderIntroText:
+	ntag "COLLECTOR:"
 	text "Hi, I'm the"
 	line "MOVE REMINDER!"
 
@@ -90,11 +91,13 @@ FuchsiaMovesHouse_MoveReminderIntroText:
 	done
 
 FuchsiaMovesHouse_MoveReminderCancelText:
+	ntag "COLLECTOR:"
 	text "Come visit me"
 	line "again."
 	done
 
 FuchsiaMovesHouse_MoveReminderNoScaleText:
+	ntag "COLLECTOR:"
 	text "You don't have any"
 	line "HEART SCALEs."
 

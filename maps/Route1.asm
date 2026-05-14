@@ -94,6 +94,7 @@ Route1PotionSample:
 	end
 
 Route1PotionSampleText:
+	ntag "CLERK:"
 	text "Hi! I work at a"
 	line "#MON MART."
 
@@ -117,6 +118,7 @@ Route1AlsoHavePokeballsText:
 Route1YoungsterLedges:
 	jumptextfaceplayer Route1YoungsterLedgesText
 Route1YoungsterLedgesText:
+	ntag "YOUNGSTER:"
 	text "See those ledges"
 	line "along the road?"
 

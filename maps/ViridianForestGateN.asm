@@ -14,6 +14,7 @@ ViridianForestGateNSuperNerdScript:
 	jumptextfaceplayer ViridianForestGateNSuperNerdText
 
 ViridianForestGateNOfficerText:
+	ntag "OFFICER:"
 	text "Have you noticed"
 	line "the bushes on the"
 	cont "roadside?"
@@ -24,6 +25,7 @@ ViridianForestGateNOfficerText:
 	done
 
 ViridianForestGateNSuperNerdText:
+	ntag "SUPERNERD:"
 	text "Many #MON live"
 	line "only in forests "
 	cont "and caves."

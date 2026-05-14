@@ -98,16 +98,19 @@ Route18GateStopMovement4:
 	step_end
 
 Route18GateOfficerText:
+	ntag "OFFICER:"
 	text "CYCLING ROAD is"
 	line "all uphill from"
 	cont "here."
 	done
 
 Route18GateStopText:
+	ntag "OFFICER:"
 	text "Hey! Whoa! Stop!"
 	done
 
 Route18GateCannotPassText:
+	ntag "OFFICER:"
 	text "You need to have"
 	line "a BICYCLE to ride"
 	cont "on CYCLING ROAD!"

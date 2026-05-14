@@ -43,6 +43,7 @@ GoldenrodPokecenter1FPokefanF:
 	end
 
 GoldenrodPokecenter1FPokefanFDoYouHaveFlowerMailText:
+	ntag "WOMAN:"
 	text "Oh my, your pack"
 	line "looks so heavy!"
 
@@ -63,6 +64,7 @@ GoldenrodPokecenter1FAskGiveAwayAnFlowerMailText:
 	done
 
 GoldenrodPokecenter1FPokefanFThisIsForYouText:
+	ntag "WOMAN:"
 	text "Oh, that's great!"
 	line "Thank you, honey!"
 
@@ -71,16 +73,19 @@ GoldenrodPokecenter1FPokefanFThisIsForYouText:
 	done
 
 GoldenrodPokecenter1FPokefanFDaughterWillBeDelightedText:
+	ntag "WOMAN:"
 	text "My daughter will"
 	line "be delighted!"
 	done
 
 GoldenrodPokecenter1FPokefanFTooBadText:
+	ntag "WOMAN:"
 	text "Oh? You don't have"
 	line "one? Too bad."
 	done
 
 GoldenrodPokecenter1FPokefanFAnotherTimeThenText:
+	ntag "WOMAN:"
 	text "Oh… Well, another"
 	line "time, then."
 	done
@@ -93,6 +98,7 @@ GoldenrodPokecenter1FPlayerGaveAwayTheFlowerMailText:
 GoldenrodPokecenter1FLassScript:
 	jumptextfaceplayer GoldenrodPokecenter1FLassText
 GoldenrodPokecenter1FLassText:
+	ntag "LASS:"
 	text "A higher level"
 	line "#MON doesn't"
 	cont "always win."

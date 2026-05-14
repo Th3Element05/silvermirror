@@ -19,6 +19,7 @@ Route12GateGuardScript:
 	jumptext Route12GateGuardAfterSnorlaxText
 
 Route12GateGuardBeforeSnorlaxText:
+	ntag "OFFICER:"
 	text "There have been"
 	line "fewer people pass-"
 	cont "ing through here"
@@ -28,6 +29,7 @@ Route12GateGuardBeforeSnorlaxText:
 	done
 
 Route12GateGuardAfterSnorlaxText:
+	ntag "OFFICER:"
 	text "A big #MON was"
 	line "asleep on a road!"
 

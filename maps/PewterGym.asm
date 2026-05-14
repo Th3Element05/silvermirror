@@ -167,6 +167,7 @@ TrainerCamperIsaac:
 	end
 
 CamperIsaacSeenText:
+	ntag "CAMPER:"
 	text "Stop right there,"
 	line "kid!"
 
@@ -176,6 +177,7 @@ CamperIsaacSeenText:
 	done
 
 CamperIsaacBeatenText:
+	ntag "ISAAC:"
 	text "Darn!"
 
 	para "Light years isn't"
@@ -184,6 +186,7 @@ CamperIsaacBeatenText:
 	done
 
 CamperIsaacAfterBattleText:
+	ntag "CAMPER:"
 	text "You're pretty hot,"
 	line "but not as hot"
 	cont "as BROCK!"
@@ -198,6 +201,7 @@ PewterGymGuideScript:
 	jumptextfaceplayer PewterGymGuideWinText
 
 PewterGymGuideText:
+	ntag "GUIDE:"
 	text "Hiya! I can tell"
 	line "you have what it"
 	cont "takes to become a"
@@ -222,6 +226,7 @@ PewterGymGuideText:
 	done
 
 PewterGymGuideWinText:
+	ntag "GUIDE:"
 	text "Just as I thought!"
 	line "You're #MON"
 	cont "CHAMP material!"

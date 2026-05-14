@@ -18,6 +18,7 @@ OlivinePunishmentSpeechHouseBookshelf1:
 	jumpstd MagazineBookshelfScript
 
 OlivinePunishmentSpeechHouseDadText:
+	ntag "MAN:"
 	text "Along the way to"
 	line "CIANWOOD, there"
 	cont "are four deserted"
@@ -29,6 +30,7 @@ OlivinePunishmentSpeechHouseDadText:
 	done
 
 OlivinePunishmentSpeechHouseDaughterText:
+	ntag "LASS:"
 	text "Whenever I get in"
 	line "trouble, Daddy"
 	cont "always scares me."

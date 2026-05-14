@@ -86,11 +86,13 @@ Route32Pokecenter1FFishingGuruScript:
 	end
 
 Route32Pokecenter1FFishingGuruText_Intro:
+	ntag "FISHERMAN:"
 	text "I'm the JOHTO"
 	line "FISHING GURU!"
 	done
 
 Route32Pokecenter1FFishingGuruText_Question:
+	ntag "FISHERMAN:"
 	text "This is a great"
 	line "fishing spot."
 
@@ -99,6 +101,7 @@ Route32Pokecenter1FFishingGuruText_Question:
 	done
 
 Route32Pokecenter1FFishingGuruText_Yes:
+	ntag "FISHERMAN:"
 	text "Heh, that's good"
 	line "to hear."
 
@@ -107,6 +110,7 @@ Route32Pokecenter1FFishingGuruText_Yes:
 	done
 
 Route32Pokecenter1FFishingGuruText_GiveSuperRod:
+	ntag "FISHERMAN:"
 	text "Fishing is great!"
 
 	para "If there's water,"
@@ -116,16 +120,19 @@ Route32Pokecenter1FFishingGuruText_GiveSuperRod:
 	done
 
 Route32Pokecenter1FFishingGuruText_No:
+	ntag "FISHERMAN:"
 	text "Oh. That's too"
 	line "bad…"
 	done
 
 Route32Pokecenter1FFishingGuruText_After:
+	ntag "FISHERMAN:"
 	text "Yo, kid. How are"
 	line "they biting?"
 	done
 
 Route32Pokecenter1FFishingGuruText_OfferLure:
+	ntag "FISHERMAN:"
 	text "I have a special"
 	line "lure that can hook"
 	cont "exotic #MON in"
@@ -136,6 +143,7 @@ Route32Pokecenter1FFishingGuruText_OfferLure:
 	done
 
 Route32Pokecenter1FFishingGuruText_AskTakeLure:
+	ntag "FISHERMAN:"
 	text "How are the #-"
 	line "MON biting?"
 
@@ -146,6 +154,7 @@ Route32Pokecenter1FFishingGuruText_AskTakeLure:
 	done
 
 Route32Pokecenter1FFishingGuruText_SwapAnytime:
+	ntag "FISHERMAN:"
 	text "If you change your"
 	line "mind, just say so."
 
@@ -154,6 +163,7 @@ Route32Pokecenter1FFishingGuruText_SwapAnytime:
 	done
 
 Route32Pokecenter1FFishingGuruText_GiveLure:
+	ntag "FISHERMAN:"
 	text "I'll put it on"
 	line "your SUPER ROD."
 
@@ -165,6 +175,7 @@ Route32Pokecenter1FFishingGuruText_GiveLure:
 	done
 
 Route32Pokecenter1FFishingGuruText_ReturnLure:
+	ntag "FISHERMAN:"
 	text "I'll take it off"
 	line "your SUPER ROD."
 
@@ -176,6 +187,7 @@ Route32Pokecenter1FFishingGuruText_ReturnLure:
 	done
 
 Route32Pokecenter1FFishingGuruText_HaveRod:
+	ntag "FISHERMAN:"
 	text "I have cousins in"
 	line "KANTO, we're all"
 	cont "avid fishermen."
@@ -186,6 +198,7 @@ Route32Pokecenter1FFishingGuruText_HaveRod:
 Route32Pokecenter1FCooltrainerFScript:
 	jumptextfaceplayer Route32Pokecenter1FCooltrainerFText
 Route32Pokecenter1FCooltrainerFText:
+	ntag "TRAINER:"
 	text "What should I make"
 	line "my #MON hold?"
 

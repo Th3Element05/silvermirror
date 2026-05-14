@@ -86,11 +86,13 @@ GoldenrodGameCornerEggVendor:
 	end
 
 GameCornerEggVendor_IntroText:
+	ntag "???:"
 	text "Psst. You there."
 	line "You got coins?"
 	done
 
 GameCornerEggVendor_OfferText:
+	ntag "???:"
 	text "I've got some rare"
 	line "#MON eggs, but"
 	cont "they'll cost you."
@@ -105,12 +107,14 @@ GameCornerEggVendor_GotEggText:
 	done
 
 GameCornerEggVendor_FinishText:
+	ntag "???:"
 	text "I have more eggs,"
 	line "if you have more"
 	cont "coins."
 	done
 
 GameCornerEggVendor_OfferStandsText:
+	ntag "???:"
 	text "Come back when you"
 	line "change your mind."
 	done
@@ -124,6 +128,7 @@ GoldenrodGameCornerLuckySeatScript:
 	sjump GoldenrodGameCornerEndRightScript
 
 GoldenrodGameCornerPharmacistText:
+	ntag "GAMBLER:"
 	text "I always play this"
 	line "slot machine. It"
 	cont "pays out more than"
@@ -137,6 +142,7 @@ GoldenrodGameCornerPokefanM1Script:
 	sjump GoldenrodGameCornerEndLeftScript
 
 GoldenrodGameCornerPokefanM1Text:
+	ntag "GAMBLER:"
 	text "I just love this"
 	line "new slot machine."
 
@@ -152,6 +158,7 @@ GoldenrodGameCornerCooltrainerFScript:
 	sjump GoldenrodGameCornerEndRightScript
 
 GoldenrodGameCornerCooltrainerFText:
+	ntag "GAMBLER:"
 	text "I won't quit until"
 	line "I win!"
 	done
@@ -163,6 +170,7 @@ GoldenrodGameCornerCooltrainerMScript:
 	sjump GoldenrodGameCornerEndLeftScript
 
 GoldenrodGameCornerCooltrainerMText:
+	ntag "GAMBLER:"
 	text "Life is a gamble."
 	line "I'm going to flip"
 	cont "cards till I drop!"
@@ -175,6 +183,7 @@ GoldenrodGameCornerPokefanFScript:
 	sjump GoldenrodGameCornerEndRightScript
 
 GoldenrodGameCornerPokefanFText:
+	ntag "GAMBLER:"
 	text "Card flip…"
 
 	para "I prefer it over"

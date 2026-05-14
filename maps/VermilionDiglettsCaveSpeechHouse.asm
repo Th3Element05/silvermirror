@@ -8,6 +8,7 @@ VermilionDiglettsCaveSpeechHouse_MapScripts:
 VermilionPidgeyHouseYoungsterScript:
 	jumptextfaceplayer VermilionPidgeyHouseYoungsterText
 VermilionPidgeyHouseYoungsterText:
+	ntag "YOUNGSTER:"
 	text "I'm getting my"
 	line "PIDGEY to fly a"
 	cont "letter to SAFFRON"

@@ -14,6 +14,7 @@ RedsMom:
 	jumptextfaceplayer RedsMomHaveYouMetElmText
 
 RedsMomHaveYouMetElmText:
+	ntag "WOMAN:"
 	text "Hello."
 
 	para "You look like a"
@@ -27,6 +28,7 @@ RedsMomHaveYouMetElmText:
 	done
 
 RedsMomWhenBoyGrowsUpText:
+	ntag "WOMAN:"
 	text "Hello."
 
 	para "My boy wants to be"

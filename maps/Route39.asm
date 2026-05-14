@@ -46,17 +46,20 @@ TrainerPsychicNorman:
 	end
 
 PsychicNormanSeenText:
+	ntag "PSYCHIC:"
 	text "Let me see what"
 	line "your #MON are"
 	cont "capable of."
 	done
 
 PsychicNormanBeatenText:
+	ntag "NORMAN:"
 	text "Ooh, your #MON"
 	line "have potential."
 	done
 
 PsychicNormanAfterBattleText:
+	ntag "PSYCHIC:"
 	text "You know how #-"
 	line "MON have different"
 	cont "abilities?"
@@ -99,11 +102,13 @@ TrainerPokefanfEleanor:
 	end
 
 PokefanfEleanorHopeItGetsDarkText:
+	ntag "#FAN:"
 	text "Ufufufu… I hope it"
 	line "gets dark soon."
 	done
 
 PokefanfEleanorSeenText:
+	ntag "#FAN:"
 	text "You came at just"
 	line "the right time."
 
@@ -111,11 +116,13 @@ PokefanfEleanorSeenText:
 	done
 
 PokefanfEleanorBeatenText:
+	ntag "ELEANOR:"
 	text "Oh, how disap-"
 	line "pointing…"
 	done
 
 PokefanfEleanorAfterBattleText:
+	ntag "#FAN:"
 	text "I met my #MON"
 	line "at night, right"
 	cont "here on ROUTE 39."
@@ -209,17 +216,20 @@ TrainerPokefanmDerek:
 	end
 
 PokefanmDerekSeenText:
+	ntag "#FAN:"
 	text "This is a good"
 	line "time to brag about"
 	cont "my PIKACHU!"
 	done
 
 PokefanmDerekBeatenText:
+	ntag "DEREK:"
 	text "I had no time to"
 	line "show off PIKACHU…"
 	done
 
 PokefanMDerekText_NotBragging:
+	ntag "DEREK:"
 	text "I'm not listening"
 	line "to your bragging!"
 
@@ -241,6 +251,7 @@ TrainerSailorStanley:
 	end
 
 SailorStanleySeenText:
+	ntag "SAILOR:"
 	text "I just got back to"
 	line "OLIVINE."
 
@@ -249,10 +260,12 @@ SailorStanleySeenText:
 	done
 
 SailorStanleyBeatenText:
+	ntag "STANLEY:"
 	text "Awaaargh!"
 	done
 
 SailorStanleyAfterBattleText:
+	ntag "SAILOR:"
 	text "My #MON were"
 	line "caught and raised"
 	cont "overseas."
@@ -272,7 +285,8 @@ Route39Miltank:
 	end
 
 Route39MiltankText:
-	text "MILTANK: Mooo!"
+	ntag "MILTANK:"
+	text "Mooo!"
 	done
 
 

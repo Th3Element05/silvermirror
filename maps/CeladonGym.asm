@@ -163,17 +163,20 @@ TrainerBeautyVictoria:
 	end
 
 BeautyVictoriaSeenText:
+	ntag "BEAUTY:"
 	text "Pleased to meet"
 	line "you. My hobby is"
 	cont "#MON training."
 	done
 
 BeautyVictoriaBeatenText:
+	ntag "VICTORIA:"
 	text "Oh!"
 	line "Splendid!"
 	done
 
 BeautyVictoriaAfterBattleText:
+	ntag "BEAUTY:"
 	text "I have a blind"
 	line "date coming up."
 	cont "I have to learn"
@@ -191,6 +194,7 @@ TrainerCooltrainerFGwen:
 	end
 
 CooltrainerFGwenSeenText:
+	ntag "COOLTRAINER:"
 	text "Welcome to"
 	line "CELADON GYM!"
 
@@ -200,11 +204,13 @@ CooltrainerFGwenSeenText:
 	done
 
 CooltrainerFGwenBeatenText:
+	ntag "GWEN:"
 	text "Oh!"
 	line "Beaten!"
 	done
 
 CooltrainerFGwenAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "I didn't bring my"
 	line "best #MON!"
 
@@ -223,17 +229,20 @@ TrainerLassCora:
 	end
 
 LassCoraSeenText:
+	ntag "LASS:"
 	text "Don't bring any"
 	line "bugs or fire"
 	cont "#MON in here!"
 	done
 
 LassCoraBeatenText:
+	ntag "CORA:"
 	text "Oh!"
 	line "You!"
 	done
 
 LassCoraAfterBattleText:
+	ntag "LASS:"
 	text "Our LEADER, ERIKA,"
 	line "might be quiet,"
 	cont "but she's also"
@@ -251,6 +260,7 @@ TrainerBeautySteph:
 	end
 
 BeautyStephSeenText:
+	ntag "BEAUTY:"
 	text "Look at my grass"
 	line "#MON!"
 
@@ -259,10 +269,12 @@ BeautyStephSeenText:
 	done
 
 BeautyStephBeatenText:
+	ntag "STEPH:"
 	text "No!"
 	done
 
 BeautyStephAfterBattleText:
+	ntag "BEAUTY:"
 	text "We only use grass-"
 	line "type #MON at"
 	cont "our GYM!"
@@ -283,16 +295,19 @@ TrainerPicnickerSharon:
 	end
 
 PicnickerSharonSeenText:
+	ntag "PICNICKER:"
 	text "Aren't you the"
 	line "peeping Tom?"
 	done
 
 PicnickerSharonBeatenText:
+	ntag "SHARON:"
 	text "I'm"
 	line "in shock!"
 	done
 
 PicnickerSharonAfterBattleText:
+	ntag "PICNICKER:"
 	text "Oh, you weren't"
 	line "peeping? We get a"
 	cont "lot of gawkers!"
@@ -309,16 +324,19 @@ TrainerBeautyJulia:
 	end
 
 BeautyJuliaSeenText:
+	ntag "BEAUTY:"
 	text "I was getting"
 	line "bored."
 	done
 
 BeautyJuliaBeatenText:
+	ntag "JULIA:"
 	text "My"
 	line "makeup!"
 	done
 
 BeautyJuliaAfterBattleText:
+	ntag "BEAUTY:"
 	text "Grass-type #MON"
 	line "are tough against"
 	cont "the water-type!"
@@ -339,6 +357,7 @@ TrainerLassZoey:
 	end
 
 LassZoeySeenText:
+	ntag "LASS:"
 	text "Hey!"
 
 	para "You are not"
@@ -346,11 +365,13 @@ LassZoeySeenText:
 	done
 
 LassZoeyBeatenText:
+	ntag "ZOEY:"
 	text "You're"
 	line "too rough!"
 	done
 
 LassZoeyAfterBattleText:
+	ntag "LASS:"
 	text "Bleaah!"
 	line "I hope ERIKA"
 	cont "wipes you out!"

@@ -18,6 +18,7 @@ CianwoodLugiaSpeechHouseBookshelf:
 	jumpstd PictureBookshelfScript
 
 CianwoodLugiaSpeechHouseTeacherText:
+	ntag "WOMAN:"
 	text "You came from"
 	line "OLIVINE?"
 
@@ -32,6 +33,7 @@ CianwoodLugiaSpeechHouseTeacherText:
 	done
 
 CianwoodLugiaSpeechHouseLassText:
+	ntag "LASS:"
 	text "I heard that you"
 	line "can only see it if"
 	cont "you have a SILVER"
@@ -43,6 +45,7 @@ CianwoodLugiaSpeechHouseLassText:
 	done
 
 CianwoodLugiaSpeechHouseTwinText:
+	ntag "GIRL:"
 	text "I've heard that"
 	line "the whirlpools"
 	cont "around the islands"

@@ -8,6 +8,7 @@ SafariRestHouseArea4_MapScripts:
 SafariRestHouseArea4CooltrainerM:
 	jumptextfaceplayer SafariRestHouseArea4CooltrainerMText
 SafariRestHouseArea4CooltrainerMText:
+	ntag "TRAINER:"
 	text "Using BAIT will"
 	line "make #MON less"
 	cont "likely to flee."
@@ -16,6 +17,7 @@ SafariRestHouseArea4CooltrainerMText:
 SafariRestHouseArea4SuperNerd:
 	jumptextfaceplayer SafariRestHouseArea4SuperNerdText
 SafariRestHouseArea4SuperNerdText:
+	ntag "SUPERNERD:"
 	text "I hiked a lot, but"
 	line "I didn't see any"
 	cont "#MON I wanted."
@@ -24,6 +26,7 @@ SafariRestHouseArea4SuperNerdText:
 SafariRestHouseArea4Scientist:
 	jumptextfaceplayer SafariRestHouseArea4ScientistText
 SafariRestHouseArea4ScientistText:
+	ntag "SCIENTIST:"
 	text "Tossing ROCKs at"
 	line "#MON makes them"
 	cont "easier to catch,"

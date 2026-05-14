@@ -29,16 +29,19 @@ TrainerLassAlice:
 	end
 
 LassAliceSeenText:
+	ntag "LASS:"
 	text "I came to get my"
 	line "mushroom #MON!"
 	done
 
 LassAliceBeatenText:
+	ntag "ALICE:"
 	text "Oh! My cute"
 	line "mushroom #MON!"
 	done
 
 LassAliceAfterBattleText:
+	ntag "LASS:"
 	text "There might not"
 	line "be any more"
 	cont "mushrooms here."
@@ -70,10 +73,12 @@ Route4HeadbuttGuy:
 	jumptextfaceplayer Route4HeadbuttGuyAfterText
 
 Route4HeadbuttGuyOuchText:
+	ntag "GUY:"
 	text "Ow!"
 	done
 
 Route4HeadbuttGuyIntroText:
+	ntag "GUY:"
 	text "This rock is"
 	line "blocking the path."
 
@@ -89,6 +94,7 @@ Route4HeadbuttGuyIntroText:
 	done
 
 Route4HeadbuttGuyOutroText:
+	ntag "GUY:"
 	text "Some of your #-"
 	line "MON should be able"
 	cont "to HEADBUTT trees,"
@@ -97,6 +103,7 @@ Route4HeadbuttGuyOutroText:
 	done
 
 Route4HeadbuttGuyAfterText:
+	ntag "GUY:"
 	text "I have a headache…"
 
 	para "Don't use HEADBUTT"

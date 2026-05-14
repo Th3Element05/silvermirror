@@ -105,6 +105,7 @@ AzaleaTownKurtText3:
 AzaleaTownYoungsterScript:
 	jumptextfaceplayer AzaleaTownYoungsterText
 AzaleaTownYoungsterText:
+	ntag "YOUNGSTER:"
 	text "AZALEA is a quiet"
 	line "town."
 
@@ -116,6 +117,7 @@ AzaleaTownYoungsterText:
 AzaleaTownGrampsScript:
 	jumptextfaceplayer AzaleaTownGrampsText
 AzaleaTownGrampsText:
+	ntag "GRAMPS:"
 	text "There is a cave"
 	line "near here called"
 	cont "SLOWPOKE WELL."
@@ -128,6 +130,7 @@ AzaleaTownGrampsText:
 AzaleaTownTeacherScript:
 	jumptextfaceplayer AzaleaTownTeacherText
 AzaleaTownTeacherText:
+	ntag "TEACHER:"
 	text "Did you come to"
 	line "get KURT to make"
 	cont "some BALLs?"

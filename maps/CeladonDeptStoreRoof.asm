@@ -262,21 +262,25 @@ CeladonDeptStoreRoofGirlScript:
 	end
 
 CeladonDeptStoreRoofGirlText:
+	ntag "GIRL:"
 	text "I'm thirsty! Do"
 	line "Do you have any-"
 	cont "thing to drink?"
 	done
 
 CeladonDeptStoreRoofNoYouDontText:
+	ntag "GIRL:"
 	text "No you don't!"
 	done
 
 CeladonDeptStoreRoofTooBadText:
+	ntag "GIRL:"
 	text "Oh."
 	line "That's too bad."
 	done
 
 CeladonDeptStoreRoofCanHaveText:
+	ntag "GIRL:"
 	text "I can have this"
 	line "@"
 	text_ram wStringBuffer3
@@ -284,6 +288,7 @@ CeladonDeptStoreRoofCanHaveText:
 	done
 
 CeladonDeptStoreRoofGaveDrinkText:
+	ntag "GIRL:"
 	text "Yay!"
 	line "@"
 	text_ram wStringBuffer3
@@ -302,6 +307,7 @@ CeladonDeptStoreRoofGaveDrinkText:
 ;	done
 
 CeladonDeptStoreRoofSandstormText:
+	ntag "GIRL:"
 	text "Thanks!"
 	
 	para "FRESH WATER would"
@@ -320,6 +326,7 @@ CeladonDeptStoreRoofSandstormText:
 ;	done
 
 CeladonDeptStoreRoofRainDanceText:
+	ntag "GIRL:"
 	text "Yay! SODA POP!"
 
 	para "Fizzy drinks"
@@ -340,6 +347,7 @@ CeladonDeptStoreRoofRainDanceText:
 ;	done
 
 CeladonDeptStoreRoofSunnyDayText:
+	ntag "GIRL:"
 	text "LEMONADE is such"
 	line "a pretty color!"
 	
@@ -350,6 +358,7 @@ CeladonDeptStoreRoofSunnyDayText:
 	done
 
 CeladonDeptStoreRoofNoThanksText:
+	ntag "GIRL:"
 	text "No, thank you!"
 	line "I'm not thirsty"
 	cont "after all!"
@@ -358,6 +367,7 @@ CeladonDeptStoreRoofNoThanksText:
 CeladonDeptStoreRoofSuperNerdScript:
 	jumptextfaceplayer CeladonDeptStoreRoofSuperNerdText
 CeladonDeptStoreRoofSuperNerdText:
+	ntag "SUPERNERD:"
 	text "My sister is a"
 	line "trainer, believe"
 	cont "it or not."

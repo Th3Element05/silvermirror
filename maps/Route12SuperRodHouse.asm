@@ -49,6 +49,7 @@ SuperRodHouseBookshelf: ; unreferenced
 	jumpstd PictureBookshelfScript
 
 OfferSuperRodText:
+	ntag "FISHERMAN:"
 	text "I'm the FISHING"
 	line "GURU's brother!"
 
@@ -60,6 +61,7 @@ OfferSuperRodText:
 	done
 
 GiveSuperRodText:
+	ntag "FISHERMAN:"
 	text "Grand! I like"
 	line "your style!"
 
@@ -68,6 +70,7 @@ GiveSuperRodText:
 	done
 
 GaveSuperRodText:
+	ntag "FISHERMAN:"
 	text "Fishing is a way"
 	line "of life!"
 
@@ -78,11 +81,13 @@ GaveSuperRodText:
 	done
 
 DontWantSuperRodText:
+	ntag "FISHERMAN:"
 	text "Oh… That's so"
 	line "disappointing…"
 	done
 
 Route12SuperRodHouseTryFishingText:
+	ntag "FISHERMAN:"
 	text "Hello there,"
 	line "<PLAYER>!"
 

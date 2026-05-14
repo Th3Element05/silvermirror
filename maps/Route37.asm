@@ -192,6 +192,7 @@ TrainerPsychicMark:
 	end
 
 PsychicMarkSeenText:
+	ntag "PSYCHIC:"
 	text "#MON can't do a"
 	line "thing if they are"
 	cont "asleep."
@@ -201,11 +202,13 @@ PsychicMarkSeenText:
 	done
 
 PsychicMarkBeatenText:
+	ntag "MARK:"
 	text "I lost. That's"
 	line "pretty sad…"
 	done
 
 PsychicMarkAfterBattleText:
+	ntag "PSYCHIC:"
 	text "Putting #MON to"
 	line "sleep or paralyz-"
 	cont "ing them are good"
@@ -233,27 +236,32 @@ TrainerTwinsAnnandanne2:
 	end
 
 TwinsAnnandanne1SeenText:
+	ntag "TWIN:"
 	text "ANNE and I are in"
 	line "this together!"
 	done
 
 TwinsAnnandanne2SeenText:
+	ntag "TWIN:"
 	text "ANN and I are in"
 	line "this together!"
 	done
 
 TwinsAnnandanneBeatenText:
+	ntag "ANN&ANNE:"
 	text "Nnn… A little too"
 	line "strong."
 	done
 
 TwinsAnnandanne1AfterBattleText:
+	ntag "TWIN:"
 	text "I can tell what my"
 	line "sister and #MON"
 	cont "are thinking."
 	done
 
 TwinsAnnandanne2AfterBattleText:
+	ntag "TWIN:"
 	text "We share the same"
 	line "feelings as our"
 	cont "#MON."

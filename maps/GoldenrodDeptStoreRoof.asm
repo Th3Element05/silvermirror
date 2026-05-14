@@ -46,6 +46,7 @@ GoldenrodDeptStoreRoofClerkScript:
 GoldenrodDeptStoreRoofPokefanFScript:
 	jumptextfaceplayer GoldenrodDeptStoreRoofPokefanFText
 GoldenrodDeptStoreRoofPokefanFText:
+	ntag "WOMAN:"
 	text "Whew, I'm tired."
 
 	para "I sometimes come"
@@ -64,6 +65,7 @@ GoldenrodDeptStoreRoofFisherScript:
 	end
 
 GoldenrodDeptStoreRoofFisherText:
+	ntag "COLLECTOR:"
 	text "Pardon? Who says"
 	line "an adult can't get"
 	cont "into this?"
@@ -77,6 +79,7 @@ GoldenrodDeptStoreRoofFisherText:
 GoldenrodDeptStoreRoofTwinScript:
 	jumptextfaceplayer GoldenrodDeptStoreRoofTwinText
 GoldenrodDeptStoreRoofTwinText:
+	ntag "GIRL:"
 	text "They have bargain"
 	line "sales here every"
 	cont "so often."
@@ -96,10 +99,12 @@ GoldenrodDeptStoreRoofSuperNerdScript:
 	end
 
 GoldenrodDeptStoreRoofSuperNerdOhWowText:
+	ntag "SUPERNERD:"
 	text "Oh, wow!"
 	done
 
 GoldenrodDeptStoreRoofSuperNerdQuitBotheringMeText:
+	ntag "SUPERNERD:"
 	text "Will you quit"
 	line "bothering me?"
 	done
@@ -107,6 +112,7 @@ GoldenrodDeptStoreRoofSuperNerdQuitBotheringMeText:
 GoldenrodDeptStoreRoofPokefanMScript:
 	jumptextfaceplayer GoldenrodDeptStoreRoofPokefanMText
 GoldenrodDeptStoreRoofPokefanMText:
+	ntag "MAN:"
 	text "There's something"
 	line "I really want,"
 	cont "but I don't have"
@@ -120,6 +126,7 @@ GoldenrodDeptStoreRoofPokefanMText:
 GoldenrodDeptStoreRoofTeacherScript:
 	jumptextfaceplayer GoldenrodDeptStoreRoofTeacherText
 GoldenrodDeptStoreRoofTeacherText:
+	ntag "LADY:"
 	text "Oh, everything is"
 	line "so cheap!"
 
@@ -130,6 +137,7 @@ GoldenrodDeptStoreRoofTeacherText:
 GoldenrodDeptStoreRoofBugCatcherScript:
 	jumptextfaceplayer GoldenrodDeptStoreRoofBugCatcherText
 GoldenrodDeptStoreRoofBugCatcherText:
+	ntag "BOY:"
 	text "My #MON always"
 	line "get paralyzed or"
 	cont "poisoned…"
@@ -318,4 +326,3 @@ GoldenrodDeptStoreRoof_MapEvents:
 	object_event  7,  4, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStoreRoofPokefanFScript, EVENT_GOLDENROD_SALE_ON
 ;always
 	object_event  8,  2, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStoreRoofFisherScript, -1
-

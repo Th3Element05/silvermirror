@@ -30,6 +30,7 @@ PokemonTower5FLeaveAuraScript:
 PokemonTower5FSafeMediumScript:
 	jumptextfaceplayer PokemonTower5FSafeMediumText
 PokemonTower5FSafeMediumText:
+	ntag "MEDIUM:"
 	text "Come, child! I"
 	line "sealed this space"
 	cont "with white magic!"
@@ -48,16 +49,18 @@ TrainerMediumDoris:
 	end
 
 MediumDorisSeenText:
+	ntag "MEDIUM:"
 	text "You… shall…"
 	line "join… us…"
 	done
 
 MediumDorisBeatenText:
-	text "What a"
-	line "nightmare!"
+	ntag "DORIS:"
+	text "What a nightmare!"
 	done
 
 MediumDorisAfterBattleText:
+	ntag "MEDIUM:"
 	text "I was possessed!"
 	done
 
@@ -72,15 +75,18 @@ TrainerMediumJade:
 	end
 
 MediumJadeSeenText:
+	ntag "MEDIUM:"
 	text "Give… me…"
 	line "your… soul…"
 	done
 
 MediumJadeBeatenText:
-	text "Gasp!"
+	ntag "JADE:"
+	text "…Gasp!"
 	done
 
 MediumJadeAfterBattleText:
+	ntag "MEDIUM:"
 	text "I was under"
 	line "possession!"
 	done
@@ -96,14 +102,17 @@ TrainerMediumLydia:
 	end
 
 MediumLydiaSeenText:
+	ntag "MEDIUM:"
 	text "Zombies!"
 	done
 
 MediumLydiaBeatenText:
+	ntag "LYDIA:"
 	text "Ha?"
 	done
 
 MediumLydiaAfterBattleText:
+	ntag "MEDIUM:"
 	text "I regained my"
 	line "senses!"
 	done
@@ -119,15 +128,18 @@ TrainerMediumDelilah:
 	end
 
 MediumDelilahSeenText:
+	ntag "MEDIUM:"
 	text "Urgah…"
 	line "Urff…"
 	done
 
 MediumDelilahBeatenText:
+	ntag "DELILAH:"
 	text "Whoo!"
 	done
 
 MediumDelilahAfterBattleText:
+	ntag "MEDIUM:"
 	text "I fell to evil"
 	line "spirits despite"
 	cont "my training!"

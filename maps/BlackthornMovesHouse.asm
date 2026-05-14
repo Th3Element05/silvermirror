@@ -11,7 +11,6 @@ BlackthornMoveDeleter:
 	special MoveDeletion
 	waitbutton
 	closetext
-	giveitem SILVER_LEAF
 	end
 
 BlackthornMoveReminder:
@@ -133,6 +132,7 @@ BothLeavesMenuDataHeader:
 	db "CANCEL@"
 
 BlackthornMovesHouse_MoveReminderIntroText:
+	ntag "COLLECTOR:"
 	text "Hi, I'm the"
 	line "MOVE REMINDER!"
 
@@ -177,11 +177,13 @@ BlackthornMovesHouse_MoveReminderIntroText:
 ;	done
 
 BlackthornMovesHouse_MoveReminderCancelText:
+	ntag "COLLECTOR:"
 	text "Come visit me"
 	line "again."
 	done
 
 BlackthornMovesHouse_MoveReminderNoLeavesText:
+	ntag "COLLECTOR:"
 	text "You don't have any"
 	line "SILVER LEAVES or"
 	cont "GOLD LEAVES."
@@ -202,6 +204,7 @@ BlackthornMovesHouse_MoveReminderNoLeavesText:
 ;	done
 
 BlackthornMovesHouse_GiveMeWhatText:
+	ntag "COLLECTOR:"
 	text "What are you going"
 	line "to give me?"
 	done

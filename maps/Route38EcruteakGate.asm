@@ -10,6 +10,7 @@ Route38EcruteakGateOfficerScript:
 	jumptextfaceplayer Route38EcruteakGateOfficerText
 
 Route38EcruteakGateOfficerText:
+	ntag "OFFICER:"
 	text "Where did you say"
 	line "you're from?"
 

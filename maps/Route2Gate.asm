@@ -139,6 +139,7 @@ Route2GateOaksAideFlashExplainText:
 Route2GateOfficerScript:
 	jumptext Route2GateOfficerScriptText
 Route2GateOfficerScriptText:
+	ntag "OFFICER:"
 	text "You'll need FLASH"
 	line "to get through"
 	cont "ROCK TUNNEL."

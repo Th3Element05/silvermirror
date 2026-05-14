@@ -14,6 +14,7 @@ FuchsiaPokecenter1FReceptionistScript:
 FuchsiaPokecenter1FBenchGuyScript:
 	jumptext FuchsiaPokecenter1FBenchGuyText
 FuchsiaPokecenter1FBenchGuyText:
+	ntag "GUY:"
 	text "If you're studying "
 	line "#MON, visit"
 	cont "the SAFARI ZONE."
@@ -25,6 +26,7 @@ FuchsiaPokecenter1FBenchGuyText:
 FuchsiaPokecenter1FRockerScript:
 	jumptextfaceplayer FuchsiaPokecenter1FRockerText
 FuchsiaPokecenter1FRockerText:
+	ntag "ROCKER:"
 	text "You can't win"
 	line "with just one"
 	cont "strong #MON."
@@ -37,6 +39,7 @@ FuchsiaPokecenter1FRockerText:
 FuchsiaPokecenter1FCooltrainerFScript:
 	jumptextfaceplayer FuchsiaPokecenter1FCooltrainerFText
 FuchsiaPokecenter1FCooltrainerFText:
+	ntag "TRAINER:"
 	text "There's a route"
 	line "to the west of"
 	cont "VIRIDIAN CITY."

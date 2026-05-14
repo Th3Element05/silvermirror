@@ -1,28 +1,14 @@
 	object_const_def
-	const GOLDENRODPPSPEECHHOUSE_FISHER
-	const GOLDENRODPPSPEECHHOUSE_LASS
 
 GoldenrodPPSpeechHouse_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
 
-GoldenrodPPSpeechHouseFisherScript:
-	jumptextfaceplayer GoldenrodPPSpeechHouseFisherText
-
-GoldenrodPPSpeechHouseLassScript:
-	jumptextfaceplayer GoldenrodPPSpeechHouseLassText
-
-GoldenrodPPSpeechHouseBookshelf2:
-	jumpstd DifficultBookshelfScript
-
-GoldenrodPPSpeechHouseBookshelf1:
-	jumpstd MagazineBookshelfScript
-
-GoldenrodPPSpeechHouseRadio:
-	jumpstd Radio2Script
-
-GoldenrodPPSpeechHouseFisherText:
+GoldenrodPPSpeechHousePokefanMScript:
+	jumptextfaceplayer GoldenrodPPSpeechHousePokefanMText
+GoldenrodPPSpeechHousePokefanMText:
+	ntag "#FAN:"
 	text "Once while I was"
 	line "battling, my"
 	cont "#MON couldn't"
@@ -34,7 +20,10 @@ GoldenrodPPSpeechHouseFisherText:
 	roll "gone."
 	done
 
+GoldenrodPPSpeechHouseLassScript:
+	jumptextfaceplayer GoldenrodPPSpeechHouseLassText
 GoldenrodPPSpeechHouseLassText:
+	ntag "LASS:"
 	text "Sometimes, a"
 	line "healthy #MON"
 	cont "may be unable to"
@@ -45,6 +34,16 @@ GoldenrodPPSpeechHouseLassText:
 	cont "MON CENTER or use"
 	roll "an item."
 	done
+
+GoldenrodPPSpeechHouseBookshelf2:
+	jumpstd DifficultBookshelfScript
+
+GoldenrodPPSpeechHouseBookshelf1:
+	jumpstd MagazineBookshelfScript
+
+GoldenrodPPSpeechHouseRadio:
+	jumpstd Radio2Script
+
 
 GoldenrodPPSpeechHouse_MapEvents:
 	db 0, 0 ; filler
@@ -61,5 +60,5 @@ GoldenrodPPSpeechHouse_MapEvents:
 	bg_event  7,  1, BGEVENT_READ, GoldenrodPPSpeechHouseRadio
 
 	def_object_events
-	object_event  2,  4, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodPPSpeechHouseFisherScript, -1
+	object_event  2,  4, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodPPSpeechHousePokefanMScript, -1
 	object_event  5,  3, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodPPSpeechHouseLassScript, -1

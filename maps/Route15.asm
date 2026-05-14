@@ -13,15 +13,18 @@ TrainerPicnickerMaria:
 	jumptextfaceplayer PicnickerMariaAfterBattleText
 
 PicnickerMariaSeenText:
+	ntag "PICNICKER:"
 	text "What's cool?"
 	line "Trading #MON!"
 	done
 
 PicnickerMariaBeatenText:
+	ntag "MARIA:"
 	text "I said trade!"
 	done
 
 PicnickerMariaAfterBattleText:
+	ntag "PICNICKER:"
 	text "I trade #MON"
 	line "with my friends!"
 	done
@@ -34,16 +37,19 @@ TrainerPicnickerLucy:
 	jumptextfaceplayer PicnickerLucyAfterBattleText
 
 PicnickerLucySeenText:
+	ntag "PICNICKER:"
 	text "Want to play with"
 	line "my #MON?"
 	done
 
 PicnickerLucyBeatenText:
+	ntag "LUCY:"
 	text "I was too"
 	line "impatient!"
 	done
 
 PicnickerLucyAfterBattleText:
+	ntag "PICNICKER:"
 	text "I'll go train with"
 	line "weaker people."
 	done
@@ -56,17 +62,20 @@ TrainerBirdKeeperBoris:
 	jumptextfaceplayer BirdKeeperBorisAfterBattleText
 
 BirdKeeperBorisSeenText:
+	ntag "BIRDKEEPER:"
 	text "When I whistle, I"
 	line "can summon bird"
 	cont "#MON!"
 	done
 
 BirdKeeperBorisBeatenText:
+	ntag "BORIS:"
 	text "Ow!"
 	line "That's tragic!"
 	done
 
 BirdKeeperBorisAfterBattleText:
+	ntag "BIRDKEEPER:"
 	text "Maybe I'm not cut"
 	line "out for battles."
 	done
@@ -79,16 +88,19 @@ TrainerBirdKeeperBob:
 	jumptextfaceplayer BirdKeeperBobAfterBattleText
 
 BirdKeeperBobSeenText:
+	ntag "BIRDKEEPER:"
 	text "Hmm? My birds are"
 	line "shivering! You're"
 	cont "good, aren't you?"
 	done
 
 BirdKeeperBobBeatenText:
+	ntag "BOB:"
 	text "Just as I thought!"
 	done
 
 BirdKeeperBobAfterBattleText:
+	ntag "BIRDKEEPER:"
 	text "Did you know moves"
 	line "like EARTHQUAKE"
 	cont "don't have any"
@@ -103,17 +115,20 @@ TrainerBeautyValerie:
 	jumptextfaceplayer BeautyValerieAfterBattleText
 
 BeautyValerieSeenText:
+	ntag "BEAUTY:"
 	text "I raise #MON"
 	line "because I live"
 	cont "alone!"
 	done
 
 BeautyValerieBeatenText:
+	ntag "VALERIE:"
 	text "I didn't ask for"
 	line "this!"
 	done
 
 BeautyValerieAfterBattleText:
+	ntag "BEAUTY:"
 	text "I just like going"
 	line "home to be with"
 	cont "my #MON!"
@@ -127,16 +142,19 @@ TrainerPicnickerCarrie:
 	jumptextfaceplayer PicnickerCarrieAfterBattleText
 
 PicnickerCarrieSeenText:
+	ntag "PICNICKER:"
 	text "Let me try out the"
 	line "#MON I just"
 	cont "got in a trade!"
 	done
 
 PicnickerCarrieBeatenText:
+	ntag "CARRIE:"
 	text "Not good enough!"
 	done
 
 PicnickerCarrieAfterBattleText:
+	ntag "PICNICKER:"
 	text "You can't change"
 	line "the nickname of"
 	cont "any #MON you"
@@ -154,16 +172,19 @@ TrainerBikerJoel:
 	jumptextfaceplayer BikerJoelAfterBattleText
 
 BikerJoelSeenText:
+	ntag "BIKER:"
 	text "Fork over all your"
 	line "cash when you"
 	cont "lose to me, kid!"
 	done
 
 BikerJoelBeatenText:
+	ntag "JOEL:"
 	text "This can't be!"
 	done
 
 BikerJoelAfterBattleText:
+	ntag "BIKER:"
 	text "I was just joking"
 	line "about the money!"
 	done
@@ -176,15 +197,18 @@ TrainerBikerGlenn:
 	jumptextfaceplayer BikerGlennAfterBattleText
 
 BikerGlennSeenText:
+	ntag "BIKER:"
 	text "Hey kid! C'mon!"
 	line "I just got these!"
 	done
 
 BikerGlennBeatenText:
+	ntag "GLENN:"
 	text "Why not?"
 	done
 
 BikerGlennAfterBattleText:
+	ntag "BIKER:"
 	text "You only live"
 	line "once, so I live"
 	cont "as an outlaw!"
@@ -304,16 +328,19 @@ TrainerPicnickerTiffany:
 	end
 
 PicnickerTiffanySeenText:
+	ntag "PICNICKER:"
 	text "You look gentle,"
 	line "so I think I can"
 	cont "beat you!"
 	done
 
 PicnickerTiffanyBeatenText:
+	ntag "TIFFANY:"
 	text "No, wrong!"
 	done
 
 PicnickerTiffanyAfterBattleText:
+	ntag "TIFFANY:"
 	text "I'm afraid of"
 	line "BIKERs, they look"
 	cont "so ugly and mean!"
@@ -327,16 +354,19 @@ TrainerBeautyOlivia:
 	jumptextfaceplayer BeautyOliviaAfterBattleText
 
 BeautyOliviaSeenText:
+	ntag "BEAUTY:"
 	text "Oh, you're a"
 	line "little cutie!"
 	done
 
 BeautyOliviaBeatenText:
+	ntag "OLIVIA:"
 	text "You looked so"
 	line "cute too!"
 	done
 
 BeautyOliviaAfterBattleText:
+	ntag "BEAUTY:"
 	text "I forgive you!"
 	line "I can take it!"
 	done

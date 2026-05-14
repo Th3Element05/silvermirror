@@ -154,7 +154,6 @@ RadioTower5FDirectorThankYouText:
 DJBen:
 	jumptextfaceplayer BenText
 BenText:
-	ntag "DJ BEN:"
 	ntag "BEN:"
 	text "Do you listen to"
 	line "our music?"

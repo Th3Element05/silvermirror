@@ -237,7 +237,7 @@ SilphCo7FLaprasGiftScript:
 	jumptextfaceplayer SilphCo7FClerkSavedText
 
 SilphCo7FGiveLaprasText:
-;	ntag "MAN:"
+	ntag "MAN:"
 	text "Oh! Hi! You're"
 	line "not a ROCKET! You"
 	cont "came to save us?"
@@ -255,7 +255,7 @@ SilphCo7FReceivedLaprasText:
 	done
 
 SilphCo7FExplainLaprasText:
-;	ntag "MAN:"
+	ntag "MAN:"
 	text "It's LAPRAS. It's"
 	line "very intelligent."
 
@@ -270,7 +270,7 @@ SilphCo7FExplainLaprasText:
 	done
 
 SilphCo7FClerkText:
-;	ntag "MAN:"
+	ntag "MAN:"
 	text "TEAM ROCKET's"
 	line "BOSS went to the"
 	cont "boardroom! Is our"
@@ -278,7 +278,7 @@ SilphCo7FClerkText:
 	done
 
 SilphCo7FClerkSavedText:
-;	ntag "MAN:"
+	ntag "MAN:"
 	text "Saved at last!"
 	line "Thank you!"
 	done
@@ -291,6 +291,7 @@ SilphCo7FReceptionist:
 	jumptextfaceplayer SilphCo7FReceptionistSavedText
 
 SilphCo7FReceptionistText:
+	ntag "GIRL:"
 	text "You! It's really"
 	line "dangerous here!"
 
@@ -299,6 +300,7 @@ SilphCo7FReceptionistText:
 	done
 
 SilphCo7FReceptionistSavedText:
+	ntag "GIRL:"
 	text "Safe at last!"
 	line "Oh thank you!"
 	done
@@ -311,6 +313,7 @@ SilphCo7FClerk1:
 	jumptextfaceplayer SilphCo7FClerk1SavedText
 
 SilphCo7FClerk1Text:
+	ntag "MAN:"
 	text "TEAM ROCKET was"
 	line "after the MASTER"
 	cont "BALL which will"
@@ -318,6 +321,7 @@ SilphCo7FClerk1Text:
 	done
 
 SilphCo7FClerk1SavedText:
+	ntag "MAN:"
 	text "We canceled the"
 	line "MASTER BALL"
 	cont "project because"
@@ -332,6 +336,7 @@ SilphCo7FClerk2:
 	jumptextfaceplayer SilphCo7FClerk2SavedText
 
 SilphCo7FClerk2Text:
+	ntag "MAN:"
 	text "It would be bad"
 	line "if TEAM ROCKET"
 	cont "took over SILPH"
@@ -339,6 +344,7 @@ SilphCo7FClerk2Text:
 	done
 
 SilphCo7FClerk2SavedText:
+	ntag "MAN:"
 	text "Wow! You chased"
 	line "off TEAM ROCKET"
 	cont "all by yourself?"
@@ -355,15 +361,18 @@ TrainerRocketGruntM23:
 	end
 
 GruntM23SeenText:
+	ntag "ROCKET:"
 	text "Oh ho! I smell a"
 	line "little rat!"
 	done
 
 GruntM23BeatenText:
+	ntag "ROCKET:"
 	text "Lights out!"
 	done
 
 GruntM23AfterBattleText:
+	ntag "ROCKET:"
 	text "You won't find my"
 	line "BOSS by just"
 	cont "scurrying around!"
@@ -380,16 +389,19 @@ TrainerRocketGruntF7:
 	end
 
 GruntF7SeenText:
+	ntag "ROCKET:"
 	text "A child intruder?"
 	line "That must be you!"
 	done
 
 GruntF7BeatenText:
+	ntag "ROCKET:"
 	text "Fine!"
 	line "I lost!"
 	done
 
 GruntF7AfterBattleText:
+	ntag "ROCKET:"
 	text "Go on home"
 	line "before my BOSS"
 	cont "gets ticked off!"
@@ -406,6 +418,7 @@ TrainerScientistDannie:
 	end
 
 ScientistDannieSeenText:
+	ntag "SCIENTIST:"
 	text "Heheh!"
 
 	para "You mistook me for"
@@ -413,10 +426,12 @@ ScientistDannieSeenText:
 	done
 
 ScientistDannieBeatenText:
+	ntag "DANNIE:"
 	text "I'm done!"
 	done
 
 ScientistDannieAfterBattleText:
+	ntag "SCIENTIST:"
 	text "Despite your age,"
 	line "you are a skilled"
 	cont "trainer!"
@@ -433,16 +448,19 @@ TrainerRocketGruntM24:
 	end
 
 GruntM24SeenText:
+	ntag "ROCKET:"
 	text "I am one of four"
 	line "ROCKET BROTHERS!"
 	done
 
 GruntM24BeatenText:
+	ntag "ROCKET:"
 	text "Aack!"
 	line "Brothers, I lost!"
 	done
 
 GruntM24AfterBattleText:
+	ntag "ROCKET:"
 	text "Doesn't matter."
 	line "My brothers will"
 	cont "repay the favor!"

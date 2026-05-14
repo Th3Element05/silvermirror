@@ -77,11 +77,10 @@ LoreleisRoom_EnterMovement:
 	step_end
 
 LoreleiScript_LoreleiBeforeText:
-	text "Welcome to"
-	line "#MON LEAGUE!@"
-
-	text_promptbutton
 	ntag "LORELEI:"
+	text "Welcome to"
+	line "#MON LEAGUE!"
+
 	para "I am LORELEI of"
 	line "the ELITE FOUR!"
 

@@ -107,6 +107,7 @@ BlackthornCityFlypointCallback:
 BlackthornGramps1Script:
 	jumptextfaceplayer BlackthornGrampsRefusesEntryText
 BlackthornGrampsRefusesEntryText:
+	ntag "ELDER:"
 	text "No. Only chosen"
 	line "trainers may enter"
 	cont "the DRAGON's DEN."
@@ -122,6 +123,7 @@ BlackthornGrampsGrantsEntryText:
 ;	cont "father--our MASTER"
 ;	cont "--will also."
 ;
+	ntag "ELDER:"
 	text "CLAIR has granted"
 	line "you permission."
 
@@ -153,6 +155,7 @@ BlackthornSuperNerdScript:
 	end
 
 Text_ClairIsOut:
+	ntag "SUPERNERD:"
 	text "Our LEADER isn't"
 	line "here right now."
 
@@ -178,6 +181,7 @@ Text_ClairIsOut:
 ;	done
 
 Text_ClairIsIn:
+	ntag "SUPERNERD:"
 	text "CLAIR, our GYM"
 	line "LEADER, is waiting"
 	cont "for you."
@@ -189,6 +193,7 @@ Text_ClairIsIn:
 	done
 
 Text_ClairIsBeaten:
+	ntag "SUPERNERD:"
 	text "You defeated"
 	line "CLAIR?"
 
@@ -203,6 +208,7 @@ Text_ClairIsBeaten:
 BlackthornYoungsterScript:
 	jumptextfaceplayer BlackthornYoungsterText
 BlackthornYoungsterText:
+	ntag "YOUNGSTER:"
 	text "Dragon masters all"
 	line "come from the city"
 	cont "of BLACKTHORN."
@@ -211,6 +217,7 @@ BlackthornYoungsterText:
 BlackthornBlackBeltScript:
 	jumptextfaceplayer BlackBeltText_VoicesInMyHead
 BlackBeltText_VoicesInMyHead:
+	ntag "BLACKBELT:"
 	text "Arooo! Voices in"
 	line "my head!"
 
@@ -221,6 +228,7 @@ BlackBeltText_VoicesInMyHead:
 BlackthornCooltrainerF1Script:
 	jumptextfaceplayer BlackthornCooltrainerF1Text
 BlackthornCooltrainerF1Text:
+	ntag "TRAINER:"
 	text "Whew, I just came"
 	line "through ICE PATH."
 

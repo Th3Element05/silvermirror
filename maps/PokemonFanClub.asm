@@ -46,6 +46,7 @@ PokemonFanClubChairmanScript:
 PokemonFanClubReceptionistScript:
 	jumptextfaceplayer PokemonFanClubReceptionistText
 PokemonFanClubReceptionistText:
+	ntag "ASSISTANT:"
 	text "Our CHAIRMAN is"
 	line "very vocal when it"
 	cont "comes to #MON…"
@@ -67,6 +68,7 @@ PokemonFanClubPsyduckFanScript:
 	jumptext PokemonFanClubPsyduckFanNormalText
 
 PokemonFanClubPsyduckFanNormalText:
+	ntag "#FAN:"
 	text "I just love my"
 	line "PSYDUCK!"
 
@@ -80,6 +82,7 @@ PokemonFanClubShowPsyduckText:
 	done
 
 PokemonFanClubPsyduckFanBetterText:
+	ntag "#FAN:"
 	text "Oh dear!"
 
 	para "My PSYDUCK is far"
@@ -102,6 +105,7 @@ PokemonFanClubPikachuFanScript:
 	jumptext PokemonFanClubPikachuFanNormalText
 
 PokemonFanClubPikachuFanNormalText:
+	ntag "#FAN:"
 	text "Won't you admire"
 	line "my PIKACHU's"
 	cont "adorable tail?"
@@ -113,6 +117,7 @@ PokemonFanClubShowPikachuText:
 	done
 
 PokemonFanClubPikachuFanBetterText:
+	ntag "#FAN:"
 	text "Humph! My PIKACHU"
 	line "is twice as cute"
 	cont "as that one!"

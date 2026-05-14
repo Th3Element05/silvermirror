@@ -207,16 +207,19 @@ TrainerCooltrainermZane:
 	end
 
 CooltrainermZaneSeenText:
+	ntag "COOLTRAINER:"
 	text "My chance of"
 	line "losing? Not even"
 	cont "one percent!"
 	done
 
 CooltrainermZaneBeatenText:
+	ntag "ZANE:"
 	text "That's odd."
 	done
 
 CooltrainermZaneAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "I know my short-"
 	line "comings now."
 
@@ -235,6 +238,7 @@ TrainerCooltrainerfLayla:
 	end
 
 CooltrainerfLaylaSeenText:
+	ntag "COOLTRAINER:"
 	text "Dragons are sacred"
 	line "#MON."
 
@@ -248,10 +252,12 @@ CooltrainerfLaylaSeenText:
 	done
 
 CooltrainerfLaylaBeatenText:
+	ntag "LAYLA:"
 	text "Way to go!"
 	done
 
 CooltrainerfLaylaAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "Dragons are weak"
 	line "against dragon-"
 	cont "type moves."
@@ -260,6 +266,7 @@ CooltrainerfLaylaAfterBattleText:
 BlackthornGymBlockingCooltrainer:
 	jumptextfaceplayer BlackthornGymBlockingCooltrainer_Text
 BlackthornGymBlockingCooltrainer_Text:
+	ntag "TRAINER:"
 	text "Our LEADER isn't"
 	line "here right now."
 
@@ -296,6 +303,7 @@ BlackthornGymGuideScript:
 	end
 
 BlackthornGymGuideClairOutText:
+	ntag "GUIDE:"
 	text "Yo! CHAMP!"
 
 	para "The GYM LEADER"
@@ -309,6 +317,7 @@ BlackthornGymGuideClairOutText:
 	done
 
 BlackthornGymGuideText:
+	ntag "GUIDE:"
 	text "Yo! CHAMP!"
 
 ;	para "It's been a long"
@@ -327,6 +336,7 @@ BlackthornGymGuideText:
 	done
 
 BlackthornGymGuideWinText:
+	ntag "GUIDE:"
 	text "You were great to"
 	line "beat CLAIR!"
 

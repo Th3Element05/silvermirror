@@ -263,6 +263,7 @@ SSAnne2FCaptainWelcomeBackText:
 SSAnne2FWaiterScript:
 	jumptextfaceplayer SSAnne2FWaiterText
 SSAnne2FWaiterText:
+	ntag "WAITER:"
 	text "This ship, she is"
 	line "a luxury liner"
 	cont "for trainers!"

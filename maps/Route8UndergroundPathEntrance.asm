@@ -8,6 +8,7 @@ Route8UndergroundPathEntrance_MapScripts:
 Route8UndergroundPathEntranceGirlScript:
 	jumptextfaceplayer Route8UndergroundPathEntranceGirlText
 Route8UndergroundPathEntranceGirlText:
+	ntag "GIRL:"
 	text "The dept. store"
 	line "in CELADON has a"
 	cont "great selection!"

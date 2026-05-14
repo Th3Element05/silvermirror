@@ -67,8 +67,7 @@ OakScript:
 	waitsfx
 	promptbutton
 	giveitem POKE_BALL, 5
-	itemnotify
-;
+;	itemnotify
 ;	promptbutton
 ;	verbosegiveitem POKE_BALL, 5
 ;
@@ -864,6 +863,7 @@ OaksLabOakHaveRequestText:
 	para "<PLAYER>, <RIVAL>!"
 	line "Take these with"
 	cont "you!"
+	done
 
 OaksLabGotPokedexText:
 	text "<PLAYER> got a"
@@ -925,11 +925,9 @@ OaksLabOakExplainsPagerText:
 
 	para "But you'll need to"
 	line "get PAGER CARDs"
-	cont "to call them with.@"
-;	cont "to call with it.@"
+	cont "to make use of it.@"
 
 	text_promptbutton
-;	ntag "──────────"
 	ntag "<RIVAL>:"
 	text "Alright, GRAMPS!"
 	line "Leave it all to"
@@ -994,21 +992,22 @@ OaksLabOakGivesPokeballsText:
 	line "them! Use these"
 	cont "to capture wild"
 	roll "#MON."
+	done
 
 OaksLabGetPokeballsText:
 	text "<PLAYER> received"
-	line "#BALLs."
+	line "five #BALLs."
 	done
 
 OaksLabPokeballExplainationText:
 	ntag "PROF.OAK:"
-	text "When a wild #-"
-	line "MON appears, it's"
-	cont "fair game."
+	text "Whenever a wild"
+	line "#MON appears,"
+	cont "it's fair game."
 
-	para "Just throw a #-"
-	line "BALL at it and"
-	cont "try to catch it!"
+	para "Just throw a BALL"
+	line "at it and try to"
+	cont "catch it!"
 
 	para "This won't always"
 	line "work, though."

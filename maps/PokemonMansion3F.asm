@@ -69,15 +69,18 @@ TrainerBurglarEddie:
 	end
 
 BurglarEddieSeenText:
+	ntag "BURGLAR:"
 	text "This place is"
 	line "like, huge!"
 	done
 
 BurglarEddieBeatenText:
+	ntag "EDDIE:"
 	text "Ayah!"
 	done
 
 BurglarEddieAfterBattleText:
+	ntag "BURGLAR:"
 	text "I wonder where"
 	line "my partner went."
 	done
@@ -93,16 +96,19 @@ TrainerScientistDominic:
 	end
 
 ScientistDominicSeenText:
+	ntag "SCIENTIST:"
 	text "My mentor once"
 	line "lived here."
 	done
 
 ScientistDominicBeatenText:
+	ntag "DOMINIC:"
 	text "Whew!"
 	line "Overwhelming!"
 	done
 
 ScientistDominicAfterBattleText:
+	ntag "SCIENTIST:"
 	text "So, you're stuck?"
 	line "Try jumping off"
 	cont "over there!"

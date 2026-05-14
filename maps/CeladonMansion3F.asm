@@ -34,6 +34,7 @@ GameFreakGameDesignerScript:
 	end
 
 GameFreakGameDesignerText:
+	ntag "DESIGNER:"
 	text "I'm the GAME"
 	line "DESIGNER!"
 
@@ -43,6 +44,7 @@ GameFreakGameDesignerText:
 	done
 
 GameFreakGameDesignerCompletedPokedexText:
+	ntag "DESIGNER:"
 	text "Wow! Excellent!"
 	line "You completed your"
 	cont "#DEX!"
@@ -58,6 +60,7 @@ GameFreakGameDesignerPauseForDiplomaText:
 	done
 
 GameFreakGameDesignerAfterDiplomaText:
+	ntag "DESIGNER:"
 ;	text "The GRAPHIC ARTIST"
 ;	line "will print out a"
 ;	cont "DIPLOMA for you."
@@ -100,6 +103,7 @@ GameFreakGraphicArtistScript:
 ;	end
 
 GameFreakGraphicArtistText:
+	ntag "ARTIST:"
 	text "I'm the GRAPHIC"
 	line "ARTIST."
 
@@ -133,6 +137,7 @@ GameFreakGraphicArtistText:
 GameFreakProgrammerScript:
 	jumptextfaceplayer GameFreakProgrammerText
 GameFreakProgrammerText:
+	ntag "PROGRAMMER:"
 	text "Who, me? I'm the"
 	line "PROGRAMMER."
 
@@ -144,6 +149,7 @@ GameFreakProgrammerText:
 GameFreakCharacterDesignerScript:
 	jumptextfaceplayer GameFreakCharacterDesignerText
 GameFreakCharacterDesignerText:
+	ntag "WRITER:"
 	text "I wrote the story!"
 	line "Isn't ERIKA cute?"
 

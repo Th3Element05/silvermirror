@@ -14,6 +14,7 @@ CinnabarPokecenter1FReceptionistScript:
 CinnabarPokecenter1FBenchGuyScript:
 	jumptext CinnabarPokecenter1FBenchGuyText
 CinnabarPokecenter1FBenchGuyText:
+	ntag "GUY:"
 	text "#MON can still"
 	line "learn techniques"
 	cont "after canceling"
@@ -35,6 +36,7 @@ CinnabarPokecenter1FGentlemanText:
 ;	line "worth a try!"
 ;	done
 ;
+	ntag "GENTLEMAN:"
 	text "Evolved #MON"
 	line "typically learn"
 	cont "moves more slowly."
@@ -48,6 +50,7 @@ CinnabarPokecenter1FGentlemanText:
 CinnabarPokecenter1FCooltrainerFScript:
 	jumptextfaceplayer CinnabarPokecenter1FCooltrainerFText
 CinnabarPokecenter1FCooltrainerFText:
+	ntag "TRAINER:"
 	text "You can cancel"
 	line "evolution."
 

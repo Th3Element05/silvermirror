@@ -14,6 +14,7 @@ OlivinePokecenter1FFishingGuruScript:
 OlivinePokecenter1FFisherScript:
 	jumptextfaceplayer OlivinePokecenter1FFisherText
 OlivinePokecenter1FFisherText:
+	ntag "FISHER:"
 	text "The SAILOR in the"
 	line "OLIVINE CAFE next"
 	cont "door is really"
@@ -29,13 +30,13 @@ OlivinePokecenter1FFisherText:
 OlivinePokecenter1FTeacherScript:
 	jumptextfaceplayer OlivinePokecenter1FTeacherText
 OlivinePokecenter1FTeacherText:
+	ntag "LADY:"
 	text "There's a person"
 	line "in CIANWOOD CITY"
 	cont "across the sea."
 
-	para "I heard him brag-"
-	line "ging about his"
-	cont "rare #MON."
+	para "He'll take photos"
+	line "of your #MON."
 	done
 
 OlivinePokecenter1F_MapEvents:

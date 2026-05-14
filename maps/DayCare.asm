@@ -83,13 +83,14 @@ DayCareLadyScript:
 	closetext
 	end
 
-DayCareBookshelf:
-	jumpstd DifficultBookshelfScript
-
 Text_GrampsLookingForYou:
+	ntag "DAYCARE:"
 	text "My husband was"
 	line "looking for you."
 	done
+
+DayCareBookshelf:
+	jumpstd DifficultBookshelfScript
 
 ;Text_DayCareManTalksAboutEggTicket: ; unreferenced
 ;	text "I'm the DAY-CARE"

@@ -177,6 +177,7 @@ CeruleanCityRivalAfterBattleText:
 CeruleanCityOfficerScript:
 	jumptextfaceplayer CeruleanCityOfficerText
 CeruleanCityOfficerText:
+	ntag "OFFICER:"
 	text "The people here"
 	line "were robbed."
 
@@ -214,6 +215,7 @@ TrainerRocketGruntM4:
 	end
 
 CeruleanCityRocketSeenText:
+	ntag "ROCKET:"
 	text "Hey! Stay out!"
 	line "It's not your"
 	cont "yard! Huh? Me?"
@@ -224,12 +226,14 @@ CeruleanCityRocketSeenText:
 	done
 
 CeruleanCityRocketBeatenText:
+	ntag "ROCKET:"
 	text "Stop!"
 	line "I give up!"
 	cont "I'll leave quietly!"
 	done
 
 CeruleanCityRocketAfterBattleText:
+	ntag "ROCKET:"
 	text "OK! I'll return"
 	line "the TM I stole!"
 	done
@@ -240,6 +244,7 @@ CeruleanCityRecoveredDigText:
 	done
 
 CeruleanCityRocketLeavesText:
+	ntag "ROCKET:"
 	text "I better get"
 	line "moving! Bye!"
 	done
@@ -317,6 +322,7 @@ CeruleanCitySlowbroDisobeysScript:
 	jumptextfaceplayer CeruleanCityObedienceSpeechText
 
 CeruleanCitySlowbroTrainerWaterGunText:
+	ntag "TRAINER:"
 	text "OK! SLOWBRO!"
 	line "Use WATER GUN!"
 
@@ -324,6 +330,7 @@ CeruleanCitySlowbroTrainerWaterGunText:
 	done
 
 CeruleanCitySlowbroTrainerWithdrawText:
+	ntag "TRAINER:"
 	text "SLOWBRO, WITHDRAW!"
 
 	para "No! You blew it"
@@ -331,6 +338,7 @@ CeruleanCitySlowbroTrainerWithdrawText:
 	done
 
 CeruleanCitySlowbroTrainerPsychicText:
+	ntag "TRAINER:"
 	text "Show me your"
 	line "PSYCHIC attack!"
 
@@ -359,6 +367,7 @@ CeruleanCitySlowbroIgnoreText:
 	done
 
 CeruleanCityObedienceSpeechText:
+	ntag "TRAINER:"
 	text "It's so hard to"
 	line "control #MON!"
 
@@ -377,6 +386,7 @@ CeruleanCitySuperNerd1Script:
 	jumptextfaceplayer CeruleanCitySuperNerd1Text2
 
 CeruleanCitySuperNerd1Text:
+	ntag "SUPERNERD:"
 	text "That trainer in"
 	line "front of the shop"
 	cont "can't control her"
@@ -390,6 +400,7 @@ CeruleanCitySuperNerd1Text:
 	done
 
 CeruleanCitySuperNerd1Text2:
+	ntag "SUPERNERD:"
 	text "That trainer in"
 	line "front of the shop"
 	cont "can't control her"
@@ -399,6 +410,7 @@ CeruleanCitySuperNerd1Text2:
 CeruleanCityCooltrainerMScript:
 	jumptextfaceplayer CeruleanCityCooltrainerMText
 CeruleanCityCooltrainerMText:
+	ntag "TRAINER:"
 	text "You're a trainer"
 	line "too? Collecting,"
 	cont "fighting, it's a"
@@ -408,6 +420,7 @@ CeruleanCityCooltrainerMText:
 CeruleanCitySuperNerd2Script:
 	jumptextfaceplayer CeruleanCitySuperNerd2Text
 CeruleanCitySuperNerd2Text:
+	ntag "SUPERNERD:"
 	text "You're making an"
 	line "encyclopedia on"
 	cont "#MON? That"
@@ -417,6 +430,7 @@ CeruleanCitySuperNerd2Text:
 CeruleanCityCooltrainerFScript:
 	jumptextfaceplayer CeruleanCityCooltrainerFText
 CeruleanCityCooltrainerFText:
+	ntag "TRAINER:"
 	text "I want a bright"
 	line "red BICYCLE!"
 
@@ -428,6 +442,7 @@ CeruleanCityCooltrainerFText:
 CeruleanCaveCooltrainerMScript:
 	jumptextfaceplayer CeruleanCaveCooltrainerMText
 CeruleanCaveCooltrainerMText:
+	ntag "TRAINER:"
 	text "This is CERULEAN"
 	line "CAVE! Horribly"
 	cont "strong #MON"

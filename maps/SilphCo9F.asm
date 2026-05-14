@@ -103,16 +103,19 @@ SilphCo9FNurseScript:
 	jumptext SilphCo9FNurseSavedText
 
 SilphCo9FNurseText1:
+	ntag "NURSE:"
 	text "You look tired!"
 	line "You should take a"
 	cont "quick nap!"
 	done
 
 SilphCo9FNurseText2:
+	ntag "NURSE:"
 	text "Don't give up!"
 	done
 
 SilphCo9FNurseSavedText:
+	ntag "NURSE:"
 	text "Thank you so"
 	line "much!"
 	done
@@ -128,16 +131,19 @@ TrainerRocketGruntM26:
 	end
 
 GruntM26SeenText:
+	ntag "ROCKET:"
 	text "I am one of four"
 	line "ROCKET BROTHERS!"
 	done
 
 GruntM26BeatenText:
+	ntag "ROCKET:"
 	text "Warg!"
 	line "Brothers, I lost!"
 	done
 
 GruntM26AfterBattleText:
+	ntag "ROCKET:"
 	text "My brothers will"
 	line "avenge me!"
 	done
@@ -153,16 +159,19 @@ TrainerScientistIsaiah:
 	end
 
 ScientistIsaiahSeenText:
+	ntag "SCIENTIST:"
 	text "Your #MON have"
 	line "weak points! I"
 	cont "can nail them!"
 	done
 
 ScientistIsaiahBeatenText:
+	ntag "ISAIAH:"
 	text "You hammered me!"
 	done
 
 ScientistIsaiahAfterBattleText:
+	ntag "SCIENTIST:"
 	text "Exploiting weak"
 	line "spots does work!"
 	cont "Think about"
@@ -180,15 +189,18 @@ TrainerRocketGruntF9:
 	end
 
 GruntF9SeenText:
+	ntag "ROCKET:"
 	text "Your #MON seem"
 	line "to adore you, kid!"
 	done
 
 GruntF9BeatenText:
+	ntag "ROCKET:"
 	text "Ghaaah!"
 	done
 
 GruntF9AfterBattleText:
+	ntag "ROCKET:"
 	text "If I had started"
 	line "as a trainer at"
 	cont "your age…"

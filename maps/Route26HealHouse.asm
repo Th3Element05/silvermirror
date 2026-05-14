@@ -36,6 +36,7 @@ CelebrityHouseBookshelf:
 	jumpstd MagazineBookshelfScript
 
 CelebrityText1:
+	ntag "CELEBRITY:"
 	text "Oh, dear."
 	line "You've found me."
 
@@ -48,6 +49,7 @@ CelebrityText1:
 	done
 
 CelebrityText2:
+	ntag "CELEBRITY:"
 	text "It's tough being a"
 	line "top celebrity."
 
@@ -59,7 +61,8 @@ CelebrityText2:
 	done
 
 CelebritysFearowText:
-	text "FEAROW: Feero!"
+	ntag "FEAROW:"
+	text "Feero!"
 	done
 
 Route26HealHouse_MapEvents:

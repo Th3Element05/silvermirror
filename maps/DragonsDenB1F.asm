@@ -16,15 +16,18 @@ TrainerCooltrainerMJake:
 	end
 
 CooltrainerMJakeSeenText:
+	ntag "COOLTRAINER:"
 	text "You! How dare you"
 	line "enter uninvited!"
 	done
 
 CooltrainerMJakeBeatenText:
+	ntag "JAKE:"
 	text "S-strong!"
 	done
 
 CooltrainerMJakeAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "The shrine ahead"
 	line "is home to the"
 	cont "MASTERs of our"
@@ -45,15 +48,18 @@ TrainerCooltrainerFReena:
 	end
 
 CooltrainerFReenaSeenText:
+	ntag "COOLTRAINER:"
 	text "You shouldn't be"
 	line "in here!"
 	done
 
 CooltrainerFReenaBeatenText:
+	ntag "REENA:"
 	text "Oh yikes, I lost!"
 	done
 
 CooltrainerFReenaAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "Soon I'm going to"
 	line "get permission"
 	cont "from our MASTER to"
@@ -88,20 +94,24 @@ TrainerTwinsAmyandMay2:
 	end
 
 TwinsAmyandMaySeenText:
+	ntag "TWIN:"
 	text "It's a stranger we"
 	line "don't know."
 	done
 
 TwinsAmyandMayBeatenText:
+	ntag "AMY&MAY:"
 	text "Who are you?"
 	done
 
 TwinsAmyandMay1AfterBattleText:
+	ntag "TWIN:"
 	text "It was like having"
 	line "to battle LANCE."
 	done
 
 TwinsAmyandMay2AfterBattleText:
+	ntag "TWIN:"
 	text "We'll tell on you."
 
 	para "MASTER will be"

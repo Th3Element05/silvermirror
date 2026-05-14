@@ -227,6 +227,7 @@ TrainerPokemaniacZach:
 	end
 
 PokemaniacZachSeenText:
+	ntag "#MANIAC:"
 	text "You're working on"
 	line "a #DEX?"
 
@@ -239,17 +240,20 @@ PokemaniacZachSeenText:
 	done
 
 PokemaniacZachBeatenText:
+	ntag "ZACH:"
 	text "You've got strong"
 	line "#MON!"
 	done
 
 PokemaniacZachAfterTextDay:
+	ntag "#MANIAC:"
 	text "I'm waiting for"
 	line "#MON that only"
 	cont "come out at night."
 	done
 
 PokemaniacZachAfterTextNite:
+	ntag "#MANIAC:"
 	text "I'm waiting for"
 	line "#MON that only"
 	cont "appear during the"
@@ -268,16 +272,19 @@ TrainerTeacherShirley:
 	end
 
 TeacherShirleySeenText:
+	ntag "TEACHER:"
 	text "You look like you"
 	line "need to be taught"
 	cont "a lesson."
 	done
 
 TeacherShirleyBeatenText:
+	ntag "SHIRLEY:"
 	text "I got schooled."
 	done
 
 TeacherShirleyAfterBattleText:
+	ntag "TEACHER:"
 	text "See those ledges?"
 	line "It's scary to jump"
 	cont "off them."
@@ -299,17 +306,20 @@ TrainerSuperNerdMerle:
 	end
 
 SuperNerdMerleSeenText:
+	ntag "SUPERNERD:"
 	text "I hope your #-"
 	line "MON are ready for"
 	cont "a battle!"
 	done
 
 SuperNerdMerleBeatenText:
+	ntag "MERLE:"
 	text "I thought I was"
 	line "ready."
 	done
 
 SuperNerdMerleAfterBattleText:
+	ntag "SUPERNERD:"
 	text "If your #MON"
 	line "aren't ready for"
 	cont "battle, keep out"

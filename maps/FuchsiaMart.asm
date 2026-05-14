@@ -33,6 +33,7 @@ FuchsiaMartMedScript:
 FuchsiaMartPokefanMScript:
 	jumptextfaceplayer FuchsiaMartPokefanMText
 FuchsiaMartPokefanMText:
+	ntag "#FAN:"
 	text "Do you have a"
 	line "SAFARI ZONE flag?"
 
@@ -43,6 +44,7 @@ FuchsiaMartPokefanMText:
 FuchsiaMartCooltrainerFScript:
 	jumptextfaceplayer FuchsiaMartCooltrainerFText
 FuchsiaMartCooltrainerFText:
+	ntag "TRAINER:"
 	text "They don't sell"
 	line "SAFARI BALLs here."
 

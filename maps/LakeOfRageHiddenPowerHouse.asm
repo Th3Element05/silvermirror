@@ -59,6 +59,7 @@ HiddenPowerGuy:
 ;	done
 
 HiddenPowerGuyText3:
+	ntag "MAN:"
 	text "I am meditating…"
 	done
 

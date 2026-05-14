@@ -28,17 +28,20 @@ TrainerPokemaniacCalvin:
 	end
 
 PokemaniacCalvinSeenText:
+	ntag "#MANIAC:"
 	text "You have a"
 	line "#DEX?"
 	cont "I want one too!"
 	done
 
 PokemaniacCalvinBeatenText:
+	ntag "CALVIN:"
 	text "Shoot!"
 	line "I'm so jealous!"
 	done
 
 PokemaniacCalvinAfterBattleText:
+	ntag "#MANIAC:"
 	text "When you finish"
 	line "your #DEX, can"
 	cont "I have it?"
@@ -55,15 +58,18 @@ TrainerHikerSidney:
 	end
 
 HikerSidneySeenText:
+	ntag "HIKER:"
 	text "Hit me with your"
 	line "best shot!"
 	done
 
 HikerSidneyBeatenText:
+	ntag "SIDNEY:"
 	text "Fired away!"
 	done
 
 HikerSidneyAfterBattleText:
+	ntag "HIKER:"
 	text "I'll raise my"
 	line "#MON to beat"
 	cont "yours, kid!"
@@ -80,16 +86,19 @@ TrainerHikerWalter:
 	end
 
 HikerWalterSeenText:
+	ntag "HIKER:"
 	text "Hahaha! Can you"
 	line "beat my power?"
 	done
 
 HikerWalterBeatenText:
+	ntag "WALTER:"
 	text "Oops!"
 	line "Out-muscled!"
 	done
 
 HikerWalterAfterBattleText:
+	ntag "HIKER:"
 	text "I go for power"
 	line "because I hate"
 	cont "thinking!"
@@ -106,18 +115,21 @@ TrainerHikerJim:
 	end
 
 HikerJimSeenText:
+	ntag "HIKER:"
 	text "My #MON"
 	line "techniques will"
 	cont "leave you crying!"
 	done
 
 HikerJimBeatenText:
+	ntag "JIM:"
 	text "I give!"
 	line "You're a better"
 	cont "technician!"
 	done
 
 HikerJimAfterBattleText:
+	ntag "HIKER:"
 	text "In mountains,"
 	line "you'll often find"
 	cont "rock-type #MON."
@@ -134,16 +146,19 @@ TrainerPicnickerCindy:
 	end
 
 PicnickerCindySeenText:
+	ntag "PICNICKER:"
 	text "Hikers leave twigs"
 	line "as trail markers."
 	done
 
 PicnickerCindyBeatenText:
+	ntag "CINDY:"
 	text "Ohhh!"
 	line "I did my best!"
 	done
 
 PicnickerCindyAfterBattleText:
+	ntag "PICNICKER:"
 	text "I want to go "
 	line "home!"
 	done
@@ -159,15 +174,18 @@ TrainerPokemaniacShane:
 	end
 
 PokemaniacShaneSeenText:
+	ntag "#MANIAC:"
 	text "Do you know about"
 	line "costume players?"
 	done
 
 PokemaniacShaneBeatenText:
+	ntag "SHANE:"
 	text "Well, that's that."
 	done
 
 PokemaniacShaneAfterBattleText:
+	ntag "#MANIAC:"
 	text "Costume players"
 	line "dress up as"
 	cont "#MON for fun."
@@ -184,17 +202,20 @@ TrainerPicnickerHope:
 	end
 
 PicnickerHopeSeenText:
+	ntag "PICNICKER:"
 	text "I don't often"
 	line "come here, but I"
 	cont "will fight you."
 	done
 
 PicnickerHopeBeatenText:
+	ntag "HOPE:"
 	text "Oh!"
 	line "I lost!"
 	done
 
 PicnickerHopeAfterBattleText:
+	ntag "PICNICKER:"
 	text "I like tiny"
 	line "#MON, big ones"
 	cont "are too scary!"
@@ -211,16 +232,19 @@ TrainerPokemaniacBen:
 	end
 
 PokemaniacBenSeenText:
+	ntag "#MANIAC:"
 	text "I draw #MON"
 	line "when I'm home."
 	done
 
 PokemaniacBenBeatenText:
+	ntag "BEN:"
 	text "Whew!"
 	line "I'm exhausted!"
 	done
 
 PokemaniacBenAfterBattleText:
+	ntag "#MANIAC:"
 	text "I'm an artist,"
 	line "not a fighter."
 	done

@@ -125,6 +125,7 @@ SaffronCityRocketGuard:
 ;	showemote EMOTE_SLEEP, SAFFRONCITY_ROCKET_SLEEP, 40
 ;	jumptext SaffronRocketGuardSnoozeText
 SaffronRocketGuardText:
+	ntag "ROCKET:"
 	text "I'm a security"
 	line "guard."
 
@@ -137,7 +138,7 @@ SaffronCityRocketSleep:
 	jumptext SaffronRocketGuardSnoozeText
 SaffronRocketGuardSnoozeText:
 	text "…"
-	line "Snore…"
+	line "…Snore…"
 
 	para "Hah! He's taking"
 	line "a snooze!"
@@ -168,36 +169,43 @@ SaffronCityRocketScript:
 	jumptextfaceplayer SaffronRocketText7
 
 SaffronRocketText1:
+	ntag "ROCKET:"
 	text "What do you want?"
 	line "Get lost!"
 	done
 
 SaffronRocketText2:
+	ntag "ROCKET:"
 	text "BOSS said he'll"
 	line "take this town!"
 	done
 
 SaffronRocketText3:
+	ntag "ROCKET:"
 	text "Get out of the"
 	line "way!"
 	done
 
 SaffronRocketText4:
+	ntag "ROCKET:"
 	text "SAFFRON belongs"
 	line "to TEAM ROCKET!"
 	done
 
 SaffronRocketText5:
+	ntag "ROCKET:"
 	text "Being evil makes"
 	line "me feel so alive!"
 	done
 
 SaffronRocketText6:
+	ntag "ROCKET:"
 	text "Ow! Watch where"
 	line "you're walking!"
 	done
 
 SaffronRocketText7:
+	ntag "ROCKET:"
 	text "With SILPH under"
 	line "control, we can"
 	cont "exploit #MON"
@@ -220,12 +228,14 @@ SaffronCityCivilianScript:
 	jumptextfaceplayer SaffronCivilianText4
 
 SaffronCivilianText1:
+	ntag "CITIZEN:"
 	text "You beat TEAM"
 	line "ROCKET all alone?"
 	cont "That's amazing!"
 	done
 
 SaffronCivilianText2:
+	ntag "CITIZEN:"
 	text "Yeah! TEAM ROCKET"
 	line "is gone!"
 	cont "It's safe to go"
@@ -233,12 +243,14 @@ SaffronCivilianText2:
 	done
 
 SaffronCivilianText3:
+	ntag "CITIZEN:"
 	text "People should be"
 	line "flocking back to"
 	cont "SAFFRON now."
 	done
 
 SaffronCivilianText4:
+	ntag "CITIZEN:"
 	text "I saw ROCKET's"
 	line "BOSS escaping"
 	cont "SILPH's building."
@@ -251,6 +263,7 @@ SaffronCityGentlemanText:
 ;	line "PIDGEOT when I"
 ;	cont "read about SILPH."
 ;
+	ntag "GENTLEMAN:"
 	text "I came right away"
 	line "when I read about"
 	cont "ROCKETs at SILPH!"

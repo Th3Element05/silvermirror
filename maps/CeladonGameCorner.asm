@@ -22,6 +22,7 @@ CeladonGameCornerClerkScript:
 CeladonGameCornerReceptionistScript:
 	jumptextfaceplayer CeladonGameCornerReceptionistText
 CeladonGameCornerReceptionistText:
+	ntag "CASHIER:"
 	text "Welcome!"
 
 	para "You may exchange"
@@ -48,16 +49,19 @@ TrainerRocketGruntM6:
 	end
 
 CeladonGameCornerRocketSeenText:
+	ntag "ROCKET:"
 	text "I'm guarding this"
 	line "poster!"
 	cont "Go away, or else!"
 	done
 
 CeladonGameCornerRocketBeatenText:
+	ntag "ROCKET:"
 	text "Dang!"
 	done
 
 CeladonGameCornerRocketAfterBattleText:
+	ntag "ROCKET:"
 	text "Our hideout might"
 	line "be discovered! I"
 	cont "better tell BOSS!"
@@ -103,6 +107,7 @@ CeladonGameCornerPokefanMScript:
 ;	end
 
 CeladonGameCornerPokefanMText:
+	ntag "GAMBLER:"
 	text "Keep this quiet."
 
 	para "It's rumored that"
@@ -117,6 +122,7 @@ CeladonGameCornerBeautyScript:
 	sjump CeladonGameCornerEndLeftScript
 
 CeladonGameCornerBeautyText:
+	ntag "GAMBLER:"
 	text "I think these"
 	line "machines have"
 	cont "different odds."
@@ -154,11 +160,13 @@ CeladonGameCornerFishingGuruScript:
 	sjump CeladonGameCornerEndRightScript
 
 CeladonGameCornerFishingGuruCoinsText:
+	ntag "GAMBLER:"
 	text "Kid, do you want"
 	line "to play?"
 	done
 
 CeladonGameCornerFishingGuruText:
+	ntag "GAMBLER:"
 	text "Wins seem to come"
 	line "and go."
 	done
@@ -170,6 +178,7 @@ CeladonGameCornerPokefanFScript:
 	sjump CeladonGameCornerEndLeftScript
 
 CeladonGameCornerPokefanFText:
+	ntag "GAMBLER:"
 	text "I'm having a"
 	line "wonderful time!"
 	done
@@ -186,6 +195,7 @@ CeladonGameCornerGymGuideScript:
 	sjump CeladonGameCornerEndLeftScript
 
 CeladonGameCornerGymGuideText:
+	ntag "GUIDE:"
 	text "Hey! CHAMP in the"
 	line "making!"
 
@@ -203,6 +213,7 @@ CeladonGameCornerGymGuideText:
 	done
 
 CeladonGameCornerGymGuideAfterText:
+	ntag "GUIDE:"
 	text "They offer rare"
 	line "#MON that can"
 	cont "be exchanged for"
@@ -219,6 +230,7 @@ CeladonGameCornerGrampsScript:
 	sjump CeladonGameCornerEndRightScript
 
 CeladonGameCornerGrampsText:
+	ntag "GAMBLER:"
 	text "Games are scary!"
 	line "It's so easy to"
 	cont "get hooked!"
@@ -256,11 +268,13 @@ CeladonGameCornerFisherScript:
 	sjump CeladonGameCornerEndLeftScript
 
 CeladonGameCornerFisherCoinsText:
+	ntag "GAMBLER:"
 	text "What's up? Want"
 	line "some coins?"
 	done
 
 CeladonGameCornerFisherText:
+	ntag "GAMBLER:"
 	text "Darn! I need more"
 	line "coins for the"
 	cont "#MON I want!"
@@ -298,6 +312,7 @@ CeladonGameCornerGentlemanScript:
 	sjump CeladonGameCornerEndRightScript
 
 CeladonGameCornerGentlemanCoinsText:
+	ntag "GAMBLER:"
 	text "Hey, what? You're"
 	line "throwing me off!"
 	cont "Here are some"
@@ -305,6 +320,7 @@ CeladonGameCornerGentlemanCoinsText:
 	done
 
 CeladonGameCornerGentlemanText:
+	ntag "GAMBLER:"
 	text "The trick is to"
 	line "watch the reels"
 	cont "closely!"
@@ -330,11 +346,13 @@ CeladonGameCornerReceivedCoinsText:
 	done
 
 CeladonGameCornerForgotCoinCaseText:
+	ntag "GAMBLER:"
 	text "Oops! You don't"
 	line "have a COIN CASE!"
 	done
 
 CeladonGameCornerFullCoinCaseText:
+	ntag "GAMBLER:"
 	text "You already have"
 	line "enough of coins!"
 	done

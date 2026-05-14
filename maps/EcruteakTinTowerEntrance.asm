@@ -190,7 +190,7 @@ TinTowerEntranceGrampsScript:
 	jumptextfaceplayer TinTowerEntranceGrampsBeastsText
 
 TinTowerEntranceGrampsTowersText:
-;	ntag "GRAMPS:"
+	ntag "GRAMPS:"
 	text "Two towers…"
 	line "Two #MON…"
 
@@ -201,7 +201,7 @@ TinTowerEntranceGrampsTowersText:
 	done
 
 TinTowerEntranceGrampsHoohReturnedText:
-;	ntag "GRAMPS:"
+	ntag "GRAMPS:"
 	text "The TIN TOWER"
 	line "shook! A #MON"
 	cont "must have returned"
@@ -209,7 +209,7 @@ TinTowerEntranceGrampsHoohReturnedText:
 	done
 
 TinTowerEntranceGrampsBeastsText:
-;	ntag "GRAMPS:"
+	ntag "GRAMPS:"
 	text "The BURNED TOWER…"
 
 	para "They say the three"

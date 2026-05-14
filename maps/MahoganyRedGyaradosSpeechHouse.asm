@@ -8,6 +8,7 @@ MahoganyRedGyaradosSpeechHouse_MapScripts:
 MahoganyRedGyaradosSpeechHouseBlackBeltScript:
 	jumptextfaceplayer MahoganyRedGyaradosSpeechHouseBlackBeltText
 MahoganyRedGyaradosSpeechHouseBlackBeltText:
+	ntag "BLACKBELT:"
 	text "I heard a gold"
 	line "#MON was seen"
 	cont "in the lake."
@@ -34,6 +35,7 @@ MahoganyRedGyaradosSpeechHouseBlackBeltText:
 MahoganyRedGyaradosSpeechHouseTeacherScript:
 	jumptextfaceplayer MahoganyRedGyaradosSpeechHouseTeacherText
 MahoganyRedGyaradosSpeechHouseTeacherText:
+	ntag "LADY:"
 	text "My favorite radio"
 	line "program? I'd say"
 	cont "#MON MUSIC."

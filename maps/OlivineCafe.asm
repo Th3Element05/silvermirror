@@ -70,6 +70,7 @@ OlivineCafeSailorScript:
 ;	done
 ;
 OlivineCafeStrengthSailorText_GotStrength:
+	ntag "SAILOR:"
 	text "On the sea, the"
 	line "only thing you can"
 	cont "count on is your"
@@ -80,6 +81,7 @@ OlivineCafeStrengthSailorText_GotStrength:
 	done
 
 OlivineCafeFishingGuruText:
+	ntag "FISHERMAN:"
 	text "OLIVINE CAFE's"
 	line "menu is chock full"
 	cont "of hearty fare for"
@@ -87,6 +89,7 @@ OlivineCafeFishingGuruText:
 	done
 
 OlivineCafeSailorText:
+	ntag "SAILOR:"
 	text "Whenever I roll"
 	line "into this town, I"
 	cont "always visit the"

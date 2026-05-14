@@ -451,6 +451,7 @@ RadioTowerBuenaPrizeReceptionist:
 	end
 
 RadioTower2FBuenaReceptionistPointsForPrizesText:
+	ntag "ASSISTANT:"
 	text "You can cash in"
 	line "your saved points"
 
@@ -459,6 +460,7 @@ RadioTower2FBuenaReceptionistPointsForPrizesText:
 	done
 
 RadioTower2FBuenaReceptionistNoCardText:
+	ntag "ASSISTANT:"
 	text "You can't trade in"
 	line "points without"
 	cont "your BLUE CARD."
@@ -470,6 +472,7 @@ RadioTower2FBuenaReceptionistNoCardText:
 RadioTower2FSuperNerdScript:
 	jumptextfaceplayer RadioTower2FSuperNerdText
 RadioTower2FSuperNerdText:
+	ntag "SUPERNERD:"
 	text "You can listen to"
 	line "the radio almost"
 	cont "anywhere. Tune in!"
@@ -492,12 +495,14 @@ RadioTower2FTeacherScript:
 	end
 
 RadioTower2FTeacherText:
+	ntag "LADY:"
 	text "Lullabies on the"
 	line "radio may make"
 	cont "#MON sleep."
 	done
 
 RadioTower2FTeacherText_Rockets:
+	ntag "LADY:"
 	text "Who was that guy"
 	line "that ran by?"
 

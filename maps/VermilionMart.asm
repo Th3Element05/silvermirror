@@ -48,6 +48,7 @@ VermilionMartMedScript:
 VermilionMartCooltrainerFScript:
 	jumptextfaceplayer VermilionMartCooltrainerFText
 VermilionMartCooltrainerFText:
+	ntag "TRAINER:"
 	text "I think #MON"
 	line "can be good or"
 	cont "evil. It depends"
@@ -57,6 +58,7 @@ VermilionMartCooltrainerFText:
 VermilionMartCooltrainerMScript:
 	jumptextfaceplayer VermilionMartCooltrainerMText
 VermilionMartCooltrainerMText:
+	ntag "TRAINER:"
 	text "There are evil"
 	line "people who will"
 	cont "use #MON for"

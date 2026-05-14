@@ -112,6 +112,7 @@ TrainerYoungsterRegis:
 	end
 
 YoungsterRegisSeenText:
+	ntag "YOUNGSTER:"
 	text "I haven't seen you"
 	line "around before."
 
@@ -120,10 +121,12 @@ YoungsterRegisSeenText:
 	done
 
 YoungsterRegisBeatenText:
+	ntag "REGIS:"
 	text "You're strong!"
 	done
 
 YoungsterRegisAfterText:
+	ntag "YOUNGSTER:"
 	text "I'm going to try"
 	line "to be the best"
 	cont "with my favorites."
@@ -144,6 +147,7 @@ TrainerCoupleDuffAndEda_Eda:
 	end
 
 CoupleDuffAndEda_EdaSeenText:
+	ntag "COOLTRAINER:"
 	text "Uh-huh. Yeah, and"
 	line "you know…"
 
@@ -155,11 +159,13 @@ CoupleDuffAndEda_EdaSeenText:
 	done
 
 CoupleDuffAndEda_EdaBeatenText:
+	ntag "EDA:"
 	text "I hung up, and I"
 	line "still lost?"
 	done
 
 CoupleDuffAndEda_EdaAfterText:
+	ntag "COOLTRAINER:"
 	text "I was having a"
 	line "nice chat too."
 	done
@@ -175,6 +181,7 @@ TrainerCoupleDuffAndEda_Duff:
 	end
 
 CoupleDuffAndEda_DuffSeenText:
+	ntag "COOLTRAINER:"
 	text "My girlfriend is"
 	line "always talking on"
 	cont "the phone."
@@ -184,11 +191,13 @@ CoupleDuffAndEda_DuffSeenText:
 	done
 
 CoupleDuffAndEda_DuffBeatenText:
+	ntag "DUFF:"
 	text "Hmmm. This is"
 	line "disappointing."
 	done
 
 CoupleDuffAndEda_DuffAfterText:
+	ntag "COOLTRAINER:"
 	text "At least she's"
 	line "not on the phone"
 	cont "anymore."
@@ -205,15 +214,18 @@ TrainerFisherFred:
 	end
 
 FisherFredSeenText:
+	ntag "FISHER:"
 	text "My #MON?"
 	line "Freshly caught!"
 	done
 
 FisherFredBeatenText:
+	ntag "FRED:"
 	text "SPLASH?"
 	done
 
 FisherFredAfterText:
+	ntag "FISHER:"
 	text "Freshly caught"
 	line "#MON are no"
 	cont "match for properly"
@@ -335,6 +347,7 @@ Route32PackFullM:
 	end
 
 FisherWiltonSeenText:
+	ntag "FISHER:"
 	text "Whoa!"
 
 	para "You made me lose"
@@ -342,10 +355,12 @@ FisherWiltonSeenText:
 	done
 
 FisherWiltonBeatenText:
+	ntag "WILTON:"
 	text "Sploosh!"
 	done
 
 FisherWiltonAfterText:
+	ntag "WILTON:"
 	text "Calm, collected…"
 
 	para "The essence of"
@@ -403,6 +418,7 @@ TrainerFisherRalph:
 	end
 
 FisherRalphSeenText:
+	ntag "FISHER:"
 	text "I'm really good at"
 	line "both fishing and"
 	cont "#MON."
@@ -412,11 +428,13 @@ FisherRalphSeenText:
 	done
 
 FisherRalphBeatenText:
+	ntag "RALPH:"
 	text "Tch! I tried to"
 	line "rush things…"
 	done
 
 FisherRalphAfterText:
+	ntag "RALPH:"
 	text "Fishing is a life-"
 	line "long passion."
 
@@ -435,6 +453,7 @@ TrainerYoungsterBrady:
 	end
 
 YoungsterBradySeenText:
+	ntag "YOUNGSTER:"
 	text "I found some good"
 	line "#MON in the"
 	cont "grass!"
@@ -444,11 +463,13 @@ YoungsterBradySeenText:
 	done
 
 YoungsterBradyBeatenText:
+	ntag "BRADY:"
 	text "Darn. I thought I"
 	line "could win."
 	done
 
 YoungsterBradyAfterText:
+	ntag "YOUNGSTER:"
 	text "The grass is full"
 	line "of clingy things."
 	done
@@ -464,16 +485,19 @@ TrainerBirdKeeperJohn:
 	end
 
 BirdKeeperJohnSeenText:
+	ntag "BIRDKEEPER:"
 	text "Those BADGEs! You"
 	line "sure have a lot!"
 	done
 
 BirdKeeperJohnBeatenText:
+	ntag "JOHN:"
 	text "I know what my"
 	line "weaknesses are."
 	done
 
 BirdKeeperJohnAfterText:
+	ntag "BIRDKEEPER:"
 	text "I should train"
 	line "again at the GYM"
 	cont "in VIOLET CITY."

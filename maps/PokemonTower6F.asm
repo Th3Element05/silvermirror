@@ -60,19 +60,19 @@ PokemonTower6FGhostScript:
 	end
 
 PokemonTower6FBegoneText:
-	ntag "???????:"
+	ntag "???:"
 	text "  Be gone…"
 	line "       Intruders…"
 	done
 
 PokemonTower6FGetOutText:
-	ntag "???????:"
+	ntag "???:"
 	text "         Get out!"
 	line "   Get out!"
 	done
 
 PokemonTower6FGetOutGetOutText:
-	ntag "???????:"
+	ntag "???:"
 	text "Get out! Get out! Get out! get out!"
 	line "out! Get out! Get out! Get out! Get out!"
 	done
@@ -106,15 +106,18 @@ TrainerMediumMaya:
 	end
 
 MediumMayaSeenText:
+	ntag "MEDIUM:"
 	text "Urff… Kwaah!"
 	done
 
 MediumMayaBeatenText:
-	text "Something"
-	line "fell out!"
+	ntag "MAYA:"
+	text "Something fell"
+	line "out!"
 	done
 
 MediumMayaAfterBattleText:
+	ntag "MEDIUM:"
 	text "Hair didn't fall"
 	line "out! It was an"
 	cont "evil spirit!"
@@ -131,15 +134,18 @@ TrainerMediumWillow:
 	end
 
 MediumWillowSeenText:
+	ntag "MEDIUM:"
 	text "Ke… ke… ke…"
 	line "ke… ke… ke!!"
 	done
 
 MediumWillowBeatenText:
+	ntag "WILLOW:"
 	text "Keee!"
 	done
 
 MediumWillowAfterBattleText:
+	ntag "MEDIUM:"
 	text "What's going on"
 	line "here?"
 	done
@@ -155,15 +161,18 @@ TrainerMediumAbigail:
 	end
 
 MediumAbigailSeenText:
+	ntag "MEDIUM:"
 	text "Give… me…"
 	line "blood…"
 	done
 
 MediumAbigailBeatenText:
+	ntag "ABIGAIL:"
 	text "Groan!"
 	done
 
 MediumAbigailAfterBattleText:
+	ntag "MEDIUM:"
 	text "I feel anemic"
 	line "and weak…"
 	done

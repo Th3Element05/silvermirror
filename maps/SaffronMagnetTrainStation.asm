@@ -214,6 +214,7 @@ SaffronMagnetTrainStationGymGuideScript:
 	end
 
 SaffronMagnetTrainStationGymGuideText1:
+	ntag "MAN:"
 	text "The MAGNET TRAIN"
 	line "is super-modern."
 
@@ -224,6 +225,7 @@ SaffronMagnetTrainStationGymGuideText1:
 	done
 
 SaffronMagnetTrainStationGymGuideText2A:
+	ntag "MAN:"
 	para "They need to"
 	line "perform regular"
 	cont "maintainance to"
@@ -232,6 +234,7 @@ SaffronMagnetTrainStationGymGuideText2A:
 	done
 
 SaffronMagnetTrainStationGymGuideText2B:
+	ntag "MAN:"
 	text "Whew…"
 
 	para "How many times"
@@ -254,6 +257,7 @@ SaffronMagnetTrainStationLassScript:
 	end
 	
 SaffronMagnetTrainStationLassText:
+	ntag "LASS:"
 	text "Hi. Do you have a"
 	line "RAIL PASS?"
 
@@ -264,6 +268,7 @@ SaffronMagnetTrainStationLassText:
 	done
 
 SaffronMagentTrainStationLassText2:
+	ntag "LASS:"
 	text "But we can't ride"
 	line "while the train is"
 	cont "being serviced."

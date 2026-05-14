@@ -26,6 +26,7 @@ GoldenrodDeptStore2FYoungsterText:
 ;	line "up to ten phone"
 ;	cont "numbers."
 ;
+	ntag "YOUNGSTER:"
 	text "#GEAR can save"
 	line "up to twelve"
 	cont "phone numbers."
@@ -38,7 +39,8 @@ GoldenrodDeptStore2FYoungsterText:
 GoldenrodDeptStore2FCooltrainerFScript:
 	jumptextfaceplayer GoldenrodDeptStore2FCooltrainerFText
 GoldenrodDeptStore2FCooltrainerFText:
-	text "I got TOGEPI at"
+	ntag "TRAINER:"
+	text "I got LARVITAR at"
 	line "the GAME CORNER."
 
 	para "Now it's my best"
@@ -48,6 +50,7 @@ GoldenrodDeptStore2FCooltrainerFText:
 GoldenrodDeptStore2FGentlemanScript:
 	jumptextfaceplayer GoldenrodDeptStore2FGentlemanText
 GoldenrodDeptStore2FGentlemanText:
+	ntag "GENTLEMAN:"
 	text "This DEPT.STORE"
 	line "makes me realize"
 	cont "that GOLDENROD is"

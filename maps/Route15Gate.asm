@@ -15,6 +15,7 @@ Route15GateTilesCallback:
 Route15GateOfficerScript:
 	jumptext Route15GateOfficerText
 Route15GateOfficerText:
+	ntag "OFFICER:"
 	text "You're working on"
 	line "a #DEX? That's"
 	cont "really something."

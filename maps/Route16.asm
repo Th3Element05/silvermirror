@@ -237,6 +237,7 @@ TrainerBikerAiden:
 ;	end
 
 BikerAidenSeenText:
+	ntag "BIKER:"
 	text "Hey, who told you"
 	line "you could ride up"
 	cont "and down this"
@@ -244,10 +245,12 @@ BikerAidenSeenText:
 	done
 
 BikerAidenBeatenText:
+	ntag "AIDEN:"
 	text "Crash!"
 	done
 
 BikerAidenAfterBattleText:
+	ntag "AIDEN:"
 	text "See you later!"
 	line "Come back anytime!"
 	done
@@ -260,15 +263,18 @@ TrainerJugglerOtis:
 	jumptextfaceplayer JugglerOtisAfterBattleText
 
 JugglerOtisSeenText:
+	ntag "JUGGLER:"
 	text "I'm feeling"
 	line "hungry and mean!"
 	done
 
 JugglerOtisBeatenText:
+	ntag "OTIS:"
 	text "Bad, bad, bad!"
 	done
 
 JugglerOtisAfterBattleText:
+	ntag "JUGGLER:"
 	text "I like my #MON"
 	line "ferocious! They"
 	cont "tear up enemies!"
@@ -282,15 +288,18 @@ TrainerBikerJoseph:
 	jumptextfaceplayer BikerJosephAfterBattleText
 
 BikerJosephSeenText:
+	ntag "BIKER:"
 	text "Hey, you just"
 	line "bumped me!"
 	done
 
 BikerJosephBeatenText:
+	ntag "JOSEPH:"
 	text "Kaboom!"
 	done
 
 BikerJosephAfterBattleText:
+	ntag "BIKER:"
 	text "You can also get"
 	line "to FUCHSIA from"
 	cont "VERMILION using a"
@@ -305,15 +314,18 @@ TrainerJugglerBurt:
 	jumptextfaceplayer JugglerBurtAfterBattleText
 
 JugglerBurtSeenText:
+	ntag "JUGGLER:"
 	text "Come out and play,"
 	line "little mouse!"
 	done
 
 JugglerBurtBeatenText:
+	ntag "BURT:"
 	text "You little rat!"
 	done
 
 JugglerBurtAfterBattleText:
+	ntag "JUGGLER:"
 	text "I hate losing!"
 	line "Get away from me!"
 	done
@@ -326,15 +338,18 @@ TrainerJugglerFinnley:
 	jumptextfaceplayer JugglerFinnleyAfterBattleText
 
 JugglerFinnleySeenText:
+	ntag "JUGGLER:"
 	text "Nice BIKE!"
 	line "Hand it over!"
 	done
 
 JugglerFinnleyBeatenText:
+	ntag "FINNLEY:"
 	text "Knock out!"
 	done
 
 JugglerFinnleyAfterBattleText:
+	ntag "JUGGLER:"
 	text "Forget it, who"
 	line "needs your BIKE!"
 	done
@@ -347,15 +362,18 @@ TrainerBikerTeddy:
 	jumptextfaceplayer BikerTeddyAfterBattleText
 
 BikerTeddySeenText:
+	ntag "BIKER:"
 	text "What do you want?"
 	done
 
 BikerTeddyBeatenText:
+	ntag "TEDDY:"
 	text "Don't you"
 	line "dare laugh!"
 	done
 
 BikerTeddyAfterBattleText:
+	ntag "BIKER:"
 	text "We like just"
 	line "hanging here,"
 	cont "what's it to you?"

@@ -26,18 +26,21 @@ TrainerLassSadie:
 	end
 
 LassSadieSeenText:
+	ntag "LASS:"
 	text "I collected these"
 	line "#MON from all"
 	cont "around the world!"
 	done
 
 LassSadieBeatenText:
+	ntag "SADIE:"
 	text "Oh no!"
 	line "I went around the"
 	cont "world for these!"
 	done
 
 LassSadieAfterBattleText:
+	ntag "LASS:"
 	text "You hurt my poor"
 	line "worldly #MON!"
 
@@ -57,16 +60,19 @@ TrainerYoungsterJimmy:
 	end
 
 YoungsterJimmySeenText:
+	ntag "YOUNGSTER:"
 	text "I love #MON!"
 	line "Do you?"
 	done
 
 YoungsterJimmyBeatenText:
+	ntag "JIMMY:"
 	text "Wow! "
 	line "You're great!"
 	done
 
 YoungsterJimmyAfterBattleText:
+	ntag "YOUNGSTER:"
 	text "Let me be your"
 	line "friend, OK?"
 
@@ -85,16 +91,19 @@ TrainerGentlemanEdward:
 	end
 
 GentlemanEdwardSeenText:
+	ntag "GENTLEMAN:"
 	text "You pup! How dare"
 	line "you barge in!"
 	done
 
 GentlemanEdwardBeatenText:
+	ntag "EDWARD:"
 	text "Humph!"
 	line "You rude child!"
 	done
 
 GentlemanEdwardAfterBattleText:
+	ntag "GENTLEMAN:"
 	text "I wish to be left"
 	line "alone! Get out!"
 	done
@@ -110,6 +119,7 @@ TrainerGentlemanPreston:
 	end
 
 GentlemanPrestonSeenText:
+	ntag "GENTLEMAN:"
 	text "I travel alone"
 	line "on my journeys!"
 
@@ -118,10 +128,12 @@ GentlemanPrestonSeenText:
 	done
 
 GentlemanPrestonBeatenText:
+	ntag "PRESTON:"
 	text "My, my friends…"
 	done
 
 GentlemanPrestonAfterBattleText:
+	ntag "GENTLEMAN:"
 	text "You should be"
 	line "nice to friends!"
 	done
@@ -139,17 +151,20 @@ TrainerCooltrainerMAndre:
 	end
 
 CooltrainerMAndreSeenText:
+	ntag "COOLTRAINER:"
 	text "Battle me so I"
 	line "can show off for"
 	cont "my girl!"
 	done
 
 CooltrainerMAndreBeatenText:
+	ntag "ANDRE:"
 	text "…"
 	line "Show off…"
 	done
 
 CooltrainerMAndreAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "Maybe I should"
 	line "just be relaxing."
 	done
@@ -165,15 +180,18 @@ TrainerGentlemanBlake:
 	end
 
 GentlemanBlakeSeenText:
+	ntag "GENTLEMAN:"
 	text "Flourish the"
 	line "pinky!"
 	done
 
 GentlemanBlakeBeatenText:
+	ntag "BLAKE:"
 	text "Fiddlesticks!"
 	done
 
 GentlemanBlakeAfterBattleText:
+	ntag "GENTLEMAN:"
 	text "I won this trip"
 	line "from a contest on"
 	cont "the radio."
@@ -193,14 +211,17 @@ TrainerBurglarBarry:
 	end
 
 BurglarBarrySeenText:
+	ntag "BURGLAR:"
 	text "!"
 	done
 
 BurglarBarryBeatenText:
+	ntag "BARRY:"
 	text "…"
 	done
 
 BurglarBarryAfterBattleText:
+	ntag "BURGLAR:"
 	text "This really is my"
 	line "room!"
 
@@ -219,14 +240,17 @@ TrainerMediumChel:
 	end
 
 MediumChelSeenText:
+	ntag "MEDIUM:"
 	text "Boo!"
 	done
 
 MediumChelBeatenText:
+	ntag "CHEL:"
 	text "Boo…"
 	done
 
 MediumChelAfterBattleText:
+	ntag "MEDIUM:"
 	text "My granddaughter"
 	line "is taking me on"
 	cont "this cruise!"
@@ -248,15 +272,18 @@ TrainerLassElena:
 	end
 
 LassElenaSeenText:
+	ntag "LASS:"
 	text "Mother! Someone's"
 	line "in our room!"
 	done
 
 LassElenaBeatenText:
+	ntag "ELENA:"
 	text "Hmph!"
 	done
 
 LassElenaAfterBattleText:
+	ntag "LASS:"
 	text "You really should"
 	line "knock before you"
 	cont "enter!"
@@ -273,14 +300,17 @@ TrainerPokefanFAudrey:
 	end
 
 PokefanFAudreySeenText:
+	ntag "#FAN:"
 	text "Oh! A visitor!"
 	done
 
 PokefanFAudreyBeatenText:
+	ntag "AUDREY:"
 	text "Good battle!"
 	done
 
 PokefanFAudreyAfterBattleText:
+	ntag "#FAN:"
 	text "This is my daugh-"
 	line "ter's first trip on"
 	cont "the S.S.ANNE."
@@ -296,6 +326,7 @@ PokefanFAudreyAfterBattleText:
 SSAnneRoomsNorthGentlemanScript:
 	jumptextfaceplayer SSAnneRoomsNorthGentlemanText
 SSAnneRoomsNorthGentlemanText:
+	ntag "GENTLEMAN:"
 	text "Ssh! I'm a GLOBAL"
 	line "POLICE agent!"
 
@@ -311,11 +342,13 @@ SSAnneRoomsNorthLass1Script:
 	jumptextfaceplayer SSAnneRoomsNorthLass1Text1
 
 SSAnneRoomsNorthLass1Text1:
+	ntag "LASS:"
 	text "We are cruising"
 	line "around the world."
 	done
 
 SSAnneRoomsNorthLass1Text2:
+	ntag "LASS:"
 	text "The S.S.ANNE lets"
 	line "trainers aboard"
 	cont "whenever it docks."
@@ -329,6 +362,7 @@ SSAnneRoomsNorthLass1Text2:
 SSAnneRoomsNorthGirlScript:
 	jumptextfaceplayer SSAnneRoomsNorthGirlText
 SSAnneRoomsNorthGirlText:
+	ntag "GIRL:"
 	text "I always travel"
 	line "with CLEFAIRY!"
 	done
@@ -349,6 +383,7 @@ SSAnneRoomsNorthClefairyText:
 SSAnneRoomsNorthPokefanMScript:
 	jumptextfaceplayer SSAnneRoomsNorthPokefanMText
 SSAnneRoomsNorthPokefanMText:
+	ntag "MAN:"
 	text "A cruise is so"
 	line "elegant yet cozy!"
 	done
@@ -356,6 +391,7 @@ SSAnneRoomsNorthPokefanMText:
 SSAnneRoomsNorthLass2Script:
 	jumptextfaceplayer SSAnneRoomsNorthLass2Text
 SSAnneRoomsNorthLass2Text:
+	ntag "LASS:"
 	text "Waiter, I would"
 	line "like a cherry pie"
 	cont "please!"

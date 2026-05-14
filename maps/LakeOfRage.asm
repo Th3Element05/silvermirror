@@ -138,8 +138,8 @@ LakeOfRageMagikarpCryText:
 	done
 
 LakeOfRageGotGoldScaleText:
-	text "<PLAYER> obtained a"
-	line "GOLD SCALE."
+	text "<PLAYER> obtained"
+	line "a GOLD SCALE."
 	done
 
 ; clair
@@ -194,6 +194,7 @@ LakeOfRageClairScript:
 	end
 
 LakeOfRageClairFirstText:
+	ntag "CLAIR:"
 	text "They say LAKE OF"
 	line "RAGE was created"
 	cont "by a rampaging"
@@ -205,16 +206,15 @@ LakeOfRageClairFirstText:
 	done
 
 LakeOfRageClairIntroText:
+	ntag "CLAIR:"
 	text "You're <PLAYER>?"
 
 	para "You look like a"
 	line "#MON trainer."
 
-	para "Nice to meet you.@"
+	para "Nice to meet you."
 
-	text_promptbutton
-	ntag "CLAIR:"
-	text "I'm CLAIR, the"
+	para "I'm CLAIR, the"
 	line "GYM LEADER from"
 	cont "BLACKTHORN CITY."
 	done
@@ -294,12 +294,14 @@ TrainerFisherMarco:
 	end
 
 FisherMarcoSeenText:
+	ntag "FISHER:"
 	text "Let me battle with"
 	line "the #MON I just"
 	cont "caught!"
 	done
 
 FisherMarcoBeatenText:
+	ntag "MARCO:"
 	text "I might be an ex-"
 	line "pert angler, but"
 	cont "I stink as a #-"
@@ -307,6 +309,7 @@ FisherMarcoBeatenText:
 	done
 
 FisherMarcoAfterBattleText:
+	ntag "FISHER:"
 	text "I won't lose as an"
 	line "angler! I catch"
 	cont "#MON all day."
@@ -323,6 +326,7 @@ TrainerFisherArchie:
 	end
 
 FisherArchieSeenText:
+	ntag "FISHER:"
 	text "No matter what I"
 	line "do, all I catch"
 	cont "are the same #-"
@@ -330,11 +334,13 @@ FisherArchieSeenText:
 	done
 
 FisherArchieBeatenText:
+	ntag "ARCHIE:"
 	text "My line's all"
 	line "tangled up…"
 	done
 
 FisherArchieAfterBattleText:
+	ntag "FISHER:"
 	text "Why can't I catch"
 	line "any good #MON?"
 	done
@@ -350,6 +356,7 @@ TrainerCooltrainermKevin:
 	end
 
 CooltrainermKevinSeenText:
+	ntag "COOLTRAINER:"
 	text "If a trainer spots"
 	line "another trainer,"
 	cont "he has to make a"
@@ -357,11 +364,13 @@ CooltrainermKevinSeenText:
 	done
 
 CooltrainermKevinBeatenText:
+	ntag "KEVIN:"
 	text "Whew…"
 	line "Good battle."
 	done
 
 CooltrainermKevinAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "#MON and their"
 	line "trainer become"
 	cont "powerful through"
@@ -379,6 +388,7 @@ TrainerCooltrainerfCara:
 	end
 
 CooltrainerfCaraSeenText:
+	ntag "COOLTRAINER:"
 	text "I heard a rare"
 	line "MAGIKARP was seen"
 	cont "in the lake."
@@ -397,10 +407,12 @@ CooltrainerfCaraSeenText:
 ;	done
 
 CooltrainerfCaraBeatenText:
+	ntag "CARA:"
 	text "Good going!"
 	done
 
 CooltrainerfCaraAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "Come to think of"
 	line "it, I've seen a"
 	cont "pink BUTTERFREE."
@@ -409,6 +421,7 @@ CooltrainerfCaraAfterBattleText:
 LakeOfRageSuperNerdScript:
 	jumptextfaceplayer LakeOfRageSuperNerdText
 LakeOfRageSuperNerdText:
+	ntag "SUPERNERD:"
 	text "I heard this lake"
 	line "was made by ram-"
 	cont "paging GYARADOS."
@@ -417,6 +430,7 @@ LakeOfRageSuperNerdText:
 LakeOfRageCooltrainerFScript:
 	jumptextfaceplayer LakeOfRageCooltrainerFText
 LakeOfRageCooltrainerFText:
+	ntag "SUPERNERD:"
 	text "Did my eyes de-"
 	line "ceive me? I saw a"
 	cont "gold MAGIKARP in"

@@ -194,15 +194,18 @@ TrainerPsychicIdris:
 	end
 
 PsychicIdrisSeenText:
+	ntag "PSYCHIC:"
 	text "Hmmm… This is a"
 	line "strange place."
 	done
 
 PsychicIdrisBeatenText:
+	ntag "IDRIS:"
 	text "…"
 	done
 
 PsychicIdrisAfterBattleText:
+	ntag "PSYCHIC:"
 	text "I like thinking"
 	line "here."
 	done

@@ -13,8 +13,8 @@ TrainerHouse1F_MapScripts:
 TrainerHouse1FReceptionistScript:
 	jumptextfaceplayer TrainerHouse1FReceptionistText
 
-TrainerHouse1FCooltrainerMScript:
-	jumptextfaceplayer TrainerHouse1FCooltrainerMText
+;TrainerHouse1FCooltrainerMScript:
+;	jumptextfaceplayer TrainerHouse1FCooltrainerMText
 
 TrainerHouse1FCooltrainerFScript:
 	jumptextfaceplayer TrainerHouse1FCooltrainerFText
@@ -35,6 +35,7 @@ TrainerHouseIllegibleBook:
 	jumptext TrainerHouseIllegibleText
 
 TrainerHouse1FReceptionistText:
+	ntag "RECEPTIONIST:"
 	text "Welcome to TRAINER"
 	line "HOUSE, the newest"
 	cont "and most happening"
@@ -49,20 +50,22 @@ TrainerHouse1FReceptionistText:
 	roll "downstairs."
 	done
 
-TrainerHouse1FCooltrainerMText:
-	text "VIRIDIAN is the"
-	line "town closest to"
-	cont "INDIGO PLATEAU."
-
-	para "They built this"
-	line "place because so"
-	cont "many trainers pass"
-	roll "through on their"
-	cont "way up to INDIGO"
-	roll "PLATEAU."
-	done
+;TrainerHouse1FCooltrainerMText:
+;	ntag "TRAINER:"
+;	text "VIRIDIAN is the"
+;	line "town closest to"
+;	cont "INDIGO PLATEAU."
+;
+;	para "They built this"
+;	line "place because so"
+;	cont "many trainers pass"
+;	roll "through on their"
+;	cont "way up to INDIGO"
+;	roll "PLATEAU."
+;	done
 
 TrainerHouse1FCooltrainerFText:
+	ntag "TRAINER:"
 	text "They hold practice"
 	line "battles downstairs"
 	cont "here."
@@ -74,20 +77,17 @@ TrainerHouse1FCooltrainerFText:
 	done
 
 TrainerHouse1FYoungsterText:
+	ntag "YOUNGSTER:"
 	text "I guess you can't"
 	line "become the CHAMP"
 	cont "unless you go all"
 	roll "over the place and"
 	cont "battle all kinds"
 	roll "of people."
-
-	para "The CHAMPION from"
-	line "PALLET traveled to"
-	cont "all the cities and"
-	roll "towns in KANTO."
 	done
 
 TrainerHouse1FGentlemanText:
+	ntag "GENTLEMAN:"
 	text "Whew… I'm taking a"
 	line "rest from #MON"
 	cont "battles."
@@ -141,7 +141,7 @@ TrainerHouse1F_MapEvents:
 
 	def_object_events
 	object_event  0, 11, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TrainerHouse1FReceptionistScript, -1
-	object_event  7, 11, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TrainerHouse1FCooltrainerMScript, -1
+;	object_event  7, 11, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TrainerHouse1FCooltrainerMScript, -1
 	object_event  6,  2, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 2, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TrainerHouse1FCooltrainerFScript, -1
 	object_event  4,  8, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TrainerHouse1FYoungsterScript, -1
 	object_event  2,  4, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TrainerHouse1FGentlemanScript, -1

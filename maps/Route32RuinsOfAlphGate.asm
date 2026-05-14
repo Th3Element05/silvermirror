@@ -13,6 +13,7 @@ Route32RuinsOfAlphGateOfficerScript:
 	jumptext Route32RuinsOfAlphGateOfficer_AfterText
 
 Route32RuinsOfAlphGateOfficerText:
+	ntag "OFFICER:"
 	text "They found an old"
 	cont "structure inside a"
 	line "cave here."
@@ -22,6 +23,7 @@ Route32RuinsOfAlphGateOfficerText:
 	done
 
 Route32RuinsOfAlphGateOfficer_AfterText:
+	ntag "OFFICER:"
 	text "All that shaking"
 	line "unearthed more of"
 	cont "the RUINS?"
@@ -30,6 +32,7 @@ Route32RuinsOfAlphGateOfficer_AfterText:
 Route32RuinsOfAlphGatePokefanMScript:
 	jumptextfaceplayer Route32RuinsOfAlphGatePokefanMText
 Route32RuinsOfAlphGatePokefanMText:
+	ntag "MAN:"
 	text "You're studying"
 	line "the RUINS?"
 

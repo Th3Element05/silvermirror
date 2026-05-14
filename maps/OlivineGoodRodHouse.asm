@@ -1,78 +1,78 @@
 	object_const_def
-;	const OLIVINEGOODRODHOUSE_FISHING_GURU
 
 OlivineGoodRodHouse_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
 
-;GoodRodGuru:
-;	faceplayer
-;	opentext
-;	checkevent EVENT_GOT_GOOD_ROD
-;	iftrue .AlreadyGotItem
-;	writetext OfferGoodRodText
-;	yesorno
-;	iffalse .DontWantIt
-;	writetext GiveGoodRodText
-;	promptbutton
-;	verbosegiveitem GOOD_ROD
-;	writetext GaveGoodRodText
-;	waitbutton
-;	closetext
-;	setevent EVENT_GOT_GOOD_ROD
-;	end
+GoodRodGuru:
+	faceplayer
+	opentext
+	checkevent EVENT_GOT_GOOD_ROD
+	iftrue .AlreadyGotItem
+	writetext OfferGoodRodText
+	yesorno
+	iffalse .DontWantIt
+	writetext GiveGoodRodText
+	promptbutton
+	verbosegiveitem GOOD_ROD
+	writetext GaveGoodRodText
+	waitbutton
+	closetext
+	setevent EVENT_GOT_GOOD_ROD
+	end
 
-;.DontWantIt:
-;	writetext DontWantGoodRodText
-;	waitbutton
-;	closetext
-;	end
+.DontWantIt:
+	writetext DontWantGoodRodText
+	waitbutton
+	closetext
+	end
 
-;.AlreadyGotItem:
-;	writetext HaveGoodRodText
-;	waitbutton
-;	closetext
-;	end
+.AlreadyGotItem:
+	writetext GaveGoodRodText
+	waitbutton
+	closetext
+	end
 
-;GoodRodHouseBookshelf: ; unreferenced
-;	jumpstd PictureBookshelfScript
+OfferGoodRodText:
+	ntag "FISHERMAN:"
+	text "OLIVINE is on the"
+	line "sea!"
 
-;OfferGoodRodText:
-;	text "OLIVINE is on the"
-;	line "sea!"
-;
-;	para "And if it's on the"
-;	line "sea, there are"
-;	cont "bound to be fish!"
-;
-;	para "I've fished here"
-;	line "for 30 years."
-;
-;	para "Would you like to"
-;	line "face the sea and"
-;	cont "fish?"
-;	done
+	para "And if it's on the"
+	line "sea, there are"
+	cont "bound to be fish!"
 
-;GiveGoodRodText:
-;	text "Ah, hahah!"
-;	line "We have ourselves"
-;	cont "a new angler!"
-;	done
+	para "I've fished here"
+	line "for 30 years."
 
-;GaveGoodRodText:
-;	text "Fish aren't found"
-;	line "in the sea alone."
-;
-;	para "They go wherever"
-;	line "there is water."
-;	done
+	para "Would you like to"
+	line "face the sea and"
+	cont "fish?"
+	done
 
-;DontWantGoodRodText:
-;	text "Whaaat? You don't"
-;	line "like to fish!?"
-;	cont "Incomprehensible!"
-;	done
+GiveGoodRodText:
+	ntag "FISHERMAN:"
+	text "Ah, hahah!"
+	line "We have ourselves"
+	cont "a new angler!"
+	done
+
+GaveGoodRodText:
+	ntag "FISHERMAN:"
+	text "Fish aren't found"
+	line "in the sea alone."
+
+	para "They go wherever"
+	line "there is water."
+	done
+
+DontWantGoodRodText:
+	ntag "FISHERMAN:"
+	text "Whaaat? You don't"
+	line "like to fish!?"
+	cont "Incomprehensible!"
+	done
 
 ;HaveGoodRodText:
 ;	text "How are things?"

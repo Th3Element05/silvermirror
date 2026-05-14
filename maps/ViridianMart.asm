@@ -92,6 +92,7 @@ ViridianMartMedScript:
 	end
 
 ViridianMartRestockingText:
+	ntag "CLERK:"
 	text "I'm restocking the"
 	line "#MON medicine."
 
@@ -135,12 +136,14 @@ ViridianMartGotParcelText:
 	done
 
 ViridianMartCooltrainerMText:
+	ntag "TRAINER:"
 	text "Use POTIONs on"
 	line "injured #MON"
 	cont "to restore HP!"
 	done
 
 ViridianMartYoungsterText:
+	ntag "YOUNGSTER:"
 	text "This shop sells"
 	line "many ANTIDOTEs."
 	done
@@ -159,5 +162,5 @@ ViridianMart_MapEvents:
 	def_object_events
 	object_event  0,  5, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ViridianMartClerkScript, -1
 	object_event  0,  3, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ViridianMartMedScript, -1
-	object_event  3,  2, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianMartCooltrainerMScript, -1
+	object_event  3,  2, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianMartCooltrainerMScript, -1
 	object_event  6,  5, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ViridianMartYoungsterScript, -1

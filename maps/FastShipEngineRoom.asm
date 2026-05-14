@@ -39,16 +39,19 @@ TrainerRocketGruntM29:
 	end
 
 GruntM29SeenText:
+	ntag "ROCKET:"
 	text "Its not safe for"
 	line "kids down here!"
 	done
 
 GruntM29BeatenText:
+	ntag "ROCKET:"
 	text "You're strong"
 	line "for a kid!"
 	done
 
 GruntM29AfterBattleText:
+	ntag "ROCKET:"
 	text "You won't beat"
 	line "all of us!"
 	done
@@ -73,6 +76,7 @@ TrainerRocketExecutiveM3:
 	end
 
 ExecutiveM3SeenText:
+	ntag "ROCKET:"
 	text "Who are you?"
 
 	para "I'll show you what"
@@ -82,10 +86,12 @@ ExecutiveM3SeenText:
 	done
 
 ExecutiveM3BeatenText:
+	ntag "ROCKET:"
 	text "Guh!"
 	done
 
 ExecutiveM3AfterBattleText:
+	ntag "ROCKET:"
 	text "Oh no."
 	line "This isn't good!"
 	done
@@ -125,6 +131,7 @@ FastShipEngineRoomSailor_FirstTrip:
 	jumptextfaceplayer FastShipEngineRoomThanksText
 
 FastShipEngineRoomHelpText:
+	ntag "SAILOR:"
 	text "TEAM ROCKET is"
 	line "trying to take"
 	cont "control of the"
@@ -134,6 +141,7 @@ FastShipEngineRoomHelpText:
 	done
 
 FastShipEngineRoomThanksText:
+	ntag "SAILOR:"
 	text "Thank you!"
 	line "You saved us!"
 	done
@@ -156,6 +164,7 @@ TrainerSailorPedro:
 	end
 
 SailorPedroSeenText:
+	ntag "SAILOR:"
 	text "It'll be smooth"
 	line "sailing until we"
 	cont "get closer to our"
@@ -166,10 +175,12 @@ SailorPedroSeenText:
 	done
 
 SailorPedroBeatenText:
+	ntag "PEDRO:"
 	text "That was rough."
 	done
 
 SailorPedroAfterBattleText:
+	ntag "SAILOR:"
 	text "Good thing I'm"
 	line "better at sailing"
 	cont "than I am at #-"
@@ -179,6 +190,7 @@ SailorPedroAfterBattleText:
 FastShipEngineRoomSailor:
 	jumptextfaceplayer FastShipEngineRoomSailorText
 FastShipEngineRoomSailorText:
+	ntag "SAILOR:"
 	text "It's important to"
 	line "keep any ship's"
 	cont "engine well"

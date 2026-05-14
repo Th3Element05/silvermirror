@@ -9,6 +9,7 @@ Route19Gate_MapScripts:
 Route19FuchsiaGateOfficerScript:
 	jumptext Route19FuchsiaGateOfficerText
 Route19FuchsiaGateOfficerText:
+	ntag "OFFICER:"
 	text "SEAFOAM ISLANDS"
 	line "are south-west"
 	cont "from here."

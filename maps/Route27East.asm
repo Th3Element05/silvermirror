@@ -16,15 +16,18 @@ TrainerCooltrainerMFelix:
 	end
 
 CooltrainerMFelixSeenText:
+	ntag "COOLTRAINER:"
 	text "Hm? You're good,"
 	line "aren't you?"
 	done
 
 CooltrainerMFelixBeatenText:
+	ntag "FELIX:"
 	text "Just as I thought!"
 	done
 
 CooltrainerMFelixAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "A good trainer can"
 	line "recognize other"
 	cont "good trainers."
@@ -41,6 +44,7 @@ TrainerCooltrainerFMira:
 	end
 
 CooltrainerFMiraSeenText:
+	ntag "COOLTRAINER:"
 	text "You shouldn't"
 	line "underestimate the"
 	cont "wild #MON in"
@@ -48,11 +52,13 @@ CooltrainerFMiraSeenText:
 	done
 
 CooltrainerFMiraBeatenText:
+	ntag "MIRA:"
 	text "Oh! You're much"
 	line "too strong!"
 	done
 
 CooltrainerFMiraAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "You're just a kid,"
 	line "but you're not to"
 	cont "be underestimated"

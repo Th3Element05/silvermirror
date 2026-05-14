@@ -8,6 +8,7 @@ PokemonTower1F_MapScripts:
 PokemonTowerPokefanFScript:
 	jumptextfaceplayer PokemonTowerPokefanFText
 PokemonTowerPokefanFText:
+	ntag "WOMAN:"
 	text "Did you come to"
 	line "pay respects?"
 	cont "Bless you!"
@@ -16,6 +17,7 @@ PokemonTowerPokefanFText:
 PokemonTowerPokefanMScript:
 	jumptextfaceplayer PokemonTowerPokefanMText
 PokemonTowerPokefanMText:
+	ntag "MAN:"
 	text "I came to pray"
 	line "for my CLEFAIRY."
 
@@ -26,6 +28,7 @@ PokemonTowerPokefanMText:
 PokemonTowerGirlScript:
 	jumptextfaceplayer PokemonTowerGirlText
 PokemonTowerGirlText:
+	ntag "GIRL:"
 	text "My GROWLITHE…"
 	line "Why did you die?"
 	done
@@ -33,15 +36,17 @@ PokemonTowerGirlText:
 PokemonTowerReceptionistScript:
 	jumptextfaceplayer PokemonTowerReceptionistText
 PokemonTowerReceptionistText:
+	ntag "RECEPTIONIST:"
 	text "#MON TOWER was"
 	line "erected in the"
 	cont "memory of #MON"
-	roll "that had died."
+	roll "that have died."
 	done
 
 PokemonTowerMediumScript:
 	jumptextfaceplayer PokemonTowerMediumText
 PokemonTowerMediumText:
+	ntag "MEDIUM:"
 	text "I am a MEDIUM!"
 	line "There are spirits"
 	cont "up to mischief!"

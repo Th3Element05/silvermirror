@@ -30,26 +30,27 @@ BattleTowerOutsideSailorScript:
 BattleTowerOutsideSign:
 	jumptext BattleTowerOutsideSignText
 
-BattleTowerOutsideYoungsterText_NotYetOpen: ; unreferenced
-	text "Wow, the BATTLE"
-	line "TOWER is huge! My"
-	cont "neck is tired from"
-	roll "looking up at it."
-	done
+;BattleTowerOutsideYoungsterText_NotYetOpen: ; unreferenced
+;	text "Wow, the BATTLE"
+;	line "TOWER is huge! My"
+;	cont "neck is tired from"
+;	roll "looking up at it."
+;	done
 
-BattleTowerOutsideYoungsterText_Mobile: ; unreferenced
-	text "Wow, the BATTLE"
-	line "TOWER is huge!"
-
-	para "Since there are a"
-	line "whole bunch of"
-	cont "trainers inside,"
-	roll "there must also be"
-	cont "a wide variety of"
-	roll "#MON."
-	done
+;BattleTowerOutsideYoungsterText_Mobile: ; unreferenced
+;	text "Wow, the BATTLE"
+;	line "TOWER is huge!"
+;
+;	para "Since there are a"
+;	line "whole bunch of"
+;	cont "trainers inside,"
+;	roll "there must also be"
+;	cont "a wide variety of"
+;	roll "#MON."
+;	done
 
 BattleTowerOutsideYoungsterText:
+	ntag "YOUNGSTER:"
 	text "Wow, the BATTLE"
 	line "TOWER is huge!"
 
@@ -69,6 +70,7 @@ BattleTowerOutsideYoungsterText:
 ;	done
 
 BattleTowerOutsideBeautyText:
+	ntag "BEAUTY:"
 	text "You can use only"
 	line "three #MON."
 
@@ -89,6 +91,7 @@ BattleTowerOutsideBeautyText:
 ;	done
 
 BattleTowerOutsideSailorText:
+	ntag "SAILOR:"
 	text "Hehehe, I snuck"
 	line "out from work."
 

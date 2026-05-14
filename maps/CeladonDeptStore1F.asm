@@ -8,6 +8,7 @@ CeladonDeptStore1F_MapScripts:
 CeladonDeptStore1FReceptionistScript:
 	jumptextfaceplayer CeladonDeptStore1FReceptionistText
 CeladonDeptStore1FReceptionistText:
+	ntag "RECEPTIONIST:"
 	text "Hello! Welcome to"
 	line "CELADON DEPT."
 	cont "STORE!"
@@ -19,6 +20,7 @@ CeladonDeptStore1FReceptionistText:
 CeladonDeptStore1FGentlemanScript:
 	jumptextfaceplayer CeladonDeptStore1FGentlemanText
 CeladonDeptStore1FGentlemanText:
+	ntag "GENTLEMAN:"
 	text "The DEPT.STORE"
 	line "has a pretty good"
 	cont "selection."

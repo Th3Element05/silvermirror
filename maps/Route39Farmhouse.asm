@@ -84,6 +84,7 @@ FarmerMScript_Milking:
 ;	done
 
 FarmerMText_BuyMilk:
+	ntag "FARMER:"
 	text "How'd you like my"
 	line "MOOMOO MILK?"
 
@@ -98,26 +99,31 @@ FarmerMText_BuyMilk:
 	done
 
 FarmerMText_GotMilk:
+	ntag "FARMER:"
 	text "Here ya go!"
 	line "Drink up'n enjoy!"
 	done
 
 FarmerMText_NoMoney:
+	ntag "FARMER:"
 	text "Sorry, there."
 	line "No cash, no sale!"
 	done
 
 FarmerMText_NoRoom:
+	ntag "FARMER:"
 	text "I reckon yer"
 	line "PACK's full."
 	done
 
 FarmerMText_NoSale:
+	ntag "FARMER:"
 	text "You don't want it?"
 	line "Come again, hear?"
 	done
 
 FarmerMText_Milking:
+	ntag "FARMER:"
 	text "I best go do my"
 	line "milkin'."
 	done
@@ -125,6 +131,7 @@ FarmerMText_Milking:
 PokefanF_SnoreFarmer:
 	jumptextfaceplayer FarmerFText_Generic
 FarmerFText_Generic:
+	ntag "FARMER"
 	text "We do alright as"
 	line "long as MILTANK"
 	cont "keeps givin' milk."

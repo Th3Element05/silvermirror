@@ -14,6 +14,7 @@ Route42EcruteakGateGentlemanScript:
 	jumptextfaceplayer Route42EcruteakGateRouteClearText
 
 Route42EcruteakGateRouteBlockedText:
+	ntag "GENTLEMAN:"
 	text "Boulders fell from"
 	line "MT.MORTAR and"
 	cont "blocked ROUTE 42!"
@@ -25,6 +26,7 @@ Route42EcruteakGateRouteBlockedText:
 	done
 
 Route42EcruteakGateRouteClearText:
+	ntag "GENTLEMAN:"
 	text "The boulders have"
 	line "been cleared!"
 
@@ -42,6 +44,7 @@ Route42EcruteakGateOfficerScript:
 	jumptextfaceplayer Route42EcruteakGateOfficerText
 
 Route42EcruteakGateOfficerBlockedText:
+	ntag "OFFICER:"
 	text "MT.MORTAR is this"
 	line "way, but you can't"
 	cont "get to MAHOGANY"
@@ -58,6 +61,7 @@ Route42EcruteakGateOfficerBlockedText:
 ;	done
 
 Route42EcruteakGateOfficerText:
+	ntag "OFFICER:"
 	text "MT.MORTAR is like"
 	line "a maze inside."
 

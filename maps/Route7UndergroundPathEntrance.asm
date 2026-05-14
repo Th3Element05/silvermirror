@@ -8,6 +8,7 @@ Route7UndergroundPathEntrance_MapScripts:
 Route7UndergroundPathEntrancePokefanMScript:
 	jumptextfaceplayer Route7UndergroundPathEntrancePokefanMText
 Route7UndergroundPathEntrancePokefanMText:
+	ntag "MAN:"
 	text "I heard a sleepy"
 	line "#MON appeared"
 	cont "near CELADON CITY."

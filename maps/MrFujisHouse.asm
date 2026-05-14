@@ -115,12 +115,14 @@ MrFujisHouseGirlScript:
 	jumptextfaceplayer MrFujisHouseGirlMrFujiGoneText
 
 MrFujisHouseGirlText:
+	ntag "GIRL:"
 	text "It's so warm!"
 	line "#MON are so"
 	cont "nice to hug!"
 	done
 
 MrFujisHouseGirlMrFujiGoneText:
+	ntag "GIRL:"
 	text "This is really"
 	line "MR.FUJI's house."
 
@@ -151,12 +153,14 @@ MrFujisHouseSuperNerdScript:
 	jumptextfaceplayer MrFujisHouseSuperNerdMrFujiGoneText
 
 MrFujisHouseSuperNerdText:
+	ntag "SUPERNERD:"
 	text "MR.FUJI had been"
 	line "praying alone for"
 	cont "CUBONE's mother."
 	done
 
 MrFujisHouseSuperNerdMrFujiGoneText:
+	ntag "SUPERNERD:"
 	text "That's odd, MR.FUJI"
 	line "isn't here."
 	cont "Where'd he go?"

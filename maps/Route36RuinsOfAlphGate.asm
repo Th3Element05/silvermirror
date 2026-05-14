@@ -24,6 +24,7 @@ Route36RuinsOfAlphGateOfficerScript:
 ;	done
 
 Route36RuinsOfAlphGateOfficerText:
+	ntag "OFFICER:"
 	text "More RUINS were"
 	line "unearthed?"
 
@@ -36,6 +37,7 @@ Route36RuinsOfAlphGateOfficerText:
 Route36RuinsOfAlphGateGrampsScript:
 	jumptextfaceplayer Route36RuinsOfAlphGateGrampsText
 Route36RuinsOfAlphGateGrampsText:
+	ntag "GRAMPS:"
 	text "I don't like walk-"
 	line "ing on ROUTE 36."
 

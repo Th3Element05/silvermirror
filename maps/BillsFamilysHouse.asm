@@ -143,6 +143,7 @@ BillsMomScript:
 	end
 
 BillsMomText_BeforeGSBall:
+	ntag "#FAN:"
 	text "Oh, you collect"
 	line "#MON? My son"
 	cont "BILL is an expert."
@@ -156,6 +157,7 @@ BillsMomText_AfterGSBall:
 ;	line "any time!"
 ;	done
 ;BillsMomText_AfterEcruteak:
+	ntag "#FAN:"
 	text "My husband was"
 	line "once known as a"
 	cont "#MANIAC."
@@ -196,6 +198,7 @@ BillsSisterScript:
 	end
 
 BillsSisterUsefulNumberText:
+	ntag "GIRL:"
 	text "Are you a trainer?"
 
 	para "I've got a useful"
@@ -209,6 +212,7 @@ SisterGaveBillsNumberText:
 	done
 
 BillsSisterRefusedNumberText:
+	ntag "GIRL:"
 	text "My brother made"
 	line "the PC #MON"
 	cont "storage system."
@@ -219,11 +223,13 @@ BillsSisterRefusedNumberText:
 	done
 
 BillsSisterPhoneFullText:
+	ntag "GIRL:"
 	text "You can't record"
 	line "any more numbers."
 	done
 
 BillsSisterStorageSystemText:
+	ntag "GIRL:"
 	text "My big brother"
 	line "BILL made the PC"
 	cont "#MON storage"

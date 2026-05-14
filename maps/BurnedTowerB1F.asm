@@ -158,6 +158,7 @@ BurnedTowerB1FGramps:
 	end
 
 BurnedTowerB1FGrampsText:
+	ntag "GRAMPS:"
 	text "What were those"
 	line "#MON that ran"
 	cont "by just now?"

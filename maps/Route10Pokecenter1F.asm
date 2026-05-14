@@ -27,6 +27,7 @@ Route10Pokecenter1FBenchGuyText:
 Route10Pokecenter1FGentlemanScript:
 	jumptextfaceplayer Route10Pokecenter1FGentlemanText
 Route10Pokecenter1FGentlemanText:
+	ntag "GENTLEMAN:"
 	text "The element types"
 	line "of #MON make"
 	cont "them stronger"
@@ -35,9 +36,10 @@ Route10Pokecenter1FGentlemanText:
 	roll "others!"
 	done
 
-Route10Pokecenter1FFisherScript:
-	jumptextfaceplayer Route10Pokecenter1FFisherText
-Route10Pokecenter1FFisherText:
+Route10Pokecenter1FHikerScript:
+	jumptextfaceplayer Route10Pokecenter1FHikerText
+Route10Pokecenter1FHikerText:
+	ntag "HIKER:"
 	text "I sold a useless"
 	line "NUGGET for ¥5000!"
 	done
@@ -57,5 +59,5 @@ Route10Pokecenter1F_MapEvents:
 	object_event  3,  1, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route10Pokecenter1FNurseScript, -1
 	object_event 11,  2, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, Route10Pokecenter1FReceptionistScript, -1
 	object_event  0,  4, SPRITE_BENCH_GUY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route10Pokecenter1FBenchGuyScript, -1
-	object_event  2,  5, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, Route10Pokecenter1FFisherScript, -1
+	object_event  2,  5, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, Route10Pokecenter1FHikerScript, -1
 	object_event  6,  3, SPRITE_GENTLEMAN, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route10Pokecenter1FGentlemanScript, -1

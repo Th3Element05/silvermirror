@@ -35,7 +35,7 @@ TrainerRocketHideoutGiovanni:
 	end
 
 RocketHideoutGiovanniSeenText:
-;	ntag "GIOVANNI:"
+	ntag "ROCKET:"
 	text "So! I must say, I"
 	line "am impressed you"
 	cont "got here!@"
@@ -87,16 +87,19 @@ TrainerRocketGruntF3:
 	jumptextfaceplayer RocketGruntF3AfterBattleText
 
 RocketGruntF3SeenText:
+	ntag "ROCKET:"
 	text "The elevator"
 	line "doesn't work? Who"
 	cont "has the LIFT KEY?"
 	done
 
 RocketGruntF3BeatenText:
+	ntag "ROCKET:"
 	text "No!"
 	done
 
 RocketGruntF3AfterBattleText:
+	ntag "ROCKET:"
 	text "Oh no! I dropped"
 	line "the LIFT KEY!"
 	done
@@ -115,16 +118,19 @@ TrainerRocketExecutiveM1:
 	jumptextfaceplayer RocketExecutiveM1AfterBattleText
 
 RocketExecutiveM1SeenText:
+	ntag "ROCKET:"
 	text "I know you! You"
 	line "ruined our plans"
 	cont "at MT.MOON!"
 	done
 
 RocketExecutiveM1BeatenText:
+	ntag "ROCKET:"
 	text "Burned again!"
 	done
 
 RocketExecutiveM1AfterBattleText:
+	ntag "ROCKET:"
 	text "Do you have"
 	line "something against"
 	cont "TEAM ROCKET?"
@@ -144,16 +150,19 @@ TrainerRocketExecutiveF1:
 	jumptextfaceplayer RocketExecutiveF1AfterBattleText
 
 RocketExecutiveF1SeenText:
+	ntag "ROCKET:"
 	text "How can you not"
 	line "see the beauty of"
 	cont "our evil?"
 	done
 
 RocketExecutiveF1BeatenText:
+	ntag "ROCKET:"
 	text "Ayaya!"
 	done
 
 RocketExecutiveF1AfterBattleText:
+	ntag "ROCKET:"
 	text "BOSS! I'm sorry I"
 	line "failed you!"
 	done

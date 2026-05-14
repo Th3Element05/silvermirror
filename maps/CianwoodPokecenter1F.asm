@@ -11,17 +11,19 @@ CianwoodPokecenter1FNurseScript:
 CianwoodPokecenter1FLassScript:
 	jumptextfaceplayer CianwoodPokecenter1FLassText
 CianwoodPokecenter1FLassText:
+	ntag "LASS:"
 	text "Have you met the"
-	line "#MANIAC?"
+	line "#SEER?"
 
-	para "He's always brag-"
-	line "ging about his"
-	cont "rare #MON."
+	para "She can tell you"
+	line "things about your"
+	cont "#MON!"
 	done
 
 CianwoodPokecenter1FSuperNerdScript:
 	jumptextfaceplayer CianwoodPokecenter1FSuperNerdText
 CianwoodPokecenter1FSuperNerdText:
+	ntag "SUPERNERD:"
 	text "I love showing off"
 	line "the #MON that I've"
 	cont "raised."

@@ -19,6 +19,7 @@ VioletKylesHousePokefanMScript:
 ;	end
 
 VioletKylesHousePokefanMText:
+	ntag "MAN:"
 	text "A #MON you get"
 	line "in a trade grows"
 	cont "quickly."

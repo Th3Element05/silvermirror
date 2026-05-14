@@ -39,6 +39,7 @@ CherrygroveTeacherScript:
 ;	done
 
 CherrygroveTeacherText_HaveMapCard:
+	ntag "WOMAN:"
 	text "When you're with"
 	line "#MON, going"
 	cont "anywhere is fun."
@@ -68,6 +69,7 @@ CherrygroveYoungsterScript:
 ;	done
 
 CherrygroveYoungsterText_HavePokedex:
+	ntag "YOUNGSTER:"
 	text "I battled the"
 	line "trainers on the"
 	cont "road."
@@ -119,6 +121,7 @@ MysticWaterGuy:
 ;	done
 
 MysticWaterGuy_FishingText:
+	ntag "FISHER:"
 	text "Fishing is very"
 	line "relaxing."
 	done

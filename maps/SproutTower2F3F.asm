@@ -60,7 +60,7 @@ SageLiSeenText:
 	done
 
 SageLiBeatenText:
-	ntag "SAGE:"
+	ntag "LI:"
 	text "Ah, excellent!"
 	done
 
@@ -108,17 +108,20 @@ TrainerSageJin:
 	end
 
 SageJinSeenText:
+	ntag "SAGE:"
 	text "I train to find"
 	line "enlightenment in"
 	cont "#MON!"
 	done
 
 SageJinBeatenText:
+	ntag "JIN:"
 	text "My training is"
 	line "incomplete…"
 	done
 
 SageJinAfterBattleText:
+	ntag "SAGE:"
 	text "As #MON grow"
 	line "stronger, so does"
 	cont "the trainer."
@@ -141,17 +144,20 @@ TrainerSageKyro:
 	end
 
 SageKyroSeenText:
+	ntag "SAGE:"
 	text "Let me see how"
 	line "much you trust"
 	cont "your #MON."
 	done
 
 SageKyroBeatenText:
+	ntag "KYRO:"
 	text "Yes, your trust is"
 	line "real!"
 	done
 
 SageKyroAfterBattleText:
+	ntag "SAGE:"
 	text "It is not far to"
 	line "the ELDER."
 	done
@@ -195,17 +201,20 @@ TrainerSageNico:
 	end
 
 SageNicoSeenText:
+	ntag "SAGE:"
 	text "However hard we"
 	line "battle, the TOWER"
 	cont "will stand strong."
 	done
 
 SageNicoBeatenText:
+	ntag "NICO:"
 	text "I fought hard but"
 	line "I'm too weak."
 	done
 
 SageNicoAfterBattleText:
+	ntag "SAGE:"
 	text "The flexible pil-"
 	line "lar protects the"
 	cont "TOWER, even from"
@@ -224,15 +233,18 @@ TrainerSageNoe:
 	end
 
 SageNoeSeenText:
+	ntag "SAGE:"
 	text "…Sway like leaves"
 	line "in the wind…"
 	done
 
 SageNoeBeatenText:
+	ntag "NOE:"
 	text "Oh, I'm weak!"
 	done
 
 SageNoeAfterBattleText:
+	ntag "SAGE:"
 	text "I tried to copy"
 	line "BELLSPROUT's"
 	cont "gentle movements"

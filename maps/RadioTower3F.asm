@@ -63,6 +63,7 @@ RadioTower3FCooltrainerFScript:
 	jumptextfaceplayer RadioTower3FCooltrainerFYouWereMarvelousText
 
 RadioTower3FCooltrainerFLockedGateText:
+	ntag "TRAINER:"
 	text "Some maniac ran"
 	line "through and locked"
 	cont "the security gate"
@@ -76,6 +77,7 @@ RadioTower3FCooltrainerFLockedGateText:
 	done
 
 RadioTower3FCooltrainerFHaveKeyText:
+	ntag "TRAINER:"
 	text "The DIRECTOR gave"
 	line "you his card key?"
 
@@ -84,11 +86,13 @@ RadioTower3FCooltrainerFHaveKeyText:
 	done
 
 RadioTower3FCooltrainerFGateOpenText:
+	ntag "TRAINER:"
 	text "You got the gate"
 	line "open!"
 	done
 
 RadioTower3FCooltrainerFYoureAHeroText:
+	ntag "TRAINER:"
 	text "Thank you!"
 	line "You're a hero!"
 
@@ -105,6 +109,7 @@ RadioTower3FCooltrainerFYoureAHeroText:
 ;	done
 
 RadioTower3FCooltrainerFYouWereMarvelousText:
+	ntag "TRAINER:"
 	text "You were simply"
 	line "marvelous!"
 	done
@@ -113,6 +118,7 @@ RadioTower3FCooltrainerFYouWereMarvelousText:
 RadioTower3FGymGuideScript:
 	jumptextfaceplayer RadioTower3FGymGuideText
 RadioTower3FGymGuideText:
+	ntag "EMPLOYEE:"
 	text "We run 24 hours a"
 	line "day to broadcast"
 	cont "entertaining pro-"
@@ -127,6 +133,7 @@ RadioTower3FGymGuideText:
 RadioTower3FSuperNerdScript:
 	jumptextfaceplayer RadioTower3FSuperNerdText
 RadioTower3FSuperNerdText:
+	ntag "EMPLOYEE:"
 	text "We have recordings"
 	line "of the cries of"
 	cont "all #MON that"

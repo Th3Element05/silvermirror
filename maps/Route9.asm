@@ -105,6 +105,7 @@ TrainerBugCatcherDoug:
 	end
 
 BugCatcherDougSeenText:
+	ntag "BUGCATCHER:"
 	text "I got up early"
 	line "every day to"
 	cont "raise my #MON!"
@@ -112,6 +113,7 @@ BugCatcherDougSeenText:
 	done
 
 BugCatcherDougBeatenText:
+	ntag "DOUG:"
 	text "WHAT?"
 
 	para "What a total"
@@ -119,6 +121,7 @@ BugCatcherDougBeatenText:
 	done
 
 BugCatcherDougAfterBattleText:
+	ntag "DOUG:"
 	text "I have to collect"
 	line "more than bugs to"
 	cont "get stronger…"
@@ -136,16 +139,19 @@ TrainerHikerBenjamin:
 	end
 
 HikerBenjaminSeenText:
+	ntag "HIKER:"
 	text "Hahaha!"
 	line "Aren't you a"
 	cont "tough little one!"
 	done
 
 HikerBenjaminBeatenText:
+	ntag "BENJAMIN:"
 	text "What's that?"
 	done
 
 HikerBenjaminAfterBattleText:
+	ntag "HIKER:"
 	text "Hahaha! Kids"
 	line "should be tough!"
 	done
@@ -162,16 +168,19 @@ TrainerCamperDean:
 	end
 
 CamperDeanSeenText:
+	ntag "CAMPER:"
 	text "Who's that walking"
 	line "with those good"
 	cont "looking #MON?"
 	done
 
 CamperDeanBeatenText:
+	ntag "DEAN:"
 	text "Out like a light!"
 	done
 
 CamperDeanAfterBattleText:
+	ntag "CAMPER:"
 	text "Keep walking!"
 	done
 
@@ -187,16 +196,19 @@ TrainerCamperSid:
 	end
 
 CamperSidSeenText:
+	ntag "CAMPER:"
 	text "I'm taking ROCK"
 	line "TUNNEL to go to"
 	cont "LAVENDER…"
 	done
 
 CamperSidBeatenText:
+	ntag "SID:"
 	text "Can't measure up!"
 	done
 
 CamperSidAfterBattleText:
+	ntag "CAMPER:"
 	text "Are you off to"
 	line "ROCK TUNNEL too?"
 	done
@@ -213,15 +225,18 @@ TrainerBugCatcherDon:
 	end
 
 BugCatcherDonSeenText:
+	ntag "BUGCATCHER:"
 	text "Go, my super bug"
 	line "#MON!"
 	done
 
 BugCatcherDonBeatenText:
+	ntag "DON:"
 	text "My bugs…"
 	done
 
 BugCatcherDonAfterBattleText:
+	ntag "BUGCATCHER:"
 	text "If you don't like"
 	line "bug #MON, you"
 	cont "bug me!"
@@ -239,16 +254,19 @@ TrainerPicnickerEllie:
 	end
 
 PicnickerEllieSeenText:
+	ntag "PICNICKER:"
 	text "Don't you dare"
 	line "condescend me!"
 	done
 
 PicnickerEllieBeatenText:
+	ntag "ELLIE:"
 	text "No!"
 	line "You're too much!"
 	done
 
 PicnickerEllieAfterBattleText:
+	ntag "PICNICKER:"
 	text "You're obviously"
 	line "talented! Good"
 	cont "luck to you!"
@@ -322,20 +340,19 @@ TrainerPicnickerGina:
 	end
 
 PicnickerGinaSeenText:
+	ntag "PICNICKER:"
 	text "You have #MON"
 	line "with you!"
 	cont "You're mine!"
 	done
 
 PicnickerGinaBeatenText:
+	ntag "GINA:"
 	text "You deceived me!"
 	done
 
 PicnickerGinaAfterBattleText:
-;	text "You need light to"
-;	line "get through that"
-;	cont "dark tunnel ahead."
-;	done
+	ntag "GINA:"
 	text "You're too strong"
 	line "to be a practice"
 	cont "partner."
@@ -389,12 +406,14 @@ TrainerHikerErik:
 	end
 
 HikerErikSeenText:
+	ntag "HIKER:"
 	text "Bwahaha!"
 	line "Great! I was"
 	cont "bored, eh!"
 	done
 
 HikerErikBeatenText:
+	ntag "ERIK:"
 	text "Keep it coming!"
 
 	para "Oh wait. I'm out"
@@ -402,6 +421,7 @@ HikerErikBeatenText:
 	done
 
 HikerErikAfterBattleText:
+	ntag "HIKER:"
 	text "You sure had guts"
 	line "standing up to me"
 	cont "there, eh?"
@@ -419,16 +439,19 @@ TrainerHikerMichael:
 	end
 
 HikerMichaelSeenText:
+	ntag "HIKER:"
 	text "Hahahaha!"
 	line "Come on, dude!"
 	done
 
 HikerMichaelBeatenText:
+	ntag "MICHAEL:"
 	text "Hahahaha!"
 	line "You beat me fair!"
 	done
 
 HikerMichaelAfterBattleText:
+	ntag "HIKER:"
 	text "Hahahaha!"
 	line "Us hearty guys"
 	cont "always laugh!"

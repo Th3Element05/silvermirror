@@ -15,6 +15,7 @@ MountMoonGiftShopClerkScript:
 MountMoonGiftShopLassScript:
 	jumptextfaceplayer MountMoonGiftShopLassText
 MountMoonGiftShopLassText:
+	ntag "LASS:"
 	text "When the sun goes"
 	line "down, CLEFAIRY"
 	cont "come out to play."

@@ -241,6 +241,7 @@ VermilionCityPortSailorScript:
 	jumptextfaceplayer VermilionCityPortSailorSSAquaText
 
 VermilionCityPortSailorWelcomeText:
+	ntag "SAILOR:"
 	text "Welcome to the"
 	line "S.S.ANNE!"
 
@@ -251,11 +252,13 @@ VermilionCityPortSailorWelcomeText:
 	done
 
 VermilionCityPortSailorSetSailText:
+	ntag "SAILOR:"
 	text "The S.S.ANNE has"
 	line "set sail!"
 	done
 
 VermilionCityPortSailorSSAquaText:
+	ntag "SAILOR:"
 	text "Welcome! S.S.AQUA"
 	line "is docked, but you"
 	cont "will need a ticket"
@@ -263,6 +266,7 @@ VermilionCityPortSailorSSAquaText:
 	done
 
 VermilionCityPortSailorScheduleText:
+	ntag "SAILOR:"
 	text "S.S.AQUA sails to"
 	line "OLIVINE CITY on"
 	cont "SUNDAY, TUESDAY,"
@@ -301,24 +305,28 @@ VermilionCityGamblerScript:
 	jumptextfaceplayer VermilionCityGamblerSSAnneText
 
 VermilionCityGamblerSSAquaText:
+	ntag "MAN:"
 	text "Did you see the"
 	line "S.S.AQUA moored"
 	cont "in the harbor?"
 	done
 
 VermilionCityGamblerSSAquaDepartedText:
+	ntag "MAN:"
 	text "The S.S.AQUA has"
 	line "already sailed to"
 	cont "OLIVINE today."
 	done
 
 VermilionCityGamblerSSAnneText:
+	ntag "MAN:"
 	text "Did you see the"
 	line "S.S.ANNE moored"
 	cont "in the harbor?"
 	done
 
 VermilionCityGamblerSSAnneDepartedText:
+	ntag "MAN:"
 	text "The S.S.ANNE has"
 	line "departed!"
 
@@ -327,6 +335,7 @@ VermilionCityGamblerSSAnneDepartedText:
 	done
 
 VermilionCityGamblerRelaxingText:
+	ntag "MAN:"
 	text "Watching ships"
 	line "coming and going"
 	cont "is very relaxing!"
@@ -335,6 +344,7 @@ VermilionCityGamblerRelaxingText:
 VermilionCityBeautyScript:
 	jumptextfaceplayer VermilionCityBeautyText
 VermilionCityBeautyText:
+	ntag "LADY:"
 	text "We're careful"
 	line "about pollution!"
 
@@ -346,6 +356,7 @@ VermilionCityBeautyText:
 VermilionMachopOwner:
 	jumptextfaceplayer VermilionMachopOwnerText
 VermilionMachopOwnerText:
+	ntag "MAN:"
 	text "I'm putting up a"
 	line "building on this"
 	cont "plot of land."
@@ -374,7 +385,7 @@ VermilionMachopText1:
 	done
 
 VermilionMachopText2:
-	text "A MACHOP is"
+	text "This MACHOP is"
 	line "stomping the land"
 	cont "flat."
 	done
@@ -382,6 +393,7 @@ VermilionMachopText2:
 VermilionCitySailorScript:
 	jumptextfaceplayer VermilionCitySailorText
 VermilionCitySailorText:
+	ntag "SAILOR:"
 	text "S.S.ANNE is a"
 	line "famous luxury"
 	cont "cruise ship."

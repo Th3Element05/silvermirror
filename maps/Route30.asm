@@ -296,16 +296,19 @@ TrainerYoungsterJoey:
 	end
 
 YoungsterJoey1SeenText:
+	ntag "YOUNGSTER:"
 	text "Come on,"
 	cont "let's battle!"
 	done
 
 YoungsterJoey1BeatenText:
+	ntag "JOEY:"
 	text "Ack! I lost!"
 	line "Doggone it!"
 	done
 
 YoungsterJoey1AfterText:
+	ntag "JOEY:"
 	text "Do I have to have"
 	line "more #MON in"
 	cont "order to win?"
@@ -316,6 +319,7 @@ YoungsterJoey1AfterText:
 	done
 
 YoungsterJoeyText_GiveHPUpAfterBattle:
+	ntag "JOEY:"
 	text "I lost again…"
 	line "Gee, you're tough!"
 
@@ -341,6 +345,7 @@ TrainerYoungsterThomas:
 	end
 
 YoungsterThomasSeenText:
+	ntag "YOUNGSTER:"
 	text "You're a #MON"
 	line "trainer, right?"
 
@@ -349,11 +354,13 @@ YoungsterThomasSeenText:
 	done
 
 YoungsterThomasBeatenText:
+	ntag "THOMAS:"
 	text "That's strange."
 	line "I won before."
 	done
 
 YoungsterThomasAfterText:
+	ntag "YOUNGSTER:"
 	text "Becoming a good"
 	line "trainer is really"
 	cont "tough."
@@ -374,17 +381,20 @@ TrainerBugCatcherDylan:
 	end
 
 BugCatcherDylanSeenText:
+	ntag "BUGCATCHER:"
 	text "Instead of a bug"
 	line "#MON, I found"
 	cont "a trainer!"
 	done
 
 BugCatcherDylanBeatenText:
+	ntag "DYLAN:"
 	text "Argh! You're too"
 	line "strong!"
 	done
 
 BugCatcherDylanAfterText:
+	ntag "BUGCATCHER:"
 	text "I ran out of #-"
 	line "BALLs while I was"
 	cont "catching #MON."

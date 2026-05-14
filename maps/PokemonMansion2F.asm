@@ -70,17 +70,20 @@ TrainerBurglarDuncan:
 	end
 
 BurglarDuncanSeenText:
+	ntag "BURGLAR:"
 	text "I can't get out!"
 	line "This old place is"
 	cont "one big puzzle!"
 	done
 
 BurglarDuncanBeatenText:
+	ntag "DUNCAN:"
 	text "Oh no!"
 	line "My bag of loot!"
 	done
 
 BurglarDuncanAfterBattleText:
+	ntag "BURGLAR:"
 	text "Switches open and"
 	line "close alternating"
 	cont "sets of doors!"

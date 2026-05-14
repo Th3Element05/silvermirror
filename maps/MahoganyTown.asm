@@ -13,6 +13,7 @@ MahoganyTownFlypointCallback:
 MahoganyTownGrampsScript:
 	jumptextfaceplayer MahoganyTownGrampsText
 MahoganyTownGrampsText:
+	ntag "GRAMPS:"
 	text "A #MON with an"
 	line "unusual color was"
 	cont "spotted swimming"
@@ -29,6 +30,7 @@ MahoganyTownGrampsText:
 MahoganyTownFisherScript:
 	jumptextfaceplayer MahoganyTownFisherText
 MahoganyTownFisherText:
+	ntag "FISHER:"
 	text "Since you came"
 	line "this far, take the"
 	cont "time to do some"
@@ -42,6 +44,7 @@ MahoganyTownFisherText:
 MahoganyTownLassScript:
 	jumptextfaceplayer MahoganyTownLassText
 MahoganyTownLassText:
+	ntag "LASS:"
 	text "Visit my grandma's"
 	line "shop, she sells"
 	cont "stuff that nobody"

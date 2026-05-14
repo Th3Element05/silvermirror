@@ -195,6 +195,7 @@ GoldenrodCityFlypointCallback:
 GoldenrodCityPokefanMScript:
 	jumptextfaceplayer GoldenrodCityPokefanMText
 GoldenrodCityPokefanMText:
+	ntag "MAN:"
 	text "They built a new"
 	line "RADIO TOWER to"
 	cont "replace the old,"
@@ -204,6 +205,7 @@ GoldenrodCityPokefanMText:
 GoldenrodCityYoungster1Script:
 	jumptextfaceplayer GoldenrodCityYoungster1Text
 GoldenrodCityYoungster1Text:
+	ntag "YOUNGSTER:"
 	text "A new BIKE SHOP"
 	line "will open soon!"
 
@@ -213,6 +215,7 @@ GoldenrodCityYoungster1Text:
 GoldenrodCityCooltrainerF2Script:
 	jumptextfaceplayer GoldenrodCityCooltrainerF2Text
 GoldenrodCityCooltrainerF2Text:
+	ntag "TRAINER:"
 	text "The RADIO TOWER in"
 	line "GOLDENROD CITY is"
 	cont "a landmark."
@@ -224,6 +227,7 @@ GoldenrodCityCooltrainerF2Text:
 GoldenrodCityYoungster2Script:
 	jumptextfaceplayer GoldenrodCityYoungster2Text
 GoldenrodCityYoungster2Text:
+	ntag "YOUNGSTER:"
 	text "E-he-he-he…"
 
 	para "I got in trouble"
@@ -235,6 +239,7 @@ GoldenrodCityYoungster2Text:
 GoldenrodCityLassScript:
 	jumptextfaceplayer GoldenrodCityLassText
 GoldenrodCityLassText:
+	ntag "LASS:"
 	text "The man at that"
 	line "house rates your"
 	cont "#MON names."
@@ -246,6 +251,7 @@ GoldenrodCityLassText:
 GoldenrodCityGrampsScript:
 	jumptextfaceplayer GoldenrodCityGrampsText
 GoldenrodCityGrampsText:
+	ntag "GRAMPS:"
 	text "Whew! This is one"
 	line "big town."
 

@@ -17,6 +17,7 @@ TrainerPicnickerAzriel:
 	end
 
 PicnickerAzrielSeenText:
+	ntag "PICNICKER:"
 	text "I've been to a"
 	line "#MON GYM a few"
 	cont "times. But, I"
@@ -24,11 +25,13 @@ PicnickerAzrielSeenText:
 	done
 
 PicnickerAzrielBeatenText:
+	ntag "AZRIEL:"
 	text "Ohh!"
 	line "Blew it again!"
 	done
 
 PicnickerAzrielAfterBattleText:
+	ntag "PICNICKER:"
 	text "I noticed some"
 	line "#MANIACs"
 	cont "prowling around."
@@ -120,6 +123,7 @@ TrainerPokemaniacBrent:
 	end
 
 PokemaniacBrentSeenText:
+	ntag "#MANIAC:"
 	text "Wow, are you a"
 	line "#MANIAC too?"
 	cont "Want to see my"
@@ -127,11 +131,13 @@ PokemaniacBrentSeenText:
 	done
 
 PokemaniacBrentBeatenText:
+	ntag "BRENT:"
 	text "Humph."
 	line "I'm not angry!"
 	done
 
 PokemaniacBrentAfterBattleText:
+	ntag "BRENT:"
 	text "I have more rare"
 	line "#MON at home!"
 	done

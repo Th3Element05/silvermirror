@@ -27,12 +27,14 @@ PewterMuseum2FShuttleSign:
 	jumptext PewterMuseum2FShuttleSignText
 
 PewterMuseum2F_Scientist_Text:
+	ntag "SCIENTIST:"
 	text "Welcome to the"
 	line "2nd floor space"
 	cont "exhibit!"
 	done
 
 PewterMuseum2F_Granny_Text:
+	ntag "GRANNY:"
 	text "I remember when"
 	line "they first sent"
 	cont "man into space!"
@@ -43,6 +45,7 @@ PewterMuseum2F_Granny_Text:
 	done
 
 PewterMuseum2F_Youngster_Text:
+	ntag "YOUNGSTER:"
 	text "MOON STONE?"
 
 	para "What's so special"
@@ -50,11 +53,13 @@ PewterMuseum2F_Youngster_Text:
 	done
 
 PewterMuseum2F_PokefanM_Text:
+	ntag "MAN:"
 	text "Yeah, a PIKACHU"
 	line "soon, I promise!"
 	done
 
 PewterMuseum2F_Girl_Text:
+	ntag "GIRL:"
 	text "I want a PIKACHU!"
 	line "It's so cute!"
 

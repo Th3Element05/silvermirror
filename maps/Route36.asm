@@ -289,6 +289,7 @@ Route36BlockingSchoolboyRightScript:
 	end
 
 Route36BlockingSchoolboyText:
+	ntag "SCHOOLBOY:"
 	text "Don't bother me!"
 
 	para "I'm busy battling"
@@ -334,15 +335,18 @@ TrainerPsychicPhil:
 	end
 
 PsychicPhilSeenText:
+	ntag "PSYCHIC:"
 	text "I'm going to read"
 	line "your thoughts!"
 	done
 
 PsychicPhilBeatenText:
+	ntag "PHIL:"
 	text "I misread you!"
 	done
 
 PsychicPhilAfterBattleText:
+	ntag "PSYCHIC:"
 	text "I'd be stronger"
 	line "if I could tell"
 	cont "what my opponent"
@@ -427,17 +431,20 @@ Route36Rematch:
 	end
 
 SchoolboyTorinSeenText:
+	ntag "SCHOOLBOY:"
 	text "Thanks to my stud-"
 	line "ies, I'm ready for"
 	cont "any #MON!"
 	done
 
 SchoolboyTorinBeatenText:
+	ntag "TORIN:"
 	text "Oops! Computation"
 	line "error?"
 	done
 
 SchoolboyTorinAfterBattleText:
+	ntag "TORIN:"
 	text "Darn. I study five"
 	line "hours a day too."
 
@@ -496,17 +503,20 @@ TrainerSchoolboyChad:
 	end
 
 SchoolboyChadSeenText:
+	ntag "SCHOOLBOY:"
 	text "I'm always ready"
 	line "for another #-"
 	cont "MON battle!"
 	done
 
 SchoolboyChadBeatenText:
+	ntag "CHAD:"
 	text "I wasn't ready"
 	line "for that!"
 	done
 
 SchoolboyChadAfterBattleText:
+	ntag "CHAD:"
 	text "My strategy wasn't"
 	line "good enough."
 

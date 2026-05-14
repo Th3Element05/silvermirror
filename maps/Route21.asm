@@ -17,16 +17,19 @@ TrainerFisherJonah:
 	end
 
 FisherJonahSeenText:
+	ntag "FISHER:"
 	text "You want to know"
 	line "if the fish are"
 	cont "biting?"
 	done
 
 FisherJonahBeatenText:
+	ntag "JONAH:"
 	text "Dang!"
 	done
 
 FisherJonahAfterBattleText:
+	ntag "FISHER:"
 	text "I can't catch"
 	line "anything good!"
 	done
@@ -114,16 +117,18 @@ TrainerFisherKyle:
 ;	end
 
 FisherKyleSeenText:
+	ntag "FISHER:"
 	text "I got a big haul!"
 	line "Wanna go for it?"
 	done
 
 FisherKyleBeatenText:
-	text "Darn"
-	line "MAGIKARP!"
+	ntag "KYLE:"
+	text "Darn MAGIKARP!"
 	done
 
 FisherKyleAfterBattleText:
+	ntag "KYLE:"
 	text "I seem to only"
 	line "catch MAGIKARP!"
 	done
@@ -140,16 +145,19 @@ TrainerSwimmerMSeth:
 	end
 
 SwimmerMSethSeenText:
+	ntag "SWIMMER:"
 	text "I'm new at"
 	line "swimming!"
 	done
 
 SwimmerMSethBeatenText:
+	ntag "SETH:"
 	text "I need more"
 	line "practice!"
 	done
 
 SwimmerMSethAfterBattleText:
+	ntag "SWIMMER:"
 	text "I look like what?"
 	line "I need an inner"
 	cont "tube? Get lost!"
@@ -167,15 +175,18 @@ TrainerSwimmerMLewis:
 	end
 
 SwimmerMLewisSeenText:
+	ntag "SWIMMER:"
 	text "The sea cleanses"
 	line "my body and soul!"
 	done
 
 SwimmerMLewisBeatenText:
+	ntag "LEWIS:"
 	text "Ayah!"
 	done
 
 SwimmerMLewisAfterBattleText:
+	ntag "SWIMMER:"
 	text "I like the"
 	line "mountains too!"
 	done
@@ -192,16 +203,19 @@ TrainerFisherMartin:
 	end
 
 FisherMartinSeenText:
+	ntag "FISHER:"
 	text "Hey, don't scare"
 	line "away the fish!"
 	done
 
 FisherMartinBeatenText:
+	ntag "MARTIN:"
 	text "Sorry!"
 	line "I didn't mean it!"
 	done
 
 FisherMartinAfterBattleText:
+	ntag "FISHER:"
 	text "I was just angry"
 	line "that I couldn't"
 	cont "catch anything."
@@ -219,16 +233,19 @@ TrainerFisherStephen:
 	end
 
 FisherStephenSeenText:
+	ntag "FISHER:"
 	text "Keep me company"
 	line "'til I get a hit!"
 	done
 
 FisherStephenBeatenText:
+	ntag "STEPHEN:"
 	text "That burned some"
 	line "time."
 	done
 
 FisherStephenAfterBattleText:
+	ntag "FISHER:"
 	text "Oh wait! I got a"
 	line "bite! Yeah!"
 	done
@@ -245,16 +262,19 @@ TrainerSwimmerMHal:
 	end
 
 SwimmerMHalSeenText:
+	ntag "SWIMMER:"
 	text "I caught all my"
 	line "#MON at sea!"
 	done
 
 SwimmerMHalBeatenText:
+	ntag "HAL:"
 	text "Diver!!"
 	line "Down!!"
 	done
 
 SwimmerMHalAfterBattleText:
+	ntag "SWIMMER:"
 	text "Where'd you catch"
 	line "your #MON?"
 	done
@@ -271,16 +291,19 @@ TrainerSwimmerMPaton:
 	end
 
 SwimmerMPatonSeenText:
+	ntag "SWIMMER:"
 	text "Right now, I'm in"
 	line "a triathlon meet!"
 	done
 
 SwimmerMPatonBeatenText:
+	ntag "PATON:"
 	text "Pant…"
 	line "pant… pant…"
 	done
 
 SwimmerMPatonAfterBattleText:
+	ntag "SWIMMER:"
 	text "I'm beat!"
 	line "But, I still have"
 	cont "the bike race and"
@@ -299,16 +322,19 @@ TrainerSwimmerMBrandon:
 	end
 
 SwimmerMBrandonSeenText:
+	ntag "SWIMMER:"
 	text "Ahh! Feel the sun"
 	line "and the wind!"
 	done
 
 SwimmerMBrandonBeatenText:
+	ntag "BRANDON:"
 	text "Yow!"
 	line "I lost!"
 	done
 
 SwimmerMBrandonAfterBattleText:
+	ntag "SWIMMER:"
 	text "I'm sunburnt to a"
 	line "crisp!"
 	done

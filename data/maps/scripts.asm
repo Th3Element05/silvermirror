@@ -103,11 +103,9 @@ INCLUDE "maps/Route11.asm"
 INCLUDE "maps/Route11Gate.asm"
 INCLUDE "maps/Route11Gate2F.asm"
 
-
-SECTION "Map Scripts 10A", ROMX
-
 INCLUDE "maps/VermilionPort.asm"
 INCLUDE "maps/OlivinePort.asm"
+
 
 SECTION "Map Scripts 10", ROMX
 
@@ -118,6 +116,18 @@ INCLUDE "maps/SSAnneKitchen.asm"
 INCLUDE "maps/SSAnne2F.asm"
 INCLUDE "maps/SSAnneRooms2F.asm"
 INCLUDE "maps/SSAnneBow.asm"
+;INCLUDE "maps/FastShip1F.asm"
+;INCLUDE "maps/FastShipB1F.asm"
+;INCLUDE "maps/FastShipCabins_North.asm"
+;INCLUDE "maps/FastShipCabins_South.asm"
+;INCLUDE "maps/FastShipCaptainsCabin.asm"
+;INCLUDE "maps/FastShipEngineRoom.asm"
+
+
+SECTION "Map Scripts 10B", ROMX
+
+;INCLUDE "maps/VermilionPort.asm"
+;INCLUDE "maps/OlivinePort.asm"
 INCLUDE "maps/FastShip1F.asm"
 INCLUDE "maps/FastShipB1F.asm"
 INCLUDE "maps/FastShipCabins_North.asm"

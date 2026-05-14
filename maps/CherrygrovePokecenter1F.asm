@@ -11,6 +11,7 @@ CherrygrovePokecenter1FNurseScript:
 CherrygrovePokecenter1FFisherScript:
 	jumptextfaceplayer CherrygrovePokecenter1FFisherText
 CherrygrovePokecenter1FFisherText:
+	ntag "FISHER:"
 	text "It's great. I can"
 	line "store any number"
 	cont "of #MON, and"
@@ -20,6 +21,7 @@ CherrygrovePokecenter1FFisherText:
 CherrygrovePokecenter1FGentlemanScript:
 	jumptextfaceplayer CherrygrovePokecenter1FGentlemanText
 CherrygrovePokecenter1FGentlemanText:
+	ntag "GENTLEMAN:"
 	text "That PC is free"
 	line "for any trainer"
 	cont "to use."

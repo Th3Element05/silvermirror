@@ -17,6 +17,7 @@ TrainerCooltrainerMAdam:
 	end
 
 CooltrainerMAdamSeenText:
+	ntag "COOLTRAINER:"
 	text "I'm on a trip to"
 	line "test my skills at"
 	cont "#MON GYMs all"
@@ -24,10 +25,12 @@ CooltrainerMAdamSeenText:
 	done
 
 CooltrainerMAdamBeatenText:
+	ntag "ADAM:"
 	text "I wanted to win!"
 	done
 
 CooltrainerMAdamAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "A great trainer"
 	line "should never stop"
 	cont "striving to earn"
@@ -45,16 +48,19 @@ TrainerGuitaristEdgar:
 	end
 
 GuitaristEdgarSeenText:
+	ntag "GUITARIST:"
 	text "We're going on"
 	line "tour!"
 	done
 
 GuitaristEdgarBeatenText:
+	ntag "EDGAR:"
 	text "Yowza!"
 	line "Total distortion!"
 	done
 
 GuitaristEdgarAfterBattleText:
+	ntag "GUITARIST:"
 	text "Rock & Roll!"
 
 	para "Trashing the room?"
@@ -74,17 +80,20 @@ TrainerJugglerRodney:
 	end
 
 JugglerRodneySeenText:
+	ntag "JUGGLER:"
 	text "I'm in charge of"
 	line "the pyrotechnics"
 	cont "for our show!"
 	done
 
 JugglerRodneyBeatenText:
+	ntag "RODNEY:"
 	text "Fizzle… The"
 	line "flame's tiny…"
 	done
 
 JugglerRodneyAfterBattleText:
+	ntag "JUGGLER:"
 	text "I should have been"
 	line "a FIREBREATHER."
 	done
@@ -100,17 +109,20 @@ TrainerGentlemanVictor:
 	end
 
 GentlemanVictorSeenText:
+	ntag "GENTLEMAN:"
 	text "Oh, no. I've lost"
 	line "something that's"
 	cont "very important."
 	done
 
 GentlemanVictorBeatenText:
+	ntag "VICTOR:"
 	text "I… I can't find"
 	line "it…"
 	done
 
 GentlemanVictorAfterBattleText:
+	ntag "GENTLEMAN:"
 	text "I give up."
 	line "You don't have to"
 	cont "look. Just forget"
@@ -128,15 +140,18 @@ TrainerBurglarJerry:
 	end
 
 BurglarJerrySeenText:
+	ntag "BURGLAR:"
 	text "What do you mean"
 	line "this isn't my room?"
 	done
 
 BurglarJerryBeatenText:
+	ntag "JERRY:"
 	text "I lost!"
 	done
 
 BurglarJerryAfterBattleText:
+	ntag "BURGLAR:"
 	text "This isn't your"
 	line "room, either!"
 	done
@@ -145,6 +160,7 @@ BurglarJerryAfterBattleText:
 FastShipCabinsSouthCooltrainerF:
 	jumptextfaceplayer FastShipCabinsSouthCooltrainerFText
 FastShipCabinsSouthCooltrainerFText:
+	ntag "TRAINER:"
 	text "My partner is"
 	line "always battling"
 	cont "other trainers to"
@@ -158,6 +174,7 @@ FastShipCabinsSouthCooltrainerFText:
 FastShipCabinsSouthGentleman:
 	jumptextfaceplayer FastShipCabinsSouthGentlemanText
 FastShipCabinsSouthGentlemanText:
+	ntag "GENTLEMAN:"
 	text "I never had the"
 	line "time to travel"
 	cont "before I retired."

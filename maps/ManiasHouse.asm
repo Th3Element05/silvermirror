@@ -54,6 +54,7 @@ ManiaScript:
 ;	end
 
 ManiaText_WantShuckle:
+	ntag "MANIA:"
 	text "Hi! You have lots"
 	line "of #MON!"
 
@@ -69,6 +70,7 @@ ManiaText_WantShuckle:
 	done
 
 ManiaText_RefusedShuckle:
+	ntag "MANIA:"
 	text "Oh. I understand."
 
 	para "Please come back"
@@ -77,11 +79,13 @@ ManiaText_RefusedShuckle:
 	done
 
 ManiaText_NotShuckle:
+	ntag "MANIA:"
 	text "That's not a"
 	line "SHUCKLE!"
 	done
 
 ManiaText_ShuckleFainted:
+	ntag "MANIA:"
 	text "That #MON"
 	line "needs to go to a"
 	cont "#MON CENTER."
@@ -98,6 +102,7 @@ ManiaText_ShuckleFainted:
 ;	done
 
 ManiaText_LoveShuckie:
+	ntag "MANIA:"
 	text "Wow! SHUCKLE!"
 
 	para "I'm going to call"
@@ -105,6 +110,7 @@ ManiaText_LoveShuckie:
 	done
 
 ManiaText_Thanks:
+	ntag "MANIA:"
 	text "Thanks!"
 
 	para "I promise to"

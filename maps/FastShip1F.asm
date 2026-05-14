@@ -121,6 +121,7 @@ FastShip1FExitSailorScript:
 	end
 
 FastShip1FSailor1Text_ToVermilion:
+	ntag "SAILOR:"
 	text "FAST SHIP S.S.AQUA"
 	line "is en route to"
 	cont "VERMILION CITY."
@@ -131,6 +132,7 @@ FastShip1FSailor1Text_ToVermilion:
 	done
 
 FastShip1FSailor1Text_ToOlivine:
+	ntag "SAILOR:"
 	text "FAST SHIP S.S.AQUA"
 	line "is en route to"
 	cont "OLIVINE CITY."
@@ -141,6 +143,7 @@ FastShip1FSailor1Text_ToOlivine:
 	done
 
 FastShip1FSailor1Text_Bed:
+	ntag "SAILOR:"
 	text "You can use the"
 	line "bed in your cabin"
 	cont "to pass the time"
@@ -148,12 +151,14 @@ FastShip1FSailor1Text_Bed:
 	done
 
 FastShip1FSailor1Text_InOlivine:
+	ntag "SAILOR:"
 	text "FAST SHIP S.S.AQUA"
 	line "has arrived in"
 	cont "OLIVINE CITY."
 	done
 
 FastShip1FSailor1Text_InVermilion:
+	ntag "SAILOR:"
 	text "FAST SHIP S.S.AQUA"
 	line "has arrived in"
 	cont "VERMILION CITY."
@@ -176,6 +181,7 @@ FastShip1FGuideSailorScript:
 	end
 
 FastShip1FRoomSailorText:
+	ntag "SAILOR:"
 	text "Here's your cabin."
 
 	para "You can heal your"
@@ -188,6 +194,7 @@ FastShip1FRoomSailorText:
 	done
 
 FastShip1FRoomSailorText_FirstTrip:
+	ntag "SAILOR:"
 	text "Here's your cabin."
 
 	para "If your #MON"
@@ -202,6 +209,7 @@ FastShip1FSailor3Script:
 	jumptextfaceplayer FastShip1FSailor3Text
 
 FastShip1FSailor3Text:
+	ntag "SAILOR:"
 	text "Most of the other"
 	line "passengers are"
 	cont "trainers."

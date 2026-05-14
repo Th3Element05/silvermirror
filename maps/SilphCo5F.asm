@@ -349,6 +349,7 @@ SilphCo5FClerk:
 	jumptextfaceplayer SilphCo5FClerkSavedText
 
 SilphCo5FClerkText:
+	ntag "MAN:"
 	text "TEAM ROCKET is"
 	line "in an uproar over"
 	cont "some intruder."
@@ -356,6 +357,7 @@ SilphCo5FClerkText:
 	done
 
 SilphCo5FClerkSavedText:
+	ntag "MAN:"
 	text "TEAM ROCKET took"
 	line "off! You're our"
 	cont "hero! Thank you!"
@@ -372,17 +374,20 @@ TrainerScientistRich:
 	end
 
 ScientistRichSeenText:
-	text "We study #"
-	line "BALL technology"
-	cont "on this floor!"
+	ntag "SCIENTIST:"
+	text "We study #BALL"
+	line "technology on this"
+	cont "floor!"
 	done
 
 ScientistRichBeatenText:
+	ntag "RICH:"
 	text "Dang!"
 	line "Blast it!"
 	done
 
 ScientistRichAfterBattleText:
+	ntag "SCIENTIST:"
 	text "We worked on the"
 	line "ultimate #BALL"
 	cont "which could catch"
@@ -400,16 +405,19 @@ TrainerRocketGruntM21:
 	end
 
 GruntM21SeenText:
+	ntag "ROCKET:"
 	text "Show TEAM ROCKET"
 	line "a little respect!"
 	done
 
 GruntM21BeatenText:
+	ntag "ROCKET:"
 	text "Cough…"
 	line "Cough…"
 	done
 
 GruntM21AfterBattleText:
+	ntag "ROCKET:"
 	text "Which reminds me."
 
 	para "KOFFING evolves"
@@ -427,16 +435,19 @@ TrainerJugglerFritz:
 	end
 
 JugglerFritzSeenText:
+	ntag "JUGGLER:"
 	text "Whaaat? There"
 	line "shouldn't be any"
 	cont "children here?"
 	done
 
 JugglerFritzBeatenText:
+	ntag "FRITZ:"
 	text "Oh goodness!"
 	done
 
 JugglerFritzAfterBattleText:
+	ntag "JUGGLER:"
 	text "It's not smart"
 	line "to pick a fight"
 	cont "with TEAM ROCKET!"
@@ -453,15 +464,18 @@ TrainerRocketGruntF5:
 	end
 
 GruntF5SeenText:
+	ntag "ROCKET:"
 	text "I heard a kid was"
 	line "wandering around."
 	done
 
 GruntF5BeatenText:
+	ntag "ROCKET:"
 	text "Boom!"
 	done
 
 GruntF5AfterBattleText:
+	ntag "ROCKET:"
 	text "You're only on 5F."
 	line "It's a long way"
 	cont "to my BOSS!"

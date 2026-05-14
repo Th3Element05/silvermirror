@@ -16,6 +16,7 @@ TrainerPokemaniacJude:
 	end
 
 PokemaniacJudeSeenText:
+	ntag "#MANIAC:"
 	text "I came all the way"
 	line "here to conduct my"
 	cont "#MON research."
@@ -26,11 +27,13 @@ PokemaniacJudeSeenText:
 	done
 
 PokemaniacJudeBeatenText:
+	ntag "JUDE:"
 	text "You demonstrated"
 	line "on me!"
 	done
 
 PokemaniacJudeAfterBattleText:
+	ntag "#MANIAC:"
 	text "I should compile"
 	line "and announce my"
 	cont "study findings."
@@ -51,16 +54,19 @@ TrainerHikerLeonel:
 	end
 
 HikerLeonelSeenText:
+	ntag "HIKER:"
 	text "What do you know!"
 	line "A visitor!"
 	done
 
 HikerLeonelBeatenText:
+	ntag "LEONEL:"
 	text "Wahahah! You're a"
 	line "feisty one!"
 	done
 
 HikerLeonelAfterBattleText:
+	ntag "HIKER:"
 	text "I live down here."
 
 	para "You can, too, if"
@@ -81,6 +87,7 @@ TrainerPokemaniacCarson:
 	end
 
 PokemaniacCarsonSeenText:
+	ntag "#MANIAC:"
 	text "Who's there?"
 
 	para "Leave me and my"
@@ -88,11 +95,13 @@ PokemaniacCarsonSeenText:
 	done
 
 PokemaniacCarsonBeatenText:
+	ntag "CARSON:"
 	text "Go…"
 	line "Go away!"
 	done
 
 PokemaniacCarsonAfterBattleText:
+	ntag "#MANIAC:"
 	text "Just me and my"
 	line "#MON. I'm de-"
 	cont "lirious with joy."

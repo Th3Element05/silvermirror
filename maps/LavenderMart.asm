@@ -38,6 +38,7 @@ LavenderMartMedScript:
 LavenderMartPokefanMScript:
 	jumptextfaceplayer LavenderMartPokefanMText
 LavenderMartPokefanMText:
+	ntag "#FAN:"
 	text "You know REVIVE?"
 	line "It revives any"
 	cont "fainted #MON!"
@@ -46,6 +47,7 @@ LavenderMartPokefanMText:
 LavenderMartCooltrainerMScript:
 	jumptextfaceplayer LavenderMartCooltrainerMText
 LavenderMartCooltrainerMText:
+	ntag "TRAINER:"
 	text "I found a NUGGET"
 	line "in the mountains."
 

@@ -31,6 +31,7 @@ SlowpokeWellB2FGymGuideScript:
 ;	itemball TM_RAIN_DANCE
 
 SlowpokeWellB2FGymGuideText:
+	ntag "MAN:"
 	text "I'm waiting to see"
 	line "SLOWPOKE's moment"
 	cont "of evolution."
@@ -50,6 +51,7 @@ SlowpokeWellB2FGymGuideText:
 	done
 
 SlowpokeWellB2FGymGuideText_GotKingsRock:
+	ntag "MAN:"
 	text "I'm going to be"
 	line "like SLOWPOKE."
 

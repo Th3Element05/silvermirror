@@ -16,14 +16,17 @@ TrainerSupernerdJames:
 	end
 
 SupernerdJamesSeenText:
+	ntag "SUPERNERD:"
 	text "Yo! WALDO!"
 	done
 
 SupernerdJamesBeatenText:
+	ntag "JAMES:"
 	text "Sorry, my mistake."
 	done
 
 SupernerdJamesAfterBattleText:
+	ntag "SUPERNERD:"
 	text "I'm investigating"
 	line "MT.MORTAR, but my"
 	cont "pal's gone AWOL."

@@ -14,8 +14,9 @@ CeladonChiefHouseTilesCallback:
 	endcallback
 
 CeladonCheifHouseChiefScript:
-	jumptextfaceplayer CeladonCheifHouseChiefText
-CeladonCheifHouseChiefText:
+	jumptextfaceplayer CeladonChiefHouseChiefText
+CeladonChiefHouseChiefText:
+	ntag "CHIEF:"
 	text "Hehehe! The slots"
 	line "just reel in the"
 	cont "dough, big time!"
@@ -24,6 +25,7 @@ CeladonCheifHouseChiefText:
 CeladonCheifHouseRocketScript:
 	jumptextfaceplayer CeladonCheifHouseRocketText
 CeladonCheifHouseRocketText:
+	ntag "ROCKET:"
 	text "CHIEF!"
 
 	para "We just shipped"
@@ -34,6 +36,7 @@ CeladonCheifHouseRocketText:
 CeladonCheifHouseSailorScript:
 	jumptextfaceplayer CeladonCheifHouseSailorText
 CeladonCheifHouseSailorText:
+	ntag "ROCKET:"
 	text "Don't touch the"
 	line "poster at the"
 	cont "GAME CORNER!"

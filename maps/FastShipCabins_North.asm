@@ -86,42 +86,70 @@ TrainerGentlemanRichard:
 	end
 
 GentlemanRichardSeenText:
+	ntag "GENTLEMAN:"
 	text "I love going on"
 	line "trips with my"
 	cont "granddaughters!"
 	done
 
 GentlemanRichardBeatenText:
+	ntag "RICHARD:"
 	text "Oh…"
 	done
 
 GentlemanRichardAfterBattleText:
+	ntag "GENTLEMAN:"
 	text "My granddaughters"
 	line "are pretty good"
 	cont "trainers, too!"
 	done
 
-TrainerTwinsJoAndZoe:
-	trainer TWINS, JOANDZOE, EVENT_BEAT_TWINS_JOANDZOE, TwinsJoAndZoeSeenText, TwinsJoAndZoeBeatenText, 0, .Script
+TrainerTwinsJoAndZoe1:
+	trainer TWINS, JOANDZOE, EVENT_BEAT_TWINS_JOANDZOE, TwinsJoAndZoe1SeenText, TwinsJoAndZoeBeatenText, 0, .Script
 .Script:
 	endifjustbattled
 	opentext
-	writetext TwinsJoAndZoeAfterBattleText
+	writetext TwinsJoAndZoe1AfterBattleText
 	waitbutton
 	closetext
 	end
 
-TwinsJoAndZoeSeenText:
+TrainerTwinsJoAndZoe2:
+	trainer TWINS, JOANDZOE, EVENT_BEAT_TWINS_JOANDZOE, TwinsJoAndZoe1SeenText, TwinsJoAndZoeBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext TwinsJoAndZoe2AfterBattleText
+	waitbutton
+	closetext
+	end
+
+TwinsJoAndZoe1SeenText:
+	ntag "TWIN:"
 	text "We're bored."
 	line "Play with us!"
 	done
 
+;TwinsJoAndZoe2SeenText:
+;	ntag "ZOE:"
+;	text "We're bored."
+;	line "Play with us!"
+;	done
+
 TwinsJoAndZoeBeatenText:
+	ntag "JO&ZOE:"
 	text "Hey, losing isn't"
 	line "fun!"
 	done
 
-TwinsJoAndZoeAfterBattleText:
+TwinsJoAndZoe1AfterBattleText:
+	ntag "TWIN:"
+	text "Grandpa teaches us"
+	line "all about #MON!"
+	done
+
+TwinsJoAndZoe2AfterBattleText:
+	ntag "TWIN:"
 	text "Grandpa teaches us"
 	line "all about #MON!"
 	done
@@ -137,15 +165,18 @@ TrainerPicnickerRobin:
 	end
 
 PicnickerRobinSeenText:
+	ntag "PICNICKER:"
 	text "Eek!"
 	done
 
 PicnickerRobinBeatenText:
+	ntag "ROBIN:"
 	text "This is a private"
 	line "cabin!"
 	done
 
 PicnickerRobinAfterBattleText:
+	ntag "PICNICKER:"
 	text "What are you doing"
 	line "barging into other"
 	cont "people's rooms?"
@@ -162,16 +193,19 @@ TrainerCoolDuoElanAndIda:
 	end
 
 CoolDuoElanAndIdaSeenText:
+	ntag "COOLTRAINER:"
 	text "Excuse me, we're"
 	line "a little busy."
 	done
 
 CoolDuoElanAndIdaBeatenText:
+	ntag "ELAN&IDA:"
 	text "Ooh, wow."
 	line "You're tough!"
 	done
 
 CoolDuoElanAndIdaAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "Would you mind"
 	line "giving us some"
 	cont "privacy?"
@@ -188,6 +222,7 @@ FastShipCabinsNorthGranny:
 	jumptextfaceplayer FastShipCabinsNorthGrannyAloneText
 
 FastShipCabinsNorthGrannyFamilyText:
+	ntag "GRANNY:"
 	text "I love taking my"
 	line "granddaughters on"
 	cont "trips!"
@@ -198,6 +233,7 @@ FastShipCabinsNorthGrannyFamilyText:
 	done
 
 FastShipCabinsNorthGrannyAloneText:
+	ntag "GRANNY:"
 	text "Its nice to get"
 	line "away on your own"
 	cont "from time to time."
@@ -230,8 +266,8 @@ FastShipCabins_North_MapEvents:
 
 	def_object_events
 	object_event 13,  4, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerGentlemanRichard, EVENT_FAST_SHIP_TRAINERS_1A
-	object_event 17,  4, SPRITE_TWIN, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 1, TrainerTwinsJoAndZoe, EVENT_FAST_SHIP_TRAINERS_1A
-	object_event 17,  5, SPRITE_TWIN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 1, TrainerTwinsJoAndZoe, EVENT_FAST_SHIP_TRAINERS_1A
+	object_event 17,  4, SPRITE_TWIN, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 1, TrainerTwinsJoAndZoe1, EVENT_FAST_SHIP_TRAINERS_1A
+	object_event 17,  5, SPRITE_TWIN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 1, TrainerTwinsJoAndZoe2, EVENT_FAST_SHIP_TRAINERS_1A
 	object_event 13,  5, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FastShipCabinsNorthGranny, EVENT_FAST_SHIP_TRAINERS_1B
 	object_event 26,  3, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerPicnickerRobin, EVENT_FAST_SHIP_TRAINERS_2A
 	object_event 39,  6, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 0, TrainerCoolDuoElanAndIda, EVENT_FAST_SHIP_TRAINERS_3A

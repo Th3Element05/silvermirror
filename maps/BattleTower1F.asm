@@ -348,6 +348,7 @@ MovementData_BattleTowerBattleRoomPlayerTurnsToFaceNextOpponent:
 	step_end
 
 Text_BattleTowerWelcomesYou:
+	ntag "ATTENDANT:"
 	text "BATTLE TOWER"
 	line "welcomes you!"
 
@@ -356,11 +357,13 @@ Text_BattleTowerWelcomesYou:
 	done
 
 Text_WantToGoIntoABattleRoom:
+	ntag "ATTENDANT:"
 	text "Want to go into a"
 	line "BATTLE ROOM?"
 	done
 
 Text_RightThisWayToYourBattleRoom:
+	ntag "ATTENDANT:"
 	text "Right this way to"
 	line "your BATTLE ROOM."
 	done
@@ -417,6 +420,7 @@ Text_RightThisWayToYourBattleRoom:
 ;	done
 
 Text_BattleTowerIntroduction_2:
+	ntag "ATTENDANT:"
 	text "BATTLE TOWER is a"
 	line "facility made for"
 	cont "#MON battles."
@@ -457,17 +461,19 @@ Text_ReceivedAListOfLeadersOnTheHonorRoll:
 	done
 
 Text_PleaseConfirmOnThisMonitor:
+	ntag "ATTENDANT:"
 	text "Please confirm on"
 	line "this monitor."
 	done
 
-Text_ThankYou: ; unreferenced
-	text "Thank you!"
-
-	para ""
-	done
+;Text_ThankYou: ; unreferenced
+;	text "Thank you!"
+;
+;	para ""
+;	done
 
 Text_ThanksForVisiting:
+	ntag "ATTENDANT:"
 	text "Thanks for"
 	line "visiting!"
 	done
@@ -489,6 +495,7 @@ Text_ThanksForVisiting:
 ;	done
 
 Text_CongratulationsYouveBeatenAllTheTrainers:
+	ntag "ATTENDANT:"
 	text "Congratulations!"
 
 	para "You've beaten all"
@@ -517,6 +524,7 @@ Text_PlayerGotFive:
 	text_end
 
 Text_YourPackIsStuffedFull:
+	ntag "ATTENDANT:"
 	text "Oops, your PACK is"
 	line "stuffed full."
 
@@ -532,30 +540,34 @@ Text_YourPackIsStuffedFull:
 ;	done
 
 Text_WeHopeToServeYouAgain:
+	ntag "ATTENDANT:"
 	text "We hope to serve"
 	line "you again."
 	done
 
 Text_PleaseStepThisWay:
+	ntag "ATTENDANT:"
 	text "Please step this"
 	line "way."
 	done
 
 Text_WouldYouLikeToHearAboutTheBattleTower:
+	ntag "ATTENDANT:"
 	text "Would you like to"
 	line "hear about the"
 	cont "BATTLE TOWER?"
 	done
 
 Text_CantBeRegistered:
+	ntag "ATTENDANT:"
 	text "Your record from"
 	line "the previous"
-
-	para "BATTLE ROOM can't"
-	line "be registered. OK?"
+	cont "BATTLE ROOM can't"
+	roll "be registered. OK?"
 	done
 
 Text_CantBeRegistered_PreviousRecordDeleted:
+	ntag "ATTENDANT:"
 	text "Your record from"
 	line "the previous"
 	cont "BATTLE ROOM can't"
@@ -596,6 +608,7 @@ Text_BattleTowerRules:
 	done
 
 Text_BattleTower_LeftWithoutSaving:
+	ntag "ATTENDANT:"
 	text "Excuse me!"
 	line "You didn't SAVE"
 	cont "before exiting"
@@ -608,12 +621,14 @@ Text_BattleTower_LeftWithoutSaving:
 	done
 
 Text_YourMonWillBeHealedToFullHealth:
+	ntag "ATTENDANT:"
 	text "Your #MON will"
 	line "be healed to full"
 	cont "health."
 	done
 
 Text_NextUpOpponentNo:
+	ntag "ATTENDANT:"
 	text "Next up, opponent"
 	line "no.@"
 	text_ram wStringBuffer3
@@ -628,6 +643,7 @@ Text_NextUpOpponentNo:
 ;	done
 
 Text_SaveBeforeEnteringBattleRoom:
+;	ntag "ATTENDANT:"
 	text "Before entering"
 	line "the BATTLE ROOM,"
 	cont "your progress will"
@@ -640,6 +656,7 @@ Text_SaveAndEndTheSession:
 	done
 
 Text_SaveBeforeReentry:
+;	ntag "ATTENDANT:"
 	text "Your record will"
 	line "be SAVED before"
 	cont "you go back into"
@@ -660,6 +677,7 @@ Text_CancelYourBattleRoomChallenge:
 ;	done
 
 Text_WeveBeenWaitingForYou:
+	ntag "ATTENDANT:"
 	text "We've been waiting"
 	line "for you. This way"
 	cont "to a BATTLE ROOM,"
@@ -667,6 +685,7 @@ Text_WeveBeenWaitingForYou:
 	done
 
 Text_FiveDayBattleLimit_Mobile:
+	ntag "ATTENDANT:"
 	text "You may enter only"
 	line "five BATTLE ROOMs"
 	cont "each day."
@@ -676,6 +695,7 @@ Text_FiveDayBattleLimit_Mobile:
 	done
 
 Text_TooMuchTimeElapsedNoRegister:
+	ntag "ATTENDANT:"
 	text "Sorry, but it's"
 	line "not possible to"
 	cont "register your"
@@ -704,6 +724,7 @@ Text_TooMuchTimeElapsedNoRegister:
 ;	done
 
 Text_AMonLevelExceeds:
+	ntag "ATTENDANT:"
 	text "One or more of"
 	line "your #MON's"
 	cont "levels exceeds @"
@@ -724,6 +745,7 @@ Text_MayNotEnterABattleRoomUnderL70:
 	done
 
 Text_BattleTowerYoungster:
+	ntag "YOUNGSTER:"
 	text "Destroyed by the"
 	line "first opponent in"
 	cont "no time at all…"
@@ -731,6 +753,7 @@ Text_BattleTowerYoungster:
 	done
 
 Text_BattleTowerCooltrainerF:
+	ntag "TRAINER:"
 	text "There are lots of"
 	line "BATTLE ROOMs, but"
 	cont "I'm going to win"
@@ -738,6 +761,7 @@ Text_BattleTowerCooltrainerF:
 	done
 
 Text_BattleTowerGranny:
+	ntag "GRANNY:"
 	text "It's a grueling"
 	line "task, not being"
 	cont "able to use items"
@@ -750,6 +774,7 @@ Text_BattleTowerGranny:
 	done
 
 Text_BattleTowerBugCatcher:
+	ntag "BUGCATCHER:"
 	text "I'm trying to see"
 	line "how far I can go"
 	cont "using just bug"
@@ -776,5 +801,5 @@ BattleTower1F_MapEvents:
 	object_event  7,  6, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BattleTower1FReceptionistScript, -1
 	object_event 14,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, BattleTower1FYoungsterScript, -1
 	object_event  4,  9, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BattleTower1FCooltrainerFScript, -1
-	object_event  1,  3, SPRITE_BOY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BattleTower1FBugCatcherScript, -1
+	object_event  1,  3, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BattleTower1FBugCatcherScript, -1
 	object_event 14,  3, SPRITE_GRANNY, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BattleTower1FGrannyScript, -1

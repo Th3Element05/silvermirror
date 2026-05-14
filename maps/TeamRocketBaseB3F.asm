@@ -68,6 +68,7 @@ TeamRocketBaseB3FKogaNinja:
 	end
 
 TeamRocketBaseB3FPlayerText:
+	ntag "NINJA:"
 	text "<PLAYER>!"
 	done
 
@@ -115,6 +116,7 @@ TeamRocketBaseB3FKoga:
 	jumptextfaceplayer TeamRocketBaseB3FKogaBothSwitchesText
 
 TeamRocketBaseB3FKogaHintText:
+	ntag "KOGA:"
 	text "Having trouble"
 	line "finding JANINE?"
 
@@ -123,6 +125,7 @@ TeamRocketBaseB3FKogaHintText:
 	done
 
 TeamRocketBaseB3FKogaBothSwitchesText:
+	ntag "KOGA:"
 	text "You've found both"
 	line "switches."
 
@@ -253,6 +256,7 @@ TeamRocketBaseB3FPositionPlayerScript:
 	end
 
 TeamRocketBaseB3FJanineIntroText:
+	ntag "NINJA:"
 	text "So, you found your"
 	line "way here."
 	done
@@ -450,22 +454,26 @@ TrainerNinjaTeisatsu:
 	jumptextfaceplayer TeamRocketBaseB3FPerfectDisguiseText
 
 NinjaTeisatsuSeenText:
+	ntag "NINJA:"
 	text "My students are"
 	line "sparring. I have"
 	cont "time to battle."
 	done
 
 NinjaTeisatsuBeatenText:
+	ntag "TEISATSU:"
 	text "I wish my students"
 	line "were that strong!"
 	done
 
 NinjaTeisatsuAfterBattleText:
+	ntag "NINJA:"
 	text "My students train"
 	line "day and night."
 	done
 
 TeamRocketBaseB3FPerfectDisguiseText:
+	ntag "NINJA:"
 	text "KOGA and JANINE"
 	line "have perfected the"
 	cont "art of disguise."
@@ -488,22 +496,26 @@ TrainerNinjaKancho:
 	jumptextfaceplayer NinjaKanchoDuringChallengeText
 
 NinjaKanchoSeenText:
+	ntag "NINJA:"
 	text "I'm practicing my"
 	line "flying-kick!"
 	done
 
 NinjaKanchoBeatenText:
+	ntag "KANCHO:"
 	text "I came crashing"
 	line "down!"
 	done
 
 NinjaKanchoDuringChallengeText:
+	ntag "NINJA:"
 	text "I'm not JANINE,"
 	line "her flying-kick is"
 	cont "perfect."
 	done
 
 NinjaKanchoAfterBattleText:
+	ntag "NINJA:"
 	text "I'll keep training"
 	line "until I'm as good"
 	cont "as JANINE!"
@@ -521,6 +533,7 @@ TrainerNinjaKishu:
 	jumptextfaceplayer NinjaKishuDuringChallengeText
 
 NinjaKishuSeenText:
+	ntag "NINJA:"
 	text "I love it when my"
 	line "opponent goes all-"
 	cont "out."
@@ -531,11 +544,13 @@ NinjaKishuSeenText:
 	done
 
 NinjaKishuBeatenText:
+	ntag "KISHU:"
 	text "I went all-out,"
 	line "now I'm all out."
 	done
 
 NinjaKishuDuringChallengeText:
+	ntag "NINJA:"
 	text "I'm not JANINE,"
 	line "but even a master"
 	cont "like her trains"
@@ -543,6 +558,7 @@ NinjaKishuDuringChallengeText:
 	done
 
 NinjaKishuAfterBattleText:
+	ntag "NINJA:"
 	text "I want to teach"
 	line "students of my own"
 	cont "someday."
@@ -560,16 +576,19 @@ TrainerNinjaKonran:
 	jumptextfaceplayer NinjaKonranBeforeSwitchText
 
 NinjaKonranSeenText:
+	ntag "NINJA:"
 	text "JANINE told me to"
 	line "watch this area."
 	done
 
 NinjaKonranBeatenText:
+	ntag "KONRAN:"
 	text "Was I supposed to"
 	line "fight?"
 	done
 
 NinjaKonranBeforeSwitchText:
+	ntag "NINJA:"
 	text "What am I supposed"
 	line "to be watching?"
 
@@ -578,6 +597,7 @@ NinjaKonranBeforeSwitchText:
 	done
 
 NinjaKonranAfterBattleText:
+	ntag "NINJA:"
 	text "A secret switch in"
 	line "the bookshelf?"
 
@@ -591,6 +611,7 @@ TrainerNinjaSekko:
 	jumptextfaceplayer NinjaSekkoAfterBattleText
 
 NinjaSekkoSeenText:
+	ntag "NINJA:"
 	text "Do I know where"
 	line "JANINE is?"
 
@@ -598,11 +619,13 @@ NinjaSekkoSeenText:
 	done
 
 NinjaSekkoBeatenText:
+	ntag "SEKKO:"
 	text "I'm not allowed"
 	line "to tell."
 	done
 
 NinjaSekkoAfterBattleText:
+	ntag "NINJA:"
 	text "I'm loyal to the"
 	line "NINJA CLAN."
 

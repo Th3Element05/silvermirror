@@ -175,6 +175,7 @@ TrainerPokefanFGeorgia:
 	end
 
 PokefanFGeorgiaSeenText:
+	ntag "#FAN:"
 	text "Hi. Did you know…?"
 
 	para "#MON get more"
@@ -185,11 +186,13 @@ PokefanFGeorgiaSeenText:
 	done
 
 PokefanFGeorgiaBeatenText:
+	ntag "GEORGIA:"
 	text "Where did I meet"
 	line "this VULPIX?"
 	done
 
 PokefanFGeorgiaAfterBattleText:
+	ntag "#FAN:"
 	text "If only there were"
 	line "an easy way to"
 	cont "identify where I"
@@ -208,17 +211,20 @@ TrainerYoungsterOwen:
 	end
 
 YoungsterOwenSeenText:
+	ntag "YOUNGSTER:"
 	text "I just became a"
 	line "trainer! But, I"
 	cont "think I can win!"
 	done
 
 YoungsterOwenBeatenText:
+	ntag "OWEN:"
 	text "My #MON"
 	line "couldn't!"
 	done
 
 YoungsterOwenAfterBattleText:
+	ntag "YOUNGSTER:"
 	text "What do you want?"
 	line "Leave me alone!"
 	done
@@ -295,17 +301,20 @@ TrainerSchoolboyAlan:
 	end
 
 SchoolboyAlanSeenText:
+	ntag "SCHOOLBOY:"
 	text "I'm the best in"
 	line "my class!"
 	done
 
 SchoolboyAlanBeatenText:
+	ntag "ALAN:"
 	text "Darn!"
 	line "I need to make my"
 	cont "#MON stronger!"
 	done
 
 SchoolboyAlanAfterBattleText:
+	ntag "ALAN:"
 	text "There's a big"
 	line "#MON that"
 	cont "comes down from"
@@ -387,22 +396,26 @@ TrainerYoungsterIan:
 	end
 
 YoungsterIanSeenText:
+	ntag "YOUNGSTER:"
 	text "Let's go, but"
 	line "don't cheat!"
 	done
 
 YoungsterIanBeatenText:
+	ntag "IAN:"
 	text "Huh?"
 	line "That's not right!"
 	done
 
 YoungsterIanAfterBattleText:
+	ntag "IAN:"
 	text "I'm trying hard so"
 	line "I can be the best"
 	cont "in my class."
 	done
 
 YoungsterIanRematchGiftText:
+	ntag "IAN:"
 	text "I lost again…"
 	line "but thats alright."
 
@@ -461,6 +474,7 @@ TrainerPokefanMWilliam:
 	end
 
 PokefanMWilliamSeenText:
+	ntag "#FAN:"
 	text "We adore our #-"
 	line "MON, even if they"
 	cont "dislike us."
@@ -470,10 +484,12 @@ PokefanMWilliamSeenText:
 	done
 
 PokefanMWilliamBeatenText:
+	ntag "WILLIAM:"
 	text "M-my #MON!"
 	done
 
 PokefanMWilliamAfterBattleText:
+	ntag "#FAN:"
 	text "I lost the battle,"
 	line "but my #MON win"
 	cont "the prize for"
@@ -561,6 +577,7 @@ TrainerPokefanFBeverly: ;no rematch, give nugget
 	end
 
 PokefanFBeverlySeenText:
+	ntag "#FAN:"
 	text "My #MON are"
 	line "simply darling."
 
@@ -570,11 +587,13 @@ PokefanFBeverlySeenText:
 	done
 
 PokefanFBeverlyBeatenText:
+	ntag "BEVERLY:"
 	text "I can beat you in"
 	line "pride, but…"
 	done
 
 PokefanFBeverlyAfterBattleText:
+	ntag "BEVERLY:"
 	text "I must say, your"
 	line "#MON are quite"
 	cont "cute, too."
@@ -592,6 +611,7 @@ TrainerOfficerRex:
 	end
 
 OfficerRexSeenText:
+	ntag "OFFICER:"
 ;	text "I'm practicing"
 ;	line "for a show!"
 	text "I'm doing my"
@@ -599,11 +619,12 @@ OfficerRexSeenText:
 	done
 
 OfficerRexBeatenText:
-	text "That was"
-	line "electric!"
+	ntag "REX:"
+	text "That was electric!"
 	done
 
 OfficerRexAfterBattleText:
+	ntag "OFFICER:"
 	text "Well, I'd better"
 	line "get back to work."
 	done
@@ -620,16 +641,19 @@ TrainerYoungsterJason:
 	end
 
 YoungsterJasonSeenText:
+	ntag "YOUNGSTER:"
 	text "My #MON should"
 	line "be ready by now!"
 	done
 
 YoungsterJasonBeatenText:
-	text "Too"
-	line "much, too young!"
+	ntag "JASON:"
+	text "Too much,"
+	line "too young!"
 	done
 
 YoungsterJasonAfterBattleText:
+	ntag "YOUNGSTER:"
 	text "I better go find"
 	line "stronger ones!"
 	done
@@ -646,6 +670,7 @@ TrainerPokefanMRobert:
 	end
 
 PokefanMRobertSeenText:
+	ntag "#FAN:"
 	text "You like #MON,"
 	line "don't you?"
 
@@ -653,11 +678,13 @@ PokefanMRobertSeenText:
 	done
 
 PokefanMRobertBeatenText:
+	ntag "ROBERT:"
 	text "I'd have to say"
 	line "that's my loss."
 	done
 
 PokefanMRobertAfterBattleText:
+	ntag "#FAN:"
 	text "Look what you did"
 	line "to my #MON…"
 
@@ -677,17 +704,20 @@ TrainerOfficerCarter:
 	end
 
 OfficerCarterSeenText:
+	ntag "OFFICER:"
 	text "Watch out for"
 ;	line "live wires!"
 	line "criminals!"
 	done
 
 OfficerCarterBeatenText:
+	ntag "CARTER:"
 	text "Whoa!"
 ;	line "You spark plug!"
 	done
 
 OfficerCarterAfterBattleText:
+	ntag "OFFICER:"
 	text "#MON battles"
 	line "are electrifying!"
 	done

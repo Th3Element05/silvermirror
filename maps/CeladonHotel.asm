@@ -17,6 +17,7 @@ CeladonHotelTilesCallback:
 CeladonHotelReceptionistScript:
 	jumptext CeladonHotelReceptionistText
 CeladonHotelReceptionistText:
+	ntag "RECEPTIONIST:"
 	text "#MON? No, this"
 	line "is a hotel for"
 	cont "people."
@@ -27,6 +28,7 @@ CeladonHotelReceptionistText:
 CeladonHotelDoormanScript:
 	jumptext CeladonHotelDoormanText
 CeladonHotelDoormanText:
+	ntag "DOORMAN:"
 	text "I'm sorry."
 	line "Only hotel guests"
 	cont "allowed inside."
@@ -35,6 +37,7 @@ CeladonHotelDoormanText:
 CeladonHotelBeautyScript:
 	jumptextfaceplayer CeladonHotelBeautyText
 CeladonHotelBeautyText:
+	ntag "LADY:"
 	text "I'm on vacation"
 	line "with my brother"
 	cont "and boy friend."
@@ -46,13 +49,15 @@ CeladonHotelBeautyText:
 CeladonHotelSuperNerdScript:
 	jumptextfaceplayer CeladonHotelSuperNerdText
 CeladonHotelSuperNerdText:
+	ntag "GUY:"
 	text "Why did she bring"
 	line "her brother?"
 	done
 
-CeladonHotelBenchGuyScript:
-	jumptext CeladonHotelBenchGuyText
-CeladonHotelBenchGuyText:
+CeladonHotelBoyScript:
+	jumptext CeladonHotelBoyText
+CeladonHotelBoyText:
+	ntag "BOY:"
 	text "My sis brought me"
 	line "on this vacation!"
 	done
@@ -75,6 +80,6 @@ CeladonHotel_MapEvents:
 	def_object_events
 	object_event  3,  1, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeladonHotelReceptionistScript, -1
 	object_event 11,  2, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CeladonHotelDoormanScript, -1
-	object_event  0,  4, SPRITE_BENCH_GUY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonHotelBenchGuyScript, -1
-	object_event  2,  4, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CeladonHotelBeautyScript, -1
-	object_event  8,  4, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeladonHotelSuperNerdScript, -1
+	object_event  5,  3, SPRITE_BOY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonHotelBoyScript, -1
+	object_event  6,  3, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CeladonHotelBeautyScript, -1
+	object_event  9,  4, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeladonHotelSuperNerdScript, -1

@@ -60,6 +60,7 @@ BikeShopClerkScript:
 	jumptext BikeShopClerkAfterText
 
 BikeShopClerkWelcomeText:
+	ntag "CLERK:"
 	text "Hi! Welcome to"
 	line "our BIKE SHOP."
 
@@ -73,16 +74,19 @@ BikeShopClerkWelcomeText:
 	done
 
 BikeShopClerkSaveUpText:
+	ntag "CLERK:"
 	text "Save up some money"
 	line "and come back!"
 	done
 
 BikeShopClerkCantAffordText:
+	ntag "CLERK:"
 	text "Sorry! You can't"
 	line "afford it!"
 	done
 
 BikeShopClerkBikeVoucherText:
+	ntag "CLERK:"
 	text "Oh, that's…"
 
 	para "A BIKE VOUCHER!"
@@ -102,11 +106,13 @@ BikeShopBoughtBicycleText:
 	done
 
 BikeShopClerkComeAgainText:
+	ntag "CLERK:"
 	text "Come back again"
 	line "some time!"
 	done
 
 BikeShopClerkAfterText:
+	ntag "CLERK:"
 	text "How do you like"
 	line "your new BICYCLE?"
 
@@ -123,12 +129,14 @@ BikeShopYoungsterScript:
 	jumptextfaceplayer BikeShopYoungsterText2
 
 BikeShopYoungsterText1:
+	ntag "YOUNGSTER:"
 	text "These BIKEs are"
 	line "cool, but they're"
 	cont "way expensive!"
 	done
 
 BikeShopYoungsterText2:
+	ntag "YOUNGSTER:"
 	text "Wow. Your BIKE is"
 	line "really cool!"
 	done
@@ -136,6 +144,7 @@ BikeShopYoungsterText2:
 BikeShopPokefanFScript:
 	jumptextfaceplayer BikeShopPokefanFText
 BikeShopPokefanFText:
+	ntag "#FAN:"
 	text "A plain city BIKE"
 	line "is good enough"
 	cont "for me!"

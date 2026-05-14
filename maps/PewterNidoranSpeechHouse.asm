@@ -8,6 +8,7 @@ PewterNidoranSpeechHouse_MapScripts:
 PewterNidoranHouseManScript:
 	jumptextfaceplayer PewterNidoranHouseManText
 PewterNidoranHouseManText:
+	ntag "MAN:"
 	text "Our #MON's an"
 	line "outsider, so it's"
 	cont "hard to handle."
@@ -28,6 +29,7 @@ PewterNidoranHouseManText:
 PewterNidoranHouseBoyScript:
 	jumptextfaceplayer PewterNidoranSpeechHouseBoyText
 PewterNidoranSpeechHouseBoyText:
+	ntag "BOY:"
 	text "NIDORAN, sit!"
 	done
 

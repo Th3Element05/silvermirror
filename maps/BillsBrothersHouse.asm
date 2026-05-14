@@ -13,6 +13,7 @@ BillsBrothersHouseTilesCallback:
 BillsGrandpaScript:
 	jumptextfaceplayer BillsGrandpaText
 BillsGrandpaText:
+	ntag "GRAMPS:"
 	text "Hmm? You've met"
 	line "BILL?"
 
@@ -36,6 +37,7 @@ BillsBrotherText:
 ;BillsMomScript:
 ;	jumptextfaceplayer BillsMomText
 ;BillsMomText:
+	ntag "YOUNGSTER:"
 	text "SAFARI ZONE's"
 	line "WARDEN is old,"
 	cont "but still active!"

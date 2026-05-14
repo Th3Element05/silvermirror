@@ -15,6 +15,7 @@ ViridianNicknameSpeechHouseSpearySignText:
 ViridianNicknameSpeechHousePokefanMScript:
 	jumptextfaceplayer ViridianNicknameSpeechHousePokefanMText
 ViridianNicknameSpeechHousePokefanMText:
+	ntag "#FAN:"
 	text "Coming up with"
 	line "nicknames is fun,"
 	cont "but hard."
@@ -27,6 +28,7 @@ ViridianNicknameSpeechHousePokefanMText:
 ViridianNicknameSpeechHouseGirlScript:
 	jumptextfaceplayer ViridianNicknameSpeechHouseGirlText
 ViridianNicknameSpeechHouseGirlText:
+	ntag "GIRL:"
 	text "My Daddy loves"
 	line "#MON too."
 	done

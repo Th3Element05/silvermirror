@@ -30,6 +30,7 @@ CeladonDeptStore5FClerk2Script:
 CeladonDeptStore5FGentlemanScript:
 	jumptextfaceplayer CeladonDeptStore5FGentlemanText
 CeladonDeptStore5FGentlemanText:
+	ntag "GENTLEMAN:"
 	text "#MON ability"
 	line "enhancers can be"
 	cont "bought only here."
@@ -45,6 +46,7 @@ CeladonDeptStore5FGentlemanText:
 CeladonDeptStore5FSailorScript:
 	jumptextfaceplayer CeladonDeptStore5FSailorText
 CeladonDeptStore5FSailorText:
+	ntag "SAILOR:"
 	text "I'm here for"
 	line "#MON ability"
 	cont "enhancers."

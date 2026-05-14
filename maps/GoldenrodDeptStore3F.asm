@@ -15,6 +15,7 @@ GoldenrodDeptStore3FClerkScript:
 GoldenrodDeptStore3FSuperNerdScript:
 	jumptextfaceplayer GoldenrodDeptStore3FSuperNerdText
 GoldenrodDeptStore3FSuperNerdText:
+	ntag "SUPERNERD:"
 	text "I, I, I'm really"
 	line "impatient!"
 
@@ -26,9 +27,10 @@ GoldenrodDeptStore3FSuperNerdText:
 GoldenrodDeptStore3FRockerScript:
 	jumptextfaceplayer GoldenrodDeptStore3FRockerText
 GoldenrodDeptStore3FRockerText:
-	text "Hey! When you bat-"
-	line "tle, do you use X"
-	cont "SPECIAL?"
+	ntag "ROCKER:"
+	text "Hey! When you're"
+	line "battling, do you"
+	cont "use X SPECIAL?"
 
 	para "It's awesome. It"
 	line "really jacks up"

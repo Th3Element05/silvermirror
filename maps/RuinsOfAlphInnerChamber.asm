@@ -32,6 +32,7 @@ RuinsOfAlphStrangePresenceText:
 RuinsOfAlphInnerChamberScientist1Script:
 	jumptextfaceplayer RuinsOfAlphInnerChamberScientist1Text
 RuinsOfAlphInnerChamberScientist1Text:
+	ntag "SCIENTIST:"
 	text "The patterns on"
 	line "the walls are so"
 	cont "interesting!"
@@ -48,6 +49,7 @@ RuinsOfAlphInnerChamberScientist1Text:
 RuinsOfAlphInnerChamberScientist2Script:
 	jumptextfaceplayer RuinsOfAlphInnerChamberScientist2Text
 RuinsOfAlphInnerChamberScientist2Text:
+	ntag "SCIENTIST:"
 	text "This place has a"
 	line "mystical quality"
 	cont "to it."

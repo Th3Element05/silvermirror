@@ -62,6 +62,7 @@ TrainerPokemaniacMax:
 	end
 
 PokemaniacMaxSeenText:
+	ntag "#MANIAC:"
 	text "I love #MON!"
 
 	para "That's why I"
@@ -71,11 +72,13 @@ PokemaniacMaxSeenText:
 	done
 
 PokemaniacMaxBeatenText:
+	ntag "MAX:"
 	text "How could you do"
 	line "this to me?"
 	done
 
 PokemaniacMaxAfterBattleText:
+	ntag "#MANIAC:"
 	text "What else do I"
 	line "like besides"
 	cont "#MON?"
@@ -95,16 +98,19 @@ TrainerPokemaniacJulius:
 	end
 
 PokemaniacJuliusSeenText:
+	ntag "#MANIAC:"
 	text "Hey! Do you have"
 	line "any rare #MON?"
 	done
 
 PokemaniacJuliusBeatenText:
-	text "Oh, my poor #-"
-	line "MON! Darlings!"
+	ntag "JULIUS:"
+	text "My poor #MON!"
+	line "Darlings!"
 	done
 
 PokemaniacJuliusAfterBattleText:
+	ntag "#MANIAC:"
 	text "I'd be happy just"
 	line "to own a single"
 	cont "rare #MON."
@@ -121,6 +127,7 @@ TrainerPicnickerMegan:
 	end
 
 PicnickerMeganSeenText:
+	ntag "PICNICKER:"
 	text "Are you going to"
 	line "LAKE OF RAGE too?"
 
@@ -129,10 +136,12 @@ PicnickerMeganSeenText:
 	done
 
 PicnickerMeganBeatenText:
+	ntag "MEGAN:"
 	text "I played too much!"
 	done
 
 PicnickerMeganAfterBattleText:
+	ntag "PICNICKER:"
 	text "I'm having a pic-"
 	line "nic with #MON."
 
@@ -150,17 +159,20 @@ TrainerCamperSpencer:
 	end
 
 CamperSpencerSeenText:
+	ntag "CAMPER:"
 	text "I can do so much"
 	line "with my #MON--"
 	cont "it's super-fun!"
 	done
 
 CamperSpencerBeatenText:
+	ntag "SPENCER:"
 	text "Losing isn't fun"
 	line "at all…"
 	done
 
 CamperSpencerAfterBattleText:
+	ntag "CAMPER:"
 	text "Are you going to"
 	line "LAKE OF RAGE?"
 ;	text "What is going on"

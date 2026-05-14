@@ -25,17 +25,20 @@ TrainerSailorTerrell:
 	end
 
 SailorTerrellSeenText:
+	ntag "SAILOR:"
 	text "Matey, you're"
 	line "walking the plank"
 	cont "if you lose!"
 	done
 
 SailorTerrellBeatenText:
+	ntag "TERRELL:"
 	text "Argh!"
 	line "Beaten by a kid!"
 	done
 
 SailorTerrellAfterBattleText:
+	ntag "SAILOR:"
 	text "Jellyfish some-"
 	line "times drift into"
 	cont "the ship."
@@ -52,6 +55,7 @@ TrainerFisherArnold:
 	end
 
 FisherArnoldSeenText:
+	ntag "FISHER:"
 	text "Hello stranger!"
 	line "Stop and chat!"
 
@@ -60,12 +64,14 @@ FisherArnoldSeenText:
 	done
 
 FisherArnoldBeatenText:
+	ntag "ARNOLD:"
 	text "Darn!"
 	line "I let that one"
 	cont "get away!"
 	done
 
 FisherArnoldAfterBattleText:
+	ntag "FISHER:"
 	text "I was going to"
 	line "make you my"
 	cont "assistant too!"
@@ -82,16 +88,19 @@ TrainerSailorErnest:
 	end
 
 SailorErnestSeenText:
+	ntag "SAILOR:"
 	text "Us sailors have"
 	line "#MON too!"
 	done
 
 SailorErnestBeatenText:
+	ntag "ERNEST:"
 	text "OK, you're not"
 	line "bad."
 	done
 
 SailorErnestAfterBattleText:
+	ntag "SAILOR:"
 	text "We caught all our"
 	line "#MON while"
 	cont "out at sea!"
@@ -108,16 +117,19 @@ TrainerSailorKent:
 	end
 
 SailorKentSeenText:
+	ntag "SAILOR:"
 	text "I like feisty"
 	line "kids like you!"
 	done
 
 SailorKentBeatenText:
+	ntag "KENT:"
 	text "Argh!"
 	line "Lost it!"
 	done
 
 SailorKentAfterBattleText:
+	ntag "SAILOR:"
 	text "Sea #MON live"
 	line "in deep water."
 	cont "You'll need a ROD!"
@@ -134,16 +146,19 @@ TrainerSailorJeff:
 	end
 
 SailorJeffSeenText:
+	ntag "SAILOR:"
 	text "My sailor's pride"
 	line "is at stake!"
 	done
 
 SailorJeffBeatenText:
+	ntag "JEFF:"
 	text "Your spirit sank"
 	line "me!"
 	done
 
 SailorJeffAfterBattleText:
+	ntag "SAILOR:"
 	text "Did you see the"
 	line "FISHING GURU in"
 	cont "VERMILION CITY?"
@@ -160,17 +175,20 @@ TrainerSailorGarrett:
 	end
 
 SailorGarrettSeenText:
+	ntag "SAILOR:"
 	text "You know what they"
 	line "say about sailors"
 	cont "and fighting!"
 	done
 
 SailorGarrettBeatenText:
+	ntag "GARRETT:"
 	text "Right!"
 	line "Good fight, mate!"
 	done
 
 SailorGarrettAfterBattleText:
+	ntag "SAILOR:"
 	text "Haha! Want to be"
 	line "a sailor, mate?"
 	done
@@ -188,17 +206,20 @@ TrainerPokemaniacHorton:
 	end
 
 PokemaniacHortonSeenText:
+	ntag "#MANIAC:"
 	text "I love battling"
 	line "with trainers from"
 	cont "around the world!"
 	done
 
 PokemaniacHortonBeatenText:
+	ntag "HORTON:"
 	text "You have some neat"
 	line "#MON!"
 	done
 
 PokemaniacHortonAfterBattleText:
+	ntag "#MANIAC:"
 	text "I take this trip"
 	line "as often as I can"
 	cont "so I can see new"
@@ -216,6 +237,7 @@ TrainerTeacherKate:
 	end
 
 TeacherKateSeenText:
+	ntag "TEACHER:"
 	text "You like #MON?"
 
 	para "Have a look at"
@@ -223,27 +245,50 @@ TeacherKateSeenText:
 	done
 
 TeacherKateBeatenText:
+	ntag "KATE:"
 	text "Aren't they great?"
 	done
 
 TeacherKateAfterBattleText:
+	ntag "TEACHER:"
 	text "I love showing off"
 	line "my #MON to all"
 	cont "of the different"
 	roll "trainers we meet!"
 	done
 
-TrainerCoupleVicAndTara:
-	trainer COUPLE, VICANDTARA, EVENT_BEAT_COUPLE_VICANDTARA, CoupleVicAndTaraSeenText, CoupleVicAndTaraBeatenText, 0, .Script
+TrainerCoupleVicAndTara1:
+	trainer COUPLE, VICANDTARA, EVENT_BEAT_COUPLE_VICANDTARA, CoupleVicAndTara1SeenText, CoupleVicAndTaraBeatenText, 0, .Script
 .Script:
 	endifjustbattled
 	opentext
-	writetext CoupleVicAndTaraAfterBattleText
+	writetext CoupleVicAndTara1AfterBattleText
 	waitbutton
 	closetext
 	end
 
-CoupleVicAndTaraSeenText:
+TrainerCoupleVicAndTara2:
+	trainer COUPLE, VICANDTARA, EVENT_BEAT_COUPLE_VICANDTARA, CoupleVicAndTara2SeenText, CoupleVicAndTaraBeatenText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext CoupleVicAndTara2AfterBattleText
+	waitbutton
+	closetext
+	end
+
+CoupleVicAndTara1SeenText:
+	ntag "CAMPER:"
+	text "Battling eachother"
+	line "all the time gets"
+	cont "boring."
+
+	para "Would you like to"
+	line "join us?"
+	done
+
+CoupleVicAndTara2SeenText:
+	ntag "PICNICKER:"
 	text "Battling eachother"
 	line "all the time gets"
 	cont "boring."
@@ -253,15 +298,24 @@ CoupleVicAndTaraSeenText:
 	done
 
 CoupleVicAndTaraBeatenText:
+	ntag "VIC&TARA:"
 	text "We don't need a"
 	line "third wheel!"
 	done
 
-CoupleVicAndTaraAfterBattleText:
+CoupleVicAndTara1AfterBattleText:
+	ntag "CAMPER:"
 	text "On second thought,"
 	line "I think I'll stick"
 	cont "to battling with"
 	roll "my partner."
+	done
+
+CoupleVicAndTara2AfterBattleText:
+	ntag "PICNICKER:"
+	text "Its more fun to"
+	line "just battle with"
+	cont "my partner."
 	done
 
 TrainerCooltrainerFMia:
@@ -275,6 +329,7 @@ TrainerCooltrainerFMia:
 	end
 
 CooltrainerFMiaSeenText:
+	ntag "COOLTRAINER:"
 	text "Don't board the"
 	line "S.S.ANNE if you're"
 	cont "not ready for a"
@@ -282,11 +337,13 @@ CooltrainerFMiaSeenText:
 	done
 
 CooltrainerFMiaBeatenText:
+	ntag "MIA:"
 	text "I guess I wasn't"
 	line "ready…"
 	done
 
 CooltrainerFMiaAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "I better heal up"
 	line "my #MON before"
 	cont "another trainer"
@@ -304,15 +361,18 @@ TrainerPokefanMAustin:
 	end
 
 PokefanMAustinSeenText:
+	ntag "#FAN:"
 	text "A battle?"
 	line "Let's do it!"
 	done
 
 PokefanMAustinBeatenText:
+	ntag "AUSTIN:"
 	text "What fun!"
 	done
 
 PokefanMAustinAfterBattleText:
+	ntag "#FAN:"
 	text "I don't go seeking"
 	line "people to battle,"
 	cont "but I'm always"
@@ -337,6 +397,7 @@ SSAnneRoomsSouthMachokeText:
 SSAnneRoomsSouthSuperNerdScript:
 	jumptextfaceplayer SSAnneRoomsSouthSuperNerdText
 SSAnneRoomsSouthSuperNerdText:
+	ntag "SUPERNERD:"
 	text "My buddy, MACHOKE,"
 	line "is super strong!"
 
@@ -389,8 +450,8 @@ SSAnneRoomsSouth_MapEvents:
 ; rematch trainers
 	object_event  0,  5, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_FAST, 2, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 0, TrainerPokemaniacHorton, EVENT_SSANNE_TRAINERS_1B
 	object_event  3,  4, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerTeacherKate, EVENT_SSANNE_TRAINERS_1B
-	object_event 10,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerCoupleVicAndTara, EVENT_SSANNE_TRAINERS_2B
-	object_event  9,  4, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerCoupleVicAndTara, EVENT_SSANNE_TRAINERS_2B
+	object_event 10,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerCoupleVicAndTara1, EVENT_SSANNE_TRAINERS_2B
+	object_event  9,  4, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerCoupleVicAndTara2, EVENT_SSANNE_TRAINERS_2B
 	object_event 18,  3, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerCooltrainerFMia, EVENT_SSANNE_TRAINERS_3B
 	object_event 25,  3, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerPokefanMAustin, EVENT_SSANNE_TRAINERS_4B
 ; npcs

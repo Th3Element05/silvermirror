@@ -233,6 +233,7 @@ OlderHaircutBrotherScript:
 	end
 
 GoldenrodUndergroundOlderHaircutBrotherOfferHaircutText:
+	ntag "STYLIST:"
 	text "Welcome to my"
 	line "#MON SALON!"
 
@@ -249,25 +250,30 @@ GoldenrodUndergroundOlderHaircutBrotherOfferHaircutText:
 	done
 
 GoldenrodUndergroundOlderHaircutBrotherAskWhichMonText:
+	ntag "STYLIST:"
 	text "Which #MON"
 	line "should I work on?"
 	done
 
 GoldenrodUndergroundOlderHaircutBrotherWatchItBecomeBeautifulText:
+	ntag "STYLIST:"
 	text "OK! Watch it"
 	line "become beautiful!"
 	done
 
 GoldenrodUndergroundOlderHaircutBrotherAllDoneText:
+	ntag "STYLIST:"
 	text "There! All done!"
 	done
 
 GoldenrodUndergroundOlderHaircutBrotherThatsAShameText:
+	ntag "STYLIST:"
 	text "Is that right?"
 	line "That's a shame!"
 	done
 
 GoldenrodUndergroundOlderHaircutBrotherYoullNeedMoreMoneyText:
+	ntag "STYLIST:"
 	text "You'll need more"
 	line "money than that."
 	done
@@ -277,6 +283,7 @@ GoldenrodUndergroundOlderHaircutBrotherOneHaircutADayText:
 ;	line "haircut a day. I'm"
 ;	cont "done for today."
 ;	done
+	ntag "STYLIST:"
 	text "I'm done giving"
 	line "haricuts today."
 	
@@ -295,6 +302,7 @@ YoungerHaircutBrotherScript:
 ;
 	jumptextfaceplayer GoldenrodUndergroundYoungerHaircutBrotherText
 GoldenrodUndergroundYoungerHaircutBrotherText:
+	ntag "BOY:"
 	text "Hi there!"
 
 	para "My big brother is"

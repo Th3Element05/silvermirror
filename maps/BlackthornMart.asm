@@ -21,6 +21,7 @@ BlackthornMartMedScript:
 BlackthornMartCooltrainerMScript:
 	jumptextfaceplayer BlackthornMartCooltrainerMText
 BlackthornMartCooltrainerMText:
+	ntag "TRAINER:"
 	text "You can't buy MAX"
 	line "REVIVE in most"
 	cont "shops."
@@ -37,6 +38,7 @@ BlackthornMartCooltrainerMText:
 BlackthornMartBlackBeltScript:
 	jumptextfaceplayer BlackthornMartBlackBeltText
 BlackthornMartBlackBeltText:
+	ntag "BLACKBELT:"
 	text "MAX REPEL keeps"
 	line "weak #MON away"
 	cont "from you."

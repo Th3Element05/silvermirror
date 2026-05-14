@@ -39,6 +39,7 @@ Route40BattleTowerGateTwinScript:
 ;	done
 
 Route40BattleTowerGateRockerText:
+	ntag "MAN:"
 	text "Are you going to"
 	line "the BATTLE TOWER?"
 
@@ -57,6 +58,7 @@ Route40BattleTowerGateRockerText:
 ;	done
 
 Route40BattleTowerGateTwinText:
+	ntag "GIRL:"
 	text "The levels of the"
 	line "#MON I want to"
 	cont "use are all"

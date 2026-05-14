@@ -14,6 +14,7 @@ ViridianForestGateSLittleGirlScript:
 	jumptextfaceplayer ViridianForestGateSLittleGirlText
 
 ViridianForestGateSOfficerText:
+	ntag "OFFICER:"
 	text "Are you going to"
 	line "VIRIDIAN FOREST?"
 	
@@ -22,6 +23,7 @@ ViridianForestGateSOfficerText:
 	done
 
 ViridianForestGateSLittleGirlText:
+	ntag "GIRL:"
 	text "RATTATA may be"
 	line "small, but its"
 	cont "bite is wicked!"

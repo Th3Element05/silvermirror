@@ -17,17 +17,20 @@ TrainerGentlemanGregory:
 	end
 
 GentlemanGregorySeenText:
+	ntag "GENTLEMAN:"
 	text "Competing against"
 	line "the young keeps"
 	cont "me youthful."
 	done
 
 GentlemanGregoryBeatenText:
+	ntag "GREGORY:"
 	text "Good fight! Ah, I"
 	cont "feel young again!"
 	done
 
 GentlemanGregoryAfterBattleText:
+	ntag "GENTLEMAN:"
 	text "15 years ago, I"
 	line "would have won!"
 	done
@@ -43,15 +46,18 @@ TrainerFisherJustin:
 	end
 
 FisherJustinSeenText:
+	ntag "FISHER:"
 	text "Check out what I"
 	line "fished up!"
 	done
 
 FisherJustinBeatenText:
+	ntag "JUSTIN:"
 	text "I'm all out!"
 	done
 
 FisherJustinAfterBattleText:
+	ntag "FISHER:"
 	text "Party?"
 
 	para "The cruise ship's"
@@ -70,15 +76,18 @@ TrainerLassEllen:
 	end
 
 LassEllenSeenText:
+	ntag "LASS:"
 	text "I never saw you"
 	line "at the party."
 	done
 
 LassEllenBeatenText:
+	ntag "ELLEN:"
 	text "Take it easy!"
 	done
 
 LassEllenAfterBattleText:
+	ntag "LASS:"
 	text "Oh, I adore your"
 	line "strong #MON!"
 	done
@@ -94,16 +103,19 @@ TrainerGentlemanWesley:
 	end
 
 GentlemanWesleySeenText:
+	ntag "GENTLEMAN:"
 	text "Which do you like,"
 	line "a strong or a"
 	cont "rare #MON?"
 	done
 
 GentlemanWesleyBeatenText:
+	ntag "WESLEY:"
 	text "I must salute you!"
 	done
 
 GentlemanWesleyAfterBattleText:
+	ntag "GENTLEMAN:"
 	text "I prefer strong"
 	line "and rare #MON."
 	done
@@ -121,6 +133,7 @@ TrainerGentlemanAlfred:
 	end
 
 GentlemanAlfredSeenText:
+	ntag "GENTLEMAN:"
 	text "By battling with"
 	line "young trainers, I"
 	cont "keep myself young"
@@ -128,10 +141,12 @@ GentlemanAlfredSeenText:
 	done
 
 GentlemanAlfredBeatenText:
+	ntag "ALFRED:"
 	text "Whippersnapper!"
 	done
 
 GentlemanAlfredAfterBattleText:
+	ntag "GENTLEMAN:"
 	text "Youth is wasted"
 	line "on the young."
 	done
@@ -147,16 +162,19 @@ TrainerBeautyAdeline:
 	end
 
 BeautyAdelineSeenText:
+	ntag "BEAUTY:"
 	text "I'm trying to"
 	line "forget my woes."
 	cont "Let's battle!"
 	done
 
 BeautyAdelineBeatenText:
+	ntag "ADELINE:"
 	text "My heart weeps…"
 	done
 
 BeautyAdelineAfterBattleText:
+	ntag "BEAUTY:"
 	text "A voyage is best"
 	line "for getting over"
 	cont "a broken heart."
@@ -183,22 +201,26 @@ TrainerCoolDuoZacAndJen_Jen:
 	end
 
 CoolDuoZacAndJenSeenText:
+	ntag "COOLTRAINER:"
 	text "We have a new"
 	line "strategy that we"
 	cont "are eager to try!"
 	done
 
 CoolDuoZacAndJenBeatenText:
+	ntag "ZAC&JEN:"
 	text "You're very good!"
 	done
 
 CoolDuoZacAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "My strategy didn't"
 	line "work, next time we"
 	cont "can try hers."
 	done
 
 CoolDuoJenAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "His strategy didn't"
 	line "work, next time we"
 	cont "will try mine!"
@@ -215,6 +237,7 @@ TrainerSuperNerdEmmett:
 	end
 
 SuperNerdEmmettSeenText:
+	ntag "SUPERNERD:"
 	text "I wish I had"
 	line "something clever"
 	cont "to say before we"
@@ -222,11 +245,13 @@ SuperNerdEmmettSeenText:
 	done
 
 SuperNerdEmmettBeatenText:
+	ntag "EMMETT:"
 	text "I got it!"
 	line "Huh? It's over?"
 	done
 
 SuperNerdEmmettAfterBattleText:
+	ntag "SUPERNERD:"
 	text "I'll have a clever"
 	line "intro for my next"
 	cont "battle!"
@@ -243,16 +268,19 @@ TrainerCooltrainerFElla:
 	end
 
 CooltrainerFEllaSeenText:
+	ntag "COOLTRAINER:"
 	text "Every battle makes"
 	line "me and my #MON"
 	cont "sharper!"
 	done
 
 CooltrainerFEllaBeatenText:
+	ntag "ELLA:"
 	text "Thank you."
 	done
 
 CooltrainerFEllaAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "Win or lose, every"
 	line "battle makes us"
 	cont "stronger!"
@@ -274,6 +302,7 @@ SSAnneRooms2FGentleman1Script:
 	end
 
 SSAnneRooms2FGentleman1Text:
+	ntag "GENTLEMAN:"
 	text "In all my travels"
 	line "I've never seen"
 	cont "any #MON sleep"
@@ -293,6 +322,7 @@ SSAnneRooms2FGentleman1Text:
 SSAnneRooms2FGentleman2Script:
 	jumptextfaceplayer SSAnneRooms2FGentleman2Text
 SSAnneRooms2FGentleman2Text:
+	ntag "GENTLEMAN:"
 	text "Ah yes, I have"
 	line "seen some #MON"
 	cont "ferry people"
@@ -302,6 +332,7 @@ SSAnneRooms2FGentleman2Text:
 SSAnneRooms2FGentleman3Script:
 	jumptextfaceplayer SSAnneRooms2FGentleman3Text
 SSAnneRooms2FGentleman3Text:
+	ntag "GENTLEMAN:"
 	text "Have you gone to"
 	line "the SAFARI ZONE"
 	cont "in FUCHSIA CITY?"
@@ -313,6 +344,7 @@ SSAnneRooms2FGentleman3Text:
 SSAnneRooms2FBoyScript:
 	jumptextfaceplayer SSAnneRooms2FBoyText
 SSAnneRooms2FBoyText:
+	ntag "BOY:"
 	text "Me and my Daddy"
 	line "think the SAFARI"
 	cont "ZONE is awesome!"
@@ -321,9 +353,9 @@ SSAnneRooms2FBoyText:
 SSAnneRooms2FBeautyScript:
 	jumptextfaceplayer SSAnneRooms2FBeautyText
 SSAnneRooms2FBeautyText:
+	ntag "LADY:"
 	text "The CAPTAIN looked"
-	line "really sick and"
-	cont "pale!"
+	line "really pale!"
 	done
 
 ;SSAnneRooms2FLassScript:

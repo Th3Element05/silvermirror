@@ -20,6 +20,7 @@ EcruteakPokecenter1FPokefanMText:
 ;	done
 ;
 ;EcruteakPokecenter1FPokefanMTextMobile:
+	ntag "#FAN:"
 	text "You must be hoping"
 	line "to battle more"
 	cont "people, right?"
@@ -41,6 +42,7 @@ EcruteakPokecenter1FCooltrainerFText:
 ;	line "LEADER, is soooo"
 ;	cont "cool."
 ;
+	ntag "TRAINER:"
 	text "The GYM LEADER,"
 	line "MORTY, is so cool!"
 
@@ -48,9 +50,10 @@ EcruteakPokecenter1FCooltrainerFText:
 	line "really tough too."
 	done
 
-EcruteakPokecenter1FGymGuideScript:
-	jumptextfaceplayer EcruteakPokecenter1FGymGuideText
-EcruteakPokecenter1FGymGuideText:
+EcruteakPokecenter1FPharmacistScript:
+	jumptextfaceplayer EcruteakPokecenter1FPharmacistText
+EcruteakPokecenter1FPharmacistText:
+	ntag "MAN:"
 	text "LAKE OF RAGE…"
 
 	para "I wonder why it's"
@@ -75,5 +78,5 @@ EcruteakPokecenter1F_MapEvents:
 	object_event  3,  1, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakPokecenter1FNurseScript, -1
 	object_event  7,  6, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakPokecenter1FPokefanMScript, -1
 	object_event  1,  4, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakPokecenter1FCooltrainerFScript, -1
-	object_event  7,  1, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, EcruteakPokecenter1FGymGuideScript, -1
+	object_event  7,  1, SPRITE_PHARMACIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakPokecenter1FPharmacistScript, -1
 ;	object_event  0,  7, SPRITE_BILL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ECRUTEAK_POKE_CENTER_BILL

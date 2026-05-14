@@ -485,6 +485,7 @@ Route36NationalParkGatePlayerWaitWithContestantsMovement:
 	step_end
 
 Route36NationalParkGateOfficer1AskToParticipateText:
+	ntag "OFFICER:"
 	text "Today's @"
 	text_ram wStringBuffer3
 	text "."
@@ -505,6 +506,7 @@ Route36NationalParkGateOfficer1AskToParticipateText:
 	done
 
 Route36NationalParkGateOfficer1GiveParkBallsText:
+	ntag "OFFICER:"
 	text "Here are the PARK"
 	line "BALLs for the"
 	cont "Contest."
@@ -516,6 +518,7 @@ Route36NationalParkGatePlayerReceivedParkBallsText:
 	done
 
 Route36NationalParkGateOfficer1ExplainsRulesText:
+	ntag "OFFICER:"
 	text "The person who"
 	line "gets the strong-"
 	cont "est bug #MON"
@@ -539,6 +542,7 @@ Route36NationalParkGateOfficer1ExplainsRulesText:
 	done
 
 Route36NationalParkGateOfficer1AskToUseFirstMonText:
+	ntag "OFFICER:"
 	text "Uh-oh…"
 
 	para "You have more than"
@@ -556,6 +560,7 @@ Route36NationalParkGateOfficer1AskToUseFirstMonText:
 	done
 
 Route36NationalParkGateOfficer1WellHoldYourMonText:
+	ntag "OFFICER:"
 	text "Fine, we'll hold"
 	line "your other #MON"
 	cont "while you compete."
@@ -564,10 +569,11 @@ Route36NationalParkGateOfficer1WellHoldYourMonText:
 Route36NationalParkGatePlayersMonLeftWithHelperText:
 	text "<PLAYER>'s #MON"
 	line "were left with the"
-	cont "CONTEST HELPER."
+	cont "CONTEST OFFICER."
 	done
 
 Route36NationalParkGateOfficer1ChooseMonAndComeBackText:
+	ntag "OFFICER:"
 	text "Please choose the"
 	line "#MON to be used"
 	cont "in the Contest,"
@@ -575,12 +581,14 @@ Route36NationalParkGateOfficer1ChooseMonAndComeBackText:
 	done
 
 Route36NationalParkGateOfficer1TakePartInFutureText:
+	ntag "OFFICER:"
 	text "OK. We hope you'll"
 	line "take part in the"
 	cont "future."
 	done
 
 Route36NationalParkGateOfficer1FirstMonCantBattleText:
+	ntag "OFFICER:"
 	text "Uh-oh…"
 	line "The first #MON"
 	cont "in your party"
@@ -593,6 +601,7 @@ Route36NationalParkGateOfficer1FirstMonCantBattleText:
 	done
 
 Route36NationalParkGateOfficer1MakeRoomText:
+	ntag "OFFICER:"
 	text "Uh-oh…"
 	line "Both your party"
 	cont "and your PC BOX"
@@ -609,6 +618,7 @@ Route36NationalParkGateOfficer1MakeRoomText:
 	done
 
 Route36NationalParkGateOfficer1EggAsFirstMonText:
+	ntag "OFFICER:"
 	text "Uh-oh…"
 	line "You have an EGG as"
 	cont "the first #MON"
@@ -621,6 +631,7 @@ Route36NationalParkGateOfficer1EggAsFirstMonText:
 	done
 
 Route36NationalParkGateOfficer1WantToFinishText:
+	ntag "OFFICER:"
 	text "You still have @"
 	text_ram wStringBuffer3
 	text_start
@@ -631,6 +642,7 @@ Route36NationalParkGateOfficer1WantToFinishText:
 	done
 
 Route36NationalParkGateOfficer1WaitHereForAnnouncementText:
+	ntag "OFFICER:"
 	text "OK. Please wait"
 	line "here for the"
 	cont "announcement of"
@@ -638,12 +650,14 @@ Route36NationalParkGateOfficer1WaitHereForAnnouncementText:
 	done
 
 Route36NationalParkGateOfficer1OkGoFinishText:
+	ntag "OFFICER:"
 	text "OK. Please go back"
 	line "outside and finish"
 	cont "up."
 	done
 
 Route36NationalParkGateOfficer1ContestIsOverText:
+	ntag "OFFICER:"
 	text "Today's Contest is"
 	line "over. We hope you"
 	cont "will participate"
@@ -651,6 +665,7 @@ Route36NationalParkGateOfficer1ContestIsOverText:
 	done
 
 Route36NationalParkGateOfficer1SomeMonOnlySeenInParkText:
+	ntag "OFFICER:"
 	text "Some #MON can"
 	line "only be seen in"
 	cont "the PARK."
@@ -836,6 +851,7 @@ BugCatchingContestant10BStillCompetingText:
 ;	done
 
 Route36NationalParkGateOfficer1WellHoldPrizeText:
+	ntag "OFFICER:"
 	text "Uh-oh… Your PACK"
 	line "is full."
 
@@ -848,6 +864,7 @@ Route36NationalParkGateOfficer1WellHoldPrizeText:
 	done
 
 Route36NationalParkGateOfficer1HeresThePrizeText:
+	ntag "OFFICER:"
 	text "<PLAYER>?"
 
 	para "Here's the prize"

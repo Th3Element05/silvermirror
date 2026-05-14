@@ -404,9 +404,6 @@ INCLUDE "data/phone/text/timandsue_overworld.asm" ; new
 INCLUDE "data/phone/text/todd_overworld.asm"
 INCLUDE "data/phone/text/torin_overworld.asm" ; new
 INCLUDE "data/phone/text/tully_overworld.asm"
-INCLUDE "data/phone/text/vance_overworld.asm"
-INCLUDE "data/phone/text/walt_overworld.asm" ; new
-INCLUDE "data/phone/text/wilton_overworld.asm"
 
 
 SECTION "bank2E", ROMX
@@ -644,6 +641,7 @@ INCLUDE "data/phone/text/todd_caller.asm"
 INCLUDE "data/phone/text/torin_caller.asm" ; new
 INCLUDE "data/phone/text/wade_caller.asm"
 INCLUDE "data/phone/text/walt_caller.asm" ; new
+INCLUDE "data/phone/text/generic_caller_text.asm" ; NEW
 
 
 SECTION "UpdateBattleHUDs", ROMX
@@ -675,6 +673,9 @@ INCLUDE "data/phone/text/joey_overworld.asm"
 INCLUDE "data/phone/text/wade_overworld.asm"
 INCLUDE "data/phone/text/ralph_overworld.asm"
 INCLUDE "data/phone/text/liz_overworld.asm"
+INCLUDE "data/phone/text/vance_overworld.asm"
+INCLUDE "data/phone/text/walt_overworld.asm" ; new
+INCLUDE "data/phone/text/wilton_overworld.asm"
 
 
 SECTION "Special Phone Text", ROMX

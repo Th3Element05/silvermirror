@@ -10,6 +10,7 @@ VermilionPortPassageTeacherScript:
 	jumptextfaceplayer VermilionPortPassageTeacherText
 
 VermilionPortPassageTeacherText:
+	ntag "LADY:"
 	text "The FAST SHIP"
 	line "sails on Wednes-"
 	cont "days and Sundays"

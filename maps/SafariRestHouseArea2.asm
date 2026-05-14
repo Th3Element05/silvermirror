@@ -8,6 +8,7 @@ SafariRestHouseArea2_MapScripts:
 SafariRestHouseArea2Scientist:
 	jumptextfaceplayer SafariRestHouseArea2ScientistText
 SafariRestHouseArea2ScientistText:
+	ntag "SCIENTIST:"
 	text "How many did you"
 	line "catch? I'm bushed"
 	cont "from the work!"
@@ -16,6 +17,7 @@ SafariRestHouseArea2ScientistText:
 SafariRestHouseArea2PokefanM:
 	jumptextfaceplayer SafariRestHouseArea2PokefanMText
 SafariRestHouseArea2PokefanMText:
+	ntag "#FAN:"
 	text "I caught a"
 	line "CHANSEY!"
 
@@ -26,6 +28,7 @@ SafariRestHouseArea2PokefanMText:
 SafariRestHouseArea2Twin:
 	jumptextfaceplayer SafariRestHouseArea2TwinText
 SafariRestHouseArea2TwinText:
+	ntag "GIRL:"
 	text "Whew! I'm tired"
 	line "from all the fun!"
 	done

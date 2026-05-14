@@ -75,15 +75,18 @@ TrainerRocketGruntM14:
 	end
 
 RocketGruntM14SeenText:
+	ntag "ROCKET:"
 	text "What do you want?"
 	line "Why are you here?"
 	done
 
 RocketGruntM14BeatenText:
+	ntag "ROCKET:"
 	text "I give up!"
 	done
 
 RocketGruntM14AfterBattleText:
+	ntag "ROCKET:"
 	text "I'm not going to"
 	line "forget this!"
 	done
@@ -113,6 +116,7 @@ TrainerRocketGruntF4:
 	end
 
 RocketGruntF4SeenText:
+	ntag "ROCKET:"
 	text "This old guy came"
 	line "and complained"
 	cont "about us harming"
@@ -123,11 +127,13 @@ RocketGruntF4SeenText:
 	done
 
 RocketGruntF4BeatenText:
-	text "Please!"
-	line "No more!"
+	ntag "ROCKET:"
+	text "No more!"
+	line "Please!"
 	done
 
 RocketGruntF4AfterBattleText:
+	ntag "ROCKET:"
 	text "#MON are only"
 	line "good for making"
 	cont "money!"
@@ -155,16 +161,19 @@ TrainerRocketGruntM15:
 	end
 
 RocketGruntM15SeenText:
+	ntag "ROCKET:"
 	text "You're not saving"
 	line "anyone, kid!"
 	done
 
 RocketGruntM15BeatenText:
-	text "Don't fight"
-	line "us ROCKETs!"
+	ntag "ROCKET:"
+	text "Don't fight us"
+	line "ROCKETs!"
 	done
 
 RocketGruntM15AfterBattleText:
+	ntag "ROCKET:"
 	text "You're not getting"
 	line "away with this!"
 	done

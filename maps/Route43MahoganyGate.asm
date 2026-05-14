@@ -8,6 +8,7 @@ Route43MahoganyGate_MapScripts:
 Route43MahoganyGateOfficer:
 	jumptext Route43MahoganyGateOfficerText
 Route43MahoganyGateOfficerText:
+	ntag "OFFICER:"
 	text "Only people headed"
 	line "up to LAKE OF RAGE"
 	cont "pass through here."

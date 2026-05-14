@@ -90,6 +90,7 @@ MagikarpHouseBookshelf:
 	jumpstd DifficultBookshelfScript
 
 MagikarpLengthRaterText_LakeOfRageHistory:
+	ntag "FISHERMAN:"
 	text "LAKE OF RAGE is"
 	line "actually a crater"
 	cont "made by rampaging"
@@ -124,6 +125,7 @@ MagikarpLengthRaterText_LakeOfRageHistory:
 ;	done
 
 MagikarpLengthRaterText_WorldsLargestMagikarp:
+	ntag "FISHERMAN:"
 	text "My dream is to"
 	line "see the world's"
 ;	text "LAKE OF RAGE is"
@@ -143,6 +145,7 @@ MagikarpLengthRaterText_WorldsLargestMagikarp:
 	done
 
 MagikarpLengthRaterText_YouHaveAMagikarp:
+	ntag "FISHERMAN:"
 	text "Ah, you have a"
 	line "MAGIKARP!"
 
@@ -151,6 +154,7 @@ MagikarpLengthRaterText_YouHaveAMagikarp:
 	done
 
 MagikarpLengthRaterText_Memento:
+	ntag "FISHERMAN:"
 	text "Wow! This one is"
 	line "outstanding!"
 
@@ -162,6 +166,7 @@ MagikarpLengthRaterText_Memento:
 	done
 
 MagikarpLengthRaterText_Bonus:
+	ntag "FISHERMAN:"
 	text "The record is the"
 	line "important thing."
 
@@ -179,6 +184,7 @@ MagikarpLengthRaterText_TooShort:
 ;	roll "before."
 ;	done
 
+	ntag "FISHERMAN:"
 	text "This is a fine"
 	line "MAGIKARP, but I've"
 	cont "seen bigger."
@@ -186,11 +192,13 @@ MagikarpLengthRaterText_TooShort:
 
 
 MagikarpLengthRaterText_NotMagikarp:
+	ntag "FISHERMAN:"
 	text "What? That's not a"
 	line "MAGIKARP!"
 	done
 
 MagikarpLengthRaterText_Refused:
+	ntag "FISHERMAN:"
 	text "Oh… So you didn't"
 	line "get one big enough"
 	cont "to show me?"

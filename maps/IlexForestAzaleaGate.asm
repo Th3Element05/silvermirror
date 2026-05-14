@@ -14,12 +14,14 @@ IlexForestAzaleaGateGrannyScript:
 	jumptextfaceplayer IlexForestAzaleaGateGrannyText
 
 IlexForestAzaleaGateOfficerText:
+	ntag "OFFICER:"
 	text "ILEX FOREST is"
 	line "big. Be careful!"
 	cont "Don't get lost."
 	done
 
 IlexForestAzaleaGateGrannyText:
+	ntag "GRANNY:"
 	text "The FOREST is"
 	line "watched over by"
 	cont "its protector."

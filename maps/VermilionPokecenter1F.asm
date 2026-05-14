@@ -14,6 +14,7 @@ VermilionPokecenter1FReceptionistScript:
 VermilionPokecenter1FBenchGuyScript:
 	jumptext VermilionPokecenter1FBenchGuyText
 VermilionPokecenter1FBenchGuyText:
+	ntag "GUY:"
 	text "It is true that a"
 	line "higher level"
 	cont "#MON will be"
@@ -32,6 +33,7 @@ VermilionPokecenter1FBenchGuyText:
 VermilionPokecenter1FSailorScript:
 	jumptextfaceplayer VermilionPokecenter1FSailorText
 VermilionPokecenter1FSailorText:
+	ntag "SAILOR:"
 	text "My #MON was"
 	line "poisoned! It"
 	cont "fainted while we"
@@ -41,6 +43,7 @@ VermilionPokecenter1FSailorText:
 VermilionPokecenter1FGuruScript:
 	jumptextfaceplayer VermilionPokecenter1FGuruText
 VermilionPokecenter1FGuruText:
+	ntag "MAN:"
 	text "Even if they are"
 	line "the same level,"
 	cont "#MON can have"

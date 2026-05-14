@@ -46,6 +46,7 @@ MountMortarB1FKiyoScript:
 	end
 
 MountMortarB1FKiyoIntroText:
+	ntag "BLACKBELT:"
 	text "Hey!"
 
 	para "I am the KARATE"
@@ -61,11 +62,13 @@ MountMortarB1FKiyoIntroText:
 	done
 
 MountMortarB1FKiyoWinText:
+	ntag "KIYO:"
 	text "Waaaarggh!"
 	line "I'm beaten!"
 	done
 
 MountMortarB1FTyrogueRewardText:
+	ntag "BLACKBELT:"
 	text "I… I'm crushed…"
 
 	para "My training is"
@@ -86,6 +89,7 @@ MountMortarB1FReceiveMonText:
 	done
 
 MountMortarB1FKiyoGotTyrogueText:
+	ntag "BLACKBELT:"
 	text "TYROGUE is a"
 	line "fighting-type."
 
@@ -100,6 +104,7 @@ MountMortarB1FKiyoGotTyrogueText:
 	done
 
 MountMortarB1FKiyoFullPartyText:
+	ntag "BLACKBELT:"
 	text "You have no room"
 	line "in your party!"
 	done

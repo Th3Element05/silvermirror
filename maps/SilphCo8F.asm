@@ -35,11 +35,13 @@ SilphCo8FClerk:
 	jumptextfaceplayer SilphCo8FClerkSavedText
 
 SilphCo8FClerkText:
+	ntag "MAN:"
 	text "I wonder if SILPH"
 	line "is finished…"
 	done
 
 SilphCo8FClerkSavedText:
+	ntag "MAN:"
 	text "Thanks for saving"
 	line "us!"
 	done
@@ -55,16 +57,19 @@ TrainerScientistLinden:
 	end
 
 ScientistLindenSeenText:
+	ntag "SCIENTIST:"
 	text "You're causing us"
 	line "problems!"
 	done
 
 ScientistLindenBeatenText:
+	ntag "LINDEN:"
 	text "Huh?"
 	line "I lost?"
 	done
 
 ScientistLindenAfterBattleText:
+	ntag "SCIENTIST:"
 	text "So, what do you"
 	line "think of SILPH's"
 	cont "teleporters?"
@@ -81,16 +86,18 @@ TrainerRocketGruntF8:
 	end
 
 GruntF8SeenText:
+	ntag "ROCKET:"
 	text "That's as far as"
 	line "you'll go!"
 	done
 
 GruntF8BeatenText:
-	text "Not enough"
-	line "grit!"
+	ntag "ROCKET:"
+	text "Not enough grit!"
 	done
 
 GruntF8AfterBattleText:
+	ntag "ROCKET:"
 	text "If you don't turn"
 	line "back, I'll call"
 	cont "for backup!"
@@ -107,16 +114,19 @@ TrainerRocketGruntM25:
 	end
 
 GruntM25SeenText:
+	ntag "ROCKET:"
 	text "I am one of four"
 	line "ROCKET BROTHERS!"
 	done
 
 GruntM25BeatenText:
+	ntag "ROCKET:"
 	text "Whoo!"
 	line "Oh brothers!"
 	done
 
 GruntM25AfterBattleText:
+	ntag "ROCKET:"
 	text "I'll leave you up"
 	line "to my brothers!"
 	done

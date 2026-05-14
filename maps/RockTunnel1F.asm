@@ -24,16 +24,19 @@ TrainerHikerBailey:
 	end
 
 HikerBaileySeenText:
+	ntag "HIKER:"
 	text "This tunnel goes"
 	line "a long way, kid!"
 	done
 
 HikerBaileyBeatenText:
+	ntag "BAILEY:"
 	text "Doh!"
 	line "You win!"
 	done
 
 HikerBaileyAfterBattleText:
+	ntag "HIKER:"
 	text "Watch for ONIX!"
 	line "It can put the"
 	cont "squeeze on you!"
@@ -50,15 +53,18 @@ TrainerPokemaniacAndrew:
 	end
 
 PokemaniacAndrewSeenText:
+	ntag "#MANIAC:"
 	text "#MON fight!"
 	line "Ready, go!"
 	done
 
 PokemaniacAndrewBeatenText:
+	ntag "ANDREW:"
 	text "Game over!"
 	done
 
 PokemaniacAndrewAfterBattleText:
+	ntag "#MANIAC:"
 	text "Oh well, I'll get"
 	line "a ZUBAT as I go!"
 	done
@@ -74,17 +80,20 @@ TrainerHikerHolden:
 	end
 
 HikerHoldenSeenText:
+	ntag "HIKER:"
 	text "Hmm. Maybe I'm"
 	line "lost in here…"
 	done
 
 HikerHoldenBeatenText:
+	ntag "HOLDEN:"
 	text "Ease up!"
 	line "What am I doing?"
 	cont "Which way is out?"
 	done
 
 HikerHoldenAfterBattleText:
+	ntag "HIKER:"
 	text "I had to take this"
 	line "detour because of"
 	cont "that sleeping"
@@ -109,16 +118,19 @@ TrainerHikerTim:
 	end
 
 HikerTimSeenText:
+	ntag "HIKER:"
 	text "Outsiders like"
 	line "you need to show"
 	cont "me some respect!"
 	done
 
 HikerTimBeatenText:
+	ntag "TIM:"
 	text "I give!"
 	done
 
 HikerTimAfterBattleText:
+	ntag "HIKER:"
 	text "You're talented"
 	line "enough to hike!"
 	done
@@ -134,16 +146,19 @@ TrainerPicnickerEdna:
 	end
 
 PicnickerEdnaSeenText:
+	ntag "PICNICKER:"
 	text "Eek! Don't try"
 	line "anything funny in"
 	cont "the dark!"
 	done
 
 PicnickerEdnaBeatenText:
+	ntag "EDNA:"
 	text "It was too dark!"
 	done
 
 PicnickerEdnaAfterBattleText:
+	ntag "PICNICKER:"
 	text "I saw a MACHOP"
 	line "in this tunnel!"
 	done
@@ -159,15 +174,18 @@ TrainerPicnickerKim:
 	end
 
 PicnickerKimSeenText:
+	ntag "PICNICKER:"
 	text "You have #MON!"
 	line "Let's play!"
 	done
 
 PicnickerKimBeatenText:
+	ntag "KIM:"
 	text "You play hard!"
 	done
 
 PicnickerKimAfterBattleText:
+	ntag "PICNICKER:"
 	text "Whew! I'm all"
 	line "sweaty now!"
 	done
@@ -183,16 +201,19 @@ TrainerPicnickerBrooke:
 	end
 
 PicnickerBrookeSeenText:
+	ntag "PICNICKER:"
 	text "I came this far"
 	line "for #MON!"
 	done
 
 PicnickerBrookeBeatenText:
+	ntag "BROOKE:"
 	text "I'm out of"
 	line "#MON!"
 	done
 
 PicnickerBrookeAfterBattleText:
+	ntag "PICNICKER:"
 	text "You looked cute"
 	line "and harmless!"
 	done

@@ -134,6 +134,7 @@ TrainerCooltrainerMGavin:
 	end
 
 CooltrainerMGavinSeenText:
+	ntag "COOLTRAINER:"
 	text "I got eight GYM"
 	line "BADGES in JOHTO."
 
@@ -143,10 +144,12 @@ CooltrainerMGavinSeenText:
 	done
 
 CooltrainerMGavinBeatenText:
+	ntag "GAVIN:"
 	text "I blew it!"
 	done
 
 CooltrainerMGavinAfterBattleText:
+	ntag "GAVIN:"
 	text "It's going to be"
 	line "tough to beat the"
 	cont "#MON LEAGUE."
@@ -172,17 +175,20 @@ TrainerCooltrainerMFinn:
 	end
 
 CooltrainerMFinnSeenText:
+	ntag "COOLTRAINER:"
 	text "By experiencing"
 	line "tough battles, you"
 	cont "gain power."
 	done
 
 CooltrainerMFinnBeatenText:
+	ntag "FINN:"
 	text "Gaah! Life is even"
 	line "tougher!"
 	done
 
 CooltrainerMFinnAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "To get to #MON"
 	line "LEAGUE, you have"
 	cont "to get through"
@@ -208,6 +214,7 @@ TrainerCooltrainerFJoyce:
 	end
 
 CooltrainerFJoyceSeenText:
+	ntag "COOLTRAINER:"
 	text "You look like a"
 	line "good trainer."
 
@@ -217,11 +224,13 @@ CooltrainerFJoyceSeenText:
 	done
 
 CooltrainerFJoyceBeatenText:
+	ntag "JOYCE:"
 	text "No! I don't"
 	line "believe this!"
 	done
 
 CooltrainerFJoyceAfterBattleText:
+	ntag "COOLTRAINER:"
 	text "I've defeated"
 	line "eight GYM LEADERs,"
 	cont "so I was feeling"
@@ -314,6 +323,7 @@ TrainerCooltrainerFBeth:
 	end
 
 CooltrainerFBethSeenText:
+	ntag "COOLTRAINER:"
 	text "Some of the train-"
 	line "ers on their way"
 	cont "to #MON LEAGUE"
@@ -328,11 +338,13 @@ CooltrainerFBethSeenText:
 	done
 
 CooltrainerFBethBeatenText:
+	ntag "BETH:"
 	text "#MON aren't"
 	line "just tools."
 	done
 
 CooltrainerFBethAfterBattleText:
+	ntag "BETH:"
 	text "#MON are in-"
 	line "valuable, lifelong"
 	cont "partners."
@@ -350,16 +362,19 @@ TrainerPsychicCaleb:
 	end
 
 PsychicCalebSeenText:
+	ntag "PSYCHIC:"
 	text "Do you have enough"
 	line "BADGES to get to"
 	cont "#MON LEAGUE?"
 	done
 
 PsychicCalebBeatenText:
+	ntag "CALEB:"
 	text "Good battle!"
 	done
 
 PsychicCalebAfterBattleText:
+	ntag "PSYCHIC:"
 	text "People and #MON"
 	line "grow from their"
 	cont "experiences."
@@ -380,6 +395,7 @@ TrainerFisherLuca:
 	end
 
 FisherLucaSeenText:
+	ntag "FISHER:"
 	text "I'm feeling great"
 	line "today!"
 
@@ -389,11 +405,13 @@ FisherLucaSeenText:
 	done
 
 FisherLucaBeatenText:
+	ntag "LUCA:"
 	text "No! Not in this"
 	line "battle!"
 	done
 
 FisherLucaAfterBattleText:
+	ntag "FISHER:"
 	text "Just like in fish-"
 	line "ing, it's all over"
 	cont "in #MON if you"

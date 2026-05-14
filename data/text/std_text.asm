@@ -1,26 +1,26 @@
 NurseMornText:
-;	ntag "NURSE:"
+	ntag "NURSE:"
 	text "Good morning!"
 	line "Welcome to our"
 	cont "#MON CENTER."
 	done
 
 NurseDayText:
-;	ntag "NURSE:"
+	ntag "NURSE:"
 	text "Hello!"
 	line "Welcome to our"
 	cont "#MON CENTER."
 	done
 
 NurseEveText:
-;	ntag "NURSE:"
+	ntag "NURSE:"
 	text "Good evening!"
 	line "Welcome to our"
 	cont "#MON CENTER."
 	done
 
 NurseNiteText:
-;	ntag "NURSE:"
+	ntag "NURSE:"
 	text "Good evening!"
 	line "You're out late."
 
@@ -70,7 +70,7 @@ NurseNiteText:
 ;	done
 
 NurseAskHealText:
-;	ntag "NURSE:"
+	ntag "NURSE:"
 	text "We can heal your"
 	line "#MON to perfect"
 	cont "health."
@@ -80,13 +80,13 @@ NurseAskHealText:
 	done
 
 NurseTakePokemonText:
-;	ntag "NURSE:"
+	ntag "NURSE:"
 	text "OK, may I see your"
 	line "#MON?"
 	done
 
 NurseReturnPokemonText:
-;	ntag "NURSE:"
+	ntag "NURSE:"
 	text "Thank you for"
 	line "waiting."
 
@@ -95,7 +95,7 @@ NurseReturnPokemonText:
 	done
 
 NurseGoodbyeText:
-;	ntag "NURSE:"
+	ntag "NURSE:"
 	text "We hope to see you"
 	line "again."
 	done
@@ -106,7 +106,7 @@ NurseGoodbyeText:
 ;	done
 
 NursePokerusText:
-;	ntag "NURSE:"
+	ntag "NURSE:"
 	text "Your #MON seems"
 	line "to be infected by"
 	cont "tiny life forms."
@@ -249,6 +249,7 @@ MartSignText:
 	done
 
 ContestResults_ReadyToJudgeText:
+	ntag "JUDGE:"
 	text "We will now judge"
 	line "the #MON you've"
 	cont "caught."
@@ -264,6 +265,7 @@ ContestResults_ReadyToJudgeText:
 	done
 
 ContestResults_PlayerWonAPrizeText:
+	ntag "JUDGE:"
 	text "<PLAYER>, the No.@"
 	text_ram wStringBuffer3
 	text_start
@@ -281,11 +283,13 @@ ReceivedItemText:
 	done
 
 ContestResults_JoinUsNextTimeText:
+	ntag "JUDGE:"
 	text "Please join us for"
 	line "the next Contest!"
 	done
 
 ContestResults_ConsolationPrizeText:
+	ntag "JUDGE:"
 	text "Everyone else gets"
 	line "a SITRUS BERRY for"
 	cont "participating!"
@@ -297,11 +301,13 @@ ContestResults_ConsolationPrizeText:
 ;	done
 
 ContestResults_DidNotWinText:
+	ntag "JUDGE:"
 	text "We hope you do"
 	line "better next time."
 	done
 
 ContestResults_ReturnPartyText:
+	ntag "JUDGE:"
 	text "We'll return the"
 	line "#MON we were"
 	cont "holding for you."
@@ -309,6 +315,7 @@ ContestResults_ReturnPartyText:
 	done
 
 ContestResults_PartyFullText:
+	ntag "JUDGE:"
 	text "Your party's full,"
 	line "so the #MON was"
 	cont "sent to your BOX"
@@ -348,11 +355,13 @@ GymStatue_WinningTrainers2Text:
 	done
 
 CoinVendor_WelcomeText:
+	ntag "CASHIER:"
 	text "Welcome to the"
 	line "GAME CORNER."
 	done
 
 CoinVendor_NoCoinCaseText:
+	ntag "CASHIER:"
 	text "Do you need game"
 	line "coins?"
 
@@ -362,6 +371,7 @@ CoinVendor_NoCoinCaseText:
 	done
 
 CoinVendor_IntroText:
+	ntag "CASHIER:"
 	text "Do you need some"
 	line "game coins?"
 
@@ -371,31 +381,37 @@ CoinVendor_IntroText:
 	done
 
 CoinVendor_Buy50CoinsText:
+	ntag "CASHIER:"
 	text "Thank you!"
 	line "Here are 50 coins."
 	done
 
 CoinVendor_Buy500CoinsText:
+	ntag "CASHIER:"
 	text "Thank you! Here"
 	line "are 500 coins."
 	done
 
 CoinVendor_NotEnoughMoneyText:
+	ntag "CASHIER:"
 	text "You don't have"
 	line "enough money."
 	done
 
 CoinVendor_CoinCaseFullText:
+	ntag "CASHIER:"
 	text "Whoops! Your COIN"
 	line "CASE is full."
 	done
 
 CoinVendor_CancelText:
+	ntag "CASHIER:"
 	text "No coins for you?"
 	line "Come again!"
 	done
 
 BugContestPrizeNoRoomText:
+	ntag "JUDGE:"
 	text "Oh? Your PACK is"
 	line "full."
 
@@ -431,6 +447,7 @@ BugContestPrizeNoRoomText:
 ;	done
 
 HappinessRaterIntroText:
+	ntag "RATER:"
 	text "If you treat your"
 	line "#MON nicely,"
 	cont "they will love you"
@@ -443,12 +460,14 @@ HappinessRaterIntroText:
 	done
 
 HappinessRatingText_LooksMean:
+	ntag "RATER:"
 	text "It doesn't seem to"
 	line "like you at all."
 	cont "It looks mean."
 	done
 
 HappinessRatingText_NotUsedToYou:
+	ntag "RATER:"
 ;	text "You should treat"
 ;	line "it better. It's"
 ;	cont "not used to you."
@@ -460,22 +479,26 @@ HappinessRatingText_NotUsedToYou:
 	done
 
 HappinessRatingText_QuiteCute:
+	ntag "RATER:"
 	text "It's quite cute."
 	done
 
 HappinessRatingText_SortOfHappy:
+	ntag "RATER:"
 	text "It's friendly to-"
 	line "ward you. It looks"
 	cont "sort of happy."
 	done
 
 HappinessRatingText_ReallyTrustsYou:
+	ntag "RATER:"
 	text "I get the feeling"
 	line "that it really"
 	cont "trusts you."
 	done
 
 HappinessRatingText_LovesYouALot:
+	ntag "RATER:"
 	text "It looks really"
 	line "happy! It must"
 	cont "love you a lot."
@@ -490,6 +513,7 @@ RegisteredNumber2Text:
 	done
 
 PokecenterReceptionistText: ;silvermirror+
+	ntag "RECEPTIONIST:"
 	text "You can use the"
 	line "PC in the corner"
 	cont "to access the"
@@ -510,6 +534,7 @@ SilphCo_BingoText: ;silvermirror+
 	done
 
 SaffronGateClosedText: ;silvermirror+
+	ntag "OFFICER:"
 	text "TEAM ROCKET is"
 	line "causing trouble"
 	cont "in SAFFRON CITY."
@@ -523,6 +548,7 @@ SaffronGateClosedText: ;silvermirror+
 	done
 
 SaffronGateCanHaveDrinkText: ;silvermirror+
+	ntag "OFFICER:"
 	text "<……>"
 
 	para "Huh? I can have"
@@ -539,6 +565,7 @@ SaffronGateGiveDrinkText: ;silvermirror+
 	done
 
 SaffronGateOpenText: ;silvermirror+
+	ntag "OFFICER:"
 	text "…"
 	line "Glug glug…"
 	cont "…"

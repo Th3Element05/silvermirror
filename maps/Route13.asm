@@ -105,16 +105,19 @@ TrainerBirdKeeperJamie:
 	end
 
 BirdKeeperJamieSeenText:
+	ntag "BIRDKEEPER:"
 	text "You need to use"
 	line "TMs to teach good"
 	cont "moves to #MON!"
 	done
 
 BirdKeeperJamieBeatenText:
+	ntag "JAMIE:"
 	text "Not good enough!"
 	done
 
 BirdKeeperJamieAfterBattleText:
+	ntag "JAMIE:"
 	text "You have some ride"
 	line "PAGERs, right?"
 	cont "Those are useful!"
@@ -128,6 +131,7 @@ TrainerBirdKeeperDennis:
 	jumptextfaceplayer BirdKeeperDennisAfterBattleText
 
 BirdKeeperDennisSeenText:
+	ntag "BIRDKEEPER:"
 	text "TMs are on sale"
 	line "in CELADON!"
 	cont "But, only a few"
@@ -135,10 +139,12 @@ BirdKeeperDennisSeenText:
 	done
 
 BirdKeeperDennisBeatenText:
+	ntag "DENNIS:"
 	text "Aww, bummer!"
 	done
 
 BirdKeeperDennisAfterBattleText:
+	ntag "BIRDKEEPER:"
 	text "Teach #MON"
 	line "moves of the same"
 	cont "element type for"
@@ -153,16 +159,19 @@ TrainerBirdKeeperPerry:
 	jumptextfaceplayer BirdKeeperPerryAfterBattleText
 
 BirdKeeperPerrySeenText:
+	ntag "BIRDKEEPER:"
 	text "Have you taught"
 	line "your bird #MON"
 	cont "how to FLY?"
 	done
 
 BirdKeeperPerryBeatenText:
+	ntag "PERRY:"
 	text "Shot down!"
 	done
 
 BirdKeeperPerryAfterBattleText:
+	ntag "BIRDKEEPER:"
 	text "Bird #MON are"
 	line "my true love!"
 	done
@@ -175,16 +184,19 @@ TrainerBirdKeeperToby:
 	jumptextfaceplayer BirdKeeperTobyAfterBattleText
 
 BirdKeeperTobySeenText:
+	ntag "BIRDKEEPER:"
 	text "My bird #MON"
 	line "should be ready"
 	cont "for battle."
 	done
 
 BirdKeeperTobyBeatenText:
+	ntag "TOBY:"
 	text "Not ready yet!"
 	done
 
 BirdKeeperTobyAfterBattleText:
+	ntag "BIRDKEEPER:"
 	text "They need to learn"
 	line "better moves."
 	done
@@ -197,15 +209,18 @@ TrainerBirdKeeperRoy:
 	jumptextfaceplayer BirdKeeperRoyAfterBattleText
 
 BirdKeeperRoySeenText:
+	ntag "BIRDKEEPER:"
 	text "I always go with"
 	line "bird #MON!"
 	done
 
 BirdKeeperRoyBeatenText:
+	ntag "ROY:"
 	text "Out of power!"
 	done
 
 BirdKeeperRoyAfterBattleText:
+	ntag "BIRDKEEPER:"
 	text "I wish I could"
 	line "fly like PIDGEY"
 	cont "and PIDGEOTTO…"
@@ -219,16 +234,19 @@ TrainerBikerDwayne:
 	jumptextfaceplayer BikerDwayneAfterBattleText
 
 BikerDwayneSeenText:
+	ntag "BIKER:"
 	text "What're you"
 	line "lookin' at?"
 	done
 
 BikerDwayneBeatenText:
+	ntag "DWAYNE:"
 	text "Dang!"
 	line "Stripped gears!"
 	done
 
 BikerDwayneAfterBattleText:
+	ntag "BIKER:"
 	text "Get lost!"
 	done
 
@@ -240,15 +258,18 @@ TrainerBirdKeeperRod:
 	jumptextfaceplayer BirdKeeperRodAfterBattleText
 
 BirdKeeperRodSeenText:
+	ntag "BIRDKEEPER:"
 	text "The wind's blowing"
 	line "my way!"
 	done
 
 BirdKeeperRodBeatenText:
+	ntag "ROD:"
 	text "The wind turned!"
 	done
 
 BirdKeeperRodAfterBattleText:
+	ntag "BIRDKEEPER:"
 	text "I'm beat. I guess"
 	line "I'll FLY home."
 	done
@@ -261,17 +282,20 @@ TrainerPicnickerSelina:
 	jumptextfaceplayer PicnickerSelinaAfterBattleText
 
 PicnickerSelinaSeenText:
+	ntag "PICNICKER:"
 	text "My cute #MON"
 	line "wish to make your"
 	cont "acquaintance."
 	done
 
 PicnickerSelinaBeatenText:
+	ntag "SELINA:"
 	text "Wow!"
 	line "You totally won!"
 	done
 
 PicnickerSelinaAfterBattleText:
+	ntag "PICKNICKER:"
 	text "You have to make"
 	line "#MON fight to"
 	cont "toughen them up!"
@@ -285,15 +309,18 @@ TrainerPicnickerTanya:
 	jumptextfaceplayer PicnickerTanyaAfterBattleText
 
 PicnickerTanyaSeenText:
+	ntag "PICNICKER:"
 	text "Wow! Your BADGEs"
 	line "are too cool!"
 	done
 
 PicnickerTanyaBeatenText:
+	ntag "TANYA:"
 	text "Not enough!"
 	done
 
 PicnickerTanyaAfterBattleText:
+	ntag "PICNICKER:"
 	text "You got those"
 	line "BADGEs from GYM"
 	cont "LEADERs. I know!"
@@ -313,21 +340,25 @@ TrainerTwinsKayAndTia2:
 	jumptextfaceplayer TwinsKayAndTia2AfterBattleText
 
 TwinsKayAndTiaSeenText:
+	ntag "TWIN:"
 	text "Sure, we'll play"
 	line "with you!"
 	done
 
 TwinsKayAndTiaBeatenText:
+	ntag "KAY&TIA:"
 	text "You brute!"
 	done
 
 TwinsKayAndTia1AfterBattleText:
+	ntag "TWIN:"
 	text "I wonder which is"
 	line "stronger, male or"
 	cont "female #MON?"
 	done
 
 TwinsKayAndTia2AfterBattleText:
+	ntag "TWIN:"
 	text "I don't know"
 	line "anything about"
 	cont "#MON. I just"
@@ -342,16 +373,19 @@ TrainerPicnickerPiper:
 	jumptextfaceplayer PicnickerPiperAfterBattleText
 
 PicnickerPiperSeenText:
+	ntag "PICNICKER:"
 	text "I'm told I'm good"
 	line "for a kid!"
 	done
 
 PicnickerPiperBeatenText:
+	ntag "PIPER:"
 	text "Ohh!"
 	line "I lost!"
 	done
 
 PicnickerPiperAfterBattleText:
+	ntag "PICNICKER:"
 	text "I want to become"
 	line "a good trainer."
 	cont "I'll train hard."
@@ -365,16 +399,19 @@ TrainerBirdKeeperAbe:
 	jumptextfaceplayer BirdKeeperAbeAfterBattleText
 
 BirdKeeperAbeSeenText:
+	ntag "BIRDKEEPER:"
 	text "My bird #MON"
 	line "want to scrap!"
 	done
 
 BirdKeeperAbeBeatenText:
+	ntag "ABE:"
 	text "My bird combo"
 	line "lost?"
 	done
 
 BirdKeeperAbeAfterBattleText:
+	ntag "BIRDKEEPER:"
 	text "My #MON look"
 	line "happy even though"
 	cont "they lost."
@@ -388,15 +425,18 @@ TrainerPicnickerDebra:
 	jumptextfaceplayer PicnickerDebraAfterBattleText
 
 PicnickerDebraSeenText:
+	ntag "PICNICKER:"
 	text "I found CARBOS in"
 	line "a cave once."
 	done
 
 PicnickerDebraBeatenText:
+	ntag "DEBRA:"
 	text "Just messed up!"
 	done
 
 PicnickerDebraAfterBattleText:
+	ntag "PICNICKER:"
 	text "CARBOS boosted"
 	line "the SPEED of my"
 	cont "#MON."

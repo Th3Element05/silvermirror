@@ -34,6 +34,7 @@ PhotoStudioPokepic:
 	ret
 
 CianwoodPhotoStudioFishingGuruText_Question:
+	ntag "PHOTOGRAPHER:"
 	text "You have magnifi-"
 	line "cent #MON with"
 	cont "you."
@@ -43,15 +44,16 @@ CianwoodPhotoStudioFishingGuruText_Question:
 	done
 
 CianwoodPhotoStudioFishingGuruText_Yes:
+	ntag "PHOTOGRAPHER:"
 	text "OK! Big smile now!"
 	done
 
 CianwoodPhotoStudioFishingGuruText_No:
+	ntag "PHOTOGRAPHER:"
 	text "Oh, that's too"
 	line "bad. I thought it"
-
-	para "would be a great"
-	line "memento…"
+	cont "would be a great"
+	roll "memento…"
 	done
 
 CianwoodPhotoStudio_MapEvents:

@@ -21,16 +21,19 @@ TrainerBikerHarris:
 	jumptextfaceplayer BikerHarrisAfterBattleText
 
 BikerHarrisSeenText:
+	ntag "BIKER:"
 	text "Perfect! I need to"
 	line "burn some time!"
 	done
 
 BikerHarrisBeatenText:
+	ntag "HARRIS:"
 	text "What?"
 	line "You!?"
 	done
 
 BikerHarrisAfterBattleText:
+	ntag "BIKER:"
 	text "Raising #MON"
 	line "is a drag, man."
 	done
@@ -43,16 +46,19 @@ TrainerBikerZeke:
 	jumptextfaceplayer BikerZekeAfterBattleText
 
 BikerZekeSeenText:
+	ntag "BIKER:"
 	text "We ride out here"
 	line "because there's"
 	cont "more room!"
 	done
 
 BikerZekeBeatenText:
+	ntag "ZEKE:"
 	text "Wipe out!"
 	done
 
 BikerZekeAfterBattleText:
+	ntag "BIKER:"
 	text "It's cool you"
 	line "made your #MON"
 	cont "so strong!"
@@ -69,15 +75,18 @@ TrainerBikerCharles:
 	jumptextfaceplayer BikerCharlesAfterBattleText
 
 BikerCharlesSeenText:
+	ntag "BIKER:"
 	text "#MON fight?"
 	line "Cool! Rumble!"
 	done
 
 BikerCharlesBeatenText:
+	ntag "CHARLES:"
 	text "Blown away!"
 	done
 
 BikerCharlesAfterBattleText:
+	ntag "BIKER:"
 	text "You know who'd"
 	line "win, you and me"
 	cont "one on one!"
@@ -91,17 +100,20 @@ TrainerBirdKeeperHank:
 	jumptextfaceplayer BirdKeeperHankAfterBattleText
 
 BirdKeeperHankSeenText:
+	ntag "BIRDKEEPER:"
 	text "Have you heard of"
 	line "the legendary"
 	cont "#MON?"
 	done
 
 BirdKeeperHankBeatenText:
+	ntag "HANK:"
 	text "Why?"
 	line "Why'd I lose?"
 	done
 
 BirdKeeperHankAfterBattleText:
+	ntag "BIRDKEEPER:"
 	text "The 3 legendary"
 	line "#MON are all"
 	cont "birds of prey."
@@ -189,17 +201,20 @@ TrainerBikerReese:
 ;	end
 
 BikerReeseSeenText:
+	ntag "BIKER:"
 	text "C'mon, c'mon."
 	line "Let's go, let's"
 	cont "go, let's go!"
 	done
 
 BikerReeseBeatenText:
+	ntag "REESE:"
 	text "Arrg!"
 	line "Lost!"
 	done
 
 BikerReeseAfterBattleText:
+	ntag "REESE:"
 	text "Don't get cocky!"
 	done
 
@@ -211,15 +226,18 @@ TrainerBirdKeeperTheo:
 	jumptextfaceplayer BirdKeeperTheoAfterBattleText
 
 BirdKeeperTheoSeenText:
+	ntag "BIRDKEEPER:"
 	text "I'm not into it,"
 	line "but OK! Let's go!"
 	done
 
 BirdKeeperTheoBeatenText:
+	ntag "THEO:"
 	text "I knew it!"
 	done
 
 BirdKeeperTheoAfterBattleText:
+	ntag "BIRDKEEPER:"
 	text "Winning, losing,"
 	line "it doesn't matter"
 	cont "in the long run!"
