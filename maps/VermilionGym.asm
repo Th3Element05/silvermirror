@@ -384,6 +384,93 @@ VermilionGymSurgeTrashCan:
 	reloadmappart
 	jumpstd TrashCanScript
 
+
+; rematch
+VermilionGymSurgeRematchScript:
+	faceplayer
+	opentext
+	checkevent EVENT_BEAT_LTSURGE_2
+	iftrue .skipintro
+	writetext LtSurgeRematchIntroText
+	waitbutton
+	sjump .startbattle
+
+.skipintro
+	writetext LtSurgeAskRematchText
+	yesorno
+	iffalse .norematch
+.startbattle
+	closetext
+	winlosstext LtSurgeRematchWinLossText, 0
+	loadtrainer LT_SURGE, LT_SURGE2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_LTSURGE_2
+;	scall VermilionGymRematchesCheck
+	farscall ViridianGymRematchesCompleteCheck
+	opentext
+.norematch
+	writetext LtSurgeRematchAfterBattleText
+	waitbutton
+	closetext
+	end
+
+;VermilionGymRematchesCheck:
+;	checkevent EVENT_BEAT_LEADER_BLUE
+;	iftrue .end
+;	checkevent EVENT_BEAT_BROCK_2
+;	iffalse .end
+;	checkevent EVENT_BEAT_MISTY_2
+;	iffalse .end
+;;	checkevent EVENT_BEAT_LTSURGE_2
+;;	iffalse .end
+;	checkevent EVENT_BEAT_ERIKA_2
+;	iffalse .end
+;	checkevent EVENT_BEAT_KOGA_2
+;	iffalse .end
+;	checkevent EVENT_BEAT_SABRINA_2
+;	iffalse .end
+;	checkevent EVENT_BEAT_BLAINE_2
+;	iffalse .end
+;	clearevent EVENT_VIRIDIAN_GYM_BLUE
+;	specialphonecall SPECIALCALL_VIRIDIANGYM2
+;.end
+;	end
+
+LtSurgeRematchIntroText:
+	ntag "LT.SURGE:"
+	text "<PLAYER>!"
+
+	para "We don't get a new"
+	line "LEAGUE CHAMPION"
+	cont "very often!"
+
+	para "Only the toughest"
+	line "trainers can beat"
+	cont "the ELITE FOUR!"
+
+	para "Show me what you've"
+	line "got!"
+	done
+
+LtSurgeAskRematchText:
+	ntag "LT.SURGE:"
+	text "Ready to challenge"
+	line "me again?"
+	done
+
+LtSurgeRematchWinLossText:
+	ntag "LT.SURGE:"
+	text "Electrifying!"
+	done
+
+LtSurgeRematchAfterBattleText:
+	ntag "LT.SURGE:"
+	text "I'll put you to the"
+	line "test any time!"
+	done
+
+
 VermilionGym_MapEvents:
 	db 0, 0 ; filler
 
@@ -414,8 +501,10 @@ VermilionGym_MapEvents:
 	bg_event  6,  1, BGEVENT_READ, VermilionGymSurgeTrashCan
 
 	def_object_events
-	object_event  5,  2, SPRITE_SURGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionGymSurgeScript, -1
+	object_event  5,  2, SPRITE_SURGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionGymSurgeScript, EVENT_BEAT_ELITE_FOUR
 	object_event  9,  6, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerGentlemanMilton, -1
 	object_event  3,  8, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerGuitaristClyde, -1
 	object_event  0, 10, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSailorKenneth, -1
 	object_event  7, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, VermilionGymGuideScript, -1
+;
+	object_event  5,  2, SPRITE_SURGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionGymSurgeRematchScript, EVENT_KANTO_LEADER_REMATCHES

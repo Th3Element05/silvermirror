@@ -240,6 +240,110 @@ PewterGymStatue:
 .Beaten:
 	jumpstd GymStatue2Script
 
+
+; rematch
+PewterGymBrockRematchScript:
+	faceplayer
+	opentext
+	checkevent EVENT_BEAT_BROCK_2
+	iftrue .skipintro
+	writetext BrockRematchIntroText
+	waitbutton
+	sjump .startbattle
+
+.skipintro
+	writetext BrockAskRematchText
+	yesorno
+	iffalse .norematch
+.startbattle
+	closetext
+	winlosstext BrockRematchWinLossText, 0
+	loadtrainer BROCK, BROCK2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_BROCK_2
+;	scall PewterGymRematchesCheck
+	farscall ViridianGymRematchesCompleteCheck
+	opentext
+.norematch
+	writetext BrockRematchAfterBattleText
+	waitbutton
+	closetext
+	end
+
+;PewterGymRematchesCheck:
+;	checkevent EVENT_BEAT_LEADER_BLUE
+;	iftrue .end
+;;	checkevent EVENT_BEAT_BROCK_2
+;;	iffalse .end
+;	checkevent EVENT_BEAT_MISTY_2
+;	iffalse .end
+;	checkevent EVENT_BEAT_LTSURGE_2
+;	iffalse .end
+;	checkevent EVENT_BEAT_ERIKA_2
+;	iffalse .end
+;	checkevent EVENT_BEAT_KOGA_2
+;	iffalse .end
+;	checkevent EVENT_BEAT_SABRINA_2
+;	iffalse .end
+;	checkevent EVENT_BEAT_BLAINE_2
+;	iffalse .end
+;	clearevent EVENT_VIRIDIAN_GYM_BLUE
+;	specialphonecall SPECIALCALL_VIRIDIANGYM2
+;.end
+;	end
+
+BrockRematchIntroText:
+	ntag "BROCK:"
+	text "<PLAYER>!"
+	line "It's been a while!"
+
+	para "The #MON LEAGUE"
+	line "said there was a"
+	cont "new CHAMPION!"
+
+	para "You showed so much"
+	line "potential when you"
+	cont "challenged me for"
+	roll "the BOULDERBADGE."
+
+	para "But I never would"
+	line "have imagined you"
+	cont "would go on to be-"
+	roll "come CHAMPION!"
+
+	para "Please, let's have"
+	line "another battle!"
+
+	para "This time I won't"
+	line "hold back!"
+	done
+
+BrockAskRematchText:
+	ntag "BROCK:"
+	text "Ready for another"
+	line "rematch?"
+	done
+
+BrockRematchWinLossText:
+	ntag "BROCK:"
+	text "Wow! That's what I"
+	line "should expect from"
+	cont "the #MON LEAGUE"
+	roll "CHAMPION."
+	done
+
+BrockRematchAfterBattleText:
+	ntag "BROCK:"
+	text "Whenever you feel"
+	line "like battling, let"
+	cont "me know."
+
+	para "I'm always ready"
+	line "for a challenge!"
+	done
+
+
 PewterGym_MapEvents:
 	db 0, 0 ; filler
 
@@ -254,6 +358,8 @@ PewterGym_MapEvents:
 	bg_event  7, 11, BGEVENT_READ, PewterGymStatue
 
 	def_object_events
-	object_event  5,  1, SPRITE_BROCK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterGymBrockScript, -1
+	object_event  5,  1, SPRITE_BROCK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterGymBrockScript, EVENT_BEAT_ELITE_FOUR
 	object_event  3,  7, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperIsaac, -1
 	object_event  6, 11, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, PewterGymGuideScript, -1
+;
+	object_event  5,  1, SPRITE_BROCK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterGymBrockRematchScript, EVENT_KANTO_LEADER_REMATCHES

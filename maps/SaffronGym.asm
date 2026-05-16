@@ -444,6 +444,98 @@ SaffronGymStatue:
 .Beaten:
 	jumpstd GymStatue2Script
 
+
+; rematch
+SaffronGymSabrinaRematchScript:
+	faceplayer
+	opentext
+	checkevent EVENT_BEAT_SABRINA_2
+	iftrue .skipintro
+	writetext SabrinaRematchIntroText
+	waitbutton
+	sjump .startbattle
+
+.skipintro
+	writetext SabrinaAskRematchText
+	yesorno
+	iffalse .norematch
+.startbattle
+	closetext
+	winlosstext SabrinaRematchWinLossText, 0
+	loadtrainer SABRINA, SABRINA2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_SABRINA_2
+;	scall SaffronGymRematchesCheck
+	farscall ViridianGymRematchesCompleteCheck
+	opentext
+.norematch
+	writetext SabrinaRematchAfterBattleText
+	waitbutton
+	closetext
+	end
+
+;SaffronGymRematchesCheck:
+;	checkevent EVENT_BEAT_LEADER_BLUE
+;	iftrue .end
+;	checkevent EVENT_BEAT_BROCK_2
+;	iffalse .end
+;	checkevent EVENT_BEAT_MISTY_2
+;	iffalse .end
+;	checkevent EVENT_BEAT_LTSURGE_2
+;	iffalse .end
+;	checkevent EVENT_BEAT_ERIKA_2
+;	iffalse .end
+;	checkevent EVENT_BEAT_KOGA_2
+;	iffalse .end
+;;	checkevent EVENT_BEAT_SABRINA_2
+;;	iffalse .end
+;	checkevent EVENT_BEAT_BLAINE_2
+;	iffalse .end
+;	clearevent EVENT_VIRIDIAN_GYM_BLUE
+;	specialphonecall SPECIALCALL_VIRIDIANGYM2
+;.end
+;	end
+
+SabrinaRematchIntroText:
+	ntag "SABRINA:"
+	text "I knew you would"
+	line "return here as"
+	cont "the CHAMPION."
+
+	para "I had a vision of"
+	line "your victory over"
+	cont "<RIVAL>."
+
+	para "I also knew you"
+	line "would return here"
+	cont "to challenge me"
+	roll "again."
+	done
+
+SabrinaAskRematchText:
+	ntag "SABRINA:"
+	text "Another battle?"
+	done
+
+SabrinaRematchWinLossText:
+	ntag "SABRINA:"
+	text "You are extremely"
+	line "talented. I don't"
+	cont "need psychic power"
+	roll "to see that."
+	done
+
+SabrinaRematchAfterBattleText:
+	ntag "SABRINA:"
+	text "I'll be ready for"
+	line "our next battle."
+
+	para "I already know"
+	line "when it will be."
+	done
+
+
 SaffronGym_MapEvents:
 	db 0, 0 ; filler
 
@@ -481,40 +573,6 @@ SaffronGym_MapEvents:
 	warp_event 11, 14, SAFFRON_GYM, 30 ;31
 	warp_event 11, 10, SAFFRON_GYM, 4  ;32
 	warp_event  8, 10, SAFFRON_GYM, 31 ;33
-;
-;	warp_event  9, 17, SAFFRON_CITY, 2 ;1
-;	warp_event 10, 17, SAFFRON_CITY, 2 ;2
-;	warp_event 11, 14, SAFFRON_GYM, 18 ;3
-;	warp_event 18, 14, SAFFRON_GYM, 19 ;4
-;	warp_event 18, 10, SAFFRON_GYM, 20 ;5
-;	warp_event  1, 10, SAFFRON_GYM, 21 ;6
-;	warp_event  4,  2, SAFFRON_GYM, 22 ;7
-;	warp_event 11,  4, SAFFRON_GYM, 23 ;8
-;	warp_event  1, 14, SAFFRON_GYM, 24 ;9
-;	warp_event 18,  2, SAFFRON_GYM, 25 ;10
-;	warp_event 15, 16, SAFFRON_GYM, 26 ;11
-;	warp_event  4, 16, SAFFRON_GYM, 27 ;12
-;	warp_event  4,  8, SAFFRON_GYM, 28 ;13
-;	warp_event  8,  2, SAFFRON_GYM, 29 ;14
-;	warp_event 15,  8, SAFFRON_GYM, 30 ;15
-;	warp_event 15,  4, SAFFRON_GYM, 31 ;16
-;	warp_event  1,  4, SAFFRON_GYM, 32 ;17
-;	warp_event 18, 16, SAFFRON_GYM, 3  ;18
-;	warp_event 18,  8, SAFFRON_GYM, 4  ;19
-;	warp_event  1,  8, SAFFRON_GYM, 5  ;20
-;	warp_event  4,  4, SAFFRON_GYM, 6  ;21
-;	warp_event 11,  2, SAFFRON_GYM, 7  ;22
-;	warp_event  1, 16, SAFFRON_GYM, 8  ;23
-;	warp_event 18,  4, SAFFRON_GYM, 9  ;24
-;	warp_event 15, 14, SAFFRON_GYM, 10 ;25
-;	warp_event  4, 14, SAFFRON_GYM, 11 ;26
-;	warp_event  4, 10, SAFFRON_GYM, 12 ;27
-;	warp_event  8,  4, SAFFRON_GYM, 13 ;28
-;	warp_event 15, 10, SAFFRON_GYM, 14 ;29
-;	warp_event 15,  2, SAFFRON_GYM, 15 ;30
-;	warp_event  1,  2, SAFFRON_GYM, 16 ;31
-;	warp_event 11, 10, SAFFRON_GYM, 17 ;32
-;	warp_event  8, 10, SAFFRON_GYM, 3  ;33
 
 	def_coord_events
 
@@ -522,7 +580,7 @@ SaffronGym_MapEvents:
 	bg_event  8, 15, BGEVENT_READ, SaffronGymStatue
 
 	def_object_events
-	object_event 10,  8, SPRITE_SABRINA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronGymSabrinaScript, -1
+	object_event 10,  8, SPRITE_SABRINA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronGymSabrinaScript, EVENT_BEAT_ELITE_FOUR
 	object_event  3,  3, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 2, TrainerPsychicNathan, -1
 	object_event 10,  3, SPRITE_GRANNY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerMediumHazel, -1
 	object_event 17,  3, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 2, TrainerPsychicFranklin, -1
@@ -531,3 +589,5 @@ SaffronGym_MapEvents:
 	object_event  3, 15, SPRITE_GRANNY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerMediumStella, -1
 	object_event 17, 15, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 2, TrainerPsychicGreg, -1
 	object_event  9, 14, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronGymGuideScript, -1
+;
+	object_event 10,  8, SPRITE_SABRINA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronGymSabrinaRematchScript, EVENT_KANTO_LEADER_REMATCHES

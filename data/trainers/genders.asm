@@ -21,6 +21,7 @@ BTTrainerClassGenders:
 	db MALE   ; KOGA
 	db FEMALE ; SABRINA
 	db MALE   ; BLAINE
+	db MALE   ; BLUE
 	db MALE   ; GIOVANNI
 	db MALE   ; ROCKET_BOSS
 	db FEMALE ; LORELEI

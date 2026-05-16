@@ -22,6 +22,7 @@ TrainerEncounterMusic::
 	db MUSIC_SAGE_ENCOUNTER        ; koga
 	db MUSIC_BEAUTY_ENCOUNTER      ; sabrina
 	db MUSIC_TRAINER_ENCOUNTER     ; blaine
+	db MUSIC_TRAINER_ENCOUNTER     ; blue
 	db MUSIC_ROCKET_ENCOUNTER      ; giovanni
 	db MUSIC_ROCKET_ENCOUNTER      ; rocket_boss
 	db MUSIC_TRAINER_ENCOUNTER     ; lorelei

@@ -13,21 +13,24 @@ GymLeaders:
 	db JASMINE
 	db CHUCK
 	db CLAIR
-	db LORELEI ; WILL
+	db JANINE
+	db LORELEI
 	db BRUNO
-	db AGATHA ; KAREN
-	db LANCE ; KOGA
+	db AGATHA
+	db LANCE
 	db CHAMPION
 	db POKEMON_PROF
 	db RED
+	db GREEN
 ; fallthrough
 KantoGymLeaders:
 	db BROCK
 	db MISTY
 	db LT_SURGE
 	db ERIKA
-	db KOGA ; JANINE
+	db KOGA
 	db SABRINA
 	db BLAINE
-	db GIOVANNI ; BLUE
+	db BLUE
+	db GIOVANNI
 	db -1

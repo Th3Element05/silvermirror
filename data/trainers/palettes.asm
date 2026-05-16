@@ -27,13 +27,11 @@ INCBIN "gfx/trainers/erika.gbcpal", middle_colors
 INCBIN "gfx/trainers/koga.gbcpal", middle_colors
 INCBIN "gfx/trainers/sabrina.gbcpal", middle_colors
 INCBIN "gfx/trainers/blaine.gbcpal", middle_colors
-;INCBIN "gfx/trainers/blue.gbcpal", middle_colors
+INCBIN "gfx/trainers/champion.gbcpal", middle_colors ; leader blue
 INCBIN "gfx/trainers/giovanni.gbcpal", middle_colors
 INCBIN "gfx/trainers/giovanni.gbcpal", middle_colors
-;INCBIN "gfx/trainers/will.gbcpal", middle_colors
 INCBIN "gfx/trainers/lorelei.gbcpal", middle_colors
 INCBIN "gfx/trainers/bruno.gbcpal", middle_colors
-;INCBIN "gfx/trainers/karen.gbcpal", middle_colors
 INCBIN "gfx/trainers/agatha.gbcpal", middle_colors
 INCBIN "gfx/trainers/lance.gbcpal", middle_colors
 INCBIN "gfx/trainers/champion.gbcpal", middle_colors
@@ -79,7 +77,6 @@ INCBIN "gfx/trainers/pokefan_f.gbcpal", middle_colors
 INCBIN "gfx/trainers/kimono_girl.gbcpal", middle_colors
 INCBIN "gfx/trainers/twins.gbcpal", middle_colors
 INCBIN "gfx/trainers/officer.gbcpal", middle_colors
-;INCBIN "gfx/trainers/mysticalman.gbcpal", middle_colors
 INCBIN "gfx/trainers/ninja.gbcpal", middle_colors
 INCBIN "gfx/trainers/couple.gbcpal", middle_colors
 INCBIN "gfx/trainers/cool_duo.gbcpal", middle_colors
