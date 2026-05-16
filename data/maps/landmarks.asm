@@ -46,7 +46,7 @@ Landmarks:
 	landmark 124,  88, Route46Name
 	landmark 132,  76, Route45Name
 	landmark 132,  60, BlackthornCityName
-	landmark 130,  52, IcePathName
+	landmark 132,  52, IcePathName
 	landmark 120,  52, Route44Name
 	landmark 108,  52, MahoganyTownName
 	landmark 108,  44, Route43Name
@@ -54,6 +54,15 @@ Landmarks:
 	landmark  92,  52, Route42Name
 	landmark  92,  44, MtMortarName
 	landmark 148,  68, SilverCaveName
+; PokegearMap_JohtoMap: (johto region town map landmark limits)
+	landmark 140, 116, FastShipName
+	landmark  48,  68, LighthouseName
+	landmark  72,  48, BurnedTowerName
+	landmark  80, 124, SlowpokeWellName
+	landmark 120,  68, DarkCaveName
+	landmark 128,  60, DragonsDenName
+	landmark 108,  56, NinjaDenName
+
 	assert_table_length KANTO_LANDMARK
 	landmark  44, 100, PalletTownName
 	landmark  44,  88, Route1Name
@@ -69,8 +78,8 @@ Landmarks:
 	landmark 100,  32, Route24Name
 	landmark 112,  28, Route25Name
 	landmark 100,  56, Route5Name
-	landmark 100,  72, Route6Name
-	landmark 100,  88, VermilionCityName
+	landmark 100,  80, Route6Name
+	landmark 100,  92, VermilionCityName
 	landmark 108,  88, DiglettsCaveName ;route 11
 	landmark 116,  44, Route9Name
 	landmark 132,  48, Route10Name
@@ -82,7 +91,7 @@ Landmarks:
 	landmark  76,  68, CeladonCityName
 	landmark 100,  68, SaffronCityName
 	landmark 116,  92, Route11Name
-	landmark 132,  88, Route12Name
+	landmark 132,  96, Route12Name
 	landmark 124, 108, Route13Name
 	landmark 116, 112, Route14Name
 	landmark 100, 116, Route15Name
@@ -107,21 +116,15 @@ Landmarks:
 ; hof \engine\pokegear\pokegear.asm > TownMap_GetKantoLandmarkLimits:
 	landmark  16,  76, Route28Name
 ; end
+	landmark 100, 100, SSAnneName
 	landmark 116,  28, BillsHouseName
 	landmark 104,  64, UndergroundName
-	landmark 100, 100, SSAnneName
 	landmark  76,  72, RocketHideoutName
 	landmark 100,  68, SilphCoName
 	landmark  40, 128, PokemonMansionName
 	landmark  92,  36, CeruleanCaveName
 	landmark 116,  22, BillsBackYardName
-	landmark 140, 116, FastShipName
-	landmark  48,  68, LighthouseName
-	landmark  72,  48, BurnedTowerName
-	landmark  80, 124, SlowpokeWellName
-	landmark 120,  68, DarkCaveName
-	landmark 128,  60, DragonsDenName
-	landmark 108,  56, NinjaDenName
+
 	assert_table_length NUM_LANDMARKS
 
 

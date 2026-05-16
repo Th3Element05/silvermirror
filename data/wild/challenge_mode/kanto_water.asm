@@ -235,6 +235,14 @@ KantoWaterWildMonsChallenge:
 	db 15, SEAKING    ; 10
 	end_water_wildmons
 
+	def_water_wildmons TOHJO_FALLS_OUTSIDE ;GEN1
+	db 4 percent ; encounter rate
+	db 41, TENTACRUEL ; 50
+	db 41, GYARADOS   ; 30
+	db 41, GYARADOS   ; 10
+	db 10, MAGIKARP   ; 10
+	end_water_wildmons
+
 	def_water_wildmons BILLS_BACK_YARD ;GEN2
 	db 6 percent ; encounter rate
 	db 10, GOLDEEN    ; 50
