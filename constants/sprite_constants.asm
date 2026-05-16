@@ -220,7 +220,7 @@ DEF SPRITE_POKEMON EQU const_value
 	const SPRITE_SLOWBRO    ; 50
 ;	const SPRITE_MAGNEMITE  ; 51
 ;	const SPRITE_MAGNETON   ; 52
-;	const SPRITE_FARFETCH_D ; 53
+	const SPRITE_FARFETCH_D ; 53
 	const SPRITE_DODUO      ; 54
 ;	const SPRITE_DODRIO     ; 55
 ;	const SPRITE_SEEL       ; 56
