@@ -1,30 +1,39 @@
+;NurseMornText:
+;	ntag "NURSE:"
+;	text "Good morning!"
+;	line "Welcome to our"
+;	cont "#MON CENTER."
+;	done
+
+;NurseDayText:
+;	ntag "NURSE:"
+;	text "Hello!"
+;	line "Welcome to our"
+;	cont "#MON CENTER."
+;	done
+
+;NurseEveText:
+;	ntag "NURSE:"
+;	text "Good evening!"
+;	line "Welcome to our"
+;	cont "#MON CENTER."
+;	done
+
+;NurseNiteText:
+;	ntag "NURSE:"
+;	text "Good evening!"
+;	line "You're out late."
+;
+;	para "Welcome to our"
+;	line "#MON CENTER."
+;	done
+
 NurseMornText:
-	ntag "NURSE:"
-	text "Good morning!"
-	line "Welcome to our"
-	cont "#MON CENTER."
-	done
-
 NurseDayText:
-	ntag "NURSE:"
-	text "Hello!"
-	line "Welcome to our"
-	cont "#MON CENTER."
-	done
-
 NurseEveText:
-	ntag "NURSE:"
-	text "Good evening!"
-	line "Welcome to our"
-	cont "#MON CENTER."
-	done
-
 NurseNiteText:
 	ntag "NURSE:"
-	text "Good evening!"
-	line "You're out late."
-
-	para "Welcome to our"
+	text "Welcome to our"
 	line "#MON CENTER."
 	done
 
