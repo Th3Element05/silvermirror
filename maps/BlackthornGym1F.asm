@@ -43,6 +43,8 @@ BlackthornGymClairScript:
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_RISINGBADGE
+	clearevent EVENT_INDIGO_POKECENTER_LANCE
+	setmapscene INDIGO_PLATEAU_POKECENTER_1F, SCENE_INDIGOPLATEAUPOKECENTER1F_LANCE
 .FightDone:
 	checkevent EVENT_GOT_TM72_DRAGONBREATH
 	iftrue .SpeechAfterTM

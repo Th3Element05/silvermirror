@@ -19,6 +19,10 @@ DragonShrineNoopScene:
 	end
 
 DragonShrineTakeTestScript:
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .skipcall
+	specialphonecall SPECIALCALL_MTSILVER
+.skipcall
 	applymovement PLAYER, DragonShrinePlayerWalkInMovement
 	applymovement DRAGONSHRINE_ELDER1, DragonShrineElderStepDown2Movement
 	opentext

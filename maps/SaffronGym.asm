@@ -401,12 +401,22 @@ PsychicGregAfterBattleText:
 	done
 
 SaffronGymGuideScript:
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .ChampText
 	checkevent EVENT_BEAT_SABRINA
 	iftrue .SaffronGymGuideWinScript
 	jumptextfaceplayer SaffronGymGuideText
 
 .SaffronGymGuideWinScript:
 	jumptextfaceplayer SaffronGymGuideWinText
+
+.ChampText:
+	faceplayer
+	opentext
+	farwritetext PewterGymGuideChampText
+	waitbutton
+	closetext
+	end
 
 SaffronGymGuideText:
 	ntag "GUIDE:"
@@ -438,12 +448,15 @@ SaffronGymGuideWinText:
 
 SaffronGymStatue:
 	gettrainername STRING_BUFFER_4, SABRINA, SABRINA1
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .Champion
 	checkflag ENGINE_MARSHBADGE
 	iftrue .Beaten
 	jumpstd GymStatue1Script
 .Beaten:
 	jumpstd GymStatue2Script
-
+.Champion
+	jumpstd GymStatue3Script
 
 ; rematch
 SaffronGymSabrinaRematchScript:

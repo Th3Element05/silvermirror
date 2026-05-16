@@ -158,3 +158,10 @@ MomPhoneLeaderBlueScript:
 	farwritetext MomPhoneLeaderBlueReminderText
 	specialphonecall SPECIALCALL_NONE
 	end
+
+MomPhoneLanceVisitScript:
+	farwritetext MomPhoneLanceVisitText
+	setmapscene INDIGO_PLATEAU_POKECENTER_1F, SCENE_INDIGOPLATEAUPOKECENTER1F_LANCE
+	clearevent EVENT_INDIGO_POKECENTER_LANCE
+	specialphonecall SPECIALCALL_NONE
+	end

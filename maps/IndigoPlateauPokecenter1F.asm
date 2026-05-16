@@ -1,28 +1,19 @@
 	object_const_def
-;	const INDIGOPLATEAUPOKECENTER1F_LANCE
+	const INDIGOPLATEAUPOKECENTER1F_LANCE
 	const INDIGOPLATEAUPOKECENTER1F_COOLTRAINERM
 
 IndigoPlateauPokecenter1F_MapScripts:
 	def_scene_scripts
 	scene_script IndigoPlateauPokecenter1FNoop1Scene, SCENE_INDIGOPLATEAUPOKECENTER1F_FIRST_TIME
+	scene_script IndigoPokecenterOpenMtSilverScript, SCENE_INDIGOPLATEAUPOKECENTER1F_LANCE
 	scene_script IndigoPlateauPokecenter1FNoop2Scene, SCENE_INDIGOPLATEAUPOKECENTER1F_NOOP
-;	scene_script IndigoPlateauPokecenter1FLanceScene, SCENE_INDIGOPLATEAUPOKECENTER1F_LANCE
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, IndigoPlateauPokecenter1FPrepareElite4Callback
-;	callback MAPCALLBACK_NEWMAP, IndigoPlateauFlypointCallback
 
 IndigoPlateauPokecenter1FNoop1Scene:
 IndigoPlateauPokecenter1FNoop2Scene:
 	end
-
-;IndigoPlateauPokecenter1FLanceScene:
-;	sdefer IndigoPokecenterLanceGiftScript
-;	end
-
-;IndigoPlateauFlypointCallback:
-;	setflag ENGINE_FLYPOINT_INDIGO_PLATEAU
-;	endcallback
 
 IndigoPlateauPokecenter1FPrepareElite4Callback:
 	setflag ENGINE_FLYPOINT_INDIGO_PLATEAU
@@ -102,76 +93,149 @@ IndigoPlateauPokecenter1FCooltrainerMText:
 	roll "start all over!"
 	done
 
-;IndigoPokecenterLanceGiftScript:
-;	setscene SCENE_INDIGOPLATEAUPOKECENTER1F_NOOP
+
+IndigoPokecenterOpenMtSilverScript:
+	turnobject INDIGOPLATEAUPOKECENTER1F_LANCE, DOWN
+	showemote EMOTE_SHOCK, INDIGOPLATEAUPOKECENTER1F_LANCE, 20
+	applymovement INDIGOPLATEAUPOKECENTER1F_LANCE, IndigoPlateauLanceApproachesPlayerMovement
+	opentext
+	writetext IndigoPlateauLanceOpensMtSilverText
+	waitbutton
+	closetext
+	applymovement INDIGOPLATEAUPOKECENTER1F_LANCE, IndigoPlateauLanceLeavesMovement
+	turnobject INDIGOPLATEAUPOKECENTER1F_LANCE, DOWN
+	opentext
+	writetext IndigoPlateauLanceChallengeAgainText
+	waitbutton
+	closetext
+	applymovement INDIGOPLATEAUPOKECENTER1F_LANCE, IndigoPlateauLanceLeavesMovement
+	disappear INDIGOPLATEAUPOKECENTER1F_LANCE
+	setevent EVENT_OPENED_MT_SILVER
+	setscene SCENE_INDIGOPLATEAUPOKECENTER1F_NOOP
+	end
+
+IndigoPlateauLanceOpensMtSilverText:
+	ntag "LANCE:"
+	text "There you are,"
+	line "<PLAYER>!"
+
+	para "We got word that"
+	line "you've collected"
+	cont "BADGEs from 16"
+	roll "#MON GYMs!"
+
+	para "That's an impress-"
+	line "ive accomplishment,"
+	cont "even for a LEAGUE"
+	roll "CHAMPION!"
+
+	para "The LEAGUE has"
+	line "granted you access"
+	cont "to ROUTE 28, which"
+	roll "goes to MT.SILVER."
+
+	para "You can get there"
+	line "by going west from"
+	cont "VICTORY ROAD GATE."
+
+	para "It's a dangerous"
+	line "place, filled with"
+	cont "powerful #MON."
+
+	para "But the LEAGUE"
+	line "wouldn't be giving"
+	cont "you access if you"
+	roll "couldn't handle it."
+
+	para "Still, be careful."
+	done
+
+IndigoPlateauLanceChallengeAgainText:
+	ntag "LANCE:"
+	text "Oh, and please"
+	line "come challenge the"
+	cont "ELITE FOUR again!"
+
+	para "We all enjoy the"
+	line "challenge!"
+	done
+
+IndigoPlateauLanceApproachesPlayerMovement:
+	step DOWN
+	step DOWN
+	step_end
+
+IndigoPlateauLanceLeavesMovement:
+	step UP
+	step UP
+	step_end
+
+
+;TeleportGuyScript:
+;	faceplayer
+;	opentext
+;	writetext TeleportGuyText1
+;	yesorno
+;	iffalse .No
+;	writetext TeleportGuyYesText
+;	waitbutton
+;	closetext
+;	playsound SFX_WARP_TO
+;	special FadeOutPalettes
+;	waitsfx
+;	warp PALLET_TOWN, 5, 6
+;	end
+;
+;.No:
+;	writetext TeleportGuyNoText
+;	waitbutton
+;	closetext
 ;	end
 
+;TeleportGuyText1:
+;	ntag "GRAMPS:"
+;	text "Ah! You're chal-"
+;	line "lenging the ELITE"
+;	cont "FOUR? Are you sure"
+;	roll "you're ready?"
+;
+;	para "If you need to"
+;	line "train some more,"
+;	cont "my ABRA can help"
+;	roll "you."
+;
+;	para "It can TELEPORT"
+;	line "you home."
+;
+;	para "Would you like to"
+;	line "go home now?"
+;	done
 
-TeleportGuyScript:
-	faceplayer
-	opentext
-	writetext TeleportGuyText1
-	yesorno
-	iffalse .No
-	writetext TeleportGuyYesText
-	waitbutton
-	closetext
-	playsound SFX_WARP_TO
-	special FadeOutPalettes
-	waitsfx
-	warp PALLET_TOWN, 5, 6
-	end
+;TeleportGuyYesText:
+;	ntag "GRAMPS:"
+;	text "OK, OK. Picture"
+;	line "your house in your"
+;	cont "mind…"
+;	done
 
-.No:
-	writetext TeleportGuyNoText
-	waitbutton
-	closetext
-	end
+;TeleportGuyNoText:
+;	ntag "GRAMPS:"
+;	text "OK, OK. The best"
+;	line "of luck to you!"
+;	done
 
-TeleportGuyText1:
-	ntag "GRAMPS:"
-	text "Ah! You're chal-"
-	line "lenging the ELITE"
-	cont "FOUR? Are you sure"
-	roll "you're ready?"
+;AbraScript:
+;	opentext
+;	writetext AbraText
+;	cry ABRA
+;	waitbutton
+;	closetext
+;	end
 
-	para "If you need to"
-	line "train some more,"
-	cont "my ABRA can help"
-	roll "you."
-
-	para "It can TELEPORT"
-	line "you home."
-
-	para "Would you like to"
-	line "go home now?"
-	done
-
-TeleportGuyYesText:
-	ntag "GRAMPS:"
-	text "OK, OK. Picture"
-	line "your house in your"
-	cont "mind…"
-	done
-
-TeleportGuyNoText:
-	ntag "GRAMPS:"
-	text "OK, OK. The best"
-	line "of luck to you!"
-	done
-
-AbraScript:
-	opentext
-	writetext AbraText
-	cry ABRA
-	waitbutton
-	closetext
-	end
-
-AbraText:
-	ntag "ABRA:"
-	text "Aabra…"
-	done
+;AbraText:
+;	ntag "ABRA:"
+;	text "Aabra…"
+;	done
 
 IndigoPlateauPokecenter1F_MapEvents:
 	db 0, 0 ; filler
@@ -188,10 +252,10 @@ IndigoPlateauPokecenter1F_MapEvents:
 	def_bg_events
 
 	def_object_events
-;	object_event  8,  8, SPRITE_LANCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IndigoPokecenterLanceGiftScript, EVENT_INDIGO_POKECENTER_LANCE
+	object_event  7,  8, SPRITE_LANCE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_INDIGO_POKECENTER_LANCE
 	object_event  8,  4, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IndigoPlateauPokecenter1FCooltrainerMScript, -1
 	object_event 13,  5, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, IndigoPlateauPokecenter1FNurseScript, -1
 	object_event  0,  7, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, IndigoPlateauPokecenter1FClerkScript, -1
 	object_event  6,  9, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IndigoPlateauPokecenter1FGymGuideScript, EVENT_INDIGO_POKECENTER_GYM_GUIDE
-	object_event 13, 10, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TeleportGuyScript, -1 ;EVENT_TELEPORT_GUY
-	object_event 14, 10, SPRITE_ABRA, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, AbraScript, -1 ;EVENT_TELEPORT_GUY
+;	object_event 13, 10, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TeleportGuyScript, EVENT_TELEPORT_GUY
+;	object_event 14, 10, SPRITE_ABRA, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, AbraScript, EVENT_TELEPORT_GUY

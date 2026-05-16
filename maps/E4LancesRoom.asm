@@ -53,6 +53,8 @@ LancesRoomLanceScript:
 	checkevent EVENT_BEAT_E4_LANCE
 	iftrue LanceScript_AfterBattle
 	turnobject LANCESROOM_LANCE, LEFT
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue LanceRematchScript
 	opentext
 	writetext LanceBattleIntroText
 	waitbutton
@@ -251,6 +253,12 @@ Movement_PlayerStepsAside:
 Movement_OakSpeaksToRival:
 	step UP
 	turn_head RIGHT
+	step_end
+
+Movement_RepositionLanceAfterRematch:
+	step UP
+	step LEFT
+	turn_head DOWN
 	step_end
 
 Movement_OakLeadsPlayerAway:
@@ -514,6 +522,89 @@ LancesRoomOakComeWithMeText:
 	para "<PLAYER>!"
 	line "Come with me!"
 	done
+
+
+; rematch
+LanceRematchScript:
+	opentext
+	writetext LanceRematchIntroText
+	waitbutton
+	closetext
+	winlosstext LanceRematchWinText, 0
+	setlasttalked LANCESROOM_LANCE
+	loadtrainer LANCE, LANCE2
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	setevent EVENT_BEAT_E4_LANCE
+	playmusic MUSIC_GYM_VICTORY
+	opentext
+	writetext LanceRematchAfterBattleText
+	waitbutton
+	closetext
+	playsound SFX_ENTER_DOOR
+	changeblock 4, 0, $0e ; open door
+	reloadmappart
+	applymovement LANCESROOM_LANCE, Movement_RepositionLanceAfterRematch
+	opentext
+	writetext LanceRematchEnterHallOfFameText
+	waitbutton
+	closetext
+	follow LANCESROOM_LANCE, PLAYER
+	applymovement LANCESROOM_LANCE, Movement_OakLeadsPlayerAway
+	playsound SFX_EXIT_BUILDING
+	disappear LANCESROOM_LANCE
+	applymovement PLAYER, Movement_PlayerEntersHallOfFame
+	playsound SFX_EXIT_BUILDING
+;	disappear PLAYER
+	applymovement PLAYER, Movement_CameraPansUp
+	pause 20
+	setmapscene HALL_OF_FAME, SCENE_HALLOFFAME_LANCE
+	setevent EVENT_HALL_OF_FAME_OAK
+	clearevent EVENT_HALL_OF_FAME_LANCE
+	warpfacing UP, HALL_OF_FAME, 4, 9
+	end
+
+LanceRematchIntroText:
+	ntag "LANCE:"
+	text "Welcome back,"
+	line "<PLAYER>."
+
+	para "Even with all of"
+	line "your skill, the"
+	cont "ELITE FOUR are"
+	roll "still formidible,"
+	cont "aren't they?"
+
+	para "You've made it"
+	line "this far, show me"
+	cont "you've still got"
+	roll "what it takes!"
+	done
+
+LanceRematchWinText:
+	ntag "LANCE:"
+	text "That's it!"
+
+	para "You are still a"
+	cont "#MON master!"
+	done
+
+LanceRematchAfterBattleText:
+	ntag "LANCE:"
+	text "Congratulations,"
+	line "<PLAYER>!"
+
+	para "You've done it"
+	line "again!"
+	done
+
+LanceRematchEnterHallOfFameText:
+	para "Let's get you and"
+	line "those #MON into"
+	cont "the HALL OF FAME!"
+	done
+
 
 E4LancesRoom_MapEvents:
 	db 0, 0 ; filler

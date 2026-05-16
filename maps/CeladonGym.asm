@@ -379,12 +379,15 @@ LassZoeyAfterBattleText:
 
 CeladonGymStatue:
 	gettrainername STRING_BUFFER_4, ERIKA, ERIKA1
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .Champion
 	checkflag ENGINE_RAINBOWBADGE
 	iftrue .Beaten
 	jumpstd GymStatue1Script
 .Beaten:
 	jumpstd GymStatue2Script
-
+.Champion
+	jumpstd GymStatue3Script
 
 ; rematch
 CeladonGymErikaRematchScript:
