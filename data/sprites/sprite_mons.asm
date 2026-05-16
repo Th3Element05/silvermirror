@@ -83,7 +83,7 @@ SpriteMons:
 	db SLOWBRO    ; 50
 ;	db MAGNEMITE  ; 51
 ;	db MAGNETON   ; 52
-;	db FARFETCH_D ; 53
+	db FARFETCH_D ; 53
 	db DODUO      ; 54
 ;	db DODRIO     ; 55
 ;	db SEEL       ; 56
