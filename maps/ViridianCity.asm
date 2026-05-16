@@ -263,7 +263,7 @@ ViridianCityMoveTutorScript:
 	closewindow
 	ifequal 1, .Snore
 	ifequal 2, .SleepTalk
-	sjump .Incompatible
+	sjump .Cancel
 
 .Snore:
 	setval SNORE
@@ -271,7 +271,7 @@ ViridianCityMoveTutorScript:
 ;	writetext ViridianCityTutorMoveText
 ;	special MoveTutor
 ;	ifequal FALSE, .TeachMove
-;	sjump .Incompatible
+;	sjump .Cancel
 
 .SleepTalk:
 	setval SLEEP_TALK
@@ -279,16 +279,16 @@ ViridianCityMoveTutorScript:
 ;	writetext ViridianCityTutorMoveText
 ;	special MoveTutor
 ;	ifequal FALSE, .TeachMove
-;	sjump .Incompatible
+;	sjump .Cancel
 
 .ChoseMove:
 	writetext ViridianCityTutorMoveText
 	special MoveTutor
 	ifequal FALSE, .TeachSleepingMove
-;	sjump .Incompatible	
+;	sjump .Cancel	
 
-.Incompatible:
-	writetext ViridianCityTutorIncompatibleText
+.Cancel:
+	writetext ViridianCityTutorCancelText
 	waitbutton
 	closetext
 	end
@@ -343,7 +343,7 @@ ViridianCityWokeTutorScript:
 	closewindow
 	ifequal 1, .DreamEater
 	ifequal 2, .Nightmare
-	sjump .Incompatible
+	sjump .Cancel
 
 .DreamEater:
 	setval DREAM_EATER
@@ -351,7 +351,7 @@ ViridianCityWokeTutorScript:
 ;	writetext ViridianCityTutorMoveText
 ;	special MoveTutor
 ;	ifequal FALSE, .TeachMove
-;	sjump .Incompatible
+;	sjump .Cancel
 
 .Nightmare:
 	setval NIGHTMARE
@@ -359,16 +359,16 @@ ViridianCityWokeTutorScript:
 ;	writetext ViridianCityTutorMoveText
 ;	special MoveTutor
 ;	ifequal FALSE, .TeachMove
-;	sjump .Incompatible
+;	sjump .Cancel
 
 .ChoseMove:
 	writetext ViridianCityTutorMoveText
 	special MoveTutor
 	ifequal FALSE, .TeachWokenMove
-;	sjump .Incompatible	
+;	sjump .Cancel	
 
-.Incompatible:
-	writetext ViridianCityTutorIncompatibleText
+.Cancel:
+	writetext ViridianCityTutorCancelText
 	waitbutton
 	closetext
 	end
@@ -432,11 +432,12 @@ ViridianCityTutorMoveText:
 	text_start
 	done
 
-ViridianCityTutorIncompatibleText:
-	ntag "MAN:"
-	text "Your #MON can't"
-	line "learn this move…"
+ViridianCityTutorCancelText:
+	text "Maybe later."
 	done
+;	text "Your #MON can't"
+;	line "learn this move…"
+;	done
 
 ;ViridianCityDreamEaterFisher:
 ;	showemote EMOTE_SLEEP, VIRIDIANCITY_FISHER, 30
