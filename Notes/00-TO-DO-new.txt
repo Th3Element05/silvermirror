@@ -60,13 +60,21 @@ OftenFleeMons:
 
 DO
 
-add ntags to all overworld text...
+
+KANTO gym leader rematches, 
+KOGA in fuschia only after clearing ninja den
+BLUE in viridian only after clearing others
+kanto gym statues, only say leader? like johto
+
+JOHTO gym leader rematches?
+when are they active?
+full parties of 5?
+
+
 TrainerHouseB1F... stuff?
 
 jumpstd HappinessCheckScript ;in pokecenters?
 remove from elsewhere?, ensure ntag are appropriate
-
-ecruteak city FISHER, sailor instead?
 
 additional starter-boost items in johto? 
 mystic water, charcoal, miracle seed.
@@ -75,12 +83,6 @@ week siblings give second other boost items?
 
 what to use EVENT_CAUGHT_MISSINGNO for?
 
-charcoal kiln 
-
-
-lucky number show only in johto
-buena's password only in johto
-all of these only after expansion card, or after E4?
 
 \gfx\stats\party_menu_ob.pal
 the skin tone in this might be better? > \gfx\overworld\npc_sprites.pal
@@ -123,8 +125,8 @@ Clair: Dragonair and Kingdra
 tohjo falls xp grind area?
 high xp mons:
 255 chansey
-215 gyarados
-205 tentacruel
+	215 gyarados
+	205 tentacruel
 200 heracross
 200 miltank
 200 pinsir
