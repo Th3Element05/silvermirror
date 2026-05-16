@@ -377,6 +377,96 @@ FuchsiaGymStatue:
 .Beaten:
 	jumpstd GymStatue2Script
 
+
+; rematch
+FuchsiaGymKogaRematchScript:
+	faceplayer
+	opentext
+	checkevent EVENT_BEAT_KOGA_2
+	iftrue .skipintro
+	writetext KogaRematchIntroText
+	waitbutton
+	sjump .startbattle
+
+.skipintro
+	writetext KogaAskRematchText
+	yesorno
+	iffalse .norematch
+.startbattle
+	closetext
+	winlosstext KogaRematchWinLossText, 0
+	loadtrainer KOGA, KOGA2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_KOGA_2
+;	scall FuchsiaGymRematchesCheck
+	farscall ViridianGymRematchesCompleteCheck
+	opentext
+.norematch
+	writetext KogaRematchAfterBattleText
+	waitbutton
+	closetext
+	end
+
+;FuchsiaGymRematchesCheck:
+;	checkevent EVENT_BEAT_LEADER_BLUE
+;	iftrue .end
+;	checkevent EVENT_BEAT_BROCK_2
+;	iffalse .end
+;	checkevent EVENT_BEAT_MISTY_2
+;	iffalse .end
+;	checkevent EVENT_BEAT_LTSURGE_2
+;	iffalse .end
+;	checkevent EVENT_BEAT_ERIKA_2
+;	iffalse .end
+;;	checkevent EVENT_BEAT_KOGA_2
+;;	iffalse .end
+;	checkevent EVENT_BEAT_SABRINA_2
+;	iffalse .end
+;	checkevent EVENT_BEAT_BLAINE_2
+;	iffalse .end
+;	clearevent EVENT_VIRIDIAN_GYM_BLUE
+;	specialphonecall SPECIALCALL_VIRIDIANGYM2
+;.end
+;	end
+
+KogaRematchIntroText:
+	ntag "KOGA:"
+	text "Nice to see you"
+	line "again, <PLAYER>!"
+
+	para "#MON LEAGUE"
+	line "CHAMPIONs often"
+	cont "challenge the GYM"
+	roll "LEADERs, to make"
+	cont "sure we represent"
+	roll "the LEAGUE well."
+
+	para "I know we had our"
+	line "battle in JOHTO,"
+	cont "but let's have an"
+	roll "official one!"
+	done
+
+KogaAskRematchText:
+	ntag "KOGA:"
+	text "Ready to battle"
+	line "again?"
+	done
+
+KogaRematchWinLossText:
+	ntag "KOGA:"
+	text "I'm always amazed"
+	line "by your skill."
+	done
+
+KogaRematchAfterBattleText:
+	ntag "KOGA:"
+	text "Return here for a"
+	line "battle, any time!"
+	done
+
+
 FuchsiaGym_MapEvents:
 	db 0, 0 ; filler
 
@@ -391,7 +481,7 @@ FuchsiaGym_MapEvents:
 	bg_event  6, 15, BGEVENT_READ, FuchsiaGymStatue
 
 	def_object_events
-	object_event  4, 10, SPRITE_KOGA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FuchsiaGymKogaScript, EVENT_NINJA_CHALLENGE_IN_PROGRESS
+	object_event  4, 10, SPRITE_KOGA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FuchsiaGymKogaScript, EVENT_BEAT_ELITE_FOUR
 	object_event  8,  2, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_TRAINER, 2, TrainerNinjaKoa, -1
 	object_event  3,  5, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_TRAINER, 2, TrainerNinjaKhai, -1
 	object_event  2,  7, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSageEzra, -1
@@ -399,5 +489,7 @@ FuchsiaGym_MapEvents:
 	object_event  1, 12, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSageKoda, -1
 	object_event  8, 13, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSageMusa, -1
 	object_event  7, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, FuchsiaGymGuideScript, -1
+;
+	object_event  4, 10, SPRITE_KOGA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FuchsiaGymKogaRematchScript, EVENT_NINJA_CHALLENGE_IN_PROGRESS
 
 ;.GrayOverTreeOBPalette

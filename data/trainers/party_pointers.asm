@@ -21,6 +21,7 @@ TrainerGroups:
 	dba KogaGroup
 	dba SabrinaGroup
 	dba BlaineGroup
+	dba BlueGroup
 	dba GiovanniGroup
 	dba RocketBossGroup
 	dba LoreleiGroup

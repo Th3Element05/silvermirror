@@ -4,10 +4,10 @@ TrainerClassDVs:
 	;  atk,def,spd,spc
 	dn  9, 10,  7,  7 ; FALKNER
 	dn  9,  8,  8,  8 ; BUGSY
-	dn  8,  8,  8,  8 ; WHITNEY
+	dn  7,  8,  8,  8 ; WHITNEY
 	dn  9,  8,  8,  8 ; MORTY
 	dn  9,  8,  8,  8 ; CHUCK
-	dn  9,  8,  8,  8 ; JASMINE
+	dn  7,  8,  8,  8 ; JASMINE
 	dn  9,  8,  8,  8 ; PRYCE
 	dn  7, 12, 13, 13 ; CLAIR
 	dn 15, 15, 15, 15 ; POKEMON_PROF
@@ -18,8 +18,9 @@ TrainerClassDVs:
 	dn  9,  8,  8,  8 ; LT_SURGE
 	dn  7,  9,  9,  9 ; ERIKA
 	dn  9,  9,  9,  9 ; KOGA
-	dn  7, 13,  8,  7 ; SABRINA
+	dn  5, 13,  8, 10 ; SABRINA ; hidden power BUG
 	dn  9, 10, 10, 11 ; BLAINE
+	dn 14, 14, 14, 14 ; BLUE
 	dn 10, 12, 12, 13 ; GIOVANNI
 	dn 10, 10,  9, 10 ; ROCKET BOSS
 	dn  7, 12, 13, 13 ; LORELEI
@@ -66,7 +67,7 @@ TrainerClassDVs:
 	dn  9,  8,  8,  8 ; BOARDER
 	dn  9,  8,  8,  8 ; POKEFANM
 	dn  6, 13,  8,  8 ; POKEFANF
-	dn  6,  8,  8, 10 ; KIMONO_GIRL
+	dn  7,  8,  8, 10 ; KIMONO_GIRL
 	dn  6,  8, 10,  8 ; TWINS
 	dn  9,  8,  8,  8 ; OFFICER
 	dn  9,  8,  8,  8 ; NINJA ; MYSTICALMAN

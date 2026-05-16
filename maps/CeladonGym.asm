@@ -385,6 +385,98 @@ CeladonGymStatue:
 .Beaten:
 	jumpstd GymStatue2Script
 
+
+; rematch
+CeladonGymErikaRematchScript:
+	faceplayer
+	opentext
+	checkevent EVENT_BEAT_ERIKA_2
+	iftrue .skipintro
+	writetext ErikaRematchIntroText
+	waitbutton
+	sjump .startbattle
+
+.skipintro
+	writetext ErikaAskRematchText
+	yesorno
+	iffalse .norematch
+.startbattle
+	closetext
+	winlosstext ErikaRematchWinLossText, 0
+	loadtrainer ERIKA, ERIKA2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_ERIKA_2
+;	scall CeladonGymRematchesCheck
+	farscall ViridianGymRematchesCompleteCheck
+	opentext
+.norematch
+	writetext ErikaRematchAfterBattleText
+	waitbutton
+	closetext
+	end
+
+;CeladonGymRematchesCheck:
+;	checkevent EVENT_BEAT_LEADER_BLUE
+;	iftrue .end
+;	checkevent EVENT_BEAT_BROCK_2
+;	iffalse .end
+;	checkevent EVENT_BEAT_MISTY_2
+;	iffalse .end
+;	checkevent EVENT_BEAT_LTSURGE_2
+;	iffalse .end
+;;	checkevent EVENT_BEAT_ERIKA_2
+;;	iffalse .end
+;	checkevent EVENT_BEAT_KOGA_2
+;	iffalse .end
+;	checkevent EVENT_BEAT_SABRINA_2
+;	iffalse .end
+;	checkevent EVENT_BEAT_BLAINE_2
+;	iffalse .end
+;	clearevent EVENT_VIRIDIAN_GYM_BLUE
+;	specialphonecall SPECIALCALL_VIRIDIANGYM2
+;.end
+;	end
+
+ErikaRematchIntroText:
+	ntag "ERIKA:"
+	text "<PLAYER>!"
+
+	para "How nice to get a"
+	line "visit from the new"
+	cont "LEAGUE CHAMPION!"
+
+	para "I sometimes worry"
+	line "that my abilities"
+	cont "as GYM LEADER are"
+	roll "getting rusty."
+
+	para "While you're here,"
+	line "I'd appreciate if"
+	cont "you could test my"
+	roll "skills."
+	done
+
+ErikaAskRematchText:
+	ntag "ERIKA:"
+	text "Would you mind"
+	line "testing me again?"
+	done
+
+ErikaRematchWinLossText:
+	ntag "ERIKA:"
+	text "Thank you!"
+	done
+
+ErikaRematchAfterBattleText:
+	ntag "ERIKA:"
+	text "Regularly battling"
+	line "with challenging"
+	cont "opponents keeps"
+	roll "your skills sharp!"
+	done
+
+
 CeladonGym_MapEvents:
 	db 0, 0 ; filler
 
@@ -399,7 +491,7 @@ CeladonGym_MapEvents:
 	bg_event  6, 15, BGEVENT_READ, CeladonGymStatue
 
 	def_object_events
-	object_event  4,  3, SPRITE_ERIKA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonGymErikaScript, -1
+	object_event  4,  3, SPRITE_ERIKA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonGymErikaScript, EVENT_BEAT_ELITE_FOUR
 	object_event  3,  3, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerBeautyVictoria, -1
 	object_event  5,  3, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerCooltrainerFGwen, -1
 	object_event  6,  3, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerLassCora, -1
@@ -407,3 +499,5 @@ CeladonGym_MapEvents:
 	object_event  9,  5, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerPicnickerSharon, -1
 	object_event  7, 10, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerBeautyJulia, -1
 	object_event  2, 11, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerLassZoey, -1
+;
+	object_event  4,  3, SPRITE_ERIKA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonGymErikaRematchScript, EVENT_KANTO_LEADER_REMATCHES

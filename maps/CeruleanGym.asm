@@ -236,6 +236,98 @@ CeruleanGymStatue:
 .Beaten:
 	jumpstd GymStatue2Script
 
+
+; rematch
+CeruleanGymMistyRematchScript:
+	faceplayer
+	opentext
+	checkevent EVENT_BEAT_MISTY_2
+	iftrue .skipintro
+	writetext MistyRematchIntroText
+	waitbutton
+	sjump .startbattle
+
+.skipintro
+	writetext MistyAskRematchText
+	yesorno
+	iffalse .norematch
+.startbattle
+	closetext
+	winlosstext MistyRematchWinLossText, 0
+	loadtrainer MISTY, MISTY2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_MISTY_2
+;	scall CeruleanGymRematchesCheck
+	farscall ViridianGymRematchesCompleteCheck
+	opentext
+.norematch
+	writetext MistyRematchAfterBattleText
+	waitbutton
+	closetext
+	end
+
+;CeruleanGymRematchesCheck:
+;	checkevent EVENT_BEAT_LEADER_BLUE
+;	iftrue .end
+;	checkevent EVENT_BEAT_BROCK_2
+;	iffalse .end
+;;	checkevent EVENT_BEAT_MISTY_2
+;;	iffalse .end
+;	checkevent EVENT_BEAT_LTSURGE_2
+;	iffalse .end
+;	checkevent EVENT_BEAT_ERIKA_2
+;	iffalse .end
+;	checkevent EVENT_BEAT_KOGA_2
+;	iffalse .end
+;	checkevent EVENT_BEAT_SABRINA_2
+;	iffalse .end
+;	checkevent EVENT_BEAT_BLAINE_2
+;	iffalse .end
+;	clearevent EVENT_VIRIDIAN_GYM_BLUE
+;	specialphonecall SPECIALCALL_VIRIDIANGYM2
+;.end
+;	end
+
+MistyRematchIntroText:
+	ntag "MISTY:"
+	text "<PLAYER>!"
+
+	para "I heard there was"
+	line "a new #MON"
+	cont "LEAGUE CHAMPION!"
+
+	para "Congratulations!"
+
+	para "But, just because"
+	line "you're the CHAMP"
+	cont "doesn't mean you're"
+	roll "off the hook!"
+
+	para "You're not getting"
+	line "out of here until"
+	cont "we battle!"
+	done
+
+MistyAskRematchText:
+	ntag "MISTY:"
+	text "Want to have"
+	line "another battle?"
+	done
+
+MistyRematchWinLossText:
+	ntag "MISTY:"
+	text "The CHAMP sure can"
+	line "make a SPLASH!"
+	done
+
+MistyRematchAfterBattleText:
+	ntag "MISTY:"
+	text "Come back whenever"
+	line "you want a battle!"
+	done
+
+
 CeruleanGym_MapEvents:
 	db 0, 0 ; filler
 
@@ -250,7 +342,9 @@ CeruleanGym_MapEvents:
 	bg_event  6, 13, BGEVENT_READ, CeruleanGymStatue
 
 	def_object_events
-	object_event  4,  3, SPRITE_MISTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeruleanGymMistyScript, -1
+	object_event  4,  3, SPRITE_MISTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeruleanGymMistyScript, EVENT_BEAT_ELITE_FOUR
 	object_event  8,  9, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSwimmerMHarold, -1
 	object_event  2,  4, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerPicnickerSophia, -1
 	object_event  7, 12, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanGymGuideScript, -1
+;
+	object_event  4,  3, SPRITE_MISTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeruleanGymMistyRematchScript, EVENT_KANTO_LEADER_REMATCHES

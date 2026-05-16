@@ -125,7 +125,7 @@ TeamRocketBaseB2FMeetJanineAndKogaScene:
 	writetext TeamRocketBaseB2FNinjaJoninChallengeText
 	waitbutton
 	closetext
-	setevent EVENT_NINJA_CHALLENGE_IN_PROGRESS
+;	setevent EVENT_NINJA_CHALLENGE_IN_PROGRESS ; init events (hide rematch KOGA in fuschia gym)
 	end
 
 NinjaJoninSeenText:

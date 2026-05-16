@@ -19,6 +19,7 @@ TrainerClassNames::
 	li "LEADER"         ;KOGA
 	li "LEADER"         ;SABRINA
 	li "LEADER"         ;BLAINE
+	li "LEADER"         ;BLUE
 	li "LEADER"         ;GIOVANNI
 	li "BOSS"           ;GIOVANNI
 	li "ELITE FOUR"     ;LORELEI

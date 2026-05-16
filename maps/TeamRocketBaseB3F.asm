@@ -49,7 +49,7 @@ TeamRocketBaseB3FKogaNinja:
 	waitbutton
 	closetext
 	winlosstext KogaBeatenNinjaText, 0
-	loadtrainer KOGA, KOGA2
+	loadtrainer KOGA, KOGA_NINJA
 	startbattle
 ;	moveobject PLAYER, 6, 14
 ;	turnobject PLAYER, LEFT

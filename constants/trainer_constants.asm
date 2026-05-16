@@ -95,29 +95,36 @@ DEF KRIS EQU __trainer_class__
 
 	trainerclass BROCK ; 0c
 	const BROCK1
+	const BROCK2
 
 	trainerclass MISTY ; 0d
 	const MISTY1
+	const MISTY2
 
 	trainerclass LT_SURGE ; 0e
 	const LT_SURGE1
+	const LT_SURGE2
 
 	trainerclass ERIKA ; 0f
 	const ERIKA1
+	const ERIKA2
 
 	trainerclass KOGA ; 10
 	const KOGA1
 	const KOGA2
+	const KOGA_NINJA
 
 	trainerclass SABRINA ; 11
 	const SABRINA1
+	const SABRINA2
 
 	trainerclass BLAINE ; 12
 	const BLAINE1
+	const BLAINE2
 
-;	trainerclass BLUE ; 13
-;	const BLUE1
-;
+	trainerclass BLUE ; 13
+	const BLUE1
+
 	trainerclass GIOVANNI ; 13
 	const GIOVANNI1
 

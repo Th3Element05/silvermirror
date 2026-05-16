@@ -146,3 +146,15 @@ MomPhoneLectureScript:
 	yesorno
 	iftrue MomPhoneSaveMoneyScript
 	sjump MomPhoneWontSaveMoneyScript
+
+MomPhoneLeaderBlueScript:
+	checkevent EVENT_MOM_CALLED_ABOUT_LEADER_BLUE
+	iftrue .SecondTime
+	farwritetext MomPhoneLeaderBlueText
+	specialphonecall SPECIALCALL_NONE
+	setevent EVENT_MOM_CALLED_ABOUT_LEADER_BLUE
+	end
+.SecondTime
+	farwritetext MomPhoneLeaderBlueReminderText
+	specialphonecall SPECIALCALL_NONE
+	end

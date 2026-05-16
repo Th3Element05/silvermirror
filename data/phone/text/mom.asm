@@ -159,3 +159,32 @@ MomPhoneLectureText:
 	para "What about money?"
 	line "Should I save it?"
 	done
+
+MomPhoneLeaderBlueText:
+	text "Hello? <PLAYER>?"
+	
+	para "Have you heard the"
+	line "news?"
+
+	para "Our neighbor just"
+	line "told me!"
+
+	para "#MON LEAGUE has"
+	line "appointed <RIVAL>"
+	cont "as the new LEADER"
+	roll "of VIRIDIAN GYM!"
+
+	para "You should go pay"
+	line "him a visit!"
+	done
+
+MomPhoneLeaderBlueReminderText:
+	text "Hello? <PLAYER>?"
+
+	para "Have you visted"
+	line "<RIVAL> yet?"
+
+	para "He's the new GYM"
+	line "LEADER in VIRIDIAN"
+	cont "CITY, remember?"
+	done

@@ -19,6 +19,7 @@ BTTrainerClassSprites:
 	db SPRITE_KOGA          ; Koga
 	db SPRITE_SABRINA       ; Sabrina
 	db SPRITE_BLAINE        ; Blaine
+	db SPRITE_BLUE          ; Blue
 	db SPRITE_GIOVANNI      ; Giovanni
 	db SPRITE_GIOVANNI      ; Rocket Boss
 	db SPRITE_LORELEI       ; Lorelei

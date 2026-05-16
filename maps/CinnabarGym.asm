@@ -782,6 +782,96 @@ CinnabarGymStatue:
 .Beaten:
 	jumpstd GymStatue2Script
 
+
+; rematch
+CinnabarGymBlaineRematchScript:
+	faceplayer
+	opentext
+	checkevent EVENT_BEAT_BLAINE_2
+	iftrue .skipintro
+	writetext BlaineRematchIntroText
+	waitbutton
+	sjump .startbattle
+
+.skipintro
+	writetext BlaineAskRematchText
+	yesorno
+	iffalse .norematch
+.startbattle
+	closetext
+	winlosstext BlaineRematchWinLossText, 0
+	loadtrainer BLAINE, BLAINE2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_BLAINE_2
+;	scall CinnabarGymRematchesCheck
+	farscall ViridianGymRematchesCompleteCheck
+	opentext
+.norematch
+	writetext BlaineRematchAfterBattleText
+	waitbutton
+	closetext
+	end
+
+;CinnabarGymRematchesCheck:
+;	checkevent EVENT_BEAT_LEADER_BLUE
+;	iftrue .end
+;	checkevent EVENT_BEAT_BROCK_2
+;	iffalse .end
+;	checkevent EVENT_BEAT_MISTY_2
+;	iffalse .end
+;	checkevent EVENT_BEAT_LTSURGE_2
+;	iffalse .end
+;	checkevent EVENT_BEAT_ERIKA_2
+;	iffalse .end
+;	checkevent EVENT_BEAT_KOGA_2
+;	iffalse .end
+;	checkevent EVENT_BEAT_SABRINA_2
+;	iffalse .end
+;;	checkevent EVENT_BEAT_BLAINE_2
+;;	iffalse .end
+;	clearevent EVENT_VIRIDIAN_GYM_BLUE
+;	specialphonecall SPECIALCALL_VIRIDIANGYM2
+;.end
+;	end
+
+BlaineRematchIntroText:
+	ntag "BLAINE:"
+	text "The newest LEAGUE"
+	line "CHAMPION, <PLAYER>!"
+
+	para "What brings you"
+	line "to CINNABAR GYM?"
+
+	para "Have you come for"
+	line "a red-hot #MON"
+	cont "battle?"
+
+	para "You're the LEAGUE"
+	line "CHAMPION now, I'll"
+	cont "show you how hot"
+	roll "it can get!"
+	done
+
+BlaineAskRematchText:
+	ntag "BLAINE:"
+	text "Need to warm up"
+	line "with a battle?"
+	done
+
+BlaineRematchWinLossText:
+	ntag "BLAINE:"
+	text "You're always"
+	line "red-hot!"
+	done
+
+BlaineRematchAfterBattleText:
+	ntag "BLAINE:"
+	text "I'm here if you're"
+	line "feeling chilly!"
+	done
+
+
 CinnabarGym_MapEvents:
 	db 0, 0 ; filler
 
@@ -808,5 +898,7 @@ CinnabarGym_MapEvents:
 	object_event  2, 15, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TrainerFirebreatherEvan, -1
 	object_event  2,  9, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, TrainerSuperNerdMarkus, -1
 	object_event 20,  2, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_TRAINER, 2, TrainerSuperNerdTeru, -1
-	object_event  3,  3, SPRITE_BLAINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarGymBlaineScript, -1
+	object_event  3,  3, SPRITE_BLAINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarGymBlaineScript, EVENT_BEAT_ELITE_FOUR
 	object_event 19, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarGymGuideScript, -1
+;
+	object_event  3,  3, SPRITE_BLAINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarGymBlaineRematchScript, EVENT_KANTO_LEADER_REMATCHES

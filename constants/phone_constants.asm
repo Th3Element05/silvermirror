@@ -66,6 +66,7 @@ DEF NUM_PHONE_CONTACTS EQU const_value - 1
 	const SPECIALCALL_VIRIDIANGYM    ;only outside
 	const SPECIALCALL_SSTICKET       ;only outside
 	const SPECIALCALL_RADIOTOWER     ;wherever you are
+	const SPECIALCALL_VIRIDIANGYM2   ;only outside
 	const SPECIALCALL_MASTERBALL     ;only outside
 DEF NUM_SPECIALCALLS EQU const_value - 1
 DEF SPECIALCALL_SIZE EQU 6

@@ -371,20 +371,22 @@ PokemaniacTysonAfterBattleText:
 	done
 
 ViridianGymGuideScript:
-	faceplayer
-	opentext
+	checkevent EVENT_VIRIDIAN_GYM_BLUE
+	iffalse .ViridianGymGuideBlueScript
 	checkevent EVENT_BEAT_GIOVANNI
 	iftrue .ViridianGymGuideWinScript
-	writetext ViridianGymGuideText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer ViridianGymGuideText
 
 .ViridianGymGuideWinScript:
-	writetext ViridianGymGuideWinText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer ViridianGymGuideWinText
+
+.ViridianGymGuideBlueScript:
+	checkevent EVENT_BEAT_LEADER_BLUE
+	iftrue .ViridianGymGuideBeatBlueScript
+	jumptextfaceplayer ViridianGymGuideBlueText
+
+.ViridianGymGuideBeatBlueScript:
+	jumptextfaceplayer ViridianGymGuideBeatBlueText
 
 ViridianGymGuideText:
 	ntag "GUIDE:"
@@ -412,7 +414,52 @@ ViridianGymGuideWinText:
 	cont "GYM LEADER here?"
 	done
 
+ViridianGymGuideBlueText:
+	ntag "GUIDE:"
+	text "VIRIDIAN GYM got"
+	line "a new LEADER!"
+
+	para "They were actually"
+	line "a #MON LEAGUE"
+	cont "CHAMPION once, if"
+	roll "only briefly."
+
+	para "But you know all"
+	line "about that, don't"
+	cont "you, CHAMP?"
+	done
+
+ViridianGymGuideBeatBlueText:
+	ntag "GUIDE:"
+	text "That's another win"
+	line "under your belt,"
+	cont "huh, CHAMP?"
+
+	para "It feels like"
+	line "nothing can stand"
+	cont "in your way."
+
+	para "I've seen you win"
+	line "so many times."
+	cont "It makes me wonder"
+	roll "if you ever needed"
+	cont "my advice?"
+
+	para "<……>"
+	
+	para "Haha, don't tell"
+	line "me!"
+
+	para "Whether or not you"
+	line "needed my advice,"
+	cont "I'm happy to keep"
+	roll "helping anyone who"
+	cont "might need it!"
+	done
+
 ViridianGymStatue:
+	checkevent EVENT_VIRIDIAN_GYM_BLUE
+	iffalse .BlueIsLeader
 ;	gettrainername STRING_BUFFER_4, GIOVANNI, GIOVANNI1
 	checkflag ENGINE_EARTHBADGE
 	iftrue .Beaten
@@ -422,6 +469,10 @@ ViridianGymStatue:
 .Beaten:
 ;	jumpstd GymStatue2Script
 	jumptext ViridianGymStatue2Text
+
+.BlueIsLeader:
+	gettrainername STRING_BUFFER_4, BLUE, BLUE1
+	jumpstd GymStatue3Script
 
 ViridianGymStatue1Text:
 	text "VIRIDIAN CITY"
@@ -442,6 +493,138 @@ ViridianGymStatue2Text:
 
 ViridianGymRevive:
 	itemball REVIVE
+
+
+ViridianGymRematchesCompleteCheck::
+	checkevent EVENT_BEAT_LEADER_BLUE
+	iftrue .end
+	checkevent EVENT_BEAT_BROCK_2
+	iffalse .end
+	checkevent EVENT_BEAT_MISTY_2
+	iffalse .end
+	checkevent EVENT_BEAT_LTSURGE_2
+	iffalse .end
+	checkevent EVENT_BEAT_ERIKA_2
+	iffalse .end
+	checkevent EVENT_BEAT_KOGA_2
+	iffalse .end
+	checkevent EVENT_BEAT_SABRINA_2
+	iffalse .end
+	checkevent EVENT_BEAT_BLAINE_2
+	iffalse .end
+	clearevent EVENT_VIRIDIAN_GYM_BLUE
+	specialphonecall SPECIALCALL_VIRIDIANGYM2
+.end
+	end
+
+
+ViridianGymBlueScript:
+	faceplayer
+	opentext
+	checkevent EVENT_BEAT_LEADER_BLUE
+	iftrue .skipintro
+	writetext BlueRematchIntroText
+	waitbutton
+	sjump .startbattle
+
+.skipintro
+	writetext BlueAskRematchText
+	yesorno
+	iffalse .norematch
+.startbattle
+	closetext
+	winlosstext BlueRematchWinLossText, 0
+	loadtrainer BLUE, BLUE1
+	startbattle
+	reloadmapafterbattle
+	opentext
+	checkevent EVENT_BEAT_LEADER_BLUE
+	iffalse .firsttime
+.norematch
+	writetext BlueRematchAfterBattleText
+	waitbutton
+	closetext
+	end
+
+.firsttime
+	setevent EVENT_BEAT_LEADER_BLUE
+	writetext BlueAfterFirstRematchText
+	waitbutton
+	closetext
+	end
+	
+
+BlueRematchIntroText:
+	ntag "<RIVAL>:"
+	text "<PLAYER>! Welcome"
+	line "to my GYM!"
+
+	para "Haha, it feels"
+	line "odd to say that."
+	cont "I've been to so"
+	roll "many GYMs myself,"
+	cont "I never imagined"
+	roll "I would be on the"
+	cont "other side of"
+	roll "those battles!"
+
+	para "I haven't had many"
+	line "challengers yet,"
+	cont "I'm not sure people"
+	roll "have realized this"
+	cont "GYM's open again."
+
+	para "So, <PLAYER>, will"
+	line "you help me break"
+	cont "in my new GYM?"
+
+	para "Not that I've ever"
+	line "held anything back"
+	cont "in our battles,"
+	roll "but this time I'm"
+	cont "still going to do"
+	roll "my best to win!"
+	done
+
+BlueAskRematchText:
+	ntag "<RIVAL>:"
+	text "Do you have time"
+	line "for a battle with"
+	cont "an old rival?"
+	done
+
+BlueRematchWinLossText:
+	ntag "<RIVAL>:"
+	text "You're always just"
+	line "a step above me!"
+	done
+
+BlueRematchAfterBattleText:
+	ntag "<RIVAL>:"
+	text "We can battle any"
+	line "time you want."
+	done
+
+BlueAfterFirstRematchText:
+	ntag "<RIVAL>:"
+	text "You definitely"
+	line "deserve to be the"
+	cont "LEAGUE CHAMPION."
+
+	para "I'm not sure if I"
+	line "ever had a chance"
+	cont "against you."
+
+	para "No hard feelings,"
+	line "though! I've got"
+	cont "my own GYM now, so"
+	roll "I've done alright!"
+
+	para "I'll try not to"
+	line "let it go to my"
+	cont "head!"
+	done
+
 
 ViridianGym_MapEvents:
 	db 0, 0 ; filler
@@ -468,3 +651,5 @@ ViridianGym_MapEvents:
 	object_event  2, 16, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 3, TrainerPokemaniacTyson, -1
 	object_event 16, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianGymGuideScript, -1
 	object_event 16,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, ViridianGymRevive, EVENT_VIRIDIAN_GYM_REVIVE
+;
+	object_event  2,  1, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianGymBlueScript, EVENT_VIRIDIAN_GYM_BLUE

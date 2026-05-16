@@ -16,5 +16,6 @@ SpecialPhoneCallList:
 	specialcall SpecialCallOnlyWhenOutside, PHONECONTACT_OAK, OakPhoneCallerScript ;VIRIDIANGYM
 	specialcall SpecialCallOnlyWhenOutside, PHONECONTACT_OAK, OakPhoneCallerScript ;SSTICKET
 	specialcall SpecialCallWhereverYouAre,  PHONECONTACT_OAK, OakPhoneCallerScript ;RADIOTOWER
+	specialcall SpecialCallOnlyWhenOutside, PHONECONTACT_MOM, MomPhoneLeaderBlueScript ;LEADERBLUE
 	specialcall SpecialCallOnlyWhenOutside, PHONECONTACT_OAK, OakPhoneCallerScript ;elm masterball
 	assert_table_length NUM_SPECIALCALLS
