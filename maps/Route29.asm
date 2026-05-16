@@ -1,6 +1,5 @@
 	object_const_def
 	const ROUTE29_ORAN_BERRY
-;	const ROUTE29_CAL
 ;	const ROUTE29_TUSCANY
 
 Route29_MapScripts:
@@ -138,74 +137,6 @@ Route29_NoFruit:
 ;	cont "is unfortunate…"
 ;	done
 
-; scripts
-;Route29Cal1:
-;	showemote EMOTE_SHOCK, ROUTE29_CAL, 15
-;	applymovement ROUTE29_CAL, Route29CalApproachesMovement1
-;	turnobject PLAYER, LEFT
-;	sjump Route29CalScript
-;
-;Route29Cal2:
-;	showemote EMOTE_SHOCK, ROUTE29_CAL, 15
-;	applymovement ROUTE29_CAL, Route29CalApproachesMovement2
-;	turnobject PLAYER, LEFT
-;;	sjump Route29CalScript
-;	; fallthrough
-;
-;Route29CalScript:
-;	setlasttalked ROUTE29_CAL
-;	faceplayer
-;	opentext
-;	playmusic MUSIC_TRAINER_ENCOUNTER ; MUSIC_OFFICER_ENCOUNTER
-;	writetext Route29CalSeenText
-;	waitbutton
-;	closetext
-;	winlosstext Route29CalBeatenText, 0
-;	loadtrainer CAL, CAL3
-;	startbattle
-;	reloadmapafterbattle
-;	opentext
-;	writetext Route29CalAfterText
-;	waitbutton
-;	closetext
-;	setevent EVENT_BEAT_ROUTE_29_CAL
-;	special FadeBlackQuickly
-;	special ReloadSpritesNoPalettes
-;	disappear ROUTE29_CAL
-;	playsound SFX_ESCAPE_ROPE
-;	waitsfx
-;	special FadeInQuickly
-;	setscene SCENE_ROUTE29_NOOP
-;;	playmapmusic
-;	end
-
-;Route29CalSeenText:
-;	text "<……>"
-;;	text "I traveled out"
-;;	line "here just so I"
-;;	cont "could battle you."
-;	done
-
-;Route29CalBeatenText:
-;	text "<……>"
-;;	text "I lost…"
-;;	line "Darn…"
-;	done
-
-;Route29CalAfterText:
-;	text "<……>"
-;;	text "Next time!"
-;	done
-
-;Route29CalApproachesMovement1:
-;	step UP
-;Route29CalApproachesMovement2:
-;	step UP
-;	step UP
-;	step UP
-;	step RIGHT
-;	step RIGHT
-;	step_end
 
 ; trainers
 TrainerPokemaniacZach:
@@ -357,7 +288,6 @@ Route29_MapEvents:
 
 	def_object_events
 	object_event 12,  2, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route29_OranBerry, EVENT_ROUTE_29_ORAN_BERRY
-;	object_event 50, 12, SPRITE_CAL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, Route29CalScript, EVENT_BEAT_ROUTE_29_CAL
 ;	object_event 29, 12, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TuscanyScript, EVENT_ROUTE_29_TUSCANY_OF_TUESDAY
 	object_event 25,  5, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 4, TrainerPokemaniacZach, -1
 	object_event  7, 12, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_UP, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerTeacherShirley, -1
