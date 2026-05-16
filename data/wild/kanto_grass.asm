@@ -1432,6 +1432,32 @@ KantoGrassWildMons:
 	db 20, RATTATA    ;  1% chance
 	end_grass_wildmons
 
+	def_grass_wildmons TOHJO_FALLS_OUTSIDE ;GEN1
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; day
+	db 50, CHANSEY    ; 20% chance
+	db 50, CHANSEY    ; 20% chance
+	db 50, MILTANK    ; 15% chance
+	db 50, SCYTHER    ; 10% chance
+	db 50, PINSIR     ; 10% chance
+	db 50, HERACROSS  ; 10% chance
+	db 50, SCYTHER    ;  5% chance
+	db 50, PINSIR     ;  5% chance
+	db 50, HERACROSS  ;  4% chance
+	db 50, HERACROSS  ;  1% chance
+	; nite
+	db 50, CHANSEY    ; 20% chance
+	db 50, CHANSEY    ; 20% chance
+	db 50, MILTANK    ; 15% chance
+	db 50, SCYTHER    ; 10% chance
+	db 50, PINSIR     ; 10% chance
+	db 50, HERACROSS  ; 10% chance
+	db 50, SCYTHER    ;  5% chance
+	db 50, PINSIR     ;  5% chance
+	db 50, HERACROSS  ;  4% chance
+	db 50, HERACROSS  ;  1% chance
+	end_grass_wildmons
+
 	def_grass_wildmons BILLS_BACK_YARD ;GEN1
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; day

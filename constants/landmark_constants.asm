@@ -47,6 +47,15 @@
 	const LANDMARK_ROUTE_42          ; 0c
 	const LANDMARK_MT_MORTAR         ; 0d
 	const LANDMARK_SILVER_CAVE       ; 2e
+; PokegearMap_JohtoMap: (johto region town map landmark limits)
+	const LANDMARK_FAST_SHIP         ; 69
+	const LANDMARK_LIGHTHOUSE        ; 6a
+	const LANDMARK_BURNED_TOWER      ; 6b
+	const LANDMARK_SLOWPOKE_WELL     ; 6c
+	const LANDMARK_DARK_CAVE         ; 6d
+	const LANDMARK_DRAGONS_DEN       ; 6e
+	const LANDMARK_NINJA_DEN         ; 6f
+
 DEF KANTO_LANDMARK EQU const_value	
 	const LANDMARK_PALLET_TOWN       ; 2f
 	const LANDMARK_ROUTE_1           ; 30
@@ -100,21 +109,15 @@ DEF KANTO_LANDMARK EQU const_value
 ; hof \engine\pokegear\pokegear.asm > TownMap_GetKantoLandmarkLimits:	
 	const LANDMARK_ROUTE_28          ; 60
 ; end
+	const LANDMARK_SS_ANNE           ; 63
 	const LANDMARK_BILLS_HOUSE       ; 61
 	const LANDMARK_UNDERGROUND_PATH  ; 62
-	const LANDMARK_SS_ANNE           ; 63
 	const LANDMARK_ROCKET_HIDEOUT    ; 64
 	const LANDMARK_SILPH_CO          ; 65
 	const LANDMARK_POKEMON_MANSION   ; 66
 	const LANDMARK_CERULEAN_CAVE     ; 67
 	const LANDMARK_BILLS_BACK_YARD   ; 68
-	const LANDMARK_FAST_SHIP         ; 69
-	const LANDMARK_LIGHTHOUSE        ; 6a
-	const LANDMARK_BURNED_TOWER      ; 6b
-	const LANDMARK_SLOWPOKE_WELL     ; 6c
-	const LANDMARK_DARK_CAVE         ; 6d
-	const LANDMARK_DRAGONS_DEN       ; 6e
-	const LANDMARK_NINJA_DEN         ; 6f
+
 DEF NUM_LANDMARKS EQU const_value
 
 ; used in CaughtData
