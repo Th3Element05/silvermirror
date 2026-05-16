@@ -188,3 +188,25 @@ MomPhoneLeaderBlueReminderText:
 	line "LEADER in VIRIDIAN"
 	cont "CITY, remember?"
 	done
+
+MomPhoneLanceVisitText:
+	text "Hello? <PLAYER>?"
+
+	para "Someone from the"
+	line "#MON LEAGUE"
+	cont "came by the house"
+	roll "looking for you."
+
+	para "He said his name"
+	line "was LANCE."
+
+	para "He wanted me to"
+	line "let you know that"
+	cont "he has something"
+	roll "to tell you."
+
+	para "He said he'll be"
+	line "waiting at the"
+	cont "INDIGO PLATEAU"
+	roll "#MON CENTER."
+	done

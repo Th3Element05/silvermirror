@@ -4,6 +4,7 @@
 PalletTown_MapScripts:
 	def_scene_scripts
 	scene_script PalletTownNoop1Scene, SCENE_PALLETTOWN_OAK_HEY_WAIT
+	scene_script PalletTownKantoRematchNotificationScene, SCENE_PALLETTOWN_REMATCH_NOTIFY
 	scene_script PalletTownNoop2Scene, SCENE_PALLETTOWN_NOOP
 
 	def_callbacks
@@ -11,6 +12,10 @@ PalletTown_MapScripts:
 
 PalletTownNoop1Scene:
 PalletTownNoop2Scene:
+	end
+
+PalletTownKantoRematchNotificationScene:
+	sdefer KantoRematchNotificationScript
 	end
 
 PalletTownFlypointCallback:
@@ -251,6 +256,32 @@ OaksHouseSignText:
 ;	closetext
 ;	end
 
+KantoRematchNotificationScript:
+	opentext
+	writetext KantoLeadersRematchNotificationText
+	playsound SFX_1ST_PLACE
+;	playsound SFX_FANFARE
+;	playsound SFX_FANFARE_2
+;	playsound SFX_DEX_FANFARE_230_PLUS
+;	playsound SFX_EVOLVED
+;	playsound SFX_GET_BADGE
+	waitsfx
+	setscene SCENE_PALLETTOWN_NOOP
+	waitbutton
+	end
+
+KantoLeadersRematchNotificationText:
+	text "Congratulations!"
+	line "As #MON LEAGUE"
+	cont "CHAMPION, you can"
+	roll "now challenge the"
+	cont "KANTO GYM LEADERS"
+	roll "to rematches!"
+
+	para "Good luck!"
+	done
+
+
 PalletTown_MapEvents:
 	db 0, 0 ; filler
 
@@ -270,8 +301,7 @@ PalletTown_MapEvents:
 	bg_event 11,  5, BGEVENT_READ, OaksHouseSign
 
 	def_object_events
-;	object_event 8,  5, SPRITE_OAK, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PALLET_TOWN_OAK
-	object_event 8,  5, SPRITE_VARIABLE_1, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PALLET_TOWN_OAK
+	object_event  8,  5, SPRITE_VARIABLE_1, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PALLET_TOWN_OAK
 	object_event  4,  8, SPRITE_TEACHER, SPRITEMOVEDATA_WANDER, 2, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PalletTownTeacherScript, -1
 	object_event 12, 14, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PalletTownFisherScript, -1
 ;	object_event  1,  2, SPRITE_OAK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TradeNPCTest, -1

@@ -43,6 +43,16 @@ BrunoScript_Battle:
 	opentext
 	checkevent EVENT_BEAT_E4_BRUNO
 	iftrue BrunoScript_AfterBattle
+
+	checkevent EVENT_OPENED_MT_SILVER
+	iffalse .Normal
+	writetext BrunoScript_BrunoBeforeRematchText
+	waitbutton
+	closetext
+	winlosstext BrunoScript_BrunoBeatenText, 0
+	loadtrainer BRUNO, BRUNO2
+
+.Normal
 	writetext BrunoScript_BrunoBeforeText
 	waitbutton
 	closetext
@@ -95,6 +105,19 @@ BrunoScript_BrunoBeforeText:
 	para "We will grind you"
 	line "down with our"
 	cont "superior power!"
+
+	para "Hoo hah!"
+	done
+
+BrunoScript_BrunoBeforeRematchText:
+	ntag "BRUNO:"
+	text "The ELITE FOUR"
+	line "never turn down"
+	cont "a challenge!"
+
+	para "Not even when the"
+	line "challenger is the"
+	cont "LEAGUE CHAMPION!"
 
 	para "Hoo hah!"
 	done

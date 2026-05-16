@@ -296,12 +296,22 @@ SailorKennethAfterBattleText:
 	done
 
 VermilionGymGuideScript:
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .ChampText
 	checkevent EVENT_BEAT_LTSURGE
 	iftrue .VermilionGymGuideWinScript
 	jumptextfaceplayer VermilionGymGuideText
 
 .VermilionGymGuideWinScript:
 	jumptextfaceplayer VermilionGymGuideWinText
+
+.ChampText:
+	faceplayer
+	opentext
+	farwritetext PewterGymGuideChampText
+	waitbutton
+	closetext
+	end
 
 VermilionGymGuideText:
 	ntag "GUIDE:"
@@ -337,11 +347,15 @@ VermilionGymGuideWinText:
 
 VermilionGymStatue:
 	gettrainername STRING_BUFFER_4, LT_SURGE, LT_SURGE1
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .Champion
 	checkflag ENGINE_THUNDERBADGE
 	iftrue .Beaten
 	jumpstd GymStatue1Script
 .Beaten:
 	jumpstd GymStatue2Script
+.Champion
+	jumpstd GymStatue3Script
 
 ;VermilionGymTrashCan:
 ;	jumptext VermilionGymTrashCanText

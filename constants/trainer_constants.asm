@@ -134,15 +134,19 @@ DEF KRIS EQU __trainer_class__
 
 	trainerclass LORELEI ; 14
 	const LORELEI1
+	const LORELEI2
 
 	trainerclass BRUNO ; 15
 	const BRUNO1
+	const BRUNO2
 
 	trainerclass AGATHA ; 16
 	const AGATHA1
+	const AGATHA2
 
 	trainerclass LANCE ; 17
 	const LANCE1
+	const LANCE2
 
 	trainerclass CHAMPION ; 18
 	const CHAMPION1_BULBASAUR

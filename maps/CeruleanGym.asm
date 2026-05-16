@@ -193,11 +193,22 @@ PicnickerSophiaAfterBattleText:
 	done
 
 CeruleanGymGuideScript:
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .ChampText
 	checkevent EVENT_BEAT_MISTY
 	iftrue .CeruleanGymGuideWinScript
 	jumptextfaceplayer CeruleanGymGuideText
+
 .CeruleanGymGuideWinScript:
 	jumptextfaceplayer CeruleanGymGuideWinText
+
+.ChampText:
+	faceplayer
+	opentext
+	farwritetext PewterGymGuideChampText
+	waitbutton
+	closetext
+	end
 
 CeruleanGymGuideText:
 	ntag "GUIDE:"
@@ -230,12 +241,15 @@ CeruleanGymGuideWinText:
 
 CeruleanGymStatue:
 	gettrainername STRING_BUFFER_4, MISTY, MISTY1
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .Champion
 	checkflag ENGINE_CASCADEBADGE
 	iftrue .Beaten
 	jumpstd GymStatue1Script
 .Beaten:
 	jumpstd GymStatue2Script
-
+.Champion
+	jumpstd GymStatue3Script
 
 ; rematch
 CeruleanGymMistyRematchScript:

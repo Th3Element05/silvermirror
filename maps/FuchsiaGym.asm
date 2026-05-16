@@ -338,11 +338,22 @@ SageMusaAfterBattleText:
 	done
 
 FuchsiaGymGuideScript:
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .ChampText
 	checkevent EVENT_BEAT_KOGA
 	iftrue .FuchsiaGymGuideWinScript
 	jumptextfaceplayer FuchsiaGymGuideText
+
 .FuchsiaGymGuideWinScript:
 	jumptextfaceplayer FuchsiaGymGuideWinText
+
+.ChampText:
+	faceplayer
+	opentext
+	farwritetext PewterGymGuideChampText
+	waitbutton
+	closetext
+	end
 
 FuchsiaGymGuideText:
 	ntag "GUIDE:"
@@ -371,12 +382,15 @@ FuchsiaGymGuideWinText:
 
 FuchsiaGymStatue:
 	gettrainername STRING_BUFFER_4, KOGA, KOGA1
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .Champion
 	checkflag ENGINE_SOULBADGE
 	iftrue .Beaten
 	jumpstd GymStatue1Script
 .Beaten:
 	jumpstd GymStatue2Script
-
+.Champion
+	jumpstd GymStatue3Script
 
 ; rematch
 FuchsiaGymKogaRematchScript:

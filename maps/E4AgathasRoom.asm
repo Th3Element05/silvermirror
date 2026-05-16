@@ -43,6 +43,16 @@ AgathaScript_Battle:
 	opentext
 	checkevent EVENT_BEAT_E4_AGATHA
 	iftrue AgathaScript_AfterBattle
+
+	checkevent EVENT_OPENED_MT_SILVER
+	iffalse .Normal
+	writetext AgathaScript_AgathaBeforeRematchText
+	waitbutton
+	closetext
+	winlosstext AgathaScript_AgathaBeatenText, 0
+	loadtrainer AGATHA, AGATHA2
+
+.Normal
 	writetext AgathaScript_AgathaBeforeText
 	waitbutton
 	closetext
@@ -101,6 +111,16 @@ AgathaScript_AgathaBeforeText:
 	para "<PLAYER>! I'll show"
 	line "you how a real"
 	cont "trainer fights!"
+	done
+
+AgathaScript_AgathaBeforeRematchText:
+	ntag "AGATHA:"
+	text "A challenge from"
+	line "the CHAMPION?"
+
+	para "Show me that you"
+	line "are still worthy"
+	cont "of that title!"
 	done
 
 AgathaScript_AgathaBeatenText:

@@ -193,12 +193,17 @@ CamperIsaacAfterBattleText:
 	done
 
 PewterGymGuideScript:
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .ChampText
 	checkevent EVENT_BEAT_BROCK
 	iftrue .PewterGymGuideWinScript
 	jumptextfaceplayer PewterGymGuideText
 
 .PewterGymGuideWinScript:
 	jumptextfaceplayer PewterGymGuideWinText
+
+.ChampText:
+	jumptextfaceplayer PewterGymGuideChampText
 
 PewterGymGuideText:
 	ntag "GUIDE:"
@@ -232,14 +237,26 @@ PewterGymGuideWinText:
 	cont "CHAMP material!"
 	done
 
+PewterGymGuideChampText::
+	ntag "GUIDE:"
+	text "Congratulations,"
+	line "CHAMP!"
+
+	para "I knew you could"
+	line "go all the way!"
+	done
+
 PewterGymStatue:
 	gettrainername STRING_BUFFER_4, BROCK, BROCK1
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .Champion
 	checkflag ENGINE_BOULDERBADGE
 	iftrue .Beaten
 	jumpstd GymStatue1Script
 .Beaten:
 	jumpstd GymStatue2Script
-
+.Champion
+	jumpstd GymStatue3Script
 
 ; rematch
 PewterGymBrockRematchScript:

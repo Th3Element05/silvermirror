@@ -737,17 +737,19 @@ SuperNerdTeruAfterBattleText:
 	done
 
 CinnabarGymGuideScript:
-	faceplayer
-	opentext
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .ChampText
 	checkevent EVENT_BEAT_BLAINE
 	iftrue .CinnabarGymGuideWinScript
-	writetext CinnabarGymGuideText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer CinnabarGymGuideText
 
 .CinnabarGymGuideWinScript:
-	writetext CinnabarGymGuideWinText
+	jumptextfaceplayer CinnabarGymGuideWinText
+
+.ChampText:
+	faceplayer
+	opentext
+	farwritetext PewterGymGuideChampText
 	waitbutton
 	closetext
 	end
@@ -776,12 +778,15 @@ CinnabarGymGuideWinText:
 
 CinnabarGymStatue:
 	gettrainername STRING_BUFFER_4, BLAINE, BLAINE1
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .Champion
 	checkflag ENGINE_VOLCANOBADGE
 	iftrue .Beaten
 	jumpstd GymStatue1Script
 .Beaten:
 	jumpstd GymStatue2Script
-
+.Champion
+	jumpstd GymStatue3Script
 
 ; rematch
 CinnabarGymBlaineRematchScript:

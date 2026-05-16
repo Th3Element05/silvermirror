@@ -214,6 +214,8 @@ ViridianCityCoffeeGrampsTravelText:
 	done
 
 ViridianCityGymGramps:
+	checkevent EVENT_VIRIDIAN_GYM_BLUE
+	iffalse .BlueIsLeader
 	checkevent EVENT_BEAT_GIOVANNI
 	iftrue .LeaderLeft
 	checkevent EVENT_VIRIDIAN_GYM_LEADER_RETURNED
@@ -223,6 +225,8 @@ ViridianCityGymGramps:
 	jumptextfaceplayer ViridianCityLeaderReturnedText
 .LeaderLeft
 	jumptextfaceplayer ViridianCityLeaderLeftText
+.BlueIsLeader
+	jumptextfaceplayer ViridianCityBlueIsLeaderText
 
 ViridianCityGymGrampsText:
 	ntag "GRAMPS:"
@@ -249,6 +253,15 @@ ViridianCityLeaderLeftText:
 	line "fill the role of"
 	cont "GYM LEADER in"
 	roll "VIRIDIAN now?"
+	done
+
+ViridianCityBlueIsLeaderText:
+	ntag "GRAMPS:"
+	text "VIRIDIAN GYM got"
+	line "a new LEADER!"
+
+	para "I heard he's even"
+	line "a former CHAMPION!"
 	done
 
 ViridianCityMoveTutorScript:

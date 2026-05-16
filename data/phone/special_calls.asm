@@ -10,12 +10,13 @@ SpecialPhoneCallList:
 	table_width SPECIALCALL_SIZE, SpecialPhoneCallList
 	specialcall SpecialCallOnlyWhenOutside, PHONECONTACT_OAK, OakPhoneCallerScript ;POKERUS
 	specialcall SpecialCallOnlyWhenOutside, PHONECONTACT_MOM, MomPhoneLectureScript ;WORRIED
-	specialcall SpecialCallOnlyWhenOutside, PHONECONTACT_OAK, OakPhoneCallerScript ;SS ANNE
+	specialcall SpecialCallOnlyWhenOutside, PHONECONTACT_OAK, OakPhoneCallerScript ;SSANNE
 	specialcall SpecialCallOnlyWhenOutside, PHONECONTACT_OAK, OakPhoneCallerScript ;FLASH
 	specialcall SpecialCallOnlyWhenOutside, PHONECONTACT_OAK, OakPhoneCallerScript ;SILPHCO
 	specialcall SpecialCallOnlyWhenOutside, PHONECONTACT_OAK, OakPhoneCallerScript ;VIRIDIANGYM
 	specialcall SpecialCallOnlyWhenOutside, PHONECONTACT_OAK, OakPhoneCallerScript ;SSTICKET
 	specialcall SpecialCallWhereverYouAre,  PHONECONTACT_OAK, OakPhoneCallerScript ;RADIOTOWER
-	specialcall SpecialCallOnlyWhenOutside, PHONECONTACT_MOM, MomPhoneLeaderBlueScript ;LEADERBLUE
+	specialcall SpecialCallOnlyWhenOutside, PHONECONTACT_MOM, MomPhoneLeaderBlueScript ;VIRIDIANGYM2
+	specialcall SpecialCallOnlyWhenOutside, PHONECONTACT_MOM, MomPhoneLanceVisitScript ;MTSILVER
 	specialcall SpecialCallOnlyWhenOutside, PHONECONTACT_OAK, OakPhoneCallerScript ;elm masterball
 	assert_table_length NUM_SPECIALCALLS

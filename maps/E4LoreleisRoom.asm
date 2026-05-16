@@ -43,11 +43,23 @@ LoreleiScript_Battle:
 	opentext
 	checkevent EVENT_BEAT_E4_LORELEI
 	iftrue LoreleiScript_AfterBattle
+
+	checkevent EVENT_OPENED_MT_SILVER
+	iffalse .Normal
+	writetext LoreleiScript_LoreleiBeforeRematchText
+	waitbutton
+	closetext
+	winlosstext LoreleiScript_LoreleiBeatenText, 0
+	loadtrainer LORELEI, LORELEI2
+
+.Normal
 	writetext LoreleiScript_LoreleiBeforeText
 	waitbutton
 	closetext
 	winlosstext LoreleiScript_LoreleiBeatenText, 0
 	loadtrainer LORELEI, LORELEI1
+
+.StartBattle
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_E4_LORELEI
@@ -98,6 +110,22 @@ LoreleiScript_LoreleiBeforeText:
 
 	para "Hahaha!"
 	line "Are you ready?"
+	done
+
+LoreleiScript_LoreleiBeforeRematchText:
+	ntag "LORELEI:"
+	text "Welcome back to"
+	line "#MON LEAGUE,"
+	cont "CHAMPION."
+
+	para "You've defeated"
+	line "the ELITE FOUR"
+	cont "before…"
+
+	para "But, as a trainer"
+	line "you must know that"
+	cont "victory is never"
+	roll "a sure thing."
 	done
 
 LoreleiScript_LoreleiBeatenText:

@@ -572,7 +572,7 @@ BlueRematchIntroText:
 	line "challengers yet,"
 	cont "I'm not sure people"
 	roll "have realized this"
-	cont "GYM's open again."
+	cont "GYM is open again."
 
 	para "So, <PLAYER>, will"
 	line "you help me break"
