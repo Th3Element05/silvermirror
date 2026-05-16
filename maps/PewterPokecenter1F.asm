@@ -45,8 +45,8 @@ PewterPokecenterJigglypuff:
 	end
 
 PewterJigglypuffText:
-	text "JIGGLYPUFF: Puu"
-	line "pupuu."
+	ntag "JIGGLYPUFF:"
+	text "Puu pupuu."
 	done
 
 PewterPokecenter1FGentlemanScript:

@@ -138,7 +138,7 @@ Route42ChuckFarewellText:
 	text "That's it! The"
 	line "path is clear!"
 
-	text "My name is CHUCK,"
+	para "My name is CHUCK,"
 	line "I'm the GYM LEADER"
 	cont "in CIANWOOD CITY!"
 
