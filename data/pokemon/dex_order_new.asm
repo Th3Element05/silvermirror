@@ -1,5 +1,6 @@
 ; Every Pokémon sorted in Kanto Pokédex Order.
 
+OldPokedexOrder:
 NewPokedexOrder:
 	table_width 1, NewPokedexOrder
 	db BULBASAUR

@@ -512,7 +512,8 @@ Pokedex_InitOptionScreen:
 	call Pokedex_DrawOptionScreenBG
 	call Pokedex_InitArrowCursor
 	; point cursor to the current dex mode (modes == menu item indexes)
-	ld a, [wCurDexMode]
+;	ld a, [wCurDexMode]
+	xor a ; zero out a so dex mode selection cursor always starts at the top
 	ld [wDexArrowCursorPosIndex], a
 	call Pokedex_DisplayModeDescription
 	call WaitBGMap
@@ -554,21 +555,21 @@ Pokedex_UpdateOptionScreen:
 	ret
 
 .NoUnownModeArrowCursorData:
-	db D_UP | D_DOWN, 3
+	db D_UP | D_DOWN, 2 ;3
 	dwcoord 2,  4 ; NEW
-	dwcoord 2,  6 ; OLD
-	dwcoord 2,  8 ; ABC
+;	dwcoord 2,  6 ; OLD
+	dwcoord 2,  6 ; ABC
 
 .ArrowCursorData:
-	db D_UP | D_DOWN, 4
+	db D_UP | D_DOWN, 3 ;4
 	dwcoord 2,  4 ; NEW
-	dwcoord 2,  6 ; OLD
-	dwcoord 2,  8 ; ABC
-	dwcoord 2, 10 ; UNOWN
+;	dwcoord 2,  6 ; OLD
+	dwcoord 2,  6 ; ABC
+	dwcoord 2,  8 ; UNOWN
 
 .MenuActionJumptable:
 	dw .MenuAction_NewMode
-	dw .MenuAction_OldMode
+;	dw .MenuAction_OldMode
 	dw .MenuAction_ABCMode
 	dw .MenuAction_UnownMode
 
@@ -1206,7 +1207,7 @@ Pokedex_DrawOptionScreenBG:
 	db   "@"
 
 .UnownMode:
-	db "UNOWN MODE@"
+	db "UNOWN DEX@" ;"UNOWN MODE@"
 
 Pokedex_DrawSearchScreenBG:
 	call Pokedex_FillBackgroundColor2
@@ -1620,12 +1621,11 @@ Pokedex_OrderMonsByMode:
 
 .Jumptable:
 	dw .NewMode
-;	dw .OldMode
+	dw .OldMode
 	dw Pokedex_ABCMode
 
 .NewMode:
 	ld de, NewPokedexOrder
-.do_dex                    ;silvermirror
 	ld hl, wPokedexOrder
 	ld c, NUM_POKEMON
 .loopnew
@@ -1637,19 +1637,17 @@ Pokedex_OrderMonsByMode:
 	call .FindLastSeen
 	ret
 
-;.OldMode:
-;;	ld hl, wPokedexOrder
-;;	ld a, $1
-;;	ld c, NUM_POKEMON
-;;.loopold
-;;	ld [hli], a
-;;	inc a
-;;	dec c
-;;	jr nz, .loopold
-;;	call .FindLastSeen
-;;	ret
-;	ld de, OldPokedexOrder ;silvermirror
-;	jr .do_dex             ;silvermirror
+.OldMode:
+	ld hl, wPokedexOrder
+	ld a, $1
+	ld c, NUM_POKEMON
+.loopold
+	ld [hli], a
+	inc a
+	dec c
+	jr nz, .loopold
+	call .FindLastSeen
+	ret
 
 .FindLastSeen:
 	ld hl, wPokedexOrder + NUM_POKEMON - 1
@@ -1708,7 +1706,8 @@ INCLUDE "data/pokemon/dex_order_alpha.asm"
 
 INCLUDE "data/pokemon/dex_order_new.asm"
 
-;INCLUDE "data/pokemon/dex_order_old.asm" ;silvermirror
+;INCLUDE "data/pokemon/dex_order_old.asm" ; this should be unused but still referenced in code
+                                          ; so overlaps with data in dex_order_new.asm
 
 Pokedex_DisplayModeDescription:
 	xor a
@@ -1750,8 +1749,8 @@ Pokedex_DisplayModeDescription:
 ;	next "alphabetically.@"
 
 .UnownMode:
-	db   " UNOWN are listed in"
-	next " the order caught.@"
+	db   " UNOWN are listed"
+	next " by order caught.@"
 ;	db   "UNOWN are listed"
 ;	next "in catching order.@"
 
