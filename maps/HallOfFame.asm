@@ -41,7 +41,6 @@ HallOfFameLanceScript:
 	stopfollow
 	turnobject HALLOFFAME_LANCE, UP
 	setevent EVENT_BEAT_ELITE_FOUR_REMATCH
-	;clearevent EVENT_TELEPORT_GUY
 	; fallthrough
 
 HallOfFameInductionScript:
