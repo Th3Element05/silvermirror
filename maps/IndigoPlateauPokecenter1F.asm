@@ -171,71 +171,97 @@ IndigoPlateauLanceLeavesMovement:
 	step_end
 
 
-;TeleportGuyScript:
-;	faceplayer
-;	opentext
-;	writetext TeleportGuyText1
-;	yesorno
-;	iffalse .No
-;	writetext TeleportGuyYesText
-;	waitbutton
-;	closetext
+RespawnOneOffsGuyScript:
+	faceplayer
+	opentext
+	writetext RespawnGuyIntroText
+	promptbutton
+	writetext RespawnGuyAskRespawnText
+	yesorno
+	iffalse .No
+	writetext RespawnGuyYesText
+	promptbutton
+	writetext RespawnGuySilenceText
+	promptbutton
+	closetext
+	special RespawnOneOffs
+	sjump AbraScript
+
 ;	playsound SFX_WARP_TO
 ;	special FadeOutPalettes
 ;	waitsfx
 ;	warp PALLET_TOWN, 5, 6
 ;	end
-;
-;.No:
-;	writetext TeleportGuyNoText
-;	waitbutton
-;	closetext
-;	end
 
-;TeleportGuyText1:
-;	ntag "GRAMPS:"
-;	text "Ah! You're chal-"
-;	line "lenging the ELITE"
-;	cont "FOUR? Are you sure"
-;	roll "you're ready?"
-;
-;	para "If you need to"
-;	line "train some more,"
-;	cont "my ABRA can help"
-;	roll "you."
-;
-;	para "It can TELEPORT"
-;	line "you home."
-;
-;	para "Would you like to"
-;	line "go home now?"
-;	done
+.No:
+	writetext RespawnGuyNoText
+	waitbutton
+	closetext
+	end
 
-;TeleportGuyYesText:
-;	ntag "GRAMPS:"
-;	text "OK, OK. Picture"
-;	line "your house in your"
-;	cont "mind…"
-;	done
+RespawnGuyIntroText:
+	ntag "GRAMPS:"
+	text "Ah, your journey"
+	line "has taken you far"
+	cont "and wide…"
 
-;TeleportGuyNoText:
-;	ntag "GRAMPS:"
-;	text "OK, OK. The best"
-;	line "of luck to you!"
-;	done
+	para "You've seen many"
+	line "wonderous things,"
+	cont "encountered some"
+	roll "unique #MON…"
 
-;AbraScript:
-;	opentext
-;	writetext AbraText
-;	cry ABRA
-;	waitbutton
-;	closetext
-;	end
+	para "If you've failed"
+	line "to capture any of"
+	cont "these unique #-"
+	roll "MON, my ABRA here"
+	cont "can help."
 
-;AbraText:
-;	ntag "ABRA:"
-;	text "Aabra…"
-;	done
+	para "It can call these"
+	line "creatures back, to"
+	cont "give you a second"
+	roll "chance."
+
+	para "Do you want ABRA"
+	line "to call back any"
+	cont "unique #MON"
+	roll "that you failed to"
+	cont "to capture?"
+	done
+
+RespawnGuyAskRespawnText:
+	text "Respawn uncaptured"
+	line "unique #MON?"
+	done
+
+RespawnGuyYesText:
+	ntag "GRAMPS:"
+	text "OK. Picture those"
+	line "#MON in your"
+	cont "in your mind…"
+	done
+
+RespawnGuySilenceText:
+	text "…"
+	done
+
+RespawnGuyNoText:
+	ntag "GRAMPS:"
+	text "OK, OK. The best"
+	line "of luck to you!"
+	done
+
+AbraScript:
+	opentext
+	writetext AbraText
+	cry ABRA
+	waitbutton
+	closetext
+	end
+
+AbraText:
+	ntag "ABRA:"
+	text "Aabra…"
+	done
 
 IndigoPlateauPokecenter1F_MapEvents:
 	db 0, 0 ; filler
@@ -257,5 +283,5 @@ IndigoPlateauPokecenter1F_MapEvents:
 	object_event 13,  5, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, IndigoPlateauPokecenter1FNurseScript, -1
 	object_event  0,  7, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, IndigoPlateauPokecenter1FClerkScript, -1
 	object_event  9,  7, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IndigoPlateauPokecenter1FGymGuideScript, EVENT_INDIGO_POKECENTER_GYM_GUIDE
-;	object_event 13, 10, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TeleportGuyScript, EVENT_TELEPORT_GUY
-;	object_event 14, 10, SPRITE_ABRA, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, AbraScript, EVENT_TELEPORT_GUY
+	object_event 13, 10, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RespawnOneOffsGuyScript, EVENT_INDIGO_POKECENTER_ABRA_GUY
+	object_event 14, 10, SPRITE_ABRA, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, AbraScript, EVENT_INDIGO_POKECENTER_ABRA_GUY
