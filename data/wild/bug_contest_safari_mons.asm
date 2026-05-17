@@ -4,17 +4,28 @@ ContestSafariMonsNormal:
 	map_id NATIONAL_PARK_BUG_CONTEST
 .NationalPark
 	table_width 4, .NationalPark
+; default (all times)
+;	db 20, CATERPIE,    7, 18
+;	db 20, WEEDLE,      7, 18
+;	db 10, METAPOD,     9, 18
+;	db 10, KAKUNA,      9, 18
+;	db  5, BUTTERFREE, 12, 15
+;	db  5, BEEDRILL,   12, 15
+;	db 10, VENONAT,    10, 16
+;	db 10, PARAS,      10, 17
+;	db  5, SCYTHER,    13, 14
+;	db  5, PINSIR,     13, 14
 ; morning
 	db 20, CATERPIE,    7, 18
 	db 20, WEEDLE,      7, 18
-	db 10, METAPOD,     9, 18
-	db 10, KAKUNA,      9, 18
+	db 20, LEDYBA,      9, 18
+	db  5, VENONAT,     9, 18
 	db  5, BUTTERFREE, 12, 15
 	db  5, BEEDRILL,   12, 15
-	db 10, VENONAT,    10, 16
-	db 10, PARAS,      10, 17
-	db  5, SCYTHER,    13, 14
-	db  5, PINSIR,     13, 14
+	db 10, PARAS,      10, 16
+	db  5, HERACROSS,  13, 16
+	db  5, SCYTHER,    13, 16
+	db  5, PINSIR,     13, 16
 ; day/eve
 	db 20, CATERPIE,    7, 18
 	db 20, WEEDLE,      7, 18
@@ -22,21 +33,21 @@ ContestSafariMonsNormal:
 	db 10, KAKUNA,      9, 18
 	db  5, BUTTERFREE, 12, 15
 	db  5, BEEDRILL,   12, 15
-	db 10, VENONAT,    10, 16
-	db 10, PARAS,      10, 17
-	db  5, SCYTHER,    13, 14
-	db  5, PINSIR,     13, 14
+	db 15, PARAS,      10, 16
+	db  5, HERACROSS,  13, 16
+	db  5, SCYTHER,    13, 16
+	db  5, PINSIR,     13, 16
 ; nite
 	db 20, CATERPIE,    7, 18
 	db 20, WEEDLE,      7, 18
-	db 10, METAPOD,     9, 18
-	db 10, KAKUNA,      9, 18
+	db 20, SPINARAK,    9, 18
+	db  5, PARAS,       9, 18
 	db  5, BUTTERFREE, 12, 15
 	db  5, BEEDRILL,   12, 15
 	db 10, VENONAT,    10, 16
-	db 10, PARAS,      10, 17
-	db  5, SCYTHER,    13, 14
-	db  5, PINSIR,     13, 14
+	db  5, HERACROSS,  13, 16
+	db  5, SCYTHER,    13, 16
+	db  5, PINSIR,     13, 16
 	assert_table_length 30
 	
 	map_id SAFARI_ZONE_AREA_1 ; FIELD ;silvermirror
