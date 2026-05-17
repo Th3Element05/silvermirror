@@ -5,17 +5,17 @@ RuinsOfAlphHoOhItemRoom_MapScripts:
 
 	def_callbacks
 
-RuinsOfAlphHoOhItemRoomSitrusBerry:
-	itemball SITRUS_BERRY
+RuinsOfAlphHoOhItemRoomSacredAsh:
+	itemball SACRED_ASH
 
-RuinsOfAlphHoOhItemRoomLeppaBerry:
-	itemball LEPPA_BERRY
+RuinsOfAlphHoOhItemRoomNugget:
+	itemball NUGGET
 
-RuinsOfAlphHoOhItemRoomRevivalHerb:
-	itemball REVIVAL_HERB
+RuinsOfAlphHoOhItemRoomStarPiece:
+	itemball STAR_PIECE
 
-RuinsOfAlphHoOhItemRoomCharcoal:
-	itemball CHARCOAL
+RuinsOfAlphHoOhItemRoomLumBerry:
+	itemball LUM_BERRY
 
 RuinsOfAlphHoOhItemRoomAncientReplica:
 	jumptext RuinsOfAlphInnerChamber_StatueText
@@ -41,7 +41,7 @@ RuinsOfAlphHoOhItemRoom_MapEvents:
 	bg_event  5,  1, BGEVENT_READ, RuinsOfAlphHoOhItemRoomAncientReplica
 
 	def_object_events
-	object_event  2,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphHoOhItemRoomSitrusBerry, EVENT_HO_OH_ITEM_ROOM_SITRUS_BERRY
-	object_event  5,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphHoOhItemRoomLeppaBerry, EVENT_HO_OH_ITEM_ROOM_LEPPA_BERRY
-	object_event  2,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphHoOhItemRoomRevivalHerb, EVENT_HO_OH_ITEM_ROOM_REVIVAL_HERB
-	object_event  5,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphHoOhItemRoomCharcoal, EVENT_HO_OH_ITEM_ROOM_CHARCOAL
+	object_event  5,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphHoOhItemRoomSacredAsh, EVENT_HO_OH_ITEM_ROOM_SACRED_ASH
+	object_event  5,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphHoOhItemRoomNugget, EVENT_HO_OH_ITEM_ROOM_NUGGET
+	object_event  2,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphHoOhItemRoomStarPiece, EVENT_HO_OH_ITEM_ROOM_STAR_PIECE
+	object_event  2,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphHoOhItemRoomLumBerry, EVENT_HO_OH_ITEM_ROOM_LUM_BERRY
