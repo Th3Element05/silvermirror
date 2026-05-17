@@ -11,6 +11,9 @@ LavenderPokecenter1FNurseScript:
 LavenderPokecenter1FReceptionistScript:
 	jumpstd PokecenterReceptionistScript
 
+LavenderPokecenter1FHappinessRaterScript:
+	jumpstd HappinessCheckScript
+
 LavenderPokecenter1FBenchGuyScript:
 	jumptext LavenderPokecenter1FBenchGuyText
 LavenderPokecenter1FBenchGuyText:
@@ -55,6 +58,7 @@ LavenderPokecenter1F_MapEvents:
 	def_object_events
 	object_event  3,  1, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LavenderPokecenter1FNurseScript, -1
 	object_event 11,  2, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LavenderPokecenter1FReceptionistScript, -1
+	object_event  8,  1, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LavenderPokecenter1FHappinessRaterScript, -1
 	object_event  0,  4, SPRITE_BENCH_GUY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LavenderPokecenter1FBenchGuyScript, -1
 	object_event  2,  6, SPRITE_TWIN, SPRITEMOVEDATA_WALK_UP_DOWN, 2, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LavenderPokecenter1FGirlScript, -1
 	object_event  5,  3, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LavenderPokecenter1FGentlemanScript, -1

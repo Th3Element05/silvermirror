@@ -456,7 +456,7 @@ BugContestPrizeNoRoomText:
 ;	done
 
 HappinessRaterIntroText:
-	ntag "RATER:"
+	ntag "NURSE:"
 	text "If you treat your"
 	line "#MON nicely,"
 	cont "they will love you"
@@ -469,18 +469,14 @@ HappinessRaterIntroText:
 	done
 
 HappinessRatingText_LooksMean:
-	ntag "RATER:"
+	ntag "NURSE:"
 	text "It doesn't seem to"
 	line "like you at all."
 	cont "It looks mean."
 	done
 
 HappinessRatingText_NotUsedToYou:
-	ntag "RATER:"
-;	text "You should treat"
-;	line "it better. It's"
-;	cont "not used to you."
-;	done
+	ntag "NURSE:"
 	text "It's not used to"
 	line "you yet. You still"
 	cont "need to earn its"
@@ -488,26 +484,26 @@ HappinessRatingText_NotUsedToYou:
 	done
 
 HappinessRatingText_QuiteCute:
-	ntag "RATER:"
+	ntag "NURSE:"
 	text "It's quite cute."
 	done
 
 HappinessRatingText_SortOfHappy:
-	ntag "RATER:"
+	ntag "NURSE:"
 	text "It's friendly to-"
 	line "ward you. It looks"
 	cont "sort of happy."
 	done
 
 HappinessRatingText_ReallyTrustsYou:
-	ntag "RATER:"
+	ntag "NURSE:"
 	text "I get the feeling"
 	line "that it really"
 	cont "trusts you."
 	done
 
 HappinessRatingText_LovesYouALot:
-	ntag "RATER:"
+	ntag "NURSE:"
 	text "It looks really"
 	line "happy! It must"
 	cont "love you a lot."

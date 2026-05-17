@@ -11,6 +11,9 @@ CinnabarPokecenter1FNurseScript:
 CinnabarPokecenter1FReceptionistScript:
 	jumpstd PokecenterReceptionistScript
 
+CinnabarPokecenter1FHappinessRaterScript:
+	jumpstd HappinessCheckScript
+
 CinnabarPokecenter1FBenchGuyScript:
 	jumptext CinnabarPokecenter1FBenchGuyText
 CinnabarPokecenter1FBenchGuyText:
@@ -74,6 +77,7 @@ CinnabarPokecenter1F_MapEvents:
 	def_object_events
 	object_event  3,  1, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CinnabarPokecenter1FNurseScript, -1
 	object_event 11,  2, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CinnabarPokecenter1FReceptionistScript, -1
+	object_event  8,  1, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CinnabarPokecenter1FHappinessRaterScript, -1
 	object_event  0,  4, SPRITE_BENCH_GUY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarPokecenter1FBenchGuyScript, -1
-	object_event  2,  6, SPRITE_GENTLEMAN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarPokecenter1FGentlemanScript, -1
-	object_event  9,  4, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CinnabarPokecenter1FCooltrainerFScript, -1
+	object_event  5,  5, SPRITE_GENTLEMAN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarPokecenter1FGentlemanScript, -1
+	object_event 10,  5, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CinnabarPokecenter1FCooltrainerFScript, -1
