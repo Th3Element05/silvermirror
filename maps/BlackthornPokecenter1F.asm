@@ -8,6 +8,9 @@ BlackthornPokecenter1F_MapScripts:
 BlackthornPokecenter1FNurseScript:
 	jumpstd PokecenterNurseScript
 
+BlackthornPokecenter1FHappinessRaterScript:
+	jumpstd HappinessCheckScript
+
 BlackthornPokecenter1FGentlemanScript:
 	jumptextfaceplayer BlackthornPokecenter1FGentlemanText
 BlackthornPokecenter1FGentlemanText:
@@ -34,8 +37,6 @@ BlackthornPokecenter1FTwinText:
 	cont "they forgot."
 	done
 
-BlackthornPokecenter1FCooltrainerMScript:
-	jumpstd HappinessCheckScript
 
 BlackthornPokecenter1F_MapEvents:
 	db 0, 0 ; filler
@@ -50,6 +51,6 @@ BlackthornPokecenter1F_MapEvents:
 
 	def_object_events
 	object_event  3,  1, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BlackthornPokecenter1FNurseScript, -1
-	object_event  5,  3, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BlackthornPokecenter1FGentlemanScript, -1
+	object_event  6,  2, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BlackthornPokecenter1FHappinessRaterScript, -1
+	object_event  7,  6, SPRITE_GENTLEMAN, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BlackthornPokecenter1FGentlemanScript, -1
 	object_event  1,  4, SPRITE_TWIN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, BlackthornPokecenter1FTwinScript, -1
-	object_event  7,  6, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BlackthornPokecenter1FCooltrainerMScript, -1

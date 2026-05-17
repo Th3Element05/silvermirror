@@ -9,101 +9,107 @@ GoldenrodHappinessRater_MapScripts:
 	def_callbacks
 
 GoldenrodHappinessRaterTeacherScript:
-	jumpstd HappinessCheckScript
-
-;	faceplayer
-;	opentext
-;	special GetFirstPokemonHappiness
-;	writetext GoldenrodHappinessRaterTeacherText
-;	promptbutton
-;	ifgreater 250 - 1, .LovesYouALot
-;	ifgreater 200 - 1, .ReallyTrustsYou
-;	ifgreater 150 - 1, .SortOfHappy
-;	ifgreater 100 - 1, .QuiteCute
-;	ifgreater  50 - 1, .NotUsedToYou
+	faceplayer
+	opentext
+	special GetFirstPokemonHappiness
+	writetext GoldenrodHappinessRaterIntroText
+	promptbutton
+	ifgreater 250 - 1, .LovesYouALot
+	ifgreater 200 - 1, .ReallyTrustsYou
+	ifgreater 150 - 1, .SortOfHappy
+	ifgreater 100 - 1, .QuiteCute
+	ifgreater  50 - 1, .NotUsedToYou
 ;	sjump .LooksMean
-;
-;.LovesYouALot:
-;	writetext GoldenrodHappinessRatingText_LovesYouALot
-;	waitbutton
-;	closetext
-;	end
-;
-;.ReallyTrustsYou:
-;	writetext GoldenrodHappinessRatingText_ReallyTrustsYou
-;	waitbutton
-;	closetext
-;	end
-;
-;.SortOfHappy:
-;	writetext GoldenrodHappinessRatingText_SortOfHappy
-;	waitbutton
-;	closetext
-;	end
-;
-;.QuiteCute:
-;	writetext GoldenrodHappinessRatingText_QuiteCute
-;	waitbutton
-;	closetext
-;	end
-;
-;.NotUsedToYou:
-;	writetext GoldenrodHappinessRatingText_NotUsedToYou
-;	waitbutton
-;	closetext
-;	end
-;
-;.LooksMean:
-;	writetext GoldenrodHappinessRatingText_LooksMean
-;	waitbutton
-;	closetext
-;	end
 
-;GoldenrodHappinessRaterTeacherText:
-;	text "If you treat your"
-;	line "#MON nicely,"
-;	cont "they will love you"
-;	roll "in return."
-;
-;	para "Oh? Let me see"
-;	line "your @"
-;	text_ram wStringBuffer3
-;	text "…"
-;	done
+.LooksMean:
+	writetext GoldenrodHappinessRatingText_LooksMean
+	waitbutton
+	closetext
+	end
 
-;GoldenrodHappinessRatingText_LovesYouALot:
-;	text "It looks really"
-;	line "happy! It must"
-;	cont "love you a lot."
-;	done
+.NotUsedToYou:
+	writetext GoldenrodHappinessRatingText_NotUsedToYou
+	waitbutton
+	closetext
+	end
 
-;GoldenrodHappinessRatingText_ReallyTrustsYou:
-;	text "I get the feeling"
-;	line "that it really"
-;	cont "trusts you."
-;	done
+.QuiteCute:
+	writetext GoldenrodHappinessRatingText_QuiteCute
+	waitbutton
+	closetext
+	end
 
-;GoldenrodHappinessRatingText_SortOfHappy:
-;	text "It's friendly to-"
-;	line "ward you. It looks"
-;	cont "sort of happy."
-;	done
+.SortOfHappy:
+	writetext GoldenrodHappinessRatingText_SortOfHappy
+	waitbutton
+	closetext
+	end
 
-;GoldenrodHappinessRatingText_QuiteCute:
-;	text "It's quite cute."
-;	done
+.ReallyTrustsYou:
+	writetext GoldenrodHappinessRatingText_ReallyTrustsYou
+	waitbutton
+	closetext
+	end
 
-;GoldenrodHappinessRatingText_NotUsedToYou:
-;	text "You should treat"
-;	line "it better. It's"
-;	cont "not used to you."
-;	done
+.LovesYouALot:
+	writetext GoldenrodHappinessRatingText_LovesYouALot
+	waitbutton
+	closetext
+	end
 
-;GoldenrodHappinessRatingText_LooksMean:
-;	text "It doesn't seem to"
-;	line "like you at all."
-;	cont "It looks mean."
-;	done
+GoldenrodHappinessRaterIntroText:
+	ntag "LADY:"
+	text "If you treat your"
+	line "#MON nicely,"
+	cont "they will love you"
+	roll "in return."
+
+	para "Oh? Let me see"
+	line "your @"
+	text_ram wStringBuffer3
+	text "…"
+	done
+
+GoldenrodHappinessRatingText_LooksMean:
+	ntag "LADY:"
+	text "It doesn't seem to"
+	line "like you at all."
+	cont "It looks mean."
+	done
+
+GoldenrodHappinessRatingText_NotUsedToYou:
+	ntag "LADY:"
+	text "It's not used to"
+	line "you yet. You still"
+	cont "need to earn its"
+	roll "respect."
+	done
+
+GoldenrodHappinessRatingText_QuiteCute:
+	ntag "LADY:"
+	text "It's quite cute."
+	done
+
+GoldenrodHappinessRatingText_SortOfHappy:
+	ntag "LADY:"
+	text "It's friendly to-"
+	line "ward you. It looks"
+	cont "sort of happy."
+	done
+
+GoldenrodHappinessRatingText_ReallyTrustsYou:
+	ntag "LADY:"
+	text "I get the feeling"
+	line "that it really"
+	cont "trusts you."
+	done
+
+GoldenrodHappinessRatingText_LovesYouALot:
+	ntag "LADY:"
+	text "It looks really"
+	line "happy! It must"
+	cont "love you a lot."
+	done
 
 GoldenrodHappinessRaterPokefanMScript:
 	jumptextfaceplayer GoldenrodHappinessRaterPokefanMText
