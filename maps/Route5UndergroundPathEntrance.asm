@@ -5,7 +5,7 @@ Route5UndergroundPathEntrance_MapScripts:
 
 	def_callbacks
 
-Route5UndergroundPathEntranceGirlScript:
+TradeNPCMia:
 	faceplayer
 	opentext
 	trade NPC_TRADE_MIA
@@ -26,4 +26,4 @@ Route5UndergroundPathEntrance_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  2,  2, SPRITE_TWIN, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route5UndergroundPathEntranceGirlScript, -1
+	object_event  2,  2, SPRITE_TWIN, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TradeNPCMia, -1

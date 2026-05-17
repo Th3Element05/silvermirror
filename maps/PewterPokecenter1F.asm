@@ -78,13 +78,6 @@ PewterPokecenter1FGentlemanText2:
 	para "Scram!"
 	done
 
-;Chris:
-;	faceplayer
-;	opentext
-;	trade NPC_TRADE_CHRIS
-;	waitbutton
-;	closetext
-;	end
 
 PewterPokecenter1F_MapEvents:
 	db 0, 0 ; filler

@@ -6,13 +6,13 @@ OlivineTimsHouse_MapScripts:
 
 	def_callbacks
 
-;Tim:
-;	faceplayer
-;	opentext
-;	trade NPC_TRADE_TIM
-;	waitbutton
-;	closetext
-;	end
+TradeNPCMindy:
+	faceplayer
+	opentext
+	trade NPC_TRADE_MINDY
+	waitbutton
+	closetext
+	end
 
 TimsHouseBookshelf:
 	jumpstd MagazineBookshelfScript
@@ -31,4 +31,4 @@ OlivineTimsHouse_MapEvents:
 	bg_event  1,  1, BGEVENT_READ, TimsHouseBookshelf
 
 	def_object_events
-;	object_event  2,  3, SPRITE_FISHING_GURU, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Tim, -1
+	object_event  2,  3, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TradeNPCMindy, -1
