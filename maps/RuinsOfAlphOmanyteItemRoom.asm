@@ -5,17 +5,17 @@ RuinsOfAlphOmanyteItemRoom_MapScripts:
 
 	def_callbacks
 
-RuinsOfAlphOmanyteItemRoomLeppaBerry:
-	itemball LEPPA_BERRY
-
 RuinsOfAlphOmanyteItemRoomMysticWater:
 	itemball MYSTIC_WATER
 
-RuinsOfAlphOmanyteItemRoomStardust:
-	itemball STARDUST
+RuinsOfAlphOmanyteItemHelixFossil:
+	itemball HELIX_FOSSIL
 
-RuinsOfAlphOmanyteItemRoomStarPiece:
-	itemball STAR_PIECE
+RuinsOfAlphOmanyteItemBigPearl:
+	itemball BIG_PEARL
+
+RuinsOfAlphOmanyteItemRevivalHerb:
+	itemball REVIVAL_HERB
 
 RuinsOfAlphOmanyteItemRoomAncientReplica:
 	jumptext RuinsOfAlphInnerChamber_StatueText
@@ -41,7 +41,7 @@ RuinsOfAlphOmanyteItemRoom_MapEvents:
 	bg_event  5,  1, BGEVENT_READ, RuinsOfAlphOmanyteItemRoomAncientReplica
 
 	def_object_events
-	object_event  2,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphOmanyteItemRoomLeppaBerry, EVENT_OMANYTE_ITEM_ROOM_LEPPA_BERRY
-	object_event  5,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphOmanyteItemRoomMysticWater, EVENT_OMANYTE_ITEM_ROOM_MYSTIC_WATER
-	object_event  2,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphOmanyteItemRoomStardust, EVENT_OMANYTE_ITEM_ROOM_STARDUST
-	object_event  5,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphOmanyteItemRoomStarPiece, EVENT_OMANYTE_ITEM_ROOM_STAR_PIECE
+	object_event  2,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphOmanyteItemRoomMysticWater, EVENT_OMANYTE_ITEM_ROOM_MYSTIC_WATER
+	object_event  5,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphOmanyteItemHelixFossil, EVENT_OMANYTE_ITEM_ROOM_HELIX_FOSSIL
+	object_event  2,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphOmanyteItemBigPearl, EVENT_OMANYTE_ITEM_ROOM_BIG_PEARL
+	object_event  5,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphOmanyteItemRevivalHerb, EVENT_OMANYTE_ITEM_ROOM_REVIVAL_HERB

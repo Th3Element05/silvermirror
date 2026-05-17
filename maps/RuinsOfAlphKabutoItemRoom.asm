@@ -5,17 +5,17 @@ RuinsOfAlphKabutoItemRoom_MapScripts:
 
 	def_callbacks
 
-RuinsOfAlphKabutoItemRoomOranBerry:
-	itemball ORAN_BERRY
+RuinsOfAlphKabutoItemRoomMiracleSeed:
+	itemball MIRACLE_SEED
 
-RuinsOfAlphKabutoItemRoomPechaBerry:
-	itemball PECHA_BERRY
+RuinsOfAlphKabutoItemRoomDomeFossil:
+	itemball DOME_FOSSIL
 
-RuinsOfAlphKabutoItemRoomHealPowder:
-	itemball HEAL_POWDER
+RuinsOfAlphKabutoItemRoomPearl:
+	itemball PEARL
 
-RuinsOfAlphKabutoItemRoomEnergypowder:
-	itemball ENERGYPOWDER
+RuinsOfAlphKabutoItemRoomRevivalHerb:
+	itemball REVIVAL_HERB
 
 RuinsOfAlphKabutoItemRoomAncientReplica:
 	jumptext RuinsOfAlphInnerChamber_StatueText
@@ -41,7 +41,7 @@ RuinsOfAlphKabutoItemRoom_MapEvents:
 	bg_event  5,  1, BGEVENT_READ, RuinsOfAlphKabutoItemRoomAncientReplica
 
 	def_object_events
-	object_event  2,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphKabutoItemRoomOranBerry, EVENT_KABUTO_ITEM_ROOM_ORAN_BERRY
-	object_event  5,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphKabutoItemRoomPechaBerry, EVENT_KABUTO_ITEM_ROOM_PECHA_BERRY
-	object_event  2,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphKabutoItemRoomHealPowder, EVENT_KABUTO_ITEM_ROOM_HEAL_POWDER
-	object_event  5,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphKabutoItemRoomEnergypowder, EVENT_KABUTO_ITEM_ROOM_ENERGYPOWDER
+	object_event  2,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphKabutoItemRoomMiracleSeed, EVENT_KABUTO_ITEM_ROOM_MIRACLE_SEED
+	object_event  5,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphKabutoItemRoomDomeFossil, EVENT_KABUTO_ITEM_ROOM_DOME_FOSSIL
+	object_event  2,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphKabutoItemRoomPearl, EVENT_KABUTO_ITEM_ROOM_PEARL
+	object_event  5,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RuinsOfAlphKabutoItemRoomRevivalHerb, EVENT_KABUTO_ITEM_ROOM_REVIVAL_HERB
