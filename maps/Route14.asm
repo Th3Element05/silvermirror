@@ -5,14 +5,6 @@ Route14_MapScripts:
 
 	def_callbacks
 
-;Kim:
-;	faceplayer
-;	opentext
-;	trade NPC_TRADE_KIM
-;	waitbutton
-;	closetext
-;	end
-
 
 TrainerBikerHarris:
 	trainer BIKER, HARRIS, EVENT_BEAT_BIKER_HARRIS, BikerHarrisSeenText, BikerHarrisBeatenText, 0, .Script

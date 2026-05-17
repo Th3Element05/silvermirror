@@ -23,6 +23,11 @@ DEF NPCTRADE_STRUCT_LENGTH EQU _RS
 	const NPC_TRADE_JIM     ; 6
 	const NPC_TRADE_CLIFTON ; 7
 	const NPC_TRADE_NORMA   ; 8
+; johto
+	const NPC_TRADE_MINDY   ; 9
+	const NPC_TRADE_CHRIS   ; 10
+	const NPC_TRADE_KYLE    ; 11
+	const NPC_TRADE_EMY     ; 12
 DEF NUM_NPC_TRADES EQU const_value
 
 ; trade gender limits
@@ -46,4 +51,4 @@ DEF NUM_NPC_TRADES EQU const_value
 	const TRADE_DIALOGSET_COLLECTOR
 	const TRADE_DIALOGSET_HAPPY
 	const TRADE_DIALOGSET_GENERIC ;_NEWBIE
-	const TRADE_DIALOGSET_GIRL
+	const TRADE_DIALOGSET_GIRL ; hardcoded genders for nidoran trade

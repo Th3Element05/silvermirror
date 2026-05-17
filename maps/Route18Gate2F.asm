@@ -5,7 +5,7 @@ Route18Gate2F_MapScripts:
 
 	def_callbacks
 
-Route18Gate2FNoahScript:
+TradeNPCNoah:
 	faceplayer
 	opentext
 	trade NPC_TRADE_NOAH
@@ -46,4 +46,4 @@ Route18Gate2F_MapEvents:
 	bg_event  4,  2, BGEVENT_UP, Route18Gate2FBinocularsRight
 
 	def_object_events
-	object_event  5,  3, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route18Gate2FNoahScript, -1
+	object_event  5,  3, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TradeNPCNoah, -1

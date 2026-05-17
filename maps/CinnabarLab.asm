@@ -16,7 +16,7 @@ CinnabarLabScientistText:
 	cont "for examination."
 	done
 
-CinnabarLabCliftonScript:
+TradeNPCClifton:
 	faceplayer
 	opentext
 	trade NPC_TRADE_CLIFTON
@@ -24,7 +24,7 @@ CinnabarLabCliftonScript:
 	closetext
 	end
 
-CinnabarLabNormaScript:
+TradeNPCNorma:
 	faceplayer
 	opentext
 	trade NPC_TRADE_NORMA
@@ -63,5 +63,5 @@ CinnabarLab_MapEvents:
 
 	def_object_events
 	object_event  4,  2, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarLabScientist, -1
-	object_event  0,  3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarLabCliftonScript, -1
-	object_event  3,  4, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarLabNormaScript, -1
+	object_event  0,  3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TradeNPCClifton, -1
+	object_event  3,  4, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TradeNPCNorma, -1
