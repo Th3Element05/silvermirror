@@ -31,7 +31,7 @@ RuinsOfAlphOutsideScientistScript:
 	writetext RuinsOfAlphOutside_TellMeText
 	waitbutton
 	readvar VAR_UNOWNCOUNT
-	ifgreater 2, .GiveUnownDex
+	ifgreater 1, .GiveUnownDex
 	closetext
 	end
 
