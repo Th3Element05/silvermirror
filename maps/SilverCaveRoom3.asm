@@ -84,7 +84,7 @@ MtSilverOak:
 	writetext MtSilverOak_BeforeBattleText2
 	promptbutton
 ;	setlasttalked SILVERCAVEROOM3_OAK
-	winlosstext MtSilverWinLossText, MtSilverWinLossText
+	winlosstext MtSilverOakWinLossText, MtSilverOakWinLossText
 	checkevent EVENT_GOT_SQUIRTLE_FROM_OAK
 	iftrue .OakCharizard
 	checkevent EVENT_GOT_BULBASAUR_FROM_OAK
@@ -193,18 +193,17 @@ MtSilverOak_BeforeBattleText2:
 	roll "first-hand!"
 	done
 
-;MtSilverOakWinLossText:
-;	text " "
-;	done
-
-MtSilverOak_AfterBattleText:
+MtSilverOakWinLossText:
 	ntag "PROF.OAK:"
 	text "<PLAYER>, you"
 	line "and your #MON"
 	cont "really are"
 	roll "extraordinary."
+	done
 
-	para "Thank you for"
+MtSilverOak_AfterBattleText:
+	ntag "PROF.OAK:"
+	text "Thank you for"
 	line "having that battle"
 	cont "with me."
 
@@ -214,10 +213,9 @@ MtSilverOak_AfterBattleText:
 	para "Come visit me at"
 	line "my lab any time."
 
-	para "I would like to"
-	line "see how your #-"
-	cont "DEX is coming"
-	roll "along."
+	para "You can show me"
+	line "how your #DEX"
+	cont "is coming along!"
 	done
 
 MtSilverOak_OakLeavesText:
@@ -230,10 +228,9 @@ MtSilverOak_OakLeavesText:
 	roll "fill the #DEX?"
 
 	para "I know it's a big"
-	line "thing to ask, but"
-	cont "if anyone can get"
-	roll "it done, it's you,"
-	cont "<PLAYER>!"
+	line "job, but if anyone"
+	cont "can get it done,"
+	roll "it's you, <PLAYER>!"
 
 	para "Don't give up!"
 	done
@@ -310,7 +307,12 @@ SilverMirror:
 	applymovement SILVERCAVEROOM3_SILVER_MIRROR, SilverCaveRoom3_RocksmashMovement
 	appear SILVERCAVEROOM3_SILVER_CHRIS
 	refreshscreen
-	pause 20
+;	pause 20
+	pause 10
+	opentext
+	writetext SilverCaveRoom3_ShockedText
+	waitbutton
+	closetext
 	winlosstext MtSilverWinLossText, MtSilverWinLossText
 	loadtrainer RED, RED1 ;CAL, CAL1
 	startbattle
@@ -325,7 +327,12 @@ SilverMirror:
 	applymovement SILVERCAVEROOM3_SILVER_MIRROR, SilverCaveRoom3_RocksmashMovement
 	appear SILVERCAVEROOM3_SILVER_KRIS
 	refreshscreen
-	pause 20
+;	pause 20
+	pause 10
+	opentext
+	writetext SilverCaveRoom3_ShockedText
+	waitbutton
+	closetext
 	winlosstext MtSilverWinLossText, MtSilverWinLossText
 	loadtrainer GREEN, GREEN1 ;CAL, CAL1
 	startbattle
@@ -337,16 +344,12 @@ SilverMirror:
 ;	sjump .FinishSilverMirror
 
 .FinishSilverMirror
+	special RespawnOneOffs
+	setevent EVENT_BEAT_SILVER_MIRROR
 	pause 20
 	special HealParty
-	refreshscreen
-	checkevent EVENT_BEAT_SILVER_MIRROR
-	iffalse .SilverMirrorCredits
-	special RestartMapMusic
-	end
-
-.SilverMirrorCredits
-	setevent EVENT_BEAT_SILVER_MIRROR
+	callasm SilverCaveRoom3_SaveGameAsm
+;	refreshscreen
 	credits
 	end
 
@@ -362,7 +365,11 @@ SilverMirror:
 	closetext
 	end
 
-SilverCaveRoom3_CopyPlayerParty:
+SilverCaveRoom3_SaveGameAsm:
+	farcall SaveGameData
+	ret
+
+SilverCaveRoom3_CopyPlayerPartyAsm:
 	farcall CopyPlayerPartyToMysteryGiftTrainer
 	ret
 
@@ -428,9 +435,10 @@ SilverCaveRoom3_SilverMirrorText:
 SilverCaveRoom3_TouchedMirrorText:
 	text "<PLAYER> reached"
 	line "out and touched"
-	cont "the SILVER MIRROR…@"
+	cont "the SILVER MIRROR…"
+	done
 
-	text_promptbutton
+SilverCaveRoom3_ShockedText:
 	ntag "<PLAYER>:"
 	text "…!"
 	done
