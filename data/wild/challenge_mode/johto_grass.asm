@@ -263,7 +263,7 @@ JohtoGrassWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_39
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; day
 	db 16, RATTATA    ; 20% chance
 	db 20, RATICATE   ; 20% chance
@@ -835,7 +835,7 @@ JohtoGrassWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	end_grass_wildmons
 
 	def_grass_wildmons DARK_CAVE_VIOLET_ENTRANCE
-	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; day
 	db 23, GEODUDE    ; 20% chance
 	db 23, ZUBAT      ; 20% chance
@@ -861,7 +861,7 @@ JohtoGrassWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	end_grass_wildmons
 
 	def_grass_wildmons DARK_CAVE_BLACKTHORN_ENTRANCE
-	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; day
 	db 23, GEODUDE    ; 20% chance
 	db 23, ZUBAT      ; 20% chance
@@ -887,7 +887,7 @@ JohtoGrassWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	end_grass_wildmons
 
 	def_grass_wildmons ICE_PATH_1F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; day
 	db 21, SWINUB     ; 20% chance
 	db 22, SWINUB     ; 20% chance
@@ -913,7 +913,7 @@ JohtoGrassWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	end_grass_wildmons
 
 	def_grass_wildmons ICE_PATH_B1F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; day
 	db 21, SWINUB     ; 20% chance
 	db 22, SWINUB     ; 20% chance
@@ -939,7 +939,7 @@ JohtoGrassWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	end_grass_wildmons
 
 	def_grass_wildmons ICE_PATH_B2F_B3F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; day
 	db 22, SWINUB     ; 20% chance
 	db 23, SWINUB     ; 20% chance
