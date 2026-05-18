@@ -29,28 +29,36 @@ DEF NUM_NONTRAINER_PHONECONTACTS EQU const_value - 1
 
 	trainerclass FALKNER ; 01
 	const FALKNER1
+	const FALKNER2
 
 DEF KRIS EQU __trainer_class__
 	trainerclass BUGSY ; 02
 	const BUGSY1
+	const BUGSY2
 
 	trainerclass WHITNEY ; 03
 	const WHITNEY1
+	const WHITNEY2
 
 	trainerclass MORTY ; 04
 	const MORTY1
+	const MORTY2
 
 	trainerclass CHUCK ; 05
 	const CHUCK1
+	const CHUCK2
 
 	trainerclass JASMINE ; 06
 	const JASMINE1
+	const JASMINE2
 
 	trainerclass PRYCE ; 07
 	const PRYCE1
+	const PRYCE2
 
 	trainerclass CLAIR ; 08
 	const CLAIR1
+	const CLAIR2
 
 	trainerclass POKEMON_PROF ; 09
 	const OAK_T_VENUSAUR
