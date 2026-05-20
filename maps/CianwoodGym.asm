@@ -356,6 +356,62 @@ CianwoodGymStatue:
 CianwoodGymBoulder:
 	jumpstd StrengthBoulderScript
 
+
+; rematch
+CianwoodGymChuckRematchScript:
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	iftrue .GreatBattle
+	faceplayer
+	opentext
+	writetext ChuckAskRematchText
+	yesorno
+	iffalse .norematch
+.startbattle
+	closetext
+	winlosstext ChuckRematchWinLossText, 0
+	loadtrainer CHUCK, CHUCK2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_CHUCK_2
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	opentext
+.norematch
+	writetext ChuckRematchAfterBattleText
+	waitbutton
+	closetext
+	end
+
+.GreatBattle
+	jumptextfaceplayer ChuckRematchGreatBattleText
+
+ChuckAskRematchText:
+	ntag "CHUCK:"
+	text "WAHAHAH!"
+
+	para "Are you ready to"
+	line "battle?"
+	done
+
+ChuckRematchWinLossText:
+	ntag "CHUCK:"
+	text "Smashed again!"
+	done
+
+ChuckRematchAfterBattleText:
+	ntag "CHUCK:"
+	text "Come back for a"
+	line "battle, any time!"
+	done
+
+ChuckRematchGreatBattleText:
+	ntag "CHUCK:"
+	text "WAHAHAH!"
+
+	para "That was a great"
+	line "battle!"
+	done
+
+
 CianwoodGym_MapEvents:
 	db 0, 0 ; filler
 
@@ -370,7 +426,7 @@ CianwoodGym_MapEvents:
 	bg_event  6, 15, BGEVENT_READ, CianwoodGymStatue
 
 	def_object_events
-	object_event  4,  1, SPRITE_CHUCK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CianwoodGymChuckScript, -1
+	object_event  4,  1, SPRITE_CHUCK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CianwoodGymChuckScript, EVENT_JOHTO_GYM_LEADERS
 	object_event  5,  1, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodGymBoulder, -1
 	object_event  7, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CianwoodGymGuideScript, -1
 	object_event  4, 13, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GymClosedBlackbeltScript, EVENT_ROUTE_42_BOULDERS_CLEARED
@@ -382,3 +438,5 @@ CianwoodGym_MapEvents:
 ;	object_event  3,  9, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBlackbeltYoshi, -1
 ;	object_event  5,  5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerBlackbeltLao, -1
 ;	object_event  3,  7, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodGymBoulder, -1
+;
+	object_event  4,  1, SPRITE_CHUCK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CianwoodGymChuckRematchScript, EVENT_JOHTO_LEADER_REMATCHES

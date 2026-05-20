@@ -43,9 +43,12 @@ BlackthornGymClairScript:
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_RISINGBADGE
+	setevent EVENT_JOHTO_GYM_LEADERS
+	clearevent EVENT_JOHTO_LEADER_REMATCHES
 	clearevent EVENT_INDIGO_POKECENTER_LANCE
 	clearevent EVENT_INDIGO_POKECENTER_ABRA_GUY
 	setmapscene INDIGO_PLATEAU_POKECENTER_1F, SCENE_INDIGOPLATEAUPOKECENTER1F_LANCE
+	setmapscene BLACKTHORN_CITY, SCENE_BLACKTHORNCITY_REMATCH_NOTIFY
 .FightDone:
 	checkevent EVENT_GOT_TM72_DRAGONBREATH
 	iftrue .SpeechAfterTM
@@ -73,15 +76,35 @@ BlackthornGymClairScript:
 	end
 
 .AfterDragonsDen:
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	iftrue .GreatBattle
 	checkevent EVENT_ANSWERED_DRAGON_MASTER_QUIZ_WRONG
 	iftrue .FailedTest
 	writetext ClairTextAfterDragonsDenPassedText
-	waitbutton
-	closetext
-	end
+	sjump BlackthornGymClairRematchScript
 
 .FailedTest
 	writetext ClairTextAfterDragonsDenFailedText
+	sjump BlackthornGymClairRematchScript
+
+.GreatBattle
+	jumptextfaceplayer ClairRematchGreatBattleText
+
+BlackthornGymClairRematchScript:
+	promptbutton
+	writetext ClairAskRematchText
+	yesorno
+	iffalse .norematch
+	closetext
+	winlosstext ClairRematchWinLossText, 0
+	loadtrainer CLAIR, CLAIR2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_CLAIR_2
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	opentext
+.norematch
+	writetext ClairRematchAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -198,6 +221,37 @@ ClairTextAfterDragonsDenFailedText:
 	para "That's a very rare"
 	line "honor."
 	done
+
+ClairAskRematchText:
+	ntag "CLAIR:"
+	text "While you're here,"
+	line "would you like to"
+	cont "have a battle?"
+	done
+
+ClairRematchWinLossText:
+	ntag "CLAIR:"
+	text "I really thought"
+	line "that I could beat"
+	cont "you this time!"
+	done
+
+ClairRematchAfterBattleText:
+	ntag "CLAIR:"
+	text "Trainers like you"
+	line "don't come around"
+	cont "very often."
+
+	para "I'll gladly battle"
+	line "you again any day."
+	done
+
+ClairRematchGreatBattleText:
+	ntag "CLAIR:"
+	text "That was a great"
+	line "battle!"
+	done
+
 
 TrainerCooltrainermZane:
 	trainer COOLTRAINERM, ZANE, EVENT_BEAT_COOLTRAINERM_ZANE, CooltrainermZaneSeenText, CooltrainermZaneBeatenText, 0, .Script

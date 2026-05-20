@@ -373,6 +373,66 @@ GoldenrodGymStatue:
 	gettrainername STRING_BUFFER_4, WHITNEY, WHITNEY1
 	jumpstd GymStatue3Script
 
+
+; rematch
+GoldenrodGymWhitneyRematchScript:
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	iftrue .GreatBattle
+	faceplayer
+	opentext
+	writetext WhitneyAskRematchText
+	yesorno
+	iffalse .norematch
+.startbattle
+	closetext
+	winlosstext WhitneyRematchWinLossText, 0
+	loadtrainer WHITNEY, WHITNEY2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_WHITNEY_2
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	opentext
+.norematch
+	writetext WhitneyRematchAfterBattleText
+	waitbutton
+	closetext
+	end
+
+.GreatBattle
+	jumptextfaceplayer WhitneyRematchGreatBattleText
+
+WhitneyAskRematchText:
+	ntag "WHITNEY:"
+	text "Welcome back!"
+
+	para "Are you ready to"
+	cont "battle?"
+	done
+
+WhitneyRematchWinLossText:
+	ntag "WHITNEY:"
+	text "Sob…"
+
+	para "…Waaaaaaah!"
+	done
+
+WhitneyRematchAfterBattleText:
+	ntag "WHITNEY:"
+	text "Come back for a"
+	line "battle, any time!"
+	done
+
+WhitneyRematchGreatBattleText:
+	ntag "WHITNEY:"
+	text "Waaaaah!"
+
+	para "Waaaaah!"
+
+	para "Sob…"
+	line "…Snivel, hic…"
+	done
+
+
 GoldenrodGym_MapEvents:
 	db 0, 0 ; filler
 
@@ -388,9 +448,11 @@ GoldenrodGym_MapEvents:
 	bg_event  4, 15, BGEVENT_READ, GoldenrodGymStatue
 
 	def_object_events
-	object_event  8,  3, SPRITE_WHITNEY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodGymWhitneyScript, -1
+	object_event  8,  3, SPRITE_WHITNEY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodGymWhitneyScript, EVENT_JOHTO_GYM_LEADERS
 	object_event  9,  6, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerLassRuby, -1 ;bridget
 	object_event  0,  2, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerBeautyCybil, -1 ;victoria
 	object_event 19,  5, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBeautySamantha, -1 ;samantha
 	object_event  9, 13, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerLassKelly, -1 ;carrie
 	object_event  5, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodGymGuideScript, -1
+;
+	object_event  8,  3, SPRITE_WHITNEY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodGymWhitneyRematchScript, EVENT_JOHTO_LEADER_REMATCHES
