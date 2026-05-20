@@ -234,7 +234,7 @@ MoveDescriptions::
 	dw IronTailDescription
 	dw MetalClawDescription
 	dw ZenHeadbuttDescription ;VitalThrowDescription
-	dw MorningSunDescription
+	dw WhirlwindDescription   ;MorningSunDescription
 	dw SynthesisDescription
 	dw MoonlightDescription
 	dw HiddenPowerDescription
@@ -2029,10 +2029,14 @@ ZenHeadbuttDescription:
 ;	db   "A 2nd-strike move"
 ;	next "that never misses.@"
 
-MorningSunDescription:
-	db   "Restores HP."
-	feed "More effective in"
-	feed "the morning.@"
+WhirlwindDescription:
+	db   "Blows away the foe"
+	feed "& ends battles vs"
+	feed "wild #MON.@"
+;MorningSunDescription:
+;	db   "Restores HP."
+;	feed "More effective in"
+;	feed "the morning.@"
 ;	db   "Restores HP. The"
 ;	feed "amount varies by"
 ;	feed "time and weather.@"

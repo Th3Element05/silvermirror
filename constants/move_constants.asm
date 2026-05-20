@@ -239,7 +239,7 @@
 	const IRON_TAIL    ; e7
 	const METAL_CLAW   ; e8
 	const ZEN_HEADBUTT ; e9 ;VITAL_THROW, removed
-	const MORNING_SUN  ; ea
+	const WHIRLWIND    ; ea ;MORNING_SUN, removed
 	const SYNTHESIS    ; eb
 	const MOONLIGHT    ; ec
 	const HIDDEN_POWER ; ed
