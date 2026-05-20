@@ -41,6 +41,7 @@ PidgeyEggMoves:
 	db PURSUIT
 	db FEINT_ATTACK
 	db FORESIGHT
+	db LOUD_VOICE
 ;	db DETECT       ;removed
 	db -1 ; end
 
@@ -114,7 +115,7 @@ ZubatEggMoves:
 	db PURSUIT
 	db FEINT_ATTACK
 	db GUST
-;	db WHIRLWIND    ;removed
+	db WHIRLWIND
 ;	db DETECT       ;removed
 	db -1 ; end
 
@@ -444,7 +445,7 @@ KabutoEggMoves:
 	db -1 ; end
 
 AerodactylEggMoves:
-;	db WHIRLWIND ;removed
+	db WHIRLWIND
 	db PURSUIT
 	db FORESIGHT
 ;	db DETECT    ;removed
@@ -506,7 +507,7 @@ HoothootEggMoves:
 	db SUPERSONIC
 	db FEINT_ATTACK
 	db WING_ATTACK
-;	db WHIRLWIND    ;removed
+	db WHIRLWIND
 	db SKY_ATTACK   ;tm?
 ;	db DETECT       ;removed
 	db -1 ; end
@@ -630,7 +631,7 @@ AipomEggMoves:
 	db -1 ; end
 
 YanmaEggMoves:
-;	db WHIRLWIND  ;removed
+	db WHIRLWIND
 	db FLAIL      ;REVERSAL ;removed
 	db LEECH_LIFE
 ;	db DETECT     ;removed
@@ -643,7 +644,7 @@ WooperEggMoves:
 	db -1 ; end
 
 MurkrowEggMoves:
-;	db WHIRLWIND    ;removed
+	db WHIRLWIND
 	db DRILL_PECK
 	db QUICK_ATTACK
 ;	db MIRROR_MOVE  ;removed
@@ -789,7 +790,7 @@ MantineEggMoves:
 SkarmoryEggMoves:
 	db DRILL_PECK
 	db PURSUIT
-;	db WHIRLWIND  ;removed
+	db WHIRLWIND
 	db SKY_ATTACK ;tm?
 ;	db DETECT     ;removed
 	db -1 ; end

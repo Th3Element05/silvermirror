@@ -207,7 +207,7 @@ ButterfreeEvosAttacks:
 	db 15, SLEEP_POWDER
 	db 16, GUST ;10
 	db 18, SUPERSONIC
-	db 22, HYPNOSIS ;whirlwind, removed
+	db 22, WHIRLWIND ;HYPNOSIS
 	db 24, PSYBEAM
 	db 28, SILVER_WIND
 	db 30, AGILITY ;tailwind, x
@@ -258,7 +258,7 @@ PidgeyEvosAttacks:
 	db 5, MUD_SLAP ;sand_attack, removed
 	db 9, GUST
 	db 13, QUICK_ATTACK
-	db 17, DOUBLE_TEAM ;whirlwind, removed
+	db 17, WHIRLWIND ;DOUBLE_TEAM
 	db 21, TWISTER
 	db 25, CHARM ;featherdance, x
 	db 29, AGILITY
@@ -276,7 +276,7 @@ PidgeottoEvosAttacks:
 	db 5, MUD_SLAP ;sand_attack, removed
 	db 9, GUST
 	db 13, QUICK_ATTACK
-	db 17, DOUBLE_TEAM ;whirlwind, removed
+	db 17, WHIRLWIND ;DOUBLE_TEAM
 	db 22, TWISTER
 	db 27, CHARM ;featherdance, x
 	db 32, AGILITY
@@ -293,7 +293,7 @@ PidgeotEvosAttacks:
 	db 5, MUD_SLAP ;sand_attack, removed
 	db 9, GUST
 	db 13, QUICK_ATTACK
-	db 17, DOUBLE_TEAM ;whirlwind, removed
+	db 17, WHIRLWIND ;DOUBLE_TEAM
 	db 22, TWISTER
 	db 27, CHARM ;featherdance, x
 	db 32, AGILITY
@@ -3556,7 +3556,7 @@ EspeonEvosAttacks: ; GEN6/7
 	db 20, PSYBEAM
 	db 25, FUTURE_SIGHT
 	db 29, REFLECT ;psych_up, x
-	db 33, MORNING_SUN
+	db 33, SYNTHESIS ;morning_sun, x
 	db 37, PSYCHIC_M
 	db 41, DOUBLE_EDGE ;last_resort
 	db 45, POWER_GEM ;power_swap
@@ -4589,7 +4589,7 @@ TyranitarEvosAttacks:
 
 LugiaEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, ROAR ;whirlwind, removed
+	db 1, WHIRLWIND ;ROAR
 	db 9, GUST
 	db 15, DRAGONBREATH ;dragon_rush, x
 	db 23, EXTRASENSORY
@@ -4608,7 +4608,7 @@ LugiaEvosAttacks:
 
 HoOhEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, ROAR ;whirlwind, removed
+	db 1, WHIRLWIND ;ROAR
 	db 9, GUST
 	db 15, DRAGONBREATH ;brave_bird, x
 	db 23, EXTRASENSORY

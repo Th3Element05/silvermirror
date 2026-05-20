@@ -2,7 +2,7 @@
 
 EncoreMoves:
 	db SWORDS_DANCE
-;	db WHIRLWIND ;removed
+	db WHIRLWIND
 	db LEER
 	db ROAR
 	db DISABLE

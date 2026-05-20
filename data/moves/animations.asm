@@ -235,7 +235,7 @@ BattleAnimations::
 	dw BattleAnim_IronTail
 	dw BattleAnim_MetalClaw
 	dw BattleAnim_ZenHeadbutt ;_VitalThrow ;
-	dw BattleAnim_MorningSun
+	dw BattleAnim_Whirlwind ;_MorningSun
 	dw BattleAnim_Synthesis
 	dw BattleAnim_Moonlight
 	dw BattleAnim_HiddenPower
@@ -902,29 +902,29 @@ BattleAnim_Roost:
 	anim_wait 16
 	anim_ret
 
-;BattleAnim_Whirlwind:
-;	anim_1gfx BATTLE_ANIM_GFX_WIND
-;.loop
-;	anim_sound 0, 0, SFX_RAZOR_WIND
-;	anim_obj BATTLE_ANIM_OBJ_GUST, 64, 112, $0
-;	anim_wait 6
-;	anim_loop 9, .loop
-;	anim_incobj 1
-;	anim_incobj 2
-;	anim_incobj 3
-;	anim_incobj 4
-;	anim_incobj 5
-;	anim_incobj 6
-;	anim_incobj 7
-;	anim_incobj 8
-;	anim_incobj 9
-;	anim_sound 16, 2, SFX_WHIRLWIND
-;	anim_wait 128
-;	anim_if_param_equal $0, .done
-;	anim_bgeffect BATTLE_BG_EFFECT_REMOVE_MON, $0, BG_EFFECT_TARGET, $0
-;	anim_wait 64
-;.done
-;	anim_ret
+BattleAnim_Whirlwind:
+	anim_1gfx BATTLE_ANIM_GFX_WIND
+.loop
+	anim_sound 0, 0, SFX_RAZOR_WIND
+	anim_obj BATTLE_ANIM_OBJ_GUST, 64, 112, $0
+	anim_wait 6
+	anim_loop 9, .loop
+	anim_incobj 1
+	anim_incobj 2
+	anim_incobj 3
+	anim_incobj 4
+	anim_incobj 5
+	anim_incobj 6
+	anim_incobj 7
+	anim_incobj 8
+	anim_incobj 9
+	anim_sound 16, 2, SFX_WHIRLWIND
+	anim_wait 128
+	anim_if_param_equal $0, .done
+	anim_bgeffect BATTLE_BG_EFFECT_REMOVE_MON, $0, BG_EFFECT_TARGET, $0
+	anim_wait 64
+.done
+	anim_ret
 
 BattleAnim_Bounce:
 	anim_if_param_equal $1, .turn1
@@ -5309,7 +5309,8 @@ BattleAnim_ZenHeadbutt:
 ;	anim_wait 16
 ;	anim_ret
 
-BattleAnim_MorningSun:
+BattleAnim_Synthesis:
+;BattleAnim_MorningSun:
 	anim_1gfx BATTLE_ANIM_GFX_SHINE
 	anim_bgeffect BATTLE_BG_EFFECT_CYCLE_MID_OBPALS_GRAY_AND_YELLOW, $0, $0, $0
 	anim_sound 0, 0, SFX_MORNING_SUN
@@ -5325,21 +5326,21 @@ BattleAnim_MorningSun:
 	anim_call BattleAnimSub_Glimmer
 	anim_ret
 
-BattleAnim_Synthesis:
-	anim_1gfx BATTLE_ANIM_GFX_SHINE
-	anim_call BattleAnim_TargetObj_1Row
-	anim_bgeffect BATTLE_BG_EFFECT_FADE_MON_TO_LIGHT_REPEATING, $0, BG_EFFECT_USER, $40
-	anim_bgeffect BATTLE_BG_EFFECT_CYCLE_MID_OBPALS_GRAY_AND_YELLOW, $0, $0, $0
-	anim_sound 0, 0, SFX_OUTRAGE
-	anim_wait 72
-	anim_incbgeffect BATTLE_BG_EFFECT_FADE_MON_TO_LIGHT_REPEATING
-	anim_call BattleAnim_ShowMon_0
-	anim_if_param_equal WEATHER_SUN, BattleAnim_IntensifiedHeal
-	anim_if_param_equal WEATHER_RAIN, BattleAnim_WeakenedHeal
-	anim_if_param_equal WEATHER_SANDSTORM, BattleAnim_WeakenedHeal
-	anim_bgeffect BATTLE_BG_EFFECT_CYCLE_MID_OBPALS_GRAY_AND_YELLOW, $0, $0, $0
-	anim_call BattleAnimSub_Glimmer
-	anim_ret
+;BattleAnim_Synthesis:
+;	anim_1gfx BATTLE_ANIM_GFX_SHINE
+;	anim_call BattleAnim_TargetObj_1Row
+;	anim_bgeffect BATTLE_BG_EFFECT_FADE_MON_TO_LIGHT_REPEATING, $0, BG_EFFECT_USER, $40
+;	anim_bgeffect BATTLE_BG_EFFECT_CYCLE_MID_OBPALS_GRAY_AND_YELLOW, $0, $0, $0
+;	anim_sound 0, 0, SFX_OUTRAGE
+;	anim_wait 72
+;	anim_incbgeffect BATTLE_BG_EFFECT_FADE_MON_TO_LIGHT_REPEATING
+;	anim_call BattleAnim_ShowMon_0
+;	anim_if_param_equal WEATHER_SUN, BattleAnim_IntensifiedHeal
+;	anim_if_param_equal WEATHER_RAIN, BattleAnim_WeakenedHeal
+;	anim_if_param_equal WEATHER_SANDSTORM, BattleAnim_WeakenedHeal
+;	anim_bgeffect BATTLE_BG_EFFECT_CYCLE_MID_OBPALS_GRAY_AND_YELLOW, $0, $0, $0
+;	anim_call BattleAnimSub_Glimmer
+;	anim_ret
 
 BattleAnim_IntensifiedHeal:
 	anim_bgeffect BATTLE_BG_EFFECT_CYCLE_MID_OBPALS_GRAY_AND_YELLOW, $0, $0, $0
