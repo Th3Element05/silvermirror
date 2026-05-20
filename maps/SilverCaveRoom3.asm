@@ -296,7 +296,7 @@ SilverMirror:
 	writetext SilverCaveRoom3_SilverMirrorText
 	yesorno
 	iffalse .DontTouch
-	callasm SilverCaveRoom3_CopyPlayerParty
+	callasm SilverCaveRoom3_CopyPlayerPartyAsm
 	writetext SilverCaveRoom3_TouchedMirrorText
 	waitbutton
 	closetext
@@ -348,7 +348,7 @@ SilverMirror:
 	setevent EVENT_BEAT_SILVER_MIRROR
 	pause 20
 	special HealParty
-	callasm SilverCaveRoom3_SaveGameAsm
+;	callasm SilverCaveRoom3_SaveGameAsm
 ;	refreshscreen
 	credits
 	end
@@ -365,9 +365,9 @@ SilverMirror:
 	closetext
 	end
 
-SilverCaveRoom3_SaveGameAsm:
-	farcall SaveGameData
-	ret
+;SilverCaveRoom3_SaveGameAsm:
+;	farcall SaveGameData
+;	ret
 
 SilverCaveRoom3_CopyPlayerPartyAsm:
 	farcall CopyPlayerPartyToMysteryGiftTrainer
