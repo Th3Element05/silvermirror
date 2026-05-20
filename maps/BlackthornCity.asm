@@ -307,7 +307,7 @@ BlackthornCityMartSignScript:
 	jumpstd MartSignScript
 
 
-KantoRematchNotifyScript:
+JohtoRematchNotifyScript:
 	opentext
 	writetext JohtoLeadersRematchNotifyText
 ;	playsound SFX_1ST_PLACE
