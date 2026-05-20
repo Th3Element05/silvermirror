@@ -273,7 +273,7 @@ GenerateAltSwarmShiny:
 	cp 2 ; adjust to desired percentage
 	jr nc, .skipshine
 	ld b, ATKDEFDV_SHINYF
-	ld c, SPDSPCDV_SHINY
+	ld c, SPDSPCDV_SHINYF
 	jr .UpdateDVs
 
 .skipshine:
