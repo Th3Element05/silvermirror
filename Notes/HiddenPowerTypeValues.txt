@@ -1,0 +1,105 @@
+Damage Type - The formula for what damage type Hidden Power will have is also very simple. You just need 2 values, Attack DV, and Defense DV. Our example Pokemon had 7 Attack and 8 Defense. Now you use the binary chart and convert those numbers into Binary. 7 = 0111 and 8 = 1000. Now we take only the last 2 numbers from each and combine them Attack first then Defense. 7 = 11, 8 = 00, 1100. Now we look at the binary chart and figure out what number we ended up with and compare it against the chart below to find out what damage type we have: (1100 is binary for 12 so we would have a Hidden Power move that does 45 psychic damage)
+
+SHINY atk = 2/3/6/7/10/11/14/15 def/spd/spc = 10
+1/8192
+
+DEF ATKDEFDV_SHINY EQU $FF
+DEF SPDSPCDV_SHINY EQU $FE
+DEF ATKDEFDV_SHINYF EQU $FE
+DEF SPDSPCDV_SHINYF EQU $FF
+
+M:F
+7:1 : Female = Odd ATK, Even DEF, and Odd SPC
+3:1 : Female =          Even DEF  and Odd SPC
+1:1 : Female =                        Odd SPC
+1:3 : Female =          Even DEF  or  Odd SPC
+
+7:1 starters/, fossils/, eevee/, snorlax
+3:1 growlithe/, abra/, machop/, electabuzz, magmar
+1:3 clefairy/, vulpix/, jigglypuff/, snubbull/, corsola
+
+atk|def / spd|spc
+
+$cc	0000 = Fighting 
+$cd	0001 = Flying
+$ce	0010 = Poison
+$cf	0011 = Ground
+$dc	0100 = Rock
+$dd	0101 = Bug
+$de	0110 = Ghost
+$df	0111 = Steel
+$ec	1000 = Fire
+$ed	1001 = Water
+$ee	1010 = Grass
+$ef	1011 = Electric
+$fc	1100 = Psychic
+$fd	1101 = Ice
+$fe	1110 = Dragon
+$ff	1111 = Dark
+
+
+0	0000
+1	0001
+2	0010
+3	0011
+	
+4	0100
+5	0101
+6	0110
+7	0111
+	
+8	1000
+9	1001
+a	1010
+b	1011
+	
+c	1100
+d	1101
+e	1110
+f	1111
+
+
+
+DEF SHINY_ATK_DV EQU 14 ; or 15
+DEF SHINY_DEF_DV EQU 14 ; or 15
+DEF SHINY_SPD_DV EQU 15
+DEF SHINY_SPC_DV EQU 14 ; or 15
+
+CheckShininess:
+; Check if a mon is shiny by DVs at bc.
+; Return carry if shiny.
+
+	ld l, c
+	ld h, b
+
+; Attack
+	ld a, [hl]
+	and %1111 << 4
+	cp SHINY_ATK_DV << 4
+	jr c, .not_shiny
+
+; Defense
+	ld a, [hli]
+	and %1111
+	cp SHINY_DEF_DV
+	jr c, .not_shiny
+
+; Speed
+	ld a, [hl]
+	and %1111 << 4
+	cp SHINY_SPD_DV << 4
+	jr c, .not_shiny
+
+; Special
+	ld a, [hl]
+	and %1111
+	cp SHINY_SPC_DV
+	jr c, .not_shiny
+
+; shiny
+	scf
+	ret
+
+.not_shiny
+	and a
+	ret
