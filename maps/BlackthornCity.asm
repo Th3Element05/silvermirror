@@ -3,10 +3,19 @@
 
 BlackthornCity_MapScripts:
 	def_scene_scripts
+	scene_script BlackthornCityNoop1Scene, SCENE_BLACKTHORNCITY_NOOP
+	scene_script BlackthornCityRematchNotifyScene, SCENE_BLACKTHORNCITY_REMATCH_NOTIFY
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, BlackthornCityFlypointCallback
 ;	callback MAPCALLBACK_OBJECTS, BlackthornCitySantosCallback
+
+BlackthornCityNoop1Scene:
+	end
+
+BlackthornCityRematchNotifyScene:
+	sdefer JohtoRematchNotifyScript
+	end
 
 BlackthornCityFlypointCallback:
 	setflag ENGINE_FLYPOINT_BLACKTHORN
@@ -296,6 +305,37 @@ BlackthornCityPokecenterSign:
 
 BlackthornCityMartSignScript:
 	jumpstd MartSignScript
+
+
+KantoRematchNotifyScript:
+	opentext
+	writetext JohtoLeadersRematchNotifyText
+;	playsound SFX_1ST_PLACE
+	playsound SFX_FANFARE
+;	playsound SFX_FANFARE_2
+;	playsound SFX_DEX_FANFARE_230_PLUS
+;	playsound SFX_EVOLVED
+;	playsound SFX_GET_BADGE
+	waitsfx
+;	waitbutton
+	closetext
+	setscene SCENE_BLACKTHORNCITY_NOOP
+	end
+
+JohtoLeadersRematchNotifyText:
+	text "Congratulations!"
+	line "You've collected"
+	cont "BADGEs from every"
+	roll "GYM in JOHTO!"
+
+	para "You can now"
+	line "challenge the"
+	cont "JOHTO GYM LEADERS"
+	roll "to rematches!"
+
+	para "Good luck!"
+	done
+
 
 BlackthornCity_MapEvents:
 	db 0, 0 ; filler

@@ -401,6 +401,8 @@ VermilionGymSurgeTrashCan:
 
 ; rematch
 VermilionGymSurgeRematchScript:
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
+	iftrue .GreatBattle
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_LTSURGE_2
@@ -420,6 +422,7 @@ VermilionGymSurgeRematchScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_LTSURGE_2
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
 ;	scall VermilionGymRematchesCheck
 	farscall ViridianGymRematchesCompleteCheck
 	opentext
@@ -428,6 +431,9 @@ VermilionGymSurgeRematchScript:
 	waitbutton
 	closetext
 	end
+
+.GreatBattle
+	jumptextfaceplayer LtSurgeRematchGreatBattleText
 
 ;VermilionGymRematchesCheck:
 ;	checkevent EVENT_BEAT_LEADER_BLUE
@@ -482,6 +488,12 @@ LtSurgeRematchAfterBattleText:
 	ntag "LT.SURGE:"
 	text "I'll put you to the"
 	line "test any time!"
+	done
+
+LtSurgeRematchGreatBattleText:
+	ntag "LT.SURGE:"
+	text "That was a great"
+	line "battle!"
 	done
 
 

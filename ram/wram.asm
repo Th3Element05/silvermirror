@@ -3197,6 +3197,7 @@ wMahoganyMart1FSceneID::                          db
 wTeamRocketBaseB1FSceneID::                       db
 ;wTeamRocketBaseB2FSceneID::                       db
 wTeamRocketBaseB3FSceneID::                       db
+wBlackthornCitySceneID::                          db
 ;wDragonsDenB1FSceneID::                           db
 wDragonShrineSceneID::                            db
 wBattleTower1FSceneID::                           db
@@ -3210,7 +3211,7 @@ wBattleTowerHallwaySceneID::                      db
 ;wMobileTradeRoomSceneID::                         db ; unused in silvermirror
 ;wMobileBattleRoomSceneID::                        db ; unused in silvermirror
 
-	ds 49 ;total ds 128 - 79 used = ds 49
+	ds 48 ;total ds 128 - 80 used = ds 48
 
 ;; fight counts ; unused
 ;wJackFightCount::    db

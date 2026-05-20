@@ -326,6 +326,60 @@ AzaleaGymStatue:
 ;	gettrainername STRING_BUFFER_4, BUGSY, BUGSY1
 ;	jumpstd GymStatue2Script
 
+
+; rematch
+AzaleaGymBugsyRematchScript:
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	iftrue .GreatBattle
+	faceplayer
+	opentext
+	writetext BugsyAskRematchText
+	yesorno
+	iffalse .norematch
+.startbattle
+	closetext
+	winlosstext BugsyRematchWinLossText, 0
+	loadtrainer BUGSY, BUGSY2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_BUGSY_2
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	opentext
+.norematch
+	writetext BugsyRematchAfterBattleText
+	waitbutton
+	closetext
+	end
+
+.GreatBattle
+	jumptextfaceplayer BugsyRematchGreatBattleText
+
+BugsyAskRematchText:
+	ntag "BUGSY:"
+	text "Welcome back!"
+
+	para "Are you ready to"
+	cont "battle?"
+	done
+
+BugsyRematchWinLossText:
+	ntag "BUGSY:"
+	text "Squashed again!"
+	done
+
+BugsyRematchAfterBattleText:
+	ntag "BUGSY:"
+	text "Come back for a"
+	line "battle, any time!"
+	done
+
+BugsyRematchGreatBattleText:
+	ntag "BUGSY:"
+	text "That was a great"
+	line "battle!"
+	done
+
+
 AzaleaGym_MapEvents:
 	db 0, 0 ; filler
 
@@ -340,10 +394,12 @@ AzaleaGym_MapEvents:
 	bg_event  6, 13, BGEVENT_READ, AzaleaGymStatue
 
 	def_object_events
-	object_event  5,  7, SPRITE_BUGSY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AzaleaGymBugsyScript, -1
+	object_event  5,  7, SPRITE_BUGSY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AzaleaGymBugsyScript, EVENT_JOHTO_GYM_LEADERS
 	object_event  9,  2, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherAbel, -1 ;josh
 	object_event  4,  3, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerBugCatcherFinley, -1 ;benny
 	object_event  1,  8, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherJon, -1 ;al
 	object_event  4, 10, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 1, TrainerTwinsMegAndPeg1, -1 ;amyandmay
 	object_event  5, 10, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 1, TrainerTwinsMegAndPeg2, -1 ;amyandmay
 	object_event  7, 13, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AzaleaGymGuideScript, -1
+;
+	object_event  5,  7, SPRITE_BUGSY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AzaleaGymBugsyRematchScript, EVENT_JOHTO_LEADER_REMATCHES

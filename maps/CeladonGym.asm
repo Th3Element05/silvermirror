@@ -156,11 +156,7 @@ TrainerBeautyVictoria:
 	trainer BEAUTY, VICTORIA, EVENT_BEAT_BEAUTY_VICTORIA, BeautyVictoriaSeenText, BeautyVictoriaBeatenText, 0, .Script
 .Script:
 	endifjustbattled
-	opentext
-	writetext BeautyVictoriaAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer BeautyVictoriaAfterBattleText
 
 BeautyVictoriaSeenText:
 	ntag "BEAUTY:"
@@ -187,11 +183,7 @@ TrainerCooltrainerFGwen:
 	trainer COOLTRAINERF, GWEN, EVENT_BEAT_COOLTRAINERF_GWEN, CooltrainerFGwenSeenText, CooltrainerFGwenBeatenText, 0, .Script
 .Script:
 	endifjustbattled
-	opentext
-	writetext CooltrainerFGwenAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer CooltrainerFGwenAfterBattleText
 
 CooltrainerFGwenSeenText:
 	ntag "COOLTRAINER:"
@@ -222,11 +214,7 @@ TrainerLassCora:
 	trainer LASS, CORA, EVENT_BEAT_LASS_CORA, LassCoraSeenText, LassCoraBeatenText, 0, .Script
 .Script:
 	endifjustbattled
-	opentext
-	writetext LassCoraAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer LassCoraAfterBattleText
 
 LassCoraSeenText:
 	ntag "LASS:"
@@ -253,11 +241,7 @@ TrainerBeautySteph:
 	trainer BEAUTY, STEPH, EVENT_BEAT_BEAUTY_STEPH, BeautyStephSeenText, BeautyStephBeatenText, 0, .Script
 .Script:
 	endifjustbattled
-	opentext
-	writetext BeautyStephAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer BeautyStephAfterBattleText
 
 BeautyStephSeenText:
 	ntag "BEAUTY:"
@@ -288,11 +272,7 @@ TrainerPicnickerSharon:
 	trainer PICNICKER, SHARON, EVENT_BEAT_PICNICKER_SHARON, PicnickerSharonSeenText, PicnickerSharonBeatenText, 0, .Script
 .Script:
 	endifjustbattled
-	opentext
-	writetext PicnickerSharonAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer PicnickerSharonAfterBattleText
 
 PicnickerSharonSeenText:
 	ntag "PICNICKER:"
@@ -317,11 +297,7 @@ TrainerBeautyJulia:
 	trainer BEAUTY, JULIA, EVENT_BEAT_BEAUTY_JULIA, BeautyJuliaSeenText, BeautyJuliaBeatenText, 0, .Script
 .Script:
 	endifjustbattled
-	opentext
-	writetext BeautyJuliaAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer BeautyJuliaAfterBattleText
 
 BeautyJuliaSeenText:
 	ntag "BEAUTY:"
@@ -350,11 +326,7 @@ TrainerLassZoey:
 	trainer LASS, ZOEY, EVENT_BEAT_LASS_ZOEY, LassZoeySeenText, LassZoeyBeatenText, 0, .Script
 .Script:
 	endifjustbattled
-	opentext
-	writetext LassZoeyAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer LassZoeyAfterBattleText
 
 LassZoeySeenText:
 	ntag "LASS:"
@@ -389,8 +361,11 @@ CeladonGymStatue:
 .Champion
 	jumpstd GymStatue3Script
 
+
 ; rematch
 CeladonGymErikaRematchScript:
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	iftrue .GreatBattle
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_ERIKA_2
@@ -410,6 +385,7 @@ CeladonGymErikaRematchScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ERIKA_2
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 ;	scall CeladonGymRematchesCheck
 	farscall ViridianGymRematchesCompleteCheck
 	opentext
@@ -418,6 +394,9 @@ CeladonGymErikaRematchScript:
 	waitbutton
 	closetext
 	end
+
+.GreatBattle
+	jumptextfaceplayer ErikaRematchGreatBattleText
 
 ;CeladonGymRematchesCheck:
 ;	checkevent EVENT_BEAT_LEADER_BLUE
@@ -477,6 +456,12 @@ ErikaRematchAfterBattleText:
 	line "with challenging"
 	cont "opponents keeps"
 	roll "your skills sharp!"
+	done
+
+ErikaRematchGreatBattleText:
+	ntag "ERIKA:"
+	text "That was a nice"
+	line "battle!"
 	done
 
 

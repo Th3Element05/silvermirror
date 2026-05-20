@@ -262,6 +262,60 @@ VioletGymStatue:
 ;	gettrainername STRING_BUFFER_4, FALKNER, FALKNER1
 ;	jumpstd GymStatue2Script
 
+
+; rematch
+VioletGymFalknerRematchScript:
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	iftrue .GreatBattle
+	faceplayer
+	opentext
+	writetext FalknerAskRematchText
+	yesorno
+	iffalse .norematch
+.startbattle
+	closetext
+	winlosstext FalknerRematchWinLossText, 0
+	loadtrainer FALKNER, FALKNER2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_FALKNER_2
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	opentext
+.norematch
+	writetext FalknerRematchAfterBattleText
+	waitbutton
+	closetext
+	end
+
+.GreatBattle
+	jumptextfaceplayer FalknerRematchGreatBattleText
+
+FalknerAskRematchText:
+	ntag "FALKNER:"
+	text "Welcome back!"
+
+	para "Are you ready to"
+	cont "battle?"
+	done
+
+FalknerRematchWinLossText:
+	ntag "FALKNER:"
+	text "Grounded again!"
+	done
+
+FalknerRematchAfterBattleText:
+	ntag "FALKNER:"
+	text "Come back for a"
+	line "battle, any time!"
+	done
+
+FalknerRematchGreatBattleText:
+	ntag "FALKNER:"
+	text "That was a great"
+	line "battle!"
+	done
+
+
 VioletGym_MapEvents:
 	db 0, 0 ; filler
 
@@ -276,7 +330,9 @@ VioletGym_MapEvents:
 	bg_event  6, 13, BGEVENT_READ, VioletGymStatue
 
 	def_object_events
-	object_event  5,  2, SPRITE_FALKNER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, VioletGymFalknerScript, -1
+	object_event  5,  2, SPRITE_FALKNER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, VioletGymFalknerScript, EVENT_JOHTO_GYM_LEADERS
 	object_event  7,  6, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 2, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperRick, -1 ;rod
 	object_event  2, 10, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_RIGHT, 2, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperLucas, -1 ;abe
 	object_event  7, 13, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VioletGymGuideScript, -1
+;
+	object_event  5,  2, SPRITE_FALKNER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, VioletGymFalknerRematchScript, EVENT_JOHTO_LEADER_REMATCHES

@@ -788,8 +788,11 @@ CinnabarGymStatue:
 .Champion
 	jumpstd GymStatue3Script
 
+
 ; rematch
 CinnabarGymBlaineRematchScript:
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	iftrue .GreatBattle
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_BLAINE_2
@@ -809,6 +812,7 @@ CinnabarGymBlaineRematchScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_BLAINE_2
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 ;	scall CinnabarGymRematchesCheck
 	farscall ViridianGymRematchesCompleteCheck
 	opentext
@@ -817,6 +821,9 @@ CinnabarGymBlaineRematchScript:
 	waitbutton
 	closetext
 	end
+
+.GreatBattle
+	jumptextfaceplayer BlaineRematchGreatBattleText
 
 ;CinnabarGymRematchesCheck:
 ;	checkevent EVENT_BEAT_LEADER_BLUE
@@ -874,6 +881,12 @@ BlaineRematchAfterBattleText:
 	ntag "BLAINE:"
 	text "I'm here if you're"
 	line "feeling chilly!"
+	done
+
+BlaineRematchGreatBattleText:
+	ntag "BLAINE:"
+	text "That was a hot"
+	line "battle!"
 	done
 
 

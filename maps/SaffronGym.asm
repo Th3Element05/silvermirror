@@ -458,8 +458,11 @@ SaffronGymStatue:
 .Champion
 	jumpstd GymStatue3Script
 
+
 ; rematch
 SaffronGymSabrinaRematchScript:
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	iftrue .GreatBattle
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_SABRINA_2
@@ -479,6 +482,7 @@ SaffronGymSabrinaRematchScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_SABRINA_2
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 ;	scall SaffronGymRematchesCheck
 	farscall ViridianGymRematchesCompleteCheck
 	opentext
@@ -487,6 +491,9 @@ SaffronGymSabrinaRematchScript:
 	waitbutton
 	closetext
 	end
+
+.GreatBattle
+	jumptextfaceplayer SabrinaRematchGreatBattleText
 
 ;SaffronGymRematchesCheck:
 ;	checkevent EVENT_BEAT_LEADER_BLUE
@@ -546,6 +553,12 @@ SabrinaRematchAfterBattleText:
 
 	para "I already know"
 	line "when it will be."
+	done
+
+SabrinaRematchGreatBattleText:
+	ntag "SABRINA:"
+	text "I knew that would"
+	line "be a great battle!"
 	done
 
 

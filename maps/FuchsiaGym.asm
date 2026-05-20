@@ -392,8 +392,11 @@ FuchsiaGymStatue:
 .Champion
 	jumpstd GymStatue3Script
 
+
 ; rematch
 FuchsiaGymKogaRematchScript:
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	iftrue .GreatBattle
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_KOGA_2
@@ -413,6 +416,7 @@ FuchsiaGymKogaRematchScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_KOGA_2
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 ;	scall FuchsiaGymRematchesCheck
 	farscall ViridianGymRematchesCompleteCheck
 	opentext
@@ -421,6 +425,9 @@ FuchsiaGymKogaRematchScript:
 	waitbutton
 	closetext
 	end
+
+.GreatBattle
+	jumptextfaceplayer KogaRematchGreatBattleText
 
 ;FuchsiaGymRematchesCheck:
 ;	checkevent EVENT_BEAT_LEADER_BLUE
@@ -478,6 +485,12 @@ KogaRematchAfterBattleText:
 	ntag "KOGA:"
 	text "Return here for a"
 	line "battle, any time!"
+	done
+
+KogaRematchGreatBattleText:
+	ntag "KOGA:"
+	text "That was a great"
+	line "battle!"
 	done
 
 

@@ -251,8 +251,11 @@ CeruleanGymStatue:
 .Champion
 	jumpstd GymStatue3Script
 
+
 ; rematch
 CeruleanGymMistyRematchScript:
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	iftrue .GreatBattle
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_MISTY_2
@@ -272,6 +275,7 @@ CeruleanGymMistyRematchScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_MISTY_2
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 ;	scall CeruleanGymRematchesCheck
 	farscall ViridianGymRematchesCompleteCheck
 	opentext
@@ -280,6 +284,9 @@ CeruleanGymMistyRematchScript:
 	waitbutton
 	closetext
 	end
+
+.GreatBattle
+	jumptextfaceplayer MistyRematchGreatBattleText
 
 ;CeruleanGymRematchesCheck:
 ;	checkevent EVENT_BEAT_LEADER_BLUE
@@ -339,6 +346,12 @@ MistyRematchAfterBattleText:
 	ntag "MISTY:"
 	text "Come back whenever"
 	line "you want a battle!"
+	done
+
+MistyRematchGreatBattleText:
+	ntag "MISTY:"
+	text "That was a great"
+	line "battle!"
 	done
 
 

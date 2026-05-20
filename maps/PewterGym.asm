@@ -258,8 +258,11 @@ PewterGymStatue:
 .Champion
 	jumpstd GymStatue3Script
 
+
 ; rematch
 PewterGymBrockRematchScript:
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	iftrue .GreatBattle
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_BROCK_2
@@ -279,6 +282,7 @@ PewterGymBrockRematchScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_BROCK_2
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 ;	scall PewterGymRematchesCheck
 	farscall ViridianGymRematchesCompleteCheck
 	opentext
@@ -287,6 +291,9 @@ PewterGymBrockRematchScript:
 	waitbutton
 	closetext
 	end
+
+.GreatBattle
+	jumptextfaceplayer BrockRematchGreatBattleText
 
 ;PewterGymRematchesCheck:
 ;	checkevent EVENT_BEAT_LEADER_BLUE
@@ -358,6 +365,12 @@ BrockRematchAfterBattleText:
 
 	para "I'm always ready"
 	line "for a challenge!"
+	done
+
+BrockRematchGreatBattleText:
+	ntag "BROCK:"
+	text "That was a great"
+	line "battle!"
 	done
 
 

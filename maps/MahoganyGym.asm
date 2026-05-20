@@ -359,6 +359,60 @@ MahoganyGymStatue:
 ;	gettrainername STRING_BUFFER_4, PRYCE, PRYCE1
 ;	jumpstd GymStatue2Script
 
+
+; rematch
+MahoganyGymPryceRematchScript:
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	iftrue .GreatBattle
+	faceplayer
+	opentext
+	writetext PryceAskRematchText
+	yesorno
+	iffalse .norematch
+.startbattle
+	closetext
+	winlosstext PryceRematchWinLossText, 0
+	loadtrainer PRYCE, PRYCE2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_PRYCE_2
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	opentext
+.norematch
+	writetext PryceRematchAfterBattleText
+	waitbutton
+	closetext
+	end
+
+.GreatBattle
+	jumptextfaceplayer PryceRematchGreatBattleText
+
+PryceAskRematchText:
+	ntag "PRYCE:"
+	text "Welcome back."
+
+	para "Are you ready to"
+	cont "battle?"
+	done
+
+PryceRematchWinLossText:
+	ntag "PRYCE:"
+	text "Put on ice again!"
+	done
+
+PryceRematchAfterBattleText:
+	ntag "PRYCE:"
+	text "Come back for a"
+	line "battle, any time!"
+	done
+
+PryceRematchGreatBattleText:
+	ntag "PRYCE:"
+	text "That was a great"
+	line "battle!"
+	done
+
+
 MahoganyGym_MapEvents:
 	db 0, 0 ; filler
 
@@ -373,12 +427,14 @@ MahoganyGym_MapEvents:
 	bg_event  6, 15, BGEVENT_READ, MahoganyGymStatue
 
 	def_object_events
-	object_event  5,  3, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, MahoganyGymPryceScript, -1
+	object_event  5,  3, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, MahoganyGymPryceScript, EVENT_JOHTO_GYM_LEADERS
 	object_event  2,  4, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 1, TrainerBoarderShaun, -1 ;douglas
 	object_event  5,  9, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_TRAINER, 1, TrainerSkierRoxanne, -1 ;roxanne
 	object_event  0, 17, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 1, TrainerBoarderRonald, -1 ;ronald
 	object_event  9, 17, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_TRAINER, 1, TrainerSkierClarissa, -1 ;clarissa
 	object_event  7, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, MahoganyGymGuideScript, -1
 ;	object_event  4,  6, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 1, TrainerBoarderBrad, -1 ;brad
+;
+	object_event  5,  3, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, MahoganyGymPryceRematchScript, EVENT_JOHTO_LEADER_REMATCHES
 
 ;.PinkOverYellowOBPalette

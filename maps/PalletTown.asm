@@ -4,7 +4,7 @@
 PalletTown_MapScripts:
 	def_scene_scripts
 	scene_script PalletTownNoop1Scene, SCENE_PALLETTOWN_OAK_HEY_WAIT
-	scene_script PalletTownKantoRematchNotificationScene, SCENE_PALLETTOWN_REMATCH_NOTIFY
+	scene_script PalletTownKantoRematchNotifyScene, SCENE_PALLETTOWN_REMATCH_NOTIFY
 	scene_script PalletTownNoop2Scene, SCENE_PALLETTOWN_NOOP
 
 	def_callbacks
@@ -14,8 +14,8 @@ PalletTownNoop1Scene:
 PalletTownNoop2Scene:
 	end
 
-PalletTownKantoRematchNotificationScene:
-	sdefer KantoRematchNotificationScript
+PalletTownKantoRematchNotifyScene:
+	sdefer KantoRematchNotifyScript
 	end
 
 PalletTownFlypointCallback:
@@ -256,21 +256,22 @@ OaksHouseSignText:
 ;	closetext
 ;	end
 
-KantoRematchNotificationScript:
+KantoRematchNotifyScript:
 	opentext
-	writetext KantoLeadersRematchNotificationText
-	playsound SFX_1ST_PLACE
-;	playsound SFX_FANFARE
+	writetext KantoLeadersRematchNotifyText
+;	playsound SFX_1ST_PLACE
+	playsound SFX_FANFARE
 ;	playsound SFX_FANFARE_2
 ;	playsound SFX_DEX_FANFARE_230_PLUS
 ;	playsound SFX_EVOLVED
 ;	playsound SFX_GET_BADGE
 	waitsfx
+;	waitbutton
+	closetext
 	setscene SCENE_PALLETTOWN_NOOP
-	waitbutton
 	end
 
-KantoLeadersRematchNotificationText:
+KantoLeadersRematchNotifyText:
 	text "Congratulations!"
 	line "As #MON LEAGUE"
 	cont "CHAMPION, you can"

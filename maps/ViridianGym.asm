@@ -519,6 +519,8 @@ ViridianGymRematchesCompleteCheck::
 
 
 ViridianGymBlueScript:
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	iftrue .GreatBattle
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_LEADER_BLUE
@@ -537,6 +539,7 @@ ViridianGymBlueScript:
 	loadtrainer BLUE, BLUE1
 	startbattle
 	reloadmapafterbattle
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	opentext
 	checkevent EVENT_BEAT_LEADER_BLUE
 	iffalse .firsttime
@@ -552,7 +555,9 @@ ViridianGymBlueScript:
 	waitbutton
 	closetext
 	end
-	
+
+.GreatBattle
+	jumptextfaceplayer BlueRematchGreatBattleText
 
 BlueRematchIntroText:
 	ntag "<RIVAL>:"
@@ -601,7 +606,7 @@ BlueRematchWinLossText:
 
 BlueRematchAfterBattleText:
 	ntag "<RIVAL>:"
-	text "We can battle any"
+	text "I'll battle you any"
 	line "time you want."
 	done
 
@@ -623,6 +628,13 @@ BlueAfterFirstRematchText:
 	para "I'll try not to"
 	line "let it go to my"
 	cont "head!"
+	done
+
+BlueRematchGreatBattleText:
+	ntag "<RIVAL>:"
+	text "I'll keep training"
+	line "to be stronger for"
+	cont "our next battle!"
 	done
 
 

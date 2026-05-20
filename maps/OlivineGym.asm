@@ -174,6 +174,60 @@ OlivineGymStatue:
 ;.Beaten:
 ;	jumpstd GymStatue2Script
 
+
+; rematch
+OlivineGymJasmineRematchScript:
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	iftrue .GreatBattle
+	faceplayer
+	opentext
+	writetext JasmineAskRematchText
+	yesorno
+	iffalse .norematch
+.startbattle
+	closetext
+	winlosstext JasmineRematchWinLossText, 0
+	loadtrainer JASMINE, JASMINE2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_JASMINE_2
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	opentext
+.norematch
+	writetext JasmineRematchAfterBattleText
+	waitbutton
+	closetext
+	end
+
+.GreatBattle
+	jumptextfaceplayer JasmineRematchGreatBattleText
+
+JasmineAskRematchText:
+	ntag "JASMINE:"
+	text "Welcome back."
+
+	para "Are you ready to"
+	line "battle?"
+	done
+
+JasmineRematchWinLossText:
+	ntag "JASMINE:"
+	text "Beaten again!"
+	done
+
+JasmineRematchAfterBattleText:
+	ntag "JASMINE:"
+	text "Come back for a"
+	line "battle, any time!"
+	done
+
+JasmineRematchGreatBattleText:
+	ntag "JASMINE:"
+	text "That was a great"
+	line "battle!"
+	done
+
+
 OlivineGym_MapEvents:
 	db 0, 0 ; filler
 
@@ -188,5 +242,7 @@ OlivineGym_MapEvents:
 	bg_event  7, 13, BGEVENT_READ, OlivineGymStatue
 
 	def_object_events
-	object_event  5,  1, SPRITE_JASMINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineGymJasmineScript, -1
+	object_event  5,  1, SPRITE_JASMINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineGymJasmineScript, EVENT_JOHTO_GYM_LEADERS
 	object_event  6, 13, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineGymGuideScript, -1
+;
+	object_event  5,  1, SPRITE_JASMINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineGymJasmineRematchScript, EVENT_JOHTO_LEADER_REMATCHES
