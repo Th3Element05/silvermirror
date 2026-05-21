@@ -1,10 +1,10 @@
 	db "MOUSE@" ; species name
 	dw 104, 130 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+	db   "When angered, it"
+	next "immediately dis-"
+	next "charges all of"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+	page "the energy stored"
+	next "in the pouches in"
+	next "its cheeks.@"
