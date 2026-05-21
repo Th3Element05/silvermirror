@@ -127,7 +127,7 @@ MtSilverOak:
 	turnobject PLAYER, UP
 	pause 20
 	applymovement PLAYER, SilverCaveRoom3_ApproachMirrorMovement
-	pause 20
+;	pause 20
 	special FadeBlackQuickly
 	special ReloadSpritesNoPalettes
 	pause 30
@@ -307,7 +307,6 @@ SilverMirror:
 	applymovement SILVERCAVEROOM3_SILVER_MIRROR, SilverCaveRoom3_RocksmashMovement
 	appear SILVERCAVEROOM3_SILVER_CHRIS
 	refreshscreen
-;	pause 20
 	pause 10
 	opentext
 	writetext SilverCaveRoom3_ShockedText
@@ -327,7 +326,6 @@ SilverMirror:
 	applymovement SILVERCAVEROOM3_SILVER_MIRROR, SilverCaveRoom3_RocksmashMovement
 	appear SILVERCAVEROOM3_SILVER_KRIS
 	refreshscreen
-;	pause 20
 	pause 10
 	opentext
 	writetext SilverCaveRoom3_ShockedText
