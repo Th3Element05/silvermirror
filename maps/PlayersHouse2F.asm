@@ -277,60 +277,57 @@ PlayersHouseBookshelfChallengeModeDeactivatedText:
 	line "DEACTIVATED!"
 	done
 
-PlayersHouseDebugPlayer:
-	opentext
-	writetext PlayersHouseDebugText
-	waitbutton
-;	givepoke BULBASAUR, 10
-;	givepoke CHARMANDER, 10
-;	givepoke SQUIRTLE, 10
-	givepoke BULBASAUR, 50
-	givepoke CHARMANDER, 50
+;PlayersHouseDebugPlayer:
+;	opentext
+;	writetext PlayersHouseDebugText
+;	waitbutton
+;	givepoke BULBASAUR, 50
+;	givepoke CHARMANDER, 50
 ;	givepoke SQUIRTLE, 50
 
-	loadmem wPartyMon1Moves+0, FIRE_FANG
-	loadmem wPartyMon1Moves+1, ICE_FANG
-	loadmem wPartyMon1Moves+2, THUNDER_FANG
-	loadmem wPartyMon1Moves+3, POISON_FANG
-;	loadmem wPartyMon1DVs+0, $ea
-;	loadmem wPartyMon1DVs+1, $aa
+;	loadmem wPartyMon1Moves+0, FIRE_FANG
+;	loadmem wPartyMon1Moves+1, ICE_FANG
+;	loadmem wPartyMon1Moves+2, THUNDER_FANG
+;	loadmem wPartyMon1Moves+3, POISON_FANG
+;	loadmem wPartyMon1DVs+0, $ef
+;	loadmem wPartyMon1DVs+1, $fe
 
-	loadmem wPartyMon2Moves+0, FIRE_PUNCH
-	loadmem wPartyMon2Moves+1, ICE_PUNCH
-	loadmem wPartyMon2Moves+2, THUNDERPUNCH
-	loadmem wPartyMon2Moves+3, METAL_CLAW
-;	loadmem wPartyMon1DVs+0, $ea
-;	loadmem wPartyMon1DVs+1, $aa
+;	loadmem wPartyMon2Moves+0, FIRE_PUNCH
+;	loadmem wPartyMon2Moves+1, ICE_PUNCH
+;	loadmem wPartyMon2Moves+2, THUNDERPUNCH
+;	loadmem wPartyMon2Moves+3, METAL_CLAW
+;	loadmem wPartyMon1DVs+0, $ef
+;	loadmem wPartyMon1DVs+1, $fe
 
 ;	loadmem wPartyMon3Moves+0, SEED_BOMB
 ;	loadmem wPartyMon3Moves+1, X_SCISSOR
 ;	loadmem wPartyMon3Moves+2, ASTONISH
 ;	loadmem wPartyMon3Moves+3, ICICLE_SPEAR
-;	loadmem wPartyMon1DVs+0, $ea
-;	loadmem wPartyMon1DVs+1, $aa
+;	loadmem wPartyMon1DVs+0, $ef
+;	loadmem wPartyMon1DVs+1, $fe
 
-	giveitem RARE_CANDY, 20
-	giveitem CARBOS, 20
-	giveitem X_ACCURACY, 20
+;	giveitem RARE_CANDY, 20
+;	giveitem CARBOS, 20
+;	giveitem X_ACCURACY, 20
 ;	giveitem TM_GIGA_DRAIN
-	special HealParty
-	closetext
-	end
+;	special HealParty
+;	closetext
+;	end
 
-TrainerRivalDebug:
-	trainer RIVAL1, RIVAL_DEBUG, EVENT_BEAT_GRUNTM_1, PlayersHouseDebugText, PlayersHouseDebugText, 0, .Script
-.Script:
-	endifjustbattled
-	opentext
-	writetext PlayersHouseDebugText
-	waitbutton
-	closetext
-	clearevent EVENT_BEAT_GRUNTM_1
-	end
-
-PlayersHouseDebugText:
-	text "DEBUG STUFF"
-	done
+;TrainerRivalDebug:
+;	trainer RIVAL1, RIVAL_DEBUG, EVENT_BEAT_GRUNTM_1, PlayersHouseDebugText, PlayersHouseDebugText, 0, .Script
+;.Script:
+;	endifjustbattled
+;	opentext
+;	writetext PlayersHouseDebugText
+;	waitbutton
+;	closetext
+;	clearevent EVENT_BEAT_GRUNTM_1
+;	end
+;
+;PlayersHouseDebugText:
+;	text "DEBUG STUFF"
+;	done
 
 PlayersHouse2F_MapEvents:
 	db 0, 0 ; filler
@@ -353,5 +350,5 @@ PlayersHouse2F_MapEvents:
 	object_event  4,  4, SPRITE_DOLL_1, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PlayersHouseDoll1Script, EVENT_PLAYERS_HOUSE_2F_DOLL_1
 	object_event  5,  4, SPRITE_DOLL_2, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PlayersHouseDoll2Script, EVENT_PLAYERS_HOUSE_2F_DOLL_2
 	object_event  0,  1, SPRITE_BIG_DOLL, SPRITEMOVEDATA_BIGDOLL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PlayersHouseBigDollScript, EVENT_PLAYERS_HOUSE_2F_BIG_DOLL
-	object_event  1,  1, SPRITE_CHRIS, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PlayersHouseDebugPlayer, -1
-	object_event  0,  1, SPRITE_CHRIS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerRivalDebug, -1
+;	object_event  1,  1, SPRITE_CHRIS, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PlayersHouseDebugPlayer, -1
+;	object_event  0,  1, SPRITE_CHRIS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerRivalDebug, -1
