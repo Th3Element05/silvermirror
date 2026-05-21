@@ -41,6 +41,7 @@ MrPokemonsHouseMrPokemonEventScript:
 	waitbutton
 	closetext
 	applymovement MRPOKEMONSHOUSE_OAK, MrPokemonsHouse_OakWalksToMrPokemonMovement
+	turnobject MRPOKEMONSHOUSE_GENTLEMAN, LEFT
 	opentext
 	writetext MrPokemonsHouse_OakSaysFarewellText
 	waitbutton
@@ -51,6 +52,7 @@ MrPokemonsHouseMrPokemonEventScript:
 	waitsfx
 	special RestartMapMusic
 	pause 15
+	turnobject MRPOKEMONSHOUSE_GENTLEMAN, DOWN
 	turnobject PLAYER, UP
 	opentext
 	writetext MrPokemonText_Invaluable
