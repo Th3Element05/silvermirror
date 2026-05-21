@@ -337,8 +337,8 @@ endr
 	pop af
 	jp c, CancelEvolution
 
-	ld hl, CongratulationsYourPokemonText
-	call PrintText
+;	ld hl, CongratulationsYourPokemonText
+;	call PrintText
 
 	pop hl
 
