@@ -1929,8 +1929,12 @@
 	const EVENT_HO_OH_ITEM_ROOM_LUM_BERRY
 ; used 16
 
-; group total used 134
-; running total used 2034
+; Passwords
+	const EVENT_JOHTO_STARTERS
+; used 1
+
+; group total used 135
+; running total used 2035
 
 	const_next 2048
 DEF NUM_EVENTS EQU const_value ; 800

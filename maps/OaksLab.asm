@@ -104,12 +104,18 @@ OaksLabTryToLeaveScript:
 	applymovement PLAYER, OaksLabDontLeaveMovement
 	end
 
+
+; Fire starter
 CharmanderPokeBallScript:
 	checkevent EVENT_OAKS_LAB_OAK
 	iftrue LookAtPokeballsEarlyScript
-;	opentext
-;	setval CHARMANDER
-;	special ShowPokedexEntry
+	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
+	iftrue OaksLastPokemonScript
+	turnobject OAKSLAB_OAK, DOWN
+	checkevent EVENT_JOHTO_STARTERS
+	iftrue .Cyndaquil
+
+;Charmander
 	refreshscreen
 	pokepic CHARMANDER
 	cry CHARMANDER
@@ -117,18 +123,15 @@ CharmanderPokeBallScript:
 	closepokepic
 	setval CHARMANDER
 	special SilentSetSeenMon
-	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
-	iftrue OaksLastPokemonScript
-	turnobject OAKSLAB_OAK, DOWN
+	getmonname STRING_BUFFER_3, CHARMANDER
 	opentext
-	writetext OaksLabTakeCharmanderText
+	writetext OaksLabTakeFireStarterText
 	yesorno
 	iffalse OaksLabDidntChooseStarterScript
 	disappear OAKSLAB_POKE_BALL1
 	writetext OaksLabChoseStarterText
 	promptbutton
 	waitsfx
-	getmonname STRING_BUFFER_3, CHARMANDER
 	writetext OaksLabReceivedStarterText
 	playsound SFX_CAUGHT_MON
 	waitsfx
@@ -138,13 +141,46 @@ CharmanderPokeBallScript:
 	setevent EVENT_GOT_A_POKEMON_FROM_OAK
 	setevent EVENT_GOT_CHARMANDER_FROM_OAK
 	sjump RivalTakesSquirtle
-	
+
+.Cyndaquil
+	refreshscreen
+	pokepic CYNDAQUIL
+	cry CYNDAQUIL
+	waitbutton
+	closepokepic
+;	setval CYNDAQUIL
+;	special SilentSetSeenMon
+	getmonname STRING_BUFFER_3, CYNDAQUIL
+	opentext
+	writetext OaksLabTakeFireStarterText
+	yesorno
+	iffalse OaksLabDidntChooseStarterScript
+	disappear OAKSLAB_POKE_BALL1
+	writetext OaksLabChoseStarterText
+	promptbutton
+	waitsfx
+	writetext OaksLabReceivedStarterText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	promptbutton
+	givepoke CYNDAQUIL, 5
+	closetext
+	setevent EVENT_GOT_A_POKEMON_FROM_OAK
+	setevent EVENT_GOT_CHARMANDER_FROM_OAK
+	sjump RivalTakesSquirtle
+
+
+; Water starter
 SquirtlePokeBallScript:
 	checkevent EVENT_OAKS_LAB_OAK
 	iftrue LookAtPokeballsEarlyScript
-;	opentext
-;	setval SQUIRTLE
-;	special ShowPokedexEntry
+	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
+	iftrue OaksLastPokemonScript
+	turnobject OAKSLAB_OAK, DOWN
+	checkevent EVENT_JOHTO_STARTERS
+	iftrue .Totodile
+
+;Squirtle
 	refreshscreen
 	pokepic SQUIRTLE
 	cry SQUIRTLE
@@ -154,16 +190,15 @@ SquirtlePokeBallScript:
 	special SilentSetSeenMon
 	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
 	iftrue OaksLastPokemonScript
-	turnobject OAKSLAB_OAK, DOWN
+	getmonname STRING_BUFFER_3, SQUIRTLE
 	opentext
-	writetext OaksLabTakeSquirtleText
+	writetext OaksLabTakeWaterStarterText
 	yesorno
 	iffalse OaksLabDidntChooseStarterScript
 	disappear OAKSLAB_POKE_BALL2
 	writetext OaksLabChoseStarterText
 	promptbutton
 	waitsfx
-	getmonname STRING_BUFFER_3, SQUIRTLE
 	writetext OaksLabReceivedStarterText
 	playsound SFX_CAUGHT_MON
 	waitsfx
@@ -173,13 +208,48 @@ SquirtlePokeBallScript:
 	setevent EVENT_GOT_A_POKEMON_FROM_OAK
 	setevent EVENT_GOT_SQUIRTLE_FROM_OAK
 	sjump RivalTakesBulbasaur
-	
+
+.Totodile
+	refreshscreen
+	pokepic TOTODILE
+	cry TOTODILE
+	waitbutton
+	closepokepic
+;	setval TOTODILE
+;	special SilentSetSeenMon
+	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
+	iftrue OaksLastPokemonScript
+	getmonname STRING_BUFFER_3, TOTODILE
+	opentext
+	writetext OaksLabTakeWaterStarterText
+	yesorno
+	iffalse OaksLabDidntChooseStarterScript
+	disappear OAKSLAB_POKE_BALL2
+	writetext OaksLabChoseStarterText
+	promptbutton
+	waitsfx
+	writetext OaksLabReceivedStarterText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	promptbutton
+	givepoke TOTODILE, 5
+	closetext
+	setevent EVENT_GOT_A_POKEMON_FROM_OAK
+	setevent EVENT_GOT_SQUIRTLE_FROM_OAK
+	sjump RivalTakesBulbasaur
+
+
+; Grass starter
 BulbasaurPokeBallScript:
 	checkevent EVENT_OAKS_LAB_OAK
 	iftrue LookAtPokeballsEarlyScript
-;	opentext
-;	setval BULBASAUR
-;	special ShowPokedexEntry
+	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
+	iftrue OaksLastPokemonScript
+	turnobject OAKSLAB_OAK, DOWN
+	checkevent EVENT_JOHTO_STARTERS
+	iftrue .Chikorita
+
+;Bulbasaur
 	refreshscreen
 	pokepic BULBASAUR
 	cry BULBASAUR
@@ -189,21 +259,49 @@ BulbasaurPokeBallScript:
 	special SilentSetSeenMon
 	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
 	iftrue OaksLastPokemonScript
-	turnobject OAKSLAB_OAK, DOWN
+	getmonname STRING_BUFFER_3, BULBASAUR
 	opentext
-	writetext OaksLabTakeBulbasaurText
+	writetext OaksLabTakeGrassStarterText
 	yesorno
 	iffalse OaksLabDidntChooseStarterScript
 	disappear OAKSLAB_POKE_BALL3
 	writetext OaksLabChoseStarterText
 	promptbutton
 	waitsfx
-	getmonname STRING_BUFFER_3, BULBASAUR
 	writetext OaksLabReceivedStarterText
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	promptbutton
 	givepoke BULBASAUR, 5
+	closetext
+	setevent EVENT_GOT_A_POKEMON_FROM_OAK
+	setevent EVENT_GOT_BULBASAUR_FROM_OAK
+	sjump RivalTakesCharmander
+
+.Chikorita
+	refreshscreen
+	pokepic CHIKORITA
+	cry CHIKORITA
+	waitbutton
+	closepokepic
+;	setval CHIKORITA
+;	special SilentSetSeenMon
+	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
+	iftrue OaksLastPokemonScript
+	getmonname STRING_BUFFER_3, CHIKORITA
+	opentext
+	writetext OaksLabTakeGrassStarterText
+	yesorno
+	iffalse OaksLabDidntChooseStarterScript
+	disappear OAKSLAB_POKE_BALL3
+	writetext OaksLabChoseStarterText
+	promptbutton
+	waitsfx
+	writetext OaksLabReceivedStarterText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	promptbutton
+	givepoke CHIKORITA, 5
 	closetext
 	setevent EVENT_GOT_A_POKEMON_FROM_OAK
 	setevent EVENT_GOT_BULBASAUR_FROM_OAK
@@ -491,17 +589,179 @@ OaksLabPoster2Text:
 	line "manner."
 	done
 
-OaksLabPC:
-	jumptext OaksLabPCText
+OaksLabPC: ;simple
+	opentext
+	writetext OaksLabPCText
+	promptbutton
+	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
+	iffalse .OaksPCLocked
+	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
+	iftrue .OaksPCLocked
+	checkevent EVENT_JOHTO_STARTERS
+	iftrue .AskChangeBack
+	writetext OaksLabPCJohtoOptionText
+	yesorno
+	iffalse .End
+	playsound SFX_SAVE
+	setevent EVENT_JOHTO_STARTERS
+	writetext OaksLabPCJohtoStarterText
+	waitbutton
+	closetext
+	end
+
+.AskChangeBack
+	writetext OaksLabPCKantoOptionText
+	yesorno
+	iffalse .End
+	playsound SFX_SAVE
+	clearevent EVENT_JOHTO_STARTERS
+	writetext OaksLabPCKantoStarterText
+	waitbutton
+	closetext
+	end
+
+.OaksPCLocked
+	writetext OaksLabPCLockedText
+	waitbutton
+.End
+	closetext
+	end
+
 OaksLabPCText:
-	text "It's PROF. OAK's"
+	text "It's PROF.OAK's"
 	line "personal computer."
-
-	para "…"
-
-	para "You don't know"
-	line "the password."
 	done
+
+OaksLabPCLockedText:
+	text "…"
+
+	para "You don't know the"
+	line "password."
+	done
+
+OaksLabPCJohtoOptionText:
+	text "He forgot to sign"
+	line "out!"
+
+	para "Swap your starter"
+	line "#MON choices to"
+	cont "JOHTO starters?"
+	done
+
+OaksLabPCJohtoStarterText:
+	text "Starter #MON"
+	line "set to JOHTO."
+	done
+
+OaksLabPCKantoOptionText:
+	text "Swap your starter"
+	line "choices back to"
+	cont "KANTO starters?"
+	done
+
+OaksLabPCKantoStarterText:
+	text "Starter #MON"
+	line "set to KANTO."
+	done
+
+
+;OaksLabPC: ;password system (not working)
+;	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
+;	iftrue .AlreadyGotStarter
+;	opentext
+;	writetext OaksLabPCAskPasswordText
+;	yesorno
+;	iffalse .End
+;	callasm OaksPCPasswordAsm
+;	callasm OaksPCCheckPasswordAsm
+;	iffalse .WrongPassword
+;	playsound SFX_SAVE
+;	setevent EVENT_JOHTO_STARTERS
+;	waitsfx
+;;	opentext
+;	writetext OaksPCPasswordAcceptedText
+;	waitbutton
+;.End
+;	closetext
+;	end
+;
+;.WrongPassword
+;	playsound SFX_WRONG
+;	waitsfx
+;	closetext
+;	end
+;
+;.AlreadyGotStarter
+;	jumptext OaksLabPCText
+;OaksLabPCText:
+;	text "It's PROF.OAK's"
+;	line "personal computer."
+;	done
+;
+;	para "…"
+;
+;	para "You don't know"
+;	line "the password."
+;	done
+
+;OaksLabPCAskPasswordText:
+;	text "It's PROF.OAK's"
+;	line "personal computer."
+;
+;	para "It's locked…"
+;
+;	para "Do you want to"
+;	line "input a password?"
+;	done
+
+;OaksPCPasswordAcceptedText:
+;	text "Password Accepted"
+;
+;	para "Starter #MON"
+;	cont "set to JOHTO."
+;
+;	para "To change back to"
+;	line "KANTO starters,"
+;	cont "input any wrong"
+;	roll "password."
+;	done
+
+;OaksPCPasswordAsm:
+;	push de
+;	call LoadStandardMenuHeader
+;	call DisableSpriteUpdates
+;	pop de
+;	push de
+;	ld b, NAME_PASSWORD
+;	ld de, wGreensName
+;;	ld a, $03 ; bank3?
+;;	rst Bankswitch
+;;	call NamingScreen
+;;	ld a, $15
+;;	rst Bankswitch
+;	farcall NamingScreen
+;	pop hl
+;	ld de, wStringBuffer1
+;	call InitName
+;	ld a, $4 ; ExitAllMenus is in bank 0; maybe it used to be in bank 4
+;	ld hl, ExitAllMenus
+;	rst FarCall
+;	ret
+
+;OaksPCCheckPasswordAsm:
+;	xor a
+;	ld [wScriptVar], a
+;	ld de, JohtoPassword
+;	ld hl, wGreensName ; check saved password
+;	ld c, 4
+;	call CompareBytes
+;	ret nz
+;	ld a, 1
+;	ld [wScriptVar], a
+;	ret
+
+;JohtoPassword:
+;	db "JOHTO"
 
 PokedexScript:
 	jumptext OaksLabPokedexText
@@ -512,7 +772,12 @@ OaksLabPokedexText:
 	done
 
 OaksLabTrashcan:
+	checkevent EVENT_JOHTO_STARTERS
+	iftrue .JohtoStartersTest
 	jumpstd TrashCanScript
+
+.JohtoStartersTest
+	jumptext OaksLabPokedexText
 
 OaksLabBookshelf:
 	jumpstd DifficultBookshelfScript
@@ -695,22 +960,43 @@ OaksLabRivalNotGreedyText:
 	line "<PLAYER>!"
 	done
 
-OaksLabTakeCharmanderText:
+;OaksLabTakeCharmanderText:
+;	text "You want the"
+;	line "FIRE #MON,"
+;	cont "CHARMANDER?"
+;	done
+OaksLabTakeFireStarterText:
 	text "You want the"
 	line "FIRE #MON,"
-	cont "CHARMANDER?"
+	cont "@"
+	text_ram wStringBuffer3
+	text "?"
 	done
 
-OaksLabTakeSquirtleText:
+;OaksLabTakeSquirtleText:
+;	text "You want the"
+;	line "WATER #MON,"
+;	cont "SQUIRTLE?"
+;	done
+OaksLabTakeWaterStarterText:
 	text "You want the"
 	line "WATER #MON,"
-	cont "SQUIRTLE?"
+	cont "@"
+	text_ram wStringBuffer3
+	text "?"
 	done
 
-OaksLabTakeBulbasaurText:
+;OaksLabTakeBulbasaurText:
+;	text "You want the"
+;	line "GRASS #MON,"
+;	cont "BULBASAUR?"
+;	done
+OaksLabTakeGrassStarterText:
 	text "You want the"
 	line "GRASS #MON,"
-	cont "BULBASAUR?"
+	cont "@"
+	text_ram wStringBuffer3
+	text "?"
 	done
 
 OaksLabChoseStarterText:
@@ -976,9 +1262,9 @@ OaksLabOakTalkToMomText:
 
 OaksLabPokemonAwaitText:
 	ntag "PROF.OAK:"
-	text "<PLAYER>!"
-	line "#MON around the"
-	cont "world await you!"
+	text "<PLAYER>! #MON"
+	line "around the world"
+	cont "await you!"
 	done
 
 OaksLabOakGivesPokeballsText:
@@ -1066,10 +1352,14 @@ OaksLabTrashcanText:
 	done
 
 OaksLabThoseArePokeballsText:
-	text "Those are"
-	line "#BALLs. They"
-	cont "contain #MON!"
+	text "It's a #BALL."
+	line "It has a #MON"
+	cont "inside!"
 	done
+;	text "Those are #-"
+;	line "BALLs. They"
+;	cont "contain #MON!"
+;	done
 
 OakLabEvaluateDexText:
 	ntag "PROF.OAK:"
@@ -1530,7 +1820,19 @@ DebugRollCreditsText:
 	text "Roll credits?"
 	done
 
-;Debug:
+DebugLancesRoom:
+	opentext
+	writetext DebugLancesRoomText
+	yesorno
+	iffalse .End
+	warp E4_LANCES_ROOM, 4, 21
+.End
+	closetext
+	end
+
+DebugLancesRoomText:
+	text "Go to LANCE's ROOM?"
+	done
 
 DebugSFXRoom:
 	opentext
@@ -1859,7 +2161,7 @@ OaksLab_MapEvents:
 	bg_event  3,  6, BGEVENT_READ, DebugMasterBalls
 	bg_event  6,  6, BGEVENT_READ, DebugSkipFastShip
 	bg_event  7,  6, BGEVENT_READ, DebugCredits
-;	bg_event  8,  6, BGEVENT_READ, Debug
+	bg_event  8,  6, BGEVENT_READ, DebugLancesRoom
 	bg_event  9,  6, BGEVENT_READ, DebugSFXRoom
 ; front bookshelves
 	bg_event  0,  7, BGEVENT_READ, DebugBeatKantoLeaders
