@@ -2505,31 +2505,31 @@ HappinessCheckScript:
 	end
 
 .NotUsedToYou:
-	writetext HappinessRatingText_NotUsedToYou
+	farwritetext HappinessRatingText_NotUsedToYou
 	waitbutton
 	closetext
 	end
 
 .QuiteCute:
-	writetext HappinessRatingText_QuiteCute
+	farwritetext HappinessRatingText_QuiteCute
 	waitbutton
 	closetext
 	end
 
 .SortOfHappy:
-	writetext HappinessRatingText_SortOfHappy
+	farwritetext HappinessRatingText_SortOfHappy
 	waitbutton
 	closetext
 	end
 
 .ReallyTrustsYou:
-	writetext HappinessRatingText_ReallyTrustsYou
+	farwritetext HappinessRatingText_ReallyTrustsYou
 	waitbutton
 	closetext
 	end
 
 .LovesYouALot:
-	writetext HappinessRatingText_LovesYouALot
+	farwritetext HappinessRatingText_LovesYouALot
 	waitbutton
 	closetext
 	end
