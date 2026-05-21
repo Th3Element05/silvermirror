@@ -41,17 +41,16 @@ LancesRoomDoorLocksBehindYouScript:
 
 Script_ApproachLanceFromLeft:
 ; stop from leaving?
-	special FadeOutMusic
 	applymovement PLAYER, MovementData_ApproachLanceFromLeft
 	sjump LancesRoomLanceScript
 
 Script_ApproachLanceFromRight:
 ; stop from leaving?
-	special FadeOutMusic
 	applymovement PLAYER, MovementData_ApproachLanceFromRight
 LancesRoomLanceScript:
 	checkevent EVENT_BEAT_E4_LANCE
 	iftrue LanceScript_AfterBattle
+	special FadeOutMusic
 	turnobject LANCESROOM_LANCE, LEFT
 	checkevent EVENT_OPENED_MT_SILVER
 	iftrue LanceRematchScript
@@ -119,22 +118,41 @@ LancesRoomRivalBattleScript:
 	closetext
 	setlasttalked LANCESROOM_RIVAL
 	winlosstext ChampionBattleWinText, ChampionBattleLossText
+
 	checkevent EVENT_GOT_SQUIRTLE_FROM_OAK
 	iftrue .ChampionBulbasaur
+
 	checkevent EVENT_GOT_BULBASAUR_FROM_OAK
 	iftrue .ChampionCharmander
+
+;ChampionSquirtle
 	getmonname STRING_BUFFER_3, CHARMANDER
+	checkevent EVENT_JOHTO_STARTERS
+	iffalse .CharmanderStarter
+	getmonname STRING_BUFFER_3, CYNDAQUIL
+.CharmanderStarter
 	loadtrainer CHAMPION, CHAMPION1_SQUIRTLE
 	sjump .DoChampionBattle
+
 .ChampionBulbasaur
 	getmonname STRING_BUFFER_3, SQUIRTLE
+	checkevent EVENT_JOHTO_STARTERS
+	iffalse .SquirtleStarter
+	getmonname STRING_BUFFER_3, TOTODILE
+.SquirtleStarter
 	loadtrainer CHAMPION, CHAMPION1_BULBASAUR
 	sjump .DoChampionBattle
+
 .ChampionCharmander
 	getmonname STRING_BUFFER_3, BULBASAUR
+	checkevent EVENT_JOHTO_STARTERS
+	iffalse .BulbasaurStarter
+	getmonname STRING_BUFFER_3, CHIKORITA
+.BulbasaurStarter
 	loadtrainer CHAMPION, CHAMPION1_CHARMANDER
-;	sjump .FinishChampion
+;	sjump .DoChampionBattle
 	; fallthrough
+
 .DoChampionBattle
 	startbattle
 	dontrestartmapmusic
@@ -290,9 +308,9 @@ LanceBattleIntroText:
 	cont "call me LANCE the"
 	roll "DRAGON MASTER!"
 
-	para "You know that"
+	para "Did you know that"
 	line "dragons are"
-	cont "mythical #MON!"
+	cont "mythical #MON?"
 
 	para "They're hard to"
 	line "catch and raise,"
@@ -303,7 +321,7 @@ LanceBattleIntroText:
 	line "indestructible!"
 
 	para "Well, are you"
-	line "ready to lose?"
+	line "ready?"
 
 	para "Your LEAGUE"
 	line "challenge ends"
@@ -314,15 +332,14 @@ LanceBattleWinText:
 	ntag "LANCE:"
 	text "That's it!"
 
-	para "I hate to admit"
-	line "it, but you are a"
-	cont "#MON master!"
+	para "<PLAYER>, you are"
+	cont "a #MON master!"
 	done
 
 LanceBattleAfterText_1:
 	ntag "LANCE:"
 	text "I still can't"
-	line "believe my"
+	line "believe that my"
 	cont "dragons lost to"
 	roll "you, <PLAYER>!"
 
@@ -383,7 +400,7 @@ ChampionBattleIntroText:
 	line "be strong to keep"
 	cont "me sharp!"
 
-	para "While working on"
+	para "While filling my"
 	line "#DEX, I looked"
 	cont "all over for"
 	cont "powerful #MON!"
@@ -467,8 +484,9 @@ LancesRoomOakCongratulationsText:
 	ntag "PROF.OAK:"
 	text "So, you won!"
 	line "Congratulations!"
-	cont "You're the new"
-	roll "#MON LEAGUE"
+
+	para "You're the new"
+	line "#MON LEAGUE"
 	cont "CHAMPION!"
 
 	para "You've grown up so"
@@ -484,17 +502,17 @@ LancesRoomOakDisappointedText:
 	text "<RIVAL>!"
 	line "I'm disappointed!"
 
-	para "I came when I"
-	line "heard you beat"
+	para "I came as soon as"
+	line "I heard you beat"
 	cont "the ELITE FOUR!"
 
-	para "But, when I got"
-	line "here, you had"
+	para "But by the time I"
+	line "got here, you had"
 	cont "already lost!"
 
 	para "<RIVAL>! Do you"
-	line "understand why"
-	cont "you lost?"
+	line "understand why you"
+	cont "lost?"
 
 	para "You have forgotten"
 	line "to treat your"
