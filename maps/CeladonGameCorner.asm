@@ -558,18 +558,18 @@ CeladonGameCorner100Coins:
 	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
 	end
 
-CeladonGameCornerDebugCoins:
-	conditional_event EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_100, .HiddenCoins
-.HiddenCoins
-	getstring STRING_BUFFER_4, CeladonGameCornerCoins100
-	scall CeladonGameCornerFoundCoinsStdScript
-	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
-	iftrue .End
-	givecoins 9999
-	setevent EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_100
-.End
-	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
-	end
+;CeladonGameCornerDebugCoins:
+;	conditional_event EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_100, .HiddenCoins
+;.HiddenCoins
+;	getstring STRING_BUFFER_4, CeladonGameCornerCoins100
+;	scall CeladonGameCornerFoundCoinsStdScript
+;	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
+;	iftrue .End
+;	givecoins 9999
+;	setevent EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_100
+;.End
+;	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
+;	end
 
 CeladonGameCornerCoins10:
 	db "10@"
@@ -755,7 +755,7 @@ CeladonGameCorner_MapEvents:
 ;	bg_event 11,  3, BGEVENT_ITEM, CeladonGameCorner40CoinsI
 	bg_event 15,  4, BGEVENT_IFNOTSET, CeladonGameCorner100Coins
 ;	bg_event 15,  4, BGEVENT_ITEM, CeladonGameCorner100CoinsI
-	bg_event  0,  0, BGEVENT_IFNOTSET, CeladonGameCornerDebugCoins
+;	bg_event  0,  0, BGEVENT_IFNOTSET, CeladonGameCornerDebugCoins
 
 	def_object_events
 	object_event  9,  1, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerRocketGruntM6, EVENT_BEAT_GRUNTM_6
