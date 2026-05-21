@@ -87,7 +87,7 @@ WiseTriosRoomExplainClearBellScript:
 	sjump .TurnAwayPlayer
 
 WiseTriosRoomThatFeatherText:
-	ntag "GAKU:"
+	ntag "SAGE:"
 	text "That feather!"
 	line "The RAINBOW WING!"
 
@@ -109,7 +109,7 @@ WiseTriosRoomThatFeatherText:
 	done
 
 WiseTriosRoomExplainTowersText:
-	ntag "MASA:"
+	ntag "SAGE:"
 	text "A long time ago"
 	line "a rainbow-winged"
 	cont "#MON made its"
@@ -155,7 +155,7 @@ WiseTriosRoomExplainTowersText:
 	done
 
 WiseTriosRoomExplainClearBellText:
-	ntag "KOJI:"
+	ntag "SAGE:"
 	text "If you wish to"
 	line "prove the quality"
 	cont "of your spirit,"
@@ -209,7 +209,7 @@ WiseTriosRoomExplainClearBellText:
 ;	done
 
 WiseTriosRoomBringTheWingText:
-	ntag "KOJI:"
+	ntag "SAGE:"
 	text "We were told you"
 	line "had a feather from"
 	cont "a RAINBOW-colored"
@@ -264,7 +264,7 @@ TrainerSageGaku:
 	jumptextfaceplayer SageKojiAfterBattleFinalText
 
 SageGakuSeenText:
-	ntag "GAKU:"
+	ntag "SAGE:"
 	text "Ah!"
 
 	para "The sound of that"
@@ -295,7 +295,7 @@ SageGakuBeatenText:
 	done
 
 SageGakuAfterBattleText:
-	ntag "GAKU:"
+	ntag "SAGE:"
 	text "The rainbow-winged"
 	line "#MON has not"
 	cont "been seen for"
@@ -334,7 +334,7 @@ TrainerSageMasa:
 	jumptextfaceplayer SageKojiAfterBattleFinalText
 
 SageMasaSeenText:
-	ntag "MASA:"
+	ntag "SAGE:"
 	text "That bell's chime"
 	line "is indicative of"
 	cont "the bearer's soul."
@@ -356,7 +356,7 @@ SageMasaBeatenText:
 	done
 
 SageMasaAfterBattleText:
-	ntag "MASA:"
+	ntag "SAGE:"
 	text "You might just be"
 	line "worthy to climb"
 	cont "TIN TOWER and face"
@@ -387,7 +387,7 @@ TrainerSageKoji:
 	jumptextfaceplayer SageKojiAfterBattleFinalText
 
 SageKojiSeenText:
-	ntag "KOJI:"
+	ntag "SAGE:"
 	text "Let me see your"
 	line "power!"
 
@@ -407,7 +407,7 @@ SageKojiBeatenText:
 ;	done
 
 SageKojiAfterBattleSpeechText:
-	ntag "KOJI:"
+	ntag "SAGE:"
 	text "The sound of your"
 	line "CLEAR BELL ringing"
 	cont "is undeniable."
@@ -422,7 +422,7 @@ SageKojiAfterBattleSpeechText:
 	done
 
 SageKojiAfterBattleFinalText:
-	ntag "KOJI:"
+	ntag "SAGE:"
 	text "Please, go on,"
 	line "and enter the TIN"
 	cont "TOWER ahead."
