@@ -444,10 +444,18 @@ _CongratulationsYourPokemonText::
 ;	text_end ; unreferenced
 
 _EvolvedIntoText::
-	text_start
-
-	cont "evolved into"      ;para
-	roll "@"                 ;line
+;	text_start
+;
+;	cont "evolved into"      ;para
+;	roll "@"                 ;line
+;	text_ram wStringBuffer1
+;	text "!"
+;	done
+	text "Congratulations!"
+	line "@"
+	text_ram wStringBuffer2
+	text " evolved"
+	cont "into @"
 	text_ram wStringBuffer1
 	text "!"
 	done
@@ -1242,8 +1250,8 @@ _BallSentToPCText::
 _NewDexDataText::
 	text_ram wEnemyMonNickname
 	text "'s data"
-	line "was newly added to"
-	cont "the #DEX.@"
+	line "was added to the"
+	cont "#DEX.@"
 	sound_slot_machine_start
 	text_promptbutton
 	text_end
