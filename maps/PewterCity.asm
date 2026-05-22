@@ -217,17 +217,21 @@ PewterCityBlockingGuyHeyText:
 
 PewterCityBlockingGuyFollowMeText:
 	ntag "TRAINER:"
-	text "You're a trainer"
-	line "right? BROCK is"
-	cont "looking for new"
-	roll "challengers!"
+	text "You're a trainer,"
+	line "right?"
+
+;	para "BROCK is looking"
+;	line "for challengers!" ;"for new challengers!"
 
 	para "Follow me!"
 	done
 
 PewterCityBlockingGuyBrockText:
 	ntag "TRAINER:"
-	text "If you have the"
+	text "This is PEWTER's"
+	line "#MON GYM!"
+
+	para "If you have the"
 	line "right stuff, go"
 	cont "take on BROCK!"
 	done
@@ -437,8 +441,7 @@ PewterCitySign:
 	jumptext PewterCitySignText
 PewterCitySignText:
 	text "PEWTER CITY"
-	line "A Stone Gray"
-	cont "City"
+	line "A Stone Gray City"
 	done
 
 PewterCityTrainerTips:
