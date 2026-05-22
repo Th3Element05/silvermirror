@@ -889,7 +889,7 @@ SwarmGrassWildMonsAlt:
 
 	; EEVEE
 	def_grass_wildmons BILLS_BACK_YARD ;GEN1
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; day
 	db 10, EEVEE      ; 20% chance
 	db 10, EEVEE      ; 20% chance
@@ -1047,7 +1047,7 @@ SwarmGrassWildMonsAlt:
 
 	; MEOWTH
 	def_grass_wildmons ROUTE_39
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; day
 	db 16, MEOWTH     ; 20% chance
 	db 17, MEOWTH     ; 20% chance
@@ -1177,7 +1177,7 @@ SwarmGrassWildMonsAlt:
 
 	; KOFFING (1/2)
 	def_grass_wildmons BURNED_TOWER_1F
-	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; day
 	db 14, KOFFING    ; 20% chance
 	db 15, KOFFING    ; 20% chance
@@ -1255,7 +1255,7 @@ SwarmGrassWildMonsAlt:
 
 	; PARAS
 	def_grass_wildmons ILEX_FOREST
-	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; day
 	db  6, PARAS      ; 20% chance
 	db  7, PARAS      ; 20% chance
@@ -1281,7 +1281,7 @@ SwarmGrassWildMonsAlt:
 
 	; SLOWPOKE (1/2)
 	def_grass_wildmons SLOWPOKE_WELL_B1F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; day
 	db  6, SLOWPOKE   ; 20% chance
 	db  7, SLOWPOKE   ; 20% chance
@@ -1307,7 +1307,7 @@ SwarmGrassWildMonsAlt:
 
 	; SLOWPOKE (2/2)
 	def_grass_wildmons SLOWPOKE_WELL_B2F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; day
 	db 21, SLOWPOKE   ; 20% chance
 	db 22, SLOWPOKE   ; 20% chance
@@ -1359,7 +1359,7 @@ SwarmGrassWildMonsAlt:
 
 	; TEDDIURSA (1/2)
 	def_grass_wildmons DARK_CAVE_VIOLET_ENTRANCE
-	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; day
 	db 20, TEDDIURSA  ; 20% chance
 	db 20, TEDDIURSA  ; 20% chance
@@ -1385,7 +1385,7 @@ SwarmGrassWildMonsAlt:
 
 	; TEDDIURSA (2/2)
 	def_grass_wildmons DARK_CAVE_BLACKTHORN_ENTRANCE
-	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; day
 	db 20, TEDDIURSA  ; 20% chance
 	db 20, TEDDIURSA  ; 20% chance
@@ -1411,7 +1411,7 @@ SwarmGrassWildMonsAlt:
 
 	; SWINUB (1/3)
 	def_grass_wildmons ICE_PATH_1F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; day
 	db 21, SWINUB     ; 20% chance
 	db 22, SWINUB     ; 20% chance
@@ -1437,7 +1437,7 @@ SwarmGrassWildMonsAlt:
 
 	; SWINUB (2/3)
 	def_grass_wildmons ICE_PATH_B1F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; day
 	db 21, SWINUB     ; 20% chance
 	db 22, SWINUB     ; 20% chance
@@ -1463,7 +1463,7 @@ SwarmGrassWildMonsAlt:
 
 	; SWINUB (3/3)
 	def_grass_wildmons ICE_PATH_B2F_B3F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; day
 	db 21, SWINUB     ; 20% chance
 	db 22, SWINUB     ; 20% chance

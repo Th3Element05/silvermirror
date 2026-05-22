@@ -51,7 +51,7 @@ KantoWaterWildMons:
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_19 ;GEN1
-	db 6 percent ; encounter rate
+	db 5 percent ; encounter rate
 	db 10, TENTACOOL  ; 50
 	db 15, HORSEA     ; 30
 	db 15, TENTACOOL  ; 10
@@ -59,7 +59,7 @@ KantoWaterWildMons:
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_20 ;GEN1
-	db 6 percent ; encounter rate
+	db 5 percent ; encounter rate
 	db 10, TENTACOOL  ; 50
 	db 15, HORSEA     ; 30
 	db 15, TENTACOOL  ; 10
@@ -67,7 +67,7 @@ KantoWaterWildMons:
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_21 ;GEN1
-	db 6 percent ; encounter rate
+	db 5 percent ; encounter rate
 	db 10, TENTACOOL  ; 50
 	db 15, HORSEA     ; 30
 	db 15, TENTACOOL  ; 10
@@ -163,7 +163,7 @@ KantoWaterWildMons:
 	end_water_wildmons
 
 	def_water_wildmons VERMILION_PORT ;GEN1
-	db 6 percent ; encounter rate
+	db 4 percent ; encounter rate
 	db 10, TENTACOOL  ; 50
 	db 15, HORSEA     ; 30
 	db 15, TENTACOOL  ; 10
@@ -219,7 +219,7 @@ KantoWaterWildMons:
 	end_water_wildmons
 
 	def_water_wildmons TOHJO_FALLS_OUTSIDE ;GEN1
-	db 4 percent ; encounter rate
+	db 6 percent ; encounter rate
 	db 41, TENTACRUEL ; 50
 	db 41, GYARADOS   ; 30
 	db 41, GYARADOS   ; 10
@@ -227,7 +227,7 @@ KantoWaterWildMons:
 	end_water_wildmons
 
 	def_water_wildmons BILLS_BACK_YARD ;GEN1
-	db 6 percent ; encounter rate
+	db 4 percent ; encounter rate
 	db 10, GOLDEEN    ; 50
 	db 10, PSYDUCK    ; 30
 	db  5, MAGIKARP   ; 10

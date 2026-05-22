@@ -471,7 +471,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons MOUNT_MORTAR_1F_OUTSIDE
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
 	; day
 	db 14, GEODUDE    ; 20% chance
 	db 13, ZUBAT      ; 20% chance
@@ -497,7 +497,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons MOUNT_MORTAR_1F_INSIDE
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
 	; day
 	db 13, GEODUDE    ; 20% chance
 	db 14, RATTATA    ; 20% chance
@@ -523,7 +523,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons MOUNT_MORTAR_2F_INSIDE
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
 	; day
 	db 31, GRAVELER   ; 20% chance
 	db 32, MACHOKE    ; 20% chance
@@ -549,7 +549,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons MOUNT_MORTAR_B1F
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
 	; day
 	db 15, ZUBAT      ; 20% chance
 	db 16, ZUBAT      ; 20% chance
@@ -679,7 +679,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons UNION_CAVE_1F
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
 	; day
 	db  6, GEODUDE    ; 20% chance
 	db  6, SANDSHREW  ; 20% chance
@@ -705,7 +705,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons UNION_CAVE_B1F
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
 	; day
 	db  6, ZUBAT      ; 20% chance
 	db  8, GEODUDE    ; 20% chance
@@ -835,7 +835,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons DARK_CAVE_VIOLET_ENTRANCE
-	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
 	; day
 	db 23, GEODUDE    ; 20% chance
 	db 23, ZUBAT      ; 20% chance
@@ -861,7 +861,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons DARK_CAVE_BLACKTHORN_ENTRANCE
-	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
 	; day
 	db 23, GEODUDE    ; 20% chance
 	db 23, ZUBAT      ; 20% chance
@@ -887,7 +887,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons ICE_PATH_1F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; day
 	db 21, SWINUB     ; 20% chance
 	db 22, SWINUB     ; 20% chance
@@ -913,7 +913,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons ICE_PATH_B1F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; day
 	db 21, SWINUB     ; 20% chance
 	db 22, SWINUB     ; 20% chance
@@ -939,7 +939,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons ICE_PATH_B2F_B3F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; day
 	db 22, SWINUB     ; 20% chance
 	db 23, SWINUB     ; 20% chance
@@ -991,7 +991,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons WHIRL_ISLAND_CAVES
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
 	; day
 	db 23, KRABBY     ; 20% chance
 	db 24, KRABBY     ; 20% chance
@@ -1017,7 +1017,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons WHIRL_ISLAND_B1F_B2F
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
 	; day
 	db 23, KRABBY     ; 20% chance
 	db 24, KRABBY     ; 20% chance
