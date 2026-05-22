@@ -82,8 +82,7 @@ YoungsterGordonSeenText:
 
 YoungsterGordonBeatenText:
 	ntag "GORDON:"
-	text "Losing"
-	line "stinks!"
+	text "Losing stinks!"
 	done
 
 YoungsterGordonAfterBattleText:
@@ -112,8 +111,7 @@ BugCatcherDaneSeenText:
 
 BugCatcherDaneBeatenText:
 	ntag "DANE:"
-	text "You"
-	line "got me!"
+	text "You got me!"
 	done
 
 BugCatcherDaneAfterBattleText:
@@ -251,7 +249,7 @@ MountMoon_MapEvents:
 	warp_event 29, 41, MOUNT_MOON_SQUARE, 1 ; 7
 	warp_event 13, 43, MOUNT_MOON_B2F, 3    ; 8
 	warp_event  7, 49, MOUNT_MOON, 2        ; 9
-	warp_event 29, 49, MOUNT_MOON_B2F, 1    ; 10
+	warp_event 31, 49, MOUNT_MOON_B2F, 1    ; 10
 	warp_event  3, 51, MOUNT_MOON_B2F, 2    ; 11
 	warp_event 13, 51, MOUNT_MOON_B2F, 4    ; 12
 	warp_event 35, 51, ROUTE_4, 1           ; 13
@@ -275,5 +273,6 @@ MountMoon_MapEvents:
 	object_event 35, 31, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, MtMoonRareCandy, EVENT_MT_MOON_RARE_CANDY
 	object_event  4, 32, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, MtMoonTMWaterGun, EVENT_MT_MOON_TM_WATER_GUN
 	object_event 20, 33, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, MtMoonPotion2, EVENT_MT_MOON_POTION2
+	object_event 18, 29, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MtMoonRock, -1
+	object_event 32, 37, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MtMoonRock, -1
 	object_event 33, 45, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MtMoonRock, -1
-;	object_event 36, 48, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MtMoonRock, -1
