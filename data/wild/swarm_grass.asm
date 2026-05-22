@@ -733,7 +733,7 @@ SwarmGrassWildMons:
 
 	; EEVEE
 	def_grass_wildmons BILLS_BACK_YARD ;GEN1
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; day
 	db 10, EEVEE      ; 20% chance
 	db 10, EEVEE      ; 20% chance
@@ -969,7 +969,7 @@ SwarmGrassWildMons:
 
 	; ODDISH
 	def_grass_wildmons ILEX_FOREST
-	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; day
 	db  6, ODDISH     ; 20% chance
 	db  7, ODDISH     ; 20% chance
@@ -1073,7 +1073,7 @@ SwarmGrassWildMons:
 
 	; DUNSPARCE (1/2)
 	def_grass_wildmons DARK_CAVE_VIOLET_ENTRANCE
-	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; day
 	db 18, DUNSPARCE  ; 20% chance
 	db 18, DUNSPARCE  ; 20% chance
@@ -1099,7 +1099,7 @@ SwarmGrassWildMons:
 
 	; DUNSPARCE (2/2)
 	def_grass_wildmons DARK_CAVE_BLACKTHORN_ENTRANCE
-	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; day
 	db 18, DUNSPARCE  ; 20% chance
 	db 18, DUNSPARCE  ; 20% chance
@@ -1125,7 +1125,7 @@ SwarmGrassWildMons:
 
 	; SNEASEL (1/3)
 	def_grass_wildmons ICE_PATH_1F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; day
 	db 22, SNEASEL    ; 20% chance
 	db 23, SNEASEL    ; 20% chance
@@ -1151,7 +1151,7 @@ SwarmGrassWildMons:
 
 	; SNEASEL (2/3)
 	def_grass_wildmons ICE_PATH_B1F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; day
 	db 22, SNEASEL    ; 20% chance
 	db 23, SNEASEL    ; 20% chance
@@ -1177,7 +1177,7 @@ SwarmGrassWildMons:
 
 	; SNEASEL (3/3)
 	def_grass_wildmons ICE_PATH_B2F_B3F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 	; day
 	db 22, SNEASEL    ; 20% chance

@@ -731,7 +731,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons MOUNT_MOON ;GEN1
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
 	; day
 	db  6, ZUBAT      ; 20% chance
 	db  6, ZUBAT      ; 20% chance
@@ -757,7 +757,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons MOUNT_MOON_B2F ;GEN1
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
 	; day
 	db  7, ZUBAT      ; 20% chance
 	db  7, ZUBAT      ; 20% chance
@@ -809,7 +809,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons ROCK_TUNNEL_1F ;GEN1
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
 	; day
 	db 15, ZUBAT      ; 20% chance
 	db 15, ZUBAT      ; 20% chance
@@ -835,7 +835,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons ROCK_TUNNEL_B1F ;GEN1
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
 	; day
 	db 15, ZUBAT      ; 20% chance
 	db 16, ZUBAT      ; 20% chance
@@ -861,7 +861,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons POKEMON_TOWER_3F ;GEN1
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
 	; day
 	db 18, GASTLY     ; 20% chance
 	db 18, GASTLY     ; 20% chance
@@ -887,7 +887,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons POKEMON_TOWER_4F ;GEN1
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
 	; day
 	db 18, GASTLY     ; 20% chance
 	db 18, GASTLY     ; 20% chance
@@ -913,7 +913,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons POKEMON_TOWER_5F ;GEN1
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
 	; day
 	db 18, GASTLY     ; 20% chance
 	db 18, GASTLY     ; 20% chance
@@ -939,7 +939,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons POKEMON_TOWER_6F ;GEN1
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
 	; day
 	db 18, GASTLY     ; 20% chance
 	db 19, GASTLY     ; 20% chance
@@ -991,7 +991,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons SEAFOAM_ISLANDS ;GEN1
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
 	; day
 	db 19, ZUBAT      ; 20% chance
 	db 20, SLOWPOKE   ; 20% chance
@@ -1017,7 +1017,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons SEAFOAM_ISLANDS_B1F ;GEN1
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
 	; day
 	db 19, ZUBAT      ; 20% chance
 	db 20, KRABBY     ; 20% chance
@@ -1043,7 +1043,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons SEAFOAM_ISLANDS_B2F ;GEN1
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
 	; day
 	db 19, ZUBAT      ; 20% chance
 	db 20, KRABBY     ; 20% chance
@@ -1121,7 +1121,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons POWER_PLANT ;GEN1
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
 	; day
 	db 23, VOLTORB    ; 20% chance
 	db 22, MAGNEMITE  ; 20% chance
@@ -1147,7 +1147,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons POKEMON_MANSION_1F ;GEN1
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
 	; day
 	db 28, KOFFING    ; 20% chance
 	db 28, GRIMER     ; 20% chance
@@ -1173,7 +1173,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons POKEMON_MANSION_2F ;GEN1
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
 	; day
 	db 28, KOFFING    ; 20% chance
 	db 28, GRIMER     ; 20% chance
@@ -1199,7 +1199,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons POKEMON_MANSION_3F ;GEN1
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
 	; day
 	db 28, KOFFING    ; 20% chance
 	db 28, GRIMER     ; 20% chance
@@ -1225,7 +1225,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons POKEMON_MANSION_B1F ;GEN1
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
 	; day
 	db 28, GRIMER     ; 20% chance
 	db 28, GRIMER     ; 20% chance
@@ -1251,7 +1251,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons VICTORY_ROAD_1F ;GEN1
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
 	; day
 	db 38, ONIX       ; 20% chance
 	db 33, MACHOP     ; 20% chance
@@ -1277,7 +1277,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons VICTORY_ROAD_2F ;GEN1
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
 	; day
 	db 38, ONIX       ; 20% chance
 	db 33, MACHOP     ; 20% chance
@@ -1303,7 +1303,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons VICTORY_ROAD_3F ;GEN1
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
 	; day
 	db 38, ONIX       ; 20% chance
 	db 33, MACHOP     ; 20% chance
@@ -1329,7 +1329,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons CERULEAN_CAVE_1F ;GEN1
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
 	; day
 	db 48, GOLBAT     ; 20% chance
 	db 48, GOLBAT     ; 20% chance
@@ -1355,7 +1355,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons CERULEAN_CAVE_2F ;GEN1
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
 	; day
 	db 48, GOLBAT     ; 20% chance
 	db 46, KADABRA    ; 20% chance
@@ -1381,7 +1381,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons CERULEAN_CAVE_B1F ;GEN1
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
 	; day
 	db 48, GOLBAT     ; 20% chance
 	db 46, GRAVELER   ; 20% chance
@@ -1407,7 +1407,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons TOHJO_FALLS ;GEN1
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
 	; day
 	db 21, ZUBAT      ; 20% chance
 	db 24, RATICATE   ; 20% chance
@@ -1433,7 +1433,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons TOHJO_FALLS_OUTSIDE ;GEN1
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; day
 	db 50, CHANSEY    ; 20% chance
 	db 50, CHANSEY    ; 20% chance
@@ -1459,7 +1459,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons BILLS_BACK_YARD ;GEN1
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; day
 	db 16, PIDGEY     ; 20% chance
 	db 12, BELLSPROUT ; 20% chance

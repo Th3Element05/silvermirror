@@ -3,7 +3,7 @@
 JohtoWaterWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as JohtoWaterWildMons:
 
 	def_water_wildmons ROUTE_27_WEST
-	db 6 percent ; encounter rate
+	db 5 percent ; encounter rate
 	db 15, TENTACOOL
 	db 15, POLIWAG
 	db 15, SLOWPOKE
@@ -11,7 +11,7 @@ JohtoWaterWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_30
-	db 2 percent ; encounter rate
+	db 6 percent ; encounter rate
 	db 15, POLIWAG
 	db 10, MAGIKARP
 	db 10, POLIWAG
@@ -19,7 +19,7 @@ JohtoWaterWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_31
-	db 2 percent ; encounter rate
+	db 6 percent ; encounter rate
 	db 15, POLIWAG
 	db 10, MAGIKARP
 	db 10, POLIWAG
@@ -43,7 +43,7 @@ JohtoWaterWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_35
-	db 4 percent ; encounter rate
+	db 6 percent ; encounter rate
 	db 15, PSYDUCK
 	db 10, MAGIKARP
 	db 10, PSYDUCK
@@ -51,7 +51,7 @@ JohtoWaterWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_40
-	db 6 percent ; encounter rate
+	db 5 percent ; encounter rate
 	db 15, TENTACOOL
 	db 16, HORSEA
 	db 25, TENTACRUEL
@@ -59,7 +59,7 @@ JohtoWaterWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_41
-	db 6 percent ; encounter rate
+	db 5 percent ; encounter rate
 	db 15, TENTACOOL
 	db 16, HORSEA
 	db 25, TENTACRUEL
@@ -67,7 +67,7 @@ JohtoWaterWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_42
-	db 4 percent ; encounter rate
+	db 5 percent ; encounter rate
 	db 15, GOLDEEN
 	db 10, MAGIKARP
 	db 10, GOLDEEN
@@ -75,7 +75,7 @@ JohtoWaterWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_43
-	db 2 percent ; encounter rate
+	db 6 percent ; encounter rate
 	db 10, MAGIKARP
 	db  5, MAGIKARP
 	db 15, MAGIKARP
@@ -83,7 +83,7 @@ JohtoWaterWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_44
-	db 2 percent ; encounter rate
+	db 6 percent ; encounter rate
 	db 15, POLIWAG
 	db 10, MAGIKARP
 	db 10, POLIWAG
@@ -91,7 +91,7 @@ JohtoWaterWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_45
-	db 2 percent ; encounter rate
+	db 6 percent ; encounter rate
 	db 10, MAGIKARP
 	db  5, MAGIKARP
 	db 15, MAGIKARP
@@ -99,7 +99,7 @@ JohtoWaterWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	end_water_wildmons
 
 	def_water_wildmons NEW_BARK_TOWN
-	db 6 percent ; encounter rate
+	db 2 percent ; encounter rate
 	db 15, TENTACOOL
 	db 16, HORSEA
 	db 10, TENTACOOL
@@ -123,7 +123,7 @@ JohtoWaterWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	end_water_wildmons
 
 	def_water_wildmons VIOLET_CITY
-	db 2 percent ; encounter rate
+	db 6 percent ; encounter rate
 	db 15, POLIWAG
 	db 10, MAGIKARP
 	db 10, POLIWAG
@@ -131,7 +131,7 @@ JohtoWaterWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	end_water_wildmons
 
 	def_water_wildmons RUINS_OF_ALPH_OUTSIDE
-	db 2 percent ; encounter rate
+	db 6 percent ; encounter rate
 	db 15, WOOPER
 	db 15, QUAGSIRE
 	db 10, WOOPER
@@ -139,7 +139,7 @@ JohtoWaterWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	end_water_wildmons
 
 	def_water_wildmons UNION_CAVE_1F
-	db 2 percent ; encounter rate
+	db 4 percent ; encounter rate
 	db 15, WOOPER
 	db 15, QUAGSIRE
 	db 10, WOOPER
@@ -147,7 +147,7 @@ JohtoWaterWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	end_water_wildmons
 
 	def_water_wildmons UNION_CAVE_B1F
-	db 2 percent ; encounter rate
+	db 4 percent ; encounter rate
 	db 15, WOOPER
 	db 15, QUAGSIRE
 	db 10, WOOPER
@@ -155,7 +155,7 @@ JohtoWaterWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	end_water_wildmons
 
 	def_water_wildmons UNION_CAVE_B2F
-	db 4 percent ; encounter rate
+	db 2 percent ; encounter rate
 	db 15, TENTACOOL
 	db 15, WOOPER
 	db 25, TENTACRUEL
@@ -179,7 +179,7 @@ JohtoWaterWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	end_water_wildmons
 
 	def_water_wildmons ILEX_FOREST
-	db 2 percent ; encounter rate
+	db 4 percent ; encounter rate
 	db 15, PSYDUCK
 	db 10, MAGIKARP
 	db 10, PSYDUCK
@@ -187,7 +187,7 @@ JohtoWaterWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	end_water_wildmons
 
 	def_water_wildmons ECRUTEAK_CITY
-	db 2 percent ; encounter rate
+	db 6 percent ; encounter rate
 	db 15, POLIWAG
 	db 10, MAGIKARP
 	db 10, POLIWAG
@@ -195,7 +195,7 @@ JohtoWaterWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	end_water_wildmons
 
 	def_water_wildmons OLIVINE_CITY
-	db 6 percent ; encounter rate
+	db 5 percent ; encounter rate
 	db 15, TENTACOOL
 	db 16, HORSEA
 	db 10, TENTACOOL
@@ -235,7 +235,7 @@ JohtoWaterWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	end_water_wildmons
 
 	def_water_wildmons CIANWOOD_CITY
-	db 6 percent ; encounter rate
+	db 5 percent ; encounter rate
 	db 15, TENTACOOL
 	db 16, HORSEA
 	db 10, TENTACOOL
@@ -299,7 +299,7 @@ JohtoWaterWildMonsChallenge: ;MUST BE IN OWN BANK even though uses same data as 
 	end_water_wildmons
 
 	def_water_wildmons SILVER_CAVE_OUTSIDE
-	db 2 percent ; encounter rate
+	db 6 percent ; encounter rate
 	db 25, POLIWHIRL
 	db 25, GYARADOS
 	db 20, POLIWAG

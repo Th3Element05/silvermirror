@@ -2,23 +2,6 @@
 
 KantoWaterWildMonsChallenge:
 
-;water_time
-;	def_water_wildmons ROUTE_1
-;	db 4 percent ; encounter rate
-;	; morn
-;	db 10, BULBASAUR
-;	db 10, BULBASAUR
-;	db 10, BULBASAUR
-;	; day
-;	db 10, CHARMANDER
-;	db 10, CHARMANDER
-;	db 10, CHARMANDER
-;	; nite
-;	db 10, SQUIRTLE
-;	db 10, SQUIRTLE
-;	db 10, SQUIRTLE
-;	end_water_wildmons
-
 	def_water_wildmons ROUTE_4 ;GEN2
 	db 4 percent ; encounter rate
 	db 10, GOLDEEN    ; 50
@@ -68,7 +51,7 @@ KantoWaterWildMonsChallenge:
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_19 ;GEN2
-	db 6 percent ; encounter rate
+	db 5 percent ; encounter rate
 	db 10, TENTACOOL  ; 50
 	db 15, HORSEA     ; 30
 	db 15, TENTACOOL  ; 10
@@ -76,7 +59,7 @@ KantoWaterWildMonsChallenge:
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_20 ;GEN2
-	db 6 percent ; encounter rate
+	db 5 percent ; encounter rate
 	db 10, TENTACOOL  ; 50
 	db 15, HORSEA     ; 30
 	db 15, TENTACOOL  ; 10
@@ -84,7 +67,7 @@ KantoWaterWildMonsChallenge:
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_21 ;GEN2
-	db 6 percent ; encounter rate
+	db 5 percent ; encounter rate
 	db 10, TENTACOOL  ; 50
 	db 15, HORSEA     ; 30
 	db 15, TENTACOOL  ; 10
@@ -180,7 +163,7 @@ KantoWaterWildMonsChallenge:
 	end_water_wildmons
 
 	def_water_wildmons VERMILION_PORT ;GEN2
-	db 6 percent ; encounter rate
+	db 4 percent ; encounter rate
 	db 10, TENTACOOL  ; 50
 	db 15, HORSEA     ; 30
 	db 15, TENTACOOL  ; 10
@@ -236,7 +219,7 @@ KantoWaterWildMonsChallenge:
 	end_water_wildmons
 
 	def_water_wildmons TOHJO_FALLS_OUTSIDE ;GEN1
-	db 4 percent ; encounter rate
+	db 6 percent ; encounter rate
 	db 41, TENTACRUEL ; 50
 	db 41, GYARADOS   ; 30
 	db 41, GYARADOS   ; 10
@@ -244,7 +227,7 @@ KantoWaterWildMonsChallenge:
 	end_water_wildmons
 
 	def_water_wildmons BILLS_BACK_YARD ;GEN2
-	db 6 percent ; encounter rate
+	db 4 percent ; encounter rate
 	db 10, GOLDEEN    ; 50
 	db 10, PSYDUCK    ; 30
 	db  5, MAGIKARP   ; 10
