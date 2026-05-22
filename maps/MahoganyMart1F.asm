@@ -40,13 +40,15 @@ MahoganyMart1FCheckDayOfWeekCallback:
 	disappear MAHOGANYMART1F_DUMMYRIGHT_F
 	disappear MAHOGANYMART1F_DUMMYDOWN_M
 	disappear MAHOGANYMART1F_DUMMYDOWN_F
+	checkevent EVENT_FORCE_GRANNY_GONE
+	iftrue .NoGranny
 	readvar VAR_WEEKDAY
 	ifequal SATURDAY, .NoGranny
 	ifequal SUNDAY, .NoGranny
 ;	checkevent EVENT_WISE_TRIO_EXPLAINED_CLEAR_BELL
 ;	iffalse .Finished
 	readvar VAR_TIMEOFDAY
-	ifequal NITE, .NoGranny
+	ifequal NITE_F, .NoGranny
 ;else appear
 	appear MAHOGANYMART1F_GRANNY
 	endcallback
@@ -56,6 +58,7 @@ MahoganyMart1FCheckDayOfWeekCallback:
 	ifnotequal SCENE_MAHOGANYMART1F_NINJA, .Finished
 	appear MAHOGANYMART1F_GRANNY
 .Finished
+	clearevent EVENT_FORCE_GRANNY_GONE
 	endcallback
 
 ; scripts
@@ -199,6 +202,7 @@ MahoganyMart1FSecretStairsConditional:
 	pause 25
 	playsound SFX_HEADBUTT
 	pause 20
+	setevent EVENT_FORCE_GRANNY_GONE
 	warpfacing DOWN, MAHOGANY_TOWN, 11, 8
 	end
 
