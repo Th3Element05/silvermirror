@@ -263,6 +263,7 @@
 	const EVENT_BOULDER_IN_ICE_PATH_2A
 	const EVENT_BOULDER_IN_ICE_PATH_3A
 	const EVENT_BOULDER_IN_ICE_PATH_4A
+	const EVENT_FORCE_GRANNY_GONE
 	const EVENT_NINJA_SECURITY_1
 	const EVENT_NINJA_SECURITY_2
 	const EVENT_NINJA_SECURITY_3
@@ -396,8 +397,8 @@
 	const EVENT_RESTORED_POWER_TO_KANTO
 	const EVENT_SET_WHEN_FOUGHT_HO_OH
 
-; group used 215
-; running total 315
+; group used 216
+; running total 316
 
 	const_next 400
 ; Kanto people
