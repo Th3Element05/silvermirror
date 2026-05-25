@@ -425,7 +425,7 @@ DexEntryScreen_ArrowCursorData:
 	db D_RIGHT | D_LEFT, 3 ;4
 	dwcoord 1, 17  ; PAGE
 	dwcoord 8, 17  ; AREA ;	dwcoord 6, 17  ; AREA
-	dwcoord 14, 17 ; CRY  ;dwcoord 11, 17 ; CRY
+	dwcoord 15, 17 ; CRY  ;dwcoord 11, 17 ; CRY
 ;	dwcoord 15, 17 ; PRNT
 
 DexEntryScreen_MenuActionJumptable:
@@ -1173,7 +1173,7 @@ Pokedex_DrawDexEntryScreenBG:
 .Weight:
 	db "WT   ???<lb>", -1 ;"WT   ???<%>", -1
 .MenuItems:
-	db $3b, " PAGE   AREA  CRY   ", -1 ;" PAGE AREA CRY PRNT"
+	db $3b, " PAGE   AREA   CRY   ", -1 ;" PAGE AREA CRY PRNT"
 
 Pokedex_DrawOptionScreenBG:
 	call Pokedex_FillBackgroundColor2
