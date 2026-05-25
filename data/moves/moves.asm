@@ -4,11 +4,6 @@ MACRO move
 	db \1 ; animation
 	db \2 ; effect
 	db \3 ; power
-;	db \4 ; type
-;	db \5 percent ; accuracy
-;	db \6 ; pp
-;	db \7 percent ; effect chance
-;	assert \6 <= 40, "PP must be 40 or less"
 	db \4 | \5 ; type
 	db \6 percent ; accuracy
 	db \7 ; pp
@@ -19,6 +14,7 @@ ENDM
 Moves:
 ; entries correspond to move ids (see constants/move_constants.asm)
 	table_width MOVE_LENGTH, Moves
+;	     MOVE,         EFFECT,                 POWER, TYPE,         CATEGORY, ACC, PP, EFFECT%
 	move TACKLE,       EFFECT_NORMAL_HIT,         40, NORMAL,       PHYSICAL, 100, 35,   0 ; OLD POW:35 ACC:95
 	move KARATE_CHOP,  EFFECT_NORMAL_HIT,         50, FIGHTING,     PHYSICAL, 100, 25,   0
 	move DOUBLESLAP,   EFFECT_MULTI_HIT,          15, NORMAL,       PHYSICAL,  85, 10,   0
@@ -30,7 +26,7 @@ Moves:
 	move THUNDERPUNCH, EFFECT_PARALYZE_HIT,       75, ELECTRIC,     PHYSICAL, 100, 15,  10
 	move SCRATCH,      EFFECT_NORMAL_HIT,         40, NORMAL,       PHYSICAL, 100, 35,   0
 	move CRUSH_CLAW,   EFFECT_DEFENSE_DOWN_HIT,   75, NORMAL,       PHYSICAL,  95, 10,  50 ;VICEGRIP, removed
-	move GUILLOTINE,   EFFECT_OHKO,                0, NORMAL,       PHYSICAL,  30,  5,   0
+	move GUILLOTINE,   EFFECT_OHKO,                2, NORMAL,       PHYSICAL,  30,  5,   0
 	move AIR_SLICE,    EFFECT_FLINCH_HIT,         75, FLYING,       SPECIAL,   95, 20,  30 ;RAZOR_WIND, removed
 	move SWORDS_DANCE, EFFECT_ATTACK_UP_2,         0, NORMAL,       STATUS,   100, 30,   0
 	move AERIAL_ACE,   EFFECT_ALWAYS_HIT,         60, FLYING,       PHYSICAL, 101, 20,   0 ;CUT, removed
@@ -50,7 +46,7 @@ Moves:
 	move HEADBUTT,     EFFECT_FLINCH_HIT,         70, NORMAL,       PHYSICAL, 100, 15,  30
 	move HORN_ATTACK,  EFFECT_NORMAL_HIT,         65, NORMAL,       PHYSICAL, 100, 25,   0
 	move FURY_STRIKES, EFFECT_MULTI_HIT,          20, NORMAL,       PHYSICAL,  85, 20,   0 ;FURY_ATTACK, removed
-	move HORN_DRILL,   EFFECT_OHKO,                1, NORMAL,       PHYSICAL,  30,  5,   0
+	move HORN_DRILL,   EFFECT_OHKO,                2, NORMAL,       PHYSICAL,  30,  5,   0
 	move FLARE_BLITZ,  EFFECT_RECOIL_HIT,        120, FIRE,         PHYSICAL, 100, 15,  10 ;POUND, removed
 	move BODY_SLAM,    EFFECT_BODY_SLAM,          85, NORMAL,       PHYSICAL, 100, 15,  30 ; OLD EFFECT_PARALYZE_HIT
 	move WRAP,         EFFECT_TRAP_TARGET,        15, NORMAL,       PHYSICAL,  85, 20,   0
@@ -108,7 +104,7 @@ Moves:
 	move THUNDER,      EFFECT_THUNDER,           120, ELECTRIC,     SPECIAL,   70, 10,  30
 	move ROCK_THROW,   EFFECT_NORMAL_HIT,         50, ROCK,         PHYSICAL,  90, 15,   0
 	move EARTHQUAKE,   EFFECT_EARTHQUAKE,        100, GROUND,       PHYSICAL, 100, 10,   0
-	move FISSURE,      EFFECT_OHKO,                1, GROUND,       PHYSICAL,  30,  5,   0
+	move FISSURE,      EFFECT_OHKO,                2, GROUND,       PHYSICAL,  30,  5,   0
 	move DIG,          EFFECT_FLY,                60, GROUND,       PHYSICAL, 100, 10,   0
 	move TOXIC,        EFFECT_TOXIC,               0, POISON,       STATUS,    90, 10, 100 ; OLD ACC:85
 	move CONFUSION,    EFFECT_CONFUSE_HIT,        50, PSYCHIC_TYPE, SPECIAL,  100, 25,  10
@@ -136,9 +132,9 @@ Moves:
 	move REFLECT,      EFFECT_REFLECT,             0, PSYCHIC_TYPE, STATUS,   100, 20,   0
 	move FOCUS_ENERGY, EFFECT_FOCUS_ENERGY,        0, NORMAL,       STATUS,   100, 30,   0
 	move BIDE,         EFFECT_BIDE,                0, NORMAL,       PHYSICAL, 100, 10,   0
-	move METRONOME,    EFFECT_METRONOME,           0, NORMAL,       STATUS,   100, 10,   0
+	move METRONOME,    EFFECT_METRONOME,           1, NORMAL,       STATUS,   100, 10,   0
 	move MIRROR_SHOT,  EFFECT_ACCURACY_DOWN_HIT,  65, STEEL,        SPECIAL,   85, 10,  30 ;MIRROR_MOVE, removed
-	move SELFDESTRUCT, EFFECT_SELFDESTRUCT,      200, NORMAL,       PHYSICAL, 100,  5,   0
+	move SELFDESTRUCT, EFFECT_SELFDESTRUCT,      250, NORMAL,       PHYSICAL, 100,  5,   0
 	move SEED_BOMB,    EFFECT_NORMAL_HIT,         80, GRASS,        PHYSICAL, 100, 15,   0 ;EGG_BOMB, removed
 	move LICK,         EFFECT_PARALYZE_HIT,       20, GHOST,        PHYSICAL, 100, 30,  30
 	move SMOG,         EFFECT_POISON_HIT,         20, POISON,       SPECIAL,   90, 20,  50 ; OLD ACC:70 %:40
