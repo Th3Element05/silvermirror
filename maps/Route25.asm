@@ -129,8 +129,8 @@ TrainerHikerRussell:
 HikerRussellSeenText:
 	ntag "HIKER:"
 	text "I just got down"
-	line "from MT.MOON,"
-	cont "but I'm ready!"
+	line "from MT.MOON, but"
+	cont "I'm ready!"
 	done
 
 HikerRussellBeatenText:
@@ -158,8 +158,8 @@ TrainerCamperElliot:
 CamperElliotSeenText:
 	ntag "CAMPER:"
 	text "I'm a cool guy."
-	line "I've got a girl"
-	cont "friend!"
+	line "I've got a cool"
+	cont "girlfriend!"
 	done
 
 CamperElliotBeatenText:
@@ -203,20 +203,20 @@ TrainerLassHillary:
 	askforphonenumber PHONE_LASS_HILLARY
 	ifequal PHONE_CONTACTS_FULL, .PhoneFull
 	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
-	gettrainername STRING_BUFFER_3, TEACHER, HILLARY1
+	gettrainername STRING_BUFFER_3, LASS, HILLARY1
 	scall .RegisteredNumber
 	jump .NumberAccepted
 
 .WantsBattle:
 	scall .Rematch
 	winlosstext LassHillaryBeatenText, 0
-	loadtrainer TEACHER, HILLARY_0
+	loadtrainer LASS, HILLARY_0
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight
-	loadtrainer TEACHER, HILLARY_3
+	loadtrainer LASS, HILLARY_3
 	readvar VAR_BADGES
 	ifgreater 3, .LoadFight ;4_BADGES
-	loadtrainer TEACHER, HILLARY_2
+	loadtrainer LASS, HILLARY_2
 .LoadFight:
 	startbattle
 	reloadmapafterbattle
@@ -348,8 +348,8 @@ TrainerLassMichelle:
 
 LassMichelleSeenText:
 	ntag "LASS:"
-	text "Hi! My boy"
-	line "friend is cool!"
+	text "Hi! My boyfriend"
+	line "is cool!"
 	done
 
 LassMichelleBeatenText:
