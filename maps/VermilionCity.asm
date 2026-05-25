@@ -521,7 +521,7 @@ VermilionCity_MapEvents:
 	coord_event 18, 30, SCENE_VERMILIONCITY_CHECK_ENTER_PORT, VermilionCityCheckEnterPortScript
 
 	def_bg_events
-	bg_event 27,  3, BGEVENT_READ, VermilionCitySign
+	bg_event 25,  3, BGEVENT_READ, VermilionCitySign
 	bg_event 11, 19, BGEVENT_READ, VermilionGymSign
 	bg_event  7, 13, BGEVENT_READ, PokemonFanClubSign
 	bg_event 29, 15, BGEVENT_READ, VermilionCityPortSign
