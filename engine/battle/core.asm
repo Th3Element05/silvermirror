@@ -4813,7 +4813,7 @@ CheckDanger:
 
 PrintPlayerHUD:
 	ld de, wBattleMonNickname
-	hlcoord 10, 7
+	hlcoord 9, 7 ;10, 7
 	call Battle_DummyFunction
 	call PlaceString
 
@@ -6008,32 +6008,29 @@ MoveInfoBox:
 ;	hlcoord 0, 8
 ;	ld b, 3
 ;	ld c, 9
-	hlcoord 0, 9 ; upper left corner of the MoveInfoBox
-	ld b, 2 ; box height (not including border)
-	ld c, 8 ; box width (not including border)
+	hlcoord 0, 7 ; upper left corner of the MoveInfoBox
+	ld b, 4 ; box height (not including border)
+	ld c, 7 ; box width (not including border)
 
 	call Textbox
 	call MobileTextBorder
 
-	ld a, [wPlayerDisableCount]
-	and a
-	jr z, .not_disabled
-
-	swap a
-	and $f
-	ld b, a
-	ld a, [wMenuCursorY]
-	cp b
-	jr nz, .not_disabled
-
-;	hlcoord 1, 10 ; location for "Disabled" text
-	hlcoord 1, 11 ; location for "Disabled" text
-	ld de, .Disabled
-	call PlaceString
-;	jr .done
-	jp .done
-
-.not_disabled
+;	ld a, [wPlayerDisableCount]
+;	and a
+;	jr z, .not_disabled
+;	swap a
+;	and $f
+;	ld b, a
+;	ld a, [wMenuCursorY]
+;	cp b
+;	jr nz, .not_disabled
+;	hlcoord 1, 11 ; location for "Disabled" text
+;	ld de, .Disabled
+;	call PlaceString
+;;	jr .done
+;	jp .done
+;
+;.not_disabled
 	ld hl, wMenuCursorY
 	dec [hl]
 	call SetPlayerTurn
@@ -6087,7 +6084,7 @@ MoveInfoBox:
 	ld hl, vTiles2 tile $79 ;$55 
 	lb bc, BANK(TypeIconGFX), 4 ; bank in 'b', Num of Tiles in 'c'
 	call Request1bpp
-	hlcoord 1, 10 ; placing the Type Tiles in  the MoveInfoBox
+	hlcoord 1, 8 ; placing the Type Tiles in  the MoveInfoBox
 	ld [hl], $79 ;$55
 	inc hl
 	ld [hl], $7a ;$56
@@ -6120,55 +6117,141 @@ MoveInfoBox:
 	ld hl, vTiles2 tile $7d ;$59
 	lb bc, BANK(CategoryIconGFX), 2 ; bank in 'b', Num of Tiles in 'c'
 	call Request2bpp ; Load 2bpp at b:de to occupy c tiles of hl.
-	hlcoord 5, 10 ; placing the Category Tiles in the MoveInfoBox
+	hlcoord 5, 8 ; placing the Category Tiles in the MoveInfoBox
 	ld [hl], $7d ;$59
 	inc hl
 	ld [hl], $7e ;$5a
 
 .classic
+;.power
+; print move BP (Base Power)
+	ld de, .power_string ; "ATK"
+	hlcoord 1, 9
+	call PlaceString
+	ld a, [wPlayerMoveStruct + MOVE_EFFECT]
+	cp EFFECT_STATIC_DAMAGE
+	jr nz, .not_static_damage
+	ld de, .staticdmg_string
+	hlcoord 1, 9
+	call PlaceString
+.not_static_damage
+	hlcoord 5, 9
+	ld a, [wPlayerMoveStruct + MOVE_POWER]
+	and a
+	jr nz, .haspower
+	ld de, .novalue_string ; "---"
+	call PlaceString
+	jr .accuracy
+.haspower
+	cp 2
+	jr z, .inf_power
+	cp 1
+	jr z, .var_power
+	ld [wTextDecimalByte], a
+	ld de, wTextDecimalByte
+	lb bc, 1, 3 ; number of bytes this number is in, in 'b', number of possible digits in 'c'
+	set 6, b ; left-aligned
+	call PrintNum
+	jr .accuracy
+
+.inf_power
+	ld de, .infinity_string
+	call PlaceString
+	jr .accuracy
+
+.var_power
+	ld de, .unknown_string
+	call PlaceString
+
+; print move ACC
+.accuracy
+	hlcoord 1, 10
+	ld de, .accuracy_string ; "ACC"
+	call PlaceString
+	hlcoord 5, 10
+	ld a, [wPlayerMoveStruct + MOVE_ACC]
+; convert from hex to decimal
+; this is the same code used in function "Adjust_Percent" in engine\pokemon\mon_stats.asm
+	ldh [hMultiplicand], a
+	ld a, 100
+	ldh [hMultiplier], a
+	call Multiply
+	; Divide hDividend length b (max 4 bytes) by hDivisor. Result in hQuotient.
+	ld b, 2
+	ld a, 255
+	ldh [hDivisor], a
+	call Divide
+	ldh a, [hQuotient + 3]
+	cp 100
+	jr z, .print_num
+	cp 80 ; Moves with 80 accuracy print as 81, so skip "inc a"
+	jr z, .print_num
+	inc a
+	cp 1 ; EFFECT_ALWAYS_HIT moves have Accuracy value set as 101 in data/moves/moves.asm
+	jr z, .no_acc
+.print_num
+	ld [wTextDecimalByte], a
+	ld de, wTextDecimalByte
+	lb bc, 1, 3 ; number of bytes this number is in, in 'b', number of possible digits in 'c'
+	set 6, b ; left-aligned
+	call PrintNum
+	jr .check_disabled
+
+.no_acc
+	ld de, .infinity_string ;.novalue_string
+	call PlaceString
+
+; check if move is disabled
+.check_disabled
+	ld a, [wPlayerDisableCount]
+	and a
+	jr z, .done
+	swap a
+	and $f
+	ld b, a
+	ld a, [wMenuCursorY]
+	cp b
+	jr nz, .done
+	hlcoord 1, 11 ; location for "Disabled" text
+	ld de, .disabled_string
+	call PlaceString
+
+.done
 	ld b, SCGB_BATTLE_COLORS
 	call GetSGBLayout
-.done
+;.done
 	ret
 
-.Disabled:
-	db "DISABLED@"
-.Type:
-	db "TYPE/@"
-
 .PrintPP:
-;	hlcoord 5, 11
-;	ld a, [wLinkMode] ; What's the point of this check?
-;	cp LINK_MOBILE
-;	jr c, .ok
-;	hlcoord 5, 11
-;.ok
-	hlcoord 4, 11 ; location of PP values
+	hlcoord 5, 11 ; location of PP values
 	push hl
 	ld de, wStringBuffer1
 	lb bc, 1, 2
-	call PrintNum
-	pop hl
-	inc hl
-	inc hl
-	ld [hl], "/"
-	inc hl
-	ld de, wNamedObjectIndex
-	lb bc, 1, 2
 	set 6, b
 	call PrintNum
+	pop hl
 	hlcoord 1, 11
 	ld a, $75 ;"P"
 	ld [hli], a
 	ld [hl], a
 	ret
 
-;.power_string:
-;	db "BP@"
-;.nopower_string:
-;	db "---@"
-;.accuracy_string:
-;	db "AC@"
+.power_string:
+	db "ATK@"
+.accuracy_string:
+	db "ACC   <%>@"
+.novalue_string:
+	db "---@"
+.infinity_string:
+	db "<INF1><INF2>@"
+.unknown_string:
+	db "<?><?><?>@"
+.disabled_string:
+	db "DISABLE@"
+.staticdmg_string:
+	db "DMG@"
+;.Type:
+;	db "TYPE/@"
 
 CheckPlayerHasUsableMoves:
 	ld a, STRUGGLE

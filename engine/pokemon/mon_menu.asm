@@ -1213,7 +1213,20 @@ SetUpMoveScreenBG:
 	push bc
 	farcall CopyMonToTempMon
 	pop hl
+	hlcoord 5, 0
 	call PrintLevel
+
+; place gender
+	callfar GetGender
+	ld a, " "
+	jr c, .got_gender_char
+	ld a, "♂"
+	jr nz, .got_gender_char
+	ld a, "♀"
+.got_gender_char
+	hlcoord 8, 0
+	ld [hl], a
+
 	ld hl, wPlayerHPPal
 	call SetHPPal
 	ld b, SCGB_PARTY_MENU
@@ -1274,12 +1287,10 @@ PlaceMoveData:
 	hlcoord 0, 11
 	ld de, String_MoveType_Bottom
 	call PlaceString
-;	hlcoord 12, 12
-	hlcoord 1, 11 ;type icons
+	hlcoord 1, 11
 	ld de, String_MoveAtk
 	call PlaceString
-;	hlcoord 12, 13
-	hlcoord 1, 12 ;type icons
+	hlcoord 1, 12
 	ld de, String_MoveAcc
 	call PlaceString
 
@@ -1359,23 +1370,49 @@ PlaceMoveData:
 ; Print move power
 	ld a, [wCurSpecies]
 	dec a
+	ld hl, Moves + MOVE_EFFECT
+	ld bc, MOVE_LENGTH
+	call AddNTimes
+	ld a, Bank(Moves)
+	call GetFarByte
+	cp EFFECT_STATIC_DAMAGE
+	jr nz, .not_static_damage
+	ld de, String_MoveDmg
+	hlcoord 1, 11
+	call PlaceString
+.not_static_damage
+	ld a, [wCurSpecies]
+	dec a
 	ld hl, Moves + MOVE_POWER
 	ld bc, MOVE_LENGTH
 	call AddNTimes
 	ld a, BANK(Moves)
 	call GetFarByte
-;	hlcoord 16, 12
 	hlcoord 5, 11 ;type icons
+	and a
+	jr nz, .haspower
+	ld de, MoveString_NoValue ; "---"
+	call PlaceString
+	jr .accuracy
+.haspower
 	cp 2
-	jr c, .no_power
+	jr z, .inf_power
+	cp 1
+	jr z, .var_power
 	ld [wTextDecimalByte], a
 	ld de, wTextDecimalByte
-	lb bc, 1, 3
-	set 6, b
+	lb bc, 1, 3 ; number of bytes this number is in, in 'b', number of possible digits in 'c'
+	set 6, b ; left-aligned
 	call PrintNum
 	jr .accuracy
-.no_power
-	ld de, String_NoValue
+
+.inf_power
+	ld de, MoveString_Infiniity
+	call PlaceString
+	jr .accuracy
+
+.var_power
+	ld de, MoveString_Unknown
 	call PlaceString
 
 .accuracy
@@ -1386,21 +1423,36 @@ PlaceMoveData:
 	call AddNTimes
 	ld a, BANK(Moves)
 	call GetFarByte
-	cp 101
-	jr c, .no_acc
-	Call ConvertPercentages
-	ld [wBuffer1], a
-	ld de, wBuffer1
-	lb bc, 1, 3
-;	hlcoord 16, 13
-	hlcoord 5, 12 ;type icons
-	set 6, b
+	hlcoord 5, 12
+; convert from hex to decimal
+; this is the same code used in function "Adjust_Percent" in engine\pokemon\mon_stats.asm
+	ldh [hMultiplicand], a
+	ld a, 100
+	ldh [hMultiplier], a
+	call Multiply
+	; Divide hDividend length b (max 4 bytes) by hDivisor. Result in hQuotient.
+	ld b, 2
+	ld a, 255
+	ldh [hDivisor], a
+	call Divide
+	ldh a, [hQuotient + 3]
+	cp 100
+	jr z, .print_num
+	cp 80
+	jr z, .print_num
+	inc a
+	cp 1
+	jr z, .no_acc
+.print_num
+	ld [wTextDecimalByte], a
+	ld de, wTextDecimalByte
+	lb bc, 1, 3 ; number of bytes this number is in, in 'b', number of possible digits in 'c'
+	set 6, b ; left-aligned
 	call PrintNum
 	jr .description
+
 .no_acc
-;	hlcoord 16, 13
-	hlcoord 5, 12 ;type icons
-	ld de, String_NoValue
+	ld de, MoveString_Infiniity
 	call PlaceString
 
 .description
@@ -1421,59 +1473,16 @@ String_MoveType_Bottom:
 	db "│       └@" ;type icons
 String_MoveAtk:
 	db "ATK/@"
+String_MoveDmg:
+	db "DMG/@"
 String_MoveAcc:
-	db "ACC/@"
-String_NoValue:
+	db "ACC/  <%>@"
+MoveString_NoValue:
 	db "---@"
-
-;; This converts values out of 256 into a value
-;; out of 100. It achieves this by multiplying
-;; the value by 100 and dividing it by 256.
-;ConvertPercentages:
-;
-;	; Overwrite the "hl" register.
-;	ld l, a
-;	ld h, 0
-;	push af
-;
-;	; Multiplies the value of the "hl" register by 3.
-;	add hl, hl
-;	add a, l
-;	ld l, a
-;	adc h
-;	sub l
-;	ld h, a
-;
-;	; Multiplies the value of the "hl" register
-;	; by 8. The value of the "hl" register
-;	; is now 24 times its original value.
-;	add hl, hl
-;	add hl, hl
-;	add hl, hl
-;
-;	; Add the original value of the "hl" value to itself,
-;	; making it 25 times its original value.
-;	pop af
-;	add a, l
-;	ld l, a
-;	adc h
-;	sbc l
-;	ld h, a
-;
-;	; Multiply the value of the "hl" register by
-;	; 4, making it 100 times its original value.
-;	add hl, hl
-;	add hl, hl
-;
-;	; Set the "l" register to 0.5, otherwise the rounded
-;	; value may be lower than expected. Round the
-;	; high byte to nearest and drop the low byte.
-;	ld l, 0.5
-;	sla l
-;	sbc a
-;	and 1
-;	add a, h
-;	ret
+MoveString_Infiniity:
+	db "<INF1><INF2>@"
+MoveString_Unknown:
+	db "<?><?><?>@"
 
 PlaceMoveScreenArrows:
 	call PlaceMoveScreenLeftArrow
