@@ -43,8 +43,8 @@
 	charmap "<DO>",      $70 ; hiragana small do, unused
 	charmap "◀",         $71
 	charmap "『",         $72 ; Japanese opening quote, unused
-	charmap "<ID>",      $73
-	charmap "№",         $74
+;	charmap "<ID>",      $73
+;	charmap "№",         $74
 
 ; Actual characters (from other graphics files)
 
@@ -123,8 +123,12 @@
 	charmap "└",         $be
 	charmap "┘",         $bf
 
-	charmap "<ID#>",     $cc
-	charmap "<#>",       $cd
+	charmap "<?>",       $c8 ; non-bold "?"
+	charmap "<%>",       $c9
+	charmap "<INF1>",    $ca ; left half of infinity symbol
+	charmap "<INF2>",    $cb ; right half of infinity symbol
+	charmap "<ID>",      $cc
+	charmap "№",         $cd
 	charmap "′",         $ce
 	charmap "″",         $cf
 
