@@ -2,21 +2,37 @@ Documentation Notes
 Silver Mirror
 
 SILVERPOWDER	viridian forest
+MIRACLE_SEED	pewter city (grass starter)
+CHARCOAL	pewter city (fire starter)
+MYSTIC_WATER	pewter city (water starter)
+
+
+
+TM_WATER_GUN	mount moon 1f
+TM_BIDE		brock
+TM_FALSE_SWIPE	route 4
+TM_HEADBUTT	route 4
+TM_THUNDER_WAVE	route 24
+
+
+
+remove bill offer phone number
+test secret stairs after clearing ninja den
 
 
 
 
-CongratulationsYourPokemonText
-
-EvolvedIntoText
 
 
+BROCK
+pidgey11,kakuna7,nidoranf9,charmander12,pikachu6
+
+RVIAL CERULEAN
+geodude15,nidoranf14,pidgey14,charmander18,zubat8
+
+MISTY
+LOST	zubat14,nidorina17,geodude18,charmander20,pidgey17,bellsprout16
+zubat14,nidorina17,geodude18,charmander20,pidgey17,bellsprout20
 
 
 
-
-
-
-
-
-maps are still messed up!!!

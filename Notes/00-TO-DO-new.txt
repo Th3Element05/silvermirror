@@ -6,9 +6,6 @@ celadongamecorner debugcoins
 
 TEST
 
-WHIRLWIND
-SYNTHESIS
-
 check dewgong animation
 
 fossil revive script still broken?
@@ -68,8 +65,6 @@ OftenFleeMons:
 DO
 
 remove debug stuff
-
-test WHRILWIND, SYNTHESIS
 
 
 I think I need to double check egg-moves and tmhm-moves against serebii
