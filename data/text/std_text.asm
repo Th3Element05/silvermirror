@@ -478,9 +478,9 @@ HappinessRatingText_LooksMean:
 HappinessRatingText_NotUsedToYou:
 	ntag "NURSE:"
 	text "It's not used to"
-	line "you yet. You still"
-	cont "need to earn its"
-	roll "respect."
+	line "you yet."
+	cont "You still need to"
+	roll "earn its respect."
 	done
 
 HappinessRatingText_QuiteCute:

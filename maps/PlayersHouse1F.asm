@@ -204,8 +204,8 @@ MomWalksBackMovement:
 ElmsLookingForYouText:
 	ntag "MOM:"
 	text "Oh, <PLAYER>…!"
-	line "PROF.OAK was look-"
-	cont "ing for you."
+	line "PROF.OAK was just"
+	cont "looking for you."
 
 	para "He said he had"
 	line "something to give"
@@ -226,7 +226,7 @@ MomGivesPokegearText:
 
 	para "It's essential if"
 	line "you want to be a"
-	cont "good trainer."
+	cont "trainer someday."
 
 	para "Oh, the day of the"
 	line "week isn't set."

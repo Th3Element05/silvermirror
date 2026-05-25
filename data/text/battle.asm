@@ -260,9 +260,14 @@ BattleText_PluralEnemyAreAboutToUseWillPlayerChangeMon:
 	done
 
 BattleText_EnemySentOut:
+;	text "<ENEMY>"
+;	line "sent out"
+;	cont "@"
+;	text_ram wEnemyMonNickname
+;	text "!"
+;	done
 	text "<ENEMY>"
-	line "sent out"
-	cont "@"
+	line "sends @"
 	text_ram wEnemyMonNickname
 	text "!"
 	done

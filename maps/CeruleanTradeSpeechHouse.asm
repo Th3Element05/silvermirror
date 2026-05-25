@@ -31,6 +31,7 @@ CeruleanTradeSpeechHouseGrannyText:
 	done
 
 CeruleanTradeSpeechHouseKangaskhanScript:
+	faceplayer
 	opentext
 	writetext CeruleanTradeSpeechHouseKangaskhanText
 	cry KANGASKHAN

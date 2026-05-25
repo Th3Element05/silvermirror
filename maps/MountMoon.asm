@@ -60,8 +60,7 @@ HikerDanielBeatenText:
 HikerDanielAfterBattleText:
 	ntag "HIKER:"
 	text "Kids like you"
-	line "shouldn't be"
-	cont "here!"
+	line "shouldn't be here!"
 	done
 
 TrainerYoungsterGordon:
