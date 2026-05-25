@@ -227,18 +227,19 @@ BillsHousePlayerDontLeaveMovement:
 	step_end
 
 BillsHouseBillIntroText:
-	ntag "A #MON?:"
+	ntag "#MON?:"
 	text "Hiya!"
 	line "I'm a #MON…"
 	cont "…No I'm not!@"
 
 	text_promptbutton
-;	ntag "───────────"
 	ntag "BILL?:"
-	para "Call me BILL!"
+	text "Call me BILL!"
 	line "I'm a true blue"
-	cont "#MANIAC! Hey!"
-	roll "What's with that"
+	cont "#MANIAC!"
+
+	para "Hey!"
+	line "What's with that"
 	cont "skeptical look?"
 
 	para "I'm not joshing"
