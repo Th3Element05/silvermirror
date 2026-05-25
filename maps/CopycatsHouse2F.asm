@@ -148,7 +148,7 @@ CopycatText_Default:
 
 	text_promptbutton
 	ntag "COPYCAT:"
-	para " Huh?"
+	text " Huh?"
 	line " You're strange!"
 	done
 

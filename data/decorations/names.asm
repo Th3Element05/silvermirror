@@ -19,7 +19,7 @@ DecorationNames:
 	li " POSTER"
 	li " DOLL"
 	li "BIG "
-	li "FEATHERY"
+	li "PLAIN" ;"FEATHERY"
 	li "PIKACHU"
 	li "PINK"
 	li "POLKADOT"

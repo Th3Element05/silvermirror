@@ -877,7 +877,6 @@ OaksLabIntroConversationText:
 	line "up with waiting!@"
 
 	text_promptbutton
-;	ntag "──────────"
 	ntag "PROF.OAK:"
 	text "<RIVAL>?"
 	line "Let me think…"
@@ -908,13 +907,11 @@ OaksLabIntroConversationText:
 	para "Choose!@"
 
 	text_promptbutton
-;	ntag "──────────"
 	ntag "<RIVAL>:"
 	text "Hey! GRAMPS!"
 	line "What about me?@"
 
 	text_promptbutton
-;	ntag "──────────"
 	ntag "PROF.OAK:"
 	text "Be patient!"
 	line "<RIVAL>, you can"

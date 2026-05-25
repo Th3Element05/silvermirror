@@ -62,8 +62,7 @@ CeruleanMartCooltrainerMScript:
 CeruleanMartCooltrainerMText:
 	ntag "TRAINER:"
 	text "Use REPEL to keep"
-	line "bugs and weak"
-	cont "#MON away."
+	line "weak #MON away."
 
 	para "Put your strongest"
 	line "#MON at the"

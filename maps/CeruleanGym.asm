@@ -100,8 +100,13 @@ ReceivedCascadebadgeText:
 MistyCascadebadgeText:
 	ntag "MISTY:"
 	text "The CASCADEBADGE"
-	line "makes all #MON"
-	cont "up to L30 obey!"
+	line "is proof of your"
+	cont "abilities as a"
+	roll "#MON TRAINER."
+
+;	text "The CASCADEBADGE"
+;	line "makes all #MON"
+;	cont "up to L30 obey!"
 
 ;	para "That includes"
 ;	line "even outsiders!"
@@ -147,8 +152,7 @@ SwimmerMHaroldSeenText:
 
 SwimmerMHaroldBeatenText:
 	ntag "HAROLD:"
-	text "That"
-	line "can't be!"
+	text "That can't be!"
 	done
 
 SwimmerMHaroldAfterBattleText:
@@ -180,8 +184,8 @@ PicnickerSophiaSeenText:
 
 PicnickerSophiaBeatenText:
 	ntag "SOPHIA:"
-	text "You"
-	line "overwhelmed me!"
+	text "You overwhelmed"
+	line "me!"
 	done
 
 PicnickerSophiaAfterBattleText:
