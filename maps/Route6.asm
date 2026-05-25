@@ -63,7 +63,7 @@ TrainerCoupleTimAndSue_Tim:
 	trainer COUPLE, TIMANDSUE1, EVENT_BEAT_COUPLE_TIMANDSUE, CoupleTimSeenText, CoupleTimAndSueBeatenText, 0, .Script
 .Script:
 	endifjustbattled
-	turnobject LAST_TALKED, LEFT
+	turnobject LAST_TALKED, RIGHT
 	opentext
 	writetext CoupleTimAndSueAfterBattleText
 	waitbutton
@@ -308,7 +308,7 @@ Route6_MapEvents:
 	bg_event 19, 11, BGEVENT_READ, Route6UndergroundPathSign
 
 	def_object_events
-	object_event  0, 11, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerBugCatcherAbner, -1
+	object_event  1, 11, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerBugCatcherAbner, -1
 	object_event 10, 17, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerCoupleTimAndSue_Tim, -1
 	object_event 11, 17, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerCoupleTimAndSue_Sue, -1
 	object_event 19, 22, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherEllis, -1
