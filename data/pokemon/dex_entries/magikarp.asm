@@ -3,7 +3,7 @@
 
 	db   "This weak and"
 	next "pathetic #MON"
-	next "gets easily pushed"
+	next "is easily pushed"
 
 	page "along rivers when"
 	next "there are strong"
