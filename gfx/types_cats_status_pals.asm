@@ -12,9 +12,9 @@ StatusIconPals:
 ; FRZ
 	RGB 16, 27, 27 ;09, 18, 31
 ; FNT
-	RGB 00, 00, 00
+	RGB 31, 00, 00 ;00, 00, 00
 ; TOX
-	RGB 06, 02, 06 ;27, 06, 28
+	RGB 20, 08, 20 ;06, 02, 06 ;27, 06, 28
 
 CategoryIconPals:
 ; PHYSICAL
