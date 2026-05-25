@@ -1632,7 +1632,16 @@ InitPartyMenuStatusPals:
 	ld de, wBGPals1 palette 5 + 4 ; Color 3 of Palette 5 (Dark Gray Pixels)
 	ld bc, 2 ; 1 Color (2 bytes)
 	call FarCopyColorWRAM
-	
+
+	ld hl, StatusIconPals
+	ld c, $6 ; FNT Index
+	ld b, 0
+	add hl, bc
+	add hl, bc
+	ld de, wBGPals1 palette 6 + 4 ; Color 3 of Palette 6 (Dark Gray Pixels)
+	ld bc, 2 ; 1 Color (2 bytes)
+	call FarCopyColorWRAM
+
 ;	; put white (7fff) into the slot 4 of pals 4, 5, 6
 ;	ldh a, [rSVBK]
 ;	push af
