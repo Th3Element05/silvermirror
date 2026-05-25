@@ -346,17 +346,31 @@ TMHM_ShowTMMoveDescription:
 	call AddNTimes
 	ld a, BANK(Moves)
 	call GetFarByte
-	hlcoord 5, 12 ;type icons
+	hlcoord 5, 12
+	and a
+	jr nz, .haspower
+	ld de, String_TMHMNoValue ; "---"
+	call PlaceString
+	jr .accuracy
+.haspower
 	cp 2
-	jr c, .no_power
+	jr z, .inf_power
+	cp 1
+	jr z, .var_power
 	ld [wTextDecimalByte], a
 	ld de, wTextDecimalByte
-	lb bc, 1, 3
-	set 6, b
+	lb bc, 1, 3 ; number of bytes this number is in, in 'b', number of possible digits in 'c'
+	set 6, b ; left-aligned
 	call PrintNum
 	jr .accuracy
-.no_power
-	ld de, String_TMHMNoValue
+
+.inf_power
+	ld de, String_TMHMInfiniity
+	call PlaceString
+	jr .accuracy
+
+.var_power
+	ld de, String_TMHMUnknown
 	call PlaceString
 
 .accuracy
@@ -367,19 +381,36 @@ TMHM_ShowTMMoveDescription:
 	call AddNTimes
 	ld a, BANK(Moves)
 	call GetFarByte
-	cp 101
-	jr c, .no_acc
-	call ConvertPercentages
-	ld [wBuffer1], a
-	ld de, wBuffer1
-	lb bc, 1, 3
-	hlcoord 5, 13 ;type icons
-	set 6, b
+	hlcoord 5, 13
+; convert from hex to decimal
+; this is the same code used in function "Adjust_Percent" in engine\pokemon\mon_stats.asm
+	ldh [hMultiplicand], a
+	ld a, 100
+	ldh [hMultiplier], a
+	call Multiply
+	; Divide hDividend length b (max 4 bytes) by hDivisor. Result in hQuotient.
+	ld b, 2
+	ld a, 255
+	ldh [hDivisor], a
+	call Divide
+	ldh a, [hQuotient + 3]
+	cp 100
+	jr z, .print_num
+	cp 80
+	jr z, .print_num
+	inc a
+	cp 1
+	jr z, .no_acc
+.print_num
+	ld [wTextDecimalByte], a
+	ld de, wTextDecimalByte
+	lb bc, 1, 3 ; number of bytes this number is in, in 'b', number of possible digits in 'c'
+	set 6, b ; left-aligned
 	call PrintNum
 	jr .description
+
 .no_acc
-	hlcoord 5, 13 ;type icons
-	ld de, String_TMHMNoValue
+	ld de, String_TMHMInfiniity
 	call PlaceString
 
 .description
@@ -405,10 +436,16 @@ String_TMHMType_Bottom:
 ;	db "│                  │@" ;type icons
 String_TMHMAtk:
 	db "ATK/@"
+;String_TMHMDmg:
+;	db "DMG/@"
 String_TMHMAcc:
-	db "ACC/@"
+	db "ACC/  <%>@"
 String_TMHMNoValue:
 	db "---@"
+String_TMHMInfiniity:
+	db "<INF1><INF2>@"
+String_TMHMUnknown:
+	db "<?><?><?>@"
 
 TMHM_ChooseTMorHM:
 	call TMHM_PlaySFX_ReadText2
