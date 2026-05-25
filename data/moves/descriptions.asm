@@ -355,7 +355,7 @@ CrushClawDescription:
 
 GuillotineDescription:
 	db   "Large pincers KO"
-	feed "the foe instantly."
+	feed "the foe instantly.@"
 ;	feed "if it hits.@"
 ;	db   "A one-hit KO,"
 ;	next "pincer attack.@"
@@ -517,7 +517,7 @@ FuryStrikesDescription:
 
 HornDrillDescription:
 	db   "Spinning horn KOs"
-	feed "the foe instantly."
+	feed "the foe instantly.@"
 ;	feed "if it hits.@"
 ;	db   "A one-hit KO,"
 ;	next "drill attack.@"
@@ -624,14 +624,14 @@ GrowlDescription:
 RoarDescription:
 	db   "A load roar which"
 	feed "scares away wild"
-	feed "#MON."
+	feed "#MON.@"
 ;	db   "Scares wild foes"
 ;	next "to end battle.@"
 
 SingDescription:
 	db   "A soft song that"
 	feed "might put the foe"
-	feed "to sleep."
+	feed "to sleep.@"
 ;	db   "May cause the foe"
 ;	next "to fall asleep.@"
 
@@ -1444,9 +1444,11 @@ BonemerangDescription:
 ;	next "strikes twice.@"
 
 RestDescription:
-	db   "Fully recovers HP.@"
-	feed "User sleeps for"
-	feed "two turns."
+	db   "User sleeps to"
+	feed "fully recover HP.@"
+;	db   "Fully recovers HP."
+;	feed "User sleeps for"
+;	feed "two turns.@"
 ;	db   "Sleep for 2 turns"
 ;	next "to fully recover.@"
 
