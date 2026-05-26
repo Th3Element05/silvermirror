@@ -582,11 +582,8 @@ OaksLabPoster1Text:
 OaksLabPoster2:
 	jumptext OaksLabPoster2Text
 OaksLabPoster2Text:
-	text "The SAVE option is"
-	line "on the MENU."
-
-	para "Use it in a timely"
-	line "manner."
+	text "Hold the B button"
+	line "to run."
 	done
 
 OaksLabPC: ;simple
@@ -887,7 +884,7 @@ OaksLabIntroConversationText:
 
 	para "Here, <PLAYER>!"
 
-	para "There are 3"
+	para "There are three"
 	line "#MON here!"
 
 	para "Haha!"
@@ -899,10 +896,16 @@ OaksLabIntroConversationText:
 	line "I was a serious"
 	cont "#MON trainer!"
 
-	para "In my old age, I"
-	line "have only 3 left,"
-	cont "but you can have"
-	roll "one!"
+	para "Now that you're"
+	line "old enough to have"
+	cont "your own #MON,"
+	roll "you can have one"
+	cont "of mine!"
+
+;	para "In my old age, I"
+;	line "have only 3 left,"
+;	cont "but you can have"
+;	roll "one!"
 
 	para "Choose!@"
 
@@ -1373,49 +1376,14 @@ OakLabOakGoodbyeText:
 	cont "come visit again."
 	done
 
-;OaksLabTravelTip1Text:
-;	text "<PLAYER> opened a"
-;	line "book."
-;
-;	para "Travel Tip 1:"
-;
-;	para "Press START to"
-;	line "open the MENU."
-;	done
 
-;OaksLabTravelTip2Text:
-;	text "<PLAYER> opened a"
-;	line "book."
-;
-;	para "Travel Tip 2:"
-;
-;	para "Record your trip"
-;	line "with SAVE!"
-;	done
+OakRematchScript:
+	sjump OakScript
+	end
 
-;OaksLabTravelTip3Text:
-;	text "<PLAYER> opened a"
-;	line "book."
-;
-;	para "Travel Tip 3:"
-;
-;	para "Open your PACK and"
-;	line "press SELECT to"
-;	cont "move items."
-;	done
 
-;OaksLabTravelTip4Text:
-;	text "<PLAYER> opened a"
-;	line "book."
-;
-;	para "Travel Tip 4:"
-;
-;	para "Check your #MON"
-;	line "moves. Press the"
-;
-;	para "A Button to switch"
-;	line "moves."
-;	done
+
+
 
 ; DEBUG
 DebugGotCharmander:
@@ -2130,7 +2098,20 @@ DebugBeatClairText:
 
 ;Debug:
 ;Debug:
-;Debug:
+
+DebugRareCandy:
+	opentext
+	writetext DebugRareCandyText
+	yesorno
+	iffalse .end
+	verbosegiveitem RARE_CANDY, 10
+.end
+	closetext
+	end
+
+DebugRareCandyText:
+	text "10 RARE CANDY?"
+	done
 
 OaksLab_MapEvents:
 	db 0, 0 ; filler
@@ -2168,7 +2149,7 @@ OaksLab_MapEvents:
 	bg_event  6,  7, BGEVENT_READ, DebugBeatJohtoLeaders
 ;	bg_event  7,  7, BGEVENT_READ, Debug
 ;	bg_event  8,  7, BGEVENT_READ, Debug
-;	bg_event  9,  7, BGEVENT_READ, Debug
+	bg_event  9,  7, BGEVENT_READ, DebugRareCandy
 
 ; normal stuff
 	bg_event  4,  0, BGEVENT_READ, OaksLabPoster1
@@ -2190,3 +2171,5 @@ OaksLab_MapEvents:
 	object_event  8,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OaksAssistantScript, -1
 	object_event  2, 10, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OaksAssistantScript, -1
 ;	object_event  1,  9, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OaksLabGirlScript, -1
+
+	object_event  5,  2, SPRITE_OAK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OakRematchScript, EVENT_OAKS_LAB_OAK_REMATCH
