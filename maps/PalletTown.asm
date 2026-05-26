@@ -259,11 +259,7 @@ OaksHouseSignText:
 KantoRematchNotifyScript:
 	opentext
 	writetext KantoLeadersRematchNotifyText
-;	playsound SFX_1ST_PLACE
-	playsound SFX_FANFARE
-;	playsound SFX_FANFARE_2
-;	playsound SFX_DEX_FANFARE_230_PLUS
-;	playsound SFX_EVOLVED
+	playsound SFX_3RD_PLACE
 ;	playsound SFX_GET_BADGE
 	waitsfx
 ;	waitbutton

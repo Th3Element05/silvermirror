@@ -666,7 +666,7 @@ AcidDescription:
 ;	next "lower DEFENSE.@"
 
 EmberDescription:
-	db   "User sttacks with"
+	db   "User attacks with"
 	feed "hot embers."
 	feed "May inflict burn.@"
 ;	db   "An attack that may"
