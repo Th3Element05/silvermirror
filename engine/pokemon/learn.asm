@@ -103,8 +103,11 @@ LearnMove:
 
 .cancel
 ; Reset palettes for text box border
-	ld b, SCGB_BATTLE_COLORS ; this messes up party menu icon palettes, but non-issue since they are hidden
+;	farcall InitPartyMenuGFX ; horrible consequences
+	ld b, SCGB_BATTLE_COLORS
 	call GetSGBLayout
+;	ld b, SCGB_PARTY_MENU
+;	call GetSGBLayout
 
 	ld hl, StopLearningMoveText
 	call PrintText
@@ -138,6 +141,7 @@ ForgetMove:
 
 ; Print UI element
 	call ClearSprites
+;	call HideSprites
 
 	hlcoord 0, 11
 	ld de, String_LearnTabTop
@@ -317,21 +321,21 @@ ForgetMove:
 	push hl
 ;	ld hl, MoveAskForgetText
 ;	call PrintText
-	hlcoord 5, 0 ;5, 2
+	hlcoord 0, 0 ;5, 0
 	ld b, 1 + NUM_MOVES * 2
-	ld c, MOVE_NAME_LENGTH
+	ld c, MOVE_NAME_LENGTH + 1
 	call Textbox
-	hlcoord 6, 1
+	hlcoord 1, 1 ;6, 1
 	ld de, String_LearnReplace
 	call PlaceString
-	hlcoord 5 + 2, 0 + 3 ;5 + 2, 2 + 2
+	hlcoord 0 + 2, 0 + 3 ;5 + 2, 0 + 3
 	ld a, SCREEN_WIDTH * 2
 	ld [wListMovesLineSpacing], a
 	predef ListMoves
 	; w2DMenuData
-	ld a, $3 ;$4
+	ld a, $3
 	ld [w2DMenuCursorInitY], a
-	ld a, $6
+	ld a, $1 ;$6
 	ld [w2DMenuCursorInitX], a
 	ld a, [wNumMoves]
 	inc a
