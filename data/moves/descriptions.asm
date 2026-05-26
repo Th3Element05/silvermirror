@@ -637,8 +637,8 @@ SingDescription:
 
 SupersonicDescription:
 	db   "Dissonant sound"
-	feed "waves that cause"
-	feed "confusion.@"
+	feed "waves that can"
+	feed "cause confusion.@"
 ;	db   "Sound waves that"
 ;	next "cause confusion.@"
 
