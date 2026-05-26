@@ -485,7 +485,8 @@ PokefanMWilliamSeenText:
 
 PokefanMWilliamBeatenText:
 	ntag "WILLIAM:"
-	text "M-my #MON!"
+	text "I'd have to say"
+	line "that's my loss."
 	done
 
 PokefanMWilliamAfterBattleText:
@@ -679,8 +680,7 @@ PokefanMRobertSeenText:
 
 PokefanMRobertBeatenText:
 	ntag "ROBERT:"
-	text "I'd have to say"
-	line "that's my loss."
+	text "M-my #MON!"
 	done
 
 PokefanMRobertAfterBattleText:
@@ -712,8 +712,7 @@ OfficerCarterSeenText:
 
 OfficerCarterBeatenText:
 	ntag "CARTER:"
-	text "Whoa!"
-;	line "You spark plug!"
+	text "You spark plug!"
 	done
 
 OfficerCarterAfterBattleText:

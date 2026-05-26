@@ -19,7 +19,7 @@ AlanAskNumber1Text:
 ;	line "phone number?"
 ;	done
 
-	para "I found up a"
+	para "I even found a"
 	line "FIRE STONE the"
 	cont "other day!"
 
@@ -47,6 +47,7 @@ AlanNumberAcceptedText:
 	text "I'll call you if"
 	line "I find anything."
 	cont "Count on it!"
+	done
 
 AlanNumberDeclinedText:
 	ntag "ALAN:"
