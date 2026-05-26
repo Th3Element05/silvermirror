@@ -1659,6 +1659,26 @@ InitPartyMenuStatusPals:
 	ret
 
 
+LoadLearnCategoryAndTypePals:
+	ld a, [wPutativeTMHMMove] ;[wCurSpecies]
+	dec a
+	ld hl, Moves + MOVE_TYPE
+	ld bc, MOVE_LENGTH
+	call AddNTimes
+	ld a, BANK(Moves)
+	call GetFarByte
+	ld c, a
+	and ~TYPE_MASK ; Specific to Phys/Spec split
+	swap a ; Specific to Phys/Spec split
+	srl a  ; Specific to Phys/Spec split
+	srl a  ; Specific to Phys/Spec split
+	dec a  ; Specific to Phys/Spec split
+	ld b, a ; Move Category Index
+	farcall GetMonTypeIndex
+	; type index is already in c
+	ld de, wBGPals1 palette 5
+	jr LoadCategoryAndTypePals
+
 LoadBattleCategoryAndTypePals:
 	ld a, [wPlayerMoveStruct + MOVE_TYPE]
 	and ~TYPE_MASK ; Phys/Spec split only

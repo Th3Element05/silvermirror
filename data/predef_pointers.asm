@@ -85,4 +85,5 @@ PredefPointers::
 	add_predef GetMonTypeIndex
 	add_predef Player_LoadNonFaintStatus
 	add_predef Enemy_LoadNonFaintStatus
+	add_predef PrintLearnMoveDescription
 	dbw -1, DummyEndPredef ; pointless

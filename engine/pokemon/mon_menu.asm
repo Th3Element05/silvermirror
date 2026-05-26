@@ -703,9 +703,9 @@ MonMenu_FlyPager:
 	ld a, $0
 	ret
 
-.NoReload: ; unreferenced
-	ld a, $1
-	ret
+;.NoReload: ; unreferenced
+;	ld a, $1
+;	ret
 
 MonMenu_Flash:
 	farcall GetPartyNickname
@@ -1281,18 +1281,12 @@ PlaceMoveData:
 	xor a
 	ldh [hBGMapMode], a
 ; Print UI element
-	hlcoord 0, 10
-	ld de, String_MoveType_Top
-	call PlaceString
-	hlcoord 0, 11
-	ld de, String_MoveType_Bottom
-	call PlaceString
-	hlcoord 1, 11
-	ld de, String_MoveAtk
-	call PlaceString
-	hlcoord 1, 12
-	ld de, String_MoveAcc
-	call PlaceString
+;	hlcoord 0, 10
+;	ld de, String_MoveType_Top
+;	call PlaceString
+;	hlcoord 0, 11
+;	ld de, String_MoveType_Bottom
+;	call PlaceString
 
 ;phys/spec split
 	ld a, [wOptions2]
@@ -1368,19 +1362,24 @@ PlaceMoveData:
 
 ;.power
 ; Print move power
-	ld a, [wCurSpecies]
-	dec a
-	ld hl, Moves + MOVE_EFFECT
-	ld bc, MOVE_LENGTH
-	call AddNTimes
-	ld a, Bank(Moves)
-	call GetFarByte
-	cp EFFECT_STATIC_DAMAGE
-	jr nz, .not_static_damage
-	ld de, String_MoveDmg
-	hlcoord 1, 11
+	hlcoord 1, 12 ;1, 11
+	ld de, .power_string
 	call PlaceString
-.not_static_damage
+
+;	ld a, [wCurSpecies]
+;	dec a
+;	ld hl, Moves + MOVE_EFFECT
+;	ld bc, MOVE_LENGTH
+;	call AddNTimes
+;	ld a, Bank(Moves)
+;	call GetFarByte
+;	cp EFFECT_STATIC_DAMAGE
+;	jr nz, .not_static_damage
+;	ld de,.staticdmg_string
+;	hlcoord 1, 11
+;	call PlaceString
+
+;.not_static_damage
 	ld a, [wCurSpecies]
 	dec a
 	ld hl, Moves + MOVE_POWER
@@ -1388,10 +1387,10 @@ PlaceMoveData:
 	call AddNTimes
 	ld a, BANK(Moves)
 	call GetFarByte
-	hlcoord 5, 11 ;type icons
+	hlcoord 3, 12
 	and a
 	jr nz, .haspower
-	ld de, MoveString_NoValue ; "---"
+	ld de, .novalue_string ; "---"
 	call PlaceString
 	jr .accuracy
 .haspower
@@ -1402,28 +1401,32 @@ PlaceMoveData:
 	ld [wTextDecimalByte], a
 	ld de, wTextDecimalByte
 	lb bc, 1, 3 ; number of bytes this number is in, in 'b', number of possible digits in 'c'
-	set 6, b ; left-aligned
+;	set 6, b ; left-aligned
 	call PrintNum
 	jr .accuracy
 
 .inf_power
-	ld de, MoveString_Infiniity
+	ld de, .infinity_string
 	call PlaceString
 	jr .accuracy
 
 .var_power
-	ld de, MoveString_Unknown
+	ld de, .unknown_string
 	call PlaceString
 
 .accuracy
 ; Print move accuracy
+	hlcoord 1, 13 ;1, 12
+	ld de, .accuracy_string
+	call PlaceString
+
 	ld a, [wCurSpecies]
 	ld bc, MOVE_LENGTH
 	ld hl, (Moves + MOVE_ACC) - MOVE_LENGTH
 	call AddNTimes
 	ld a, BANK(Moves)
 	call GetFarByte
-	hlcoord 5, 12
+	hlcoord 3, 13
 ; convert from hex to decimal
 ; this is the same code used in function "Adjust_Percent" in engine\pokemon\mon_stats.asm
 	ldh [hMultiplicand], a
@@ -1447,12 +1450,12 @@ PlaceMoveData:
 	ld [wTextDecimalByte], a
 	ld de, wTextDecimalByte
 	lb bc, 1, 3 ; number of bytes this number is in, in 'b', number of possible digits in 'c'
-	set 6, b ; left-aligned
+;	set 6, b ; left-aligned
 	call PrintNum
 	jr .description
 
 .no_acc
-	ld de, MoveString_Infiniity
+	ld de, .infinity_string
 	call PlaceString
 
 .description
@@ -1467,22 +1470,25 @@ PlaceMoveData:
 	ret
 
 ; UI elements
-String_MoveType_Top:
-	db "┌───────┐@" ;type icons
-String_MoveType_Bottom:
-	db "│       └@" ;type icons
-String_MoveAtk:
-	db "ATK/@"
-String_MoveDmg:
-	db "DMG/@"
-String_MoveAcc:
-	db "ACC/  <%>@"
-MoveString_NoValue:
+.power_string:
+	db "<ATK1><ATK2>@"
+.accuracy_string:
+	db "<ACC1><ACC2>   <%>@"
+.novalue_string:
 	db "---@"
-MoveString_Infiniity:
-	db "<INF1><INF2>@"
-MoveString_Unknown:
+.infinity_string:
+	db " <INF1><INF2>@"
+.unknown_string:
 	db "<?><?><?>@"
+;.staticdmg_string:
+;	db "DMG/@"
+;.Type:
+;	db "TYPE/@"
+;String_MoveType_Top:
+;	db "┌───────┐@" ;type icons
+;String_MoveType_Bottom:
+;	db "│       └@" ;type icons
+
 
 PlaceMoveScreenArrows:
 	call PlaceMoveScreenLeftArrow
