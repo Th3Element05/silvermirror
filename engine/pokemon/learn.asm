@@ -50,6 +50,10 @@ LearnMove:
 	ld [wPlayerDisableCount], a
 .not_disabled
 
+; Reset palettes for text box border
+	ld b, SCGB_BATTLE_COLORS
+	call GetSGBLayout
+
 	call GetMoveName
 	ld hl, Text_1_2_and_Poof ; 1, 2 and…
 	call PrintText
@@ -103,7 +107,6 @@ LearnMove:
 
 .cancel
 ; Reset palettes for text box border
-;	farcall InitPartyMenuGFX ; horrible consequences
 	ld b, SCGB_BATTLE_COLORS
 	call GetSGBLayout
 ;	ld b, SCGB_PARTY_MENU
