@@ -123,10 +123,18 @@
 	charmap "└",         $be
 	charmap "┘",         $bf
 
-	charmap "<?>",       $c8 ; non-bold "?"
-	charmap "<%>",       $c9
-	charmap "<INF1>",    $ca ; left half of infinity symbol
-	charmap "<INF2>",    $cb ; right half of infinity symbol
+	charmap "<ATK1>",    $c0 ; left half of ATK symbol
+	charmap "<ATK2>",    $c1 ; right half of ATK symbol
+	charmap "<ACC1>",    $c2 ; left half of ACC symbol
+	charmap "<ACC2>",    $c3 ; right half of ACC symbol
+	charmap "<%>",       $c4
+	charmap "<INF1>",    $c5 ; left half of infinity symbol
+	charmap "<INF2>",    $c6 ; right half of infinity symbol
+	charmap "<?>",       $c7 ; non-bold "?"
+;	charmap "<c8>",      $c8
+;	charmap "<c9>",      $c9
+;	charmap "<ca>",      $ca
+;	charmap "<cb>",      $cb
 	charmap "<ID>",      $cc
 	charmap "№",         $cd
 	charmap "′",         $ce

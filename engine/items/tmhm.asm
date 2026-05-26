@@ -253,16 +253,10 @@ TMHM_ShowTMMoveDescription:
 
 ; Print UI element
 	hlcoord 0, 11
-	ld de, String_TMHMType_Top
+	ld de, String_TMHMTabTop
 	call PlaceString
 	hlcoord 0, 12
-	ld de, String_TMHMType_Bottom
-	call PlaceString
-	hlcoord 1, 12 ;type icons
-	ld de, String_TMHMAtk
-	call PlaceString
-	hlcoord 1, 13 ;type icons
-	ld de, String_TMHMAcc
+	ld de, String_TMHMTabBottom
 	call PlaceString
 
 ;phys/spec split
@@ -339,6 +333,10 @@ TMHM_ShowTMMoveDescription:
 
 ;.power
 ; Print move power
+;	hlcoord 1, 12 ;type icons
+;	ld de, .power_string
+;	call PlaceString
+
 	ld a, [wCurSpecies]
 	dec a
 	ld hl, Moves + MOVE_POWER
@@ -346,10 +344,10 @@ TMHM_ShowTMMoveDescription:
 	call AddNTimes
 	ld a, BANK(Moves)
 	call GetFarByte
-	hlcoord 5, 12
+	hlcoord 3, 12
 	and a
 	jr nz, .haspower
-	ld de, String_TMHMNoValue ; "---"
+	ld de, .novalue_string ; "---"
 	call PlaceString
 	jr .accuracy
 .haspower
@@ -360,28 +358,32 @@ TMHM_ShowTMMoveDescription:
 	ld [wTextDecimalByte], a
 	ld de, wTextDecimalByte
 	lb bc, 1, 3 ; number of bytes this number is in, in 'b', number of possible digits in 'c'
-	set 6, b ; left-aligned
+;	set 6, b ; left-aligned
 	call PrintNum
 	jr .accuracy
 
 .inf_power
-	ld de, String_TMHMInfiniity
+	ld de, .infinity_string
 	call PlaceString
 	jr .accuracy
 
 .var_power
-	ld de, String_TMHMUnknown
+	ld de, .unknown_string
 	call PlaceString
 
 .accuracy
 ; Print move accuracy
+	hlcoord 1, 13 ;type icons
+	ld de, .accuracy_string
+	call PlaceString
+
 	ld a, [wCurSpecies]
 	ld bc, MOVE_LENGTH
 	ld hl, (Moves + MOVE_ACC) - MOVE_LENGTH
 	call AddNTimes
 	ld a, BANK(Moves)
 	call GetFarByte
-	hlcoord 5, 13
+	hlcoord 3, 13
 ; convert from hex to decimal
 ; this is the same code used in function "Adjust_Percent" in engine\pokemon\mon_stats.asm
 	ldh [hMultiplicand], a
@@ -405,12 +407,12 @@ TMHM_ShowTMMoveDescription:
 	ld [wTextDecimalByte], a
 	ld de, wTextDecimalByte
 	lb bc, 1, 3 ; number of bytes this number is in, in 'b', number of possible digits in 'c'
-	set 6, b ; left-aligned
+;	set 6, b ; left-aligned
 	call PrintNum
 	jr .description
 
 .no_acc
-	ld de, String_TMHMInfiniity
+	ld de, .infinity_string
 	call PlaceString
 
 .description
@@ -429,23 +431,21 @@ TMHM_ShowTMMoveDescription:
 	jp TMHM_JoypadLoop
 
 ; UI elements
-String_TMHMType_Top:
-	db "┌───────┐@" ;type icons
-String_TMHMType_Bottom:
-	db "│       └@" ;type icons
-;	db "│                  │@" ;type icons
-String_TMHMAtk:
-	db "ATK/@"
-;String_TMHMDmg:
-;	db "DMG/@"
-String_TMHMAcc:
-	db "ACC/  <%>@"
-String_TMHMNoValue:
+;.power_string:
+;	db "<ATK1><ATK2>@"
+.accuracy_string:
+	db "<ACC1><ACC2>   <%>@"
+.novalue_string:
 	db "---@"
-String_TMHMInfiniity:
-	db "<INF1><INF2>@"
-String_TMHMUnknown:
+.infinity_string:
+	db " <INF1><INF2>@"
+.unknown_string:
 	db "<?><?><?>@"
+String_TMHMTabTop:
+	db "┌──────┐@"
+String_TMHMTabBottom:
+	db "│<ATK1><ATK2>    └@"
+
 
 TMHM_ChooseTMorHM:
 	call TMHM_PlaySFX_ReadText2

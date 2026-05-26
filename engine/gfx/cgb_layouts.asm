@@ -43,7 +43,7 @@ CGBLayoutJumptable:
 	dw _CGB_PartyMenu
 	dw _CGB_Evolution
 	dw _CGB_GSTitleScreen
-	dw _CGB_Unused0D
+	dw _CGB_LearnScreen ;Unused0D
 	dw _CGB_MoveList
 	dw _CGB_BetaPikachuMinigame
 	dw _CGB_PokedexSearchOption
@@ -230,17 +230,18 @@ _CGB_FinishBattleScreenLayout:
 	ld a, $6
 	call FillBoxCGB
 
+
 ; check if we're in the MoveInfoBox
 	hlcoord 0, 12
 	ld a, [hl]
 	cp $be ;$7d ; lower left border tile
 	jr nz, .done
-
-	; Move Type and Category pal
-	hlcoord 1, 8, wAttrmap ;1, 11, wAttrmap ; Move Type and Category location
-	ld bc, 7
+; Move Type and Category pal
+	hlcoord 1, 8, wAttrmap ; Move Type and Category location
+	ld bc, 6
 	ld a, $5
 	call ByteFill
+	jr .done
 
 .done
 	ld hl, BattleObjectPals
@@ -877,12 +878,37 @@ _CGB_GSTitleScreen:
 	ldh [hCGBPalUpdate], a
 	ret
 
-_CGB_Unused0D:
-	ld hl, PalPacket_Diploma + 1
-	call CopyFourPalettes
-	call WipeAttrmap
+;_CGB_Unused0D:
+;	ld hl, PalPacket_Diploma + 1
+;	call CopyFourPalettes
+;	call WipeAttrmap
+;	call ApplyAttrmap
+;	ret
+_CGB_LearnScreen:
+; check if we're in the ForgetMove box
+;	hlcoord 5, 10
+;	ld a, [hl]
+;	cp $be ; $bf ; lower right border tile
+;	jr z, .black ;.done
+
+	hlcoord 13, 12, wAttrmap ; Move Type and Category location
+	ld bc, 6
+	ld a, $5
+	call ByteFill
+
+;.done
+	ld hl, BattleObjectPals
+	ld de, wOBPals1 palette PAL_BATTLE_OB_GRAY
+	ld bc, 6 palettes
+	ld a, BANK(wOBPals1)
+	call FarCopyWRAM
 	call ApplyAttrmap
 	ret
+
+;.black
+;	call WipeAttrmap
+;	call ApplyAttrmap
+;	ret
 
 _CGB_UnownPuzzle:
 	ld hl, PalPacket_UnownPuzzle + 1
