@@ -3052,10 +3052,10 @@ BattleAnim_AquaJet:
 	anim_sound 0, 0, SFX_MENU
 	anim_bgeffect BATTLE_BG_EFFECT_HIDE_MON, $0, BG_EFFECT_USER, $0
 	anim_call BattleAnimSub_QuickAttack
-	anim_wait 12
-	anim_sound 0, 1, SFX_HYDRO_PUMP
+	anim_wait 16
+	anim_sound 0, 1, SFX_UNKNOWN_63
 	anim_obj BATTLE_ANIM_OBJ_HYDRO_PUMP, 132, 72, $0
-	anim_wait 32
+	anim_wait 24
 	anim_bgeffect BATTLE_BG_EFFECT_SHOW_MON, $0, BG_EFFECT_USER, $0
 	anim_wait 16
 	anim_ret
