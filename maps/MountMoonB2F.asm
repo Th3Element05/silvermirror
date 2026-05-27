@@ -14,6 +14,10 @@ MountMoonB2FChooseFossilScene:
 MountMoonB2FNoopScene:
 	end
 
+
+MtMoonB2FFossilNerdCoordScript:
+	showemote EMOTE_SHOCK, MOUNTMOONB2F_SUPER_NERD, 20
+	turnobject PLAYER, LEFT
 MtMoonB2FFossilNerdScript:
 	checkevent EVENT_MT_MOON_OBTAINED_FOSSIL
 	iftrue .CinnabarLab
@@ -30,16 +34,11 @@ MtMoonB2FFossilNerdScript:
 	reloadmapafterbattle
 	setevent EVENT_BEAT_SUPER_NERD_SAM
 	setscene SCENE_MOUNTMOONB2F_NOOP
-	sjump .Finish
-
-.CinnabarLab
-	jumptextfaceplayer MtMoonB2FSuperNerdCinnabarLabText
-
 .TakeOne
 	jumptextfaceplayer MtMoonB2FSuperNerdTakeOneText
 
-.Finish
-	end
+.CinnabarLab
+	jumptextfaceplayer MtMoonB2FSuperNerdCinnabarLabText
 
 MtMoonB2FSuperNerdStopText:
 	ntag "SUPERNERD:"
@@ -280,7 +279,7 @@ MountMoonB2F_MapEvents:
 	warp_event 17, 29, MOUNT_MOON, 12 ; 4
 
 	def_coord_events
-	coord_event 13, 10, SCENE_MOUNTMOONB2F_CHOOSE_FOSSIL, MtMoonB2FFossilNerdScript
+	coord_event 13, 10, SCENE_MOUNTMOONB2F_CHOOSE_FOSSIL, MtMoonB2FFossilNerdCoordScript
 
 	def_bg_events
 	bg_event 35, 11, BGEVENT_ITEM, MtMoonB2FHiddenEther
