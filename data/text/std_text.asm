@@ -1,88 +1,44 @@
-;NurseMornText:
-;	ntag "NURSE:"
-;	text "Good morning!"
+NurseMornText:
+	ntag "NURSE:"
+	text "Good morning!"
 ;	line "Welcome to our"
 ;	cont "#MON CENTER."
-;	done
+	done
 
-;NurseDayText:
-;	ntag "NURSE:"
+NurseDayText:
+	ntag "NURSE:"
 ;	text "Hello!"
 ;	line "Welcome to our"
 ;	cont "#MON CENTER."
 ;	done
-
-;NurseEveText:
-;	ntag "NURSE:"
-;	text "Good evening!"
-;	line "Welcome to our"
-;	cont "#MON CENTER."
-;	done
-
-;NurseNiteText:
-;	ntag "NURSE:"
-;	text "Good evening!"
-;	line "You're out late."
-;
-;	para "Welcome to our"
-;	line "#MON CENTER."
-;	done
-
-NurseMornText:
-NurseDayText:
-NurseEveText:
-NurseNiteText:
-	ntag "NURSE:"
 	text "Welcome to our"
 	line "#MON CENTER."
 	done
 
-;PokeComNurseMornText:
-;	text "Good morning!"
+NurseEveText:
+	ntag "NURSE:"
+	text "Good afternoon!"
+;	line "Welcome to our"
+;	cont "#MON CENTER."
+	done
+
+NurseNiteText:
+	ntag "NURSE:"
+	text "Good evening!"
+;	line "You're out late."
 ;
-;	para "This is the #-"
-;	line "MON COMMUNICATION"
-;
-;	para "CENTER--or the"
-;	line "#COM CENTER."
-;	done
-;
-;PokeComNurseDayText:
-;	text "Hello!"
-;
-;	para "This is the #-"
-;	line "MON COMMUNICATION"
-;
-;	para "CENTER--or the"
-;	line "#COM CENTER."
-;	done
-;
-;PokeComNurseEveText:
-;	text "Good evening."
-;
-;	para "This is the #-"
-;	line "MON COMMUNICATION"
-;
-;	para "CENTER--or the"
-;	line "#COM CENTER."
-;	done
-;
-;PokeComNurseNiteText:
-;	text "Good to see you"
-;	line "working so late."
-;
-;	para "This is the #-"
-;	line "MON COMMUNICATION"
-;
-;	para "CENTER--or the"
-;	line "#COM CENTER."
-;	done
+;	para "Welcome to our"
+;	line "#MON CENTER."
+	done
 
 NurseAskHealText:
 	ntag "NURSE:"
-	text "We can heal your"
-	line "#MON to perfect"
-	cont "health."
+	text "We can restore"
+	line "your #MON to"
+	cont "perfect health."
+;	text "We can heal your"
+;	line "#MON to perfect"
+;	cont "health."
 
 	para "Shall we heal your"
 	line "#MON?"
@@ -108,11 +64,6 @@ NurseGoodbyeText:
 	text "We hope to see you"
 	line "again."
 	done
-
-;; not used
-;	text "We hope to see you"
-;	line "again."
-;	done
 
 NursePokerusText:
 	ntag "NURSE:"
@@ -157,6 +108,47 @@ NursePokerusText:
 ;
 ;	para "But we can't tell"
 ;	line "you anything more."
+;	done
+
+;PokeComNurseMornText:
+;	text "Good morning!"
+;
+;	para "This is the #-"
+;	line "MON COMMUNICATION"
+;
+;	para "CENTER--or the"
+;	line "#COM CENTER."
+;	done
+
+;PokeComNurseDayText:
+;	text "Hello!"
+;
+;	para "This is the #-"
+;	line "MON COMMUNICATION"
+;
+;	para "CENTER--or the"
+;	line "#COM CENTER."
+;	done
+
+;PokeComNurseEveText:
+;	text "Good evening."
+;
+;	para "This is the #-"
+;	line "MON COMMUNICATION"
+;
+;	para "CENTER--or the"
+;	line "#COM CENTER."
+;	done
+
+;PokeComNurseNiteText:
+;	text "Good to see you"
+;	line "working so late."
+;
+;	para "This is the #-"
+;	line "MON COMMUNICATION"
+;
+;	para "CENTER--or the"
+;	line "#COM CENTER."
 ;	done
 
 DifficultBookshelfText:
