@@ -124,3 +124,76 @@ TREE		cut/headbutt
 SILVER	WHT	
 .pink	PNK
 .grey	BLK	
+
+
+
+improved berry text scripts
+Route1_OranBerry:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, ORAN_BERRY
+	farwritetext _HeyItsFruitText
+	promptbutton
+	giveitem ORAN_BERRY, 2
+	iffalse .NoRoomInBag
+	farwritetext _PickedBerriesText
+	playsound SFX_ITEM
+	waitsfx
+	waitbutton
+	farwritetext _BerriesInBerryPocketText
+	promptbutton
+	disappear ROUTE1_ORAN_BERRY
+	setflag ENGINE_DAILY_ROUTE_1_FRUIT
+	closetext
+	end
+.NoRoomInBag
+	farwritetext _FruitPackIsFullText
+	waitbutton
+	closetext
+	end
+
+
+Route1_BLKApricorn:
+	opentext
+	farwritetext _FruitBearingTreeText
+	promptbutton
+	getitemname STRING_BUFFER_3, BLK_APRICORN
+	farwritetext _HeyItsFruitText
+	promptbutton
+	giveitem BLK_APRICORN
+	iffalse .NoRoomInBag
+	farwritetext _PickedApricornText
+	playsound SFX_ITEM
+	waitsfx
+	waitbutton
+	itemnotify
+	disappear ROUTE1_BLK_APRICORN
+	setflag ENGINE_DAILY_ROUTE_1_FRUIT
+	closetext
+	end
+.NoRoomInBag
+	farwritetext _FruitPackIsFullText
+	waitbutton
+	closetext
+	end
+
+
+common_1
+_PickedBerriesText::
+	text "<PLAYER> picked"
+	line "the berries."
+	done
+
+_PickedApricornText::
+	text "<PLAYER> picked"
+	line "the @"
+	text_ram wStringBuffer3
+	text "."
+	done
+
+_BerriesInBerryPocketText::
+	text "<PLAYER> put the"
+	line "berries in the"
+	cont "BERRY POCKET."
+	done

@@ -10,6 +10,24 @@ _HeyItsFruitText::
 	text "!"
 	done
 
+;_PickedBerriesText:
+;	text "<PLAYER> picked"
+;	line "the berries."
+;	done
+
+;_PickedApricornText:
+;	text "<PLAYER> picked"
+;	line "the @"
+;	text_ram wStringBuffer3
+;	text "."
+;	done
+
+;_BerriesInBerryPocketText:
+;	text "<PLAYER> put the"
+;	line "berries in the"
+;	cont "BERRY POCKET."
+;	done
+
 _ObtainedFruitText::
 	text "Obtained some"
 	line "@"
@@ -47,13 +65,13 @@ _RecoveredSomeHPText::
 
 _CuredOfPoisonText::
 	text_ram wStringBuffer1
-	text " was" ;"'s"
+	text "'s"
 	line "cured of poison."
 	done
 
 _RidOfParalysisText::
 	text_ram wStringBuffer1
-	text " was" ;"'s"
+	text "'s"
 	line "rid of paralysis."
 	done
 
@@ -96,8 +114,6 @@ _GrewToLevelText::
 	sound_dex_fanfare_50_79 ; plays SFX_DEX_FANFARE_50_79, identical to SFX_LEVEL_UP
 	text_promptbutton
 	text_end
-
-;	text_end ; unreferenced
 
 _CameToItsSensesText::
 	text_ram wStringBuffer1
@@ -1746,8 +1762,11 @@ _MomTakeMoneyText::
 
 _MomSaveMoneyText::
 	ntag "MOM:"
-	text "Do you want to"
-	line "save some money?"
+;	text "Do you want to"
+;	line "save some money?"
+;	done
+	text "Do you want me to"
+	line "save your money?"
 	done
 
 _MomHaventSavedThatMuchText::
