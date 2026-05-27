@@ -62,7 +62,7 @@ MtMoonPokecenter1FSalesmanScript:
 	special PlaceMoneyTopRight
 	writetext MtMoonPokecenterGotMagikarpText
 	promptbutton
-	givepoke MAGIKARP, 5
+	givepoke MAGIKARP, 5, HEART_SCALE
 	setevent EVENT_BOUGHT_MAGIKARP
 	; fallthrough
 .NoRefunds
