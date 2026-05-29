@@ -23,6 +23,8 @@ ViridianMartOaksParcelScene:
 	giveitem OAKS_PARCEL
 	waitsfx
 	waitbutton
+	writetext ViridianMartSayHiToOakText
+	waitbutton
 	closetext
 	setevent EVENT_GOT_OAKS_PARCEL
 	setevent EVENT_PLAYERS_HOUSE_1F_NEIGHBOR
@@ -122,8 +124,8 @@ ViridianMartFromPalletText:
 
 ViridianMartOaksParcelText:
 	ntag "CLERK:"
-	text "You know PROF."
-	line "OAK, right?"
+	text "You know PROF.OAK,"
+	line "right?"
 
 	para "His order came in."
 	line "Will you take it"

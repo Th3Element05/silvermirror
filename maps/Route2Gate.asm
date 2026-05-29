@@ -69,8 +69,7 @@ GotFlashPagerText:
 Route2GateOaksAideAskPokemonText:
 	ntag "AIDE:"
 	text "Hi! Remember me?"
-	line "I'm PROF.OAK's"
-	cont "AIDE."
+	line "I'm PROF.OAK's AIDE."
 
 	para "If you caught 10"
 	line "kinds of #MON,"

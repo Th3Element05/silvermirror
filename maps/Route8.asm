@@ -379,7 +379,7 @@ PokefanMTrevorAfterBattleText:
 	ntag "#FAN:"
 	text "Oh, yes! I have to"
 	line "get my #MON out"
-	cont "of DAY-CARE!"
+	cont "of DAYCARE!"
 	done
 
 

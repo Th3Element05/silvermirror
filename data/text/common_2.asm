@@ -690,7 +690,8 @@ _ThrewAwayText::
 
 _OakThisIsntTheTimeText::
 _ItemsOakWarningText::
-	ntag "PROF.OAK:"
+_ItemOakWarningText::
+;	ntag "PROF.OAK:"
 ;	text "<PLAYER>!"
 	text "This isn't the"
 	line "time to use that!"
@@ -916,7 +917,7 @@ _LeftWithDayCareLadyText::
 	text_ram wBreedMon2Nickname
 	text_start
 	line "that was left with"
-	cont "the DAY-CARE LADY."
+	cont "the DAYCARE LADY."
 	done
 
 _LeftWithDayCareManText::
@@ -924,7 +925,7 @@ _LeftWithDayCareManText::
 	text_ram wBreedMon1Nickname
 	text_start
 	line "that was left with"
-	cont "the DAY-CARE MAN."
+	cont "the DAYCARE MAN."
 	done
 
 _BreedBrimmingWithEnergyText::
@@ -1473,8 +1474,11 @@ _OakRating19::
 	done
 
 _OakPCText4::
-	text "The link to PROF."
-	line "OAK's PC closed."
+;	text "The link to PROF."
+;	line "OAK's PC closed."
+;	done
+	text "Closed the link"
+	line "to PROF.OAK's PC."
 	done
 
 ;_TrainerRankingExplanationText:: ; unreferenced
@@ -1658,10 +1662,15 @@ _PokemonNotEnoughHPText::
 	prompt
 
 _MayRegisterItemText::
+;	text "An item in your"
+;	line "PACK may be"
+;	cont "registered for use"
+;	roll "on SELECT Button."
+;	done
 	text "An item in your"
 	line "PACK may be"
-	cont "registered for use"
-	roll "on SELECT Button."
+	cont "registered to use"
+	roll "with SELECT."
 	done
 
 _OakText1::

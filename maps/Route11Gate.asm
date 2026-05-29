@@ -44,8 +44,7 @@ Route11GateTilesCallback:
 ;
 ;Route11GateOaksAideAskPokemonText:
 ;	text "Hi! Remember me?"
-;	line "I'm PROF.OAK's"
-;	cont "AIDE."
+;	line "I'm PROF.OAK's AIDE."
 ;
 ;	para "If you caught 30"
 ;	line "kinds of #MON,"

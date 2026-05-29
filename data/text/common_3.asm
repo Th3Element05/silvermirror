@@ -1365,16 +1365,12 @@ _ItemCantUseOnEggText::
 	line "on an EGG."
 	prompt
 
-_ItemOakWarningText::
+;_ItemOakWarningText::
 ;	ntag "PROF.OAK:"
 ;	text "<PLAYER>!"
 ;	line "This isn't the"
 ;	cont "time to use that!"
 ;	prompt
-	ntag "PROF.OAK:"
-	text "This isn't the"
-	line "time to use that!"
-	prompt
 
 _ItemBelongsToSomeoneElseText::
 	text "That belongs to"

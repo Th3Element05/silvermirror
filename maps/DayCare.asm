@@ -93,7 +93,7 @@ DayCareBookshelf:
 	jumpstd DifficultBookshelfScript
 
 ;Text_DayCareManTalksAboutEggTicket: ; unreferenced
-;	text "I'm the DAY-CARE"
+;	text "I'm the DAYCARE"
 ;	line "MAN."
 ;
 ;	para "There's something"
@@ -109,14 +109,14 @@ DayCareBookshelf:
 ;	line "ODD EGG."
 ;
 ;	para "But since we run a"
-;	line "DAY-CARE, we don't"
+;	line "DAYCARE, we don't"
 ;
 ;	para "need it. You may"
 ;	line "as well have it."
 ;	done
 
 ;DayCareManText_GiveOddEgg:
-;	text "I'm the DAY-CARE"
+;	text "I'm the DAYCARE"
 ;	line "MAN."
 ;
 ;	para "Do you know about"
@@ -186,5 +186,5 @@ DayCare_MapEvents:
 	bg_event  1,  1, BGEVENT_READ, DayCareBookshelf
 
 	def_object_events
-	object_event  2,  3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DayCareManScript_Inside, EVENT_DAY_CARE_MAN_IN_DAY_CARE
-	object_event  5,  3, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DayCareLadyScript, -1
+	object_event  2,  3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, DayCareManScript_Inside, EVENT_DAY_CARE_MAN_IN_DAY_CARE
+	object_event  5,  4, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, DayCareLadyScript, -1

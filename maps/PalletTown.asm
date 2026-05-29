@@ -262,7 +262,7 @@ KantoRematchNotifyScript:
 	playsound SFX_3RD_PLACE
 ;	playsound SFX_GET_BADGE
 	waitsfx
-;	waitbutton
+	waitbutton
 	closetext
 	setscene SCENE_PALLETTOWN_NOOP
 	end

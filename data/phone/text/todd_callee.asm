@@ -62,7 +62,7 @@ ToddGenericText:
 	para "I do all sorts"
 	line "of things, like"
 ;	cont "leaving them in"
-;	roll "DAY-CARE and"
+;	roll "DAYCARE and"
 	cont "toughening them up"
 	roll "with items."
 	done

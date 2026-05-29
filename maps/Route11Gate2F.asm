@@ -23,7 +23,7 @@ Route11Gate2FOaksAideScript:
 	iffalse .SaidNo
 	readvar VAR_DEXCAUGHT
 	getnum STRING_BUFFER_3
-	ifless 30, .NotEnough
+	ifless 25, .NotEnough
 	writetext Route11Gate2FOaksAideCongratsText
 	promptbutton
 	verbosegiveitem ITEMFINDER
@@ -46,10 +46,9 @@ Route11Gate2FOaksAideScript:
 Route11Gate2FOaksAideAskPokemonText:
 	ntag "AIDE:"
 	text "Hi! Remember me?"
-	line "I'm PROF.OAK's"
-	cont "AIDE."
+	line "I'm PROF.OAK's AIDE."
 
-	para "If you caught 30"
+	para "If you caught 25"
 	line "kinds of #MON,"
 	cont "I'm supposed to"
 	roll "give you an"
@@ -57,7 +56,7 @@ Route11Gate2FOaksAideAskPokemonText:
 
 	para "So, <PLAYER>! Have"
 	line "you caught at"
-	cont "least 30 kinds of"
+	cont "least 25 kinds of"
 	roll "#MON?"
 	done
 
