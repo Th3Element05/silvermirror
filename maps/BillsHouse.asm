@@ -41,38 +41,35 @@ BillsHouseBillScript:
 	jumptext BillsHouseBillInsideTeleporterText
 
 .AfterHelpedBill
-	faceplayer
-	opentext
-	checkcellnum PHONE_BILL
-	iftrue .GotBillsNumber
-	writetext BillOffersNumberText
-	askforphonenumber PHONE_BILL
-	ifequal PHONE_CONTACTS_FULL, .NoRoom
-	ifequal PHONE_CONTACT_REFUSED, .Refused
-	waitsfx
-	addcellnum PHONE_BILL
-	writetext RecordedBillsNumberText
-	playsound SFX_REGISTER_PHONE_NUMBER
-	waitsfx
-	waitbutton
-	closetext
-	end
+;	faceplayer
+;	opentext
+;	checkcellnum PHONE_BILL
+;	iftrue .GotBillsNumber
+;	writetext BillOffersNumberText
+;	askforphonenumber PHONE_BILL
+;	ifequal PHONE_CONTACTS_FULL, .NoRoom
+;	ifequal PHONE_CONTACT_REFUSED, .Refused
+;	waitsfx
+;	addcellnum PHONE_BILL
+;	writetext RecordedBillsNumberText
+;	playsound SFX_REGISTER_PHONE_NUMBER
+;	waitsfx
+;	waitbutton
+;	closetext
+;	end
+;.NoRoom:
+;	writetext BillsHousePhoneFullText
+;	promptbutton
+;.Refused:
+;	writetext BillsHouseBummerText
+;	waitbutton
+;	closetext
+;	end
 
-.NoRoom:
-	writetext BillsHousePhoneFullText
-	promptbutton
-.Refused:
-	writetext BillsHouseBummerText
-	waitbutton
-	closetext
-	end
-
-.GotBillsNumber
+;.GotBillsNumber
 ;	checkevent EVENT_GOT_HM01_CUT
 ;	iftrue BillsGrandpa
-	writetext BillsHouseBillExplainRadioCardText
-	waitbutton
-	closetext
+	jumptextfaceplayer BillsHouseBillExplainRadioCardText
 	end
 
 .BillsHouseBillGoesToTeleporterScript:
