@@ -406,6 +406,7 @@ endr
 	ld [wTempSpecies], a
 	xor a
 	ld [wMonType], a
+	call LearnEvolutionMove
 	call LearnLevelMoves
 	ld a, [wTempSpecies]
 	dec a
@@ -452,6 +453,43 @@ endr
 	ld a, [wMonTriedToEvolve]
 	and a
 	call nz, RestartMapMusic
+	ret
+
+LearnEvolutionMove:
+	ld a, [wTempSpecies]
+	ld [wCurPartySpecies], a
+	dec a
+	ld c, a
+	ld b, 0
+	ld hl, EvolutionMoves
+	add hl, bc
+	ld a, [hl]
+	and a
+	ret z
+
+	push hl
+	ld d, a
+	ld hl, wPartyMon1Moves
+	ld a, [wCurPartyMon]
+	ld bc, PARTYMON_STRUCT_LENGTH
+	call AddNTimes
+	ld b, NUM_MOVES
+.check_move
+	ld a, [hli]
+	cp d
+	jr z, .has_move
+	dec b
+	jr nz, .check_move
+	ld a, d
+	ld [wPutativeTMHMMove], a
+	ld [wNamedObjectIndex], a
+	call GetMoveName
+	call CopyName1
+	predef LearnMove
+	ld a, [wCurPartySpecies]
+	ld [wTempSpecies], a
+.has_move
+	pop hl
 	ret
 
 UpdateSpeciesNameIfNotNicknamed:
@@ -730,7 +768,8 @@ GetPreEvolution:
 	ld a, [hli]
 	and a
 	jr z, .no_evolve ; If we jump, this Pokemon does not evolve into wCurPartySpecies.
-	cp EVOLVE_STAT ; This evolution type has the extra parameter of stat comparison.
+;	cp EVOLVE_STAT ; This evolution type has the extra parameter of stat comparison.
+	cp EVOLVE_HOLD ; This evolution type has the extra parameter of hold item + time of day.
 	jr nz, .not_tyrogue
 	inc hl
 
