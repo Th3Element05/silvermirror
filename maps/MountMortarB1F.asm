@@ -9,7 +9,7 @@ MountMortarB1F_MapScripts:
 MountMortarB1FKiyoScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_TYROGUE_FROM_KIYO
+	checkevent EVENT_GOT_HITMONTOP_FROM_KIYO
 	iftrue .GotTyrogue
 	checkevent EVENT_BEAT_BLACKBELT_KIYO
 	iftrue .BeatKiyo
@@ -31,8 +31,8 @@ MountMortarB1FKiyoScript:
 	writetext MountMortarB1FReceiveMonText
 	playsound SFX_CAUGHT_MON
 	waitsfx
-	givepoke TYROGUE, 10
-	setevent EVENT_GOT_TYROGUE_FROM_KIYO
+	givepoke HITMONTOP, 10
+	setevent EVENT_GOT_HITMONTOP_FROM_KIYO
 .GotTyrogue:
 	writetext MountMortarB1FKiyoGotTyrogueText
 	waitbutton
@@ -85,16 +85,17 @@ MountMortarB1FTyrogueRewardText:
 
 MountMortarB1FReceiveMonText:
 	text "<PLAYER> received"
-	line "TYROGUE."
+	line "HITMONTOP."
 	done
 
 MountMortarB1FKiyoGotTyrogueText:
 	ntag "BLACKBELT:"
-	text "TYROGUE is a"
-	line "fighting-type."
+	text "HITMONTOP is a"
+	line "FIGHTING-type."
 
-	para "It evolves into a"
-	line "tougher #MON."
+	para "It's not as well"
+	line "known as HITMONLEE"
+	cont "or HITMONCHAN."
 
 	para "Keep up the hard"
 	line "work. I'll keep"
