@@ -399,6 +399,9 @@ DayCareManOutside:
 .AskGiveEgg:
 	ld hl, .FoundAnEggText
 	call PrintText
+.ask_egg_loop
+	ld hl, .DoYouWantEggText
+	call PrintText
 	call YesNoBox
 	jr c, .Declined
 	ld a, [wPartyCount]
@@ -418,6 +421,10 @@ DayCareManOutside:
 	jr .Load0
 
 .Declined:
+	ld hl, .SureYouDontWantItText
+	call PrintText
+	call YesNoBox
+	jr c, .ask_egg_loop
 	ld hl, .IllKeepItThanksText
 
 .Load0:
@@ -437,12 +444,20 @@ DayCareManOutside:
 	text_far _FoundAnEggText
 	text_end
 
+.DoYouWantEggText:
+	text_far _DoYouWantThisEggText
+	text_end
+
 .ReceivedEggText:
 	text_far _ReceivedEggText
 	text_end
 
 .TakeGoodCareOfEggText:
 	text_far _TakeGoodCareOfEggText
+	text_end
+
+.SureYouDontWantItText:
+	text_far _SureYouDontWantItText
 	text_end
 
 .IllKeepItThanksText:
@@ -601,10 +616,47 @@ DayCare_InitBreeding:
 	ld a, EGG_LEVEL
 	ld [wCurPartyLevel], a
 
-; Nidoran♀ can give birth to either gender of Nidoran
+; Hitmon* mons can birth any species, Hitmontop only in Gen2 Mode or after E4.
 	ld a, [wCurPartySpecies]
+	cp HITMONTOP
+	jr z, .do_hitmontop
+	cp HITMONLEE
+	jr z, .is_hitmon_group
+	cp HITMONCHAN
+	jr nz, .check_nidoran
+
+.is_hitmon_group
+; Check Mode, Check HOF
+	ld a, [wChallengeMode]
+	bit GAME_CHALLENGE_MODE_F, a
+	jp nz, .do_hitmontop
+
+	ld a, [wStatusFlags]
+	bit STATUSFLAGS_HALL_OF_FAME_F, a
+	jp z, .not_hitmontop
+
+.do_hitmontop
+	call Random
+	cp 33 percent
+	ld a, HITMONTOP
+	jr c, .GotEggSpecies
+
+.not_hitmontop
+	call Random
+	cp 50 percent + 1
+	ld a, HITMONCHAN
+	jr c, .GotEggSpecies
+	ld a, HITMONLEE
+	jr .GotEggSpecies
+
+;-; Nidoran♀ can give birth to either gender of Nidoran
+; Both Nidoran can give birth to either gender of Nidoran
+.check_nidoran
 	cp NIDORAN_F
+	jr z, .is_nidoran
+	cp NIDORAN_M
 	jr nz, .GotEggSpecies
+.is_nidoran
 	call Random
 	cp 50 percent + 1
 	ld a, NIDORAN_F
