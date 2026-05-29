@@ -20,7 +20,7 @@ VermilionGymTrashCanScript:
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	iftrue .second_switch
 ;first_switch
-	random 4
+	random 3
 	ifnotequal 0, .reset_switches
 	writetext VermilionGymFoundSwitchText
 	playsound SFX_PUSH_BUTTON
@@ -51,9 +51,9 @@ VermilionGymTrashCanScript:
 	writetext VermilionGymTrashCanText
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	iffalse .NoReset
+	playsound SFX_WRONG
 	promptbutton
 	writetext VermilionGymResetSwitchesText
-	playsound SFX_WRONG
 	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	; fallthrough
 .NoReset:
@@ -129,7 +129,7 @@ LtSurgeIntroText:
 	line "you think you're"
 	cont "doing here?"
 
-	para "You won't live"
+	para "You won't last"
 	line "long in combat!"
 	cont "That's for sure!"
 
