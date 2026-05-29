@@ -149,9 +149,9 @@ MomPhoneLectureText:
 	text "Hello?"
 
 	para "…… <PLAYER>?"
-	line "I heard from PROF."
-	cont "OAK that you went"
-	cont "on a long trip."
+	line "PROF.OAK told me"
+	cont "that you went on"
+	roll "a long trip."
 
 	para "I wish you would"
 	line "have told me…"

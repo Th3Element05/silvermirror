@@ -53,7 +53,7 @@ BillsFamilysHouseBill_GiveGSBallText:
 	ntag "BILL:"
 	text "<PLAYER>!"
 	line "What are you doing"
-	cont "in GOLDENROD?"
+	cont "in GOLDENROD, pal?"
 
 	para "I heard you were"
 	line "the new #MON"
@@ -85,7 +85,7 @@ BillsFamilysHouseBill_GiveGSBallText:
 	cont "of my tests."
 
 	para "I think you should"
-	line "take it."
+	line "take it!"
 	done
 
 BillsFamilysHouseBill_ExplainGSBallText:
@@ -108,7 +108,8 @@ BillsFamilysHouseBill_ExplainGSBallText:
 	para "You should come"
 	line "visit sometime!"
 
-	para "See you later!"
+	para "See you later,"
+	line "cheif!"
 	done
 
 BillsFamilysHouse_BillLeavesMovement:

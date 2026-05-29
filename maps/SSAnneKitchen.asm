@@ -50,10 +50,9 @@ SSAnneKitchenCook4Script:
 
 SSAnneKitchenCook4Text:
 	ntag "COOK:"
-	text "Hum-de-hum-de-"
-	line "ho…"
+	text "Hum-de-hum-de-ho…"
 
-	para "I peel spuds"
+	para "I peel the spuds"
 	line "every day!"
 	cont "Hum-hum…"
 	done
@@ -112,8 +111,15 @@ SSAnneKitchenTrashcan:
 ;	jumpstd TrashCanScript
 	jumptext SSAnneKitchenTrashcanText
 SSAnneKitchenTrashcanText:
-	text "Its full of"
-	line "potato peels!"
+	text "It's full of potato"
+	line "peels!"
+	done
+
+SSAnneKitchenOnionTrashcan:
+	jumptext SSAnneKitchenOnionTrashcanText
+SSAnneKitchenOnionTrashcanText:
+	text "It's full of onion"
+	line "skins."
 	done
 
 SSAnneKitchenHiddenGreatBall:
@@ -130,6 +136,7 @@ SSAnneKitchen_MapEvents:
 	def_bg_events
 	bg_event 13,  5, BGEVENT_READ, SSAnneKitchenTrashcan
 	bg_event 13,  7, BGEVENT_READ, SSAnneKitchenTrashcan
+	bg_event 13,  7, BGEVENT_READ, SSAnneKitchenOnionTrashcan
 	bg_event 13,  9, BGEVENT_ITEM, SSAnneKitchenHiddenGreatBall
 ;	bg_event 13,  9, BGEVENT_READ, SSAnneKitchenTrashcan
 

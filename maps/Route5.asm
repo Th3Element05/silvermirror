@@ -96,7 +96,7 @@ Route5UndergroundPathSign:
 	jumptext Route5UndergroundPathSignText
 
 DayCareSignText:
-	text "DAY-CARE"
+	text "DAYCARE"
 
 	para "LET US RAISE YOUR"
 	line "#MON FOR YOU!"

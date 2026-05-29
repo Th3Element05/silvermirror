@@ -1826,14 +1826,14 @@ _DaycareDummyText::
 
 _DayCareManIntroText::
 	ntag "DAYCARE:"
-	text "I'm the DAY-CARE"
+	text "I'm the DAYCARE"
 	line "MAN. Want me to"
 	cont "raise a #MON?"
 	done
 
 _DayCareManIntroEggText::
 	ntag "DAYCARE:"
-	text "I'm the DAY-CARE"
+	text "I'm the DAYCARE"
 	line "MAN. Do you know"
 	cont "about EGGs?"
 
@@ -1853,7 +1853,7 @@ _DayCareManIntroEggText::
 
 _DayCareLadyIntroText::
 	ntag "DAYCARE:"
-	text "I'm the DAY-CARE"
+	text "I'm the DAYCARE"
 	line "LADY."
 
 	para "Should I raise a"
@@ -1862,7 +1862,7 @@ _DayCareLadyIntroText::
 
 _DayCareLadyIntroEggText::
 	ntag "DAYCARE:"
-	text "I'm the DAY-CARE"
+	text "I'm the DAYCARE"
 	line "LADY. Do you know"
 	cont "about EGGs?"
 
@@ -2013,16 +2013,24 @@ _FoundAnEggText::
 
 	para "We were raising"
 	line "your #MON, and"
-	cont "my goodness, were"
-	roll "we surprised!"
+;	cont "my goodness, were"
+;	roll "we surprised!"
+;
+;	para "Your #MON had"
+;	line "an EGG!"
+;
+;	para "We don't know how"
+;	line "it got there, but"
+;	cont "your #MON had"
+;	roll "it. You want it?"
+;	done
+	cont "it had an EGG!"
+	done
 
-	para "Your #MON had"
-	line "an EGG!"
-
-	para "We don't know how"
-	line "it got there, but"
-	cont "your #MON had"
-	roll "it. You want it?"
+_DoYouWantThisEggText::
+	ntag "DAYCARE:"
+	text "Do you want this"
+	line "EGG?"
 	done
 
 _ReceivedEggText::
@@ -2034,6 +2042,12 @@ _TakeGoodCareOfEggText::
 	ntag "DAYCARE:"
 	text "Take good care of"
 	line "it."
+	done
+
+_SureYouDontWantItText::
+	ntag "DAYCARE:"
+	text "Are you sure you"
+	line "don't want it?"
 	done
 
 _IllKeepItThanksText::

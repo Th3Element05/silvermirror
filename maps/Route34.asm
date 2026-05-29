@@ -412,7 +412,7 @@ Route34SignText:
 ;Route34DayCareSign:
 ;	jumptext Route34DayCareSignText
 ;Route34DayCareSignText:
-;	text "DAY-CARE"
+;	text "DAYCARE"
 ;
 ;	para "LET US RAISE YOUR"
 ;	line "#MON FOR YOU!"
