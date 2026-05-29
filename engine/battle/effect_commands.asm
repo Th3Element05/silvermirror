@@ -5335,6 +5335,7 @@ BattleCommand_EndLoop:
 ;	jr z, .beat_up
 ;	cp EFFECT_TRIPLE_KICK
 ;	jr nz, .not_triple_kick
+	jr .not_triple_kick
 .reject_triple_kick_sample
 	call BattleRandom
 	and $3
@@ -5405,11 +5406,11 @@ BattleCommand_EndLoop:
 	call GetBattleVar
 ;	cp EFFECT_BEAT_UP
 ;	jr nz, .not_beat_up
-	ld a, [wBeatUpHitAtLeastOnce]
-	and a
-	jr z, .end
-	ld [bc], a
-.not_beat_up
+;	ld a, [wBeatUpHitAtLeastOnce]
+;	and a
+;	jr z, .end
+;	ld [bc], a
+;.not_beat_up
 	push bc
 	call StdBattleTextbox
 
