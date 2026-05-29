@@ -47,8 +47,8 @@ TrainerClassNames::
 	li "SKIER"          ;SKIER
 	li "BUG CATCHER"    ;BUG_CATCHER
 	li "FISHER"         ;FISHER
-	li "SWIMMER♂"       ;SWIMMERM
-	li "SWIMMER♀"       ;SWIMMERF
+	li "SWIMMER"       ;SWIMMERM ; "SWIMMER♂"
+	li "SWIMMER"       ;SWIMMERF ; "SWIMMER♀"
 	li "SAILOR"         ;SAILOR
 	li "SUPER NERD"     ;SUPER_NERD
 	li "GUITARIST"      ;GUITARIST
