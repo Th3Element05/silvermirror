@@ -4051,60 +4051,60 @@ JugglerGroup:
 
 BlackbeltGroup:
 	; BLACKBELT_T, TAKESHI (DOJO) ;31
-	db "TAKESHI@", TRAINERTYPE_VARIABLE
-	; Classic Mode
-	db TRAINERTYPE_NORMAL
+	db "TAKESHI@", TRAINERTYPE_NORMAL
+;	; Classic Mode
+;	db TRAINERTYPE_NORMAL
 	db 30, MANKEY
 	db 31, MANKEY
 	db 32, PRIMEAPE
-	db $fe ; delimiter
-	; Gen2 Mode
-	db TRAINERTYPE_NORMAL
-	db 31, MANKEY
-	db 32, PRIMEAPE
-	db 20, TYROGUE
+;	db $fe ; delimiter
+;	; Gen2 Mode
+;	db TRAINERTYPE_NORMAL
+;	db 31, MANKEY
+;	db 32, PRIMEAPE
+;	db 20, TYROGUE
 	db -1 ; end
 
 	; BLACKBELT_T, BRUCE (DOJO) ;36
-	db "BRUCE@", TRAINERTYPE_VARIABLE
-	; Classic Mode
-	db TRAINERTYPE_NORMAL
+	db "BRUCE@", TRAINERTYPE_NORMAL
+;	; Classic Mode
+;	db TRAINERTYPE_NORMAL
 	db 36, PRIMEAPE
-	db $fe ; delimiter
-	; Gen2 Mode
-	db TRAINERTYPE_NORMAL
-	db 20, TYROGUE
-	db 36, PRIMEAPE
+;	db $fe ; delimiter
+;	; Gen2 Mode
+;	db TRAINERTYPE_NORMAL
+;	db 20, TYROGUE
+;	db 36, PRIMEAPE
 	db -1 ; end
 
 	; BLACKBELT_T, JACKIE (DOJO) ;32
-	db "JACKIE@", TRAINERTYPE_VARIABLE
-	; Classic Mode
-	db TRAINERTYPE_NORMAL
+	db "JACKIE@", TRAINERTYPE_NORMAL
+;	; Classic Mode
+;	db TRAINERTYPE_NORMAL
 	db 32, MACHOP
 	db 33, MACHOKE
-	db $fe ; delimiter
-	; Gen2 Mode
-	db TRAINERTYPE_NORMAL
-	db 32, MACHOP
-	db 33, MACHOKE
-	db 20, TYROGUE
+;	db $fe ; delimiter
+;	; Gen2 Mode
+;	db TRAINERTYPE_NORMAL
+;	db 32, MACHOP
+;	db 33, MACHOKE
+;	db 20, TYROGUE
 	db -1 ; end
 
 	; BLACKBELT_T, JET (DOJO) ;31
-	db "JET@", TRAINERTYPE_VARIABLE
-	; Classic Mode
-	db TRAINERTYPE_NORMAL
+	db "JET@", TRAINERTYPE_NORMAL
+;	; Classic Mode
+;	db TRAINERTYPE_NORMAL
 	db 31, MACHOP
 	db 30, MANKEY
 	db 32, PRIMEAPE
-	db $fe ; delimiter
-	; Gen2 Mode
-	db TRAINERTYPE_NORMAL
-	db 31, MACHOP
-	db 20, TYROGUE
-	db 30, MANKEY
-	db 32, PRIMEAPE
+;	db $fe ; delimiter
+;	; Gen2 Mode
+;	db TRAINERTYPE_NORMAL
+;	db 31, MACHOP
+;	db 20, TYROGUE
+;	db 30, MANKEY
+;	db 32, PRIMEAPE
 	db -1 ; end
 
 	; BLACKBELT_T, MASTER (DOJO) ;37
