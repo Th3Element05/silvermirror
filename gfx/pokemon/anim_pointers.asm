@@ -240,7 +240,7 @@ AnimationPointers:
 ;	dw Porygon2Animation
 	dw StantlerAnimation
 	dw SmeargleAnimation
-	dw TyrogueAnimation
+;	dw TyrogueAnimation ; removed (not replaced)
 	dw HitmontopAnimation
 ;	dw SmoochumAnimation
 	dw MagnezoneAnimation ;MAGNEZONE

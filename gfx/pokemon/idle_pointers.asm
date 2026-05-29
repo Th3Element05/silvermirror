@@ -240,7 +240,7 @@ AnimationIdlePointers:
 ;	dw Porygon2AnimationIdle
 	dw StantlerAnimationIdle
 	dw SmeargleAnimationIdle
-	dw TyrogueAnimationIdle
+;	dw TyrogueAnimationIdle ; removed (not replaced)
 	dw HitmontopAnimationIdle
 ;	dw SmoochumAnimationIdle
 	dw MagnezoneAnimationIdle ;MAGNEZONE

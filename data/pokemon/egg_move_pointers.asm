@@ -171,9 +171,9 @@ EggMovePointers::
 	dw NoEggMoves
 	dw ChinchouEggMoves
 	dw NoEggMoves
-;	dw PichuEggMoves     ; baby
-;	dw CleffaEggMoves    ; baby
-;	dw IgglybuffEggMoves ; baby
+;	dw PichuEggMoves     ; replaced
+;	dw CleffaEggMoves    ; replaced
+;	dw IgglybuffEggMoves ; replaced
 ;	dw TogepiEggMoves    ; replaced
 ;	dw NoEggMoves        ; replaced
 	dw NatuEggMoves
@@ -241,13 +241,13 @@ EggMovePointers::
 ;	dw NoEggMoves ;PORYGON2
 	dw StantlerEggMoves
 	dw NoEggMoves
-	dw TyrogueEggMoves
+;	dw TyrogueEggMoves ; removed (not replaced)
 	dw NoEggMoves
-;	dw SmoochumEggMoves ; baby
+;	dw SmoochumEggMoves ; replaced
 	dw NoEggMoves ;MAGNEZONE
-;	dw ElekidEggMoves   ; baby
+;	dw ElekidEggMoves   ; replaced
 	dw NoEggMoves ;TANGROWTH
-;	dw MagbyEggMoves    ; baby
+;	dw MagbyEggMoves    ; replaced
 	dw NoEggMoves ;LEAFEON
 	dw NoEggMoves ;GLACEON
 	dw MiltankEggMoves

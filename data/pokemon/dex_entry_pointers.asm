@@ -242,7 +242,7 @@ PokedexDataPointerTable:
 ;	dw Porygon2PokedexEntry
 	dw StantlerPokedexEntry
 	dw SmearglePokedexEntry
-	dw TyroguePokedexEntry
+;	dw TyroguePokedexEntry ; removed (not replaced)
 	dw HitmontopPokedexEntry
 ;	dw SmoochumPokedexEntry
 	dw MagnezonePokedexEntry ;MAGNEZONE

@@ -240,7 +240,7 @@ BitmasksPointers:
 ;	dw Porygon2Bitmasks
 	dw StantlerBitmasks
 	dw SmeargleBitmasks
-	dw TyrogueBitmasks
+;	dw TyrogueBitmasks ; removed (not replaced)
 	dw HitmontopBitmasks
 ;	dw SmoochumBitmasks
 	dw MagnezoneBitmasks ;MAGNEZONE

@@ -488,8 +488,8 @@ PokemonPicPointers::
 	dba StantlerBackpic
 	dba SmeargleFrontpic
 	dba SmeargleBackpic
-	dba TyrogueFrontpic
-	dba TyrogueBackpic
+;	dba TyrogueFrontpic ; removed (not replaced)
+;	dba TyrogueBackpic  ; removed (not replaced)
 	dba HitmontopFrontpic
 	dba HitmontopBackpic
 ;	dba SmoochumFrontpic

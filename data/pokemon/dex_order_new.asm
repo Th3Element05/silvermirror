@@ -244,7 +244,7 @@ NewPokedexOrder:
 ;	db PORYGON2
 	db STANTLER
 	db SMEARGLE
-	db TYROGUE
+;	db TYROGUE ; removed (not replaced)
 	db HITMONTOP
 ;	db SMOOCHUM
 	db MAGNEZONE ;MAGNEZONE

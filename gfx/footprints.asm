@@ -252,7 +252,7 @@ INCBIN "gfx/footprints/donphan.1bpp"
 ;INCBIN "gfx/footprints/porygon2.1bpp"
 INCBIN "gfx/footprints/stantler.1bpp"
 INCBIN "gfx/footprints/smeargle.1bpp"
-INCBIN "gfx/footprints/tyrogue.1bpp"
+;INCBIN "gfx/footprints/tyrogue.1bpp" ; removed (not replaced)
 INCBIN "gfx/footprints/hitmontop.1bpp"
 ;INCBIN "gfx/footprints/smoochum.1bpp"
 INCBIN "gfx/footprints/magnezone.1bpp" ;MAGNEZONE
@@ -273,7 +273,7 @@ INCBIN "gfx/footprints/lugia.1bpp"
 INCBIN "gfx/footprints/ho_oh.1bpp"
 INCBIN "gfx/footprints/celebi.1bpp"
 INCBIN "gfx/footprints/missingno.1bpp" ;MISSINGNO
-;INCBIN "gfx/footprints/253.1bpp"
+INCBIN "gfx/footprints/253.1bpp"
 INCBIN "gfx/footprints/254.1bpp"
 INCBIN "gfx/footprints/255.1bpp"
 INCBIN "gfx/footprints/256.1bpp"

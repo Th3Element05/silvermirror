@@ -822,14 +822,14 @@ StantlerEggMoves:
 ;	db DETECT       ;removed
 	db -1 ; end
 
-TyrogueEggMoves:
-	db RAPID_SPIN
-	db JUMP_KICK ;HI_JUMP_KICK
-	db MACH_PUNCH
-	db LOCK_ON      ;MIND_READER ;removed
-;	db DETECT       ;removed
-	db LOW_SWEEP
-	db -1 ; end
+;TyrogueEggMoves:
+;	db RAPID_SPIN
+;	db JUMP_KICK ;HI_JUMP_KICK
+;	db MACH_PUNCH
+;	db LOCK_ON      ;MIND_READER ;removed
+;;	db DETECT       ;removed
+;	db LOW_SWEEP
+;	db -1 ; end
 
 ;SmoochumEggMoves:
 JynxEggMoves:

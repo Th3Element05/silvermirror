@@ -250,7 +250,7 @@ DEF JOHTO_POKEMON EQU const_value
 	const CORSOLA    ; df
 	const REMORAID   ; e0
 	const OCTILLERY  ; e1
-	const DELIBIRD   ; e2 ; replaced
+	const DELIBIRD   ; e2 ; ;
 	const MANTINE    ; e2
 	const SKARMORY   ; e3
 	const HOUNDOUR   ; e4
@@ -258,16 +258,16 @@ DEF JOHTO_POKEMON EQU const_value
 	const KINGDRA    ; e6
 	const PHANPY     ; e7
 	const DONPHAN    ; e8
-;	const PORYGON2   ; e9 ; remove instead of DELIBIRD?
+;	const PORYGON2   ; e9 ; removed
 	const STANTLER   ; ea
 	const SMEARGLE   ; eb
-	const TYROGUE    ; ec
+;	const TYROGUE    ; ec ; removed (not replaced)
 	const HITMONTOP  ; ed
-;	const SMOOCHUM   ; ee ; baby
+;	const SMOOCHUM   ; ee ; removed
 	const MAGNEZONE  ; ee ;MAGNEZONE
-;	const ELEKID     ; ef ; baby
+;	const ELEKID     ; ef ; removed
 	const TANGROWTH  ; ef ;TANGROWTH
-;	const MAGBY      ; f0 ; baby
+;	const MAGBY      ; f0 ; removed
 	const LEAFEON    ; f0 ;LEAFEON
 	const GLACEON    ; f1 ;GLACEON
 	const MILTANK    ; f2

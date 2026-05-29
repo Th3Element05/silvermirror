@@ -22,7 +22,7 @@ OldPokedexOrder:
 	db RATICATE
 	db SENTRET
 	db FURRET
-	db PICHU
+;	db PICHU
 	db PIKACHU
 	db RAICHU
 	db CATERPIE
@@ -41,14 +41,14 @@ OldPokedexOrder:
 	db ZUBAT
 	db GOLBAT
 	db CROBAT
-	db CLEFFA
+;	db CLEFFA
 	db CLEFAIRY
 	db CLEFABLE
-	db IGGLYBUFF
+;	db IGGLYBUFF
 	db JIGGLYPUFF
 	db WIGGLYTUFF
-	db TOGEPI
-	db TOGETIC
+;	db TOGEPI
+;	db TOGETIC
 	db SANDSHREW
 	db SANDSLASH
 	db EKANS
@@ -144,18 +144,18 @@ OldPokedexOrder:
 	db MACHOP
 	db MACHOKE
 	db MACHAMP
-	db TYROGUE
+;	db TYROGUE ; removed (not replaced)
 	db HITMONLEE
 	db HITMONCHAN
 	db HITMONTOP
 	db GIRAFARIG
 	db TAUROS
 	db MILTANK
-	db MAGBY
+;	db MAGBY
 	db MAGMAR
-	db SMOOCHUM
+;	db SMOOCHUM
 	db JYNX
-	db ELEKID
+;	db ELEKID
 	db ELECTABUZZ
 	db MR__MIME
 	db SMEARGLE
@@ -217,7 +217,7 @@ OldPokedexOrder:
 	db SNEASEL
 	db MISDREAVUS
 	db PORYGON
-	db PORYGON2
+;	db PORYGON2
 	db CHANSEY
 	db BLISSEY
 	db LAPRAS
