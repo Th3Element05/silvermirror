@@ -25,7 +25,8 @@ VermilionCityNoop3Scene:
 	end
 
 VermilionCitySSAnneLeavesScene:
-	applymovement PLAYER, VermilionPortSSAnneLeavesMovement
+;	applymovement PLAYER, VermilionPortSSAnneLeavesMovement
+	turnobject PLAYER, DOWN
 	pause 30
 	playsound SFX_BOAT
 	earthquake 30
@@ -400,11 +401,11 @@ VermilionCitySailorText:
 	done
 
 ; movement
-VermilionPortSSAnneLeavesMovement:
-	step UP
-	step UP
-	turn_head DOWN
-	step_end
+;VermilionPortSSAnneLeavesMovement:
+;;	step UP
+;;	step UP
+;	turn_head DOWN
+;	step_end
 
 VermilionCityPlayerExitsPortMovement:
 	step UP
