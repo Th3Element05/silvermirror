@@ -96,7 +96,7 @@ CinnabarIslandMartSign:
 CinnabarIslandMissingNoScript:
 	random 16
 	ifnotequal 0, .End
-	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
+;	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
 	loadwildmon MISSINGNO, 30
 	startbattle
 	reloadmapafterbattle
@@ -106,11 +106,11 @@ CinnabarIslandMissingNoScript:
 .nocatch
 	setscene SCENE_CINNABARISLAND_NOOP
 	giveitem RARE_CANDY, 16
-	giveitem RARE_CANDY, 8
-	giveitem RARE_CANDY, 4
-	giveitem RARE_CANDY, 2
-	giveitem RARE_CANDY, 1
-	giveitem RARE_CANDY, 1
+;	giveitem RARE_CANDY, 8
+;	giveitem RARE_CANDY, 4
+;	giveitem RARE_CANDY, 2
+;	giveitem RARE_CANDY, 1
+;	giveitem RARE_CANDY, 1
 .End
 	end
 
