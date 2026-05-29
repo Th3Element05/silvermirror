@@ -987,12 +987,10 @@ MoveScreenLoop:
 	jp .joy_loop
 
 .moving_move
-	ld a, " "
-	hlcoord 1, 11
-;	ld bc, 5
-;	ld bc, 8 ;phys/spec split
-	ld bc, 7 ;type icons
-	call ByteFill
+;	ld a, " "
+;	hlcoord 1, 11
+;	ld bc, 7 ;type icons
+;	call ByteFill
 	hlcoord 1, 12
 	lb bc, 5, SCREEN_WIDTH - 2
 	call ClearBox
