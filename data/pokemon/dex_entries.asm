@@ -253,7 +253,7 @@ DonphanPokedexEntry::    INCLUDE "data/pokemon/dex_entries/donphan.asm"
 ;Porygon2PokedexEntry::   INCLUDE "data/pokemon/dex_entries/porygon2.asm"
 StantlerPokedexEntry::   INCLUDE "data/pokemon/dex_entries/stantler.asm"
 SmearglePokedexEntry::   INCLUDE "data/pokemon/dex_entries/smeargle.asm"
-TyroguePokedexEntry::    INCLUDE "data/pokemon/dex_entries/tyrogue.asm"
+;TyroguePokedexEntry::    INCLUDE "data/pokemon/dex_entries/tyrogue.asm" ; removed (not replaced)
 HitmontopPokedexEntry::  INCLUDE "data/pokemon/dex_entries/hitmontop.asm"
 ;SmoochumPokedexEntry::   INCLUDE "data/pokemon/dex_entries/smoochum.asm"
 MagnezonePokedexEntry::  INCLUDE "data/pokemon/dex_entries/magnezone.asm" ;MAGNEZONE

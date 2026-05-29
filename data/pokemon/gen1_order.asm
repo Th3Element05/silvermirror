@@ -140,7 +140,7 @@ Pokered_MonIndices:
 	db SMEARGLE ; missingno.
 	db KINGLER
 	db CLOYSTER
-	db TYROGUE ; missingno.
+	db MISSINGNO ;db TYROGUE ; missingno.
 	db ELECTRODE
 	db CLEFABLE
 	db WEEZING
@@ -263,5 +263,5 @@ Pokered_MonIndices:
 	db CELEBI
 	db MISSINGNO ;MISSINGNO
 	db MAMOSWINE ;MAMOSWINE
-	db MISSINGNO
+;	db MISSINGNO
 	assert_table_length NUM_POKEMON + 1

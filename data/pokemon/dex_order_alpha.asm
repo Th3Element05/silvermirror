@@ -238,7 +238,7 @@ AlphabeticalPokedexOrder:
 	db TOTODILE
 	db TYPHLOSION
 	db TYRANITAR
-	db TYROGUE
+;	db TYROGUE ; removed (not replaced)
 	db UMBREON
 	db UNOWN
 	db URSARING

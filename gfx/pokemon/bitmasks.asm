@@ -239,7 +239,7 @@ DonphanBitmasks:    INCLUDE "gfx/pokemon/donphan/bitmask.asm"
 ;Porygon2Bitmasks:   INCLUDE "gfx/pokemon/porygon2/bitmask.asm"
 StantlerBitmasks:   INCLUDE "gfx/pokemon/stantler/bitmask.asm"
 SmeargleBitmasks:   INCLUDE "gfx/pokemon/smeargle/bitmask.asm"
-TyrogueBitmasks:    INCLUDE "gfx/pokemon/tyrogue/bitmask.asm"
+;TyrogueBitmasks:    INCLUDE "gfx/pokemon/tyrogue/bitmask.asm" ; removed (not replaced)
 HitmontopBitmasks:  INCLUDE "gfx/pokemon/hitmontop/bitmask.asm"
 ;SmoochumBitmasks:   INCLUDE "gfx/pokemon/smoochum/bitmask.asm"
 MagnezoneBitmasks:  INCLUDE "gfx/pokemon/magnezone/bitmask.asm" ;MAGNEZONE

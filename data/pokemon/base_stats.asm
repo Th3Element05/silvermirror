@@ -194,9 +194,9 @@ INCLUDE "data/pokemon/base_stats/ariados.asm"
 INCLUDE "data/pokemon/base_stats/crobat.asm"
 INCLUDE "data/pokemon/base_stats/chinchou.asm"
 INCLUDE "data/pokemon/base_stats/lanturn.asm"
-;INCLUDE "data/pokemon/base_stats/pichu.asm"    ; baby
-;INCLUDE "data/pokemon/base_stats/cleffa.asm"    ; baby
-;INCLUDE "data/pokemon/base_stats/igglybuff.asm" ; baby
+;INCLUDE "data/pokemon/base_stats/pichu.asm"     ; replaced
+;INCLUDE "data/pokemon/base_stats/cleffa.asm"    ; replaced
+;INCLUDE "data/pokemon/base_stats/igglybuff.asm" ; replaced
 ;INCLUDE "data/pokemon/base_stats/togepi.asm"    ; replaced
 ;INCLUDE "data/pokemon/base_stats/togetic.asm"   ; replaced
 INCLUDE "data/pokemon/base_stats/natu.asm"
@@ -264,13 +264,13 @@ INCLUDE "data/pokemon/base_stats/donphan.asm"
 ;INCLUDE "data/pokemon/base_stats/porygon2.asm"
 INCLUDE "data/pokemon/base_stats/stantler.asm"
 INCLUDE "data/pokemon/base_stats/smeargle.asm"
-INCLUDE "data/pokemon/base_stats/tyrogue.asm"
+;INCLUDE "data/pokemon/base_stats/tyrogue.asm" ; removed (not replaced)
 INCLUDE "data/pokemon/base_stats/hitmontop.asm"
-;INCLUDE "data/pokemon/base_stats/smoochum.asm" ; baby
+;INCLUDE "data/pokemon/base_stats/smoochum.asm" ; replaced
 INCLUDE "data/pokemon/base_stats/magnezone.asm" ;MAGNEZONE
-;INCLUDE "data/pokemon/base_stats/elekid.asm"   ; baby
+;INCLUDE "data/pokemon/base_stats/elekid.asm"   ; replaced
 INCLUDE "data/pokemon/base_stats/tangrowth.asm" ;TANGROWTH
-;INCLUDE "data/pokemon/base_stats/magby.asm"    ; baby
+;INCLUDE "data/pokemon/base_stats/magby.asm"    ; replaced
 INCLUDE "data/pokemon/base_stats/leafeon.asm" ;LEAFEON
 INCLUDE "data/pokemon/base_stats/glaceon.asm" ;GLACEON
 INCLUDE "data/pokemon/base_stats/miltank.asm"

@@ -90,7 +90,7 @@ DonphanFrames:    INCLUDE "gfx/pokemon/donphan/frames.asm"
 ;Porygon2Frames:   INCLUDE "gfx/pokemon/porygon2/frames.asm"
 StantlerFrames:   INCLUDE "gfx/pokemon/stantler/frames.asm"
 SmeargleFrames:   INCLUDE "gfx/pokemon/smeargle/frames.asm"
-TyrogueFrames:    INCLUDE "gfx/pokemon/tyrogue/frames.asm"
+;TyrogueFrames:    INCLUDE "gfx/pokemon/tyrogue/frames.asm" ; removed (not replaced)
 HitmontopFrames:  INCLUDE "gfx/pokemon/hitmontop/frames.asm"
 ;SmoochumFrames:   INCLUDE "gfx/pokemon/smoochum/frames.asm"
 MagnezoneFrames:  INCLUDE "gfx/pokemon/magnezone/frames.asm" ;MAGNEZONE

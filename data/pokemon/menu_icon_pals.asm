@@ -247,7 +247,7 @@ MonMenuIconPals:
 ;	icon_pals BLUE,   GRAY     ; PORYGON2
 	icon_pals BROWN,  GREEN    ; STANTLER
 	icon_pals BROWN,  GREEN    ; SMEARGLE
-	icon_pals BROWN,  BLUE     ; TYROGUE
+;	icon_pals BROWN,  BLUE     ; TYROGUE ; removed (not replaced)
 	icon_pals BLUE,   PURPLE   ; HITMONTOP
 ;	icon_pals RED,    PINK     ; SMOOCHUM
 	icon_pals GRAY,   BROWN    ; MAGNEZONE ;MAGNEZONE

@@ -243,7 +243,7 @@ IconPointers:
 ;	dw Porygon2Icon ;replaced
 	dw StantlerIcon
 	dw SmeargleIcon
-	dw TyrogueIcon
+;	dw TyrogueIcon ; removed (not replaced)
 	dw HitmontopIcon
 ;	dw SmoochumIcon
 	dw MagnezoneIcon ;MAGNEZONE

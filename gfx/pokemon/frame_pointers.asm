@@ -240,7 +240,7 @@ FramesPointers:
 ;	dw Porygon2Frames
 	dw StantlerFrames
 	dw SmeargleFrames
-	dw TyrogueFrames
+;	dw TyrogueFrames ; removed (not replaced)
 	dw HitmontopFrames
 ;	dw SmoochumFrames
 	dw MagnezoneFrames ;MAGNEZONE

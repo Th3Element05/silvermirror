@@ -241,7 +241,7 @@ DonphanAnimation:    INCLUDE "gfx/pokemon/donphan/anim.asm"
 ;Porygon2Animation:   INCLUDE "gfx/pokemon/porygon2/anim.asm"
 StantlerAnimation:   INCLUDE "gfx/pokemon/stantler/anim.asm"
 SmeargleAnimation:   INCLUDE "gfx/pokemon/smeargle/anim.asm"
-TyrogueAnimation:    INCLUDE "gfx/pokemon/tyrogue/anim.asm"
+;TyrogueAnimation:    INCLUDE "gfx/pokemon/tyrogue/anim.asm" ; removed (not replaced)
 HitmontopAnimation:  INCLUDE "gfx/pokemon/hitmontop/anim.asm"
 ;SmoochumAnimation:   INCLUDE "gfx/pokemon/smoochum/anim.asm"
 MagnezoneAnimation: INCLUDE "gfx/pokemon/magnezone/anim.asm" ;MAGNEZONE

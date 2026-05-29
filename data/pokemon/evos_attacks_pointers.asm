@@ -173,9 +173,9 @@ EvosAttacksPointers::
 	dw CrobatEvosAttacks
 	dw ChinchouEvosAttacks
 	dw LanturnEvosAttacks
-;	dw PichuEvosAttacks     ; baby
-;	dw CleffaEvosAttacks    ; baby
-;	dw IgglybuffEvosAttacks ; baby
+;	dw PichuEvosAttacks     ; replaced
+;	dw CleffaEvosAttacks    ; replaced
+;	dw IgglybuffEvosAttacks ; replaced
 ;	dw TogepiEvosAttacks    ; replaced
 ;	dw TogeticEvosAttacks   ; replaced
 	dw NatuEvosAttacks
@@ -243,13 +243,13 @@ EvosAttacksPointers::
 ;	dw Porygon2EvosAttacks
 	dw StantlerEvosAttacks
 	dw SmeargleEvosAttacks
-	dw TyrogueEvosAttacks
+;	dw TyrogueEvosAttacks ; removed (not replaced)
 	dw HitmontopEvosAttacks
-;	dw SmoochumEvosAttacks ; baby
+;	dw SmoochumEvosAttacks ; replaced
 	dw MagnezoneEvosAttacks ;MAGNEZONE
-;	dw ElekidEvosAttacks   ; baby
+;	dw ElekidEvosAttacks   ; replaced
 	dw TangrowthEvosAttacks ;TANGROWTH
-;	dw MagbyEvosAttacks    ; baby
+;	dw MagbyEvosAttacks    ; replaced
 	dw LeafeonEvosAttacks ;LEAFEON
 	dw GlaceonEvosAttacks ;GLACEON
 	dw MiltankEvosAttacks

@@ -171,9 +171,9 @@ PokemonNames::
 	db "CROBAT@@@@"
 	db "CHINCHOU@@"
 	db "LANTURN@@@"
-;	db "PICHU@@@@@" ; baby
-;	db "CLEFFA@@@@" ; baby
-;	db "IGGLYBUFF@" ; baby
+;	db "PICHU@@@@@" ; replaced
+;	db "CLEFFA@@@@" ; replaced
+;	db "IGGLYBUFF@" ; replaced
 ;	db "TOGEPI@@@@" ; replaced
 ;	db "TOGETIC@@@" ; replaced
 	db "NATU@@@@@@"
@@ -238,16 +238,16 @@ PokemonNames::
 	db "KINGDRA@@@"
 	db "PHANPY@@@@"
 	db "DONPHAN@@@"
-;	db "PORYGON2@@"
+;	db "PORYGON2@@" ;replaced
 	db "STANTLER@@"
 	db "SMEARGLE@@"
-	db "TYROGUE@@@"
+;	db "TYROGUE@@@" ;removed (not replaced)
 	db "HITMONTOP@"
-;	db "SMOOCHUM@@" ; baby
+;	db "SMOOCHUM@@" ; replaced
 	db "MAGNEZONE@" ;MAGNEZONE
-;	db "ELEKID@@@@" ; baby
+;	db "ELEKID@@@@" ; replaced
 	db "TANGROWTH@" ;TANGROWTH
-;	db "MAGBY@@@@@" ; baby
+;	db "MAGBY@@@@@" ; replaced
 	db "LEAFEON@@@" ;LEAFEON
 	db "GLACEON@@@" ;GLACEON
 	db "MILTANK@@@"
@@ -265,6 +265,7 @@ PokemonNames::
 	assert_table_length NUM_POKEMON
 	db "EGG@@@@@@@"
 	assert_table_length EGG
-	db "?????@@@@@"
-	db "?????@@@@@"
+	db "?????@@@@@" ; 254
+	db "?????@@@@@" ; 255
+	db "?????@@@@@" ; 256
 	assert_table_length $100
