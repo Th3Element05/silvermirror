@@ -155,7 +155,7 @@ Moves:
 	move GLARE,        EFFECT_PARALYZE,            0, NORMAL,       STATUS,    75, 30,   0
 	move DREAM_EATER,  EFFECT_DREAM_EATER,       100, PSYCHIC_TYPE, SPECIAL,  100, 15,   0
 	move POISON_JAB,   EFFECT_POISON_HIT,         80, POISON,       PHYSICAL, 100, 20,  30 ;POISON_GAS, removed
-	move BULLET_SEED,  EFFECT_MULTI_HIT,          10, GRASS,        PHYSICAL, 100, 30,   0 ;BARRAGE, removed
+	move BULLET_SEED,  EFFECT_MULTI_HIT,          20, GRASS,        PHYSICAL, 100, 30,   0 ;BARRAGE, removed
 	move LEECH_LIFE,   EFFECT_LEECH_HIT,          20, BUG,          PHYSICAL, 100, 15,   0
 	move POISON_FANG,  EFFECT_POISON_HIT,         50, POISON,       PHYSICAL, 100, 15,  30 ;LOVELY_KISS, removed
 	move SKY_ATTACK,   EFFECT_FLY,               140, FLYING,       PHYSICAL,  90,  5,   0 ; OLD: EFFECT_SKY_ATTACK
