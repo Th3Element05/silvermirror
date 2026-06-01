@@ -291,6 +291,17 @@ PokeBallEffect:
 	srl b
 	rr c
 
+;	; BUG: Catch rate formula breaks for Pokémon with max HP > 341 (see docs/bugs_and_glitches.md)
+	; Divide by 2 again if there's still something in the high byte
+	ld a, d
+	and a
+	jr z, .check_cur_low
+	srl d
+	rr e
+	srl b
+	rr c
+.check_cur_low
+
 	ld a, c
 	and a
 	jr nz, .okay_1
@@ -736,13 +747,16 @@ BallMultiplierFunctionTable:
 	dbw SAFARI_BALL,     SafariBallMultiplier
 	dbw HEAVY_BALL,      HeavyBallMultiplier
 	dbw LEVEL_BALL,      LevelBallMultiplier
-	dbw LURE_BALL,       LureBallMultiplier
+;	dbw LURE_BALL,       LureBallMultiplier
+	dbw NET_BALL,        NetBallMultiplier
 	dbw FAST_BALL,       FastBallMultiplier
-	dbw MOON_BALL,       MoonBallMultiplier
+;	dbw MOON_BALL,       MoonBallMultiplier
+	dbw DUSK_BALL,       DuskBallMultiplier
 	dbw LOVE_BALL,       LoveBallMultiplier
 	dbw PARK_BALL,       ParkBallMultiplier
 	db -1 ; end
 
+SafariBallMultiplier:
 UltraBallMultiplier:
 ; multiply catch rate by 2
 	sla b
@@ -750,7 +764,6 @@ UltraBallMultiplier:
 	ld b, $ff
 	ret
 
-SafariBallMultiplier:
 GreatBallMultiplier:
 ParkBallMultiplier:
 ; multiply catch rate by 1.5
@@ -903,6 +916,31 @@ LureBallMultiplier:
 	ld b, a
 	ret
 
+NetBallMultiplier:
+; Check enemy Type 1
+	ld hl, wEnemyMonType1
+	ld a, [hli]
+	cp WATER
+	jr z, .type_match
+	cp BUG
+	jr z, .type_match
+; Check enemy Type 2
+	ld a, [hl]
+	cp WATER
+	jr z, .type_match
+	cp BUG
+;	jr z, .type_match
+	ret nz ; If they hadn't matched by now, we're done.
+
+.type_match
+	sla b
+	jr c, .max
+	sla b
+	ret nc
+.max
+	ld b, $ff
+	ret
+
 MoonBallMultiplier:
 	push bc
 	ld a, [wTempEnemyMonSpecies]
@@ -924,12 +962,13 @@ MoonBallMultiplier:
 	ret nz
 
 	inc hl
-	inc hl
-	inc hl
+;	inc hl
+;	inc hl
 
 	push bc
 	ld a, BANK("Evolutions and Attacks")
 	call GetFarByte
+;	cp MOON_STONE_RED ; BURN_HEAL
 	cp MOON_STONE
 	pop bc
 	ret nz
@@ -943,14 +982,30 @@ MoonBallMultiplier:
 .done
 	ret
 
-LoveBallMultiplier:
+DuskBallMultiplier:
+	ld a, [wTimeOfDay]
+	cp NITE_F
+	jr z, .nite_or_cave
+	call GetMapEnvironment
+	cp CAVE
+	ret nz ; If its not NITE_F and we're not in a CAVE, we're done.
 
-	; does species match?
-	ld a, [wTempEnemyMonSpecies]
-	ld c, a
-	ld a, [wTempBattleMonSpecies]
-	cp c
-	ret nz
+.nite_or_cave
+	sla b
+	jr c, .max
+	sla b
+	ret nc
+.max
+	ld b, $ff
+	ret
+
+LoveBallMultiplier:
+;	; does species match?
+;	ld a, [wTempEnemyMonSpecies]
+;	ld c, a
+;	ld a, [wTempBattleMonSpecies]
+;	cp c
+;	ret nz
 
 	; check player mon species
 	push bc
@@ -988,8 +1043,17 @@ LoveBallMultiplier:
 	pop bc
 	ret z
 
+	; does species match?
+	ld a, [wTempEnemyMonSpecies]
+	ld c, a
+	ld a, [wTempBattleMonSpecies]
+	cp c
+	jr nz, .not_same_species
+
 	sla b
 	jr c, .max
+
+.not_same_species
 	sla b
 	jr c, .max
 	sla b

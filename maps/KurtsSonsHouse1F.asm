@@ -154,7 +154,8 @@ KurtsSonsHouse1FKurtsSon:
 .GiveLureBall:
 	writetext KurtsSonsHouse1FKurtsSon_FinishedYourBallText
 	promptbutton
-	verbosegiveitemvar LURE_BALL, VAR_KURT_APRICORNS
+;	verbosegiveitemvar LURE_BALL, VAR_KURT_APRICORNS
+	verbosegiveitemvar NET_BALL, VAR_KURT_APRICORNS
 	iffalse .NoRoomForBall
 	clearevent EVENT_GAVE_KURT_SON_BLU_APRICORN
 	sjump .TryCatchingPokemon
@@ -162,7 +163,8 @@ KurtsSonsHouse1FKurtsSon:
 .GiveMoonBall:
 	writetext KurtsSonsHouse1FKurtsSon_FinishedYourBallText
 	promptbutton
-	verbosegiveitemvar MOON_BALL, VAR_KURT_APRICORNS
+;	verbosegiveitemvar MOON_BALL, VAR_KURT_APRICORNS
+	verbosegiveitemvar DUSK_BALL, VAR_KURT_APRICORNS
 	iffalse .NoRoomForBall
 	clearevent EVENT_GAVE_KURT_SON_YLW_APRICORN
 	sjump .TryCatchingPokemon
