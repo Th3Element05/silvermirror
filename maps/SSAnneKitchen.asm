@@ -136,9 +136,8 @@ SSAnneKitchen_MapEvents:
 	def_bg_events
 	bg_event 13,  5, BGEVENT_READ, SSAnneKitchenTrashcan
 	bg_event 13,  7, BGEVENT_READ, SSAnneKitchenTrashcan
-	bg_event 13,  7, BGEVENT_READ, SSAnneKitchenOnionTrashcan
 	bg_event 13,  9, BGEVENT_ITEM, SSAnneKitchenHiddenGreatBall
-;	bg_event 13,  9, BGEVENT_READ, SSAnneKitchenTrashcan
+	bg_event 13,  9, BGEVENT_READ, SSAnneKitchenOnionTrashcan
 
 	def_object_events
 	object_event  1,  8, SPRITE_CHEF, SPRITEMOVEDATA_WALK_UP_DOWN, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneKitchenCook1Script, -1
