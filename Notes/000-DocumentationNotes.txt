@@ -1,23 +1,48 @@
 Documentation Notes
 Silver Mirror
 
-SILVERPOWDER	viridian forest
-MIRACLE_SEED	pewter city (grass starter)
-CHARCOAL	pewter city (fire starter)
-MYSTIC_WATER	pewter city (water starter)
+
+get screenshot after youngster ian battle "registered number"
 
 
 
-TM_WATER_GUN	mount moon 1f
-TM_BIDE		brock
-TM_FALSE_SWIPE	route 4
-TM_HEADBUTT	route 4
-TM_THUNDER_WAVE	route 24
+cerulean city spawnpoint
+cerulean dummy bugcatcher on nugget bridge
+
+removeable? = TANGROWTH?, DELIBIRD?, TYROGUE(removed), HITMONTOP?
+restore PORYGON2? 
+or remove 2 more to add ELECTIVIRE, RHYPERIOR, MAGMORTAR?
+or, forget MAGMORTAR, remove DELIBIRD, and just add the other two?
+27	suicune
+112	porygon2
+130	entei
+132	raikou
+361	electivire	<
+523	delibird	x?
+556	hitmontop
+680	tangrowth
+701	rhyperior	<
+793	magmortar	<
+971	stantler	x?
 
 
 
-remove bill offer phone number
+
+"received berries" text
+
 test secret stairs after clearing ninja den
+
+can anything you catch before misty learn TM_WATER_GUN?
+at least anything that doesn't already know it via level up?
+
+clefairy dex entry
+smaller zubat front sprite?
+belly drum anim too long
+charmeleon animation too long?
+swap headbutt animation shake/hit
+
+CardFlip_ShiftDigitsUpOnePixel in engine/games/card_flip.asm:
+This function and the single call to it in the same file can be safely removed if you don't like the look, if it interferes with altered font graphics, etc.
 
 
 
@@ -34,5 +59,61 @@ MISTY
 LOST	zubat14,nidorina17,geodude18,charmander20,pidgey17,bellsprout16
 zubat14,nidorina17,geodude18,charmander20,pidgey17,bellsprout20
 
+LT.SURGE
+nidorano18,farfetchd12,weepinbell24,geodude21,zubat20,charmeleon25
+switches 1,7,1,1,12,2,10,7!
 
+
+
+
+
+
+
+
+
+
+
+NormalBoxEffect:
+	ld c, DECOFLAG_SILVER_TROPHY_DOLL
+	jr OpenBox
+GorgeousBoxEffect:
+	ld c, DECOFLAG_GOLD_TROPHY_DOLL
+OpenBox:
+	farcall SetSpecificDecorationFlag
+	ld hl, .SentTrophyHomeText
+	call PrintText
+	jp UseDisposableItem
+
+SetSpecificDecorationFlag:
+	ld a, c
+	call GetDecorationID
+	ld b, SET_FLAG
+	call DecorationFlagAction
+	ret
+
+GetDecorationID:
+	push hl
+	push de
+	ld e, a
+	ld d, 0
+	ld hl, DecorationIDs
+	add hl, de
+	ld a, [hl]
+	pop de
+	pop hl
+	ret
+
+SetAllDecorationFlags: ; unreferenced
+	ld hl, DecorationIDs
+.loop
+	ld a, [hli]
+	cp -1
+	jr z, .done
+	push hl
+	ld b, SET_FLAG
+	call DecorationFlagAction
+	pop hl
+	jr .loop
+.done
+	ret
 
