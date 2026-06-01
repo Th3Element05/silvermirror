@@ -28,8 +28,8 @@ SilverMirrorAppearCallback:
 	disappear SILVERCAVEROOM3_SILVER_KRIS
 	checkevent EVENT_BEAT_MT_SILVER_OAK
 	iffalse .done
-	checkevent EVENT_OAK_IN_MT_SILVER
-	iffalse .done
+;	checkevent EVENT_OAK_IN_MT_SILVER
+;	iffalse .done
 	appear SILVERCAVEROOM3_SILVER_MIRROR
 .done
 	endcallback
@@ -110,6 +110,7 @@ MtSilverOak:
 
 .FinishMtSilverOak:
 	setevent EVENT_BEAT_MT_SILVER_OAK
+	clearevent EVENT_OAKS_LAB_OAK_REMATCH
 	special FadeOutMusic
 	opentext
 	writetext MtSilverOak_AfterBattleText

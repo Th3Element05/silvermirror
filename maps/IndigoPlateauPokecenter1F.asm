@@ -111,6 +111,8 @@ IndigoPokecenterOpenMtSilverScript:
 	applymovement INDIGOPLATEAUPOKECENTER1F_LANCE, IndigoPlateauLanceLeavesMovement
 	disappear INDIGOPLATEAUPOKECENTER1F_LANCE
 	setevent EVENT_OPENED_MT_SILVER
+	clearevent EVENT_OAK_IN_MT_SILVER
+	setevent EVENT_OAKS_LAB_OAK
 	setscene SCENE_INDIGOPLATEAUPOKECENTER1F_NOOP
 	end
 
@@ -235,9 +237,9 @@ RespawnGuyAskRespawnText:
 
 RespawnGuyYesText:
 	ntag "GRAMPS:"
-	text "OK. Picture those"
+	text "Okay. Keep those"
 	line "#MON in your"
-	cont "in your mind…"
+	cont "mind…"
 	done
 
 RespawnGuySilenceText:
@@ -246,8 +248,8 @@ RespawnGuySilenceText:
 
 RespawnGuyNoText:
 	ntag "GRAMPS:"
-	text "OK, OK. The best"
-	line "of luck to you!"
+	text "Okay, Okay."
+	line "I wish you luck!"
 	done
 
 AbraScript:
