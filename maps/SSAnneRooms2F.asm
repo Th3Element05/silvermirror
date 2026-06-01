@@ -26,7 +26,7 @@ GentlemanGregorySeenText:
 GentlemanGregoryBeatenText:
 	ntag "GREGORY:"
 	text "Good fight! Ah, I"
-	cont "feel young again!"
+	line "feel young again!"
 	done
 
 GentlemanGregoryAfterBattleText:
@@ -105,8 +105,8 @@ TrainerGentlemanWesley:
 GentlemanWesleySeenText:
 	ntag "GENTLEMAN:"
 	text "Which do you like,"
-	line "a strong or a"
-	cont "rare #MON?"
+	line "a strong #MON,"
+	cont "or a rare one?"
 	done
 
 GentlemanWesleyBeatenText:
@@ -338,7 +338,7 @@ SSAnneRooms2FGentleman3Text:
 	cont "in FUCHSIA CITY?"
 
 	para "It had many rare"
-	line "kinds of #MON!!"
+	line "kinds of #MON!"
 	done
 
 SSAnneRooms2FBoyScript:
