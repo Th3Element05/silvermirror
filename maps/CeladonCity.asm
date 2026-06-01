@@ -92,7 +92,7 @@ CeladonCityTutorSoftboiledText:
 
 CeladonCityTutorSoftboiledRefused:
 	ntag "GRAMPS:"
-	text "OK then."
+	text "Okay then."
 	done
 
 CeladonCityTutorSoftboiledClear:

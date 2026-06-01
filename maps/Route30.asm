@@ -328,7 +328,7 @@ YoungsterJoeyText_GiveHPUpAfterBattle:
 	cont "to give you this."
 
 	para "Use it to get even"
-	line "tougher, OK?"
+	line "tougher, okay?"
 
 	para "I'm going to get"
 	line "tougher too."

@@ -274,7 +274,7 @@ SilphCo7FClerkText:
 	text "TEAM ROCKET's"
 	line "BOSS went to the"
 	cont "boardroom! Is our"
-	roll "PRESIDENT ok?"
+	roll "PRESIDENT okay?"
 	done
 
 SilphCo7FClerkSavedText:

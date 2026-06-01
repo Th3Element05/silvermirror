@@ -95,15 +95,15 @@ SailorErnestSeenText:
 
 SailorErnestBeatenText:
 	ntag "ERNEST:"
-	text "OK, you're not"
+	text "Okay, you're not"
 	line "bad."
 	done
 
 SailorErnestAfterBattleText:
 	ntag "SAILOR:"
 	text "We caught all our"
-	line "#MON while"
-	cont "out at sea!"
+	line "#MON while out"
+	cont "at sea!"
 	done
 
 TrainerSailorKent:
@@ -446,7 +446,7 @@ SSAnneRoomsSouth_MapEvents:
 	object_event  8,  5, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSailorErnest, EVENT_SSANNE_FIRST_VISIT_NPCS
 	object_event 18,  2, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSailorKent, EVENT_SSANNE_FIRST_VISIT_NPCS
 	object_event 26,  3, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSailorJeff, EVENT_SSANNE_FIRST_VISIT_NPCS
-	object_event 24,  5, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSailorGarrett, EVENT_SSANNE_FIRST_VISIT_NPCS
+	object_event 24,  5, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSailorGarrett, EVENT_SSANNE_FIRST_VISIT_NPCS
 ; rematch trainers
 	object_event  0,  5, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_FAST, 2, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 0, TrainerPokemaniacHorton, EVENT_SSANNE_TRAINERS_1B
 	object_event  3,  4, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerTeacherKate, EVENT_SSANNE_TRAINERS_1B

@@ -205,10 +205,7 @@ CatchingTutorialDebriefText:
 
 ViridianCityCoffeeGrampsTravelText:
 	ntag "GRAMPS:"
-	text "I used to travel"
-	line "when I was young."
-	
-	para "I hope that will"
+	text "I hope that will"
 	line "come in handy on"
 	cont "your travels!"
 	done
@@ -540,7 +537,7 @@ ViridianCityYoungster2QuestionText:
 
 ViridianCityYoungster2DeclinedText:
 	ntag "BOY:"
-	text "Oh, OK then!"
+	text "Oh, okay then!"
 	done
 
 ViridianCityYoungster2AcceptedText:

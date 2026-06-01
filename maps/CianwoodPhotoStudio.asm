@@ -45,7 +45,7 @@ CianwoodPhotoStudioFishingGuruText_Question:
 
 CianwoodPhotoStudioFishingGuruText_Yes:
 	ntag "PHOTOGRAPHER:"
-	text "OK! Big smile now!"
+	text "Okay! Big smile!"
 	done
 
 CianwoodPhotoStudioFishingGuruText_No:

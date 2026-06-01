@@ -132,7 +132,7 @@ SaffronMagnetTrainStationOfficer_RightThisWayText:
 	text "May I see your"
 	line "RAIL PASS?"
 
-	para "OK. Right this"
+	para "Okay. Right this"
 	line "way, please."
 	done
 

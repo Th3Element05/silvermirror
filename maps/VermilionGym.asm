@@ -254,7 +254,7 @@ GuitaristClydeBeatenText:
 
 GuitaristClydeAfterBattleText:
 	ntag "GUITARIST:"
-	text "OK, I'll talk!"
+	text "Okay, I'll talk!"
 
 	para "LT.SURGE said he"
 	line "hid door switches"

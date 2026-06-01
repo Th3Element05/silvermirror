@@ -164,7 +164,7 @@ DaisyWhichMonText:
 
 DaisyAlrightText:
 	ntag "DAISY:"
-	text "OK, I'll get it"
+	text "Okay, I'll get it"
 	line "all cleaned up in"
 	cont "no time."
 	done
@@ -200,7 +200,7 @@ DaisyRefusedText:
 	ntag "DAISY:"
 	text "You don't want tp"
 	line "have one groomed?"
-	cont "OK, we can just"
+	cont "Okay, we can just"
 	roll "have tea."
 	done
 

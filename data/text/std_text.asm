@@ -46,8 +46,8 @@ NurseAskHealText:
 
 NurseTakePokemonText:
 	ntag "NURSE:"
-	text "OK, may I see your"
-	line "#MON?"
+	text "Okay, may I see"
+	line "your #MON?"
 	done
 
 NurseReturnPokemonText:
@@ -61,8 +61,11 @@ NurseReturnPokemonText:
 
 NurseGoodbyeText:
 	ntag "NURSE:"
-	text "We hope to see you"
-	line "again."
+;	text "We hope to see you"
+;	line "again."
+;	done
+	text "Okay, come back"
+	line "anytime."
 	done
 
 NursePokerusText:

@@ -257,7 +257,7 @@ GoldenrodUndergroundOlderHaircutBrotherAskWhichMonText:
 
 GoldenrodUndergroundOlderHaircutBrotherWatchItBecomeBeautifulText:
 	ntag "STYLIST:"
-	text "OK! Watch it"
+	text "Okay! Watch it"
 	line "become beautiful!"
 	done
 
@@ -414,7 +414,7 @@ GoldenrodUndergroundYoungerHaircutBrotherText:
 ;	done
 ;
 ;GoldenrodUndergroundYoungerHaircutBrotherIllMakeItLookCoolText:
-;	text "OK! I'll make it"
+;	text "Okay! I'll make it"
 ;	line "look cool!"
 ;	done
 ;

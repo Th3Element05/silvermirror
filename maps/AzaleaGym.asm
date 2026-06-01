@@ -87,8 +87,8 @@ BugsyText_ResearchIncomplete:
 	para "My research isn't"
 	line "complete yet."
 
-	para "OK, you win. Take"
-	line "this BADGE."
+	para "Okay, you win."
+	line "Take this BADGE."
 	done
 
 Text_ReceivedHiveBadge:

@@ -626,7 +626,7 @@ GameCornerPrize_NoRoomText:
 
 GameCornerPrize_ConfirmPurchaseText:
 	ntag "CASHIER:"
-	text "OK, so you wanted"
+	text "Okay, you wanted"
 	line "a @"
 	text_ram wStringBuffer3
 	text "?"
@@ -639,8 +639,8 @@ GameCornerPrize_HereYouGoText:
 
 GameCornerPrize_ComeAgainText:
 	ntag "CASHIER:"
-	text "OK. Please save"
-	line "your coins and"
+	text "Okay. Please save"
+	line "up your coins and"
 	cont "come again!"
 	done
 

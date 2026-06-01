@@ -23,7 +23,7 @@ ElmsWifeText:
 	ntag "WOMAN:"
 	text "My husband's always"
 	line "so busy."
-	cont "I hope he's OK."
+	cont "I hope he's okay."
 
 	para "When he's caught"
 	line "up in his #MON"

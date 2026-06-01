@@ -41,7 +41,7 @@ DarkCaveBlackthornEntrancePharmacistText1:
 	para "I'll give you a"
 	line "pair of BLACK-"
 	cont "GLASSES, so forget"
-	roll "you saw me, OK?"
+	roll "you saw me, okay?"
 	done
 
 DarkCaveBlackthornEntrancePharmacistText2:

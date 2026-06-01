@@ -11,8 +11,8 @@ ParryDefeatedMonText:
 	text_ram wStringBuffer4
 	text "!"
 
-	para "That was OK, but I"
-	line "wanted to get it…"
+	para "But I wish I'd been"
+	line "able to catch it…"
 	done
 
 ParryLostAMonText:
@@ -45,8 +45,8 @@ ParryBattleRematchText:
 	done
 
 ParryHangUpText:
-	text "OK, give me a call"
-	line "again!"
+	text "Okay, give me a"
+	line "call again!"
 	done
 
 ParryBattleWithMeText:

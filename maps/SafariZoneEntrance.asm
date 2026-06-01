@@ -310,7 +310,7 @@ SafariZoneEntranceMainOfficer_Text:
 
 SafariZoneEntranceMainOfficer_Text2:
 	ntag "RANGER:"
-	text "OK! Please come"
+	text "Okay! Please come"
 	line "again!"
 	done
 

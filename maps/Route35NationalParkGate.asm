@@ -289,7 +289,7 @@ Route35NationalParkGatePlayerEnterParkMovement:
 ;	cont "first #MON in"
 ;	roll "your party."
 ;
-;	para "Is that OK with"
+;	para "Is that okay with"
 ;	line "you?"
 ;	done
 
@@ -370,10 +370,15 @@ Route35NationalParkGatePlayerEnterParkMovement:
 
 Route35NationalParkGateOfficer1WaitAtNorthGateText:
 	ntag "OFFICER:"
-	text "OK. Please wait at"
-	line "the North Gate for"
-	cont "the announcement"
-	roll "of the winners."
+;	text "OK. Please wait at"
+;	line "the North Gate for"
+;	cont "the announcement"
+;	roll "of the winners."
+;	done
+	text "Please wait at the"
+	line "North Gate where"
+	cont "they will announce"
+	roll "the winners."
 	done
 
 ;Route35NationalParkGateOfficer1OkGoFinishText:

@@ -35,11 +35,12 @@ JackNumberAcceptedText:
 
 JackNumberDeclinedText:
 	ntag "JACK:"
-	text "Oh, OK. Too bad…"
+	text "Oh, Okay."
+	line "Too bad…"
 
 	para "Well, if you ever"
 	line "want my number,"
-	cont "come see me, OK?"
+	cont "come see me, okay?"
 	done
 
 JackPhoneFullText:

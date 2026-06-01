@@ -132,7 +132,7 @@ RocketGruntM10BeatenText:
 
 RocketGruntM10AfterBattleText:
 	ntag "ROCKET:"
-	text "OK, I'll talk!"
+	text "Okay, I'll talk!"
 	line "Take the elevator"
 	cont "to see my BOSS!"
 	done
