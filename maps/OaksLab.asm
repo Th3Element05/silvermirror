@@ -52,7 +52,7 @@ OakScript:
 	checkevent EVENT_GOT_POKEBALLS_FROM_OAK
 	iffalse .OakGiveBalls
 	writetext OakLabEvaluateDexText
-	waitbutton
+	promptbutton
 	special ProfOaksPCBoot
 	writetext OakLabOakGoodbyeText
 	waitbutton
@@ -1378,11 +1378,112 @@ OakLabOakGoodbyeText:
 
 
 OakRematchScript:
-	sjump OakScript
+;	sjump OakScript
+	faceplayer
+	opentext
+	writetext OaksLabAskEvaluateDexText
+	yesorno
+	iffalse .OfferRematch
+	special ProfOaksPCBoot
+	writetext OakLabOakGoodbyeText
+	waitbutton
+	closetext
 	end
 
+.OfferRematch
+	writetext OaksLabOakAskRematchText
+	yesorno
+	iffalse .DeclinedRematch
+; rematch
+	winlosstext OaksLabOakWinLossText, OaksLabOakWinLossText
+	checkevent EVENT_GOT_SQUIRTLE_FROM_OAK
+	iftrue .OakCharizard
+	checkevent EVENT_GOT_BULBASAUR_FROM_OAK
+	iftrue .OakBlastoise
+;OakVenusaur:
+	loadtrainer POKEMON_PROF, OAK_T_VENUSAUR
+	loadmem VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	dontrestartmapmusic
+	reloadmap ;reloadmapafterbattle
+	sjump .FinishOaksLabOak
+.OakCharizard:
+	loadtrainer POKEMON_PROF, OAK_T_CHARIZARD
+	loadmem VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	dontrestartmapmusic
+	reloadmap ;reloadmapafterbattle
+	sjump .FinishOaksLabOak
+.OakBlastoise:
+	loadtrainer POKEMON_PROF, OAK_T_BLASTOISE
+	loadmem VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	dontrestartmapmusic
+	reloadmap ;reloadmapafterbattle
 
+.FinishOaksLabOak
+	special HealParty
+	opentext
+	writetext OaksLabOak_AfterBattleText
+	waitbutton
+	closetext
+	end
 
+.DeclinedRematch
+	writetext OaksLabOakDeclinedRematchText
+	waitbutton
+	closetext
+	end
+
+OaksLabAskEvaluateDexText:
+	ntag "PROF.OAK:"
+	text "<PLAYER>!"
+	line "How's your progress"
+	cont "on the #DEX?"
+
+	para "Can I check it?"
+	done
+
+OaksLabOakAskRematchText:
+	ntag "PROF.OAK:"
+	text "Okay, some other"
+	line "time."
+
+	para "What about a"
+	cont "battle instead?"
+
+	para "Our battle at"
+	line "MT.SILVER got my"
+	cont "blood moving!"
+
+	para "I had forgotten"
+	line "how much I enjoy"
+	cont "a good #MON"
+	roll "battle!"
+
+	para "Just say the word,"
+	line "and we can have a"
+	cont "rematch."
+	done
+
+OaksLabOakDeclinedRematchText:
+	ntag "PROF.OAK:"
+	text "Okay, some other"
+	line "time, then."
+	done
+
+OaksLabOakWinLossText:
+	ntag "PROF.OAK:"
+	text "What a thrilling"
+	line "battle!"
+	done
+
+OaksLabOak_AfterBattleText:
+	ntag "PROF.OAK:"
+	text "Anytime you want"
+	line "to battle again,"
+	cont "just let me know."
+	done
 
 
 ; DEBUG
@@ -2172,4 +2273,4 @@ OaksLab_MapEvents:
 	object_event  2, 10, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OaksAssistantScript, -1
 ;	object_event  1,  9, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OaksLabGirlScript, -1
 
-	object_event  5,  2, SPRITE_OAK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OakRematchScript, EVENT_OAKS_LAB_OAK_REMATCH
+	object_event  4,  2, SPRITE_OAK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OakRematchScript, EVENT_OAKS_LAB_OAK_REMATCH
