@@ -151,17 +151,17 @@
 	const SACRED_ASH   ; 8f
 	const HEAVY_BALL   ; 90
 	const LEVEL_BALL   ; 91
-	const LURE_BALL    ; 92
+	const NET_BALL     ; 92 ; LURE_BALL
 	const FAST_BALL    ; 93
 	const LIGHT_BALL   ; 94
 	const FRIEND_BALL  ; 95
-	const MOON_BALL    ; 96
+	const DUSK_BALL    ; 96 ; MOON_BALL
 	const LOVE_BALL    ; 97
 	const NORMAL_BOX   ; 98
 	const GORGEOUS_BOX ; 99
 	const SUN_STONE    ; 9a
 	const STEEL_INGOT  ; 9b ; POLKADOT_BOW
-	const UP_GRADE     ; 9c
+	const UP_GRADE     ; 9c ; unused, unless PORYGON2 restored
 	const ORAN_BERRY   ; 9d
 	const SITRUS_BERRY ; 9e
 	const SQUIRTBOTTLE ; 9f
