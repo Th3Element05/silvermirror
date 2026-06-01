@@ -3,6 +3,7 @@
 	const LANDMARK_SPECIAL           ; 00
 ; Johto landmarks
 	const LANDMARK_OLIVINE_CITY      ; 01
+	const LANDMARK_LIGHTHOUSE        ; 6a
 	const LANDMARK_BATTLE_TOWER      ; 02
 	const LANDMARK_ROUTE_40          ; 03
 	const LANDMARK_WHIRL_ISLANDS     ; 04
@@ -11,6 +12,7 @@
 	const LANDMARK_ROUTE_39          ; 07
 	const LANDMARK_ROUTE_38          ; 08
 	const LANDMARK_ECRUTEAK_CITY     ; 09
+	const LANDMARK_BURNED_TOWER      ; 6b
 	const LANDMARK_TIN_TOWER         ; 0a
 	const LANDMARK_ROUTE_37          ; 0b
 	const LANDMARK_ROUTE_36          ; 0c
@@ -21,6 +23,7 @@
 	const LANDMARK_ROUTE_34          ; 12
 	const LANDMARK_ILEX_FOREST       ; 13
 	const LANDMARK_AZALEA_TOWN       ; 14
+	const LANDMARK_SLOWPOKE_WELL     ; 6c
 	const LANDMARK_ROUTE_33          ; 15
 	const LANDMARK_UNION_CAVE        ; 16
 	const LANDMARK_ROUTE_32          ; 17
@@ -39,6 +42,7 @@
 	const LANDMARK_ROUTE_46          ; 24
 	const LANDMARK_ROUTE_45          ; 25
 	const LANDMARK_BLACKTHORN_CITY   ; 26
+	const LANDMARK_DRAGONS_DEN       ; 6e
 	const LANDMARK_ICE_PATH          ; 27
 	const LANDMARK_ROUTE_44          ; 28
 	const LANDMARK_MAHOGANY_TOWN     ; 29
@@ -49,11 +53,7 @@
 	const LANDMARK_SILVER_CAVE       ; 2e
 ; PokegearMap_JohtoMap: (johto region town map landmark limits)
 	const LANDMARK_FAST_SHIP         ; 69
-	const LANDMARK_LIGHTHOUSE        ; 6a
-	const LANDMARK_BURNED_TOWER      ; 6b
-	const LANDMARK_SLOWPOKE_WELL     ; 6c
-	const LANDMARK_DARK_CAVE         ; 6d
-	const LANDMARK_DRAGONS_DEN       ; 6e
+;	const LANDMARK_DARK_CAVE         ; 6d
 	const LANDMARK_NINJA_DEN         ; 6f
 
 DEF KANTO_LANDMARK EQU const_value	
@@ -68,8 +68,10 @@ DEF KANTO_LANDMARK EQU const_value
 	const LANDMARK_MT_MOON           ; 37
 	const LANDMARK_ROUTE_4           ; 38
 	const LANDMARK_CERULEAN_CITY     ; 39
+	const LANDMARK_CERULEAN_CAVE     ; 67
 	const LANDMARK_ROUTE_24          ; 3a
 	const LANDMARK_ROUTE_25          ; 3b
+	const LANDMARK_BILLS_HOUSE       ; 61
 	const LANDMARK_ROUTE_5           ; 3c
 	const LANDMARK_ROUTE_6           ; 3d
 	const LANDMARK_VERMILION_CITY    ; 3e
@@ -83,6 +85,7 @@ DEF KANTO_LANDMARK EQU const_value
 	const LANDMARK_ROUTE_7           ; 46
 	const LANDMARK_CELADON_CITY      ; 47
 	const LANDMARK_SAFFRON_CITY      ; 48
+	const LANDMARK_SILPH_CO          ; 65
 	const LANDMARK_ROUTE_11          ; 49
 	const LANDMARK_ROUTE_12          ; 4a
 	const LANDMARK_ROUTE_13          ; 4b
@@ -97,6 +100,7 @@ DEF KANTO_LANDMARK EQU const_value
 	const LANDMARK_SEAFOAM_ISLANDS   ; 54
 	const LANDMARK_ROUTE_20          ; 55
 	const LANDMARK_CINNABAR_ISLAND   ; 56
+	const LANDMARK_POKEMON_MANSION   ; 66
 	const LANDMARK_ROUTE_21          ; 57
 	const LANDMARK_ROUTE_22          ; 58
 	const LANDMARK_ROUTE_23          ; 59
@@ -110,12 +114,8 @@ DEF KANTO_LANDMARK EQU const_value
 	const LANDMARK_ROUTE_28          ; 60
 ; end
 	const LANDMARK_SS_ANNE           ; 63
-	const LANDMARK_BILLS_HOUSE       ; 61
 	const LANDMARK_UNDERGROUND_PATH  ; 62
 	const LANDMARK_ROCKET_HIDEOUT    ; 64
-	const LANDMARK_SILPH_CO          ; 65
-	const LANDMARK_POKEMON_MANSION   ; 66
-	const LANDMARK_CERULEAN_CAVE     ; 67
 	const LANDMARK_BILLS_BACK_YARD   ; 68
 
 DEF NUM_LANDMARKS EQU const_value

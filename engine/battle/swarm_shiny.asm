@@ -74,7 +74,7 @@ GenerateSwarmShiny:
 	jp z, .remoraid
 	cp LANDMARK_ROUTE_45
 	jp z, .skarmory
-	cp LANDMARK_DARK_CAVE
+	cp LANDMARK_DARK_CAVE_31
 	jp z, .dunsparce
 	cp LANDMARK_UNION_CAVE
 	jp z, .wooper
