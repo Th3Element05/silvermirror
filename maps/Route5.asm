@@ -50,7 +50,7 @@ DayCareManScript_Outside:
 	ifequal TRUE, .end_fail
 	clearflag ENGINE_DAY_CARE_MAN_HAS_EGG
 	readvar VAR_FACING
-	ifequal RIGHT, .walk_around_player
+	ifequal LEFT, .walk_around_player
 	applymovement ROUTE5_DAYCAREMAN, Route5DayCareManWalksBackInsideMovement
 	playsound SFX_ENTER_DOOR
 	disappear ROUTE5_DAYCAREMAN
@@ -76,15 +76,15 @@ DayCareMon2Script:
 	end
 
 Route5DayCareManWalksBackInsideMovement:
-	slow_step LEFT
-	slow_step LEFT
+	slow_step RIGHT
+	slow_step RIGHT
 	slow_step UP
 	step_end
 
 Route5DayCareManWalksAroundPlayerMovement:
 	slow_step DOWN
-	slow_step LEFT
-	slow_step LEFT
+	slow_step RIGHT
+	slow_step RIGHT
 	slow_step UP
 	slow_step UP
 	step_end
@@ -120,23 +120,23 @@ Route5_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 17, 27, ROUTE_5_UNDERGROUND_PATH_ENTRANCE, 1
-	warp_event  8, 29, ROUTE_5_SAFFRON_GATE, 1
-	warp_event  9, 29, ROUTE_5_SAFFRON_GATE, 2
-	warp_event  9, 23, DAY_CARE, 1
-	warp_event  9, 19, DAY_CARE, 3
+	warp_event 17, 31, ROUTE_5_UNDERGROUND_PATH_ENTRANCE, 1
+	warp_event  8, 33, ROUTE_5_SAFFRON_GATE, 1
+	warp_event  9, 33, ROUTE_5_SAFFRON_GATE, 2
+	warp_event  9, 27, DAY_CARE, 1
+	warp_event  9, 23, DAY_CARE, 3
 
 	def_coord_events
 
 	def_bg_events
-	bg_event 13, 23, BGEVENT_READ, Route5DayCareSign
-	bg_event 15, 27, BGEVENT_READ, Route5UndergroundPathSign
-	bg_event 13, 20, BGEVENT_ITEM, Route5HiddenEverstone
+	bg_event  7, 27, BGEVENT_READ, Route5DayCareSign
+	bg_event 15, 31, BGEVENT_READ, Route5UndergroundPathSign
+	bg_event 13, 24, BGEVENT_ITEM, Route5HiddenEverstone
 
 	def_object_events
-	object_event 11, 24, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DayCareManScript_Outside, EVENT_DAY_CARE_MAN_ON_ROUTE_5
-	object_event 11, 17, SPRITE_DAY_CARE_MON_1, SPRITEMOVEDATA_POKEMON, 2, 2, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, DayCareMon1Script, EVENT_DAY_CARE_MON_1
-	object_event  8, 16, SPRITE_DAY_CARE_MON_2, SPRITEMOVEDATA_POKEMON, 2, 2, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, DayCareMon2Script, EVENT_DAY_CARE_MON_2
-	object_event 12,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route5SilkScarf, EVENT_ROUTE_5_SILK_SCARF
+	object_event  7, 28, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DayCareManScript_Outside, EVENT_DAY_CARE_MAN_ON_ROUTE_5
+	object_event 11, 21, SPRITE_DAY_CARE_MON_1, SPRITEMOVEDATA_POKEMON, 2, 2, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, DayCareMon1Script, EVENT_DAY_CARE_MON_1
+	object_event  8, 20, SPRITE_DAY_CARE_MON_2, SPRITEMOVEDATA_POKEMON, 2, 2, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, DayCareMon2Script, EVENT_DAY_CARE_MON_2
+	object_event 12, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route5SilkScarf, EVENT_ROUTE_5_SILK_SCARF
 
 ;\engine\gfx\color.asm handles SPRITE_DAY_CARE_MON colors over SILVER and ROCK

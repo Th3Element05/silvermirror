@@ -225,7 +225,7 @@ ENDM
 	map_const COPYCATS_HOUSE_2F,                            4,  3 ;  8
 	map_const SAFFRON_PIDGEY_HOUSE,                         4,  4 ;  9
 	map_const SAFFRON_MAGNET_TRAIN_STATION,                10,  9 ; 10
-	map_const ROUTE_5,                                     10, 16 ; 11
+	map_const ROUTE_5,                                     10, 18 ; 11
 	map_const ROUTE_5_UNDERGROUND_PATH_ENTRANCE,            4,  4 ; 12
 	map_const ROUTE_5_SAFFRON_GATE,                         4,  4 ; 13
 	map_const KURTS_SONS_HOUSE_1F,                          5,  4 ; 14

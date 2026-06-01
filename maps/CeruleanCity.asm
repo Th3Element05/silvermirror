@@ -14,8 +14,6 @@ CeruleanCity_MapScripts:
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, CeruleanCityFlypointCallback
 	callback MAPCALLBACK_OBJECTS, CeruleanCityBlockersCallback
-;	callback MAPCALLBACK_OBJECTS, CeruleanCityMoveOfficerCallback
-;	callback MAPCALLBACK_OBJECTS, CeruleanCityMoveSlowbroCallback
 ;	callback MAPCALLBACK_OBJECTS, CeruleanCaveBlockCallback
 
 CeruleanCityNoop1Scene:
@@ -28,21 +26,16 @@ CeruleanCityFlypointCallback:
 	endcallback
 
 CeruleanCityBlockersCallback:
-;CeruleanCityMoveOfficerCallback:
+; check got CUT
+	checkevent EVENT_GOT_HM01_CUT ;EVENT_BEAT_GRUNTM_4
+	iftrue .Done
+	moveobject CERULEANCITY_SLOWBRO, 18, 28
+	moveobject CERULEANCITY_SLOWBRO_TRAINER, 19, 28
+; check helped BILL
 	checkevent EVENT_HELPED_BILL
-	iftrue .BillHelped
+	iftrue .Done
 	moveobject CERULEANCITY_OFFICER, 27, 12
-.BillHelped
-;	endcallback
-	; fallthrough
-;CeruleanCityMoveSlowbroCallback:
-	checkevent EVENT_BEAT_GRUNTM_4 ;EVENT_BEAT_LTSURGE
-	iftrue .ObtainedDig
-	endcallback
-
-.ObtainedDig
-	moveobject CERULEANCITY_SLOWBRO, 20, 26
-	moveobject CERULEANCITY_SLOWBRO_TRAINER, 21, 26
+.Done
 	endcallback
 	; fallthrough
 ;CeruleanCaveBlockCallback:
@@ -56,7 +49,7 @@ CeruleanCityBlockersCallback:
 
 ; scripts
 CeruleanCityRivalEncounterR:
-	moveobject CERULEANCITY_RIVAL, 21, 2
+	moveobject CERULEANCITY_RIVAL, 19, 2
 	; fallthrough
 CeruleanCityRivalEncounterL:
 	playmusic MUSIC_RIVAL_ENCOUNTER
@@ -105,7 +98,7 @@ CeruleanCityRivalEncounterL:
 
 CeruleanCityRivalGoesAroundScript:
 	readvar VAR_XCOORD
-	ifequal 20, .Right
+	ifequal 18, .Right
 	applymovement CERULEANCITY_RIVAL, CeruleanCityRivalLeftMovement
 	end
 .Right
@@ -532,37 +525,37 @@ CeruleanCity_MapEvents:
 	warp_event  9, 11, CERULEAN_GYM_BADGE_SPEECH_HOUSE, 1 ; 3
 	warp_event 27, 11, CERULEAN_TRASHED_HOUSE, 2          ; 4
 	warp_event 13, 15, CERULEAN_TRADE_SPEECH_HOUSE, 1     ; 5
-	warp_event 19, 17, CERULEAN_POKECENTER_1F, 1          ; 6
+	warp_event 21, 17, CERULEAN_POKECENTER_1F, 1          ; 6
 	warp_event 30, 19, CERULEAN_GYM, 1                    ; 7
 	warp_event 14, 25, BIKE_SHOP, 1                       ; 8
 	warp_event 25, 25, CERULEAN_MART, 1                   ; 9
 	warp_event  9,  9, CERULEAN_GYM_BADGE_SPEECH_HOUSE, 3 ; 10
 
 	def_coord_events
-	coord_event 20,  7, SCENE_CERULEANCITY_RIVAL_BATTLE, CeruleanCityRivalEncounterL
-	coord_event 21,  7, SCENE_CERULEANCITY_RIVAL_BATTLE, CeruleanCityRivalEncounterR
+	coord_event 18,  7, SCENE_CERULEANCITY_RIVAL_BATTLE, CeruleanCityRivalEncounterL
+	coord_event 19,  7, SCENE_CERULEANCITY_RIVAL_BATTLE, CeruleanCityRivalEncounterR
 
 	def_bg_events
 	bg_event 23, 19, BGEVENT_READ, CeruleanCitySign
 	bg_event 29, 19, BGEVENT_READ, CeruleanGymSign
 	bg_event 11, 25, BGEVENT_READ, CeruleanCityBikeShopSign
 	bg_event 17, 29, BGEVENT_READ, CeruleanCityTrainerTips
-	bg_event 20, 17, BGEVENT_READ, CeruleanCityPokecenterSign
+	bg_event 22, 17, BGEVENT_READ, CeruleanCityPokecenterSign
 	bg_event 26, 25, BGEVENT_READ, CeruleanCityMartSign
 	bg_event 15,  8, BGEVENT_ITEM, CeruleanCityHiddenRareCandy
 
 	def_object_events
-	object_event 20,  2, SPRITE_VARIABLE_2, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CERULEAN_CITY_RIVAL
+	object_event 18,  2, SPRITE_VARIABLE_2, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CERULEAN_CITY_RIVAL
 ;	object_event 20,  2, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CERULEAN_CITY_RIVAL
 	object_event 28, 12, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeruleanCityOfficerScript, -1
 	object_event 30,  8, SPRITE_ROCKET, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerRocketGruntM4, EVENT_CERULEAN_CITY_ROCKET
-	object_event 20, 27, SPRITE_SLOWBRO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, CeruleanCitySlowbroScript, -1
-	object_event 21, 27, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCitySlowbroTrainerScript, -1
+	object_event 21, 26, SPRITE_SLOWBRO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, CeruleanCitySlowbroScript, -1
+	object_event 22, 26, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCitySlowbroTrainerScript, -1
 	object_event  4, 12, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, CeruleanCaveCooltrainerMScript, EVENT_BEAT_ELITE_FOUR
 	object_event 15, 18, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WALK_UP_DOWN, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeruleanCitySuperNerd1Script, -1
 	object_event 31, 20, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanCityCooltrainerMScript, -1
 	object_event  9, 21, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanCitySuperNerd2Script, -1
 	object_event  9, 27, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCityCooltrainerFScript, -1
-	object_event 21, -5, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
+	object_event 18, -5, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
 
 ;.PinkOverYellowOBPalette
