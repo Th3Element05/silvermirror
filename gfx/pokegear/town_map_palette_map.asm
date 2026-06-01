@@ -17,12 +17,12 @@ endr
 ENDM
 
 ; gfx/pokegear/town_map.png
-	townmappals EARTH,    EARTH,    EARTH,    MOUNTAIN, MOUNTAIN, MOUNTAIN, BORDER,   BORDER
+	townmappals EARTH,    EARTH,    EARTH,    MOUNTAIN, POI,      MOUNTAIN, BORDER,   BORDER
 	townmappals EARTH,    EARTH,    CITY,     EARTH,    POI,      POI_MTN,  POI,      POI_MTN
 	townmappals EARTH,    EARTH,    EARTH,    MOUNTAIN, MOUNTAIN, MOUNTAIN, BORDER,   BORDER
-	townmappals EARTH,    EARTH,    BORDER,   POI_WTR,  POI_WTR,  EARTH,    POI,      POI
+	townmappals EARTH,    EARTH,    BORDER,   EARTH,    EARTH,    POI,      POI,      POI
 	townmappals EARTH,    EARTH,    EARTH,    MOUNTAIN, MOUNTAIN, MOUNTAIN, BORDER,   BORDER
-	townmappals BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   EARTH
+	townmappals BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER
 ; gfx/pokegear/pokegear.png
 	townmappals BORDER,   BORDER,   BORDER,   BORDER,   POI,      POI,      POI,      BORDER
 	townmappals BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER

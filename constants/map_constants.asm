@@ -66,7 +66,7 @@ ENDM
 	map_const PEWTER_MUSEUM_2F,                             7,  4 ;  6
 	map_const PEWTER_SNOOZE_SPEECH_HOUSE,                   4,  4 ;  7
 	map_const PEWTER_NIDORAN_SPEECH_HOUSE,                  4,  4 ;  8
-	map_const ROUTE_2_NORTH,                               10, 18 ;  9
+	map_const ROUTE_2,                                     10, 18 ;  9
 	map_const ROUTE_2_NUGGET_HOUSE,                         4,  4 ; 10
 	map_const VIRIDIAN_FOREST,                             17, 22 ; 11
 	map_const VIRIDIAN_FOREST_GATE_N,                       4,  4 ; 12
@@ -90,9 +90,10 @@ ENDM
 	map_const ROUTE_25,                                    32,  9 ; 12
 	map_const BILLS_HOUSE,                                  4,  4 ; 13
 	map_const ROUTE_9,                                     30,  9 ; 14
-	map_const ROUTE_10_NORTH,                              10, 30 ; 15 ; 10, 24 ; 15
+	map_const ROUTE_10,                                    10, 25 ; 15 ; 10, 30
 	map_const ROUTE_10_POKECENTER_1F,                       7,  4 ; 16
-	map_const BILLS_BACK_YARD,                             10, 12 ; 17
+	map_const ROUTE_10_NORTH,                              10,  7 ; 17
+	map_const BILLS_BACK_YARD,                             10, 12 ; 18
 	endgroup
 
 	newgroup VERMILION                                            ;  5

@@ -54,7 +54,7 @@ KantoGrassWildMonsChallenge:
 ;	db  2, NIDORAN_M  ;  1% chance
 ;	end_grass_wildmons
 
-	def_grass_wildmons ROUTE_2_NORTH ;GEN2
+	def_grass_wildmons ROUTE_2 ;GEN2
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; day
 	db  3, PIDGEY     ; 20% chance
@@ -262,7 +262,7 @@ KantoGrassWildMonsChallenge:
 	db 16, YANMA      ;  1% chance
 	end_grass_wildmons
 
-	def_grass_wildmons ROUTE_10_NORTH ;GEN2
+	def_grass_wildmons ROUTE_10 ;GEN2
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; day
 	db 16, SPEAROW    ; 20% chance
@@ -1458,7 +1458,7 @@ KantoGrassWildMonsChallenge:
 	db 50, HERACROSS  ;  1% chance
 	end_grass_wildmons
 
-	def_grass_wildmons BILLS_BACK_YARD ;GEN2
+	def_grass_wildmons ROUTE_10_NORTH ;GEN2
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; day
 	db 16, PIDGEY     ; 20% chance

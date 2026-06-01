@@ -128,7 +128,7 @@ EngineFlags:
 	engine_flag wDailyFlags1, DAILYFLAGS1_TRAINER_HOUSE_F
 	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE1_FRUIT
 	engine_flag wDailyFlags1, DAILYFLAGS_VIRIDIANFOREST_FRUIT
-	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE2NORTH_FRUIT
+	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE2_FRUIT
 	engine_flag wDailyFlags1, DAILYFLAGS_PEWTERCITY_FRUIT
 	engine_flag wDailyFlags1, DAILYFLAGS_ROUTE24_FRUIT
 	engine_flag wDailyFlags1, DAILYFLAGS_BILLS_BACK_YARD_FRUIT

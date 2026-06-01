@@ -24,11 +24,8 @@ SaffronCity_Blocks:
 Route2South_Blocks:
 	INCBIN "maps/Route2South.blk"
 
-;Route2_Blocks:                             ;silvermirror+
-;	INCBIN "maps/Route2.blk"
-
-Route2North_Blocks:
-	INCBIN "maps/Route2North.blk"
+Route2_Blocks:
+	INCBIN "maps/Route2.blk"
 
 ElmsHouse_Blocks:
 	INCBIN "maps/ElmsHouse.blk"
@@ -355,11 +352,11 @@ CherrygroveMart_Blocks:
 CinnabarMart_Blocks:                   ;silvermirror+
 	INCBIN "maps/Mart.blk"
 
-Route10North_Blocks:
-	INCBIN "maps/Route10North.blk"
+Route10_Blocks:
+	INCBIN "maps/Route10.blk"
 
-;Route10_Blocks:                        ;silvermirror+
-;	INCBIN "maps/Route10.blk"
+Route10North_Blocks:                        ;silvermirror+
+	INCBIN "maps/Route10North.blk"
 
 ViridianPokecenter1F_Blocks:
 PewterPokecenter1F_Blocks:

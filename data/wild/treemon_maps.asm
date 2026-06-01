@@ -74,7 +74,7 @@ TreeMonMaps:
 	treemon_map VIRIDIAN_CITY,             TREEMON_SET_NORTHERN_KANTO
 	treemon_map ROUTE_2_SOUTH,             TREEMON_SET_NORTHERN_KANTO
 	treemon_map VIRIDIAN_FOREST,           TREEMON_SET_NORTHERN_KANTO
-	treemon_map ROUTE_2_NORTH,             TREEMON_SET_NORTHERN_KANTO
+	treemon_map ROUTE_2,                   TREEMON_SET_NORTHERN_KANTO
 	treemon_map PEWTER_CITY,               TREEMON_SET_NORTHERN_KANTO
 	treemon_map ROUTE_3,                   TREEMON_SET_NORTHERN_KANTO
 	treemon_map ROUTE_4,                   TREEMON_SET_NORTHERN_KANTO
@@ -83,11 +83,11 @@ TreeMonMaps:
 	treemon_map ROUTE_25,                  TREEMON_SET_NORTHERN_KANTO
 	treemon_map ROUTE_5,                   TREEMON_SET_CENTRAL_KANTO
 	treemon_map ROUTE_6,                   TREEMON_SET_CENTRAL_KANTO
-;	treemon_map VERMILION_CITY,            TREEMON_SET_CENTRAL_KANTO
+	treemon_map VERMILION_CITY,            TREEMON_SET_CENTRAL_KANTO
 	treemon_map ROUTE_11,                  TREEMON_SET_CENTRAL_KANTO
 	treemon_map ROUTE_9,                   TREEMON_SET_CENTRAL_KANTO
-;	treemon_map ROUTE_10_NORTH,            TREEMON_SET_CENTRAL_KANTO
-;	treemon_map ROUTE_10_SOUTH,            TREEMON_SET_CENTRAL_KANTO
+	treemon_map ROUTE_10,                  TREEMON_SET_CENTRAL_KANTO
+	treemon_map ROUTE_10_SOUTH,            TREEMON_SET_CENTRAL_KANTO
 ;	treemon_map LAVENDER_TOWN,             TREEMON_SET_CENTRAL_KANTO
 	treemon_map ROUTE_7,                   TREEMON_SET_CENTRAL_KANTO
 	treemon_map ROUTE_8,                   TREEMON_SET_CENTRAL_KANTO
@@ -136,7 +136,7 @@ TreeMonMaps:
 	treemon_map ROUTE_29,                  TREEMON_SET_ROUTE
 ;	treemon_map ROUTE_45,                  TREEMON_SET_TOWN
 ;	treemon_map ROUTE_46,                  TREEMON_SET_TOWN
-;	treemon_map BLACKTHORN_CITY,           TREEMON_SET_TOWN
+	treemon_map BLACKTHORN_CITY,           TREEMON_SET_TOWN
 	treemon_map ROUTE_44,                  TREEMON_SET_TOWN
 	treemon_map MAHOGANY_TOWN,             TREEMON_SET_TOWN
 	treemon_map ROUTE_42,                  TREEMON_SET_TOWN
@@ -160,7 +160,7 @@ RockMonMaps:
 	treemon_map MOUNT_MOON,                TREEMON_SET_ROCK
 	treemon_map ROUTE_3,                   TREEMON_SET_ROCK
 	treemon_map ROUTE_4,                   TREEMON_SET_ROCK
-	treemon_map ROUTE_10_NORTH,            TREEMON_SET_ROCK
+	treemon_map ROUTE_10,                  TREEMON_SET_ROCK
 	treemon_map ROCK_TUNNEL_1F,            TREEMON_SET_ROCK
 	treemon_map POKEMON_MANSION_1F,        TREEMON_SET_POISON_ROCK
 	treemon_map CERULEAN_CAVE_1F,          TREEMON_SET_ROCK

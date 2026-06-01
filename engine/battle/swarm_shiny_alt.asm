@@ -49,7 +49,7 @@ GenerateAltSwarmShiny:
 	jp z, .magmar
 	cp LANDMARK_VICTORY_ROAD
 	jp z, .larvitar
-	cp LANDMARK_BILLS_BACK_YARD
+	cp LANDMARK_ROUTE_10_NORTH
 	jp z, .eevee
 ; johto
 	cp LANDMARK_ROUTE_29

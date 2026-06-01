@@ -238,7 +238,7 @@ RockTunnel1F_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 15,  5, ROUTE_10_NORTH, 2  ; 1
+	warp_event 15,  5, ROUTE_10, 2  ; 1
 	warp_event 13, 29, ROUTE_10_SOUTH, 1  ; 2
 	warp_event  5,  3, ROCK_TUNNEL_B1F, 3 ; 3
 	warp_event 17, 11, ROCK_TUNNEL_B1F, 2 ; 4

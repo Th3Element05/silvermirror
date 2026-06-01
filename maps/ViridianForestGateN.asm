@@ -39,10 +39,8 @@ ViridianForestGateN_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  3,  0, ROUTE_2_NORTH, 5
-	warp_event  4,  0, ROUTE_2_NORTH, 6
-;	warp_event  3,  0, ROUTE_2, 1
-;	warp_event  4,  0, ROUTE_2, 2
+	warp_event  3,  0, ROUTE_2, 5
+	warp_event  4,  0, ROUTE_2, 6
 	warp_event  3,  7, VIRIDIAN_FOREST, 1
 	warp_event  4,  7, VIRIDIAN_FOREST, 1
 

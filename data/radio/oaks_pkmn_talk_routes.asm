@@ -2,14 +2,14 @@
 
 OaksPKMNTalkRoutes:
 ;	map_id ROUTE_1
-	map_id ROUTE_2_SOUTH
+	map_id ROUTE_2
 	map_id ROUTE_3
 	map_id ROUTE_4
 	map_id ROUTE_5
 	map_id ROUTE_6
 	map_id ROUTE_7
 	map_id ROUTE_8
-	map_id ROUTE_10_NORTH
+	map_id ROUTE_10
 	map_id ROUTE_11
 	map_id ROUTE_13
 	map_id ROUTE_15

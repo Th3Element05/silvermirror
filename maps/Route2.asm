@@ -1,22 +1,22 @@
 	object_const_def
-	const ROUTE2N_PNK_APRICORN
+	const ROUTE2_PNK_APRICORN
 
-Route2North_MapScripts:
+Route2_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
-	callback MAPCALLBACK_OBJECTS, Route2NFruittrees
+	callback MAPCALLBACK_OBJECTS, Route2Fruittrees
 
-Route2NFruittrees:
+Route2Fruittrees:
 .Berry:
-	checkflag ENGINE_DAILY_ROUTE_2_NORTH_FRUIT
+	checkflag ENGINE_DAILY_ROUTE_2_FRUIT
 	iftrue .NoFruit
-	appear ROUTE2N_PNK_APRICORN
+	appear ROUTE2_PNK_APRICORN
 .NoFruit:
 	endcallback
 
 ; fruit
-Route2N_PNKApricorn:
+Route2_PNKApricorn:
 	opentext
 	farwritetext _FruitBearingTreeText
 	promptbutton
@@ -25,13 +25,13 @@ Route2N_PNKApricorn:
 	promptbutton
 	verbosegiveitem PNK_APRICORN
 	iffalse .NoRoomInBag
-	disappear ROUTE2N_PNK_APRICORN
-	setflag ENGINE_DAILY_ROUTE_2_NORTH_FRUIT
+	disappear ROUTE2_PNK_APRICORN
+	setflag ENGINE_DAILY_ROUTE_2_FRUIT
 .NoRoomInBag
 	closetext
 	end
 
-Route2N_NoFruit:
+Route2_NoFruit:
 	farsjump Std_NoFruitScript
 
 ; bg text
@@ -41,7 +41,7 @@ Route2DiglettsCaveSignText:
 	text "DIGLETT's CAVE"
 	done
 
-Route2North_MapEvents:
+Route2_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
@@ -55,10 +55,10 @@ Route2North_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 13,  4, BGEVENT_READ, Route2N_NoFruit
+	bg_event 13,  4, BGEVENT_READ, Route2_NoFruit
 	bg_event 11, 11, BGEVENT_READ, Route2DiglettsCaveSign
 
 	def_object_events
-	object_event 13,  4, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, Route2N_PNKApricorn, EVENT_ROUTE_2N_PNK_APRICORN
+	object_event 13,  4, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, Route2_PNKApricorn, EVENT_ROUTE_2_PNK_APRICORN
 
 ;.PinkOverYellowOBPalette

@@ -22,7 +22,7 @@ INCLUDE "maps/ViridianNicknameSpeechHouse.asm"
 SECTION "Map Scripts 3", ROMX
 
 INCLUDE "maps/Route2South.asm"
-INCLUDE "maps/Route2North.asm"
+INCLUDE "maps/Route2.asm"
 INCLUDE "maps/ViridianForestGateS.asm"
 INCLUDE "maps/ViridianForestGateN.asm"
 INCLUDE "maps/ViridianForest.asm"
@@ -139,12 +139,13 @@ INCLUDE "maps/FastShipEngineRoom.asm"
 SECTION "Map Scripts 11", ROMX
 
 INCLUDE "maps/Route9.asm"
-INCLUDE "maps/Route10North.asm"
+INCLUDE "maps/Route10.asm"
 INCLUDE "maps/Route10Pokecenter1F.asm"
 INCLUDE "maps/RockTunnel1F.asm"
 INCLUDE "maps/RockTunnelB1F.asm"
 INCLUDE "maps/Route10South.asm"
 INCLUDE "maps/PowerPlant.asm"
+INCLUDE "maps/Route10North.asm"
 
 
 SECTION "Map Scripts 12", ROMX

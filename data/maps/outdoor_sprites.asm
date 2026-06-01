@@ -75,7 +75,7 @@ SafariZoneGroupSprites:
 PewterGroupSprites:
 ;PewterCity     YOUNGSTER, SUPER_NERD, COOLTRAINER_M, COOLTRAINER_F, berry, apricorn
 ;ViridianForest BUG_CATCHER, berry, apricorn, poke_ball
-;Route2North    berry, apricorn
+;Route2         berry, apricorn
 ;Route3         LASS, YOUNGSTER, SUPER_NERD, BOY
 IndigoGroupSprites:
 ;Route23        none
@@ -104,7 +104,7 @@ CeruleanGroupSprites:
 ;Route25        YOUNGSTER, POKEFAN_M, LASS, captain, poke_ball
 ;Route5         (in SaffronGroup for roof color, actually connected to CeruleanCity)
 ;Route9         YOUNGSTER, POKEFAN_M, LASS, BUG_CATCHER, poke_ball
-;Route10North   LASS, SUPER_NERD, poke_ball, rock
+;Route10        LASS, SUPER_NERD, poke_ball, rock
 SaffronGroupSprites:
 ;SaffronCity    ROCKET, LASS, SUPER_NERD, SCIENTIST, POKEFAN_M, gentleman, pidgeot
 ;Route5         GRAMPS, daycare_mon_1, daycare_mon_2

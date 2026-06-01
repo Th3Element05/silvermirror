@@ -134,7 +134,7 @@ SwarmGrassWildMons:
 	db 16, KADABRA    ;  1% chance
 
 	; VOLTORB
-	def_grass_wildmons ROUTE_10_NORTH ;GEN1
+	def_grass_wildmons ROUTE_10 ;GEN1
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; day
 	db 16, VOLTORB    ; 20% chance
@@ -732,7 +732,7 @@ SwarmGrassWildMons:
 	db 38, ONIX       ;  1% chance
 
 	; EEVEE
-	def_grass_wildmons BILLS_BACK_YARD ;GEN1
+	def_grass_wildmons ROUTE_10_NORTH ;GEN1
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; day
 	db 10, EEVEE      ; 20% chance

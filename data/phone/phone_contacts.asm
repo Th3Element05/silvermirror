@@ -41,7 +41,7 @@ PhoneContacts:
 	phone SCHOOLBOY,    CHAD1,                 ROUTE_36,                  ANYTIME, ChadPhoneCalleeScript,    ANYTIME, ChadPhoneCallerScript
 	phone POKEFANM,     DEREK1,                ROUTE_39,                  ANYTIME, DerekPhoneCalleeScript,   ANYTIME, DerekPhoneCallerScript
 	phone FISHER,       TULLY1,                ROUTE_12,                  ANYTIME, TullyPhoneCalleeScript,   ANYTIME, TullyPhoneCallerScript
-	phone POKEMANIAC,   BRENT1,                ROUTE_10_NORTH,            ANYTIME, BrentPhoneCalleeScript,   ANYTIME, BrentPhoneCallerScript
+	phone POKEMANIAC,   BRENT1,                ROUTE_10,                  ANYTIME, BrentPhoneCalleeScript,   ANYTIME, BrentPhoneCallerScript
 	phone PICNICKER,    TIFFANY1,              ROUTE_15,                  ANYTIME, TiffanyPhoneCalleeScript, ANYTIME, TiffanyPhoneCallerScript
 	phone BIRD_KEEPER,  VANCE_2,               ROUTE_20,                  ANYTIME, VancePhoneCalleeScript,   ANYTIME, VancePhoneCallerScript
 	phone FISHER,       WILTON_0,              ROUTE_32,                  ANYTIME, WiltonPhoneCalleeScript,  ANYTIME, WiltonPhoneCallerScript

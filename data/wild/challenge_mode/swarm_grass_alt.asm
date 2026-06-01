@@ -160,7 +160,7 @@ SwarmGrassWildMonsAltChallenge:
 	db 19, MURKROW    ;  1% chance
 
 	; MAGNEMITE (GEN2)
-	def_grass_wildmons ROUTE_10_NORTH ;GEN2
+	def_grass_wildmons ROUTE_10 ;GEN2
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; day
 	db 16, MAGNEMITE  ; 20% chance
@@ -888,7 +888,7 @@ SwarmGrassWildMonsAltChallenge:
 	db 32, MAROWAK    ;  1% chance
 
 	; EEVEE (GEN2)
-	def_grass_wildmons BILLS_BACK_YARD ;GEN2
+	def_grass_wildmons ROUTE_10_NORTH ;GEN2
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; day
 	db 10, EEVEE      ; 20% chance

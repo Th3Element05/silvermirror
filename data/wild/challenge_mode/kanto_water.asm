@@ -18,7 +18,7 @@ KantoWaterWildMonsChallenge:
 	db 15, GOLDUCK    ; 10
 	end_water_wildmons
 
-	def_water_wildmons ROUTE_10_NORTH ;GEN2
+	def_water_wildmons ROUTE_10 ;GEN2
 	db 4 percent ; encounter rate
 	db 10, GOLDEEN    ; 50
 	db  5, MAGIKARP   ; 30
@@ -226,11 +226,11 @@ KantoWaterWildMonsChallenge:
 	db 10, MAGIKARP   ; 10
 	end_water_wildmons
 
-	def_water_wildmons BILLS_BACK_YARD ;GEN2
+	def_water_wildmons ROUTE_10_NORTH ;GEN2
 	db 4 percent ; encounter rate
 	db 10, GOLDEEN    ; 50
-	db 10, PSYDUCK    ; 30
-	db  5, MAGIKARP   ; 10
+	db  5, MAGIKARP   ; 30
+	db 10, CHINCHOU   ; 10
 	db 15, SEAKING    ; 10
 	end_water_wildmons
 

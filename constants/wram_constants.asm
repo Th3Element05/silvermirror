@@ -297,7 +297,7 @@ DEF CELEBIEVENT_FOREST_IS_RESTLESS_F EQU 2
 	const DAILYFLAGS1_TRAINER_HOUSE_F                 ; 7
 	const DAILYFLAGS_ROUTE1_FRUIT                     ; 8
 	const DAILYFLAGS_VIRIDIANFOREST_FRUIT             ; 9
-	const DAILYFLAGS_ROUTE2NORTH_FRUIT                ; 10
+	const DAILYFLAGS_ROUTE2_FRUIT                     ; 10
 	const DAILYFLAGS_PEWTERCITY_FRUIT                 ; 11
 	const DAILYFLAGS_ROUTE24_FRUIT                    ; 12
 	const DAILYFLAGS_BILLS_BACK_YARD_FRUIT            ; 13

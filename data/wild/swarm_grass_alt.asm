@@ -160,7 +160,7 @@ SwarmGrassWildMonsAlt:
 	db 16, KADABRA    ;  1% chance
 
 	; MAGNEMITE
-	def_grass_wildmons ROUTE_10_NORTH ;GEN1
+	def_grass_wildmons ROUTE_10 ;GEN1
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; day
 	db 16, MAGNEMITE  ; 20% chance
@@ -888,7 +888,7 @@ SwarmGrassWildMonsAlt:
 	db 32, MAROWAK    ;  1% chance
 
 	; EEVEE
-	def_grass_wildmons BILLS_BACK_YARD ;GEN1
+	def_grass_wildmons ROUTE_10_NORTH ;GEN1
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; day
 	db 10, EEVEE      ; 20% chance

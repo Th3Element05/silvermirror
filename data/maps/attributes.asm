@@ -249,19 +249,19 @@ ENDM
 ;	connection south, Route48, ROUTE_48, 1
 
 	map_attributes PewterCity, PEWTER_CITY, $0f, SOUTH | EAST
-	connection south, Route2North, ROUTE_2_NORTH, 5 ;4
+	connection south, Route2, ROUTE_2, 5 ;4
 ;	connection south, Route2, ROUTE_2, 5 ;4
 	connection east, Route3, ROUTE_3, -5 ;4 ;-6
 
 	map_attributes Route2South, ROUTE_2_SOUTH, $0f, NORTH | SOUTH
-	connection north, Route2North, ROUTE_2_NORTH, 0
+	connection north, Route2, ROUTE_2, 0
 	connection south, ViridianCity, VIRIDIAN_CITY, -5 ;-4
 
 ;	map_attributes Route2, ROUTE_2, $0f, NORTH | SOUTH
 ;	connection north, PewterCity, PEWTER_CITY, -5 ;-4
 ;	connection south, ViridianCity, VIRIDIAN_CITY, -5 ;-4
 
-	map_attributes Route2North, ROUTE_2_NORTH, $0f, NORTH | SOUTH
+	map_attributes Route2, ROUTE_2, $0f, NORTH | SOUTH
 	connection north, PewterCity, PEWTER_CITY, -5 ;-4
 	connection south, Route2South, ROUTE_2_SOUTH, 0
 
@@ -348,7 +348,6 @@ ENDM
 
 	map_attributes LavenderTown, LAVENDER_TOWN, $2c, NORTH | SOUTH | WEST
 	connection north, Route10South, ROUTE_10_SOUTH, 0
-;	connection north, Route10, ROUTE_10, 0
 	connection south, Route12, ROUTE_12, -1 ;-2
 	connection west, Route8, ROUTE_8, -1 ;0
 
@@ -378,7 +377,7 @@ ENDM
 
 	map_attributes Route9, ROUTE_9, $2c, WEST | EAST
 	connection west, CeruleanCity, CERULEAN_CITY, -4
-	connection east, Route10North, ROUTE_10_NORTH, -7 ;0 ;-1
+	connection east, Route10, ROUTE_10, -2 ;-7 ;0
 
 	map_attributes Route24, ROUTE_24, $43, SOUTH | EAST
 	connection south, CeruleanCity, CERULEAN_CITY, -4
@@ -396,7 +395,6 @@ ENDM
 	connection west, PewterCity, PEWTER_CITY, 5 ;-4 ;6
 	connection east, Route4, ROUTE_4, 0 ;24 ; east, Route4, ROUTE_4, 1
 
-
 	map_attributes Route4, ROUTE_4, $2c, WEST | EAST
 	connection west, Route3, ROUTE_3, 0 ;-24 ; west, Route3, ROUTE_3, -1
 	connection east, CeruleanCity, CERULEAN_CITY, -4
@@ -405,16 +403,16 @@ ENDM
 	connection west, SaffronCity, SAFFRON_CITY, -5 ;-6
 	connection east, LavenderTown, LAVENDER_TOWN, 1 ;0
 
-	map_attributes Route10North, ROUTE_10_NORTH, $2c, SOUTH | WEST
-	connection south, Route10South, ROUTE_10_SOUTH, 0
-	connection west, Route9, ROUTE_9, 7 ;0 ;-1
+	map_attributes Route10North, ROUTE_10_NORTH, $2c, SOUTH
+	connection south, Route10, ROUTE_10, 0
 
-;	map_attributes Route10, ROUTE_10, $2c, SOUTH | WEST
-;	connection south, LavenderTown, LAVENDER_TOWN, 0
-;	connection west, Route9, ROUTE_9, 0 ;1
+	map_attributes Route10, ROUTE_10, $2c, NORTH | SOUTH | WEST
+	connection north, Route10North, ROUTE_10_NORTH, 0
+	connection south, Route10South, ROUTE_10_SOUTH, 0
+	connection west, Route9, ROUTE_9, 2 ;0 ;-1
 
 	map_attributes Route10South, ROUTE_10_SOUTH, $2c, NORTH | SOUTH
-	connection north, Route10North, ROUTE_10_NORTH, 0
+	connection north, Route10, ROUTE_10, 0
 	connection south, LavenderTown, LAVENDER_TOWN, 0
 
 	map_attributes Route23, ROUTE_23, $2c, SOUTH ; $0f, 0

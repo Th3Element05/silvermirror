@@ -197,7 +197,7 @@ MapSpecificOBPalettes:
 ;kanto
 	_use_palette_routine_for_map ROUTE_1, .GrayOverYellowOBPalette                  ;blk
 	_use_palette_routine_for_map VIRIDIAN_FOREST, .PinkOverYellowOBPalette          ;pecha
-	_use_palette_routine_for_map ROUTE_2_NORTH, .PinkOverYellowOBPalette            ;pnk
+	_use_palette_routine_for_map ROUTE_2, .PinkOverYellowOBPalette                  ;pnk
 	_use_palette_routine_for_map PEWTER_CITY, .PinkOverYellowOBPalette              ;persim
 	_use_palette_routine_for_map PEWTER_POKECENTER_1F, .PinkOverYellowOBPalette     ;jigglypuff
 	_use_palette_routine_for_map CERULEAN_CITY, .PinkOverYellowOBPalette            ;slowbro

@@ -364,7 +364,7 @@ InitPokegearTilemap:
 
 .Map:
 	ld a, [wPokegearMapPlayerIconLandmark]
-	cp LANDMARK_NINJA_DEN ; Last Johto landmark constant
+	cp LANDMARK_FAST_SHIP ; Last Johto landmark constant
 	jr c, .johto
 	cp KANTO_LANDMARK
 	jr nc, .kanto
