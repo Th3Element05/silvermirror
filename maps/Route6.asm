@@ -241,7 +241,7 @@ TrainerPicnickerEmily:
 
 PicnickerEmilySeenText:
 	ntag "PICNICKER:"
-	text "Me? Well, OK."
+	text "Me? Well, Okay."
 	line "I'll play!"
 	done
 

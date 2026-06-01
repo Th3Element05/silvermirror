@@ -59,7 +59,7 @@ ErinGenericText:
 	line "your #MON?"
 
 	para "Don't push them"
-	line "too hard, ok?"
+	line "too hard, okay?"
 	done
 
 ;	para "Hey, @"

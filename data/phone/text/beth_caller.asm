@@ -67,11 +67,11 @@ BethBattleRematchText:
 	para "@"
 	text_ram wStringBuffer5
 	text "."
-	line "Look for me, OK?"
+	line "Look for me, okay?"
 	done
 
 BethHangUpText:
-	text "OK, bye-bye!"
+	text "Okay, bye-bye!"
 	done
 
 BethLetsBattleAgainSometimeText:

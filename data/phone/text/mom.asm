@@ -67,7 +67,7 @@ MomDeterminedText:
 	para "But, <PLAYER>, I"
 	line "know you're really"
 	cont "determined. You'll"
-	cont "be OK, right?"
+	cont "be okay, right?"
 	done
 
 MomCheckBalanceText:
@@ -103,12 +103,12 @@ MomYouveSavedText:
 	done
 
 MomOKIllSaveText:
-	text "OK. I'll save your"
-	line "money."
+	text "Okay. I'll save"
+	line "your money."
 	done
 
 MomPhoneWontSaveMoneyText:
-	text "OK. I won't save"
+	text "Okay. I won't save"
 	line "your money."
 	done
 

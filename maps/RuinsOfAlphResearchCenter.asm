@@ -833,7 +833,7 @@ RuinsOfAlphResearchCenter_MapScripts:
 ;
 ;	para "I hold onto it so"
 ;	line "you go make room,"
-;	cont "OK?"
+;	cont "okay?"
 ;	done
 
 ;RuinsOfAlphResearchCenterPlayerReceivedOmanyteText:

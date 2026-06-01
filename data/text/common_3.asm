@@ -64,7 +64,7 @@ _ClockSetWithControlPadText::
 	done
 
 _ClockIsThisOKText::
-	text "Is this OK?"
+	text "Is this okay?"
 	done
 
 _ClockHasResetText::
@@ -107,7 +107,7 @@ _MobileBattleMustPickThreeMonText::
 	cont "pick a team of"
 	roll "three #MON."
 
-	para "Is that OK?"
+	para "Is that okay?"
 	done
 
 _MobileBattleMoreInfoText::
@@ -638,7 +638,7 @@ _MartSellPriceText::
 	text_decimal hMoneyTemp, 3, 6
 	text "."
 
-	para "Is that OK?"
+	para "Is that okay?"
 	done
 
 _MartWelcomeText::
@@ -1517,13 +1517,13 @@ _DeleterAskWhichMonText::
 _DSTIsThatOKText::
 ;	ntag "MOM:"
 	text " DST,"
-	line "is that OK?"
+	line "is that okay?"
 	done
 
 _TimeAskOkayText::
 ;	ntag "MOM:"
 	text ","
-	line "is that OK?"
+	line "is that okay?"
 	done
 
 _TimesetAskDSTText::

@@ -271,7 +271,7 @@ RadioTower2FBuenaJoinTheShowText:
 	para "What was your name"
 	line "again?"
 
-	para "…<PLAYER>, OK!"
+	para "…<PLAYER>, okay!"
 
 	para "Come on, <PLAYER>."
 	line "Join the show."
@@ -291,7 +291,7 @@ RadioTower2FBuenaComeBackAfterListeningText:
 	ntag "BUENA:"
 	text "Come back after"
 	line "you listen to my"
-	cont "show, OK?"
+	cont "show, okay?"
 	roll "Catch ya later!"
 	done
 

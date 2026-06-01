@@ -73,8 +73,8 @@ LizWrongNumberText:
 	done
 
 LizHangUpText:
-	text "OK, I'll call you"
-	line "later!"
+	text "Okay, I'll talk to"
+	line "you later!"
 	done
 
 LizRuinsOfAlphGossipText:

@@ -74,5 +74,5 @@ ParryRematchGiftText:
 	para "I want you to work"
 	line "and succeed for"
 	cont "the both of us."
-	roll "So take this, OK?"
+	roll "So take this!"
 	done

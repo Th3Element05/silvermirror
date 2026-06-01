@@ -227,7 +227,7 @@ CeruleanCityRocketBeatenText:
 
 CeruleanCityRocketAfterBattleText:
 	ntag "ROCKET:"
-	text "OK! I'll return"
+	text "Okay! I'll return"
 	line "the TM I stole!"
 	done
 
@@ -316,7 +316,7 @@ CeruleanCitySlowbroDisobeysScript:
 
 CeruleanCitySlowbroTrainerWaterGunText:
 	ntag "TRAINER:"
-	text "OK! SLOWBRO!"
+	text "Okay! SLOWBRO!"
 	line "Use WATER GUN!"
 
 	para "No! That's wrong!"

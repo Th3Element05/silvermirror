@@ -398,7 +398,7 @@ _BTWinM25Text:
 	done
 
 _BTGreetingF1Text:
-	text "OK, I'm not"
+	text "Okay, I'm not"
 	line "fooling around!"
 	done
 
@@ -608,7 +608,7 @@ _BTWinF14Text:
 	done
 
 _BTGreetingF15Text:
-	text "OK, here goes!"
+	text "Okay, here goes!"
 	line "I have momentum!"
 	done
 

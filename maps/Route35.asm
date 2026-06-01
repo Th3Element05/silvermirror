@@ -99,7 +99,7 @@ OfficerDirkAfterBattleText:
 	cont "own ways."
 
 	para "But don't overdo"
-	line "it, OK?"
+	line "it, okay?"
 	done
 
 OfficerDirkPrettyToughText:

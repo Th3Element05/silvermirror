@@ -16,7 +16,7 @@ TimAndSueNumberAcceptedText:
 	done
 
 TimAndSueNumberDeclinedText:
-	text "Uh, OK."
+	text "Uh, Okay."
 	line "That's too bad…"
 	done
 

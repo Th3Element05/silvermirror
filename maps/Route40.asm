@@ -153,7 +153,8 @@ SwimmermDarylSeenText:
 
 SwimmermDarylBeatenText:
 	ntag "DARYL:"
-	text "OK! Uncle! I give!"
+	text "Okay! Uncle!"
+	line "I give!"
 	done
 
 SwimmermDarylAfterBattleText:

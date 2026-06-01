@@ -91,7 +91,8 @@ BikeShopClerkBikeVoucherText:
 
 	para "A BIKE VOUCHER!"
 
-	para "OK! Here you go!"
+	para "Okay!"
+	line "Here you go!"
 	done
 
 BikeShopGotBicycleText:

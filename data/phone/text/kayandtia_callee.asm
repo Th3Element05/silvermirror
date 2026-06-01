@@ -38,5 +38,5 @@ KayAndTiaReminderText:
 	text ","
 
 	para "so don't forget,"
-	line "OK?"
+	line "okay?"
 	done

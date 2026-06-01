@@ -555,7 +555,7 @@ Route36NationalParkGateOfficer1AskToUseFirstMonText:
 	cont "first #MON in"
 	roll "your party."
 
-	para "Is that OK with"
+	para "Is that okay with"
 	line "you?"
 	done
 
@@ -582,9 +582,13 @@ Route36NationalParkGateOfficer1ChooseMonAndComeBackText:
 
 Route36NationalParkGateOfficer1TakePartInFutureText:
 	ntag "OFFICER:"
-	text "OK. We hope you'll"
-	line "take part in the"
-	cont "future."
+;	text "OK. We hope you'll"
+;	line "take part in the"
+;	cont "future."
+;	done
+	text "Okay. We hope you"
+	line "will participate"
+	cont "in the future."
 	done
 
 Route36NationalParkGateOfficer1FirstMonCantBattleText:
@@ -643,7 +647,7 @@ Route36NationalParkGateOfficer1WantToFinishText:
 
 Route36NationalParkGateOfficer1WaitHereForAnnouncementText:
 	ntag "OFFICER:"
-	text "OK. Please wait"
+	text "Okay. Please wait"
 	line "here for the"
 	cont "announcement of"
 	roll "the winners."
@@ -651,9 +655,9 @@ Route36NationalParkGateOfficer1WaitHereForAnnouncementText:
 
 Route36NationalParkGateOfficer1OkGoFinishText:
 	ntag "OFFICER:"
-	text "OK. Please go back"
-	line "outside and finish"
-	cont "up."
+	text "Okay. Please go"
+	line "back into the park"
+	cont "and finish up."
 	done
 
 Route36NationalParkGateOfficer1ContestIsOverText:

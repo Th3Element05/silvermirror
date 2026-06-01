@@ -186,7 +186,7 @@ LassWhitneyCriesText:
 	text "Oh, no. You made"
 	line "WHITNEY cry."
 
-	para "It's OK. She'll"
+	para "It's okay. She'll"
 	line "stop soon. She"
 	cont "always cries when"
 	roll "she loses."

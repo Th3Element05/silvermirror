@@ -62,7 +62,7 @@ GavinBattleRematchText:
 	done
 
 GavinHangUpText:
-	text "OK, I'll talk to"
+	text "Okay, I'll talk to"
 	line "you soon!"
 	done
 

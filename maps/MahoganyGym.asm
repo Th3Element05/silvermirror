@@ -165,8 +165,8 @@ BoarderShaunSeenText:
 
 BoarderShaunBeatenText:
 	ntag "SHAUN:"
-	text "OK. I'll tell you"
-	line "PRYCE's secret."
+	text "Alright. I'll tell"
+	line "you PRYCE's secret."
 	done
 
 BoarderShaunAfterBattleText:

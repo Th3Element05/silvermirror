@@ -74,7 +74,7 @@ YoungsterJimmyBeatenText:
 YoungsterJimmyAfterBattleText:
 	ntag "YOUNGSTER:"
 	text "Let me be your"
-	line "friend, OK?"
+	line "friend, okay?"
 
 	para "Then we can trade"
 	line "#MON!"

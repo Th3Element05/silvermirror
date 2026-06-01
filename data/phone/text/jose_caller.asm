@@ -51,7 +51,7 @@ JoseBattleRematchText:
 	line "where I'm at."
 
 	para "Keep an eye out"
-	line "for me, OK?"
+	line "for me, okay?"
 	done
 
 JoseHangUpText:

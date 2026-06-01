@@ -276,7 +276,7 @@ _OakTimeIsItText::
 ;	done
 
 ;_IsThisOKText:: ; unreferenced
-;	text "Is this OK?"
+;	text "Is this okay?"
 ;	done
 
 ;_EnterTheIDNoText:: ; unreferenced
@@ -991,7 +991,7 @@ _PnP_PickyText::
 
 _PnP_SortOfOKText::
 	text_start
-	line "is sort of OK."
+	line "is sort of okay."
 	done
 
 _PnP_SoSoText::
@@ -1465,7 +1465,7 @@ _JustSawSomeRareMonText::
 
 	para "I'll call you if I"
 	line "see another rare"
-	cont "#MON, OK?"
+	cont "#MON, okay?"
 	prompt
 
 _SavingRecordText::
@@ -1495,7 +1495,7 @@ _NoCoinCaseText::
 	prompt
 
 _NPCTradeCableText::
-	text "OK, connect the"
+	text "Okay, connect the"
 	line "Game Link Cable."
 	prompt
 
@@ -1694,7 +1694,7 @@ _MomLeavingText1::
 	para "So, you're leaving"
 	line "on an adventure…"
 
-	para "OK!"
+	para "Okay!"
 	line "I'll help too."
 
 	para "But what can I do"
@@ -1712,8 +1712,10 @@ _MomLeavingText1::
 
 _MomLeavingText2::
 	ntag "MOM:"
-	text "OK, I'll take care"
-	line "of your money."
+;	text "OK, I'll take care"
+;	line "of your money."
+	text "Okay, I'll help you"
+	line "save your money."
 
 	para "<……><……><……>"
 	prompt
@@ -1795,8 +1797,10 @@ _MomNotEnoughRoomInBankText::
 
 _MomStartSavingMoneyText::
 	ntag "MOM:"
-	text "OK, I'll save your"
-	line "money. Trust me!"
+;	text "OK, I'll save your"
+;	line "money. Trust me!"
+	text "Okay, I'll help you"
+	line "save your money."
 
 	para "<PLAYER>, stick"
 	line "with it!"
@@ -1913,7 +1917,7 @@ _LastHealthyMonText::
 
 _IllRaiseYourMonText::
 	ntag "DAYCARE:"
-	text "OK. I'll raise"
+	text "Okay. I'll raise"
 	line "your @"
 	text_ram wStringBuffer1
 	text "."
@@ -2079,5 +2083,5 @@ _HoldStillText::
 _PrestoAllDoneText::
 	ntag "PHOTOGRAPHER:"
 	text "Presto! All done."
-	line "Come again, OK?"
+	line "Come again, okay?"
 	done

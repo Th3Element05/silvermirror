@@ -102,7 +102,7 @@ Route24NuggetRocketJoinText:
 	para "I'm telling you"
 	line "to join!"
 
-	para "OK, you need"
+	para "Okay, you need"
 	line "convincing!"
 
 	para "I'll make you an"
@@ -139,7 +139,7 @@ TrainerCamperIvan:
 
 CamperIvanSeenText:
 	ntag "CAMPER:"
-	text "OK! I'm No. 5!"
+	text "Okay! I'm No. 5!"
 	line "I'll stomp you!"
 	done
 

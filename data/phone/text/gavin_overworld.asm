@@ -37,7 +37,7 @@ GavinNumberAcceptedText:
 
 GavinNumberDeclinedText:
 	ntag "GAVIN:"
-	text "OK… I understand…"
+	text "I understand…"
 	line "But if you change"
 	cont "your mind, give me"
 	roll "a shout anytime."

@@ -1,6 +1,6 @@
 _NoPhotoText::
 	text "Oh, no picture?"
-	line "Come again, OK?"
+	line "Come again, okay?"
 	done
 
 _EggPhotoText::
@@ -63,7 +63,7 @@ _NameRaterFinishedText::
 	done
 
 _NameRaterComeAgainText::
-	text "OK, then. Come"
+	text "Okay, then. Come"
 	line "again sometime."
 	done
 
@@ -157,7 +157,7 @@ _ThatsEnoughComeBackText::
 	text_end
 
 _OKComeBackText::
-	text " OK!"
+	text " okay!"
 	line "Come back!@"
 	text_end
 

@@ -359,8 +359,8 @@ CinnabarLabFossilScientistNoRoomForFossilPokemonText:
 	line "room for it!"
 
 	para "I hold onto it so"
-	line "you go make room,"
-	cont "OK?"
+	line "you go make room!"
+;	cont "okay?"
 	done
 
 CinnabarLabReceivedPokemonText:

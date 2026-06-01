@@ -214,7 +214,7 @@ RadioTower4FFanatic_RiseAgainText:
 
 RadioTower4FOfficer_AfterBattleText:
 	ntag "OFFICER:"
-	text "Yeah, ok, pal."
+	text "Yeah, okay, pal."
 	line "We'll see…"
 
 	para "For now, you're"

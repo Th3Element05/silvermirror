@@ -273,7 +273,7 @@ BillsHouseWontHelpBillText:
 
 	para "What do you say,"
 	line "chief? Please?"
-	cont "OK? All right!"
+	cont "Okay? All right!"
 	done
 
 BillsHouseRunCellSeparatorText:

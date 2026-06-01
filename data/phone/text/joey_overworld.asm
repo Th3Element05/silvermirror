@@ -21,7 +21,7 @@ JoeyAskNumber2Text:
 	line "lose against you!"
 
 	para "We have to battle"
-	line "again, OK?"
+	line "again, okay?"
 	done
 
 JoeyNumberAcceptedText:

@@ -44,7 +44,7 @@ VanceBattleRematchText:
 	done
 
 VanceHangUpText:
-	text "OK, bye for now!"
+	text "Okay, bye for now!"
 	done
 
 VanceLookingForwardText:

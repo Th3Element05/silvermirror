@@ -15,7 +15,7 @@ JoseAskNumber1Text:
 	line "number? I'll call."
 
 	para "Don't expect a"
-	line "whole lot, OK?"
+	line "whole lot, okay?"
 	done
 
 JoseAskNumber2Text:

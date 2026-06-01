@@ -86,7 +86,7 @@ GoldenrodMagnetTrainStationOfficer_AreYouComingAboardText:
 ;	text "May I see your"
 ;	line "RAIL PASS, please?"
 ;
-;	para "OK. Right this"
+;	para "Okay. Right this"
 ;	line "way, please."
 ;	done
 
