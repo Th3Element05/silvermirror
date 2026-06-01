@@ -2666,11 +2666,15 @@ PlayerAttackDamage:
 	call ThickClubBoost
 
 .done
+	push hl
+	call DittoMetalPowder
+	pop hl
+
 	call TruncateHL_BC
 
 	ld a, [wBattleMonLevel]
 	ld e, a
-	call DittoMetalPowder
+;	call DittoMetalPowder
 
 	ld a, 1
 	and a
@@ -2926,11 +2930,15 @@ EnemyAttackDamage:
 	call ThickClubBoost
 
 .done
+	push hl
+	call DittoMetalPowder
+	pop hl
+
 	call TruncateHL_BC
 
 	ld a, [wEnemyMonLevel]
 	ld e, a
-	call DittoMetalPowder
+;	call DittoMetalPowder
 
 	ld a, 1
 	and a
@@ -2985,7 +2993,6 @@ HitSelfInConfusion:
 
 BattleCommand_DamageCalc:
 ; Return a damage value for move power d, player level e, enemy defense c and player attack b.
-; BUG: Confusion damage is affected by type-boosting items and Explosion/Self-Destruct doubling (see docs/bugs_and_glitches.md)
 
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
@@ -5067,8 +5074,11 @@ BattleCommand_ForceSwitch:
 	jp z, .fail
 	cp BATTLETYPE_CELEBI
 	jp z, .fail
-	cp BATTLETYPE_SUICUNE
+;	cp BATTLETYPE_SUICUNE
+;	jp z, .fail
+	cp BATTLETYPE_NO_CATCH
 	jp z, .fail
+
 	ldh a, [hBattleTurn]
 	and a
 	jp nz, .force_player_switch
