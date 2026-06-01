@@ -1863,7 +1863,7 @@ HitmonleeEvosAttacks:
 HitmonchanEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, BULK_UP ;revenge, x
-	db 1, FURY_STRIKES ;comet_punch, removed ;evolution move?
+	db 1, FURY_STRIKES ;comet_punch, removed
 	db 6, AGILITY
 	db 11, PURSUIT
 	db 16, MACH_PUNCH ;16, EVOLUTION_MOVE
