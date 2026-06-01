@@ -200,8 +200,11 @@ OW_SkipEvolutions:
 	inc hl
 	and a
 	ret z
-	cp EVOLVE_STAT
+;	cp EVOLVE_STAT
+;	jr z, .extra_skip
+	cp EVOLVE_HOLD
 	jr nz, .no_extra_skip
+;.extra_skip
 	inc hl
 .no_extra_skip
 	inc hl
