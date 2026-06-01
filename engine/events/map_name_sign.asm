@@ -83,6 +83,10 @@ InitMapNameSign::
 ;	ret z
 ;	cp LANDMARK_POWER_PLANT
 ;	ret z
+	cp LANDMARK_ROCKET_HIDEOUT
+	ret z
+	cp LANDMARK_NINJA_DEN
+	ret z
 	ld a, 1
 	and a
 	ret

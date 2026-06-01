@@ -72,7 +72,7 @@ GenerateAltSwarmShiny:
 	jp z, .gligar
 	cp LANDMARK_ROUTE_46
 	jp z, .phanpy
-	cp LANDMARK_DARK_CAVE
+	cp LANDMARK_DARK_CAVE_45
 	jp z, .teddiursa
 	cp LANDMARK_RUINS_OF_ALPH
 	jp z, .smeargle
