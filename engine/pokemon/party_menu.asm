@@ -354,10 +354,9 @@ PlacePartyMonTMHMCompatibility:
 	ret
 
 .string_able
-	db "ABLE@"
-
+	db "LEARN@" ;"ABLE@"
 .string_not_able
-	db "NOT ABLE@"
+	db "Unable@" ;"NOT ABLE@"
 
 PlacePartyMonEvoStoneCompatibility:
 	ld a, [wPartyCount]
@@ -415,8 +414,11 @@ PlacePartyMonEvoStoneCompatibility:
 	ld a, [hli]
 	and a
 	jr z, .nope
-	cp EVOLVE_STAT
+;	cp EVOLVE_STAT
+;	jr z, .four_bytes
+	cp EVOLVE_HOLD
 	jr nz, .not_four_bytes
+;.four_bytes
 	inc hl
 .not_four_bytes
 	inc hl
@@ -438,9 +440,9 @@ PlacePartyMonEvoStoneCompatibility:
 	ret
 
 .string_able
-	db "ABLE@"
+	db "EVOLVE@" ;"ABLE@"
 .string_not_able
-	db "NOT ABLE@"
+	db " @" ;"NOT ABLE@"
 
 PlacePartyMonGender:
 	ld a, [wPartyCount]
