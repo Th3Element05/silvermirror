@@ -67,7 +67,7 @@ NewGame:
 	call OakSpeech
 	call InitializeWorld
 
-	ld a, LANDMARK_NEW_BARK_TOWN
+	ld a, LANDMARK_PALLET_TOWN ;LANDMARK_NEW_BARK_TOWN
 	ld [wPrevLandmark], a
 
 	ld a, SPAWN_HOME
@@ -358,7 +358,7 @@ Continue:
 	jp FinishContinueFunction
 
 SpawnAfterRed:
-	ld a, SPAWN_MT_SILVER
+	ld a, SPAWN_PALLET ;SPAWN_MT_SILVER
 	ld [wDefaultSpawnpoint], a
 
 PostCreditsSpawn:
