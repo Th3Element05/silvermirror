@@ -217,7 +217,41 @@ FightingDojoKarateMasterScript:
 	jumptextfaceplayer KarateMasterOffersPokemonText
 
 .GotPokemon
+	checkevent EVENT_GOT_POKEMON_FROM_DOJO_2
+	iftrue .TrainWithUs
+	checkevent EVENT_BEAT_BLACKBELT_MASTER_REMATCH
+	iftrue .OfferSecondPokemon
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iffalse .StillTraining
+	opentext
+	writetext KarateMasterRematchIntroText
+	yesorno
+	iffalse .DeclinedRematch
+	writetext KarateMasterAcceptedRematchText
+	waitbutton
+	winlosstext KarateMasterWinLossText, 0
+	loadtrainer BLACKBELT_T, MASTER2
+	startbattle
+	reloadmapafterbattle
+.OfferSecondPokemon
+	setscene SCENE_FIGHTINGDOJO_NOOP
+	opentext
+	writetext KarateMasterOffersSecondPokemonText
+	waitbutton
+	closetext
+	end
+
+.TrainWithUs
 	jumptextfaceplayer KarateMasterTrainWithUsText
+
+.StillTraining
+	jumptextfaceplayer KarateMasterTrainingText
+
+.DeclinedRematch
+	writetext KarateMasterDeclinedRematchText
+	waitbutton
+	closetext
+	end
 
 KarateMasterIntroText:
 	ntag "MASTER:"
@@ -292,6 +326,49 @@ KarateMasterExplainTMText:
 	line "it!"
 	done
 
+KarateMasterRematchIntroText:
+	ntag "MASTER:"
+	text "Hwa!"
+	line "So you've become"
+	cont "#MON LEAGUE"
+	roll "CHAMPION?"
+
+	para "You're strong!"
+	line "But I have been"
+	cont "training, too!"
+
+	para "Are you up for a"
+	line "battle, CHAMPION?"
+	done
+
+KarateMasterOffersSecondPokemonText:
+	ntag "MASTER:"
+	text "I have lost again!"
+
+	para "I must strive to"
+	line "train harder!"
+	cont "To get stronger!"
+
+	para "Please, take this"
+	line "other FIGHTING"
+	cont "#MON."
+
+	para "I know it will"
+	line "grow strong under"
+	cont "your care!"
+	done
+
+KarateMasterTrainingText:
+	ntag "MASTER:"
+	text "We will continue"
+	line "to train!"
+
+	para "I would like you"
+	line "to challenge me"
+	cont "again! When I've"
+	roll "become stronger!"
+	done
+
 KarateMasterTrainWithUsText:
 	ntag "MASTER:"
 	text "Ho!"
@@ -299,6 +376,21 @@ KarateMasterTrainWithUsText:
 	para "Stay and train at"
 	line "Karate with us!"
 	done
+
+KarateMasterAcceptedRematchText:
+	ntag "MASTER:"
+	text "Hwa!"
+	done
+
+KarateMasterDeclinedRematchText:
+	ntag "MASTER:"
+	text "Train and become"
+	line "stronger!"
+
+	para "Challenge me when"
+	line "you are ready!"
+	done
+
 
 FightingDojoKarateMasterOffersPokemonScript:
 	applymovement FIGHTINGDOJO_KARATE_MASTER, FightingDojoApproachPlayerMovement
@@ -335,7 +427,8 @@ KarateMasterOffersPokemonText:
 
 FightingDojoHitmonlee:
 	checkevent EVENT_GOT_POKEMON_FROM_DOJO
-	iftrue AlreadyGotFightingMonScript
+;	iftrue FightingDojoDontGetGreedyScript
+	iftrue .AlreadyGotHitmonchan
 	refreshscreen
 	pokepic HITMONLEE
 	cry HITMONLEE
@@ -357,6 +450,21 @@ FightingDojoHitmonlee:
 	closetext
 	end
 
+.AlreadyGotHitmonchan
+	checkevent EVENT_BEAT_BLACKBELT_MASTER_REMATCH
+	iffalse FightingDojoDontGetGreedyScript
+	disappear FIGHTINGDOJO_HITMONLEE_POKE_BALL
+	setevent EVENT_GOT_POKEMON_FROM_DOJO_2
+	getmonname STRING_BUFFER_3, HITMONLEE
+	opentext
+	writetext FightingDojoReceivedPokemonText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	promptbutton
+	givepoke HITMONLEE, 50
+	closetext
+	end
+
 FightingDojoTakeHitmonleeText:
 	text "You want the"
 	line "hard kicking"
@@ -365,7 +473,8 @@ FightingDojoTakeHitmonleeText:
 
 FightingDojoHitmonchan:
 	checkevent EVENT_GOT_POKEMON_FROM_DOJO
-	iftrue AlreadyGotFightingMonScript
+;	iftrue FightingDojoDontGetGreedyScript
+	iftrue .AlreadyGotHitmonlee
 	refreshscreen
 	pokepic HITMONCHAN
 	cry HITMONCHAN
@@ -387,6 +496,21 @@ FightingDojoHitmonchan:
 	closetext
 	end
 
+.AlreadyGotHitmonlee
+	checkevent EVENT_BEAT_BLACKBELT_MASTER_REMATCH
+	iffalse FightingDojoDontGetGreedyScript
+	disappear FIGHTINGDOJO_HITMONCHAN_POKE_BALL
+	setevent EVENT_GOT_POKEMON_FROM_DOJO_2
+	getmonname STRING_BUFFER_3, HITMONCHAN
+	opentext
+	writetext FightingDojoReceivedPokemonText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	promptbutton
+	givepoke HITMONCHAN, 50
+	closetext
+	end
+
 FightingDojoTakeHitmonchanText:
 	text "You want the"
 	line "piston punching"
@@ -400,7 +524,7 @@ FightingDojoReceivedPokemonText:
 	text "!"
 	done
 
-AlreadyGotFightingMonScript:
+FightingDojoDontGetGreedyScript:
 	jumptext FightingDojoDontGetGreedyText
 
 FightingDojoDontGetGreedyText:
@@ -408,27 +532,7 @@ FightingDojoDontGetGreedyText:
 	line "greedy…"
 	done
 
-;FightingDojoAfterFirstChallengeScript:
-;	checkevent EVENT_GOT_POKEMON_FROM_DOJO
-;	iffalse .Skip
-;	turnobject FIGHTINGDOJO_KARATE_MASTER, LEFT
-;	opentext
-;	writetext KarateMasterTrainingText
-;	waitbutton
-;	closetext
-;	turnobject FIGHTINGDOJO_KARATE_MASTER, DOWN
-;	applymovement PLAYER, FightingDojoStepDownMovement
-;	end
-;
-;KarateMasterTrainingText:
-;	text "We will continue"
-;	line "to train!"
-;
-;	para "We would like you"
-;	line "to challenge us"
-;	cont "again! When we"
-;	roll "are stronger!"
-;	done
+
 
 TrainerBlackbeltTakeshi:
 	trainer BLACKBELT_T, TAKESHI, EVENT_BEAT_BLACKBELT_TAKESHI, BlackbeltTakeshiSeenText, BlackbeltTakeshiBeatenText, 0, .Script
@@ -602,7 +706,7 @@ FightingDojo_MapEvents:
 	def_object_events
 	object_event  4,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FightingDojoHitmonlee, EVENT_GOT_HITMONLEE_FROM_DOJO
 	object_event  5,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FightingDojoHitmonchan, EVENT_GOT_HITMONCHAN_FROM_DOJO
-	object_event  5,  3, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, FightingDojoKarateMasterScript, -1
+	object_event  5,  3, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_SCRIPT, 0, FightingDojoKarateMasterScript, -1
 	object_event  1,  5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 0, TrainerBlackbeltTakeshi, -1
 	object_event  3,  5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 0, TrainerBlackbeltBruce, -1
 	object_event  6,  5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerBlackbeltJackie, -1

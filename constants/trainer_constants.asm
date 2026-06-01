@@ -738,6 +738,8 @@ DEF KRIS EQU __trainer_class__
 	const LEE
 	const LAO
 	const KIYO
+; rematch
+	const MASTER2
 
 	trainerclass PSYCHIC_T ; 38
 ; kanto
