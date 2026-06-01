@@ -264,6 +264,7 @@ KantoRematchNotifyScript:
 	waitsfx
 	waitbutton
 	closetext
+	setmapscene FIGHTING_DOJO, SCENE_FIGHTINGDOJO_CHALLENGE_1
 	setscene SCENE_PALLETTOWN_NOOP
 	end
 
