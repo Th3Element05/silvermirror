@@ -51,7 +51,7 @@ MtMoonB2FSuperNerdStopText:
 
 MtMoonB2FSuperNerdBeatenText:
 	ntag "SAM:"
-	text "OK! Fine!"
+	text "Alright! Fine!"
 	line "I'll share!"
 	done
 
@@ -80,8 +80,7 @@ MtMoonDomeFossilScript:
 	yesorno
 	iffalse MtMoonB2FDontGetFossilScript
 	verbosegiveitem DOME_FOSSIL
-	iffalse MtMoonB2FDontGetFossilScript
-;	closetext
+	closetext
 	disappear MOUNTMOONB2F_DOME_FOSSIL
 	setevent EVENT_MT_MOON_OBTAINED_FOSSIL
 	setevent EVENT_DOME_FOSSIL_AT_MT_MORTAR
@@ -94,8 +93,7 @@ MtMoonHelixFossilScript:
 	yesorno
 	iffalse MtMoonB2FDontGetFossilScript
 	verbosegiveitem HELIX_FOSSIL
-	iffalse MtMoonB2FDontGetFossilScript
-;	closetext
+	closetext
 	disappear MOUNTMOONB2F_HELIX_FOSSIL
 	setevent EVENT_MT_MOON_OBTAINED_FOSSIL
 	setevent EVENT_HELIX_FOSSIL_AT_MT_MORTAR
