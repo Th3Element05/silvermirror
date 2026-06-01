@@ -10,6 +10,7 @@ Landmarks:
 	landmark  -8, -16, SpecialMapName
 ; johto
 	landmark  44,  68, OlivineCityName
+	landmark  48,  68, LighthouseName
 	landmark  32,  64, BattleTowerName
 	landmark  36,  84, Route40Name
 	landmark  36, 100, WhirlIslandsName
@@ -18,6 +19,7 @@ Landmarks:
 	landmark  44,  56, Route39Name
 	landmark  60,  52, Route38Name
 	landmark  76,  52, EcruteakCityName
+	landmark  72,  48, BurnedTowerName
 	landmark  76,  44, TinTowerName
 	landmark  76,  60, Route37Name
 	landmark  76,  68, Route36Name
@@ -28,6 +30,7 @@ Landmarks:
 	landmark  60, 108, Route34Name
 	landmark  60, 124, IlexForestName
 	landmark  76, 124, AzaleaTownName
+	landmark  80, 124, SlowpokeWellName
 	landmark  88, 124, Route33Name
 	landmark  92, 116, UnionCaveName
 	landmark  92,  92, Route32Name
@@ -46,6 +49,7 @@ Landmarks:
 	landmark 124,  88, Route46Name
 	landmark 132,  76, Route45Name
 	landmark 132,  60, BlackthornCityName
+	landmark 128,  60, DragonsDenName
 	landmark 132,  52, IcePathName
 	landmark 120,  52, Route44Name
 	landmark 108,  52, MahoganyTownName
@@ -56,47 +60,46 @@ Landmarks:
 	landmark 148,  68, SilverCaveName
 ; PokegearMap_JohtoMap: (johto region town map landmark limits)
 	landmark 140, 116, FastShipName
-	landmark  48,  68, LighthouseName
-	landmark  72,  48, BurnedTowerName
-	landmark  80, 124, SlowpokeWellName
-	landmark 120,  68, DarkCaveName
-	landmark 128,  60, DragonsDenName
+;	landmark 120,  68, DarkCaveName
 	landmark 108,  56, NinjaDenName
 
 	assert_table_length KANTO_LANDMARK
 	landmark  44, 100, PalletTownName
-	landmark  44,  88, Route1Name
-	landmark  44,  76, ViridianCityName
-	landmark  44,  64, Route2Name
-	landmark  40,  60, ViridianForestName
-	landmark  52,  60, DiglettsCaveName ;route 2
-	landmark  44,  52, PewterCityName
-	landmark  60,  52, Route3Name
-	landmark  76,  44, MtMoonName
-	landmark  88,  44, Route4Name
-	landmark 100,  44, CeruleanCityName
-	landmark 100,  32, Route24Name
-	landmark 112,  28, Route25Name
-	landmark 100,  56, Route5Name
-	landmark 100,  80, Route6Name
+	landmark  44,  92, Route1Name
+	landmark  44,  84, ViridianCityName
+	landmark  44,  72, Route2Name
+	landmark  40,  68, ViridianForestName
+	landmark  48,  68, DiglettsCaveName ;route 2
+	landmark  44,  60, PewterCityName
+	landmark  60,  60, Route3Name
+	landmark  76,  52, MtMoonName
+	landmark  88,  52, Route4Name
+	landmark 100,  52, CeruleanCityName
+	landmark  92,  44, CeruleanCaveName
+	landmark 100,  40, Route24Name
+	landmark 112,  36, Route25Name
+	landmark 116,  36, BillsHouseName
+	landmark 100,  64, Route5Name
+	landmark 100,  84, Route6Name
 	landmark 100,  92, VermilionCityName
 	landmark 108,  88, DiglettsCaveName ;route 11
-	landmark 116,  44, Route9Name
-	landmark 132,  48, Route10Name
-	landmark 132,  60, RockTunnelName
-	landmark 132,  68, LavenderTownName
-	landmark 138,  68, PokemonTowerName
-	landmark 116,  68, Route8Name
-	landmark  88,  68, Route7Name
-	landmark  76,  68, CeladonCityName
-	landmark 100,  68, SaffronCityName
+	landmark 116,  52, Route9Name
+	landmark 132,  56, Route10Name
+	landmark 132,  68, RockTunnelName
+	landmark 132,  76, LavenderTownName
+	landmark 136,  76, PokemonTowerName
+	landmark 116,  76, Route8Name
+	landmark  88,  76, Route7Name
+	landmark  76,  76, CeladonCityName
+	landmark 100,  76, SaffronCityName
+	landmark 100,  76, SilphCoName
 	landmark 116,  92, Route11Name
-	landmark 132,  96, Route12Name
+	landmark 132,  92, Route12Name
 	landmark 124, 108, Route13Name
 	landmark 116, 112, Route14Name
 	landmark 100, 116, Route15Name
-	landmark  64,  68, Route16Name
-	landmark  60,  92, Route17Name
+	landmark  64,  76, Route16Name
+	landmark  60,  96, Route17Name
 	landmark  72, 116, Route18Name
 	landmark  84, 116, FuchsiaCityName
 	landmark  84, 108, SafariZoneName
@@ -104,26 +107,23 @@ Landmarks:
 	landmark  68, 132, SeafoamIslandsName
 	landmark  56, 132, Route20Name
 	landmark  44, 132, CinnabarIslandName
-	landmark  44, 116, Route21Name
-	landmark  32,  76, Route22Name
-	landmark  28,  60, Route23Name
-	landmark  28,  44, VictoryRoadName
-	landmark  28,  36, IndigoPlateauName
-	landmark 140,  52, PowerPlantName
-	landmark  28,  88, Route26Name
-	landmark  24, 100, Route27Name
-	landmark  12, 100, TohjoFallsName
-; hof \engine\pokegear\pokegear.asm > TownMap_GetKantoLandmarkLimits:
-	landmark  16,  76, Route28Name
-; end
-	landmark 100, 100, SSAnneName
-	landmark 116,  28, BillsHouseName
-	landmark 104,  64, UndergroundName
-	landmark  76,  72, RocketHideoutName
-	landmark 100,  68, SilphCoName
 	landmark  40, 128, PokemonMansionName
-	landmark  92,  36, CeruleanCaveName
-	landmark 116,  22, BillsBackYardName
+	landmark  44, 116, Route21Name
+	landmark  32,  84, Route22Name
+	landmark  28,  68, Route23Name
+	landmark  28,  52, VictoryRoadName
+	landmark  28,  44, IndigoPlateauName
+	landmark 140,  60, PowerPlantName
+	landmark  28,  96, Route26Name
+	landmark  24, 108, Route27Name
+	landmark  12, 108, TohjoFallsName
+; hof \engine\pokegear\pokegear.asm > TownMap_GetKantoLandmarkLimits:
+	landmark  16,  84, Route28Name
+; end
+	landmark 100,  96, SSAnneName
+	landmark 108,  68, UndergroundName
+	landmark  76,  80, RocketHideoutName
+	landmark 116,  28, BillsBackYardName
 
 	assert_table_length NUM_LANDMARKS
 
@@ -232,7 +232,7 @@ FastShipName:        db "S.S.AQUA@" ;"FAST SHIP¯S.S.AQUA@"
 ViridianForestName:  db "VIRIDIAN¯FOREST@"
 DiglettsCaveName:    db "DIGLETT's¯CAVE@"
 TohjoFallsName:      db "TOHJO FALLS@"
-UndergroundName:     db "UNDERGROUND@"
+UndergroundName:     db "UNDERGROUND¯PATH@"
 BattleTowerName:     db "BATTLE¯TOWER@"
 ;CliffEdgeGateName:   db "CLIFF EDGE¯GATE@"
 ;CliffCaveName:       db "CLIFF CAVE@"
