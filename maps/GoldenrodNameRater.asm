@@ -37,4 +37,4 @@ GoldenrodNameRater_MapEvents:
 	bg_event  7,  1, BGEVENT_READ, GoldenrodNameRaterRadio
 
 	def_object_events
-	object_event  2,  4, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 2, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodNameRater, -1
+	object_event  2,  4, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GoldenrodNameRater, -1
