@@ -454,7 +454,7 @@ Trade_LoadMonIconGFX:
 GetSpeciesIcon:
 ; Load species icon into VRAM at tile a
 	push de
-	ld a, MON_DVS
+	ld a, 0 ;MON_DVS ; is this just to check shininess?
 	call GetPartyParamLocation
 	call SetMenuMonIconColor
 	ld a, [wTempIconSpecies]
@@ -480,6 +480,8 @@ GetSwarmIcon:
 
 FlyFunction_GetMonIcon: ; hardcoded to pidgeot
 	push de
+;	ld a, [wTempIconSpecies]
+;	call ReadMonMenuIcon
 	ld a, ICON_PIDGEOT
 	ld [wCurIcon], a
 	pop de
