@@ -51,7 +51,7 @@ HallOfFameInductionScript:
 	special HealMachineAnim
 	setevent EVENT_INDIGO_POKECENTER_GYM_GUIDE
 	clearevent EVENT_KANTO_LEADER_REMATCHES
-	clearevent EVENT_OAK_IN_MT_SILVER
+;	clearevent EVENT_OAK_IN_MT_SILVER
 	special RespawnOneOffs
 	special HealParty
 	checkevent EVENT_GOT_SS_TICKET_FROM_OAK
@@ -64,10 +64,6 @@ HallOfFameInductionScript:
 	end
 
 HallOfFame_WalkUpWithOak:
-;	step UP
-;	step UP
-;	step UP
-;	step UP
 	step UP
 	step UP
 	step UP
