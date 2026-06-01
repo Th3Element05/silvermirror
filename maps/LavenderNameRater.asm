@@ -33,4 +33,4 @@ LavenderNameRater_MapEvents:
 	bg_event 1, 1, BGEVENT_READ, LavenderNameRaterDifficultBookshelf
 
 	def_object_events
-	object_event  2,  3, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, LavenderNameRater, -1
+	object_event  2,  3, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LavenderNameRater, -1
