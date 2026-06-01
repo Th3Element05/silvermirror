@@ -148,11 +148,12 @@ PokecenterNurseScript:
 .no
 
 	farwritetext NurseReturnPokemonText
-	pause 20
+;	pause 20
+	sjump .bow
 
 .done
 	farwritetext NurseGoodbyeText
-
+.bow
 	turnobject LAST_TALKED, UP
 	pause 10
 	turnobject LAST_TALKED, DOWN
