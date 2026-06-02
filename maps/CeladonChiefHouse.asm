@@ -23,7 +23,8 @@ CeladonChiefHouseChiefText:
 	done
 
 CeladonCheifHouseRocketScript:
-	jumptextfaceplayer CeladonCheifHouseRocketText
+	turnobject LAST_TALKED, RIGHT
+	jumptext CeladonCheifHouseRocketText
 CeladonCheifHouseRocketText:
 	ntag "ROCKET:"
 	text "CHIEF!"
