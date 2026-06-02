@@ -540,7 +540,7 @@ SaffronGateClosedText: ;silvermirror+
 	cont "in SAFFRON CITY."
 
 	para "I'm on guard duty."
-	line "You can't go"
+	line "I can't let you"
 	cont "through."
 
 	para "Gee, I'm thirsty,"

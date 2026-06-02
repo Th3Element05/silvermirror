@@ -17,38 +17,38 @@ Route8GateGuardScript:
 	jumptext Route8GateThanksText
 
 Route8GateStopScript1:
-	showemote EMOTE_SHOCK, PLAYER, 20
 	opentext
 	writetext Route8GateStopText
 	waitbutton
 	closetext
+	showemote EMOTE_SHOCK, PLAYER, 20
 	applymovement PLAYER, Route8GateStopMovement1
 	sjump Route8GateClosedScript
 
 Route8GateStopScript2:
-	showemote EMOTE_SHOCK, PLAYER, 20
 	opentext
 	writetext Route8GateStopText
 	waitbutton
 	closetext
+	showemote EMOTE_SHOCK, PLAYER, 20
 	applymovement PLAYER, Route8GateStopMovement2
 	sjump Route8GateClosedScript
 
 Route8GateStopScript3:
-	showemote EMOTE_SHOCK, PLAYER, 20
 	opentext
 	writetext Route8GateStopText
 	waitbutton
 	closetext
+	showemote EMOTE_SHOCK, PLAYER, 20
 	applymovement PLAYER, Route8GateStopMovement3
 	sjump Route8GateClosedScript
 
 Route8GateStopScript4:
-	showemote EMOTE_SHOCK, PLAYER, 20
 	opentext
 	writetext Route8GateStopText
 	waitbutton
 	closetext
+	showemote EMOTE_SHOCK, PLAYER, 20
 	applymovement PLAYER, Route8GateStopMovement4
 	; fallthrough
 

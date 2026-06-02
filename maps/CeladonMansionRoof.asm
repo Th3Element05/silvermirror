@@ -20,7 +20,7 @@ CeladonMansionRoofDrawGraffitiText:
 	done
 
 CeladonMansionRoofGraffitiText:
-	text "Haha! Its the"
+	text "Haha! It's the"
 	line "funny face that"
 	cont "you drew!"
 	done
