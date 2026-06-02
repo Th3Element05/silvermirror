@@ -211,11 +211,11 @@ _TMHMNotCompatibleText::
 ;	text "."
 ;	prompt
 
-	text_ram wStringBuffer2
+	text_ram wStringBuffer1 ;wStringBuffer2
 	text " "
 	line "cannot learn"
 	cont "@"
-	text_ram wStringBuffer1
+	text_ram wStringBuffer2 ;wStringBuffer1
 	text "."
 	prompt
 
