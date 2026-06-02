@@ -272,7 +272,7 @@ PlacePartyMonStatus:
 	ld c, a
 	ld b, 0
 ;	hlcoord 5, 2 ; where the Status Condition Text was being printed
-	hlcoord 11, 2 ;6, 2 ; aligning the Status Tiles with the left-hand side of the Party Menu ;3, 2
+	hlcoord 11, 2 ; place the Status Tiles on top of HP: label
 .loop
 	push bc
 	push hl
@@ -314,7 +314,7 @@ PlacePartyMonTMHMCompatibility:
 	ret z
 	ld c, a
 	ld b, 0
-	hlcoord 12, 2
+	hlcoord 13, 2 ;12, 2
 .loop
 	push bc
 	push hl
@@ -354,7 +354,7 @@ PlacePartyMonTMHMCompatibility:
 	ret
 
 .string_able
-	db "LEARN@" ;"ABLE@"
+	db "LEARN!@" ;"ABLE@"
 .string_not_able
 	db "Unable@" ;"NOT ABLE@"
 
