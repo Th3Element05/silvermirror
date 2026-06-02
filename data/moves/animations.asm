@@ -4876,15 +4876,16 @@ BattleAnim_Spark:
 ;	anim_ret
 
 BattleAnim_FuryCutter:
+	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_HP_BUG
 	anim_1gfx BATTLE_ANIM_GFX_CUT
 .loop
 	anim_sound 0, 1, SFX_CUT
 	anim_if_param_and %00000001, .obj1
-	anim_obj BATTLE_ANIM_OBJ_CUT_LONG_DOWN_LEFT, 152, 40, $0
+	anim_obj BATTLE_ANIM_OBJ_CUT_LONG_DOWN_LEFT, 152, 38, $0
 	anim_jump .okay
 
 .obj1
-	anim_obj BATTLE_ANIM_OBJ_CUT_LONG_DOWN_RIGHT, 112, 40, $0
+	anim_obj BATTLE_ANIM_OBJ_CUT_LONG_DOWN_RIGHT, 112, 38, $0
 .okay
 	anim_wait 16
 	anim_jumpuntil .loop
