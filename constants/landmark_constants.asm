@@ -3,7 +3,7 @@
 	const LANDMARK_SPECIAL           ; 00
 ; Johto landmarks
 	const LANDMARK_OLIVINE_CITY      ; 01
-	const LANDMARK_LIGHTHOUSE        ; 02
+;	const LANDMARK_LIGHTHOUSE        ; 02
 	const LANDMARK_BATTLE_TOWER      ; 03
 	const LANDMARK_ROUTE_40          ; 04
 	const LANDMARK_WHIRL_ISLANDS     ; 05
@@ -115,7 +115,7 @@ DEF KANTO_LANDMARK EQU const_value
 	const LANDMARK_ROUTE_28          ; 69
 ; end
 	const LANDMARK_SS_ANNE           ; 6a
-	const LANDMARK_ROUTE_10_NORTH    ; 6b
+;	const LANDMARK_ROUTE_10_NORTH    ; 6b
 ;	const LANDMARK_ROCKET_HIDEOUT    ; 6c
 
 DEF NUM_LANDMARKS EQU const_value

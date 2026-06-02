@@ -1441,10 +1441,10 @@ KantoGrassWildMons:
 	db 50, SCYTHER    ; 10% chance
 	db 50, PINSIR     ; 10% chance
 	db 50, HERACROSS  ; 10% chance
-	db 50, SCYTHER    ;  5% chance
-	db 50, PINSIR     ;  5% chance
-	db 50, HERACROSS  ;  4% chance
-	db 50, HERACROSS  ;  1% chance
+	db  7, CHIKORITA  ;  5% chance
+	db  7, CYNDAQUIL  ;  5% chance
+	db  7, TOTODILE   ;  4% chance
+	db  7, TOTODILE   ;  1% chance
 	; nite
 	db 50, CHANSEY    ; 20% chance
 	db 50, CHANSEY    ; 20% chance
@@ -1452,10 +1452,10 @@ KantoGrassWildMons:
 	db 50, SCYTHER    ; 10% chance
 	db 50, PINSIR     ; 10% chance
 	db 50, HERACROSS  ; 10% chance
-	db 50, SCYTHER    ;  5% chance
-	db 50, PINSIR     ;  5% chance
-	db 50, HERACROSS  ;  4% chance
-	db 50, HERACROSS  ;  1% chance
+	db  7, CHIKORITA  ;  5% chance
+	db  7, CYNDAQUIL  ;  5% chance
+	db  7, TOTODILE   ;  4% chance
+	db  7, TOTODILE   ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_10_NORTH ;GEN1

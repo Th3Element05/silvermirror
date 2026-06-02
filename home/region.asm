@@ -16,9 +16,9 @@ IsInJohto::
 	cp LANDMARK_SPECIAL
 	jr nz, .CheckRegion
 
-	ld a, [wBackupMapGroup]
+	ld a, [wPrevMapGroup] ;[wBackupMapGroup]
 	ld b, a
-	ld a, [wBackupMapNumber]
+	ld a, [wPrevMapNumber] ;[wBackupMapNumber]
 	ld c, a
 	call GetWorldMapLocation
 

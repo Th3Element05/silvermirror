@@ -62,9 +62,9 @@ RegionCheck:
 	jr nz, .checkagain
 
 ; In a special map, get the backup map group / map id
-	ld a, [wBackupMapGroup]
+	ld a, [wPrevMapGroup] ;[wBackupMapGroup]
 	ld b, a
-	ld a, [wBackupMapNumber]
+	ld a, [wPrevMapNumber] ;[wBackupMapNumber]
 	ld c, a
 	call GetWorldMapLocation
 

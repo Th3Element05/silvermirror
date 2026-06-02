@@ -122,7 +122,7 @@ Landmarks:
 	landmark  16,  84, Route28Name
 ; end
 	landmark 108, 100, SSAnneName
-	landmark 140,  44, Route10North
+;	landmark 140,  44, Route10North
 ;	landmark  92,  72, RocketHideoutName
 
 	assert_table_length NUM_LANDMARKS
@@ -242,7 +242,7 @@ SpecialMapName:      db "SPECIAL@"
 ;RocketHideoutName:   db "ROCKET¯HIDEOUT@"
 ;NinjaDenName:        db "NINJA¯DEN@"
 BillsHouseName:      db "BILL's HOUSE@"
-Route10North:        db "ROUTE 10¯NORTH@"
+;Route10North:        db "ROUTE 10¯NORTH@"
 ;BillsBackYardName:   db "BEHIND¯BILL's HOUSE@" ;"BILL's¯BACK YARD@"
 ;                       "SILVER CAVE/" one line on map screen
 ;                       "CHERRYGROVE CITY" one line on fly screen

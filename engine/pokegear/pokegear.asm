@@ -227,9 +227,9 @@ TownMap_GetCurrentLandmark:
 	call GetWorldMapLocation
 	cp LANDMARK_SPECIAL
 	ret nz
-	ld a, [wBackupMapGroup]
+	ld a, [wPrevMapGroup] ;[wBackupMapGroup]
 	ld b, a
-	ld a, [wBackupMapNumber]
+	ld a, [wPrevMapNumber] ;[wBackupMapNumber]
 	ld c, a
 	call GetWorldMapLocation
 	ret
@@ -244,9 +244,9 @@ TownMap_InitCursorAndPlayerIconPositions:
 	jr z, .FastShip
 	cp LANDMARK_SPECIAL
 	jr nz, .LoadLandmark
-	ld a, [wBackupMapGroup]
+	ld a, [wPrevMapGroup] ;[wBackupMapGroup]
 	ld b, a
-	ld a, [wBackupMapNumber]
+	ld a, [wPrevMapNumber] ;[wBackupMapNumber]
 	ld c, a
 	call GetWorldMapLocation
 .LoadLandmark:
@@ -2853,9 +2853,9 @@ FlyMap:
 ; the backup map information is used.
 	cp LANDMARK_SPECIAL
 	jr nz, .CheckRegion
-	ld a, [wBackupMapGroup]
+	ld a, [wPrevMapGroup] ;[wBackupMapGroup]
 	ld b, a
-	ld a, [wBackupMapNumber]
+	ld a, [wPrevMapNumber] ;[wBackupMapNumber]
 	ld c, a
 	call GetWorldMapLocation
 .CheckRegion:
