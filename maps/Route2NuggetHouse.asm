@@ -14,10 +14,10 @@ TradeNPCMateo:
 	closetext
 	end
 
-Route2TradeHouseScientistScript:
-	jumptextfaceplayer Route2TradeHouseScientistText
-Route2TradeHouseScientistText:
-	ntag "SCIENTIST:"
+Route2TradeHousePokefanScript:
+	jumptextfaceplayer Route2TradeHousePokefanText
+Route2TradeHousePokefanText:
+	ntag "MAN:"
 	text "The PPS is great!"
 
 	para "You can still use"
@@ -40,4 +40,4 @@ Route2NuggetHouse_MapEvents:
 
 	def_object_events
 	object_event  4,  1, SPRITE_GAMEBOY_KID, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TradeNPCMateo, -1
-	object_event  2,  4, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route2TradeHouseScientistScript, -1
+	object_event  2,  4, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route2TradeHousePokefanScript, -1

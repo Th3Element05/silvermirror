@@ -176,7 +176,7 @@ TrainerPokemaniacShane:
 PokemaniacShaneSeenText:
 	ntag "#MANIAC:"
 	text "Do you know about"
-	line "costume players?"
+	line "cosplayers?"
 	done
 
 PokemaniacShaneBeatenText:
@@ -186,9 +186,9 @@ PokemaniacShaneBeatenText:
 
 PokemaniacShaneAfterBattleText:
 	ntag "#MANIAC:"
-	text "Costume players"
-	line "dress up as"
-	cont "#MON for fun."
+	text "Cosplayers dress"
+	line "up as #MON for"
+	cont "fun."
 	done
 
 TrainerPicnickerHope:
