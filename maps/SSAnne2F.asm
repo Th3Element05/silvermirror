@@ -168,6 +168,9 @@ SSAnne2FRubCaptainsBack:
 ;	promptbutton
 ;	verbosegiveitem TM_CUT ;removed
 	setevent EVENT_GOT_HM01_CUT
+	setevent EVENT_BULBASAUR_POKEBALL_IN_OAKS_LAB
+	setevent EVENT_CHARMANDER_POKEBALL_IN_OAKS_LAB
+	setevent EVENT_SQUIRTLE_POKEBALL_IN_OAKS_LAB
 	writetext SSAnne2FCaptainSetSailText
 	waitbutton
 	closetext
