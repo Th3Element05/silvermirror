@@ -9,6 +9,7 @@ _EggPhotoText::
 	done
 
 _NameRaterHelloText::
+	ntag "GENTLEMAN:"
 	text "Hello, hello! I'm"
 	line "the NAME RATER."
 
@@ -20,12 +21,14 @@ _NameRaterHelloText::
 	done
 
 _NameRaterWhichMonText::
+	ntag "GENTLEMAN:"
 	text "Which #MON's"
 	line "nickname should I"
 	cont "rate for you?"
 	prompt
 
 _NameRaterBetterNameText::
+	ntag "GENTLEMAN:"
 	text "Hm… @"
 	text_ram wStringBuffer1
 	text "…"
@@ -46,28 +49,32 @@ _NameRaterBetterNameText::
 	done
 
 _NameRaterWhatNameText::
+	ntag "GENTLEMAN:"
 	text "All right. What"
 	line "name should we"
 	cont "give it, then?"
 	prompt
 
 _NameRaterFinishedText::
+;	ntag "GENTLEMAN:"
 ;	text "That's a better"
 ;	line "name than before!"
 ;
 ;	para "Well done!"
 ;	done
-
+	ntag "GENTLEMAN:"
 	text "That's a good"
 	line "name! Well done!"
 	done
 
 _NameRaterComeAgainText::
+	ntag "GENTLEMAN:"
 	text "Okay, then. Come"
 	line "again sometime."
 	done
 
 _NameRaterPerfectNameText::
+	ntag "GENTLEMAN:"
 	text "Hm… @"
 	text_ram wStringBuffer1
 	text "?"
@@ -82,11 +89,13 @@ _NameRaterPerfectNameText::
 	done
 
 _NameRaterEggText::
+	ntag "GENTLEMAN:"
 	text "Huh…? That's just"
 	line "an EGG."
 	done
 
 _NameRaterSameNameText::
+	ntag "GENTLEMAN:"
 	text "It might look the"
 	line "same as before,"
 	cont "but this new name"
@@ -96,6 +105,7 @@ _NameRaterSameNameText::
 	done
 
 _NameRaterNamedText::
+	ntag "GENTLEMAN:"
 	text "All right. This"
 	line "#MON is now"
 	cont "named @"
