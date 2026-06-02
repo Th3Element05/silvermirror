@@ -27,6 +27,17 @@ or, forget MAGMORTAR, remove DELIBIRD, and just add the other two?
 
 
 
+CHECK
+can ROCKET_HIDEOUT landmark just be CELADON_CITY?
+same with NINJA_DEN and MAHOGANY_TOWN?
+
+
+johto starters behind tohjo falls waterfall
+
+
+check data/wild/treemon_maps.asm for RockMonMaps:
+
+ss anne port ship "water" color at night is too green, doesn't match water
 
 "received berries" text
 
@@ -39,6 +50,7 @@ clefairy dex entry
 smaller zubat front sprite?
 belly drum anim too long
 charmeleon animation too long?
+charmeleon backsprite, move tail down?
 swap headbutt animation shake/hit
 
 CardFlip_ShiftDigitsUpOnePixel in engine/games/card_flip.asm:
