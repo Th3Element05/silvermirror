@@ -727,21 +727,21 @@ LoadPinkPage:
 ;	db   "STATUS/"
 ;	next "TYPE/@"
 .Status_Text:
-	db   "STATUS/@"
+	db   "STATUS:@"
 .Type_Text:
-	db   "TYPE/@"
+	db   "TYPE:@"
 
 .OK_str:
 	db "OK @"
 
 .ExpPointStr:
-	db "EXP POINTS@"
+	db "EXP.POINTS@"
 
 .LevelUpStr:
-	db "LEVEL UP@"
+	db "LEVEL UP:@"
 
 .ToStr:
-	db "TO@"
+	db "TO:@"
 
 .PkrsStr:
 	db "#RUS@"
