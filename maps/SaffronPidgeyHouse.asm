@@ -46,14 +46,15 @@ SaffronPidgeyHousePidgeyText:
 SaffronPidgeyHousePaper:
 	jumptext SaffronPidgeyHousePaperText
 SaffronPidgeyHousePaperText:
-	text "It's an ad for"
-	line "PP UP…"
+	text "It's an ad."
+;	line "PP UP…"
 
 	para "Get more PP"
-	line "…!@"
-	text_promptbutton
-	text "for your #MON's"
+	line "…!"
+
+	para "for your #MON's"
 	line "moves!"
+	cont "Use PP UP!"
 	done
 
 ;	text "I was given a PP"
