@@ -16,11 +16,15 @@ MrFujisHousePokefluteScene:
 	promptbutton
 	verbosegiveitem POKE_FLUTE
 	writetext MrFujisHouseMrFujiExplainFluteText
+	promptbutton
+	writetext MrFujisHouseMrFujiGivesExpnCardText
+	promptbutton
 ; Fuji gives EXPN CARD
 	getstring STRING_BUFFER_4, .RadioCardText
 	scall .ReceiveItem
 	setflag ENGINE_RADIO_CARD
 	setflag ENGINE_EXPN_CARD
+	waitbutton
 	writetext MrFujisHouseMrFujiExplainRadioText
 ;
 	waitbutton
@@ -64,14 +68,10 @@ MrFujisHouseMrFujiExplainFluteText:
 
 	para "It works on any"
 	line "sleeping #MON."
-;	done
 
-;	para "And, even if you"
-;	line "can't play the"
-;	cont "FLUTE, you can"
-;	roll "use this."
-;
-	para "And, even if you"
+MrFujisHouseMrFujiGivesExpnCardText:
+	ntag "MR.FUJI:"
+	text "And, even if you"
 	line "don't know how to"
 	cont "play the FLUTE,"
 	roll "you can use this."
@@ -81,7 +81,7 @@ MrFujisHouseMrFujiExplainRadioText:
 	ntag "MR.FUJI:"
 	text "That will enable"
 	line "the radio on your"
-	cont "# GEAR to pick"
+	cont "#GEAR to pick"
 	roll "up more channels!"
 
 	para "Now you can listen"
