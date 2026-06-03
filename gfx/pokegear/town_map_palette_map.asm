@@ -22,7 +22,7 @@ ENDM
 	townmappals EARTH,    EARTH,    EARTH,    MOUNTAIN, MOUNTAIN, MOUNTAIN, BORDER,   BORDER
 	townmappals EARTH,    EARTH,    BORDER,   EARTH,    EARTH,    POI,      POI,      POI
 	townmappals EARTH,    EARTH,    EARTH,    MOUNTAIN, MOUNTAIN, MOUNTAIN, BORDER,   BORDER
-	townmappals BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER
+	townmappals POI_WTR,  BORDER,   BORDER,   POI_WTR,  BORDER,   BORDER,   BORDER,   BORDER
 ; gfx/pokegear/pokegear.png
 	townmappals BORDER,   BORDER,   BORDER,   BORDER,   POI,      POI,      POI,      BORDER
 	townmappals BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER

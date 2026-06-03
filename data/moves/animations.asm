@@ -1152,8 +1152,6 @@ BattleAnim_MudBomb:
 
 BattleAnim_Headbutt:
 	anim_1gfx BATTLE_ANIM_GFX_HIT
-	anim_bgeffect BATTLE_BG_EFFECT_SHAKE_SCREEN_X, $14, $2, $0
-	anim_wait 32
 	anim_call BattleAnim_TargetObj_1Row
 	anim_bgeffect BATTLE_BG_EFFECT_TACKLE, $0, BG_EFFECT_USER, $0
 	anim_wait 4
@@ -1161,6 +1159,8 @@ BattleAnim_Headbutt:
 	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 136, 56, $0
 	anim_wait 8
 	anim_call BattleAnim_ShowMon_0
+	anim_bgeffect BATTLE_BG_EFFECT_SHAKE_SCREEN_X, $14, $2, $0
+	anim_wait 32
 	anim_ret
 
 BattleAnim_HornAttack:
@@ -5289,8 +5289,9 @@ BattleAnim_ZenHeadbutt:
 	anim_sound 0, 0, SFX_FORESIGHT
 	anim_obj BATTLE_ANIM_OBJ_FORESIGHT, 64, 88, $0
 	anim_wait 24
+	anim_call BattleAnim_ShowMon_0
 	anim_jump BattleAnim_Headbutt
-	anim_ret
+;	anim_ret
 
 
 
@@ -5490,6 +5491,7 @@ BattleAnim_CrossChop:
 	anim_ret
 
 BattleAnim_Twister:
+	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_HP_DRAGON
 	anim_2gfx BATTLE_ANIM_GFX_WIND, BATTLE_ANIM_GFX_HIT
 .loop1
 	anim_sound 0, 0, SFX_RAZOR_WIND
