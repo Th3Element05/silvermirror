@@ -314,7 +314,7 @@ PlacePartyMonTMHMCompatibility:
 	ret z
 	ld c, a
 	ld b, 0
-	hlcoord 12, 2 ;12, 2
+	hlcoord 12, 2
 .loop
 	push bc
 	push hl
@@ -356,7 +356,7 @@ PlacePartyMonTMHMCompatibility:
 .string_able
 	db "LEARN!@" ;"ABLE@"
 .string_not_able
-	db " @" ;"Unable@" ;"NOT ABLE@"
+	db "---@" ;"Unable@" ;"NOT ABLE@"
 
 PlacePartyMonEvoStoneCompatibility:
 	ld a, [wPartyCount]
@@ -442,7 +442,7 @@ PlacePartyMonEvoStoneCompatibility:
 .string_able
 	db "EVOLVE!@" ;"ABLE@"
 .string_not_able
-	db " @" ;"Unable@" ;"NOT ABLE@"
+	db "---@" ;"Unable@" ;"NOT ABLE@"
 
 PlacePartyMonGender:
 	ld a, [wPartyCount]
@@ -450,7 +450,7 @@ PlacePartyMonGender:
 	ret z
 	ld c, a
 	ld b, 0
-	hlcoord 12, 2
+	hlcoord 11, 2 ;12, 2
 .loop
 	push bc
 	push hl
