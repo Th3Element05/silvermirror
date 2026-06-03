@@ -30,7 +30,7 @@ RocketGruntM11AfterBattleText:
 	cont "basement floors."
 
 	para "Can you reach our"
-	roll "BOSS?"
+	line "BOSS?"
 	done
 
 RocketHideoutB2FNugget:

@@ -269,10 +269,17 @@ CeladonCityTrainerTips2Text:
 CeladonCityDeptStoreSign:
 	jumptext CeladonCityDeptStoreSignText
 CeladonCityDeptStoreSignText:
-	text "Find What You"
-	line "Need at CELADON"
-	cont "DEPT.STORE!"
+	text "CELADON CITY"
+	line "DEPT.STORE"
+	
+	para "We Have What You"
+	line "Need!"
 	done
+
+;	text "Find What You"
+;	line "Need at CELADON"
+;	cont "DEPT.STORE!"
+;	done
 
 CeladonCityPokecenterSign:
 	jumpstd PokecenterSignScript

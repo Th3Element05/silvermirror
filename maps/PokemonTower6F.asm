@@ -53,6 +53,7 @@ PokemonTower6FGhostScript:
 	reloadmapafterbattle
 	setevent EVENT_FOUGHT_POKEMON_GHOST
 	setscene SCENE_POKEMONTOWER6F_NOOP
+	opentext
 	writetext PokemonTower6FGhostDepartedText
 	cry MAROWAK
 	waitbutton
@@ -74,7 +75,7 @@ PokemonTower6FGetOutText:
 PokemonTower6FGetOutGetOutText:
 	ntag "???:"
 	text "Get out! Get out! Get out! get out!"
-	line "out! Get out! Get out! Get out! Get out!"
+	line "Out! Get out! Get out! Get out! Get out!"
 	done
 
 PokemonTower6FSilphScopeText:
