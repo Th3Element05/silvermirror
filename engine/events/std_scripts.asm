@@ -2751,8 +2751,8 @@ SaffronGateClosedScript::
 	sjump .SaffronGateOpenScript
 
 .SaffronGateOpenScript:
-	playsound SFX_POTION
 	farwritetext SaffronGateOpenText
+	playsound SFX_POTION
 	waitbutton
 	closetext
 	setevent EVENT_GAVE_SAFFRON_GUARD_DRINK
