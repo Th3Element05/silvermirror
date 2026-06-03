@@ -6166,6 +6166,8 @@ MoveInfoBox:
 	ldh a, [hQuotient + 3]
 	cp 100
 	jr z, .print_num
+	cp 80
+	jr z, .print_num
 	inc a
 	cp 1
 	jr z, .no_acc
