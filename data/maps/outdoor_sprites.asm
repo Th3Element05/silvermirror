@@ -208,6 +208,7 @@ CeladonGroupSprites:
 	db SPRITE_POLIWRATH
 	db SPRITE_BIG_SNORLAX
 	db SPRITE_POKE_BALL
+	db SPRITE_BERRY
 	db 0 ; end
 	;updated
 
