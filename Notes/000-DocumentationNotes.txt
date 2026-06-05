@@ -1,38 +1,23 @@
 Documentation Notes
 Silver Mirror
 
+string buffers
 
-get screenshot after youngster ian battle "registered number"
+ABCDEF screenshot after youngster ian battle "registered number"
+ABCDEF screenshot celadon hotel pc
 
 
 
-cerulean city spawnpoint
-cerulean dummy bugcatcher on nugget bridge
 
-removeable? = TANGROWTH?, DELIBIRD?, TYROGUE(removed), HITMONTOP?
-restore PORYGON2? 
-or remove 2 more to add ELECTIVIRE, RHYPERIOR, MAGMORTAR?
-or, forget MAGMORTAR, remove DELIBIRD, and just add the other two?
-27	suicune
-112	porygon2
-130	entei
-132	raikou
-361	electivire	<
-523	delibird	x?
-556	hitmontop
-680	tangrowth
-701	rhyperior	<
-793	magmortar	<
-971	stantler	x?
 
+safari rest house bookshelves
+
+test mr.fuji house give pokeflute script... repeat at end?
 
 
 CHECK
 can ROCKET_HIDEOUT landmark just be CELADON_CITY?
 same with NINJA_DEN and MAHOGANY_TOWN?
-
-
-johto starters behind tohjo falls waterfall
 
 
 check data/wild/treemon_maps.asm for RockMonMaps:
@@ -46,40 +31,80 @@ test secret stairs after clearing ninja den
 can anything you catch before misty learn TM_WATER_GUN?
 at least anything that doesn't already know it via level up?
 
+rhyhorn dex entry (newline > it)
 clefairy dex entry
-smaller zubat front sprite?
-belly drum anim too long
-charmeleon animation too long?
-charmeleon backsprite, move tail down?
-swap headbutt animation shake/hit
-
-CardFlip_ShiftDigitsUpOnePixel in engine/games/card_flip.asm:
-This function and the single call to it in the same file can be safely removed if you don't like the look, if it interferes with altered font graphics, etc.
-
-
+gastly dex entry (opponent > foe(s))
+machop dex entry (newline > It)
+mareep color?
+hyper potion heal amount
 
 
 
 
 BROCK
-pidgey11,kakuna7,nidoranf9,charmander12,pikachu6
+WIN	pidgey11,kakuna7,nidoranf9,charmander12,pikachu6
 
 RVIAL CERULEAN
-geodude15,nidoranf14,pidgey14,charmander18,zubat8
+WIN	geodude15,nidoranf14,pidgey14,charmander18,zubat8
 
 MISTY
 LOST	zubat14,nidorina17,geodude18,charmander20,pidgey17,bellsprout16
-zubat14,nidorina17,geodude18,charmander20,pidgey17,bellsprout20
+WIN	zubat14,nidorina17,geodude18,charmander20,pidgey17,bellsprout20
 
 LT.SURGE
 nidorano18,farfetchd12,weepinbell24,geodude21,zubat20,charmeleon25
 switches 1,7,1,1,12,2,10,7!
 
+RIVAL POKEMON TOWER
+???
+
+ERIKA
+>	geodude25,farfetchd26,golbat26,mrmime26,weepinbell26,charmeleon30
+
+RIVAL SILPH
+LOST	geodude25,farfetchd28,golbat28,mrmime27,weepinbell27,charmeleon30
 
 
 
 
 
+
+continuity of STAIRS
+; Tilesets indexes (see data/tilesets.asm)
+	const_def 1
+const TILESET_JOHTO                ; 01
+const TILESET_JOHTO_MODERN         ; 02
+const TILESET_KANTO                ; 03
+const TILESET_BATTLE_TOWER_OUTSIDE ; 04
+const TILESET_HOUSE                ; 05
+const TILESET_POKECENTER           ; 07
+	const TILESET_GATE                 ; 08
+const TILESET_PORT                 ; 09
+const TILESET_LAB                  ; 0a
+const TILESET_FACILITY             ; 0b
+const TILESET_MART                 ; 0c
+const TILESET_MANSION              ; 0d
+const TILESET_GAME_CORNER          ; 0e
+const TILESET_ELITE_FOUR_ROOM      ; 0f
+const TILESET_TRADITIONAL_HOUSE    ; 10
+const TILESET_TRAIN_STATION        ; 11
+const TILESET_CHAMPIONS_ROOM       ; 12
+const TILESET_LIGHTHOUSE           ; 13
+const TILESET_PLAYERS_ROOM         ; 14
+const TILESET_POKECOM_CENTER       ; 15
+const TILESET_BATTLE_TOWER_INSIDE  ; 16
+const TILESET_TOWER                ; 17
+const TILESET_CAVE                 ; 18
+const TILESET_PARK                 ; 19
+const TILESET_RUINS_OF_ALPH        ; 1a
+const TILESET_RADIO_TOWER          ; 1b
+const TILESET_UNDERGROUND          ; 1c
+const TILESET_ICE_PATH             ; 1d
+const TILESET_DARK_CAVE            ; 1e
+const TILESET_FOREST               ; 1f
+const TILESET_ROCKET_FACILITY      ; 21
+const TILESET_CEMETARY             ; 22
+DEF NUM_TILESETS EQU const_value - 1
 
 
 
@@ -129,3 +154,21 @@ SetAllDecorationFlags: ; unreferenced
 .done
 	ret
 
+
+
+
+removeable? = TANGROWTH?, DELIBIRD?, TYROGUE(removed), HITMONTOP?
+restore PORYGON2? 
+or remove 2 more to add ELECTIVIRE, RHYPERIOR, MAGMORTAR?
+or, forget MAGMORTAR, remove DELIBIRD, and just add the other two?
+27	suicune
+112	porygon2
+130	entei
+132	raikou
+361	electivire	<
+523	delibird	x?
+556	hitmontop
+680	tangrowth
+701	rhyperior	<
+793	magmortar	<
+971	stantler	x?
