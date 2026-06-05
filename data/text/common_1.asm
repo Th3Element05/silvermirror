@@ -861,40 +861,35 @@ _BenFernText3B::
 
 _LC_Text1::
 	text_start
-	line "Yeehaw! How y'all"
+	line "Yeehaw!"
 	done
 
 _LC_Text2::
 	text_start
-	line "doin' now?"
+	line "How're ya'll doin'"
 	done
 
 _LC_Text3::
 	text_start
-	line "Whether you're up"
+	line "today?"
 	done
 
 _LC_Text4::
 	text_start
-	line "or way down low,"
+	line "It's time for the"
 	done
 
 _LC_Text5::
 	text_start
-	line "don't you miss the"
+	line "LUCKY NUMBER SHOW!"
 	done
 
 _LC_Text6::
 	text_start
-	line "LUCKY NUMBER SHOW!"
-	done
-
-_LC_Text7::
-	text_start
 	line "Today's Lucky"
 	done
 
-_LC_Text8::
+_LC_Text7::
 	text_start
 	line "Number is @"
 	text_pause
@@ -902,29 +897,39 @@ _LC_Text8::
 	text "!"
 	done
 
-_LC_Text9::
+_LC_Text8::
 	text_start
 	line "I'll repeat that!"
 	done
 
-_LC_Text10::
+_LC_Text9::
 	text_start
 	line "Match it and go to"
 	done
 
-_LC_Text11::
+_LC_Text10::
 	text_start
 	line "the RADIO TOWER!"
 	done
 
-_LC_DragText1::
+_LC_Text11::
 	text_start
-	line "…Repeating myself"
+	line "Or talk to the"
 	done
 
-_LC_DragText2::
+_LC_Text12::
 	text_start
-	line "gets to be a drag…"
+	line "RECEPTIONIST at a"
+	done
+
+_LC_Text13::
+	text_start
+	line "#MON CENTER!"
+	done
+
+_LC_Text14::
+	text_start
+	line " "
 	done
 
 ; Places and People

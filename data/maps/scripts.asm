@@ -79,13 +79,11 @@ INCLUDE "maps/BillsBackYard.asm"
 SECTION "Map Scripts 8", ROMX
 
 INCLUDE "maps/Route5.asm"
-INCLUDE "maps/Route5UndergroundPathEntrance.asm" ;silvermirror+
-INCLUDE "maps/Route5SaffronGate.asm"
 INCLUDE "maps/DayCare.asm"
+INCLUDE "maps/Route5UndergroundPathEntrance.asm" ;silvermirror+
 INCLUDE "maps/UndergroundPath.asm"
-INCLUDE "maps/Route6.asm"
 INCLUDE "maps/Route6UndergroundPathEntrance.asm"
-INCLUDE "maps/Route6SaffronGate.asm"
+INCLUDE "maps/Route6.asm"
 
 
 SECTION "Map Scripts 9", ROMX
@@ -160,13 +158,16 @@ INCLUDE "maps/LavenderNameRater.asm"
 
 SECTION "Map Scripts 13", ROMX
 
+INCLUDE "maps/Route5SaffronGate.asm"
+INCLUDE "maps/Route6SaffronGate.asm"
+INCLUDE "maps/Route7SaffronGate.asm"
+INCLUDE "maps/Route8SaffronGate.asm"
 INCLUDE "maps/Route7.asm"
 INCLUDE "maps/Route7UndergroundPathEntrance.asm"
-INCLUDE "maps/Route7SaffronGate.asm"
 INCLUDE "maps/UndergroundPathEW.asm"
 INCLUDE "maps/Route8.asm"
 INCLUDE "maps/Route8UndergroundPathEntrance.asm"
-INCLUDE "maps/Route8SaffronGate.asm"
+
 
 
 SECTION "Map Scripts 14", ROMX

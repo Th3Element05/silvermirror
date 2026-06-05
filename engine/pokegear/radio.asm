@@ -1134,59 +1134,54 @@ LuckyNumberShow6:
 	jp NextRadioLine
 
 LuckyNumberShow7:
-	ld hl, LC_Text7
-	ld a, LUCKY_NUMBER_SHOW_8
-	jp NextRadioLine
-
-LuckyNumberShow8:
 	ld hl, wStringBuffer1
 	ld de, wLuckyIDNumber
 	lb bc, PRINTNUM_LEADINGZEROS | 2, 5
 	call PrintNum
 	ld a, "@"
 	ld [wStringBuffer1 + 5], a
+	ld hl, LC_Text7
+	ld a, LUCKY_NUMBER_SHOW_8
+	jp NextRadioLine
+
+LuckyNumberShow8:
 	ld hl, LC_Text8
 	ld a, LUCKY_NUMBER_SHOW_9
 	jp NextRadioLine
 
 LuckyNumberShow9:
-	ld hl, LC_Text9
+	ld hl, LC_Text7
 	ld a, LUCKY_NUMBER_SHOW_10
 	jp NextRadioLine
 
 LuckyNumberShow10:
-	ld hl, LC_Text7
+	ld hl, LC_Text9
 	ld a, LUCKY_NUMBER_SHOW_11
 	jp NextRadioLine
 
 LuckyNumberShow11:
-	ld hl, LC_Text8
+	ld hl, LC_Text10
 	ld a, LUCKY_NUMBER_SHOW_12
 	jp NextRadioLine
 
 LuckyNumberShow12:
-	ld hl, LC_Text10
+	ld hl, LC_Text11
 	ld a, LUCKY_NUMBER_SHOW_13
 	jp NextRadioLine
 
 LuckyNumberShow13:
-	ld hl, LC_Text11
-	call Random
-	and a
-	ld a, LUCKY_CHANNEL
-	jr nz, .okay
+	ld hl, LC_Text12
 	ld a, LUCKY_NUMBER_SHOW_14
-.okay
 	jp NextRadioLine
 
 LuckyNumberShow14:
-	ld hl, LC_DragText1
+	ld hl, LC_Text13
 	ld a, LUCKY_NUMBER_SHOW_15
 	jp NextRadioLine
 
 LuckyNumberShow15:
-	ld hl, LC_DragText2
-	ld a, LUCKY_CHANNEL
+	ld hl, LC_Text14
+	ld a, LUCKY_CHANNEL ; loop
 	jp NextRadioLine
 
 LC_Text1:
@@ -1233,12 +1228,16 @@ LC_Text11:
 	text_far _LC_Text11
 	text_end
 
-LC_DragText1:
-	text_far _LC_DragText1
+LC_Text12:
+	text_far _LC_Text12
 	text_end
 
-LC_DragText2:
-	text_far _LC_DragText2
+LC_Text13:
+	text_far _LC_Text13
+	text_end
+
+LC_Text14:
+	text_far _LC_Text14
 	text_end
 
 PeoplePlaces1:

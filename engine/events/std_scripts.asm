@@ -60,6 +60,7 @@ StdScripts::
 	add_stdscript HappinessCheckScript
 	add_stdscript PokecenterReceptionistScript ;silvermirror+
 	add_stdscript SilphCoNoCardKeyScript ;silvermirror+
+	add_stdscript PokecenterLuckyNumberScript ;silvermirror+
 
 PokecenterNurseScript:
 ; EVENT_WELCOMED_TO_POKECOM_CENTER is never set
@@ -240,10 +241,15 @@ TrashCanScript:
 	farjumptext TrashCanText
 
 PCScript:
+	readvar VAR_FACING
+	ifnotequal UP, .CantSeeTheScreen
 	opentext
 	special PokemonCenterPC
 	closetext
 	end
+
+.CantSeeTheScreen:
+	farjumptext CantSeeThePCScreenText
 
 ElevatorButtonScript:
 	playsound SFX_READ_TEXT_2
@@ -2536,6 +2542,9 @@ HappinessCheckScript:
 	end
 
 PokecenterReceptionistScript: ;silvermirror+
+	checkflag ENGINE_RADIO_CARD
+	iftrue PokecenterLuckyNumberScript
+; else, before radio card
 	farjumptext PokecenterReceptionistText
 
 SilphCoNoCardKeyScript:
@@ -2545,222 +2554,6 @@ SilphCoOpenDoorScript::
 	pause 10
 	playsound SFX_TALLY
 	farjumptext SilphCo_BingoText
-
-SaffronGateClosedScript::
-	opentext
-	farwritetext SaffronGateClosedText
-	checkitem FRESH_WATER
-	iftrue .own_water
-	checkitem SODA_POP
-	iftrue .own_soda
-	checkitem LEMONADE
-	iftrue .ask_lemonade
-	waitbutton
-.no_drink
-	closetext
-	end
-
-.own_water
-	checkitem SODA_POP
-	iftrue .own_water_and_soda
-	checkitem LEMONADE
-	iftrue .ask_water_lemonade
-	jump .ask_water
-
-.own_soda
-	checkitem LEMONADE
-	iftrue .ask_soda_lemonade
-	jump .ask_soda
-
-.own_water_and_soda
-	checkitem LEMONADE
-	iftrue .ask_water_soda_lemonade
-	loadmenu .WaterSodaMenuDataHeader
-	verticalmenu
-	closewindow
-	ifequal $1, .IsFreshWater
-	ifequal $2, .IsSodaPop
-	jump .no_drink
-
-.ask_water
-	loadmenu .WaterMenuDataHeader
-	verticalmenu
-	closewindow
-	ifequal $1, .IsFreshWater
-	jump .no_drink
-
-.ask_soda
-	loadmenu .SodaMenuDataHeader
-	verticalmenu
-	closewindow
-	ifequal $1, .IsSodaPop
-	jump .no_drink
-
-.ask_lemonade
-	loadmenu .LemonadeMenuDataHeader
-	verticalmenu
-	closewindow
-	ifequal $1, .IsLemonade
-	jump .no_drink
-
-.ask_water_lemonade
-	loadmenu .WaterLemonadeMenuDataHeader
-	verticalmenu
-	closewindow
-	ifequal $1, .IsFreshWater
-	ifequal $2, .IsLemonade
-	jump .no_drink
-
-.ask_soda_lemonade
-	loadmenu .SodaLemonadeMenuDataHeader
-	verticalmenu
-	closewindow
-	ifequal $1, .IsSodaPop
-	ifequal $2, .IsLemonade
-	jump .no_drink
-
-.ask_water_soda_lemonade
-	loadmenu .WaterSodaLemonadeMenuDataHeader
-	verticalmenu
-	closewindow
-	ifequal $1, .IsFreshWater
-	ifequal $2, .IsSodaPop
-	ifequal $3, .IsLemonade
-	; fallthrough
-
-;.no_drink
-;	farwritetext SaffronGateTooBadText
-;	waitbutton
-;	closetext
-;	end
-
-.WaterMenuDataHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 14, 6
-	dw .WaterMenuData
-	db 1 ; default option
-
-.WaterMenuData:
-	db STATICMENU_CURSOR ; flags
-	db 2 ; items
-	db "FRESH WATER@"
-	db "CANCEL@"
-
-.SodaMenuDataHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 12, 6
-	dw .SodaMenuData
-	db 1 ; default option
-
-.SodaMenuData:
-	db STATICMENU_CURSOR ; flags
-	db 2 ; items
-	db "SODA POP@"
-	db "CANCEL@"
-
-.LemonadeMenuDataHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 12, 6
-	dw .LemonadeMenuData
-	db 1 ; default option
-
-.LemonadeMenuData:
-	db STATICMENU_CURSOR ; flags
-	db 2 ; items
-	db "LEMONADE@"
-	db "CANCEL@"
-
-.WaterSodaMenuDataHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 14, 8
-	dw .WaterSodaMenuData
-	db 1 ; default option
-
-.WaterSodaMenuData:
-	db STATICMENU_CURSOR ; flags
-	db 3 ; items
-	db "FRESH WATER@"
-	db "SODA POP@"
-	db "CANCEL@"
-
-.WaterLemonadeMenuDataHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 14, 8
-	dw .WaterLemonadeMenuData
-	db 1 ; default option
-
-.WaterLemonadeMenuData:
-	db STATICMENU_CURSOR ; flags
-	db 3 ; items
-	db "FRESH WATER@"
-	db "LEMONADE@"
-	db "CANCEL@"
-
-.SodaLemonadeMenuDataHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 12, 8
-	dw .SodaLemonadeMenuData
-	db 1 ; default option
-
-.SodaLemonadeMenuData:
-	db STATICMENU_CURSOR ; flags
-	db 3 ; items
-	db "SODA POP@"
-	db "LEMONADE@"
-	db "CANCEL@"
-
-.WaterSodaLemonadeMenuDataHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 14, 10
-	dw .WaterSodaLemonadeMenuData
-	db 1 ; default option
-
-.WaterSodaLemonadeMenuData:
-	db STATICMENU_CURSOR ; flags
-	db 4 ; items
-	db "FRESH WATER@"
-	db "SODA POP@"
-	db "LEMONADE@"
-	db "CANCEL@"
-
-.IsFreshWater:
-	getitemname STRING_BUFFER_3, FRESH_WATER
-	farwritetext SaffronGateCanHaveDrinkText
-	promptbutton
-	takeitem FRESH_WATER, 1
-	farwritetext SaffronGateGiveDrinkText
-	promptbutton
-	sjump .SaffronGateOpenScript
-
-.IsSodaPop:
-	getitemname STRING_BUFFER_3, SODA_POP
-	farwritetext SaffronGateCanHaveDrinkText
-	promptbutton
-	takeitem SODA_POP, 1
-	farwritetext SaffronGateGiveDrinkText
-	promptbutton
-	sjump .SaffronGateOpenScript
-
-.IsLemonade:
-	getitemname STRING_BUFFER_3, LEMONADE
-	farwritetext SaffronGateCanHaveDrinkText
-	promptbutton
-	takeitem LEMONADE, 1
-	farwritetext SaffronGateGiveDrinkText
-	promptbutton
-	sjump .SaffronGateOpenScript
-
-.SaffronGateOpenScript:
-	farwritetext SaffronGateOpenText
-	playsound SFX_POTION
-	waitbutton
-	closetext
-	setevent EVENT_GAVE_SAFFRON_GUARD_DRINK
-	setmapscene ROUTE_5_SAFFRON_GATE, SCENE_ROUTE5GATE_NOOP
-	setmapscene ROUTE_6_SAFFRON_GATE, SCENE_ROUTE6GATE_NOOP
-	setmapscene ROUTE_7_SAFFRON_GATE, SCENE_ROUTE7GATE_NOOP
-	setmapscene ROUTE_8_SAFFRON_GATE, SCENE_ROUTE8GATE_NOOP
-	end
 
 Std_NoFruitScript::
 	opentext
@@ -2782,4 +2575,131 @@ Movement_SafariZoneOver_WalkAfterWarp:
 	step DOWN
 	step DOWN
 	turn_head UP
+	step_end
+
+PokecenterLuckyNumberScript:
+	faceplayer
+	opentext
+	farwritetext PokecenterLuckyNumber_AskToPlayText
+	yesorno
+	iffalse .ReceptionistStdText
+;	promptbutton
+	checkflag ENGINE_LUCKY_NUMBER_SHOW
+	iftrue .skip
+	special ResetLuckyNumberShowFlag
+.skip
+	special PrintTodaysLuckyNumber
+	checkflag ENGINE_LUCKY_NUMBER_SHOW
+	iftrue .GameOver
+	farwritetext PokecenterLuckyNumber_IdIsText
+	promptbutton
+	closetext
+	applymovement 3, PokecenterLuckyNumberGoToPCMovement
+	waitsfx
+	opentext
+	farwritetext PokecenterLuckyNumber_DotDotDotText
+	playsound SFX_DEX_FANFARE_20_49
+	waitsfx
+	promptbutton
+	special CheckForLuckyNumberWinners
+	closetext
+	applymovement 3, PokecenterLuckyNumberReturnToPlayerMovement
+	opentext
+	ifless 1, .NoPrize ; 0 digits match
+	ifless 2, .FifthPlace ; 1 digit match
+	ifless 3, .FourthPlace ; 2 digits match
+	ifless 4, .ThirdPlace ; 3 digits match
+	ifless 5, .SecondPlace ; 4 digits match
+	sjump .FirstPlace ; all digits match
+
+.GameOver:
+	farwritetext PokecenterLuckyNumber_ComeAgainText
+	waitbutton
+	closetext
+	end
+
+.FirstPlace:
+	farwritetext PokecenterLuckyNumber_PerfectMatchText
+	pause 4
+	playsound SFX_1ST_PLACE
+	waitsfx
+	promptbutton
+	giveitem MASTER_BALL
+	iffalse .BagFull
+	itemnotify
+	setflag ENGINE_LUCKY_NUMBER_SHOW
+	sjump .GameOver
+
+.SecondPlace:
+	farwritetext PokecenterLuckyNumber_VeryGoodMatchText
+	pause 4
+	playsound SFX_2ND_PLACE
+	waitsfx
+	promptbutton
+	giveitem LUCKY_EGG
+	iffalse .BagFull
+	itemnotify
+	setflag ENGINE_LUCKY_NUMBER_SHOW
+	sjump .GameOver
+
+.ThirdPlace:
+	farwritetext PokecenterLuckyNumber_GoodMatchText
+	pause 4
+	playsound SFX_3RD_PLACE
+	waitsfx
+	promptbutton
+	giveitem MAX_ELIXER
+	iffalse .BagFull
+	itemnotify
+	setflag ENGINE_LUCKY_NUMBER_SHOW
+	sjump .GameOver
+
+.FourthPlace:
+	farwritetext PokecenterLuckyNumber_OkayMatchText
+	pause 4
+	playsound SFX_LEVEL_UP
+	waitsfx
+	promptbutton
+	giveitem MAX_ETHER
+	iffalse .BagFull
+	itemnotify
+	setflag ENGINE_LUCKY_NUMBER_SHOW
+	sjump .GameOver
+
+.FifthPlace:
+	farwritetext PokecenterLuckyNumber_WeakMatchText
+	pause 4
+	playsound SFX_LEVEL_UP
+	waitsfx
+	promptbutton
+	giveitem PP_UP
+	iffalse .BagFull
+	itemnotify
+	setflag ENGINE_LUCKY_NUMBER_SHOW
+	sjump .GameOver
+
+.NoPrize:
+	farwritetext PokecenterLuckyNumber_NoneOfYourIDNumbersMatchText
+	waitbutton
+	closetext
+	end
+
+.BagFull:
+	farwritetext PokecenterLuckyNumber_NoRoomForYourPrizeText
+	waitbutton
+	closetext
+	end
+
+.ReceptionistStdText:
+	farwritetext PokecenterReceptionistText
+	waitbutton
+	closetext
+	end
+
+PokecenterLuckyNumberGoToPCMovement:
+	step UP
+	step_end
+
+PokecenterLuckyNumberReturnToPlayerMovement:
+	step DOWN
 	step_end

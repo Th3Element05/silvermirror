@@ -231,6 +231,13 @@ TrashCanText:
 	line "here…"
 	done
 
+CantSeeThePCScreenText:
+	text "It's a PC."
+
+	para "You can't see the"
+	line "screen from here."
+	done
+
 ;; not used
 ;	text "A #MON may be"
 ;	line "able to move this."
@@ -533,53 +540,109 @@ SilphCo_BingoText: ;silvermirror+
 	line "opened the door!"
 	done
 
-SaffronGateClosedText: ;silvermirror+
-	ntag "OFFICER:"
-	text "TEAM ROCKET is"
-	line "causing trouble"
-	cont "in SAFFRON CITY."
-
-	para "I'm on guard duty."
-	line "I can't let you"
-	cont "through."
-
-	para "Gee, I'm thirsty,"
-	line "though!"
+PokecenterLuckyNumber_AskToPlayText::
+	ntag "RECEPTIONIST:"
+	text "Hello, are you"
+	line "here for the LUCKY"
+	cont "NUMBER SHOW?"
 	done
 
-SaffronGateCanHaveDrinkText: ;silvermirror+
-	ntag "OFFICER:"
-	text "<……>"
+PokecenterLuckyNumber_IdIsText::
+	ntag "RECEPTIONIST:"
+	text "Let me check"
+	line "the ID Numbers of"
+	cont "your #MON."
 
-	para "Huh? I can have"
-	line "this drink?"
-
-	para "Gee, thanks!"
+	para "If you get lucky,"
+	line "you win a prize!"
 	done
 
-SaffronGateGiveDrinkText: ;silvermirror+
-	text "<PLAYER> gave"
-	line "@"
+	para "Today's ID number"
+	line "is @"
 	text_ram wStringBuffer3
-	text "!"
+	text "."
+
+	para "Let's see if you"
+	line "have a match."
 	done
 
-SaffronGateOpenText: ;silvermirror+
-	ntag "OFFICER:"
-	text "…"
-	line "Glug glug…"
-	cont "…"
-	cont "Gulp…" ;cont on purpose, not roll
+PokecenterLuckyNumber_DotDotDotText::
+	ntag "RECEPTIONIST:"
+	text "<……>"
+	line "<……>"
+	done
 
-	para "If you want to go"
-	line "to SAFFRON CITY…"
+PokecenterLuckyNumber_ComeAgainText::
+	ntag "RECEPTIONIST:"
+	text "Please come back"
+	line "tomorrow for the"
+	cont "next LUCKY NUMBER."
+	done
 
-	para "You can go on"
-	line "through. I'll"
-	cont "share this with"
-	roll "the other guards!"
-	
-	para "Just be careful"
-	line "with TEAM ROCKET"
-	cont "around!"
+PokecenterLuckyNumber_PerfectMatchText::
+	ntag "RECEPTIONIST:"
+	text "Wow! You have a"
+	line "perfect match of"
+	cont "all five numbers!"
+
+	para "We have a grand"
+	line "prize winner!"
+
+	para "You have won a"
+	line "MASTER BALL!"
+	done
+
+PokecenterLuckyNumber_VeryGoodMatchText::
+	ntag "RECEPTIONIST:"
+	text "Very nice! You've"
+	line "matched the last"
+	cont "four numbers!"
+
+	para "You've won a"
+	line "LUCKY EGG!"
+	done
+
+PokecenterLuckyNumber_GoodMatchText::
+	ntag "RECEPTIONIST:"
+	text "Hey! You've"
+	line "matched the last"
+	cont "three numbers!"
+
+	para "You've won a"
+	line "MAX ELIXER!"
+	done
+
+PokecenterLuckyNumber_OkayMatchText::
+	ntag "RECEPTIONIST:"
+	text "Ooh, you've"
+	line "matched the last"
+	cont "two numbers."
+
+	para "You've won a"
+	line "MAX ETHER!"
+	done
+
+PokecenterLuckyNumber_WeakMatchText::
+	ntag "RECEPTIONIST:"
+	text "Not bad, you've"
+	line "matched the last"
+	cont "number."
+
+	para "You've won a"
+	line "PP UP!"
+	done
+
+PokecenterLuckyNumber_NoneOfYourIDNumbersMatchText::
+	ntag "RECEPTIONIST:"
+	text "Nope, none of your"
+	line "ID numbers match."
+	done
+
+PokecenterLuckyNumber_NoRoomForYourPrizeText::
+	ntag "RECEPTIONIST:"
+	text "You've got no room"
+	line "for your prize."
+
+	para "Make room and come"
+	line "back right away."
 	done

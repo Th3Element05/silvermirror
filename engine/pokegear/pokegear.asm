@@ -2088,8 +2088,8 @@ RadioChannels:
 	jp LoadStation_PokemonMusic
 
 .LuckyChannel:
-	call .InJohto
-	jr nc, .NoSignal
+;	call .InJohto
+;	jr nc, .NoSignal
 	jp LoadStation_LuckyChannel
 
 .BuenasPassword:
