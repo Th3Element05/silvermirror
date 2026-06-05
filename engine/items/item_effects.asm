@@ -757,6 +757,15 @@ BallMultiplierFunctionTable:
 	db -1 ; end
 
 SafariBallMultiplier:
+; multiply catch rate by 4
+	sla b
+	jr c, .max
+	sla b
+	ret nc
+.max
+	ld b, $ff
+	ret
+
 UltraBallMultiplier:
 ; multiply catch rate by 2
 	sla b
