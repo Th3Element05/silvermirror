@@ -291,7 +291,7 @@ SafariZoneEntranceOfficer_Text4:
 
 	para "Find the SECRET"
 	line "HOUSE and you win"
-	cont "a free HM03!"
+	cont "a free TM03 SURF!"
 	done
 
 SafariZoneEntranceMainOfficer_Text:
