@@ -1463,10 +1463,10 @@ KantoGrassWildMons:
 	; day
 	db 16, PIDGEY     ; 20% chance
 	db 12, BELLSPROUT ; 20% chance
-	db 12, BELLSPROUT ; 15% chance
+	db 10, EEVEE      ; 15% chance
 	db 18, PIDGEOTTO  ; 10% chance
 	db 12, ABRA       ; 10% chance
-	db 10, EEVEE      ; 10% chance
+	db 12, BELLSPROUT ; 10% chance
 	db  7, BULBASAUR  ;  5% chance
 	db  7, CHARMANDER ;  5% chance
 	db  7, SQUIRTLE   ;  4% chance
@@ -1474,10 +1474,10 @@ KantoGrassWildMons:
 	; nite
 	db 12, BELLSPROUT ; 20% chance
 	db 14, VENONAT    ; 20% chance
-	db 12, ODDISH     ; 15% chance
+	db 10, EEVEE      ; 15% chance
 	db 12, ODDISH     ; 10% chance
 	db 12, ABRA       ; 10% chance
-	db 10, EEVEE      ; 10% chance
+	db 12, ODDISH     ; 10% chance
 	db  7, BULBASAUR  ;  5% chance
 	db  7, CHARMANDER ;  5% chance
 	db  7, SQUIRTLE   ;  4% chance

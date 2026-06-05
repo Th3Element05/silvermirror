@@ -14,7 +14,7 @@ AlfredPhoneCalleeScript: ; You call Alfred
 	farjump AlfredPokemonBlurb
 
 .WaitingForBattle:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_LIGHTHOUSE
+	getlandmarkname STRING_BUFFER_5, LANDMARK_OLIVINE_CITY
 	farjump AlfredReminderScript
 
 AlfredPhoneCallerScript: ; Calls you
@@ -31,6 +31,6 @@ AlfredPhoneCallerScript: ; Calls you
 	farjump AlfredNoctowlTrade
 
 AlfredWantsBattle:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_LIGHTHOUSE
+	getlandmarkname STRING_BUFFER_5, LANDMARK_OLIVINE_CITY
 	setflag ENGINE_ALFRED_READY_FOR_REMATCH
 	farjump PhoneScript_WantsToBattle_Male

@@ -43,13 +43,15 @@ GenerateAltSwarmShiny:
 	jp z, .zubat
 	cp LANDMARK_ROCK_TUNNEL
 	jp z, .cubone
+	cp LANDMARK_POKEMON_TOWER
+	jp z, .misdreavus
 	cp LANDMARK_SEAFOAM_ISLANDS
 	jp z, .krabby
 	cp LANDMARK_POKEMON_MANSION
-	jp z, .magmar
+	jp z, .ditto
 	cp LANDMARK_VICTORY_ROAD
 	jp z, .larvitar
-	cp LANDMARK_ROUTE_10_NORTH
+	cp LANDMARK_SPECIAL ;LANDMARK_ROUTE_10_NORTH
 	jp z, .eevee
 ; johto
 	cp LANDMARK_ROUTE_29
@@ -70,8 +72,6 @@ GenerateAltSwarmShiny:
 	jp z, .lickitung
 	cp LANDMARK_ROUTE_45
 	jp z, .gligar
-	cp LANDMARK_ROUTE_46
-	jp z, .phanpy
 	cp LANDMARK_DARK_CAVE_45
 	jp z, .teddiursa
 	cp LANDMARK_RUINS_OF_ALPH
@@ -167,13 +167,17 @@ GenerateAltSwarmShiny:
 	ld a, [wCurPartySpecies]
 	cp CUBONE
 	jp .next
+.misdreavus
+	ld a, [wCurPartySpecies]
+	cp MISDREAVUS
+	jp .next
 .krabby
 	ld a, [wCurPartySpecies]
 	cp KRABBY
 	jp .next
-.magmar
+.ditto
 	ld a, [wCurPartySpecies]
-	cp MAGMAR
+	cp DITTO
 	jp .next
 .larvitar
 	ld a, [wCurPartySpecies]

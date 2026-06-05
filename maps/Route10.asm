@@ -4,7 +4,19 @@ Route10_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+	callback MAPCALLBACK_NEWMAP, RockTunnelFlypointCallback
 
+RockTunnelFlypointCallback:
+	setflag ENGINE_FLYPOINT_ROCK_TUNNEL
+	callasm Route10ForceLandmarkSpecialAsm
+	endcallback
+
+Route10ForceLandmarkSpecialAsm:
+	ld a, MAPGROUP_CERULEAN
+	ld [wPrevMapGroup], a
+	ld a, MAP_ROUTE_10
+	ld [wPrevMapNumber], a
+	ret
 
 TrainerPicnickerAzriel:
 	trainer PICNICKER, AZRIEL, EVENT_BEAT_PICNICKER_AZRIEL, PicnickerAzrielSeenText, PicnickerAzrielBeatenText, 0, .Script

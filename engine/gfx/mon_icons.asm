@@ -710,7 +710,7 @@ ReadMonMenuIcon:
 	ret
 
 FlyMonMenuIcon: ; 8eab3
-	jr z, .bird
+;	jr z, .bird
 	dec a
 	ld hl, MonMenuIcons
 	ld e, a
@@ -718,9 +718,9 @@ FlyMonMenuIcon: ; 8eab3
 	add hl, de
 	ld a, [hl]
 	ret
-.bird
-	ld a, ICON_PIDGEOT
-	ret
+;.bird
+;	ld a, ICON_PIDGEOT
+;	ret
 
 INCLUDE "data/pokemon/menu_icons.asm"
 

@@ -64,6 +64,7 @@ Landmarks:
 ;	landmark 108,  56, NinjaDenName
 
 	assert_table_length KANTO_LANDMARK
+	landmark 140,  44, Route10NorthName
 	landmark  52, 108, PalletTownName
 	landmark  52,  96, Route1Name
 	landmark  52,  84, ViridianCityName
@@ -242,7 +243,7 @@ SpecialMapName:      db "SPECIAL@"
 ;RocketHideoutName:   db "ROCKET¯HIDEOUT@"
 ;NinjaDenName:        db "NINJA¯DEN@"
 BillsHouseName:      db "BILL's HOUSE@"
-;Route10North:        db "ROUTE 10¯NORTH@"
+Route10NorthName:    db "ROUTE 10¯NORTH@"
 ;BillsBackYardName:   db "BEHIND¯BILL's HOUSE@" ;"BILL's¯BACK YARD@"
 ;                       "SILVER CAVE/" one line on map screen
 ;                       "CHERRYGROVE CITY" one line on fly screen

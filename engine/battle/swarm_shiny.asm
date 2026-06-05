@@ -51,7 +51,7 @@ GenerateSwarmShiny:
 	jp z, .magmar
 	cp LANDMARK_VICTORY_ROAD
 	jp z, .geodude
-	cp LANDMARK_ROUTE_10_NORTH
+	cp LANDMARK_SPECIAL ;LANDMARK_ROUTE_10_NORTH
 	jp z, .eevee
 ; johto
 	cp LANDMARK_ROUTE_29

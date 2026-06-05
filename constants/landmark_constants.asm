@@ -57,6 +57,7 @@
 ;	const LANDMARK_NINJA_DEN         ; 34
 
 DEF KANTO_LANDMARK EQU const_value	
+	const LANDMARK_ROUTE_10_NORTH    ; 
 	const LANDMARK_PALLET_TOWN       ; 33
 	const LANDMARK_ROUTE_1           ; 34
 	const LANDMARK_VIRIDIAN_CITY     ; 35
@@ -115,7 +116,6 @@ DEF KANTO_LANDMARK EQU const_value
 	const LANDMARK_ROUTE_28          ; 69
 ; end
 	const LANDMARK_SS_ANNE           ; 6a
-;	const LANDMARK_ROUTE_10_NORTH    ; 6b
 ;	const LANDMARK_ROCKET_HIDEOUT    ; 6c
 
 DEF NUM_LANDMARKS EQU const_value
