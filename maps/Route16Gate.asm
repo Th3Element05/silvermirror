@@ -21,44 +21,44 @@ Route16GateNoopScene:
 Route16GateBicycleCheck1:
 	checkitem BICYCLE
 	iftrue Route16Bicycle
-	showemote EMOTE_SHOCK, PLAYER, 20
 	opentext
 	writetext Route16GateStopText
 	waitbutton
 	closetext
+	showemote EMOTE_SHOCK, PLAYER, 20
 	applymovement PLAYER, Route16GateStopMovement1
 	jumptext Route16GateCannotPassText
 
 Route16GateBicycleCheck2:
 	checkitem BICYCLE
 	iftrue Route16Bicycle
-	showemote EMOTE_SHOCK, PLAYER, 20
 	opentext
 	writetext Route16GateStopText
 	waitbutton
 	closetext
+	showemote EMOTE_SHOCK, PLAYER, 20
 	applymovement PLAYER, Route16GateStopMovement2
 	jumptext Route16GateCannotPassText
 
 Route16GateBicycleCheck3:
 	checkitem BICYCLE
 	iftrue Route16Bicycle
-	showemote EMOTE_SHOCK, PLAYER, 20
 	opentext
 	writetext Route16GateStopText
 	waitbutton
 	closetext
+	showemote EMOTE_SHOCK, PLAYER, 20
 	applymovement PLAYER, Route16GateStopMovement3
 	jumptext Route16GateCannotPassText
 
 Route16GateBicycleCheck4:
 	checkitem BICYCLE
 	iftrue Route16Bicycle
-	showemote EMOTE_SHOCK, PLAYER, 20
 	opentext
 	writetext Route16GateStopText
 	waitbutton
 	closetext
+	showemote EMOTE_SHOCK, PLAYER, 20
 	applymovement PLAYER, Route16GateStopMovement4
 	jumptext Route16GateCannotPassText
 

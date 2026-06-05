@@ -20,44 +20,44 @@ Route18GateNoopScene:
 Route18GateBicycleCheck1:
 	checkitem BICYCLE
 	iftrue Route18Bicycle
-	showemote EMOTE_SHOCK, PLAYER, 20
 	opentext
 	writetext Route18GateStopText
 	waitbutton
 	closetext
+	showemote EMOTE_SHOCK, PLAYER, 20
 	applymovement PLAYER, Route18GateStopMovement1
 	jumptext Route18GateCannotPassText
 
 Route18GateBicycleCheck2:
 	checkitem BICYCLE
 	iftrue Route18Bicycle
-	showemote EMOTE_SHOCK, PLAYER, 20
 	opentext
 	writetext Route18GateStopText
 	waitbutton
 	closetext
+	showemote EMOTE_SHOCK, PLAYER, 20
 	applymovement PLAYER, Route18GateStopMovement2
 	jumptext Route18GateCannotPassText
 
 Route18GateBicycleCheck3:
 	checkitem BICYCLE
 	iftrue Route18Bicycle
-	showemote EMOTE_SHOCK, PLAYER, 20
 	opentext
 	writetext Route18GateStopText
 	waitbutton
 	closetext
+	showemote EMOTE_SHOCK, PLAYER, 20
 	applymovement PLAYER, Route18GateStopMovement3
 	jumptext Route18GateCannotPassText
 
 Route18GateBicycleCheck4:
 	checkitem BICYCLE
 	iftrue Route18Bicycle
-	showemote EMOTE_SHOCK, PLAYER, 20
 	opentext
 	writetext Route18GateStopText
 	waitbutton
 	closetext
+	showemote EMOTE_SHOCK, PLAYER, 20
 	applymovement PLAYER, Route18GateStopMovement4
 	jumptext Route18GateCannotPassText
 
