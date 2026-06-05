@@ -330,7 +330,7 @@ SaffronGateGiveDrinkText:
 	text "!"
 	done
 
-SaffronGateGulpText
+SaffronGateGulpText:
 	ntag "OFFICER:"
 	text "…"
 	line "Glug glug…"
