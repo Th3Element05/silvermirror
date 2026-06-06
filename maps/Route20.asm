@@ -16,6 +16,7 @@ Route20Noop2Scene:
 
 
 Route20GetRocksmashScript:
+	turnobject ROUTE20_COOLTRAINERM, RIGHT
 	showemote EMOTE_SHOCK, ROUTE20_COOLTRAINERM, 20
 	readvar VAR_FACING
 	ifequal DOWN, .ThruSeafoam
@@ -41,20 +42,34 @@ Route20GetRocksmashScript:
 	follow ROUTE20_COOLTRAINERM, PLAYER
 	applymovement ROUTE20_COOLTRAINERM, Route20RockSmashGuyReturnMovement
 	stopfollow
-	pause 15
+	pause 10
 	; fallthrough ; sjump Route20RockSmashGuyScript
 
 Route20RockSmashGuyScript:
-;	setlasttalked ROUTE20_COOLTRAINERM
+	variablesprite SPRITE_VARIABLE_1, SPRITE_GEODUDE_MOVE
+	special LoadUsedSpritesGFX
+;	variablesprite SPRITE_VARIABLE_1, SPRITE_GEODUDE_MOVE
+	setlasttalked ROUTE20_COOLTRAINERM
 	faceplayer
 	opentext
 ;	checkevent EVENT_GOT_TM58_ROCK_SMASH
 ;	iftrue .AlreadyGotRockSmash
 	writetext Route20RockSmashGuyIntroText
-	promptbutton
+	waitbutton
 	closetext
 	turnobject ROUTE20_COOLTRAINERM, LEFT
 	pause 10
+	playsound SFX_BALL_POOF
+	appear ROUTE20_GEODUDE
+	turnobject ROUTE20_GEODUDE, DOWN
+	waitsfx
+	cry GEODUDE
+	waitsfx
+	turnobject ROUTE20_GEODUDE, RIGHT
+	opentext
+	writetext Route20RockSmashGuyGiveCommandText
+	waitbutton
+	closetext
 	turnobject ROUTE20_GEODUDE, LEFT
 	scall Route20GeodudeScript
 	pause 10
@@ -97,6 +112,9 @@ Route20RockSmashGuyScript:
 	applymovement ROUTE20_COOLTRAINERM, Route20RockSmashGuyLeaveMovement
 	disappear ROUTE20_COOLTRAINERM
 	setscene SCENE_ROUTE20_NOOP
+	setmapscene PALLET_TOWN, SCENE_PALLETTOWN_NOOP
+	setevent EVENT_PALLET_TOWN_TENTACOOL
+	clearevent EVENT_OAKS_LAB_OAK
 	end
 
 .AlreadyGotRockSmash:
@@ -121,7 +139,7 @@ Route20RockSmashGuyIntro_Seafoam:
 	para "That must have"
 	line "been tough!"
 
-	para "Here, you probably"
+	para "Here, I bet you'll"
 	line "want to see this."
 	done
 
@@ -141,6 +159,12 @@ Route20RockSmashGuyIntroText:
 	line "smashing rocks!"
 
 	para "Watch!"
+	done
+
+Route20RockSmashGuyGiveCommandText:
+	ntag "TRAINER:"
+	text "GEODUDE! Use your"
+	line "ROCK SMASH!"
 	done
 
 Route20RockSmashGuyGivePagerText:
@@ -630,8 +654,8 @@ Route20_MapEvents:
 	bg_event 53, 11, BGEVENT_READ, SeafoamIslandsSign
 
 	def_object_events
-	object_event 51, 10, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, Route20RockSmashGuyScript, EVENT_GOT_TM58_ROCK_SMASH
-	object_event 50, 10, SPRITE_VARIABLE_1, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, Route20GeodudeScript, EVENT_GOT_TM58_ROCK_SMASH
+	object_event 51, 10, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, Route20RockSmashGuyScript, EVENT_GOT_TM58_ROCK_SMASH
+	object_event 50, 10, SPRITE_VARIABLE_1, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, Route20GeodudeScript, EVENT_ROUTE_20_GEODUDE
 	object_event 49, 10, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route20RockScript, -1
 ;
 	object_event  8,  8, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerSwimmerFDenise, -1
@@ -644,8 +668,9 @@ Route20_MapEvents:
 	object_event 65,  9, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerFWendy, -1
 	object_event 77,  8, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSwimmerMJerome, -1
 	object_event 78, 12, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSwimmerMCameron, -1
+	object_event 58,  9, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route20RockScript, -1
+	object_event 48,  4, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route20RockScript, -1
 	object_event 50, 11, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route20RockScript, -1
-	object_event 48, 11, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route20RockScript, -1
-	object_event 49, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, Route20TMBrickBreak, EVENT_ROUTE_20_TM_BRICK_BREAK
+	object_event 56, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, Route20TMBrickBreak, EVENT_ROUTE_20_TM_BRICK_BREAK
 
 ;.GrayOverYellowOBPalette

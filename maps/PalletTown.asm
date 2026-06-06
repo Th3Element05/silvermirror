@@ -1,17 +1,20 @@
 	object_const_def
 	const PALLETTOWN_OAK
+	const PALLETTOWN_OAK_TENTACOOL
 
 PalletTown_MapScripts:
 	def_scene_scripts
 	scene_script PalletTownNoop1Scene, SCENE_PALLETTOWN_OAK_HEY_WAIT
+	scene_script PalletTownNoop2Scene, SCENE_PALLETTOWN_TENTACOOL
 	scene_script PalletTownKantoRematchNotifyScene, SCENE_PALLETTOWN_REMATCH_NOTIFY
-	scene_script PalletTownNoop2Scene, SCENE_PALLETTOWN_NOOP
+	scene_script PalletTownNoop3Scene, SCENE_PALLETTOWN_NOOP
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, PalletTownFlypointCallback
 
 PalletTownNoop1Scene:
 PalletTownNoop2Scene:
+PalletTownNoop3Scene:
 	end
 
 PalletTownKantoRematchNotifyScene:
@@ -79,6 +82,81 @@ PalletTownOakUnsafeText:
 	line "me!"
 	done
 
+
+PalletTownOakWatchingTentacool:
+	faceplayer
+	opentext
+	writetext PalletTownOakExplainsTentacoolText
+	waitbutton
+	closetext
+	turnobject PALLETTOWN_OAK_TENTACOOL, LEFT
+	end
+
+PalletTownTentacoolBlockScript:
+	showemote EMOTE_SHOCK, PALLETTOWN_OAK_TENTACOOL, 20
+	opentext
+	writetext PalletTownOakHeyWaitTentacoolText
+	waitbutton
+	closetext
+	scall PalletTownTentacoolWalkbackMovement
+	opentext
+	writetext PalletTownOakExplainsTentacoolText
+	waitbutton
+	closetext
+	turnobject PALLETTOWN_OAK_TENTACOOL, LEFT
+	end
+
+PalletTownTentacoolWalkbackMovement:
+	readvar VAR_XCOORD
+	ifequal 5, .Three
+	ifequal 6, .Two
+	ifequal 7, .One
+	; else  4, .Four
+;Four
+	applymovement PLAYER, PalletTownOneStepRightMovement
+.Three
+	applymovement PLAYER, PalletTownOneStepRightMovement
+.Two
+	applymovement PLAYER, PalletTownOneStepRightMovement
+.One
+	applymovement PLAYER, PalletTownStepAwayFromTentacoolMovement
+	end
+
+PalletTownOakHeyWaitTentacoolText:
+	ntag "PROF.OAK:"
+	text "Hey! Wait!"
+	done
+
+PalletTownOakExplainsTentacoolText:
+	ntag "PROF.OAK:"
+	text "<PLAYER>! Look!"
+	line "TENTACOOL usually"
+	cont "stay farther out"
+	roll "at sea."
+
+	para "I'm studying their"
+	line "behavior. Please"
+	cont "don't disturb them!"
+
+	para "If you're trying to"
+	line "get to CINNABAR,"
+	cont "you'll need to take"
+	roll "ROUTE 19 and 20."
+
+	para "They're south from"
+	roll "FUCHSIA CITY."
+	done
+
+PalletTownOneStepRightMovement:
+	step RIGHT
+	step_end
+
+PalletTownStepAwayFromTentacoolMovement:
+	step UP
+	turn_head RIGHT
+	step_end
+
+; npc
 PalletTownTeacherScript:
 ;;	jumptextfaceplayer PalletTownTeacherText
 ;	faceplayer
@@ -291,6 +369,10 @@ PalletTown_MapEvents:
 	def_coord_events
 	coord_event 10,  1, SCENE_PALLETTOWN_OAK_HEY_WAIT, PalletTownOakHeyWaitScriptL
 	coord_event 11,  1, SCENE_PALLETTOWN_OAK_HEY_WAIT, PalletTownOakHeyWaitScriptR
+	coord_event  4, 16, SCENE_PALLETTOWN_TENTACOOL, PalletTownTentacoolBlockScript
+	coord_event  5, 16, SCENE_PALLETTOWN_TENTACOOL, PalletTownTentacoolBlockScript
+	coord_event  6, 16, SCENE_PALLETTOWN_TENTACOOL, PalletTownTentacoolBlockScript
+	coord_event  7, 16, SCENE_PALLETTOWN_TENTACOOL, PalletTownTentacoolBlockScript
 
 	def_bg_events
 	bg_event  7,  9, BGEVENT_READ, PalletTownSign
@@ -300,6 +382,10 @@ PalletTown_MapEvents:
 
 	def_object_events
 	object_event  8,  5, SPRITE_VARIABLE_1, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PALLET_TOWN_OAK
+;
+	object_event  8, 15, SPRITE_VARIABLE_1, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PalletTownOakWatchingTentacool, EVENT_PALLET_TOWN_TENTACOOL
+	object_event  5, 17, SPRITE_TENTACOOL, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PALLET_TOWN_TENTACOOL
+	object_event  6, 18, SPRITE_TENTACOOL, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PALLET_TOWN_TENTACOOL
+;
 	object_event  4,  8, SPRITE_TEACHER, SPRITEMOVEDATA_WANDER, 2, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PalletTownTeacherScript, -1
 	object_event 12, 14, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PalletTownFisherScript, -1
-;	object_event  1,  2, SPRITE_OAK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TradeNPCTest, -1

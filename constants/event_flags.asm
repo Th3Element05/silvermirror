@@ -408,6 +408,7 @@
 ; The map script command macros `disappear` and `appear` set/clear these flags and immediately apply the effect on visibility.
 ; The map script command macros `setevent` and `clearevent` set/clear these flags, and their effects will be seen when the map is reloaded.
 	const EVENT_PALLET_TOWN_OAK
+	const EVENT_PALLET_TOWN_TENTACOOL
 	const EVENT_PLAYERS_HOUSE_MOM_1
 	const EVENT_PLAYERS_HOUSE_MOM_2
 	const EVENT_PLAYERS_HOUSE_1F_NEIGHBOR
@@ -475,6 +476,7 @@
 	const EVENT_SAFARI_ZONE_AREA_4_NPC1
 	const EVENT_SAFARI_ZONE_AREA_4_NPC2
 	const EVENT_ROUTE_19_BOY
+	const EVENT_ROUTE_20_GEODUDE
 	const EVENT_CINNABAR_LAB_HELIX_FOSSIL
 	const EVENT_CINNABAR_LAB_DOME_FOSSIL
 	const EVENT_CINNABAR_LAB_OLD_AMBER

@@ -60,6 +60,7 @@ CinnabarGroupSprites:
 	; 9 of 9 walking
 	db SPRITE_SLEEPING
 	db SPRITE_FISHER
+	db SPRITE_TENTACOOL
 	db SPRITE_POKE_BALL
 	db SPRITE_ROCK
 	db SPRITE_BERRY

@@ -24,6 +24,9 @@ SafariSecretHouseOfficer:
 	writetext GotSurfPagerText
 	waitbutton
 	closetext
+	setmapscene PALLET_TOWN, SCENE_PALLETTOWN_TENTACOOL
+	setevent EVENT_OAKS_LAB_OAK
+	clearevent EVENT_PALLET_TOWN_TENTACOOL
 	end
 
 .JumpstdReceiveItem:
