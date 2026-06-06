@@ -324,7 +324,7 @@ PlayersHouseBookshelfChallengeModeDeactivatedText:
 ;	closetext
 ;	clearevent EVENT_BEAT_GRUNTM_1
 ;	end
-;
+
 ;PlayersHouseDebugText:
 ;	text "DEBUG STUFF"
 ;	done

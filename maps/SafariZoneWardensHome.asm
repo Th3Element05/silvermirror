@@ -41,7 +41,8 @@ SafariZoneWardenScript:
 
 .GiveWardenTeeth
 	writetext GaveSafariZoneWardenTeethText
-;	playsound gavetheteeth
+	playsound SFX_ITEM
+	takeitem GOLD_TEETH
 	promptbutton
 	writetext SafariZoneWardenThanksGivePagerText
 	promptbutton

@@ -93,4 +93,4 @@
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 5c
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 5d
 	tilecoll FLOOR, FLOOR, LADDER, FLOOR ; 5e
-	tilecoll , , ,  ; 5f
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 5f

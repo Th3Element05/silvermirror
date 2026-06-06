@@ -4,11 +4,11 @@ Route10Pokecenter1F_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
-	callback MAPCALLBACK_NEWMAP, RockTunnelFlypointCallback
-
-RockTunnelFlypointCallback:
-	setflag ENGINE_FLYPOINT_ROCK_TUNNEL
-	endcallback
+;	callback MAPCALLBACK_NEWMAP, RockTunnelFlypointCallback
+;
+;RockTunnelFlypointCallback:
+;	setflag ENGINE_FLYPOINT_ROCK_TUNNEL
+;	endcallback
 
 Route10Pokecenter1FNurseScript:
 	jumpstd PokecenterNurseScript
