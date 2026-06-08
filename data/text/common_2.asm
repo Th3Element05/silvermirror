@@ -417,7 +417,7 @@ _CantUseDigText::
 
 _TeleportReturnText::
 	text "Return to the last"
-	line "#MON CENTER."
+	line "#MON CENTER?"
 	done
 
 _CantUseTeleportText::

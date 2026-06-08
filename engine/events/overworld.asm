@@ -1054,7 +1054,9 @@ TeleportFunction:
 	reloadmappart
 	special UpdateTimePals
 	writetext .TeleportReturnText
-	pause 60
+	yesorno
+	iffalse .AbortTeleport
+	pause 10
 	reloadmappart
 	closetext
 	playsound SFX_WARP_TO
@@ -1065,6 +1067,10 @@ TeleportFunction:
 	newloadmap MAPSETUP_TELEPORT
 	playsound SFX_WARP_FROM
 	applymovement PLAYER, .TeleportTo
+	end
+
+.AbortTeleport
+	closetext
 	end
 
 .TeleportFrom:
