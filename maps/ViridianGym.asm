@@ -66,8 +66,9 @@ GiovanniIntroText:
 
 	para "But, you have"
 	line "caught me again!"
-	cont "So be it! This"
-	roll "time, I'm not"
+
+	para "So be it! This"
+	line "time, I'm not"
 	cont "holding back!"
 
 	para "Once more, you"
