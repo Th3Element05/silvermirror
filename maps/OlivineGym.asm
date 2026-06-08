@@ -72,10 +72,10 @@ Jasmine_SteelTypeIntro:
 	ntag "JASMINE:"
 	text "I am JASMINE, a"
 	line "GYM LEADER. I use"
-	cont "the steel-type."
+	cont "the STEEL-type."
 
 	para "…Do you know about"
-	line "the steel-type?"
+	line "the STEEL-type?"
 
 	para "It's a type that"
 	line "was only recently"
@@ -147,7 +147,7 @@ OlivineGymGuideText:
 
 	para "JASMINE uses the"
 	line "newly discovered"
-	cont "steel-type."
+	cont "STEEL-type."
 
 	para "I don't know very"
 	line "much about it."
@@ -157,7 +157,7 @@ OlivineGymGuideWinText:
 	ntag "GUIDE:"
 	text "That was awesome."
 
-	para "The steel-type,"
+	para "The STEEL-type,"
 	line "huh?"
 
 	para "That was a close"

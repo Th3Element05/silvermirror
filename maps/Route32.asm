@@ -71,7 +71,7 @@ Route32_MapScripts:
 ;FriedaGaveGiftText:
 ;	text "FRIEDA: Give it to"
 ;	line "a #MON that has"
-;	cont "poison-type moves."
+;	cont "POISON-type moves."
 ;
 ;	para "Oh!"
 ;

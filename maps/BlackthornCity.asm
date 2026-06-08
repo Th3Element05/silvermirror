@@ -89,7 +89,7 @@ BlackthornCityFlypointCallback:
 ;
 ;	para "SPELL TAG…"
 ;
-;	para "Ghost-type moves"
+;	para "GHOST-type moves"
 ;	line "get stronger…"
 ;
 ;	para "It will frighten"

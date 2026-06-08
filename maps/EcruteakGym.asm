@@ -219,7 +219,7 @@ SagePingAfterBattleText:
 	text "We use only ghost-"
 	line "type #MON."
 
-	para "No normal-type"
+	para "No NORMAL-type"
 	line "attack can harm"
 	cont "them!"
 	done

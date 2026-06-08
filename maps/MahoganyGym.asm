@@ -121,7 +121,7 @@ PryceText_AncientpowerSpeech:
 	line "ANCIENTPOWER."
 
 	para "It's a special"
-	line "rock-type attack"
+	line "ROCK-type attack"
 	cont "which may raise"
 	roll "all of the user's"
 	cont "stats at once."
@@ -331,7 +331,7 @@ MahoganyGymGuideText:
 	para "He's said to be"
 	line "good at freezing"
 	cont "opponents with"
-	roll "ice-type moves."
+	roll "ICE-type moves."
 
 	para "That means you"
 	line "should melt him"

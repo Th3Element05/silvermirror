@@ -137,7 +137,7 @@ JackSunnyDayTriviaText:
 	text "Did you know…?"
 
 	para "If the sunlight is"
-	line "harsh, water-type"
+	line "harsh, WATER-type"
 	cont "moves become much"
 	roll "weaker."
 	done
@@ -146,7 +146,7 @@ JackRainDanceTriviaText:
 	text "Did you know…?"
 
 	para "When it's raining,"
-	line "fire-type moves"
+	line "FIRE-type moves"
 	cont "become much weaker"
 	roll "than usual."
 	done

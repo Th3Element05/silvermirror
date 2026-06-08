@@ -383,11 +383,11 @@ BlackthornGymGuideText:
 ;	cont "Count on me!"
 ;
 	para "CLAIR uses the"
-	line "mythical dragon-"
-	cont "-type #MON."
+	line "mythical DRAGON-"
+	cont "type #MON."
 
 	para "They resist a lot"
-	line "of types, but ice-"
+	line "of types, but ICE-"
 	cont "type moves are"
 	roll "their weakness."
 	done

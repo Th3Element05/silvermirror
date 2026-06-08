@@ -943,7 +943,7 @@ FissureDescription:
 	db   "A fissure opens to"
 	feed "instantly KO foe.@"
 ;	feed "foe if it hits.@"
-;	db   "A ground-type,"
+;	db   "A GROUND-type,"
 ;	next "one-hit KO attack.@"
 
 DigDescription:
@@ -1583,7 +1583,7 @@ CurseDescription:
 	feed "raises ATK & DEF"
 	feed "but lowers SPEED.@"
 ;	db   "Works differently"
-;	next "for ghost-types.@"
+;	next "for GHOST-types.@"
 
 FlailDescription:
 	db   "Flails wildly."
@@ -2090,14 +2090,14 @@ RainDanceDescription:
 	db   "Summons a storm to"
 	feed "boost WATER-type"
 	feed "moves for 5 turns.@"
-;	db   "Boosts water-type"
+;	db   "Boosts WATER-type"
 ;	next "moves for 5 turns.@"
 
 SunnyDayDescription:
 	db   "Intense sunlight"
 	feed "boosts FIRE-type"
 	feed "moves for 5 turns.@"
-;	db   "Boosts fire-type"
+;	db   "Boosts FIRE-type"
 ;	next "moves for 5 turns.@"
 
 CrunchDescription:

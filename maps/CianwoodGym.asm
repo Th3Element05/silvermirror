@@ -325,7 +325,7 @@ CianwoodGymGuideText:
 	ntag "GUIDE:"
 	text "The GYM LEADER"
 	cont "here uses the"
-	roll "fighting-type."
+	roll "FIGHTING-type."
 
 	para "So you should"
 	line "confound him with"

@@ -132,7 +132,7 @@ HikerJimAfterBattleText:
 	ntag "HIKER:"
 	text "In mountains,"
 	line "you'll often find"
-	cont "rock-type #MON."
+	cont "ROCK-type #MON."
 	done
 
 TrainerPicnickerCindy:

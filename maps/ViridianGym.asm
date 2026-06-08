@@ -403,7 +403,7 @@ ViridianGymGuideText:
 
 	para "I heard that the"
 	line "trainers here"
-	cont "like ground-type"
+	cont "like GROUND-type"
 	roll "#MON!"
 	done
 

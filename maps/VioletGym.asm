@@ -67,7 +67,7 @@ FalknerIntroText:
 	cont "leader!"
 
 	para "People say you can"
-	line "clip flying-type"
+	line "clip FLYING-type"
 	cont "#MON's wings"
 	roll "with a jolt of"
 	cont "electricity…"
@@ -238,9 +238,9 @@ VioletGymGuideText:
 	ntag "GUIDE:"
 	text "Hey! CHAMP!"
 
-	para "The grass-type is"
+	para "The GRASS-type is"
 	line "weak against the"
-	cont "flying-type. Keep"
+	cont "FLYING-type. Keep"
 	roll "this in mind."
 	done
 

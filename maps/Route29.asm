@@ -113,7 +113,7 @@ Route29_NoFruit:
 ;	cont "is most adorable?"
 ;
 ;	para "It strengthens"
-;	line "normal-type moves."
+;	line "NORMAL-type moves."
 ;
 ;	para "I am certain it"
 ;	line "will be of use."

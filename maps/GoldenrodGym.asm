@@ -354,11 +354,11 @@ GoldenrodGymGuideText:
 	text "Yo! CHAMP!"
 
 	para "This GYM is home"
-	line "to normal-type"
+	line "to NORMAL-type"
 	cont "#MON trainers."
 
 	para "I recommend you"
-	line "use fighting-type"
+	line "use FIGHTING-type"
 	cont "#MON."
 	done
 

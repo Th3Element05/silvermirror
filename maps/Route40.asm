@@ -69,8 +69,8 @@ Route40_MapScripts:
 ;	text "MONICA: It's an"
 ;	line "item that raises"
 ;
-;	para "the power of fly-"
-;	line "ing-type moves."
+;	para "the power of FLY-"
+;	line "ING-type moves."
 ;
 ;	para "You should equip a"
 ;	line "bird #MON with"
