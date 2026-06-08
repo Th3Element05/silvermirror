@@ -152,8 +152,8 @@ FightingDojoTutorRefusedText:
 
 FightingDojoTutorIncompatibleText:
 	ntag "SENSEI:"
-	text "Your #MON can't"
-	line "learn this move…"
+	text "Train with us"
+	line "any time!"
 	done
 
 FightingDojoKarateMasterLeftScript:
@@ -268,8 +268,8 @@ KarateMasterIntroText:
 
 KarateMasterDefeatMyStudentsText:
 	ntag "MASTER:"
-	text "Defeat all 4 of"
-	line "my students to"
+	text "Defeat all four"
+	line "of my students to"
 	cont "prove you posses"
 	roll "the strength to"
 	cont "challenge me!"
@@ -278,7 +278,7 @@ KarateMasterDefeatMyStudentsText:
 KarateMasterChallengeText:
 	ntag "MASTER:"
 	text "Ha! Well met,"
-	line "Challenger!"
+	line "challenger!"
 
 	para "My students are"
 	line "formidable!"
@@ -690,8 +690,8 @@ FightingDojo_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  4, 11, SAFFRON_CITY, 1
-	warp_event  5, 11, SAFFRON_CITY, 1
+	warp_event  4, 13, SAFFRON_CITY, 1
+	warp_event  5, 13, SAFFRON_CITY, 1
 
 	def_coord_events
 	coord_event 4, 3, SCENE_FIGHTINGDOJO_CHALLENGE_1, FightingDojoKarateMasterLeftScript
@@ -700,18 +700,18 @@ FightingDojo_MapEvents:
 	def_bg_events
 	bg_event  1,  0, BGEVENT_READ, FightingDojoSign1
 	bg_event  8,  0, BGEVENT_READ, FightingDojoSign2
-	bg_event  3,  9, BGEVENT_READ, FightingDojoStatue
-	bg_event  6,  9, BGEVENT_READ, FightingDojoStatue
+	bg_event  3, 11, BGEVENT_READ, FightingDojoStatue
+	bg_event  6, 11, BGEVENT_READ, FightingDojoStatue
 
 	def_object_events
 	object_event  4,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FightingDojoHitmonlee, EVENT_GOT_HITMONLEE_FROM_DOJO
 	object_event  5,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FightingDojoHitmonchan, EVENT_GOT_HITMONCHAN_FROM_DOJO
 	object_event  5,  3, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_SCRIPT, 0, FightingDojoKarateMasterScript, -1
-	object_event  1,  5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 0, TrainerBlackbeltTakeshi, -1
-	object_event  3,  5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 0, TrainerBlackbeltBruce, -1
-	object_event  6,  5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerBlackbeltJackie, -1
-	object_event  8,  5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerBlackbeltJet, -1
-	object_event  7,  9, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, FightingDojoMoveTutorScript, -1
+	object_event  2,  7, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 0, TrainerBlackbeltTakeshi, -1
+	object_event  3,  6, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 0, TrainerBlackbeltBruce, -1
+	object_event  6,  6, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerBlackbeltJackie, -1
+	object_event  7,  7, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerBlackbeltJet, -1
+	object_event  7, 11, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, FightingDojoMoveTutorScript, -1
 	object_event  1,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, FightingDojoFocusBand, EVENT_FIGHTING_DOJO_FOCUS_BAND
 	object_event  8,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, FightingDojoBlackBelt, EVENT_FIGHTING_DOJO_BLACK_BELT
 

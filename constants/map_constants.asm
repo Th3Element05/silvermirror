@@ -220,7 +220,7 @@ ENDM
 	map_const SAFFRON_POKECENTER_1F,                        7,  4 ;  2
 	map_const SAFFRON_MART,                                 5,  4 ;  3
 	map_const SAFFRON_GYM,                                 10,  9 ;  4
-	map_const FIGHTING_DOJO,                                5,  6 ;  5
+	map_const FIGHTING_DOJO,                                5,  7 ;  5
 	map_const MR_PSYCHICS_HOUSE,                            4,  4 ;  6
 	map_const COPYCATS_HOUSE_1F,                            5,  4 ;  7
 	map_const COPYCATS_HOUSE_2F,                            4,  3 ;  8
