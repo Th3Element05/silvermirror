@@ -412,8 +412,8 @@ RareCandyDesc:
 	next "#MON by one.@"
 
 XAccuracyDesc:
-	db   "Raises accuracy."
-	next "(1 BTL)@"
+	db   "Raises accuracy"
+	next "temporarily.@"
 
 ;LeafStoneDesc:
 ;	db   "Evolves certain"
@@ -457,7 +457,7 @@ MaxRepelDesc:
 
 DireHitDesc:
 	db   "Ups critical hit"
-	next "ratio. (1 BTL)@"
+	next "ratio temporarily.@"
 
 FreshWaterDesc:
 	db   "Restores #MON"
@@ -472,20 +472,20 @@ LemonadeDesc:
 	next "HP by 80.@"
 
 XAttackDesc:
-	db   "Raises ATTACK."
-	next "(1 BTL)@"
+	db   "Raises ATTACK"
+	next "temporarily.@"
 
 XDefendDesc:
-	db   "Raises DEFENSE."
-	next "(1 BTL)@"
+	db   "Raises DEFENSE"
+	next "temporarily.@"
 
 XSpeedDesc:
-	db   "Raises SPEED."
-	next "(1 BTL)@"
+	db   "Raises SPEED"
+	next "temporarily.@"
 
 XSpecialDesc:
-	db   "Raises SPECIAL"
-	next "ATTACK. (1 BTL)@"
+	db   "Ups SPECIAL ATK"
+	next "temporarily.@"
 
 CoinCaseDesc:
 	db   "Holds up to 9,999"
@@ -500,8 +500,10 @@ PokeFluteDesc:               ;silvermirror
 	next "wakes any #MON.@"
 
 ExpShareDesc:
-	db   "Shares battle EXP."
-	next "Points. (HOLD)@"
+;	db   "Shares battle EXP."
+;	next "Points. (HOLD)@"
+	db   "Shares EXP.POINTS"
+	next "in battle. (HOLD)@"
 
 OldRodDesc:
 	db   "Use by water to"
@@ -557,20 +559,26 @@ MysteryEggDesc:
 	next "from MR.#MON.@"
 
 ClearBellDesc:
-	db   "Makes a gentle"
-	next "ringing.@"
+;	db   "Makes a gentle"
+;	next "ringing.@"
+	db   "You can hear it"
+	next "ringing gently.@"
 
 SilverWingDesc:
-	db   "A strange, silver-"
-	next "colored feather.@"
+;	db   "A strange, silver-"
+;	next "colored feather.@"
+	db   "A feather from a"
+	next "silver #MON.@"
 
 MoomooMilkDesc:
 	db   "Restores #MON"
 	next "HP by 100.@"
 
 QuickClawDesc:
-	db   "Raises 1st strike"
-	next "chance. (HOLD)@"
+;	db   "Raises 1st strike"
+;	next "chance. (HOLD)@"
+	db   "Holder may strike"
+	next "first. (HOLD).@"
 
 PechaBerryDesc:
 	db   "A self-cure for"
@@ -629,7 +637,7 @@ BigMushroomDesc:
 	next "Sell high.@"
 
 SilverPowderDesc:
-	db   "Powers up bug-type"
+	db   "Powers up BUG-type"
 	next "moves. (HOLD)@"
 
 BluApricornDesc:
@@ -704,7 +712,7 @@ SmokeBallDesc:
 	next "#MON. (HOLD)@"
 
 NeverMeltIceDesc:
-	db   "Powers up ice-type"
+	db   "Powers up ICE-type"
 	next "moves. (HOLD)@"
 
 MagnetDesc:
@@ -865,7 +873,7 @@ LeppaBerryDesc:
 ;DragonScaleDesc:
 ;	db   "Evolves certain"
 ;	next "kinds of #MON.@"
-;	db   "A rare dragon-type"
+;	db   "A rare DRAGON-type"
 ;	next "item.@"
 
 BerserkGeneDesc:
