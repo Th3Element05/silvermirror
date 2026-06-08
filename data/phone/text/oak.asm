@@ -77,9 +77,13 @@ OakPhoneGetFlashText:
 	cont "should be useful"
 	cont "on your journey."
 
-	para "My assitant is"
-	line "waiting for you"
-	cont "on ROUTE 2."
+;	para "My assitant is"
+;	line "waiting for you"
+;	cont "on ROUTE 2."
+
+	para "My assistant will"
+	line "meet you at the"
+	cont "GATE on ROUTE 2."
 
 	para "You can take the"
 	line "shortcut through"
@@ -95,7 +99,7 @@ OakPhoneRemindFlashText:
 
 	para "My assistant is"
 	line "waiting for you"
-	cont "on ROUTE 2."
+	cont "at ROUTE 2 GATE."
 
 	para "You can get there"
 	line "through DIGGLET's"
@@ -130,8 +134,8 @@ OakPhoneViridianGymText:
 	text "Hello, <PLAYER>?"
 
 	para "Are you still"
-	line "collecting"
-	cont "GYM BADGEs?"
+	line "collecting BADGEs"
+	cont "from #MON GYMs?"
 
 	para "I've gotten word"
 	line "the GYM LEADER in"
