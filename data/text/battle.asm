@@ -660,8 +660,9 @@ OneHitKOText:
 	prompt
 
 SuperEffectiveText:
-	text "It's super-"
-	line "effective!"
+;	text "It's super-"
+;	line "effective!"
+	text "Super-effective!"
 	prompt
 
 NotVeryEffectiveText:
