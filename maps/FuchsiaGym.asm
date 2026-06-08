@@ -87,9 +87,8 @@ KogaIntroText:
 
 KogaBeaten1Text:
 	ntag "KOGA:"
-	text "Humph!"
-	line "You have proven"
-	cont "your worth!"
+	text "You have proven"
+	line "your worth!"
 
 	para "Here! Take the"
 	line "SOULBADGE!"
@@ -104,9 +103,6 @@ KogaExplainSoulbadgeText:
 	ntag "KOGA:"
 	text "Now that you have"
 	line "the SOULBADGE,"
-;	cont "your #MON can"
-;	roll "use SURF outside"
-;	cont "of battle!"
 	cont "you are one step"
 	roll "closer to the"
 	cont "#MON LEAGUE!"

@@ -168,9 +168,9 @@ LtSurgeThunderbadgeText:
 ;	line "lets your #MON"
 ;	cont "use FLY anytime!"
 
-	text "That's an official"
-	line "POKEMON LEAGUE"
-	cont "BADGE!"
+	text "That THUNDERBADGE"
+	line "is my endorsement"
+	cont "of your skill!"
 
 	para "You're special,"
 	line "kid! Take this!"

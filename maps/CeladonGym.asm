@@ -86,7 +86,7 @@ ErikaIntroText:
 	para "I teach the art of"
 	line "flower arranging."
 	cont "My #MON are of"
-	roll "the grass-type."
+	roll "the GRASS-type."
 
 	para "Oh, I'm sorry, I"
 	line "had no idea that"
@@ -116,15 +116,19 @@ PlayerReceivedRainbowbadgeText:
 
 ErikaExplainRainbowbadgeText:
 	ntag "ERIKA:"
-	text "The RAINBOWBADGE"
-	line "will make #MON"
-	cont "up to L50 obey."
+;	text "The RAINBOWBADGE"
+;	line "will make #MON"
+;	cont "up to L50 obey."
 
 ;	para "It also allows"
 ;	line "#MON to use"
 ;	cont "the move STRENGTH"
 ;	roll "to move boulders."
-;
+
+	text "The RAINBOWBADGE"
+	line "proves your skill"
+	cont "as a trainer."
+
 	para "Please also take"
 	line "this with you."
 	done
@@ -313,13 +317,13 @@ BeautyJuliaBeatenText:
 
 BeautyJuliaAfterBattleText:
 	ntag "BEAUTY:"
-	text "Grass-type #MON"
+	text "GRASS-type #MON"
 	line "are tough against"
-	cont "the water-type!"
+	cont "the WATER-type!"
 
 	para "They also have an"
-	line "edge on rock and"
-	cont "ground #MON!"
+	line "edge on ROCK and"
+	cont "GROUND #MON!"
 	done
 
 TrainerLassZoey:

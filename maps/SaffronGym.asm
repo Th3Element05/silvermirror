@@ -137,7 +137,7 @@ SabrinaExplainMarshbadgeText:
 
 	para "Wear it proudly."
 
-	para "Wait, please take"
+	para "And please take"
 	line "this TM with you!"
 	done
 
@@ -219,7 +219,7 @@ TrainerMediumHazel:
 MediumHazelSeenText:
 	ntag "MEDIUM:"
 	text "SABRINA is younger"
-	line "than I, but I"
+	line "than I am, but I"
 	cont "respect her!"
 	done
 
@@ -291,8 +291,7 @@ MediumNaomiSeenText:
 
 MediumNaomiBeatenText:
 	ntag "NAOMI:"
-	text "I knew"
-	line "it!"
+	text "I knew it!"
 	done
 
 MediumNaomiAfterBattleText:
@@ -345,8 +344,8 @@ TrainerMediumStella:
 MediumStellaSeenText:
 	ntag "MEDIUM:"
 	text "You and I,"
-	line "our #MON"
-	line "shall fight!"
+	line "our #MON shall"
+	cont "fight!"
 	done
 
 MediumStellaBeatenText:

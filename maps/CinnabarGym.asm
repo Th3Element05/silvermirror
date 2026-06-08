@@ -133,7 +133,12 @@ ReceivedVolcanobadgeText:
 
 BlaineVolcanobadgeText:
 	ntag "BLAINE:"
-	text "Hah!"
+	text "The VOLCANOBADGE"
+	line "proves that you"
+	cont "can handle a hot"
+	roll "#MON battle!"
+
+	para "Hah!"
 
 	para "Here, you can"
 	line "have this too!"

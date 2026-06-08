@@ -84,7 +84,7 @@ BrockIntroText:
 
 	para "That's why my"
 	line "#MON are all"
-	cont "the rock-type!"
+	cont "the ROCK-type!"
 
 	para "Do you still want"
 	line "to challenge me?"
@@ -116,7 +116,13 @@ BrockBoulderbadgeText:
 ;	para "The technique"
 ;	line "FLASH can now be"
 ;	cont "used any time!"
-	
+
+	para "Stronger #MON"
+	line "will obey your"
+	cont "commands without"
+	roll "question when you"
+	cont "have more BADGEs."
+
 	para "There are all"
 	line "kinds of trainers"
 	cont "in the world!"

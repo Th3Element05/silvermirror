@@ -22,6 +22,11 @@ PewterNidoranHouseManText:
 	cont "unskilled trainer"
 	roll "in battle!"
 
+	para "The more BADGEs"
+	line "you have, higher"
+	cont "level #MON will"
+	roll "obey you."
+
 	para "If only we had"
 	line "some BADGES…"
 	done
