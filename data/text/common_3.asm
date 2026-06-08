@@ -452,10 +452,11 @@ _EvolvedIntoText::
 ;	text "!"
 ;	done
 	text "Congratulations!"
-	line "@"
+
+	para "@"
 	text_ram wStringBuffer2
 	text " evolved"
-	cont "into @"
+	line "into @"
 	text_ram wStringBuffer1
 	text "!"
 	done
