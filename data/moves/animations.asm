@@ -2931,27 +2931,27 @@ BattleAnim_Waterfall:
 	anim_wait 4
 	anim_clearobjs
 	anim_bgeffect BATTLE_BG_EFFECT_SHOW_MON, $0, BG_EFFECT_USER, $0
-	anim_sound 0, 1, SFX_LICK
+	anim_sound 0, 1, SFX_UNKNOWN_63 ;SFX_LICK
 	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 136, 56, $0
 	anim_obj BATTLE_ANIM_OBJ_BUBBLE_SPLASH, 140, 56, $d0
 	anim_obj BATTLE_ANIM_OBJ_BUBBLE_SPLASH, 140, 56, $50
-	anim_wait 3
-	anim_sound 0, 1, SFX_LICK
+	anim_wait 4
+	anim_sound 0, 1, SFX_UNKNOWN_63 ;SFX_LICK
 	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 136, 48, $0
 	anim_obj BATTLE_ANIM_OBJ_BUBBLE_SPLASH, 140, 48, $d0
 	anim_obj BATTLE_ANIM_OBJ_BUBBLE_SPLASH, 140, 48, $50
-	anim_wait 3
-	anim_sound 0, 1, SFX_LICK
+	anim_wait 4
+	anim_sound 0, 1, SFX_UNKNOWN_63 ;SFX_LICK
 	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 136, 40, $0
 	anim_obj BATTLE_ANIM_OBJ_BUBBLE_SPLASH, 140, 40, $d0
 	anim_obj BATTLE_ANIM_OBJ_BUBBLE_SPLASH, 140, 40, $50
-	anim_wait 3
-	anim_sound 0, 1, SFX_LICK
+	anim_wait 4
+	anim_sound 0, 1, SFX_UNKNOWN_63 ;SFX_LICK
 	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 136, 32, $0
 	anim_obj BATTLE_ANIM_OBJ_BUBBLE_SPLASH, 140, 32, $d0
 	anim_obj BATTLE_ANIM_OBJ_BUBBLE_SPLASH, 140, 32, $50
-	anim_wait 3
-	anim_sound 0, 1, SFX_LICK
+	anim_wait 4
+	anim_sound 0, 1, SFX_UNKNOWN_63 ;SFX_LICK
 	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 136, 24, $0
 	anim_obj BATTLE_ANIM_OBJ_BUBBLE_SPLASH, 140, 24, $d0
 	anim_obj BATTLE_ANIM_OBJ_BUBBLE_SPLASH, 140, 24, $50
@@ -3573,27 +3573,27 @@ BattleAnim_AquaTail:
 	anim_wait 4
 	anim_clearobjs
 	anim_bgeffect BATTLE_BG_EFFECT_SHOW_MON, $0, BG_EFFECT_USER, $0
-	anim_sound 0, 1, SFX_LICK
+	anim_sound 0, 1, SFX_UNKNOWN_63
 	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 136, 24, $0
 	anim_obj BATTLE_ANIM_OBJ_BUBBLE_SPLASH, 140, 24, $d0
 	anim_obj BATTLE_ANIM_OBJ_BUBBLE_SPLASH, 140, 24, $50
-	anim_wait 3
-	anim_sound 0, 1, SFX_LICK
+	anim_wait 6
+	anim_sound 0, 1, SFX_UNKNOWN_63
 	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 136, 32, $0
 	anim_obj BATTLE_ANIM_OBJ_BUBBLE_SPLASH, 140, 32, $d0
 	anim_obj BATTLE_ANIM_OBJ_BUBBLE_SPLASH, 140, 32, $50
-	anim_wait 3
-	anim_sound 0, 1, SFX_LICK
+	anim_wait 5
+	anim_sound 0, 1, SFX_UNKNOWN_63
 	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 136, 40, $0
 	anim_obj BATTLE_ANIM_OBJ_BUBBLE_SPLASH, 140, 40, $d0
 	anim_obj BATTLE_ANIM_OBJ_BUBBLE_SPLASH, 140, 40, $50
-	anim_wait 3
-	anim_sound 0, 1, SFX_LICK
+	anim_wait 4
+	anim_sound 0, 1, SFX_UNKNOWN_63
 	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 136, 48, $0
 	anim_obj BATTLE_ANIM_OBJ_BUBBLE_SPLASH, 140, 48, $d0
 	anim_obj BATTLE_ANIM_OBJ_BUBBLE_SPLASH, 140, 48, $50
 	anim_wait 3
-	anim_sound 0, 1, SFX_LICK
+	anim_sound 0, 1, SFX_UNKNOWN_63
 	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 136, 56, $0
 	anim_obj BATTLE_ANIM_OBJ_BUBBLE_SPLASH, 140, 56, $d0
 	anim_obj BATTLE_ANIM_OBJ_BUBBLE_SPLASH, 140, 56, $50
