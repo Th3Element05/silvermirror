@@ -166,11 +166,6 @@ PewterMuseum1F_Scientist_TakeTheAmberText:
 	para "Take this to a"
 	line "#MON LAB and"
 	cont "get it examined!"
-
-	para "I hear there is a"
-	line "good team of"
-	cont "researchers on"
-	roll "CINNABAR ISLAND!"
 	done
 
 PewterMuseum1F_CinnabarIslandText:

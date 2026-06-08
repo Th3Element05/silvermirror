@@ -132,7 +132,7 @@ KurtsSonsHouse1FKurtsSon:
 	writetext KurtsSonsHouse1F_StartRightAwayText
 	waitbutton
 	closetext
-	turnobject LAST_TALKED, LEFT
+	turnobject LAST_TALKED, RIGHT
 	appear KURTSSONSHOUSE1F_APRICORN_BALL
 	end
 
@@ -212,7 +212,7 @@ KurtsSonsHouse1FKurtsSon:
 	writetext KurtsSonsHouse1FKurtsSon_StillWorking
 	waitbutton
 	closetext
-	turnobject LAST_TALKED, DOWN
+	turnobject LAST_TALKED, RIGHT
 	end
 
 .HelpUsFirst:

@@ -147,7 +147,7 @@ SilphCo11FReceptionist:
 SilphCo11FReceptionistText:
 	ntag "SECRETARY:"
 	text "Thank you for"
-	cont "saving all of us!"
+	line "saving all of us!"
 
 	para "We admire your"
 	line "courage."

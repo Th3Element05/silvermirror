@@ -226,7 +226,7 @@ SaffronMagnetTrainStationGymGuideText1:
 
 SaffronMagnetTrainStationGymGuideText2A:
 	ntag "MAN:"
-	para "They need to"
+	text "They need to"
 	line "perform regular"
 	cont "maintainance to"
 	roll "keep everything"
