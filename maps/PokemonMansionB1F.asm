@@ -99,18 +99,32 @@ PokemonMansionB1FBlaineText:
 	para "<……>"
 
 	para "I see, you are a"
-	line "#MON trianer!"
+	line "#MON trainer!"
 
 	para "I am BLAINE! I"
 	line "am the LEADER of"
 	cont "CINNABAR GYM!"
 
-	para "I came here to see"
-	line "what I could find"
-	cont "out about the dis-"
-	roll "aster that caused"
-	cont "the scientists to"
-	roll "abandon the lab."
+;	para "I wanted to find"
+;	line "out more about the"
+;	cont "disaster that made"
+;	roll "them abandon this"
+;	cont "mansion."
+
+	para "I've been curious"
+	line "about what caused"
+	cont "this mansion to"
+	roll "be abandoned."
+
+;	para "It appears that"
+;	line "something terrible"
+;	cont "happened in this"
+;	roll "old lab."
+
+	para "This basement lab"
+	line "appears to have"
+	cont "been the cause of"
+	roll "some disaster…"
 
 	para "But so much has"
 	line "been looted, there"
@@ -241,8 +255,8 @@ TrainerBurglarCorey:
 
 BurglarCoreySeenText:
 	ntag "BURGLAR:"
-	text "Uh-oh. Where am"
-	line "I now?"
+	text "Uh-oh."
+	line "Where am I now?"
 	done
 
 BurglarCoreyBeatenText:
@@ -323,4 +337,4 @@ PokemonMansionB1F_MapEvents:
 	object_event  5,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PokemonMansionB1FTMSolarbeam, EVENT_POKEMON_MANSION_B1F_TM_SOLARBEAM
 	object_event  1, 22, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PokemonMansionB1FFullRestore, EVENT_POKEMON_MANSION_B1F_FULL_RESTORE
 	object_event 19, 25, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PokemonMansionB1FTMBlizzard, EVENT_POKEMON_MANSION_B1F_TM_BLIZZARD
-	object_event 16, 20, SPRITE_POKEDEX, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PokemonMansionB1FDiary, -1
+	object_event 16, 20, SPRITE_POKEDEX, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, PokemonMansionB1FDiary, -1

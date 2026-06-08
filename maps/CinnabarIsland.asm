@@ -36,7 +36,7 @@ CinnabarGymDoorLockedText:
 	para "There's a note!"
 
 	para "I've gone to the"
-	line "abandoned lab to"
+	line "old mansion to"
 	cont "investigate some-"
 	roll "thing.    -BLAINE"
 	done
@@ -55,7 +55,7 @@ CinnabarIslandGramps:
 	jumptextfaceplayer CinnabarIslandGrampsText
 CinnabarIslandGrampsText:
 	ntag "GRAMPS:"
-	text "The old laboratory"
+	text "This old mansion"
 	line "was abandoned"
 	cont "because of some"
 	roll "disaster."
@@ -64,7 +64,7 @@ CinnabarIslandGrampsText:
 CinnabarIslandLabSign:
 	jumptext CinnabarIslandLabSignText
 CinnabarIslandLabSignText:
-	text "#MON LAB"
+	text "#MON MANSION"
 	done
 
 CinnabarIslandSign:
@@ -131,7 +131,7 @@ CinnabarIsland_MapEvents:
 	coord_event 21, 11, SCENE_CINNABARISLAND_MISSINGNO, CinnabarIslandMissingNoScript
 
 	def_bg_events
-	bg_event 11,  7, BGEVENT_READ, CinnabarIslandSign
+	bg_event 13,  5, BGEVENT_READ, CinnabarIslandSign
 	bg_event 17,  5, BGEVENT_READ, CinnabarIslandGymSign
 	bg_event 12, 13, BGEVENT_READ, CinnabarIslandPokecenterSign
 	bg_event 16, 13, BGEVENT_READ, CinnabarIslandMartSign
