@@ -7,7 +7,7 @@ OakPhoneCalleeScript:
 	checkevent EVENT_OAK_CALLED_ABOUT_RADIO_TOWER
 	iftrue .RemindRadioTower
 	checkevent EVENT_RADIO_TOWER_4F_OAK
-	iftrue .OakBusy
+	iffalse .OakBusy
 	checkevent EVENT_OAK_CALLED_ABOUT_VIRIDIAN_GYM
 	iftrue .RemindViridianGym
 	checkevent EVENT_OAK_CALLED_ABOUT_SILPHCO
