@@ -21,7 +21,7 @@ NPCTrades:
 ; twin, vermilion magnet train speech house
 	npctrade TRADE_DIALOGSET_GENERIC,   SPEAROW,    FARFETCH_D, "DUX@@@@@@@@", $9e, $ee, STICK,        45087, "ELYSSA@@@@@", TRADE_GENDER_EITHER
 ; scientist, cinnabar lab fossil room
-	npctrade TRADE_DIALOGSET_GENERIC,   DITTO,      DITTO,      "MORPH@@@@@@", $ea, $aa, METAL_POWDER, 19643, "JIM@@@@@@@@", TRADE_GENDER_EITHER
+	npctrade TRADE_DIALOGSET_GENERIC,   DITTO,      DITTO,      "MORPH@@@@@@", $ee, $ee, METAL_POWDER, 19643, "JIM@@@@@@@@", TRADE_GENDER_EITHER
 ; gramps, cinnabar lab
 	npctrade TRADE_DIALOGSET_HAPPY,     GROWLITHE,  CHANSEY,    "DORIS@@@@@@", $7e, $ee, LUCKY_PUNCH,  82415, "CLIFTON@@@@", TRADE_GENDER_EITHER
 ; beauty, cinnabar lab
