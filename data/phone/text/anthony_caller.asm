@@ -11,7 +11,7 @@ AnthonyMonAteSomeBerriesText:
 	para "It looked like it"
 	line "was enjoying them,"
 	cont "so I decided to"
-	line "try some."
+	roll "try some."
 
 	para "I'm not sure if"
 	line "people should eat"
