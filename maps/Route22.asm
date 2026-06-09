@@ -4,13 +4,15 @@
 Route22_MapScripts:
 	def_scene_scripts
 	scene_script Route22Noop1Scene, SCENE_ROUTE22_NOOP
-	scene_script Route22Noop2Scene, SCENE_ROUTE22_RIVAL
+	scene_script Route22Noop2Scene, SCENE_ROUTE22_RIVAL_1
+	scene_script Route22Noop3Scene, SCENE_ROUTE22_RIVAL_2
 
 	def_callbacks
 
 ; scene scripts
 Route22Noop1Scene:
 Route22Noop2Scene:
+Route22Noop3Scene:
 	end
 
 ; scripts
@@ -21,8 +23,8 @@ Route22RivalBattleLow:
 	pause 20
 	appear ROUTE22_RIVAL
 	applymovement ROUTE22_RIVAL, Route22RivalApproachMovement
-	readvar VAR_BADGES
-	ifgreater 7, FinalRivalBattleScript
+;	readvar VAR_BADGES
+;	ifgreater 7, FinalRivalBattleScript
 	opentext
 	writetext Route22RivalBeforeBattleText1
 	waitbutton
@@ -71,7 +73,50 @@ Route22RivalGoesAroundScript:
 	applymovement ROUTE22_RIVAL, Route22RivalUnderMovement
 	end
 
-FinalRivalBattleScript:
+Route22RivalApproachMovement:
+	slow_step RIGHT
+	slow_step RIGHT
+	slow_step RIGHT
+	slow_step RIGHT
+	step_end
+
+Route22RivalOverMovement:
+	slow_step UP
+	slow_step RIGHT
+	slow_step RIGHT
+	slow_step RIGHT
+	slow_step DOWN
+	slow_step DOWN
+	step_end
+
+Route22RivalUnderMovement:
+	slow_step DOWN
+	slow_step RIGHT
+	slow_step RIGHT
+	slow_step RIGHT
+	step_end
+
+Route22RivalLeavesMovement1:
+	slow_step DOWN
+	slow_step DOWN
+	slow_step DOWN
+	slow_step DOWN
+	step_end
+
+
+; rival before victory road
+Route22Rival2:
+	moveobject ROUTE22_RIVAL, 16, 10
+	playmusic MUSIC_RIVAL_ENCOUNTER
+	pause 20
+	appear ROUTE22_RIVAL
+	applymovement ROUTE22_RIVAL, Route22Rival2ApproachMovement
+	follow PLAYER, ROUTE22_RIVAL
+	applymovement PLAYER, Route22PlayerStepsLeftMovement
+	stopfollow
+	turnobject PLAYER, RIGHT
+	turnobject ROUTE22_RIVAL, LEFT
+;FinalRivalBattleScript:
 	opentext
 	writetext Route22RivalBeforeBattleText2
 	waitbutton
@@ -103,50 +148,36 @@ FinalRivalBattleScript:
 	waitbutton
 	closetext
 	playmusic MUSIC_RIVAL_ENCOUNTER
-	applymovement ROUTE22_RIVAL, Route22RivalLeavesMovement2
+	turnobject PLAYER, UP
+	applymovement ROUTE22_RIVAL, Route22Rival2LeavesMovement
 	disappear ROUTE22_RIVAL
+	playsound SFX_ENTER_DOOR ;SFX_EXIT_BUILDING
+	waitsfx
 	setscene SCENE_ROUTE22_NOOP
 	special RestartMapMusic
 	end
 
-; movements
-Route22RivalApproachMovement:
-	slow_step RIGHT
-	slow_step RIGHT
-	slow_step RIGHT
-	slow_step RIGHT
+Route22Rival2ApproachMovement:
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step UP
 	step_end
 
-Route22RivalOverMovement:
+Route22PlayerStepsLeftMovement:
+	step LEFT
+	step_end
+
+Route22Rival2LeavesMovement:
 	slow_step UP
-	slow_step RIGHT
-	slow_step RIGHT
-	slow_step RIGHT
-	slow_step DOWN
-	slow_step DOWN
+	slow_step LEFT
+	slow_step UP
+	slow_step UP
 	step_end
 
-Route22RivalUnderMovement:
-	slow_step DOWN
-	slow_step RIGHT
-	slow_step RIGHT
-	slow_step RIGHT
-	step_end
-
-Route22RivalLeavesMovement1:
-	slow_step DOWN
-	slow_step DOWN
-	slow_step DOWN
-	slow_step DOWN
-	step_end
-
-Route22RivalLeavesMovement2:
-	slow_step LEFT
-	slow_step LEFT
-	slow_step LEFT
-	slow_step LEFT
-	slow_step LEFT
-	step_end
 
 ; npc text
 Route22RivalBeforeBattleText1:
@@ -276,8 +307,9 @@ Route22_MapEvents:
 	warp_event 10, 15, ROUTE_26_GATE, 2
 
 	def_coord_events
-	coord_event 29,  4, SCENE_ROUTE22_RIVAL, Route22RivalBattleHigh
-	coord_event 29,  5, SCENE_ROUTE22_RIVAL, Route22RivalBattleLow
+	coord_event 29,  4, SCENE_ROUTE22_RIVAL_1, Route22RivalBattleHigh
+	coord_event 29,  5, SCENE_ROUTE22_RIVAL_1, Route22RivalBattleLow
+	coord_event 10,  8, SCENE_ROUTE22_RIVAL_2, Route22RivalBattle2
 
 	def_bg_events
 	bg_event 11,  7, BGEVENT_READ, VictoryRoadEntranceSign

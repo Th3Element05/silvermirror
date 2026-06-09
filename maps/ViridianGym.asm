@@ -35,7 +35,7 @@ ViridianGymGiovanniScript:
 	promptbutton
 	writetext GiovanniEarthbadgeText
 	promptbutton
-	setmapscene ROUTE_22, SCENE_ROUTE22_RIVAL
+	setmapscene ROUTE_22, SCENE_ROUTE22_RIVAL_2
 	; fallthrough
 .FightDone:
 	checkevent EVENT_GOT_TM27_FISSURE
