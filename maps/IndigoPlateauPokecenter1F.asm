@@ -269,8 +269,8 @@ IndigoPlateauPokecenter1F_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  7, 11, ROUTE_23, 1
-	warp_event  8, 11, ROUTE_23, 2
+	warp_event  7, 11, ROUTE_23_NORTH, 1
+	warp_event  8, 11, ROUTE_23_NORTH, 2
 	warp_event  7,  0, E4_LORELEIS_ROOM, 1
 	warp_event  8,  0, E4_LORELEIS_ROOM, 2
 

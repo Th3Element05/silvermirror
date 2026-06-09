@@ -143,8 +143,8 @@ VictoryRoadGate_MapEvents:
 	warp_event 15, 15, ROUTE_22, 1
 	warp_event  2,  7, ROUTE_28, 1
 	warp_event  3,  7, ROUTE_28, 1
-	warp_event 14,  0, ROUTE_23, 6
-	warp_event 15,  0, ROUTE_23, 7
+	warp_event 14,  0, ROUTE_23, 2
+	warp_event 15,  0, ROUTE_23, 3
 
 	def_coord_events
 	coord_event 14,  9, SCENE_VICTORYROADGATE_BADGE_CHECK, VictoryRoadGateBadgeCheckScript

@@ -23,7 +23,7 @@ SpawnPoints:
 	spawn FUCHSIA_CITY,               17, 28
 	spawn SAFFRON_CITY,                9, 30
 	spawn CINNABAR_ISLAND,            11, 14
-	spawn ROUTE_23,                    9,  6
+	spawn ROUTE_23_NORTH,              9,  6
 
 	spawn NEW_BARK_TOWN,               6,  5 ;13,  6
 	spawn CHERRYGROVE_CITY,           29,  4

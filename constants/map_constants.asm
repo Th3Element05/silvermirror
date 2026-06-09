@@ -247,18 +247,19 @@ ENDM
 
 	newgroup INDIGO                                               ; 13
 	map_const VICTORY_ROAD_GATE,                           10,  8 ;  1
-	map_const ROUTE_23,                                    10, 37 ;  2
-	map_const INDIGO_PLATEAU_POKECENTER_1F,                 9,  6 ;  3
-	map_const E4_LORELEIS_ROOM,                             5,  9 ;  4
-	map_const E4_BRUNOS_ROOM,                               5,  9 ;  5
-	map_const E4_AGATHAS_ROOM,                              5,  9 ;  6
-	map_const E4_LANCES_ROOM,                               5, 11 ;  7
+	map_const ROUTE_23,                                    10, 30 ;  2
+	map_const ROUTE_23_NORTH,                              10,  9 ;  3
+	map_const INDIGO_PLATEAU_POKECENTER_1F,                 9,  6 ;  4
+	map_const E4_LORELEIS_ROOM,                             5,  9 ;  5
+	map_const E4_BRUNOS_ROOM,                               5,  9 ;  6
+	map_const E4_AGATHAS_ROOM,                              5,  9 ;  7
+	map_const E4_LANCES_ROOM,                               5, 11 ;  8
 	map_const HALL_OF_FAME,                                 5,  5 ;  9
-	map_const ROUTE_26,                                    10, 52 ;  1
-	map_const ROUTE_26_GATE,                                4,  4 ;  2
-	map_const ROUTE_26_HEAL_HOUSE,                          4,  4 ;  3
-	map_const DAY_OF_WEEK_SIBLINGS_HOUSE,                   4,  4 ;  4
-	map_const ROUTE_27_EAST,                               26,  9 ;  5
+	map_const ROUTE_26,                                    10, 52 ; 10
+	map_const ROUTE_26_GATE,                                4,  4 ; 11
+	map_const ROUTE_26_HEAL_HOUSE,                          4,  4 ; 12
+	map_const DAY_OF_WEEK_SIBLINGS_HOUSE,                   4,  4 ; 13
+	map_const ROUTE_27_EAST,                               26,  9 ; 14
 	endgroup
 
 	newgroup NEW_BARK                                             ; 15

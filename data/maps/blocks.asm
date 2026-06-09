@@ -1043,6 +1043,9 @@ VictoryRoad3F_Blocks:
 Route23_Blocks:
 	INCBIN "maps/Route23.blk"
 
+Route23North_Blocks:
+	INCBIN "maps/Route23North.blk"
+
 GoldenrodFlowerShop_Blocks:
 	INCBIN "maps/GoldenrodFlowerShop.blk"
 

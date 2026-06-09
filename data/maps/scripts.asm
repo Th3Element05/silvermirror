@@ -330,6 +330,7 @@ SECTION "Map Scripts 24", ROMX
 INCLUDE "maps/Route22.asm"
 INCLUDE "maps/VictoryRoadGate.asm"
 INCLUDE "maps/Route23.asm"
+INCLUDE "maps/Route23North.asm"
 INCLUDE "maps/VictoryRoad1F.asm"
 INCLUDE "maps/VictoryRoad2F.asm"
 INCLUDE "maps/VictoryRoad3F.asm"

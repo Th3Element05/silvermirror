@@ -415,8 +415,12 @@ ENDM
 	connection north, Route10, ROUTE_10, 0
 	connection south, LavenderTown, LAVENDER_TOWN, 0
 
-	map_attributes Route23, ROUTE_23, $2c, SOUTH ; $0f, 0
+	map_attributes Route23, ROUTE_23, $2c, NORTH | SOUTH
+	connection north, Route23North, ROUTE_23_NORTH, 0
 	connection south, Route22, ROUTE_22, 0
+
+	map_attributes Route23North, ROUTE_23_NORTH, $2c, SOUTH
+	connection south, Route23, ROUTE_23, 0
 
 	map_attributes SproutTower1F, SPROUT_TOWER_1F, $00, 0
 	map_attributes SproutTower2F3F, SPROUT_TOWER_2F_3F, $00, 0

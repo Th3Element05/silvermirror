@@ -26,12 +26,12 @@ VictoryRoad1FSetUpStoneTableCallback:
 	db -1 ; end
 
 .Boulder1
-;	pause 20
-	playsound SFX_PUSH_BUTTON
+;	pause 10
 	disappear VICTORYROAD1F_BOULDER
 	changeblock 20, 16, $4e ; rock
 ;	reloadmappart
-;	waitsfx
+	playsound SFX_PUSH_BUTTON
+	waitsfx
 	opentext
 	writetext VictoryRoad1FPushedSwitchText
 	waitbutton
@@ -106,9 +106,9 @@ CooltrainerFLoisAfterBattleText:
 VictoryRoad1FGateSign:
 	jumptext VictoryRoad1FGateSignText
 VictoryRoad1FGateSignText:
-	text "Prove your"
-	line "STRENGTH and the"
-	cont "path shall open."
+	text "Show your STRENGTH"
+	line "and the path shall"
+	cont "open."
 	done
 
 VictoryRoad1FButtonSign:
@@ -133,7 +133,7 @@ VictoryRoad1F_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 11, 21, ROUTE_23, 5 ;1
+	warp_event  9, 21, ROUTE_23, 1 ;1
 	warp_event  5,  5, VICTORY_ROAD_2F, 1 ;2
 	warp_event 21, 17, VICTORY_ROAD_1F, 3 ;3 button
 

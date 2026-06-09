@@ -28,12 +28,12 @@ VictoryRoad3FSetUpStoneTableCallback:
 	db -1 ; end
 
 .Boulder1
-;	pause 20
-	playsound SFX_PUSH_BUTTON
+;	pause 10
 	disappear VICTORYROAD1F_BOULDER
 	changeblock 2, 12, $4e ; rock
 ;	reloadmappart
-;	waitsfx
+	playsound SFX_PUSH_BUTTON
+	waitsfx
 	opentext
 	writetext VictoryRoad3FPushedSwitchText
 	waitbutton
@@ -215,7 +215,7 @@ VictoryRoad3F_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 23,  5, ROUTE_23, 3 ;1
+	warp_event 23,  5, ROUTE_23_NORTH, 3 ;1
 	warp_event  5,  5, VICTORY_ROAD_2F, 2 ;2
 	warp_event 21, 11, VICTORY_ROAD_2F, 3 ;3
 	warp_event 27, 17, VICTORY_ROAD_2F, 4 ;4

@@ -46,12 +46,12 @@ VictoryRoad2FSetUpStoneTableCallback:
 	db -1 ; end
 
 .Boulder1
-;	pause 20
-	playsound SFX_PUSH_BUTTON
+;	pause 10
 	disappear VICTORYROAD2F_BOULDER1
 	changeblock 0, 20, $4f ; statue rock
 ;	reloadmappart
-;	waitsfx
+	playsound SFX_PUSH_BUTTON
+	waitsfx
 	opentext
 	writetext VictoryRoad2FPushedSwitchText
 	waitbutton
@@ -63,12 +63,12 @@ VictoryRoad2FSetUpStoneTableCallback:
 	end
 
 .Boulder2
-;	pause 20
-	playsound SFX_PUSH_BUTTON
+;	pause 10
 	disappear VICTORYROAD2F_BOULDER2
 	changeblock 8, 22, $4f ; statue rock
 ;	reloadmappart
-;	waitsfx
+	playsound SFX_PUSH_BUTTON
+	waitsfx
 	opentext
 	writetext VictoryRoad2FPushedSwitchText
 	waitbutton
