@@ -42,20 +42,22 @@ ClefairyDance:
 	appear MOUNTMOONSQUARE_FAIRY2
 	follow MOUNTMOONSQUARE_FAIRY1, MOUNTMOONSQUARE_FAIRY2
 	applymovement MOUNTMOONSQUARE_FAIRY1, MountMoonSquareDanceEntrance
+	stopfollow
 	cry CLEFAIRY
 	waitsfx
 	pause 30
 	applymovement MOUNTMOONSQUARE_FAIRY1, MountMoonSquareDanceSpin
+	follow MOUNTMOONSQUARE_FAIRY1, MOUNTMOONSQUARE_FAIRY2
 	applymovement MOUNTMOONSQUARE_FAIRY1, MountMoonSquareDanceDown
 	cry CLEFAIRY
 	applymovement MOUNTMOONSQUARE_FAIRY1, MountMoonSquareDanceSpin
-	applymovement MOUNTMOONSQUARE_FAIRY1, MountMoonSquareDanceLeft
+	applymovement MOUNTMOONSQUARE_FAIRY1, MountMoonSquareDanceRight
 	cry CLEFAIRY
 	applymovement MOUNTMOONSQUARE_FAIRY1, MountMoonSquareDanceSpin
 	applymovement MOUNTMOONSQUARE_FAIRY1, MountMoonSquareDanceUp
 	cry CLEFAIRY
 	applymovement MOUNTMOONSQUARE_FAIRY1, MountMoonSquareDanceSpin
-	applymovement MOUNTMOONSQUARE_FAIRY1, MountMoonSquareDanceRight
+	applymovement MOUNTMOONSQUARE_FAIRY1, MountMoonSquareDanceLeft
 	cry CLEFAIRY
 	applymovement MOUNTMOONSQUARE_FAIRY1, MountMoonSquareDanceSpin
 	applymovement MOUNTMOONSQUARE_FAIRY1, MountMoonSquareDanceDown
