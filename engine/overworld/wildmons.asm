@@ -957,10 +957,16 @@ UpdateRoamMons:
 
 .UpdateKanto:
 	ld hl, RoamMapsKanto
+	call Random
+	and %00011111 ; 1/8n chance it moves to a completely random map, where n is the number of roaming connections from the current map.
+	jp z, JumpRoamMonKanto
 	jr .loop
 
 .Update:
 	ld hl, RoamMaps
+	call Random
+	and %00011111 ; 1/8n chance it moves to a completely random map, where n is the number of roaming connections from the current map.
+	jp z, JumpRoamMon
 .loop
 ; Are we at the end of the table?
 	ld a, [hl]
@@ -991,8 +997,8 @@ UpdateRoamMons:
 	ld l, e
 ; Choose which map to warp to.
 	call Random
-	and %00011111 ; 1/8n chance it moves to a completely random map, where n is the number of roaming connections from the current map.
-	jr z, JumpRoamMon
+;	and %00011111 ; 1/8n chance it moves to a completely random map, where n is the number of roaming connections from the current map.
+;	jr z, JumpRoamMon
 	and %11
 	cp [hl]
 	jr nc, .update_loop ; invalid index, try again
