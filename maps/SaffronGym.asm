@@ -265,8 +265,8 @@ PsychicFranklinBeatenText:
 PsychicFranklinAfterBattleText:
 	ntag "PSYCHIC:"
 	text "Psychic #MON"
-	line "fear only ghosts"
-	cont "and bugs!"
+	line "fear only GHOST"
+	cont "and BUG-types!"
 	done
 
 TrainerMediumNaomi:
@@ -426,9 +426,9 @@ SaffronGymGuideText:
 	line "use psychic power"
 	cont "instead of force!"
 
-	para "Fighting #MON"
+	para "FIGHTING-types"
 	line "are weak against"
-	cont "psychic #MON!"
+	cont "PSYCHIC #MON!"
 
 	para "They get creamed"
 	line "before they can"
@@ -613,6 +613,6 @@ SaffronGym_MapEvents:
 	object_event 17,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 2, TrainerPsychicHerman, -1
 	object_event  3, 15, SPRITE_GRANNY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerMediumStella, -1
 	object_event 17, 15, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 2, TrainerPsychicGreg, -1
-	object_event  9, 14, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronGymGuideScript, -1
+	object_event  9, 14, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, SaffronGymGuideScript, -1
 ;
 	object_event 10,  8, SPRITE_SABRINA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronGymSabrinaRematchScript, EVENT_KANTO_LEADER_REMATCHES

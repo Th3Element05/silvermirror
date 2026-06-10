@@ -299,7 +299,7 @@ BlackbeltLaoBeatenText:
 
 BlackbeltLaoAfterText:
 	ntag "BLACKBELT:"
-	text "Fighting #MON"
+	text "FIGHTING-types"
 	line "are afraid of"
 	cont "psychics…"
 	done
@@ -329,7 +329,7 @@ CianwoodGymGuideText:
 
 	para "So you should"
 	line "confound him with"
-	cont "psychic #MON."
+	cont "PSYCHIC #MON."
 
 	para "Wipe out his #-"
 	line "MON before they"
@@ -428,7 +428,7 @@ CianwoodGym_MapEvents:
 	def_object_events
 	object_event  4,  1, SPRITE_CHUCK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CianwoodGymChuckScript, EVENT_JOHTO_GYM_LEADERS
 	object_event  5,  1, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodGymBoulder, -1
-	object_event  7, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CianwoodGymGuideScript, -1
+	object_event  7, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, CianwoodGymGuideScript, -1
 	object_event  4, 13, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GymClosedBlackbeltScript, EVENT_ROUTE_42_BOULDERS_CLEARED
 	object_event  5, 13, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GymClosedBlackbeltScript, EVENT_ROUTE_42_BOULDERS_CLEARED
 	object_event  2, 12, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBlackbeltLee, EVENT_CIANWOOD_GYM_TRAINERS ;nob

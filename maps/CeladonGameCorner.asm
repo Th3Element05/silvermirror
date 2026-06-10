@@ -204,7 +204,7 @@ CeladonGameCornerGymGuideText:
 
 	para "CELADON GYM's"
 	line "LEADER is ERIKA!"
-	cont "She uses grass-"
+	cont "She uses GRASS-"
 	roll "type #MON!"
 
 	para "She might appear"
@@ -765,7 +765,7 @@ CeladonGameCorner_MapEvents:
 	object_event  2,  9, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, EVE, 0, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerBeautyScript, -1
 	object_event  5,  7, SPRITE_FISHING_GURU, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerFishingGuruScript, -1
 	object_event  8,  7, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, DAY, 0, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerPokefanFScript, -1
-	object_event  8, 10, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerGymGuideScript, -1
+	object_event  8, 10, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerGymGuideScript, -1
 	object_event 11, 11, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerGrampsScript, -1
 	object_event 14,  7, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerFisherScript, -1
 	object_event 17,  9, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerGentlemanScript, -1

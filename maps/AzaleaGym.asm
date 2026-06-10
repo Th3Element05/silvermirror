@@ -65,13 +65,13 @@ BugsyText_INeverLose:
 	text "I'm BUGSY!"
 
 	para "I never lose when"
-	line "it comes to bug"
+	line "it comes to BUG"
 	cont "#MON."
 
 	para "My research is"
 	line "going to make me"
 	cont "the authority on"
-	roll "bug #MON!"
+	roll "BUG #MON!"
 
 	para "Let me demonstrate"
 	line "what I've learned"
@@ -118,7 +118,7 @@ BugsyText_FuryCutterSpeech:
 
 BugsyText_BugMonsAreDeep:
 	ntag "BUGSY:"
-	text "Bug #MON have"
+	text "BUG #MON have"
 	line "many mysteries to"
 	cont "explore."
 
@@ -166,7 +166,7 @@ TrainerBugCatcherFinley:
 
 BugCatcherFinleySeenText:
 	ntag "BUGCATCHER:"
-	text "Bug #MON evolve"
+	text "BUG #MON evolve"
 	line "young. So they get"
 	cont "stronger quickly!"
 	done
@@ -196,7 +196,7 @@ TrainerBugCatcherJon:
 
 BugCatcherJonSeenText:
 	ntag "BUGCATCHER:"
-	text "Bug #MON are"
+	text "BUG #MON are"
 	line "cool and tough!"
 
 	para "I'll prove it to"
@@ -213,7 +213,7 @@ BugCatcherJonAfterBattleText:
 	ntag "BUGCATCHER:"
 	text "They're so cool,"
 	line "but most girls"
-	cont "don't like bug"
+	cont "don't like BUG"
 	roll "#MON."
 
 	para "I don't know why…"
@@ -264,7 +264,7 @@ TwinsMegAndPeg1AfterBattleText:
 
 TwinsMegAndPeg2AfterBattleText:
 	ntag "TWIN:"
-	text "Our precious bug"
+	text "Our precious BUG"
 	line "#MON lost!"
 	cont "What a shame."
 	done
@@ -292,10 +292,10 @@ AzaleaGymGuideText:
 
 	para "BUGSY's young, but"
 	line "his knowledge of"
-	cont "bug #MON is for"
+	cont "BUG #MON is for"
 	roll "real."
 
-	para "Remember… Bug"
+	para "Remember… BUG"
 	line "#MON don't like"
 	cont "fire."
 
@@ -400,6 +400,6 @@ AzaleaGym_MapEvents:
 	object_event  1,  8, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherJon, -1 ;al
 	object_event  4, 10, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 1, TrainerTwinsMegAndPeg1, -1 ;amyandmay
 	object_event  5, 10, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 1, TrainerTwinsMegAndPeg2, -1 ;amyandmay
-	object_event  7, 13, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AzaleaGymGuideScript, -1
+	object_event  7, 13, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, AzaleaGymGuideScript, -1
 ;
 	object_event  5,  7, SPRITE_BUGSY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AzaleaGymBugsyRematchScript, EVENT_JOHTO_LEADER_REMATCHES

@@ -109,7 +109,7 @@ FalknerZephyrBadgeText:
 FalknerTMMudSlapText:
 	ntag "FALKNER:"
 	text "SKY ATTACK is the"
-	line "strongest flying-"
+	line "strongest FLYING-"
 	cont "type attack!"
 
 	para "Enegy is stored"
@@ -333,6 +333,6 @@ VioletGym_MapEvents:
 	object_event  5,  2, SPRITE_FALKNER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, VioletGymFalknerScript, EVENT_JOHTO_GYM_LEADERS
 	object_event  7,  6, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 2, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperRick, -1 ;rod
 	object_event  2, 10, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_RIGHT, 2, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperLucas, -1 ;abe
-	object_event  7, 13, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VioletGymGuideScript, -1
+	object_event  7, 13, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, VioletGymGuideScript, -1
 ;
 	object_event  5,  2, SPRITE_FALKNER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, VioletGymFalknerRematchScript, EVENT_JOHTO_LEADER_REMATCHES

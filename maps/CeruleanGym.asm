@@ -223,11 +223,11 @@ CeruleanGymGuideText:
 
 	para "The LEADER, MISTY,"
 	line "is a pro who uses"
-	cont "water #MON!"
+	cont "WATER #MON!"
 
 	para "You can drain all"
 	line "their water with"
-	cont "plant #MON!"
+	cont "GRASS #MON!"
 
 	para "Or, zap them with"
 	line "electricity!"
@@ -376,6 +376,6 @@ CeruleanGym_MapEvents:
 	object_event  4,  3, SPRITE_MISTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeruleanGymMistyScript, EVENT_BEAT_ELITE_FOUR
 	object_event  8,  9, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSwimmerMHarold, -1
 	object_event  2,  4, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerPicnickerSophia, -1
-	object_event  7, 12, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanGymGuideScript, -1
+	object_event  7, 12, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, CeruleanGymGuideScript, -1
 ;
 	object_event  4,  3, SPRITE_MISTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeruleanGymMistyRematchScript, EVENT_KANTO_LEADER_REMATCHES

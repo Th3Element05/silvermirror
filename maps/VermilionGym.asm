@@ -134,7 +134,7 @@ LtSurgeIntroText:
 	cont "That's for sure!"
 
 	para "I tell you kid,"
-	line "electric #MON"
+	line "ELECTRIC #MON"
 	cont "saved me during"
 	roll "the war!"
 
@@ -182,7 +182,7 @@ SurgeExplainTMText:
 	line "SPARK!"
 
 	para "Teach it to an"
-	line "electric #MON!"
+	line "ELECTRIC #MON!"
 	done
 
 LtSurgeAfterBattleText:
@@ -194,7 +194,7 @@ LtSurgeAfterBattleText:
 	line "sure powerful!"
 
 	para "But, it's useless"
-	line "against ground-"
+	line "against GROUND-"
 	cont "type #MON!"
 	done
 
@@ -324,11 +324,11 @@ VermilionGymGuideText:
 	roll "Lightning Warrior!"
 
 	para "He's an expert on"
-	line "electric #MON!"
+	line "ELECTRIC #MON!"
 
-	para "Birds and water"
-	line "#MON are at"
-	cont "risk! Beware of"
+	para "FLYING and WATER-"
+	line "type #MON are"
+	cont "at risk! Beware of"
 	roll "paralysis too!"
 
 	para "LT.SURGE is very"
@@ -531,6 +531,6 @@ VermilionGym_MapEvents:
 	object_event  9,  6, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_TRAINER, 3, TrainerGentlemanMilton, -1
 	object_event  3,  8, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerGuitaristClyde, -1
 	object_event  0, 10, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSailorKenneth, -1
-	object_event  7, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, VermilionGymGuideScript, -1
+	object_event  7, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 1, VermilionGymGuideScript, -1
 ;
 	object_event  5,  2, SPRITE_SURGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionGymSurgeRematchScript, EVENT_KANTO_LEADER_REMATCHES

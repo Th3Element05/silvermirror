@@ -149,7 +149,7 @@ BlaineExplainTMText:
 	text "TM38 contains"
 	line "FIRE BLAST!"
 
-	para "Teach it to fire-"
+	para "Teach it to FIRE-"
 	line "type #MON!"
 	done
 
@@ -160,7 +160,7 @@ BlaineAfterBattleText:
 	cont "technique!"
 
 	para "Don't waste it on"
-	line "water #MON!"
+	line "WATER #MON!"
 	done
 
 CinnabarQuizMachine1:
@@ -553,7 +553,7 @@ TrainerFirebreatherRay: ; quiz 3
 FirebreatherRaySeenText:
 	ntag "FIREBREATHER:"
 	text "I just like using"
-	line "fire #MON!"
+	line "FIRE #MON!"
 	done
 
 FirebreatherRayBeatenText:
@@ -565,7 +565,7 @@ FirebreatherRayBeatenText:
 FirebreatherRayAfterBattleText:
 	ntag "FIREBREATHER:"
 	text "I just don't like"
-	line "water #MON!"
+	line "WATER #MON!"
 	done
 
 TrainerSuperNerdCary: ; quiz 4
@@ -658,7 +658,7 @@ FirebreatherEvanBeatenText:
 
 FirebreatherEvanAfterBattleText:
 	ntag "FIREBREATHER:"
-	text "Us fire #MON"
+	text "Us FIRE #MON"
 	line "fans like PONYTA"
 	cont "and NINETALES!"
 	done
@@ -705,7 +705,7 @@ SuperNerdMarkusAfterBattleText:
 	ntag "SUPERNERD:"
 	text "Water beats fire!"
 	line "But, fire melts"
-	cont "ice #MON!"
+	cont "ICE #MON!"
 	done
 
 TrainerSuperNerdTeru:
@@ -765,7 +765,7 @@ CinnabarGymGuideText:
 	line "making!"
 
 	para "The hot-headed"
-	line "BLAINE is a fire"
+	line "BLAINE is a FIRE"
 	cont "#MON pro!"
 
 	para "Douse his spirits"
@@ -922,6 +922,6 @@ CinnabarGym_MapEvents:
 	object_event  2,  9, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, TrainerSuperNerdMarkus, -1
 	object_event 20,  2, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_TRAINER, 2, TrainerSuperNerdTeru, -1
 	object_event  3,  3, SPRITE_BLAINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarGymBlaineScript, EVENT_BEAT_ELITE_FOUR
-	object_event 19, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarGymGuideScript, -1
+	object_event 19, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, CinnabarGymGuideScript, -1
 ;
 	object_event  3,  3, SPRITE_BLAINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarGymBlaineRematchScript, EVENT_KANTO_LEADER_REMATCHES
