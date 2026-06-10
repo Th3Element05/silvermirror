@@ -413,23 +413,23 @@ LoadStatsScreenPals:
 	cp $7f ;$7e ; first half of pink page color
 	jr nz, .notpinkpage
 
-	; if we're here, we're on the pink page
-	; set slot 4 (the "text" slot) of Pal 7 to WHITE (FFFF or 7FFF)
-	; pal 6 too, status condition, if slot 2 of pal 6 isnt white
-	; if it is white, means we are "OK", and dont change slot 4 of pal 6
+;	; if we're here, we're on the pink page
+;	; set slot 4 (the "text" slot) of Pal 7 to WHITE (FFFF or 7FFF)
+;	; pal 6 too, status condition, if slot 2 of pal 6 isnt white
+;	; if it is white, means we are "OK", and dont change slot 4 of pal 6
 	ld a, $FF ; loading white into slot 4 of pal 6 and 7, checking pal 6 after
 	ld [wBGPals1 palette 7 + 6], a ; slot 4 of Palette 7, byte 1
 	ld [wBGPals1 palette 7 + 7], a ; slot 4 of palette 7, byte 2
-	ld [wBGPals1 palette 6 + 6], a ; slot 4 of palette 6, byte 1
-	ld [wBGPals1 palette 6 + 7], a ; slot 4 of palette 6, byte 2
+;	ld [wBGPals1 palette 6 + 6], a ; slot 4 of palette 6, byte 1
+;	ld [wBGPals1 palette 6 + 7], a ; slot 4 of palette 6, byte 2
 
-	; check if $7F $FF is loaded into pal 6 + 2, means we are "OK" and need black in slot 4 of pal 6
-	ld a, [wBGPals1 palette 6 + 2] ; pal 6 slot 2 byte 1
-	cp $FF ; white color by default will be $7FFF but $ff will be read first
-	jr nz, .done
-	ld a, [wBGPals1 palette 6 + 3] ; pal 6 slot 2 byte 1
-	cp $7F
-	jr nz, .done
+;	; check if $7F $FF is loaded into pal 6 + 2, means we are "OK" and need black in slot 4 of pal 6
+;	ld a, [wBGPals1 palette 6 + 2] ; pal 6 slot 2 byte 1
+;	cp $FF ; white color by default will be $7FFF but $ff will be read first
+;	jr nz, .done
+;	ld a, [wBGPals1 palette 6 + 3] ; pal 6 slot 2 byte 1
+;	cp $7F
+;	jr nz, .done
 	xor a ; loading black into slot 4 of pal 6
 	ld [wBGPals1 palette 6 + 6], a
 	ld [wBGPals1 palette 6 + 7], a
@@ -1783,14 +1783,20 @@ LoadPlayerStatusIconPalette:
 ;	; done loading white color directly into slot 4 of pal 6
 ;.phase2 
 	ld hl, StatusIconPals
+	ld a, d
 	ld c, d
 	ld b, 0
 	add hl, bc ; pointers are 2 bytes long, so double the index to point at the right color
 	add hl, bc
+	cp $6
+	jr z, .fainted
 	ld de, wBGPals1 palette 6 + 2 ; slot 2 of pal 6
 	ld bc, 2 ; number of bytes of the color, 2 bytes per slot
 	jp FarCopyColorWRAM
-
+.fainted
+	ld de, wBGPals1 palette 6 + 4 ; slot 3 of pal 6
+	ld bc, 2 ; number of bytes of the color, 2 bytes per slot
+	jp FarCopyColorWRAM
 
 LoadEnemyBattleCGBLayoutStatusIconPalette:
 	ld bc, 0	
