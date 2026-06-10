@@ -105,7 +105,7 @@ Route22RivalLeavesMovement1:
 
 
 ; rival before victory road
-Route22Rival2:
+Route22RivalBattle2:
 	moveobject ROUTE22_RIVAL, 16, 10
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	pause 20
