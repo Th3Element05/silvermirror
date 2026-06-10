@@ -382,7 +382,7 @@ TrainerBugCatcherDylan:
 
 BugCatcherDylanSeenText:
 	ntag "BUGCATCHER:"
-	text "Instead of a bug"
+	text "Instead of a BUG"
 	line "#MON, I found"
 	cont "a trainer!"
 	done

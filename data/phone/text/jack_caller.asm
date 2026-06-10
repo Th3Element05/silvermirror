@@ -127,8 +127,8 @@ JackMagnitudeTriviaText:
 JackSandstormTriviaText:
 	text "Did you know…?"
 
-	para "The rock, ground"
-	line "and steel types"
+	para "The ROCK, GROUND,"
+	line "and STEEL-types"
 	cont "can't be hurt by"
 	roll "SANDSTORM."
 	done

@@ -70,7 +70,7 @@ TrainerCooltrainermAxel:
 CooltrainermAxelSeenText:
 	ntag "COOLTRAINER:"
 	text "It's not as if we"
-	line "only use dragon-"
+	line "only use DRAGON-"
 	cont "type #MON."
 	done
 
@@ -83,8 +83,8 @@ CooltrainermAxelBeatenText:
 CooltrainermAxelAfterBattleText:
 	ntag "COOLTRAINER:"
 	text "Members of the"
-	line "dragon-clan can"
-	cont "only train dragon"
+	line "Dragon Clan can"
+	cont "only train DRAGON"
 	roll "#MON after our"
 	cont "MASTER allows it."
 	done

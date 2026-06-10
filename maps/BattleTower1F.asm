@@ -777,11 +777,11 @@ Text_BattleTowerBugCatcher:
 	ntag "BUGCATCHER:"
 	text "I'm trying to see"
 	line "how far I can go"
-	cont "using just bug"
+	cont "using just BUG"
 	roll "#MON."
 ;
 ;	para "Don't let there be"
-;	line "any fire #MON…"
+;	line "any FIRE #MON…"
 	done
 
 BattleTower1F_MapEvents:

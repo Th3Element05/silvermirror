@@ -498,7 +498,7 @@ Route36NationalParkGateOfficer1AskToParticipateText:
 
 	para "Using one of your"
 	line "#MON, catch a"
-	cont "bug #MON to be"
+	cont "BUG #MON to be"
 	roll "judged."
 
 	para "Would you like to"
@@ -521,7 +521,7 @@ Route36NationalParkGateOfficer1ExplainsRulesText:
 	ntag "OFFICER:"
 	text "The person who"
 	line "gets the strong-"
-	cont "est bug #MON"
+	cont "est BUG #MON"
 	roll "is the winner."
 
 	para "You have {d:BUG_CONTEST_MINUTES}"
@@ -536,7 +536,7 @@ Route36NationalParkGateOfficer1ExplainsRulesText:
 	cont "catch as your own."
 
 	para "Go out and catch"
-	line "the strongest bug"
+	line "the strongest BUG"
 	cont "#MON you can"
 	roll "find!"
 	done
@@ -612,7 +612,7 @@ Route36NationalParkGateOfficer1MakeRoomText:
 	roll "are full."
 
 	para "You have no room"
-	line "to put the bug"
+	line "to put the BUG"
 	cont "#MON you catch."
 
 	para "Please make room"
@@ -759,7 +759,7 @@ BugCatchingContestant6BStillCompetingText:
 	ntag "BARRY:"
 	text "It's easier to"
 	line "win if you get a"
-	cont "high-level bug"
+	cont "high-level BUG"
 	roll "#MON."
 
 	para "But I think they"
@@ -773,13 +773,13 @@ BugCatchingContestant7BText:
 	line "That's great!"
 
 	para "Do you feel like"
-	line "looking for bug"
+	line "looking for BUG"
 	cont "#MON with me?"
 	done
 
 BugCatchingContestant7BStillCompetingText:
 	ntag "CINDY:"
-	text "I really love bug"
+	text "I really love BUG"
 	line "#MON!"
 	done
 
@@ -848,7 +848,7 @@ BugCatchingContestant10BStillCompetingText:
 ;	line "earn a prize just"
 ;	cont "for participating,"
 ;	roll "you also get to"
-;	cont "keep the last bug"
+;	cont "keep the last BUG"
 ;	roll "#MON you may have"
 ;	cont "caught during the"
 ;	roll "contest!"

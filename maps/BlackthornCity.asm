@@ -273,7 +273,7 @@ BlackthornGymSignText:
 	cont "LEADER: CLAIR"
 
 	para "The Blessed User"
-	line "of Dragon #MON"
+	line "of DRAGON #MON"
 	done
 
 BlackthornMovesHouseSign:

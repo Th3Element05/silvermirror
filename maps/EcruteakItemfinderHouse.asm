@@ -118,7 +118,7 @@ EcruteakTwoTowersText:
 
 	para "Each tower was the"
 	line "roost of powerful"
-	cont "flying #MON."
+	cont "#MON."
 
 	para "But one of the"
 	line "towers burned to"

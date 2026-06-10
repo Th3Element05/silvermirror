@@ -223,7 +223,7 @@ TrainerLassCora:
 LassCoraSeenText:
 	ntag "LASS:"
 	text "Don't bring any"
-	line "bugs or fire"
+	line "BUG or FIRE"
 	cont "#MON in here!"
 	done
 
@@ -249,7 +249,7 @@ TrainerBeautySteph:
 
 BeautyStephSeenText:
 	ntag "BEAUTY:"
-	text "Look at my grass"
+	text "Look at my GRASS"
 	line "#MON!"
 
 	para "They're so easy"
@@ -263,7 +263,7 @@ BeautyStephBeatenText:
 
 BeautyStephAfterBattleText:
 	ntag "BEAUTY:"
-	text "We only use grass-"
+	text "We only use GRASS-"
 	line "type #MON at"
 	cont "our GYM!"
 

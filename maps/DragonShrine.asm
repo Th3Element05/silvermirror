@@ -447,7 +447,7 @@ DragonShrineElder1Script:
 
 DragonShrineSymbolicDragonText:
 	ntag "ELDER:"
-	text "Dragon #MON are"
+	text "DRAGON #MON are"
 	line "symbolic of our"
 	cont "clan."
 
@@ -459,7 +459,7 @@ DragonShrineSymbolicDragonText:
 
 DragonShrineElderAfterFailedText:
 	ntag "ELDER:"
-	text "Dragon #MON are"
+	text "DRAGON #MON are"
 	line "symbolic of our"
 	cont "clan."
 

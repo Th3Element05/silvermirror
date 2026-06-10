@@ -226,7 +226,7 @@ TrainerBugCatcherDon:
 
 BugCatcherDonSeenText:
 	ntag "BUGCATCHER:"
-	text "Go, my super bug"
+	text "Go, my super BUG"
 	line "#MON!"
 	done
 
@@ -238,7 +238,7 @@ BugCatcherDonBeatenText:
 BugCatcherDonAfterBattleText:
 	ntag "BUGCATCHER:"
 	text "If you don't like"
-	line "bug #MON, you"
+	line "BUG #MON, you"
 	cont "bug me!"
 	done
 

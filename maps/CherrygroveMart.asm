@@ -54,7 +54,7 @@ CherrygroveMartYoungsterText:
 	ntag "YOUNGSTER:"
 	text "When I was walking"
 	line "in the grass, a"
-	cont "bug #MON poi-"
+	cont "BUG #MON poi-"
 	roll "soned my #MON!"
 
 	para "I just kept going,"

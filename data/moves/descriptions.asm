@@ -700,14 +700,14 @@ HydroPumpDescription:
 	db   "Foe is blasted by"
 	feed "a huge volume of"
 	feed "pressurized water.@"
-;	db   "A powerful water-"
+;	db   "A powerful WATER-"
 ;	next "type attack.@"
 
 SurfDescription:
 	db   "Summons a giant"
 	feed "wave to sweep the"
 	feed "battlefield.@"
-;	db   "A strong water-"
+;	db   "A strong WATER-"
 ;	next "type attack.@"
 
 IceBeamDescription:

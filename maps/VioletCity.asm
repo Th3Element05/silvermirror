@@ -192,10 +192,6 @@ VioletCityLassText:
 	line "that ghosts appear"
 	cont "in SPROUT TOWER"
 	roll "at night!"
-
-	para "They say NORMAL-"
-	line "type attacks don't"
-	cont "effect ghosts."
 	done
 
 VioletCityGrampsScript:
@@ -257,7 +253,7 @@ VioletGymSignText:
 	cont "LEADER: FALKNER"
 
 	para "The Elegant Master"
-	line "of Flying #MON"
+	line "of FLYING #MON"
 	done
 
 SproutTowerSign:

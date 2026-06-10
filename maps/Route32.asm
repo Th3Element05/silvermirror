@@ -79,7 +79,7 @@ Route32_MapScripts:
 ;
 ;	para "You'll be shocked"
 ;	line "how good it makes"
-;	cont "poison moves!"
+;	cont "POISON moves!"
 ;	done
 
 ;FriedaFridayText:

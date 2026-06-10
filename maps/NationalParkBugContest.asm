@@ -67,7 +67,7 @@ BugCatchingContestant6AScript:
 BugCatchingContestant6AText:
 	ntag "BARRY:"
 	text "You should weaken"
-	line "bug #MON first,"
+	line "BUG #MON first,"
 	cont "then throw a BALL."
 	done
 
@@ -87,7 +87,7 @@ BugCatchingContestant8AScript:
 BugCatchingContestant8AText:
 	ntag "JOSH:"
 	text "I've been collect-"
-	line "ing bug #MON"
+	line "ing BUG #MON"
 	cont "since forever."
 
 	para "There's no way I'm"
@@ -107,7 +107,7 @@ BugCatchingContestant10AScript:
 	jumptextfaceplayer BugCatchingContestant10AText
 BugCatchingContestant10AText:
 	ntag "KIPP:"
-	text "I've studied bug"
+	text "I've studied BUG"
 	line "#MON a lot."
 
 	para "I'm going to win"

@@ -252,7 +252,7 @@ BugCatcherRobBeatenText:
 BugCatcherRobAfterBattleText:
 	ntag "ROB:"
 	text "I'm going to look"
-	line "for stronger bug"
+	line "for stronger BUG"
 	cont "#MON."
 	done
 

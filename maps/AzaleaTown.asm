@@ -185,7 +185,7 @@ AzaleaGymSignText:
 	cont "LEADER: BUGSY"
 
 	para "The Walking"
-	line "Bug #MON"
+	line "BUG #MON"
 	cont "Encyclopedia"
 	done
 

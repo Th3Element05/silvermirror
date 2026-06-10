@@ -235,7 +235,7 @@ Route35NationalParkGatePlayerEnterParkMovement:
 ;
 ;	para "Using one of your"
 ;	line "#MON, catch a"
-;	cont "bug #MON to be"
+;	cont "BUG #MON to be"
 ;	roll "judged."
 ;
 ;	para "Would you like to"
@@ -256,7 +256,7 @@ Route35NationalParkGatePlayerEnterParkMovement:
 ;Route35NationalParkGateOfficer1ExplainsRulesText:
 ;	text "The person who"
 ;	line "gets the strong-"
-;	cont "est bug #MON"
+;	cont "est BUG #MON"
 ;	roll "is the winner."
 ;
 ;	para "You have {d:BUG_CONTEST_MINUTES}"
@@ -271,7 +271,7 @@ Route35NationalParkGatePlayerEnterParkMovement:
 ;	cont "catch as your own."
 ;
 ;	para "Go out and catch"
-;	line "the strongest bug"
+;	line "the strongest BUG"
 ;	cont "#MON you can"
 ;	roll "find!"
 ;	done
@@ -337,7 +337,7 @@ Route35NationalParkGatePlayerEnterParkMovement:
 ;	roll "are full."
 ;
 ;	para "You have no room"
-;	line "to put the bug"
+;	line "to put the BUG"
 ;	cont "#MON you catch."
 ;
 ;	para "Please make room"
@@ -420,7 +420,7 @@ BugCatchingContestExplanationText:
 	line "earn a prize just"
 	cont "for participating,"
 	roll "you also get to"
-	cont "keep the last bug"
+	cont "keep the last BUG"
 	roll "#MON you may have"
 	cont "caught during the"
 	roll "contest!"
@@ -430,7 +430,7 @@ BugCatchingContestExplanationText:
 ;	line "earn a prize just"
 ;	cont "for participating,"
 ;	roll "you also get to"
-;	cont "keep the bug"
+;	cont "keep the BUG"
 ;	roll "#MON you may"
 ;	cont "have at the end of"
 ;	roll "the contest."

@@ -304,7 +304,7 @@ SaffronGymSignText:
 	cont "LEADER: SABRINA"
 
 	para "The Master of"
-	line "Psychic #MON!"
+	line "PSYCHIC #MON!"
 	done
 
 FightingDojoSign:

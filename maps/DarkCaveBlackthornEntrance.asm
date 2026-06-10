@@ -47,7 +47,7 @@ DarkCaveBlackthornEntrancePharmacistText1:
 DarkCaveBlackthornEntrancePharmacistText2:
 	ntag "???:"
 	text "BLACKGLASSES ups"
-	line "the power of dark-"
+	line "the power of DARK-"
 	cont "type moves."
 	done
 

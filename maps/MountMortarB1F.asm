@@ -80,7 +80,7 @@ MountMortarB1FTyrogueRewardText:
 	para "As proof that you"
 	line "defeated me, I'll"
 	cont "give you a rare"
-	roll "fighting #MON."
+	roll "FIGHTING #MON."
 	done
 
 MountMortarB1FReceiveMonText:

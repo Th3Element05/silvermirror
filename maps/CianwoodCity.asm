@@ -103,8 +103,8 @@ CianwoodCityLassText:
 	ntag "LASS:"
 	text "CHUCK, the GYM"
 	line "LEADER, spars with"
-	cont "his fighting #-"
-	roll "MON."
+	cont "his FIGHTING-type"
+	roll "#MON."
 	done
 
 CianwoodCitySign:

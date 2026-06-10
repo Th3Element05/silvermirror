@@ -30,8 +30,8 @@ CooltrainerMJakeAfterBattleText:
 	ntag "COOLTRAINER:"
 	text "The shrine ahead"
 	line "is home to the"
-	cont "MASTERs of our"
-	roll "dragon-user clan."
+	cont "MASTERs of the"
+	roll "Dragon Clan."
 
 	para "You're not allowed"
 	line "to just go in!"
@@ -124,7 +124,7 @@ DragonShrineSignpostText:
 	text "DRAGON SHRINE"
 
 	para "A shrine honoring"
-	line "the dragon #MON"
+	line "the DRAGON #MON"
 	cont "said to have lived"
 	roll "in DRAGON's DEN."
 	done

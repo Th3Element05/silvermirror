@@ -106,7 +106,7 @@ OlivineLighthouse3F_MapScripts:
 
 ;GentlemanPrestonAfterBattleText:
 ;	text "JASMINE used to"
-;	line "use rock #MON"
+;	line "use ROCK #MON"
 ;	cont "like ONIX."
 ;	done
 

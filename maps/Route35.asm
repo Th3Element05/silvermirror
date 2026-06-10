@@ -124,7 +124,7 @@ TrainerBugCatcherDarin:
 BugCatcherDarinSeenText:
 	ntag "BUGCATCHER:"
 	text "I'll go anywhere"
-	line "if bug #MON"
+	line "if BUG #MON"
 	cont "appear there."
 	done
 

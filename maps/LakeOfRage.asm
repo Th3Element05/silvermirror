@@ -79,7 +79,7 @@ LakeOfRageFlypointCallback:
 ;WesleyGaveGiftText:
 ;	text "WESLEY: BLACKBELT"
 ;	line "beefs up the power"
-;	cont "of fighting moves."
+;	cont "of FIGHTING moves."
 ;	done
 
 ;WesleyWednesdayText:

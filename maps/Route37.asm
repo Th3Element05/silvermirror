@@ -153,14 +153,14 @@ Route37_NoFruit:
 ;	line "now!"
 ;
 ;	para "A #MON that"
-;	line "knows electric"
+;	line "knows ELECTRIC"
 ;
 ;	para "moves should hold"
 ;	line "it."
 ;
 ;	para "My sis MONICA said"
 ;	line "it powers up"
-;	cont "electric moves!"
+;	cont "ELECTRIC moves!"
 ;	done
 
 ;SunnySundayText:

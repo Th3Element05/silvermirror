@@ -96,11 +96,11 @@ Route36_NoFruit:
 
 ;ArthurGaveGiftText:
 ;	text "ARTHUR: A #MON"
-;	line "that uses rock-"
+;	line "that uses ROCK-"
 ;	cont "type moves should"
 ;	roll "hold on to that."
 ;
-;	para "It pumps up rock-"
+;	para "It pumps up ROCK-"
 ;	line "type attacks."
 ;	done
 
