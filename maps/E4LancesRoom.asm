@@ -333,7 +333,7 @@ LanceBattleWinText:
 	text "That's it!"
 
 	para "<PLAYER>, you are"
-	cont "a #MON master!"
+	line "a #MON master!"
 	done
 
 LanceBattleAfterText_1:

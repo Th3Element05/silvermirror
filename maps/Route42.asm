@@ -288,8 +288,8 @@ HikerAnthonyBeatenText:
 
 HikerAnthonyAfterBattleText:
 	ntag "ANTHONY:"
-	text "Losing feels"
-	line "insignificant when"
+	text "Losing feels less"
+	line "significant when"
 	cont "you look up at the"
 	roll "big sky!"
 	done

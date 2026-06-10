@@ -25,8 +25,8 @@ CianwoodPokecenter1FSuperNerdScript:
 CianwoodPokecenter1FSuperNerdText:
 	ntag "SUPERNERD:"
 	text "I love showing off"
-	line "the #MON that I've"
-	cont "raised."
+	line "the #MON that"
+	cont "I've raised."
 
 	para "Don't you?"
 

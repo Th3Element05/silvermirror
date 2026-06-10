@@ -324,8 +324,8 @@ CianwoodGymGuideScript:
 CianwoodGymGuideText:
 	ntag "GUIDE:"
 	text "The GYM LEADER"
-	cont "here uses the"
-	roll "FIGHTING-type."
+	line "here uses the"
+	cont "FIGHTING-type."
 
 	para "So you should"
 	line "confound him with"
