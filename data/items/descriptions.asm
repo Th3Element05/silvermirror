@@ -146,11 +146,11 @@ ItemDescriptions:
 	dw SacredAshDesc
 	dw HeavyBallDesc
 	dw LevelBallDesc
-	dw LureBallDesc
+	dw NetBallDesc ;LureBallDesc
 	dw FastBallDesc
 	dw LightBallDesc
 	dw FriendBallDesc
-	dw MoonBallDesc
+	dw DuskBallDesc ;MoonBallDesc
 	dw LoveBallDesc
 	dw NormalBoxDesc
 	dw GorgeousBoxDesc
@@ -271,26 +271,34 @@ ItemDescriptions:
 ;	assert_table_length NUM_ITEMS + NUM_TMS + NUM_HMS + 1 ; count ITEM_FF
 
 MasterBallDesc:
-	db   "The best BALL."
-	next "It never fails.@"
+;	db   "The best BALL."
+;	next "It never fails.@"
+	db   "Catches any #-"
+	next "MON without fail.@"
 
 UltraBallDesc:
-	db   "A BALL with a high"
-	next "rate of success.@"
+;	db   "A BALL with a high"
+;	next "rate of success.@"
+	db   "#BALL with a high"
+	next "catch rate.@"
 
 BrightpowderDesc:
 	db   "Lowers the foe's"
 	next "accuracy. (HOLD)@"
 
 GreatBallDesc:
-	db   "A BALL with a good"
-	next "rate of success.@"
+;	db   "A BALL with a good"
+;	next "rate of success.@"
+	db   "#BALL with a good"
+	next "catch rate.@"
 
 PokeBallDesc:
-	db   "Standard BALL for"
-	next "catching #MON.@"
 ;	db   "An item for catch-"
 ;	next "ing #MON.@"
+;	db   "Standard BALL for"
+;	next "catching #MON.@"
+	db   "Standard #BALL."
+	next "Normal catch rate.@"
 
 TownMapDesc:
 	db   "A map of the local"
@@ -506,21 +514,23 @@ ExpShareDesc:
 	next "in battle. (HOLD)@"
 
 OldRodDesc:
-	db   "Use by water to"
+GoodRodDesc:
+SuperRodDesc:
+	db   "Use near water to"
 	next "fish for #MON.@"
 
-GoodRodDesc:
-	db   "A good ROD for"
-	next "catching #MON.@"
+;GoodRodDesc:
+;	db   "A good ROD for"
+;	next "catching #MON.@"
 
 SilverLeafDesc:
 	db   "A strange, silver-"
 	next "colored leaf.@"
 
-SuperRodDesc:
+;SuperRodDesc:
 ;SuperRod2Desc:
-	db   "The best ROD for"
-	next "catching #MON.@"
+;	db   "The best ROD for"
+;	next "catching #MON.@"
 
 PPUpDesc:
 	db   "Raises max PP of"
@@ -589,11 +599,11 @@ GoldLeafDesc:
 	next "colored leaf.@"
 
 SoftSandDesc:
-	db   "Powers up ground-"
+	db   "Powers up GROUND-"
 	next "type moves. (HOLD)@"
 
 SharpBeakDesc:
-	db   "Powers up flying-"
+	db   "Powers up FLYING-"
 	next "type moves. (HOLD)@"
 
 CheriBerryDesc:
@@ -609,7 +619,7 @@ RawstBerryDesc:
 	next "burn. (HOLD)@"
 
 PoisonBarbDesc:
-	db   "Powers up poison-"
+	db   "Powers up POISON-"
 	next "type moves. (HOLD)@"
 
 KingsRockDesc:
@@ -666,18 +676,18 @@ CleanseTagDesc:
 	next "#MON. (HOLD)@"
 
 MysticWaterDesc:
-	db   "Powers up water-"
+	db   "Powers up WATER-"
 	next "type moves. (HOLD)@"
 
 TwistedSpoonDesc:
-	db   "Powers up psychic-"
+	db   "Powers up PSYCHIC-"
 	next "type moves. (HOLD)@"
 
 WhtApricornDesc:
 	db   "A white APRICORN.@"
 
 BlackbeltDesc:
-	db   "Boosts fighting-"
+	db   "Boosts FIGHTING-"
 	next "type moves. (HOLD)@"
 
 BlkApricornDesc:
@@ -687,7 +697,7 @@ PnkApricornDesc:
 	db   "A pink APRICORN.@"
 
 BlackGlassesDesc:
-	db   "Powers up dark-"
+	db   "Powers up DARK-"
 	next "type moves. (HOLD)@"
 
 ;SlowpokeTailDesc:
@@ -698,7 +708,7 @@ GoldTeethDesc:
 	next "false teeth.@"
 
 SilkScarfDesc:
-	db   "Powers up normal-"
+	db   "Powers up NORMAL-"
 	next "type moves. (HOLD)@"
 
 StickDesc:
@@ -716,7 +726,7 @@ NeverMeltIceDesc:
 	next "moves. (HOLD)@"
 
 MagnetDesc:
-	db   "Boosts electric-"
+	db   "Boosts ELECTRIC-"
 	next "type moves. (HOLD)@"
 
 LumBerryDesc:
@@ -738,7 +748,7 @@ EverStoneDesc:
 ;	next "(HOLD)@"
 
 SpellTagDesc:
-	db   "Powers up ghost-"
+	db   "Powers up GHOST-"
 	next "type moves. (HOLD)@"
 
 ;RageCandyBarDesc:
@@ -756,7 +766,7 @@ BlueCardDesc:
 	next "points.@"
 
 MiracleSeedDesc:
-	db   "Powers up grass-"
+	db   "Powers up GRASS-"
 	next "type moves. (HOLD)@"
 
 ThickClubDesc:
@@ -786,7 +796,7 @@ RevivalHerbDesc:
 	next "#MON. Bitter.@"
 
 HardStoneDesc:
-	db   "Powers up rock-"
+	db   "Powers up ROCK-"
 	next "type moves. (HOLD)@"
 
 LuckyEggDesc:
@@ -807,8 +817,10 @@ BikeVoucherDesc:
 	next "at BIKE SHOP.@"
 
 EggTicketDesc:
-	db   "May use at Golden-"
-	next "rod trade corner.@"
+;	db   "May use at Golden-"
+;	next "rod trade corner.@"
+	db   "A ticket stub that"
+	next "can be tossed.@"
 
 ;LostItemDesc:
 ;	db   "The #DOLL lost"
@@ -838,11 +850,11 @@ PassDesc:
 ;	next "MAGNET TRAIN.@"
 
 SafariBallDesc:
-	db   "The BALL used in"
+	db   "#BALL used in"
 	next "the SAFARI ZONE.@"
 
 CharcoalDesc:
-	db   "Powers up fire-"
+	db   "Powers up FIRE-"
 	next "type moves. (HOLD)@"
 
 BerryJuiceDesc:
@@ -855,11 +867,11 @@ RazorClawDesc:
 	next "hit ratio. (HOLD)@"
 
 ;MetalCoatDesc:
-;	db   "Powers up steel-"
+;	db   "Powers up STEEL-"
 ;	next "type moves. (HOLD)@"
 
 DragonFangDesc:
-	db   "Powers up dragon-"
+	db   "Powers up DRAGON-"
 	next "type moves. (HOLD)@"
 
 LeftoversDesc:
@@ -885,20 +897,29 @@ SacredAshDesc:
 	next "fainted #MON.@"
 
 HeavyBallDesc:
-	db   "A BALL for catch-"
-	next "ing heavy #MON.@"
+;	db   "A BALL for catch-"
+;	next "ing heavy #MON.@"
+	db   "Good for catching"
+	next "heavy #MON.@"
 
 LevelBallDesc:
-	db   "A BALL for lower-"
-	next "level #MON.@"
+;	db   "A BALL for lower-"
+;	next "level #MON.@"
+	db   "Good for catching"
+	next "low-level #MON.@"
 
-LureBallDesc:
-	db   "A BALL for #MON"
-	next "hooked by a ROD.@"
+;LureBallDesc:
+;	db   "A BALL for #MON"
+;	next "hooked by a ROD.@"
+NetBallDesc:
+	db   "Good for WATER- or"
+	next "BUG-type #MON.@"
 
 FastBallDesc:
-	db   "A BALL for catch-"
-	next "ing fast #MON.@"
+;	db   "A BALL for catch-"
+;	next "ing fast #MON.@"
+	db   "Good for catching"
+	next "fast #MON.@"
 
 LightBallDesc:
 	db   "Boosts PIKACHU's"
@@ -908,9 +929,12 @@ FriendBallDesc:
 	db   "A BALL that makes"
 	next "#MON friendly.@"
 
-MoonBallDesc:
-	db   "A BALL for MOON"
-	next "STONE evolvers.@"
+;MoonBallDesc:
+;	db   "A BALL for MOON"
+;	next "STONE evolvers.@"
+DuskBallDesc:
+	db   "Good for catching"
+	next "#MON at NITE.@"
 
 LoveBallDesc:
 	db   "For catching the"
@@ -929,10 +953,10 @@ GorgeousBoxDesc:
 ;	next "kinds of #MON.@"
 
 ;PolkadotBowDesc:
-;	db   "Powers up normal-"
+;	db   "Powers up NORMAL-"
 ;	next "type moves. (HOLD)@"
 SteelIngotDesc:
-	db   "Powers up steel-"
+	db   "Powers up STEEL-"
 	next "type moves. (HOLD)@"
 
 UpGradeDesc:
@@ -953,7 +977,7 @@ SquirtBottleDesc:
 
 ParkBallDesc:
 	db   "The Bug-Catching"
-	next "Contest BALL.@"
+	next "Contest #BALL.@"
 
 RainbowWingDesc:
 	db   "A mystical feather"
@@ -971,7 +995,7 @@ FlowerMailDesc:
 	next "(HOLD)@"
 
 SuperRod2Desc:
-	db   "The best ROD with"
+	db   "A fishing rod with"
 	next "a special lure.@"
 ;	db   "There is a special"
 ;	next "lure on this ROD.@"

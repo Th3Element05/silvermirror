@@ -258,8 +258,7 @@ CeladonCityTrainerTips2Text:
 	para "GUARD SPEC."
 	line "protects #MON"
 	cont "against SPECIAL"
-	roll "attacks such as"
-	cont "fire and water!"
+	roll "attacks!"
 
 	para "Get your items at"
 	line "CELADON DEPT."
