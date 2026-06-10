@@ -58,6 +58,7 @@
 
 DEF KANTO_LANDMARK EQU const_value	
 	const LANDMARK_ROUTE_10_NORTH    ; 
+; Route 10 North is outside of the loop
 	const LANDMARK_PALLET_TOWN       ; 33
 	const LANDMARK_ROUTE_1           ; 34
 	const LANDMARK_VIRIDIAN_CITY     ; 35
