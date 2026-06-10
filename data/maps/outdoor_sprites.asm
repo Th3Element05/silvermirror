@@ -237,9 +237,14 @@ FuchsiaGroupSprites:
 	;updated
 
 SilverGroupSprites:
-; Route26, Route27East, Route28, SilverCaveOutside
+;Route26, Route27East, Route28, SilverCaveOutside
+;MountMoonSquare         CLEFAIRY_MOVE, rock
+;TinTowerRoof            ho_oh
 	db SPRITE_OAK
-	; 1 of 9 max walking sprites
+	db SPRITE_CLEFAIRY_MOVE
+	; 2 of 9 max walking sprites
+	db SPRITE_HO_OH
+	db SPRITE_ROCK
 	db SPRITE_BERRY
 	db SPRITE_APRICORN
 	db SPRITE_POKE_BALL
@@ -411,21 +416,18 @@ DungeonsGroupSprites:
 ;NationalPark,           YOUNGSTER, LASS, POKEFAN_M, POKEFAN_F, BOY, teacher, meowth, pokeball
 ;NationalParkBugContest, YOUNGSTER, LASS, POKEFAN_M, BUG_CATCHER, cooltrainer_m, pokeball
 ;RuinsOfAlphOutside      YOUNGSTER, scientist
-;MountMoonSquare         CLEFAIRY_MOVE, rock
-;TinTowerRoof            ho_oh
+
 	db SPRITE_YOUNGSTER
 	db SPRITE_LASS
 	db SPRITE_POKEFAN_M
 	db SPRITE_POKEFAN_F
 	db SPRITE_BOY
 	db SPRITE_BUG_CATCHER
-	db SPRITE_CLEFAIRY_MOVE
-	; 7 of 9 max walking sprites
+	; 6 of 9 max walking sprites
 	db SPRITE_SCIENTIST
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_TEACHER
 	db SPRITE_MEOWTH
-	db SPRITE_HO_OH
 	db SPRITE_POKE_BALL
 	db SPRITE_ROCK
 	db 0 ; end
