@@ -1,3 +1,5 @@
+-3189145427106399875
+
 Documentation Notes
 Silver Mirror
 
@@ -10,10 +12,20 @@ ABCDEF screenshot celadon hotel pc
 
 
 
-safari rest house bookshelves
 
-test mr.fuji house give pokeflute script... repeat at end?
+route 37 one block taller (ecruteak shorter)
 
+johto gym guide color?
+
+
+search each type lowercase?
+
+
+computers in fossil room, silph, everywhere?
+
+TEST mr.fuji house give pokeflute script... repeat at end?
+TEST route 22 second rival battle
+TEST mount moon square clefairy dance
 
 CHECK
 can ROCKET_HIDEOUT landmark just be CELADON_CITY?
@@ -28,41 +40,34 @@ ss anne port ship "water" color at night is too green, doesn't match water
 
 test secret stairs after clearing ninja den
 
-can anything you catch before misty learn TM_WATER_GUN?
-at least anything that doesn't already know it via level up?
 
+
+pager order?
+rock slide too long?
+erika trainer pic
+bullet seed grass palette?
+air slice flying palette
+flash cannon animation?
+mareep color?
+hyper potion heal amount
+digglet icon
+golem back sprite
+charizard back sprite
+seadra back sprite
+misdreavus animation (eyes)
+stantler palette
+crobat backsprite
+
+horsea "dragon" (not type) in dex?
+horsea dex entry
 rhyhorn dex entry (newline > it)
 clefairy dex entry
 gastly dex entry (opponent > foe(s))
 machop dex entry (newline > It)
-mareep color?
-hyper potion heal amount
+seel dex entry
+grimer dex entry (-togther?)
+marill dex entry (It > new page)
 
-
-
-
-BROCK
-WIN	pidgey11,kakuna7,nidoranf9,charmander12,pikachu6
-
-RVIAL CERULEAN
-WIN	geodude15,nidoranf14,pidgey14,charmander18,zubat8
-
-MISTY
-LOST	zubat14,nidorina17,geodude18,charmander20,pidgey17,bellsprout16
-WIN	zubat14,nidorina17,geodude18,charmander20,pidgey17,bellsprout20
-
-LT.SURGE
-nidorano18,farfetchd12,weepinbell24,geodude21,zubat20,charmeleon25
-switches 1,7,1,1,12,2,10,7!
-
-RIVAL POKEMON TOWER
-???
-
-ERIKA
->	geodude25,farfetchd26,golbat26,mrmime26,weepinbell26,charmeleon30
-
-RIVAL SILPH
-LOST	geodude25,farfetchd28,golbat28,mrmime27,weepinbell27,charmeleon30
 
 
 
