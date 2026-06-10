@@ -39,25 +39,6 @@ Tileset0Anim:
 TilesetJohtoModernAnim:
 TilesetKantoAnim:
 TilesetPortAnim:
-;	dw vTiles2 tile $14, ReadTileToAnimBuffer
-;	dw NULL,  WaitTileAnimation
-;	dw NULL,  WaitTileAnimation
-;	dw wTileAnimBuffer, ScrollTileRightLeft
-;	dw NULL,  WaitTileAnimation
-;	dw NULL,  WaitTileAnimation
-;	dw vTiles2 tile $14, WriteTileFromAnimBuffer
-;	dw NULL,  WaitTileAnimation
-;	dw NULL,  WaitTileAnimation
-;	dw vTiles2 tile $64, AnimateFountainTile
-;	dw NULL,  WaitTileAnimation
-;	dw NULL,  WaitTileAnimation
-;	dw NULL,  AnimateWaterPalette
-;	dw NULL,  WaitTileAnimation
-;	dw NULL,  WaitTileAnimation
-;	dw NULL,  AnimateFlowerTile
-;	dw NULL,  WaitTileAnimation
-;	dw vTiles2 tile $74, AnimateWaterTile ;johto water animation
-;	dw NULL,  DoneTileAnimation
 	dw vTiles2 tile $14, ReadTileToAnimBuffer ;$14 water
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
@@ -81,8 +62,24 @@ TilesetPortAnim:
 	dw NULL,  AnimateFlowerTile
 	dw NULL,  WaitTileAnimation
 	dw vTiles2 tile $74, AnimateWaterTile ;$74 johto water
-;	dw NULL,  StandingTileFrame8
 	dw NULL,  DoneTileAnimation
+;
+;	dw vTiles2 tile $14, AnimateWavesTile ;$14 kanto water
+;	dw NULL,  WaitTileAnimation
+;	dw vTiles2 tile $6f, ReadTileToAnimBuffer
+;	dw wTileAnimBuffer, ScrollTileDown
+;	dw wTileAnimBuffer, ScrollTileDown
+;	dw wTileAnimBuffer, ScrollTileDown
+;	dw vTiles2 tile $6f, WriteTileFromAnimBuffer
+;	dw NULL,  WaitTileAnimation
+;	dw vTiles2 tile $74, AnimateWaterTile ;$74 johto water
+;	dw NULL,  WaitTileAnimation
+;	dw NULL,  WaitTileAnimation
+;	dw NULL,  AnimateFlowerTile
+;	dw NULL,  WaitTileAnimation
+;	dw NULL,  WaitTileAnimation
+;	dw NULL,  StandingTileFrame8
+;	dw NULL,  DoneTileAnimation
 
 TilesetParkAnim:
 	dw vTiles2 tile $14, AnimateWaterTile
@@ -538,6 +535,36 @@ AnimateWaterTile:
 
 .WaterTileFrames:
 	INCBIN "gfx/tilesets/water/water.2bpp"
+
+;AnimateWavesTile:
+;; Save the stack pointer in bc for WriteTile to restore
+;	ld hl, sp+0
+;	ld b, h
+;	ld c, l
+;
+;; A cycle of 4 frames, updating every other tick
+;	ld a, [wTileAnimationTimer]
+;	and %110
+;
+;; hl = .WavesTileFrames + a * 8
+;; (a was pre-multiplied by 2 from 'and %110')
+;	add a
+;	add a
+;	add a
+;	add LOW(.WavesTileFrames)
+;	ld l, a
+;	ld a, 0
+;	adc HIGH(.WavesTileFrames)
+;	ld h, a
+;
+;; Write the tile graphic from hl (now sp) to de (now hl)
+;	ld sp, hl
+;	ld l, e
+;	ld h, d
+;	jp WriteTile
+;
+;.WavesTileFrames:
+;	INCBIN "gfx/tilesets/water/waves.2bpp"
 
 ForestTreeLeftAnimation:
 ; Save the stack pointer in bc for WriteTile to restore
@@ -1147,3 +1174,9 @@ WhirlpoolDarkTiles1: INCBIN "gfx/tilesets/whirlpool/5.2bpp"
 WhirlpoolDarkTiles2: INCBIN "gfx/tilesets/whirlpool/6.2bpp"
 WhirlpoolDarkTiles3: INCBIN "gfx/tilesets/whirlpool/7.2bpp"
 WhirlpoolDarkTiles4: INCBIN "gfx/tilesets/whirlpool/8.2bpp"
+
+; 4-frame animation, use:
+;	dw WhirlpoolFrames1, AnimateWhirlpoolTile
+; use different Frames + Tiles
+;WhirlpoolFrames1: dw vTiles2 tile $32, WhirlpoolTiles1
+;WhirlpoolTiles1: INCBIN "gfx/tilesets/whirlpool/1.2bpp"
