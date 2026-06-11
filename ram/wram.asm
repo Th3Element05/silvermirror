@@ -3181,6 +3181,7 @@ wGoldenrodGymSceneID::                            db
 wGoldenrodMagnetTrainStationSceneID::             db
 ;wGoldenrodUndergroundSwitchRoomEntrancesSceneID:: db
 wAzaleaTownSceneID::                              db
+wRuinsOfAlphOutsideSceneID::                      db
 wRuinsOfAlphInnerChamberSceneID::                 db
 wRuinsOfAlphKabutoChamberSceneID::                db
 wRuinsOfAlphOmanyteChamberSceneID::               db
@@ -3211,7 +3212,7 @@ wBattleTowerHallwaySceneID::                      db
 ;wMobileTradeRoomSceneID::                         db ; unused in silvermirror
 ;wMobileBattleRoomSceneID::                        db ; unused in silvermirror
 
-	ds 48 ;total ds 128 - 80 used = ds 48
+	ds 47 ;total ds 128 - 81 used = ds 48
 
 ;; fight counts ; unused
 ;wJackFightCount::    db

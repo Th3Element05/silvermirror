@@ -69,6 +69,7 @@ BillsHouseBillScript:
 ;.GotBillsNumber
 ;	checkevent EVENT_GOT_HM01_CUT
 ;	iftrue BillsGrandpa
+	setflag ENGINE_RADIO_CARD
 	jumptextfaceplayer BillsHouseBillExplainRadioCardText
 	end
 

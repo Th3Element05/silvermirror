@@ -1,10 +1,17 @@
 	object_const_def
+	const RUINSOFALPHOUTSIDE_SCIENTIST
 
 RuinsOfAlphOutside_MapScripts:
 	def_scene_scripts
+	scene_script RuinsOfAlphOutsideNoop1Scene, SCENE_RUINSOFALPHOUTSIDE_NOOP
+	scene_script RuinsOfAlphOutsideNoop2Scene, SCENE_RUINSOFALPHOUTSIDE_SCIENTIST
 
 	def_callbacks
 	callback MAPCALLBACK_TILES, RuinsOfAlphOutsideCavesCallback
+
+RuinsOfAlphOutsideNoop1Scene:
+RuinsOfAlphOutsideNoop2Scene:
+	end
 
 RuinsOfAlphOutsideCavesCallback:
 	checkevent EVENT_MADE_UNOWN_APPEAR_IN_RUINS
@@ -16,6 +23,20 @@ RuinsOfAlphOutsideCavesCallback:
 .RuinsAreOpen
 	endcallback
 
+; scripts
+RuinsOfAlphOutside_AlternateExit:
+	showemote EMOTE_SHOCK, RUINSOFALPHOUTSIDE_SCIENTIST, 20
+	applymovement RUINSOFALPHOUTSIDE_SCIENTIST, RuinsOfAlphOutsideScientist_AltMovement
+	sjump RuinsOfAlphOutsideScientistScript
+
+RuinsOfAlphOutside_NormalExit:
+	moveobject RUINSOFALPHOUTSIDE_SCIENTIST, 14, 9
+	applymovement RUINSOFALPHOUTSIDE_SCIENTIST, RuinsOfAlphOutsideScientist_NormalMovement1
+	showemote EMOTE_SHOCK, RUINSOFALPHOUTSIDE_SCIENTIST, 20
+	turnobject PLAYER, RIGHT
+	applymovement RUINSOFALPHOUTSIDE_SCIENTIST, RuinsOfAlphOutsideScientist_NormalMovement2
+	; fallthrough
+
 RuinsOfAlphOutsideScientistScript:
 	checkflag ENGINE_UNOWN_DEX
 	iftrue .GotUnownDex
@@ -23,11 +44,12 @@ RuinsOfAlphOutsideScientistScript:
 	opentext
 	checkevent EVENT_TALKED_TO_RUINS_SCIENTIST_AFTER_FALLING
 	iftrue .SkipIntro
+	setscene SCENE_RUINSOFALPHOUTSIDE_NOOP
 	writetext RuinsOfAlphOutside_DoneForText
 	setevent EVENT_TALKED_TO_RUINS_SCIENTIST_AFTER_FALLING
 	promptbutton
 .SkipIntro
-	clearflag EVENT_RUINS_OF_ALPH_INNER_CHAMBER_SCIENTISTS
+	clearevent EVENT_RUINS_OF_ALPH_INNER_CHAMBER_SCIENTISTS
 	writetext RuinsOfAlphOutside_TellMeText
 	waitbutton
 	readvar VAR_UNOWNCOUNT
@@ -183,6 +205,28 @@ RuinsOfAlphOutside_AllUnownText:
 	roll "conduct research."
 	done
 
+RuinsOfAlphOutsideScientist_NormalMovement1:
+	big_step DOWN
+	big_step DOWN
+	big_step DOWN
+	big_step DOWN
+	big_step DOWN
+	turn_head LEFT
+	step_end
+
+RuinsOfAlphOutsideScientist_NormalMovement2:
+	big_step LEFT
+	big_step LEFT
+	big_step LEFT
+	step_end
+
+RuinsOfAlphOutsideScientist_AltMovement:
+	big_step LEFT
+	big_step LEFT
+	big_step UP
+	big_step UP
+	step_end
+
 TrainerPsychicIdris:
 	trainer PSYCHIC_T, IDRIS, EVENT_BEAT_PSYCHIC_IDRIS, PsychicIdrisSeenText, PsychicIdrisBeatenText, 0, .Script
 .Script:
@@ -282,6 +326,8 @@ RuinsOfAlphOutside_MapEvents:
 ;	warp_event 17, 11, RUINS_OF_ALPH_RESEARCH_CENTER, 1
 
 	def_coord_events
+	coord_event 10, 14, SCENE_RUINSOFALPHOUTSIDE_SCIENTIST, RuinsOfAlphOutside_NormalExit
+	coord_event 14,  8, SCENE_RUINSOFALPHOUTSIDE_SCIENTIST, RuinsOfAlphOutside_AlternateExit
 
 	def_bg_events
 	bg_event 12, 16, BGEVENT_READ, RuinsOfAlphSign
