@@ -28,8 +28,8 @@ UnionCave1FGeodude:
 	iffalse .Set1
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
 	iffalse .Set2
-	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_3
-	iffalse .Set3
+;	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_3
+;	iffalse .Set3
 ;	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_4
 ;	iffalse .Set4
 	promptbutton
@@ -52,8 +52,8 @@ UnionCave1FGeodude:
 
 ;.Set4
 ;	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_4
-.Set3
-	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_3
+;.Set3
+;	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_3
 .Set2
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
 .Set1
@@ -75,7 +75,7 @@ UnionCave1FGeodudeGotHit:
 	done
 
 UnionCave1FGeodudeFainted:
-	text "GOEDUDE fainted!"
+	text "GEODUDE fainted!"
 	done
 
 UnionCave1FKangaskhanAttackMovement:
