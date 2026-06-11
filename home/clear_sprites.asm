@@ -11,9 +11,9 @@ ClearSprites::
 
 
 ClearTextboxSprites::
-; Erase OAM data in Textbox area
+; Erase OAM data in Textbox area on Pokegear Pager screen
 	ld hl, wShadowOAM + 80
-	ld b, 30
+	ld b, 32
 	xor a
 .loop
 	ld [hli], a
