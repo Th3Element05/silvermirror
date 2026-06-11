@@ -413,18 +413,19 @@ BlackthornGroupSprites:
 	db 0 ; end
 
 DungeonsGroupSprites:
-;NationalPark,           YOUNGSTER, LASS, POKEFAN_M, POKEFAN_F, BOY, teacher, meowth, pokeball
+;NationalPark,           YOUNGSTER, LASS, POKEFAN_M, POKEFAN_F, BOY, TEACHER, meowth, pokeball
 ;NationalParkBugContest, YOUNGSTER, LASS, POKEFAN_M, BUG_CATCHER, cooltrainer_m, pokeball
 ;RuinsOfAlphOutside      YOUNGSTER, scientist
 
+	db SPRITE_SCIENTIST
 	db SPRITE_YOUNGSTER
 	db SPRITE_LASS
 	db SPRITE_POKEFAN_M
 	db SPRITE_POKEFAN_F
 	db SPRITE_BOY
 	db SPRITE_BUG_CATCHER
-	; 6 of 9 max walking sprites
-	db SPRITE_SCIENTIST
+	db SPRITE_TEACHER
+	; 7 of 9 max walking sprites
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_TEACHER
 	db SPRITE_MEOWTH
