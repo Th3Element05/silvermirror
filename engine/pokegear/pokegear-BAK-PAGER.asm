@@ -343,7 +343,7 @@ InitPokegearTilemap:
 	call Pokegear_LoadTilemapRLE
 	hlcoord 0, 12
 	lb bc, 4, 18
-;	call Textbox
+	call Textbox
 	call PokegearPager_UpdateDisplayList
 	ret
 
@@ -500,7 +500,7 @@ PokegearPager_Init:
 	ld [wPokegearPagerCursorPosition], a
 	call InitPokegearTilemap
 	call ExitPokegearRadio_HandleMusic
-	ld d, PAL_OW_SILVER
+	ld d, PAL_OW_SILVER 
 	farcall InitPokegearOBPal
 	ld hl, PagerCardSprites
 .loop
@@ -529,8 +529,8 @@ PokegearPager_Init:
 	pop hl
 	jr .loop
 .done
-;	ld hl, PokegearSelectPagerText
-;	call PrintText
+	ld hl, PokegearSelectPagerText
+	call PrintText
 	ret
 
 PokegearPager_Joypad:
@@ -607,7 +607,6 @@ PokegearPager_Joypad:
 	ret z
 
 	; get the offset from PagerCardRoutines
-	call ClearTextboxSprites
 	ld hl, PagerCardRoutines
 	ld b, 0
 	add hl, bc
@@ -748,8 +747,7 @@ PokegearPager_GetDPad:
 .down
 	ld hl, wPokegearPagerCursorPosition
 	ld a, [hl]
-;	cp PHONE_OR_PAGER_HEIGHT - 1
-	cp PAGER_HEIGHT - 1
+	cp PHONE_OR_PAGER_HEIGHT - 1
 	jr nc, .scroll_page_down
 	inc [hl]
 	jr .done_joypad_same_page
@@ -757,8 +755,7 @@ PokegearPager_GetDPad:
 .scroll_page_down
 	ld hl, wPokegearPagerScrollPosition
 	ld a, [hl]
-;	cp NUM_PAGER_FLAGS - PHONE_OR_PAGER_HEIGHT
-	cp NUM_PAGER_FLAGS - PAGER_HEIGHT
+	cp NUM_PAGER_FLAGS - PHONE_OR_PAGER_HEIGHT
 	ret nc
 	inc [hl]
 	jr .done_joypad_update_page
@@ -819,8 +816,7 @@ PokegearPager_UpdateDisplayList:
 	ld a, [wPokegearPagerLoadNameBuffer]
 	inc a
 	ld [wPokegearPagerLoadNameBuffer], a
-;	cp PHONE_OR_PAGER_HEIGHT
-	cp PAGER_HEIGHT
+	cp PHONE_OR_PAGER_HEIGHT
 	jr c, .loop
 	call PokegearPager_UpdateCursor
 	ret
@@ -837,13 +833,12 @@ PokegearPagerContactSubmenu:
 	ld h, a
 	inc de
 	push hl
-;	ld bc, hBGMapAddress + 1
-;	add hl, bc
-	hlcoord 9, 3
+	ld bc, hBGMapAddress + 1
+	add hl, bc
 	ld a, [de]
 	inc de
 	sla a
-	ld b, 3 ;a
+	ld b, a
 	ld c, 8
 	push de
 	call Textbox
@@ -918,8 +913,8 @@ PokegearPagerContactSubmenu:
 	dw .Cancel
 
 .Cancel:
-;	ld hl, PokegearAskWhoCallText
-;	call PrintText
+	ld hl, PokegearAskWhoCallText
+	call PrintText
 	scf
 	ret
 
@@ -954,7 +949,7 @@ PokegearPagerContactSubmenu:
 	ret
 
 .CallCancelStrings:
-	dwcoord 10, 4 ;10, 8
+	dwcoord 10, 8
 	db 2
 	db   "CALL"
 	next "CANCEL"
@@ -2778,7 +2773,7 @@ TownMapBubble:
 	ret
 
 .Where:
-	db "Fly where?@"
+	db "Where?@"
 
 .Name:
 ; We need the map location of the default flypoint
@@ -3161,7 +3156,7 @@ Pokedex_GetArea:
 	bit PLAYERGENDER_FEMALE_F, a
 	jr z, .male
 ;	inc c ; PAL_OW_BLUE
-	inc c ; PAL_OW_GREEN
+	ld c, PAL_OW_GREEN
 .male
 	ld a, c
 	ld [hli], a ; attributes
@@ -3413,8 +3408,7 @@ INCBIN "gfx/pokegear/flymap_label_border.1bpp"
 
 ClearPhoneOrPagerArea:
 	hlcoord 1, 3
-;	ld b, PHONE_OR_PAGER_HEIGHT * 2 + 1
-	ld b, PAGER_HEIGHT * 2 + 1
+	ld b, PHONE_OR_PAGER_HEIGHT * 2 + 1
 	ld a, " "
 .row
 	ld c, SCREEN_WIDTH - 2
@@ -3431,8 +3425,7 @@ ClearPhoneOrPagerArea:
 ClearPhoneOrPagerCursors:
 	ld a, " "
 x = 4
-;rept PHONE_OR_PAGER_HEIGHT
-rept PAGER_HEIGHT
+rept PHONE_OR_PAGER_HEIGHT
 	hlcoord 1, x
 	ld [hl], a
 x = x + 2

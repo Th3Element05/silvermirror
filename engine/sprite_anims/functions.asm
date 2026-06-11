@@ -1058,7 +1058,8 @@ SpriteAnimFunc_PagerMon:
 	jr c, .hide_pager_mon
 	; if pager flag bit >= scroll + pager height, hide
 	ld a, e
-	add PHONE_OR_PAGER_HEIGHT
+;	add PHONE_OR_PAGER_HEIGHT
+	add PAGER_HEIGHT
 	cp d
 	jr c, .hide_pager_mon
 	jr z, .hide_pager_mon
