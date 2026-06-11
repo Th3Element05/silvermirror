@@ -19,13 +19,13 @@ StartMenu::
 
 	farcall ReanchorBGMap_NoOAMUpdate
 
-	ld hl, wStatusFlags2
-	bit STATUSFLAGS2_BUG_CONTEST_TIMER_F, [hl]
+;	ld hl, wStatusFlags2
+;	bit STATUSFLAGS2_BUG_CONTEST_TIMER_F, [hl]
 	ld hl, .MenuHeader
-	jr z, .GotMenuData
-	ld hl, .ContestMenuHeader
+;	jr z, .GotMenuData
+;	ld hl, .ContestMenuHeader
 
-.GotMenuData:
+;.GotMenuData:
 	call LoadMenuHeader
 	call .SetUpMenuItems
 	ld a, [wBattleMenuCursorPosition]

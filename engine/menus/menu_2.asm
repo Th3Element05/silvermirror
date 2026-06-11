@@ -181,12 +181,12 @@ StartMenu_PrintSafariZoneStatus:
 ;.step_count
 ;	db "/500@"
 .balls_remaining
-	db "BALLS×@"
+	db "BALLs×@"
 
 StartMenu_DrawBugContestStatusBox:
-	hlcoord 0, 0
+	hlcoord 0, 11 ;0, 0
 	ld b, 5
-	ld c, 17
+	ld c, 18 ;11 ;17
 	call Textbox
 	ret
 
@@ -196,14 +196,15 @@ StartMenu_PrintBugContestStatus:
 	push af
 	set NO_TEXT_SCROLL, [hl]
 	call StartMenu_DrawBugContestStatusBox
-	hlcoord 1, 5
+	hlcoord 1, 12 ;1, 5
 	ld de, .BallsString
 	call PlaceString
-	hlcoord 8, 5
+	hlcoord 7, 12 ;8, 5
 	ld de, wParkBallsRemaining
-	lb bc, PRINTNUM_LEFTALIGN | 1, 2
+;	lb bc, PRINTNUM_LEFTALIGN | 1, 2
+	lb bc, PRINTNUM_LEADINGZEROS | 1, 2
 	call PrintNum
-	hlcoord 1, 1
+	hlcoord 1, 14 ;1, 1
 	ld de, .CaughtString
 	call PlaceString
 	ld a, [wContestMon]
@@ -214,12 +215,12 @@ StartMenu_PrintBugContestStatus:
 	call GetPokemonName
 
 .no_contest_mon
-	hlcoord 8, 1
+	hlcoord 1, 16 ;8, 1
 	call PlaceString
 	ld a, [wContestMon]
 	and a
 	jr z, .skip_level
-	hlcoord 1, 3
+	hlcoord 1, 15 ;1, 3
 	ld de, .LevelString
 	call PlaceString
 	ld a, [wContestMonLevel]
@@ -234,16 +235,16 @@ StartMenu_PrintBugContestStatus:
 	ld [wOptions], a
 	ret
 
-.BallsJPString: ; unreferenced
-	db "ボール　　　こ@"
+;.BallsJPString: ; unreferenced
+;	db "ボール　　　こ@"
+.BallsString:
+	db "BALLs×@"
 .CaughtString:
 	db "CAUGHT@"
-.BallsString:
-	db "BALLS:@"
+.LevelString:
+	db "Level@"
 .NoneString:
 	db "None@"
-.LevelString:
-	db "LEVEL@"
 
 FindApricornsInBag:
 ; Checks the bag for Apricorns.

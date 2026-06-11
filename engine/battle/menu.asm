@@ -70,6 +70,7 @@ SafariBattleMenuHeader:
 	hlcoord 7, 14
 	ld de, wSafariBallsRemaining
 	lb bc, PRINTNUM_LEADINGZEROS | 1, 2
+;	lb bc, PRINTNUM_LEFTALIGN | 1, 2
 	call PrintNum
 	ret
 
@@ -82,19 +83,20 @@ ContestBattleMenuHeader:
 .MenuData:
 	db STATICMENU_CURSOR | STATICMENU_DISABLE_B ; flags
 	dn 2, 2 ; rows, columns
-	db 12 ; spacing
+	db 11 ;12 ; spacing
 	dba .Text
 	dba .PrintParkBallsRemaining
 
 .Text:
 	db "FIGHT@"
 	db "<PKMN>@"
-	db "PARKBALL×  @"
+	db "BALL×  @" ;"PARKBALL×  @"
 	db "RUN@"
 
 .PrintParkBallsRemaining:
-	hlcoord 11, 16
+	hlcoord 7, 16 ;11, 16
 	ld de, wParkBallsRemaining
 	lb bc, PRINTNUM_LEADINGZEROS | 1, 2
+;	lb bc, PRINTNUM_LEFTALIGN | 1, 2
 	call PrintNum
 	ret

@@ -11,12 +11,12 @@ DisplayCaughtContestMonStats:
 
 	hlcoord 0, 0
 	ld b, 4
-	ld c, 13
+	ld c, 12 ;13
 	call Textbox
 
 	hlcoord 0, 6
 	ld b, 4
-	ld c, 13
+	ld c, 12 ;13
 	call Textbox
 
 	hlcoord 2, 0
@@ -27,11 +27,11 @@ DisplayCaughtContestMonStats:
 	ld de, .This
 	call PlaceString
 
-	hlcoord 5, 4
+	hlcoord 6, 4 ;5, 4
 	ld de, .Health
 	call PlaceString
 
-	hlcoord 5, 10
+	hlcoord 6, 10 ;5, 10
 	ld de, .Health
 	call PlaceString
 
@@ -42,8 +42,9 @@ DisplayCaughtContestMonStats:
 	hlcoord 1, 2
 	call PlaceString
 
-	ld h, b
-	ld l, c
+;	ld h, b
+;	ld l, c
+	hlcoord 2, 4
 	ld a, [wContestMonLevel]
 	ld [wTempMonLevel], a
 	call PrintLevel
@@ -52,18 +53,19 @@ DisplayCaughtContestMonStats:
 	hlcoord 1, 8
 	call PlaceString
 
-	ld h, b
-	ld l, c
+;	ld h, b
+;	ld l, c
+	hlcoord 2, 10
 	ld a, [wEnemyMonLevel]
 	ld [wTempMonLevel], a
 	call PrintLevel
 
-	hlcoord 11, 4
+	hlcoord 9, 4 ;11, 4
 	ld de, wContestMonMaxHP
 	lb bc, 2, 3
 	call PrintNum
 
-	hlcoord 11, 10
+	hlcoord 9, 10 ;11, 10
 	ld de, wEnemyMonMaxHP
 	call PrintNum
 
@@ -80,7 +82,7 @@ DisplayCaughtContestMonStats:
 	ret
 
 .Health:
-	db "HEALTH@"
+	db "HP:@" ;"HEALTH@"
 .Stock:
 	db " STOCK <PKMN> @"
 .This:
