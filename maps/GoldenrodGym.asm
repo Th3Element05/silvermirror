@@ -15,9 +15,9 @@ GoldenrodGymNoop2Scene:
 
 GoldenrodGymWhitneyScript:
 	faceplayer
-	opentext
 	checkevent EVENT_BEAT_WHITNEY
 	iftrue .FightDone
+	opentext
 	writetext WhitneyIntroText
 	waitbutton
 	closetext
@@ -33,6 +33,7 @@ GoldenrodGymWhitneyScript:
 	setevent EVENT_BEAT_LASS_KELLY
 	setevent EVENT_BEAT_LASS_RUBY
 .FightDone:
+	opentext
 	checkevent EVENT_MADE_WHITNEY_CRY
 	iffalse .StoppedCrying
 	writetext WhitneyYouMeanieText
