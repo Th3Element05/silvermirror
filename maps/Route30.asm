@@ -17,10 +17,11 @@ Route30Noop2Scene:
 	end
 
 Route30Fruittrees:
-	checkflag ENGINE_DAILY_ROUTE_1_FRUIT
+	checkflag ENGINE_DAILY_ROUTE_30_FRUIT
 	iftrue .NoFruit
-	appear ROUTE1_ORAN_BERRY
-	appear ROUTE1_BLK_APRICORN
+	appear ROUTE30_ORAN_BERRY
+	appear ROUTE30_PECHA_BERRY
+	appear ROUTE30_PNK_APRICORN
 .NoFruit:
 	endcallback
 
