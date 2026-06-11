@@ -71,8 +71,8 @@ MortyIntroText:
 
 	para "It's said that a"
 	line "rainbow-colored"
-	cont "#MON will appear"
-	roll "before a truly"
+	cont "#MON can be"
+	roll "seen by a truly"
 	cont "powerful trainer."
 
 	para "I believed that"
@@ -80,8 +80,8 @@ MortyIntroText:
 	cont "trained here all"
 	roll "my life."
 
-	para "As a result, I can"
-	line "now see what"
+	para "As a result, I"
+	line "can now see what"
 	cont "others cannot."
 
 	para "Just a bit more…"

@@ -227,8 +227,8 @@ EcruteakGymSignText:
 	line "#MON GYM"
 	cont "LEADER: MORTY"
 
-	para "The Mystic Seer of"
-	line "the Future"
+	para "The Mystic Seer"
+	line "of the Future"
 	done
 
 EcruteakDanceTheaterSign:
