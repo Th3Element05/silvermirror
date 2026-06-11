@@ -27,7 +27,7 @@ Moves:
 	move SCRATCH,      EFFECT_NORMAL_HIT,         40, NORMAL,       PHYSICAL, 100, 35,   0
 	move CRUSH_CLAW,   EFFECT_DEFENSE_DOWN_HIT,   75, NORMAL,       PHYSICAL,  95, 10,  50 ;VICEGRIP, removed
 	move GUILLOTINE,   EFFECT_OHKO,                2, NORMAL,       PHYSICAL,  30,  5,   0
-	move AIR_SLICE,    EFFECT_FLINCH_HIT,         75, FLYING,       SPECIAL,   95, 20,  30 ;RAZOR_WIND, removed
+	move AIR_SLICE,    EFFECT_FLINCH_HIT,         75, FLYING,       SPECIAL,   95, 15,  30 ;RAZOR_WIND, removed
 	move SWORDS_DANCE, EFFECT_ATTACK_UP_2,         0, NORMAL,       STATUS,   100, 30,   0
 	move AERIAL_ACE,   EFFECT_ALWAYS_HIT,         60, FLYING,       PHYSICAL, 101, 20,   0 ;CUT, removed
 	move GUST,         EFFECT_GUST,               40, FLYING,       SPECIAL,  100, 35,   0
