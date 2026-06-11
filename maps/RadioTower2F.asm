@@ -229,18 +229,15 @@ RadioTower2FBuenaShowIntroductionText:
 
 	para "If you can tell me"
 	line "the password from"
-
-	para "the program, you"
-	line "will earn points."
+	cont "the program, you"
+	roll "will earn points."
 
 	para "Save up those"
 	line "points and trade"
-
-	para "them to that sweet"
-	line "young lady over"
-
-	para "there for some"
-	line "choice prizes!"
+	cont "them to that sweet"
+	roll "young lady over"
+	cont "there for some"
+	roll "choice prizes!"
 
 	para "Here you go!"
 
@@ -454,9 +451,8 @@ RadioTower2FBuenaReceptionistPointsForPrizesText:
 	ntag "ASSISTANT:"
 	text "You can cash in"
 	line "your saved points"
-
-	para "for a lovely prize"
-	line "of your choice!"
+	cont "for a lovely prize"
+	roll "of your choice!"
 	done
 
 RadioTower2FBuenaReceptionistNoCardText:
