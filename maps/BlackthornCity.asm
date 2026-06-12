@@ -139,7 +139,7 @@ BlackthornGrampsGrantsEntryText:
 	para "You may enter."
 	done
 
-BlackthornSuperNerdScript:
+BlackthornCooltrainerMScript:
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_CLAIR
@@ -164,7 +164,7 @@ BlackthornSuperNerdScript:
 	end
 
 Text_ClairIsOut:
-	ntag "SUPERNERD:"
+	ntag "TRAINER:"
 	text "Our LEADER isn't"
 	line "here right now."
 
@@ -190,7 +190,7 @@ Text_ClairIsOut:
 ;	done
 
 Text_ClairIsIn:
-	ntag "SUPERNERD:"
+	ntag "TRAINER:"
 	text "CLAIR, our GYM"
 	line "LEADER, is waiting"
 	cont "for you."
@@ -202,7 +202,7 @@ Text_ClairIsIn:
 	done
 
 Text_ClairIsBeaten:
-	ntag "SUPERNERD:"
+	ntag "TRAINER:"
 	text "You defeated"
 	line "CLAIR?"
 
@@ -363,7 +363,7 @@ BlackthornCity_MapEvents:
 
 	def_object_events
 ;	object_event 22, 20, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SantosScript, EVENT_BLACKTHORN_CITY_SANTOS_OF_SATURDAY
-	object_event 17, 12, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, BlackthornSuperNerdScript, -1
+	object_event 17, 12, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BlackthornCooltrainerMScript, -1
 	object_event 20,  2, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BlackthornGramps1Script, EVENT_BLACKTHORN_CITY_GRAMPS_BLOCKS_DRAGONS_DEN
 	object_event 21,  2, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BlackthornGramps2Script, EVENT_BLACKTHORN_CITY_GRAMPS_NOT_BLOCKING_DRAGONS_DEN
 	object_event 10, 25, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BlackthornYoungsterScript, -1
