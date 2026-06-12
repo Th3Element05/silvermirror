@@ -51,8 +51,16 @@ LearnMove:
 .not_disabled
 
 ; Reset palettes for text box border
-	ld b, SCGB_BATTLE_COLORS
+;	ld b, SCGB_PARTY_MENU
+;	call GetSGBLayout
+
+;	ld b, SCGB_BATTLE_COLORS
+;	call GetSGBLayout
+;	call ClearTilemap
+
+	ld b, SCGB_DIPLOMA
 	call GetSGBLayout
+	call SetPalettes
 
 	call GetMoveName
 	ld hl, Text_1_2_and_Poof ; 1, 2 and…
@@ -107,10 +115,16 @@ LearnMove:
 
 .cancel
 ; Reset palettes for text box border
-	ld b, SCGB_BATTLE_COLORS
-	call GetSGBLayout
 ;	ld b, SCGB_PARTY_MENU
 ;	call GetSGBLayout
+
+;	ld b, SCGB_BATTLE_COLORS
+;	call GetSGBLayout
+;	call ClearTilemap
+
+	ld b, SCGB_DIPLOMA
+	call GetSGBLayout
+	call SetPalettes
 
 	ld hl, StopLearningMoveText
 	call PrintText
@@ -130,6 +144,21 @@ LearnMove:
 
 ForgetMove:
 	push hl
+;	farcall LoadLearnCategoryAndTypePals
+;	call SetPalettes
+
+;	ld b, SCGB_PARTY_MENU
+;	call GetSGBLayout
+
+;	ld b, SCGB_BATTLE_COLORS
+;	call GetSGBLayout
+;	call ClearTilemap
+;	call ClearSprites
+
+	ld b, SCGB_DIPLOMA
+	call GetSGBLayout
+	call SetPalettes
+
 	ld hl, AskForgetMoveText
 	call PrintText
 	call YesNoBox
@@ -144,7 +173,6 @@ ForgetMove:
 
 ; Print UI element
 	call ClearSprites
-;	call HideSprites
 
 	hlcoord 0, 11
 	ld de, String_LearnTabTop

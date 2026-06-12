@@ -318,12 +318,28 @@ ChooseMoveToLearn:
 	cp -1
 	jr z, .cancel_border_fix
 
+.print_move_stat_strings
+	hlcoord 0, 10
+	ld de, MoveTypeTop
+	call PlaceString
+	hlcoord 0, 11
+	ld de, MoveType
+	call PlaceString
+	hlcoord 1, 11
+	ld de, MoveAttack
+	call PlaceString
+	hlcoord 1, 12
+	ld de, MoveAcc
+	call PlaceString
+
 ;phys/spec split
 	ld a, [wOptions2]
 	bit PHYS_SPEC_SPLIT, a
 	jr nz, .no_category
 
 ; Place Move Cateogry
+;	ld a, [wCurSpecies]
+;	dec a
 	ld a, [wMenuSelection]
 	ld bc, MOVE_LENGTH
 	ld hl, (Moves + MOVE_TYPE) - MOVE_LENGTH
@@ -350,6 +366,8 @@ ChooseMoveToLearn:
 
 .no_category
 ; Place Move Type
+;	ld a, [wCurSpecies]
+;	dec a
 	ld a, [wMenuSelection]
 ;	ld b, a
 	ld bc, MOVE_LENGTH
@@ -361,7 +379,6 @@ ChooseMoveToLearn:
 	ld c, a
 	farcall GetMonTypeIndex
 	ld a, c
-
 ; Type Index adjust done
 ; Load Type GFX Tiles, color will be in Slot 4 of Palette
 	ld hl, TypeIconGFX ; ptr for PNG w/ black Tiles, since this screen is using Slot 4 in the Palette for Type color
@@ -390,104 +407,52 @@ ChooseMoveToLearn:
 
 ;.power
 ; Print move power
-	hlcoord 1, 12 ;1, 11
-	ld de, .power_string
-	call PlaceString
-
 ;	ld a, [wCurSpecies]
 ;	dec a
-;	ld hl, Moves + MOVE_EFFECT
-;	ld bc, MOVE_LENGTH
-;	call AddNTimes
-;	ld a, Bank(Moves)
-;	call GetFarByte
-;	cp EFFECT_STATIC_DAMAGE
-;	jr nz, .not_static_damage
-;	ld de,.staticdmg_string
-;	hlcoord 1, 11
-;	call PlaceString
-
-;.not_static_damage
 	ld a, [wMenuSelection]
 	ld bc, MOVE_LENGTH
 	ld hl, (Moves + MOVE_POWER) - MOVE_LENGTH
 	call AddNTimes
 	ld a, BANK(Moves)
 	call GetFarByte
-	hlcoord 3, 12
-	and a
-	jr nz, .haspower
-	ld de, .novalue_string ; "---"
-	call PlaceString
-	jr .accuracy
-.haspower
+	hlcoord 5, 11 ;type icons
 	cp 2
-	jr z, .inf_power
-	cp 1
-	jr z, .var_power
+	jr c, .no_power
 	ld [wTextDecimalByte], a
 	ld de, wTextDecimalByte
-	lb bc, 1, 3 ; number of bytes this number is in, in 'b', number of possible digits in 'c'
-;	set 6, b ; left-aligned
+	lb bc, 1, 3
+	set 6, b
 	call PrintNum
-	jr .accuracy
-
-.inf_power
-	ld de, .infinity_string
-	call PlaceString
-	jr .accuracy
-
-.var_power
-	ld de, .unknown_string
+	jr .print_move_acc
+.no_power
+	ld de, MoveNoAttack
 	call PlaceString
 
-.accuracy
+.print_move_acc
 ; Print move accuracy
-	hlcoord 1, 13 ;1, 12
-	ld de, .accuracy_string
-	call PlaceString
-
+;	ld a, [wCurSpecies]
 	ld a, [wMenuSelection]
 	ld bc, MOVE_LENGTH
 	ld hl, (Moves + MOVE_ACC) - MOVE_LENGTH
 	call AddNTimes
 	ld a, BANK(Moves)
 	call GetFarByte
-
-	hlcoord 3, 13
-; convert from hex to decimal
-; this is the same code used in function "Adjust_Percent" in engine\pokemon\mon_stats.asm
-	ldh [hMultiplicand], a
-	ld a, 100
-	ldh [hMultiplier], a
-	call Multiply
-	; Divide hDividend length b (max 4 bytes) by hDivisor. Result in hQuotient.
-	ld b, 2
-	ld a, 255
-	ldh [hDivisor], a
-	call Divide
-	ldh a, [hQuotient + 3]
-	cp 100
-	jr z, .print_num
-	cp 80
-	jr z, .print_num
-	inc a
-	cp 1
-	jr z, .no_acc
-.print_num
-	ld [wTextDecimalByte], a
-	ld de, wTextDecimalByte
-	lb bc, 1, 3 ; number of bytes this number is in, in 'b', number of possible digits in 'c'
-;	set 6, b ; left-aligned
+	cp 101
+	jr c, .no_acc
+	call ConvertPercentages
+	ld [wBuffer1], a
+	ld de, wBuffer1
+	lb bc, 1, 3
+	hlcoord 5, 12 ;type icons
+	set 6, b
 	call PrintNum
-	jr .description
-
+	jr .print_move_desc
 .no_acc
-	ld de, .infinity_string
+	hlcoord 5, 12 ;type icons
+	ld de, MoveNoAttack
 	call PlaceString
 
-.description
-; Print Move Description
+.print_move_desc
 	push de
 	ld a, [wMenuSelection]
 	inc a
@@ -504,26 +469,63 @@ ChooseMoveToLearn:
 	ldh [hBGMapMode], a
 	ret
 
-; UI elements
-.power_string:
-	db "<ATK1><ATK2>@"
-.accuracy_string:
-	db "<ACC1><ACC2>   <%>@"
-.novalue_string:
+MoveTypeTop:
+;	db "┌─────┐@"
+	db "┌───────┐@" ;type icons
+MoveType:
+;	db "│TYPE/└@"
+	db "│       └@" ;type icons
+MoveAttack:
+	db "ATK/@"
+MoveAcc:
+	db "ACC/@"
+MoveNoAttack:
 	db "---@"
-.infinity_string:
-	db " <INF1><INF2>@"
-.unknown_string:
-	db "<?><?><?>@"
-;.staticdmg_string:
-;	db "DMG/@"
-;.Type:
-;	db "TYPE/@"
-;String_MoveType_Top:
-;	db "┌───────┐@" ;type icons
-;String_MoveType_Bottom:
-;	db "│       └@" ;type icons
 
+;ConvertPercentages2:
+;	; Overwrite the "hl" register.
+;	ld l, a
+;	ld h, 0
+;	push af
+;
+;	; Multiplies the value of the "hl" register by 3.
+;	add hl, hl
+;	add a, l
+;	ld l, a
+;	adc h
+;	sub l
+;	ld h, a
+;
+;	; Multiplies the value of the "hl" register
+;	; by 8. The value of the "hl" register
+;	; is now 24 times its original value.
+;	add hl, hl
+;	add hl, hl
+;	add hl, hl
+;
+;	; Add the original value of the "hl" value to itself,
+;	; making it 25 times its original value.
+;	pop af
+;	add a, l
+;	ld l, a
+;	adc h
+;	sbc l
+;	ld h, a
+;
+;	; Multiply the value of the "hl" register by
+;	; 4, making it 100 times its original value.
+;	add hl, hl
+;	add hl, hl
+;
+;	; Set the "l" register to 0.5, otherwise the rounded
+;	; value may be lower than expected. Round the
+;	; high byte to nearest and drop the low byte.
+;	ld l, 0.5
+;	sla l
+;	sbc a
+;	and 1
+;	add a, h
+;	ret
 
 MoveReminderWhichMonText:
 	text "Which #MON"
