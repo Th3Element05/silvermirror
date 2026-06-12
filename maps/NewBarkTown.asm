@@ -177,7 +177,7 @@ NewBarkTownRival_BeenThinkingText:
 	text "I've been doing a"
 	line "lot of thinking"
 	cont "since I lost as"
-	roll "#MON CHAMPION."
+	roll "LEAGUE CHAMPION."
 
 	para "There's more to"
 	line "being a trainer"

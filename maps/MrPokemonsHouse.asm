@@ -256,7 +256,7 @@ MrPokemonText_RainbowWing:
 	line "saw that #MON"
 	cont "when he was young."
 
-	para "Hm? That FEATHER!"
+	para "Hm? That feather!"
 	line "It came from the"
 	cont "#MON you saw?"
 

@@ -81,6 +81,8 @@ RadioTower4FBlueScript:
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ROCKET_FANATIC
 	pause 10
+	showemote EMOTE_SHOCK, RADIOTOWER4F_ROCKET, 20
+	pause 10
 	showemote EMOTE_BOLT, RADIOTOWER4F_ROCKET, 20
 	turnobject RADIOTOWER4F_ROCKET, DOWN
 	opentext
@@ -259,7 +261,7 @@ RadioTower4FOakScript:
 	writetext RadioTower4FBlue_ExplainWaterfallText
 	waitbutton
 	closetext
-	turnobject RADIOTOWER4F_BLUE, RIGHT
+	turnobject RADIOTOWER4F_BLUE, DOWN
 	pause 10
 	showemote EMOTE_QUESTION, RADIOTOWER4F_BLUE, 20
 	opentext
@@ -333,7 +335,7 @@ RadioTower4FOak_SorryMaryText:
 RadioTower4FBlue_GiveWaterfallText:
 	ntag "<RIVAL>:"
 	text "Thanks for the"
-	line "assist."
+	line "assist, <PLAYER>."
 
 	para "I couldn't have"
 	line "done that alone."
@@ -559,7 +561,7 @@ RadioTower4F_MapEvents:
 	object_event 14,  5, SPRITE_OAK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
 	object_event 13,  4, SPRITE_ROCKET, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
 	object_event 13,  5, SPRITE_ELECTRODE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
-	object_event 12,  1, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RADIO_TOWER_4F_OFFICER
+	object_event 12,  1, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RADIO_TOWER_4F_OFFICER
 	object_event 14,  6, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, RadioTower4FDJMaryScript, -1
 	object_event 12,  7, SPRITE_MEOWTH, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RadioTowerMeowth, -1
 	object_event  6,  4, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RadioTower4FFisherScript, -1
