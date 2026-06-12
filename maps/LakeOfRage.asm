@@ -207,12 +207,11 @@ LakeOfRageClairFirstText:
 
 LakeOfRageClairIntroText:
 	ntag "CLAIR:"
-	text "You're <PLAYER>?"
-
-	para "You look like a"
+	text "You look like a"
 	line "#MON trainer."
 
-	para "Nice to meet you."
+	para "You're <PLAYER>?"
+	line "Nice to meet you."
 
 	para "I'm CLAIR, the"
 	line "GYM LEADER from"
@@ -238,8 +237,8 @@ LakeOfRageClairMagikarpText:
 
 LakeOfRageClairChallengeText:
 	ntag "CLAIR:"
-	text "I suppose want a"
-	line "GYM BADGE?"
+	text "I suppose you want"
+	line "a GYM BADGE?"
 	done
 
 LakeOfRageClairStayLongerText:
@@ -253,10 +252,19 @@ LakeOfRageClairStayLongerText:
 	done
 
 LakeOfRageGetMoreBadgesText:
-	text "<PLAYER> should"
-	line "return here with"
+;	text "<PLAYER> should"
+;	line "return here with"
+;	cont "more GYM BADGEs."
+;	done
+	text "You should return"
+	line "here after earning"
 	cont "more GYM BADGEs."
 	done
+;	text "<PLAYER> should"
+;	line "return here after"
+;	cont "collecting more"
+;	roll "GYM BADGEs."
+;	done
 
 LakeOfRageClairReturnsToGymText:
 	ntag "CLAIR:"
