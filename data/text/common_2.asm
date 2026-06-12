@@ -509,6 +509,11 @@ _UseRockSmashText::
 ;	cont "ROCK SMASH!" ;silvermirror -
 	done
 
+_SmashNothingText::
+	text "There's nothing to"
+	line "smash here."
+	prompt
+
 _MaySmashText::
 	text "Maybe a #MON"
 	line "could break this."

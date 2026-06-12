@@ -402,7 +402,11 @@ FlashFunction:
 	jr c, .useflash
 	ld a, [wTimeOfDayPalset]
 	cp DARKNESS_PALSET
-	jr nz, .notadarkcave
+;	jr nz, .notadarkcave
+	jr z, .useflash
+	ld a, DAY_F
+	ld [wMapTimeOfDay], a
+
 .useflash
 	call UseFlash
 	ld a, $81
@@ -1489,27 +1493,61 @@ AskHeadbuttText:
 	text_far _AskHeadbuttText
 	text_end
 
+
+
+
 RockSmashFunction:
-	call TryRockSmashFromMenu
+	call FieldMoveJumptableReset
+.loop
+	ld hl, .Jumptable
+	call FieldMoveJumptable
+	jr nc, .loop
 	and $7f
 	ld [wFieldMoveSucceeded], a
 	ret
 
-TryRockSmashFromMenu:
-	call GetFacingObject
-	jr c, .no_rock
-	ld a, d
-	cp SPRITEMOVEDATA_SMASHABLE_ROCK
-	jr nz, .no_rock
+.Jumptable:
+	dw .CheckAble
+	dw .DoRockSmash
+	dw .FailRockSmash
 
+.CheckAble:
+	call CheckForSomethingToSmash
+	jr c, .nothingtosmash
+	ld a, $1
+	ret
+
+.nothingtosmash
+	ld a, $2
+	ret
+
+.DoRockSmash:
 	ld hl, RockSmashFromMenuScript
 	call QueueScript
 	ld a, $81
 	ret
 
-.no_rock
-	call FieldMoveFailed
+.FailRockSmash:
+	ld hl, SmashNothingText
+	call MenuTextboxBackup
 	ld a, $80
+	ret
+
+SmashNothingText:
+	text_far _SmashNothingText
+	text_end
+
+CheckForSomethingToSmash:
+	call GetFacingObject
+	ret c
+	ld a, d
+	cp SPRITEMOVEDATA_SMASHABLE_ROCK
+	jr nz, .no_rock
+	and a
+	ret
+
+.no_rock
+	scf
 	ret
 
 GetFacingObject:
@@ -1533,6 +1571,52 @@ GetFacingObject:
 .fail
 	scf
 	ret
+
+
+;RockSmashFunction:
+;	call TryRockSmashFromMenu
+;	and $7f
+;	ld [wFieldMoveSucceeded], a
+;	ret
+
+;TryRockSmashFromMenu:
+;	call GetFacingObject
+;	jr c, .no_rock
+;	ld a, d
+;	cp SPRITEMOVEDATA_SMASHABLE_ROCK
+;	jr nz, .no_rock
+;
+;	ld hl, RockSmashFromMenuScript
+;	call QueueScript
+;	ld a, $81
+;	ret
+;
+;.no_rock
+;	call FieldMoveFailed
+;	ld a, $80
+;	ret
+;
+;GetFacingObject:
+;	farcall CheckFacingObject
+;	jr nc, .fail
+;
+;	ldh a, [hObjectStructIndex]
+;	call GetObjectStruct
+;	ld hl, OBJECT_MAP_OBJECT_INDEX
+;	add hl, bc
+;	ld a, [hl]
+;	ldh [hLastTalked], a
+;	call GetMapObject
+;	ld hl, MAPOBJECT_MOVEMENT
+;	add hl, bc
+;	ld a, [hl]
+;	ld d, a
+;	and a
+;	ret
+;
+;.fail
+;	scf
+;	ret
 
 RockSmashFromMenuScript:
 	reloadmappart
