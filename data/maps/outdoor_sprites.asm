@@ -268,6 +268,7 @@ CherrygroveGroupSprites:
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_CAL
 	; max 8 of 9 walking sprites
+	db SPRITE_ROCK
 	db SPRITE_POKE_BALL
 	db SPRITE_BERRY
 	db SPRITE_APRICORN
