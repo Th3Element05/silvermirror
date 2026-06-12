@@ -221,6 +221,7 @@ MapSpecificOBPalettes:
 	_use_palette_routine_for_map ROUTE_36, .CyanOverBrownOBPalette                  ;rawst
 	_use_palette_routine_for_map GOLDENROD_DEPT_STORE_B1F, .GrayOverYellowOBPalette ;machoke
 	_use_palette_routine_for_map AZALEA_TOWN, .PinkOverYellowOBPalette              ;slowpoke
+	_use_palette_routine_for_map KURTS_HOUSE, .PinkOverYellowOBPalette              ;slowpoke
 	_use_palette_routine_for_map ROUTE_33, .GrayOverYellowOBPalette                 ;blk
 	_use_palette_routine_for_map UNION_CAVE_1F, .GrayOverYellowOBPalette            ;geodude
 	_use_palette_routine_for_map ROUTE_30, .PinkOverYellowOBPalette                 ;pecha, pnk
