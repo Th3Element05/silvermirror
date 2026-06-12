@@ -369,7 +369,7 @@ Route35NationalParkGatePlayerEnterParkMovement:
 ;	done
 
 Route35NationalParkGateOfficer1WaitAtNorthGateText:
-	ntag "OFFICER:"
+	ntag "RANGER:"
 ;	text "OK. Please wait at"
 ;	line "the North Gate for"
 ;	cont "the announcement"
@@ -395,7 +395,7 @@ Route35NationalParkGateOfficer1WaitAtNorthGateText:
 ;	done
 
 Route35NationalParkGateOfficer1WeHoldContestsText:
-	ntag "OFFICER:"
+	ntag "RANGER:"
 	text "We hold Contests"
 	line "regularly in the"
 	cont "PARK. You should"
@@ -410,7 +410,7 @@ Route35NationalParkGateYoungsterText:
 	done
 
 BugCatchingContestExplanationText:
-	ntag "OFFICER:"
+	ntag "RANGER:"
 	text "The Bug-Catching"
 	line "Contest is held on"
 	cont "Tuesday, Thursday"
