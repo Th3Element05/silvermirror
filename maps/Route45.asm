@@ -255,10 +255,10 @@ HikerParryGivesIronText:
 
 	para "Keep it up!"
 
-	para "Oh, and take this"
-	line "--it's the gift"
-	cont "you couldn't take"
-	roll "last time."
+	para "Oh, and take this,"
+	line "it's the gift you"
+	cont "couldn't take last"
+	roll "time."
 	done
 
 TrainerBlackbeltKenji:

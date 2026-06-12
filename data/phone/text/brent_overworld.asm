@@ -30,7 +30,7 @@ BrentAskNumber2Text:
 
 BrentNumberAcceptedText:
 	ntag "BRENT:"
-	text "BILL--he's more"
+	text "BILL! He's more"
 	line "than amazing!"
 
 	para "To be a #MANIAC"

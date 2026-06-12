@@ -229,6 +229,6 @@ ChadReminderText:
 	text_ram wStringBuffer5
 	text "."
 
-	para "Hurry over--I'm"
-	line "waiting."
+	para "Hurry over!"
+	line "I'm waiting!"
 	done

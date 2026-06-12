@@ -66,7 +66,7 @@ JoeyRematchGiftText:
 	line "loss…"
 
 	para "No doubt about"
-	line "it--you're tough."
+	line "it, you're tough."
 
 	para "Being beaten this"
 	line "often actually"

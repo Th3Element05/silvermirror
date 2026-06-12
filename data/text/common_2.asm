@@ -265,7 +265,7 @@ _YourFriendIsNotReadyText::
 	prompt
 
 _MysteryGiftFiveADayText::
-	text "Sorry--only five"
+	text "Sorry, only five"
 	line "gifts a day."
 	prompt
 
@@ -1353,8 +1353,8 @@ _OakRating04::
 
 _OakRating05::
 	ntag "PROF.OAK:"
-	text "You're trying--I"
-	line "can see that."
+	text "You're trying,"
+	line "I can see that."
 
 	para "Your #DEX is"
 	line "coming together."

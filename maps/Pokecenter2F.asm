@@ -914,7 +914,7 @@ Text_PleaseComeIn:
 ;	prompt
 
 Text_RejectNewMon:
-	text "Sorry--@"
+	text "Sorry, @"
 	text_ram wStringBuffer1
 	text_start
 	line "can't be taken."
@@ -939,19 +939,19 @@ Text_RejectMonWithMail:
 	prompt
 
 Text_TimeCapsuleClosed:
-	text "I'm sorry--the"
+	text "I'm sorry, the"
 	line "TIME CAPSULE is"
 	cont "being adjusted."
 	done
 
 Text_TradeRoomClosed:
-	text "I'm sorry--the"
+	text "I'm sorry, the"
 	line "TRADE MACHINE is"
 	cont "being adjusted."
 	done
 
 Text_BattleRoomClosed:
-	text "I'm sorry--the"
+	text "I'm sorry, the"
 	line "BATTLE MACHINE is"
 	cont "being adjusted."
 	done

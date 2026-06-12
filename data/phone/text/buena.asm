@@ -186,7 +186,7 @@ BuenaPhoneProfessorOakText:
 	para "So I went over and"
 	line "introduced myself."
 
-	para "Get this--he tunes"
+	para "Get this! He tunes"
 	line "in to my program!"
 
 	para "Oh! Here comes"

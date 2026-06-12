@@ -84,8 +84,8 @@ PryceText_Intro:
 	para "I do not lose"
 	line "easily."
 
-	para "I, PRYCE--the"
-	line "winter trainer--"
+	para "I, PRYCE, the"
+	line "winter trainer,"
 	cont "shall demonstrate"
 	roll "my power!"
 	done
@@ -289,7 +289,7 @@ SkierClarissaAfterBattleText:
 ;	para "It's fun, isn't"
 ;	line "it?"
 ;
-;	para "But hey--we're"
+;	para "But hey, we're"
 ;	line "not playing games"
 ;	cont "here!"
 ;	done

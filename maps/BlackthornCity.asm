@@ -129,8 +129,8 @@ BlackthornGramps2Script:
 BlackthornGrampsGrantsEntryText:
 ;	text "If CLAIR allows"
 ;	line "it, her grand-"
-;	cont "father--our MASTER"
-;	cont "--will also."
+;	cont "father, our MASTER"
+;	cont "will also."
 ;
 	ntag "ELDER:"
 	text "CLAIR has granted"

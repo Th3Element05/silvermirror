@@ -72,7 +72,7 @@ EcruteakItemfinderHouse_MapScripts:
 ;	para "so you'll have to"
 ;	line "look yourself."
 ;
-;	para "Oh yeah--I heard"
+;	para "Oh yeah, I heard"
 ;	line "there are items"
 ;
 ;	para "in ECRUTEAK's"

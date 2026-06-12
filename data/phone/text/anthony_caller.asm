@@ -44,13 +44,13 @@ AnthonyLostAMonText:
 	cont "a passing BEAUTY."
 
 	para "Learn from my"
-	line "mistake--always"
+	line "mistake, always"
 	cont "stay focused on"
 	roll "the job at hand!"
 	done
 
 AnthonyBattleRematchText:
-	text "Come on--let's"
+	text "Come on! Let's"
 	line "battle right now!"
 
 	para "@"

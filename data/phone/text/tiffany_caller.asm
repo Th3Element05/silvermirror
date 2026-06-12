@@ -4,7 +4,7 @@ TiffanyMonIsAdorableText:
 	cont "you think so?"
 
 	para "I always sleep"
-	line "with it--it's so"
+	line "with it, it's so"
 	cont "fluffy and warm!"
 	done
 

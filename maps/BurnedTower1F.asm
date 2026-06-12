@@ -111,8 +111,8 @@ BurnedTower1FMovement_PlayerStartsToFall:
 ;	para "study what are"
 ;	line "said to be the"
 ;
-;	para "legendary #MON"
-;	line "--SUICUNE, ENTEI"
+;	para "legendary #MON:"
+;	line "SUICUNE, ENTEI"
 ;	cont "and RAIKOU."
 ;
 ;	para "EUSINE is here, so"

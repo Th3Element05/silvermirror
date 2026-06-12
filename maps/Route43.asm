@@ -66,7 +66,7 @@ PokemaniacMaxSeenText:
 	text "I love #MON!"
 
 	para "That's why I"
-	line "started--and why"
+	line "started, and why"
 	cont "I'll keep on col-"
 	roll "lecting #MON!"
 	done
@@ -161,8 +161,8 @@ TrainerCamperSpencer:
 CamperSpencerSeenText:
 	ntag "CAMPER:"
 	text "I can do so much"
-	line "with my #MON--"
-	cont "it's super-fun!"
+	line "with my #MON!"
+	cont "It's super-fun!"
 	done
 
 CamperSpencerBeatenText:

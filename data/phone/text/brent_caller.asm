@@ -49,7 +49,7 @@ BrentBattleRematchText:
 	cont "#MON. It'll be"
 	roll "worth your time!"
 
-	para "You know where--"
+	para "You know where- "
 	line "@"
 	text_ram wStringBuffer5
 	text "."

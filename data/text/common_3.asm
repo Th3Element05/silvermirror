@@ -549,7 +549,7 @@ _BargainShopIntroText::
 
 	para "I sell rare items"
 	line "that nobody else"
-	cont "carries--but only"
+	cont "carries, but only"
 	roll "one of each item."
 	done
 
@@ -834,7 +834,7 @@ _MobileCardFolderAskDeleteText::
 	roll "PASSCODE will also"
 	cont "be deleted."
 
-	para "Beware--a deleted"
+	para "Beware: A deleted"
 	line "CARD FOLDER can't"
 	cont "be restored."
 

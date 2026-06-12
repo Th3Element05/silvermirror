@@ -53,7 +53,7 @@ ToddHangUpText:
 	done
 
 ToddDepartmentStoreBargainSaleText:
-	text "This is it--the"
+	text "This is it! The"
 	line "one we've all been"
 	cont "waiting for!"
 

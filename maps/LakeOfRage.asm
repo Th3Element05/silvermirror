@@ -402,7 +402,7 @@ CooltrainerfCaraSeenText:
 ;	para "Oh, darn. I came"
 ;	line "here for nothing?"
 ;
-;	para "I know--let's"
+;	para "I know, let's"
 ;	line "battle!"
 ;	done
 

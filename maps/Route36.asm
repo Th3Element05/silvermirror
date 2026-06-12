@@ -543,7 +543,7 @@ Route36TrainerTips1Text:
 	text "TRAINER TIPS"
 
 	para "#MON stats"
-	line "vary--even within"
+	line "vary, even within"
 	cont "the same species."
 
 	para "Their stats may be"

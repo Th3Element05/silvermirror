@@ -91,7 +91,7 @@ CoolDuoThomAfterBattleText:
 	text "We did our best,"
 	line "but came up short."
 
-	para "No excuses--I"
+	para "No excuses, I can"
 	line "admit we lost."
 	done
 

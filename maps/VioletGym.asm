@@ -102,7 +102,7 @@ ReceivedZephyrBadgeText:
 
 FalknerZephyrBadgeText:
 	ntag "FALKNER:"
-	text "Here--take this"
+	text "Here, take this"
 	line "too."
 	done
 

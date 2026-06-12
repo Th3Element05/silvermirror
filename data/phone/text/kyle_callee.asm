@@ -27,8 +27,8 @@ KyleFishingTipsText:
 	cont "just like that,"
 	roll "without moving."
 
-	para "And then, YOINK--"
-	line "you get a bite!"
+	para "And then, YOINK!"
+	line "You got a bite!"
 
 	para "YANK on the line"
 	line "and pull it out of"

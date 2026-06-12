@@ -247,7 +247,7 @@ MediumMinaBeatenText:
 MediumMinaAfterBattleText:
 	ntag "MEDIUM:"
 	text "The one who wants"
-	line "to win most--will!"
+	line "to win most, will!"
 	done
 
 TrainerMediumLeona:

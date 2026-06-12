@@ -541,7 +541,7 @@ RuinsOfAlphResearchCenter_MapScripts:
 ;
 ;	para "But it's not known"
 ;	line "why they were"
-;	cont "built--or by whom."
+;	cont "built, or by whom."
 ;	done
 
 ;RuinsOfAlphResearchCenterScientist1Text_GotUnownDex:

@@ -98,7 +98,7 @@ WhitneyIntroText:
 
 	para "You want to bat-"
 	line "tle? I'm warning"
-	cont "you--I'm good!"
+	cont "you, I'm good!"
 	done
 
 WhitneyShouldntBeSoSeriousText:

@@ -65,7 +65,7 @@ ParryGenericText:
 	para "My @"
 	text_ram wStringBuffer4
 	text " and"
-	line "me--we're looking"
+	line "me, we're looking"
 	cont "mighty dandy!"
 	roll "Hahahah!"
 	done

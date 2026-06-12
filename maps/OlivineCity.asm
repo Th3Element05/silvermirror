@@ -114,9 +114,9 @@ OlivineCityStandingYoungsterScript:
 OlivineCityStandingYoungsterPokegearText:
 	ntag "YOUNGSTER:"
 	text "That thing you"
-	line "have--it's a #-"
-	cont "GEAR, right? Wow,"
-	roll "that's cool."
+	line "have, it's a #-"
+	cont "GEAR, right?"
+	roll "Wow, that's cool."
 	done
 
 OlivineCityStandingYoungsterPokedexText:

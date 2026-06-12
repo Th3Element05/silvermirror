@@ -182,9 +182,9 @@ RuinsOfAlphOutside_RuinsAreOldText:
 	line "about 1500 years"
 	cont "old."
 
-	para "But it's not known"
-	line "why they were"
-	cont "built--or by whom."
+	para "But we don't know"
+	line "who built them,"
+	cont "or why."
 	done
 
 RuinsOfAlphOutside_AllUnownText:

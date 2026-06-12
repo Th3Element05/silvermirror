@@ -71,7 +71,7 @@ VanceRematchGiftText:
 	line "really strong!"
 
 	para "Thanks for taking"
-	line "me on so often--"
+	line "me on so often."
 	cont "I learned a whole"
 	roll "lot from you."
 

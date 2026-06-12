@@ -65,7 +65,7 @@ AnthonyGenericText:
 	para "My @"
 	text_ram wStringBuffer4
 	text " and"
-	line "me--we have energy"
+	line "me, we have energy"
 	cont "to burn. We hike"
 	roll "up mountains every"
 	cont "day to work out"

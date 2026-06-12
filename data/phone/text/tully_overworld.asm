@@ -72,6 +72,6 @@ TullyPackFullText:
 	ntag "TULLY:"
 	text "Your PACK's full?"
 
-	para "Come back later--"
+	para "Come back later,"
 	line "that'll do it."
 	done

@@ -337,8 +337,8 @@ GentlemanLikeADanceText:
 	line "treat to see!"
 
 	para "I want you to have"
-	line "this. Don't worry"
-	cont "--take it!"
+	line "this. Don't worry,"
+	cont "take it!"
 	done
 
 GentlemanLuckyEggExplanationText:

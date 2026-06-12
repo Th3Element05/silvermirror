@@ -7,7 +7,7 @@ ErinAskNumber1Text:
 	line "much harder…"
 
 	para "Here's my number."
-	line "I'm ERIN--don't"
+	line "I'm ERIN, don't"
 	cont "forget! Want to"
 	roll "battle me again?"
 	done
@@ -33,7 +33,7 @@ ErinNumberDeclinedText:
 	text "Oh… I'm sad…"
 	line "If you do want to"
 	cont "battle, come see"
-	roll "ERIN--that's me!"
+	roll "ERIN! That's me!"
 	done
 
 ErinPhoneFullText:
