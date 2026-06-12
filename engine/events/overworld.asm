@@ -400,10 +400,17 @@ FlashFunction:
 	farcall SpecialAerodactylChamber
 	pop hl
 	jr c, .useflash
-	ld a, [wTimeOfDayPalset]
-	cp DARKNESS_PALSET
-;	jr nz, .notadarkcave
+
+	ld a, [wEnvironment]
+	cp CAVE
 	jr z, .useflash
+
+;	ld a, [wTimeOfDayPalset]
+;	cp DARKNESS_PALSET
+;	jr nz, .notadarkcave
+;	jr z, .useflash
+
+.notadarkcave
 	ld a, DAY_F
 	ld [wMapTimeOfDay], a
 
@@ -412,10 +419,10 @@ FlashFunction:
 	ld a, $81
 	ret
 
-.notadarkcave
-	call FieldMoveFailed
-	ld a, $80
-	ret
+;.notadarkcave
+;	call FieldMoveFailed
+;	ld a, $80
+;	ret
 
 ;.nozephyrbadge
 ;	ld a, $80
