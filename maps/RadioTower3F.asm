@@ -39,6 +39,11 @@ RadioTower3FCooltrainerFScript:
 	iftrue .UsedCardKey
 	checkevent EVENT_GOT_RADIO_TOWER_CARD_KEY
 	iftrue .GotCardKey
+	checkevent EVENT_OAK_CALLED_ABOUT_RADIO_TOWER
+	iftrue .LockedGate
+	jumptextfaceplayer RadioTower3FCooltrainerFBeforeText
+
+.LockedGate:
 	jumptextfaceplayer RadioTower3FCooltrainerFLockedGateText
 
 .GotCardKey:
@@ -61,6 +66,14 @@ RadioTower3FCooltrainerFScript:
 
 .GotNugget:
 	jumptextfaceplayer RadioTower3FCooltrainerFYouWereMarvelousText
+
+RadioTower3FCooltrainerFBeforeText:
+	ntag "TRAINER:"
+	text "I caught a rare"
+	line "#MON when the"
+	cont "radio reported a"
+	roll "swarm nearby!"
+	done
 
 RadioTower3FCooltrainerFLockedGateText:
 	ntag "TRAINER:"
@@ -148,6 +161,8 @@ CardKeySlotScript:: ;export for using CARD KEY from bag
 	opentext
 	writetext RadioTower3FCardKeySlotText
 	waitbutton
+	checkevent ENGINE_ROCKETS_IN_RADIO_TOWER
+	iffalse .EndCardKey
 	checkevent EVENT_USED_RADIO_TOWER_CARD_KEY
 	iftrue .EndCardKey
 	checkitem CARD_KEY_R
