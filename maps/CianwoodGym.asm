@@ -164,9 +164,9 @@ GetStormBadgeText:
 ChuckExplainBadgeText:
 	ntag "CHUCK:"
 	text "You're strong."
-	line "I think you might"
-	cont "your #MON could"
-	roll "handle anything."
+	line "Your #MON can"
+	cont "probably handle"
+	roll "anything."
 
 	para "Take this, too!"
 	done
@@ -201,18 +201,18 @@ ChuckExplainWhirlpoolText:
 
 	para "LAPRAS from your"
 	line "SURF PAGER can use"
-	cont "WHIRLPOOL calm"
+	cont "WHIRLPOOL to calm"
 	roll "turbulent water."
 
-	para "With that, you can"
-	line "get past the whirl-"
-	cont "pools around the"
-	roll "WHIRL ISLANDS."
+	para "You should be able"
+	line "to get past the"
+	cont "whirlpools around"
+	roll "the WHIRL ISLANDS."
 
 	para "People say that a"
 	line "powerful #MON"
 	cont "lurks deep within"
-	roll "WHIRL ISLANDs."
+	roll "those caves."
 
 	para "But I've searched"
 	line "there and never"
@@ -429,14 +429,14 @@ CianwoodGym_MapEvents:
 	object_event  4,  1, SPRITE_CHUCK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CianwoodGymChuckScript, EVENT_JOHTO_GYM_LEADERS
 	object_event  5,  1, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodGymBoulder, -1
 	object_event  7, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, CianwoodGymGuideScript, -1
-	object_event  4, 13, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GymClosedBlackbeltScript, EVENT_ROUTE_42_BOULDERS_CLEARED
-	object_event  5, 13, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GymClosedBlackbeltScript, EVENT_ROUTE_42_BOULDERS_CLEARED
-	object_event  2, 12, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBlackbeltLee, EVENT_CIANWOOD_GYM_TRAINERS ;nob
-	object_event  7, 12, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBlackbeltLao, EVENT_CIANWOOD_GYM_TRAINERS ;lung
-	object_event  4,  8, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodGymBoulder, -1
-	object_event  5,  8, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodGymBoulder, -1
+	object_event  4, 12, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GymClosedBlackbeltScript, EVENT_ROUTE_42_BOULDERS_CLEARED
+	object_event  5, 12, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GymClosedBlackbeltScript, EVENT_ROUTE_42_BOULDERS_CLEARED
+	object_event  3, 11, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBlackbeltLee, EVENT_CIANWOOD_GYM_TRAINERS ;nob
+	object_event  5,  7, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerBlackbeltLao, EVENT_CIANWOOD_GYM_TRAINERS ;lung
+	object_event  3,  9, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodGymBoulder, -1
+	object_event  4,  9, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodGymBoulder, -1
+	object_event  5,  9, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodGymBoulder, -1
 ;	object_event  3,  9, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBlackbeltYoshi, -1
 ;	object_event  5,  5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerBlackbeltLao, -1
-;	object_event  3,  7, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodGymBoulder, -1
 ;
 	object_event  4,  1, SPRITE_CHUCK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CianwoodGymChuckRematchScript, EVENT_JOHTO_LEADER_REMATCHES
