@@ -417,7 +417,7 @@ PewterCityGymSignText:
 PewterCityPoliceNoticeSign:
 	jumptext PewterCityPoliceNoticeSignText
 PewterCityPoliceNoticeSignText:
-	text "     NOTICE!"
+	text "It's a notice!"
 
 	para "Suspicious people"
 	line "have been spotted"

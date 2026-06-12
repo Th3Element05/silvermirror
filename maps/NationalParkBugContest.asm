@@ -126,7 +126,7 @@ BugCatchingContestant10AText:
 ;NationalParkBattleNoticeSign:
 ;	jumptext NationalParkBattleNoticeText
 ;NationalParkBattleNoticeText:
-;	text "     NOTICE!"
+;	text "It's a notice!"
 ;
 ;	para "Please battle only"
 ;	line "in the grass."

@@ -336,7 +336,7 @@ BikerNolanAfterBattleText:
 Route17NoticeSign:
 	jumptext Route17NoticeSignText
 Route17NoticeSignText:
-	text "     NOTICE!"
+	text "It's a notice!"
 
 	para "Watch out for"
 	line "discarded items!"
