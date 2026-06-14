@@ -801,6 +801,7 @@ BattleAnim_Guillotine:
 ;BattleAnim_RazorWind:
 ;	anim_if_param_equal $1, BattleAnim_FocusEnergy
 BattleAnim_AirSlice:
+	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_HP_FLYING
 	anim_1gfx BATTLE_ANIM_GFX_WHIP
 ;	anim_bgeffect BATTLE_BG_EFFECT_CYCLE_OBPALS_GRAY_AND_YELLOW, $0, $1, $0
 .loop
@@ -870,7 +871,7 @@ BattleAnim_Gust:
 	anim_ret
 
 BattleAnim_WingAttack:
-;	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_HP_FLYING
+	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_HP_FLYING
 	anim_1gfx BATTLE_ANIM_GFX_HIT
 	anim_sound 0, 1, SFX_WING_ATTACK
 	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 148, 56, $0
@@ -1655,8 +1656,8 @@ BattleAnim_DragonDance:
 	anim_obj BATTLE_ANIM_OBJ_FLAME_WHEEL, 48, 84, $15
 	anim_loop 6, .loop
 	anim_wait 32 ;96
-	anim_jump BattleAnim_Endure
-;	anim_ret
+;	anim_jump BattleAnim_Endure
+	anim_ret
 
 ;BattleAnim_Mist:
 ;	anim_obp0 $54
@@ -3255,7 +3256,7 @@ BattleAnim_PoisonJab:
 ;	anim_ret
 
 BattleAnim_BulletSeed:
-	anim_setobjpal PAL_BATTLE_OB_BLUE, PAL_BTLCUSTOM_HP_ROCK
+	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_GREEN
 	anim_2gfx BATTLE_ANIM_GFX_FLOWER, BATTLE_ANIM_GFX_HIT
 	anim_sound 0, 1, SFX_MEGA_PUNCH
 	anim_obj BATTLE_ANIM_OBJ_NEEDLE, 52, 88, $18
@@ -3760,8 +3761,10 @@ BattleAnim_RockSlide:
 	anim_sound 0, 1, SFX_STRENGTH
 	anim_obj BATTLE_ANIM_OBJ_SMALL_ROCK, 136, 68, $30
 	anim_wait 16
-	anim_loop 4, .loop
-	anim_wait 96
+;	anim_loop 4, .loop
+;	anim_wait 96
+	anim_loop 3, .loop
+	anim_wait 64
 	anim_ret
 
 BattleAnim_HyperFang:
@@ -3782,7 +3785,7 @@ BattleAnim_Sharpen:
 	anim_obj BATTLE_ANIM_OBJ_SHARPEN_LEFT, 84, 84, $0
 ;	anim_obj BATTLE_ANIM_OBJ_SHARPEN_LEFT, 76, 84, $0
 	anim_obj BATTLE_ANIM_OBJ_FORESIGHT, 62, 78, $0
-	anim_wait 12
+	anim_wait 16
 	anim_obj BATTLE_ANIM_OBJ_SHARPEN_RIGHT, 46, 84, $0
 	anim_obj BATTLE_ANIM_OBJ_SHARPEN_RIGHT, 54, 84, $0
 ;	anim_obj BATTLE_ANIM_OBJ_SHARPEN_RIGHT, 62, 84, $0
@@ -3792,7 +3795,7 @@ BattleAnim_Sharpen:
 ;	anim_obj BATTLE_ANIM_OBJ_FORESIGHT, 72, 80, $0
 	anim_wait 32
 	anim_loop 3, .loop
-	anim_wait 16
+	anim_wait 24
 	anim_jump BattleAnim_Endure
 ;	anim_ret
 
