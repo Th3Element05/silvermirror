@@ -235,7 +235,6 @@
 	const EVENT_DOME_FOSSIL_AT_MT_MORTAR
 	const EVENT_MT_MORTAR_OBTAINED_FOSSIL
 	const EVENT_MET_FLORIA
-	const EVENT_TALKED_TO_FLORIA_AT_FLOWER_SHOP
 	const EVENT_FOUGHT_SUDOWOODO
 	const EVENT_ROUTE_36_BATTLE
 	const EVENT_ROUTE_36_OPEN
@@ -398,8 +397,8 @@
 	const EVENT_RESTORED_POWER_TO_KANTO
 	const EVENT_SET_WHEN_FOUGHT_HO_OH
 
-; group used 216
-; running total 316
+; group used 215
+; running total 315
 
 	const_next 400
 ; Kanto people
@@ -897,6 +896,7 @@
 	const EVENT_TIN_TOWER_8F_MAX_ELIXER
 	const EVENT_TIN_TOWER_8F_FULL_RESTORE
 	const EVENT_TIN_TOWER_9F_HP_UP
+	const EVENT_TIN_TOWER_ROOF_SACRED_ASH
 	const EVENT_WHIRL_ISLAND_NE_ULTRA_BALL
 	const EVENT_WHIRL_ISLAND_SW_ULTRA_BALL
 	const EVENT_WHIRL_ISLAND_B1F_FULL_RESTORE
@@ -943,9 +943,9 @@
 ;	const EVENT_ROUTE_35_TM_ROLLOUT
 ;	const EVENT_ROUTE_30_ANTIDOTE
 ;
-; used 115
-; group total used 260
-; running total 960
+; used 116
+; group total used 261
+; running total 961
 
 	const_next 1000
 ; Kanto hidden items (silvermirror)
