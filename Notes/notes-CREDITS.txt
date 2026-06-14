@@ -13,6 +13,7 @@ gfx\credits\smoochum.png
 gfx\credits\ditto.png
 gfx\credits\igglybuff.png
 
+CREDITS_WAIT, 456 (total)
 
 
 
