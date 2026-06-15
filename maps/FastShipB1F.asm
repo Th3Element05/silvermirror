@@ -330,8 +330,8 @@ FastShipB1F_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 31,  7, FAST_SHIP_1F, 10
-	warp_event  3,  7, FAST_SHIP_1F, 11
+	warp_event 31,  6, FAST_SHIP_1F, 10
+	warp_event  3,  6, FAST_SHIP_1F, 11
 	warp_event  7,  3, FAST_SHIP_ENGINE_ROOM, 1
 
 	def_coord_events

@@ -205,7 +205,7 @@ FastShipEngineRoom_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  7,  3, FAST_SHIP_B1F, 3
+	warp_event  7,  2, FAST_SHIP_B1F, 3
 
 	def_coord_events
 	coord_event 17,  7, SCENE_FASTSHIPENGINEROOM_ROCKETS, FastShipRngineRoomRocketsSpeech

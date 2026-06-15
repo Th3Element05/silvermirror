@@ -301,7 +301,7 @@ VioletCity_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 14, 29, BGEVENT_READ, VioletCity_NoFruit
+	bg_event 14, 28, BGEVENT_READ, VioletCity_NoFruit
 	bg_event 24, 20, BGEVENT_READ, VioletCitySign
 	bg_event 19, 17, BGEVENT_READ, VioletGymSign
 	bg_event 24,  8, BGEVENT_READ, SproutTowerSign
@@ -311,7 +311,7 @@ VioletCity_MapEvents:
 	bg_event 37, 14, BGEVENT_ITEM, VioletCityHiddenHyperPotion
 
 	def_object_events
-	object_event 14, 29, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, VioletCity_YLWApricorn, EVENT_VIOLET_CITY_YLW_APRICORN
+	object_event 14, 28, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, VioletCity_YLWApricorn, EVENT_VIOLET_CITY_YLW_APRICORN
 ;	object_event 13, 16, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, VioletCityEarlScript, EVENT_VIOLET_CITY_EARL
 	object_event 26, 17, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, VioletCityLassScript, -1
 	object_event 17, 20, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletCityGrampsScript, -1

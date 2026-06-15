@@ -129,21 +129,21 @@ SSAnneKitchen_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  1,  2, SS_ANNE_1F, 3 ; 1
+	warp_event  3,  8, SS_ANNE_1F, 3 ; 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event 13,  5, BGEVENT_READ, SSAnneKitchenTrashcan
-	bg_event 13,  7, BGEVENT_READ, SSAnneKitchenTrashcan
-	bg_event 13,  9, BGEVENT_ITEM, SSAnneKitchenHiddenGreatBall
-	bg_event 13,  9, BGEVENT_READ, SSAnneKitchenOnionTrashcan
+	bg_event 17,  3, BGEVENT_READ, SSAnneKitchenTrashcan
+	bg_event 17,  5, BGEVENT_READ, SSAnneKitchenTrashcan
+	bg_event 17,  7, BGEVENT_ITEM, SSAnneKitchenHiddenGreatBall
+	bg_event 17,  7, BGEVENT_READ, SSAnneKitchenOnionTrashcan
 
 	def_object_events
-	object_event  1,  8, SPRITE_CHEF, SPRITEMOVEDATA_WALK_UP_DOWN, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneKitchenCook1Script, -1
-	object_event  5,  8, SPRITE_CHEF, SPRITEMOVEDATA_WALK_UP_DOWN, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneKitchenCook2Script, -1
-	object_event  9,  7, SPRITE_CHEF, SPRITEMOVEDATA_WALK_UP_DOWN, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneKitchenCook3Script, -1
-	object_event 13,  6, SPRITE_CHEF, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneKitchenCook4Script, -1
-	object_event 13,  8, SPRITE_CHEF, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneKitchenCook5Script, -1
-	object_event 13, 10, SPRITE_CHEF, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneKitchenCook6Script, -1
-	object_event  8, 12, SPRITE_CHEF, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneKitchenCook7Script, -1
+	object_event  5,  5, SPRITE_CHEF, SPRITEMOVEDATA_WALK_UP_DOWN, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneKitchenCook1Script, -1
+	object_event  9,  6, SPRITE_CHEF, SPRITEMOVEDATA_WALK_UP_DOWN, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneKitchenCook2Script, -1
+	object_event 13,  5, SPRITE_CHEF, SPRITEMOVEDATA_WALK_UP_DOWN, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneKitchenCook3Script, -1
+	object_event 17,  4, SPRITE_CHEF, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneKitchenCook4Script, -1
+	object_event 17,  6, SPRITE_CHEF, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneKitchenCook5Script, -1
+	object_event 17,  8, SPRITE_CHEF, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneKitchenCook6Script, -1
+	object_event  8, 10, SPRITE_CHEF, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneKitchenCook7Script, -1

@@ -119,7 +119,7 @@ ENDM
 	map_const SS_ANNE_1F,                                  18,  8 ;  3
 	map_const SS_ANNE_ROOMS_NORTH,                         18,  4 ;  4
 	map_const SS_ANNE_ROOMS_SOUTH,                         18,  4 ;  5
-	map_const SS_ANNE_KITCHEN,                              7,  7 ;  6
+	map_const SS_ANNE_KITCHEN,                             10,  7 ;  6
 	map_const SS_ANNE_2F,                                  19,  9 ;  7
 	map_const SS_ANNE_ROOMS_2F,                            18,  4 ;  8
 	map_const SS_ANNE_BOW,                                 10,  7 ;  9
@@ -289,7 +289,7 @@ ENDM
 	endgroup
 
 	newgroup VIOLET                                               ; 17
-	map_const VIOLET_CITY,                                 20, 18 ;  1
+	map_const VIOLET_CITY,                                 20, 17 ;  1
 	map_const VIOLET_POKECENTER_1F,                         5,  4 ;  2
 	map_const VIOLET_MART,                                  5,  4 ;  3
 	map_const VIOLET_GYM,                                   5,  8 ;  4
@@ -297,7 +297,7 @@ ENDM
 	map_const TRAINER_HOUSE_B1F,                            5,  8 ;  6
 	map_const VIOLET_KYLES_HOUSE,                           4,  4 ;  7
 	map_const VIOLET_NICKNAME_SPEECH_HOUSE,                 4,  4 ;  8
-	map_const ROUTE_32,                                    10, 45 ;  9
+	map_const ROUTE_32,                                    10, 46 ;  9
 	map_const ROUTE_32_RUINS_OF_ALPH_GATE,                  4,  5 ; 10
 	map_const ROUTE_32_POKECENTER_1F,                       5,  4 ; 11
 	map_const ROUTE_35,                                    10, 18 ; 12
@@ -343,7 +343,7 @@ ENDM
 	endgroup
 
 	newgroup ECRUTEAK                                             ; 20
-	map_const ECRUTEAK_CITY,                               20, 18 ;  1
+	map_const ECRUTEAK_CITY,                               20, 17 ;  1
 	map_const ECRUTEAK_POKECENTER_1F,                       5,  4 ;  2
 	map_const ECRUTEAK_MART,                                5,  4 ;  3
 	map_const ECRUTEAK_GYM,                                 5,  9 ;  4
@@ -352,7 +352,7 @@ ENDM
 	map_const WISE_TRIOS_ROOM,                              4,  4 ;  7
 	map_const ECRUTEAK_LUGIA_SPEECH_HOUSE,                  4,  4 ;  9
 	map_const ECRUTEAK_ITEMFINDER_HOUSE,                    4,  4 ; 10
-	map_const ROUTE_37,                                    10,  9 ; 11
+	map_const ROUTE_37,                                    10, 10 ; 11
 	endgroup
 
 	newgroup OLIVINE                                              ; 21

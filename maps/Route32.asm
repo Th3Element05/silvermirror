@@ -147,7 +147,7 @@ TrainerCoupleDuffAndEda_Eda:
 	end
 
 CoupleDuffAndEda_EdaSeenText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "Uh-huh. Yeah, and"
 	line "you know…"
 
@@ -165,7 +165,7 @@ CoupleDuffAndEda_EdaBeatenText:
 	done
 
 CoupleDuffAndEda_EdaAfterText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "I was having a"
 	line "nice chat too."
 	done
@@ -181,7 +181,7 @@ TrainerCoupleDuffAndEda_Duff:
 	end
 
 CoupleDuffAndEda_DuffSeenText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "My girlfriend is"
 	line "always talking on"
 	cont "the phone."
@@ -197,7 +197,7 @@ CoupleDuffAndEda_DuffBeatenText:
 	done
 
 CoupleDuffAndEda_DuffAfterText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "At least she's"
 	line "not on the phone"
 	cont "anymore."
@@ -581,33 +581,33 @@ Route32_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 11, 73, ROUTE_32_POKECENTER_1F, 1
-	warp_event  4,  2, ROUTE_32_RUINS_OF_ALPH_GATE, 3
-	warp_event  4,  3, ROUTE_32_RUINS_OF_ALPH_GATE, 4
-	warp_event  6, 79, UNION_CAVE_1F, 4
+	warp_event 11, 75, ROUTE_32_POKECENTER_1F, 1
+	warp_event  4,  4, ROUTE_32_RUINS_OF_ALPH_GATE, 3
+	warp_event  4,  5, ROUTE_32_RUINS_OF_ALPH_GATE, 4
+	warp_event  6, 81, UNION_CAVE_1F, 4
 
 	def_coord_events
 ;	coord_event 18,  8, SCENE_ROUTE32_COOLTRAINER_M_BLOCKS, Route32CooltrainerMStopsYouScene
 ;	coord_event  7, 71, SCENE_ROUTE32_OFFER_SLOWPOKETAIL, Route32WannaBuyASlowpokeTailScript
 
 	def_bg_events
-	bg_event 13,  5, BGEVENT_READ, Route32Sign
-	bg_event  9,  1, BGEVENT_READ, Route32RuinsSign
-	bg_event 10, 84, BGEVENT_READ, Route32UnionCaveSign
-	bg_event 12, 73, BGEVENT_READ, Route32PokecenterSign
-	bg_event 12, 67, BGEVENT_ITEM, Route32HiddenUltraBall
-	bg_event 11, 40, BGEVENT_ITEM, Route32HiddenMaxPotion
+	bg_event 13,  7, BGEVENT_READ, Route32Sign
+	bg_event  9,  3, BGEVENT_READ, Route32RuinsSign
+	bg_event 10, 86, BGEVENT_READ, Route32UnionCaveSign
+	bg_event 12, 75, BGEVENT_READ, Route32PokecenterSign
+	bg_event 12, 69, BGEVENT_ITEM, Route32HiddenUltraBall
+	bg_event 11, 42, BGEVENT_ITEM, Route32HiddenMaxPotion
 
 	def_object_events
 ;	object_event 12, 67, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FriedaScript, EVENT_ROUTE_32_FRIEDA_OF_FRIDAY
-	object_event 12, 22, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerYoungsterRegis, -1 ;albert
-	object_event  9, 35, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerCoupleDuffAndEda_Eda, -1 ;picnicker liz
-	object_event  8, 35, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerCoupleDuffAndEda_Duff, -1 ;camper roland
-	object_event  6, 48, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerFisherFred, -1 ;henry
-	object_event  8, 49, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerFisherWilton, -1 ;justin
-	object_event 12, 56, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerFisherRalph, -1 ;ralph
-	object_event  4, 63, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerYoungsterBrady, -1 ;gordon
-	object_event 11, 82, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperJohn, -1 ;peter
-	object_event  6, 53, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route32UltraBall, EVENT_ROUTE_32_ULTRA_BALL
-	object_event  3, 30, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route32MaxRepel, EVENT_ROUTE_32_MAX_REPEL
+	object_event 12, 24, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerYoungsterRegis, -1 ;albert
+	object_event  9, 37, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerCoupleDuffAndEda_Eda, -1 ;picnicker liz
+	object_event  8, 37, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerCoupleDuffAndEda_Duff, -1 ;camper roland
+	object_event  6, 50, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerFisherFred, -1 ;henry
+	object_event  8, 51, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerFisherWilton, -1 ;justin
+	object_event 12, 58, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerFisherRalph, -1 ;ralph
+	object_event  4, 65, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerYoungsterBrady, -1 ;gordon
+	object_event 11, 84, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperJohn, -1 ;peter
+	object_event  6, 55, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route32UltraBall, EVENT_ROUTE_32_ULTRA_BALL
+	object_event  3, 32, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route32MaxRepel, EVENT_ROUTE_32_MAX_REPEL
 ;	object_event 15, 13, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route32RoarTMGuyScript, -1

@@ -141,7 +141,7 @@ ENDM
 
 	map_attributes BlackthornCity, BLACKTHORN_CITY, $71, SOUTH | WEST
 	connection south, Route45, ROUTE_45, 0
-	connection west, Route44, ROUTE_44, 9
+	connection west, Route44, ROUTE_44, 0 ;9
 
 	map_attributes SilverCaveOutside, SILVER_CAVE_OUTSIDE, $2c, EAST
 	connection east, Route28, ROUTE_28, 6
@@ -228,7 +228,7 @@ ENDM
 
 	map_attributes Route44, ROUTE_44, $71, WEST | EAST
 	connection west, MahoganyTown, MAHOGANY_TOWN, 0
-	connection east, BlackthornCity, BLACKTHORN_CITY, -9
+	connection east, BlackthornCity, BLACKTHORN_CITY, 0 ;-9
 
 	map_attributes Route45, ROUTE_45, $71, NORTH | WEST
 	connection north, BlackthornCity, BLACKTHORN_CITY, 0
