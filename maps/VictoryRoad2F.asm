@@ -182,7 +182,7 @@ TrainerCooltrainerMMike:
 	end
 
 CooltrainerMMikeSeenText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "Come on!"
 	line "I'll whip you!"
 	done
@@ -193,7 +193,7 @@ CooltrainerMMikeBeatenText:
 	done
 
 CooltrainerMMikeAfterBattleText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "You earned the"
 	line "right to be on"
 	cont "VICTORY ROAD!"

@@ -134,7 +134,7 @@ TrainerCooltrainermBrian:
 	end
 
 CooltrainermBrianSeenText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "I can tell you're"
 	line "a good trainer by"
 	cont "looking at you."
@@ -150,7 +150,7 @@ CooltrainermBrianBeatenText:
 	done
 
 CooltrainermBrianAfterBattleText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "Wow. You have a"
 	line "lot of BADGEs."
 
@@ -169,7 +169,7 @@ TrainerCooltrainerfJenn:
 	end
 
 CooltrainerfJennSeenText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "You look strong."
 
 	para "Good trainers seek"
@@ -184,7 +184,7 @@ CooltrainerfJennBeatenText:
 	done
 
 CooltrainerfJennAfterBattleText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "We all get better"
 	line "by experiencing"
 	cont "many battles."

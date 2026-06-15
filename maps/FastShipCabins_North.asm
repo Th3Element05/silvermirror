@@ -193,7 +193,7 @@ TrainerCoolDuoElanAndIda:
 	end
 
 CoolDuoElanAndIdaSeenText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "Excuse me, we're"
 	line "a little busy."
 	done
@@ -205,7 +205,7 @@ CoolDuoElanAndIdaBeatenText:
 	done
 
 CoolDuoElanAndIdaAfterBattleText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "Would you mind"
 	line "giving us some"
 	cont "privacy?"

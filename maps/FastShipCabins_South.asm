@@ -17,7 +17,7 @@ TrainerCooltrainerMAdam:
 	end
 
 CooltrainerMAdamSeenText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "I'm on a trip to"
 	line "test my skills at"
 	cont "#MON GYMs all"
@@ -30,7 +30,7 @@ CooltrainerMAdamBeatenText:
 	done
 
 CooltrainerMAdamAfterBattleText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "A great trainer"
 	line "should never stop"
 	cont "striving to earn"

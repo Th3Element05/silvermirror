@@ -190,7 +190,7 @@ TrainerCooltrainerFGwen:
 	jumptextfaceplayer CooltrainerFGwenAfterBattleText
 
 CooltrainerFGwenSeenText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "Welcome to"
 	line "CELADON GYM!"
 
@@ -206,7 +206,7 @@ CooltrainerFGwenBeatenText:
 	done
 
 CooltrainerFGwenAfterBattleText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "I didn't bring my"
 	line "best #MON!"
 

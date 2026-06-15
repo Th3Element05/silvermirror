@@ -364,7 +364,7 @@ TrainerCooltrainermKevin:
 	end
 
 CooltrainermKevinSeenText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "If a trainer spots"
 	line "another trainer,"
 	cont "he has to make a"
@@ -378,7 +378,7 @@ CooltrainermKevinBeatenText:
 	done
 
 CooltrainermKevinAfterBattleText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "#MON and their"
 	line "trainer become"
 	cont "powerful through"
@@ -396,7 +396,7 @@ TrainerCooltrainerfCara:
 	end
 
 CooltrainerfCaraSeenText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "I heard a rare"
 	line "MAGIKARP was seen"
 	cont "in the lake."
@@ -420,7 +420,7 @@ CooltrainerfCaraBeatenText:
 	done
 
 CooltrainerfCaraAfterBattleText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "Come to think of"
 	line "it, I've seen a"
 	cont "pink BUTTERFREE."
@@ -537,8 +537,8 @@ LakeOfRage_MapEvents:
 
 	def_object_events
 ;	object_event  2,  5, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WesleyScript, EVENT_LAKE_OF_RAGE_WESLEY_OF_WEDNESDAY
-	object_event 22, 20, SPRITE_MAGIKARP_SWIM, SPRITEMOVEDATA_SWIM_WANDER, 2, 1, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, GoldMagikarp, EVENT_LAKE_OF_RAGE_GOLD_MAGIKARP
-	object_event 21, 28, SPRITE_CLAIR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LakeOfRageClairScript, EVENT_CLAIR_RETURNED_TO_GYM ;EVENT_LAKE_OF_RAGE_CLAIR
+	object_event 22, 20, SPRITE_MAGIKARP_SWIM, SPRITEMOVEDATA_SWIM_WANDER, 2, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, GoldMagikarp, EVENT_LAKE_OF_RAGE_GOLD_MAGIKARP
+	object_event 21, 28, SPRITE_CLAIR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LakeOfRageClairScript, EVENT_CLAIR_RETURNED_TO_GYM ;EVENT_LAKE_OF_RAGE_CLAIR
 	object_event 36, 13, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LakeOfRageSuperNerdScript, -1
 	object_event 30, 24, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LakeOfRageCooltrainerFScript, -1
 ;	object_event 20, 26, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LakeOfRageGrampsScript, -1

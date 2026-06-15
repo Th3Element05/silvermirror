@@ -201,7 +201,7 @@ TrainerCoolDuoZacAndJen_Jen:
 	end
 
 CoolDuoZacAndJenSeenText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "We have a new"
 	line "strategy that we"
 	cont "are eager to try!"
@@ -213,14 +213,14 @@ CoolDuoZacAndJenBeatenText:
 	done
 
 CoolDuoZacAfterBattleText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "My strategy didn't"
 	line "work, next time we"
 	cont "can try hers."
 	done
 
 CoolDuoJenAfterBattleText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "His strategy didn't"
 	line "work, next time we"
 	cont "will try mine!"
@@ -268,7 +268,7 @@ TrainerCooltrainerFElla:
 	end
 
 CooltrainerFEllaSeenText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "Every battle makes"
 	line "me and my #MON"
 	cont "sharper!"
@@ -280,7 +280,7 @@ CooltrainerFEllaBeatenText:
 	done
 
 CooltrainerFEllaAfterBattleText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "Win or lose, every"
 	line "battle makes us"
 	cont "stronger!"

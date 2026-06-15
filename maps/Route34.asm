@@ -275,7 +275,7 @@ TrainerCooltrainerfLola:
 	end
 
 CooltrainerfLolaSeenText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "This is our spot!"
 
 	para "We thought it was"
@@ -289,7 +289,7 @@ CooltrainerfLolaBeatenText:
 	done
 
 CooltrainerfLolaAfterText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "The sunlight"
 	line "makes your body"
 	cont "stronger."
@@ -306,7 +306,7 @@ TrainerCooltrainerfSalma:
 	end
 
 CooltrainerfSalmaSeenText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "Kyaaah!"
 	line "Someone found us!"
 	done
@@ -318,7 +318,7 @@ CooltrainerfSalmaBeatenText:
 	done
 
 CooltrainerfSalmaAfterText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "Isn't this"
 	line "beach great?"
 

@@ -180,7 +180,7 @@ TrainerCooltrainerMPaul:
 	end
 
 CooltrainerMPaulSeenText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "VIRIDIAN GYM was"
 	line "closed for a long"
 	cont "time, but now our"
@@ -193,7 +193,7 @@ CooltrainerMPaulBeatenText:
 	done
 
 CooltrainerMPaulAfterBattleText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "You can go onto"
 	line "#MON LEAGUE"
 	cont "only by defeating"
@@ -211,7 +211,7 @@ TrainerCooltrainerMNick:
 	end
 
 CooltrainerMNickSeenText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "The truly talented"
 	line "win with style!"
 	done
@@ -222,7 +222,7 @@ CooltrainerMNickBeatenText:
 	done
 
 CooltrainerMNickAfterBattleText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "The LEADER will"
 	line "scold me!"
 	done
@@ -297,7 +297,7 @@ TrainerCooltrainerMAaron:
 	end
 
 CooltrainerMAaronSeenText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "Heh! You must be"
 	line "running out of"
 	cont "steam by now!"
@@ -309,7 +309,7 @@ CooltrainerMAaronBeatenText:
 	done
 
 CooltrainerMAaronAfterBattleText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "You need power to"
 	line "keep up with our"
 	cont "GYM LEADER!"

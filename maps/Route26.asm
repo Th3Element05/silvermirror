@@ -134,7 +134,7 @@ TrainerCooltrainerMGavin:
 	end
 
 CooltrainerMGavinSeenText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "I got eight GYM"
 	line "BADGES in JOHTO."
 
@@ -175,7 +175,7 @@ TrainerCooltrainerMFinn:
 	end
 
 CooltrainerMFinnSeenText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "By experiencing"
 	line "tough battles, you"
 	cont "gain power."
@@ -188,7 +188,7 @@ CooltrainerMFinnBeatenText:
 	done
 
 CooltrainerMFinnAfterBattleText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "To get to #MON"
 	line "LEAGUE, you have"
 	cont "to get through"
@@ -214,7 +214,7 @@ TrainerCooltrainerFJoyce:
 	end
 
 CooltrainerFJoyceSeenText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "You look like a"
 	line "good trainer."
 
@@ -230,7 +230,7 @@ CooltrainerFJoyceBeatenText:
 	done
 
 CooltrainerFJoyceAfterBattleText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "I've defeated"
 	line "eight GYM LEADERs,"
 	cont "so I was feeling"
@@ -323,7 +323,7 @@ TrainerCooltrainerFBeth:
 	end
 
 CooltrainerFBethSeenText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "Some of the train-"
 	line "ers on their way"
 	cont "to #MON LEAGUE"

@@ -151,7 +151,7 @@ TrainerCooltrainerMAndre:
 	end
 
 CooltrainerMAndreSeenText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "Battle me so I"
 	line "can show off for"
 	cont "my girl!"
@@ -164,7 +164,7 @@ CooltrainerMAndreBeatenText:
 	done
 
 CooltrainerMAndreAfterBattleText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "Maybe I should"
 	line "just be relaxing."
 	done

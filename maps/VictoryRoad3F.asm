@@ -78,7 +78,7 @@ TrainerCooltrainerFAnnie:
 	end
 
 CooltrainerFAnnieSeenText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "Trainers live to"
 	line "seek stronger"
 	cont "opponents!"
@@ -91,7 +91,7 @@ CooltrainerFAnnieBeatenText:
 	done
 
 CooltrainerFAnnieAfterBattleText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "By fighting tough"
 	line "battles, you get"
 	cont "stronger!"
@@ -108,7 +108,7 @@ TrainerCooltrainerMLevi:
 	end
 
 CooltrainerMLeviSeenText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "I heard rumors of"
 	line "a child prodigy!"
 	done
@@ -120,7 +120,7 @@ CooltrainerMLeviBeatenText:
 	done
 
 CooltrainerMLeviAfterBattleText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "You beat GIOVANNI"
 	line "of TEAM ROCKET?"
 	done
@@ -136,7 +136,7 @@ TrainerCooltrainerFFran:
 	end
 
 CooltrainerFFranSeenText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "I'll show you just"
 	line "how good you are!"
 	done
@@ -147,7 +147,7 @@ CooltrainerFFranBeatenText:
 	done
 
 CooltrainerFFranAfterBattleText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "You showed me just"
 	line "how good I was!"
 	done
@@ -163,7 +163,7 @@ TrainerCooltrainerMRyan:
 	end
 
 CooltrainerMRyanSeenText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "Only the chosen"
 	line "can pass here!"
 	done
@@ -175,7 +175,7 @@ CooltrainerMRyanBeatenText:
 	done
 
 CooltrainerMRyanAfterBattleText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "All trainers here"
 	line "are headed to the"
 	cont "#MON LEAGUE!"

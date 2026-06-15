@@ -16,7 +16,7 @@ TrainerCooltrainerMJake:
 	end
 
 CooltrainerMJakeSeenText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "You! How dare you"
 	line "enter uninvited!"
 	done
@@ -27,7 +27,7 @@ CooltrainerMJakeBeatenText:
 	done
 
 CooltrainerMJakeAfterBattleText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "The shrine ahead"
 	line "is home to the"
 	cont "MASTERs of the"
@@ -48,7 +48,7 @@ TrainerCooltrainerFReena:
 	end
 
 CooltrainerFReenaSeenText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "You shouldn't be"
 	line "in here!"
 	done
@@ -59,7 +59,7 @@ CooltrainerFReenaBeatenText:
 	done
 
 CooltrainerFReenaAfterBattleText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "Soon I'm going to"
 	line "get permission"
 	cont "from our MASTER to"

@@ -97,7 +97,7 @@ TrainerCooltrainermColt:
 	end
 
 CooltrainermColtSeenText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "What are your"
 	line "thoughts on rais-"
 	cont "ing #MON?"
@@ -110,7 +110,7 @@ CooltrainermColtBeatenText:
 	done
 
 CooltrainermColtAfterBattleText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "I see you're rais-"
 	line "ing your #MON"
 	cont "with care."
@@ -132,7 +132,7 @@ TrainerCooltrainerfQuinn:
 	end
 
 CooltrainerfQuinnSeenText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "What is your"
 	line "battle strategy?"
 
@@ -147,7 +147,7 @@ CooltrainerfQuinnBeatenText:
 	done
 
 CooltrainerfQuinnAfterBattleText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "I'm not in favor"
 	line "of overly power-"
 	cont "ful moves."

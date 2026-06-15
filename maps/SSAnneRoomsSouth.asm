@@ -329,7 +329,7 @@ TrainerCooltrainerFMia:
 	end
 
 CooltrainerFMiaSeenText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "Don't board the"
 	line "S.S.ANNE if you're"
 	cont "not ready for a"
@@ -343,7 +343,7 @@ CooltrainerFMiaBeatenText:
 	done
 
 CooltrainerFMiaAfterBattleText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "I better heal up"
 	line "my #MON before"
 	cont "another trainer"

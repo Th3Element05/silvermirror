@@ -72,7 +72,7 @@ TrainerCoolDuoThomAndKae_Kae:
 	end
 
 CoolDuoThomAndKaeSeenText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "We've been raising"
 	line "our #MON to-"
 	cont "gether!"
@@ -87,7 +87,7 @@ CoolDuoThomAndKaeBeatenText:
 	done
 
 CoolDuoThomAfterBattleText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "We did our best,"
 	line "but came up short."
 
@@ -96,7 +96,7 @@ CoolDuoThomAfterBattleText:
 	done
 
 CoolDuoKaeAfterBattleText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "We've been to many"
 	line "GYMs, but the GYM"
 	cont "in GOLDENROD is my"
