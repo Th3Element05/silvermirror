@@ -225,14 +225,23 @@ TeamRocketBaseB3FJanineNinja:
 	waitbutton
 	closetext
 	applymovement TEAMROCKETBASEB3F_KOGA, TeamRocketBaseB3FKogaStepsUpMovement
+	turnobject TEAMROCKETBASEB3F_JANINE, RIGHT
 	opentext
 	writetext TeamRocketBaseB3FKogaFarewellText
 	waitbutton
 	closetext
+	turnobject TEAMROCKETBASEB3F_JANINE, DOWN
 	applymovement TEAMROCKETBASEB3F_KOGA, TeamRocketBaseB3FKogaLeavesMovement
 	disappear TEAMROCKETBASEB3F_KOGA
 	moveobject TEAMROCKETBASEB3F_JANINE, 10, 3
 	clearevent EVENT_NINJA_CHALLENGE_IN_PROGRESS
+	setevent EVENT_BEAT_NINJA_TEISATSU
+	setevent EVENT_BEAT_NINJA_KANCHO
+	setevent EVENT_BEAT_NINJA_KISHU
+	setevent EVENT_BEAT_NINJA_KONRAN
+	setevent EVENT_BEAT_NINJA_SEKKO
+	setevent EVENT_BEAT_NINJA_GENIN
+	setevent EVENT_BEAT_NINJA_CHUNIN
 ;	setmapscene WISE_TRIOS_ROOM, SCENE_WISETRIOROOM_NOOP
 ;	setevent EVENT_WISE_TRIOS_ROOM_WISE_TRIO_1
 ;	clearevent EVENT_WISE_TRIOS_ROOM_WISE_TRIO_2
