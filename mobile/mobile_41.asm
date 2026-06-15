@@ -245,16 +245,16 @@ StubbedTrainerRankings_StepCount:
 	ld hl, sTrainerRankingStepCount
 	jp StubbedTrainerRankings_Increment4Byte
 
-StubbedTrainerRankings_BattleTowerWins: ; unreferenced
-	ret
-	ld a, BANK(s5_aa8d)
-	call OpenSRAM
-	ld a, [s5_aa8d]
-	and a
-	call CloseSRAM
-	ret nz
-	ld hl, sTrainerRankingBattleTowerWins
-	jp StubbedTrainerRankings_Increment2Byte
+;StubbedTrainerRankings_BattleTowerWins: ; unreferenced
+;	ret
+;	ld a, BANK(s5_aa8d)
+;	call OpenSRAM
+;	ld a, [s5_aa8d]
+;	and a
+;	call CloseSRAM
+;	ret nz
+;	ld hl, sTrainerRankingBattleTowerWins
+;	jp StubbedTrainerRankings_Increment2Byte
 
 StubbedTrainerRankings_TMsHMsTaught:
 	ret
@@ -282,10 +282,10 @@ StubbedTrainerRankings_TrainerBattles:
 	ld hl, sTrainerRankingTrainerBattles
 	jp StubbedTrainerRankings_Increment3Byte
 
-StubbedTrainerRankings_Unused1: ; unreferenced
-	ret
-	ld hl, sTrainerRankingUnused1
-	jp StubbedTrainerRankings_Increment3Byte
+;StubbedTrainerRankings_Unused1: ; unreferenced
+;	ret
+;	ld hl, sTrainerRankingUnused1
+;	jp StubbedTrainerRankings_Increment3Byte
 
 StubbedTrainerRankings_HallOfFame::
 	ret
@@ -362,10 +362,10 @@ StubbedTrainerRankings_PhoneCalls:
 	ld hl, sTrainerRankingPhoneCalls
 	jr StubbedTrainerRankings_Increment3Byte
 
-StubbedTrainerRankings_Unused2: ; unreferenced
-	ret
-	ld hl, sTrainerRankingUnused2
-	jr StubbedTrainerRankings_Increment3Byte
+;StubbedTrainerRankings_Unused2: ; unreferenced
+;	ret
+;	ld hl, sTrainerRankingUnused2
+;	jr StubbedTrainerRankings_Increment3Byte
 
 StubbedTrainerRankings_LinkBattles:
 	ret
@@ -386,10 +386,10 @@ StubbedTrainerRankings_TreeEncounters:
 	ld hl, sTrainerRankingTreeEncounters
 	jr StubbedTrainerRankings_Increment3Byte
 
-StubbedTrainerRankings_Unused3: ; unreferenced
-	ret
-	ld hl, sTrainerRankingUnused3
-	jr StubbedTrainerRankings_Increment3Byte
+;StubbedTrainerRankings_Unused3: ; unreferenced
+;	ret
+;	ld hl, sTrainerRankingUnused3
+;	jr StubbedTrainerRankings_Increment3Byte
 
 StubbedTrainerRankings_ColosseumWins:
 	ret
@@ -431,9 +431,9 @@ StubbedTrainerRankings_Increment2Byte:
 	ld bc, 1
 	jr StubbedTrainerRankings_Increment
 
-StubbedTrainerRankings_Increment1Byte: ; unreferenced
-	push bc
-	ld bc, 0
+;StubbedTrainerRankings_Increment1Byte: ; unreferenced
+;	push bc
+;	ld bc, 0
 
 ; Increments a big-endian value of bc + 1 bytes at hl
 StubbedTrainerRankings_Increment:
@@ -536,16 +536,16 @@ RestoreGSBallFlag:
 	call CloseSRAM
 	ret
 
-VerifyTrainerRankingsChecksum: ; unreferenced
-	call CalculateTrainerRankingsChecksum
-	ld hl, sTrainerRankingsChecksum
-	ld a, d
-	cp [hl]
-	ret nz
-	inc hl
-	ld a, e
-	cp [hl]
-	ret
+;VerifyTrainerRankingsChecksum: ; unreferenced
+;	call CalculateTrainerRankingsChecksum
+;	ld hl, sTrainerRankingsChecksum
+;	ld a, d
+;	cp [hl]
+;	ret nz
+;	inc hl
+;	ld a, e
+;	cp [hl]
+;	ret
 
 ClearGSBallFlag:
 	ld a, BANK(sGSBallFlag)
@@ -555,25 +555,25 @@ ClearGSBallFlag:
 	call CloseSRAM
 	ret
 
-InitializeTrainerRankings: ; unreferenced
-; Initializes Trainer Rankings data for a new save file in JP Crystal.
-	ld hl, sTrainerRankings
-	ld bc, sTrainerRankingsEnd - sTrainerRankings
-	xor a
-	call ByteFill
-
-	; Initialize the shortest Magikarp to 100.0 cm
-	ld hl, sTrainerRankingShortestMagikarp
-	ld a, $3
-	ld [hli], a
-	ld [hl], $e8
-
-	call UpdateTrainerRankingsChecksum
-	ld hl, sTrainerRankings
-	ld de, sTrainerRankingsBackup
-	ld bc, sTrainerRankingsEnd - sTrainerRankings
-	call CopyBytes
-	ret
+;InitializeTrainerRankings: ; unreferenced
+;; Initializes Trainer Rankings data for a new save file in JP Crystal.
+;	ld hl, sTrainerRankings
+;	ld bc, sTrainerRankingsEnd - sTrainerRankings
+;	xor a
+;	call ByteFill
+;
+;	; Initialize the shortest Magikarp to 100.0 cm
+;	ld hl, sTrainerRankingShortestMagikarp
+;	ld a, $3
+;	ld [hli], a
+;	ld [hl], $e8
+;
+;	call UpdateTrainerRankingsChecksum
+;	ld hl, sTrainerRankings
+;	ld de, sTrainerRankingsBackup
+;	ld bc, sTrainerRankingsEnd - sTrainerRankings
+;	call CopyBytes
+;	ret
 
 _MobilePrintNum::
 ; Supports signed 31-bit integers (up to 10 digits)
@@ -1027,24 +1027,24 @@ Function106464::
 	farcall LoadFrame
 	ret
 
-Function10649b: ; unreferenced
-	ld a, [wTextboxFrame]
-	maskbits NUM_FRAMES
-	ld bc, TEXTBOX_FRAME_TILES * LEN_1BPP_TILE
-	ld hl, Frames
-	call AddNTimes
-	ld d, h
-	ld e, l
-	ld hl, vTiles0 tile "┌" ; $ba
-	ld c, TEXTBOX_FRAME_TILES ; "┌" to "┘"
-	ld b, BANK(Frames)
-	call Function1064c3
-	ld hl, vTiles2 tile " " ; $7f
-	ld de, TextboxSpaceGFX
-	ld c, 1
-	ld b, BANK(TextboxSpaceGFX)
-	call Function1064c3
-	ret
+;Function10649b: ; unreferenced
+;	ld a, [wTextboxFrame]
+;	maskbits NUM_FRAMES
+;	ld bc, TEXTBOX_FRAME_TILES * LEN_1BPP_TILE
+;	ld hl, Frames
+;	call AddNTimes
+;	ld d, h
+;	ld e, l
+;	ld hl, vTiles0 tile "┌" ; $ba
+;	ld c, TEXTBOX_FRAME_TILES ; "┌" to "┘"
+;	ld b, BANK(Frames)
+;	call Function1064c3
+;	ld hl, vTiles2 tile " " ; $7f
+;	ld de, TextboxSpaceGFX
+;	ld c, 1
+;	ld b, BANK(TextboxSpaceGFX)
+;	call Function1064c3
+;	ret
 
 Function1064c3:
 	ldh a, [rSVBK]
@@ -1062,21 +1062,21 @@ Function1064c3:
 	ldh [rSVBK], a
 	jr asm_1064ed
 
-Function1064d8: ; unreferenced
-	ldh a, [rSVBK]
-	push af
-	ld a, $6
-	ldh [rSVBK], a
-	push bc
-	push hl
-	ld hl, Function3f9f
-	ld a, b
-	rst FarCall
-	pop hl
-	pop bc
-	pop af
-	ldh [rSVBK], a
-	jr asm_1064ed
+;Function1064d8: ; unreferenced
+;	ldh a, [rSVBK]
+;	push af
+;	ld a, $6
+;	ldh [rSVBK], a
+;	push bc
+;	push hl
+;	ld hl, Function3f9f
+;	ld a, b
+;	rst FarCall
+;	pop hl
+;	pop bc
+;	pop af
+;	ldh [rSVBK], a
+;	jr asm_1064ed
 
 asm_1064ed:
 	ld de, wDecompressScratch
@@ -1096,11 +1096,11 @@ asm_1064ed:
 	ldh [rSVBK], a
 	ret
 
-Function10650a: ; unreferenced
-	ld de, MobilePhoneTilesGFX
-	lb bc, BANK(MobilePhoneTilesGFX), 17
-	call Get2bpp
-	ret
+;Function10650a: ; unreferenced
+;	ld de, MobilePhoneTilesGFX
+;	lb bc, BANK(MobilePhoneTilesGFX), 17
+;	call Get2bpp
+;	ret
 
 MobileDialingFrameGFX:
 INCBIN "gfx/mobile/dialing_frame.2bpp"

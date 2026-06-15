@@ -32,19 +32,19 @@ Function8b342::
 .two
 	ret
 
-Function8b35d: ; unreferenced
-	ld a, h
-	cp d
-	ret nz
-	ld a, l
-	cp e
-	ret
+;Function8b35d: ; unreferenced
+;	ld a, h
+;	cp d
+;	ret nz
+;	ld a, l
+;	cp e
+;	ret
 
-Function8b363: ; unreferenced
-	push bc
-	farcall CheckMobileAdapterStatus
-	pop bc
-	ret
+;Function8b363: ; unreferenced
+;	push bc
+;	farcall CheckMobileAdapterStatus
+;	pop bc
+;	ret
 
 Function8b36c:
 	; [bc + (0:4)] = -1
@@ -719,8 +719,8 @@ Function8b75d:
 	jr nz, .asm_8b780
 	jr Function8b79e
 
-Function8b787: ; unreferenced
-	ret
+;Function8b787: ; unreferenced
+;	ret
 
 Function8b788:
 .asm_8b788

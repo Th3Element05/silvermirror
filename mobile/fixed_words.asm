@@ -31,14 +31,14 @@ Function11c075:
 	call Function11c08f
 	ret
 
-Function11c082: ; unreferenced
-	push de
-	ld a, c
-	call Function11c254
-	pop de
-	ld bc, wcd36
-	call PrintEZChatBattleMessage
-	ret
+;Function11c082: ; unreferenced
+;	push de
+;	ld a, c
+;	call Function11c254
+;	pop de
+;	ld bc, wcd36
+;	call PrintEZChatBattleMessage
+;	ret
 
 Function11c08f:
 	ld l, e
@@ -1334,30 +1334,30 @@ Function11c86e:
 	jr nz, .asm_11c8c2
 	ret
 
-BCD2String: ; unreferenced
-	inc a
-	push af
-	and $f
-	ldh [hDividend], a
-	pop af
-	and $f0
-	swap a
-	ldh [hDividend + 1], a
-	xor a
-	ldh [hDividend + 2], a
-	push hl
-	farcall Function11a80c
-	pop hl
-	ld a, [wcd63]
-	add "０"
-	ld [hli], a
-	ld a, [wcd62]
-	add "０"
-	ld [hli], a
-	ret
+;BCD2String: ; unreferenced
+;	inc a
+;	push af
+;	and $f
+;	ldh [hDividend], a
+;	pop af
+;	and $f0
+;	swap a
+;	ldh [hDividend + 1], a
+;	xor a
+;	ldh [hDividend + 2], a
+;	push hl
+;	farcall Function11a80c
+;	pop hl
+;	ld a, [wcd63]
+;	add "０"
+;	ld [hli], a
+;	ld a, [wcd62]
+;	add "０"
+;	ld [hli], a
+;	ret
 
-MobileString_Page: ; unreferenced
-	db "ぺージ@"
+;MobileString_Page: ; unreferenced
+;	db "ぺージ@"
 
 MobileString_Prev:
 	db "まえ@"

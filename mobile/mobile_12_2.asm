@@ -175,12 +175,12 @@ Function4aa34:
 	pop af
 	ret
 
-Function4aa6e: ; unreferenced
-	pop af
-	ld de, SFX_WRONG
-	call PlaySFX
-	call WaitSFX
-	jr Function4aa34
+;Function4aa6e: ; unreferenced
+;	pop af
+;	ld de, SFX_WRONG
+;	call PlaySFX
+;	call WaitSFX
+;	jr Function4aa34
 
 Function4aa7a:
 	ld hl, wd002
@@ -646,8 +646,8 @@ Function4ad60:
 	farcall ManagePokemonMoves
 	ret
 
-Function4ad67: ; unreferenced
-	ret
+;Function4ad67: ; unreferenced
+;	ret
 
 Function4ad68:
 	hlcoord 13, 12
