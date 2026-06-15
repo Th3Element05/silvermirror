@@ -81,3 +81,4 @@
 	tilecoll WATER, WATER, WATER, WATER ; 50
 	tilecoll WATER, WATER, WATER, WATER ; 51
 	tilecoll FLOOR, FLOOR, FLOOR, LADDER ; 52
+	tilecoll WATER, WATER, WATER, WATER ; 53
