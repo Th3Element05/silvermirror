@@ -574,9 +574,14 @@ RespawnOneOffs:
 
 	ld de, ENGINE_PLAYER_CAUGHT_HO_OH
 	farcall EngineFlagAction
-	ret nz
+;	ret nz
+	jr nz, .CaughtHooh
 	eventflagreset EVENT_TIN_TOWER_ROOF_HO_OH
 	eventflagreset EVENT_FOUGHT_HO_OH
+	ret
+
+.CaughtHooh
+	eventflagreset EVENT_TIN_TOWER_ROOF_SACRED_ASH
 	ret
 
 RespawnRoamingRaikou:

@@ -6523,6 +6523,11 @@ LoadEnemyMon:
 	ld a, [wBaseItem1]
 	jr z, .UpdateItem
 
+	ld a, [wBattleType]
+	cp BATTLETYPE_HO_OH
+	ld a, [wBaseItem1]
+	jr z, .UpdateItem
+
 ; Failing that, it's all up to chance
 ;  Effective chances:
 ;    45% None
