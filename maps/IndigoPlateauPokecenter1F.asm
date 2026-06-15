@@ -97,7 +97,16 @@ IndigoPlateauPokecenter1FCooltrainerMText:
 IndigoPokecenterOpenMtSilverScript:
 	turnobject INDIGOPLATEAUPOKECENTER1F_LANCE, DOWN
 	showemote EMOTE_SHOCK, INDIGOPLATEAUPOKECENTER1F_LANCE, 20
-	applymovement INDIGOPLATEAUPOKECENTER1F_LANCE, IndigoPlateauLanceApproachesPlayerMovement
+;	applymovement INDIGOPLATEAUPOKECENTER1F_LANCE, IndigoPlateauLanceApproachesPlayerMovement
+	opentext
+	writetext IndigoPlateauLanceThereYouAreText
+	waitbutton
+	closetext
+	applymovement PLAYER, IndigoPlateauLanceLeavesMovement
+	readvar VAR_XCOORD
+	ifequal 7, .Skip
+	applymovement PLAYER, IndigoPlateauSecondaryMovement
+.Skip
 	opentext
 	writetext IndigoPlateauLanceOpensMtSilverText
 	waitbutton
@@ -116,29 +125,31 @@ IndigoPokecenterOpenMtSilverScript:
 	setscene SCENE_INDIGOPLATEAUPOKECENTER1F_NOOP
 	end
 
-IndigoPlateauLanceOpensMtSilverText:
+IndigoPlateauLanceThereYouAreText:
 	ntag "LANCE:"
 	text "There you are,"
 	line "<PLAYER>!"
+	done
 
-	para "We got word that"
+IndigoPlateauLanceOpensMtSilverText:
+	ntag "LANCE:"
+	text "We got word that"
 	line "you've collected"
 	cont "BADGEs from 16"
 	roll "#MON GYMs!"
 
-	para "That's an impress-"
-	line "ive accomplishment,"
-	cont "even for a LEAGUE"
-	roll "CHAMPION!"
+	para "Even for a LEAGUE"
+	line "CHAMPION, that's"
+	cont "very impressive!"
 
 	para "The LEAGUE has"
 	line "granted you access"
 	cont "to ROUTE 28, which"
 	roll "goes to MT.SILVER."
 
-	para "You can get there"
-	line "by going west from"
-	cont "VICTORY ROAD GATE."
+;	para "You can get there"
+;	line "from VICTORY ROAD"
+;	cont "GATE on ROUTE 22."
 
 	para "It's a dangerous"
 	line "place, filled with"
@@ -149,7 +160,9 @@ IndigoPlateauLanceOpensMtSilverText:
 	cont "you access if you"
 	roll "couldn't handle it."
 
-	para "Still, be careful."
+	para "Still, be careful"
+	line "if you decide to"
+	cont "climb MT.SILVER."
 	done
 
 IndigoPlateauLanceChallengeAgainText:
@@ -162,18 +175,24 @@ IndigoPlateauLanceChallengeAgainText:
 	line "challenge!"
 	done
 
-IndigoPlateauLanceApproachesPlayerMovement:
-	step DOWN
-	step DOWN
-	step_end
+;IndigoPlateauLanceApproachesPlayerMovement:
+;	step DOWN
+;	step DOWN
+;	step_end
 
 IndigoPlateauLanceLeavesMovement:
 	step UP
 	step UP
 	step_end
 
+IndigoPlateauSecondaryMovement:
+	step LEFT
+	turn_head UP
+	step_end
 
 RespawnOneOffsGuyScript:
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	iftrue .AlreadyRespawned
 	faceplayer
 	opentext
 	writetext RespawnGuyIntroText
@@ -187,6 +206,7 @@ RespawnOneOffsGuyScript:
 	promptbutton
 	closetext
 	special RespawnOneOffs
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	sjump AbraScript
 
 ;	playsound SFX_WARP_TO
@@ -200,6 +220,9 @@ RespawnOneOffsGuyScript:
 	waitbutton
 	closetext
 	end
+
+.AlreadyRespawned:
+	jumptextfaceplayer RespawnGuyAlreadyRespawnedText
 
 RespawnGuyIntroText:
 	ntag "GRAMPS:"
@@ -248,8 +271,13 @@ RespawnGuySilenceText:
 
 RespawnGuyNoText:
 	ntag "GRAMPS:"
-	text "Okay, Okay."
+	text "Okay, okay."
 	line "I wish you luck!"
+	done
+
+RespawnGuyAlreadyRespawnedText:
+	ntag "GRAMPS:"
+	text "I wish you luck!"
 	done
 
 AbraScript:
