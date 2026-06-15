@@ -13,8 +13,6 @@ FlowerShopTeacherScript:
 	iftrue .GotSquirtbottle
 	checkevent EVENT_MET_FLORIA
 	iffalse .HaventMetFloria
-	checkevent EVENT_TALKED_TO_FLORIA_AT_FLOWER_SHOP
-	iffalse .Lalala
 	faceplayer
 	opentext
 	writetext GoldenrodFlowerShopTeacherHeresTheSquirtbottleText
@@ -102,7 +100,6 @@ FlowerShopFloriaScript:
 	writetext GoldenrodFlowerShopFloriaToldSisText
 	waitbutton
 	closetext
-	setevent EVENT_TALKED_TO_FLORIA_AT_FLOWER_SHOP
 ;	setevent EVENT_FLORIA_AT_FLOWER_SHOP
 ;	clearevent EVENT_FLORIA_AT_SUDOWOODO
 	end
@@ -158,5 +155,5 @@ GoldenrodFlowerShop_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  2,  4, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FlowerShopTeacherScript, -1
+	object_event  1,  3, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FlowerShopTeacherScript, -1
 	object_event  5,  6, SPRITE_TWIN, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, FlowerShopFloriaScript, EVENT_FLORIA_AT_FLOWER_SHOP

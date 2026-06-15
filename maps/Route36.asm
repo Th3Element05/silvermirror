@@ -200,8 +200,6 @@ WeirdTreeMovement_Flee:
 Route36FloriaScript:
 	faceplayer
 	opentext
-;	checkevent EVENT_TALKED_TO_FLORIA_AT_FLOWER_SHOP
-;	iftrue .SecondTimeTalking
 	setevent EVENT_MET_FLORIA
 	writetext FloriaText1
 	waitbutton
