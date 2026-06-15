@@ -4,18 +4,19 @@
 BlackthornCity_MapScripts:
 	def_scene_scripts
 	scene_script BlackthornCityNoop1Scene, SCENE_BLACKTHORNCITY_NOOP
-	scene_script BlackthornCityRematchNotifyScene, SCENE_BLACKTHORNCITY_REMATCH_NOTIFY
+	scene_script BlackthornCityNoop2Scene, SCENE_BLACKTHORNCITY_REMATCH_NOTIFY
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, BlackthornCityFlypointCallback
 ;	callback MAPCALLBACK_OBJECTS, BlackthornCitySantosCallback
 
 BlackthornCityNoop1Scene:
+BlackthornCityNoop2Scene:
 	end
 
-BlackthornCityRematchNotifyScene:
-	sdefer JohtoRematchNotifyScript
-	end
+;BlackthornCityRematchNotifyScene:
+;	sdefer JohtoRematchNotifyScript
+;	end
 
 BlackthornCityFlypointCallback:
 	setflag ENGINE_FLYPOINT_BLACKTHORN
@@ -310,14 +311,10 @@ BlackthornCityMartSignScript:
 JohtoRematchNotifyScript:
 	opentext
 	writetext JohtoLeadersRematchNotifyText
-;	playsound SFX_1ST_PLACE
-	playsound SFX_FANFARE
-;	playsound SFX_FANFARE_2
-;	playsound SFX_DEX_FANFARE_230_PLUS
-;	playsound SFX_EVOLVED
+	playsound SFX_3RD_PLACE
 ;	playsound SFX_GET_BADGE
 	waitsfx
-;	waitbutton
+	waitbutton
 	closetext
 	setscene SCENE_BLACKTHORNCITY_NOOP
 	end
@@ -351,6 +348,7 @@ BlackthornCity_MapEvents:
 	warp_event 20,  1, DRAGONS_DEN_1F, 1
 
 	def_coord_events
+	coord_event 18, 12, SCENE_BLACKTHORNCITY_REMATCH_NOTIFY, JohtoRematchNotifyScript
 
 	def_bg_events
 	bg_event 34, 24, BGEVENT_READ, BlackthornCitySign
