@@ -23,8 +23,8 @@ TinTower1FStairsCallback:
 
 ; scene
 TinTower1FTowerShakesScene:
-	checkitem RAINBOW_WING
-	iffalse .NoHooh
+;	checkitem RAINBOW_WING
+;	iffalse .NoHooh
 	checkflag ENGINE_PLAYER_CAUGHT_HO_OH
 	iftrue .NoHooh
 	checkevent EVENT_FOUGHT_HO_OH

@@ -11,8 +11,8 @@ TinTowerRoofHoOhCallback:
 	disappear TINTOWERROOF_HO_OH
 	checkevent EVENT_FOUGHT_HO_OH
 	iftrue .NoAppear
-	checkitem RAINBOW_WING
-	iffalse .NoAppear
+;	checkitem RAINBOW_WING
+;	iffalse .NoAppear
 	appear TINTOWERROOF_HO_OH
 .NoAppear:
 	endcallback
@@ -43,6 +43,9 @@ HoOhText:
 	text "Shaoooh!"
 	done
 
+TinTowerRoofSacredAsh:
+	itemball SACRED_ASH
+
 TinTowerRoof_MapEvents:
 	db 0, 0 ; filler
 
@@ -55,3 +58,4 @@ TinTowerRoof_MapEvents:
 
 	def_object_events
 	object_event  7,  5, SPRITE_HO_OH, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TinTowerHoOh, EVENT_TIN_TOWER_ROOF_HO_OH
+	object_event  7,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TinTowerRoofSacredAsh, EVENT_TIN_TOWER_ROOF_SACRED_ASH
