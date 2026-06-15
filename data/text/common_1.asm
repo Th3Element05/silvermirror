@@ -488,13 +488,13 @@ _MobileForPartnersMonText::
 	text "."
 	done
 
-_MobilePlayersMonTradeText::
-	text_ram wPlayerTrademonSenderName
-	text "'s"
-	line "@"
-	text_ram wPlayerTrademonSpeciesName
-	text " trade…"
-	done
+;_MobilePlayersMonTradeText::
+;	text_ram wPlayerTrademonSenderName
+;	text "'s"
+;	line "@"
+;	text_ram wPlayerTrademonSpeciesName
+;	text " trade…"
+;	done
 
 _MobileTakeGoodCareOfMonText::
 	text "Take good care of"
@@ -1348,9 +1348,9 @@ _CardWasListedText::
 	text "."
 	prompt
 
-_StartingLinkText::
-	text "Starting link."
-	done
+;_StartingLinkText::
+;	text "Starting link."
+;	done
 
 _LinkTerminatedText::
 	text "Link terminated."
