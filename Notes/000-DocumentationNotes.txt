@@ -4,6 +4,7 @@ Documentation Notes
 Silver Mirror
 
 string buffers
+national park teacher walking sprite
 
 ABCDEF screenshot after youngster ian battle "registered number"
 ABCDEF screenshot celadon hotel pc
@@ -12,53 +13,73 @@ ABCDEF screenshot celadon hotel pc
 
 
 
+cerulean trashed house, fixed?
 
-route 37 one block taller (ecruteak shorter)
+how many walking sprites in SSANNE ROOMS NORTH? (pokefan F)
 
-johto gym guide color?
+game corner prize vendor scripts (all)
+
+olivine good rod house uses route32pokecenter lure script
 
 
-search each type lowercase?
+route 30 pecha berry respawns instantly
+gotta check all fruit trees now... may as well do "picked berries"
 
+ss anne port ship "water" color at night is too green, doesn't match water
 
 computers in fossil room, silph, everywhere?
 
+
+KURTS SON
+(where do you respawn if you faint inside SILPH?)
+(sneak out either way and test Talk event script anyway)
+test making all apricorn balls
+
+TEST
+these use overworld phone scripts from Route20
+(they are in the same bank so should be fine)
+Fisher Kyle (route 21)
+
+these use overworld phone scripts from Route17
+(they are in the same bank so should be fine)
+Fisher Tully (route 12)
+Bird Keeper Jamie (route 13)
+Biker Reese (route 14)
+Biker Aiden (route 16)
+Bird Keeper Jose (route 18)
+
+TEST
+enter HOF a second time, legitimately
+(scenes/events are reset by entering indigo plateau)
+
+TEST berserk gene after mewtwo battle
+TEST credits
+TEST squirtbottle scripts
+TEST ninja security pokeball
+TEST dragon shrine dratini pokeball script
+TEST elite four again
+TEST indigo plateau lance script
+TEST special landmark tohjo falls
+TEST kanto leader rematches
+TEST activate johto leader rematches
+TEST johto leader rematches
+TEST ruins of alph outside scientist disables radio card
+TEST ruins of alph outside scripts
+TEST whitney after battle opentext
 TEST mr.fuji house give pokeflute script... repeat at end?
 TEST route 22 second rival battle
 TEST mount moon square clefairy dance
+TEST mahogany mart stairs after clearing ninja den
 
 CHECK
 can ROCKET_HIDEOUT landmark just be CELADON_CITY?
 same with NINJA_DEN and MAHOGANY_TOWN?
 
 
-check data/wild/treemon_maps.asm for RockMonMaps:
-
-ss anne port ship "water" color at night is too green, doesn't match water
-
-"received berries" text
-
-test secret stairs after clearing ninja den
 
 
-
-pager order?
-rock slide too long?
-erika trainer pic
-bullet seed grass palette?
-air slice flying palette
 flash cannon animation?
-mareep color?
-hyper potion heal amount
-digglet icon
-golem back sprite
-charizard back sprite
-seadra back sprite
-misdreavus animation (eyes)
-stantler palette
-crobat backsprite
 
-horsea "dragon" (not type) in dex?
 horsea dex entry
 rhyhorn dex entry (newline > it)
 clefairy dex entry
@@ -67,9 +88,13 @@ machop dex entry (newline > It)
 seel dex entry
 grimer dex entry (-togther?)
 marill dex entry (It > new page)
+mewtwo dex entry
 
 
 
+
+champion's room stairs?
+elite four room stairs?
 
 
 
@@ -83,7 +108,7 @@ const TILESET_KANTO                ; 03
 const TILESET_BATTLE_TOWER_OUTSIDE ; 04
 const TILESET_HOUSE                ; 05
 const TILESET_POKECENTER           ; 07
-	const TILESET_GATE                 ; 08
+const TILESET_GATE                 ; 08
 const TILESET_PORT                 ; 09
 const TILESET_LAB                  ; 0a
 const TILESET_FACILITY             ; 0b
@@ -115,49 +140,9 @@ DEF NUM_TILESETS EQU const_value - 1
 
 
 
-NormalBoxEffect:
-	ld c, DECOFLAG_SILVER_TROPHY_DOLL
-	jr OpenBox
-GorgeousBoxEffect:
-	ld c, DECOFLAG_GOLD_TROPHY_DOLL
-OpenBox:
-	farcall SetSpecificDecorationFlag
-	ld hl, .SentTrophyHomeText
-	call PrintText
-	jp UseDisposableItem
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSMSdmQs9wY4XJTkdoRn8QpAhbMoUpOY9aWjB_7Dd4rHAmjYBP68rYInpUAvsOPzCoHGiEsY5f2wlwo/pubhtml?widget=true&amp;headers=false"></iframe>
 
-SetSpecificDecorationFlag:
-	ld a, c
-	call GetDecorationID
-	ld b, SET_FLAG
-	call DecorationFlagAction
-	ret
-
-GetDecorationID:
-	push hl
-	push de
-	ld e, a
-	ld d, 0
-	ld hl, DecorationIDs
-	add hl, de
-	ld a, [hl]
-	pop de
-	pop hl
-	ret
-
-SetAllDecorationFlags: ; unreferenced
-	ld hl, DecorationIDs
-.loop
-	ld a, [hli]
-	cp -1
-	jr z, .done
-	push hl
-	ld b, SET_FLAG
-	call DecorationFlagAction
-	pop hl
-	jr .loop
-.done
-	ret
+https://docs.google.com/spreadsheets/d/1-3RvOeC4Ymswg5hqdd7F-1gGs5bRkSTm28OCV8ipzhM/edit?usp=sharing
 
 
 
