@@ -54,11 +54,12 @@ ZapdosText:
 PowerPlantVoltorbTrapScript:
 	variablesprite SPRITE_VOLTORB_TRAP, SPRITE_VOLTORB
 	special LoadUsedSpritesGFX
+	showemote EMOTE_BOLT, LAST_TALKED, 20
 	opentext
 	writetext PowerPlantBzzztText
 	cry VOLTORB
-;	pause 20
-	showemote EMOTE_BOLT, LAST_TALKED, 20
+	waitsfx
+	waitbutton
 	closetext
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM ;battletype prevents random level variation
 	loadwildmon VOLTORB, 29
@@ -71,11 +72,12 @@ PowerPlantVoltorbTrapScript:
 PowerPlantElectrodeTrapScript:
 	variablesprite SPRITE_VOLTORB_TRAP, SPRITE_ELECTRODE
 	special LoadUsedSpritesGFX
+	showemote EMOTE_BOLT, LAST_TALKED, 20
 	opentext
 	writetext PowerPlantBzzztText
 	cry ELECTRODE
-;	pause 20
-	showemote EMOTE_BOLT, LAST_TALKED, 20
+	waitsfx
+	waitbutton
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM ;battletype prevents random level variation
 	loadwildmon ELECTRODE, 30
 	startbattle
@@ -87,11 +89,12 @@ PowerPlantElectrodeTrapScript:
 PowerPlantShinyVoltorbTrapScript:
 	variablesprite SPRITE_VOLTORB_TRAP, SPRITE_VOLTORB
 	special LoadUsedSpritesGFX
+	showemote EMOTE_BOLT, LAST_TALKED, 20
 	opentext
 	writetext PowerPlantBzzztText
 	cry VOLTORB
-;	pause 20
-	showemote EMOTE_BOLT, LAST_TALKED, 20
+	waitsfx
+	waitbutton
 	closetext
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCESHINY
 	loadwildmon VOLTORB, 29
