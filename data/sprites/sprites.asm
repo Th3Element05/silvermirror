@@ -32,7 +32,7 @@ OverworldSprites:
 	overworld_sprite WhitneySpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
 	overworld_sprite MortySpriteGFX, 12, WALKING_SPRITE, PAL_OW_SILVER ;PAL_OW_BROWN
 	overworld_sprite ChuckSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN ;PAL_OW_RED
-	overworld_sprite JasmineSpriteGFX, 12, WALKING_SPRITE, PAL_OW_GREEN
+	overworld_sprite JasmineSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
 	overworld_sprite PryceSpriteGFX, 12, WALKING_SPRITE, PAL_OW_SILVER ;PAL_OW_BROWN
 	overworld_sprite ClairSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
 	overworld_sprite RocketSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
