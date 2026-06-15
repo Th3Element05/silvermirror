@@ -166,7 +166,7 @@ Text_ReceivedRisingBadge:
 ClairText_RisingBadgeSpeech:
 	ntag "CLAIR:"
 	text "And, I think you"
-	line "will can make good"
+	line "will make good use"
 	cont "use of this."
 	done
 
@@ -264,7 +264,7 @@ TrainerCooltrainermZane:
 	end
 
 CooltrainermZaneSeenText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "My chance of"
 	line "losing? Not even"
 	cont "one percent!"
@@ -276,7 +276,7 @@ CooltrainermZaneBeatenText:
 	done
 
 CooltrainermZaneAfterBattleText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "I know my short-"
 	line "comings now."
 
@@ -295,7 +295,7 @@ TrainerCooltrainerfLayla:
 	end
 
 CooltrainerfLaylaSeenText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "Dragons are sacred"
 	line "#MON."
 
@@ -314,7 +314,7 @@ CooltrainerfLaylaBeatenText:
 	done
 
 CooltrainerfLaylaAfterBattleText:
-	ntag "COOLTRAINER:"
+	ntag "TRAINER:"
 	text "Dragons are weak"
 	line "against DRAGON-"
 	cont "type moves."
@@ -413,6 +413,7 @@ BlackthornGymStatue:
 ;	gettrainername STRING_BUFFER_4, CLAIR, CLAIR1
 ;	jumpstd GymStatue2Script
 
+
 BlackthornGym1F_MapEvents:
 	db 0, 0 ; filler
 
@@ -434,7 +435,7 @@ BlackthornGym1F_MapEvents:
 	def_object_events
 	object_event  1, 13, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BlackthornGymBlockingCooltrainer, EVENT_CLAIR_RETURNED_TO_GYM
 	object_event  0, 13, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BlackthornGymBlockingCooltrainer, EVENT_CLAIR_RETURNED_TO_GYM
-	object_event  5,  3, SPRITE_CLAIR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BlackthornGymClairScript, -1
+	object_event  5,  3, SPRITE_CLAIR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BlackthornGymClairScript, -1
 	object_event  6,  6, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerCooltrainermZane, -1 ;mike
 	object_event  9,  2, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerCooltrainerfLayla, -1 ;lola
 	object_event  7, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, BlackthornGymGuideScript, -1

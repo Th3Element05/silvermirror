@@ -392,10 +392,10 @@ EcruteakGym_MapEvents:
 	warp_event  4, 17, ECRUTEAK_CITY, 10
 	warp_event  5, 17, ECRUTEAK_CITY, 10
 	warp_event  4, 14, ECRUTEAK_GYM, 4
-;	warp_event  2,  4, ECRUTEAK_GYM, 3
-;	warp_event  3,  4, ECRUTEAK_GYM, 3
+	warp_event  2,  4, ECRUTEAK_GYM, 3
+	warp_event  3,  4, ECRUTEAK_GYM, 3
 	warp_event  4,  4, ECRUTEAK_GYM, 3
-	warp_event  4,  5, ECRUTEAK_GYM, 3
+;	warp_event  4,  5, ECRUTEAK_GYM, 3
 	warp_event  6,  4, ECRUTEAK_GYM, 3
 	warp_event  7,  4, ECRUTEAK_GYM, 3
 	warp_event  2,  6, ECRUTEAK_GYM, 3
@@ -430,7 +430,7 @@ EcruteakGym_MapEvents:
 	bg_event  6, 15, BGEVENT_READ, EcruteakGymStatue
 
 	def_object_events
-	object_event  5,  1, SPRITE_MORTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, EcruteakGymMortyScript, EVENT_JOHTO_GYM_LEADERS
+	object_event  5,  1, SPRITE_MORTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakGymMortyScript, EVENT_JOHTO_GYM_LEADERS
 	object_event  2,  7, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerSageBo, -1 ;jeffrey
 	object_event  3, 13, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSagePing, -1 ;ping
 	object_event  7,  5, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerMediumMina, -1 ;martha
