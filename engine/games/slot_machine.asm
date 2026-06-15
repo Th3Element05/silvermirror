@@ -1671,12 +1671,12 @@ Slots_InitBias:
 ;	db  19 percent,     SLOTS_CHERRY
 ;	db 100 percent,     SLOTS_NO_BIAS
 ;
-	db   1 percent,     SLOTS_SEVEN
-	db   2 percent,     SLOTS_POKEBALL
-	db   4 percent,     SLOTS_STARYU
-	db   8 percent,     SLOTS_SQUIRTLE
-	db  16 percent,     SLOTS_PIKACHU
-	db  32 percent,     SLOTS_CHERRY
+	db   2 percent,     SLOTS_SEVEN
+	db   4 percent,     SLOTS_POKEBALL
+	db   8 percent,     SLOTS_STARYU
+	db  16 percent,     SLOTS_SQUIRTLE
+	db  32 percent,     SLOTS_PIKACHU
+	db  64 percent,     SLOTS_CHERRY
 	db 100 percent,     SLOTS_NO_BIAS
 
 .Lucky:
@@ -1688,12 +1688,12 @@ Slots_InitBias:
 ;	db  31 percent + 1, SLOTS_CHERRY
 ;	db 100 percent,     SLOTS_NO_BIAS
 ;
-	db   1 percent + 1, SLOTS_SEVEN
-	db   3 percent + 1, SLOTS_POKEBALL
-	db   6 percent + 1, SLOTS_STARYU
-	db  11 percent + 1, SLOTS_SQUIRTLE
-	db  23 percent + 1, SLOTS_PIKACHU
-	db  32 percent + 1, SLOTS_CHERRY
+	db   4 percent,     SLOTS_SEVEN
+	db   6 percent,     SLOTS_POKEBALL
+	db   8 percent,     SLOTS_STARYU
+	db  16 percent,     SLOTS_SQUIRTLE
+	db  32 percent,     SLOTS_PIKACHU
+	db  64 percent,     SLOTS_CHERRY
 	db 100 percent,     SLOTS_NO_BIAS
 
 Slots_IlluminateBetLights:
