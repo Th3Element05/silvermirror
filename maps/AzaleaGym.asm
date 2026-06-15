@@ -139,7 +139,7 @@ TrainerBugCatcherAbel:
 BugCatcherAbelSeenText:
 	ntag "BUGCATCHER:"
 	text "My #MON are"
-	cont "pretty tough!"
+	line "pretty tough!"
 	done
 
 BugCatcherAbelBeatenText:

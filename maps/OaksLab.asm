@@ -1450,7 +1450,7 @@ OaksLabOakAskRematchText:
 	line "time."
 
 	para "What about a"
-	cont "battle instead?"
+	line "battle instead?"
 
 	para "Our battle at"
 	line "MT.SILVER got my"

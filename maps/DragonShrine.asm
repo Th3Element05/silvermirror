@@ -380,6 +380,8 @@ DragonShrineElderWalkAwayMovement:
 
 DragonShrineDratiniPokeballScript:
 	opentext
+	writetext DragonShrineItsDratiniText
+	promptbutton
 	refreshscreen
 	pokepic DRATINI
 	cry DRATINI
@@ -415,12 +417,14 @@ DragonShrineDratiniPokeballScript:
 	closetext
 	end
 
-DragonShrineTakeThisDratiniText:
+DragonShrineItsDratiniText:
 	text "Its the #MON"
 	line "offered by the"
 	cont "DRAGON clan."
+	done
 
-	para "Take it?"
+DragonShrineTakeThisDratiniText:
+	text "Take it?"
 	done
 
 DragonShrineMaybeLaterText:
@@ -484,7 +488,7 @@ DragonShrineElder2Text:
 	cont "our MASTER."
 
 	para "In fact, not since"
-	line "Master LANCE."
+	line "MASTER LANCE."
 	done
 
 DragonShrineElder2FailedText:
@@ -496,7 +500,7 @@ DragonShrineElder2FailedText:
 	para "The last trainer"
 	line "who gained our"
 	cont "MASTER's approval"
-	roll "was Master LANCE."
+	roll "was MASTER LANCE."
 	done
 
 DragonShrineElder3Script:
@@ -504,7 +508,7 @@ DragonShrineElder3Script:
 DragonShrineElder3Text:
 	ntag "ELDER:"
 	text "You know young"
-	line "Master LANCE?"
+	line "MASTER LANCE?"
 
 	para "He looks so much"
 	line "like our MASTER"
