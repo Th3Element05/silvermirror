@@ -185,3 +185,11 @@
 	tilecoll WALL, WALL, WALL, WALL ; b8
 	tilecoll WALL, WALL, WALL, WALL ; b9
 	tilecoll WALL, WALL, WALL, WALL ; ba
+	tilecoll WATER, WATER, WATER, WATER ; bb
+	tilecoll WALL, WALL, WALL, WALL ; bc
+	tilecoll WALL, WALL, WALL, WALL ; bd
+	tilecoll WATER, WATER, WATER, WATER ; be
+	tilecoll WATER, WATER, WATER, WATER ; bf
+	tilecoll WATER, WATER, WATER, WATER ; c0
+	tilecoll WATER, WATER, WATER, WATER ; c1
+	tilecoll WATER, WATER, WATER, WATER ; c2
