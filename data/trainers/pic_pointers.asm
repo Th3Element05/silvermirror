@@ -21,7 +21,7 @@ TrainerPicPointers::
 	dba KogaPic
 	dba SabrinaPic
 	dba BlainePic
-	dba ChampionPic ; leader blue
+	dba BluePic ; leader blue
 	dba GiovanniPic
 	dba GiovanniPic
 	dba LoreleiPic

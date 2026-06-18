@@ -770,3 +770,5 @@ GlaceonFrontpic:     INCBIN "gfx/pokemon/glaceon/front.animated.2bpp.lz"
 
 
 SECTION "Pics 24", ROMX
+
+BluePic:             INCBIN "gfx/trainers/blue.2bpp.lz"

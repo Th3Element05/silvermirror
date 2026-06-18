@@ -146,6 +146,30 @@ TrainerCard_Page2_LoadGFX:
 	ld hl, vTiles2 tile $29
 	lb bc, BANK(LeaderGFX), 86
 	call Request2bpp
+
+; check and load diff gfx for 8th leader here
+	ld hl, wKantoBadges
+	bit EARTHBADGE, [hl]
+	jr z, .load_badges
+
+	ld hl, wStatusFlags2
+	bit STATUSFLAGS2_BLUE_IN_VIRIDIAN_GYM_F, [hl]
+	jr nz, .load_blue
+
+	ld de, LeaderGiovanniGFX
+	ld hl, vTiles2 tile $70
+	lb bc, BANK(LeaderGFX), 9
+	call Request2bpp
+	jr .load_badges
+
+.load_blue
+	ld de, LeaderBlueGFX
+	ld hl, vTiles2 tile $70
+	lb bc, BANK(LeaderGFX), 9
+	call Request2bpp
+	; fallthrough
+.load_badges
+
 	ld de, BadgeGFX
 	ld hl, vTiles0 tile $00
 	lb bc, BANK(BadgeGFX), 44
@@ -697,6 +721,9 @@ LeaderGFX:  INCBIN "gfx/trainer_card/kanto_leaders.2bpp"
 LeaderGFX2: INCBIN "gfx/trainer_card/johto_leaders.2bpp"
 BadgeGFX:   INCBIN "gfx/trainer_card/kanto_badges.2bpp"
 BadgeGFX2:  INCBIN "gfx/trainer_card/johto_badges.2bpp"
+
+LeaderGiovanniGFX: INCBIN "gfx/trainer_card/leader_giovanni.2bpp"
+LeaderBlueGFX: INCBIN "gfx/trainer_card/leader_blue.2bpp"
 
 CardRightCornerGFX: INCBIN "gfx/trainer_card/card_right_corner.2bpp"
 
