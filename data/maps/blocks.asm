@@ -188,10 +188,11 @@ FuchsiaGoodRodHouse_Blocks:
 FuchsiaMovesHouse_Blocks:
 SafariZoneWardensHome_Blocks:
 SaffronPidgeyHouse_Blocks:
+CeruleanTrashedHouse_Blocks:
 	INCBIN "maps/House1.blk"
 
-CeruleanTrashedHouse_Blocks:
-	INCBIN "maps/CeruleanTrashedHouse.blk" ;silvermirror+
+;CeruleanTrashedHouse_Blocks:
+;	INCBIN "maps/CeruleanTrashedHouse.blk" ;silvermirror+
 
 BillsHouse_Blocks:
 	INCBIN "maps/BillsHouse.blk"           ;silvermirror+
