@@ -310,9 +310,9 @@ GoldenrodDeptStoreRoof_MapEvents:
 	bg_event  9,  1, BGEVENT_READ, PokeDollVendingMachine
 	bg_event  8,  1, BGEVENT_READ, PokeDollVendingMachine
 	bg_event 10,  1, BGEVENT_UP, GoldenrodDeptStoreRoofVendingMachine
-	bg_event 15,  4, BGEVENT_RIGHT, Binoculars1
-	bg_event 15,  5, BGEVENT_RIGHT, Binoculars2
-	bg_event 15,  6, BGEVENT_RIGHT, Binoculars3
+	bg_event 15,  9, BGEVENT_RIGHT, Binoculars1
+	bg_event 15, 10, BGEVENT_RIGHT, Binoculars2
+	bg_event 15, 11, BGEVENT_RIGHT, Binoculars3
 
 	def_object_events
 ;sale active

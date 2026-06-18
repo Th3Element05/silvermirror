@@ -4,14 +4,14 @@ RockTunnel1F_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
-;	callback MAPCALLBACK_TILES, .RockTunnelLadderCallback
-;
-;.RockTunnelLadderCallback:
-;	checkevent EVENT_GOT_HM05_FLASH
-;	iftrue .Skip
-;	changeblock 26, 8, $1e ; rocks
-;.Skip
-;	endcallback
+	callback MAPCALLBACK_TILES, .RockTunnelLadderCallback
+
+.RockTunnelLadderCallback:
+	checkevent EVENT_GOT_HM05_FLASH
+	iftrue .Skip
+	changeblock 26, 8, $22 ; rocks
+.Skip
+	endcallback
 
 TrainerHikerBailey:
 	trainer HIKER, BAILEY, EVENT_BEAT_HIKER_BAILEY, HikerBaileySeenText, HikerBaileyBeatenText, 0, .Script

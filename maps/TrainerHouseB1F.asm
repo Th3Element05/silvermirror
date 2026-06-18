@@ -83,21 +83,21 @@ Movement_EnterTrainerHouseBattleRoom:
 	step DOWN
 	step DOWN
 	step DOWN
-	step DOWN
+;	step DOWN
 	step LEFT
 	turn_head RIGHT
 	step_end
 
 Movement_ExitTrainerHouseBattleRoom:
-	step UP
-	step UP
-	step UP
 	step RIGHT
 	step UP
 	step UP
 	step UP
 	step UP
 	step UP
+	step UP
+	step UP
+;	step UP
 	step RIGHT
 	step RIGHT
 	step RIGHT
@@ -178,4 +178,4 @@ TrainerHouseB1F_MapEvents:
 
 	def_object_events
 	object_event  7,  1, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
-	object_event  6, 11, SPRITE_CHRIS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
+	object_event  6, 10, SPRITE_CHRIS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
