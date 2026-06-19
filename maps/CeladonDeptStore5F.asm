@@ -7,8 +7,8 @@ CeladonDeptStore5F_MapScripts:
 	callback MAPCALLBACK_TILES, CeladonDeptStore5FChangeBlockCallback
 
 CeladonDeptStore5FChangeBlockCallback:
-	changeblock 10, 0, $05 ; stairs down
-	changeblock 12, 0, $06 ; stairs up
+;	changeblock 10, 0, $05 ; stairs down
+;	changeblock 12, 0, $06 ; stairs up
 	changeblock  4, 4, $15 ; fancy shelf
 	changeblock  8, 4, $1b ; plain shelf
 	endcallback
@@ -75,8 +75,8 @@ CeladonDeptStore5F_MapEvents:
 
 	def_warp_events
 	warp_event  2,  0, CELADON_DEPT_STORE_ELEVATOR, 1
-	warp_event 12,  0, CELADON_DEPT_STORE_ROOF, 1
-	warp_event 10,  0, CELADON_DEPT_STORE_4F, 2
+	warp_event 10,  0, CELADON_DEPT_STORE_ROOF, 1
+	warp_event 12,  0, CELADON_DEPT_STORE_4F, 2
 
 	def_coord_events
 

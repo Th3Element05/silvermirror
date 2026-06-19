@@ -121,8 +121,8 @@ CeladonDeptStore3F_MapEvents:
 
 	def_warp_events
 	warp_event  2,  0, CELADON_DEPT_STORE_ELEVATOR, 1
-	warp_event 12,  0, CELADON_DEPT_STORE_4F, 3
-	warp_event 10,  0, CELADON_DEPT_STORE_2F, 2
+	warp_event 10,  0, CELADON_DEPT_STORE_4F, 3
+	warp_event 12,  0, CELADON_DEPT_STORE_2F, 2
 
 	def_coord_events
 
