@@ -1673,10 +1673,10 @@ Slots_InitBias:
 ;
 	db   2 percent,     SLOTS_SEVEN
 	db   4 percent,     SLOTS_POKEBALL
-	db   8 percent,     SLOTS_STARYU
+	db  10 percent,     SLOTS_STARYU
 	db  16 percent,     SLOTS_SQUIRTLE
-	db  32 percent,     SLOTS_PIKACHU
-	db  64 percent,     SLOTS_CHERRY
+	db  22 percent,     SLOTS_PIKACHU
+	db  28 percent,     SLOTS_CHERRY
 	db 100 percent,     SLOTS_NO_BIAS
 
 .Lucky:
@@ -1689,11 +1689,11 @@ Slots_InitBias:
 ;	db 100 percent,     SLOTS_NO_BIAS
 ;
 	db   4 percent,     SLOTS_SEVEN
-	db   6 percent,     SLOTS_POKEBALL
-	db   8 percent,     SLOTS_STARYU
-	db  16 percent,     SLOTS_SQUIRTLE
-	db  32 percent,     SLOTS_PIKACHU
-	db  64 percent,     SLOTS_CHERRY
+	db   8 percent,     SLOTS_POKEBALL
+	db  14 percent,     SLOTS_STARYU
+	db  20 percent,     SLOTS_SQUIRTLE
+	db  26 percent,     SLOTS_PIKACHU
+	db  32 percent,     SLOTS_CHERRY
 	db 100 percent,     SLOTS_NO_BIAS
 
 Slots_IlluminateBetLights:
@@ -1859,12 +1859,12 @@ Slots_GetPayout:
 
 .PayoutTable:
 	table_width 2, Slots_GetPayout.PayoutTable
-	dw 300 ; SLOTS_SEVEN
-	dw 100 ; SLOTS_POKEBALL
-	dw   6 ; SLOTS_CHERRY
-	dw  12 ; SLOTS_PIKACHU
-	dw  16 ; SLOTS_SQUIRTLE
-	dw  24 ; SLOTS_STARYU
+	dw 700 ; SLOTS_SEVEN
+	dw 300 ; SLOTS_POKEBALL
+	dw  10 ; SLOTS_CHERRY
+	dw  20 ; SLOTS_PIKACHU
+	dw  30 ; SLOTS_SQUIRTLE
+	dw  40 ; SLOTS_STARYU
 ;	dw 300 ; SLOTS_SEVEN
 ;	dw  50 ; SLOTS_POKEBALL
 ;	dw   6 ; SLOTS_CHERRY
@@ -1915,12 +1915,12 @@ Slots_PayoutText:
 
 .PayoutStrings:
 	table_width 6, Slots_PayoutText.PayoutStrings
-	dbw "300@", .LinedUpSevens      ; SLOTS_SEVEN
-	dbw "100@", .LinedUpPokeballs   ; SLOTS_POKEBALL
-	dbw "6@@@", .LinedUpMonOrCherry ; SLOTS_CHERRY
-	dbw "12@@", .LinedUpMonOrCherry ; SLOTS_PIKACHU
-	dbw "16@@", .LinedUpMonOrCherry ; SLOTS_SQUIRTLE
-	dbw "24@@", .LinedUpMonOrCherry ; SLOTS_STARYU
+	dbw "700@", .LinedUpSevens      ; SLOTS_SEVEN
+	dbw "300@", .LinedUpPokeballs   ; SLOTS_POKEBALL
+	dbw "10@@", .LinedUpMonOrCherry ; SLOTS_CHERRY
+	dbw "20@@", .LinedUpMonOrCherry ; SLOTS_PIKACHU
+	dbw "30@@", .LinedUpMonOrCherry ; SLOTS_SQUIRTLE
+	dbw "40@@", .LinedUpMonOrCherry ; SLOTS_STARYU
 	assert_table_length NUM_SLOT_REELS
 
 .Text_PrintPayout:
@@ -1959,20 +1959,22 @@ endr
 ; the worse odds to favor seven symbol streaks (12.5% vs 25%).
 ; it's possible that either the wKeepSevenBiasChance initialization
 ; or this code was intended to lead to flipped percentages.
+; SILVERMIRROR: I flipped the odds on this so wKeepSevenBiasChance 
+; has 25% chance to keep streak (vs 12.5%)
 	ld a, [wKeepSevenBiasChance]
 	and a
 	jr nz, .lower_seven_streak_odds
 	call Random
-	and %0010100
-	ret z ; 25% chance to stick with seven symbol bias
+	and %0011100
+	ret z ; 12.5% chance to stick with seven symbol bias
 	ld a, SLOTS_NO_BIAS
 	ld [wSlotBias], a
 	ret
 
 .lower_seven_streak_odds
 	call Random
-	and %0011100
-	ret z ; 12.5% chance to stick with seven symbol bias
+	and %0010100
+	ret z ; 25% chance to stick with seven symbol bias
 	ld a, SLOTS_NO_BIAS
 	ld [wSlotBias], a
 	ret
