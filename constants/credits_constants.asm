@@ -18,18 +18,19 @@
 	const PRET_SHOUTOUT
 	const TH3ELEMENT05
 	const SOURAPPLE
-;	const RANGI
+	const RANGI42
 	const NARISHMA
 	const GRATEORACLELEWOT
 	const RAJA239
 	const ARDORIN
 	const EXKZOL
 	const BLEEPERWAGON
+	const GEOMETRY13
 	const GREG_CREDIT
 	const SSENRAH
 	const KNIGHTOWL
 	const TIGERBLOOD
-	const GUARDIAN1691
+;	const GUARDIAN1691
 DEF NUM_CREDITS_STRINGS EQU const_value
 
 ; CreditsScript indexes (see data/credits_script.asm)

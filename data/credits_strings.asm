@@ -19,13 +19,14 @@ CreditsStringsPointers:
 	dw .PretShoutOut
 	dw .Th3Element05
 	dw .SourApple
-;	dw .Rangi
+	dw .Rangi42
 	dw .Narishma
 	dw .GrateOracleLewot
 	dw .RaJa239
 	dw .Ardorin
 	dw .Exkzol
 	dw .BleeperWagon
+	dw .Geometry13
 	dw .Greg
 	dw .Ssenrah
 	dw .KnightOwl
@@ -43,29 +44,30 @@ CreditsStringsPointers:
 .MapDesign:           db "     MAP DESIGN@"
 .Coding:              db " CODE CONTRIBUTORS@"
 .ProductTesting:      db "  PRODUCT TESTING@"
-.Thanks:              db "     And THANKS@"
+.Thanks:              db "       THANKS@"
 .SpecialThanks:       db "   SPECIAL THANKS@"
 .SourShoutOut:        db "    To SourApple"
                     next "     Creator of"
                     next "    SOUR CRYSTAL@"
-.PretShoutOut:        db " To the entire Pret"
+.PretShoutOut:        db " To the entire PRET"
                     next " community, without"
 					next " which this would"
 					next " have been hopeless.@"
 .Th3Element05:        db "    Th3Element05@"
 .SourApple:           db "     SourApple@"
-;.Rangi:               db "      Rangi42"
+.Rangi42:             db "      Rangi42@"
 .Narishma:            db "    Narishma-gb@"
 .GrateOracleLewot     db " Grate Oracle Lewot@"
 .RaJa239:             db "      RaJa239@"
 .Ardorin:             db "       Ardorin@"
 .Exkzol:              db "     Exkzol@"
 .BleeperWagon:        db "    BleeperWagon@"
-.Greg:                db "     Greg@"
-.Ssenrah:             db "      Ssenrah@"
-.KnightOwl:           db "     Knight Owl@"
-.TigerBlood:          db "      TigerBlood@"
-.Guardian1691:        db "     Guardian1691@"
+.Geometry13:          db "     Geometry13@"
+.Greg:                db "    Greg@"
+.Ssenrah:             db "     Ssenrah@"
+.KnightOwl:           db "    Knight Owl@"
+.TigerBlood:          db "     TigerBlood@"
+;.Guardian1691:        db "    Guardian1691@"
 ;                      ; "12345678901234567890@" max length (screen width)
 ;                      ; up to 5 lines per page
 ;"12345678901234567890@"

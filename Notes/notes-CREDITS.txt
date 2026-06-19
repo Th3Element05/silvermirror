@@ -28,38 +28,29 @@ RaJa239
 tanu
 plenty of others
 
+
+
 Sour Crystal contributors
 SourApple - creator
 FIQ - custom palette stuff
 
-Nayru62 - type/cat icons
+This project was forked from SourApple's Sour Crystal
 
-Gen2Plus credits (Polished Crystal)
-Ranji42
 
-GLISCOR		
-HONCHKROW	BloodlessNS
-MAMOSWINE	
-MISMAGIUS	BloodlessNS, SoupPotato
-WEAVILE		
-YANMEGA		
-AMBIPOM		Scarlax
-TANGROWTH	
-MAGNEZONE	Scarlax (BloodlessNS, SoupPotato)
+Type and Category Icons adapted from code by Nayru62
 
-mauvesea sprites (most of them)
-ShadowOne333 sprites (most of them)
-BloodlessNS sprites (most of them)
-Scarlax
-SoupPotato
 
-Blue Emerald
-solo993
-Chamber
-Lake
-Neslug
-Pikachu25
-metalflygon08
-JaceDeane
+Code and Graphics adapted from Rangi42's "Polished Crystal" and its contributors:
+Reef tile gfx
+Some tileset animation code
+Graphics and base_data for:
+GLACEON, GLISCOR, HONCHKROW, LEAFEON, MAGNEZONE, MAMOSWINE, MISMAGIUS, TANGROWTH, WEAVILE, and YANMEGA
+
+
+Code for textbox nametags by Narishma-gb
+
+
+pret discord
+
 
 Satoshi Tajiri, Game Freak, and Nintendo for creating Pokémon Crystal in the first place.
