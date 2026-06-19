@@ -685,8 +685,8 @@ CeladonGameCorner_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 14, 13, CELADON_CITY, 6
 	warp_event 15, 13, CELADON_CITY, 6
+	warp_event 16, 13, CELADON_CITY, 6
 	warp_event 17,  0, ROCKET_HIDEOUT_B1F, 3
 
 	def_coord_events
