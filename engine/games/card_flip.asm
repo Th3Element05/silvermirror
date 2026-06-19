@@ -857,8 +857,8 @@ CardFlip_CheckWinCondition:
 	jr nz, .WinSix
 	jp .Lose
 
-.WinSix:
-	ld c, $6
+.WinSix: ;Twelve (x4)
+	ld c, $c ;$6
 	ld de, SFX_2ND_PLACE
 	jp .Payout
 
@@ -882,8 +882,8 @@ CardFlip_CheckWinCondition:
 	jr z, .WinNine
 	jp .Lose
 
-.WinNine:
-	ld c, $9
+.WinNine: ;Eighteen (x6)
+	ld c, $12 ;$9
 	ld de, SFX_2ND_PLACE
 	jp .Payout
 
@@ -914,8 +914,8 @@ CardFlip_CheckWinCondition:
 	jr z, .WinTwelve
 	jp .Lose
 
-.WinTwelve:
-	ld c, $c
+.WinTwelve: ;TwentyFour (x8)
+	ld c, $18 ;$c
 	ld de, SFX_2ND_PLACE
 	jp .Payout
 
@@ -960,8 +960,8 @@ CardFlip_CheckWinCondition:
 	jr z, .WinEighteen
 	jp .Lose
 
-.WinEighteen:
-	ld c, $12
+.WinEighteen: ;ThirtySix (x12)
+	ld c, $24 ;$12
 	ld de, SFX_2ND_PLACE
 	jp .Payout
 
@@ -1064,7 +1064,7 @@ CardFlip_CheckWinCondition:
 	ld a, [wCardFlipFaceUpCard]
 	cp e
 	jr nz, .Lose
-	ld c, 72
+	ld c, 144 ;72
 	ld de, SFX_2ND_PLACE
 	jr .Payout
 
