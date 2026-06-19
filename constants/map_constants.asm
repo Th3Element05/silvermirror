@@ -165,10 +165,10 @@ ENDM
 	map_const CELADON_DEPT_STORE_ROOF,                      8,  6 ;  8
 	map_const CELADON_DEPT_STORE_ELEVATOR,                  2,  2 ;  9
 	map_const CELADON_GYM,                                  5,  9 ; 10
-	map_const CELADON_MANSION_1F,                           4,  5 ; 11
-	map_const CELADON_MANSION_2F,                           4,  5 ; 12
-	map_const CELADON_MANSION_3F,                           4,  5 ; 13
-	map_const CELADON_MANSION_ROOF,                         4,  7 ; 14
+	map_const CELADON_MANSION_1F,                           5,  5 ; 11
+	map_const CELADON_MANSION_2F,                           5,  5 ; 12
+	map_const CELADON_MANSION_3F,                           5,  5 ; 13
+	map_const CELADON_MANSION_ROOF,                         5,  7 ; 14
 	map_const CELADON_MANSION_ROOF_HOUSE,                   4,  4 ; 15
 	map_const CELADON_GAME_CORNER,                         10,  7 ; 16
 	map_const CELADON_GAME_CORNER_PRIZE_ROOM,               4,  4 ; 17
