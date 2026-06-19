@@ -10,8 +10,8 @@ DEF GAMECORNER_LARVITAR_COINS     EQU 4000
 ;
 DEF GAMECORNER_ETHER_COINS        EQU 200
 DEF GAMECORNER_PP_UP_COINS        EQU 300
-DEF GAMECORNER_RARE_CANDY_COINS   EQU 400
-DEF GAMECORNER_NUGGET_COINS       EQU 500
+DEF GAMECORNER_RARE_CANDY_COINS   EQU 600
+DEF GAMECORNER_NUGGET_COINS       EQU 1000
 ;
 ;DEF GAMECORNER_FIRE_STONE_COINS   EQU 250
 ;DEF GAMECORNER_THUNDERSTONE_COINS EQU 250
@@ -75,7 +75,7 @@ GameCornerPrizesKantoPokemonVendor:
 	special GameCornerPrizeMonCheckDex
 	givepoke CLEFAIRY, 12
 	takecoins GAMECORNER_CLEFAIRY_COINS
-	sjump .loop
+	sjump GameCorner_CancelPurchaseScript ;.loop
 
 .Dratini:
 	checkcoins GAMECORNER_DRATINI_COINS
@@ -93,7 +93,7 @@ GameCornerPrizesKantoPokemonVendor:
 	special GameCornerPrizeMonCheckDex
 	givepoke DRATINI, 24
 	takecoins GAMECORNER_DRATINI_COINS
-	sjump .loop
+	sjump GameCorner_CancelPurchaseScript ;.loop
 
 .Chansey:
 	checkcoins GAMECORNER_CHANSEY_COINS
@@ -111,7 +111,7 @@ GameCornerPrizesKantoPokemonVendor:
 	special GameCornerPrizeMonCheckDex
 	givepoke CHANSEY, 18
 	takecoins GAMECORNER_CHANSEY_COINS
-	sjump .loop
+	sjump GameCorner_CancelPurchaseScript ;.loop
 
 .Porygon:
 	checkcoins GAMECORNER_PORYGON_COINS
@@ -129,7 +129,7 @@ GameCornerPrizesKantoPokemonVendor:
 	special GameCornerPrizeMonCheckDex
 	givepoke PORYGON, 10
 	takecoins GAMECORNER_PORYGON_COINS
-	sjump .loop
+	sjump GameCorner_CancelPurchaseScript ;.loop
 
 GameCornerPrizesKantoMonMenuHeader:
 	db MENU_BACKUP_TILES ; flags
@@ -181,7 +181,7 @@ GameCornerPrizesJohtoPokemonVendor:
 	special GameCornerPrizeMonCheckDex
 	givepoke DUNSPARCE, 10
 	takecoins GAMECORNER_CLEFAIRY_COINS
-	sjump .loop
+	sjump GameCorner_CancelPurchaseScript ;.loop
 
 .Murkrow:
 	checkcoins GAMECORNER_MURKROW_COINS
@@ -197,9 +197,9 @@ GameCornerPrizesJohtoPokemonVendor:
 	waitbutton
 	setval MURKROW
 	special GameCornerPrizeMonCheckDex
-	givepoke DRATINI, 18
+	givepoke MURKROW, 18
 	takecoins GAMECORNER_MURKROW_COINS
-	sjump .loop
+	sjump GameCorner_CancelPurchaseScript ;.loop
 
 .Slugma:
 	checkcoins GAMECORNER_SLUGMA_COINS
@@ -215,9 +215,9 @@ GameCornerPrizesJohtoPokemonVendor:
 	waitbutton
 	setval SLUGMA
 	special GameCornerPrizeMonCheckDex
-	givepoke CHANSEY, 24
+	givepoke SLUGMA, 24
 	takecoins GAMECORNER_SLUGMA_COINS
-	sjump .loop
+	sjump GameCorner_CancelPurchaseScript ;.loop
 
 .Larvitar:
 	checkcoins GAMECORNER_LARVITAR_COINS
@@ -233,9 +233,9 @@ GameCornerPrizesJohtoPokemonVendor:
 	waitbutton
 	setval LARVITAR
 	special GameCornerPrizeMonCheckDex
-	givepoke PORYGON, 10
+	givepoke LARVITAR, 10
 	takecoins GAMECORNER_LARVITAR_COINS
-	sjump .loop
+	sjump GameCorner_CancelPurchaseScript ;.loop
 
 GameCornerPrizesJohtoMonMenuHeader:
 	db MENU_BACKUP_TILES ; flags
