@@ -15,7 +15,7 @@ Tilesets::
 	table_width TILESET_LENGTH, Tilesets
 	tileset Tileset0
 	tileset TilesetJohto
-	tileset TilesetJohtoModern
+;	tileset TilesetJohtoModern
 	tileset TilesetKanto
 	tileset TilesetBattleTowerOutside
 	tileset TilesetHouse
@@ -34,7 +34,7 @@ Tilesets::
 	tileset TilesetChampionsRoom
 	tileset TilesetLighthouse
 	tileset TilesetPlayersRoom
-	tileset TilesetPokeComCenter
+;	tileset TilesetPokeComCenter
 	tileset TilesetBattleTowerInside
 	tileset TilesetTower
 	tileset TilesetCave

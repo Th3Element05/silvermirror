@@ -15,8 +15,8 @@ Tileset0PalMap:
 TilesetJohtoPalMap:
 INCLUDE "gfx/tilesets/johto_palette_map.asm"
 
-TilesetJohtoModernPalMap:
-INCLUDE "gfx/tilesets/johto_modern_palette_map.asm"
+;TilesetJohtoModernPalMap:
+;INCLUDE "gfx/tilesets/johto_modern_palette_map.asm"
 
 TilesetHousePalMap:
 INCLUDE "gfx/tilesets/house_palette_map.asm"
@@ -92,8 +92,8 @@ INCLUDE "gfx/tilesets/lighthouse_palette_map.asm"
 TilesetPlayersRoomPalMap:
 INCLUDE "gfx/tilesets/players_room_palette_map.asm"
 
-UnusedMuseumPalMap: ; unreferenced
-INCLUDE "gfx/tilesets/unused_museum_palette_map.asm"
+;UnusedMuseumPalMap: ; unreferenced
+;INCLUDE "gfx/tilesets/unused_museum_palette_map.asm"
 
 TilesetIcePathPalMap:
 INCLUDE "gfx/tilesets/ice_path_palette_map.asm"
@@ -101,8 +101,8 @@ INCLUDE "gfx/tilesets/ice_path_palette_map.asm"
 TilesetForestPalMap:
 INCLUDE "gfx/tilesets/forest_palette_map.asm"
 
-TilesetPokeComCenterPalMap:
-INCLUDE "gfx/tilesets/pokecom_center_palette_map.asm"
+;TilesetPokeComCenterPalMap:
+;INCLUDE "gfx/tilesets/pokecom_center_palette_map.asm"
 
 TilesetBattleTowerInsidePalMap:
 INCLUDE "gfx/tilesets/battle_tower_inside_palette_map.asm"
