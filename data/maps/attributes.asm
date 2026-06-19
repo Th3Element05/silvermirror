@@ -310,11 +310,11 @@ ENDM
 	connection east, FuchsiaCity, FUCHSIA_CITY, -5
 
 	map_attributes Route17, ROUTE_17, $43, NORTH | SOUTH
-	connection north, Route16, ROUTE_16, 1
+	connection north, Route16, ROUTE_16, 0
 	connection south, Route18, ROUTE_18, 1
 
 	map_attributes Route16, ROUTE_16, $43, SOUTH | EAST
-	connection south, Route17, ROUTE_17, -1
+	connection south, Route17, ROUTE_17, 0
 	connection east, CeladonCity, CELADON_CITY, -3 ;-5
 
 	map_attributes CeladonCity, CELADON_CITY, $0f, WEST | EAST

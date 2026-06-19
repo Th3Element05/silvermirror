@@ -178,7 +178,7 @@ ENDM
 	map_const ROUTE_7,                                     10, 10 ; 21
 	map_const ROUTE_7_UNDERGROUND_PATH_ENTRANCE,            4,  4 ; 23
 	map_const ROUTE_7_SAFFRON_GATE,                         4,  5 ; 22
-	map_const ROUTE_16,                                    19, 10 ; 24
+	map_const ROUTE_16,                                    20, 10 ; 24
 	map_const ROUTE_16_FUCHSIA_SPEECH_HOUSE,                4,  4 ; 25
 	map_const ROUTE_16_GATE,                                4,  5 ; 26
 	endgroup
