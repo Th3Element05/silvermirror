@@ -70,7 +70,7 @@ LancesRoomLanceScript:
 	writetext LanceBattleAfterText_1
 
 	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .LanceHallOfFame
+	iftrue LanceTakesPlayerToHallOfFame
 
 	promptbutton
 	special FadeOutMusic
@@ -562,8 +562,8 @@ LanceRematchScript:
 	playmusic MUSIC_GYM_VICTORY
 	opentext
 	writetext LanceRematchAfterBattleText
-
-.LanceHallOfFame
+	; fallthrough
+LanceTakesPlayerToHallOfFame:
 	waitbutton
 	closetext
 	playsound SFX_ENTER_DOOR

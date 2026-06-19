@@ -6,7 +6,7 @@ CeruleanTrashedHouse_MapScripts:
 	def_callbacks
 	callback MAPCALLBACK_TILES, CeruleanTrashedHouseTilesCallback
 
-CeladonChiefHouseTilesCallback:
+CeruleanTrashedHouseTilesCallback:
 	checkevent EVENT_BEAT_GRUNTM_4
 	iffalse .TrashedHouse
 	checkevent EVENT_BEAT_GIOVANNI

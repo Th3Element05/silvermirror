@@ -63,7 +63,7 @@ GuitaristEdgarAfterBattleText:
 	ntag "GUITARIST:"
 	text "Rock & Roll!"
 
-	para "<…>"
+	para "<……>"
 
 	para "Trashing the room?"
 
