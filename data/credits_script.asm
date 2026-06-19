@@ -89,7 +89,7 @@ CreditsScript:
 
 	db               CODING, 0
 ;                          ; 1
-	db              RANJI42, 2
+	db              RANGI42, 2
 	db             NARISHMA, 3
 	db     GRATEORACLELEWOT, 4
 ;                          ; 5

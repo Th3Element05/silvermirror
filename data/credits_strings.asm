@@ -31,7 +31,7 @@ CreditsStringsPointers:
 	dw .Ssenrah
 	dw .KnightOwl
 	dw .TigerBlood
-	dw .Guardian1691
+;	dw .Guardian1691
 	assert_table_length NUM_CREDITS_STRINGS
 
 .PokemonTitle:        db "      #MON@"
