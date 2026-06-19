@@ -51,6 +51,7 @@ AgathaScript_Battle:
 	closetext
 	winlosstext AgathaScript_AgathaBeatenText, 0
 	loadtrainer AGATHA, AGATHA2
+	sjump .StartBattle
 
 .Normal
 	writetext AgathaScript_AgathaBeforeText
@@ -58,6 +59,8 @@ AgathaScript_Battle:
 	closetext
 	winlosstext AgathaScript_AgathaBeatenText, 0
 	loadtrainer AGATHA, AGATHA1
+
+.StartBattle
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_E4_AGATHA

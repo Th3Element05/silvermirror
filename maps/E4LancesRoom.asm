@@ -68,6 +68,10 @@ LancesRoomLanceScript:
 	playmusic MUSIC_GYM_VICTORY
 	opentext
 	writetext LanceBattleAfterText_1
+
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .LanceHallOfFame
+
 	promptbutton
 	special FadeOutMusic
 	writetext LanceBattleAfterText_2
@@ -558,6 +562,8 @@ LanceRematchScript:
 	playmusic MUSIC_GYM_VICTORY
 	opentext
 	writetext LanceRematchAfterBattleText
+
+.LanceHallOfFame
 	waitbutton
 	closetext
 	playsound SFX_ENTER_DOOR
@@ -605,7 +611,7 @@ LanceRematchWinText:
 	text "That's it!"
 
 	para "You are still a"
-	cont "#MON master!"
+	line "#MON master!"
 	done
 
 LanceRematchAfterBattleText:
@@ -618,8 +624,9 @@ LanceRematchAfterBattleText:
 	done
 
 LanceRematchEnterHallOfFameText:
-	para "Let's get you and"
-	line "those #MON into"
+	ntag "LANCE:"
+	text "Let's get you and"
+	line "your #MON into"
 	cont "the HALL OF FAME!"
 	done
 

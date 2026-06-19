@@ -51,6 +51,7 @@ LoreleiScript_Battle:
 	closetext
 	winlosstext LoreleiScript_LoreleiBeatenText, 0
 	loadtrainer LORELEI, LORELEI2
+	sjump .StartBattle
 
 .Normal
 	writetext LoreleiScript_LoreleiBeforeText

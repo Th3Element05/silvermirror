@@ -51,6 +51,7 @@ BrunoScript_Battle:
 	closetext
 	winlosstext BrunoScript_BrunoBeatenText, 0
 	loadtrainer BRUNO, BRUNO2
+	sjump .StartBattle
 
 .Normal
 	writetext BrunoScript_BrunoBeforeText
@@ -58,6 +59,8 @@ BrunoScript_Battle:
 	closetext
 	winlosstext BrunoScript_BrunoBeatenText, 0
 	loadtrainer BRUNO, BRUNO1
+
+.StartBattle
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_E4_BRUNO
