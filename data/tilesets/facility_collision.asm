@@ -128,4 +128,4 @@
 	tilecoll WALL, WALL, FLOOR, WALL ; 7f
 	tilecoll COUNTER, COUNTER, COUNTER, FLOOR ; 80
 	tilecoll WALL, WALL, BOOKSHELF, BOOKSHELF ; 81
-	tilecoll , , ,  ; 82
+	tilecoll LADDER, FLOOR, FLOOR, FLOOR ; 82
