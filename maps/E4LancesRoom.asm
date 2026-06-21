@@ -73,7 +73,8 @@ LancesRoomLanceScript:
 	iftrue LanceTakesPlayerToHallOfFame
 
 	promptbutton
-	special FadeOutMusic
+;	special FadeOutMusic
+	musicfadeout MUSIC_NONE, 16
 	writetext LanceBattleAfterText_2
 	waitbutton
 	closetext
