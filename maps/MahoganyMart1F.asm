@@ -138,9 +138,12 @@ MahoganyMart1FSecretStairsConditional:
 	changeblock 6, 2, $28 ; stairs
 	reloadmappart
 	waitsfx
+	checkevent EVENT_NINJA_CHALLENGE_IN_PROGRESS
+	iffalse .AcceptedByNinjas
 	checkevent EVENT_MAHOGANY_MART_GRANNY
 	iffalse .YouSawNothing
-;else
+; else
+.AcceptedByNinjas
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
 	end
 
