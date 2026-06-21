@@ -19,13 +19,15 @@ CREDITS_WAIT, 456 (total)
 
 
 big help from discord
+Ranji42			code
 Grate Oracle Lewot	code
 Narishma-gb		code
-pq
+Ardorin			code
+RaJa239
 SatoMew
 Darkshade
-RaJa239
 tanu
+pq
 plenty of others
 
 
@@ -35,22 +37,27 @@ SourApple - creator
 FIQ - custom palette stuff
 
 This project was forked from SourApple's Sour Crystal
-
-
-Type and Category Icons adapted from code by Nayru62
-
+Huge Thanks to Sour Crystal and its contributors!
 
 Code and Graphics adapted from Rangi42's "Polished Crystal" and its contributors:
-Reef tile gfx
-Some tileset animation code
-Graphics and base_data for:
-GLACEON, GLISCOR, HONCHKROW, LEAFEON, MAGNEZONE, MAMOSWINE, MISMAGIUS, TANGROWTH, WEAVILE, and YANMEGA
+- Reef tile gfx
+- Some tileset animation code
+- Graphics and base_data for: GLACEON, GLISCOR, HONCHKROW, LEAFEON, MAGNEZONE, MAMOSWINE, MISMAGIUS, TANGROWTH, WEAVILE, and YANMEGA
 
+Type and Category Icons adapted from code by Nayru62 and Ranji42
 
 Code for textbox nametags by Narishma-gb
 
+Dynamic Levels code by Ardorin
 
-pret discord
+Noteworthy assistance from users in Discord:
+Ranji42
+Grate Oracle Lewot
+RaJa239
+pq
+SatoMew
+SarkShade
+tanu
+and many others!
 
-
-Satoshi Tajiri, Game Freak, and Nintendo for creating Pokémon Crystal in the first place.
+Thanks to Satoshi Tajiri, Game Freak, and Nintendo for creating Pokémon Crystal in the first place.

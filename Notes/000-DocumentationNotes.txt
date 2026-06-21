@@ -13,52 +13,17 @@ ABCDEF screenshot celadon hotel pc
 
 
 
-cerulean trashed house, fixed?
-
-how many walking sprites in SSANNE ROOMS NORTH? (pokefan F)
-
-game corner prize vendor scripts (all)
-
-olivine good rod house uses route32pokecenter lure script
-
-
-route 30 pecha berry respawns instantly
-gotta check all fruit trees now... may as well do "picked berries"
-
-ss anne port ship "water" color at night is too green, doesn't match water
 
 computers in fossil room, silph, everywhere?
 
-
-KURTS SON
-(where do you respawn if you faint inside SILPH?)
-(sneak out either way and test Talk event script anyway)
-test making all apricorn balls
-
-TEST
-these use overworld phone scripts from Route20
-(they are in the same bank so should be fine)
-Fisher Kyle (route 21)
-
-these use overworld phone scripts from Route17
-(they are in the same bank so should be fine)
-Fisher Tully (route 12)
-Bird Keeper Jamie (route 13)
-Biker Reese (route 14)
-Biker Aiden (route 16)
-Bird Keeper Jose (route 18)
-
-TEST
-enter HOF a second time, legitimately
-(scenes/events are reset by entering indigo plateau)
-
+TEST route 16 "always on bike"
+TEST celadon mansion roof collison
+TEST route 16-17 connection
+TEST cerulean trashed house changeblocks (beat_grunt, beat_giovanni)
 TEST berserk gene after mewtwo battle
-TEST credits
 TEST squirtbottle scripts
 TEST ninja security pokeball
 TEST dragon shrine dratini pokeball script
-TEST elite four again
-TEST indigo plateau lance script
 TEST special landmark tohjo falls
 TEST kanto leader rematches
 TEST activate johto leader rematches
@@ -67,9 +32,8 @@ TEST ruins of alph outside scientist disables radio card
 TEST ruins of alph outside scripts
 TEST whitney after battle opentext
 TEST mr.fuji house give pokeflute script... repeat at end?
-TEST route 22 second rival battle
+TEST elite four first after lance music fade out
 TEST mount moon square clefairy dance
-TEST mahogany mart stairs after clearing ninja den
 
 CHECK
 can ROCKET_HIDEOUT landmark just be CELADON_CITY?
@@ -89,52 +53,6 @@ seel dex entry
 grimer dex entry (-togther?)
 marill dex entry (It > new page)
 mewtwo dex entry
-
-
-
-
-champion's room stairs?
-elite four room stairs?
-
-
-
-
-continuity of STAIRS
-; Tilesets indexes (see data/tilesets.asm)
-	const_def 1
-const TILESET_JOHTO                ; 01
-const TILESET_JOHTO_MODERN         ; 02
-const TILESET_KANTO                ; 03
-const TILESET_BATTLE_TOWER_OUTSIDE ; 04
-const TILESET_HOUSE                ; 05
-const TILESET_POKECENTER           ; 07
-const TILESET_GATE                 ; 08
-const TILESET_PORT                 ; 09
-const TILESET_LAB                  ; 0a
-const TILESET_FACILITY             ; 0b
-const TILESET_MART                 ; 0c
-const TILESET_MANSION              ; 0d
-const TILESET_GAME_CORNER          ; 0e
-const TILESET_ELITE_FOUR_ROOM      ; 0f
-const TILESET_TRADITIONAL_HOUSE    ; 10
-const TILESET_TRAIN_STATION        ; 11
-const TILESET_CHAMPIONS_ROOM       ; 12
-const TILESET_LIGHTHOUSE           ; 13
-const TILESET_PLAYERS_ROOM         ; 14
-const TILESET_POKECOM_CENTER       ; 15
-const TILESET_BATTLE_TOWER_INSIDE  ; 16
-const TILESET_TOWER                ; 17
-const TILESET_CAVE                 ; 18
-const TILESET_PARK                 ; 19
-const TILESET_RUINS_OF_ALPH        ; 1a
-const TILESET_RADIO_TOWER          ; 1b
-const TILESET_UNDERGROUND          ; 1c
-const TILESET_ICE_PATH             ; 1d
-const TILESET_DARK_CAVE            ; 1e
-const TILESET_FOREST               ; 1f
-const TILESET_ROCKET_FACILITY      ; 21
-const TILESET_CEMETARY             ; 22
-DEF NUM_TILESETS EQU const_value - 1
 
 
 
@@ -162,3 +80,86 @@ or, forget MAGMORTAR, remove DELIBIRD, and just add the other two?
 701	rhyperior	<
 793	magmortar	<
 971	stantler	x?
+
+
+
+
+
+Since you are the only contributor to this repository, you can safely rewrite the history without disrupting anyone else. [1, 2] 
+The most efficient and modern way to fix all past commits matching your real name is using git-filter-repo. This tool replaces the old, slow git filter-branch method. [3, 4, 5, 6, 7] 
+Here are the step-by-step instructions to wipe your real name from the entire history:
+## Step 1: Install git-filter-repo [8] 
+You need to install this utility tool on your machine. [9] 
+
+* Mac (Homebrew): brew install git-filter-repo
+* Windows (Scoop): scoop install git-filter-repo
+* Python (Pip): pip install git-filter-repo [10, 11, 12, 13, 14] 
+
+## Step 2: Create a Fresh Clone (Recommended) [15] 
+git-filter-repo refuses to run on a standard working directory to protect you from data loss. It requires a fresh clone or a flagged command. [16] 
+
+   1. Open your terminal.
+   2. Navigate to a temporary folder and clone a fresh copy:
+   
+   git clone <YOUR_GITHUB_REPO_URL>
+   cd <YOUR_REPO_NAME>
+   
+   [17, 18] 
+
+## Step 3: Map the Old Name to the New Name
+Create a mapping file so Git knows exactly what to swap.
+
+   1. Create a file named .mailmap in the root folder of your project.
+   2. Open it in a text editor and add this exact format (replace with your actual details):
+   
+   Desired Name <desired-email@example.com> Real Name <real-name-email@example.com>
+   
+   Note: Place your preferred public name and email first, followed by the real name and email you want to erase. [19] 
+
+## Step 4: Rewrite the History
+Run the filtering command to instantly update every commit in the repository: [20] 
+
+git filter-repo --mailmap .mailmap
+
+Your local history is now completely updated. Your real name is gone from the local logs.
+## Step 5: Force Push back to GitHub
+Because you completely changed the history, GitHub will reject a normal push. You must force it to overwrite the cloud version. [21, 22, 23] 
+
+git push origin --force --all
+
+## Step 6: Fix Future Commits
+To ensure Git never uses your real name again on this computer, update your global settings:
+
+git config --global user.name "Your Desired Name"
+git config --global user.email "desired-email@example.com"
+
+To make sure we get this perfectly right, let me know:
+
+* What operating system (Windows, Mac, Linux) are you using?
+* Do you need help checking the exact email addresses Git used for those accidental commits?
+
+I can guide you through extracting those details or troubleshooting any terminal errors.
+
+[1] [https://medium.com](https://medium.com/@ogbonnaijeoma871/i-accidentally-pushed-1-5gb-of-build-files-to-github-and-how-i-fixed-it-c52a13cb073a)
+[2] [https://labs.teecom.com](https://labs.teecom.com/2018/07/31/breaking-commits-apart-with-git.html)
+[3] [https://coreui.io](https://coreui.io/answers/how-to-anonymize-commits-in-git/)
+[4] [https://coreui.io](https://coreui.io/tags/git/)
+[5] [https://www.git-tower.com](https://www.git-tower.com/learn/git/faq/git-filter-repo)
+[6] [https://techcommunity.microsoft.com](https://techcommunity.microsoft.com/blog/azureinfrastructureblog/how-to-safely-remove-secrets-from-your-git-history-the-right-way/4464722)
+[7] [https://www.codeconcisely.com](https://www.codeconcisely.com/posts/change-author-data-for-all-existing-commits/)
+[8] [https://docs.pantheon.io](https://docs.pantheon.io/guides/git/troubleshooting)
+[9] [https://medium.com](https://medium.com/@Ezama/i-accidentally-committed-an-api-key-to-github-heres-how-i-fixed-it-c54e64a49938)
+[10] [https://www.deployhq.com](https://www.deployhq.com/git/faqs/update-author-committer-multiple-git-commits)
+[11] [https://github.com](https://github.com/orgs/community/discussions/168436)
+[12] [https://gist.github.com](https://gist.github.com/Boggin/2e25abd3a4423ca812671b4bd3f860d0)
+[13] [https://www.harness.io](https://www.harness.io/blog/how-to-remove-an-api-key-from-a-git-commit)
+[14] [https://github.com](https://github.com/orgs/community/discussions/185811)
+[15] [https://medium.com](https://medium.com/neural-engineer/erasing-git-history-how-to-keep-only-your-latest-commit-on-github-67e2173fce66)
+[16] [https://andrewlock.net](https://andrewlock.net/rewriting-git-history-simply-with-git-filter-repo/)
+[17] [https://gist.github.com](https://gist.github.com/raykibul/0692d111e83dd80cd5483c687f149d6b)
+[18] [https://github.com](https://github.com/orgs/community/discussions/176766)
+[19] [https://www.reddit.com](https://www.reddit.com/r/transprogrammer/comments/kxi8al/tip_if_you_have_your_deadname_in_git_commits_and/)
+[20] [https://gklsan.medium.com](https://gklsan.medium.com/how-to-change-git-commit-author-information-for-all-commits-a-complete-guide-29c954e8319d)
+[21] [https://egghead.io](https://egghead.io/lessons/misc-git-how-to-change-the-most-recent-commit-with-amend)
+[22] [https://www.ujwalbudha.com.np](https://www.ujwalbudha.com.np/blogs/removing-sensitive-data-git-history.html)
+[23] [https://levelup.gitconnected.com](https://levelup.gitconnected.com/github-commands-to-start-your-version-control-journey-part-2-c8599bdc0253)
