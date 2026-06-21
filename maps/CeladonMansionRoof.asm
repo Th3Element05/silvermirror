@@ -22,7 +22,7 @@ CeladonMansionRoofDrawGraffitiText:
 CeladonMansionRoofGraffitiText:
 	text "Haha! It's the"
 	line "funny face that"
-	cont "you drew!"
+	cont "<PLAYER> drew!"
 	done
 
 CeladonMansionRoofSign:
@@ -44,6 +44,6 @@ CeladonMansionRoof_MapEvents:
 
 	def_bg_events
 	bg_event  2,  5, BGEVENT_READ, CeladonMansionRoofSign
-	bg_event  8,  1, BGEVENT_LEFT, CeladonMansionRoofGraffiti
+	bg_event  2,  1, BGEVENT_LEFT, CeladonMansionRoofGraffiti
 
 	def_object_events
