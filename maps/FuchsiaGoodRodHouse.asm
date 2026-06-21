@@ -42,11 +42,10 @@ FishingGuruGood:
 
 FishingGuruGoodQuestionText:
 	ntag "FISHERMAN:"
-	text "I'm the FISHING"
-	line "GURU's older"
-	cont "brother!"
+	text "I'm a FISHING"
+	line "GURU!"
 
-	para "I simply Looove"
+	para "I simply LOVE"
 	line "fishing!"
 
 	para "Do you like to"
@@ -81,8 +80,7 @@ FishingGuruGoodRefusedText:
 
 FishingGuruGoodAfterText:
 	ntag "FISHERMAN:"
-	text "Hello there,"
-	line "<PLAYER>!"
+	text "Hello there!"
 
 	para "How are the fish"
 	line "biting?"

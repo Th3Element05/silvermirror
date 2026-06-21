@@ -50,10 +50,10 @@ SuperRodHouseBookshelf: ; unreferenced
 
 OfferSuperRodText:
 	ntag "FISHERMAN:"
-	text "I'm the FISHING"
-	line "GURU's brother!"
+	text "I'm a FISHING"
+	line "GURU!"
 
-	para "I simply Looove"
+	para "I simply LOVE"
 	line "fishing!"
 
 	para "Do you like to"
@@ -88,8 +88,7 @@ DontWantSuperRodText:
 
 Route12SuperRodHouseTryFishingText:
 	ntag "FISHERMAN:"
-	text "Hello there,"
-	line "<PLAYER>!"
+	text "Hello there!"
 
 	para "Use the SUPER ROD"
 	line "in any water!"
