@@ -341,7 +341,7 @@ BlackthornCity_MapEvents:
 	warp_event 18, 11, BLACKTHORN_GYM_1F, 1
 	warp_event 13, 21, BLACKTHORN_DRAGON_SPEECH_HOUSE, 1
 	warp_event 29, 23, BLACKTHORN_EMYS_HOUSE, 1
-	warp_event 15, 29, BLACKTHORN_MART, 2
+	warp_event 15, 29, BLACKTHORN_MART, 1
 	warp_event 21, 29, BLACKTHORN_POKECENTER_1F, 1
 	warp_event  9, 31, BLACKTHORN_MOVES_HOUSE, 1
 	warp_event 36,  9, ICE_PATH_1F, 2

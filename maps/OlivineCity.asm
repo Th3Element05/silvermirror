@@ -194,7 +194,7 @@ OlivineCity_MapEvents:
 	warp_event 29, 11, OLIVINE_PUNISHMENT_SPEECH_HOUSE, 1
 	warp_event 13, 15, OLIVINE_GOOD_ROD_HOUSE, 1
 	warp_event  7, 21, OLIVINE_CAFE, 1
-	warp_event 19, 17, OLIVINE_MART, 2
+	warp_event 19, 17, OLIVINE_MART, 1
 	warp_event 29, 27, OLIVINE_LIGHTHOUSE_1F, 1
 	warp_event 19, 33, OLIVINE_PORT, 1
 
