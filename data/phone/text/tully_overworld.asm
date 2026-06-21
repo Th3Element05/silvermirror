@@ -2,13 +2,17 @@ TullyAskNumber1Text:
 	ntag "TULLY:"
 	text "Hey, you're trying"
 	line "to be the ultimate"
-	cont "trainer too? Then"
+	cont "trainer too?"
+	cont "Then that means"
 	roll "we're comrades!"
 
-	para "If I find any more"
-	line "items by the"
-	cont "water, I'll give"
-	roll "you some."
+	para "Sometimes I find"
+	line "useful items by"
+	cont "the water!"
+
+	para "If I come across"
+	line "any more, I'll"
+	cont "give you some."
 
 	para "Just give me your"
 	line "phone number."

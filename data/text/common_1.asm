@@ -10,23 +10,23 @@ _HeyItsFruitText::
 	text "!"
 	done
 
-;_PickedBerriesText:
-;	text "<PLAYER> picked"
-;	line "the berries."
-;	done
+_PickedBerriesText::
+	text "<PLAYER> picked"
+	line "the berries."
+	done
 
-;_PickedApricornText:
-;	text "<PLAYER> picked"
-;	line "the @"
-;	text_ram wStringBuffer3
-;	text "."
-;	done
+_PickedApricornText::
+	text "<PLAYER> picked"
+	line "the @"
+	text_ram wStringBuffer3
+	text "."
+	done
 
-;_BerriesInBerryPocketText:
-;	text "<PLAYER> put the"
-;	line "berries in the"
-;	cont "BERRY POCKET."
-;	done
+_BerriesInBerryPocketText::
+	text "<PLAYER> put the"
+	line "berries in the"
+	cont "BERRY POCKET."
+	done
 
 _ObtainedFruitText::
 	text "Obtained some"
@@ -36,8 +36,11 @@ _ObtainedFruitText::
 	done
 
 _FruitPackIsFullText::
-	text "But the PACK is"
-	line "full…"
+;	text "But your PACK is"
+;	line "full…"
+;	done
+	text "But your BERRY"
+	line "POCKET is full…"
 	done
 
 _NothingHereText::

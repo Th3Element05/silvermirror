@@ -3,7 +3,7 @@ JoseAskNumber1Text:
 	text "If my FEAROW"
 	line "sees anything"
 	cont "pretty, it goes"
-	line "and gets it."
+	roll "and gets it."
 
 	para "Do you like pretty"
 	line "things?"

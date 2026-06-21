@@ -195,8 +195,8 @@ TrainerBikerReese:
 BikerReeseSeenText:
 	ntag "BIKER:"
 	text "C'mon, c'mon."
-	line "Let's go, let's"
-	cont "go, let's go!"
+	line "Let's go, let's go,"
+	cont "let's go!"
 	done
 
 BikerReeseBeatenText:
