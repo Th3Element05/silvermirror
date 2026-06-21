@@ -4,6 +4,12 @@ Route3_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+	callback MAPCALLBACK_NEWMAP, MountMoonFlypointCallback
+
+MountMoonFlypointCallback:
+	setflag ENGINE_FLYPOINT_MT_MOON
+	setmapscene CINNABAR_ISLAND, SCENE_CINNABARISLAND_NOOP
+	endcallback
 
 TrainerYoungsterAsher:
 	trainer YOUNGSTER, ASHER, EVENT_BEAT_YOUNGSTER_ASHER, YoungsterAsherSeenText, YoungsterAsherBeatenText, 0, .Script

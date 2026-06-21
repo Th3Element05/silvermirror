@@ -8,6 +8,7 @@ Route10_MapScripts:
 
 RockTunnelFlypointCallback:
 	setflag ENGINE_FLYPOINT_ROCK_TUNNEL
+	setmapscene CINNABAR_ISLAND, SCENE_CINNABARISLAND_NOOP
 	callasm Route10ForceLandmarkSpecialAsm
 	endcallback
 
