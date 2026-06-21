@@ -22,11 +22,22 @@ BillsBackYard_LumBerry:
 	getitemname STRING_BUFFER_3, LUM_BERRY
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem LUM_BERRY, 2
-	iffalse .NoRoomInBag
+	giveitem LUM_BERRY, 2
+	iffalse .BillsBackYard_NoRoomInBag
+	farwritetext _PickedBerriesText
 	disappear BILLSBACKYARD_LUM_BERRY
 	setflag ENGINE_DAILY_BILLS_BACK_YARD_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	farwritetext _BerriesInBerryPocketText
+	waitbutton
+	closetext
+	end
+
+.BillsBackYard_NoRoomInBag:
+	farwritetext _FruitPackIsFullText
+	waitbutton
 	closetext
 	end
 
@@ -37,7 +48,7 @@ BillsBackYard_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 16,  1, BILLS_HOUSE, 1
+;	warp_event 16,  1, BILLS_HOUSE, 1
 ;	warp_event 16,  1, DARK_CAVE_VIOLET_ENTRANCE, 4
 
 	def_coord_events

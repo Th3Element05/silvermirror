@@ -21,11 +21,21 @@ Route33_BLKApricorn:
 	getitemname STRING_BUFFER_3, BLK_APRICORN
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem BLK_APRICORN
-	iffalse .NoRoomInBag
+	giveitem BLK_APRICORN
+	iffalse .Route33_NoRoomInBag
+	farwritetext _PickedApricornText
 	disappear ROUTE33_BLK_APRICORN
 	setflag ENGINE_DAILY_ROUTE_33_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	itemnotify
+	closetext
+	end
+
+.Route33_NoRoomInBag:
+	farwritetext _FruitPackIsFullText
+	waitbutton
 	closetext
 	end
 

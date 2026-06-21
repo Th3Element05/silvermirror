@@ -43,11 +43,16 @@ PewterCity_ChestoBerry:
 	getitemname STRING_BUFFER_3, CHESTO_BERRY
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem CHESTO_BERRY, 2
-	iffalse .NoRoomInBag
+	giveitem CHESTO_BERRY, 2
+	iffalse PewterCity_NoRoomInBag
+	farwritetext _PickedBerriesText
 	disappear PEWTERCITY_CHESTO_BERRY
 	setflag ENGINE_DAILY_PEWTER_CITY_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	farwritetext _BerriesInBerryPocketText
+	waitbutton
 	closetext
 	end
 
@@ -58,11 +63,16 @@ PewterCity_PersimBerry:
 	getitemname STRING_BUFFER_3, PERSIM_BERRY
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem PERSIM_BERRY, 2
-	iffalse .NoRoomInBag
+	giveitem PERSIM_BERRY, 2
+	iffalse PewterCity_NoRoomInBag
+	farwritetext _PickedBerriesText
 	disappear PEWTERCITY_PERSIM_BERRY
 	setflag ENGINE_DAILY_PEWTER_CITY_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	farwritetext _BerriesInBerryPocketText
+	waitbutton
 	closetext
 	end
 
@@ -73,11 +83,15 @@ PewterCity_BLUApricorn:
 	getitemname STRING_BUFFER_3, BLU_APRICORN
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem BLU_APRICORN
-	iffalse .NoRoomInBag
+	giveitem BLU_APRICORN
+	iffalse PewterCity_NoRoomInBag
+	farwritetext _PickedApricornText
 	disappear PEWTERCITY_BLU_APRICORN
 	setflag ENGINE_DAILY_PEWTER_CITY_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	itemnotify
 	closetext
 	end
 
@@ -88,11 +102,21 @@ PewterCity_WHTApricorn:
 	getitemname STRING_BUFFER_3, WHT_APRICORN
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem WHT_APRICORN
-	iffalse .NoRoomInBag
+	giveitem WHT_APRICORN
+	iffalse PewterCity_NoRoomInBag
+	farwritetext _PickedApricornText
 	disappear PEWTERCITY_WHT_APRICORN
 	setflag ENGINE_DAILY_PEWTER_CITY_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	itemnotify
+	closetext
+	end
+
+PewterCity_NoRoomInBag:
+	farwritetext _FruitPackIsFullText
+	waitbutton
 	closetext
 	end
 

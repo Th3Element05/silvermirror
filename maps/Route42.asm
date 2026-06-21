@@ -39,11 +39,15 @@ Route42_PNKApricorn:
 	getitemname STRING_BUFFER_3, PNK_APRICORN
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem PNK_APRICORN
-	iffalse .NoRoomInBag
+	giveitem PNK_APRICORN
+	iffalse Route42_NoRoomInBag
+	farwritetext _PickedApricornText
 	disappear ROUTE42_PNK_APRICORN
 	setflag ENGINE_DAILY_ROUTE_42_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	itemnotify
 	closetext
 	end
 
@@ -54,11 +58,15 @@ Route42_GRNApricorn:
 	getitemname STRING_BUFFER_3, GRN_APRICORN
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem GRN_APRICORN
-	iffalse .NoRoomInBag
+	giveitem GRN_APRICORN
+	iffalse Route42_NoRoomInBag
+	farwritetext _PickedApricornText
 	disappear ROUTE42_GRN_APRICORN
 	setflag ENGINE_DAILY_ROUTE_42_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	itemnotify
 	closetext
 	end
 
@@ -69,11 +77,21 @@ Route42_YLWApricorn:
 	getitemname STRING_BUFFER_3, YLW_APRICORN
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem YLW_APRICORN
-	iffalse .NoRoomInBag
+	giveitem YLW_APRICORN
+	iffalse Route42_NoRoomInBag
+	farwritetext _PickedApricornText
 	disappear ROUTE42_YLW_APRICORN
 	setflag ENGINE_DAILY_ROUTE_42_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	itemnotify
+	closetext
+	end
+
+Route42_NoRoomInBag:
+	farwritetext _FruitPackIsFullText
+	waitbutton
 	closetext
 	end
 

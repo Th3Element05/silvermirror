@@ -23,11 +23,21 @@ Route2_PNKApricorn:
 	getitemname STRING_BUFFER_3, PNK_APRICORN
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem PNK_APRICORN
-	iffalse .NoRoomInBag
+	giveitem PNK_APRICORN
+	iffalse .Route2_NoRoomInBag
+	farwritetext _PickedApricornText
 	disappear ROUTE2_PNK_APRICORN
 	setflag ENGINE_DAILY_ROUTE_2_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	itemnotify
+	closetext
+	end
+
+.Route2_NoRoomInBag:
+	farwritetext _FruitPackIsFullText
+	waitbutton
 	closetext
 	end
 

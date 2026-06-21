@@ -35,11 +35,15 @@ Route37_REDApricorn:
 	getitemname STRING_BUFFER_3, RED_APRICORN
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem RED_APRICORN
-	iffalse .NoRoomInBag
+	giveitem RED_APRICORN
+	iffalse Route37_NoRoomInBag
+	farwritetext _PickedApricornText
 	disappear ROUTE37_RED_APRICORN
 	setflag ENGINE_DAILY_ROUTE_37_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	itemnotify
 	closetext
 	end
 
@@ -47,14 +51,18 @@ Route37_BLUApricorn:
 	opentext
 	farwritetext _FruitBearingTreeText
 	promptbutton
-	getitemname STRING_BUFFER_3, BLK_APRICORN
+	getitemname STRING_BUFFER_3, BLU_APRICORN
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem BLK_APRICORN
-	iffalse .NoRoomInBag
+	giveitem BLU_APRICORN
+	iffalse Route37_NoRoomInBag
+	farwritetext _PickedApricornText
 	disappear ROUTE37_BLU_APRICORN
 	setflag ENGINE_DAILY_ROUTE_37_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	itemnotify
 	closetext
 	end
 
@@ -65,11 +73,21 @@ Route37_BLKApricorn:
 	getitemname STRING_BUFFER_3, BLK_APRICORN
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem BLK_APRICORN
-	iffalse .NoRoomInBag
+	giveitem BLK_APRICORN
+	iffalse Route37_NoRoomInBag
+	farwritetext _PickedApricornText
 	disappear ROUTE37_BLK_APRICORN
 	setflag ENGINE_DAILY_ROUTE_37_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	itemnotify
+	closetext
+	end
+
+Route37_NoRoomInBag:
+	farwritetext _FruitPackIsFullText
+	waitbutton
 	closetext
 	end
 

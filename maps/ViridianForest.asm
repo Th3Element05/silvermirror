@@ -25,11 +25,16 @@ ViridianForest_OranBerry:
 	getitemname STRING_BUFFER_3, ORAN_BERRY
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem ORAN_BERRY, 2
-	iffalse .NoRoomInBag
+	giveitem ORAN_BERRY, 2
+	iffalse ViridianForest_NoRoomInBag
+	farwritetext _PickedBerriesText
 	disappear VIRIDIANFOREST_ORAN_BERRY
 	setflag ENGINE_DAILY_VIRIDIAN_FOREST_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	farwritetext _BerriesInBerryPocketText
+	waitbutton
 	closetext
 	end
 
@@ -40,11 +45,22 @@ ViridianForest_PechaBerry:
 	getitemname STRING_BUFFER_3, PECHA_BERRY
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem PECHA_BERRY, 2
-	iffalse .NoRoomInBag
+	giveitem PECHA_BERRY, 2
+	iffalse ViridianForest_NoRoomInBag
+	farwritetext _PickedBerriesText
 	disappear VIRIDIANFOREST_PECHA_BERRY
 	setflag ENGINE_DAILY_VIRIDIAN_FOREST_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	farwritetext _BerriesInBerryPocketText
+	waitbutton
+	closetext
+	end
+
+ViridianForest_NoRoomInBag:
+	farwritetext _FruitPackIsFullText
+	waitbutton
 	closetext
 	end
 

@@ -13,7 +13,7 @@ Route16AlwaysOnBikeCallback:
 	readvar VAR_YCOORD
 	ifless 10, .CanWalk
 	readvar VAR_XCOORD
-	ifgreater 17, .CanWalk
+	ifgreater 21, .CanWalk
 	setflag ENGINE_ALWAYS_ON_BIKE
 	endcallback
 
@@ -36,11 +36,22 @@ Route16_SitrusBerry:
 	getitemname STRING_BUFFER_3, SITRUS_BERRY
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem SITRUS_BERRY, 2
-	iffalse .NoRoomInBag
+	giveitem SITRUS_BERRY, 2
+	iffalse .Route16_NoRoomInBag
+	farwritetext _PickedBerriesText
 	disappear ROUTE16_SITRUS_BERRY
 	setflag ENGINE_DAILY_ROUTE_16_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	farwritetext _BerriesInBerryPocketText
+	waitbutton
+	closetext
+	end
+
+.Route16_NoRoomInBag:
+	farwritetext _FruitPackIsFullText
+	waitbutton
 	closetext
 	end
 

@@ -30,11 +30,21 @@ VioletCity_YLWApricorn:
 	getitemname STRING_BUFFER_3, YLW_APRICORN
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem YLW_APRICORN
-	iffalse .NoRoomInBag
+	giveitem YLW_APRICORN
+	iffalse .VioletCity_NoRoomInBag
+	farwritetext _PickedApricornText
 	disappear VIOLETCITY_YLW_APRICORN
-	setflag ENGINE_DAILY_ROUTE_33_FRUIT
-.NoRoomInBag
+	setflag ENGINE_DAILY_VIOLET_CITY_FRUIT
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	itemnotify
+	closetext
+	end
+
+.VioletCity_NoRoomInBag:
+	farwritetext _FruitPackIsFullText
+	waitbutton
 	closetext
 	end
 
@@ -288,7 +298,7 @@ VioletCity_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  9, 17, VIOLET_MART, 2
+	warp_event  9, 17, VIOLET_MART, 1
 	warp_event 18, 17, VIOLET_GYM, 1
 	warp_event 30, 17, TRAINER_HOUSE_1F, 1 ; EARLS_POKEMON_ACADEMY, 1
 	warp_event  3, 15, VIOLET_NICKNAME_SPEECH_HOUSE, 1

@@ -34,11 +34,21 @@ AzaleaTown_WHTApricorn:
 	getitemname STRING_BUFFER_3, WHT_APRICORN
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem WHT_APRICORN
-	iffalse .NoRoomInBag
+	giveitem WHT_APRICORN
+	iffalse .AzaleaTown_NoRoomInBag
+	farwritetext _PickedApricornText
 	disappear AZALEATOWN_WHT_APRICORN
 	setflag ENGINE_DAILY_AZALEA_TOWN_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	itemnotify
+	closetext
+	end
+
+.AzaleaTown_NoRoomInBag:
+	farwritetext _FruitPackIsFullText
+	waitbutton
 	closetext
 	end
 
@@ -237,7 +247,7 @@ AzaleaTown_MapEvents:
 	def_warp_events
 	warp_event 15,  9, AZALEA_POKECENTER_1F, 1
 	warp_event 21, 13, CHARCOAL_KILN, 1
-	warp_event 21,  5, AZALEA_MART, 2
+	warp_event 21,  5, AZALEA_MART, 1
 	warp_event  9,  5, KURTS_HOUSE, 1
 	warp_event 10, 15, AZALEA_GYM, 1
 	warp_event 31,  7, SLOWPOKE_WELL_B1F, 1

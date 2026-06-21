@@ -23,11 +23,16 @@ Route35_LeppaBerry:
 	getitemname STRING_BUFFER_3, LEPPA_BERRY
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem LEPPA_BERRY, 2
-	iffalse .NoRoomInBag
+	giveitem LEPPA_BERRY, 2
+	iffalse Route35_NoRoomInBag
+	farwritetext _PickedBerriesText
 	disappear ROUTE35_LEPPA_BERRY
 	setflag ENGINE_DAILY_ROUTE_35_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	farwritetext _BerriesInBerryPocketText
+	waitbutton
 	closetext
 	end
 
@@ -38,11 +43,21 @@ Route35_GRNApricorn:
 	getitemname STRING_BUFFER_3, GRN_APRICORN
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem GRN_APRICORN
-	iffalse .NoRoomInBag
+	giveitem GRN_APRICORN
+	iffalse Route35_NoRoomInBag
+	farwritetext _PickedApricornText
 	disappear ROUTE35_GRN_APRICORN
 	setflag ENGINE_DAILY_ROUTE_35_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	itemnotify
+	closetext
+	end
+
+Route35_NoRoomInBag:
+	farwritetext _FruitPackIsFullText
+	waitbutton
 	closetext
 	end
 

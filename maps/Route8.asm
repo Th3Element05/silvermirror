@@ -23,11 +23,16 @@ Route8_RawstBerry:
 	getitemname STRING_BUFFER_3, RAWST_BERRY
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem RAWST_BERRY, 2
-	iffalse .NoRoomInBag
+	giveitem RAWST_BERRY, 2
+	iffalse Route8_NoRoomInBag
+	farwritetext _PickedBerriesText
 	disappear ROUTE8_RAWST_BERRY
 	setflag ENGINE_DAILY_ROUTE_8_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	farwritetext _BerriesInBerryPocketText
+	waitbutton
 	closetext
 	end
 
@@ -38,11 +43,21 @@ Route8_YLWApricorn:
 	getitemname STRING_BUFFER_3, YLW_APRICORN
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem YLW_APRICORN
-	iffalse .NoRoomInBag
+	giveitem YLW_APRICORN
+	iffalse Route8_NoRoomInBag
+	farwritetext _PickedApricornText
 	disappear ROUTE8_YLW_APRICORN
 	setflag ENGINE_DAILY_ROUTE_8_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	itemnotify
+	closetext
+	end
+
+Route8_NoRoomInBag:
+	farwritetext _FruitPackIsFullText
+	waitbutton
 	closetext
 	end
 

@@ -38,11 +38,22 @@ Route29_OranBerry:
 	getitemname STRING_BUFFER_3, ORAN_BERRY
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem ORAN_BERRY, 2
-	iffalse .NoRoomInBag
+	giveitem ORAN_BERRY, 2
+	iffalse .Route29_NoRoomInBag
+	farwritetext _PickedBerriesText
 	disappear ROUTE29_ORAN_BERRY
 	setflag ENGINE_DAILY_ROUTE_29_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	farwritetext _BerriesInBerryPocketText
+	waitbutton
+	closetext
+	end
+
+.Route29_NoRoomInBag:
+	farwritetext _FruitPackIsFullText
+	waitbutton
 	closetext
 	end
 

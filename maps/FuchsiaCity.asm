@@ -29,11 +29,16 @@ FuchsiaCity_AspearBerry:
 	getitemname STRING_BUFFER_3, ASPEAR_BERRY
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem ASPEAR_BERRY, 2
-	iffalse .NoRoomInBag
+	giveitem ASPEAR_BERRY, 2
+	iffalse FuchsiaCity_NoRoomInBag
+	farwritetext _PickedBerriesText
 	disappear FUCHSIACITY_ASPEAR_BERRY
 	setflag ENGINE_DAILY_FUCHSIA_CITY_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	farwritetext _BerriesInBerryPocketText
+	waitbutton
 	closetext
 	end
 
@@ -44,11 +49,21 @@ FuchsiaCity_REDApricorn:
 	getitemname STRING_BUFFER_3, RED_APRICORN
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem RED_APRICORN
-	iffalse .NoRoomInBag
+	giveitem RED_APRICORN
+	iffalse FuchsiaCity_NoRoomInBag
+	farwritetext _PickedApricornText
 	disappear FUCHSIACITY_RED_APRICORN
 	setflag ENGINE_DAILY_FUCHSIA_CITY_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	itemnotify
+	closetext
+	end
+
+FuchsiaCity_NoRoomInBag:
+	farwritetext _FruitPackIsFullText
+	waitbutton
 	closetext
 	end
 

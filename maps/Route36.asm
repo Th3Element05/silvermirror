@@ -33,11 +33,22 @@ Route36_RawstBerry:
 	getitemname STRING_BUFFER_3, RAWST_BERRY
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem RAWST_BERRY, 2
-	iffalse .NoRoomInBag
+	giveitem RAWST_BERRY, 2
+	iffalse .Route36_NoRoomInBag
+	farwritetext _PickedBerriesText
 	disappear ROUTE36_RAWST_BERRY
 	setflag ENGINE_DAILY_ROUTE_36_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	farwritetext _BerriesInBerryPocketText
+	waitbutton
+	closetext
+	end
+
+.Route36_NoRoomInBag:
+	farwritetext _FruitPackIsFullText
+	waitbutton
 	closetext
 	end
 

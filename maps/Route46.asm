@@ -24,11 +24,16 @@ Route46_CheriBerry:
 	getitemname STRING_BUFFER_3, CHERI_BERRY
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem CHERI_BERRY, 2
-	iffalse .NoRoomInBag
+	giveitem CHERI_BERRY, 2
+	iffalse Route46_NoRoomInBag
+	farwritetext _PickedBerriesText
 	disappear ROUTE46_CHERI_BERRY
 	setflag ENGINE_DAILY_ROUTE_46_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	farwritetext _BerriesInBerryPocketText
+	waitbutton
 	closetext
 	end
 
@@ -39,11 +44,22 @@ Route46_SitrusBerry:
 	getitemname STRING_BUFFER_3, SITRUS_BERRY
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem SITRUS_BERRY, 2
-	iffalse .NoRoomInBag
+	giveitem SITRUS_BERRY, 2
+	iffalse Route46_NoRoomInBag
+	farwritetext _PickedBerriesText
 	disappear ROUTE46_SITRUS_BERRY
 	setflag ENGINE_DAILY_ROUTE_46_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	farwritetext _BerriesInBerryPocketText
+	waitbutton
+	closetext
+	end
+
+Route46_NoRoomInBag:
+	farwritetext _FruitPackIsFullText
+	waitbutton
 	closetext
 	end
 

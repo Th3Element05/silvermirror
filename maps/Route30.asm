@@ -33,11 +33,16 @@ Route30_OranBerry:
 	getitemname STRING_BUFFER_3, ORAN_BERRY
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem ORAN_BERRY, 2
-	iffalse .NoRoomInBag
+	giveitem ORAN_BERRY, 2
+	iffalse Route30_NoRoomInBag
+	farwritetext _PickedBerriesText
 	disappear ROUTE30_ORAN_BERRY
 	setflag ENGINE_DAILY_ROUTE_30_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	farwritetext _BerriesInBerryPocketText
+	waitbutton
 	closetext
 	end
 	
@@ -48,11 +53,16 @@ Route30_PechaBerry:
 	getitemname STRING_BUFFER_3, PECHA_BERRY
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem PECHA_BERRY, 2
-	iffalse .NoRoomInBag
+	giveitem PECHA_BERRY, 2
+	iffalse Route30_NoRoomInBag
+	farwritetext _PickedBerriesText
 	disappear ROUTE30_PECHA_BERRY
 	setflag ENGINE_DAILY_ROUTE_30_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	farwritetext _BerriesInBerryPocketText
+	waitbutton
 	closetext
 	end
 
@@ -63,11 +73,21 @@ Route30_PNKApricorn:
 	getitemname STRING_BUFFER_3, PNK_APRICORN
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem PNK_APRICORN
-	iffalse .NoRoomInBag
+	giveitem PNK_APRICORN
+	iffalse Route30_NoRoomInBag
+	farwritetext _PickedApricornText
 	disappear ROUTE30_PNK_APRICORN
 	setflag ENGINE_DAILY_ROUTE_30_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	itemnotify
+	closetext
+	end
+
+Route30_NoRoomInBag:
+	farwritetext _FruitPackIsFullText
+	waitbutton
 	closetext
 	end
 

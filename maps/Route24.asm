@@ -29,11 +29,22 @@ Route24_LeppaBerry:
 	getitemname STRING_BUFFER_3, LEPPA_BERRY
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem LEPPA_BERRY, 2
-	iffalse .NoRoomInBag
+	giveitem LEPPA_BERRY, 2
+	iffalse .Route24_NoRoomInBag
+	farwritetext _PickedBerriesText
 	disappear ROUTE24_LEPPA_BERRY
 	setflag ENGINE_DAILY_ROUTE_24_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	farwritetext _BerriesInBerryPocketText
+	waitbutton
+	closetext
+	end
+
+.Route24_NoRoomInBag:
+	farwritetext _FruitPackIsFullText
+	waitbutton
 	closetext
 	end
 

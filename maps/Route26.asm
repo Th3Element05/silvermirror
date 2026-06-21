@@ -12,8 +12,8 @@ Route26_MapScripts:
 Route26Fruittrees:
 	checkflag ENGINE_DAILY_ROUTE_26_FRUIT
 	iftrue .NoFruit
-	appear ROUTE1_ORAN_BERRY
-	appear ROUTE1_BLK_APRICORN
+	appear ROUTE26_LEPPA_BERRY
+	appear ROUTE26_SITRUS_BERRY
 .NoFruit:
 	endcallback
 
@@ -24,11 +24,16 @@ Route26_LeppaBerry:
 	getitemname STRING_BUFFER_3, LEPPA_BERRY
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem LEPPA_BERRY, 2
-	iffalse .NoRoomInBag
+	giveitem LEPPA_BERRY, 2
+	iffalse Route26_NoRoomInBag
+	farwritetext _PickedBerriesText
 	disappear ROUTE26_LEPPA_BERRY
 	setflag ENGINE_DAILY_ROUTE_26_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	farwritetext _BerriesInBerryPocketText
+	waitbutton
 	closetext
 	end
 
@@ -39,11 +44,22 @@ Route26_SitrusBerry:
 	getitemname STRING_BUFFER_3, SITRUS_BERRY
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem SITRUS_BERRY, 2
-	iffalse .NoRoomInBag
+	giveitem SITRUS_BERRY, 2
+	iffalse Route26_NoRoomInBag
+	farwritetext _PickedBerriesText
 	disappear ROUTE26_SITRUS_BERRY
 	setflag ENGINE_DAILY_ROUTE_26_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	farwritetext _BerriesInBerryPocketText
+	waitbutton
+	closetext
+	end
+
+Route26_NoRoomInBag:
+	farwritetext _FruitPackIsFullText
+	waitbutton
 	closetext
 	end
 

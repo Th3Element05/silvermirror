@@ -24,11 +24,16 @@ Route38_ChestoBerry:
 	getitemname STRING_BUFFER_3, CHESTO_BERRY
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem CHESTO_BERRY, 2
-	iffalse .NoRoomInBag
+	giveitem CHESTO_BERRY, 2
+	iffalse Route38_NoRoomInBag
+	farwritetext _PickedBerriesText
 	disappear ROUTE38_CHESTO_BERRY
 	setflag ENGINE_DAILY_ROUTE_38_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	farwritetext _BerriesInBerryPocketText
+	waitbutton
 	closetext
 	end
 
@@ -39,11 +44,21 @@ Route38_WHTApricorn:
 	getitemname STRING_BUFFER_3, WHT_APRICORN
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem WHT_APRICORN
-	iffalse .NoRoomInBag
+	giveitem WHT_APRICORN
+	iffalse Route38_NoRoomInBag
+	farwritetext _PickedApricornText
 	disappear ROUTE38_WHT_APRICORN
 	setflag ENGINE_DAILY_ROUTE_38_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	itemnotify
+	closetext
+	end
+
+Route38_NoRoomInBag:
+	farwritetext _FruitPackIsFullText
+	waitbutton
 	closetext
 	end
 

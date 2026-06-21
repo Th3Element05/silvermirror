@@ -24,11 +24,16 @@ Route44_AspearBerry:
 	getitemname STRING_BUFFER_3, ASPEAR_BERRY
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem ASPEAR_BERRY, 2
-	iffalse .NoRoomInBag
+	giveitem ASPEAR_BERRY, 2
+	iffalse Route44_NoRoomInBag
+	farwritetext _PickedBerriesText
 	disappear ROUTE44_ASPEAR_BERRY
 	setflag ENGINE_DAILY_ROUTE_44_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	farwritetext _BerriesInBerryPocketText
+	waitbutton
 	closetext
 	end
 
@@ -39,11 +44,21 @@ Route44_REDApricorn:
 	getitemname STRING_BUFFER_3, RED_APRICORN
 	farwritetext _HeyItsFruitText
 	promptbutton
-	verbosegiveitem RED_APRICORN
-	iffalse .NoRoomInBag
+	giveitem RED_APRICORN
+	iffalse Route44_NoRoomInBag
+	farwritetext _PickedApricornText
 	disappear ROUTE44_RED_APRICORN
 	setflag ENGINE_DAILY_ROUTE_44_FRUIT
-.NoRoomInBag
+	playsound SFX_ITEM
+	waitsfx
+	promptbutton
+	itemnotify
+	closetext
+	end
+
+Route44_NoRoomInBag:
+	farwritetext _FruitPackIsFullText
+	waitbutton
 	closetext
 	end
 
