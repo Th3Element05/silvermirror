@@ -9,7 +9,8 @@
 	const GRAPHICS_DESIGN
 	const POKEMON_ANIMATION
 	const MAP_DESIGN
-	const CODING
+	const CONTRIBUTORS
+	const ASSISTANCE
 	const PRODUCT_TESTING
 	const THANKS
 	const SPECIAL_THANKS
@@ -21,8 +22,11 @@
 	const RANGI42
 	const NARISHMA
 	const GRATEORACLELEWOT
-	const RAJA239
 	const ARDORIN
+	const RAJA239
+	const DARKSHADE
+	const SATOMEW
+	const TANU
 	const EXKZOL
 	const BLEEPERWAGON
 	const GEOMETRY13

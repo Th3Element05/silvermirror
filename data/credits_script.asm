@@ -87,19 +87,19 @@ CreditsScript:
 ;; Update the banner.
 ;	db CREDITS_SCENE, 1 ; Smoochum / Charmander
 
-	db               CODING, 0
-;                          ; 1
-	db              RANGI42, 2
-	db             NARISHMA, 3
-	db     GRATEORACLELEWOT, 4
+	db         CONTRIBUTORS, 0
+	db              RANGI42, 1
+	db             NARISHMA, 2
+	db     GRATEORACLELEWOT, 3
+	db              ARDORIN, 4
 ;                          ; 5
 	db CREDITS_WAIT, 24
 
-	db               CODING, 0
-;                          ; 1
-	db              RAJA239, 2
-	db              ARDORIN, 3
-;                          ; 4
+	db           ASSISTANCE, 0
+	db              RAJA239, 1
+	db            DARKSHADE, 2
+	db              SATOMEW, 3
+	db                 TANU, 4
 ;                          ; 5
 	db CREDITS_WAIT, 24
 
@@ -217,7 +217,7 @@ CreditsScript:
 ;             SOUR_SHOUTOUT, 3
 ;             SOUR_SHOUTOUT, 4
 ;                          ; 5
-	db CREDITS_WAIT, 64
+	db CREDITS_WAIT, 32
 
 	db               THANKS, 0
 	db        PRET_SHOUTOUT, 1
@@ -225,7 +225,7 @@ CreditsScript:
 ;             PRET_SHOUTOUT, 3
 ;             PRET_SHOUTOUT, 4
 ;                          ; 5
-	db CREDITS_WAIT, 64
+	db CREDITS_WAIT, 48
 
 	db            COPYRIGHT, 1
 

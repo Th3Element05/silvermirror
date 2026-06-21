@@ -10,7 +10,8 @@ CreditsStringsPointers:
 	dw .GraphicsDesign
 	dw .PokemonAnimation
 	dw .MapDesign
-	dw .Coding
+	dw .Contributors
+	dw .Assistance
 	dw .ProductTesting
 	dw .Thanks
 	dw .SpecialThanks
@@ -22,8 +23,11 @@ CreditsStringsPointers:
 	dw .Rangi42
 	dw .Narishma
 	dw .GrateOracleLewot
-	dw .RaJa239
 	dw .Ardorin
+	dw .RaJa239
+	dw .Darkshade
+	dw .SatoMew
+	dw .Tanu
 	dw .Exkzol
 	dw .BleeperWagon
 	dw .Geometry13
@@ -42,7 +46,8 @@ CreditsStringsPointers:
 .GraphicsDesign:      db "  GRAPHICS DESIGN@"
 .PokemonAnimation:    db " #MON ANIMATION@"
 .MapDesign:           db "     MAP DESIGN@"
-.Coding:              db " CODE CONTRIBUTORS@"
+.Contributors:        db " CODE CONTRIBUTORS@"
+.Assistance:          db " CODING ASSISTANCE@"
 .ProductTesting:      db "  PRODUCT TESTING@"
 .Thanks:              db "       THANKS@"
 .SpecialThanks:       db "   SPECIAL THANKS@"
@@ -58,8 +63,11 @@ CreditsStringsPointers:
 .Rangi42:             db "      Rangi42@"
 .Narishma:            db "    Narishma-gb@"
 .GrateOracleLewot     db " Grate Oracle Lewot@"
+.Ardorin:             db "      Ardorin@"
 .RaJa239:             db "      RaJa239@"
-.Ardorin:             db "       Ardorin@"
+.Darkshade:           db "     DarkShade@"
+.SatoMew:             db "      SatoMew@"
+.Tanu:                db "       tanu@"
 .Exkzol:              db "     Exkzol@"
 .BleeperWagon:        db "    BleeperWagon@"
 .Geometry13:          db "     Geometry13@"
