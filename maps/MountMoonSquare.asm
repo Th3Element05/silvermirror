@@ -19,13 +19,13 @@ MountMoonSquareDisappearMoonStoneCallback:
 	endcallback
 
 MountMoonSquareDisappearRockCallback:
-	checkflag ENGINE_MT_MOON_SQUARE_CLEFAIRY
-	iftrue .HideRock
-	checktime NITE
-	iftrue .ShowRock
-.HideRock
+;	checkflag ENGINE_MT_MOON_SQUARE_CLEFAIRY
+;	iftrue .HideRock
+;	checktime NITE
+;	iftrue .ShowRock
+;.HideRock
 	disappear MOUNTMOONSQUARE_ROCK
-.ShowRock
+;.ShowRock
 	endcallback
 
 ClefairyDance:
@@ -38,39 +38,41 @@ ClefairyDance:
 ; dance
 	applymovement PLAYER, MountMoonSquarePlayerStepsForward
 	pause 15
-	appear MOUNTMOONSQUARE_FAIRY1
 	appear MOUNTMOONSQUARE_FAIRY2
-	follow MOUNTMOONSQUARE_FAIRY1, MOUNTMOONSQUARE_FAIRY2
-	applymovement MOUNTMOONSQUARE_FAIRY1, MountMoonSquareDanceEntrance
-	stopfollow
+	appear MOUNTMOONSQUARE_FAIRY1
+;	playsound SFX_STRENGTH
+	appear MOUNTMOONSQUARE_ROCK
+	playsound SFX_STRENGTH
+	applymovement MOUNTMOONSQUARE_ROCK, MountMoonSquareMeteorMovement
+	earthquake 30
+	showemote EMOTE_SHOCK, PLAYER, 20
+	cry CLEFAIRY
+	pause 30
+	applymovement MOUNTMOONSQUARE_FAIRY1, MountMoonSquareClefairy1Entrance
+	applymovement MOUNTMOONSQUARE_FAIRY2, MountMoonSquareClefairy2Entrance
 	cry CLEFAIRY
 	waitsfx
-	pause 30
-	applymovement MOUNTMOONSQUARE_FAIRY1, MountMoonSquareDanceSpin
-	follow MOUNTMOONSQUARE_FAIRY1, MOUNTMOONSQUARE_FAIRY2
-	applymovement MOUNTMOONSQUARE_FAIRY1, MountMoonSquareDanceDown
+; dance
+;	applymovement MOUNTMOONSQUARE_FAIRY2, MountMoonSquareDanceLeft
+;	cry CLEFAIRY
+	applymovement MOUNTMOONSQUARE_FAIRY2, MountMoonSquareDanceDown
 	cry CLEFAIRY
-	applymovement MOUNTMOONSQUARE_FAIRY1, MountMoonSquareDanceSpin
 	applymovement MOUNTMOONSQUARE_FAIRY1, MountMoonSquareDanceRight
 	cry CLEFAIRY
-	applymovement MOUNTMOONSQUARE_FAIRY1, MountMoonSquareDanceSpin
-	applymovement MOUNTMOONSQUARE_FAIRY1, MountMoonSquareDanceUp
+	applymovement MOUNTMOONSQUARE_FAIRY2, MountMoonSquareDanceUp
 	cry CLEFAIRY
-	applymovement MOUNTMOONSQUARE_FAIRY1, MountMoonSquareDanceSpin
 	applymovement MOUNTMOONSQUARE_FAIRY1, MountMoonSquareDanceLeft
-	cry CLEFAIRY
-	applymovement MOUNTMOONSQUARE_FAIRY1, MountMoonSquareDanceSpin
-	applymovement MOUNTMOONSQUARE_FAIRY1, MountMoonSquareDanceDown
-	cry CLEFAIRY
-	applymovement MOUNTMOONSQUARE_FAIRY1, MountMoonSquareSlowStepRight
-;	stopfollow
-	turnobject MOUNTMOONSQUARE_FAIRY2, LEFT
-	pause 10
-	showemote EMOTE_SHOCK, MOUNTMOONSQUARE_FAIRY2, 15
+;	cry CLEFAIRY
+;	applymovement MOUNTMOONSQUARE_FAIRY2, MountMoonSquareDanceDown
+; flee
 	turnobject MOUNTMOONSQUARE_FAIRY1, LEFT
+	pause 10
 	cry CLEFAIRY
+	showemote EMOTE_SHOCK, MOUNTMOONSQUARE_FAIRY1, 15
+	turnobject MOUNTMOONSQUARE_FAIRY2, LEFT
+	showemote EMOTE_SHOCK, MOUNTMOONSQUARE_FAIRY2, 15
 	pause 15
-;	follow
+	follow MOUNTMOONSQUARE_FAIRY1, MOUNTMOONSQUARE_FAIRY2
 	applymovement MOUNTMOONSQUARE_FAIRY1, MountMoonSquareClefairyFlee
 	disappear MOUNTMOONSQUARE_FAIRY1
 	disappear MOUNTMOONSQUARE_FAIRY2
@@ -83,52 +85,98 @@ ClefairyDance:
 	end
 
 MountMoonSquarePlayerStepsForward:
-	step RIGHT
-	step_end
-
-MountMoonSquareDanceEntrance:
-	step DOWN
-	jump_step LEFT
-MountMoonSquareDanceLeft:
-	slow_jump_step LEFT
-	step_end
-
-MountMoonSquareDanceDown:
-	slow_jump_step DOWN
-	step_end
-
-MountMoonSquareDanceRight:
-	slow_jump_step RIGHT
-	step_end
-
-MountMoonSquareDanceUp:
-	slow_jump_step UP
-	step_end
-
-MountMoonSquareDanceSpin:
-	step_sleep 5
-	turn_head DOWN
-	step_sleep 5
-	turn_head RIGHT
-	step_sleep 5
-	turn_head UP
-	step_sleep 5
-	turn_head LEFT
-	step_sleep 5
-	turn_head DOWN
-	step_sleep 5
-	step_end
-
-MountMoonSquareSlowStepRight:
 	slow_step RIGHT
 	step_end
 
+MountMoonSquareMeteorMovement:
+	fast_slide_step DOWN
+	fast_slide_step DOWN
+	fast_slide_step DOWN
+	fast_slide_step DOWN
+	step_end
+
+MountMoonSquareClefairy1Entrance:
+	step DOWN
+MountMoonSquareClefairy2Entrance:
+	slow_jump_step DOWN
+	slow_step DOWN
+	step_end
+
+MountMoonSquareDanceLeft:
+	step UP
+	slow_jump_step LEFT
+	turn_head DOWN
+	step_sleep 4
+	turn_head RIGHT
+	step_sleep 4
+	turn_head UP
+	step_sleep 4
+	turn_head LEFT
+	step_sleep 4
+	slow_step DOWN
+	step_end
+
+MountMoonSquareDanceDown:
+	step LEFT
+	slow_jump_step DOWN
+	turn_head RIGHT
+	step_sleep 4
+	turn_head UP
+	step_sleep 4
+	turn_head LEFT
+	step_sleep 4
+	turn_head DOWN
+	step_sleep 4
+	slow_step RIGHT
+	step_end
+
+MountMoonSquareDanceRight:
+	step DOWN
+	slow_jump_step RIGHT
+	turn_head UP
+	step_sleep 4
+	turn_head LEFT
+	step_sleep 4
+	turn_head DOWN
+	step_sleep 4
+	turn_head RIGHT
+	step_sleep 4
+	slow_step UP
+	step_end
+
+MountMoonSquareDanceUp:
+	step RIGHT
+	slow_jump_step UP
+	turn_head LEFT
+	step_sleep 4
+	turn_head DOWN
+	step_sleep 4
+	turn_head RIGHT
+	step_sleep 4
+	turn_head UP
+	step_sleep 4
+	slow_step LEFT
+	step_end
+
+;MountMoonSquareDanceSpin:
+;	step_sleep 5
+;	turn_head DOWN
+;	step_sleep 5
+;	turn_head RIGHT
+;	step_sleep 5
+;	turn_head UP
+;	step_sleep 5
+;	turn_head LEFT
+;	step_sleep 5
+;	turn_head DOWN
+;	step_sleep 5
+;	step_end
+
 MountMoonSquareClefairyFlee:
+	fast_jump_step UP
+	fast_jump_step UP
 	big_step RIGHT
-	fast_jump_step UP
-	fast_jump_step LEFT
-	fast_jump_step UP
-	fast_jump_step UP
+	big_step UP
 	step_end
 
 MountMoonSquareGiftShopSign:
@@ -167,9 +215,9 @@ MountMoonSquare_MapEvents:
 	bg_event 22,  7, BGEVENT_ITEM, MountMoonSquareHiddenMoonStone
 
 	def_object_events
-	object_event 25,  5, SPRITE_CLEFAIRY_MOVE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_MT_MOON_SQUARE_CLEFAIRY
-	object_event 25,  4, SPRITE_CLEFAIRY_MOVE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_MT_MOON_SQUARE_CLEFAIRY
-	object_event 22,  7, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MtMoonSquareRock, EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1 ;EVENT_MT_MOON_SQUARE_ROCK
+	object_event 21,  3, SPRITE_CLEFAIRY_MOVE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_MT_MOON_SQUARE_CLEFAIRY
+	object_event 22,  3, SPRITE_CLEFAIRY_MOVE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_MT_MOON_SQUARE_CLEFAIRY
+	object_event 22,  3, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MtMoonSquareRock, EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1 ;EVENT_MT_MOON_SQUARE_ROCK
 
 ;.PinkOverYellowOBPalette
 
