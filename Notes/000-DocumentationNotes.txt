@@ -13,37 +13,6 @@ ABCDEF screenshot celadon hotel pc
 
 
 
-
-computers in fossil room, silph, everywhere?
-
-TEST route 16 "always on bike"
-TEST celadon mansion roof collison
-TEST route 16-17 connection
-TEST cerulean trashed house changeblocks (beat_grunt, beat_giovanni)
-TEST berserk gene after mewtwo battle
-TEST squirtbottle scripts
-TEST ninja security pokeball
-TEST dragon shrine dratini pokeball script
-TEST special landmark tohjo falls
-TEST kanto leader rematches
-TEST activate johto leader rematches
-TEST johto leader rematches
-TEST ruins of alph outside scientist disables radio card
-TEST ruins of alph outside scripts
-TEST whitney after battle opentext
-TEST mr.fuji house give pokeflute script... repeat at end?
-TEST elite four first after lance music fade out
-TEST mount moon square clefairy dance
-
-CHECK
-can ROCKET_HIDEOUT landmark just be CELADON_CITY?
-same with NINJA_DEN and MAHOGANY_TOWN?
-
-
-
-
-flash cannon animation?
-
 horsea dex entry
 rhyhorn dex entry (newline > it)
 clefairy dex entry
