@@ -560,6 +560,7 @@
 	const EVENT_MAHOGANY_MART_GRANNY
 	const EVENT_MAHOGANY_MART_NINJA
 	const EVENT_NINJA_SECURITY_NINJAS
+	const EVENT_NINJA_SECURITY_POKEBALL_NINJA
 	const EVENT_TEAM_ROCKET_BASE_B2F_JANINE
 	const EVENT_TEAM_ROCKET_BASE_B2F_KOGA
 	const EVENT_TEAM_ROCKET_BASE_B2F_JONIN
@@ -602,10 +603,10 @@
 	const EVENT_PLAYERS_HOUSE_2F_BIG_DOLL
 ; not worth the trouble to remove?
 	const EVENT_MYSTERY_GIFT_DELIVERY_GUY
-; used 123
+; used 124
 
-; group total used 210
-; running total 610
+; group total used 211
+; running total 611
 
 
 	const_next 700

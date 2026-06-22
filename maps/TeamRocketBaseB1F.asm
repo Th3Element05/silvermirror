@@ -2,6 +2,7 @@
 	const TEAMROCKETBASEB1F_NINJA_M
 	const TEAMROCKETBASEB1F_NINJA_T
 	const TEAMROCKETBASEB1F_NINJA_BALL
+	const TEAMROCKETBASEB1F_NINJA_B
 
 TeamRocketBaseB1F_MapScripts:
 	def_scene_scripts
@@ -118,14 +119,34 @@ NinjaSecurity7:
 ;8 ;pokeball disguise
 NinjaSecurity8:
 	setevent EVENT_NINJA_SECURITY_8
-	moveobject TEAMROCKETBASEB1F_NINJA_M, 14, 16
-	moveobject TEAMROCKETBASEB1F_NINJA_T, 14, 16
-	playsound SFX_CUT
 	applymovement TEAMROCKETBASEB1F_NINJA_BALL, MahoganyMart1FRockSmashMovement2
 	disappear TEAMROCKETBASEB1F_NINJA_BALL
-	appear TEAMROCKETBASEB1F_NINJA_M
-	applymovement TEAMROCKETBASEB1F_NINJA_M, MahoganyMart1FRockSmashMovement2
-	sjump NinjaSecurityScript
+	playsound SFX_CUT
+	applymovement TEAMROCKETBASEB1F_NINJA_B, MahoganyMart1FRockSmashMovement2
+	appear TEAMROCKETBASEB1F_NINJA_B
+	setlasttalked TEAMROCKETBASEB1F_NINJA_B
+	faceplayer
+	playmusic MUSIC_DRAGONS_DEN
+	pause 9
+	showemote EMOTE_SHOCK, PLAYER, 20
+	opentext
+	writetext TeamRocketBaseB1FNinjaGuardSeenText0
+	waitbutton
+	closetext
+	scall NinjaGuardRandomBattleScript
+	startbattle
+	setevent EVENT_NINJA_SECURITY_POKEBALL_NINJA
+	disappear TEAMROCKETBASEB1F_NINJA_B
+	reloadmapafterbattle
+	refreshscreen
+	end
+
+BallNinjaFailsafe:
+	jumptextfaceplayer NinjaGuardBeatenText
+	applymovement TEAMROCKETBASEB1F_NINJA_B, MahoganyMart1FRockSmashMovement2
+	disappear TEAMROCKETBASEB1F_NINJA_B
+	refreshscreen
+	end
 
 ;battle
 NinjaSecurityScript:
@@ -308,6 +329,7 @@ TeamRocketBaseB1FNugget:
 TeamRocketBaseB1FGuardSpec:
 	itemball GUARD_SPEC
 
+
 TeamRocketBaseB1F_MapEvents:
 	db 0, 0 ; filler
 
@@ -359,6 +381,7 @@ TeamRocketBaseB1F_MapEvents:
 	object_event -4,  0, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_NINJA_SECURITY_NINJAS
 	object_event -4,  0, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_NINJA_SECURITY_NINJAS
 	object_event 14, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NinjaSecurity8, EVENT_NINJA_SECURITY_8
+	object_event 14, 16, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_SCRIPT, 0, BallNinjaFailsafe, EVENT_NINJA_SECURITY_POKEBALL_NINJA
 	object_event 27,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TeamRocketBaseB1FHyperPotion, EVENT_TEAM_ROCKET_BASE_B1F_HYPER_POTION
 	object_event 19, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TeamRocketBaseB1FNugget, EVENT_TEAM_ROCKET_BASE_B1F_NUGGET
 	object_event  7,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TeamRocketBaseB1FGuardSpec, EVENT_TEAM_ROCKET_BASE_B1F_GUARD_SPEC
