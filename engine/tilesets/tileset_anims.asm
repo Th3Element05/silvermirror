@@ -207,8 +207,9 @@ TilesetIcePathAnim:
 	dw NULL,  DoneTileAnimation
 
 TilesetRocketFacilityAnim:
-	dw vTiles2 tile $20, AnimateUpDownSpinnerTiles
-	dw vTiles2 tile $30, AnimateLeftRightSpinnerTiles
+TilesetTrainStationAnim:
+	dw vTiles2 tile $40, AnimateUpDownSpinnerTiles
+	dw vTiles2 tile $50, AnimateLeftRightSpinnerTiles
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
@@ -277,7 +278,6 @@ TilesetRuinsOfAlphAnim:
 ;TilesetOmanyteWordRoomAnim:
 ;TilesetAerodactylWordRoomAnim:
 TilesetTraditionalHouseAnim:
-TilesetTrainStationAnim:
 TilesetUndergroundAnim:
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
