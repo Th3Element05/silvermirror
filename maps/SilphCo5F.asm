@@ -515,6 +515,7 @@ SilphCo5FReport3Text:
 	cont "by link-cable."
 	done
 
+
 ; itemballs
 SilphCo5FProtein:
 	itemball PROTEIN
@@ -525,17 +526,27 @@ SilphCo5FTMSubmission:
 SilphCo5FCardKey:
 	itemball CARD_KEY
 
+
 ; hidden items
 SilphCo5FHiddenElixer:
 	hiddenitem ELIXER, EVENT_SILPH_CO_5F_HIDDEN_ELIXER
+
+
+SilphCoPokeballPCScript:
+	jumptext SilphCoPokeballPCText
+SilphCoPokeballPCText:
+	text "It's #BALL"
+	line "research data."
+	done
+
 
 SilphCo5F_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
 	warp_event 21,  0, SILPH_CO_ELEVATOR, 1
-	warp_event 24,  0, SILPH_CO_6F, 3
-	warp_event 26,  0, SILPH_CO_4F, 2
+	warp_event 26,  0, SILPH_CO_6F, 3
+	warp_event 24,  0, SILPH_CO_4F, 2
 	warp_event 27,  3, SILPH_CO_7F, 6 ; 5F-4
 	warp_event 11,  5, SILPH_CO_3F, 4 ; 5F-5
 	warp_event  3, 15, SILPH_CO_3F, 9 ; 5F-6
@@ -544,6 +555,7 @@ SilphCo5F_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 20,  0, BGEVENT_READ, SilphCoElevatorButton
 	bg_event  7,  4, BGEVENT_IFNOTSET, SilphCo5F_Door1
 	bg_event  7,  5, BGEVENT_IFNOTSET, SilphCo5F_Door1
 	bg_event 15, 10, BGEVENT_IFNOTSET, SilphCo5F_Door2
@@ -551,6 +563,11 @@ SilphCo5F_MapEvents:
 	bg_event  7, 12, BGEVENT_IFNOTSET, SilphCo5F_Door3
 	bg_event  7, 13, BGEVENT_IFNOTSET, SilphCo5F_Door3
 	bg_event 12,  3, BGEVENT_ITEM, SilphCo5FHiddenElixer
+	bg_event 17,  5, BGEVENT_READ, SilphCoCopierScript
+	bg_event  2,  4, BGEVENT_UP, SilphCoPokeballPCScript
+	bg_event  3,  4, BGEVENT_UP, SilphCoPokeballPCScript
+	bg_event 12, 12, BGEVENT_UP, SilphCoPokeballPCScript
+	bg_event 13, 12, BGEVENT_UP, SilphCoPokeballPCScript
 
 	def_object_events
 ;	object_event  2,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_ITEMBALL, 0, SilphCo5FApricornBall, EVENT_KURTS_SON_APRICORN_BALL

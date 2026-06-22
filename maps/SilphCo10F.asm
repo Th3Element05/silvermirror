@@ -113,6 +113,18 @@ SilphCo10FTMEarthquake:
 SilphCo10FRareCandy:
 	itemball RARE_CANDY
 
+
+SilphCoMasterBallDataScript:
+	jumptext SilphCoMasterBallDataText
+SilphCoMasterBallDataText:
+	text "Capture data for"
+	line "an experimental"
+	cont "#BALL."
+
+	para "It never failed!"
+	done
+
+
 SilphCo10F_MapEvents:
 	db 0, 0 ; filler
 
@@ -127,8 +139,13 @@ SilphCo10F_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event  6,  0, BGEVENT_READ, SilphCoElevatorButton
 	bg_event 10,  8, BGEVENT_IFNOTSET, SilphCo10F_Door1
 	bg_event 11,  8, BGEVENT_IFNOTSET, SilphCo10F_Door1
+	bg_event  4,  2, BGEVENT_UP, SilphCoMasterBallDataScript
+	bg_event  5,  2, BGEVENT_UP, SilphCoMasterBallDataScript
+	bg_event  2,  4, BGEVENT_UP, SilphCoMasterBallDataScript
+	bg_event  3,  4, BGEVENT_UP, SilphCoMasterBallDataScript
 
 	def_object_events
 	object_event 11,  2, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 4, TrainerScientistWeston, EVENT_BEAT_GIOVANNI_SILPHCO

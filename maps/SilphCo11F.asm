@@ -61,12 +61,11 @@ SilphCo11FGiovanniEncounter:
 	writetext SilphCo11FGiovanniIntroText
 	waitbutton
 	closetext
-	applymovement SILPHCO11F_GIOVANNI, SilphCo11FGiovanniApproachMovement
 	readvar VAR_XCOORD
 	ifequal 6, .Skip
-	turnobject SILPHCO11F_GIOVANNI, RIGHT
-	turnobject PLAYER, LEFT
+	applymovement SILPHCO11F_GIOVANNI, SilphCo11FGiovanniRightMovement
 .Skip
+	applymovement SILPHCO11F_GIOVANNI, SilphCo11FGiovanniApproachMovement
 	winlosstext SilphCo11FGiovanniBeatenText, 0
 	setlasttalked SILPHCO11F_GIOVANNI
 	loadtrainer ROCKET_BOSS, GIOVANNI_SILPHCO
@@ -284,8 +283,11 @@ SilphCo11FComputerText:
 	line "a #MON on it!"
 	done
 
+SilphCo11FGiovanniRightMovement:
+	step RIGHT
+	step_end
+
 SilphCo11FGiovanniApproachMovement:
-	step DOWN
 	step DOWN
 	step DOWN
 	step_end
@@ -295,14 +297,15 @@ SilphCo11F_MapEvents:
 
 	def_warp_events
 	warp_event  9,  0, SILPH_CO_ELEVATOR, 1
-	warp_event 14,  0, SILPH_CO_10F, 2
+	warp_event 12,  0, SILPH_CO_10F, 2
 	warp_event  3,  3, SILPH_CO_7F, 5 ; 11F-3
 
 	def_coord_events
-	coord_event  6, 13, SCENE_SILPHCO11F_GIOVANNI, SilphCo11FGiovanniEncounter
+	coord_event  6, 12, SCENE_SILPHCO11F_GIOVANNI, SilphCo11FGiovanniEncounter
 	coord_event  7, 12, SCENE_SILPHCO11F_GIOVANNI, SilphCo11FGiovanniEncounter
 
 	def_bg_events
+	bg_event  8,  0, BGEVENT_READ, SilphCoElevatorButton
 	bg_event  6, 13, BGEVENT_IFNOTSET, SilphCo11F_Door1
 	bg_event  7, 13, BGEVENT_IFNOTSET, SilphCo11F_Door1
 	bg_event 13,  8, BGEVENT_IFNOTSET, SilphCo11F_Door2

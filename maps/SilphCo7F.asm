@@ -492,6 +492,7 @@ SilphCo7FRivalTeleportMovement:
 	teleport_from
 	step_end
 
+
 ; itemballs
 SilphCo7FCalcium:
 	itemball CALCIUM
@@ -499,13 +500,15 @@ SilphCo7FCalcium:
 SilphCo7FTMSwordsDance:
 	itemball TM_SWORDS_DANCE
 
+
 SilphCo7F_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	bg_event 16,  0, BGEVENT_READ, SilphCoElevatorButton
 	warp_event 17,  0, SILPH_CO_ELEVATOR, 1
-	warp_event 20,  0, SILPH_CO_8F, 3
-	warp_event 22,  0, SILPH_CO_6F, 2
+	warp_event 22,  0, SILPH_CO_8F, 3
+	warp_event 20,  0, SILPH_CO_6F, 2
 	warp_event  5,  3, SILPH_CO_3F, 7 ; 7F-4
 	warp_event  5,  7, SILPH_CO_11F, 3 ; 7F-5
 	warp_event 21, 15, SILPH_CO_5F, 4 ; 7F-6
@@ -521,6 +524,8 @@ SilphCo7F_MapEvents:
 	bg_event 11,  6, BGEVENT_IFNOTSET, SilphCo7F_Door2
 	bg_event 20, 12, BGEVENT_IFNOTSET, SilphCo7F_Door3
 	bg_event 21, 12, BGEVENT_IFNOTSET, SilphCo7F_Door3
+	bg_event  2, 12, BGEVENT_UP, SilphCoMatrixPCScript
+	bg_event  3, 12, BGEVENT_UP, SilphCoMatrixPCScript
 
 	def_object_events
 	object_event  3,  6, SPRITE_BLUE, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilphCo7FRivalScript, EVENT_SILPH_CO_7F_RIVAL

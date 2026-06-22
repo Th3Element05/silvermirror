@@ -215,14 +215,15 @@ SilphCo9F_MapEvents:
 
 	def_warp_events
 	warp_event 17,  0, SILPH_CO_ELEVATOR, 1
-	warp_event 20,  0, SILPH_CO_10F, 3
-	warp_event 22,  0, SILPH_CO_8F, 2
+	warp_event 22,  0, SILPH_CO_10F, 3
+	warp_event 20,  0, SILPH_CO_8F, 2
 	warp_event  9,  3, SILPH_CO_3F, 6 ; 9F-4
 	warp_event 17, 15, SILPH_CO_5F, 7 ; 9F-5
 
 	def_coord_events
 
 	def_bg_events
+	bg_event 16,  0, BGEVENT_READ, SilphCoElevatorButton
 	bg_event 18,  4, BGEVENT_IFNOTSET, SilphCo9F_Door1
 	bg_event 19,  4, BGEVENT_IFNOTSET, SilphCo9F_Door1
 	bg_event  3,  8, BGEVENT_IFNOTSET, SilphCo9F_Door2
@@ -232,6 +233,12 @@ SilphCo9F_MapEvents:
 	bg_event 11, 12, BGEVENT_IFNOTSET, SilphCo9F_Door4
 	bg_event 11, 13, BGEVENT_IFNOTSET, SilphCo9F_Door4
 	bg_event  2, 15, BGEVENT_ITEM, SilphCo9FHiddenMaxPotion
+	bg_event  6,  6, BGEVENT_UP, SilphCoMatrixPCScript
+	bg_event  7,  6, BGEVENT_UP, SilphCoMatrixPCScript
+	bg_event 18, 12, BGEVENT_UP, SilphCoGenericPCScript
+	bg_event 19, 12, BGEVENT_UP, SilphCoGenericPCScript
+	bg_event 18, 14, BGEVENT_UP, SilphCoPCOffScript
+	bg_event 19, 14, BGEVENT_UP, SilphCoPCOffScript
 
 	def_object_events
 	object_event  2,  4, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 4, TrainerRocketGruntM26, EVENT_BEAT_GIOVANNI_SILPHCO

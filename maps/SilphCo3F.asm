@@ -134,8 +134,8 @@ SilphCo3F_MapEvents:
 
 	def_warp_events
 	warp_event 21,  0, SILPH_CO_ELEVATOR, 1
-	warp_event 24,  0, SILPH_CO_4F, 3
-	warp_event 26,  0, SILPH_CO_2F, 2
+	warp_event 26,  0, SILPH_CO_4F, 3
+	warp_event 24,  0, SILPH_CO_2F, 2
 	warp_event  3,  3, SILPH_CO_5F, 5 ; 3F-4
 	warp_event 27,  3, SILPH_CO_2F, 4 ; 3F-5
 	warp_event  3, 11, SILPH_CO_9F, 4 ; 3F-6
@@ -147,10 +147,14 @@ SilphCo3F_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 20,  0, BGEVENT_READ, SilphCoElevatorButton
 	bg_event  9,  8, BGEVENT_IFNOTSET, SilphCo3F_Door1
 	bg_event  9,  9, BGEVENT_IFNOTSET, SilphCo3F_Door1
 	bg_event 17,  8, BGEVENT_IFNOTSET, SilphCo3F_Door2
 	bg_event 17,  9, BGEVENT_IFNOTSET, SilphCo3F_Door2
+	bg_event  7,  5, BGEVENT_READ, SilphCoCopierScript
+	bg_event 12,  8, BGEVENT_UP, SilphCoGenericPCScript
+	bg_event 13,  8, BGEVENT_UP, SilphCoGenericPCScript
 
 	def_object_events
 	object_event 20,  7, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerRocketGruntM18, EVENT_BEAT_GIOVANNI_SILPHCO

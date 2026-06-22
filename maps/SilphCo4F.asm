@@ -184,10 +184,12 @@ SilphCo4F_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 20,  0, BGEVENT_READ, SilphCoElevatorButton
 	bg_event 12,  8, BGEVENT_IFNOTSET, SilphCo4F_Door1
 	bg_event 13,  8, BGEVENT_IFNOTSET, SilphCo4F_Door1
 	bg_event  4, 12, BGEVENT_IFNOTSET, SilphCo4F_Door2
 	bg_event  5, 12, BGEVENT_IFNOTSET, SilphCo4F_Door2
+	bg_event 17,  9, BGEVENT_READ, SilphCoCopierScript
 
 	def_object_events
 	object_event 14,  6, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerScientistMarc, EVENT_BEAT_GIOVANNI_SILPHCO

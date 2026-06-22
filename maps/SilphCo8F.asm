@@ -146,8 +146,12 @@ SilphCo8F_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 16,  0, BGEVENT_READ, SilphCoElevatorButton
 	bg_event  7,  8, BGEVENT_IFNOTSET, SilphCo8F_Door1
 	bg_event  7,  9, BGEVENT_IFNOTSET, SilphCo8F_Door1
+	bg_event  5,  1, BGEVENT_READ, SilphCoCopierScript
+	bg_event  8,  2, BGEVENT_UP, SilphCoPCOffScript
+	bg_event  9,  2, BGEVENT_UP, SilphCoPCOffScript
 
 	def_object_events
 	object_event 10,  2, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 4, TrainerScientistLinden, EVENT_BEAT_GIOVANNI_SILPHCO

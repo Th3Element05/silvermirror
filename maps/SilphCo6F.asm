@@ -237,8 +237,10 @@ SilphCo6F_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 16,  0, BGEVENT_READ, SilphCoElevatorButton
 	bg_event  5, 12, BGEVENT_IFNOTSET, SilphCo6F_Door1
 	bg_event  5, 13, BGEVENT_IFNOTSET, SilphCo6F_Door1
+	bg_event 13,  5, BGEVENT_READ, SilphCoCopierScript
 
 	def_object_events
 	object_event 17,  3, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerRocketGruntF6, EVENT_BEAT_GIOVANNI_SILPHCO

@@ -244,10 +244,15 @@ SilphCo2F_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 20,  0, BGEVENT_READ, SilphCoElevatorButton
 	bg_event  4,  4, BGEVENT_IFNOTSET, SilphCo2F_Door1
 	bg_event  5,  4, BGEVENT_IFNOTSET, SilphCo2F_Door1
 	bg_event  4, 10, BGEVENT_IFNOTSET, SilphCo2F_Door2
 	bg_event  5, 10, BGEVENT_IFNOTSET, SilphCo2F_Door2
+	bg_event 21,  5, BGEVENT_READ, SilphCoCopierScript
+	bg_event 24, 14, BGEVENT_UP, SilphCoPCOffScript
+	bg_event 25, 14, BGEVENT_UP, SilphCoPCOffScript
+
 	def_object_events
 	object_event 24,  7, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerRocketGruntM16, EVENT_BEAT_GIOVANNI_SILPHCO
 	object_event 16, 11, SPRITE_ROCKET, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerRocketGruntM17, EVENT_BEAT_GIOVANNI_SILPHCO
