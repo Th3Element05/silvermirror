@@ -416,6 +416,30 @@ CinnabarLabFossilRoomOldAmberText:
 	line "is being revived!"
 	done
 
+CinnabarLabFossilsPC:
+	jumptext CinnabarLabFossilsPCText
+CinnabarLabFossilsPCText:
+	text "It's research data"
+	line "about fossils of"
+	cont "extinct #MON."
+	done
+
+CinnabarLabAnomolyPC:
+	jumptext CinnabarLabAnomolyPCText
+CinnabarLabAnomolyPCText:
+	text "It's an email."
+
+	para "Someone visiting"
+	line "from VIRIDIAN CITY"
+	cont "reported sighting"
+	roll "an anomoly nearby."
+
+	para "I've monitored the"
+	line "area for a while,"
+	cont "and have not seen"
+	roll "anything unusual."
+	done
+
 ;FossilSetStepCount:
 ;	ld a, 50
 ;	ld [wFossilStepCount], a
@@ -474,7 +498,10 @@ CinnabarLabFossilRoom_MapEvents:
 	def_coord_events
 
 	def_bg_events
-;	bg_event  0,  0, BGEVENT_READ, DebugGiveFossils
+	bg_event  0,  4, BGEVENT_UP, CinnabarLabFossilsPC
+	bg_event  1,  4, BGEVENT_UP, CinnabarLabFossilsPC
+	bg_event  6,  4, BGEVENT_UP, CinnabarLabAnomolyPC
+	bg_event  7,  4, BGEVENT_UP, CinnabarLabAnomolyPC
 
 	def_object_events
 ;	object_event  3,  2, SPRITE_FOSSIL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CinnabarLabFossilRoomHelixFossil, EVENT_CINNABAR_LAB_HELIX_FOSSIL
