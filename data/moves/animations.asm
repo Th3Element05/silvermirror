@@ -3642,30 +3642,36 @@ BattleAnim_Crabhammer:
 	anim_ret
 
 BattleAnim_FlashCannon:
-;	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BATTLE_OB_YELLOW
-	anim_1gfx BATTLE_ANIM_GFX_SPEED, BATTLE_ANIM_GFX_WHIP
+	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_YELLOW
+	anim_3gfx BATTLE_ANIM_GFX_SHINE, BATTLE_ANIM_GFX_EGG, BATTLE_ANIM_GFX_HIT
 	anim_sound 0, 1, SFX_FLASH
-	anim_bgeffect BATTLE_BG_EFFECT_FLASH_INVERTED, $0, $6, $20
-	anim_wait 4
-	anim_obj BATTLE_ANIM_OBJ_FLASH, 48, 92, $0
-	anim_wait 4
-	anim_obj BATTLE_ANIM_OBJ_FLASH, 48, 92, $8
-	anim_wait 4
-	anim_obj BATTLE_ANIM_OBJ_FLASH, 48, 92, $10
-	anim_wait 4
-	anim_obj BATTLE_ANIM_OBJ_FLASH, 48, 92, $18
-	anim_wait 4
-	anim_obj BATTLE_ANIM_OBJ_FLASH, 48, 92, $20
-	anim_wait 4
-	anim_obj BATTLE_ANIM_OBJ_FLASH, 48, 92, $28
-	anim_wait 4
-	anim_obj BATTLE_ANIM_OBJ_FLASH, 48, 92, $30
-	anim_wait 4
-	anim_obj BATTLE_ANIM_OBJ_FLASH, 48, 92, $38
-	anim_wait 32
-	anim_jump BattleAnim_ConfuseRay
-;	anim_wait 32
-;	anim_ret
+	anim_bgeffect BATTLE_BG_EFFECT_FLASH_INVERTED, $0, $6, $b
+	anim_wait 6
+	anim_obj BATTLE_ANIM_OBJ_FORESIGHT, 48, 80, $0
+	anim_wait 6
+	anim_obj BATTLE_ANIM_OBJ_FORESIGHT, 56, 84, $0
+	anim_wait 6
+	anim_obj BATTLE_ANIM_OBJ_FORESIGHT, 60, 92, $0
+	anim_wait 6
+	anim_obj BATTLE_ANIM_OBJ_FORESIGHT, 56, 96, $0
+	anim_wait 6
+	anim_obj BATTLE_ANIM_OBJ_FORESIGHT, 48, 104, $0
+	anim_wait 6
+	anim_obj BATTLE_ANIM_OBJ_FORESIGHT, 32, 96, $0
+	anim_wait 6
+	anim_obj BATTLE_ANIM_OBJ_FORESIGHT, 36, 92, $0
+	anim_wait 6
+	anim_obj BATTLE_ANIM_OBJ_FORESIGHT, 32, 84, $0
+	anim_wait 6
+	anim_obj BATTLE_ANIM_OBJ_FORESIGHT, 48, 80, $0
+	anim_wait 16
+	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_HP_STEEL
+	anim_obj BATTLE_ANIM_OBJ_OCTAZOOKA, 64, 92, $4
+	anim_wait 16
+	anim_sound 6, 2, SFX_TACKLE
+	anim_obj BATTLE_ANIM_OBJ_HIT_BIG_YFIX, 136, 48, $0
+	anim_wait 8
+	anim_ret
 
 ;BattleAnim_Explosion:
 ;	anim_1gfx BATTLE_ANIM_GFX_EXPLOSION
