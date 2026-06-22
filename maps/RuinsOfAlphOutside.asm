@@ -30,7 +30,7 @@ RuinsOfAlphOutside_AlternateExit:
 	sjump RuinsOfAlphOutsideScientistScript
 
 RuinsOfAlphOutside_NormalExit:
-	moveobject RUINSOFALPHOUTSIDE_SCIENTIST, 14, 9
+;	moveobject RUINSOFALPHOUTSIDE_SCIENTIST, 14, 9
 	applymovement RUINSOFALPHOUTSIDE_SCIENTIST, RuinsOfAlphOutsideScientist_NormalMovement1
 	showemote EMOTE_SHOCK, RUINSOFALPHOUTSIDE_SCIENTIST, 20
 	turnobject PLAYER, RIGHT
@@ -206,6 +206,10 @@ RuinsOfAlphOutside_AllUnownText:
 	done
 
 RuinsOfAlphOutsideScientist_NormalMovement1:
+	big_step UP
+	big_step UP
+	big_step LEFT
+	big_step LEFT
 	big_step DOWN
 	big_step DOWN
 	big_step DOWN
