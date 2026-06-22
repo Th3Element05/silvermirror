@@ -393,6 +393,11 @@ GoldenrodGymWhitneyRematchScript:
 	setevent EVENT_BEAT_WHITNEY_2
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	opentext
+	writetext WhitneyRematchGreatBattleText
+	waitbutton
+	closetext
+	end
+
 .norematch
 	writetext WhitneyRematchAfterBattleText
 	waitbutton
@@ -407,7 +412,7 @@ WhitneyAskRematchText:
 	text "Welcome back!"
 
 	para "Are you ready to"
-	cont "battle?"
+	line "battle?"
 	done
 
 WhitneyRematchWinLossText:

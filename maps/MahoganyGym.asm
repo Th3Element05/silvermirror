@@ -392,7 +392,7 @@ PryceAskRematchText:
 	text "Welcome back."
 
 	para "Are you ready to"
-	cont "battle?"
+	line "battle?"
 	done
 
 PryceRematchWinLossText:

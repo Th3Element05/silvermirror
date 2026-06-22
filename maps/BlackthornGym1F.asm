@@ -88,7 +88,10 @@ BlackthornGymClairScript:
 	sjump BlackthornGymClairRematchScript
 
 .GreatBattle
-	jumptextfaceplayer ClairRematchGreatBattleText
+	writetext ClairRematchGreatBattleText
+	waitbutton
+	closetext
+	end
 
 BlackthornGymClairRematchScript:
 	promptbutton

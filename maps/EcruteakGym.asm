@@ -364,7 +364,7 @@ MortyAskRematchText:
 	text "Welcome back."
 
 	para "Are you ready to"
-	cont "battle?"
+	line "battle?"
 	done
 
 MortyRematchWinLossText:
@@ -437,4 +437,4 @@ EcruteakGym_MapEvents:
 	object_event  7,  9, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerMediumLeona, -1 ;grace
 	object_event  7, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, EcruteakGymGuideScript, -1
 ;
-	object_event  5,  1, SPRITE_MORTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, EcruteakGymMortyRematchScript, EVENT_JOHTO_LEADER_REMATCHES
+	object_event  5,  1, SPRITE_MORTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakGymMortyRematchScript, EVENT_JOHTO_LEADER_REMATCHES
