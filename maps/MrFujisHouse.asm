@@ -11,6 +11,10 @@ MrFujisHouseNoop1Scene:
 	end
 
 MrFujisHousePokefluteScene:
+	sdefer MrFujisHouseGivePokefluteScript
+	end
+
+MrFujisHouseGivePokefluteScript:
 	opentext
 	writetext MrFujisHouseMrFujiGivePokeFluteText
 	promptbutton
@@ -26,10 +30,9 @@ MrFujisHousePokefluteScene:
 	setflag ENGINE_EXPN_CARD
 	waitbutton
 	writetext MrFujisHouseMrFujiExplainRadioText
-;
+	setscene SCENE_MRFUJISHOUSE_NOOP
 	waitbutton
 	closetext
-	setscene SCENE_MRFUJISHOUSE_NOOP
 	end
 
 .RadioCardText:
@@ -68,6 +71,7 @@ MrFujisHouseMrFujiExplainFluteText:
 
 	para "It works on any"
 	line "sleeping #MON."
+	done
 
 MrFujisHouseMrFujiGivesExpnCardText:
 	ntag "MR.FUJI:"
