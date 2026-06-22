@@ -44,8 +44,8 @@ OlivineGoodRodHouseFishingGuruScript:
 	writetext OlivineGoodRodHouseFishingGuruText_AskTakeLure
 	yesorno
 	iffalse .NoSwapLure
-	giveitem SUPER_ROD
 	takeitem SUPER_ROD_2, 1
+	giveitem SUPER_ROD
 	clearevent EVENT_SUPER_ROD_LURE_ACTIVE
 	writetext OlivineGoodRodHouseFishingGuruText_ReturnLure
 	waitbutton
@@ -63,8 +63,8 @@ OlivineGoodRodHouseFishingGuruScript:
 	yesorno
 	iffalse .NoSwapLure
 	setevent EVENT_GOT_JOHTO_LURE
-	giveitem SUPER_ROD_2
 	takeitem SUPER_ROD, 1
+	giveitem SUPER_ROD_2
 	setevent EVENT_SUPER_ROD_LURE_ACTIVE
 	writetext OlivineGoodRodHouseFishingGuruText_GiveLure
 	waitbutton

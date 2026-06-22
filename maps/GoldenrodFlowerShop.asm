@@ -49,10 +49,10 @@ GoldenrodFlowerShopTeacherWeirdTreeText:
 	para "My little sister"
 	line "got all excited"
 	cont "and went to see"
-	line "it…"
+	roll "it…"
 
-	para "I'm worried… Isn't"
-	line "it dangerous?"
+	para "I'm worried…"
+	line "Is it dangerous?"
 	done
 
 GoldenrodFlowerShopTeacherAskWantToBorrowWaterBottleText:

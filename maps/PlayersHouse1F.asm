@@ -121,11 +121,11 @@ MomScript:
 	opentext
 	checkevent EVENT_FIRST_TIME_BANKING_WITH_MOM
 	iftrue .FirstTimeBanking
-	checkevent EVENT_TALKED_TO_MOM_AFTER_GETTING_POKEDEX ; EVENT_TALKED_TO_MOM_AFTER_MYSTERY_EGG_QUEST
+	checkevent EVENT_TALKED_TO_MOM_AFTER_GETTING_POKEDEX
 	iftrue .BankOfMom
-	checkevent EVENT_GOT_POKEDEX ; EVENT_GAVE_MYSTERY_EGG_TO_ELM
+	checkevent EVENT_GOT_POKEDEX
 	iftrue .GotPokedex
-	checkevent EVENT_GOT_A_POKEMON_FROM_OAK ; EVENT_GOT_A_POKEMON_FROM_ELM
+	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
 	iftrue .GotAPokemon
 	writetext HurryUpElmIsWaitingText
 	waitbutton

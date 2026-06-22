@@ -108,7 +108,9 @@ Route22RivalLeavesMovement1:
 Route22RivalBattle2:
 	moveobject ROUTE22_RIVAL, 16, 10
 	playmusic MUSIC_RIVAL_ENCOUNTER
-	pause 20
+;	pause 20
+	showemote EMOTE_SHOCK, PLAYER, 20
+	turnobject PLAYER, DOWN
 	appear ROUTE22_RIVAL
 	applymovement ROUTE22_RIVAL, Route22Rival2ApproachMovement
 	follow PLAYER, ROUTE22_RIVAL
@@ -153,6 +155,7 @@ Route22RivalBattle2:
 	disappear ROUTE22_RIVAL
 	playsound SFX_ENTER_DOOR ;SFX_EXIT_BUILDING
 	waitsfx
+	pause 20
 	setscene SCENE_ROUTE22_NOOP
 	special RestartMapMusic
 	end

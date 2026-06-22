@@ -50,7 +50,8 @@ Script_ApproachLanceFromRight:
 LancesRoomLanceScript:
 	checkevent EVENT_BEAT_E4_LANCE
 	iftrue LanceScript_AfterBattle
-	special FadeOutMusic
+;	special FadeOutMusic
+	musicfadeout MUSIC_NONE, 8
 	turnobject LANCESROOM_LANCE, LEFT
 	checkevent EVENT_OPENED_MT_SILVER
 	iftrue LanceRematchScript
@@ -74,7 +75,7 @@ LancesRoomLanceScript:
 
 	promptbutton
 ;	special FadeOutMusic
-	musicfadeout MUSIC_NONE, 16
+	musicfadeout MUSIC_NONE, 8
 	writetext LanceBattleAfterText_2
 	waitbutton
 	closetext
