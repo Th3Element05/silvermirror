@@ -358,6 +358,15 @@ Route3SignText:
 Route3MtMoonPokecenterSign:
 	jumpstd PokecenterSignScript
 
+
+Route3SecretSign:
+	jumptext Route3SecretSignText
+Route3SecretSignText:
+	text "It's a secret to"
+	line "everyone."
+	done
+
+
 Route3_MapEvents:
 	db 0, 0 ; filler
 
@@ -373,6 +382,7 @@ Route3_MapEvents:
 	bg_event 55,  7, BGEVENT_READ, Route3MtMoonSign
 	bg_event 49, 27, BGEVENT_READ, Route3Sign
 	bg_event 50,  5, BGEVENT_READ, Route3MtMoonPokecenterSign
+	bg_event 28,  9, BGEVENT_READ, Route3SecretSign
 
 	def_object_events
 	object_event 10, 22, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerYoungsterAsher, -1
