@@ -1486,6 +1486,65 @@ OaksLabOak_AfterBattleText:
 	done
 
 
+; hints
+OaksLabMewHintBookshelf:
+	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
+	iffalse .NotYet
+	opentext
+	writetext OaksLabAskReadHintText
+	yesorno
+	iffalse .NoHint
+	random 2
+	ifequal 1, .MewHint
+; else 0
+	jumptext OaksLabMissingnoHint
+
+.MewHint
+	jumptext OaksLabMewHintText
+
+.NotYet
+	jumptext OaksLabNoHintYetText
+
+.NoHint
+	writetext OaksLabDeclinedHintText
+	waitbutton
+	closetext
+	end
+
+OaksLabNoHintYetText:
+	text "These books have"
+	line "hints in them."
+
+	para "You shouldn't read"
+	line "them yet."
+	done
+
+OaksLabAskReadHintText:
+	text "These books have"
+	line "hints in them."
+
+	para "Do you want to"
+	line "read one?"
+	done
+
+OaksLabDeclinedHintText:
+	text "Better not."
+	done
+
+OaksLabMewHintText:
+	text "Somehow there's a"
+	line "truck parked at"
+	cont "VERMILION PORT."
+	done
+
+OaksLabMissingnoHint:
+	text "Something strange"
+	line "on CINNABAR's east"
+	cont "coast."
+	done
+
+
+
 ; DEBUG
 DebugGotCharmander:
 	opentext
@@ -2229,28 +2288,29 @@ OaksLab_MapEvents:
 
 	def_bg_events
 ; oak bookshelves
-	bg_event  6,  1, BGEVENT_READ, DebugGotCharmander
-	bg_event  7,  1, BGEVENT_READ, DebugGotSquirtle
-	bg_event  8,  1, BGEVENT_READ, DebugGotBulbasaur
-	bg_event  9,  1, BGEVENT_READ, DebugBeatEliteFour
+;	bg_event  6,  1, BGEVENT_READ, DebugGotCharmander
+;	bg_event  7,  1, BGEVENT_READ, DebugGotSquirtle
+	bg_event  7,  1, BGEVENT_READ, OaksLabMewHintBookshelf
+;	bg_event  8,  1, BGEVENT_READ, DebugGotBulbasaur
+;	bg_event  9,  1, BGEVENT_READ, DebugBeatEliteFour
 ; back bookshelves
-	bg_event  0,  6, BGEVENT_READ, DebugFullPokegear
-	bg_event  1,  6, BGEVENT_READ, DebugAllTMs
-	bg_event  2,  6, BGEVENT_READ, DebugAllHMs
-	bg_event  3,  6, BGEVENT_READ, DebugMasterBalls
-	bg_event  6,  6, BGEVENT_READ, DebugSkipFastShip
-	bg_event  7,  6, BGEVENT_READ, DebugCredits
-	bg_event  8,  6, BGEVENT_READ, DebugLancesRoom
-	bg_event  9,  6, BGEVENT_READ, DebugSFXRoom
+;	bg_event  0,  6, BGEVENT_READ, DebugFullPokegear
+;	bg_event  1,  6, BGEVENT_READ, DebugAllTMs
+;	bg_event  2,  6, BGEVENT_READ, DebugAllHMs
+;	bg_event  3,  6, BGEVENT_READ, DebugMasterBalls
+;	bg_event  6,  6, BGEVENT_READ, DebugSkipFastShip
+;	bg_event  7,  6, BGEVENT_READ, DebugCredits
+;	bg_event  8,  6, BGEVENT_READ, DebugLancesRoom
+;	bg_event  9,  6, BGEVENT_READ, DebugSFXRoom
 ; front bookshelves
-	bg_event  0,  7, BGEVENT_READ, DebugBeatKantoLeaders
-	bg_event  1,  7, BGEVENT_READ, DebugLockedKantoGyms
+;	bg_event  0,  7, BGEVENT_READ, DebugBeatKantoLeaders
+;	bg_event  1,  7, BGEVENT_READ, DebugLockedKantoGyms
 ;	bg_event  2,  7, BGEVENT_READ, Debug
-	bg_event  3,  7, BGEVENT_READ, DebugCompleteKanto
-	bg_event  6,  7, BGEVENT_READ, DebugBeatJohtoLeaders
+;	bg_event  3,  7, BGEVENT_READ, DebugCompleteKanto
+;	bg_event  6,  7, BGEVENT_READ, DebugBeatJohtoLeaders
 ;	bg_event  7,  7, BGEVENT_READ, Debug
 ;	bg_event  8,  7, BGEVENT_READ, Debug
-	bg_event  9,  7, BGEVENT_READ, DebugRareCandy
+;	bg_event  9,  7, BGEVENT_READ, DebugRareCandy
 
 ; normal stuff
 	bg_event  4,  0, BGEVENT_READ, OaksLabPoster1
