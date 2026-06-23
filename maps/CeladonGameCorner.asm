@@ -710,7 +710,7 @@ CeladonGameCorner_MapEvents:
 	bg_event  7,  7, BGEVENT_LEFT, CeladonGameCornerLuckySlotMachineScript
 	bg_event  7,  8, BGEVENT_LEFT, CeladonGameCornerLuckySlotMachineScript
 	bg_event  7,  9, BGEVENT_LEFT, CeladonGameCornerLuckySlotMachineScript
-;	bg_event  7, 10, BGEVENT_LEFT, CeladonGameCornerLuckySlotMachineScript
+;	bg_event  7, 10, BGEVENT_LEFT, CeladonGameCornerLuckySlotMachineScript ; og lucky
 	bg_event  7, 11, BGEVENT_LEFT, CeladonGameCornerLuckySlotMachineScript
 	bg_event 12,  6, BGEVENT_RIGHT, CeladonGameCornerLuckySlotMachineScript
 	bg_event 12,  7, BGEVENT_RIGHT, CeladonGameCornerLuckySlotMachineScript
