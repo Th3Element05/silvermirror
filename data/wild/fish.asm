@@ -284,8 +284,8 @@ FishGroups:
 .Gyarados_Good:
 	db  30 percent, MAGIKARP,   10 ; 30%
 	db  60 percent, MAGIKARP,   10 ; 30%
-	db  99 percent, MAGIKARP,   10 ; 39%
-	db 100 percent, GYARADOS,   20 ;  1%
+	db  95 percent, MAGIKARP,   10 ; 35%
+	db 100 percent, GYARADOS,   20 ;  5%
 .Gyarados_Super:
 .Gyarados_Super_2:
 	db  30 percent, MAGIKARP,   15 ; 30%

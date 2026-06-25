@@ -193,9 +193,9 @@ KantoGrassWildMons:
 	db 19, MANKEY     ; 10% chance
 	db 19, MANKEY     ; 10% chance
 	db 18, VULPIX     ; 10% chance
-	db 14, JIGGLYPUFF ;  5% chance
 	db 12, ABRA       ;  5% chance
-	db 12, ABRA       ;  4% chance
+	db 12, ABRA       ;  5% chance
+	db 16, KADABRA    ;  4% chance
 	db 16, KADABRA    ;  1% chance
 	; nite
 	db 20, MEOWTH     ; 20% chance
@@ -206,7 +206,7 @@ KantoGrassWildMons:
 	db 12, ABRA       ; 10% chance
 	db 17, ODDISH     ;  5% chance
 	db 20, MEOWTH     ;  5% chance
-	db 14, JIGGLYPUFF ;  4% chance
+	db 16, KADABRA    ;  4% chance
 	db 16, KADABRA    ;  1% chance
 	end_grass_wildmons
 
@@ -219,9 +219,9 @@ KantoGrassWildMons:
 	db 19, MANKEY     ; 10% chance
 	db 19, MANKEY     ; 10% chance
 	db 18, VULPIX     ; 10% chance
-	db 14, JIGGLYPUFF ;  5% chance
 	db 12, ABRA       ;  5% chance
-	db 12, ABRA       ;  4% chance
+	db 12, ABRA       ;  5% chance
+	db 16, KADABRA    ;  4% chance
 	db 16, KADABRA    ;  1% chance
 	; nite
 	db 19, MANKEY     ; 20% chance
@@ -232,7 +232,7 @@ KantoGrassWildMons:
 	db 12, ABRA       ; 10% chance
 	db 20, GROWLITHE  ;  5% chance
 	db 18, VULPIX     ;  5% chance
-	db 14, JIGGLYPUFF ;  4% chance
+	db 16, KADABRA    ;  4% chance
 	db 16, KADABRA    ;  1% chance
 	end_grass_wildmons
 
@@ -248,7 +248,7 @@ KantoGrassWildMons:
 	db 20, NIDORINO   ;  5% chance
 	db 20, NIDORINA   ;  5% chance
 	db 20, RATICATE   ;  4% chance
-	db 20, FEAROW     ;  1% chance
+	db 20, RATICATE   ;  1% chance
 	; nite
 	db 16, NIDORAN_M  ; 20% chance
 	db 16, NIDORAN_F  ; 20% chance
@@ -812,26 +812,26 @@ KantoGrassWildMons:
 	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
 	; day
 	db 15, ZUBAT      ; 20% chance
-	db 15, ZUBAT      ; 20% chance
+	db 16, ZUBAT      ; 20% chance
 	db 16, MACHOP     ; 15% chance
-	db 16, MACHOP     ; 10% chance
 	db 16, GEODUDE    ; 10% chance
-	db 16, GEODUDE    ; 10% chance
-	db 16, GEODUDE    ;  5% chance
-	db 16, GEODUDE    ;  5% chance
-	db 14, ONIX       ;  4% chance
-	db 12, CUBONE     ;  1% chance
+	db 17, GEODUDE    ; 10% chance
+	db 17, GEODUDE    ; 10% chance
+	db 16, MACHOP     ;  5% chance
+	db 14, ONIX       ;  5% chance
+	db 13, CUBONE     ;  4% chance
+	db 14, ONIX       ;  1% chance
 	; nite
 	db 16, GEODUDE    ; 20% chance
-	db 16, GEODUDE    ; 20% chance
+	db 17, GEODUDE    ; 20% chance
 	db 16, MACHOP     ; 15% chance
-	db 16, MACHOP     ; 10% chance
 	db 15, ZUBAT      ; 10% chance
-	db 15, ZUBAT      ; 10% chance
-	db 15, ZUBAT      ;  5% chance
-	db 15, ZUBAT      ;  5% chance
-	db 14, ONIX       ;  4% chance
-	db 12, CUBONE     ;  1% chance
+	db 16, ZUBAT      ; 10% chance
+	db 16, ZUBAT      ; 10% chance
+	db 16, MACHOP     ;  5% chance
+	db 15, ONIX       ;  5% chance
+	db 13, CUBONE     ;  4% chance
+	db 14, ONIX       ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons ROCK_TUNNEL_B1F ;GEN1
@@ -843,10 +843,10 @@ KantoGrassWildMons:
 	db 16, GEODUDE    ; 10% chance
 	db 17, GEODUDE    ; 10% chance
 	db 17, GEODUDE    ; 10% chance
-	db 14, ONIX       ;  5% chance
+	db 16, MACHOP     ;  5% chance
 	db 14, ONIX       ;  5% chance
 	db 13, CUBONE     ;  4% chance
-	db 16, MACHOP     ;  1% chance
+	db 14, ONIX       ;  1% chance
 	; nite
 	db 16, GEODUDE    ; 20% chance
 	db 17, GEODUDE    ; 20% chance
@@ -854,10 +854,10 @@ KantoGrassWildMons:
 	db 15, ZUBAT      ; 10% chance
 	db 16, ZUBAT      ; 10% chance
 	db 16, ZUBAT      ; 10% chance
+	db 16, MACHOP     ;  5% chance
 	db 15, ONIX       ;  5% chance
-	db 14, ONIX       ;  5% chance
 	db 13, CUBONE     ;  4% chance
-	db 16, MACHOP     ;  1% chance
+	db 14, ONIX       ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons POKEMON_TOWER_3F ;GEN1
@@ -1203,24 +1203,24 @@ KantoGrassWildMons:
 	; day
 	db 28, KOFFING    ; 20% chance
 	db 28, GRIMER     ; 20% chance
-	db 27, VULPIX     ; 15% chance
+	db 27, GROWLITHE  ; 15% chance
 	db 28, KOFFING    ; 10% chance
-	db 31, MAGMAR     ; 10% chance
-	db 27, GROWLITHE  ; 10% chance
-	db 27, GROWLITHE  ;  5% chance
-	db 36, WEEZING    ;  5% chance
-	db 36, WEEZING    ;  4% chance
+	db 28, GRIMER     ; 10% chance
+	db 27, VULPIX     ; 10% chance
+	db 27, VULPIX     ;  5% chance
+	db 35, WEEZING    ;  5% chance
+	db 38, MUK        ;  4% chance
 	db 38, MUK        ;  1% chance
 	; nite
 	db 28, KOFFING    ; 20% chance
 	db 28, GRIMER     ; 20% chance
-	db 27, VULPIX     ; 15% chance
+	db 27, GROWLITHE  ; 15% chance
 	db 28, KOFFING    ; 10% chance
-	db 31, MAGMAR     ; 10% chance
-	db 27, GROWLITHE  ; 10% chance
-	db 27, GROWLITHE  ;  5% chance
-	db 36, WEEZING    ;  5% chance
-	db 36, WEEZING    ;  4% chance
+	db 28, GRIMER     ; 10% chance
+	db 27, VULPIX     ; 10% chance
+	db 27, VULPIX     ;  5% chance
+	db 35, WEEZING    ;  5% chance
+	db 38, MUK        ;  4% chance
 	db 38, MUK        ;  1% chance
 	end_grass_wildmons
 

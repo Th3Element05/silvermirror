@@ -93,10 +93,10 @@ ContestSafariMonsChallenge:
 	table_width 4, .Safari2
 ; morning
 	db 20, LEDYBA,        10, 20
-	db 10, YANMA,         14, 30
+	db  9, YANMA,         14, 30
 	db 10, EXEGGCUTE,     10, 20
 	db 20, PARAS,         10, 24
-	db  4, PARASECT,      10, 24
+	db  5, PARASECT,      10, 24
 	db  5, LEDIAN,        18, 30
 	db 10, SCYTHER,       14, 30
 	db 10, PINSIR,        14, 30
@@ -104,10 +104,10 @@ ContestSafariMonsChallenge:
 	db  1, CHANSEY,       14, 30
 ; day/eve
 	db 20, LEDYBA,        10, 20
-	db 10, YANMA,         14, 30
+	db  9, YANMA,         14, 30
 	db 10, EXEGGCUTE,     10, 20
 	db 20, PARAS,         10, 24
-	db  4, PARASECT,      24, 30
+	db  5, PARASECT,      24, 30
 	db  5, LEDIAN,        18, 30
 	db 10, SCYTHER,       14, 30
 	db 10, PINSIR,        14, 30
@@ -115,10 +115,10 @@ ContestSafariMonsChallenge:
 	db  1, CHANSEY,       14, 30
 ; nite
 	db 20, SPINARAK,      10, 21
-	db 10, YANMA,         14, 30
+	db  9, YANMA,         14, 30
 	db 10, EXEGGCUTE,     10, 20
 	db 20, VENONAT,       10, 30
-	db  4, VENOMOTH,      24, 30
+	db  5, VENOMOTH,      24, 30
 	db  5, ARIADOS,       22, 30
 	db 10, SCYTHER,       14, 30
 	db 10, PINSIR,        14, 30
@@ -168,37 +168,37 @@ ContestSafariMonsChallenge:
 .Safari4
 	table_width 4, .Safari4
 ; morning
-	db 15, HOPPIP,        10, 20
-	db 10, SUNKERN,       10, 20
-	db  5, SUNKERN,       10, 20
-	db 15, MARILL,        10, 20
-	db 20, EXEGGCUTE,     10, 20
-	db 14, TANGELA,       14, 30
+	db 20, HOPPIP,        10, 20
+	db 20, SUNKERN,       10, 20
+	db 10, EXEGGCUTE,     10, 20
+	db 10, EXEGGCUTE,     10, 20
+	db 10, TANGELA,       14, 30
+	db  5, TANGELA,       14, 30
 	db 10, AIPOM,         10, 30
 	db  5, MILTANK,       14, 30
-	db  5, SMEARGLE,      10, 20
+	db  9, SMEARGLE,      10, 20
 	db  1, CHANSEY,       14, 30
 ; day/eve
-	db 15, HOPPIP,        10, 20
-	db 10, SUNKERN,       10, 20
-	db  5, SUNKERN,       10, 20
-	db 15, MARILL,        10, 20
-	db 20, EXEGGCUTE,     10, 20
-	db 14, TANGELA,       14, 30
+	db 20, HOPPIP,        10, 20
+	db 20, SUNKERN,       10, 20
+	db 10, EXEGGCUTE,     10, 20
+	db 10, EXEGGCUTE,     10, 20
+	db 10, TANGELA,       14, 30
+	db  5, TANGELA,       14, 30
 	db 10, AIPOM,         10, 30
 	db  5, MILTANK,       14, 30
-	db  5, SMEARGLE,      10, 20
+	db  9, SMEARGLE,      10, 20
 	db  1, CHANSEY,       14, 30
 ; nite
-	db 15, HOPPIP,        10, 20
-	db 10, SUNKERN,       10, 20
-	db  5, SUNKERN,       10, 20
-	db 15, MARILL,        10, 20
-	db 20, EXEGGCUTE,     10, 20
-	db 14, TANGELA,       14, 30
+	db 20, WOOPER,        10, 20
+	db 20, MARILL,        10, 20
+	db 10, EXEGGCUTE,     10, 20
+	db 10, EXEGGCUTE,     10, 20
+	db 10, TANGELA,       14, 30
+	db  5, TANGELA,       14, 30
 	db 10, AIPOM,         10, 30
 	db  5, MILTANK,       14, 30
-	db  5, SMEARGLE,      10, 20
+	db  9, SMEARGLE,      10, 20
 	db  1, CHANSEY,       14, 30
 	assert_table_length 30
 	

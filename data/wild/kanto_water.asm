@@ -262,8 +262,8 @@ KantoWaterWildMons:
 	db 6 percent ; encounter rate
 	db 10, SLOWPOKE   ; 50
 	db 10, PSYDUCK    ; 30
-	db 10, GOLDEEN    ; 10
-	db 10, GOLDEEN    ; 10
+	db 10, POLIWAG    ; 10
+	db 10, POLIWAG    ; 10
 	end_water_wildmons
 
 	db -1 ; end

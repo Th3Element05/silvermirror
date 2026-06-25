@@ -119,7 +119,7 @@ SwarmGrassWildMonsAltChallenge:
 	db 20, GROWLITHE  ; 10% chance
 	db 18, VULPIX     ;  5% chance
 	db 12, ABRA       ;  5% chance
-	db 14, JIGGLYPUFF ;  4% chance
+	db 12, ABRA       ;  4% chance
 	db 16, KADABRA    ;  1% chance
 	; nite
 	db 19, MURKROW    ; 20% chance
@@ -130,7 +130,7 @@ SwarmGrassWildMonsAltChallenge:
 	db 19, HOUNDOUR   ; 10% chance
 	db 20, MEOWTH     ;  5% chance
 	db 12, ABRA       ;  5% chance
-	db 14, JIGGLYPUFF ;  4% chance
+	db 12, ABRA       ;  4% chance
 	db 16, KADABRA    ;  1% chance
 
 	; HOUNDOUR (GEN2)
@@ -145,8 +145,8 @@ SwarmGrassWildMonsAltChallenge:
 	db 20, GROWLITHE  ; 10% chance
 	db 18, VULPIX     ;  5% chance
 	db 12, ABRA       ;  5% chance
-	db 14, JIGGLYPUFF ;  4% chance
-	db 16, KADABRA    ;  1% chance
+	db 16, KADABRA    ;  4% chance
+	db 12, ABRA       ;  1% chance
 	; nite
 	db 19, HOUNDOUR   ; 20% chance
 	db 19, HOUNDOUR   ; 20% chance
@@ -155,9 +155,9 @@ SwarmGrassWildMonsAltChallenge:
 	db 20, MEOWTH     ; 10% chance
 	db 20, MEOWTH     ; 10% chance
 	db 12, ABRA       ;  5% chance
-	db 16, GASTLY     ;  5% chance
-	db 14, JIGGLYPUFF ;  4% chance
-	db 19, MURKROW    ;  1% chance
+	db 12, ABRA       ;  5% chance
+	db 16, KADABRA    ;  4% chance
+	db 12, ABRA       ;  1% chance
 
 	; MAGNEMITE (GEN2)
 	def_grass_wildmons ROUTE_10 ;GEN2
@@ -523,7 +523,7 @@ SwarmGrassWildMonsAltChallenge:
 	db 16, MACHOP     ;  4% chance
 	db 15, ZUBAT      ;  1% chance
 
-	; MISDREAVUS (1/5) (same)
+	; MISDREAVUS (1/5)
 	def_grass_wildmons POKEMON_TOWER_3F ;GEN1
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; day
@@ -535,8 +535,8 @@ SwarmGrassWildMonsAltChallenge:
 	db 18, GASTLY     ; 10% chance
 	db 18, GASTLY     ;  5% chance
 	db 18, ZUBAT      ;  5% chance
-	db 18, GASTLY     ;  4% chance
-	db 20, CUBONE     ;  1% chance
+	db 25, HAUNTER    ;  4% chance
+	db 17, CUBONE     ;  1% chance
 	; nite
 	db 16, MISDREAVUS ; 20% chance
 	db 16, MISDREAVUS ; 20% chance
@@ -546,10 +546,10 @@ SwarmGrassWildMonsAltChallenge:
 	db 18, GASTLY     ; 10% chance
 	db 18, GASTLY     ;  5% chance
 	db 18, ZUBAT      ;  5% chance
-	db 18, GASTLY     ;  4% chance
-	db 20, CUBONE     ;  1% chance
+	db 25, HAUNTER    ;  4% chance
+	db 17, CUBONE     ;  1% chance
 
-	; MISDREAVUS (2/5) (same)
+	; MISDREAVUS (2/5)
 	def_grass_wildmons POKEMON_TOWER_4F ;GEN1
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; day
@@ -561,8 +561,8 @@ SwarmGrassWildMonsAltChallenge:
 	db 18, GASTLY     ; 10% chance
 	db 18, GASTLY     ;  5% chance
 	db 18, ZUBAT      ;  5% chance
-	db 18, GASTLY     ;  4% chance
-	db 20, CUBONE     ;  1% chance
+	db 25, HAUNTER    ;  4% chance
+	db 18, CUBONE     ;  1% chance
 	; nite
 	db 16, MISDREAVUS ; 20% chance
 	db 16, MISDREAVUS ; 20% chance
@@ -573,9 +573,9 @@ SwarmGrassWildMonsAltChallenge:
 	db 19, GASTLY     ;  5% chance
 	db 18, ZUBAT      ;  5% chance
 	db 25, HAUNTER    ;  4% chance
-	db 20, CUBONE     ;  1% chance
+	db 18, CUBONE     ;  1% chance
 
-	; MISDREAVUS (3/5) (same)
+	; MISDREAVUS (3/5)
 	def_grass_wildmons POKEMON_TOWER_5F ;GEN1
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; day
@@ -588,7 +588,7 @@ SwarmGrassWildMonsAltChallenge:
 	db 18, GASTLY     ;  5% chance
 	db 18, ZUBAT      ;  5% chance
 	db 25, HAUNTER    ;  4% chance
-	db 20, CUBONE     ;  1% chance
+	db 19, CUBONE     ;  1% chance
 	; nite
 	db 16, MISDREAVUS ; 20% chance
 	db 17, MISDREAVUS ; 20% chance
@@ -599,9 +599,9 @@ SwarmGrassWildMonsAltChallenge:
 	db 20, GASTLY     ;  5% chance
 	db 18, ZUBAT      ;  5% chance
 	db 25, HAUNTER    ;  4% chance
-	db 20, CUBONE     ;  1% chance
+	db 19, CUBONE     ;  1% chance
 
-	; MISDREAVUS (4/5) (same)
+	; MISDREAVUS (4/5)
 	def_grass_wildmons POKEMON_TOWER_6F ;GEN1
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; day
@@ -613,7 +613,7 @@ SwarmGrassWildMonsAltChallenge:
 	db 20, GASTLY     ; 10% chance
 	db 18, ZUBAT      ;  5% chance
 	db 25, HAUNTER    ;  5% chance
-	db 20, CUBONE     ;  4% chance
+	db 20, GASTLY     ;  4% chance
 	db 20, CUBONE     ;  1% chance
 	; nite
 	db 16, MISDREAVUS ; 20% chance
@@ -624,10 +624,10 @@ SwarmGrassWildMonsAltChallenge:
 	db 20, GASTLY     ; 10% chance
 	db 18, ZUBAT      ;  5% chance
 	db 25, HAUNTER    ;  5% chance
-	db 20, CUBONE     ;  4% chance
+	db 20, GASTLY     ;  4% chance
 	db 20, CUBONE     ;  1% chance
 
-	; MISDREAVUS (5/5) (same)
+	; MISDREAVUS (5/5)
 	def_grass_wildmons POKEMON_TOWER_7F ;GEN1
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; day
@@ -639,7 +639,7 @@ SwarmGrassWildMonsAltChallenge:
 	db 20, GASTLY     ; 10% chance
 	db 18, ZUBAT      ;  5% chance
 	db 25, HAUNTER    ;  5% chance
-	db 20, CUBONE     ;  4% chance
+	db 20, GASTLY     ;  4% chance
 	db 20, CUBONE     ;  1% chance
 	; nite
 	db 16, MISDREAVUS ; 20% chance
@@ -650,7 +650,7 @@ SwarmGrassWildMonsAltChallenge:
 	db 20, GASTLY     ; 10% chance
 	db 18, ZUBAT      ;  5% chance
 	db 25, HAUNTER    ;  5% chance
-	db 20, CUBONE     ;  4% chance
+	db 20, GASTLY     ;  4% chance
 	db 20, CUBONE     ;  1% chance
 
 	; KRABBY (1/3) (same)

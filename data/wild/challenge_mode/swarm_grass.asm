@@ -93,7 +93,7 @@ SwarmGrassWildMonsChallenge:
 	db 20, GROWLITHE  ; 10% chance
 	db 20, SNUBBULL   ;  5% chance
 	db 12, ABRA       ;  5% chance
-	db 14, JIGGLYPUFF ;  4% chance
+	db 12, ABRA       ;  4% chance
 	db 16, KADABRA    ;  1% chance
 	; nite
 	db 18, VULPIX     ; 20% chance
@@ -104,7 +104,7 @@ SwarmGrassWildMonsChallenge:
 	db 19, HOUNDOUR   ; 10% chance
 	db 20, MEOWTH     ;  5% chance
 	db 12, ABRA       ;  5% chance
-	db 14, JIGGLYPUFF ;  4% chance
+	db 12, ABRA       ;  4% chance
 	db 16, KADABRA    ;  1% chance
 
 	; GROWLITHE (GEN2)
@@ -114,12 +114,12 @@ SwarmGrassWildMonsChallenge:
 	db 20, GROWLITHE  ; 20% chance
 	db 20, GROWLITHE  ; 20% chance
 	db 20, SNUBBULL   ; 15% chance
-	db 20, SNUBBULL   ; 10% chance
+	db 12, ABRA       ; 10% chance
 	db 20, PIDGEY     ; 10% chance
 	db 20, PIDGEY     ; 10% chance
 	db 18, VULPIX     ;  5% chance
-	db 12, ABRA       ;  5% chance
-	db 14, JIGGLYPUFF ;  4% chance
+	db 20, SNUBBULL   ;  5% chance
+	db 16, KADABRA    ;  4% chance
 	db 16, KADABRA    ;  1% chance
 	; nite
 	db 20, GROWLITHE  ; 20% chance
@@ -129,9 +129,9 @@ SwarmGrassWildMonsChallenge:
 	db 20, MEOWTH     ; 10% chance
 	db 19, HOUNDOUR   ; 10% chance
 	db 12, ABRA       ;  5% chance
-	db 16, GASTLY     ;  5% chance
-	db 14, JIGGLYPUFF ;  4% chance
-	db 19, MURKROW    ;  1% chance
+	db 12, ABRA       ;  5% chance
+	db 16, KADABRA    ;  4% chance
+	db 16, KADABRA    ;  1% chance
 
 	; VOLTORB (GEN2)
 	def_grass_wildmons ROUTE_10 ;GEN2
@@ -608,23 +608,23 @@ SwarmGrassWildMonsChallenge:
 	db 31, MAGMAR     ; 20% chance
 	db 31, MAGMAR     ; 20% chance
 	db 28, KOFFING    ; 15% chance
+	db 28, GRIMER     ; 10% chance
 	db 27, GROWLITHE  ; 10% chance
 	db 27, VULPIX     ; 10% chance
-	db 28, GRIMER     ; 10% chance
-	db 28, KOFFING    ;  5% chance
+	db 23, SLUGMA     ;  5% chance
 	db 35, WEEZING    ;  5% chance
-	db 35, WEEZING    ;  4% chance
+	db 38, MUK        ;  4% chance
 	db 38, MUK        ;  1% chance
 	; nite
 	db 31, MAGMAR     ; 20% chance
 	db 31, MAGMAR     ; 20% chance
-	db 28, KOFFING    ; 15% chance
+	db 28, GRIMER     ; 15% chance
+	db 28, KOFFING    ; 10% chance
 	db 27, HOUNDOUR   ; 10% chance
 	db 27, VULPIX     ; 10% chance
-	db 28, GRIMER     ; 10% chance
-	db 28, KOFFING    ;  5% chance
+	db 23, SLUGMA     ;  5% chance
 	db 35, WEEZING    ;  5% chance
-	db 35, WEEZING    ;  4% chance
+	db 38, MUK        ;  4% chance
 	db 38, MUK        ;  1% chance
 
 	; MAGMAR (4/4) (GEN2)

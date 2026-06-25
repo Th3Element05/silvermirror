@@ -91,9 +91,9 @@ SwarmGrassWildMons:
 	db 18, BELLSPROUT ; 10% chance
 	db 19, MANKEY     ; 10% chance
 	db 20, GROWLITHE  ; 10% chance
-	db 14, JIGGLYPUFF ;  5% chance
 	db 12, ABRA       ;  5% chance
-	db 12, ABRA       ;  4% chance
+	db 12, ABRA       ;  5% chance
+	db 16, KADABRA    ;  4% chance
 	db 16, KADABRA    ;  1% chance
 	; nite
 	db 18, VULPIX     ; 20% chance
@@ -104,7 +104,7 @@ SwarmGrassWildMons:
 	db 20, MEOWTH     ; 10% chance
 	db 18, BELLSPROUT ;  5% chance
 	db 12, ABRA       ;  5% chance
-	db 12, JIGGLYPUFF ;  4% chance
+	db 12, ABRA       ;  4% chance
 	db 16, KADABRA    ;  1% chance
 
 	; GROWLITHE
@@ -117,9 +117,9 @@ SwarmGrassWildMons:
 	db 20, EKANS      ; 10% chance
 	db 20, SANDSHREW  ; 10% chance
 	db 18, VULPIX     ; 10% chance
-	db 19, MANKEY     ;  5% chance
 	db 12, ABRA       ;  5% chance
-	db 14, JIGGLYPUFF ;  4% chance
+	db 12, ABRA       ;  5% chance
+	db 16, KADABRA    ;  4% chance
 	db 16, KADABRA    ;  1% chance
 	; nite
 	db 20, GROWLITHE  ; 20% chance
@@ -127,10 +127,10 @@ SwarmGrassWildMons:
 	db 19, MANKEY     ; 15% chance
 	db 20, MEOWTH     ; 10% chance
 	db 20, MEOWTH     ; 10% chance
-	db 20, MEOWTH     ; 10% chance
+	db 12, ABRA       ; 10% chance
 	db 18, VULPIX     ;  5% chance
-	db 12, ABRA       ;  5% chance
-	db 14, JIGGLYPUFF ;  4% chance
+	db 20, MEOWTH     ;  5% chance
+	db 16, KADABRA    ;  4% chance
 	db 16, KADABRA    ;  1% chance
 
 	; VOLTORB
@@ -611,9 +611,9 @@ SwarmGrassWildMons:
 	db 27, GROWLITHE  ; 10% chance
 	db 27, VULPIX     ; 10% chance
 	db 28, GRIMER     ; 10% chance
-	db 28, KOFFING    ;  5% chance
+	db 28, GRIMER     ;  5% chance
 	db 35, WEEZING    ;  5% chance
-	db 35, WEEZING    ;  4% chance
+	db 38, MUK        ;  4% chance
 	db 38, MUK        ;  1% chance
 	; nite
 	db 31, MAGMAR     ; 20% chance
@@ -622,9 +622,9 @@ SwarmGrassWildMons:
 	db 27, GROWLITHE  ; 10% chance
 	db 27, VULPIX     ; 10% chance
 	db 28, GRIMER     ; 10% chance
-	db 28, KOFFING    ;  5% chance
+	db 28, GRIMER     ;  5% chance
 	db 35, WEEZING    ;  5% chance
-	db 35, WEEZING    ;  4% chance
+	db 38, MUK        ;  4% chance
 	db 38, MUK        ;  1% chance
 
 	; MAGMAR (4/4)
