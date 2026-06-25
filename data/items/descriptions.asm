@@ -279,8 +279,8 @@ MasterBallDesc:
 UltraBallDesc:
 ;	db   "A BALL with a high"
 ;	next "rate of success.@"
-	db   "#BALL with a high"
-	next "catch rate.@"
+	db   "#BALL with a"
+	next "high catch rate.@"
 
 BrightpowderDesc:
 	db   "Lowers the foe's"
@@ -289,8 +289,8 @@ BrightpowderDesc:
 GreatBallDesc:
 ;	db   "A BALL with a good"
 ;	next "rate of success.@"
-	db   "#BALL with a good"
-	next "catch rate.@"
+	db   "#BALL with a"
+	next "good catch rate.@"
 
 PokeBallDesc:
 ;	db   "An item for catch-"

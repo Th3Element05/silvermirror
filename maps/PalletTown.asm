@@ -144,7 +144,7 @@ PalletTownOakExplainsTentacoolText:
 	roll "ROUTE 19 and 20."
 
 	para "They're south from"
-	roll "FUCHSIA CITY."
+	line "FUCHSIA CITY."
 	done
 
 PalletTownOneStepRightMovement:

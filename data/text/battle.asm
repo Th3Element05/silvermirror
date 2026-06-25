@@ -72,7 +72,7 @@ HurtByBurnText:
 LeechSeedSapsText:
 	text "LEECH SEED"
 	line "saps HP from"
-	line "<USER>!" ;"<USER>!"
+	cont "<USER>!" ;"<USER>!"
 	prompt
 
 HasANightmareText:
