@@ -351,7 +351,8 @@ endr
 
 	push hl
 	ld hl, EvolvedIntoText
-	call PrintTextboxText
+;	call PrintTextboxText
+	call PrintText
 	farcall StubbedTrainerRankings_MonsEvolved
 
 	ld de, MUSIC_NONE
