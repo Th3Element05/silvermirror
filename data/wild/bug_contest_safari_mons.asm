@@ -203,4 +203,3 @@ ContestSafariMonsNormal:
 	assert_table_length 30
 	
 	db -1 ; terminator
-	

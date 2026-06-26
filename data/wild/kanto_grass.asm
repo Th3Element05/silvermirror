@@ -871,8 +871,8 @@ KantoGrassWildMons:
 	db 18, ZUBAT      ; 10% chance
 	db 18, GASTLY     ;  5% chance
 	db 18, GASTLY     ;  5% chance
-	db 18, GASTLY     ;  4% chance
-	db 20, CUBONE     ;  1% chance
+	db 25, HAUNTER    ;  4% chance
+	db 17, CUBONE     ;  1% chance
 	; nite
 	db 18, GASTLY     ; 20% chance
 	db 18, GASTLY     ; 20% chance
@@ -881,9 +881,9 @@ KantoGrassWildMons:
 	db 18, GASTLY     ; 10% chance
 	db 18, ZUBAT      ; 10% chance
 	db 18, GASTLY     ;  5% chance
-	db 18, GASTLY     ;  5% chance
+	db 25, HAUNTER    ;  5% chance
 	db 18, GASTLY     ;  4% chance
-	db 20, CUBONE     ;  1% chance
+	db 17, CUBONE     ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons POKEMON_TOWER_4F ;GEN1
@@ -897,8 +897,8 @@ KantoGrassWildMons:
 	db 18, ZUBAT      ; 10% chance
 	db 19, GASTLY     ;  5% chance
 	db 19, GASTLY     ;  5% chance
-	db 19, GASTLY     ;  4% chance
-	db 20, CUBONE     ;  1% chance
+	db 25, HAUNTER    ;  4% chance
+	db 18, CUBONE     ;  1% chance
 	; nite
 	db 18, GASTLY     ; 20% chance
 	db 18, GASTLY     ; 20% chance
@@ -907,9 +907,9 @@ KantoGrassWildMons:
 	db 18, GASTLY     ; 10% chance
 	db 18, ZUBAT      ; 10% chance
 	db 19, GASTLY     ;  5% chance
-	db 19, GASTLY     ;  5% chance
-	db 25, HAUNTER    ;  4% chance
-	db 20, CUBONE     ;  1% chance
+	db 25, HAUNTER    ;  5% chance
+	db 19, GASTLY     ;  4% chance
+	db 18, CUBONE     ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons POKEMON_TOWER_5F ;GEN1
@@ -924,7 +924,7 @@ KantoGrassWildMons:
 	db 20, GASTLY     ;  5% chance
 	db 20, GASTLY     ;  5% chance
 	db 25, HAUNTER    ;  4% chance
-	db 20, CUBONE     ;  1% chance
+	db 19, CUBONE     ;  1% chance
 	; nite
 	db 18, GASTLY     ; 20% chance
 	db 18, GASTLY     ; 20% chance
@@ -933,9 +933,9 @@ KantoGrassWildMons:
 	db 19, GASTLY     ; 10% chance
 	db 18, ZUBAT      ; 10% chance
 	db 20, GASTLY     ;  5% chance
-	db 20, GASTLY     ;  5% chance
-	db 25, HAUNTER    ;  4% chance
-	db 20, CUBONE     ;  1% chance
+	db 25, HAUNTER    ;  5% chance
+	db 20, GASTLY     ;  4% chance
+	db 19, CUBONE     ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons POKEMON_TOWER_6F ;GEN1
@@ -949,7 +949,7 @@ KantoGrassWildMons:
 	db 18, ZUBAT      ; 10% chance
 	db 20, GASTLY     ;  5% chance
 	db 25, HAUNTER    ;  5% chance
-	db 20, CUBONE     ;  4% chance
+	db 20, GASTLY     ;  4% chance
 	db 20, CUBONE     ;  1% chance
 	; nite
 	db 18, GASTLY     ; 20% chance
@@ -959,8 +959,8 @@ KantoGrassWildMons:
 	db 20, GASTLY     ; 10% chance
 	db 18, ZUBAT      ; 10% chance
 	db 20, GASTLY     ;  5% chance
-	db 25, HAUNTER    ;  5% chance
-	db 20, CUBONE     ;  4% chance
+	db 20, GASTLY     ;  5% chance
+	db 25, HAUNTER    ;  4% chance
 	db 20, CUBONE     ;  1% chance
 	end_grass_wildmons
 
@@ -975,7 +975,7 @@ KantoGrassWildMons:
 	db 18, ZUBAT      ; 10% chance
 	db 20, GASTLY     ;  5% chance
 	db 25, HAUNTER    ;  5% chance
-	db 20, CUBONE     ;  4% chance
+	db 20, GASTLY     ;  4% chance
 	db 20, CUBONE     ;  1% chance
 	; nite
 	db 18, GASTLY     ; 20% chance
@@ -985,8 +985,8 @@ KantoGrassWildMons:
 	db 20, GASTLY     ; 10% chance
 	db 18, ZUBAT      ; 10% chance
 	db 20, GASTLY     ;  5% chance
-	db 25, HAUNTER    ;  5% chance
-	db 20, CUBONE     ;  4% chance
+	db 20, GASTLY     ;  5% chance
+	db 25, HAUNTER    ;  4% chance
 	db 20, CUBONE     ;  1% chance
 	end_grass_wildmons
 
@@ -1028,7 +1028,7 @@ KantoGrassWildMons:
 	db 20, SEEL       ;  5% chance
 	db 20, SEEL       ;  5% chance
 	db 28, KINGLER    ;  4% chance
-	db 28, KINGLER    ;  1% chance
+	db 28, SLOWBRO    ;  1% chance
 	; nite
 	db 19, ZUBAT      ; 20% chance
 	db 20, KRABBY     ; 20% chance
@@ -1039,7 +1039,7 @@ KantoGrassWildMons:
 	db 19, ZUBAT      ;  5% chance
 	db 22, GOLBAT     ;  5% chance
 	db 28, KINGLER    ;  4% chance
-	db 28, KINGLER    ;  1% chance
+	db 28, SLOWBRO    ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons SEAFOAM_ISLANDS_B2F ;GEN1
@@ -1462,8 +1462,8 @@ KantoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; day
 	db 16, PIDGEY     ; 20% chance
-	db 12, BELLSPROUT ; 20% chance
-	db 10, EEVEE      ; 15% chance
+	db 10, EEVEE      ; 20% chance
+	db 12, BELLSPROUT ; 15% chance
 	db 18, PIDGEOTTO  ; 10% chance
 	db 12, ABRA       ; 10% chance
 	db 12, BELLSPROUT ; 10% chance
@@ -1472,9 +1472,9 @@ KantoGrassWildMons:
 	db  7, SQUIRTLE   ;  4% chance
 	db  7, SQUIRTLE   ;  1% chance
 	; nite
-	db 12, BELLSPROUT ; 20% chance
+	db 10, EEVEE      ; 20% chance
 	db 14, VENONAT    ; 20% chance
-	db 10, EEVEE      ; 15% chance
+	db 12, BELLSPROUT ; 15% chance
 	db 12, ODDISH     ; 10% chance
 	db 12, ABRA       ; 10% chance
 	db 12, ODDISH     ; 10% chance
