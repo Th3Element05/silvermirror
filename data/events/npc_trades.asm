@@ -13,17 +13,17 @@ NPCTrades:
 ; twin, route 5 underground entrance (gender specific text: hardcoded ♂ / ♀)
 	npctrade TRADE_DIALOGSET_GIRL,      NIDORAN_F,  NIDORAN_M,  "SPIKE@@@@@@", $9e, $ee, PECHA_BERRY,  58236, "MIA@@@@@@@@", TRADE_GENDER_FEMALE
 ; youngster, route 11 gate 2f
-	npctrade TRADE_DIALOGSET_HAPPY,     GEODUDE,    CUBONE,     "FLINT@@@@@@", $9e, $ee, THICK_CLUB,   90714, "LUCAS@@@@@@", TRADE_GENDER_EITHER
+	npctrade TRADE_DIALOGSET_HAPPY,     GEODUDE,    CUBONE,     "FLINT@@@@@@", $9e, $ee, THICK_CLUB,   20714, "LUCAS@@@@@@", TRADE_GENDER_EITHER
 ; super_nerd, route 18 gate 2f
 	npctrade TRADE_DIALOGSET_COLLECTOR, SLOWBRO,    LICKITUNG,  "MARC@@@@@@@", $7e, $ee, LEPPA_BERRY,  26850, "NOAH@@@@@@@", TRADE_GENDER_EITHER
 ; gramps, cerulean trade speech house
-	npctrade TRADE_DIALOGSET_HAPPY,     POLIWHIRL,  JYNX,       "LOLA@@@@@@@", $7e, $ee, ASPEAR_BERRY, 71392, "MASON@@@@@@", TRADE_GENDER_EITHER
+	npctrade TRADE_DIALOGSET_HAPPY,     POLIWHIRL,  JYNX,       "LOLA@@@@@@@", $7e, $ee, ASPEAR_BERRY, 31392, "MASON@@@@@@", TRADE_GENDER_EITHER
 ; twin, vermilion magnet train speech house
 	npctrade TRADE_DIALOGSET_GENERIC,   SPEAROW,    FARFETCH_D, "DUX@@@@@@@@", $9e, $ee, STICK,        45087, "ELYSSA@@@@@", TRADE_GENDER_EITHER
 ; scientist, cinnabar lab fossil room
 	npctrade TRADE_DIALOGSET_GENERIC,   DITTO,      DITTO,      "MORPH@@@@@@", $ee, $ee, METAL_POWDER, 19643, "JIM@@@@@@@@", TRADE_GENDER_EITHER
 ; gramps, cinnabar lab
-	npctrade TRADE_DIALOGSET_HAPPY,     GROWLITHE,  CHANSEY,    "DORIS@@@@@@", $7e, $ee, LUCKY_PUNCH,  82415, "CLIFTON@@@@", TRADE_GENDER_EITHER
+	npctrade TRADE_DIALOGSET_HAPPY,     GROWLITHE,  CHANSEY,    "DORIS@@@@@@", $7e, $ee, LUCKY_PUNCH,  52415, "CLIFTON@@@@", TRADE_GENDER_EITHER
 ; beauty, cinnabar lab
 	npctrade TRADE_DIALOGSET_COLLECTOR, VENONAT,    TANGELA,    "CRINKLES@@@", $9e, $ee, CHESTO_BERRY, 37508, "NORMA@@@@@@", TRADE_GENDER_EITHER
 ; lass, olivine tims house 
