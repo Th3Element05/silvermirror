@@ -1,7 +1,6 @@
 	db PORYGON ; 137
 
-	db  65,  60,  70,  40,  85,  75  ;PORYGON
-;	db  85,  80,  90,  60, 105,  95  ;PORYGON2
+	db  65,  60,  70,  40,  85,  75
 	;   hp  atk  def  spd  sat  sdf
 
 	db NORMAL, NORMAL ; type
@@ -24,3 +23,6 @@
 ;SKULL_BASH
 ;PSYWAVE
 ;MIMIC
+
+;	db  85,  80,  90,  60, 105,  95  ;PORYGON2
+	;   hp  atk  def  spd  sat  sdf
