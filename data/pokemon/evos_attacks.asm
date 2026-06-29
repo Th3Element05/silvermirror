@@ -1680,8 +1680,8 @@ HypnoEvosAttacks:
 	db 1, DREAM_EATER ;1, EVOLUTION_MOVE
 	db 1, NIGHTMARE
 	db 1, TACKLE ;pound, removed
-	db 1, HYPNOSIS
-	db 7, DISABLE
+	db 1, DISABLE
+	db 7, HYPNOSIS
 	db 9, CONFUSION
 	db 15, HEADBUTT
 	db 18, SMOG ;poison_gas, removed
@@ -3501,7 +3501,7 @@ YanmaEvosAttacks:
 
 YanmegaEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, BUG_BUZZ
+;	db 1, BUG_BUZZ
 	db 1, AIR_SLICE
 	db 1, NIGHT_SLASH
 	db 1, BUG_BITE
