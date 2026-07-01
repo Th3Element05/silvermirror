@@ -242,12 +242,12 @@ KantoGrassWildMonsChallenge:
 	db 16, NIDORAN_M  ; 20% chance
 	db 16, NIDORAN_F  ; 20% chance
 	db 16, SPEAROW    ; 15% chance
-	db 16, SENTRET    ; 10% chance
+	db 16, SPEAROW    ; 10% chance
 	db 16, EKANS      ; 10% chance
 	db 16, SANDSHREW  ; 10% chance
 	db 20, NIDORINO   ;  5% chance
 	db 20, NIDORINA   ;  5% chance
-	db 16, SPEAROW    ;  4% chance
+	db 16, SANDSHREW  ;  4% chance
 	db 16, YANMA      ;  1% chance
 	; nite
 	db 16, NIDORAN_M  ; 20% chance
@@ -258,7 +258,7 @@ KantoGrassWildMonsChallenge:
 	db 16, ZUBAT      ; 10% chance
 	db 20, NIDORINO   ;  5% chance
 	db 20, NIDORINA   ;  5% chance
-	db 16, ZUBAT      ;  4% chance
+	db 16, RATTATA    ;  4% chance
 	db 16, YANMA      ;  1% chance
 	end_grass_wildmons
 

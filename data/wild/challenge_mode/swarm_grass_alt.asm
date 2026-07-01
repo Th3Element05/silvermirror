@@ -1181,35 +1181,9 @@ SwarmGrassWildMonsAltChallenge:
 	; day
 	db 14, KOFFING    ; 20% chance
 	db 15, KOFFING    ; 20% chance
-	db 13, RATTATA    ; 15% chance
-	db 14, RATTATA    ; 10% chance
-	db 15, RATTATA    ; 10% chance
-	db 16, KOFFING    ; 10% chance
-	db 14, ZUBAT      ;  5% chance
-	db 15, ZUBAT      ;  5% chance
-	db 20, RATICATE   ;  4% chance
-	db 20, RATICATE   ;  1% chance
-	; nite
-	db 14, KOFFING    ; 20% chance
-	db 15, KOFFING    ; 20% chance
-	db 13, RATTATA    ; 15% chance
-	db 14, RATTATA    ; 10% chance
-	db 15, MISDREAVUS ; 10% chance
-	db 16, KOFFING    ; 10% chance
-	db 14, ZUBAT      ;  5% chance
-	db 15, ZUBAT      ;  5% chance
-	db 20, RATICATE   ;  4% chance
-	db 20, RATICATE   ;  1% chance
-
-	; KOFFING (2/2)
-	def_grass_wildmons BURNED_TOWER_B1F
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
-	; day
-	db 14, KOFFING    ; 20% chance
-	db 15, KOFFING    ; 20% chance
 	db 14, RATTATA    ; 15% chance
 	db 16, KOFFING    ; 10% chance
-	db 16, KOFFING    ; 10% chance
+	db 20, RATICATE   ; 10% chance
 	db 20, MAGMAR     ; 10% chance
 	db 15, RATTATA    ;  5% chance
 	db 15, SLUGMA     ;  5% chance
@@ -1220,7 +1194,33 @@ SwarmGrassWildMonsAltChallenge:
 	db 15, KOFFING    ; 20% chance
 	db 14, RATTATA    ; 15% chance
 	db 16, KOFFING    ; 10% chance
+	db 21, RATICATE   ; 10% chance
+	db 15, MISDREAVUS ; 10% chance
+	db 15, RATTATA    ;  5% chance
+	db 15, SLUGMA     ;  5% chance
+	db 15, ZUBAT      ;  4% chance
+	db 16, ZUBAT      ;  1% chance
+
+	; KOFFING (2/2)
+	def_grass_wildmons BURNED_TOWER_B1F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; day
+	db 14, KOFFING    ; 20% chance
+	db 15, KOFFING    ; 20% chance
+	db 14, RATTATA    ; 15% chance
 	db 16, KOFFING    ; 10% chance
+	db 20, RATICATE   ; 10% chance
+	db 20, MAGMAR     ; 10% chance
+	db 15, RATTATA    ;  5% chance
+	db 15, SLUGMA     ;  5% chance
+	db 15, ZUBAT      ;  4% chance
+	db 16, ZUBAT      ;  1% chance
+	; nite
+	db 14, KOFFING    ; 20% chance
+	db 15, KOFFING    ; 20% chance
+	db 14, RATTATA    ; 15% chance
+	db 16, KOFFING    ; 10% chance
+	db 21, RATICATE   ; 10% chance
 	db 15, MISDREAVUS ; 10% chance
 	db 15, RATTATA    ;  5% chance
 	db 15, SLUGMA     ;  5% chance

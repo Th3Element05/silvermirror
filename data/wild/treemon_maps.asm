@@ -134,6 +134,7 @@ TreeMonMaps:
 	treemon_map ROUTE_30,                  TREEMON_SET_ROUTE
 ;	treemon_map CHERRYGROVE_CITY,          TREEMON_SET_TOWN
 	treemon_map ROUTE_29,                  TREEMON_SET_ROUTE
+	treemon_map NEW_BARK_TOWN,             TREEMON_SET_TOWN
 ;	treemon_map ROUTE_45,                  TREEMON_SET_TOWN
 ;	treemon_map ROUTE_46,                  TREEMON_SET_TOWN
 	treemon_map BLACKTHORN_CITY,           TREEMON_SET_TOWN
@@ -166,6 +167,7 @@ RockMonMaps:
 	treemon_map CERULEAN_CAVE_1F,          TREEMON_SET_ROCK
 	treemon_map CERULEAN_CAVE_2F,          TREEMON_SET_ROCK
 	treemon_map CERULEAN_CAVE_B1F,         TREEMON_SET_ROCK
+	treemon_map FUCHSIA_CITY,              TREEMON_SET_SEA_ROCK_KANTO
 	treemon_map ROUTE_19,                  TREEMON_SET_SEA_ROCK_KANTO
 	treemon_map ROUTE_20,                  TREEMON_SET_SEA_ROCK_KANTO
 	treemon_map BURNED_TOWER_1F,           TREEMON_SET_FIRE_ROCK
