@@ -336,6 +336,7 @@ SaffronGateGulpText:
 	line "Glug glug…"
 	cont "…"
 	cont "Gulp…" ;cont on purpose, not roll
+	done
 
 SaffronGateOpenText:
 	ntag "OFFICER:"
