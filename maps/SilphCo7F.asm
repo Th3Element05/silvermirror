@@ -505,7 +505,6 @@ SilphCo7F_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	bg_event 16,  0, BGEVENT_READ, SilphCoElevatorButton
 	warp_event 17,  0, SILPH_CO_ELEVATOR, 1
 	warp_event 22,  0, SILPH_CO_8F, 3
 	warp_event 20,  0, SILPH_CO_6F, 2
@@ -518,6 +517,7 @@ SilphCo7F_MapEvents:
 	coord_event  3,  3, SCENE_SILPHCO7F_RIVAL_BATTLE, SilphCo7FRivalEncounterLow
 
 	def_bg_events
+	bg_event 16,  0, BGEVENT_READ, SilphCoElevatorButton
 	bg_event 20,  4, BGEVENT_IFNOTSET, SilphCo7F_Door1
 	bg_event 21,  4, BGEVENT_IFNOTSET, SilphCo7F_Door1
 	bg_event 10,  6, BGEVENT_IFNOTSET, SilphCo7F_Door2
