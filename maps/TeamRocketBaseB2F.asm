@@ -583,8 +583,8 @@ TeamRocketBaseB2FTaxesText:
 TeamRocketBaseB2FHiddenFullHeal:
 	hiddenitem FULL_HEAL, EVENT_TEAM_ROCKET_BASE_B2F_HIDDEN_FULL_HEAL
 
-TeamRocketBaseB2FTMThief:
-	itemball TM_THIEF
+;TeamRocketBaseB2FTMThief:
+;	itemball TM_THIEF
 
 TeamRocketBaseB2F_MapEvents:
 	db 0, 0 ; filler
@@ -636,6 +636,6 @@ TeamRocketBaseB2F_MapEvents:
 	object_event 25, 13, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_TRAINER, 0, TrainerNinjaGenin, -1
 	object_event  4,  1, SPRITE_NINJA, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_TRAINER, 0, TrainerNinjaChunin, -1
 ; TM_THIEF
-	object_event  3, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, TeamRocketBaseB2FTMThief, EVENT_TEAM_ROCKET_BASE_B2F_TM_THIEF
+;	object_event  3, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, TeamRocketBaseB2FTMThief, EVENT_TEAM_ROCKET_BASE_B2F_TM_THIEF
 
 ;.GrayOverTreeOBPalette
