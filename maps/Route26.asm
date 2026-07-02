@@ -86,8 +86,8 @@ TrainerCooltrainerMGavin:
 	iftrue .GavinDefeated
 	checkevent EVENT_GAVIN_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskedAlready
-	writetext CooltrainerMGavinAfterBattleText
-	promptbutton
+;	writetext CooltrainerMGavinAfterBattleText
+;	promptbutton
 	setevent EVENT_GAVIN_ASKED_FOR_PHONE_NUMBER
 	scall .AskNumber1
 	jump .AskForNumber
@@ -275,8 +275,8 @@ TrainerCooltrainerFBeth:
 	iftrue .BethDefeated
 	checkevent EVENT_BETH_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskedAlready
-	writetext CooltrainerFBethAfterBattleText
-	promptbutton
+;	writetext CooltrainerFBethAfterBattleText
+;	promptbutton
 	setevent EVENT_BETH_ASKED_FOR_PHONE_NUMBER
 	scall .AskNumber1
 	jump .AskForNumber

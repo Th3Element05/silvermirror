@@ -22,8 +22,8 @@ TrainerBirdKeeperJamie:
 	iftrue .JamieDefeated
 	checkevent EVENT_JAMIE_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskAgainForPhoneNumber
-	writetext BirdKeeperJamieAfterBattleText
-	waitbutton
+;	writetext BirdKeeperJamieAfterBattleText
+;	waitbutton
 	setevent EVENT_JAMIE_ASKED_FOR_PHONE_NUMBER
 	scall Route17AskNumber1
 	jump .ContinueAskForPhoneNumber

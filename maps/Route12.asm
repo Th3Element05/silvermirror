@@ -222,8 +222,8 @@ TrainerFisherTully:
 	iftrue .TullyDefeated
 	checkevent EVENT_TULLY_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskedAlready
-	writetext FisherTullyAfterBattleText
-	promptbutton
+;	writetext FisherTullyAfterBattleText
+;	promptbutton
 	setevent EVENT_TULLY_ASKED_FOR_PHONE_NUMBER
 	scall Route17AskNumber1
 	sjump .AskForNumber

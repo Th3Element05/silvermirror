@@ -338,8 +338,8 @@ TrainerBirdKepperVance:
 	iftrue .VanceDefeated
 	checkevent EVENT_VANCE_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskedAlready
-	writetext BirdKeeperVanceLegendaryBirdsText
-	promptbutton
+;	writetext BirdKeeperVanceLegendaryBirdsText
+;	promptbutton
 	setevent EVENT_VANCE_ASKED_FOR_PHONE_NUMBER
 	scall Route20AskNumber1
 	sjump .AskForNumber

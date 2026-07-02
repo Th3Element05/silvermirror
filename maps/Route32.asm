@@ -252,8 +252,8 @@ TrainerFisherWilton:
 	iftrue .WiltonDefeated
 	checkevent EVENT_WILTON_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskedAlready
-	writetext FisherWiltonAfterText
-	promptbutton
+;	writetext FisherWiltonAfterText
+;	promptbutton
 	setevent EVENT_WILTON_ASKED_FOR_PHONE_NUMBER
 	scall Route32AskNumber1M
 	sjump .AskForNumber
@@ -386,8 +386,8 @@ TrainerFisherRalph:
 	iftrue .RalphDefeated
 	checkevent EVENT_RALPH_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskAgain
-	writetext FisherRalphAfterText
-	promptbutton
+;	writetext FisherRalphAfterText
+;	promptbutton
 	setevent EVENT_RALPH_ASKED_FOR_PHONE_NUMBER
 	scall Route32AskNumber1M
 	sjump .AskForNumber

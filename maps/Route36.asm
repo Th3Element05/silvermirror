@@ -380,8 +380,8 @@ TrainerSchoolboyTorin:
 	iftrue .TorinDefeated
 	checkevent EVENT_TORIN_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskedBefore
-	writetext SchoolboyTorinAfterBattleText
-	waitbutton
+;	writetext SchoolboyTorinAfterBattleText
+;	waitbutton
 	setevent EVENT_TORIN_ASKED_FOR_PHONE_NUMBER
 	scall Route36AskNumber1
 	jump .AskForNumber
@@ -480,8 +480,8 @@ TrainerSchoolboyChad:
 	iftrue .ChadDefeated
 	checkevent EVENT_CHAD_ASKED_FOR_PHONE_NUMBER
 	iftrue .SecondTimeAsking
-	writetext SchoolboyChadAfterBattleText
-	promptbutton
+;	writetext SchoolboyChadAfterBattleText
+;	promptbutton
 	setevent EVENT_CHAD_ASKED_FOR_PHONE_NUMBER
 	scall Route36AskNumber1
 	sjump .AskToRegisterNumber

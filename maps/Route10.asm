@@ -69,8 +69,8 @@ TrainerPokemaniacBrent:
 	iftrue .BrentDefeated
 	checkevent EVENT_BRENT_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskedAlready
-	writetext PokemaniacBrentAfterBattleText
-	promptbutton
+;	writetext PokemaniacBrentAfterBattleText
+;	promptbutton
 	setevent EVENT_BRENT_ASKED_FOR_PHONE_NUMBER
 	scall .AskNumber1
 	sjump .AskForNumber

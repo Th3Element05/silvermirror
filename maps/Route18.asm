@@ -36,8 +36,8 @@ TrainerBirdKeeperJose:
 	iftrue .JoseDefeated
 	checkevent EVENT_JOSE_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskedAlready
-	writetext BirdKeeperJoseAfterBattleText
-	promptbutton
+;	writetext BirdKeeperJoseAfterBattleText
+;	promptbutton
 	setevent EVENT_JOSE_ASKED_FOR_PHONE_NUMBER
 	scall Route17AskNumber1
 	sjump .AskForNumber

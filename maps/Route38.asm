@@ -120,8 +120,8 @@ TrainerSailorHuey:
 	iftrue .HueyDefeated
 	checkevent EVENT_HUEY_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskedBefore
-	writetext SailorHueyAfterBattleText
-	promptbutton
+;	writetext SailorHueyAfterBattleText
+;	promptbutton
 	setevent EVENT_HUEY_ASKED_FOR_PHONE_NUMBER
 	scall .AskNumber1
 	sjump .AskForNumber

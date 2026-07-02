@@ -265,8 +265,8 @@ TrainerSchoolboyAlan:
 	iftrue .AlanDefeated
 	checkevent EVENT_ALAN_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskAgainForPhoneNumber
-	writetext SchoolboyAlanAfterBattleText
-	promptbutton
+;	writetext SchoolboyAlanAfterBattleText
+;	promptbutton
 	setevent EVENT_ALAN_ASKED_FOR_PHONE_NUMBER
 	scall Route11AskNumber1
 	sjump .ContinueAskForPhoneNumber
@@ -360,8 +360,8 @@ TrainerYoungsterIan:
 	iftrue .IanDefeated
 	checkevent EVENT_IAN_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskedAlready
-	writetext YoungsterIanAfterBattleText
-	promptbutton
+;	writetext YoungsterIanAfterBattleText
+;	promptbutton
 	setevent EVENT_IAN_ASKED_FOR_PHONE_NUMBER
 	scall Route11AskNumber1
 	sjump .AskForNumber
@@ -531,8 +531,8 @@ TrainerPokefanFBeverly: ;no rematch, give nugget
 	iftrue .BeverlyDefeated
 	checkevent EVENT_BEVERLY_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskAgain
-	writetext PokefanFBeverlyAfterBattleText
-	promptbutton
+;	writetext PokefanFBeverlyAfterBattleText
+;	promptbutton
 	setevent EVENT_BEVERLY_ASKED_FOR_PHONE_NUMBER
 	scall .AskNumber1F
 	sjump .RequestNumber

@@ -146,8 +146,8 @@ TrainerLassDana:
 	iftrue .DanaDefeated
 	checkevent EVENT_DANA_ASKED_FOR_PHONE_NUMBER
 	iftrue .SecondTimeAsking
-	writetext LassDanaAfterBattleText
-	promptbutton
+;	writetext LassDanaAfterBattleText
+;	promptbutton
 	setevent EVENT_DANA_ASKED_FOR_PHONE_NUMBER
 	scall .AskNumber1F
 	sjump .AskForPhoneNumber

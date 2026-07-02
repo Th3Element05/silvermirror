@@ -224,8 +224,8 @@ TrainerYoungsterJoey:
 	iftrue .JoeyDefeated
 	checkevent EVENT_JOEY_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskAgain
-	writetext YoungsterJoey1AfterText
-	promptbutton
+;	writetext YoungsterJoey1AfterText
+;	promptbutton
 	setevent EVENT_JOEY_ASKED_FOR_PHONE_NUMBER
 	scall .AskNumber1
 	sjump .RequestNumber

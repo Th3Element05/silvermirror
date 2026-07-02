@@ -39,8 +39,8 @@ TrainerBugCatcherDoug:
 	iftrue .DougDefeated
 	checkevent EVENT_DOUG_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskedBefore
-	writetext BugCatcherDougAfterBattleText
-	promptbutton
+;	writetext BugCatcherDougAfterBattleText
+;	promptbutton
 	setevent EVENT_DOUG_ASKED_FOR_PHONE_NUMBER
 	scall Route9AskNumber1
 	jump .AskForNumber
@@ -293,8 +293,8 @@ TrainerPicnickerGina:
 	iftrue .GinaDefeated
 	checkevent EVENT_GINA_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskAgain
-	writetext PicnickerGinaAfterBattleText
-	promptbutton
+;	writetext PicnickerGinaAfterBattleText
+;	promptbutton
 	setevent EVENT_GINA_ASKED_FOR_PHONE_NUMBER
 	scall Route9AskNumber1
 	sjump .FinishAsk

@@ -191,8 +191,8 @@ TrainerLassHillary:
 	iftrue .HillaryDefeated
 	checkevent EVENT_HILLARY_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskedBefore
-	writetext LassHillaryAfterBattleText
-	waitbutton
+;	writetext LassHillaryAfterBattleText
+;	waitbutton
 	setevent EVENT_HILLARY_ASKED_FOR_PHONE_NUMBER
 	scall .AskNumber1
 	jump .AskForNumber

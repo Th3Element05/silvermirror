@@ -54,8 +54,8 @@ TrainerPicnickerErin:
 	iftrue .ErinDefeated
 	checkevent EVENT_ERIN_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskedAlready
-	writetext PicnickerErinAfterBattleText
-	promptbutton
+;	writetext PicnickerErinAfterBattleText
+;	promptbutton
 	setevent EVENT_ERIN_ASKED_FOR_PHONE_NUMBER
 	scall .AskNumber1F
 	sjump .AskForNumber
@@ -213,8 +213,8 @@ TrainerHikerKenny:
 	iftrue .KennyDefeated
 	checkevent EVENT_KENNY_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskedBefore
-	writetext HikerKennyAfterBattleText
-	waitbutton
+;	writetext HikerKennyAfterBattleText
+;	waitbutton
 	setevent EVENT_KENNY_ASKED_FOR_PHONE_NUMBER
 	scall .AskNumber1
 	jump .AskForNumber

@@ -208,8 +208,8 @@ TrainerSchoolboyBilly:
 	iftrue .BillyDefeated
 	checkevent EVENT_BILLY_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskedBefore
-	writetext SchoolboyBillyAfterBattleText
-	waitbutton
+;	writetext SchoolboyBillyAfterBattleText
+;	waitbutton
 	setevent EVENT_BILLY_ASKED_FOR_PHONE_NUMBER
 	scall .AskNumber1
 	jump .AskForNumber

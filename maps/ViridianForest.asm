@@ -151,8 +151,8 @@ TrainerBugCatcherRob:
 	iftrue .RobDefeated
 	checkevent EVENT_ROB_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskedBefore
-	writetext BugCatcherRobAfterBattleText
-	promptbutton
+;	writetext BugCatcherRobAfterBattleText
+;	promptbutton
 	setevent EVENT_ROB_ASKED_FOR_PHONE_NUMBER
 	scall .AskNumber1
 	jump .AskForNumber

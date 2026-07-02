@@ -181,8 +181,8 @@ TrainerBikerAiden:
 	iftrue .AidenDefeated
 	checkevent EVENT_AIDEN_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskedBefore
-	writetext BikerAidenAfterBattleText
-	waitbutton
+;	writetext BikerAidenAfterBattleText
+;	waitbutton
 	setevent EVENT_AIDEN_ASKED_FOR_PHONE_NUMBER
 	scall Route17AskNumber1
 	jump .AskForNumber

@@ -168,8 +168,8 @@ TrainerFirebreatherWalt:
 	iftrue .WaltDefeated
 	checkevent EVENT_WALT_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskedAlready
-	writetext FirebreatherWaltAfterBattleText
-	promptbutton
+;	writetext FirebreatherWaltAfterBattleText
+;	promptbutton
 	setevent EVENT_WALT_ASKED_FOR_PHONE_NUMBER
 	scall Route35AskNumber1M
 	jump .AskForNumber

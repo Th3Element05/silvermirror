@@ -233,8 +233,8 @@ TrainerHikerAnthony:
 	iftrue .AnthonyDefeated
 	checkevent EVENT_ANTHONY_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskAgain
-	writetext HikerAnthonyAfterBattleText
-	promptbutton
+;	writetext HikerAnthonyAfterBattleText
+;	promptbutton
 	setevent EVENT_ANTHONY_ASKED_FOR_PHONE_NUMBER
 	scall .AskNumber1
 	jump .AskForPhoneNumber

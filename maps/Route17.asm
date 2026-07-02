@@ -200,8 +200,8 @@ TrainerBikerEoin:
 	iftrue .EoinDefeated
 	checkevent EVENT_EOIN_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskedBefore
-	writetext BikerEoinAfterBattleText
-	waitbutton
+;	writetext BikerEoinAfterBattleText
+;	waitbutton
 	setevent EVENT_EOIN_ASKED_FOR_PHONE_NUMBER
 	scall Route17AskNumber1
 	jump .AskForNumber

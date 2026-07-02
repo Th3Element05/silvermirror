@@ -28,8 +28,8 @@ TrainerBugCatcherWade1:
 	iftrue .WadeDefeated
 	checkevent EVENT_WADE_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskAgain
-	writetext BugCatcherWade1AfterText
-	promptbutton
+;	writetext BugCatcherWade1AfterText
+;	promptbutton
 	setevent EVENT_WADE_ASKED_FOR_PHONE_NUMBER
 	scall .AskPhoneNumberSTD
 	sjump .Continue

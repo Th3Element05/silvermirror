@@ -301,8 +301,8 @@ TrainerCamperTanner:
 	iftrue .TannerDefeated
 	checkevent EVENT_TANNER_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskAgainForPhoneNumber
-	writetext CamperTannerAfterBattleText
-	waitbutton
+;	writetext CamperTannerAfterBattleText
+;	waitbutton
 	setevent EVENT_TANNER_ASKED_FOR_PHONE_NUMBER
 	scall .AskNumber1
 	jump .ContinueAskForPhoneNumber

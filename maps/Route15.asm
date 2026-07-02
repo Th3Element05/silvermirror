@@ -232,8 +232,8 @@ TrainerPicnickerTiffany:
 	iftrue .TiffanyDefeated
 	checkevent EVENT_TIFFANY_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskedAlready
-	writetext PicnickerTiffanyAfterBattleText
-	promptbutton
+;	writetext PicnickerTiffanyAfterBattleText
+;	promptbutton
 	setevent EVENT_TIFFANY_ASKED_FOR_PHONE_NUMBER
 	scall .AskNumber1
 	sjump .AskForNumber

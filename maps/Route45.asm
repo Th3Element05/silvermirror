@@ -184,8 +184,8 @@ TrainerHikerParry:
 	iftrue .ParryDefeated
 	checkevent EVENT_PARRY_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskedAlready
-	writetext HikerParryAfterBattleText
-	promptbutton
+;	writetext HikerParryAfterBattleText
+;	promptbutton
 	setevent EVENT_PARRY_ASKED_FOR_PHONE_NUMBER
 	scall Route45AskNumber1M
 	sjump .AskForNumber
@@ -287,8 +287,8 @@ TrainerBlackbeltKenji:
 	checkevent EVENT_KENJI_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskedAlready
 	special SampleKenjiBreakCountdown
-	writetext BlackbeltKenjiAfterBattleText
-	waitbutton
+;	writetext BlackbeltKenjiAfterBattleText
+;	waitbutton
 	setevent EVENT_KENJI_ASKED_FOR_PHONE_NUMBER
 	scall Route45AskNumber1M
 	sjump .AskForNumber

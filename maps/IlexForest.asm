@@ -226,8 +226,8 @@ TrainerBugCatcherArnie:
 	iftrue .ArnieDefeated
 	checkevent EVENT_ARNIE_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskedAlready
-	writetext BugCatcherArnieAfterBattleText
-	promptbutton
+;	writetext BugCatcherArnieAfterBattleText
+;	promptbutton
 	setevent EVENT_ARNIE_ASKED_FOR_PHONE_NUMBER
 	scall .AskNumber1M
 	jump .AskForNumber

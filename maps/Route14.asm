@@ -126,8 +126,8 @@ TrainerBikerReese:
 	iftrue .ReeseDefeated
 	checkevent EVENT_REESE_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskedBefore
-	writetext BikerReeseAfterBattleText
-	waitbutton
+;	writetext BikerReeseAfterBattleText
+;	waitbutton
 	setevent EVENT_REESE_ASKED_FOR_PHONE_NUMBER
 	scall Route17AskNumber1
 	jump .AskForNumber

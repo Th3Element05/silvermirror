@@ -53,8 +53,8 @@ TrainerFisherKyle:
 	iftrue .KyleDefeated
 	checkevent EVENT_KYLE_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskedBefore
-	writetext FisherKyleAfterBattleText
-	promptbutton
+;	writetext FisherKyleAfterBattleText
+;	promptbutton
 	setevent EVENT_KYLE_ASKED_FOR_PHONE_NUMBER
 	scall Route20AskNumber1
 	jump .AskForNumber

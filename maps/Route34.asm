@@ -18,8 +18,8 @@ TrainerCamperTodd:
 	iftrue .ToddDefeated
 	checkevent EVENT_TODD_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskAgain
-	writetext CamperToddAfterText
-	promptbutton
+;	writetext CamperToddAfterText
+;	promptbutton
 	setevent EVENT_TODD_ASKED_FOR_PHONE_NUMBER
 	scall .AskNumber
 	sjump .FinishAsk

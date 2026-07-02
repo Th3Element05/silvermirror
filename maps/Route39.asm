@@ -168,8 +168,8 @@ TrainerPokefanmDerek:
 	iftrue .NumberAccepted
 	checkevent EVENT_DEREK_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskedAlready
-	writetext PokefanMDerekText_NotBragging
-	promptbutton
+;	writetext PokefanMDerekText_NotBragging
+;	promptbutton
 	setevent EVENT_DEREK_ASKED_FOR_PHONE_NUMBER
 	scall .AskNumber1
 	sjump .AskForNumber
