@@ -8,3 +8,11 @@
 	page "from the south"
 	next "along with the"
 	next "spring.@"
+
+;	db   "This legendary"
+;	next "#MON is said to"
+;	next "migrate from the"
+;
+;	page "south, bringing"
+;	next "the warm spring"
+;	next "weather with it.@"

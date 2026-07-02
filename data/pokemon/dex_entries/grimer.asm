@@ -3,8 +3,8 @@
 
 	db   "When two of these"
 	next "#MON's bodies"
-	next "are combined"
+	next "are combined,"
 
-	page "together, new"
+	page "dangerous new"
 	next "poisons are"
 	next "created.@"

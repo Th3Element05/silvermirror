@@ -3,8 +3,8 @@
 
 	db   "It hypnotizes"
 	next "itself so that it"
-	next "can teleport away"
+	next "can teleport when"
 
-	page "when it senses"
-	next "danger, even"
-	next "if it is asleep.@"
+	page "it senses danger,"
+	next "even while it is"
+	next "asleep.@"

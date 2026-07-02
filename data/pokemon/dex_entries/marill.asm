@@ -3,8 +3,8 @@
 
 	db   "The fur on its"
 	next "body naturally"
-	next "repels water. It"
+	next "repels water."
 
-	page "can stay dry, even"
-	next "when it plays in"
-	next "the water.@"
+	page "It can stay dry,"
+	next "even when playing"
+	next "underwater.@"
