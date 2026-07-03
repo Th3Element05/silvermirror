@@ -22,10 +22,10 @@ ReceptionScene:
 ;	end
 
 PewterMuseum1F_Reception_Scientist_Script:
-	faceplayer
-	opentext
 	checkscene
 	iftrue .AlreadyPayed
+	faceplayer
+	opentext
 	readvar VAR_FACING
 	ifequal DOWN, .DontSneakIn
 	ifequal LEFT, .DontSneakIn
@@ -69,7 +69,8 @@ PewterMuseum1F_Reception_Scientist_Script:
 	end
 
 .AlreadyPayed:
-	jumptext PewterMuseum1F_Scientist_TakeYourTimeText
+	jumptextfaceplayer PewterMuseum1F_Scientist_TakeYourTimeText
+
 
 PewterMuseum1F_Fossil_Scientist_Script:
 	jumptextfaceplayer PewterMuseum1F_Scientist_PrideAndJoyText

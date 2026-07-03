@@ -63,7 +63,7 @@ PewterMuseum2F_Girl_Text:
 	text "I want a PIKACHU!"
 	line "It's so cute!"
 
-	para "I asked my Daddy"
+	para "I asked my daddy"
 	line "to catch me one!"
 	done
 

@@ -288,9 +288,10 @@ ViridianForestYoungster2:
 	jumptextfaceplayer ViridianForestYoungster2Text
 ViridianForestYoungster2Text:
 	ntag "YOUNGSTER:"
-	text "I ran out of #"
+	text "I ran out of #-"
 	line "BALLs to catch"
 	cont "#MON with!"
+
 	para "You should carry"
 	line "extras!"
 	done

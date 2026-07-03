@@ -29,7 +29,7 @@ ViridianNicknameSpeechHouseGirlScript:
 	jumptextfaceplayer ViridianNicknameSpeechHouseGirlText
 ViridianNicknameSpeechHouseGirlText:
 	ntag "GIRL:"
-	text "My Daddy loves"
+	text "My daddy loves"
 	line "#MON too."
 	done
 
