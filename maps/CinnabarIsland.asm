@@ -105,14 +105,26 @@ CinnabarIslandMissingNoScript:
 	setevent EVENT_CAUGHT_MISSINGNO
 .nocatch
 	setscene SCENE_CINNABARISLAND_NOOP
+	opentext
+	writetext CinnabarIslandFoundRareCandyText
+	playsound SFX_ITEM
+	waitsfx
+	waitbutton
 	giveitem RARE_CANDY, 10
 ;	giveitem RARE_CANDY, 8
 ;	giveitem RARE_CANDY, 4
 ;	giveitem RARE_CANDY, 2
 ;	giveitem RARE_CANDY, 1
 ;	giveitem RARE_CANDY, 1
+	closetext
 .End
 	end
+
+CinnabarIslandFoundRareCandyText:
+	text "<PLAYER> found"
+	line "10 RARE CANDY."
+	done
+
 
 CinnabarIsland_MapEvents:
 	db 0, 0 ; filler
