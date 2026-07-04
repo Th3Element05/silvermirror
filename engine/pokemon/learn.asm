@@ -321,6 +321,8 @@ ForgetMove:
 	jr z, .print_num
 	cp 80
 	jr z, .print_num
+	cp 60
+	jr z, .print_num
 	inc a
 	cp 1
 	jr z, .no_acc
