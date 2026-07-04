@@ -88,8 +88,9 @@ BrockIntroText:
 
 	para "Do you still want"
 	line "to challenge me?"
-	cont "Fine then! Show"
-	roll "me your best!"
+
+	para "Fine then! Show"
+	line "me your best!"
 	done
 
 BrockWinLossText:
