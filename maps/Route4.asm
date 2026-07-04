@@ -141,7 +141,7 @@ Route4_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  7,  7, BGEVENT_READ, Route4Sign
+	bg_event  9,  7, BGEVENT_READ, Route4Sign
 	bg_event 16,  3, BGEVENT_ITEM, Route4HiddenGreatBall
 
 	def_object_events
