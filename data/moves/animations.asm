@@ -1430,22 +1430,28 @@ BattleAnim_PoisonTail:
 
 BattleAnim_PinMissile:
 	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_HP_BUG
-	anim_2gfx BATTLE_ANIM_GFX_HORN, BATTLE_ANIM_GFX_HIT
-	anim_sound 0, 0, SFX_RAZOR_WIND
-	anim_obj BATTLE_ANIM_OBJ_MEDIUM_HORN, 64, 92, $28
-	anim_wait 12
-	anim_obj BATTLE_ANIM_OBJ_MEDIUM_HORN, 56, 84, $28
-	anim_sound 0, 1, SFX_POISON_STING
-	anim_obj BATTLE_ANIM_OBJ_HIT, 136, 56, $0
-	anim_wait 12
-	anim_obj BATTLE_ANIM_OBJ_MEDIUM_HORN, 52, 88, $28
-	anim_sound 0, 1, SFX_POISON_STING
-	anim_obj BATTLE_ANIM_OBJ_HIT, 128, 48, $0
-	anim_wait 12
-	anim_sound 0, 1, SFX_POISON_STING
-	anim_obj BATTLE_ANIM_OBJ_HIT, 132, 52, $0
-	anim_wait 16
-	anim_ret
+	anim_jump  BattleAnim_SpikeCannon
+;
+;	anim_2gfx BATTLE_ANIM_GFX_HORN, BATTLE_ANIM_GFX_HIT
+;;	anim_sound 0, 1, SFX_MEGA_PUNCH
+;	anim_obj BATTLE_ANIM_OBJ_MEDIUM_HORN, 52, 88, $18
+;	anim_wait 12
+;	anim_obj BATTLE_ANIM_OBJ_MEDIUM_HORN, 64, 92, $18
+;	anim_sound 0, 1, SFX_POISON_STING
+;	anim_obj BATTLE_ANIM_OBJ_HIT_SMALL, 130, 50, $0
+;	anim_wait 12
+;	anim_obj BATTLE_ANIM_OBJ_MEDIUM_HORN, 56, 84, $18
+;	anim_sound 0, 1, SFX_POISON_STING
+;	anim_obj BATTLE_ANIM_OBJ_HIT_SMALL, 136, 56, $0
+;	anim_wait 12
+;	anim_obj BATTLE_ANIM_OBJ_MEDIUM_HORN, 60, 96, $18
+;	anim_sound 0, 1, SFX_POISON_STING
+;	anim_obj BATTLE_ANIM_OBJ_HIT_SMALL, 128, 48, $0
+;	anim_wait 12
+;	anim_sound 0, 1, SFX_POISON_STING
+;	anim_obj BATTLE_ANIM_OBJ_HIT_SMALL, 137, 57, $0
+;	anim_wait 16
+;	anim_ret
 
 BattleAnim_Leer:
 	anim_1gfx BATTLE_ANIM_GFX_BEAM
@@ -3025,8 +3031,8 @@ BattleAnim_Astonish:
 
 BattleAnim_IcicleSpear:
 	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_ICE
-;BattleAnim_SpikeCannon:
-	anim_2gfx BATTLE_ANIM_GFX_HORN, BATTLE_ANIM_GFX_HIT ;BATTLE_ANIM_OBJ_ICE ;
+BattleAnim_SpikeCannon:
+	anim_2gfx BATTLE_ANIM_GFX_HORN, BATTLE_ANIM_GFX_HIT
 	anim_sound 0, 1, SFX_MEGA_PUNCH
 ;.loop
 	anim_obj BATTLE_ANIM_OBJ_MEDIUM_HORN, 52, 88, $18
