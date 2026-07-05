@@ -91,12 +91,17 @@ LoadHPBar:
 	call Get1bppViaHDMA
 	ld de, ExpBarGFX
 	ld hl, vTiles2 tile $55
-	lb bc, BANK(ExpBarGFX), 9
+	lb bc, BANK(ExpBarGFX), 11 ;9
 	call Get2bppViaHDMA
-	ld de, MobilePhoneTilesGFX + 7 tiles ; mobile phone icon
-	ld hl, vTiles2 tile $5e
-	lb bc, BANK(MobilePhoneTilesGFX), 2
-	call Get2bppViaHDMA
+;	ld de, MobilePhoneTilesGFX + 7 tiles ; mobile phone icon
+;	ld hl, vTiles2 tile $5e
+;	lb bc, BANK(MobilePhoneTilesGFX), 2
+;	call Get2bppViaHDMA
+
+;	ld de, ExpBarGFX + 12 tiles ; no-catch icon
+;	ld hl, vTiles2 tile $7f
+;	lb bc, BANK(ExpBarGFX), 1
+;	call Get2bppViaHDMA
 	ret
 
 StatsScreen_LoadFont:

@@ -175,32 +175,49 @@ _CGB_FinishBattleScreenLayout:
 	call InitPartyMenuBGPal7
 	hlcoord 0, 0, wAttrmap
 	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
-	ld a, PAL_BATTLE_BG_ENEMY_HP
+	ld a, PAL_BATTLE_BG_EXP ;PAL_BATTLE_BG_ENEMY_HP
 	call ByteFill
+
+; player mon backpic
 	hlcoord 0, 4, wAttrmap
 	lb bc, 8, 10
 	ld a, PAL_BATTLE_BG_PLAYER
 	call FillBoxCGB
+
+; enemy mon frontpic
 	hlcoord 10, 0, wAttrmap
 	lb bc, 7, 10
 	ld a, PAL_BATTLE_BG_ENEMY
 	call FillBoxCGB
-	hlcoord 0, 0, wAttrmap
-	lb bc, 4, 10
+
+; enemy HP bar
+	hlcoord 0, 2, wAttrmap ;0, 0
+	lb bc, 2, 11 ;4, 10
 	ld a, PAL_BATTLE_BG_ENEMY_HP
 	call FillBoxCGB
-	hlcoord 10, 7, wAttrmap
-	lb bc, 5, 10
+
+; player HP bar
+	hlcoord 9, 9, wAttrmap ;10, 7
+	lb bc, 3, 11 ;5, 10
 	ld a, PAL_BATTLE_BG_PLAYER_HP
 	call FillBoxCGB
+
+; player EXP bar
 	hlcoord 10, 11, wAttrmap
-	lb bc, 1, 9
+	lb bc, 1, 8 ;1, 9
 	ld a, PAL_BATTLE_BG_EXP
 	call FillBoxCGB
+
+; textbox
 	hlcoord 0, 12, wAttrmap
 	ld bc, 6 * SCREEN_WIDTH
 	ld a, PAL_BATTLE_BG_TEXT
 	call ByteFill
+
+;	hlcoord 1, 1, wAttrmap
+;	lb bc, 1, 9
+;	ld a, PAL_BATTLE_BG_EXP
+;	call FillBoxCGB
 
 ; HUD vertical bar thingy
 ; flip enemy vertical bar tile

@@ -4850,9 +4850,9 @@ PrintPlayerHUD:
 	callfar GetGender
 	ld a, " "
 	jr c, .got_gender_char
-	ld a, "♂"
+	ld a, $5e ;"♂"
 	jr nz, .got_gender_char
-	ld a, "♀"
+	ld a, $5f ;"♀"
 
 .got_gender_char
 	hlcoord 17, 8
@@ -4940,9 +4940,9 @@ DrawEnemyHUD:
 	callfar GetGender
 	ld a, " "
 	jr c, .got_gender
-	ld a, "♂"
+	ld a, $5e ;"♂"
 	jr nz, .got_gender
-	ld a, "♀"
+	ld a, $5f ;"♀"
 
 .got_gender
 	hlcoord 9, 1
@@ -6167,8 +6167,6 @@ MoveInfoBox:
 	cp 100
 	jr z, .print_num
 	cp 80
-	jr z, .print_num
-	cp 60
 	jr z, .print_num
 	inc a
 	cp 1

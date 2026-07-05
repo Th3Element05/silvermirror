@@ -126,7 +126,7 @@ DrawPlayerPartyIconHUDBorder:
 
 .tiles
 	db $6d ;$73 ; right side
-	db $5c ; bottom right
+	db $77 ;$5c ; bottom right
 	db $6f ; bottom left
 	db $62 ;$76 ; bottom side
 .tiles_end
@@ -142,18 +142,18 @@ DrawEnemyHUDBorder:
 	ld a, [wBattleMode]
 	dec a
 ;	ret nz
-	jr nz, .no_catch
+	jr nz, .trainer
 	ld a, [wTempEnemyMonSpecies]
 	dec a
 	call CheckCaughtMon
 	ret z
 	hlcoord 1, 1
-	ld [hl], $5d
+	ld [hl], $5d ;caught icon
 	ret
 
-.no_catch
+.trainer
 	hlcoord 1, 1
-	ld [hl], $c8
+	ld [hl], $5c ;no-catch icon
 	ret
 
 .tiles
