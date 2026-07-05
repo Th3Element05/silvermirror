@@ -141,13 +141,19 @@ DrawEnemyHUDBorder:
 	call PlaceHUDBorderTiles
 	ld a, [wBattleMode]
 	dec a
-	ret nz
+;	ret nz
+	jr nz, .no_catch
 	ld a, [wTempEnemyMonSpecies]
 	dec a
 	call CheckCaughtMon
 	ret z
 	hlcoord 1, 1
 	ld [hl], $5d
+	ret
+
+.no_catch
+	hlcoord 1, 1
+	ld [hl], $c8
 	ret
 
 .tiles
