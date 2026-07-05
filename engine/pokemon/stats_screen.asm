@@ -421,7 +421,7 @@ StatsScreen_InitUpperHalf:
 	call CopyNickname
 	hlcoord 8, 2
 	call PlaceString
-	hlcoord 18, 0
+	hlcoord 17, 0 ;18, 0
 	call .PlaceGenderChar
 	hlcoord 9, 4
 	ld a, "/"
@@ -457,9 +457,9 @@ StatsScreen_InitUpperHalf:
 	farcall GetGender
 	pop hl
 	ret c
-	ld a, "♂"
+	ld a, $32 ;"♂"
 	jr nz, .got_gender
-	ld a, "♀"
+	ld a, $33 ;"♀"
 .got_gender
 	ld [hl], a
 	ret
@@ -887,9 +887,9 @@ LoadBluePage:
 	cp $7f
 	jr z, .done
 	and CAUGHT_GENDER_MASK
-	ld a, "♂"
+	ld a, $32 ;"♂" ;$32
 	jr z, .got_gender
-	ld a, "♀"
+	ld a, $33 ;"♀" ;$33
 .got_gender
 	hlcoord 9, 13
 	ld [hl], a

@@ -333,8 +333,9 @@ _CGB_StatsScreenHPPals:
 	ld hl, StatsScreenPagePals
 	ld de, wBGPals1 palette 3 ; palettes 3 & 4
 ;	ld bc, 3 palettes ; pink, green, and blue page palettes
-	ld bc, 2 palettes ; pink, green, blue, ( and orange page) palettes
+;	ld bc, 2 palettes ; pink, green, blue, ( and orange page) palettes
 	; NOTE: Won't hurt anything if you don't have a 4th stats page, just leave it
+	ld bc, 3 palettes ; pink, green, blue pages. shiny, male, female icons
 
 	ld a, BANK(wBGPals1)
 	call FarCopyWRAM
@@ -369,10 +370,26 @@ _CGB_StatsScreenHPPals:
 	ld a, $1 ; mon palette
 	call FillBoxCGB
 
-	hlcoord 10, 16, wAttrmap
-	ld bc, 10
+;; exp bar
+;	hlcoord 10, 16, wAttrmap
+;	ld bc, 10
+;	ld a, $2 ; exp palette
+;	call ByteFill
+; exp bar and OT gender icon
+	hlcoord 9, 13, wAttrmap
+	lb bc, 4, 10
 	ld a, $2 ; exp palette
+	call FillBoxCGB
+
+	hlcoord 17, 0, wAttrmap
+	ld bc, 3
+	ld a, $5 ; gender/shiny icon palette
 	call ByteFill
+
+;	hlcoord 9, 13, wAttrmap
+;	ld bc, 1
+;	ld a, $2 ; exp palette (OT player gender)
+;	call ByteFill
 
 ; page indicator boxes
 	hlcoord 13, 5, wAttrmap ; If 4th Stats Page implemented use this instead -> hlcoord 11, 5, wAttrmap
@@ -1374,7 +1391,7 @@ INCLUDE "gfx/trainer_card/kanto_badges.pal"
 
 _CGB_MoveList:
 	ld de, wBGPals1
-	ld a, PREDEFPAL_GOLDENROD
+	ld a, PREDEFPAL_47 ;PREDEFPAL_GOLDENROD
 	call GetPredefPal
 	call LoadHLPaletteIntoDE
 	ld a, [wPlayerHPPal]
@@ -1386,6 +1403,12 @@ _CGB_MoveList:
 	add hl, bc
 	call LoadPalette_White_Col1_Col2_Black
 	call WipeAttrmap
+
+;	ld hl, StatsScreenPagePals
+;	ld de, wBGPals1 palette 3 ; palettes 3 & 4
+;	ld bc, 3 palettes ; pink, green, blue pages. shiny, male, female icons
+;	ld a, BANK(wBGPals1)
+;	call FarCopyWRAM
 
 	ld hl, Moves + MOVE_TYPE
 	ld a, [wCurSpecies]
@@ -1429,6 +1452,16 @@ _CGB_MoveList:
 	ld de, wBGPals1 palette 2 + 6 ; slot 4 of palette 2
 	ld c, 2 ; 1 color (2 bytes)
 	call LoadCPaletteBytesFromHLIntoDE
+
+; Gender (and shiny) icon tiles
+	hlcoord 1, 0, wAttrmap
+	ld bc, 1 ; area 1 Tile in HEIGHT, 1 Tiles in WIDTH
+	ld a, $0 ; Palette 0
+	call ByteFill
+;	hlcoord 1, 0, wAttrmap
+;	ld bc, 1 ; area 1 Tile in HEIGHT, 1 Tiles in WIDTH
+;	ld a, $5 ; Palette 0
+;	call ByteFill
 
 ; Type and Category tiles
 	hlcoord 11, 12, wAttrmap ;2, 13, wAttrmap

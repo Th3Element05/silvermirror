@@ -1218,12 +1218,20 @@ SetUpMoveScreenBG:
 	callfar GetGender
 	ld a, " "
 	jr c, .got_gender_char
-	ld a, "♂"
+	ld a, $32 ;"♂"
 	jr nz, .got_gender_char
-	ld a, "♀"
+	ld a, $33 ;"♀"
 .got_gender_char
-	hlcoord 8, 0
+	hlcoord 1, 0 ;8, 0
 	ld [hl], a
+
+;; place shiny icon
+;	ld bc, wTempMonDVs
+;	farcall CheckShininess
+;	jr nc, .not_shiny
+;	hlcoord 9, 0
+;	ld [hl], "⁂"
+;.not_shiny
 
 	ld hl, wPlayerHPPal
 	call SetHPPal
