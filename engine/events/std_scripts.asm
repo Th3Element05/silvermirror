@@ -158,8 +158,7 @@ PokecenterNurseScript:
 	turnobject LAST_TALKED, UP
 	pause 10
 	turnobject LAST_TALKED, DOWN
-	pause 10
-
+;	pause 10
 	waitbutton
 	closetext
 	end
