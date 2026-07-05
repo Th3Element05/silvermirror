@@ -8,6 +8,11 @@
 	RGB 17, 31, 31 ; blue, color 2
 	RGB 30, 22, 12 ; orange, color 3
 	RGB 00, 00, 00 ; black, color 4
+; female, male, & shiny
+	RGB 31, 31, 31 ; White, color 1
+	RGB 31, 10, 10 ; female, color 2
+	RGB 10, 20, 31 ; male, color 3
+	RGB 31, 31, 10 ; shiny, color 4
 
 
 ;; light/faded
