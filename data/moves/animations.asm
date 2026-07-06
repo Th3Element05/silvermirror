@@ -641,6 +641,7 @@ BattleAnim_FakeOut:
 	anim_ret
 
 BattleAnim_KarateChop:
+	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_HP_FIGHTING
 	anim_1gfx BATTLE_ANIM_GFX_HIT
 	anim_sound 0, 1, SFX_KARATE_CHOP
 	anim_obj BATTLE_ANIM_OBJ_PALM, 136, 40, $0
@@ -1901,6 +1902,7 @@ BattleAnim_Submission:
 
 BattleAnim_LowSweep:
 ;BattleAnim_LowKick:
+	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_HP_FIGHTING
 	anim_1gfx BATTLE_ANIM_GFX_HIT
 	anim_bgeffect BATTLE_BG_EFFECT_FLASH_INVERTED, $0, $4, $2
 	anim_sound 0, 1, SFX_DOUBLE_KICK
@@ -4582,21 +4584,24 @@ BattleAnimSub_Wind:
 	anim_bgeffect BATTLE_BG_EFFECT_CYCLE_OBPALS_GRAY_AND_YELLOW, $0, $2, $0
 	anim_bgeffect BATTLE_BG_EFFECT_ALTERNATE_HUES, $0, $2, $0
 	anim_battlergfx_1row
-	anim_sound 0, 0, SFX_PSYCHIC
+;	anim_sound 0, 0, SFX_SWORDS_DANCE ;SFX_PSYCHIC
 .loop
 	anim_wait 8
 	anim_obj BATTLE_ANIM_OBJ_SHOOTING_SPARKLE, 64, 88, $4
+	anim_sound 0, 0, SFX_SCRATCH
 	anim_wait 8
 	anim_obj BATTLE_ANIM_OBJ_SHOOTING_SPARKLE, 64, 80, $4
 	anim_wait 8
 	anim_obj BATTLE_ANIM_OBJ_SHOOTING_SPARKLE, 64, 96, $4
 	anim_wait 8
 	anim_loop 2, .loop
+;	anim_sound 0, 0, SFX_SCRATCH
 	anim_wait 16
 	anim_bgeffect BATTLE_BG_EFFECT_BATTLEROBJ_2ROW, $0, BG_EFFECT_USER, $0
 	anim_wait 6
+	anim_sound 0, 0, SFX_SWORDS_DANCE
 	anim_bgeffect BATTLE_BG_EFFECT_NIGHT_SHADE, $0, BG_EFFECT_TARGET, $8
-	anim_wait 64
+	anim_wait 48 ;64
 	anim_incbgeffect BATTLE_BG_EFFECT_NIGHT_SHADE
 	anim_bgeffect BATTLE_BG_EFFECT_SHOW_MON, $0, BG_EFFECT_USER, $0
 	anim_wait 4
