@@ -1181,19 +1181,13 @@ BattleAnim_FuryStrikes:
 	anim_wait 4
 	anim_sound 0, 1, SFX_HORN_ATTACK
 	anim_obj BATTLE_ANIM_OBJ_HIT, 120, 42, $0
-;	anim_wait 8
-;	anim_call BattleAnim_TargetObj_1Row
-;	anim_bgeffect BATTLE_BG_EFFECT_TACKLE, $0, BG_EFFECT_USER, $0
 	anim_wait 8
 	anim_sound 0, 1, SFX_HORN_ATTACK
 	anim_obj BATTLE_ANIM_OBJ_HIT, 146, 46, $0
-;	anim_wait 8
-;	anim_call BattleAnim_TargetObj_1Row
-;	anim_bgeffect BATTLE_BG_EFFECT_TACKLE, $0, BG_EFFECT_USER, $0
 	anim_wait 8
 	anim_sound 0, 1, SFX_HORN_ATTACK
 	anim_obj BATTLE_ANIM_OBJ_HIT, 124, 50, $0
-	anim_wait 8
+	anim_wait 4
 	anim_call BattleAnim_ShowMon_0
 	anim_ret
 
