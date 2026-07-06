@@ -1150,37 +1150,37 @@ LuckyNumberShow8:
 	jp NextRadioLine
 
 LuckyNumberShow9:
-	ld hl, LC_Text7
+	ld hl, LC_Text6
 	ld a, LUCKY_NUMBER_SHOW_10
 	jp NextRadioLine
 
 LuckyNumberShow10:
-	ld hl, LC_Text9
+	ld hl, LC_Text7
 	ld a, LUCKY_NUMBER_SHOW_11
 	jp NextRadioLine
 
 LuckyNumberShow11:
-	ld hl, LC_Text10
+	ld hl, LC_Text9
 	ld a, LUCKY_NUMBER_SHOW_12
 	jp NextRadioLine
 
 LuckyNumberShow12:
-	ld hl, LC_Text11
+	ld hl, LC_Text10
 	ld a, LUCKY_NUMBER_SHOW_13
 	jp NextRadioLine
 
 LuckyNumberShow13:
-	ld hl, LC_Text12
+	ld hl, LC_Text11
 	ld a, LUCKY_NUMBER_SHOW_14
 	jp NextRadioLine
 
 LuckyNumberShow14:
-	ld hl, LC_Text13
+	ld hl, LC_Text12
 	ld a, LUCKY_NUMBER_SHOW_15
 	jp NextRadioLine
 
 LuckyNumberShow15:
-	ld hl, LC_Text14
+	ld hl, LC_Text13
 	ld a, LUCKY_CHANNEL ; loop
 	jp NextRadioLine
 

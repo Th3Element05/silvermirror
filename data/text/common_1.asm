@@ -889,7 +889,7 @@ _LC_Text5::
 
 _LC_Text6::
 	text_start
-	line "Today's Lucky"
+	line "Today the Lucky"
 	done
 
 _LC_Text7::
