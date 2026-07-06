@@ -50,7 +50,7 @@ Route5GateStopScript4:
 	closetext
 	showemote EMOTE_SHOCK, PLAYER, 20
 	applymovement PLAYER, Route5GateStopMovement4
-	; fallthrough
+	sjump SaffronGateClosedScript ;Route5GateClosedScript
 
 ;Route5GateClosedScript:
 ;	farscall SaffronGateClosedScript
