@@ -1,9 +1,8 @@
 KriseMiniSkirtText:
 	text "It wasn't a very"
 	line "smart idea to"
-
-	para "come to the PARK"
-	line "in a miniskirt,"
+	cont "come to the PARK"
+	roll "in a miniskirt,"
 	cont "was it…?"
 
 	para "These leaves keep"
@@ -14,9 +13,8 @@ KriseMiniSkirtText:
 KriseReminderText:
 	text "Hi! You haven't"
 	line "forgotten about"
-
-	para "your promise to"
-	line "battle me?"
+	cont "your promise to"
+	roll "battle me?"
 
 	para "I'm waiting on"
 	line "@"

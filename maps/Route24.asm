@@ -150,7 +150,7 @@ TrainerCamperIvan:
 
 CamperIvanSeenText:
 	ntag "CAMPER:"
-	text "Okay! I'm No. 5!"
+	text "Okay! I'm No.5!"
 	line "I'll stomp you!"
 	done
 
@@ -178,7 +178,7 @@ TrainerLassLaura:
 
 LassLauraSeenText:
 	ntag "LASS:"
-	text "I'm No. 4!"
+	text "I'm No.4!"
 	line "Getting tired?"
 	done
 
@@ -205,7 +205,7 @@ TrainerYoungsterAlbert:
 
 YoungsterAlbertSeenText:
 	ntag "YOUNGSTER:"
-	text "Here's No. 3!"
+	text "Here's No.3!"
 	line "I won't be easy!"
 	done
 

@@ -40,7 +40,7 @@ TannerReminderText:
 	cont "@"
 	text_from_ram wStringBuffer5
 	text ","
-	cont "so you should have"
-	roll "no trouble find-"
-	cont "ing me!"
+	roll "so you should have"
+	cont "no trouble find-"
+	roll "ing me!"
 	done

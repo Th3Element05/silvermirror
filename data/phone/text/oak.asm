@@ -15,7 +15,7 @@ OakPhoneEvaluatePokedexText:
 	para "You should drop"
 	line "by sometime so I"
 	cont "can evaluate your"
-	cont "#DEX."
+	roll "#DEX."
 	done
 
 OakPhoneHowManyBadgesText:
@@ -41,7 +41,7 @@ OakPhoneSSAnneText:
 	para "The cruise ship,"
 	line "S.S.ANNE, is in"
 	cont "VERMILION CITY"
-	cont "right now!"
+	roll "right now!"
 
 	para "Its passengers are"
 	line "all trainers!"
@@ -75,7 +75,7 @@ OakPhoneGetFlashText:
 	para "Listen, I have"
 	line "something that"
 	cont "should be useful"
-	cont "on your journey."
+	roll "on your journey."
 
 ;	para "My assitant is"
 ;	line "waiting for you"
@@ -112,7 +112,7 @@ OakPhoneSilphCoText:
 	para "I've just heard"
 	line "news about TEAM"
 	cont "ROCKET activity"
-	cont "in SAFFRON CITY!"
+	roll "in SAFFRON CITY!"
 
 	para "Be careful if you"
 	line "go to challenge"
@@ -140,7 +140,7 @@ OakPhoneViridianGymText:
 	para "I've gotten word"
 	line "the GYM LEADER in"
 	cont "VIRIDIAN CITY has"
-	cont "returned!"
+	roll "returned!"
 
 	para "If you need more"
 	line "BADGEs, you should"
@@ -153,7 +153,7 @@ OakPhoneRemindViridianGymText:
 	para "If you need more"
 	line "GYM BADGEs, you"
 	cont "should challenge"
-	cont "the GYM LEADER in"
+	roll "the GYM LEADER in"
 	cont "VIRIDIAN CITY!"
 	done
 
@@ -172,12 +172,12 @@ OakPhoneRadioTowerText:
 	para "I'm at the RADIO"
 	line "TOWER in GOLDENROD"
 	cont "and someone has"
-	cont "taken us hostage!"
+	roll "taken us hostage!"
 
 	para "I never expected"
 	line "anything like this"
 	cont "to happen, I don't"
-	cont "have my #MON"
+	roll "have any #MON"
 	cont "with me!"
 
 	para "Please, help us!"
@@ -189,7 +189,7 @@ OakPhoneRemindRadioTowerText:
 	para "We're still being"
 	line "held hostage at"
 	cont "the RADIO TOWER"
-	cont "in GOLDENROD!"
+	roll "in GOLDENROD!"
 
 	para "Help!"
 	done
@@ -214,7 +214,7 @@ OakPhoneDiscoveredPokerusText:
 	para "Apparently there's"
 	line "something called"
 	cont "#RUS that can"
-	cont "infect #MON."
+	roll "infect #MON."
 
 	para "Yes, it's like a"
 	line "virus, so it's"
@@ -223,12 +223,12 @@ OakPhoneDiscoveredPokerusText:
 	para "It multiplies fast"
 	line "and infects other"
 	cont "#MON too. But"
-	cont "that's all."
+	roll "that's all."
 
 	para "It doesn't seem to"
 	line "do anything, and"
 	cont "it goes away over"
-	cont "time."
+	roll "time."
 
 	para "I guess it's"
 	line "nothing to worry"

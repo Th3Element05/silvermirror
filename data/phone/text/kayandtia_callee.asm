@@ -36,7 +36,6 @@ KayAndTiaReminderText:
 	line "@"
 	text_from_ram wStringBuffer5
 	text ","
-
-	para "so don't forget,"
-	line "okay?"
+	cont "so don't forget,"
+	roll "okay?"
 	done

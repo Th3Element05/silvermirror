@@ -52,8 +52,8 @@ HillaryReminderText:
 	cont "@"
 	text_from_ram wStringBuffer5
 	text_start
-	cont "and have a battle,"
-	roll "right?"
+	roll "and have a battle!"
+;	cont "right?"
 
 	para "Don't forget!"
 	done

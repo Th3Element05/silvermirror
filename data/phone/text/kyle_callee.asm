@@ -66,5 +66,5 @@ KyleReminderText:
 	cont "@"
 	text_from_ram wStringBuffer5
 	text ","
-	cont "so hurry up!"
+	roll "so hurry up!"
 	done
