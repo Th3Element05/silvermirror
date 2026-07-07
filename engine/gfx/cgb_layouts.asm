@@ -381,15 +381,23 @@ _CGB_StatsScreenHPPals:
 	ld a, $2 ; exp palette
 	call FillBoxCGB
 
+; gender/shiny icons
 	hlcoord 17, 0, wAttrmap
 	ld bc, 3
 	ld a, $5 ; gender/shiny icon palette
 	call ByteFill
 
+; OT gender icon
 ;	hlcoord 9, 13, wAttrmap
 ;	ld bc, 1
 ;	ld a, $2 ; exp palette (OT player gender)
 ;	call ByteFill
+
+; PKRS icons
+	hlcoord 0, 8, wAttrmap
+	ld bc, 3
+	ld a, $2 ; exp palette
+	call ByteFill
 
 ; page indicator boxes
 	hlcoord 13, 5, wAttrmap ; If 4th Stats Page implemented use this instead -> hlcoord 11, 5, wAttrmap

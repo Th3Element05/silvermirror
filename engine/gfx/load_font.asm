@@ -133,6 +133,6 @@ LoadStatsScreenPageTilesGFX:
 	ld de, StatsScreenPageTilesGFX
 	ld hl, vTiles2 tile $31
 ;	lb bc, BANK(StatsScreenPageTilesGFX), 17 ; loads 17 Tiles
-	lb bc, BANK(StatsScreenPageTilesGFX), 27 ; Loading More Tiles than in Vanilla
+	lb bc, BANK(StatsScreenPageTilesGFX), 30 ;27 ; Loading More Tiles than in Vanilla
 	call Get2bppViaHDMA
 	ret

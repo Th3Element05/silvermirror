@@ -589,8 +589,8 @@ LoadPinkPage:
 	and $f0
 	jr z, .NotImmuneToPkrs
 ;	hlcoord 8, 8
-	hlcoord 19, 1
-	ld [hl], "." ; Pokérus immunity dot
+	hlcoord 0, 8 ;19, 1
+	ld [hl], $35 ;"." ; Pokérus immunity dot
 .NotImmuneToPkrs:
 	ld a, [wMonType]
 	cp BOXMON
@@ -627,10 +627,18 @@ LoadPinkPage:
 	jr .done_status
 
 .HasPokerus:
-	ld de, .PkrsStr
-	hlcoord 1, 13
-	call PlaceString
-;	jr .done_status
+;	ld de, .PkrsStr
+;	hlcoord 1, 13
+;	call PlaceString
+;;	jr .done_status
+;	jr .NotImmuneToPkrs
+
+	hlcoord 0, 8
+	ld [hl], $4c ; PKRS icon left
+	inc hl
+	ld [hl], $4d ; PKRS icon middle
+	inc hl
+	ld [hl], $4e ; PKRS icon right
 	jr .NotImmuneToPkrs
 
 .StatusOK:
@@ -757,19 +765,19 @@ PrintMonTypeTiles:
 	call AddNTimes
 	ld d, h
 	ld e, l
-	ld hl, vTiles2 tile $4c
+	ld hl, vTiles2 tile $75 ;$4c
 	lb bc, BANK(TypeLightIconGFX), 4 ; Bank in 'c', Number of Tiles in 'c'
 	call Request2bpp
 
 ; placing the Type1 Tiles (from gfx\stats\types_light.png)
 	hlcoord 5, 14
-	ld [hl], $4c
+	ld [hl], $75 ;$4c
 	inc hl
-	ld [hl], $4d
+	ld [hl], $76 ;$4d
 	inc hl
-	ld [hl], $4e
+	ld [hl], $77 ;$4e
 	inc hl
-	ld [hl], $4f
+	ld [hl], $78 ;$4f
 	inc hl
 	ld a, [wBaseType1]
 	ld b, a
