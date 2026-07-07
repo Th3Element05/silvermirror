@@ -7,7 +7,7 @@ BillyResearchText:
 
 BillyReminderText:
 	text "Is that all"
-	cont "right?"
+	line "right?"
 
 	para "We're going to"
 	line "battle again on"
