@@ -23,9 +23,9 @@ BeverlyPhoneCallerScript:
 
 .FoundNugget:
 	setflag ENGINE_BEVERLY_HAS_NUGGET
-	getlandmarkname STRING_BUFFER_5, LANDMARK_NATIONAL_PARK
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_11
 	farsjump PhoneScript_FoundItem_Female
 
 BeverlylRemindNugget:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_NATIONAL_PARK
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_11
 	farsjump BeverlyComePickUpScript

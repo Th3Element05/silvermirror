@@ -43,9 +43,7 @@ BeverlyFoundItemText:
 	line "some NUGGETs."
 
 	para "If you'd like, you"
-	line "could have one as"
-	cont "thanks for helping"
-	roll "me out."
+	line "could have one."
 
 	para "I'll be at"
 	line "@"
