@@ -252,9 +252,9 @@ TMHM_ShowTMMoveDescription:
 	ld [wCurSpecies], a
 
 ; Print UI element
-	hlcoord 0, 11
-	ld de, String_TMHMTabTop
-	call PlaceString
+;	hlcoord 0, 11
+;	ld de, String_TMHMTabTop
+;	call PlaceString
 	hlcoord 0, 12
 	ld de, String_TMHMTabBottom
 	call PlaceString
@@ -441,10 +441,11 @@ TMHM_ShowTMMoveDescription:
 	db " <INF1><INF2>@"
 .unknown_string:
 	db "<?><?><?>@"
-String_TMHMTabTop:
-	db "┌──────┐@"
+;String_TMHMTabTop:
+;	db "┌──────┐@"
 String_TMHMTabBottom:
-	db "│<ATK1><ATK2>    └@"
+;	db "│<ATK1><ATK2>    └@"
+	db "│<ATK1><ATK2>    @"
 
 
 TMHM_ChooseTMorHM:
