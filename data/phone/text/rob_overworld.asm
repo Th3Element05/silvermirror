@@ -43,8 +43,8 @@ RobPhoneFullText:
 RobRematchText:
 	ntag "ROB:"
 	text "My BUG #MON"
-	line "have been wait-"
-	cont "ing for you!"
+	line "have been waiting"
+	cont "for you!"
 	done
 
 RobGiftText:
