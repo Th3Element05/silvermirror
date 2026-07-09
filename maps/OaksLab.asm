@@ -769,12 +769,7 @@ OaksLabPokedexText:
 	done
 
 OaksLabTrashcan:
-	checkevent EVENT_JOHTO_STARTERS
-	iftrue .JohtoStartersTest
 	jumpstd TrashCanScript
-
-.JohtoStartersTest
-	jumptext OaksLabPokedexText
 
 OaksLabBookshelf:
 	jumpstd DifficultBookshelfScript
@@ -2303,14 +2298,14 @@ OaksLab_MapEvents:
 ;	bg_event  8,  6, BGEVENT_READ, DebugLancesRoom
 ;	bg_event  9,  6, BGEVENT_READ, DebugSFXRoom
 ; front bookshelves
-;	bg_event  0,  7, BGEVENT_READ, DebugBeatKantoLeaders
-;	bg_event  1,  7, BGEVENT_READ, DebugLockedKantoGyms
-;	bg_event  2,  7, BGEVENT_READ, Debug
-;	bg_event  3,  7, BGEVENT_READ, DebugCompleteKanto
-;	bg_event  6,  7, BGEVENT_READ, DebugBeatJohtoLeaders
-;	bg_event  7,  7, BGEVENT_READ, Debug
-;	bg_event  8,  7, BGEVENT_READ, Debug
-;	bg_event  9,  7, BGEVENT_READ, DebugRareCandy
+	bg_event  0,  7, BGEVENT_READ, OaksLabBookshelf ;DebugBeatKantoLeaders
+	bg_event  1,  7, BGEVENT_READ, OaksLabBookshelf ;DebugLockedKantoGyms
+	bg_event  2,  7, BGEVENT_READ, OaksLabBookshelf ;Debug
+	bg_event  3,  7, BGEVENT_READ, OaksLabBookshelf ;DebugCompleteKanto
+	bg_event  6,  7, BGEVENT_READ, OaksLabBookshelf ;DebugBeatJohtoLeaders
+	bg_event  7,  7, BGEVENT_READ, OaksLabBookshelf ;Debug
+	bg_event  8,  7, BGEVENT_READ, OaksLabBookshelf ;Debug
+	bg_event  9,  7, BGEVENT_READ, OaksLabBookshelf ;DebugRareCandy
 
 ; normal stuff
 	bg_event  4,  0, BGEVENT_READ, OaksLabPoster1

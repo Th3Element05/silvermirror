@@ -178,7 +178,7 @@ LtSurgeThunderbadgeText:
 
 SurgeExplainTMText:
 	ntag "LT.SURGE:"
-	text "TM52 contains"
+	text "TM42 contains"
 	line "SPARK!"
 
 	para "Teach it to an"

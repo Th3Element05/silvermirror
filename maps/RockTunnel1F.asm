@@ -224,7 +224,7 @@ RockTunnel1FSignText:
 	text "ROCK TUNNEL"
 
 	para "CERULEAN CITY -"
-	cont "LAVENDER TOWN"
+	line "LAVENDER TOWN"
 	done
 
 ; itemballs

@@ -32,7 +32,7 @@ OlivinePunishmentSpeechHouseDadText:
 OlivinePunishmentSpeechHouseDaughterText:
 	ntag "LASS:"
 	text "Whenever I get in"
-	line "trouble, Daddy"
+	line "trouble, daddy"
 	cont "always scares me."
 	done
 

@@ -345,7 +345,7 @@ SSAnneRooms2FBoyScript:
 	jumptextfaceplayer SSAnneRooms2FBoyText
 SSAnneRooms2FBoyText:
 	ntag "BOY:"
-	text "Me and my Daddy"
+	text "Me and my daddy"
 	line "think the SAFARI"
 	cont "ZONE is awesome!"
 	done
