@@ -4097,7 +4097,7 @@ BattleAnim_FlameWheel:
 	anim_obj BATTLE_ANIM_OBJ_FLAME_WHEEL, 48, 106, $0
 	anim_wait 6
 	anim_loop 3, .loop
-	anim_wait 90
+	anim_wait 60 ;90
 ;
 	anim_call BattleAnim_TargetObj_1Row
 	anim_bgeffect BATTLE_BG_EFFECT_TACKLE, $0, BG_EFFECT_USER, $0
