@@ -81,8 +81,8 @@ RocketGruntM8BeatenText:
 RocketGruntM8AfterBattleText:
 	ntag "ROCKET:"
 	text "SILPH SCOPE?"
-	line "I don't know"
-	cont "where it is!"
+	line "I don't know where"
+	cont "it is!"
 	done
 
 TrainerRocketGruntM9:
@@ -185,7 +185,7 @@ RocketHideoutB1F_MapEvents:
 	bg_event 13, 13, BGEVENT_ITEM, RocketHideoutB1FHiddenPPUp
 
 	def_object_events
-	object_event 10, 15, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerRocketGruntM8, EVENT_BEAT_GIOVANNI
+	object_event 10, 15, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerRocketGruntM8, EVENT_BEAT_GIOVANNI
 	object_event  4,  4, SPRITE_ROCKET, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerRocketGruntM7, EVENT_BEAT_GIOVANNI
 	object_event 18,  6, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerRocketGruntF2, EVENT_BEAT_GIOVANNI
 	object_event 20, 16, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerRocketGruntM9, EVENT_BEAT_GIOVANNI
