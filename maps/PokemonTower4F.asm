@@ -30,7 +30,7 @@ MediumMargretAfterBattleText:
 	ntag "MEDIUM:"
 	text "We can't crack"
 	line "the identity of"
-	cont "the GHOST."
+	cont "the ghost."
 	done
 
 TrainerMediumEthel:
@@ -45,14 +45,14 @@ TrainerMediumEthel:
 
 MediumEthelSeenText:
 	ntag "MEDIUM:"
-	text "GHOST! No!"
+	text "Ghost! No!"
 	line "Kwaaah!"
 	done
 
 MediumEthelBeatenText:
 	ntag "ETHEL:"
 	text "Where is the"
-	line "GHOST?"
+	line "ghost?"
 	done
 
 MediumEthelAfterBattleText:
@@ -111,9 +111,9 @@ PokemonTower4F_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event 13,  7, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerMediumMargret, -1
-	object_event  3, 10, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerMediumEthel, -1
-	object_event 11, 12, SPRITE_GRANNY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerMediumRebecca, -1
+	object_event 13,  7, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerMediumMargret, -1
+	object_event  3, 10, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerMediumEthel, -1
+	object_event 11, 12, SPRITE_GRANNY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerMediumRebecca, -1
 	object_event  7, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PokemonTower4FAwakening, EVENT_POKEMON_TOWER_4F_AWAKENING
 	object_event 10, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PokemonTower4FElixer, EVENT_POKEMON_TOWER_4F_ELIXER
 	object_event 10, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PokemonTower4FHPUp, EVENT_POKEMON_TOWER_4F_HP_UP

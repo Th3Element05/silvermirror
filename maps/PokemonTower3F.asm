@@ -29,8 +29,8 @@ MediumMarthaBeatenText:
 
 MediumMarthaAfterBattleText:
 	ntag "MEDIUM:"
-	text "The GHOST can be"
-	line "identified by the"
+	text "The ghost can be"
+	line "identified with a"
 	cont "SILPH SCOPE."
 	done
 
@@ -105,7 +105,7 @@ PokemonTower3F_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  9,  3, SPRITE_GRANNY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerMediumMartha, -1
-	object_event  7,  8, SPRITE_GRANNY, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerMediumGrace, -1
-	object_event  8, 13, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerMediumBethany, -1
+	object_event  9,  3, SPRITE_GRANNY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerMediumMartha, -1
+	object_event  7,  8, SPRITE_GRANNY, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerMediumGrace, -1
+	object_event  8, 13, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerMediumBethany, -1
 	object_event 10,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PokemonTower3FEscapeRope, EVENT_POKEMON_TOWER_3F_ESCAPE_ROPE
