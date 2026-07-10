@@ -6638,13 +6638,21 @@ LoadEnemyMon:
 .NotRoaming:
 ; Register a contains wBattleType
 
+; No Catch battle type
+; Used by Marowak in Pokemon Tower
+; Force female DVs (Cubone's mother)
+	cp BATTLETYPE_NO_CATCH
+	ld b, $dc ; odd ATK, even DEF
+	ld c, $cd ; even SPD, odd SPC
+	jr z, .UpdateDVs
+
 ; Forced shiny battle type
 ; Used by Red Gyarados at Lake of Rage
 	cp BATTLETYPE_FORCESHINY
 	jr nz, .GenerateDVs
 
-	ld b, ATKDEFDV_SHINY ; $ea
-	ld c, SPDSPCDV_SHINY ; $aa
+	ld b, ATKDEFDV_SHINY ; $ef
+	ld c, SPDSPCDV_SHINY ; $fe
 	jr .UpdateDVs
 
 .GenerateDVs:
