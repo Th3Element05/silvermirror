@@ -10,6 +10,7 @@ CeladonHotelTilesCallback:
 	changeblock  0, 0, $0B ; trees
 	changeblock  2, 0, $09 ; blank wall
 	changeblock  6, 0, $0B ; trees
+	changeblock 10, 0, $16 ; up stairs
 	changeblock 12, 2, $05 ; counter
 	changeblock 12, 4, $04 ; blank floor
 	endcallback
@@ -55,7 +56,7 @@ CeladonHotelSuperNerdText:
 	done
 
 CeladonHotelBoyScript:
-	jumptext CeladonHotelBoyText
+	jumptextfaceplayer CeladonHotelBoyText
 CeladonHotelBoyText:
 	ntag "BOY:"
 	text "My sis brought me"

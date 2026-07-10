@@ -8,7 +8,7 @@
 	tilecoll COUNTER, WALL, FLOOR, FLOOR ; 07
 	tilecoll COUNTER, WALL, FLOOR, PC ; 08
 	tilecoll WALL, WALL, FLOOR, FLOOR ; 09
-	tilecoll STAIRCASE, WALL, FLOOR, FLOOR ; 0a
+	tilecoll WALL, STAIRCASE, FLOOR, FLOOR ; 0a
 	tilecoll WALL, WALL, WALL, WALL ; 0b
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 0c
 	tilecoll FLOOR, FLOOR, FLOOR, WARP_CARPET_DOWN ; 0d
@@ -20,7 +20,7 @@
 	tilecoll FLOOR, FLOOR, FLOOR, WALL ; 13
 	tilecoll WALL, PC, FLOOR, FLOOR ; 14
 	tilecoll COUNTER, FLOOR, FLOOR, FLOOR ; 15
-	tilecoll WALL, FLOOR, FLOOR, FLOOR ; 16
+	tilecoll WALL, STAIRCASE, FLOOR, FLOOR ; 16
 	tilecoll WALL, WALL, WALL, WALL ; 17
 	tilecoll WALL, WALL, WALL, WALL ; 18
 	tilecoll FLOOR, WALL, FLOOR, FLOOR ; 19
