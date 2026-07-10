@@ -979,7 +979,7 @@ BattleAnim_Bounce:
 
 BattleAnim_BugBite:
 	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_HP_BUG
-	anim_jump BattleAnim_Peck
+	anim_jump BattleAnim_PeckAnim
 ;	anim_ret
 
 ;BattleAnim_Bind:
@@ -1850,6 +1850,8 @@ BattleAnim_HyperBeam:
 	anim_ret
 
 BattleAnim_Peck:
+	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_HP_FLYING
+BattleAnim_PeckAnim:
 	anim_1gfx BATTLE_ANIM_GFX_HIT
 	anim_sound 0, 1, SFX_PECK
 	anim_obj BATTLE_ANIM_OBJ_HIT_SMALL_YFIX, 128, 48, $0
@@ -1860,6 +1862,7 @@ BattleAnim_Peck:
 	anim_ret
 
 BattleAnim_DrillPeck:
+	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_HP_FLYING
 	anim_1gfx BATTLE_ANIM_GFX_HIT
 .loop
 	anim_sound 0, 1, SFX_PECK
