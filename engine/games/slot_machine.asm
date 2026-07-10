@@ -1859,12 +1859,12 @@ Slots_GetPayout:
 
 .PayoutTable:
 	table_width 2, Slots_GetPayout.PayoutTable
-	dw 700 ; SLOTS_SEVEN
-	dw 300 ; SLOTS_POKEBALL
-	dw  10 ; SLOTS_CHERRY
-	dw  20 ; SLOTS_PIKACHU
-	dw  30 ; SLOTS_SQUIRTLE
-	dw  40 ; SLOTS_STARYU
+	dw 1000 ; SLOTS_SEVEN
+	dw 2000 ; SLOTS_POKEBALL
+	dw   15 ; SLOTS_CHERRY
+	dw   30 ; SLOTS_PIKACHU
+	dw   60 ; SLOTS_SQUIRTLE
+	dw  120 ; SLOTS_STARYU
 ;	dw 300 ; SLOTS_SEVEN
 ;	dw  50 ; SLOTS_POKEBALL
 ;	dw   6 ; SLOTS_CHERRY
