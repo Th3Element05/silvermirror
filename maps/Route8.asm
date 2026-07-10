@@ -78,8 +78,8 @@ TrainerSuperNerdPat:
 SuperNerdPatSeenText:
 	ntag "SUPERNERD:"
 	text "You look good at"
-	line "#MON, but"
-	cont "how's your chem?"
+	line "#MON, but how's"
+	cont "your chem?"
 	done
 
 SuperNerdPatBeatenText:
@@ -114,7 +114,7 @@ PokefanMJoshuaSeenText:
 
 PokefanMJoshuaBeatenText:
 	ntag "JOSHUA:"
-	text "PO- POLIWAG!"
+	text "PO-POLIWAG!"
 	done
 
 PokefanMJoshuaAfterBattleText:
@@ -334,7 +334,8 @@ LassChloeAfterBattleText:
 	text "SAFFRON's gate"
 	line "keeper won't let"
 	cont "us through."
-	roll "He's so mean!"
+
+	para "He's so mean!"
 	done
 
 
