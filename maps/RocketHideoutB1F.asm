@@ -1,4 +1,5 @@
 	object_const_def
+	const ROCKETHIDEOUTB1F_DOOR_ROCKET
 
 RocketHideoutB1F_MapScripts:
 	def_scene_scripts
@@ -137,6 +138,23 @@ RocketGruntM10AfterBattleText:
 	cont "to see my BOSS!"
 	done
 
+
+RocketHideoutB1FLockedDoor:
+	conditional_event EVENT_BEAT_GIOVANNI, .RocketGrunt
+.RocketGrunt
+	turnobject ROCKETHIDEOUTB1F_DOOR_ROCKET, UP
+	jumptext RocketHideoutB1FDoorGruntText
+RocketHideoutB1FDoorGruntText:
+	ntag "ROCKET:"
+	text "Huh? Who's there?"
+
+	para "I'm not supposed"
+	line "to open this door"
+	cont "for anyone."
+
+	para "Scram!"
+	done
+
 RocketHideoutB1FTMThief:
 	itemball TM_THIEF
 
@@ -146,7 +164,7 @@ RocketHideoutB1FEscapeRope:
 RocketHideoutB1FHyperPotion:
 	itemball HYPER_POTION
 
-RocketHideoutB3FHiddenPPUp:
+RocketHideoutB1FHiddenPPUp:
 	hiddenitem PP_UP, EVENT_ROCKET_HIDEOUT_B1F_HIDDEN_PP_UP
 
 RocketHideoutB1F_MapEvents:
@@ -162,14 +180,16 @@ RocketHideoutB1F_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 13, 13, BGEVENT_ITEM, RocketHideoutB3FHiddenPPUp
+;	bg_event 10, 14, BGEVENT_READ, RocketHideoutB1FLockedDoor
+	bg_event 10, 14, BGEVENT_IFNOTSET, RocketHideoutB1FLockedDoor
+	bg_event 13, 13, BGEVENT_ITEM, RocketHideoutB1FHiddenPPUp
 
 	def_object_events
-	object_event  4,  4, SPRITE_ROCKET, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerRocketGruntM7, -1
-	object_event 18,  6, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerRocketGruntF2, -1
-	object_event 10, 15, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerRocketGruntM8, -1
-	object_event 20, 16, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerRocketGruntM9, -1
-	object_event  7, 21, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerRocketGruntM10, -1
+	object_event 10, 15, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerRocketGruntM8, EVENT_BEAT_GIOVANNI
+	object_event  4,  4, SPRITE_ROCKET, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerRocketGruntM7, EVENT_BEAT_GIOVANNI
+	object_event 18,  6, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerRocketGruntF2, EVENT_BEAT_GIOVANNI
+	object_event 20, 16, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerRocketGruntM9, EVENT_BEAT_GIOVANNI
+	object_event  7, 21, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerRocketGruntM10, EVENT_BEAT_GIOVANNI
 	object_event 17, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, RocketHideoutB1FTMThief, EVENT_ROCKET_HIDEOUT_B1F_TM_THIEF
 	object_event  3, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RocketHideoutB1FEscapeRope, EVENT_ROCKET_HIDEOUT_B1F_ESCAPE_ROPE
 	object_event  1, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RocketHideoutB1FHyperPotion, EVENT_ROCKET_HIDEOUT_B1F_HYPER_POTION
