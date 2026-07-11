@@ -77,10 +77,10 @@ PewterMuseum1F_Fossil_Scientist_Script:
 
 
 PewterMuseum1F_Old_Amber_Scientist_Script:
-	faceplayer
-	opentext
 	checkevent EVENT_GOT_OLD_AMBER
 	iftrue .GotAmber
+	faceplayer
+	opentext
 	writetext PewterMuseum1F_Scientist_TakeTheAmberText
 	waitbutton
 	disappear PEWTER_MUSEUM_1F_OLD_AMBER

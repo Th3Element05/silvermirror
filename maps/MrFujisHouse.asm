@@ -51,7 +51,7 @@ MrFujisHouseMrFujiScript:
 
 MrFujisHouseMrFujiGivePokeFluteText:
 	ntag "MR.FUJI:"
-	text "<PLAYER>."
+	text "<PLAYER>…"
 
 	para "Your #DEX quest"
 	line "may fail without"
