@@ -488,6 +488,8 @@ PlayerDepositItemMenu:
 	ld a, [wItemAttributeValue]
 	cp TM_HM
 	jr z, .CantDeposit
+	cp KEY_ITEM        ; MAX_KEY_ITEMS = 25, 
+	jr z, .CantDeposit ; but the most you should ever be able to have at once is 24.
 
 	ld a, [wSpriteUpdatesEnabled]
 	push af
