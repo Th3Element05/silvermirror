@@ -358,7 +358,7 @@ CeladonGameCornerFullCoinCaseText:
 	done
 
 CeladonGameCornerSlotMachineScript:
-	random 6
+	random 4
 	ifequal 0, CeladonGameCornerLuckySlotMachineScript
 	refreshscreen
 	setval FALSE
@@ -409,7 +409,7 @@ CeladonGameCorner10Coins1:
 	scall CeladonGameCornerFoundCoinsStdScript
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
 	iftrue .End
-	givecoins 10
+	givecoins 20
 	setevent EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_1
 .End
 	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
@@ -422,7 +422,7 @@ CeladonGameCorner10Coins2:
 	scall CeladonGameCornerFoundCoinsStdScript
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
 	iftrue .End
-	givecoins 10
+	givecoins 20
 	setevent EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_2
 .End
 	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
@@ -435,7 +435,7 @@ CeladonGameCorner10Coins3:
 	scall CeladonGameCornerFoundCoinsStdScript
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
 	iftrue .End
-	givecoins 10
+	givecoins 20
 	setevent EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_3
 .End
 	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
@@ -448,7 +448,7 @@ CeladonGameCorner10Coins4:
 	scall CeladonGameCornerFoundCoinsStdScript
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
 	iftrue .End
-	givecoins 10
+	givecoins 20
 	setevent EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_4
 .End
 	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
@@ -461,7 +461,7 @@ CeladonGameCorner10Coins5:
 	scall CeladonGameCornerFoundCoinsStdScript
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
 	iftrue .End
-	givecoins 10
+	givecoins 20
 	setevent EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_5
 .End
 	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
@@ -474,7 +474,7 @@ CeladonGameCorner10Coins6:
 	scall CeladonGameCornerFoundCoinsStdScript
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
 	iftrue .End
-	givecoins 10
+	givecoins 20
 	setevent EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_6
 .End
 	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
@@ -487,7 +487,7 @@ CeladonGameCorner10Coins7:
 	scall CeladonGameCornerFoundCoinsStdScript
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
 	iftrue .End
-	givecoins 10
+	givecoins 20
 	setevent EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_7
 .End
 	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
@@ -500,7 +500,7 @@ CeladonGameCorner10Coins8:
 	scall CeladonGameCornerFoundCoinsStdScript
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
 	iftrue .End
-	givecoins 10
+	givecoins 20
 	setevent EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_10_8
 .End
 	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
@@ -513,7 +513,7 @@ CeladonGameCorner20Coins1:
 	scall CeladonGameCornerFoundCoinsStdScript
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
 	iftrue .End
-	givecoins 20
+	givecoins 40
 	setevent EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_20_1
 .End
 	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
@@ -526,7 +526,7 @@ CeladonGameCorner20Coins2:
 	scall CeladonGameCornerFoundCoinsStdScript
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
 	iftrue .End
-	givecoins 20
+	givecoins 40
 	setevent EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_20_2
 .End
 	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
@@ -539,7 +539,7 @@ CeladonGameCorner40Coins:
 	scall CeladonGameCornerFoundCoinsStdScript
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
 	iftrue .End
-	givecoins 40
+	givecoins 60
 	setevent EVENT_CELADON_GAME_CORNER_HIDDEN_COINS_40
 .End
 	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_8
@@ -572,13 +572,13 @@ CeladonGameCorner100Coins:
 ;	end
 
 CeladonGameCornerCoins10:
-	db "10@"
-
-CeladonGameCornerCoins20:
 	db "20@"
 
-CeladonGameCornerCoins40:
+CeladonGameCornerCoins20:
 	db "40@"
+
+CeladonGameCornerCoins40:
+	db "60@"
 
 CeladonGameCornerCoins100:
 	db "100@"
@@ -706,29 +706,29 @@ CeladonGameCorner_MapEvents:
 	bg_event  6,  9, BGEVENT_RIGHT, CeladonGameCornerCardFlipScript
 	bg_event  6, 10, BGEVENT_RIGHT, CeladonGameCornerCardFlipScript
 	bg_event  6, 11, BGEVENT_RIGHT, CeladonGameCornerCardFlipScript
-	bg_event  7,  6, BGEVENT_LEFT, CeladonGameCornerLuckySlotMachineScript
-	bg_event  7,  7, BGEVENT_LEFT, CeladonGameCornerLuckySlotMachineScript
-	bg_event  7,  8, BGEVENT_LEFT, CeladonGameCornerLuckySlotMachineScript
-	bg_event  7,  9, BGEVENT_LEFT, CeladonGameCornerLuckySlotMachineScript
-;	bg_event  7, 10, BGEVENT_LEFT, CeladonGameCornerLuckySlotMachineScript ; og lucky
-	bg_event  7, 11, BGEVENT_LEFT, CeladonGameCornerLuckySlotMachineScript
-	bg_event 12,  6, BGEVENT_RIGHT, CeladonGameCornerLuckySlotMachineScript
-	bg_event 12,  7, BGEVENT_RIGHT, CeladonGameCornerLuckySlotMachineScript
-	bg_event 12,  8, BGEVENT_RIGHT, CeladonGameCornerLuckySlotMachineScript
-	bg_event 12,  9, BGEVENT_RIGHT, CeladonGameCornerLuckySlotMachineScript
-	bg_event 12, 10, BGEVENT_RIGHT, CeladonGameCornerLuckySlotMachineScript
-;	bg_event 12, 11, BGEVENT_RIGHT, CeladonGameCornerLuckySlotMachineScript
-	bg_event 13,  6, BGEVENT_LEFT, CeladonGameCornerLuckySlotMachineScript
-;	bg_event 13,  7, BGEVENT_LEFT, CeladonGameCornerLuckySlotMachineScript
+	bg_event  7,  6, BGEVENT_LEFT, CeladonGameCornerSlotMachineScript
+	bg_event  7,  7, BGEVENT_LEFT, CeladonGameCornerLuckySlotMachineScript ; in use DAY
+	bg_event  7,  8, BGEVENT_LEFT, CeladonGameCornerSlotMachineScript
+	bg_event  7,  9, BGEVENT_LEFT, CeladonGameCornerSlotMachineScript
+	bg_event  7, 10, BGEVENT_LEFT, CeladonGameCornerLuckySlotMachineScript ; in use NITE ; og lucky
+	bg_event  7, 11, BGEVENT_LEFT, CeladonGameCornerSlotMachineScript
+	bg_event 12,  6, BGEVENT_RIGHT, CeladonGameCornerSlotMachineScript
+	bg_event 12,  7, BGEVENT_RIGHT, CeladonGameCornerSlotMachineScript
+	bg_event 12,  8, BGEVENT_RIGHT, CeladonGameCornerSlotMachineScript
+	bg_event 12,  9, BGEVENT_RIGHT, CeladonGameCornerSlotMachineScript
+	bg_event 12, 10, BGEVENT_RIGHT, CeladonGameCornerSlotMachineScript
+;	bg_event 12, 11, BGEVENT_RIGHT, CeladonGameCornerSlotMachineScript
+	bg_event 13,  6, BGEVENT_LEFT, CeladonGameCornerSlotMachineScript
+;	bg_event 13,  7, BGEVENT_LEFT, CeladonGameCornerSlotMachineScript
 	bg_event 13,  8, BGEVENT_LEFT, CeladonGameCornerOutToLunchScript ; Out to Lunch
-	bg_event 13,  9, BGEVENT_LEFT, CeladonGameCornerLuckySlotMachineScript
-	bg_event 13, 10, BGEVENT_LEFT, CeladonGameCornerLuckySlotMachineScript
-	bg_event 13, 11, BGEVENT_LEFT, CeladonGameCornerLuckySlotMachineScript
+	bg_event 13,  9, BGEVENT_LEFT, CeladonGameCornerSlotMachineScript
+	bg_event 13, 10, BGEVENT_LEFT, CeladonGameCornerSlotMachineScript
+	bg_event 13, 11, BGEVENT_LEFT, CeladonGameCornerSlotMachineScript
 	bg_event 18,  6, BGEVENT_RIGHT, CeladonGameCornerSomeonesKeysScript ; Someones Keys
-	bg_event 18,  7, BGEVENT_RIGHT, CeladonGameCornerLuckySlotMachineScript
-	bg_event 18,  8, BGEVENT_RIGHT, CeladonGameCornerLuckySlotMachineScript
-;	bg_event 18,  9, BGEVENT_RIGHT, CeladonGameCornerLuckySlotMachineScript
-	bg_event 18, 10, BGEVENT_RIGHT, CeladonGameCornerLuckySlotMachineScript
+	bg_event 18,  7, BGEVENT_RIGHT, CeladonGameCornerSlotMachineScript
+	bg_event 18,  8, BGEVENT_RIGHT, CeladonGameCornerSlotMachineScript
+;	bg_event 18,  9, BGEVENT_RIGHT, CeladonGameCornerSlotMachineScript
+	bg_event 18, 10, BGEVENT_RIGHT, CeladonGameCornerSlotMachineScript
 	bg_event 18, 11, BGEVENT_RIGHT, CeladonGameCornerLuckySlotMachineScript
 ;
 	bg_event  0,  4, BGEVENT_IFNOTSET, CeladonGameCorner10Coins1
@@ -762,12 +762,12 @@ CeladonGameCorner_MapEvents:
 	object_event  5,  2, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerClerkScript, -1
 	object_event  3,  2, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerReceptionistScript, -1
 	object_event  2,  6, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, NITE, 0, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerPokefanMScript, -1
-	object_event  2,  9, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, EVE, 0, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerBeautyScript, -1
+	object_event  2,  9, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, DAY | EVE, 0, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerBeautyScript, -1
 	object_event  5,  7, SPRITE_FISHING_GURU, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerFishingGuruScript, -1
-	object_event  8,  7, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, DAY, 0, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerPokefanFScript, -1
-	object_event  8, 10, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerGymGuideScript, -1
+	object_event  8,  7, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, DAY | EVE, 0, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerPokefanFScript, -1
+	object_event 14,  7, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerGymGuideScript, -1
 	object_event 11, 11, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerGrampsScript, -1
-	object_event 14,  7, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerFisherScript, -1
+	object_event  8, 10, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, NITE, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerFisherScript, -1
 	object_event 17,  9, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerGentlemanScript, -1
 	object_event 19,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, CeladonGameCornerAmuletCoin, EVENT_CELADON_GAME_CORNER_AMULET_COIN
 
