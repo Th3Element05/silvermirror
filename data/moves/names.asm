@@ -20,7 +20,7 @@ MoveNames::
 	li "ROOST"        ;"WHIRLWIND"
 	li "BOUNCE"       ;"FLY"
 	li "BUG BITE"     ;"BIND"
-	li "WAKE UP SLAP" ;"SLAM"
+	li "WAKE-UP SLAP" ;"SLAM"
 	li "VINE WHIP"
 	li "STOMP"
 	li "DOUBLE KICK"
