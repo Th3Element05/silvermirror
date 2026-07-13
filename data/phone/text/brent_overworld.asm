@@ -11,7 +11,7 @@ BrentAskNumber1Text:
 
 	para "Do you know BILL?"
 	line "He's an incredible"
-	cont "#MANIAC."
+	cont "#MANIAC,"
 	roll "I revere him."
 
 	para "I'll teach you all"
