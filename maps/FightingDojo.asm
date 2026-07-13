@@ -419,16 +419,20 @@ KarateMasterOffersPokemonText:
 	cont "that they would do"
 	roll "well in your care."
 
-	para "If you would like"
-	line "one, please choose"
-	cont "whichever one you"
-	roll "like."
+	para "If you would like,"
+	line "please, take one."
 	done
 
+;	para "If you would like"
+;	line "one, please choose"
+;	cont "whichever one you"
+;	roll "like."
+;	done
+
 FightingDojoHitmonlee:
-	checkevent EVENT_GOT_POKEMON_FROM_DOJO
-;	iftrue FightingDojoDontGetGreedyScript
-	iftrue .AlreadyGotHitmonchan
+;	checkevent EVENT_GOT_POKEMON_FROM_DOJO
+;;	iftrue FightingDojoDontGetGreedyScript
+;	iftrue .AlreadyGotHitmonchan
 	refreshscreen
 	pokepic HITMONLEE
 	cry HITMONLEE
@@ -438,6 +442,12 @@ FightingDojoHitmonlee:
 	writetext FightingDojoTakeHitmonleeText
 	yesorno
 	iffalse .NotHitmonlee
+
+	readvar VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, NoRoomForFightingPokemon
+	checkevent EVENT_GOT_POKEMON_FROM_DOJO
+	iftrue .AlreadyGotHitmonchan
+
 	disappear FIGHTINGDOJO_HITMONLEE_POKE_BALL
 	setevent EVENT_GOT_POKEMON_FROM_DOJO
 	getmonname STRING_BUFFER_3, HITMONLEE
@@ -472,9 +482,9 @@ FightingDojoTakeHitmonleeText:
 	done
 
 FightingDojoHitmonchan:
-	checkevent EVENT_GOT_POKEMON_FROM_DOJO
-;	iftrue FightingDojoDontGetGreedyScript
-	iftrue .AlreadyGotHitmonlee
+;	checkevent EVENT_GOT_POKEMON_FROM_DOJO
+;;	iftrue FightingDojoDontGetGreedyScript
+;	iftrue .AlreadyGotHitmonlee
 	refreshscreen
 	pokepic HITMONCHAN
 	cry HITMONCHAN
@@ -483,7 +493,13 @@ FightingDojoHitmonchan:
 	opentext
 	writetext FightingDojoTakeHitmonchanText
 	yesorno
-	iffalse .NotHitmonlee
+	iffalse .NotHitmonchan
+
+	readvar VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, NoRoomForFightingPokemon
+	checkevent EVENT_GOT_POKEMON_FROM_DOJO
+	iftrue .AlreadyGotHitmonlee
+
 	disappear FIGHTINGDOJO_HITMONCHAN_POKE_BALL
 	setevent EVENT_GOT_POKEMON_FROM_DOJO
 	getmonname STRING_BUFFER_3, HITMONCHAN
@@ -492,7 +508,7 @@ FightingDojoHitmonchan:
 	waitsfx
 	promptbutton
 	givepoke HITMONCHAN, 30
-.NotHitmonlee
+.NotHitmonchan
 	closetext
 	end
 
@@ -532,6 +548,16 @@ FightingDojoDontGetGreedyText:
 	line "greedy…"
 	done
 
+NoRoomForFightingPokemon:
+	farwritetext _NoRoomInPartyText
+	waitbutton
+	closetext
+	end
+
+;FightingDojo_NoRoomInPartyText:
+;	text "There's no room in"
+;	line "your party."
+;	done
 
 
 TrainerBlackbeltTakeshi:

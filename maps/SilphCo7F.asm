@@ -218,6 +218,10 @@ SilphCo7FLaprasGiftScript:
 	opentext
 	writetext SilphCo7FGiveLaprasText
 	promptbutton
+
+	readvar VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, .PartyFull
+
 	writetext SilphCo7FReceivedLaprasText
 	playsound SFX_CAUGHT_MON
 	waitsfx
@@ -225,6 +229,12 @@ SilphCo7FLaprasGiftScript:
 	givepoke LAPRAS, 15
 	setevent EVENT_GOT_LAPRAS_FROM_SILPH_CO
 	writetext SilphCo7FExplainLaprasText
+	waitbutton
+	closetext
+	end
+
+.PartyFull
+	writetext SilphCo7F_NoRoomInPartyText
 	waitbutton
 	closetext
 	end
@@ -247,6 +257,13 @@ SilphCo7FGiveLaprasText:
 	para "I want you to"
 	line "have this #MON"
 	cont "for saving us."
+	done
+
+SilphCo7F_NoRoomInPartyText:
+	ntag "MAN:"
+	text "But you'll need to"
+	line "make room in your"
+	cont "party, first!"
 	done
 
 SilphCo7FReceivedLaprasText:

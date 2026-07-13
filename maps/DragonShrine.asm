@@ -412,7 +412,8 @@ DragonShrineDratiniPokeballScript:
 	end
 
 .PartyFull:
-	writetext DragonShrinePartyFullText
+;	writetext DragonShrinePartyFullText
+	farwritetext _NoRoomInPartyText
 	waitbutton
 	closetext
 	end
@@ -431,10 +432,10 @@ DragonShrineMaybeLaterText:
 	text "Maybe later."
 	done
 
-DragonShrinePartyFullText:
-	text "You can't carry"
-	line "any more #MON."
-	done
+;DragonShrinePartyFullText:
+;	text "You can't carry"
+;	line "any more #MON."
+;	done
 
 DragonShrinePlayerReceivedDratiniText:
 	text "<PLAYER> received"

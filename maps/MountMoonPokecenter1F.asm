@@ -57,6 +57,10 @@ MtMoonPokecenter1FSalesmanScript:
 	checkmoney YOUR_MONEY, 500
 	ifequal HAVE_LESS, .NotEnoughMoney
 	waitsfx
+
+	readvar VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, .PartyFull
+
 	playsound SFX_TRANSACTION
 	takemoney YOUR_MONEY, 500
 	special PlaceMoneyTopRight
@@ -79,6 +83,12 @@ MtMoonPokecenter1FSalesmanScript:
 
 .NotEnoughMoney
 	writetext MtMoonPokecenterSalesmanNoMoneyText
+	waitbutton
+	closetext
+	end
+
+.PartyFull
+	writetext MountMoonPokecenter_NoRoomInPartyText
 	waitbutton
 	closetext
 	end
@@ -111,6 +121,12 @@ MtMoonPokecenterSalesmanNoMoneyText:
 	ntag "SALESMAN:"
 	text "You'll need more"
 	line "money than that!"
+	done
+
+MountMoonPokecenter_NoRoomInPartyText:
+	ntag "SALESMAN:"
+	text "You have no room"
+	line "in your party!"
 	done
 
 MtMoonPokecenterSalesmanNoRefundsText:

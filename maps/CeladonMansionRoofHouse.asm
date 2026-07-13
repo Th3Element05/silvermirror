@@ -24,6 +24,10 @@ CeladonMansionEeveePokeballScript:
 	writetext CeladonMansionRoofTakeEeveeText
 	yesorno
 	iffalse .DontTakeEevee
+
+	readvar VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, .PartyFull
+
 	disappear CELADONMANSIONROOF_EEVEE_POKE_BALL
 	writetext CeladonMansionRoofReceivedEeveeText
 	playsound SFX_CAUGHT_MON
@@ -39,6 +43,12 @@ CeladonMansionEeveePokeballScript:
 
 .DontTakeEevee
 	writetext CeladonMansionRoofDontTakeEeveeText
+	waitbutton
+	closetext
+	end
+
+.PartyFull
+	farwritetext _NoRoomInPartyText
 	waitbutton
 	closetext
 	end

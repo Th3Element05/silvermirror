@@ -1570,3 +1570,11 @@ _MomLostGearBookletText::
 	para "Come back again in"
 	line "a while."
 	prompt
+
+_NoRoomInPartyText::
+	text "You can't carry"
+	line "any more #MON."
+	done
+;	text "There's no room in"
+;	line "your party."
+;	done
