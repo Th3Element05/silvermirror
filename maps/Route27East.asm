@@ -34,7 +34,7 @@ CooltrainerMFelixAfterBattleText:
 	done
 
 TrainerCooltrainerFMira:
-	trainer COOLTRAINERF, MEGAN, EVENT_BEAT_COOLTRAINERF_MIRA, CooltrainerFMiraSeenText, CooltrainerFMiraBeatenText, 0, .Script
+	trainer COOLTRAINERF, MIRA, EVENT_BEAT_COOLTRAINERF_MIRA, CooltrainerFMiraSeenText, CooltrainerFMiraBeatenText, 0, .Script
 .Script:
 	endifjustbattled
 	opentext
