@@ -223,7 +223,7 @@ TrainerLassCora:
 LassCoraSeenText:
 	ntag "LASS:"
 	text "Don't bring any"
-	line "BUG or FIRE"
+	line "BUG or FIRE-type"
 	cont "#MON in here!"
 	done
 
@@ -286,8 +286,7 @@ PicnickerSharonSeenText:
 
 PicnickerSharonBeatenText:
 	ntag "SHARON:"
-	text "I'm"
-	line "in shock!"
+	text "I'm in shock!"
 	done
 
 PicnickerSharonAfterBattleText:
@@ -311,8 +310,7 @@ BeautyJuliaSeenText:
 
 BeautyJuliaBeatenText:
 	ntag "JULIA:"
-	text "My"
-	line "makeup!"
+	text "My makeup!"
 	done
 
 BeautyJuliaAfterBattleText:
@@ -336,8 +334,8 @@ LassZoeySeenText:
 	ntag "LASS:"
 	text "Hey!"
 
-	para "You are not"
-	line "allowed in here!"
+	para "You're not allowed"
+	line "in here!"
 	done
 
 LassZoeyBeatenText:
