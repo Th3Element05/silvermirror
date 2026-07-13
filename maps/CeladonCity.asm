@@ -181,7 +181,14 @@ CeladonCityGramps2Text:
 	done
 
 CeladonCityGramps3Script:
-	jumptextfaceplayer CeladonCityGramps3Text
+	faceplayer
+	opentext
+	writetext CeladonCityGramps3Text
+	waitbutton
+	closetext
+	turnobject LAST_TALKED, up
+	end
+
 CeladonCityGramps3Text:
 	ntag "GRAMPS:"
 	text "Heheh! This GYM"
