@@ -93,9 +93,9 @@ TrainerBirdKeeperHank:
 
 BirdKeeperHankSeenText:
 	ntag "BIRDKEEPER:"
-	text "Have you heard of"
-	line "the legendary"
-	cont "#MON?"
+	text "Have you heard"
+	line "of the legendary"
+	cont "bird #MON?"
 	done
 
 BirdKeeperHankBeatenText:

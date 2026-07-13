@@ -106,10 +106,14 @@ TrainerBirdKeeperJamie:
 
 BirdKeeperJamieSeenText:
 	ntag "BIRDKEEPER:"
-	text "You need to use"
-	line "TMs to teach good"
-	cont "moves to #MON!"
+	text "You need TMs to"
+	line "teach some #MON"
+	cont "certain moves!"
 	done
+;	text "You need to use"
+;	line "TMs to teach good"
+;	cont "moves to #MON!"
+;	done
 
 BirdKeeperJamieBeatenText:
 	ntag "JAMIE:"
@@ -134,8 +138,8 @@ BirdKeeperDennisSeenText:
 	ntag "BIRDKEEPER:"
 	text "TMs are on sale"
 	line "in CELADON!"
-	cont "But, only a few"
-	roll "people have HMs!"
+;	cont "But, only a few"
+;	roll "people have HMs!"
 	done
 
 BirdKeeperDennisBeatenText:
@@ -148,7 +152,7 @@ BirdKeeperDennisAfterBattleText:
 	text "Teach #MON"
 	line "moves of the same"
 	cont "element type for"
-	roll "more power."
+	roll "more power!"
 	done
 
 
