@@ -3186,7 +3186,7 @@ BattleAnim_HeatWave:
 	anim_obj BATTLE_ANIM_OBJ_POISON_GAS, 44, 80, $2
 	anim_wait 8
 	anim_loop 9, .loop
-	anim_wait 48
+	anim_wait 40
 	anim_incbgeffect BATTLE_BG_EFFECT_NIGHT_SHADE
 	anim_call BattleAnim_ShowMon_1
 	anim_ret
@@ -4373,7 +4373,7 @@ BattleAnim_FaintAttack:
 	anim_sound 0, 0, SFX_CURSE
 	anim_call BattleAnim_TargetObj_1Row
 	anim_bgeffect BATTLE_BG_EFFECT_FADE_MON_TO_WHITE_WAIT_FADE_BACK, $0, BG_EFFECT_USER, $80
-	anim_wait 96
+	anim_wait 64 ;96
 	anim_sound 0, 1, SFX_COMET_PUNCH
 	anim_obj BATTLE_ANIM_OBJ_HIT, 120, 32, $0
 	anim_wait 8
