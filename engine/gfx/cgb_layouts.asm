@@ -179,34 +179,34 @@ _CGB_FinishBattleScreenLayout:
 	call ByteFill
 
 ; player mon backpic
-	hlcoord 0, 4, wAttrmap
-	lb bc, 8, 10
+	hlcoord 0, 6, wAttrmap ;0, 4, wAttrmap
+	lb bc, 6, 9 ;8, 10
 	ld a, PAL_BATTLE_BG_PLAYER
 	call FillBoxCGB
 
 ; enemy mon frontpic
-	hlcoord 10, 0, wAttrmap
-	lb bc, 7, 10
+	hlcoord 11, 0, wAttrmap ;10, 0, wAttrmap
+	lb bc, 7, 9 ;7, 10
 	ld a, PAL_BATTLE_BG_ENEMY
 	call FillBoxCGB
 
 ; enemy HP bar
-	hlcoord 0, 2, wAttrmap ;0, 0
-	lb bc, 2, 11 ;4, 10
+	hlcoord 2, 2, wAttrmap ;0, 0, wAttrmap
+	lb bc, 1, 9 ;4, 10
 	ld a, PAL_BATTLE_BG_ENEMY_HP
 	call FillBoxCGB
 
 ; player HP bar
-	hlcoord 9, 9, wAttrmap ;10, 7
-	lb bc, 3, 11 ;5, 10
+	hlcoord 9, 10, wAttrmap ;10, 7, wAttrmap
+	lb bc, 1, 8 ;5, 10
 	ld a, PAL_BATTLE_BG_PLAYER_HP
 	call FillBoxCGB
 
-; player EXP bar
-	hlcoord 10, 11, wAttrmap
-	lb bc, 1, 8 ;1, 9
-	ld a, PAL_BATTLE_BG_EXP
-	call FillBoxCGB
+;; player EXP bar
+;	hlcoord 10, 11, wAttrmap
+;	lb bc, 1, 8 ;1, 9
+;	ld a, PAL_BATTLE_BG_EXP
+;	call FillBoxCGB
 
 ; textbox
 	hlcoord 0, 12, wAttrmap
@@ -246,7 +246,6 @@ _CGB_FinishBattleScreenLayout:
 	lb bc, 1, 2
 	ld a, $6
 	call FillBoxCGB
-
 
 ; check if we're in the MoveInfoBox
 	hlcoord 0, 12
