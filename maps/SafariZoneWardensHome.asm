@@ -42,7 +42,7 @@ SafariZoneWardenScript:
 .GiveWardenTeeth
 	writetext GaveSafariZoneWardenTeethText
 	playsound SFX_ITEM
-	takeitem GOLD_TEETH
+	waitsfx
 	promptbutton
 	writetext SafariZoneWardenThanksGivePagerText
 	promptbutton
@@ -54,6 +54,7 @@ SafariZoneWardenScript:
 ;	writetext SafariZoneWardenGiveStrengthText
 ;	promptbutton
 ;	verbosegiveitem TM_STRENGTH
+	takeitem GOLD_TEETH
 	setevent EVENT_GOT_HM04_STRENGTH
 	writetext SafariZoneWardenAskSurfText
 	waitbutton
