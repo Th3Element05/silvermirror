@@ -542,9 +542,9 @@ SilphCo_BingoText: ;silvermirror+
 
 PokecenterLuckyNumber_AskToPlayText::
 	ntag "RECEPTIONIST:"
-	text "Hello, are you"
-	line "here for the LUCKY"
-	cont "NUMBER SHOW?"
+	text "Welcome! Are you"
+	line "here for the"
+	cont "LUCKY NUMBER SHOW?"
 	done
 
 PokecenterLuckyNumber_IdIsText::

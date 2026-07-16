@@ -2598,9 +2598,10 @@ PokecenterLuckyNumberScript:
 	opentext
 	farwritetext PokecenterLuckyNumber_DotDotDotText
 	playsound SFX_DEX_FANFARE_20_49
+	special CheckForLuckyNumberWinners
 	waitsfx
 	promptbutton
-	special CheckForLuckyNumberWinners
+;	special CheckForLuckyNumberWinners
 	closetext
 	applymovement 3, PokecenterLuckyNumberReturnToPlayerMovement
 	opentext

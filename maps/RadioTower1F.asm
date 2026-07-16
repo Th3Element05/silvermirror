@@ -29,9 +29,10 @@ RadioTower1FLuckyNumberManScript:
 	waitsfx
 	writetext RadioTower1FLuckyNumberManDotDotDotText
 	playsound SFX_DEX_FANFARE_20_49
+	special CheckForLuckyNumberWinners
 	waitsfx
 	promptbutton
-	special CheckForLuckyNumberWinners
+;	special CheckForLuckyNumberWinners
 	closetext
 	applymovement RADIOTOWER1F_LUCKYNUMBERMAN, RadioTower1FLuckyNumberManReturnToPlayerMovement
 	opentext
@@ -122,9 +123,9 @@ RadioTower1FLuckyNumberManScript:
 
 RadioTower1FLuckyNumberManAskToPlayText:
 	ntag "GENTLEMAN:"
-	text "Hello, are you"
-	line "here for the LUCKY"
-	cont "NUMBER SHOW?"
+	text "Welcome! Are you"
+	line "here for the"
+	cont "LUCKY NUMBER SHOW?"
 
 	para "Want me to check"
 	line "the ID numbers of"
