@@ -5,6 +5,6 @@
 	next "gether in areas"
 	next "that are hotter"
 
-	page "than normal. If it"
-	next "cools off, its"
-	next "skin hardens.@"
+	page "than normal."
+	next "If it cools off,"
+	next "its skin hardens.@"
