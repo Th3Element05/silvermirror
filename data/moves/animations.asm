@@ -3321,7 +3321,7 @@ BattleAnim_LeechLife:
 	anim_ret
 
 BattleAnim_PoisonFang:
-	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_PURPLE
+;	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_PURPLE
 	anim_2gfx BATTLE_ANIM_GFX_CUT, BATTLE_ANIM_GFX_POISON;, BATTLE_ANIM_GFX_HIT
 	anim_obj BATTLE_ANIM_OBJ_BITE, 136, 56, $98
 	anim_obj BATTLE_ANIM_OBJ_BITE, 136, 56, $18
@@ -3425,38 +3425,15 @@ BattleAnim_Transform:
 	anim_ret
 
 BattleAnim_WaterPulse:
-;	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_WATER
-;	anim_1gfx BATTLE_ANIM_GFX_PSYCHIC
-;	anim_bgeffect BATTLE_BG_EFFECT_START_WATER, $0, BG_EFFECT_TARGET, $0
-;	anim_sound 6, 2, SFX_BUBBLEBEAM
-;.loop
-;	anim_obj BATTLE_ANIM_OBJ_WAVE, 64, 80, $2
-;	anim_bgeffect BATTLE_BG_EFFECT_WATER, $1c, $0, $0
-;	anim_wait 8
-;	anim_obj BATTLE_ANIM_OBJ_WAVE, 64, 88, $3
-;	anim_bgeffect BATTLE_BG_EFFECT_WATER, $8, $0, $0
-;	anim_wait 8
-;	anim_obj BATTLE_ANIM_OBJ_WAVE, 64, 96, $4
-;	anim_bgeffect BATTLE_BG_EFFECT_WATER, $30, $0, $0
-;	anim_wait 8
-;	anim_loop 2, .loop
-;	anim_wait 32
-;	anim_call BattleAnim_ShowMon_1
-;	anim_bgeffect BATTLE_BG_EFFECT_END_WATER, $0, $0, $0
-;	anim_wait 4
-;	anim_ret
-;
 	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_WATER
+	anim_call BattleAnim_UserObj_2Row
 	anim_bgeffect BATTLE_BG_EFFECT_START_WATER, $0, BG_EFFECT_TARGET, $0
 	anim_sound 6, 2, SFX_BUBBLEBEAM
-;	anim_call BattleAnim_UserObj_1Row
 	anim_call BattleAnimSub_Pulse
 	anim_call BattleAnim_ShowMon_1
 	anim_bgeffect BATTLE_BG_EFFECT_END_WATER, $0, $0, $0
 	anim_wait 4
 	anim_ret
-
-
 
 ;BattleAnim_Bubble:
 ;	anim_setobjpal PAL_BATTLE_OB_BLUE, PAL_BTLCUSTOM_BUBBLE
@@ -5806,7 +5783,7 @@ BattleAnimSub_Pulse:
 ;	anim_ret
 
 BattleAnim_FireFang:
-	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_FIRE
+;	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_FIRE
 	anim_2gfx BATTLE_ANIM_GFX_CUT, BATTLE_ANIM_GFX_FIRE;, BATTLE_ANIM_GFX_HIT
 	anim_obj BATTLE_ANIM_OBJ_BITE, 136, 56, $98
 	anim_obj BATTLE_ANIM_OBJ_BITE, 136, 56, $18
@@ -5815,7 +5792,7 @@ BattleAnim_FireFang:
 	anim_ret
 
 BattleAnim_IceFang:
-	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_ICE
+;	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_ICE
 	anim_2gfx BATTLE_ANIM_GFX_CUT, BATTLE_ANIM_GFX_ICE;, BATTLE_ANIM_GFX_HIT
 	anim_obj BATTLE_ANIM_OBJ_BITE, 136, 56, $98
 	anim_obj BATTLE_ANIM_OBJ_BITE, 136, 56, $18
@@ -5824,7 +5801,7 @@ BattleAnim_IceFang:
 	anim_ret
 
 BattleAnim_ThunderFang:
-	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_YELLOW
+;	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_YELLOW
 	anim_2gfx BATTLE_ANIM_GFX_CUT, BATTLE_ANIM_GFX_LIGHTNING;, BATTLE_ANIM_GFX_HIT
 	anim_obj BATTLE_ANIM_OBJ_BITE, 136, 56, $98
 	anim_obj BATTLE_ANIM_OBJ_BITE, 136, 56, $18
