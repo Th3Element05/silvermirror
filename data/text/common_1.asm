@@ -532,12 +532,12 @@ _MobileTradeCameBackText::
 _OPT_IntroText1::
 	text_start
 ;	line "MARY: PROF.OAK's"
-	line "Hello! And welcome"
+	line "Hello! Welcome to"
 	done
 
 _OPT_IntroText2::
 	text_start
-	line "to #MON TALK!"
+	line "#MON TALK!"
 	done
 
 _OPT_IntroText3::
