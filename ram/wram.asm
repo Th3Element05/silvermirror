@@ -3116,7 +3116,7 @@ wMooMooBerries:: db
 wUndergroundSwitchPositions:: db
 wFarfetchdPosition:: db
 
-	ds 13
+	ds 3 ;13 ; increase MAX_ITEMS +5
 
 ; map scene ids
 wPlayersHouse1FSceneID::                          db
