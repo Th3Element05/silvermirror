@@ -92,6 +92,7 @@ OlivineLighthouse5F_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	warp_event  8,  9, OLIVINE_LIGHTHOUSE_ELEVATOR, 1
 	warp_event  9, 14, OLIVINE_LIGHTHOUSE_6F, 1
 	warp_event  3,  5, OLIVINE_LIGHTHOUSE_4F, 2
 	warp_event  9,  7, OLIVINE_LIGHTHOUSE_4F, 3
@@ -99,7 +100,6 @@ OlivineLighthouse5F_MapEvents:
 	warp_event 17,  7, OLIVINE_LIGHTHOUSE_4F, 10
 	warp_event 16,  5, OLIVINE_LIGHTHOUSE_6F, 2
 	warp_event 17,  5, OLIVINE_LIGHTHOUSE_6F, 3
-	warp_event  8,  9, OLIVINE_LIGHTHOUSE_ELEVATOR, 1
 
 	def_coord_events
 
