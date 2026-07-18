@@ -718,6 +718,8 @@ BattleAnim_DragonClaw:
 
 BattleAnim_ShadowClaw:
 	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_HP_GHOST
+	anim_bgp $1b
+;	anim_obp1 $1b
 	anim_jump BattleAnim_Scratch
 ;	anim_ret
 
@@ -3185,8 +3187,8 @@ BattleAnim_HeatWave:
 .loop
 	anim_obj BATTLE_ANIM_OBJ_POISON_GAS, 44, 80, $2
 	anim_wait 8
-	anim_loop 9, .loop
-	anim_wait 40
+	anim_loop 10, .loop
+	anim_wait 48
 	anim_incbgeffect BATTLE_BG_EFFECT_NIGHT_SHADE
 	anim_call BattleAnim_ShowMon_1
 	anim_ret
@@ -3261,7 +3263,7 @@ BattleAnim_PoisonJab:
 ;	anim_ret
 
 BattleAnim_BulletSeed:
-	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_GREEN
+;	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_GREEN
 	anim_2gfx BATTLE_ANIM_GFX_FLOWER, BATTLE_ANIM_GFX_HIT
 	anim_sound 0, 1, SFX_MEGA_PUNCH
 	anim_obj BATTLE_ANIM_OBJ_NEEDLE, 52, 88, $18
@@ -4369,6 +4371,7 @@ BattleAnim_ScaryFace:
 	anim_ret
 
 BattleAnim_FaintAttack:
+	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_HP_DARK
 	anim_1gfx BATTLE_ANIM_GFX_HIT
 	anim_sound 0, 0, SFX_CURSE
 	anim_call BattleAnim_TargetObj_1Row
@@ -5225,6 +5228,7 @@ BattleAnim_Encore:
 	anim_ret
 
 BattleAnim_Pursuit:
+	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_HP_DARK
 	anim_1gfx BATTLE_ANIM_GFX_HIT
 	anim_sound 0, 1, SFX_COMET_PUNCH
 	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 136, 56, $0
@@ -5500,7 +5504,7 @@ BattleAnim_CrossChop:
 	anim_obj BATTLE_ANIM_OBJ_CROSS_CHOP2, 120, 72, $0
 	anim_wait 8
 	anim_bgeffect BATTLE_BG_EFFECT_SHAKE_SCREEN_X, $58, $2, $0
-	anim_wait 92
+	anim_wait 48 ;92
 	anim_sound 0, 1, SFX_VICEGRIP
 	anim_bgeffect BATTLE_BG_EFFECT_FLASH_INVERTED, $0, $8, $10
 	anim_wait 16
