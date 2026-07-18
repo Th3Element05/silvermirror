@@ -128,8 +128,9 @@ GiovanniAfterBattleText:
 	text "Having lost, I"
 	line "cannot face my"
 	cont "underlings!"
-	roll "TEAM ROCKET is"
-	cont "finished!"
+
+	para "TEAM ROCKET is"
+	line "finished!"
 
 	para "I will dedicate my"
 	line "life to the study"

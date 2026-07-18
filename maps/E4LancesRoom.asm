@@ -409,7 +409,7 @@ ChampionBattleIntroText:
 	para "While filling my"
 	line "#DEX, I looked"
 	cont "all over for"
-	cont "powerful #MON!"
+	roll "powerful #MON!"
 
 	para "Not only that, I"
 	line "assembled teams"

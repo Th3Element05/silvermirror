@@ -65,8 +65,10 @@ IndigoPlateauPokecenter1FGymGuideText:
 
 	para "If you lose, you"
 	line "have to start all"
-	cont "over again! This"
-	roll "is it! Go for it!"
+	cont "over again!"
+
+	para "This is it!"
+	line "Go for it!"
 	done
 
 IndigoPokecenterFirstVisitScript:

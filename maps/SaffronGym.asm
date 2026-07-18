@@ -264,9 +264,10 @@ PsychicFranklinBeatenText:
 
 PsychicFranklinAfterBattleText:
 	ntag "PSYCHIC:"
-	text "Psychic #MON"
-	line "fear only GHOST"
-	cont "and BUG-types!"
+	text "Psychic #MON's"
+	line "only fears are"
+	cont "BUGs, GHOSTs, and"
+	roll "DARK-types!"
 	done
 
 TrainerMediumNaomi:

@@ -236,7 +236,7 @@ CopycatText_YouBet:
 	done
 
 CopycatsDoduoText:
-	ntag "DODRIO:"
+	ntag "DODUO:"
 	text "Gii giii!"
 
 	para "MIRROR, MIRROR,"
