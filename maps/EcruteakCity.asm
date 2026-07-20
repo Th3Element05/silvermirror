@@ -234,8 +234,8 @@ EcruteakGymSignText:
 EcruteakDanceTheaterSign:
 	jumptext EcruteakDanceTheaterSignText
 EcruteakDanceTheaterSignText:
-	text "ECRUTEAK DANCE"
-	line "THEATER"
+	text "ECRUTEAK CITY"
+	line "DANCE THEATER"
 	done
 
 BurnedTowerSign:
