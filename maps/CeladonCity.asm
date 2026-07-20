@@ -186,7 +186,7 @@ CeladonCityGramps3Script:
 	writetext CeladonCityGramps3Text
 	waitbutton
 	closetext
-	turnobject LAST_TALKED, up
+	turnobject LAST_TALKED, UP
 	end
 
 CeladonCityGramps3Text:
