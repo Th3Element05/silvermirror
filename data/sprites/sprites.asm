@@ -88,7 +88,7 @@ OverworldSprites:
 	overworld_sprite JanineSpriteGFX, 12, WALKING_SPRITE, PAL_OW_PURPLE ;PAL_OW_RED
 ; objects
 	overworld_sprite PokeBallSpriteGFX, 4, STILL_SPRITE, PAL_OW_RED
-	overworld_sprite PokedexSpriteGFX, 4, STILL_SPRITE, PAL_OW_RED
+	overworld_sprite PokedexSpriteGFX, 4, STILL_SPRITE, PAL_OW_SILVER
 	overworld_sprite PaperSpriteGFX, 4, STILL_SPRITE, PAL_OW_SILVER ;PAL_OW_BLUE
 	overworld_sprite RockSpriteGFX, 4, STILL_SPRITE, PAL_OW_ROCK
 	overworld_sprite BoulderSpriteGFX, 4, STILL_SPRITE, PAL_OW_ROCK
