@@ -331,6 +331,8 @@ GameCornerPrizesItemMenuHeader:
 
 ; stone prize vendor
 GameCornerPrizesStoneVendor:
+	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
+	iftrue GameCornerPrizesEvolveVendor
 	faceplayer
 	opentext
 	writetext GameCornerPrize_IntroText
@@ -339,8 +341,6 @@ GameCornerPrizesStoneVendor:
 	iffalse GameCorner_NoCoinCaseScript
 	writetext GameCornerPrize_WhichPrizeText
 GameCornerPrizesStoneVendorLoop:
-	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
-	iftrue GameCornerPrizesEvolveVendor
 	special DisplayCoinCaseBalance
 	loadmenu GameCornerPrizesStoneMenuHeader
 	verticalmenu

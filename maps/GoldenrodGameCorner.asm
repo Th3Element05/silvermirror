@@ -54,16 +54,16 @@ GoldenrodGameCornerEggVendor:
 	writetext GameCornerEggVendor_IntroText
 	waitbutton
 	checkitem COIN_CASE
-	iffalse GameCorner_NoCoinCaseScript
+	iffalse .NoCoinCase ;GameCorner_NoCoinCaseScript
 	special DisplayCoinCaseBalance
 	writetext GameCornerEggVendor_OfferText
 	pause 15
 	yesorno
 	iffalse .NoThanks
 	checkcoins GAMECORNER_EGG_COINS
-	ifequal HAVE_LESS, GameCorner_NotEnoughCoinsScript
+	ifequal HAVE_LESS, .NotEnoughCoins ;GameCorner_NotEnoughCoinsScript
 	readvar VAR_PARTYCOUNT
-	ifequal PARTY_LENGTH, GameCorner_NoRoomScript
+	ifequal PARTY_LENGTH, .NoRoomForEgg ;GameCorner_NoRoomScript
 	playsound SFX_TRANSACTION
 	takecoins GAMECORNER_EGG_COINS
 	waitsfx
@@ -78,8 +78,29 @@ GoldenrodGameCornerEggVendor:
 	turnobject LAST_TALKED, RIGHT
 	end
 
+.NoCoinCase
+	writetext GameCornerEggVendor_NoCoinCaseText
+	waitbutton
+	closetext
+	turnobject LAST_TALKED, RIGHT
+	end
+
 .NoThanks
 	writetext GameCornerEggVendor_OfferStandsText
+	waitbutton
+	closetext
+	turnobject LAST_TALKED, RIGHT
+	end
+
+.NotEnoughCoins
+	writetext GameCornerEggVendor_NotEnoughCoinsText
+	waitbutton
+	closetext
+	turnobject LAST_TALKED, RIGHT
+	end
+
+.NoRoomForEgg
+	writetext GameCornerEggVendor_NoRoomText
 	waitbutton
 	closetext
 	turnobject LAST_TALKED, RIGHT
@@ -91,6 +112,12 @@ GameCornerEggVendor_IntroText:
 	line "You got coins?"
 	done
 
+GameCornerEggVendor_NoCoinCaseText:
+	ntag "???:"
+	text "Oh? You don't even"
+	line "have a COIN CASE."
+	done
+
 GameCornerEggVendor_OfferText:
 	ntag "???:"
 	text "I've got some rare"
@@ -99,6 +126,18 @@ GameCornerEggVendor_OfferText:
 
 	para "One rare egg for"
 	line "{d:GAMECORNER_EGG_COINS} coins, deal?"
+	done
+
+GameCornerEggVendor_NotEnoughCoinsText:
+	ntag "???:"
+	text "You don't have"
+	line "enough coins."
+	done
+
+GameCornerEggVendor_NoRoomText:
+	ntag "???:"
+	text "You have no room"
+	line "for it."
 	done
 
 GameCornerEggVendor_GotEggText:
