@@ -6692,18 +6692,18 @@ LoadEnemyMon:
 
 ; Species-specfic:
 
-; Unown
-	ld a, [wTempEnemyMonSpecies]
-	cp UNOWN
-	jr nz, .Magikarp
-
-; Get letter based on DVs
-	ld hl, wEnemyMonDVs
-	predef GetUnownLetter
-; Can't use any letters that haven't been unlocked
-; If combined with forced shiny battletype, causes an infinite loop
-	call CheckUnownLetter
-	jr c, .GenerateDVs ; try again
+;; Unown
+;	ld a, [wTempEnemyMonSpecies]
+;	cp UNOWN
+;	jr nz, .Magikarp
+;
+;; Get letter based on DVs
+;	ld hl, wEnemyMonDVs
+;	predef GetUnownLetter
+;; Can't use any letters that haven't been unlocked
+;; If combined with forced shiny battletype, causes an infinite loop
+;	call CheckUnownLetter
+;	jr c, .GenerateDVs ; try again
 
 .Magikarp:
 ; These filters are untranslated.
@@ -7001,54 +7001,55 @@ CheckSleepingTreeMon:
 
 INCLUDE "data/wild/treemons_asleep.asm"
 
-CheckUnownLetter:
-; Return carry if the Unown letter hasn't been unlocked yet
+;CheckUnownLetter: ; unreferenced (commented out only call at battle/core.asm "; Unown")
+;; Return carry if the Unown letter hasn't been unlocked yet
+;
+;	ld a, [wUnlockedUnowns]
+;	ld c, a
+;	ld de, 0
+;
+;.loop
+;
+;; Don't check this set unless it's been unlocked
+;	srl c
+;	jr nc, .next
+;
+;; Is our letter in the set?
+;	ld hl, UnlockedUnownLetterSets
+;	add hl, de
+;	ld a, [hli]
+;	ld h, [hl]
+;	ld l, a
+;
+;	push de
+;	ld a, [wUnownLetter]
+;	ld de, 1
+;	push bc
+;	call IsInArray
+;	pop bc
+;	pop de
+;
+;	jr c, .match
+;
+;.next
+;; Make sure we haven't gone past the end of the table
+;	inc e
+;	inc e
+;	ld a, e
+;	cp NUM_UNLOCKED_UNOWN_SETS * 2
+;	jr c, .loop
+;
+;; Hasn't been unlocked, or the letter is invalid
+;	scf
+;	ret
+;
+;.match
+;; Valid letter
+;	and a
+;	ret
+;
+;INCLUDE "data/wild/unlocked_unowns.asm"
 
-	ld a, [wUnlockedUnowns]
-	ld c, a
-	ld de, 0
-
-.loop
-
-; Don't check this set unless it's been unlocked
-	srl c
-	jr nc, .next
-
-; Is our letter in the set?
-	ld hl, UnlockedUnownLetterSets
-	add hl, de
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
-
-	push de
-	ld a, [wUnownLetter]
-	ld de, 1
-	push bc
-	call IsInArray
-	pop bc
-	pop de
-
-	jr c, .match
-
-.next
-; Make sure we haven't gone past the end of the table
-	inc e
-	inc e
-	ld a, e
-	cp NUM_UNLOCKED_UNOWN_SETS * 2
-	jr c, .loop
-
-; Hasn't been unlocked, or the letter is invalid
-	scf
-	ret
-
-.match
-; Valid letter
-	and a
-	ret
-
-INCLUDE "data/wild/unlocked_unowns.asm"
 
 ;SwapBattlerLevels: ; unreferenced
 ;	push bc
