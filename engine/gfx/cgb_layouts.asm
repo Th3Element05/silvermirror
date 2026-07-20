@@ -197,7 +197,7 @@ _CGB_FinishBattleScreenLayout:
 	call FillBoxCGB
 
 ; player HP bar
-	hlcoord 9, 10, wAttrmap ;10, 7, wAttrmap
+	hlcoord 10, 9, wAttrmap ;10, 7, wAttrmap
 	lb bc, 1, 8 ;5, 10
 	ld a, PAL_BATTLE_BG_PLAYER_HP
 	call FillBoxCGB
