@@ -114,9 +114,8 @@ PokefanmColinAfterBattleText:
 	ntag "#FAN:"
 	text "I lost the battle,"
 	line "but my #MON win"
-
-	para "the prize for"
-	line "being most lovely."
+	cont "the prize for"
+	roll "being most lovely."
 	done
 
 
@@ -308,6 +307,8 @@ NationalParkBattleNoticeText:
 	line "WARDEN's OFFICE"
 	done
 
+NationalParkTrashcan:
+	jumpstd TrashCanScript
 
 ; items
 NationalParkHiddenFullHeal:
@@ -334,6 +335,10 @@ NationalPark_MapEvents:
 	def_bg_events
 	bg_event 14, 44, BGEVENT_READ, NationalParkRelaxationSquareSign
 	bg_event 26, 30, BGEVENT_READ, NationalParkBattleNoticeSign
+	bg_event 16,  4, BGEVENT_READ, NationalParkTrashcan
+	bg_event 22,  4, BGEVENT_READ, NationalParkTrashcan
+	bg_event 12, 40, BGEVENT_READ, NationalParkTrashcan
+	bg_event 30, 40, BGEVENT_READ, NationalParkTrashcan
 	bg_event  6, 47, BGEVENT_ITEM, NationalParkHiddenFullHeal
 
 	def_object_events
@@ -346,8 +351,8 @@ NationalPark_MapEvents:
 	object_event 15,  4, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, NationalParkPokefanFScript, -1
 	object_event 27, 40, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NationalParkTeacher1Script, -1
 	object_event 26, 40, SPRITE_MEOWTH, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, NationalParkMeowth, -1
-	object_event 11, 41, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NationalParkYoungster1Script, -1
-	object_event 10, 41, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, NationalParkYoungster2Script, -1
+	object_event 11, 40, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NationalParkYoungster1Script, -1
+	object_event 10, 40, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, NationalParkYoungster2Script, -1
 	object_event 17, 41, SPRITE_TEACHER, SPRITEMOVEDATA_WANDER, 1, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, NationalParkTeacher2Script, -1
 
 	object_event 35, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NationalParkSunStone, EVENT_NATIONAL_PARK_SUN_STONE

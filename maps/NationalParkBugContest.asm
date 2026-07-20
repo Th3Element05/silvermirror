@@ -159,6 +159,10 @@ NationalParkBugContest_MapEvents:
 	def_bg_events
 	bg_event 14, 44, BGEVENT_READ, NationalParkRelaxationSquareSign
 	bg_event 26, 30, BGEVENT_READ, NationalParkBattleNoticeSign
+	bg_event 16,  4, BGEVENT_READ, NationalParkTrashcan
+	bg_event 22,  4, BGEVENT_READ, NationalParkTrashcan
+	bg_event 12, 40, BGEVENT_READ, NationalParkTrashcan
+	bg_event 30, 40, BGEVENT_READ, NationalParkTrashcan
 	bg_event  6, 47, BGEVENT_ITEM, NationalParkHiddenFullHeal
 
 	def_object_events
