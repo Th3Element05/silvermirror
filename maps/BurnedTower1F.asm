@@ -37,8 +37,6 @@ BurnedTowerLostGirlScript:
 	writetext BurnedTowerGirl_BeforeText
 	waitbutton
 	closetext
-	setscene SCENE_BURNEDTOWER1F_NOOP
-	setevent EVENT_FOUND_GIRL_IN_BURNED_TOWER
 	special FadeOutMusic
 	pause 15
 	earthquake 50
@@ -55,9 +53,11 @@ BurnedTowerLostGirlScript:
 	writetext BurnedTowerGirl_AfterText
 	waitbutton
 	closetext
-	wildoff
-	setevent EVENT_HOLE_IN_BURNED_TOWER
-	setscene SCENE_ECRUTEAKCITY_NOOP
+;	wildoff
+;	setevent EVENT_HOLE_IN_BURNED_TOWER
+;	setevent EVENT_FOUND_GIRL_IN_BURNED_TOWER
+;	setscene SCENE_BURNEDTOWER1F_NOOP
+;	setscene SCENE_ECRUTEAKCITY_NOOP
 	pause 15
 	warpcheck
 	end
