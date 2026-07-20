@@ -20,9 +20,9 @@ Route42EcruteakGateRouteBlockedText:
 	cont "blocked ROUTE 42!"
 
 	para "The GYM LEADER"
-	line "from CIANWOOD is"
-	cont "has come all this"
-	roll "way to help!"
+	line "from CIANWOOD has"
+	cont "come all this way"
+	roll "to help!"
 	done
 
 Route42EcruteakGateRouteClearText:
