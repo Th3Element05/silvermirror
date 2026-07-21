@@ -1073,22 +1073,22 @@ JohtoGrassWildMons:
 	; day
 	db 40, URSARING   ; 20% chance
 	db 40, DONPHAN    ; 20% chance
-	db 40, PONYTA     ; 15% chance
+	db 37, PONYTA     ; 15% chance
 	db 42, RAPIDASH   ; 10% chance
 	db 39, TANGELA    ; 10% chance
 	db 40, TANGELA    ; 10% chance
-	db 40, PONYTA     ;  5% chance
+	db 37, PONYTA     ;  5% chance
 	db 40, DODUO      ;  5% chance
 	db 43, DODRIO     ;  4% chance
 	db 43, DODRIO     ;  1% chance
 	; nite
 	db 39, TANGELA    ; 20% chance
 	db 40, GOLBAT     ; 20% chance
-	db 40, PONYTA     ; 15% chance
+	db 37, PONYTA     ; 15% chance
 	db 42, RAPIDASH   ; 10% chance
 	db 40, SNEASEL    ; 10% chance
 	db 38, POLIWHIRL  ; 10% chance
-	db 40, PONYTA     ;  5% chance
+	db 37, PONYTA     ;  5% chance
 	db 40, SNEASEL    ;  5% chance
 	db 38, POLIWHIRL  ;  4% chance
 	db 38, POLIWHIRL  ;  1% chance
