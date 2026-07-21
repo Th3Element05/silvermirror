@@ -161,7 +161,7 @@ CardKeySlotScript:: ;export for using CARD KEY from bag
 	opentext
 	writetext RadioTower3FCardKeySlotText
 	waitbutton
-	checkevent ENGINE_ROCKETS_IN_RADIO_TOWER
+	checkflag ENGINE_ROCKETS_IN_RADIO_TOWER
 	iffalse .EndCardKey
 	checkevent EVENT_USED_RADIO_TOWER_CARD_KEY
 	iftrue .EndCardKey
