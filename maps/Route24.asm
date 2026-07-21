@@ -343,7 +343,7 @@ TrainerCamperTanner:
 	verbosegiveitem LEAF_STONE
 	iffalse .BagFull
 	clearflag ENGINE_TANNER_HAS_SUN_STONE
-;	setevent ENGINE_TANNER_GAVE_SUN_STONE
+;	setflag ENGINE_TANNER_GAVE_SUN_STONE
 	jump .NumberAccepted
 
 .SunStone
