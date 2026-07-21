@@ -68,9 +68,8 @@ GoldenrodDeptStore5FPokefanMText:
 
 	para "The name is a re-"
 	line "flection of the"
-
-	para "original trainer's"
-	line "feelings for it."
+	cont "original trainer's"
+	roll "feelings for it."
 	done
 
 GoldenrodDeptStore5FDirectory:

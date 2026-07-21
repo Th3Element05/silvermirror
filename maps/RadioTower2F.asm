@@ -254,7 +254,7 @@ RadioTower2FBuenaTuneInToMyShowText:
 RadioTower2FBuenaDoYouKnowPasswordText:
 	ntag "BUENA:"
 	text "Did you tune in to"
-	cont "my radio show?"
+	line "my radio show?"
 
 	para "Do you remember"
 	line "today's password?"

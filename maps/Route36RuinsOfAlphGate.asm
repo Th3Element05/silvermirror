@@ -16,8 +16,8 @@ Route36RuinsOfAlphGateOfficerScript:
 
 ;Route36RuinsOfAlphGateOfficerText:
 ;	text "They found an old"
-;	cont "structure inside a"
-;	line "cave here."
+;	line "structure inside a"
+;	cont "cave here."
 ;
 ;	para "The site was named"
 ;	line "the RUINS OF ALPH."
