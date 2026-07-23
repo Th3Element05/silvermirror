@@ -155,6 +155,8 @@ SetBattlePal_Text:
 	jp FarCopyWRAM
 
 _CGB_BattleColors:
+	call LoadPlayerBattleCGBLayoutStatusIconPalette
+	call LoadEnemyBattleCGBLayoutStatusIconPalette
 	ld de, wBGPals1
 	call SetBattlePal_Player
 	call SetBattlePal_Enemy
@@ -164,9 +166,8 @@ _CGB_BattleColors:
 	ld de, wOBPals1
 	call SetBattlePal_Enemy
 	call SetBattlePal_Player
-
-	call LoadPlayerBattleCGBLayoutStatusIconPalette
-	call LoadEnemyBattleCGBLayoutStatusIconPalette
+;	call LoadPlayerBattleCGBLayoutStatusIconPalette
+;	call LoadEnemyBattleCGBLayoutStatusIconPalette
 
 	ld a, SCGB_BATTLE_COLORS
 	ld [wDefaultSGBLayout], a
