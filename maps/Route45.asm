@@ -527,7 +527,7 @@ Route45SignText:
 	line "MOUNTAIN ROAD"
 	done
 
-Route45HiddenPpUp:
+Route45HiddenPPUp:
 	hiddenitem PP_UP, EVENT_ROUTE_45_HIDDEN_PP_UP
 
 ; items
@@ -555,7 +555,7 @@ Route45_MapEvents:
 	bg_event 16, 80, BGEVENT_READ, Route45_NoFruit
 	bg_event 15, 82, BGEVENT_READ, Route45_NoFruit
 	bg_event 10,  4, BGEVENT_READ, Route45Sign
-	bg_event 13, 80, BGEVENT_ITEM, Route45HiddenPpUp
+	bg_event 13, 80, BGEVENT_ITEM, Route45HiddenPPUp
 
 	def_object_events
 	object_event 16, 80, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route45_LeppaBerry, EVENT_ROUTE_45_LEPPA_BERRY
@@ -566,7 +566,7 @@ Route45_MapEvents:
 	object_event  5, 28, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerHikerParry, -1 ;parry
 	object_event  6, 51, SPRITE_BLACK_BELT, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_TRAINER, 2, TrainerBlackbeltKenji, -1 ;kenji
 	object_event 15, 65, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerHikerPatrick, -1 ;michael
-	object_event  4, 70, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TrainerCamperDilan, -1 ;quentin
+	object_event  4, 70, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperDilan, -1 ;quentin
 ;	object_event  9, 65, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerHikerTimothy, -1 ;timothy
 	object_event  9, 50, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route45Nugget, EVENT_ROUTE_45_NUGGET
 	object_event  5, 66, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route45Revive, EVENT_ROUTE_45_REVIVE
