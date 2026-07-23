@@ -103,7 +103,7 @@ HideHeadbuttTree:
 	ld a, $2c ; grass tile (sour $74 custom for headbutt)
 	jr z, .replacement_tile_determined
 
-	ld a, $05 ; grass tile
+	ld a, $45 ; $05 ; grass tile
 .replacement_tile_determined
 	ld [hli], a
 	ld [hld], a
