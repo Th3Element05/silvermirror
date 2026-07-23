@@ -50,6 +50,7 @@ NewBarkTownRivalEncounterScript:
 	opentext
 	writetext NewBarkTownRival_IntroText
 	promptbutton
+	setevent EVENT_NEW_BARK_TOWN_RIVAL
 	winlosstext NewBarkTownRival_WinText, NewBarkTownRival_LossText
 	loadtrainer RIVAL2, RIVAL2_NEW_BARK_TOWN
 ;	loadmem VAR_BATTLETYPE, BATTLETYPE_CANLOSE
