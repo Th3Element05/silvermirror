@@ -319,7 +319,7 @@ TrainerYoungsterJoey:
 YoungsterJoey1SeenText:
 	ntag "YOUNGSTER:"
 	text "Come on,"
-	cont "let's battle!"
+	line "let's battle!"
 	done
 
 YoungsterJoey1BeatenText:
@@ -493,7 +493,7 @@ Route30_MapEvents:
 	object_event 13,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route30RainbowWing, EVENT_ROUTE_30_RAINBOW_WING
 	object_event  2, 27, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerYoungsterJoey, -1 ;joey
 	object_event 16, 30, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerYoungsterThomas, -1 ;mikey
-	object_event  1,  7, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherDylan, -1 ;don
+	object_event  1,  8, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerBugCatcherDylan, -1 ;don
 ;	object_event  8, 35, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route30Antidote, EVENT_ROUTE_30_ANTIDOTE
 
 ;.PinkOverYellowOBPalette
