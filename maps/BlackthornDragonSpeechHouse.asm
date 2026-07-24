@@ -12,8 +12,8 @@ BlackthornDragonSpeechHouseGrannyText:
 	text "A clan of trainers"
 	line "who can freely"
 	cont "command dragons"
-	roll "live right here in"
-	cont "BLACKTHORN."
+	roll "live right here,"
+	cont "in BLACKTHORN."
 
 	para "As a result, there"
 	line "are many legends"

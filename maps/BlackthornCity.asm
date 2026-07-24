@@ -118,7 +118,7 @@ BlackthornGramps1Script:
 	jumptextfaceplayer BlackthornGrampsRefusesEntryText
 BlackthornGrampsRefusesEntryText:
 	ntag "ELDER:"
-	text "No. Only chosen"
+	text "Only chosen"
 	line "trainers may enter"
 	cont "the DRAGON's DEN."
 
