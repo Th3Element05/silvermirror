@@ -157,7 +157,7 @@ Route46Sign:
 	jumptext Route46SignText
 Route46SignText:
 	text "ROUTE 46"
-	line "MOUNTAIN RD. AHEAD"
+	line "MOUNTAIN ROAD"
 	done
 
 ; items
