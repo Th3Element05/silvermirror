@@ -288,6 +288,32 @@ KantoGrassWildMonsChallenge:
 	db 16, VENONAT    ;  1% chance
 	end_grass_wildmons
 
+	def_grass_wildmons ROUTE_10_SOUTH ; NO GRASS ; this is data for phone text
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
+	; day
+	db 15, ZUBAT      ; 20% chance
+	db 15, ZUBAT      ; 20% chance
+	db 16, MACHOP     ; 15% chance
+	db 16, MACHOP     ; 10% chance
+	db 16, GEODUDE    ; 10% chance
+	db 16, GEODUDE    ; 10% chance
+	db 16, GEODUDE    ;  5% chance
+	db 16, GEODUDE    ;  5% chance
+	db 14, ONIX       ;  4% chance
+	db 12, CUBONE     ;  1% chance
+	; nite
+	db 16, GEODUDE    ; 20% chance
+	db 16, GEODUDE    ; 20% chance
+	db 16, MACHOP     ; 15% chance
+	db 16, MACHOP     ; 10% chance
+	db 15, ZUBAT      ; 10% chance
+	db 15, ZUBAT      ; 10% chance
+	db 15, ZUBAT      ;  5% chance
+	db 15, ZUBAT      ;  5% chance
+	db 14, ONIX       ;  4% chance
+	db 12, CUBONE     ;  1% chance
+	end_grass_wildmons
+
 	def_grass_wildmons ROUTE_11 ;GEN2
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; day

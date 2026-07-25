@@ -288,6 +288,32 @@ KantoGrassWildMons:
 	db 20, RATICATE   ;  1% chance
 	end_grass_wildmons
 
+	def_grass_wildmons ROUTE_10_SOUTH ; NO GRASS ; this is data for phone text
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
+	; day
+	db 15, ZUBAT      ; 20% chance
+	db 16, ZUBAT      ; 20% chance
+	db 16, MACHOP     ; 15% chance
+	db 16, GEODUDE    ; 10% chance
+	db 17, GEODUDE    ; 10% chance
+	db 17, GEODUDE    ; 10% chance
+	db 16, MACHOP     ;  5% chance
+	db 14, ONIX       ;  5% chance
+	db 13, CUBONE     ;  4% chance
+	db 14, ONIX       ;  1% chance
+	; nite
+	db 16, GEODUDE    ; 20% chance
+	db 17, GEODUDE    ; 20% chance
+	db 16, MACHOP     ; 15% chance
+	db 15, ZUBAT      ; 10% chance
+	db 16, ZUBAT      ; 10% chance
+	db 16, ZUBAT      ; 10% chance
+	db 16, MACHOP     ;  5% chance
+	db 15, ONIX       ;  5% chance
+	db 13, CUBONE     ;  4% chance
+	db 14, ONIX       ;  1% chance
+	end_grass_wildmons
+
 	def_grass_wildmons ROUTE_11 ;GEN1
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; day
@@ -494,6 +520,32 @@ KantoGrassWildMons:
 	db 26, RATICATE   ;  5% chance
 	db 22, RATTATA    ;  4% chance
 	db 26, FEAROW     ;  1% chance
+	end_grass_wildmons
+
+	def_grass_wildmons ROUTE_20 ; NO GRASS ; this is data for phone text
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; day
+	db 21, PIDGEY     ; 20% chance
+	db 21, PIDGEY     ; 20% chance
+	db 21, RATTATA    ; 15% chance
+	db 21, RATTATA    ; 10% chance
+	db 28, PIDGEOTTO  ; 10% chance
+	db 30, PIDGEOTTO  ; 10% chance
+	db 24, RATICATE   ;  5% chance
+	db 26, TANGELA    ;  5% chance
+	db 26, TANGELA    ;  4% chance
+	db 24, MR__MIME   ;  1% chance
+	; nite
+	db 21, RATTATA    ; 20% chance
+	db 21, RATTATA    ; 20% chance
+	db 21, PIDGEY     ; 15% chance
+	db 30, PIDGEOTTO  ; 10% chance
+	db 24, RATICATE   ; 10% chance
+	db 24, RATICATE   ; 10% chance
+	db 21, PIDGEY     ;  5% chance
+	db 26, TANGELA    ;  5% chance
+	db 26, TANGELA    ;  4% chance
+	db 24, MR__MIME   ;  1% chance
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_21 ;GEN1
