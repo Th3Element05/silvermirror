@@ -496,6 +496,32 @@ KantoGrassWildMonsChallenge:
 	db 20, SLUGMA     ;  1% chance
 	end_grass_wildmons
 
+	def_grass_wildmons ROUTE_20 ;GEN2
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; day
+	db 21, PIDGEY     ; 20% chance
+	db 22, SENTRET    ; 20% chance
+	db 21, RATTATA    ; 15% chance
+	db 21, PIDGEY     ; 10% chance
+	db 28, FURRET     ; 10% chance
+	db 30, PIDGEOTTO  ; 10% chance
+	db 30, PIDGEOTTO  ;  5% chance
+	db 26, TANGELA    ;  5% chance
+	db 26, TANGELA    ;  4% chance
+	db 24, MR__MIME   ;  1% chance
+	; nite
+	db 21, RATTATA    ; 20% chance
+	db 21, RATTATA    ; 20% chance
+	db 21, HOOTHOOT   ; 15% chance
+	db 21, HOOTHOOT   ; 10% chance
+	db 29, NOCTOWL    ; 10% chance
+	db 24, RATICATE   ; 10% chance
+	db 21, HOOTHOOT   ;  5% chance
+	db 26, TANGELA    ;  5% chance
+	db 26, TANGELA    ;  4% chance
+	db 24, MR__MIME   ;  1% chance
+	end_grass_wildmons
+
 	def_grass_wildmons ROUTE_21 ;GEN2
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; day
