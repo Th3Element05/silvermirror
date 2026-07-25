@@ -3,6 +3,7 @@
 	const TEAMROCKETBASEB1F_NINJA_T
 	const TEAMROCKETBASEB1F_NINJA_BALL
 	const TEAMROCKETBASEB1F_NINJA_B
+	const TEAMROCKETBASEB1F_SHINE
 
 TeamRocketBaseB1F_MapScripts:
 	def_scene_scripts
@@ -202,6 +203,29 @@ NinjaGuardRandomBattleScript:
 	loadtrainer NINJA, NINJA_GUARD_R2
 	end
 
+TeamRocketBaseSetShine:
+	checkevent EVENT_TEAM_ROCKET_BASE_B1F_SWITCH
+	iftrue NoNinjaSecurity
+	setevent EVENT_NINJA_SECURITY_SHOW_SHINE
+	end
+
+TeamRocketBaseShowShine:
+	checkevent EVENT_NINJA_SECURITY_SHOW_SHINE
+	iffalse NoNinjaSecurity
+	appear TEAMROCKETBASEB1F_SHINE
+	pause 4
+	turnobject TEAMROCKETBASEB1F_SHINE, DOWN
+	pause 6
+	turnobject TEAMROCKETBASEB1F_SHINE, UP
+	pause 4
+	turnobject TEAMROCKETBASEB1F_SHINE, DOWN
+	pause 4
+	turnobject TEAMROCKETBASEB1F_SHINE, UP
+	pause 2
+	disappear TEAMROCKETBASEB1F_SHINE
+	clearevent EVENT_NINJA_SECURITY_SHOW_SHINE
+	; fallthrough
+
 NoNinjaSecurity:
 	end
 
@@ -317,6 +341,7 @@ TeamRocketBaseB1FFakeBookshelfText:
 	line "are fake!"
 	done
 
+
 TeamRocketBaseB1FHiddenRevive:
 	hiddenitem REVIVE, EVENT_TEAM_ROCKET_BASE_B1F_HIDDEN_REVIVE
 
@@ -340,8 +365,6 @@ TeamRocketBaseB1F_MapEvents:
 ;	warp_event 25,  2, TEAM_ROCKET_BASE_B1F, 3
 
 	def_coord_events
-	; There are five security cameras in the base.
-	; Walking in front of one triggers two Rocket Grunts.
 	coord_event 17,  2, SCENE_TEAMROCKETBASEB1F_NINJAS, NinjaSecurity1a
 	coord_event 17,  3, SCENE_TEAMROCKETBASEB1F_NINJAS, NinjaSecurity1b
 	coord_event  9,  2, SCENE_TEAMROCKETBASEB1F_NINJAS, NinjaSecurity2a
@@ -356,6 +379,8 @@ TeamRocketBaseB1F_MapEvents:
 	coord_event 26, 14, SCENE_TEAMROCKETBASEB1F_NINJAS, NinjaSecurity7
 	coord_event 28, 14, SCENE_TEAMROCKETBASEB1F_NINJAS, NinjaSecurity7;b
 ;	coord_event 11, 16, SCENE_TEAMROCKETBASEB1F_NINJAS, NinjaSecurity8
+	coord_event 15, 11, SCENE_TEAMROCKETBASEB1F_NINJAS, TeamRocketBaseShowShine
+	coord_event 15, 12, SCENE_TEAMROCKETBASEB1F_NINJAS, TeamRocketBaseSetShine
 	; There are spots on the floor that trigger a Pokémon battle.
 	; Each Pokémon (Voltorb, Koffing, Geodude) knows Selfdestruct.
 ;	coord_event  2,  7, SCENE_TEAMROCKETBASEB1F_TRAPS, ExplodingTrap1
@@ -382,6 +407,7 @@ TeamRocketBaseB1F_MapEvents:
 	object_event -4,  0, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_NINJA_SECURITY_NINJAS
 	object_event 14, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NinjaSecurity8, EVENT_NINJA_SECURITY_8
 	object_event 14, 16, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_SCRIPT, 0, BallNinjaFailsafe, EVENT_NINJA_SECURITY_POKEBALL_NINJA
+	object_event 20, 11, SPRITE_SHINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_NINJA_SECURITY_NINJAS
 	object_event 27,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TeamRocketBaseB1FHyperPotion, EVENT_TEAM_ROCKET_BASE_B1F_HYPER_POTION
 	object_event 19, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TeamRocketBaseB1FNugget, EVENT_TEAM_ROCKET_BASE_B1F_NUGGET
 	object_event  7,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TeamRocketBaseB1FGuardSpec, EVENT_TEAM_ROCKET_BASE_B1F_GUARD_SPEC

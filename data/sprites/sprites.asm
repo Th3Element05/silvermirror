@@ -98,7 +98,7 @@ OverworldSprites:
 	overworld_sprite DomeFossilSpriteGFX, 4, STILL_SPRITE, PAL_OW_ROCK
 	overworld_sprite OldAmberSpriteGFX, 4, STILL_SPRITE, PAL_OW_ROCK
 	overworld_sprite MirrorSpriteGFX, 8, STANDING_SPRITE, PAL_OW_SILVER
-; 5b
+	overworld_sprite ShineSpriteGFX, 8, STANDING_SPRITE, PAL_OW_SILVER
 ; 5c
 ; 5d
 ; 5e

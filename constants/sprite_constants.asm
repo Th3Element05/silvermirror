@@ -93,7 +93,7 @@
 	const SPRITE_DOME_FOSSIL            ; 58
 	const SPRITE_OLD_AMBER              ; 59
 	const SPRITE_MIRROR                 ; 5a
-;; 5b
+	const SPRITE_SHINE                  ; 5b
 ;; 5c
 ;; 5d
 ;; 5e
