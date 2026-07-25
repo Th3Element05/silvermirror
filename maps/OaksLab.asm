@@ -14,10 +14,18 @@ OaksLab_MapScripts:
 	scene_script OaksLabNoop2Scene,   SCENE_OAKSLAB_RIVAL_BATTLE
 
 	def_callbacks
+	callback MAPCALLBACK_OBJECTS, OaksLabMoveOakCallback
 
 OaksLabNoop1Scene:
 OaksLabNoop2Scene:
 	end
+
+CeruleanCityBlockersCallback:
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iffalse .Done
+	moveobject OAKSLAB_OAK, 4, 2
+.Done
+	endcallback
 
 OaksLabMeetOakScene:
 	applymovement PLAYER, OaksLabPlayerWalkInMovement
@@ -1489,13 +1497,25 @@ OaksLabMewHintBookshelf:
 	writetext OaksLabAskReadHintText
 	yesorno
 	iffalse .NoHint
-	random 2
-	ifequal 1, .MewHint
-; else 0
-	jumptext OaksLabMissingnoHint
-
-.MewHint
 	jumptext OaksLabMewHintText
+
+.NotYet
+	jumptext OaksLabNoHintYetText
+
+.NoHint
+	writetext OaksLabDeclinedHintText
+	waitbutton
+	closetext
+	end
+
+OaksLabMissinnoHintBookshelf:
+	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
+	iffalse .NotYet
+	opentext
+	writetext OaksLabAskReadHintText
+	yesorno
+	iffalse .NoHint
+	jumptext OaksLabMissingnoHint
 
 .NotYet
 	jumptext OaksLabNoHintYetText
@@ -2285,7 +2305,8 @@ OaksLab_MapEvents:
 ; oak bookshelves
 ;	bg_event  6,  1, BGEVENT_READ, DebugGotCharmander
 ;	bg_event  7,  1, BGEVENT_READ, DebugGotSquirtle
-	bg_event  7,  1, BGEVENT_READ, OaksLabMewHintBookshelf
+	bg_event  8,  1, BGEVENT_READ, OaksLabMewHintBookshelf
+	bg_event  9,  1, BGEVENT_READ, OaksLabMissinnoHintBookshelf
 ;	bg_event  8,  1, BGEVENT_READ, DebugGotBulbasaur
 ;	bg_event  9,  1, BGEVENT_READ, DebugBeatEliteFour
 ; back bookshelves
