@@ -32,11 +32,20 @@ LearnMove:
 	push de
 	call ForgetMove
 	pop de
+
+	push hl
+	ld [wNamedObjectIndex], a
+	call GetMoveName
+	ld hl, ConfirmForgetMoveText
+	call PrintText
+	call YesNoBox
+	pop hl
+
 	jp c, .cancel
 
 	push hl
 	push de
-	ld [wNamedObjectIndex], a
+;	ld [wNamedObjectIndex], a
 
 	ld b, a
 	ld a, [wBattleMode]
@@ -62,7 +71,7 @@ LearnMove:
 	call GetSGBLayout
 	call SetPalettes
 
-	call GetMoveName
+;	call GetMoveName
 	ld hl, Text_1_2_and_Poof ; 1, 2 and…
 	call PrintText
 	pop de
@@ -433,6 +442,10 @@ LearnedMoveText:
 
 MoveAskForgetText:
 	text_far _MoveAskForgetText
+	text_end
+
+ConfirmForgetMoveText:
+	text_far _ConfirmForgetMoveText
 	text_end
 
 StopLearningMoveText:

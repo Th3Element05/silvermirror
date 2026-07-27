@@ -989,6 +989,13 @@ _AskForgetMoveText::
 	text "?"
 	done
 
+_ConfirmForgetMoveText::
+	text "Really forget"
+	line "@"
+	text_ram wStringBuffer1
+	text "?"
+	done
+
 Text_MoveForgetCount::
 	text "1, 2 and…@"
 	text_pause
