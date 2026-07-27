@@ -70,6 +70,7 @@ BTTrainerClassSprites:
 	db SPRITE_TWIN          ; Twins
 	db SPRITE_OFFICER       ; Officer
 	db SPRITE_NINJA         ; Ninja
+	db SPRITE_NINJA         ; Ninja2
 	db SPRITE_COOLTRAINER_F ; Couple
 	db SPRITE_COOLTRAINER_M ; CoolDuo
 	db SPRITE_CHRIS         ; Red

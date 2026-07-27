@@ -73,6 +73,7 @@ TrainerEncounterMusic::
 	db MUSIC_LASS_ENCOUNTER        ; twins
 	db MUSIC_TRAINER_ENCOUNTER     ; officer
 	db MUSIC_DRAGONS_DEN           ; ninja ; mysticalman MUSIC_TRAINER_ENCOUNTER
+	db MUSIC_DRAGONS_DEN           ; ninja2
 	db MUSIC_BEAUTY_ENCOUNTER      ; couple
 	db MUSIC_TRAINER_ENCOUNTER     ; coolduo
 	db MUSIC_TRAINER_ENCOUNTER     ; red

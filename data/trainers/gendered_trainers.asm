@@ -27,6 +27,7 @@ MaleTrainers:
 	db BIKER
 	db SCIENTIST
 	db NINJA
+	db NINJA2
 .End
 
 FemaleTrainers:

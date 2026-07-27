@@ -72,6 +72,7 @@ BTTrainerClassGenders:
 	db FEMALE ; TWINS
 	db MALE   ; OFFICER
 	db MALE   ; NINJA
+	db MALE   ; NINJA2
 	db FEMALE ; COUPLE
 	db MALE   ; COOLDUO
 	db MALE   ; RED

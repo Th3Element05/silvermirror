@@ -78,6 +78,7 @@ INCBIN "gfx/trainers/kimono_girl.gbcpal", middle_colors
 INCBIN "gfx/trainers/twins.gbcpal", middle_colors
 INCBIN "gfx/trainers/officer.gbcpal", middle_colors
 INCBIN "gfx/trainers/ninja.gbcpal", middle_colors
+INCBIN "gfx/trainers/pokemaniac.gbcpal", middle_colors ; Ninja2
 INCBIN "gfx/trainers/couple.gbcpal", middle_colors
 INCBIN "gfx/trainers/cool_duo.gbcpal", middle_colors
 INCBIN "gfx/trainers/red.gbcpal", middle_colors

@@ -922,10 +922,10 @@ DEF KRIS EQU __trainer_class__
 	const NINJA_GUARD_R0    ;const EUSINE
 	const NINJA_GUARD_R1
 	const NINJA_GUARD_R2
-	const JONIN
+;	const JONIN
 	const CHUNIN
 	const GENIN
-	const TEISATSU
+;	const TEISATSU
 	const KANCHO
 	const KISHU
 	const KONRAN
@@ -933,6 +933,11 @@ DEF KRIS EQU __trainer_class__
 ;	const IROH
 ;	const AANG
 ;	const ZUKO
+
+	trainerclass NINJA2
+; johto
+	const JONIN
+	const TEISATSU
 
 	trainerclass COUPLE ; 44
 ; kanto (JR TRAINERs r6)

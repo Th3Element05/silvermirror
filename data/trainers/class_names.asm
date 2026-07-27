@@ -70,6 +70,7 @@ TrainerClassNames::
 	li "TWINS"          ;TWINS
 	li "OFFICER"        ;OFFICER
 	li "NINJA"          ;NINJA ;"MYSTICALMAN" ;MYSTICALMAN
+	li "NINJA"          ;NINJA2
 	li "COUPLE"         ;COUPLE
 	li "COOLDUO"        ;COOL_DUO
 	li "<PKMN> TRAINER" ;RED

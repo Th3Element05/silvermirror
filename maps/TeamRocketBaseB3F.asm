@@ -452,7 +452,7 @@ TeamRocketBaseB3FJanineText:
 
 ; trainers
 TrainerNinjaTeisatsu:
-	trainer NINJA, TEISATSU, EVENT_BEAT_NINJA_TEISATSU, NinjaTeisatsuSeenText, NinjaTeisatsuBeatenText, 0, .Script
+	trainer NINJA2, TEISATSU, EVENT_BEAT_NINJA_TEISATSU, NinjaTeisatsuSeenText, NinjaTeisatsuBeatenText, 0, .Script
 .Script:
 ;	endifjustbattled
 	checkevent EVENT_NINJA_CHALLENGE_IN_PROGRESS

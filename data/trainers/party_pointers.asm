@@ -72,6 +72,7 @@ TrainerGroups:
 	dba TwinsGroup
 	dba OfficerGroup
 	dba NinjaGroup ;MysticalmanGroup
+	dba Ninja2Group
 	dba CoupleGroup
 	dba CoolDuoGroup
 	dba RedGroup

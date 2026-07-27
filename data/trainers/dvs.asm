@@ -71,6 +71,7 @@ TrainerClassDVs:
 	dn  7,  8,  8,  7 ;   TWINS
 	dn  8,  8,  8,  8 ; OFFICER
 	dn  8,  8, 10,  8 ; NINJA
+	dn 10,  8, 10,  8 ; NINJA
 	dn  8,  8,  8,  8 ; COUPLE
 	dn 10,  9,  9, 10 ; COOL_DUO
 	dn 10, 10, 10, 10 ; RED   ;15, 13, 13, 14

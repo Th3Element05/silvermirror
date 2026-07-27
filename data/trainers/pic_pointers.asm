@@ -72,6 +72,7 @@ TrainerPicPointers::
 	dba TwinsPic
 	dba OfficerPic
 	dba NinjaPic ;MysticalmanPic
+	dba NinjaPic ; Ninja2
 	dba CouplePic
 	dba CoolduoPic
 	dba RedPic

@@ -22,7 +22,7 @@ TeamRocketBaseB2F_MapScripts:
 ;	end
 
 TrainerNinjaJonin:
-	trainer NINJA, JONIN, EVENT_BEAT_NINJA_JONIN, NinjaJoninSeenText, NinjaJoninBeatenText, 0, .Script
+	trainer NINJA2, JONIN, EVENT_BEAT_NINJA_JONIN, NinjaJoninSeenText, NinjaJoninBeatenText, 0, .Script
 .Script:
 	checkevent EVENT_TEAM_ROCKET_BASE_B2F_JONIN
 	iffalse TeamRocketBaseB2FNinjaJoninScript
