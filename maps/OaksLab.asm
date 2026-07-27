@@ -20,7 +20,7 @@ OaksLabNoop1Scene:
 OaksLabNoop2Scene:
 	end
 
-CeruleanCityBlockersCallback:
+OaksLabMoveOakCallback:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iffalse .Done
 	moveobject OAKSLAB_OAK, 4, 2
