@@ -154,8 +154,7 @@ CooltrainermBrianSeenText:
 	line "a good trainer by"
 	cont "looking at you."
 
-	para "I'm good at #-"
-	line "MON, too."
+	para "But I'm good, too."
 	done
 
 CooltrainermBrianBeatenText:

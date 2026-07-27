@@ -438,11 +438,15 @@ LakeOfRageSuperNerdText:
 LakeOfRageCooltrainerFScript:
 	jumptextfaceplayer LakeOfRageCooltrainerFText
 LakeOfRageCooltrainerFText:
-	ntag "SUPERNERD:"
-	text "Did my eyes de-"
-	line "ceive me? I saw a"
-	cont "gold MAGIKARP in"
-	line "the lake…"
+	ntag "TRAINER:"
+;	text "Did my eyes de-"
+;	line "ceive me? I saw a"
+;	cont "gold MAGIKARP in"
+;	roll "the lake…"
+
+	text "I thought I saw a"
+	line "gold MAGIKARP in"
+	cont "the lake…"
 
 	para "But MAGIKARP are"
 	line "usually orange."

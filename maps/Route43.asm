@@ -126,9 +126,9 @@ PokemaniacJuliusBeatenText:
 
 PokemaniacJuliusAfterBattleText:
 	ntag "#MANIAC:"
-	text "I'd be happy just"
-	line "to own a single"
-	cont "rare #MON."
+	text "I'd do anything to"
+	line "own more than my"
+	cont "one rare #MON!"
 	done
 
 TrainerPicnickerMegan:
