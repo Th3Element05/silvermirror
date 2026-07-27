@@ -83,9 +83,8 @@ Text_IlexForestShrine:
 	text "ILEX FOREST"
 	line "SHRINE…"
 
-	para "In honor of"
-	line "the forest's"
-	cont "protector…"
+	para "In honor of the"
+	line "forest's protector…"
 	done
 
 Text_ShrineCelebiEvent:
