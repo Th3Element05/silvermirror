@@ -844,7 +844,7 @@ BattleAnim_AerialAce:
 	anim_sound 0, 0, SFX_MENU
 	anim_bgeffect BATTLE_BG_EFFECT_HIDE_MON, $0, BG_EFFECT_USER, $0
 	anim_call BattleAnimSub_QuickAttack
-	anim_wait 12
+	anim_wait 32
 	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_HP_FLYING
 	anim_sound 0, 1, SFX_CUT
 	anim_obj BATTLE_ANIM_OBJ_CUT_LONG_DOWN_LEFT, 152, 40, $0
@@ -1643,7 +1643,8 @@ BattleAnim_Flamethrower:
 .loop
 	anim_sound 0, 1, SFX_EMBER
 	anim_wait 16
-	anim_loop 6, .loop
+;	anim_loop 6, .loop
+	anim_loop 4, .loop
 	anim_wait 16
 	anim_ret
 
@@ -2308,15 +2309,17 @@ BattleAnim_RockThrow:
 	anim_wait 2
 	anim_sound 0, 1, SFX_STRENGTH
 	anim_obj BATTLE_ANIM_OBJ_SMALL_ROCK, 136, 68, $30
-	anim_wait 96
+	anim_wait 60 ;96
 	anim_ret
 
 BattleAnim_Earthquake:
 	anim_bgeffect BATTLE_BG_EFFECT_SHAKE_SCREEN_X, $60, $4, $10
 .loop
 	anim_sound 0, 1, SFX_EMBER
-	anim_wait 24
-	anim_loop 4, .loop
+;	anim_wait 24
+;	anim_loop 4, .loop
+	anim_wait 16
+	anim_loop 5, .loop
 	anim_ret
 
 BattleAnim_Fissure:
@@ -3755,7 +3758,7 @@ BattleAnim_RockSlide:
 ;	anim_loop 4, .loop
 ;	anim_wait 96
 	anim_loop 3, .loop
-	anim_wait 64
+	anim_wait 32 ;64
 	anim_ret
 
 BattleAnim_HyperFang:
