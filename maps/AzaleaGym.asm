@@ -104,17 +104,27 @@ BugsyText_HiveBadgeSpeech:
 
 BugsyText_FuryCutterSpeech:
 	ntag "BUGSY:"
-	text "TM75 contains"
-	line "FURY CUTTER."
+	text "TM81 contains"
+	line "X-SCISSOR."
 
-	para "If you don't miss,"
-	line "it gets stronger"
-	cont "every turn."
+	para "It's a powerful"
+	line "BUG-type attack!"
 
-	para "The longer your"
-	line "battle goes, the"
-	cont "stronger it gets."
+	para "Put it to good"
+	line "use!"
 	done
+
+;	text "TM75 contains"
+;	line "FURY CUTTER."
+;
+;	para "If you don't miss,"
+;	line "it gets stronger"
+;	cont "every turn."
+;
+;	para "The longer your"
+;	line "battle goes, the"
+;	cont "stronger it gets."
+;	done
 
 BugsyText_BugMonsAreDeep:
 	ntag "BUGSY:"

@@ -12,13 +12,18 @@ CianwoodPokecenter1FLassScript:
 	jumptextfaceplayer CianwoodPokecenter1FLassText
 CianwoodPokecenter1FLassText:
 	ntag "LASS:"
-	text "Have you met the"
-	line "#SEER?"
-
-	para "She can tell you"
-	line "things about your"
-	cont "#MON!"
+	text "The local pharmacy"
+	line "sells traditional"
+	cont "#MON medicines."
 	done
+
+;	text "Have you met the"
+;	line "#SEER?"
+;
+;	para "She can tell you"
+;	line "things about your"
+;	cont "#MON!"
+;	done
 
 CianwoodPokecenter1FSuperNerdScript:
 	jumptextfaceplayer CianwoodPokecenter1FSuperNerdText

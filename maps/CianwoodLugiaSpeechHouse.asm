@@ -37,7 +37,7 @@ CianwoodLugiaSpeechHouseLassText:
 	text "I heard that you"
 	line "can only see it if"
 	cont "you have a SILVER"
-	line "WING."
+	roll "WING."
 
 	para "It must have the"
 	line "same scent as the"
