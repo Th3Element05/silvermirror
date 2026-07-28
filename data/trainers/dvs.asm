@@ -1,3 +1,9 @@
+; M:F
+; 1:1 : Female =                        Odd Spc
+; 1:3 : Female =          Even Def   or Odd Spc
+; 3:1 : Female =          Even Def  and Odd Spc
+; 7:1 : Female = Odd Atk, Even Def, and Odd Spc
+
 TrainerClassDVs:
 ; entries correspond to trainer classes (see constants/trainer_constants.asm)
 	table_width 2, TrainerClassDVs
@@ -74,8 +80,8 @@ TrainerClassDVs:
 	dn 10,  8, 10,  8 ; NINJA
 	dn  8,  8,  8,  8 ; COUPLE
 	dn 10,  9,  9, 10 ; COOL_DUO
-	dn 10, 10, 10, 10 ; RED   ;15, 13, 13, 14
-	dn  9, 10, 10, 11 ;   GREEN ;15, 13, 13, 14
+	dn 12, 13, 13, 14 ; RED   ;15, 13, 13, 14
+	dn 13, 13, 13, 13 ;   GREEN ;15, 13, 13, 14
 	assert_table_length NUM_TRAINER_CLASSES - 3 ; exclude AERODACTYLE_FOSSIL, KABUTOPS_FOSSIL, POKEMON_GHOST
 
 ;male,   ATK=*,   DEF=*,    SPD=*  SPC=EVEN
