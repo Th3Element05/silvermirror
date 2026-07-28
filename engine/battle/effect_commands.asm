@@ -3734,6 +3734,7 @@ BattleCommand_SleepTarget:
 ;	cp SLP_MASK
 ;	jr z, .random_loop ; Sleep for 1-3 turns instead of 2-7
 	inc a
+	inc a ; one additional sleep turn (2-4 turns)
 	ld [de], a
 	call UpdateOpponentInParty
 ;	call RefreshBattleHuds
