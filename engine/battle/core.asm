@@ -8135,7 +8135,7 @@ AnimateExpBar:
 	inc b
 	push bc
 	push de
-	hlcoord 17, 11
+	hlcoord 10, 11 ;17, 11
 	call PlaceExpBar
 	pop de
 	ld a, $1
@@ -8151,7 +8151,7 @@ AnimateExpBar:
 	inc b
 	push bc
 	push de
-	hlcoord 17, 11
+	hlcoord 10, 11 ;17, 11
 	call PlaceExpBar
 	pop de
 	ld a, $1
@@ -8388,11 +8388,12 @@ FillInExpBar:
 	push hl
 	call CalcExpBar
 	pop hl
-	ld de, 7
-	add hl, de
+;	ld de, 7
+;	add hl, de
 	jp PlaceExpBar
 
 CalcExpBar:
+; Returns 0-64 in b (?)
 ; Calculate the percent exp between this level and the next
 ; Level in b
 	push de
@@ -8491,6 +8492,7 @@ CalcExpBar:
 	ld b, a
 	ret
 
+; 0-64 in b (?), b = filled pixels (?)
 PlaceExpBar:
 	ld c, $8 ; number of tiles
 .loop1
@@ -8499,7 +8501,7 @@ PlaceExpBar:
 	jr c, .next
 	ld b, a
 	ld a, $6a ; full bar
-	ld [hld], a
+	ld [hli], a ;[hld], a
 	dec c
 	jr z, .finish
 	jr .loop1
@@ -8507,20 +8509,21 @@ PlaceExpBar:
 .next
 	add $8
 	jr z, .loop2
-	add $54 ; tile to the left of small exp bar tile
+	add $62 ;$54 ; tile to the left of small exp bar tile
 	jr .skip
 
 .loop2
 	ld a, $62 ; empty bar
 
 .skip
-	ld [hld], a
+	ld [hli], a ;[hld], a
 	ld a, $62 ; empty bar
 	dec c
 	jr nz, .loop2
 
 .finish
 	ret
+
 
 GetBattleMonBackpic:
 	ld a, [wPlayerSubStatus4]

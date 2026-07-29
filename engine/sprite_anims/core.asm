@@ -593,7 +593,7 @@ AnimateEndOfExpBar:
 	call Sprites_Sine
 	pop hl
 	pop de
-	add 13 * TILE_WIDTH
+	add 10 * TILE_WIDTH ;add 13
 	ld [hli], a ; y
 
 	pop af
@@ -602,7 +602,7 @@ AnimateEndOfExpBar:
 	call Sprites_Cosine
 	pop hl
 	pop de
-	add 10 * TILE_WIDTH + 4
+	add 15 * TILE_WIDTH; + 4 ;add 10
 	ld [hli], a ; x
 
 	ld a, $0
