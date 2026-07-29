@@ -32,21 +32,28 @@ LearnMove:
 	push de
 	call ForgetMove
 	pop de
+	jp c, .cancel
 
+; Ask to confirm forget selected move
 	push hl
+	push de
 	ld [wNamedObjectIndex], a
 	call GetMoveName
+	; Reset palettes for text box border
+	ld b, SCGB_DIPLOMA
+	call GetSGBLayout
+	call SetPalettes
+
 	ld hl, ConfirmForgetMoveText
 	call PrintText
 	call YesNoBox
+	pop de
 	pop hl
-
 	jp c, .cancel
 
 	push hl
 	push de
 ;	ld [wNamedObjectIndex], a
-
 	ld b, a
 	ld a, [wBattleMode]
 	and a
@@ -58,18 +65,6 @@ LearnMove:
 	ld [wDisabledMove], a
 	ld [wPlayerDisableCount], a
 .not_disabled
-
-; Reset palettes for text box border
-;	ld b, SCGB_PARTY_MENU
-;	call GetSGBLayout
-
-;	ld b, SCGB_BATTLE_COLORS
-;	call GetSGBLayout
-;	call ClearTilemap
-
-	ld b, SCGB_DIPLOMA
-	call GetSGBLayout
-	call SetPalettes
 
 ;	call GetMoveName
 	ld hl, Text_1_2_and_Poof ; 1, 2 and…
