@@ -190,6 +190,7 @@ gfx/pokemon/girafarig/front.animated.tilemap: gfx/pokemon/girafarig/front.2bpp g
 ### Misc file-specific graphics rules
 
 gfx/pokemon/%/back.2bpp: rgbgfx += -Z 
+gfx/pokemon/%/back7.2bpp: rgbgfx += -Z 
 gfx/pokemon/%/front.2bpp: rgbgfx += 
 
 gfx/trainers/%.2bpp: rgbgfx += -Z 

@@ -194,64 +194,64 @@ ROMX $47
 ROMX $48
 	org $4000
 	"Pic Pointers"
-	"Pics 1"
+;	"Pics 1"
 ROMX $49
 	org $4000
 	"Unown Pic Pointers"
-	"Pics 2"
+;	"Pics 2"
 ROMX $4a
 	"Trainer Pic Pointers"
-	"Pics 3"
+;	"Pics 3"
 ROMX $4b
-	"Pics 4"
+;	"Pics 4"
 ROMX $4c
-	"Pics 5"
+;	"Pics 5"
 ROMX $4d
-	"Pics 6"
+;	"Pics 6"
 ROMX $4e
-	"Pics 7"
+;	"Pics 7"
 ROMX $4f
-	"Pics 8"
+;	"Pics 8"
 ROMX $50
-	"Pics 9"
+;	"Pics 9"
 ROMX $51
-	"Pics 10"
+;	"Pics 10"
 ROMX $52
-	"Pics 11"
+;	"Pics 11"
 ROMX $53
-	"Pics 12"
+;	"Pics 12"
 ROMX $54
-	"Pics 13"
+;	"Pics 13"
 ROMX $55
-	"Pics 14"
+;	"Pics 14"
 ROMX $56
-	"Pics 15"
+;	"Pics 15"
 ROMX $57
-	"Pics 16"
+;	"Pics 16"
 ROMX $58
-	"Pics 17"
+;	"Pics 17"
 ROMX $59
-	"Pics 18"
+;	"Pics 18"
 ROMX $5a
-	"Pics 19"
+;	"Pics 19"
 ROMX $5b
 	"bank5B"
-	"Pics 20"
+;	"Pics 20"
 ROMX $5c
 	"mobile5C"
-	"Pics 21"
+;	"Pics 21"
 ROMX $5d
 	"Crystal Phone Text 2"
-	"Pics 22"
+;	"Pics 22"
 ROMX $5e
 	"UpdateBattleHUDs"
 	"Songs 5"
 	"Crystal Sound Effects"
 	"mobile5E"
-	"Pics 23"
+;	"Pics 23"
 ROMX $5f
 	"mobile5F"
-	"Pics 24"
+;	"Pics 24"
 ROMX $60
 	"Map Scripts 13"
 	"Pokedex Entries 001-064"

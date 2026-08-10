@@ -794,14 +794,17 @@ BattleAnimCmd_BattlerGFX_1Row:
 .okay
 	ld a, BATTLE_ANIM_GFX_PLAYERHEAD
 	ld [hli], a
-	ld a, ($80 - 6 - 7) - BATTLEANIM_BASE_TILE
+;	ld a, ($80 - 6 - 7) - BATTLEANIM_BASE_TILE
+	ld a, ($80 - 7 - 7) - BATTLEANIM_BASE_TILE
 	ld [hli], a
 	ld a, BATTLE_ANIM_GFX_ENEMYFEET
 	ld [hli], a
-	ld a, ($80 - 6) - BATTLEANIM_BASE_TILE
+;	ld a, ($80 - 6) - BATTLEANIM_BASE_TILE
+	ld a, ($80 - 7) - BATTLEANIM_BASE_TILE
 	ld [hl], a
 
-	ld hl, vTiles0 tile ($80 - 6 - 7)
+;	ld hl, vTiles0 tile ($80 - 6 - 7)
+	ld hl, vTiles0 tile ($80 - 7 - 7)
 	ld de, vTiles2 tile $06 ; Enemy feet start tile
 	ld a, 7 tiles ; Enemy pic height
 	ld [wBattleAnimGFXTempPicHeight], a
@@ -810,7 +813,8 @@ BattleAnimCmd_BattlerGFX_1Row:
 	ld de, vTiles2 tile $31 ; Player head start tile
 	ld a, 6 tiles ; Player pic height
 	ld [wBattleAnimGFXTempPicHeight], a
-	ld a, 6 ; Copy 6x1 tiles
+;	ld a, 6 ; Copy 6x1 tiles
+	ld a, 7 ; Copy 7x1 tiles
 	call .LoadFeet
 	ret
 
@@ -848,14 +852,17 @@ BattleAnimCmd_BattlerGFX_2Row:
 .okay
 	ld a, BATTLE_ANIM_GFX_PLAYERHEAD
 	ld [hli], a
-	ld a, ($80 - 6 * 2 - 7 * 2) - BATTLEANIM_BASE_TILE
+;	ld a, ($80 - 6 * 2 - 7 * 2) - BATTLEANIM_BASE_TILE
+	ld a, ($80 - 7 * 2 - 7 * 2) - BATTLEANIM_BASE_TILE
 	ld [hli], a
 	ld a, BATTLE_ANIM_GFX_ENEMYFEET
 	ld [hli], a
-	ld a, ($80 - 6 * 2) - BATTLEANIM_BASE_TILE
+;	ld a, ($80 - 6 * 2) - BATTLEANIM_BASE_TILE
+	ld a, ($80 - 7 * 2) - BATTLEANIM_BASE_TILE
 	ld [hl], a
 
-	ld hl, vTiles0 tile ($80 - 6 * 2 - 7 * 2)
+;	ld hl, vTiles0 tile ($80 - 6 * 2 - 7 * 2)
+	ld hl, vTiles0 tile ($80 - 7 * 2 - 7 * 2)
 	ld de, vTiles2 tile $05 ; Enemy feet start tile
 	ld a, 7 tiles ; Enemy pic height
 	ld [wBattleAnimGFXTempPicHeight], a
@@ -864,7 +871,8 @@ BattleAnimCmd_BattlerGFX_2Row:
 	ld de, vTiles2 tile $31 ; Player head start tile
 	ld a, 6 tiles ; Player pic height
 	ld [wBattleAnimGFXTempPicHeight], a
-	ld a, 6 ; Copy 6x2 tiles
+;	ld a, 6 ; Copy 6x2 tiles
+	ld a, 7 ; Copy 6x2 tiles
 	call .LoadHead
 	ret
 
@@ -999,21 +1007,25 @@ GetSubstitutePic: ; used only for BANK(GetSubstitutePic)
 
 .player
 	ld hl, MonsterSpriteGFX + 4 tiles
-	ld de, sScratch + (2 * 6 + 4) tiles
+;	ld de, sScratch + (2 * 6 + 4) tiles
+	ld de, sScratch + (2 * 7 + 8) tiles
 	call .CopyTile
 	ld hl, MonsterSpriteGFX + 5 tiles
-	ld de, sScratch + (3 * 6 + 4) tiles
+;	ld de, sScratch + (3 * 6 + 4) tiles
+	ld de, sScratch + (3 * 7 + 7) tiles
 	call .CopyTile
 	ld hl, MonsterSpriteGFX + 6 tiles
-	ld de, sScratch + (2 * 6 + 5) tiles
+;	ld de, sScratch + (2 * 6 + 5) tiles
+	ld de, sScratch + (2 * 7 + 9) tiles
 	call .CopyTile
 	ld hl, MonsterSpriteGFX + 7 tiles
-	ld de, sScratch + (3 * 6 + 5) tiles
+;	ld de, sScratch + (3 * 6 + 5) tiles
+	ld de, sScratch + (3 * 7 + 8) tiles
 	call .CopyTile
 
 	ld hl, vTiles2 tile $31
 	ld de, sScratch
-	lb bc, BANK(GetSubstitutePic), 6 * 6
+	lb bc, BANK(GetSubstitutePic), 6 * 7
 	call Request2bpp
 
 .done

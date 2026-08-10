@@ -352,8 +352,8 @@ BattleBGEffect_HideMon:
 	jr .got_pointer
 
 .player_side
-	hlcoord 2, 6
-	lb bc, 6, 6
+	hlcoord 1, 6 ;2, 6
+	lb bc, 6, 7 ;6, 6
 .got_pointer
 	call ClearBox
 	pop bc
@@ -425,7 +425,8 @@ BattleBGEffect_BattlerObj_1Row:
 .player_side
 	ld a, BATTLE_ANIM_OBJ_PLAYERHEAD_1ROW
 	ld [wBattleObjectTempID], a
-	ld a, 6 * TILE_WIDTH
+;	ld a, 6 * TILE_WIDTH
+	ld a, 5 * TILE_WIDTH
 .okay
 	ld [wBattleObjectTempXCoord], a
 	ld a, 8 * TILE_WIDTH
@@ -446,8 +447,8 @@ BattleBGEffect_BattlerObj_1Row:
 	jr .okay2
 
 .player_side_2
-	hlcoord 2, 6
-	lb bc, 1, 6
+	hlcoord 1, 6 ;2, 6
+	lb bc, 1, 7 ;1, 6
 .okay2
 	call ClearBox
 	ld a, $1
@@ -490,7 +491,8 @@ BattleBGEffect_BattlerObj_2Row:
 .player_side
 	ld a, BATTLE_ANIM_OBJ_PLAYERHEAD_2ROW
 	ld [wBattleObjectTempID], a
-	ld a, 6 * TILE_WIDTH
+;	ld a, 6 * TILE_WIDTH
+	ld a, 5 * TILE_WIDTH
 .okay
 	ld [wBattleObjectTempXCoord], a
 	ld a, 8 * TILE_WIDTH
@@ -511,8 +513,8 @@ BattleBGEffect_BattlerObj_2Row:
 	jr .okay2
 
 .player_side_2
-	hlcoord 2, 6
-	lb bc, 2, 6
+	hlcoord 1, 6 ;2, 6
+	lb bc, 2, 7 ;2, 6
 .okay2
 	call ClearBox
 	ld a, $1
@@ -743,29 +745,38 @@ BattleBGEffect_RunPicResizeScript:
 	jp EndBattleBGEffect
 
 .ClearBox:
-; get dims
+;; get dims
+;	push bc
+;	inc hl
+;	ld a, [hli]
+;	ld b, a
+;	and $f
+;	ld c, a
+;	ld a, b
+;	swap a
+;	and $f
+;	ld b, a
+;; get coords
+;	ld e, [hl]
+;	ld d, 0
+;	ld hl, .Coords
+;	add hl, de
+;	add hl, de
+;	ld a, [hli]
+;	ld h, [hl]
+;	ld l, a
+;	call ClearBox
+;	pop bc
+;	ret
+
+; clear the whole backpic
 	push bc
-	inc hl
-	ld a, [hli]
-	ld b, a
-	and $f
-	ld c, a
-	ld a, b
-	swap a
-	and $f
-	ld b, a
-; get coords
-	ld e, [hl]
-	ld d, 0
-	ld hl, .Coords
-	add hl, de
-	add hl, de
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
+	hlcoord 1, 6
+	lb bc, 6, 7
 	call ClearBox
 	pop bc
 	ret
+	
 
 .PlaceGraphic:
 ; get dims
@@ -828,7 +839,7 @@ BattleBGEffect_RunPicResizeScript:
 	ret
 
 .Coords:
-	dwcoord  2,  6
+	dwcoord  1, 6 ;2,  6
 	dwcoord  3,  8
 	dwcoord  4, 10
 	dwcoord 12,  0
@@ -841,20 +852,35 @@ MACRO bgsquare
 	dw \3
 ENDM
 
-	bgsquare 6, 6, .SixBySix
+;	bgsquare 6, 6, .SixBySix
+	bgsquare 6, 7, .SixBySeven
 	bgsquare 4, 4, .FourByFour
 	bgsquare 2, 2, .TwoByTwo
 	bgsquare 7, 7, .SevenBySeven
 	bgsquare 5, 5, .FiveByFive
 	bgsquare 3, 3, .ThreeByThree
 
-.SixBySix:
-	db $00, $06, $0c, $12, $18, $1e
-	db $01, $07, $0d, $13, $19, $1f
-	db $02, $08, $0e, $14, $1a, $20
-	db $03, $09, $0f, $15, $1b, $21
-	db $04, $0a, $10, $16, $1c, $22
-	db $05, $0b, $11, $17, $1d, $23
+;.SixBySix:
+;	db $00, $06, $0c, $12, $18, $1e
+;	db $01, $07, $0d, $13, $19, $1f
+;	db $02, $08, $0e, $14, $1a, $20
+;	db $03, $09, $0f, $15, $1b, $21
+;	db $04, $0a, $10, $16, $1c, $22
+;	db $05, $0b, $11, $17, $1d, $23
+.SixBySeven:
+	db $00, $06, $0c, $12, $18, $1e, $24
+	db $01, $07, $0d, $13, $19, $1f, $25
+	db $02, $08, $0e, $14, $1a, $20, $26
+	db $03, $09, $0f, $15, $1b, $21, $27
+	db $04, $0a, $10, $16, $1c, $22, $28
+	db $05, $0b, $11, $17, $1d, $23, $29
+;.SixBySeven:
+;	db $00, $01, $02, $03, $04, $05, $06
+;	db $07, $08, $09, $0a, $0b, $0c, $0d
+;	db $0e, $0f, $10, $11, $12, $13, $14
+;	db $15, $16, $17, $18, $19, $1a, $1b
+;	db $1c, $1d, $1e, $1f, $20, $21, $22
+;	db $23, $24, $25, $26, $27, $28, $29
 
 .FourByFour:
 	db $00, $0c, $12, $1e

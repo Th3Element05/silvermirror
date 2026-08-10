@@ -282,8 +282,8 @@ GetMonBackpic:
 	pop af
 	call FarDecompress
 	ld hl, wDecompressScratch
-	ld c, 6 * 6
-	call FixBackpicAlignment
+	ld c, 6 * 7 ;6 * 6
+;	call FixBackpicAlignment
 	pop hl
 	ld de, wDecompressScratch
 	ldh a, [hROMBank]
@@ -337,24 +337,24 @@ GetMonBackpic:
 ;	db BANK("Pics 23") ; BANK("Pics 1") + 22
 ;	db BANK("Pics 24") ; BANK("Pics 1") + 23
 
-GSIntro_GetMonFrontpic: ; unreferenced
-	ld a, c
-	push de
-	ld hl, PokemonPicPointers
-	dec a
-	ld bc, 6
-	call AddNTimes
-	ld a, BANK(PokemonPicPointers)
-	call GetFarByte
-;	call FixPicBank
-	push af
-	inc hl
-	ld a, BANK(PokemonPicPointers)
-	call GetFarWord
-	pop af
-	pop de
-	call FarDecompress
-	ret
+;GSIntro_GetMonFrontpic: ; unreferenced
+;	ld a, c
+;	push de
+;	ld hl, PokemonPicPointers
+;	dec a
+;	ld bc, 6
+;	call AddNTimes
+;	ld a, BANK(PokemonPicPointers)
+;	call GetFarByte
+;;	call FixPicBank
+;	push af
+;	inc hl
+;	ld a, BANK(PokemonPicPointers)
+;	call GetFarWord
+;	pop af
+;	pop de
+;	call FarDecompress
+;	ret
 
 GetTrainerPic:
 	ld a, [wTrainerClass]
@@ -422,41 +422,41 @@ DecompressGet2bpp:
 	ldh [rSVBK], a
 	ret
 
-FixBackpicAlignment:
-	push de
-	push bc
-	ld a, [wBoxAlignment]
-	and a
-	jr z, .keep_dims
-	ld a, c
-	cp 7 * 7
-	ld de, 7 * 7 tiles
-	jr z, .got_dims
-	cp 6 * 6
-	ld de, 6 * 6 tiles
-	jr z, .got_dims
-	ld de, 5 * 5 tiles
-
-.got_dims
-	ld a, [hl]
-	ld b, 0
-	ld c, 8
-.loop
-	rra
-	rl b
-	dec c
-	jr nz, .loop
-	ld a, b
-	ld [hli], a
-	dec de
-	ld a, e
-	or d
-	jr nz, .got_dims
-
-.keep_dims
-	pop bc
-	pop de
-	ret
+;FixBackpicAlignment:
+;	push de
+;	push bc
+;	ld a, [wBoxAlignment]
+;	and a
+;	jr z, .keep_dims
+;	ld a, c
+;	cp 7 * 7
+;	ld de, 7 * 7 tiles
+;	jr z, .got_dims
+;	cp 6 * 6
+;	ld de, 6 * 6 tiles
+;	jr z, .got_dims
+;	ld de, 5 * 5 tiles
+;
+;.got_dims
+;	ld a, [hl]
+;	ld b, 0
+;	ld c, 8
+;.loop
+;	rra
+;	rl b
+;	dec c
+;	jr nz, .loop
+;	ld a, b
+;	ld [hli], a
+;	dec de
+;	ld a, e
+;	or d
+;	jr nz, .got_dims
+;
+;.keep_dims
+;	pop bc
+;	pop de
+;	ret
 
 PadFrontpic:
 ; pads frontpic to fill 7x7 box

@@ -244,7 +244,7 @@ AnimateHOFMonEntrance:
 	ld a, $31
 	ldh [hGraphicStartTile], a
 	hlcoord 6, 6
-	lb bc, 6, 6
+	lb bc, 7, 6 ;6, 6
 	predef PlaceGraphic
 	ld a, $d0
 	ldh [hSCY], a
