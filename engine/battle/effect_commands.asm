@@ -2747,31 +2747,62 @@ CheckDamageStatsCritical:
 	ldh a, [hBattleTurn]
 	and a
 	jr nz, .enemy
+
+; player
+	ld a, [wOptions2]
+	bit PHYS_SPEC_SPLIT, a
+	jr nz, .classic_p
+
+; split
 	ld a, [wPlayerMoveStructType]
 	cp SPECIAL
-; special
+	jr nc, .special_p
+	jr .physical_p
+
+.classic_p
+	ld a, [wPlayerMoveStructType]
+	and TYPE_MASK
+	cp SPECIAL_C
+	jr c, .physical_p
+
+.special_p
 	ld a, [wPlayerSAtkLevel]
 	ld b, a
 	ld a, [wEnemySDefLevel]
-	jr nc, .end
-; physical
+	jr .end
+.physical_p
 	ld a, [wPlayerAtkLevel]
 	ld b, a
 	ld a, [wEnemyDefLevel]
 	jr .end
 
 .enemy
+	ld a, [wOptions2]
+	bit PHYS_SPEC_SPLIT, a
+	jr nz, .classic_e
+
+; split
 	ld a, [wEnemyMoveStructType]
 	cp SPECIAL
-; special
+	jr nc, .special_e
+	jr .physical_e
+
+.classic_e
+	ld a, [wEnemyMoveStructType]
+	and TYPE_MASK
+	cp SPECIAL_C
+	jr c, .physical_e
+
+.special_e
 	ld a, [wEnemySAtkLevel]
 	ld b, a
 	ld a, [wPlayerSDefLevel]
-	jr nc, .end
-; physical
+	jr .end
+.physical_e
 	ld a, [wEnemyAtkLevel]
 	ld b, a
 	ld a, [wPlayerDefLevel]
+
 .end
 	cp b
 	pop bc
