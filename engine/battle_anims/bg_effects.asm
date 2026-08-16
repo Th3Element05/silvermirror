@@ -674,7 +674,8 @@ BattleBGEffect_ReturnMon:
 
 .PlayerData:
 	db  0, $31, 0
-	db -2, $66, 0
+;	db -2, $66, 0
+	db -2, $67, 0
 	db  1, $31, 1
 	db -2, $44, 1
 	db  2, $31, 2
@@ -745,39 +746,30 @@ BattleBGEffect_RunPicResizeScript:
 	jp EndBattleBGEffect
 
 .ClearBox:
-;; get dims
-;	push bc
-;	inc hl
-;	ld a, [hli]
-;	ld b, a
-;	and $f
-;	ld c, a
-;	ld a, b
-;	swap a
-;	and $f
-;	ld b, a
-;; get coords
-;	ld e, [hl]
-;	ld d, 0
-;	ld hl, .Coords
-;	add hl, de
-;	add hl, de
-;	ld a, [hli]
-;	ld h, [hl]
-;	ld l, a
-;	call ClearBox
-;	pop bc
-;	ret
-
-; clear the whole backpic
+; get dims
 	push bc
-	hlcoord 1, 6
-	lb bc, 6, 7
+	inc hl
+	ld a, [hli]
+	ld b, a
+	and $f
+	ld c, a
+	ld a, b
+	swap a
+	and $f
+	ld b, a
+; get coords
+	ld e, [hl]
+	ld d, 0
+	ld hl, .Coords
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
 	call ClearBox
 	pop bc
 	ret
 	
-
 .PlaceGraphic:
 ; get dims
 	push bc
@@ -839,7 +831,7 @@ BattleBGEffect_RunPicResizeScript:
 	ret
 
 .Coords:
-	dwcoord  1, 6 ;2,  6
+	dwcoord  1,  6 ;2,  6
 	dwcoord  3,  8
 	dwcoord  4, 10
 	dwcoord 12,  0
@@ -874,13 +866,6 @@ ENDM
 	db $03, $09, $0f, $15, $1b, $21, $27
 	db $04, $0a, $10, $16, $1c, $22, $28
 	db $05, $0b, $11, $17, $1d, $23, $29
-;.SixBySeven:
-;	db $00, $01, $02, $03, $04, $05, $06
-;	db $07, $08, $09, $0a, $0b, $0c, $0d
-;	db $0e, $0f, $10, $11, $12, $13, $14
-;	db $15, $16, $17, $18, $19, $1a, $1b
-;	db $1c, $1d, $1e, $1f, $20, $21, $22
-;	db $23, $24, $25, $26, $27, $28, $29
 
 .FourByFour:
 	db $00, $0c, $12, $1e

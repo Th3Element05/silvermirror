@@ -90,8 +90,8 @@ LoadHPBar:
 
 	call Get1bppViaHDMA
 	ld de, ExpBarGFX
-	ld hl, vTiles2 tile $55
-	lb bc, BANK(ExpBarGFX), 11 ;9
+	ld hl, vTiles2 tile $5c ;$55
+	lb bc, BANK(ExpBarGFX), 4 ;11 ;9
 	call Get2bppViaHDMA
 ;	ld de, MobilePhoneTilesGFX + 7 tiles ; mobile phone icon
 ;	ld hl, vTiles2 tile $5e
