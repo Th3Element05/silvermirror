@@ -1192,7 +1192,7 @@ Pokedex_DrawOptionScreenBG:
 	ld a, [wUnlockedUnownMode]
 	and a
 	ret z
-	hlcoord 3, 10
+	hlcoord 3, 8 ;3, 10
 	ld de, .UnownMode
 	call PlaceString
 	ret
