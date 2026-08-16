@@ -1185,6 +1185,7 @@ OaksLabOaksDreamGivePagerText:
 ;	done
 
 ;OaksLabOakGivePagerText:
+;	text ""
 	para "<PLAYER>, <RIVAL>,"
 	line "Take this, too."
 

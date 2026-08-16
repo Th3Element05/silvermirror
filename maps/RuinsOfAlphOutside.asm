@@ -75,7 +75,7 @@ RuinsOfAlphOutsideScientistScript:
 	writetext RuinsOfAlphOutside_ExplainDexText
 	waitbutton
 	closetext
-	special RestartMapMusic
+;	special RestartMapMusic
 	end
 
 .GotUnownDex
@@ -136,8 +136,8 @@ RuinsOfAlphOutside_GiveUnownDexText:
 	cont "there should be"
 	roll "many more."
 
-	para "Hm? That's a #-"
-	line "DEX, isn't it?"
+	para "Oh? You have a"
+	line "#DEX!"
 
 	para "Let me upgrade it"
 	line "to keep track of"
@@ -162,7 +162,7 @@ RuinsOfAlphOutside_ModifiedDexText:
 	done
 
 RuinsOfAlphOutside_DexUpgradedText:
-	para "<PLAYER>'s #DEX"
+	text "<PLAYER>'s #DEX"
 	line "was upgraded."
 	done
 
