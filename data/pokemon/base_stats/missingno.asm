@@ -15,7 +15,7 @@
 	INCBIN "gfx/pokemon/missingno/front.dimensions"
 ;	dw NULL, NULL ; unused (beta front/back pics)
 	db GROWTH_MEDIUM_SLOW ; growth rate
-	dn EGG_NONE, EGG_NONE ; egg groups
+	dn EGG_DITTO, EGG_DITTO ; egg groups ;EGG_NONE
 
 	; tm/hm learnset
 ;	tmhm GIGA_IMPACT, SWORDS_DANCE, TOXIC, DOUBLE_EDGE, BUBBLEBEAM, WATER_GUN, ICE_BEAM, BLIZZARD, SUBMISSION, SEISMIC_TOSS, THUNDER, EARTHQUAKE, FISSURE, PSYCHIC_M, SKY_ATTACK, REST, THUNDER_WAVE, TRI_ATTACK, SUBSTITUTE

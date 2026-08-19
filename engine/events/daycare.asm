@@ -610,6 +610,16 @@ DayCare_InitBreeding:
 	ld a, [wBreedMon2Species]
 
 .GotMother:
+; Missingno can breed with Ditto to produce a random egg.
+	cp MISSINGNO
+	jr nz, .notmissingno
+.looprandom
+	call Random
+	cp 251
+	jr nc, .looprandom
+	inc a
+.notmissingno
+; Find PreEvolution of Mother or Non-Ditto BreedMon.
 	ld [wCurPartySpecies], a
 	callfar GetPreEvolution
 	callfar GetPreEvolution
