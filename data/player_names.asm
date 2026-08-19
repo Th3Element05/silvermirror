@@ -12,8 +12,8 @@ ChrisNameMenuHeader:
 MalePlayerNameArray:
 	db "RED@" ;silvermirror -db "CHRIS@"
 	db "ASH@" ;silvermirror -db "MAT@"
-	db "JACK@" ;silvermirror -db "ALLAN@"
-	db "CHRIS@" ;silvermirror -db "JON@"
+	db "CHRIS@" ;silvermirror -db "ALLAN@"
+	db "ETHAN@" ;silvermirror -db "JON@"
 	db 2 ; title indent
 	db " NAME @" ; title
 
@@ -30,8 +30,8 @@ KrisNameMenuHeader:
 	db "NEW NAME@"
 FemalePlayerNameArray:
 	db "GREEN@" ;silvermirror -db "KRIS@"
-	db "AMANDA@"
-	db "JODI@" ;silvermirror -db "JUANA@"
-	db "KRIS@" ;silvermirror -db "JODI@"
+	db "LEAF@"
+	db "KRIS@" ;silvermirror -db "JUANA@"
+	db "LYRA@" ;silvermirror -db "JODI@"
 	db 2 ; title indent
 	db " NAME @" ; title
