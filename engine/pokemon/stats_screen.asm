@@ -1147,13 +1147,18 @@ EggSoonString:
 EggCloseString:
 	db   "It moves around"
 	next "inside sometimes."
-	next "It must be close"
-	next "to hatching.@"
+;	next "It must be close"
+;	next "to hatching.@"
+	next "But it needs a"
+	next "little more time.@"
 
 EggMoreTimeString:
-	db   "Wonder what's"
-	next "inside? It needs"
-	next "more time, though.@"
+;	db   "Wonder what's"
+;	next "inside? It needs"
+;	next "more time, though.@"
+	db   "Something's inside,"
+	next "But it's not ready"
+	next "to hatch yet.@"
 
 EggALotMoreTimeString:
 	db   "This EGG needs a"
