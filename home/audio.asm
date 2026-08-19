@@ -425,8 +425,10 @@ SpecialMapMusic::
 	ld a, [wPlayerState]
 	cp PLAYER_SURF
 	jr z, .surf
-	cp PLAYER_SURF_PIKA
-	jr z, .surf
+;	cp PLAYER_SURF_PIKA
+;	jr z, .surf
+	cp PLAYER_BIKE
+	jr z, .bike
 
 	ld a, [wStatusFlags2]
 	bit STATUSFLAGS2_BUG_CONTEST_TIMER_F, a
@@ -436,7 +438,7 @@ SpecialMapMusic::
 	and a
 	ret
 
-.bike ; unreferenced
+.bike
 	ld de, MUSIC_BICYCLE
 	scf
 	ret
