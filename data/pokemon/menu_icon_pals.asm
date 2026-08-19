@@ -205,21 +205,21 @@ MonMenuIconPals:
 	icon_pals PINK,   GREEN    ; ESPEON
 	icon_pals BROWN,  BLUE     ; UMBREON
 	icon_pals BLUE,   PURPLE   ; MURKROW
-	icon_pals RED,    PURPLE   ; HONCHKROW ;HONCHKROW
+	icon_pals BLUE,   RED      ; HONCHKROW ;HONCHKROW
 	icon_pals PINK,   BLUE     ; SLOWKING
-	icon_pals RED,    YELLOW   ; MISDREAVUS
-	icon_pals RED,    YELLOW   ; MISMAGIUS ;MISMAGIUS
+	icon_pals PURPLE, YELLOW   ; MISDREAVUS
+	icon_pals PURPLE, YELLOW   ; MISMAGIUS ;MISMAGIUS
 	icon_pals GRAY,   BLUE     ; UNOWN
 	icon_pals BLUE,   PURPLE   ; WOBBUFFET
 	icon_pals PINK,   BLUE     ; GIRAFARIG
 	icon_pals BLUE,   YELLOW   ; PINECO
 	icon_pals RED,    YELLOW   ; FORRETRESS
 	icon_pals BLUE,   PINK     ; DUNSPARCE
-	icon_pals PURPLE, BLUE     ; GLIGAR
+	icon_pals PINK,   BLUE     ; GLIGAR
 	icon_pals PURPLE, BLUE     ; GLISCOR ;GLISCOR
 	icon_pals GRAY,   BROWN    ; STEELIX
 	icon_pals PINK,   GRAY     ; SNUBBULL
-	icon_pals PURPLE, BROWN    ; GRANBULL
+	icon_pals PINK,   BROWN    ; GRANBULL
 	icon_pals BLUE,   PURPLE   ; QWILFISH
 	icon_pals RED,    GREEN    ; SCIZOR
 	icon_pals RED,    BLUE     ; SHUCKLE
