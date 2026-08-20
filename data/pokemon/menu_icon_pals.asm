@@ -23,7 +23,7 @@ MonMenuIconPals:
 	icon_pals YELLOW, GREEN    ; BEEDRILL
 	icon_pals BROWN,  YELLOW   ; PIDGEY
 	icon_pals BROWN,  YELLOW   ; PIDGEOTTO
-	icon_pals RED,    YELLOW   ; PIDGEOT
+	icon_pals BROWN,  YELLOW   ; PIDGEOT
 	icon_pals PURPLE, BROWN    ; RATTATA
 	icon_pals BROWN,  RED      ; RATICATE
 	icon_pals BROWN,  YELLOW   ; SPEAROW
@@ -129,7 +129,7 @@ MonMenuIconPals:
 	icon_pals PURPLE, BLUE     ; STARMIE
 	icon_pals PINK,   GREEN    ; MR_MIME
 	icon_pals GREEN,  GRAY     ; SCYTHER
-	icon_pals RED,    PURPLE   ; JYNX
+	icon_pals RED,    PINK     ; JYNX
 	icon_pals YELLOW, BROWN    ; ELECTABUZZ
 	icon_pals RED,    PINK     ; MAGMAR
 	icon_pals BROWN,  BLUE     ; PINSIR
@@ -139,7 +139,7 @@ MonMenuIconPals:
 	icon_pals BLUE,   PURPLE   ; LAPRAS
 	icon_pals PURPLE, BLUE     ; DITTO
 	icon_pals BROWN,  GRAY     ; EEVEE
-	icon_pals BLUE,   PURPLE   ; VAPOREON
+	icon_pals BLUE,   PINK     ; VAPOREON
 	icon_pals YELLOW, GREEN    ; JOLTEON
 	icon_pals RED,    BROWN    ; FLAREON
 	icon_pals BLUE,   GRAY     ; PORYGON
@@ -207,7 +207,7 @@ MonMenuIconPals:
 	icon_pals BLUE,   PURPLE   ; MURKROW
 	icon_pals BLUE,   RED      ; HONCHKROW ;HONCHKROW
 	icon_pals PINK,   BLUE     ; SLOWKING
-	icon_pals PURPLE, YELLOW   ; MISDREAVUS
+	icon_pals PINK,   YELLOW   ; MISDREAVUS
 	icon_pals PURPLE, YELLOW   ; MISMAGIUS ;MISMAGIUS
 	icon_pals GRAY,   BLUE     ; UNOWN
 	icon_pals BLUE,   PURPLE   ; WOBBUFFET
@@ -235,14 +235,14 @@ MonMenuIconPals:
 	icon_pals BROWN,  YELLOW   ; MAMOSWINE ;MAMOSWINE
 	icon_pals PINK,   BLUE     ; CORSOLA
 	icon_pals BLUE,   PURPLE   ; REMORAID
-	icon_pals RED,    GREEN    ; OCTILLERY
+	icon_pals RED,    YELLOW   ; OCTILLERY
 	icon_pals RED,    PURPLE   ; DELIBIRD
 	icon_pals BLUE,   GRAY     ; MANTINE
 	icon_pals GRAY,   BROWN    ; SKARMORY
 	icon_pals RED,    BLUE     ; HOUNDOUR
 	icon_pals RED,    BLUE     ; HOUNDOOM
 	icon_pals BLUE,   PURPLE   ; KINGDRA
-	icon_pals GRAY,   GRAY     ; PHANPY
+	icon_pals BLUE,   GRAY     ; PHANPY
 	icon_pals GRAY,   BROWN    ; DONPHAN
 ;	icon_pals BLUE,   GRAY     ; PORYGON2
 	icon_pals BROWN,  GREEN    ; STANTLER
@@ -257,8 +257,8 @@ MonMenuIconPals:
 	icon_pals GREEN,  BLUE     ; LEAFEON ;LEAFEON
 	icon_pals BLUE,   GRAY     ; GLACEON ;GLACEON
 	icon_pals PINK,   BLUE     ; MILTANK
-	icon_pals PINK,   PURPLE   ; BLISSEY
-	icon_pals BROWN,  RED      ; RAIKOU
+	icon_pals PINK,   GRAY     ; BLISSEY
+	icon_pals BROWN,  YELLOW   ; RAIKOU
 	icon_pals RED,    BLUE     ; ENTEI
 	icon_pals BLUE,   GRAY     ; SUICUNE
 	icon_pals GREEN,  YELLOW   ; LARVITAR
