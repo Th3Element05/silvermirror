@@ -55,11 +55,11 @@ TiffanyRematchText:
 
 TiffanyGiftText:
 	ntag "TIFFANY:"
-	text "You took a long"
-	line "time. See this?"
+	text "It's nice to see"
+	line "you!"
 
-	para "Isn't it neat?"
-;	line "It's a DUSK STONE."
+	para "Look at this!"
+	line "It's a DUSK STONE!"
 	done
 
 TiffanyPackFullText:

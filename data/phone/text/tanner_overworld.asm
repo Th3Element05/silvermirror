@@ -62,9 +62,10 @@ TannerRematchText:
 
 TannerGiftText:
 	ntag "TANNER:"
-	text "Good to see you!"
-	line "Look what I found!"
-	cont "It's for you!"
+	text "Thanks for coming!"
+
+	para "Look what I found!"
+	line "It's a SUN STONE!"
 	done
 
 TannerPackFullText:

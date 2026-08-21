@@ -227,7 +227,7 @@ TrainerPicnickerTiffany:
 	checkflag ENGINE_TIFFANY_READY_FOR_REMATCH
 	iftrue .WantsBattle
 	checkflag ENGINE_TIFFANY_HAS_DUSK_STONE
-	iftrue .HasDuskStone
+	iftrue .GiveDuskStone
 	checkcellnum PHONE_PICNICKER_TIFFANY
 	iftrue .TiffanyDefeated
 	checkevent EVENT_TIFFANY_ASKED_FOR_PHONE_NUMBER
@@ -262,23 +262,18 @@ TrainerPicnickerTiffany:
 	startbattle
 	reloadmapafterbattle
 	clearflag ENGINE_TIFFANY_READY_FOR_REMATCH
+	checkevent EVENT_TIFFANY_GAVE_DUSK_STONE
+	iftrue .End
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .GiveDuskStone
+	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
+	iftrue .GiveDuskStone
+.End
 	end
 
-.HasDuskStone:
+.GiveDuskStone:
+	setflag ENGINE_TIFFANY_HAS_DUSK_STONE
 	scall .Gift
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .DuskStone
-	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
-	iftrue .DuskStone
-
-;NotDuskStone
-	verbosegiveitem NUGGET
-	iffalse .PackFull
-	clearflag ENGINE_TIFFANY_HAS_DUSK_STONE
-;	setevent EVENT_TIFFANY_GAVE_DUSK_STONE
-	sjump .NumberAccepted
-
-.DuskStone
 	verbosegiveitem DUSK_STONE
 	iffalse .PackFull
 	clearflag ENGINE_TIFFANY_HAS_DUSK_STONE

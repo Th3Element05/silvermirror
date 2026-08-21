@@ -331,22 +331,19 @@ TrainerCamperTanner:
 	startbattle
 	reloadmapafterbattle
 	clearflag ENGINE_TANNER_READY_FOR_REMATCH
+; give Sun Stone after rematch
+	checkevent EVENT_TANNER_GAVE_SUN_STONE
+	iftrue .End
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .GiveSunStone
+	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
+	iftrue .GiveSunStone
+.End
 	end
 
-.GiveStone:
+.GiveSunStone:
+	setflag ENGINE_TANNER_HAS_SUN_STONE
 	scall .Gift
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .SunStone
-	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
-	iftrue .SunStone
-;LeafStone
-	verbosegiveitem LEAF_STONE
-	iffalse .BagFull
-	clearflag ENGINE_TANNER_HAS_SUN_STONE
-;	setflag ENGINE_TANNER_GAVE_SUN_STONE
-	jump .NumberAccepted
-
-.SunStone
 	verbosegiveitem SUN_STONE
 	iffalse .BagFull
 	clearflag ENGINE_TANNER_HAS_SUN_STONE
