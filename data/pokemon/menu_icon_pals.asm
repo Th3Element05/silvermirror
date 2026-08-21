@@ -23,7 +23,7 @@ MonMenuIconPals:
 	icon_pals YELLOW, GREEN    ; BEEDRILL
 	icon_pals BROWN,  YELLOW   ; PIDGEY
 	icon_pals BROWN,  YELLOW   ; PIDGEOTTO
-	icon_pals BROWN,  YELLOW   ; PIDGEOT
+	icon_pals RED,    YELLOW   ; PIDGEOT
 	icon_pals PURPLE, BROWN    ; RATTATA
 	icon_pals BROWN,  RED      ; RATICATE
 	icon_pals BROWN,  YELLOW   ; SPEAROW
