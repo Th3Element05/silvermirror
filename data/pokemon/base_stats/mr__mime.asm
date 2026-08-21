@@ -6,7 +6,7 @@
 	db PSYCHIC_TYPE, PSYCHIC_TYPE ; type
 	db 45 ; catch rate
 	db 136 ; base exp
-	db NO_ITEM, LUM_BERRY ; items
+	db LEPPA_BERRY, LUM_BERRY ; items
 	db GENDER_F50 ; gender ratio
 ;	db 100 ; unknown 1
 	db 12 ;25 ; Step cycles to hatch
