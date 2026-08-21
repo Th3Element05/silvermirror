@@ -296,7 +296,7 @@ TrainerCamperTanner:
 	checkflag ENGINE_TANNER_READY_FOR_REMATCH
 	iftrue .ChooseRematch
 	checkflag ENGINE_TANNER_HAS_SUN_STONE
-	iftrue .GiveStone
+	iftrue .GiveSunStone
 	checkcellnum PHONE_CAMPER_TANNER
 	iftrue .TannerDefeated
 	checkevent EVENT_TANNER_ASKED_FOR_PHONE_NUMBER
