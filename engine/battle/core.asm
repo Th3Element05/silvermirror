@@ -6530,9 +6530,9 @@ LoadEnemyMon:
 
 ; Failing that, it's all up to chance
 ;  Effective chances:
-;    45% None
-;    50% Item1
-;     5% Item2
+;    50% None
+;    48% Item1
+;     2% Item2
 
 ; 50% chance of getting an item
 	call BattleRandom
@@ -6542,13 +6542,29 @@ LoadEnemyMon:
 
 ; From there, an 5% chance for Item2
 	call BattleRandom
-	cp 5 percent ; 10% of 50% = 2% Item2
+	cp 4 percent ; 4% of 50% = 2% Item2
 	ld a, [wBaseItem1]
 	jr nc, .UpdateItem
 	ld a, [wBaseItem2]
 
 .UpdateItem:
 	ld [wEnemyMonItem], a
+
+; prevent Dragon Scale until after HOF unless Gen2Mode
+	cp DRAGON_SCALE
+	jr nz, .finished
+
+	ld a, [wChallengeMode]
+	bit GAME_CHALLENGE_MODE_F, a
+	jp nz, .finished
+
+	ld a, [wStatusFlags]
+	bit STATUSFLAGS_HALL_OF_FAME_F, a
+	jp nz, .finished
+
+	xor a
+	ld [wEnemyMonItem], a
+.finished
 
 ; Initialize DVs
 
