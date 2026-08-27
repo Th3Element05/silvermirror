@@ -425,8 +425,8 @@ BattleBGEffect_BattlerObj_1Row:
 .player_side
 	ld a, BATTLE_ANIM_OBJ_PLAYERHEAD_1ROW
 	ld [wBattleObjectTempID], a
-;	ld a, 6 * TILE_WIDTH
-	ld a, 5 * TILE_WIDTH
+	ld a, 6 * TILE_WIDTH
+;	ld a, 5 * TILE_WIDTH ; idk why this is reduced when going from 6 to 7-wide
 .okay
 	ld [wBattleObjectTempXCoord], a
 	ld a, 8 * TILE_WIDTH
@@ -447,8 +447,8 @@ BattleBGEffect_BattlerObj_1Row:
 	jr .okay2
 
 .player_side_2
-	hlcoord 1, 6 ;2, 6
-	lb bc, 1, 7 ;1, 6
+	hlcoord 2, 6 ;1, 6
+	lb bc, 1, 6 ;1, 7
 .okay2
 	call ClearBox
 	ld a, $1
@@ -492,7 +492,7 @@ BattleBGEffect_BattlerObj_2Row:
 	ld a, BATTLE_ANIM_OBJ_PLAYERHEAD_2ROW
 	ld [wBattleObjectTempID], a
 ;	ld a, 6 * TILE_WIDTH
-	ld a, 5 * TILE_WIDTH
+	ld a, 5 * TILE_WIDTH ; idk why this is reduced when going from 6 to 7-wide
 .okay
 	ld [wBattleObjectTempXCoord], a
 	ld a, 8 * TILE_WIDTH

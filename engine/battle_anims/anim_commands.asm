@@ -207,7 +207,7 @@ BattleAnimDelayFrame:
 	jr nz, .wait
 	ret
 
-ClearActorHud: ; clear both HUDs during move animtions
+ClearActorHud:
 ;	ldh a, [hBattleTurn]
 ;	and a
 ;	jr z, .player
@@ -223,24 +223,24 @@ ClearActorHud: ; clear both HUDs during move animtions
 	call ClearBox
 	ret
 
-PlaceWindowOverBattleTextbox: ; unreferenced
-	xor a
-	ldh [hBGMapMode], a
-	; bgcoord hBGMapAddress, 0, 20
-	ld a, LOW(vBGMap0 + 20 * BG_MAP_WIDTH)
-	ldh [hBGMapAddress], a
-	ld a, HIGH(vBGMap0 + 20 * BG_MAP_WIDTH)
-	ldh [hBGMapAddress + 1], a
-	call WaitBGMap2
-	ld a, (SCREEN_HEIGHT - TEXTBOX_HEIGHT) * TILE_WIDTH
-	ldh [hWY], a
-	; bgcoord hBGMapAddress, 0, 0
-	xor a ; LOW(vBGMap0)
-	ldh [hBGMapAddress], a
-	ld a, HIGH(vBGMap0)
-	ldh [hBGMapAddress + 1], a
-	call BattleAnimDelayFrame
-	ret
+;PlaceWindowOverBattleTextbox: ; unreferenced
+;	xor a
+;	ldh [hBGMapMode], a
+;	; bgcoord hBGMapAddress, 0, 20
+;	ld a, LOW(vBGMap0 + 20 * BG_MAP_WIDTH)
+;	ldh [hBGMapAddress], a
+;	ld a, HIGH(vBGMap0 + 20 * BG_MAP_WIDTH)
+;	ldh [hBGMapAddress + 1], a
+;	call WaitBGMap2
+;	ld a, (SCREEN_HEIGHT - TEXTBOX_HEIGHT) * TILE_WIDTH
+;	ldh [hWY], a
+;	; bgcoord hBGMapAddress, 0, 0
+;	xor a ; LOW(vBGMap0)
+;	ldh [hBGMapAddress], a
+;	ld a, HIGH(vBGMap0)
+;	ldh [hBGMapAddress + 1], a
+;	call BattleAnimDelayFrame
+;	ret
 
 BattleAnim_ClearOAM:
 	ld a, [wBattleAnimFlags]
@@ -794,27 +794,28 @@ BattleAnimCmd_BattlerGFX_1Row:
 .okay
 	ld a, BATTLE_ANIM_GFX_PLAYERHEAD
 	ld [hli], a
-;	ld a, ($80 - 6 - 7) - BATTLEANIM_BASE_TILE
-	ld a, ($80 - 7 - 7) - BATTLEANIM_BASE_TILE
+	ld a, ($80 - 6 - 7) - BATTLEANIM_BASE_TILE
+;	ld a, ($80 - 7 - 7) - BATTLEANIM_BASE_TILE
 	ld [hli], a
 	ld a, BATTLE_ANIM_GFX_ENEMYFEET
 	ld [hli], a
-;	ld a, ($80 - 6) - BATTLEANIM_BASE_TILE
-	ld a, ($80 - 7) - BATTLEANIM_BASE_TILE
+	ld a, ($80 - 6) - BATTLEANIM_BASE_TILE
+;	ld a, ($80 - 7) - BATTLEANIM_BASE_TILE
 	ld [hl], a
 
-;	ld hl, vTiles0 tile ($80 - 6 - 7)
-	ld hl, vTiles0 tile ($80 - 7 - 7)
+	ld hl, vTiles0 tile ($80 - 6 - 7)
+;	ld hl, vTiles0 tile ($80 - 7 - 7)
 	ld de, vTiles2 tile $06 ; Enemy feet start tile
 	ld a, 7 tiles ; Enemy pic height
 	ld [wBattleAnimGFXTempPicHeight], a
 	ld a, 7 ; Copy 7x1 tiles
 	call .LoadFeet
-	ld de, vTiles2 tile $31 ; Player head start tile
+;	ld de, vTiles2 tile $31 ; Player head start tile
+	ld de, vTiles2 tile $37 ; Player head second tile
 	ld a, 6 tiles ; Player pic height
 	ld [wBattleAnimGFXTempPicHeight], a
-;	ld a, 6 ; Copy 6x1 tiles
-	ld a, 7 ; Copy 7x1 tiles
+	ld a, 6 ; Copy 6x1 tiles
+;	ld a, 7 ; Copy 7x1 tiles
 	call .LoadFeet
 	ret
 
@@ -872,7 +873,7 @@ BattleAnimCmd_BattlerGFX_2Row:
 	ld a, 6 tiles ; Player pic height
 	ld [wBattleAnimGFXTempPicHeight], a
 ;	ld a, 6 ; Copy 6x2 tiles
-	ld a, 7 ; Copy 7x2 tiles
+	ld a, 7 ; Copy 6x2 tiles
 	call .LoadHead
 	ret
 
@@ -1026,6 +1027,7 @@ GetSubstitutePic: ; used only for BANK(GetSubstitutePic)
 
 	ld hl, vTiles2 tile $31
 	ld de, sScratch
+;	lb bc, BANK(GetSubstitutePic), 6 * 6
 	lb bc, BANK(GetSubstitutePic), 6 * 7
 	call Request2bpp
 

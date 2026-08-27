@@ -220,9 +220,9 @@ BattleAnimOAMData:
 	battleanimoam $12, 12, .OAMData_cf ; BATTLE_ANIM_OAMSET_D2
 	battleanimoam $00, 13, .OAMData_cc ; BATTLE_ANIM_OAMSET_D3
 	battleanimoam $00,  7, .OAMData_d4 ; BATTLE_ANIM_OAMSET_D4
-	battleanimoam $00,  7, .OAMData_d5 ; BATTLE_ANIM_OAMSET_D5
+	battleanimoam $00,  6, .OAMData_d5 ; BATTLE_ANIM_OAMSET_D5 ; _1Row
 	battleanimoam $00, 14, .OAMData_d6 ; BATTLE_ANIM_OAMSET_D6
-	battleanimoam $00, 14, .OAMData_d7 ; BATTLE_ANIM_OAMSET_D7
+	battleanimoam $00, 14, .OAMData_d7 ; BATTLE_ANIM_OAMSET_D7 ; _2Row
 	battleanimoam $07,  4, .OAMData_03 ; BATTLE_ANIM_OAMSET_D8
 	battleanimoam $00,  9, .OAMData_d9 ; BATTLE_ANIM_OAMSET_D9
 	battleanimoam $06,  9, .OAMData_da ; BATTLE_ANIM_OAMSET_DA
@@ -766,7 +766,7 @@ BattleAnimOAMData:
 	dbsprite   0,   0, 0, 0, $03, $1 | OBP_NUM
 	dbsprite   1,   0, 0, 0, $04, $1 | OBP_NUM
 	dbsprite   2,   0, 0, 0, $05, $1 | OBP_NUM
-	dbsprite   3,   0, 0, 0, $06, $1 | OBP_NUM
+;	dbsprite   3,   0, 0, 0, $06, $1 | OBP_NUM
 
 .OAMData_d7:
 	dbsprite  -3,   0, 0, 0, $00, $1 | OBP_NUM
