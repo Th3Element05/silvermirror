@@ -207,17 +207,17 @@ BattleAnimDelayFrame:
 	jr nz, .wait
 	ret
 
-ClearActorHud:
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .player
+ClearActorHud: ; clear both HUDs during move animtions
+;	ldh a, [hBattleTurn]
+;	and a
+;	jr z, .player
 
 	hlcoord 1, 0
 	lb bc, 4, 10
 	call ClearBox
-	ret
-
-.player
+;	ret
+;
+;.player
 	hlcoord 9, 7
 	lb bc, 5, 11
 	call ClearBox
@@ -872,7 +872,7 @@ BattleAnimCmd_BattlerGFX_2Row:
 	ld a, 6 tiles ; Player pic height
 	ld [wBattleAnimGFXTempPicHeight], a
 ;	ld a, 6 ; Copy 6x2 tiles
-	ld a, 7 ; Copy 6x2 tiles
+	ld a, 7 ; Copy 7x2 tiles
 	call .LoadHead
 	ret
 
@@ -958,7 +958,8 @@ BattleAnimCmd_UpdateActorPic:
 .player
 	ld hl, vTiles2 tile $31
 	ld b, 0
-	ld c, 6 * 6
+;	ld c, 6 * 6
+	ld c, 6 * 7
 	call Request2bpp
 	ret
 
