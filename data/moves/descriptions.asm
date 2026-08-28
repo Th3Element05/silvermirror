@@ -661,7 +661,7 @@ DisableDescription:
 AcidDescription:
 	db   "User hurls acid at"
 	feed "the foe."
-	feed "May lower DEFENSE.@"
+	feed "May lower SP.DEF.@"
 ;	db   "An attack that may"
 ;	next "lower DEFENSE.@"
 
@@ -887,7 +887,7 @@ StringShotDescription:
 
 DragonRageDescription:
 	db   "Always inflicts"
-	feed "40HP of damage.@"
+	feed "40<HP> of damage.@"
 ;	db   "Always inflicts"
 ;	next "40HP damage.@"
 
@@ -1820,7 +1820,7 @@ RolloutDescription:
 FalseSwipeDescription:
 	db   "Restrained attack"
 	feed "to leave the foe"
-	feed "with at least 1HP.@"
+	feed "with at least 1<HP>.@"
 ;	db   "Leaves the foe"
 ;	next "with at least 1HP.@"
 

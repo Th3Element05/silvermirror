@@ -257,10 +257,24 @@ ForgetMove:
 	call GetSGBLayout
 
 ;.power
-; Print move power
+; Print move power ; (already printed with extended border)
 ;	hlcoord 1, 12
 ;	ld de, .power_string
 ;	call PlaceString
+
+	ld a, [wPutativeTMHMMove]
+	dec a
+	ld hl, Moves + MOVE_EFFECT
+	ld bc, MOVE_LENGTH
+	call AddNTimes
+	ld a, Bank(Moves)
+	call GetFarByte
+	cp EFFECT_STATIC_DAMAGE
+	jr nz, .not_static_damage
+	ld de,.staticdmg_string
+	hlcoord 6, 12
+	call PlaceString
+.not_static_damage
 
 	ld a, [wPutativeTMHMMove] ;[wCurSpecies]
 	dec a
@@ -413,8 +427,8 @@ ForgetMove:
 	ret
 
 ; UI elements
-.power_string:
-	db "<ATK1><ATK2>@"
+;.power_string:
+;	db "<ATK1><ATK2>@"
 .accuracy_string:
 	db "<ACC1><ACC2>   <%>@"
 .novalue_string:
@@ -423,6 +437,8 @@ ForgetMove:
 	db " <INF1><INF2>@"
 .unknown_string:
 	db "<?><?><?>@"
+.staticdmg_string:
+	db "<HP>@"
 String_LearnTabTop:
 	db "┌──────────────────┐@"
 String_LearnTabBottom:

@@ -1372,20 +1372,20 @@ PlaceMoveData:
 	ld de, .power_string
 	call PlaceString
 
-;	ld a, [wCurSpecies]
-;	dec a
-;	ld hl, Moves + MOVE_EFFECT
-;	ld bc, MOVE_LENGTH
-;	call AddNTimes
-;	ld a, Bank(Moves)
-;	call GetFarByte
-;	cp EFFECT_STATIC_DAMAGE
-;	jr nz, .not_static_damage
-;	ld de,.staticdmg_string
-;	hlcoord 1, 11
-;	call PlaceString
+	ld a, [wCurSpecies]
+	dec a
+	ld hl, Moves + MOVE_EFFECT
+	ld bc, MOVE_LENGTH
+	call AddNTimes
+	ld a, Bank(Moves)
+	call GetFarByte
+	cp EFFECT_STATIC_DAMAGE
+	jr nz, .not_static_damage
+	ld de,.staticdmg_string
+	hlcoord 6, 12
+	call PlaceString
+.not_static_damage
 
-;.not_static_damage
 	ld a, [wCurSpecies]
 	dec a
 	ld hl, Moves + MOVE_POWER
@@ -1488,8 +1488,8 @@ PlaceMoveData:
 	db " <INF1><INF2>@"
 .unknown_string:
 	db "<?><?><?>@"
-;.staticdmg_string:
-;	db "DMG/@"
+.staticdmg_string:
+	db "<HP>@"
 ;.Type:
 ;	db "TYPE/@"
 ;String_MoveType_Top:
