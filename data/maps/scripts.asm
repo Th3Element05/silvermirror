@@ -225,6 +225,7 @@ INCLUDE "maps/SafariZoneWardensHome.asm"
 INCLUDE "maps/SafariZoneMainOffice.asm"
 INCLUDE "maps/FuchsiaGoodRodHouse.asm"
 INCLUDE "maps/FuchsiaMovesHouse.asm"
+INCLUDE "maps/BlackthornMovesHouse.asm"
 
 
 SECTION "Map Scripts 18", ROMX
@@ -652,7 +653,7 @@ INCLUDE "maps/BlackthornEmysHouse.asm"
 INCLUDE "maps/DragonsDen1F.asm"
 INCLUDE "maps/DragonsDenB1F.asm"
 INCLUDE "maps/DragonShrine.asm"
-INCLUDE "maps/BlackthornMovesHouse.asm"
+;INCLUDE "maps/BlackthornMovesHouse.asm" ; same bank as FuchsiaMovesHouse, "Map Scripts 17"
 INCLUDE "maps/Route45.asm"
 INCLUDE "maps/DarkCaveBlackthornEntrance.asm"
 INCLUDE "maps/Route46.asm"
