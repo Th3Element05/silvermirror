@@ -578,22 +578,6 @@ OaksAssistantText:
 ;	cont "in high regard!"
 ;	done
 
-
-
-OaksLabPoster1:
-	jumptext OaksLabPoster1Text
-OaksLabPoster1Text:
-	text "Press START to"
-	line "open the MENU."
-	done
-
-OaksLabPoster2:
-	jumptext OaksLabPoster2Text
-OaksLabPoster2Text:
-	text "Hold the B button"
-	line "to run."
-	done
-
 OaksLabPC: ;simple
 	opentext
 	writetext OaksLabPCText
@@ -779,7 +763,7 @@ OaksLabPokedexText:
 OaksLabTrashcan:
 	jumpstd TrashCanScript
 
-OaksLabBookshelf:
+OaksLabDifficultBookshelf:
 	jumpstd DifficultBookshelfScript
 
 ; movements
@@ -1490,46 +1474,168 @@ OaksLabOak_AfterBattleText:
 	done
 
 
+;info
+OaksLabPoster1:
+	jumptext OaksLabPoster1Text
+OaksLabPoster1Text:
+	text "Read the books on"
+	line "OAK's bookshelves"
+	cont "for info about"
+	roll "this game."
+
+OaksLabBookshelf1:
+	jumptext OaksLabBookshelf1Text
+OaksLabBookshelf1Text:
+;	text "Press START to"
+;	line "open the MENU."
+;	done
+	text "You can reset the"
+	line "clock by pressing"
+	cont "DOWN + SELECT + B"
+	roll "on title screen."
+	done
+
+OaksLabBookshelf2:
+	jumptext OaksLabBookshelf2Text
+OaksLabBookshelf2Text:
+	text "Certain #MON"
+	line "appear more often"
+	cont "(or only) during"
+	roll "the DAY."
+	
+	para "Others appear more"
+	line "often (or only) at"
+	roll "NIGHT."
+
+	para "DAY: 6AM to 8PM"
+	line "NIGHT: 8PM to 6AM"
+	done
+
+OaksLabBookshelf3:
+	jumptext OaksLabBookshelf3Text
+OaksLabBookshelf3Text:
+	text "You can register"
+	line "the SELECT button"
+	cont "to use an item"
+	roll "from your PACK."
+	done
+
+OaksLabBookshelf4:
+	jumptext OaksLabBookshelf4Text
+OaksLabBookshelf4Text:
+	text "Hold the B button"
+	line "to run."
+	done
+
+OaksLabBookshelf5:
+	jumptext OaksLabBookshelf5Text
+OaksLabBookshelf5Text:
+	text "The #DEX can be"
+	line "fully completed in"
+	cont "both Classic Mode"
+	roll "and Gen2 Mode."
+	done
+
+OaksLabBookshelf6:
+	jumptext OaksLabBookshelf6Text
+OaksLabBookshelf6Text:
+	text "When you call a"
+	line "trainer, they are"
+	cont "likely to offer"
+	roll "a rematch."
+
+	para "Their #MON will"
+	line "get stronger as"
+	cont "you collect more"
+	roll "GYM BADGES."
+	done
+
+OaksLabBookshelf7:
+	jumptext OaksLabBookshelf7Text
+OaksLabBookshelf7Text:
+	text "In Classic Mode,"
+	line "#MON with Gen2"
+	cont "evolutions won't"
+	roll "evolve until after"
+	cont "you defeat the"
+	roll "ELITE FOUR."
+	done
+
+OaksLabBookshelf8:
+	jumptext OaksLabBookshelf8Text
+OaksLabBookshelf8Text:
+	text "Use OAK's PC to"
+	line "swap to alternate"
+	cont "starter #MON"
+	roll "in Gen2 Mode."
+	done
+
+
 ; hints
-OaksLabMewHintBookshelf:
+OaksLabHintBookshelf:
 	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
 	iffalse .NotYet
 	opentext
 	writetext OaksLabAskReadHintText
-	yesorno
-	iffalse .NoHint
-	jumptext OaksLabMewHintText
-
-.NotYet
-	jumptext OaksLabNoHintYetText
-
-.NoHint
+	loadmenu .HintMenuHeader
+	verticalmenu
+	closewindow
+	ifequal 1, .MewLocation
+	ifequal 2, .MissingNo
+	ifequal 3, .RareCandy
+	ifequal 4, .RandomEggs
+;	sjump .NoHint
+;.NoHint
 	writetext OaksLabDeclinedHintText
 	waitbutton
 	closetext
 	end
 
-OaksLabMissinnoHintBookshelf:
-	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
-	iffalse .NotYet
-	opentext
-	writetext OaksLabAskReadHintText
-	yesorno
-	iffalse .NoHint
-	jumptext OaksLabMissingnoHint
-
 .NotYet
 	jumptext OaksLabNoHintYetText
 
-.NoHint
-	writetext OaksLabDeclinedHintText
+.HintMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 0, 14, TEXTBOX_Y - 1
+	dw .MenuData
+	db 1 ; default option
+
+.MenuData:
+	db STATICMENU_CURSOR ; flags
+	db 5 ; items
+	db "MEW HINT@"
+	db "[REDACTED]@"
+	db "RARE CANDY@"
+	db "RANDOM EGGs@"
+	db "CANCEL@"
+
+.MewLocation
+	writetext OaksLabMewHintText
+	waitbutton
+	closetext
+	end
+
+.MissingNo
+	writetext OaksLabMissingnoHint
+	waitbutton
+	closetext
+	end
+
+.RareCandy
+	writetext OaksLabRareCandyHint
+	waitbutton
+	closetext
+	end
+
+.RandomEggs
+	writetext OaksLabRandomEggsHint
 	waitbutton
 	closetext
 	end
 
 OaksLabNoHintYetText:
 	text "These books have"
-	line "hints in them."
+	line "secrets in them."
 
 	para "You shouldn't read"
 	line "them yet."
@@ -1537,7 +1643,7 @@ OaksLabNoHintYetText:
 
 OaksLabAskReadHintText:
 	text "These books have"
-	line "hints in them."
+	line "secrets in them."
 
 	para "Do you want to"
 	line "read one?"
@@ -1550,15 +1656,31 @@ OaksLabDeclinedHintText:
 OaksLabMewHintText:
 	text "Somehow there's a"
 	line "truck parked at"
-	cont "VERMILION PORT."
+	cont "VERMILION PORT…"
 	done
 
 OaksLabMissingnoHint:
-	text "Something strange"
+	text "An OLD MAN from"
+	line "VIRIDIAN CITY…"
+	
+	para "Something strange"
 	line "on CINNABAR's east"
-	cont "coast."
+	cont "coast…"
 	done
 
+OaksLabRareCandyHint:
+	text "You will get some"
+	line "RARE CANDY after"
+	cont "each encounter"
+	roll "with [REDACTED]."
+
+OaksLabRandomEggsHint:
+	text "You can get random"
+	line "#MON EGGs from"
+	cont "the DAYCARE if you"
+	roll "leave [REDACTED]"
+	cont "with DITTO."
+	done
 
 
 ; DEBUG
@@ -2304,12 +2426,10 @@ OaksLab_MapEvents:
 
 	def_bg_events
 ; oak bookshelves
-;	bg_event  6,  1, BGEVENT_READ, DebugGotCharmander
-;	bg_event  7,  1, BGEVENT_READ, DebugGotSquirtle
-	bg_event  8,  1, BGEVENT_READ, OaksLabMewHintBookshelf
-	bg_event  9,  1, BGEVENT_READ, OaksLabMissinnoHintBookshelf
-;	bg_event  8,  1, BGEVENT_READ, DebugGotBulbasaur
-;	bg_event  9,  1, BGEVENT_READ, DebugBeatEliteFour
+	bg_event  6,  1, BGEVENT_READ, OaksLabDifficultBookshelf ;DebugGotCharmander
+	bg_event  7,  1, BGEVENT_READ, OaksLabHintBookshelf ;DebugGotSquirtle
+	bg_event  8,  1, BGEVENT_READ, OaksLabDifficultBookshelf ;DebugGotBulbasaur
+	bg_event  9,  1, BGEVENT_READ, OaksLabDifficultBookshelf ;DebugBeatEliteFour
 ; back bookshelves
 ;	bg_event  0,  6, BGEVENT_READ, DebugFullPokegear
 ;	bg_event  1,  6, BGEVENT_READ, DebugAllTMs
@@ -2331,7 +2451,7 @@ OaksLab_MapEvents:
 
 ; normal stuff
 	bg_event  4,  0, BGEVENT_READ, OaksLabPoster1
-	bg_event  5,  0, BGEVENT_READ, OaksLabPoster2
+	bg_event  5,  0, BGEVENT_READ, OaksLabPoster1
 	bg_event  9,  3, BGEVENT_READ, OaksLabTrashcan
 	bg_event  0,  1, BGEVENT_READ, OaksLabPC
 
