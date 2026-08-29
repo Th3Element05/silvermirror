@@ -133,8 +133,8 @@ MortyText_ShadowBallSpeech:
 	ntag "MORTY:"
 	text "It's SHADOW BALL."
 	line "It causes damage"
-	cont "and may reduce"
-	roll "SP.DEF."
+	cont "and may reduce the"
+	roll "target's SP.DEF."
 
 	para "Use it if it"
 	line "appeals to you."
