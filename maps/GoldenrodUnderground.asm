@@ -681,8 +681,8 @@ GoldenrodUndergroundHiddenRevivalHerb:
 GoldenrodUndergroundHiddenRareCandy:
 	hiddenitem RARE_CANDY, EVENT_GOLDENROD_UNDERGROUND_HIDDEN_RARE_CANDY
 
-;GoldenrodUndergroundCoinCase:
-;	itemball COIN_CASE
+GoldenrodUndergroundCoinCase:
+	itemball COIN_CASE
 
 GoldenrodUnderground_MapEvents:
 	db 0, 0 ; filler
@@ -719,4 +719,4 @@ GoldenrodUnderground_MapEvents:
 ;	object_event  3, 27, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_TRAINER, 2, TrainerPokemaniacIssac, -1
 ;	object_event  2,  6, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_TRAINER, 3, TrainerPokemaniacDonald, -1
 ;
-;	object_event  7, 25, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GoldenrodUndergroundCoinCase, EVENT_GOLDENROD_UNDERGROUND_COIN_CASE
+	object_event  4, 25, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GoldenrodUndergroundCoinCase, EVENT_GOT_COIN_CASE ;EVENT_GOLDENROD_UNDERGROUND_COIN_CASE
