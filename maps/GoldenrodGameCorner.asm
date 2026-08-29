@@ -1,6 +1,7 @@
 DEF GAMECORNER_EGG_COINS          EQU 5000
 ;50 coins = $1000
 ;500 coins = $10000
+;1 coin = $20
 
 	object_const_def
 ;	const GOLDENRODGAMECORNER_MOVETUTOR
