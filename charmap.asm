@@ -132,7 +132,7 @@
 	charmap "<INF2>",    $c6 ; right half of infinity symbol
 	charmap "<?>",       $c7 ; non-bold "?"
 	charmap "<HP>",      $c8 ; HP character
-;	charmap "<c9>",      $c9
+	charmap "+",         $c9
 ;	charmap "<ca>",      $ca
 ;	charmap "<cb>",      $cb
 	charmap "<ID>",      $cc
