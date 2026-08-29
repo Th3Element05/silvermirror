@@ -2,6 +2,9 @@
 	const ROCKETHIDEOUTB4F_GIOVANNI
 	const ROCKETHIDEOUTB4F_LIFT_KEY
 	const ROCKETHIDEOUTB4F_SILPH_SCOPE
+	const ROCKETHIDEOUTB4F_KEY_GRUNT
+	const ROCKETHIDEOUTB4F_ROCKETEXEC_M
+	const ROCKETHIDEOUTB4F_ROCKETEXEC_F
 
 RocketHideoutB4F_MapScripts:
 	def_scene_scripts
@@ -27,11 +30,15 @@ TrainerRocketHideoutGiovanni:
 	special FadeBlackQuickly
 	special ReloadSpritesNoPalettes
 	disappear ROCKETHIDEOUTB4F_GIOVANNI
+	disappear ROCKETHIDEOUTB4F_ROCKETEXEC_M
+	disappear ROCKETHIDEOUTB4F_ROCKETEXEC_F
 	playsound SFX_ESCAPE_ROPE
 	waitsfx
+	setevent EVENT_CELADON_CITY_ROCKETS
+	setevent EVENT_OPENED_ROCKET_HIDEOUT_B4F_DOOR
+	changeblock 16, 12, $65 ; door open
 	appear ROCKETHIDEOUTB4F_SILPH_SCOPE
 	special FadeInQuickly
-	setevent EVENT_CELADON_CITY_ROCKETS
 	end
 
 RocketHideoutGiovanniSeenText:
