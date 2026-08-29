@@ -785,7 +785,6 @@ DEF KRIS EQU __trainer_class__
 	const LIZ1 ; unused
 ; rematch
 	const GINA_2
-	const GINA_3
 	const GINA_0
 	const ERIN_2
 	const ERIN_0
