@@ -235,6 +235,8 @@ OlivineLighthouseAmphy:
 	special FadeInPalettes
 	special FadeOutPalettes
 	special FadeInPalettes
+	cry AMPHAROS
+	waitsfx
 	end
 
 ;AmphyPalPalooText:
