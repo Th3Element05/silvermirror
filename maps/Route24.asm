@@ -342,6 +342,7 @@ TrainerCamperTanner:
 	end
 
 .GiveSunStone:
+	opentext
 	setflag ENGINE_TANNER_HAS_SUN_STONE
 	scall .Gift
 	verbosegiveitem SUN_STONE

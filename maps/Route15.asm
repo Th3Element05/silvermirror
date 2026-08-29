@@ -272,6 +272,7 @@ TrainerPicnickerTiffany:
 	end
 
 .GiveDuskStone:
+	opentext
 	setflag ENGINE_TIFFANY_HAS_DUSK_STONE
 	scall .Gift
 	verbosegiveitem DUSK_STONE
