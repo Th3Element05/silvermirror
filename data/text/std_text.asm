@@ -385,10 +385,10 @@ CoinVendor_IntroText:
 	ntag "CASHIER:"
 	text "Do you need some"
 	line "game coins?"
-
-	para "It costs ¥1000 for"
-	line "50 coins. Do you"
-	cont "want some?"
+;
+;	para "It costs ¥1000 for"
+;	line "50 coins. Do you"
+;	cont "want some?"
 	done
 
 CoinVendor_Buy50CoinsText:
@@ -555,7 +555,6 @@ PokecenterLuckyNumber_IdIsText::
 
 	para "If you get lucky,"
 	line "you win a prize!"
-	done
 
 	para "Today's ID number"
 	line "is @"
