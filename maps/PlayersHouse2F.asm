@@ -211,7 +211,7 @@ PlayersBedHealing:
 	opentext
 	writetext PlayersBedHealingText1
 	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
-	iffalse .NoHeal
+	iffalse .NoPokemon
 	promptbutton
 	writetext PlayersBedHealingText2
 	yesorno
@@ -226,8 +226,8 @@ PlayersBedHealing:
 	special RestartMapMusic
 	opentext
 	writetext PlayersBedHealingText3
+.NoPokemon
 	waitbutton
-	; fallthrough
 .NoHeal
 	closetext
 	end

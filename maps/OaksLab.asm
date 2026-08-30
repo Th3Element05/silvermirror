@@ -1482,6 +1482,7 @@ OaksLabPoster1Text:
 	line "OAK's bookshelves"
 	cont "for info about"
 	roll "this game."
+	done
 
 OaksLabBookshelf1:
 	jumptext OaksLabBookshelf1Text
@@ -1505,7 +1506,7 @@ OaksLabBookshelf2Text:
 	
 	para "Others appear more"
 	line "often (or only) at"
-	roll "NIGHT."
+	cont "NIGHT."
 
 	para "DAY: 6AM to 8PM"
 	line "NIGHT: 8PM to 6AM"
@@ -1547,7 +1548,7 @@ OaksLabBookshelf6Text:
 	para "Their #MON will"
 	line "get stronger as"
 	cont "you collect more"
-	roll "GYM BADGES."
+	roll "GYM BADGEs."
 	done
 
 OaksLabBookshelf7:
@@ -2440,14 +2441,14 @@ OaksLab_MapEvents:
 ;	bg_event  8,  6, BGEVENT_READ, DebugLancesRoom
 ;	bg_event  9,  6, BGEVENT_READ, DebugSFXRoom
 ; front bookshelves
-	bg_event  0,  7, BGEVENT_READ, OaksLabBookshelf ;DebugBeatKantoLeaders
-	bg_event  1,  7, BGEVENT_READ, OaksLabBookshelf ;DebugLockedKantoGyms
-	bg_event  2,  7, BGEVENT_READ, OaksLabBookshelf ;Debug
-	bg_event  3,  7, BGEVENT_READ, OaksLabBookshelf ;DebugCompleteKanto
-	bg_event  6,  7, BGEVENT_READ, OaksLabBookshelf ;DebugBeatJohtoLeaders
-	bg_event  7,  7, BGEVENT_READ, OaksLabBookshelf ;Debug
-	bg_event  8,  7, BGEVENT_READ, OaksLabBookshelf ;Debug
-	bg_event  9,  7, BGEVENT_READ, OaksLabBookshelf ;DebugRareCandy
+	bg_event  0,  7, BGEVENT_READ, OaksLabBookshelf1 ;DebugBeatKantoLeaders
+	bg_event  1,  7, BGEVENT_READ, OaksLabBookshelf2 ;DebugLockedKantoGyms
+	bg_event  2,  7, BGEVENT_READ, OaksLabBookshelf3 ;Debug
+	bg_event  3,  7, BGEVENT_READ, OaksLabBookshelf4 ;DebugCompleteKanto
+	bg_event  6,  7, BGEVENT_READ, OaksLabBookshelf5 ;DebugBeatJohtoLeaders
+	bg_event  7,  7, BGEVENT_READ, OaksLabBookshelf6 ;Debug
+	bg_event  8,  7, BGEVENT_READ, OaksLabBookshelf7 ;Debug
+	bg_event  9,  7, BGEVENT_READ, OaksLabBookshelf8 ;DebugRareCandy
 
 ; normal stuff
 	bg_event  4,  0, BGEVENT_READ, OaksLabPoster1
