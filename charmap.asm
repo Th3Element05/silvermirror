@@ -178,7 +178,7 @@
 	charmap "▶",         $ed
 	charmap "▼",         $ee
 	charmap "♂",         $ef
-	charmap "¥",         $f0
+	charmap "¥",         $f0 ; $
 	charmap "×",         $f1
 	charmap "…",         $f2 ; ellipsis
 	charmap "/",         $f3
