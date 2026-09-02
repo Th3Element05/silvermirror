@@ -660,5 +660,5 @@ BankOfMom_MenuHeader:
 	db 4 ; items
 	db "WITHDRAW@" ;"GET@"
 	db "DEPOSIT@"  ;"SAVE@"
-	db "SAVE Y/N@" ;"CHANGE@"
+	db "SAVE¥?@"   ;"CHANGE@"
 	db "CANCEL@"
