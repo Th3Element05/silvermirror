@@ -17,7 +17,7 @@ ViridianPokecenter1FBenchGuyText:
 	ntag "GUY:"
 	text "#MON CENTERs"
 	line "heal your tired,"
-	cont "hurt or fainted"
+	cont "hurt, or fainted"
 	roll "#MON!"
 	done
 
