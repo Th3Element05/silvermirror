@@ -1,8 +1,8 @@
 	db "BAT@" ; species name
 	dw 207, 170 ; height, weight
 
-	db   "During the day, it"
-	next "gathers with"
+	db   "During the day,"
+	next "it gathers with"
 	next "others and hangs"
 
 	page "from the ceilings"
