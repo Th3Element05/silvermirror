@@ -862,6 +862,7 @@ BattleAnim_AerialAce:
 ;	anim_ret
 
 BattleAnim_Gust:
+	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_HP_FLYING
 	anim_2gfx BATTLE_ANIM_GFX_WIND, BATTLE_ANIM_GFX_HIT
 .loop
 	anim_sound 0, 1, SFX_RAZOR_WIND
@@ -1016,10 +1017,12 @@ BattleAnim_Slam:
 	anim_ret
 
 BattleAnim_VineWhip:
+	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_GREEN
 	anim_2gfx BATTLE_ANIM_GFX_WHIP, BATTLE_ANIM_GFX_HIT
 	anim_sound 0, 1, SFX_VINE_WHIP
 	anim_obj BATTLE_ANIM_OBJ_VINE_WHIP2, 116, 48, $80
-	anim_wait 4
+;	anim_wait 4
+	anim_wait 8
 	anim_sound 0, 1, SFX_VINE_WHIP
 	anim_obj BATTLE_ANIM_OBJ_VINE_WHIP1, 128, 54, $0
 	anim_wait 8
@@ -1458,7 +1461,18 @@ BattleAnim_Leer:
 	anim_1gfx BATTLE_ANIM_GFX_BEAM
 	anim_bgeffect BATTLE_BG_EFFECT_CYCLE_OBPALS_GRAY_AND_YELLOW, $0, $2, $0
 	anim_call BattleAnimSub_EyeBeams
-	anim_wait 16
+	anim_wait 24
+;	anim_ret
+	anim_bgeffect BATTLE_BG_EFFECT_BATTLEROBJ_1ROW, $0, BG_EFFECT_USER, $0
+	anim_wait 8
+	anim_bgeffect BATTLE_BG_EFFECT_FADE_MON_TO_BLACK_REPEATING, $0, BG_EFFECT_TARGET, $40
+	anim_wait 64
+	anim_incbgeffect BATTLE_BG_EFFECT_FADE_MON_TO_BLACK_REPEATING
+	anim_wait 1
+	anim_bgeffect BATTLE_BG_EFFECT_SHOW_MON, $0, BG_EFFECT_USER, $0
+	anim_wait 5
+	anim_incobj 10
+	anim_wait 8
 	anim_ret
 
 BattleAnim_Bite:
@@ -3253,7 +3267,7 @@ BattleAnim_Glare:
 	anim_bgeffect BATTLE_BG_EFFECT_FLASH_INVERTED, $0, $8, $20
 	anim_bgeffect BATTLE_BG_EFFECT_CYCLE_OBPALS_GRAY_AND_YELLOW, $0, $2, $0
 	anim_call BattleAnimSub_EyeBeams
-	anim_wait 16
+	anim_wait 32
 	anim_ret
 
 BattleAnim_DreamEater:
