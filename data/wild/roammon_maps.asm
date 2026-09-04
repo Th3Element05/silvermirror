@@ -14,7 +14,7 @@ ENDM
 
 RoamMaps:
 	list_start RoamMaps
-	; start map, ...other maps
+	; start map, ...other maps (limit of 4 connections per map starting map)
 	roam_map ROUTE_29,  ROUTE_30, ROUTE_46
 	roam_map ROUTE_30,  ROUTE_29, ROUTE_31
 	roam_map ROUTE_31,  ROUTE_30, ROUTE_32, ROUTE_36
@@ -41,10 +41,10 @@ RoamMapsKanto:
 	roam_map ROUTE_2,  ROUTE_1,  ROUTE_3,  ROUTE_22
 	roam_map ROUTE_3,  ROUTE_4,  ROUTE_2
 	roam_map ROUTE_4,  ROUTE_3,  ROUTE_5,  ROUTE_9,  ROUTE_24
-	roam_map ROUTE_5,  ROUTE_4,  ROUTE_6,  ROUTE_7,  ROUTE_8, ROUTE_9, ROUTE_24
+	roam_map ROUTE_5,  ROUTE_4,  ROUTE_7,  ROUTE_8,  ROUTE_9
 	roam_map ROUTE_6,  ROUTE_5,  ROUTE_7,  ROUTE_8,  ROUTE_11
 	roam_map ROUTE_7,  ROUTE_5,  ROUTE_6,  ROUTE_8,  ROUTE_16
-	roam_map ROUTE_8,  ROUTE_5,  ROUTE_6,  ROUTE_7,  ROUTE_12, ROUTE_10
+	roam_map ROUTE_8,  ROUTE_5,  ROUTE_6,  ROUTE_12, ROUTE_10
 	roam_map ROUTE_9,  ROUTE_4,  ROUTE_5,  ROUTE_24, ROUTE_10
 	roam_map ROUTE_10, ROUTE_8,  ROUTE_9,  ROUTE_12
 	roam_map ROUTE_11, ROUTE_6,  ROUTE_12

@@ -850,34 +850,71 @@ InitRoamMonsKanto:
 
 CheckEncounterRoamMon:
 	push hl
-; Don't trigger an encounter if we're on water.
+;; Don't trigger an encounter if we're on water.
 ;	call CheckOnWater
 ;	jr z, .DontEncounterRoamMon
 ; Load the current map group and number to de
 	call CopyCurrMapDE
-; Randomly select a beast.
-	call Random
-	cp 100 ; 25/64 chance
-	jr nc, .DontEncounterRoamMon
+;; Randomly select a beast.
+;	call Random
+;;	cp 100 ; 25/64 chance
+;;	jr nc, .DontEncounterRoamMon
 ;	and %00000011 ; Of that, a 3/4 chance.  Running total: 75/256, or around 29.3%.
-;	jr z, .DontEncounterRoamMon
-;	dec a ; 1/3 chance that it's Entei, 1/3 chance that it's Raikou
+;;	jr z, .DontEncounterRoamMon
+;;	dec a ; 1/3 chance that it's Entei, 1/3 chance that it's Raikou
+          ; without `dec a`, a is now in the range 0-3, a 25% chance for each roamer
 
-	and %00000011 ; a is now in the range 0-3
+;; Compare its current location with yours
+;	ld hl, wRoamMon1MapGroup
+;	ld c, a
+;	ld b, 0
+;	ld a, 7 ; length of the roam_struct
+;	call AddNTimes
+;	ld a, d
+;	cp [hl]
+;	jr nz, .DontEncounterRoamMon
+;	inc hl
+;	ld a, e
+;	cp [hl]
+;	jr nz, .DontEncounterRoamMon
 
-; Compare its current location with yours
+; Check for any Roamers at your current location
 	ld hl, wRoamMon1MapGroup
-	ld c, a
-	ld b, 0
-	ld a, 7 ; length of the roam_struct
-	call AddNTimes
-	ld a, d
-	cp [hl]
+	ld a, [hli]
+	cp d
+	jr nz, .next1
+	ld a, [hl] ; wRoamMon1MapNumber
+	cp e
+	jr z, .FoundRoamMon
+
+.next1
+	ld hl, wRoamMon2MapGroup
+	ld a, [hli]
+	cp d
+	jr nz, .next2
+	ld a, [hl] ; wRoamMon2MapNumber
+	cp e
+	jr z, .FoundRoamMon
+
+.next2
+	ld hl, wRoamMon3MapGroup
+	ld a, [hli]
+	cp d
+	jr nz, .next3
+	ld a, [hl] ; wRoamMon3MapNumber
+	cp e
+	jr z, .FoundRoamMon
+
+.next3
+	ld hl, wRoamMon4MapGroup
+	ld a, [hli]
+	cp d
 	jr nz, .DontEncounterRoamMon
-	inc hl
-	ld a, e
-	cp [hl]
+	ld a, [hl] ; wRoamMon4MapNumber
+	cp e
 	jr nz, .DontEncounterRoamMon
+
+.FoundRoamMon
 ; We've decided to take on a beast, so stage its information for battle.
 	dec hl
 	dec hl
@@ -989,6 +1026,10 @@ UpdateRoamMons:
 
 ; We have the correct entry now, so let's choose a random map from it.
 .yes
+	call Random
+	and %00000001 ; 1/2 chance to stay on the same map
+	jr z, .stay_put
+
 	inc hl
 	ld d, h
 	ld e, l
@@ -1014,6 +1055,7 @@ UpdateRoamMons:
 	ld a, [wRoamMons_LastMapNumber]
 	cp [hl]
 	jr z, .update_loop
+.stay_put
 	dec hl
 
 .done
