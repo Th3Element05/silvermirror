@@ -406,8 +406,7 @@ Route25BillsHouseSign:
 	jumptext Route25BillsHouseSignText
 
 Route25BillsHouseSignText:
-	text "SEA COTTAGE"
-	line "BILL lives here!"
+	text "BILL's HOUSE"
 	done
 
 Route25_MapEvents:

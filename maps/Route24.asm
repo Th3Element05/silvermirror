@@ -398,7 +398,7 @@ TrainerCamperTanner:
 
 CamperTannerSeenText:
 	ntag "CAMPER:"
-	text "I saw your feat"
+	text "I saw your feet"
 	line "from the grass!"
 	done
 
