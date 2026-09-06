@@ -158,14 +158,14 @@ TrainerCard_Page2_LoadGFX:
 
 	ld de, LeaderGiovanniGFX
 	ld hl, vTiles2 tile $70
-	lb bc, BANK(LeaderGFX), 9
+	lb bc, BANK(LeaderGiovanniGFX), 9
 	call Request2bpp
 	jr .load_badges
 
 .load_blue
 	ld de, LeaderBlueGFX
 	ld hl, vTiles2 tile $70
-	lb bc, BANK(LeaderGFX), 9
+	lb bc, BANK(LeaderBlueGFX), 9
 	call Request2bpp
 	; fallthrough
 .load_badges
@@ -176,6 +176,7 @@ TrainerCard_Page2_LoadGFX:
 	call Request2bpp
 	ld hl, TrainerCard_KantoBadgesOAM ;TrainerCard_JohtoBadgesOAM
 	call TrainerCard_Page2_3_InitObjectsAndStrings
+	call TrainerCard_Page2_CheckRematches
 	call TrainerCard_IncrementJumptable
 	ret
 
@@ -234,6 +235,7 @@ TrainerCard_Page3_LoadGFX:
 	call Request2bpp
 	ld hl, TrainerCard_JohtoBadgesOAM ;TrainerCard_KantoBadgesOAM
 	call TrainerCard_Page2_3_InitObjectsAndStrings
+	call TrainerCard_Page3_CheckRematches
 	call TrainerCard_IncrementJumptable
 	ret
 
@@ -296,7 +298,7 @@ TrainerCard_PrintTopHalfOfCard:
 	next "MONEY@"
 
 .ID_No:
-	db $27, $28, -1 ; ID NO
+	db $27, $28, -1 ; ID NO (font $cc, $cd)
 
 .HorizontalDivider:
 	db $25, $25, $25, $25, $25, $25, $25, $25, $25, $25, $25, $25, $26, -1 ; ____________>
@@ -494,6 +496,121 @@ TrainerCard_Page1_PrintGameTime:
 	xor " " ^ $2e ; alternate between space and small colon ($2e) tiles
 	ld [hl], a
 	ret
+
+TrainerCard_Page2_CheckRematches:
+	xor a
+	ld c, a
+.rematch_loop
+	call GetCheckmarkCoords
+	ld a, c
+	call GetKantoRematchPointer
+	jr z, .skip
+	ld [hl], $7e ; checkmark tile
+.skip
+	inc c
+	ld a, c
+	cp 8
+	jr nz, .rematch_loop
+	ret
+
+; returns in de the event at position 'a'
+; preserves bc, hl
+GetKantoRematchPointer:
+	push bc
+	push hl
+	ld hl, KantoLeaderRematchFlags
+	add a
+	ld c, a
+	ld b, 0
+	add hl, bc
+	ld a, [hli]
+	ld e, a
+	ld d, [hl]
+	ld b, 2
+	call EventFlagAction
+	pop hl
+	pop bc
+	ret
+
+KantoLeaderRematchFlags:
+	dw EVENT_BEAT_BROCK_2
+	dw EVENT_BEAT_MISTY_2
+	dw EVENT_BEAT_LTSURGE_2
+	dw EVENT_BEAT_ERIKA_2
+	dw EVENT_BEAT_KOGA_2
+	dw EVENT_BEAT_SABRINA_2
+	dw EVENT_BEAT_BLAINE_2
+	dw EVENT_BEAT_LEADER_BLUE
+
+TrainerCard_Page3_CheckRematches:
+	xor a
+	ld c, a
+.rematch_loop
+	call GetCheckmarkCoords
+	ld a, c
+	call GetJohtoRematchPointer
+	jr z, .skip
+	ld [hl], $7e ; checkmark tile
+.skip
+	inc c
+	ld a, c
+	cp 8
+	jr nz, .rematch_loop
+	ret
+
+; returns in de the event at position 'a'
+; preserves bc, hl
+GetJohtoRematchPointer:
+	push bc
+	push hl
+	ld hl, JohtoLeaderRematchFlags
+	add a
+	ld c, a
+	ld b, 0
+	add hl, bc
+	ld a, [hli]
+	ld e, a
+	ld d, [hl]
+	ld b, 2
+	call EventFlagAction
+	pop hl
+	pop bc
+	ret
+
+JohtoLeaderRematchFlags:
+	dw EVENT_BEAT_FALKNER_2
+	dw EVENT_BEAT_BUGSY_2
+	dw EVENT_BEAT_WHITNEY_2
+	dw EVENT_BEAT_MORTY_2
+	dw EVENT_BEAT_CHUCK_2
+	dw EVENT_BEAT_JASMINE_2
+	dw EVENT_BEAT_PRYCE_2
+	dw EVENT_BEAT_CLAIR_2
+
+; returns in hl the BG coords (wTileMap) of the checkmark for trainer "a"
+; preserves bc
+GetCheckmarkCoords:
+	push bc
+	ld hl, TrainerCheckmarkCoords
+	add a
+	ld c, a
+	ld b, 0
+	add hl, bc
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	pop bc
+	ret
+
+TrainerCheckmarkCoords:
+	dwcoord 2,  10 ; Brock, Falkner
+	dwcoord 6,  10 ; Misty, Bugsy
+	dwcoord 10, 10 ; Surge, Whitney
+	dwcoord 14, 10 ; Erika, Morty
+	dwcoord 2,  13 ; Koga, Chuck
+	dwcoord 6,  13 ; Sabrina, Jasmine
+	dwcoord 10, 13 ; Blaine, Pryce
+	dwcoord 14, 13 ; Blue, Clair
 
 TrainerCard_Page2_3_AnimateBadges:
 	ldh a, [hVBlankCounter]

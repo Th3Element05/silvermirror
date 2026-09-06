@@ -1115,13 +1115,20 @@ _CGB_TrainerCard:
 	; fill screen with opposite-gender palette for the card border
 	hlcoord 0, 0, wAttrmap
 	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
-	ld a, [wPlayerGender]
-	and a
-	ld a, $2 ; kris
-	jr z, .got_gender
-	ld a, $2 ; chris
-.got_gender
+;	ld a, [wPlayerGender]
+;	and a
+;	ld a, $2 ; kris
+;	jr z, .got_gender
+	ld a, $2 ; blue
+;.got_gender
 	call ByteFill
+
+;	; fill rematch checkmark area with green palette
+;	hlcoord 2, 10, wAttrmap
+;	lb bc, 4, 13
+;	ld a, $1 ; green
+;	call FillBoxCGB
+
 	; fill trainer sprite area with same-gender palette
 	hlcoord 14, 1, wAttrmap
 	lb bc, 7, 5
@@ -1177,7 +1184,7 @@ _CGB_TrainerCard:
 ;	and a
 ;	ld a, $2 ; kris
 ;	jr z, .got_gender3
-	ld a, $2 ; chris
+	ld a, $2 ; blue
 ;.got_gender3	
 	hlcoord 18, 1, wAttrmap
 	ld [hl], a
@@ -1322,13 +1329,20 @@ _CGB_TrainerCardKanto:
 	; fill screen with opposite-gender palette for the card border
 	hlcoord 0, 0, wAttrmap
 	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
-	ld a, [wPlayerGender]
-	and a
-	ld a, $2 ; kris
-	jr z, .got_gender
-	ld a, $2 ; chris
-.got_gender	
+;	ld a, [wPlayerGender]
+;	and a
+;	ld a, $1 ; kris
+;	jr z, .got_gender
+	ld a, $2 ; blue
+;.got_gender	
 	call ByteFill
+
+;	; fill rematch checkmark area with green palette
+;	hlcoord 2, 10, wAttrmap
+;	lb bc, 4, 13
+;	ld a, $1 ; green
+;	call FillBoxCGB
+
 	; fill trainer sprite area with same-gender palette
 	hlcoord 14, 1, wAttrmap
 	lb bc, 7, 5
@@ -1384,7 +1398,7 @@ _CGB_TrainerCardKanto:
 ;	and a
 ;	ld a, $2 ; kris
 ;	jr z, .got_gender3
-	ld a, $2 ; chris
+	ld a, $2 ; blue
 ;.got_gender3	
 	hlcoord 18, 1, wAttrmap
 	ld [hl], a
