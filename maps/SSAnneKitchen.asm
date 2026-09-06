@@ -115,12 +115,12 @@ SSAnneKitchenTrashcanText:
 	line "peels!"
 	done
 
-SSAnneKitchenOnionTrashcan:
-	jumptext SSAnneKitchenOnionTrashcanText
-SSAnneKitchenOnionTrashcanText:
-	text "It's full of onion"
-	line "skins."
-	done
+;SSAnneKitchenOnionTrashcan:
+;	jumptext SSAnneKitchenOnionTrashcanText
+;SSAnneKitchenOnionTrashcanText:
+;	text "It's full of onion"
+;	line "skins!"
+;	done
 
 SSAnneKitchenHiddenGreatBall:
 	hiddenitem GREAT_BALL, EVENT_SS_ANNE_KITCHEN_HIDDEN_GREAT_BALL
@@ -137,7 +137,7 @@ SSAnneKitchen_MapEvents:
 	bg_event 17,  3, BGEVENT_READ, SSAnneKitchenTrashcan
 	bg_event 17,  5, BGEVENT_READ, SSAnneKitchenTrashcan
 	bg_event 17,  7, BGEVENT_ITEM, SSAnneKitchenHiddenGreatBall
-	bg_event 17,  7, BGEVENT_READ, SSAnneKitchenOnionTrashcan
+;	bg_event 17,  7, BGEVENT_READ, SSAnneKitchenOnionTrashcan ; used BGEVENT_ITEM seems to block this
 
 	def_object_events
 	object_event  5,  5, SPRITE_CHEF, SPRITEMOVEDATA_WALK_UP_DOWN, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneKitchenCook1Script, -1
