@@ -365,6 +365,19 @@ GymStatue_WinningTrainers2Text:
 	line "<RIVAL>, <PLAYER>"
 	done
 
+GymStatue_RematchText:
+	text_ram wStringBuffer3
+	text_start
+	line "#MON GYM"
+	
+	para "LEADER: @"
+	text_ram wStringBuffer4
+	text_start
+	line "REMATCH: @"
+	text_ram wStringBuffer5
+	text_start
+	done
+
 CoinVendor_WelcomeText:
 	ntag "CASHIER:"
 	text "Welcome to the"

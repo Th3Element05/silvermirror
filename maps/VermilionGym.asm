@@ -355,7 +355,19 @@ VermilionGymStatue:
 .Beaten:
 	jumpstd GymStatue2Script
 .Champion
-	jumpstd GymStatue3Script
+	getstring STRING_BUFFER_5, .IncompleteString
+	checkevent EVENT_BEAT_LTSURGE_2
+	iffalse .Incomplete
+	getstring STRING_BUFFER_5, .CompleteString
+.Incomplete
+	jumpstd GymStatue4Script
+
+.IncompleteString:
+	db "Pending@"
+
+.CompleteString:
+	db "COMPLETE!@"
+
 
 ;VermilionGymTrashCan:
 ;	jumptext VermilionGymTrashCanText

@@ -324,12 +324,22 @@ EcruteakGymGuideWinText:
 
 EcruteakGymStatue:
 	gettrainername STRING_BUFFER_4, MORTY, MORTY1
+	checkflag ENGINE_RISINGBADGE
+	iftrue .Rematch
 	jumpstd GymStatue3Script
-;	checkflag ENGINE_FOGBADGE
-;	iftrue .Beaten
-;	jumpstd GymStatue1Script
-;.Beaten:
-;	jumpstd GymStatue2Script
+.Rematch
+	getstring STRING_BUFFER_5, .IncompleteString
+	checkevent EVENT_BEAT_MORTY_2
+	iffalse .Incomplete
+	getstring STRING_BUFFER_5, .CompleteString
+.Incomplete
+	jumpstd GymStatue4Script
+
+.IncompleteString:
+	db "Pending@"
+
+.CompleteString:
+	db "COMPLETE!@"
 
 
 ; rematch

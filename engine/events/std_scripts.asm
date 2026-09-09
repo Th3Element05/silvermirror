@@ -53,6 +53,7 @@ StdScripts::
 	add_stdscript GymStatue1Script
 	add_stdscript GymStatue2Script
 	add_stdscript GymStatue3Script
+	add_stdscript GymStatue4Script
 	add_stdscript ReceiveItemScript
 	add_stdscript ReceiveTogepiEggScript
 	add_stdscript PCScript
@@ -2392,6 +2393,16 @@ GymStatue3Script:
 	getcurlandmarkname STRING_BUFFER_3
 	opentext
 	farwritetext GymStatue_CityGymText
+	waitbutton
+	closetext
+	end
+
+GymStatue4Script:
+	getcurlandmarkname STRING_BUFFER_3
+	opentext
+;	farwritetext GymStatue_CityGymText
+;	promptbutton
+	farwritetext GymStatue_RematchText
 	waitbutton
 	closetext
 	end

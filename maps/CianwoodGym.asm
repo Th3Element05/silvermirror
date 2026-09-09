@@ -346,12 +346,22 @@ CianwoodGymGuideWinText:
 
 CianwoodGymStatue:
 	gettrainername STRING_BUFFER_4, CHUCK, CHUCK1
+	checkflag ENGINE_RISINGBADGE
+	iftrue .Rematch
 	jumpstd GymStatue3Script
-;	checkflag ENGINE_STORMBADGE
-;	iftrue .Beaten
-;	jumpstd GymStatue1Script
-;.Beaten:
-;	jumpstd GymStatue2Script
+.Rematch
+	getstring STRING_BUFFER_5, .IncompleteString
+	checkevent EVENT_BEAT_CHUCK_2
+	iffalse .Incomplete
+	getstring STRING_BUFFER_5, .CompleteString
+.Incomplete
+	jumpstd GymStatue4Script
+
+.IncompleteString:
+	db "Pending@"
+
+.CompleteString:
+	db "COMPLETE!@"
 
 CianwoodGymBoulder:
 	jumpstd StrengthBoulderScript

@@ -372,7 +372,22 @@ GoldenrodGymGuideWinText:
 
 GoldenrodGymStatue:
 	gettrainername STRING_BUFFER_4, WHITNEY, WHITNEY1
+	checkflag ENGINE_RISINGBADGE
+	iftrue .Rematch
 	jumpstd GymStatue3Script
+.Rematch
+	getstring STRING_BUFFER_5, .IncompleteString
+	checkevent EVENT_BEAT_WHITNEY_2
+	iffalse .Incomplete
+	getstring STRING_BUFFER_5, .CompleteString
+.Incomplete
+	jumpstd GymStatue4Script
+
+.IncompleteString:
+	db "Pending@"
+
+.CompleteString:
+	db "COMPLETE!@"
 
 
 ; rematch

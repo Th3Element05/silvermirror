@@ -474,7 +474,18 @@ ViridianGymStatue:
 
 .BlueIsLeader:
 	gettrainername STRING_BUFFER_4, BLUE, BLUE1
-	jumpstd GymStatue3Script
+	getstring STRING_BUFFER_5, .IncompleteString
+	checkevent EVENT_BEAT_LEADER_BLUE
+	iffalse .Incomplete
+	getstring STRING_BUFFER_5, .CompleteString
+.Incomplete
+	jumptext ViridianGymStatue3Text
+
+.IncompleteString:
+	db "NONE@"
+
+.CompleteString:
+	db "<PLAYER>@"
 
 ViridianGymStatue1Text:
 	text "VIRIDIAN CITY"
@@ -489,8 +500,19 @@ ViridianGymStatue2Text:
 	line "#MON GYM"
 
 	para "WINNING TRAINERS:"
-	line "<RIVAL>"
-	cont "<PLAYER>"
+	line "<RIVAL>, <PLAYER>"
+	done
+
+ViridianGymStatue3Text:
+	text "VIRIDIAN CITY"
+	line "#MON GYM"
+
+	para "LEADER: <RIVAL>"
+
+	para "WINNING TRAINERS:"
+	line "@"
+	text_ram wStringBuffer5
+	text_start
 	done
 
 ViridianGymRevive:

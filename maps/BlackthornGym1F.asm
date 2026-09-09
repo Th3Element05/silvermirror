@@ -408,13 +408,23 @@ BlackthornGymGuideWinText:
 
 BlackthornGymStatue:
 	gettrainername STRING_BUFFER_4, CLAIR, CLAIR1
-	jumpstd GymStatue3Script
 ;	checkflag ENGINE_RISINGBADGE
-;	iftrue .Beaten
-;	jumpstd GymStatue1Script
-;.Beaten:
-;	gettrainername STRING_BUFFER_4, CLAIR, CLAIR1
-;	jumpstd GymStatue2Script
+	checkevent EVENT_CLEARED_DRAGONS_DEN
+	iftrue .Rematch
+	jumpstd GymStatue3Script
+.Rematch
+	getstring STRING_BUFFER_5, .IncompleteString
+	checkevent EVENT_BEAT_CLAIR_2
+	iffalse .Incomplete
+	getstring STRING_BUFFER_5, .CompleteString
+.Incomplete
+	jumpstd GymStatue4Script
+
+.IncompleteString:
+	db "Pending@"
+
+.CompleteString:
+	db "COMPLETE!@"
 
 
 BlackthornGym1F_MapEvents:
