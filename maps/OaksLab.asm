@@ -1351,8 +1351,9 @@ OaksLabThoseArePokeballsText:
 
 OakLabEvaluateDexText:
 	ntag "PROF.OAK:"
-	text "How is your #-"
-	line "DEX coming?"
+	text "<PLAYER>!"
+	line "How are you doing"
+	cont "on your #DEX?"
 
 	para "Let's see…"
 	done
