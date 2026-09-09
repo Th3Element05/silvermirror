@@ -1431,7 +1431,7 @@ LoadMapPals:
 	cp TOWN
 	jr z, .outside
 	cp ROUTE
-	ret nz
+	jr nz, .DollPalettes
 .outside
 	ld a, [wMapGroup]
 	add a
@@ -1458,8 +1458,11 @@ LoadMapPals:
 	ld a, BANK(wBGPals1)
 	call FarCopyWRAM
 
+.DollPalettes
 	; Day Care outdoor palettes
 	ld a, [wMapGroup]
+	cp GROUP_PLAYERS_HOUSE_2F
+	jr z, .PlayersHouse2F
 	cp GROUP_ROUTE_5 ;GROUP_ROUTE_34
 	ret nz
 
@@ -1520,6 +1523,69 @@ LoadMapPals:
 	inc hl
 
 	ld de, wOBPals1 palette PAL_OW_ROCK + 2
+	ld bc, 1 palettes - 2
+	ld a, BANK(wOBPals1)
+	call FarCopyWRAM
+	ret
+
+.PlayersHouse2F
+	ld a, [wMapNumber]
+	cp MAP_PLAYERS_HOUSE_2F
+	ret nz
+
+	ld a, [wDecoLeftOrnament]
+	ld e, a
+	farcall GetDecorationSpecies
+	ld a, e
+	and a
+	jr z, .deco_right_ornament
+	ld [wCurPartySpecies], a
+
+	ld de, GetMenuMonIconPalette_PredeterminedShininess
+	ld a, BANK(GetMenuMonIconPalette_PredeterminedShininess)
+	call FarCall_de
+	ld a, e
+	add a
+	add a
+	add a
+	ld e, a
+	ld d, 0
+	ld hl, PartyMenuOBPals
+	add hl, de
+
+	inc hl
+	inc hl
+
+	ld de, wOBPals1 palette PAL_OW_PURPLE + 2
+	ld bc, 1 palettes - 2
+	ld a, BANK(wOBPals1)
+	call FarCopyWRAM
+
+.deco_right_ornament
+	ld a, [wDecoRightOrnament]
+	ld e, a
+	farcall GetDecorationSpecies
+	ld a, e
+	and a
+	ret z
+	ld [wCurPartySpecies], a
+
+	ld de, GetMenuMonIconPalette_PredeterminedShininess
+	ld a, BANK(GetMenuMonIconPalette_PredeterminedShininess)
+	call FarCall_de
+	ld a, e
+	add a
+	add a
+	add a
+	ld e, a
+	ld d, 0
+	ld hl, PartyMenuOBPals
+	add hl, de
+
+	inc hl
+	inc hl
+
+	ld de, wOBPals1 palette PAL_OW_TREE + 2
 	ld bc, 1 palettes - 2
 	ld a, BANK(wOBPals1)
 	call FarCopyWRAM

@@ -200,6 +200,10 @@ GetMonSprite:
 	jr z, .BreedMon1
 	cp SPRITE_DAY_CARE_MON_2
 	jr z, .BreedMon2
+;	cp SPRITE_DOLL_1
+;	jr z, .Doll1
+;	cp SPRITE_DOLL_2
+;	jr z, .Doll2
 	cp SPRITE_VARS
 	jr nc, .Variable
 	jr .Icon
@@ -225,6 +229,20 @@ GetMonSprite:
 .BreedMon2
 	ld a, [wBreedMon2Species]
 	ld d, 2
+;	jr .Mon
+;
+;.Doll1
+;	ld a, [wDecoLeftOrnament]
+;	jr .MonDoll
+;
+;.Doll2:
+;	ld a, [wDecoRightOrnament]
+;.MonDoll:
+;	ld e, a
+;	farcall GetDecorationSpecies
+;	ld a, e
+;	lb de, 0, 0
+;	; fallthrough
 
 .Mon:
 	ld e, a

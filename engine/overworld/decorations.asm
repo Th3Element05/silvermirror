@@ -498,6 +498,14 @@ GetDecorationSprite:
 	ld c, a
 	ret
 
+GetDecorationSpecies::
+	ld a, e
+	call GetDecorationData
+	inc hl
+	ld a, [hl]
+	ld e, a
+	ret
+
 INCLUDE "data/decorations/attributes.asm"
 
 INCLUDE "data/decorations/names.asm"
