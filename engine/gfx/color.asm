@@ -1458,14 +1458,10 @@ LoadMapPals:
 	ld a, BANK(wBGPals1)
 	call FarCopyWRAM
 
-.DollPalettes
 	; Day Care outdoor palettes
 	ld a, [wMapGroup]
-	cp GROUP_PLAYERS_HOUSE_2F
-	jr z, .PlayersHouse2F
 	cp GROUP_ROUTE_5 ;GROUP_ROUTE_34
 	ret nz
-
 	ld a, [wMapNumber]
 	cp MAP_ROUTE_5 ;MAP_ROUTE_34
 	ret nz
@@ -1528,7 +1524,11 @@ LoadMapPals:
 	call FarCopyWRAM
 	ret
 
-.PlayersHouse2F
+	; Player's Room small doll palettes
+.DollPalettes
+	ld a, [wMapGroup]
+	cp GROUP_PLAYERS_HOUSE_2F
+	ret nz
 	ld a, [wMapNumber]
 	cp MAP_PLAYERS_HOUSE_2F
 	ret nz
