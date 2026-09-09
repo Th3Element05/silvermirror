@@ -875,21 +875,38 @@ BattleAnim_Gust:
 	anim_wait 16
 	anim_ret
 
+;BattleAnim_WingAttack:
+;	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_HP_FLYING
+;	anim_1gfx BATTLE_ANIM_GFX_HIT
+;	anim_sound 0, 1, SFX_WING_ATTACK
+;	anim_wait 6
+;	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 148, 56, $0
+;	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 116, 56, $0
+;	anim_sound 0, 1, SFX_WING_ATTACK
+;	anim_wait 6
+;	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 144, 56, $0
+;	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 120, 56, $0
+;	anim_sound 0, 1, SFX_WING_ATTACK
+;	anim_wait 6
+;	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 140, 56, $0
+;	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 124, 56, $0
+;	anim_wait 16
+;	anim_ret
 BattleAnim_WingAttack:
 	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_HP_FLYING
 	anim_1gfx BATTLE_ANIM_GFX_HIT
 	anim_sound 0, 1, SFX_WING_ATTACK
-	anim_wait 6
-	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 148, 56, $0
-	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 116, 56, $0
-	anim_sound 0, 1, SFX_WING_ATTACK
-	anim_wait 6
-	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 144, 56, $0
-	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 120, 56, $0
-	anim_sound 0, 1, SFX_WING_ATTACK
-	anim_wait 6
-	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 140, 56, $0
-	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 124, 56, $0
+	anim_wait 18
+	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 152, 56, $0
+	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 112, 56, $0
+;	anim_sound 0, 1, SFX_WING_ATTACK
+	anim_wait 12
+	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 146, 54, $0
+	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 118, 54, $0
+;	anim_sound 0, 1, SFX_WING_ATTACK
+	anim_wait 12
+	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 140, 50, $0
+	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 124, 50, $0
 	anim_wait 16
 	anim_ret
 
@@ -1603,7 +1620,7 @@ BattleAnim_Acid:
 	anim_call BattleAnimSub_Acid
 ;
 	anim_call BattleAnimSub_Poison
-	anim_wait 24
+	anim_wait 32
 ;	anim_obj BATTLE_ANIM_OBJ_POISON_DROPLET, 128, 36, $11
 ;	anim_wait 4
 ;	anim_obj BATTLE_ANIM_OBJ_POISON_DROPLET, 144, 36, $0f
@@ -4899,8 +4916,9 @@ BattleAnim_MudShot:
 	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_HP_GROUND
 	anim_2gfx BATTLE_ANIM_GFX_POISON, BATTLE_ANIM_GFX_HIT
 	anim_call BattleAnimSub_Acid
-	anim_wait 8
-	anim_obj BATTLE_ANIM_OBJ_HIT_BIG, 136, 40, $0
+	anim_wait 32
+;	anim_obj BATTLE_ANIM_OBJ_HIT_BIG, 136, 40, $0
+	anim_obj BATTLE_ANIM_OBJ_HIT_BIG_YFIX, 136, 40, $0
 	anim_wait 16 ;48
 	anim_ret
 
