@@ -94,6 +94,7 @@ ReleaseTheBeasts:
 	setevent EVENT_FOUND_GIRL_IN_BURNED_TOWER
 	setevent EVENT_BURNED_TOWER_LOST_GIRL
 	clearevent EVENT_ECRUTEAK_CITY_GIRL
+	setscene SCENE_BURNEDTOWER1F_NOOP
 	setscene SCENE_BURNEDTOWERB1F_NOOP
 	setscene SCENE_ECRUTEAKCITY_NOOP
 	end
@@ -153,7 +154,7 @@ BurnedTowerB1FGramps:
 	writetext BurnedTowerB1FGrampsText
 	waitbutton
 	closetext
-;	wildon
+	wildon
 	applymovement BURNEDTOWERB1F_GRAMPS, BurnedTowerB1FGrampsMovement
 	disappear BURNEDTOWERB1F_GRAMPS
 	playsound SFX_EXIT_BUILDING

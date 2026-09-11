@@ -53,7 +53,7 @@ BurnedTowerLostGirlScript:
 	writetext BurnedTowerGirl_AfterText
 	waitbutton
 	closetext
-;	wildoff
+	wildoff
 ;	setevent EVENT_HOLE_IN_BURNED_TOWER
 ;	setevent EVENT_FOUND_GIRL_IN_BURNED_TOWER
 ;	setscene SCENE_BURNEDTOWER1F_NOOP

@@ -15,6 +15,7 @@ EcruteakCityNoop2Scene:
 
 EcruteakCityFlypointCallback:
 	setflag ENGINE_FLYPOINT_ECRUTEAK
+	wildon
 	endcallback
 
 EcruteakCityLostGirlScript:
