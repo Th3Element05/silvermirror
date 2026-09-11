@@ -16,7 +16,7 @@ PrintMoveDescription:
 PrintLearnMoveDescription:
 	push hl
 	ld hl, MoveDescriptions
-	ld a, [wPutativeTMHMMove] ;[wCurSpecies]
+	ld a, [wBuffer1] ;[wPutativeTMHMMove]
 	dec a
 	ld c, a
 	ld b, 0

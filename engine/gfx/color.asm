@@ -1726,7 +1726,7 @@ InitPartyMenuStatusPals:
 
 
 LoadLearnCategoryAndTypePals:
-	ld a, [wPutativeTMHMMove] ;[wCurSpecies]
+	ld a, [wBuffer1] ;[wPutativeTMHMMove]
 	dec a
 	ld hl, Moves + MOVE_TYPE
 	ld bc, MOVE_LENGTH

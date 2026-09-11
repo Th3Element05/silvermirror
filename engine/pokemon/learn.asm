@@ -31,6 +31,7 @@ LearnMove:
 ; to make room for the new move we're trying to learn.
 	push de
 	call ForgetMove
+.debug_after_ForgetMove
 	pop de
 	jp c, .cancel
 
@@ -175,10 +176,122 @@ ForgetMove:
 	ld bc, NUM_MOVES
 	call CopyBytes
 
-; Print UI element
 	call ClearSprites
 
-	hlcoord 0, 11
+;	pop hl
+;.loop
+;	push hl
+;;	ld hl, MoveAskForgetText
+;;	call PrintText
+	hlcoord 0, 0 ;5, 0
+	ld b, 2 + NUM_MOVES * 2
+	ld c, MOVE_NAME_LENGTH + 1
+	call Textbox
+	hlcoord 1, 0 ;6, 1
+	ld de, String_LearnReplace
+	call PlaceString
+	hlcoord 2, 10
+	ld de, wStringBuffer2 ; PutativeTMHMMove
+	call PlaceString
+	hlcoord 0 + 2, 0 + 2 ;5 + 2, 0 + 3
+	ld a, SCREEN_WIDTH * 2
+	ld [wListMovesLineSpacing], a
+	predef ListMoves
+	ld a, [wNumMoves]
+	inc a
+	inc a
+	ld [w2DMenuNumRows], a
+	ld de, ForgetMoveScreen2DMenuData
+	call Load2DMenuData
+	ld hl, w2DMenuFlags1
+;	set 6, [hl] ; enable sprite animations
+;	set 7, [hl]
+	jr .skip_joy
+
+.joy_loop
+	call ScrollingMenuJoypad
+
+;	bit 1, a
+;	jp nz, .b_button
+;	bit 0, a
+;	jp nz, .a_button
+
+	bit B_BUTTON_F, a
+	jp nz, .b_button
+	bit A_BUTTON_F, a
+	jp nz, .a_button
+
+.skip_joy
+	call PrepareToPlaceForgetMoveData
+	call PlaceForgetMoveData
+	jp .joy_loop
+
+.b_button
+	push af
+	call SafeLoadTempTilemapToTilemap
+	pop af
+	pop hl
+	jr .cancel
+
+.a_button
+	call PlayClickSFX
+	call WaitSFX
+	ld a, [wMenuCursorY]
+	cp $5
+	jr z, .b_button
+
+	push af
+	call SafeLoadTempTilemapToTilemap
+	pop af
+	pop hl
+	ld a, [wMenuCursorY]
+	dec a ; [wMenuCursorY]
+	ld c, a
+	ld b, 0
+	add hl, bc
+	ld a, [hl]
+	and a
+	ret
+
+.cancel
+;	pop hl
+	scf
+	ret
+
+ForgetMoveScreen2DMenuData:
+	db 2, 1 ; cursor start y, x
+	db 5, 1 ; rows, columns
+	db $20, $00 ; flags
+	dn 2, 0 ; cursor offsets
+	db D_UP | D_DOWN | A_BUTTON | B_BUTTON ; accepted buttons
+
+
+PrepareToPlaceForgetMoveData:
+	ld a, [wMenuCursorY]
+	cp $5
+	jr z, .putative_move
+
+	ld hl, wListMoves_MoveIndicesBuffer
+	dec a ; [wMenuCursorY]
+	ld c, a
+	ld b, 0
+	add hl, bc
+	ld a, [hl]
+	ld [wBuffer1], a
+	jr .done
+
+.putative_move
+	ld a, [wPutativeTMHMMove]
+	ld [wBuffer1], a
+.done
+	hlcoord 1, 12
+	lb bc, 5, 18
+	jp ClearBox
+
+PlaceForgetMoveData:
+	call ClearSprites
+; Print UI element
+	hlcoord 16, 11
 	ld de, String_LearnTabTop
 	call PlaceString
 	hlcoord 0, 12
@@ -191,7 +304,7 @@ ForgetMove:
 	jr nz, .no_category
 
 ; Place Move Cateogry
-	ld a, [wPutativeTMHMMove] ;[wCurSpecies]
+	ld a, [wBuffer1] ; selected Move or [wPutativeTMHMMove]
 	dec a
 	ld hl, Moves + MOVE_TYPE
 	ld bc, MOVE_LENGTH
@@ -218,7 +331,7 @@ ForgetMove:
 
 .no_category
 ; Place Move Type
-	ld a, [wPutativeTMHMMove] ;[wCurSpecies]
+	ld a, [wBuffer1] ; selected Move or [wPutativeTMHMMove]
 	dec a
 	ld hl, Moves + MOVE_TYPE
 	ld bc, MOVE_LENGTH
@@ -262,7 +375,7 @@ ForgetMove:
 ;	ld de, .power_string
 ;	call PlaceString
 
-	ld a, [wPutativeTMHMMove]
+	ld a, [wBuffer1] ; selected Move or [wPutativeTMHMMove]
 	dec a
 	ld hl, Moves + MOVE_EFFECT
 	ld bc, MOVE_LENGTH
@@ -276,7 +389,7 @@ ForgetMove:
 	call PlaceString
 .not_static_damage
 
-	ld a, [wPutativeTMHMMove] ;[wCurSpecies]
+	ld a, [wBuffer1] ; selected Move or [wPutativeTMHMMove]
 	dec a
 	ld hl, Moves + MOVE_POWER
 	ld bc, MOVE_LENGTH
@@ -316,7 +429,7 @@ ForgetMove:
 	ld de, .accuracy_string
 	call PlaceString
 
-	ld a, [wPutativeTMHMMove] ;[wCurSpecies]
+	ld a, [wBuffer1] ; selected Move or [wPutativeTMHMMove]
 	ld bc, MOVE_LENGTH
 	ld hl, (Moves + MOVE_ACC) - MOVE_LENGTH
 	call AddNTimes
@@ -357,73 +470,16 @@ ForgetMove:
 	call PlaceString
 
 .description
-	hlcoord 1, 11
-	ld de, wStringBuffer2
-	call PlaceString
-	hlcoord 1, 14
-	lb bc, 3, 18
-	call ClearBox
+;	hlcoord 1, 14
+;	lb bc, 3, 18
+;	call ClearBox
 	hlcoord 1, 14
 	predef PrintLearnMoveDescription
 
-
-	pop hl
-.loop
-	push hl
-;	ld hl, MoveAskForgetText
-;	call PrintText
-	hlcoord 0, 0 ;5, 0
-	ld b, 1 + NUM_MOVES * 2
-	ld c, MOVE_NAME_LENGTH + 1
-	call Textbox
-	hlcoord 1, 1 ;6, 1
-	ld de, String_LearnReplace
-	call PlaceString
-	hlcoord 0 + 2, 0 + 3 ;5 + 2, 0 + 3
-	ld a, SCREEN_WIDTH * 2
-	ld [wListMovesLineSpacing], a
-	predef ListMoves
-	; w2DMenuData
-	ld a, $3
-	ld [w2DMenuCursorInitY], a
-	ld a, $1 ;$6
-	ld [w2DMenuCursorInitX], a
-	ld a, [wNumMoves]
-	inc a
-	ld [w2DMenuNumRows], a
-	ld a, $1
-	ld [w2DMenuNumCols], a
-	ld [wMenuCursorY], a
-	ld [wMenuCursorX], a
-	ld a, $3
-	ld [wMenuJoypadFilter], a
-	ld a, $20
-	ld [w2DMenuFlags1], a
-	xor a
-	ld [w2DMenuFlags2], a
-	ld a, $20
-	ld [w2DMenuCursorOffsets], a
-	call StaticMenuJoypad
-	push af
-	call SafeLoadTempTilemapToTilemap
-	pop af
-	pop hl
-	bit 1, a
-	jr nz, .cancel
-	push hl
-	ld a, [wMenuCursorY]
-	dec a
-	ld c, a
-	ld b, 0
-	add hl, bc
-	ld a, [hl]
-	pop hl
-	add hl, bc
-	and a
-	ret
-
-.cancel
-	scf
+;	ld b, SCGB_MOVE_LIST
+;	call GetSGBLayout ; reload proper palettes for new Move Type and Category, and apply
+;	ld a, $1 ; done editing the screen
+;	ldh [hBGMapMode], a
 	ret
 
 ; UI elements
@@ -440,7 +496,7 @@ ForgetMove:
 .staticdmg_string:
 	db "<HP>@"
 String_LearnTabTop:
-	db "┌──────────────────┐@"
+	db "───┐@"
 String_LearnTabBottom:
 	db "│<ATK1><ATK2>                │@"
 String_LearnReplace:
