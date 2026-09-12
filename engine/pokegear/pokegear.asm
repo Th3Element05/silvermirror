@@ -3160,8 +3160,7 @@ Pokedex_GetArea:
 	ld a, [wPlayerGender]
 	bit PLAYERGENDER_FEMALE_F, a
 	jr z, .male
-;	inc c ; PAL_OW_BLUE
-	inc c ; PAL_OW_GREEN
+	ld c, PAL_OW_GREEN
 .male
 	ld a, c
 	ld [hli], a ; attributes
