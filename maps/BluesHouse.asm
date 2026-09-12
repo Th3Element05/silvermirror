@@ -24,6 +24,8 @@ BluesHouseNeighborText:
 	done
 
 DaisyScript:
+	checkflag ENGINE_DAISYS_GROOMING
+	iftrue .AlreadyGroomedMon
 	checkflag ENGINE_MAP_CARD
 	iftrue .DaisyGroom ; keep grooming?
 	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
@@ -34,6 +36,11 @@ DaisyScript:
 
 .BlueAtLab
 	jumptextfaceplayer BluesHouseBlueAtLabText
+
+.AlreadyGroomedMon
+	random 3
+	ifequal 0, .DaisyIdle
+	jumptextfaceplayer DaisyAlreadyGroomedText
 
 .DaisyIdle
 	jumptextfaceplayer BluesHouseDaisyIdleText
@@ -46,8 +53,6 @@ DaisyScript:
 .Daytime:
 	faceplayer
 	opentext
-	checkflag ENGINE_DAISYS_GROOMING
-	iftrue .AlreadyGroomedMon
 	writetext DaisyOfferGroomingText
 	yesorno
 	iffalse .Refused
@@ -72,12 +77,6 @@ DaisyScript:
 	special PlayCurMonCry
 	promptbutton
 	writetext DaisyAllDoneText
-	waitbutton
-	closetext
-	end
-
-.AlreadyGroomedMon:
-	writetext DaisyAlreadyGroomedText
 	waitbutton
 	closetext
 	end
@@ -198,10 +197,11 @@ DaisyAlreadyGroomedText:
 
 DaisyRefusedText:
 	ntag "DAISY:"
-	text "You don't want tp"
+	text "You don't want to"
 	line "have one groomed?"
-	cont "Okay, we can just"
-	roll "have tea."
+	
+	para "Okay, we can just"
+	line "have tea."
 	done
 
 DaisyCantGroomEggText:
