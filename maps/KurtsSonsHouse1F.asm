@@ -24,11 +24,13 @@ KurtsSonsHouse1FApricornBallCallback:
 KurtsSonsHouse1FKurtsSon:
 	faceplayer
 	opentext
+	checkevent EVENT_MET_KURTS_SON
+	iftrue .SkipIntro
 	checkevent EVENT_BEAT_GIOVANNI_SILPHCO
 	iffalse .HelpUsFirst
 ; cleared silph co
-	checkevent EVENT_MET_KURTS_SON
-	iftrue .SkipIntro
+;	checkevent EVENT_MET_KURTS_SON
+;	iftrue .SkipIntro
 	writetext KurtsSonsHouse1FKurtsSon_ThankYouText
 	promptbutton
 ;	verbosegiveitem LEVEL_BALL
@@ -217,9 +219,13 @@ KurtsSonsHouse1FKurtsSon:
 
 .HelpUsFirst:
 	writetext KurtsSonsHouse1FKurtsSon_HelpUsText
-	waitbutton
-	closetext
-	end
+	promptbutton
+	writetext KurtsSonsHouse1FKurtsSon_ThankYouText
+	promptbutton
+	setevent EVENT_MET_KURTS_SON
+	sjump .BringMeApricorns
+;	closetext
+;	end
 
 KurtsSonsHouse1FKurtsSon_HelpUsText:
 	ntag "BURT:"
@@ -234,10 +240,20 @@ KurtsSonsHouse1FKurtsSon_HelpUsText:
 	para "But my coworkers"
 	line "weren't so lucky!"
 
-	para "I'm so worried"
-	line "about them, I can't"
-	cont "even focus on my"
-	roll "hobbies!"
+;	para "I'm so worried"
+;	line "about them, I can't"
+;	cont "even focus on my"
+;	roll "hobbies!"
+;	done
+
+	para "You're a trainer?"
+
+	para "Do you think you"
+	line "can help them?"
+
+	para "If #BALLs will"
+	line "help, I've got you"
+	cont "covered!"
 	done
 
 ;	text "I study #BALL"

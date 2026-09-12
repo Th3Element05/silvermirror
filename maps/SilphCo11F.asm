@@ -93,9 +93,12 @@ SilphCo11FGiovanniEncounter:
 	clearevent EVENT_SAFFRON_CITY_CIVILIANS
 ;	clearevent EVENT_OAK_CALLED_ABOUT_SILPHCO
 	variablesprite SPRITE_VARIABLE_2, SPRITE_CLERK
+	checkevent EVENT_MET_KURTS_SON
+	iftrue .AlreadyMetBurt
 	setevent EVENT_KURTS_SONS_HOUSE_1F_KURTS_SON
 	clearevent EVENT_SAFFRON_CITY_KURTS_SON
 	setmapscene SAFFRON_CITY, SCENE_SAFFRONCITY_MEET_KURTS_SON
+.AlreadyMetBurt
 	special PlayMapMusic
 	end
 
