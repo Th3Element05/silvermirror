@@ -31,10 +31,10 @@ AlanLostAMonText:
 	done
 
 AlanBattleRematchText:
-	text "I've studied quite"
-	line "a bit since then,"
-	cont "and I've gotten a"
-	roll "lot better!"
+	text "I've been studying"
+	line "since our last"
+	cont "battle, and I've"
+	roll "gotten better!"
 
 	para "I'm hanging out on"
 	line "@"

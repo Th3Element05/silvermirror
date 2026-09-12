@@ -40,11 +40,11 @@ ReenaLostAMonText:
 
 	para "I would never fail"
 	line "to catch a wild"
-
-	para "@"
+	cont "@"
 	text_ram wStringBuffer4
 	text "…"
-	line "Oh! Never mind!"
+
+	para "Oh! Never mind!"
 	done
 
 ReenaBattleRematchText:
@@ -80,9 +80,8 @@ ReenaReminderText:
 
 	para "I told you that"
 	line "the place was"
-
-	para "@"
+	cont "@"
 	text_ram wStringBuffer5
 	text "!"
-	line "Don't try to run!"
+	roll "Don't try to run!"
 	done

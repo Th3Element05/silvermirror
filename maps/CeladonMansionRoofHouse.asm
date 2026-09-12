@@ -71,7 +71,7 @@ CeladonMansionRoofReceivedEeveeText:
 	done
 
 CeladonMansionRoofDontTakeEeveeText:
-	text "<PLAYER> left"
+	text "<PLAYER> left the"
 	line "EEVEE here."
 	done
 

@@ -63,11 +63,10 @@ BethBattleRematchText:
 
 	para "I'll be waiting"
 	line "for you around"
-
-	para "@"
+	cont "@"
 	text_ram wStringBuffer5
 	text "."
-	line "Look for me, okay?"
+	roll "Look for me, okay?"
 	done
 
 BethHangUpText:

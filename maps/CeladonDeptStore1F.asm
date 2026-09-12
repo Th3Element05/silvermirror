@@ -14,7 +14,7 @@ CeladonDeptStore1FReceptionistText:
 	cont "STORE!"
 
 	para "The directory is"
-	line "to the right."
+	line "to your right."
 	done
 
 CeladonDeptStore1FGentlemanScript:

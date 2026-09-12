@@ -412,7 +412,7 @@ TrainerLassNora:
 LassNoraSeenText:
 	ntag "LASS:"
 	text "What's a cute,"
-	line "round and fluffy"
+	line "round, and fluffy"
 	cont "#MON?"
 	done
 
