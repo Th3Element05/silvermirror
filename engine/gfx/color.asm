@@ -1431,7 +1431,7 @@ LoadMapPals:
 	cp TOWN
 	jr z, .outside
 	cp ROUTE
-	jr nz, .DollPalettes
+	jp nz, .DollPalettes
 .outside
 	ld a, [wMapGroup]
 	add a
