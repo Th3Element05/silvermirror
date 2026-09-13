@@ -78,6 +78,7 @@ CeladonGameCornerPosterScript:
 	playsound SFX_PUSH_BUTTON
 	waitsfx
 	playsound SFX_ENTER_DOOR
+	waitsfx
 	setevent EVENT_OPENED_ROCKET_HIDEOUT
 .AlreadyOpened
 	jumptext CeladonGameCornerSwitchText
