@@ -37,7 +37,7 @@ TypeIconPals:
 ; POISON
 	RGB 20, 08, 20 ;22, 07, 19
 ; GROUND
-	RGB 29, 24, 12
+	RGB 25, 20, 10 ;29, 24, 12
 ; ROCK
 	RGB 18, 12, 05 ;24, 20, 07
 ; BUG
@@ -49,7 +49,7 @@ TypeIconPals:
 ; FIRE
 	RGB 31, 15, 04
 ; WATER
-	RGB 11, 18, 30
+	RGB 11, 18, 31 ;11, 18, 30
 ; GRASS
 	RGB 15, 25, 10 ;11, 25, 11
 ; ELECTRIC
