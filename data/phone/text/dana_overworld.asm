@@ -49,7 +49,7 @@ DanaNumberAcceptedText:
 	text "Next time a boy"
 	line "gives me another"
 	cont "THUNDERSTONE, I'll"
-	roll "share call you!"
+	roll "share with you!"
 ;
 ;	para "Does that make me"
 ;	line "bad?"
