@@ -170,7 +170,7 @@ MoveNames::
 	li "THIEF"
 	li "LEAF BLADE"   ;"SPIDER WEB"
 	li "ENERGY BALL"  ;"MIND READER"
-	li "NIGHTMARE"
+	li "WILL-O-WISP"  ;"NIGHTMARE"
 	li "FLAME WHEEL"
 	li "SNORE"
 	li "CURSE"

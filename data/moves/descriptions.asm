@@ -171,7 +171,7 @@ MoveDescriptions::
 	dw ThiefDescription
 	dw LeafBladeDescription ;SpiderWebDescription
 	dw EnergyBallDescription ;MindReaderDescription
-	dw NightmareDescription
+	dw WillOWispDescription ;NightmareDescription
 	dw FlameWheelDescription
 	dw SnoreDescription
 	dw CurseDescription
@@ -1557,12 +1557,16 @@ EnergyBallDescription:
 ;	db   "Ensures the next"
 ;	next "attack will hit.@"
 
-NightmareDescription:
-	db   "A sleeping foe"
-	feed "looses 1/4 HP on"
-	feed "every turn.@"
-;	db   "A sleeper loses"
-;	next "1/4 HP every turn.@"
+WillOWispDescription:
+	db   "Foe is tormented"
+	feed "by sinister flames"
+	feed "to inflict burn.@"
+;NightmareDescription:
+;	db   "A sleeping foe"
+;	feed "looses 1/4 HP on"
+;	feed "every turn.@"
+;;	db   "A sleeper loses"
+;;	next "1/4 HP every turn.@"
 
 FlameWheelDescription:
 	db   "User tackles while"

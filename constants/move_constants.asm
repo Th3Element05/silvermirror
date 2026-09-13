@@ -176,7 +176,7 @@
 	const THIEF        ; a8
 	const LEAF_BLADE   ; a9 ;SPIDER_WEB, removed
 	const ENERGY_BALL  ; aa ;MIND_READER, removed
-	const NIGHTMARE    ; ab
+	const WILL_O_WISP  ; ab ;NIGHTMARE, replaced
 	const FLAME_WHEEL  ; ac
 	const SNORE        ; ad
 	const CURSE        ; ae

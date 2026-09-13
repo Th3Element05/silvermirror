@@ -200,7 +200,7 @@ DEF TM01 EQU const_value
 	add_tm DRAGON_CLAW  ;TM02 ; ab ;new
 	add_tm SURF         ;TM03 ; ac
 	add_tm CALM_MIND    ;TM04 ; ad ;new
-	add_tm FLASH        ;TM05 ; ae
+	add_tm WILL_O_WISP  ;TM05 ; ae
 	add_tm TOXIC        ;TM06 ; af
 	add_tm BULK_UP      ;TM07 ; b0 ;new
 	add_tm BODY_SLAM    ;TM08 ; b1
@@ -319,7 +319,7 @@ DEF MT01 EQU const_value
 	add_mt ICE_PUNCH
 	add_mt SOFTBOILED
 	add_mt DREAM_EATER
-	add_mt NIGHTMARE
+;	add_mt NIGHTMARE
 	add_mt SNORE
 	add_mt SLEEP_TALK
 	add_mt SWEET_SCENT

@@ -1841,7 +1841,7 @@ DebugAllTMs:
 	giveitem TM_DRAGON_CLAW  ;TM02 ; ab
 	giveitem TM_SURF         ;TM03 ; ac
 	giveitem TM_CALM_MIND    ;TM04 ; ad
-	giveitem TM_FLASH        ;TM05 ; ae
+	giveitem TM_WILL_O_WISP  ;TM05 ; ae
 	giveitem TM_TOXIC        ;TM06 ; af
 	giveitem TM_BULK_UP      ;TM07 ; b0
 	giveitem TM_BODY_SLAM    ;TM08 ; b1
@@ -1966,7 +1966,7 @@ DebugAllHMs:
 	writetext DebugAskFlashText
 	yesorno
 	iffalse .whirlpool
-	giveitem TM_FLASH
+;	giveitem TM_FLASH
 	setflag ENGINE_PAGER_FLASH
 	setevent EVENT_GOT_HM05_FLASH
 .whirlpool

@@ -75,8 +75,11 @@ SafariZoneArea1RestHouseSignText:
 ;	cont "remaining time!"
 ;	done
 
-SafariZoneArea1Nugget:
-	itemball NUGGET
+SafariZoneArea1HiddenNugget:
+	hiddenitem NUGGET, EVENT_SAFARI_ZONE_SOUTH_HIDDEN_NUGGET
+
+SafariZoneArea1TMWillOWisp:
+	itemball TM_WILL_O_WISP
 
 SafariZoneArea1_MapEvents:
 	db 0, 0 ; filler
@@ -97,6 +100,7 @@ SafariZoneArea1_MapEvents:
 	def_bg_events
 ;	bg_event 18, 24, BGEVENT_READ, SafariZoneArea1TrainerTipsSign
 	bg_event 22, 22, BGEVENT_READ, SafariZoneArea1RestHouseSign
+	bg_event 18, 14, BGEVENT_ITEM, SafariZoneArea1HiddenNugget
 
 	def_object_events
 	object_event 19, 24, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, 0, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SafariZoneArea1Officer, -1
@@ -113,4 +117,4 @@ SafariZoneArea1_MapEvents:
 	object_event 24,  9, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 2, 2, -1, DAY, 0, OBJECTTYPE_SCRIPT, 0, SafariZoneArea1Lass, EVENT_SAFARI_ZONE_AREA_1_NPC3
 	object_event 23, 22, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, NITE, 0, OBJECTTYPE_SCRIPT, 0, SafariZoneArea1Cooltrainers, EVENT_SAFARI_ZONE_AREA_1_NPC3
 ;
-	object_event 18, 14, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SafariZoneArea1Nugget, EVENT_SAFARI_ZONE_AREA_1_NUGGET
+	object_event 21, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, SafariZoneArea1TMWillOWisp, EVENT_SAFARI_ZONE_AREA_1_TM_WILL_O_WISP

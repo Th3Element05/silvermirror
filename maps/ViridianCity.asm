@@ -261,89 +261,92 @@ ViridianCityBlueIsLeaderText:
 	line "a former CHAMPION!"
 	done
 
-ViridianCityMoveTutorScript:
-	showemote EMOTE_SLEEP, VIRIDIANCITY_FISHER, 30
-	opentext
-	writetext ViridianCityTutorSleepingText
-	yesorno
-	iftrue ViridianCityWokeTutorScript
-	writetext ViridianCityTutorSleepingMovesText
-	loadmenu .MoveMenuHeader
-	verticalmenu
-	closewindow
-	ifequal 1, .Snore
-	ifequal 2, .SleepTalk
-	sjump .Cancel
-
-.Snore:
-	setval SNORE
-	sjump .ChoseMove
-;	writetext ViridianCityTutorMoveText
-;	special MoveTutor
-;	ifequal FALSE, .TeachMove
+;ViridianCityMoveTutorScript:
+;	showemote EMOTE_SLEEP, VIRIDIANCITY_FISHER, 30
+;	opentext
+;	writetext ViridianCityTutorSleepingText
+;	yesorno
+;	iftrue ViridianCityWokeTutorScript
+;	writetext ViridianCityTutorSleepingMovesText
+;	loadmenu .MoveMenuHeader
+;	verticalmenu
+;	closewindow
+;	ifequal 1, .Snore
+;	ifequal 2, .SleepTalk
 ;	sjump .Cancel
-
-.SleepTalk:
-	setval SLEEP_TALK
+;
+;.Snore:
+;	setval SNORE
 ;	sjump .ChoseMove
+;;	writetext ViridianCityTutorMoveText
+;;	special MoveTutor
+;;	ifequal FALSE, .TeachMove
+;;	sjump .Cancel
+;
+;.SleepTalk:
+;	setval SLEEP_TALK
+;;	sjump .ChoseMove
+;;	writetext ViridianCityTutorMoveText
+;;	special MoveTutor
+;;	ifequal FALSE, .TeachMove
+;;	sjump .Cancel
+;
+;.ChoseMove:
 ;	writetext ViridianCityTutorMoveText
 ;	special MoveTutor
-;	ifequal FALSE, .TeachMove
-;	sjump .Cancel
-
-.ChoseMove:
-	writetext ViridianCityTutorMoveText
-	special MoveTutor
-	ifequal FALSE, .TeachSleepingMove
-;	sjump .Cancel	
-
-.Cancel:
-	writetext ViridianCityTutorCancelText
-	waitbutton
-	closetext
-	end
-
-.TeachSleepingMove:
-	showemote EMOTE_SLEEP, VIRIDIANCITY_FISHER, 30
-	writetext ViridianCityTutorStillAsleepText
-	waitbutton
-	closetext
-	end
-
-.MoveMenuHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 2, 15, TEXTBOX_Y - 2
-	dw .MenuData
-	db 1 ; default option
-
-.MenuData:
-	db STATICMENU_CURSOR ; flags
-	db 3 ; items
-	db "SNORE@"
-	db "SLEEP TALK@"
-	db "CANCEL@"
-
-ViridianCityTutorSleepingText:
-	text "He's sound asleep."
-	line "Wake him up?"
-	done
-
-ViridianCityTutorSleepingMovesText:
-	text "He's snoring very"
-	line "loudly."
-
-	para "Your #MON could"
-	line "learn from him."
-	done
-
-ViridianCityTutorStillAsleepText:
-	text "The man is still"
-	line "sound asleep."
-	done
+;	ifequal FALSE, .TeachSleepingMove
+;;	sjump .Cancel	
+;
+;.Cancel:
+;	writetext ViridianCityTutorCancelText
+;	waitbutton
+;	closetext
+;	end
+;
+;.TeachSleepingMove:
+;	showemote EMOTE_SLEEP, VIRIDIANCITY_FISHER, 30
+;	writetext ViridianCityTutorStillAsleepText
+;	waitbutton
+;	closetext
+;	end
+;
+;.MoveMenuHeader:
+;	db MENU_BACKUP_TILES ; flags
+;	menu_coords 0, 2, 15, TEXTBOX_Y - 2
+;	dw .MenuData
+;	db 1 ; default option
+;
+;.MenuData:
+;	db STATICMENU_CURSOR ; flags
+;	db 3 ; items
+;	db "SNORE@"
+;	db "SLEEP TALK@"
+;	db "CANCEL@"
+;
+;ViridianCityTutorSleepingText:
+;	text "He's sound asleep."
+;	line "Wake him up?"
+;	done
+;
+;ViridianCityTutorSleepingMovesText:
+;	text "He's snoring very"
+;	line "loudly."
+;
+;	para "Your #MON could"
+;	line "learn from him."
+;	done
+;
+;ViridianCityTutorStillAsleepText:
+;	text "The man is still"
+;	line "sound asleep."
+;	done
 
 ViridianCityWokeTutorScript:
-	closetext
+;	closetext
 	showemote EMOTE_SLEEP, VIRIDIANCITY_FISHER, 20
+	pause 10
+	showemote EMOTE_SLEEP, VIRIDIANCITY_FISHER, 20
+	pause 10
 	showemote EMOTE_QUESTION, VIRIDIANCITY_FISHER, 20
 	faceplayer
 	opentext
@@ -352,38 +355,35 @@ ViridianCityWokeTutorScript:
 	verticalmenu
 	closewindow
 	ifequal 1, .DreamEater
-	ifequal 2, .Nightmare
+	ifequal 2, .Snore
+	ifequal 3, .SleepTalk
 	sjump .Cancel
 
-.DreamEater:
+.DreamEater
 	setval DREAM_EATER
 	sjump .ChoseMove
-;	writetext ViridianCityTutorMoveText
-;	special MoveTutor
-;	ifequal FALSE, .TeachMove
-;	sjump .Cancel
 
-.Nightmare:
-	setval NIGHTMARE
+.Snore
+	setval SNORE
+	sjump .ChoseMove
+
+.SleepTalk
+	setval SLEEP_TALK
 ;	sjump .ChoseMove
-;	writetext ViridianCityTutorMoveText
-;	special MoveTutor
-;	ifequal FALSE, .TeachMove
-;	sjump .Cancel
 
-.ChoseMove:
+.ChoseMove
 	writetext ViridianCityTutorMoveText
 	special MoveTutor
 	ifequal FALSE, .TeachWokenMove
 ;	sjump .Cancel	
 
-.Cancel:
+.Cancel
 	writetext ViridianCityTutorCancelText
 	waitbutton
 	closetext
 	end
 
-.TeachWokenMove:
+.TeachWokenMove
 	writetext ViridianCityTutorBackToSleepText
 	waitbutton
 	closetext
@@ -391,15 +391,16 @@ ViridianCityWokeTutorScript:
 
 .MoveMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 2, 15, TEXTBOX_Y - 2
+	menu_coords 0, 2, 15, TEXTBOX_Y - 1
 	dw .MenuData
 	db 1 ; default option
 
 .MenuData:
 	db STATICMENU_CURSOR ; flags
-	db 3 ; items
+	db 4 ; items
 	db "DREAM EATER@"
-	db "NIGHTMARE@"
+	db "SNORE@"
+	db "SLEEP TALK@"
 	db "CANCEL@"
 
 ViridianCityTutorDreamEatenText:
@@ -444,6 +445,10 @@ ViridianCityTutorMoveText:
 
 ViridianCityTutorCancelText:
 	text "Maybe later."
+
+	para "<……>"
+
+	para "…zzzzz…"
 	done
 ;	text "Your #MON can't"
 ;	line "learn this move…"
@@ -688,7 +693,7 @@ ViridianCity_MapEvents:
 	def_object_events
 	object_event 18,  9, SPRITE_SLEEPING, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ViridianCityCoffeeGrampsScript, EVENT_VIRIDIAN_CITY_COFFEE_GRAMPS
 	object_event 17,  5, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityTutorialGrampsScript, EVENT_VIRIDIAN_CITY_CATCHING_GRAMPS
-	object_event  6, 23, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ViridianCityMoveTutorScript, -1
+	object_event  6, 23, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ViridianCityWokeTutorScript, -1
 	object_event 27,  7, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityGymGramps, -1
 	object_event 13, 20, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ViridianCityYoungster1Script, -1
 	object_event 30, 25, SPRITE_BOY, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ViridianCityYoungster2Script, -1

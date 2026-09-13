@@ -172,7 +172,7 @@ BattleAnimations::
 	dw BattleAnim_Thief
 	dw BattleAnim_LeafBlade ;_SpiderWeb ;
 	dw BattleAnim_EnergyBall ;_MindReader ;
-	dw BattleAnim_Nightmare
+	dw BattleAnim_WillOWisp ;_Nightmare
 	dw BattleAnim_FlameWheel
 	dw BattleAnim_Snore
 	dw BattleAnim_Curse
@@ -2264,6 +2264,7 @@ BattleAnim_DragonRage:
 
 BattleAnim_FireSpin:
 	anim_setobjpal PAL_BATTLE_OB_RED, PAL_BTLCUSTOM_FIRE
+BattleAnimSub_FireSpin:
 	anim_1gfx BATTLE_ANIM_GFX_FIRE
 .loop
 	anim_sound 6, 2, SFX_EMBER
@@ -2272,11 +2273,15 @@ BattleAnim_FireSpin:
 	anim_sound 6, 2, SFX_EMBER
 	anim_obj BATTLE_ANIM_OBJ_FIRE_SPIN, 64, 96, $3
 	anim_wait 2
+	anim_obj BATTLE_ANIM_OBJ_FIRE_SPIN, 64, 80, $4
+	anim_wait 2
 	anim_sound 6, 2, SFX_EMBER
 	anim_obj BATTLE_ANIM_OBJ_FIRE_SPIN, 64, 88, $3
 	anim_wait 2
 	anim_sound 6, 2, SFX_EMBER
 	anim_obj BATTLE_ANIM_OBJ_FIRE_SPIN, 64, 96, $4
+	anim_wait 2
+	anim_obj BATTLE_ANIM_OBJ_FIRE_SPIN, 64, 80, $3
 	anim_wait 2
 	anim_loop 2, .loop
 	anim_wait 96
@@ -4132,15 +4137,19 @@ BattleAnim_EnergyBall:
 ;	anim_wait 32
 ;	anim_ret
 
-BattleAnim_Nightmare:
-	anim_1gfx BATTLE_ANIM_GFX_ANGELS
-	anim_bgp $1b
-	anim_obp0 $f
-	anim_obj BATTLE_ANIM_OBJ_NIGHTMARE, 132, 40, $0
-	anim_obj BATTLE_ANIM_OBJ_NIGHTMARE, 132, 40, $a0
-	anim_sound 0, 1, SFX_NIGHTMARE
-	anim_wait 96
-	anim_ret
+BattleAnim_WillOWisp:
+	anim_setobjpal PAL_BATTLE_OB_RED, PAL_BTLCUSTOM_HP_DRAGON
+	anim_jump BattleAnimSub_FireSpin
+
+;BattleAnim_Nightmare:
+;	anim_1gfx BATTLE_ANIM_GFX_ANGELS
+;	anim_bgp $1b
+;	anim_obp0 $f
+;	anim_obj BATTLE_ANIM_OBJ_NIGHTMARE, 132, 40, $0
+;	anim_obj BATTLE_ANIM_OBJ_NIGHTMARE, 132, 40, $a0
+;	anim_sound 0, 1, SFX_NIGHTMARE
+;	anim_wait 96
+;	anim_ret
 
 BattleAnim_FlameWheel:
 	anim_setobjpal PAL_BATTLE_OB_RED, PAL_BTLCUSTOM_FIRE

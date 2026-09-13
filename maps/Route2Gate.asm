@@ -24,11 +24,15 @@ Route2GateOaksAideScript:
 	setflag ENGINE_PAGER_FLASH
 	writetext GotFlashPagerText
 	promptbutton
-	writetext Route2GateOaksAideExplainPagerGiveFlashText
-	promptbutton
-	verbosegiveitem TM_FLASH
+;	writetext Route2GateOaksAideExplainPagerGiveFlashText
+;	promptbutton
+;	verbosegiveitem TM_FLASH
 	setevent EVENT_GOT_HM05_FLASH
 ;	clearevent EVENT_OAK_CALLED_ABOUT_FLASH
+	waitbutton
+	closetext
+	end
+
 .GotFlash
 	writetext Route2GateOaksAideFlashExplainText
 	waitbutton

@@ -186,7 +186,8 @@ Moves:
 	move THIEF,        EFFECT_THIEF,              60, DARK,         PHYSICAL, 100, 25, 100
 	move LEAF_BLADE,   EFFECT_NORMAL_HIT,         90, GRASS,        PHYSICAL, 100, 15,   0 ;SPIDER_WEB, removed
 	move ENERGY_BALL,  EFFECT_SP_DEF_DOWN_HIT,    90, GRASS,        SPECIAL,  100, 10,  10 ;MIND_READER, removed
-	move NIGHTMARE,    EFFECT_NIGHTMARE,           0, GHOST,        STATUS,   100, 15,   0
+;	move NIGHTMARE,    EFFECT_NIGHTMARE,           0, GHOST,        STATUS,   100, 15,   0
+	move WILL_O_WISP,  EFFECT_BURN,                0, FIRE,         STATUS,   100, 15,   0 ;NIGHTMARE, replaced
 	move FLAME_WHEEL,  EFFECT_FLAME_WHEEL,        60, FIRE,         PHYSICAL, 100, 25,  10
 	move SNORE,        EFFECT_SNORE,              50, NORMAL,       SPECIAL,  100, 15,  30
 	move CURSE,        EFFECT_CURSE,               0, CURSE_TYPE,   STATUS,   100, 10,   0
@@ -233,7 +234,7 @@ Moves:
 	move HEAL_BELL,    EFFECT_HEAL_BELL,           0, NORMAL,       STATUS,   100,  5,   0
 	move POWER_GEM,    EFFECT_NORMAL_HIT,         80, ROCK,         SPECIAL,  100, 20,   0 ;RETURN, removed
 	move DISCHARGE,    EFFECT_PARALYZE_HIT,       80, ELECTRIC,     SPECIAL,  100, 15,  10 ;PRESENT, removed
-	move HEX,          EFFECT_HEX,                60, GHOST,        SPECIAL,  100, 10,   0 ;FRUSTRATION, removed
+	move HEX,          EFFECT_HEX,                65, GHOST,        SPECIAL,  100, 10,   0 ;FRUSTRATION, removed
 	move SAFEGUARD,    EFFECT_SAFEGUARD,           0, NORMAL,       STATUS,   100, 25,   0
 	move PAIN_SPLIT,   EFFECT_PAIN_SPLIT,          0, NORMAL,       STATUS,   100, 20,   0
 	move SACRED_FIRE,  EFFECT_SACRED_FIRE,       100, FIRE,         PHYSICAL,  95,  5,  50

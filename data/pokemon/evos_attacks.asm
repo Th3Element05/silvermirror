@@ -86,6 +86,7 @@ CharmanderEvosAttacks:
 	db 28, SLASH
 	db 34, FLAMETHROWER
 	db 37, FIRE_SPIN
+	db 46, HEAT_WAVE ;inferno gen5, x
 	db 0 ; no more level-up moves
 
 CharmeleonEvosAttacks:
@@ -101,6 +102,7 @@ CharmeleonEvosAttacks:
 	db 32, SLASH
 	db 39, FLAMETHROWER
 	db 43, FIRE_SPIN
+	db 54, HEAT_WAVE ;inferno gen5, x
 	db 0 ; no more level-up moves
 
 CharizardEvosAttacks:
@@ -606,25 +608,46 @@ ClefableEvosAttacks:
 	db 1, METRONOME ;1, EVOLUTION_MOVE
 	db 0 ; no more level-up moves
 
-VulpixEvosAttacks: ;GEN4
+VulpixEvosAttacks: ;GEN5
 	db EVOLVE_ITEM, FIRE_STONE, NINETALES
 	db 0 ; no more evolutions
 	db 1, EMBER
-	db 4, ROAR
-	db 7, LEER ;tail_whip, removed
-	db 11, QUICK_ATTACK
-	db 14, FIRE_SPIN ;will_o_wisp, x
-	db 17, CONFUSE_RAY
-	db 21, DISABLE ;imprison, x
-	db 24, FLAMETHROWER
-	db 27, SAFEGUARD
+	db 4, LEER ;tail_whip, removed
+	db 7, ROAR
+	db 10, QUICK_ATTACK
+	db 12, FIRE_SPIN
+	db 15, CONFUSE_RAY
+	db 18, DISABLE ;imprison, x
+	db 20, PURSUIT ;feint_attack, 31
+	db 23, FLAME_WHEEL
+	db 26, WILL_O_WISP
+	db 28, HEX
 	db 31, FEINT_ATTACK ;payback, x
-	db 34, HEX ;FIRE_SPIN, 14
-	db 37, ATTRACT ;captivate, x
-	db 41, DESTINY_BOND ;grudge, x
-	db 44, EXTRASENSORY
-	db 47, FIRE_BLAST
+	db 34, FLAMETHROWER
+	db 36, SAFEGUARD
+	db 39, EXTRASENSORY
+	db 42, FIRE_BLAST
+	db 47, ATTRACT ;captivate, x
+	db 50, HEAT_WAVE ;inferno, x
 	db 0 ; no more level-up moves
+;
+;	db 0 ; no more evolutions
+;	db 1, EMBER
+;	db 4, ROAR
+;	db 7, LEER ;tail_whip, removed
+;	db 11, QUICK_ATTACK
+;	db 14, FIRE_SPIN ;will_o_wisp, x
+;	db 17, CONFUSE_RAY
+;	db 21, DISABLE ;imprison, x
+;	db 24, FLAMETHROWER
+;	db 27, SAFEGUARD
+;	db 31, FEINT_ATTACK ;payback, x
+;	db 34, HEX ;FIRE_SPIN, 14
+;	db 37, ATTRACT ;captivate, x
+;	db 41, DESTINY_BOND ;grudge, x
+;	db 44, EXTRASENSORY
+;	db 47, FIRE_BLAST
+;	db 0 ; no more level-up moves
 
 NinetalesEvosAttacks:
 	db 0 ; no more evolutions
@@ -1585,7 +1608,7 @@ GastlyEvosAttacks:
 	db 33, SHADOW_BALL ;DREAM_EATER, 29
 	db 36, DARK_PULSE
 	db 40, DESTINY_BOND
-	db 43, NIGHTMARE
+;	db 43, NIGHTMARE ;removed
 	db 0 ; no more level-up moves
 
 HaunterEvosAttacks:
@@ -1608,7 +1631,7 @@ GengarEvosAttacks: ;GEN4  ;HEX
 	db 39, SHADOW_BALL ;DREAM_EATER, 29
 	db 44, DARK_PULSE
 	db 50, DESTINY_BOND
-	db 55, NIGHTMARE
+;	db 55, NIGHTMARE ;removed
 	db 0 ; no more level-up moves
 
 ;GengarEvosAttacks:
@@ -1627,7 +1650,7 @@ GengarEvosAttacks: ;GEN4  ;HEX
 ;	db 39, SHADOW_BALL ;DREAM_EATER, 29
 ;	db 44, DARK_PULSE
 ;	db 50, DESTINY_BOND
-;	db 55, NIGHTMARE
+;;	db 55, NIGHTMARE ;removed
 ;	db 0 ; no more level-up moves
 
 OnixEvosAttacks:
@@ -1678,7 +1701,7 @@ DrowzeeEvosAttacks:
 HypnoEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, DREAM_EATER ;1, EVOLUTION_MOVE
-	db 1, NIGHTMARE
+;	db 1, NIGHTMARE ;removed
 	db 1, TACKLE ;pound, removed
 	db 1, DISABLE
 	db 7, HYPNOSIS
