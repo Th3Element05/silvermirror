@@ -2306,8 +2306,8 @@ PokemaniacGroup:
 
 	; POKEMANIAC, SHANE (ROCK TUNNEL B1F) ;22
 	db "SHANE@", TRAINERTYPE_MOVES
-	db 22, CHARMANDER   SCRATCH, EMBER, SMOKESCREEN, SCARY_FACE ;DragonRage@19
-	db 23, CUBONE       LEER, FOCUS_ENERGY, BONEMERANG, RAGE
+	db 22, CHARMANDER,  SCRATCH, EMBER, SMOKESCREEN, SCARY_FACE ;DragonRage@19
+	db 23, CUBONE,      LEER, FOCUS_ENERGY, BONEMERANG, RAGE
 	db -1 ; end
 
 	; POKEMANIAC, BEN (ROCK TUNNEL B1F) ;25
@@ -5562,7 +5562,7 @@ GreenGroup:
 ;	const THIEF        ; a8
 ;	const LEAF_BLADE   ; a9 ;spider_web, removed
 ;	const ENERGY_BALL  ; aa ;mind_reader, removed
-;	const NIGHTMARE    ; ab
+;	const WILL_O_WISP  ; ab ;nightmare, removed
 ;	const FLAME_WHEEL  ; ac
 ;	const SNORE        ; ad
 ;	const CURSE        ; ae
