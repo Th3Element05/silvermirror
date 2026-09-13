@@ -163,6 +163,7 @@ MoveEffectsPointers:
 ;	dw Tickle      ;NEW
 	dw Hex         ;NEW
 	dw HoneClaws   ;NEW
+	dw DoBurn      ;NEW
 ;	dw WeightDamage
 ;	dw Growth
 	assert_table_length NUM_MOVE_EFFECTS

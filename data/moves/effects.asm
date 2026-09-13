@@ -2320,6 +2320,16 @@ HoneClaws:
 	statupfailtext
 	endmove
 
+DoBurn:
+	checkobedience
+	usedmovetext
+	doturn
+	stab
+	checkhit
+	checksafeguard
+	burn
+	endmove
+
 ;WeightDamage:
 ;	checkobedience
 ;	usedmovetext

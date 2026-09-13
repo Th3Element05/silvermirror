@@ -392,6 +392,7 @@ AI_Smart_EffectHandlers:
 	dbw EFFECT_GYRO_BALL,        AI_Smart_GyroBall
 	dbw EFFECT_WAKE_UP_SLAP,     AI_Smart_WakeUpOpponent
 	dbw EFFECT_HEX,              AI_Smart_Hex
+	dbw EFFECT_BURN,             AI_Smart_Burn
 	db -1 ; end
 
 AI_Smart_Sleep:
@@ -1194,6 +1195,7 @@ AI_Smart_SuperFang:
 	inc [hl]
 	ret
 
+AI_Smart_Burn:
 AI_Smart_Paralyze:
 ; 50% chance to discourage this move if player's HP is below 25%.
 	call AICheckPlayerQuarterHP
