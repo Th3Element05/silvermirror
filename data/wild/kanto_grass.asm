@@ -90,9 +90,9 @@ KantoGrassWildMons:
 	db  6, SANDSHREW  ; 10% chance
 	db  8, MANKEY     ; 10% chance
 	db  6, SANDSHREW  ;  5% chance
-	db  8, MANKEY     ;  5% chance
-	db  8, SPEAROW    ;  4% chance
-	db  8, SPEAROW    ;  1% chance
+	db  8, SPEAROW    ;  5% chance
+	db  8, MANKEY     ;  4% chance
+	db  8, MANKEY     ;  1% chance
 	; nite
 	db  8, RATTATA    ; 20% chance
 	db  8, RATTATA    ; 20% chance
