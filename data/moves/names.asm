@@ -147,7 +147,7 @@ MoveNames::
 	li "WATER PULSE"  ;"BUBBLE"
 	li "DIZZY PUNCH"
 	li "SPORE"
-	li "FLASH"
+	li "KINESIS"      ;"FLASH"
 	li "EXTRASENSORY" ;"PSYWAVE"
 	li "SPLASH"
 	li "AQUA TAIL"    ;"ACID ARMOR"

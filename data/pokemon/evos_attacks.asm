@@ -1072,7 +1072,7 @@ AlakazamEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TELEPORT
 	db 1, DISABLE
-	db 1, FLASH ;kinesis, removed
+	db 1, KINESIS
 	db 15, CONFUSION ;16, EVOLUTION_MOVE
 	db 20, FORESIGHT ;miracle_eye, x
 	db 24, PSYBEAM
@@ -1089,7 +1089,7 @@ AlakazamEvosAttacks:
 ;	db 0 ; no more evolutions
 ;	db 1, TELEPORT
 ;	db 1, DISABLE
-;	db 1, FLASH ;kinesis, removed
+;	db 1, KINESIS
 ;	db 15, CONFUSION ;16, EVOLUTION_MOVE
 ;	db 20, FORESIGHT ;miracle_eye, x
 ;	db 24, PSYBEAM

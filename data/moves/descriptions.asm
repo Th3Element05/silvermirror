@@ -148,7 +148,7 @@ MoveDescriptions::
 	dw WaterPulseDescription ;BubbleDescription
 	dw DizzyPunchDescription
 	dw SporeDescription
-	dw FlashDescription
+	dw KinesisDescription ;FlashDescription
 	dw ExtrasensoryDescription ;PsywaveDescription
 	dw SplashDescription
 	dw AquaTailDescription ;AcidArmorDescription
@@ -1378,15 +1378,18 @@ SporeDescription:
 ;	db   "A move that"
 ;	next "induces sleep.@"
 
-FlashDescription:
-	db   "A blinding light"
-	feed "that lowers the"
-	feed "foe's ACCURACY.@"
-;	db   "A blinding flash"
-;	feed "of light which"
-;	feed "lowers ACCURACY.@"
-;	db   "Blinds the foe to"
-;	next "reduce accuracy.@"
+KinesisDescription:
+	db   "Confounds the foe"
+	feed "with telekinesis"
+	feed "to lower accuracy.@"
+;	db   "Reduces the foe's"
+;	next "accuracy.@"
+;FlashDescription:
+;	db   "A blinding light"
+;	feed "that lowers the"
+;	feed "foe's ACCURACY.@"
+;;	db   "Blinds the foe to"
+;;	next "reduce accuracy.@"
 
 ExtrasensoryDescription:
 	db   "An odd, unseeable"

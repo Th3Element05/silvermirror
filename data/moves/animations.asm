@@ -149,7 +149,7 @@ BattleAnimations::
 	dw BattleAnim_WaterPulse ;_Bubble ;
 	dw BattleAnim_DizzyPunch
 	dw BattleAnim_Spore
-	dw BattleAnim_Flash
+	dw BattleAnim_Kinesis ;_Flash
 	dw BattleAnim_Extrasensory ;_Psywave ;
 	dw BattleAnim_Splash
 	dw BattleAnim_AquaTail ;_AcidArmor ;
@@ -3212,20 +3212,20 @@ BattleAnim_SignalBeam:
 	anim_wait 64
 	anim_ret
 
-;BattleAnim_Kinesis:
-;	anim_2gfx BATTLE_ANIM_GFX_MISC, BATTLE_ANIM_GFX_NOISE
-;	anim_bgeffect BATTLE_BG_EFFECT_CYCLE_OBPALS_GRAY_AND_YELLOW, $0, $2, $0
-;	anim_obj BATTLE_ANIM_OBJ_KINESIS, 80, 76, $0
-;	anim_wait 32
-;.loop
-;	anim_sound 0, 0, SFX_KINESIS
-;	anim_obj BATTLE_ANIM_OBJ_SOUND, 64, 88, $0
-;	anim_wait 32
-;	anim_loop 3, .loop
-;	anim_wait 32
-;	anim_sound 0, 0, SFX_KINESIS_2
-;	anim_wait 32
-;	anim_ret
+BattleAnim_Kinesis:
+	anim_2gfx BATTLE_ANIM_GFX_MISC, BATTLE_ANIM_GFX_NOISE
+	anim_bgeffect BATTLE_BG_EFFECT_CYCLE_OBPALS_GRAY_AND_YELLOW, $0, $2, $0
+	anim_obj BATTLE_ANIM_OBJ_KINESIS, 80, 76, $0
+	anim_wait 32
+.loop
+	anim_sound 0, 0, SFX_KINESIS
+	anim_obj BATTLE_ANIM_OBJ_SOUND, 64, 88, $0
+	anim_wait 32
+	anim_loop 3, .loop
+	anim_wait 32
+	anim_sound 0, 0, SFX_KINESIS_2
+	anim_wait 32
+	anim_ret
 
 BattleAnim_Softboiled:
 	anim_2gfx BATTLE_ANIM_GFX_EGG, BATTLE_ANIM_GFX_BUBBLE
@@ -3567,7 +3567,7 @@ BattleAnim_Spore:
 	anim_wait 16
 	anim_jump BattleAnim_StunSpore.loop
 
-BattleAnim_Flash:
+BattleAnim_Flash: ;used by BattleAnim_MirrorShot
 	anim_1gfx BATTLE_ANIM_GFX_SPEED
 	anim_sound 0, 1, SFX_FLASH
 	anim_bgeffect BATTLE_BG_EFFECT_FLASH_INVERTED, $0, $6, $20

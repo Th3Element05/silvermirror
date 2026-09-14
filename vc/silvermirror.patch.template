@@ -489,18 +489,18 @@ ConditionValueC = {dws_ THUNDER  }
 
 ;ji wa lei  011800
 
-[FPA 004 Begin@Reduce_move_anim_flashing]                                                   
-Mode = 3                                                          
-Type = 0                                                          
-Address = {hex @} 
-DarkEnable0 = 1
-Dark0 = 4   
-MotionBEnable0 = 3                                            
-MotionBlur0 = 15                                          
-ConditionType = 0                                                 
-ConditionValueA = {dws_ wFXAnimID}  
-ConditionValueB = {dws_ ==       }
-ConditionValueC = {dws_ FLASH    }
+;[FPA 004 Begin@Reduce_move_anim_flashing]                                                   
+;Mode = 3                                                          
+;Type = 0                                                          
+;Address = {hex @} 
+;DarkEnable0 = 1
+;Dark0 = 4   
+;MotionBEnable0 = 3                                            
+;MotionBlur0 = 15                                          
+;ConditionType = 0                                                 
+;ConditionValueA = {dws_ wFXAnimID}  
+;ConditionValueB = {dws_ ==       }
+;ConditionValueC = {dws_ FLASH    }
 
 
 ;skill name 1 : ..............Mem Write: pc32 = 0x30db addr = 0xcf87 value = 0x2c

@@ -15,7 +15,7 @@ MoveGrammar:
 ;	db EGG_BOMB
 	db SMOG
 	db BONE_CLUB
-	db FLASH
+;	db FLASH
 	db SPLASH
 ;	db ACID_ARMOR
 	db BONEMERANG

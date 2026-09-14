@@ -26,7 +26,7 @@ ENDM
 ; [FPA 003 Begin]
 	vc_const THUNDER
 ; [FPA 004 Begin]
-	vc_const FLASH
+;	vc_const FLASH ;removed
 ; [FPA 005 Begin]
 ;	vc_const EXPLOSION ;removed
 ; [FPA 006 Begin]

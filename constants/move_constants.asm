@@ -153,7 +153,7 @@
 	const WATER_PULSE  ; 91 ;BUBBLE, removed
 	const DIZZY_PUNCH  ; 92
 	const SPORE        ; 93
-	const FLASH        ; 94
+	const KINESIS      ; 94 ;FLASH, removed
 	const EXTRASENSORY ; 95 ;PSYWAVE, removed
 	const SPLASH       ; 96
 	const AQUA_TAIL    ; 97 ;ACID_ARMOR, removed

@@ -45,7 +45,7 @@
 ;	const MONMENUITEM_FLY        ; 2
 ;	const MONMENUITEM_SURF       ; 3
 ;	const MONMENUITEM_STRENGTH   ; 4
-	const MONMENUITEM_FLASH      ; 5
+;	const MONMENUITEM_FLASH      ; 5
 ;	const MONMENUITEM_WHIRLPOOL  ; 6
 ;	const MONMENUITEM_WATERFALL  ; 7
 ;	const MONMENUITEM_ROCKSMASH  ; 8
@@ -64,6 +64,7 @@
 	const MONMENUITEM_MAIL       ; 12
 	const MONMENUITEM_ERROR      ; 13
 	const MONMENUITEM_FLY        ; 2
+	const MONMENUITEM_FLASH      ; 5
 DEF NUM_MONMENUITEMS EQU const_value - 1
 
 ; MonMenuOptions categories

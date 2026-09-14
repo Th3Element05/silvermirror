@@ -163,7 +163,7 @@ Moves:
 	move WATER_PULSE,  EFFECT_CONFUSE_HIT,        60, WATER,        SPECIAL,  100, 20,  20 ;BUBBLE, removed
 	move DIZZY_PUNCH,  EFFECT_CONFUSE_HIT,        70, NORMAL,       PHYSICAL, 100, 10,  20
 	move SPORE,        EFFECT_SLEEP,               0, GRASS,        STATUS,   100, 15,   0
-	move FLASH,        EFFECT_ACCURACY_DOWN,       0, NORMAL,       STATUS,   100, 20,   0 ; OLD ACC:70
+	move KINESIS,      EFFECT_ACCURACY_DOWN_HIT,  20, PSYCHIC_TYPE, SPECIAL,  100, 15,   0 ;FLASH, removed
 	move EXTRASENSORY, EFFECT_FLINCH_HIT,         80, PSYCHIC_TYPE, SPECIAL,  100, 20,  10 ;PSYWAVE, removed
 	move SPLASH,       EFFECT_SPLASH,              0, NORMAL,       PHYSICAL, 100, 40,   0
 	move AQUA_TAIL,    EFFECT_NORMAL_HIT,         90, WATER,        PHYSICAL,  90, 10,   0 ;ACID_ARMOR, removed

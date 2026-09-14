@@ -365,11 +365,11 @@ IsMonFlashUser:
 	and a
 	ret z ; .fail, dont have Pager yet
 
-; Check if Mon knows Move (don't add twice)
-	ld a, FLASH
-	call CheckMonKnowsMove
-	and a
-	ret z
+;; Check if Mon knows Move (don't add twice)
+;	ld a, FLASH
+;	call CheckMonKnowsMove
+;	and a
+;	ret z
 
 ; Check if Mon can use move
 	ld a, [wCurPartySpecies]

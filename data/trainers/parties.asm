@@ -506,7 +506,7 @@ KogaGroup:
 SabrinaGroup:
 	; SABRINA, SABRINA1
 	db "SABRINA@", TRAINERTYPE_MOVES
-	db 38, KADABRA,     DISABLE, PSYBEAM, RECOVER, NO_MOVE
+	db 38, KADABRA,     DISABLE, PSYBEAM, RECOVER, KINESIS
 	db 37, MR__MIME,    CONFUSION, BARRIER, LIGHT_SCREEN, DOUBLESLAP
 	db 38, VENOMOTH,    POISONPOWDER, LEECH_LIFE, STUN_SPORE, PSYBEAM
 	db 42, ALAKAZAM,    PSYCHIC_M, PSYBEAM, RECOVER, REFLECT
@@ -5539,7 +5539,7 @@ GreenGroup:
 ;	const WATER_PULSE  ; 91 ;bubble, removed
 ;	const DIZZY_PUNCH  ; 92
 ;	const SPORE        ; 93
-;	const FLASH        ; 94
+;	const KINESIS      ; 94 ;flash, removed
 ;	const EXTRASENSORY ; 95 ;psywave, removed
 ;	const SPLASH       ; 96
 ;	const AQUA_TAIL    ; 97 ;acid_aromr, removed
