@@ -110,7 +110,7 @@ MtSilverOak:
 
 .FinishMtSilverOak:
 	setevent EVENT_BEAT_MT_SILVER_OAK
-	clearevent EVENT_OAKS_LAB_OAK_REMATCH
+	clearevent EVENT_OAKS_LAB_OAK_2 ;appear
 	special FadeOutMusic
 	opentext
 	writetext MtSilverOak_AfterBattleText

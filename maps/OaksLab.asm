@@ -1365,11 +1365,20 @@ OakLabOakGoodbyeText:
 	cont "come visit again."
 	done
 
-
-OakRematchScript:
-;	sjump OakScript
+OakScript_2:
 	faceplayer
 	opentext
+	checkevent EVENT_BEAT_MT_SILVER_OAK
+	iftrue .OakRematchScript
+	writetext OakLabEvaluateDexText
+	promptbutton
+	special ProfOaksPCBoot
+	writetext OakLabOakGoodbyeText
+	waitbutton
+	closetext
+	end
+
+.OakRematchScript
 	writetext OaksLabAskEvaluateDexText
 	yesorno
 	iffalse .OfferRematch
@@ -2471,5 +2480,5 @@ OaksLab_MapEvents:
 	object_event  7, 10, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OaksAssistantScript, -1
 	object_event  2, 10, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OaksAssistantScript, -1
 ;	object_event  1,  9, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OaksLabGirlScript, -1
-
-	object_event  4,  2, SPRITE_OAK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OakRematchScript, EVENT_OAKS_LAB_OAK_REMATCH
+;
+	object_event  4,  2, SPRITE_OAK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OakScript_2, EVENT_OAKS_LAB_OAK_2

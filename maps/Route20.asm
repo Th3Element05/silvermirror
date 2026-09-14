@@ -114,7 +114,8 @@ Route20RockSmashGuyScript:
 	setscene SCENE_ROUTE20_NOOP
 	setmapscene PALLET_TOWN, SCENE_PALLETTOWN_NOOP
 	setevent EVENT_PALLET_TOWN_TENTACOOL
-	clearevent EVENT_OAKS_LAB_OAK
+;	clearevent EVENT_OAKS_LAB_OAK ;appear
+	clearevent EVENT_OAKS_LAB_OAK_2 ;appear
 	end
 
 .AlreadyGotRockSmash:

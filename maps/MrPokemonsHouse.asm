@@ -60,7 +60,8 @@ MrPokemonsHouseMrPokemonEventScript:
 	writetext MrPokemonText_VisitElm
 	waitbutton
 	closetext
-	setevent EVENT_OAKS_LAB_OAK ;disappear
+;	setevent EVENT_OAKS_LAB_OAK ;disappear
+	setevent EVENT_OAKS_LAB_OAK_2 ;disappear
 	clearevent EVENT_RADIO_TOWER_4F_OAK ;appear
 	clearevent EVENT_ELMS_LAB_ELM ;appear
 	setscene SCENE_MRPOKEMONSHOUSE_NOOP

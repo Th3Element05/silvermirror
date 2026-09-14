@@ -54,7 +54,7 @@ PalletTownOakHeyWaitScriptL:
 	playsound SFX_ENTER_DOOR ;SFX_EXIT_BUILDING
 	waitsfx
 	setmapscene OAKS_LAB, SCENE_OAKSLAB_MEET_OAK
-	clearevent EVENT_OAKS_LAB_OAK
+	clearevent EVENT_OAKS_LAB_OAK ;appear
 	applymovement PLAYER, PalletTownEnterLabMovement
 ;	warp OAKS_LAB, 5, 11
 	warpfacing UP, OAKS_LAB, 5, 11

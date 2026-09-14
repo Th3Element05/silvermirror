@@ -247,7 +247,8 @@ RadioTower4FOakScript:
 	applymovement RADIOTOWER4F_OAK, RadioTower4FExitSceneMovement
 	playsound SFX_EXIT_BUILDING
 	disappear RADIOTOWER4F_OAK
-	clearevent EVENT_OAKS_LAB_OAK
+;	clearevent EVENT_OAKS_LAB_OAK ;appear
+	clearevent EVENT_OAKS_LAB_OAK_2 ;appear
 	waitsfx
 	playmusic MUSIC_GOLDENROD_CITY
 	applymovement RADIOTOWER4F_BLUE, RadioTower4FBlueApproachesPlayerMovement
