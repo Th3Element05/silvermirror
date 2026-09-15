@@ -157,36 +157,36 @@ CreditsScript:
 	db           GEOMETRY13, 2
 	db          GREG_CREDIT, 3
 	db              SSENRAH, 4
-	db            KNIGHTOWL, 5
+	db           TIGERBLOOD, 5
 	db CREDITS_WAIT, 8
 
 	db         SILVERMIRROR, 0
 	db      PRODUCT_TESTING, 1
 	db          GREG_CREDIT, 2
 	db              SSENRAH, 3
-	db            KNIGHTOWL, 4
-	db           TIGERBLOOD, 5
+	db           TIGERBLOOD, 4
+	db            KNIGHTOWL, 5
 	db CREDITS_WAIT, 8
 
 	db         SILVERMIRROR, 0
 	db      PRODUCT_TESTING, 1
 	db              SSENRAH, 2
-	db            KNIGHTOWL, 3
-	db           TIGERBLOOD, 4
-;                          ; 5
-	db CREDITS_WAIT, 8
-
-	db         SILVERMIRROR, 0
-	db      PRODUCT_TESTING, 1
-	db            KNIGHTOWL, 2
 	db           TIGERBLOOD, 3
-;                          ; 4
+	db            KNIGHTOWL, 4
 ;                          ; 5
 	db CREDITS_WAIT, 8
 
 	db         SILVERMIRROR, 0
 	db      PRODUCT_TESTING, 1
 	db           TIGERBLOOD, 2
+	db            KNIGHTOWL, 3
+;                          ; 4
+;                          ; 5
+	db CREDITS_WAIT, 8
+
+	db         SILVERMIRROR, 0
+	db      PRODUCT_TESTING, 1
+	db            KNIGHTOWL, 2
 ;                          ; 3
 ;                          ; 4
 ;                          ; 5
