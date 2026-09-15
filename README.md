@@ -89,22 +89,22 @@ Currently working on final testing runs, and adding some supplementary features.
 
 ### __Coding:__
 - **Textbox Nametag Code**  
-####  Narishma-gb  
+  >Narishma-gb  
 - **Dynamic Levels Code**  
-#####  Ardorin  
+  >Ardorin  
 - **Type and Category GFX Code**  
-######  Nayru62  
-######  Rangi42  
+  >Nayru62  
+  >Rangi42  
 - **Various ASM Assistance**  
-  Grate Oracle Lewot  
-  Narishma-gb  
-  Ranji42  
-  RaJa239  
-  pq  
-  SatoMew  
-  DarkShade  
-  tanu  
-  Everyone else on the PRET pokecrystal Discord!  
+ >Grate Oracle Lewot  
+ >Narishma-gb  
+ >Ranji42  
+ >RaJa239  
+ >pq  
+ >SatoMew  
+ >DarkShade  
+ >tanu  
+ >Everyone else on the PRET pokecrystal Discord!  
 
 ### __Graphics:__
 - **Reef tile gfx** from Polished Crystal  
