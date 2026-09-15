@@ -15,14 +15,14 @@ Currently working on final testing runs, and adding some supplementary features.
 ## __Features:__
 
 - **Alternate Gen2 Mode**  
-  - Encounter a wider variety of Pokémon on your journey through Kanto.  
-    Or enjoy a Classic experience limited to the original 151 Pokémon (until you defeat the Elite Four).  
-    Can be set during a New Game.  
+  >Encounter a wider variety of Pokémon on your journey through Kanto.  
+  >Or enjoy a Classic experience limited to the original 151 Pokémon (until you defeat the Elite Four).  
+  >Can be set during a New Game.  
 - **251 Pokémon obtainable**  
-  - Complete the Pokédex without trading, in both Classic Mode and Gen2 Mode.  
+  >Complete the Pokédex without trading, in both Classic Mode and Gen2 Mode.  
 - **Physical/Special Split**  
-  - Enabled by default, can be toggled in game Options.  
-  - On Classic setting, Ghost-Type is now special, Dark and Dragon-Type are now Physical.  
+  >Enabled by default, can be toggled in game Options.  
+  >On Classic setting, Ghost-Type is now special, Dark and Dragon-Type are now Physical.  
 - **More Move Info**  
   - Move Info (Type, Power, Accuracy, etc.) is shown in battle, when learning a new move, and many more places that moves can be viewed.  
 - **Intrinsic Field Moves**  
@@ -96,38 +96,38 @@ Currently working on final testing runs, and adding some supplementary features.
   >Nayru62  
   >Rangi42  
 - **Various ASM Assistance**  
- >Grate Oracle Lewot  
- >Narishma-gb  
- >Ranji42  
- >RaJa239  
- >pq  
- >SatoMew  
- >DarkShade  
- >tanu  
- >Everyone else on the PRET pokecrystal Discord!  
+  >Grate Oracle Lewot  
+  >Narishma-gb  
+  >Ranji42  
+  >RaJa239  
+  >pq  
+  >SatoMew  
+  >DarkShade  
+  >tanu  
+  >Everyone else on the PRET pokecrystal Discord!  
 
 ### __Graphics:__
 - **Reef tile gfx** from Polished Crystal  
 - **Some tileset animation code** from Polished Crystal  
 - **Pokémon Graphics:** from Polished Crystal:  
-  GLACEON, GLISCOR, HONCHKROW, LEAFEON, MAGNEZONE, MAMOSWINE, MISMAGIUS, TANGROWTH, WEAVILE, and YANMEGA  
+  >GLACEON, GLISCOR, HONCHKROW, LEAFEON, MAGNEZONE, MAMOSWINE, MISMAGIUS, TANGROWTH, WEAVILE, and YANMEGA  
 
 ### __Audio:__
 - **Gen1 Music** from pokered-crysaudio  
-  dannye  
+  >dannye  
 
 ### __Testing:__
 - **Alpha Version**  
-  Exkzol  
-  Bleeperwagon  
+  >Exkzol  
+  >Bleeperwagon  
 - **Beta Versions**  
-  Exkzol  
-  Bleeperwagon  
-  Geometry13  
-  Greg  
-  Ssenrah  
-  TigerBlood  
-  Knight Owl  
+  >Exkzol  
+  >Bleeperwagon  
+  >Geometry13  
+  >Greg  
+  >Ssenrah  
+  >TigerBlood  
+  >Knight Owl  
 
 
 ## __Sour Crystal Credits:__
