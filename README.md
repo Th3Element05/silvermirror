@@ -6,7 +6,7 @@ Forked from Sour Crystal v4.1a
 My goal was to recreate the story of Red's journey through Kanto, with as many Quality of Life and graphical upgrades as possible while still maintaining the classic charm of the Gameboy/Gameboy Color Pokémon games.  
 I also wanted to include a new post-game storyline in Johto, as a mirror to the inclusion of Kanto in Pokémon Gold, Silver, and Crystal.  Challenge the Johto Gym Leaders for eight more badges, and climb Mount Silver to face the final challenges in the game.
 
-# Version 0.3.2
+## Version 0.3.2
 The current build is essentially complete.  
 - **9/15/26**  
 Currently working on final testing runs, and adding some supplementary features.  
@@ -57,7 +57,8 @@ Currently working on final testing runs, and adding some supplementary features.
 - **Modern Bill's PC Boxes**  
   >Has a GUI like Gen3. No more saving between boxes required.  
 - **New Custom Pokémon Sprites**  
-  >Front Sprites by Sour Apple. Back Sprites based on work by MeroMero.  
+  >Front Sprites by Sour Apple.  
+  >Back Sprites based on work by MeroMero.  
 - **Unique Party sprites**  
   >Every Pokémon has a unique sprite in your party.  
 - **Upgraded battle graphics**  
@@ -68,7 +69,8 @@ Currently working on final testing runs, and adding some supplementary features.
   >To reduce your main pocket from getting full.  
 - **Almost all bugs from gen2 have been fixed.**  
 - **A couple Secrets and Easter Eggs** based on classic Gen1 rumors and glitches.  
-- **And many other small goodies to find!**  
+- **Many other small goodies to find!**  
+
 
 
 ## __Screenshots:__
@@ -80,9 +82,11 @@ Currently working on final testing runs, and adding some supplementary features.
 ![safari-zone](https://images.hackdex.app/[game]/.png)
 
 
-###### __Resources:__
+
+### __Resources:__
 - **[Discord Server](https://discord.gg/[temporarily redacted])**
 - **[Pokémon Silver Mirror Documentation](https://docs.google.com/spreadsheets/d/1-3RvOeC4Ymswg5hqdd7F-1gGs5bRkSTm28OCV8ipzhM)**
+
 
 
 ## __Silver Mirror Credits:__
@@ -107,20 +111,20 @@ Currently working on final testing runs, and adding some supplementary features.
   >Everyone else on the PRET pokecrystal Discord!  
 
 ### __Graphics:__
-- **Reef tile gfx** from Polished Crystal  
-- **Some tileset animation code** from Polished Crystal  
 - **Pokémon Graphics:** from Polished Crystal:  
   >GLACEON, GLISCOR, HONCHKROW, LEAFEON, MAGNEZONE, MAMOSWINE, MISMAGIUS, TANGROWTH, WEAVILE, and YANMEGA  
+- **Reef tile gfx** from Polished Crystal  
+- **Some tileset animation code** from Polished Crystal  
 
 ### __Audio:__
 - **Gen1 Music** from pokered-crysaudio  
   >dannye  
 
 ### __Testing:__
-- **Alpha Version**  
+- **Alpha Version Testers**  
   >Exkzol  
   >Bleeperwagon  
-- **Beta Versions**  
+- **Beta Version Testers**  
   >Exkzol  
   >Bleeperwagon  
   >Geometry13  
@@ -128,6 +132,7 @@ Currently working on final testing runs, and adding some supplementary features.
   >Ssenrah  
   >TigerBlood  
   >Knight Owl  
+
 
 
 ## __Sour Crystal Credits:__
@@ -151,9 +156,7 @@ Currently working on final testing runs, and adding some supplementary features.
 - **All my discord members** who contributed to bug-testing and all who gave me support
 - **Satoshi Tajiri**, **Game Freak**, and **Nintendo** for creating Pokémon Crystal in the first place.
 
-
-
-
+<br/>
 
 # Pokémon Silver Mirror [![Build Info]
 
@@ -161,6 +164,9 @@ This is based on a disassembly of Pokémon Crystal.
 
 To set up the repository, see [INSTALL.md](INSTALL.md).
 - uses RGBDS v0.6.0
+
+<br/>
+<br/>
 
 ## See also
 
