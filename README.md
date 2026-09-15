@@ -72,6 +72,7 @@ Currently working on final testing runs, and adding some supplementary features.
 - **Many other small goodies to find!**  
 
 <br/>
+
 ## __Screenshots:__
 
 ![title-screen](https://images.hackdex.app/[game]/.png)
@@ -162,10 +163,13 @@ Currently working on final testing runs, and adding some supplementary features.
 
 This is based on a disassembly of Pokémon Crystal.
 
-To set up the repository, see [INSTALL.md](INSTALL.md).
-- uses RGBDS v0.6.0
+To set up the repository, see [INSTALL.md](INSTALL.md).  
+>uses RGBDS v0.6.0
 
-<br/>
+I learned Assembly in the process of making this game.  
+I don't actually know how to use git, and most of my commits are a mess.  
+Forgive me.  
+
 <br/>
 
 ## See also
