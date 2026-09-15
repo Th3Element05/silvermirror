@@ -1,14 +1,15 @@
 # Pokémon: Silver Mirror
 
-This is a custom Pokémon game based on the Pokémon Crystal disassembly.
+This is a custom Pokémon game based on the Pokémon Crystal disassembly.  
 Forked from Sour Crystal v4.1a
 
-My goal was to recreate the story of Red's journey through Kanto, with as many Quality of Life and graphical upgrades as possible while still maintaining the classic charm of the Gameboy/Gameboy Color Pokémon games.
+My goal was to recreate the story of Red's journey through Kanto, with as many Quality of Life and graphical upgrades as possible while still maintaining the classic charm of the Gameboy/Gameboy Color Pokémon games.  
 I also wanted to include a new post-game storyline in Johto, as a mirror to the inclusion of Kanto in Pokémon Gold, Silver, and Crystal.  Challenge the Johto Gym Leaders for eight more badges, and climb Mount Silver to face the final challenges in the game.
 
 # Version 0.3.2
-The current build is essentially complete.
-9/15/26 - Currently working on final testing runs, and adding some supplementary features.
+The current build is essentially complete.  
+- **9/15/26**  
+  - Currently working on final testing runs, and adding some supplementary features.  
 
 
 ## __Features:__
@@ -25,23 +26,25 @@ On Classic setting, Ghost-Type is now special, Dark and Dragon-Type are now Phys
 - **More Move Info**  
 Move Info (Type, Power, Accuracy, etc.) is shown in battle, when learning a new move, and many more places that moves can be viewed.  
 - **Intrinsic Field Moves**  
-Appropriate Pokémon can use field moves (once it has been obtained in the story) without knowing the attack.  
-- **A new Pager system**  
+Appropriate Pokémon can use field moves (once it has been obtained in the story) without knowing the attack for battle.  
+- **Pokégear Pager System**  
 Allows use of obtained Field Moves without needing to keep an appropriate user in your party.  
 - **Pokémon Swarms**  
-Announced on the radio. Swarming Pokémon have an increased chance of being shiny.  
+Announced on the radio. The active Swarm is visible on the Pokégear map.  
+Swarming Pokémon have an increased chance of being shiny.  
 - **Reusable TMs**  
 Use TMs to teach moves as many times as you like.  
 - **Updated Movepools**  
 Based primarily on Gen4.  
 - **Updated Move properties**  
 Base Power, Accuracy, Effects, etc.  
-- **Added Gen4 Evolutions** 
+- **Added Gen4 Evolutions**  
 Yanmega, Honchkrow, Mismagius, Gliscor, Weavile, Mamoswine, Magnezone, Tangrowth, Leafeon, and Glaceon.  
 - **Location-based Evolutions** for appropraite Pokémon.  
 Only available in Gen2 Mode, or after defeating the Elite Four.  
 - **Trade Evolutions obtainable without trading**  
-Use the required item on Pokémon to evolve them. (Linking Cord, King’s Rock, Metal Coat, etc.)  
+Use the required item on Pokémon to evolve them.  
+(Linking Cord, King’s Rock, Metal Coat, etc.)  
 - **Postgame Gym Leader Rematches**  
 Kanto Leaders can be rematched after defeating the Elite Four. Johto Leaders can be rematched after obtaining 16 Badges.  
 - **Move Reminder**  
@@ -78,12 +81,12 @@ To reduce your main pocket from getting full.
 
 ###### __Resources:__
 - **[Discord Server](https://discord.gg/[temporarily redacted])**
-- **[Documentation](https://docs.google.com/spreadsheets/d/1-3RvOeC4Ymswg5hqdd7F-1gGs5bRkSTm28OCV8ipzhM)**
+- **[Pokémon Silver Mirror Documentation](https://docs.google.com/spreadsheets/d/1-3RvOeC4Ymswg5hqdd7F-1gGs5bRkSTm28OCV8ipzhM)**
 
 
 ## __Silver Mirror Credits:__
 
-###### __Coding:__
+### __Coding:__
 - **Textbox Nametag Code**  
   Narishma-gb  
 - **Dynamic Levels Code**  
@@ -102,17 +105,17 @@ To reduce your main pocket from getting full.
   tanu  
   Everyone else on the PRET pokecrystal Discord!  
 
-###### __Graphics:__
+### __Graphics:__
 - **Reef tile gfx** from Polished Crystal  
 - **Some tileset animation code** from Polished Crystal  
 - **Pokémon Graphics:** from Polished Crystal:  
   GLACEON, GLISCOR, HONCHKROW, LEAFEON, MAGNEZONE, MAMOSWINE, MISMAGIUS, TANGROWTH, WEAVILE, and YANMEGA  
 
-###### __Audio:__
+### __Audio:__
 - **Gen1 Music** from pokered-crysaudio  
   dannye  
 
-###### __Testing:__
+### __Testing:__
 - **Alpha Version**  
   Exkzol  
   Bleeperwagon  
@@ -128,7 +131,7 @@ To reduce your main pocket from getting full.
 
 ## __Sour Crystal Credits:__
 
-###### __Codework:__
+### __Codework:__
 - **FIQ** for various ASM work, and  the dynamic battle palette system
 - **Vulcandth** for various ASM work, and for porting the NEWBOX PC system
 - **Rangi42** for various ASM work and being a huge inspiration
@@ -136,7 +139,7 @@ To reduce your main pocket from getting full.
 - **Pfero** for various ASM and bugfixing
 - **Luna** for assisting with the Safari Zone code
 
-###### __Music:__
+### __Music:__
 - **CoralDev** for the new Kanto trainer battle music
 - **Mmmmmm** for various music covers
 - **FroggestSpirit** for various music covers
