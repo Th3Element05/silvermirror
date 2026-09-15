@@ -71,8 +71,7 @@ Currently working on final testing runs, and adding some supplementary features.
 - **A couple Secrets and Easter Eggs** based on classic Gen1 rumors and glitches.  
 - **Many other small goodies to find!**  
 
-
-
+<br/>
 ## __Screenshots:__
 
 ![title-screen](https://images.hackdex.app/[game]/.png)
@@ -81,13 +80,13 @@ Currently working on final testing runs, and adding some supplementary features.
 ![visible-berries](https://images.hackdex.app/[game]/.png)
 ![safari-zone](https://images.hackdex.app/[game]/.png)
 
-
+<br/>
 
 ### __Resources:__
 - **[Discord Server](https://discord.gg/[temporarily redacted])**
 - **[Pokémon Silver Mirror Documentation](https://docs.google.com/spreadsheets/d/1-3RvOeC4Ymswg5hqdd7F-1gGs5bRkSTm28OCV8ipzhM)**
 
-
+<br/>
 
 ## __Silver Mirror Credits:__
 
@@ -133,7 +132,7 @@ Currently working on final testing runs, and adding some supplementary features.
   >TigerBlood  
   >Knight Owl  
 
-
+<br/>
 
 ## __Sour Crystal Credits:__
 
@@ -150,6 +149,7 @@ Currently working on final testing runs, and adding some supplementary features.
 - **Mmmmmm** for various music covers
 - **FroggestSpirit** for various music covers
 
+<br/>
 
 ## __Special Thanks:__
 - **yenatch**, **kanzure**, **Pikalax**, **iimarckus**, and everyone else who's contributed to disassembling Pokémon Crystal.
