@@ -9,7 +9,7 @@ I also wanted to include a new post-game storyline in Johto, as a mirror to the 
 # Version 0.3.2
 The current build is essentially complete.  
 - **9/15/26**  
-  - Currently working on final testing runs, and adding some supplementary features.  
+Currently working on final testing runs, and adding some supplementary features.  
 
 
 ## __Features:__
@@ -26,45 +26,46 @@ The current build is essentially complete.
 - **More Move Info**  
   - Move Info (Type, Power, Accuracy, etc.) is shown in battle, when learning a new move, and many more places that moves can be viewed.  
 - **Intrinsic Field Moves**  
-Appropriate Pokémon can use field moves (once it has been obtained in the story) without knowing the attack for battle.  
+  - Appropriate Pokémon can use field moves (once it has been obtained in the story) without knowing the attack for battle.  
 - **Pokégear Pager System**  
-Allows use of obtained Field Moves without needing to keep an appropriate user in your party.  
+  - Allows use of obtained Field Moves without needing to keep an appropriate user in your party.  
 - **Pokémon Swarms**  
-Announced on the radio. The active Swarm is visible on the Pokégear map.  
-Swarming Pokémon have an increased chance of being shiny.  
+  - Announced on the radio. The active Swarm is visible on the Pokégear map.  
+  - Swarming Pokémon have an increased chance of being shiny.  
 - **Reusable TMs**  
-Use TMs to teach moves as many times as you like.  
+  - Use TMs to teach moves as many times as you like.  
 - **Updated Movepools**  
-Based primarily on Gen4.  
+  - Based primarily on Gen4.  
 - **Updated Move properties**  
-Base Power, Accuracy, Effects, etc.  
+  - Base Power, Accuracy, Effects, etc.  
 - **Added Gen4 Evolutions**  
-Yanmega, Honchkrow, Mismagius, Gliscor, Weavile, Mamoswine, Magnezone, Tangrowth, Leafeon, and Glaceon.  
+  - Yanmega, Honchkrow, Mismagius, Gliscor, Weavile, Mamoswine, Magnezone, Tangrowth, Leafeon, and Glaceon.  
 - **Location-based Evolutions** for appropraite Pokémon.  
-Only available in Gen2 Mode, or after defeating the Elite Four.  
+  - Only available in Gen2 Mode, or after defeating the Elite Four.  
 - **Trade Evolutions obtainable without trading**  
-Use the required item on Pokémon to evolve them.  
+  - Use the required item on Pokémon to evolve them.  
 (Linking Cord, King’s Rock, Metal Coat, etc.)  
 - **Postgame Gym Leader Rematches**  
-Kanto Leaders can be rematched after defeating the Elite Four. Johto Leaders can be rematched after obtaining 16 Badges.  
+  - Kanto Leaders can be rematched after defeating the Elite Four.  
+  - Johto Leaders can be rematched after obtaining 16 Badges.  
 - **Move Reminder**  
-Re-teach Pokémon any of their Level-up Moves.  
+  - Re-teach Pokémon any of their Level-up Moves.  
 - **Shininess and Gender decoupled from DVs**  
-Male and Female Pokémon have equal chance to have high DVs or be shiny.  
+  - Male and Female Pokémon have equal chance to have high DVs or be shiny.  
 - **Upgraded trainer rematches**  
-Rematch trainer parties scale as you progress through the story.  
+  - Rematch trainer parties scale as you progress through the story.  
 - **Modern Bill's PC Boxes**  
-Has a GUI like Gen3. No more saving between boxes required.  
+  - Has a GUI like Gen3. No more saving between boxes required.  
 - **New Custom Pokémon Sprites**  
-Front Sprites by Sour Apple. Back Sprites based on work by MeroMero.  
+  - Front Sprites by Sour Apple. Back Sprites based on work by MeroMero.  
 - **Unique Party sprites**  
-Every Pokémon has a unique sprite in your party.  
+  - Every Pokémon has a unique sprite in your party.  
 - **Upgraded battle graphics**  
-More dynamic colors and attack animations for many moves.  
+  - More dynamic colors and attack animations for many moves.  
 - **Visible Berries and Apricorns on the overworld.**  
-Each tree respawns at 12:00am each day.  
+  - Each tree respawns at 12:00am each day.  
 - **Berry Pocket**  
-To reduce your main pocket from getting full.  
+  - To reduce your main pocket from getting full.  
 - **Almost all bugs from gen2 have been fixed.**  
 - **A couple Secrets and Easter Eggs** based on classic Gen1 rumors and glitches.  
 - **And many other small goodies to find!**  
