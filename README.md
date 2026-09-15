@@ -9,7 +9,7 @@ I also wanted to include a new post-game storyline in Johto, as a mirror to the 
 # Version 0.3.2
 The current build is essentially complete.  
 - **9/15/26**  
-  - Currently working on final testing runs, and adding some supplementary features.  
+ - Currently working on final testing runs, and adding some supplementary features.  
 
 
 ## __Features:__
