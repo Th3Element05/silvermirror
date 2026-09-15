@@ -14,12 +14,12 @@ The current build is essentially complete.
 
 ## __Features:__
 
-**Alternate Gen2 Mode**  
-- Encounter a wider variety of Pokémon on your journey through Kanto.  
-- Or enjoy a Classic experience limited to the original 151 Pokémon (until you defeat the Elite Four).  
-- Can be set during a New Game.  
-**251 Pokémon obtainable**  
-- Complete the Pokédex without trading, in both Classic Mode and Gen2 Mode.  
+- **Alternate Gen2 Mode**  
+  - Encounter a wider variety of Pokémon on your journey through Kanto.  
+    Or enjoy a Classic experience limited to the original 151 Pokémon (until you defeat the Elite Four).  
+    Can be set during a New Game.  
+- **251 Pokémon obtainable**  
+  - Complete the Pokédex without trading, in both Classic Mode and Gen2 Mode.  
 - **Physical/Special Split**  
   - Enabled by default, can be toggled in game Options.  
   - On Classic setting, Ghost-Type is now special, Dark and Dragon-Type are now Physical.  
