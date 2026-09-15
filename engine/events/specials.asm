@@ -15,6 +15,10 @@ Special::
 
 INCLUDE "data/events/special_pointers.asm"
 
+MrPsychic:
+	farcall _MrPsychic
+	ret
+
 UnusedDummySpecial:
 	ret
 

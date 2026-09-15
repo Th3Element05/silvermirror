@@ -117,10 +117,222 @@ PrintTempMonStats:
 .StatNames:
 	db   "ATTACK"
 	next "DEFENSE"
-	next "SP.ATK"
-	next "SP.DEF"
+	next "SPC.ATK"
+	next "SPC.DEF"
 	next "SPEED"
 	next "@"
+
+PrintTempMonDVs:
+; Place textbox to display DVs
+	hlcoord 12, 0
+	lb bc, 10, 6
+	call Textbox
+
+	hlcoord 13, 1
+	ld de, .DVstrings
+	call PlaceString
+
+; we're using wPokedexStatus because why not, nobody using it atm lol
+; ATK DV
+	ld a, [wTempMonDVs] ; only get the first byte of the word
+	and %11110000 ; most significant nybble of first byte in word-sized wTempMonDVs
+	swap a ; so we can print it properly
+	ld [wPokedexStatus], a
+
+	ld c, 0
+	; calc HP stat contribution
+	and 1 ; a still has the ATK DV
+	jr z, .atk_not_odd
+	ld a, 0
+	add 8
+	ld b, 0
+	ld c, a
+.atk_not_odd
+	push bc
+
+	ld a, [wPokedexStatus]
+	ld hl, StatDataGFX ; from gfx/stats/dv_gfx.png
+	ld bc, 4 * LEN_2BPP_TILE ; Type GFX is 4 Tiles Wide
+	call AddNTimes
+	ld d, h
+	ld e, l
+	ld hl, vTiles2 tile $68
+	lb bc, BANK(StatDataGFX), 4 ; bank in 'b', Num of Tiles in 'c'
+	call Request2bpp
+	hlcoord 13, 4 ; placing the Tiles in the info box
+	ld [hl], $68
+	inc hl
+	ld [hl], $69
+	inc hl
+	ld [hl], $6a
+	inc hl
+	ld [hl], $6b
+
+	ld de, wPokedexStatus
+	lb bc,  1, 2 ; bytes, digits
+	hlcoord 17, 4
+	call PrintNum
+
+; DEF DV
+	ld a, [wTempMonDVs] ; only get the first byte of the word
+	and %00001111 ; least significant nybble, don't need to swap the bits of the byte
+	ld [wPokedexStatus], a ;DEF
+
+	; calc HP stat contribution
+	pop bc
+	and 1 ; a still has the DEF DV
+	jr z, .def_not_odd
+	ld a, c
+	add 4
+	ld b, 0
+	ld c, a
+.def_not_odd
+	push bc
+
+	ld a, [wPokedexStatus]
+	ld hl, StatDataGFX ; from gfx/stats/dv_gfx.png
+	ld bc, 4 * LEN_2BPP_TILE ; Type GFX is 4 Tiles Wide
+	call AddNTimes
+	ld d, h
+	ld e, l
+	ld hl, vTiles2 tile $6c
+	lb bc, BANK(StatDataGFX), 4 ; bank in 'b', Num of Tiles in 'c'
+	call Request2bpp
+	hlcoord 13, 6 ; placing the Tiles in the info box
+	ld [hl], $6c
+	inc hl
+	ld [hl], $6d
+	inc hl
+	ld [hl], $6e
+	inc hl
+	ld [hl], $6f
+
+	ld de, wPokedexStatus
+	lb bc,  1, 2
+	hlcoord 17, 6
+	call PrintNum
+
+; SPC DV
+	ld a, [wTempMonDVs + 1] ; second byte of word
+	and %00001111 ; least significant nybble, don't need to swap the bits of the byte
+	ld [wPokedexStatus], a ;SPC
+	
+	; calc HP stat contribution
+	pop bc
+	and 1 ; a still has the DEF DV
+	jr z, .spc_not_odd
+	ld a, c
+	add 1
+	ld b, 0
+	ld c, a
+.spc_not_odd
+	push bc
+
+	ld a, [wPokedexStatus]
+	ld hl, StatDataGFX ; from gfx/stats/dv_gfx.png
+	ld bc, 4 * LEN_2BPP_TILE ; Type GFX is 4 Tiles Wide
+	call AddNTimes
+	ld d, h
+	ld e, l
+	ld hl, vTiles2 tile $74
+	lb bc, BANK(StatDataGFX), 4 ; bank in 'b', Num of Tiles in 'c'
+	call Request2bpp
+	hlcoord 13, 8 ; placing the Tiles in the info box
+	ld [hl], $74
+	inc hl
+	ld [hl], $75
+	inc hl
+	ld [hl], $76
+	inc hl
+	ld [hl], $77
+
+	ld de, wPokedexStatus
+	lb bc, 1, 2 ; bytes, digits
+	hlcoord 17, 8
+	call PrintNum
+
+; SPE DV
+	ld a, [wTempMonDVs + 1] ; second byte of word
+	and %11110000 ; most significant nybble of 2nd byte in word-sized wTempMonDVs
+	swap a ; so we can print it properly
+	ld [wPokedexStatus], a ;SPEED
+
+	; calc HP stat contribution
+	pop bc
+	and 1 ; a still has the SPEED DV
+	jr z, .speed_not_odd
+	ld a, c
+	add 2
+	ld b, 0
+	ld c, a
+.speed_not_odd
+	push bc
+
+	ld a, [wPokedexStatus]
+	ld hl, StatDataGFX ; from gfx/stats/dv_gfx.png
+	ld bc, 4 * LEN_2BPP_TILE ; Type GFX is 4 Tiles Wide
+	call AddNTimes
+	ld d, h
+	ld e, l
+	ld hl, vTiles2 tile $78
+	lb bc, BANK(StatDataGFX), 4 ; bank in 'b', Num of Tiles in 'c'
+	call Request2bpp
+	hlcoord 13, 10 ; placing the Tiles in the info box
+	ld [hl], $78
+	inc hl
+	ld [hl], $79
+	inc hl
+	ld [hl], $7a
+	inc hl
+	ld [hl], $7b
+
+	ld de, wPokedexStatus
+	lb bc,  1, 2 ; bytes, digits
+	hlcoord 17, 10
+	call PrintNum
+
+; HP DV is determined by the last bit of each of these four DVs
+	; odd Attack DV adds 8, Defense adds 4, Speed adds 2, and Special adds 1
+	; For example, a Lugia with the DVs 5 Atk, 15 Def, 13 Spe, and 13 Spc will have:
+	; 5 Attack = Odd, HP += 8
+	; 15 Defense = Odd, HP += 4
+	; 13 Speed = Odd, HP += 2
+	; 13 Special = Odd, HP += 1
+	; resulting in an HP stat of 15
+	; THANKS SMOGON
+	; going to "and 1" each final value and push a counter to stack to preserve it
+	pop bc
+	ld a, c
+	ld [wPokedexStatus], a
+
+	ld hl, StatDataGFX ; from gfx/stats/dv_gfx.png
+	ld bc, 4 * LEN_2BPP_TILE ; Type GFX is 4 Tiles Wide
+	call AddNTimes
+	ld d, h
+	ld e, l
+	ld hl, vTiles2 tile $64
+	lb bc, BANK(StatDataGFX), 4 ; bank in 'b', Num of Tiles in 'c'
+	call Request2bpp
+	hlcoord 13, 2 ; placing the Tiles in the info box
+	ld [hl], $64
+	inc hl
+	ld [hl], $65
+	inc hl
+	ld [hl], $66
+	inc hl
+	ld [hl], $67
+
+	ld de, wPokedexStatus
+	lb bc,  1, 2 ; bytes, digits
+	hlcoord 17, 2
+	jp PrintNum
+
+.DVstrings:
+	db   "HP"
+	next "ATK"
+	next "DEF"
+	next "SPC"
+	next "SPE@"
 
 GetGender:
 ; Return the gender of a given monster (wCurPartyMon/wCurOTMon/wCurWildMon).

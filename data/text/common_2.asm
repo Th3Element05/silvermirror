@@ -1735,3 +1735,58 @@ _CantDepositText::
 	text "Can't deposit"
 	line "this item."
 	prompt
+
+;_MrPsychicIntroText::
+;	ntag "MR.PSYCHIC:"
+;	text "Hello, <PLAYER>!"
+;	line "I was expecting"
+;	cont "you!"
+;
+;	para "I can read the"
+;	line "potential of your"
+;	cont "#MON with my"
+;	roll "psychic power."
+;
+;	para "Shall I read one"
+;	line "of your #MON?"
+;	done
+
+_MrPsychicWhichMonText::
+	ntag "MR.PSYCHIC:"
+	text "Which #MON"
+	line "should I read?"
+	prompt
+
+_MrPsychicReadingText::
+	ntag "MR.PSYCHIC:"
+	text "Hm… @"
+	text_ram wStringBuffer1
+	text "…"
+	line "Let's see…"
+
+	para "I see it!"
+	prompt
+
+_MrPsychicPotentialText::
+	ntag "MR.PSYCHIC:"
+	text "@"
+	text_ram wStringBuffer1
+	text "'s"
+	line "potential!"
+	done
+
+_MrPsychicComeAgainText::
+	ntag "MR.PSYCHIC:"
+	text "Drop by any time!"
+
+	para "I'll be expecting"
+	line "you!"
+	done
+
+_MrPsychicEggText::
+	ntag "MR.PSYCHIC:"
+	text "An EGG?"
+	line "Now, now…"
+	cont "I'd hate to spoil"
+	roll "the surprise!"
+	done

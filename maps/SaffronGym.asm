@@ -44,10 +44,10 @@ SaffronGymSabrinaScript:
 	scall SaffronGymCheckBadges
 	; fallthrough
 .FightDone:
-	checkevent EVENT_GOT_TM04_CALM_MIND
-	iftrue .GotPsywave
-	verbosegiveitem TM_CALM_MIND
-	setevent EVENT_GOT_TM04_CALM_MIND
+	checkevent EVENT_GOT_TM29_PSYCHIC
+	iftrue .GotPsychic
+	verbosegiveitem TM_PSYCHIC_M
+	setevent EVENT_GOT_TM29_PSYCHIC
 	writetext SabrinaExplainTMText
 	waitbutton
 	closetext
@@ -62,7 +62,7 @@ SaffronGymSabrinaScript:
 	changeblock 8, 10, $12 ; red warp tile
 	reloadmappart
 	end
-.GotPsywave:
+.GotPsychic:
 	writetext SabrinaAfterBattleText
 	waitbutton
 	closetext
@@ -143,17 +143,17 @@ SabrinaExplainMarshbadgeText:
 
 SabrinaExplainTMText:
 	ntag "SABRINA:"
-;	text "TM46 is PSYWAVE!"
-;	line "It uses powerful"
-;	cont "psychic waves to"
-;	roll "inflict damage!"
+;	text "TM04 is CALM MIND."
+;	line "By focusing their"
+;	cont "mind, #MON can"
+;	roll "raise both their"
+;	cont "SPECIAL ATTACK and"
+;	roll "SPECIAL DEFENSE!"
 ;
-	text "TM04 is CALM MIND."
-	line "By focusing their"
-	cont "mind, #MON can"
-	roll "raise both their"
-	cont "SPECIAL ATTACK and"
-	roll "SPECIAL DEFENSE!"
+	text "TM29 is PSYCHIC,"
+	line "it's one of the"
+	cont "strongest PSYCHIC-"
+	roll "type attacks!"
 
 	para "Good luck on your"
 	line "#MON LEAGUE"

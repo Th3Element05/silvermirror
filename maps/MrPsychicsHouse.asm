@@ -6,27 +6,39 @@ MrPsychicsHouse_MapScripts:
 
 	def_callbacks
 
-MrPsychic:
+MrPsychicScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_TM29_PSYCHIC
-	iftrue .AlreadyGotItem
-	writetext MrPsychicText1
+	checkevent EVENT_GOT_TM04_CALM_MIND
+	iftrue .AlreadyGotCalmMind
+	writetext MrPsychicTMText1
 	promptbutton
-	verbosegiveitem TM_PSYCHIC_M
-	iffalse .Done
-	setevent EVENT_GOT_TM29_PSYCHIC
-.AlreadyGotItem:
-	writetext MrPsychicText2
+	verbosegiveitem TM_CALM_MIND
+	iffalse .declined
+	setevent EVENT_GOT_TM04_CALM_MIND
+	writetext MrPsychicTMText2
+	sjump .skip_welcome
+
+.AlreadyGotCalmMind
+	writetext MrPsychicIntroText
+.skip_welcome
+	yesorno
+	iffalse .declined
+	special MrPsychic
 	waitbutton
-.Done:
+	closetext
+	end
+
+.declined
+	farwritetext _MrPsychicComeAgainText
+	waitbutton
 	closetext
 	end
 
 MrPsychicsHouseBookshelf:
 	jumpstd DifficultBookshelfScript
 
-MrPsychicText1:
+MrPsychicTMText1:
 	ntag "MR.PSYCHIC:"
 	text "…Wait! Don't say"
 	line "a word!"
@@ -38,12 +50,42 @@ MrPsychicText1:
 	para "You wanted this!"
 	done
 
-MrPsychicText2:
+MrPsychicTMText2:
 	ntag "MR.PSYCHIC:"
-	text "TM29 is PSYCHIC."
+	text "TM04 is CALM MIND."
+	line "By focusing their"
+	cont "mind, #MON can"
+	roll "raise both their"
+	cont "SPECIAL ATTACK and"
+	roll "SPECIAL DEFENSE!"
 
-	para "It may lower the"
-	line "target's SP.DEF."
+	para "By calming your"
+	line "mind, even people"
+	cont "can access their"
+	roll "own psychic power!"
+
+	para "I can read the"
+	line "potential of your"
+	cont "#MON with my"
+	roll "psychic power."
+
+	para "Shall I read one"
+	line "of your #MON?"
+	done
+
+MrPsychicIntroText:
+	ntag "MR.PSYCHIC:"
+	text "Hello, <PLAYER>!"
+	line "I was expecting"
+	cont "you!"
+
+	para "I can read the"
+	line "potential of your"
+	cont "#MON with my"
+	roll "psychic power."
+
+	para "Shall I read one"
+	line "of your #MON?"
 	done
 
 ; itemballs
@@ -64,5 +106,5 @@ MrPsychicsHouse_MapEvents:
 	bg_event  1,  1, BGEVENT_READ, MrPsychicsHouseBookshelf
 
 	def_object_events
-	object_event  5,  3, SPRITE_FISHING_GURU, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, MrPsychic, -1
-	object_event  3,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, MrPsychicsHouseTwistedSpoon, EVENT_MR_PSYCHICS_HOUSE_TWISTED_SPOON
+	object_event  5,  3, SPRITE_FISHING_GURU, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, MrPsychicScript, -1
+	object_event  4,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, MrPsychicsHouseTwistedSpoon, EVENT_MR_PSYCHICS_HOUSE_TWISTED_SPOON

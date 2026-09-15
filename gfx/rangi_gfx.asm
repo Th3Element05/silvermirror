@@ -15,3 +15,6 @@ INCBIN "gfx/stats/types_light.2bpp"
 
 TypeDarkIconGFX::
 INCBIN "gfx/stats/types_dark.2bpp"
+
+StatDataGFX::
+INCBIN "gfx/stats/dv_gfx.2bpp"
