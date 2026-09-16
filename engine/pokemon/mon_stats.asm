@@ -117,8 +117,8 @@ PrintTempMonStats:
 .StatNames:
 	db   "ATTACK"
 	next "DEFENSE"
-	next "SPC.ATK"
-	next "SPC.DEF"
+	next "SP.ATK"
+	next "SP.DEF"
 	next "SPEED"
 	next "@"
 
@@ -562,20 +562,20 @@ ListMovePP:
 	jr nz, .load_loop
 	ret
 
-BrokenPlacePPUnits: ; unreferenced
-; Probably would have these parameters:
-; hl = starting coordinate
-; de = SCREEN_WIDTH or SCREEN_WIDTH * 2
-; c = the number of moves (1-4)
-.loop
-	ld [hl], $32 ; typo for P?
-	inc hl
-	ld [hl], $3e ; P
-	dec hl
-	add hl, de
-	dec c
-	jr nz, .loop
-	ret
+;BrokenPlacePPUnits: ; unreferenced
+;; Probably would have these parameters:
+;; hl = starting coordinate
+;; de = SCREEN_WIDTH or SCREEN_WIDTH * 2
+;; c = the number of moves (1-4)
+;.loop
+;	ld [hl], $32 ; typo for P?
+;	inc hl
+;	ld [hl], $3e ; P
+;	dec hl
+;	add hl, de
+;	dec c
+;	jr nz, .loop
+;	ret
 
 Unused_PlaceEnemyHPLevel:
 	push hl
