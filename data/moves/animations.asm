@@ -294,11 +294,11 @@ BattleAnim_Dummy:
 	anim_ret
 
 BattleAnim_HeldItemTrigger:
-	anim_1gfx BATTLE_ANIM_GFX_BUBBLE
-	anim_sound 0, 0, SFX_FULL_HEAL
-	anim_bgeffect BATTLE_BG_EFFECT_FADE_MON_TO_LIGHT_REPEATING, $0, BG_EFFECT_USER, $40
-	anim_call BattleAnim_Recover_branch
-	anim_incbgeffect BATTLE_BG_EFFECT_FADE_MON_TO_LIGHT_REPEATING
+;	anim_1gfx BATTLE_ANIM_GFX_BUBBLE
+;	anim_sound 0, 0, SFX_FULL_HEAL
+;	anim_bgeffect BATTLE_BG_EFFECT_FADE_MON_TO_LIGHT_REPEATING, $0, BG_EFFECT_USER, $40
+;	anim_call BattleAnim_Recover_branch
+;	anim_incbgeffect BATTLE_BG_EFFECT_FADE_MON_TO_LIGHT_REPEATING
 	anim_ret
 
 BattleAnim_ThrowPokeBall:
@@ -2586,6 +2586,7 @@ BattleAnim_DoubleTeam:
 	anim_ret
 
 BattleAnim_Recover:
+	anim_if_param_equal $1, .Item
 	anim_2gfx BATTLE_ANIM_GFX_BUBBLE, BATTLE_ANIM_GFX_SHINE
 	anim_sound 0, 0, SFX_SHARPEN
 	anim_bgeffect BATTLE_BG_EFFECT_FADE_MON_TO_LIGHT_REPEATING, $0, BG_EFFECT_USER, $40
@@ -2595,6 +2596,14 @@ BattleAnim_Recover:
 	anim_bgeffect BATTLE_BG_EFFECT_CYCLE_MID_OBPALS_GRAY_AND_YELLOW, $0, $0, $0
 	anim_jump BattleAnimSub_Glimmer
 ;	anim_ret
+
+.Item
+	anim_1gfx BATTLE_ANIM_GFX_BUBBLE
+	anim_sound 0, 0, SFX_FULL_HEAL
+	anim_bgeffect BATTLE_BG_EFFECT_FADE_MON_TO_LIGHT_REPEATING, $0, BG_EFFECT_USER, $40
+	anim_call BattleAnim_Recover_branch
+	anim_incbgeffect BATTLE_BG_EFFECT_FADE_MON_TO_LIGHT_REPEATING
+	anim_ret
 
 BattleAnim_Recover_branch:
 	anim_obj BATTLE_ANIM_OBJ_RECOVER, 44, 88, $30

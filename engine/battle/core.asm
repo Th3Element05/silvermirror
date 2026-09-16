@@ -4526,7 +4526,9 @@ ItemRecoveryAnim:
 	push de
 	push bc
 	call EmptyBattleTextbox
-	ld a, ANIM_HELD_ITEM_TRIGGER
+	ld a, 1 ; held item anim
+	ld [wBattleAnimParam], a
+	ld a, RECOVER ;ANIM_HELD_ITEM_TRIGGER
 	ld [wFXAnimID], a
 	call SwitchTurnCore
 	xor a
