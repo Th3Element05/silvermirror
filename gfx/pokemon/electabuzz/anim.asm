@@ -5,7 +5,7 @@
 	frame 3, 04
 	frame 4, 04
 	dorepeat 4
-	setrepeat 4
+	setrepeat 2
 	frame 5, 02
 	frame 6, 02
 	frame 5, 02
