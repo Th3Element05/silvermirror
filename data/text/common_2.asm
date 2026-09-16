@@ -1790,3 +1790,41 @@ _MrPsychicEggText::
 	cont "I'd hate to spoil"
 	roll "the surprise!"
 	done
+
+_MeditateWithWhichMonText::
+	ntag "MAN:"
+	text "Choose a #MON"
+	line "to meditate with."
+	prompt
+
+;	text "What #MON will"
+;	line "you meditate with?"
+;	prompt
+
+_MeditationHiddenPowerText::
+	ntag "MAN:"
+	text "Hm…"
+
+	para "Yes…"
+	line "Can you feel it?"
+
+	para "@"
+	text_ram wStringBuffer3
+	text "'s hidden"
+	line "power is @"
+	text_ram wStringBuffer1
+	text "!"
+	done
+_ComeMeditateAgainText::
+	ntag "MAN:"
+	text "You're welcome to"
+	line "meditate with me"
+	cont "any time."
+	done
+
+_MeditateEggText::
+	ntag "MAN:"
+	text "Hm… An EGG does"
+	line "seem very good at"
+	cont "meditation…"
+	done

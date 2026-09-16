@@ -341,6 +341,12 @@ _CGB_StatsScreenHPPals:
 	call FarCopyWRAM
 
 	call LoadStatsScreenStatusIconPalette
+
+;; Load Pokemon's Hidden Power Type palette
+;	predef HiddenPower_StringBuffer1
+;	ld de, wBGPals1 palette 4 + 4 ; slot 3 of pal 4, 1 byte
+;	call LoadMonBaseTypePal	
+
 ; Load Pokemon's Type Palette(s)
 	call GetBaseData
 	ld a, [wBaseType1]
@@ -362,36 +368,15 @@ _CGB_StatsScreenHPPals:
 	; type index is already in c
 	ld de, wBGPals1 palette 7 + 4 ; slot 3 of pal 7, byte 1
 	call LoadMonBaseTypePal	
+
 .palettes_done
 	call WipeAttrmap
 
+; Pokemon front pic
 	hlcoord 0, 0, wAttrmap
 	lb bc, 8, SCREEN_WIDTH
 	ld a, $1 ; mon palette
 	call FillBoxCGB
-
-;; exp bar
-;	hlcoord 10, 16, wAttrmap
-;	ld bc, 10
-;	ld a, $2 ; exp palette
-;	call ByteFill
-; exp bar and OT gender icon
-	hlcoord 9, 13, wAttrmap
-	lb bc, 4, 10
-	ld a, $2 ; exp palette
-	call FillBoxCGB
-
-; gender/shiny icons
-	hlcoord 17, 0, wAttrmap
-	ld bc, 3
-	ld a, $5 ; gender/shiny icon palette
-	call ByteFill
-
-; OT gender icon
-;	hlcoord 9, 13, wAttrmap
-;	ld bc, 1
-;	ld a, $2 ; exp palette (OT player gender)
-;	call ByteFill
 
 ; PKRS icons
 	hlcoord 0, 8, wAttrmap
@@ -399,24 +384,33 @@ _CGB_StatsScreenHPPals:
 	ld a, $2 ; exp palette
 	call ByteFill
 
+; OT gender icon
+	hlcoord 9, 13, wAttrmap
+	ld [hl], $2 ; exp palette (OT player gender)
+
+; exp bar
+	hlcoord 11, 16, wAttrmap
+	ld bc, 9
+	ld a, $2 ; exp palette
+	call ByteFill
+
 ; page indicator boxes
 	hlcoord 13, 5, wAttrmap ; If 4th Stats Page implemented use this instead -> hlcoord 11, 5, wAttrmap
-;	lb bc, 2, 2
 	lb bc, 2, 4 ; 2 Tiles in HEIGHT, 4 Tiles in WIDTH
 	ld a, $3 ; pink & green page palette 
 	call FillBoxCGB
 
-;	hlcoord 15, 5, wAttrmap
-;	lb bc, 2, 2
-;	ld a, $4 ; green page palette
-;	call FillBoxCGB
-
 	hlcoord 17, 5, wAttrmap ; If 4th Stats Page implemented use this instead -> hlcoord 15, 5, wAttrmap
 	lb bc, 2, 2 ; 2 Tiles in HEIGHT, 2 Tiles in WIDTH 
 	; If 4th Stats Page implemented use this instead -> lb bc, 2, 4 ; 2 Tiles in HEIGHT, 4 Tiles in WIDTH
-;	ld a, $5 ; blue page palette
 	ld a, $4 ; blue & orange box palette
 	call FillBoxCGB
+
+; gender/shiny icons
+	hlcoord 17, 0, wAttrmap
+	ld bc, 3
+	ld a, $5 ; gender/shiny icon palette
+	call ByteFill
 
 ; mon status
 	hlcoord 7, 12, wAttrmap
@@ -429,6 +423,12 @@ _CGB_StatsScreenHPPals:
 	lb bc, 2, 4 ; 2 Tiles in HEIGHT, 4 Tiles in WIDTH 
 	ld a, $7 ; mon base type light/dark pals
 	call FillBoxCGB
+
+;; hidden power type
+;	hlcoord 6, 16, wAttrmap
+;	lb bc, 1, 4 ; 2 Tiles in HEIGHT, 4 Tiles in WIDTH 
+;	ld a, $4 ; mon base type light/dark pals
+;	call FillBoxCGB
 
 	call ApplyAttrmap
 	call ApplyPals

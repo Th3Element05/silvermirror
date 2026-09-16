@@ -9,7 +9,6 @@ HiddenPowerDamage:
 .got_dvs
 
 ;; Power: ;silvermirror- HIDDEN_POWER always 60 base power
-;
 ;; Take the top bit from each stat
 ;
 ;	; Attack
@@ -62,7 +61,6 @@ HiddenPowerDamage:
 ;	ld d, a
 
 ; Type:
-
 	; Def & 3
 	ld a, [hl]
 	and %0011

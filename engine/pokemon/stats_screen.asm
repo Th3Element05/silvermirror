@@ -870,6 +870,11 @@ LoadBluePage:
 	hlcoord 11, 8
 	ld bc, 6
 	predef PrintTempMonStats
+
+;	ld b, CHECK_FLAG
+;	ld de, EVENT_LEARNED_HIDDEN_POWERS
+;	call EventFlagAction
+;	jr nz, PrintTempMonHiddenPower ; the flag is set
 	ret
 
 .PlaceOTInfo:
@@ -917,6 +922,52 @@ IDNoString:
 
 OTString:
 	db "OT/@"
+
+;PrintTempMonHiddenPower:
+;	ld de, HiddenPowerStatString
+;	hlcoord 0, 15
+;	call PlaceString
+;
+;	ld hl, wTempMonDVs
+;	; Def & 3
+;	ld a, [hl]
+;	and %0011
+;	ld b, a
+;	; + (Atk & 3) << 2
+;	ld a, [hl]
+;	and %0011 << 4
+;	swap a
+;	add a
+;	add a
+;	or b
+;; Skip Normal
+;	inc a
+;	and TYPE_MASK
+;
+;	ld hl, TypeDarkIconGFX ; from gfx\stats\types_dark.png
+;	ld bc, 4 * LEN_2BPP_TILE ; Type GFX is 4 tiles wide
+;	call AddNTimes
+;	ld d, h
+;	ld e, l
+;	ld hl, vTiles2 tile $79
+;	lb bc, BANK(TypeDarkIconGFX), 4 ; Bank in 'c', Number of Tiles in 'c'
+;	call Request2bpp
+;
+;; placing the Type1 Tiles (from gfx\stats\types_dark.png)
+;	hlcoord 6, 16
+;	ld [hl], $79
+;	inc hl
+;	ld [hl], $7a
+;	inc hl
+;	ld [hl], $7b
+;	inc hl
+;	ld [hl], $7c
+;	inc hl
+;	ret
+;
+;HiddenPowerStatString:
+;	db   "HIDDEN"
+;	feed "POWER:@"
 
 StatsScreen_PlaceFrontpic:
 	ld hl, wTempMonDVs

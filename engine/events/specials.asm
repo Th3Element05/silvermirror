@@ -15,12 +15,8 @@ Special::
 
 INCLUDE "data/events/special_pointers.asm"
 
-MrPsychic:
-	farcall _MrPsychic
-	ret
-
-UnusedDummySpecial:
-	ret
+;UnusedDummySpecial:
+;	ret
 
 SetPlayerPalette:
 	ld a, [wScriptVar]
@@ -221,13 +217,13 @@ CardFlip:
 	call StartGameCornerGame
 	ret
 
-UnusedMemoryGame:
-	call CheckCoinsAndCoinCase
-	ret c
-	ld a, BANK(_MemoryGame)
-	ld hl, _MemoryGame
-	call StartGameCornerGame
-	ret
+;UnusedMemoryGame:
+;	call CheckCoinsAndCoinCase
+;	ret c
+;	ld a, BANK(_MemoryGame)
+;	ld hl, _MemoryGame
+;	call StartGameCornerGame
+;	ret
 
 StartGameCornerGame:
 	call FarQueueScript
@@ -639,3 +635,132 @@ RespawnRoamingMew:
 	xor a ; generate new stats
 	ld [wRoamMon4HP], a
 	ret
+
+MrPsychic:
+;	farcall _MrPsychic
+;	ret
+;; Introduce himself
+;	ld hl, MrPsychicIntroText
+;	call PrintText
+;	call YesNoBox
+;	jp c, .cancel
+
+; Select a Pokemon from your party
+	ld hl, MrPsychicWhichMonText
+	call PrintText
+	farcall SelectMonFromParty
+	jr c, .cancel
+	ld a, [wCurPartySpecies]
+	cp EGG
+	jr z, .egg
+
+; Load selected party mon's nickname into the wStringBuffer1.
+	call GetCurNickname
+
+; Get selected party mon's DVs.
+	ld a, [wCurPartyMon]
+	ld hl, wPartyMon1DVs
+	ld bc, PARTYMON_STRUCT_LENGTH
+	call AddNTimes
+	ld a, [hli]
+	ld [wTempMonDVs], a
+	ld a, [hl]
+	ld [wTempMonDVs + 1], a
+
+; Show selected party mon's DVs
+	ld hl, MrPsychicReadingText
+	call PrintText
+
+	predef PrintTempMonDVs
+	; we need to print text after this predef
+	; otherwise the background's palette bleeds through
+
+	ld hl, MrPsychicPotentialText
+	call PrintText
+	call WaitButton
+	call CloseText ; close text to clear the stats window
+	call OpenText  ; open text again for the farewell
+
+.cancel
+	ld hl, MrPsychicComeAgainText
+	jr .done
+
+.egg
+	ld hl, MrPsychicEggText
+
+.done
+	call PrintText
+	ret
+
+;MrPsychicIntroText:
+;	text_far _MrPsychicIntroText
+;	text_end
+
+MrPsychicWhichMonText:
+	text_far _MrPsychicWhichMonText
+	text_end
+
+MrPsychicReadingText:
+	text_far _MrPsychicReadingText
+	text_end
+
+MrPsychicPotentialText:
+	text_far _MrPsychicPotentialText
+	text_end
+
+MrPsychicComeAgainText:
+	text_far _MrPsychicComeAgainText
+	text_end
+
+MrPsychicEggText:
+	text_far _MrPsychicEggText
+	text_end
+
+RevealHiddenPower:
+;	farcall _RevealHiddenPower
+;	ret
+; Select a Pokemon from your party
+	ld hl, MeditateWithWhichMonText
+	call PrintText
+	farcall SelectMonFromParty
+	jr c, .cancel
+	ld a, [wCurPartySpecies]
+	cp EGG
+	jr z, .egg
+
+; Load selected party mon's nickname into the wStringBuffer1.
+	call GetCurNickname
+	farcall CopyPokemonName_Buffer1_Buffer3
+
+; Show selected party mon's DVs
+	predef HiddenPower_StringBuffer1
+	ld hl, MeditationHiddenPowerText
+	call PrintText
+	call WaitButton
+
+.cancel
+	ld hl, ComeMeditateAgainText
+	jr .done
+
+.egg
+	ld hl, MeditateEggText
+
+.done
+	call PrintText
+	ret
+
+MeditateWithWhichMonText:
+	text_far _MeditateWithWhichMonText
+	text_end
+
+MeditationHiddenPowerText:
+	text_far _MeditationHiddenPowerText
+	text_end
+
+ComeMeditateAgainText:
+	text_far _ComeMeditateAgainText
+	text_end
+
+MeditateEggText:
+	text_far _MeditateEggText
+	text_end

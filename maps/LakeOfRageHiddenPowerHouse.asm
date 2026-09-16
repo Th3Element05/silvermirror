@@ -9,23 +9,28 @@ LakeOfRageHiddenPowerHouse_MapScripts:
 HiddenPowerGuy:
 	faceplayer
 	opentext
-;;	checkevent EVENT_GOT_TM10_HIDDEN_POWER
-;;	iftrue .AlreadyGotItem
-;	writetext HiddenPowerGuyText1
-;	promptbutton
-;;	verbosegiveitem TM_HIDDEN_POWER
-;;	iffalse .Done
-;;	setevent EVENT_GOT_TM10_HIDDEN_POWER
-;	writetext HiddenPowerGuyText2
-;	waitbutton
-;	closetext
-;	end
-;.AlreadyGotItem:
-	writetext HiddenPowerGuyText3
+	writetext HiddenPowerGuyAskMeditateText
+	yesorno
+	iffalse .declined
+	special RevealHiddenPower
 	waitbutton
-;.Done:
+	closetext
+;	setevent EVENT_LEARNED_HIDDEN_POWERS
+	end
+
+.declined
+	farwritetext _ComeMeditateAgainText
+	waitbutton
 	closetext
 	end
+
+HiddenPowerGuyAskMeditateText:
+	ntag "MAN:"
+	text "I am meditating…"
+
+	para "Would you like to"
+	line "meditate with me?"
+	done
 
 ;HiddenPowerGuyText1:
 ;	text "…You have strayed"
@@ -57,11 +62,6 @@ HiddenPowerGuy:
 ;	cont "pend on the #-"
 ;	roll "MON using it."
 ;	done
-
-HiddenPowerGuyText3:
-	ntag "MAN:"
-	text "I am meditating…"
-	done
 
 HiddenPowerHouseBookshelf:
 	jumpstd DifficultBookshelfScript
