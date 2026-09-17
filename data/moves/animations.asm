@@ -589,12 +589,21 @@ BattleAnim_Miss:
 	anim_ret
 
 BattleAnim_EnemyDamage:
+	anim_bgeffect BATTLE_BG_EFFECT_CYCLE_MON_LIGHT_DARK_REPEATING, $0, BG_EFFECT_TARGET, $10
 .loop
 	anim_bgeffect BATTLE_BG_EFFECT_HIDE_MON, $0, BG_EFFECT_TARGET, $0
 	anim_wait 5
 	anim_bgeffect BATTLE_BG_EFFECT_SHOW_MON, $0, BG_EFFECT_TARGET, $0
 	anim_wait 5
 	anim_loop 3, .loop
+	anim_incbgeffect BATTLE_BG_EFFECT_CYCLE_MON_LIGHT_DARK_REPEATING
+	anim_ret
+
+BattleAnim_PlayerDamage:
+	anim_bgeffect BATTLE_BG_EFFECT_CYCLE_MON_LIGHT_DARK_REPEATING, $0, BG_EFFECT_TARGET, $10
+	anim_bgeffect BATTLE_BG_EFFECT_SHAKE_SCREEN_Y, $20, $2, $20
+	anim_wait 32
+	anim_incbgeffect BATTLE_BG_EFFECT_CYCLE_MON_LIGHT_DARK_REPEATING
 	anim_ret
 
 BattleAnim_EnemyStatDown:
@@ -605,18 +614,22 @@ BattleAnim_EnemyStatDown:
 	anim_wait 1
 	anim_ret
 
-BattleAnim_PlayerStatDown:
-	anim_call BattleAnim_UserObj_1Row
-	anim_bgeffect BATTLE_BG_EFFECT_WOBBLE_PLAYER, $0, $0, $0
-	anim_wait 40
-	anim_call BattleAnim_ShowMon_1
-	anim_wait 1
-	anim_ret
-
-BattleAnim_PlayerDamage:
-	anim_bgeffect BATTLE_BG_EFFECT_SHAKE_SCREEN_Y, $20, $2, $20
-	anim_wait 40
-	anim_ret
+BattleAnim_PlayerStatDown: 
+;	anim_call BattleAnim_UserObj_1Row
+;	anim_bgeffect BATTLE_BG_EFFECT_WOBBLE_MON, $0, BG_EFFECT_TARGET, $0
+;	anim_wait 40
+;	anim_incbgeffect BATTLE_BG_EFFECT_WOBBLE_MON
+;	anim_call BattleAnim_ShowMon_1
+;	anim_wait 1
+;	anim_ret
+;BattleAnim_PlayerStatDown: ;OG ; unused?
+;	anim_call BattleAnim_UserObj_1Row
+;	anim_bgeffect BATTLE_BG_EFFECT_WOBBLE_PLAYER, $0, $0, $0
+;	anim_wait 40
+;	anim_call BattleAnim_ShowMon_1
+;	anim_wait 1
+;	anim_ret
+; fallthrough (for now)
 
 BattleAnim_Wobble:
 	anim_bgeffect BATTLE_BG_EFFECT_WOBBLE_SCREEN, $0, $0, $0
