@@ -7165,10 +7165,15 @@ ApplyPrzEffectOnSpeed:
 	ld a, [hld]
 	ld b, a
 	ld a, [hl]
+
+; halve speed
 	srl a
 	rr b
-	srl a
-	rr b
+
+;; halve it again
+;	srl a
+;	rr b
+
 	ld [hli], a
 	or b
 	jr nz, .player_ok
