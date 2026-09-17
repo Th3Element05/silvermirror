@@ -2047,12 +2047,16 @@ AI_Smart_Foresight:
 	cp BASE_STAT_LEVEL + 3
 	jr nc, .encourage
 
-; 60% chance to encourage this move if the player is a Ghost type.
+; 60% chance to encourage this move if the player is a Ghost or Dark type.
 	ld a, [wBattleMonType1]
 	cp GHOST
 	jr z, .encourage
+	cp DARK
+	jr z, .encourage
 	ld a, [wBattleMonType2]
 	cp GHOST
+	jr z, .encourage
+	cp DARK
 	jr z, .encourage
 
 ; 92% chance to discourage this move otherwise.

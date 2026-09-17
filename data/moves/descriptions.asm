@@ -1729,12 +1729,22 @@ ZapCannonDescription:
 ;	next "always paralyzes.@"
 
 ForesightDescription:
-	db   "Negates the foe's"
-	feed "evasiveness and"
-	feed "GHOST's immunity.@"
+;	db   "Negates the foe's"
+;	feed "evasiveness and"
+;	feed "GHOST's immunity.@"
+
+	db   "Negates foe's GHOST"
+	feed "& DARK immunities,"
+	feed "& its evasiveness.@"
+
+;	db   "Negates GHOST's and"
+;	feed "DARK's immunities &"
+;	feed "foe's evasion stat.@"
+
 ;	db   "Allows user to hit"
 ;	feed "GHOST or DARK type"
 ;	feed "#MON.@"
+
 ;	db   "Negates accuracy"
 ;	next "reduction moves.@"
 
