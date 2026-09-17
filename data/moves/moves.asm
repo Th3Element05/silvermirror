@@ -157,7 +157,7 @@ Moves:
 	move POISON_JAB,   EFFECT_POISON_HIT,         80, POISON,       PHYSICAL, 100, 20,  30 ;POISON_GAS, removed
 	move BULLET_SEED,  EFFECT_MULTI_HIT,          25, GRASS,        PHYSICAL, 100, 30,   0 ;BARRAGE, removed
 	move LEECH_LIFE,   EFFECT_LEECH_HIT,          30, BUG,          PHYSICAL, 100, 20,   0
-	move POISON_FANG,  EFFECT_POISON_HIT,         50, POISON,       PHYSICAL, 100, 15,  40 ;LOVELY_KISS, removed
+	move POISON_FANG,  EFFECT_POISON_HIT,         50, POISON,       PHYSICAL, 100, 15,  50 ;LOVELY_KISS, removed
 	move SKY_ATTACK,   EFFECT_FLY,               140, FLYING,       PHYSICAL,  90,  5,   0 ; OLD: EFFECT_SKY_ATTACK
 	move TRANSFORM,    EFFECT_TRANSFORM,           0, NORMAL,       STATUS,   100, 10,   0
 	move WATER_PULSE,  EFFECT_CONFUSE_HIT,        60, WATER,        SPECIAL,  100, 20,  20 ;BUBBLE, removed
@@ -269,8 +269,8 @@ Moves:
 	move BRICK_BREAK,  EFFECT_DEFENSE_DOWN_HIT,   70, FIGHTING,     PHYSICAL, 100, 15,  20 ;ROCK_SMASH, removed
 	move WHIRLPOOL,    EFFECT_TRAP_TARGET,        35, WATER,        SPECIAL,   85, 15,   0 ; OLD POW:15
 	move DARK_PULSE,   EFFECT_FLINCH_HIT,         80, DARK,         SPECIAL,  100, 15,  20 ;BEAT_UP, removed
-	move FIRE_FANG,    EFFECT_FANG_HIT,           65, FIRE,         PHYSICAL, 100, 15,  10 ;NEW
-	move ICE_FANG,     EFFECT_FANG_HIT,           65, ICE,          PHYSICAL, 100, 15,  10 ;NEW
-	move THUNDER_FANG, EFFECT_FANG_HIT,           65, ELECTRIC,     PHYSICAL, 100, 15,  10 ;NEW
+	move FIRE_FANG,    EFFECT_FANG_HIT,           65, FIRE,         PHYSICAL,  95, 15,  10 ;NEW
+	move ICE_FANG,     EFFECT_FANG_HIT,           65, ICE,          PHYSICAL,  95, 15,  10 ;NEW
+	move THUNDER_FANG, EFFECT_FANG_HIT,           65, ELECTRIC,     PHYSICAL,  95, 15,  10 ;NEW
 	move STRUGGLE,     EFFECT_RECOIL_HIT,         50, NORMAL,       PHYSICAL, 100,  1,   0 ; $ff
 	assert_table_length NUM_ATTACKS
