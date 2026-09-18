@@ -1917,7 +1917,7 @@ DebugAllTMs:
 	giveitem TM_CURSE        ;TM69 ; ee
 	giveitem TM_SHADOW_BALL  ;TM70 ; ef
 	giveitem TM_STONE_EDGE   ;TM71 ; f0
-	giveitem TM_DRAGONBREATH ;TM72 ; f1
+	giveitem TM_POISON_JAB   ;TM72 ; f1
 	giveitem TM_ATTRACT      ;TM73 ; f2
 	giveitem TM_GYRO_BALL    ;TM74 ; f3
 	giveitem TM_SWORDS_DANCE ;TM75 ; f4
@@ -1929,7 +1929,8 @@ DebugAllTMs:
 	giveitem TM_X_SCISSOR    ;TM81 ; fa
 	giveitem TM_WHIRLPOOL    ;TM82 ; fb
 	giveitem TM_WATERFALL    ;TM83 ; fc
-	giveitem TM_POISON_JAB   ;TM84 ; fd
+;	giveitem TM_TACKLE       ;TM84 ; fd
+;	giveitem TM_TACKLE       ;TM85 ; fd
 .End
 	closetext
 	end

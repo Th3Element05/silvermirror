@@ -50,7 +50,7 @@ BlackthornGymClairScript:
 	setmapscene INDIGO_PLATEAU_POKECENTER_1F, SCENE_INDIGOPLATEAUPOKECENTER1F_LANCE
 	setmapscene BLACKTHORN_CITY, SCENE_BLACKTHORNCITY_REMATCH_NOTIFY
 .FightDone:
-	checkevent EVENT_GOT_TM72_DRAGONBREATH
+	checkevent EVENT_GOT_TM59_DRAGON_PULSE
 	iftrue .SpeechAfterTM
 	setevent EVENT_BEAT_COOLTRAINERF_LAYLA
 	setevent EVENT_BEAT_COOLTRAINERM_ZANE
@@ -59,13 +59,13 @@ BlackthornGymClairScript:
 ;	setevent EVENT_BEAT_COOLTRAINERM_PAUL
 	writetext ClairText_RisingBadgeSpeech
 	promptbutton
-	verbosegiveitem TM_DRAGONBREATH
-;	iffalse .SpeechAfterTM ;.NoRoomForDragonbreath
-	setevent EVENT_GOT_TM72_DRAGONBREATH
-	writetext ClairText_DragonbreathSpeech
+	verbosegiveitem TM_DRAGON_PULSE
+	iffalse .SpeechAfterTM ;.NoRoomForDragonPulse
+	setevent EVENT_GOT_TM59_DRAGON_PULSE
+	writetext ClairText_DragonPulseSpeech
 	promptbutton
 .SpeechAfterTM
-;.NoRoomForDragonbreath:
+;.NoRoomForDragonPulse:
 	checkevent EVENT_CLEARED_DRAGONS_DEN
 	iftrue .AfterDragonsDen
 	writetext ClairText_GoToDragonsDen
@@ -173,19 +173,26 @@ ClairText_RisingBadgeSpeech:
 	cont "use of this."
 	done
 
-ClairText_DragonbreathSpeech:
+ClairText_DragonPulseSpeech:
 	ntag "CLAIR:"
-	text "That contains"
-	line "DRAGONBREATH."
+	text "That TM teaches"
+	line "DRAGON PULSE."
 
-	para "It's an attack"
-	line "that may paralyze"
-	cont "the opponent."
+	para "It's a powerful"
+	line "DRAGON-type attack"
+	cont "that's only shared"
+	roll "with those deemed"
+	cont "worthy by my CLAN."
+
+	para "You defeated me,"
+	line "you've earned it."
+	cont "Make sure you put"
+	roll "it to good use."
 	done
 
 ClairText_GoToDragonsDen:
 	ntag "CLAIR:"
-	text "You've beaten me,"
+	text "You've bested me,"
 	line "and even LANCE."
 
 	para "I think you should"

@@ -80,8 +80,8 @@ CharmanderEvosAttacks:
 	db 1, GROWL
 	db 7, EMBER
 	db 10, SMOKESCREEN
-	db 16, SCARY_FACE ;DRAGON_RAGE
-	db 19, DRAGON_RAGE ;SCARY_FACE
+	db 16, SCARY_FACE ;dragon_rage, removed
+	db 19, DRAGONBREATH ;SCARY_FACE
 	db 25, FIRE_FANG
 	db 28, SLASH
 	db 34, FLAMETHROWER
@@ -96,8 +96,8 @@ CharmeleonEvosAttacks:
 	db 1, GROWL
 	db 7, EMBER
 	db 10, SMOKESCREEN
-	db 17, SCARY_FACE ;DRAGON_RAGE
-	db 21, DRAGON_RAGE ;SCARY_FACE
+	db 17, SCARY_FACE ;dragon_rage, removed
+	db 21, DRAGONBREATH ;SCARY_FACE
 	db 28, FIRE_FANG
 	db 32, SLASH
 	db 39, FLAMETHROWER
@@ -114,8 +114,8 @@ CharizardEvosAttacks:
 	db 1, GROWL
 	db 7, EMBER
 	db 10, SMOKESCREEN
-	db 17, SCARY_FACE ;DRAGON_RAGE
-	db 21, DRAGON_RAGE ;SCARY_FACE
+	db 17, SCARY_FACE ;dragon_rage, removed
+	db 21, DRAGONBREATH ;SCARY_FACE
 	db 28, FIRE_FANG
 	db 32, SLASH
 	db 35, WING_ATTACK ;36, EVOLUTION_MOVE
@@ -2301,7 +2301,7 @@ GyaradosEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, THRASH
 	db 19, BITE ;20, EVOLUTION_MOVE
-	db 23, DRAGON_RAGE
+	db 23, DRAGONBREATH ;dragon_rage, removed
 	db 26, LEER
 	db 29, TWISTER
 	db 32, AQUA_TAIL ;ICE_FANG
@@ -2647,7 +2647,7 @@ DratiniEvosAttacks:
 	db 1, LEER
 	db 5, THUNDER_WAVE
 	db 11, TWISTER
-	db 16, DRAGON_RAGE
+	db 16, DRAGONBREATH ;dragon_rage, removed
 	db 21, BODY_SLAM ;slam, removed
 	db 25, AGILITY
 	db 31, AQUA_TAIL
@@ -2665,7 +2665,7 @@ DragonairEvosAttacks:
 	db 1, LEER
 	db 5, THUNDER_WAVE
 	db 11, TWISTER
-	db 16, DRAGON_RAGE
+	db 16, DRAGONBREATH ;dragon_rage, removed
 	db 21, BODY_SLAM ;slam, removed
 	db 25, AGILITY
 	db 32, AQUA_TAIL
@@ -2686,7 +2686,7 @@ DragoniteEvosAttacks:
 	db 1, LEER
 	db 5, THUNDER_WAVE
 	db 11, TWISTER
-	db 16, DRAGON_RAGE
+	db 16, DRAGONBREATH ;dragon_rage, removed
 	db 21, BODY_SLAM ;slam, removed
 	db 25, AGILITY
 	db 32, AQUA_TAIL

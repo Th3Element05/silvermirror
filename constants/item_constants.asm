@@ -267,7 +267,7 @@ DEF TM01 EQU const_value
 	add_tm CURSE        ;TM69 ; ee
 	add_tm SHADOW_BALL  ;TM70 ; ef
 	add_tm STONE_EDGE   ;TM71 ; f0 ;new
-	add_tm DRAGONBREATH ;TM72 ; f1
+	add_tm POISON_JAB   ;TM72 ; f1 ;new
 	add_tm ATTRACT      ;TM73 ; f2
 	add_tm GYRO_BALL    ;TM74 ; f3 ;new
 	add_tm SWORDS_DANCE ;TM75 ; f4
@@ -279,7 +279,7 @@ DEF TM01 EQU const_value
 	add_tm X_SCISSOR    ;TM81 ; fa ;new
 	add_tm WHIRLPOOL    ;TM82 ; fb
 	add_tm WATERFALL    ;TM83 ; fc
-	add_tm POISON_JAB   ;TM84 ; fd ;new
+;	add_tm TACKLE       ;TM84 ; fd
 ;	add_tm TACKLE       ;TM85 ; fe
 DEF NUM_TMS EQU __tmhm_value__ - 1
 

@@ -387,7 +387,7 @@ HorseaEggMoves:
 	db OCTAZOOKA
 	db DISABLE
 	db SPLASH
-	db DRAGON_RAGE
+	db DRAGONBREATH ;dragon_rage, removed
 	db -1 ; end
 
 GoldeenEggMoves:
@@ -448,6 +448,7 @@ AerodactylEggMoves:
 	db WHIRLWIND
 	db PURSUIT
 	db FORESIGHT
+	db DRAGONBREATH
 ;	db DETECT    ;removed
 	db -1 ; end
 
