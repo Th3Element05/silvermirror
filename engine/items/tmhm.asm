@@ -255,9 +255,9 @@ TMHM_ShowTMMoveDescription:
 ;	hlcoord 0, 11
 ;	ld de, String_TMHMTabTop
 ;	call PlaceString
-	hlcoord 0, 12
-	ld de, String_TMHMTabBottom
-	call PlaceString
+;	hlcoord 0, 12
+;	ld de, String_TMHMTabBottom
+;	call PlaceString
 
 ;phys/spec split
 	ld a, [wOptions2]
@@ -333,9 +333,9 @@ TMHM_ShowTMMoveDescription:
 
 ;.power
 ; Print move power
-;	hlcoord 1, 12 ;type icons
-;	ld de, .power_string
-;	call PlaceString
+	hlcoord 1, 12
+	ld de, .power_string
+	call PlaceString
 
 	ld a, [wCurSpecies]
 	dec a
@@ -373,7 +373,7 @@ TMHM_ShowTMMoveDescription:
 
 .accuracy
 ; Print move accuracy
-	hlcoord 1, 13 ;type icons
+	hlcoord 1, 13
 	ld de, .accuracy_string
 	call PlaceString
 
@@ -431,8 +431,8 @@ TMHM_ShowTMMoveDescription:
 	jp TMHM_JoypadLoop
 
 ; UI elements
-;.power_string:
-;	db "<ATK1><ATK2>@"
+.power_string:
+	db "<ATK1><ATK2>    @"
 .accuracy_string:
 	db "<ACC1><ACC2>   <%>@"
 .novalue_string:
@@ -445,7 +445,7 @@ TMHM_ShowTMMoveDescription:
 ;	db "┌──────┐@"
 String_TMHMTabBottom:
 ;	db "│<ATK1><ATK2>    └@"
-	db "│<ATK1><ATK2>    @"
+	db "┌<ATK1><ATK2>    @"
 
 
 TMHM_ChooseTMorHM:
