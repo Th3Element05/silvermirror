@@ -82,7 +82,7 @@ MoveDescriptions::
 	dw SleepPowderDescription
 	dw PetalDanceDescription
 	dw StringShotDescription
-	dw DragonRageDescription
+	dw RockPolishDescription ;DragonRageDescription
 	dw FireSpinDescription
 	dw ThundershockDescription
 	dw ThunderboltDescription
@@ -885,9 +885,13 @@ StringShotDescription:
 ;	db   "A move that lowers"
 ;	next "the foe's SPEED.@"
 
-DragonRageDescription:
-	db   "Always inflicts"
-	feed "40<HP> of damage.@"
+RockPolishDescription:
+	db   "User polishes its"
+	feed "body to greatly"
+	feed "boost its SPEED.@"
+;DragonRageDescription:
+;	db   "Always inflicts"
+;	feed "40<HP> of damage.@"
 ;	db   "Always inflicts"
 ;	next "40HP damage.@"
 
@@ -1256,10 +1260,6 @@ AquaJetDescription:
 	db   "User lunges at"
 	feed "blinding speed."
 	feed "Always goes first.@"
-;RockPolishDescription:
-;	db   "User polishes its"
-;	feed "body to greatly"
-;	feed "boost its SPEED.@"
 ;ConstrictDescription:
 ;	db   "An attack that may"
 ;	next "lower SPEED.@"

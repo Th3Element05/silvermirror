@@ -1251,7 +1251,7 @@ GeodudeEvosAttacks:
 	db 1, TACKLE
 	db 1, DEFENSE_CURL
 	db 4, MUD_SLAP ;mud_sport, x
-	db 8, AGILITY ;rock_polish, x
+	db 8, ROCK_POLISH
 	db 11, ROCK_THROW
 	db 15, MAGNITUDE
 	db 18, SUBMISSION ;or TAKE_DOWN
@@ -1273,7 +1273,7 @@ GolemEvosAttacks:
 	db 1, TACKLE
 	db 1, DEFENSE_CURL
 	db 4, MUD_SLAP ;mud_sport, x
-	db 8, AGILITY ;rock_polish, x
+	db 8, ROCK_POLISH
 	db 11, ROCK_THROW
 	db 15, MAGNITUDE
 	db 18, SUBMISSION ;or TAKE_DOWN
@@ -1292,7 +1292,7 @@ GolemEvosAttacks:
 ;	db 1, TACKLE
 ;	db 1, DEFENSE_CURL
 ;	db 4, MUD_SLAP ;mud_sport, x
-;	db 8, AGILITY ;rock_polish, x
+;	db 8, ROCK_POLISH
 ;	db 11, ROCK_THROW
 ;	db 15, MAGNITUDE
 ;	db 18, SUBMISSION ;or TAKE_DOWN
@@ -1667,7 +1667,7 @@ OnixEvosAttacks:
 	db 17, MUD_SHOT ;rock_tomb, x
 	db 22, SANDSTORM
 	db 25, BODY_SLAM ;slam, removed
-	db 30, AGILITY ;rock_polish, x
+	db 30, ROCK_POLISH
 	db 33, DRAGONBREATH
 	db 38, IRON_TAIL
 	db 41, EARTH_POWER ;sand_tomb, x
@@ -3843,7 +3843,7 @@ SteelixEvosAttacks:
 	db 17, MUD_SHOT ;rock_tomb, x
 	db 22, SANDSTORM
 	db 25, BODY_SLAM ;slam, removed
-	db 30, AGILITY ;rock_polish, x
+	db 30, ROCK_POLISH
 	db 33, DRAGONBREATH
 	db 38, IRON_TAIL ;0, EVOLUTION_MOVE
 	db 41, CRUNCH

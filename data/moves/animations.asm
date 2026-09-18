@@ -83,7 +83,7 @@ BattleAnimations::
 	dw BattleAnim_SleepPowder
 	dw BattleAnim_PetalDance
 	dw BattleAnim_StringShot
-	dw BattleAnim_DragonRage
+	dw BattleAnim_RockPolish ;_DragonRage
 	dw BattleAnim_FireSpin
 	dw BattleAnim_Thundershock
 	dw BattleAnim_Thunderbolt
@@ -2264,16 +2264,16 @@ BattleAnim_StringShot:
 	anim_wait 64
 	anim_ret
 
-BattleAnim_DragonRage:
-	anim_setobjpal PAL_BATTLE_OB_RED, PAL_BTLCUSTOM_HP_DRAGON ;PAL_BTLCUSTOM_DRAGON_RAGE
-	anim_1gfx BATTLE_ANIM_GFX_FIRE
-.loop
-	anim_sound 6, 2, SFX_EMBER
-	anim_obj BATTLE_ANIM_OBJ_DRAGON_RAGE, 64, 92, $0
-	anim_wait 3
-	anim_loop 16, .loop
-	anim_wait 64
-	anim_ret
+;BattleAnim_DragonRage:
+;	anim_setobjpal PAL_BATTLE_OB_RED, PAL_BTLCUSTOM_HP_DRAGON ;PAL_BTLCUSTOM_DRAGON_RAGE
+;	anim_1gfx BATTLE_ANIM_GFX_FIRE
+;.loop
+;	anim_sound 6, 2, SFX_EMBER
+;	anim_obj BATTLE_ANIM_OBJ_DRAGON_RAGE, 64, 92, $0
+;	anim_wait 3
+;	anim_loop 16, .loop
+;	anim_wait 64
+;	anim_ret
 
 BattleAnim_FireSpin:
 	anim_setobjpal PAL_BATTLE_OB_RED, PAL_BTLCUSTOM_FIRE
@@ -3156,7 +3156,7 @@ BattleAnim_AquaJet:
 	anim_sound 0, 0, SFX_MENU
 	anim_bgeffect BATTLE_BG_EFFECT_HIDE_MON, $0, BG_EFFECT_USER, $0
 	anim_call BattleAnimSub_QuickAttack
-	anim_wait 16
+	anim_wait 24
 	anim_sound 0, 1, SFX_UNKNOWN_63
 	anim_obj BATTLE_ANIM_OBJ_HYDRO_PUMP, 132, 72, $0
 	anim_wait 24
@@ -3164,14 +3164,21 @@ BattleAnim_AquaJet:
 	anim_wait 32
 	anim_ret
 
-;BattleAnim_RockPolish:
-;	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_HP_ROCK
-;	anim_2gfx BATTLE_ANIM_GFX_SHAPES, BATTLE_ANIM_GFX_SPEED
-;	anim_call BattleAnim_TargetObj_1Row
-;	anim_sound 0, 0, SFX_RAZOR_WIND
-;	anim_bgeffect BATTLE_BG_EFFECT_FADE_MON_TO_LIGHT_REPEATING, $0, BG_EFFECT_USER, $40
-;	anim_obj BATTLE_ANIM_OBJ_DEFENSE_CURL, 48, 88, $0
-;	anim_wait 18
+BattleAnim_RockPolish:
+	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_HP_ROCK
+	anim_2gfx BATTLE_ANIM_GFX_SHAPES, BATTLE_ANIM_GFX_SPEED
+	anim_call BattleAnim_TargetObj_1Row
+	anim_bgeffect BATTLE_BG_EFFECT_FADE_MON_TO_LIGHT_REPEATING, $0, BG_EFFECT_USER, $40
+	anim_obj BATTLE_ANIM_OBJ_DEFENSE_CURL, 48, 88, $0
+.loop
+	anim_sound 0, 0, SFX_FORESIGHT
+	anim_wait 12
+	anim_loop 6, .loop
+	anim_wait 32
+	anim_incobj 2
+	anim_incbgeffect BATTLE_BG_EFFECT_FADE_MON_TO_LIGHT_REPEATING
+	anim_call BattleAnim_ShowMon_0
+	anim_ret
 ;.loop
 ;	anim_sound 0, 0, SFX_SWORDS_DANCE
 ;	anim_obj BATTLE_ANIM_OBJ_FOCUS, 44, 108, $6

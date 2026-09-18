@@ -171,91 +171,91 @@ ItemDescriptions:
 	dw TeruSama0Desc ; ITEM_A8
 	dw TeruSama0Desc ; ITEM_A9
 	assert_table_length NUM_ITEMS
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-	dw TeruSama1Desc
-;	dw TeruSama1Desc
+	dw TeruSama1Desc ; TM01
+	dw TeruSama1Desc ; TM02
+	dw TeruSama1Desc ; TM03
+	dw TeruSama1Desc ; TM04
+	dw TeruSama1Desc ; TM05
+	dw TeruSama1Desc ; TM06
+	dw TeruSama1Desc ; TM07
+	dw TeruSama1Desc ; TM08
+	dw TeruSama1Desc ; TM09
+	dw TeruSama1Desc ; TM10
+	dw TeruSama1Desc ; TM11
+	dw TeruSama1Desc ; TM12
+	dw TeruSama1Desc ; TM13
+	dw TeruSama1Desc ; TM14
+	dw TeruSama1Desc ; TM15
+	dw TeruSama1Desc ; TM16
+	dw TeruSama1Desc ; TM17
+	dw TeruSama1Desc ; TM18
+	dw TeruSama1Desc ; TM19
+	dw TeruSama1Desc ; TM20
+	dw TeruSama1Desc ; TM21
+	dw TeruSama1Desc ; TM22
+	dw TeruSama1Desc ; TM23
+	dw TeruSama1Desc ; TM24
+	dw TeruSama1Desc ; TM25
+	dw TeruSama1Desc ; TM26
+	dw TeruSama1Desc ; TM27
+	dw TeruSama1Desc ; TM28
+	dw TeruSama1Desc ; TM29
+	dw TeruSama1Desc ; TM30
+	dw TeruSama1Desc ; TM31
+	dw TeruSama1Desc ; TM32
+	dw TeruSama1Desc ; TM33
+	dw TeruSama1Desc ; TM34
+	dw TeruSama1Desc ; TM35
+	dw TeruSama1Desc ; TM36
+	dw TeruSama1Desc ; TM37
+	dw TeruSama1Desc ; TM38
+	dw TeruSama1Desc ; TM39
+	dw TeruSama1Desc ; TM40
+	dw TeruSama1Desc ; TM41
+	dw TeruSama1Desc ; TM42
+	dw TeruSama1Desc ; TM43
+	dw TeruSama1Desc ; TM44
+	dw TeruSama1Desc ; TM45
+	dw TeruSama1Desc ; TM46
+	dw TeruSama1Desc ; TM47
+	dw TeruSama1Desc ; TM48
+	dw TeruSama1Desc ; TM49
+	dw TeruSama1Desc ; TM50
+	dw TeruSama1Desc ; TM51
+	dw TeruSama1Desc ; TM52
+	dw TeruSama1Desc ; TM53
+	dw TeruSama1Desc ; TM54
+	dw TeruSama1Desc ; TM55
+	dw TeruSama1Desc ; TM56
+	dw TeruSama1Desc ; TM57
+	dw TeruSama1Desc ; TM58
+	dw TeruSama1Desc ; TM59
+	dw TeruSama1Desc ; TM60
+	dw TeruSama1Desc ; TM61
+	dw TeruSama1Desc ; TM62
+	dw TeruSama1Desc ; TM63
+	dw TeruSama1Desc ; TM64
+	dw TeruSama1Desc ; TM65
+	dw TeruSama1Desc ; TM66
+	dw TeruSama1Desc ; TM67
+	dw TeruSama1Desc ; TM68
+	dw TeruSama1Desc ; TM69
+	dw TeruSama1Desc ; TM70
+	dw TeruSama1Desc ; TM71
+	dw TeruSama1Desc ; TM72
+	dw TeruSama1Desc ; TM73
+	dw TeruSama1Desc ; TM74
+	dw TeruSama1Desc ; TM75
+	dw TeruSama1Desc ; TM76
+	dw TeruSama1Desc ; TM77
+	dw TeruSama1Desc ; TM78
+	dw TeruSama1Desc ; TM79
+	dw TeruSama1Desc ; TM80
+	dw TeruSama1Desc ; TM81
+	dw TeruSama1Desc ; TM82
+	dw TeruSama1Desc ; TM83
+;	dw TeruSama1Desc ; TM84
+;	dw TeruSama1Desc ; TM85
 	assert_table_length NUM_ITEMS + NUM_TMS
 ;	dw TeruSama2Desc
 ;	dw TeruSama2Desc
