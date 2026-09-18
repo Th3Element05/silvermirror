@@ -2461,7 +2461,7 @@ PorygonEvosAttacks:
 ;	db 1, conversion2, removed
 	db 1, TACKLE
 	db 1, CONVERSION
-	db 1, SWORDS_DANCE ;SHARPEN, tm
+	db 1, SWORDS_DANCE ;SHARPEN, removed
 	db 7, PSYBEAM
 	db 12, AGILITY
 	db 18, RECOVER
@@ -3977,7 +3977,7 @@ SneaselEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, LEER 
-	db 1, SHARPEN ;taunt, x
+	db 1, HONE_CLAWS ;taunt, x
 	db 8, QUICK_ATTACK
 	db 10, SCREECH
 	db 14, FEINT_ATTACK
@@ -3997,7 +3997,7 @@ WeavileEvosAttacks:
 	db 1, PURSUIT ;assurance, x
 	db 1, SCRATCH
 	db 1, LEER
-	db 1, SHARPEN ;1, EVOLUTION_MOVE ;taunt, x
+	db 1, HONE_CLAWS ;1, EVOLUTION_MOVE ;taunt, x
 	db 8, QUICK_ATTACK
 	db 10, SCREECH
 	db 14, FEINT_ATTACK
@@ -4258,7 +4258,7 @@ HoundourEvosAttacks:
 	db 1, EMBER
 	db 4, SMOG
 	db 9, EMBER
-	db 12, SHARPEN ;howl, x
+	db 12, HONE_CLAWS ;howl, x
 	db 17, BITE
 	db 22, FORESIGHT ;odor_sleuth, x
 	db 27, PURSUIT ;beat_up, removed
@@ -4278,7 +4278,7 @@ HoundoomEvosAttacks:
 	db 1, EMBER
 	db 4, SMOG
 	db 9, EMBER
-	db 12, SHARPEN ;howl, x
+	db 12, HONE_CLAWS ;howl, x
 	db 17, BITE
 	db 22, FORESIGHT ;odor_sleuth, x
 	db 28, PURSUIT ;beat_up, removed
@@ -4350,7 +4350,7 @@ DonphanEvosAttacks:
 ;;	db 1, conversion2, removed
 ;	db 1, TACKLE
 ;	db 1, CONVERSION
-;	db 1, SWORDS_DANCE ;SHARPEN, tm
+;	db 1, SWORDS_DANCE ;SHARPEN, removed
 ;	db 7, PSYBEAM
 ;	db 12, AGILITY
 ;	db 18, RECOVER

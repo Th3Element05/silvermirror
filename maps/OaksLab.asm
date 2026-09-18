@@ -1891,7 +1891,7 @@ DebugAllTMs:
 	giveitem TM_SKY_ATTACK   ;TM43 ; d4
 	giveitem TM_REST         ;TM44 ; d5
 	giveitem TM_THUNDER_WAVE ;TM45 ; d6
-	giveitem TM_SHARPEN      ;TM46 ; d7
+	giveitem TM_HONE_CLAWS   ;TM46 ; d7
 	giveitem TM_ICY_WIND     ;TM47 ; d8
 	giveitem TM_ROCK_SLIDE   ;TM48 ; d9
 	giveitem TM_TRI_ATTACK   ;TM49 ; da

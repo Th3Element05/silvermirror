@@ -159,7 +159,7 @@ MoveDescriptions::
 	dw RestDescription
 	dw RockSlideDescription
 	dw HyperFangDescription
-	dw SharpenDescription
+	dw HoneClawsDescription
 	dw ConversionDescription
 	dw TriAttackDescription
 	dw SuperFangDescription
@@ -1469,9 +1469,9 @@ HyperFangDescription:
 ;	db   "An attack that may"
 ;	next "cause flinching.@"
 
-SharpenDescription:
+HoneClawsDescription:
 	db   "User sharpens its"
-	feed "body to increase"
+	feed "claws to increase"
 	feed "ATTACK & ACCURACY.@"
 ;	db   "A move that raises"
 ;	next "the user's ATTACK.@"

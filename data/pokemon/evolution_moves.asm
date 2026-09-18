@@ -214,7 +214,7 @@ EvolutionMoves::
 	db NO_MOVE      ; SHUCKLE    ; d4
 	db NO_MOVE      ; HERACROSS  ; d5
 	db NO_MOVE      ; SNEASEL    ; d6
-	db SHARPEN      ; WEAVILE    ; d7
+	db HONE_CLAWS   ; WEAVILE    ; d7
 	db NO_MOVE      ; TEDDIURSA  ; d8
 	db SCARY_FACE   ; URSARING   ; d9
 	db NO_MOVE      ; SLUGMA     ; da

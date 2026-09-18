@@ -241,7 +241,7 @@ DEF TM01 EQU const_value
 	add_tm SKY_ATTACK   ;TM43 ; d4
 	add_tm REST         ;TM44 ; d5
 	add_tm THUNDER_WAVE ;TM45 ; d6
-	add_tm SHARPEN      ;TM46 ; d7 ;new
+	add_tm HONE_CLAWS   ;TM46 ; d7 ;new
 	add_tm ICY_WIND     ;TM47 ; d8
 	add_tm ROCK_SLIDE   ;TM48 ; d9
 	add_tm TRI_ATTACK   ;TM49 ; da

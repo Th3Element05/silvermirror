@@ -20,7 +20,7 @@ MoveGrammar:
 ;	db ACID_ARMOR
 	db BONEMERANG
 	db REST
-	db SHARPEN
+	db HONE_CLAWS ;SHARPEN, removed
 	db SUBSTITUTE
 ;	db MIND_READER
 	db SNORE

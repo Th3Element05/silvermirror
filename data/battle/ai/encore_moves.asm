@@ -20,7 +20,7 @@ EncoreMoves:
 	db DREAM_EATER
 	db SMOG ;POISON_GAS ;removed
 	db SPLASH
-	db SHARPEN
+	db HONE_CLAWS ;SHARPEN, removed
 	db CONVERSION
 	db SUPER_FANG
 	db SUBSTITUTE

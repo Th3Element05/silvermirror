@@ -160,7 +160,7 @@ BattleAnimations::
 	dw BattleAnim_Rest
 	dw BattleAnim_RockSlide
 	dw BattleAnim_HyperFang
-	dw BattleAnim_Sharpen
+	dw BattleAnim_HoneClaws ;_Sharpen
 	dw BattleAnim_Conversion
 	dw BattleAnim_TriAttack
 	dw BattleAnim_SuperFang
@@ -3877,7 +3877,8 @@ BattleAnim_HyperFang:
 	anim_wait 16
 	anim_ret
 
-BattleAnim_Sharpen:
+;BattleAnim_Sharpen:
+BattleAnim_HoneClaws:
 	anim_2gfx BATTLE_ANIM_GFX_CUT, BATTLE_ANIM_GFX_SHINE
 	anim_resetobp0
 .loop

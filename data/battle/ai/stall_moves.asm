@@ -18,7 +18,7 @@ StallMoves:
 ;	db MIMIC ;removed
 	db SCREECH
 	db HARDEN
-;	db WITHDRAW
+;	db WITHDRAW, removed
 	db DEFENSE_CURL
 	db BARRIER
 	db LIGHT_SCREEN
@@ -30,7 +30,7 @@ StallMoves:
 	db TRANSFORM
 	db SPLASH
 ;	db ACID_ARMOR ;removed
-	db SHARPEN
+	db HONE_CLAWS ;SHARPEN, removed
 	db CONVERSION
 	db SUBSTITUTE
 	db FLAME_WHEEL
