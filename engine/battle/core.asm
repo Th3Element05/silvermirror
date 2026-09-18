@@ -6112,13 +6112,13 @@ MoveInfoBox:
 	ld de, .power_string ; "ATK"
 	call PlaceString
 
-	ld a, [wPlayerMoveStruct + MOVE_EFFECT]
-	cp EFFECT_STATIC_DAMAGE
-	jr nz, .not_static_damage
-	ld de, .staticdmg_string
-	hlcoord 6, 9
-	call PlaceString
-.not_static_damage
+;	ld a, [wPlayerMoveStruct + MOVE_EFFECT]
+;	cp EFFECT_STATIC_DAMAGE
+;	jr nz, .not_static_damage
+;	ld de, .staticdmg_string
+;	hlcoord 6, 9
+;	call PlaceString
+;.not_static_damage
 
 	hlcoord 3, 9 ;5, 9
 	ld a, [wPlayerMoveStruct + MOVE_POWER]
@@ -6244,8 +6244,8 @@ MoveInfoBox:
 	db "<?><?><?>@"
 .disabled_string:
 	db "DISABLED@"
-.staticdmg_string:
-	db "<HP>@"
+;.staticdmg_string:
+;	db "<HP>@"
 ;.Type:
 ;	db "TYPE/@"
 

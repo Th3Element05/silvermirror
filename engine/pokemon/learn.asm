@@ -375,19 +375,19 @@ PlaceForgetMoveData:
 ;	ld de, .power_string
 ;	call PlaceString
 
-	ld a, [wBuffer1] ; selected Move or [wPutativeTMHMMove]
-	dec a
-	ld hl, Moves + MOVE_EFFECT
-	ld bc, MOVE_LENGTH
-	call AddNTimes
-	ld a, Bank(Moves)
-	call GetFarByte
-	cp EFFECT_STATIC_DAMAGE
-	jr nz, .not_static_damage
-	ld de,.staticdmg_string
-	hlcoord 6, 12
-	call PlaceString
-.not_static_damage
+;	ld a, [wBuffer1] ; selected Move or [wPutativeTMHMMove]
+;	dec a
+;	ld hl, Moves + MOVE_EFFECT
+;	ld bc, MOVE_LENGTH
+;	call AddNTimes
+;	ld a, Bank(Moves)
+;	call GetFarByte
+;	cp EFFECT_STATIC_DAMAGE
+;	jr nz, .not_static_damage
+;	ld de,.staticdmg_string
+;	hlcoord 6, 12
+;	call PlaceString
+;.not_static_damage
 
 	ld a, [wBuffer1] ; selected Move or [wPutativeTMHMMove]
 	dec a
@@ -493,8 +493,8 @@ PlaceForgetMoveData:
 	db " <INF1><INF2>@"
 .unknown_string:
 	db "<?><?><?>@"
-.staticdmg_string:
-	db "<HP>@"
+;.staticdmg_string:
+;	db "<HP>@"
 String_LearnTabTop:
 	db "───┐@"
 String_LearnTabBottom:

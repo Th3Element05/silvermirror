@@ -394,18 +394,18 @@ ChooseMoveToLearn:
 	ld de, .power_string
 	call PlaceString
 
-	ld a, [wMenuSelection]
-	ld bc, MOVE_LENGTH
-	ld hl, (Moves + MOVE_EFFECT) - MOVE_LENGTH
-	call AddNTimes
-	ld a, BANK(Moves)
-	call GetFarByte
-	cp EFFECT_STATIC_DAMAGE
-	jr nz, .not_static_damage
-	ld de,.staticdmg_string
-	hlcoord 6, 12
-	call PlaceString
-.not_static_damage
+;	ld a, [wMenuSelection]
+;	ld bc, MOVE_LENGTH
+;	ld hl, (Moves + MOVE_EFFECT) - MOVE_LENGTH
+;	call AddNTimes
+;	ld a, BANK(Moves)
+;	call GetFarByte
+;	cp EFFECT_STATIC_DAMAGE
+;	jr nz, .not_static_damage
+;	ld de,.staticdmg_string
+;	hlcoord 6, 12
+;	call PlaceString
+;.not_static_damage
 
 	ld a, [wMenuSelection]
 	ld bc, MOVE_LENGTH
@@ -516,8 +516,8 @@ ChooseMoveToLearn:
 	db " <INF1><INF2>@"
 .unknown_string:
 	db "<?><?><?>@"
-.staticdmg_string:
-	db "<HP>@"
+;.staticdmg_string:
+;	db "<HP>@"
 ;.Type:
 ;	db "TYPE/@"
 ;String_MoveType_Top:
