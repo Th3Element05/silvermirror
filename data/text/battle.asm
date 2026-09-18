@@ -626,10 +626,6 @@ RegainedHealthText:
 	prompt
 
 AttackMissedText:
-	text "<USER>'s"
-	line "attack missed!"
-	prompt
-
 AttackMissed2Text:
 	text "<USER>'s"
 	line "attack missed!"
@@ -644,6 +640,11 @@ CrashedText:
 UnaffectedText:
 	text "<TARGET>"
 	line "was not affected!"
+	prompt
+
+UnaffectedProtectText:
+	text "<TARGET>"
+	line "was unaffected!"
 	prompt
 
 DoesntAffectText:
@@ -959,10 +960,6 @@ ItFailedText:
 	prompt
 
 DidntAffect1Text:
-	text "It didn't affect"
-	line "<TARGET>!"
-	prompt
-
 DidntAffect2Text:
 	text "It didn't affect"
 	line "<TARGET>!"
@@ -997,6 +994,11 @@ AlreadyParalyzedText:
 AlreadyBurnedText:
 	text "<TARGET>'s"
 	line "already burned!"
+	prompt
+
+AlreadyFrozenText:
+	text "<TARGET>'s"
+	line "already frozen!"
 	prompt
 
 ProtectedByText:
@@ -1055,8 +1057,11 @@ ProtectedItselfText:
 	prompt
 
 ProtectingItselfText:
-	text "<TARGET>'s"
-	line "PROTECTING itself!"
+;	text "<TARGET>'s"
+;	line "PROTECTING itself!"
+;	done
+	text "PROTECT blocked"
+	line "the attack!"
 	done
 
 SpikesText:
@@ -1156,9 +1161,6 @@ CopiedStatsText:
 	prompt
 
 ForesawAttackText:
-;	text "<USER>"
-;	line "foresaw an attack!"
-;	prompt
 	text "<USER>"
 	line "foresaw an attack!"
 	prompt

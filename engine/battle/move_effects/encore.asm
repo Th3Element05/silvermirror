@@ -115,4 +115,4 @@ BattleCommand_Encore:
 	jp StdBattleTextbox
 
 .failed
-	jp PrintDidntAffect2
+	jp FailMove

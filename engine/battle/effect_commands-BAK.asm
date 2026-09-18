@@ -2269,7 +2269,7 @@ GetFailureResultText:
 	ld de, ItFailedText
 	jr z, .got_text
 	ld hl, AttackMissedText
-	ld de, UnaffectedProtectText ;AttackMissed2Text
+	ld de, AttackMissed2Text
 	ld a, [wCriticalHit]
 	cp -1
 	jr nz, .got_text
@@ -3716,78 +3716,51 @@ UpdateMoveData:
 	call GetMoveName
 	jp CopyName1
 
-CheckForStatusIfAlreadyHasAny:
-	ld a, BATTLE_VARS_STATUS_OPP
-	call GetBattleVarAddr
-	ld d, h
-	ld e, l
-	and SLP_MASK
-	ld hl, AlreadyAsleepText
-	ret nz
-	
-	ld a, [de]
-	bit FRZ, a
-	ld hl, AlreadyFrozenText
-	ret nz
-	
-	bit PAR, a
-	ld hl, AlreadyParalyzedText
-	ret nz
-	
-	bit PSN, a
-	ld hl, AlreadyPoisonedText
-	ret nz
-	
-	bit BRN, a
-	ld hl, AlreadyBurnedText
-	ret
-
 BattleCommand_SleepTarget:
-;	ld a, BATTLE_VARS_STATUS_OPP
-;	call GetBattleVarAddr
-;	ld d, h
-;	ld e, l
-;	ld a, [de]
-;	and SLP_MASK
-;	ld hl, AlreadyAsleepText
-	call CheckForStatusIfAlreadyHasAny
-	jr nz, .asleep
-
 	call GetOpponentItem
 	ld a, b
 	cp HELD_PREVENT_SLEEP
-	jr nz, .no_item_protection
+	jr nz, .not_protected_by_item
+
 	ld a, [hl]
 	ld [wNamedObjectIndex], a
 	call GetItemName
 	ld hl, ProtectedByText
-	jp StdBattleTextbox
+	jr .fail
 
-.no_item_protection
-;	ld hl, DidntAffect1Text
+.not_protected_by_item
 	ld a, BATTLE_VARS_STATUS_OPP
-	call GetBattleVar
-	and a
-	jr nz, .didnt_affect
+	call GetBattleVarAddr
+	ld d, h
+	ld e, l
+	ld a, [de]
+	and SLP_MASK
+	ld hl, AlreadyAsleepText
+	jr nz, .fail
 
 	ld a, [wAttackMissed]
 	and a
-	jr nz, .failed
+	jp nz, PrintDidntAffect2
+
+	ld hl, DidntAffect1Text
+
+	ld a, [de]
+	and a
+	jr nz, .fail
 
 	call CheckSubstituteOpp
-	jr nz, .didnt_affect
+	jr nz, .fail
 
 	call AnimateCurrentMove
 ;	ld b, SLP_MASK
 ;	ld a, [wInBattleTowerBattle]
 ;	and a
 ;	jr z, .random_loop ; Sleep for 1-3 turns instead of 2-7
-;	ld b, %011
+	ld b, %011
 
 .random_loop
 	call BattleRandom
-;	and b
-	and %011
+	and b
 	jr z, .random_loop
 ;	cp SLP_MASK
 ;	jr z, .random_loop ; Sleep for 1-3 turns instead of 2-7
@@ -3814,18 +3787,11 @@ BattleCommand_SleepTarget:
 	jp z, OpponentCantMove
 	ret
 
-.asleep
+.fail
 	push hl
 	call AnimateFailedMove
 	pop hl
 	jp StdBattleTextbox
-
-.failed
-	jp PrintMissedOrProtected
-
-.didnt_affect
-	call AnimateFailedMove
-	jp PrintDidntAffect
 
 BattleCommand_PoisonTarget:
 	call CheckSubstituteOpp
@@ -3877,52 +3843,51 @@ BattleCommand_Poison:
 	ld hl, DoesntAffectText
 	ld a, [wTypeModifier]
 	and $7f
-	jr z, .doesnt_affect
+	jp z, .failed
 
 	ld a, POISON
 	call CheckIfTargetIsGivenType
-	jr z, .doesnt_affect
+	jp z, .failed
 
 	ld a, STEEL
 	call CheckIfTargetIsGivenType
-	jr z, .doesnt_affect
+	jp z, .failed
 
-;	ld a, BATTLE_VARS_STATUS_OPP
-;	call GetBattleVar
-;	ld b, a
-;	ld hl, AlreadyPoisonedText
-;	and 1 << PSN
-	call CheckForStatusIfAlreadyHasAny
-	jr nz, .poisoned
+	ld a, BATTLE_VARS_STATUS_OPP
+	call GetBattleVar
+	ld b, a
+	ld hl, AlreadyPoisonedText
+	and 1 << PSN
+	jp nz, .failed
 
 	call GetOpponentItem
 	ld a, b
 	cp HELD_PREVENT_POISON
-	jr nz, .no_item_protection
+	jr nz, .do_poison
 	ld a, [hl]
 	ld [wNamedObjectIndex], a
 	call GetItemName
 	ld hl, ProtectedByText
-	jp StdBattleTextbox
+	jr .failed
 
-.no_item_protection
-;	ld hl, DidntAffect1Text
+.do_poison
+	ld hl, DidntAffect1Text
 	ld a, BATTLE_VARS_STATUS_OPP
 	call GetBattleVar
-	and a
-	jr nz, .didnt_affect
-
-	ld a, [wAttackMissed]
 	and a
 	jr nz, .failed
 
 	call CheckSubstituteOpp
-	jr nz, .didnt_affect
+	jr nz, .failed
+	ld a, [wAttackMissed]
+	and a
+	jr nz, .failed
 
-;;effect chance
-;	ld a, [wEffectFailed]
-;	and a
-;	ret nz
+;effect chance \/
+	ld a, [wEffectFailed]
+	and a
+	ret nz
+;effect chance /\
 
 	call .check_toxic
 	jr z, .toxic
@@ -3945,23 +3910,11 @@ BattleCommand_Poison:
 	farcall UseHeldStatusHealingItem
 	ret
 
-.doesnt_affect
-	call AnimateFailedMove
-	jp PrintDoesntAffect
-
-.poisoned
+.failed
 	push hl
 	call AnimateFailedMove
-;	ld hl, AlreadyPoisonedText
 	pop hl
 	jp StdBattleTextbox
-
-.failed
-	jp PrintMissedOrProtected
-
-.didnt_affect
-	call AnimateFailedMove
-	jp PrintDidntAffect
 
 .apply_poison
 	call AnimateCurrentMove
@@ -6018,11 +5971,11 @@ BattleCommand_Confuse:
 	jp StdBattleTextbox
 
 .not_already_confused
+	call CheckSubstituteOpp
+	jr nz, BattleCommand_Confuse_CheckSnore_Swagger_ConfuseHit
 	ld a, [wAttackMissed]
 	and a
-	jr nz, BattleCommand_Confuse_CheckSnore_Swagger_ConfuseHit ; attack missed
-	call CheckSubstituteOpp
-	jr nz, BattleCommand_Confuse_CheckSnore_Swagger_ConfuseHit ; substitute active
+	jr nz, BattleCommand_Confuse_CheckSnore_Swagger_ConfuseHit
 BattleCommand_FinishConfusingTarget:
 	ld bc, wEnemyConfuseCount
 	ldh a, [hBattleTurn]
@@ -6075,26 +6028,16 @@ BattleCommand_Confuse_CheckSnore_Swagger_ConfuseHit:
 	ret z
 	cp EFFECT_SWAGGER
 	ret z
-	ld a, [wAttackMissed]
-	and a
-	jp nz, PrintMissedOrProtected
-	jp PrintDidntAffect
+	jp PrintDidntAffect2
 
 BattleCommand_Paralyze:
+	ld a, BATTLE_VARS_STATUS_OPP
+	call GetBattleVar
+	bit PAR, a
+	jp nz, .paralyzed
 	ld a, [wTypeModifier]
 	and $7f
-	jr z, .doesnt_affect
-
-;	ld a, ELECTRIC ; Don't paralyze an Electric-type
-;	call CheckIfTargetIsGivenType
-;	jp z, .doesnt_affect
-
-;	ld a, BATTLE_VARS_STATUS_OPP
-;	call GetBattleVar
-;	bit PAR, a
-	call CheckForStatusIfAlreadyHasAny
-	jr nz, .paralyzed
-
+	jp z, .didnt_affect
 	call GetOpponentItem
 	ld a, b
 	cp HELD_PREVENT_PARALYZE
@@ -6107,19 +6050,15 @@ BattleCommand_Paralyze:
 	jp StdBattleTextbox
 
 .no_item_protection
-;	ld hl, DidntAffect1Text
 	ld a, BATTLE_VARS_STATUS_OPP
 	call GetBattleVarAddr
 	and a
-	jr nz, .didnt_affect
-
+	jr nz, .failed
 	ld a, [wAttackMissed]
 	and a
 	jr nz, .failed
-
 	call CheckSubstituteOpp
-	jr nz, .didnt_affect
-
+	jr nz, .failed
 	ld c, 30
 	call DelayFrames
 	call AnimateCurrentMove
@@ -6142,39 +6081,29 @@ BattleCommand_Paralyze:
 	ld hl, UseHeldStatusHealingItem
 	jp CallBattleCore
 
-.doesnt_affect
-	call AnimateFailedMove
-	jp PrintDoesntAffect
-
 .paralyzed
-	push hl
 	call AnimateFailedMove
-;	ld hl, AlreadyParalyzedText
-	pop hl
+	ld hl, AlreadyParalyzedText
 	jp StdBattleTextbox
 
 .failed
-	jp PrintMissedOrProtected
+	jp PrintDidntAffect2
 
 .didnt_affect
 	call AnimateFailedMove
-	jp PrintDidntAffect
+	jp PrintDoesntAffect
 
 BattleCommand_Burn:
+	ld a, BATTLE_VARS_STATUS_OPP
+	call GetBattleVar
+	bit BRN, a
+	jp nz, .burned
 	ld a, [wTypeModifier]
 	and $7f
-	jr z, .doesnt_affect
-
+	jp z, .didnt_affect
 	ld a, FIRE ; Don't burn a Fire-type
 	call CheckIfTargetIsGivenType
-	jr z, .doesnt_affect
-
-;	ld a, BATTLE_VARS_STATUS_OPP
-;	call GetBattleVar
-;	bit BRN, a
-	call CheckForStatusIfAlreadyHasAny
-	jr nz, .burned
-
+	jp z, .didnt_affect
 	call GetOpponentItem
 	ld a, b
 	cp HELD_PREVENT_BURN
@@ -6187,19 +6116,15 @@ BattleCommand_Burn:
 	jp StdBattleTextbox
 
 .no_item_protection
-;	ld hl, DidntAffect1Text
 	ld a, BATTLE_VARS_STATUS_OPP
 	call GetBattleVarAddr
 	and a
-	jr nz, .didnt_affect
-
+	jr nz, .failed
 	ld a, [wAttackMissed]
 	and a
 	jr nz, .failed
-
 	call CheckSubstituteOpp
-	jr nz, .didnt_affect
-
+	jr nz, .failed
 	ld c, 30
 	call DelayFrames
 	call AnimateCurrentMove
@@ -6223,23 +6148,17 @@ BattleCommand_Burn:
 	ld hl, UseHeldStatusHealingItem
 	jp CallBattleCore
 
-.doesnt_affect
-	call AnimateFailedMove
-	jp PrintDoesntAffect
-
 .burned
-	push hl
 	call AnimateFailedMove
-;	ld hl, AlreadyBurnedText
-	pop hl
+	ld hl, AlreadyBurnedText
 	jp StdBattleTextbox
 
 .failed
-	jp PrintMissedOrProtected
+	jp PrintDidntAffect2
 
 .didnt_affect
 	call AnimateFailedMove
-	jp PrintDidntAffect
+	jp PrintDoesntAffect
 
 INCLUDE "engine/battle/move_effects/substitute.asm"
 
@@ -6542,12 +6461,10 @@ PrintDidntAffect:
 	ld hl, DidntAffect1Text
 	jp StdBattleTextbox
 
-PrintMissedOrProtected:
+PrintDidntAffect2:
 	call AnimateFailedMove
-;	ld hl, DidntAffect1Text ; 'it didn't affect'
-;	ld de, DidntAffect2Text ; 'it didn't affect'
-	ld hl, AttackMissedText ; 'attack missed' ;EvadedText ; 'evaded the attack'
-	ld de, UnaffectedProtectText ; 'was unaffected' ;ProtectingItselfText ; 'protecting itself'
+	ld hl, DidntAffect1Text ; 'it didn't affect'
+	ld de, DidntAffect2Text ; 'it didn't affect'
 	jp FailText_CheckOpponentProtect
 
 PrintParalyze:

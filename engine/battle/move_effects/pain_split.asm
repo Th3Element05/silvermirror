@@ -88,4 +88,4 @@ BattleCommand_PainSplit:
 	ret
 
 .ButItFailed:
-	jp PrintDidntAffect2
+	jp FailMove ;PrintMissedOrProtected
