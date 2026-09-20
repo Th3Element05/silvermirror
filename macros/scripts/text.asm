@@ -1,13 +1,16 @@
-DEF text   EQUS "db TX_START,"    ; Start writing text.
-DEF next   EQUS "db \"<NEXT>\","  ; Move a line down.
-DEF line   EQUS "db \"<LINE>\","  ; Start writing at the bottom line.
-DEF page   EQUS "db \"@\","       ; Start a new Pokédex page.
-DEF para   EQUS "db \"<PARA>\","  ; Start a new paragraph.
-DEF cont   EQUS "db \"<CONT>\","  ; Scroll to the next line.
-DEF done   EQUS "db \"<DONE>\""   ; End a text box.
-DEF prompt EQUS "db \"<PROMPT>\"" ; Prompt the player to end a text box (initiating some other event).
-DEF roll   EQUS "db \"<SCROLL>\"," ; _ContTextNoPause
-DEF feed   EQUS "db \"<LF>\","     ; Text on next line with no gap.
+DEF text     EQUS "db TX_START,"     ; Start writing text.
+DEF next     EQUS "db \"<NEXT>\","   ; Move a line down.
+DEF feed     EQUS "db \"<LF>\","     ; Text on next line with no gap.
+DEF line     EQUS "db \"<LINE>\","   ; Start writing at the bottom line.
+DEF page     EQUS "db \"@\","        ; Start a new Pokédex page.
+DEF para     EQUS "db \"<PARA>\","   ; Start a new paragraph.
+DEF autopara EQUS "db \"<A_PARA>\"," ; Automatically start a new paragraph.
+DEF cont     EQUS "db \"<CONT>\","   ; Scroll to the next line.
+DEF roll     EQUS "db \"<SCROLL>\"," ; _ContTextNoPause
+DEF scroll   EQUS "db \"<A_SCROLL>\"," ; Auto scroll to the next line after a short pause.
+DEF done     EQUS "db \"<DONE>\""    ; End a text box.
+DEF autodone EQUS "db \"<A_DONE>\""  ; Automatically ends a text box.
+DEF prompt   EQUS "db \"<PROMPT>\""  ; Prompt the player to end a text box (initiating some other event).
 ;DEF ntag   EQUS "db TX_NAMETAG," ;no comma?
 
 ; TextCommands indexes (see home/text.asm)

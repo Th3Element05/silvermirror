@@ -35,6 +35,9 @@
 	charmap "<TRAINER>", $5d ; "TRAINER"
 	charmap "<ROCKET>",  $5e ; "ROCKET"
 	charmap "<DEXEND>",  $5f
+	charmap "<A_SCROLL>", $60 ; auto scroll
+	charmap "<A_DONE>",	 $61 ; auto done
+;	charmap "<A_PARA>",  $62 ; auto para
 
 ; Actual characters (from gfx/font/font_battle_extra.png)
 

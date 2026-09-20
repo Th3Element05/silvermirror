@@ -239,8 +239,10 @@ ENDM
 	dict "<CR>",      CarriageReturnChar
 	dict "<NULL>",    NullChar
 	dict "<SCROLL>",  _ContTextNoPause
+	dict "<A_SCROLL>", _ContTextPauseShort
 	dict "<_CONT>",   _ContText
 	dict "<PARA>",    Paragraph
+;	dict "<A_PARA>",  AutoParagraph
 	dict "<MOM>",     PrintMomsName
 	dict "<PLAYER>",  PrintPlayerName
 	dict "<RIVAL>",   PrintRivalName
@@ -259,6 +261,7 @@ ENDM
 	dict "<CONT>",    ContText
 	dict "<……>",      SixDotsChar
 	dict "<DONE>",    DoneText
+	dict "<A_DONE>",  AutoDoneText
 	dict "<PROMPT>",  PromptText
 	dict "<PKMN>",    PlacePKMN
 	dict "<POKE>",    PlacePOKE
@@ -485,6 +488,21 @@ Paragraph::
 	pop de
 	jp NextChar
 
+;AutoParagraph::
+;	push de
+;	call Text_WaitBGMap
+;;	ld c, 20
+;;	call DelayFrames
+;	call TextCommand_PAUSE ; wait for button press or 24 frames
+;	hlcoord TEXTBOX_INNERX, TEXTBOX_INNERY
+;	lb bc, TEXTBOX_INNERH - 1, TEXTBOX_INNERW
+;	call ClearBox
+;	ld c, 20
+;	call DelayFrames
+;	hlcoord TEXTBOX_INNERX, TEXTBOX_INNERY
+;	pop de
+;	jp NextChar
+
 _ContText::
 	ld a, [wLinkMode]
 	or a
@@ -508,6 +526,17 @@ _ContTextNoPause::
 	call TextScroll
 	call TextScroll
 	hlcoord TEXTBOX_INNERX, TEXTBOX_INNERY + 2
+	pop de
+	jp NextChar
+
+_ContTextPauseShort::
+	push de
+	call TextCommand_PAUSE ; wait for button press or 24 frames
+	call TextScroll
+	call TextScroll
+	hlcoord TEXTBOX_INNERX, TEXTBOX_INNERY + 2
+	ld c, 5
+	call DelayFrames
 	pop de
 	jp NextChar
 
@@ -557,6 +586,13 @@ DoneText::
 
 .stop:
 	text_end
+
+AutoDoneText::
+	call Text_WaitBGMap
+;	ld c, 24
+;	call DelayFrames
+	call TextCommand_PAUSE ; wait for button press or 24 frames
+	jr DoneText
 
 NullChar::
 	ld a, "?"
@@ -907,14 +943,15 @@ TextCommand_DECIMAL::
 	ret
 
 TextCommand_PAUSE::
-; wait for button press or 30 frames
+;; wait for button press or 30 frames
+; wait for button press or 24 frames
 	push hl
 	push bc
 	call GetJoypad
 	ldh a, [hJoyDown]
 	and A_BUTTON | B_BUTTON
 	jr nz, .done
-	ld c, 30
+	ld c, 24 ;30
 	call DelayFrames
 .done
 	pop bc

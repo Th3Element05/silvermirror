@@ -1211,20 +1211,34 @@ _BuenaOffTheAirText::
 _EnemyWithdrewText::
 	text "<ENEMY>"
 	line "withdrew"
-	cont "@"
+	scroll "@"
 	text_ram wEnemyMonNickname
 	text "!"
-	prompt
+	autodone
+;	text "<ENEMY>"
+;	line "withdrew"
+;	cont "@"
+;	text_ram wEnemyMonNickname
+;	text "!"
+;	prompt
 
 _EnemyUsedOnText::
 	text "<ENEMY>"
 	line "used @"
 	text_ram wMonOrItemNameBuffer
 	text_start
-	cont "on @"
+	scroll "on @"
 	text_ram wEnemyMonNickname
 	text "!"
-	prompt
+	autodone
+;	text "<ENEMY>"
+;	line "used @"
+;	text_ram wMonOrItemNameBuffer
+;	text_start
+;	cont "on @"
+;	text_ram wEnemyMonNickname
+;	text "!"
+;	prompt
 
 ;_ThatCantBeUsedRightNowText:: ; unreferenced
 ;	text "That can't be used"
