@@ -850,22 +850,31 @@ DoesntAffectText:
 
 CriticalHitText:
 	text "A critical hit!"
-	prompt
+	autodone
+
+;	text "A critical hit!"
+;	prompt
 
 OneHitKOText:
 	text "It's a one-hit KO!"
 	prompt
 
 SuperEffectiveText:
+	text "Super-effective!"
+	autodone
+
 ;	text "It's super-"
 ;	line "effective!"
-	text "Super-effective!"
-	prompt
+;	prompt
 
 NotVeryEffectiveText:
 	text "It's not very"
 	line "effective…"
-	prompt
+	autodone
+
+;	text "It's not very"
+;	line "effective…"
+;	prompt
 
 TookDownWithItText:
 	text "<TARGET>"
