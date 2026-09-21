@@ -166,11 +166,21 @@ PictureBookshelfText:
 	done
 
 MagazineBookshelfText:
-	text "#MON magazines…"
-	line "#MON PAL,"
-	cont "#MON HANDBOOK,"
-	roll "#MON GRAPH…"
+	text "Lots of magazines"
+	line "and books about"
+	cont "#MON…"
 	done
+
+;	text "It's full of books"
+;	line "and magazines"
+;	cont "about #MON."
+;	done
+
+;	text "#MON magazines…"
+;	line "#MON PAL,"
+;	cont "#MON HANDBOOK,"
+;	roll "#MON GRAPH…"
+;	done
 
 TeamRocketOathText:
 	text "TEAM ROCKET OATH"
