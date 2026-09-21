@@ -1722,8 +1722,12 @@ _CGB_PlayerOrMonFrontpicPals:
 	ld a, [wCurPartySpecies]
 	ld bc, wTempMonDVs
 	call GetPlayerOrMonPalettePointer
-	call LoadPalette_White_Col1_Col2_Black
+	call LoadPalette_White_Col1_Col2_Black ; mon palette, palette 0
+	ld hl, ExpBarPalette
+	call LoadPalette_White_Col1_Col2_Black ; exp palette, palette 1
 	call WipeAttrmap
+	hlcoord 18, 13, wAttrmap
+	ld [hl], $1 ; exp palette (gender icon)
 	call ApplyAttrmap
 	call ApplyPals
 	ret

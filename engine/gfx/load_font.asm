@@ -47,6 +47,14 @@ _LoadFontsBattleExtra::
 	call Get2bppViaHDMA
 	jr LoadFrame
 
+_LoadHOFGenderTiles::
+	call Get1bppViaHDMA
+	ld de, ExpBarGFX
+	ld hl, vTiles2 tile $7b ;$70 ;$5c
+	lb bc, BANK(ExpBarGFX), 5
+	call Get2bppViaHDMA
+	ret
+
 LoadFrame:
 	ld a, [wTextboxFrame]
 	maskbits NUM_FRAMES

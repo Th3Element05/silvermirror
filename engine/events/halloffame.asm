@@ -122,6 +122,9 @@ AnimateHallOfFame:
 	hlcoord 1, 2
 	call PlaceString
 	call WaitBGMap
+	ld b, SCGB_PLAYER_OR_MON_FRONTPIC_PALS
+	call GetSGBLayout
+	call SetPalettes
 	decoord 6, 5
 	ld c, ANIM_MON_HOF
 	predef HOF_AnimateFrontpic
@@ -295,6 +298,7 @@ HOF_SlideFrontpic:
 
 _HallOfFamePC:
 	call LoadFontsBattleExtra
+	farcall _LoadHOFGenderTiles
 	xor a
 	ld [wJumptableIndex], a
 .MasterLoop:
@@ -363,12 +367,21 @@ _HallOfFamePC:
 	pop hl
 	call DisplayHOFMon
 	ld a, [wHallOfFameTempWinCount]
+	cp HOF_FIRST_VICTORY
+	jr z, .print_first_victory
 	cp HOF_MASTER_COUNT
 	jr c, .print_num_hof
 	ld de, .HOFMaster
 	hlcoord 1, 2
 	call PlaceString
 	hlcoord 13, 2
+	jr .finish
+
+.print_first_victory
+	ld de, .FirstVictory
+	hlcoord 1, 2
+	call PlaceString
+	hlcoord 20, 2
 	jr .finish
 
 .print_num_hof
@@ -396,6 +409,9 @@ _HallOfFamePC:
 
 .EmptyString:
 	db "@"
+
+.FirstVictory:
+	db "  First Victory!@"
 
 .HOFMaster:
 	db "    HOF Master!@"
@@ -487,9 +503,9 @@ DisplayHOFMon:
 	farcall GetGender
 	ld a, " "
 	jr c, .got_gender
-	ld a, "♂"
+	ld a, $7d ;$72 ;"♂"
 	jr nz, .got_gender
-	ld a, "♀"
+	ld a, $7e ;$73 ;"♀"
 
 .got_gender
 	hlcoord 18, 13

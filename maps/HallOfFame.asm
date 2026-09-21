@@ -40,6 +40,8 @@ HallOfFameLanceScript:
 	applymovement HALLOFFAME_LANCE, HallOfFame_WalkUpWithOak
 	stopfollow
 	turnobject HALLOFFAME_LANCE, UP
+	checkevent EVENT_OPENED_MT_SILVER
+	iffalse HallOfFameInductionScript
 	setevent EVENT_BEAT_ELITE_FOUR_REMATCH
 	; fallthrough
 
