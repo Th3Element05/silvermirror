@@ -303,7 +303,8 @@ Trade_GetAttributeOfLastPartymon:
 GetTradeMonName:
 	push de
 	ld [wNamedObjectIndex], a
-	call GetBasePokemonName
+;	call GetBasePokemonName ; Discards gender (Nidoran).
+	call GetPokemonName
 	ld hl, wStringBuffer1
 	pop de
 	ret

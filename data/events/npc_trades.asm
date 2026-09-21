@@ -11,7 +11,7 @@ NPCTrades:
 ; gameboy_kid, route 2 nugget house
 	npctrade TRADE_DIALOGSET_COLLECTOR, ABRA,       MR__MIME,   "MARCEL@@@@@", $9e, $ee, SITRUS_BERRY, 04179, "MATEO@@@@@@", TRADE_GENDER_EITHER
 ; twin, route 5 underground entrance (gender specific text: hardcoded ♂ / ♀)
-	npctrade TRADE_DIALOGSET_GIRL,      NIDORAN_F,  NIDORAN_M,  "SPIKE@@@@@@", $9e, $ee, PECHA_BERRY,  58236, "MIA@@@@@@@@", TRADE_GENDER_FEMALE
+	npctrade TRADE_DIALOGSET_GIRL,      NIDORAN_F,  NIDORAN_M,  "SPIKE@@@@@@", $9e, $ee, PECHA_BERRY,  58236, "MIA@@@@@@@@", TRADE_GENDER_EITHER
 ; youngster, route 11 gate 2f
 	npctrade TRADE_DIALOGSET_HAPPY,     GEODUDE,    CUBONE,     "FLINT@@@@@@", $9e, $ee, THICK_CLUB,   20714, "LUCAS@@@@@@", TRADE_GENDER_EITHER
 ; super_nerd, route 18 gate 2f
