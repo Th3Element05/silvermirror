@@ -162,6 +162,20 @@ INCBIN "data/tilesets/underground_metatiles.bin"
 TilesetUndergroundColl::
 INCLUDE "data/tilesets/underground_collision.asm"
 
+; moved to Tileset Data 5
+;TilesetDarkCaveGFX::
+;INCBIN "gfx/tilesets/dark_cave.2bpp.lz"
+;
+;TilesetDarkCaveMeta::
+;INCBIN "data/tilesets/dark_cave_metatiles.bin"
+;
+;TilesetDarkCaveColl::
+;INCLUDE "data/tilesets/dark_cave_collision.asm"
+
+
+
+SECTION "Tileset Data 5", ROMX
+
 TilesetDarkCaveGFX::
 INCBIN "gfx/tilesets/dark_cave.2bpp.lz"
 
@@ -170,10 +184,6 @@ INCBIN "data/tilesets/dark_cave_metatiles.bin"
 
 TilesetDarkCaveColl::
 INCLUDE "data/tilesets/dark_cave_collision.asm"
-
-
-
-SECTION "Tileset Data 5", ROMX
 
 ;TilesetPokeComCenterGFX::
 ;INCBIN "gfx/tilesets/pokecom_center.2bpp.lz"
