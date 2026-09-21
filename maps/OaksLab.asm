@@ -1334,11 +1334,6 @@ OaksPokeBallText:
 	line "last #MON!"
 	done
 
-OaksLabTrashcanText:
-	text "There's nothing in"
-	line "here…"
-	done
-
 OaksLabThoseArePokeballsText:
 	text "It's a #BALL."
 	line "It has a #MON"

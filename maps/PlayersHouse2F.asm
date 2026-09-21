@@ -268,13 +268,17 @@ PlayersRadioText4:
 	done
 
 PlayersHouseBookshelfChallengeModeActivatedText:
-	text "CHALLENGE MODE"
-	line "ACTIVATED!"
+	text "Switched to"
+	line "GEN2 MODE!"
+;	text "CHALLENGE MODE"
+;	line "ACTIVATED!"
 	done
 
 PlayersHouseBookshelfChallengeModeDeactivatedText:
-	text "CHALLENGE MODE"
-	line "DEACTIVATED!"
+	text "Switched to"
+	line "CLASSIC MODE!"
+;	text "CHALLENGE MODE"
+;	line "DEACTIVATED!"
 	done
 
 ;PlayersHouseDebugPlayer:
