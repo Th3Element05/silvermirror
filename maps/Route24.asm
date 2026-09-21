@@ -369,7 +369,14 @@ TrainerCamperTanner:
 	end
 
 .AskNumber1:
+	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
+	iftrue .AskNumberGen2
 	jumpstd AskNumber1MScript
+	end
+
+.AskNumberGen2:
+	writetext CamperTannerOfferNumberText_Gen2
+;	promptbutton
 	end
 
 .AskNumber2:
@@ -414,6 +421,19 @@ CamperTannerAfterBattleText:
 	cont "bridge scared me!"
 	done
 
+CamperTannerOfferNumberText_Gen2:
+	text "I came across a"
+	line "SUN STONE in the"
+	cont "grass last week."
+
+	para "Hey, how about we"
+	line "exchange phone"
+	cont "numbers?"
+
+	para "If I find another"
+	line "SUN STONE, I'll be"
+	cont "happy to share!"
+	done
 
 ; itemballs
 Route24TMThunderWave:

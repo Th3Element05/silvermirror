@@ -288,7 +288,14 @@ TrainerPicnickerTiffany:
 	end
 
 .AskNumber1:
+	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
+	iftrue .AskNumberGen2
 	jumpstd AskNumber1FScript
+	end
+
+.AskNumberGen2:
+	writetext PicnickerTiffanyOfferNumberText_Gen2
+;	promptbutton
 	end
 
 .AskNumber2:
@@ -342,6 +349,20 @@ PicnickerTiffanyAfterBattleText:
 	cont "so ugly and mean!"
 	done
 
+PicnickerTiffanyOfferNumberText_Gen2:
+	text "My PIKACHU found a"
+	line "DUSK STONE around"
+	cont "here last week,"
+	roll "but I sold it."
+
+	para "It didn't go for"
+	line "much, so if I find"
+	cont "another one, you"
+	roll "could have it."
+
+	para "Could I have your"
+	line "phone number?"
+	done
 
 TrainerBeautyOlivia:
 	trainer BEAUTY, OLIVIA, EVENT_BEAT_BEAUTY_OLIVIA, BeautyOliviaSeenText, BeautyOliviaBeatenText, 0, .Script

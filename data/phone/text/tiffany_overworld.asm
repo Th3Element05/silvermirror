@@ -18,12 +18,17 @@ TiffanyAskNumber1Text:
 
 TiffanyAskNumber2Text:
 	ntag "TIFFANY:"
-	text "I want to know"
-	line "your phone number!"
-
-	para "Let's talk about"
-	line "PIKACHU!"
+	text "Did you decide to"
+	line "trade numbers with"
+	cont "me after all?"
 	done
+
+;	text "I want to know"
+;	line "your phone number!"
+;
+;	para "Let's talk about"
+;	line "PIKACHU!"
+;	done
 
 TiffanyNumberAcceptedText:
 	ntag "TIFFANY:"
