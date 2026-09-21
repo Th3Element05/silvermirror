@@ -5,6 +5,7 @@ InitDisplayForHallOfFame:
 	call DisableLCD
 	call LoadStandardFont
 	call LoadFontsBattleExtra
+;	call LoadGenderTilesHOF
 	hlbgcoord 0, 0
 	ld bc, vBGMap1 - vBGMap0
 	ld a, " "
@@ -26,6 +27,14 @@ InitDisplayForHallOfFame:
 .SavingRecordText:
 	text_far _SavingRecordText
 	text_end
+
+;LoadGenderTilesHOF:
+;	call Get1bppViaHDMA
+;	ld de, ExpBarGFX
+;	ld hl, vTiles2 tile $70 ;$5c
+;	lb bc, BANK(ExpBarGFX), 4
+;	call Get2bppViaHDMA
+;	ret
 
 InitDisplayForRedCredits:
 	call ClearBGPalettes
