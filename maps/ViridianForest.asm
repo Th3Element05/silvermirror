@@ -288,12 +288,15 @@ ViridianForestYoungster2:
 	jumptextfaceplayer ViridianForestYoungster2Text
 ViridianForestYoungster2Text:
 	ntag "YOUNGSTER:"
-	text "I ran out of #-"
-	line "BALLs to catch"
-	cont "#MON with!"
+;	text "I ran out of #-"
+;	line "BALLs to catch"
+;	cont "#MON with!"
+	text "I've run out of"
+	line "#BALLs for"
+	cont "catching #MON!"
 
-	para "You should carry"
-	line "extras!"
+	para "You should always"
+	line "carry extras!"
 	done
 
 ; bg text
@@ -402,12 +405,12 @@ ViridianForest_MapEvents:
 	bg_event 24, 32, BGEVENT_READ, ViridianForestTrainerTips1
 	bg_event 18, 37, BGEVENT_READ, ViridianForestTrainerTips4
 	bg_event  1, 15, BGEVENT_ITEM, ViridianForestHiddenPotion
-	bg_event 16, 34, BGEVENT_ITEM, ViridianForestHiddenAntidote
+	bg_event 16, 33, BGEVENT_ITEM, ViridianForestHiddenAntidote
 
 	def_object_events
 	object_event 21,  2, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ViridianForest_OranBerry, EVENT_VIRIDIAN_FOREST_ORAN_BERRY
 	object_event 23,  2, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, ViridianForest_PechaBerry, EVENT_VIRIDIAN_FOREST_PECHA_BERRY
-	object_event 16, 35, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianForestYoungster1, -1
+	object_event 16, 34, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianForestYoungster1, -1
 	object_event 27, 32, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ViridianForestYoungster2, -1
 	object_event  2, 15, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerBugCatcherBenny, -1
 	object_event 28, 17, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerBugCatcherEd, -1
