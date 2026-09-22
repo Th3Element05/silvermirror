@@ -136,13 +136,8 @@ BattleText_UserRecoveredPPUsing:
 BattleText_TargetWasHitByFutureSight:
 	text "<TARGET>"
 	line "was hit by"
-	scroll "FUTURE SIGHT!"
-	autodone
-
-;	text "<TARGET>"
-;	line "was hit by"
-;	cont "FUTURE SIGHT!"
-;	prompt
+	cont "FUTURE SIGHT!"
+	prompt
 
 BattleText_SafeguardFaded:
 	text "<USER>'s"
@@ -333,7 +328,7 @@ BattleText_PluralEnemyAreAboutToUseWillPlayerChangeMon:
 
 BattleText_EnemySentOut:
 	text "<ENEMY>"
-	line "sent out"
+	line "sends out"
 	scroll "@"
 	text_ram wEnemyMonNickname
 	text "!"
@@ -850,31 +845,21 @@ DoesntAffectText:
 
 CriticalHitText:
 	text "A critical hit!"
-	autodone
-
-;	text "A critical hit!"
-;	prompt
+	prompt
 
 OneHitKOText:
 	text "It's a one-hit KO!"
 	prompt
 
 SuperEffectiveText:
-	text "Super-effective!"
-	autodone
-
-;	text "It's super-"
-;	line "effective!"
-;	prompt
+	text "It's super-"
+	line "effective!"
+	prompt
 
 NotVeryEffectiveText:
 	text "It's not very"
 	line "effective…"
-	autodone
-
-;	text "It's not very"
-;	line "effective…"
-;	prompt
+	prompt
 
 TookDownWithItText:
 	text "<TARGET>"
@@ -1093,6 +1078,7 @@ GettingPumpedText:
 	text "<USER>'s"
 	line "much more likely"
 	scroll "to critical hit!"
+	prompt
 
 ;	text_pause
 ;	text "<USER>'s"
