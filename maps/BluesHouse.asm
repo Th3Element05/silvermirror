@@ -7,8 +7,24 @@ BluesHouse_MapScripts:
 	def_callbacks
 
 BluesHouseNeighbor:
-	jumptextfaceplayer BluesHouseNeighborText
-BluesHouseNeighborText:
+	checkevent EVENT_BEAT_BROCK
+	iftrue .MissRival
+	jumptextfaceplayer BluesHouseNeighborText1
+
+.MissRival
+	jumptextfaceplayer BluesHouseNeighborText2
+
+BluesHouseNeighborText1:
+	ntag "NEIGHBOR:"
+	text "Hi <PLAYER>!"
+
+	para "PROF.OAK gave you"
+	line "a #MON, too?"
+
+	para "That's wonderful!"
+	done
+
+BluesHouseNeighborText2:
 	ntag "NEIGHBOR:"
 	text "Hi <PLAYER>!"
 

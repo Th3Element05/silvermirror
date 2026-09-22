@@ -433,6 +433,8 @@ OaksLabRivalBattleStart:
 	disappear OAKSLAB_BLUE
 	setscene SCENE_OAKSLAB_NOOP
 	setmapscene PALLET_TOWN, SCENE_PALLETTOWN_NOOP
+	setevent EVENT_PLAYERS_HOUSE_1F_NEIGHBOR
+	clearevent EVENT_BLUES_HOUSE_NEIGHBOR
 	special HealParty
 	waitsfx
 	special RestartMapMusic
