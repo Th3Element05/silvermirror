@@ -335,12 +335,18 @@ ViridianForestTrainerTips3:
 ViridianForestTrainerTips3Text:
 	text "TRAINER TIPS"
 
-	para "No stealing of"
-	line "#MON from"
-	cont "other trainers!"
-	roll "Catch only wild"
-	cont "#MON!"
+	para "No stealing from"
+	line "other trainers!"
+	cont "Cnly catch wild"
+	roll "#MON!"
 	done
+
+;	para "No stealing of"
+;	line "#MON from"
+;	cont "other trainers!"
+;	roll "Catch only wild"
+;	cont "#MON!"
+;	done
 
 ViridianForestTrainerTips4:
 	jumptext ViridianForestTrainerTips4Text

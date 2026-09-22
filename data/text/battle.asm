@@ -1076,8 +1076,8 @@ ProtectedByMistText:
 GettingPumpedText:
 	text_pause
 	text "<USER>'s"
-	line "much more likely"
-	scroll "to critical hit!"
+	line "more likely to"
+	scroll "critical hit!"
 	prompt
 
 ;	text_pause

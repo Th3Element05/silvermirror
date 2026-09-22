@@ -16,8 +16,8 @@ ViridianForestGateNSuperNerdScript:
 ViridianForestGateNOfficerText:
 	ntag "OFFICER:"
 	text "Have you noticed"
-	line "the bushes on the"
-	cont "roadside?"
+	line "the small trees"
+	cont "on the roadside?"
 
 	para "They can be cut"
 	line "down by a special"
