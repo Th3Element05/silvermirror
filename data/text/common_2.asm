@@ -1718,8 +1718,8 @@ _OakText3::
 _OakText4::
 	ntag "PROF.OAK:"
 	text "For some people,"
-	line "#MON are pets"
-	cont "Others use them"
+	line "#MON are pets,"
+	cont "others use them"
 	roll "for fights."
 	prompt
 

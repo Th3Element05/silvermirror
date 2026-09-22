@@ -73,8 +73,8 @@ CreditsStringsPointers:
 .Geometry13:          db "     Geometry13@"
 .Greg:                db "    Greg@"
 .Ssenrah:             db "     Ssenrah@"
-.KnightOwl:           db "    Knight Owl@"
-.TigerBlood:          db "     TigerBlood@"
+.KnightOwl:           db "     Knight Owl@"
+.TigerBlood:          db "    TigerBlood@"
 ;.Guardian1691:        db "    Guardian1691@"
 ;                      ; "12345678901234567890@" max length (screen width)
 ;                      ; up to 5 lines per page
