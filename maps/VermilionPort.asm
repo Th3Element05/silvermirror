@@ -337,8 +337,8 @@ VermilionPort_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 15,  6, BGEVENT_READ, VermilionPortTruck
-	bg_event 14,  6, BGEVENT_READ, VermilionPortTruck
+	bg_event 15,  5, BGEVENT_READ, VermilionPortTruck
+	bg_event 14,  5, BGEVENT_READ, VermilionPortTruck
 
 	def_object_events
 	object_event  5,  8, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionPortTicketSailorScript, EVENT_VERMILION_PORT_TICKET_SAILOR
