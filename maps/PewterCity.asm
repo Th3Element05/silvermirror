@@ -299,6 +299,7 @@ PewterCitySuperNerd1Script:
 	yesorno
 	iftrue PewterCityBeenToMuseum
 	writetext PewterCitySuperNerd1GoToMuseumText
+	promptbutton
 	closetext
 	playmusic MUSIC_SHOW_ME_AROUND
 	readvar VAR_FACING
