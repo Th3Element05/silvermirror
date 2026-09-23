@@ -45,7 +45,7 @@ TypeIconPals:
 ; GHOST
 	RGB 14, 11, 19 ;15, 11, 18
 ; STEEL
-	RGB 23, 23, 25
+	RGB 21, 21, 23 ;23, 23, 25
 ; FIRE
 	RGB 31, 15, 04
 ; WATER
@@ -57,7 +57,7 @@ TypeIconPals:
 ; PSYCHIC
 	RGB 30, 11, 16 ;31, 09, 15
 ; ICE
-	RGB 16, 27, 27
+	RGB 14, 27, 27 ;16, 27, 27
 ; DRAGON
 	RGB 14, 07, 30 ;15, 07, 31
 ; DARK
