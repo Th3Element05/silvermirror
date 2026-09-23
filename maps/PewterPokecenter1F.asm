@@ -41,14 +41,32 @@ PewterPokecenterJigglypuff:
 	closetext
 	playmusic MUSIC_JIGGLYPUFF_SONG
 ;	pause 200 ;total
-	pause 90
-	showemote EMOTE_SLEEP, PEWTERPOKECENTER_BENCH_GUY, 30
+	showemote EMOTE_MUSIC2, PEWTERPOKECENTER_JIGGLYPUFF, 30
 	pause 10
-	showemote EMOTE_SLEEP, PEWTERPOKECENTER_BENCH_GUY, 30
+	showemote EMOTE_MUSIC1, PEWTERPOKECENTER_JIGGLYPUFF, 30
 	pause 10
-	showemote EMOTE_SLEEP, PEWTERPOKECENTER_BENCH_GUY, 30
+	showemote EMOTE_MUSIC2, PEWTERPOKECENTER_JIGGLYPUFF, 30
+	pause 10
+	showemote EMOTE_MUSIC1, PEWTERPOKECENTER_JIGGLYPUFF, 30
+	pause 10
+	showemote EMOTE_MUSIC2, PEWTERPOKECENTER_JIGGLYPUFF, 30
+	showemote EMOTE_SLEEP, PEWTERPOKECENTER_BENCH_GUY, 20
+	pause 10
+	showemote EMOTE_SLEEP, PEWTERPOKECENTER_BENCH_GUY, 20
+	pause 10
 	special RestartMapMusic
 	end
+
+;	playmusic MUSIC_JIGGLYPUFF_SONG
+;;	pause 200 ; total
+;	pause 90
+;	showemote EMOTE_SLEEP, PEWTERPOKECENTER_BENCH_GUY, 30
+;	pause 10
+;	showemote EMOTE_SLEEP, PEWTERPOKECENTER_BENCH_GUY, 30
+;	pause 10
+;	showemote EMOTE_SLEEP, PEWTERPOKECENTER_BENCH_GUY, 30
+;	special RestartMapMusic
+;	end
 
 PewterJigglypuffText:
 	ntag "JIGGLYPUFF:"
@@ -71,12 +89,14 @@ PewterPokecenter1FGentlemanText1:
 	text "What!?"
 
 	para "TEAM ROCKET is"
-	line "at MT.MOON? Huh?"
+	line "at MT.MOON?"
 	done
 
 PewterPokecenter1FGentlemanText2:
 	ntag "GENTLEMAN:"
-	text "I'm on the phone!"
+	text "Huh?"
+
+	para "I'm on the phone!"
 
 	para "Scram!"
 	done

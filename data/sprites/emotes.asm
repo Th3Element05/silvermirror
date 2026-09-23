@@ -15,7 +15,9 @@ Emotes:
 	emote HeartEmote,     4, $f8
 	emote BoltEmote,      4, $f8
 	emote SleepEmote,     4, $f8
-	emote FishEmote,      4, $f8
+;	emote FishEmote,      4, $f8
+	emote Music1Emote,    4, $f8
+	emote Music2Emote,    4, $f8
 	emote JumpShadowGFX,  1, $fc
 	emote FishingRodGFX,  2, $fc
 	emote BoulderDustGFX, 2, $fe
