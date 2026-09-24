@@ -44,8 +44,8 @@ MonMenuIconPals:
 	icon_pals PINK,   GREEN    ; CLEFABLE
 	icon_pals RED,    YELLOW   ; VULPIX
 	icon_pals YELLOW, PINK     ; NINETALES
-	icon_pals PINK,   GREEN    ; JIGGLYPUFF
-	icon_pals PINK,   GREEN    ; WIGGLYTUFF
+	icon_pals BLUE,   GREEN    ; JIGGLYPUFF
+	icon_pals BLUE,   GREEN    ; WIGGLYTUFF
 	icon_pals BLUE,   GREEN    ; ZUBAT
 	icon_pals BLUE,   GREEN    ; GOLBAT
 	icon_pals GREEN,  YELLOW   ; ODDISH
