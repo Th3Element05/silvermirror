@@ -16,18 +16,18 @@
 	RGB 05, 05, 05
 ;Bulbasaur palette
 	RGB 31, 31, 31
-	RGB 09, 28, 15
-	RGB 31, 10, 06
+	RGB 04, 26, 12 ;09, 28, 15
+	RGB 31, 10, 06 ;31, 10, 06
 	RGB 01, 01, 01
 ;Charmander palette
 	RGB 31, 31, 31
-	RGB 31, 13, 04
-	RGB 22, 05, 05
+	RGB 31, 17, 08 ;31, 13, 04
+	RGB 24, 10, 05 ;22, 05, 05
 	RGB 01, 01, 01
 ;Squirtle palette
 	RGB 31, 31, 31
-	RGB 22, 18, 08
-	RGB 09, 16, 31
+	RGB 24, 14, 01 ;22, 18, 08
+	RGB 12, 25, 27 ;09, 16, 31
 	RGB 01, 01, 01
 ;female trainer palette
 	RGB 31, 31, 31
