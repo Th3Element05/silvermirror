@@ -3,8 +3,8 @@
 
 	db   "If it notices"
 	next "anything that"
-	next "moves, it"
+	next "moves, it will"
 
-	page "immediately flings"
+	page "immediately fling"
 	next "its vine at the"
 	next "object.@"

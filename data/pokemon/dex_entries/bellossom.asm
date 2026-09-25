@@ -5,6 +5,6 @@
 	next "together, their"
 	next "petals rub against"
 
-	page "each other,"
-	next "making pretty,"
+	page "each other, which"
+	next "makes pretty,"
 	next "relaxing sounds.@"
