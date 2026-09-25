@@ -152,8 +152,8 @@ AzaleaTownTeacherText:
 AzaleaTownSlowpokeScript:
 	opentext
 	writetext AzaleaTownSlowpokeText1
-	pause 60
-	writetext AzaleaTownSlowpokeText2
+;	pause 60
+;	writetext AzaleaTownSlowpokeText2
 	cry SLOWPOKE
 	waitbutton
 	closetext
@@ -162,14 +162,17 @@ AzaleaTownSlowpokeScript:
 AzaleaTownSlowpokeText1:
 	ntag "SLOWPOKE:"
 	text "<……> <……> <……>"
+	line "<……> <……> <……>"
+	cont "<……> <……> <……>"
+	cont "<……> <……> <……>"
 
-	para "<……> <……> <……>"
+	para "<……> <……>Yawn?"
 	done
 
-AzaleaTownSlowpokeText2:
-	ntag "SLOWPOKE:"
-	text "<……> <……>Yawn?"
-	done
+;AzaleaTownSlowpokeText2:
+;	ntag "SLOWPOKE:"
+;	text "<……> <……>Yawn?"
+;	done
 
 AzaleaTownSign:
 	jumptext AzaleaTownSignText

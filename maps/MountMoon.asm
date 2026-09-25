@@ -46,9 +46,11 @@ TrainerHikerDaniel:
 
 HikerDanielSeenText:
 	ntag "HIKER:"
-	text "Whoa! You shocked"
-	line "me! Oh, you're"
-	cont "just a kid!"
+	text "Whoa!"
+	line "You shocked me!"
+
+	para "Oh, you're"
+	line "just a kid!"
 	done
 
 HikerDanielBeatenText:

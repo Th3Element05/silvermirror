@@ -119,8 +119,8 @@ CeruleanCityRivalBeforeBattleText:
 	roll "smart #MON!"
 
 	para "Here, let me see"
-	line "what you caught,"
-	cont "<PLAYER>!"
+	line "what you caught!"
+;	cont "<PLAYER>!"
 	done
 
 CeruleanCityRivalBattleWinText:
@@ -245,8 +245,8 @@ CeruleanCityRocketLeavesText:
 CeruleanCitySlowbroScript:
 	opentext
 	writetext CeruleanCitySlowbroText1
-	pause 60
-	writetext CeruleanCitySlowbroText2
+;	pause 60
+;	writetext CeruleanCitySlowbroText2
 	cry SLOWBRO
 	waitbutton
 	closetext
@@ -255,14 +255,17 @@ CeruleanCitySlowbroScript:
 CeruleanCitySlowbroText1:
 	ntag "SLOWBRO:"
 	text "<……> <……> <……>"
+	line "<……> <……> <……>"
+	cont "<……> <……> <……>"
+	cont "<……> <……> <……>"
 
-	para "<……> <……> <……>"
+	para "<……> <……>Yarah?"
 	done
 
-CeruleanCitySlowbroText2:
-	ntag "SLOWBRO:"
-	text "<……> <……>Yarah?"
-	done
+;CeruleanCitySlowbroText2:
+;	ntag "SLOWBRO:"
+;	text "<……> <……>Yarah?"
+;	done
 
 CeruleanCitySlowbroTrainerScript:
 	turnobject CERULEANCITY_SLOWBRO_TRAINER, LEFT
@@ -385,7 +388,7 @@ CeruleanCitySuperNerd1Text:
 	cont "can't control her"
 	roll "SLOWBRO."
 	
-	para "Its blocking the"
+	para "It's blocking the"
 	line "path…"
 
 	para "There might be a"
@@ -405,9 +408,11 @@ CeruleanCityCooltrainerMScript:
 CeruleanCityCooltrainerMText:
 	ntag "TRAINER:"
 	text "You're a trainer"
-	line "too? Collecting,"
-	cont "fighting, it's a"
-	roll "tough life."
+	line "too?"
+
+	para "Collecting,"
+	line "battling…"
+	cont "It's a tough life."
 	done
 
 CeruleanCitySuperNerd2Script:
@@ -416,8 +421,9 @@ CeruleanCitySuperNerd2Text:
 	ntag "SUPERNERD:"
 	text "You're making an"
 	line "encyclopedia on"
-	cont "#MON? That"
-	roll "sounds amusing."
+	cont "#MON?"
+
+	para "That sounds fun."
 	done
 
 CeruleanCityCooltrainerFScript:
@@ -471,9 +477,10 @@ CeruleanGymSignText:
 CeruleanCityBikeShopSign:
 	jumptext CeruleanCityBikeShopSignText
 CeruleanCityBikeShopSignText:
-	text "Grass and caves"
+	text "BIKE SHOP"
+
+	para "Grass and caves"
 	line "handled easily!"
-	cont "BIKE SHOP"
 	done
 
 CeruleanCityTrainerTips:

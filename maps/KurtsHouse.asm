@@ -571,8 +571,8 @@ KurtsHouseSlowpoke:
 	faceplayer
 	opentext
 	writetext KurtsHouseSlowpokeText1
-	pause 60
-	writetext KurtsHouseSlowpokeText2
+;	pause 60
+;	writetext KurtsHouseSlowpokeText2
 	cry SLOWPOKE
 	waitbutton
 	closetext
@@ -581,14 +581,17 @@ KurtsHouseSlowpoke:
 KurtsHouseSlowpokeText1:
 	ntag "SLOWPOKE:"
 	text "<……> <……> <……>"
+	line "<……> <……> <……>"
+	cont "<……> <……> <……>"
+	cont "<……> <……> <……>"
 
-	para "<……> <……> <……>"
+	para "<……> <……>Yawn?"
 	done
 
-KurtsHouseSlowpokeText2:
-	ntag "SLOWPOKE:"
-	text "<……> <……>Yawn?"
-	done
+;KurtsHouseSlowpokeText2:
+;	ntag "SLOWPOKE:"
+;	text "<……> <……>Yawn?"
+;	done
 
 KurtsHouseOakPhoto:
 	jumptext KurtsHouseOakPhotoText
