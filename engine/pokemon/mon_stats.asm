@@ -160,6 +160,8 @@ PrintTempMonDVs:
 	lb bc, BANK(StatDataGFX), 4 ; bank in 'b', Num of Tiles in 'c'
 	call Request2bpp
 	hlcoord 13, 4 ; placing the Tiles in the info box
+;	ld a, $68
+;	call PrintDVgfx
 	ld [hl], $68
 	inc hl
 	ld [hl], $69
@@ -199,6 +201,8 @@ PrintTempMonDVs:
 	lb bc, BANK(StatDataGFX), 4 ; bank in 'b', Num of Tiles in 'c'
 	call Request2bpp
 	hlcoord 13, 6 ; placing the Tiles in the info box
+;	ld a, $6c
+;	call PrintDVgfx
 	ld [hl], $6c
 	inc hl
 	ld [hl], $6d
@@ -238,6 +242,8 @@ PrintTempMonDVs:
 	lb bc, BANK(StatDataGFX), 4 ; bank in 'b', Num of Tiles in 'c'
 	call Request2bpp
 	hlcoord 13, 8 ; placing the Tiles in the info box
+;	ld a, $74
+;	call PrintDVgfx
 	ld [hl], $74
 	inc hl
 	ld [hl], $75
@@ -278,6 +284,8 @@ PrintTempMonDVs:
 	lb bc, BANK(StatDataGFX), 4 ; bank in 'b', Num of Tiles in 'c'
 	call Request2bpp
 	hlcoord 13, 10 ; placing the Tiles in the info box
+;	ld a, $78
+;	call PrintDVgfx
 	ld [hl], $78
 	inc hl
 	ld [hl], $79
@@ -314,6 +322,8 @@ PrintTempMonDVs:
 	lb bc, BANK(StatDataGFX), 4 ; bank in 'b', Num of Tiles in 'c'
 	call Request2bpp
 	hlcoord 13, 2 ; placing the Tiles in the info box
+;	ld a, $64
+;	call PrintDVgfx
 	ld [hl], $64
 	inc hl
 	ld [hl], $65
@@ -333,6 +343,14 @@ PrintTempMonDVs:
 	next "DEF"
 	next "SPC"
 	next "SPE@"
+
+;PrintDVgfx:
+;rept 3
+;	ld [hli], a
+;	inc a
+;endr
+;	ld [hl], a
+;	ret
 
 GetGender:
 ; Return the gender of a given monster (wCurPartyMon/wCurOTMon/wCurWildMon).
