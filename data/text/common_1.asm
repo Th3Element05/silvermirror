@@ -1853,8 +1853,10 @@ _DaycareDummyText::
 _DayCareManIntroText::
 	ntag "DAYCARE:"
 	text "I'm the DAYCARE"
-	line "MAN. Want me to"
-	cont "raise a #MON?"
+	line "MAN."
+
+	para "Want me to raise"
+	line "a #MON?"
 	done
 
 _DayCareManIntroEggText::

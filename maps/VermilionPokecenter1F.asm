@@ -38,20 +38,26 @@ VermilionPokecenter1FSailorScript:
 VermilionPokecenter1FSailorText:
 	ntag "SAILOR:"
 	text "My #MON was"
-	line "poisoned! It"
-	cont "fainted while we"
-	roll "were walking!"
+	line "poisoned!"
+
+	para "It fainted while"
+	line "we were walking!"
 	done
 
 VermilionPokecenter1FGuruScript:
 	jumptextfaceplayer VermilionPokecenter1FGuruText
 VermilionPokecenter1FGuruText:
 	ntag "MAN:"
+;	text "Even if they are"
+;	line "the same level,"
+;	cont "#MON can have"
+;	roll "very different"
+;	cont "abilities."
+;
 	text "Even if they are"
 	line "the same level,"
 	cont "#MON can have"
-	roll "very different"
-	cont "abilities."
+	roll "different stats."
 
 	para "A #MON raised"
 	line "by a trainer is"

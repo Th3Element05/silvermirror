@@ -225,8 +225,8 @@ BugCatcherEllisBeatenText:
 BugCatcherEllisAfterBattleText:
 	ntag "BUGCATCHER:"
 	text "Are my #MON"
-	line "weak? Or, am I"
-	cont "just bad?"
+	line "weak?"
+	cont "Or am I just bad?"
 	done
 
 TrainerPicnickerEmily:
@@ -253,8 +253,8 @@ PicnickerEmilyBeatenText:
 PicnickerEmilyAfterBattleText:
 	ntag "PICNICKER:"
 	text "I want to get"
-	line "stronger! What's"
-	cont "your secret?"
+	line "stronger!"
+	cont "What's your secret?"
 	done
 
 TrainerCamperLloyd:
