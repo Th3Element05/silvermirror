@@ -1,10 +1,18 @@
 	db "WEED@" ; species name
 	dw 108, 120 ; height, weight
 
-	db   "During the day, it"
-	next "stays in the cold"
-	next "underground to"
+	db   "During the day,"
+	next "it stays in the"
+	next "cold underground"
 
-	page "avoid the sun."
+	page "to avoid the sun."
 	next "It grows by bath-"
 	next "ing in moonlight.@"
+
+;	db   "During the day, it"
+;	next "stays in the cold"
+;	next "underground to"
+;
+;	page "avoid the sun."
+;	next "It grows by bath-"
+;	next "ing in moonlight.@"
