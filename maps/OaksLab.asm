@@ -1842,14 +1842,13 @@ DebugAllTMs:
 	writetext DebugAllTMsText
 	yesorno
 	iffalse .End
-	giveitem TM_DYNAMICPUNCH
 	giveitem TM_DYNAMICPUNCH ;TM01 ; aa
 	giveitem TM_DRAGON_CLAW  ;TM02 ; ab
 	giveitem TM_SURF         ;TM03 ; ac
 	giveitem TM_CALM_MIND    ;TM04 ; ad
 	giveitem TM_WILL_O_WISP  ;TM05 ; ae
 	giveitem TM_TOXIC        ;TM06 ; af
-	giveitem TM_BULK_UP      ;TM07 ; b0
+	giveitem TM_MEDITATE     ;TM07 ; b0
 	giveitem TM_BODY_SLAM    ;TM08 ; b1
 	giveitem TM_BULLET_SEED  ;TM09 ; b2
 	giveitem TM_HIDDEN_POWER ;TM10 ; b3
@@ -1876,7 +1875,7 @@ DebugAllTMs:
 	giveitem TM_MUD_SLAP     ;TM31 ; c8
 	giveitem TM_DOUBLE_TEAM  ;TM32 ; c9
 	giveitem TM_REFLECT      ;TM33 ; ca
-	giveitem TM_BIDE         ;TM34 ; cb
+	giveitem TM_ROCK_TOMB    ;TM34 ; cb ;BIDE
 	giveitem TM_METRONOME    ;TM35 ; cc
 	giveitem TM_SELFDESTRUCT ;TM36 ; cd
 	giveitem TM_SUBMISSION   ;TM37 ; ce

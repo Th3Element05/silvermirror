@@ -88,7 +88,7 @@ MoveDescriptions::
 	dw ThunderboltDescription
 	dw ThunderWaveDescription
 	dw ThunderDescription
-	dw RockThrowDescription
+	dw RockTombDescription ;RockThrowDescription
 	dw EarthquakeDescription
 	dw FissureDescription
 	dw DigDescription
@@ -96,7 +96,7 @@ MoveDescriptions::
 	dw ConfusionDescription
 	dw PsychicMDescription
 	dw HypnosisDescription
-	dw BulkUpDescription ;MeditateDescription
+	dw MeditateDescription ;BulkUpDescription
 	dw AgilityDescription
 	dw QuickAttackDescription
 	dw RageDescription
@@ -117,7 +117,7 @@ MoveDescriptions::
 	dw HazeDescription
 	dw ReflectDescription
 	dw FocusEnergyDescription
-	dw BideDescription
+	dw PaybackDescription ;BideDescription
 	dw MetronomeDescription
 	dw MirrorShotDescription ;MirrorMoveDescription
 	dw SelfdestructDescription
@@ -930,11 +930,15 @@ ThunderDescription:
 ;	db   "An attack that may"
 ;	next "cause paralysis.@"
 
-RockThrowDescription:
-	db   "Attack by throwing"
-	feed "small rocks.@"
-;	db   "Drops rocks on the"
-;	next "enemy.@"
+RockTombDescription:
+	db   "Hurls boulders at"
+	feed "the target, which"
+	feed "lower its SPEED.@"
+;RockThrowDescription:
+;	db   "Attack by throwing"
+;	feed "small rocks.@"
+;;	db   "Drops rocks on the"
+;;	next "enemy.@"
 
 EarthquakeDescription:
 	db   "User causes the"
@@ -985,13 +989,16 @@ HypnosisDescription:
 ;	db   "May put the foe to"
 ;	next "sleep.@"
 
-BulkUpDescription:
-	db   "User flexes their"
-	feed "muscles to raise"
-	feed "ATTACK & DEFENSE.@"
-;MeditateDescription:
+MeditateDescription:
+	db   "User meditates to"
+	feed "raise its ATTACK"
+	feed "and DEFENSE.@"
 ;	db   "Raises the user's"
 ;	next "ATTACK.@"
+;BulkUpDescription:
+;	db   "User flexes their"
+;	feed "muscles to raise"
+;	feed "ATTACK & DEFENSE.@"
 
 AgilityDescription:
 	db   "User lightens its"
@@ -1141,12 +1148,20 @@ FocusEnergyDescription:
 ;	db   "Raises the criti-"
 ;	next "cal hit ratio.@"
 
-BideDescription:
-	db   "Absorbs damage for"
-	feed "2-3 turns, then"
-	feed "hits back double.@"
-;	db   "Waits 2-3 turns &"
-;	next "hits back double.@"
+PaybackDescription:
+	db   "Power is doubled"
+	feed "if the user moves"
+	feed "after the target.@"
+;	db   "If the user moves"
+;	feed "after the target,"
+;	feed "power is doubled.@"
+
+;BideDescription:
+;	db   "Absorbs damage for"
+;	feed "2-3 turns, then"
+;	feed "hits back double.@"
+;;	db   "Waits 2-3 turns &"
+;;	next "hits back double.@"
 
 MetronomeDescription:
 	db   "User unlocks its"

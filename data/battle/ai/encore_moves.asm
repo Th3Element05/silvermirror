@@ -11,7 +11,7 @@ EncoreMoves:
 	db GROWTH
 	db POISONPOWDER
 	db STRING_SHOT
-	db BULK_UP ;MEDITATE ;removed
+	db MEDITATE ;bulk_up
 	db AGILITY
 	db TELEPORT
 	db SCREECH

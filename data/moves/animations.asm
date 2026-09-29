@@ -89,7 +89,7 @@ BattleAnimations::
 	dw BattleAnim_Thunderbolt
 	dw BattleAnim_ThunderWave
 	dw BattleAnim_Thunder
-	dw BattleAnim_RockThrow
+	dw BattleAnim_RockTomb ;_RockThrow
 	dw BattleAnim_Earthquake
 	dw BattleAnim_Fissure
 	dw BattleAnim_Dig
@@ -97,7 +97,7 @@ BattleAnimations::
 	dw BattleAnim_Confusion
 	dw BattleAnim_PsychicM
 	dw BattleAnim_Hypnosis
-	dw BattleAnim_BulkUp ;_Meditate
+	dw BattleAnim_Meditate ;_BulkUp ;
 	dw BattleAnim_Agility
 	dw BattleAnim_QuickAttack
 	dw BattleAnim_Rage
@@ -118,7 +118,7 @@ BattleAnimations::
 	dw BattleAnim_Haze
 	dw BattleAnim_Reflect
 	dw BattleAnim_FocusEnergy
-	dw BattleAnim_Bide
+	dw BattleAnim_Payback ;_Bide ;
 	dw BattleAnim_Metronome
 	dw BattleAnim_MirrorShot ;_MirrorMove ;
 	dw BattleAnim_Selfdestruct
@@ -1935,6 +1935,7 @@ BattleAnim_DrillPeck:
 	anim_ret
 
 BattleAnim_Submission:
+	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_HP_FIGHTING
 	anim_1gfx BATTLE_ANIM_GFX_HIT
 	anim_call BattleAnim_UserObj_1Row
 	anim_bgeffect BATTLE_BG_EFFECT_WOBBLE_MON, $0, BG_EFFECT_TARGET, $0
@@ -2347,7 +2348,8 @@ BattleAnim_Thunder:
 	anim_wait 48
 	anim_ret
 
-BattleAnim_RockThrow:
+BattleAnim_RockTomb:
+;BattleAnim_RockThrow:
 	anim_1gfx BATTLE_ANIM_GFX_ROCKS
 	anim_bgeffect BATTLE_BG_EFFECT_SHAKE_SCREEN_X, $60, $1, $0
 	anim_sound 0, 1, SFX_STRENGTH
@@ -2364,7 +2366,7 @@ BattleAnim_RockThrow:
 	anim_wait 2
 	anim_sound 0, 1, SFX_STRENGTH
 	anim_obj BATTLE_ANIM_OBJ_SMALL_ROCK, 136, 68, $30
-	anim_wait 60 ;96
+	anim_wait 64 ;96
 	anim_ret
 
 BattleAnim_Earthquake:
@@ -2824,31 +2826,31 @@ BattleAnim_FocusEnergy:
 	anim_call BattleAnim_ShowMon_0
 	anim_ret
 
-BattleAnim_Bide:
-	anim_1gfx BATTLE_ANIM_GFX_HIT
-	anim_if_param_equal $0, .attack ;BattleAnim_MegaPunch, removed
-	anim_call BattleAnim_TargetObj_1Row
-	anim_sound 0, 0, SFX_ESCAPE_ROPE
-	anim_bgeffect BATTLE_BG_EFFECT_CYCLE_MON_LIGHT_DARK_REPEATING, $0, BG_EFFECT_USER, $20
-	anim_wait 72
-	anim_incbgeffect BATTLE_BG_EFFECT_CYCLE_MON_LIGHT_DARK_REPEATING
-	anim_call BattleAnim_ShowMon_0
-	anim_ret
-
-.attack
-	anim_bgeffect BATTLE_BG_EFFECT_SHAKE_SCREEN_X, $40, $2, $0
-	anim_wait 48
-	anim_bgeffect BATTLE_BG_EFFECT_FLASH_INVERTED, $0, $8, $3
-.loop
-	anim_call BattleAnimSub_Punch
-;	anim_sound 0, 1, SFX_MEGA_PUNCH
+;BattleAnim_Bide:
+;	anim_1gfx BATTLE_ANIM_GFX_HIT
+;	anim_if_param_equal $0, .attack ;BattleAnim_MegaPunch, removed
+;	anim_call BattleAnim_TargetObj_1Row
+;	anim_sound 0, 0, SFX_ESCAPE_ROPE
+;	anim_bgeffect BATTLE_BG_EFFECT_CYCLE_MON_LIGHT_DARK_REPEATING, $0, BG_EFFECT_USER, $20
+;	anim_wait 72
+;	anim_incbgeffect BATTLE_BG_EFFECT_CYCLE_MON_LIGHT_DARK_REPEATING
+;	anim_call BattleAnim_ShowMon_0
+;	anim_ret
+;
+;.attack
+;	anim_bgeffect BATTLE_BG_EFFECT_SHAKE_SCREEN_X, $40, $2, $0
+;	anim_wait 48
+;	anim_bgeffect BATTLE_BG_EFFECT_FLASH_INVERTED, $0, $8, $3
+;.loop
+;	anim_call BattleAnimSub_Punch
+;;	anim_sound 0, 1, SFX_MEGA_PUNCH
+;;	anim_obj BATTLE_ANIM_OBJ_PUNCH, 136, 56, $0
+;;	anim_obj BATTLE_ANIM_OBJ_HIT_BIG_YFIX, 136, 56, $0
+;;	anim_wait 6
 ;	anim_obj BATTLE_ANIM_OBJ_PUNCH, 136, 56, $0
-;	anim_obj BATTLE_ANIM_OBJ_HIT_BIG_YFIX, 136, 56, $0
 ;	anim_wait 6
-	anim_obj BATTLE_ANIM_OBJ_PUNCH, 136, 56, $0
-	anim_wait 6
-	anim_loop 3, .loop
-	anim_ret
+;	anim_loop 3, .loop
+;	anim_ret
 
 BattleAnim_Metronome:
 	anim_2gfx BATTLE_ANIM_GFX_MISC, BATTLE_ANIM_GFX_SPEED
@@ -4842,7 +4844,8 @@ BattleAnim_GigaDrain:
 	anim_ret
 
 BattleAnim_CalmMind:
-BattleAnim_BulkUp:
+BattleAnim_Meditate:
+;BattleAnim_BulkUp:
 BattleAnim_Endure:
 	anim_1gfx BATTLE_ANIM_GFX_SPEED
 	anim_call BattleAnim_TargetObj_1Row
@@ -5305,6 +5308,7 @@ BattleAnim_Encore:
 	anim_wait 16
 	anim_ret
 
+BattleAnim_Payback:
 BattleAnim_Pursuit:
 	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_HP_DARK
 	anim_1gfx BATTLE_ANIM_GFX_HIT

@@ -173,7 +173,7 @@ PsyduckEggMoves:
 MankeyEggMoves:
 ;	db ROCK_SLIDE ;tm48
 	db FORESIGHT
-	db BULK_UP    ;MEDITATE
+	db MEDITATE   ;bulk_up
 ;	db COUNTER    ;tm18
 	db FLAIL      ;REVERSAL ;removed
 ;	db BEAT_UP    ;removed
@@ -206,7 +206,7 @@ AbraEggMoves:
 
 MachopEggMoves:
 	db LIGHT_SCREEN
-	db BULK_UP      ;MEDITATE
+	db MEDITATE     ;bulk_up
 	db LOW_SWEEP    ;ROLLING_KICK ;removed
 	db ENCORE
 ;	db DETECT       ;removed
@@ -834,7 +834,7 @@ StantlerEggMoves:
 
 ;SmoochumEggMoves:
 JynxEggMoves:
-	db BULK_UP ;MEDITATE ;removed
+	db MEDITATE   ;bulk_up
 	db FAKE_OUT
 	db -1 ; end
 
@@ -843,7 +843,7 @@ ElectabuzzEggMoves:
 	db KARATE_CHOP
 	db BARRIER
 	db LOW_SWEEP    ;ROLLING_KICK ;removed
-	db BULK_UP      ;MEDITATE ;removed
+	db MEDITATE     ;bulk_up
 	db CROSS_CHOP
 ;	db DETECT       ;removed
 	db -1 ; end

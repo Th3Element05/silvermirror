@@ -202,7 +202,7 @@ DEF TM01 EQU const_value
 	add_tm CALM_MIND    ;TM04 ; ad ;new
 	add_tm WILL_O_WISP  ;TM05 ; ae
 	add_tm TOXIC        ;TM06 ; af
-	add_tm BULK_UP      ;TM07 ; b0 ;new
+	add_tm MEDITATE     ;TM07 ; b0 ;new
 	add_tm BODY_SLAM    ;TM08 ; b1
 	add_tm BULLET_SEED  ;TM09 ; b2 ;new
 	add_tm HIDDEN_POWER ;TM10 ; b3
@@ -229,7 +229,7 @@ DEF TM01 EQU const_value
 	add_tm MUD_SLAP     ;TM31 ; c8
 	add_tm DOUBLE_TEAM  ;TM32 ; c9
 	add_tm REFLECT      ;TM33 ; ca
-	add_tm BIDE         ;TM34 ; cb
+	add_tm ROCK_TOMB    ;TM34 ; cb ;BIDE
 	add_tm METRONOME    ;TM35 ; cc
 	add_tm SELFDESTRUCT ;TM36 ; cd
 	add_tm SUBMISSION   ;TM37 ; ce

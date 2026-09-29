@@ -35,7 +35,7 @@ Moves:
 	move ROOST,        EFFECT_HEAL,                0, FLYING,       STATUS,   100, 10,   0 ;WHIRLWIND, removed
 	move BOUNCE,       EFFECT_FLY,                85, FLYING,       PHYSICAL,  85,  5,  30 ;FLY, removed
 	move BUG_BITE,     EFFECT_NORMAL_HIT,         60, BUG,          PHYSICAL, 100, 20,   0 ;BIND, removed
-	move WAKE_UP_SLAP, EFFECT_WAKE_UP_SLAP,       70, FIGHTING,     PHYSICAL, 100, 10,   0 ;SLAM, removed
+	move WAKE_UP_SLAP, EFFECT_WAKE_UP_SLAP,       60, FIGHTING,     PHYSICAL, 100, 10,   0 ;SLAM, removed
 	move VINE_WHIP,    EFFECT_NORMAL_HIT,         40, GRASS,        PHYSICAL, 100, 25,   0
 	move STOMP,        EFFECT_STOMP,              65, NORMAL,       PHYSICAL, 100, 20,  30
 	move DOUBLE_KICK,  EFFECT_DOUBLE_HIT,         30, FIGHTING,     PHYSICAL, 100, 30,   0
@@ -63,7 +63,7 @@ Moves:
 	move ROAR,         EFFECT_FORCE_SWITCH,        0, NORMAL,       STATUS,   100, 20,   0
 	move SING,         EFFECT_SLEEP,               0, NORMAL,       STATUS,    55, 15,   0
 	move SUPERSONIC,   EFFECT_CONFUSE,             0, NORMAL,       STATUS,    55, 20,   0
-	move LOUD_VOICE,   EFFECT_WAKE_UP_SLAP,       70, NORMAL,       SPECIAL,  100, 10,   0 ;SONICBOOM, removed
+	move LOUD_VOICE,   EFFECT_WAKE_UP_SLAP,       60, NORMAL,       SPECIAL,  100, 10,   0 ;SONICBOOM, removed
 	move DISABLE,      EFFECT_DISABLE,             0, NORMAL,       STATUS,   100, 20,   0
 	move ACID,         EFFECT_SP_DEF_DOWN_HIT,    40, POISON,       SPECIAL,  100, 30,  10
 	move EMBER,        EFFECT_BURN_HIT,           40, FIRE,         SPECIAL,  100, 25,  10
@@ -102,7 +102,8 @@ Moves:
 	move THUNDERBOLT,  EFFECT_PARALYZE_HIT,       95, ELECTRIC,     SPECIAL,  100, 15,  10
 	move THUNDER_WAVE, EFFECT_PARALYZE,            0, ELECTRIC,     STATUS,   100, 20,   0
 	move THUNDER,      EFFECT_THUNDER,           120, ELECTRIC,     SPECIAL,   70, 10,  30
-	move ROCK_THROW,   EFFECT_NORMAL_HIT,         50, ROCK,         PHYSICAL,  90, 15,   0
+	move ROCK_TOMB,    EFFECT_SPEED_DOWN_HIT,     50, ROCK,         PHYSICAL,  90, 15, 100 ;ROCK_THROW, removed
+;	move ROCK_THROW,   EFFECT_NORMAL_HIT,         50, ROCK,         PHYSICAL,  90, 15,   0
 	move EARTHQUAKE,   EFFECT_EARTHQUAKE,        100, GROUND,       PHYSICAL, 100, 10,   0
 	move FISSURE,      EFFECT_OHKO,                2, GROUND,       PHYSICAL,  30,  5,   0
 	move DIG,          EFFECT_FLY,                80, GROUND,       PHYSICAL, 100, 10,   0
@@ -110,10 +111,10 @@ Moves:
 	move CONFUSION,    EFFECT_CONFUSE_HIT,        50, PSYCHIC_TYPE, SPECIAL,  100, 25,  10
 	move PSYCHIC_M,    EFFECT_SP_DEF_DOWN_HIT,    90, PSYCHIC_TYPE, SPECIAL,  100, 10,  10
 	move HYPNOSIS,     EFFECT_SLEEP,               0, PSYCHIC_TYPE, STATUS,    65, 20,   0
-	move BULK_UP,      EFFECT_BULK_UP,             0, FIGHTING,     STATUS,   100, 20,   0 ;MEDITATE, removed
+	move MEDITATE,     EFFECT_BULK_UP,             0, PSYCHIC_TYPE, STATUS,   100, 20,   0 ;bulk_up
 	move AGILITY,      EFFECT_SPEED_UP_2,          0, PSYCHIC_TYPE, STATUS,   100, 30,   0
 	move QUICK_ATTACK, EFFECT_PRIORITY_HIT,       40, NORMAL,       PHYSICAL, 100, 30,   0
-	move RAGE,         EFFECT_RAGE,               20, NORMAL,       PHYSICAL, 100, 20,   0
+	move RAGE,         EFFECT_RAGE,               25, NORMAL,       PHYSICAL, 100, 20,   0 ; OLD POW:20
 	move TELEPORT,     EFFECT_TELEPORT,            0, PSYCHIC_TYPE, STATUS,   100, 20,   0
 	move NIGHT_SHADE,  EFFECT_LEVEL_DAMAGE,        1, GHOST,        SPECIAL,  100, 15,   0
 	move NASTY_PLOT,   EFFECT_SP_ATK_UP_2,         0, DARK,         STATUS,   100, 20,   0 ;MIMIC, removed
@@ -131,7 +132,8 @@ Moves:
 	move HAZE,         EFFECT_RESET_STATS,         0, ICE,          STATUS,   100, 30,   0
 	move REFLECT,      EFFECT_REFLECT,             0, PSYCHIC_TYPE, STATUS,   100, 20,   0
 	move FOCUS_ENERGY, EFFECT_FOCUS_ENERGY,        0, NORMAL,       STATUS,   100, 30,   0
-	move BIDE,         EFFECT_BIDE,                0, NORMAL,       PHYSICAL, 100, 10,   0
+	move PAYBACK,      EFFECT_PAYBACK,            50, DARK,         PHYSICAL, 100, 10,   0 ;BIDE, removed
+;	move BIDE,         EFFECT_BIDE,                0, NORMAL,       PHYSICAL, 100, 10,   0
 	move METRONOME,    EFFECT_METRONOME,           1, NORMAL,       STATUS,   100, 10,   0
 	move MIRROR_SHOT,  EFFECT_ACCURACY_DOWN_HIT,  65, STEEL,        SPECIAL,   85, 10,  30 ;MIRROR_MOVE, removed
 	move SELFDESTRUCT, EFFECT_SELFDESTRUCT,      250, NORMAL,       PHYSICAL, 100,  5,   0
@@ -180,7 +182,7 @@ Moves:
 	move SUPER_FANG,   EFFECT_SUPER_FANG,          1, NORMAL,       PHYSICAL,  90, 10,   0
 	move SLASH,        EFFECT_NORMAL_HIT,         70, NORMAL,       PHYSICAL, 100, 20,   0
 	move SUBSTITUTE,   EFFECT_SUBSTITUTE,          0, NORMAL,       STATUS,   100, 10,   0
-	move GYRO_BALL,    EFFECT_GYRO_BALL,          50, STEEL,        PHYSICAL, 100,  5,   0 ;STRUGGLE, $ff
+	move GYRO_BALL,    EFFECT_GYRO_BALL,          55, STEEL,        PHYSICAL, 100,  5,   0 ;STRUGGLE, $ff
 	move SKETCH,       EFFECT_SKETCH,              0, NORMAL,       STATUS,   100,  1,   0
 	move BULLET_PUNCH, EFFECT_PRIORITY_HIT,       40, STEEL,        PHYSICAL, 100, 30,   0 ;TRIPLE_KICK, removed
 	move THIEF,        EFFECT_THIEF,              60, DARK,         PHYSICAL, 100, 25, 100

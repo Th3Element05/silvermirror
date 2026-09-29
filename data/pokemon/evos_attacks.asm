@@ -249,7 +249,7 @@ BeedrillEvosAttacks:
 	db 25, SPIKES ;toxic_spikes, x
 	db 28, BUG_BITE ;PIN_MISSILE, 10
 	db 31, AGILITY
-	db 34, FEINT_ATTACK ;assurance, x
+	db 34, PAYBACK ;assurance, x
 	db 37, POISON_JAB
 	db 40, FLAIL ;endeavor, x
 	db 0 ; no more level-up moves
@@ -319,7 +319,7 @@ RattataEvosAttacks:
 	db 16, HYPER_FANG
 	db 19, FEINT_ATTACK ;sucker_punch, x
 	db 22, CRUNCH
-	db 25, FAKE_OUT ;assurance, x
+	db 25, PAYBACK ;assurance, x
 	db 28, SUPER_FANG
 	db 31, DOUBLE_EDGE
 	db 34, FLAIL ;endeavor, x
@@ -338,7 +338,7 @@ RaticateEvosAttacks:
 	db 19, FEINT_ATTACK ;sucker_punch, x
 	db 19, SCARY_FACE ;20, EVOLUTION_MOVE
 	db 24, CRUNCH
-	db 29, FAKE_OUT ;assurance, x
+	db 29, PAYBACK ;assurance, x
 	db 34, SUPER_FANG
 	db 39, DOUBLE_EDGE
 	db 44, FLAIL ;endeavor, x
@@ -355,7 +355,7 @@ SpearowEvosAttacks:
 	db 17, AERIAL_ACE
 	db 21, STEEL_WING ;mirror_move, removed
 	db 25, AGILITY
-	db 29, FEINT_ATTACK ;assurance, x
+	db 29, PAYBACK ;assurance, x
 	db 33, ROOST
 	db 37, DRILL_PECK
 	db 0 ; no more level-up moves
@@ -371,7 +371,7 @@ FearowEvosAttacks:
 	db 17, AERIAL_ACE
 	db 23, STEEL_WING ;mirror_move, removed
 	db 29, AGILITY
-	db 35, FEINT_ATTACK ;assurance, x
+	db 35, PAYBACK ;assurance, x
 	db 41, ROOST
 	db 47, DRILL_PECK
 	db 0 ; no more level-up moves
@@ -618,11 +618,11 @@ VulpixEvosAttacks: ;GEN5
 	db 12, FIRE_SPIN
 	db 15, CONFUSE_RAY
 	db 18, DISABLE ;imprison, x
-	db 20, PURSUIT ;feint_attack, 31
+	db 20, FEINT_ATTACK
 	db 23, FLAME_WHEEL
 	db 26, WILL_O_WISP
 	db 28, HEX
-	db 31, FEINT_ATTACK ;payback, x
+	db 31, PAYBACK
 	db 34, FLAMETHROWER
 	db 36, SAFEGUARD
 	db 39, EXTRASENSORY
@@ -630,24 +630,6 @@ VulpixEvosAttacks: ;GEN5
 	db 47, ATTRACT ;captivate, x
 	db 50, HEAT_WAVE ;inferno, x
 	db 0 ; no more level-up moves
-;
-;	db 0 ; no more evolutions
-;	db 1, EMBER
-;	db 4, ROAR
-;	db 7, LEER ;tail_whip, removed
-;	db 11, QUICK_ATTACK
-;	db 14, FIRE_SPIN ;will_o_wisp, x
-;	db 17, CONFUSE_RAY
-;	db 21, DISABLE ;imprison, x
-;	db 24, FLAMETHROWER
-;	db 27, SAFEGUARD
-;	db 31, FEINT_ATTACK ;payback, x
-;	db 34, HEX ;FIRE_SPIN, 14
-;	db 37, ATTRACT ;captivate, x
-;	db 41, DESTINY_BOND ;grudge, x
-;	db 44, EXTRASENSORY
-;	db 47, FIRE_BLAST
-;	db 0 ; no more level-up moves
 
 NinetalesEvosAttacks:
 	db 0 ; no more evolutions
@@ -954,7 +936,7 @@ MankeyEvosAttacks:
 	db 13, KARATE_CHOP
 	db 17, SEISMIC_TOSS
 	db 21, SCREECH
-	db 25, LOW_SWEEP ;assurance, x
+	db 25, PAYBACK ;assurance, x
 	db 33, SWAGGER
 	db 37, CROSS_CHOP
 	db 41, FEINT_ATTACK ;THRASH, 45
@@ -971,7 +953,7 @@ PrimeapeEvosAttacks:
 	db 13, KARATE_CHOP
 	db 17, SEISMIC_TOSS
 	db 21, SCREECH
-	db 25, LOW_SWEEP ;assurance, x
+	db 25, PAYBACK ;assurance, x
 	db 27, RAGE ;28, EVOLUTION_MOVE
 	db 35, SWAGGER
 	db 41, CROSS_CHOP
@@ -1252,7 +1234,7 @@ GeodudeEvosAttacks:
 	db 1, DEFENSE_CURL
 	db 4, MUD_SLAP ;mud_sport, x
 	db 8, ROCK_POLISH
-	db 11, ROCK_THROW
+	db 11, ROCK_TOMB ;rock_throw, removed
 	db 15, MAGNITUDE
 	db 18, SUBMISSION ;or TAKE_DOWN
 	db 22, ROLLOUT
@@ -1274,7 +1256,7 @@ GolemEvosAttacks:
 	db 1, DEFENSE_CURL
 	db 4, MUD_SLAP ;mud_sport, x
 	db 8, ROCK_POLISH
-	db 11, ROCK_THROW
+	db 11, ROCK_TOMB ;rock_throw, removed
 	db 15, MAGNITUDE
 	db 18, SUBMISSION ;or TAKE_DOWN
 	db 22, ROLLOUT
@@ -1293,7 +1275,7 @@ GolemEvosAttacks:
 ;	db 1, DEFENSE_CURL
 ;	db 4, MUD_SLAP ;mud_sport, x
 ;	db 8, ROCK_POLISH
-;	db 11, ROCK_THROW
+;	db 11, ROCK_TOMB ;rock_throw, removed
 ;	db 15, MAGNITUDE
 ;	db 18, SUBMISSION ;or TAKE_DOWN
 ;	db 22, ROLLOUT
@@ -1602,13 +1584,14 @@ GastlyEvosAttacks:
 	db 15, NIGHT_SHADE
 	db 18, CONFUSE_RAY
 	db 22, FEINT_ATTACK ;sucker_punch, x
-	db 26, HEX ;payback, x
+	db 26, PAYBACK
 	db 29, HYPNOSIS
 	db 29, DREAM_EATER ;SHADOW_BALL, 33
 	db 33, SHADOW_BALL ;DREAM_EATER, 29
 	db 36, DARK_PULSE
 	db 40, DESTINY_BOND
-;	db 43, NIGHTMARE ;removed
+	db 43, HEX
+;	db 47, NIGHTMARE ;removed
 	db 0 ; no more level-up moves
 
 HaunterEvosAttacks:
@@ -1625,32 +1608,35 @@ GengarEvosAttacks: ;GEN4  ;HEX
 	db 15, NIGHT_SHADE
 	db 18, CONFUSE_RAY
 	db 22, FEINT_ATTACK ;sucker_punch, x
-	db 28, HEX ;payback, x
+	db 28, PAYBACK
 	db 33, HYPNOSIS
 	db 33, DREAM_EATER ;SHADOW_BALL, 33
 	db 39, SHADOW_BALL ;DREAM_EATER, 29
 	db 44, DARK_PULSE
 	db 50, DESTINY_BOND
-;	db 55, NIGHTMARE ;removed
+	db 55, HEX
+;	db 61, NIGHTMARE ;removed
 	db 0 ; no more level-up moves
 
-;GengarEvosAttacks:
+;GengarEvosAttacks: ;GEN4  ;HEX
 ;	db 0 ; no more evolutions
-;	db 1, SHADOW_CLAW ;1, EVOLUTION_MOVE, gengar
+;	db 1, SHADOW_CLAW ;1, EVOLUTION_MOVE, (gengar)
 ;	db 1, HYPNOSIS
 ;	db 1, LICK
 ;	db 5, DISABLE ;spite, removed
-;	db 8, MEAN_LOOK
-;	db 12, CURSE
+;	db 8, CURSE
+;	db 11, MEAN_LOOK
 ;	db 15, NIGHT_SHADE
-;	db 19, CONFUSE_RAY
+;	db 18, CONFUSE_RAY
 ;	db 22, FEINT_ATTACK ;sucker_punch, x
-;	db 28, HEX ;payback, x
+;	db 28, PAYBACK
+;	db 33, HYPNOSIS
 ;	db 33, DREAM_EATER ;SHADOW_BALL, 33
 ;	db 39, SHADOW_BALL ;DREAM_EATER, 29
 ;	db 44, DARK_PULSE
 ;	db 50, DESTINY_BOND
-;;	db 55, NIGHTMARE ;removed
+;	db 55, HEX
+;;	db 61, NIGHTMARE ;removed
 ;	db 0 ; no more level-up moves
 
 OnixEvosAttacks:
@@ -1662,7 +1648,7 @@ OnixEvosAttacks:
 	db 1, DEFENSE_CURL
 	db 1, WRAP ;bind, removed
 	db 6, SCREECH
-	db 9, ROCK_THROW
+	db 9, ROCK_TOMB ;rock_throw, removed
 	db 14, RAGE
 	db 17, MUD_SHOT ;rock_tomb, x
 	db 22, SANDSTORM
@@ -1687,7 +1673,7 @@ DrowzeeEvosAttacks:
 	db 9, CONFUSION
 	db 15, HEADBUTT
 	db 18, SMOG ;poison_gas, removed
-	db 21, BULK_UP ;meditate, removed
+	db 21, MEDITATE ;bulk_up
 	db 26, PSYBEAM
 	db 29, BARRIER ;psych_up, removed
 	db 32, ZEN_HEADBUTT ;HEADBUTT, dupe
@@ -1708,7 +1694,7 @@ HypnoEvosAttacks:
 	db 9, CONFUSION
 	db 15, HEADBUTT
 	db 18, SMOG ;poison_gas, removed
-	db 21, BULK_UP ;meditate, removed
+	db 21, MEDITATE ;bulk_up
 	db 28, PSYBEAM
 	db 33, BARRIER ;psych_up, removed
 	db 38, ZEN_HEADBUTT ;HEADBUTT, dupe
@@ -1867,7 +1853,7 @@ HitmonleeEvosAttacks:
 	db 0 ; no more evolutions
 ;	db 1, ;revenge, x
 	db 1, DOUBLE_KICK ;1, EVOLUTION_MOVE
-	db 5, BULK_UP ;meditate, removed
+	db 5, MEDITATE ;bulk_up
 	db 9, LOW_SWEEP ;rolling_kick, x
 	db 13, JUMP_KICK
 	db 17, BRICK_BREAK
@@ -1885,7 +1871,7 @@ HitmonleeEvosAttacks:
 
 HitmonchanEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, BULK_UP ;revenge, x
+	db 1, MEDITATE ;bulk_up ;revenge, x
 	db 1, FURY_STRIKES ;comet_punch, removed
 	db 6, AGILITY
 	db 11, PURSUIT
@@ -1928,7 +1914,7 @@ KoffingEvosAttacks:
 	db 1, TACKLE
 	db 6, SMOG ;SMOG, 1
 	db 10, SMOKESCREEN
-	db 15, PURSUIT ;assurance, x
+	db 15, PAYBACK ;assurance, x
 	db 19, HAZE ;SELFDESTRUCT
 	db 24, SLUDGE
 	db 28, GYRO_BALL ;HAZE
@@ -1945,7 +1931,7 @@ WeezingEvosAttacks:
 	db 1, TACKLE
 	db 6, SMOG ;SMOG, 1
 	db 10, SMOKESCREEN
-	db 15, PURSUIT ;assurance, x
+	db 15, PAYBACK ;assurance, x
 	db 19, HAZE ;SELFDESTRUCT
 	db 24, SLUDGE
 	db 28, GYRO_BALL ;HAZE
@@ -2161,7 +2147,7 @@ MrMimeEvosAttacks:
 	db 1, LIGHT_SCREEN
 	db 1, REFLECT
 	db 1, CONFUSION
-	db 6, BULK_UP ;meditate, removed
+	db 6, MEDITATE ;bulk_up
 	db 10, ENCORE
 	db 14, DOUBLESLAP
 	db 18, PROTECT ;mimic, removed
@@ -2277,7 +2263,7 @@ TaurosEvosAttacks:
 	db 11, SCARY_FACE
 	db 15, PURSUIT
 	db 19, REST
-	db 24, FEINT_ATTACK ;payback, x
+	db 24, PAYBACK
 	db 29, ZEN_HEADBUTT
 	db 35, TAKE_DOWN
 	db 41, SWAGGER
@@ -3357,10 +3343,10 @@ SudowoodoEvosAttacks:
 	db 0 ; no more evolutions
 ;	db 1, ;wood_hammer, x
 ;	db 1, ;copycat, x
-	db 1, ROCK_THROW
+	db 1, ROCK_TOMB ;rock_throw, removed
 	db 6, FLAIL
 	db 9, LOW_SWEEP ;low_kick, ~
-	db 14, ROCK_THROW
+	db 14, ROCK_TOMB ;rock_throw, removed
 	db 17, FURY_STRIKES ;mimic, removed
 	db 22, MEAN_LOOK ;block, x
 	db 25, FEINT_ATTACK
@@ -3626,7 +3612,7 @@ MurkrowEvosAttacks:
 	db 11, HAZE
 	db 15, WING_ATTACK
 	db 21, NIGHT_SHADE
-	db 25, FAKE_OUT ;assurance, x
+	db 25, PAYBACK ;assurance, x
 	db 31, SWAGGER ;taunt, x
 	db 35, FEINT_ATTACK
 	db 41, MEAN_LOOK
@@ -3678,7 +3664,7 @@ MisdreavusEvosAttacks:
 	db 19, MEAN_LOOK
 	db 23, HEX ;PSYBEAM, 1
 	db 28, PAIN_SPLIT
-	db 32, FEINT_ATTACK ;payback, x
+	db 32, PAYBACK
 	db 37, SHADOW_BALL
 	db 41, PERISH_SONG
 	db 46, DESTINY_BOND ;grudge, x
@@ -3740,10 +3726,10 @@ PinecoEvosAttacks:
 	db 9, BUG_BITE
 	db 12, TAKE_DOWN
 	db 17, RAPID_SPIN
-	db 20, BIDE
+	db 20, RAGE ;bide, removed
 	db 23, PIN_MISSILE ;natural_gift
 	db 28, SPIKES
-	db 31, FEINT_ATTACK ;payback, x
+	db 31, PAYBACK
 	db 34, SELFDESTRUCT ;explosion, removed
 	db 39, BARRIER ;iron_defense, x
 	db 42, GYRO_BALL
@@ -3759,11 +3745,11 @@ ForretressEvosAttacks:
 	db 9, BUG_BITE
 	db 12, TAKE_DOWN
 	db 17, RAPID_SPIN
-	db 20, BIDE
+	db 20, RAGE ;bide, removed
 	db 23, PIN_MISSILE ;natural_gift, x
 	db 28, SPIKES
 	db 30, MIRROR_SHOT ;31, EVOLUTION_MOVE
-	db 33, FEINT_ATTACK ;payback
+	db 33, PAYBACK
 	db 38, SELFDESTRUCT ;explosion, removed
 	db 45, BARRIER ;iron_defense
 	db 50, GYRO_BALL
@@ -3838,7 +3824,7 @@ SteelixEvosAttacks:
 	db 1, HARDEN
 	db 1, WRAP ;bind, removed
 	db 6, SCREECH
-	db 9, ROCK_THROW
+	db 9, ROCK_TOMB ;rock_throw, removed
 	db 14, RAGE
 	db 17, MUD_SHOT ;rock_tomb, x
 	db 22, SANDSTORM
@@ -3866,8 +3852,8 @@ SnubbullEvosAttacks:
 	db 19, HEADBUTT
 	db 25, ROAR
 	db 31, RAGE
-	db 37, FEINT_ATTACK ;TAKE_DOWN, 43
-	db 43, TAKE_DOWN ;payback
+	db 37, TAKE_DOWN
+	db 43, PAYBACK
 	db 49, CRUNCH
 	db 0 ; no more level-up moves
 
@@ -3886,8 +3872,8 @@ GranbullEvosAttacks:
 	db 19, HEADBUTT
 	db 27, ROAR
 	db 35, RAGE
-	db 43, FEINT_ATTACK ;TAKE_DOWN, 43
-	db 51, TAKE_DOWN ;payback
+	db 43, TAKE_DOWN
+	db 51, PAYBACK
 	db 59, CRUNCH
 	db 0 ; no more level-up moves
 
@@ -3944,7 +3930,7 @@ ShuckleEvosAttacks: ;GEN6~
 	db 12, STRING_SHOT ;struggle_bug, x
 	db 16, SAFEGUARD
 	db 20, REST
-	db 23, ROCK_THROW
+	db 23, ROCK_TOMB ;rock_throw, removed
 	db 27, ACID ;gastro_acid, x
 	db 31, DISABLE ;power_trick, x
 	db 34, ROCK_BLAST
@@ -3993,8 +3979,8 @@ SneaselEvosAttacks:
 WeavileEvosAttacks:
 	db 0 ; no more evolutions
 ;	db 1, ;embargo, x
-	db 1, BULK_UP ;revenge, x
-	db 1, PURSUIT ;assurance, x
+	db 1, MEDITATE ;bulk_up ;revenge, x
+	db 1, PAYBACK ;assurance, x
 	db 1, SCRATCH
 	db 1, LEER
 	db 1, HONE_CLAWS ;1, EVOLUTION_MOVE ;taunt, x
@@ -4026,7 +4012,7 @@ TeddiursaEvosAttacks:
 	db 43, REST
 	db 43, SNORE
 	db 48, THRASH
-	db 54, ROCK_THROW ;FEINT_ATTACK ;fling, x
+	db 54, ROCK_TOMB ;rock_throw, removed ;FEINT_ATTACK ;fling, x
 	db 0 ; no more level-up moves
 
 UrsaringEvosAttacks:
@@ -4053,7 +4039,7 @@ SlugmaEvosAttacks:
 ;	db 1, ;yawn, x
 	db 1, SMOG
 	db 8, EMBER
-	db 11, ROCK_THROW
+	db 11, ROCK_TOMB ;rock_throw, removed
 	db 16, HARDEN
 	db 23, RECOVER
 	db 26, ANCIENTPOWER
@@ -4070,7 +4056,7 @@ MagcargoEvosAttacks:
 ;	db 1, ;yawn, x
 	db 1, SMOG
 	db 8, EMBER
-	db 11, ROCK_THROW
+	db 11, ROCK_TOMB ;rock_throw, removed
 	db 16, HARDEN
 	db 23, RECOVER
 	db 26, ANCIENTPOWER
@@ -4339,7 +4325,7 @@ DonphanEvosAttacks:
 	db 19, MAGNITUDE
 	db 24, BODY_SLAM ;slam, removed
 	db 24, FURY_STRIKES ;25, EVOLUTION_MOVE ;fury_attack, removed
-	db 31, PURSUIT ;assurance, x
+	db 31, PAYBACK ;assurance, x
 	db 39, SCARY_FACE
 	db 46, EARTHQUAKE
 	db 54, GIGA_IMPACT
@@ -4410,10 +4396,10 @@ SmeargleEvosAttacks:
 
 HitmontopEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, BULK_UP
+	db 1, MEDITATE ;bulk_up
 	db 1, LOW_SWEEP ;1, EVOLUTION_MOVE ;rolling_kick, x
 	db 6, FOCUS_ENERGY
-	db 10, PURSUIT
+	db 10, FEINT_ATTACK ;PURSUIT
 	db 15, QUICK_ATTACK
 	db 19, DOUBLE_KICK ;triple_kick, removed
 	db 24, RAPID_SPIN
@@ -4486,7 +4472,7 @@ MiltankEvosAttacks:
 	db 5, DEFENSE_CURL
 	db 8, STOMP
 	db 11, RECOVER ;milk_drink, removed
-	db 15, BIDE
+	db 15, RAGE ;bide, removed
 	db 19, ROLLOUT
 	db 24, BODY_SLAM
 	db 29, ZEN_HEADBUTT
@@ -4581,7 +4567,7 @@ LarvitarEvosAttacks:
 	db 19, SCARY_FACE
 	db 23, THRASH
 	db 28, DARK_PULSE
-	db 32, PURSUIT ;payback, x
+	db 32, PAYBACK
 	db 37, CRUNCH
 	db 41, EARTHQUAKE
 	db 46, STONE_EDGE
@@ -4599,7 +4585,7 @@ PupitarEvosAttacks:
 	db 19, SCARY_FACE
 	db 23, THRASH
 	db 28, DARK_PULSE
-	db 34, PURSUIT ;payback, x
+	db 34, PAYBACK
 	db 41, CRUNCH
 	db 47, EARTHQUAKE
 	db 54, STONE_EDGE
@@ -4619,7 +4605,7 @@ TyranitarEvosAttacks:
 	db 19, SCARY_FACE
 	db 23, THRASH
 	db 28, DARK_PULSE
-	db 34, PURSUIT ;payback, x
+	db 34, PAYBACK
 	db 41, CRUNCH
 	db 47, EARTHQUAKE
 	db 54, STONE_EDGE
@@ -4635,7 +4621,7 @@ LugiaEvosAttacks:
 	db 29, RAIN_DANCE
 	db 37, HYDRO_PUMP
 	db 43, AEROBLAST
-	db 50, FEINT_ATTACK ;PAYBACK ;punishment, x
+	db 50, PAYBACK
 	db 57, ANCIENTPOWER
 	db 65, SAFEGUARD
 	db 71, RECOVER
@@ -4654,7 +4640,7 @@ HoOhEvosAttacks:
 	db 29, SUNNY_DAY
 	db 37, FIRE_BLAST
 	db 43, SACRED_FIRE
-	db 50, FEINT_ATTACK ;PAYBACK ;punishment, x
+	db 50, PAYBACK
 	db 57, ANCIENTPOWER
 	db 65, SAFEGUARD
 	db 71, RECOVER

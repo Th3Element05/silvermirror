@@ -12,7 +12,7 @@ StallMoves:
 	db LEECH_SEED
 	db GROWTH
 	db STRING_SHOT
-	db BULK_UP ;MEDITATE ;removed
+	db MEDITATE ;bulk_up
 	db AGILITY
 	db RAGE
 ;	db MIMIC ;removed
@@ -25,7 +25,7 @@ StallMoves:
 	db HAZE
 	db REFLECT
 	db FOCUS_ENERGY
-	db BIDE
+;	db BIDE, removed
 	db AMNESIA
 	db TRANSFORM
 	db SPLASH

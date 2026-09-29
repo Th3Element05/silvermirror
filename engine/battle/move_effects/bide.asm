@@ -56,7 +56,7 @@ BattleCommand_StoreEnergy:
 
 	ld a, BATTLE_VARS_MOVE_ANIM
 	call GetBattleVarAddr
-	ld a, BIDE
+	ld a, ENDURE ;BIDE
 	ld [hl], a
 
 	ld b, unleashenergy_command

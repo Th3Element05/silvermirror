@@ -184,6 +184,7 @@ ENDM
 	command wakeupslap              ; b1
 	command hex                     ; b2
 	command burn                    ; b3
+	command payback                 ; b4
 ;	command weightdamage            ; 
 ;	command growth                  ; 
 DEF NUM_EFFECT_COMMANDS EQU const_value - 1

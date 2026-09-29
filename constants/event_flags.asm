@@ -13,7 +13,7 @@
 ; used 8
 
 ; Kanto Gym Leader TM gifts
-	const EVENT_GOT_TM34_BIDE
+	const EVENT_GOT_TM34_ROCK_TOMB ;_BIDE
 	const EVENT_GOT_TM11_BUBBLEBEAM
 	const EVENT_GOT_TM42_SPARK
 	const EVENT_GOT_TM21_GIGA_DRAIN

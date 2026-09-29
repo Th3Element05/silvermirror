@@ -184,6 +184,7 @@ BattleCommandPointers:
 	dw BattleCommand_WakeUpSlap
 	dw BattleCommand_Hex
 	dw BattleCommand_Burn
+	dw BattleCommand_Payback
 ;	dw BattleCommand_WeightDamage
 ;	dw BattleCommand_Growth
 	assert_table_length NUM_EFFECT_COMMANDS

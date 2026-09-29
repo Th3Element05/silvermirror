@@ -7,7 +7,7 @@ ResidualMoves:
 	db STUN_SPORE
 	db THUNDER_WAVE
 	db FOCUS_ENERGY
-	db BIDE
+;	db BIDE, removed
 ;	db POISON_GAS ;removed
 	db TRANSFORM
 	db CONVERSION

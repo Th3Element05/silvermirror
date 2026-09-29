@@ -35,10 +35,10 @@ PewterGymBrockScript:
 	scall PewterGymCheckBadges
 	; fallthrough
 .FightDone:
-	checkevent EVENT_GOT_TM34_BIDE
+	checkevent EVENT_GOT_TM34_ROCK_TOMB
 	iftrue .SpeechAfterTM
-	verbosegiveitem TM_BIDE
-	setevent EVENT_GOT_TM34_BIDE
+	verbosegiveitem TM_ROCK_TOMB
+	setevent EVENT_GOT_TM34_ROCK_TOMB
 	writetext BrockTMBideText
 	promptbutton
 	; fallthrough
@@ -142,13 +142,22 @@ BrockBoulderbadgeText:
 BrockTMBideText:
 	ntag "BROCK:"
 	text "TM34 contains"
-	line "BIDE!"
+	line "ROCK TOMB!"
 
-	para "Your #MON will"
-	line "absorb damage in"
-	cont "battle then pay"
-	roll "it back double!"
+	para "Rocks are hurled"
+	line "at the opponent,"
+	cont "which also slows"
+	roll "them down!"
 	done
+
+;	text "TM34 contains"
+;	line "BIDE!"
+;
+;	para "Your #MON will"
+;	line "absorb damage in"
+;	cont "battle then pay"
+;	roll "it back double!"
+;	done
 
 BrockAfterBattleText:
 	ntag "BROCK:"

@@ -93,7 +93,7 @@
 	const THUNDERBOLT  ; 55
 	const THUNDER_WAVE ; 56
 	const THUNDER      ; 57
-	const ROCK_THROW   ; 58
+	const ROCK_TOMB    ; 58 ;ROCK_THROW, removed
 	const EARTHQUAKE   ; 59
 	const FISSURE      ; 5a
 	const DIG          ; 5b
@@ -101,7 +101,7 @@
 	const CONFUSION    ; 5d
 	const PSYCHIC_M    ; 5e
 	const HYPNOSIS     ; 5f
-	const BULK_UP      ; 60 ;MEDITATE, removed
+	const MEDITATE     ; 60 ;bulk_up
 	const AGILITY      ; 61
 	const QUICK_ATTACK ; 62
 	const RAGE         ; 63
@@ -122,7 +122,7 @@
 	const HAZE         ; 72
 	const REFLECT      ; 73
 	const FOCUS_ENERGY ; 74
-	const BIDE         ; 75
+	const PAYBACK      ; 75 ;BIDE, removed
 	const METRONOME    ; 76
 	const MIRROR_SHOT  ; 77 ;MIRROR_MOVE, removed
 	const SELFDESTRUCT ; 78

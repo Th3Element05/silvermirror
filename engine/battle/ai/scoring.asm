@@ -393,6 +393,7 @@ AI_Smart_EffectHandlers:
 	dbw EFFECT_WAKE_UP_SLAP,     AI_Smart_WakeUpOpponent
 	dbw EFFECT_HEX,              AI_Smart_Hex
 	dbw EFFECT_BURN,             AI_Smart_Burn
+	dbw EFFECT_PAYBACK,          AI_Smart_Payback
 	db -1 ; end
 
 AI_Smart_Sleep:
@@ -1220,16 +1221,14 @@ AI_Smart_Paralyze:
 	ret
 
 AI_Smart_SpeedDownHit:
-; Icy Wind
-
 ; Almost 90% chance to greatly encourage this move if the following conditions all meet:
 ; Enemy's HP is higher than 25%.
 ; It's the first turn of player's Pokemon.
 ; Player is faster than enemy.
 
-	ld a, [wEnemyMoveStruct + MOVE_ANIM]
-	cp ICY_WIND
-	ret nz
+;	ld a, [wEnemyMoveStruct + MOVE_ANIM]
+;	cp ICY_WIND
+;	ret nz
 	call AICheckEnemyQuarterHP
 	ret nc
 	ld a, [wPlayerTurnsTaken]
@@ -2797,6 +2796,7 @@ AI_Smart_Thunder:
 	inc [hl]
 	ret
 
+AI_Smart_Payback:
 AI_Smart_GyroBall:
 ; 80% chance to encourage this move if enemy is slower than player.
 
