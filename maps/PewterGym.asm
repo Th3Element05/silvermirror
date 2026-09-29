@@ -405,18 +405,18 @@ PewterGym_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  4, 13, PEWTER_CITY, 2
-	warp_event  5, 13, PEWTER_CITY, 2
+	warp_event  4, 15, PEWTER_CITY, 2
+	warp_event  5, 15, PEWTER_CITY, 2
 
 	def_coord_events
 
 	def_bg_events
-	bg_event  2, 11, BGEVENT_READ, PewterGymStatue
-	bg_event  7, 11, BGEVENT_READ, PewterGymStatue
+	bg_event  2, 13, BGEVENT_READ, PewterGymStatue
+	bg_event  7, 13, BGEVENT_READ, PewterGymStatue
 
 	def_object_events
-	object_event  5,  1, SPRITE_BROCK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterGymBrockScript, EVENT_BEAT_ELITE_FOUR
-	object_event  3,  7, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperIsaac, -1
-	object_event  6, 11, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 1, PewterGymGuideScript, -1
+	object_event  5,  4, SPRITE_BROCK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterGymBrockScript, EVENT_BEAT_ELITE_FOUR
+	object_event  3,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperIsaac, -1
+	object_event  6, 13, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 1, PewterGymGuideScript, -1
 ;
-	object_event  5,  1, SPRITE_BROCK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterGymBrockRematchScript, EVENT_KANTO_LEADER_REMATCHES
+	object_event  5,  4, SPRITE_BROCK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterGymBrockRematchScript, EVENT_KANTO_LEADER_REMATCHES
