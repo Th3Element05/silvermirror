@@ -327,12 +327,18 @@ BattleText_PluralEnemyAreAboutToUseWillPlayerChangeMon:
 ;	done
 
 BattleText_EnemySentOut:
-	text "<ENEMY>"
-	line "sends out"
-	scroll "@"
+	text "Opponent sends"
+	line "out @"
 	text_ram wEnemyMonNickname
 	text "!"
 	autodone
+
+;	text "<ENEMY>"
+;	line "sends out"
+;	scroll "@"
+;	text_ram wEnemyMonNickname
+;	text "!"
+;	autodone
 
 ;	text "<ENEMY>"
 ;	line "sends @"
