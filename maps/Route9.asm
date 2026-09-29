@@ -141,8 +141,9 @@ TrainerHikerBenjamin:
 HikerBenjaminSeenText:
 	ntag "HIKER:"
 	text "Hahaha!"
-	line "Aren't you a"
-	cont "tough little one!"
+
+	para "Aren't you a tough"
+	line "little one!"
 	done
 
 HikerBenjaminBeatenText:
@@ -268,8 +269,9 @@ PicnickerEllieBeatenText:
 PicnickerEllieAfterBattleText:
 	ntag "PICNICKER:"
 	text "You're obviously"
-	line "talented! Good"
-	cont "luck to you!"
+	line "talented!"
+
+	para "Good luck to you!"
 	done
 
 
