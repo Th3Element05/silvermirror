@@ -150,7 +150,7 @@ GetMonSubmenuItems:
 	call IsMonFlashUser
 	call IsMonDigUser
 	call IsMonTeleportUser
-	call IsMonSweetScentUser
+;	call IsMonSweetScentUser
 
 .skip_moves
 	ld a, MONMENUITEM_STATS
@@ -433,35 +433,35 @@ IsMonTeleportUser:
 .toomanymoves
 	ret
 
-IsMonSweetScentUser:
-;; Location check
-;	farcall CanUseSweetScent ; instead of CanEncounterWildMon for older versions of pokecrystal
-;	ret nc
-;	farcall GetMapEncounterRate
-;	ld a, b
+;IsMonSweetScentUser:
+;;; Location check
+;;	farcall CanUseSweetScent ; instead of CanEncounterWildMon for older versions of pokecrystal
+;;	ret nc
+;;	farcall GetMapEncounterRate
+;;	ld a, b
+;;	and a
+;;	ret z
+;
+;; Check if mon knows Move (don't add twice)
+;	ld a, SWEET_SCENT
+;	call CheckMonKnowsMove
 ;	and a
 ;	ret z
-
-; Check if mon knows Move (don't add twice)
-	ld a, SWEET_SCENT
-	call CheckMonKnowsMove
-	and a
-	ret z
-
-; Check if Mon can use move
-	ld a, [wCurPartySpecies]
-	ld de, 1
-	ld hl, CanUseSweetScentMons
-	call IsInArray
-	ret nc
-
-; Add move to Mon Menu
-	ld a, [wMonSubmenuCount]
-	cp NUM_MONMENU_ITEMS - 4
-	jr z, .toomanymoves
-	ld a, MONMENUITEM_SWEETSCENT
-	call AddMonMenuItem
-.toomanymoves
-	ret
+;
+;; Check if Mon can use move
+;	ld a, [wCurPartySpecies]
+;	ld de, 1
+;	ld hl, CanUseSweetScentMons
+;	call IsInArray
+;	ret nc
+;
+;; Add move to Mon Menu
+;	ld a, [wMonSubmenuCount]
+;	cp NUM_MONMENU_ITEMS - 4
+;	jr z, .toomanymoves
+;	ld a, MONMENUITEM_SWEETSCENT
+;	call AddMonMenuItem
+;.toomanymoves
+;	ret
 
 INCLUDE "data/moves/hm_move_users.asm"
