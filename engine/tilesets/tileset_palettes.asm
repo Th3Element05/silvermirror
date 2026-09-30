@@ -8,14 +8,20 @@ LoadSpecialMapPalette:
 
 .not_dark
 	ld a, [wMapTileset]
-;	cp TILESET_POKECOM_CENTER
-;	jr z, .pokecom_2f
+	cp TILESET_POKECENTER
+	jr z, .white_brown
+	cp TILESET_FACILITY
+	jr z, .white_brown
+	cp TILESET_ROCKET_FACILITY
+	jr z, .white_brown
 	cp TILESET_HOUSE
 	jr z, .house
 	cp TILESET_ICE_PATH
 	jr z, .ice_path
 	cp TILESET_RADIO_TOWER
 	jr z, .radio_tower
+;	cp TILESET_POKECOM_CENTER
+;	jr z, .pokecom_2f
 ;	cp TILESET_MANSION
 ;	jr z, .mansion_mobile
 	cp TILESET_BATTLE_TOWER_INSIDE
@@ -27,10 +33,13 @@ LoadSpecialMapPalette:
 	scf
 	ret
 
-;.pokecom_2f
-;	call LoadPokeComPalette
-;	scf
-;	ret
+.white_brown
+	ld a, [wMapNumber]
+	cp MAP_POKEMON_MANSION_1F
+	jr nc, .do_nothing
+	call LoadWhiteBrownPalette
+	scf
+	ret
 
 .house
 	call LoadHousePalette
@@ -50,6 +59,11 @@ LoadSpecialMapPalette:
 	call LoadRadioTowerPalette
 	scf
 	ret
+
+;.pokecom_2f
+;	call LoadPokeComPalette
+;	scf
+;	ret
 
 ;.mansion_mobile
 ;	call LoadMansionPalette
@@ -303,16 +317,6 @@ MapSpecificOBPalettes:
 ;MuseumPalette:
 ;INCLUDE "gfx/tilesets/museum.pal"
 
-LoadDarknessPalette:
-	ld a, BANK(wBGPals1)
-	ld de, wBGPals1
-	ld hl, DarknessPalette
-	ld bc, 8 palettes
-	jp FarCopyWRAM
-
-DarknessPalette:
-INCLUDE "gfx/tilesets/darkness.pal"
-
 ;LoadPokeComPalette:
 ;	ld a, BANK(wBGPals1)
 ;	ld de, wBGPals1
@@ -324,49 +328,55 @@ INCLUDE "gfx/tilesets/darkness.pal"
 ;PokeComPalette:
 ;INCLUDE "gfx/tilesets/pokecom_center.pal"
 
-LoadBattleTowerInsidePalette:
-	ld a, BANK(wBGPals1)
-	ld de, wBGPals1
-	ld hl, BattleTowerInsidePalette
-	ld bc, 8 palettes
-	call FarCopyWRAM
-	ret
 
-BattleTowerInsidePalette:
-INCLUDE "gfx/tilesets/battle_tower_inside.pal"
+LoadDarknessPalette:
+	ld hl, DarknessPalette
+	jr FinishLoadTilesetPalette
+
+LoadBattleTowerInsidePalette:
+	ld hl, BattleTowerInsidePalette
+	jr FinishLoadTilesetPalette
+
+LoadRadioTowerPalette:
+	ld hl, RadioTowerPalette
+	jr FinishLoadTilesetPalette
 
 LoadIcePathPalette:
-	ld a, BANK(wBGPals1)
-	ld de, wBGPals1
 	ld hl, IcePathPalette
-	ld bc, 8 palettes
-	call FarCopyWRAM
-	ret
-
-IcePathPalette:
-INCLUDE "gfx/tilesets/ice_path.pal"
+	jr FinishLoadTilesetPalette
 
 LoadHousePalette:
+	ld hl, HousePalette
+	jr FinishLoadTilesetPalette
+
+LoadWhiteBrownPalette:
+	ld hl, WhiteBrownPalette
+;	jr FinishLoadTilesetPalette
+
+FinishLoadTilesetPalette:
 	ld a, BANK(wBGPals1)
 	ld de, wBGPals1
-	ld hl, HousePalette
+;	ld hl, DarknessPalette
 	ld bc, 8 palettes
-	call FarCopyWRAM
-	ret
+	jp FarCopyWRAM
+
+DarknessPalette:
+INCLUDE "gfx/tilesets/darkness.pal"
+
+WhiteBrownPalette:
+INCLUDE "gfx/tilesets/white_brown.pal"
 
 HousePalette:
 INCLUDE "gfx/tilesets/house.pal"
 
-LoadRadioTowerPalette:
-	ld a, BANK(wBGPals1)
-	ld de, wBGPals1
-	ld hl, RadioTowerPalette
-	ld bc, 8 palettes
-	call FarCopyWRAM
-	ret
+IcePathPalette:
+INCLUDE "gfx/tilesets/ice_path.pal"
 
 RadioTowerPalette:
 INCLUDE "gfx/tilesets/radio_tower.pal"
+
+BattleTowerInsidePalette:
+INCLUDE "gfx/tilesets/battle_tower_inside.pal"
 
 ;LoadMansionPalette:
 ;	ld a, BANK(wBGPals1)
