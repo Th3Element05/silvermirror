@@ -395,6 +395,7 @@ CeladonDeptStoreRoofVendingMachine:
 	ifequal 1, .FreshWater
 	ifequal 2, .SodaPop
 	ifequal 3, .Lemonade
+.End
 	closetext
 	end
 
@@ -431,17 +432,20 @@ CeladonDeptStoreRoofVendingMachine:
 	writetext CeladonClangText
 	promptbutton
 	itemnotify
-	sjump .Start
+;	sjump .Start
+	sjump .End
 
 .NotEnoughMoney:
 	writetext CeladonVendingNoMoneyText
 	waitbutton
-	sjump .Start
+;	sjump .Start
+	sjump .End
 
 .NotEnoughSpace:
 	writetext CeladonVendingNoSpaceText
 	waitbutton
-	sjump .Start
+;	sjump .Start
+	sjump .End
 
 .VendingMenuHeader:
 	db MENU_BACKUP_TILES ; flags

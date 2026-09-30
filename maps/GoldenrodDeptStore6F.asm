@@ -22,6 +22,7 @@ GoldenrodVendingMachine:
 	ifequal 1, .FreshWater
 	ifequal 2, .SodaPop
 	ifequal 3, .Lemonade
+.End
 	closetext
 	end
 
@@ -58,17 +59,20 @@ GoldenrodVendingMachine:
 	writetext GoldenrodClangText
 	promptbutton
 	itemnotify
-	sjump .Start
+;	sjump .Start
+	sjump .End
 
 .NotEnoughMoney:
 	writetext GoldenrodVendingNoMoneyText
 	waitbutton
-	sjump .Start
+;	sjump .Start
+	sjump .End
 
 .NotEnoughSpace:
 	writetext GoldenrodVendingNoSpaceText
 	waitbutton
-	sjump .Start
+;	sjump .Start
+	sjump .End
 
 .MenuHeader:
 	db MENU_BACKUP_TILES ; flags
