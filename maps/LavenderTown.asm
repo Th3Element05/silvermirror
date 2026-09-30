@@ -160,7 +160,7 @@ LavenderTown_MapEvents:
 ;	bg_event  9,  3, BGEVENT_READ, LavenderTownSilphScopeSign
 	bg_event 15,  7, BGEVENT_READ, LavenderTownPokemonTowerSign
 	bg_event  5,  9, BGEVENT_READ, LavenderTownPokemonHouseSign
-	bg_event 11,  9, BGEVENT_READ, LavenderTownSign
+	bg_event  9,  5, BGEVENT_READ, LavenderTownSign
 	bg_event  4,  5, BGEVENT_READ, LavenderPokecenterSignText
 	bg_event 16, 13, BGEVENT_READ, LavenderMartSignText
 

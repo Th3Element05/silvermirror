@@ -244,13 +244,19 @@ SSAnne2FCaptainThanksGivePagerText:
 
 SSAnne2FCaptainSetSailText:
 	ntag "CAPTAIN:"
-	text "Whew!"
+	text "Well!"
 
-	para "Now that I'm not"
-	line "seasick anymore,"
-	cont "I guess it's time"
-	roll "to set sail!"
+	para "I guess it's time"
+	line "to set sail!"
 	done
+
+;	text "Whew!"
+;
+;	para "Now that I'm not"
+;	line "seasick anymore,"
+;	cont "I guess it's time"
+;	roll "to set sail!"
+;	done
 
 SSAnne2FCaptainWelcomeBackText:
 	ntag "CAPTAIN:"
