@@ -5,6 +5,6 @@
 	next "only one thing at"
 	next "a time. Once it"
 
-	page "starts rushing, it"
-	next "forgets why it"
+	page "starts charging,"
+	next "it forgets why it"
 	next "started.@"
