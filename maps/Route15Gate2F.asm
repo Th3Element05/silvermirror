@@ -8,8 +8,8 @@ Route15Gate2F_MapScripts:
 Route15Gate2FOaksAideScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_EXP_SHARE
-	iftrue .GotExpShare
+	checkevent EVENT_GOT_KANTO_LUCKY_EGG
+	iftrue .GotLuckyEgg
 	writetext Route15Gate2FOaksAideAskPokemonText
 	yesorno
 	iffalse .SaidNo
@@ -18,10 +18,10 @@ Route15Gate2FOaksAideScript:
 	ifless 40, .NotEnough
 	writetext Route15Gate2FOaksAideCongratsText
 	promptbutton
-	verbosegiveitem EXP_SHARE
-	setevent EVENT_GOT_EXP_SHARE
-.GotExpShare
-	writetext Route15Gate2FOaksAideExpShareExplainText
+	verbosegiveitem LUCKY_EGG
+	setevent EVENT_GOT_KANTO_LUCKY_EGG
+.GotLuckyEgg
+	writetext Route15Gate2FOaksAideLuckyEggExplainText
 	waitbutton
 	closetext
 	end
@@ -43,8 +43,8 @@ Route15Gate2FOaksAideAskPokemonText:
 	para "If you caught 40"
 	line "kinds of #MON,"
 	cont "I'm supposed to"
-	roll "give you an"
-	cont "EXP.SHARE!"
+	roll "give you this"
+	cont "LUCKY EGG!"
 
 	para "So, <PLAYER>! Have"
 	line "you caught at"
@@ -79,16 +79,12 @@ Route15Gate2FOaksAideCongratsText:
 	para "Congratulations!"
 	done
 
-Route15Gate2FOaksAideExpShareExplainText:
+Route15Gate2FOaksAideLuckyEggExplainText:
 	ntag "AIDE:"
-	text "EXP.SHARE will"
-	line "share experience"
-	cont "from battles with"
-	roll "the #MON that"
-	cont "holds it!"
-
-	para "Even if they"
-	line "don't fight!"
+	text "When a #MON"
+	line "holds a LUCKY EGG,"
+	cont "they gain boosted"
+	roll "EXP from battle!"
 	done
 
 Route15Gate2FBinoculars:

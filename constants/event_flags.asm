@@ -72,6 +72,8 @@
 	const EVENT_GOT_TM77_RAIN_DANCE
 	const EVENT_GOT_TM78_SANDSTORM
 	const_skip ; unused
+	const_skip ; unused
+	const_skip ; unused
 ; used 21
 
 ; Got stuff Kanto
@@ -95,6 +97,13 @@
 	const EVENT_GOT_EXP_SHARE
 	const EVENT_GOT_MASTER_BALL_FROM_SILPH_CO
 	const EVENT_GOT_BERSERK_GENE
+	const EVENT_GOT_KANTO_LUCKY_EGG
+	const_skip ;unused
+	const_skip ;unused
+	const_skip ;unused
+	const_skip ;unused
+; used 25
+
 ; Got stuff Johto
 	const EVENT_GOT_SMOKE_BALL_FROM_CAPTAIN_ON_SS_AQUA
 	const EVENT_GOT_DANCE_THEATER_LUCKY_EGG
@@ -107,12 +116,15 @@
 	const EVENT_GOT_BLACKGLASSES_IN_DARK_CAVE
 	const EVENT_GOT_DRATINI ;from dragon shrine
 	const EVENT_GOT_DRAGON_FANG
-;	const EVENT_GOT_RAINBOW_WING ;unused
-;	const EVENT_GOT_CLEAR_BELL ;unused
-;	const EVENT_GOT_SILVER_WING ;unused
-; used 25
-; group total used 83
-; running total 83
+	const EVENT_GOT_RAINBOW_WING ; unused
+	const EVENT_GOT_CLEAR_BELL ; unused
+	const EVENT_GOT_SILVER_WING ; unused
+	const_skip ; unused
+	const_skip ; unused
+	const_skip ; unused
+; used 17
+; group total used 99
+; running total 99
 
 	const_next 100
 ; Story events (silvermirror)

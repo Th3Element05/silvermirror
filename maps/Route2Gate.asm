@@ -9,8 +9,21 @@ Route2Gate_MapScripts:
 Route2GateOaksAideScript:
 	faceplayer
 	opentext
+	checkevent EVENT_GOT_EXP_SHARE
+	iftrue .GotExpShare
 	checkevent EVENT_GOT_HM05_FLASH
 	iftrue .GotFlash
+	writetext Route2GateOaksAideGiveFlashText
+	promptbutton
+	stringtotext .pagercardname, MEM_BUFFER_1
+	scall .JumpstdReceiveItem
+	setflag ENGINE_PAGER_FLASH
+	setevent EVENT_GOT_HM05_FLASH
+	writetext GotFlashPagerText
+	promptbutton
+	; fallthrough
+
+.GotFlash
 	writetext Route2GateOaksAideAskPokemonText
 	yesorno
 	iffalse .SaidNo
@@ -19,21 +32,14 @@ Route2GateOaksAideScript:
 	ifless 10, .NotEnough
 	writetext Route2GateOaksAideCongratsText
 	promptbutton
-	stringtotext .pagercardname, MEM_BUFFER_1
-	scall .JumpstdReceiveItem
-	setflag ENGINE_PAGER_FLASH
-	writetext GotFlashPagerText
-	promptbutton
-;	writetext Route2GateOaksAideExplainPagerGiveFlashText
-;	promptbutton
-;	verbosegiveitem TM_FLASH
-	setevent EVENT_GOT_HM05_FLASH
-;	clearevent EVENT_OAK_CALLED_ABOUT_FLASH
+	verbosegiveitem EXP_SHARE
+	setevent EVENT_GOT_EXP_SHARE
+	writetext Route2GateOaksAideExpShareExplainText
 	waitbutton
 	closetext
 	end
 
-.GotFlash
+.GotExpShare
 	writetext Route2GateOaksAideFlashExplainText
 	waitbutton
 	closetext
@@ -57,9 +63,20 @@ Route2GateOaksAideScript:
 
 GotFlashPagerText:
 	text "PIKACHU was added"
-	line "to the PPS!@"
+	line "to the PPS!"
+	done
 
-	text_promptbutton
+Route2GateOaksAideGiveFlashText:
+	ntag "AIDE:"
+	text "Hi! Remember me?"
+	line "I'm PROF.OAK's AIDE."
+
+	para "PROF.OAK asked me"
+	line "to give you this"
+	cont "FLASH PAGER."
+	done
+
+Route2GateOaksAideAskPokemonText:
 	ntag "AIDE:"
 	text "PIKACHU can use"
 	line "FLASH to light up"
@@ -68,18 +85,15 @@ GotFlashPagerText:
 	para "Call PIKACHU from"
 	line "the PAGER CARD in"
 	cont "your #GEAR!"
-	done
 
-Route2GateOaksAideAskPokemonText:
-	ntag "AIDE:"
-	text "Hi! Remember me?"
-	line "I'm PROF.OAK's AIDE."
+	para "…"
+	line "Oh!"
 
 	para "If you caught 10"
 	line "kinds of #MON,"
-	cont "I'm supposed to"
-	roll "give you this"
-	cont "FLASH PAGER!"
+	cont "I'm also supposed"
+	roll "to give you an"
+	cont "EXP.SHARE!"
 
 	para "So, <PLAYER>! Have"
 	line "you caught at"
@@ -114,29 +128,34 @@ Route2GateOaksAideCongratsText:
 	para "Congratulations!"
 	done
 
-Route2GateOaksAideExplainPagerGiveFlashText:
+Route2GateOaksAideExpShareExplainText:
 	ntag "AIDE:"
-	text "PROF.OAK wanted"
-	line "you to have this,"
-	cont "too. So you can"
-	roll "teach FLASH to"
-	cont "your own #MON!"
+	text "When a #MON is"
+	line "holding EXP.SHARE,"
+	cont "they will receive"
+	roll "EXP from battles,"
+	cont "even if they don't"
+	roll "fight!"
 	done
+;
+;	text "EXP.SHARE will"
+;	line "share experience"
+;	cont "from battles with"
+;	roll "the #MON that"
+;	cont "holds it, even if"
+;	roll "they don't fight!"
+;	done
 
 Route2GateOaksAideFlashExplainText:
 	ntag "AIDE:"
 	text "FLASH can light up"
 	line "even the darkest"
 	cont "dungeons."
-;	
-;	text "The TM FLASH can"
-;	line "light up even the"
-;	cont "darkest dungeons."
-;
-;	para "You'll need it to"
-;	line "get through the"
-;	cont "ROCK TUNNEL to"
-;	roll "LAVENDER TOWN!"
+
+	para "Call PIKACHU from"
+	line "the PAGER CARD in"
+	cont "your #GEAR to"
+	roll "use FLASH!"
 	done
 
 Route2GateOfficerScript:
