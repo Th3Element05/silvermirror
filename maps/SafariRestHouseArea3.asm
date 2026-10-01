@@ -45,8 +45,8 @@ SafariRestHouseArea3_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, SAFARI_ZONE_AREA_3, 7
-	warp_event  3,  7, SAFARI_ZONE_AREA_3, 7
+	warp_event  2,  7, SAFARI_ZONE_AREA_3, 9
+	warp_event  3,  7, SAFARI_ZONE_AREA_3, 9
 
 	def_coord_events
 
