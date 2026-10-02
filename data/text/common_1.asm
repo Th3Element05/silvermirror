@@ -1553,10 +1553,7 @@ _NPCTradeIntroText1::
 
 _NPCTradeIntroText2::
 	text "Hi, I'm looking"
-	line "for this #MON."
-
-	para "If you have"
-	line "@"
+	line "for @"
 	text_ram wStringBuffer1
 	text ", would"
 
@@ -1570,8 +1567,10 @@ _NPCTradeIntroText3:: ;TRADE_DIALOGSET_GIRL
 	text_ram wMonOrItemNameBuffer
 	text "'s cute,"
 	line "but I don't have"
-	cont "one. Do you have"
-	roll "@"                 ;cont
+	cont "one."
+
+	para "Do you have a"
+	line "@"                 ;cont
 	text_ram wStringBuffer1
 	text "?"
 
@@ -1593,6 +1592,33 @@ _NPCTradeIntroText4::
 	text_ram wStringBuffer2
 	text "?"
 	done
+
+_NPCTradeIntroText5::
+	text "I just caught"
+	line "@"
+	text_ram wStringBuffer1
+	text ", but"
+	cont "I'd really like"
+	roll "@"
+	text_ram wStringBuffer2
+	text "."
+
+	para "If you have one,"
+	line "I'll trade this"
+	cont "@"
+	text_ram wStringBuffer1
+	text " for it!"
+	done
+
+;	para "If you have a"
+;	line "@"
+;	text_ram wStringBuffer2
+;	text ", would"
+;	cont "you trade it for"
+;	roll "my @"
+;	text_ram wStringBuffer1
+;	text "?"
+;	done
 
 _NPCTradeCancelText1::
 	text "You don't want to"
@@ -1665,6 +1691,15 @@ _NPCTradeCompleteText3::
 _NPCTradeCompleteText4::
 	text "Excellent!"
 	line "Thanks!"
+	done
+
+_NPCTradeCompleteText5::
+	text "Wow! @"
+	text_ram wMonOrItemNameBuffer
+	text "!"
+	line "You can't even"
+	cont "find that in the"
+	roll "SAFARI ZONE!"
 	done
 
 _NPCTradeAfterText1::

@@ -25,4 +25,4 @@ VermilionMagnetTrainSpeechHouse_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  3,  5, SPRITE_TWIN, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TradeNPCElyssa, -1
+	object_event  5,  5, SPRITE_TWIN, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TradeNPCElyssa, -1

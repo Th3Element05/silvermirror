@@ -5,14 +5,22 @@ Route7UndergroundPathEntrance_MapScripts:
 
 	def_callbacks
 
-Route7UndergroundPathEntrancePokefanMScript:
-	jumptextfaceplayer Route7UndergroundPathEntrancePokefanMText
-Route7UndergroundPathEntrancePokefanMText:
-	ntag "MAN:"
-	text "I heard a sleepy"
-	line "#MON appeared"
-	cont "near CELADON CITY."
-	done
+TradeNPCSokka:
+	faceplayer
+	opentext
+	trade NPC_TRADE_SOKKA
+	waitbutton
+	closetext
+	end
+
+;Route7UndergroundPathEntrancePokefanMScript:
+;	jumptextfaceplayer Route7UndergroundPathEntrancePokefanMText
+;Route7UndergroundPathEntrancePokefanMText:
+;	ntag "MAN:"
+;	text "I heard a sleepy"
+;	line "#MON appeared"
+;	cont "near CELADON CITY."
+;	done
 
 Route7UndergroundPathEntrance_MapEvents:
 	db 0, 0 ; filler
@@ -27,4 +35,4 @@ Route7UndergroundPathEntrance_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  2,  2, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route7UndergroundPathEntrancePokefanMScript, -1
+	object_event  2,  2, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TradeNPCSokka, -1

@@ -657,13 +657,13 @@ KimonoGirlYukiAfterBattleText:
 	done
 
 
-;TradeNPCJackson:
-;	faceplayer
-;	opentext
-;	trade NPC_TRADE_JACKSON
-;	waitbutton
-;	closetext
-;	end
+TradeNPCJackson:
+	faceplayer
+	opentext
+	trade NPC_TRADE_JACKSON
+	waitbutton
+	closetext
+	end
 
 ;DanceTheaterRhyhorn:
 ;	opentext
@@ -727,7 +727,7 @@ DanceTheater_MapEvents:
 	object_event  9,  2, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 0, TrainerKimonoGirlAoki, -1 ;leafeon
 	object_event 10,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_TRAINER, 0, TrainerKimonoGirlYuki, -1 ;glaceon
 	object_event  8,  6, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DanceTheaterGrannyScript, -1
-;	object_event  3, 10, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TradeNPCJackson, -1
+	object_event  3, 10, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TradeNPCJackson, -1
 ;	object_event  2, 10, SPRITE_RHYHORN, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_SCRIPT, 0, DanceTheaterRhyhorn, -1
 ;	object_event  3, 10, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DanceTheaterCooltrainerMScript, -1
 

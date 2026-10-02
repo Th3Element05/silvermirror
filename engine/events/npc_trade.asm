@@ -391,7 +391,7 @@ PrintTradeText:
 	push af
 	call GetTradeMonNames
 	pop af
-	ld bc, 2 * 4
+	ld bc, 2 * 5 ;2 * 4
 	ld hl, TradeTexts
 	call AddNTimes
 	ld a, [wTradeDialog]
@@ -407,27 +407,32 @@ PrintTradeText:
 TradeTexts:
 ; entries correspond to TRADE_DIALOG_* × TRADE_DIALOGSET_* constants
 ; TRADE_DIALOG_INTRO
-	dw NPCTradeIntroText1
-	dw NPCTradeIntroText2
-	dw NPCTradeIntroText4
-	dw NPCTradeIntroText3
+	dw NPCTradeIntroText1 ;TRADE_DIALOGSET_COLLECTOR
+	dw NPCTradeIntroText2 ;TRADE_DIALOGSET_HAPPY
+	dw NPCTradeIntroText4 ;TRADE_DIALOGSET_GENERIC
+	dw NPCTradeIntroText5 ;TRADE_DIALOGSET_SAFARI
+	dw NPCTradeIntroText3 ;TRADE_DIALOGSET_GIRL
 ; TRADE_DIALOG_CANCEL
 	dw NPCTradeCancelText1
-	dw NPCTradeCancelText1;2
-	dw NPCTradeCancelText1;2
-	dw NPCTradeCancelText1;3
+	dw NPCTradeCancelText1 ;2
+	dw NPCTradeCancelText1 ;2
+	dw NPCTradeCancelText1 ;5
+	dw NPCTradeCancelText1 ;3
 ; TRADE_DIALOG_WRONG
 	dw NPCTradeWrongText1
-	dw NPCTradeWrongText1;2
-	dw NPCTradeWrongText1;2
-	dw NPCTradeWrongText1;3
+	dw NPCTradeWrongText1 ;2
+	dw NPCTradeWrongText1 ;2
+	dw NPCTradeWrongText1 ;5
+	dw NPCTradeWrongText1 ;3
 ; TRADE_DIALOG_COMPLETE
 	dw NPCTradeCompleteText1
 	dw NPCTradeCompleteText2
 	dw NPCTradeCompleteText4
+	dw NPCTradeCompleteText5
 	dw NPCTradeCompleteText3
 ; TRADE_DIALOG_AFTER
 	dw NPCTradeAfterText1
+	dw NPCTradeAfterText2
 	dw NPCTradeAfterText2
 	dw NPCTradeAfterText2
 	dw NPCTradeAfterText3
@@ -464,6 +469,10 @@ NPCTradeIntroText3:
 
 NPCTradeIntroText4:
 	text_far _NPCTradeIntroText4
+	text_end
+
+NPCTradeIntroText5:
+	text_far _NPCTradeIntroText5
 	text_end
 
 NPCTradeCancelText1:
@@ -504,6 +513,10 @@ NPCTradeCompleteText3:
 
 NPCTradeCompleteText4:
 	text_far _NPCTradeCompleteText4
+	text_end
+
+NPCTradeCompleteText5:
+	text_far _NPCTradeCompleteText5
 	text_end
 
 NPCTradeAfterText1:

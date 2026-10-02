@@ -16,18 +16,23 @@ DEF NPCTRADE_STRUCT_LENGTH EQU _RS
 	const_def
 	const NPC_TRADE_MATEO   ; 0
 	const NPC_TRADE_MIA     ; 1
-	const NPC_TRADE_LUCAS   ; 2
-	const NPC_TRADE_NOAH    ; 3
-	const NPC_TRADE_MASON   ; 4
-	const NPC_TRADE_ELYSSA  ; 5
-	const NPC_TRADE_JIM     ; 6
-	const NPC_TRADE_CLIFTON ; 7
-	const NPC_TRADE_NORMA   ; 8
+	const NPC_TRADE_HIROSHI ; 2
+	const NPC_TRADE_LUCAS   ; 3
+	const NPC_TRADE_NOAH    ; 4
+	const NPC_TRADE_MASON   ; 5
+	const NPC_TRADE_ELYSSA  ; 6
+	const NPC_TRADE_SOKKA   ; 7
+	const NPC_TRADE_FRANK   ; 8
+	const NPC_TRADE_ARATA   ; 9
+	const NPC_TRADE_JIM     ; 10
+	const NPC_TRADE_CLIFTON ; 11
+	const NPC_TRADE_NORMA   ; 12
 ; johto
-	const NPC_TRADE_MINDY   ; 9
-	const NPC_TRADE_CHRIS   ; 10
-	const NPC_TRADE_KYLE    ; 11
-	const NPC_TRADE_EMY     ; 12
+	const NPC_TRADE_MINDY   ; 13
+	const NPC_TRADE_JACKSON ; 14
+	const NPC_TRADE_CHRIS   ; 15
+	const NPC_TRADE_KYLE    ; 16
+	const NPC_TRADE_EMY     ; 17
 DEF NUM_NPC_TRADES EQU const_value
 
 ; trade gender limits
@@ -51,4 +56,5 @@ DEF NUM_NPC_TRADES EQU const_value
 	const TRADE_DIALOGSET_COLLECTOR
 	const TRADE_DIALOGSET_HAPPY
 	const TRADE_DIALOGSET_GENERIC ;_NEWBIE
-	const TRADE_DIALOGSET_GIRL ; hardcoded genders for nidoran trade
+	const TRADE_DIALOGSET_SAFARI
+	const TRADE_DIALOGSET_GIRL

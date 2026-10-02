@@ -19,6 +19,14 @@ Route10Pokecenter1FBenchGuyText:
 	cont "haunted by ghosts!"
 	done
 
+TradeNPCHiroshi:
+	faceplayer
+	opentext
+	trade NPC_TRADE_HIROSHI
+	waitbutton
+	closetext
+	end
+
 Route10Pokecenter1FGentlemanScript:
 	jumptextfaceplayer Route10Pokecenter1FGentlemanText
 Route10Pokecenter1FGentlemanText:
@@ -54,5 +62,6 @@ Route10Pokecenter1F_MapEvents:
 	object_event  3,  1, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route10Pokecenter1FNurseScript, -1
 	object_event 11,  2, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, Route10Pokecenter1FReceptionistScript, -1
 	object_event  0,  4, SPRITE_BENCH_GUY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route10Pokecenter1FBenchGuyScript, -1
+	object_event  9,  5, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TradeNPCHiroshi, -1
 	object_event  2,  5, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, Route10Pokecenter1FHikerScript, -1
 	object_event  6,  3, SPRITE_GENTLEMAN, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route10Pokecenter1FGentlemanScript, -1

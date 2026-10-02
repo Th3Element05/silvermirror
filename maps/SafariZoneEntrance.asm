@@ -384,6 +384,24 @@ SafariZoneBoxFullText:
 	line "then come see me."
 	done
 
+
+TradeNPCFrank:
+	faceplayer
+	opentext
+	trade NPC_TRADE_FRANK
+	waitbutton
+	closetext
+	end
+
+TradeNPCArata:
+	faceplayer
+	opentext
+	trade NPC_TRADE_ARATA
+	waitbutton
+	closetext
+	end
+
+
 SafariZoneEntrance_MapEvents:
 	db 0, 0 ; filler
 
@@ -400,3 +418,5 @@ SafariZoneEntrance_MapEvents:
 	object_event  0,  5, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, PERSONTYPE_SCRIPT, 0, SafariZoneEntranceOfficerScript, -1
 	object_event  3,  2, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, PERSONTYPE_SCRIPT, 0, SafariZoneEntranceMainOfficerScript, EVENT_SAFARI_ZONE_ENTRANCE_OFFICER_SAFARI_GAME_NOT_ACTIVE
 	object_event  2,  1, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, PERSONTYPE_SCRIPT, 0, SafariZoneEntranceMainOfficerScript, EVENT_SAFARI_ZONE_ENTRANCE_OFFICER_SAFARI_GAME_ACTIVE
+	object_event  5,  7, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 1, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TradeNPCFrank, -1
+	object_event  8,  6, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_LEFT, 1, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TradeNPCArata, -1
