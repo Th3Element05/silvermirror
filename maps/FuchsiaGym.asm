@@ -526,4 +526,4 @@ FuchsiaGym_MapEvents:
 ;
 	object_event  4, 10, SPRITE_KOGA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FuchsiaGymKogaRematchScript, EVENT_NINJA_CHALLENGE_IN_PROGRESS
 
-;.GrayOverTreeOBPalette
+;.GrayOverTreeOBPalette (GrayOverTreeYellowSkin)

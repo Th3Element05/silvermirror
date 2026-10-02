@@ -382,4 +382,4 @@ MahoganyMart1F_MapEvents:
 	object_event  7,  2, SPRITE_KRIS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	object_event  7,  3, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_SCRIPT, 0, MahoganyMartTwinScript, EVENT_WISE_TRIO_EXPLAINED_CLEAR_BELL
 
-;.GrayOverTreeOBPalette
+;.GrayOverTreeOBPalette (GrayOverTreeYellowSkin)

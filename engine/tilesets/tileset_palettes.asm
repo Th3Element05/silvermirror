@@ -273,7 +273,7 @@ MapSpecificOBPalettes:
 	ld a, [wTimeOfDayPal]
 	maskbits NUM_DAYTIMES
 	ld bc, 8 palettes
-	ld hl, GrayOverTree
+	ld hl, GrayOverTree ;(YellowSkin)
 	jr .finish
 
 .RockOverTreeOBPalette:

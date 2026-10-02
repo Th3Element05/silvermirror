@@ -58,6 +58,7 @@ MapScenes::
 	scene_var ECRUTEAK_CITY,                               wEcruteakCitySceneID
 	scene_var BURNED_TOWER_1F,                             wBurnedTower1FSceneID
 	scene_var BURNED_TOWER_B1F,                            wBurnedTowerB1FSceneID
+	scene_var DANCE_THEATER,                               wDanceTheaterSceneID
 ;	scene_var ECRUTEAK_TIN_TOWER_ENTRANCE,                 wEcruteakTinTowerEntranceSceneID
 	scene_var WISE_TRIOS_ROOM,                             wWiseTriosRoomSceneID
 	scene_var TIN_TOWER_1F,                                wTinTower1FSceneID

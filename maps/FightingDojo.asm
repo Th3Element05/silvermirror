@@ -741,4 +741,4 @@ FightingDojo_MapEvents:
 	object_event  1,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, FightingDojoFocusBand, EVENT_FIGHTING_DOJO_FOCUS_BAND
 	object_event  8,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, FightingDojoBlackBelt, EVENT_FIGHTING_DOJO_BLACK_BELT
 
-;.GrayOverTreeOBPalette
+;.GrayOverTreeOBPalette (GrayOverTreeYellowSkin)

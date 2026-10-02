@@ -3172,6 +3172,7 @@ wOlivinePortSceneID::                             db
 wEcruteakCitySceneID::                            db
 wBurnedTower1FSceneID::                           db
 wBurnedTowerB1FSceneID::                          db
+wDanceTheaterSceneID::                            db
 ;wEcruteakTinTowerEntranceSceneID::                db
 wWiseTriosRoomSceneID::                           db
 wTinTower1FSceneID::                              db
@@ -3212,7 +3213,7 @@ wBattleTowerHallwaySceneID::                      db
 ;wMobileTradeRoomSceneID::                         db ; unused in silvermirror
 ;wMobileBattleRoomSceneID::                        db ; unused in silvermirror
 
-	ds 47 ;total ds 128 - 81 used = ds 48
+	ds 46 ;total ds 128 - 82 used = ds 46
 
 ;; fight counts ; unused
 ;wJackFightCount::    db

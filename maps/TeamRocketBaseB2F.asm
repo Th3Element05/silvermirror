@@ -638,4 +638,4 @@ TeamRocketBaseB2F_MapEvents:
 ; TM_THIEF
 ;	object_event  3, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, TeamRocketBaseB2FTMThief, EVENT_TEAM_ROCKET_BASE_B2F_TM_THIEF
 
-;.GrayOverTreeOBPalette
+;.GrayOverTreeOBPalette (GrayOverTreeYellowSkin)
