@@ -1,4 +1,4 @@
-DEF RANDY_OT_ID EQU 01001
+DEF RANDY_OT_ID EQU 69741 ;01001
 
 TryAddMonToParty:
 ; Check if to copy wild mon or generate a new one
@@ -1328,10 +1328,20 @@ GivePoke::
 	ld hl, wPartyMon1ID
 	ld bc, PARTYMON_STRUCT_LENGTH
 	call AddNTimes
-	ld a, HIGH(RANDY_OT_ID)
+
+;	ld a, HIGH(RANDY_OT_ID)
+;	ld [hli], a
+;	ld [hl], LOW(RANDY_OT_ID)
+	; random OT_ID
+	call Random
 	ld [hli], a
-	ld [hl], LOW(RANDY_OT_ID)
+	ld [hl], a
+
 	pop bc
+	
+	; OT Gender male
+	ld b, CAUGHT_BY_UNKNOWN
+
 	farcall SetGiftPartyMonCaughtData
 	jr .skip_nickname
 

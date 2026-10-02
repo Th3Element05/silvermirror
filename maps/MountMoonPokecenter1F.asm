@@ -66,7 +66,9 @@ MtMoonPokecenter1FSalesmanScript:
 	special PlaceMoneyTopRight
 	writetext MtMoonPokecenterGotMagikarpText
 	promptbutton
-	givepoke MAGIKARP, 5, HEART_SCALE
+;	givepoke MAGIKARP, 5, HEART_SCALE
+	givepoke MAGIKARP, 5, NO_ITEM, MagikarpName, MagikarpOTName
+	givepokemail MagikarpMail
 	setevent EVENT_BOUGHT_MAGIKARP
 	; fallthrough
 .NoRefunds
@@ -93,6 +95,16 @@ MtMoonPokecenter1FSalesmanScript:
 	closetext
 	end
 
+MagikarpName:
+	db "MAGIKARP@"
+
+MagikarpOTName:
+	db "UNKNOWN@"
+
+MagikarpMail:
+	db FLOWER_MAIL
+	db   "No refunds.@"
+
 MtMoonPokecenterSalesmanDealText:
 	ntag "SALESMAN:"
 	text "Hello, there!"
@@ -112,10 +124,16 @@ MtMoonPokecenterGotMagikarpText:
 
 MtMoonPokecenterSalesmanNoText:
 	ntag "SALESMAN:"
-	text "No? I'm only"
-	line "doing this as a"
-	cont "favor to you!"
+	text "No?"
+	line "I'm only doing"
+	cont "this as a favor"
+	roll "to you!"
 	done
+;
+;	text "No? I'm only"
+;	line "doing this as a"
+;	cont "favor to you!"
+;	done
 
 MtMoonPokecenterSalesmanNoMoneyText:
 	ntag "SALESMAN:"
