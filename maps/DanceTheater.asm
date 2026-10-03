@@ -119,7 +119,7 @@ KimonoGirlsChallengeScript:
 ; glaceon, yuki
 	applymovement DANCETHEATER_GLACEON, KimonoGirlGlaceon_Approach
 	opentext
-	writetext KimonoGirlGlaceonSeenText
+	writetext KimonoGirlGlaceonSeenText_Challenge
 	waitbutton
 	closetext
 	winlosstext KimonoGirlGlaceonBeatenText, 0
@@ -128,14 +128,22 @@ KimonoGirlsChallengeScript:
 	reloadmapafterbattle
 	applymovement DANCETHEATER_GLACEON, KimonoGirlGlaceon_Retreat
 ; victory
+	setevent EVENT_BEAT_KIMONO_GIRL_CHALLENGE
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_3
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_4
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_5
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_6
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_7
 	setscene SCENE_DANCETHEATER_NOOP
 	applymovement DANCETHEATER_GRANNY, DanceTheaterGranny_Approach
 	setlasttalked DANCETHEATER_GRANNY
 	; fallthrough
 
 DanceTheaterGrannyScript:
-	checkscene SCENE_DANCETHEATER_CHALLENGE
-	iftrue .DefaultText
+	checkevent EVENT_BEAT_KIMONO_GIRL_CHALLENGE
+	iffalse .DefaultText
 	checkevent EVENT_GOT_DANCE_THEATER_LUCKY_EGG
 	iftrue .DefaultText
 	faceplayer
@@ -202,13 +210,24 @@ KimonoGirlUmbreonBeatenText_Challenge: ;
 	roll "of us!"
 	done
 
+KimonoGirlGlaceonSeenText_Challenge:
+	ntag "YUKI:"
+	text "I'm the last one."
+
+	para "Do you think you"
+	line "can beat me too?"
+
+	para "My #MON is"
+	line "tough."
+	done
+
 ; victory
 DanceTheaterGrannyVictoryText:
 	ntag "GRANNY:"
 	text "What a stunning"
 	line "performance!"
 
-	text "Many trainers come"
+	para "Many trainers come"
 	line "to challenge the"
 	cont "KIMONO GIRLs, but"
 	roll "I've never seen"
@@ -228,6 +247,7 @@ DanceTheaterGrannyVictoryText:
 	done
 
 DanceTheaterGrannyLuckyEggText:
+	ntag "GRANNY:"
 	text "That LUCKY EGG"
 	line "helps #MON gain"
 	cont "experience points"
@@ -618,7 +638,7 @@ KimonoGirlAokiAfterBattleText:
 	line "peaceful, its my"
 	cont "favorite place."
 
-	text "I like to train"
+	para "I like to train"
 	line "my #MON there."
 	done
 
