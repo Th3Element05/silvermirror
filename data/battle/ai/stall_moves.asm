@@ -1,5 +1,4 @@
-; AI_OPPORTUNIST discourages these moves
-; when the player's HP is low.
+; AI_OPPORTUNIST discourages these moves when its HP is low.
 
 StallMoves:
 	db SWORDS_DANCE
