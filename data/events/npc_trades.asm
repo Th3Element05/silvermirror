@@ -30,7 +30,7 @@ NPCTrades:
 ; NPC_TRADE_ARATA ;rocker, safari zone entrance
 	npctrade TRADE_DIALOGSET_SAFARI,    ELECTABUZZ, PINSIR,     "GATACK@@@@@", $98, $de, LUM_BERRY,    23931, "ARATA@@@@@@", TRADE_GENDER_EITHER
 ; NPC_TRADE_JIM ;scientist, cinnabar lab fossil room
-	npctrade TRADE_DIALOGSET_GENERIC,   DITTO,      DITTO,      "MORPH@@@@@@", $ee, $ee, METAL_POWDER, 64582, "JIM@@@@@@@@", TRADE_GENDER_EITHER
+	npctrade TRADE_DIALOGSET_GENERIC,   DITTO,      DITTO,      "MORPH@@@@@@", $ff, $ff, METAL_POWDER, 64582, "JIM@@@@@@@@", TRADE_GENDER_EITHER
 ; NPC_TRADE_CLIFTON ;gramps, cinnabar lab
 	npctrade TRADE_DIALOGSET_HAPPY,     GROWLITHE,  CHANSEY,    "DORIS@@@@@@", $d8, $bf, LUCKY_PUNCH,  29213, "CLIFTON@@@@", TRADE_GENDER_EITHER
 ; NPC_TRADE_NORMA ;beauty, cinnabar lab
