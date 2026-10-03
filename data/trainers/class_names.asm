@@ -9,7 +9,7 @@ TrainerClassNames::
 	li "LEADER"         ;JASMINE
 	li "LEADER"         ;PRYCE
 	li "LEADER"         ;CLAIR
-	li "<PKMN> PROF."   ;POKEMON_PROF
+	li "PROFESSOR"      ;POKEMON_PROF "<PKMN> PROF."
 	li "RIVAL"          ;RIVAL1
 	li "RIVAL"          ;RIVAL2
 	li "LEADER"         ;BROCK
@@ -36,7 +36,7 @@ TrainerClassNames::
 	li "SCIENTIST"      ;SCIENTIST
 	li "YOUNGSTER"      ;YOUNGSTER
 	li "SCHOOLBOY"      ;SCHOOLBOY
-	li "BIRD KEEPER"    ;BIRD_KEEPER
+	li "BIRDKEEPER"    ;BIRD_KEEPER
 	li "LASS"           ;LASS
 	li "TEACHER"        ;TEACHER
 	li "ACE TRAINER"    ;COOLTRAINERM
@@ -45,12 +45,12 @@ TrainerClassNames::
 	li "#MANIAC"        ;POKEMANIAC
 	li "GENTLEMAN"      ;GENTLEMAN
 	li "SKIER"          ;SKIER
-	li "BUG CATCHER"    ;BUG_CATCHER
+	li "BUGCATCHER"    ;BUG_CATCHER
 	li "FISHER"         ;FISHER
 	li "SWIMMER"       ;SWIMMERM ; "SWIMMER♂"
 	li "SWIMMER"       ;SWIMMERF ; "SWIMMER♀"
 	li "SAILOR"         ;SAILOR
-	li "SUPER NERD"     ;SUPER_NERD
+	li "SUPERNERD"     ;SUPER_NERD
 	li "GUITARIST"      ;GUITARIST
 	li "HIKER"          ;HIKER
 	li "BIKER"          ;BIKER
