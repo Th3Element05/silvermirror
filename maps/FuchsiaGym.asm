@@ -260,7 +260,7 @@ SageKyloBeatenText:
 
 SageKyloAfterBattleText:
 	ntag "SAGE:"
-	text "I will keep on"
+	text "I will continue"
 	line "training under"
 	cont "my NINJA MASTER,"
 	roll "KOGA!"
@@ -309,9 +309,8 @@ TrainerSageMusa:
 
 SageMusaSeenText:
 	ntag "SAGE:"
-	text "Strength isn't"
-	line "the key for"
-	cont "#MON!"
+	text "Strength isn't the"
+	line "key to winning."
 
 	para "It's strategy!"
 
@@ -515,7 +514,7 @@ FuchsiaGym_MapEvents:
 	bg_event  6, 15, BGEVENT_READ, FuchsiaGymStatue
 
 	def_object_events
-	object_event  4, 10, SPRITE_KOGA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FuchsiaGymKogaScript, EVENT_BEAT_ELITE_FOUR
+	object_event  5, 10, SPRITE_KOGA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FuchsiaGymKogaScript, EVENT_BEAT_ELITE_FOUR
 	object_event  8,  2, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_TRAINER, 2, TrainerNinjaKoa, -1
 	object_event  3,  5, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_TRAINER, 2, TrainerNinjaKhai, -1
 	object_event  2,  7, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSageEzra, -1
@@ -524,6 +523,6 @@ FuchsiaGym_MapEvents:
 	object_event  8, 13, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSageMusa, -1
 	object_event  7, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 1, FuchsiaGymGuideScript, -1
 ;
-	object_event  4, 10, SPRITE_KOGA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FuchsiaGymKogaRematchScript, EVENT_NINJA_CHALLENGE_IN_PROGRESS
+	object_event  5, 10, SPRITE_KOGA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FuchsiaGymKogaRematchScript, EVENT_NINJA_CHALLENGE_IN_PROGRESS
 
 ;.GrayOverTreeOBPalette (GrayOverTreeYellowSkin)

@@ -64,7 +64,7 @@ CinnabarIslandGrampsText:
 CinnabarIslandLabSign:
 	jumptext CinnabarIslandLabSignText
 CinnabarIslandLabSignText:
-	text "#MON MANSION"
+	text "#MON LAB"
 	done
 
 CinnabarIslandSign:

@@ -105,6 +105,10 @@ CinnabarLabLegendsPCText:
 	cont "to CERULEAN."
 	done
 
+CinnabarLabDifficultBookshelf:
+	jumpstd DifficultBookshelfScript
+
+
 CinnabarLabResearchRoom_MapEvents:
 	db 0, 0 ; filler
 
@@ -119,6 +123,12 @@ CinnabarLabResearchRoom_MapEvents:
 	bg_event  1,  4, BGEVENT_UP, CinnabarLabLegendsPC
 ;	bg_event  4,  4, BGEVENT_UP, CinnabarLabEeveePC
 	bg_event  5,  4, BGEVENT_UP, CinnabarLabEeveePC
+	bg_event  2,  1, BGEVENT_READ, CinnabarLabDifficultBookshelf
+	bg_event  3,  1, BGEVENT_READ, CinnabarLabDifficultBookshelf
+	bg_event  4,  1, BGEVENT_READ, CinnabarLabDifficultBookshelf
+	bg_event  5,  1, BGEVENT_READ, CinnabarLabDifficultBookshelf
+	bg_event  6,  5, BGEVENT_READ, CinnabarLabDifficultBookshelf
+	bg_event  7,  5, BGEVENT_READ, CinnabarLabDifficultBookshelf
 
 	def_object_events
 	object_event  3,  2, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarLabMetronomeScientist, -1
