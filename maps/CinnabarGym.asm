@@ -409,7 +409,7 @@ CinnabarGymQuestion5Text: ;true
 	done
 
 CinnabarGymQuestion6Text: ;false
-	text "TM28 contains"
+	text "TM34 contains"
 	line "TOMBSTONER?"
 	done
 
@@ -910,8 +910,8 @@ CinnabarGym_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 20, 17, CINNABAR_ISLAND, 2
-	warp_event 21, 17, CINNABAR_ISLAND, 2
+	warp_event 19, 18, CINNABAR_ISLAND, 2
+	warp_event 20, 18, CINNABAR_ISLAND, 2
 
 	def_coord_events
 
@@ -932,7 +932,7 @@ CinnabarGym_MapEvents:
 	object_event  2, 15, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TrainerFirebreatherEvan, -1
 	object_event  2,  9, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, TrainerSuperNerdMarkus, -1
 	object_event 20,  2, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_TRAINER, 2, TrainerSuperNerdTeru, -1
-	object_event  3,  3, SPRITE_BLAINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarGymBlaineScript, EVENT_BEAT_ELITE_FOUR
-	object_event 19, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, CinnabarGymGuideScript, -1
+	object_event  4,  3, SPRITE_BLAINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarGymBlaineScript, EVENT_BEAT_ELITE_FOUR
+	object_event 17, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, CinnabarGymGuideScript, -1
 ;
-	object_event  3,  3, SPRITE_BLAINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarGymBlaineRematchScript, EVENT_KANTO_LEADER_REMATCHES
+	object_event  4,  3, SPRITE_BLAINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarGymBlaineRematchScript, EVENT_KANTO_LEADER_REMATCHES

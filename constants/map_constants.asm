@@ -236,7 +236,7 @@ ENDM
 	map_const CINNABAR_ISLAND,                             11, 10 ;  1
 	map_const CINNABAR_POKECENTER_1F,                       7,  4 ;  2
 	map_const CINNABAR_MART,                                5,  4 ;  3
-	map_const CINNABAR_GYM,                                12,  9 ;  4
+	map_const CINNABAR_GYM,                                12, 10 ;  4
 	map_const CINNABAR_LAB,                                 8,  4 ;  5
 	map_const CINNABAR_LAB_RESEARCH_ROOM,                   4,  4 ;  6
 	map_const CINNABAR_LAB_FOSSIL_ROOM,                     4,  4 ;  7
