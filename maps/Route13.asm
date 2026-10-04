@@ -164,10 +164,14 @@ TrainerBirdKeeperPerry:
 
 BirdKeeperPerrySeenText:
 	ntag "BIRDKEEPER:"
-	text "Have you taught"
-	line "your bird #MON"
-	cont "how to FLY?"
+	text "Do your bird"
+	line "#MON know how"
+	cont "to FLY?"
 	done
+;	text "Have you taught"
+;	line "your bird #MON"
+;	cont "how to FLY?"
+;	done
 
 BirdKeeperPerryBeatenText:
 	ntag "PERRY:"

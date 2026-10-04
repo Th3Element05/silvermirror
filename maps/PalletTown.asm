@@ -143,7 +143,7 @@ PalletTownOakExplainsTentacoolText:
 	cont "you'll need to take"
 	roll "ROUTE 19 and 20."
 
-	para "They're south from"
+	para "That's south from"
 	line "FUCHSIA CITY."
 	done
 

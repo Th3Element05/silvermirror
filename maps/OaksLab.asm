@@ -1585,6 +1585,7 @@ OaksLabHintBookshelf:
 	iffalse .NotYet
 	opentext
 	writetext OaksLabAskReadHintText
+	promptbutton
 	loadmenu .HintMenuHeader
 	verticalmenu
 	closewindow
@@ -1681,6 +1682,7 @@ OaksLabRareCandyHint:
 	line "RARE CANDY after"
 	cont "each encounter"
 	roll "with [REDACTED]."
+	done
 
 OaksLabRandomEggsHint:
 	text "You can get random"
