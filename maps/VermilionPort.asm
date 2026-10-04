@@ -211,12 +211,13 @@ VermilionPortTruck:
 	waitsfx
 	waitbutton
 	closepokepic
-	setval MEW
-	special SilentSetSeenMon
 	special InitRoamMonsKanto
 	opentext
 	writetext VermilionPortMewFlewOffText
-	waitbutton
+	promptbutton
+	setval MEW
+;	special SilentSetSeenMon
+	special ShowPokedexEntry
 	closetext
 	setevent EVENT_FOUND_MEW
 	end
