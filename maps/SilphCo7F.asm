@@ -211,6 +211,33 @@ SilphCo7FRivalAfterBattleText:
 	roll "Smell ya later!"
 	done
 
+SilphCo7FRivalApproachMovementLong:
+	slow_step UP
+SilphCo7FRivalApproachMovementShort:
+	slow_step UP
+	slow_step UP
+	step_end
+
+SilphCo7FRivalLeavesMovementLong:
+	slow_step LEFT
+	slow_step UP
+	slow_step UP
+	slow_step RIGHT
+	slow_step RIGHT
+	slow_step RIGHT
+	slow_step DOWN
+	step_end
+
+SilphCo7FRivalLeavesMovementShort:
+	slow_step RIGHT
+	slow_step RIGHT
+	step_end
+
+SilphCo7FRivalTeleportMovement:
+;	teleport_from
+	rock_smash 30
+	step_end
+
 SilphCo7FLaprasGiftScript:
 	checkevent EVENT_GOT_LAPRAS_FROM_SILPH_CO
 	iftrue .GotLapras
@@ -482,32 +509,6 @@ GruntM24AfterBattleText:
 	line "My brothers will"
 	cont "repay the favor!"
 	done
-
-SilphCo7FRivalApproachMovementLong:
-	slow_step UP
-SilphCo7FRivalApproachMovementShort:
-	slow_step UP
-	slow_step UP
-	step_end
-
-SilphCo7FRivalLeavesMovementLong:
-	slow_step LEFT
-	slow_step UP
-	slow_step UP
-	slow_step RIGHT
-	slow_step RIGHT
-	slow_step RIGHT
-	slow_step DOWN
-	step_end
-
-SilphCo7FRivalLeavesMovementShort:
-	slow_step RIGHT
-	slow_step RIGHT
-	step_end
-
-SilphCo7FRivalTeleportMovement:
-	teleport_from
-	step_end
 
 
 ; itemballs
