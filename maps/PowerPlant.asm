@@ -61,7 +61,9 @@ PowerPlantVoltorbTrapScript:
 	waitsfx
 	waitbutton
 	closetext
-	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM ;battletype prevents random level variation
+; Voltorb has no wild hold item, 
+; This just prevents the level from being randomized.
+	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
 	loadwildmon VOLTORB, 29
 	startbattle
 	disappear LAST_TALKED
@@ -78,7 +80,10 @@ PowerPlantElectrodeTrapScript:
 	cry ELECTRODE
 	waitsfx
 	waitbutton
-	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM ;battletype prevents random level variation
+	closetext
+; Electrode has no wild hold item, 
+; This just prevents the level from being randomized.
+	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
 	loadwildmon ELECTRODE, 30
 	startbattle
 	disappear LAST_TALKED
