@@ -217,16 +217,12 @@ OaksPKMNTalkSwarm1:
 ;;silvermirror ; Only do challenge mode check if in Kanto
 ;	call .InJohto
 ;	jp c, .generate_flag
-;;silvermirror ; Check if challenge mode is active. If yes, consider alternate swarms.
-	ld a, [wChallengeMode]
-	bit GAME_CHALLENGE_MODE_F, a
-	jr nz, .generate_flag
 
-;.hof_check
-;silvermirror ; Check if beat e4. If no, don't use alternate swarms.
-	ld a, [wStatusFlags]
-	bit STATUSFLAGS_HALL_OF_FAME_F, a
-	jr z, .normal_swarm ;.not_hof
+; Check if challenge mode is active or E4 has been beaten.
+; If yes, consider alternate swarms.
+	ld a, [wChallengeMode]
+	and a
+	jr z, .normal_swarm ; z not active
 
 ; Choose normal or alternate swarm
 .generate_flag

@@ -1402,7 +1402,7 @@ RandomPhoneMon:
 	ld b, a
 ;Check if challenge mode is active. If no, skip next step.
 	ld a, [wChallengeMode]
-	and a
+	bit GAME_CHALLENGE_MODE_F, a ; and a
 	jr z, .no_variance
 ;Find delimiter then load next byte
 .find_delimiter

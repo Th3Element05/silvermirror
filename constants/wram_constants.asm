@@ -413,6 +413,7 @@ DEF DAYCARELADY_ACTIVE_F         EQU 7
 ; wChallengeMode::
 	const_def
 	const GAME_CHALLENGE_MODE_F ; 0
+	const GAME_CLEARED_HOF_F    ; 1
 
 ; wUnlockedUnowns::
 	const_def

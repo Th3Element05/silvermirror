@@ -638,12 +638,8 @@ DayCare_InitBreeding:
 .is_hitmon_group
 ; Check Mode, Check HOF
 	ld a, [wChallengeMode]
-	bit GAME_CHALLENGE_MODE_F, a
-	jp nz, .do_hitmontop
-
-	ld a, [wStatusFlags]
-	bit STATUSFLAGS_HALL_OF_FAME_F, a
-	jp z, .not_hitmontop
+	and a
+	jr z, .not_hitmontop ; z not active
 
 .do_hitmontop
 	call Random

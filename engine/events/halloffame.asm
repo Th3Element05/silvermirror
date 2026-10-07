@@ -11,8 +11,13 @@ HallOfFame::
 	ld [wSpawnAfterChampion], a
 
 	; Enable the Pokégear map to cycle through all of Kanto
+	; And switch between Kanto/Johto AREA maps. 
 	ld hl, wStatusFlags
 	set STATUSFLAGS_HALL_OF_FAME_F, [hl]
+
+	; Enable Gen2 evos and stuff in Classic Mode
+	ld hl, wChallengeMode
+	set GAME_CLEARED_HOF_F, [hl]
 
 	farcall HallOfFame_InitSaveIfNeeded
 

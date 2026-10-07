@@ -331,6 +331,7 @@ EngineFlags:
 	engine_flag wSwarmFlags, SWARMFLAGS_SWARM_ACTIVE
 
 	engine_flag wChallengeMode, GAME_CHALLENGE_MODE_F
+	engine_flag wChallengeMode, GAME_CLEARED_HOF_F
 
 	engine_flag wPlayerCaught, 0 ; Ho-Oh
 	engine_flag wPlayerCaught, 1 ; Lugia

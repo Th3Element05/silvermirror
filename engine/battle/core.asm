@@ -6521,32 +6521,41 @@ LoadEnemyMon:
 ; In a wild battle, we pull from the item slots in BaseData
 
 ; Force Item1
-; Used for Ho-Oh, Lugia and Snorlax encounters
+; Only used for Snorlax encounters to force held item, 
+; Which is irrelevant due to "Force Item2" below.
 	ld a, [wBattleType]
 	cp BATTLETYPE_FORCEITEM
 	ld a, [wBaseItem1]
 	jr z, .UpdateItem
 
-	ld a, [wBattleType]
-	cp BATTLETYPE_HO_OH
-	ld a, [wBaseItem1]
+; Force Item2 if Item2=Item1
+	ld b, a
+	ld a, [wBaseItem2]
+	cp b
 	jr z, .UpdateItem
+
+;; Force Ho-oh's hold item
+;	ld a, [wBattleType]
+;	cp BATTLETYPE_HO_OH
+;	ld a, [wBaseItem1]
+;	jr z, .UpdateItem
 
 ; Failing that, it's all up to chance
 ;  Effective chances:
 ;    50% None
-;    48% Item1
-;     2% Item2
+;    45% Item1
+;     5% Item2
 
-; 50% chance of getting an item
+; 50% chance of no hold item
 	call BattleRandom
-	cp 50 percent + 1
+	cp 50 percent
 	ld a, NO_ITEM
 	jr c, .UpdateItem
 
-; From there, an 5% chance for Item2
+; From there, a 5% chance for Item2
+; Otherwise, it will be Item1
 	call BattleRandom
-	cp 4 percent ; 4% of 50% = 2% Item2
+	cp 10 percent + 1 ; 10% of 50% = 5% Item2
 	ld a, [wBaseItem1]
 	jr nc, .UpdateItem
 	ld a, [wBaseItem2]
@@ -6556,17 +6565,24 @@ LoadEnemyMon:
 
 ; prevent Dragon Scale until after HOF unless Gen2Mode
 	cp DRAGON_SCALE
+	ld b, HEART_SCALE
+	jr z, .Check_Gen2_HOF
+
+	cp KINGS_ROCK
+;	ld b, HEART_SCALE
+	jr z, .Check_Gen2_HOF
+
+	cp METAL_COAT
+	ld b, IRON_PLATE
 	jr nz, .finished
 
+.Check_Gen2_HOF
 	ld a, [wChallengeMode]
-	bit GAME_CHALLENGE_MODE_F, a
-	jp nz, .finished
+	and a
+	jp nz, .finished ; nz is active
 
-	ld a, [wStatusFlags]
-	bit STATUSFLAGS_HALL_OF_FAME_F, a
-	jp nz, .finished
-
-	xor a
+;	xor a
+	ld a, b
 	ld [wEnemyMonItem], a
 .finished
 

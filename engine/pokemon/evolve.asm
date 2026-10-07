@@ -85,12 +85,8 @@ EvolveAfterBattle_MasterLoop:
 
 ; Check Mode, Check HOF
 	ld a, [wChallengeMode]
-	bit GAME_CHALLENGE_MODE_F, a
-	jp nz, .do_gen_2_evos
-
-	ld a, [wStatusFlags]
-	bit STATUSFLAGS_HALL_OF_FAME_F, a
-	jp z, .dont_evolve_2
+	and a
+	jp z, .dont_evolve_2 ; z not active
 
 .do_gen_2_evos
 	ld a, b
