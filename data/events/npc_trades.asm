@@ -14,11 +14,11 @@ NPCTrades:
 ; NPC_TRADE_MIA ;twin, route 5 underground entrance
 	npctrade TRADE_DIALOGSET_GIRL,      NIDORAN_F,  NIDORAN_M,  "SPIKE@@@@@@", $9d, $ac, PECHA_BERRY,  57572, "MIA@@@@@@@@", TRADE_GENDER_EITHER
 ; NPC_TRADE_HIROSHI ;youngster, route 10 pokecenter
-	npctrade TRADE_DIALOGSET_GENERIC,   BELLSPROUT, ODDISH,     "ODOKAWA@@@@", $9d, $ac, PERSIM_BERRY, 33623, "HIROSHI@@@@", TRADE_GENDER_EITHER
+	npctrade TRADE_DIALOGSET_GENERIC,   ODDISH,     SEEL,       "ODOKAWA@@@@", $9d, $ac, PERSIM_BERRY, 33623, "HIROSHI@@@@", TRADE_GENDER_EITHER
 ; NPC_TRADE_LUCAS ;youngster, route 11 gate 2f
-	npctrade TRADE_DIALOGSET_HAPPY,     GEODUDE,    CUBONE,     "FLINT@@@@@@", $bf, $8e, THICK_CLUB,   62774, "LUCAS@@@@@@", TRADE_GENDER_EITHER
+	npctrade TRADE_DIALOGSET_HAPPY,     GEODUDE,    CUBONE,     "FLINT@@@@@@", $bf, $8e, SITRUS_BERRY, 62774, "LUCAS@@@@@@", TRADE_GENDER_EITHER
 ; NPC_TRADE_NOAH ;super_nerd, route 18 gate 2f
-	npctrade TRADE_DIALOGSET_COLLECTOR, SLOWBRO,    LICKITUNG,  "MARC@@@@@@@", $ac, $f8, LEPPA_BERRY,  64445, "NOAH@@@@@@@", TRADE_GENDER_EITHER
+	npctrade TRADE_DIALOGSET_COLLECTOR, SLOWBRO,    LICKITUNG,  "MARC@@@@@@@", $ac, $f8, SITRUS_BERRY, 64445, "NOAH@@@@@@@", TRADE_GENDER_EITHER
 ; NPC_TRADE_MASON ;gramps, cerulean trade speech house
 	npctrade TRADE_DIALOGSET_HAPPY,     POLIWHIRL,  JYNX,       "LOLA@@@@@@@", $e9, $db, ASPEAR_BERRY, 16856, "MASON@@@@@@", TRADE_GENDER_EITHER
 ; NPC_TRADE_ELYSSA ;twin, vermilion magnet train speech house
