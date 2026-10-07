@@ -746,9 +746,13 @@ _YouCantUseItInABattleText::
 	prompt
 
 _AreYouABoyOrAreYouAGirlText::
-	text "Are you a boy?"
-	line "Or are you a girl?"
+	text "Will you play as a"
+	line "boy, or as a girl?"
 	done
+
+;	text "Are you a boy?"
+;	line "Or are you a girl?"
+;	done
 
 Text_ThisGameHasTwoGameModes::
 	text "This game has two"
