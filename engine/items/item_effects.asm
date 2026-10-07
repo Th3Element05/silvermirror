@@ -168,7 +168,7 @@ ItemEffects:
 	dw NormalBoxEffect     ; NORMAL_BOX
 	dw GorgeousBoxEffect   ; GORGEOUS_BOX
 	dw EvoStoneEffect      ; SUN_STONE
-	dw NoEffect            ; STEEL_INGOT ; POLKADOT_BOW
+	dw NoEffect            ; IRON_PLATE ; POLKADOT_BOW
 	dw EvoStoneEffect      ; UP_GRADE
 	dw RestoreHPEffect     ; ORAN_BERRY
 	dw RestoreHPEffect     ; SITRUS_BERRY

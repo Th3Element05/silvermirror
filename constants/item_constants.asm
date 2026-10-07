@@ -160,7 +160,7 @@
 	const NORMAL_BOX   ; 98
 	const GORGEOUS_BOX ; 99
 	const SUN_STONE    ; 9a
-	const STEEL_INGOT  ; 9b ; POLKADOT_BOW
+	const IRON_PLATE   ; 9b ; POLKADOT_BOW
 	const UP_GRADE     ; 9c ; unused, unless PORYGON2 restored
 	const ORAN_BERRY   ; 9d
 	const SITRUS_BERRY ; 9e

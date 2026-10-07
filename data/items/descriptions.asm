@@ -155,7 +155,7 @@ ItemDescriptions:
 	dw NormalBoxDesc
 	dw GorgeousBoxDesc
 	dw SunStoneDesc
-	dw SteelIngotDesc ; PolkadotBowDesc
+	dw IronPlateDesc ; PolkadotBowDesc
 	dw UpGradeDesc
 	dw OranBerryDesc
 	dw SitrusBerryDesc
@@ -955,7 +955,7 @@ GorgeousBoxDesc:
 ;PolkadotBowDesc:
 ;	db   "Powers up NORMAL-"
 ;	next "type moves. (HOLD)@"
-SteelIngotDesc:
+IronPlateDesc:
 	db   "Powers up STEEL-"
 	next "type moves. (HOLD)@"
 
