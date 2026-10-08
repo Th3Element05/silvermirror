@@ -43,7 +43,16 @@ Route12Gate2FLassExplainSwiftText:
 	done
 
 Route12Gate2FBinocularsL:
-	jumptext Route12Gate2FManFishingText
+	opentext
+	writetext Route12Gate2FManFishingText
+	waitbutton
+	closetext
+	checkevent EVENT_GOT_WIDE_LENS
+	iftrue .End
+	jumpstd BinocularsWideLensScript
+.End
+	end
+
 Route12Gate2FManFishingText:
 	text "Looked into the"
 	line "binoculars."
@@ -52,7 +61,16 @@ Route12Gate2FManFishingText:
 	done
 
 Route12Gate2FBinocularsR:
-	jumptext Route12Gate2FPokemonTowerText
+	opentext
+	writetext Route12Gate2FPokemonTowerText
+	waitbutton
+	closetext
+	checkevent EVENT_GOT_WIDE_LENS
+	iftrue .End
+	jumpstd BinocularsWideLensScript
+.End
+	end
+
 Route12Gate2FPokemonTowerText:
 	text "Looked into the"
 	line "binoculars."

@@ -62,6 +62,7 @@ StdScripts::
 	add_stdscript PokecenterReceptionistScript ;silvermirror+
 	add_stdscript SilphCoNoCardKeyScript ;silvermirror+
 	add_stdscript PokecenterLuckyNumberScript ;silvermirror+
+	add_stdscript BinocularsWideLensScript ;silvermirror+
 
 PokecenterNurseScript:
 ; EVENT_WELCOMED_TO_POKECOM_CENTER is never set
@@ -2714,3 +2715,20 @@ PokecenterLuckyNumberGoToPCMovement:
 PokecenterLuckyNumberReturnToPlayerMovement:
 	step DOWN
 	step_end
+
+BinocularsWideLensScript:
+	random 3
+	ifnotequal 0, .End
+	giveitem WIDE_LENS
+	iffalse .End
+	showemote EMOTE_SHOCK, PLAYER, 20
+	opentext
+	farwritetext _WideLensFellOutText
+	playsound SFX_ITEM
+	waitsfx
+	itemnotify
+;	waitbutton
+	setevent EVENT_GOT_WIDE_LENS
+	closetext
+.End
+	end

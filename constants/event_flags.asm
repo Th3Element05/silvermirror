@@ -98,7 +98,7 @@
 	const EVENT_GOT_MASTER_BALL_FROM_SILPH_CO
 	const EVENT_GOT_BERSERK_GENE
 	const EVENT_GOT_KANTO_LUCKY_EGG
-	const_skip ;unused
+	const EVENT_GOT_WIDE_LENS
 	const_skip ;unused
 	const_skip ;unused
 	const_skip ;unused

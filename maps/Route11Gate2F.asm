@@ -106,8 +106,17 @@ Route11Gate2FBinoculars:
 	checkevent EVENT_ROUTE_12_SNORLAX
 	iftrue .AfterSnorlax
 	jumptext Route11Gate2FSnorlaxText
+
 .AfterSnorlax
-	jumptext Route11Gate2FBeautifulViewText
+	opentext
+	writetext Route11Gate2FBeautifulViewText
+	waitbutton
+	closetext
+	checkevent EVENT_GOT_WIDE_LENS
+	iftrue .End
+	jumpstd BinocularsWideLensScript
+.End
+	end
 
 Route11Gate2FSnorlaxText:
 	text "Looked into the"

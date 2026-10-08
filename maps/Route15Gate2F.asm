@@ -88,7 +88,16 @@ Route15Gate2FOaksAideLuckyEggExplainText:
 	done
 
 Route15Gate2FBinoculars:
-	jumptext Route15Gate2FSmallIslandText
+	opentext
+	writetext Route15Gate2FSmallIslandText
+	waitbutton
+	closetext
+	checkevent EVENT_GOT_WIDE_LENS
+	iftrue .End
+	jumpstd BinocularsWideLensScript
+.End
+	end
+
 Route15Gate2FSmallIslandText:
 	text "Looked into the"
 	line "binoculars."

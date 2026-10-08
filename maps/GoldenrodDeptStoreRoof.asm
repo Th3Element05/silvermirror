@@ -169,7 +169,16 @@ PokeDollVendingMachineText:
 	done
 
 Binoculars1:
-	jumptext Binoculars1Text
+	opentext
+	writetext Binoculars1Text
+	waitbutton
+	closetext
+	checkevent EVENT_GOT_WIDE_LENS
+	iftrue .End
+	jumpstd BinocularsWideLensScript
+.End
+	end
+
 Binoculars1Text:
 	text "Hey! Some trainers"
 	line "are battling on"
@@ -180,7 +189,16 @@ Binoculars1Text:
 	done
 
 Binoculars2:
-	jumptext Binoculars2Text
+	opentext
+	writetext Binoculars2Text
+	waitbutton
+	closetext
+	checkevent EVENT_GOT_WIDE_LENS
+	iftrue .End
+	jumpstd BinocularsWideLensScript
+.End
+	end
+
 Binoculars2Text:
 	text "A FISHER caught a"
 	line "lot of MAGIKARP…"
@@ -193,7 +211,16 @@ Binoculars2Text:
 	done
 
 Binoculars3:
-	jumptext Binoculars3Text
+	opentext
+	writetext Binoculars3Text
+	waitbutton
+	closetext
+	checkevent EVENT_GOT_WIDE_LENS
+	iftrue .End
+	jumpstd BinocularsWideLensScript
+.End
+	end
+
 Binoculars3Text:
 	text "These are pointed"
 	line "straight towards"

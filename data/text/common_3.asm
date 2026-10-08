@@ -1585,3 +1585,20 @@ _NoRoomInPartyText::
 ;	text "There's no room in"
 ;	line "your party."
 ;	done
+
+_WideLensFellOutText::
+	text "Something fell out"
+	line "of the binoculars!"
+
+	para "<PLAYER> picked up"
+	line "the WIDE LENS."
+	done
+
+;_PutWideLensBackText::
+;	text "But <PLAYER>'s PACK"
+;	line "is full…"
+;
+;	para "<PLAYER> put the"
+;	line "WIDE LENS back in"
+;	cont "the binoculars."
+;	done

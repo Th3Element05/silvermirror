@@ -14,7 +14,16 @@ TradeNPCNoah:
 	end
 
 Route18Gate2FBinocularsLeft:
-	jumptext Route18Gate2FPalletTownText
+	opentext
+	writetext Route18Gate2FPalletTownText
+	waitbutton
+	closetext
+	checkevent EVENT_GOT_WIDE_LENS
+	iftrue .End
+	jumpstd BinocularsWideLensScript
+.End
+	end
+
 Route18Gate2FPalletTownText:
 	text "Looked into the"
 	line "binoculars."
@@ -24,7 +33,16 @@ Route18Gate2FPalletTownText:
 	done
 
 Route18Gate2FBinocularsRight:
-	jumptext Route18Gate2FPeopleSwimmingText
+	opentext
+	writetext Route18Gate2FPeopleSwimmingText
+	waitbutton
+	closetext
+	checkevent EVENT_GOT_WIDE_LENS
+	iftrue .End
+	jumpstd BinocularsWideLensScript
+.End
+	end
+
 Route18Gate2FPeopleSwimmingText:
 	text "Looked into the"
 	line "binoculars."
