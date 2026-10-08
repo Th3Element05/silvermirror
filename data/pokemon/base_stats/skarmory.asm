@@ -6,7 +6,7 @@
 	db STEEL, FLYING ; type
 	db 25 ; catch rate
 	db 168 ; base exp
-	db NO_ITEM, METAL_COAT ; items
+	db NO_ITEM, METAL_COAT ; items ; IRON_PLATE
 	db GENDER_F50 ; gender ratio
 ;	db 100 ; unknown 1
 	db 12 ;25 ; Step cycles to hatch

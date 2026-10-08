@@ -6,7 +6,7 @@
 	db ICE, PSYCHIC_TYPE ; type
 	db 45 ; catch rate
 	db 87 ; base exp
-	db ASPEAR_BERRY, ASPEAR_BERRY ; items
+	db ASPEAR_BERRY, NO_ITEM ; items
 	db GENDER_F100 ; gender ratio
 ;	db 100 ; unknown 1
 	db 12 ;25 ; Step cycles to hatch

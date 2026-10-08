@@ -7,7 +7,7 @@
 	db FLYING, NORMAL ; type ;NORMAL, NORMAL ; type
 	db 29 ; catch rate
 	db 255 ; base exp
-	db NO_ITEM, MASTER_BALL ; items
+	db MASTER_BALL, NO_ITEM ; items
 	db GENDER_UNKNOWN ; gender ratio
 ;	db 100 ; unknown 1
 	db 120 ; step cycles to hatch

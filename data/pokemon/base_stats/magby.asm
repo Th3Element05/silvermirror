@@ -6,7 +6,7 @@
 	db FIRE, FIRE ; type
 	db 45 ; catch rate
 	db 117 ; base exp
-	db RAWST_BERRY, RAWST_BERRY ; items
+	db RAWST_BERRY, NO_ITEM ; items
 	db GENDER_F25 ; gender ratio
 ;	db 100 ; unknown 1
 	db 12 ;25 ; Step cycles to hatch

@@ -6,7 +6,7 @@
 	db WATER, PSYCHIC_TYPE ; type
 	db 70 ; catch rate
 	db 164 ; base exp
-	db NO_ITEM, KINGS_ROCK ; items
+	db NO_ITEM, KINGS_ROCK ; items ; HEART_SCALE
 	db GENDER_F50 ; gender ratio
 ;	db 100 ; unknown 1
 	db 10 ;20 ; step cycles to hatch
