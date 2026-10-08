@@ -1607,28 +1607,47 @@ BattleCommand_CheckHit:
 	ld b, a
 
 .BrightPowder:
+	; check Brightpowder
 	push bc
 	call GetOpponentItem
 	ld a, b
 	cp HELD_BRIGHTPOWDER
 	ld a, c ; % miss
 	pop bc
-	jr nz, .skip_brightpowder
+	jr nz, .WideLens
 
 	ld c, a
 	ld a, b
 	sub c
 	ld b, a
-	jr nc, .skip_brightpowder
+	jr nc, .WideLens
 	ld b, 0
+	
+.WideLens:
+	; check Wide Lens
+	push bc
+	call GetUserItem
+	ld a, b
+	cp HELD_WIDE_LENS
+	ld a, c ; wide_lens parameter (% hit)
+	pop bc
+	jr nz, .check_hit
 
-.skip_brightpowder
+	ld c, a
+	ld a, b
+	add c
+	ld b, a
+	jr nc, .check_hit
+	ld b, $ff
+
+.check_hit
 	ld a, b
 	cp -1
 	jr z, .Hit
 
 	call BattleRandom
 	cp b
+.Accuracy_Breakpoint:
 	jr nc, .Miss
 
 .Hit:

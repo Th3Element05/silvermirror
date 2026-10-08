@@ -166,9 +166,9 @@ ItemDescriptions:
 	dw FlowerMailDesc
 	dw SuperRod2Desc
 	dw DuskStoneDesc
-	dw RazorFangDesc ; ITEM_A6
-	dw RazorClawDesc ; ITEM_A7
-	dw TeruSama0Desc ; ITEM_A8
+	dw RazorFangDesc
+	dw RazorClawDesc
+	dw WideLensDesc
 	dw TeruSama0Desc ; ITEM_A9
 	assert_table_length NUM_ITEMS
 	dw TeruSama1Desc ; TM01
@@ -756,7 +756,7 @@ SpellTagDesc:
 ;	next "HP by 20.@"
 SilphScopeDesc:              ;silvermirror
 	db   "Able to reveal"
-	next "unseen #MON.@"
+	next "unseen things.@"
 
 GSBallDesc:
 	db   "A mysterious BALL.@"
@@ -1003,6 +1003,10 @@ SuperRod2Desc:
 CardKeyNDesc:
 	db   "Opens doors in the"
 	next "NINJA's DEN.@"
+
+WideLensDesc:
+	db   "Raises accuracy"
+	next "of attacks. (HOLD)@"
 
 ;SurfMailDesc:
 ;	db   "LAPRAS-print MAIL."

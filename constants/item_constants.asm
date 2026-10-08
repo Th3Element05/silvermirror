@@ -173,7 +173,7 @@
 	const DUSK_STONE   ; a5
 	const RAZOR_FANG   ; a6
 	const RAZOR_CLAW   ; a7
-	const ITEM_A8      ; a8
+	const WIDE_LENS    ; a8
 	const ITEM_A9      ; a9
 DEF NUM_ITEMS EQU const_value - 1
 

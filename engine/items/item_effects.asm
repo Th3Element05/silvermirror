@@ -181,7 +181,7 @@ ItemEffects:
 	dw EvoStoneEffect      ; DUSK_STONE
 	dw NoEffect            ; RAZOR_FANG
 	dw NoEffect            ; RAZOR_CLAW
-	dw NoEffect            ; ITEM_A8
+	dw NoEffect            ; WIDE_LENS
 	dw NoEffect            ; ITEM_A9
 	assert_table_length NUM_ITEMS ; assert_table_length ITEM_B3
 ; The items past ITEM_B3 do not have effect entries:

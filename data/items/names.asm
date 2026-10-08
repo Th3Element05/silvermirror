@@ -167,7 +167,7 @@ ItemNames::
 	li "DUSK STONE"
 	li "RAZOR FANG"
 	li "RAZOR CLAW"
-	li "ITEM-A8"      ; ITEM_A8
+	li "WIDE LENS"
 	li "ITEM-A9"      ; ITEM_A9
 	assert_list_length NUM_ITEMS
 	li "TM01"

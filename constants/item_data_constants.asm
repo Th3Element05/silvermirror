@@ -143,5 +143,5 @@ DEF MAIL_STRUCT_LENGTH_JP EQU $2a ; mailmsg_jp struct
 	const HELD_FLINCH
 	const HELD_AMULET_COIN
 	const HELD_BRIGHTPOWDER
-	const_skip
+	const HELD_WIDE_LENS ; const_skip
 	const HELD_FOCUS_BAND

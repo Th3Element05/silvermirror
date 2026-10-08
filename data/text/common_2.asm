@@ -625,15 +625,28 @@ _WhitedOutToTrainerText:: ;silvermirror
 	done
 
 _ItemfinderItemNearbyText::
-	text "Yes! ITEMFINDER"
+	text "Yes! @"
+	text_ram wStringBuffer2
+	text_start
 	line "indicates there's"
 	cont "an item nearby."
 	prompt
+;
+;	text "Yes! ITEMFINDER"
+;	line "indicates there's"
+;	cont "an item nearby."
+;	prompt
 
 _ItemfinderNopeText::
-	text "Nope! ITEMFINDER"
+	text "Nope! @"
+	text_ram wStringBuffer2
+	text_start
 	line "isn't responding."
 	prompt
+;
+;	text "Nope! ITEMFINDER"
+;	line "isn't responding."
+;	prompt
 
 _PoisonFaintText::
 	text_ram wStringBuffer3
