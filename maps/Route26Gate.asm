@@ -9,12 +9,10 @@ Route26Gate_MapScripts:
 	def_callbacks
 
 Route26GateClosedScene:
-;	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
-;	iffalse .Gen1
-;	setscene SCENE_ROUTE26GATE_NOOP
-;.Gen1
-	checkevent EVENT_GAVE_SAFFRON_GUARD_DRINK
-	iffalse .CannotPass
+;	checkevent EVENT_GAVE_SAFFRON_GUARD_DRINK
+;	iffalse .CannotPass
+	readvar VAR_BADGES
+	ifless 2, .CannotPass
 	setscene SCENE_ROUTE26GATE_NOOP
 .CannotPass
 	; fallthrough
@@ -22,8 +20,10 @@ Route26GateNoop2Scene:
 	end
 
 Route26GateGuardScript:
-	checkevent EVENT_GAVE_SAFFRON_GUARD_DRINK
-	iffalse .GateClosed
+;	checkevent EVENT_GAVE_SAFFRON_GUARD_DRINK
+;	iffalse .GateClosed
+	readvar VAR_BADGES
+	ifless 2, .GateClosed
 	jumptext Route26GateOpenText
 .GateClosed
 	jumptext Route26ComeBackLaterText
