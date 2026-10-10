@@ -116,6 +116,35 @@ PowerPlantBzzztText:
 PowerPlantBookshelf:
 	jumpstd DifficultBookshelfScript
 
+PowerPlantPC_Off:
+	jumptext PowerPlantPCText_Off
+PowerPlantPCText_Off:
+	text "This PC isn't on."
+	done
+
+PowerPlantPC_Numbers:
+	jumptext PowerPlantPCText_Numbers
+PowerPlantPCText_Numbers:
+	text "Lines and lines"
+	line "of numbers!"
+	done
+
+PowerPlantPC_Solitaire:
+	jumptext PowerPlantPCText_Solitaire
+PowerPlantPCText_Solitaire:
+	text "Someone was play-"
+	line "ing Solitaire!"
+	done
+
+PowerPlantPC_Minesweeper:
+	jumptext PowerPlantPCText_Minesweeper
+PowerPlantPCText_Minesweeper:
+	text "There's a game of"
+	line "Minesweeper that"
+	cont "someone lost."
+	done
+
+
 ; items
 PowerPlantTMThunderbolt:
 	itemball TM_THUNDERBOLT
@@ -153,19 +182,44 @@ PowerPlant_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 19, 17, BGEVENT_ITEM, PowerPlantHiddenMaxElixer
-	bg_event 14,  0, BGEVENT_ITEM, PowerPlantHiddenPPUp
+	bg_event 20, 17, BGEVENT_ITEM, PowerPlantHiddenMaxElixer
+	bg_event 14,  1, BGEVENT_ITEM, PowerPlantHiddenPPUp
 	bg_event 16,  1, BGEVENT_READ, PowerPlantBookshelf
 	bg_event 17,  1, BGEVENT_READ, PowerPlantBookshelf
 	bg_event 18,  1, BGEVENT_READ, PowerPlantBookshelf
 	bg_event 19,  1, BGEVENT_READ, PowerPlantBookshelf
 	bg_event 20,  1, BGEVENT_READ, PowerPlantBookshelf
-	bg_event 21,  1, BGEVENT_UP, PowerPlantBookshelf
+	bg_event 21,  1, BGEVENT_READ, PowerPlantBookshelf
+	bg_event 16, 31, BGEVENT_READ, PowerPlantBookshelf
 	bg_event 17, 31, BGEVENT_READ, PowerPlantBookshelf
 	bg_event 18, 31, BGEVENT_READ, PowerPlantBookshelf
 	bg_event 19, 31, BGEVENT_READ, PowerPlantBookshelf
-	bg_event 32, 31, BGEVENT_UP, PowerPlantBookshelf
+	bg_event 32, 31, BGEVENT_READ, PowerPlantBookshelf
 	bg_event 33, 31, BGEVENT_READ, PowerPlantBookshelf
+	bg_event 10, 18, BGEVENT_UP, PowerPlantPC_Solitaire
+	bg_event 11, 18, BGEVENT_UP, PowerPlantPC_Solitaire
+	bg_event 10, 20, BGEVENT_UP, PowerPlantPC_Off
+	bg_event 11, 20, BGEVENT_UP, PowerPlantPC_Off
+	bg_event 10, 22, BGEVENT_UP, PowerPlantPC_Minesweeper
+	bg_event 11, 22, BGEVENT_UP, PowerPlantPC_Minesweeper
+	bg_event 16, 20, BGEVENT_UP, PowerPlantPC_Numbers
+	bg_event 17, 20, BGEVENT_UP, PowerPlantPC_Numbers
+	bg_event 20, 26, BGEVENT_UP, PowerPlantPC_Minesweeper
+	bg_event 21, 26, BGEVENT_UP, PowerPlantPC_Minesweeper
+	bg_event 26, 28, BGEVENT_UP, PowerPlantPC_Numbers
+	bg_event 27, 28, BGEVENT_UP, PowerPlantPC_Numbers
+	bg_event 32, 26, BGEVENT_UP, PowerPlantPC_Solitaire
+	bg_event 33, 26, BGEVENT_UP, PowerPlantPC_Solitaire
+	bg_event 36,  8, BGEVENT_UP, PowerPlantPC_Numbers
+	bg_event 37,  8, BGEVENT_UP, PowerPlantPC_Numbers
+	bg_event 16,  6, BGEVENT_UP, PowerPlantPC_Off
+	bg_event 17,  6, BGEVENT_UP, PowerPlantPC_Off
+	bg_event 16,  8, BGEVENT_UP, PowerPlantPC_Solitaire
+	bg_event 17,  8, BGEVENT_UP, PowerPlantPC_Solitaire
+	bg_event 20,  6, BGEVENT_UP, PowerPlantPC_Off
+	bg_event 21,  6, BGEVENT_UP, PowerPlantPC_Off
+	bg_event 20,  8, BGEVENT_UP, PowerPlantPC_Off
+	bg_event 21,  8, BGEVENT_UP, PowerPlantPC_Off
 
 	def_object_events
 	object_event  4,  9, SPRITE_ZAPDOS, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, PowerPlantZapdos, EVENT_ZAPDOS_APPEAR
