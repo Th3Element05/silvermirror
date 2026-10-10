@@ -419,7 +419,7 @@ Route25_MapEvents:
 
 	def_bg_events
 	bg_event 41,  3, BGEVENT_READ, Route25BillsHouseSign
-	bg_event 10,  1, BGEVENT_ITEM, Route25HiddenElixer
+	bg_event 10,  2, BGEVENT_ITEM, Route25HiddenElixer
 	bg_event 36,  3, BGEVENT_ITEM, Route25HiddenEther
 
 	def_object_events

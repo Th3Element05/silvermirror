@@ -498,8 +498,8 @@ Route13_MapEvents:
 	bg_event 35, 13, BGEVENT_READ, Route13TrainerTips1
 	bg_event 53,  5, BGEVENT_READ, Route13TrainerTips2
 	bg_event 51, 11, BGEVENT_READ, Route13Sign
-	bg_event 36, 13, BGEVENT_ITEM, Route13HiddenCalcium
-	bg_event 21, 14, BGEVENT_ITEM, Route13HiddenPPUp
+	bg_event 37, 13, BGEVENT_ITEM, Route13HiddenCalcium
+	bg_event 21, 13, BGEVENT_ITEM, Route13HiddenPPUp
 
 	def_object_events
 	object_event  4,  4, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBirdKeeperJamie, -1

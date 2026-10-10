@@ -46,6 +46,6 @@ Route23_MapEvents:
 	bg_event  5,  7, BGEVENT_READ, VictoryRoadSign
 	bg_event  8, 42, BGEVENT_ITEM, Route23HiddenMaxEther
 	bg_event 17, 32, BGEVENT_ITEM, Route23HiddenUltraBall
-	bg_event 11,  8, BGEVENT_ITEM, Route23HiddenFullRestore
+	bg_event 10,  8, BGEVENT_ITEM, Route23HiddenFullRestore
 
 	def_object_events

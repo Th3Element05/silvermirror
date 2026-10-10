@@ -154,7 +154,7 @@ PokemonMansion3F_MapEvents:
 
 	def_bg_events
 	bg_event 10,  5, BGEVENT_READ, PokemonMansion3FSecretSwitch
-	bg_event  1,  9, BGEVENT_ITEM, PokemonMansion3FHiddenMaxRevive
+	bg_event  1, 10, BGEVENT_ITEM, PokemonMansion3FHiddenMaxRevive
 
 	def_object_events
 	object_event  6, 11, SPRITE_PHARMACIST, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 0, TrainerBurglarEddie, -1

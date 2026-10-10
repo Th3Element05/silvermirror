@@ -182,7 +182,7 @@ PokemonTower5F_MapEvents:
 	coord_event 10,  9, SCENE_POKEMONTOWER5F_IN, PokemonTower5FLeaveAuraScript
 
 	def_bg_events
-	bg_event  2, 12, BGEVENT_ITEM, PokemonTower5FHiddenElixer
+	bg_event  2, 11, BGEVENT_ITEM, PokemonTower5FHiddenElixer
 
 	def_object_events
 	object_event 10,  8, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PokemonTower5FSafeMediumScript, -1

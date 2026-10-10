@@ -23,6 +23,6 @@ Route28_MapEvents:
 
 	def_bg_events
 	bg_event 31,  5, BGEVENT_READ, Route28Sign
-	bg_event 25,  2, BGEVENT_ITEM, Route28HiddenRareCandy
+	bg_event 25,  3, BGEVENT_ITEM, Route28HiddenRareCandy
 
 	def_object_events

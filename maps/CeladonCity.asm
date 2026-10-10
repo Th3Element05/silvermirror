@@ -325,7 +325,7 @@ CeladonCity_MapEvents:
 	bg_event 37, 21, BGEVENT_READ, CeladonCityTrainerTips2
 	bg_event 10, 13, BGEVENT_READ, CeladonCityDeptStoreSign
 	bg_event 40,  9, BGEVENT_READ, CeladonCityPokecenterSign
-	bg_event 46, 15, BGEVENT_ITEM, CeladonCityHiddenPpUp
+	bg_event 46, 16, BGEVENT_ITEM, CeladonCityHiddenPpUp
 
 	def_object_events
 	object_event 40, 14, SPRITE_ROCKET, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonCityRocket1Script, EVENT_CELADON_CITY_ROCKETS

@@ -196,7 +196,7 @@ Route10_MapEvents:
 	bg_event  5, 23, BGEVENT_READ, Route10RockTunnelSign
 	bg_event 10, 23, BGEVENT_READ, Route10PokecenterSign
 	bg_event  3, 43, BGEVENT_READ, PowerPlantSign
-	bg_event  7, 21, BGEVENT_ITEM, Route10HiddenSuperPotion
+	bg_event  7, 22, BGEVENT_ITEM, Route10HiddenSuperPotion
 
 	def_object_events
 	object_event  5, 29, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerPicnickerAzriel, -1

@@ -281,7 +281,7 @@ MountMoonB2F_MapEvents:
 
 	def_bg_events
 	bg_event 35, 11, BGEVENT_ITEM, MtMoonB2FHiddenEther
-	bg_event 18, 14, BGEVENT_ITEM, MtMoonB2FHiddenMoonStone
+	bg_event 17, 14, BGEVENT_ITEM, MtMoonB2FHiddenMoonStone
 
 	def_object_events
 	object_event 12, 10, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MtMoonB2FFossilNerdScript, -1

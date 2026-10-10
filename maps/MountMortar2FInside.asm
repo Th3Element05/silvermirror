@@ -63,7 +63,7 @@ MountMortar2FInside_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 24,  8, BGEVENT_ITEM, MountMortar2FInsideHiddenFullRestore
+	bg_event 23,  8, BGEVENT_ITEM, MountMortar2FInsideHiddenFullRestore
 
 	def_object_events
 	object_event 13, 26, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_TRAINER, 2, TrainerSupernerdJames, -1 ;hugh
