@@ -111,6 +111,7 @@ VermilionPortTicketSailorScript:
 	end
 
 .NoTicket
+	specialphonecall SPECIALCALL_SSTICKET
 	writetext VermilionPortNoTicketText
 	waitbutton
 	closetext

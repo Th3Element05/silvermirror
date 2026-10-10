@@ -37,10 +37,6 @@ OaksLabMeetOakScene:
 ;scripts
 OakScript:
 	faceplayer
-	checkevent EVENT_GOT_SS_TICKET_FROM_OAK
-	iftrue .EvaluatePokedex
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .OakGiveTicket
 	checkevent EVENT_GOT_POKEDEX
 	iftrue .EvaluatePokedex
 ;deliver parcel
@@ -90,17 +86,6 @@ OakScript:
 
 .OakWildPokemon
 	jumptext OaksLabWildPokemonText
-
-.OakGiveTicket
-	opentext
-	writetext OakGiveTicketText1
-	promptbutton
-	verbosegiveitem S_S_TICKET
-	setevent EVENT_GOT_SS_TICKET_FROM_OAK
-	writetext OakGiveTicketText2
-	waitbutton
-	closetext
-	end
 
 OaksLabTryToLeaveScript:
 	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
@@ -1366,7 +1351,14 @@ OakScript_2:
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_MT_SILVER_OAK
-	iftrue .OakRematchScript
+	iftrue .AskDexOfferRematchScript
+	checkevent EVENT_GOT_SS_TICKET_FROM_OAK
+	iftrue .EvaluatePokedex
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .OakGiveTicket
+	; fallthrough
+
+.EvaluatePokedex
 	writetext OakLabEvaluateDexText
 	promptbutton
 	special ProfOaksPCBoot
@@ -1375,7 +1367,17 @@ OakScript_2:
 	closetext
 	end
 
-.OakRematchScript
+.OakGiveTicket
+	writetext OakGiveTicketText1
+	promptbutton
+	verbosegiveitem S_S_TICKET
+	setevent EVENT_GOT_SS_TICKET_FROM_OAK
+	writetext OakGiveTicketText2
+	waitbutton
+	closetext
+	end
+
+.AskDexOfferRematchScript
 	writetext OaksLabAskEvaluateDexText
 	yesorno
 	iffalse .OfferRematch
