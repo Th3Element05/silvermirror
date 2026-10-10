@@ -115,15 +115,24 @@ SSAnneKitchenTrashcanText:
 	line "peels!"
 	done
 
-;SSAnneKitchenOnionTrashcan:
-;	jumptext SSAnneKitchenOnionTrashcanText
-;SSAnneKitchenOnionTrashcanText:
-;	text "It's full of onion"
-;	line "skins!"
-;	done
 
 SSAnneKitchenHiddenGreatBall:
-	hiddenitem GREAT_BALL, EVENT_SS_ANNE_KITCHEN_HIDDEN_GREAT_BALL
+	checkevent EVENT_SS_ANNE_KITCHEN_HIDDEN_GREAT_BALL
+	iftrue SSAnneKitchenOnionTrashcan
+	verbosegiveitem GREAT_BALL
+	iffalse .End
+	setevent EVENT_SS_ANNE_KITCHEN_HIDDEN_GREAT_BALL
+.End
+	closetext
+	end
+
+SSAnneKitchenOnionTrashcan:
+	jumptext SSAnneKitchenOnionTrashcanText
+SSAnneKitchenOnionTrashcanText:
+	text "It's full of onion"
+	line "skins!"
+	done
+
 
 SSAnneKitchen_MapEvents:
 	db 0, 0 ; filler
