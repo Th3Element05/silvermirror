@@ -106,9 +106,9 @@ CooltrainerFLoisAfterBattleText:
 VictoryRoad1FGateSign:
 	jumptext VictoryRoad1FGateSignText
 VictoryRoad1FGateSignText:
-	text "Show your STRENGTH"
-	line "and the path shall"
-	cont "open."
+	text "Prove your"
+	line "STRENGTH and the"
+	cont "path shall open."
 	done
 
 VictoryRoad1FButtonSign:

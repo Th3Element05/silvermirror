@@ -75,9 +75,8 @@ MrPsychicTMText2:
 
 MrPsychicIntroText:
 	ntag "MR.PSYCHIC:"
-	text "Hello, <PLAYER>!"
-	line "I was expecting"
-	cont "you!"
+	text "Hello, <PLAYER>! I"
+	line "was expecting you!"
 
 	para "I can read the"
 	line "potential of your"
