@@ -1594,11 +1594,12 @@ OaksLabHintBookshelf:
 	ifequal 1, .MewLocation
 	ifequal 2, .MissingNo
 	ifequal 3, .RareCandy
-	ifequal 4, .RandomEggs
+	ifequal 4, .MasterBalls
+	ifequal 5, .RandomEggs
 ;	sjump .NoHint
 ;.NoHint
-	writetext OaksLabDeclinedHintText
-	waitbutton
+;	writetext OaksLabDeclinedHintText
+;	waitbutton
 	closetext
 	end
 
@@ -1607,16 +1608,17 @@ OaksLabHintBookshelf:
 
 .HintMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 14, TEXTBOX_Y - 1
+	menu_coords 0, 0, 15, TEXTBOX_Y + 1
 	dw .MenuData
 	db 1 ; default option
 
 .MenuData:
 	db STATICMENU_CURSOR ; flags
 	db 5 ; items
-	db "MEW HINT@"
-	db "[REDACTED]@"
+	db "MEW LOCATION@"
+	db "MISSINGNO.@"
 	db "RARE CANDY@"
+	db "MASTER BALLs@"
 	db "RANDOM EGGs@"
 	db "CANCEL@"
 
@@ -1627,19 +1629,25 @@ OaksLabHintBookshelf:
 	end
 
 .MissingNo
-	writetext OaksLabMissingnoHint
+	writetext OaksLabMissingnoHintText
 	waitbutton
 	closetext
 	end
 
 .RareCandy
-	writetext OaksLabRareCandyHint
+	writetext OaksLabRareCandyHintText
+	waitbutton
+	closetext
+	end
+
+.MasterBalls
+	writetext OaksLabMasterBallsHintText
 	waitbutton
 	closetext
 	end
 
 .RandomEggs
-	writetext OaksLabRandomEggsHint
+	writetext OaksLabRandomEggsHintText
 	waitbutton
 	closetext
 	end
@@ -1655,9 +1663,6 @@ OaksLabNoHintYetText:
 OaksLabAskReadHintText:
 	text "These books have"
 	line "secrets in them."
-
-	para "Do you want to"
-	line "read one?"
 	done
 
 OaksLabDeclinedHintText:
@@ -1670,7 +1675,7 @@ OaksLabMewHintText:
 	cont "VERMILION PORT…"
 	done
 
-OaksLabMissingnoHint:
+OaksLabMissingnoHintText:
 	text "An OLD MAN from"
 	line "VIRIDIAN CITY…"
 	
@@ -1679,19 +1684,25 @@ OaksLabMissingnoHint:
 	cont "coast…"
 	done
 
-OaksLabRareCandyHint:
+OaksLabRareCandyHintText:
 	text "You will get some"
 	line "RARE CANDY after"
 	cont "each encounter"
-	roll "with [REDACTED]."
+	roll "with MISSINGNO."
 	done
 
-OaksLabRandomEggsHint:
+OaksLabMasterBallsHintText:
+	text "MISSINGNO will"
+	line "always be holding"
+	cont "a MASTER BALL."
+	done
+
+OaksLabRandomEggsHintText:
 	text "You can get random"
 	line "#MON EGGs from"
 	cont "the DAYCARE if you"
-	roll "leave [REDACTED]"
-	cont "with DITTO."
+	roll "leave MISSINGNO"
+	cont "with a DITTO."
 	done
 
 
