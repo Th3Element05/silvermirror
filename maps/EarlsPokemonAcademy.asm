@@ -285,67 +285,135 @@ AcademyBlackboardText2: ; unreferenced
 	done
 
 AcademyPoisonText:
-	text "If poisoned, a"
-	line "#MON steadily"
-	cont "loses HP."
+	text "During battle,"
+	line "poisoned #MON"
+	cont "lose HP at the end"
+	roll "of their turn."
+
+	para "Badly poisoned"
+	line "#MON will lose"
+	cont "more and more HP"
+	roll "each turn."
 
 	para "Poison lingers"
 	line "after the battle,"
 	cont "and HP is lost as"
 	roll "you walk."
 
-	para "To cure it, use an"
-	line "ANTIDOTE."
+	para "Use ANTIDOTE to"
+	line "cure POISON."
 	done
+
+;	text "If poisoned, a"
+;	line "#MON steadily"
+;	cont "loses HP."
+;
+;	para "Poison lingers"
+;	line "after the battle,"
+;	cont "and HP is lost as"
+;	roll "you walk."
+;
+;	para "To cure it, use an"
+;	line "ANTIDOTE."
+;	done
 
 AcademyParalysisText:
-	text "Paralysis reduces"
-	line "speed and may"
-	cont "prevent movement."
+	text "Paralysis halves"
+	line "a #MON's SPEED."
 
-	para "It remains after"
-	line "battle, so use"
-	cont "a PARLYZ HEAL."
+	para "Also, a paralyzed"
+	line "#MON might not"
+	cont "be able to move on"
+	roll "their turn."
+
+	para "PARLYZ HEAL will"
+	line "cure PARALYSIS."
 	done
 
+;	text "Paralysis reduces"
+;	line "speed and may"
+;	cont "prevent movement."
+;
+;	para "It remains after"
+;	line "battle, so use"
+;	cont "a PARLYZ HEAL."
+;	done
+
 AcademySleepText:
-	text "If asleep, your"
-	line "#MON can't make"
-	cont "a move."
+	text "Sleeping #MON"
+	line "will wake up after"
+	cont "2-4 turns."
 
 	para "A sleeping #MON"
 	line "doesn't wake up"
 	cont "after battle."
 
-	para "Wake it up with"
-	line "an AWAKENING."
+	para "Use AWAKENING to"
+	line "cure SLEEP."
 	done
+
+;	text "If asleep, your"
+;	line "#MON can't make"
+;	cont "a move."
+;
+;	para "A sleeping #MON"
+;	line "doesn't wake up"
+;	cont "after battle."
+;
+;	para "Wake it up with"
+;	line "an AWAKENING."
+;	done
 
 AcademyBurnText:
-	text "A burn steadily"
-	line "consumes HP."
+	text "A burned #MON"
+	line "will take damage"
+	cont "at the end of"
+	roll "their turn."
 
-	para "It also reduces"
-	line "attack power."
+	para "Burn also reduces"
+	line "physical ATTACK"
+	cont "power by half."
 
-	para "A burn lingers"
-	line "after battle."
-
-	para "Use a BURN HEAL as"
-	line "the cure."
+	para "Use BURN HEAL to"
+	line "cure BURN."
 	done
+
+;	text "A burn steadily"
+;	line "consumes HP."
+;
+;	para "It also reduces"
+;	line "attack power."
+;
+;	para "A burn lingers"
+;	line "after battle."
+;
+;	para "Use a BURN HEAL as"
+;	line "the cure."
+;	done
 
 AcademyFreezeText:
-	text "If your #MON is"
-	line "frozen, it can't"
-	cont "do a thing."
+	text "A frozen #MON"
+	line "is unable to move."
 
-	para "It remains frozen"
-	line "after battle."
+	para "During battle,"
+	line "a frozen #MON"
+	cont "might thaw out on"
+	roll "their turn."
 
-	para "Thaw it out with"
-	line "an ICE HEAL."
+	para "Use ICE HEAL to"
+	line "cure FREEZE."
 	done
+
+;	text "If your #MON is"
+;	line "frozen, it can't"
+;	cont "do a thing."
+;
+;	para "It remains frozen"
+;	line "after battle."
+;
+;	para "Thaw it out with"
+;	line "an ICE HEAL."
+;	done
 
 AcademyNotebookText:
 	text "It's this kid's"
