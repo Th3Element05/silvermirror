@@ -54,9 +54,9 @@ OlivineLighthouse1F_MapEvents:
 
 	def_warp_events
 	warp_event  8,  9, OLIVINE_LIGHTHOUSE_ELEVATOR, 1
-	warp_event  8, 17, OLIVINE_CITY, 9
-	warp_event  9, 17, OLIVINE_CITY, 9
-	warp_event  2,  7, OLIVINE_LIGHTHOUSE_2F, 1
+	warp_event  8, 15, OLIVINE_CITY, 9
+	warp_event  9, 15, OLIVINE_CITY, 9
+	warp_event  6,  2, OLIVINE_LIGHTHOUSE_2F, 1
 	warp_event 16, 13, OLIVINE_LIGHTHOUSE_2F, 3
 	warp_event 17, 13, OLIVINE_LIGHTHOUSE_2F, 4
 
@@ -67,4 +67,4 @@ OlivineLighthouse1F_MapEvents:
 
 	def_object_events
 	object_event  5,  3, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineLighthouse1FSailorScript, -1
-	object_event 12, 11, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineLighthouse1FPokefanFScript, -1
+	object_event 11, 12, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineLighthouse1FPokefanFScript, -1
