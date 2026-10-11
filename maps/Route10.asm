@@ -160,6 +160,9 @@ Route10RockTunnelSign:
 	jumptext Route10RockTunnelSignText
 Route10RockTunnelSignText:
 	text "ROCK TUNNEL"
+
+	para "CERULEAN CITY -"
+	line "LAVENDER TOWN"
 	done
 
 Route10PokecenterSign:

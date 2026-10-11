@@ -191,7 +191,7 @@ Route33_NoFruit:
 Route33Sign:
 	jumptext Route33SignText
 Route33SignText:
-	text "ROUTE 33"
+	text "UNION CAVE"
 	done
 
 Route33_MapEvents:

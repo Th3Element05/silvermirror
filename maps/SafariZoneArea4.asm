@@ -77,7 +77,8 @@ SafariZoneArea4WardensTeethSignText:
 SafariZoneArea4RestHouseSign:
 	jumptext SafariZoneArea4RestHouseSignText
 SafariZoneArea4RestHouseSignText:
-	text "REST HOUSE"
+	text "AREA 4"
+	line "REST HOUSE"
 	done
 
 SafariZoneArea4Sign:

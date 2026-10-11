@@ -371,8 +371,10 @@ Route17Sign:
 	jumptext Route17SignText
 Route17SignText:
 	text "ROUTE 17"
-	line "CELADON CITY -"
-	cont "FUCHSIA CITY"
+	line "CYCLING ROAD"
+
+	para "CELADON CITY -"
+	line "FUCHSIA CITY"
 	done
 
 ;Route17NoticeSign2:

@@ -352,7 +352,10 @@ Route3Sign:
 	jumptext Route3SignText
 Route3SignText:
 	text "ROUTE 3"
-	line "MT.MOON AHEAD"
+
+	para "PEWTER CITY -"
+	line "MT.MOON"
+;	para "MT.MOON AHEAD"
 	done
 
 Route3MtMoonPokecenterSign:

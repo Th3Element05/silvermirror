@@ -523,7 +523,6 @@ Route32UnionCaveSign:
 	jumptext Route32UnionCaveSignText
 Route32UnionCaveSignText:
 	text "UNION CAVE"
-	line "AHEAD"
 	done
 
 Route32PokecenterSign:
@@ -593,7 +592,7 @@ Route32_MapEvents:
 	def_bg_events
 	bg_event 13,  7, BGEVENT_READ, Route32Sign
 	bg_event  9,  3, BGEVENT_READ, Route32RuinsSign
-	bg_event 10, 86, BGEVENT_READ, Route32UnionCaveSign
+	bg_event  9, 85, BGEVENT_READ, Route32UnionCaveSign
 	bg_event 12, 75, BGEVENT_READ, Route32PokecenterSign
 	bg_event 12, 69, BGEVENT_ITEM, Route32HiddenUltraBall
 	bg_event 11, 42, BGEVENT_ITEM, Route32HiddenMaxPotion

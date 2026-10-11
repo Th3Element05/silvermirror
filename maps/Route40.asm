@@ -128,8 +128,8 @@ FisherRoyceAfterBattleText:
 	roll "#MON."
 
 	para "It's much more"
-	line "effective than a"
-	cont "ULTRA BALL."
+	line "effective than"
+	cont "an ULTRA BALL."
 	done
 
 TrainerSwimmermDaryl:

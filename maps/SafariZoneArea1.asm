@@ -62,7 +62,8 @@ SafariZoneArea1OfficerText:
 SafariZoneArea1RestHouseSign:
 	jumptext SafariZoneArea1RestHouseSignText
 SafariZoneArea1RestHouseSignText:
-	text "REST HOUSE"
+	text "AREA 1"
+	line "REST HOUSE"
 	done
 
 ;SafariZoneArea1TrainerTipsSign:

@@ -437,8 +437,9 @@ Route8UndergroundPathSign:
 	jumptext Route8UndergroundPathSignText
 Route8UndergroundPathSignText:
 	text "UNDERGROUND PATH"
-	line "CELADON CITY -"
-	cont "LAVENDER TOWN"
+
+	para "CELADON CITY -"
+	line "LAVENDER TOWN"
 	done
 
 

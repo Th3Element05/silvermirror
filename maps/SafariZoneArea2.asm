@@ -97,7 +97,8 @@ SafariZoneArea2SignText:
 SafariZoneArea2RestHouseSign:
 	jumptext SafariZoneArea2RestHouseSignText
 SafariZoneArea2RestHouseSignText:
-	text "REST HOUSE"
+	text "AREA 2"
+	line "REST HOUSE"
 	done
 
 ;SafariZoneArea2TrainerTips:

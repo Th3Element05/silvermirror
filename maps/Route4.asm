@@ -116,8 +116,9 @@ Route4Sign:
 	jumptext Route4SignText
 Route4SignText:
 	text "ROUTE 4"
-	line "MT.MOON -"
-	cont "CERULEAN CITY"
+
+	para "MT.MOON -"
+	line "CERULEAN CITY"
 	done
 
 Route4TMFalseSwipe:

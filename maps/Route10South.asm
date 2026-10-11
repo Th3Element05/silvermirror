@@ -364,7 +364,7 @@ PokemaniacLarryAfterBattleText:
 Route10Sign:
 	jumptext Route10SignText
 Route10SignText:
-	text "ROUTE 10"
+	text "ROCK TUNNEL"
 
 	para "CERULEAN CITY -"
 	line "LAVENDER TOWN"

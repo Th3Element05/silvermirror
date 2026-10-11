@@ -390,9 +390,6 @@ Route34SignText:
 
 	para "GOLDENROD CITY -"
 	line "AZALEA TOWN"
-
-	para "ILEX FOREST"
-	line "SOMEWHERE BETWEEN"
 	done
 
 ;Route34TrainerTips: ;unreferenced

@@ -7,8 +7,9 @@ Route7UndergroundPathSign:
 	jumptext Route7UndergroundPathSignText
 Route7UndergroundPathSignText:
 	text "UNDERGROUND PATH"
-	line "CELADON CITY -"
-	cont "LAVENDER TOWN"
+	
+	para "CELADON CITY -"
+	line "LAVENDER TOWN"
 	done
 
 Route7_MapEvents:
