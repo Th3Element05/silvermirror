@@ -388,7 +388,7 @@ ENDM
 	map_const BATTLE_TOWER_ELEVATOR,                        2,  2 ; 13
 	map_const BATTLE_TOWER_HALLWAY,                        11,  2 ; 14
 	map_const BATTLE_TOWER_BATTLE_ROOM,                     4,  4 ; 15
-	map_const ROUTE_41,                                    25, 27 ; 16
+	map_const ROUTE_41,                                    28, 27 ; 16 ;25, 27
 	endgroup
 
 	newgroup MAHOGANY                                             ; 23
