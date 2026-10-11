@@ -147,10 +147,23 @@ FastShipEngineRoomThanksText:
 	done
 
 FastShipEngineRoomUnconsciousSailor:
+	checkevent EVENT_FAST_SHIP_HAS_ARRIVED
+	iftrue .JustResting
 	jumptext FastShipEngineRoomUnconsciousSailorText
+
+.JustResting
+	jumptext FastShipEngineRoomRestingSailorText
+
 FastShipEngineRoomUnconsciousSailorText:
 	text "He's been knocked"
 	line "unconscious!"
+	done
+
+FastShipEngineRoomRestingSailorText:
+	ntag "SAILOR:"
+	text "I'll be alright."
+
+	para "I'm just resting."
 	done
 
 TrainerSailorPedro:
