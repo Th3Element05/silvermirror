@@ -2601,14 +2601,14 @@ PlayRadioStationPointers:
 	assert_table_length NUM_MAP_RADIO_STATIONS
 
 LoadStation_PokemonChannel:
-	call IsInJohto
-	and a
-	jr nz, .kanto
+;	call IsInJohto
+;	and a
+;	jr nz, .kanto
 	call UpdateTime
 	jp LoadStation_OaksPokemonTalk
-
-.kanto:
-	jp LoadStation_PlacesAndPeople
+;
+;.kanto:
+;	jp LoadStation_PlacesAndPeople
 
 PokegearMap:
 	ld a, e
