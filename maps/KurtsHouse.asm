@@ -633,6 +633,8 @@ KurtsHouse_MapEvents:
 	bg_event  5,  1, BGEVENT_READ, KurtsHouseBookshelf
 	bg_event  2,  1, BGEVENT_READ, KurtsHouseBookshelf
 	bg_event  3,  1, BGEVENT_READ, KurtsHouseBookshelf
+	bg_event 10,  1, BGEVENT_READ, KurtsHouseBookshelf
+	bg_event 11,  1, BGEVENT_READ, KurtsHouseBookshelf
 	bg_event  4,  1, BGEVENT_READ, KurtsHouseCelebiStatue
 
 	def_object_events

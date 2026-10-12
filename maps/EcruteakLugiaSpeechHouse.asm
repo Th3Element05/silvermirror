@@ -50,7 +50,7 @@ EcruteakLugiaSpeechHouse_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  7,  1, BGEVENT_READ, LugiaSpeechHouseRadio
+	bg_event  2,  1, BGEVENT_READ, LugiaSpeechHouseRadio
 
 	def_object_events
 	object_event  2,  3, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakLugiaSpeechHouseGrampsScript, -1
