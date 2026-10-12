@@ -10,6 +10,7 @@ OlivineCity_MapScripts:
 
 OlivineCityFlypointCallback:
 	setflag ENGINE_FLYPOINT_OLIVINE
+	setflag ENGINE_REACHED_GOLDENROD ; I'm setting this here to unlock the magnet train in Saffron.
 	readvar VAR_FACING
 	ifnotequal UP, .NotExitingPort
 	applymovement PLAYER, OlivineCityPlayerExitsPortMovement
