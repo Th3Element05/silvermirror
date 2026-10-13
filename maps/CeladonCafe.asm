@@ -51,10 +51,10 @@ CeladonCafeGamblerScript:
 	faceplayer
 	opentext
 	writetext CeladonCafeLostItAllText
-	promptbutton
+	waitbutton
 	verbosegiveitem COIN_CASE
 	setevent EVENT_GOT_COIN_CASE
-	waitbutton
+	waitsfx
 	closetext
 	end
 
