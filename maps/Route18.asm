@@ -192,8 +192,9 @@ Route18CyclingRoadSign:
 	jumptext Route18CyclingRoadSignText
 Route18CyclingRoadSignText:
 	text "CYCLING ROAD"
-	line "No pedestrians"
-	cont "permitted!"
+
+	para "No pedestrians"
+	line "permitted!"
 	done
 
 Route18Sign:
