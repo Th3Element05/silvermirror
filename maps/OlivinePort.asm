@@ -35,6 +35,8 @@ OlivinePortNoop2Scene:
 	end
 
 OlivinePortTicketSailorScript:
+	readvar VAR_FACING
+	ifnotequal DOWN, .Surfing
 	checkflag ENGINE_RODE_SSAQUA_TODAY
 	iftrue .AlreadyRodeToday
 	faceplayer
@@ -95,6 +97,17 @@ OlivinePortTicketSailorScript:
 	waitbutton
 	closetext
 	end
+
+.Surfing
+	jumptextfaceplayer VermilionPortSurfingText
+VermilionPortSurfingText:
+	ntag "SAILOR:"
+	text "You can't board"
+	line "from there!"
+
+	para "Please talk to me"
+	line "from the dock!"
+	done
 
 ;OlivinePortNoTicketText:
 ;	text "<PLAYER> doesn't"
