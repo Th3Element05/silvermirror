@@ -160,11 +160,11 @@ FightingDojoKarateMasterLeftScript:
 	turnobject PLAYER, RIGHT
 	; fallthrough
 FightingDojoKarateMasterScript:
-	checkevent EVENT_GOT_POKEMON_FROM_DOJO
-	iftrue .GotPokemon
 	setlasttalked FIGHTINGDOJO_KARATE_MASTER
 	faceplayer
 	opentext
+	checkevent EVENT_GOT_POKEMON_FROM_DOJO
+	iftrue .GotPokemon
 	checkevent EVENT_BEAT_BLACKBELT_MASTER
 	iftrue .BeatMaster
 	checkevent EVENT_BEAT_BLACKBELT_TAKESHI
@@ -214,7 +214,10 @@ FightingDojoKarateMasterScript:
 	end
 
 .OfferedPokemon
-	jumptextfaceplayer KarateMasterOffersPokemonText
+	writetext KarateMasterOffersPokemonText
+	waitbutton
+	closetext
+	end
 
 .GotPokemon
 	checkevent EVENT_GOT_POKEMON_FROM_DOJO_2
@@ -233,6 +236,7 @@ FightingDojoKarateMasterScript:
 	loadtrainer BLACKBELT_T, MASTER2
 	startbattle
 	reloadmapafterbattle
+	setevent EVENT_BEAT_BLACKBELT_MASTER_REMATCH
 .OfferSecondPokemon
 	setscene SCENE_FIGHTINGDOJO_NOOP
 	opentext
@@ -284,8 +288,8 @@ KarateMasterChallengeText:
 	line "formidable!"
 
 	para "Surely you have"
-	line "strength enough"
-	cont "to challenge me!"
+	line "the strength to"
+	cont "challenge me!"
 
 	para "Fwaaa!"
 	done
