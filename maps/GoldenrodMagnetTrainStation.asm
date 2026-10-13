@@ -176,7 +176,7 @@ GoldenrodMagnetTrainStationGentlemanScript:
 	iffalse .DontLikeTrains
 	writetext GoldenrodMagnetTrainStationGentleman_TrainsText
 	waitbutton
-	playsound SFX_KEY_ITEM
+;	playsound SFX_KEY_ITEM
 	verbosegiveitem RAIL_PASS
 	waitsfx
 ;	itemnotify
