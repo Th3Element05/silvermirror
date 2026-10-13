@@ -449,15 +449,8 @@ BirdKeeperNateBeatenText:
 
 BirdKeeperNateAfterBattleText:
 	ntag "BIRDKEEPER:"
-	text "Some #MON flee"
-	line "right away."
-
-	para "Try catching them"
-	line "with KURT's FAST"
-	cont "BALL."
-
-	para "Whenever I find a"
-	line "WHT APRICORN, I"
+	text "Whenever I find"
+	line "an APRICORN, I"
 	cont "take it to KURT"
 	cont "in AZALEA TOWN."
 
