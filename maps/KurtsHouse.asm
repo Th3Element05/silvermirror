@@ -3,6 +3,7 @@
 	const KURTSHOUSE_TWIN1
 	const KURTSHOUSE_KURT2
 	const KURTSHOUSE_TWIN2
+;	const KURTSHOUSE_GSBALL
 ;	const KURTSHOUSE_SLOWPOKE
 
 KurtsHouse_MapScripts:
@@ -245,6 +246,7 @@ Kurt1:
 	special ReloadSpritesNoPalettes
 	disappear KURTSHOUSE_KURT1
 	appear KURTSHOUSE_KURT2
+;	appear KURTSHOUSE_GSBALL
 	pause 15
 	special FadeInQuickly
 	end
@@ -269,6 +271,7 @@ Kurt1:
 	special FadeOutMusic
 	pause 20
 	showemote EMOTE_SHOCK, KURTSHOUSE_KURT1, 30
+;	disappear KURTSHOUSE_GSBALL
 	readvar VAR_FACING
 	ifequal UP, .GSBallRunAround
 	turnobject PLAYER, DOWN
@@ -611,6 +614,12 @@ KurtsHouseCelebiStatueText:
 	cont "tector."
 	done
 
+;KurtsHouseGSBallScript:
+;	jumptext KurtsHouseGSBallText
+;KurtsHouseGSBallText:
+;	text "It's the GS BALL."
+;	done
+
 KurtsHouseBookshelf:
 	jumpstd DifficultBookshelfScript
 
@@ -642,6 +651,7 @@ KurtsHouse_MapEvents:
 	object_event  5,  3, SPRITE_TWIN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, KurtsGranddaughter1, EVENT_KURTS_HOUSE_GRANDDAUGHTER_1
 	object_event 14,  3, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Kurt2, EVENT_KURTS_HOUSE_KURT_2
 	object_event 11,  4, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, KurtsGranddaughter2, EVENT_KURTS_HOUSE_GRANDDAUGHTER_2
-	object_event  6,  3, SPRITE_SLOWPOKE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, KurtsHouseSlowpoke, -1
+;	object_event 14,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, KurtsHouseGSBallScript, EVENT_KURTS_HOUSE_GSBALL
+	object_event  6,  3, SPRITE_SLOWPOKE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, KurtsHouseSlowpoke, -1
 
-;.PinkOverYellowOBPalette
+;.PinkOverPurpleOBPalette
