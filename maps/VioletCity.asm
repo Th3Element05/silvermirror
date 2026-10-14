@@ -11,8 +11,8 @@ VioletCity_MapScripts:
 
 VioletCityFlypointAndRoute32Callback:
 	setflag ENGINE_FLYPOINT_VIOLET
-	clearevent EVENT_ROUTE_36_BATTLE
 	setevent EVENT_ROUTE_36_OPEN
+	clearevent EVENT_ROUTE_36_BATTLE
 	endcallback
 
 VioletCityFruittrees:

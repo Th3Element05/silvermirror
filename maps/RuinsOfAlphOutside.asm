@@ -20,6 +20,8 @@ RuinsOfAlphOutsideCavesCallback:
 	changeblock 2, 16, $b8 ; closed ho-oh
 	changeblock 2, 28, $b8 ; closed omanyte
 	changeblock 16, 32, $b8 ; closed aerodactyl
+;	setevent EVENT_ROUTE_36_OPEN
+;	clearevent EVENT_ROUTE_36_BATTLE
 .RuinsAreOpen
 	endcallback
 
