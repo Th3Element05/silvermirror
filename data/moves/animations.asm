@@ -1100,14 +1100,15 @@ BattleAnim_DoubleKick:
 
 BattleAnim_CloseCombat:
 	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_HP_FIGHTING
+	anim_bgeffect BATTLE_BG_EFFECT_FLASH_INVERTED, $0, $8, $3
 	anim_call BattleAnim_Thrash
 	anim_wait 16
-	anim_call BattleAnim_TargetObj_1Row
-	anim_bgeffect BATTLE_BG_EFFECT_VIBRATE_MON, $0, BG_EFFECT_USER, $0
-	anim_wait 40
+;	anim_call BattleAnim_TargetObj_1Row
+;	anim_bgeffect BATTLE_BG_EFFECT_VIBRATE_MON, $0, BG_EFFECT_USER, $0
+;	anim_wait 40
 ;	anim_call BattleAnim_ShowMon_1
-	anim_call BattleAnim_ShowMon_0
-	anim_wait 1
+;	anim_call BattleAnim_ShowMon_0
+;	anim_wait 1
 	anim_ret
 
 ;BattleAnim_MegaKick:
