@@ -4,11 +4,15 @@ Route32Pokecenter1F_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+	callback MAPCALLBACK_NEWMAP, UnionCaveFlypointCallback
+
+UnionCaveFlypointCallback:
+	setflag ENGINE_FLYPOINT_UNION_CAVE
+	endcallback
 
 
 Route32Pokecenter1FNurseScript:
 	jumpstd PokecenterNurseScript
-
 
 FishingGuruJohtoOld:
 	jumptextfaceplayer FishingGuruJohtoOldAfterText
@@ -19,7 +23,6 @@ FishingGuruJohtoOldAfterText:
 	para "How are the fish"
 	line "biting?"
 	done
-
 
 Route32Pokecenter1FCooltrainerFScript:
 	jumptextfaceplayer Route32Pokecenter1FCooltrainerFText
