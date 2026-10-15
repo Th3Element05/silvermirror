@@ -147,9 +147,10 @@ HikerAlecBeatenText:
 
 HikerAlecAfterBattleText:
 	ntag "HIKER:"
-	text "It's over. I don't"
-	line "mind. We HIKERs"
-	cont "are like that."
+	text "It's over."
+	line "I don't mind."
+	cont "We HIKERs are"
+	roll "like that."
 	done
 
 ; text
