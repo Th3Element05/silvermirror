@@ -101,9 +101,9 @@ CinnabarIslandMissingNoScript:
 	startbattle
 	reloadmapafterbattle
 	special CheckBattleCaughtResult
-	iffalse .nocatch
+	iffalse .notcaught
 	setevent EVENT_CAUGHT_MISSINGNO
-.nocatch
+.notcaught
 	setscene SCENE_CINNABARISLAND_NOOP
 	opentext
 	writetext CinnabarIslandFoundRareCandyText

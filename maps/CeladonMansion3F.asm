@@ -13,8 +13,17 @@ GameFreakGameDesignerScript:
 	faceplayer
 	opentext
 	writetext GameFreakGameDesignerText
+	checkevent EVENT_CAUGHT_MISSINGNO
+	iftrue .CaughtMissingno
 	readvar VAR_DEXCAUGHT
-	ifgreater NUM_POKEMON - 3 - 1, .CompletedPokedex ; -2 :ignore Mew and Celebi, -3 :also ignore missingno
+	ifgreater NUM_POKEMON -1 - 1, .CompletedPokedex ; -1, ignore missingno
+	waitbutton
+	closetext
+	end
+
+.CaughtMissingno
+	readvar VAR_DEXCAUGHT
+	ifgreater NUM_POKEMON - 1, .CompletedPokedex ; don't ignore missingno
 	waitbutton
 	closetext
 	end
