@@ -1614,7 +1614,7 @@ OaksLabHintBookshelf:
 
 .MenuData:
 	db STATICMENU_CURSOR ; flags
-	db 5 ; items
+	db 6 ; items
 	db "MEW LOCATION@"
 	db "MISSINGNO.@"
 	db "RARE CANDY@"
@@ -1703,6 +1703,26 @@ OaksLabRandomEggsHintText:
 	cont "the DAYCARE if you"
 	roll "leave MISSINGNO"
 	cont "with a DITTO."
+	done
+
+OaksLabStartersHintText:
+	text "KANTO starters"
+	line "can be caught at"
+	cont "ROUTE 10 NORTH."
+
+	para "JOHTO starters"
+	line "are found behind"
+	cont "TOHJO FALLS."
+
+	para "But you need to"
+	line "have WATERFALL to"
+	cont "reach those areas."
+	done
+
+OaksLabSwarmShinyHintText:
+	text "Swarming #MON"
+	line "have a high chance"
+	cont "to be shiny."
 	done
 
 
