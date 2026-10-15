@@ -20,6 +20,7 @@ RadioTower4FFacingCallback:
 	ifnotequal SCENE_RADIOTOWER4F_RECORDING, .End
 	disappear RADIOTOWER4F_MARY
 .End
+	disappear RADIOTOWER4F_OFFICER
 	endcallback
 
 RadioTower4FNoop1Scene:
