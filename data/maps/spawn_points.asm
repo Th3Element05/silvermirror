@@ -28,7 +28,7 @@ SpawnPoints:
 	spawn NEW_BARK_TOWN,               6,  5 ;13,  6
 	spawn CHERRYGROVE_CITY,           29,  4
 	spawn VIOLET_CITY,                31, 26
-	spawn ROUTE_32,                   11, 74
+	spawn ROUTE_32,                   11, 76
 	spawn AZALEA_TOWN,                15, 10
 	spawn CIANWOOD_CITY,              23, 44
 	spawn GOLDENROD_CITY,             15, 28
