@@ -236,8 +236,14 @@ BlackBeltText_VoicesInMyHead:
 	done
 
 BlackthornCooltrainerF1Script:
-	jumptextfaceplayer BlackthornCooltrainerF1Text
-BlackthornCooltrainerF1Text:
+	checkevent EVENT_ROUTE_42_BOULDERS_CLEARED
+	iftrue .BouldersClearedCooltrainer
+	jumptextfaceplayer BlackthornCooltrainerF1Text1
+
+.BouldersClearedCooltrainer
+	jumptextfaceplayer BlackthornCooltrainerF1Text2
+
+BlackthornCooltrainerF1Text1:
 	ntag "TRAINER:"
 	text "Whew, I just came"
 	line "through ICE PATH."
@@ -247,6 +253,16 @@ BlackthornCooltrainerF1Text:
 	cont "out of MAHOGANY"
 	roll "until ROUTE 42 is"
 	cont "cleared."
+	done
+
+BlackthornCooltrainerF1Text2:
+	ntag "TRAINER:"
+	text "Route 42 is open?"
+	line "What a relief!"
+
+	para "I won't need to"
+	line "go back through"
+	cont "that ICE PATH!"
 	done
 
 ;BlackthornCooltrainerF2Script:
