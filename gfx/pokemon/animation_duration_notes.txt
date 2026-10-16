@@ -1,0 +1,394 @@
+Pokemon    Duration
+-------    --------
+abra             84
+aerodactyl       80
+aipom           102
+alakazam         89
+ampharos         58
+arbok           124
+arcanine         75
+ariados          72
+articuno         80
+azumarill        48
+bayleef          38
+beedrill         88
+bellossom       104
+bellsprout      104
+blastoise        58
+blissey          54
+bulbasaur        70
+butterfree       80
+caterpie         56
+celebi           88
+chansey          48
+charizard        60
+charmander       74
+charmeleon       40
+chikorita        60
+chinchou         51
+clefable         60
+clefairy         72
+cleffa           80
+cloyster         45
+corsola          72
+crobat           72
+croconaw         75
+cubone           94
+cyndaquil        51
+delibird         73
+dewgong          50
+diglett          38
+ditto            84
+dodrio           67
+doduo           100
+donphan          48
+dragonair        64
+dragonite        92
+dratini          46
+drowzee          80
+dugtrio         117
+dunsparce        54
+eevee            50
+egg              32
+ekans            75
+electabuzz       52
+electrode        45
+elekid           73
+entei            56
+espeon          108
+exeggcute        46
+exeggutor        78
+farfetch_d       68
+fearow           64
+feraligatr       78
+flaaffy          44
+flareon          58
+forretress       87
+furret           70
+gastly           88
+gengar          117
+geodude          66
+girafarig        79
+glaceon          87
+gligar           42
+gliscor          86
+gloom            87
+golbat           92
+goldeen          86
+golduck          64
+golem            56
+granbull         64
+graveler         56
+grimer           72
+growlithe        84
+gyarados         44
+haunter          84
+heracross       102
+hitmonchan       92
+hitmonlee        90
+hitmontop       106
+ho_oh            98
+honchkrow        40
+hoothoot         67
+hoppip           60
+horsea           58
+houndoom         50
+houndour         50
+hypno            90
+igglybuff        66
+ivysaur          54
+jigglypuff       78
+jolteon          95
+jumpluff         84
+jynx            128
+kabuto           46
+kabutops         85
+kadabra          72
+kakuna           36
+kangaskhan      100
+kingdra          84
+kingler          96
+koffing          81
+krabby           64
+lanturn          60
+lapras           76
+larvitar         60
+leafeon          95
+ledian           64
+ledyba           52
+lickitung        40
+lugia            75
+machamp          90
+machoke          62
+machop           82
+magby            58
+magcargo         72
+magikarp         60
+magmar           58
+magnemite        64
+magneton         68
+magnezone        49
+mamoswine       127
+mankey           72
+mantine         105
+mareep           44
+marill          116
+marowak          70
+meganium         90
+meowth           80
+metapod          48
+mew             174
+mewtwo           65
+miltank          51
+misdreavus       68
+mismagius        76
+missingno        72
+moltres          64
+mr__mime         94
+muk              60
+murkrow          55
+natu             56
+nidoking         66
+nidoqueen        75
+nidoran_f        53
+nidoran_m        70
+nidorina         80
+nidorino         98
+ninetales        73
+noctowl         104
+octillery        76
+oddish           85
+omanyte          38
+omastar          56
+onix            108
+paras            64
+parasect        116
+persian          98
+phanpy           50
+pichu            48
+pidgeot          56
+pidgeotto        82
+pidgey           62
+pikachu          81
+piloswine        40
+pineco           24
+pinsir           68
+politoed         62
+poliwag          68
+poliwhirl        68
+poliwrath        68
+ponyta           64
+porygon          55
+porygon2         40
+primeape        110
+psyduck          92
+pupitar          49
+quagsire         39
+quilava          48
+qwilfish         79
+raichu           44
+raikou           71
+rapidash        104
+raticate         40
+rattata          56
+remoraid         25
+rhydon           94
+rhyhorn          58
+sandshrew        84
+sandslash        67
+scizor          100
+scyther          85
+seadra           60
+seaking          72
+seel             78
+sentret          60
+shellder         42
+shuckle          53
+skarmory         62
+skiploom         66
+slowbro         136
+slowking        123
+slowpoke         43
+slugma           84
+smeargle         44
+smoochum         44
+sneasel          28
+snorlax         114
+snubbull         98
+spearow         107
+spinarak         39
+squirtle         68
+stantler         86
+starmie          74
+staryu           56
+steelix          74
+sudowoodo        80
+suicune          74
+sunflora         56
+sunkern          48
+swinub           60
+tangela          70
+tangrowth        68
+tauros           87
+teddiursa       120
+tentacool        40
+tentacruel       84
+togepi           56
+togetic          48
+totodile        120
+typhlosion       68
+tyranitar        74
+tyrogue          52
+umbreon          87
+unown            40
+ursaring        120
+vaporeon         64
+venomoth         72
+venonat          80
+venusaur        101
+victreebel       99
+vileplume        66
+voltorb          46
+vulpix           58
+wartortle        92
+weavile          44
+weedle           72
+weepinbell       42
+weezing          75
+wigglytuff       66
+wobbuffet        37
+wooper           48
+xatu             82
+yanma            44
+yanmega         123
+zapdos           70
+zubat            70
+
+The average animation length is 71.32 time units, across 263 Pokémon.
+There are 124 animations longer than average (duration of 72 or more).
+| Pokémon    | Duration |
+| ---------- | -------- |
+| abra       | 84       |
+| aerodactyl | 80       |
+| aipom      | 102      | 94
+| alakazam   | 89       |
+| arbok      | 124      | 98
+| arcanine   | 75       |
+| ariados    | 72       |
+| articuno   | 80       |
+| beedrill   | 88       |
+| bellossom  | 104      | 94
+| bellsprout | 104      | 78
+| butterfree | 80       |
+| celebi     | 88       |
+| charmander | 74       |
+| clefairy   | 72       |
+| cleffa     | 80       |
+| corsola    | 72       |
+| crobat     | 72       |
+| croconaw   | 75       |
+| cubone     | 94       |
+| delibird   | 73       |
+| ditto      | 84       |
+| doduo      | 100      | 84
+| dragonite  | 92       |
+| drowzee    | 80       |
+| dugtrio    | 117      | 97
+| ekans      | 75       |
+| elekid     | 73       |
+| espeon     | 108      | 92
+| exeggutor  | 78       |
+| feraligatr | 78       |
+| forretress | 87       |
+| gastly     | 88       |
+| gengar     | 117      | 89
+| girafarig  | 79       |
+| glaceon    | 87       |
+| gliscor    | 86       |
+| gloom      | 87       |
+| golbat     | 92       |
+| goldeen    | 86       |
+| grimer     | 72       |
+| growlithe  | 84       |
+| haunter    | 84       |
+| heracross  | 102      | 82
+| hitmonchan | 92       |
+| hitmonlee  | 90       |
+| hitmontop  | 106      | 90
+| ho_oh      | 98       |
+| hypno      | 90       |
+| jigglypuff | 78       |
+| jolteon    | 95       |
+| jumpluff   | 84       |
+| jynx       | 128      | 96
+| kabutops   | 85       |
+| kadabra    | 72       |
+| kangaskhan | 100      | 98
+| kingdra    | 84       |
+| kingler    | 96       |
+| koffing    | 81       |
+| lapras     | 76       |
+| leafeon    | 95       |
+| lugia      | 75       |
+| machamp    | 90       |
+| machop     | 82       |
+| magcargo   | 72       |
+| mamoswine  | 127      | 97
+| mankey     | 72       |
+| mantine    | 105      | 98
+| marill     | 116      | 92
+| meganium   | 90       |
+| meowth     | 80       |
+| mew        | 174      | *
+| mismagius  | 76       |
+| missingno  | 72       |
+| mr__mime   | 94       |
+| nidoqueen  | 75       |
+| nidorina   | 80       |
+| nidorino   | 98       |
+| ninetales  | 73       |
+| noctowl    | 104      | 92
+| octillery  | 76       |
+| oddish     | 85       |
+| onix       | 108      | 96
+| parasect   | 116      | 99
+| persian    | 98       |
+| pidgeotto  | 82       |
+| pikachu    | 81       |
+| primeape   | 110      | 99
+| psyduck    | 92       |
+| qwilfish   | 79       |
+| rapidash   | 104      | 88
+| rhydon     | 94       |
+| sandshrew  | 84       |
+| scizor     | 100      | 98
+| scyther    | 85       |
+| seaking    | 72       |
+| seel       | 78       |
+| slowbro    | 136      | 98
+| slowking   | 123      | 99
+| slugma     | 84       |
+| snorlax    | 114      | *
+| snubbull   | 98       |
+| spearow    | 107      | 90
+| stantler   | 86       |
+| starmie    | 74       |
+| steelix    | 74       |
+| sudowoodo  | 80       |
+| suicune    | 74       |
+| tauros     | 87       |
+| teddiursa  | 120      | 96
+| tentacruel | 84       |
+| totodile   | 120      | 88
+| tyranitar  | 74       |
+| umbreon    | 87       |
+| ursaring   | 120      | 96
+| venomoth   | 72       |
+| venonat    | 80       |
+| venusaur   | 101      | 98
+| victreebel | 99       |
+| wartortle  | 92       |
+| weedle     | 72       |
+| weezing    | 75       |
+| xatu       | 82       |
+| yanmega    | 123      | 96
