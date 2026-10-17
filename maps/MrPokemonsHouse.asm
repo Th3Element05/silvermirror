@@ -176,24 +176,23 @@ MrPokemonsHouse_MrPokemonScript:
 	sjump .GoVisitElm
 
 .SkipRainbowWing:
-	checkevent EVENT_SHOWED_SILVER_WING_TO_MR_POKEMON
-	iftrue .SkipSilverWing
-	checkitem SILVER_WING
-	iffalse .SkipSilverWing
-	writetext MrPokemonText_SilverWing
-	waitbutton
-	closetext
-	setevent EVENT_SHOWED_SILVER_WING_TO_MR_POKEMON
-	sjump .AlwaysNewDiscoveries
-
-.SkipSilverWing:
 	checkevent EVENT_MET_PROF_ELM
 	iffalse .GoVisitElm
 	checkevent EVENT_CLEARED_RADIO_TOWER
 	iffalse .GoSaveOak
 	checkitem GOLD_SCALE
 	iftrue .GoldScale
-	; fallthrough
+
+;SilverWing:
+	checkevent EVENT_SHOWED_SILVER_WING_TO_MR_POKEMON
+	iftrue .AlwaysNewDiscoveries
+	checkitem SILVER_WING
+	iffalse .AlwaysNewDiscoveries
+	writetext MrPokemonText_SilverWing
+	setevent EVENT_SHOWED_SILVER_WING_TO_MR_POKEMON
+	waitbutton
+	closetext
+	end
 
 .AlwaysNewDiscoveries:
 	writetext MrPokemonText_AlwaysNewDiscoveries
@@ -225,16 +224,21 @@ MrPokemonsHouse_MrPokemonScript:
 .refused
 	writetext MrPokemonText_Disappointed
 	waitbutton
+	closetext
+	end
+
 .full
+	writetext MrPokemonText_MakeRoom
+	waitbutton
 	closetext
 	end
 
 MrPokemonText_AlwaysNewDiscoveries:
 	ntag "MR.#MON:"
 	text "Life is delight-"
-	line "ful! Always, new"
-	cont "discoveries to be"
-	line "made!"
+	line "ful! There are"
+	cont "always new things"
+	roll "to discover!"
 
 	para "If you find any-"
 	line "thing rare, please"
@@ -312,6 +316,14 @@ MrPokemonText_Disappointed:
 	text "That's disappoint-"
 	line "ing. That happens"
 	cont "to be very rare."
+	done
+
+MrPokemonText_MakeRoom:
+	ntag "MR.#MON:"
+	text "Please make room"
+	line "for this!"
+	cont "I'd really love"
+	roll "that GOLD SCALE!"
 	done
 
 MrPokemonText_SaveOak:

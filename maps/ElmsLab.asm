@@ -85,6 +85,7 @@ ElmsLabElmScript:
 	closetext
 ;	special RestartMapMusic
 	setevent EVENT_MET_PROF_ELM
+	setevent EVENT_SHOWED_RAINBOW_WING_TO_MR_POKEMON
 	clearevent EVENT_MR_POKEMONS_HOUSE_MR_POKEMON
 	specialphonecall SPECIALCALL_RADIOTOWER
 	end
