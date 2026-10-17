@@ -97,8 +97,8 @@ TeamRocketBaseB3FKogaAfterBattleText:
 	ntag "KOGA:"
 	text "<PLAYER>, you must"
 	line "still find JANINE,"
-	cont "and defeat her, as"
-	roll "well."
+	cont "and defeat her,"
+	roll "as well."
 
 	para "But for my part,"
 	line "I have no doubt"
