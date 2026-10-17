@@ -247,6 +247,38 @@ OakPhoneGiftText:
 	para "See you later!"
 	done
 
+OakPhoneRainbowWingText:
+	text "Hello, <PLAYER>?"
+
+	para "PROF.ELM told me"
+	line "that you found a"
+	cont "rainbow-colored"
+	roll "#MON feather?"
+
+	para "Show that feather"
+	line "to the sages at"
+	cont "the TIN TOWER, in"
+	roll "ECRUTEAK CITY."
+
+	para "I have a feeling"
+	line "they will be very"
+	cont "interested to see"
+	roll "it!"
+	done
+
+OakPhoneRemindRainbowWingText:
+	text "Hello, <PLAYER>?"
+
+	para "Have you been to"
+	line "see the sages at"
+	cont "the TIN TOWER in"
+	roll "ECRUTEAK CITY yet?"
+
+	para "I'm sure they'll"
+	line "be interested to"
+	cont "see that rainbow-"
+	roll "colored feather!"
+	done
 
 ; OLD ELM TEXT
 

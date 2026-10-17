@@ -342,6 +342,7 @@ MahoganyMart1FGrannyReturnMovement:
 	step_end
 
 MahoganyMartTwinScript:
+	specialphonecall SPECIALCALL_RAINBOWWING
 	jumptextfaceplayer MahoganyMart1FTwinText
 MahoganyMart1FTwinText:
 	ntag "GIRL:"

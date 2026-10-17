@@ -70,6 +70,7 @@ WiseTriosRoomExplainClearBellScript:
 	opentext
 	writetext WiseTriosRoomExplainClearBellText
 	setevent EVENT_WISE_TRIO_EXPLAINED_CLEAR_BELL
+	clearevent EVENT_OAK_REMIND_ABOUT_RAINBOW_WING
 	checkevent EVENT_NINJA_CHALLENGE_IN_PROGRESS
 	iffalse .TurnAwayPlayer
 	clearevent EVENT_MAHOGANY_MART_NINJA

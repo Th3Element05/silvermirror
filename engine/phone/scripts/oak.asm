@@ -2,6 +2,8 @@
 OakPhoneCalleeScript:
 	readvar VAR_SPECIALPHONECALL
 	ifequal SPECIALCALL_POKERUS, .pokerus
+	checkevent EVENT_OAK_REMIND_ABOUT_RAINBOW_WING
+	iftrue .RemindRainbowWing
 	checkevent EVENT_OAK_REMIND_ABOUT_WATERFALL
 	iftrue .RemindWaterfall
 	checkevent EVENT_OAK_CALLED_ABOUT_RADIO_TOWER
@@ -34,6 +36,10 @@ OakPhoneCalleeScript:
 
 .Badges
 	farwritetext OakPhoneHowManyBadgesText
+	end
+
+.RemindRainbowWing
+	farwritetext OakPhoneRemindRainbowWingText
 	end
 
 .RemindWaterfall
@@ -89,7 +95,7 @@ OakPhoneCallerScript:
 	ifequal SPECIALCALL_VIRIDIANGYM, .viridiangym
 	ifequal SPECIALCALL_SSTICKET, .gift
 	ifequal SPECIALCALL_RADIOTOWER, .radiotower
-	ifequal SPECIALCALL_MASTERBALL, .gift
+	ifequal SPECIALCALL_RAINBOWWING, .rainbowwing
 	farwritetext OakPhoneDiscoveredPokerusText
 	specialphonecall SPECIALCALL_NONE
 	end
@@ -134,6 +140,19 @@ OakPhoneCallerScript:
 .gift
 	farwritetext OakPhoneGiftText
 	specialphonecall SPECIALCALL_NONE
+	end
+
+.rainbowwing
+	checkevent EVENT_OAK_REMIND_ABOUT_RAINBOW_WING
+	iftrue .rainbowwing2
+	farwritetext OakPhoneRainbowWingText
+	setevent EVENT_OAK_REMIND_ABOUT_RAINBOW_WING
+	specialphonecall SPECIAL_NONE
+	end
+
+.rainbowwing2
+	farwritetext OakPhoneRemindRainbowWingText
+	specialphonecall SPECIAL_NONE
 	end
 
 ;.neat ; unreferenced
