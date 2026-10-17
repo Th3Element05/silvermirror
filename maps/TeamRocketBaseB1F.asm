@@ -306,6 +306,7 @@ TeamRocketBaseB1FBookshelfSwitch:
 	writetext TeamRocketBaseSomethingMovedText
 	waitbutton
 	setevent EVENT_TEAM_ROCKET_BASE_B1F_SWITCH
+	clearevent EVENT_NINJA_SECURITY_SHOW_SHINE
 .NoPress
 	closetext
 	end
