@@ -534,8 +534,8 @@ VermilionGym_MapEvents:
 	bg_event  5, 11, BGEVENT_READ, VermilionGymTrashCanScript
 	bg_event  7, 11, BGEVENT_READ, VermilionGymTrashCanScript
 	bg_event  9, 11, BGEVENT_READ, VermilionGymTrashCanScript
-	bg_event  3, 15, BGEVENT_READ, VermilionGymStatue
-	bg_event  6, 15, BGEVENT_READ, VermilionGymStatue
+	bg_event  2, 15, BGEVENT_READ, VermilionGymStatue
+	bg_event  7, 15, BGEVENT_READ, VermilionGymStatue
 	bg_event  6,  1, BGEVENT_READ, VermilionGymSurgeTrashCan
 
 	def_object_events
@@ -543,6 +543,6 @@ VermilionGym_MapEvents:
 	object_event  9,  6, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_TRAINER, 3, TrainerGentlemanMilton, -1
 	object_event  3,  8, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerGuitaristClyde, -1
 	object_event  0, 10, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSailorKenneth, -1
-	object_event  7, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 1, VermilionGymGuideScript, -1
+	object_event  6, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 1, VermilionGymGuideScript, -1
 ;
 	object_event  5,  2, SPRITE_SURGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionGymSurgeRematchScript, EVENT_KANTO_LEADER_REMATCHES

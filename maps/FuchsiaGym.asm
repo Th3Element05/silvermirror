@@ -510,8 +510,8 @@ FuchsiaGym_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  3, 15, BGEVENT_READ, FuchsiaGymStatue
-	bg_event  6, 15, BGEVENT_READ, FuchsiaGymStatue
+	bg_event  2, 15, BGEVENT_READ, FuchsiaGymStatue
+	bg_event  7, 15, BGEVENT_READ, FuchsiaGymStatue
 
 	def_object_events
 	object_event  5, 10, SPRITE_KOGA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FuchsiaGymKogaScript, EVENT_BEAT_ELITE_FOUR
@@ -520,8 +520,8 @@ FuchsiaGym_MapEvents:
 	object_event  2,  7, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSageEzra, -1
 	object_event  7,  8, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSageKylo, -1
 	object_event  1, 12, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSageKoda, -1
-	object_event  8, 13, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSageMusa, -1
-	object_event  7, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 1, FuchsiaGymGuideScript, -1
+	object_event  8, 12, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSageMusa, -1
+	object_event  6, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 1, FuchsiaGymGuideScript, -1
 ;
 	object_event  5, 10, SPRITE_KOGA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FuchsiaGymKogaRematchScript, EVENT_NINJA_CHALLENGE_IN_PROGRESS
 

@@ -408,8 +408,8 @@ AzaleaGym_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  3, 13, BGEVENT_READ, AzaleaGymStatue
-	bg_event  6, 13, BGEVENT_READ, AzaleaGymStatue
+	bg_event  2, 13, BGEVENT_READ, AzaleaGymStatue
+	bg_event  7, 13, BGEVENT_READ, AzaleaGymStatue
 
 	def_object_events
 	object_event  5,  7, SPRITE_BUGSY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AzaleaGymBugsyScript, EVENT_JOHTO_GYM_LEADERS
@@ -418,6 +418,6 @@ AzaleaGym_MapEvents:
 	object_event  1,  8, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherJon, -1 ;al
 	object_event  4, 10, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 1, TrainerTwinsMegAndPeg1, -1 ;amyandmay
 	object_event  5, 10, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 1, TrainerTwinsMegAndPeg2, -1 ;amyandmay
-	object_event  7, 13, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, AzaleaGymGuideScript, -1
+	object_event  6, 13, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, AzaleaGymGuideScript, -1
 ;
 	object_event  5,  7, SPRITE_BUGSY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AzaleaGymBugsyRematchScript, EVENT_JOHTO_LEADER_REMATCHES

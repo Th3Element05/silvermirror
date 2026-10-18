@@ -449,8 +449,8 @@ BlackthornGym1F_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  3, 15, BGEVENT_READ, BlackthornGymStatue
-	bg_event  6, 15, BGEVENT_READ, BlackthornGymStatue
+	bg_event  2, 15, BGEVENT_READ, BlackthornGymStatue
+	bg_event  7, 15, BGEVENT_READ, BlackthornGymStatue
 
 	def_object_events
 	object_event  1, 13, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BlackthornGymBlockingCooltrainer, EVENT_CLAIR_RETURNED_TO_GYM
@@ -458,4 +458,4 @@ BlackthornGym1F_MapEvents:
 	object_event  5,  3, SPRITE_CLAIR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BlackthornGymClairScript, -1
 	object_event  6,  6, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerCooltrainermZane, -1 ;mike
 	object_event  9,  2, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerCooltrainerfLayla, -1 ;lola
-	object_event  7, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, BlackthornGymGuideScript, -1
+	object_event  6, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, BlackthornGymGuideScript, -1
