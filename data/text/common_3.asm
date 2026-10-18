@@ -892,13 +892,13 @@ _PhoneOutOfAreaText::
 	done
 
 _PhoneJustTalkToThemText::
-;	text "Just go talk to"
-;	line "that person!"
-;	done
-	text "That person is in"
-	line "this area! Just go"
-	cont "talk to them!"
+	text "Just go talk to"
+	line "that person!"
 	done
+;	text "That person is in"
+;	line "this area! Just go"
+;	cont "talk to them!"
+;	done
 
 _PhoneThankYouText::
 	text "Thank you!"
