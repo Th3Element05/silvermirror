@@ -2,7 +2,7 @@
 	dw 303, 2320 ; height, weight
 
 	db   "It travels by rol-"
-	next "ling on mountain"
+	next "ling down mountain"
 	next "paths. If it gains"
 
 	page "too much speed, it"

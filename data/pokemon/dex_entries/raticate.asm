@@ -5,6 +5,6 @@
 	next "hind legs enable"
 	next "it to cross"
 
-	page "rivers. It search-"
-	next "es wide areas for"
-	next "food.@"
+	page "rivers. It will"
+	next "search a wide area"
+	next "for food.@"

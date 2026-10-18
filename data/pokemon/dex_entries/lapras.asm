@@ -5,6 +5,6 @@
 	next "#MON loves to"
 	next "give people rides"
 
-	page "and provides a ve-"
-	next "ry comfortable way"
-	next "to get around.@"
+	page "and provides a"
+	next "very comfortable"
+	next "way to get around.@"

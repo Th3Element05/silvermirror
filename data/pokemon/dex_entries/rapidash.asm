@@ -3,8 +3,8 @@
 
 	db   "It just loves to"
 	next "gallop. The faster"
-	next "it goes, the long-"
+	next "it runs, the"
 
-	page "er the swaying"
+	page "longer the swaying"
 	next "flames of its mane"
 	next "will become.@"
