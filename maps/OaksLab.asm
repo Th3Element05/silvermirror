@@ -1401,8 +1401,7 @@ OakScript_2:
 	loadtrainer POKEMON_PROF, OAK_T_VENUSAUR
 	loadmem VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
-	dontrestartmapmusic
-	reloadmap ;reloadmapafterbattle
+	reloadmapafterbattle
 	sjump .FinishOaksLabOak
 .OakCharizard:
 	loadtrainer POKEMON_PROF, OAK_T_CHARIZARD
