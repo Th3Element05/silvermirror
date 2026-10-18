@@ -12,7 +12,7 @@ The current build is essentially complete.
 Currently working on final testing runs, and adding some supplementary features.  
 
 
-## __Features:__
+## __Features and Changes:__
 
 - **Classic Mode or Alternate Gen2 Mode**  
   >Can be set during a New Game.  
@@ -34,12 +34,19 @@ Currently working on final testing runs, and adding some supplementary features.
   >Swarming Pokémon have an increased chance of being shiny.  
 - **Reusable TMs**  
   >Use TMs to teach moves as many times as you like.  
-- **Updated Movepools**  
-  >Based primarily on Gen4.  
+- **Updated Move List and Level-up Moves**  
+  >Removed many duplicate or outdated/low-use moves to make room for over 60 new moves from Generation 3 and 4.  
+  >(For example, Tail Whip was removed and replaced with Growl because they do exactly the same thing.)  
+  >Pokemon Level-up Moves have been reworked to include the new moves, based primarily on Generation 4.  
 - **Updated Move properties**  
   >Base Power, Accuracy, Effects, etc.  
 - **Added Gen4 Evolutions**  
   >Yanmega, Honchkrow, Mismagius, Gliscor, Weavile, Mamoswine, Magnezone, Tangrowth, Leafeon, and Glaceon.  
+  >The following Pokémon have been removed to make room for these new evolutions:  
+  >Pichu, Cleffa, Igglybuff, Togepi, Togetic, Porygon2, Tyrogue, Smoochum, Elekid, and Magby.  
+  >Porygon's base-stats have been boosted to match Porygon2's.  
+  >Eggs from Hitmonlee, Hitmonchan, and Hitmontop can contain any Hitmon- species.  
+  >(Hitmontop eggs are unobtainable in Classic Mode until after defeating the Elite Four.)  
 - **Location-based Evolutions** for appropraite Pokémon.  
   >Only available in Gen2 Mode, or after defeating the Elite Four.  
 - **Trade Evolutions obtainable without trading**  
@@ -65,10 +72,12 @@ Currently working on final testing runs, and adding some supplementary features.
   >More dynamic colors and attack animations for many moves.  
 - **Visible Berries and Apricorns on the overworld.**  
   >Each tree respawns at 12:00am each day.  
-- **Berry Pocket**  
-  >To reduce your main pocket from getting full.  
-- **Almost all bugs from gen2 have been fixed.**  
+- **Expanded Pack**  
+  >Main Pack pocket has been expanded to hold 25 items.  
+  >Barry pocket has been added to reduce your main pocket from getting full.  
+- **Almost all bugs from vanilla Pokémon Crystal have been fixed.**  
 - **A couple Secrets and Easter Eggs** based on classic Gen1 rumors and glitches.  
+  >There is a small hint book in the bookshelf behind Professor Oak.  
 - **Many other small goodies to find!**  
 
 <br/>
