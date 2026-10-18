@@ -42,9 +42,9 @@ Currently working on final testing runs, and adding some supplementary features.
   >Base Power, Accuracy, Effects, etc.  
 - **Added Gen4 Evolutions**  
   >The following evolutions have been added:  
-  > - *Yanmega, Honchkrow, Mismagius, Gliscor, Weavile, Mamoswine, Magnezone, Tangrowth, Leafeon, and Glaceon.*  
+  >`Yanmega, Honchkrow, Mismagius, Gliscor, Weavile, Mamoswine, Magnezone, Tangrowth, Leafeon, and Glaceon.`  
   >The following Pokémon have been removed to make room for these new evolutions:  
-  > - *Pichu, Cleffa, Igglybuff, Togepi, Togetic, Porygon2, Tyrogue, Smoochum, Elekid, and Magby.*  
+  >`Pichu, Cleffa, Igglybuff, Togepi, Togetic, Porygon2, Tyrogue, Smoochum, Elekid, and Magby.`  
   >Porygon's base-stats have been boosted to match Porygon2's.  
   >Eggs from Hitmonlee, Hitmonchan, and Hitmontop can contain any Hitmon- species.  
   >(Hitmontop eggs are unobtainable in Classic Mode until after defeating the Elite Four.)  
