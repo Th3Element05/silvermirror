@@ -164,9 +164,9 @@ Currently working on final testing runs, and adding some supplementary features.
 <br/>
 
 ## __Special Thanks:__
-- **yenatch**, **kanzure**, **Pikalax**, **iimarckus**, and everyone else who's contributed to disassembling Pokémon Crystal.
-- **All my discord members** who contributed to bug-testing and all who gave me support
-- **Satoshi Tajiri**, **Game Freak**, and **Nintendo** for creating Pokémon Crystal in the first place.
+- **yenatch**, **kanzure**, **Pikalax**, **iimarckus**, and everyone else who's contributed to disassembling Pokémon Crystal.  
+- **All my discord members** who contributed to bug-testing and all who gave me support.  
+- **Satoshi Tajiri**, **Game Freak**, and **Nintendo** for creating Pokémon Crystal in the first place.  
 
 <br/>
 
