@@ -63,10 +63,11 @@ Currently working on final testing runs, and adding some supplementary features.
 - **Upgraded trainer rematches**  
   >Rematch trainer parties scale as you progress through the story.  
 - **Modern Bill's PC Boxes**  
-  >Has a GUI like Gen3. No more saving between boxes required.  
+  >Has a GUI like Generation 3. No more saving between boxes required.  
 - **New Custom Pokémon Sprites**  
-  >Front Sprites by Sour Apple.  
+  >Front Sprites/Animations by Sour Apple.  
   >Back Sprites based on work by MeroMero.  
+  >Many have been adjusted by myself.  
 - **Unique Party sprites**  
   >Every Pokémon has a unique sprite in your party.  
 - **Upgraded battle graphics**  
@@ -169,16 +170,24 @@ Currently working on final testing runs, and adding some supplementary features.
 
 <br/>
 
-# Pokémon Silver Mirror [![Build Info]
+# Pokémon Silver Mirror [Build Info]
 
-This is based on a disassembly of Pokémon Crystal.
+Silver Mirror is based on a disassembly of Pokémon Crystal.  
+Specifically forked from Sour Crystal v4.1a.
 
 To set up the repository, see [INSTALL.md](INSTALL.md).  
 >uses RGBDS v0.6.0
 
 I learned Assembly in the process of making this game.  
 I don't actually know how to use git, and most of my commits are a mess.  
-Forgive me.  
+
+<br/>
+
+## __AI Information:__
+
+On occasion, I asked ChatGPT to help *explain the function of some existing code*,  
+because I was literally learning Assembly from scratch as I worked on this project.  
+**AI was not used** to *write any code* or *generate any art* for this project.  
 
 <br/>
 
