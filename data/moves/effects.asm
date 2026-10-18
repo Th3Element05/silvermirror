@@ -2206,7 +2206,6 @@ CloseCombat:
 	applydamage
 	criticaltext
 	supereffectivetext
-	checkfaint
 	switchturn
 	defensedown
 	statdownmessage
@@ -2215,6 +2214,7 @@ CloseCombat:
 	statdownmessage
 	statdownfailtext
 	switchturn
+	checkfaint
 	buildopponentrage
 	kingsrock
 	endmove
