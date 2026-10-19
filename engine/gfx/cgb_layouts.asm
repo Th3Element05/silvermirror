@@ -180,8 +180,8 @@ _CGB_FinishBattleScreenLayout:
 	call ByteFill
 
 ; player mon backpic
-	hlcoord 0, 6, wAttrmap ;0, 4, wAttrmap
-	lb bc, 6, 9 ;8, 10
+	hlcoord 1, 6, wAttrmap ;0, 4, wAttrmap
+	lb bc, 6, 7 ;8, 10
 	ld a, PAL_BATTLE_BG_PLAYER
 	call FillBoxCGB
 
@@ -193,15 +193,15 @@ _CGB_FinishBattleScreenLayout:
 
 ; enemy HP bar
 	hlcoord 2, 2, wAttrmap ;0, 0, wAttrmap
-	lb bc, 1, 9 ;4, 10
+	ld bc, 9 ;4, 10
 	ld a, PAL_BATTLE_BG_ENEMY_HP
-	call FillBoxCGB
+	call ByteFill
 
 ; player HP bar
 	hlcoord 10, 9, wAttrmap ;10, 7, wAttrmap
-	lb bc, 1, 8 ;5, 10
+	ld bc, 8 ;5, 10
 	ld a, PAL_BATTLE_BG_PLAYER_HP
-	call FillBoxCGB
+	call ByteFill
 
 ;; player EXP bar
 ;	hlcoord 10, 11, wAttrmap
@@ -224,7 +224,7 @@ _CGB_FinishBattleScreenLayout:
 ; flip enemy vertical bar tile
 	hlcoord 1, 2, wAttrmap
 	ld bc, 1
-	ld a, PAL_BATTLE_BG_ENEMY_HP ;PAL_BATTLE_BG_PLAYER_HP
+	ld a, PAL_BATTLE_BG_EXP ;PAL_BATTLE_BG_ENEMY_HP ;PAL_BATTLE_BG_PLAYER_HP
 	set 5, a ; flips tiles on x axis
 	call ByteFill
 
@@ -239,14 +239,14 @@ _CGB_FinishBattleScreenLayout:
 ; status icons
 	; enemy
 	hlcoord 2, 1, wAttrmap
-	lb bc, 1, 2
+	ld bc, 2
 	ld a, $6
-	call FillBoxCGB
+	call ByteFill
 	; player's
 	hlcoord 10, 8, wAttrmap
-	lb bc, 1, 2
+	ld bc, 2
 	ld a, $6
-	call FillBoxCGB
+	call ByteFill
 
 ; check if we're in the MoveInfoBox
 	hlcoord 0, 12
