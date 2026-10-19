@@ -78,7 +78,7 @@ _Option:
 StringOptions:
 	db "TEXT SPEED<LF>"
 	db "        :<LF>"
-	db "BATTLE SCENE<LF>"
+	db "BATTLE ANIMATION<LF>" ;"BATTLE SCENE<LF>"
 	db "        :<LF>"
 	db "BATTLE STYLE<LF>"
 	db "        :<LF>"
