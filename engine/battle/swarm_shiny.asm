@@ -269,17 +269,51 @@ GenerateSwarmShiny:
 	;fallthrough
 .rollshiny
 	call Random
-	cp 3 ; adjust to desired percentage
-	jr nc, .trynext
-	ld b, ATKDEFDV_SHINY
-	ld c, SPDSPCDV_SHINY
-	jr .UpdateDVs
-.trynext:
-	call Random
-	cp 3 ; adjust to desired percentage
+	cp 3 ; adjust to desired percentage (1=0.39%, 2=0.78%, 3=1.17%, 4=1.56%, 5=1.95%)
 	jr nc, .skipshine
-	ld b, ATKDEFDV_SHINYF
-	ld c, SPDSPCDV_SHINYF
+;	jr nc, .trynext
+
+;; OG static shiny values
+;	ld b, ATKDEFDV_SHINY
+;	ld c, SPDSPCDV_SHINY
+;	jr .UpdateDVs
+;.trynext:
+;	call Random
+;	cp 3 ; adjust to desired percentage (1=0.39%, 2=0.78%, 3=1.17%, 4=1.56%, 5=1.95%)
+;	jr nc, .skipshine
+;	ld b, ATKDEFDV_SHINYF
+;	ld c, SPDSPCDV_SHINYF
+;	jr .UpdateDVs
+
+; Generate random shiny ATK and DEF DVs ($ee, $ef, $fe, or $ff) in b
+	call Random
+	and $03
+	ld b, a
+	and $01
+	ld d, a
+	ld a, b
+	and $02
+	rlca
+	rlca
+	rlca
+	or d
+	or $ee
+	ld b, a
+
+; Generate random shiny SPD and SPC DVs ($ee, $ef, $fe, or $ff) in  c
+	call Random
+	and $03
+	ld c, a
+	and $01
+	ld d, a
+	ld a, c
+	and $02
+	rlca
+	rlca
+	rlca
+	or d
+	or $ee
+	ld c, a
 	jr .UpdateDVs
 
 .skipshine:
