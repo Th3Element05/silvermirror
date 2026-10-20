@@ -378,8 +378,7 @@ TeamRocketBaseB3FKogaExplainsSilverWingText:
 	cont "legendary LUGIA"
 	roll "which was said to"
 	cont "roost at the top"
-	roll "of the BRASS TOWER"
-	cont "before it burned."
+	roll "of BRASS TOWER."
 
 	para "I don't know if it"
 	line "is important, but"
