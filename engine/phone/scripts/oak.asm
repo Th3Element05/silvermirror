@@ -147,12 +147,12 @@ OakPhoneCallerScript:
 	iftrue .rainbowwing2
 	farwritetext OakPhoneRainbowWingText
 	setevent EVENT_OAK_REMIND_ABOUT_RAINBOW_WING
-	specialphonecall SPECIAL_NONE
+	specialphonecall SPECIALCALL_NONE
 	end
 
 .rainbowwing2
 	farwritetext OakPhoneRemindRainbowWingText
-	specialphonecall SPECIAL_NONE
+	specialphonecall SPECIALCALL_NONE
 	end
 
 ;.neat ; unreferenced

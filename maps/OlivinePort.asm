@@ -100,14 +100,14 @@ OlivinePortTicketSailorScript:
 
 .Surfing
 	jumptextfaceplayer VermilionPortSurfingText
-VermilionPortSurfingText:
-	ntag "SAILOR:"
-	text "You can't board"
-	line "from there!"
-
-	para "Please talk to me"
-	line "from the dock!"
-	done
+;OlivinePortSurfingText:
+;	ntag "SAILOR:"
+;	text "You can't board"
+;	line "from there!"
+;
+;	para "Please talk to me"
+;	line "from the dock!"
+;	done
 
 ;OlivinePortNoTicketText:
 ;	text "<PLAYER> doesn't"
