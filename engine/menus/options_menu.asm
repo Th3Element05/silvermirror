@@ -82,9 +82,11 @@ StringOptions:
 	db "        :<LF>"
 	db "BATTLE STYLE<LF>"
 	db "        :<LF>"
-	db "PHYSCIAL/SPECIAL<LF>"
+	db "PHYS/SPECIAL<LF>"
 	db "        :<LF>"
-	db "SOUND<LF>"
+;	db "SOUND<LF>"
+;	db "        :<LF>"
+	db "DIFFICULTY CURVE<LF>"
 	db "        :<LF>"
 ;	db "PRINT<LF>"
 ;	db "        :<LF>"
@@ -103,7 +105,8 @@ GetOptionPointer:
 	dw Options_BattleScene
 	dw Options_BattleStyle
 	dw Options_Phys_Spec
-	dw Options_Sound
+;	dw Options_Sound
+	dw Options_Difficulty
 ;	dw Options_Print
 	dw Options_MenuClock ;Options_MenuAccount
 	dw Options_Frame
@@ -310,41 +313,84 @@ Options_Phys_Spec:
 .Split:   db "SPLIT  @"
 .Classic: db "CLASSIC@"
 
-Options_Sound:
-	ld hl, wOptions
+;Options_Sound:
+;	ld hl, wOptions
+;	ldh a, [hJoyPressed]
+;	bit D_LEFT_F, a
+;	jr nz, .LeftPressed
+;	bit D_RIGHT_F, a
+;	jr z, .NonePressed
+;	bit STEREO, [hl]
+;	jr nz, .SetMono
+;	jr .SetStereo
+;
+;.LeftPressed:
+;	bit STEREO, [hl]
+;	jr z, .SetStereo
+;	jr .SetMono
+;
+;.NonePressed:
+;	bit STEREO, [hl]
+;	jr nz, .ToggleStereo
+;	jr .ToggleMono
+;
+;.SetMono:
+;	res STEREO, [hl]
+;	call RestartMapMusic
+;
+;.ToggleMono:
+;	ld de, .Mono
+;	jr .Display
+;
+;.SetStereo:
+;	set STEREO, [hl]
+;	call RestartMapMusic
+;
+;.ToggleStereo:
+;	ld de, .Stereo
+;
+;.Display:
+;	hlcoord 11, 11 ;9
+;	call PlaceString
+;	and a
+;	ret
+;
+;.Mono:   db "MONO  @"
+;.Stereo: db "STEREO@"
+
+Options_Difficulty:
+	ld hl, wOptions2
 	ldh a, [hJoyPressed]
 	bit D_LEFT_F, a
 	jr nz, .LeftPressed
 	bit D_RIGHT_F, a
 	jr z, .NonePressed
-	bit STEREO, [hl]
-	jr nz, .SetMono
-	jr .SetStereo
+	bit DIFFICULTY_EASY, [hl]
+	jr nz, .SetNormal
+	jr .SetEasier
 
 .LeftPressed:
-	bit STEREO, [hl]
-	jr z, .SetStereo
-	jr .SetMono
+	bit DIFFICULTY_EASY, [hl]
+	jr z, .SetEasier
+	jr .SetNormal
 
 .NonePressed:
-	bit STEREO, [hl]
-	jr nz, .ToggleStereo
-	jr .ToggleMono
+	bit DIFFICULTY_EASY, [hl]
+	jr nz, .ToggleEasier
+	jr .ToggleNormal
 
-.SetMono:
-	res STEREO, [hl]
-	call RestartMapMusic
+.SetNormal:
+	res DIFFICULTY_EASY, [hl]
 
-.ToggleMono:
-	ld de, .Mono
+.ToggleNormal:
+	ld de, .Diff_Normal
 	jr .Display
 
-.SetStereo:
-	set STEREO, [hl]
-	call RestartMapMusic
+.SetEasier:
+	set DIFFICULTY_EASY, [hl]
 
-.ToggleStereo:
-	ld de, .Stereo
+.ToggleEasier:
+	ld de, .Diff_Easier
 
 .Display:
 	hlcoord 11, 11 ;9
@@ -352,8 +398,9 @@ Options_Sound:
 	and a
 	ret
 
-.Mono:   db "MONO  @"
-.Stereo: db "STEREO@"
+.Diff_Normal: db "NORMAL@"
+.Diff_Easier: db "EASIER@"
+
 
 	const_def
 	const OPT_PRINT_LIGHTEST ; 0
@@ -362,63 +409,64 @@ Options_Sound:
 	const OPT_PRINT_DARKER   ; 3
 	const OPT_PRINT_DARKEST  ; 4
 
-Options_Print:
-	call GetPrinterSetting
-	ldh a, [hJoyPressed]
-	bit D_LEFT_F, a
-	jr nz, .LeftPressed
-	bit D_RIGHT_F, a
-	jr z, .NonePressed
-	ld a, c
-	cp OPT_PRINT_DARKEST
-	jr c, .Increase
-	ld c, OPT_PRINT_LIGHTEST - 1
+;Options_Print:
+;	call GetPrinterSetting
+;	ldh a, [hJoyPressed]
+;	bit D_LEFT_F, a
+;	jr nz, .LeftPressed
+;	bit D_RIGHT_F, a
+;	jr z, .NonePressed
+;	ld a, c
+;	cp OPT_PRINT_DARKEST
+;	jr c, .Increase
+;	ld c, OPT_PRINT_LIGHTEST - 1
+;
+;.Increase:
+;	inc c
+;	ld a, e
+;	jr .Save
+;
+;.LeftPressed:
+;	ld a, c
+;	and a
+;	jr nz, .Decrease
+;	ld c, OPT_PRINT_DARKEST + 1
+;
+;.Decrease:
+;	dec c
+;	ld a, d
+;
+;.Save:
+;	ld b, a
+;	ld [wGBPrinterBrightness], a
+;
+;.NonePressed:
+;	ld b, 0
+;	ld hl, .Strings
+;	add hl, bc
+;	add hl, bc
+;	ld e, [hl]
+;	inc hl
+;	ld d, [hl]
+;	hlcoord 11, 11
+;	call PlaceString
+;	and a
+;	ret
+;
+;.Strings:
+;; entries correspond to OPT_PRINT_* constants
+;	dw .Lightest
+;	dw .Lighter
+;	dw .Normal
+;	dw .Darker
+;	dw .Darkest
+;
+;.Lightest: db "LIGHTEST@"
+;.Lighter:  db "LIGHTER @"
+;.Normal:   db "NORMAL  @"
+;.Darker:   db "DARKER  @"
+;.Darkest:  db "DARKEST @"
 
-.Increase:
-	inc c
-	ld a, e
-	jr .Save
-
-.LeftPressed:
-	ld a, c
-	and a
-	jr nz, .Decrease
-	ld c, OPT_PRINT_DARKEST + 1
-
-.Decrease:
-	dec c
-	ld a, d
-
-.Save:
-	ld b, a
-	ld [wGBPrinterBrightness], a
-
-.NonePressed:
-	ld b, 0
-	ld hl, .Strings
-	add hl, bc
-	add hl, bc
-	ld e, [hl]
-	inc hl
-	ld d, [hl]
-	hlcoord 11, 11
-	call PlaceString
-	and a
-	ret
-
-.Strings:
-; entries correspond to OPT_PRINT_* constants
-	dw .Lightest
-	dw .Lighter
-	dw .Normal
-	dw .Darker
-	dw .Darkest
-
-.Lightest: db "LIGHTEST@"
-.Lighter:  db "LIGHTER @"
-.Normal:   db "NORMAL  @"
-.Darker:   db "DARKER  @"
-.Darkest:  db "DARKEST @"
 
 GetPrinterSetting:
 ; converts GBPRINTER_* value in a to OPT_PRINT_* value in c,
@@ -456,6 +504,7 @@ GetPrinterSetting:
 	ld c, OPT_PRINT_DARKEST
 	lb de, GBPRINTER_DARKER, GBPRINTER_LIGHTEST
 	ret
+
 
 ;Options_MenuAccount:
 Options_MenuClock:
@@ -501,6 +550,7 @@ Options_MenuClock:
 .Off: db "OFF@"
 .On:  db "ON @"
 
+
 Options_Frame:
 	ld hl, wTextboxFrame
 	ldh a, [hJoyPressed]
@@ -543,6 +593,7 @@ Options_Cancel:
 	scf
 	ret
 
+
 OptionsControl:
 	ld hl, wJumptableIndex
 	ldh a, [hJoyLast]
@@ -561,6 +612,7 @@ OptionsControl:
 	ld [hl], OPT_TEXT_SPEED ; first option
 	scf
 	ret
+
 
 ;.CheckMenuAccount: ; I have no idea why this exists...
 ;	cp OPT_MENU_ACCOUNT
@@ -595,6 +647,7 @@ OptionsControl:
 	dec [hl]
 	scf
 	ret
+
 
 Options_UpdateCursorPosition:
 	hlcoord 1, 1

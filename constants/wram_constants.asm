@@ -70,7 +70,8 @@ DEF GBPRINTER_DARKEST  EQU $7f
 	const_def
 ;	const MENU_ACCOUNT    ; 0
 	const MENU_CLOCK      ; 0
-	const PHYS_SPEC_SPLIT ;1
+	const PHYS_SPEC_SPLIT ; 1
+	const DIFFICULTY_EASY ; 2
 
 ; wWalkingDirection::
 	const_def -1

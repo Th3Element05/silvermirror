@@ -168,6 +168,35 @@ ReadTrainerPartyPieces:
 	ld [de], a
 .no_dvs
 
+; stat exp?
+; check difficulty setting
+	ld a, [wOptions2]
+	bit DIFFICULTY_EASY, a
+	jr nz, .no_stat_exp
+
+	push hl
+	ld a, [wOTPartyCount]
+	dec a
+	ld hl, wOTPartyMon1StatExp
+	call GetPartyLocation
+	push hl ; GetPartyLocation
+
+	push bc
+	ld hl, wBadges
+	ld b, 2
+	call CountSetBits
+;	ld a, [wNumSetBits] ; already set by CountSetBits
+	ld c, 10
+	call SimpleMultiply
+	pop bc
+	pop hl ; GetPartyLocation
+
+rept 10
+	ld [hli], a
+endr
+	pop hl
+.no_stat_exp
+
 ; item?
 	ld a, [wOtherTrainerType]
 	bit TRAINERTYPE_ITEM_F, a
@@ -250,10 +279,15 @@ ReadTrainerPartyPieces:
 	pop hl
 .no_moves
 
-; Custom DVs affect stats, so recalculate them after TryAddMonToParty
-	ld a, [wOtherTrainerType]
-	and TRAINERTYPE_DVS
-	jr z, .no_stat_recalc
+;; Custom DVs or stat experience affect stats,
+;; so recalculate them after TryAddMonToParty
+;
+; We need to recalculate every time since stat exp
+; is being applied to all trainer parties.
+;
+;	ld a, [wOtherTrainerType]
+;	and TRAINERTYPE_DVS ;| TRAINERTYPE_EXP
+;	jr z, .no_stat_recalc
 
 	push hl
 
@@ -501,7 +535,7 @@ SetDynamicLevel:
 	ld hl, wBadges
 	ld b, 2
 	call CountSetBits
-	ld a, [wNumSetBits]
+;	ld a, [wNumSetBits] ; already set by CountSetBits
 	ld c, 5
 	call SimpleMultiply
 	pop bc
@@ -511,11 +545,11 @@ SetDynamicLevel:
 	add b
 	cp MAX_LEVEL
 	ret c
-; cap overflow at level 100
+; cap maximum at level 100
 	cp BADGE_LEVEL
 	ld a, MAX_LEVEL
 	ret c
-; cap overflow at level 2
+; cap minimum at level 2
 	ld a, 2
 	ret
 
