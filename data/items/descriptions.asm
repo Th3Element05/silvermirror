@@ -639,8 +639,8 @@ RedApricornDesc:
 	db   "A red APRICORN.@"
 
 TinyMushroomDesc:
-	db   "An ordinary mush-"
-	next "room. Sell low.@"
+	db   "Ordinary mushroom."
+	next "Sell low.@"
 
 BigMushroomDesc:
 	db   "A rare mushroom."
