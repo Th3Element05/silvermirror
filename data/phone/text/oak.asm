@@ -59,7 +59,7 @@ OakPhoneSSAnneText:
 	done
 
 OakPhoneRemindSSAnneText:
-	text "Hellow, <PLAYER>?"
+	text "Hello, <PLAYER>?"
 
 	para "S.S.ANNE is still"
 	line "at VERMILION CITY!"
