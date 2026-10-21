@@ -1596,17 +1596,17 @@ _NPCTradeIntroText4::
 _NPCTradeIntroText5::
 	text "I just caught"
 	line "@"
-	text_ram wStringBuffer1
+	text_ram wStringBuffer2
 	text ", but"
 	cont "I'd really like"
 	roll "@"
-	text_ram wStringBuffer2
+	text_ram wStringBuffer1
 	text "."
 
 	para "If you have one,"
 	line "I'll trade this"
 	cont "@"
-	text_ram wStringBuffer1
+	text_ram wStringBuffer2
 	text " for it!"
 	done
 
