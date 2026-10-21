@@ -171,9 +171,14 @@ ReadTrainerPartyPieces:
 ; stat exp?
 ; check difficulty setting
 	ld a, [wOptions2]
-	bit DIFFICULTY_EASY, a
-	jr nz, .no_stat_exp
+	and DIFFICULTY_MASK
+	cp DIFFICULTY_HARD
+	jr z, .hard
+	cp DIFFICULTY_EASY
+	jr z, .no_stat_exp
+	; none of the above
 
+; DIFFICULTY_NORMAL
 	push hl
 	ld a, [wOTPartyCount]
 	dec a
@@ -190,7 +195,27 @@ ReadTrainerPartyPieces:
 	call SimpleMultiply
 	pop bc
 	pop hl ; GetPartyLocation
+	jr .apply_stat_exp
 
+.hard
+	push hl
+	ld a, [wOTPartyCount]
+	dec a
+	ld hl, wOTPartyMon1StatExp
+	call GetPartyLocation
+	push hl ; GetPartyLocation
+
+	push bc
+	ld hl, wBadges
+	ld b, 2
+	call CountSetBits
+;	ld a, [wNumSetBits] ; already set by CountSetBits
+	ld c, 15
+	call SimpleMultiply
+	pop bc
+	pop hl ; GetPartyLocation
+
+.apply_stat_exp
 rept 10
 	ld [hli], a
 endr

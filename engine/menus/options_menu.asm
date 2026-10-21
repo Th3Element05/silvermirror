@@ -76,25 +76,25 @@ _Option:
 	ret
 
 StringOptions:
-	db "TEXT SPEED<LF>"
+	db "Text Speed<LF>"
 	db "        :<LF>"
-	db "BATTLE ANIMATION<LF>" ;"BATTLE SCENE<LF>"
+	db "Battle Animation<LF>" ;"BATTLE SCENE<LF>"
 	db "        :<LF>"
-	db "BATTLE STYLE<LF>"
+	db "Battle Style<LF>"
 	db "        :<LF>"
-	db "PHYS/SPECIAL<LF>"
+	db "Phys/Special<LF>"
 	db "        :<LF>"
 ;	db "SOUND<LF>"
 ;	db "        :<LF>"
-	db "DIFFICULTY CURVE<LF>"
+	db "Difficulty Curve<LF>"
 	db "        :<LF>"
 ;	db "PRINT<LF>"
 ;	db "        :<LF>"
-	db "MENU CLOCK<LF>" ;"MENU ACCOUNT<LF>"
+	db "Menu Clock<LF>" ;"MENU ACCOUNT<LF>"
 	db "        :<LF>"
-	db "FRAME<LF>"
+	db "Frame Style<LF>"
 	db "        :TYPE<LF>"
-	db "CANCEL@"
+	db "CONFIRM@"
 
 GetOptionPointer:
 	jumptable .Pointers, wJumptableIndex
@@ -170,9 +170,9 @@ Options_TextSpeed:
 	dw .Mid
 	dw .Slow
 
-.Fast: db "FAST@"
-.Mid:  db "MID @"
-.Slow: db "SLOW@"
+.Fast: db "FAST  @"
+.Mid:  db "MEDIUM@"
+.Slow: db "SLOW  @"
 
 GetTextSpeed:
 ; converts TEXT_DELAY_* value in a to OPT_TEXT_SPEED_* value in c,
@@ -358,49 +358,92 @@ Options_Phys_Spec:
 ;.Mono:   db "MONO  @"
 ;.Stereo: db "STEREO@"
 
+
+	const_def
+	const OPT_DIFFICULTY_EASY   ; 0
+	const OPT_DIFFICULTY_NORMAL ; 1
+	const OPT_DIFFICULTY_HARD   ; 2
+
 Options_Difficulty:
-	ld hl, wOptions2
+	call GetDifficultySetting
 	ldh a, [hJoyPressed]
 	bit D_LEFT_F, a
 	jr nz, .LeftPressed
 	bit D_RIGHT_F, a
 	jr z, .NonePressed
-	bit DIFFICULTY_EASY, [hl]
-	jr nz, .SetNormal
-	jr .SetEasier
+	ld a, c ; right pressed
+	cp OPT_DIFFICULTY_EASY
+	jr c, .Increase
+	ld c, OPT_DIFFICULTY_HARD - 1
+
+.Increase:
+	inc c
+	ld a, e
+	jr .Save
 
 .LeftPressed:
-	bit DIFFICULTY_EASY, [hl]
-	jr z, .SetEasier
-	jr .SetNormal
+	ld a, c
+	and a
+	jr nz, .Decrease
+	ld c, OPT_DIFFICULTY_EASY + 1
+
+.Decrease:
+	dec c
+	ld a, d
+
+.Save:
+	ld b, a
+	ld a, [wOptions2]
+	and $f0
+	or b
+	ld [wOptions2], a
 
 .NonePressed:
-	bit DIFFICULTY_EASY, [hl]
-	jr nz, .ToggleEasier
-	jr .ToggleNormal
-
-.SetNormal:
-	res DIFFICULTY_EASY, [hl]
-
-.ToggleNormal:
-	ld de, .Diff_Normal
-	jr .Display
-
-.SetEasier:
-	set DIFFICULTY_EASY, [hl]
-
-.ToggleEasier:
-	ld de, .Diff_Easier
-
-.Display:
-	hlcoord 11, 11 ;9
+	ld b, 0
+	ld hl, .Strings
+	add hl, bc
+	add hl, bc
+	ld e, [hl]
+	inc hl
+	ld d, [hl]
+	hlcoord 11, 11
 	call PlaceString
 	and a
 	ret
 
-.Diff_Normal: db "NORMAL@"
-.Diff_Easier: db "EASIER@"
+.Strings:
+; entries correspond to OPT_DIFFICULTY_* constants
+	dw .Easy
+	dw .Normal
+	dw .Hard
 
+.Easy:   db "EASIER@"
+.Normal: db "NORMAL@"
+.Hard:   db "HARDER@"
+
+GetDifficultySetting:
+; converts DIFFICULTY_* value in a to OPT_DIFFICULTY_* value in c,
+; with previous/next DIFFICULTY_* values in d/e
+	ld a, [wOptions2]
+	and DIFFICULTY_MASK
+	cp DIFFICULTY_HARD
+	jr z, .hard
+	cp DIFFICULTY_EASY
+	jr z, .easy
+	; none of the above
+	ld c, OPT_DIFFICULTY_NORMAL
+	lb de, DIFFICULTY_EASY, DIFFICULTY_HARD
+	ret
+
+.hard
+	ld c, OPT_DIFFICULTY_HARD
+	lb de, DIFFICULTY_NORMAL, DIFFICULTY_EASY
+	ret
+
+.easy
+	ld c, OPT_DIFFICULTY_EASY
+	lb de, DIFFICULTY_HARD, DIFFICULTY_NORMAL
+	ret
 
 	const_def
 	const OPT_PRINT_LIGHTEST ; 0

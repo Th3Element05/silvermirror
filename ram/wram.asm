@@ -1868,9 +1868,11 @@ wGBPrinterBrightness::
 ;   darkest:  $7F
 	db
 wOptions2::
-; bit 1: menu clock
-; bit 2: phys/spec split
-; bit 3: difficulty (trainer stat exp)
+; bit 0-2: difficulty setting
+;   easy 1; normal 3; hard 5
+; bit 3: ?
+; bit 4: menu clock off/on
+; bit 5: phys/spec split off/on
 	db
 	ds 2
 wOptionsEnd::

@@ -67,11 +67,14 @@ DEF GBPRINTER_DARKER   EQU $60
 DEF GBPRINTER_DARKEST  EQU $7f
 
 ; wOptions2::
-	const_def
-;	const MENU_ACCOUNT    ; 0
-	const MENU_CLOCK      ; 0
-	const PHYS_SPEC_SPLIT ; 1
-	const DIFFICULTY_EASY ; 2
+DEF DIFFICULTY_MASK EQU %111
+	const_def 4
+	const MENU_CLOCK      ; 4
+	const PHYS_SPEC_SPLIT ; 5
+
+DEF DIFFICULTY_EASY   EQU %001 ; 1
+DEF DIFFICULTY_NORMAL EQU %011 ; 3
+DEF DIFFICULTY_HARD   EQU %101 ; 5
 
 ; wWalkingDirection::
 	const_def -1
