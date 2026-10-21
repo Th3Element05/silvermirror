@@ -180,8 +180,8 @@ _CGB_FinishBattleScreenLayout:
 	call ByteFill
 
 ; player mon backpic
-	hlcoord 1, 6, wAttrmap ;0, 4, wAttrmap
-	lb bc, 6, 7 ;8, 10
+	hlcoord 0, 6, wAttrmap ;0, 4, wAttrmap
+	lb bc, 6, 9 ;8, 10
 	ld a, PAL_BATTLE_BG_PLAYER
 	call FillBoxCGB
 
@@ -224,7 +224,7 @@ _CGB_FinishBattleScreenLayout:
 ; flip enemy vertical bar tile
 	hlcoord 1, 2, wAttrmap
 	ld bc, 1
-	ld a, PAL_BATTLE_BG_EXP ;PAL_BATTLE_BG_ENEMY_HP ;PAL_BATTLE_BG_PLAYER_HP
+	ld a, PAL_BATTLE_BG_EXP
 	set 5, a ; flips tiles on x axis
 	call ByteFill
 
