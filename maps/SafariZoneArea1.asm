@@ -88,8 +88,8 @@ SafariZoneArea1_MapEvents:
 	def_warp_events
 	warp_event 18, 27, SAFARI_ZONE_ENTRANCE, 1     ; 1
 	warp_event 19, 27, SAFARI_ZONE_ENTRANCE, 1     ; 2
-	warp_event  4, 15, SAFARI_ZONE_AREA_4, 5       ; 3
-	warp_event  4, 14, SAFARI_ZONE_AREA_4, 6       ; 4
+	warp_event  4, 14, SAFARI_ZONE_AREA_4, 5       ; 3
+	warp_event  4, 15, SAFARI_ZONE_AREA_4, 6       ; 4
 	warp_event 18,  4, SAFARI_ZONE_AREA_3, 5       ; 5
 	warp_event 19,  4, SAFARI_ZONE_AREA_3, 6       ; 6
 	warp_event 33, 14, SAFARI_ZONE_AREA_2, 3       ; 7
