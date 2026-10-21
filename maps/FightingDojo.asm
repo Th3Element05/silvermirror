@@ -226,7 +226,6 @@ FightingDojoKarateMasterScript:
 	iftrue .OfferSecondPokemon
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iffalse .StillTraining
-	opentext
 	writetext KarateMasterRematchIntroText
 	yesorno
 	iffalse .DeclinedRematch
@@ -246,10 +245,16 @@ FightingDojoKarateMasterScript:
 	end
 
 .TrainWithUs
-	jumptextfaceplayer KarateMasterTrainWithUsText
+	writetext KarateMasterTrainWithUsText
+	waitbutton
+	closetext
+	end
 
 .StillTraining
-	jumptextfaceplayer KarateMasterTrainingText
+	writetext KarateMasterTrainingText
+	waitbutton
+	closetext
+	end
 
 .DeclinedRematch
 	writetext KarateMasterDeclinedRematchText
@@ -446,12 +451,10 @@ FightingDojoHitmonlee:
 	writetext FightingDojoTakeHitmonleeText
 	yesorno
 	iffalse .NotHitmonlee
-
-	readvar VAR_PARTYCOUNT
-	ifequal PARTY_LENGTH, NoRoomForFightingPokemon
 	checkevent EVENT_GOT_POKEMON_FROM_DOJO
 	iftrue .AlreadyGotHitmonchan
-
+	readvar VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, NoRoomForFightingPokemon
 	disappear FIGHTINGDOJO_HITMONLEE_POKE_BALL
 	setevent EVENT_GOT_POKEMON_FROM_DOJO
 	getmonname STRING_BUFFER_3, HITMONLEE
@@ -498,12 +501,10 @@ FightingDojoHitmonchan:
 	writetext FightingDojoTakeHitmonchanText
 	yesorno
 	iffalse .NotHitmonchan
-
-	readvar VAR_PARTYCOUNT
-	ifequal PARTY_LENGTH, NoRoomForFightingPokemon
 	checkevent EVENT_GOT_POKEMON_FROM_DOJO
 	iftrue .AlreadyGotHitmonlee
-
+	readvar VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, NoRoomForFightingPokemon
 	disappear FIGHTINGDOJO_HITMONCHAN_POKE_BALL
 	setevent EVENT_GOT_POKEMON_FROM_DOJO
 	getmonname STRING_BUFFER_3, HITMONCHAN
@@ -730,8 +731,8 @@ FightingDojo_MapEvents:
 	def_bg_events
 	bg_event  1,  0, BGEVENT_READ, FightingDojoSign1
 	bg_event  8,  0, BGEVENT_READ, FightingDojoSign2
-	bg_event  3, 11, BGEVENT_READ, FightingDojoStatue
-	bg_event  6, 11, BGEVENT_READ, FightingDojoStatue
+	bg_event  2, 11, BGEVENT_READ, FightingDojoStatue
+	bg_event  7, 11, BGEVENT_READ, FightingDojoStatue
 
 	def_object_events
 	object_event  4,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FightingDojoHitmonlee, EVENT_GOT_HITMONLEE_FROM_DOJO
@@ -741,7 +742,7 @@ FightingDojo_MapEvents:
 	object_event  3,  6, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 0, TrainerBlackbeltBruce, -1
 	object_event  6,  6, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerBlackbeltJackie, -1
 	object_event  7,  7, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerBlackbeltJet, -1
-	object_event  7, 11, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, FightingDojoMoveTutorScript, -1
+	object_event  6, 11, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, FightingDojoMoveTutorScript, -1
 	object_event  1,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, FightingDojoFocusBand, EVENT_FIGHTING_DOJO_FOCUS_BAND
 	object_event  8,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, FightingDojoBlackBelt, EVENT_FIGHTING_DOJO_BLACK_BELT
 
