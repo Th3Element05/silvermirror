@@ -6,14 +6,14 @@ DiglettsCave_MapScripts:
 
 	def_callbacks
 
-DiglettsCavePokefanMScript:
-	jumptextfaceplayer DiglettsCavePokefanMText
-DiglettsCavePokefanMText:
-	ntag "HIKER:"
-	text "A bunch of DIGLETT"
-	line "popped out of the"
-	cont "ground!"
-	done
+;DiglettsCavePokefanMScript:
+;	jumptextfaceplayer DiglettsCavePokefanMText
+;DiglettsCavePokefanMText:
+;	ntag "HIKER:"
+;	text "A bunch of DIGLETT"
+;	line "popped out of the"
+;	cont "ground!"
+;	done
 
 ; itemballs
 DiglettsCaveSoftSand:
@@ -37,5 +37,5 @@ DiglettsCave_MapEvents:
 ;	bg_event  6, 13, BGEVENT_ITEM, DiglettsCaveHiddenMaxRevive
 
 	def_object_events
-	object_event 33, 10, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DiglettsCavePokefanMScript, -1
+;	object_event 33, 10, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DiglettsCavePokefanMScript, -1
 	object_event 18, 17, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DiglettsCaveSoftSand, EVENT_DIGLETTS_CAVE_SOFT_SAND
