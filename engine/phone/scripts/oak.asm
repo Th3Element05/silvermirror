@@ -2,6 +2,8 @@
 OakPhoneCalleeScript:
 	readvar VAR_SPECIALPHONECALL
 	ifequal SPECIALCALL_POKERUS, .pokerus
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .MtSilver
 	checkevent EVENT_OAK_REMIND_ABOUT_RAINBOW_WING
 	iftrue .RemindRainbowWing
 	checkevent EVENT_OAK_REMIND_ABOUT_WATERFALL
@@ -25,17 +27,26 @@ OakPhoneCalleeScript:
 .default
 	random 3
 ;	ifequal 0, ;fallthrough
-	ifequal 1, .Pokedex
-	ifequal 2, .Badges
-	farwritetext OakPhoneHealYourMonText
-	end
-
-.Pokedex
+	ifequal 1, .Badges
+	ifequal 2, .HealPokemon
 	farwritetext OakPhoneEvaluatePokedexText
 	end
 
 .Badges
 	farwritetext OakPhoneHowManyBadgesText
+	end
+
+.HealPokemon
+	farwritetext OakPhoneHealYourMonText
+	end
+
+.MtSilver
+	checkevent EVENT_OAK_IN_MT_SILVER
+	iffalse .OakBusy
+	random 3
+	ifequal 0, .HealPokemon
+	; else, fallthrough
+	farwritetext OakPhoneEvaluatePokedexText
 	end
 
 .RemindRainbowWing
