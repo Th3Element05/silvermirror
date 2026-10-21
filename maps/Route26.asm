@@ -340,9 +340,9 @@ TrainerCooltrainerFBeth:
 
 CooltrainerFBethSeenText:
 	ntag "TRAINER:"
-	text "Some of the train-"
-	line "ers on their way"
-	cont "to #MON LEAGUE"
+	text "The trainers on"
+	line "their way to the"
+	cont "#MON LEAGUE"
 	roll "are so serious."
 
 	para "They try so hard"
