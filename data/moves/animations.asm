@@ -3518,7 +3518,7 @@ BattleAnim_WaterPulse:
 	anim_wait 24
 	anim_call BattleAnim_ShowMon_1
 	anim_bgeffect BATTLE_BG_EFFECT_END_WATER, $0, $0, $0
-	anim_wait 16
+	anim_wait 24
 	anim_ret
 
 ;BattleAnim_Bubble:
@@ -5859,19 +5859,14 @@ BattleAnimSub_Pulse:
 	anim_1gfx BATTLE_ANIM_GFX_PSYCHIC
 .loop
 	anim_obj BATTLE_ANIM_OBJ_WAVE, 64, 80, $2
-;	anim_bgeffect BATTLE_BG_EFFECT_WATER, $1c, $0, $0
 	anim_wait 10 ;8
 	anim_obj BATTLE_ANIM_OBJ_WAVE, 64, 88, $3
-;	anim_bgeffect BATTLE_BG_EFFECT_WATER, $8, $0, $0
 	anim_wait 10 ;8
 	anim_obj BATTLE_ANIM_OBJ_WAVE, 64, 96, $4
-;	anim_bgeffect BATTLE_BG_EFFECT_WATER, $30, $0, $0
 	anim_wait 10 ;8
 	anim_loop 3, .loop
 	anim_call BattleAnim_ShowMon_1
-	anim_wait 16 ;24
-;	anim_bgeffect BATTLE_BG_EFFECT_END_WATER, $0, $0, $0
-;	anim_wait 16
+	anim_wait 32
 	anim_ret
 
 ;BattleAnim_BeatUp:
