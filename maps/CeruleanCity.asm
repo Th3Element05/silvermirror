@@ -33,19 +33,16 @@ CeruleanCityBlockersCallback:
 	moveobject CERULEANCITY_SLOWBRO_TRAINER, 19, 28
 ; check helped BILL
 	checkevent EVENT_HELPED_BILL
-	iftrue .Done
-	moveobject CERULEANCITY_OFFICER, 27, 12
-.Done
+	iffalse .BlockHouse
+	checkevent EVENT_BEAT_MISTY
+	iffalse .BlockHouse
+	; else
 	endcallback
-	; fallthrough
-;CeruleanCaveBlockCallback:
-;	readvar VAR_BADGES
-;	ifequal NUM_KANTO_BADGES, .Disappear ;NUM_BADGES, .Disappear
-;	appear CERULEANCITY_CAVE_COOLTRAINER_M
-;	endcallback
-;.Disappear:
-;	disappear CERULEANCITY_CAVE_COOLTRAINER_M
-;	endcallback
+
+.BlockHouse
+	moveobject CERULEANCITY_OFFICER, 27, 12
+	endcallback
+
 
 ; scripts
 CeruleanCityRivalEncounterR:
@@ -554,7 +551,7 @@ CeruleanCity_MapEvents:
 	def_object_events
 	object_event 18,  2, SPRITE_VARIABLE_2, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CERULEAN_CITY_RIVAL
 ;	object_event 20,  2, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CERULEAN_CITY_RIVAL
-	object_event 28, 12, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeruleanCityOfficerScript, -1
+	object_event 28, 12, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeruleanCityOfficerScript, EVENT_BEAT_GIOVANNI
 	object_event 30,  8, SPRITE_ROCKET, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerRocketGruntM4, EVENT_CERULEAN_CITY_ROCKET
 	object_event 21, 26, SPRITE_SLOWBRO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, CeruleanCitySlowbroScript, -1
 	object_event 22, 26, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCitySlowbroTrainerScript, -1
