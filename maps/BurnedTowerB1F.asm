@@ -82,21 +82,19 @@ ReleaseTheBeasts:
 	disappear BURNEDTOWERB1F_SUICUNE1
 	waitsfx
 	special RestartMapMusic
-	setscene SCENE_BURNEDTOWERB1F_NOOP
-	setevent EVENT_RELEASED_THE_BEASTS
 	special InitRoamMons
 	appear BURNEDTOWERB1F_GRAMPS
 	refreshscreen
 	changeblock 6, 14, $1b ; ladder
 	reloadmappart
 	closetext
+	setevent EVENT_RELEASED_THE_BEASTS
 	setevent EVENT_HOLE_IN_BURNED_TOWER
 	setevent EVENT_FOUND_GIRL_IN_BURNED_TOWER
 	setevent EVENT_BURNED_TOWER_LOST_GIRL
 	clearevent EVENT_ECRUTEAK_CITY_GIRL
-	setscene SCENE_BURNEDTOWER1F_NOOP
 	setscene SCENE_BURNEDTOWERB1F_NOOP
-	setscene SCENE_ECRUTEAKCITY_NOOP
+	setmapscene BURNED_TOWER_1F, SCENE_BURNEDTOWER1F_NOOP
 	end
 
 BurnedTowerRaikouMovement:
@@ -154,11 +152,11 @@ BurnedTowerB1FGramps:
 	writetext BurnedTowerB1FGrampsText
 	waitbutton
 	closetext
-	wildon
 	applymovement BURNEDTOWERB1F_GRAMPS, BurnedTowerB1FGrampsMovement
 	disappear BURNEDTOWERB1F_GRAMPS
 	playsound SFX_EXIT_BUILDING
 	waitsfx
+	wildon
 	end
 
 BurnedTowerB1FGrampsText:

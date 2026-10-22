@@ -54,10 +54,6 @@ BurnedTowerLostGirlScript:
 	waitbutton
 	closetext
 	wildoff
-;	setevent EVENT_HOLE_IN_BURNED_TOWER
-;	setevent EVENT_FOUND_GIRL_IN_BURNED_TOWER
-;	setscene SCENE_BURNEDTOWER1F_NOOP
-;	setscene SCENE_ECRUTEAKCITY_NOOP
 	pause 15
 	warpcheck
 	end
