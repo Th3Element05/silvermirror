@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db NORMAL, NORMAL ; type
-	db 25 ; catch rate
+	db 30 ;25 ; catch rate
 	db 129 ; base exp
 	db STARDUST, MOON_STONE ; items
 	db GENDER_F75 ; gender ratio
