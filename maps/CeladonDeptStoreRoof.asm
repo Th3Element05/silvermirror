@@ -387,6 +387,7 @@ CeladonDeptStoreRoofDirectoryText:
 CeladonDeptStoreRoofVendingMachine:
 	opentext
 	writetext CeladonVendingText
+	promptbutton
 .Start:
 	special PlaceMoneyTopRight
 	loadmenu .VendingMenuHeader

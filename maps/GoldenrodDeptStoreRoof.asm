@@ -230,6 +230,7 @@ Binoculars3Text:
 GoldenrodDeptStoreRoofVendingMachine:
 	opentext
 	writetext GoldenrodVendingText
+	promptbutton
 .Start:
 	special PlaceMoneyTopRight
 	loadmenu .VendingMenuHeader

@@ -14,6 +14,7 @@ GoldenrodDeptStore6F_MapScripts:
 GoldenrodVendingMachine:
 	opentext
 	writetext GoldenrodVendingText
+	promptbutton
 .Start:
 	special PlaceMoneyTopRight
 	loadmenu .MenuHeader
