@@ -276,8 +276,10 @@ SilphCo7FLaprasGiftScript:
 SilphCo7FGiveLaprasText:
 	ntag "MAN:"
 	text "Oh! Hi! You're"
-	line "not a ROCKET! You"
-	cont "came to save us?"
+	line "not a ROCKET!"
+
+	para "You came to save"
+	line "us?"
 
 	para "Why, thank you!"
 
@@ -288,7 +290,7 @@ SilphCo7FGiveLaprasText:
 
 SilphCo7F_NoRoomInPartyText:
 	ntag "MAN:"
-	text "But you'll need to"
+	text "But you need to"
 	line "make room in your"
 	cont "party, first!"
 	done

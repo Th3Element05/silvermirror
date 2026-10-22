@@ -230,7 +230,7 @@ CeruleanCityRocketAfterBattleText:
 
 CeruleanCityRecoveredDigText:
 	text "<PLAYER> recovered"
-	line "TM28!" ; "TM28!@"
+	line "TM28 DIG!" ; "TM28!@"
 	done
 
 CeruleanCityRocketLeavesText:
