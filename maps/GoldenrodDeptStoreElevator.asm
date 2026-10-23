@@ -2,6 +2,11 @@ GoldenrodDeptStoreElevator_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+	callback MAPCALLBACK_NEWMAP, GoldenRodDeptStoreElevatorSceneCallback
+
+GoldenRodDeptStoreElevatorSceneCallback:
+	setmapscene GOLDENROD_DEPT_STORE_B1F, SCENE_GOLDENRODDEPTSTOREB1F_BOXES
+	endcallback
 
 GoldenrodDeptStoreElevatorScript:
 	opentext
@@ -12,31 +17,6 @@ GoldenrodDeptStoreElevatorScript:
 	playsound SFX_ELEVATOR
 	earthquake 60
 	waitsfx
-;	checkevent EVENT_GOLDENROD_UNDERGROUND_WAREHOUSE_BLOCKED_OFF
-;	iftrue .Done
-;	checkevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_1
-;	iftrue .BoxLayout1
-;	checkevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_2
-;	iftrue .BoxLayout2
-;	checkevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_3
-;;	iftrue .BoxLayout3
-;	; fallthrough
-;.BoxLayout3:
-;	setevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_1
-;	clearevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_2
-;	clearevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_3
-;	end
-;
-;.BoxLayout2:
-;	clearevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_1
-;	clearevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_2
-;	setevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_3
-;	end
-;
-;.BoxLayout1:
-;	clearevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_1
-;	setevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_2
-;	clearevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_3
 .Done:
 	end
 

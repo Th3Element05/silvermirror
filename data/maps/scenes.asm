@@ -66,6 +66,7 @@ MapScenes::
 	scene_var ROUTE_36_NATIONAL_PARK_GATE,                 wRoute36NationalParkGateSceneID
 	scene_var GOLDENROD_GYM,                               wGoldenrodGymSceneID
 	scene_var GOLDENROD_MAGNET_TRAIN_STATION,              wGoldenrodMagnetTrainStationSceneID
+	scene_var GOLDENROD_DEPT_STORE_B1F,                    wGoldenrodDeptStoreB1FSceneID
 ;	scene_var GOLDENROD_UNDERGROUND_SWITCH_ROOM_ENTRANCES, wGoldenrodUndergroundSwitchRoomEntrancesSceneID
 	scene_var AZALEA_TOWN,                                 wAzaleaTownSceneID
 	scene_var RUINS_OF_ALPH_OUTSIDE,                       wRuinsOfAlphOutsideSceneID

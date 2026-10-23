@@ -3182,6 +3182,7 @@ wRoute35NationalParkGateSceneID::                 db
 wRoute36NationalParkGateSceneID::                 db
 wGoldenrodGymSceneID::                            db
 wGoldenrodMagnetTrainStationSceneID::             db
+wGoldenrodDeptStoreB1FSceneID::                   db
 ;wGoldenrodUndergroundSwitchRoomEntrancesSceneID:: db
 wAzaleaTownSceneID::                              db
 wRuinsOfAlphOutsideSceneID::                      db
@@ -3215,7 +3216,7 @@ wBattleTowerHallwaySceneID::                      db
 ;wMobileTradeRoomSceneID::                         db ; unused in silvermirror
 ;wMobileBattleRoomSceneID::                        db ; unused in silvermirror
 
-	ds 46 ;total ds 128 - 82 used = ds 46
+	ds 45 ;total ds 128 - 83 used = ds 45
 
 ;; fight counts ; unused
 ;wJackFightCount::    db

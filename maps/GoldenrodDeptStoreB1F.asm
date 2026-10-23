@@ -2,11 +2,19 @@
 
 GoldenrodDeptStoreB1F_MapScripts:
 	def_scene_scripts
+	scene_script GoldenRodDeptStoreB1FBoxesScene, SCENE_GOLDENRODDEPTSTOREB1F_BOXES
+	scene_script GoldenRodDeptStoreB1FNoopScene, SCENE_GOLDENRODDEPTSTOREB1F_NOOP
 
 	def_callbacks
-;	callback MAPCALLBACK_TILES, GoldenRodDeptStoreB1FClearBoxesCallback
+;	callback MAPCALLBACK_TILES, GoldenRodDeptStoreB1FBoxesCallback
+;	; this messes up the warp(type?) for some reason
 
-GoldenRodDeptStoreB1FClearBoxesCallback:
+GoldenRodDeptStoreB1FBoxesScene:
+	sdefer GoldenRodDeptStoreB1FBoxesCallback
+GoldenRodDeptStoreB1FNoopScene:
+	end
+
+GoldenRodDeptStoreB1FBoxesCallback:
 	checkevent EVENT_BEAT_WHITNEY
 	iffalse .SecondSet
 	changeblock 4, 10, $09 ; floor
@@ -22,7 +30,10 @@ GoldenRodDeptStoreB1FClearBoxesCallback:
 	changeblock 16, 2, $09 ; floor
 	changeblock 14, 2, $1a ; boxes
 .End
+	refreshscreen
+	setscene SCENE_GOLDENRODDEPTSTOREB1F_NOOP
 	end
+
 
 GoldenrodDeptStoreB1FBlackBelt1Script:
 	jumptextfaceplayer GoldenrodDeptStoreB1FBlackBelt1Text
