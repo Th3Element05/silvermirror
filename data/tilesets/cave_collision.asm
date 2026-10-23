@@ -109,3 +109,5 @@
 	tilecoll WATER, WATER, WATER, WATER ; 6c
 	tilecoll WALL, UP_WALL, WALL, FLOOR ; 6d
 	tilecoll UP_WALL, WALL, FLOOR, WALL ; 6e
+	tilecoll WATER, WATER, WATER, WATER ; 6f
+	tilecoll WATER, WATER, WATER, WATER ; 70
