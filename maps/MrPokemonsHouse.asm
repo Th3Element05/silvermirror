@@ -116,11 +116,9 @@ MrPokemonsHouse_OakExplainsVisitText:
 	roll "for my RADIO show."
 
 	para "Speaking of which,"
-	line "I must be going."
-
-	para "I need to get to"
-	line "the RADIO TOWER"
-	cont "in GOLDENROD."
+	line "I need to get to"
+	cont "the RADIO TOWER"
+	roll "in GOLDENROD."
 	done
 
 MrPokemonsHouse_OakWalksToMrPokemonMovement:
