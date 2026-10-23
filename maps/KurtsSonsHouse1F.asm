@@ -55,7 +55,7 @@ KurtsSonsHouse1FKurtsSon:
 	iftrue .GiveHeavyBall
 	checkevent EVENT_GAVE_KURT_SON_PNK_APRICORN
 	iftrue .GiveLoveBall
-	checkevent EVENT_CAN_GIVE_GS_BALL_TO_KURT
+	checkitem GS_BALL
 	iffalse .CheckApricorns
 ;.CanGiveGSBallToKurt
 	checkevent EVENT_KURTS_SON_SAW_GS_BALL

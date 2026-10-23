@@ -139,16 +139,21 @@ Kurt1:
 	writetext KurtsHouseKurtIllStartRightAwayText
 	waitbutton
 	closetext
-	special FadeBlackQuickly
-	special ReloadSpritesNoPalettes
+;	special FadeBlackQuickly
+;	special ReloadSpritesNoPalettes
+	readvar VAR_FACING
+	ifequal UP .KurtGoesRight
+	applymovement KURTSHOUSE_KURT1, KurtsHouseKurtGoToWorkbenchDownMovement
+.KurtGoesRight
+	applymovement KURTSHOUSE_KURT1, KurtsHouseKurtGoToWorkbenchRightMovement
 	disappear KURTSHOUSE_KURT1
 	appear KURTSHOUSE_KURT2
-;	disappear KURTSHOUSE_TWIN1
-;	appear KURTSHOUSE_TWIN2
-	pause 15
-	special FadeInQuickly
-;	opentext
-;	sjump Kurt1
+;;	disappear KURTSHOUSE_TWIN1
+;;	appear KURTSHOUSE_TWIN2
+;	pause 15
+;	special FadeInQuickly
+;;	opentext
+;;	sjump Kurt1
 	end
 
 .Cancel:
@@ -237,18 +242,25 @@ Kurt1:
 	checkitem GS_BALL
 	iffalse .NoGSBall
 	writetext KurtsHouseKurtWhatIsThatText
+	promptbutton
+	writetext KurtsHouseGaveGSBallToKurtText
 	waitbutton
 	closetext
 	setevent EVENT_GAVE_GS_BALL_TO_KURT
 	takeitem GS_BALL
 	setflag ENGINE_KURT_MAKING_BALLS
-	special FadeBlackQuickly
-	special ReloadSpritesNoPalettes
+;	special FadeBlackQuickly
+;	special ReloadSpritesNoPalettes
+	readvar VAR_FACING
+	ifequal UP .KurtGoesRight
+	applymovement KURTSHOUSE_KURT1, KurtsHouseKurtGoToWorkbenchDownMovement
+.KurtGoesRight
+	applymovement KURTSHOUSE_KURT1, KurtsHouseKurtGoToWorkbenchRightMovement
 	disappear KURTSHOUSE_KURT1
 	appear KURTSHOUSE_KURT2
-;	appear KURTSHOUSE_GSBALL
-	pause 15
-	special FadeInQuickly
+;;	appear KURTSHOUSE_GSBALL
+;	pause 15
+;	special FadeInQuickly
 	end
 
 .GaveGSBallToKurt:
@@ -369,8 +381,11 @@ KurtsHouseKurtWhatIsThatText:
 	ntag "KURT:"
 	text "Wh-what is that?"
 
+;	para "I've never seen"
+;	line "one before."
 	para "I've never seen"
-	line "one before."
+	line "anything quite"
+	cont "like it."
 
 	para "It looks a lot"
 	line "like a #BALL,"
@@ -379,6 +394,11 @@ KurtsHouseKurtWhatIsThatText:
 
 	para "Let me check it"
 	line "for you."
+	done
+
+KurtsHouseGaveGSBallToKurtText:
+	text "<PLAYER> gave the"
+	line "GS BALL to KURT."
 	done
 
 KurtsHouseKurtImCheckingItNowText:
@@ -464,16 +484,25 @@ KurtsHouseKurtThisBallStartedToShakeText:
 ;	line "now, but take it."
 ;	done
 
-KurtsHouseKurtExitHouseMovement:
+KurtsHouseKurtGoToWorkbenchDownMovement:
 	big_step DOWN
 	big_step DOWN
 	big_step DOWN
-	big_step DOWN
-	big_step DOWN
+	big_step RIGHT
+	step_end
+
+KurtsHouseKurtGoToWorkbenchRightMovement:
+	big_step RIGHT
+	big_step RIGHT
+	big_step RIGHT
+	big_step RIGHT
+	big_step RIGHT
+	big_step RIGHT
 	step_end
 
 KurtsHouseKurtGoAroundPlayerThenExitHouseMovement:
 	big_step RIGHT
+KurtsHouseKurtExitHouseMovement:
 	big_step DOWN
 	big_step DOWN
 	big_step DOWN
