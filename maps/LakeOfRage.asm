@@ -113,12 +113,12 @@ GoldMagikarp:
 	disappear LAKEOFRAGE_MAGIKARP
 .NotBeaten:                 ;why is this here?
 	reloadmapafterbattle
-;	special CheckBattleCaughtResult ; check catch result to respawn if you kill it?
-;	iffalse .NoCatch
-;	setflag ENGINE_PLAYER_CAUGHT_MAGIKARP ;ENGINE_PLAYER_CAUGHT_ZAPDOS
-;.NoCatch
-;	checkevent EVENT_DEFEATED_GOLD_MAGIKARP
-;	iftrue .SecondChance
+	special CheckBattleCaughtResult ; check catch result to respawn if you kill it?
+	iffalse .NoCatch
+	setflag ENGINE_PLAYER_CAUGHT_MAGIKARP
+.NoCatch
+	checkevent EVENT_DEFEATED_GOLD_MAGIKARP
+	iftrue .SecondChance
 	opentext
 	giveitem GOLD_SCALE
 	waitsfx
@@ -127,9 +127,8 @@ GoldMagikarp:
 	waitsfx
 	itemnotify
 	closetext
-;	appear LAKEOFRAGE_CLAIR
 	setevent EVENT_DEFEATED_GOLD_MAGIKARP
-;.SecondChance
+.SecondChance
 	end
 
 LakeOfRageMagikarpCryText:

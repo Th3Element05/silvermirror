@@ -475,11 +475,11 @@ RespawnOneOffs:
 	eventflagreset EVENT_ROUTE_36_SUDOWOODO
 ;.CaughtSudowoodo
 
-;	ld de, ENGINE_PLAYER_CAUGHT_MAGIKARP
-;	farcall EngineFlagAction
-;	jr nz, .CaughtMagikarp
-;	eventflagreset EVENT_LAKE_OF_RAGE_GOLD_MAGIKARP
-;.CaughtMagikarp
+	ld de, ENGINE_PLAYER_CAUGHT_MAGIKARP
+	farcall EngineFlagAction
+	jr nz, .CaughtMagikarp
+	eventflagreset EVENT_LAKE_OF_RAGE_GOLD_MAGIKARP
+.CaughtMagikarp
 
 	ld de, ENGINE_PLAYER_WOKE_BOTH_SNORLAX
 	farcall EngineFlagAction
