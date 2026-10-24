@@ -17,8 +17,11 @@ TrainerCooltrainerMJake:
 
 CooltrainerMJakeSeenText:
 	ntag "TRAINER:"
-	text "You! How dare you"
-	line "enter uninvited!"
+;	text "You! How dare you"
+;	line "enter uninvited!"
+;	done
+	text "Hey! Who let you"
+	line "in here!"
 	done
 
 CooltrainerMJakeBeatenText:
@@ -49,8 +52,11 @@ TrainerCooltrainerFReena:
 
 CooltrainerFReenaSeenText:
 	ntag "TRAINER:"
-	text "You shouldn't be"
-	line "in here!"
+;	text "You shouldn't be"
+;	line "in here!"
+;	done
+	text "Are you allowed"
+	line "to be in here?"
 	done
 
 CooltrainerFReenaBeatenText:
@@ -112,10 +118,12 @@ TwinsAmyandMay1AfterBattleText:
 
 TwinsAmyandMay2AfterBattleText:
 	ntag "TWIN:"
-	text "We'll tell on you."
-
-	para "MASTER will be"
-	line "angry with you."
+;	text "We'll tell on you."
+;
+;	para "MASTER will be"
+;	line "angry with you."
+;	done
+	text "Who are you?"
 	done
 
 DragonShrineSignpost:
