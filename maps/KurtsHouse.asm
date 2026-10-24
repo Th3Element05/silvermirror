@@ -142,9 +142,9 @@ Kurt1:
 ;	special FadeBlackQuickly
 ;	special ReloadSpritesNoPalettes
 	readvar VAR_FACING
-	ifequal UP .KurtGoesRight
+	ifequal UP, .KurtGoesRight1
 	applymovement KURTSHOUSE_KURT1, KurtsHouseKurtGoToWorkbenchDownMovement
-.KurtGoesRight
+.KurtGoesRight1
 	applymovement KURTSHOUSE_KURT1, KurtsHouseKurtGoToWorkbenchRightMovement
 	disappear KURTSHOUSE_KURT1
 	appear KURTSHOUSE_KURT2
@@ -252,9 +252,9 @@ Kurt1:
 ;	special FadeBlackQuickly
 ;	special ReloadSpritesNoPalettes
 	readvar VAR_FACING
-	ifequal UP .KurtGoesRight
+	ifequal UP, .KurtGoesRight2
 	applymovement KURTSHOUSE_KURT1, KurtsHouseKurtGoToWorkbenchDownMovement
-.KurtGoesRight
+.KurtGoesRight2
 	applymovement KURTSHOUSE_KURT1, KurtsHouseKurtGoToWorkbenchRightMovement
 	disappear KURTSHOUSE_KURT1
 	appear KURTSHOUSE_KURT2

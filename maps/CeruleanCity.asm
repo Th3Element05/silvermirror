@@ -27,7 +27,7 @@ CeruleanCityFlypointCallback:
 
 CeruleanCityBlockersCallback:
 ; check got CUT
-	checkevent EVENT_GOT_HM01_CUT ;EVENT_BEAT_GRUNTM_4
+	checkevent EVENT_GOT_HM01_CUT
 	iftrue .Done
 	moveobject CERULEANCITY_SLOWBRO, 18, 28
 	moveobject CERULEANCITY_SLOWBRO_TRAINER, 19, 28
@@ -37,6 +37,7 @@ CeruleanCityBlockersCallback:
 	checkevent EVENT_BEAT_MISTY
 	iffalse .BlockHouse
 	; else
+.Done
 	endcallback
 
 .BlockHouse
