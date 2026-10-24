@@ -172,7 +172,7 @@ PrintTempMonDVs:
 
 	ld de, wPokedexStatus
 	lb bc,  1, 2 ; bytes, digits
-	hlcoord 17, 4
+	hlcoord 17, 3
 	call PrintNum
 
 ; DEF DV
@@ -213,7 +213,7 @@ PrintTempMonDVs:
 
 	ld de, wPokedexStatus
 	lb bc,  1, 2
-	hlcoord 17, 6
+	hlcoord 17, 5
 	call PrintNum
 
 ; SPC DV
@@ -254,7 +254,7 @@ PrintTempMonDVs:
 
 	ld de, wPokedexStatus
 	lb bc, 1, 2 ; bytes, digits
-	hlcoord 17, 8
+	hlcoord 17, 7
 	call PrintNum
 
 ; SPE DV
@@ -296,7 +296,7 @@ PrintTempMonDVs:
 
 	ld de, wPokedexStatus
 	lb bc,  1, 2 ; bytes, digits
-	hlcoord 17, 10
+	hlcoord 17, 9
 	call PrintNum
 
 ; HP DV is determined by the last bit of each of these four DVs
@@ -334,7 +334,7 @@ PrintTempMonDVs:
 
 	ld de, wPokedexStatus
 	lb bc,  1, 2 ; bytes, digits
-	hlcoord 17, 2
+	hlcoord 17, 1
 	jp PrintNum
 
 .DVstrings:
