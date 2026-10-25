@@ -7,12 +7,24 @@ OlivineTimsHouse_MapScripts:
 	def_callbacks
 
 TradeNPCMindy:
-	faceplayer
-	opentext
-	trade NPC_TRADE_MINDY
-	waitbutton
-	closetext
-	end
+;	faceplayer
+;	opentext
+;	trade NPC_TRADE_MINDY
+;	waitbutton
+;	closetext
+;	end
+	jumptextfaceplayer OlivineTimsHouseTradeText
+OlivineTimsHouseTradeText:
+	ntag "GIRL:"
+	text "A #MON you get"
+	line "in a trade grows"
+	cont "quickly."
+
+	para "But if you don't"
+	line "have enough GYM"
+	cont "BADGEs, they may"
+	roll "disobey you."
+	done
 
 TimsHouseBookshelf:
 	jumpstd MagazineBookshelfScript

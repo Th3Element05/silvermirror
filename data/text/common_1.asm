@@ -1538,7 +1538,7 @@ _NPCTradeFanfareText::
 
 ;	text_end ; unreferenced
 
-_NPCTradeIntroText1::
+_NPCTradeIntroText1:: ;TRADE_DIALOGSET_COLLECTOR
 	text "I collect #MON."
 	line "Do you have"
 	cont "@"
@@ -1551,14 +1551,13 @@ _NPCTradeIntroText1::
 	text "?"
 	done
 
-_NPCTradeIntroText2::
+_NPCTradeIntroText2:: ;TRADE_DIALOGSET_HAPPY
 	text "Hi, I'm looking"
 	line "for @"
 	text_ram wStringBuffer1
-	text ", would"
-
-	cont "you trade it for"  ;para
-	roll "my @"              ;line
+	text ","
+	cont "would you trade"  ;para
+	roll "for my @"         ;line
 	text_ram wStringBuffer2
 	text "?"
 	done
@@ -1569,7 +1568,7 @@ _NPCTradeIntroText3:: ;TRADE_DIALOGSET_GIRL
 	line "but I don't have"
 	cont "one."
 
-	para "Do you have a"
+	para "Do you have"
 	line "@"                 ;cont
 	text_ram wStringBuffer1
 	text "?"
@@ -1580,8 +1579,8 @@ _NPCTradeIntroText3:: ;TRADE_DIALOGSET_GIRL
 	text "?"
 	done
 
-_NPCTradeIntroText4::
-	text "Do you have a"
+_NPCTradeIntroText4:: ;TRADE_DIALOGSET_GENERIC
+	text "Do you have"
 	line "@"
 	text_ram wStringBuffer1
 	text "?"
@@ -1593,7 +1592,7 @@ _NPCTradeIntroText4::
 	text "?"
 	done
 
-_NPCTradeIntroText5::
+_NPCTradeIntroText5:: ;TRADE_DIALOGSET_SAFARI
 	text "I just caught"
 	line "@"
 	text_ram wStringBuffer2
@@ -1710,7 +1709,7 @@ _NPCTradeAfterText1::
 	done
 
 _NPCTradeAfterText2::
-	text "Hi! The @"
+	text "The @"
 	text_ram wMonOrItemNameBuffer
 	text_start
 	line "you traded me is"

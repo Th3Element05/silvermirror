@@ -36,16 +36,16 @@ NPCTrades:
 ; NPC_TRADE_NORMA ;beauty, cinnabar lab
 	npctrade TRADE_DIALOGSET_GIRL,      VENONAT,    TANGELA,    "CRINKLES@@@", $8f, $ad, CHESTO_BERRY, 49114, "NORMA@@@@@@", TRADE_GENDER_EITHER
 ; johto
-; NPC_TRADE_MINDY ;lass, olivine tims house 
-	npctrade TRADE_DIALOGSET_GIRL,      PRIMEAPE,   HAUNTER,    "GASPAR@@@@@", $8e, $ca, EVERSTONE,    21435, "MINDY@@@@@@", TRADE_GENDER_EITHER
 ; NPC_TRADE_JACKSON ;gentleman, dance theater
 	npctrade TRADE_DIALOGSET_COLLECTOR, RHYDON,     KANGASKHAN, "JACKLYN@@@@", $bb, $e9, SITRUS_BERRY, 15196, "JACKSON@@@@", TRADE_GENDER_EITHER
-; NPC_TRADE_CHRIS ;cooltrainer, goldenrod dept store 5f
+; NPC_TRADE_CHRIS ;cooltrainer, violet kyles house
 	npctrade TRADE_DIALOGSET_GENERIC,   XATU,       HERACROSS,  "HERCULES@@@", $b9, $ea, LUM_BERRY,    48667, "CHRIS@@@@@@", TRADE_GENDER_EITHER
-; NPC_TRADE_KYLE ;youngster, violet kyles house
-	npctrade TRADE_DIALOGSET_COLLECTOR, ONIX,       SHUCKLE,    "SHUCKS@@@@@", $db, $e8, BERRY_JUICE,  58328, "KYLE@@@@@@@", TRADE_GENDER_EITHER
 ; NPC_TRADE_EMY ;twin, blackthorn emys house
 	npctrade TRADE_DIALOGSET_GIRL,      DODRIO,     PINECO,     "CONEHEAD@@@", $fd, $c8, LEPPA_BERRY,  51289, "EMY@@@@@@@@", TRADE_GENDER_EITHER
+;; NPC_TRADE_KYLE
+;	npctrade TRADE_DIALOGSET_COLLECTOR, ONIX,       SHUCKLE,    "SHUCKS@@@@@", $db, $e8, BERRY_JUICE,  58328, "KYLE@@@@@@@", TRADE_GENDER_EITHER
+;; NPC_TRADE_MINDY
+;	npctrade TRADE_DIALOGSET_GIRL,      PRIMEAPE,   HAUNTER,    "GASPAR@@@@@", $8e, $ca, EVERSTONE,    21435, "MINDY@@@@@@", TRADE_GENDER_EITHER
 	assert_table_length NUM_NPC_TRADES
 
 ; TRADE_DIALOGSET_COLLECTOR ; 4

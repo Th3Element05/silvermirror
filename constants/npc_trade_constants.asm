@@ -28,11 +28,11 @@ DEF NPCTRADE_STRUCT_LENGTH EQU _RS
 	const NPC_TRADE_CLIFTON ; 11
 	const NPC_TRADE_NORMA   ; 12
 ; johto
-	const NPC_TRADE_MINDY   ; 13
-	const NPC_TRADE_JACKSON ; 14
-	const NPC_TRADE_CHRIS   ; 15
-	const NPC_TRADE_KYLE    ; 16
-	const NPC_TRADE_EMY     ; 17
+	const NPC_TRADE_JACKSON ; 13
+	const NPC_TRADE_CHRIS   ; 14
+	const NPC_TRADE_EMY     ; 15
+;	const NPC_TRADE_KYLE    ; unusable
+;	const NPC_TRADE_MINDY   ; unusable
 DEF NUM_NPC_TRADES EQU const_value
 
 ; trade gender limits

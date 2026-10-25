@@ -51,12 +51,25 @@ GoldenrodDeptStore5FFreeTMText:
 	done
 
 TradeNPCChris:
-	faceplayer
-	opentext
-	trade NPC_TRADE_CHRIS
-	waitbutton
-	closetext
-	end
+;	faceplayer
+;	opentext
+;	trade NPC_TRADE_CHRIS
+;	waitbutton
+;	closetext
+;	end
+	jumptextfaceplayer GoldenrodDeptStore5FTradeText
+GoldenrodDeptStore5FTradeText:
+	ntag "TRAINER:"
+	text "A #MON you get"
+	line "in a trade grows"
+	cont "quickly."
+
+	para "But if you don't"
+	line "have enough GYM"
+	cont "BADGEs, they may"
+	roll "disobey you."
+	done
+
 
 GoldenrodDeptStore5FPokefanMScript:
 	jumptextfaceplayer GoldenrodDeptStore5FPokefanMText
