@@ -2717,8 +2717,8 @@ PokecenterLuckyNumberReturnToPlayerMovement:
 	step_end
 
 BinocularsWideLensScript:
-	random 3
-	ifnotequal 0, .End
+;	random 2
+;	ifnotequal 0, .End
 	giveitem WIDE_LENS
 	iffalse .End
 	showemote EMOTE_SHOCK, PLAYER, 20
@@ -2727,7 +2727,6 @@ BinocularsWideLensScript:
 	playsound SFX_ITEM
 	waitsfx
 	itemnotify
-;	waitbutton
 	setevent EVENT_GOT_WIDE_LENS
 	closetext
 .End
