@@ -6,13 +6,13 @@
 	frame 7, 02
 	frame 8, 03
 	dorepeat 5
-	setrepeat 2
+;	setrepeat 2
 	frame 2, 05
 	frame 3, 05
 	frame 4, 05
 	frame 5, 05
 	frame 6, 05
-	dorepeat 9
+;	dorepeat 9
 	endanim
 
 ;	setrepeat 7
