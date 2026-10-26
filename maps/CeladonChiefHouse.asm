@@ -13,7 +13,7 @@ CeladonChiefHouseTilesCallback:
 	changeblock 6, 6, $07 ; right tree
 	endcallback
 
-CeladonCheifHouseChiefScript:
+CeladonChiefHouseChiefScript:
 	jumptextfaceplayer CeladonChiefHouseChiefText
 CeladonChiefHouseChiefText:
 	ntag "CHIEF:"
@@ -22,10 +22,16 @@ CeladonChiefHouseChiefText:
 	cont "dough, big time!"
 	done
 
-CeladonCheifHouseRocketScript:
+CeladonChiefHouseRocketScript:
 	turnobject LAST_TALKED, RIGHT
-	jumptext CeladonCheifHouseRocketText
-CeladonCheifHouseRocketText:
+	checkevent EVENT_BEAT_GIOVANNI
+	iftrue .ExRocket
+	jumptext CeladonChiefHouseRocketText1
+
+.ExRocket
+	jumptext CeladonChiefHouseExRocketText1
+
+CeladonChiefHouseRocketText1:
 	ntag "ROCKET:"
 	text "CHIEF!"
 
@@ -34,9 +40,18 @@ CeladonCheifHouseRocketText:
 	cont "slot prizes!"
 	done
 
-CeladonCheifHouseSailorScript:
-	jumptextfaceplayer CeladonCheifHouseSailorText
-CeladonCheifHouseSailorText:
+CeladonChiefHouseExRocketText1:
+	ntag "EX-ROCKET:"
+	text "CHIEF!"
+
+	para "We just shipped"
+	line "2000 #MON as"
+	cont "slot prizes!"
+	done
+
+CeladonChiefHouseSailorScript:
+	jumptextfaceplayer CeladonChiefHouseSailorText
+CeladonChiefHouseSailorText:
 	ntag "ROCKET:"
 	text "Don't touch the"
 	line "poster at the"
@@ -58,6 +73,6 @@ CeladonChiefHouse_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  4,  2, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CeladonCheifHouseChiefScript, -1
-	object_event  2,  2, SPRITE_ROCKET, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonCheifHouseRocketScript, -1
-	object_event  5,  6, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonCheifHouseSailorScript, -1
+	object_event  4,  2, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CeladonChiefHouseChiefScript, -1
+	object_event  2,  2, SPRITE_ROCKET, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonChiefHouseRocketScript, -1
+	object_event  5,  6, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonChiefHouseSailorScript, EVENT_BEAT_GIOVANNI_HIDEOUT
