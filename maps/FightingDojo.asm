@@ -236,9 +236,9 @@ FightingDojoKarateMasterScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_BLACKBELT_MASTER_REMATCH
+	opentext
 .OfferSecondPokemon
 	setscene SCENE_FIGHTINGDOJO_NOOP
-	opentext
 	writetext KarateMasterOffersSecondPokemonText
 	waitbutton
 	closetext
@@ -313,7 +313,7 @@ KarateMasterGiveTMText:
 	para "Unfortunately,"
 	line "I can not award"
 	cont "a #MON LEAGUE"
-	roll "badge."
+	roll "BADGE."
 
 	para "However, I cannot"
 	line "make you leave"
@@ -451,10 +451,10 @@ FightingDojoHitmonlee:
 	writetext FightingDojoTakeHitmonleeText
 	yesorno
 	iffalse .NotHitmonlee
-	checkevent EVENT_GOT_POKEMON_FROM_DOJO
-	iftrue .AlreadyGotHitmonchan
 	readvar VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, NoRoomForFightingPokemon
+	checkevent EVENT_GOT_POKEMON_FROM_DOJO
+	iftrue .AlreadyGotHitmonchan
 	disappear FIGHTINGDOJO_HITMONLEE_POKE_BALL
 	setevent EVENT_GOT_POKEMON_FROM_DOJO
 	getmonname STRING_BUFFER_3, HITMONLEE
@@ -501,10 +501,10 @@ FightingDojoHitmonchan:
 	writetext FightingDojoTakeHitmonchanText
 	yesorno
 	iffalse .NotHitmonchan
-	checkevent EVENT_GOT_POKEMON_FROM_DOJO
-	iftrue .AlreadyGotHitmonlee
 	readvar VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, NoRoomForFightingPokemon
+	checkevent EVENT_GOT_POKEMON_FROM_DOJO
+	iftrue .AlreadyGotHitmonlee
 	disappear FIGHTINGDOJO_HITMONCHAN_POKE_BALL
 	setevent EVENT_GOT_POKEMON_FROM_DOJO
 	getmonname STRING_BUFFER_3, HITMONCHAN
