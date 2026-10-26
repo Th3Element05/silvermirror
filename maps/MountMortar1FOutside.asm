@@ -6,198 +6,73 @@ MountMortar1FOutside_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
-;	callback MAPCALLBACK_TILES, .FossilWallMountMortar1F
-
-;.FossilWallMountMortar1F:
-;	checkevent EVENT_MT_MORTAR_OBTAINED_FOSSIL
-;	iffalse .nope
-;	changeblock 20, 16, $0f
-;	changeblock 20, 22, $2c
-;.nope
-;	endcallback
-
-;MountMortar1FHelixFossil:
-;	opentext
-;	writetext MountMortar1FHelixFossilText
-;	yesorno
-;	iffalse .nope
-;	disappear MOUNTMORTAR1FOUTSIDE_HELIX_FOSSIL
-;	setevent EVENT_MT_MORTAR_OBTAINED_HELIX_FOSSIL
-;	setevent EVENT_DOME_FOSSIL_AT_MT_MOON
-;	setevent EVENT_MT_MORTAR_OBTAINED_FOSSIL
-;	verbosegiveitem HELIX_FOSSIL
-;	closetext
-;rept 6
-;	playsound SFX_SPARK
-;	earthquake 4
-;endr
-;	pause 10
-;	playsound SFX_BUBBLEBEAM
-;	changeblock 20, 22, $7c
-;	changeblock 20, 16, $0f
-;	reloadmappart
-;	changeblock 20, 22, $7d
-;	reloadmappart
-;	changeblock 20, 22, $7e
-;	reloadmappart
-;	changeblock 20, 22, $2c
-;	reloadmappart
-;	applymovement MOUNTMORTAR1FOUTSIDE_DOME_FOSSIL, MovementData_DomeFossil
-;	changeblock 22, 26, $03
-;	reloadmappart
-;	playsound SFX_TOXIC
-;	disappear MOUNTMORTAR1FOUTSIDE_DOME_FOSSIL
-;	pause 5
-;rept 2
-;	playsound SFX_TOXIC
-;	pause 5
-;endr
-;	pause 23
-;	changeblock 22, 26, $0f
-;	reloadmappart
-;	closetext
-;	opentext
-;	writetext MountMortar1FDomeFossilWashedAwayText
-;	waitbutton
-;	closetext
-;	end
-;
-;.nope
-;	closetext
-;	end
-
-;MountMortar1FDomeFossil:
-;	opentext
-;	writetext MountMortar1FDomeFossilText
-;	yesorno
-;	iffalse .nope
-;	disappear MOUNTMORTAR1FOUTSIDE_DOME_FOSSIL
-;	setevent EVENT_MT_MORTAR_OBTAINED_DOME_FOSSIL
-;	setevent EVENT_HELIX_FOSSIL_AT_MT_MOON
-;	setevent EVENT_MT_MORTAR_OBTAINED_FOSSIL
-;	verbosegiveitem DOME_FOSSIL
-;	closetext
-;rept 6
-;	playsound SFX_SPARK
-;	earthquake 4
-;endr
-;	pause 10
-;	playsound SFX_BUBBLEBEAM
-;	changeblock 20, 22, $7c
-;	changeblock 20, 16, $0f
-;	reloadmappart
-;	changeblock 20, 22, $7d
-;	reloadmappart
-;	changeblock 20, 22, $7e
-;	reloadmappart
-;	changeblock 20, 22, $2c
-;	reloadmappart
-;	applymovement MOUNTMORTAR1FOUTSIDE_HELIX_FOSSIL, MovementData_HelixFossil
-;	changeblock 22, 26, $03
-;	reloadmappart
-;	playsound SFX_TOXIC
-;	disappear MOUNTMORTAR1FOUTSIDE_HELIX_FOSSIL
-;	pause 5
-;rept 2
-;	playsound SFX_TOXIC
-;	pause 5
-;endr
-;	pause 23
-;	changeblock 22, 26, $0f
-;	reloadmappart
-;	closetext
-;	opentext
-;	writetext MountMortar1FHelixFossilWashedAwayText
-;	waitbutton
-;	closetext
-;	end
-;
-;.nope
-;	closetext
-;	end
 
 MountMortar1FHelixFossil:
+	getitemname STRING_BUFFER_4, HELIX_FOSSIL
 	opentext
-	writetext MountMortar1FHelixFossilText
+	writetext MountMortar1F_FoundFossilText
 	yesorno
-	iffalse MtMortar1FOutsideDontGetFossilScript
-	verbosegiveitem HELIX_FOSSIL
-	iffalse MtMortar1FOutsideDontGetFossilScript
-	closetext
+	iffalse .DontTakeHelixFossil
+	giveitem HELIX_FOSSIL
+	iffalse MountMortar1F_PackIsFull
 	disappear MOUNTMORTAR1FOUTSIDE_HELIX_FOSSIL
 	setevent EVENT_MT_MORTAR_OBTAINED_FOSSIL
-;	setevent EVENT_HELIX_FOSSIL_AT_MT_MORTAR
-
-MountMortar1FDomeFossil:
-	opentext
-	writetext MountMortar1FDomeFossilText
-	yesorno
-	iffalse MtMortar1FOutsideDontGetFossilScript
-	verbosegiveitem DOME_FOSSIL
-	iffalse MtMortar1FOutsideDontGetFossilScript
-	closetext
-	disappear MOUNTMORTAR1FOUTSIDE_DOME_FOSSIL
-	setevent EVENT_MT_MORTAR_OBTAINED_FOSSIL
-;	setevent EVENT_DOME_FOSSIL_AT_MT_MORTAR
-
-MtMortar1FOutsideDontGetFossilScript:
+	writetext MtMortar1F_GotFossilText
+	playsound SFX_ITEM
+	waitsfx
+	itemnotify
+.DontTakeHelixFossil
 	closetext
 	end
 
-MountMortar1FHelixFossilText:
+MountMortar1FDomeFossil:
+	getitemname STRING_BUFFER_4, DOME_FOSSIL
+	opentext
+	writetext MountMortar1F_FoundFossilText
+	yesorno
+	iffalse .DontTakeDomeFossil
+	giveitem DOME_FOSSIL
+	iffalse MountMortar1F_PackIsFull
+	disappear MOUNTMORTAR1FOUTSIDE_DOME_FOSSIL
+	setevent EVENT_MT_MORTAR_OBTAINED_FOSSIL
+	writetext MtMortar1F_GotFossilText
+	playsound SFX_ITEM
+	waitsfx
+	itemnotify
+.DontTakeDomeFossil
+	closetext
+	end
+
+MountMortar1F_PackIsFull:
+	writetext MountMortar1F_PackIsFullText
+	waitbutton
+	closetext
+	end
+
+MountMortar1F_FoundFossilText:
 	text "You found a"
-	line "HELIX FOSSIL…"
-;
-;	para "If you take this"
-;	line "fossil, the wall"
-;	
-;	para "will most likely"
-;	line "collapse."
-;	
+	line "@"
+	text_ram wStringBuffer4
+	text "…"
+
 	para "Will you take the"
-	line "HELIX FOSSIL?"
+	line "@"
+	text_ram wStringBuffer4
+	text "?"
 	done
 
-MountMortar1FDomeFossilText:
-	text "You found a"
-	line "DOME FOSSIL…"
-;
-;	para "If you take this"
-;	line "fossil, the wall"
-;	
-;	para "will most likely"
-;	line "collapse."
-;	
-	para "Will you take the"
-	line "DOME FOSSIL?"
+MtMortar1F_GotFossilText:
+	text "<PLAYER> took the"
+	line "@"
+	text_ram wStringBuffer4
+	text "."
 	done
 
-;MountMortar1FHelixFossilWashedAwayText:
-;	text "The HELIX FOSSIL"
-;	line "was washed away…"
-;	done
+MountMortar1F_PackIsFullText:
+	text "There's no room in"
+	line "your PACK…"
+	done
 
-;MountMortar1FDomeFossilWashedAwayText:
-;	text "The DOME FOSSIL"
-;	line "was washed away…"
-;	done
-
-;MovementData_DomeFossil:
-;	step DOWN
-;	slow_step DOWN
-;	slow_step DOWN
-;	slow_step RIGHT
-;	slow_step RIGHT
-;	step_end
-
-;MovementData_HelixFossil:
-;	step DOWN
-;	slow_step DOWN
-;	slow_step DOWN
-;	slow_step RIGHT
-;	slow_step RIGHT
-;	slow_step RIGHT
-;	step_end
 
 MountMortar1FOutsideEther:
 	itemball ETHER

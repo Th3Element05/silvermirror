@@ -83,9 +83,14 @@ PewterMuseum1F_Old_Amber_Scientist_Script:
 	opentext
 	writetext PewterMuseum1F_Scientist_TakeTheAmberText
 	waitbutton
+	giveitem OLD_AMBER
+	iffalse .NoRoomForAmber
 	disappear PEWTER_MUSEUM_1F_OLD_AMBER
 	setevent EVENT_GOT_OLD_AMBER
-	verbosegiveitem OLD_AMBER
+	writetext PewterMuseum1F_ReceivedOldAmberText
+	playsound SFX_ITEM
+	waitsfx
+	itemnotify
 	writetext PewterMuseum1F_CinnabarIslandText
 	waitbutton
 	closetext
@@ -94,8 +99,61 @@ PewterMuseum1F_Old_Amber_Scientist_Script:
 .GotAmber
 	jumptext PewterMuseum1F_CinnabarIslandText
 
+.NoRoomForAmber
+	writetext PewterMuseum1F_MakeRoomForAmberText
+	waitbutton
+	closetext
+	end
+
+PewterMuseum1F_Scientist_TakeTheAmberText:
+	ntag "SCIENTIST:"
+	text "Ssh! I think that"
+	line "this chunk of"
+	cont "AMBER contains"
+	roll "#MON DNA!"
+
+	para "But, my colleagues"
+	line "just ignore me!"
+
+	para "So, I would like"
+	line "to ask a favor."
+
+	para "Take this to a"
+	line "#MON LAB and"
+	cont "get it examined!"
+	done
+
+PewterMuseum1F_CinnabarIslandText:
+	ntag "SCIENTIST:"
+	text "I hear there is a"
+	line "good team of"
+	cont "researchers on"
+	roll "CINNABAR ISLAND!"
+	done
+
+PewterMuseum1F_ReceivedOldAmberText:
+	text "<PLAYER> received"
+	line "OLD AMBER."
+	done
+
+PewterMuseum1F_MakeRoomForAmberText:
+	ntag "SCIENTIST:"
+	text "Oh, but there's no"
+	line "room in your PACK!"
+
+	para "Please make room"
+	line "for this!"
+	done
+
 PewterMuseum1F_Amber_Script:
 	jumptext PewterMuseum1F_AmberText
+PewterMuseum1F_AmberText:
+	text "AMBER is fossil-"
+	line "ized tree sap."
+
+	para "The AMBER here is"
+	line "clear and gold!"
+	done
 
 PewterMuseum1F_Gramps_Script:
 	faceplayer
@@ -149,40 +207,6 @@ PewterMuseum1F_Scientist_PrideAndJoyText:
 	para "They are the pride"
 	line "and joy of the"
 	cont "MUSEUM!"
-	done
-
-PewterMuseum1F_Scientist_TakeTheAmberText:
-	ntag "SCIENTIST:"
-	text "Ssh! I think that"
-	line "this chunk of"
-	cont "AMBER contains"
-	roll "#MON DNA!"
-
-	para "But, my colleagues"
-	line "just ignore me!"
-
-	para "So, I would like"
-	line "to ask a favor."
-
-	para "Take this to a"
-	line "#MON LAB and"
-	cont "get it examined!"
-	done
-
-PewterMuseum1F_CinnabarIslandText:
-	ntag "SCIENTIST:"
-	text "I hear there is a"
-	line "good team of"
-	cont "researchers on"
-	roll "CINNABAR ISLAND!"
-	done
-
-PewterMuseum1F_AmberText:
-	text "AMBER is fossil-"
-	line "ized tree sap."
-	
-	para "The AMBER here is"
-	line "clear and gold!"
 	done
 
 PewterMuseum1F_Scientist_ReceptionText:

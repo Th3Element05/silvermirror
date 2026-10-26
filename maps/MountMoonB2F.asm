@@ -16,6 +16,7 @@ MountMoonB2FNoopScene:
 
 
 MtMoonB2FFossilNerdCoordScript:
+	turnobject MOUNTMOONB2F_SUPER_NERD, RIGHT
 	showemote EMOTE_SHOCK, MOUNTMOONB2F_SUPER_NERD, 20
 	turnobject PLAYER, LEFT
 MtMoonB2FFossilNerdScript:
@@ -79,7 +80,12 @@ MtMoonDomeFossilScript:
 	writetext MtMoonB2FWantDomeFossilText
 	yesorno
 	iffalse MtMoonB2FDontGetFossilScript
-	verbosegiveitem DOME_FOSSIL
+	giveitem DOME_FOSSIL
+	iffalse MtMoonB2F_PackFull
+	writetext MtMoonB2F_ChoseDomeText
+	playsound SFX_ITEM
+	waitsfx
+	itemnotify
 	closetext
 	disappear MOUNTMOONB2F_DOME_FOSSIL
 	setevent EVENT_MT_MOON_OBTAINED_FOSSIL
@@ -92,7 +98,12 @@ MtMoonHelixFossilScript:
 	writetext MtMoonB2FWantHelixFossilText
 	yesorno
 	iffalse MtMoonB2FDontGetFossilScript
-	verbosegiveitem HELIX_FOSSIL
+	giveitem HELIX_FOSSIL
+	iffalse MtMoonB2F_PackFull
+	writetext MtMoonB2F_ChoseHelixText
+	playsound SFX_ITEM
+	waitsfx
+	itemnotify
 	closetext
 	disappear MOUNTMOONB2F_HELIX_FOSSIL
 	setevent EVENT_MT_MOON_OBTAINED_FOSSIL
@@ -102,6 +113,27 @@ MtMoonHelixFossilScript:
 MtMoonB2FDontGetFossilScript:
 	closetext
 	end
+
+MtMoonB2F_PackFull:
+	writetext MtMoonB2F_PackFullText
+	waitbutton
+	closetext
+	end
+
+MtMoonB2F_ChoseDomeText:
+	text "<PLAYER> chose the"
+	line "DOME FOSSIL!"
+	done
+
+MtMoonB2F_ChoseHelixText:
+	text "<PLAYER> chose the"
+	line "HELIX FOSSIL!"
+	done
+
+MtMoonB2F_PackFullText:
+	text "There's no room in"
+	line "your ITEM POCKET."
+	done
 
 MtMoonB2FSuperNerdTakesFossilScript:
 	applymovement MOUNTMOONB2F_SUPER_NERD, MtMoonB2FSuperNerdTakesFossilMovement
@@ -284,7 +316,7 @@ MountMoonB2F_MapEvents:
 	bg_event 17, 14, BGEVENT_ITEM, MtMoonB2FHiddenMoonStone
 
 	def_object_events
-	object_event 12, 10, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MtMoonB2FFossilNerdScript, -1
+	object_event 12, 10, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MtMoonB2FFossilNerdScript, -1
 	object_event 12,  8, SPRITE_DOME_FOSSIL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MtMoonDomeFossilScript, EVENT_MT_MOON_OBTAINED_FOSSIL
 	object_event 13,  8, SPRITE_FOSSIL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MtMoonHelixFossilScript, EVENT_MT_MOON_OBTAINED_FOSSIL
 	object_event 31, 13, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerRocketGruntM1, EVENT_HELPED_BILL
