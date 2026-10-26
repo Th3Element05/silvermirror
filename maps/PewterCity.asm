@@ -277,7 +277,7 @@ PewterCityBlockingGuyExplainItemText:
 	text " will"
 	cont "boost a #MON's"
 	roll "@"
-	text_ram wStringBuffer2
+	text_ram wStringBuffer5
 	text " attacks!"
 	done
 
@@ -583,6 +583,7 @@ PewterCityMuseumGuyLeavesMovement:
 	step RIGHT
 	remove_object
 	step_end
+
 
 PewterCity_MapEvents:
 	db 0, 0 ; filler
