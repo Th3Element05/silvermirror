@@ -325,15 +325,15 @@ PlayersHouseBookshelfChallengeModeDeactivatedText:
 ;	loadmem wPartyMon2Moves+1, ICE_PUNCH
 ;	loadmem wPartyMon2Moves+2, THUNDERPUNCH
 ;	loadmem wPartyMon2Moves+3, METAL_CLAW
-;	loadmem wPartyMon1DVs+0, $ef
-;	loadmem wPartyMon1DVs+1, $fe
+;	loadmem wPartyMon2DVs+0, $ef
+;	loadmem wPartyMon2DVs+1, $fe
 
 ;	loadmem wPartyMon3Moves+0, SEED_BOMB
 ;	loadmem wPartyMon3Moves+1, X_SCISSOR
 ;	loadmem wPartyMon3Moves+2, ASTONISH
 ;	loadmem wPartyMon3Moves+3, ICICLE_SPEAR
-;	loadmem wPartyMon1DVs+0, $ef
-;	loadmem wPartyMon1DVs+1, $fe
+;	loadmem wPartyMon3DVs+0, $ef
+;	loadmem wPartyMon3DVs+1, $fe
 
 ;	giveitem RARE_CANDY, 20
 ;	giveitem CARBOS, 20
