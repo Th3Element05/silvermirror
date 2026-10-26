@@ -178,6 +178,12 @@ OlivineCityBattleTowerSignText:
 	line "Opening Now!"
 	done
 
+OlivineCityCafeSign:
+	jumptext OlivineCityCafeSignText
+OlivineCityCafeSignText:
+	text "OLIVINE CAFE"
+	done
+
 OlivineCityPokecenterSign:
 	jumpstd PokecenterSignScript
 
@@ -208,6 +214,7 @@ OlivineCity_MapEvents:
 	bg_event 11, 11, BGEVENT_READ, OlivineGymSign
 	bg_event 30, 28, BGEVENT_READ, OlivineLighthouseSign
 	bg_event  3, 23, BGEVENT_READ, OlivineCityBattleTowerSign
+	bg_event  8, 21, BGEVENT_READ, OlivineCityCafeSign
 	bg_event 14, 21, BGEVENT_READ, OlivineCityPokecenterSign
 	bg_event 20, 17, BGEVENT_READ, OlivineCityMartSign
 

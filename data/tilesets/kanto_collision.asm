@@ -206,3 +206,5 @@
 	tilecoll UP_WALL, WALL, FLOOR, WALL ; cd
 	tilecoll WALL, UP_WALL, WALL, FLOOR ; ce
 	tilecoll UP_WALL, WALL, FLOOR, WALL ; cf
+	tilecoll WALL, WALL, WALL, WALL ; d0
+	tilecoll WALL, WALL, WALL, WALL ; d1

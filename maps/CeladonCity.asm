@@ -287,6 +287,18 @@ CeladonCityDeptStoreSignText:
 ;	cont "DEPT.STORE!"
 ;	done
 
+CeladonCityCafeSign:
+	jumptext CeladonCityCeladonCafeSignText
+CeladonCityCeladonCafeSignText:
+	text "CELADON CAFE"
+	done
+
+CeladonCityHotelSign:
+	jumptext CeladonCityCeladonHotelSignText
+CeladonCityCeladonHotelSignText:
+	text "CELADON HOTEL"
+	done
+
 CeladonCityPokecenterSign:
 	jumpstd PokecenterSignScript
 
@@ -324,6 +336,8 @@ CeladonCity_MapEvents:
 	bg_event 25, 15, BGEVENT_READ, CeladonCityTrainerTips1
 	bg_event 37, 21, BGEVENT_READ, CeladonCityTrainerTips2
 	bg_event 10, 13, BGEVENT_READ, CeladonCityDeptStoreSign
+	bg_event 30, 27, BGEVENT_READ, CeladonCityCafeSign
+	bg_event 42, 27, BGEVENT_READ, CeladonCityHotelSign
 	bg_event 40,  9, BGEVENT_READ, CeladonCityPokecenterSign
 	bg_event 46, 16, BGEVENT_ITEM, CeladonCityHiddenPpUp
 
