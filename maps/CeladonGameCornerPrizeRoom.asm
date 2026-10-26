@@ -50,6 +50,7 @@ GameCornerPrizesKantoPokemonVendor:
 	iffalse GameCorner_NoCoinCaseScript
 .loop
 	writetext GameCornerPrize_WhichPrizeText
+	promptbutton
 	special DisplayCoinCaseBalance
 	loadmenu GameCornerPrizesKantoMonMenuHeader
 	verticalmenu
@@ -156,6 +157,7 @@ GameCornerPrizesJohtoPokemonVendor:
 	iffalse GameCorner_NoCoinCaseScript
 .loop
 	writetext GameCornerPrize_WhichPrizeText
+	promptbutton
 	special DisplayCoinCaseBalance
 	loadmenu GameCornerPrizesJohtoMonMenuHeader
 	verticalmenu
@@ -261,6 +263,7 @@ GameCornerPrizesItemVendor:
 	checkitem COIN_CASE
 	iffalse GameCorner_NoCoinCaseScript
 	writetext GameCornerPrize_WhichPrizeText
+	promptbutton
 GameCornerPrizesItemVendorLoop:
 	special DisplayCoinCaseBalance
 	loadmenu GameCornerPrizesItemMenuHeader
@@ -341,6 +344,7 @@ GameCornerPrizesStoneVendor:
 	checkitem COIN_CASE
 	iffalse GameCorner_NoCoinCaseScript
 	writetext GameCornerPrize_WhichPrizeText
+	promptbutton
 GameCornerPrizesStoneVendorLoop:
 	special DisplayCoinCaseBalance
 	loadmenu GameCornerPrizesStoneMenuHeader
@@ -419,6 +423,7 @@ GameCornerPrizesEvolveVendor:
 	checkitem COIN_CASE
 	iffalse GameCorner_NoCoinCaseScript
 	writetext GameCornerPrize_WhichPrizeText
+	promptbutton
 GameCornerPrizesEvolveVendorLoop:
 	writetext GameCornerPrize_WhichPrizeText_Short
 	special DisplayCoinCaseBalance
