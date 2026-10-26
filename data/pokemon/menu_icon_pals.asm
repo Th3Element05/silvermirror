@@ -265,7 +265,7 @@ MonMenuIconPals:
 	icon_pals BLUE,   PURPLE   ; PUPITAR
 	icon_pals GREEN,  BROWN    ; TYRANITAR
 	icon_pals BLUE,   PINK     ; LUGIA
-	icon_pals RED,    BROWN    ; HO_OH
+	icon_pals RED,    YELLOW   ; HO_OH
 	icon_pals GREEN,  PINK     ; CELEBI
 	icon_pals GRAY,   BLUE     ; MISSINGNO ;MISSINGNO
 	assert_table_length NUM_POKEMON
