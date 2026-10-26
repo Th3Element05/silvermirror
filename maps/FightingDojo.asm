@@ -311,7 +311,7 @@ KarateMasterGiveTMText:
 	line "lost!"
 
 	para "Unfortunately,"
-	line "I can not award"
+	line "I cannot award"
 	cont "a #MON LEAGUE"
 	roll "BADGE."
 
