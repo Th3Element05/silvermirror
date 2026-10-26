@@ -6,10 +6,10 @@ Forked from Sour Crystal v4.1a
 My goal was to recreate the story of Red's journey through Kanto, with as many Quality of Life and graphical upgrades as possible while still maintaining the classic charm of the Gameboy/Gameboy Color Pokémon games.  
 I also wanted to include a new post-game storyline in Johto, as a mirror to the inclusion of Kanto in Pokémon Gold, Silver, and Crystal.  Challenge the Johto Gym Leaders for eight more badges, and climb Mount Silver to face the final challenges in the game.
 
-## Version 0.3.2
+## Version 0.4.2
 The current build is essentially complete.  
-- **9/15/26**  
-Currently working on final testing runs, and adding some supplementary features.  
+- **10/26/26**  
+Spot-testing some final changes and doing hopefully one last debug run.
 
 
 ## __Features and Changes:__
@@ -86,11 +86,10 @@ Currently working on final testing runs, and adding some supplementary features.
 
 ## __Screenshots:__
 
-![title-screen](https://images.hackdex.app/[game]/.png)
-![pager-system](https://images.hackdex.app/[game]/.png)
-![new-move-animations](https://images.hackdex.app/[game]/.gif)
-![visible-berries](https://images.hackdex.app/[game]/.png)
-![safari-zone](https://images.hackdex.app/[game]/.png)
+pending/placeholder  
+![title-screen](https://images.hackdex.app/[game]/.png)  
+![pager-system](https://images.hackdex.app/[game]/.png)  
+![visible-berries](https://images.hackdex.app/[game]/.png)  
 
 <br/>
 
@@ -177,6 +176,9 @@ Specifically forked from Sour Crystal v4.1a.
 
 To set up the repository, see [INSTALL.md](INSTALL.md).  
 >uses RGBDS v0.6.0
+
+Apply .bps patch to Base Rom: **Pokémon Crystal (Rev 1)**
+https://www.romhacking.net/patch/
 
 I learned Assembly in the process of making this game.  
 I don't actually know how to use git, and most of my commits are a mess.  
