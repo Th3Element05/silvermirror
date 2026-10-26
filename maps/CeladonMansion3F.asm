@@ -16,7 +16,7 @@ GameFreakGameDesignerScript:
 	checkevent EVENT_CAUGHT_MISSINGNO
 	iftrue .CaughtMissingno
 	readvar VAR_DEXCAUGHT
-	ifgreater NUM_POKEMON -1 - 1, .CompletedPokedex ; -1, ignore missingno
+	ifgreater NUM_POKEMON - 2, .CompletedPokedex ; - 2, ignore missingno
 	waitbutton
 	closetext
 	end
@@ -54,29 +54,22 @@ GameFreakGameDesignerText:
 
 GameFreakGameDesignerCompletedPokedexText:
 	ntag "DESIGNER:"
-	text "Wow! Excellent!"
-	line "You completed your"
-	cont "#DEX!"
+	text "Oh? Wow!"
+	line "Excellent!"
 
-;	para "Congratulations!"
-;	done
-	para "Here! You earned"
-	line "this!"
+	para "You completed your"
+	line "#DEX!"
+
+	para "Here!"
+	line "You earned this!"
 	done
 
 GameFreakGameDesignerPauseForDiplomaText:
-	text "…"
+	text " "
 	done
 
 GameFreakGameDesignerAfterDiplomaText:
 	ntag "DESIGNER:"
-;	text "The GRAPHIC ARTIST"
-;	line "will print out a"
-;	cont "DIPLOMA for you."
-;
-;	para "You should go show"
-;	line "it off."
-;	done
 	text "Congratulations!"
 	done
 
