@@ -115,38 +115,37 @@ SSAnneKitchenTrashcanText:
 	line "peels!"
 	done
 
+; this needs to be BGEVENT_READ, not _ITEM
+; this is written out manually because otherwise, 
+; one of the two bgevents cannot be interacted with.
+SSAnneKitchenHiddenGreatBall:
+	checkevent EVENT_SS_ANNE_KITCHEN_HIDDEN_GREAT_BALL
+	iftrue SSAnneKitchenOnionTrashcan
+	opentext
+	getitemname STRING_BUFFER_3, GREAT_BALL
+	farwritetext _PlayerFoundItemText
+	giveitem GREAT_BALL
+	iffalse .NoRoom
+	playsound SFX_ITEM
+	waitsfx
+	setevent EVENT_SS_ANNE_KITCHEN_HIDDEN_GREAT_BALL
+	itemnotify
+	closetext
+	end
+
+.NoRoom
+	promptbutton
+	farwritetext _ButNoSpaceText
+	waitbutton
+	closetext
+	end
 
 SSAnneKitchenOnionTrashcan:
-	conditional_event EVENT_SS_ANNE_KITCHEN_HIDDEN_GREAT_BALL, .OnionPeels
-.OnionPeels
 	jumptext SSAnneKitchenOnionTrashcanText
 SSAnneKitchenOnionTrashcanText:
 	text "It's full of onion"
 	line "skins!"
 	done
-
-
-SSAnneKitchenHiddenGreatBall:
-	hiddenitem GREAT_BALL, EVENT_SS_ANNE_KITCHEN_HIDDEN_GREAT_BALL
-
-
-; This one probably works if its BGEVENT_READ instead of _ITEM
-;SSAnneKitchenHiddenGreatBall:
-;	checkevent EVENT_SS_ANNE_KITCHEN_HIDDEN_GREAT_BALL
-;	iftrue SSAnneKitchenOnionTrashcan
-;	verbosegiveitem GREAT_BALL
-;	iffalse .End
-;	setevent EVENT_SS_ANNE_KITCHEN_HIDDEN_GREAT_BALL
-;.End
-;	closetext
-;	end
-
-;SSAnneKitchenOnionTrashcan:
-;	jumptext SSAnneKitchenOnionTrashcanText
-;SSAnneKitchenOnionTrashcanText:
-;	text "It's full of onion"
-;	line "skins!"
-;	done
 
 
 SSAnneKitchen_MapEvents:
@@ -160,8 +159,8 @@ SSAnneKitchen_MapEvents:
 	def_bg_events
 	bg_event 17,  3, BGEVENT_READ, SSAnneKitchenTrashcan
 	bg_event 17,  5, BGEVENT_READ, SSAnneKitchenTrashcan
-	bg_event 17,  7, BGEVENT_IFNOTSET, SSAnneKitchenOnionTrashcan
-	bg_event 17,  7, BGEVENT_ITEM, SSAnneKitchenHiddenGreatBall
+	bg_event 17,  7, BGEVENT_READ, SSAnneKitchenHiddenGreatBall
+;	bg_event 17,  7, BGEVENT_READ, SSAnneKitchenOnionTrashcan
 
 	def_object_events
 	object_event  5,  5, SPRITE_CHEF, SPRITEMOVEDATA_WALK_UP_DOWN, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnneKitchenCook1Script, -1
