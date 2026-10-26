@@ -86,7 +86,7 @@ Route2GateOaksAideAskPokemonText:
 	line "the PAGER CARD in"
 	cont "your #GEAR!"
 
-	para "… Oh!"
+	para "…Oh!"
 
 	para "If you caught 10"
 	line "kinds of #MON,"

@@ -1257,7 +1257,7 @@ OaksLabOakGivesPokeballsText:
 
 OaksLabGetPokeballsText:
 	text "<PLAYER> received"
-	line "five #BALLs."
+	line "some #BALLs."
 	done
 
 OaksLabPokeballExplainationText:

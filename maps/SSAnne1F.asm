@@ -69,7 +69,7 @@ SSAnne1F_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event 24,  3, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnne1FSailor1Script, -1
+	object_event 24,  2, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnne1FSailor1Script, -1
 	object_event 15,  4, SPRITE_CHEF, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnne1FWaiterScript, -1
 	object_event 23, 13, SPRITE_SAILOR, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SSAnne1FSailor2Script, -1
 	

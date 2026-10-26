@@ -111,4 +111,4 @@ Route16FuchsiaSpeechHouse_MapEvents:
 
 	def_object_events
 	object_event  2,  3, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route16FlyHouseLassScript, -1
-	object_event  6,  4, SPRITE_PIDGEOT, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, Route16FlyHousePidgeotScript, -1
+	object_event  6,  4, SPRITE_PIDGEOT, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route16FlyHousePidgeotScript, -1
