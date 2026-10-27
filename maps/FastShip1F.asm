@@ -45,7 +45,7 @@ FastShip1FSeeRocketsScript:
 	pause 30
 	follow FASTSHIP1F_ROCKETGIRL, FASTSHIP1F_ROCKET
 	applymovement FASTSHIP1F_ROCKETGIRL, FastShip1FRocketsMovement
-	playsound SFX_ENTER_DOOR
+	playsound SFX_EXIT_BUILDING
 	disappear FASTSHIP1F_ROCKETGIRL
 	disappear FASTSHIP1F_ROCKET
 	waitsfx

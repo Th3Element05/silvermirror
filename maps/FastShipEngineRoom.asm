@@ -15,6 +15,7 @@ FastShipEngineRoomNoop2Scene:
 
 FastShipRngineRoomRocketsSpeech:
 	turnobject PLAYER, RIGHT
+	showemote EMOTE_SAD, FASTSHIPENGINEROOM_EXECUTIVE, 20
 	opentext
 	writetext FastShipEngineRoomRocketSpeechText
 	waitbutton
