@@ -33,7 +33,8 @@ CeladonMansionEeveePokeballScript:
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	promptbutton
-	givepoke EEVEE, 10
+	givepoke EEVEE, 10, NO_ITEM, GiftEeveeName, GiftEeveeOTName
+	givepokemail GiftEeveeMail
 	closetext
 	setevent EVENT_GOT_EEVEE_FROM_CELADON_MANSION
 	end
@@ -52,6 +53,17 @@ CeladonMansionEeveePokeballScript:
 	waitbutton
 	closetext
 	end
+
+GiftEeveeName:
+	db "EEVEE@"
+
+GiftEeveeOTName:
+	db "MIKEY@"
+
+GiftEeveeMail:
+	db FLOWER_MAIL
+	db   "Please take good"
+	next "care of EEVEE.@"
 
 CeladonMansionRoofEeveeText:
 	text "It's EEVEE!"

@@ -253,7 +253,7 @@ SilphCo7FLaprasGiftScript:
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	promptbutton
-	givepoke LAPRAS, 15
+	givepoke LAPRAS, 25, NO_ITEM, GiftLaprasName, GiftLaprasOTName
 	setevent EVENT_GOT_LAPRAS_FROM_SILPH_CO
 	writetext SilphCo7FExplainLaprasText
 	waitbutton
@@ -272,6 +272,12 @@ SilphCo7FLaprasGiftScript:
 	jumptextfaceplayer SilphCo7FClerkText
 .Cleared
 	jumptextfaceplayer SilphCo7FClerkSavedText
+
+GiftLaprasName:
+	db "LAPRAS@"
+
+GiftLaprasOTName:
+	db "SILPHCO@"
 
 SilphCo7FGiveLaprasText:
 	ntag "MAN:"

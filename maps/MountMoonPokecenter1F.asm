@@ -67,8 +67,8 @@ MtMoonPokecenter1FSalesmanScript:
 	writetext MtMoonPokecenterGotMagikarpText
 	promptbutton
 ;	givepoke MAGIKARP, 5, HEART_SCALE
-	givepoke MAGIKARP, 5, NO_ITEM, MagikarpName, MagikarpOTName
-	givepokemail MagikarpMail
+	givepoke MAGIKARP, 5, NO_ITEM, GiftMagikarpName, GiftMagikarpOTName
+	givepokemail GiftMagikarpMail
 	setevent EVENT_BOUGHT_MAGIKARP
 	; fallthrough
 .NoRefunds
@@ -95,13 +95,13 @@ MtMoonPokecenter1FSalesmanScript:
 	closetext
 	end
 
-MagikarpName:
+GiftMagikarpName:
 	db "MAGIKARP@"
 
-MagikarpOTName:
+GiftMagikarpOTName:
 	db "UNKNOWN@"
 
-MagikarpMail:
+GiftMagikarpMail:
 	db FLOWER_MAIL
 	db   "No refunds.@"
 

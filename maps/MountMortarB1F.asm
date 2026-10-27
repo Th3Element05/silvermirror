@@ -31,7 +31,7 @@ MountMortarB1FKiyoScript:
 	writetext MountMortarB1FReceiveMonText
 	playsound SFX_CAUGHT_MON
 	waitsfx
-	givepoke HITMONTOP, 10
+	givepoke HITMONTOP, 50, NO_ITEM, GiftHitmontopName, GiftHitmontopOTName
 	setevent EVENT_GOT_HITMONTOP_FROM_KIYO
 .GotTyrogue:
 	writetext MountMortarB1FKiyoGotTyrogueText
@@ -44,6 +44,12 @@ MountMortarB1FKiyoScript:
 	waitbutton
 	closetext
 	end
+
+GiftHitmontopName:
+	db "HITMONTOP@"
+
+GiftHitmontopOTName:
+	db "KING@"
 
 MountMortarB1FKiyoIntroText:
 	ntag "BLACKBELT:"

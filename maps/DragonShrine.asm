@@ -398,7 +398,7 @@ DragonShrineDratiniPokeballScript:
 	writetext DragonShrinePlayerReceivedDratiniText
 	playsound SFX_CAUGHT_MON
 	waitsfx
-	givepoke DRATINI, 15, DRAGON_SCALE
+	givepoke DRATINI, 15, DRAGON_SCALE, GiftDratiniName, GiftDratiniOTName
 	checkevent EVENT_ANSWERED_DRAGON_MASTER_QUIZ_WRONG
 	special GiveDratini
 	setevent EVENT_GOT_DRATINI
@@ -417,6 +417,12 @@ DragonShrineDratiniPokeballScript:
 	waitbutton
 	closetext
 	end
+
+GiftDratiniName:
+	db "DRATINI@"
+
+GiftDratiniOTName:
+	db "ELDER@"
 
 DragonShrineItsDratiniText:
 	text "Its the #MON"
