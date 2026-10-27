@@ -88,8 +88,7 @@ The current build is complete and pending official release.
 ## __Screenshots:__
 
 pending/placeholder  
-![title-screen](https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-title-0.gif)
-![pallet-town](https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-pallet-town.png)  
+![title-screen](https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-title-0.gif)![pallet-town](https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-pallet-town.png)  
 ![pallet-town2](https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-pallet-town.png)  
 ![pager-system](https://images.hackdex.app/[game]/.png)  
 ![visible-berries](https://images.hackdex.app/[game]/.png)  
