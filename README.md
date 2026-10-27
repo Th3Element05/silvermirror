@@ -12,13 +12,13 @@ The current build is complete and pending official release.
 
 ## __Features and Changes:__
 
-- **Classic Mode or Alternate Gen2 Mode**  
+**Classic Mode or Alternate Gen2 Mode**  
   >• Can be set during a New Game.  
   >• Enjoy a Classic experience limited to the original 151 Pokémon (until you defeat the Elite Four).  
   >• Or choose to encounter a wider variety of Pokémon on your journey through Kanto.  
-- **251 Pokémon obtainable**  
+**251 Pokémon obtainable**  
   >• Complete the Pokédex without trading, in both Classic Mode and Gen2 Mode.  
-- **Physical/Special Split**  
+**Physical/Special Split**  
   >• Enabled by default, can be toggled in game Options.  
   >• On Classic setting, Ghost-Type is now special, Dark and Dragon-Type are now Physical.  
 - **More Move Info**  
