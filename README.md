@@ -14,70 +14,70 @@ The current build is complete and pending official release.
 
 - **Classic Mode or Alternate Gen2 Mode**  
   >• Can be set during a New Game.  
-  >• Enjoy a Classic experience limited to the original 151 Pokémon (until you defeat the Elite Four).
+  >• Enjoy a Classic experience limited to the original 151 Pokémon (until you defeat the Elite Four).  
   >• Or choose to encounter a wider variety of Pokémon on your journey through Kanto.  
 - **251 Pokémon obtainable**  
-  >- Complete the Pokédex without trading, in both Classic Mode and Gen2 Mode.  
+  >• Complete the Pokédex without trading, in both Classic Mode and Gen2 Mode.  
 - **Physical/Special Split**  
-  >- Enabled by default, can be toggled in game Options.  
-  >- On Classic setting, Ghost-Type is now special, Dark and Dragon-Type are now Physical.  
+  >• Enabled by default, can be toggled in game Options.  
+  >• On Classic setting, Ghost-Type is now special, Dark and Dragon-Type are now Physical.  
 - **More Move Info**  
-  >- Move Info (Type, Power, Accuracy, etc.) is shown in battle, when learning a new move, and many more places that moves can be viewed.  
+  >• Move Info (Type, Power, Accuracy, etc.) is shown in battle, when learning a new move, and many more places that moves can be viewed.  
 - **Intrinsic Field Moves**  
-  >- Appropriate Pokémon can use field moves (once it has been obtained in the story) without knowing the attack for battle.  
+  >• Appropriate Pokémon can use field moves (once it has been obtained in the story) without knowing the attack for battle.  
 - **Pokégear Pager System**  
-  >- Allows use of obtained Field Moves without needing to keep an appropriate user in your party.  
+  >• Allows use of obtained Field Moves without needing to keep an appropriate user in your party.  
 - **Pokémon Swarms**  
-  >- Announced on the radio. The active Swarm is visible on the Pokégear map.  
-  >- Swarming Pokémon have an increased chance of being shiny.  
+  >• Announced on the radio. The active Swarm is visible on the Pokégear map.  
+  >• Swarming Pokémon have an increased chance of being shiny.  
 - **Reusable TMs**  
-  >- Use TMs to teach moves as many times as you like.  
+  >• Use TMs to teach moves as many times as you like.  
 - **Updated Move List and Level-up Moves**  
-  >- Removed many duplicate or outdated/low-use moves to make room for over 60 new moves from Generation 3 and 4.  
+  >• Removed many duplicate or outdated/low-use moves to make room for over 60 new moves from Generation 3 and 4.  
   >(For example, Tail Whip was removed and replaced with Growl because they do exactly the same thing.)  
-  >- Pokemon Level-up Moves have been reworked to include the new moves, based primarily on Generation 4.  
+  >• Pokemon Level-up Moves have been reworked to include the new moves, based primarily on Generation 4.  
 - **Updated Move properties**  
-  >- Base Power, Accuracy, Effects, etc.  
+  >• Base Power, Accuracy, Effects, etc.  
 - **Added Gen4 Evolutions**  
-  >- The following Pokémon have been **removed** to make room for new evolutions:  
+  >• The following Pokémon have been **removed** to make room for new evolutions:  
   >`Pichu, Cleffa, Igglybuff, Togepi, Togetic, Porygon2, Tyrogue, Smoochum, Elekid, and Magby.`  
-  >- The following evolutions have been **added**:  
+  >• The following evolutions have been **added**:  
   >`Yanmega, Honchkrow, Mismagius, Gliscor, Weavile, Mamoswine, Magnezone, Tangrowth, Leafeon, and Glaceon.`  
-  >- Porygon's base-stats have been boosted to match Porygon2's.  
-  >- Eggs from Hitmonlee, Hitmonchan, and Hitmontop can contain any Hitmon- species.  
+  >• Porygon's base-stats have been boosted to match Porygon2's.  
+  >• Eggs from Hitmonlee, Hitmonchan, and Hitmontop can contain any Hitmon- species.  
   >(Hitmontop eggs are unobtainable in Classic Mode until after defeating the Elite Four.)  
 - **Location-based Evolutions** for appropraite Pokémon.  
-  >- (Only available in Gen2 Mode, or after defeating the Elite Four.)  
+  >• (Only available in Gen2 Mode, or after defeating the Elite Four.)  
 - **Trade Evolutions obtainable without trading**  
-  >- Use the required item on Pokémon to evolve them.  
+  >• Use the required item on Pokémon to evolve them.  
   >(Linking Cord, King’s Rock, Metal Coat, etc.)  
 - **Postgame Gym Leader Rematches**  
-  >- Kanto Leaders can be rematched after defeating the Elite Four.  
-  >- Johto Leaders can be rematched after obtaining 16 Badges.  
+  >• Kanto Leaders can be rematched after defeating the Elite Four.  
+  >• Johto Leaders can be rematched after obtaining 16 Badges.  
 - **Move Reminder**  
-  >- Re-teach Pokémon any of their Level-up Moves.  
+  >• Re-teach Pokémon any of their Level-up Moves.  
 - **Shininess and Gender decoupled from DVs**  
-  >- Male and Female Pokémon have equal chance to have high DVs or be shiny.  
+  >• Male and Female Pokémon have equal chance to have high DVs or be shiny.  
 - **Upgraded trainer rematches**  
-  >- Rematch trainer parties scale as you progress through the story.  
+  >• Rematch trainer parties scale as you progress through the story.  
 - **Modern Bill's PC Boxes**  
-  >- Has a GUI like Generation 3. No more saving between boxes required.  
+  >• Has a GUI like Generation 3. No more saving between boxes required.  
 - **New Custom Pokémon Sprites**  
-  >- Front Sprites/Animations by Sour Apple.  
-  >- Back Sprites based on work by MeroMero.  
-  >- Many have been adjusted by myself.  
+  >• Front Sprites/Animations by Sour Apple.  
+  >• Back Sprites based on work by MeroMero.  
+  >• Many have been adjusted by myself.  
 - **Unique Party sprites**  
-  >- Every Pokémon has a unique sprite in your party.  
+  >• Every Pokémon has a unique sprite in your party.  
 - **Upgraded battle graphics**  
-  >- More dynamic colors and attack animations for many moves.  
+  >• More dynamic colors and attack animations for many moves.  
 - **Visible Berries and Apricorns on the overworld.**  
-  >- Each tree respawns at 12:00am each day.  
+  >• Each tree respawns at 12:00am each day.  
 - **Expanded Pack**  
-  >- Main Pack pocket has been expanded to hold 25 items.  
-  >- Barry pocket has been added to reduce your main pocket from getting full.  
+  >• Main Pack pocket has been expanded to hold 25 items.  
+  >• Barry pocket has been added to reduce your main pocket from getting full.  
 - **Almost all bugs from vanilla Pokémon Crystal have been fixed.**  
 - **A couple Secrets and Easter Eggs**  
-  >- Based on classic Gen1 rumors and glitches.  
+  >• Based on classic Gen1 rumors and glitches.  
   >(There is a small hint book in the bookshelf behind Professor Oak.)  
 - **Many other small goodies to find!**  
 
