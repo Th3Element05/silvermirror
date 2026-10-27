@@ -7,7 +7,7 @@ My goal was to recreate the story of Red's journey through Kanto, with as many Q
 I also wanted to include a new post-game storyline in Johto, as a mirror to the inclusion of Kanto in Pokémon Gold, Silver, and Crystal.  Challenge the Johto Gym Leaders for eight more badges, and climb Mount Silver to face the final challenges in the game.
 
 ## Version 1.0
-- **10/26/26**  
+- **10/27/26**  
 The current build is complete and pending official release.
 
 ## __Features and Changes:__
