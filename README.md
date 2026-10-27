@@ -13,9 +13,9 @@ The current build is complete and pending official release.
 ## __Features and Changes:__
 
 - **Classic Mode or Alternate Gen2 Mode**  
-  >• Can be set during a New Game.<blockquote>  
-  >• Enjoy a Classic experience limited to the original 151 Pokémon (until you defeat the Elite Four).  <blockquote>
-  >• Or choose to encounter a wider variety of Pokémon on your journey through Kanto.  
+  <blockquote>Can be set during a New Game.</blockquote>  
+  <blockquote>Enjoy a Classic experience limited to the original 151 Pokémon (until you defeat the Elite Four).</blockquote>  
+  <blockquote>Or choose to encounter a wider variety of Pokémon on your journey through Kanto.</blockquote>  
 - **251 Pokémon obtainable**  
   >• Complete the Pokédex without trading, in both Classic Mode and Gen2 Mode.  
 - **Physical/Special Split**  
