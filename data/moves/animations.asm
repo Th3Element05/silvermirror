@@ -1318,7 +1318,7 @@ BattleAnim_FlareBlitz:
 
 BattleAnim_BodySlam:
 	anim_1gfx BATTLE_ANIM_GFX_HIT
-	anim_call BattleAnim_TargetObj_2Row ; 7-wide non-issue?
+	anim_call BattleAnim_TargetObj_2Row ; 7-wide non-issue
 ;	anim_call BattleAnim_TargetObj_1Row
 	anim_bgeffect BATTLE_BG_EFFECT_BOUNCE_DOWN, $0, BG_EFFECT_USER, $0
 	anim_wait 32
@@ -2393,7 +2393,7 @@ BattleAnim_Dig:
 	anim_2gfx BATTLE_ANIM_GFX_SAND, BATTLE_ANIM_GFX_HIT
 	anim_if_param_equal $0, .hit
 	anim_if_param_equal $2, .fail
-	anim_call BattleAnim_TargetObj_2Row ; 7-wide, non-issue?
+	anim_call BattleAnim_TargetObj_2Row ; 7-wide, non-issue
 ;	anim_call BattleAnim_TargetObj_1Row
 	anim_bgeffect BATTLE_BG_EFFECT_DIG, $0, BG_EFFECT_USER, $1
 	anim_obj BATTLE_ANIM_OBJ_DIG_PILE, 72, 104, $0
@@ -2429,7 +2429,7 @@ BattleAnim_Toxic:
 
 BattleAnim_Confusion:
 ;	anim_1gfx BATTLE_ANIM_GFX_HIT
-	anim_call BattleAnim_UserObj_2Row ; 7-wide, non-issue?
+	anim_call BattleAnim_UserObj_2Row ; 7-wide, non-issue
 ;	anim_call BattleAnim_UserObj_1Row
 	anim_sound 0, 1, SFX_PSYCHIC
 	anim_bgeffect BATTLE_BG_EFFECT_NIGHT_SHADE, $0, BG_EFFECT_TARGET, $8
@@ -2587,7 +2587,7 @@ BattleAnim_Screech:
 	anim_ret
 
 BattleAnim_DoubleTeam:
-	anim_call BattleAnim_TargetObj_2Row ; 7-wide, non-issue?
+	anim_call BattleAnim_TargetObj_2Row ; 7-wide, non-issue
 ;	anim_call BattleAnim_TargetObj_1Row
 	anim_sound 0, 0, SFX_PSYBEAM
 	anim_bgeffect BATTLE_BG_EFFECT_DOUBLE_TEAM, $0, BG_EFFECT_USER, $0
@@ -3022,7 +3022,7 @@ BattleAnim_Waterfall:
 	anim_wait 32
 	anim_clearobjs
 	anim_wait 1
-	anim_call BattleAnim_TargetObj_2Row ; 7-wide, non-issue?
+	anim_call BattleAnim_TargetObj_2Row ; 7-wide, non-issue
 ;	anim_call BattleAnim_TargetObj_1Row
 	anim_bgeffect BATTLE_BG_EFFECT_BODY_SLAM, $0, BG_EFFECT_USER, $0
 	anim_wait 16
@@ -3252,7 +3252,7 @@ BattleAnim_Softboiled:
 BattleAnim_HeatWave:
 	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_FIRE
 	anim_1gfx BATTLE_ANIM_GFX_HAZE
-	anim_call BattleAnim_UserObj_2Row ; 7-wide, test
+	anim_call BattleAnim_UserObj_2Row ; 7-wide, non-issue
 ;	anim_call BattleAnim_UserObj_1Row
 	anim_bgeffect BATTLE_BG_EFFECT_NIGHT_SHADE, $0, BG_EFFECT_TARGET, $4
 	anim_sound 16, 2, SFX_EMBER
@@ -3262,7 +3262,7 @@ BattleAnim_HeatWave:
 	anim_loop 10, .loop
 	anim_wait 48
 	anim_incbgeffect BATTLE_BG_EFFECT_NIGHT_SHADE
-;	anim_call BattleAnim_ShowMon_1
+	anim_call BattleAnim_ShowMon_1
 	anim_ret
 
 ;BattleAnim_HiJumpKick:
@@ -3485,7 +3485,7 @@ BattleAnim_SkyAttack:
 
 BattleAnim_Transform:
 	anim_1gfx BATTLE_ANIM_GFX_HIT
-	anim_call BattleAnim_TargetObj_2Row ; 7-wide, non-issue?
+	anim_call BattleAnim_TargetObj_2Row ; 7-wide, non-issue
 ;	anim_call BattleAnim_TargetObj_1Row
 	anim_transform
 	anim_sound 0, 0, SFX_PSYBEAM
@@ -3616,7 +3616,7 @@ BattleAnim_Extrasensory:
 BattleAnim_Splash:
 	anim_1gfx BATTLE_ANIM_GFX_HIT
 	anim_sound 0, 0, SFX_VICEGRIP
-	anim_call BattleAnim_TargetObj_2Row ; 7-wide, non-issue?
+	anim_call BattleAnim_TargetObj_2Row ; 7-wide, non-issue
 ;	anim_call BattleAnim_TargetObj_1Row
 	anim_bgeffect BATTLE_BG_EFFECT_BOUNCE_DOWN, $0, BG_EFFECT_USER, $0
 	anim_wait 96
@@ -3639,7 +3639,7 @@ BattleAnim_AquaTail:
 	anim_wait 32
 	anim_clearobjs
 	anim_wait 1
-	anim_call BattleAnim_TargetObj_2Row ; 7-wide, non-issue?
+	anim_call BattleAnim_TargetObj_2Row ; 7-wide, non-issue
 ;	anim_call BattleAnim_TargetObj_1Row
 	anim_bgeffect BATTLE_BG_EFFECT_BODY_SLAM, $0, BG_EFFECT_USER, $0
 	anim_wait 16
@@ -5200,7 +5200,7 @@ BattleAnim_Safeguard:
 
 BattleAnim_PainSplit:
 	anim_2gfx BATTLE_ANIM_GFX_HIT, BATTLE_ANIM_GFX_OBJECTS
-	anim_call BattleAnim_TargetObj_2Row ; 7-wide, non-issue?
+	anim_call BattleAnim_TargetObj_2Row ; 7-wide, non-issue
 ;	anim_call BattleAnim_TargetObj_1Row
 	anim_bgeffect BATTLE_BG_EFFECT_BODY_SLAM, $0, BG_EFFECT_USER, $0
 	anim_wait 4
