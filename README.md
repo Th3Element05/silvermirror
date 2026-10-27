@@ -105,11 +105,11 @@ The current build is complete and pending official release.
 <a href="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-battle-1.png">
 <img src="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-battle-1.png" width="160">
 </a>
-<a href="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-berries-2.png">
-<img src="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-berries-2.png" width="160">
-</a>
 <a href="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-battle-2.png">
 <img src="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-battle-2.png" width="160">
+</a>
+<a href="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-berries-2.png">
+<img src="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-berries-2.png" width="160">
 </a>
 <a href="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-pager-system.png">
 <img src="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-pager-system.png" width="160">
