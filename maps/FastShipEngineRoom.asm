@@ -14,6 +14,7 @@ FastShipEngineRoomNoop2Scene:
 	end
 
 FastShipRngineRoomRocketsSpeech:
+	turnobject PLAYER, RIGHT
 	opentext
 	writetext FastShipEngineRoomRocketSpeechText
 	waitbutton
