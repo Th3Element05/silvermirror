@@ -10,8 +10,6 @@ I also wanted to include a new post-game storyline in Johto, as a mirror to the 
 - **10/26/26**  
 The current build is complete and pending official release.
 
-<br/>
-
 ## __Features and Changes:__
 
 - **Classic Mode or Alternate Gen2 Mode**  
