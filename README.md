@@ -19,8 +19,8 @@ The current build is complete and pending official release.
 - **251 Pokémon obtainable**  
   >Complete the Pokédex without trading, in both Classic Mode and Gen2 Mode.  
 - **Physical/Special Split**  
-  >Enabled by default, can be toggled in game Options.  
-  >On Classic setting, Ghost-Type is now special, Dark and Dragon-Type are now Physical.  
+  >- Enabled by default, can be toggled in game Options.  
+  >- On Classic setting, Ghost-Type is now special, Dark and Dragon-Type are now Physical.  
 - **More Move Info**  
   >Move Info (Type, Power, Accuracy, etc.) is shown in battle, when learning a new move, and many more places that moves can be viewed.  
 - **Intrinsic Field Moves**  
@@ -39,10 +39,10 @@ The current build is complete and pending official release.
 - **Updated Move properties**  
   >Base Power, Accuracy, Effects, etc.  
 - **Added Gen4 Evolutions**  
-  >The following evolutions have been added:  
-  >`Yanmega, Honchkrow, Mismagius, Gliscor, Weavile, Mamoswine, Magnezone, Tangrowth, Leafeon, and Glaceon.`  
-  >The following Pokémon have been removed to make room for these new evolutions:  
+  >The following Pokémon have been **removed** to make room for new evolutions:  
   >`Pichu, Cleffa, Igglybuff, Togepi, Togetic, Porygon2, Tyrogue, Smoochum, Elekid, and Magby.`  
+  >The following evolutions have been **added**:  
+  >`Yanmega, Honchkrow, Mismagius, Gliscor, Weavile, Mamoswine, Magnezone, Tangrowth, Leafeon, and Glaceon.`  
   >Porygon's base-stats have been boosted to match Porygon2's.  
   >Eggs from Hitmonlee, Hitmonchan, and Hitmontop can contain any Hitmon- species.  
   >(Hitmontop eggs are unobtainable in Classic Mode until after defeating the Elite Four.)  
@@ -50,7 +50,7 @@ The current build is complete and pending official release.
   >Only available in Gen2 Mode, or after defeating the Elite Four.  
 - **Trade Evolutions obtainable without trading**  
   >Use the required item on Pokémon to evolve them.  
-(Linking Cord, King’s Rock, Metal Coat, etc.)  
+  >(Linking Cord, King’s Rock, Metal Coat, etc.)  
 - **Postgame Gym Leader Rematches**  
   >Kanto Leaders can be rematched after defeating the Elite Four.  
   >Johto Leaders can be rematched after obtaining 16 Badges.  
