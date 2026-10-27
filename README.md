@@ -90,9 +90,6 @@ The current build is complete and pending official release.
 <a href="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-title-0.gif">
 <img src="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-title-0.gif" width="160">
 </a>
-<a href="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-title-0.gif">
-<img src="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-title-0.gif" width="160">
-</a>
 <a href="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-gen2mode-0.gif">
 <img src="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-gen2mode-0.gif" width="160">
 </a>
