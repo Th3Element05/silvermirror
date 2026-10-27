@@ -89,10 +89,16 @@ The current build is complete and pending official release.
 
 pending/placeholder  
 ![title-screen](https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-title-0.gif)
-![pallet-town](https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-pallet-town.png)  
-![pallet-town2](https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-pallet-town.png)  
-![pager-system](https://images.hackdex.app/[game]/.png)  
-![visible-berries](https://images.hackdex.app/[game]/.png)  
+![gen2mode](https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-gen2mode-0.gif)
+![phys-special-split](https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-options-0.gif)
+![pallet-town](https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-pallet-town.png)
+![gen2-starters](https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-gen2mode-starters.png)
+![battle-1](https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-battle-1.png)
+![pager-system](https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-pager-system.png)
+![berries](https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-berries-2.png)
+![battle-2](https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-battle-2.png)
+![map-swarms](https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-map-swarms.png)
+![forget-move](https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-learn-b0.gif)
 
 <br/>
 
