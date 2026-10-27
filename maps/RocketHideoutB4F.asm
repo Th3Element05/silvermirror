@@ -61,7 +61,7 @@ RocketHideoutGiovanniSeenText:
 
 RocketHideoutGiovanniBeatenText:
 	ntag "GIOVANNI:"
-	text "WHAT!"
+	text "What!?"
 	line "This cannot be!"
 	done
 

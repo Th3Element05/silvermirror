@@ -114,7 +114,7 @@ BugCatcherDougSeenText:
 
 BugCatcherDougBeatenText:
 	ntag "DOUG:"
-	text "WHAT?"
+	text "What!?"
 
 	para "What a total"
 	line "waste of time!"

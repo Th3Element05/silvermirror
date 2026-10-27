@@ -434,7 +434,7 @@ ChampionBattleIntroText:
 
 ChampionBattleWinText:
 	ntag "<RIVAL>:"
-	text "NO!"
+	text "No!"
 	line "That can't be!"
 	cont "You beat my best!"
 

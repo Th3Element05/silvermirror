@@ -1016,7 +1016,7 @@ OaksLabRivalBattleWinText:
 ;	done
 
 	ntag "<RIVAL>:"
-	text "WHAT?"
+	text "What!?"
 	line "Unbelievable!"
 	cont "I picked the"
 	roll "wrong #MON!"
