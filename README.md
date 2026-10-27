@@ -6,11 +6,11 @@ Forked from Sour Crystal v4.1a
 My goal was to recreate the story of Red's journey through Kanto, with as many Quality of Life and graphical upgrades as possible while still maintaining the classic charm of the Gameboy/Gameboy Color Pokémon games.  
 I also wanted to include a new post-game storyline in Johto, as a mirror to the inclusion of Kanto in Pokémon Gold, Silver, and Crystal.  Challenge the Johto Gym Leaders for eight more badges, and climb Mount Silver to face the final challenges in the game.
 
-## Version 0.4.2
-The current build is essentially complete.  
+## Version 1.0
 - **10/26/26**  
-Spot-testing some final changes and doing hopefully one last debug run.
+The current build is complete and pending official release.
 
+<br/>
 
 ## __Features and Changes:__
 
@@ -177,7 +177,7 @@ Specifically forked from Sour Crystal v4.1a.
 To set up the repository, see [INSTALL.md](INSTALL.md).  
 >uses RGBDS v0.6.0
 
-Apply .bps patch to Base Rom: **Pokémon Crystal (Rev 1)**
+Apply .bps patch to Base Rom: **Pokémon Crystal (Rev 1)**  
 https://www.romhacking.net/patch/
 
 I learned Assembly in the process of making this game.  
