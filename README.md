@@ -87,8 +87,8 @@ The current build is complete and pending official release.
 
 ## __Screenshots:__
 
-<a href="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-title-0.gif">
-<img src="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-title-0.gif" width="160">
+<a href="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-title-r0.png">
+<img src="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-title-r0.png" width="160">
 </a>
 <a href="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-gen2mode-0.gif">
 <img src="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-gen2mode-0.gif" width="160">
