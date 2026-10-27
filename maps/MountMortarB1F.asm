@@ -49,7 +49,7 @@ GiftHitmontopName:
 	db "HITMONTOP@"
 
 GiftHitmontopOTName:
-	db "KING@"
+	db "KIYO@"
 
 MountMortarB1FKiyoIntroText:
 	ntag "BLACKBELT:"
