@@ -78,6 +78,9 @@ I also wanted to include a new post-game storyline in Johto, as a mirror to the 
 - **Expanded Pack**  
   >• Main Pack pocket has been expanded to hold 25 items.  
   >• Barry pocket has been added to reduce your main pocket from getting full.  
+- **Improved Payouts from Game Corner Games**  
+  >• Slots: Significantly increased payout amounts, and increased odds of good rolls.  
+  >• Card Flip: Doubled payout amounts.  
 - **Difficulty Setting**  
   >• There's a "Difficulty Curve" setting which has a **minor** effect on the stats of opposing trainers' Pokémon.  
   (It determines how much Stat Exp. opponents' Pokémon have. This effect scales up as you collect more Badges.)  
