@@ -10,9 +10,7 @@ I also wanted to include a new post-game storyline in Johto, as a mirror to the 
 
 ## Version 1.0
 
-- <a href="https://github.com/Th3Element05/silvermirror/releases/tag/v1.0">
-Initial Release v1.0
-</a>
+- <a href="https://github.com/Th3Element05/silvermirror/releases/tag/v1.0">Initial Release v1.0</a>
 
 ### __Resources:__
 - **[Discord Server](https://discord.gg/[temporarily redacted])**
