@@ -78,6 +78,9 @@ I also wanted to include a new post-game storyline in Johto, as a mirror to the 
 - **Expanded Pack**  
   >• Main Pack pocket has been expanded to hold 25 items.  
   >• Barry pocket has been added to reduce your main pocket from getting full.  
+- **Difficulty Setting**  
+  >• There's a "Difficulty Curve" setting which has a **minor** effect on the stats of opposing trainers' Pokémon.  
+  (It determines how much Stat Exp. opponents' Pokémon have. This effect scales up as you collect more Badges.)  
 - **Almost all bugs from vanilla Pokémon Crystal have been fixed.**  
 - **A couple Secrets and Easter Eggs**  
   >• Based on classic Gen1 rumors and glitches.  
