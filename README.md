@@ -9,8 +9,10 @@ I also wanted to include a new post-game storyline in Johto, as a mirror to the 
 ![box-art](https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/silvermirror-box.png)  
 
 ## Version 1.0
-- **10/27/26**  
-The current build is complete and pending official release.
+
+- <a href="https://github.com/Th3Element05/silvermirror/releases/tag/v1.0">
+Initial Release v1.0
+</a>
 
 ### __Resources:__
 - **[Discord Server](https://discord.gg/[temporarily redacted])**
