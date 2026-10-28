@@ -13,7 +13,7 @@ I also wanted to include a new post-game storyline in Johto, as a mirror to the 
 - <a href="https://github.com/Th3Element05/silvermirror/releases/tag/v1.0">Initial Release v1.0</a>
 
 ### __Resources:__
-- **[Discord Server](https://discord.gg/rsUamUSuwK)**
+- **[Silver Mirror Discord Server](https://discord.gg/rsUamUSuwK)**
 - **[Pokémon Silver Mirror Documentation](https://docs.google.com/spreadsheets/d/1-3RvOeC4Ymswg5hqdd7F-1gGs5bRkSTm28OCV8ipzhM)**
 
 ## __Features and Changes:__
