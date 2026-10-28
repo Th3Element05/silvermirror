@@ -12,6 +12,10 @@ I also wanted to include a new post-game storyline in Johto, as a mirror to the 
 - **10/27/26**  
 The current build is complete and pending official release.
 
+### __Resources:__
+- **[Discord Server](https://discord.gg/[temporarily redacted])**
+- **[Pokémon Silver Mirror Documentation](https://docs.google.com/spreadsheets/d/1-3RvOeC4Ymswg5hqdd7F-1gGs5bRkSTm28OCV8ipzhM)**
+
 ## __Features and Changes:__
 
 - **Classic Mode or Alternate Gen2 Mode**  
@@ -63,24 +67,21 @@ The current build is complete and pending official release.
 - **Upgraded trainer rematches**  
   >• Rematch trainer parties scale as you progress through the story.  
 - **Modern Bill's PC Boxes**  
-  >• Has a GUI like Generation 3. No more saving between boxes required.  
+  >• Has a GUI like Generation 3. Saving not required to switch Boxes.  
 - **New Custom Pokémon Sprites**  
   >• Front Sprites/Animations by Sour Apple.  
   >• Back Sprites based on work by MeroMero.  
   >• Many have been adjusted by myself.  
-- **Unique Party sprites**  
   >• Every Pokémon has a unique sprite in your party.  
 - **Upgraded battle graphics**  
   >• More dynamic colors and attack animations for many moves.  
-- **Visible Berries and Apricorns on the overworld.**  
-  >• Each tree respawns at 12:00am each day.  
 - **Expanded Pack**  
   >• Main Pack pocket has been expanded to hold 25 items.  
   >• Barry pocket has been added to reduce your main pocket from getting full.  
 - **Almost all bugs from vanilla Pokémon Crystal have been fixed.**  
 - **A couple Secrets and Easter Eggs**  
   >• Based on classic Gen1 rumors and glitches.  
-  >(There is a small hint book in the bookshelf behind Professor Oak.)  
+  >(There is a small hint book in Oak's Lab that you can access after progressing the story.)  
 - **Many other small goodies to find!**  
 
 <br/>
@@ -120,12 +121,6 @@ The current build is complete and pending official release.
 <a href="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-charizard-back.png">
 <img src="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-charizard-back.png" width="160">
 </a>
-
-<br/>
-
-### __Resources:__
-- **[Discord Server](https://discord.gg/[temporarily redacted])**
-- **[Pokémon Silver Mirror Documentation](https://docs.google.com/spreadsheets/d/1-3RvOeC4Ymswg5hqdd7F-1gGs5bRkSTm28OCV8ipzhM)**
 
 <br/>
 
