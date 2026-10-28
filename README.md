@@ -40,7 +40,7 @@ I also wanted to include a new post-game storyline in Johto, as a mirror to the 
   >• Use TMs to teach moves as many times as you like.  
 - **Updated Move List and Level-up Moves**  
   >• Removed many duplicate or outdated/low-use moves to make room for over 60 new moves from Generation 3 and 4.  
-  >(For example, Tail Whip was removed and replaced with Growl because they do exactly the same thing.)  
+  >(For example, Tail Whip was removed and replaced with Leer because they do exactly the same thing.)  
   >• Pokemon Level-up Moves have been reworked to include the new moves, based primarily on Generation 4.  
 - **Updated Move properties**  
   >• Base Power, Accuracy, Effects, etc.  
