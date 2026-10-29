@@ -1,23 +1,7 @@
 TreeMons:
 ; entries correspond to TREEMON_SET_* constants
 	table_width 2, TreeMons
-;	dw TreeMonSet_City
-;	dw TreeMonSet_Canyon
-;	dw TreeMonSet_Town
-;	dw TreeMonSet_Route
-;	dw TreeMonSet_Plains
-;	dw TreeMonSet_Lake
-;	dw TreeMonSet_Forest
-;	dw TreeMonSet_Rock
-;	dw TreeMonSet_BurnedTower
-;	dw TreeMonSet_Safari
-;	dw TreeMonSet_Central_Kanto
-;	dw TreeMonSet_Western_Kanto
-;	dw TreeMonSet_Southern_Kanto
-;	dw TreeMonSet_Northern_Kanto
-;	dw TreeMonSet_Medows_Kanto
-;	dw TreeMonSet_Mt_Silver
-;
+	dw TreeMonSet_None
 	dw TreeMonSet_Northern_Kanto
 	dw TreeMonSet_Central_Kanto
 	dw TreeMonSet_Southern_Kanto
@@ -38,6 +22,9 @@ TreeMons:
 ; Two tables each (common, rare).
 ; Structure:
 ;	db  %, species, level
+
+TreeMonSet_None:
+; no encounter data
 
 TreeMonSet_Northern_Kanto:
 ; common
@@ -65,6 +52,7 @@ TreeMonSet_Central_Kanto:
 	db 10, SPEAROW,    10
 	db  5, SPEAROW,    10
 	db  5, SPEAROW,    15
+	db -1
 	
 ; rare
 	db 50, SPEAROW,    15
