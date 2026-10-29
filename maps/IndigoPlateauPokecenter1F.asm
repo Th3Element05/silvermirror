@@ -123,6 +123,7 @@ IndigoPokecenterOpenMtSilverScript:
 	disappear INDIGOPLATEAUPOKECENTER1F_LANCE
 	setevent EVENT_OPENED_MT_SILVER
 	clearevent EVENT_OAK_IN_MT_SILVER
+	clearevent EVENT_VICTORY_ROAD_GATE_BLACKBELT
 ;	setevent EVENT_OAKS_LAB_OAK ;disappear
 	setevent EVENT_OAKS_LAB_OAK_2 ;disappear
 	setscene SCENE_INDIGOPLATEAUPOKECENTER1F_NOOP
