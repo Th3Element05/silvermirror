@@ -3,7 +3,7 @@
 This is a custom Pokémon game based on the Pokémon Crystal disassembly.  
 Forked from Sour Crystal v4.1a
 
-My goal was to recreate the story of Red's journey through Kanto, with as many Quality of Life and graphical upgrades as possible while still maintaining the classic charm of the Gameboy/Gameboy Color Pokémon games.  
+My goal was to recreate the story of Red's journey through Kanto from Pokémon Red/Blue, with as many Quality of Life and graphical upgrades as possible while still maintaining the classic charm of the Gameboy/Gameboy Color Pokémon games.  
 I also wanted to include a new post-game storyline in Johto, as a mirror to the inclusion of Kanto in Pokémon Gold, Silver, and Crystal.  Challenge the Johto Gym Leaders for eight more badges, and climb Mount Silver to face the final challenges in the game.
 
 ![box-art](https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/silvermirror-box.png)  
