@@ -156,6 +156,7 @@ I also wanted to include a new post-game storyline in Johto, as a mirror to the 
   >GLACEON, GLISCOR, HONCHKROW, LEAFEON, MAGNEZONE, MAMOSWINE, MISMAGIUS, TANGROWTH, WEAVILE, and YANMEGA  
 - **Reef tile gfx** from Polished Crystal  
 - **Some tileset animation code** from Polished Crystal  
+- **Misty and Lorelei trainer pics** provided by SkidMarc25  
 
 ### __Audio:__
 - **Gen1 Music** from pokered-crysaudio  
