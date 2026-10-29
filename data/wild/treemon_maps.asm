@@ -30,11 +30,11 @@ TreeMonMaps:
 	treemon_map ROUTE_12,                  TREEMON_SET_CENTRAL_KANTO
 	treemon_map ROUTE_13,                  TREEMON_SET_CENTRAL_KANTO
 	treemon_map ROUTE_14,                  TREEMON_SET_CENTRAL_KANTO
-;	treemon_map ROUTE_15,                  TREEMON_SET_CENTRAL_KANTO
+	treemon_map ROUTE_15,                  TREEMON_SET_CENTRAL_KANTO
 	treemon_map ROUTE_16,                  TREEMON_SET_CENTRAL_KANTO
 ;	treemon_map ROUTE_17,                  TREEMON_SET_CENTRAL_KANTO
 ;	treemon_map ROUTE_18,                  TREEMON_SET_CENTRAL_KANTO
-	treemon_map FUCHSIA_CITY,              TREEMON_SET_CENTRAL_KANTO
+	treemon_map FUCHSIA_CITY,              TREEMON_SET_SOUTHERN_KANTO
 ;	treemon_map SAFARI_ZONE_AREA_1,        TREEMON_SET_SOUTHERN_KANTO
 ;	treemon_map SAFARI_ZONE_AREA_2,        TREEMON_SET_NORTHERN_KANTO
 ;	treemon_map SAFARI_ZONE_AREA_3,        TREEMON_SET_CENTRAL_KANTO

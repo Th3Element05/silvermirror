@@ -47,16 +47,16 @@ TreeMonSet_Northern_Kanto:
 TreeMonSet_Central_Kanto:
 ; common
 	db 50, SPEAROW,    10
-	db 15, VENONAT,    10
-	db 15, VENONAT,    15
-	db 10, SPEAROW,    10
-	db  5, SPEAROW,    10
+	db 15, PIDGEY,     10
+	db 15, PIDGEY,     15
+	db 10, VENONAT,    10
+	db  5, VENONAT,    15
 	db  5, SPEAROW,    15
 	db -1
 	
 ; rare
 	db 50, SPEAROW,    15
-	db 15, VENONAT,    10
+	db 15, PIDGEY,     15
 	db 15, VENONAT,    15
 	db 10, SCYTHER,    15
 	db  5, PINSIR,     15
