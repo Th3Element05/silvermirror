@@ -44,6 +44,108 @@ PlayersHousePosterScript:
 .Script:
 	describedecoration DECODESC_POSTER
 
+PlayersBedHealing:
+	opentext
+	writetext PlayersBedHealingText1
+	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
+	iffalse .NoPokemon
+	promptbutton
+	writetext PlayersBedHealingText2
+	yesorno
+	iffalse .NoHeal
+	closetext
+	special FadeBlackQuickly
+	special ReloadSpritesNoPalettes
+	special HealParty
+	playmusic MUSIC_HEAL
+	pause 60
+	special FadeInQuickly
+	special RestartMapMusic
+	opentext
+	writetext PlayersBedHealingText3
+.NoPokemon
+	waitbutton
+.NoHeal
+	closetext
+	end
+
+PlayersBedHealingText1:
+	text "Your bed looks"
+	line "warm and cozy."
+	done
+
+PlayersBedHealingText2:
+	text "Would you like to"
+	line "rest in your bed?"
+	done
+
+PlayersBedHealingText3:
+	text "Your #MON are"
+	line "feeling refreshed!"
+	done
+
+PlayersHouseBookshelfScript:
+if DEF(_DEBUG)
+	opentext
+	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
+	iftrue .TurnOffChallengeMode
+	playsound SFX_PAY_DAY
+	setflag ENGINE_CHALLENGE_MODE_ACTIVE
+	writetext PlayersHouseBookshelfChallengeModeActivatedText
+.cont:
+	waitbutton
+	closetext
+	end
+
+.TurnOffChallengeMode:
+	playsound SFX_SHUT_DOWN_PC
+	clearflag ENGINE_CHALLENGE_MODE_ACTIVE
+	writetext PlayersHouseBookshelfChallengeModeDeactivatedText
+	jump .cont
+else
+	jumpstd PictureBookshelfScript
+endc
+
+PlayersHousePCScript:
+	opentext
+	special PlayersHousePC
+	iftrue .Warp
+	closetext
+	end
+.Warp:
+	warp NONE, 0, 0
+	end
+
+PlayersHouseBookshelfChallengeModeActivatedText:
+	text "Switched to"
+	line "GEN2 MODE!"
+	done
+
+PlayersHouseBookshelfChallengeModeDeactivatedText:
+	text "Switched to"
+	line "CLASSIC MODE!"
+	done
+
+PlayersRadioText1:
+	text "#MON TALK!"
+	line "Please tune in"
+	cont "next time!"
+	done
+
+PlayersRadioText2:
+	text "#MON CHANNEL!"
+	done
+
+PlayersRadioText3:
+	text "This is DJ MARY,"
+	line "your host!"
+	done
+
+PlayersRadioText4:
+	text "#MON!"
+	line "#MON CHANNEL…"
+	done
+
 PlayersHouseRadioScript:
 if DEF(_DEBUG)
 	opentext
@@ -197,139 +299,32 @@ else
 	pause 45
 	closetext
 	end
-
 endc
 
-PlayersHouseBookshelfScript:
-if DEF(_DEBUG)
+PlayersHouseDebugPlayer:
 	opentext
-	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
-	iftrue .TurnOffChallengeMode
-	playsound SFX_PAY_DAY
-	setflag ENGINE_CHALLENGE_MODE_ACTIVE
-	writetext PlayersHouseBookshelfChallengeModeActivatedText
-.cont:
+	writetext PlayersHouseDebugText
 	waitbutton
-	closetext
-	end
+	givepoke PRIMEAPE, 50
+	givepoke PRIMEAPE, 50
+	givepoke JUMPLUFF, 50
 
-.TurnOffChallengeMode:
-	playsound SFX_SHUT_DOWN_PC
-	clearflag ENGINE_CHALLENGE_MODE_ACTIVE
-	writetext PlayersHouseBookshelfChallengeModeDeactivatedText
-	jump .cont
-else
-	jumpstd PictureBookshelfScript
-endc
-
-PlayersHousePCScript:
-	opentext
-	special PlayersHousePC
-	iftrue .Warp
-	closetext
-	end
-.Warp:
-	warp NONE, 0, 0
-	end
-
-PlayersBedHealing:
-	opentext
-	writetext PlayersBedHealingText1
-	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
-	iffalse .NoPokemon
-	promptbutton
-	writetext PlayersBedHealingText2
-	yesorno
-	iffalse .NoHeal
-	closetext
-	special FadeBlackQuickly
-	special ReloadSpritesNoPalettes
-	special HealParty
-	playmusic MUSIC_HEAL
-	pause 60
-	special FadeInQuickly
-	special RestartMapMusic
-	opentext
-	writetext PlayersBedHealingText3
-.NoPokemon
-	waitbutton
-.NoHeal
-	closetext
-	end
-
-PlayersBedHealingText1:
-	text "Your bed looks"
-	line "warm and cozy."
-	done
-
-PlayersBedHealingText2:
-	text "Would you like to"
-	line "rest in your bed?"
-	done
-
-PlayersBedHealingText3:
-	text "Your #MON are"
-	line "feeling refreshed!"
-	done
-
-PlayersRadioText1:
-	text "#MON TALK!"
-	line "Please tune in"
-	cont "next time!"
-	done
-
-PlayersRadioText2:
-	text "#MON CHANNEL!"
-	done
-
-PlayersRadioText3:
-	text "This is DJ MARY,"
-	line "your host!"
-	done
-
-PlayersRadioText4:
-	text "#MON!"
-	line "#MON CHANNEL…"
-	done
-
-PlayersHouseBookshelfChallengeModeActivatedText:
-	text "Switched to"
-	line "GEN2 MODE!"
-;	text "CHALLENGE MODE"
-;	line "ACTIVATED!"
-	done
-
-PlayersHouseBookshelfChallengeModeDeactivatedText:
-	text "Switched to"
-	line "CLASSIC MODE!"
-;	text "CHALLENGE MODE"
-;	line "DEACTIVATED!"
-	done
-
-;PlayersHouseDebugPlayer:
-;	opentext
-;	writetext PlayersHouseDebugText
-;	waitbutton
-;	givepoke BULBASAUR, 50
-;	givepoke CHARMANDER, 50
-;	givepoke SQUIRTLE, 50
-
-;	loadmem wPartyMon1Moves+0, FIRE_FANG
-;	loadmem wPartyMon1Moves+1, ICE_FANG
-;	loadmem wPartyMon1Moves+2, THUNDER_FANG
-;	loadmem wPartyMon1Moves+3, POISON_FANG
+	loadmem wPartyMon1Moves+0, AERIAL_ACE
+	loadmem wPartyMon1Moves+1, BOUNCE
+	loadmem wPartyMon1Moves+2, DIG
+	loadmem wPartyMon1Moves+3, TELEPORT
 ;	loadmem wPartyMon1DVs+0, $ef
 ;	loadmem wPartyMon1DVs+1, $fe
 
-;	loadmem wPartyMon2Moves+0, FIRE_PUNCH
-;	loadmem wPartyMon2Moves+1, ICE_PUNCH
-;	loadmem wPartyMon2Moves+2, THUNDERPUNCH
-;	loadmem wPartyMon2Moves+3, METAL_CLAW
+	loadmem wPartyMon2Moves+0, AQUA_JET
+	loadmem wPartyMon2Moves+1, SKY_ATTACK
+	loadmem wPartyMon2Moves+2, SUBSTITUTE
+	loadmem wPartyMon2Moves+3, MACH_PUNCH
 ;	loadmem wPartyMon2DVs+0, $ef
 ;	loadmem wPartyMon2DVs+1, $fe
 
-;	loadmem wPartyMon3Moves+0, SEED_BOMB
-;	loadmem wPartyMon3Moves+1, X_SCISSOR
+	loadmem wPartyMon3Moves+0, EXTREMESPEED
+	loadmem wPartyMon3Moves+1, SELFDESTRUCT
 ;	loadmem wPartyMon3Moves+2, ASTONISH
 ;	loadmem wPartyMon3Moves+3, ICICLE_SPEAR
 ;	loadmem wPartyMon3DVs+0, $ef
@@ -339,24 +334,24 @@ PlayersHouseBookshelfChallengeModeDeactivatedText:
 ;	giveitem CARBOS, 20
 ;	giveitem X_ACCURACY, 20
 ;	giveitem TM_GIGA_DRAIN
-;	special HealParty
-;	closetext
-;	end
+	special HealParty
+	closetext
+	end
 
-;TrainerRivalDebug:
-;	trainer RIVAL1, RIVAL_DEBUG, EVENT_BEAT_GRUNTM_1, PlayersHouseDebugText, PlayersHouseDebugText, 0, .Script
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext PlayersHouseDebugText
-;	waitbutton
-;	closetext
-;	clearevent EVENT_BEAT_GRUNTM_1
-;	end
+TrainerRivalDebug:
+	trainer RIVAL1, RIVAL_DEBUG, EVENT_BEAT_GRUNTM_1, PlayersHouseDebugText, PlayersHouseDebugText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext PlayersHouseDebugText
+	waitbutton
+	closetext
+	clearevent EVENT_BEAT_GRUNTM_1
+	end
 
-;PlayersHouseDebugText:
-;	text "DEBUG STUFF"
-;	done
+PlayersHouseDebugText:
+	text "DEBUG STUFF"
+	done
 
 PlayersHouse2F_MapEvents:
 	db 0, 0 ; filler
@@ -379,5 +374,7 @@ PlayersHouse2F_MapEvents:
 	object_event  4,  4, SPRITE_DOLL_1, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, PlayersHouseDoll1Script, EVENT_PLAYERS_HOUSE_2F_DOLL_1
 	object_event  5,  4, SPRITE_DOLL_2, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_SCRIPT, 0, PlayersHouseDoll2Script, EVENT_PLAYERS_HOUSE_2F_DOLL_2
 	object_event  0,  1, SPRITE_BIG_DOLL, SPRITEMOVEDATA_BIGDOLL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PlayersHouseBigDollScript, EVENT_PLAYERS_HOUSE_2F_BIG_DOLL
-;	object_event  1,  1, SPRITE_CHRIS, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PlayersHouseDebugPlayer, -1
-;	object_event  0,  1, SPRITE_CHRIS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerRivalDebug, -1
+if DEF(_DEBUG)
+	object_event  1,  1, SPRITE_RED, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PlayersHouseDebugPlayer, -1
+	object_event  0,  1, SPRITE_RED, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerRivalDebug, -1
+endc

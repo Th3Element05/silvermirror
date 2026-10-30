@@ -1675,13 +1675,24 @@ OaksLabMewHintText:
 	done
 
 OaksLabMissingnoHintText:
-	text "An OLD MAN from"
-	line "VIRIDIAN CITY…"
-	
-	para "Something strange"
-	line "on CINNABAR's east"
-	cont "coast…"
+	text "“Old man glitch”"
+
+	para "Let the old man"
+	line "show you how to"
+	cont "catch #MON."
+
+	para "Fly to CINNABAR,"
+	line "and SURF along"
+	cont "the west coast."
 	done
+
+;	text "An OLD MAN from"
+;	line "VIRIDIAN CITY…"
+;	
+;	para "Something strange"
+;	line "on CINNABAR's east"
+;	cont "coast…"
+;	done
 
 OaksLabRareCandyHintText:
 	text "You will get some"
@@ -1725,85 +1736,7 @@ OaksLabSwarmShinyHintText:
 	done
 
 
-; DEBUG
-DebugGotCharmander:
-	opentext
-	writetext DebugGotCharmanderText
-	yesorno
-	iffalse .End
-	setevent EVENT_GOT_POKEDEX
-	setflag ENGINE_POKEDEX
-	setevent EVENT_GOT_A_POKEMON_FROM_OAK
-	clearevent EVENT_GOT_SQUIRTLE_FROM_OAK
-	clearevent EVENT_GOT_BULBASAUR_FROM_OAK
-	setevent EVENT_GOT_CHARMANDER_FROM_OAK
-.End
-	closetext
-	end
-
-DebugGotCharmanderText:
-	text "Got CHARMANDER?"
-	done
-
-DebugGotSquirtle:
-	opentext
-	writetext DebugGotSquirtleText
-	yesorno
-	iffalse .End
-	setevent EVENT_GOT_POKEDEX
-	setflag ENGINE_POKEDEX
-	setevent EVENT_GOT_A_POKEMON_FROM_OAK
-	clearevent EVENT_GOT_CHARMANDER_FROM_OAK
-	clearevent EVENT_GOT_BULBASAUR_FROM_OAK
-	setevent EVENT_GOT_SQUIRTLE_FROM_OAK
-.End
-	closetext
-	end
-
-DebugGotSquirtleText:
-	text "Got SQUIRTLE?"
-	done
-
-DebugGotBulbasaur:
-	opentext
-	writetext DebugGotBulbasaurText
-	yesorno
-	iffalse .End
-	setevent EVENT_GOT_POKEDEX
-	setflag ENGINE_POKEDEX
-	setevent EVENT_GOT_A_POKEMON_FROM_OAK
-	clearevent EVENT_GOT_CHARMANDER_FROM_OAK
-	clearevent EVENT_GOT_SQUIRTLE_FROM_OAK
-	setevent EVENT_GOT_BULBASAUR_FROM_OAK
-.End
-	closetext
-	end
-
-DebugGotBulbasaurText:
-	text "Got BULBASAUR?"
-	done
-
-DebugBeatEliteFour:
-	opentext
-	writetext DebugBeatEliteFourText
-	yesorno
-	iffalse .End
-	setevent EVENT_BEAT_E4_LORELEI
-	setevent EVENT_BEAT_E4_BRUNO
-	setevent EVENT_BEAT_E4_AGATHA
-	setevent EVENT_BEAT_E4_LANCE
-	setevent EVENT_BEAT_E4_CHAMPION
-;	setflag ENGINE_CREDITS_SKIP
-;	setevent EVENT_BEAT_ELITE_FOUR
-	warp HALL_OF_FAME, 4, 9
-.End
-	closetext
-	end
-
-DebugBeatEliteFourText:
-	text "Beat ELITE FOUR?"
-	done
-
+if DEF(_DEBUG)
 ; back bookshelves
 DebugFullPokegear:
 	opentext
@@ -2247,103 +2180,6 @@ DebugBeatGiovanniText:
 	text "Beat GIOVANNI?"
 	done
 
-DebugLockedKantoGyms:
-	opentext
-	writetext DebugViridianGymText
-	yesorno
-	iffalse .End
-	setevent EVENT_CINNABAR_GYM_LEADER_RETURNED
-	setevent EVENT_VIRIDIAN_GYM_LEADER_RETURNED
-.End
-	closetext
-	end
-
-DebugViridianGymText:
-	text "Unlock CINNABAR,"
-	line "VIRIDIAN GYMs?"
-	done
-
-;Debug:
-
-DebugCompleteKanto:
-	opentext
-	writetext DebugCompleteKantoText
-	yesorno
-	iffalse .End
-	setevent EVENT_GOT_POKEDEX
-	setflag ENGINE_POKEDEX
-	setflag ENGINE_POKEGEAR
-	setflag ENGINE_PHONE_CARD
-	setflag ENGINE_MAP_CARD
-	setflag ENGINE_PAGER_CARD
-	setflag ENGINE_RADIO_CARD
-	setflag ENGINE_EXPN_CARD
-	setflag ENGINE_PAGER_CUT
-	setflag ENGINE_PAGER_FLY
-	setflag ENGINE_PAGER_SURF
-	setflag ENGINE_PAGER_STRENGTH
-	setflag ENGINE_PAGER_FLASH
-	setflag ENGINE_STORMBADGE ;ENGINE_PAGER_WHIRLPOOL
-	setflag ENGINE_PAGER_ROCK_SMASH
-	setevent EVENT_GOT_HM01_CUT
-	setevent EVENT_GOT_HM02_FLY
-	setevent EVENT_GOT_HM03_SURF
-	setevent EVENT_GOT_HM04_STRENGTH
-	setevent EVENT_GOT_HM05_FLASH
-	setflag ENGINE_BOULDERBADGE
-	setflag ENGINE_CASCADEBADGE
-	setflag ENGINE_THUNDERBADGE
-	setflag ENGINE_RAINBOWBADGE
-	setflag ENGINE_MARSHBADGE
-	setflag ENGINE_SOULBADGE
-	setflag ENGINE_VOLCANOBADGE
-	setflag ENGINE_EARTHBADGE
-	setflag ENGINE_FLYPOINT_INDIGO_PLATEAU
-	setflag ENGINE_FLYPOINT_PALLET
-	setflag ENGINE_FLYPOINT_VIRIDIAN
-	setflag ENGINE_FLYPOINT_PEWTER
-	setflag ENGINE_FLYPOINT_CERULEAN
-	setflag ENGINE_FLYPOINT_VERMILION
-	setflag ENGINE_FLYPOINT_CELADON
-	setflag ENGINE_FLYPOINT_ROCK_TUNNEL
-	setflag ENGINE_FLYPOINT_LAVENDER
-	setflag ENGINE_FLYPOINT_FUCHSIA
-	setflag ENGINE_FLYPOINT_SAFFRON
-	setflag ENGINE_FLYPOINT_CINNABAR
-	setevent EVENT_CINNABAR_GYM_LEADER_RETURNED
-	setevent EVENT_VIRIDIAN_GYM_LEADER_RETURNED
-	setevent EVENT_BEAT_BROCK
-	setevent EVENT_BEAT_MISTY
-	setevent EVENT_BEAT_LTSURGE
-	setevent EVENT_BEAT_ERIKA
-	setevent EVENT_BEAT_KOGA
-	setevent EVENT_BEAT_SABRINA
-	setevent EVENT_BEAT_BLAINE
-	setevent EVENT_BEAT_GIOVANNI
-	setevent EVENT_BEAT_GIOVANNI_HIDEOUT
-	setevent EVENT_BEAT_GIOVANNI_SILPHCO
-	setflag ENGINE_BOULDERBADGE
-	setflag ENGINE_CASCADEBADGE
-	setflag ENGINE_THUNDERBADGE
-	setflag ENGINE_RAINBOWBADGE
-	setflag ENGINE_MARSHBADGE
-	setflag ENGINE_SOULBADGE
-	setflag ENGINE_VOLCANOBADGE
-	setflag ENGINE_EARTHBADGE
-	setevent EVENT_BEAT_E4_LORELEI
-	setevent EVENT_BEAT_E4_BRUNO
-	setevent EVENT_BEAT_E4_AGATHA
-	setevent EVENT_BEAT_E4_LANCE
-	setevent EVENT_BEAT_E4_CHAMPION
-	warp HALL_OF_FAME, 4, 9
-.End
-	closetext
-	end
-
-DebugCompleteKantoText:
-	text "Complete KANTO?"
-	done
-
 DebugBeatJohtoLeaders:
 	opentext
 	writetext DebugBeatJasmineText
@@ -2436,8 +2272,178 @@ DebugBeatClairText:
 	text "Beat CLAIR?"
 	done
 
-;Debug:
-;Debug:
+DebugLockedKantoGyms:
+	opentext
+	writetext DebugViridianGymText
+	yesorno
+	iffalse .End
+	setevent EVENT_CINNABAR_GYM_LEADER_RETURNED
+	setevent EVENT_VIRIDIAN_GYM_LEADER_RETURNED
+.End
+	closetext
+	end
+
+DebugViridianGymText:
+	text "Unlock CINNABAR,"
+	line "VIRIDIAN GYMs?"
+	done
+
+DebugCompleteKanto:
+	opentext
+	writetext DebugCompleteKantoText
+	yesorno
+	iffalse .End
+	setevent EVENT_GOT_POKEDEX
+	setflag ENGINE_POKEDEX
+	setflag ENGINE_POKEGEAR
+	setflag ENGINE_PHONE_CARD
+	setflag ENGINE_MAP_CARD
+	setflag ENGINE_PAGER_CARD
+	setflag ENGINE_RADIO_CARD
+	setflag ENGINE_EXPN_CARD
+	setflag ENGINE_PAGER_CUT
+	setflag ENGINE_PAGER_FLY
+	setflag ENGINE_PAGER_SURF
+	setflag ENGINE_PAGER_STRENGTH
+	setflag ENGINE_PAGER_FLASH
+	setflag ENGINE_STORMBADGE ;ENGINE_PAGER_WHIRLPOOL
+	setflag ENGINE_PAGER_ROCK_SMASH
+	setevent EVENT_GOT_HM01_CUT
+	setevent EVENT_GOT_HM02_FLY
+	setevent EVENT_GOT_HM03_SURF
+	setevent EVENT_GOT_HM04_STRENGTH
+	setevent EVENT_GOT_HM05_FLASH
+	setflag ENGINE_BOULDERBADGE
+	setflag ENGINE_CASCADEBADGE
+	setflag ENGINE_THUNDERBADGE
+	setflag ENGINE_RAINBOWBADGE
+	setflag ENGINE_MARSHBADGE
+	setflag ENGINE_SOULBADGE
+	setflag ENGINE_VOLCANOBADGE
+	setflag ENGINE_EARTHBADGE
+	setflag ENGINE_FLYPOINT_INDIGO_PLATEAU
+	setflag ENGINE_FLYPOINT_PALLET
+	setflag ENGINE_FLYPOINT_VIRIDIAN
+	setflag ENGINE_FLYPOINT_PEWTER
+	setflag ENGINE_FLYPOINT_CERULEAN
+	setflag ENGINE_FLYPOINT_VERMILION
+	setflag ENGINE_FLYPOINT_CELADON
+	setflag ENGINE_FLYPOINT_ROCK_TUNNEL
+	setflag ENGINE_FLYPOINT_LAVENDER
+	setflag ENGINE_FLYPOINT_FUCHSIA
+	setflag ENGINE_FLYPOINT_SAFFRON
+	setflag ENGINE_FLYPOINT_CINNABAR
+	setevent EVENT_CINNABAR_GYM_LEADER_RETURNED
+	setevent EVENT_VIRIDIAN_GYM_LEADER_RETURNED
+	setevent EVENT_BEAT_BROCK
+	setevent EVENT_BEAT_MISTY
+	setevent EVENT_BEAT_LTSURGE
+	setevent EVENT_BEAT_ERIKA
+	setevent EVENT_BEAT_KOGA
+	setevent EVENT_BEAT_SABRINA
+	setevent EVENT_BEAT_BLAINE
+	setevent EVENT_BEAT_GIOVANNI
+	setevent EVENT_BEAT_GIOVANNI_HIDEOUT
+	setevent EVENT_BEAT_GIOVANNI_SILPHCO
+	setflag ENGINE_BOULDERBADGE
+	setflag ENGINE_CASCADEBADGE
+	setflag ENGINE_THUNDERBADGE
+	setflag ENGINE_RAINBOWBADGE
+	setflag ENGINE_MARSHBADGE
+	setflag ENGINE_SOULBADGE
+	setflag ENGINE_VOLCANOBADGE
+	setflag ENGINE_EARTHBADGE
+	setevent EVENT_BEAT_E4_LORELEI
+	setevent EVENT_BEAT_E4_BRUNO
+	setevent EVENT_BEAT_E4_AGATHA
+	setevent EVENT_BEAT_E4_LANCE
+	setevent EVENT_BEAT_E4_CHAMPION
+	warp HALL_OF_FAME, 4, 9
+.End
+	closetext
+	end
+
+DebugCompleteKantoText:
+	text "Complete KANTO?"
+	done
+
+DebugGotCharmander:
+	opentext
+	writetext DebugGotCharmanderText
+	yesorno
+	iffalse .End
+	setevent EVENT_GOT_POKEDEX
+	setflag ENGINE_POKEDEX
+	setevent EVENT_GOT_A_POKEMON_FROM_OAK
+	clearevent EVENT_GOT_SQUIRTLE_FROM_OAK
+	clearevent EVENT_GOT_BULBASAUR_FROM_OAK
+	setevent EVENT_GOT_CHARMANDER_FROM_OAK
+.End
+	closetext
+	end
+
+DebugGotCharmanderText:
+	text "Got CHARMANDER?"
+	done
+
+DebugGotSquirtle:
+	opentext
+	writetext DebugGotSquirtleText
+	yesorno
+	iffalse .End
+	setevent EVENT_GOT_POKEDEX
+	setflag ENGINE_POKEDEX
+	setevent EVENT_GOT_A_POKEMON_FROM_OAK
+	clearevent EVENT_GOT_CHARMANDER_FROM_OAK
+	clearevent EVENT_GOT_BULBASAUR_FROM_OAK
+	setevent EVENT_GOT_SQUIRTLE_FROM_OAK
+.End
+	closetext
+	end
+
+DebugGotSquirtleText:
+	text "Got SQUIRTLE?"
+	done
+
+DebugGotBulbasaur:
+	opentext
+	writetext DebugGotBulbasaurText
+	yesorno
+	iffalse .End
+	setevent EVENT_GOT_POKEDEX
+	setflag ENGINE_POKEDEX
+	setevent EVENT_GOT_A_POKEMON_FROM_OAK
+	clearevent EVENT_GOT_CHARMANDER_FROM_OAK
+	clearevent EVENT_GOT_SQUIRTLE_FROM_OAK
+	setevent EVENT_GOT_BULBASAUR_FROM_OAK
+.End
+	closetext
+	end
+
+DebugGotBulbasaurText:
+	text "Got BULBASAUR?"
+	done
+
+DebugBeatEliteFour:
+	opentext
+	writetext DebugBeatEliteFourText
+	yesorno
+	iffalse .End
+	setevent EVENT_BEAT_E4_LORELEI
+	setevent EVENT_BEAT_E4_BRUNO
+	setevent EVENT_BEAT_E4_AGATHA
+	setevent EVENT_BEAT_E4_LANCE
+	setevent EVENT_BEAT_E4_CHAMPION
+;	setflag ENGINE_CREDITS_SKIP
+;	setevent EVENT_BEAT_ELITE_FOUR
+	warp HALL_OF_FAME, 4, 9
+.End
+	closetext
+	end
+
+DebugBeatEliteFourText:
+	text "Beat ELITE FOUR?"
+	done
 
 DebugRareCandy:
 	opentext
@@ -2452,6 +2458,8 @@ DebugRareCandy:
 DebugRareCandyText:
 	text "10 RARE CANDY?"
 	done
+endc
+
 
 OaksLab_MapEvents:
 	db 0, 0 ; filler
@@ -2472,24 +2480,37 @@ OaksLab_MapEvents:
 	bg_event  7,  1, BGEVENT_READ, OaksLabHintBookshelf ;DebugGotSquirtle
 	bg_event  8,  1, BGEVENT_READ, OaksLabDifficultBookshelf ;DebugGotBulbasaur
 	bg_event  9,  1, BGEVENT_READ, OaksLabDifficultBookshelf ;DebugBeatEliteFour
+
+if DEF(_DEBUG)
 ; back bookshelves
-;	bg_event  0,  6, BGEVENT_READ, DebugFullPokegear
-;	bg_event  1,  6, BGEVENT_READ, DebugAllTMs
-;	bg_event  2,  6, BGEVENT_READ, DebugAllHMs
-;	bg_event  3,  6, BGEVENT_READ, DebugMasterBalls
-;	bg_event  6,  6, BGEVENT_READ, DebugSkipFastShip
-;	bg_event  7,  6, BGEVENT_READ, DebugCredits
-;	bg_event  8,  6, BGEVENT_READ, DebugLancesRoom
-;	bg_event  9,  6, BGEVENT_READ, DebugSFXRoom
+	bg_event  0,  6, BGEVENT_READ, DebugFullPokegear
+	bg_event  1,  6, BGEVENT_READ, DebugAllTMs
+	bg_event  2,  6, BGEVENT_READ, DebugAllHMs
+	bg_event  3,  6, BGEVENT_READ, DebugMasterBalls
+	bg_event  6,  6, BGEVENT_READ, DebugSkipFastShip
+	bg_event  7,  6, BGEVENT_READ, DebugCredits
+	bg_event  8,  6, BGEVENT_READ, DebugLancesRoom
+	bg_event  9,  6, BGEVENT_READ, DebugSFXRoom
 ; front bookshelves
-	bg_event  0,  7, BGEVENT_READ, OaksLabBookshelf1 ;DebugBeatKantoLeaders
-	bg_event  1,  7, BGEVENT_READ, OaksLabBookshelf2 ;DebugLockedKantoGyms
-	bg_event  2,  7, BGEVENT_READ, OaksLabBookshelf3 ;Debug
-	bg_event  3,  7, BGEVENT_READ, OaksLabBookshelf4 ;DebugCompleteKanto
-	bg_event  6,  7, BGEVENT_READ, OaksLabBookshelf5 ;DebugBeatJohtoLeaders
-	bg_event  7,  7, BGEVENT_READ, OaksLabBookshelf6 ;Debug
-	bg_event  8,  7, BGEVENT_READ, OaksLabBookshelf7 ;Debug
-	bg_event  9,  7, BGEVENT_READ, OaksLabBookshelf8 ;DebugRareCandy
+	bg_event  0,  7, BGEVENT_READ, DebugBeatKantoLeaders
+	bg_event  1,  7, BGEVENT_READ, DebugBeatJohtoLeaders
+	bg_event  2,  7, BGEVENT_READ, DebugLockedKantoGyms
+	bg_event  3,  7, BGEVENT_READ, DebugCompleteKanto
+	bg_event  6,  7, BGEVENT_READ, DebugGotBulbasaur
+	bg_event  7,  7, BGEVENT_READ, DebugGotCharmander
+	bg_event  8,  7, BGEVENT_READ, DebugGotSquirtle
+	bg_event  9,  7, BGEVENT_READ, DebugRareCandy
+else
+; front bookshelves
+	bg_event  0,  7, BGEVENT_READ, OaksLabBookshelf1
+	bg_event  1,  7, BGEVENT_READ, OaksLabBookshelf2
+	bg_event  2,  7, BGEVENT_READ, OaksLabBookshelf3
+	bg_event  3,  7, BGEVENT_READ, OaksLabBookshelf4
+	bg_event  6,  7, BGEVENT_READ, OaksLabBookshelf5
+	bg_event  7,  7, BGEVENT_READ, OaksLabBookshelf6
+	bg_event  8,  7, BGEVENT_READ, OaksLabBookshelf7
+	bg_event  9,  7, BGEVENT_READ, OaksLabBookshelf8
+endc
 
 ; normal stuff
 	bg_event  4,  0, BGEVENT_READ, OaksLabPoster1
