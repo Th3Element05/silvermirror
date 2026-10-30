@@ -2,12 +2,12 @@
 ; OverworldSprites indexes (see data/sprites/sprites.asm)
 	const_def
 	const SPRITE_NONE                   ; 00
-	const SPRITE_CHRIS                  ; 01
- 	const SPRITE_CHRIS_RUN              ; 02
-	const SPRITE_CHRIS_BIKE             ; 03
-	const SPRITE_KRIS                   ; 04
- 	const SPRITE_KRIS_RUN               ; 05
-	const SPRITE_KRIS_BIKE              ; 06
+	const SPRITE_RED                    ; 01
+ 	const SPRITE_RED_RUN                ; 02
+	const SPRITE_RED_BIKE               ; 03
+	const SPRITE_GREEN                  ; 04
+ 	const SPRITE_GREEN_RUN              ; 05
+	const SPRITE_GREEN_BIKE             ; 06
 	const SPRITE_SURF                   ; 07 Lapras
 	const SPRITE_BLUE                   ; 08
 	const SPRITE_BROCK                  ; 09

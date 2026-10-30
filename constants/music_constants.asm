@@ -49,7 +49,7 @@
 	const MUSIC_VIOLET_CITY                  ; 2d
 	const MUSIC_JOHTO_GYM_LEADER_BATTLE      ; 2e
 	const MUSIC_CHAMPION_BATTLE              ; 2f
-	const MUSIC_RIVAL_BATTLE                 ; 30
+	const MUSIC_FINAL_BATTLE                 ; 30 ;MUSIC_RIVAL_BATTLE
 	const MUSIC_ROCKET_BATTLE                ; 31
 	const MUSIC_PROF_ELM                     ; 32
 	const MUSIC_DARK_CAVE                    ; 33
@@ -83,15 +83,15 @@
 	const MUSIC_VICTORY_ROAD                 ; 4f
 	const MUSIC_POKEMON_LULLABY              ; 50
 	const MUSIC_POKEMON_MARCH                ; 51
-	const MUSIC_GS_OPENING                   ; 52
-	const MUSIC_GS_OPENING_2                 ; 53
+;	const MUSIC_GS_OPENING                   ; 52 removed
+;	const MUSIC_GS_OPENING_2                 ; 53 removed
 	const MUSIC_MAIN_MENU                    ; 54
 	const MUSIC_RUINS_OF_ALPH_INTERIOR       ; 55
 	const MUSIC_ROCKET_OVERTURE              ; 56
 	const MUSIC_DANCING_HALL                 ; 57
 	const MUSIC_BUG_CATCHING_CONTEST_RANKING ; 58
 	const MUSIC_BUG_CATCHING_CONTEST         ; 59
-	const MUSIC_LAKE_OF_RAGE_ROCKET_RADIO    ; 5a
+;	const MUSIC_LAKE_OF_RAGE_ROCKET_RADIO    ; 5a removed
 	const MUSIC_PRINTER                      ; 5b
 	const MUSIC_POST_CREDITS                 ; 5c
 ; new to Crystal

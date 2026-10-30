@@ -11,7 +11,7 @@ INCLUDE "audio/sfx_pointers.asm"
 SECTION "Songs 1", ROMX
 
 INCLUDE "audio/music/route36.asm"
-INCLUDE "audio/music/rivalbattle.asm"
+INCLUDE "audio/music/finalbattle.asm" ; "audio/music/rivalbattle.asm"
 INCLUDE "audio/music/rocketbattle.asm"
 INCLUDE "audio/music/elmslab.asm"
 INCLUDE "audio/music/darkcave.asm"
@@ -25,7 +25,6 @@ INCLUDE "audio/music/titlescreen.asm" ; samename
 INCLUDE "audio/music/ruinsofalphinterior.asm"
 INCLUDE "audio/music/lookpokemaniac.asm"
 INCLUDE "audio/music/trainervictory.asm"
-INCLUDE "audio/music/viridianforest.asm" ; "audio/music/route2.asm"
 
 
 SECTION "Songs 2", ROMX
@@ -39,7 +38,6 @@ INCLUDE "audio/music/kantowildbattle.asm" ; samename
 INCLUDE "audio/music/pokemoncenter.asm"
 INCLUDE "audio/music/looklass.asm" ; samename
 INCLUDE "audio/music/looktrainer.asm" ; "audio/music/lookofficer.asm"
-;INCLUDE "audio/music/viridianforest.asm" ; "audio/music/route2.asm"
 INCLUDE "audio/music/mtmoon.asm"
 INCLUDE "audio/music/showmearound.asm"
 INCLUDE "audio/music/gamecorner.asm"
@@ -56,7 +54,7 @@ INCLUDE "audio/music/ruinsofalphradio.asm"
 INCLUDE "audio/music/lookbeauty.asm"
 INCLUDE "audio/music/route26.asm"
 INCLUDE "audio/music/ecruteakcity.asm"
-INCLUDE "audio/music/lakeofragerocketradio.asm"
+;INCLUDE "audio/music/lakeofragerocketradio.asm" ; removed
 INCLUDE "audio/music/magnettrain.asm"
 INCLUDE "audio/music/lavendertown.asm" ; samename
 INCLUDE "audio/music/dancinghall.asm"
@@ -76,34 +74,37 @@ INCLUDE "audio/music/printer.asm"
 
 SECTION "Songs 4", ROMX
 
-INCLUDE "audio/music/cities1.asm" ; "audio/music/viridiancity.asm"
-INCLUDE "audio/music/celadoncity.asm" ; samename
-
 INCLUDE "audio/music/wildpokemonvictory.asm"
 INCLUDE "audio/music/successfulcapture.asm"
 assert BANK(Music_WildPokemonVictory) == BANK(Music_SuccessfulCapture)
 
+INCLUDE "audio/music/johtowildbattle.asm"
+INCLUDE "audio/music/johtowildbattlenight.asm"
+assert BANK(Music_JohtoWildBattle) == BANK(Music_JohtoWildBattleNight)
+
+INCLUDE "audio/music/lookscientist.asm" ; "audio/music/lookhiker.asm"
+INCLUDE "audio/music/lookrocket.asm"
+INCLUDE "audio/music/rockettheme.asm"
+assert BANK(Music_LookRocket) == BANK(Music_RocketTheme)
+
+INCLUDE "audio/music/lookrival.asm" ; samename
+INCLUDE "audio/music/pokemontower.asm" ; "audio/music/aftertherivalfight.asm"
+; assert BANK(Music_LookRival) == BANK(Music_AfterTheRivalFight)
+
+INCLUDE "audio/music/cities1.asm" ; "audio/music/viridiancity.asm"
+INCLUDE "audio/music/celadoncity.asm" ; samename
+INCLUDE "audio/music/viridianforest.asm" ; "audio/music/route2.asm"
 INCLUDE "audio/music/gymleadervictory.asm"
 INCLUDE "audio/music/mtmoonsquare.asm"
 INCLUDE "audio/music/gym.asm"
 INCLUDE "audio/music/pallettown.asm"
 INCLUDE "audio/music/profoakspokemontalk.asm"
 INCLUDE "audio/music/profoak.asm"
-
-INCLUDE "audio/music/lookrival.asm" ; samename
-INCLUDE "audio/music/pokemontower.asm" ; "audio/music/aftertherivalfight.asm"
-; assert BANK(Music_LookRival) == BANK(Music_AfterTheRivalFight)
-
 INCLUDE "audio/music/surf.asm" ; samename
 INCLUDE "audio/music/nationalpark.asm"
 INCLUDE "audio/music/azaleatown.asm"
 INCLUDE "audio/music/cherrygrovecity.asm"
 INCLUDE "audio/music/unioncave.asm"
-
-INCLUDE "audio/music/johtowildbattle.asm"
-INCLUDE "audio/music/johtowildbattlenight.asm"
-assert BANK(Music_JohtoWildBattle) == BANK(Music_JohtoWildBattleNight)
-
 INCLUDE "audio/music/johtotrainerbattle.asm"
 INCLUDE "audio/music/lookyoungster.asm"
 INCLUDE "audio/music/tintower.asm"
@@ -113,14 +114,8 @@ INCLUDE "audio/music/mom.asm"
 INCLUDE "audio/music/victoryroad.asm"
 INCLUDE "audio/music/pokemonlullaby.asm"
 INCLUDE "audio/music/pokemonmarch.asm"
-INCLUDE "audio/music/goldsilveropening.asm"
-INCLUDE "audio/music/goldsilveropening2.asm"
-INCLUDE "audio/music/lookscientist.asm" ; "audio/music/lookhiker.asm"
-
-INCLUDE "audio/music/lookrocket.asm"
-INCLUDE "audio/music/rockettheme.asm"
-assert BANK(Music_LookRocket) == BANK(Music_RocketTheme)
-
+;INCLUDE "audio/music/goldsilveropening.asm"
+;INCLUDE "audio/music/goldsilveropening2.asm"
 INCLUDE "audio/music/mainmenu.asm"
 INCLUDE "audio/music/lookkimonogirl.asm"
 INCLUDE "audio/music/pokeflutechannel.asm"
