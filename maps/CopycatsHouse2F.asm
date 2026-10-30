@@ -34,13 +34,13 @@ Copycat:
 	iftrue .Default_Female_1
 	applymovement COPYCATSHOUSE2F_COPYCAT, CopycatSpinAroundMovementData
 	faceplayer
-	variablesprite SPRITE_COPYCAT, SPRITE_CHRIS
+	variablesprite SPRITE_COPYCAT, SPRITE_RED
 	sjump .Default_Merge_1
 
 .Default_Female_1:
 	applymovement COPYCATSHOUSE2F_COPYCAT, CopycatSpinAroundMovementData
 	faceplayer
-	variablesprite SPRITE_COPYCAT, SPRITE_KRIS
+	variablesprite SPRITE_COPYCAT, SPRITE_GREEN
 .Default_Merge_1:
 	special LoadUsedSpritesGFX
 	checkevent EVENT_GOT_METAL_POWDER_FROM_COPYCAT
