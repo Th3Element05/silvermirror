@@ -8,9 +8,15 @@ I also wanted to include a new post-game storyline in Johto, as a mirror to the 
 
 ![box-art](https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/silvermirror-box.png)  
 
-## Version 1.0
+## Version 1.01
 
-- <a href="https://github.com/Th3Element05/silvermirror/releases/tag/v1.0">Initial Release v1.0</a>
+- <a href="https://github.com/Th3Element05/silvermirror/releases/tag/v1.0">Initial Release v1.0</a>  
+
+### __Change Log:__  
+- Replaced Kris graphics with Leaf/Green  
+- Replaced Pallet Town music with the original track from RBY  
+- Adjusted battle music for Rival battles and some other climactic battles  
+- Made a hint in the hint book way less vague  
 
 ### __Resources:__
 - **[Silver Mirror Discord Server](https://discord.gg/rsUamUSuwK)**
@@ -91,6 +97,9 @@ I also wanted to include a new post-game storyline in Johto, as a mirror to the 
 - **Many other small goodies to find!**  
 
 <br/>
+
+### __Recommended Emulators:__
+[mGBA](https://mgba.io/),  [BGB](https://bgb.bircd.org/), [SameBoy](https://github.com/LIJI32/SameBoy), [Gambatte](https://github.com/sinamas/gambatte)  
 
 ## __Screenshots:__
 
