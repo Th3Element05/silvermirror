@@ -152,15 +152,24 @@ I also wanted to include a new post-game storyline in Johto, as a mirror to the 
   >Everyone else on the PRET pokecrystal Discord!  
 
 ### __Graphics:__
-- **Pokémon Graphics:** from Polished Crystal:  
-  >GLACEON, GLISCOR, HONCHKROW, LEAFEON, MAGNEZONE, MAMOSWINE, MISMAGIUS, TANGROWTH, WEAVILE, and YANMEGA  
-- **Reef tile gfx** from Polished Crystal  
-- **Some tileset animation code** from Polished Crystal  
-- **Misty and Lorelei trainer pics** provided by SkidMarc25  
+- **SourApple**  
+  >Pokémon Front Pics and Animations  
+- **MeroMero**  
+  >Provided the base for most Pokemon Back Pics  
+- **Polished Crystal**  
+- >Pokémon Graphics by various contributors:  
+  >`GLACEON, GLISCOR, HONCHKROW, LEAFEON, MAGNEZONE, MAMOSWINE, MISMAGIUS, TANGROWTH, WEAVILE, and YANMEGA`  
+  >Reef tile gfx  
+  >Some tileset animation code  
+- **AtmaBuster**  
+  >Provided the base for Leaf's Front and Back graphics  
+- **SkidMarc25**  
+  >Provided trainer graphics for:  
+  >`Cyclist, Misty, and Lorelei`  
 
 ### __Audio:__
-- **Gen1 Music** from pokered-crysaudio  
-  >dannye  
+- **dannye** pokered-crysaudio  
+  >Gen1 Music Tracks  
 
 ### __Testing:__
 - **Alpha Version Testers**  
