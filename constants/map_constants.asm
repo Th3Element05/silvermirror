@@ -38,10 +38,10 @@ ENDM
 	newgroup PALLET                                               ;  1
 	map_const PALLET_TOWN,                                 10,  9 ;  1
 	map_const PLAYERS_HOUSE_1F,                             5,  4 ;  2
-	map_const PLAYERS_HOUSE_2F,                             4,  3 ;  3
+	map_const PLAYERS_HOUSE_2F,                             4,  4 ;  3
 	map_const OAKS_LAB,                                     5,  6 ;  4
 	map_const BLUES_HOUSE,                                  5,  4 ;  5
-	map_const BLUES_HOUSE_2F,                               4,  3 ;  6
+	map_const BLUES_HOUSE_2F,                               4,  4 ;  6
 	map_const ROUTE_1,                                     10, 18 ;  7
 	endgroup
 
@@ -223,7 +223,7 @@ ENDM
 	map_const FIGHTING_DOJO,                                5,  7 ;  5
 	map_const MR_PSYCHICS_HOUSE,                            4,  4 ;  6
 	map_const COPYCATS_HOUSE_1F,                            5,  4 ;  7
-	map_const COPYCATS_HOUSE_2F,                            4,  3 ;  8
+	map_const COPYCATS_HOUSE_2F,                            4,  4 ;  8
 	map_const SAFFRON_PIDGEY_HOUSE,                         4,  4 ;  9
 	map_const SAFFRON_MAGNET_TRAIN_STATION,                10,  9 ; 10
 	map_const ROUTE_5,                                     10, 18 ; 11

@@ -2,12 +2,11 @@ RedsHouse2F_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
-	callback MAPCALLBACK_TILES, RedsHouse2FHouseTilesCallback
+;	callback MAPCALLBACK_TILES, RedsHouse2FHouseTilesCallback
 
-RedsHouse2FHouseTilesCallback:
-;	changeblock 4, 2, $38 ; n64
-	changeblock 0, 4, $1e ; yellow bed
-	endcallback
+;RedsHouse2FHouseTilesCallback:
+;	changeblock 0, 4, $1e ; yellow bed
+;	endcallback
 
 RedsHouse2FYoungChris:
 	faceplayer
@@ -120,10 +119,11 @@ RedsHouse2FPCScript:
 	jumptext RedsHouse2FPCText
 
 RedsHouse2FN64Text:
-	text "<PLAYER> played the"
-	line "N64."
+	text "<PLAYER> played"
+	line "the NINTENDO 64."
 
-	para "Better get going."
+	para "Well, better get"
+	line "going."
 	done
 
 RedsHouse2FPCText:
@@ -148,5 +148,5 @@ RedsHouse2F_MapEvents:
 	bg_event  2,  1, BGEVENT_READ, RedsHouse2FPCScript
 
 	def_object_events
-	object_event  1,  4, SPRITE_BOY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RedsHouse2FYoungChris, -1
-	object_event  4,  2, SPRITE_N64, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedsHouse2FN64Script, -1
+	object_event  2,  3, SPRITE_BOY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RedsHouse2FYoungChris, -1
+;	object_event  4,  2, SPRITE_N64, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedsHouse2FN64Script, -1

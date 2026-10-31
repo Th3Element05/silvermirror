@@ -12,8 +12,9 @@ CopycatsHouse2F_MapScripts:
 ;	callback MAPCALLBACK_OBJECTS, CopycatsHouse2FWhichGenderCallback
 
 CopycatsHouse2FTilesCallback:
-	changeblock 2, 0, $32 ; table
-	changeblock 0, 4, $1c ; pink bed
+	changeblock 0, 0, $04 ; wall
+	changeblock 0, 2, $05 ; floor
+	changeblock 0, 6, $1e ; yellow bed
 	endcallback
 
 ;CopycatsHouse2FWhichGenderCallback:
@@ -268,6 +269,16 @@ CopycatsHouse2FDollText:
 	line "It's only a doll…"
 	done
 
+CopycatsHouse2FGameConsoleScript:
+	jumptext CopycatsHouse2FSNESText
+CopycatsHouse2FSNESText:
+	text "<PLAYER> played"
+	line "the SNES."
+
+	para "Well, better get"
+	line "going."
+	done
+
 CopycatsHouse2FHiddenNugget:
 	hiddenitem NUGGET, EVENT_COPYCATS_HOUSE_2F_HIDDEN_NUGGET
 
@@ -280,19 +291,20 @@ CopycatsHouse2F_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  5,  1, BGEVENT_READ, CopycatsHouse2FBookshelf
+;	bg_event  5,  1, BGEVENT_READ, CopycatsHouse2FBookshelf
 	bg_event  2,  1, BGEVENT_ITEM, CopycatsHouse2FHiddenNugget
 
 	def_object_events
 ;	object_event  2,  4, SPRITE_COPYCAT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Copycat, EVENT_COPYCAT_1
 ;	object_event  2,  4, SPRITE_COPYCAT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Copycat, EVENT_COPYCAT_2
 	object_event  2,  4, SPRITE_COPYCAT, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Copycat, -1
-	object_event  1,  5, SPRITE_CLEFAIRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, EVENT_COPYCATS_HOUSE_2F_DOLL
-	object_event  6,  4, SPRITE_DODUO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CopycatsDoduo, -1
+	object_event  1,  6, SPRITE_CLEFAIRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, EVENT_COPYCATS_HOUSE_2F_DOLL
+	object_event  5,  6, SPRITE_DODUO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CopycatsDoduo, -1
 	object_event  0,  1, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_BIGDOLLSYM, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, -1
 	object_event  3,  1, SPRITE_EEVEE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, -1
 ;	object_event  4,  4, SPRITE_SHELLDER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, -1
-	object_event  4,  4, SPRITE_JIGGLYPUFF, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, -1
+	object_event  5,  1, SPRITE_JIGGLYPUFF, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, -1
 ;	object_event  2,  1, SPRITE_PIDGEY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, -1
+	object_event  4,  5, SPRITE_SNES, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FGameConsoleScript, -1
 
 ;.PinkOverYellowOBPalette

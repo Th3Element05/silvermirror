@@ -1,6 +1,6 @@
 InitDecorations:
-	ld a, DECO_FEATHERY_BED
-	ld [wDecoBed], a
+;	ld a, DECO_FEATHERY_BED
+;	ld [wDecoBed], a
 	ld a, DECO_TOWN_MAP
 	ld [wDecoPoster], a
 	ld a, DECO_SNES
@@ -1108,13 +1108,13 @@ DecorationDesc_GiantOrnament:
 
 ToggleMaptileDecorations:
 	; tile coordinates work the same way as for changeblock
-	lb de, 0, 4 ; bed coordinates
+	lb de, 0, 6 ; bed coordinates
 	ld a, [wDecoBed]
 	call SetDecorationTile
-	lb de, 7, 4 ; plant coordinates
+	lb de, 6, 6 ; plant coordinates
 	ld a, [wDecoPlant]
 	call SetDecorationTile
-	lb de, 6, 0 ; poster coordinates
+	lb de, 4, 0 ; poster coordinates
 	ld a, [wDecoPoster]
 	call SetDecorationTile
 	call SetPosterVisibility
