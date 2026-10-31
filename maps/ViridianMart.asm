@@ -18,11 +18,11 @@ ViridianMartOaksParcelScene:
 	opentext
 	writetext ViridianMartOaksParcelText
 	promptbutton
+	giveitem OAKS_PARCEL
 	writetext ViridianMartGotParcelText
 	playsound SFX_KEY_ITEM
-	giveitem OAKS_PARCEL
 	waitsfx
-	waitbutton
+	itemnotify
 	writetext ViridianMartSayHiToOakText
 	waitbutton
 	closetext
@@ -132,7 +132,7 @@ ViridianMartOaksParcelText:
 	done
 	
 ViridianMartGotParcelText:
-	text "<PLAYER> got"
+	text "<PLAYER> received"
 	line "OAK's PARCEL!"
 	done
 

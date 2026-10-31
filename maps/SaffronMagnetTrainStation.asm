@@ -59,8 +59,8 @@ SaffronMagnetTrainStationOfficerScript:
 	takemoney YOUR_MONEY, 500
 	special PlaceMoneyTopRight
 	waitsfx
-	writetext SaffronMagnetTrainStationOfficer_BoughtPassText
 	giveitem RAIL_PASS
+	writetext SaffronMagnetTrainStationOfficer_BoughtPassText
 	playsound SFX_KEY_ITEM
 	waitsfx
 	itemnotify

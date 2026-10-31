@@ -57,8 +57,8 @@ GoldenrodMagnetTrainStationOfficerScript:
 	takemoney YOUR_MONEY, 500
 	special PlaceMoneyTopRight
 	waitsfx
-	writetext SaffronMagnetTrainStationOfficer_BoughtPassText
 	giveitem RAIL_PASS
+	writetext SaffronMagnetTrainStationOfficer_BoughtPassText
 	playsound SFX_KEY_ITEM
 	waitsfx
 	itemnotify
@@ -176,10 +176,8 @@ GoldenrodMagnetTrainStationGentlemanScript:
 	iffalse .DontLikeTrains
 	writetext GoldenrodMagnetTrainStationGentleman_TrainsText
 	waitbutton
-;	playsound SFX_KEY_ITEM
 	verbosegiveitem RAIL_PASS
 	waitsfx
-;	itemnotify
 	closetext
 	end
 

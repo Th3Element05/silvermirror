@@ -18,7 +18,6 @@ PokemonFanClubChairmanScript:
 	checkevent EVENT_GOT_BICYCLE
 	iftrue .BoughtBike
 	verbosegiveitem BIKE_VOUCHER
-	iffalse .NoRoomForGift
 	setevent EVENT_LISTENED_TO_FAN_CLUB_PRESIDENT
 	writetext PokemonFanClubChairmanVoucherText
 	waitbutton

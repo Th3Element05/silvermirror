@@ -37,7 +37,7 @@ TrainerRocketHideoutGiovanni:
 	setevent EVENT_CELADON_CITY_ROCKETS
 	setevent EVENT_OPENED_ROCKET_HIDEOUT_B4F_DOOR
 	changeblock 16, 12, $65 ; door open
-	appear ROCKETHIDEOUTB4F_SILPH_SCOPE
+;	appear ROCKETHIDEOUTB4F_SILPH_SCOPE
 	special FadeInQuickly
 	end
 
@@ -82,7 +82,23 @@ RocketHideoutGiovanniAfterBattleText:
 	para "I hope we meet"
 	line "again…"
 	done
-	
+
+RocketHideoutB4FSilphScope:
+	opentext
+	giveitem SILPH_SCOPE
+	writetext RocketHideoutB4FGotSilphScopeText
+	playsound SFX_KEY_ITEM
+	waitsfx
+	itemnotify
+	closetext
+	end
+
+RocketHideoutB4FGotSilphScopeText:
+	text "<PLAYER> found"
+	line "the SILPH SCOPE!"
+	done
+
+
 TrainerRocketGruntF3:
 	trainer GRUNTF, GRUNTF_3, EVENT_BEAT_GRUNTF_3, RocketGruntF3SeenText, RocketGruntF3BeatenText, 0, .Script
 .Script:
@@ -177,9 +193,6 @@ RocketExecutiveF1AfterBattleText:
 RocketHideoutB4FLiftKey:
 	itemball LIFT_KEY
 
-RocketHideoutB4FSilphScope:
-	itemball SILPH_SCOPE
-
 RocketHideoutB4FTMAirSlice:
 	itemball TM_AIR_SLICE
 
@@ -208,7 +221,7 @@ RocketHideoutB4F_MapEvents:
 	def_object_events
 	object_event 17,  3, SPRITE_GIOVANNI, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerRocketHideoutGiovanni, EVENT_BEAT_GIOVANNI_HIDEOUT
 	object_event  2,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RocketHideoutB4FLiftKey, EVENT_ROCKET_HIDEOUT_B4F_LIFT_KEY
-	object_event 17,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RocketHideoutB4FSilphScope, EVENT_ROCKET_HIDEOUT_B4F_SILPH_SCOPE
+	object_event 17,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RocketHideoutB4FSilphScope, EVENT_ROCKET_HIDEOUT_B4F_SILPH_SCOPE
 	object_event  3,  2, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerRocketGruntF3, EVENT_BEAT_GIOVANNI
 	object_event 18, 14, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerRocketExecutiveF1, EVENT_BEAT_GIOVANNI_HIDEOUT
 	object_event 15, 14, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerRocketExecutiveM1, EVENT_BEAT_GIOVANNI_HIDEOUT

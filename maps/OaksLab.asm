@@ -1370,8 +1370,13 @@ OakScript_2:
 .OakGiveTicket
 	writetext OakGiveTicketText1
 	promptbutton
-	verbosegiveitem S_S_TICKET
+	giveitem S_S_TICKET
 	iffalse .NoRoomForTicket
+	waitsfx
+	writetext OaksLabReceivedSSTicketText
+	playsound SFX_KEY_ITEM
+	waitsfx
+	itemnotify
 	setevent EVENT_GOT_SS_TICKET_FROM_OAK
 	writetext OakGiveTicketText2
 	waitbutton
@@ -1440,6 +1445,11 @@ OaksLabAskEvaluateDexText:
 	cont "on the #DEX?"
 
 	para "Can I check it?"
+	done
+
+OaksLabReceivedSSTicketText:
+	text "<PLAYER> received"
+	line "an S.S.TICKET!"
 	done
 
 OaksLabOakAskRematchText:
