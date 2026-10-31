@@ -134,7 +134,7 @@ OverworldSprites:
 	overworld_sprite SurfingPikachuSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
 	overworld_sprite FamicomSpriteGFX, 4, STILL_SPRITE, PAL_OW_RED
 	overworld_sprite VirtualBoySpriteGFX, 4, STILL_SPRITE, PAL_OW_RED
-	overworld_sprite SnesSpriteGFX, 4, STILL_SPRITE, PAL_OW_BLUE
+	overworld_sprite SnesSpriteGFX, 4, STILL_SPRITE, PAL_OW_PURPLE ;PAL_OW_BLUE
 	overworld_sprite N64SpriteGFX, 4, STILL_SPRITE, PAL_OW_BROWN
 	overworld_sprite GoldTrophySpriteGFX, 4, STILL_SPRITE, PAL_OW_YELLOW ;PAL_OW_BROWN
 	overworld_sprite SilverTrophySpriteGFX, 4, STILL_SPRITE, PAL_OW_SILVER
