@@ -761,7 +761,7 @@ _YouCantUseItInABattleText::
 _AreYouABoyOrAreYouAGirlText::
 	text "Will you play as a"
 	line "boy, or as a girl?"
-	done
+	prompt
 
 ;	text "Are you a boy?"
 ;	line "Or are you a girl?"
