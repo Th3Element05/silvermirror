@@ -115,12 +115,6 @@ BillsHouseBillsComputerScript:
 	promptbutton
 	setflag ENGINE_RADIO_CARD
 	writetext BillsHouseBillExplainRadioCardText
-;	promptbutton
-; Bill gives S_S_TICKET
-;	verbosegiveitem S_S_TICKET ; this is the SS Aqua ticket for now
-;;	iffalse .NoRoom
-;	promptbutton
-;	writetext BillsHouseBillShipText
 	waitbutton
 	closetext
 	setevent EVENT_HELPED_BILL

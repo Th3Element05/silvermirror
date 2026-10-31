@@ -49,11 +49,13 @@ RedsHouse2FYoungChris:
 
 .goldleaf
 	verbosegiveitem GOLD_LEAF
+	iffalse .Refused
 	closetext
 	end
 
 .silverleaf
 	verbosegiveitem SILVER_LEAF
+	iffalse .Refused
 	closetext
 	end
 
@@ -63,6 +65,7 @@ RedsHouse2FYoungChris:
 	writetext RedsHouse2FChrisLoveText
 	promptbutton
 	verbosegiveitem HEART_SCALE
+	iffalse .Refused
 	closetext
 	end
 

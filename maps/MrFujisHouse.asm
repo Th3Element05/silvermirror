@@ -19,6 +19,7 @@ MrFujisHouseGivePokefluteScript:
 	writetext MrFujisHouseMrFujiGivePokeFluteText
 	promptbutton
 	verbosegiveitem POKE_FLUTE
+;	iffalse .NoRoomForFlute
 	writetext MrFujisHouseMrFujiExplainFluteText
 	promptbutton
 	writetext MrFujisHouseMrFujiGivesExpnCardText
@@ -32,6 +33,7 @@ MrFujisHouseGivePokefluteScript:
 	writetext MrFujisHouseMrFujiExplainRadioText
 	setscene SCENE_MRFUJISHOUSE_NOOP
 	waitbutton
+;.NoRoomForFlute
 	closetext
 	end
 
@@ -43,6 +45,8 @@ MrFujisHouseGivePokefluteScript:
 	end
 
 MrFujisHouseMrFujiScript:
+;	checkitem POKE_FLUTE
+;	iffalse MrFujisHouseGivePokefluteScript
 	checkevent EVENT_WOKE_SNORLAX
 	iftrue .FluteHelped
 	jumptextfaceplayer MrFujisHouseMrFujiExplainFluteText

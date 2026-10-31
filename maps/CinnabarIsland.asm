@@ -106,18 +106,22 @@ CinnabarIslandMissingNoScript:
 .notcaught
 	setscene SCENE_CINNABARISLAND_NOOP
 	opentext
+	giveitem RARE_CANDY, 9
 	writetext CinnabarIslandFoundRareCandyText
+	giveitem RARE_CANDY, 1
+	iffalse .BagFull
 	playsound SFX_ITEM
 	waitsfx
 	waitbutton
-	giveitem RARE_CANDY, 10
-;	giveitem RARE_CANDY, 8
-;	giveitem RARE_CANDY, 4
-;	giveitem RARE_CANDY, 2
-;	giveitem RARE_CANDY, 1
-;	giveitem RARE_CANDY, 1
 	closetext
 .End
+	end
+
+.BagFull
+	promptbutton
+	writetext CinnabarIslandBagFullText
+	waitbutton
+	closetext
 	end
 
 CinnabarIslandFoundRareCandyText:
@@ -125,6 +129,12 @@ CinnabarIslandFoundRareCandyText:
 	line "10 RARE CANDY."
 	done
 
+CinnabarIslandBagFullText:
+	text "But there isn't"
+	line "enough room for"
+	cont "all of them in"
+	roll "<PLAYER>'s PACK."
+	done
 
 CinnabarIsland_MapEvents:
 	db 0, 0 ; filler

@@ -1371,9 +1371,11 @@ OakScript_2:
 	writetext OakGiveTicketText1
 	promptbutton
 	verbosegiveitem S_S_TICKET
+	iffalse .NoRoomForTicket
 	setevent EVENT_GOT_SS_TICKET_FROM_OAK
 	writetext OakGiveTicketText2
 	waitbutton
+.NoRoomForTicket
 	closetext
 	end
 
@@ -1683,7 +1685,7 @@ OaksLabMissingnoHintText:
 
 	para "Fly to CINNABAR,"
 	line "and SURF along"
-	cont "the west coast."
+	cont "the east coast."
 	done
 
 ;	text "An OLD MAN from"

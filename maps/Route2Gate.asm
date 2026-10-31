@@ -33,9 +33,11 @@ Route2GateOaksAideScript:
 	writetext Route2GateOaksAideCongratsText
 	promptbutton
 	verbosegiveitem EXP_SHARE
+	iffalse .PackFull
 	setevent EVENT_GOT_EXP_SHARE
 	writetext Route2GateOaksAideExpShareExplainText
 	waitbutton
+.PackFull
 	closetext
 	end
 

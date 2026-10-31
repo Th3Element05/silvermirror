@@ -14,11 +14,12 @@ PokemonFanClubChairmanScript:
 	yesorno
 	iffalse .NotListening
 	writetext PokemonFanClubChairmanRapidashText
-	setevent EVENT_LISTENED_TO_FAN_CLUB_PRESIDENT
 	promptbutton
 	checkevent EVENT_GOT_BICYCLE
 	iftrue .BoughtBike
 	verbosegiveitem BIKE_VOUCHER
+	iffalse .NoRoomForGift
+	setevent EVENT_LISTENED_TO_FAN_CLUB_PRESIDENT
 	writetext PokemonFanClubChairmanVoucherText
 	waitbutton
 	closetext
@@ -38,8 +39,11 @@ PokemonFanClubChairmanScript:
 
 .BoughtBike:
 	verbosegiveitem MASTER_BALL
+	iffalse .NoRoomForGift
+	setevent EVENT_LISTENED_TO_FAN_CLUB_PRESIDENT
 	writetext PokemonFanClubChairmanMasterBallText
 	waitbutton
+.NoRoomForGift
 	closetext
 	end
 

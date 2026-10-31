@@ -21,7 +21,9 @@ Director:
 	writetext RadioTower5FDirectorEmergencyText
 	promptbutton
 	verbosegiveitem CARD_KEY_R
+	iffalse .NoRoomForCardKey
 	setevent EVENT_GOT_RADIO_TOWER_CARD_KEY
+.NoRoomForCardKey
 	closetext
 	end
 

@@ -16,10 +16,12 @@ FishingGuruOld:
 	writetext FishingGuruOldYesText
 	promptbutton
 	verbosegiveitem OLD_ROD
+	iffalse .BagFull
+	setevent EVENT_GOT_OLD_ROD
 	writetext FishingGuruOldGiveRodText
 	waitbutton
+.BagFull
 	closetext
-	setevent EVENT_GOT_OLD_ROD
 	end
 
 .GotOldRod:

@@ -27,10 +27,12 @@ Route11Gate2FOaksAideScript:
 	writetext Route11Gate2FOaksAideCongratsText
 	promptbutton
 	verbosegiveitem ITEMFINDER
+	iffalse .BagFull
 	setevent EVENT_GOT_ITEMFINDER
 .GotItemfinder
 	writetext Route11Gate2FOaksAideItemfinderExplainText
 	waitbutton
+.BagFull
 	closetext
 	end
 

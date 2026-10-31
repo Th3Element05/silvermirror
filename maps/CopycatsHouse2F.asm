@@ -44,7 +44,7 @@ Copycat:
 .Default_Merge_1:
 	special LoadUsedSpritesGFX
 	checkevent EVENT_GOT_METAL_POWDER_FROM_COPYCAT
-	iftrue .GotMimic
+	iftrue .GotMetalPowder
 	opentext
 	writetext CopycatText_Default
 	waitbutton
@@ -60,10 +60,9 @@ Copycat:
 	iffalse .DollNotForYou
 	writetext CopycatText_ThanksGiveTM
 	promptbutton
-	takeitem POKE_DOLL
 	verbosegiveitem METAL_POWDER
-;	writetext CopycatText_ExplainTM
-;	waitbutton
+	iffalse .BagFull
+	takeitem POKE_DOLL
 	closetext
 	appear COPYCATSHOUSE2F_POKEDOLL
 	setevent EVENT_GOT_METAL_POWDER_FROM_COPYCAT
@@ -76,9 +75,15 @@ Copycat:
 	closetext
 	end
 
-.GotMimic
+.BagFull
+	writetext CopycatText_MakeRoom
+	waitbutton
+	closetext
+	end
+
+.GotMetalPowder
 	opentext
-	writetext CopycatText_ThanksForTM
+	writetext CopycatText_ThanksText
 	waitbutton
 	closetext
 	scall CopycatIntoTwinScript
@@ -203,7 +208,17 @@ CopycatText_ThanksGiveTM:
 ;	line "#MON!"
 ;	done
 
-CopycatText_ThanksForTM:
+CopycatText_MakeRoom:
+	ntag "COPYCAT:"
+	text "I can't take your"
+	line "gift if you won't"
+	cont "accept mine."
+
+	para "Please make room"
+	line "for it!"
+	done
+
+CopycatText_ThanksText:
 	ntag "<PLAYER>:"
 	text "Hi!"
 	line "Thanks for the"
