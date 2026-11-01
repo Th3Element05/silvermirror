@@ -648,18 +648,28 @@ _ItemfinderNopeText::
 ;	line "isn't responding."
 ;	prompt
 
-_PoisonFaintText::
+;_PoisonFaintText::
+;	text_ram wStringBuffer3
+;	text_start
+;	line "fainted!"
+;	prompt
+
+;_PoisonWhiteoutText::
+;	text "<PLAYER> is out of"
+;	line "useable #MON!"
+;
+;	para "<PLAYER> whited"
+;	line "out!"
+;	prompt
+
+_PoisonRecoveryText::
 	text_ram wStringBuffer3
-	text_start
-	line "fainted!"
-	prompt
-
-_PoisonWhiteoutText::
-	text "<PLAYER> is out of"
-	line "useable #MON!"
-
-	para "<PLAYER> whited"
-	line "out!"
+;	text_start
+;	line "shook off the"
+;	cont "poison with 1HP!"
+;	prompt
+	text " shook"
+	line "off the poison!"
 	prompt
 
 _UseSweetScentText::
