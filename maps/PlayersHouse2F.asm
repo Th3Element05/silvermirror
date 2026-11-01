@@ -305,26 +305,26 @@ PlayersHouseDebugPlayer:
 	opentext
 	writetext PlayersHouseDebugText
 	waitbutton
-	givepoke PRIMEAPE, 50
-	givepoke PRIMEAPE, 50
-	givepoke JUMPLUFF, 50
+	givepoke ABRA, 50
+	givepoke CHARMANDER, 50
+	givepoke SQUIRTLE, 50
 
-	loadmem wPartyMon1Moves+0, AERIAL_ACE
-	loadmem wPartyMon1Moves+1, BOUNCE
-	loadmem wPartyMon1Moves+2, DIG
-	loadmem wPartyMon1Moves+3, TELEPORT
+;	loadmem wPartyMon1Moves+0, AERIAL_ACE
+;	loadmem wPartyMon1Moves+1, BOUNCE
+;	loadmem wPartyMon1Moves+2, DIG
+;	loadmem wPartyMon1Moves+3, TELEPORT
 ;	loadmem wPartyMon1DVs+0, $ef
 ;	loadmem wPartyMon1DVs+1, $fe
 
-	loadmem wPartyMon2Moves+0, AQUA_JET
-	loadmem wPartyMon2Moves+1, SKY_ATTACK
-	loadmem wPartyMon2Moves+2, SUBSTITUTE
-	loadmem wPartyMon2Moves+3, MACH_PUNCH
+;	loadmem wPartyMon2Moves+0, AQUA_JET
+;	loadmem wPartyMon2Moves+1, SKY_ATTACK
+;	loadmem wPartyMon2Moves+2, SUBSTITUTE
+;	loadmem wPartyMon2Moves+3, MACH_PUNCH
 ;	loadmem wPartyMon2DVs+0, $ef
 ;	loadmem wPartyMon2DVs+1, $fe
 
-	loadmem wPartyMon3Moves+0, EXTREMESPEED
-	loadmem wPartyMon3Moves+1, SELFDESTRUCT
+;	loadmem wPartyMon3Moves+0, EXTREMESPEED
+;	loadmem wPartyMon3Moves+1, SELFDESTRUCT
 ;	loadmem wPartyMon3Moves+2, ASTONISH
 ;	loadmem wPartyMon3Moves+3, ICICLE_SPEAR
 ;	loadmem wPartyMon3DVs+0, $ef
