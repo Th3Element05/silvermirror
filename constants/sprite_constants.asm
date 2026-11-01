@@ -280,7 +280,7 @@ DEF SPRITE_POKEMON EQU const_value
 ;	const SPRITE_KABUTO     ; 8c
 ;	const SPRITE_KABUTOPS   ; 8d
 ;	const SPRITE_AERODACTYL ; 8e
-;	const SPRITE_SNORLAX    ; 8f
+	const SPRITE_SNORLAX    ; 8f
 	const SPRITE_ARTICUNO   ; 90
 	const SPRITE_ZAPDOS     ; 91
 	const SPRITE_MOLTRES    ; 92
