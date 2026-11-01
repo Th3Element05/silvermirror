@@ -305,9 +305,12 @@ PlayersHouseDebugPlayer:
 	opentext
 	writetext PlayersHouseDebugText
 	waitbutton
-	givepoke ABRA, 50
+	givepoke BULBASAUR, 50
 	givepoke CHARMANDER, 50
 	givepoke SQUIRTLE, 50
+;	givepoke CHIKORITA, 50
+;	givepoke CYNDAQUIL, 50
+;	givepoke TOTODILE, 50
 
 ;	loadmem wPartyMon1Moves+0, AERIAL_ACE
 ;	loadmem wPartyMon1Moves+1, BOUNCE
