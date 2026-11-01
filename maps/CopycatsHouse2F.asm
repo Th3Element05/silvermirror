@@ -14,7 +14,7 @@ CopycatsHouse2F_MapScripts:
 CopycatsHouse2FTilesCallback:
 	changeblock 0, 0, $2c ; bookshelf
 	changeblock 0, 2, $05 ; floor
-	changeblock 0, 6, $1e ; yellow bed
+	changeblock 0, 4, $1e ; yellow bed
 	endcallback
 
 ;CopycatsHouse2FWhichGenderCallback:
@@ -306,12 +306,12 @@ CopycatsHouse2F_MapEvents:
 ;	object_event  2,  4, SPRITE_COPYCAT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Copycat, EVENT_COPYCAT_1
 ;	object_event  2,  4, SPRITE_COPYCAT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Copycat, EVENT_COPYCAT_2
 	object_event  2,  4, SPRITE_COPYCAT, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Copycat, -1
-	object_event  1,  6, SPRITE_CLEFAIRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, EVENT_COPYCATS_HOUSE_2F_DOLL
+	object_event  1,  5, SPRITE_CLEFAIRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, EVENT_COPYCATS_HOUSE_2F_DOLL
 	object_event  5,  6, SPRITE_DODUO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CopycatsDoduo, -1
-	object_event  3,  1, SPRITE_EEVEE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FRareDoll, -1
+	object_event  0,  2, SPRITE_EEVEE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FRareDoll, -1
 	object_event  5,  1, SPRITE_JIGGLYPUFF, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FRareDoll, -1
-	object_event  0,  2, SPRITE_PIDGEY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, -1
-	object_event  0,  5, SPRITE_SNORLAX, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FRareDoll, -1
+	object_event  3,  1, SPRITE_PIDGEY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, -1
+	object_event  0,  6, SPRITE_SNORLAX, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FRareDoll, -1
 ;	object_event  0,  1, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_BIGDOLLSYM, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FDoll, -1
 	object_event  4,  5, SPRITE_SNES, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CopycatsHouse2FGameConsoleScript, -1
 

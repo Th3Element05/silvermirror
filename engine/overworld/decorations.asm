@@ -1108,7 +1108,7 @@ DecorationDesc_GiantOrnament:
 
 ToggleMaptileDecorations:
 	; tile coordinates work the same way as for changeblock
-	lb de, 0, 6 ; bed coordinates
+	lb de, 0, 4 ; bed coordinates
 	ld a, [wDecoBed]
 	call SetDecorationTile
 	lb de, 6, 6 ; plant coordinates
