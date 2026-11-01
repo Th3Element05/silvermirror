@@ -261,9 +261,13 @@ if DEF(_DEBUG)
 	; intro events
 	addcellnum PHONE_MOM
 	addcellnum PHONE_OAK
+	setmapscene INDIGO_PLATEAU_POKECENTER_1F, SCENE_INDIGOPLATEAUPOKECENTER1F_LANCE
+	setmapscene MAHOGANY_MART_1F, SCENE_MAHOGANYMART1F_NINJA
 	setmapscene PLAYERS_HOUSE_1F, $1
 	setevent EVENT_PLAYERS_HOUSE_MOM_1
+	setevent EVENT_WISE_TRIO_EXPLAINED_CLEAR_BELL
 	clearevent EVENT_PLAYERS_HOUSE_MOM_2
+	clearevent EVENT_MAHOGANY_MART_NINJA
 	special HealParty
 	closetext
 	end
@@ -332,31 +336,6 @@ PlayersHouseDebugPlayer:
 ;	loadmem wPartyMon3DVs+0, $ef
 ;	loadmem wPartyMon3DVs+1, $fe
 
-	giveitem RARE_CANDY, 30
-	giveitem POTION, 99
-	giveitem POTION, 99
-	giveitem POTION, 99
-	giveitem POTION, 99
-	giveitem POTION, 99
-	giveitem POTION, 99
-	giveitem POTION, 99
-	giveitem POTION, 99
-	giveitem POTION, 99
-	giveitem POTION, 99
-	giveitem POTION, 99
-	giveitem POTION, 99
-	giveitem POTION, 99
-	giveitem POTION, 99
-	giveitem POTION, 99
-	giveitem POTION, 99
-	giveitem POTION, 99
-	giveitem POTION, 99
-	giveitem POTION, 99
-	giveitem POTION, 99
-	giveitem POTION, 99
-	giveitem POTION, 99
-	giveitem POTION, 99
-	giveitem POTION, 99
 	giveitem POTION, 99
 ;	giveitem CARBOS, 20
 ;	giveitem X_ACCURACY, 20

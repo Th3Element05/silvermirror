@@ -94,7 +94,7 @@
 	const SPRITE_OLD_AMBER              ; 59
 	const SPRITE_MIRROR                 ; 5a
 	const SPRITE_SHINE                  ; 5b
-;; 5c
+;	const SPRITE_RADIO                  ; 5c
 ;; 5d
 ;; 5e
 ;; 5f

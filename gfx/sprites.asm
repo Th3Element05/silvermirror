@@ -99,6 +99,7 @@ DomeFossilSpriteGFX::          INCBIN "gfx/sprites/dome_fossil.2bpp"
 OldAmberSpriteGFX::            INCBIN "gfx/sprites/old_amber.2bpp"
 MirrorSpriteGFX::              INCBIN "gfx/sprites/mirror.2bpp"
 ShineSpriteGFX::               INCBIN "gfx/sprites/shine.2bpp"
+;RadioSpriteGFX::               INCBIN "gfx/sprites/radio.2bpp"
 
 
 SECTION "Sprites 4", ROMX
