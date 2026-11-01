@@ -37,7 +37,7 @@ TrainerRocketHideoutGiovanni:
 	setevent EVENT_CELADON_CITY_ROCKETS
 	setevent EVENT_OPENED_ROCKET_HIDEOUT_B4F_DOOR
 	changeblock 16, 12, $65 ; door open
-;	appear ROCKETHIDEOUTB4F_SILPH_SCOPE
+	appear ROCKETHIDEOUTB4F_SILPH_SCOPE
 	special FadeInQuickly
 	end
 
