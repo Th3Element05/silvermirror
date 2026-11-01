@@ -84,26 +84,24 @@ PlayersBedHealingText3:
 	line "feeling refreshed!"
 	done
 
-PlayersHouseBookshelfScript:
 if DEF(_DEBUG)
+PlayersHouseModeChangeScript:
 	opentext
 	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
 	iftrue .TurnOffChallengeMode
 	playsound SFX_PAY_DAY
 	setflag ENGINE_CHALLENGE_MODE_ACTIVE
 	writetext PlayersHouseBookshelfChallengeModeActivatedText
-.cont:
-	waitbutton
-	closetext
-	end
+	sjump .cont
 
-.TurnOffChallengeMode:
+.TurnOffChallengeMode
 	playsound SFX_SHUT_DOWN_PC
 	clearflag ENGINE_CHALLENGE_MODE_ACTIVE
 	writetext PlayersHouseBookshelfChallengeModeDeactivatedText
-	jump .cont
-else
-	jumpstd PictureBookshelfScript
+.cont
+	waitbutton
+	closetext
+	end
 endc
 
 PlayersHousePCScript:
@@ -301,6 +299,7 @@ else
 	end
 endc
 
+if DEF(_DEBUG)
 PlayersHouseDebugPlayer:
 	opentext
 	writetext PlayersHouseDebugText
@@ -333,12 +332,37 @@ PlayersHouseDebugPlayer:
 ;	loadmem wPartyMon3DVs+0, $ef
 ;	loadmem wPartyMon3DVs+1, $fe
 
-;	giveitem RARE_CANDY, 20
+	giveitem RARE_CANDY, 30
+	giveitem POTION, 99
+	giveitem POTION, 99
+	giveitem POTION, 99
+	giveitem POTION, 99
+	giveitem POTION, 99
+	giveitem POTION, 99
+	giveitem POTION, 99
+	giveitem POTION, 99
+	giveitem POTION, 99
+	giveitem POTION, 99
+	giveitem POTION, 99
+	giveitem POTION, 99
+	giveitem POTION, 99
+	giveitem POTION, 99
+	giveitem POTION, 99
+	giveitem POTION, 99
+	giveitem POTION, 99
+	giveitem POTION, 99
+	giveitem POTION, 99
+	giveitem POTION, 99
+	giveitem POTION, 99
+	giveitem POTION, 99
+	giveitem POTION, 99
+	giveitem POTION, 99
+	giveitem POTION, 99
 ;	giveitem CARBOS, 20
 ;	giveitem X_ACCURACY, 20
 ;	giveitem TM_GIGA_DRAIN
 
-;	giveitem BICYCLE
+	giveitem BICYCLE
 ;	giveitem COIN_CASE
 ;	giveitem ITEMFINDER
 ;	giveitem POKE_FLUTE
@@ -380,6 +404,8 @@ TrainerRivalDebug:
 PlayersHouseDebugText:
 	text "DEBUG STUFF"
 	done
+endc
+
 
 PlayersHouse2F_MapEvents:
 	db 0, 0 ; filler
@@ -394,8 +420,10 @@ PlayersHouse2F_MapEvents:
 	bg_event  0,  7, BGEVENT_READ, PlayersBedHealing
 	bg_event  0,  1, BGEVENT_UP, PlayersHousePCScript
 	bg_event  1,  1, BGEVENT_READ, PlayersHouseRadioScript
-	bg_event  0,  0, BGEVENT_READ, PlayersHouseBookshelfScript
 	bg_event  5,  0, BGEVENT_IFSET, PlayersHousePosterScript
+if DEF(_DEBUG)
+	bg_event  4,  4, BGEVENT_READ, PlayersHouseModeChangeScript
+endc
 
 	def_object_events
 	object_event  4,  5, SPRITE_CONSOLE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PlayersHouseGameConsoleScript, EVENT_PLAYERS_HOUSE_2F_CONSOLE
