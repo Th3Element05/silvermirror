@@ -140,12 +140,26 @@ PalletTownOakExplainsTentacoolText:
 
 	para "If you're trying to"
 	line "get to CINNABAR,"
-	cont "you'll need to take"
-	roll "ROUTE 19 and 20."
+	cont "you'll need to go"
+	roll "another way."
 
-	para "That's south from"
-	line "FUCHSIA CITY."
+	para "You could take"
+	line "ROUTE 20 and go"
+	cont "through SEAFOAM"
+	roll "ISLANDS."
+
+	para "They're south-west"
+	line "from FUCHSIA CITY."
 	done
+
+;	para "If you're trying to"
+;	line "get to CINNABAR,"
+;	cont "you'll need to take"
+;	roll "ROUTE 19 and 20."
+;
+;	para "That's south from"
+;	line "FUCHSIA CITY."
+;	done
 
 PalletTownOneStepRightMovement:
 	step RIGHT
@@ -387,5 +401,5 @@ PalletTown_MapEvents:
 	object_event  5, 17, SPRITE_TENTACOOL, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PALLET_TOWN_TENTACOOL
 	object_event  6, 18, SPRITE_TENTACOOL, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PALLET_TOWN_TENTACOOL
 ;
-	object_event  4,  8, SPRITE_TEACHER, SPRITEMOVEDATA_WANDER, 2, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PalletTownTeacherScript, -1
-	object_event 12, 14, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PalletTownFisherScript, -1
+	object_event  3,  9, SPRITE_TEACHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PalletTownTeacherScript, -1
+	object_event 11, 14, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PalletTownFisherScript, -1
