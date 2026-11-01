@@ -17,5 +17,4 @@
 	dn EGG_BUG, EGG_BUG ; egg groups
 
 	; tm/hm learnset
-	tmhm
-	; end
+	tmhm ; none
