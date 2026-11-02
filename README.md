@@ -8,7 +8,11 @@ I also wanted to include a new post-game storyline in Johto, as a mirror to the 
 
 ![box-art](https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/silvermirror-box.png)  
 
-## Version 1.1
+## Version 1.0 (Current Release)  
+
+- <a href="https://github.com/Th3Element05/silvermirror/releases/tag/v1.0">Initial Release v1.0</a>  
+
+## Version 1.1 (Next Release)  
 
 Version 1.1 should be compatible with existing save files from v1.0.  
 **But I highly recommend making a backup of your save file, just in case.**
