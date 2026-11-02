@@ -115,36 +115,15 @@ Version 1.1 should be compatible with existing save files from v1.0.
 ## __Screenshots:__
 
 ![title-screen](https://images.hackdex.app/pokemon-silver-mirror/1793514438515-0.gif)
-<a href="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-gen2mode-0.gif">
-<img src="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-gen2mode-0.gif" width="160">
-</a>
-<a href="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-options-0.gif">
-<img src="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-options-0.gif" width="160">
-</a>
-<a href="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-pallet-town.png">
-<img src="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-pallet-town.png" width="160">
-</a>
-<a href="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-gen2mode-starters.png">
-<img src="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-gen2mode-starters.png" width="160">
-</a>
-<a href="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-battle-1.png">
-<img src="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-battle-1.png" width="160">
-</a>
-<a href="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-battle-2.png">
-<img src="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-battle-2.png" width="160">
-</a>
-<a href="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-berries-2.png">
-<img src="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-berries-2.png" width="160">
-</a>
-<a href="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-pager-system.png">
-<img src="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-pager-system.png" width="160">
-</a>
-<a href="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-learn-b0.gif">
-<img src="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-learn-b0.gif" width="160">
-</a>
-<a href="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-charizard-back.png">
-<img src="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-charizard-back.png" width="160">
-</a>
+![mode-selection](https://images.hackdex.app/pokemon-silver-mirror/1793153836771-0.gif)
+![hey-wait](https://images.hackdex.app/pokemon-silver-mirror/1793153871888-0.png)
+![battle-move-info](https://images.hackdex.app/pokemon-silver-mirror/1793153887090-0.png)
+![battle-status-icons](https://images.hackdex.app/pokemon-silver-mirror/1793154014159-0.png)
+![overworld-berries](https://images.hackdex.app/pokemon-silver-mirror/1793153894860-0.png)
+![forget-move](https://images.hackdex.app/pokemon-silver-mirror/1793153936925-0.gif)
+![pager-screen](https://images.hackdex.app/pokemon-silver-mirror/1793153920988-0.png)
+![mr-psychic](https://images.hackdex.app/pokemon-silver-mirror/1793154039320-0.png)
+![battle-back-pics](https://images.hackdex.app/pokemon-silver-mirror/1793154029964-0.png)
 
 <br/>
 
