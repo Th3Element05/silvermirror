@@ -85,6 +85,7 @@ RocketHideoutGiovanniAfterBattleText:
 
 RocketHideoutB4FSilphScope:
 	opentext
+	disappear ROCKETHIDEOUTB4F_SILPH_SCOPE
 	giveitem SILPH_SCOPE
 	writetext RocketHideoutB4FGotSilphScopeText
 	playsound SFX_KEY_ITEM
