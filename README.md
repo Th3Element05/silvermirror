@@ -110,13 +110,11 @@ Version 1.1 should be compatible with existing save files from v1.0.
 <br/>
 
 ### __Recommended Emulators:__
-[mGBA](https://mgba.io/),  [BGB](https://bgb.bircd.org/), [SameBoy](https://github.com/LIJI32/SameBoy), [Gambatte](https://github.com/sinamas/gambatte)  
+[mGBA](https://mgba.io/),  [BGB](https://bgb.bircd.org/), [SameBoy](https://github.com/LIJI32/SameBoy)
 
 ## __Screenshots:__
 
-<a href="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-title-r0.png">
-<img src="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-title-r0.png" width="160">
-</a>
+![title-screen](https://images.hackdex.app/pokemon-silver-mirror/1793514438515-0.gif)
 <a href="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-gen2mode-0.gif">
 <img src="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-gen2mode-0.gif" width="160">
 </a>
