@@ -16,7 +16,7 @@ OlivineLighthouseElevatorScript:
 	end
 
 OlivineLighthouseElevatorData:
-	db 5 ; floors
+	db 2 ; floors
 ;	elevfloor FLOOR_6F, 1, OLIVINE_LIGHTHOUSE_6F
 	elevfloor FLOOR_5F, 1, OLIVINE_LIGHTHOUSE_5F
 ;	elevfloor FLOOR_4F, 1, OLIVINE_LIGHTHOUSE_4F
