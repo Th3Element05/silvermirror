@@ -61,7 +61,7 @@ SaffronMagnetTrainStationOfficerScript:
 	waitsfx
 	giveitem RAIL_PASS
 	writetext SaffronMagnetTrainStationOfficer_BoughtPassText
-	playsound SFX_KEY_ITEM
+	playsound SFX_ITEM
 	waitsfx
 	itemnotify
 ;	setevent EVENT_GOT_MAGNET_TRAIN_PASS
