@@ -261,13 +261,13 @@ if DEF(_DEBUG)
 	; intro events
 	addcellnum PHONE_MOM
 	addcellnum PHONE_OAK
-	setmapscene INDIGO_PLATEAU_POKECENTER_1F, SCENE_INDIGOPLATEAUPOKECENTER1F_LANCE
-	setmapscene MAHOGANY_MART_1F, SCENE_MAHOGANYMART1F_NINJA
 	setmapscene PLAYERS_HOUSE_1F, $1
 	setevent EVENT_PLAYERS_HOUSE_MOM_1
-	setevent EVENT_WISE_TRIO_EXPLAINED_CLEAR_BELL
 	clearevent EVENT_PLAYERS_HOUSE_MOM_2
-	clearevent EVENT_MAHOGANY_MART_NINJA
+;	setmapscene INDIGO_PLATEAU_POKECENTER_1F, SCENE_INDIGOPLATEAUPOKECENTER1F_LANCE
+;	setmapscene MAHOGANY_MART_1F, SCENE_MAHOGANYMART1F_NINJA
+;	setevent EVENT_WISE_TRIO_EXPLAINED_CLEAR_BELL
+;	clearevent EVENT_MAHOGANY_MART_NINJA
 	special HealParty
 	closetext
 	end
@@ -311,14 +311,42 @@ PlayersHouseDebugPlayer:
 	givepoke BULBASAUR, 50
 	givepoke CHARMANDER, 50
 	givepoke SQUIRTLE, 50
-;	givepoke CHIKORITA, 50
-;	givepoke CYNDAQUIL, 50
-;	givepoke TOTODILE, 50
+	givepoke CHIKORITA, 50
+	givepoke CYNDAQUIL, 50
+	givepoke TOTODILE, 50
+	givepoke RATTATA, 50
+	givepoke RATICATE, 50
+	givepoke PIDGEY, 50
+	givepoke PIDGEOTTO, 50
+	givepoke SPEAROW, 50
+	givepoke FEAROW, 50
+	givepoke JIGGLYPUFF, 50
+	givepoke WIGGLYTUFF, 50
+	givepoke CLEFAIRY, 50
+	givepoke CLEFABLE, 50
+	givepoke GEODUDE, 50
+	givepoke GRAVELER, 50
+	givepoke GOLEM, 50
+	givepoke MACHOP, 50
+	givepoke MACHOKE, 50
+	givepoke MACHAMP, 50
+	givepoke ABRA, 50
+	givepoke KADABRA, 50
+	givepoke ALAKAZAM, 50
+	givepoke PORYGON, 50
+	givepoke ONIX, 50
+	givepoke STARYU, 50
+	givepoke STARMIE, 50
+	givepoke PIKACHU, 50
+	givepoke RAICHU, 50
+	givepoke VOLTORB, 50
+	givepoke LUGIA, 50
+	givepoke HO_OH, 50
 
-;	loadmem wPartyMon1Moves+0, AERIAL_ACE
-;	loadmem wPartyMon1Moves+1, BOUNCE
-;	loadmem wPartyMon1Moves+2, DIG
-;	loadmem wPartyMon1Moves+3, TELEPORT
+	loadmem wPartyMon1Moves+0, AERIAL_ACE
+	loadmem wPartyMon1Moves+1, BOUNCE
+	loadmem wPartyMon1Moves+2, DIG
+	loadmem wPartyMon1Moves+3, TELEPORT
 ;	loadmem wPartyMon1DVs+0, $ef
 ;	loadmem wPartyMon1DVs+1, $fe
 
@@ -339,7 +367,7 @@ PlayersHouseDebugPlayer:
 	giveitem POTION, 99
 ;	giveitem CARBOS, 20
 ;	giveitem X_ACCURACY, 20
-;	giveitem TM_GIGA_DRAIN
+	giveitem TM_TOXIC
 
 	giveitem BICYCLE
 ;	giveitem COIN_CASE

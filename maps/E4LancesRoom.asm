@@ -208,6 +208,9 @@ LancesRoomRivalBattleScript:
 	playsound SFX_EXIT_BUILDING
 ;	disappear PLAYER
 	applymovement PLAYER, Movement_CameraPansUp
+	setmapscene OAKS_LAB, SCENE_OAKSLAB_NOOP
+	setevent EVENT_OAKS_LAB_OAK
+	clearevent EVENT_OAKS_LAB_OAK_2
 	pause 20
 ;	setmapscene HALL_OF_FAME, SCENE_HALLOFFAME_ENTER ;should be set in IndigoPlateauPokecenter1F.asm
 	warpfacing UP, HALL_OF_FAME, 4, 9
