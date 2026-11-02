@@ -19,7 +19,6 @@ Version 1.1 should be compatible with existing save files from v1.0.
 - <a href="https://github.com/Th3Element05/silvermirror/releases/tag/v1.0">Initial Release v1.0</a>  
 
 ### __Change Log:__  
-- Fixed a few bugs and errors.  
 - Replaced Kris graphics with Leaf/Green.  
 - Replaced Pallet Town music with the original track from RBY.  
 - Adjusted battle music for Rival battles and some other climactic battles.  
@@ -27,6 +26,7 @@ Version 1.1 should be compatible with existing save files from v1.0.
 - A wider selection of room decorations are available when starting a New Game.  
 - Fixed issue with some Pokémon's TM compatibility not being correct/complete.  
 - Fixed issue where EXP.SHARE and LUCKY EGG would be unobtainable if the player's pack is full the first time they receive them from OAK's AIDE.  
+- Fixed other misc. bugs and errors.  
 - Pokémon will be cured of poison when they reach 1HP while walking.  
 - Made a hint in the hint book way less vague.  
 
