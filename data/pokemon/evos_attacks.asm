@@ -530,9 +530,9 @@ NidoqueenEvosAttacks:
 NidoranMEvosAttacks:
 	db EVOLVE_LEVEL, 16, NIDORINO
 	db 0 ; no more evolutions
-	db 1, GROWL
+	db 1, LEER ;tail_whip, removed
 	db 1, SCRATCH
-	db 7, LEER ;tail_whip, removed
+	db 7, GROWL
 	db 9, POISON_STING
 	db 13, FOCUS_ENERGY ;helping_hand, x
 	db 19, FURY_STRIKES ;fury_swipes, removed
@@ -548,9 +548,9 @@ NidoranMEvosAttacks:
 NidorinoEvosAttacks:
 	db EVOLVE_ITEM, MOON_STONE, NIDOKING
 	db 0 ; no more evolutions
-	db 1, GROWL
+	db 1, LEER ;tail_whip, removed
 	db 1, SCRATCH
-	db 7, LEER ;tail_whip, removed
+	db 7, GROWL
 	db 9, POISON_STING
 	db 13, FOCUS_ENERGY ;helping_hand, x
 	db 19, FURY_STRIKES ;fury_swipes, removed
