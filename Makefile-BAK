@@ -1,7 +1,7 @@
 roms := \
-	sourcrystal.gbc \
-	sourcrystal_debug.gbc
-patches := sourcrystal.patch
+	silvermirror.gbc \
+	silvermirror_debug.gbc
+patches := silvermirror.patch
 
 rom_obj := \
 	audio.o \
@@ -23,9 +23,9 @@ rom_obj := \
 	lib/mobile/main.o \
 	lib/mobile/mail.o
 
-sourcrystal_obj       := $(rom_obj:.o=.o)
-sourcrystal_debug_obj := $(rom_obj:.o=_debug.o)
-sourcrystal_vc_obj    := $(rom_obj:.o=_vc.o)
+silvermirror_obj       := $(rom_obj:.o=.o)
+silvermirror_debug_obj := $(rom_obj:.o=_debug.o)
+silvermirror_vc_obj    := $(rom_obj:.o=_vc.o)
 
 
 ### Build tools
@@ -46,15 +46,15 @@ RGBLINK ?= $(RGBDS)rgblink
 ### Build targets
 
 .SUFFIXES:
-.PHONY: all sour sour_debug clean tidy compare tools
+.PHONY: all silvmir silvmir_debug clean tidy compare tools
 .SECONDEXPANSION:
 .PRECIOUS:
 .SECONDARY:
 
-all: sour sour_debug sour_vc
-sour:       sourcrystal.gbc
-sour_debug: sourcrystal_debug.gbc
-sour_vc:    sourcrystal.patch
+all: silvmir silvmir_debug silvmir_vc
+silvmir:       silvermirror.gbc
+silvmir_debug: silvermirror_debug.gbc
+silvmir_vc:    silvermirror.patch
 
 clean: tidy
 	find gfx \
@@ -80,9 +80,9 @@ tidy:
 	      $(patches:.patch=_vc.sym) \
 	      $(patches:.patch=_vc.map) \
 	      $(patches:%.patch=vc/%.constants.sym) \
-	      $(sourcrystal_obj) \
-	      $(sourcrystal_vc_obj) \
-	      $(sourcrystal_debug_obj) \
+	      $(silvermirror_obj) \
+	      $(silvermirror_vc_obj) \
+	      $(silvermirror_debug_obj) \
 	      rgbdscheck.o
 	$(MAKE) clean -C tools/
 
@@ -99,9 +99,9 @@ ifeq ($(DEBUG),1)
 RGBASMFLAGS += -E
 endif
 
-$(sourcrystal_obj):       RGBASMFLAGS += -D _CRYSTAL11
-$(sourcrystal_debug_obj): RGBASMFLAGS += -D _CRYSTAL11 -D _DEBUG
-$(sourcrystal_vc_obj):    RGBASMFLAGS += -D _CRYSTAL11 -D _CRYSTAL11_VC
+$(silvermirror_obj):       RGBASMFLAGS += -D _CRYSTAL11
+$(silvermirror_debug_obj): RGBASMFLAGS += -D _CRYSTAL11 -D _DEBUG
+$(silvermirror_vc_obj):    RGBASMFLAGS += -D _CRYSTAL11 -D _CRYSTAL11_VC
 
 %.patch: vc/%.constants.sym %_vc.gbc %.gbc vc/%.patch.template
 	tools/make_patch $*_vc.sym $^ $@
@@ -125,9 +125,9 @@ $1: $2 $$(shell tools/scan_includes $2) $(preinclude_deps) | rgbdscheck.o
 endef
 
 # Dependencies for shared objects objects
-$(foreach obj, $(sourcrystal_obj), $(eval $(call DEP,$(obj),$(obj:.o=.asm))))
-$(foreach obj, $(sourcrystal_debug_obj), $(eval $(call DEP,$(obj),$(obj:_debug.o=.asm))))
-$(foreach obj, $(sourcrystal_vc_obj), $(eval $(call DEP,$(obj),$(obj:_vc.o=.asm))))
+$(foreach obj, $(silvermirror_obj), $(eval $(call DEP,$(obj),$(obj:.o=.asm))))
+$(foreach obj, $(silvermirror_debug_obj), $(eval $(call DEP,$(obj),$(obj:_debug.o=.asm))))
+$(foreach obj, $(silvermirror_vc_obj), $(eval $(call DEP,$(obj),$(obj:_vc.o=.asm))))
 
 # Dependencies for VC files that need to run scan_includes
 %.constants.sym: %.constants.asm $(shell tools/scan_includes %.constants.asm) $(preinclude_deps) | rgbdscheck.o
@@ -136,9 +136,9 @@ $(foreach obj, $(sourcrystal_vc_obj), $(eval $(call DEP,$(obj),$(obj:_vc.o=.asm)
 endif
 
 
-sourcrystal_opt       = -Cjv -t PM_CRYSTAL -i BYTE -n 1 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
-sourcrystal_debug_opt = -Cjv -t PM_CRYSTAL -i BYTE -n 1 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
-sourcrystal_vc_opt    = -Cjv -t PM_CRYSTAL -i BYTE -n 1 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
+silvermirror_opt       = -Cjv -t PM_CRYSTAL -i BYTE -n 1 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
+silvermirror_debug_opt = -Cjv -t PM_CRYSTAL -i BYTE -n 1 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
+silvermirror_vc_opt    = -Cjv -t PM_CRYSTAL -i BYTE -n 1 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
 
 %.gbc: $$(%_obj) layout.link
 	$(RGBLINK) -n $*.sym -m $*.map -l layout.link -o $@ $(filter %.o,$^)
@@ -190,6 +190,7 @@ gfx/pokemon/girafarig/front.animated.tilemap: gfx/pokemon/girafarig/front.2bpp g
 ### Misc file-specific graphics rules
 
 gfx/pokemon/%/back.2bpp: rgbgfx += -Z 
+gfx/pokemon/%/back7.2bpp: rgbgfx += -Z 
 gfx/pokemon/%/front.2bpp: rgbgfx += 
 
 gfx/trainers/%.2bpp: rgbgfx += -Z 
