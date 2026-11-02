@@ -104,7 +104,7 @@ NameRival:
 	ret
 
 .DefaultName:
-	db "BLUE@" ;silvermirror -db "SILVER@"
+	db "BLUE@"
 
 NameRater:
 	farcall _NameRater
