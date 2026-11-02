@@ -46,15 +46,15 @@ RGBLINK ?= $(RGBDS)rgblink
 ### Build targets
 
 .SUFFIXES:
-.PHONY: all silvmir silvmir_debug clean tidy compare tools
+.PHONY: all silvermirror debug clean tidy compare tools
 .SECONDEXPANSION:
 .PRECIOUS:
 .SECONDARY:
 
-all: silvmir silvmir_debug silvmir_vc
-silvmir:       silvermirror.gbc
-silvmir_debug: silvermirror_debug.gbc
-silvmir_vc:    silvermirror.patch
+all: silvermirror vc
+silvermirror: silvermirror.gbc
+debug:        silvermirror_debug.gbc
+vc:           silvermirror.patch
 
 clean: tidy
 	find gfx \
