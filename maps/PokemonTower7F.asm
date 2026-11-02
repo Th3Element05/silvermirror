@@ -14,6 +14,7 @@ PokemonTower7FMrFujiScript:
 	writetext PokemonTower7FMrFujiText
 	waitbutton
 	closetext
+;	takeitem SILPH_SCOPE
 	setevent EVENT_POKEMON_TOWER_7F_MR_FUJI
 	setevent EVENT_SAFFRON_CITY_ROCKET_GUARD
 	clearevent EVENT_MR_FUJIS_HOUSE_MR_FUJI

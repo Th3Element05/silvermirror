@@ -24,6 +24,7 @@ OlivineGoodRodHouseFishingGuruScript:
 	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
 	iffalse .GiveSuperRod
 	verbosegiveitem SUPER_ROD_2
+	iffalse .BagFull
 	setevent EVENT_GOT_SUPER_ROD
 	writetext OlivineGoodRodHouseFishingGuruText_GiveSuperRod
 	waitbutton
@@ -54,6 +55,7 @@ OlivineGoodRodHouseFishingGuruScript:
 
 .GiveSuperRod:
 	verbosegiveitem SUPER_ROD
+	iffalse .BagFull
 	setevent EVENT_GOT_SUPER_ROD
 	writetext OlivineGoodRodHouseFishingGuruText_GiveSuperRod
 	promptbutton
@@ -68,6 +70,7 @@ OlivineGoodRodHouseFishingGuruScript:
 	setevent EVENT_SUPER_ROD_LURE_ACTIVE
 	writetext OlivineGoodRodHouseFishingGuruText_GiveLure
 	waitbutton
+.BagFull
 	closetext
 	end
 

@@ -207,7 +207,7 @@ TeamRocketBaseB3FJanineNinja:
 	giveitem CLEAR_BELL
 	waitsfx
 	writetext TeamRocketBaseB3FReceivedClearBellText
-	playsound SFX_ITEM
+	playsound SFX_KEY_ITEM
 	waitsfx
 	itemnotify
 	closetext
@@ -218,7 +218,7 @@ TeamRocketBaseB3FJanineNinja:
 	giveitem SILVER_WING
 	waitsfx
 	writetext TeamRocketBaseB3FReceivedSilverWingText
-	playsound SFX_ITEM
+	playsound SFX_KEY_ITEM
 	waitsfx
 	itemnotify
 	writetext TeamRocketBaseB3FKogaExplainsSilverWingText

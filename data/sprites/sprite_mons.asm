@@ -143,7 +143,7 @@ SpriteMons:
 ;	db KABUTO     ; 8c
 ;	db KABUTOPS   ; 8d
 ;	db AERODACTYL ; 8e
-;	db SNORLAX    ; 8f
+	db SNORLAX    ; 8f
 	db ARTICUNO   ; 90
 	db ZAPDOS     ; 91
 	db MOLTRES    ; 92

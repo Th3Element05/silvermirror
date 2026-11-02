@@ -16,13 +16,13 @@ BillsFamilysHouseTilesCallback:
 BillScript:
 	faceplayer
 	opentext
-;	checkevent EVENT_GOT_GS_BALL_FROM_BILL
-;	iftrue .GotGSBall
 	writetext BillsFamilysHouseBill_GiveGSBallText
-	waitbutton
-;	yesorno
-;	iffalse .Refused
-	verbosegiveitem GS_BALL
+	promptbutton
+	giveitem GS_BALL
+	writetext BillsFamilysHouseReceivedGSBallText
+	playsound SFX_KEY_ITEM
+	waitsfx
+	itemnotify
 	setevent EVENT_GOT_GS_BALL_FROM_BILL
 	setevent EVENT_CAN_GIVE_GS_BALL_TO_KURT
 	writetext BillsFamilysHouseBill_ExplainGSBallText
@@ -36,18 +36,6 @@ BillScript:
 	disappear BILLSFAMILYSHOUSE_BILL
 	playsound SFX_EXIT_BUILDING
 	end
-;
-;.NoRoom:
-;	writetext BillPartyFullText
-;	waitbutton
-;	closetext
-;	end
-;
-;.Refused:
-;	writetext BillNoEeveeText
-;	waitbutton
-;	closetext
-;	end
 
 BillsFamilysHouseBill_GiveGSBallText:
 	ntag "BILL:"
@@ -86,6 +74,11 @@ BillsFamilysHouseBill_GiveGSBallText:
 
 	para "I think you should"
 	line "take it!"
+	done
+
+BillsFamilysHouseReceivedGSBallText:
+	text "<PLAYER> received"
+	line "the GS BALL!"
 	done
 
 BillsFamilysHouseBill_ExplainGSBallText:

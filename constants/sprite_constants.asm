@@ -2,12 +2,12 @@
 ; OverworldSprites indexes (see data/sprites/sprites.asm)
 	const_def
 	const SPRITE_NONE                   ; 00
-	const SPRITE_CHRIS                  ; 01
- 	const SPRITE_CHRIS_RUN              ; 02
-	const SPRITE_CHRIS_BIKE             ; 03
-	const SPRITE_KRIS                   ; 04
- 	const SPRITE_KRIS_RUN               ; 05
-	const SPRITE_KRIS_BIKE              ; 06
+	const SPRITE_RED                    ; 01
+ 	const SPRITE_RED_RUN                ; 02
+	const SPRITE_RED_BIKE               ; 03
+	const SPRITE_GREEN                  ; 04
+ 	const SPRITE_GREEN_RUN              ; 05
+	const SPRITE_GREEN_BIKE             ; 06
 	const SPRITE_SURF                   ; 07 Lapras
 	const SPRITE_BLUE                   ; 08
 	const SPRITE_BROCK                  ; 09
@@ -94,7 +94,7 @@
 	const SPRITE_OLD_AMBER              ; 59
 	const SPRITE_MIRROR                 ; 5a
 	const SPRITE_SHINE                  ; 5b
-;; 5c
+;	const SPRITE_RADIO                  ; 5c
 ;; 5d
 ;; 5e
 ;; 5f
@@ -280,7 +280,7 @@ DEF SPRITE_POKEMON EQU const_value
 ;	const SPRITE_KABUTO     ; 8c
 ;	const SPRITE_KABUTOPS   ; 8d
 ;	const SPRITE_AERODACTYL ; 8e
-;	const SPRITE_SNORLAX    ; 8f
+	const SPRITE_SNORLAX    ; 8f
 	const SPRITE_ARTICUNO   ; 90
 	const SPRITE_ZAPDOS     ; 91
 	const SPRITE_MOLTRES    ; 92

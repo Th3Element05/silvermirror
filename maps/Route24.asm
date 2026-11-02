@@ -61,7 +61,12 @@ Route24NuggetRocketScript:
 	writetext Route24NuggetRocketIntroText
 	promptbutton
 	verbosegiveitem NUGGET
-;	waitbutton
+	iffalse .ToughLuck
+	sjump .GotNugget
+.ToughLuck
+	writetext Route24NuggetRocketToughLuckText
+	promptbutton
+.GotNugget
 	writetext Route24NuggetRocketJoinText
 	waitbutton
 	closetext
@@ -92,6 +97,12 @@ Route24NuggetRocketIntroText:
 
 	para "You just earned a"
 	line "fabulous prize!"
+	done
+
+Route24NuggetRocketToughLuckText:
+	ntag "RECRUITER:"
+	text "No room?"
+	line "Tough luck, pal."
 	done
 
 Route24NuggetRocketJoinText:

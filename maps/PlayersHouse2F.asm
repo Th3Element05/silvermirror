@@ -44,6 +44,106 @@ PlayersHousePosterScript:
 .Script:
 	describedecoration DECODESC_POSTER
 
+PlayersBedHealing:
+	opentext
+	writetext PlayersBedHealingText1
+	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
+	iffalse .NoPokemon
+	promptbutton
+	writetext PlayersBedHealingText2
+	yesorno
+	iffalse .NoHeal
+	closetext
+	special FadeBlackQuickly
+	special ReloadSpritesNoPalettes
+	special HealParty
+	playmusic MUSIC_HEAL
+	pause 60
+	special FadeInQuickly
+	special RestartMapMusic
+	opentext
+	writetext PlayersBedHealingText3
+.NoPokemon
+	waitbutton
+.NoHeal
+	closetext
+	end
+
+PlayersBedHealingText1:
+	text "Your bed looks"
+	line "warm and cozy."
+	done
+
+PlayersBedHealingText2:
+	text "Would you like to"
+	line "rest in your bed?"
+	done
+
+PlayersBedHealingText3:
+	text "Your #MON are"
+	line "feeling refreshed!"
+	done
+
+if DEF(_DEBUG)
+PlayersHouseModeChangeScript:
+	opentext
+	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
+	iftrue .TurnOffChallengeMode
+	playsound SFX_PAY_DAY
+	setflag ENGINE_CHALLENGE_MODE_ACTIVE
+	writetext PlayersHouseBookshelfChallengeModeActivatedText
+	sjump .cont
+
+.TurnOffChallengeMode
+	playsound SFX_SHUT_DOWN_PC
+	clearflag ENGINE_CHALLENGE_MODE_ACTIVE
+	writetext PlayersHouseBookshelfChallengeModeDeactivatedText
+.cont
+	waitbutton
+	closetext
+	end
+endc
+
+PlayersHousePCScript:
+	opentext
+	special PlayersHousePC
+	iftrue .Warp
+	closetext
+	end
+.Warp:
+	warp NONE, 0, 0
+	end
+
+PlayersHouseBookshelfChallengeModeActivatedText:
+	text "Switched to"
+	line "GEN2 MODE!"
+	done
+
+PlayersHouseBookshelfChallengeModeDeactivatedText:
+	text "Switched to"
+	line "CLASSIC MODE!"
+	done
+
+PlayersRadioText1:
+	text "#MON TALK!"
+	line "Please tune in"
+	cont "next time!"
+	done
+
+PlayersRadioText2:
+	text "#MON CHANNEL!"
+	done
+
+PlayersRadioText3:
+	text "This is DJ MARY,"
+	line "your host!"
+	done
+
+PlayersRadioText4:
+	text "#MON!"
+	line "#MON CHANNEL…"
+	done
+
 PlayersHouseRadioScript:
 if DEF(_DEBUG)
 	opentext
@@ -164,6 +264,10 @@ if DEF(_DEBUG)
 	setmapscene PLAYERS_HOUSE_1F, $1
 	setevent EVENT_PLAYERS_HOUSE_MOM_1
 	clearevent EVENT_PLAYERS_HOUSE_MOM_2
+;	setmapscene INDIGO_PLATEAU_POKECENTER_1F, SCENE_INDIGOPLATEAUPOKECENTER1F_LANCE
+;	setmapscene MAHOGANY_MART_1F, SCENE_MAHOGANYMART1F_NINJA
+;	setevent EVENT_WISE_TRIO_EXPLAINED_CLEAR_BELL
+;	clearevent EVENT_MAHOGANY_MART_NINJA
 	special HealParty
 	closetext
 	end
@@ -197,166 +301,118 @@ else
 	pause 45
 	closetext
 	end
-
 endc
 
-PlayersHouseBookshelfScript:
 if DEF(_DEBUG)
+PlayersHouseDebugPlayer:
 	opentext
-	checkflag ENGINE_CHALLENGE_MODE_ACTIVE
-	iftrue .TurnOffChallengeMode
-	playsound SFX_PAY_DAY
-	setflag ENGINE_CHALLENGE_MODE_ACTIVE
-	writetext PlayersHouseBookshelfChallengeModeActivatedText
-.cont:
+	writetext PlayersHouseDebugText
 	waitbutton
-	closetext
-	end
+	givepoke BULBASAUR, 50
+	givepoke CHARMANDER, 50
+	givepoke SQUIRTLE, 50
+	givepoke CHIKORITA, 50
+	givepoke CYNDAQUIL, 50
+	givepoke TOTODILE, 50
+	givepoke RATTATA, 50
+	givepoke RATICATE, 50
+	givepoke PIDGEY, 50
+	givepoke PIDGEOTTO, 50
+	givepoke SPEAROW, 50
+	givepoke FEAROW, 50
+	givepoke JIGGLYPUFF, 50
+	givepoke WIGGLYTUFF, 50
+	givepoke CLEFAIRY, 50
+	givepoke CLEFABLE, 50
+	givepoke GEODUDE, 50
+	givepoke GRAVELER, 50
+	givepoke GOLEM, 50
+	givepoke MACHOP, 50
+	givepoke MACHOKE, 50
+	givepoke MACHAMP, 50
+	givepoke ABRA, 50
+	givepoke KADABRA, 50
+	givepoke ALAKAZAM, 50
+	givepoke PORYGON, 50
+	givepoke ONIX, 50
+	givepoke STARYU, 50
+	givepoke STARMIE, 50
+	givepoke PIKACHU, 50
+	givepoke RAICHU, 50
+	givepoke VOLTORB, 50
+	givepoke LUGIA, 50
+	givepoke HO_OH, 50
 
-.TurnOffChallengeMode:
-	playsound SFX_SHUT_DOWN_PC
-	clearflag ENGINE_CHALLENGE_MODE_ACTIVE
-	writetext PlayersHouseBookshelfChallengeModeDeactivatedText
-	jump .cont
-else
-	jumpstd PictureBookshelfScript
-endc
-
-PlayersHousePCScript:
-	opentext
-	special PlayersHousePC
-	iftrue .Warp
-	closetext
-	end
-.Warp:
-	warp NONE, 0, 0
-	end
-
-PlayersBedHealing:
-	opentext
-	writetext PlayersBedHealingText1
-	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
-	iffalse .NoPokemon
-	promptbutton
-	writetext PlayersBedHealingText2
-	yesorno
-	iffalse .NoHeal
-	closetext
-	special FadeBlackQuickly
-	special ReloadSpritesNoPalettes
-	special HealParty
-	playmusic MUSIC_HEAL
-	pause 60
-	special FadeInQuickly
-	special RestartMapMusic
-	opentext
-	writetext PlayersBedHealingText3
-.NoPokemon
-	waitbutton
-.NoHeal
-	closetext
-	end
-
-PlayersBedHealingText1:
-	text "Your bed looks"
-	line "warm and cozy."
-	done
-
-PlayersBedHealingText2:
-	text "Would you like to"
-	line "rest in your bed?"
-	done
-
-PlayersBedHealingText3:
-	text "Your #MON are"
-	line "feeling refreshed!"
-	done
-
-PlayersRadioText1:
-	text "#MON TALK!"
-	line "Please tune in"
-	cont "next time!"
-	done
-
-PlayersRadioText2:
-	text "#MON CHANNEL!"
-	done
-
-PlayersRadioText3:
-	text "This is DJ MARY,"
-	line "your host!"
-	done
-
-PlayersRadioText4:
-	text "#MON!"
-	line "#MON CHANNEL…"
-	done
-
-PlayersHouseBookshelfChallengeModeActivatedText:
-	text "Switched to"
-	line "GEN2 MODE!"
-;	text "CHALLENGE MODE"
-;	line "ACTIVATED!"
-	done
-
-PlayersHouseBookshelfChallengeModeDeactivatedText:
-	text "Switched to"
-	line "CLASSIC MODE!"
-;	text "CHALLENGE MODE"
-;	line "DEACTIVATED!"
-	done
-
-;PlayersHouseDebugPlayer:
-;	opentext
-;	writetext PlayersHouseDebugText
-;	waitbutton
-;	givepoke BULBASAUR, 50
-;	givepoke CHARMANDER, 50
-;	givepoke SQUIRTLE, 50
-
-;	loadmem wPartyMon1Moves+0, FIRE_FANG
-;	loadmem wPartyMon1Moves+1, ICE_FANG
-;	loadmem wPartyMon1Moves+2, THUNDER_FANG
-;	loadmem wPartyMon1Moves+3, POISON_FANG
+	loadmem wPartyMon1Moves+0, AERIAL_ACE
+	loadmem wPartyMon1Moves+1, BOUNCE
+	loadmem wPartyMon1Moves+2, DIG
+	loadmem wPartyMon1Moves+3, TELEPORT
 ;	loadmem wPartyMon1DVs+0, $ef
 ;	loadmem wPartyMon1DVs+1, $fe
 
-;	loadmem wPartyMon2Moves+0, FIRE_PUNCH
-;	loadmem wPartyMon2Moves+1, ICE_PUNCH
-;	loadmem wPartyMon2Moves+2, THUNDERPUNCH
-;	loadmem wPartyMon2Moves+3, METAL_CLAW
+;	loadmem wPartyMon2Moves+0, AQUA_JET
+;	loadmem wPartyMon2Moves+1, SKY_ATTACK
+;	loadmem wPartyMon2Moves+2, SUBSTITUTE
+;	loadmem wPartyMon2Moves+3, MACH_PUNCH
 ;	loadmem wPartyMon2DVs+0, $ef
 ;	loadmem wPartyMon2DVs+1, $fe
 
-;	loadmem wPartyMon3Moves+0, SEED_BOMB
-;	loadmem wPartyMon3Moves+1, X_SCISSOR
+;	loadmem wPartyMon3Moves+0, EXTREMESPEED
+;	loadmem wPartyMon3Moves+1, SELFDESTRUCT
 ;	loadmem wPartyMon3Moves+2, ASTONISH
 ;	loadmem wPartyMon3Moves+3, ICICLE_SPEAR
 ;	loadmem wPartyMon3DVs+0, $ef
 ;	loadmem wPartyMon3DVs+1, $fe
 
-;	giveitem RARE_CANDY, 20
+	giveitem POTION, 99
 ;	giveitem CARBOS, 20
 ;	giveitem X_ACCURACY, 20
-;	giveitem TM_GIGA_DRAIN
-;	special HealParty
-;	closetext
-;	end
+	giveitem TM_TOXIC
 
-;TrainerRivalDebug:
-;	trainer RIVAL1, RIVAL_DEBUG, EVENT_BEAT_GRUNTM_1, PlayersHouseDebugText, PlayersHouseDebugText, 0, .Script
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext PlayersHouseDebugText
-;	waitbutton
-;	closetext
-;	clearevent EVENT_BEAT_GRUNTM_1
-;	end
+	giveitem BICYCLE
+;	giveitem COIN_CASE
+;	giveitem ITEMFINDER
+;	giveitem POKE_FLUTE
+;	giveitem OLD_ROD
+;	giveitem GOOD_ROD
+;	giveitem SUPER_ROD
+;	giveitem SUPER_ROD_2
+;	giveitem GOLD_SCALE
+;	giveitem OAKS_PARCEL
+;	giveitem S_S_TICKET
+;	giveitem CLEAR_BELL
+;	giveitem SILVER_WING
+;	giveitem GOLD_TEETH
+;	giveitem SILPH_SCOPE
+;	giveitem GS_BALL
+;	giveitem BLUE_CARD
+;	giveitem CARD_KEY
+;	giveitem BIKE_VOUCHER
+;	giveitem CARD_KEY_R
+;	giveitem LIFT_KEY
+;	giveitem RAIL_PASS
+;	giveitem SQUIRTBOTTLE
 
-;PlayersHouseDebugText:
-;	text "DEBUG STUFF"
-;	done
+	special HealParty
+	closetext
+	end
+
+TrainerRivalDebug:
+	trainer RIVAL1, RIVAL_DEBUG, EVENT_BEAT_GRUNTM_1, PlayersHouseDebugText, PlayersHouseDebugText, 0, .Script
+.Script:
+	endifjustbattled
+	opentext
+	writetext PlayersHouseDebugText
+	waitbutton
+	closetext
+	clearevent EVENT_BEAT_GRUNTM_1
+	end
+
+PlayersHouseDebugText:
+	text "DEBUG STUFF"
+	done
+endc
+
 
 PlayersHouse2F_MapEvents:
 	db 0, 0 ; filler
@@ -369,15 +425,22 @@ PlayersHouse2F_MapEvents:
 	def_bg_events
 	bg_event  0,  4, BGEVENT_READ, PlayersBedHealing
 	bg_event  0,  5, BGEVENT_READ, PlayersBedHealing
-	bg_event  2,  1, BGEVENT_UP, PlayersHousePCScript
-	bg_event  3,  1, BGEVENT_READ, PlayersHouseRadioScript
-	bg_event  5,  1, BGEVENT_READ, PlayersHouseBookshelfScript
-	bg_event  6,  0, BGEVENT_IFSET, PlayersHousePosterScript
+	bg_event  0,  1, BGEVENT_UP, PlayersHousePCScript
+	bg_event  1,  1, BGEVENT_READ, PlayersHouseRadioScript
+	bg_event  5,  0, BGEVENT_IFSET, PlayersHousePosterScript
+if DEF(_DEBUG)
+	bg_event  4,  4, BGEVENT_READ, PlayersHouseModeChangeScript
+endc
 
 	def_object_events
-	object_event  4,  2, SPRITE_CONSOLE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PlayersHouseGameConsoleScript, EVENT_PLAYERS_HOUSE_2F_CONSOLE
-	object_event  4,  4, SPRITE_DOLL_1, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, PlayersHouseDoll1Script, EVENT_PLAYERS_HOUSE_2F_DOLL_1
-	object_event  5,  4, SPRITE_DOLL_2, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_SCRIPT, 0, PlayersHouseDoll2Script, EVENT_PLAYERS_HOUSE_2F_DOLL_2
-	object_event  0,  1, SPRITE_BIG_DOLL, SPRITEMOVEDATA_BIGDOLL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PlayersHouseBigDollScript, EVENT_PLAYERS_HOUSE_2F_BIG_DOLL
-;	object_event  1,  1, SPRITE_CHRIS, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PlayersHouseDebugPlayer, -1
-;	object_event  0,  1, SPRITE_CHRIS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerRivalDebug, -1
+	object_event  4,  5, SPRITE_CONSOLE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PlayersHouseGameConsoleScript, EVENT_PLAYERS_HOUSE_2F_CONSOLE
+	object_event  2,  1, SPRITE_DOLL_1, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PlayersHouseDoll1Script, EVENT_PLAYERS_HOUSE_2F_DOLL_1
+	object_event  3,  1, SPRITE_DOLL_2, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_SCRIPT, 0, PlayersHouseDoll2Script, EVENT_PLAYERS_HOUSE_2F_DOLL_2
+	object_event  0,  6, SPRITE_BIG_DOLL, SPRITEMOVEDATA_BIGDOLL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PlayersHouseBigDollScript, EVENT_PLAYERS_HOUSE_2F_BIG_DOLL
+if DEF(_DEBUG)
+	object_event  7,  5, SPRITE_RED, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PlayersHouseDebugPlayer, -1
+	object_event  7,  4, SPRITE_RED, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerRivalDebug, -1
+endc
+
+;PAL_OW_BLUE = DOLL_1
+;PAL_OW_TREE = DOLL_2

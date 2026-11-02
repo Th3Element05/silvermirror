@@ -1,11 +1,11 @@
 SECTION "Sprites 1", ROMX
 
-ChrisSpriteGFX::               INCBIN "gfx/sprites/chris.2bpp"
-ChrisRunSpriteGFX::            INCBIN "gfx/sprites/chris_run.2bpp"
-ChrisBikeSpriteGFX::           INCBIN "gfx/sprites/chris_bike.2bpp"
-KrisSpriteGFX::                INCBIN "gfx/sprites/kris.2bpp"
-KrisRunSpriteGFX::             INCBIN "gfx/sprites/kris_run.2bpp"
-KrisBikeSpriteGFX::            INCBIN "gfx/sprites/kris_bike.2bpp"
+ChrisSpriteGFX::               INCBIN "gfx/sprites/red.2bpp"
+ChrisRunSpriteGFX::            INCBIN "gfx/sprites/red_run.2bpp"
+ChrisBikeSpriteGFX::           INCBIN "gfx/sprites/red_bike.2bpp"
+KrisSpriteGFX::                INCBIN "gfx/sprites/green.2bpp"
+KrisRunSpriteGFX::             INCBIN "gfx/sprites/green_run.2bpp"
+KrisBikeSpriteGFX::            INCBIN "gfx/sprites/green_bike.2bpp"
 SurfSpriteGFX::                INCBIN "gfx/sprites/surf.2bpp"
 BlueSpriteGFX::                INCBIN "gfx/sprites/blue.2bpp"
 BrockSpriteGFX::               INCBIN "gfx/sprites/brock.2bpp"
@@ -99,6 +99,7 @@ DomeFossilSpriteGFX::          INCBIN "gfx/sprites/dome_fossil.2bpp"
 OldAmberSpriteGFX::            INCBIN "gfx/sprites/old_amber.2bpp"
 MirrorSpriteGFX::              INCBIN "gfx/sprites/mirror.2bpp"
 ShineSpriteGFX::               INCBIN "gfx/sprites/shine.2bpp"
+;RadioSpriteGFX::               INCBIN "gfx/sprites/radio.2bpp"
 
 
 SECTION "Sprites 4", ROMX

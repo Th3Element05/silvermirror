@@ -79,25 +79,35 @@ PlayBattleMusic:
 	jr .done
 
 .trainermusic
-	ld de, MUSIC_CHAMPION_BATTLE
-	cp CHAMPION
-	jr z, .done
-	cp POKEMON_PROF
-	jr z, .done
-	cp RED
-	jr z, .done
+;	ld de, MUSIC_KANTO_TRAINER_BATTLE
+	cp RIVAL2
+	jr z, .kantotrainer
 
-	ld de, MUSIC_ROCKET_BATTLE
+;	ld de, MUSIC_FINAL_BATTLE
+	cp CHAMPION
+	jr z, .finalbattle
+	cp RED
+	jr z, .finalbattle
+	cp GREEN
+	jr z, .finalbattle
+
+;	ld de, MUSIC_CHAMPION_BATTLE
+	cp POKEMON_PROF
+	jr z, .championtrainer
+	cp LANCE
+	jr z, .championtrainer
+
+;	ld de, MUSIC_ROCKET_BATTLE
 	cp GRUNTM
-	jr z, .done
+	jr z, .rockettrainer
 	cp GRUNTF
-	jr z, .done
+	jr z, .rockettrainer
 	cp EXECUTIVEM
-	jr z, .done
+	jr z, .rockettrainer
 	cp EXECUTIVEF
-	jr z, .done
+	jr z, .rockettrainer
 	cp SCIENTIST
-	jr z, .done
+	jr z, .rockettrainer
 
 	ld de, MUSIC_KANTO_GYM_LEADER_BATTLE
 	farcall IsKantoGymLeader
@@ -109,23 +119,23 @@ PlayBattleMusic:
 	farcall IsGymLeader
 	jr c, .done
 
-	ld de, MUSIC_RIVAL_BATTLE
-	ld a, [wOtherTrainerClass]
-	cp RIVAL1
-	jr z, .done
-	cp RIVAL2
-	jr nz, .othertrainer
-
-	ld a, [wOtherTrainerID]
-	cp RIVAL2_4_BULBASAUR ; Second Rival on Route 22
-	jr c, .done
-	ld de, MUSIC_RIVAL_BATTLE ;MUSIC_CHAMPION_BATTLE
-	jr .done
+;	ld de, MUSIC_KANTO_TRAINER_BATTLE
+;	ld a, [wOtherTrainerClass]
+;	cp RIVAL1
+;	jr z, .done
+;	cp RIVAL2
+;	jr nz, .othertrainer
+;
+;	ld a, [wOtherTrainerID]
+;	cp RIVAL2_4_BULBASAUR ; Second Rival on Route 22
+;	jr c, .done
+;	ld de, MUSIC_KANTO_TRAINER_BATTLE
+;	jr .done
 
 .othertrainer
 	ld a, [wLinkMode]
 	and a
-	jr nz, .johtotrainer
+	jr nz, .kantotrainer
 
 	farcall RegionCheck
 	ld a, e
@@ -136,8 +146,21 @@ PlayBattleMusic:
 	ld de, MUSIC_JOHTO_TRAINER_BATTLE
 	jr .done
 
+.finalbattle
+	ld de, MUSIC_FINAL_BATTLE
+	jr .done
+
+.championtrainer
+	ld de, MUSIC_CHAMPION_BATTLE
+	jr .done
+
+.rockettrainer
+	ld de, MUSIC_ROCKET_BATTLE
+	jr .done
+
 .kantotrainer
 	ld de, MUSIC_KANTO_TRAINER_BATTLE
+	; fallthrough to .done
 
 .done
 	call PlayMusic

@@ -19,10 +19,12 @@ Route15Gate2FOaksAideScript:
 	writetext Route15Gate2FOaksAideCongratsText
 	promptbutton
 	verbosegiveitem LUCKY_EGG
+	iffalse .PackFull
 	setevent EVENT_GOT_KANTO_LUCKY_EGG
 .GotLuckyEgg
 	writetext Route15Gate2FOaksAideLuckyEggExplainText
 	waitbutton
+.PackFull
 	closetext
 	end
 

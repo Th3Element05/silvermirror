@@ -1,8 +1,10 @@
 InitDecorations:
-	ld a, DECO_FEATHERY_BED
-	ld [wDecoBed], a
+;	ld a, DECO_FEATHERY_BED
+;	ld [wDecoBed], a
 	ld a, DECO_TOWN_MAP
 	ld [wDecoPoster], a
+	ld a, DECO_SNES
+	ld [wDecoConsole], a
 	ret
 
 _PlayerDecorationMenu:
@@ -223,10 +225,10 @@ FindOwnedCarpets:
 	jp FindOwnedDecosInCategory
 
 .carpets:
-	db DECO_RED_CARPET ; 7
-	db DECO_BLUE_CARPET ; 8
-	db DECO_YELLOW_CARPET ; 9
-	db DECO_GREEN_CARPET ; a
+;	db DECO_RED_CARPET ; 7
+;	db DECO_BLUE_CARPET ; 8
+;	db DECO_YELLOW_CARPET ; 9
+;	db DECO_GREEN_CARPET ; a
 	db -1
 
 DecoPlantMenu:
@@ -241,9 +243,9 @@ FindOwnedPlants:
 	jp FindOwnedDecosInCategory
 
 .plants:
-	db DECO_MAGNAPLANT ; c
-	db DECO_TROPICPLANT ; d
-	db DECO_JUMBOPLANT ; e
+;	db DECO_MAGNAPLANT ; c
+;	db DECO_TROPICPLANT ; d
+;	db DECO_JUMBOPLANT ; e
 	db -1
 
 DecoPosterMenu:
@@ -332,7 +334,7 @@ FindOwnedBigDolls:
 
 .big_dolls:
 	db DECO_BIG_SNORLAX_DOLL ; 1a
-	db DECO_BIG_ONIX_DOLL ; 1b
+;	db DECO_BIG_ONIX_DOLL ; 1b
 	db DECO_BIG_LAPRAS_DOLL ; 1c
 	db -1
 
@@ -1055,29 +1057,41 @@ DecorationDesc_NullPoster:
 
 DecorationDesc_LeftOrnament:
 	ld a, [wDecoLeftOrnament]
-	jr DecorationDesc_OrnamentOrConsole
+	jr DecorationDesc_Ornament
 
 DecorationDesc_RightOrnament:
 	ld a, [wDecoRightOrnament]
-	jr DecorationDesc_OrnamentOrConsole
+	jr DecorationDesc_Ornament
 
-DecorationDesc_Console:
-	ld a, [wDecoConsole]
-	jr DecorationDesc_OrnamentOrConsole
-
-DecorationDesc_OrnamentOrConsole:
+DecorationDesc_Ornament:
 	ld c, a
 	ld de, wStringBuffer3
 	call GetDecorationName_c_de
-	ld b, BANK(.OrnamentConsoleScript)
-	ld de, .OrnamentConsoleScript
+	ld b, BANK(.OrnamentDescScript)
+	ld de, .OrnamentDescScript
 	ret
 
-.OrnamentConsoleScript:
+.OrnamentDescScript:
 	jumptext .LookAdorableDecoText
 
 .LookAdorableDecoText:
 	text_far _LookAdorableDecoText
+	text_end
+
+DecorationDesc_Console:
+	ld a, [wDecoConsole]
+	ld c, a
+	ld de, wStringBuffer3
+	call GetDecorationName_c_de
+	ld b, BANK(.ConsoleDescScript)
+	ld de, .ConsoleDescScript
+	ret
+
+.ConsoleDescScript:
+	jumptext .PlayedConsoleDecoText
+
+.PlayedConsoleDecoText:
+	text_far _PlayedConsoleDecoText
 	text_end
 
 DecorationDesc_GiantOrnament:
@@ -1097,10 +1111,10 @@ ToggleMaptileDecorations:
 	lb de, 0, 4 ; bed coordinates
 	ld a, [wDecoBed]
 	call SetDecorationTile
-	lb de, 7, 4 ; plant coordinates
+	lb de, 6, 6 ; plant coordinates
 	ld a, [wDecoPlant]
 	call SetDecorationTile
-	lb de, 6, 0 ; poster coordinates
+	lb de, 4, 0 ; poster coordinates
 	ld a, [wDecoPoster]
 	call SetDecorationTile
 	call SetPosterVisibility

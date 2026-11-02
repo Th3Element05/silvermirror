@@ -25,10 +25,12 @@ FishingGuruGood:
 	writetext FishingGuruGoodYesText
 	promptbutton
 	verbosegiveitem GOOD_ROD
+	iffalse .BagFull
+	setevent EVENT_GOT_GOOD_ROD
 	writetext FishingGuruGoodGiveRodText
 	waitbutton
+.BagFull
 	closetext
-	setevent EVENT_GOT_GOOD_ROD
 	end
 
 .GotGoodRod:

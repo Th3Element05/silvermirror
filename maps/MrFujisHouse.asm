@@ -18,7 +18,11 @@ MrFujisHouseGivePokefluteScript:
 	opentext
 	writetext MrFujisHouseMrFujiGivePokeFluteText
 	promptbutton
-	verbosegiveitem POKE_FLUTE
+	giveitem POKE_FLUTE
+	writetext MrFujisHouseReceivedPokefluteText
+	playsound SFX_KEY_ITEM
+	waitsfx
+	itemnotify
 	writetext MrFujisHouseMrFujiExplainFluteText
 	promptbutton
 	writetext MrFujisHouseMrFujiGivesExpnCardText
@@ -43,6 +47,8 @@ MrFujisHouseGivePokefluteScript:
 	end
 
 MrFujisHouseMrFujiScript:
+;	checkitem POKE_FLUTE
+;	iffalse MrFujisHouseGivePokefluteScript
 	checkevent EVENT_WOKE_SNORLAX
 	iftrue .FluteHelped
 	jumptextfaceplayer MrFujisHouseMrFujiExplainFluteText
@@ -60,6 +66,11 @@ MrFujisHouseMrFujiGivePokeFluteText:
 
 	para "I think this may"
 	line "help your quest."
+	done
+
+MrFujisHouseReceivedPokefluteText:
+	text "<PLAYER> received"
+	line "the #FLUTE!"
 	done
 
 MrFujisHouseMrFujiExplainFluteText:

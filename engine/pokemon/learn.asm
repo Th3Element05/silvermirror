@@ -500,7 +500,7 @@ String_LearnTabTop:
 String_LearnTabBottom:
 	db "│<ATK1><ATK2>                │@"
 String_LearnReplace:
-	db "FORGET?@"
+	db "─ FORGET? @"
 
 
 LearnedMoveText:

@@ -171,11 +171,20 @@ Route30HoohFlyoverScript:
 	promptbutton
 	waitsfx
 	giveitem RAINBOW_WING
+	iffalse .NoRoomForRainbowWing
 	writetext Route30GotRainbowWingText
 	playsound SFX_KEY_ITEM
 	waitsfx
 	itemnotify
 	closetext
+	setscene SCENE_ROUTE30_NOOP
+	setevent EVENT_ROUTE_30_SAW_HOOH
+	special RestartMapMusic
+	end
+
+.NoRoomForRainbowWing
+	closetext
+	appear ROUTE30_RAINBOW_WING
 	setscene SCENE_ROUTE30_NOOP
 	setevent EVENT_ROUTE_30_SAW_HOOH
 	special RestartMapMusic
@@ -490,7 +499,7 @@ Route30_MapEvents:
 	object_event  5, 39, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route30_OranBerry, EVENT_ROUTE_30_ORAN_BERRY
 	object_event 16,  8, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, Route30_PechaBerry, EVENT_ROUTE_30_PECHA_BERRY
 	object_event 15,  9, SPRITE_APRICORN, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, Route30_PNKApricorn, EVENT_ROUTE_30_PNK_APRICORN
-	object_event 13,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route30RainbowWing, EVENT_ROUTE_30_RAINBOW_WING
+	object_event 13,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route30RainbowWing, EVENT_ROUTE_30_RAINBOW_WING
 	object_event  2, 27, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerYoungsterJoey, -1 ;joey
 	object_event 16, 30, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerYoungsterThomas, -1 ;mikey
 	object_event  1,  8, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerBugCatcherDylan, -1 ;don

@@ -31,7 +31,7 @@ Music:
 	dba Music_GymLeaderVictory
 	dba Music_MtMoonSquare
 	dba Music_Gym
-	dba Music_PalletTown
+	dba Music_PalletTown               ;samename
 	dba Music_ProfOaksPokemonTalk
 	dba Music_ProfOak
 	dba Music_LookRival                ; samename
@@ -51,7 +51,7 @@ Music:
 	dba Music_VioletCity
 	dba Music_JohtoGymBattle
 	dba Music_ChampionBattle
-	dba Music_RivalBattle
+	dba Music_FinalBattle             ;Music_RivalBattle
 	dba Music_RocketBattle
 	dba Music_ElmsLab
 	dba Music_DarkCave
@@ -85,15 +85,15 @@ Music:
 	dba Music_VictoryRoad
 	dba Music_PokemonLullaby
 	dba Music_PokemonMarch
-	dba Music_GoldSilverOpening
-	dba Music_GoldSilverOpening2
+;	dba Music_GoldSilverOpening        ; removed
+;	dba Music_GoldSilverOpening2       ; removed
 	dba Music_MainMenu
 	dba Music_RuinsOfAlphInterior
 	dba Music_RocketTheme
 	dba Music_DancingHall
 	dba Music_ContestResults
 	dba Music_BugCatchingContest
-	dba Music_LakeOfRageRocketRadio
+;	dba Music_LakeOfRageRocketRadio    ; removed
 	dba Music_Printer
 	dba Music_PostCredits
 ; new to Crystal

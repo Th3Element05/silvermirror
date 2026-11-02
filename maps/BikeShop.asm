@@ -87,9 +87,8 @@ BikeShopClerkCantAffordText:
 
 BikeShopClerkBikeVoucherText:
 	ntag "CLERK:"
-	text "Oh, that's…"
-
-	para "A BIKE VOUCHER!"
+	text "Oh, that's a"
+	line "BIKE VOUCHER!"
 
 	para "Okay!"
 	line "Here you go!"

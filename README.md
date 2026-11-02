@@ -1,16 +1,29 @@
 # Pokémon: Silver Mirror
 
 This is a custom Pokémon game based on the Pokémon Crystal disassembly.  
-Forked from Sour Crystal v4.1a
+Forked from Sour Crystal v4.1a  
 
 My goal was to recreate the story of Red's journey through Kanto from Pokémon Red/Blue, with as many Quality of Life and graphical upgrades as possible while still maintaining the classic charm of the Gameboy/Gameboy Color Pokémon games.  
 I also wanted to include a new post-game storyline in Johto, as a mirror to the inclusion of Kanto in Pokémon Gold, Silver, and Crystal.  Challenge the Johto Gym Leaders for eight more badges, and climb Mount Silver to face the final challenges in the game.
 
 ![box-art](https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/silvermirror-box.png)  
 
-## Version 1.0
+## Version 1.1
 
-- <a href="https://github.com/Th3Element05/silvermirror/releases/tag/v1.0">Initial Release v1.0</a>
+Version 1.1 should be compatible with existing save files from v1.0.  
+**But I highly recommend making a backup of your save file, just in case.**
+- <a href="https://github.com/Th3Element05/silvermirror/releases/tag/v1.1">Version v1.1 Release Page</a>  
+
+### __Change Log:__  
+- Replaced Kris graphics with Leaf/Green.  
+- Replaced Pallet Town music with the original track from RBY.  
+- Adjusted battle music for Rival battles and some other climactic battles.  
+- Changed the player's room to be more like RBY.  
+- A wider selection of room decorations are available when starting a New Game.  
+- Fixed issue with some Pokémon's TM compatibility not being correct/complete.  
+- Fixed issue where EXP.SHARE and LUCKY EGG would be unobtainable if the player's pack is full the first time they receive them from OAK's AIDE.  
+- Pokémon will be cured of poison when they reach 1HP while walking.  
+- Made a hint in the hint book way less vague.  
 
 ### __Resources:__
 - **[Silver Mirror Discord Server](https://discord.gg/rsUamUSuwK)**
@@ -92,6 +105,9 @@ I also wanted to include a new post-game storyline in Johto, as a mirror to the 
 
 <br/>
 
+### __Recommended Emulators:__
+[mGBA](https://mgba.io/),  [BGB](https://bgb.bircd.org/), [SameBoy](https://github.com/LIJI32/SameBoy), [Gambatte](https://github.com/sinamas/gambatte)  
+
 ## __Screenshots:__
 
 <a href="https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/sm-title-r0.png">
@@ -152,14 +168,24 @@ I also wanted to include a new post-game storyline in Johto, as a mirror to the 
   >Everyone else on the PRET pokecrystal Discord!  
 
 ### __Graphics:__
-- **Pokémon Graphics:** from Polished Crystal:  
-  >GLACEON, GLISCOR, HONCHKROW, LEAFEON, MAGNEZONE, MAMOSWINE, MISMAGIUS, TANGROWTH, WEAVILE, and YANMEGA  
-- **Reef tile gfx** from Polished Crystal  
-- **Some tileset animation code** from Polished Crystal  
+- **SourApple**  
+  >Pokémon Front Pics and Animations  
+- **MeroMero**  
+  >Provided the base for most Pokemon Back Pics  
+- **Polished Crystal**  
+- >Pokémon Graphics by various contributors:  
+  >`GLACEON, GLISCOR, HONCHKROW, LEAFEON, MAGNEZONE, MAMOSWINE, MISMAGIUS, TANGROWTH, WEAVILE, and YANMEGA`  
+  >Reef tile gfx  
+  >Some tileset animation code  
+- **AtmaBuster**  
+  >Provided the base for Leaf's Front and Back graphics  
+- **SkidMarc25**  
+  >Provided trainer graphics for:  
+  >`Cyclist, Misty, and Lorelei`  
 
 ### __Audio:__
-- **Gen1 Music** from pokered-crysaudio  
-  >dannye  
+- **dannye** pokered-crysaudio  
+  >Gen1 Music Tracks  
 
 ### __Testing:__
 - **Alpha Version Testers**  

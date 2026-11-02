@@ -353,7 +353,7 @@ BattleBGEffect_HideMon:
 
 .player_side
 	hlcoord 1, 6 ;2, 6
-	lb bc, 6, 7 ;6, 6
+	lb bc, 6, 8 ;6, 6
 .got_pointer
 	call ClearBox
 	pop bc
