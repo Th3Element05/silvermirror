@@ -115,7 +115,7 @@ FuchsiaScytherExhibit:
 FuchsiaCityScytherText:
 	text "SCYTHER"
 
-	para "Wields it's razor-"
+	para "Wields its razor-"
 	line "sharp blades with"
 	cont "ninja-like speed"
 	roll "and agility!"

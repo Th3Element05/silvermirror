@@ -19,6 +19,7 @@ Version 1.1 should be compatible with existing save files from v1.0.
 - <a href="https://github.com/Th3Element05/silvermirror/releases/tag/v1.1">Version v1.1 Release Page</a>  
 
 ### __Change Log:__  
+- Fixed a few bugs and errors.  
 - Replaced Kris graphics with Leaf/Green.  
 - Replaced Pallet Town music with the original track from RBY.  
 - Adjusted battle music for Rival battles and some other climactic battles.  
