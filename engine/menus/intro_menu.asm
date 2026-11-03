@@ -863,7 +863,7 @@ RivalNames:
 	db "GARY@"
 ;	db "JOHN@"
 ;	db "SILVER@"
-	db 1 ; title indent
+	db 2 ; title indent
 	db " RIVAL @" ; title
 
 GSShowPlayerNamingChoices: ; unreferenced

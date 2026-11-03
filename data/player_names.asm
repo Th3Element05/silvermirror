@@ -14,7 +14,7 @@ MalePlayerNameArray:
 	db "ASH@"
 ;	db "ETHAN@"
 ;	db "CHRIS@"
-	db 1 ; title indent
+	db 2 ; title indent
 	db " NAME @" ; title
 
 KrisNameMenuHeader:
@@ -33,5 +33,5 @@ FemalePlayerNameArray:
 	db "LEAF@"
 ;	db "LYRA@"
 ;	db "KRIS@"
-	db 1 ; title indent
+	db 2 ; title indent
 	db " NAME @" ; title
