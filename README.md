@@ -14,7 +14,7 @@ Version 1.1 should be compatible with existing save files from v1.0.
 **But I highly recommend making a backup of your save file, just in case.**
 - <a href="https://github.com/Th3Element05/silvermirror/releases/tag/v1.1">Version v1.1 Release Page</a>  
 
-## Previous Release: Version 1.0 (Initial Release)  
+### Previous Release: Version 1.0 (Initial Release)  
 
 - <a href="https://github.com/Th3Element05/silvermirror/releases/tag/v1.0">Initial Release v1.0</a>  
 

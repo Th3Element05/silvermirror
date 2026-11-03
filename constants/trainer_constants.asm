@@ -705,24 +705,29 @@ DEF KRIS EQU __trainer_class__
 ; rematch
 	const WALT_0
 
-	trainerclass JUGGLER ; 36
+	trainerclass CYCLIST ; 36
 ; kanto
 	const FRITZ
-	const OTIS ; cueball
-	const BURT ; cueball
-	const FINNLEY ; cueball
-	const DUSTIN ; cueball
-	const LYLE ; cueball
-	const DARIUS ; cueball
-	const JULIEN ; cueball
-	const MAXIMO ; cueball
+	const OTIS
+	const BURT
+	const FINNLEY
+	const DUSTIN
+	const LYLE
+	const DARIUS
+	const JULIEN
+; johto
+	; none
+
+	trainerclass JUGGLER ; 37
+; kanto
+	const MAXIMO
 	const DARIO
 	const GILBERT
 ; johto
 	const IRWIN1 ; no rematch
 	const RODNEY
 
-	trainerclass BLACKBELT_T ; 37
+	trainerclass BLACKBELT_T ; 38
 ; kanto
 	const TAKESHI
 	const BRUCE
@@ -741,7 +746,7 @@ DEF KRIS EQU __trainer_class__
 ; rematch
 	const MASTER2
 
-	trainerclass PSYCHIC_T ; 38
+	trainerclass PSYCHIC_T ; 39
 ; kanto
 	const NATHAN
 	const FRANKLIN
@@ -755,7 +760,7 @@ DEF KRIS EQU __trainer_class__
 	const IDRIS
 	const KENAN
 
-	trainerclass PICNICKER ; 39
+	trainerclass PICNICKER ; 3a
 ; kanto (JR TRAINER F)
 	const SOPHIA
 	const EMILY
@@ -793,7 +798,7 @@ DEF KRIS EQU __trainer_class__
 ;	const LIZ_2
 ;	const LIZ_0
 
-	trainerclass CAMPER ; 3a
+	trainerclass CAMPER ; 3b
 ; kanto (JR TRAINER M)
 	const ISAAC
 	const IVAN
@@ -815,7 +820,7 @@ DEF KRIS EQU __trainer_class__
 	const TANNER_0
 	const TODD_0
 
-	trainerclass SAGE ; 3b
+	trainerclass SAGE ; 3c
 ; kanto (FUCHSIA GYM (jugglers))
 	const EZRA
 	const KYLO
@@ -834,7 +839,7 @@ DEF KRIS EQU __trainer_class__
 	const MASA
 	const KOJI
 
-	trainerclass MEDIUM ; 3c
+	trainerclass MEDIUM ; 3d
 ; kanto (CHANNELER)
 	const MARTHA
 	const GRACE
@@ -857,12 +862,12 @@ DEF KRIS EQU __trainer_class__
 	const MINA
 	const LEONA
 
-	trainerclass BOARDER ; 3d
+	trainerclass BOARDER ; 3e
 ; johto
 	const RONALD
 	const SHAUN
 
-	trainerclass POKEFANM ; 3e
+	trainerclass POKEFANM ; 3f
 ; kanto (GAMBLER)
 	const TREVOR
 	const WILLIAM
@@ -874,7 +879,7 @@ DEF KRIS EQU __trainer_class__
 	const COLIN
 	const BRENDAN
 
-	trainerclass POKEFANF ; 3f
+	trainerclass POKEFANF ; 40
 ; kanto (GAMBLER)
 	const BEVERLY1 ; no rematch
 	const GEORGIA
@@ -883,7 +888,7 @@ DEF KRIS EQU __trainer_class__
 	const ELEANOR
 	const RUTH
 
-	trainerclass KIMONO_GIRL ; 40
+	trainerclass KIMONO_GIRL ; 41
 ; johto
 	const NAOKO ;flareon
 	const SAYO  ;espeon
@@ -893,7 +898,7 @@ DEF KRIS EQU __trainer_class__
 	const AOKI  ;leafeon
 	const YUKI  ;glaceon
 
-	trainerclass TWINS ; 41
+	trainerclass TWINS ; 42
 ; kanto (BEAUTYs r13)
 	const KAYANDTIA1
 ; johto
@@ -905,7 +910,7 @@ DEF KRIS EQU __trainer_class__
 ;	const KAYANDTIA_2
 ;	const KAYANDTIA_0
 
-	trainerclass OFFICER ; 42
+	trainerclass OFFICER ; 43
 ; kanto
 	const REX
 	const CARTER
@@ -913,12 +918,12 @@ DEF KRIS EQU __trainer_class__
 	const KEITH
 	const DIRK
 
-	trainerclass NINJA ; 43 ;MYSTICALMAN
+	trainerclass NINJA ; 44
 ; kanto (FUCHSIA GYM (tamers))
 	const KOA
 	const KHAI
 ; johto
-	const NINJA_GUARD_R0    ;const EUSINE
+	const NINJA_GUARD_R0
 	const NINJA_GUARD_R1
 	const NINJA_GUARD_R2
 ;	const JONIN
@@ -938,7 +943,7 @@ DEF KRIS EQU __trainer_class__
 	const JONIN
 	const TEISATSU
 
-	trainerclass COUPLE ; 44
+	trainerclass COUPLE ; 45
 ; kanto (JR TRAINERs r6)
 	const TIMANDSUE1
 	const VICANDTARA
@@ -951,23 +956,23 @@ DEF KRIS EQU __trainer_class__
 ;	const TIMANDSUE_3
 ;	const TIMANDSUE_0
 
-	trainerclass COOL_DUO ; 45
+	trainerclass COOL_DUO ; 46
 ; kanto
 	const ZACANDJEN
 ; johto
 	const THOMANDKAE
 	const ELANANDIDA
 
-	trainerclass RED ; 46
+	trainerclass RED ; 47
 	const RED1
 
-	trainerclass GREEN ; 47
+	trainerclass GREEN ; 48
 	const GREEN1
 
-	trainerclass KABUTOPS_FOSSIL ; 47
+	trainerclass KABUTOPS_FOSSIL ; 49
 
-	trainerclass AERODACTYL_FOSSIL ; 48
+	trainerclass AERODACTYL_FOSSIL ; 50
 
-	trainerclass POKEMON_GHOST ; 49
+	trainerclass POKEMON_GHOST ; 51
 
 DEF NUM_TRAINER_CLASSES EQU __trainer_class__ - 1 ; should we subtract the fossils and ghost here?

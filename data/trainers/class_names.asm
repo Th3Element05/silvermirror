@@ -56,6 +56,7 @@ TrainerClassNames::
 	li "BIKER"          ;BIKER
 	li "BURGLAR"        ;BURGLAR
 	li "FIREBREATHER"   ;FIREBREATHER
+	li "CYCLIST"        ;CYCLIST
 	li "JUGGLER"        ;JUGGLER
 	li "BLACKBELT"      ;BLACKBELT_T
 	li "PSYCHIC"        ;PSYCHIC_T

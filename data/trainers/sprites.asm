@@ -56,6 +56,7 @@ BTTrainerClassSprites:
 	db SPRITE_BIKER         ; Biker
 	db SPRITE_PHARMACIST    ; Burglar
 	db SPRITE_FISHER        ; Firebreather
+	db SPRITE_BIKER         ; Cyclist
 	db SPRITE_ROCKER        ; Juggler
 	db SPRITE_BLACK_BELT    ; Blackbelt
 	db SPRITE_YOUNGSTER     ; Psychic

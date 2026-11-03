@@ -58,6 +58,7 @@ TrainerGroups:
 	dba BikerGroup
 	dba BurglarGroup
 	dba FirebreatherGroup
+	dba CyclistGroup
 	dba JugglerGroup
 	dba BlackbeltGroup
 	dba PsychicGroup

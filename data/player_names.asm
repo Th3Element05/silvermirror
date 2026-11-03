@@ -10,11 +10,11 @@ ChrisNameMenuHeader:
 	db 3 ;5 ; items
 	db "NEW NAME@"
 MalePlayerNameArray:
-	db "RED@" ;silvermirror -db "CHRIS@"
-	db "ASH@" ;silvermirror -db "MAT@"
-;	db "CHRIS@" ;silvermirror -db "ALLAN@"
-;	db "ETHAN@" ;silvermirror -db "JON@"
-	db 2 ; title indent
+	db "RED@"
+	db "ASH@"
+;	db "ETHAN@"
+;	db "CHRIS@"
+	db 1 ; title indent
 	db " NAME @" ; title
 
 KrisNameMenuHeader:
@@ -29,9 +29,9 @@ KrisNameMenuHeader:
 	db 3 ;5 ; items
 	db "NEW NAME@"
 FemalePlayerNameArray:
-	db "GREEN@" ;silvermirror -db "KRIS@"
+	db "GREEN@"
 	db "LEAF@"
-;	db "KRIS@" ;silvermirror -db "JUANA@"
-;	db "LYRA@" ;silvermirror -db "JODI@"
-	db 2 ; title indent
+;	db "LYRA@"
+;	db "KRIS@"
+	db 1 ; title indent
 	db " NAME @" ; title
