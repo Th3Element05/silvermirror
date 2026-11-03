@@ -52,9 +52,10 @@ RGBLINK ?= $(RGBDS)rgblink
 .SECONDARY:
 
 all: silvermirror vc
-silvermirror: silvermirror.gbc
-debug:        silvermirror_debug.gbc
-vc:           silvermirror.patch
+debug: silvermirror silvermirror_debug vc
+silvermirror:       silvermirror.gbc
+silvermirror_debug: silvermirror_debug.gbc
+silvermirror_vc:    silvermirror.patch
 
 clean: tidy
 	find gfx \
