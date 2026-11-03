@@ -3346,10 +3346,10 @@ wdc60:: db
 wSwarmSpecies:: db
 wSwarmLandmark:: db
 
-	ds 13 ; sourcrystal ds 15
+;	ds 13 ; -> ;removed to make room to expand CONTACT_LIST_SIZE
 
-wVermilionGymTrashCan1:: db ;silvermirror+
-wVermilionGymTrashCan2:: db ;silvermirror+
+;wVermilionGymTrashCan1:: db ;silvermirror+, unused
+;wVermilionGymTrashCan2:: db ;silvermirror+, unused
 
 wFossilStepCount:: ds 1
 
@@ -3366,7 +3366,7 @@ wSafariTimeRemaining:: dw
 
 wPhoneList:: ds CONTACT_LIST_SIZE + 1
 
-	ds 22
+;	ds 22 ;removed to make room to expand CONTACT_LIST_SIZE
 
 wLuckyNumberShowFlag:: db
 wRepelType:: db
@@ -3392,7 +3392,7 @@ wBackupWarpNumber:: db
 wBackupMapGroup::   db
 wBackupMapNumber::  db
 
-	ds 3
+;	ds 3 ; -> ;removed to make room to expand CONTACT_LIST_SIZE
 
 wLastSpawnMapGroup:: db
 wLastSpawnMapNumber:: db
@@ -3434,8 +3434,9 @@ wPartyMon{d:n}Nickname:: ds MON_NAME_LENGTH
 endr
 wPartyMonNicknamesEnd::
 
-;	ds 20 ;22 -> DEF CONTACT_LIST_SIZE EQU 10 ;12
-	ds 13 ;20 -> room for wRoamMon4:: roam_struct
+;	ds 20 ;22 -> DEF CONTACT_LIST_SIZE EQU 12 ;10
+;	ds 13 ;20 -> room for wRoamMon4:: roam_struct
+;	ds 0  ;13 -> removed to make room to expand CONTACT_LIST_SIZE
 
 wPokedexCaught:: flag_array NUM_POKEMON
 wEndPokedexCaught::
