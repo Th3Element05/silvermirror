@@ -147,29 +147,29 @@ GruntM21AfterBattleText:
 	line "into WEEZING!"
 	done
 
-TrainerJugglerFritz:
-	trainer JUGGLER, FRITZ, EVENT_BEAT_JUGGLER_FRITZ, JugglerFritzSeenText, JugglerFritzBeatenText, 0, .Script
+TrainerJugglerMaximo:
+	trainer JUGGLER, MAXIMO, EVENT_BEAT_JUGGLER_MAXIMO, JugglerMaximoSeenText, JugglerMaximoBeatenText, 0, .Script
 .Script:
 	endifjustbattled
 	opentext
-	writetext JugglerFritzAfterBattleText
+	writetext JugglerMaximoAfterBattleText
 	waitbutton
 	closetext
 	end
 
-JugglerFritzSeenText:
+JugglerMaximoSeenText:
 	ntag "JUGGLER:"
 	text "Whaaat? There"
 	line "shouldn't be any"
 	cont "children here?"
 	done
 
-JugglerFritzBeatenText:
-	ntag "FRITZ:"
+JugglerMaximoBeatenText:
+	ntag "MAXIMO:"
 	text "Oh goodness!"
 	done
 
-JugglerFritzAfterBattleText:
+JugglerMaximoAfterBattleText:
 	ntag "JUGGLER:"
 	text "It's not smart"
 	line "to pick a fight"
@@ -295,7 +295,7 @@ SilphCo5F_MapEvents:
 	def_object_events
 	object_event  8,  3, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerScientistRich, EVENT_BEAT_GIOVANNI_SILPHCO
 	object_event 28,  4, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerRocketGruntM21, EVENT_BEAT_GIOVANNI_SILPHCO
-	object_event 18, 10, SPRITE_ROCKER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerJugglerFritz, EVENT_BEAT_GIOVANNI_SILPHCO
+	object_event 18, 10, SPRITE_ROCKER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerJugglerMaximo, EVENT_BEAT_GIOVANNI_SILPHCO
 	object_event  8, 16, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerRocketGruntF5, EVENT_BEAT_GIOVANNI_SILPHCO
 	object_event 13,  9, SPRITE_CLERK, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilphCo5FClerk, -1
 	object_event  4,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SilphCo5FProtein, EVENT_SILPH_CO_5F_PROTEIN

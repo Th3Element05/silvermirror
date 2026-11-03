@@ -745,6 +745,7 @@ SECTION "Pics 23", ROMX
 BikerPic:            INCBIN "gfx/trainers/biker.2bpp.lz"
 BurglarPic:          INCBIN "gfx/trainers/burglar.2bpp.lz"
 FirebreatherPic:     INCBIN "gfx/trainers/firebreather.2bpp.lz"
+CyclistPic:          INCBIN "gfx/trainers/cyclist.2bpp.lz"
 JugglerPic:          INCBIN "gfx/trainers/juggler.2bpp.lz"
 
 

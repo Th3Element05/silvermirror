@@ -267,28 +267,29 @@ BikerAidenAfterBattleText:
 	done
 
 
-TrainerJugglerOtis:
-	trainer JUGGLER, OTIS, EVENT_BEAT_JUGGLER_OTIS, JugglerOtisSeenText, JugglerOtisBeatenText, 0, .Script
+TrainerCyclistOtis:
+	trainer CYCLIST, OTIS, EVENT_BEAT_CYCLIST_OTIS, CyclistOtisSeenText, CyclistOtisBeatenText, 0, .Script
 .Script:
 	endifjustbattled
-	jumptextfaceplayer JugglerOtisAfterBattleText
+	jumptextfaceplayer CyclistOtisAfterBattleText
 
-JugglerOtisSeenText:
-	ntag "JUGGLER:"
+CyclistOtisSeenText:
+	ntag "CYCLIST:"
 	text "I'm feeling"
-	line "hungry and mean!"
+	line "hungry!"
 	done
 
-JugglerOtisBeatenText:
+CyclistOtisBeatenText:
 	ntag "OTIS:"
 	text "Bad, bad, bad!"
 	done
 
-JugglerOtisAfterBattleText:
-	ntag "JUGGLER:"
-	text "I like my #MON"
-	line "ferocious! They"
-	cont "tear up enemies!"
+CyclistOtisAfterBattleText:
+	ntag "CYCLIST:"
+	text "My #MON are"
+	line "ravenous!"
+	cont "They chew through"
+	roll "enemies!"
 	done
 
 
@@ -311,58 +312,56 @@ BikerJosephBeatenText:
 
 BikerJosephAfterBattleText:
 	ntag "BIKER:"
-	text "You can also get"
-	line "to FUCHSIA from"
-	cont "VERMILION using a"
-	roll "coastal road."
+	text "I could belly-"
+	line "bump you outta"
+	cont "here!"
 	done
 
 
-TrainerJugglerBurt:
-	trainer JUGGLER, BURT, EVENT_BEAT_JUGGLER_BURT, JugglerBurtSeenText, JugglerBurtBeatenText, 0, .Script
+TrainerCyclistBurt:
+	trainer CYCLIST, BURT, EVENT_BEAT_CYCLIST_BURT, CyclistBurtSeenText, CyclistBurtBeatenText, 0, .Script
 .Script:
 	endifjustbattled
-	jumptextfaceplayer JugglerBurtAfterBattleText
+	jumptextfaceplayer CyclistBurtAfterBattleText
 
-JugglerBurtSeenText:
-	ntag "JUGGLER:"
-	text "Come out and play,"
+CyclistBurtSeenText:
+	ntag "CYCLIST:"
+	text "Come out to play,"
 	line "little mouse!"
 	done
 
-JugglerBurtBeatenText:
+CyclistBurtBeatenText:
 	ntag "BURT:"
 	text "You little rat!"
 	done
 
-JugglerBurtAfterBattleText:
-	ntag "JUGGLER:"
+CyclistBurtAfterBattleText:
+	ntag "CYCLIST:"
 	text "I hate losing!"
 	line "Get away from me!"
 	done
 
 
-TrainerJugglerFinnley:
-	trainer JUGGLER, FINNLEY, EVENT_BEAT_JUGGLER_FINNLEY, JugglerFinnleySeenText, JugglerFinnleyBeatenText, 0, .Script
+TrainerCyclistFinnley:
+	trainer CYCLIST, FINNLEY, EVENT_BEAT_CYCLIST_FINNLEY, CyclistFinnleySeenText, CyclistFinnleyBeatenText, 0, .Script
 .Script:
 	endifjustbattled
-	jumptextfaceplayer JugglerFinnleyAfterBattleText
+	jumptextfaceplayer CyclistFinnleyAfterBattleText
 
-JugglerFinnleySeenText:
-	ntag "JUGGLER:"
+CyclistFinnleySeenText:
+	ntag "CYCLIST:"
 	text "Nice BIKE!"
-	line "Hand it over!"
 	done
 
-JugglerFinnleyBeatenText:
+CyclistFinnleyBeatenText:
 	ntag "FINNLEY:"
 	text "Knock out!"
 	done
 
-JugglerFinnleyAfterBattleText:
-	ntag "JUGGLER:"
-	text "Forget it, who"
-	line "needs your BIKE!"
+CyclistFinnleyAfterBattleText:
+	ntag "CYCLIST:"
+	text "I like my BIKE"
+	line "better!"
 	done
 
 
@@ -437,9 +436,9 @@ Route16_MapEvents:
 	object_event 25,  5, SPRITE_BERRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, Route16_SitrusBerry, EVENT_ROUTE_16_SITRUS_BERRY
 	object_event 26, 12, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_BIGDOLLSYM, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route16Snorlax, EVENT_ROUTE_16_SNORLAX
 	object_event  5, 14, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerBikerAiden, -1
-	object_event  8, 12, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerJugglerOtis, -1
+	object_event  8, 12, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerCyclistOtis, -1
 	object_event 11, 13, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBikerJoseph, -1
-	object_event 13, 14, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerJugglerBurt, -1
-	object_event 16, 15, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerJugglerFinnley, -1
+	object_event 13, 14, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerCyclistBurt, -1
+	object_event 16, 15, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerCyclistFinnley, -1
 	object_event 19, 14, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBikerTeddy, -1
 	object_event  6,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, Route16TMAerialAce, EVENT_ROUTE_16_TM_AERIAL_ACE

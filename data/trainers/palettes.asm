@@ -64,6 +64,7 @@ INCBIN "gfx/trainers/hiker.gbcpal", middle_colors
 INCBIN "gfx/trainers/biker.gbcpal", middle_colors
 INCBIN "gfx/trainers/burglar.gbcpal", middle_colors
 INCBIN "gfx/trainers/firebreather.gbcpal", middle_colors
+INCBIN "gfx/trainers/cyclist.gbcpal", middle_colors
 INCBIN "gfx/trainers/juggler.gbcpal", middle_colors
 INCBIN "gfx/trainers/blackbelt_t.gbcpal", middle_colors
 INCBIN "gfx/trainers/psychic_t.gbcpal", middle_colors

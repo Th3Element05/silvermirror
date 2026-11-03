@@ -58,6 +58,7 @@ BTTrainerClassGenders:
 	db MALE   ; BIKER
 	db MALE   ; BURGLAR
 	db MALE   ; FIREBREATHER
+	db MALE   ; CYCLIST
 	db MALE   ; JUGGLER
 	db MALE   ; BLACKBELT_T
 	db MALE   ; PSYCHIC_T

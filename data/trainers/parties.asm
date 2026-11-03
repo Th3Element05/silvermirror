@@ -3953,9 +3953,59 @@ FirebreatherGroup:
 	db PLAYER_LEVEL - 1, MAGMAR
 	db -1 ; end
 
+CyclistGroup:
+	; CYCLIST, FRITZ (ROUTE 17)cueball ;29
+	db "FRITZ@", TRAINERTYPE_NORMAL
+	db 30, PRIMEAPE
+	db 29, MACHOKE
+	db -1 ; end
+
+	; CYCLIST, OTIS (ROUTE 16)cueball ;33
+	db "OTIS@", TRAINERTYPE_NORMAL
+	db 33, MACHOP
+	db -1 ; end
+
+	; CYCLIST, BURT (ROUTE 16)cueball ;29
+	db "BURT@", TRAINERTYPE_NORMAL
+	db 29, MANKEY
+	db 30, MACHOP
+	db -1 ; end
+
+	; CYCLIST, FINNLEY (ROUTE 16)cueball ;28
+	db "FINNLEY@", TRAINERTYPE_NORMAL
+	db 28, MACHOP
+	db 30, MANKEY
+	db 29, MACHOP
+	db -1 ; end
+
+	; CYCLIST, DUSTIN (ROUTE 17)cueball ;29
+	db "DUSTIN@", TRAINERTYPE_NORMAL
+	db 29, MACHOP
+	db 30, MACHOKE
+	db -1 ; end
+
+	; CYCLIST, LYLE (ROUTE 17)cueball ;29
+	db "LYLE@", TRAINERTYPE_NORMAL
+	db 29, MANKEY
+	db 30, PRIMEAPE
+	db -1 ; end
+
+	; CYCLIST, DARIUS (ROUTE 17)cueball ;33
+	db "DARIUS@", TRAINERTYPE_NORMAL
+	db 34, MACHOKE
+	db -1 ; end
+
+	; CYCLIST, JULIEN (ROUTE 17)cueball ;26
+	db "JULIEN@", TRAINERTYPE_NORMAL
+	db 26, MANKEY
+	db 25, MANKEY
+	db 27, MACHOKE
+	db 26, MACHOP
+	db -1 ; end
+
 JugglerGroup:
-	; JUGGLER, FRITZ (SILPH CO 5F) ;29
-	db "FRITZ@", TRAINERTYPE_VARIABLE
+	; JUGGLER, MAXIMO (SILPH CO 5F) ;29
+	db "MAXIMO@", TRAINERTYPE_VARIABLE
 	; Classic Mode
 	db TRAINERTYPE_NORMAL
 	db 29, KADABRA
@@ -3965,55 +4015,6 @@ JugglerGroup:
 	db TRAINERTYPE_NORMAL
 	db 30, UMBREON
 	db 30, MR__MIME
-	db -1 ; end
-
-	; JUGGLER, OTIS (ROUTE 16)cueball ;33
-	db "OTIS@", TRAINERTYPE_NORMAL
-	db 33, MACHOP
-	db -1 ; end
-
-	; JUGGLER, BURT (ROUTE 16)cueball ;29
-	db "BURT@", TRAINERTYPE_NORMAL
-	db 29, MANKEY
-	db 30, MACHOP
-	db -1 ; end
-
-	; JUGGLER, FINNLEY (ROUTE 16)cueball ;28
-	db "FINNLEY@", TRAINERTYPE_NORMAL
-	db 28, MACHOP
-	db 30, MANKEY
-	db 29, MACHOP
-	db -1 ; end
-
-	; JUGGLER, DUSTIN (ROUTE 17)cueball ;29
-	db "DUSTIN@", TRAINERTYPE_NORMAL
-	db 29, MACHOP
-	db 30, MACHOKE
-	db -1 ; end
-
-	; JUGGLER, LYLE (ROUTE 17)cueball ;29
-	db "LYLE@", TRAINERTYPE_NORMAL
-	db 29, MANKEY
-	db 30, PRIMEAPE
-	db -1 ; end
-
-	; JUGGLER, DARIUS (ROUTE 17)cueball ;33
-	db "DARIUS@", TRAINERTYPE_NORMAL
-	db 34, MACHOKE
-	db -1 ; end
-
-	; JUGGLER, JULIEN (ROUTE 17)cueball ;26
-	db "JULIEN@", TRAINERTYPE_NORMAL
-	db 26, MANKEY
-	db 25, MANKEY
-	db 27, MACHOKE
-	db 26, MACHOP
-	db -1 ; end
-
-	; JUGGLER, MAXIMO (ROUTE 17)cueball ;29
-	db "MAXIMO@", TRAINERTYPE_NORMAL
-	db 30, PRIMEAPE
-	db 29, MACHOKE
 	db -1 ; end
 
 	; JUGGLER, DARIO (VICTORY ROAD 2F) ;48
