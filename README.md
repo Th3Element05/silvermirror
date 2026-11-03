@@ -159,11 +159,9 @@ Version 1.1 should be compatible with existing save files from v1.0.
   >`GLACEON, GLISCOR, HONCHKROW, LEAFEON, MAGNEZONE, MAMOSWINE, MISMAGIUS, TANGROWTH, WEAVILE, and YANMEGA`  
   >Reef tile gfx  
   >Some tileset animation code  
-- **AtmaBuster**  
-  >Provided the base for Leaf's Front and Back graphics  
 - **SkidMarc25**  
-  >Provided trainer graphics for:  
-  >`Cyclist, Misty, and Lorelei`  
+  >Provided some trainer graphics for:  
+  >`Player Backs, Misty, Sailor, Fisher, Cyclist, Rockets, Giovanni, Lorelei, and Lance`  
 
 ### __Audio:__
 - **dannye** pokered-crysaudio  
