@@ -623,7 +623,7 @@ if !DEF(_DEBUG)
 	call RotateThreePalettesRight
 	call ClearTilemap
 
-	ld a, NIDORINO ; silvermirror -WOOPER +NIDORINO
+	ld a, PIKACHU ;NIDORINO ;WOOPER
 	ld [wCurSpecies], a
 	ld [wCurPartySpecies], a
 	call GetBaseData
@@ -675,7 +675,6 @@ endc
 	call NamePlayer
 	ld hl, OakText7
 	call PrintText
-;silvermirror +starthereA
 	call RotateThreePalettesRight 
 	call ClearTilemap
 
@@ -706,7 +705,6 @@ endc
 	call Intro_RotatePalettesLeftFrontpic
 	ld hl, OakText10
 	call PrintText
-;silvermirror +endhereA
 	ret
 
 OakText1:
@@ -716,7 +714,7 @@ OakText1:
 OakText2:
 	text_far _OakText2
 	text_asm
-	ld a, NIDORINO ; silvermirror -WOOPER +NIDORINO
+	ld a, PIKACHU ;NIDORINO ;WOOPER
 	call PlayMonCry
 	call WaitSFX
 	ld hl, OakText3
@@ -741,8 +739,7 @@ OakText6:
 OakText7:
 	text_far _OakText7
 	text_end
-	
-;silvermirror +starthereB
+
 	OakText8:
 	text_far _OakText8
 	text_end
@@ -754,7 +751,6 @@ OakText7:
 	OakText10:
 	text_far _OakText10
 	text_end
-;silvermirror +endhereB
 
 NamePlayer:
 	farcall MovePlayerPicRight
@@ -797,11 +793,10 @@ NamePlayer:
 	ret
 
 .Chris:
-	db "RED@@@@@@@@" ;silvermirror -db "CHRIS@@@@@@"
+	db "RED@@@@@@@@"
 .Kris:
-	db "GREEN@@@@@@" ;silvermirror -db "KRIS@@@@@@@"
+	db "GREEN@@@@@@"
 
-;silvermirror +starthereC
 NameRivalIntro:
 	farcall MovePlayerPicRight
 	call ShowRivalNamingChoices
@@ -868,9 +863,8 @@ RivalNames:
 	db "GARY@"
 ;	db "JOHN@"
 ;	db "SILVER@"
-	db 2 ; title indent
+	db 1 ; title indent
 	db " RIVAL @" ; title
-;silvermirror +endhereC
 
 GSShowPlayerNamingChoices: ; unreferenced
 	call LoadMenuHeader
