@@ -155,7 +155,8 @@ PewterCityBlockingGuyScript:
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_BROCK
-	iftrue .GiveItem
+;	iftrue .GiveItem
+	iftrue .GivePagerCard
 	writetext PewterCityBlockingGuyFollowMeText
 	waitbutton
 	closetext
@@ -183,56 +184,83 @@ PewterCityBlockingGuyScript:
 	special RestartMapMusic
 	end
 
-.GiveItem
+;.GiveItem
+;	checkevent EVENT_GOT_PEWTER_BOOST_ITEM
+;	iftrue .Skip
+;	writetext PewterCityBlockingGuyBeatBrockText
+;	promptbutton
+;	setscene SCENE_PEWTERCITY_NOOP
+;.Skip
+;	checkevent EVENT_GOT_BULBASAUR_FROM_OAK
+;	iftrue .MiracleSeed
+;	checkevent EVENT_GOT_CHARMANDER_FROM_OAK
+;	iftrue .Charcoal
+;;	checkevent EVENT_GOT_SQUIRTLE_FROM_OAK
+;;	iftrue .MysticWater
+;;.MysticWater
+;	getitemname STRING_BUFFER_4, MYSTIC_WATER
+;	getstring STRING_BUFFER_5, PewterCityWater
+;	checkevent EVENT_GOT_PEWTER_BOOST_ITEM
+;	iftrue .GotPewterBoostItem
+;	verbosegiveitem MYSTIC_WATER
+;	iffalse .BagFull
+;	setevent EVENT_GOT_MYSTIC_WATER
+;	sjump .GotPewterBoostItem
+;
+;.Charcoal
+;	getitemname STRING_BUFFER_4, CHARCOAL
+;	getstring STRING_BUFFER_5, PewterCityFire
+;	checkevent EVENT_GOT_PEWTER_BOOST_ITEM
+;	iftrue .GotPewterBoostItem
+;	verbosegiveitem CHARCOAL
+;	iffalse .BagFull
+;	setevent EVENT_POKEMON_MANSION_1F_CHARCOAL
+;	sjump .GotPewterBoostItem
+;
+;.MiracleSeed
+;	getitemname STRING_BUFFER_4, MIRACLE_SEED
+;	getstring STRING_BUFFER_5, PewterCityGrass
+;	checkevent EVENT_GOT_PEWTER_BOOST_ITEM
+;	iftrue .GotPewterBoostItem
+;	verbosegiveitem MIRACLE_SEED
+;	iffalse .BagFull
+;	setevent EVENT_CELADON_CITY_MIRACLE_SEED
+;	; fallthrough
+;
+;.GotPewterBoostItem:
+;	setevent EVENT_GOT_PEWTER_BOOST_ITEM
+;	writetext PewterCityBlockingGuyExplainItemText
+;	waitbutton
+;.BagFull:
+;	closetext
+;	end
+
+.GivePagerCard
 	checkevent EVENT_GOT_PEWTER_BOOST_ITEM
-	iftrue .Skip
+	iftrue .GoodLuck
 	writetext PewterCityBlockingGuyBeatBrockText
 	promptbutton
+	stringtotext .pagercardname, MEM_BUFFER_1
+	scall .JumpstdReceiveItem
+	setflag ENGINE_PAGER_CARD
+	writetext GotPagerCardText
 	setscene SCENE_PEWTERCITY_NOOP
-.Skip
-	checkevent EVENT_GOT_BULBASAUR_FROM_OAK
-	iftrue .MiracleSeed
-	checkevent EVENT_GOT_CHARMANDER_FROM_OAK
-	iftrue .Charcoal
-;	checkevent EVENT_GOT_SQUIRTLE_FROM_OAK
-;	iftrue .MysticWater
-;.MysticWater
-	getitemname STRING_BUFFER_4, MYSTIC_WATER
-	getstring STRING_BUFFER_5, PewterCityWater
-	checkevent EVENT_GOT_PEWTER_BOOST_ITEM
-	iftrue .GotPewterBoostItem
-	verbosegiveitem MYSTIC_WATER
-	iffalse .BagFull
-	setevent EVENT_GOT_MYSTIC_WATER
-	sjump .GotPewterBoostItem
-
-.Charcoal
-	getitemname STRING_BUFFER_4, CHARCOAL
-	getstring STRING_BUFFER_5, PewterCityFire
-	checkevent EVENT_GOT_PEWTER_BOOST_ITEM
-	iftrue .GotPewterBoostItem
-	verbosegiveitem CHARCOAL
-	iffalse .BagFull
-	setevent EVENT_POKEMON_MANSION_1F_CHARCOAL
-	sjump .GotPewterBoostItem
-
-.MiracleSeed
-	getitemname STRING_BUFFER_4, MIRACLE_SEED
-	getstring STRING_BUFFER_5, PewterCityGrass
-	checkevent EVENT_GOT_PEWTER_BOOST_ITEM
-	iftrue .GotPewterBoostItem
-	verbosegiveitem MIRACLE_SEED
-	iffalse .BagFull
-	setevent EVENT_CELADON_CITY_MIRACLE_SEED
-;	sjump .GotPewterBoostItem
-	; fallthrough
-.GotPewterBoostItem:
 	setevent EVENT_GOT_PEWTER_BOOST_ITEM
-	writetext PewterCityBlockingGuyExplainItemText
+	promptbutton
+	writetext PewterCityBlockingGuyExplainsPagerText
+	promptbutton
+.GoodLuck
+	writetext PewterCityBlockingGuyGoodLuckText
 	waitbutton
-.BagFull:
 	closetext
 	end
+
+.pagercardname
+	db "PAGER CARD@"
+.JumpstdReceiveItem:
+	jumpstd ReceiveItemScript
+	end
+
 
 PewterCityBlockingGuyHeyText:
 	ntag "TRAINER:"
@@ -269,26 +297,61 @@ PewterCityBlockingGuyBeatBrockText:
 	line "you to have this!"
 	done
 
-PewterCityBlockingGuyExplainItemText:
-	ntag "TRAINER:"
-	text "Holding that"
-	line "@"
-	text_ram wStringBuffer4
-	text " will"
-	cont "boost a #MON's"
-	roll "@"
-	text_ram wStringBuffer5
-	text " attacks!"
+GotPagerCardText:
+	text "<PLAYER>'s #GEAR"
+	line "now has a PPS!"
 	done
 
-PewterCityGrass:
-	db "GRASS@"
+PewterCityBlockingGuyExplainsPagerText:
+	ntag "TRAINER:"
+	text "That's the latest"
+	line "#GEAR upgrade."
 
-PewterCityFire:
-	db "FIRE@"
+	para "The #MON"
+	line "PAGER SYSTEM."
 
-PewterCityWater:
-	db "WATER@"
+	para "It allows you to"
+	line "call on special"
+	cont "#MON to aid you"
+	roll "on your travels."
+
+	para "But you'll need to"
+	line "get PAGER CARDs"
+	cont "to make use of it."
+
+	para "It's hard work to"
+	line "collect BADGEs,"
+	cont "and you need eight"
+	roll "of them to get in"
+	cont "to #MON LEAGUE!"
+	done
+
+PewterCityBlockingGuyGoodLuckText:
+	ntag "TRAINER:"
+	text "Good luck!"
+	done
+
+;PewterCityBlockingGuyExplainItemText:
+;	ntag "TRAINER:"
+;	text "Holding that"
+;	line "@"
+;	text_ram wStringBuffer4
+;	text " will"
+;	cont "boost a #MON's"
+;	roll "@"
+;	text_ram wStringBuffer5
+;	text " attacks!"
+;	done
+;
+;PewterCityGrass:
+;	db "GRASS@"
+;
+;PewterCityFire:
+;	db "FIRE@"
+;
+;PewterCityWater:
+;	db "WATER@"
+
 
 PewterCitySuperNerd1Script:
 	faceplayer

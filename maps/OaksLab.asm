@@ -467,20 +467,10 @@ DeliverOaksParcelScript:
 	disappear OAKSLAB_POKEDEX2
 	waitsfx
 	promptbutton
-	writetext OaksLabOaksDreamGivePagerText
-;	writetext OaksLabOaksDreamText
-;	promptbutton
-;	writetext OaksLabOakGivePagerText
+	writetext OaksLabOaksDreamText
 	promptbutton
-	stringtotext .pagercardname, MEM_BUFFER_1
-	scall .JumpstdReceiveItem
-	setflag ENGINE_PAGER_CARD
-	writetext GotPagerCardText
+	writetext OaksLabRivalLeaveItToMeText
 	promptbutton
-	writetext OaksLabOakExplainsPagerText
-	waitbutton
-;	closetext
-;	opentext
 	setlasttalked OAKSLAB_BLUE
 	faceplayer
 	writetext OaksLabRivalLeavesAfterPokedexText
@@ -516,11 +506,11 @@ DeliverOaksParcelScript:
 	closetext
 	end
 
-.JumpstdReceiveItem:
-	jumpstd ReceiveItemScript
-	end
-.pagercardname
-	db "PAGER CARD@"
+;.JumpstdReceiveItem:
+;	jumpstd ReceiveItemScript
+;	end
+;.pagercardname
+;	db "PAGER CARD@"
 
 OaksLabRivalParcelEntranceScript:
 	readvar VAR_FACING
@@ -809,12 +799,12 @@ OaksLabRivalStepLeftMovement:
 	step_end
 
 OaksLabRivalBattleBulbasaurMovement:
-	step LEFT
+	slow_step LEFT
 OaksLabRivalBattleSquirtleMovement:
-	step LEFT
+	slow_step LEFT
 OaksLabRivalBattleCharmanderMovement:
-	step LEFT
-	step DOWN
+	slow_step LEFT
+	slow_step DOWN
 	step_end
 
 OaksLabRivalLeavesMovement:
@@ -1130,8 +1120,7 @@ OaksLabGotPokedexText:
 	line "#DEX from OAK!"
 	done
 
-;OaksLabOaksDreamText:
-OaksLabOaksDreamGivePagerText:
+OaksLabOaksDreamText:
 	ntag "PROF.OAK:"
 	text "To make a complete"
 	line "guide on all the"
@@ -1153,42 +1142,9 @@ OaksLabOaksDreamGivePagerText:
 	para "This is a great"
 	line "undertaking in"
 	cont "#MON history!"
-;	done
-
-;OaksLabOakGivePagerText:
-;	text ""
-	para "<PLAYER>, <RIVAL>,"
-	line "Take this, too."
-
-	para "It will come in"
-	line "handy on your"
-	cont "#MON journey."
 	done
 
-GotPagerCardText:
-	text "<PLAYER>'s #GEAR"
-	line "now has a PPS!"
-	done
-
-OaksLabOakExplainsPagerText:
-	ntag "PROF.OAK:"
-	text "That's the latest"
-	line "#GEAR upgrade."
-;	cont "card."
-
-	para "The #MON"
-	line "PAGER SYSTEM."
-
-	para "It allows you to"
-	line "call on special"
-	cont "#MON to aid you"
-	roll "on your travels."
-
-	para "But you'll need to"
-	line "get PAGER CARDs"
-	cont "to make use of it.@"
-
-	text_promptbutton
+OaksLabRivalLeaveItToMeText:
 	ntag "<RIVAL>:"
 	text "Alright, GRAMPS!"
 	line "Leave it all to"
