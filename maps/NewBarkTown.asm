@@ -136,7 +136,7 @@ NewBarkTownRival_LookingForGrampsText:
 	line "to know where he"
 	cont "is, do you?"
 
-	para "<……><……>"
+	para "<……> <……>"
 
 	para "He was on his way"
 	line "to GOLDENROD?"

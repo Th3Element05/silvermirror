@@ -173,8 +173,8 @@ _CardFolderOpenText::
 	text_end
 
 _OakTimeWokeUpText::
-	text "<……><……><……>"
-	line "<……><……><……><……>"
+	text "<……> <……> <……>"
+	line "<……> <……> <……>"
 
 	para "Zzz… Hm? Wha…?"
 	line "You woke me up!"
@@ -1783,7 +1783,7 @@ _MomLeavingText2::
 	text "Okay, I'll help you"
 	line "save your money."
 
-	para "<……><……><……>"
+	para "<……> <……> <……>"
 	prompt
 
 _MomLeavingText3::

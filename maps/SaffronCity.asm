@@ -71,7 +71,7 @@ SaffronCityKurtsSon_IntroText:
 	line "ran off all of the"
 	cont "sudden."
 
-	para "<……><……>"
+	para "<……> <……>"
 
 	para "Wow, you took down"
 	line "their boss?"

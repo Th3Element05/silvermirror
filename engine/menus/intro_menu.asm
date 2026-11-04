@@ -558,7 +558,7 @@ Continue_UnknownGameTime:
 	ret
 
 .three_question_marks
-	db " ???@"
+	db " ??:??@"
 
 Continue_DisplayBadgeCount:
 	push hl

@@ -155,18 +155,18 @@ _BTWinM10Text:
 	done
 
 _BTGreetingM11Text:
-	text "<……><……><……>"
-	line "<……><……>Battle?"
+	text "<……> <……> <……>"
+	line "<……> <……>Battle?"
 	done
 
 _BTLossM11Text:
-	text "<……><……><……>"
-	line "<……><……>I won?"
+	text "<……> <……> <……>"
+	line "<……> <……>I won?"
 	done
 
 _BTWinM11Text:
-	text "<……><……><……>"
-	line "<……><……>I lost?"
+	text "<……> <……> <……>"
+	line "<……> <……>I lost?"
 	done
 
 _BTGreetingM12Text:
