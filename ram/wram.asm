@@ -3366,7 +3366,7 @@ wSafariTimeRemaining:: dw
 
 wPhoneList:: ds CONTACT_LIST_SIZE + 1
 
-;	ds 22 ;removed to make room to expand CONTACT_LIST_SIZE
+	ds 16 ;22 ;removed to make room to expand CONTACT_LIST_SIZE
 
 wLuckyNumberShowFlag:: db
 wRepelType:: db
