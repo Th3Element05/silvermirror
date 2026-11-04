@@ -121,7 +121,7 @@ ElmsLabElm_MeetElmText:
 	line "becoming the new"
 	cont "LEAGUE CHAMPION!"
 
-	para "<……><……>"
+	para "<……> <……>"
 
 	para "What? You want to"
 	line "show me something?"
@@ -140,7 +140,7 @@ ElmsLabElm_MeetElmText:
 	para "Where in the world"
 	line "did you get that?"
 
-	para "<……><……>"
+	para "<……> <……>"
 
 	para "So you really saw"
 	line "HO-OH?"
@@ -208,7 +208,7 @@ ElmsLabElm_OverheardPhoneCallText:
 	para "Who was that on"
 	line "the phone?"
 
-	para "<……><……>"
+	para "<……> <……>"
 	done
 
 ElmsLabElm_SaveOakText:

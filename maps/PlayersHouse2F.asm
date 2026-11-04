@@ -308,45 +308,45 @@ PlayersHouseDebugPlayer:
 	opentext
 	writetext PlayersHouseDebugText
 	waitbutton
-	givepoke BULBASAUR, 50
-	givepoke CHARMANDER, 50
-	givepoke SQUIRTLE, 50
-	givepoke CHIKORITA, 50
-	givepoke CYNDAQUIL, 50
-	givepoke TOTODILE, 50
-	givepoke RATTATA, 50
-	givepoke RATICATE, 50
-	givepoke PIDGEY, 50
-	givepoke PIDGEOTTO, 50
-	givepoke SPEAROW, 50
-	givepoke FEAROW, 50
-	givepoke JIGGLYPUFF, 50
-	givepoke WIGGLYTUFF, 50
-	givepoke CLEFAIRY, 50
-	givepoke CLEFABLE, 50
-	givepoke GEODUDE, 50
-	givepoke GRAVELER, 50
-	givepoke GOLEM, 50
-	givepoke MACHOP, 50
-	givepoke MACHOKE, 50
-	givepoke MACHAMP, 50
-	givepoke ABRA, 50
-	givepoke KADABRA, 50
-	givepoke ALAKAZAM, 50
-	givepoke PORYGON, 50
-	givepoke ONIX, 50
-	givepoke STARYU, 50
-	givepoke STARMIE, 50
-	givepoke PIKACHU, 50
-	givepoke RAICHU, 50
-	givepoke VOLTORB, 50
-	givepoke LUGIA, 50
-	givepoke HO_OH, 50
+;	givepoke BULBASAUR, 50
+;	givepoke CHARMANDER, 50
+;	givepoke SQUIRTLE, 50
+;	givepoke CHIKORITA, 50
+;	givepoke CYNDAQUIL, 50
+;	givepoke TOTODILE, 50
+;	givepoke RATTATA, 50
+;	givepoke RATICATE, 50
+;	givepoke PIDGEY, 50
+;	givepoke PIDGEOTTO, 50
+;	givepoke SPEAROW, 50
+;	givepoke FEAROW, 50
+;	givepoke JIGGLYPUFF, 50
+;	givepoke WIGGLYTUFF, 50
+;	givepoke CLEFAIRY, 50
+;	givepoke CLEFABLE, 50
+;	givepoke GEODUDE, 50
+;	givepoke GRAVELER, 50
+;	givepoke GOLEM, 50
+;	givepoke MACHOP, 50
+;	givepoke MACHOKE, 50
+;	givepoke MACHAMP, 50
+;	givepoke ABRA, 50
+;	givepoke KADABRA, 50
+;	givepoke ALAKAZAM, 50
+;	givepoke PORYGON, 50
+;	givepoke ONIX, 50
+;	givepoke STARYU, 50
+;	givepoke STARMIE, 50
+;	givepoke PIKACHU, 50
+;	givepoke RAICHU, 50
+;	givepoke VOLTORB, 50
+;	givepoke LUGIA, 50
+;	givepoke HO_OH, 50
 
-	loadmem wPartyMon1Moves+0, AERIAL_ACE
-	loadmem wPartyMon1Moves+1, BOUNCE
-	loadmem wPartyMon1Moves+2, DIG
-	loadmem wPartyMon1Moves+3, TELEPORT
+;	loadmem wPartyMon1Moves+0, AERIAL_ACE
+;	loadmem wPartyMon1Moves+1, BOUNCE
+;	loadmem wPartyMon1Moves+2, DIG
+;	loadmem wPartyMon1Moves+3, TELEPORT
 ;	loadmem wPartyMon1DVs+0, $ef
 ;	loadmem wPartyMon1DVs+1, $fe
 
@@ -364,12 +364,13 @@ PlayersHouseDebugPlayer:
 ;	loadmem wPartyMon3DVs+0, $ef
 ;	loadmem wPartyMon3DVs+1, $fe
 
-	giveitem POTION, 99
+	giveitem RARE_CANDY, 99
+	giveitem MASTER_BALL, 99
 ;	giveitem CARBOS, 20
 ;	giveitem X_ACCURACY, 20
-	giveitem TM_TOXIC
+;	giveitem TM_TOXIC
 
-	giveitem BICYCLE
+;	giveitem BICYCLE
 ;	giveitem COIN_CASE
 ;	giveitem ITEMFINDER
 ;	giveitem POKE_FLUTE
@@ -423,8 +424,8 @@ PlayersHouse2F_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  0,  4, BGEVENT_READ, PlayersBedHealing
-	bg_event  0,  5, BGEVENT_READ, PlayersBedHealing
+	bg_event  0,  6, BGEVENT_READ, PlayersBedHealing
+	bg_event  0,  7, BGEVENT_READ, PlayersBedHealing
 	bg_event  0,  1, BGEVENT_UP, PlayersHousePCScript
 	bg_event  1,  1, BGEVENT_READ, PlayersHouseRadioScript
 	bg_event  5,  0, BGEVENT_IFSET, PlayersHousePosterScript
@@ -436,7 +437,7 @@ endc
 	object_event  4,  5, SPRITE_CONSOLE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PlayersHouseGameConsoleScript, EVENT_PLAYERS_HOUSE_2F_CONSOLE
 	object_event  2,  1, SPRITE_DOLL_1, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PlayersHouseDoll1Script, EVENT_PLAYERS_HOUSE_2F_DOLL_1
 	object_event  3,  1, SPRITE_DOLL_2, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_SCRIPT, 0, PlayersHouseDoll2Script, EVENT_PLAYERS_HOUSE_2F_DOLL_2
-	object_event  0,  6, SPRITE_BIG_DOLL, SPRITEMOVEDATA_BIGDOLL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PlayersHouseBigDollScript, EVENT_PLAYERS_HOUSE_2F_BIG_DOLL
+	object_event  0,  4, SPRITE_BIG_DOLL, SPRITEMOVEDATA_BIGDOLL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PlayersHouseBigDollScript, EVENT_PLAYERS_HOUSE_2F_BIG_DOLL
 if DEF(_DEBUG)
 	object_event  7,  5, SPRITE_RED, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PlayersHouseDebugPlayer, -1
 	object_event  7,  4, SPRITE_RED, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerRivalDebug, -1

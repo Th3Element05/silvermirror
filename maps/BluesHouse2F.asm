@@ -8,7 +8,8 @@ BluesHouse2F_MapScripts:
 
 BluesHouse2FHouseTilesCallback:
 	changeblock 4, 0, $2c ; bookshelves
-	changeblock 0, 4, $1d ; blue bed
+	changeblock 0, 6, $1d ; blue bed
+	changeblock 4, 0, $1f ; town map
 	endcallback
 
 BluesHouse2FGameConsoleScript:

@@ -58,6 +58,7 @@ TrainerPicPointers::
 	dba BikerPic
 	dba BurglarPic
 	dba FirebreatherPic
+	dba CyclistPic
 	dba JugglerPic
 	dba BlackbeltTPic
 	dba PsychicTPic

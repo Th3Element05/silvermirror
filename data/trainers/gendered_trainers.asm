@@ -25,6 +25,7 @@ MaleTrainers:
 	db OFFICER
 	db SAGE
 	db BIKER
+	db CYCLIST
 	db SCIENTIST
 	db NINJA
 	db NINJA2

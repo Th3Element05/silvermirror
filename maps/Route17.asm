@@ -13,28 +13,29 @@ Route17AlwaysOnBikeCallback:
 
 
 ; trainers
-TrainerJugglerDustin:
-	trainer JUGGLER, DUSTIN, EVENT_BEAT_JUGGLER_DUSTIN, JugglerDustinSeenText, JugglerDustinBeatenText, 0, .Script
+TrainerCyclistDustin:
+	trainer CYCLIST, DUSTIN, EVENT_BEAT_CYCLIST_DUSTIN, CyclistDustinSeenText, CyclistDustinBeatenText, 0, .Script
 .Script:
 	endifjustbattled
-	jumptextfaceplayer JugglerDustinAfterBattleText
+	jumptextfaceplayer CyclistDustinAfterBattleText
 
-JugglerDustinSeenText:
-	ntag "JUGGLER:"
+CyclistDustinSeenText:
+	ntag "CYCLIST:"
 	text "What do you want,"
 	line "kiddo?"
 	done
 
-JugglerDustinBeatenText:
+CyclistDustinBeatenText:
 	ntag "DUSTIN:"
 	text "Whoo!"
 	done
 
-JugglerDustinAfterBattleText:
-	ntag "JUGGLER:"
-	text "I could belly-"
-	line "bump you outta"
-	cont "here!"
+CyclistDustinAfterBattleText:
+	ntag "CYCLIST:"
+	text "You can also get"
+	line "to FUCHSIA from"
+	cont "VERMILION using a"
+	roll "coastal road."
 	done
 
 
@@ -62,25 +63,25 @@ BikerMarkeyAfterBattleText:
 	done
 
 
-TrainerJugglerLyle:
-	trainer JUGGLER, LYLE, EVENT_BEAT_JUGGLER_LYLE, JugglerLyleSeenText, JugglerLyleBeatenText, 0, .Script
+TrainerCyclistLyle:
+	trainer CYCLIST, LYLE, EVENT_BEAT_CYCLIST_LYLE, CyclistLyleSeenText, CyclistLyleBeatenText, 0, .Script
 .Script:
 	endifjustbattled
-	jumptextfaceplayer JugglerLyleAfterBattleText
+	jumptextfaceplayer CyclistLyleAfterBattleText
 
-JugglerLyleSeenText:
-	ntag "JUGGLER:"
-	text "There's no money"
-	line "in fighting kids!"
+CyclistLyleSeenText:
+	ntag "CYCLIST:"
+	text "I'm tired from my"
+	line "workout!"
 	done
 
-JugglerLyleBeatenText:
+CyclistLyleBeatenText:
 	ntag "LYLE:"
 	text "Burned out!"
 	done
 
-JugglerLyleAfterBattleText:
-	ntag "JUGGLER:"
+CyclistLyleAfterBattleText:
+	ntag "CYCLIST:"
 	text "Good stuff is"
 	line "lying around on"
 	cont "CYCLING ROAD!"
@@ -136,51 +137,51 @@ BikerTheronAfterBattleText:
 	done
 
 
-TrainerJugglerDarius:
-	trainer JUGGLER, DARIUS, EVENT_BEAT_JUGGLER_DARIUS, JugglerDariusSeenText, JugglerDariusBeatenText, 0, .Script
+TrainerCyclistDarius:
+	trainer CYCLIST, DARIUS, EVENT_BEAT_CYCLIST_DARIUS, CyclistDariusSeenText, CyclistDariusBeatenText, 0, .Script
 .Script:
 	endifjustbattled
-	jumptextfaceplayer JugglerDariusAfterBattleText
+	jumptextfaceplayer CyclistDariusAfterBattleText
 
-JugglerDariusSeenText:
-	ntag "JUGGLER:"
+CyclistDariusSeenText:
+	ntag "CYCLIST:"
 	text "My #MON won't"
 	line "evolve! Why?"
 	done
 
-JugglerDariusBeatenText:
+CyclistDariusBeatenText:
 	ntag "DARIUS:"
 	text "Why, you!"
 	done
 
-JugglerDariusAfterBattleText:
-	ntag "JUGGLER:"
+CyclistDariusAfterBattleText:
+	ntag "CYCLIST:"
 	text "Maybe some #MON"
 	line "need element"
 	cont "STONEs to evolve."
 	done
 
 
-TrainerJugglerJulien:
-	trainer JUGGLER, JULIEN, EVENT_BEAT_JUGGLER_JULIEN, JugglerJulienSeenText, JugglerJulienBeatenText, 0, .Script
+TrainerCyclistJulien:
+	trainer CYCLIST, JULIEN, EVENT_BEAT_CYCLIST_JULIEN, CyclistJulienSeenText, CyclistJulienBeatenText, 0, .Script
 .Script:
 	endifjustbattled
-	jumptextfaceplayer JugglerJulienAfterBattleText
+	jumptextfaceplayer CyclistJulienAfterBattleText
 
-JugglerJulienSeenText:
-	ntag "JUGGLER:"
+CyclistJulienSeenText:
+	ntag "CYCLIST:"
 	text "I need a little"
 	line "exercise!"
 	done
 
-JugglerJulienBeatenText:
+CyclistJulienBeatenText:
 	ntag "JULIEN:"
 	text "Whew!"
 	line "Good workout!"
 	done
 
-JugglerJulienAfterBattleText:
-	ntag "JUGGLER:"
+CyclistJulienAfterBattleText:
+	ntag "CYCLIST:"
 	text "I'm sure I lost"
 	line "weight there!"
 	done
@@ -285,24 +286,24 @@ BikerEoinAfterBattleText:
 	done
 
 
-TrainerJugglerMaximo:
-	trainer JUGGLER, MAXIMO, EVENT_BEAT_JUGGLER_MAXIMO, JugglerMaximoSeenText, JugglerMaximoBeatenText, 0, .Script
+TrainerCyclistFritz:
+	trainer CYCLIST, FRITZ, EVENT_BEAT_CYCLIST_FRITZ, CyclistFritzSeenText, CyclistFritzBeatenText, 0, .Script
 .Script:
 	endifjustbattled
-	jumptextfaceplayer JugglerMaximoAfterBattleText
+	jumptextfaceplayer CyclistFritzAfterBattleText
 
-JugglerMaximoSeenText:
-	ntag "JUGGLER:"
+CyclistFritzSeenText:
+	ntag "CYCLIST:"
 	text "Be a rebel!"
 	done
 
-JugglerMaximoBeatenText:
-	ntag "MAXIMO:"
+CyclistFritzBeatenText:
+	ntag "FRITZ:"
 	text "Aaaargh!"
 	done
 
-JugglerMaximoAfterBattleText:
-	ntag "JUGGLER:"
+CyclistFritzAfterBattleText:
+	ntag "CYCLIST:"
 	text "Be ready to fight"
 	line "for your beliefs!"
 	done
@@ -441,15 +442,15 @@ Route17_MapEvents:
 	bg_event 12, 118, BGEVENT_ITEM, Route17HiddenMaxElixer
 
 	def_object_events
-	object_event  7,  9, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerJugglerDustin, -1
+	object_event  7,  9, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerCyclistDustin, -1
 	object_event  6, 21, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerBikerMarkey, -1
-	object_event 12, 17, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerJugglerLyle, -1
+	object_event 12, 17, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerCyclistLyle, -1
 	object_event  6, 33, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerBikerRiley, -1
 	object_event 16, 31, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBikerTheron, -1
-	object_event 17, 60, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerJugglerDarius, -1
-	object_event  4, 58, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerJugglerJulien, -1
+	object_event 17, 60, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerCyclistDarius, -1
+	object_event  4, 58, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerCyclistJulien, -1
 	object_event  6, 97, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBikerEoin, -1
-	object_event 18, 91, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerJugglerMaximo, -1
+	object_event 18, 91, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerCyclistFritz, -1
 	object_event 11, 114, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerBikerNolan, -1
 	object_event 18, 54, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route17SharpBeak, EVENT_ROUTE_17_SHARP_BEAK
 	object_event 19, 111, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_ITEMBALL, 0, Route17TMRollout, EVENT_ROUTE_17_TM_ROLLOUT

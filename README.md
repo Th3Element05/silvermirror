@@ -8,17 +8,25 @@ I also wanted to include a new post-game storyline in Johto, as a mirror to the 
 
 ![box-art](https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/silvermirror-box.png)  
 
+## Version 1.2  
+
+Version 1.2 is **NOT** compatible with previous save files.  
+**Stay on version 1.1 if you want to continue your current save.**
+- <a href="https://github.com/Th3Element05/silvermirror/releases/tag/v1.2">Version v1.2 Release Page</a>  
+
+### __Version 1.2 Change Log:__  
+- Added POTION in Player's PC at game start.  
+- The PPS is now obtained in Pewter City, after defeating Brock.  
+- Pokégear can now save 32 phone contacts.  
+- Added INSTANT Text Speed setting.  
+
 ## Version 1.1 (Current Release)  
 
 Version 1.1 should be compatible with existing save files from v1.0.  
 **But I highly recommend making a backup of your save file, just in case.**
 - <a href="https://github.com/Th3Element05/silvermirror/releases/tag/v1.1">Version v1.1 Release Page</a>  
 
-## Previous Release: Version 1.0 (Initial Release)  
-
-- <a href="https://github.com/Th3Element05/silvermirror/releases/tag/v1.0">Initial Release v1.0</a>  
-
-### __Change Log:__  
+### __Version 1.1 Change Log:__  
 - Replaced Kris graphics with Leaf/Green.  
 - Replaced Pallet Town music with the original track from RBY.  
 - Adjusted battle music for Rival battles and some other climactic battles.  
@@ -93,11 +101,12 @@ Version 1.1 should be compatible with existing save files from v1.0.
   >• Every Pokémon has a unique sprite in your party.  
 - **Upgraded battle graphics**  
   >• More dynamic colors and attack animations for many moves.  
-- **Expanded Pack**  
+- **More Inventory Space**  
   >• Main Pack pocket has been expanded to hold 25 items.  
   >• Barry pocket has been added to reduce your main pocket from getting full.  
+  >• Pokégear phone contact list can store 32 contacts.  
 - **Improved Payouts from Game Corner Games**  
-  >• Slots: Significantly increased payout amounts, and increased odds of good rolls.  
+  >• Slots: Significantly increased payout amounts, and increased odds of lucky rolls.  
   >• Card Flip: Doubled payout amounts.  
 - **Difficulty Setting**  
   >• There's a "Difficulty Curve" setting which has a **minor** effect on the stats of opposing trainers' Pokémon.  
@@ -159,11 +168,9 @@ Version 1.1 should be compatible with existing save files from v1.0.
   >`GLACEON, GLISCOR, HONCHKROW, LEAFEON, MAGNEZONE, MAMOSWINE, MISMAGIUS, TANGROWTH, WEAVILE, and YANMEGA`  
   >Reef tile gfx  
   >Some tileset animation code  
-- **AtmaBuster**  
-  >Provided the base for Leaf's Front and Back graphics  
 - **SkidMarc25**  
-  >Provided trainer graphics for:  
-  >`Cyclist, Misty, and Lorelei`  
+  >Provided some trainer graphics for:  
+  >`Player Backs, Misty, Sailor, Fisher, Cyclist, Rockets, Giovanni, Lorelei, and Lance`  
 
 ### __Audio:__
 - **dannye** pokered-crysaudio  
@@ -241,20 +248,21 @@ because I was literally learning Assembly from scratch as I worked on this proje
 
 Other disassembly and/or decompilation projects:
 * [**Pokémon Red and Blue**](https://github.com/pret/pokered)
-* [**Pokémon Gold and Silver (Space World '97 demo)**](https://github.com/pret/pokegold-spaceworld)
 * [**Pokémon Yellow**](https://github.com/pret/pokeyellow)
-* [**Pokémon Trading Card Game**](https://github.com/pret/poketcg)
-* [**Pokémon Pinball**](https://github.com/pret/pokepinball)
-* [**Pokémon Stadium**](https://github.com/pret/pokestadium)
 * [**Pokémon Gold and Silver**](https://github.com/pret/pokegold)
+* [**Pokémon Crystal**] (https://github.com/pret/pokecrystal)
 * [**Pokémon Ruby and Sapphire**](https://github.com/pret/pokeruby)
-* [**Pokémon Pinball: Ruby & Sapphire**](https://github.com/pret/pokepinballrs)
-* [**Pokémon FireRed and LeafGreen**](https://github.com/pret/pokefirered)
 * [**Pokémon Emerald**](https://github.com/pret/pokeemerald)
-* [**Pokémon Mystery Dungeon: Red Rescue Team**](https://github.com/pret/pmd-red)
+* [**Pokémon FireRed and LeafGreen**](https://github.com/pret/pokefirered)
 * [**Pokémon Diamond and Pearl**](https://github.com/pret/pokediamond)
 * [**Pokémon Platinum**](https://github.com/pret/pokeplatinum) 
 * [**Pokémon HeartGold and SoulSilver**](https://github.com/pret/pokeheartgold)
+* [**Pokémon Gold and Silver (Space World '97 demo)**](https://github.com/pret/pokegold-spaceworld)
+* [**Pokémon Trading Card Game**](https://github.com/pret/poketcg)
+* [**Pokémon Pinball**](https://github.com/pret/pokepinball)
+* [**Pokémon Stadium**](https://github.com/pret/pokestadium)
+* [**Pokémon Pinball: Ruby & Sapphire**](https://github.com/pret/pokepinballrs)
+* [**Pokémon Mystery Dungeon: Red Rescue Team**](https://github.com/pret/pmd-red)
 * [**Pokémon Mystery Dungeon: Explorers of Sky**](https://github.com/pret/pmd-sky)
 
 ## PRET Contacts

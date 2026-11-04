@@ -63,6 +63,7 @@ TrainerClassDVs:
 	dn  8,  8,  8,  8 ; BIKER
 	dn  8,  8,  8,  8 ; BURGLAR 1:3
 	dn  8,  8,  8,  8 ; FIREBREATHER 1:3
+	dn  8,  8,  8,  8 ; CYCLIST
 	dn  8,  8,  8,  8 ; JUGGLER
 	dn  8,  8,  8,  8 ; BLACKBELT_T
 	dn  8,  8,  8,  8 ; PSYCHIC_T

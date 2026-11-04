@@ -59,6 +59,7 @@ TrainerEncounterMusic::
 	db MUSIC_TRAINER_ENCOUNTER     ; biker
 	db MUSIC_POKEMANIAC_ENCOUNTER  ; burglar
 	db MUSIC_TRAINER_ENCOUNTER     ; firebreather
+	db MUSIC_TRAINER_ENCOUNTER     ; cyclist
 	db MUSIC_POKEMANIAC_ENCOUNTER  ; juggler
 	db MUSIC_TRAINER_ENCOUNTER     ; blackbelt_t
 	db MUSIC_YOUNGSTER_ENCOUNTER   ; psychic_t

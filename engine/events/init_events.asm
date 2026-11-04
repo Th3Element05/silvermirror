@@ -6,6 +6,15 @@ InitializeEvents:
 	ld [sMysteryGiftTrainerHouseFlag], a
 	call CloseSRAM
 
+; deposit initial POTION in Player's PC
+	ld a, POTION
+	ld [wCurItem], a
+	ld a, 1
+	ld [wItemQuantityChange], a
+	ld [wPCItemQuantityChange], a
+	ld hl, wNumPCItems
+	call ReceiveItem
+
 ; initialize events
 	ld hl, InitialEvents
 .events_loop
