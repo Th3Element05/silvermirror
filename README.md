@@ -8,17 +8,25 @@ I also wanted to include a new post-game storyline in Johto, as a mirror to the 
 
 ![box-art](https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/silvermirror-box.png)  
 
+## Version 1.2  
+
+Version 1.2 is **NOT** compatible with previous save files.  
+**Stay on version 1.1 if you want to continue your current save.**
+- <a href="https://github.com/Th3Element05/silvermirror/releases/tag/v1.2">Version v1.2 Release Page</a>  
+
+### __Version 1.2 Change Log:__  
+- Added POTION in Player's PC at game start.  
+- The PPS is now obtained in Pewter City, after defeating Brock.  
+- Pokégear can now save 32 phone contacts.  
+- Added INSTANT Text Speed setting.  
+
 ## Version 1.1 (Current Release)  
 
 Version 1.1 should be compatible with existing save files from v1.0.  
 **But I highly recommend making a backup of your save file, just in case.**
 - <a href="https://github.com/Th3Element05/silvermirror/releases/tag/v1.1">Version v1.1 Release Page</a>  
 
-### Previous Release: Version 1.0 (Initial Release)  
-
-- <a href="https://github.com/Th3Element05/silvermirror/releases/tag/v1.0">Initial Release v1.0</a>  
-
-### __Change Log:__  
+### __Version 1.1 Change Log:__  
 - Replaced Kris graphics with Leaf/Green.  
 - Replaced Pallet Town music with the original track from RBY.  
 - Adjusted battle music for Rival battles and some other climactic battles.  
