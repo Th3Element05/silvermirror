@@ -20,7 +20,7 @@ Version 1.2 is **NOT** compatible with previous save files.
 - Pokégear can now save 32 phone contacts.  
 - Added INSTANT Text Speed setting.  
 
-* [**Full Changelog History**](CHANGELOG.md)
+[**Full Changelog History**](CHANGELOG.md)
 
 ---
 

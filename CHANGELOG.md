@@ -26,5 +26,5 @@ Version 1.1 should be compatible with existing save files from v1.0.
 
 ---
 
-## __Version 1.0__  
-Initial Release
+### __Version 1.0__  
+- Initial Release
