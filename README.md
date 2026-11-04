@@ -20,6 +20,10 @@ Version 1.2 is **NOT** compatible with previous save files.
 - Pokégear can now save 32 phone contacts.  
 - Added INSTANT Text Speed setting.  
 
+* [**Full Change Log History**](CHANGELOG.md)
+
+---
+
 ## Version 1.1 (Current Release)  
 
 Version 1.1 should be compatible with existing save files from v1.0.  
@@ -37,6 +41,10 @@ Version 1.1 should be compatible with existing save files from v1.0.
 - Fixed other misc. bugs and errors.  
 - Pokémon will be cured of poison when they reach 1HP while walking.  
 - Made a hint in the hint book way less vague.  
+
+---
+
+
 
 ### __Resources:__
 - **[Silver Mirror Discord Server](https://discord.gg/rsUamUSuwK)**
@@ -241,16 +249,15 @@ because I was literally learning Assembly from scratch as I worked on this proje
 
 ## See also
 
-- [**FAQ**](FAQ.md)
-- [**Documentation**][docs]
-- [**Wiki**][wiki] (includes [tutorials][tutorials])
-- [**Symbols**][symbols]
+- [**pokecrystal FAQ**](FAQ.md)
+- [**pokecrystal Documentation**][docs]
+- [**pokecrystal Wiki**][wiki] (includes [tutorials][tutorials])
 
 Other disassembly and/or decompilation projects:
 * [**Pokémon Red and Blue**](https://github.com/pret/pokered)
 * [**Pokémon Yellow**](https://github.com/pret/pokeyellow)
 * [**Pokémon Gold and Silver**](https://github.com/pret/pokegold)
-* [**Pokémon Crystal**] (https://github.com/pret/pokecrystal)
+* [**Pokémon Crystal**](https://github.com/pret/pokecrystal)
 * [**Pokémon Ruby and Sapphire**](https://github.com/pret/pokeruby)
 * [**Pokémon Emerald**](https://github.com/pret/pokeemerald)
 * [**Pokémon FireRed and LeafGreen**](https://github.com/pret/pokefirered)
