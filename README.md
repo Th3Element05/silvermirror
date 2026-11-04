@@ -93,11 +93,12 @@ Version 1.1 should be compatible with existing save files from v1.0.
   >• Every Pokémon has a unique sprite in your party.  
 - **Upgraded battle graphics**  
   >• More dynamic colors and attack animations for many moves.  
-- **Expanded Pack**  
+- **More Inventory Space**  
   >• Main Pack pocket has been expanded to hold 25 items.  
   >• Barry pocket has been added to reduce your main pocket from getting full.  
+  >• Pokégear phone contact list can store 32 contacts.  
 - **Improved Payouts from Game Corner Games**  
-  >• Slots: Significantly increased payout amounts, and increased odds of good rolls.  
+  >• Slots: Significantly increased payout amounts, and increased odds of lucky rolls.  
   >• Card Flip: Doubled payout amounts.  
 - **Difficulty Setting**  
   >• There's a "Difficulty Curve" setting which has a **minor** effect on the stats of opposing trainers' Pokémon.  
@@ -239,20 +240,21 @@ because I was literally learning Assembly from scratch as I worked on this proje
 
 Other disassembly and/or decompilation projects:
 * [**Pokémon Red and Blue**](https://github.com/pret/pokered)
-* [**Pokémon Gold and Silver (Space World '97 demo)**](https://github.com/pret/pokegold-spaceworld)
 * [**Pokémon Yellow**](https://github.com/pret/pokeyellow)
-* [**Pokémon Trading Card Game**](https://github.com/pret/poketcg)
-* [**Pokémon Pinball**](https://github.com/pret/pokepinball)
-* [**Pokémon Stadium**](https://github.com/pret/pokestadium)
 * [**Pokémon Gold and Silver**](https://github.com/pret/pokegold)
+* [**Pokémon Crystal**] (https://github.com/pret/pokecrystal)
 * [**Pokémon Ruby and Sapphire**](https://github.com/pret/pokeruby)
-* [**Pokémon Pinball: Ruby & Sapphire**](https://github.com/pret/pokepinballrs)
-* [**Pokémon FireRed and LeafGreen**](https://github.com/pret/pokefirered)
 * [**Pokémon Emerald**](https://github.com/pret/pokeemerald)
-* [**Pokémon Mystery Dungeon: Red Rescue Team**](https://github.com/pret/pmd-red)
+* [**Pokémon FireRed and LeafGreen**](https://github.com/pret/pokefirered)
 * [**Pokémon Diamond and Pearl**](https://github.com/pret/pokediamond)
 * [**Pokémon Platinum**](https://github.com/pret/pokeplatinum) 
 * [**Pokémon HeartGold and SoulSilver**](https://github.com/pret/pokeheartgold)
+* [**Pokémon Gold and Silver (Space World '97 demo)**](https://github.com/pret/pokegold-spaceworld)
+* [**Pokémon Trading Card Game**](https://github.com/pret/poketcg)
+* [**Pokémon Pinball**](https://github.com/pret/pokepinball)
+* [**Pokémon Stadium**](https://github.com/pret/pokestadium)
+* [**Pokémon Pinball: Ruby & Sapphire**](https://github.com/pret/pokepinballrs)
+* [**Pokémon Mystery Dungeon: Red Rescue Team**](https://github.com/pret/pmd-red)
 * [**Pokémon Mystery Dungeon: Explorers of Sky**](https://github.com/pret/pmd-sky)
 
 ## PRET Contacts
