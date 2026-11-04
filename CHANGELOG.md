@@ -1,6 +1,6 @@
 # CHANGELOG History
 
-## __Version 1.2 Change Log:__  
+### __Version 1.2 Changelog:__  
 Version 1.2 is **NOT** compatible with previous save files.  
 **Stay on version 1.1 if you want to continue your current save.**
 - Added POTION in Player's PC at game start.  
@@ -10,7 +10,7 @@ Version 1.2 is **NOT** compatible with previous save files.
 
 ---
 
-## __Version 1.1 Change Log:__  
+### __Version 1.1 Changelog:__  
 Version 1.1 should be compatible with existing save files from v1.0.  
 **But I highly recommend making a backup of your save file, just in case.**
 - Replaced Kris graphics with Leaf/Green.  
