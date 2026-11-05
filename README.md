@@ -8,13 +8,13 @@ I also wanted to include a new post-game storyline in Johto, as a mirror to the 
 
 ![box-art](https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/silvermirror-box.png)  
 
-## Version 1.2  
+## Version 1.2.0 (Current Release)  
 
-Version 1.2 is **NOT** compatible with previous save files.  
+Version 1.2.0 is **NOT** compatible with previous save files.  
 **Stay on version 1.1 if you want to continue your current save.**
 - <a href="https://github.com/Th3Element05/silvermirror/releases/tag/v1.2">Version v1.2 Release Page</a>  
 
-### __Version 1.2 Changelog:__  
+### __Version 1.2.0 Changelog:__  
 - Added POTION in Player's PC at game start.  
 - The PPS is now obtained in Pewter City, after defeating Brock.  
 - Pokégear can now save 32 phone contacts.  
@@ -23,28 +23,6 @@ Version 1.2 is **NOT** compatible with previous save files.
 [**Full Changelog History**](CHANGELOG.md)
 
 ---
-
-## Version 1.1 (Current Release)  
-
-Version 1.1 should be compatible with existing save files from v1.0.  
-**But I highly recommend making a backup of your save file, just in case.**
-- <a href="https://github.com/Th3Element05/silvermirror/releases/tag/v1.1">Version v1.1 Release Page</a>  
-
-### __Version 1.1 Changelog:__  
-- Replaced Kris graphics with Leaf/Green.  
-- Replaced Pallet Town music with the original track from RBY.  
-- Adjusted battle music for Rival battles and some other climactic battles.  
-- Changed the player's room to be more like RBY.  
-- A wider selection of room decorations are available when starting a New Game.  
-- Fixed issue with some Pokémon's TM compatibility not being correct/complete.  
-- Fixed issue where EXP.SHARE and LUCKY EGG would be unobtainable if the player's pack is full the first time they receive them from OAK's AIDE.  
-- Fixed other misc. bugs and errors.  
-- Pokémon will be cured of poison when they reach 1HP while walking.  
-- Made a hint in the hint book way less vague.  
-
----
-
-
 
 ### __Resources:__
 - **[Silver Mirror Discord Server](https://discord.gg/rsUamUSuwK)**
@@ -132,7 +110,7 @@ Version 1.1 should be compatible with existing save files from v1.0.
 
 ## __Screenshots:__
 
-![title-screen](https://images.hackdex.app/pokemon-silver-mirror/1793514438515-0.gif)
+![title-screen](https://images.hackdex.app/pokemon-silver-mirror/1793850756425-0.gif)
 ![mode-selection](https://images.hackdex.app/pokemon-silver-mirror/1793153836771-0.gif)
 ![hey-wait](https://images.hackdex.app/pokemon-silver-mirror/1793153871888-0.png)
 ![battle-move-info](https://images.hackdex.app/pokemon-silver-mirror/1793153887090-0.png)
