@@ -1075,7 +1075,7 @@ _RocketRadioText2::
 _RocketRadioText3::
 	text_start
 ;	line "After three years"
-	line "radio tower, we"
+	line "RADIO TOWER, we"
 	done
 
 _RocketRadioText4::
