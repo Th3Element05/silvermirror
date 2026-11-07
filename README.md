@@ -64,6 +64,7 @@ Version 1.2.0 is **NOT** compatible with previous save files.
   >• Porygon's base-stats have been boosted to match Porygon2's.  
   >• Eggs from Hitmonlee, Hitmonchan, and Hitmontop can contain any Hitmon- species.  
   >(Hitmontop eggs are unobtainable in Classic Mode until after defeating the Elite Four.)  
+  >• Nidoran eggs can contain either Nidoran♂ or Nidoran♀.
 - **Location-based Evolutions** for appropraite Pokémon.  
   >• (Only available in Gen2 Mode, or after defeating the Elite Four.)  
 - **Trade Evolutions obtainable without trading**  
