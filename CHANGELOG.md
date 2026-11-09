@@ -1,7 +1,7 @@
 # CHANGELOG History
 
-### __Version 1.2 Changelog:__  
-Version 1.2 is **NOT** compatible with previous save files.  
+### __Version 1.2.0 Changelog:__  
+Version 1.2.0 is **NOT** compatible with previous save files.  
 **Stay on version 1.1 if you want to continue your current save.**
 - Added POTION in Player's PC at game start.  
 - The PPS is now obtained in Pewter City, after defeating Brock.  
