@@ -11,8 +11,9 @@ I also wanted to include a new post-game storyline in Johto, as a mirror to the 
 ## Version 1.2.0 (Current Release)  
 
 Version 1.2.0 is **NOT** compatible with previous save files.  
-**Stay on version 1.1 if you want to continue your current save.**
-- <a href="https://github.com/Th3Element05/silvermirror/releases/tag/v1.2.0">Version v1.2.0 Release Page</a>  
+**Stay on version 1.1 if you want to continue your current save.**  
+- <a href="https://github.com/Th3Element05/silvermirror/releases/tag/v1.2.0">Version v1.2.0 Release Page</a> (github)  
+- [Available on HackDex](https://www.hackdex.app/hack/pokemon-silver-mirror)  
 
 ### __Version 1.2.0 Changelog:__  
 - Added POTION in Player's PC at game start.  
