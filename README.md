@@ -143,7 +143,7 @@ Version 1.2.0 is **NOT** compatible with previous save files.
   >SatoMew  
   >DarkShade  
   >tanu  
-  >Everyone else on the PRET pokecrystal Discord!  
+  >**Everyone on the PRET pokecrystal Discord who helped me along the way!**  
 
 ### __Graphics:__
 - **SourApple**  
@@ -196,8 +196,7 @@ Version 1.2.0 is **NOT** compatible with previous save files.
 <br/>
 
 ## __Special Thanks:__
-- **yenatch**, **kanzure**, **Pikalax**, **iimarckus**, and everyone else who's contributed to disassembling Pokémon Crystal.  
-- **All my discord members** who contributed to bug-testing and all who gave me support.  
+- Everyone who has contributed to disassembling Pokémon Crystal.  
 - **Satoshi Tajiri**, **Game Freak**, and **Nintendo** for creating Pokémon Crystal in the first place.  
 
 <br/>
