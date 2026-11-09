@@ -8,6 +8,19 @@ I also wanted to include a new post-game storyline in Johto, as a mirror to the 
 
 ![box-art](https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/silvermirror-box.png)  
 
+## Version 1.2.1 (Pending Release)  
+
+Version 1.2.1 should be compatible with saves from v1.2.0.  
+**I recommend making a backup of your save file anyway, just in case.**  
+- <a href="https://github.com/Th3Element05/silvermirror/releases/tag/v1.2.1">Version v1.2.1 Release Page</a> (github)  
+- [Available on HackDex](https://www.hackdex.app/hack/pokemon-silver-mirror)  
+
+### __Version 1.2.1 Changelog:__  
+- Fixed oversight causing Gen2/Alternate swarm to give shiny Pokémon set DVs instead of generating a random shiny DV.  
+- Viridian Forest now shows the time of day instead of being always night like Ilex Forest.  
+
+---
+
 ## Version 1.2.0 (Current Release)  
 
 Version 1.2.0 is **NOT** compatible with previous save files.  
