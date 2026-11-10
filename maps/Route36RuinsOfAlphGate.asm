@@ -28,7 +28,7 @@ Route36RuinsOfAlphGateOfficerText:
 	text "More RUINS were"
 	line "unearthed?"
 
-	text "Don't you wonder"
+	para "Don't you wonder"
 	line "who'd make some-"
 	cont "thing like this?"
 	roll "And why?"
