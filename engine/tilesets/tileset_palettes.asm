@@ -16,6 +16,8 @@ LoadSpecialMapPalette:
 	jr z, .white_brown
 	cp TILESET_HOUSE
 	jr z, .house
+	cp TILESET_PLAYERS_ROOM
+	jr z, .house
 	cp TILESET_ICE_PATH
 	jr z, .ice_path
 	cp TILESET_RADIO_TOWER
