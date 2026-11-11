@@ -265,12 +265,12 @@ BluesHouse_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  0,  1, BGEVENT_READ, BluesHouse1FStoveScript
-	bg_event  1,  1, BGEVENT_READ, BluesHouse1FSinkScript
-	bg_event  2,  1, BGEVENT_READ, BluesHouse1FFridgeScript
-	bg_event  4,  1, BGEVENT_READ, BluesHouse1FTV
-	bg_event  6,  1, BGEVENT_READ, BluesHouse1FBookshelf
-	bg_event  7,  1, BGEVENT_READ, BluesHouse1FBookshelf
+;	bg_event  0,  1, BGEVENT_READ, BluesHouse1FStoveScript
+;	bg_event  1,  1, BGEVENT_READ, BluesHouse1FSinkScript
+;	bg_event  2,  1, BGEVENT_READ, BluesHouse1FFridgeScript
+	bg_event  5,  1, BGEVENT_READ, BluesHouse1FTV
+	bg_event  2,  1, BGEVENT_READ, BluesHouse1FBookshelf
+	bg_event  3,  1, BGEVENT_READ, BluesHouse1FBookshelf
 
 	def_object_events
 	object_event  4,  4, SPRITE_DAISY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DaisyScript, -1

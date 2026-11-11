@@ -16,8 +16,9 @@ Version 1.2.1 should be compatible with saves from v1.2.0.
 - [Available on HackDex](https://www.hackdex.app/hack/pokemon-silver-mirror)  
 
 ### __Version 1.2.1 Changelog:__  
-- Fixed oversight causing Gen2/Alternate swarm to give shiny Pokémon set DVs instead of generating a random shiny DV.  
-- Viridian Forest now shows the time of day instead of being always night like Ilex Forest.  
+- Fixed oversight causing shiny Pokémon from Gen2/Alternate swarms to have set DVs instead of random shiny DVs.  
+- Viridian Forest now has day/night palettes instead of always using the night palette like Ilex Forest.  
+- Player's House 1F is now more like it was in RBY.  
 
 ---
 
