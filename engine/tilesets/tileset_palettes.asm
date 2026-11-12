@@ -16,6 +16,8 @@ LoadSpecialMapPalette:
 	jr z, .white_brown
 	cp TILESET_HOUSE
 	jr z, .house
+	cp TILESET_PLAYERS_ROOM
+	jr z, .house
 	cp TILESET_ICE_PATH
 	jr z, .ice_path
 	cp TILESET_RADIO_TOWER
@@ -118,6 +120,7 @@ MACRO _use_palette_routine_for_map
 ENDM
 
 MapSpecificPalettes:
+	_use_palette_routine_for_map VIRIDIAN_FOREST, .ViridianForestBGPalettes
 ;	_use_palette_routine_for_map PEWTER_MUSEUM_1F, .MuseumBGPalettes
 ;	_use_palette_routine_for_map PEWTER_MUSEUM_2F, .MuseumBGPalettes
 ;	_use_palette_routine_for_map POKEMON_MANSION_B1F, .LavaOverRedCoalOverBrownBGPalette
@@ -136,9 +139,13 @@ MapSpecificPalettes:
 	_use_palette_routine_for_map SILVER_CAVE_ROOM_3, .SilverCaveBGPalettes
 	db -1 ; terminator
 
-;.LavaOverRedCoalOverBrownBGPalette:
-;	ld hl, LavaOverRedCoalOverBrown
-;	jp .next
+.ViridianForestBGPalettes:
+	ld hl, ViridianForestPals
+	ld a, [wTimeOfDayPal]
+	maskbits NUM_DAYTIMES
+	ld bc, 8 palettes
+	call AddNTimes
+	jp .next_TimeOfDay
 .SilverCaveBGPalettes:
 	ld hl, SilverCaveBGPals
 	ld a, [wTimeOfDayPal]
@@ -188,6 +195,9 @@ MapSpecificPalettes:
 	jp .next
 ;.ViridianGymBGPalettes:
 ;	ld hl, ViridianGymPals
+;	jp .next
+;.LavaOverRedCoalOverBrownBGPalette:
+;	ld hl, LavaOverRedCoalOverBrown
 ;	jp .next
 ;.MuseumBGPalettes
 ;	call LoadMuseumPalette

@@ -427,12 +427,12 @@ KurtsSonsHouse1F_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  0,  1, BGEVENT_READ, KurtsSonsHouse1FStoveScript
-	bg_event  1,  1, BGEVENT_READ, KurtsSonsHouse1FSinkScript
-	bg_event  2,  1, BGEVENT_READ, KurtsSonsHouse1FFridgeScript
+;	bg_event  0,  1, BGEVENT_READ, KurtsSonsHouse1FStoveScript
+;	bg_event  1,  1, BGEVENT_READ, KurtsSonsHouse1FSinkScript
+;	bg_event  2,  1, BGEVENT_READ, KurtsSonsHouse1FFridgeScript
 ;	bg_event  4,  1, BGEVENT_READ, KurtsSonsHouse1FTV
-	bg_event  6,  1, BGEVENT_READ, KurtsSonsHouse1FBookshelf
-	bg_event  7,  1, BGEVENT_READ, KurtsSonsHouse1FBookshelf
+	bg_event  2,  1, BGEVENT_READ, KurtsSonsHouse1FBookshelf
+	bg_event  3,  1, BGEVENT_READ, KurtsSonsHouse1FBookshelf
 
 	def_object_events
 	object_event  4,  4, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, KurtsSonsHouse1FKurtsSon, EVENT_KURTS_SONS_HOUSE_1F_KURTS_SON

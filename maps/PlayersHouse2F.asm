@@ -207,51 +207,51 @@ if DEF(_DEBUG)
 ;	giveitem SAFARI_BALL, 50
 	; good party
 	givepoke STARMIE, 90, LEFTOVERS
-	givepoke MAGMAR, 90, LEFTOVERS
-	givepoke VICTREEBEL, 90, LEFTOVERS
-	givepoke WEEZING, 90, LEFTOVERS
-	givepoke ELECTABUZZ, 90, LEFTOVERS
-	givepoke PIDGEOT, 90, LEFTOVERS
+	givepoke PIKACHU, 5, LEFTOVERS
+	givepoke PIKACHU, 5, LIGHT_BALL
+	givepoke CHARMANDER, 5, LEFTOVERS
+	givepoke CHARMANDER, 5, LEFTOVERS
+;	givepoke PIDGEOT, 90, LEFTOVERS
 ;
 	loadmem wPartyMon1Moves+0, SURF
 	loadmem wPartyMon1Moves+1, ICE_BEAM
 	loadmem wPartyMon1Moves+2, THUNDERBOLT
 	loadmem wPartyMon1Moves+3, PSYCHIC_M
+;	loadmem wPartyMon1DVs+0, $ea
+;	loadmem wPartyMon1DVs+1, $aa
+;
+;	loadmem wPartyMon2Moves+0, FLAMETHROWER
+;	loadmem wPartyMon2Moves+1, THUNDERPUNCH
+;	loadmem wPartyMon2Moves+2, PSYCHIC_M
+;	loadmem wPartyMon2Moves+3, HEADBUTT
 ;	loadmem wPartyMon2DVs+0, $ea
 ;	loadmem wPartyMon2DVs+1, $aa
 ;
-	loadmem wPartyMon2Moves+0, FLAMETHROWER
-	loadmem wPartyMon2Moves+1, THUNDERPUNCH
-	loadmem wPartyMon2Moves+2, PSYCHIC_M
-	loadmem wPartyMon2Moves+3, HEADBUTT
-;	loadmem wPartyMon2DVs+0, $ea
-;	loadmem wPartyMon2DVs+1, $aa
-;
-	loadmem wPartyMon3Moves+0, GIGA_DRAIN
-	loadmem wPartyMon3Moves+1, SLUDGE_BOMB
-	loadmem wPartyMon3Moves+2, TOXIC
-	loadmem wPartyMon3Moves+3, SLEEP_POWDER
+;	loadmem wPartyMon3Moves+0, GIGA_DRAIN
+;	loadmem wPartyMon3Moves+1, SLUDGE_BOMB
+;	loadmem wPartyMon3Moves+2, TOXIC
+;	loadmem wPartyMon3Moves+3, SLEEP_POWDER
 ;	loadmem wPartyMon3DVs+0, $ea
 ;	loadmem wPartyMon3DVs+1, $aa
 ;
-	loadmem wPartyMon4Moves+0, SLUDGE_BOMB
-	loadmem wPartyMon4Moves+1, SMOKESCREEN
-	loadmem wPartyMon4Moves+2, FEINT_ATTACK
-	loadmem wPartyMon4Moves+3, SELFDESTRUCT
+;	loadmem wPartyMon4Moves+0, SLUDGE_BOMB
+;	loadmem wPartyMon4Moves+1, SMOKESCREEN
+;	loadmem wPartyMon4Moves+2, FEINT_ATTACK
+;	loadmem wPartyMon4Moves+3, SELFDESTRUCT
 ;	loadmem wPartyMon4DVs+0, $ea
 ;	loadmem wPartyMon4DVs+1, $aa
 ;
-	loadmem wPartyMon5Moves+0, THUNDERBOLT
-	loadmem wPartyMon5Moves+1, ICE_PUNCH
-	loadmem wPartyMon5Moves+2, KARATE_CHOP
-	loadmem wPartyMon5Moves+3, THIEF
+;	loadmem wPartyMon5Moves+0, THUNDERBOLT
+;	loadmem wPartyMon5Moves+1, ICE_PUNCH
+;	loadmem wPartyMon5Moves+2, KARATE_CHOP
+;	loadmem wPartyMon5Moves+3, THIEF
 ;	loadmem wPartyMon5DVs+0, $ea
 ;	loadmem wPartyMon5DVs+1, $aa
 ;
-	loadmem wPartyMon6Moves+0, WING_ATTACK
-	loadmem wPartyMon6Moves+1, SWIFT
-	loadmem wPartyMon6Moves+2, DOUBLE_TEAM
-	loadmem wPartyMon6Moves+3, ROAR
+;	loadmem wPartyMon6Moves+0, WING_ATTACK
+;	loadmem wPartyMon6Moves+1, SWIFT
+;	loadmem wPartyMon6Moves+2, DOUBLE_TEAM
+;	loadmem wPartyMon6Moves+3, ROAR
 ;	loadmem wPartyMon6DVs+0, $ea
 ;	loadmem wPartyMon6DVs+1, $aa
 ;	; Grant All Pokemon                     ;commented out Grant All Pokemon
@@ -314,34 +314,7 @@ PlayersHouseDebugPlayer:
 ;	givepoke CHIKORITA, 50
 ;	givepoke CYNDAQUIL, 50
 ;	givepoke TOTODILE, 50
-;	givepoke RATTATA, 50
-;	givepoke RATICATE, 50
-;	givepoke PIDGEY, 50
-;	givepoke PIDGEOTTO, 50
-;	givepoke SPEAROW, 50
-;	givepoke FEAROW, 50
-;	givepoke JIGGLYPUFF, 50
-;	givepoke WIGGLYTUFF, 50
-;	givepoke CLEFAIRY, 50
-;	givepoke CLEFABLE, 50
-;	givepoke GEODUDE, 50
-;	givepoke GRAVELER, 50
-;	givepoke GOLEM, 50
-;	givepoke MACHOP, 50
-;	givepoke MACHOKE, 50
-;	givepoke MACHAMP, 50
-;	givepoke ABRA, 50
-;	givepoke KADABRA, 50
-;	givepoke ALAKAZAM, 50
-;	givepoke PORYGON, 50
-;	givepoke ONIX, 50
-;	givepoke STARYU, 50
-;	givepoke STARMIE, 50
-;	givepoke PIKACHU, 50
-;	givepoke RAICHU, 50
-;	givepoke VOLTORB, 50
-;	givepoke LUGIA, 50
-;	givepoke HO_OH, 50
+	givepoke NIDORINA, 50
 
 ;	loadmem wPartyMon1Moves+0, AERIAL_ACE
 ;	loadmem wPartyMon1Moves+1, BOUNCE

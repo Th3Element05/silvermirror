@@ -83,16 +83,16 @@ CopycatsHouse1F_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  0,  1, BGEVENT_READ, CopycatsHouse1FStoveScript
-	bg_event  1,  1, BGEVENT_READ, CopycatsHouse1FSinkScript
-	bg_event  2,  1, BGEVENT_READ, CopycatsHouse1FFridgeScript
-	bg_event  4,  1, BGEVENT_READ, CopycatsHouse1FTV
-	bg_event  6,  1, BGEVENT_READ, CopycatsHouse1FBookshelf
-	bg_event  7,  1, BGEVENT_READ, CopycatsHouse1FBookshelf
+;	bg_event  0,  1, BGEVENT_READ, CopycatsHouse1FStoveScript
+;	bg_event  1,  1, BGEVENT_READ, CopycatsHouse1FSinkScript
+;	bg_event  2,  1, BGEVENT_READ, CopycatsHouse1FFridgeScript
+	bg_event  5,  1, BGEVENT_READ, CopycatsHouse1FTV
+	bg_event  2,  1, BGEVENT_READ, CopycatsHouse1FBookshelf
+	bg_event  3,  1, BGEVENT_READ, CopycatsHouse1FBookshelf
 
 	def_object_events
 	object_event  7,  4, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CopycatsHouse1FPokefanMScript, -1
 	object_event  4,  3, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CopycatsHouse1FPokefanFScript, -1
-	object_event  2,  5, SPRITE_CHANSEY_MOVE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, CopycatsHouse1FChanseyScript, -1
+	object_event  3,  4, SPRITE_CHANSEY_MOVE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, CopycatsHouse1FChanseyScript, -1
 
 ;.PinkOverYellowOBPalette

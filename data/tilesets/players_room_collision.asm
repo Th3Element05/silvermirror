@@ -18,7 +18,7 @@
 	tilecoll WALL, STAIRCASE, FLOOR, FLOOR ; 11
 	tilecoll FLOOR, WALL, FLOOR, FLOOR ; 12
 	tilecoll WALL, FLOOR, FLOOR, FLOOR ; 13
-	tilecoll WALL, WALL, FLOOR, FLOOR ; 14
+	tilecoll WALL, WALL, PC, RADIO ; 14
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 15
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 16
 	tilecoll WALL, WALL, FLOOR, FLOOR ; 17
