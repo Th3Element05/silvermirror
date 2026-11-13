@@ -1,5 +1,14 @@
 # CHANGELOG History
 
+### __Version 1.2.1 Changelog:__  
+Version 1.2.1 should be compatible with saves from v1.2.0.  
+**I recommend making a backup of your save file anyway, just in case.**  
+- Fixed oversight causing shiny Pokémon from Gen2/Alternate swarms to all have the same DVs.  
+- Viridian Forest now has day/night palettes instead of always using the night palette like Ilex Forest.  
+- Player's House 1F is now more like it was in RBY, and palette changes for Player's House tileset.  
+
+---  
+
 ### __Version 1.2.0 Changelog:__  
 Version 1.2.0 is **NOT** compatible with previous save files.  
 **Stay on version 1.1 if you want to continue your current save.**
@@ -8,7 +17,7 @@ Version 1.2.0 is **NOT** compatible with previous save files.
 - Pokégear can now save 32 phone contacts.  
 - Added INSTANT Text Speed setting.  
 
----
+---  
 
 ### __Version 1.1 Changelog:__  
 Version 1.1 should be compatible with existing save files from v1.0.  
@@ -24,7 +33,7 @@ Version 1.1 should be compatible with existing save files from v1.0.
 - Pokémon will be cured of poison when they reach 1HP while walking.  
 - Made a hint in the hint book way less vague.  
 
----
+---  
 
 ### __Version 1.0__  
 - Initial Release
