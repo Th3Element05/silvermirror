@@ -8,7 +8,7 @@ I also wanted to include a new post-game storyline in Johto, as a mirror to the 
 
 ![box-art](https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/silvermirror-box.png)  
 
-## Version 1.2.1 (Pending Release)  
+## Version 1.2.1 (Current Release)  
 
 Version 1.2.1 should be compatible with saves from v1.2.0.  
 **I recommend making a backup of your save file anyway, just in case.**  
@@ -19,21 +19,6 @@ Version 1.2.1 should be compatible with saves from v1.2.0.
 - Fixed oversight causing shiny Pokémon from Gen2/Alternate swarms to all have the same DVs.  
 - Viridian Forest now has day/night palettes instead of always using the night palette like Ilex Forest.  
 - Player's House 1F is now more like it was in RBY, and palette changes for Player's House tileset.  
-
----
-
-## Version 1.2.0 (Current Release)  
-
-Version 1.2.0 is **NOT** compatible with previous save files.  
-**Stay on version 1.1 if you want to continue your current save.**  
-- <a href="https://github.com/Th3Element05/silvermirror/releases/tag/v1.2.0">Version v1.2.0 Release Page</a> (github)  
-- [Available on HackDex](https://www.hackdex.app/hack/pokemon-silver-mirror)  
-
-### __Version 1.2.0 Changelog:__  
-- Added POTION in Player's PC at game start.  
-- The PPS is now obtained in Pewter City, after defeating Brock.  
-- Pokégear can now save 32 phone contacts.  
-- Added INSTANT Text Speed setting.  
 
 [**Full Changelog History**](CHANGELOG.md)
 
