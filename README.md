@@ -26,7 +26,9 @@ Version 1.2.1 should be compatible with saves from v1.2.0.
 
 ### __Resources:__
 - **[Silver Mirror Discord Server](https://discord.gg/rsUamUSuwK)**
-- **[Pokémon Silver Mirror Documentation](https://docs.google.com/spreadsheets/d/1-3RvOeC4Ymswg5hqdd7F-1gGs5bRkSTm28OCV8ipzhM)**
+- **Pokémon Silver Mirror Documentation**  
+  >• [Google Sheets Documentation](https://docs.google.com/spreadsheets/d/1-3RvOeC4Ymswg5hqdd7F-1gGs5bRkSTm28OCV8ipzhM)  
+  >• [Game Guide by vet](https://veturian.github.io/pokemon/silver-mirror/)  
 
 ## __Features and Changes:__
 
