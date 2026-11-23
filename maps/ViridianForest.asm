@@ -337,7 +337,7 @@ ViridianForestTrainerTips3Text:
 
 	para "No stealing from"
 	line "other trainers!"
-	cont "Cnly catch wild"
+	cont "Only catch wild"
 	roll "#MON!"
 	done
 
