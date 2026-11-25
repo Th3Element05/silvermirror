@@ -19,7 +19,6 @@
 	; tm/hm learnset
 	tmhm \
 	DYNAMICPUNCH, \
-	SURF, \
 	CALM_MIND, \
 	TOXIC, \
 	BODY_SLAM, \

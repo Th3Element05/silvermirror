@@ -26,6 +26,7 @@
 	ENDURE, \
 	IRON_TAIL, \
 	EARTHQUAKE, \
+	FISSURE, \
 	DIG, \
 	MUD_SLAP, \
 	DOUBLE_TEAM, \

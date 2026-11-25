@@ -27,6 +27,7 @@
 	PROTECT, \
 	ENDURE, \
 	EARTHQUAKE, \
+	FISSURE, \
 	DIG, \
 	MUD_SLAP, \
 	DOUBLE_TEAM, \

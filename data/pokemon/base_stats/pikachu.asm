@@ -19,7 +19,6 @@
 	; tm/hm learnset
 	tmhm \
 	DYNAMICPUNCH, \
-	SURF, \
 	CALM_MIND, \
 	TOXIC, \
 	BODY_SLAM, \
@@ -53,5 +52,4 @@
 	RAIN_DANCE, \
 	THUNDERPUNCH, \
 	SNORE, \
-	SLEEP_TALK, \
-	SWEET_SCENT
+	SLEEP_TALK
