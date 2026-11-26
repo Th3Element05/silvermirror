@@ -18,6 +18,7 @@
 
 	; tm/hm learnset
 	tmhm \
+	DYNAMICPUNCH, \
 	SURF, \
 	CALM_MIND, \
 	TOXIC, \
@@ -26,6 +27,7 @@
 	BLIZZARD, \
 	HYPER_BEAM, \
 	PROTECT, \
+	COUNTER, \
 	ENDURE, \
 	IRON_TAIL, \
 	DIG, \
@@ -44,10 +46,12 @@
 	FALSE_SWIPE, \
 	BRICK_BREAK, \
 	HEADBUTT, \
+	DOUBLE_EDGE, \
 	SWAGGER, \
 	SHADOW_CLAW, \
 	THIEF, \
 	GIGA_IMPACT, \
+	CURSE, \
 	SHADOW_BALL, \
 	POISON_JAB, \
 	ATTRACT, \

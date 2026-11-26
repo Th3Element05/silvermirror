@@ -102,23 +102,16 @@ RockItemEncounter:
 	ret
 	
 .RockItems:
-;	db 1, PP_UP
-;	db 1, HP_UP
-;	db 1, PROTEIN
-;	db 1, IRON
-;	db 1, CARBOS
-	db 1, HELIX_FOSSIL
-	db 1, DOME_FOSSIL
-	db 1, OLD_AMBER
-	db 1, NUGGET ;10000
-	db 2, STAR_PIECE ;9800
-	db 4, BIG_PEARL ;7500
-;	db 8, GOLD_LEAF ;1000
-;	db 8, SILVER_LEAF ;1000
-	db 16, STARDUST ;2000
-	db 24, PEARL ;1400
-	db 64, HEART_SCALE
-	db -1
+	db 2, HELIX_FOSSIL     ;0.78%
+	db 2, DOME_FOSSIL      ;0.78%
+	db 2, OLD_AMBER        ;0.78%
+	db 3, NUGGET ;10000    ;1.17%
+	db 4, STAR_PIECE ;9800 ;1.56%
+	db 8, BIG_PEARL ;7500  ;3.12%
+	db 16, STARDUST ;2000  ;6.25%
+	db 24, PEARL ;1400     ;9.37%
+	db 64, HEART_SCALE     ;25.0%
+	db -1 ;NO_ITEM         ;51.2%
 
 ;.RockItems:
 ;	db 2, STAR_PIECE ;9800
@@ -153,9 +146,9 @@ TreeItemEncounter:
 	ret
 
 .TreeItems:
-	db 64, SILVER_LEAF
-	db 64, GOLD_LEAF
-	db -1
+	db 64, SILVER_LEAF ;25%
+	db 64, GOLD_LEAF   ;25%
+	db -1 ;NO_ITEM     ;50%
 
 ;.TreeItems:
 ;	db 1, BLK_APRICORN

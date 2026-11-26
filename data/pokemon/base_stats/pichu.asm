@@ -18,7 +18,6 @@
 
 	; tm/hm learnset
 	tmhm \
-	SURF, \
 	TOXIC, \
 	BODY_SLAM, \
 	HIDDEN_POWER, \

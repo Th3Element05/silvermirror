@@ -34,6 +34,7 @@
 	WATER_PULSE, \
 	MUD_SLAP, \
 	DOUBLE_TEAM, \
+	REFLECT, \
 	SWIFT, \
 	REST, \
 	ICY_WIND, \

@@ -1,4 +1,5 @@
 # Delete these rules if you don't care about matching.
+# commented out in Makefile, line: #include gfx/lz.mk
 
 %.lz: LZFLAGS = --compressor multipass
 

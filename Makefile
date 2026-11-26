@@ -150,7 +150,7 @@ silvermirror_vc_opt    = -Cjv -t PM_CRYSTAL -i BYTE -n 1 -k 01 -l 0x33 -m 0x10 -
 ### LZ compression rules
 
 # Delete this line if you don't care about matching and just want optimal compression.
-include gfx/lz.mk
+#include gfx/lz.mk
 
 %.lz: %
 	tools/lzcomp $(LZFLAGS) -- $< $@
