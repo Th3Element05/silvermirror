@@ -8,26 +8,22 @@ I also wanted to include a new post-game storyline in Johto, as a mirror to the 
 
 ![box-art](https://github.com/Th3Element05/silvermirror/blob/master/Screenshots/silvermirror-box.png)  
 
-## Version 1.2.1 (Current Release)  
+## Version 1.2.2 (Current Release)
 
-Version 1.2.1 should be compatible with saves from v1.2.0.  
+Version 1.2.2 should be compatible with saves from v1.2.0 and higher.  
 **I recommend making a backup of your save file anyway, just in case.**  
-- <a href="https://github.com/Th3Element05/silvermirror/releases/tag/v1.2.1">Version v1.2.1 Release Page</a> (github)  
-- [Available on HackDex](https://www.hackdex.app/hack/pokemon-silver-mirror)  
 
-### __Version 1.2.1 Changelog:__  
-- Fixed oversight causing shiny Pokémon from Gen2/Alternate swarms to all have the same DVs.  
-- Viridian Forest now has day/night palettes instead of always using the night palette like Ilex Forest.  
-- Player's House 1F is now more like it was in RBY, and palette changes for Player's House tileset.  
+### __Version 1.2.2 Changelog:__  
+- Gave more Pokémon compatibility with False Swipe TM.  
+- Fixed other TM compatibility inconsistencies.  
+- Removed lz.mk rules from Makefile.  
 
-[**Full Changelog History**](CHANGELOG.md)
-
----
+---  
 
 ### __Resources:__
 - [Silver Mirror Discord Server](https://discord.gg/rsUamUSuwK)  
 - [Google Sheets Documentation](https://docs.google.com/spreadsheets/d/1-3RvOeC4Ymswg5hqdd7F-1gGs5bRkSTm28OCV8ipzhM)  
-- [Game Guide by vet](https://veturian.github.io/pokemon/silver-mirror/)  
+- [Game Guide by veturian](https://veturian.github.io/pokemon/silver-mirror/)  
 
 ## __Features and Changes:__
 
