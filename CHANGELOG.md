@@ -1,5 +1,12 @@
 # CHANGELOG History
 
+### __Version 1.2.2 Changelog:__  
+- Gave more Pokémon compatibility with False Swipe TM.  
+- Fixed other TM compatibility inconsistencies.  
+- Removed lz.mk rules from Makefile.  
+
+---  
+
 ### __Version 1.2.1 Changelog:__  
 Version 1.2.1 should be compatible with saves from v1.2.0.  
 **I recommend making a backup of your save file anyway, just in case.**  
@@ -36,4 +43,4 @@ Version 1.1 should be compatible with existing save files from v1.0.
 ---  
 
 ### __Version 1.0__  
-- Initial Release
+- Initial Release  
