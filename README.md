@@ -13,6 +13,9 @@ I also wanted to include a new post-game storyline in Johto, as a mirror to the 
 Version 1.2.2 should be compatible with saves from v1.2.0 and higher.  
 **I recommend making a backup of your save file anyway, just in case.**  
 
+ - [Current Release (github)](https://github.com/Th3Element05/silvermirror/releases/tag/v1.2.2)  
+ - [Available on HackDex](https://www.hackdex.app/hack/pokemon-silver-mirror)  
+
 ### __Version 1.2.2 Changelog:__  
 - Gave more Pokémon compatibility with False Swipe TM.  
 - Fixed other TM compatibility inconsistencies.  
